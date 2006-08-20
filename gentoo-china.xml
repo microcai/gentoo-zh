@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<layman>
+
+  <overlay
+      type = "svn"
+      src  = "http://gentoo-china-overlay.googlecode.com/svn/trunk/"
+      name = "gentoo-china-overlay">
+
+    <link>
+      http://code.google.com/p/gentoo-china-overlay
+    </link>
+
+    <description>
+      Purpose
+
+      To provide some programs useful to Chinese users.
+    </description>
+
+  </overlay>
+</layman>
