@@ -14,6 +14,7 @@ EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_postrm
 
 HOMEPAGE="http://code.google.com/p/chinese-fortune/"
 SRC_URI="http://chinese-fortune.googlecode.com/svn/trunk/${P}.tar.bz2"
+RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"

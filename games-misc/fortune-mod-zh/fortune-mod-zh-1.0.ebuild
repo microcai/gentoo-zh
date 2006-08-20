@@ -5,6 +5,7 @@
 DESCRIPTION="Chinese fortune shell script"
 HOMEPAGE="http://code.google.com/p/chinese-fortune"
 SRC_URI="http://chinese-fortune.googlecode.com/svn/trunk/${P}.tar.bz2"
+RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"
