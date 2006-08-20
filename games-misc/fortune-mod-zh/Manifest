@@ -1,8 +1,8 @@
-DIST fortune-mod-zh-1.0.tar.bz2 1184 RMD160 3dab6c87c8b1f45a3963133837218957965e05a0 SHA1 0138592812612d09c8c2de7eeb25d277ea6088d3 SHA256 1ffc068abfc11c2f6fa68c7ac099ccce0f640598c6ced6074f2edc7958cdcc83
+DIST fortune-mod-zh-1.0.tar.bz2 1181 RMD160 f2b4484e9e1e627161654aa21cfd578129d7c76d SHA1 d3c09f705bf1bee36f90664dc4f39ae647dd61ea SHA256 021c24de63aaf1eb0e3e548654f0ac423ed776e1d43095f814d8bf1f05443ae3
 EBUILD fortune-mod-zh-1.0.ebuild 571 RMD160 5aab7511d2408ccf70c30b1b9208d7b2917738a1 SHA1 4aa88e0e3db4aa088b29e9fddddfb6047e54f0da SHA256 510e83888bb7cf577c4706de35e36219cdb37472913baeddaa9812ce6662710e
 MD5 c5ea7941c892115df16a6d862f23fedd fortune-mod-zh-1.0.ebuild 571
 RMD160 5aab7511d2408ccf70c30b1b9208d7b2917738a1 fortune-mod-zh-1.0.ebuild 571
 SHA256 510e83888bb7cf577c4706de35e36219cdb37472913baeddaa9812ce6662710e fortune-mod-zh-1.0.ebuild 571
-MD5 f0a50c0a9f20718128838b54ec0eb76d files/digest-fortune-mod-zh-1.0 253
-RMD160 ad7915382b1023bfb97342ca63dceff757bebdc5 files/digest-fortune-mod-zh-1.0 253
-SHA256 40e5aa49d9d1a42e5194cd7f9fd6ca3e9bcf17390baf7a90f06b8b7af7c5cce6 files/digest-fortune-mod-zh-1.0 253
+MD5 989bfa21b1b1d3e9b81be3cc220bcb61 files/digest-fortune-mod-zh-1.0 253
+RMD160 a86b7a01f294c9f9d38f16da6c85caf337c7a0bc files/digest-fortune-mod-zh-1.0 253
+SHA256 5c463afce888ad7bccb148b55f491a3dae905f7ac1443559c22e85a183aa47b8 files/digest-fortune-mod-zh-1.0 253
