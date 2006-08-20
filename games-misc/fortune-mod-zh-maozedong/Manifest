@@ -1,0 +1,8 @@
+DIST fortune-mod-zh-maozedong-0.1.tar.bz2 56095 RMD160 7945a7383b387eae6a9a63a7e59c5b38c0ffd4ef SHA1 0e140d60411cf74d4a18711a4e07ce2857eef7ae SHA256 ca6e6d2393d52e477669c1dcf3d83011bc4bff035592737ac6f02a54cb3f9ab6
+EBUILD fortune-mod-zh-maozedong-0.1.ebuild 186 RMD160 23729389d0f45e6f74f6d69942c13a84c4c6d25e SHA1 f785de6a95ee5dbead8d51c1edf3805e8cc24ae0 SHA256 758489133a04b42092720ebd20dc2728703db9a74ea6fa6d0e9c736aeb30629b
+MD5 07ba8e467858306f00b7495d5fdebc07 fortune-mod-zh-maozedong-0.1.ebuild 186
+RMD160 23729389d0f45e6f74f6d69942c13a84c4c6d25e fortune-mod-zh-maozedong-0.1.ebuild 186
+SHA256 758489133a04b42092720ebd20dc2728703db9a74ea6fa6d0e9c736aeb30629b fortune-mod-zh-maozedong-0.1.ebuild 186
+MD5 ca3a4ba21dace713186c59cad68f36aa files/digest-fortune-mod-zh-maozedong-0.1 286
+RMD160 242d5a3ace27ccd304cd824dc98cf5cdd0e45186 files/digest-fortune-mod-zh-maozedong-0.1 286
+SHA256 c303f0eb097489e39e3592741f9b57dcdf12b98e5074977b892f92226a0c3721 files/digest-fortune-mod-zh-maozedong-0.1 286

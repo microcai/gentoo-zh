@@ -1,0 +1,8 @@
+DIST fortune-mod-zh-tao-0.1.tar.bz2 8310 RMD160 9d730d4958aced1443833c2bc25416f613a7e94b SHA1 b8fba32ae798f7c6a2635dfeabbfe81fbcb9235c SHA256 4b067d1aafab921cf7f7baed770d3597315ff2528a0c6d3e92ba5383d54379b7
+EBUILD fortune-mod-zh-tao-0.1.ebuild 197 RMD160 d67fb41dec2339e8a9843b21bef55124181f82b9 SHA1 bdaffc08c304e16ae030ecc6eb05e17729aa786d SHA256 13388545262c4f58ab53614ec137394ae08749b04f6cf13772d3e8cdf06ef027
+MD5 343a3c3b238e9755df5337452e40f4d5 fortune-mod-zh-tao-0.1.ebuild 197
+RMD160 d67fb41dec2339e8a9843b21bef55124181f82b9 fortune-mod-zh-tao-0.1.ebuild 197
+SHA256 13388545262c4f58ab53614ec137394ae08749b04f6cf13772d3e8cdf06ef027 fortune-mod-zh-tao-0.1.ebuild 197
+MD5 d7dc8c73b35c265a08ef7dbbdfd08bf2 files/digest-fortune-mod-zh-tao-0.1 265
+RMD160 bcefc283e11d8f2f1a6bf547c5ce3fa3be32d073 files/digest-fortune-mod-zh-tao-0.1 265
+SHA256 9d33d084575b932de4c7d8d44029fd90ae38d0aaf6a51aaa8c0a753e9067d4fc files/digest-fortune-mod-zh-tao-0.1 265
