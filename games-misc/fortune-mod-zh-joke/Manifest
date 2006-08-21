@@ -1,0 +1,8 @@
+DIST fortune-mod-zh-joke-0.1.tar.bz2 43469 RMD160 5baf063bdbc21781e7091f72874192cd749c63d6 SHA1 72f1b2ca622dd79d3077b84327e06bc31ffac6e1 SHA256 dfdc105e35ce0d9eb23165c5553a5638930ae218cf8b4c12c061a7d343d80f17
+EBUILD fortune-mod-zh-joke-0.1.ebuild 644 RMD160 490127f09f4578500de8fcd08ce24aa4fb37380e SHA1 b8db720102929a5440e7cba5f23b8e91a582101c SHA256 0f665945dab612419342f9ddcc1cb824543fb3313dd95e0e341dd03dd299a562
+MD5 a567b07acf535007122585abf38bb85b fortune-mod-zh-joke-0.1.ebuild 644
+RMD160 490127f09f4578500de8fcd08ce24aa4fb37380e fortune-mod-zh-joke-0.1.ebuild 644
+SHA256 0f665945dab612419342f9ddcc1cb824543fb3313dd95e0e341dd03dd299a562 fortune-mod-zh-joke-0.1.ebuild 644
+MD5 5d0e285ebd0d64a5fa67f85ec7a5b74f files/digest-fortune-mod-zh-joke-0.1 271
+RMD160 ea34d9d16d3ef863a7daca008dc783f4614a33e9 files/digest-fortune-mod-zh-joke-0.1 271
+SHA256 a579af0a34ab7866eb4c2f4da1c88bf2ef07830d7488eaab5910f4561213ccf8 files/digest-fortune-mod-zh-joke-0.1 271
