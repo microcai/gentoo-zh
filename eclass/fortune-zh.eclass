@@ -46,8 +46,6 @@ fortune-zh_pkg_postinst() {
 
 fortune-zh_pkg_postrm() {
 	einfo "Removing ${NAME} from $CONF"
-	TMPFILE=`mktemp /tmp/${CONF##*/}.XXXXXXXXXX` || die "mktemp failed"
-	grep -v ${NAME} $CONF > ${TMPFILE}
-	mv ${TMPFILE} $CONF
+	sed -i "/${NAME}/d" $CONF
 	chmod 644 $CONF
 }
