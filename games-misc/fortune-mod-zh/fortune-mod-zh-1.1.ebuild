@@ -19,3 +19,4 @@ src_install() {
 	dosym fortune-zh /usr/bin/fortune-sc
 	dosym fortune-zh /usr/bin/fortune-tc
 }
+
