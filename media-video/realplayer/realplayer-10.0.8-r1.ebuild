@@ -6,11 +6,12 @@ inherit nsplugins eutils
 MY_SOURCE=realplay-${PV}-source
 DESCRIPTION="Real Media Player"
 HOMEPAGE="http://www.helixplayer.org/"
-SRC_URI="https://helixcommunity.org/frs/download.php/2153/realplay-10.0.8-source.tar.bz2"
+SRC_URI="https://helixcommunity.org/frs/download.php/2153/realplay-10.0.8-source.tar.bz2
+	amd64? ( mirror://gentoo/realplay_gtk_current-20060824-dist_linux-2.6-glibc23-amd64.zip )"
 LICENSE="GPL-2"
 SLOT="0"
 # -sparc -amd64: 1.0_beta1: build fails on both platforms... --eradicator
-KEYWORDS="~x86 -sparc -amd64"
+KEYWORDS="-* ~x86 ~amd64 -sparc"
 IUSE="mozilla nptl cjk alsa"
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/pango-1.2
@@ -36,8 +37,12 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	
-	# FIXME: only works for linux-x86, amd64 and sparc need a extra file.
-	cp -ru distribution/linux-2.2-libc6-gcc32-i586/* .
+	if use x86; then
+		cp -ru distribution/linux-2.2-libc6-gcc32-i586/* .
+	elif use amd64; then
+		cp -ru ../distribution .
+		cp -ru distribution/linux-2.6-glibc23-amd64/* .
+	fi
 
 	#adjust strange naming for helixplayer tarball
 	epatch ${FILESDIR}/installer-naming.patch
