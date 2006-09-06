@@ -4,10 +4,10 @@
 inherit nsplugins eutils
 
 MY_SOURCE=realplay-${PV}-source
-DESCRIPTION="Real Media Player"
+DESCRIPTION="Real Media Player built from source"
 HOMEPAGE="http://www.helixplayer.org/"
 SRC_URI="https://helixcommunity.org/frs/download.php/2153/realplay-10.0.8-source.tar.bz2
-	amd64? ( mirror://gentoo/realplay_gtk_current-20060824-dist_linux-2.6-glibc23-amd64.zip )"
+	amd64? ( http://gentoo-china-overlay.googlecode.com/svn/trunk/distfiles/realplay_gtk_current-20060824-dist_linux-2.6-glibc23-amd64.zip )"
 LICENSE="GPL-2"
 SLOT="0"
 # -sparc -amd64: 1.0_beta1: build fails on both platforms... --eradicator
