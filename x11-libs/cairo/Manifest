@@ -1,0 +1,12 @@
+AUX cairo-1.2.4-lcd-cleartype-like.diff 7244 RMD160 e50d5bf17cbead688a8b808a78fe4104c09af52e SHA1 f63131fd75bb496db59e3ce6bc755bbfb70baacb SHA256 4926d20d2b6b5071a5bf9ee9a12a36fef69510ebebd717c1dab151fe650f173a
+MD5 de7cccfcca8e686bca039a985436548e files/cairo-1.2.4-lcd-cleartype-like.diff 7244
+RMD160 e50d5bf17cbead688a8b808a78fe4104c09af52e files/cairo-1.2.4-lcd-cleartype-like.diff 7244
+SHA256 4926d20d2b6b5071a5bf9ee9a12a36fef69510ebebd717c1dab151fe650f173a files/cairo-1.2.4-lcd-cleartype-like.diff 7244
+DIST cairo-1.2.4.tar.gz 2882781 RMD160 dee558b7489aa089de6963d909a8352725e10bdd SHA1 5520b771c8b85acea78fa56fc4c39b4dca6bcc7c SHA256 c1580ca951b2f57c4f8b34549997854bc48dbaf036ca1ca6c017c03db3504ddb
+EBUILD cairo-1.2.4.ebuild 1949 RMD160 50732b4a0caf4ebd067c9f44acc96092def0ba15 SHA1 5f7ad7af57b415c304764b8f2fc4e6460843f1fe SHA256 bf2cd9151ef9f9d0f0967e1d015d703fdb3ce68114c9c115e1545bfad440fb63
+MD5 62119d941abb9e9942941de3f6c72541 cairo-1.2.4.ebuild 1949
+RMD160 50732b4a0caf4ebd067c9f44acc96092def0ba15 cairo-1.2.4.ebuild 1949
+SHA256 bf2cd9151ef9f9d0f0967e1d015d703fdb3ce68114c9c115e1545bfad440fb63 cairo-1.2.4.ebuild 1949
+MD5 ad8f70972aca60be3e0459b112265b0e files/digest-cairo-1.2.4 238
+RMD160 72f3842866c3dba95a661b08a00010b85945244b files/digest-cairo-1.2.4 238
+SHA256 b04bf38f8f8c64f7e1256aa588f200c2f5619f0710745279beac16b7955eb2fe files/digest-cairo-1.2.4 238
