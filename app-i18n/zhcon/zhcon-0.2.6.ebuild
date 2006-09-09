@@ -33,4 +33,6 @@ src_unpack() {
 
 src_install() {
 	make DESTDIR=${D} install || die
+	dodoc AUTHORS ChangeLog README NEWS TODO THANKS
+	dodoc ABOUT-NLS README.BSD README.gpm README.utf8
 }
