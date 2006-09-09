@@ -20,6 +20,8 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig"
 
+RESTRICT="primaryuri"
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"

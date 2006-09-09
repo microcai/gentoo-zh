@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 	media-libs/libtheora
 	media-libs/libogg"
 
-RESTRICT="fetch"
+RESTRICT="primaryuri"
 
 # Had to change the source directory because of this somewhat
 # non-standard naming convention

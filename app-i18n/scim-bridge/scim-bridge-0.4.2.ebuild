@@ -11,14 +11,19 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug"
+IUSE="debug agent gtk2 qt3 doc"
 
 RDEPEND=">=app-i18n/scim-1.4.2
-	virtual/libintl"
+	virtual/libintl
+	gtk2? ( =x11-libs/gtk+-2* )
+	qt3? ( =x11-libs/qt-3.3* )
+	doc? ( app-doc/doxygen )"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig"
+
+RESTRICT="primaryuri"
 
 src_unpack() {
 	unpack ${A}
@@ -26,11 +31,27 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# due to the buggy configure script, "--enable-agent" disable the
+	# feature in actual , so I must handle them ugly.
+	DISABLE=""
+	use agent || DISABLE="$DISABLE --disable-agent "
+	use gtk2 || DISABLE="$DISABLE --disable-gtk2-immodule "
+	use qt3 || DISABLE="$DISABLE --disable-qt3-immodule "
+	use doc || DISABLE="$DISABLE --disable-documents "
+	#use test || DISABLE="$DISABLE --disable-tests"
+
+	# "--disable-debug" will enable debug
+	ENABLE=""
+	use debug && ENABLE="$ENABLE --enable-debug "
+
 	econf \
-		$(use_enable debug scim-debug) \
+		$ENABLE \
+		$DISABLE \
 		--disable-static \
 		--enable-shared \
 		--disable-dependency-tracking || die "econf failed"
+
 	emake || die "make failed."
 }
 
