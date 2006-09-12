@@ -1,8 +1,8 @@
-DIST latex-unicode-font-utils-0.3.tbz2 22388 RMD160 bf5480d52738a6be7472406a30a9cc742ce567dc SHA1 091bedf05484715081f0b9edadb878ae3e2d8053 SHA256 6b04d4a6290da4e330972fd378e1120ff4c7c26be6f1d14fa5fad783b54bd1ab
-EBUILD latex-unicode-font-utils-0.3.ebuild 1192 RMD160 43b3f0efdc8d9b5d299d9fe2db98e11f4c2eed54 SHA1 08d6ac52d51130df07497c9ed4ed67ec1c4eda7a SHA256 27a5e27674670bb805ea7e08b05ac7ca9e4abab22703e0cee2948bd87123ec9e
-MD5 fe33e3a1d1441bf9d8cde251fef56585 latex-unicode-font-utils-0.3.ebuild 1192
-RMD160 43b3f0efdc8d9b5d299d9fe2db98e11f4c2eed54 latex-unicode-font-utils-0.3.ebuild 1192
-SHA256 27a5e27674670bb805ea7e08b05ac7ca9e4abab22703e0cee2948bd87123ec9e latex-unicode-font-utils-0.3.ebuild 1192
-MD5 2295d40ab5d143465d26beadd092d7d4 files/digest-latex-unicode-font-utils-0.3 277
-RMD160 85a58d040c9278e9bb8965e5df9ac571393ebd48 files/digest-latex-unicode-font-utils-0.3 277
-SHA256 1f877b0845707db19c8a27389d809864d217ed2c1c654057c3525557c0915031 files/digest-latex-unicode-font-utils-0.3 277
+DIST latex-unicode-font-utils-0.3.tbz2 22424 RMD160 f9edfc02fb07b0ab15c86a2617c2da0dfb0c4201 SHA1 2393f7ce626bd07e4965c5d4616d8a43c837fbc6 SHA256 157049c863905982aef3340013d8e7144ab4791659c5a02739e973951a434591
+EBUILD latex-unicode-font-utils-0.3.ebuild 1211 RMD160 d9e80f0440e3a61c003aa1b4d9426cef75208267 SHA1 ecbe0b9ef53a4f50e0c3c54ada9adefd92d82a66 SHA256 fe377dc485e0ca2848a1364bb13bd65130df53b39447497732d2e14741736a01
+MD5 44609fceee6408834aace7de63141e07 latex-unicode-font-utils-0.3.ebuild 1211
+RMD160 d9e80f0440e3a61c003aa1b4d9426cef75208267 latex-unicode-font-utils-0.3.ebuild 1211
+SHA256 fe377dc485e0ca2848a1364bb13bd65130df53b39447497732d2e14741736a01 latex-unicode-font-utils-0.3.ebuild 1211
+MD5 e71bbc7f8252d74f729b9dcf7ac3d23e files/digest-latex-unicode-font-utils-0.3 277
+RMD160 972b3400f8556fb92ce0ecf5b887923817eadcf4 files/digest-latex-unicode-font-utils-0.3 277
+SHA256 6c69ff81715824ca6c4392471132cb94c759ecf04629ce9cd9a0fd3d69e7e4a8 files/digest-latex-unicode-font-utils-0.3 277

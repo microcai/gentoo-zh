@@ -11,9 +11,9 @@ SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND="app-text/tetex
-		app-text/dvipdfmx
+		>=app-text/dvipdfmx-20050201
 		app-text/t1utils
-		app-text/ttf2pt1
+		>=app-text/ttf2pt1-3.4.4
 		dev-tex/cjk-latex"
 RDEPEND="${DEPEND}"
 
