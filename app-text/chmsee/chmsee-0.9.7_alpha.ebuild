@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}"
 
 src_compile() {
 	cd ${WORKDIR}/${PN}-0.9.7-alpha
-    econf ${use_enable css} || die "configure failed"
+    econf || die "configure failed"
     emake || die "make failed"
 }
 
