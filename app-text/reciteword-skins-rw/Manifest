@@ -1,0 +1,8 @@
+DIST reciteword-skins-rw-0.8.2.tar.bz2 6651402 RMD160 f7b04cf59d8aee9e1e632fa46e43ec1dcdbc287b SHA1 bf5cad53c30de33a0d09b23c6fec3c5cef2721e7 SHA256 1d27eca79d71fd3d2f6aebbc3b786e423a624dbb48e6e22b3f8a7e733d5ac627
+EBUILD reciteword-skins-rw-0.8.2.ebuild 510 RMD160 19e3a28e902c925d1da3284a97bfcff2ddadf929 SHA1 5d271e17d09d88cd8a98a4ea0c33c33b72f78b3e SHA256 cb51947c429fc3dacf6f7ee969981855f4d5aaebb9e6a3cbe334c28afa1b93f4
+MD5 3640d4eb779483e45ebecea2d4d80658 reciteword-skins-rw-0.8.2.ebuild 510
+RMD160 19e3a28e902c925d1da3284a97bfcff2ddadf929 reciteword-skins-rw-0.8.2.ebuild 510
+SHA256 cb51947c429fc3dacf6f7ee969981855f4d5aaebb9e6a3cbe334c28afa1b93f4 reciteword-skins-rw-0.8.2.ebuild 510
+MD5 85910400da62e26b0d07def395025653 files/digest-reciteword-skins-rw-0.8.2 283
+RMD160 11fd99313c24394c37afb4a9508a2665c7fb091f files/digest-reciteword-skins-rw-0.8.2 283
+SHA256 fe1be33e81e5309eba1b65626ebe0c4651c4668f31a041ef0bc75bdfd58454ce files/digest-reciteword-skins-rw-0.8.2 283

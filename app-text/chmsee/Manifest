@@ -1,0 +1,12 @@
+AUX chmsee-0.9.5-strip-flags.patch 1254 RMD160 491c6b5b9ffe33901ef57800bba188107c000b53 SHA1 ebf7193fb9b04211da21695bffae7c825bf6c9ad SHA256 31e515f117ca936195e40c78ed44e00cff39fa9b30abf6cc7ffe812ca395da89
+MD5 7dd9749e1b39c18fbd105f595568ce25 files/chmsee-0.9.5-strip-flags.patch 1254
+RMD160 491c6b5b9ffe33901ef57800bba188107c000b53 files/chmsee-0.9.5-strip-flags.patch 1254
+SHA256 31e515f117ca936195e40c78ed44e00cff39fa9b30abf6cc7ffe812ca395da89 files/chmsee-0.9.5-strip-flags.patch 1254
+DIST chmsee-0.9.6.tar.bz2 338636 RMD160 f2386974cc8ea0fd9fe36eb68c6c7ed765116953 SHA1 252e02126e1e12d9afadfcc0a1e375159942ad3e SHA256 631da20bc3db0063a33d4717609730840f4307999e839191cde3f2e38bf68599
+EBUILD chmsee-0.9.6.ebuild 662 RMD160 f4dcdd6fe9bc00ed11d5c08ffcbbcb2f38127fcc SHA1 516a30cde76e9fdee4314d88a808d02d603ffc03 SHA256 ac65f09bb235d8750fd8cf157609cd077cf7f682b2c8707917fa3080610e972d
+MD5 e51dbadf72e0bbe0f17f669ceda7d779 chmsee-0.9.6.ebuild 662
+RMD160 f4dcdd6fe9bc00ed11d5c08ffcbbcb2f38127fcc chmsee-0.9.6.ebuild 662
+SHA256 ac65f09bb235d8750fd8cf157609cd077cf7f682b2c8707917fa3080610e972d chmsee-0.9.6.ebuild 662
+MD5 1efebc72f57936e12f1d33aecab76719 files/digest-chmsee-0.9.6 241
+RMD160 2d04f5cbe5eeaec8653294eea2d59aca59c58b3e files/digest-chmsee-0.9.6 241
+SHA256 c4345cacd6b11cb5621dff47f125044ddf48c7cbd7c1918e36ef56f724dd30d4 files/digest-chmsee-0.9.6 241

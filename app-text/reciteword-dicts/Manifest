@@ -1,0 +1,8 @@
+DIST reciteword-dicts-0.8.2.tar.bz2 2430470 RMD160 3e891f5fff6551cdd793ff5f1f75f666dc2ed092 SHA1 fd86df4edc59c2cc3ade74c5de4ee1ba60568443 SHA256 9b245749501b52e199d46660972d02da5e2ae800a462045fb75dff6d54f96eec
+EBUILD reciteword-dicts-0.8.2.ebuild 504 RMD160 998c34998d142890b9c2744d13048fc2d7201189 SHA1 373ed0b66c22d27d9bac4a05d94386c8c63112c3 SHA256 68f1f8270816ae5d91deb0c81126bcbfbfa11ccc0c63f7ef5d52c0053f4ccebe
+MD5 7b9cd38db60ccc36b9c932904740b971 reciteword-dicts-0.8.2.ebuild 504
+RMD160 998c34998d142890b9c2744d13048fc2d7201189 reciteword-dicts-0.8.2.ebuild 504
+SHA256 68f1f8270816ae5d91deb0c81126bcbfbfa11ccc0c63f7ef5d52c0053f4ccebe reciteword-dicts-0.8.2.ebuild 504
+MD5 a0e682dd24d9a4163174da2e37c440ed files/digest-reciteword-dicts-0.8.2 274
+RMD160 87c6ffd00a99cc6d24dca37feb8f7a6ecbaac0d7 files/digest-reciteword-dicts-0.8.2 274
+SHA256 f23af378db37da6726d55ea74da8d95782a9f4daa409e589ec30b732e75478d2 files/digest-reciteword-dicts-0.8.2 274

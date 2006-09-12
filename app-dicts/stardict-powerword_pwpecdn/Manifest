@@ -1,0 +1,8 @@
+DIST stardict-powerword_pwpecdn-2.4.2.tar.bz2 1508843 RMD160 e74462c8733a4a0b39128e3b231754fca974e4e7 SHA1 bd674fd25a7f785d7a453e17aa46bb170941ecd0 SHA256 7423f30840f6fcfac55d7cf7a4a035d3c44e540b929cd20e8e718fe2a0e372cd
+EBUILD stardict-powerword_pwpecdn-2.4.2.ebuild 367 RMD160 2188f6d6e81942532e087008387ba882afc04625 SHA1 0503c2358a9d711a9ceb0f54072f578958187d2a SHA256 fed9c0a53b8d75bb19012382b805b84eb47ed4868a1ea6fc04eaf76a1c954508
+MD5 e05ac489903978b163338dc8655ba25f stardict-powerword_pwpecdn-2.4.2.ebuild 367
+RMD160 2188f6d6e81942532e087008387ba882afc04625 stardict-powerword_pwpecdn-2.4.2.ebuild 367
+SHA256 fed9c0a53b8d75bb19012382b805b84eb47ed4868a1ea6fc04eaf76a1c954508 stardict-powerword_pwpecdn-2.4.2.ebuild 367
+MD5 c396048ce70ffcdb162c1f53a9dc6c42 files/digest-stardict-powerword_pwpecdn-2.4.2 304
+RMD160 e630dbfab99883f5125b76fa3fb1c2298c4c9bf8 files/digest-stardict-powerword_pwpecdn-2.4.2 304
+SHA256 9fc60d21426c2727816af29129e252467a294aeac93ef6350ffa53df1e47f8f5 files/digest-stardict-powerword_pwpecdn-2.4.2 304
