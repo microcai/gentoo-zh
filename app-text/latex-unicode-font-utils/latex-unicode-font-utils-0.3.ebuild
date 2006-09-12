@@ -9,7 +9,6 @@ SRC_URI="http://lidaibin.googlepages.com/${P}.tbz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="local"
 
 DEPEND="app-text/tetex
 		app-text/dvipdfmx
@@ -26,13 +25,10 @@ src_unpack() {
 
 src_install() {
 	cd ${WORKDIR}
-	if use local; then
-		dobin texmf-local/cvtfont.sh
-		dobin texmf-local/instfonts.sh
-	else
-		dobin texmf-home/cvtfont.sh
-		dobin texmf-home/instfonts.sh
-	fi
+	dobin cvtfont.local
+	dobin instfonts.local
+	dobin cvtfont.home
+	dobin instfonts.home
 	insinto /etc
 	doins font_maps.dat
 	insinto /usr/share/${PN}
@@ -45,8 +41,11 @@ pkg_postinst() {
 	einfo
 	einfo "Please modify /etc/font_maps.dat before run instfonts.sh."
 	einfo
-	einfo "Usage: instfonts.sh <font-directory>"
-	einfo "Example: instfonts.sh /usr/share/fonts/zh_CN"
+	einfo "Usage: instfonts.<local/home> <font-directory>"
+	einfo "Example: instfonts.<local/home> /usr/share/fonts/zh_CN"
+	einfo
+	einfo "instfonts.local generate configure files to /usr/local/share/texmf"
+	einfo "instfonts.home generate configure files to \$HOME/texmf"
 	einfo
 	einfo "How to make a pdf: "
 	einfo "latex xxx.tex"
