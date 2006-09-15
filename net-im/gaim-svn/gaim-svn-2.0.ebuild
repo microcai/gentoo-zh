@@ -122,7 +122,7 @@ src_compile() {
 			myconf="${myconf} --x-includes=/usr/include/X11"
 	fi
 
-	econf \
+	econf --disable-schemas-install \
 		$(use_enable nls) \
 		$(use_enable perl) \
 		$(use_enable spell gtkspell) \
@@ -145,5 +145,14 @@ src_compile() {
 src_install() {
 	make install DESTDIR=${D} || die "Install failed"
 	use perl && fixlocalpod
-	dodoc ABOUT-NLS AUTHORS COPYING HACKING INSTALL NEWS PROGRAMMING_NOTES README ChangeLog VERSION
+	dodoc AUTHORS COPYING HACKING INSTALL NEWS PROGRAMMING_NOTES README ChangeLog
+}
+
+pkg_postinst() {
+	local entries="/etc/gconf/schemas/gaim.schemas"
+	if [ -e "$entries" ]; then
+		einfo "setting gaim gconf defaults..."
+		GCONF_CONFIG_SOURCE=`${ROOT}/usr/bin/gconftool-2 --get-default-source` \
+		${ROOT}/usr/bin/gconftool-2 --makefile-install-rule ${entries}
+	fi
 }
