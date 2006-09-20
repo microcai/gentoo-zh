@@ -1,5 +1,6 @@
 DIST chmsee-0.9.6.tar.bz2 338636 RMD160 f2386974cc8ea0fd9fe36eb68c6c7ed765116953 SHA1 252e02126e1e12d9afadfcc0a1e375159942ad3e SHA256 631da20bc3db0063a33d4717609730840f4307999e839191cde3f2e38bf68599
 DIST chmsee-0.9.7-alpha.tar.gz 455776 RMD160 f10aa61551d20d18021cdaef0f98add3bcb2366d SHA1 26b3a0fbf4bc50c88485c71996f844f1709d629c SHA256 bda4adcc15796e5d3e5c5f4da96bc217bad9c351db81ca613882b170f449ff13
+DIST chmsee-1.0.0-alpha.tar.gz 463202 RMD160 cd621ff0568c06ed6f0b59aa651ed8eb555a2609 SHA1 4e3a6509645ad61227d08bfc9352d252d6bb728c SHA256 d6fa1108897296ea6d244602d110bcd1817f2c15d68fc673c67532ee3b1d4d7a
 EBUILD chmsee-0.9.6.ebuild 662 RMD160 f4dcdd6fe9bc00ed11d5c08ffcbbcb2f38127fcc SHA1 516a30cde76e9fdee4314d88a808d02d603ffc03 SHA256 ac65f09bb235d8750fd8cf157609cd077cf7f682b2c8707917fa3080610e972d
 MD5 e51dbadf72e0bbe0f17f669ceda7d779 chmsee-0.9.6.ebuild 662
 RMD160 f4dcdd6fe9bc00ed11d5c08ffcbbcb2f38127fcc chmsee-0.9.6.ebuild 662
@@ -8,9 +9,16 @@ EBUILD chmsee-0.9.7_alpha.ebuild 773 RMD160 8dd63adae0b780666c1abcd07181ad96272a
 MD5 8560ac0958885c63f691ae971c6b9ffc chmsee-0.9.7_alpha.ebuild 773
 RMD160 8dd63adae0b780666c1abcd07181ad96272aa5ff chmsee-0.9.7_alpha.ebuild 773
 SHA256 12ac4cded9ff7fd3e091c548287770ba9d472712f6d0754a96f38e0da56fbc72 chmsee-0.9.7_alpha.ebuild 773
+EBUILD chmsee-1.0.0_alpha.ebuild 765 RMD160 e84691a54dac0c1f7292e96dfed1e0fb15d92077 SHA1 9d3e415fcecfd3e928bcec4ddfe55c9fbd711435 SHA256 8774d5734ff6666b456a2db7950a2f503f1298e94ed4792f7bf7333b99b58dcf
+MD5 79a07fa986a1d2881bce68f54d60c5be chmsee-1.0.0_alpha.ebuild 765
+RMD160 e84691a54dac0c1f7292e96dfed1e0fb15d92077 chmsee-1.0.0_alpha.ebuild 765
+SHA256 8774d5734ff6666b456a2db7950a2f503f1298e94ed4792f7bf7333b99b58dcf chmsee-1.0.0_alpha.ebuild 765
 MD5 1efebc72f57936e12f1d33aecab76719 files/digest-chmsee-0.9.6 241
 RMD160 2d04f5cbe5eeaec8653294eea2d59aca59c58b3e files/digest-chmsee-0.9.6 241
 SHA256 c4345cacd6b11cb5621dff47f125044ddf48c7cbd7c1918e36ef56f724dd30d4 files/digest-chmsee-0.9.6 241
 MD5 dcce9a31dcb254ebbab4d1de1bd93b5d files/digest-chmsee-0.9.7_alpha 256
 RMD160 313abfbbd8dbcf0e7c39af3624ff954cd7812cd6 files/digest-chmsee-0.9.7_alpha 256
 SHA256 7919633f2e3f64aca46fe7208664f0bd1f3f0d71aa17d785fe79a2242ec9b002 files/digest-chmsee-0.9.7_alpha 256
+MD5 e72bda9e7d7cda34b462b6231a72e547 files/digest-chmsee-1.0.0_alpha 256
+RMD160 fc51f9153d23aa5b17ab2f5e585efd60a33f2ffe files/digest-chmsee-1.0.0_alpha 256
+SHA256 328905034fafd627f5e8d7a183d0cf78a3d6642dbed3a0b7e6b1599dda1b21bd files/digest-chmsee-1.0.0_alpha 256
