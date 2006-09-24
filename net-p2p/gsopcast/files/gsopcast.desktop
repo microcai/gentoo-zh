@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Exec=gsopcast
+Terminal=false
+Type=Application
+Icon=gnome-term-night.png
+Categories=Application;Network;
+Name=gsopcast
+Name[zh_CN]=网络电视
