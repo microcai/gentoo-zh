@@ -1,0 +1,120 @@
+diff -uNr multiget/mainframe.cpp multiget_new/mainframe.cpp
+--- multiget/mainframe.cpp	2006-09-24 21:30:25.000000000 +0800
++++ multiget_new/mainframe.cpp	2006-09-25 23:55:41.000000000 +0800
+@@ -1225,7 +1225,7 @@
+ 	//check url in task list first
+ //	vector<_TaskAttr>::iterator it;
+ 	if(IsUrlExist(url)) {
+-		wxMessageBox("url exists");
++	  wxMessageBox(wxT("url exists"));
+ 	}
+ 	
+ 	//no same url found,add new task
+@@ -2209,7 +2209,7 @@
+ 	
+ 	if(IsUrlExist(string(url.mb_str(wxConvLocal))))
+ 	{
+-		wxMessageBox("url exists");
++	  wxMessageBox(wxT("url exists"));
+ 		return;
+ 	}
+ 	
+@@ -2561,7 +2561,7 @@
+ 
+ void MainFrame::RemoveProxy(wxString name)
+ {
+-	std::string na=name.mb_str( wxConvLocal );
++  std::string na=static_cast<std::string>(name.mb_str( wxConvLocal ));
+ 	
+ 	std::vector<_ProxyAttr>::iterator it;
+ 	for(it=m_AllProxyList.begin();it!=m_AllProxyList.end();it++)
+@@ -2576,7 +2576,7 @@
+ bool MainFrame::AddProxy(
+ int type,wxString name,wxString server,int port,wxString user,wxString pass)
+ {
+-	std::string na=name.mb_str( wxConvLocal );
++  std::string na=static_cast<std::string>(name.mb_str( wxConvLocal ));
+ 	
+ 	std::vector<_ProxyAttr>::iterator it;
+ 	for(it=m_AllProxyList.begin();it!=m_AllProxyList.end();it++)
+diff -uNr multiget/mgapp.cpp multiget_new/mgapp.cpp
+--- multiget/mgapp.cpp	2006-09-23 21:15:36.000000000 +0800
++++ multiget_new/mgapp.cpp	2006-09-25 23:54:01.000000000 +0800
+@@ -103,7 +103,7 @@
+ //single check
+     //const wxString name = wxString::Format("MultiGet-%s", wxGetUserId().c_str());
+ 	wxString name;
+-	name.Printf("MultiGet-%s", wxGetUserId().c_str());
++	  name.Printf(wxT("MultiGet-%s"), wxGetUserId().c_str());
+     m_Checker = new wxSingleInstanceChecker(name);
+     if ( m_Checker->IsAnotherRunning() )
+     {
+diff -uNr multiget/mgnewtaskdlg.cpp multiget_new/mgnewtaskdlg.cpp
+--- multiget/mgnewtaskdlg.cpp	2006-09-23 21:18:01.000000000 +0800
++++ multiget_new/mgnewtaskdlg.cpp	2006-09-25 23:57:05.000000000 +0800
+@@ -424,5 +424,5 @@
+ //如果user和pass不为空，要改写url返回
+ std::string CNewTaskDlg::GetUrl()
+ {
+-	return m_sUrl.mb_str(wxConvLocal);
++  return static_cast<std::string>(m_sUrl.mb_str(wxConvLocal));
+ }
+diff -uNr multiget/mgstring.cpp multiget_new/mgstring.cpp
+--- multiget/mgstring.cpp	2006-09-23 17:55:37.000000000 +0800
++++ multiget_new/mgstring.cpp	2006-09-26 00:12:09.000000000 +0800
+@@ -91,8 +91,8 @@
+ wxString CMgString::GetWxStr(_MGSTRID id) {
+ 	if(ZH_CN_UTF_8==m_Lang || EN_US_UTF_8==m_Lang)
+ 	{
+-		//wxString wxs(m_SA[m_Lang][id].c_str(),wxConvLocal);
+-		wxString wxs(m_SA[m_Lang][id].c_str());
++		wxString wxs(m_SA[m_Lang][id].c_str(),wxConvLocal);
++		//wxString wxs(m_SA[m_Lang][id].c_str());
+ 		return wxs;		
+ 	}
+ 	else if(ZH_CN_18030==m_Lang)
+@@ -105,7 +105,7 @@
+ 		wxCSConv tomb(wxT("cp936"));
+ 		char bufmb[512];
+ 		len=tomb.WC2MB(bufmb,bufuc,512);
+-		wxString wxs(bufmb);
++		wxString wxs(bufmb, tomb);
+ 		return wxs;			
+ 	}		
+ 	else if(ZH_TW_BIG5==m_Lang)
+@@ -118,8 +118,7 @@
+ 		wxCSConv tomb(wxT("cp950"));
+ 		char bufmb[512];
+ 		len=tomb.WC2MB(bufmb,bufuc,512);
+-		std::string str(bufmb);
+-		return str;		
++		return wxString((const char *)bufmb, tomb);
+ 	}
+ 	
+ 	//other lang goes here
+diff -uNr multiget/proxydlg.cpp multiget_new/proxydlg.cpp
+--- multiget/proxydlg.cpp	2006-09-20 15:33:06.000000000 +0800
++++ multiget_new/proxydlg.cpp	2006-09-26 00:09:57.000000000 +0800
+@@ -198,7 +198,7 @@
+ 	{
+ 		_ProxyAttr px=m_pParent->GetProxy(i);
+ 		wxString x1,x2,x3,x4,x5,x6;
+-		x1=wxString(px.sName.c_str());
++		x1=wxString(px.sName.c_str(), wxConvLocal);
+ 		switch(px.nType)
+ 		{
+ 			case 0:
+@@ -224,10 +224,10 @@
+ 				break;
+ 		}
+ 		
+-		x3=wxString(px.sServer.c_str());
++		x3=wxString(px.sServer.c_str(), wxConvLocal);
+ 		x4.Printf(wxT("%d"),px.nPort);
+-		x5=wxString(px.sUser);
+-		x6=wxString(px.sPass);
++		x5=wxString(px.sUser.c_str(), wxConvLocal);
++		x6=wxString(px.sPass.c_str(), wxConvLocal);
+ 		AddInfo(proxylist,x1,x2,x3,x4,x5,x6);		
+ 		
+ 	}	

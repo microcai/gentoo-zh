@@ -87,18 +87,18 @@ src_compile() {
 
 	local myconf
 
-	if ! use bonjour ; then
+	if use bonjour ; then
 		myconf="${myconf} --with-howl-includes=."
 		myconf="${myconf} --with-howl-libs=."
 	fi
 
-	if ! use silc; then
+	if use silc; then
 		einfo "Disabling SILC protocol"
 		myconf="${myconf} --with-silc-includes=."
 		myconf="${myconf} --with-silc-libs=."
 	fi
 
-	if ! use gadu ; then
+	if use gadu ; then
 		myconf="${myconf} --with-gadu-includes=."
 		myconf="${myconf} --with-gadu-libs=."
 	fi
