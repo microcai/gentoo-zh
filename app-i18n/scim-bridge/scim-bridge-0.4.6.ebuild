@@ -5,13 +5,12 @@ inherit eutils
 
 DESCRIPTION="Scim-bridge is yet another IM client of SCIM"
 HOMEPAGE="http://www.scim-im.org/projects/scim_bridge"
-SRC_URI="mirror://sourceforge/scim/${P}.tar.gz
-	http://freedesktop.org/~scim/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug agent gtk2 qt3 doc"
+IUSE="gtk2 qt3 doc debug no-agent "
 
 RDEPEND=">=app-i18n/scim-1.4.2
 	virtual/libintl
@@ -31,12 +30,15 @@ src_unpack() {
 }
 
 src_compile() {
+	USE_AGENT="--enable-agent"
+	use no-agent &&	USE_AGENT="--disable-agent"
+
 	econf \
-		$(use_enable agent agent) \
 		$(use_enable gtk2 gtk2-immodule) \
 		$(use_enable qt3 qt3-immodule) \
 		$(use_enable doc documents) \
 		$(use_enable debug debug) \
+		${USE_AGENT} \
 		--disable-static \
 		--enable-shared \
 		--disable-dependency-tracking || die "econf failed"
@@ -51,9 +53,23 @@ src_install() {
 }
 
 pkg_postinst() {
+	if use gtk2 ; then 
+		einfo "Updating gtk-immodules conf in ${ROOT}/etc/gtk-2.0/gtk.immodules ..."
+		gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
+		einfo "Done!"
+	fi
+
 	einfo
 	einfo "After you emerged ${PN}, use right click to switch immodules for GTK2."
 	einfo "If you would like to use ${PN} as default instead of XIM, set"
 	einfo "	% export GTK_IM_MODULE=scim-bridge"
 	einfo
+}
+
+pkg_postrm() {
+	if use gtk2 ; then
+		einfo "Updating gtk-immodules conf in ${ROOT}/etc/gtk-2.0/gtk.immodules ..."
+		gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
+		einfo "Done!"
+	fi
 }
