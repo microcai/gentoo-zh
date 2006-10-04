@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
-DEPEND="x11-libs/wxGTK"
+DEPEND="x11-libs/wxGTK !net-misc/multiget-bin"
 RDEPEND="${DEPEND}"
 
 RESTRICT="primaryuri"

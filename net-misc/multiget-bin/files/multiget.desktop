@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Exec=MultiGet
+Terminal=false
+Type=Application
+Icon=multiget.png
+Categories=Application;Network;
+Name=MultiGet
+Name[zh_CN]=MultiGet下载工具
