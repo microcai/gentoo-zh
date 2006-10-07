@@ -16,7 +16,6 @@ KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="css"
 RDEPEND=">=gnome-base/libglade-2.0
 		 >=x11-libs/gtk+-2.8
-		 net-libs/gecko-sdk
 		 app-doc/chmlib
 		 dev-libs/openssl
 		 "

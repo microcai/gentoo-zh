@@ -24,7 +24,7 @@ src_unpack() {
 }
 
 src_install() {
-	cd ${WORKDIR}
+	cd ${S}
 	dobin cvtfont.local
 	dobin instfonts.local
 	dobin cvtfont.home
@@ -39,7 +39,7 @@ src_install() {
 pkg_postinst() {
 	einfo
 	einfo
-	einfo "Please modify /etc/font_maps.dat before run instfonts.sh."
+	einfo "Please modify /etc/font_maps.dat before run instfonts.*."
 	einfo
 	einfo "Usage: instfonts.<local/home> <font-directory>"
 	einfo "Example: instfonts.<local/home> /usr/share/fonts/zh_CN"

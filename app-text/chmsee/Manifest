@@ -9,10 +9,10 @@ EBUILD chmsee-0.9.7_alpha.ebuild 773 RMD160 8dd63adae0b780666c1abcd07181ad96272a
 MD5 8560ac0958885c63f691ae971c6b9ffc chmsee-0.9.7_alpha.ebuild 773
 RMD160 8dd63adae0b780666c1abcd07181ad96272aa5ff chmsee-0.9.7_alpha.ebuild 773
 SHA256 12ac4cded9ff7fd3e091c548287770ba9d472712f6d0754a96f38e0da56fbc72 chmsee-0.9.7_alpha.ebuild 773
-EBUILD chmsee-1.0.0_alpha.ebuild 765 RMD160 e84691a54dac0c1f7292e96dfed1e0fb15d92077 SHA1 9d3e415fcecfd3e928bcec4ddfe55c9fbd711435 SHA256 8774d5734ff6666b456a2db7950a2f503f1298e94ed4792f7bf7333b99b58dcf
-MD5 79a07fa986a1d2881bce68f54d60c5be chmsee-1.0.0_alpha.ebuild 765
-RMD160 e84691a54dac0c1f7292e96dfed1e0fb15d92077 chmsee-1.0.0_alpha.ebuild 765
-SHA256 8774d5734ff6666b456a2db7950a2f503f1298e94ed4792f7bf7333b99b58dcf chmsee-1.0.0_alpha.ebuild 765
+EBUILD chmsee-1.0.0_alpha.ebuild 743 RMD160 02f6f36b914e4ed1640fd5392a59504ba5f91f14 SHA1 d656ffc1a227de579ffb186f1c31d2f97b29ba8c SHA256 d9cafc5770222b084ab57b0b8b15a35b2ac90f9a69ac32c8c9a50a036e5e2ea0
+MD5 6aa6b94fc04ed0d40126d26c6d13a052 chmsee-1.0.0_alpha.ebuild 743
+RMD160 02f6f36b914e4ed1640fd5392a59504ba5f91f14 chmsee-1.0.0_alpha.ebuild 743
+SHA256 d9cafc5770222b084ab57b0b8b15a35b2ac90f9a69ac32c8c9a50a036e5e2ea0 chmsee-1.0.0_alpha.ebuild 743
 MD5 1efebc72f57936e12f1d33aecab76719 files/digest-chmsee-0.9.6 241
 RMD160 2d04f5cbe5eeaec8653294eea2d59aca59c58b3e files/digest-chmsee-0.9.6 241
 SHA256 c4345cacd6b11cb5621dff47f125044ddf48c7cbd7c1918e36ef56f724dd30d4 files/digest-chmsee-0.9.6 241
