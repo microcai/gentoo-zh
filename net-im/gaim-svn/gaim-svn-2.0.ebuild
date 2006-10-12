@@ -18,6 +18,7 @@ nls perl silc spell startup-notification tcl tk xscreensaver custom-flags ssl
 msn qq"
 
 RDEPEND="
+	!net-im/gaim
 	audiofile? ( media-libs/libao
 		media-libs/audiofile )
 	bonjour? ( !avahi? ( net-misc/howl )
