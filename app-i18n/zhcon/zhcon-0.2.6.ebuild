@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /home/cvsroot/ebuildteam/app-i18n/zhcon/zhcon-0.2.5.ebuild,v 1.1 2006/06/22 02:38:19 scsi Exp $
 
-inherit eutils
+inherit eutils autotools
 
 MY_P=${P/6/5}
 S="${WORKDIR}/${MY_P}"
@@ -24,15 +24,15 @@ RDEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${DISTDIR}/zhcon-0.2.5-to-0.2.6.diff.gz
-	epatch ${FILESDIR}/zhcon-0.2.5.make-fix.patch
-	epatch ${FILESDIR}/${P}.sysconfdir.patch
-	epatch ${FILESDIR}/${P}.configure.in.patch
-	./bootstrap
+	epatch "${DISTDIR}"/zhcon-0.2.5-to-0.2.6.diff.gz
+	epatch "${FILESDIR}"/zhcon-0.2.5.make-fix.patch
+	epatch "${FILESDIR}"/${P}.sysconfdir.patch
+	epatch "${FILESDIR}"/${P}.configure.in.patch
+	eautoreconf
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README NEWS TODO THANKS
 	dodoc ABOUT-NLS README.BSD README.gpm README.utf8
 }
