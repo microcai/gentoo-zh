@@ -1,0 +1,150 @@
+diff -urNp Xft.orig/xftfreetype.c Xft/xftfreetype.c
+--- Xft.orig/xftfreetype.c	2005-05-28 00:44:40.000000000 +0800
++++ Xft/xftfreetype.c	2005-05-28 09:49:19.000000000 +0800
+@@ -387,6 +387,9 @@ XftFontInfoFill (Display *dpy, _Xconst F
+     FcChar32	    hash, *hashp;
+     FT_Face	    face;
+     int		    nhash;
++#ifdef FC_EMBEDDED_BITMAP
++    FcBool          embed;
++#endif
+ 
+     if (!info)
+ 	return FcFalse;
+@@ -429,7 +432,10 @@ XftFontInfoFill (Display *dpy, _Xconst F
+      */
+     if (FcPatternGetDouble (pattern, FC_PIXEL_SIZE, 0, &dsize) != FcResultMatch)
+ 	goto bail1;
+-
++    
++    if (dsize != (long)dsize) /* for speed - avoid math compute  */
++	    dsize = ((dsize - (long)dsize) >= 0.5) ? (long)dsize + 1 : (long)dsize;
++    
+     if (FcPatternGetDouble (pattern, FC_ASPECT, 0, &aspect) != FcResultMatch)
+ 	aspect = 1.0;
+     
+@@ -509,10 +515,38 @@ XftFontInfoFill (Display *dpy, _Xconst F
+      */
+     fi->load_flags = FT_LOAD_DEFAULT;
+ 
++#ifdef FC_EMBEDDED_BITMAP
++    switch (FcPatternGetBool (pattern, FC_EMBEDDED_BITMAP, 0, &embed)) {
++	    case FcResultNoMatch:
++		    embed= FcTrue;
++		    break;
++	    case FcResultMatch:
++		    break;
++	    default:
++		    goto bail1;
++    }
++#endif
++
+     /* disable bitmaps when anti-aliasing or transforming glyphs */
+-    if (fi->antialias || fi->transform)
++    if ((fi->antialias
++#ifdef FC_EMBEDDED_BITMAP
++	&& embed == FcFalse 
++#endif
++	) || fi->transform)
+ 	fi->load_flags |= FT_LOAD_NO_BITMAP;
+-    
++
++#ifdef FC_USE_GAMMA
++    switch (FcPatternGetBool(pattern, FC_USE_GAMMA, 0, &fi->usegamma)) {
++	    case FcResultNoMatch:
++		    fi->usegamma= FcFalse;
++		    break;
++	    case FcResultMatch:
++		    break;
++	    default:
++		    goto bail1;
++    }
++#endif
++	
+     /* disable hinting if requested */
+     switch (FcPatternGetBool (pattern, FC_HINTING, 0, &hinting)) {
+     case FcResultNoMatch:
+diff -urNp Xft.orig/xftglyphs.c Xft/xftglyphs.c
+--- Xft.orig/xftglyphs.c	2005-05-28 00:44:40.000000000 +0800
++++ Xft/xftglyphs.c	2005-05-28 02:38:31.000000000 +0800
+@@ -41,6 +41,31 @@ static const int    filters[3][3] = {
+ {    65538*1/13,65538*3/13,65538*9/13 },
+ };
+ 
++#ifdef FC_USE_GAMMA
++#define M_MAX  255
++#define M_X    128
++#define M_Y    208 
++int isgamma_init = False;
++static unsigned char  gamma_table[257];
++
++static void
++XftGammaInit(void)
++{
++    unsigned int  x, a;
++    for (x = 0; x < 256; x++)
++    {
++	if ( x <= M_X )
++	    a = ( x * M_Y + M_X / 2) / M_X;
++	else
++	    a = M_Y + ( ( x - M_X ) * ( M_MAX - M_Y ) +
++		( M_MAX - M_X ) / 2 ) / ( M_MAX - M_X );
++
++	gamma_table[x] = (unsigned char)a;
++    }
++    isgamma_init = True;
++}
++#endif
++
+ /*
+  * Validate the memory info for a font
+  */
+@@ -108,6 +133,11 @@ XftFontLoadGlyphs (Display	    *dpy,
+     if (!face)
+ 	return;
+ 
++#ifdef FC_USE_GAMMA
++    if (font->info.antialias && !isgamma_init)
++	    XftGammaInit();
++#endif
++    
+     matrix.xx = matrix.yy = 0x10000L;
+     matrix.xy = matrix.yx = 0;
+ 
+@@ -350,6 +380,22 @@ XftFontLoadGlyphs (Display	    *dpy,
+ 	    FT_Outline_Translate ( &glyphslot->outline, -left*hmul, -bottom*vmul );
+ 
+ 	    FT_Outline_Get_Bitmap( _XftFTlibrary, &glyphslot->outline, &ftbit );
++		
++#ifdef FC_USE_GAMMA
++	    if (font->info.antialias && font->info.usegamma)
++	    {
++		unsigned char *pos = bufBitmap;
++		int x,y;
++		for (y=0 ; y < ftbit.rows ; y++)
++		{
++		    for (x=0 ; x < pitch ; x ++)
++		    {
++			pos[x] = gamma_table[pos[x]];
++		    }
++		    pos += pitch;
++		}
++	    } 
++#endif
+ 	    break;
+ 	case ft_glyph_format_bitmap:
+ 	    if (font->info.antialias)
+diff -urNp Xft.orig/xftint.h Xft/xftint.h
+--- Xft.orig/xftint.h	2005-05-28 00:44:40.000000000 +0800
++++ Xft/xftint.h	2005-05-28 02:36:07.000000000 +0800
+@@ -125,6 +125,10 @@ struct _XftFontInfo {
+     FT_F26Dot6		xsize, ysize;	/* pixel size */
+     FcBool		antialias;	/* doing antialiasing */
+     FcBool		embolden;	/* force emboldening */
++#ifdef FC_USE_GAMMA
++    FcBool              usegamma;
++#endif
++
+     int			rgba;		/* subpixel order */
+     FT_Matrix		matrix;		/* glyph transformation matrix */
+     FcBool		transform;	/* non-identify matrix? */
