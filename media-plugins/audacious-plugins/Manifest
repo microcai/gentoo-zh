@@ -1,7 +1,7 @@
-AUX audacious-plugins-1.2.2-mp3-id3tag-edit.patch 1137 RMD160 204c3e59c672d46409004166419c288465af084f SHA1 61baf1ef0b42c8fa84a7993c3f73aa0deaee2877 SHA256 0e9ea8969be17db57ac14060ecddc3d6a9c9b6115cfe0d7960c5cdb20b2b367d
-MD5 332cedc3cd7795000756f459f82f0ec4 files/audacious-plugins-1.2.2-mp3-id3tag-edit.patch 1137
-RMD160 204c3e59c672d46409004166419c288465af084f files/audacious-plugins-1.2.2-mp3-id3tag-edit.patch 1137
-SHA256 0e9ea8969be17db57ac14060ecddc3d6a9c9b6115cfe0d7960c5cdb20b2b367d files/audacious-plugins-1.2.2-mp3-id3tag-edit.patch 1137
+AUX audacious-plugins-1.2.2-mp3-id3tag-edit.patch 965 RMD160 490e52b31cf38fc033cf261135ee4021daf66dc9 SHA1 10f5f937b663e4afe8e8cc1baef4b27c65a840d8 SHA256 554eaebbb85d7056e61c9068a3d52e4a460aed9dd1872ebfad81c3b3973229cb
+MD5 247c4b06b779a5fce5f555d240251881 files/audacious-plugins-1.2.2-mp3-id3tag-edit.patch 965
+RMD160 490e52b31cf38fc033cf261135ee4021daf66dc9 files/audacious-plugins-1.2.2-mp3-id3tag-edit.patch 965
+SHA256 554eaebbb85d7056e61c9068a3d52e4a460aed9dd1872ebfad81c3b3973229cb files/audacious-plugins-1.2.2-mp3-id3tag-edit.patch 965
 DIST audacious-plugins-1.2.2.tgz 2178529 RMD160 b986bb1e12fd0b3c5f0e1dde994781fb556a1d3c SHA1 300888007539fe8bcdb7fd474a7466b7f09371a2 SHA256 0422cdb510c9f7c90ceb206b4f7317e3b7ea8a66809f78976a1231d2fc073049
 EBUILD audacious-plugins-1.2.2-r1.ebuild 2662 RMD160 0056a2e71d581877ad47db2a69ff77c701abc35b SHA1 cf21184335d56f5c5b54cbe43b9600e7d4b7ffba SHA256 6cf3e80857f2b17ef5f12074c221e5fb63582438252c0c45c448eae3815f11c5
 MD5 372d2bce2f574459593ac016615eeeb3 audacious-plugins-1.2.2-r1.ebuild 2662
