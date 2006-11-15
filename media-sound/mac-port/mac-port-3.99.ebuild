@@ -18,16 +18,10 @@ DEPEND="asm? ( dev-lang/yasm )"
 RDEPEND=""
 
 src_compile() {
-        local myconf=""
-        if use asm
-        then
-                myconf="${myconf} --enable-assembly=yes"
-        fi
-
-        econf ${myconf} || die "configure failed"
-        emake || die "emake failed"
+	econf $(use_enable asm assembly) || die "configure failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-        emake DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 }
