@@ -22,14 +22,14 @@ RDEPEND=">=gnome-base/libglade-2.0
 		 
 DEPEND="${RDEPEND}"
 
+S=${WORKDIR}/${PN}-1.0.0-alpha
+
 src_compile() {
-	cd ${WORKDIR}/${PN}-1.0.0-alpha
-    econf || die "configure failed"
-    emake || die "make failed"
+	econf || die "configure failed"
+	emake -j1 || die "make failed"
 }
 
 src_install() {
-	cd ${WORKDIR}/${PN}-1.0.0-alpha
-    einstall || die
-    dodoc COPYING AUTHORS README
+	einstall || die
+	dodoc COPYING AUTHORS README
 }
