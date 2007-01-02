@@ -9,7 +9,7 @@ SRC_URI="http://www.fcitx.org/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="truetype"
 
 DEPEND="|| ( ( x11-libs/libX11 x11-libs/libXrender x11-libs/libXt )

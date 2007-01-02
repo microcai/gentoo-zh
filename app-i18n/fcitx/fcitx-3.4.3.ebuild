@@ -5,7 +5,7 @@ inherit eutils
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://www.fcitx.org/"
-SRC_URI="http://www.fcitx.org/download/${P}.tar.bz2"
+SRC_URI="http://www.fcitx.org/download/${P}ny.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,7 +20,7 @@ RESTRICT="primaryuri"
 
 src_compile() {
 	sed 's/ -lX11 / -lX11 -lXpm /' -i configure.in
-	ereconf
+	eautoreconf
 	econf $(use_enable truetype xft) || die "configure failed"
 	emake || die "make failed"
 }
@@ -32,7 +32,7 @@ src_install()
 	dodoc AUTHORS ChangeLog README THANKS TODO
 
 	rm -rf "${D}"/usr/share/fcitx/doc/
-	dodoc doc/pinyin.txt doc/cjkvinput.txt doc/fcitx3.pdf
+	dodoc doc/pinyin.txt doc/cjkvinput.txt doc/fcitx3.pdf doc/fcitx3.odt
 	dohtml doc/wb_fh.htm
 }
 
@@ -44,9 +44,9 @@ pkg_postinst()
 	einfo " export XIM_PROGRAM=fcitx"
 	einfo ""
 	einfo "If you want to use WuBi or ErBi"
-	einfo " cp /usr/share/fcitx/data/wbx.mb ~/.fcitx"
-	einfo " cp /usr/share/fcitx/data/erbi.mb ~/.fcitx"
-	einfo " cp /usr/share/fcitx/data/tables.conf ~/.fcitx"
+	einfo " ln -s /usr/share/fcitx/data/wbx.mb ~/.fcitx"
+	einfo " ln -s /usr/share/fcitx/data/erbi.mb ~/.fcitx"
+	einfo " ln -s /usr/share/fcitx/data/tables.conf ~/.fcitx"
 	einfo ""
-	einfo "Note that fcitx only works in the zh_CN locale."
+	einfo "Note that fcitx may only work in the zh_CN locale."
 }
