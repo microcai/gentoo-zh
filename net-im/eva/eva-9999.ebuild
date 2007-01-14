@@ -15,5 +15,5 @@ SRC_URI=""
 HOMEPAGE="http://sourceforge.net/projects/evaq"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc hppa sparc amd64 ia64 alpha"
+KEYWORDS="-*"
 need-kde 3
