@@ -25,7 +25,8 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}/src
+	cd ${S}
+	econf || die "econf failed"
 	emake || die "emake failed"
 }
 
