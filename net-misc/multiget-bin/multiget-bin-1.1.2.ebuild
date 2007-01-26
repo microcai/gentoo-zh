@@ -5,7 +5,7 @@
 MY_PN="${PN/m/M}"
 MY_PN="${MY_PN/g/G}"
 MY_PN="${MY_PN/-bin/}"
-MY_P="${MY_PN}-${PV}"
+MY_P="${MY_PN}-${PV}-linux"
 
 DESCRIPTION="A multi thread download tool liked flashget based wxGTK"
 HOMEPAGE="http://sourceforge.net/projects/multiget"
