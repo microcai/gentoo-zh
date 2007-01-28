@@ -7,7 +7,7 @@ inherit eutils
 DESCRIPTION="Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter"
 HOMEPAGE="http://packages.debian.org/stable/text/zh-autoconvert.html"
 SRC_URI="mirror://debian/pool/main/z/${PN}/${PN}_${PV}.orig.tar.gz
-	mirror://debian/pool/main/z/${PN}/${PN}_${PV}-1.diff.gz"
+	mirror://debian/pool/main/z/${PN}/${PN}_${PVR/r/}.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,7 +19,7 @@ S=${WORKDIR}/${P/zh-}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ../${PN}_${PV}-1.diff
+	epatch ../${PN}_${PVR/r/}.diff
 }
 
 src_compile() {
