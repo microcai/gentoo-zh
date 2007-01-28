@@ -25,4 +25,7 @@ src_unpack() {
 src_install() {
 	dobin lunar
 	doman lunar.1
+	dodir usr/share/lunar
+	insinto /usr/share/lunar
+	doins lunar.bitmap
 }
