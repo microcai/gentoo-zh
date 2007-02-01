@@ -4,9 +4,11 @@
 
 inherit eutils flag-o-matic
 
+MY_P=${P/_beta/-beta}
+
 DESCRIPTION="Utility for viewing Microsoft .chm files."
 HOMEPAGE="http://chmsee.gro.clinux.org"
-SRC_URI="http://chmsee.gro.clinux.org/${PN}-1.0.0-alpha.tar.gz"
+SRC_URI="http://chmsee.gro.clinux.org/${MY_P}.tar.gz"
 RESTRICT="mirror"
 
 LICENSE="GPL-2"
@@ -17,12 +19,11 @@ IUSE="css"
 RDEPEND=">=gnome-base/libglade-2.0
 		 >=x11-libs/gtk+-2.8
 		 app-doc/chmlib
-		 dev-libs/openssl
-		 "
+		 dev-libs/openssl"
 		 
 DEPEND="${RDEPEND}"
 
-S=${WORKDIR}/${PN}-1.0.0-alpha
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	econf || die "configure failed"
