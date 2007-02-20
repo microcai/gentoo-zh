@@ -3,28 +3,39 @@
 
 inherit nsplugins eutils
 
+MY_PN="RealPlayer"
 MY_SOURCE=realplay-${PV}-source
 DESCRIPTION="Real Media Player built from source"
 HOMEPAGE="http://www.helixplayer.org/"
 SRC_URI="https://helixcommunity.org/frs/download.php/2153/realplay-10.0.8-source.tar.bz2
 	amd64? ( http://gentoo-china-overlay.googlecode.com/svn/distfiles/realplay_gtk_current-20060824-dist_linux-2.6-glibc23-amd64.zip )"
-LICENSE="GPL-2"
+LICENSE="HBRL"
 SLOT="0"
-# -sparc -amd64: 1.0_beta1: build fails on both platforms... --eradicator
 KEYWORDS="-* ~x86 ~amd64 -sparc"
-IUSE="mozilla nptl cjk alsa"
-RDEPEND=">=dev-libs/glib-2
-	>=x11-libs/pango-1.2
-	>=x11-libs/gtk+-2.2
-	alsa? ( >=media-libs/alsa-oss-1.0 )"
-DEPEND="${RDEPEND}
-	media-libs/libtheora
-	media-libs/libogg"
+IUSE="X alsa cjk nptl nsplugin"
+RDEPEND="!amd64? (
+			X? ( >=dev-libs/glib-2
+				>=x11-libs/pango-1.2
+				>=x11-libs/gtk+-2.2 )
+			=virtual/libstdc++-3.3*
+		)
+		amd64? (
+			X? ( app-emulation/emul-linux-x86-gtklibs )
+			app-emulation/emul-linux-x86-compat
+		)"
+RESTRICT="strip nomirror test"
 
-RESTRICT="primaryuri"
+QA_TEXTRELS="opt/RealPlayer/codecs/raac.so
+	opt/RealPlayer/codecs/cvt1.so
+	opt/RealPlayer/codecs/colorcvt.so
+	opt/RealPlayer/codecs/drv2.so
+	opt/RealPlayer/codecs/drvc.so
+	opt/RealPlayer/plugins/theorarend.so
+	opt/RealPlayer/plugins/vorbisrend.so
+	opt/RealPlayer/plugins/swfrender.so
+	opt/RealPlayer/plugins/vidsite.so
+	opt/RealPlayer/plugins/oggfformat.so"
 
-# Had to change the source directory because of this somewhat
-# non-standard naming convention
 S=${WORKDIR}/realplay-${PV}
 
 pkg_nofetch() {
@@ -90,37 +101,56 @@ src_compile() {
 src_install() {
 	# install the tarballed installation into 
 	# the /opt directory
-	keepdir /opt/RealPlayer
-	tar -jxf ${S}/release/realplayer.tar.bz2 -C ${D}/opt/RealPlayer
+	keepdir /opt/${MY_PN}
+	mkdir ${S}/${MY_PN}
+	tar jxf ${S}/release/realplayer.tar.bz2 -C ${S}/${MY_PN}
+	cd ${S}/${MY_PN}
 
-	if use mozilla ; then
-		cd ${D}/opt/RealPlayer/mozilla
-		exeinto /opt/netscape/plugins
-		doexe nphelix.so
-		inst_plugin /opt/netscape/plugins/nphelix.so
+	fperms 644 codecs/*
+	insinto /opt/${MY_PN}/codecs
+	doins codecs/*
+	for x in drvc drv2 atrc sipr; do
+		dosym ${x}.so /opt/${MY_PN}/codecs/${x}.so.6.0
+	done
+
+	dodoc README
+	dohtml share/hxplay_help.html share/tigris.css
+
+	if use X; then
+		for x in common lib mozilla plugins postinst realplay realplay.bin share; do
+			mv $x ${D}/opt/${MY_PN}
+		done;
+
+		dodir /usr/bin
+		dosym /opt/${MY_PN}/realplay /usr/bin/realplay
+
+		cd ${D}/opt/${MY_PN}/share
+		domenu realplay.desktop
+
+		for res in 16 192 32 48; do
+			insinto /usr/share/icons/hicolor/${res}x${res}/apps
+			newins icons/realplay_${res}x${res}.png \
+					realplay.png
+		done
+
+		# mozilla plugin
+		if use nsplugin ; then
+			cd ${D}/opt/${MY_PN}/mozilla
+			exeinto /opt/netscape/plugins
+			doexe nphelix.so
+			inst_plugin /opt/netscape/plugins/nphelix.so
+
+			insinto /opt/netscape/plugins
+			doins nphelix.xpt
+			inst_plugin /opt/netscape/plugins/nphelix.xpt
+		fi
+
+		# Language resources
+		cd ${D}/opt/RealPlayer/share/locale
+		for LC in *; do
+			mkdir -p ${D}/usr/share/locale/${LC}/LC_MESSAGES
+			dosym /opt/RealPlayer/share/locale/${LC}/player.mo /usr/share/locale/${LC}/LC_MESSAGES/realplay.mo
+			dosym /opt/RealPlayer/share/locale/${LC}/widget.mo /usr/share/locale/${LC}/LC_MESSAGES/libgtkhx.mo
+		done
 	fi
-
-	doenvd ${FILESDIR}/50realplay
-
-	for res in 16 192 32 48; do
-		insinto /usr/share/icons/hicolor/${res}x${res}/apps
-		newins ${S}/player/app/gtk/res/icons/realplay/realplay_${res}x${res}.png \
-				realplay.png
-	done
-	# Remove setup script as it's dangerous, and the directory if it's empty
-	#rm -rf ${D}/opt/RealPlayer/Bin/setup
-	rm -fr ${D}/opt/RealPlayer/Bin
-	
-	# Language resources
-	cd ${D}/opt/RealPlayer/share/locale
-	for LC in *; do
-		dodir /usr/share/locale/${LC}/LC_MESSAGES
-		dosym /opt/RealPlayer/share/locale/${LC}/player.mo /usr/share/locale/${LC}/LC_MESSAGES/realplay.mo
-		dosym /opt/RealPlayer/share/locale/${LC}/widget.mo /usr/share/locale/${LC}/LC_MESSAGES/libgtkhx.mo
-	done
-										
-	dosym /opt/RealPlayer/realplay /usr/bin/realplay
-	doicon ${D}/opt/RealPlayer/share/realplay.png
-	domenu ${D}/opt/RealPlayer/share/realplay.desktop
 }
-
