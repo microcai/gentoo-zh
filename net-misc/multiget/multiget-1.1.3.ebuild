@@ -6,7 +6,7 @@ inherit eutils
 
 DESCRIPTION="A multi thread download tool liked flashget based wxGTK"
 HOMEPAGE="http://sourceforge.net/projects/multiget"
-SRC_URI="mirror://sourceforge/multiget/${P}-src.tar.gz"
+SRC_URI="mirror://sourceforge/multiget/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
