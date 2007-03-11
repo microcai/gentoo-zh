@@ -15,6 +15,8 @@ DEPEND="media-sound/mac-port
         media-sound/audacious"
 RDEPEND="media-sound/audacious"
 
+RESTRICT="primaryuri"
+
 src_compile() {
 	econf || die "econf failed"
 	emake || die "emake failed"
