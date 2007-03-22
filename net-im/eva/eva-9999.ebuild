@@ -15,5 +15,5 @@ SRC_URI=""
 HOMEPAGE="http://sourceforge.net/projects/evaq"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS=""
 need-kde 3
