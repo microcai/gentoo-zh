@@ -27,7 +27,7 @@ S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	econf || die "configure failed"
-	emake -j1 || die "make failed"
+	emake || die "make failed"
 }
 
 src_install() {
