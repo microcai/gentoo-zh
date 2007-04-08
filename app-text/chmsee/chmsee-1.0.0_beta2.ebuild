@@ -19,7 +19,8 @@ IUSE="css"
 RDEPEND=">=gnome-base/libglade-2.0
 		 >=x11-libs/gtk+-2.8
 		 app-doc/chmlib
-		 dev-libs/openssl"
+		 dev-libs/openssl
+		 www-client/mozilla-firefox"
 		 
 DEPEND="${RDEPEND}"
 
@@ -31,6 +32,6 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	emake DESTDIR=${D} install || die
 	dodoc COPYING AUTHORS README
 }
