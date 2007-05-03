@@ -13,7 +13,8 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="x11-libs/gtk+"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	amd64? ( app-emulation/emul-linux-x86-compat )"
 
 RESTRICT="primaryuri"
 
