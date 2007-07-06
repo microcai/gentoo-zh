@@ -11,9 +11,12 @@ SRC_URI="https://helixcommunity.org/frs/download.php/2153/realplay-10.0.8-source
 	amd64? ( http://gentoo-china-overlay.googlecode.com/svn/distfiles/realplay_gtk_current-20060824-dist_linux-2.6-glibc23-amd64.zip )"
 LICENSE="HBRL"
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64 -sparc"
+KEYWORDS="-* ~x86 ~amd64"
 IUSE="X alsa cjk nptl nsplugin"
-RDEPEND="!amd64? (
+DEPEND="media-libs/libvorbis
+		media-libs/libtheora"
+RDEPEND="${DEPEND}
+		!amd64? (
 			X? ( >=dev-libs/glib-2
 				>=x11-libs/pango-1.2
 				>=x11-libs/gtk+-2.2 )
