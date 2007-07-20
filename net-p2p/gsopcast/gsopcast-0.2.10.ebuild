@@ -16,7 +16,7 @@ DEPEND="x11-libs/gtk+"
 RDEPEND="${DEPEND}
 	amd64? ( app-emulation/emul-linux-x86-compat )"
 
-RESTRICT="primaryuri"
+RESTRICT="mirror"
 
 src_unpack() {
 	mkdir ${WORKDIR}
