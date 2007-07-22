@@ -7,7 +7,7 @@ S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A Monkey's Audio Codec port to *nix"
 HOMEPAGE="http://sourceforge.net/projects/mac-port"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
+SRC_URI="http://ftp.nluug.nl/pub/os/Linux/distr/pardusrepo/sources/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
