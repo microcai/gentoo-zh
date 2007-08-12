@@ -33,7 +33,8 @@ src_compile() {
 
 src_install() {
 	cd ${WORKDIR}/sp-sc
-	dobin sp-sc
+	dobin sp-sc-auth
+	dosym sp-sc /usr/bin/sp-sc-auth
 	cd ${S}/src
 	dobin gsopcast
 	insinto /usr/share/applications
