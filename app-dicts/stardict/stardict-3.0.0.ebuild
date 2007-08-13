@@ -42,7 +42,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-prefsdlg.cpp.diff
-	epatch ${FILESDIR}/${P}-configure.in.diff
+	epatch ${FILESDIR}/${P}-configure.in*.diff
 	AT_M4DIR="m4" eautoreconf
 	gnome2_omf_fix
 }
