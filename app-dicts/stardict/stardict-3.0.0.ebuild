@@ -65,7 +65,4 @@ pkg_postinst() {
 	elog
 	ewarn "If you upgraded from 2.4.1 or lower and use your own dictionary"
 	ewarn "files, you'll need to run: /usr/share/stardict/tools/stardict_dict_update"
-	ewarn
-	ewarn "If you have disabled gnome support and encountered segfault, "
-	ewarn "please try to enable gnome support"
 }
