@@ -1,0 +1,17 @@
+--- festival/lib/festival.scm.o	2006-03-19 17:30:55.000000000 -0600
++++ festival/lib/festival.scm	2006-03-19 17:36:07.000000000 -0600
+@@ -621,4 +621,14 @@
+      "tobi.scm" "f2bf0lr.scm"))
+   t)
+ 
++;;; Command for Asterisk begin
++(define (tts_textasterisk string mode)
++    "(tts_textasterisk STRING MODE)
++      Apply tts to STRING.  This function is specifically designed for
++        use in server mode so a single function call may synthesize the string.
++	  This function name may be added to the server safe functions."
++	        (utt.send.wave.client (utt.wave.resample (utt.wave.rescale (utt.synth
++		                    (eval (list 'Utterance 'Text string))) 5) 8000)))
++				    ;;; Command for Asterisk end
++
+ (provide 'festival)

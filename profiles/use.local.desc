@@ -1,1 +1,3 @@
 media-sound/mac-port:asm - Enable use of asm routines to improve performance
+app-dicts/stardict:gucharmap - Enable gucharmap plugin for stardict
+app-dicts/stardict:espeak - Enable espeak plugin for stardict
