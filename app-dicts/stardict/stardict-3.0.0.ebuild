@@ -30,7 +30,6 @@ RDEPEND="gnome? ( >=gnome-base/libbonobo-2.2.0
 	festival? ( =app-accessibility/festival-1.96_beta
 		=app-accessibility/speech-tools-1.2.96_beta )
 	espeak? ( ~app-accessibility/espeak-1.26 )
-	>=dev-libs/popt-1.7
 	>=sys-libs/zlib-1.1.4
 	>=x11-libs/gtk+-2.6"
 
