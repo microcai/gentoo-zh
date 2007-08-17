@@ -51,8 +51,9 @@ src_compile() {
 }
 
 src_install() {
-	dolib.so ${S}/lib/{libestbase.so.1.2.96.1,libeststring.so.1.2}
+	dolib.so ${S}/lib/{libestbase.so.1.2.96.1,libestools.so.1.2.96.1,libeststring.so.1.2}
 	dosym /usr/$(get_libdir)/libestbase.so.1.2.96.1 /usr/$(get_libdir)/libestbase.so
+	dosym /usr/$(get_libdir)/libestools.so.1.2.96.1 /usr/$(get_libdir)/libestools.so
 	dosym /usr/$(get_libdir)/libeststring.so.1.2 /usr/$(get_libdir)/libeststring.so
 	dolib.a ${S}/lib/{libestbase.a,libestools.a,libeststring.a}
 
