@@ -12,11 +12,15 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 x86-fbsd"
 IUSE=""
 
-RDEPEND="games-misc/fortune-mod"
+RDEPEND="games-misc/fortune-mod
+	app-i18n/zh-autoconvert
+	gnome? ( >=gnome-extra/zenity-2.10.1 )"
 
 src_install() {
-	dobin fortune-zh
-	dosym fortune-zh /usr/bin/fortune-sc
-	dosym fortune-zh /usr/bin/fortune-tc
+	emake DESTDIR=${D} install || die "emake install failed"
+	if use zenity ; then
+		exeinto /usr/bin
+		doexe gfortune-zh
+	fi
 }
 
