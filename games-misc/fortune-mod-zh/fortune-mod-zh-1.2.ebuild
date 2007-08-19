@@ -4,12 +4,12 @@
 
 DESCRIPTION="Chinese fortune shell script"
 HOMEPAGE="http://code.google.com/p/chinese-fortune"
-SRC_URI="http://chinese-fortune.googlecode.com/svn/trunk/${P}.tar.bz2"
+SRC_URI="http://chinese-fortune.googlecode.com/files/${P}.tar.bz2"
 RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 x86-fbsd"
 IUSE=""
 
 RDEPEND="games-misc/fortune-mod"
