@@ -13,7 +13,7 @@ ECLASS="fortune-zh"
 EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_postrm
 
 HOMEPAGE="http://code.google.com/p/chinese-fortune/"
-SRC_URI="http://chinese-fortune.googlecode.com/svn/trunk/${P}.tar.bz2"
+SRC_URI="http://chinese-fortune.googlecode.com/files/${P}.tar.bz2"
 RESTRICT="mirror"
 
 LICENSE="GPL-2"
@@ -46,6 +46,6 @@ fortune-zh_pkg_postinst() {
 
 fortune-zh_pkg_postrm() {
 	einfo "Removing ${NAME} from $CONF"
-	sed -i "/${NAME}/d" $CONF
+	sed -i -e "/${NAME}/d" $CONF
 	chmod 644 $CONF
 }
