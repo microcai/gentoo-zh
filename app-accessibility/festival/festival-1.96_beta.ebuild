@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cstr.ed.ac.uk/"
 SITE="http://www.festvox.org/packed/${PN}/${PV/_beta//}"
 MY_P=${PN}-1.96-beta
 SRC_URI="${SITE}/${MY_P}.tar.gz
-	${SITE}/speech_tools-1.2.96-beta.tar.gz
+	http://www.speech.cs.cmu.edu/awb/fftest/speech_tools-1.2.96-beta.tar.gz
 	${SITE}/festlex_POSLEX.tar.gz
 	${SITE}/festlex_CMU.tar.gz
 	${SITE}/festlex_OALD.tar.gz
