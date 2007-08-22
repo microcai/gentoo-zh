@@ -14,6 +14,10 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
+DEPEND="=x11-libs/gtk+-1.2.10-r12"
+
+RDEPEND="${DEPEND}"
+
 S=${WORKDIR}/${P/zh-}
 
 src_unpack() {
