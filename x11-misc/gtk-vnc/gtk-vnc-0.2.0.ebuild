@@ -13,13 +13,12 @@ IUSE="python examples"
 
 RDEPEND="
 >=net-libs/gnutls-1.4.0
+>=x11-libs/gtk+-2.0
 python? ( >=dev-lang/python-2.4
->=dev-python/pygtk-2.0 )
-gtk? ( >=x11-libs/gtk+-2.0 )"
+>=dev-python/pygtk-2.0 )"
 
 DEPEND="$RDEPEND
-dev-util/pkgconfig
-nls? ( sys-devel/gettext )"
+dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
