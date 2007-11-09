@@ -8,7 +8,7 @@ inherit gnome2 eutils autotools
 #       their indexes seem to be in a different format. So we'll keep them
 #       seperate for now.
 
-IUSE="festival festival-plugin espeak espeak-plugin gnome gucharmap spell"
+IUSE="festival espeak gnome gucharmap spell"
 DESCRIPTION="A GNOME2 international dictionary supporting fuzzy and glob style matching"
 HOMEPAGE="http://stardict.sourceforge.net/"
 SRC_URI="mirror://sourceforge/stardict/${P}.tar.bz2"
@@ -19,7 +19,7 @@ SLOT="0"
 # when adding keywords, remember to add to stardict.eclass
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-BDEPEND="gnome? ( >=gnome-base/libbonobo-2.2.0
+RDEPEND="gnome? ( >=gnome-base/libbonobo-2.2.0
 		>=gnome-base/libgnome-2.2.0
 		>=gnome-base/libgnomeui-2.2.0
 		>=gnome-base/gconf-2
@@ -27,20 +27,12 @@ BDEPEND="gnome? ( >=gnome-base/libbonobo-2.2.0
 		app-text/scrollkeeper )
 	spell? ( app-text/enchant )
 	gucharmap? ( >=gnome-extra/gucharmap-1.4.0 )
+	festival? ( =app-accessibility/festival-1.96_beta )
+	espeak? ( >=app-accessibility/espeak-1.29 )
 	>=sys-libs/zlib-1.1.4
 	>=x11-libs/gtk+-2.12"
 
-RDEPEND="${BDEPEND}
-	festival? ( =app-accessibility/festival-1.96_beta )
-	espeak? ( >=app-accessibility/espeak-1.29 )"
-
-DEPEND="${BDEPEND}
-	festival? ( festival-plugin?  ( 
-		=app-accessibility/festival-1.96_beta )
-	)
-	espeak? ( espeak-pulgin? ( 
-		>=app-accessibility/espeak-1.29 )
-	)
+DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.22
 	dev-util/pkgconfig"
 
@@ -58,11 +50,10 @@ src_compile() {
 	G2CONF="$(use_enable gnome gnome-support) 
 		$(use_enable spell)
 		$(use_enable gucharmap)
-		$(use_enable festival-plugin festival)
-		$(use_enable espeak-plugin espeak)
+		$(use_enable festival festival)
+		$(use_enable espeak espeak)
 		--disable-advertisement
-		--disable-updateinfo
-		"
+		--disable-updateinfo"
 	gnome2_src_compile
 }
 
