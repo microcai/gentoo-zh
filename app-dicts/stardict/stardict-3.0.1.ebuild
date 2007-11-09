@@ -28,7 +28,7 @@ BDEPEND="gnome? ( >=gnome-base/libbonobo-2.2.0
 	spell? ( app-text/enchant )
 	gucharmap? ( >=gnome-extra/gucharmap-1.4.0 )
 	>=sys-libs/zlib-1.1.4
-	>=x11-libs/gtk+-2.6"
+	>=x11-libs/gtk+-2.12"
 
 RDEPEND="${BDEPEND}
 	festival? ( =app-accessibility/festival-1.96_beta )
