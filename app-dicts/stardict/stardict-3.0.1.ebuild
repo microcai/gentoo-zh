@@ -32,14 +32,14 @@ BDEPEND="gnome? ( >=gnome-base/libbonobo-2.2.0
 
 RDEPEND="${BDEPEND}
 	festival? ( =app-accessibility/festival-1.96_beta )
-	espeak? ( ~app-accessibility/espeak-1.26 )"
+	espeak? ( >=app-accessibility/espeak-1.29 )"
 
 DEPEND="${BDEPEND}
 	festival? ( festival-plugin?  ( 
 		=app-accessibility/festival-1.96_beta )
 	)
 	espeak? ( espeak-pulgin? ( 
-		~app-accessibility/espeak-1.26 )
+		>=app-accessibility/espeak-1.29 )
 	)
 	>=dev-util/intltool-0.22
 	dev-util/pkgconfig"
