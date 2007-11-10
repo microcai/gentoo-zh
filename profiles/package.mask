@@ -1,0 +1,4 @@
+# festival is not working
+# I am solving this problem
+# once solved, I will unmask this version
+=app-dicts/stardict-3.0.1
