@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.8.ebuild,v 1.4 2007/07/11 05:41:18 mr_bones_ Exp $
+# $Header$
 
 inherit gnome2 eutils autotools
 
@@ -10,7 +10,7 @@ inherit gnome2 eutils autotools
 
 IUSE="festival espeak gnome gucharmap spell"
 DESCRIPTION="A GNOME2 international dictionary supporting fuzzy and glob style matching"
-HOMEPAGE="http://stardict.sourceforge.net/ http://cosoft.org.cn/projects/stardict/"
+HOMEPAGE="http://stardict.sourceforge.net/"
 SRC_URI="mirror://sourceforge/stardict/${P}.tar.bz2"
 
 RESTRICT="test"
@@ -19,7 +19,7 @@ SLOT="0"
 # when adding keywords, remember to add to stardict.eclass
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-RDEPEND="gnome? ( >=gnome-base/libbonobo-2.2.0
+DEP="gnome? ( >=gnome-base/libbonobo-2.2.0
 		>=gnome-base/libgnome-2.2.0
 		>=gnome-base/libgnomeui-2.2.0
 		>=gnome-base/gconf-2
@@ -27,20 +27,22 @@ RDEPEND="gnome? ( >=gnome-base/libbonobo-2.2.0
 		app-text/scrollkeeper )
 	spell? ( app-text/enchant )
 	gucharmap? ( >=gnome-extra/gucharmap-1.4.0 )
-	festival? ( =app-accessibility/festival-1.96_beta
-		=app-accessibility/speech-tools-1.2.96_beta )
-	espeak? ( ~app-accessibility/espeak-1.26 )
 	>=sys-libs/zlib-1.1.4
-	>=x11-libs/gtk+-2.6"
+	>=x11-libs/gtk+-2.12"
 
-DEPEND="${RDEPEND}
+RDEPEND="${DEP}
+	espeak? ( >=app-accessibility/espeak-1.29 )
+	festival? ( =app-accessibility/festival-1.96_beta )"
+
+DEPEND="${DEP}
 	>=dev-util/intltool-0.22
 	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-*.diff
+	epatch ${FILESDIR}/${P}-configure.in-EST.diff
+	epatch ${FILESDIR}/${P}-gconf-m4.diff
 	AT_M4DIR="m4" eautoreconf
 	gnome2_omf_fix
 }
@@ -50,8 +52,11 @@ src_compile() {
 	G2CONF="$(use_enable gnome gnome-support) 
 		$(use_enable spell)
 		$(use_enable gucharmap)
-		$(use_enable festival)
-		$(use_enable espeak)"
+		$(use_enable espeak espeak)
+		--disable-festival
+		--disable-espeak
+		--disable-advertisement
+		--disable-updateinfo"
 	gnome2_src_compile
 }
 

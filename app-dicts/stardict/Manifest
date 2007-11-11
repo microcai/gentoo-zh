@@ -1,33 +1,16 @@
-AUX stardict-3.0.0-configure.in-EST.diff 459 RMD160 d8d3de801eedbab337fab87d7cb1e60be2517805 SHA1 85f56191176cd16fa2c13e951ce05f7bfb708c33 SHA256 cad6dcbb615b90d4e14e7578f53efcf8c78c3f36d7ba20a66dedef3a260510c5
-MD5 84ce24da92d1b4b2b79fa940eae38d13 files/stardict-3.0.0-configure.in-EST.diff 459
-RMD160 d8d3de801eedbab337fab87d7cb1e60be2517805 files/stardict-3.0.0-configure.in-EST.diff 459
-SHA256 cad6dcbb615b90d4e14e7578f53efcf8c78c3f36d7ba20a66dedef3a260510c5 files/stardict-3.0.0-configure.in-EST.diff 459
-AUX stardict-3.0.0-configure.in-gthread.diff 437 RMD160 d9646f83be101ba59a46ae9788476489e189acc8 SHA1 ab237e4cdf0d4c756984aa5d98b442e7b24ee858 SHA256 ceadb424eac50182ee535f7bc762d8b0ce1e0aad4040744aefbdc1d1f72b0329
-MD5 9683986db03fc494154fccf0ed9e53c8 files/stardict-3.0.0-configure.in-gthread.diff 437
-RMD160 d9646f83be101ba59a46ae9788476489e189acc8 files/stardict-3.0.0-configure.in-gthread.diff 437
-SHA256 ceadb424eac50182ee535f7bc762d8b0ce1e0aad4040744aefbdc1d1f72b0329 files/stardict-3.0.0-configure.in-gthread.diff 437
-AUX stardict-3.0.0-gconf-m4.diff 1720 RMD160 e4fea58f8730207a2de6d64f33c563f2fb758011 SHA1 a1fff45ee0ee30fa27ac9e512c9a9b7539117d9b SHA256 dac7841720aa693fc65150beff507120346b1a6b1040a33baf26cb7485cf5939
-MD5 30cdee6040b055f37d0302db802e4f9a files/stardict-3.0.0-gconf-m4.diff 1720
-RMD160 e4fea58f8730207a2de6d64f33c563f2fb758011 files/stardict-3.0.0-gconf-m4.diff 1720
-SHA256 dac7841720aa693fc65150beff507120346b1a6b1040a33baf26cb7485cf5939 files/stardict-3.0.0-gconf-m4.diff 1720
-AUX stardict-3.0.0-prefsdlg.cpp.diff 851 RMD160 cb367c6469d8d0b81120058069d880c653d084c1 SHA1 3d1c3f83a5f321ce4ba84d08a490114bca133bba SHA256 7d9ec18305dfce3a021e2e053b7bcb3f2a18207dc9930e36e53d7584d3a4c9d6
-MD5 72a0009b78f91dadf67693922acad750 files/stardict-3.0.0-prefsdlg.cpp.diff 851
-RMD160 cb367c6469d8d0b81120058069d880c653d084c1 files/stardict-3.0.0-prefsdlg.cpp.diff 851
-SHA256 7d9ec18305dfce3a021e2e053b7bcb3f2a18207dc9930e36e53d7584d3a4c9d6 files/stardict-3.0.0-prefsdlg.cpp.diff 851
-DIST stardict-3.0.0.tar.bz2 1911973 RMD160 8d303ef0be71df262c52a0543cceb8c3f045f4b4 SHA1 3408104c1975b063697392ff8a78cc315a4c9471 SHA256 b5b9535e8795eca7982573d6b06cffc41c21b592e39a131caacfeeb3a0dad25c
+AUX stardict-3.0.1-configure.in-EST.diff 459 RMD160 d8d3de801eedbab337fab87d7cb1e60be2517805 SHA1 85f56191176cd16fa2c13e951ce05f7bfb708c33 SHA256 cad6dcbb615b90d4e14e7578f53efcf8c78c3f36d7ba20a66dedef3a260510c5
+MD5 84ce24da92d1b4b2b79fa940eae38d13 files/stardict-3.0.1-configure.in-EST.diff 459
+RMD160 d8d3de801eedbab337fab87d7cb1e60be2517805 files/stardict-3.0.1-configure.in-EST.diff 459
+SHA256 cad6dcbb615b90d4e14e7578f53efcf8c78c3f36d7ba20a66dedef3a260510c5 files/stardict-3.0.1-configure.in-EST.diff 459
+AUX stardict-3.0.1-gconf-m4.diff 1720 RMD160 e4fea58f8730207a2de6d64f33c563f2fb758011 SHA1 a1fff45ee0ee30fa27ac9e512c9a9b7539117d9b SHA256 dac7841720aa693fc65150beff507120346b1a6b1040a33baf26cb7485cf5939
+MD5 30cdee6040b055f37d0302db802e4f9a files/stardict-3.0.1-gconf-m4.diff 1720
+RMD160 e4fea58f8730207a2de6d64f33c563f2fb758011 files/stardict-3.0.1-gconf-m4.diff 1720
+SHA256 dac7841720aa693fc65150beff507120346b1a6b1040a33baf26cb7485cf5939 files/stardict-3.0.1-gconf-m4.diff 1720
 DIST stardict-3.0.1.tar.bz2 1964195 RMD160 296d73bd9acdbb53c21a4fb17e608a25f01b76de SHA1 a0357e88105eaf7d6a4aa4803bf8617759bf0315 SHA256 504b3a7748933b9bd998cb85f37d4fa0a8575306643ffe6a9742450e66cd556f
-EBUILD stardict-3.0.0.ebuild 2055 RMD160 355bd93d8e2b09ac29be6d8e59a0e3b961ee90ff SHA1 7f6b810e21352b4f5f8ef85a419c0c97a060831f SHA256 ae4e5576df2e0bcba7c49e915b2a89a523607564d34fc7478dc02021117a61ee
-MD5 c9653215b5bbfc1406d4a374ce675642 stardict-3.0.0.ebuild 2055
-RMD160 355bd93d8e2b09ac29be6d8e59a0e3b961ee90ff stardict-3.0.0.ebuild 2055
-SHA256 ae4e5576df2e0bcba7c49e915b2a89a523607564d34fc7478dc02021117a61ee stardict-3.0.0.ebuild 2055
-EBUILD stardict-3.0.1-r1.ebuild 1922 RMD160 3931af0e7aefcba141219c85cc2f4a991eee6dde SHA1 63e5421af1d008a99945421d8137c73518b304bd SHA256 b83342bfac2429e222ef928952b50790ea7f52e158df307aa14a835c09141655
-MD5 9c27d0f81e0825bc077a06ad7d2b0588 stardict-3.0.1-r1.ebuild 1922
-RMD160 3931af0e7aefcba141219c85cc2f4a991eee6dde stardict-3.0.1-r1.ebuild 1922
-SHA256 b83342bfac2429e222ef928952b50790ea7f52e158df307aa14a835c09141655 stardict-3.0.1-r1.ebuild 1922
-EBUILD stardict-3.0.1.ebuild 1997 RMD160 9c83bff1fa135798769ac960455d2e4c79cce9f2 SHA1 de5e514b5e1fcf17ab17fe4a170565441f55e49f SHA256 4ddcf0f484c38f0caeeca82aa9065a9abccef958c022e63b8c5177cfb9f900ca
-MD5 83f6d77d3277f8246922a72ad35a15ab stardict-3.0.1.ebuild 1997
-RMD160 9c83bff1fa135798769ac960455d2e4c79cce9f2 stardict-3.0.1.ebuild 1997
-SHA256 4ddcf0f484c38f0caeeca82aa9065a9abccef958c022e63b8c5177cfb9f900ca stardict-3.0.1.ebuild 1997
+EBUILD stardict-3.0.1-r2.ebuild 1999 RMD160 e0beb9a22e5020ebe2758601f989ee66ce4b3b9a SHA1 26fab9aa2d88a070015c8eed8b319b42f04ec1fd SHA256 0ac3bc4adb135d180c05b14984ae7f86dcf12c02927bc4abbb43813b92f1dba5
+MD5 37a2c34914f307e42bc70f68db6cbf20 stardict-3.0.1-r2.ebuild 1999
+RMD160 e0beb9a22e5020ebe2758601f989ee66ce4b3b9a stardict-3.0.1-r2.ebuild 1999
+SHA256 0ac3bc4adb135d180c05b14984ae7f86dcf12c02927bc4abbb43813b92f1dba5 stardict-3.0.1-r2.ebuild 1999
 MISC ChangeLog 5135 RMD160 8ca123c3a544d029eaa56cc24d6132c30e430caa SHA1 95e8349b5eb71be03dc381227ab53c2a00291aaa SHA256 69801987fe0a0c801f096e722d267c1f78d2a52e4f966cedf46533846d70d238
 MD5 e48c97d94ae7f1ae8cfcb78bc5c50cd2 ChangeLog 5135
 RMD160 8ca123c3a544d029eaa56cc24d6132c30e430caa ChangeLog 5135
@@ -36,12 +19,6 @@ MISC metadata.xml 215 RMD160 bc605cad3a51cfe131aebf045a65a7152dc1c970 SHA1 04148
 MD5 b1119d84c7a4c3535572b94ec508e907 metadata.xml 215
 RMD160 bc605cad3a51cfe131aebf045a65a7152dc1c970 metadata.xml 215
 SHA256 ea8096d4344ae593281549545469191c76ecd503f708ab04c2027095b59fa234 metadata.xml 215
-MD5 1ef5995a5341f1bdbf289aa6c4809a70 files/digest-stardict-3.0.0 250
-RMD160 c6267eeeaeeb6c1939d4db742d5eb803ca6b33be files/digest-stardict-3.0.0 250
-SHA256 974133def5958d4ded9f5f4bd89a2998dd35dcb13a0d640457b0c35d78de28d6 files/digest-stardict-3.0.0 250
-MD5 bcfbec75a842d6d82693196415ecb8b9 files/digest-stardict-3.0.1 250
-RMD160 15793ac40add260d4b02710aa2c9dd92a1fc5f9a files/digest-stardict-3.0.1 250
-SHA256 25bbc2947a3ff5167208d92557e5319e3a97632b9844130a7408d3b966cb59d9 files/digest-stardict-3.0.1 250
-MD5 bcfbec75a842d6d82693196415ecb8b9 files/digest-stardict-3.0.1-r1 250
-RMD160 15793ac40add260d4b02710aa2c9dd92a1fc5f9a files/digest-stardict-3.0.1-r1 250
-SHA256 25bbc2947a3ff5167208d92557e5319e3a97632b9844130a7408d3b966cb59d9 files/digest-stardict-3.0.1-r1 250
+MD5 bcfbec75a842d6d82693196415ecb8b9 files/digest-stardict-3.0.1-r2 250
+RMD160 15793ac40add260d4b02710aa2c9dd92a1fc5f9a files/digest-stardict-3.0.1-r2 250
+SHA256 25bbc2947a3ff5167208d92557e5319e3a97632b9844130a7408d3b966cb59d9 files/digest-stardict-3.0.1-r2 250
