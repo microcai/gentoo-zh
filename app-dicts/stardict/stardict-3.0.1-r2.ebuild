@@ -13,7 +13,7 @@ DESCRIPTION="A GNOME2 international dictionary supporting fuzzy and glob style m
 HOMEPAGE="http://stardict.sourceforge.net/"
 SRC_URI="mirror://sourceforge/stardict/${P}.tar.bz2"
 
-RESTRICT="test"
+RESTRICT="test mirror"
 LICENSE="GPL-2"
 SLOT="0"
 # when adding keywords, remember to add to stardict.eclass
