@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header$
 
 inherit eutils
 
@@ -11,8 +11,10 @@ SRC_URI="mirror://debian/pool/main/z/${PN}/${PN}_${PV}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
 IUSE=""
+
+RESTRICT="mirror"
 
 DEPEND="=x11-libs/gtk+-1.2.10-r12"
 
@@ -31,11 +33,11 @@ src_compile() {
 }
 
 src_install() {
-	dobin autogb 
+	dobin autogb
 	dosym autogb /usr/bin/autob5
 
 	dolib.a lib/libhz.a
-	dolib.so lib/libhz.so.0.0 
+	dolib.so lib/libhz.so.0.0
 	dosym libhz.so.0.0 /usr/lib/libhz.so.0
 	dosym libhz.so.0 /usr/lib/libhz.so
 
