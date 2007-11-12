@@ -1,6 +1,8 @@
+DIST stardict-treedict-infoBrowse-zh_CN-2.4.2.tar.bz2 267596 RMD160 ed05d26f73c8fd963b2f87ecd3cf13da3f0e2af9 SHA1 588f976207a4cdd7ad981b603fd40321d959e4ee SHA256 ce464ac3d578d4e15fe51151e35fc109ec3b15bb4f8e0278dacf1b03f9e1247a
+EBUILD stardict-treedict-infoBrowse-zh_CN-2.4.2.ebuild 391 RMD160 396369bb90780718b6a495086aac44c2834f41b7 SHA1 36df6cb5a037d99df38867527183112ebfeaa2f8 SHA256 05159a3d11c30599c91247389da5dbb51baa06bae8e44bd0674525ef9b00a1eb
+MD5 eafa78f81e65ed6d8d6a82ffeaca0c87 stardict-treedict-infoBrowse-zh_CN-2.4.2.ebuild 391
+RMD160 396369bb90780718b6a495086aac44c2834f41b7 stardict-treedict-infoBrowse-zh_CN-2.4.2.ebuild 391
+SHA256 05159a3d11c30599c91247389da5dbb51baa06bae8e44bd0674525ef9b00a1eb stardict-treedict-infoBrowse-zh_CN-2.4.2.ebuild 391
 MD5 48a39fa22e5abf0df36f487eb22e5ed8 files/digest-stardict-treedict-infoBrowse-zh_CN-2.4.2 325
 RMD160 6f77ba356011515e52a025f867c5c8c477832e7f files/digest-stardict-treedict-infoBrowse-zh_CN-2.4.2 325
 SHA256 99d63214e31950418a20fe8dea2bf2ea20a69111a651db7504004aa64356b754 files/digest-stardict-treedict-infoBrowse-zh_CN-2.4.2 325
-MD5 17e5449b019d14787b28969bf7c50da3 stardict-treedict-infoBrowse-zh_CN-2.4.2.ebuild 400
-RMD160 a8135c0569e5b3480a5289cd54ec5bf58127d969 stardict-treedict-infoBrowse-zh_CN-2.4.2.ebuild 400
-SHA256 030750c8960158cf925c89c6b3699eda4f5e38e36451fdc235900ba9fc258bf7 stardict-treedict-infoBrowse-zh_CN-2.4.2.ebuild 400

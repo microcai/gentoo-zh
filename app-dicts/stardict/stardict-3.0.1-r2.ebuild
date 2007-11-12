@@ -17,7 +17,7 @@ RESTRICT="test mirror"
 LICENSE="GPL-2"
 SLOT="0"
 # when adding keywords, remember to add to stardict.eclass
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~sparc ~x86"
 
 DEP="gnome? ( >=gnome-base/libbonobo-2.2.0
 		>=gnome-base/libgnome-2.2.0

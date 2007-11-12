@@ -1,4 +1,4 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,7 +6,7 @@ FROM_LANG="Simplified Chinese (GB)"
 TO_LANG="Simplified Chinese (GB)"
 DICT_SUFFIX="treedict-infoBrowse-zh_CN"
 
-inherit stardict-treedict
+inherit stardict
 
 HOMEPAGE="http://stardict.sourceforge.net/Dictionaries_Quick.php"
 
