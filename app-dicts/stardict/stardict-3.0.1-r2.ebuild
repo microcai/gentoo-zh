@@ -40,16 +40,16 @@ DEPEND="${DEP}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-configure.in-EST.diff
-	epatch ${FILESDIR}/${P}-gconf-m4.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-configure.in-EST.diff
+	epatch "${FILESDIR}"/${P}-gconf-m4.diff
 	AT_M4DIR="m4" eautoreconf
 	gnome2_omf_fix
 }
 
 src_compile() {
 	export PKG_CONFIG=$(type -P pkg-config)
-	G2CONF="$(use_enable gnome gnome-support) 
+	G2CONF="$(use_enable gnome gnome-support)
 		$(use_enable spell)
 		$(use_enable gucharmap)
 		$(use_enable espeak espeak)
@@ -61,6 +61,12 @@ src_compile() {
 }
 
 pkg_postinst() {
+	elog "Note: tts plugins are not built. For additional info, please see:"
+	elog "http://r0bertz.blogspot.com/2007/11/myths-about-stardict-301s-text-to.html"
+	elog "If you wish to enable tts engine, please enable 'Use TTS program.' at:"
+	elog "Preferences -> Dictionary -> Sound and fill in Commandline with:"
+	elog "\"echo %s | festival > --tts\" or \"espeak %s\" depending on your taste"
+	elog
 	elog "You will now need to install stardict dictionary files. If"
 	elog "you have not, execute the below to get a list of dictionaries:"
 	elog
