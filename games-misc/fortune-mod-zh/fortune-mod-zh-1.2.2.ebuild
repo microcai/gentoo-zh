@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header$
 
 DESCRIPTION="Chinese fortune shell script"
 HOMEPAGE="http://code.google.com/p/chinese-fortune"
@@ -9,15 +9,15 @@ RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 x86-fbsd"
-IUSE=""
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
+IUSE="gnome"
 
 RDEPEND="games-misc/fortune-mod
 	app-i18n/zh-autoconvert
 	gnome? ( >=gnome-extra/zenity-2.10.1 )"
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	if use zenity ; then
 		exeinto /usr/bin
 		doexe gfortune-zh
