@@ -67,6 +67,11 @@ pkg_postinst() {
 	elog "Preferences -> Dictionary -> Sound and fill in Commandline with:"
 	elog "\"echo %s | festival > --tts\" or \"espeak %s\" depending on your taste"
 	elog
+	elog "Also note: >=x11-libs/gtk+-2.12 is a requirement of stardict-3.0.1"
+	elog "If you are using stable branch, you can emerge autounmask and use"
+	elog "this command to unmask x11-libs/gtk+-2.12:"
+	elog "	autounmask x11-libs/gtk+-2.12.1-r1"
+	elog
 	elog "You will now need to install stardict dictionary files. If"
 	elog "you have not, execute the below to get a list of dictionaries:"
 	elog
