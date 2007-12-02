@@ -6,7 +6,7 @@ inherit eutils
 
 DESCRIPTION="Reciteword's dictionary."
 HOMEPAGE="http://reciteword.cosoft.org.cn/"
-SRC_URI="http://reciteword.cosoft.org.cn/reciteword/download/${P}.tar.bz2"
+SRC_URI="http://downloads.sourceforge.net/reciteword/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
