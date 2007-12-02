@@ -1,4 +1,4 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -17,6 +17,6 @@ DEPEND=">=x11-libs/gtk+-2.4.0
 		>=dev-libs/glib-2.4.0"
 
 src_install(){
-    emake install DESTDIR=${D} || die "install faled"
+	emake install DESTDIR="${D}" || die "install faled"
 }
 
