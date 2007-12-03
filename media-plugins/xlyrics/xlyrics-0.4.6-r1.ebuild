@@ -14,7 +14,10 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2.4.0
-		>=dev-libs/glib-2.4.0"
+		>=dev-libs/glib-2.4.0
+		>=media-sound/audacious-1.4.2"
+
+RDEPEND="${DEPEND}"
 
 src_unpack(){
 	unpack "${A}"
