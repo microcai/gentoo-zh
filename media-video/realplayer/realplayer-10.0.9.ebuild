@@ -45,7 +45,7 @@ S=${WORKDIR}/realplay-${PV}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	
+
 	if use x86; then
 		cp -ru distribution/linux-2.2-libc6-gcc32-i586/* .
 	elif use amd64; then
@@ -61,20 +61,20 @@ src_unpack() {
 
 	#fixes sem_t based issues
 	use nptl && epatch ${FILESDIR}/${PN}-10.0.4-sem_t.patch
-	
+
 	#fixes cjk issues
 	use cjk && epatch ${FILESDIR}/realplayer-10.0.4-cjk-hack.patch
 
 	#dirty hack,, use alsa oss emulation
 	use alsa && epatch ${FILESDIR}/realplayer-10.0.4-oss-use-aoss.patch
-	
+
 	#disable asm code ...
 	epatch ${FILESDIR}/realplayer-10.0.4-disable-asm.patch
 
 	#gcc4 fixes
 	epatch ${FILESDIR}/realplayer-10.0.4-sysinfo-gcc4-i586-fix.patch
 	epatch ${FILESDIR}/realplayer-10.0.5-gcc4-fix.patch
-	
+
 	#fixes icon name in .desktop file
 	sed -i -e 's:realplay.png:realplay:' ${S}/player/installer/common/realplay.desktop
 }
