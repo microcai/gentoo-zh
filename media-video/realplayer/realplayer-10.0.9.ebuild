@@ -1,4 +1,5 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
+# $Header$
 # Distributed under the terms of the GNU General Public License v2
 
 inherit nsplugins eutils
@@ -26,7 +27,7 @@ RDEPEND="${DEPEND}
 			X? ( app-emulation/emul-linux-x86-gtklibs )
 			app-emulation/emul-linux-x86-compat
 		)"
-RESTRICT="strip nomirror test"
+RESTRICT="strip mirror test"
 
 QA_TEXTRELS="opt/RealPlayer/codecs/raac.so
 	opt/RealPlayer/codecs/cvt1.so
@@ -96,7 +97,7 @@ src_compile() {
 }
 
 src_install() {
-	# install the tarballed installation into 
+	# install the tarballed installation into
 	# the /opt directory
 	keepdir /opt/${MY_PN}
 	mkdir ${S}/${MY_PN}
