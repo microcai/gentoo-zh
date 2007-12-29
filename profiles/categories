@@ -2,6 +2,7 @@ app-dicts
 app-emulation
 app-i18n
 app-text
+app-vim
 games-misc
 media-libs
 media-plugins
