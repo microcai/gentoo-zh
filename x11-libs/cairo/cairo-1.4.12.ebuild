@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.4.12.ebuild,v 1.7 2007/12/12 23:00:43 acevery Exp $
+# $Header: $
 
 inherit eutils flag-o-matic libtool
 
@@ -44,9 +44,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	
+
 	if use newspr; then
-		epatch ${FILESDIR}/${PN}-1.4.12-newspr.patch.bz2
+		epatch "${FILESDIR}/${P}-newspr.patch.bz2"
 	fi
 
 	# We need to run elibtoolize to ensure correct so versioning on FreeBSD
