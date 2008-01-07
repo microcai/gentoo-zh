@@ -1,0 +1,7 @@
+# ChangeLog for x11-libs/libXft
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  07 Jan 2008; Yu Yuwei <acevery@gmail.com> libXft-2.1.12.ebuild:
+  Add into overlay to make sure dependency satisfaction of cairo with newspr USE
+
