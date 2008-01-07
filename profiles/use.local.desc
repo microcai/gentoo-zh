@@ -1,4 +1,10 @@
-media-sound/mac-port:asm - Enable use of asm routines to improve performance
+# This file contains descriptions of local USE flags, and the ebuilds which
+# contain them.
+
+# Keep it sorted.
+
 app-dicts/stardict:gucharmap - Enable gucharmap plugin for stardict
 app-dicts/stardict:espeak - pull in espeak for stardict
 app-dicts/stardict:festival - pull in festival for stardict
+dev-python/zsi:twisted - add support for dev-python/twisted and dev-python/twisted-web
+media-sound/mac-port:asm - Enable use of asm routines to improve performance
