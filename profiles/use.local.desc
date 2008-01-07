@@ -4,7 +4,8 @@
 # Keep it sorted.
 
 app-dicts/stardict:gucharmap - Enable gucharmap plugin for stardict
-app-dicts/stardict:espeak - pull in espeak for stardict
-app-dicts/stardict:festival - pull in festival for stardict
-dev-python/zsi:twisted - add support for dev-python/twisted and dev-python/twisted-web
+app-dicts/stardict:espeak - Pull in espeak for stardict
+app-dicts/stardict:festival - Pull in festival for stardict
+dev-python/zsi:twisted - Add support for dev-python/twisted and dev-python/twisted-web
 media-sound/mac-port:asm - Enable use of asm routines to improve performance
+media-sound/sonata:audioscrobbler - Audioscrobbler (last.fm) support
