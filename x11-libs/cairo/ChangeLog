@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  07 Jan 2008; Yu Yuwei <acevery@gmail.com> cairo-1.4.12.ebuild:
+  Add alert to inform user build libXft with newspr USE flag as wel
+
   07 Jan 2008; Yu Yuwei <acevery@gmail.com> +metadata.xml,
   cairo-1.4.12.ebuild:
   Add Metadata.xml and fix some ebuild QA

@@ -53,6 +53,18 @@ src_unpack() {
 	elibtoolize
 }
 
+pkg_setup() {
+	if use newspr; then
+		if ! built_with_use 'x11-libs/libXft' newspr; then
+			echo
+			ewarn "You must build x11-libs/libXft with \"newspr\" USE flag,"
+			ewarn "otherwise, the \"newspr\" USE flag in cairo won't work!"
+			echo
+			ebeep 3
+		fi
+	fi
+}
+
 src_compile() {
 	#gets rid of fbmmx.c inlining warnings
 	append-flags -finline-limit=1200
