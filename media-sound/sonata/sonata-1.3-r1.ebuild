@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.2.2.ebuild,v 1.2 2007/09/26 12:14:37 angelos Exp $
+# $Header: $
 
 inherit distutils
 
@@ -12,14 +12,16 @@ SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2"
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~ppc64 ~x86"
 SLOT="0"
-IUSE="taglib lyrics dbus"
+IUSE="taglib lyrics dbus audioscrobbler"
 
-DEPEND=""
-RDEPEND=">=virtual/python-2.4
+DEPEND="sys-devel/gcc"
+RDEPEND=">=media-sound/mpd-0.12
+	>=virtual/python-2.4
 	>=dev-python/pygtk-2.10
 	taglib? ( >=dev-python/tagpy-0.93 )
 	dbus? ( dev-python/dbus-python )
-	lyrics? ( dev-python/zsi )"
+	lyrics? ( dev-python/zsi )
+	audioscrobbler? ( || ( dev-python/elementtree >=virtual/python-2.5 ) )"
 
 pkg_setup() {
 	if ! built_with_use '=x11-libs/gtk+-2*' jpeg; then
@@ -37,7 +39,7 @@ src_compile() {
 
 src_install() {
 	distutils_src_install
-	dodoc COPYING CHANGELOG README TODO TRANSLATORS
+	dodoc CHANGELOG README TODO TRANSLATORS
 }
 
 pkg_postinst() {

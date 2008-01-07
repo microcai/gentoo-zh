@@ -1,0 +1,8 @@
+# ChangeLog for media-sound/sonata
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  07 Jan 2008; Yu Yuwei <acevery@gmail.com> +metadata.xml,
+  -sonata-1.3.ebuild, +sonata-1.3-r1.ebuild:
+  Add metadata.xml and standardize ebuild; add audioscrobbler USE
+
