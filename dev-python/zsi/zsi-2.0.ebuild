@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:$
+# $Header: $
 
 inherit distutils
 
@@ -8,21 +8,21 @@ MY_PN="ZSI"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Web Services for Python"
-HOMEPAGE="http://pywebsvcs.sourceforge.net/zsi.html"
+HOMEPAGE="http://pywebsvcs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pywebsvcs/${MY_P}.tar.gz"
 
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc-macos ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="PYTHON"
 IUSE="examples doc twisted"
 
 DEPEND=">=dev-python/pyxml-0.8.3
 		>=dev-python/setuptools-0.6_rc3
-		twisted?(
+		twisted? (
 			>=dev-python/twisted-2.0
 			>=dev-python/twisted-web-0.5.0
 			>=dev-lang/python-2.4
-			)"
+			) "
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
