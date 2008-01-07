@@ -9,3 +9,5 @@ app-dicts/stardict:festival - Pull in festival for stardict
 dev-python/zsi:twisted - Add support for dev-python/twisted and dev-python/twisted-web
 media-sound/mac-port:asm - Enable use of asm routines to improve performance
 media-sound/sonata:audioscrobbler - Audioscrobbler (last.fm) support
+x11-libs/cairo:newspr - Enable Freetype subpixel font rendering
+x11-libs/libXft:newspr - Enable Freetype subpixel font rendering
