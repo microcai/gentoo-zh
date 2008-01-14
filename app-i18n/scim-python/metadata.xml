@@ -3,13 +3,13 @@
 <pkgmetadata>
 <herd>cjk</herd>
 <maintainer>
-<name>Yu Yuwei</name>
 <email>acevery@gmail.com</email>
+<name>Yu Yuwei</name>
 </maintainer>
 <longdescription>A python binding for SCIM. Now support PinYin, ShuangPin and a English Writer Input Method. </longdescription>
 <use>
-  <flag name='pinyin'>Build Pin Yin Input Method.</flag>
-  <flag name='shuangpin'>Build Shuang Pin Input Method.</flag>
-  <flag name='enwriter'>Build English Writer Input Method.</flag>
+<flag name='pinyin'>Build Pin Yin Input Method.</flag>
+<flag name='shuangpin'>Build Shuang Pin Input Method.</flag>
+<flag name='enwriter'>Build English Writer Input Method.</flag>
 </use>
 </pkgmetadata>
