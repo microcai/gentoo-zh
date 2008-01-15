@@ -15,6 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="nls pinyin shuangpin enwriter"
 
 RDEPEND="x11-libs/libXt
+	>=dev-lang/python-2.5
 	enwriter? ( dev-python/pyenchant )
 	|| ( >=app-i18n/scim-1.1 >=app-i18n/scim-cvs-1.1 )
 	nls? ( virtual/libintl )
@@ -22,6 +23,15 @@ RDEPEND="x11-libs/libXt
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
+
+pkg_setup() {
+	if ! built_with_use '>=dev-lang/python-2.5*' sqlite; then
+		echo
+		ewarn "You need build dev-lang/python-2.5 with \"sqlite\" USE flag"
+		echo
+		ebeep 3
+	fi
+}
 
 
 src_unpack() {
