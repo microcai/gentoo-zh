@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Jan 2008; Yu Yuwei <acevery@gmail.com> -files/digest-scim-python-0.1.9,
+  Manifest:
+  Modification taken to confirm that dev-lang/python build with sqlite USE
+  flag, and remove old ebuild
+
   14 Jan 2008; Yu Yuwei <acevery@gmail.com> metadata.xml,
   scim-python-0.1.9.ebuild:
   Initial commit, add metadata
