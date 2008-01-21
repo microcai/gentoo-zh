@@ -1,0 +1,7 @@
+# ChangeLog for net-im/eva
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  21 Jan 2008; Zhang Le <r0bertz@gentoo.org> +eva-20080120.ebuild:
+  added eva-20080120.ebuild
+
