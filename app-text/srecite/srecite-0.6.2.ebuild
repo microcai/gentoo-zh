@@ -7,7 +7,7 @@ inherit eutils
 DESCRIPTION="Smart Reciting"
 HOMEPAGE="http://srecite.sourceforge.net"
 SRC_URI="mirror://sourceforge/srecite/${P}.tar.gz"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 LICENSE="GPL-2"
 KEYWORDS="~x86 amd64 ia64 alpha ppc sparc hppa"
 
