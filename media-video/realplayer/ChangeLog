@@ -1,0 +1,8 @@
+# ChangeLog for media-video/realplayer
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  27 Jan 2008; Zhang Le <r0bertz@gentoo.org> files/realplayer.desktop,
+  realplayer-10.0.8-r2.ebuild, realplayer-10.0.9.ebuild:
+  realplayer clean up
+

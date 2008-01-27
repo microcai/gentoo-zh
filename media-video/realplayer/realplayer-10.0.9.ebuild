@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
-# $Header$
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
 inherit nsplugins eutils
 
@@ -44,7 +44,7 @@ S=${WORKDIR}/realplay-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	if use x86; then
 		cp -ru distribution/linux-2.2-libc6-gcc32-i586/* .
@@ -54,55 +54,55 @@ src_unpack() {
 	fi
 
 	#adjust strange naming for helixplayer tarball
-	epatch ${FILESDIR}/installer-naming.patch
+	epatch "${FILESDIR}"/installer-naming.patch
 
 	#fixes the .bif file to create a gentoo_player custom target
-	#epatch ${FILESDIR}/${P}-bif.patch
+	#epatch "${FILESDIR}"/${P}-bif.patch
 
 	#fixes sem_t based issues
-	use nptl && epatch ${FILESDIR}/${PN}-10.0.4-sem_t.patch
+	use nptl && epatch "${FILESDIR}"/${PN}-10.0.4-sem_t.patch
 
 	#fixes cjk issues
-	use cjk && epatch ${FILESDIR}/realplayer-10.0.4-cjk-hack.patch
+	use cjk && epatch "${FILESDIR}"/realplayer-10.0.4-cjk-hack.patch
 
 	#dirty hack,, use alsa oss emulation
-	use alsa && epatch ${FILESDIR}/realplayer-10.0.4-oss-use-aoss.patch
+	use alsa && epatch "${FILESDIR}"/realplayer-10.0.4-oss-use-aoss.patch
 
 	#disable asm code ...
-	epatch ${FILESDIR}/realplayer-10.0.4-disable-asm.patch
+	epatch "${FILESDIR}"/realplayer-10.0.4-disable-asm.patch
 
 	#gcc4 fixes
-	epatch ${FILESDIR}/realplayer-10.0.4-sysinfo-gcc4-i586-fix.patch
-	epatch ${FILESDIR}/realplayer-10.0.5-gcc4-fix.patch
+	epatch "${FILESDIR}"/realplayer-10.0.4-sysinfo-gcc4-i586-fix.patch
+	epatch "${FILESDIR}"/realplayer-10.0.5-gcc4-fix.patch
 
 	#fixes icon name in .desktop file
-	sed -i -e 's:realplay.png:realplay:' ${S}/player/installer/common/realplay.desktop
+	sed -i -e 's:realplay.png:realplay:' "${S}"/player/installer/common/realplay.desktop
 }
 
 src_compile() {
 
 	#copies our buildrc file over with information on where
 	#ogg and theora libs are kept
-	cp ${FILESDIR}/buildrc ${S}
+	cp "${FILESDIR}"/buildrc "${S}"
 
-	export BUILDRC="${S}/buildrc"
-	export BUILD_ROOT="${S}/build"
+	export BUILDRC=${S}/buildrc
+	export BUILD_ROOT=${S}/build
 
 	# FIXME: how to handle CFLAGS, CXXFLAGS, LDFLAGS? unset them for safety
 	unset CFLAGS
 	unset CXXFLAGS
 	unset LDFLAGS
 	#now we can begin the build
-	${S}/build/bin/build.py -m realplay_gtk_release -t release -k -p green -P helix-client-all-defines player_all || die
+	"${S}"/build/bin/build.py -m realplay_gtk_release -t release -k -p green -P helix-client-all-defines player_all || die
 }
 
 src_install() {
 	# install the tarballed installation into
 	# the /opt directory
 	keepdir /opt/${MY_PN}
-	mkdir ${S}/${MY_PN}
-	tar jxf ${S}/release/realplayer.tar.bz2 -C ${S}/${MY_PN}
-	cd ${S}/${MY_PN}
+	mkdir "${S}"/${MY_PN}
+	tar jxf "${S}"/release/realplayer.tar.bz2 -C "${S}"/${MY_PN}
+	cd "${S}"/${MY_PN}
 
 	fperms 644 codecs/*
 	insinto /opt/${MY_PN}/codecs
@@ -116,13 +116,13 @@ src_install() {
 
 	if use X; then
 		for x in common lib mozilla plugins postinst realplay realplay.bin share; do
-			mv $x ${D}/opt/${MY_PN}
+			mv $x "${D}"/opt/${MY_PN}
 		done;
 
 		dodir /usr/bin
 		dosym /opt/${MY_PN}/realplay /usr/bin/realplay
 
-		cd ${D}/opt/${MY_PN}/share
+		cd "${D}"/opt/${MY_PN}/share
 		domenu realplay.desktop
 
 		for res in 16 192 32 48; do
@@ -133,7 +133,7 @@ src_install() {
 
 		# mozilla plugin
 		if use nsplugin ; then
-			cd ${D}/opt/${MY_PN}/mozilla
+			cd "${D}"/opt/${MY_PN}/mozilla
 			exeinto /opt/netscape/plugins
 			doexe nphelix.so
 			inst_plugin /opt/netscape/plugins/nphelix.so
@@ -144,9 +144,9 @@ src_install() {
 		fi
 
 		# Language resources
-		cd ${D}/opt/RealPlayer/share/locale
+		cd "${D}"/opt/RealPlayer/share/locale
 		for LC in *; do
-			mkdir -p ${D}/usr/share/locale/${LC}/LC_MESSAGES
+			mkdir -p "${D}"/usr/share/locale/${LC}/LC_MESSAGES
 			dosym /opt/RealPlayer/share/locale/${LC}/player.mo /usr/share/locale/${LC}/LC_MESSAGES/realplay.mo
 			dosym /opt/RealPlayer/share/locale/${LC}/widget.mo /usr/share/locale/${LC}/LC_MESSAGES/libgtkhx.mo
 		done
