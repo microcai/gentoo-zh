@@ -1,8 +1,2 @@
 DIST stardict-powerword_pwqce-2.4.2.tar.bz2 3009883 RMD160 a851524640db6882328e2ff771efad5e66d871df SHA1 69457366774f5436ce51063802d00485732b4d4e SHA256 96ebdadd173bc01c8c9cbf63da4ec8250d8affb5ecc5fd1b98de894e6577f77b
 EBUILD stardict-powerword_pwqce-2.4.2.ebuild 365 RMD160 796c5c7202491df8394b9315da7b22ee2c4c08fb SHA1 c67baf9883bd4dbd9d82625a31068b8cb488f6b8 SHA256 594a0d3cceb6ab5ad1d3cf59d9e5c825c7e6bd49c6303184bf786df08fe15a0d
-MD5 3490ce60ab6f6a941e7594a3ae1fd5af stardict-powerword_pwqce-2.4.2.ebuild 365
-RMD160 796c5c7202491df8394b9315da7b22ee2c4c08fb stardict-powerword_pwqce-2.4.2.ebuild 365
-SHA256 594a0d3cceb6ab5ad1d3cf59d9e5c825c7e6bd49c6303184bf786df08fe15a0d stardict-powerword_pwqce-2.4.2.ebuild 365
-MD5 85b3eb049ebad49127139beac0f4f731 files/digest-stardict-powerword_pwqce-2.4.2 298
-RMD160 5cd29b43d697892bae493f416aca9ff6ba648b93 files/digest-stardict-powerword_pwqce-2.4.2 298
-SHA256 6652e509e37705f3416ed6becb7f0128138087135c2533e9d1cd858304f28abe files/digest-stardict-powerword_pwqce-2.4.2 298
