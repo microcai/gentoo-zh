@@ -33,7 +33,7 @@ src_install() {
 
 pkg_postinst() {
 	if use nslive; then
-		ewarn "Note: please execute the program \"nslive\" to initialize "
+		ewarn "Note: please execute the program \"nslive -p 33\" to initialize "
 		ewarn "      nslive. and comment the line \"mplayer=/usr/bin/mplayer\""
 		ewarn "      in the configure file \"\${HOME}/.ulive/ulive.conf\""
 	fi
