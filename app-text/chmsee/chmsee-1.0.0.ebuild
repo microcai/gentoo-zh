@@ -13,13 +13,15 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 
-IUSE="firefox"
+IUSE="xulrunner"
 RDEPEND=">=gnome-base/libglade-2.0
 		 >=x11-libs/gtk+-2.8
 		 app-doc/chmlib
 		 dev-libs/openssl
-		 firefox? ( >=www-client/mozilla-firefox-1.5.0.7 )
-		 !firefox? ( >=www-client/seamonkey-1.0.7 )"
+		 xulrunner? ( net-libs/xulrunner )
+		 !xulrunner? ( || (
+		 >=www-client/mozilla-firefox-1.5.0.7
+		 >=www-client/seamonkey-1.0.7 ))"
 		 
 DEPEND="${RDEPEND}"
 

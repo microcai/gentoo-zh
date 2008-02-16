@@ -14,6 +14,9 @@ IUSE="sopcast nslive"
 RDEPEND=">=dev-libs/glib-2.6
 		 >=dev-libs/openssl-0.9.8
 		 >=x11-libs/gtk+-2.6
+		 >=dev-cpp/libglademm-2.4
+		 >=dev-cpp/gtkmm-2.4
+		 >=dev-cpp/glibmm-2
 		 media-video/mplayer
 		 sopcast? (media-tv/sopcast)
 		 nslive? (media-tv/nslive)"
