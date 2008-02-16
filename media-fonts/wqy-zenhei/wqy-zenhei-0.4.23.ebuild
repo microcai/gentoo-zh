@@ -6,8 +6,7 @@ inherit font
 
 DESCRIPTION="WenQuanYi TrueType CJK font"
 HOMEPAGE="http://wqy.sourceforge.net/en/"
-PRV=${PR##?}
-SRC_URI="mirror://sourceforge/wqy/${PN}-${PV}-${PRV}.tar.gz"
+SRC_URI="mirror://sourceforge/wqy/${P}-${PR/r/}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
