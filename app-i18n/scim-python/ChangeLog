@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Feb 2008; Yu Yuwei <acevery@gmail.com> +scim-python-9999.ebuild:
+  Add svn ebuild
+
   16 Jan 2008; Yu Yuwei <acevery@gmail.com> ++,
   -scim-python-0.1.9-r1.ebuild:
   Del "shuangpin" USE flag Which is mis-added
