@@ -11,14 +11,23 @@ SRC_URI="http://liblunar.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="doc"
+IUSE="doc python"
 
-DEPEND=""
+RDEPEND="${RDEPEND}
+    doc? ( >=dev-util/gtk-doc-1 )
+	python? (
+		>=dev-python/pygobject-2.11.5
+		>=dev-python/pygtk-2.9.7
+	)"
+
 DEPEND="${RDEPEND}
-    app-text/scrollkeeper
+	sys-devel/gettext
     >=dev-util/pkgconfig-0.9
     >=dev-util/intltool-0.35
-    >=app-text/gnome-doc-utils-0.3.2
-    doc? ( >=dev-util/gtk-doc-1 )"
+	>=app-text/gnome-doc-utils-0.3.2"
 
 DOCS="AUTHORS ChangeLog NEWS README"
+
+pkg_setup() {
+	G2CONF="$(use_enable python) $(use_enable doc)"
+}
