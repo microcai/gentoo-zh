@@ -9,6 +9,7 @@ HOMEPAGE="http://code.google.com/p/scim-python/"
 #SRC_URI="http://scim-python.googlecode.com/files/${P}.tar.bz2"
 #RESTRICT="mirror"
 ESVN_REPO_URI="http://scim-python.googlecode.com/svn/trunk"
+SRC_URI="pinyin? ( http://scim-python.googlecode.com/files/pinyin-database-0.1.10.tar.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -37,6 +38,10 @@ pkg_setup() {
 
 src_unpack() {
 	subversion_src_unpack
+	if use pinyin; then
+		unpack "pinyin-database-0.1.10.tar.bz2" || die
+		mv -v "py.db" "${S}/python/engine/PinYin/" || die
+	fi
 	cd "${S}"
 	autopoint
 	AT_NO_RECURSIVE=yes AT_M4DIR=${S}/m4
