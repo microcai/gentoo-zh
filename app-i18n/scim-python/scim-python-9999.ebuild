@@ -62,6 +62,8 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
-	chmod 755 "${D}/usr/share/scim-python/engine/XingMa/XMCreateDB.py"
+	if use pinyin; then
+		chmod 755 "${D}/usr/share/scim-python/engine/XingMa/XMCreateDB.py"
+	fi
 	dodoc README ChangeLog AUTHORS NEWS TODO
 }

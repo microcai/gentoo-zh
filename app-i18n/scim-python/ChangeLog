@@ -3,6 +3,9 @@
 # $Header: $
 
   25 Feb 2008; Yu Yuwei <acevery@gmail.com> scim-python-9999.ebuild:
+  fix xingma USE condition error
+
+  25 Feb 2008; Yu Yuwei <acevery@gmail.com> scim-python-9999.ebuild:
   Work around for XMCreateDB exec
 
   25 Feb 2008; Yu Yuwei <acevery@gmail.com> scim-python-9999.ebuild:
