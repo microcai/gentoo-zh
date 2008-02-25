@@ -9,7 +9,7 @@
 <longdescription>A python binding for SCIM. Now support PinYin, ShuangPin and a English Writer Input Method. </longdescription>
 <use>
 <flag name='pinyin'>Build Pin Yin Input Method.</flag>
-<flag name='shuangpin'>Build Shuang Pin Input Method.</flag>
+<flag name='xingma'>Build XingMa Input Method Engine.</flag>
 <flag name='enwriter'>Build English Writer Input Method.</flag>
 </use>
 </pkgmetadata>

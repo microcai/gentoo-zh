@@ -13,7 +13,7 @@ ESVN_REPO_URI="http://scim-python.googlecode.com/svn/trunk"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="nls pinyin enwriter"
+IUSE="nls pinyin enwriter xingma"
 
 RDEPEND="x11-libs/libXt
 	>=dev-lang/python-2.5
@@ -46,6 +46,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		$(use_enable pinyin) \
+		$(use_enable xingma) \
 		$(use_enable nls) \
 		$(use_enable enwriter english-writer) \
 		--disable-static \
