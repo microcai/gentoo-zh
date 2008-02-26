@@ -67,3 +67,13 @@ src_install() {
 	fi
 	dodoc README ChangeLog AUTHORS NEWS TODO
 }
+
+pkg_postinst() {
+	if use xingma; then
+		einfo
+		einfo "To use XingMa Input Methond Engine"
+		einfo "You need to emerge app-i18n/scim-xingma with the USE you need"
+		einfo
+		epause
+	fi
+}
