@@ -6,7 +6,7 @@
 <email>acevery@gmail.com</email>
 <name>Yu Yuwei</name>
 </maintainer>
-<longdescription>A python binding for SCIM. Now support PinYin, ShuangPin and a English Writer Input Method. </longdescription>
+<longdescription>A python binding for SCIM. Now support various PinYin, XingMa (ZhengMa WuBi86 ErBi-QingSong CangJie5) and a English Writer Input Method. </longdescription>
 <use>
 <flag name='pinyin'>Build Pin Yin Input Method.</flag>
 <flag name='xingma'>Build XingMa Input Method Engine.</flag>

@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Feb 2008; Yu Yuwei <acevery@gmail.com> metadata.xml:
+  Update metadata.xml
+
   25 Feb 2008; Yu Yuwei <acevery@gmail.com> scim-python-9999.ebuild:
   fix xingma USE condition error
 
