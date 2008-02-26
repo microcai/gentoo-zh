@@ -9,8 +9,10 @@ app-dicts/stardict:festival - Pull in festival for stardict
 app-i18n/scim-python:pinyin - Build PinYin Input Method
 app-i18n/scim-python:xingma - Build XingMa Input Method Engine
 app-i18n/scim-python:enwriter - Build English Writer Input Method
-dev-python/zsi:twisted - Add support for dev-python/twisted and dev-python/twisted-web
+app-i18n/scim-xingma:zhengma - Support for ZhengMa Input Method
+app-i18n/scim-xingma:wubi - Support for WuBi 86 Input Method
+app-i18n/scim-xingma:erbi-qs - Support for ErBi QingSong Input Method
+app-i18n/scim-xingma:cangjie5 - Support for CangJie 5th Input Method
 media-sound/mac-port:asm - Enable use of asm routines to improve performance
-media-sound/sonata:audioscrobbler - Audioscrobbler (last.fm) support
 x11-libs/cairo:newspr - Enable Freetype subpixel font rendering
 x11-libs/libXft:newspr - Enable Freetype subpixel font rendering
