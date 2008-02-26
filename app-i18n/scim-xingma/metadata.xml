@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>cjk</herd>
+<maintainer>
+  <email>acevery@gmail.com</email>
+  <name>Yu Yuwei</name>
+</maintainer>
+<longdescription>These are the tables or mabiao which scim-python/XingMa used. XingMa is an advance Tables Input Method Engine Framework, aim at provide best user experience in table-input-method usage.
+</longdescription>
+<use>
+  <flag name='zhengma'>Install ZhengMa Input Method</flag>
+  <flag name='wubi'>Install WuBi86 Input Method</flag>
+  <flag name='erbi-qs'>Install Erbi QingSong Input Method</flag>
+  <flag name='cangjie5'>Install CangJie 5th Input Method</flag>
+</use>
+</pkgmetadata>
