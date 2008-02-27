@@ -5,7 +5,7 @@
 inherit gnome2
 
 DESCRIPTION="The Chinese Lunar applet for gnome"
-HOMEPAGE="http://dev.inlsd.org/projects/lunar-applet"
+HOMEPAGE="http://lunar-applet.googlecode.com"
 
 LICENSE="GPL-2"
 SLOT="0"
