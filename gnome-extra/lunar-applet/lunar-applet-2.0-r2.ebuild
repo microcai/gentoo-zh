@@ -19,7 +19,7 @@ RDEPEND=">=gnome-base/gnome-panel-2.16
 
 DEPEND="${RDEPEND}
     app-text/scrollkeeper
-    >=app-i18n/libgcl-0.2.2
+    >=app-i18n/liblunar-0.2.5
     >=dev-util/pkgconfig-0.9
     >=dev-util/intltool-0.35"
 
