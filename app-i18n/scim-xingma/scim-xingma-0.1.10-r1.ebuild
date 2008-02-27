@@ -6,10 +6,10 @@ inherit eutils
 
 DESCRIPTION="Tables for XingMa, A tabe Input Methon Engine"
 HOMEPAGE="http://code.google.com/p/scim-python/"
-SRC_URI="zhengma? (http://scim-python.googlecode.com/files/xingma-zhengma-database-${PV}.tar.bz2)
-	wubi? (http://scim-python.googlecode.com/files/xingma-wubi86-database-${PV}.tar.bz2)
-	erbi-qs? (http://scim-python.googlecode.com/files/xingma-erbi-qingsong-database-${PV}.tar.bz2)
-	cangjie5? (http://scim-python.googlecode.com/files/xingma-cangjie5-database-${PV}.tar.bz2)"
+SRC_URI="zhengma? (http://scim-python.googlecode.com/files/xingma-zhengma-${PV}.tar.bz2)
+	wubi? (http://scim-python.googlecode.com/files/xingma-wubi86-${PV}.tar.bz2)
+	erbi-qs? (http://scim-python.googlecode.com/files/xingma-erbi-qingsong-${PV}.tar.bz2)
+	cangjie5? (http://scim-python.googlecode.com/files/xingma-cangjie5-${PV}.tar.bz2)"
 RESTRICT="mirror"
 
 LICENSE="GPL-2"
