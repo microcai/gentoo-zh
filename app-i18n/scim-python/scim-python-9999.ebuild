@@ -7,7 +7,6 @@ inherit autotools eutils subversion
 DESCRIPTION="A python wrapper for Smart Common Input Method (SCIM)"
 HOMEPAGE="http://code.google.com/p/scim-python/"
 #SRC_URI="http://scim-python.googlecode.com/files/${P}.tar.bz2"
-#RESTRICT="mirror"
 ESVN_REPO_URI="http://scim-python.googlecode.com/svn/trunk"
 SRC_URI="pinyin? ( http://scim-python.googlecode.com/files/pinyin-database-0.1.10.tar.bz2 )"
 RESTRICT="mirror"
@@ -63,9 +62,6 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
-	if use pinyin; then
-		chmod 755 "${D}/usr/share/scim-python/engine/XingMa/XMCreateDB.py"
-	fi
 	dodoc README ChangeLog AUTHORS NEWS TODO
 }
 
