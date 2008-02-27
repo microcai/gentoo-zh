@@ -32,11 +32,11 @@ pkg_setup() {
 
 src_install() {
 	dodir /usr/share/scim/icons
-	for p in "$(find "${WORKDIR}" -iname '*.png')"; do
+	for p in $(find "${WORKDIR}" -iname '*.png'); do
 		mv "${p}" "${D}/usr/share/scim/icons/"
 	done
 	dodir /usr/share/scim-python/engine/XingMa/tables
-	for d in "$(find "${WORKDIR}" -iname '*.db')"; do
+	for d in $(find "${WORKDIR}" -iname '*.db'); do
 		mv "${d}" "${D}/usr/share/scim-python/engine/XingMa/tables/"
 	done
 }
