@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.50 2008/02/08 15:09:57 cla Exp $
 
+  01 Mar 2008; Zhang Le <r0bertz@gentoo.org> unzip-5.52-r1.ebuild:
+  if LINGUAS=zh, then define Ext_ASCII_TO_Native to _ISO_INTERN
+
   08 Feb 2008; Dawid Węgliński <cla@gentoo.org> unzip-5.52-r1.ebuild:
   Change SRC_URI as the old url wasn't fetchable
 

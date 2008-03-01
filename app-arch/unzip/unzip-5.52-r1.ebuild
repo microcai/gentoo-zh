@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${PN}${PV/.}.tar.gz"
 LICENSE="Info-ZIP"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE=""
+IUSE="linguas_zh"
 
 DEPEND=""
 
@@ -45,6 +45,8 @@ src_compile() {
 		*)            die "Unknown target, you suck" ;;
 	esac
 	append-lfs-flags #104315
+	use linguas_zh && append-flags \
+		"-D 'Ext_ASCII_TO_Native(str, n, v, x, l)=_ISO_INTERN(str)'"
 	emake -f unix/Makefile ${TARGET} || die "emake failed"
 }
 
@@ -54,3 +56,19 @@ src_install() {
 	doman man/*.1
 	dodoc BUGS History* README ToDo WHERE
 }
+
+pkg_postinst() {
+	elog "If you receive a zip file from a Windows user, after unzip the file"
+	elog "you find Chinese chars in the filename are garbled and you can't"
+	elog "recover it no matter how you convert them, you should try add"
+	elog "LINGAUS=zh to your make.conf and re-emerge unzip, and unzip it again."
+	elog ""
+	elog "Note: even after this, maybe you still couldn't see the right chars."
+	elog "This time convmv can save you. All you need to know is which language"
+	elog "version of Windows that Windows user is using and which encodin you"
+	elog "are using."
+	elog ""
+	elog "Note again: this trick may apply to Korean and Japanese users too."
+	elog "But I do not have the condition to test it -- r0bertz"
+}
+
