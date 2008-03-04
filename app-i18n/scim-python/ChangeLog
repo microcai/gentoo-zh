@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 Mar 2008; Yu Yuwei <acevery@gmail.com> scim-python-9999.ebuild:
+  Add cvs dependency into 9999 ebuild
+
   29 Feb 2008; Yu Yuwei <acevery@gmail.com> +scim-python-0.1.10_rc1.ebuild:
   add 0.1.10_rc1
 

@@ -24,6 +24,7 @@ RDEPEND="x11-libs/libXt
 	"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
+	dev-util/cvs
 	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
