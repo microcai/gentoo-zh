@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="zhengma wubi erbi-qs cangjie5"
 
-RDEPEND=">=app-i18n/scim-python-0.1.10"
+RDEPEND=">app-i18n/scim-python-0.1.9"
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
