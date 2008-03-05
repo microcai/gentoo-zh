@@ -47,3 +47,10 @@ src_install() {
 		mv "${d}" "${D}/usr/share/scim-python/engine/XingMa/tables/"
 	done
 }
+
+pkg_postinst() {
+	ewarn "DO NOT report bugs to Gentoo's bugzilla"
+	einfo "Please report all bugs to scim-python project"
+	einfo "\thttp://code.google.com/p/scim-python/issues/list"
+	einfo
+}
