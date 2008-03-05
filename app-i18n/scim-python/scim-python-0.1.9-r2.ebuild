@@ -56,3 +56,10 @@ src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 	dodoc README ChangeLog AUTHORS NEWS TODO
 }
+
+pkg_postinst(){
+	ewarn "DO NOT report bugs to Gentoo's bugzilla"
+	einfo "Please report all bugs to scim-python project"
+	einfo "\thttp://code.google.com/p/scim-python/issues/list"
+	einfo
+}

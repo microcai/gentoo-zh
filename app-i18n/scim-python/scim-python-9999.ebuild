@@ -74,4 +74,8 @@ pkg_postinst() {
 		einfo
 		epause
 	fi
+	ewarn "DO NOT report bugs to Gentoo's bugzilla"
+	einfo "Please report all bugs to scim-python project"
+	einfo "\thttp://code.google.com/p/scim-python/issues/list"
+	einfo
 }
