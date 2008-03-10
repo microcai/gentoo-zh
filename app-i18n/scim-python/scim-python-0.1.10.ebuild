@@ -4,11 +4,10 @@
 
 inherit autotools eutils
 
-MY_P="${P/_/}"
 
 DESCRIPTION="A python wrapper for Smart Common Input Method (SCIM)"
 HOMEPAGE="http://code.google.com/p/scim-python/"
-SRC_URI="http://scim-python.googlecode.com/files/${MY_P}.tar.gz
+SRC_URI="http://scim-python.googlecode.com/files/${P}.tar.gz
 	pinyin? ( http://scim-python.googlecode.com/files/pinyin-database-0.1.10.tar.bz2 )"
 RESTRICT="mirror"
 
@@ -28,7 +27,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	if ! built_with_use '>=dev-lang/python-2.5*' sqlite; then
@@ -73,8 +71,4 @@ pkg_postinst() {
 		einfo
 		epause
 	fi
-	ewarn "DO NOT report bugs to Gentoo's bugzilla"
-	einfo "Please report all bugs to scim-python project"
-	einfo "\thttp://code.google.com/p/scim-python/issues/list"
-	einfo
 }
