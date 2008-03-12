@@ -8,7 +8,7 @@ DESCRIPTION="A python wrapper for Smart Common Input Method (SCIM)"
 HOMEPAGE="http://code.google.com/p/scim-python/"
 #SRC_URI="http://scim-python.googlecode.com/files/${P}.tar.bz2"
 ESVN_REPO_URI="http://scim-python.googlecode.com/svn/trunk"
-SRC_URI="pinyin? ( http://scim-python.googlecode.com/files/pinyin-database-0.1.10.tar.bz2 )"
+SRC_URI="pinyin? ( http://scim-python.googlecode.com/files/pinyin-database-0.1.10.5.tar.bz2 )"
 RESTRICT="mirror"
 
 LICENSE="GPL-2"
