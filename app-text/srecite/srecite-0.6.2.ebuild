@@ -1,6 +1,6 @@
-#Copyright
-#Distributed under the terms of the GNU General Public License v2
-#$Header: Exp $
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: Exp $
 
 inherit eutils
 
@@ -16,12 +16,11 @@ DEPEND=">=x11-libs/gtk+-2"
 
 src_unpack(){
 	unpack ${A}
-	cd ${S}/src
-	epatch ${FILESDIR}/srecite.rc.patch
+	cd "${S}/src"
+	epatch "${FILESDIR}/srecite.rc.patch"
 }
 
 src_install() {
-	cd ${S}
 	einstall || die "install failed"
 }
 
