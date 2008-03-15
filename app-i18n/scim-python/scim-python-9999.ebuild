@@ -40,7 +40,7 @@ pkg_setup() {
 src_unpack() {
 	subversion_src_unpack
 	if use pinyin; then
-		unpack "pinyin-database-0.1.10.tar.bz2" || die
+		unpack ${A} || die
 		mv -v "py.db" "${S}/python/engine/PinYin/" || die
 	fi
 	cd "${S}"
