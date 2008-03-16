@@ -1,0 +1,61 @@
+diff -urN preload-0.4-orig/src/log.c preload-0.4/src/log.c
+--- preload-0.4-orig/src/log.c	2005-09-01 15:12:06.000000000 +0800
++++ preload-0.4/src/log.c	2008-03-15 22:37:18.420840970 +0800
+@@ -71,16 +71,19 @@
+ 
+       /* set up stdout, stderr to log and stdin to /dev/null */
+ 
+-      if (0 > (nullfd = open ("/dev/null", O_RDONLY)))
+-	g_error ("cannot open %s: %s", "/dev/null", strerror (errno));
+-
+-      if (0 > (logfd = open (logfile, O_WRONLY | O_CREAT | O_APPEND, 0600)))
+-	g_error ("cannot open %s: %s", logfile, strerror (errno));
+-
+-      if ((dup2 (nullfd, STDIN_FILENO) != STDIN_FILENO) ||
++      if (0 > (nullfd = open ("/dev/null", O_RDONLY))) {
++        g_error ("cannot open %s: %s", "/dev/null", strerror (errno));
++      }
++	  
++      if (0 > (logfd = open (logfile, O_WRONLY | O_CREAT | O_APPEND, 0600))) {
++        g_error ("cannot open %s: %s", logfile, strerror (errno));
++      }
++      
++	  if ((dup2 (nullfd, STDIN_FILENO) != STDIN_FILENO) ||
+ 	  (dup2 (logfd, STDOUT_FILENO) != STDOUT_FILENO) ||
+-	  (dup2 (logfd, STDERR_FILENO) != STDERR_FILENO))
+-	g_error ("dup2: %s", strerror (errno));
++	  (dup2 (logfd, STDERR_FILENO) != STDERR_FILENO)) {
++        g_error ("dup2: %s", strerror (errno));
++	  }
+ 
+       close (nullfd);
+       close (logfd);
+diff -urN preload-0.4-orig/src/proc.c preload-0.4/src/proc.c
+--- preload-0.4-orig/src/proc.c	2005-09-16 23:10:58.000000000 +0800
++++ preload-0.4/src/proc.c	2008-03-15 22:39:34.851842377 +0800
+@@ -166,8 +166,9 @@
+   pid_t selfpid = getpid ();
+ 
+   proc = opendir ("/proc");
+-  if (!proc)
++  if (!proc) {
+     g_error ("failed opening /proc: %s", strerror (errno));
++  }
+ 
+   while ((entry = readdir (proc)))
+   {
+diff -urN preload-0.4-orig/src/state.c preload-0.4/src/state.c
+--- preload-0.4-orig/src/state.c	2005-09-14 00:40:55.000000000 +0800
++++ preload-0.4/src/state.c	2008-03-15 22:53:49.541841516 +0800
+@@ -780,9 +780,9 @@
+ 
+       version = VERSION;
+       ver_run = strtod (version, &p);
+-      if (p - version < (int) strlen (version))
++      if (p - version < (int) strlen (version)) {
+         g_error ("Invalid %s version number %s", PACKAGE, version);
+-
++      }
+       if (ver_run < ver_read ) {
+ 	g_warning ("State file is of a newer version, ignoring it");
+ 	break;
