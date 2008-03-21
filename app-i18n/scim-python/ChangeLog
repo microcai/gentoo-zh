@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  21 Mar 2008; Yu Yuwei <acevery@gmail.com> +scim-python-0.1.10-r2.ebuild:
+  Try to fix the skim crash problem
+
   15 Mar 2008; Yu Yuwei <acevery@gmail.com> scim-python-9999.ebuild:
   fix scim-python-9999 pinyin database unpack error
 
