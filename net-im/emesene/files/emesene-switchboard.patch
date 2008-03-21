@@ -1,0 +1,18 @@
+--- emesenelib/Switchboard.py.orig	2008-03-21 01:27:45.000000000 +0800
++++ emesenelib/Switchboard.py	2008-03-21 01:29:00.000000000 +0800
+@@ -255,6 +255,15 @@
+                     charset = Type.split('text/plain; charset=')[1]
+                 except IndexError:
+                     charset = ''
++
++		try:
++		    charset = Type.split('text/plain; charset=')[1]
++		except IndexError:
++		    charset = ''
++
++		if 'P4-Context' in header:
++		    nick += header['P4-Context']
++		    body = "[" + header['P4-Context'] + "]: " + body
+                 
+                 self.emit('message', tid, nick, body, format, charset)
+                 self.msn.emit('message-received', tid)

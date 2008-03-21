@@ -1,0 +1,56 @@
+diff -uar pidgin-2.3.0/libpurple/protocols/msn/switchboard.c pidgin-2.3.0.msngroup/libpurple/protocols/msn/switchboard.c
+--- pidgin-2.3.0/libpurple/protocols/msn/switchboard.c	2007-11-25 03:05:57.000000000 +0800
++++ pidgin-2.3.0.msngroup/libpurple/protocols/msn/switchboard.c	2007-12-05 05:18:05.000000000 +0800
+@@ -836,7 +836,7 @@
+ 	char *body_final;
+ 	size_t body_len;
+ 	const char *passport;
+-	const char *value;
++	const char *value, *value2;
+ 
+ 	gc = cmdproc->session->account->gc;
+ 	swboard = cmdproc->data;
+@@ -861,6 +861,15 @@
+ 	}
+ #endif
+ 
++	if ((value2 = msn_message_get_attr(msg, "P4-Context")) != NULL)
++	{
++        char *body_enc2;
++		body_enc2 = g_strdup_printf("<b>**%s**</b> %s", value2,
++									 body_enc ? body_enc : "");
++		g_free(body_enc);
++		body_enc = body_enc2;
++	}
++
+ 	if ((value = msn_message_get_attr(msg, "X-MMS-IM-Format")) != NULL)
+ 	{
+ 		char *pre, *post;
+diff -uar pidgin-2.3.0/libpurple/protocols/msnp9/switchboard.c pidgin-2.3.0.msngroup/libpurple/protocols/msnp9/switchboard.c
+--- pidgin-2.3.0/libpurple/protocols/msnp9/switchboard.c	2007-11-25 03:05:58.000000000 +0800
++++ pidgin-2.3.0.msngroup/libpurple/protocols/msnp9/switchboard.c	2007-12-05 05:17:49.000000000 +0800
+@@ -828,7 +828,7 @@
+ 	char *body_final;
+ 	size_t body_len;
+ 	const char *passport;
+-	const char *value;
++	const char *value, *value2;
+ 
+ 	gc = cmdproc->session->account->gc;
+ 	swboard = cmdproc->data;
+@@ -853,6 +853,15 @@
+ 	}
+ #endif
+ 
++	if ((value2 = msn_message_get_attr(msg, "P4-Context")) != NULL)
++	{
++        char *body_enc2;
++		body_enc2 = g_strdup_printf("<b>**%s**</b> %s", value2,
++									 body_enc ? body_enc : "");
++		g_free(body_enc);
++		body_enc = body_enc2;
++	}
++
+ 	if ((value = msn_message_get_attr(msg, "X-MMS-IM-Format")) != NULL)
+ 	{
+ 		char *pre, *post;
