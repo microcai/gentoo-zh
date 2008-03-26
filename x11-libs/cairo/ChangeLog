@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Mar 2008; Yu Yuwei <acevery@gmail.com> +cairo-1.5.14.ebuild,
+  files/cairo-1.5-newspr.patch.bz2:
+  Add cairo-1.5.14 and change newspr patch to the one by vonr, which works
+  with cairo-1.5.14
+
   07 Mar 2008; Yu Yuwei <acevery@gmail.com> +cairo-1.5.12.ebuild,
   +files/cairo-1.5-newspr.patch.bz2:
   Add cairo-1.5.12 for firefox3_pre*
