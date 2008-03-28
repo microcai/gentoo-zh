@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Mar 2008; Yu Yuwei <acevery@gmail.com> -xmuruijie-1.3.5.ebuild,
+  +xmuruijie-1.3.6.ebuild:
+  Fix a message exception when server return non-message for authentication
+  failure
+
   27 Mar 2008; Yu Yuwei <acevery@gmail.com> +xmuruijie-1.3.5.ebuild,
   +files/iptables_rules.bak, +files/localip, +files/ruijie,
   +files/ruijie-fw, +files/saier, +files/saier-fw, +metadata.xml:
