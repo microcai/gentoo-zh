@@ -41,7 +41,7 @@ src_install(){
 pkg_postinst() {
 	einfo
 	ewarn "Please set you own configuration in"
-	ewarn "/etc/conf.d/xmuruijie.conf first."
+	ewarn "/etc/xmuruijie.conf first."
 	einfo
 	einfo "If you use dynamic IP"
 	einfo "\tYou need use: /etc/init.d/ruijie start | stop to begin or stop"
