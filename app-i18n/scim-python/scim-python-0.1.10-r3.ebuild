@@ -2,19 +2,20 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit autotools eutils subversion
+inherit autotools eutils
+
 
 DESCRIPTION="A python wrapper for Smart Common Input Method (SCIM)"
 HOMEPAGE="http://code.google.com/p/scim-python/"
-#SRC_URI="http://scim-python.googlecode.com/files/${P}.tar.bz2"
-ESVN_REPO_URI="http://scim-python.googlecode.com/svn/trunk"
-SRC_URI="pinyin? ( http://scim-python.googlecode.com/files/pinyin-database-0.1.10.5.tar.bz2 )"
+SRC_URI="http://scim-python.googlecode.com/files/${P}.tar.gz
+	pinyin? ( http://scim-python.googlecode.com/files/pinyin-database-0.1.10.5.tar.bz2 )"
 RESTRICT="mirror"
+
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="nls pinyin enwriter xingma"
+IUSE="nls pinyin xingma enwriter"
 
 RDEPEND="x11-libs/libXt
 	>=dev-lang/python-2.5
@@ -24,8 +25,8 @@ RDEPEND="x11-libs/libXt
 	"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	dev-util/cvs
 	nls? ( sys-devel/gettext )"
+
 
 pkg_setup() {
 	if ! built_with_use '>=dev-lang/python-2.5*' sqlite; then
@@ -36,17 +37,13 @@ pkg_setup() {
 	fi
 }
 
-
 src_unpack() {
-	subversion_src_unpack
+	unpack ${A}
 	if use pinyin; then
-		unpack ${A} || die
 		mv -v "py.db" "${S}/python/engine/PinYin/" || die
 	fi
 	cd "${S}"
-	autopoint
-	AT_NO_RECURSIVE=yes AT_M4DIR=${S}/m4
-	eautoreconf
+	AT_NO_RECURSIVE=yes AT_M4DIR=${S}/m4 eautoreconf
 }
 
 src_compile() {
@@ -72,8 +69,4 @@ pkg_postinst() {
 		einfo
 		epause
 	fi
-	ewarn "DO NOT report bugs to Gentoo's bugzilla"
-	einfo "Please report all bugs to scim-python project"
-	einfo "\thttp://code.google.com/p/scim-python/issues/list"
-	einfo
 }
