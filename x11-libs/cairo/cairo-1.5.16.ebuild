@@ -54,7 +54,7 @@ src_unpack() {
 	# David Turner and is now proposed for inclusion in cairo. See freedesktop
 	# #10301 and #13566. Modified to apply to cairo-1.5.12 by vonr.
 	if use newspr; then
-		epatch "${FILESDIR}/${PN}-1.5-newspr.patch.bz2"
+		epatch "${FILESDIR}/${P}-newspr.patch.bz2"
 	fi
 	# We need to run elibtoolize to ensure correct so versioning on FreeBSD
 	elibtoolize
