@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 Apr 2008; Yu Yuwei <acevery@gmail.com> +cairo-1.5.18.ebuild:
+  Add cairo-1.5.18 for newspr USE
+
   26 Mar 2008; Yu Yuwei <acevery@gmail.com> +cairo-1.5.14.ebuild,
   files/cairo-1.5-newspr.patch.bz2:
   Add cairo-1.5.14 and change newspr patch to the one by vonr, which works
