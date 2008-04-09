@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 Apr 2008; Yu Yuwei <acevery@gmail.com> cairo-1.4.12.ebuild,
+  cairo-1.4.14.ebuild, +cairo-1.5.20.ebuild:
+  Add cairo-1.5.20 and fix some badindev in 1.4.*
+
   09 Apr 2008; Yu Yuwei <acevery@gmail.com> +cairo-1.5.18.ebuild:
   Add cairo-1.5.18 for newspr USE
 
