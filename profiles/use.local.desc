@@ -13,6 +13,7 @@ app-i18n/scim-xingma:zhengma - Support for ZhengMa Input Method
 app-i18n/scim-xingma:wubi - Support for WuBi 86 Input Method
 app-i18n/scim-xingma:erbi-qs - Support for ErBi QingSong Input Method
 app-i18n/scim-xingma:cangjie5 - Support for CangJie 5th Input Method
+app-i18n/scim-xingma:compose - Support for Compose Key Input Method
 media-sound/mac-port:asm - Enable use of asm routines to improve performance
 net-misc/xmuruijie:firewall - Add support for iptables firewall
 x11-libs/cairo:newspr - Enable Freetype subpixel font rendering
