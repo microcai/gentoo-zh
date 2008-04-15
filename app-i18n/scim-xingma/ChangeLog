@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Apr 2008; Yu Yuwei <acevery@gmail.com> +scim-xingma-0.1.10.1.ebuild:
+  Add new version, which fix UUID confliction with scim-tables
+
   05 Apr 2008; Yu Yuwei <acevery@gmail.com> -scim-xingma-0.1.10-r1.ebuild,
   +scim-xingma-0.1.10-r2.ebuild:
   fix syntax error
