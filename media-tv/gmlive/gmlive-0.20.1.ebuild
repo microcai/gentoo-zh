@@ -18,8 +18,8 @@ RDEPEND=">=dev-libs/glib-2.6
 		 >=dev-cpp/gtkmm-2.4
 		 >=dev-cpp/glibmm-2
 		 media-video/mplayer
-		 sopcast? (media-tv/sopcast)
-		 nslive? (media-tv/nslive)"
+		 sopcast? ( media-tv/sopcast )
+		 nslive? ( media-tv/nslive )"
 DEPEND="${RDEPEND}
 		sys-devel/gettext
 		>=dev-util/pkgconfig-0.19
