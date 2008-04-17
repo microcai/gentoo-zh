@@ -9,15 +9,17 @@ HOMEPAGE="http://code.google.com/p/scim-python/"
 SRC_URI="zhengma? ( http://scim-python.googlecode.com/files/xingma-zhengma-${PV}.tar.bz2 )
 	wubi? ( http://scim-python.googlecode.com/files/xingma-wubi86-${PV}.tar.bz2 )
 	erbi-qs? ( http://scim-python.googlecode.com/files/xingma-erbi-qingsong-${PV}.tar.bz2 )
-	cangjie5? ( http://scim-python.googlecode.com/files/xingma-cangjie5-${PV}.tar.bz2 )"
+	cangjie5? ( http://scim-python.googlecode.com/files/xingma-cangjie5-${PV}.tar.bz2 )
+	compose? ( http://scim-python.googlecode.com/files/xingma-compose-${PV}.tar.bz2 )"
+
 RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="zhengma wubi erbi-qs cangjie5"
+IUSE="zhengma wubi erbi-qs cangjie5 compose"
 
-RDEPEND=">app-i18n/scim-python-0.1.9"
+RDEPEND=">=app-i18n/scim-python-0.1.11"
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
