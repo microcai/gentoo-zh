@@ -50,8 +50,6 @@ src_compile() {
 		$(use_enable xingma) \
 		$(use_enable nls) \
 		$(use_enable enwriter english-writer) \
-		--disable-static \
-		--disable-dependency-tracking \
 		|| die "econf failed"
 	emake || die "make failed"
 }
