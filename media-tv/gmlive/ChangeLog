@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  20 Apr 2008; Zhang Le <r0bertz@gentoo.org> Manifest:
+  fixed manifest
+
   20 Apr 2008; Zhang Le <r0bertz@gentoo.org> gmlive-0.20.1.ebuild:
   added RESTRICT mirror
 
