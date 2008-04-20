@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>r0bertz@gentoo.org</email>
+  <description>maintaining in gentoo china overlay</description>
+</maintainer>
+<longdescription>A program to view chm files</longdescription>
+<use>
+  <flag name='xulrunner'>If enabled, will pull in net-libs/xulrunner; otherwise, will use mozilla-firefox or seamonkey</flag>
+</pkgmetadata>

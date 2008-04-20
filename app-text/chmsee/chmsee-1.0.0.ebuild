@@ -7,7 +7,7 @@ inherit eutils flag-o-matic
 DESCRIPTION="Utility for viewing Microsoft .chm files."
 HOMEPAGE="http://chmsee.gro.clinux.org"
 SRC_URI="http://gro.clinux.org/frs/download.php/2040/${P}.tar.gz"
-RESTRICT="primaryuri"
+RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,18 +19,13 @@ RDEPEND=">=gnome-base/libglade-2.0
 		 app-doc/chmlib
 		 dev-libs/openssl
 		 xulrunner? ( net-libs/xulrunner )
-		 !xulrunner? ( || (
-		 >=www-client/mozilla-firefox-1.5.0.7
-		 >=www-client/seamonkey-1.0.7 ))"
+		 !xulrunner? ( 
+		 	|| ( >=www-client/mozilla-firefox-1.5.0.7
+			>=www-client/seamonkey-1.0.7 ) )"
 		 
 DEPEND="${RDEPEND}"
 
-src_compile() {
-	econf || die "configure failed"
-	emake || die "make failed"
-}
-
 src_install() {
 	emake DESTDIR=${D} install || die
-	dodoc COPYING AUTHORS README
+	dodoc AUTHORS README
 }
