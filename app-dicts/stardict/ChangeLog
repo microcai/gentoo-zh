@@ -2,6 +2,9 @@
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.34 2007/03/26 06:49:29 kevquinn Exp $
 
+  20 Apr 2008; Zhang Le <r0bertz@gentoo.org> stardict-3.0.1-r2.ebuild:
+  fixed dependency, >=gnome-base/libgnomeui-2.20
+
   26 Mar 2007; Kevin F. Quinn <kevquinn@gentoo.org>
   -files/stardict-config.sh:
   Remove insecure legacy script from files/ - bug #159543

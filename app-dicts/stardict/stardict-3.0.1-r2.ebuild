@@ -21,7 +21,7 @@ KEYWORDS="~sparc ~x86"
 
 DEP="gnome? ( >=gnome-base/libbonobo-2.2.0
 		>=gnome-base/libgnome-2.2.0
-		>=gnome-base/libgnomeui-2.2.0
+		>=gnome-base/libgnomeui-2.20
 		>=gnome-base/gconf-2
 		>=gnome-base/orbit-2.6
 		app-text/scrollkeeper )
