@@ -35,6 +35,5 @@ src_install() {
 	dobin sp-sc-auth
 	# we need to make the above available for older stuff expecting to find it with the old name
 	dosym /usr/bin/sp-sc-auth /usr/bin/sp-sc
-	dobin sp-so-auth
 	dodoc Readme
 }

@@ -3,5 +3,8 @@
 # $Header: $
 
   20 Apr 2008; Zhang Le <r0bertz@gentoo.org> sopcast-1.1.1.ebuild:
+  no sp-so-auth in this release
+
+  20 Apr 2008; Zhang Le <r0bertz@gentoo.org> sopcast-1.1.1.ebuild:
   fixed manifest
 
