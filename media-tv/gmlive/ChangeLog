@@ -1,0 +1,8 @@
+# ChangeLog for media-tv/gmlive
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  20 Apr 2008; Zhang Le <r0bertz@gentoo.org> gmlive-0.20.1.ebuild:
+  added necessary space after ( and before ) in dependency specification;
+  removed ~ppc keyword since sopcast won't work on ppc
+
