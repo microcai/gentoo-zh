@@ -9,4 +9,5 @@
 <longdescription>A program to view chm files</longdescription>
 <use>
   <flag name='xulrunner'>If enabled, will pull in net-libs/xulrunner; otherwise, will use mozilla-firefox or seamonkey</flag>
+</use>
 </pkgmetadata>

@@ -19,13 +19,13 @@ RDEPEND=">=gnome-base/libglade-2.0
 		 app-doc/chmlib
 		 dev-libs/openssl
 		 xulrunner? ( net-libs/xulrunner )
-		 !xulrunner? ( 
+		 !xulrunner? (
 		 	|| ( >=www-client/mozilla-firefox-1.5.0.7
 			>=www-client/seamonkey-1.0.7 ) )"
-		 
+
 DEPEND="${RDEPEND}"
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS README
 }

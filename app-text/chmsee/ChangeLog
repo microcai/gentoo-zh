@@ -3,6 +3,10 @@
 # $Header: $
 
   20 Apr 2008; Zhang Le <r0bertz@gentoo.org> chmsee-1.0.0.ebuild,
+  metadata.xml:
+  fixed metadata.xml, removed trailing space added necessary quote in ebuild
+
+  20 Apr 2008; Zhang Le <r0bertz@gentoo.org> chmsee-1.0.0.ebuild,
   +metadata.xml:
   fixed a bug in dependency specification， added a space between ))
 
