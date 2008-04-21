@@ -14,7 +14,7 @@ KEYWORDS="~x86"
 IUSE="doc python"
 
 RDEPEND="${RDEPEND}
-    doc? ( >=dev-util/gtk-doc-1 )
+	doc? ( >=dev-util/gtk-doc-1 )
 	python? (
 		>=dev-python/pygobject-2.11.5
 		>=dev-python/pygtk-2.9.7
@@ -22,8 +22,8 @@ RDEPEND="${RDEPEND}
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-    >=dev-util/pkgconfig-0.9
-    >=dev-util/intltool-0.35
+	>=dev-util/pkgconfig-0.9
+	>=dev-util/intltool-0.35
 	>=app-text/gnome-doc-utils-0.3.2"
 
 DOCS="AUTHORS ChangeLog NEWS README"
