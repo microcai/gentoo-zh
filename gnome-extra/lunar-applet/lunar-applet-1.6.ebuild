@@ -15,17 +15,17 @@ IUSE="doc eds"
 SRC_URI="http://ftp.inlsd.org/${PN}/${P}.tar.gz"
 
 RDEPEND=">=gnome-base/gnome-panel-2.16
-    eds? ( >=gnome-extra/evolution-data-server-1.6 )"
+	eds? ( >=gnome-extra/evolution-data-server-1.6 )"
 
 DEPEND="${RDEPEND}
-    app-text/scrollkeeper
-    >=dev-util/pkgconfig-0.9
-    >=dev-util/intltool-0.35
-    >=app-text/gnome-doc-utils-0.3.2
-    doc? ( >=dev-util/gtk-doc-1 )"
+	app-text/scrollkeeper
+	>=dev-util/pkgconfig-0.9
+	>=dev-util/intltool-0.35
+	>=app-text/gnome-doc-utils-0.3.2
+	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
-    G2CONF="$(use_enable eds) "
+	G2CONF="${G2CONF} $(use_enable eds) "
 }
