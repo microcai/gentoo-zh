@@ -36,5 +36,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "If you want to report bugs, go to our forum at http://emesene.org/trac/newticket"
+	einfo "If you want to report bugs, file a ticket at http://emesene.org/trac/newticket"
 }
