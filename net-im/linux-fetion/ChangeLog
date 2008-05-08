@@ -1,0 +1,8 @@
+# ChangeLog for net-im/linux-fetion
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  08 May 2008; Yu Yuwei <acevery@gmail.com> +linux-fetion-0.1.2.ebuild,
+  +files/linux-fetion-desktop.patch, +metadata.xml:
+  Added into gentoo-china overlay
+
