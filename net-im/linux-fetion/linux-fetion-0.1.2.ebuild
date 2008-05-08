@@ -14,7 +14,7 @@ SRC_URI="http://www.libfetion.cn/download/App/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 RESTRICT="mirror"
