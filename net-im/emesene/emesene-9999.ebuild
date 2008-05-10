@@ -7,6 +7,7 @@ inherit eutils subversion
 DESCRIPTION="Platform independent MSN Messenger client written in Python+GTK"
 HOMEPAGE="http://emesene.org/"
 ESVN_REPO_URI="https://emesene.svn.sourceforge.net/svnroot/emesene/trunk/emesene"
+ESVN_PATCHES="${PN}-r1382-contact-alias.patch"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,6 +22,7 @@ RDEPEND="${DEPEND}
 	dev-python/notify-python"
 
 #S=${WORKDIR}/${PN}
+
 src_unpack() {
 	subversion_src_unpack
 }

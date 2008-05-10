@@ -1,0 +1,13 @@
+ diff -urN emesene-orig/ContactManager.py emesene/ContactManager.py
+ --- emesene-orig/ContactManager.py      2008-05-10 02:00:38.781193084
+ +0800
+ +++ emesene/ContactManager.py   2008-05-10 02:01:51.161193607 +0800
+ @@ -187,7 +187,7 @@
+      def set_alias(self, account, alias):
+          '''set the contact alias, give an empty alias to reset'''
+          if self.protocol:
+ -            self.protocol.changeNick(alias, account)
+ +            self.protocol.changeAlias(account, alias)
+              self._on_contact_attr_changed(account, 'alias', alias)
+
+      def block(self, account):

@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 May 2008; Yu Yuwei <acevery@gmail.com>
+  +files/emesene-r1382-contact-alias.patch, emesene-9999.ebuild:
+  Add contact-alias patch
+
   04 May 2008; Yu Yuwei <acevery@gmail.com> emesene-9999.ebuild,
   -files/emesene-switchboard.patch, +metadata.xml:
   Start maintain this package
