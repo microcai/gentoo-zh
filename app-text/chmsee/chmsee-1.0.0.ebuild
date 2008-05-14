@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="xulrunner"
 RDEPEND=">=gnome-base/libglade-2.0
 		 >=x11-libs/gtk+-2.8
-		 app-doc/chmlib
+		 dev-libs/chmlib
 		 dev-libs/openssl
 		 xulrunner? ( net-libs/xulrunner )
 		 !xulrunner? (
