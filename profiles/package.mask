@@ -1,3 +1,0 @@
-# Yu Yuwei <acevery@gmail.com> 
-# only for the user who want the latest improvement
-=app-i18n/scim-python-9999
