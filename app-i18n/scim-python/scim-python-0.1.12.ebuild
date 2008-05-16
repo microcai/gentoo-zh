@@ -38,8 +38,11 @@ pkg_setup() {
 }
 
 src_unpack() {
+	unpack ${A}
+	# adapt the new py.db Makefile rules for Gentoo
 	if use pinyin; then
-		cp -v  "${DISTDIR}/${PYDBTAR}" "${S}/python/engine/PinYin/" || die
+		mv -v "py.db" "${S}/python/engine/PinYin/" || die
+		mv -v  "${DISTDIR}/${PYDBTAR}" "${S}/python/engine/PinYin/" || die
 	fi
 }
 
