@@ -42,7 +42,9 @@ pkg_setup() {
 src_unpack() {
 	subversion_src_unpack
 	if use pinyin; then
-		cp -v  "${DISTDIR}/${PYDBTAR}" "${S}/python/engine/PinYin/" || die
+		unpack ${PYDBTAR}
+		mv -v  "${DISTDIR}/${PYDBTAR}" "${S}/python/engine/PinYin/" || die
+		mv -v "py.db" "${S}/python/engine/PinYin/" || die
 	fi
 	cd "${S}"
 	autopoint
