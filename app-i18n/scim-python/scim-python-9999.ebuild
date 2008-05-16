@@ -8,8 +8,10 @@ DESCRIPTION="A python wrapper for Smart Common Input Method (SCIM)"
 HOMEPAGE="http://code.google.com/p/scim-python/"
 #SRC_URI="http://scim-python.googlecode.com/files/${P}.tar.bz2"
 ESVN_REPO_URI="http://scim-python.googlecode.com/svn/trunk"
-SRC_URI="pinyin? ( http://scim-python.googlecode.com/files/pinyin-database-0.1.10.5.tar.bz2 )"
+PYDBTAR="pinyin-database-0.1.10.5.tar.bz2"
+SRC_URI="pinyin? ( http://scim-python.googlecode.com/files/${PYDBTAR} )"
 RESTRICT="mirror"
+
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -40,8 +42,7 @@ pkg_setup() {
 src_unpack() {
 	subversion_src_unpack
 	if use pinyin; then
-		unpack ${A} || die
-		mv -v "py.db" "${S}/python/engine/PinYin/" || die
+		cp -v  "${DISTDIR}/${PYDBTAR}" "${S}/python/engine/PinYin/" || die
 	fi
 	cd "${S}"
 	autopoint

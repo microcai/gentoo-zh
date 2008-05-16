@@ -4,11 +4,11 @@
 
 inherit eutils
 
-
 DESCRIPTION="A python wrapper for Smart Common Input Method (SCIM)"
 HOMEPAGE="http://code.google.com/p/scim-python/"
+PYDBTAR="pinyin-database-0.1.10.5.tar.bz2"
 SRC_URI="http://scim-python.googlecode.com/files/${P}.tar.gz
-	pinyin? ( http://scim-python.googlecode.com/files/pinyin-database-0.1.10.5.tar.bz2 )"
+	pinyin? ( http://scim-python.googlecode.com/files/${PYDBTAR} )"
 RESTRICT="mirror"
 
 
@@ -38,9 +38,8 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
 	if use pinyin; then
-		mv -v "py.db" "${S}/python/engine/PinYin/" || die
+		cp -v  "${DISTDIR}/${PYDBTAR}" "${S}/python/engine/PinYin/" || die
 	fi
 }
 
