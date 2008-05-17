@@ -4,7 +4,7 @@
 
 DESCRIPTION="The gtk front-end of the iptv \"mms\" and \"sopcast\" and \"nslive\""
 HOMEPAGE="http://gmlive.googlecode.com"
-SRC_URI="http://gmlive.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://gmlive.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
