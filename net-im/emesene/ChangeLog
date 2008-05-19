@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  19 May 2008; Yu Yuwei <acevery@gmail.com>
+  +files/emesene-r1385-setup.patch, emesene-9999.ebuild:
+  Use distuitls to build, which is needed to use webcom
+
   10 May 2008; Yu Yuwei <acevery@gmail.com> +files/emesene-group-p4.patch,
   emesene-9999.ebuild, +files/emesene-r1382-soap-get.patch:
   Add the P4-Context patch mainly from debianl, add get() patch for r1382

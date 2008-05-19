@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils subversion
+inherit distutils subversion
 
 DESCRIPTION="Platform independent MSN Messenger client written in Python+GTK"
 HOMEPAGE="http://emesene.org/"
@@ -10,6 +10,7 @@ ESVN_REPO_URI="https://emesene.svn.sourceforge.net/svnroot/emesene/trunk/emesene
 ESVN_PATCHES="${PN}-group-p4.patch
 	${PN}-r1382-contact-alias.patch
 	${PN}-r1382-soap-get.patch
+	${PN}-r1385-setup.patch
 	"
 
 LICENSE="GPL-2"
@@ -30,10 +31,11 @@ src_unpack() {
 	subversion_src_unpack
 }
 
+
 src_install() {
 	insinto /usr/share/emesene
-	rm GPL PSF LGPL
-	doins -r *
+#	rm GPL PSF LGPL
+	doins -r build/lib*/*
 	echo -e '#!/bin/sh \n python /usr/share/emesene/Controller.py'>> emesene-start
 	dobin emesene-start
 	newicon "${S}"/themes/default/icon96.png ${PN}.png
