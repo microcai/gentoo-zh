@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  19 May 2008; Zhang Le <r0bertz@gentoo.org> +chmsee-1.0.1.ebuild:
+  added chmsee-1.0.1.ebuild
+
   14 May 2008; Zhang Le <r0bertz@gentoo.org> chmsee-1.0.0.ebuild:
   chmlib now in cat dev-libs instead of app-doc
 
