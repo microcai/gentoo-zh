@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}
 			X? ( app-emulation/emul-linux-x86-gtklibs )
 			app-emulation/emul-linux-x86-compat
 		)"
-RESTRICT="strip mirror test"
+RESTRICT="strip mirror test fetch"
 
 QA_TEXTRELS="opt/RealPlayer/codecs/raac.so
 	opt/RealPlayer/codecs/cvt1.so
