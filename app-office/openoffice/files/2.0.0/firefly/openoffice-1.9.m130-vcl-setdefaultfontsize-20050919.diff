@@ -1,0 +1,35 @@
+--- vcl/source/window/window.cxx	2005-09-09 20:32:42.000000000 +0800
++++ vcl/source/window/window.cxx	2005-09-19 14:18:15.000000000 +0800
+@@ -420,6 +420,8 @@ void Window::ImplUpdateGlobalSettings( A
+     }
+ 
+     StyleSettings aStyleSettings = rSettings.GetStyleSettings();
++//  Modify by Firefly(firefly@firefly.idv.tw)
++#if 0
+     // #97047: Force all fonts except Menu and Help to a fixed height
+     // to avoid UI scaling due to large fonts
+     // - but allow bigger fonts on bigger screens (i16682, i21238)
+@@ -442,6 +444,23 @@ void Window::ImplUpdateGlobalSettings( A
+     int toolfontheight = defFontheight;
+     if( toolfontheight > 9 )
+         toolfontheight = (defFontheight+8) / 2;
++#else
++    int maxFontheight = 10; // 10 is default for some asian systems, so always allow if requested
++    Font aFont = aStyleSettings.GetMenuFont();
++    int defFontheight = aFont.GetHeight();
++    if( defFontheight > maxFontheight )
++        defFontheight = maxFontheight;
++    char *pEnv = ::getenv("OOO_DEFAULT_FONT_SIZE");
++    if (pEnv)
++    {
++	int setSize = atoi(pEnv);
++	if (setSize > 0 && setSize != defFontheight)
++	{
++	    defFontheight = setSize;
++	}
++    }
++    int toolfontheight = defFontheight;
++#endif
+ 
+     aFont = aStyleSettings.GetAppFont();
+     aFont.SetHeight( defFontheight );

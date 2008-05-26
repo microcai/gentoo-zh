@@ -1,0 +1,89 @@
+# ChangeLog for app-shells/gentoo-bashcomp
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.17 2007/03/19 01:42:07 kloeri Exp $
+
+  25 Oct 2007; scsi <scsichen@gmail.com> files/emerge-fix.patch:
+  fix patch error
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove ka0ttic from metadata.xml due to retirement.
+
+  04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+  25 Nov 2005; Tom Gall <tgall@gentoo.org>
+  gentoo-bashcomp-20050516.ebuild:
+  stable on ppc64
+
+  28 Jun 2005; Joshua Kinard <kumba@gentoo.org>
+  gentoo-bashcomp-20050516.ebuild:
+  Marked stable on mips.
+
+  18 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  gentoo-bashcomp-20050516.ebuild:
+  Stable on alpha
+
+  04 Jun 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  gentoo-bashcomp-20050516.ebuild:
+  Stable on ppc.
+
+  30 May 2005; Christian Birchinger <joker@gentoo.org>
+  gentoo-bashcomp-20050516.ebuild:
+  Added sparc stable keyword
+
+  29 May 2005; Marcus D. Hanwell <marcus@gentoo.org>
+  gentoo-bashcomp-20050516.ebuild:
+  Stable on amd64.
+
+  29 May 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  gentoo-bashcomp-20050516.ebuild:
+  Stable on hppa.
+
+  28 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -gentoo-bashcomp-20050506.ebuild, gentoo-bashcomp-20050516.ebuild:
+  Stable on x86.
+
+*gentoo-bashcomp-20050516 (16 May 2005)
+
+  16 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +gentoo-bashcomp-20050516.ebuild:
+  Version bump; emerge now completes on virtuals. Also fixes bug 92479.
+
+*gentoo-bashcomp-20050506 (06 May 2005)
+
+  06 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -gentoo-bashcomp-20050316.ebuild, -gentoo-bashcomp-20050417.ebuild,
+  +gentoo-bashcomp-20050506.ebuild:
+  Version bump; many thanks to TGL in bug 91060. Tidy old ebuilds.
+
+*gentoo-bashcomp-20050417 (17 Apr 2005)
+
+  17 Apr 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -files/20050329-fix-actionre.diff, -gentoo-bashcomp-20050329-r1.ebuild,
+  +gentoo-bashcomp-20050417.ebuild:
+  Version bump; closes bugs 88152, 88326, 88797, and 88799.
+
+*gentoo-bashcomp-20050329-r1 (02 Apr 2005)
+
+  02 Apr 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/20050329-fix-actionre.diff, -gentoo-bashcomp-20050329.ebuild,
+  +gentoo-bashcomp-20050329-r1.ebuild:
+  Revision bump; added diff to fix action bash glob.
+
+*gentoo-bashcomp-20050329 (29 Mar 2005)
+
+  29 Mar 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +gentoo-bashcomp-20050329.ebuild:
+  Lots of changes; faster emerge completion. See installed ChangeLog.
+
+  25 Mar 2005; Aaron Walker <ka0ttic@gentoo.org>
+  gentoo-bashcomp-20050316.ebuild:
+  Fix deps.
+
+*gentoo-bashcomp-20050316 (16 Mar 2005)
+
+  16 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
+  +gentoo-bashcomp-20050316.ebuild:
+  New release; broken out from app-shells/bash-completion and into its own
+  ebuild.
+

@@ -1,0 +1,11 @@
+--- oxim/src/qt-immodule/qoximinputcontext_x11.cpp.orig   2007-02-06 16:22:07.000000000 +0800
++++ oxim/src/qt-immodule/qoximinputcontext_x11.cpp   2007-02-06 16:38:29.000000000 +0800
+@@ -45,7 +45,7 @@ const int XKeyRelease = KeyRelease;
+ 
+ #if !defined(QT_NO_IM)
+ 
+-#include "qplatformdefs.h"
++/* #include "qplatformdefs.h" */
+ #include "qapplication.h"
+ #include "qwidget.h"
+ #include "qstring.h"

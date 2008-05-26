@@ -1,0 +1,65 @@
+diff -Nur gcin-1.3.5.pre1.orig/configure gcin-1.3.5.pre1/configure
+--- gcin-1.3.5.pre1.orig/configure	2007-05-09 14:25:03.000000000 +0800
++++ gcin-1.3.5.pre1/configure	2007-05-18 17:23:52.000000000 +0800
+@@ -108,13 +108,14 @@
+ fi
+ 
+ QT_IM='N'
+-for i in qt3 qt4
++for i in 3 4
+ do
+-  QT_IM_DIR=/usr/lib/$i/plugins/$LIB/inputmethods
++  QT_IM_DIR=/usr/qt/$i/plugins/inputmethods
+   echo "testing if you have QT_IM_MODULE dir:$QT_IM_DIR support"
+   if [ -d  $QT_IM_DIR ]; then
+     QT_IM='Y'
+-    QT=$i
++    QT=qt$i
++    QT_DIR=/usr/qt/$i
+     break
+   fi
+ done
+@@ -196,6 +197,8 @@
+ echo "LIB=$LIB" >> config.mak
+ echo "MAC_OS=$MAC_OS" >> config.mak
+ echo "SO_FLAGS=$SO_FLAGS" >> config.mak
++echo "QT_DIR=$QT_DIR" >>config.mak
++echo "QT_DIR_i=\$(DESTDIR)/$QT_DIR" >>config.mak
+ echo "USE_TRAY=$use_tray" >> config.mak
+ echo "USE_I18N=$use_i18n" >> config.mak
+ 
+diff -Nur gcin-1.3.5.pre1.orig/qt-im/Makefile gcin-1.3.5.pre1/qt-im/Makefile
+--- gcin-1.3.5.pre1.orig/qt-im/Makefile	2006-10-14 13:15:36.000000000 +0800
++++ gcin-1.3.5.pre1/qt-im/Makefile	2007-05-18 17:24:03.000000000 +0800
+@@ -1,16 +1,16 @@
+ include ../config.mak
+-QTIM=$(QT)/plugins/inputmethods
+-IMMODULES=$(libdir)/$(QTIM)
++QTIM=$(QT_DIR_i)/plugins/inputmethods
++IMMODULES=$(QTIM)
+ ifeq ($(LIB), lib64)
+-	IMMODULES_LOCAL=/usr/lib/$(QT)/plugins/lib64/inputmethods
++	IMMODULES_LOCAL=$(QT_DIR_i)/plugins/lib64/inputmethods
+ else
+-	IMMODULES_LOCAL=/usr/lib/$(QTIM)
++	IMMODULES_LOCAL=$(QTIM)
+ endif
+-INCS=-I../im-client -I/usr/lib/$(QT)/include  -I/usr/include/Xft2/X11/Xft  -I/usr/include/fontconfig -I/usr/include/freetype2
++INCS=-I../im-client -I$(QT_DIR)/include  -I/usr/include/Xft2/X11/Xft  -I/usr/include/fontconfig -I/usr/include/freetype2
+ CXXFLAGS=$(OPTFLAGS) $(INCS) -Wall -D_REENTRANT -fPIC  -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -DQT_NO_DEBUG
+ OBJS=qgcininputcontextplugin.o qgcininputcontextplugin_my.o qgcininputcontext.o qgcininputcontext_x11.o
+ .SUFFIXES:	.c .cpp .a .so .E .h
+-LDFLAGS=-L/usr/lib/$(QT)/$(LIB) -L/usr/X11R6/$(LIB) -L../im-client -lqt-mt -lmng -ljpeg -lpng -lz \
++LDFLAGS=-L$(QT_DIR)/$(LIB) -L/usr/X11R6/$(LIB) -L../im-client -lqt-mt -lmng -ljpeg -lpng -lz \
+ -lXrender -lXrandr  -lXft -lfontconfig -lgcin-im-client \
+ -lXext -lX11 -lm -lSM -lICE -ldl -lpthread
+ all:	libqgcin.so
+@@ -18,7 +18,7 @@
+ .cpp.E:
+ 	$(CXX) -E $(CFLAGS) $(INCS) $< > $@
+ .h.o:
+-	/usr/lib/$(QT)/bin/moc $< -o $<_moc.cpp
++	$(QT_DIR)/bin/moc $< -o $<_moc.cpp
+ 	$(CXX) -c -pipe $(CXXFLAGS) $(INCS) $<_moc.cpp -o $@
+ 
+ libqgcin.so: $(OBJS)

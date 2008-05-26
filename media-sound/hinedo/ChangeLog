@@ -1,0 +1,7 @@
+# ChangeLog for media-sound/hinedo
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  21 Nov 2007; scsi <scsichen@gmail.com> +metadata.xml, hinedo-0.4.ebuild:
+  add keyword ~amd64
+

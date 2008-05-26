@@ -1,0 +1,11 @@
+--- svx/source/intro/ooo.src	2005-09-09 07:32:02.000000000 +0800
++++ svx/source/intro/ooo.src	2005-09-19 14:02:44.000000000 +0800
+@@ -51,7 +51,7 @@
+ #ifdef BUILD_SPECIAL
+ #define OOO_VENDOR "Sun Microsystems Inc."
+ #else
+-//#define OOO_VENDOR "my company"
++#define OOO_VENDOR "『晟鑫科技股份有限公司』"
+ #endif
+ 
+ Bitmap RID_DEFAULT_ABOUT_BMP_LOGO

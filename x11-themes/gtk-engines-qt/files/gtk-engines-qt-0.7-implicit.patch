@@ -1,0 +1,11 @@
+Index: gtk-qt-engine-0.6_p20060706/src/qt_rc_style.c
+===================================================================
+--- gtk-qt-engine-0.6_p20060706.orig/src/qt_rc_style.c
++++ gtk-qt-engine-0.6_p20060706/src/qt_rc_style.c
+@@ -1,5 +1,6 @@
+ #include "qt_rc_style.h"
+ #include "qt_style.h"
++#include "qt_qt_wrapper.h"
+ 
+ 
+ 

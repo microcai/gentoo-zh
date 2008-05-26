@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/stardict-dictd-devils
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /home/cvsroot/ebuildteam/app-dicts/stardict-dictd-gazetteer/ChangeLog,v 1.1 2006/10/05 08:06:04 scsi Exp $
+
+*stardict-dictd-devils-2.1.0 (04 Jun 2003)
+
+  04 Jun 2003; Alastair Tse <liquidx@gentoo.org>
+  stardict-dictd-devils-2.1.0.ebuild:
+  new stardict dictionary. see app-dict/stardict's ChangeLog for more.
+

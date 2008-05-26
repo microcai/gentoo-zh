@@ -1,0 +1,13 @@
+# ChangeLog for meida-sound/gtkhirad
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  15 Jun 2007; Hydonsingore Cia <hydonsingore@educities.edu.tw>
+  gtkhirad-0.2.ebuild:
+  ChangeLog modified
+
+*gtkhirad-0.2 (15 Jun 2007)
+
+  15 Jun 2007; Hydonsingore Cia <hydonsingore@educities.edu.tw>
+  +files/gtkhirad-0.2.ebuild, +files/gtkhirad-0.2-sandbox.patch:
+  Initial import.

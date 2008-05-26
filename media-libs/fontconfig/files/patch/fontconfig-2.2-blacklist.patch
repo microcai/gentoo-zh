@@ -1,0 +1,54 @@
+--- fontconfig/src/fcdir.c.blacklist	Mon Aug 26 15:57:40 2002
++++ fontconfig/src/fcdir.c	Fri Aug 30 14:59:05 2002
+@@ -150,6 +150,41 @@
+     return ret;
+ }
+ 
++static FcBool
++FcBlackListed (const char *name)
++{
++    static const char * const black_listed_names[] = {
++	"bodt.ttf",
++	"hrger.pfa",
++	"hrgrr.pfa",
++	"hritr.pfa",
++	"hrpld.pfa",
++	"hrpldi.pfa",
++	"hrplt.pfa",
++	"hrplti.pfa",
++	"hrscc.pfa",
++	"hrscs.pfa",
++	"u003043t.gsf",
++	"u004006t.gsf"
++    };
++
++    int low = 0;
++    int high = sizeof(black_listed_names) / sizeof(black_listed_names[0]) - 1;
++
++    while (low <= high) {
++	int mid = (low + high) / 2;
++	int res = strcmp (name, black_listed_names[mid]);
++	if (res == 0)
++	    return FcTrue;
++	else if (res < 0)
++	    high = mid - 1;
++	else
++	    low = mid + 1;
++    }
++
++    return FcFalse;
++}
++
+ #define FC_MAX_FILE_LEN	    4096
+ 
+ FcBool
+@@ -201,7 +235,8 @@
+     }
+     while (ret && (e = readdir (d)))
+     {
+-	if (e->d_name[0] != '.' && strlen (e->d_name) < FC_MAX_FILE_LEN)
++	if (e->d_name[0] != '.' && strlen (e->d_name) < FC_MAX_FILE_LEN &&
++	    !FcBlackListed (e->d_name))
+ 	{
+ 	    strcpy ((char *) base, (char *) e->d_name);
+ 	    ret = FcFileScan (set, dirs, cache, blanks, file, force);

@@ -1,0 +1,33 @@
+# ChangeLog for dev-libs/darts
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /home/cvsroot/ebuildteam/app-i18n/scim-chewing/ChangeLog,v 1.6 2006/05/15 08:26:21 palatis Exp $
+
+*scim-chewing-0.2.1 (5 May 2005)
+
+  5 May 2006; Palatis <palatis@gentoo.org.tw> scim-chewing-0.3.0.ebuild:
+    New beta version. KEYWORDS="-*"
+
+*scim-chewing-0.2.0 (28 Feb 2005)
+
+  28 Feb 2005; Palatis <palatis@gentoo.org.tw> scim-chewing-0.2.0.ebuild:
+    version bump.
+
+  25 Feb 2005; Palatis <palatis@gentoo.org.tw> scim-chewing-0.1.901.ebuild:
+    New beta version. KEYWORDS=""
+
+*scim-chewing-0.1.1 (21 Dec 2004)
+
+  21 Dec 2004; scsi <scsi@gentoo.org.tw> scim-chewing-0.1.1.ebuild:
+    New stable version.
+
+*scim-chewing-20041130 (1 Dec 2004)
+
+  21 Dec 2004; scsi <scsi@gentoo.org.tw> scim-chewing-2041130.ebuild:
+    change keyworld from x86 to none
+  
+  2 Dec 2004; scsi <scsi@gentoo.org.tw> scim-chewing-20041130.ebuild:
+    change keyworld from none to x86
+
+  1 Dec 2004; scsi <scsi@gentoo.org.tw> +scim-chewing-20041130.ebuild:
+    Initial import.
+

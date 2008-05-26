@@ -1,0 +1,8 @@
+# ChangeLog for app-portage/findcruft
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  16 Nov 2007; scsi <scsichen@gmail.com> +metadata.xml,
+  findcruft-1.0.4-r1.ebuild:
+  add url
+

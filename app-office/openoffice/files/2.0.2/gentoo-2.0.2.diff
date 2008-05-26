@@ -1,0 +1,31 @@
+--- patches/src680/apply 
++++ patches/src680/apply 
+@@ -64,8 +64,8 @@
+ Frugalware64: FrugalwareBase, 64bit, Frugalware64Only
+ QiLinux: QiLinuxOnly, LinuxCommon, GlobalDesktopFiles, FilePickers
+ #Gentoo
+-GentooBase : LinuxCommon, GentooOnly, NotDebian, Lockdown
+-GentooUnstable: GentooBase, GentooExperimental, GCJExperimental, BerkeleyDB43, AtkBridge, SystemJavaBits
++GentooBase : LinuxCommon, GentooOnly, NotDebian, Lockdown, GCJExperimental, AtkBridge, CalcSolver, SystemJavaBits
++GentooUnstable: GentooBase, GentooExperimental, BerkeleyDB43
+ Gentoo : GentooBase
+ Gentoo64: GentooBase, 64bit
+ # Win32
+@@ -940,8 +940,6 @@
+ #xt-precompile.diff
+ # build with -fomit-frame-pointer
+ omit-fp-workaround.diff
+-# hack: drop gcc libs
+-store-drop-gcc-libs-on-linking.diff
+ # more system db >= 4.3
+ system-db-4.3-use-lpthread.diff
+ # iz#58474 - build this part with db 4.2/4.3/4.4
+@@ -969,6 +967,8 @@
+ gentoo-gcc-naming-and-versioning.diff
+ # searchpaths of nspr/nss libs
+ gentoo-xmlsecurity-system-nss.diff
++# hack: drop gcc libs
++store-drop-gcc-libs-on-linking.diff
+ 
+ #
+ # NOTE: 64 bit OOo is work in progress!

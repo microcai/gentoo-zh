@@ -1,0 +1,8 @@
+DIST iiimf-le-xcin-0.1.5.tar.bz2 1293565
+EBUILD iiimf-xcin-0.1.5.ebuild 899 RMD160 1dbee392f29e3cb528e0e1a3ddbfd47707427007 SHA1 9fc931615bb546cc037d2ae38410bcb5cb6c5ee4 SHA256 abcfcf33679975cade2b58c67346a6f79f973b33ddbb1b598db3f9cf84543068
+MD5 a25eebecd9a83821a8e3e2714cbdb5fb iiimf-xcin-0.1.5.ebuild 899
+RMD160 1dbee392f29e3cb528e0e1a3ddbfd47707427007 iiimf-xcin-0.1.5.ebuild 899
+SHA256 abcfcf33679975cade2b58c67346a6f79f973b33ddbb1b598db3f9cf84543068 iiimf-xcin-0.1.5.ebuild 899
+MD5 ad85df12fa5ad2c8f1664c54a0a95908 files/digest-iiimf-xcin-0.1.5 73
+RMD160 8093f633b663c3306eea1c2d2c8c0027853cb2a8 files/digest-iiimf-xcin-0.1.5 73
+SHA256 928dbbecdaefd94dbe11f7684966836f8e5185c093ef2bd59b8439cbac517a01 files/digest-iiimf-xcin-0.1.5 73

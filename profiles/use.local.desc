@@ -1,0 +1,5 @@
+app-admin/eselect-xim:scim - add scim support
+app-admin/eselect-xim:gcin - add gcin support
+app-admin/eselect-xim:oxim - add oxim support
+app-i18n/gcin:filter-nobopomofo - support nobopomofo plugin
+app-i18n/gcin:chinese-sound - support chinese sound

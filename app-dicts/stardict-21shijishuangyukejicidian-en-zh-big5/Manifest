@@ -1,0 +1,8 @@
+DIST stardict-21shijishuangyukejicidian-big5-2.4.2.tar.bz2 13857907 RMD160 5f6e963e3492f4fef10654ae1825a921030a908f SHA1 9b04741fadd49bd24fc93db9c03e72200372af12 SHA256 5fff4f40403062dc262a7bb3c723bbf5a7a3a86d6f6e74bf860a2315a80ee4e9
+EBUILD stardict-21shijishuangyukejicidian-en-zh-big5-2.4.2.ebuild 521 RMD160 bafd8f242289761b31ea6416bdfdd2b339b3278e SHA1 035bf502a4674c9ae16a482633e29d3670959a70 SHA256 f435f22e1753ca3b4e10fd11b27f0a76f8c5775d4c1b5317a41c0e6f1b461776
+MD5 b49c15a00602767bbce4dff992e7a3bf stardict-21shijishuangyukejicidian-en-zh-big5-2.4.2.ebuild 521
+RMD160 bafd8f242289761b31ea6416bdfdd2b339b3278e stardict-21shijishuangyukejicidian-en-zh-big5-2.4.2.ebuild 521
+SHA256 f435f22e1753ca3b4e10fd11b27f0a76f8c5775d4c1b5317a41c0e6f1b461776 stardict-21shijishuangyukejicidian-en-zh-big5-2.4.2.ebuild 521
+MD5 b0c11597f4bb080ff31a750101079da5 files/digest-stardict-21shijishuangyukejicidian-en-zh-big5-2.4.2 346
+RMD160 49847fb97e544ee85737f80e2a8b2ada59391196 files/digest-stardict-21shijishuangyukejicidian-en-zh-big5-2.4.2 346
+SHA256 c6fe2370cb20f9fea7ed49721bdc32c9223595fbeacb9fe4448cdd5487af1fe2 files/digest-stardict-21shijishuangyukejicidian-en-zh-big5-2.4.2 346

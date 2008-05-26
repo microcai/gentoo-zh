@@ -1,0 +1,8 @@
+DIST stardict-soothill-buddhist-2.4.2.tar.bz2 1041992 RMD160 f688b6107c65a473dff248a71aac9f627520ee3d SHA1 a03959fb59c1eac6811f195deee92d20fcb4d724 SHA256 444f3986cfc23724c160ef98b4d2b495ff7d97652ff35a84a6639cf7c7180d35
+EBUILD stardict-soothill-buddhist-zh-en-big5-2.4.2.ebuild 492 RMD160 4f47cbf9506cce355f0d9613ece32c022c144388 SHA1 896ac1b8e59f81c0321b93d8851268a0c7b7881a SHA256 afcd16f62d39846009aa756be326fd3c7c9ae47075b20e14d4d663db48d36e6f
+MD5 a903ba49ff4fe45449c594c134521cff stardict-soothill-buddhist-zh-en-big5-2.4.2.ebuild 492
+RMD160 4f47cbf9506cce355f0d9613ece32c022c144388 stardict-soothill-buddhist-zh-en-big5-2.4.2.ebuild 492
+SHA256 afcd16f62d39846009aa756be326fd3c7c9ae47075b20e14d4d663db48d36e6f stardict-soothill-buddhist-zh-en-big5-2.4.2.ebuild 492
+MD5 00207cb5550e156db0105cf15f55dde2 files/digest-stardict-soothill-buddhist-zh-en-big5-2.4.2 304
+RMD160 40f9ad954b8c0a346ba1bb17c900632456bea332 files/digest-stardict-soothill-buddhist-zh-en-big5-2.4.2 304
+SHA256 83f72dbeaf7c0eda4a82a3124f00df89b5cf0ae4d0e6f8b93c5ead22aabe6fb4 files/digest-stardict-soothill-buddhist-zh-en-big5-2.4.2 304

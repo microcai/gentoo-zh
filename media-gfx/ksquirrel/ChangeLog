@@ -1,0 +1,13 @@
+# ChangeLog for media-gfx/ksquirrel
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  09 Dec 2007; scsi<scsichen@gmail.com> +ksquirrel-0.8.0.ebuild:
+  version bump
+
+  16 Nov 2007; scsi <scsichen@gmail.com> ++:
+  version bump
+
+  09 Nov 2007; scsi <scsichen@gmail.com> ++, +metadata.xml:
+  version bump
+

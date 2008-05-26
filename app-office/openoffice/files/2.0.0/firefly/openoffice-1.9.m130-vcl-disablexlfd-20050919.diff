@@ -1,0 +1,21 @@
+--- vcl/unx/source/gdi/salgdi3.cxx	2005-09-09 21:07:44.000000000 +0800
++++ vcl/unx/source/gdi/salgdi3.cxx	2005-09-19 14:21:37.000000000 +0800
+@@ -314,7 +314,8 @@ SalDisplay::GetXlfdList()
+ 		mpFactory  = new AttributeProvider;
+ 		mpFontList = new XlfdStorage;
+ 		mpFallbackFactory = new VirtualXlfd;
+-
++// Modify by Firefly(firefly@ossii.com.tw)
++#if 0
+ 		int i, nFontCount;
+ 		const int nMaxCount  = 64 * 1024 - 1;
+ 		Display *pDisplay = GetDisplay();
+@@ -421,7 +422,7 @@ SalDisplay::GetXlfdList()
+ 		// cleanup the list of simple font information
+ 		if ( pXlfdList != NULL )
+ 			free( pXlfdList );
+-
++#endif
+ 		return mpFontList;
+ 	}
+ }

@@ -1,0 +1,33 @@
+diff -Nu sdcv.orig/lib.cpp sdcv/lib.cpp
+--- sdcv.orig/lib.cpp	2004-03-20 19:25:39.000000000 +0800
++++ sdcv/lib.cpp	2005-02-23 08:05:19.349722336 +0800
+@@ -273,7 +273,8 @@
+ 		cur_wordindex = -2;	// so it is always invalid in GetWord();
+ 	}
+ 
+-	g_print("bookname: %s , wordcount %ld\n",bookname, wordcount);
++	//g_print("bookname: %s , wordcount %ld\n",bookname, wordcount);
++	g_printerr("bookname: %s , wordcount %ld\n",bookname, wordcount);
+ 	return true;
+ }
+ 
+@@ -296,7 +297,8 @@
+ 	fclose (file);
+ 	
+ 	if (!g_str_has_prefix(buffer, "StarDict's dict ifo file\nversion=2.4.2\n")) {
+-		g_print("Bad dict ifo file %s, skiped!\n", ifofilename);
++		//g_print("Bad dict ifo file %s, skiped!\n", ifofilename);
++		g_printerr("Bad dict ifo file %s, skiped!\n", ifofilename);
+ 		g_free(buffer);
+ 		return false;
+ 	}
+@@ -419,7 +421,8 @@
+ 			fclose(f);
+ 		}
+ 		else {
+-			g_print("Can not create %s.\n", oftfilename);
++			//g_print("Can not create %s.\n", oftfilename);
++			g_printerr("Can not create %s.\n", oftfilename);
+ 		}
+ 
+ #ifdef HAVE_MMAP

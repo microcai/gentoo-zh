@@ -1,0 +1,18 @@
+--- bin/unpack 
++++ bin/unpack 
+@@ -266,15 +266,6 @@
+     rm -f $CUSTOM_DIR/industrial/vcl/source/src/check*; 
+ fi
+ 
+-# needed until integration of iconswitching2
+-check_tarball $SRCDIR/$OOO_CRYSTAL_IMAGES
+-tar xzf $SRCDIR/$OOO_CRYSTAL_IMAGES -C $CUSTOM_DIR || exit 1;
+-if test ! -d $OOBUILDDIR/external_images ; then
+-    mkdir $OOBUILDDIR/external_images
+-fi
+-if test ! -f $OOBUILDDIR/external_images/$OOO_CRYSTAL_IMAGES ; then
+-    cp $SRCDIR/$OOO_CRYSTAL_IMAGES $OOBUILDDIR/external_images/
+-fi
+ 
+ if test "x$OOO_EXTRA_ARTWORK" != "x"; then
+ # Html export rulers etc.

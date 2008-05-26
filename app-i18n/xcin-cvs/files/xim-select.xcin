@@ -1,0 +1,18 @@
+# scripts used for xim-select.sh
+#
+# !!!DO NOT EDIT UNLESS YOU KNOW WHAT YOU ARE DOING!!!
+
+if [ -x /usr/bin/xcin ]
+then
+	case ${XLANG} in
+	zh_CN*,zh_SG*)
+		echo "export XMODIFIERS=@im=xcin-${XLANG};"
+		;;
+	*)
+		echo "export XMODIFIERS=@im=xcin;"
+		;;
+	esac
+	echo "LANG=\"${XLANG}\" LC_CTYPE=\"${XLANG}\" /usr/bin/xcin &"
+else
+	echo "echo \"xcin is not found on your system.\";"
+fi

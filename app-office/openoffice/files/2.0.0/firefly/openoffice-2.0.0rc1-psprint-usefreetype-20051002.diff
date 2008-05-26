@@ -1,0 +1,205 @@
+--- psprint/util/makefile.mk	2005-09-09 00:48:22.000000000 +0800
++++ psprint/util/makefile.mk	2005-10-02 19:29:14.000000000 +0800
+@@ -77,6 +77,11 @@ SHL1STDLIBS=$(UNOTOOLSLIB)		\
+ 			$(TOOLSLIB) 		\
+ 			$(SALLIB)			\
+ 			-lX11
++
++# Add by Firefly(firefly@firefly.idv.tw)
++# Use freetype2
++SHL1STDLIBS += -lfreetype
++
+ .IF "$(SOLAR_JAVA)"!=""
+ SHL1STDLIBS+=$(JVMFWKLIB)
+ .ENDIF
+diff -uNrp OOo_2.0.0_src.orig/psprint/source/fontsubset/sft.c OOo_2.0.0_src/psprint/source/fontsubset/sft.c
+--- psprint/source/fontsubset/sft.c	2005-09-09 00:39:50.000000000 +0800
++++ psprint/source/fontsubset/sft.c	2005-10-02 15:23:58.000000000 +0800
+@@ -40,6 +40,10 @@
+  *
+  */
+ 
++#include <ft2build.h>
++#include FT_FREETYPE_H
++
++
+ #if OSL_DEBUG_LEVEL == 0
+ #  ifndef NDEBUG
+ #    define NDEBUG
+@@ -535,6 +539,69 @@ static void GetMetrics(TrueTypeFont *ttf
+ }
+ 
+ static int GetTTGlyphOutline(TrueTypeFont *, sal_uInt32 , ControlPoint **, TTGlyphMetrics *, list );
++ 
++#ifdef __FREETYPE_H__
++/*
++ * Add by Firefly(firefly@firefly.idv.tw)
++ * 利用 Freetype 函數取得字符繪圖資料
++ */
++static int GetFTGlyphOutline(FT_Face face, sal_uInt32 glyphID, ControlPoint **pointArray, TTGlyphMetrics *metrics)
++{
++    *pointArray = 0;
++
++    /* 載入指定的字符 */
++    if ( FT_Load_Glyph( face, glyphID, FT_LOAD_NO_BITMAP | FT_LOAD_IGNORE_TRANSFORM | FT_LOAD_IGNORE_GLOBAL_ADVANCE_WIDTH ) )
++	return -1;
++
++    FT_GlyphSlot slot = face->glyph;
++    FT_Outline *outline = &slot->outline;
++    sal_Int16 numberOfContours = outline->n_contours; /* 輪廓總數 */
++    sal_Int16 lastPoint = outline->n_points; /* 描邊結構總數 */
++
++    if ( numberOfContours <= 0 ) return -1;
++
++    /* 取得該字符範圍座標 */
++    FT_BBox abbox;
++    if ( FT_Outline_Get_BBox( outline, &abbox) ) return -1;
++
++    FT_Vector *points = outline->points;
++    char *tags = outline->tags;
++    short *contours = outline->contours;
++
++    /* 計算該字符寬,高,以及四角座標 */
++    float scale = (float)face->units_per_EM / 1000;
++    metrics->aw = (int)( slot->advance.x * scale / 64 );
++    metrics->ah = (int)( slot->advance.y * scale / 64 );
++    metrics->xMin = (int)(abbox.xMin * scale / 64 );
++    metrics->xMax = (int)(abbox.xMax * scale / 64 );
++    metrics->yMin = (int)(abbox.yMin * scale / 64 );
++    metrics->yMax = (int)(abbox.yMax * scale / 64 );
++
++    if ( lastPoint == 0 ) return 0; 
++
++    /* 配置描邊路徑結構記憶區塊 */
++    ControlPoint* pa = calloc(lastPoint, sizeof(ControlPoint));
++
++    int first = 0;
++    int c;
++    for ( c = 0 ; c < numberOfContours ; c++ )
++    {
++	int last = contours[c];
++	int n;
++	for ( n = first; n <= last; n++ )
++	{
++	    pa[n].flags = tags[n] & 3;
++	    pa[n].x = (int)(points[n].x * scale / 64 );
++	    pa[n].y = (int)(points[n].y * scale / 64 );
++	}
++	pa[last].flags |= 0x00008000;
++	first = last + 1;
++    }
++
++    *pointArray = pa;
++    return lastPoint;
++}
++#endif
+ 
+ /* returns the number of control points, allocates the pointArray */
+ static int GetSimpleTTOutline(TrueTypeFont *ttf, sal_uInt32 glyphID, ControlPoint **pointArray, TTGlyphMetrics *metrics) /*FOLD02*/
+@@ -1653,6 +1720,11 @@ int OpenTTFont(const char *fname, sal_uI
+             return SF_FONTNO;
+         }
+         tdoffset = GetUInt32(t->ptr, 12 + 4 * facenum, 1);
++	/* Add by Firefly(firefly@firefly.idv.tw) 
++	 * 紀錄 facenum
++	 */
++	t->facenum = facenum;
++
+     } else {
+         CloseTTFont(t);
+         return SF_TTFORMAT;
+@@ -1900,6 +1972,52 @@ int  CreateT3FromTTGlyphs(TrueTypeFont *
+     TTGlyphMetrics metrics;
+     int UPEm = ttf->unitsPerEm;
+ 
++#ifdef __FREETYPE_H__
++    int useFreeType = true;
++    FT_Library FtLibrary = 0;
++    FT_Face    face = 0;
++    FT_Error   error = 0;
++
++    if ( FT_Init_FreeType( &FtLibrary ) )
++	useFreeType = false;
++
++    if ( useFreeType && FT_New_Face( FtLibrary, ttf->fname, ttf->facenum, &face ) )
++	useFreeType = false;
++
++    if ( useFreeType )
++    {
++	switch (ttf->cmapType)
++	{
++	    case CMAP_MS_Symbol:
++		error = FT_Select_Charmap( face, ft_encoding_symbol );
++		break;
++	    case CMAP_MS_ShiftJIS:
++		error = FT_Select_Charmap( face, ft_encoding_sjis );
++		break;
++	    case CMAP_MS_Big5:
++		error = FT_Select_Charmap( face, ft_encoding_big5 );
++		break;
++	    case CMAP_MS_PRC:
++		error = FT_Select_Charmap( face, ft_encoding_gb2312 );
++		break;
++	    case CMAP_MS_Wansung:
++		error = FT_Select_Charmap( face, ft_encoding_wansung );
++		break;
++	    case CMAP_MS_Johab:
++		error = FT_Select_Charmap( face, ft_encoding_johab );
++		break;
++	    default:
++		error = FT_Select_Charmap( face, ft_encoding_unicode );
++	}
++	if ( error ) useFreeType = false;
++    }
++
++    if ( useFreeType && FT_Set_Pixel_Sizes( face, 1000, 1000 ) )
++	useFreeType = false;
++#else
++    int useFreeType = false;
++#endif
++
+     const char *h01 = "%%!PS-AdobeFont-%d.%d-%d.%d\n";
+     const char *h02 = "%% Creator: %s %s %s\n";
+     const char *h09 = "%% Original font name: %s\n";
+@@ -1985,7 +2103,14 @@ int  CreateT3FromTTGlyphs(TrueTypeFont *
+ 
+     for (i = 0; i < nGlyphs; i++) {
+         fprintf(outf, h33, i);
++#ifdef __FREETYPE_H__
++	if ( useFreeType )
++	    r = GetFTGlyphOutline(face, glyphArray[i] < face->num_glyphs ? glyphArray[i] : 0, &pa, &metrics);
++	if ( r < 0 || !useFreeType )
++	    r = GetTTGlyphOutline(ttf, glyphArray[i] < ttf->nglyphs ? glyphArray[i] : 0, &pa, &metrics, 0);
++#else
+         r = GetTTGlyphOutline(ttf, glyphArray[i] < ttf->nglyphs ? glyphArray[i] : 0, &pa, &metrics, 0);
++#endif
+ 
+         if (r > 0) {
+             n =  BSplineToPSPath(pa, r, &path);
+@@ -2035,6 +2160,13 @@ int  CreateT3FromTTGlyphs(TrueTypeFont *
+     fprintf(outf, h40);
+     fprintf(outf, h41, fname);
+ 
++#ifdef __FREETYPE_H__
++    if ( face )
++	FT_Done_Face( face );
++    if ( FtLibrary )
++	FT_Done_FreeType( FtLibrary );
++#endif
++
+     return SF_OK;
+ }
+ #endif
+diff -uNrp OOo_2.0.0_src.orig/psprint/source/fontsubset/sft.h OOo_2.0.0_src/psprint/source/fontsubset/sft.h
+--- psprint/source/fontsubset/sft.h	2005-09-09 00:40:12.000000000 +0800
++++ psprint/source/fontsubset/sft.h	2005-10-02 15:23:58.000000000 +0800
+@@ -574,6 +574,9 @@ extern "C" {
+         sal_uInt32 tag;
+     
+         char        *fname;
++	/* Add by Firefly(firefly.idv.tw) */
++	int	    facenum; /* add font face number field */
++
+         sal_Int32   fsize;
+         sal_uInt8   *ptr;
+ 

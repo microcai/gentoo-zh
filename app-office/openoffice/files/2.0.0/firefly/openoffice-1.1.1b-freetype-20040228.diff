@@ -1,0 +1,2616 @@
+diff -uNp -x CVS -x prj -x unxlngi4.pro -x download oo_1.1rc3_src.orig/freetype/freetype-2.1.4-new.patch oo_1.1rc3_src/freetype/freetype-2.1.4-new.patch
+--- freetype/freetype-2.1.4-new.patch	1970-01-01 08:00:00.000000000 +0800
++++ freetype/freetype-2.1.4-new.patch	2003-08-19 09:32:58.000000000 +0800
+@@ -0,0 +1,2600 @@
++diff -rp misc/freetype-2.1.4/builds/compiler/visualc.mk misc/build/freetype-2.1.4/builds/compiler/visualc.mk
++*** misc/freetype-2.1.4/builds/compiler/visualc.mk	2000-12-14 07:44:33.000000000 +0800
++--- misc/build/freetype-2.1.4/builds/compiler/visualc.mk	2003-08-19 09:24:05.000000000 +0800
++*************** T := /Fo
++*** 63,69 ****
++  #   ANSI compliance.
++  #
++  ifndef CFLAGS
++!   CFLAGS := /nologo /c /Ox /G5 /W3 /WX
++  endif
++  
++  # ANSIFLAGS: Put there the flags used to make your compiler ANSI-compliant.
++--- 63,69 ----
++  #   ANSI compliance.
++  #
++  ifndef CFLAGS
++!   CFLAGS := /nologo /c /Ox /G5 /W3 /W4 /MT /Gd -D_CTYPE_DISABLE_MACROS
++  endif
++  
++  # ANSIFLAGS: Put there the flags used to make your compiler ANSI-compliant.
++diff -rp misc/freetype-2.1.4/builds/unix/ltmain.sh misc/build/freetype-2.1.4/builds/unix/ltmain.sh
++*** misc/freetype-2.1.4/builds/unix/ltmain.sh	2003-01-19 00:39:18.000000000 +0800
++--- misc/build/freetype-2.1.4/builds/unix/ltmain.sh	2003-08-19 09:24:05.000000000 +0800
++*************** compiler."
++*** 2296,2302 ****
++  	  ;;
++  
++  	irix | nonstopux)
++! 	  major=`expr $current - $age + 1`
++  
++  	  case $version_type in
++  	    nonstopux) verstring_prefix=nonstopux ;;
++--- 2296,2302 ----
++  	  ;;
++  
++  	irix | nonstopux)
++! 	  major=`expr $current - $age`
++  
++  	  case $version_type in
++  	    nonstopux) verstring_prefix=nonstopux ;;
++diff -rp misc/freetype-2.1.4/builds/win32/visualc/freetype.dsp misc/build/freetype-2.1.4/builds/win32/visualc/freetype.dsp
++*** misc/freetype-2.1.4/builds/win32/visualc/freetype.dsp	2003-01-31 07:24:18.000000000 +0800
++--- misc/build/freetype-2.1.4/builds/win32/visualc/freetype.dsp	2003-08-19 09:24:05.000000000 +0800
++*************** RSC=rc.exe
++*** 44,51 ****
++  # PROP Output_Dir "..\..\..\objs\release"
++  # PROP Intermediate_Dir "..\..\..\objs\release"
++  # PROP Target_Dir ""
++! # ADD BASE CPP /nologo /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /YX /FD /c
++! # ADD CPP /MD /Za /W4 /GX /Zi /O2 /I "..\..\..\include" /D "NDEBUG" /D "WIN32" /D "_MBCS" /D "_LIB" /FD /c
++  # SUBTRACT CPP /nologo /YX
++  # ADD BASE RSC /l 0x409 /d "NDEBUG"
++  # ADD RSC /l 0x409 /d "NDEBUG"
++--- 44,51 ----
++  # PROP Output_Dir "..\..\..\objs\release"
++  # PROP Intermediate_Dir "..\..\..\objs\release"
++  # PROP Target_Dir ""
++! # ADD BASE CPP /nologo /Za /W3 /GX /O2 /I "..\freetype\include\\" /D_CTYPE_DIABLE_MACROS /D"NDEBUG" /D "WIN32" /D "_MBCS" /D "_LIB" /D "FT_FLAT_COMPILE" /YX /FD /c
++! # ADD CPP /nologo /MT /Za /W4 /GX /O2 /I "..\..\..\include" /D_CTYPE_DISABLE_MACROS /D"NDEBUG" /D "WIN32" /D "_MBCS" /D "_LIB" /FD /c
++  # SUBTRACT CPP /nologo /YX
++  # ADD BASE RSC /l 0x409 /d "NDEBUG"
++  # ADD RSC /l 0x409 /d "NDEBUG"
++diff -rp misc/freetype-2.1.4/include/freetype/config/ftmodule.h misc/build/freetype-2.1.4/include/freetype/config/ftmodule.h
++*** misc/freetype-2.1.4/include/freetype/config/ftmodule.h	2002-10-31 16:29:31.000000000 +0800
++--- misc/build/freetype-2.1.4/include/freetype/config/ftmodule.h	2003-08-19 09:24:05.000000000 +0800
++***************
++*** 1,8 ****
++  FT_USE_MODULE(autohint_module_class)
++! FT_USE_MODULE(cff_driver_class)
++! FT_USE_MODULE(t1cid_driver_class)
++! FT_USE_MODULE(pcf_driver_class)
++! FT_USE_MODULE(bdf_driver_class)
++  FT_USE_MODULE(psaux_module_class)
++  FT_USE_MODULE(psnames_module_class)
++  FT_USE_MODULE(pshinter_module_class)
++--- 1,10 ----
++  FT_USE_MODULE(autohint_module_class)
++! #if 0
++!  FT_USE_MODULE(cff_driver_class)
++!  FT_USE_MODULE(t1cid_driver_class)
++!  FT_USE_MODULE(pcf_driver_class)
++!  FT_USE_MODULE(bdf_driver_class)
++! #endif
++  FT_USE_MODULE(psaux_module_class)
++  FT_USE_MODULE(psnames_module_class)
++  FT_USE_MODULE(pshinter_module_class)
++*************** FT_USE_MODULE(ft_smooth_lcd_renderer_cla
++*** 13,19 ****
++--- 15,23 ----
++  FT_USE_MODULE(ft_smooth_lcdv_renderer_class)
++  FT_USE_MODULE(tt_driver_class)
++  FT_USE_MODULE(t1_driver_class)
+++ #if 0
++  FT_USE_MODULE(t42_driver_class)
++  FT_USE_MODULE(pfr_driver_class)
++  FT_USE_MODULE(winfnt_driver_class)
+++ #endif
++  
++diff -rp misc/freetype-2.1.4/include/freetype/config/ftoption.h misc/build/freetype-2.1.4/include/freetype/config/ftoption.h
++*** misc/freetype-2.1.4/include/freetype/config/ftoption.h	2003-01-31 07:24:18.000000000 +0800
++--- misc/build/freetype-2.1.4/include/freetype/config/ftoption.h	2003-08-19 09:26:52.000000000 +0800
++*************** FT_BEGIN_HEADER
++*** 108,114 ****
++    /*   this will however force you to link the zlib to any program that    */
++    /*   also uses FreeType.                                                 */
++    /*                                                                       */
++! #define FT_CONFIG_OPTION_USE_ZLIB
++  
++  
++    /*************************************************************************/
++--- 108,114 ----
++    /*   this will however force you to link the zlib to any program that    */
++    /*   also uses FreeType.                                                 */
++    /*                                                                       */
++! /*#define FT_CONFIG_OPTION_USE_ZLIB*/
++  
++  
++    /*************************************************************************/
++*************** FT_BEGIN_HEADER
++*** 378,384 ****
++    /*   do not #undef this macro here, since the build system might         */
++    /*   define for certain configurations                                   */
++    /*                                                                       */
++! /* #define  TT_CONFIG_OPTION_BYTECODE_INTERPRETER */
++  
++  
++    /*************************************************************************/
++--- 378,384 ----
++    /*   do not #undef this macro here, since the build system might         */
++    /*   define for certain configurations                                   */
++    /*                                                                       */
++! #define  TT_CONFIG_OPTION_BYTECODE_INTERPRETER
++  
++  
++    /*************************************************************************/
++diff -rp misc/freetype-2.1.4/src/autohint/ahglobal.c misc/build/freetype-2.1.4/src/autohint/ahglobal.c
++*** misc/freetype-2.1.4/src/autohint/ahglobal.c	2003-03-21 04:58:56.000000000 +0800
++--- misc/build/freetype-2.1.4/src/autohint/ahglobal.c	2003-08-19 09:27:02.000000000 +0800
++***************
++*** 79,84 ****
++--- 79,85 ----
++      FT_GlyphSlot  glyph;
++      FT_Error      error;
++      FT_CharMap    charmap;
+++     FT_ULong      offset = 0;
++  
++  
++      face  = hinter->face;
++***************
++*** 99,104 ****
++--- 100,107 ----
++      AH_LOG(( "blue zones computation\n" ));
++      AH_LOG(( "------------------------------------------------\n" ));
++  
+++   Compute_Blues:
+++ 
++      for ( blue = AH_BLUE_CAPITAL_TOP; blue < AH_BLUE_MAX; blue++ )
++      {
++        const char*  p     = blue_chars[blue];
++***************
++*** 128,139 ****
++          AH_LOG(( "`%c'", *p ));
++  
++          /* load the character in the face -- skip unknown or empty ones */
++!         glyph_index = FT_Get_Char_Index( face, (FT_UInt)*p );
++          if ( glyph_index == 0 )
++            continue;
++  
++          error = FT_Load_Glyph( face, glyph_index, FT_LOAD_NO_SCALE );
++!         if ( error || glyph->outline.n_points <= 0 )
++            continue;
++  
++          /* now compute min or max point indices and coordinates */
++--- 131,144 ----
++          AH_LOG(( "`%c'", *p ));
++  
++          /* load the character in the face -- skip unknown or empty ones */
++!         glyph_index = FT_Get_Char_Index( face, offset + (FT_ULong)*p );
++          if ( glyph_index == 0 )
++            continue;
++  
++          error = FT_Load_Glyph( face, glyph_index, FT_LOAD_NO_SCALE );
++!         if ( error                                    ||
++!              glyph->format != FT_GLYPH_FORMAT_OUTLINE ||
++!              glyph->outline.n_points <= 0 )
++            continue;
++  
++          /* now compute min or max point indices and coordinates */
++***************
++*** 219,227 ****
++--- 224,257 ----
++            } while ( next != idx );
++  
++            /* now, set the `round' flag depending on the segment's kind */
+++ #if 0
++            round = FT_BOOL(
++              FT_CURVE_TAG( glyph->outline.tags[prev] ) != FT_CURVE_TAG_ON ||
++              FT_CURVE_TAG( glyph->outline.tags[next] ) != FT_CURVE_TAG_ON );
+++ #else
+++           round = TRUE;
+++ 
+++           {
+++             FT_Int   n = 0, p = prev;
+++             FT_Bool  is_top = AH_IS_TOP_BLUE( blue );
+++ 
+++ 
+++             while ( ( p = ( p >= last )? first : p + 1 ) != next )
+++             {
+++               if ( FT_CURVE_TAG( glyph->outline.tags[p] ) == FT_CURVE_TAG_ON )
+++               {
+++                 if ( (  is_top && points[p].y < extremum->y ) ||
+++                      ( !is_top && points[p].y > extremum->y )  )
+++                   break;
+++ 
+++                 n++;
+++               }
+++             }
+++ 
+++             if ( n >= 2 && p == next )
+++               round = FALSE;
+++           }
+++ #endif
++  
++            AH_LOG(( "%c ", round ? 'r' : 'f' ));
++          }
++***************
++*** 280,285 ****
++--- 310,327 ----
++        AH_LOG(( "-- ref = %ld, shoot = %ld\n", *blue_ref, *blue_shoot ));
++      }
++  
+++     globals->base_line = globals->blue_refs[ AH_BLUE_SMALL_BOTTOM ];
+++ 
+++     if ( !offset )
+++     {
+++       offset  = 0xFEE0;
+++       globals = &hinter->globals->design_f;
+++       AH_LOG(( "\nblues for CJK full-width-forms:\n" ));
+++       goto Compute_Blues;
+++     }
+++     else
+++       AH_LOG(( "\n" ));
+++ 
++      /* reset original face charmap */
++      FT_Set_Charmap( face, charmap );
++      error = 0;
++***************
++*** 302,308 ****
++--- 344,353 ----
++      FT_Int*     p_num_widths;
++      FT_Error    error = 0;
++      FT_Pos      edge_distance_threshold = 32000;
+++     FT_ULong    offset = 0;
+++ 
++  
+++   Compute_Widths:
++  
++      globals->num_widths  = 0;
++      globals->num_heights = 0;
++***************
++*** 315,321 ****
++        FT_UInt   glyph_index;
++  
++  
++!       glyph_index = FT_Get_Char_Index( hinter->face, 'o' );
++        if ( glyph_index == 0 )
++          return 0;
++  
++--- 360,366 ----
++        FT_UInt   glyph_index;
++  
++  
++!       glyph_index = FT_Get_Char_Index( hinter->face, offset + 'o' );
++        if ( glyph_index == 0 )
++          return 0;
++  
++***************
++*** 374,379 ****
++--- 419,431 ----
++        p_num_widths = &globals->num_widths;
++      }
++  
+++     if ( offset == 0 )
+++     {
+++       offset  = 0xFEE0;
+++       globals = &hinter->globals->design_f;
+++       goto Compute_Widths;
+++     }
+++ 
++      /* Now, compute the edge distance threshold as a fraction of the */
++      /* smallest width in the font. Set it in `hinter.glyph' too!     */
++      if ( edge_distance_threshold == 32000 )
++***************
++*** 395,398 ****
++--- 447,616 ----
++    }
++  
++  
+++   static const AH_CharFlag
+++   ah_flags_unicode[] =
+++   {
+++     { AH_CHAR_FLAG_LATIN,      0x21,   0x500  }, /* Latin, Greek, Cyrillic */
+++     { AH_CHAR_FLAG_LATIN,      0x5D0,  0x600  }, /* Hebrew                 */
+++     { AH_CHAR_FLAG_LATIN,      0x1E00, 0x2000 }, /* Latin, Greek           */
+++     { AH_CHAR_FLAG_LATIN_FULL, 0xFF00, 0xFF60 }  /* CJK-fullwidth Latin    */
+++   };
+++ 
+++ 
+++   static const AH_CharTable
+++   ah_table_unicode =
+++   {
+++     sizeof( ah_flags_unicode ) / sizeof( AH_CharFlag ),
+++     (AH_CharFlag *)ah_flags_unicode
+++   };
+++ 
+++ 
+++   FT_LOCAL_DEF( void )
+++   ah_hinter_compute_char_flags( AH_Hinter  hinter )
+++   {
+++     FT_Memory      memory = hinter->memory;
+++     FT_Face        face   = hinter->face;
+++     AH_CharTable*  table  = hinter->globals->table;
+++     FT_ULong       size, num, i;
+++     FT_Byte*       flags;
+++     FT_Byte        cflag;
+++     FT_Byte*       cur;
+++     FT_Byte*       last;
+++     FT_Error       error;
+++     FT_CharMap     charmap;
+++ 
+++ 
+++     if ( table )
+++       return;
+++ 
+++     if ( face->num_glyphs <= 0 )
+++       return;
+++ 
+++     if ( FT_NEW_ARRAY( flags, face->num_glyphs + 1 ) )
+++       return;
+++ 
+++     charmap = face->charmap;
+++     if ( FT_Select_Charmap( face, FT_ENCODING_UNICODE ) )
+++       goto  Exit;
+++ 
+++ 
+++     size = ah_table_unicode.size;
+++     num  = 0;
+++ 
+++     for ( i = 0; i < size; i++ )
+++     {
+++       FT_ULong  ucs   = ah_table_unicode.flags[i].start;
+++       FT_ULong  limit = ah_table_unicode.flags[i].last;
+++       FT_UInt   glyph_index;
+++ 
+++       cflag = ah_table_unicode.flags[i].char_flag;
+++       while ( ucs <= limit )
+++       {
+++         glyph_index = FT_Get_Char_Index( face, ucs++ );
+++ 
+++         if ( glyph_index )
+++         {
+++           num++;
+++           flags[ glyph_index ] = cflag;
+++         }
+++       }
+++     }
+++ 
+++     if ( num == 0 )
+++       goto  Exit;
+++ 
+++ 
+++     cur   = flags;
+++     last  = flags + face->num_glyphs;
+++     cflag = AH_CHAR_FLAG_NONE;
+++     num   = 0;
+++ 
+++     while ( ++cur <= last )
+++     {
+++       if ( cflag != cur[0] )
+++       {
+++         cflag = cur[0];
+++         if ( cflag != AH_CHAR_FLAG_NONE )
+++           num++;
+++       }
+++     }
+++ 
+++     size =  sizeof( AH_CharTable ) + num * sizeof( AH_CharFlag );
+++     if ( FT_ALLOC( table, size ) )
+++       goto  Exit;
+++ 
+++     table->size  = num;
+++     table->flags = (AH_CharFlag *)( table + 1 );
+++ 
+++ 
+++     cur   = flags + 1;
+++     last  = flags + face->num_glyphs;
+++     cflag = AH_CHAR_FLAG_NONE;
+++     num   = 0;
+++ 
+++     for ( i = 1; cur <= last; i++, cur++ )
+++     {
+++       if ( cflag != cur[0] )
+++       {
+++         if ( cflag != AH_CHAR_FLAG_NONE )
+++           table->flags[num - 1].last = i - 1;
+++ 
+++         cflag = cur[0];
+++         if ( cflag != AH_CHAR_FLAG_NONE )
+++         {
+++           table->flags[num].char_flag = cflag;
+++           table->flags[num++].start   = i;
+++         }
+++       }
+++     }
+++ 
+++     if ( cflag != AH_CHAR_FLAG_NONE )
+++       table->flags[num - 1].last = i - 1;
+++ 
+++     hinter->globals->table = table;
+++ 
+++   Exit:
+++     FT_Set_Charmap( face, charmap );
+++     FT_FREE( flags );
+++   }
+++ 
+++ 
+++   FT_LOCAL_DEF( FT_Byte )
+++   ah_hinter_get_char_flag( AH_Hinter  hinter,
+++                            FT_ULong   glyph_index )
+++   {
+++     AH_CharTable*  table = hinter->globals->table;
+++ 
+++ 
+++     if ( table && table->size > 0 && glyph_index )
+++     {
+++       AH_CharFlag*  cur;
+++       AH_CharFlag*  flags = table->flags;
+++       int           min   = 0;
+++       int           max   = table->size - 1;
+++       int           mid;
+++ 
+++ 
+++       if ( glyph_index < flags[min].start ||
+++            glyph_index > flags[max].last )
+++         return AH_CHAR_FLAG_NONE;
+++ 
+++       while ( min <= max )
+++       {
+++         mid = ( min + max ) / 2;
+++         cur = flags + mid;
+++ 
+++         if ( glyph_index < cur->start )
+++           max = mid - 1;
+++         else if ( glyph_index > cur->last )
+++           min = mid + 1;
+++         else
+++           return cur->char_flag;
+++       }
+++     }
+++ 
+++     return AH_CHAR_FLAG_NONE;
+++   }
+++ 
+++ 
++  /* END */
++diff -rp misc/freetype-2.1.4/src/autohint/ahglobal.h misc/build/freetype-2.1.4/src/autohint/ahglobal.h
++*** misc/freetype-2.1.4/src/autohint/ahglobal.h	2003-01-13 02:26:10.000000000 +0800
++--- misc/build/freetype-2.1.4/src/autohint/ahglobal.h	2003-08-19 09:27:02.000000000 +0800
++*************** FT_BEGIN_HEADER
++*** 50,55 ****
++--- 50,62 ----
++    FT_LOCAL( FT_Error )
++    ah_hinter_compute_globals( AH_Hinter  hinter );
++  
+++   FT_LOCAL( void )
+++   ah_hinter_compute_char_flags( AH_Hinter  hinter );
+++ 
+++   FT_LOCAL( FT_Byte )
+++   ah_hinter_get_char_flag( AH_Hinter  hinter,
+++                            FT_ULong   glyph_index );
+++ 
++  
++  FT_END_HEADER
++  
++diff -rp misc/freetype-2.1.4/src/autohint/ahglyph.c misc/build/freetype-2.1.4/src/autohint/ahglyph.c
++*** misc/freetype-2.1.4/src/autohint/ahglyph.c	2003-03-21 04:58:56.000000000 +0800
++--- misc/build/freetype-2.1.4/src/autohint/ahglyph.c	2003-08-19 09:27:02.000000000 +0800
++***************
++*** 52,62 ****
++        printf ( "Table of %s edges:\n",
++                 !dimension ? "vertical" : "horizontal" );
++        printf ( "  [ index |  pos |  dir  | link |"
++!                " serif | blue | opos  |  pos  ]\n" );
++  
++        for ( edge = edges; edge < edge_limit; edge++ )
++        {
++!         printf ( "  [ %5d | %4d | %5s | %4d | %5d |  %c  | %5.2f | %5.2f ]\n",
++                   edge - edges,
++                   (int)edge->fpos,
++                   edge->dir == AH_DIR_UP
++--- 52,62 ----
++        printf ( "Table of %s edges:\n",
++                 !dimension ? "vertical" : "horizontal" );
++        printf ( "  [ index |  pos |  dir  | link |"
++!                " serif | blue | opos  |  pos  |  diff ]\n" );
++  
++        for ( edge = edges; edge < edge_limit; edge++ )
++        {
++!         printf ( "  [ %5d | %4d | %5s | %4d | %5d |  %c   | %5.2f | %5.2f | %5.2f ]\n",
++                   edge - edges,
++                   (int)edge->fpos,
++                   edge->dir == AH_DIR_UP
++***************
++*** 72,78 ****
++                   edge->serif ? ( edge->serif - edges ) : -1,
++                   edge->blue_edge ? 'y' : 'n',
++                   edge->opos / 64.0,
++!                  edge->pos / 64.0 );
++        }
++  
++        edges      = outline->vert_edges;
++--- 72,79 ----
++                   edge->serif ? ( edge->serif - edges ) : -1,
++                   edge->blue_edge ? 'y' : 'n',
++                   edge->opos / 64.0,
++!                  edge->pos / 64.0,
++!                  ( edge->pos - edge->opos ) / 64.0 );
++        }
++  
++        edges      = outline->vert_edges;
++***************
++*** 361,366 ****
++--- 362,372 ----
++      FT_Vector*  vec         = gloader->current.outline.points;
++      char*       tag         = gloader->current.outline.tags;
++  
+++ #ifdef AH_DEBUG
+++     ah_dump_edges( outline );
+++     ah_dump_segments( outline );
+++     printf( "\n" );
+++ #endif
++  
++      /* we assume that the glyph loader has already been checked for storage */
++      for ( ; point < point_limit; point++, vec++, tag++ )
++***************
++*** 585,590 ****
++--- 591,597 ----
++            point->out_dir = ah_compute_direction( ovec.x, ovec.y );
++  
++  #ifndef AH_OPTION_NO_WEAK_INTERPOLATION
+++ #if 0
++            if ( point->flags & (AH_FLAG_CONIC | AH_FLAG_CUBIC) )
++            {
++            Is_Weak_Point:
++***************
++*** 602,619 ****
++              angle_out = ah_angle( &ovec );
++              delta     = angle_in - angle_out;
++  
++-             if ( delta > AH_PI )
++-               delta = AH_2PI - delta;
++- 
++              if ( delta < 0 )
++                delta = -delta;
++  
++              if ( delta < 2 )
++                goto Is_Weak_Point;
++            }
++            else if ( point->in_dir == -point->out_dir )
++              goto Is_Weak_Point;
++  #endif
++          }
++        }
++      }
++--- 609,627 ----
++              angle_out = ah_angle( &ovec );
++              delta     = angle_in - angle_out;
++  
++              if ( delta < 0 )
++                delta = -delta;
++  
+++             if ( delta > AH_PI )
+++               delta = AH_2PI - delta;
+++ 
++              if ( delta < 2 )
++                goto Is_Weak_Point;
++            }
++            else if ( point->in_dir == -point->out_dir )
++              goto Is_Weak_Point;
++  #endif
+++ #endif
++          }
++        }
++      }
++***************
++*** 688,693 ****
++--- 696,702 ----
++      /* load original coordinates in (u,v) */
++      ah_setup_uv( outline, AH_UV_FXY );
++  
+++ #if 0
++      /* do each contour separately */
++      for ( ; contour < contour_limit; contour++ )
++      {
++***************
++*** 777,783 ****
++  
++            } while ( start != end );
++  
++!           start->flags |= AH_FLAG_INFLECTION;
++          }
++  
++          start     = end;
++--- 786,792 ----
++  
++            } while ( start != end );
++  
++!           end->flags |= AH_FLAG_INFLECTION;
++          }
++  
++          start     = end;
++***************
++*** 790,795 ****
++--- 799,846 ----
++      Skip:
++        ;
++      }
+++ #else
+++     for ( ; contour < contour_limit; contour++ )
+++     {
+++       FT_Pos     dx1, dx2, dy1, dy2;
+++       AH_Point   point = contour[0];
+++       AH_Point   first = point;
+++       AH_Point   before;
+++       AH_Point   after;
+++ 
+++ 
+++       after  = point->next;
+++       before = point->prev;
+++       dx1    = point->u - before->u;
+++       dy1    = point->v - before->v;
+++ 
+++       do
+++       {
+++         dx2 = after->u - point->u;
+++         dy2 = after->v - point->v;
+++ 
+++         if ( dx1 == 0 || dx2 == 0 || ( dx1 ^ dx2 ) < 0 ||
+++              dy1 == 0 || dy2 == 0 || ( dy1 ^ dy2 ) < 0 )
+++           point->flags |= AH_FLAG_INFLECTION;
+++ 
+++         before = point;
+++         point  = after;
+++         after  = after->next;
+++         dx1    = dx2;
+++         dy1    = dy2;
+++ 
+++       } while ( point != first );
+++     }
+++ 
+++     /* just avoid compiler warnings */
+++     while ( FALSE )
+++     {
+++       FT_Vector  vec = { 0, 0 };
+++ 
+++       (void)ah_angle( &vec );
+++       (void)ah_angle_diff( 0, 0 );
+++     }
+++ #endif
++    }
++  
++  
++***************
++*** 894,904 ****
++--- 945,977 ----
++                segment->last = point;
++                segment->pos  = ( min_pos + max_pos ) >> 1;
++  
+++ #if 0
++                /* a segment is round if either its first or last point */
++                /* is a control point                                   */
++                if ( ( segment->first->flags | point->flags ) &
++                       AH_FLAG_CONTROL                        )
++                  segment->flags |= AH_EDGE_ROUND;
+++ #else
+++               {
+++                 AH_Point  p  = segment->first;
+++                 AH_Flags  f0 = p->flags & AH_FLAG_CONTROL;
+++                 AH_Flags  f;
+++ 
+++ 
+++                 for ( ; p != point; f0 = f )
+++                 {
+++                   p = p->next;
+++                   f = p->flags & AH_FLAG_CONTROL;
+++ 
+++                   if ( !f0 && !f )
+++                     break;
+++ 
+++                   if ( p == point )
+++                     segment->flags |= AH_EDGE_ROUND;
+++                 }
+++ 
+++               }
+++ #endif
++  
++                /* compute segment size */
++                min_pos = max_pos = point->v;
++***************
++*** 1041,1046 ****
++--- 1114,1120 ----
++      AH_Segment  segments;
++      AH_Segment  segment_limit;
++      int         dimension;
+++     FT_Long     length_3 = FT_DivFix( 64*3, outline->y_scale );
++  
++  
++      ah_setup_uv( outline, AH_UV_FYX );
++***************
++*** 1057,1063 ****
++        /* now compare each segment to the others */
++        for ( seg1 = segments; seg1 < segment_limit; seg1++ )
++        {
++!         FT_Pos      best_score;
++          AH_Segment  best_segment;
++  
++  
++--- 1131,1138 ----
++        /* now compare each segment to the others */
++        for ( seg1 = segments; seg1 < segment_limit; seg1++ )
++        {
++!         FT_ULong    best_score;
++!         FT_ULong    best_len;
++          AH_Segment  best_segment;
++  
++  
++***************
++*** 1068,1076 ****
++  
++          best_segment = seg1->link;
++          if ( best_segment )
++            best_score = seg1->score;
++          else
++!           best_score = 32000;
++  
++          for ( seg2 = segments; seg2 < segment_limit; seg2++ )
++            if ( seg1 != seg2 && seg1->dir + seg2->dir == 0 )
++--- 1143,1157 ----
++  
++          best_segment = seg1->link;
++          if ( best_segment )
+++         {
++            best_score = seg1->score;
+++           best_len   = seg1->len;
+++         }
++          else
++!         {
++!           best_score = 0x7FFFFFFFL;
++!           best_len   = 0;
++!         }
++  
++          for ( seg2 = segments; seg2 < segment_limit; seg2++ )
++            if ( seg1 != seg2 && seg1->dir + seg2->dir == 0 )
++***************
++*** 1092,1100 ****
++                continue;
++  
++              {
++!               FT_Pos  min = seg1->min_coord;
++!               FT_Pos  max = seg1->max_coord;
++!               FT_Pos  len, dist, score;
++  
++  
++                if ( min < seg2->min_coord )
++--- 1173,1182 ----
++                continue;
++  
++              {
++!               FT_Pos    min = seg1->min_coord;
++!               FT_Pos    max = seg1->max_coord;
++!               FT_Pos    len, dist;
++!               FT_ULong  score;
++  
++  
++                if ( min < seg2->min_coord )
++***************
++*** 1103,1120 ****
++                if ( max > seg2->max_coord )
++                  max = seg2->max_coord;
++  
++!               len = max - min;
++!               if ( len >= 8 )
++                {
++                  dist = seg2->pos - seg1->pos;
++                  if ( dist < 0 )
++                    dist = -dist;
++  
++!                 score = dist + 3000 / len;
++  
++!                 if ( score < best_score )
++                  {
++                    best_score   = score;
++                    best_segment = seg2;
++                  }
++                }
++--- 1185,1206 ----
++                if ( max > seg2->max_coord )
++                  max = seg2->max_coord;
++  
++!               len  = max - min;
++!               if ( len >= 4 )
++                {
++                  dist = seg2->pos - seg1->pos;
++                  if ( dist < 0 )
++                    dist = -dist;
++  
++!                 score = (FT_ULong)dist;
++  
++!                 if ( 8*score < 9*best_score )
++                  {
+++                   if ( 8*score > 7*best_score && best_len > 4*len )
+++                     continue;
+++ 
++                    best_score   = score;
+++                   best_len     = (FT_ULong)len;
++                    best_segment = seg2;
++                  }
++                }
++***************
++*** 1125,1136 ****
++--- 1211,1294 ----
++          {
++            seg1->link  = best_segment;
++            seg1->score = best_score;
+++           seg1->len   = best_len;
++  
++            best_segment->num_linked++;
++          }
++  
++        } /* edges 1 */
++  
+++       {
+++         AH_Segment  seg3, seg4, seg5, seg6, serif1, serif4;
+++         FT_Pos      pos1, pos2, pos3, pos4;
+++ 
+++ 
+++         for ( seg1 = segments; seg1 < segment_limit; seg1++ )
+++         {
+++           seg4 = seg1->link;
+++ 
+++           if ( !seg4 || seg4->link != seg1 )
+++             continue;
+++ 
+++           pos1 = seg1->pos;
+++           pos4 = seg4->pos;
+++ 
+++           if ( pos1 >= pos4 )
+++             continue;
+++ 
+++           for ( seg2 = segments; seg2 < segment_limit; seg2++ )
+++           {
+++             seg3 = seg2->link;
+++ 
+++             if ( seg2 == seg1 || !seg3 || seg3->link != seg2 )
+++               continue;
+++ 
+++             pos2 = seg2->pos;
+++             pos3 = seg3->pos;
+++ 
+++             if ( pos2 >= pos3               ||
+++                  pos1 >  pos2               ||
+++                  pos3 >  pos4               ||
+++                  seg1->score <= seg2->score )
+++               continue;
+++ 
+++             if ( seg1->score >= length_3 && seg1->score >= 4*seg2->score )
+++               continue;
+++ 
+++             if ( seg1->len > seg2->len * 2 )
+++             {
+++               serif1 = seg4;
+++               serif4 = seg1;
+++               seg1   = seg2;
+++               seg4   = seg3;
+++             }
+++             else
+++             {
+++               serif1 = seg3;
+++               serif4 = seg2;
+++             }
+++ 
+++             for ( seg5 = segments; seg5 < segment_limit; seg5++ )
+++             {
+++               seg6 = seg5->link;
+++ 
+++               if ( seg6 == seg1 )
+++               {
+++                 seg5->link  = 0;
+++                 seg5->serif = serif1;
+++               }
+++               else if ( seg6 == seg4 )
+++               {
+++                 seg5->link  = 0;
+++                 seg5->serif = serif4;
+++               }
+++             }
+++ 
+++             break;
+++           }
+++         }
+++       }
+++ 
++        /* now, compute the `serif' segments */
++        for ( seg1 = segments; seg1 < segment_limit; seg1++ )
++        {
++***************
++*** 1139,1145 ****
++          if ( seg2 && seg2->link != seg1 )
++          {
++            seg1->link  = 0;
++!           seg1->serif = seg2->link;
++          }
++        }
++  
++--- 1297,1307 ----
++          if ( seg2 && seg2->link != seg1 )
++          {
++            seg1->link  = 0;
++! 
++!           if ( seg2->score < length_3 || seg1->score < 4 * seg2->score )
++!             seg1->serif = seg2->link;
++!           else
++!             seg2->num_linked--;
++          }
++        }
++  
++***************
++*** 1211,1216 ****
++--- 1373,1381 ----
++            FT_Pos  dist;
++  
++  
+++           if ( edge->dir != seg->dir )
+++             continue;
+++ 
++            dist = seg->pos - edge->fpos;
++            if ( dist < 0 )
++              dist = -dist;
++***************
++*** 1218,1223 ****
++--- 1383,1416 ----
++            dist = FT_MulFix( dist, scale );
++            if ( dist < edge_distance_threshold )
++            {
+++             AH_Segment  link = seg->link;
+++ 
+++ 
+++             if ( link )
+++             {
+++               AH_Segment  seg1 = edge->first;
+++               AH_Segment  link1;
+++ 
+++               do
+++               {
+++                 link1 = seg1->link;
+++                 if ( link1 )
+++                 {
+++                   dist = link->pos - link1->pos;
+++                   if ( dist < 0 )
+++                     dist = -dist;
+++ 
+++                   dist = FT_MulFix( dist, scale );
+++                   if ( dist >= edge_distance_threshold )
+++                     break;
+++                 }
+++               }
+++               while ( ( seg1 = seg1->edge_next ) != edge->first );
+++ 
+++               if ( dist >= edge_distance_threshold )
+++                 continue;
+++             }
+++ 
++              found = edge;
++              break;
++            }
++***************
++*** 1243,1248 ****
++--- 1436,1442 ----
++            edge->fpos     = seg->pos;
++            edge->opos     = edge->pos = FT_MulFix( seg->pos, scale );
++            seg->edge_next = seg;
+++           edge->dir      = seg->dir;
++          }
++          else
++          {
++***************
++*** 1288,1295 ****
++        {
++          FT_Int  is_round    = 0;  /* does it contain round segments?    */
++          FT_Int  is_straight = 0;  /* does it contain straight segments? */
++-         FT_Pos  ups         = 0;  /* number of upwards segments         */
++-         FT_Pos  downs       = 0;  /* number of downwards segments       */
++  
++  
++          seg = edge->first;
++--- 1482,1487 ----
++***************
++*** 1305,1316 ****
++            else
++              is_straight++;
++  
++-           /* check for segment direction */
++-           if ( seg->dir == up_dir )
++-             ups   += seg->max_coord-seg->min_coord;
++-           else
++-             downs += seg->max_coord-seg->min_coord;
++- 
++            /* check for links -- if seg->serif is set, then seg->link must */
++            /* be ignored                                                   */
++            is_serif = (FT_Bool)( seg->serif && seg->serif->edge != edge );
++--- 1497,1502 ----
++***************
++*** 1376,1393 ****
++          if ( is_round > 0 && is_round >= is_straight )
++            edge->flags |= AH_EDGE_ROUND;
++  
++-         /* set the edge's main direction */
++-         edge->dir = AH_DIR_NONE;
++- 
++-         if ( ups > downs )
++-           edge->dir = up_dir;
++- 
++-         else if ( ups < downs )
++-           edge->dir = - up_dir;
++- 
++-         else if ( ups == downs )
++-           edge->dir = 0;  /* both up and down !! */
++- 
++          /* gets rid of serifs if link is set                */
++          /* XXX: This gets rid of many unpleasant artefacts! */
++          /*      Example: the `c' in cour.pfa at size 13     */
++--- 1562,1567 ----
++***************
++*** 1441,1450 ****
++--- 1615,1630 ----
++      AH_Edge     edge_limit = edge + outline->num_hedges;
++      AH_Globals  globals    = &face_globals->design;
++      FT_Fixed    y_scale    = outline->y_scale;
+++     FT_Pos      base_line;
++  
++      FT_Bool     blue_active[AH_BLUE_MAX];
++  
++  
+++     if ( face_globals->char_flag == AH_CHAR_FLAG_LATIN_FULL )
+++       globals = &face_globals->design_f;
+++ 
+++     base_line = globals->base_line;
+++ 
++      /* compute which blue zones are active, i.e. have their scaled */
++      /* size < 3/4 pixels                                           */
++      {
++***************
++*** 1485,1490 ****
++--- 1665,1678 ----
++        FT_Pos   best_dist;  /* initial threshold */
++  
++  
+++       if ( edge->serif )
+++       {
+++         FT_Pos  d = edge->serif->pos - edge->pos;
+++ 
+++         if ( ABS( d ) < 128 )
+++           continue;
+++       }
+++ 
++        /* compute the initial threshold as a fraction of the EM size */
++        best_dist = FT_MulFix( face_globals->face->units_per_EM / 40, y_scale );
++  
++***************
++*** 1520,1526 ****
++  
++  
++            /* first of all, compare it to the reference position */
++!           dist = edge->fpos - *blue_pos;
++            if ( dist < 0 )
++              dist = -dist;
++  
++--- 1708,1714 ----
++  
++  
++            /* first of all, compare it to the reference position */
++!           dist = base_line + edge->fpos - *blue_pos;
++            if ( dist < 0 )
++              dist = -dist;
++  
++***************
++*** 1542,1548 ****
++              if ( is_top_blue ^ is_under_ref )
++              {
++                blue_pos = globals->blue_shoots + blue;
++!               dist = edge->fpos - *blue_pos;
++                if ( dist < 0 )
++                  dist = -dist;
++  
++--- 1730,1736 ----
++              if ( is_top_blue ^ is_under_ref )
++              {
++                blue_pos = globals->blue_shoots + blue;
++!               dist = base_line + edge->fpos - *blue_pos;
++                if ( dist < 0 )
++                  dist = -dist;
++  
++***************
++*** 1582,1588 ****
++      FT_Pos   delta;
++  
++  
++!     delta = globals->scaled.blue_refs - globals->design.blue_refs;
++  
++      for ( ; edge < edge_limit; edge++ )
++      {
++--- 1770,1779 ----
++      FT_Pos   delta;
++  
++  
++!     if ( globals->char_flag == AH_CHAR_FLAG_LATIN_FULL )
++!       delta = globals->scaled.blue_refs - globals->design_f.blue_refs;
++!     else
++!       delta = globals->scaled.blue_refs - globals->design.blue_refs;
++  
++      for ( ; edge < edge_limit; edge++ )
++      {
++diff -rp misc/freetype-2.1.4/src/autohint/ahhint.c misc/build/freetype-2.1.4/src/autohint/ahhint.c
++*** misc/freetype-2.1.4/src/autohint/ahhint.c	2003-03-21 04:58:56.000000000 +0800
++--- misc/build/freetype-2.1.4/src/autohint/ahhint.c	2003-08-19 09:27:02.000000000 +0800
++***************
++*** 110,115 ****
++--- 110,117 ----
++      if ( !hinter->do_stem_adjust )
++      {
++        /* leave stem widths unchanged */
+++       if ( dist < 48 )
+++         dist += ( 48 - dist )/2 ;
++      }
++      else if ( (  vertical && !hinter->do_vert_snapping ) ||
++                ( !vertical && !hinter->do_horz_snapping ) )
++***************
++*** 117,150 ****
++        /* smooth hinting process, very lightly quantize the stem width */
++        /*                                                              */
++  
++!       /* leave the widths of serifs alone */
++  
++!       if ( ( stem_flags & AH_EDGE_SERIF ) && vertical && ( dist < 3 * 64 ) )
++!         goto Done_Width;
++  
++!       else if ( ( base_flags & AH_EDGE_ROUND ) )
++!       {
++!         if ( dist < 80 )
++!           dist = 64;
++!       }
++!       else if ( dist < 56 )
++!         dist = 56;
++  
++!       {
++!         FT_Pos  delta = dist - globals->stds[vertical];
++  
++  
++!         if ( delta < 0 )
++!           delta = -delta;
++  
++!         if ( delta < 40 )
++!         {
++!           dist = globals->stds[vertical];
++!           if ( dist < 48 )
++!             dist = 48;
++  
++!           goto Done_Width;
++          }
++  
++          if ( dist < 3 * 64 )
++          {
++--- 119,167 ----
++        /* smooth hinting process, very lightly quantize the stem width */
++        /*                                                              */
++  
++!       if ( hinter->do_blue_hints )
++!       {
++!         /* leave the widths of serifs alone */
++  
++!         if ( ( stem_flags & AH_EDGE_SERIF ) && vertical && ( dist < 3 * 64 ) )
++!           goto Done_Width;
++  
++! #if 0
++!         if ( ( base_flags & AH_EDGE_ROUND ) )
++!         {
++!           if ( dist < 80 )
++!             dist = 64;
++!         }
++!         else if ( dist < 56 )
++!           dist = 56;
++! #endif
++  
++!         {
++!           FT_Pos  delta = dist - globals->stds[vertical];
++  
+++           if ( delta < 0 )
+++             delta = -delta;
++  
++!           if ( delta < 24 )
++!           {
++!             dist = globals->stds[vertical];
++  
++!             if ( dist < 54 )
++!               dist += ( 54 - dist )/2;
++  
++!             goto Done_Width;
++!           }
++          }
+++       }
+++ 
+++       if ( dist < 54 )
+++       {
+++         dist += ( 54 - dist )/2;
+++       }
+++       else
+++       {
+++         FT_Pos  delta;
+++ 
++  
++          if ( dist < 3 * 64 )
++          {
++***************
++*** 154,170 ****
++            if ( delta < 10 )
++              dist += delta;
++  
++!           else if ( delta < 32 )
++              dist += 10;
++  
++            else if ( delta < 54 )
++              dist += 54;
++  
++            else
++              dist += delta;
++          }
++          else
++            dist = ( dist + 32 ) & -64;
++        }
++      }
++      else
++--- 171,192 ----
++            if ( delta < 10 )
++              dist += delta;
++  
++!           else if ( delta < 20 )
++              dist += 10;
++  
+++           else if ( delta < 44 )
+++             dist += delta;
+++ 
++            else if ( delta < 54 )
++              dist += 54;
++  
++            else
++              dist += delta;
++          }
+++ #if 0
++          else
++            dist = ( dist + 32 ) & -64;
+++ #endif
++        }
++      }
++      else
++***************
++*** 184,190 ****
++        }
++        else
++        {
++!         dist = ah_snap_width( globals->widths,  globals->num_widths, dist );
++  
++          if ( hinter->flags & AH_HINTER_MONOCHROME )
++          {
++--- 206,212 ----
++        }
++        else
++        {
++!         dist = ah_snap_width( globals->widths, globals->num_widths, dist );
++  
++          if ( hinter->flags & AH_HINTER_MONOCHROME )
++          {
++***************
++*** 396,401 ****
++--- 418,546 ----
++    }
++  
++  
+++   static FT_Pos
+++   ah_hint_normal_stem( AH_Hinter  hinter,
+++                        AH_Edge    edge,
+++                        AH_Edge    edge2,
+++                        FT_Pos     anchor,
+++                        int        vertical )
+++   {
+++     FT_Pos   org_len, cur_len, org_center;
+++     FT_Pos   cur_pos1, cur_pos2;
+++     FT_Pos   d_off1, u_off1, d_off2, u_off2, delta;
+++     FT_Pos   offset;
+++     FT_Pos   threshold = 64;
+++ 
+++ 
+++     if ( !hinter->do_stem_adjust )
+++     {
+++       if ( ( edge->flags  & AH_EDGE_ROUND ) &&
+++            ( edge2->flags & AH_EDGE_ROUND )  )
+++       {
+++         if ( vertical )
+++           threshold = 64 - AH_LIGHT_MODE_MAX_HORZ_GAP;
+++         else
+++           threshold = 64 - AH_LIGHT_MODE_MAX_VERT_GAP;
+++       }
+++       else
+++       {
+++         if ( vertical )
+++           threshold = 64 - AH_LIGHT_MODE_MAX_HORZ_GAP/3;
+++         else
+++           threshold = 64 - AH_LIGHT_MODE_MAX_VERT_GAP/3;
+++       }
+++     }
+++ 
+++     org_len    = edge2->opos - edge->opos;
+++     cur_len    = ah_compute_stem_width( hinter, vertical, org_len,
+++                                         edge->flags, edge2->flags );
+++     org_center = ( edge->opos + edge2->opos ) / 2 + anchor;
+++     cur_pos1   = org_center - cur_len / 2;
+++     cur_pos2   = cur_pos1 + cur_len;
+++     d_off1     = cur_pos1 - ( cur_pos1 & -64 );
+++     d_off2     = cur_pos2 - ( cur_pos2 & -64 );
+++     u_off1     = 64 - d_off1;
+++     u_off2     = 64 - d_off2;
+++     delta      = 0;
+++ 
+++ 
+++     if ( d_off1 == 0 || d_off2 == 0 )
+++       goto Exit;
+++ 
+++     if ( cur_len <= threshold )
+++     {
+++       if ( d_off2 < cur_len )
+++       {
+++         if ( u_off1 <= d_off2 )
+++           delta =  u_off1;
+++         else
+++           delta = -d_off2;
+++       }
+++ 
+++       goto Exit;
+++     }
+++ 
+++     if ( threshold < 64 )
+++     {
+++       if ( d_off1 >= threshold || u_off1 >= threshold ||
+++            d_off2 >= threshold || u_off2 >= threshold )
+++         goto Exit;
+++     }
+++ 
+++     offset = cur_len % 64;
+++ 
+++     if ( offset < 32 )
+++     {
+++       if ( u_off1 <= offset || d_off2 <= offset )
+++         goto Exit;
+++     }
+++     else
+++       offset = 64 - threshold;
+++ 
+++     d_off1 = threshold - u_off1;
+++     u_off1 = u_off1    - offset;
+++     u_off2 = threshold - d_off2;
+++     d_off2 = d_off2    - offset;
+++ 
+++     if ( d_off1 <= u_off1 )
+++       u_off1 = -d_off1;
+++ 
+++     if ( d_off2 <= u_off2 )
+++       u_off2 = -d_off2;
+++ 
+++     if ( ABS( u_off1 ) <= ABS( u_off2 ) )
+++       delta = u_off1;
+++     else
+++       delta = u_off2;
+++ 
+++   Exit:
+++ #if AH_LIGHT_MODE_MAX_DELTA_ABS < 32
+++     if ( !hinter->do_stem_adjust )
+++     {
+++       if ( delta > AH_LIGHT_MODE_MAX_DELTA_ABS )
+++         delta = AH_LIGHT_MODE_MAX_DELTA_ABS;
+++       else if ( delta < -AH_LIGHT_MODE_MAX_DELTA_ABS )
+++         delta = -AH_LIGHT_MODE_MAX_DELTA_ABS;
+++     }
+++ #endif
+++ 
+++     cur_pos1 += delta;
+++ 
+++     if ( edge->opos < edge2->opos )
+++     {
+++       edge->pos  = cur_pos1;
+++       edge2->pos = cur_pos1 + cur_len;
+++     }
+++     else
+++     {
+++       edge->pos  = cur_pos1 + cur_len;
+++       edge2->pos = cur_pos1;
+++     }
+++ 
+++     return delta;
+++   }
+++ 
+++ 
++    /*************************************************************************/
++    /*************************************************************************/
++    /*************************************************************************/
++***************
++*** 424,429 ****
++--- 569,575 ----
++      {
++        AH_Edge  edge;
++        AH_Edge  anchor = 0;
+++       FT_Pos   delta  = 0;
++        int      has_serifs = 0;
++  
++  
++***************
++*** 435,441 ****
++  
++        /* we begin by aligning all stems relative to the blue zone */
++        /* if needed -- that's only for horizontal edges            */
++!       if ( dimension )
++        {
++          for ( edge = edges; edge < edge_limit; edge++ )
++          {
++--- 581,587 ----
++  
++        /* we begin by aligning all stems relative to the blue zone */
++        /* if needed -- that's only for horizontal edges            */
++!       if ( hinter->do_blue_hints && dimension )
++        {
++          for ( edge = edges; edge < edge_limit; edge++ )
++          {
++***************
++*** 472,480 ****
++              ah_align_linked_edge( hinter, edge1, edge2, dimension );
++              edge2->flags |= AH_EDGE_DONE;
++            }
++- 
++-           if ( !anchor )
++-             anchor = edge;
++          }
++        }
++  
++--- 618,623 ----
++***************
++*** 507,512 ****
++--- 650,656 ----
++            continue;
++          }
++  
+++ #if 0
++          if ( !anchor )
++          {
++  #ifdef FT_CONFIG_CHESTER_STEM
++***************
++*** 661,666 ****
++--- 805,821 ----
++            if ( edge > edges && edge->pos < edge[-1].pos )
++              edge->pos = edge[-1].pos;
++          }
+++ #else
+++         FT_UNUSED( anchor );
+++ 
+++         if ( !dimension && edge == edges )
+++           delta = ah_hint_normal_stem( hinter, edge, edge2, 0, dimension );
+++         else
+++           ah_hint_normal_stem( hinter, edge, edge2, delta, dimension );
+++ 
+++         edge->flags  |= AH_EDGE_DONE;
+++         edge2->flags |= AH_EDGE_DONE;
+++ #endif
++        }
++  
++        if ( !has_serifs )
++***************
++*** 674,698 ****
++            continue;
++  
++          if ( edge->serif )
++-           ah_align_serif_edge( hinter, edge->serif, edge, dimension );
++-         else if ( !anchor )
++          {
++!           edge->pos = ( edge->opos + 32 ) & -64;
++!           anchor    = edge;
++          }
++!         else
++!           edge->pos = anchor->pos +
++!                       ( ( edge->opos-anchor->opos + 32 ) & -64 );
++  
++-         edge->flags |= AH_EDGE_DONE;
++  
++!         if ( edge > edges && edge->pos < edge[-1].pos )
++!           edge->pos = edge[-1].pos;
++  
++!         if ( edge + 1 < edge_limit        &&
++!              edge[1].flags & AH_EDGE_DONE &&
++!              edge->pos > edge[1].pos      )
++!           edge->pos = edge[1].pos;
++        }
++  
++      Next_Dimension:
++--- 829,884 ----
++            continue;
++  
++          if ( edge->serif )
++          {
++!           ah_align_serif_edge( hinter, edge->serif, edge, dimension );
++!           edge->flags |= AH_EDGE_DONE;
++          }
++!       }
++! 
++!       for ( edge = edges; edge < edge_limit; edge++ )
++!       {
++!         if ( !( edge->flags & AH_EDGE_DONE ) )
++!         {
++!           AH_Edge  before = edge - 1;
++!           AH_Edge  after  = edge + 1;
++  
++  
++!           while ( before >= edges && !( before->flags & AH_EDGE_DONE ) )
++!             before--;
++!           while ( after < edge_limit && !( after->flags & AH_EDGE_DONE ) )
++!             after++;
++  
++!           if ( before < edges && after >= edge_limit )
++!             continue;
++! 
++!           if ( before < edges && after < edge_limit )
++!             edge->pos = edge->opos +
++!                        ( after->pos - after->opos );
++!           else if ( before >= edges && after >= edge_limit )
++!             edge->pos = edge->opos +
++!                         before->pos - before->opos;
++!           else if ( after->fpos != before->fpos )
++!           {
++!             edge->pos = before->pos +
++!                         FT_MulDiv( edge->fpos  - before->fpos,
++!                                    after->pos  - before->pos,
++!                                    after->fpos - before->fpos );
++!           }
++!           else if ( before->dir == after->dir )
++!           {
++!             FT_Pos  db = before->pos - before->opos;
++!             FT_Pos  da = after->pos - after->opos;
++! 
++!             if ( ABS( db ) <= ABS( da ) )
++!               edge->pos = before->pos;
++!             else
++!               edge->pos = after->pos;
++!           }
++!           else if ( edge->dir == before->dir )
++!             edge->pos = before->pos;
++!           else
++!             edge->pos = after->pos;
++!         }
++        }
++  
++      Next_Dimension:
++***************
++*** 731,736 ****
++--- 917,923 ----
++      AH_Edge     edges;
++      AH_Edge     edge_limit;
++      FT_Int      dimension;
+++     FT_Bool     do_adjust = hinter->do_stem_adjust;
++  
++  
++      edges      = outline->horz_edges;
++***************
++*** 746,752 ****
++        {
++          /* move the points of each segment     */
++          /* in each edge to the edge's position */
++!         AH_Segment  seg = edge->first;
++  
++  
++          do
++--- 933,940 ----
++        {
++          /* move the points of each segment     */
++          /* in each edge to the edge's position */
++!         AH_Segment  seg   = edge->first;
++!         FT_Pos      delta = edge->pos - edge->opos;
++  
++  
++          do
++***************
++*** 758,769 ****
++            {
++              if ( dimension )
++              {
++!               point->y      = edge->pos;
++                point->flags |= AH_FLAG_TOUCH_Y;
++              }
++              else
++              {
++!               point->x      = edge->pos;
++                point->flags |= AH_FLAG_TOUCH_X;
++              }
++  
++--- 946,965 ----
++            {
++              if ( dimension )
++              {
++!               if ( do_adjust )
++!                 point->y  = edge->pos;
++!               else
++!                 point->y += delta;
++! 
++                point->flags |= AH_FLAG_TOUCH_Y;
++              }
++              else
++              {
++!               if ( do_adjust )
++!                 point->x  = edge->pos;
++!               else
++!                 point->x += delta;
++! 
++                point->flags |= AH_FLAG_TOUCH_X;
++              }
++  
++***************
++*** 823,831 ****
++--- 1019,1032 ----
++  #ifndef AH_OPTION_NO_WEAK_INTERPOLATION
++            /* if this point is candidate to weak interpolation, we will  */
++            /* interpolate it after all strong points have been processed */
+++ #if 0
++            if (  ( point->flags & AH_FLAG_WEAK_INTERPOLATION ) &&
++                 !( point->flags & AH_FLAG_INFLECTION )         )
++              continue;
+++ #else
+++           if ( !( point->flags & AH_FLAG_INFLECTION ) )
+++             continue;
+++ #endif
++  #endif
++  
++            if ( dimension )
++***************
++*** 1136,1153 ****
++    /* scale and fit the global metrics */
++    static void
++    ah_hinter_scale_globals( AH_Hinter  hinter,
++!                            FT_Fixed   x_scale,
++!                            FT_Fixed   y_scale )
++    {
++      FT_Int           n;
++      AH_Face_Globals  globals = hinter->globals;
++!     AH_Globals       design = &globals->design;
++!     AH_Globals       scaled = &globals->scaled;
++  
++  
++      /* copy content */
++      *scaled = *design;
++  
++      /* scale the standard widths & heights */
++      for ( n = 0; n < design->num_widths; n++ )
++        scaled->widths[n] = FT_MulFix( design->widths[n], x_scale );
++--- 1337,1432 ----
++    /* scale and fit the global metrics */
++    static void
++    ah_hinter_scale_globals( AH_Hinter  hinter,
++!                            FT_Size    size,
++!                            FT_UInt    glyph_index )
++    {
++      FT_Int           n;
++      AH_Face_Globals  globals = hinter->globals;
++!     AH_Globals       design  = &globals->design;
++!     AH_Globals       scaled  = &globals->scaled;
++!     FT_Fixed         x_scale = size->metrics.x_scale;
++!     FT_Fixed         y_scale = size->metrics.y_scale;
++!     FT_Pos           base    = 0;
++!     FT_Byte          cflag   = ah_hinter_get_char_flag( hinter, glyph_index );
++! #ifdef FT_CONFIG_CHESTER_BLUE_SCALE
++!     FT_Pos           s_top   = scaled->blue_shoots[ AH_BLUE_SMALL_TOP ];
++! #endif /* FT_CONFIG_CHESTER_BLUE_SCALE */
++! 
++! 
++!     if ( hinter->do_vert_hints )
++!       hinter->do_blue_hints = FT_BOOL( cflag == AH_CHAR_FLAG_LATIN     ||
++!                                        cflag == AH_CHAR_FLAG_LATIN_FULL );
++!     else
++!       hinter->do_blue_hints = FALSE;
++! 
++!     if ( cflag == AH_CHAR_FLAG_LATIN_FULL )
++!       design = &globals->design_f;
++! 
++! #ifdef FT_CONFIG_CHESTER_BLUE_SCALE
++!    /* try to optimize the y_scale so that the top of non-capital letters
++!     * is aligned on a pixel boundary whenever possible
++!     */
++!     if ( hinter->do_blue_hints )
++!     {
++!       s_top = design->blue_shoots[ AH_BLUE_SMALL_TOP ] - design->base_line;
++! 
++!       if ( design->base_line > -10000 )
++!         base = FT_MulFix( design->base_line, y_scale );
++! 
++!      /* the value of 'shoot' will be -1000 if the font doesn't have */
++!      /* small latin letters; we simply check the sign here...       */
++!       if ( s_top > 0 )
++!       {
++!         FT_Pos  height = FT_MulFix( s_top, y_scale );
++!         FT_Pos  ref    = design->blue_refs[ AH_BLUE_SMALL_TOP ];
++!         FT_Pos  fitted;
++! 
++! 
++!         if ( height < 6*64 )
++!           fitted = s_top = ( height + 44 ) & -64;
++!         else if ( height < 8*64 )
++!           fitted = s_top = ( height + 38 ) & -64;
++!         else
++!           fitted = s_top = ( height + 32 ) & -64;
++! 
++!         ref = FT_MulFix( ref - base, y_scale );
++! 
++!         if ( ref <= fitted && fitted <= height )
++!           fitted = height;
++!         else if ( fitted < ref )
++!           height = ref;
++! 
++!         if ( fitted > height )
++!         {
++!          /* adjust y_scale
++!           */
++!           y_scale = FT_MulDiv( y_scale, fitted, height );
++!           base   -= ( fitted - height )/2;
++!         }
++!       }
++! 
++!       base = ( base + 32 ) & -64;
++!     }
++! #endif /* FT_CONFIG_CHESTER_BLUE_SCALE */
++! 
++! 
++!     if ( x_scale == globals->x_scale                          &&
++!          y_scale == globals->y_scale                          &&
++! #ifdef FT_CONFIG_CHESTER_BLUE_SCALE
++!          s_top   == scaled->blue_shoots[ AH_BLUE_SMALL_TOP ]  &&
++! #endif /* FT_CONFIG_CHESTER_BLUE_SCALE */
++!          cflag   == globals->char_flag                        &&
++!          ( hinter->do_stem_adjust ^ globals->adjust_blues ) == 0 )
++!     {
++!       return;
++!     }
++  
++  
++      /* copy content */
++      *scaled = *design;
++  
+++     scaled->base_line = base;
+++ 
++      /* scale the standard widths & heights */
++      for ( n = 0; n < design->num_widths; n++ )
++        scaled->widths[n] = FT_MulFix( design->widths[n], x_scale );
++***************
++*** 1158,1167 ****
++      scaled->stds[0] = ( design->num_widths  > 0 ) ? scaled->widths[0]  : 32000;
++      scaled->stds[1] = ( design->num_heights > 0 ) ? scaled->heights[0] : 32000;
++  
++      /* scale the blue zones */
++      for ( n = 0; n < AH_BLUE_MAX; n++ )
++      {
++!       FT_Pos  delta, delta2;
++  
++  
++        delta = design->blue_shoots[n] - design->blue_refs[n];
++--- 1437,1454 ----
++      scaled->stds[0] = ( design->num_widths  > 0 ) ? scaled->widths[0]  : 32000;
++      scaled->stds[1] = ( design->num_heights > 0 ) ? scaled->heights[0] : 32000;
++  
+++     globals->x_scale      = x_scale;
+++     globals->y_scale      = y_scale;
+++     globals->char_flag    = cflag;
+++     globals->adjust_blues = hinter->do_stem_adjust;
+++ 
+++     if ( !hinter->do_blue_hints )
+++       return;
+++ 
++      /* scale the blue zones */
++      for ( n = 0; n < AH_BLUE_MAX; n++ )
++      {
++!       FT_Pos  delta, delta1, delta2, pos1, pos2, ref, shoot;
++  
++  
++        delta = design->blue_shoots[n] - design->blue_refs[n];
++***************
++*** 1180,1201 ****
++        if ( delta < 0 )
++          delta2 = -delta2;
++  
++!       scaled->blue_refs[n] =
++!         ( FT_MulFix( design->blue_refs[n], y_scale ) + 32 ) & -64;
++!       scaled->blue_shoots[n] = scaled->blue_refs[n] + delta2;
++!     }
++  
++!     globals->x_scale = x_scale;
++!     globals->y_scale = y_scale;
++    }
++  
++  
++    static void
++    ah_hinter_align( AH_Hinter  hinter )
++    {
++      ah_hinter_align_edge_points( hinter );
++      ah_hinter_align_points( hinter );
++    }
++  
++  
++    /* finalize a hinter object */
++--- 1467,1525 ----
++        if ( delta < 0 )
++          delta2 = -delta2;
++  
++!       delta = delta2;
++  
++!       if ( n == AH_BLUE_SMALL_BOTTOM )
++!       {
++!         scaled->blue_shoots[n] = delta;
++!         scaled->blue_refs[n]   = 0;
++!         continue;
++!       }
++! #ifdef FT_CONFIG_CHESTER_BLUE_SCALE
++!       else if ( n == AH_BLUE_SMALL_TOP )
++!       {
++!         scaled->blue_refs[n]   = s_top - delta;
++!         scaled->blue_shoots[n] = s_top;
++!         continue;
++!       }
++! #endif /* FT_CONFIG_CHESTER_BLUE_SCALE */
++! 
++!       pos1   = design->blue_refs[n]   - design->base_line;
++!       pos2   = design->blue_shoots[n] - design->base_line;
++!       pos1   = FT_MulFix( pos1, y_scale );
++!       pos2   = FT_MulFix( pos2, y_scale );
++!       ref    = ( pos1 + 32 ) & -64;
++!       shoot  = ( pos2 + 32 ) & -64;
++!       delta1 = ref   - pos1;
++!       delta2 = shoot - pos2;
++! 
++!       if ( !globals->adjust_blues )
++!       {
++!         if ( ref   > pos1 + 16 ) ref   = pos1 + 16;
++!         if ( ref   < pos1 - 16 ) ref   = pos1 - 16;
++!         if ( shoot > pos2 + 16 ) shoot = pos2 + 16;
++!         if ( shoot < pos2 - 16 ) shoot = pos2 - 16;
++!       }
++! 
++!       if ( ABS( delta1 ) < ABS( delta2 ) )
++!         shoot = ref + delta;
++!       else
++!         ref = shoot - delta;
++! 
++!       scaled->blue_refs[n]   = ref;
++!       scaled->blue_shoots[n] = shoot;
++!     }
++    }
++  
++  
+++ #if 0
++    static void
++    ah_hinter_align( AH_Hinter  hinter )
++    {
++      ah_hinter_align_edge_points( hinter );
++      ah_hinter_align_points( hinter );
++    }
+++ #endif
++  
++  
++    /* finalize a hinter object */
++***************
++*** 1275,1281 ****
++      hinter->globals = face_globals;
++  
++      if ( globals )
++!       face_globals->design = *globals;
++      else
++        ah_hinter_compute_globals( hinter );
++  
++--- 1599,1605 ----
++      hinter->globals = face_globals;
++  
++      if ( globals )
++!       face_globals->design = face_globals->design_f = *globals;
++      else
++        ah_hinter_compute_globals( hinter );
++  
++***************
++*** 1284,1289 ****
++--- 1608,1615 ----
++                                   ah_hinter_done_face_globals;
++      face_globals->face       = face;
++  
+++     ah_hinter_compute_char_flags( hinter );
+++ 
++    Exit:
++      return error;
++    }
++***************
++*** 1297,1302 ****
++--- 1623,1630 ----
++      FT_Memory  memory = face->memory;
++  
++  
+++     FT_Done_Size( globals->size_EM );
+++     FT_FREE( globals->table );
++      FT_FREE( globals );
++    }
++  
++***************
++*** 1310,1315 ****
++--- 1638,1644 ----
++      FT_Face           face     = hinter->face;
++      FT_GlyphSlot      slot     = face->glyph;
++      FT_Slot_Internal  internal = slot->internal;
+++     FT_Pos            offsetY;
++      FT_Fixed          x_scale  = hinter->globals->x_scale;
++      FT_Fixed          y_scale  = hinter->globals->y_scale;
++      FT_Error          error;
++***************
++*** 1318,1326 ****
++--- 1647,1664 ----
++  
++  
++      /* load the glyph */
+++ #ifndef TT_CONFIG_OPTION_BYTECODE_INTERPRETER
++      error = FT_Load_Glyph( face, glyph_index, load_flags );
++      if ( error )
++        goto Exit;
+++ #else
+++     if ( glyph_index )
+++     {
+++       error = FT_Load_Glyph( face, glyph_index, load_flags );
+++       if ( error )
+++         goto Exit;
+++     }
+++ #endif
++  
++      /* Set `hinter->transformed' after loading with FT_LOAD_NO_RECURSE. */
++      hinter->transformed = internal->glyph_transformed;
++***************
++*** 1346,1353 ****
++      {
++      case FT_GLYPH_FORMAT_OUTLINE:
++  
++        /* translate glyph outline if we need to */
++!       if ( hinter->transformed )
++        {
++          FT_UInt     n     = slot->outline.n_points;
++          FT_Vector*  point = slot->outline.points;
++--- 1684,1695 ----
++      {
++      case FT_GLYPH_FORMAT_OUTLINE:
++  
+++       offsetY = 0;
+++       if ( depth == 0 && hinter->do_blue_hints ) 
+++         offsetY = -hinter->globals->design.base_line;
+++ 
++        /* translate glyph outline if we need to */
++!       if ( hinter->transformed || offsetY )
++        {
++          FT_UInt     n     = slot->outline.n_points;
++          FT_Vector*  point = slot->outline.points;
++***************
++*** 1356,1362 ****
++          for ( ; n > 0; point++, n-- )
++          {
++            point->x += hinter->trans_delta.x;
++!           point->y += hinter->trans_delta.y;
++          }
++        }
++  
++--- 1698,1704 ----
++          for ( ; n > 0; point++, n-- )
++          {
++            point->x += hinter->trans_delta.x;
++!           point->y += hinter->trans_delta.y + offsetY;
++          }
++        }
++  
++***************
++*** 1398,1404 ****
++        /* perform feature detection */
++        ah_outline_detect_features( outline );
++  
++!       if ( hinter->do_vert_hints )
++        {
++          ah_outline_compute_blue_edges( outline, hinter->globals );
++          ah_outline_scale_blue_edges( outline, hinter->globals );
++--- 1740,1746 ----
++        /* perform feature detection */
++        ah_outline_detect_features( outline );
++  
++!       if ( depth == 0 && hinter->do_blue_hints )
++        {
++          ah_outline_compute_blue_edges( outline, hinter->globals );
++          ah_outline_scale_blue_edges( outline, hinter->globals );
++***************
++*** 1406,1418 ****
++  
++        /* perform alignment control */
++        ah_hinter_hint_edges( hinter );
++!       ah_hinter_align( hinter );
++  
++        /* now save the current outline into the loader's current table */
++        ah_outline_save( outline, gloader );
++  
++        /* we now need to hint the metrics according to the change in */
++        /* width/positioning that occured during the hinting process  */
++        {
++          FT_Pos   old_advance, old_rsb, old_lsb, new_lsb;
++          AH_Edge  edge1 = outline->vert_edges;     /* leftmost edge  */
++--- 1748,1761 ----
++  
++        /* perform alignment control */
++        ah_hinter_hint_edges( hinter );
++!       ah_hinter_align_points( hinter );
++  
++        /* now save the current outline into the loader's current table */
++        ah_outline_save( outline, gloader );
++  
++        /* we now need to hint the metrics according to the change in */
++        /* width/positioning that occured during the hinting process  */
+++       if ( hinter->do_blue_hints )
++        {
++          FT_Pos   old_advance, old_rsb, old_lsb, new_lsb;
++          AH_Edge  edge1 = outline->vert_edges;     /* leftmost edge  */
++***************
++*** 1426,1432 ****
++          new_lsb     = edge1->pos;
++  
++          hinter->pp1.x = ( ( new_lsb    - old_lsb ) + 32 ) & -64;
++!         hinter->pp2.x = ( ( edge2->pos + old_rsb ) + 32 ) & -64;
++  
++  #if 0
++          /* try to fix certain bad advance computations */
++--- 1769,1796 ----
++          new_lsb     = edge1->pos;
++  
++          hinter->pp1.x = ( ( new_lsb    - old_lsb ) + 32 ) & -64;
++! 
++!         if ( hinter->do_stem_adjust )
++!           hinter->pp2.x = ( ( edge2->pos + old_rsb ) + 32 ) & -64;
++!         else
++!           hinter->pp2.x = ( ( edge2->pos + old_rsb ) + 40 ) & -64;
++! 
++!         if ( FT_IS_FIXED_WIDTH( face ) ||
++!              ( load_flags & FT_LOAD_IGNORE_GLOBAL_ADVANCE_WIDTH ) != 0 )
++!         {
++!           FT_Pos  new_rsb;
++! 
++!           hinter->pp2.x = hinter->pp1.x + old_advance;
++!           new_lsb       = edge1->pos - hinter->pp1.x;
++!           new_rsb       = hinter->pp2.x - edge2->pos;
++! 
++!           if ( ( old_lsb <= old_rsb && new_lsb > new_rsb + 32 ) ||
++!                ( old_rsb > 0 && new_rsb < 0 && new_lsb >= 64 )   )
++!           {
++!             hinter->pp1.x += 64;
++!             hinter->pp2.x += 64;
++!           }
++!         }
++  
++  #if 0
++          /* try to fix certain bad advance computations */
++***************
++*** 1437,1442 ****
++--- 1801,1814 ----
++  
++        /* good, we simply add the glyph to our loader's base */
++        ah_loader_add( gloader );
+++ 
+++       if ( depth == 0 && hinter->do_blue_hints )
+++       {
+++         if ( hinter->globals->scaled.base_line != 0 )
+++           FT_Outline_Translate( &gloader->base.outline,
+++                                 0, hinter->globals->scaled.base_line );
+++       }
+++ 
++        break;
++  
++      case FT_GLYPH_FORMAT_COMPOSITE:
++***************
++*** 1628,1633 ****
++--- 2000,2233 ----
++    }
++  
++  
+++ #ifdef TT_CONFIG_OPTION_BYTECODE_INTERPRETER
+++ 
+++ #define AH_MAX_COMPOSITE_RECURSE 5
+++ 
+++   static FT_Error
+++   ah_hinter_check_and_load( AH_Hinter  hinter,
+++                             FT_UInt    glyph_index,
+++                             FT_Int32   load_flags,
+++                             int        depth,
+++                             short    **num_contours,
+++                             short    **num_points,
+++                             int       *num_simple_glyphs,
+++                             int       *size_array )
+++   {
+++     FT_Face        face   = hinter->face;
+++     FT_Memory      memory = hinter->memory;
+++     FT_GlyphSlot   slot   = face->glyph;
+++     FT_Error       error  = FT_Err_Ok;
+++ 
+++ 
+++     if ( depth == 0 )
+++     {
+++       *num_contours      = 0;
+++       *num_points        = 0;
+++       *num_simple_glyphs = 0;
+++       *size_array        = 0;
+++     }
+++ 
+++     error = FT_Load_Glyph( face, glyph_index, load_flags );
+++ 
+++     if ( error )
+++       return error;
+++ 
+++     switch ( slot->format )
+++     {
+++     case FT_GLYPH_FORMAT_OUTLINE:
+++       {
+++         int  size_cur = *size_array;
+++ 
+++ 
+++         if ( depth == 0 )
+++           return ah_hinter_load( hinter, 0, load_flags, 0 );
+++ 
+++         if ( slot->outline.n_contours == 0 )
+++           break;
+++ 
+++         if ( *num_simple_glyphs >= size_cur )
+++         {
+++           if ( FT_RENEW_ARRAY( *num_contours, size_cur, size_cur + 16 ) ||
+++                FT_RENEW_ARRAY( *num_points,   size_cur, size_cur + 16 ) )
+++             goto Exit;
+++           *size_array += 16;
+++         }
+++ 
+++         (*num_contours)[ (*num_simple_glyphs) ] = slot->outline.n_contours;
+++         (*num_points)[ (*num_simple_glyphs)++ ] = slot->outline.n_points;
+++         break;
+++       }
+++ 
+++     case FT_GLYPH_FORMAT_COMPOSITE:
+++       if ( depth + 1 >= AH_MAX_COMPOSITE_RECURSE )
+++         return AH_Err_Invalid_Composite;
+++ 
+++       if ( slot->num_subglyphs > 0 )
+++       {
+++         FT_UInt*  indices;
+++         int       num_subglyphs = slot->num_subglyphs;
+++         int       i;
+++ 
+++ 
+++         if ( FT_NEW_ARRAY( indices, num_subglyphs ) )
+++           goto Exit;
+++ 
+++         for ( i = 0; i < num_subglyphs; i++ )
+++           indices[i] = slot->subglyphs[i].index;
+++ 
+++ 
+++         for ( i = 0; i < num_subglyphs; i++ )
+++         {
+++           error = ah_hinter_check_and_load( hinter,
+++                                             indices[i],
+++                                             load_flags,
+++                                             depth + 1,
+++                                             num_contours,
+++                                             num_points,
+++                                             num_simple_glyphs,
+++                                             size_array );
+++           if ( error )
+++           {
+++             FT_FREE( indices );
+++             goto Exit;
+++           }
+++         }
+++ 
+++         FT_FREE( indices );
+++ 
+++         if ( depth == 0 )
+++         {
+++           FT_Size      size_EM, size;
+++           FT_Vector*   points;
+++           FT_Vector*   limit;
+++           int          num = *num_simple_glyphs, j;
+++           short        n_contours, n_points;
+++           short        *array_c, *array_p;
+++ 
+++ 
+++           if ( num == 0 )
+++             break;
+++ 
+++           size    = face->size;
+++           size_EM = hinter->globals->size_EM;
+++ 
+++           if ( !size_EM )
+++           {
+++             error = FT_New_Size( face, &hinter->globals->size_EM );
+++             if ( error )
+++               goto Exit;
+++ 
+++             size_EM = hinter->globals->size_EM;
+++             FT_Activate_Size( size_EM );
+++ 
+++             error = FT_Set_Pixel_Sizes( face,
+++                                         face->units_per_EM,
+++                                         face->units_per_EM );
+++             if ( error )
+++             {
+++               FT_Activate_Size( size );
+++               goto  Exit;
+++             }
+++           }
+++           else
+++             FT_Activate_Size( size_EM );
+++ 
+++ 
+++           load_flags &= FT_LOAD_IGNORE_GLOBAL_ADVANCE_WIDTH;
+++           load_flags |= FT_LOAD_NO_BITMAP   |
+++                         FT_LOAD_NO_AUTOHINT |
+++                         FT_LOAD_IGNORE_TRANSFORM;
+++ 
+++           error = FT_Load_Glyph( face, glyph_index, load_flags );
+++ 
+++           FT_Activate_Size( size );
+++ 
+++           if ( error )
+++             goto Exit;
+++ 
+++ 
+++           array_c    = *num_contours;
+++           array_p    = *num_points;
+++           n_contours = 0;
+++           n_points   = 0;
+++ 
+++           for ( i = 0; i < num; i++ )
+++           {
+++             n_contours += *array_c++;
+++             n_points   += *array_p++;
+++           }
+++ 
+++           if ( slot->outline.n_points   != n_points ||
+++                slot->outline.n_contours != n_contours )
+++           {
+++             error = AH_Err_Invalid_Composite;
+++             goto Exit;
+++           }
+++ 
+++ 
+++           points = slot->outline.points;
+++           limit  = points + slot->outline.n_points;
+++ 
+++           while ( points < limit )
+++           {
+++             points->x >>= 6;
+++             points->y >>= 6;
+++             points++;
+++           }
+++ 
+++           slot->metrics.horiAdvance >>= 6;
+++           slot->metrics.vertAdvance >>= 6;
+++ 
+++           array_c = *num_contours;
+++           array_p = *num_points;
+++ 
+++           for ( i = 0; i < num - 1; i++ )
+++           {
+++             slot->outline.n_contours = *array_c++;
+++             slot->outline.n_points   = *array_p++;
+++ 
+++             error = ah_hinter_load( hinter, 0, load_flags, 1 );
+++             if ( error )
+++               goto Exit;
+++ 
+++             n_points = slot->outline.n_points;
+++             slot->outline.points   += n_points;
+++             slot->outline.tags     += n_points;
+++ 
+++             slot->outline.contours += slot->outline.n_contours;
+++             n_contours             -= slot->outline.n_contours;
+++ 
+++             for ( j = 0; j < n_contours; j++ )
+++               slot->outline.contours[j] -= n_points;
+++           }
+++ 
+++           slot->outline.n_contours = *array_c;
+++           slot->outline.n_points   = *array_p;
+++ 
+++           error = ah_hinter_load( hinter, 0, load_flags, 0 );
+++         }
+++       }
+++       break;
+++ 
+++      default:
+++       error = AH_Err_Unimplemented_Feature;
+++     }
+++ 
+++ 
+++   Exit:
+++     if ( depth == 0 )
+++     {
+++       FT_FREE( *num_contours );
+++       FT_FREE( *num_points   );
+++     }
+++ 
+++     return  error;
+++   }
+++ 
+++ #endif /* TT_CONFIG_OPTION_BYTECODE_INTERPRETER */
+++ 
+++ 
++    /* load and hint a given glyph */
++    FT_LOCAL_DEF( FT_Error )
++    ah_hinter_load_glyph( AH_Hinter     hinter,
++***************
++*** 1638,1645 ****
++--- 2238,2247 ----
++    {
++      FT_Face          face         = slot->face;
++      FT_Error         error;
+++ #if 0
++      FT_Fixed         x_scale      = size->metrics.x_scale;
++      FT_Fixed         y_scale      = size->metrics.y_scale;
+++ #endif
++      AH_Face_Globals  face_globals = FACE_GLOBALS( face );
++      FT_Render_Mode   hint_mode    = FT_LOAD_TARGET_MODE(load_flags);
++  
++***************
++*** 1661,1666 ****
++--- 2263,2269 ----
++  
++      }
++  
+++ #if 0
++  #ifdef FT_CONFIG_CHESTER_BLUE_SCALE
++     /* try to optimize the y_scale so that the top of non-capital letters
++      * is aligned on a pixel boundary whenever possible
++***************
++*** 1696,1701 ****
++--- 2299,2305 ----
++      if ( face_globals->x_scale != x_scale ||
++           face_globals->y_scale != y_scale )
++        ah_hinter_scale_globals( hinter, x_scale, y_scale );
+++ #endif
++  
++      ah_loader_rewind( hinter->loader );
++  
++***************
++*** 1720,1734 ****
++  
++      hinter->do_stem_adjust   = FT_BOOL( hint_mode != FT_RENDER_MODE_LIGHT );
++  
++  #if 1
++!     load_flags  = FT_LOAD_NO_SCALE
++!                 | FT_LOAD_IGNORE_TRANSFORM ;
++  #else
++      load_flags |= FT_LOAD_NO_SCALE | FT_LOAD_NO_RECURSE;
++  #endif
++  
++      error = ah_hinter_load( hinter, glyph_index, load_flags, 0 );
++  
++    Exit:
++      return error;
++    }
++--- 2324,2366 ----
++  
++      hinter->do_stem_adjust   = FT_BOOL( hint_mode != FT_RENDER_MODE_LIGHT );
++  
+++     ah_hinter_scale_globals( hinter, size, glyph_index );
+++ 
+++ #ifndef TT_CONFIG_OPTION_BYTECODE_INTERPRETER
+++ 
++  #if 1
++!     load_flags &= FT_LOAD_IGNORE_GLOBAL_ADVANCE_WIDTH;
++!     load_flags |= FT_LOAD_NO_SCALE | FT_LOAD_IGNORE_TRANSFORM ;
++  #else
++      load_flags |= FT_LOAD_NO_SCALE | FT_LOAD_NO_RECURSE;
++  #endif
++  
++      error = ah_hinter_load( hinter, glyph_index, load_flags, 0 );
++  
+++ #else /* TT_CONFIG_OPTION_BYTECODE_INTERPRETER */
+++ 
+++     load_flags &= FT_LOAD_IGNORE_GLOBAL_ADVANCE_WIDTH;
+++     load_flags |= FT_LOAD_NO_RECURSE | FT_LOAD_NO_SCALE |
+++                   FT_LOAD_IGNORE_TRANSFORM;
+++ 
+++     {
+++       short*  num_contours;
+++       short*  num_points;
+++       int     num_simple_glyphs;
+++       int     size_array;
+++ 
+++ 
+++       error = ah_hinter_check_and_load( hinter,
+++                                         glyph_index,
+++                                         load_flags, 0,
+++                                         &num_contours,
+++                                         &num_points,
+++                                         &num_simple_glyphs,
+++                                         &size_array );
+++     }
+++ 
+++ #endif /* TT_CONFIG_OPTION_BYTECODE_INTERPRETER */
+++ 
++    Exit:
++      return error;
++    }
++diff -rp misc/freetype-2.1.4/src/autohint/ahtypes.h misc/build/freetype-2.1.4/src/autohint/ahtypes.h
++*** misc/freetype-2.1.4/src/autohint/ahtypes.h	2003-01-31 07:24:18.000000000 +0800
++--- misc/build/freetype-2.1.4/src/autohint/ahtypes.h	2003-08-19 09:27:02.000000000 +0800
++***************
++*** 48,54 ****
++  
++  #endif /* AH_DEBUG */
++  
++- 
++  FT_BEGIN_HEADER
++  
++  
++--- 48,53 ----
++*************** FT_BEGIN_HEADER
++*** 286,292 ****
++      AH_Segment     link;        /* link segment               */
++      AH_Segment     serif;       /* primary segment for serifs */
++      FT_Pos         num_linked;  /* number of linked segments  */
++!     FT_Pos         score;
++  
++    } AH_SegmentRec;
++  
++--- 285,292 ----
++      AH_Segment     link;        /* link segment               */
++      AH_Segment     serif;       /* primary segment for serifs */
++      FT_Pos         num_linked;  /* number of linked segments  */
++!     FT_ULong       score;
++!     FT_ULong       len;
++  
++    } AH_SegmentRec;
++  
++*************** FT_BEGIN_HEADER
++*** 415,420 ****
++--- 415,445 ----
++    typedef FT_Int  AH_Hinter_Flags;
++  
++  
+++ #define AH_LIGHT_MODE_MAX_HORZ_GAP     9
+++ #define AH_LIGHT_MODE_MAX_VERT_GAP     15
+++ #define AH_LIGHT_MODE_MAX_DELTA_ABS    14
+++ 
+++ #define AH_CHAR_FLAG_NONE          0
+++ #define AH_CHAR_FLAG_LATIN         1
+++ #define AH_CHAR_FLAG_LATIN_FULL    2
+++ 
+++   typedef struct AH_CharFlag_
+++   {
+++     FT_Byte   char_flag;
+++     FT_ULong  start;
+++     FT_ULong  last;
+++ 
+++   } AH_CharFlag;
+++ 
+++ 
+++   typedef struct AH_CharTable_
+++   {
+++     FT_ULong       size;
+++     AH_CharFlag*   flags;
+++ 
+++   } AH_CharTable;
+++ 
+++ 
++    /*************************************************************************/
++    /*                                                                       */
++    /* <Struct>                                                              */
++*************** FT_BEGIN_HEADER
++*** 450,455 ****
++--- 475,482 ----
++      FT_Pos  blue_refs  [AH_BLUE_MAX];
++      FT_Pos  blue_shoots[AH_BLUE_MAX];
++  
+++     FT_Pos  base_line;
+++ 
++    } AH_GlobalsRec, *AH_Globals;
++  
++  
++*************** FT_BEGIN_HEADER
++*** 478,488 ****
++--- 505,521 ----
++    {
++      FT_Face        face;
++      AH_GlobalsRec  design;
+++     AH_GlobalsRec  design_f;
++      AH_GlobalsRec  scaled;
++      FT_Fixed       x_scale;
++      FT_Fixed       y_scale;
+++     FT_Bool        adjust_blues;
++      FT_Bool        control_overshoot;
++  
+++     AH_CharTable*  table;
+++     FT_Byte        char_flag;
+++     FT_Size        size_EM;
+++ 
++    } AH_Face_GlobalsRec, *AH_Face_Globals;
++  
++  
++*************** FT_BEGIN_HEADER
++*** 511,516 ****
++--- 544,550 ----
++      FT_Bool           do_horz_snapping;  /* disable X stem size snapping */
++      FT_Bool           do_vert_snapping;  /* disable Y stem size snapping */
++      FT_Bool           do_stem_adjust;    /* disable light stem snapping  */
+++     FT_Bool           do_blue_hints;
++  
++    } AH_HinterRec, *AH_Hinter;
++  
++diff -rp misc/freetype-2.1.4/src/base/ftbase.c misc/build/freetype-2.1.4/src/base/ftbase.c
++*** misc/freetype-2.1.4/src/base/ftbase.c	2002-03-30 21:16:33.000000000 +0800
++--- misc/build/freetype-2.1.4/src/base/ftbase.c	2003-08-19 09:26:52.000000000 +0800
++***************
++*** 29,34 ****
++--- 29,35 ----
++  #include "ftgloadr.c"
++  #include "ftobjs.c"
++  #include "ftnames.c"
+++ #include "ftsynth.c"
++  
++  
++  /* END */
++diff -rp misc/freetype-2.1.4/src/base/ftobjs.c misc/build/freetype-2.1.4/src/base/ftobjs.c
++*** misc/freetype-2.1.4/src/base/ftobjs.c	2003-03-28 05:35:43.000000000 +0800
++--- misc/build/freetype-2.1.4/src/base/ftobjs.c	2003-08-19 09:24:05.000000000 +0800
++***************
++*** 804,810 ****
++      {
++        if ( cur[0]->encoding == FT_ENCODING_UNICODE )
++        {
++!         unicmap = cur;  /* record we found a Unicode charmap */
++  
++          /* XXX If some new encodings to represent UCS-4 are added,  */
++          /*     they should be added here.                           */
++--- 804,811 ----
++      {
++        if ( cur[0]->encoding == FT_ENCODING_UNICODE )
++        {
++!         if( !unicmap )     /* HDU: #107980# Saraswati workaround */
++!            unicmap = cur;  /* record we found a Unicode charmap */
++  
++          /* XXX If some new encodings to represent UCS-4 are added,  */
++          /*     they should be added here.                           */
++diff -rp misc/freetype-2.1.4/src/sfnt/ttcmap0.c misc/build/freetype-2.1.4/src/sfnt/ttcmap0.c
++*** misc/freetype-2.1.4/src/sfnt/ttcmap0.c	2002-11-07 06:32:54.000000000 +0800
++--- misc/build/freetype-2.1.4/src/sfnt/ttcmap0.c	2003-08-19 09:26:52.000000000 +0800
++***************
++*** 701,709 ****
++            p += offset;  /* start of glyph id array */
++  
++            /* check that we point within the glyph ids table only */
++!           if ( p < glyph_ids                                ||
++!                p + ( end - start + 1 ) * 2 > table + length )
++!             FT_INVALID_DATA;
++  
++            /* check glyph indices within the segment range */
++            if ( valid->level >= FT_VALIDATE_TIGHT )
++--- 701,714 ----
++            p += offset;  /* start of glyph id array */
++  
++            /* check that we point within the glyph ids table only */
++! 	  if ( valid->level >= FT_VALIDATE_TIGHT )
++! 	  {
++! 		  if ( p < glyph_ids || p + ( end - start + 1 ) * 2 > table + length )
++! 			  FT_INVALID_DATA;
++! 	  } else {
++! 		  if ( p < glyph_ids || p + ( end - start + 1 ) * 2 > valid->limit )
++! 			  FT_INVALID_DATA;
++! 	  }
++  
++            /* check glyph indices within the segment range */
++            if ( valid->level >= FT_VALIDATE_TIGHT )
+diff -uNp -x CVS -x prj -x unxlngi4.pro -x download oo_1.1.1b_src.orig/freetype/makefile.mk oo_1.1.1b_src/freetype/makefile.mk
+--- freetype/makefile.mk	2003-05-28 20:41:19.000000000 +0800
++++ freetype/makefile.mk	2003-08-19 09:33:21.000000000 +0800
+@@ -84,7 +84,7 @@ dummy:
+ 
+ TARFILE_NAME=freetype-2.1.4
+ 
+-PATCH_FILE_NAME=freetype-2.1.4.patch
++PATCH_FILE_NAME=freetype-2.1.4-new.patch
+ 
+ CONFIGURE_DIR=
+ .IF "$(GUI)"=="UNX"

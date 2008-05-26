@@ -1,0 +1,8 @@
+DIST kwirelessmonitor-0.5.91.tar.bz2 552331
+EBUILD kwirelessmonitor-0.5.91.ebuild 623 RMD160 57e440606b71fef5978c431625ad36f62c2a78f4 SHA1 92f52c051e73710e2c66ef76b3e3a0c97c922146 SHA256 39841e1b5abfef174c65e8ec4c5b5bd3d9693434c7e2e434740cc45c136833de
+MD5 a9b2ae860a6a75fc024c166f15056bbd kwirelessmonitor-0.5.91.ebuild 623
+RMD160 57e440606b71fef5978c431625ad36f62c2a78f4 kwirelessmonitor-0.5.91.ebuild 623
+SHA256 39841e1b5abfef174c65e8ec4c5b5bd3d9693434c7e2e434740cc45c136833de kwirelessmonitor-0.5.91.ebuild 623
+MD5 5f36e299effe1a38c41e59bae24d1c94 files/digest-kwirelessmonitor-0.5.91 76
+RMD160 834a35f10e5372fd6706d36473a23b195824cd25 files/digest-kwirelessmonitor-0.5.91 76
+SHA256 5ccb09d3de36ac3894bc1ef2032a1d824c047af33466111a2f91c27ff292cf15 files/digest-kwirelessmonitor-0.5.91 76

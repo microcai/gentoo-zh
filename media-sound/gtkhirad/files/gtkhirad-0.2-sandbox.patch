@@ -1,0 +1,11 @@
+--- Makefile	2007-06-10 23:28:16.000000000 +0800
++++ Makefile.new	2007-06-12 00:10:21.000000000 +0800
+@@ -2,7 +2,7 @@
+ GTK2_LIBS=`pkg-config gtk+-2.0 --libs`
+ 
+ OBJS=gtkhirad.o eggtrayicon.o
+-PREFIX=/usr
++PREFIX=${DESTDIR}/usr
+ 
+ all: $(OBJS)
+ 	cc -o gtkhirad $(GTK2_LIBS) $(OBJS)

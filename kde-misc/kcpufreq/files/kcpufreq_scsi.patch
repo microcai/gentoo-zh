@@ -1,0 +1,295 @@
+diff -Nur kcpufreq.orig/kcpufreq/kcpufreq.cpp kcpufreq/kcpufreq/kcpufreq.cpp
+--- kcpufreq.orig/kcpufreq/kcpufreq.cpp	2004-11-12 20:44:46.000000000 +0800
++++ kcpufreq/kcpufreq/kcpufreq.cpp	2005-04-10 23:38:45.000000000 +0800
+@@ -36,7 +36,7 @@
+ #endif
+ 
+ #ifdef USE_LIB_CPUFREQ
+-extern "C" 
++extern "C"
+ {
+ #include <cpufreq.h>
+ }
+@@ -53,7 +53,7 @@
+   }
+ }
+ 
+-Kcpufreq::Kcpufreq(const QString& configFile, Type type, int actions, QWidget *parent, const char *name) 
++Kcpufreq::Kcpufreq(const QString& configFile, Type type, int actions, QWidget *parent, const char *name)
+   : KPanelApplet(configFile, type, actions, parent, name)
+ {
+   // Get the current application configuration handle
+@@ -67,12 +67,26 @@
+   pixmaps[4]=KGlobal::iconLoader()->loadIcon(PIXMAP_100,KIcon::Panel);
+ 
+ 
+-  mainView = new myview(this);   
++  mainView = new myview(this);
+   mainView->show();
+-  
++
+   this->previous_freq_cur = 0;
+   this->previous_freq_max = 0;
+-
++  this->previous_temp_cur = 0;
++  this->previous_ratio_stat = 0;
++  QFont f("Helvetica", 6);
++  color_magenta=QColor("magenta");
++  color_green=QColor("green");
++  color_cyan=QColor("cyan");
++  color_yellow=QColor("yellow");
++  color_red=QColor("red");
++  colors[0]=color_magenta;
++  colors[1]=color_green;
++  colors[2]=color_cyan;
++  colors[3]=color_yellow;
++  colors[4]=color_yellow;
++  mainView->freqLabel->setFont(f);
++  mainView->tempLabel->setFont(f);
+   this->startTimer(500);
+ }
+ 
+@@ -93,19 +107,21 @@
+ 
+   void Kcpufreq::preferences()
+   {
+-  KMessageBox::information(0, i18n("This is a preferences box"));  
++  KMessageBox::information(0, i18n("This is a preferences box"));
+   }
+ */
+ 
+ 
+ int Kcpufreq::widthForHeight( int height ) const
+ {
+-  return 26 + (height * 2);
++  //return 26 + (height * 2);
++  return 36;
+ }
+ 
+ int Kcpufreq::heightForWidth( int width ) const
+ {
+-  return (width-26) / 2;
++  //return (width-26) / 2;
++  return 65;
+ }
+ 
+ /**
+@@ -113,7 +129,7 @@
+  */
+ void Kcpufreq::resizeEvent( QResizeEvent *)
+ {
+-  mainView->freqLabel->resize(this->width(),this->height());  
++  mainView->freqLabel->resize(this->width(),this->height());
+ }
+ 
+ 
+@@ -138,7 +154,17 @@
+   }
+ }
+ #endif
+-
++unsigned long get_cputemp()
++{
++  QFile ff(TEMP_CUR);
++  if(ff.exists() && ff.open(IO_ReadOnly)) {
++    QString s;
++    ff.readLine(s,100);
++    return s.simplifyWhiteSpace().section(" ",1,1).toLong();
++  } else {
++    return 0;
++  }
++}
+ 
+ /**
+  * React on QTimerEvents that occur every 500ms (see constructor above).
+@@ -147,7 +173,8 @@
+  */
+ void Kcpufreq::timerEvent(QTimerEvent *)
+ {
+-  int ratio;
++  int ratio, ratio_stat;
++  int updated=0;
+   // read in current frequency
+ #ifndef USE_LIB_CPUFREQ
+   unsigned long freq_cur = get_cpufreq(CPUFreq_CUR);
+@@ -157,12 +184,11 @@
+   unsigned long freq_max, freq_min;
+   cpufreq_get_hardware_limits(0,&freq_min,&freq_max);
+ #endif
+-
+-  ratio  = 100*freq_cur/freq_max;
++  unsigned long temp_cur = get_cputemp();
+ 
+   // if the frequency changed since last check, update the icon and
+   // text of the myView widget appropriately, otherwise do nothing
+-  if(freq_cur != this->previous_freq_cur || 
++  if(freq_cur != this->previous_freq_cur ||
+      freq_max != this->previous_freq_max) {
+     QString qs;
+     if(freq_cur >= 1000000) {
+@@ -172,14 +198,30 @@
+     } else {
+       qs = "n/a";
+     }
+-	
+-    mainView->freqLabel->setText(qs);
+-    mainView->freqIcon->setPixmap(pixmaps[ratio/25]);
+-    mainView->update();
+-
++      mainView->freqLabel->setText(qs);
++      ratio  = 100*freq_cur/freq_max;
++      ratio_stat=ratio/25;
++      if(this->previous_ratio_stat != ratio_stat)
++      {
++        mainView->freqLabel->setPaletteForegroundColor(colors[ratio_stat]);
++        mainView->freqIcon->setPixmap(pixmaps[ratio_stat]);
++        this->previous_ratio_stat = ratio_stat;
++      }
+     // save new frequency so that we can detect changes
+-    this->previous_freq_cur = freq_cur;
+-    this->previous_freq_max = freq_max;
+-  }
++      this->previous_freq_cur = freq_cur;
++      this->previous_freq_max = freq_max;
++      updated=1;
++    }
++
++    if(this->previous_temp_cur != temp_cur)
++    {
++      if(temp_cur<60) mainView->tempLabel->setPaletteForegroundColor(color_green);
++      else if(temp_cur<80) mainView->tempLabel->setPaletteForegroundColor(color_yellow);
++      else mainView->tempLabel->setPaletteForegroundColor(color_red);
++      mainView->tempLabel->setText(QString::number(temp_cur)+" C");
++      this->previous_temp_cur = temp_cur;
++      updated=1;
++    }
++    if(updated) mainView->update();
+ }
+ 
+diff -Nur kcpufreq.orig/kcpufreq/kcpufreq.h kcpufreq/kcpufreq/kcpufreq.h
+--- kcpufreq.orig/kcpufreq/kcpufreq.h	2004-11-12 19:44:22.000000000 +0800
++++ kcpufreq/kcpufreq/kcpufreq.h	2005-04-10 23:20:29.000000000 +0800
+@@ -31,6 +31,7 @@
+ 
+ #define FREQ_CUR "/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq"
+ #define FREQ_MAX "/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq"
++#define TEMP_CUR "/proc/acpi/thermal_zone/THRM/temperature"
+ 
+ #define PIXMAP_NA "cpufreq_na"
+ #define PIXMAP_25 "cpufreq_25"
+@@ -129,13 +130,19 @@
+ 
+   // the main view component; its name is still from kdevelop, but unimportant anyway:-)
+   myview *mainView;
+-  
++
+   // stores the five different pixmaps indicating the CPU frequency
+   QPixmap pixmaps[5];
+ 
+   // used to detect changes in the frequency.
+-  unsigned long previous_freq_cur, previous_freq_max;
++  unsigned long previous_freq_cur, previous_freq_max , previous_temp_cur,previous_ratio_stat;
+ 
++    QColor color_magenta;
++    QColor color_green;
++    QColor color_cyan;
++    QColor color_yellow;
++    QColor color_red;
++    QColor colors[5];
+ };
+ 
+ #endif
+diff -Nur kcpufreq.orig/kcpufreq/myview.ui kcpufreq/kcpufreq/myview.ui
+--- kcpufreq.orig/kcpufreq/myview.ui	2004-10-30 03:54:50.000000000 +0800
++++ kcpufreq/kcpufreq/myview.ui	2005-04-09 01:25:53.000000000 +0800
+@@ -8,7 +8,7 @@
+         <rect>
+             <x>1</x>
+             <y>0</y>
+-            <width>122</width>
++            <width>65</width>
+             <height>48</height>
+         </rect>
+     </property>
+@@ -22,13 +22,13 @@
+     </property>
+     <property name="minimumSize">
+         <size>
+-            <width>40</width>
++            <width>65</width>
+             <height>0</height>
+         </size>
+     </property>
+     <property name="maximumSize">
+         <size>
+-            <width>122</width>
++            <width>65</width>
+             <height>48</height>
+         </size>
+     </property>
+@@ -43,8 +43,8 @@
+             <rect>
+                 <x>0</x>
+                 <y>0</y>
+-                <width>24</width>
+-                <height>24</height>
++                <width>20</width>
++                <height>20</height>
+             </rect>
+         </property>
+         <property name="pixmap">
+@@ -60,16 +60,16 @@
+         </property>
+         <property name="geometry">
+             <rect>
+-                <x>26</x>
+-                <y>0</y>
+-                <width>50</width>
+-                <height>24</height>
++                <x>0</x>
++                <y>18</y>
++                <width>40</width>
++                <height>10</height>
+             </rect>
+         </property>
+         <property name="maximumSize">
+             <size>
+-                <width>96</width>
+-                <height>48</height>
++                <width>40</width>
++                <height>10</height>
+             </size>
+         </property>
+         <property name="text">
+@@ -79,6 +79,31 @@
+             <set>AlignVCenter</set>
+         </property>
+     </widget>
++    <widget class="QLabel">
++	    <property name="name">
++		    <cstring>tempLabel</cstring>
++	    </property>
++	    <property name="geometry">
++		    <rect>
++			    <x>0</x>
++			    <y>27</y>
++			    <width>30</width>
++			    <height>10</height>
++		    </rect>
++	    </property>
++	    <property name="maximumSize">
++		    <size>
++			    <width>30</width>
++			    <height>10</height>
++		    </size>
++	    </property>
++	    <property name="text">
++		    <string>0 MHz</string>
++	    </property>
++	    <property name="alignment">
++		    <set>AlignVCenter</set>
++	    </property>
++    </widget>
+ </widget>
+ <images>
+     <image name="image0">

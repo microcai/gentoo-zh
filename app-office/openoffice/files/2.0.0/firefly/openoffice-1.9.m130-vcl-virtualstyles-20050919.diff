@@ -1,0 +1,334 @@
+diff -uNrp SRC680_m130.orig/vcl/source/glyphs/gcach_ftyp.cxx SRC680_m130/vcl/source/glyphs/gcach_ftyp.cxx
+--- vcl/source/glyphs/gcach_ftyp.cxx	2005-09-09 20:13:09.000000000 +0800
++++ vcl/source/glyphs/gcach_ftyp.cxx	2005-09-19 14:13:26.000000000 +0800
+@@ -107,6 +107,29 @@
+ #endif
+ 
+ // -----------------------------------------------------------------------
++// Add by Firefly(firefly@firefly.idv.tw)
++#define M_MAX  255
++#define M_X    128
++#define M_Y    208
++bool isgamma_init = false;
++static unsigned char  gamma_table[257];
++
++static void GammaInit(void)
++{
++    unsigned int  x, a;
++    for (x = 0; x < 256; x++)
++    {
++        if ( x <= M_X )
++            a = ( x * M_Y + M_X / 2) / M_X;
++        else
++            a = M_Y + ( ( x - M_X ) * ( M_MAX - M_Y ) +
++                ( M_MAX - M_X ) / 2 ) / ( M_MAX - M_X );
++    
++        gamma_table[x] = (unsigned char)a;
++    }
++    isgamma_init = true;
++}
++// -----------------------------------------------------------------------
+ 
+ static FT_Library aLibFT = 0;
+ 
+@@ -782,6 +805,34 @@ FreetypeServerFont::FreetypeServerFont( 
+     // TODO: query GASP table for load flags
+     mnLoadFlags = FT_LOAD_DEFAULT;
+ 
++    // Add by Firefly(firefly@firefly.idv.tw)
++    mbArtItalic = (rFSD.meItalic != ITALIC_NONE && rFSD.mpFontData->GetSlant() == ITALIC_NONE);
++    mbArtBold = (rFSD.meWeight > WEIGHT_MEDIUM && rFSD.mpFontData->GetWeight() <= WEIGHT_MEDIUM);
++    if (!isgamma_init)
++	GammaInit();
++
++#define TT_CODEPAGE_RANGE_874    (1L << 16) /* Thai */
++#define TT_CODEPAGE_RANGE_932    (1L << 17) /* JIS/Japan */
++#define TT_CODEPAGE_RANGE_936    (1L << 18) /* Chinese: Simplified */
++#define TT_CODEPAGE_RANGE_949    (1L << 19) /* Korean Wansung */
++#define TT_CODEPAGE_RANGE_950    (1L << 20) /* Chinese: Traditional */
++#define TT_CODEPAGE_RANGE_1361   (1L << 21) /* Korean Johab */
++    const TT_OS2* os2 = (const TT_OS2*)FT_Get_Sfnt_Table(maFaceFT, ft_sfnt_os2);
++    if ((os2) && ( os2->ulCodePageRange1 & TT_CODEPAGE_RANGE_874  ||
++		   os2->ulCodePageRange1 & TT_CODEPAGE_RANGE_932  ||
++		   os2->ulCodePageRange1 & TT_CODEPAGE_RANGE_936  ||
++		   os2->ulCodePageRange1 & TT_CODEPAGE_RANGE_949  ||
++		   os2->ulCodePageRange1 & TT_CODEPAGE_RANGE_950  ||
++		   os2->ulCodePageRange1 & TT_CODEPAGE_RANGE_1361)
++	      && rFSD.mnHeight < 20)
++	mbUseGamma = true;
++    else
++	mbUseGamma = false;
++
++    if (mbUseGamma)
++	mnLoadFlags |= FT_LOAD_FORCE_AUTOHINT;
++    //---------------------------------------
++
+     if( (mnSin != 0) && (mnCos != 0) ) // hinting for 0/90/180/270 degrees only
+         mnLoadFlags |= FT_LOAD_NO_HINTING;
+     mnLoadFlags |= FT_LOAD_IGNORE_GLOBAL_ADVANCE_WIDTH; //#88334#
+@@ -1090,6 +1141,9 @@ int FreetypeServerFont::FixupGlyphIndex(
+         }
+     }
+ 
++// Modify by Firefly(firefly@firefly.idv.tw)
++// 沒有定義 BYTECODE_INTERPRETER 還是要 hinting
++#if 0
+ #if !defined(TT_CONFIG_OPTION_BYTECODE_INTERPRETER)
+     // #95556# autohinting not yet optimized for non-western glyph styles
+     if( !(mnLoadFlags & FT_LOAD_NO_HINTING)
+@@ -1098,6 +1152,7 @@ int FreetypeServerFont::FixupGlyphIndex(
+         ||(aChar >= 0xF800) ) )                 // presentation + symbols
+         nGlyphFlags |= GF_UNHINTED;
+ #endif
++#endif
+ 
+     if( nGlyphIndex != 0 )
+         nGlyphIndex |= nGlyphFlags;
+@@ -1126,8 +1181,10 @@ void FreetypeServerFont::InitGlyphData( 
+     SplitGlyphFlags( *this, nGlyphIndex, nGlyphFlags );
+ 
+     int nLoadFlags = mnLoadFlags;
+-    if( nGlyphFlags & GF_UNHINTED )
+-        nLoadFlags |= FT_LOAD_NO_HINTING;
++
++    // Add by Firefly(firefly@firefly.idv.tw)
++//    if (mbArtItalic)
++//	nLoadFlags |= FT_LOAD_NO_BITMAP;    
+ 
+     FT_Error rc = -1;
+ #if (FTVERSION <= 2008)
+@@ -1156,6 +1213,7 @@ void FreetypeServerFont::InitGlyphData( 
+     }
+ 
+     int nCharWidth = maFaceFT->glyph->metrics.horiAdvance;
++
+     if( nGlyphFlags & GF_ROTMASK ) {  // for bVertical rotated glyphs
+         const FT_Size_Metrics& rMetrics = maFaceFT->size->metrics;
+ #if (FTVERSION < 2000)
+@@ -1178,6 +1236,7 @@ void FreetypeServerFont::InitGlyphData( 
+     {
+         int t=aBbox.yMin; aBbox.yMin=aBbox.yMax, aBbox.yMax=t;
+     }
++
+     rGD.SetOffset( aBbox.xMin, -aBbox.yMax );
+     rGD.SetSize( Size( (aBbox.xMax-aBbox.xMin+1), (aBbox.yMax-aBbox.yMin) ) );
+ 
+@@ -1207,6 +1266,10 @@ bool FreetypeServerFont::GetGlyphBitmap1
+ 
+     FT_Int nLoadFlags = mnLoadFlags;
+ 
++    // Add by Firefly(firefly@firefly.idv.tw)
++    if (mbArtItalic)
++	nLoadFlags |= FT_LOAD_NO_BITMAP;    
++
+ #if (FTVERSION >= 2002)
+     // for 0/90/180/270 degree fonts enable autohinting even if not advisable
+     // non-hinted and non-antialiased bitmaps just look too ugly
+@@ -1242,6 +1305,17 @@ bool FreetypeServerFont::GetGlyphBitmap1
+ 
+     int nAngle = ApplyGlyphTransform( nGlyphFlags, pGlyphFT, true );
+ 
++    // Add by Firefly(firefly@firefly.idv.tw)
++    // 模擬斜體
++    if (mbArtItalic)
++    {
++	FT_Matrix matrix;
++	matrix.xx = matrix.yy = 0x10000L;
++	matrix.xy = 0x6000L;
++	matrix.yx = 0;
++	FT_Glyph_Transform( pGlyphFT, &matrix, NULL );
++    }
++
+     if( pGlyphFT->format != ft_glyph_format_bitmap )
+     {
+         if( pGlyphFT->format == ft_glyph_format_outline )
+@@ -1263,8 +1337,18 @@ bool FreetypeServerFont::GetGlyphBitmap1
+ 
+     const FT_Bitmap& rBitmapFT  = rBmpGlyphFT->bitmap;
+     rRawBitmap.mnHeight         = rBitmapFT.rows;
+-    rRawBitmap.mnWidth          = rBitmapFT.width;
+-    rRawBitmap.mnScanlineSize   = rBitmapFT.pitch;
++    // Modify by Firefly(firefly.idv.tw)
++    if (mbArtBold)
++    {
++	rRawBitmap.mnWidth = rBitmapFT.width + 1;
++	int lineBytes = (rRawBitmap.mnWidth + 7) >> 3;
++        rRawBitmap.mnScanlineSize   = (lineBytes > rBitmapFT.pitch) ? lineBytes : rBitmapFT.pitch;
++    }
++    else
++    {
++	rRawBitmap.mnWidth          = rBitmapFT.width;
++	rRawBitmap.mnScanlineSize   = rBitmapFT.pitch;
++    }
+     rRawBitmap.mnBitCount       = 1;
+ 
+     const ULONG nNeededSize = rRawBitmap.mnScanlineSize * rRawBitmap.mnHeight;
+@@ -1276,7 +1360,40 @@ bool FreetypeServerFont::GetGlyphBitmap1
+         rRawBitmap.mpBits = new unsigned char[ rRawBitmap.mnAllocated ];
+     }
+ 
+-    memcpy( rRawBitmap.mpBits, rBitmapFT.buffer, nNeededSize );
++    // Add by Firefly(firefly@firefly.idv.tw)
++    // 模擬粗體
++    if (!mbArtBold)
++    {
++	memcpy( rRawBitmap.mpBits, rBitmapFT.buffer, nNeededSize );
++    }
++    else
++    {
++        memset (rRawBitmap.mpBits, 0, nNeededSize);
++	unsigned char *srcLine = rBitmapFT.buffer;
++	unsigned char *dstLine = rRawBitmap.mpBits;
++	int h = rRawBitmap.mnHeight;
++	while (h--)
++	{
++	    memcpy (dstLine, srcLine, rBitmapFT.pitch);
++	    dstLine += rRawBitmap.mnScanlineSize;
++	    srcLine += rBitmapFT.pitch;
++	}
++
++	unsigned char *p = rRawBitmap.mpBits;
++	unsigned char lsb, tmp;
++	int x, y;
++	for (y=0; y < rRawBitmap.mnHeight; y++)
++	{
++	    lsb = 0;
++	    for (x=0; x < rRawBitmap.mnScanlineSize; x++)
++	    {
++		tmp = p[x] << 7;
++		p[x] |= (p[x] >> 1) | lsb;
++		lsb = tmp;
++	    }
++	    p += rRawBitmap.mnScanlineSize;
++	}
++    }
+ 
+     FT_Done_Glyph( pGlyphFT );
+ 
+@@ -1306,6 +1423,10 @@ bool FreetypeServerFont::GetGlyphBitmap8
+ 
+     FT_Int nLoadFlags = mnLoadFlags;
+ 
++    // Add by Firefly(firefly@firefly.idv.tw)
++    if (mbArtItalic)
++	nLoadFlags |= FT_LOAD_NO_BITMAP;    
++
+ #if (FTVERSION <= 2004) && !defined(TT_CONFIG_OPTION_BYTECODE_INTERPRETER)
+     // autohinting in FT<=2.0.4 makes antialiased glyphs look worse
+     nLoadFlags |= FT_LOAD_NO_HINTING;
+@@ -1343,6 +1464,16 @@ bool FreetypeServerFont::GetGlyphBitmap8
+ 
+     int nAngle = ApplyGlyphTransform( nGlyphFlags, pGlyphFT, true );
+ 
++    // Add by Firefly(firefly@firefly.idv.tw)
++    if (mbArtItalic)
++    {
++	FT_Matrix matrix;
++	matrix.xx = matrix.yy = 0x10000L;
++	matrix.xy = 0x6000L;
++	matrix.yx = 0;
++	FT_Glyph_Transform( pGlyphFT, &matrix, NULL );
++    }
++
+     if( pGlyphFT->format == ft_glyph_format_outline )
+         ((FT_OutlineGlyph)pGlyphFT)->outline.flags |= ft_outline_high_precision;
+ 
+@@ -1361,7 +1492,16 @@ bool FreetypeServerFont::GetGlyphBitmap8
+     const FT_Bitmap& rBitmapFT  = rBmpGlyphFT->bitmap;
+     rRawBitmap.mnHeight         = rBitmapFT.rows;
+     rRawBitmap.mnWidth          = rBitmapFT.width;
+-    rRawBitmap.mnScanlineSize   = ((bEmbedded?rBitmapFT.width:rBitmapFT.pitch) + 3) & -4;
++    // Add by Firefly(firefly@firefly.idv.tw)
++    if (mbArtBold)
++    {
++	rRawBitmap.mnWidth++;
++	rRawBitmap.mnScanlineSize = ((bEmbedded?rRawBitmap.mnWidth:rBitmapFT.pitch+1) + 3) & -4;
++    }
++    else
++    {
++	rRawBitmap.mnScanlineSize = ((bEmbedded?rBitmapFT.width:rBitmapFT.pitch) + 3) & -4;
++    }
+     rRawBitmap.mnBitCount       = 8;
+ 
+     const ULONG nNeededSize = rRawBitmap.mnScanlineSize * rRawBitmap.mnHeight;
+@@ -1400,6 +1540,42 @@ bool FreetypeServerFont::GetGlyphBitmap8
+         }
+     }
+ 
++    // Add by Firefly(firefly@firefly.idv.tw)
++    // 模擬粗體
++    if (mbArtBold)
++    {
++	unsigned char *p = rRawBitmap.mpBits;
++	unsigned char lsb, tmp;
++	int x, y;
++	for (y=0; y < rRawBitmap.mnHeight; y++)
++	{
++	    lsb = 0;
++	    for (x=0; x < rRawBitmap.mnWidth; x++)
++	    {
++	        tmp = p[x];
++	        p[x] |= p[x] | lsb;
++	        lsb = tmp;
++	    }
++	    p += rRawBitmap.mnScanlineSize;
++	}
++    }
++
++    // Add by Firefly(firefly@firefly.idv.tw)
++    // 小於 20 點就加深顏色
++    if (!bEmbedded && mbUseGamma)
++    {
++	unsigned char *p = rRawBitmap.mpBits;
++	int x, y;
++	for (y=0; y < rRawBitmap.mnHeight; y++)
++	{
++	    for (x=0; x < rRawBitmap.mnWidth; x++)
++	    {
++	        p[x] = gamma_table[p[x]];
++	    }
++	    p += rRawBitmap.mnScanlineSize;
++	}
++    }
++
+     FT_Done_Glyph( pGlyphFT );
+ 
+     // special case for 0/90/180/270 degree orientation
+@@ -1942,7 +2118,7 @@ bool FreetypeServerFont::GetGlyphOutline
+     int nGlyphFlags;
+     SplitGlyphFlags( *this, nGlyphIndex, nGlyphFlags );
+ 
+-    FT_Int nLoadFlags = FT_LOAD_NO_HINTING | FT_LOAD_NO_BITMAP;
++    FT_Int nLoadFlags = FT_LOAD_DEFAULT | FT_LOAD_TARGET_LIGHT;
+     FT_Error rc = FT_Load_Glyph( maFaceFT, nGlyphIndex, nLoadFlags );
+     if( rc != FT_Err_Ok )
+         return false;
+diff -uNrp SRC680_m130.orig/vcl/source/glyphs/gcach_ftyp.hxx SRC680_m130/vcl/source/glyphs/gcach_ftyp.hxx
+--- vcl/source/glyphs/gcach_ftyp.hxx	2005-09-09 20:13:26.000000000 +0800
++++ vcl/source/glyphs/gcach_ftyp.hxx	2005-09-19 14:13:26.000000000 +0800
+@@ -218,6 +218,11 @@ private:
+     rtl_UnicodeToTextConverter  maRecodeConverter;
+ 
+     ServerFontLayoutEngine*     mpLayoutEngine;
++    // Add by Firefly(firefly@firefly.idv.tw)
++    bool			mbArtItalic;
++    bool			mbArtBold;
++    bool			mbUseGamma;
++    //--------------------------------------
+ };
+ 
+ // -----------------------------------------------------------------------
+diff -uNrp SRC680_m130.orig/vcl/source/glyphs/glyphcache.cxx SRC680_m130/vcl/source/glyphs/glyphcache.cxx
+--- vcl/source/glyphs/glyphcache.cxx	2005-09-09 20:14:52.000000000 +0800
++++ vcl/source/glyphs/glyphcache.cxx	2005-09-19 14:13:26.000000000 +0800
+@@ -89,6 +89,10 @@ size_t GlyphCache::IFSD_Hash::operator()
+     nHash   += rFontSelData.mnHeight;
+     nHash   += rFontSelData.mnOrientation;
+     nHash   += rFontSelData.mbVertical;
++    // Add by Firefly(firefly@firefly.idv.tw)
++    nHash   += rFontSelData.meItalic;
++    nHash   += rFontSelData.meWeight;
++    //---------------------------------------
+     return nHash;
+ }
+ 

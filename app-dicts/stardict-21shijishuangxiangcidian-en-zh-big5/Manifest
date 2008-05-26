@@ -1,0 +1,8 @@
+DIST stardict-21shijishuangxiangcidian-big5-2.4.2.tar.bz2 13229980 RMD160 0085cff2c25c51a5673dcae6f92e95cbe7837872 SHA1 438c3b182e3884bac43a017d935e2d3f44899bf3 SHA256 3eedfaa4d006d99bee78bc07f967a52018a121ebd90b9709677868fe9ce26b2b
+EBUILD stardict-21shijishuangxiangcidian-en-zh-big5-2.4.2.ebuild 518 RMD160 9ed35dcea204c68f4134012c3ccaa78af2555fe7 SHA1 172e1b2ff1f91a7a103ac40ccea5af7541cb3192 SHA256 7ff4a811e6368a3a327d668be95a039bc85bb7d7ea3a60aef42e9178706c1531
+MD5 575c1759d64d86f0471d2ff6d895ccfa stardict-21shijishuangxiangcidian-en-zh-big5-2.4.2.ebuild 518
+RMD160 9ed35dcea204c68f4134012c3ccaa78af2555fe7 stardict-21shijishuangxiangcidian-en-zh-big5-2.4.2.ebuild 518
+SHA256 7ff4a811e6368a3a327d668be95a039bc85bb7d7ea3a60aef42e9178706c1531 stardict-21shijishuangxiangcidian-en-zh-big5-2.4.2.ebuild 518
+MD5 709f8ac51c769867eab52722bbf8b5f5 files/digest-stardict-21shijishuangxiangcidian-en-zh-big5-2.4.2 343
+RMD160 05eb35a783750abf8a2356a1525801313a6f62c8 files/digest-stardict-21shijishuangxiangcidian-en-zh-big5-2.4.2 343
+SHA256 21eed8d17dd01adfe72fd64b6fa3c8c5b573a750be46ed7e802d99456dd90715 files/digest-stardict-21shijishuangxiangcidian-en-zh-big5-2.4.2 343

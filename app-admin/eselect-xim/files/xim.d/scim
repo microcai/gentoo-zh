@@ -1,0 +1,7 @@
+export XMODIFIERS="@im=SCIM"
+#export GTK_IM_MODULE=xim
+export GTK_IM_MODULE=scim
+export QT_IM_MODULE=scim
+export XIM_PROGRAM=SCIM
+export XIM=SCIM
+

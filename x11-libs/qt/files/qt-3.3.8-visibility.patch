@@ -1,0 +1,159 @@
+Index: configure
+===================================================================
+--- configure	(revision 471775)
++++ configure	(working copy)
+@@ -1053,6 +1053,7 @@
+ [ -d $outpath/src/tools ] || mkdir -p $outpath/src/tools
+ cat > $outpath/src/tools/qconfig.cpp.new <<EOF
+ /* Install paths from configure */
++#include "qglobal.h"
+ 
+ static const char QT_INSTALL_PREFIX      [267] = "qt_nstpath=$QT_INSTALL_PREFIX";
+ static const char QT_INSTALL_BINS        [267] = "qt_binpath=$QT_INSTALL_BINS";
+Index: src/kernel/qgplugin.h
+===================================================================
+--- src/kernel/qgplugin.h	(revision 471775)
++++ src/kernel/qgplugin.h	(working copy)
+@@ -90,35 +90,19 @@
+ 	    return i->iface(); \
+ 	}
+ 
+-#    ifdef Q_WS_WIN
+-#	ifdef Q_CC_BOR
+-#	    define Q_EXPORT_PLUGIN(PLUGIN) \
+-	        Q_PLUGIN_VERIFICATION_DATA \
+-		Q_EXTERN_C __declspec(dllexport) \
+-                const char * __stdcall qt_ucm_query_verification_data() \
+-                { return qt_ucm_verification_data; } \
+-		Q_EXTERN_C __declspec(dllexport) QUnknownInterface* \
+-                __stdcall ucm_instantiate() \
+-		Q_PLUGIN_INSTANTIATE( PLUGIN )
+-#	else
+-#	    define Q_EXPORT_PLUGIN(PLUGIN) \
+-	        Q_PLUGIN_VERIFICATION_DATA \
+-		Q_EXTERN_C __declspec(dllexport) \
+-                const char *qt_ucm_query_verification_data() \
+-                { return qt_ucm_verification_data; } \
+-		Q_EXTERN_C __declspec(dllexport) QUnknownInterface* ucm_instantiate() \
+-		Q_PLUGIN_INSTANTIATE( PLUGIN )
+-#	endif
+-#    else
+-#	define Q_EXPORT_PLUGIN(PLUGIN) \
++#if defined(Q_WS_WIN) && defined(Q_CC_BOR)
++#   define Q_STDCALL __stdcall
++#else
++#   define Q_STDCALL
++#endif
++
++#define Q_EXPORT_PLUGIN(PLUGIN) \
+ 	    Q_PLUGIN_VERIFICATION_DATA \
+-	    Q_EXTERN_C \
+-            const char *qt_ucm_query_verification_data() \
++	    Q_EXTERN_C Q_EXPORT \
++            const char * Q_STDCALL qt_ucm_query_verification_data() \
+             { return qt_ucm_verification_data; } \
+-	    Q_EXTERN_C QUnknownInterface* ucm_instantiate() \
++	    Q_EXTERN_C Q_EXPORT QUnknownInterface* Q_STDCALL ucm_instantiate() \
+             Q_PLUGIN_INSTANTIATE( PLUGIN )
+-#    endif
+-
+ #endif
+ 
+ struct QUnknownInterface;
+Index: src/kernel/qapplication_x11.cpp
+===================================================================
+--- src/kernel/qapplication_x11.cpp	(revision 471775)
++++ src/kernel/qapplication_x11.cpp	(working copy)
+@@ -314,7 +314,7 @@
+ 
+ // flags for extensions for special Languages, currently only for RTL languages
+ static bool 	qt_use_rtl_extensions = FALSE;
+-bool qt_hebrew_keyboard_hack = FALSE;
++Q_EXPORT bool qt_hebrew_keyboard_hack = FALSE;
+ 
+ static Window	mouseActWindow	     = 0;	// window where mouse is
+ static int	mouseButtonPressed   = 0;	// last mouse button pressed
+@@ -3800,7 +3800,7 @@
+ }
+ 
+ 
+-bool qt_try_modal( QWidget *widget, XEvent *event )
++Q_EXPORT bool qt_try_modal( QWidget *widget, XEvent *event )
+ {
+     if (qt_xdnd_dragging) {
+ 	// allow mouse events while DnD is active
+Index: src/kernel/qtextengine_p.h
+===================================================================
+--- src/kernel/qtextengine_p.h	(revision 471775)
++++ src/kernel/qtextengine_p.h	(working copy)
+@@ -280,7 +280,7 @@
+ 
+ class QFontPrivate;
+ 
+-class QTextEngine {
++class Q_EXPORT QTextEngine {
+ public:
+     QTextEngine( const QString &str, QFontPrivate *f );
+     ~QTextEngine();
+Index: src/tools/qglobal.h
+===================================================================
+--- src/tools/qglobal.h	(revision 471775)
++++ src/tools/qglobal.h	(working copy)
+@@ -865,6 +865,10 @@
+ #    define Q_TEMPLATE_EXTERN
+ #    undef  Q_DISABLE_COPY 	/* avoid unresolved externals */
+ #  endif
++#elif defined(Q_CC_GNU) && __GNUC__ - 0 >= 4
++#    define Q_EXPORT __attribute__((visibility("default")))
++#    undef QT_MAKEDLL		/* ignore these for other platforms */
++#    undef QT_DLL
+ #else
+ #  undef QT_MAKEDLL		/* ignore these for other platforms */
+ #  undef QT_DLL
+Index: tools/designer/uilib/qwidgetfactory.h
+===================================================================
+--- tools/designer/uilib/qwidgetfactory.h	(revision 471775)
++++ tools/designer/uilib/qwidgetfactory.h	(working copy)
+@@ -48,7 +48,7 @@
+ class QWidgetFactoryPrivate;
+ class UibStrTable;
+ 
+-class QWidgetFactory
++class Q_EXPORT QWidgetFactory
+ {
+ public:
+     QWidgetFactory();
+Index: tools/designer/uilib/qwidgetfactory.cpp
+===================================================================
+--- tools/designer/uilib/qwidgetfactory.cpp	(revision 471775)
++++ tools/designer/uilib/qwidgetfactory.cpp	(working copy)
+@@ -113,13 +113,13 @@
+ static QMap<QString, bool> *availableWidgetMap = 0;
+ static QStringList *availableWidgetList = 0;
+ 
+-QMap<QWidget*, QString> *qwf_forms = 0;
++Q_EXPORT QMap<QWidget*, QString> *qwf_forms = 0;
+ QString *qwf_language = 0;
+-bool qwf_execute_code = TRUE;
++Q_EXPORT bool qwf_execute_code = TRUE;
+ bool qwf_stays_on_top = FALSE;
+ QString qwf_currFileName = "";
+ QObject *qwf_form_object = 0;
+-QString *qwf_plugin_dir = 0;
++Q_EXPORT QString *qwf_plugin_dir = 0;
+ 
+ static void setupPluginDir()
+ {
+Index: tools/designer/shared/domtool.h
+===================================================================
+--- tools/designer/shared/domtool.h	(revision 471775)
++++ tools/designer/shared/domtool.h	(working copy)
+@@ -33,7 +33,7 @@
+ class QDomElement;
+ class QDomDocument;
+ 
+-class DomTool : public Qt
++class Q_EXPORT DomTool : public Qt
+ {
+ public:
+     static QVariant readProperty( const QDomElement& e, const QString& name, const QVariant& defValue );

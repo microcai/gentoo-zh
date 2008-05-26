@@ -1,0 +1,8 @@
+# ChangeLog for app-vim/icomplete
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  16 Nov 2007; scsi <scsichen@gmail.com> +metadata.xml,
+  icomplete-0.4.ebuild:
+  add html
+

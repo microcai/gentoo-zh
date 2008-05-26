@@ -1,0 +1,8 @@
+DIST stardict-kdic-ec-14w-big5-2.4.2.tar.bz2 3318625 RMD160 8b29999a784b92372259e08e7f247a537e3e8d8b SHA1 5830bdea3b98749bcd5a1eb856025b000f708e2b SHA256 9df98e05602e766d21e3ccf0a656d8f6f0ebfccb284ce20a25a61c1353b26cb7
+EBUILD stardict-kdic-en-zh-big5-2.4.2.ebuild 465 RMD160 5cbb689614fed975a10359083272d4fb0810e803 SHA1 bf23c0f2cced05bd7a9f8fceb5d57e83c902cf71 SHA256 78aac6950bbe04bcc2f2ee5db9afcb8984ac52d7d0b5c03cf16551e69dc749cb
+MD5 b257970c7115a4a00b50a7dc1e907f3a stardict-kdic-en-zh-big5-2.4.2.ebuild 465
+RMD160 5cbb689614fed975a10359083272d4fb0810e803 stardict-kdic-en-zh-big5-2.4.2.ebuild 465
+SHA256 78aac6950bbe04bcc2f2ee5db9afcb8984ac52d7d0b5c03cf16551e69dc749cb stardict-kdic-en-zh-big5-2.4.2.ebuild 465
+MD5 a2c07d84efd69f73f8d6f2d91e88403a files/digest-stardict-kdic-en-zh-big5-2.4.2 301
+RMD160 bd6f06568b5a538ddc64d3b72f0670a452534d7a files/digest-stardict-kdic-en-zh-big5-2.4.2 301
+SHA256 172c56c70fa792f3c27e00fe5af0e743a85a20384fba0f00f263f8dc53eb426e files/digest-stardict-kdic-en-zh-big5-2.4.2 301

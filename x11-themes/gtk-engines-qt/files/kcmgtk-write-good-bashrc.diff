@@ -1,0 +1,20 @@
+--- gtk-qt-engine/kcm_gtk/kcmgtk.cpp.orig	2006-08-16 11:41:56.000000000 +0200
++++ gtk-qt-engine/kcm_gtk/kcmgtk.cpp	2006-08-16 11:42:00.000000000 +0200
+@@ -314,7 +314,7 @@
+ 		if (line.isNull())
+ 			break;
+ 		
+-		if (line.stripWhiteSpace().startsWith("export GTK2_RC_FILES=$HOME/.gtkrc-2.0"))
++		if (line.stripWhiteSpace().startsWith("export GTK2_RC_FILES=\"$HOME/.gtkrc-2.0:$HOME/.kde/share/config/gtkrc-2.0:/etc/gtk-2.0/gtkrc\""))
+ 		{
+ 			found = true;
+ 			break;
+@@ -326,7 +326,7 @@
+ 		stream << "\n";
+ 		stream << "# This line was appended by KDE\n";
+ 		stream << "# Make sure our customised gtkrc file is loaded.\n";
+-		stream << "export GTK2_RC_FILES=$HOME/.gtkrc-2.0\n";
++		stream << "export GTK2_RC_FILES=\"$HOME/.gtkrc-2.0:$HOME/.kde/share/config/gtkrc-2.0:/etc/gtk-2.0/gtkrc\"\n";
+ 	}
+ 	file.close();
+ 	

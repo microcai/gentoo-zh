@@ -1,0 +1,8 @@
+# ChangeLog for media-fonts/wqy-zenhei
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  19 Mar 2008; Hydonsingore Cia <hydonsingore@educities.edu.tw>
+  +wqy-zenhei-0.4.23-r1.ebuild, +metadata.xml:
+  Initial import.
+

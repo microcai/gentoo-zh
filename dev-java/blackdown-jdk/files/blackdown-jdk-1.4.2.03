@@ -1,0 +1,12 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /home/cvsroot/ebuildteam/dev-java/blackdown-jdk/files/blackdown-jdk-1.4.2.03,v 1.1 2006/03/29 08:56:44 paar Exp $
+
+VERSION="Blackdown JDK @PV@"
+JAVA_HOME=/opt/@P@
+JDK_HOME=/opt/@P@
+JAVAC=${JAVA_HOME}/bin/javac
+ADDPATH="${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin"
+ADDLDPATH="${JAVA_HOME}/jre/lib/@PLATFORM@/:${JAVA_HOME}/jre/lib/@PLATFORM@/native_threads/:${JAVA_HOME}/jre/lib/@PLATFORM@/client/:${JAVA_HOME}/jre/lib/@PLATFORM@/server/"
+MANPATH=/opt/@P@/man
+ENV_VARS="JAVA_HOME JDK_HOME JAVAC ADDPATH ADDLDPATH MANPATH"

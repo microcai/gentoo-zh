@@ -1,0 +1,34 @@
+AUX blackdown-jdk-1.4.2.02 636 RMD160 e7952ccb6e56400511c68455cfba4107b046ad44 SHA1 970862d0691ae66cf29063e7193563a4530c6a99 SHA256 b3323a260bbc366b9d0a22f98bce74a1eb64713abd8548bb58d1eb7d6a10ae9a
+MD5 53760442f1fff23634ed25ddf7929aa3 files/blackdown-jdk-1.4.2.02 636
+RMD160 e7952ccb6e56400511c68455cfba4107b046ad44 files/blackdown-jdk-1.4.2.02 636
+SHA256 b3323a260bbc366b9d0a22f98bce74a1eb64713abd8548bb58d1eb7d6a10ae9a files/blackdown-jdk-1.4.2.02 636
+AUX blackdown-jdk-1.4.2.03 632 RMD160 e37ee6666d43615c7026e7fb6464c93677e26c07 SHA1 6991eb0983b530aec8669430e8641a74c2b6d86f SHA256 d75b3bd1ec80442d58654a5728fccd588d51b9019b8c1b043b50cbfe3042089e
+MD5 ee8081e23710bb92f669b499874eb6fb files/blackdown-jdk-1.4.2.03 632
+RMD160 e37ee6666d43615c7026e7fb6464c93677e26c07 files/blackdown-jdk-1.4.2.03 632
+SHA256 d75b3bd1ec80442d58654a5728fccd588d51b9019b8c1b043b50cbfe3042089e files/blackdown-jdk-1.4.2.03 632
+AUX font_properties/font.properties.zh_TW 9623 RMD160 e43a4de9b0a6e48efe21a9ace24aeecac9cf70b9 SHA1 378fdc1d64bfd605cc2e91c0c85b74d4c6209581 SHA256 10aa1b4c0310ca73828616464e5dcbf32edef3f931ca15ef7af371924b4bf9a0
+MD5 3c9bb5aba5f18de904b8e4db54fecad2 files/font_properties/font.properties.zh_TW 9623
+RMD160 e43a4de9b0a6e48efe21a9ace24aeecac9cf70b9 files/font_properties/font.properties.zh_TW 9623
+SHA256 10aa1b4c0310ca73828616464e5dcbf32edef3f931ca15ef7af371924b4bf9a0 files/font_properties/font.properties.zh_TW 9623
+AUX font_properties/font.properties.zh_TW_UTF8 6918 RMD160 63e3f9f626cd60f8a92bc01ee6ffacb2337fa8cb SHA1 593f6368ab28596d837273fb052eb513c2d0778f SHA256 e30d99fea9b41b455f7d411ba1b49a02e933f1efa3c781d74a733e6f95aa06e6
+MD5 e6075f9d4934cf23e9e18295854bb6cd files/font_properties/font.properties.zh_TW_UTF8 6918
+RMD160 63e3f9f626cd60f8a92bc01ee6ffacb2337fa8cb files/font_properties/font.properties.zh_TW_UTF8 6918
+SHA256 e30d99fea9b41b455f7d411ba1b49a02e933f1efa3c781d74a733e6f95aa06e6 files/font_properties/font.properties.zh_TW_UTF8 6918
+DIST j2sdk-1.4.2-02-linux-amd64.bin 34055135
+DIST j2sdk-1.4.2-02-linux-i586.bin 34361479
+DIST j2sdk-1.4.2-03-linux-amd64.bin 33997205
+DIST j2sdk-1.4.2-03-linux-i586.bin 34375872 RMD160 47e06e37867237106caf8e5a2c635055a5203d90 SHA1 1d7dd1b91ece6f9a9895bb03986eb865934716ea SHA256 728f661fdf9510de3c01a79259d492a98d9b636034d14e1c930118280dba9df9
+EBUILD blackdown-jdk-1.4.2.02.ebuild 4787 RMD160 69eb6123dd50365cc48e237f71751dae9b8c43ac SHA1 6b4e4c06025944a3ab5fdad28bbebf678cec5fea SHA256 c96b324752ec83c0cfff6946ba31cf499b751873a3b96b75d792fb4b370df09a
+MD5 ca8ddae142bd7b1b6a30dd3cb4fb0ee4 blackdown-jdk-1.4.2.02.ebuild 4787
+RMD160 69eb6123dd50365cc48e237f71751dae9b8c43ac blackdown-jdk-1.4.2.02.ebuild 4787
+SHA256 c96b324752ec83c0cfff6946ba31cf499b751873a3b96b75d792fb4b370df09a blackdown-jdk-1.4.2.02.ebuild 4787
+EBUILD blackdown-jdk-1.4.2.03.ebuild 5191 RMD160 920d5f3cb74ef16654f872191077f1fc604a0b81 SHA1 1735f0654158658f2005f91503c5b45566190342 SHA256 3524e76d17dfd52287cacff6d00220ef856a3cdcd95b4b51adf60da3417004a0
+MD5 2785f01ae7c760555000d6e6163d3de1 blackdown-jdk-1.4.2.03.ebuild 5191
+RMD160 920d5f3cb74ef16654f872191077f1fc604a0b81 blackdown-jdk-1.4.2.03.ebuild 5191
+SHA256 3524e76d17dfd52287cacff6d00220ef856a3cdcd95b4b51adf60da3417004a0 blackdown-jdk-1.4.2.03.ebuild 5191
+MD5 c36468f22832c3157f0fcda9b03b3bff files/digest-blackdown-jdk-1.4.2.02 153
+RMD160 1612a71abcfc8d992fac311ab9e822dd07090339 files/digest-blackdown-jdk-1.4.2.02 153
+SHA256 fb01c2c7a51d180211c7bb7b5eb3ff26df13321be798c3086c953c5edcae9307 files/digest-blackdown-jdk-1.4.2.02 153
+MD5 7ba838b83eed856ac4d664e3032abdc4 files/digest-blackdown-jdk-1.4.2.03 351
+RMD160 613c2df06980c1020e3243cf5060f2e9c52b37c6 files/digest-blackdown-jdk-1.4.2.03 351
+SHA256 cfa3d9be9610a7396d807e031952e054adf14dabb5b91ecd8e1bfe08fb2eb537 files/digest-blackdown-jdk-1.4.2.03 351

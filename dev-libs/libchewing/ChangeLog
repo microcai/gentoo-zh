@@ -1,0 +1,63 @@
+# ChangeLog for dev-libs/libchewing
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /home/cvsroot/ebuildteam/dev-libs/libchewing/ChangeLog,v 1.9 2006/05/15 08:26:21 palatis Exp $
+
+*libchewing-0.2.7 (5 May 2005)
+  5 May 2005; Palatis <palatis@gentoo.org.tw>
+  libchewing-0.3.0.ebuild
+    version bump (unstable release)
+
+*libchewing-0.2.6 (28 Feb 2005)
+  28 Feb 2005; Palatis <palatis@gentoo.org.tw>
+  libchewing-0.2.6.ebuild
+    version bump.
+
+  25 Feb 2005; Palatis <palatis@gentoo.org.tw>
+  libchewing-0.2.5.901.ebuild
+    New beta version. KEKWORDS="".
+
+*libchewing-0.2.5 (28 Dec 2004)
+  28 Dec 2004; bennyc <bennyc@gentoo.org>
+    version bump
+
+*libchewing-0.2.4 (1 Dec 2004)
+   21 Dec 2004; scsi <scsi@gentoo.org.tw>
+     change source and homepage to chewing project homepage.
+   1  Dec 2004; scsi <scsi@gentoo.org.tw>
+   libchewing-0.2.4.ebuild:
+     fix configure parameter and make install error in ebuild file.
+     change keywords from ~x86 to x86
+   libchewing-0.2.3.ebuild:
+     fix configure parameter and make install error in ebuild file.
+   libchewing-0.2.2.ebuild:
+     fix configure parameter and make install error in ebuild file.
+
+*libchewing-0.2.4 (7 Oct 2004)
+
+  7 Oct 2004: Victor Tseng <palatis@gentoo.org.tw>
+    version bump to 0.2.4.
+
+*libchewing-0.2.3 (17 Aug 2004)
+
+  17 Aug 2004: Victor Tseng <palatis@gentoo.org.tw>
+    version bump to 0.2.3.
+
+  07 Jul 2004; Benny Chuang <bennyc@gentoo.org>
+    libchewing 0.2.2 thanks to Lloyd Huang
+  
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libchewing-0.2.1.ebuild:
+    virtual/glibc -> virtual/libc
+
+  23 Jun 2004; David Holm <dholm@gentoo.org> libchewing-0.2.1.ebuild:
+    Added to ~ppc.
+
+  23 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> libchewing-0.2.1.ebuild:
+    Respect CFLAGS. Thanks to Palatis <palatis@gentoo.org.tw>
+
+*libchewing-0.2.1 (21 Jun 2004)
+
+  21 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> +libchewing-0.2.1.ebuild:
+    Initial import. Ebuild submitted by Benny Chuang <bennyc@gentoo.org>,
+    see bug #52133
+

@@ -1,0 +1,39 @@
+Index: source/config/fragments/makefile.mk
+===================================================================
+RCS file: /cvs/framework/filter/source/config/fragments/makefile.mk,v
+retrieving revision 1.12
+diff -u -u -r1.12 makefile.mk
+--- filter/source/config/fragments/makefile.mk	8 Sep 2005 21:33:23 -0000	1.12
++++ filter/source/config/fragments/makefile.mk	25 Oct 2005 18:24:46 -0000
+@@ -147,13 +147,20 @@
+ .IF "$(SOLAR_JAVA)"==""
+ #cmc, hack to workaround the java build requirement
+ MERGE:=python ../tools/merge/pyAltFCFGMerge
++PACKLANG := $(XSLTPROC)
++PACKLANG_IN :=
++PACKLANG_PARAM := --stringparam
++PACKLANG_XSL :=
+ .ELSE
+ MERGE    := $(JAVA) -jar $(CLASSDIR)$/FCFGMerge.jar
+ .IF "$(JDK)" == "gcj"
+-PACKLANG := $(JAVA) $(JAVACPS) $(SOLARBINDIR)/xalan.jar org.apache.xalan.xslt.Process -XSL langfilter.xsl
++PACKLANG := $(JAVA) $(JAVACPS) $(SOLARBINDIR)/xalan.jar org.apache.xalan.xslt.Process
+ .ELSE
+-PACKLANG := $(JAVA) org.apache.xalan.xslt.Process -XSL langfilter.xsl
++PACKLANG := $(JAVA) org.apache.xalan.xslt.Process
+ .ENDIF
++PACKLANG_IN := -IN
++PACKLANG_PARAM := -PARAM
++PACKLANG_XSL := -XSL
+ .ENDIF
+ 
+ # -----------------------------------------------------------------------------
+@@ -182,7 +191,7 @@
+      +@echo Building language packages $(@:b:s/Filter_//) for filters
+      +@echo ===================================================================
+      +-$(MKDIRHIER) $(@:d)
+-     +$(PACKLANG) -IN $< -PARAM lang $(@:d:d:d:d:d:d:d:d:b) > $@
++     +$(PACKLANG) $(PACKLANG_PARAM) lang $(@:d:d:d:d:d:d:d:d:b) $(PACKLANG_XSL) langfilter.xsl $(PACKLANG_IN) $< > $@
+ 
+ $(REALFILTERPACKAGES_FILTERS_UI_LANGPACKS_PACKED) : $(REALFILTERPACKAGES_FILTERS_UI_LANGPACKS)
+ 

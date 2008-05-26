@@ -1,0 +1,77 @@
+--- configure	2006-09-17 14:57:27.000000000 +0800
++++ configure.new	2006-09-17 14:57:42.000000000 +0800
+@@ -86,16 +86,11 @@
+ fi
+ 
+ QT_IM='N'
+-for i in qt3 qt4
+-do
+-  QT_IM_DIR=/usr/lib/$i/plugins/$LIB/inputmethods
+-  echo "testing if you have QT_IM_MODULE dir:$QT_IM_DIR support"
+-  if [ -d  $QT_IM_DIR ]; then
+-    QT_IM='Y'
+-    QT=$i
+-    break
++QT_IM_DIR=$QTDIR/plugins/inputmethods
++echo "testing if you have QT_IM_MODULE dir:$QT_IM_DIR support"
++if [ -d  $QT_IM_DIR ]; then
++  QT_IM='Y'
+   fi
+-done
+ 
+ if [ $QT_IM = "Y" ]; then
+     echo "-> Yes, you have QT_IM_MODULE $QT_IM_DIR support"
+@@ -148,6 +143,7 @@
+ echo "datadir_r=$datadir" >> config.mak
+ echo "libdir=\$(DESTDIR)$libdir" >> config.mak
+ echo "includedir=\$(DESTDIR)$includedir" >> config.mak
++echo "qtdir=\$(DESTDIR)$QTDIR" >> config.mak
+ 
+ echo "LDFLAGS=$GTKLDFLAGS" >> config.mak
+ echo "GCIN_VERSION=$GCIN_VERSION" >> config.mak
+--- qt-im/Makefile	2006-08-02 15:36:52.000000000 +0800
++++ qt-im/Makefile.new	2006-09-17 14:50:42.000000000 +0800
+@@ -1,16 +1,14 @@
+ include ../config.mak
+-QTIM=$(QT)/plugins/inputmethods
+-IMMODULES=$(libdir)/$(QTIM)
+ ifeq ($(LIB), lib64)
+-	IMMODULES_LOCAL=/usr/lib/$(QT)/plugins/lib64/inputmethods
++	IMMODULES=$(qtdir)/lib64/plugins/inputmethods
+ else
+-	IMMODULES_LOCAL=/usr/lib/$(QTIM)
++	IMMODULES=/$(qtdir)/plugins/inputmethods
+ endif
+-INCS=-I../im-client -I/usr/lib/$(QT)/include  -I/usr/include/Xft2/X11/Xft  -I/usr/include/fontconfig -I/usr/include/freetype2
++INCS=-I../im-client -I$(QTDIR)/include  -I/usr/include/Xft2/X11/Xft  -I/usr/include/fontconfig -I/usr/include/freetype2
+ CXXFLAGS=$(OPTFLAGS) $(INCS) -Wall -D_REENTRANT -fPIC  -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -DQT_NO_DEBUG
+ OBJS=qgcininputcontextplugin.o qgcininputcontextplugin_my.o qgcininputcontext.o qgcininputcontext_x11.o
+ .SUFFIXES:	.c .cpp .a .so .E .h
+-LDFLAGS=-L/usr/lib/$(QT)/$(LIB) -L/usr/X11R6/$(LIB) -L../im-client -lqt-mt -lmng -ljpeg -lpng -lz \
++LDFLAGS=-L$(QTDIR)/$(LIB) -L/usr/X11R6/$(LIB) -L../im-client -lqt-mt -lmng -ljpeg -lpng -lz \
+ -lXrender -lXrandr  -lXft -lfontconfig -lgcin-im-client \
+ -lXext -lX11 -lm -lSM -lICE -ldl -lpthread
+ all:	libqgcin.so
+@@ -18,19 +16,14 @@
+ .cpp.E:
+ 	$(CXX) -E $(CFLAGS) $(INCS) $< > $@
+ .h.o:
+-	/usr/lib/$(QT)/bin/moc $< -o $<_moc.cpp
++	$(QTDIR)/bin/moc $< -o $<_moc.cpp
+ 	$(CXX) -c -pipe $(CXXFLAGS) $(INCS) $<_moc.cpp -o $@
+ 
+ libqgcin.so: $(OBJS)
+ 	$(CXX) -fno-exceptions -shared -o $@ $(OBJS) $(LDFLAGS)
+ 	rm -f core.*
+ install:
+-	if [ $(prefix) = /usr/local ]; then \
+-		install -d $(IMMODULES_LOCAL); \
+-		install -m 755 libqgcin.so $(IMMODULES_LOCAL); \
+-	else \
+-		install -d $(IMMODULES); \
+-                install -m 755 libqgcin.so $(IMMODULES); \
+-	fi
++	install -d $(IMMODULES); \
++	install -m 755 libqgcin.so $(IMMODULES) 
+ clean:
+ 	rm -f $(OBJS) libqgcin.so *~ core.* *moc*.cpp *.E

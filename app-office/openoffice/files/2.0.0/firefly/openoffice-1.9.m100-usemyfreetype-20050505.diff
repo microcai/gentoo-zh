@@ -1,0 +1,28 @@
+--- instsetoo_native/inc_openoffice/unix/shellscripts_core10.txt	2005-04-20 19:38:34.000000000 +0800
++++ instsetoo_native/inc_openoffice/unix/shellscripts_core10.txt	2005-05-05 17:12:54.000000000 +0800
+@@ -19,16 +19,16 @@ Linux)
+ esac
+ 
+ # creating link to libfreetype.so.6, if necessary
+-if [ ! -f /usr/lib/libfreetype.so.6 ]
+-then
+-  if [ ! -f $$PRODUCTINSTALLLOCATION/PRODUCTDIRECTORYNAME/program/libfreetype.so.6 ]
+-  then
+-    if [ -f $$PRODUCTINSTALLLOCATION/PRODUCTDIRECTORYNAME/program/filter/libfreetype.so.6 ]
+-    then
++#if [ ! -f /usr/lib/libfreetype.so.6 ]
++#then
++#  if [ ! -f $$PRODUCTINSTALLLOCATION/PRODUCTDIRECTORYNAME/program/libfreetype.so.6 ]
++#  then
++#    if [ -f $$PRODUCTINSTALLLOCATION/PRODUCTDIRECTORYNAME/program/filter/libfreetype.so.6 ]
++#    then
+       ln -s filter/libfreetype.so.6 $$PRODUCTINSTALLLOCATION/PRODUCTDIRECTORYNAME/program/libfreetype.so.6 >/dev/null 2>&1
+-    fi
+-  fi
+-fi
++#    fi
++#  fi
++#fi
+ 
+ exit 0
+ END

@@ -1,0 +1,12 @@
+DIST stardict-oxford-big5-2.4.2.tar.bz2 7669212 RMD160 1427f3bafe97572ccb946a5ee648f0f776eb2203 SHA1 13ba86a3f1147a3c019bafc62b670a76d94460b2 SHA256 6a538f12258b7e390e2495a2e6dac52d333cb9d7ff60dbbfa165a99969823a7a
+EBUILD stardict-oxford-en-zh-big5-2.4.2.ebuild 464 RMD160 3e571ec39dd4a4ecffcf4d571bf7884e56497dac SHA1 fbe4e2043e917cd887279eb5c868cdfb21861173 SHA256 f38181f9da75c8288338a228546ef986067263fa54e070259b0b97b34eb46502
+MD5 f9aa894e0ca7dab0db5b759fb6155cc5 stardict-oxford-en-zh-big5-2.4.2.ebuild 464
+RMD160 3e571ec39dd4a4ecffcf4d571bf7884e56497dac stardict-oxford-en-zh-big5-2.4.2.ebuild 464
+SHA256 f38181f9da75c8288338a228546ef986067263fa54e070259b0b97b34eb46502 stardict-oxford-en-zh-big5-2.4.2.ebuild 464
+MISC ChangeLog 459 RMD160 06035ddc537b182650c5e3e9544d15f74f63f6ae SHA1 787600875faee1fc6b10ba0a3c5e0f45abb0fd41 SHA256 dbe203b9cdc73489a1625ccc3a0d8ede7adb1e0a7c5af4ea3dfaf90cb22c0e74
+MD5 8640de934b44f58e622ce4a71cadd256 ChangeLog 459
+RMD160 06035ddc537b182650c5e3e9544d15f74f63f6ae ChangeLog 459
+SHA256 dbe203b9cdc73489a1625ccc3a0d8ede7adb1e0a7c5af4ea3dfaf90cb22c0e74 ChangeLog 459
+MD5 0ca5abd0e5d07df4a4dac8b355e9d160 files/digest-stardict-oxford-en-zh-big5-2.4.2 286
+RMD160 f53812bbebe2eed0c1a27c71ca4c0fa5388450fb files/digest-stardict-oxford-en-zh-big5-2.4.2 286
+SHA256 4bd6a46d6c73b05746a832bdc0e66f4a4b390b3aad4ef9dbc0f37a1bfd2ab536 files/digest-stardict-oxford-en-zh-big5-2.4.2 286

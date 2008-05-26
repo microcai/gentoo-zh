@@ -1,0 +1,14 @@
+# ChangeLog for kde-misc/imageshack-upload
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  07 Dec 2007; scsi <scsichen@gmail.com> imageshack-upload-0.5.ebuild:
+  use kde extended
+
+  05 Dec 2007; scsi <scsichen@gmail.com> imageshack-upload-0.5.ebuild:
+  fix rule
+
+  05 Dec 2007; scsi <scsichen@gmail.com> +metadata.xml,
+  -imageshack-upload-0.1.ebuild, +imageshack-upload-0.5.ebuild:
+  version bump
+

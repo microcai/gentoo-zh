@@ -1,0 +1,12 @@
+--- gentoo.orig	2007-10-25 10:44:55.000000000 +0800
++++ gentoo	2007-10-25 10:48:39.000000000 +0800
+@@ -24,8 +24,7 @@
+         /etc/make.{conf,globals} 2>/dev/null
+ 
+     if [[ $1 == '-o' ]] ; then
+-        sed -n -e '/^PORTDIR_OVERLAY=/ { s/^[^=]\+="\?\([^"]\+\|\S\+\).*/\1/p ; q }' \
+-            /etc/make.conf 2>/dev/null
++        ( source /etc/make.conf; echo $PORTDIR_OVERLAY )
+     fi
+ }
+ 

@@ -1,0 +1,497 @@
+# ChangeLog for app-i18n/gcin
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+
+  06 May 2008; scsi<scsichen@gmail.com> -gcin-1.3.1.ebuild,
+  -gcin-1.3.2.ebuild, -gcin-1.3.3.ebuild, -gcin-1.3.4.ebuild,
+  -gcin-1.3.5.ebuild, -gcin-1.3.6.ebuild, -gcin-1.3.7.1.ebuild,
+  -gcin-1.3.8.ebuild, -gcin-1.4.0_pre7.ebuild, -gcin-1.4.0_pre8.ebuild,
+  -gcin-1.4.0_pre9.ebuild, -gcin-1.4.0_pre10.ebuild,
+  -gcin-1.4.0_pre11.ebuild, +gcin-1.4.0_pre13.ebuild:
+  version bump and remove old
+
+  15 Apr 2008; scsi<scsichen@gmail.com> +gcin-1.4.0_pre11.ebuild:
+  version bump
+
+  16 Mar 2008; scsi <scsichen@gmail.com> +gcin-1.4.0_pre9.ebuild,
+  +gcin-1.4.0_pre10.ebuild:
+  gcin version bump
+
+  10 Mar 2008; scsi <scsichen@gmail.com> +gcin-1.4.0_pre8.ebuild:
+  version bump
+
+  29 Feb 2008; scsi <scsichen@gmail.com> -gcin-1.4.0_pre2.ebuild,
+  -gcin-1.4.0_pre3.ebuild, +gcin-1.4.0_pre7.ebuild:
+  version bump
+
+  19 Feb 2008; scsi <scsichen@gmail.com> +gcin-1.4.0_pre3.ebuild:
+  version bump
+
+  12 Feb 2008; scsi <scsichen@gmail.com> -gcin-1.4.0_pre1.ebuild,
+  +gcin-1.4.0_pre2.ebuild:
+  version bump
+
+  05 Feb 2008; scsi <scsichen@gmail.com> +gcin-1.4.0_pre1.ebuild:
+  version bump
+
+  05 Feb 2008; Hydonsingore Cia <hydonsingore@educities.edu.tw>
+  +gcin-1.3.9.ebuild:
+  Version bump
+
+  20 Jan 2008; Hydonsingore Cia <hydonsingore@educities.edu.tw>
+  -gcin-1.3.8_pre10.ebuild, +gcin-1.3.8.ebuild:
+  Version bump.
+
+  14 Jan 2008; scsi <scsichen@gmail.com> -gcin-1.3.8_pre8.ebuild,
+  -gcin-1.3.8_pre9.ebuild, +gcin-1.3.8_pre10.ebuild:
+  version bump
+
+  28 Dec 2007; scsi <scsichen@gmail.com> gcin-1.3.7.1.ebuild,
+  gcin-1.3.8_pre9.ebuild:
+  fix nobopomofo picture path
+
+  27 Dec 2007; Hydonsingore Cia <hydonsingore@educities.edu.tw>
+  gcin-1.3.7.1.ebuild:
+  Fix the nobopomofo issue.
+
+  27 Dec 2007; Hydonsingore Cia <hydonsingore@educities.edu.tw>
+  gcin-1.3.8_pre9.ebuild:
+  Fix the nobopomofo issue.
+
+  24 Dec 2007; scsi <scsichen@gmail.com> +gcin-1.3.8_pre9.ebuild:
+  version bump
+
+  21 Dec 2007; scsi <scsichen@gmail.com> -gcin-1.3.8_pre6.ebuild,
+  +gcin-1.3.8_pre8.ebuild:
+  version bump
+
+  21 Dec 2007; scsi <scsichen@gmail.com> -gcin-1.3.8_pre5.ebuild,
+  +gcin-1.3.8_pre6.ebuild:
+  version bump
+
+  19 Dec 2007; scsi <scsichen@gmail.com> -gcin-1.3.6_pre4.ebuild,
+  -gcin-1.3.6_pre5.ebuild, -gcin-1.3.8_pre4.ebuild:
+  remove discraded version
+
+  17 Dec 2007; scsi <scsichen@gmail.com> +gcin-1.3.8_pre5.ebuild:
+  version bump
+
+  14 Dec 2007; scsi <scsichen@gmail.com> -gcin-1.3.8_pre3.ebuild,
+  +gcin-1.3.8_pre4.ebuild:
+  version bump
+
+  12 Dec 2007; scsi <scsichen@gmail.com> -gcin-1.3.8_pre1.ebuild,
+  -gcin-1.3.8_pre2.ebuild, +gcin-1.3.8_pre3.ebuild:
+  version bump
+
+  09 Dec 2007; scsi<scsichen@gmail.com> +gcin-1.3.8_pre2.ebuild:
+  version bump
+
+  04 Dec 2007; scsi <scsichen@gmail.com> +gcin-1.3.8_pre1.ebuild:
+  version bump
+
+  27 Nov 2007; scsi <scsichen@gmail.com> ++, ++:
+  version bump
+
+  23 Nov 2007; scsi <scsichen@gmail.com> ++:
+  version bump
+
+  22 Nov 2007; scsi <scsichen@gmail.com> -gcin-1.3.6_pre2.ebuild,
+  -gcin-1.3.6_pre3.ebuild:
+  remove package which remove from source
+
+  21 Nov 2007; scsi <scsichen@gmail.com> ++:
+  version bump
+
+  21 Nov 2007; scsi <scsichen@gmail.com> ++:
+  version bump
+
+  15 Nov 2007; scsi <scsichen@gmail.com> ++:
+  version bump
+
+  01 Nov 2007; scsi <scsichen@gmail.com> +files/nobopomofo/SS1135_ST.jpg,
+  +files/nobopomofo/SS1208_DT.jpg, files/nobopomofo/gcin-filter-nobopomofo:
+  update nobopomofo
+
+  01 Nov 2007; scsi <scsichen@gmail.com> gcin-1.3.5.ebuild:
+  fix rule
+
+  01 Nov 2007; scsi <scsichen@gmail.com> gcin-1.3.5.ebuild:
+  change ~x86 to x86
+
+  12 Oct 2007; scsi <scsichen@gmail.com> ++, -gcin-1.3.5_pre7.ebuild:
+  version bump
+
+  11 Oct 2007; scsi <scsichen@gmail.com> files/digest-gcin-1.3.5_pre7,
+  Manifest:
+  fix ogg file md5sum error
+
+  09 Oct 2007; scsi <scsichen@gmail.com> ++, +metadata.xml,
+  -gcin-1.2.6.ebuild, -gcin-1.2.7.ebuild, -gcin-1.2.7-r1.ebuild,
+  -gcin-1.2.8.ebuild, -gcin-1.2.9.ebuild, gcin-1.3.1.ebuild,
+  gcin-1.3.2.ebuild, gcin-1.3.3.ebuild, gcin-1.3.4.ebuild,
+  -gcin-1.3.5_pre2.ebuild, -gcin-1.3.5_pre5.ebuild:
+  fix repcom check error and remove xim-select support for a while, becuase
+  xim-select source missing, remove old version, version bump
+
+  15 Jun 2007; scsu <scsichen@gmail.com> +gcin-1.3.5_pre2.ebuild:
+  Version bump.
+
+  11 Mar 2007; scsi <scsichen@gmail.com>
+  +gcin-1.3.5_pre1.ebuild. +files/gcin-qtimm_fix-1.3.5pre1.patch:
+  Version bump. Add filter nobopomofo support for 1.3.4.
+
+*gcin-1.3.4 (15 Apr 2007)
+
+  15 Apr 2007; Hydonsingore Cia <hydonsingore@educities.edu.tw>:
+  +gcin-1.3.4. Version bump.
+  11 Mar 2007; scsi <scsichen@gmail.com>:
+  gcin-1.3.4. add filter nobopomofo support.
+
+*gcin-1.3.3 (26 Jan 2007)
+
+  26 Jan 2007; Hydonsingore Cia <hydonsingore@educities.edu.tw>:
+  +gcin-1.3.3. Version bump.
+
+*gcin-1.2.7-r1 (22 Jan 2007)
+  
+  18 Jan 2007; scsi <scsichen@gmail.com>:
+  gcin-1.2.7-r1 fix uri for version 1.2.6, 1.2.7, 1.2.7-r1, 1.2.8, 1.2.9
+
+*gcin-1.3.2 (18 Jan 2007)
+
+  18 Jan 2007; Hydonsingore Cia <hydonsingore@educities.edu.tw>:
+  +gcin-1.3.2. Version bump. Remove old ebuilds.
+
+  15 Dec 2006; Hydonsingore Cia <hydonsingore@educities.edu.tw>:
+  Substitude qt with x11-libs/qt in dependencies to avoid portage complain.
+
+*gcin-1.3.1 (29 Nov 2006)
+  
+  29 Nov 2006; Hydonsingore Cia <hydonsingore@educities.edu.tw>:
+  +gcin-1.3.1. Version bump, add back MAKEOPS="-ji".
+
+*gcin-1.2.9 (19 Nov 2006)
+
+  19 Nov 2006; Hydonsingore Cia <hydonsingore@educities.edu.tw>:
+  +gcin-1.2.9. Version bump.
+
+*gcin-1.2.8
+
+  07 Nov 2006; scsi <scsichen@gmail.com>:
+  +gcin-1.2.8
+  gcin-1.2.[1-7] download URL fix.
+
+  05 Nov 2006; Hydonsingore Cia <hydonsingore@educities.edu.tw>:
+  gcin download URL changed.
+
+*gcin-1.2.7-r1
+
+  17 Oct 2006; Hydonsingore Cia <hydonsingore@educities.edu.tw> gcin-1.2.7-r1.ebuild:
+  +gcin-1.2.7-r1
+  Unable to build 1.2.8 successfully.
+  Introduce some 1.2.8 features.
+
+*gcin-1.2.7 (10 Oct 2006)
+  
+  10 Oct 2006; Hydonsingore Cia <hydonsingore@educities.edu.tw> gcin-1.2.7.ebuild:
+  +gcin-1.2.7.ebuild
+  version bump
+
+*gcin-1.2.6 (28 Sep 2006)
+
+  28 Sep 2006; Hydonsingore Cia <hydonsingore@educities.edu.tw> gcin-1.2.6.ebuild:
+  +gcin-1.2.6.ebuild
+  new version
+  update gcin-1.2.5-qt3.patch
+
+*gcin-0.9.2 (23 Apr 2005)
+
+  23 Apr 2005;scsi <scsi@gentoo.org.tw> gcin-0.9.2.ebuild:
+  +gcin-0.9.2.ebuild
+  new version.
+
+*gcin-0.9.1 (16 Apr 2005)
+
+  16 Apr 2005;scsi <scsi@gentoo.org.tw> gcin-0.9.1.ebuild:
+  +gcin-0.9.1.ebuild
+  fix doc patch error.
+
+  16 Apr 2005;scsi <scsi@gentoo.org.tw>:
+  -gcin-0.8.1.ebuild, -gcin-0.8.2.ebuild, -gcin-0.8.3.ebuild,
+  -gcin-0.8.4.ebuild, -gcin-0.8.5.ebuild, -gcin-0.8.6.ebuild,
+  -gcin-0.8.7.ebuild, -gcin-0.8.8.ebuild; -gcin-0.8.0.ebuild;
+  remove old version
+    
+*gcin-0.9.0 (5 Apr 2005)
+
+  06 Apr 2005;scsi <scsi@gentoo.org.tw>:
+  +gcin-0.9.0-r1.ebuild;-gcin-0.9.0.ebuild
+  fix doc patch error.
+
+  05 Apr 2005;scsi <scsi@gentoo.org.tw>:
+  +gcin-0.9.0.ebuild;
+  new version
+
+*gcin-0.8.9 (18 Mar 2005)
+
+  18 Mar 2005;scsi <scsi@gentoo.org.tw>:
+  +gcin-0.8.9.ebuild;
+  new version
+
+*gcin-0.8.8 (13 Mar 2005)
+
+  13 Mar 2005;scsi <scsi@gentoo.org.tw>:
+  +gcin-0.8.8.ebuild;
+  new version
+
+*gcin-0.8.7 (7 Mar 2005)
+
+  07 Mar 2005;scsi <scsi@gentoo.org.tw>:
+  +gcin-0.8.7.ebuild;
+  new version
+
+*gcin-0.8.6 (5 Mar 2005)
+
+  05 Mar 2005;scsi <scsi@gentoo.org.tw>:
+  +gcin-0.8.6.ebuild;
+  new version
+
+*gcin-0.8.5 (4 Mar 2005)
+
+  05 Mar 2005;scsi <scsi@gentoo.org.tw>:
+  +gcin-0.8.5.ebuild;
+  new version
+
+*gcin-0.8.4 (28 feb 2005)
+
+  28 feb 2005;scsi <scsi@gentoo.org.tw>:
+  +gcin-0.8.4.ebuild;
+  new version
+
+*gcin-0.8.3 (28 feb 2005)
+
+  28 feb 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.8.3.ebuild;
+    -gcin-0.7.0.ebuild -gcin-0.7.2.ebuild -gcin-0.7.3.ebuild -gcin-0.7.4.ebuild
+    -gcin-0.7.5.ebuild -gcin-0.7.6.ebuild -gcin-0.7.7.ebuild -gcin-0.7.8.ebuild
+    -gcin-0.7.9.ebuild
+    new version
+
+*gcin-0.8.2 (26 feb 2005)
+
+  26 feb 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.8.2.ebuild;
+    new version
+
+*gcin-0.8.1 (24 feb 2005)
+
+  24 feb 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.8.1.ebuild;
+    new version
+
+*gcin-0.8.0 (22 feb 2005)
+
+  22 feb 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.8.0.ebuild;
+    new version
+
+*gcin-0.7.9 (19 feb 2005)
+
+  19 feb 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.7.9.ebuild;
+    new version
+
+*gcin-0.7.8 (17 feb 2005)
+
+  17 feb 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.7.8.ebuild;
+    new version
+
+*gcin-0.7.7 (16 feb 2005)
+
+  16 feb 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.7.7.ebuild;
+    new version
+
+*gcin-0.7.6 (16 feb 2005)
+
+  16 feb 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.7.6.ebuild;
+    new version
+
+*gcin-0.7.5 (15 feb 2005)
+
+  15 feb 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.7.5.ebuild;
+    new version
+
+*gcin-0.7.4 (15 feb 2005)
+
+  15 feb 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.7.4.ebuild;
+    new version
+
+*gcin-0.7.3 (13 feb 2005)
+
+  13 feb 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.7.3.ebuild;
+    -gcin-0.6.1.ebuild -gcin-0.6.5.ebuild -gcin-0.6.6.ebuild -gcin-0.6.7.ebuild
+    -gcin-0.6.8.ebuild -gcin-0.6.9.ebuild
+    new version
+
+*gcin-0.7.2 (13 feb 2005)
+
+  13 feb 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.7.2.ebuild;
+    new version
+
+*gcin-0.7.0 (04 feb 2005)
+
+  04 feb 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.7.0.ebuild;
+    new version
+
+*gcin-0.6.9 (02 feb 2005)
+
+  02 feb 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.6.9.ebuild;
+    new version
+
+*gcin-0.6.8 (02 feb 2005)
+
+  02 feb 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.6.8.ebuild;
+    new version
+
+*gcin-0.6.6 (02 feb 2005)
+
+  02 feb 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.6.7.ebuild;
+    new version
+
+*gcin-0.6.6 (30 Jan 2005)
+
+  30 Jan 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.6.6.ebuild;
+    new version
+
+*gcin-0.6.5 (30 Jan 2005)
+
+  30 Jan 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.6.5.ebuild; -gcin-0.5.4.ebuild -gcin-0.5.6.ebuild -gcin-0.6.0.ebuild
+    -gcin-0.6.2.ebuild -gcin-0.6.3.ebuild -gcin-0.6.4.ebuild;
+    new version and delete old version
+
+*gcin-0.6.4 (16 Jan 2005)
+
+  24 Jan 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.6.4.ebuild;
+    new version
+
+*gcin-0.6.3 (19 Jan 2005)
+
+  19 Jan 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.6.3.ebuild;-gcin-0.5.4.ebuild, -gcin-0.5.5.ebuild, -gcin-0.5.6.ebuild,
+    -gcin-0.5.7.ebuild, -gcin-0.5.8.ebuild, -gcin-0.5.8-r1.ebuild, -gcin-0.5.9.ebuild
+    new version
+
+*gcin-0.6.2 (16 Jan 2005)
+
+  16 Jan 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.6.2.ebuild;
+    new version
+
+*gcin-0.6.1 (14 Jan 2005)
+
+  14 Jan 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.6.1.ebuild;
+    new version
+
+*gcin-0.6.0 (11 Jan 2005)
+
+  11 Jan 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.6.0.ebuild;
+    new version
+
+*gcin-0.5.9 (10 Jan 2005)
+
+  10 Jan 2005;scsi <scsi@gentoo.org.tw>;
+    +gcin-0.5.9.ebuild;
+    new version
+
+*gcin-0.5.8 (31 Dec 2004)
+
+  06 Jan 2005; scsi <scsi@gentoo.org.tw>;
+    +gcin-0.5.8-r1.ebuild
+    ebuild patch bug fix
+
+  06 Jan 2005; scsi <scsi@gentoo.org.tw>;
+    +gcin-0.5.8.ebuild
+    new version
+
+*gcin-0.5.7 (31 Dec 2004)
+
+  03 Jan 2005; scsi <scsi@gentoo.org.tw>;
+    fix dependence of ebuild
+  
+  31 Dec 2004; scsi <scsi@gentoo.org.tw>;
+    +gcin-0.5.7.ebuild
+    new version
+
+*gcin-0.5.6(18 Dec 2004)
+
+  19 Dec 2004; scsi<scsi@gentoo.org.tw>;
+  -gcin-0.2.7.ebuild -gcin-0.2.9.ebuild -gcin-0.3.0.ebuild -gcin-0.3.1.ebuild
+  -gcin-0.4.0.ebuild -gcin-0.4.9.ebuild -gcin-0.5.1.ebuild -gcin-0.5.2.ebuild
+  -gcin-0.5.3.ebuild;
+  clear old ebuild
+  
+  18 Dec 2004; scsi <scsi@gentoo.org.tw> +gcin-0.5.6.ebuild;
+  version bump
+
+*gcin-0.5.5 (13 Dec 2004)
+  
+  13 Dec 2004; scsi <scsi@gentoo.org.tw> +gcin-0.5.5.ebuild;
+  version bump
+
+*gcin-0.5.3 (20 Nov 2004)
+
+  20 Nov 2004; <scsi@gentoo.org.tw> +gcin-0.5.3.ebuild:
+  version bump
+
+*gcin-0.5.2 (20 Nov 2004)
+
+  20 Nov 2004; <scsi@gentoo.org.tw> +gcin-0.5.2.ebuild:
+  version bump
+
+*gcin-0.5.1 (14 Nov 2004)
+
+  14 Nov 2004; <palatis@gentoo.org.tw> +gcin-0.5.1.ebuild:
+  version bump
+
+*gcin-0.4.9 (04 Nov 2004)
+
+  04 Nov 2004; <ccpz@gentoo.org> +gcin-0.4.9.ebuild:
+  version bump
+
+  * gcin-0.4.0.ebuild: Victor Tseng <palatis@gentoo.org.tw>
+    Version Bump.
+
+  * gcin-0.2.4.ebuild: Paar Zhang <paar@gentoo.org.tw>
+    Version Bump.
+
+  * gcin-0.2.3.ebuild: Victor Tseng <palatis@gentoo.org.tw>
+    Version Bump.
+
+  * gcin-0.1.9.ebuild: Victor Tseng <palatis@gentoo.org.tw>
+    Version Bump. gcin now use a dynamic font resolution,
+    no need to replace font name anymore.
+
+  * gcin-0.1.5.ebuild: Victor Tseng <palatis@gentoo.org.tw>
+    Version Bump.
+
+  * gcin-0.1.3.ebuild: Benny Chuang <benny@gentoo.org.tw>
+    Contributed by lloyd :)
+  
+  * gcin-0.1.0.ebuild: Victor Tseng <palatis@gentoo.org.tw>
+    Initial Release.

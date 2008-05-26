@@ -1,0 +1,259 @@
+diff -uNrbB libXft-2.1.10.old/src/xftfreetype.c libXft-2.1.10/src/xftfreetype.c
+--- libXft-2.1.10.old/src/xftfreetype.c	2006-06-03 18:30:56.000000000 +0800
++++ libXft-2.1.10/src/xftfreetype.c	2006-10-23 20:55:27.000000000 +0800
+@@ -387,6 +387,7 @@
+     FcChar32	    hash, *hashp;
+     FT_Face	    face;
+     int		    nhash;
++    FcBool	    embed; /* Use embededbitmap switch */
+ 
+     if (!info)
+ 	return FcFalse;
+@@ -430,6 +431,16 @@
+     if (FcPatternGetDouble (pattern, FC_PIXEL_SIZE, 0, &dsize) != FcResultMatch)
+ 	goto bail1;
+ 
++    /*
++     * Add By Firefly (firefly@firefly.idv.tw)
++     * 如果取用的點數大小不是整數, 就四捨五入
++     * 加判斷式是因為避免過多小數點運算, 提昇一點兒效率.
++     *
++     * Modified By Palatis (palatis@gentoo.tw)
++     * 使用較佳的四捨五入演算法
++     */
++    dsize = (long)(dsize + 0.5);
++
+     if (FcPatternGetDouble (pattern, FC_ASPECT, 0, &aspect) != FcResultMatch)
+ 	aspect = 1.0;
+     
+@@ -509,10 +520,46 @@
+      */
+     fi->load_flags = FT_LOAD_DEFAULT;
+ 
+-    /* disable bitmaps when anti-aliasing or transforming glyphs */
+-    if (fi->antialias || fi->transform)
++    /*------------------------------------------------------------
++     * Add by Firefly (firefly@firefly.idv.tw)
++     * 預設優先使用內嵌字 (如果該字體有的話)
++     * enable bitmaps first if requested
++     *-----------------------------------------------------------*/
++    switch (FcPatternGetBool (pattern, "embed", 0, &embed)) {
++    case FcResultNoMatch:
++	embed = FcTrue;
++	break;
++    case FcResultMatch:
++	break;
++    default:
++	goto bail1;
++    }
++
++    /*
++     * 當使用 AA 或斜體時, 如果沒有指定內嵌字優先, 則取消內嵌字旗標,
++     * 因為 freetype 預設會優先讀取內嵌的點陣字, 但點陣字無法被轉換 
++     * 為 AA 狀態以及斜體.
++     *
++     * disable bitmaps when anti-aliasing and not set embed or
++     * transforming glyphs
++     */
++    if ((fi->antialias && !embed) || fi->transform)
+ 	fi->load_flags |= FT_LOAD_NO_BITMAP;
+     
++    /*
++     * 檢查粗體設定值, 沒有指定的話, 預設為中等字體
++     * Chech for weight
++     */
++    switch (FcPatternGetInteger(pattern, FC_WEIGHT, 0, &fi->weight)) {
++    case FcResultNoMatch:
++	fi->weight = FC_WEIGHT_MEDIUM;
++	break;
++    case FcResultMatch:
++	break;
++    default:
++	goto bail1;
++    }
++
+     /* disable hinting if requested */
+     switch (FcPatternGetBool (pattern, FC_HINTING, 0, &hinting)) {
+     case FcResultNoMatch:
+diff -uNrbB libXft-2.1.10.old/src/xftglyphs.c libXft-2.1.10/src/xftglyphs.c
+--- libXft-2.1.10.old/src/xftglyphs.c	2006-06-03 18:30:56.000000000 +0800
++++ libXft-2.1.10/src/xftglyphs.c	2006-10-23 20:53:48.000000000 +0800
+@@ -99,6 +99,7 @@
+     FT_Vector	    vector;
+     Bool	    subpixel = False;
+     FT_Face	    face;
++    int		    bold_advance_width = 0;
+ 
+     if (!info)
+ 	return;
+@@ -108,6 +109,14 @@
+     if (!face)
+ 	return;
+ 
++    /*-------------------------------------------------------
++     * Add by Firefly (firefly@firefly.idv.tw)
++     * 需要模擬粗體的話, 增加字符寬度
++     *------------------------------------------------------*/
++    if (font->info.weight >= FC_WEIGHT_BOLD &&
++	!(face->style_flags & FT_STYLE_FLAG_BOLD))
++	bold_advance_width = 64;
++
+     matrix.xx = matrix.yy = 0x10000L;
+     matrix.xy = matrix.yx = 0;
+ 
+@@ -219,6 +228,7 @@
+ 	    bottom = FLOOR( glyphslot->metrics.horiBearingY - glyphslot->metrics.height );
+ 	}
+ 
++	right += CEIL(bold_advance_width);
+ 	width = TRUNC(right - left);
+ 	height = TRUNC( top - bottom );
+ 
+@@ -226,34 +236,48 @@
+ 	 * Clip charcell glyphs to the bounding box
+ 	 * XXX transformed?
+ 	 */
++	 /*---------------------------------------------------------------
++	 * Modified by Firefly (firefly@firefly.idv.tw)
++	 *
++	 * 絕對不能用 font->public.max_advance_width 來當作字元的寬高值,
++	 * 因為 CJK 字元有半形以及全形, 如果一律用同一數值, 一定會造成
++	 * monospace  CJK 字型的英文與 CJK 字元等寬, 必須改用每個字符的
++	 * 實際讀取的寬高值.
++	 *
++	 * Don't use "font->public.max_advance_width", because CJK fonts
++	 * have both half-width and full-width.
++	 * So must use "glyphslot->metrics.vertAdvance" &
++         * "glyphslot->metrics.horiAdvance" in order to get correctly width.
++	 *----------------------------------------------------------------*/
++	glyphslot->metrics.horiAdvance += bold_advance_width;
+ 	if (font->info.spacing >= FC_CHARCELL && !font->info.transform)
+ 	{
+ 	    if (font->info.load_flags & FT_LOAD_VERTICAL_LAYOUT)
+ 	    {
+-		if (TRUNC(bottom) > font->public.max_advance_width)
++		if (bottom > glyphslot->metrics.vertAdvance)
+ 		{
+ 		    int adjust;
+     
+-		    adjust = bottom - (font->public.max_advance_width << 6);
++		    adjust = bottom - glyphslot->metrics.vertAdvance;
+ 		    if (adjust > top)
+ 			adjust = top;
+ 		    top -= adjust;
+ 		    bottom -= adjust;
+-		    height = font->public.max_advance_width;
++		    height = TRUNC(glyphslot->metrics.vertAdvance);
+ 		}
+ 	    }
+ 	    else
+ 	    {
+-		if (TRUNC(right) > font->public.max_advance_width)
++		if (right > glyphslot->metrics.horiAdvance)
+ 		{
+ 		    int adjust;
+     
+-		    adjust = right - (font->public.max_advance_width << 6);
++		    adjust = right - glyphslot->metrics.horiAdvance;
+ 		    if (adjust > left)
+ 			adjust = left;
+ 		    left -= adjust;
+ 		    right -= adjust;
+-		    width = font->public.max_advance_width;
++		    width = TRUNC(glyphslot->metrics.horiAdvance);
+ 		}
+ 	    }
+ 	}
+@@ -277,11 +301,11 @@
+ 		if (font->info.load_flags & FT_LOAD_VERTICAL_LAYOUT)
+ 		{
+ 		    vector.x = 0;
+-		    vector.y = -face->size->metrics.max_advance;
++		    vector.y = -glyphslot->metrics.vertAdvance;
+ 		}
+ 		else
+ 		{
+-		    vector.x = face->size->metrics.max_advance;
++		    vector.x = glyphslot->metrics.horiAdvance;
+ 		    vector.y = 0;
+ 		}
+ 		FT_Vector_Transform (&vector, &font->info.matrix);
+@@ -293,18 +317,18 @@
+ 		if (font->info.load_flags & FT_LOAD_VERTICAL_LAYOUT)
+ 		{
+ 		    xftg->metrics.xOff = 0;
+-		    xftg->metrics.yOff = -font->public.max_advance_width;
++		    xftg->metrics.yOff = -(glyphslot->metrics.vertAdvance >> 6);
+ 		}
+ 		else
+ 		{
+-		    xftg->metrics.xOff = font->public.max_advance_width;
++		    xftg->metrics.xOff = glyphslot->metrics.horiAdvance >> 6;
+ 		    xftg->metrics.yOff = 0;
+ 		}
+ 	    }
+ 	}
+ 	else
+ 	{
+-	    xftg->metrics.xOff = TRUNC(ROUND(glyphslot->advance.x));
++	    xftg->metrics.xOff = TRUNC(ROUND(glyphslot->advance.x + bold_advance_width));
+ 	    xftg->metrics.yOff = -TRUNC(ROUND(glyphslot->advance.y));
+ 	}
+ 	
+@@ -406,6 +430,45 @@
+ 	    continue;
+ 	}
+ 	
++	/*-------------------------------------------------------
++	 * Add by Firefly (firefly@firefly.idv.tw)
++	 * 模擬粗體程式碼, 本段程式碼參考 XFree86 的 X-TrueType 模組
++	 * some code from XFree86's X-TrueType module.
++	 *------------------------------------------------------*/
++	if (bold_advance_width)
++	{
++	    int h = height * vmul;
++	    int w = font->info.antialias ? pitch : pitch * 8;
++	    unsigned char *p = bufBitmap;
++	    unsigned char lsb, tmp;
++	    int i, x, y;
++
++	    /* 處理每一條水平線 */
++	    for (y = 0; y < h ; y++)
++	    {
++		lsb = 0;
++		/* 處理每個點 */
++		for (x = 0; x < w ; x++)
++		{
++		    if (font->info.antialias)
++		    {
++			tmp = p[x];
++                        if ( p[x] + lsb > 0xff )
++                            p[x] = 0xff;
++                        else
++                            p[x] = p[x] + lsb;
++		    }
++		    else
++		    {
++			tmp = p[x] << 7;
++			p[x] |= (p[x] >> 1) | lsb;
++		    }
++		    lsb = tmp;
++		}
++		p += w;
++	    }
++	}
++
+ 	if (XftDebug() & XFT_DBG_GLYPH)
+ 	{
+ 	    printf ("glyph %d:\n", (int) glyphindex);
+diff -uNrbB libXft-2.1.10.old/src/xftint.h libXft-2.1.10/src/xftint.h
+--- libXft-2.1.10.old/src/xftint.h	2006-06-07 00:35:37.000000000 +0800
++++ libXft-2.1.10/src/xftint.h	2006-10-23 20:53:48.000000000 +0800
+@@ -157,6 +157,7 @@
+     int			spacing;
+     FcBool		minspace;
+     int			char_width;
++    int			weight;
+ };
+ 
+ /*

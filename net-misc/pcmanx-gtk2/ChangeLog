@@ -1,0 +1,18 @@
+# ChangeLog for net-misc/pcmanx-gtk2
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  03 Jan 2008; scsi <scsichen@gmail.com> pcmanx-gtk2-0.3.7.ebuild:
+  move install message from preinstall to postinstall
+
+  03 Jan 2008; scsi <scsichen@gmail.com>
+  +files/firefox-xpcom-fix-0.3.7.patch, +pcmanx-gtk2-0.3.7.ebuild:
+  version bump
+
+  12 Oct 2007; scsi <scsichen@gmail.com> pcmanx-gtk2-0.3.6.ebuild:
+  remove unnecessary depend
+
+  12 Oct 2007; scsi <scsichen@gmail.com> +metadata.xml,
+  pcmanx-gtk2-0.3.6.ebuild:
+  fix depend
+

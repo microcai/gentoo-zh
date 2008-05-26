@@ -1,0 +1,35 @@
+--- psprint/source/fontmanager/fontconfig.cxx	2005-09-09 00:36:57.000000000 +0800
++++ psprint/source/fontmanager/fontconfig.cxx	2005-09-19 14:07:12.000000000 +0800
+@@ -397,6 +397,15 @@ bool PrintFontManager::initFontconfig()
+                     fprintf( stderr, "Warning: file is unusable to psprint\n" );
+ #endif
+             }
++// Add by Firefly(firefly@firefly.idv.tw)
++	    else
++	    {
++		if (aFonts.empty())
++		{
++		    std::list< OString > aDummy;
++		    analyzeFontFile( nDirID, aBase, true, aDummy, aFonts );
++		}
++	    }
+             if( aFonts.empty() )
+                 continue;
+ 
+@@ -437,6 +446,8 @@ bool PrintFontManager::initFontconfig()
+             
+             if( pUpdate )
+             {
++// Modify by firefly
++#if 0
+                 // set family name
+                 if( pUpdate->m_nFamilyName != nFamilyName )
+                 {
+@@ -487,6 +498,7 @@ bool PrintFontManager::initFontconfig()
+                     else if( slant == FC_SLANT_OBLIQUE )
+                         pUpdate->m_eItalic = italic::Oblique;
+                 }
++#endif
+                 
+                 // update font cache
+                 m_pFontCache->updateFontCacheEntry( pUpdate, false );

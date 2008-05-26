@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+<title>PCMan</title>
+<link rel="shortcut icon" href="pcmanx.png"  type="image/png">
+</head>
+<script language="javascript">
+function autoConnect(){
+    BBSURL = document.location.href;
+	var i = BBSURL.indexOf(':');
+	if( -1 == i )
+		return;
+	++i;
+	while( BBSURL.charAt(i) == '/' )
+		   ++i;
+	BBSURL = BBSURL.substring(i).split("/")[0];
+
+	if(BBSURL!=null && BBSURL!=""){
+		B=document.getElementById("browser");
+		B.innerHTML='<embed id="BBS" type="application/pcmanx" width="100%" height="100%" URL="'+BBSURL+'" FontFace="Sans">';
+		B.style.display="block";
+		document.title=BBSURL;
+	}
+}
+/*以下code是用來讓BBS的區塊被自動focus用...不過沒效果 = =|||*/
+function autofocus(){
+		document.getElementById("BBS").focus();
+}
+</script>
+<body id="HTMLBODY" style="margin:0; padding:0;" onload="autoConnect(); autofocus();" onBeforeunload ="return 'PCMan : ' + document.title;">
+<div id="browser" style="display:none; width:100%; height:100%;"></div>
+</body>
+</html>

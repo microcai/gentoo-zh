@@ -1,0 +1,8 @@
+DIST iiimf-chewing-0.0.2.tar.gz 366048
+EBUILD iiimf-chewing-0.0.2.ebuild 552 RMD160 03f54fdffe7521a8807b6af5feaf9a9eb226e7fe SHA1 feade562e012838d102c3cc4e132ac26e05b8094 SHA256 1d2880bf614a7f1bd171ad654fef664fecac52cc24c13aaef3c96e6ac9a07ecf
+MD5 f7950b525a937c6d7727b9f671d24344 iiimf-chewing-0.0.2.ebuild 552
+RMD160 03f54fdffe7521a8807b6af5feaf9a9eb226e7fe iiimf-chewing-0.0.2.ebuild 552
+SHA256 1d2880bf614a7f1bd171ad654fef664fecac52cc24c13aaef3c96e6ac9a07ecf iiimf-chewing-0.0.2.ebuild 552
+MD5 7ad539f981e93affcc238a0ccc72669f files/digest-iiimf-chewing-0.0.2 71
+RMD160 1e7a51774094a601a16dae5b1463046c7d6abdd0 files/digest-iiimf-chewing-0.0.2 71
+SHA256 3d82b33da9325a2a03f93aa076f0ae63029457ca78a2cbbdc11d824d5d3576ee files/digest-iiimf-chewing-0.0.2 71

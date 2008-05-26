@@ -1,0 +1,13 @@
+Oct 16, 2006. Hydonsingore Cia <hydosningore@educities.edu.tw>
+	Remove 1.* series.
+
+Oct 11, 2006. Hydonsingore Cia <hdyonsingore@educities.edu.tw>
+	Remove old ebuilds
+
+* openoffice-1.1.3-r1.ebuild: Nov 15, 2004
+	openoffice-1.1.3-r1.ebuild: Victor Tseng <palatis@gentoo.org.tw>
+	Version Bump. Apply firefly's patchset.
+
+*openoffice-1.1.2.ebuild: Victor Tseng <palatis@gentoo.org.tw>
+	Version Bump. Apply firefly's patchset.
+

@@ -1,0 +1,12 @@
+AUX libtabe-db3.patch 473 RMD160 4c96f2e59eb23d92c29cfe818bbf18e586d4aab0 SHA1 733a0a6368ef513b777ed1615ce1466635d78dc2 SHA256 66edef887a8bdab4ea991969dd558930eb6e735f1322be37768bdee5facbd1bc
+MD5 7717ef4639170eaef0cc0aabc9392378 files/libtabe-db3.patch 473
+RMD160 4c96f2e59eb23d92c29cfe818bbf18e586d4aab0 files/libtabe-db3.patch 473
+SHA256 66edef887a8bdab4ea991969dd558930eb6e735f1322be37768bdee5facbd1bc files/libtabe-db3.patch 473
+DIST libtabe-0.2.6-9.src.rpm 6667619
+EBUILD libtabe-0.2.6.ebuild 874 RMD160 c67606adf7e0d5a2c36ec9734f6237ad20ade22a SHA1 82127f1b1287c187147cdf7d533be52eaa31f2d3 SHA256 71493f2bbc4dd029837d910bbbf9d325d862ab0e91e10057d20cb75e4084f349
+MD5 ecc006668c9a5daacb7c48d529df9b5f libtabe-0.2.6.ebuild 874
+RMD160 c67606adf7e0d5a2c36ec9734f6237ad20ade22a libtabe-0.2.6.ebuild 874
+SHA256 71493f2bbc4dd029837d910bbbf9d325d862ab0e91e10057d20cb75e4084f349 libtabe-0.2.6.ebuild 874
+MD5 3da80df853c1eb4076772877a15291cc files/digest-libtabe-0.2.6 69
+RMD160 0e27804679016766de8064707de0f2f6a3fae3fa files/digest-libtabe-0.2.6 69
+SHA256 407b8e305fe295d84eebcb9e92a8b52081ff198644cae3db9719f58eea175091 files/digest-libtabe-0.2.6 69

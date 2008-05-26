@@ -1,0 +1,25 @@
+--- vcl/source/app/settings.cxx	2005-09-09 19:41:53.000000000 +0800
++++ vcl/source/app/settings.cxx	2005-09-19 14:15:51.000000000 +0800
+@@ -567,7 +567,21 @@ ImplStyleData::ImplStyleData( const Impl
+ 
+ void ImplStyleData::SetStandardStyles()
+ {
+-    Font aStdFont( FAMILY_SWISS, Size( 0, 10 ) );
++//   Modify by Firefly@firefly.idv.tw
++    char* pEnv;
++    int defSize = 10;
++    pEnv = ::getenv("OOO_INTERFACE_FONT_SIZE");
++    if (pEnv)
++    {
++	int setSize = atoi(pEnv);
++	if (setSize > defSize)
++	{
++	    defSize = setSize;
++	}
++    }
++    Font aStdFont(FAMILY_SWISS, Size(0, defSize));
++//---------------------------------------------------
++
+     aStdFont.SetCharSet( gsl_getSystemTextEncoding() );
+     aStdFont.SetWeight( WEIGHT_NORMAL );
+     aStdFont.SetName( vcl::DefaultFontConfigItem::get()->getUserInterfaceFont(com::sun::star::lang::Locale( rtl::OUString( RTL_CONSTASCII_USTRINGPARAM("en") ), rtl::OUString(), rtl::OUString() ) ) );
