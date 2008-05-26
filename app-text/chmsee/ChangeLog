@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 May 2008; lidaibin <lidaibin@gmail.com> chmsee-1.0.1.ebuild:
+  fixed the bug about the gecko not be found when configure
+
   19 May 2008; Zhang Le <r0bertz@gentoo.org> +chmsee-1.0.1.ebuild:
   added chmsee-1.0.1.ebuild
 

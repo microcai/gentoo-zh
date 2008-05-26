@@ -19,11 +19,21 @@ RDEPEND=">=gnome-base/libglade-2.0
 		 dev-libs/chmlib
 		 dev-libs/openssl
 		 xulrunner? ( net-libs/xulrunner )
-		 !xulrunner? (
-		 	|| ( >=www-client/mozilla-firefox-1.5.0.7
-			>=www-client/seamonkey-1.0.7 ) )"
+		 !xulrunner? ( >=www-client/mozilla-firefox-1.5.0.7 )"
 
 DEPEND="${RDEPEND}"
+
+src_compile() {
+	local myconf
+	if use xulrunner; then
+		myconf="${myconf} --with-gecko=xulrunner"
+	else
+		myconf="${myconf} --with-gecko=firefox"
+	fi
+
+	econf ${myconf} || die "configure failed"
+	emake || die "make failed"
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die
