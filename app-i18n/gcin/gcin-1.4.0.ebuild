@@ -38,7 +38,8 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure --prefix=/usr --new_gtk_im='N'
+	#./configure --prefix=/usr --new_gtk_im=Y --use_i18n=Y 
+	./configure --prefix=/usr --new_gtk_im=N
 	emake || die
 }
 
