@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-xim
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  27 May 2008; scsi <scsichen@gmail.com> ChangeLog:
+  fix checksum error
 
   01 Nov 2007; scsi <scsichen@gmail.com> ++, files/xim-select.sh,
   -eselect-xim-0.1.ebuild:
