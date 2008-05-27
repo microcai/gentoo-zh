@@ -2,6 +2,11 @@
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  27 May 2008; scsi <scsichen@gmail.com> -pcmanfm-0.3.9.ebuild,
+  -pcmanfm-0.3.9.5.ebuild, -pcmanfm-0.3.9.10.ebuild,
+  +pcmanfm-0.4.4.2.ebuild:
+  version bump
+
   06 May 2008; scsi<scsichen@gmail.com> -pcmanfm-0.3.2.2.ebuild,
   -pcmanfm-0.3.5.4b.ebuild, -pcmanfm-0.3.5.7.ebuild,
   -pcmanfm-0.3.5.8.ebuild, -pcmanfm-0.3.5.23.ebuild,
