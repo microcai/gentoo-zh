@@ -4,6 +4,9 @@
   27 May 2008; scsi <scsichen@gmail.com> Manifest:
   fix checksum error
 
+  27 May 2008; scsi <scsichen@gmail.com> Manifest:
+  fix checksum error
+
   27 May 2008; scsi <scsichen@gmail.com> -gcin-1.4.0_pre13.ebuild,
   +gcin-1.4.0.ebuild:
   version bump
