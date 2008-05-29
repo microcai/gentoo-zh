@@ -17,6 +17,7 @@ app-i18n/scim-xingma:zhengma - Support for ZhengMa Input Method
 media-sound/mac-port:asm - Enable use of asm routines to improve performance
 media-tv/gmlive:nslive - Enable nslive
 media-tv/gmlive:sopcast - Enable sopcast
+media-tv/gmlive:totem - Enable totem plugin
 net-misc/xmuruijie:firewall - Add support for iptables firewall
 x11-libs/cairo:newspr - Enable Freetype subpixel font rendering
 x11-libs/libXft:newspr - Enable Freetype subpixel font rendering
