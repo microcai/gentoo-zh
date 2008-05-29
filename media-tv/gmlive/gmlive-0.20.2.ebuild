@@ -9,7 +9,7 @@ SRC_URI="http://gmlive.googlecode.com/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="sopcast nslive"
+IUSE="sopcast nslive totem"
 RESTRICT="mirror"
 
 RDEPEND=">=dev-libs/glib-2.6
@@ -20,11 +20,17 @@ RDEPEND=">=dev-libs/glib-2.6
 		 >=dev-cpp/glibmm-2
 		 media-video/mplayer
 		 sopcast? ( media-tv/sopcast )
-		 nslive? ( media-tv/nslive )"
+		 nslive? ( media-tv/nslive )
+		 totem? ( media-video/totem )"
 DEPEND="${RDEPEND}
 		sys-devel/gettext
 		>=dev-util/pkgconfig-0.19
 		>=dev-util/intltool-0.35"
+
+src_compile() {
+	econf $(use_enable totem plugin) || die "configure failed"
+	emake || die "make failed"
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "install failed"

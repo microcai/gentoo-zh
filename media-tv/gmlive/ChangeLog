@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  29 May 2008; lidaibin <lidaibin@gmail.com> gmlive-0.20.2.ebuild:
+  regenerate the digest of the gmlive
+
   17 May 2008; lidaibin <lidaibin@gmail.com> -gmlive-0.20.1.ebuild,
   +gmlive-0.20.2.ebuild:
   Upgrade the gmlive to 0.20.2 Upgrade the gmlive to 0.20.2 -v
