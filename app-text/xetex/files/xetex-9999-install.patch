@@ -1,0 +1,42 @@
+--- install-xetex	2008-06-01 01:04:00.000000000 +0800
++++ install-xetex.gentoo	2008-06-01 19:46:54.000000000 +0800
+@@ -36,10 +36,11 @@
+ 	texbin=`readlink ${texbin}`
+ 	echo "### TeX binary (${texbin}) seems to be symlinked."
+ fi
+-texbindir=`dirname ${texbin}`
++texbindir=${D}`dirname ${texbin}`
+ echo "### TeX bin directory = ${texbindir}"
+ 
+ # copy the xetex binary to the same dir as standard tex
++mkdir -p ${texbindir}
+ cp -pf Work/texk/web2c/xetex ${texbindir}/xetex
+ echo ${texbindir}/xetex >> ${filelist}
+ 
+@@ -57,7 +58,7 @@
+ fi
+ 
+ # copy our texmf additions into the local texmf tree
+-texmflocal=`kpsewhich --var-value TEXMFLOCAL`
++texmflocal=${D}usr/share/texmf
+ if [ -z "${texmflocal}" ]; then
+ 	# if --var-value didn't work, try to find the definition in the texmf.cnf file
+ 	CNF=`kpsewhich texmf.cnf`
+@@ -93,14 +94,14 @@
+ 
+ # update kpathsearch databases because we've installed a bunch of stuff
+ echo "### Running texhash"
+-texhash ${texmflocal}
++#texhash ${texmflocal}
+ 
+ # this will build the format files on the system where this script is run;
+ # for packaged binary installations, we must repeat this on the target
+ 
+-sh ./rebuild-formats
++#sh ./rebuild-formats
+ echo "### All done. You installed xetex successfully. Newly installed files are:"
+-cat ${filelist}
++#cat ${filelist}
+ echo "### Output of 'xetex --version:'"
+ xetex --version
+ 

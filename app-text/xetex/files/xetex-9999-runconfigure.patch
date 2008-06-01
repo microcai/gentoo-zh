@@ -1,0 +1,39 @@
+--- runConfigure.sh	2008-06-01 05:44:24.000000000 +0800
++++ runConfigure.sh.gentoo	2008-06-01 05:43:57.000000000 +0800
+@@ -74,30 +74,29 @@
+ 
+ # run the TeX Live configure script
+ echo "### running TeX Live configure script as:"
+-if [ "`uname`" = "FreeBSD" ]; then
++#if [ "`uname`" = "FreeBSD" ]; then
+ 	# Required system libraries are part of the following FreeBSD ports:
+ 	# pnglib	--> graphics/png
+ 	# freetype2	--> print/freetype2
+ 	# zlib		--> graphics/imlib2
+ 	# xpdf		--> (?? not an option?)
+ 	# These are their default positions in FreeBSD:
+-	LOCALBASE=/usr/local
++	LOCALBASE=/usr/
+ 	SYSTEM_LIBS_PATHS="--with-system-freetype2 \
+                            --with-freetype2-libdir=${LOCALBASE}/lib \
+                            --with-freetype2-include=${LOCALBASE}/include \
+                            --with-fontconfig=${LOCALBASE} \
+                            --with-system-pnglib \
+                            --with-pnglib-libdir=${LOCALBASE}/lib \
+-                           --with-system-zlib \
+-                           --with-zlib-dir=${LOCALBASE}/lib/imlib2/loaders"
++                           --with-system-zlib"
+ 	# He who doesn't want to use system libraries can delete SYSTEM_LIBS_PATHS;
+ 	# of course, this will not be the choice when XeTeX becomes a FreeBSD
+ 	# port; all needed libraries will then be dependencies and handled
+ 	# automatically by the Ports System. In meantime...
+ 	CONFIGURECMD="../configure --prefix=${PREFIX} --datadir=${DATADIR} ${SYSTEM_LIBS_PATHS} --disable-threads"
+-else
+-	CONFIGURECMD="../configure --prefix=${PREFIX} --datadir=${DATADIR} --with-system-zlib --with-old-mac-fonts --disable-threads"
+-fi
++#else
++#	CONFIGURECMD="../configure --prefix=${PREFIX} --datadir=${DATADIR} --with-system-zlib --with-old-mac-fonts --disable-threads"
++#fi
+ echo ${CONFIGURECMD}
+ ${CONFIGURECMD} || exit 1
+ 
