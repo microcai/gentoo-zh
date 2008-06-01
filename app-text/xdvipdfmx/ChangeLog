@@ -1,0 +1,8 @@
+# ChangeLog for app-text/xdvipdfmx
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  01 Jun 2008; Yu Yuwei <acevery@gmail.com> +xdvipdfmx-9999.ebuild,
+  +metadata.xml:
+  Add svn ebuild
+
