@@ -14,6 +14,7 @@ app-i18n/scim-xingma:compose - Support for Compose Key Style Input Method
 app-i18n/scim-xingma:erbi-qs - Support for ErBi QingSong Input Method
 app-i18n/scim-xingma:wubi - Support for WuBi 86 Input Method
 app-i18n/scim-xingma:zhengma - Support for ZhengMa Input Method
+app-texl/texlive-core:xetex - Use TeXLive packed XeTeX
 media-sound/mac-port:asm - Enable use of asm routines to improve performance
 media-tv/gmlive:nslive - Enable nslive
 media-tv/gmlive:sopcast - Enable sopcast
