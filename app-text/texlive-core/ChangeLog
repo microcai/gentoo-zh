@@ -1,0 +1,8 @@
+# ChangeLog for app-text/texlive-core
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  01 Jun 2008; Yu Yuwei <acevery@gmail.com> +texlive-core-2007-r13.ebuild,
+  +files/texmf-update, +metadata.xml:
+  Add this for XeTeX separately build
+
