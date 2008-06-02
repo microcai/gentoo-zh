@@ -22,7 +22,8 @@ RDEPEND="app-text/xdvipdfmx
 	sys-libs/zlib
 	>=media-libs/libpng-1.2.1
 	=media-libs/freetype-2*
-	media-libs/fontconfig"
+	media-libs/fontconfig
+	!dev-tevlive/texlive-xetex"
 DEPEND="${RDEPEND}
 	sys-apps/ed
 	sys-devel/flex

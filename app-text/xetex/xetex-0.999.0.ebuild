@@ -20,7 +20,8 @@ RDEPEND="app-text/xdvipdfmx
 	sys-libs/zlib
 	>=media-libs/libpng-1.2.1
 	=media-libs/freetype-2*
-	media-libs/fontconfig"
+	media-libs/fontconfig
+	!dev-texlive/texlive-xetex"
 DEPEND="${RDEPEND}
 	sys-apps/ed
 	sys-devel/flex
@@ -35,9 +36,6 @@ pkg_setup() {
 	if  built_with_use "app-text/texlive-core" xetex ;then
 		eerror "You should not build app-text/texlive-core with \"xetex\" USE flag."
 		die "app-text/texlive-core build with \"xetex\" USE"
-	elif built_with_use "app-text/texlive" xetex ; then
-		eerror "You should not build app-text/texlive with \"xetex\" USE flag."
-		die "app-text/texlive build with \"xetex\" USE"
 	fi
 }
 
