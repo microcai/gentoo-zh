@@ -17,3 +17,8 @@ IUSE=""
 RESTRICT="mirror"
 
 S=${WORKDIR}
+src_unpack() {
+	unpack "${PN}${PV}.tar.bz2"
+	cp "${DISTDIR}"/*.pdf "${S}/"
+}
+
