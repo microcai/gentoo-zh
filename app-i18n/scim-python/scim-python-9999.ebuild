@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
-	if ! built_with_use '>=dev-lang/python-2.5*' sqlite; then
+	if ! built_with_use '>=dev-lang/python-2.5' sqlite; then
 		echo
 		ewarn "You need build dev-lang/python-2.5 with \"sqlite\" USE flag"
 		echo
@@ -43,8 +43,8 @@ src_unpack() {
 	subversion_src_unpack
 	if use pinyin; then
 		unpack ${PYDBTAR}
-		mv -v  "${DISTDIR}/${PYDBTAR}" "${S}/python/engine/PinYin/" || die
-		mv -v "py.db" "${S}/python/engine/PinYin/" || die
+		cp "${DISTDIR}/${PYDBTAR}" "${S}/python/engine/PinYin/" || die
+		mv "py.db" "${S}/python/engine/PinYin/" || die
 	fi
 	cd "${S}"
 	autopoint

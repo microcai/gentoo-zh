@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 
 
 pkg_setup() {
-	if ! built_with_use '>=dev-lang/python-2.5*' sqlite; then
+	if ! built_with_use '>=dev-lang/python-2.5' sqlite; then
 		echo
 		ewarn "You need build dev-lang/python-2.5 with \"sqlite\" USE flag"
 		echo
@@ -41,8 +41,8 @@ src_unpack() {
 	unpack ${A}
 	# adapt the new py.db Makefile rules for Gentoo
 	if use pinyin; then
-		mv -v  "${DISTDIR}/${PYDBTAR}" "${S}/python/engine/PinYin/" || die
-		mv -v "py.db" "${S}/python/engine/PinYin/" || die
+		cp "${DISTDIR}/${PYDBTAR}" "${S}/python/engine/PinYin/" || die
+		mv "py.db" "${S}/python/engine/PinYin/" || die
 	fi
 }
 
