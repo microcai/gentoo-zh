@@ -12,5 +12,6 @@ LICENSE="GPL-2 LPPL-1.3c"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-RDEPEND=">=app-text/xetex-0.997"
+RDEPEND=">=app-text/xetex-0.997
+	!dev-texlive/texlive-xetex"
 
