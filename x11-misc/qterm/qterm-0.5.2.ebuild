@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.5.2.ebuild,v 1.1 2008/05/14 17:33:36 matsuu Exp $
 
 EAPI="1"
-inherit cmake-utils
+inherit cmake-utils eutils
 
 DESCRIPTION="QTerm is a BBS client in Linux."
 HOMEPAGE="http://qterm.sourceforge.net/"
