@@ -7,7 +7,7 @@ diff -urN qterm-0.5.2.orig/cmake/FindOpenSSL.cmake qterm-0.5.2/cmake/FindOpenSSL
  
 -if (OPENSSL_INCLUDE_DIR AND OPENSSL_LIBRARIES)
 +INCLUDE( FindPkgConfig )
-+pkg_search_module(OPENSSL REQUIRED "openssl")
++pkg_search_module(OPENSSL "openssl")
  
 -  # in cache already
 -  SET(OPENSSL_FOUND TRUE)

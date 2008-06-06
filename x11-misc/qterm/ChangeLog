@@ -2,6 +2,11 @@
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.25 2008/05/14 17:33:36 matsuu Exp $
 
+  06 Jun 2008; Zhang Le <r0bertz@gentoo.org>
+  files/qterm-0.5.2-as-needed.patch:
+  openssl is actually not required, unfortunately there is no option to enable
+  or disable it for sure
+
   06 Jun 2008; Zhang Le <r0bertz@gentoo.org> qterm-0.5.2.ebuild:
   cmake should be at least version 2.4.7
 
