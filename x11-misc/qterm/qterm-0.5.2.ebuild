@@ -17,7 +17,7 @@ RDEPEND="x11-libs/qt:4
 	dev-libs/openssl"
 
 DEPEND="${RDEPEND}
-	>=dev-util/cmake-2.4.2"
+	>=dev-util/cmake-2.4.7"
 
 src_unpack() {
 	unpack ${A}
