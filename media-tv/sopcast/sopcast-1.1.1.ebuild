@@ -18,7 +18,8 @@ IUSE=""
 RESTRICT="mirror"
 
 # All dependencies might not be listed, since the binary blob's homepage only lists libstdc++
-RDEPEND=">=virtual/libstdc++-3.3"
+RDEPEND="~x86? ( virtual/libstdc++ )
+	~amd64? ( app-emulation/emul-linux-x86-compat )"
 DEPEND="${RDEPEND}"
 
 src_unpack() {
