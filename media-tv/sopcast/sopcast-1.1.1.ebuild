@@ -18,9 +18,8 @@ IUSE=""
 RESTRICT="mirror"
 
 # All dependencies might not be listed, since the binary blob's homepage only lists libstdc++
-RDEPEND="~x86? ( virtual/libstdc++ )
-	~amd64? ( app-emulation/emul-linux-x86-compat )"
-DEPEND="${RDEPEND}"
+RDEPEND="x86? ( virtual/libstdc++ )
+	amd64? ( app-emulation/emul-linux-x86-compat )"
 
 src_unpack() {
 	ewarn "SopCast binary blob is distributed without version info in its package."
