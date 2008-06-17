@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/gcin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  17 Jun 2008; Hydonsingore Cia <hydonsingore@educities.edu.tw>
+  +gcin-1.4.0-r1.ebuild, +files/gcin-FF3_gtkim.patch:
+  Fix crashes in firefox 3. Enable new gtk IM by default
+
   27 May 2008; scsi <scsichen@gmail.com> gcin-1.4.0.ebuild:
   fix checksum
 

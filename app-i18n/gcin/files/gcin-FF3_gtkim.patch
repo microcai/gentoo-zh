@@ -1,0 +1,219 @@
+--- gtk-im/gtkimcontextgcin.c	2008-06-17 20:05:19.000000000 +0800
++++ gtk-im/gtkimcontextgcin.c.new	2008-06-17 20:07:09.000000000 +0800
+@@ -30,7 +30,8 @@
+ #include "gcin-im-client.h"
+ #include <X11/keysym.h>
+ 
+-// #define NEW_GTK_IM 0
++// #define NEW_GTK_IM 1
++#define DBG 0
+ 
+ typedef struct _GtkGCINInfo GtkGCINInfo;
+ 
+@@ -49,6 +50,9 @@
+ #if NEW_GTK_IM
+ static void cancel_timeout(GtkIMContextGCIN *context)
+ {
++#if DBG
++  printf("cancel_timeout %d\n", context->timeout_handle);
++#endif
+   if (!context->timeout_handle)
+     return;
+   g_source_remove(context->timeout_handle);
+@@ -105,12 +109,19 @@
+ static void
+ reinitialize_all_ics (GtkGCINInfo *info)
+ {
++#if DBG
++  puts("reinitialize_all_ics");
++#endif
+ }
+ 
++#if 0
+ static void gcin_display_closed (GdkDisplay *display,
+ 			 gboolean    is_error,
+                          GtkIMContextGCIN *context_xim)
+ {
++#if DBG
++  puts("gcin_display_closed");
++#endif
+ #if NEW_GTK_IM
+   cancel_timeout(context_xim);
+ #endif
+@@ -120,6 +131,7 @@
+   gcin_im_client_close(context_xim->gcin_ch);
+   context_xim->gcin_ch = NULL;
+ }
++#endif
+ 
+ static void
+ preedit_style_change (GtkGCINInfo *info)
+@@ -139,10 +151,11 @@
+   if (!context_xim->gcin_ch) {
+     if (!(context_xim->gcin_ch = gcin_im_client_open(GDK_DISPLAY())))
+       perror("cannot open gcin_ch");
+-
++#if 0
++    // coredump
+     g_signal_connect (display, "closed",
+                       G_CALLBACK (gcin_display_closed), context_xim);
+-
++#endif
+     if (context_xim->is_mozilla) {
+       int rflag;
+       gcin_im_client_set_flags(context_xim->gcin_ch,
+@@ -176,7 +189,9 @@
+ gtk_im_context_gcin_init (GtkIMContextGCIN *im_context_gcin)
+ {
+   im_context_gcin->timeout_handle = 0;
+-
++#if DBG
++  printf("gtk_im_context_gcin_init %x\n", im_context_gcin);
++#endif
+ #if NEW_GTK_IM
+   int pid = getpid();
+ // probably only works for linux
+@@ -204,18 +219,19 @@
+ static void
+ gtk_im_context_gcin_finalize (GObject *obj)
+ {
+-#if 0
+-  printf("gtk_im_context_gcin_finalize\n");
++#if DBG
++  printf("gtk_im_context_gcin_finalize %x\n", obj);
+ #endif
+   GtkIMContextGCIN *context_xim = GTK_IM_CONTEXT_GCIN (obj);
+ 
++#if NEW_GTK_IM
++  cancel_timeout(context_xim);
++#endif
++
+   if (context_xim->gcin_ch) {
+     gcin_im_client_close(context_xim->gcin_ch);
+     context_xim->gcin_ch = NULL;
+   }
+-#if NEW_GTK_IM
+-  cancel_timeout(context_xim);
+-#endif
+ }
+ 
+ /* Finds the GtkWidget that owns the window, or if none, the
+@@ -239,13 +255,10 @@
+ }
+ 
+ 
+-/* Updates the in_toplevel flag for @context_xim
+- */
++#if 0
+ static void update_in_toplevel (GtkIMContextGCIN *context_xim)
+ {
+ }
+-
+-
+ static void
+ on_client_widget_hierarchy_changed (GtkWidget       *widget,
+ 				    GtkWidget       *old_toplevel,
+@@ -253,13 +266,18 @@
+ {
+   update_in_toplevel (context_xim);
+ }
+-
++#endif
+ 
+ static void
+ set_ic_client_window (GtkIMContextGCIN *context_xim,
+                       GdkWindow       *client_window)
+ {
+-//  printf("set_ic_client_window\n");
++#if DBG
++  printf("set_ic_client_window %x %x\n", context_xim, client_window);
++#endif
++  if (!client_window)
++    return;
++
+   context_xim->client_window = client_window;
+ 
+   if (context_xim->client_window)
+@@ -270,7 +288,8 @@
+       }
+     }
+ 
+-
++#if 0
++  // cause coredump
+   GtkWidget *new_client_widget = widget_for_window (context_xim->client_window);
+ 
+   if (new_client_widget != context_xim->client_widget)
+@@ -291,6 +310,7 @@
+ 
+       update_in_toplevel (context_xim);
+     }
++#endif
+ }
+ 
+ #if NEW_GTK_IM
+@@ -299,7 +319,7 @@
+   GtkIMContextGCIN *context = (GtkIMContextGCIN *)data;
+ 
+   g_signal_emit_by_name(context, "preedit_changed");
+-  context->timeout_handle = 0;
++  cancel_timeout(context);
+   return FALSE;
+ }
+ #endif
+@@ -403,13 +423,14 @@
+ 
+ #if NEW_GTK_IM
+     // this one is for mozilla, I know it is very dirty
+-
+-    if (context_xim->dirty_fix_off) {
+-      if (result && !rstr)
+-        g_signal_emit_by_name(context, "preedit_changed");
+-    } else {
+-      if (context_xim->is_mozilla && (rstr || !result)) {
+-        add_cursor_timeout(context_xim);
++    if (context_xim->is_mozilla) {
++      if (context_xim->dirty_fix_off) {
++        if (result && !rstr)
++          g_signal_emit_by_name(context, "preedit_changed");
++      } else {
++        if (rstr || !result) {
++          add_cursor_timeout(context_xim);
++        }
+       }
+     }
+ #endif
+@@ -502,8 +523,9 @@
+ static void
+ gtk_im_context_gcin_reset (GtkIMContext *context)
+ {
+-#if 0
+-  printf("gtk_im_context_gcin_reset\n");
++  GtkIMContextGCIN *context_gcin = GTK_IM_CONTEXT_GCIN (context);
++#if DBG
++  printf("gtk_im_context_gcin_reset %x\n", context_gcin);
+ #endif
+ }
+ 
+@@ -517,7 +539,9 @@
+ 				       PangoAttrList **attrs,
+                                        gint           *cursor_pos)
+ {
+-//  printf("gtk_im_context_gcin_get_preedit_string %x %x %x\n", str, attrs, cursor_pos);
++#if DBG
++  printf("gtk_im_context_gcin_get_preedit_string %x %x %x\n", str, attrs, cursor_pos);
++#endif
+   GtkIMContextGCIN *context_xim = GTK_IM_CONTEXT_GCIN (context);
+ 
+   if (str)
+@@ -540,8 +564,7 @@
+ void
+ gtk_im_context_gcin_shutdown (void)
+ {
+-// printf("shutdown\n");
+-#if NEW_GTK_IM && 0
+-  cancel_timeout(context_xim);
++#if DBG
++ printf("shutdown\n");
+ #endif
+ }
