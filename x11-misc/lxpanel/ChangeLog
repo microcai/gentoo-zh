@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Jun 2008; Hydonsingore Cia <hydonsingore@educities.edu.tw>
+  -lxpanel-0.2.1.ebuild, -lxpanel-0.2.4.ebuild, -lxpanel-0.2.5.ebuild,
+  -lxpanel-0.2.5.1.ebuild, -lxpanel-0.2.5.2.ebuild:
+  remove old versions
+
   03 Mar 2008; scsi <scsichen@gmail.com> +lxpanel-0.2.7.2.ebuild:
   version bump
 
