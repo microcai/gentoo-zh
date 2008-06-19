@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  19 Jun 2008; Hydonsingore Cia <hydonsingore@educities.edu.tw>
+  -qstardict-0.06.ebuild, -qstardict-0.07.ebuild, -qstardict-0.08.ebuild:
+  Remove old versions.
+
   11 Jun 2008; scsi <scsichen@gmail.com> +qstardict-0.12.9.ebuild:
   version bump
 
