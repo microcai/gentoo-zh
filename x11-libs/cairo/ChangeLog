@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  19 Jun 2008; Yu Yuwei <acevery@gmail.com> -cairo-1.5.12.ebuild,
+  -cairo-1.5.14.ebuild, -cairo-1.5.16.ebuild, -cairo-1.5.18.ebuild,
+  -cairo-1.5.20.ebuild, cairo-1.6.4.ebuild:
+  update ebuild according offical one, clean cairo-1.5* since 1.6.4 is stable now
+
   13 Apr 2008; Yu Yuwei <acevery@gmail.com> +cairo-1.6.4.ebuild:
   Add cairo-1.6.4
 

@@ -10,8 +10,11 @@ SRC_URI="http://cairographics.org/releases/${P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="debug directfb doc glitz newspr opengl svg test X xcb"
+
+# Test causes a circular depend on gtk+... since gtk+ needs cairo but test needs gtk+ so we need to block it
+RESTRICT="test"
 
 RDEPEND="media-libs/fontconfig
 		>=media-libs/freetype-2.1.9
@@ -32,21 +35,12 @@ RDEPEND="media-libs/fontconfig
 
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.19
-		test? (
-				virtual/ghostscript
-				>=app-text/poppler-bindings-0.4.1
-				x11-libs/pango
-				x11-libs/gtk+
-				svg? ( >=gnome-base/librsvg-2.15.0 )
-			)
 		X? ( x11-proto/renderproto
 			xcb? ( x11-proto/xcb-proto ) )
 		doc?	(
 					>=dev-util/gtk-doc-1.6
 					 ~app-text/docbook-xml-dtd-4.2
 				)"
-
-RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
@@ -63,6 +57,7 @@ src_unpack() {
 }
 
 src_compile() {
+	local use_xcb
 	#gets rid of fbmmx.c inlining warnings
 	append-flags -finline-limit=1200
 
@@ -70,11 +65,14 @@ src_compile() {
 		export glitz_LIBS=-lglitz-glx
 	fi
 
-	econf $(use_enable X xlib) $(use_enable doc gtk-doc) $(use_enable directfb) \
-		  $(use_enable svg) $(use_enable glitz) $(use_enable X xlib-xrender) \
-		  $(use_enable debug test-surfaces) --enable-pdf  --enable-png \
-		  --enable-freetype --enable-ps $(use_enable xcb) \
-		  || die "configure failed"
+	use_xcb="--disable-xcb"
+	use X && use xcb && use_xcb="--enable-xcb"
+	econf $(use_enable X xlib) $(use_enable doc gtk-doc) \
+		$(use_enable directfb) ${use_xcb} \
+		$(use_enable svg) $(use_enable glitz) $(use_enable X xlib-xrender) \
+		$(use_enable debug test-surfaces) --enable-pdf  --enable-png \
+		--enable-freetype --enable-ps  \
+		|| die "configure failed"
 
 	emake || die "compile failed"
 }
