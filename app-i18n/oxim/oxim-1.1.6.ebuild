@@ -10,27 +10,38 @@ SRC_URI="ftp://140.111.128.66/odp/OXIM/Source/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86  amd64"
-IUSE="nls gtk-im bimsphone chewing"
+IUSE="nls gtk-im qt-im qt4 bimsphone chewing no-setup-tool"
 
 DEPEND="|| ( x11-libs/libXft virtual/x11 )
     dev-util/pkgconfig
     !app-i18n/oxim-cvs
     gtk-im? ( >=x11-libs/gtk+-2 )
-    bimsphone? ( <app-i18n/libtabe-0.3 )
-    chewing? ( >=dev-libs/libchewing-0.2.5 )
+	qt-im? ( qt4? ( x11-libs/qt ) 
+			!qt4? ( <x11-libs/qt-4 ) )
+	!no-setup-tool? ( qt4? ( x11-libs/qt ) 
+			!qt4? ( <x11-libs/qt-4 ) )
+    bimsphone? ( >=app-i18n/libtabe-0.2.6 )
+    chewing? ( >=dev-libs/libchewing-0.2.5 )    
     nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-db3.patch
 }
 
 src_compile() {
+#	CFLAGS="$CFLAGS -I/usr/qt/3/mkspecs/linux-g++/"
+#	export CFLAGS
+	
 	if use gtk-im ; then
 		myconf="${myconf} --enable-gtk-immodule=yes"
 	else
 		myconf="${myconf} --enable-gtk-immodule=no"
+	fi
+	if use qt-im ; then
+		myconf="${myconf} --enable-qt-immodule=yes"
+	else
+		myconf="${myconf} --enable-qt-immodule=no"
 	fi
 	if use bimsphone ; then
 		myconf="${myconf} --enable-bimsphone-module=yes"
@@ -42,6 +53,11 @@ src_compile() {
 	else
 		myconf="${myconf} --enable-chewing-module=no"
 	fi
+	if use no-setup-tool ;  then
+		myconf="${myconf} --enable-setup-tool=no"
+	else
+		myconf="${myconf} --enable-setup-tool=yes"
+	fi
 
 	econf \
 		--host=${CHOST} \
@@ -51,6 +67,13 @@ src_compile() {
 		--with-tabe-data=/usr/share \
 		--mandir=/usr/share/man \
 		 ${myconf}|| die "econf failed"
+	
+	if use qt-im ; then
+	 	cd ${S}/src/qt-immodule
+		epatch ${FILESDIR}/qt-im-include-fix.patch
+		cd -
+	fi
+
 	emake || die "make failed"
 }
 
