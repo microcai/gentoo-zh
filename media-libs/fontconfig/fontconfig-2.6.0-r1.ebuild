@@ -4,6 +4,8 @@
 
 inherit eutils libtool autotools
 
+EAPI="1"
+
 DESCRIPTION="A library for configuring and customizing font access"
 HOMEPAGE="http://fontconfig.org/"
 SRC_URI="http://fontconfig.org/release/${P}.tar.gz"
