@@ -1,0 +1,267 @@
+diff -Naur fontconfig-2.6.0.orig/conf.d/30-metric-aliases.conf fontconfig-2.6.0/conf.d/30-metric-aliases.conf
+--- fontconfig-2.6.0.orig/conf.d/30-metric-aliases.conf	2007-11-06 00:38:03.000000000 +0100
++++ fontconfig-2.6.0/conf.d/30-metric-aliases.conf	2008-06-12 21:58:00.000000000 +0200
+@@ -46,6 +46,12 @@
+ 
+ 		3) Alias each generic to its specifics.
+ 		   eg. Arial to Liberation Sans, Albany, and Albany AMT
++
++                   However, the AMT fonts are quite ugly and do not
++                   render well on-screen, so we avoid matching them if
++                   the application said `anymetrics'; in that case, a
++                   more generic font with different metrics but better
++                   appearance will be used.
+ 	-->
+ 
+ <!-- Map specifics to generics -->
+@@ -185,7 +191,7 @@
+ 	  <accept>
+           <family>Liberation Sans</family>
+ 	  <family>Albany</family>
+-	  <family>Albany AMT</family>
++	  <!-- <family>Albany AMT</family> -->
+ 	  </accept>
+ 	</alias>
+ 
+@@ -194,7 +200,7 @@
+ 	  <accept>
+           <family>Liberation Serif</family>
+ 	  <family>Thorndale</family>
+-	  <family>Thorndale AMT</family>
++	  <!-- <family>Thorndale AMT</family> -->
+ 	  </accept>
+ 	</alias>
+ 
+@@ -203,9 +209,42 @@
+ 	  <accept>
+           <family>Liberation Mono</family>
+ 	  <family>Cumberland</family>
+-	  <family>Cumberland AMT</family>
++	  <!-- <family>Cumberland AMT</family> -->
+ 	  </accept>
+ 	</alias>
+ 
++        <match target="pattern">
++           <test name="family">
++             <string>Times New Roman</string>
++           </test>
++           <test name="anymetrics" qual="all" compare="not_eq">
++             <bool>true</bool>
++           </test>
++           <edit name="family" mode="append">
++             <string>Thorndale AMT</string>
++           </edit>
++        </match>
++        <match target="pattern">
++           <test name="family">
++             <string>Arial</string>
++           </test>
++           <test name="anymetrics" qual="all" compare="not_eq">
++             <bool>true</bool>
++           </test>
++           <edit name="family" mode="append">
++             <string>Albany AMT</string>
++           </edit>
++        </match>
++        <match target="pattern">
++           <test name="family">
++             <string>Courier New</string>
++           </test>
++           <test name="anymetrics" qual="all" compare="not_eq">
++             <bool>true</bool>
++           </test>
++           <edit name="family" mode="append">
++             <string>Cumberland AMT</string>
++           </edit>
++        </match>
+ 
+ </fontconfig>
+diff -Naur fontconfig-2.6.0.orig/conf.d/30-urw-aliases.conf fontconfig-2.6.0/conf.d/30-urw-aliases.conf
+--- fontconfig-2.6.0.orig/conf.d/30-urw-aliases.conf	2007-11-06 00:38:03.000000000 +0100
++++ fontconfig-2.6.0/conf.d/30-urw-aliases.conf	2008-06-12 22:01:04.000000000 +0200
+@@ -5,6 +5,13 @@
+   URW provides metric and shape compatible fonts for some Adobe families.
+   Helvetica, Courier, and Times are handled in 30-metric-aliases.conf.
+   -->
++
++<!--
++  However, these fonts are quite ugly and do not render well on-screen,
++  so we avoid matching them if the application said `anymetrics'; in that
++  case, a more generic font with different metrics but better appearance
++  will be used.
++
+         <alias binding="same">
+           <family>Avant Garde</family>
+           <accept><family>URW Gothic L</family></accept>
+@@ -29,6 +36,106 @@
+ 	  <family>Zapf Dingbats</family>
+ 	  <accept><family>Dingbats</family></accept>
+ 	</alias>
++-->
++        <match target="pattern">
++           <test name="family">
++             <string>Avant Garde</string>
++           </test>
++           <test name="anymetrics" qual="all" compare="not_eq">
++             <bool>true</bool>
++           </test>
++           <edit name="family" mode="append">
++             <string>URW Gothic L</string>
++           </edit>
++        </match>
++        <match target="pattern">
++           <test name="family">
++             <string>Bookman</string>
++           </test>
++           <test name="anymetrics" qual="all" compare="not_eq">
++             <bool>true</bool>
++           </test>
++           <edit name="family" mode="append">
++             <string>URW Bookman L</string>
++           </edit>
++        </match>
++        <match target="pattern">
++           <test name="family">
++             <string>Courier</string>
++           </test>
++           <test name="anymetrics" qual="all" compare="not_eq">
++             <bool>true</bool>
++           </test>
++           <edit name="family" mode="append">
++             <string>Nimbus Mono L</string>
++           </edit>
++        </match>
++        <match target="pattern">
++           <test name="family">
++             <string>Helvetica</string>
++           </test>
++           <test name="anymetrics" qual="all" compare="not_eq">
++             <bool>true</bool>
++           </test>
++           <edit name="family" mode="append">
++             <string>Nimbus Sans L</string>
++           </edit>
++        </match>
++        <match target="pattern">
++           <test name="family">
++             <string>New Century Schoolbook</string>
++           </test>
++           <test name="anymetrics" qual="all" compare="not_eq">
++             <bool>true</bool>
++           </test>
++           <edit name="family" mode="append">
++             <string>Century Schoolbook L</string>
++           </edit>
++        </match>
++        <match target="pattern">
++           <test name="family">
++             <string>Palatino</string>
++           </test>
++           <test name="anymetrics" qual="all" compare="not_eq">
++             <bool>true</bool>
++           </test>
++           <edit name="family" mode="append">
++             <string>URW Palladio L</string>
++           </edit>
++        </match>
++        <match target="pattern">
++           <test name="family">
++             <string>Times</string>
++           </test>
++           <test name="anymetrics" qual="all" compare="not_eq">
++             <bool>true</bool>
++           </test>
++           <edit name="family" mode="append">
++             <string>Nimbus Roman No9 L</string>
++           </edit>
++        </match>
++        <match target="pattern">
++           <test name="family">
++             <string>Zapf Chancery</string>
++           </test>
++           <test name="anymetrics" qual="all" compare="not_eq">
++             <bool>true</bool>
++           </test>
++           <edit name="family" mode="append">
++             <string>URW Chancery L</string>
++           </edit>
++        </match>
++        <match target="pattern">
++           <test name="family">
++             <string>Zapf Dingbats</string>
++           </test>
++           <test name="anymetrics" qual="all" compare="not_eq">
++             <bool>true</bool>
++           </test>
++           <edit name="family" mode="append">
++             <string>Dingbats</string>
++           </edit>
++        </match>
+ 	<match target="pattern">
+ 	  <test name="family">
+ 	    <string>Symbol</string>
+diff -Naur fontconfig-2.6.0.orig/conf.d/40-nonlatin.conf fontconfig-2.6.0/conf.d/40-nonlatin.conf
+--- fontconfig-2.6.0.orig/conf.d/40-nonlatin.conf	2008-05-25 00:45:51.000000000 +0200
++++ fontconfig-2.6.0/conf.d/40-nonlatin.conf	2008-06-12 22:04:27.000000000 +0200
+@@ -51,6 +51,7 @@
+ 		<family>Baekmuk Dotum</family>
+ 		<family>SimSun</family>
+ 		<family>MgOpen Modata</family>
++		<family>MgOpen Moderna</family>
+ 		<family>Sazanami Gothic</family>
+ 		<family>AR PL ShanHeiSun Uni</family>
+ 		<family>ZYSong18030</family>
+diff -Naur fontconfig-2.6.0.orig/conf.d/Makefile.am fontconfig-2.6.0/conf.d/Makefile.am
+--- fontconfig-2.6.0.orig/conf.d/Makefile.am	2008-01-10 19:43:05.000000000 +0100
++++ fontconfig-2.6.0/conf.d/Makefile.am	2008-06-12 22:03:00.000000000 +0200
+@@ -25,7 +25,12 @@
+ 	README
+ 
+ CONF_FILES = \
++	10-antialias.conf \
+ 	10-autohint.conf \
++	10-hinting.conf \
++	10-hinting-full.conf \
++	10-hinting-medium.conf \
++	10-hinting-slight.conf \
+ 	10-no-sub-pixel.conf \
+ 	10-sub-pixel-bgr.conf \
+ 	10-sub-pixel-rgb.conf \
+@@ -42,6 +47,7 @@
+ 	49-sansserif.conf \
+ 	50-user.conf \
+ 	51-local.conf \
++	53-monospace-lcd-filter.conf \
+ 	60-latin.conf \
+ 	65-fonts-persian.conf \
+ 	65-khmer.conf \
+@@ -53,6 +59,10 @@
+ 	90-synthetic.conf
+ 
+ CONF_LINKS = \
++ 	10-antialias.conf \
++ 	10-hinting.conf \
++ 	10-hinting-medium.conf \
++	10-no-sub-pixel.conf \
+ 	20-fix-globaladvance.conf \
+ 	20-unhint-small-vera.conf \
+ 	30-urw-aliases.conf \
+@@ -62,6 +72,7 @@
+ 	49-sansserif.conf \
+ 	50-user.conf \
+ 	51-local.conf \
++	53-monospace-lcd-filter.conf \
+ 	60-latin.conf \
+ 	65-fonts-persian.conf \
+ 	65-nonlatin.conf \
+diff -Naur fontconfig-2.6.0.orig/fontconfig/fontconfig.h fontconfig-2.6.0/fontconfig/fontconfig.h
+--- fontconfig-2.6.0.orig/fontconfig/fontconfig.h	2008-06-01 04:24:34.000000000 +0200
++++ fontconfig-2.6.0/fontconfig/fontconfig.h	2008-06-12 21:52:58.000000000 +0200
+@@ -112,6 +112,7 @@
+ #define FC_EMBEDDED_BITMAP  "embeddedbitmap"	/* Bool - true to enable embedded bitmaps */
+ #define FC_DECORATIVE	    "decorative"	/* Bool - true if style is a decorative variant */
+ #define FC_LCD_FILTER	    "lcdfilter"		/* Int */
++#define FC_ANY_METRICS      "anymetrics"       /* Bool - true to allow metrics which do not match the requested font */
+ 
+ #define FC_CACHE_SUFFIX		    ".cache-"FC_CACHE_VERSION
+ #define FC_DIR_CACHE_FILE	    "fonts.cache-"FC_CACHE_VERSION
