@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  20 Jun 2008; Yu Yuwei <acevery@gmail.com> cairo-1.6.4.ebuild,
+  +files/cairo-1.6.4-0ubuntu1.diff.bz2:
+  taken from http://forums.gentoo.org/viewtopic-p-5127382.html#5127382
+
   19 Jun 2008; Yu Yuwei <acevery@gmail.com> -cairo-1.5.12.ebuild,
   -cairo-1.5.14.ebuild, -cairo-1.5.16.ebuild, -cairo-1.5.18.ebuild,
   -cairo-1.5.20.ebuild, cairo-1.6.4.ebuild:
