@@ -15,6 +15,8 @@ app-i18n/scim-xingma:erbi-qs - Support for ErBi QingSong Input Method
 app-i18n/scim-xingma:wubi - Support for WuBi 86 Input Method
 app-i18n/scim-xingma:zhengma - Support for ZhengMa Input Method
 app-text/texlive-core:xetex - Use TeXLive packed XeTeX
+media-libs/fontconfig:ubuntu - Enable the lcd patch from Ubuntu
+media-libs/freetype:ubuntu - Enable the lcd patch from Ubuntu
 media-sound/mac-port:asm - Enable use of asm routines to improve performance
 media-tv/gmlive:nslive - Enable nslive
 media-tv/gmlive:sopcast - Enable sopcast
