@@ -10,6 +10,8 @@ SRC_URI="mirror://sourceforge/freetype/${P/_/}.tar.bz2
 	utils?	( mirror://sourceforge/freetype/ft2demos-${PV}.tar.bz2 )
 	doc?	( mirror://sourceforge/freetype/${PN}-doc-${PV}.tar.bz2 )"
 
+EAPI="1"
+
 LICENSE="FTL GPL-2"
 SLOT="2"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
