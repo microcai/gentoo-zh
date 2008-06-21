@@ -12,7 +12,7 @@ SRC_URI="http://cairographics.org/releases/${P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="debug directfb doc glitz +newspr opengl svg test X xcb"
 
 RDEPEND="media-libs/fontconfig
@@ -77,6 +77,7 @@ src_unpack() {
 }
 
 src_compile() {
+	local use_xcb
 	#gets rid of fbmmx.c inlining warnings
 	append-flags -finline-limit=1200
 
@@ -84,11 +85,15 @@ src_compile() {
 		export glitz_LIBS=-lglitz-glx
 	fi
 
-	econf $(use_enable X xlib) $(use_enable doc gtk-doc) $(use_enable directfb) \
-		  $(use_enable svg) $(use_enable glitz) $(use_enable X xlib-xrender) \
-		  $(use_enable debug test-surfaces) --enable-pdf  --enable-png \
-		  --enable-freetype --enable-ps $(use_enable xcb) \
-		  || die "configure failed"
+	use_xcb="--disable-xcb"
+	use X && use xcb && use_xcb="--enable-xcb"
+
+	econf $(use_enable X xlib) $(use_enable doc gtk-doc) \
+		$(use_enable directfb) ${use_xcb} \
+		$(use_enable svg) $(use_enable glitz) $(use_enable X xlib-xrender) \
+		$(use_enable debug test-surfaces) --enable-pdf  --enable-png \
+		--enable-freetype --enable-ps \
+		|| die "configure failed"
 
 	emake || die "compile failed"
 }
