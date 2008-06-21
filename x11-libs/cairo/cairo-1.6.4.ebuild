@@ -12,12 +12,17 @@ SRC_URI="http://cairographics.org/releases/${P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug directfb doc glitz +newspr opengl svg test X xcb"
 
-RDEPEND="media-libs/fontconfig
-		 newspr? ( >=media-libs/freetype-2.3.5-r2 )
-		 !newspr? ( media-libs/freetype:2 )
+RDEPEND="newspr? (
+			>=media-libs/freetype-2.3.5-r2
+			>=media-libs/fontconfig-2.6.0 
+			)
+		 !newspr? (
+			media-libs/fontconfig
+			media-libs/freetype:2
+			)
 		 sys-libs/zlib
 		 media-libs/libpng
 		 >=x11-libs/pixman-0.10.0
