@@ -1,8 +1,0 @@
-# ChangeLog for net-ftp/gftp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  22 Sep 2007; Hydonsingore Cia <hydonsingore@educities.edu.tw>
-  +gftp-2.0.18-r6.ebuild:
-  sercurity update
-

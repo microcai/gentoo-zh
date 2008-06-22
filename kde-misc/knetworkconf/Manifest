@@ -1,8 +1,0 @@
-DIST knetworkconf-0.6.1.tar.bz2 1823063
-EBUILD knetworkconf-0.6.1.ebuild 651 RMD160 fb803f695448179a7a57f53d8464533f8ed17534 SHA1 3760abbab53a514b9502c27457b8da6602dc799a SHA256 4df5c9a32f28da6f6580300d146ed36a74fa6dde0efde05bf3e8164318ad3ecc
-MD5 5bb22fbddd883fb8f74fa92b2aa6d81e knetworkconf-0.6.1.ebuild 651
-RMD160 fb803f695448179a7a57f53d8464533f8ed17534 knetworkconf-0.6.1.ebuild 651
-SHA256 4df5c9a32f28da6f6580300d146ed36a74fa6dde0efde05bf3e8164318ad3ecc knetworkconf-0.6.1.ebuild 651
-MD5 9733445b9199426377e95c185a281e4b files/digest-knetworkconf-0.6.1 72
-RMD160 437772f6ec452a18f28806dd3492a88be9a7564e files/digest-knetworkconf-0.6.1 72
-SHA256 f20646a5fedefdc16a892c7e22fdcb93cfe9dd0b381a44f99a84cd54683c908e files/digest-knetworkconf-0.6.1 72
