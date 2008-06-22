@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/libXft-2.1.12.ebuild,v 1.10 2007/07/02 13:36:24 armin76 Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -35,7 +35,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"/src/
 	if use newspr ; then
-		epatch "${FILESDIR}"/${PN}-dont_interfere_with_newspr.patch.bz2 || die
+		epatch "${FILESDIR}"/${PN}-dont_interfere_with_newspr-include-embeddedbitmap.patch.bz2 || die
 	fi
 }
 

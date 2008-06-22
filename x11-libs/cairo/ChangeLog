@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  22 Jun 2008; Yu Yuwei <acevery@gmail.com> cairo-1.6.4.ebuild,
+  +files/cairo-1.6.4-freetype-Fake-bitmap-glyph-on-certain-condition.patch.b
+  z2:
+  Add embedded bitmap font patch
+
   21 Jun 2008; Yu Yuwei <acevery@gmail.com> cairo-1.6.4.ebuild:
   stable some arch as official ebuild
 

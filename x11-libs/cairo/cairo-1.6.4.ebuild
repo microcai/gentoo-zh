@@ -17,7 +17,7 @@ IUSE="debug directfb doc glitz +newspr opengl svg test X xcb"
 
 RDEPEND="newspr? (
 			>=media-libs/freetype-2.3.5-r2
-			>=media-libs/fontconfig-2.6.0 
+			>=media-libs/fontconfig-2.6.0
 			)
 		 !newspr? (
 			media-libs/fontconfig
@@ -76,6 +76,9 @@ src_unpack() {
 	if use newspr; then
 		epatch "${FILESDIR}"/${PN}-1.6.4-0ubuntu1.diff.bz2 || die
 	fi
+
+	# for embedded bitmap font
+	epatch "${FILESDIR}/${PN}"-1.6.4-freetype-Fake-bitmap-glyph-on-certain-condition.patch.bz2 || die
 
 	# We need to run elibtoolize to ensure correct so versioning on FreeBSD
 	elibtoolize
