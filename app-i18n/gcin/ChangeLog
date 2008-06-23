@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/gcin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  23 Jun 2008; scsi <scsichen@gmail.com> Manifest:
+  fix ogg.tgz checksum
+
   21 Jun 2008; Hydonsingore Cia <hydonsingore@educities.edu.tw>
   +gcin-1.4.2.ebuild:
   Version bump.
