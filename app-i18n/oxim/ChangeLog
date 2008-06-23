@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  23 Jun 2008; scsi <scsichen@gmail.com> oxim-1.1.3.ebuild,
+  oxim-1.1.3-r1.ebuild, oxim-1.1.6.ebuild:
+  add a comment for compile error
+
   19 Jun 2008; Hydonsingore Cia <hydonsingore@educities.edu.tw>
   -oxim-1.0.3.ebuild, -oxim-1.1.1.ebuild, -oxim-1.1.2.ebuild,
   +oxim-1.1.6.ebuild:

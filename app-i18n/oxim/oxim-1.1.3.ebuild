@@ -16,8 +16,8 @@ DEPEND="|| ( x11-libs/libXft virtual/x11 )
     dev-util/pkgconfig
     !app-i18n/oxim-cvs
     gtk-im? ( >=x11-libs/gtk+-2 )
-	qt-im? ( qt4? ( x11-libs/qt ) 
-			!qt4? ( <x11-libs/qt-4 ) )
+	qt-im? ( qt4? ( x11-libs/qt:4 ) 
+			!qt4? ( x11-libs/qt:3 ) )
     bimsphone? ( >=app-i18n/libtabe-0.2.6 )
     chewing? ( >=dev-libs/libchewing-0.2.5 )
     nls? ( sys-devel/gettext )"

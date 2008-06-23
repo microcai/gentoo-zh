@@ -16,10 +16,10 @@ DEPEND="|| ( x11-libs/libXft virtual/x11 )
     dev-util/pkgconfig
     !app-i18n/oxim-cvs
     gtk-im? ( >=x11-libs/gtk+-2 )
-	qt-im? ( qt4? ( x11-libs/qt ) 
-			!qt4? ( <x11-libs/qt-4 ) )
-	!no-setup-tool? ( qt4? ( x11-libs/qt ) 
-			!qt4? ( <x11-libs/qt-4 ) )
+	qt-im? ( qt4? ( x11-libs/qt:4 ) 
+			!qt4? ( x11-libs/qt:3 ) )
+	!no-setup-tool? ( qt4? ( x11-libs/qt:4 ) 
+					!qt4? ( x11-libs/qt:3 ) )
     bimsphone? ( >=app-i18n/libtabe-0.2.6 )
     chewing? ( >=dev-libs/libchewing-0.2.5 )    
     nls? ( sys-devel/gettext )"
@@ -74,7 +74,12 @@ src_compile() {
 		cd -
 	fi
 
-	emake || die "make failed"
+	emake || {
+				eerror "upgreade oxim error!"
+				eerror "Please unemerge old oxim and emerge oxim again."
+				eerror "If problem still occur, please contract to GOT Ebuild"
+				die "make failed"
+			}
 }
 
 src_install() {
