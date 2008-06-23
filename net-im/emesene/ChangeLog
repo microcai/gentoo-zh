@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  23 Jun 2008; Yu Yuwei <acevery@gmail.com>
+  -files/emesene-r1382-contact-alias.patch, emesene-9999.ebuild:
+  Remove contact patch
+
   20 May 2008; Yu Yuwei <acevery@gmail.com>
   +files/emesene-r1387-aplay.patch, emesene-9999.ebuild:
   add aplay buffer-size for Sound plugin

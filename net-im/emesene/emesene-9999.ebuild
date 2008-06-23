@@ -8,7 +8,6 @@ DESCRIPTION="Platform independent MSN Messenger client written in Python+GTK"
 HOMEPAGE="http://emesene.org/"
 ESVN_REPO_URI="https://emesene.svn.sourceforge.net/svnroot/emesene/trunk/emesene"
 ESVN_PATCHES="${PN}-group-p4.patch
-	${PN}-r1382-contact-alias.patch
 	${PN}-r1382-soap-get.patch
 	${PN}-r1385-setup.patch
 	${PN}-r1387-aplay.patch
