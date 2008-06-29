@@ -1,10 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.6.0-r1.ebuild,v 1.1 2008/06/04 14:06:05 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.6.0-r2.ebuild,v 1.1 2008/06/26 21:38:55 cardoe Exp $
 
-inherit eutils libtool autotools
+WANT_AUTOMAKE=1.9
 
 EAPI="1"
+
+inherit eutils autotools libtool
 
 DESCRIPTION="A library for configuring and customizing font access"
 HOMEPAGE="http://fontconfig.org/"
@@ -13,12 +15,18 @@ SRC_URI="http://fontconfig.org/release/${P}.tar.gz"
 LICENSE="fontconfig"
 SLOT="1.0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="doc xml +ubuntu"
+IUSE="doc +ubuntu"
+
+# Purposefully dropped the xml USE flag and libxml2 support. Having this is
+# silly since expat is the preferred way to go per upstream and libxml2 support
+# simply exists as a fallback when expat isn't around. expat support is the main
+# way to go and every other distro uses it. By using the xml USE flag to enable
+# libxml2 support, this confuses users and results in most people getting the
+# non-standard behavior of libxml2 usage since most profiles have USE=xml
 
 RDEPEND="ubuntu? ( >=media-libs/freetype-2.3.6 )
-	!ubuntu? ( media-libs/freetype:2 )
-	!xml? ( >=dev-libs/expat-1.95.3 )
-	xml? ( >=dev-libs/libxml2-2.6 )"
+	!ubuntu? ( >=media-libs/freetype-2.1.4 )
+	>=dev-libs/expat-1.95.3"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-text/docbook-sgml-utils )"
@@ -41,12 +49,13 @@ src_unpack() {
 		epatch "${FILESDIR}"/${PN}-hinting-and-alising-confs.patch
 		cp "${FILESDIR}"/30-replace-bitmap-fonts.conf conf.d/
 	fi
-
 	epunt_cxx #74077
+	epatch "${FILESDIR}"/${P}-parallel.patch
 	# Neeeded to get a sane .so versionning on fbsd, please dont drop
 	# If you have to run eautoreconf, you can also leave the elibtoolize call as
 	# it will be a no-op.
-	eautoreconf
+	eautomake
+	elibtoolize
 }
 
 src_compile() {
@@ -55,7 +64,6 @@ src_compile() {
 		--with-docdir=/usr/share/doc/${PF} \
 		--with-default-fonts=/usr/share/fonts \
 		--with-add-fonts=/usr/local/share/fonts \
-		$(use_enable xml libxml2) \
 		|| die
 
 	emake || die
