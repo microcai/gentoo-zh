@@ -2,6 +2,9 @@
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Jun 2008; scsi <scsichen@gmail.com> +pcmanfm-0.4.5.ebuild:
+  pcmanfm version bump
+
   27 May 2008; scsi <scsichen@gmail.com> Manifest:
   fix checksum error
 
