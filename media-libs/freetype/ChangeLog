@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Jun 2008; Yu Yuwei <acevery@gmail.com> +freetype-2.3.7.ebuild:
+  update to new version
+
   22 Jun 2008; Yu Yuwei <acevery@gmail.com> +freetype-2.3.6-r1.ebuild,
   +files/freetype-2.3.6-incorect-font-scaling.patch,
   +files/freetype-dropout.patch:
