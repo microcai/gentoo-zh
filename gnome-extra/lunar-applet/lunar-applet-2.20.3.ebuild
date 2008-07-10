@@ -34,7 +34,6 @@ RDEPEND=">=gnome-base/gnome-desktop-2.12
 	x11-libs/libXau
 	media-libs/libpng
 	>=x11-libs/cairo-1.0.0
-	!=gnome-base/gnome-panel-2.20.3
 	eds? ( >=gnome-extra/evolution-data-server-1.6 )"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
