@@ -5,6 +5,9 @@
   11 Jul 2008; lidaibin <lidaibin@gmail.com> chmsee-1.0.1.ebuild:
   fixed dependency, chmsee-1.0.1 depends on xulrunner-1.9
 
+  11 Jul 2008; lidaibin <lidaibin@gmail.com> chmsee-1.0.1.ebuild:
+  fixed dependency, chmsee-1.0.1 depends on xulrunner-1.9
+
   05 Jul 2008; Zhang Le <r0bertz@gentoo.org> chmsee-1.0.1.ebuild:
   fixed dependency, chmsee depends on xulrunner-1.8
 

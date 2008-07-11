@@ -26,7 +26,11 @@ DEPEND="${RDEPEND}"
 src_compile() {
 	local myconf
 	if use xulrunner; then
-		myconf="${myconf} --with-gecko=xulrunner"
+		if has_version '=net-libs/xulrunner-1.9*'; then
+			myconf="${myconf} --with-gecko=libxul"
+		else
+			myconf="${myconf} --with-gecko=xulrunner"
+		fi
 	else
 		myconf="${myconf} --with-gecko=firefox"
 	fi
