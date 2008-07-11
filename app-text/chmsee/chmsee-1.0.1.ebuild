@@ -18,8 +18,7 @@ RDEPEND=">=gnome-base/libglade-2.0
 	>=x11-libs/gtk+-2.8
 	dev-libs/chmlib
 	dev-libs/openssl
-	xulrunner? ( || ( =net-libs/xulrunner-1.8*
-		=net-libs/xulrunner-bin-1.8.1.15 ) )
+	xulrunner? ( =net-libs/xulrunner-1.9* )
 	!xulrunner? ( >=www-client/mozilla-firefox-1.5.0.7 )"
 
 DEPEND="${RDEPEND}"
@@ -29,13 +28,7 @@ src_compile() {
 	if use xulrunner; then
 		myconf="${myconf} --with-gecko=xulrunner"
 	else
-		if has_version '=www-client/mozilla-firefox-3*'; then
-			elog "Please enable 'xulrunner' USE flag since chmsee depends on"
-			elog "xulrunner-1.8, while mozilla-firefox-3 pulls in xulrunner-1.9."
-			die
-		else
-			myconf="${myconf} --with-gecko=firefox"
-		fi
+		myconf="${myconf} --with-gecko=firefox"
 	fi
 
 	econf ${myconf} || die "configure failed"
