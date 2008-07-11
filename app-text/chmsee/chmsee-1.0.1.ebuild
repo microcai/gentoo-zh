@@ -18,7 +18,7 @@ RDEPEND=">=gnome-base/libglade-2.0
 	>=x11-libs/gtk+-2.8
 	dev-libs/chmlib
 	dev-libs/openssl
-	xulrunner? ( =net-libs/xulrunner-1.9* )
+	xulrunner? ( || ( =net-libs/xulrunner-1.9* =net-libs/xulrunner-1.8* ) )
 	!xulrunner? ( >=www-client/mozilla-firefox-1.5.0.7 )"
 
 DEPEND="${RDEPEND}"
