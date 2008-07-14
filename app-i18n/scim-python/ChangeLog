@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  14 Jul 2008; Yu Yuwei <acevery@gmail.com> +scim-python-0.1.13_rc1.ebuild:
+  Add rc ebuild
+
   02 Jun 2008; Yu Yuwei <acevery@gmail.com> -scim-python-0.1.12.ebuild,
   -scim-python-9999.ebuild, +scim-python-0.1.12-r1.ebuild,
   +scim-python-9999-r1.ebuild:
