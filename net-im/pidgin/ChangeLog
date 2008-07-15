@@ -1,5 +1,11 @@
 2008-07-15  yetist  <yetist@gmail.com>
 
+	* Manifest: 
+	* pidgin-2.4.3.1.ebuild: 
+	把QQ每次发送消息的最大字数从500修改到1500.
+
+2008-07-15  yetist  <yetist@gmail.com>
+
 	* files/pidgin-2.4.3-qq-080712.patch: 
 	* Manifest: 
 	* pidgin-2.4.3.1.ebuild: 

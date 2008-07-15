@@ -128,6 +128,7 @@ src_unpack() {
 	mv ${MY_PV2} ${MY_PV}
 	cd ${S}
 	epatch ${FILESDIR}/pidgin-2.4.3-qq-080712.patch
+	epatch ${FILESDIR}/pidgin-2.4.3-qq-im-length.patch
 }
 
 src_compile() {
