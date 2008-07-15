@@ -4,7 +4,7 @@
 
 inherit xelatex-package
 
-DESCRIPTION="xeCJK is a package for CJK fonts setting under XeLaTeX"
+DESCRIPTION="xeCJK is a package for using with XeLaTeX"
 HOMEPAGE="http://miktex.math.nankai.edu.cn"
 SRC_URI="http://miktex.math.nankai.edu.cn/xecjk/xecjk-${PV}.zip "
 
