@@ -1,0 +1,7 @@
+2008-07-15  yetist  <yetist@gmail.com>
+
+	* files/pidgin-2.4.3-qq-080712.patch: 
+	* Manifest: 
+	* pidgin-2.4.3.1.ebuild: 
+	增加patch, 解决QQ总是掉线问题及显示显示群信息的问题。
+
