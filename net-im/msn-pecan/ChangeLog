@@ -1,0 +1,7 @@
+# ChangeLog for net-im/msn-pecan
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  18 Jul 2008; Zhang Le <r0bertz@gentoo.org> +msn-pecan-9999.ebuild:
+  added msn-pecan-9999.ebuild
+
