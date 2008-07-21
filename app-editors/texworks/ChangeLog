@@ -1,0 +1,9 @@
+# ChangeLog for app-editors/texworks
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  21 Jul 2008; Yu Yuwei <acevery@gmail.com>
+  +files/texworks-hunspell-1.2.x.patch, +texworks-9999.ebuild, +files/icon,
+  +files/icon/texworks.png, +files/texworks.desktop, +metadata.xml:
+  add into overlay, ebuild by LiYanrui
+

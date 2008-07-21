@@ -1,0 +1,11 @@
+--- TeXworks.pro	2008-07-21 10:29:09.000000000 +0800
++++ TeXworks-fixed.pro	2008-07-21 10:29:29.000000000 +0800
+@@ -52,7 +52,7 @@
+ 	INCLUDEPATH += /usr/include/poppler/qt4
+ 
+ 	LIBS += -lpoppler-qt4
+-	LIBS += -lhunspell
++	LIBS += `pkg-config --libs hunspell`
+ }
+ 
+ win32 {
