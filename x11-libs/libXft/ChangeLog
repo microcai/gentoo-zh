@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  24 Jul 2008; Yu Yuwei <acevery@gmail.com> -libXft-2.1.12.ebuild,
+  +libXft-2.1.13.ebuild:
+  update ebuild
+
   22 Jun 2008; Yu Yuwei <acevery@gmail.com> libXft-2.1.12.ebuild,
   +files/libXft-dont_interfere_with_newspr-include-embeddedbitmap.patch.bz2:
   Integrate embeddedbitmap patch

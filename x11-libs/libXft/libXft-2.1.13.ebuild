@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/libXft-2.1.12.ebuild,v 1.10 2007/07/02 13:36:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/libXft-2.1.13.ebuild,v 1.1 2008/07/05 06:27:20 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -9,9 +9,10 @@ inherit x-modular flag-o-matic
 
 DESCRIPTION="X.Org Xft library"
 
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 
-IUSE="newspr"
+EAPI="1"
+IUSE="+newspr"
 
 RDEPEND="x11-libs/libXrender
 	x11-libs/libX11
@@ -31,6 +32,7 @@ pkg_setup() {
 	filter-ldflags -Bdirect
 	filter-ldflags -Wl,-Bdirect
 }
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"/src/
