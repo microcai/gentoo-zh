@@ -51,6 +51,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-0.13.2-no-lazy-bindings.patch"
 	use zh_TW && epatch "${FILESDIR}/vte_input_method.patch"
+	use zh_TW && epatch "${FILESDIR}/98_ambiguous_width.patch"
 	cd "${S}/gnome-pty-helper"
 
 	# eautoreconf will break on systems without gtk-doc

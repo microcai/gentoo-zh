@@ -1,0 +1,15 @@
+diff -Nur vte-0.16.14.orig/src/iso2022.c vte-0.16.14/src/iso2022.c
+--- vte-0.16.14.orig/src/iso2022.c	2008-05-28 08:30:04.000000000 +0800
++++ vte-0.16.14/src/iso2022.c	2008-07-13 23:06:45.000000000 +0800
+@@ -405,9 +405,9 @@
+ 	 */
+ 	if (strcmp (codeset, "utf8") == 0 && g_getenv("VTE_CJK_WIDTH") != NULL) {
+ 	  const char *env = g_getenv ("VTE_CJK_WIDTH");
+-	  if (g_ascii_strcasecmp (env, "narrow"))
++	  if ((g_ascii_strcasecmp (env, "narrow")==0) || (g_ascii_strcasecmp (env, "0")==0))
+ 	    return 1;
+-	  if (g_ascii_strcasecmp (env, "wide"))
++	  if ((g_ascii_strcasecmp (env, "wide")==0) || (g_ascii_strcasecmp (env, "1")==0))
+ 	    return 2;
+ 	  else
+ 	    return _vte_iso2022_ambiguous_width_guess ();
