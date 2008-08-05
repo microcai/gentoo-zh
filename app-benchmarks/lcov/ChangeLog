@@ -1,0 +1,8 @@
+# ChangeLog for app-benchmarks/lcov
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  14 Jun 2008; Lan Yixun <dennis.yxun@gmail.com> Manifest:
+  +lcov-1.6-r0.ebuild bugs #100803
+  import lcov by me, thanks Ryo Kuya <r-k@bc.wakwak.com>
+  
