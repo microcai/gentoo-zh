@@ -1,0 +1,13 @@
+# ChangeLog for games-misc/llk_linu
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  11 Jun 2008; Lan Yixun <dennis.yxun@gmail.com> ChangeLog:
+  update
+
+*llk_linux-2.3-beta1 (05 MAY 2008)
+
+  05 MAY 2008; LanYixun <dennis.yxun@gmail.com> ChangeLog:
+  +llk_linux-2.3-beta1.ebuild:
+  Initial import.  Ebuild submitted by me
+
