@@ -1,0 +1,15 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*fitx-9999 (03 AUG 2008)
+  03 AUG 2008; LanYixun <dennis.yxun@gmail.com> ChangeLog:
+  +fitx-9999.ebuild:
+  poll code from subversion 
+
+*fitx-0.2.0-r0 (03 AUG 2008)
+
+  03 AUG 2008; LanYixun <dennis.yxun@gmail.com> ChangeLog:
+  +fitx-0.2.0-r0.ebuild:
+  Initial import.  Ebuild submitted by me
+
