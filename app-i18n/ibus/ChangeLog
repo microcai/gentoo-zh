@@ -1,0 +1,12 @@
+# ChangeLog for games-misc/llk_linu
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*ibus-9999 (07 AUG 2008)
+
+  07 AUG 2008; LanYixun <dennis.yxun@gmail.com> ChangeLog:
+  Initial import.  Ebuild submitted by me
+
+  07 AUG 2008; oahong <oahong@jabber.org> ChangeLog:
+  +ibus-9999.ebuild:
+  ebuild written by oahong <oahong@jabber.org> or blahster <linuxsir.bbs>
