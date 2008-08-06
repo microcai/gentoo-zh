@@ -1,0 +1,101 @@
+# ChangeLog for dev-python/dbus-python
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.37 2008/08/01 17:54:40 nixnut Exp $
+
+  01 Aug 2008; nixnut <nixnut@gentoo.org> dbus-python-0.82.4.ebuild:
+  Stable on ppc wrt bug 212244
+
+  28 Jul 2008; Raúl Porcel <armin76@gentoo.org> dbus-python-0.82.4.ebuild:
+  alpha/ia64/x86 stable wrt #212244
+
+  27 Jul 2008; Friedrich Oslage <bluebird@gentoo.org>
+  dbus-python-0.82.4.ebuild:
+  Stable on sparc, bug #212244
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> dbus-python-0.80.2.ebuild,
+  dbus-python-0.81.0.ebuild, dbus-python-0.82.2.ebuild,
+  dbus-python-0.82.3.ebuild, dbus-python-0.82.4.ebuild:
+  python_mod_optimize is ROOT aware.
+
+  27 Feb 2008; Mart Raudsepp <leio@gentoo.org> dbus-python-0.82.4.ebuild:
+  Since 0.82.4 dbus-python is under the more permissive MIT license, adjust
+  ebuild
+
+  05 Jan 2008; Ali Polatel <hawking@gentoo.org> dbus-python-0.82.4.ebuild:
+  Removed dbus/Makefile.in from sed as it no longer exists in this version,
+  bug 204372. quoting.
+
+*dbus-python-0.82.4 (04 Jan 2008)
+
+  04 Jan 2008; Doug Klima <cardoe@gentoo.org> +dbus-python-0.82.4.ebuild:
+  version bump
+
+*dbus-python-0.82.3 (08 Dec 2007)
+
+  08 Dec 2007; Doug Klima <cardoe@gentoo.org> +dbus-python-0.82.3.ebuild:
+  upstream version bump
+
+  07 Sep 2007; Doug Goldstein <cardoe@gentoo.org> dbus-python-0.82.2.ebuild:
+  bug #191590. Appears this is an issue with the old python-config. -r5 and
+  higher use the new one
+
+  06 Sep 2007; Doug Goldstein <cardoe@gentoo.org>
+  +dbus-python-0.82.2.ebuild:
+  ver bump
+
+  07 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  dbus-python-0.80.2.ebuild, dbus-python-0.81.0.ebuild:
+  Add missing IUSE="test"
+
+  06 Jul 2007; Ali Polatel <hawking@gentoo.org> dbus-python-0.71.ebuild,
+  dbus-python-0.80.2.ebuild, dbus-python-0.81.0.ebuild:
+  generate .pyc/.pyo files properly, use python & multilib instead of
+  distutils (bug 176612)
+
+  22 Jun 2007; Raúl Porcel <armin76@gentoo.org> dbus-python-0.80.2.ebuild:
+  alpha stable wrt #174810
+
+  22 Jun 2007; Doug Goldstein <cardoe@gentoo.org> dbus-python-0.80.2.ebuild,
+  dbus-python-0.81.0.ebuild:
+  add dev-python/pygobject to DEPEND when building with FEATURES=test
+
+*dbus-python-0.81.0 (13 May 2007)
+
+  13 May 2007; Doug Goldstein <cardoe@gentoo.org>
+  +dbus-python-0.81.0.ebuild:
+  rev bump
+
+  13 May 2007; Joshua Kinard <kumba@gentoo.org> dbus-python-0.71.ebuild,
+  dbus-python-0.80.2.ebuild:
+  Add ~mips to KEYWORDS for both package versions.
+
+  07 May 2007; Daniel Gryniewicz <dang@gentoo.org>
+  dbus-python-0.80.2.ebuild:
+  Marked stable on amd64 for bug #174810
+
+  05 May 2007; nixnut <nixnut@gentoo.org> dbus-python-0.80.2.ebuild:
+  Stable on ppc wrt bug 174810
+
+  03 May 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  dbus-python-0.80.2.ebuild:
+  Stable on sparc wrt #174810
+
+  03 May 2007; Jeroen Roovers <jer@gentoo.org> dbus-python-0.80.2.ebuild:
+  Stable for HPPA (bug #174810).
+
+  29 Apr 2007; Raúl Porcel <armin76@gentoo.org> dbus-python-0.80.2.ebuild:
+  ia64 + x86 stable wrt #174810
+
+  28 Apr 2007; Markus Rothe <corsair@gentoo.org> dbus-python-0.80.2.ebuild:
+  Stable on ppc64; bug #174810
+
+  04 Apr 2007; Bryan Østergaard <kloeri@gentoo.org>
+  dbus-python-0.71.ebuild:
+  Stable on Alpha.
+
+*dbus-python-0.80.2 (14 Mar 2007)
+
+  14 Mar 2007; Doug Goldstein <cardoe@gentoo.org>
+  -dbus-python-0.80.1-r1.ebuild, +dbus-python-0.80.2.ebuild:
+  rev bump. Fixes memory leaks
+
