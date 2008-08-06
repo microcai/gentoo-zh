@@ -14,7 +14,7 @@ SRC_URI="http://scim-python.googlecode.com/files/pinyin-database-${PYDB_VER}.tar
 RESTRICT="mirror"
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS=""
 IUSE="+nls"
 
 DEPEND="dev-lang/python:2.5
