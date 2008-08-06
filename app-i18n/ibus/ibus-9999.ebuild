@@ -11,7 +11,7 @@ HOMEPAGE="http://code.google.com/p/ibus"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS=""
 IUSE="+nls +immqt"
 
 DEPEND="dev-lang/python:2.5
