@@ -9,3 +9,8 @@
 # scsi <scsichen@gmail.com> (01 Nov 2007)
 # source URL broken
 <=x11-misc/xim-select-0.0.3
+
+# scsi <scsichen@gmail.com> (07 Aug 2008)
+# qt patch broken
+=app-i18n/gcin-1.4.3_pre5
+
