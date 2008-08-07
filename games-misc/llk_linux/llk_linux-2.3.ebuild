@@ -16,8 +16,7 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
-DEPEND="media-libs/sdl-mixer
-	media-libs/libpng
+DEPEND="media-libs/libpng
 	media-sound/esound
 	gtk+? ( >=x11-libs/gtk+-2.12 )"
 
