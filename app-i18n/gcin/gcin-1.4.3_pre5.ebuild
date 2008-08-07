@@ -33,7 +33,8 @@ src_unpack() {
 	# apply qt im-module patch
 	#
 	if use=immqt || immqt-bc; then
-		epatch "${FILESDIR}/gcin-qtimm_fix-1.3.5_pre1.patch"
+		epatch "${FILESDIR}/gcin-1.4.3_pre5-qt3_fix.patch"
+		epatch "${FILESDIR}/gcin-1.4.3_pre5-qt4_fix.patch"
 	fi
 }
 
