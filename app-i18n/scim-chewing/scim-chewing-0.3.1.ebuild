@@ -16,13 +16,18 @@ IUSE=""
 DEPEND=">=app-i18n/scim-1.4
 		>=dev-libs/libchewing-0.3"
 
+src_unpack() {
+	unpack "${A}"
+	epatch "${FILESDIR}/scim-chewing-0.3.1-include_cstring.patch"
+}
+
 src_compile() {
 	econf || die
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS THANKS README
 }
