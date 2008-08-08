@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Aug 2008; Hong Hao <oahong@gmail.com> ibus-pinyin-9999.ebuild,
+  metadata.xml:
+  cleanup
+
 *ibus-pinyin-9999 (07 AUG 2008)
 
   07 AUG 2008; LanYixun <dennis.yxun@gmail.com> ChangeLog:

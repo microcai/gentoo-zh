@@ -5,22 +5,25 @@
 EAPI="1"
 inherit autotools eutils git
 
-EGIT_REPO_URI="git://github.com/phuang/ibus-pinyin.git"
 PYDB_VER="0.1.10.5"
-DESCRIPTION="The PinYin Engine for IBus"
-HOMEPAGE="http://code.google.com/p/ibus"
-SRC_URI="http://scim-python.googlecode.com/files/pinyin-database-${PYDB_VER}.tar.bz2"
+if [[ ${PV} == 9999 ]] ; then
+	EGIT_REPO_URI="git://github.com/phuang/ibus-pinyin.git"
+	inherit git
+	SRC_URI="http://scim-python.googlecode.com/files/pinyin-database-${PYDB_VER}.tar.bz2"
+else
+	SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz \
+		http://scim-python.googlecode.com/files/pinyin-database-${PYDB_VER}.tar.bz2"
+fi
 
-RESTRICT="mirror"
-LICENSE="LGPL-3"
+DESCRIPTION="The PinYin Engine for IBus Input Framework"
+HOMEPAGE="http://ibus.googlecode.com"
+
+LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE="+nls"
+KEYWORDS="" #~x86 ~amd64
+IUSE="nls"
 
-DEPEND="dev-lang/python:2.5
-	dev-python/pygtk
-	dev-perl/XML-Parser
-	nls? ( sys-devel/gettext )"
+DEPEND="nls? ( sys-devel/gettext )"
 RDEPEND="app-i18n/ibus
 	dev-python/pygtk"
 
@@ -39,10 +42,13 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
-	#dodoc AUTHORS COPYING ChangeLog NEWS README
+	#dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_postinst() {
-	ewarn "This package is highly experimental. Dont't blame me"
-	ewarn "If it won't work. ;-) "
+	ewarn "This package is highly experimental."
+	elog
+	elog "Please run ibus-setup and choose pinyin as the"
+	elog "default input engine"
+	elog
 }
