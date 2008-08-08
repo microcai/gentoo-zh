@@ -1,0 +1,12 @@
+diff --git a/src/header.h b/src/header.h
+index 843a099..70ae84b 100644
+--- a/src/header.h
++++ b/src/header.h
+@@ -35,6 +35,7 @@
+ #include <stdlib.h>
+ #include <signal.h>
+ #include <string>
++#include <string.h>
+ #include <unistd.h>
+ #include <termios.h>
+ #include <pthread.h>
