@@ -3,33 +3,35 @@
 # $Header: $
 
 EAPI="1"
-inherit autotools eutils git
+inherit autotools eutils
 
-EGIT_REPO_URI="git://github.com/phuang/ibus.git"
+if [[ ${PV} == "9999" ]] ; then
+	EGIT_REPO_URI="git://github.com/phuang/ibus.git"
+	inherit git
+else
+	SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
+fi
+
 DESCRIPTION="Next Generation Input Bus for Linux"
-HOMEPAGE="http://code.google.com/p/ibus"
+HOMEPAGE="http://ibus.googlecode.com"
 
-LICENSE="LGPL-3"
+LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="+nls +immqt"
+IUSE="nls immqt"
 
 DEPEND="dev-lang/python:2.5
-	dev-lang/swig
 	dev-libs/dbus-glib
-	>=dev-python/dbus-python-0.83.0
 	immqt? (
-			|| ( ( x11-libs/qt-gui x11-libs/qt-core )
-			>=x11-libs/qt-4.3.2 )
+		|| ( ( x11-libs/qt-gui x11-libs/qt-core )
+		>=x11-libs/qt-4.3.2 )
 	)
-	dev-python/pyenchant
-	dev-python/pygtk
-	nls? ( sys-devel/gettext )"
-#	x11-libs/qt-test
+	nls? ( sys-devel/gettext )
+	x11-libs/gtk+:2"
 RDEPEND=">=dev-python/dbus-python-0.83.0
-	dev-python/pygtk"
+	dev-python/pygtk
+	dev-python/pyxdg"
 
-# based on ebuild in app-i18n/scim
 get_gtk_confdir() {
 	if use amd64 || ( [ "${CONF_LIBDIR}" == "lib32" ] && use x86 ) ;
 	then
@@ -39,17 +41,16 @@ get_gtk_confdir() {
 	fi
 }
 
-# upstream already fix it.
 src_unpack() {
 	git_src_unpack
+	epatch "${FILESDIR}"/horizental_orientation.patch
 	autopoint && eautoreconf
-#	epatch "${FILESDIR}"/ibus-qmake-gentoo.patch
 }
 
 src_compile() {
 	# no maintainer mode
 	local myconf="--disable-option-checking \
-		--enable--maintainer-mode \
+		--disable--maintainer-mode \
 		--disable-dependency-tracking \
 		--disable-rpath"
 	econf $myconf \
@@ -61,23 +62,26 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
+	#dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_postinst() {
 	elog
-	elog "To use ibus, you should set the following in your"
-	elog "user startup scripts such as .xinitrc or .gnomerc"
+	elog "To use ibus, you should:"
+	elog "1. Have an input engine ,currently only"
+	elog "   app-i18n/ibus-pinyin is avaliable."
+	elog "2. Set the following in your"
+	elog "   user startup scripts such as .xinitrc"
 	elog
-	elog "export XMODIFIERS=\"@im=ibus\""
-	elog "export GTK_IM_MODULES=\"ibus\""
-	elog "export QT_IM_MODULES=\"ibus\""
-	elog "ibus &"
+	elog "   export XMODIFIERS=\"@im=ibus\""
+	elog "   export GTK_IM_MODULES=\"ibus\""
+	elog "   export QT_IM_MODULES=\"ibus\""
+	elog "   ibus &"
 	if ! use immqt; then
 		ewarn "You might need immqt USE flag if you wanna"
-		ewarn "ibus working in qt applications."
+		ewarn "ibus working in qt4 applications."
 	fi
 	elog
-	einfo "Updating gtk.immodules"
 	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > "${ROOT}$(get_gtk_confdir)/gtk.immodules"
 }
 

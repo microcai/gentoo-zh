@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Aug 2008; Hong Hao <oahong@gmail.com> ibus-9999.ebuild,
+  +files/horizental_orientation.patch, metadata.xml:
+  small cleanup, added myself as a maintainer
+
 *ibus-9999 (07 AUG 2008)
 
   07 AUG 2008; LanYixun <dennis.yxun@gmail.com> ChangeLog:

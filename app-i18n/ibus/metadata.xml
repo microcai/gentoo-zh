@@ -3,8 +3,12 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>dennis.yxun@gmail.org</email>
-  <name>Lan Yixun</name>
+	<email>dennis.yxun@gmail.org</email>
+	<name>Lan Yixun</name>
+</maintainer>
+<maintainer>
+	<email>oahong@gmail.com</email>
+	<name>Hong Hao</name>
 </maintainer>
 <longdescription lang="C">
 	IBus - An input bus
