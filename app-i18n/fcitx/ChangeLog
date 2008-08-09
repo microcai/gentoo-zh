@@ -1,0 +1,8 @@
+# ChangeLog for app-i18n/fcitx
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  09 Aug 2008; Hong Hao <oahong@gmail.com> +fcitx-9999.ebuild,
+  +metadata.xml:
+  Added a live ebuild for fcitx, new upstream fcitx.googlecode.com
+
