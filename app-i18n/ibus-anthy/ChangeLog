@@ -1,0 +1,8 @@
+# ChangeLog for app-i18n/ibus-anthy
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  09 Aug 2008; Hong Hao <oahong@gmail.com> +ibus-anthy-9999.ebuild,
+  +metadata.xml:
+  Initial import. For testing purpose only.
+
