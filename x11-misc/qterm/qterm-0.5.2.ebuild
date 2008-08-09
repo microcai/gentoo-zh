@@ -12,6 +12,7 @@ SRC_URI="mirror://sourceforge/qterm/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
+IUSE=""
 
 RDEPEND="x11-libs/qt:4
 	dev-libs/openssl"
@@ -19,10 +20,13 @@ RDEPEND="x11-libs/qt:4
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4.7"
 
+EPATCH_SOURCE="${FILESDIR}/${P}-as-needed.patch \
+	${FILESDIR}/${P}-gcc-4.3.patch"
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${FILESDIR}/${P}-as-needed.patch
+	epatch ${EPATCH_SOURCE}
 	sed -i -e '/^Exec/s/qterm/QTerm/' src/qterm.desktop.in || die
 
 	# fix the broken language files
