@@ -23,11 +23,12 @@ RDEPEND=">=app-i18n/scim-python-0.1.11"
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
-	if ! built_with_use '>=app-i18n/scim-python' xingma; then
+	if ! built_with_use '>=app-i18n/scim-python-0.1.11' xingma; then
 		echo
-		ewarn "You need build app-i18n/scim-python with \"xingma\" USE flag"
-		ewarn "OtherWise you Can Not use this tables."
+		eerror "You need build app-i18n/scim-python with \"xingma\" USE flag"
+		eerror "OtherWise you Can Not use this tables."
 		echo
+		die    "app-i18n/scim-python needs USE=xingma"
 		ebeep 3
 	fi
 }

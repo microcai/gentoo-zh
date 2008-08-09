@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 Aug 2008; Zhang Le <r0bertz@gentoo.org>
+  -scim-xingma-0.1.10.1-r1.ebuild, +scim-xingma-0.1.10.1-r2.ebuild:
+  fixed an invalid atom in scim-xingma-0.1.10.1-r1.ebuild
+
   15 Apr 2008; Yu Yuwei <acevery@gmail.com> +scim-xingma-0.1.10.1.ebuild:
   Add new version, which fix UUID confliction with scim-tables
 
