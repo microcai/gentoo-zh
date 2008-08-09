@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.5.2.ebuild,v 1.1 2008/05/14 17:33:36 matsuu Exp $
 
 EAPI="1"
-inherit cmake-utils eutils
+inherit cmake-utils eutils versionator toolchain-funcs
 
 DESCRIPTION="QTerm is a BBS client in Linux."
 HOMEPAGE="http://qterm.sourceforge.net/"
@@ -20,15 +20,15 @@ RDEPEND="x11-libs/qt:4
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4.7"
 
-EPATCH_SOURCE="${FILESDIR}/${P}-as-needed.patch \
-	${FILESDIR}/${P}-gcc-4.3.patch"
-
+MAKEOPTS="-j1"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${EPATCH_SOURCE}
+	epatch "${FILESDIR}/${P}-as-needed.patch"
+	if  $(version_is_at_least "4.3" "$(gcc-version)"); then
+		epatch "${FILESDIR}/${P}-gcc-4.3.patch"
+	fi
 	sed -i -e '/^Exec/s/qterm/QTerm/' src/qterm.desktop.in || die
-
 	# fix the broken language files
 	lrelease src/po/qterm_ch*.ts || die
 }
