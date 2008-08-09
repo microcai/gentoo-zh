@@ -50,7 +50,7 @@ src_unpack() {
 src_compile() {
 	# no maintainer mode
 	local myconf="--disable-option-checking \
-		--disable--maintainer-mode \
+		--enable--maintainer-mode \
 		--disable-dependency-tracking \
 		--disable-rpath"
 	econf $myconf \
