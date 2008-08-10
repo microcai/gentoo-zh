@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Aug 2008; Hong Hao <oahong@gmail.com> ibus-9999.ebuild:
+  fixed missing rdep, thanks goes to tenfar and zhan on our #gentoo-cn channel
+
   08 Aug 2008; Hong Hao <oahong@gmail.com> ibus-9999.ebuild,
   +files/horizental_orientation.patch, metadata.xml:
   small cleanup, added myself as a maintainer
