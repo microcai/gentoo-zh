@@ -20,6 +20,7 @@ IUSE="nls pinyin xingma enwriter"
 
 RDEPEND="x11-libs/libXt
 	>=dev-lang/python-2.5
+	>=dev-python/pygtk-2.10.1
 	enwriter? ( dev-python/pyenchant )
 	|| ( >=app-i18n/scim-1.1 >=app-i18n/scim-cvs-1.1 )
 	nls? ( virtual/libintl )

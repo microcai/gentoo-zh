@@ -2,6 +2,12 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Aug 2008; Yu Yuwei <acevery@gmail.com> -scim-python-0.1.12-r1.ebuild,
+  +scim-python-0.1.12-r2.ebuild, -scim-python-0.1.13_rc1.ebuild,
+  +scim-python-0.1.13_rc1-r1.ebuild, -scim-python-9999-r1.ebuild,
+  +scim-python-9999-r2.ebuild:
+  Add pygtk as dependency
+
   14 Jul 2008; Yu Yuwei <acevery@gmail.com> +scim-python-0.1.13_rc1.ebuild:
   Add rc ebuild
 
