@@ -6,8 +6,9 @@ EAPI="1"
 inherit autotools eutils
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://github.com/phuang/ibus.git"
 	inherit git
+	EGIT_REPO_URI="git://github.com/phuang/ibus.git"
+	EGIT_PATCHES="horizental_orientation.patch"
 else
 	SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 fi
@@ -44,12 +45,10 @@ get_gtk_confdir() {
 
 src_unpack() {
 	git_src_unpack
-	epatch "${FILESDIR}"/horizental_orientation.patch
 	autopoint && eautoreconf
 }
 
 src_compile() {
-	# no maintainer mode
 	local myconf="--disable-option-checking \
 		--enable--maintainer-mode \
 		--disable-dependency-tracking \
@@ -83,6 +82,7 @@ pkg_postinst() {
 		ewarn "ibus working in qt4 applications."
 	fi
 	elog
+
 	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > "${ROOT}$(get_gtk_confdir)/gtk.immodules"
 }
 

@@ -10,7 +10,12 @@
 	<email>oahong@gmail.com</email>
 	<name>Hong Hao</name>
 </maintainer>
-<longdescription lang="C">
-	IBus - An input bus
+<longdescription>
+	IBus means the Input Bus. It is a new input framework for Linux OS. It
+	provides full featured and user friendly input method user interface. It
+	also may help developers to develop input method easily.
 </longdescription>
+<use>
+	<flag name="immqt"> </flag>
+</use>
 </pkgmetadata>
