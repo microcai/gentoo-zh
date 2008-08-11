@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  11 Aug 2008; scsi <scsichen@gmail.com> +pcmanx-gtk2-0.3.8.ebuild:
+  version bump
+
   03 Jan 2008; scsi <scsichen@gmail.com> pcmanx-gtk2-0.3.7.ebuild:
   move install message from preinstall to postinstall
 
