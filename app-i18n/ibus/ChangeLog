@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Aug 2008; Hong Hao <oahong@gmail.com> ibus-0.1.1.20080812.ebuild,
+  ibus-9999.ebuild:
+  We don't need autotools.
+
   12 Aug 2008; Hong Hao <oahong@gmail.com> +ibus-0.1.1.20080812.ebuild:
   First public release, works on ~x86. Someone else please tst it on amd64.
 

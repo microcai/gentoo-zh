@@ -3,10 +3,10 @@
 # $Header: $
 
 EAPI="1"
-inherit autotools eutils
+inherit eutils
 
 if [[ ${PV} == "9999" ]] ; then
-	inherit git
+	inherit autotools git
 	EGIT_REPO_URI="git://github.com/phuang/ibus.git"
 	EGIT_PATCHES="horizental_orientation.patch"
 else
