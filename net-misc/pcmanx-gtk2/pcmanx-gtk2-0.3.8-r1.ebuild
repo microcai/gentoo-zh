@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils
+inherit eutils autotools multilib
 
 DESCRIPTION="PCMan is an easy-to-use telnet client mainly targets BBS users formerly writen by gtk2"
 SRC_URI="http://pcmanx.csie.net/release/${P}.tar.bz2"
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 KEYWORDS="x86 ~ppc amd64"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="firefox wget libnotify"
+IUSE="firefox wget libnotify proxy"
 
 DEPEND=">=x11-libs/gtk+-2.4
 	x11-libs/libXft
@@ -29,22 +29,27 @@ src_unpack()
 {
 	unpack ${A}
 	cd ${S}
-#	epatch ${FILESDIR}/firefox-xpcom-fix-0.3.7.patch
+	eautoreconf
 }
 
 src_compile() {
-	myconf=""
-	use firefox && myconf="$myconf --enable-plugin"
-	use wget && myconf="$myconf --enable-wget"
-	use libnotify && myconf="$myconf --enable-libnotify"
+	local myconf="$(use_enable firefox plugin) \
+				  $(use_enable wget) \
+				  $(use_enable libnotify) \
+				  $(use_enable proxy)"
 	econf $myconf || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install()
 {
-	cd $S
-	make DESTDIR=${D} install
+	cd ${S}
+	emake DESTDIR="${D}" install || die "emake failed"
+
+	exeinto /usr/$(get_libdir)/nsbrowser/plugins
+	doexe plugin/src/pcmanx-plugin.so
+	insinto /usr/$(get_libdir)/nsbrowser/plugins
+	doins plugin/src/pcmanx-plugin.so
 }
 resetplugin()
 {

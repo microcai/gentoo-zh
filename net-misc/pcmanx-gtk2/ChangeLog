@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Aug 2008; scsi <palatis@gmail.com> pcmanx-gtk2-0.3.8-r1.ebuild:
+  fix problems with USE="firefox". add IUSE="proxy".
+
   12 Aug 2008; scsi <scsichen@gmail.com> pcmanx-gtk2-0.3.8.ebuild:
   fix patch error
 
