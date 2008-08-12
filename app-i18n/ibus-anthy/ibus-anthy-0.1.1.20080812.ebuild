@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI="1"
-inherit autotools eutils
+inherit eutils
 
 if [[ ${PV} == 9999 ]] ; then
 	EGIT_REPO_URI="git://github.com/phuang/ibus-anthy.git"
@@ -17,7 +17,7 @@ HOMEPAGE="http://ibus.googlecode.com"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="" #~x86 ~amd64
+KEYWORDS="~x86" # ~amd64
 IUSE="nls"
 
 DEPEND="app-i18n/anthy
@@ -26,11 +26,6 @@ DEPEND="app-i18n/anthy
 	nls? ( sys-devel/gettext )"
 RDEPEND="app-i18n/ibus
 	app-i18n/anthy"
-
-src_unpack() {
-	git_src_unpack
-	autopoint && eautoreconf
-}
 
 src_compile() {
 	econf $(use_enable nls) \
@@ -42,11 +37,10 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
-	#dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_postinst() {
-	ewarn "This package is highly experimental."
 	elog
 	elog "To enable this input engine, you need to run ibus-setup"
 	elog

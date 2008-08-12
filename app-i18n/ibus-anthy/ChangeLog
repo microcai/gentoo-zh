@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Aug 2008; Hong Hao <oahong@gmail.com>
+  +ibus-anthy-0.1.1.20080812.ebuild, ibus-anthy-9999.ebuild:
+  New snapshot. Removed unused eclass from the live ebuild.
+
   09 Aug 2008; Hong Hao <oahong@gmail.com> +ibus-anthy-9999.ebuild,
   +metadata.xml:
   Initial import. For testing purpose only.
