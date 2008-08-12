@@ -5,22 +5,15 @@
 EAPI="1"
 inherit eutils
 
-PYDB_VER="0.1.10.5"
-if [[ ${PV} == 9999 ]] ; then
-	EGIT_REPO_URI="git://github.com/phuang/ibus-pinyin.git"
-	inherit autotools git
-	SRC_URI="http://scim-python.googlecode.com/files/pinyin-database-${PYDB_VER}.tar.bz2"
-else
-	SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz
-		http://scim-python.googlecode.com/files/pinyin-database-${PYDB_VER}.tar.bz2"
-fi
-
+PYDBTAR="pinyin-database-0.1.10.5.tar.bz2"
 DESCRIPTION="The PinYin Engine for IBus Input Framework"
 HOMEPAGE="http://ibus.googlecode.com"
+SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz
+	http://scim-python.googlecode.com/files/${PYDBTAR}"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="" #~x86 ~amd64
+KEYWORDS="~x86" # ~amd64
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
@@ -28,9 +21,8 @@ RDEPEND="app-i18n/ibus
 	dev-python/pygtk"
 
 src_unpack() {
-	git_src_unpack
-	autopoint && eautoreconf
-	cp "${DISTDIR}"/pinyin-database-${PYDB_VER}.tar.bz2 engine
+	unpack ${P}.tar.gz
+	cp "${DISTDIR}/${PYDBTAR}" "${S}"/engine
 }
 
 src_compile() {
@@ -42,11 +34,10 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
-	#dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_postinst() {
-	ewarn "This package is highly experimental."
 	elog
 	elog "Please run ibus-setup and choose pinyin as the"
 	elog "default input engine"
