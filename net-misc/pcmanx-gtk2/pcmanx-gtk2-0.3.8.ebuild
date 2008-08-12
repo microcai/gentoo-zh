@@ -29,7 +29,7 @@ src_unpack()
 {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/firefox-xpcom-fix-0.3.7.patch
+#	epatch ${FILESDIR}/firefox-xpcom-fix-0.3.7.patch
 }
 
 src_compile() {
