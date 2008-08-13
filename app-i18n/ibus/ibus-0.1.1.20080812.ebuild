@@ -12,11 +12,11 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86" #~amd64
-IUSE="nls immqt4"
+IUSE="nls qt4"
 
 DEPEND="dev-lang/python:2.5
 	dev-libs/dbus-glib
-	immqt4? (
+	qt4? (
 		|| ( ( x11-libs/qt-gui x11-libs/qt-core )
 		>=x11-libs/qt-4.3.2 )
 	)
@@ -43,7 +43,7 @@ src_compile() {
 		--disable-rpath"
 	econf $myconf \
 		$(use_enable nls) \
-		$(use_enable immqt4 qt4-immodule) \
+		$(use_enable qt4 qt4-immodule) \
 		|| die "config failed"
 	emake || die "emake failed"
 }
@@ -65,8 +65,8 @@ pkg_postinst() {
 	elog "   export GTK_IM_MODULES=\"ibus\""
 	elog "   export QT_IM_MODULES=\"ibus\""
 	elog "   ibus &"
-	if ! use immqt4; then
-		ewarn "You might need immqt4 USE flag if you want"
+	if ! use qt4; then
+		ewarn "You might need qt4 USE flag if you want"
 		ewarn "to have ibus working in qt4 applications."
 	fi
 	elog

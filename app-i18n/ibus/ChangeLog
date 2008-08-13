@@ -4,6 +4,10 @@
 
   13 Aug 2008; Hong Hao <oahong@gmail.com> ibus-0.1.1.20080812.ebuild,
   ibus-9999.ebuild, metadata.xml:
+  qt4 USE flag if you want to have qt4 immodule.
+
+  13 Aug 2008; Hong Hao <oahong@gmail.com> ibus-0.1.1.20080812.ebuild,
+  ibus-9999.ebuild, metadata.xml:
   immqt4 use flag for ibus as (r0bertz++)'s request.
 
   12 Aug 2008; Hong Hao <oahong@gmail.com> ibus-0.1.1.20080812.ebuild,
