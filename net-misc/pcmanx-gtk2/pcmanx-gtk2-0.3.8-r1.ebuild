@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils autotools multilib
+inherit flag-o-matic eutils autotools multilib
 
 DESCRIPTION="PCMan is an easy-to-use telnet client mainly targets BBS users formerly writen by gtk2"
 SRC_URI="http://pcmanx.csie.net/release/${P}.tar.bz2"
@@ -12,13 +12,13 @@ RESTRICT="nomirror"
 KEYWORDS="x86 ~ppc amd64"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="firefox wget libnotify proxy"
+IUSE="firefox libnotify socks5"
 
 DEPEND=">=x11-libs/gtk+-2.4
 	x11-libs/libXft
 	dev-util/intltool
+	net-misc/wget
 	fireofx? ( www-client/mozilla-firefox )
-	wget? ( net-misc/wget )
 	libnotify? ( x11-libs/libnotify )
 	!www-client/pcmanxplug-in
 	!virtual/pcmanx"
@@ -33,10 +33,13 @@ src_unpack()
 }
 
 src_compile() {
+	# this flag crashes CTermData::memset16()
+	filter-flags -ftree-vectorize
+
 	local myconf="$(use_enable firefox plugin) \
-				  $(use_enable wget) \
+				  $(use_enable socks5 proxy) \
 				  $(use_enable libnotify) \
-				  $(use_enable proxy)"
+				  --enable-wget"
 	econf $myconf || die "econf failed"
 	emake || die "emake failed"
 }
