@@ -16,6 +16,6 @@
 	also may help developers to develop input method easily.
 </longdescription>
 <use>
-	<flag name="immqt"> </flag>
+	<flag name="immqt4">Enable immodule for QT4 applications.</flag>
 </use>
 </pkgmetadata>

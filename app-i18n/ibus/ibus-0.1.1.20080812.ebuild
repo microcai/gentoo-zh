@@ -5,25 +5,18 @@
 EAPI="1"
 inherit eutils
 
-if [[ ${PV} == "9999" ]] ; then
-	inherit autotools git
-	EGIT_REPO_URI="git://github.com/phuang/ibus.git"
-	EGIT_PATCHES="horizental_orientation.patch"
-else
-	SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
-fi
-
 DESCRIPTION="Next Generation Input Bus for Linux"
 HOMEPAGE="http://ibus.googlecode.com"
+SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86" #~amd64
-IUSE="nls immqt"
+IUSE="nls immqt4"
 
 DEPEND="dev-lang/python:2.5
 	dev-libs/dbus-glib
-	immqt? (
+	immqt4? (
 		|| ( ( x11-libs/qt-gui x11-libs/qt-core )
 		>=x11-libs/qt-4.3.2 )
 	)
@@ -50,7 +43,7 @@ src_compile() {
 		--disable-rpath"
 	econf $myconf \
 		$(use_enable nls) \
-		$(use_enable immqt qt4-immodule) \
+		$(use_enable immqt4 qt4-immodule) \
 		|| die "config failed"
 	emake || die "emake failed"
 }
@@ -63,8 +56,8 @@ src_install() {
 pkg_postinst() {
 	elog
 	elog "To use ibus, you should:"
-	elog "1. Have an input engine ,currently only"
-	elog "   app-i18n/ibus-pinyin is avaliable."
+	elog "1. Have an input engine ,currently both"
+	elog "   app-i18n/ibus-{pinyin,anthy} are avaliable."
 	elog "2. Set the following in your"
 	elog "   user startup scripts such as .xinitrc"
 	elog
@@ -72,9 +65,9 @@ pkg_postinst() {
 	elog "   export GTK_IM_MODULES=\"ibus\""
 	elog "   export QT_IM_MODULES=\"ibus\""
 	elog "   ibus &"
-	if ! use immqt; then
-		ewarn "You might need immqt USE flag if you wanna"
-		ewarn "ibus working in qt4 applications."
+	if ! use immqt4; then
+		ewarn "You might need immqt4 USE flag if you want"
+		ewarn "to have ibus working in qt4 applications."
 	fi
 	elog
 

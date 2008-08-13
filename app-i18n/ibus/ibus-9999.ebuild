@@ -19,11 +19,11 @@ HOMEPAGE="http://ibus.googlecode.com"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="nls immqt"
+IUSE="nls immqt4"
 
 DEPEND="dev-lang/python:2.5
 	dev-libs/dbus-glib
-	immqt? (
+	immqt4? (
 		|| ( ( x11-libs/qt-gui x11-libs/qt-core )
 		>=x11-libs/qt-4.3.2 )
 	)
@@ -55,7 +55,7 @@ src_compile() {
 		--disable-rpath"
 	econf $myconf \
 		$(use_enable nls) \
-		$(use_enable immqt qt4-immodule) \
+		$(use_enable immqt4 qt4-immodule) \
 		|| die "config failed"
 	emake || die "emake failed"
 }
@@ -66,6 +66,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	ewarn "This package is very experimental, please report your bug here:"
+	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
 	elog "To use ibus, you should:"
 	elog "1. Have an input engine ,currently only"
@@ -77,8 +79,8 @@ pkg_postinst() {
 	elog "   export GTK_IM_MODULES=\"ibus\""
 	elog "   export QT_IM_MODULES=\"ibus\""
 	elog "   ibus &"
-	if ! use immqt; then
-		ewarn "You might need immqt USE flag if you wanna"
+	if ! use immqt4; then
+		ewarn "You might need immqt4 USE flag if you wanna"
 		ewarn "ibus working in qt4 applications."
 	fi
 	elog
