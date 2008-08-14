@@ -6,7 +6,6 @@
 app-dicts/stardict:espeak - Pull in espeak for stardict
 app-dicts/stardict:festival - Pull in festival for stardict
 app-dicts/stardict:gucharmap - Enable gucharmap plugin for stardict
-app-i18n/ibus:immqt - Enable immodule for x11-libs/qtsupport
 app-i18n/scim-python:enwriter - Build English Writer Input Method
 app-i18n/scim-python:pinyin - Build PinYin Input Method
 app-i18n/scim-python:xingma - Build XingMa Input Method Engine
