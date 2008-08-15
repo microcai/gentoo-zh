@@ -5,15 +5,9 @@
 EAPI="1"
 inherit eutils
 
-if [[ ${PV} == 9999 ]] ; then
-	EGIT_REPO_URI="git://github.com/phuang/ibus-anthy.git"
-	inherit git
-else
-	SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
-fi
-
 DESCRIPTION="The Anthy Engine for IBus Input Framework"
 HOMEPAGE="http://ibus.googlecode.com"
+SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
