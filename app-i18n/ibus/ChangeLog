@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Aug 2008; Hong Hao <oahong@gmail.com> -ibus-0.1.1.20080812.ebuild,
+  +ibus-0.1.1.20080815.ebuild:
+  Added new snapshot 20080815 for ibus, cleanup old ebuild. Ibus should never
+  segfault again when used with rxvt.
+
   13 Aug 2008; Hong Hao <oahong@gmail.com> ibus-0.1.1.20080812.ebuild,
   ibus-9999.ebuild, metadata.xml:
   qt4 USE flag if you want to have qt4 immodule.
