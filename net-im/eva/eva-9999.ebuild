@@ -2,11 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-ECVS_AUTH="pserver"
-ECVS_SERVER="evaq.cvs.sourceforge.net:/cvsroot/evaq"
-ECVS_MODULE="eva"
+#ECVS_AUTH="pserver"
+#ECVS_SERVER="evaq.cvs.sourceforge.net:/cvsroot/evaq"
+#ECVS_MODULE="eva"
+#inherit kde eutils cvs
+ESVN_REPO_URI="https://evaq.svn.sourceforge.net/svnroot/evaq/branches/eva-qt3-bugfix"
 
-inherit kde eutils cvs
+inherit kde eutils subersion
 
 S=${WORKDIR}/eva
 
