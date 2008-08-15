@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Aug 2008; Hong Hao <oahong@gmail.com>
+  -ibus-pinyin-0.1.1.20080812.ebuild, +ibus-pinyin-0.1.1.20080815.ebuild:
+  New snapshot(20080815) for ibus-pinyin
+
   12 Aug 2008; Hong Hao <oahong@gmail.com>
   +ibus-pinyin-0.1.1.20080812.ebuild, ibus-pinyin-9999.ebuild:
   snapshot
