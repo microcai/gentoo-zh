@@ -23,7 +23,9 @@ SLOT="0"
 KEYWORDS="" #~x86 ~amd64
 IUSE="nls"
 
-DEPEND="nls? ( sys-devel/gettext )"
+# To run autopoint you need cvs.
+DEPEND="nls? ( sys-devel/gettext )
+	dev-util/cvs"
 RDEPEND="app-i18n/ibus
 	dev-python/pygtk"
 
@@ -46,7 +48,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "This package is highly experimental."
+	ewarn "This package is very experimental, please report your bug here:"
+	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
 	elog "Please run ibus-setup and choose pinyin as the"
 	elog "default input engine"

@@ -21,8 +21,10 @@ SLOT="0"
 KEYWORDS=""
 IUSE="nls qt4"
 
+# autopoint really needs cvs!
 DEPEND="dev-lang/python:2.5
 	dev-libs/dbus-glib
+	dev-util/cvs
 	qt4? (
 		|| ( ( x11-libs/qt-gui x11-libs/qt-core )
 		>=x11-libs/qt-4.3.2 )
@@ -43,10 +45,12 @@ get_gtk_confdir() {
 	fi
 }
 
-src_unpack() {
-	git_src_unpack
-	autopoint && eautoreconf
-}
+if [[ ${PV} == 9999 ]] ; then
+	src_unpack() {
+		git_src_unpack
+		autopoint && eautoreconf
+	}
+fi
 
 src_compile() {
 	local myconf="--disable-option-checking \
@@ -70,8 +74,9 @@ pkg_postinst() {
 	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
 	elog "To use ibus, you should:"
-	elog "1. Have an input engine ,currently only"
-	elog "   app-i18n/ibus-pinyin is avaliable."
+	elog "1. Have an input engine ,currently both"
+	elog "   app-i18n/ibus-pinyin and app-i18n/ibus-anthy"
+	elog "   are available"
 	elog "2. Set the following in your"
 	elog "   user startup scripts such as .xinitrc"
 	elog
