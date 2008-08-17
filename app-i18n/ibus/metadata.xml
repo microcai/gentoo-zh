@@ -12,8 +12,6 @@
 	<description>FEEL FREE to touch it.</description>
 </maintainer>
 <longdescription>
-	IBus means the Input Bus. It is a new input framework for Linux OS. It
-	provides full featured and user friendly input method user interface. It
-	also may help developers to develop input method easily.
+	The Input Bus (ibus) is a next generation input framework for Linux OS.
 </longdescription>
 </pkgmetadata>

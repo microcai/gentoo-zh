@@ -24,7 +24,7 @@ DEPEND="dev-lang/python:2.5
 	x11-libs/gtk+:2"
 RDEPEND=">=dev-python/dbus-python-0.83.0
 	dev-python/gnome-python
-	dev-python/pygtk
+	>=dev-python/pygtk-2.12.1
 	dev-python/pyxdg"
 
 get_gtk_confdir() {

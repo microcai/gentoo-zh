@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  17 Aug 2008; Hong Hao <oahong@gmail.com> ibus-0.1.1.20080815.ebuild,
+  ibus-9999.ebuild, metadata.xml:
+  Ibus won't work properly with <dev-python/pygtk-2.12.1, thanks to Crccw for
+  reporting.
+
   15 Aug 2008; Hong Hao <oahong@gmail.com> -ibus-0.1.1.20080812.ebuild,
   +ibus-0.1.1.20080815.ebuild:
   Added new snapshot 20080815 for ibus, cleanup old ebuild. Ibus should never
