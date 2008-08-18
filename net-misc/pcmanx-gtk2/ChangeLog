@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Aug 2008; scsi <scsichen@gmail.com> pcmanx-gtk2-0.3.8-r1.ebuild:
+  fix wrong keyword fireofx to firefox
+
   13 Aug 2008; scsi <palatis@gmail.com> pcmanx-gtk2-0.3.8-r1.ebuild:
   fix problems with USE="firefox". modify IUSE="-wget socks5".
   "wget" new enabled by default, "socks5" for proxy support.

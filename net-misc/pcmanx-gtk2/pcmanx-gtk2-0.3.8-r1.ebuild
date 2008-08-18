@@ -18,7 +18,7 @@ DEPEND=">=x11-libs/gtk+-2.4
 	x11-libs/libXft
 	dev-util/intltool
 	net-misc/wget
-	fireofx? ( www-client/mozilla-firefox )
+	firefox? ( www-client/mozilla-firefox )
 	libnotify? ( x11-libs/libnotify )
 	!www-client/pcmanxplug-in
 	!virtual/pcmanx"
