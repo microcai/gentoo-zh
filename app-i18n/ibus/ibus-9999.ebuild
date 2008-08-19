@@ -3,15 +3,10 @@
 # $Header: $
 
 EAPI="1"
-inherit eutils
+EGIT_REPO_URI="git://github.com/phuang/ibus.git"
+EGIT_PATCHES="horizental_orientation.patch"
 
-if [[ ${PV} == "9999" ]] ; then
-	inherit autotools git
-	EGIT_REPO_URI="git://github.com/phuang/ibus.git"
-	EGIT_PATCHES="horizental_orientation.patch"
-else
-	SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
-fi
+inherit eutils autotools git
 
 DESCRIPTION="Next Generation Input Bus for Linux"
 HOMEPAGE="http://ibus.googlecode.com"
@@ -21,7 +16,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="nls qt4"
 
-# autopoint really needs cvs!
+# autopoint needs cvs
 DEPEND="dev-lang/python:2.5
 	dev-libs/dbus-glib
 	dev-util/cvs
@@ -45,12 +40,10 @@ get_gtk_confdir() {
 	fi
 }
 
-if [[ ${PV} == 9999 ]] ; then
-	src_unpack() {
-		git_src_unpack
-		autopoint && eautoreconf
-	}
-fi
+src_unpack() {
+	git_src_unpack
+	autopoint && eautoreconf
+}
 
 src_compile() {
 	local myconf="--disable-option-checking \
@@ -66,11 +59,11 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
-	#dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_postinst() {
-	ewarn "This package is very experimental, please report your bug here:"
+	ewarn "This is a highly experimental package, please report your bug here:"
 	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
 	elog "To use ibus, you should:"
@@ -78,15 +71,14 @@ pkg_postinst() {
 	elog "   app-i18n/ibus-pinyin and app-i18n/ibus-anthy"
 	elog "   are available"
 	elog "2. Set the following in your"
-	elog "   user startup scripts such as .xinitrc"
+	elog "   user startup scripts such as .xinitrc or .bashrc"
 	elog
 	elog "   export XMODIFIERS=\"@im=ibus\""
 	elog "   export GTK_IM_MODULES=\"ibus\""
 	elog "   export QT_IM_MODULES=\"ibus\""
 	elog "   ibus &"
 	if ! use qt4; then
-		ewarn "You might need qt4 USE flag if you wanna"
-		ewarn "ibus working in qt4 applications."
+		ewarn "Missing qt4 use flag, Ibus will not work with qt4 applications."
 	fi
 	elog
 

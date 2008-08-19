@@ -11,7 +11,7 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86" #~amd64
+KEYWORDS="~x86 ~amd64"
 IUSE="nls qt4"
 
 DEPEND="dev-lang/python:2.5
@@ -38,9 +38,7 @@ get_gtk_confdir() {
 
 src_compile() {
 	local myconf="--disable-option-checking \
-		--enable--maintainer-mode \
-		--disable-dependency-tracking \
-		--disable-rpath"
+		--enable--maintainer-mode"
 	econf $myconf \
 		$(use_enable nls) \
 		$(use_enable qt4 qt4-immodule) \
@@ -57,17 +55,17 @@ pkg_postinst() {
 	elog
 	elog "To use ibus, you should:"
 	elog "1. Have an input engine ,currently both"
-	elog "   app-i18n/ibus-{pinyin,anthy} are avaliable."
+	elog "   app-i18n/ibus-pinyin and app-i18n/ibus-anthy"
+	elog "   are avaliable."
 	elog "2. Set the following in your"
-	elog "   user startup scripts such as .xinitrc"
+	elog "   user startup scripts such as .xinitrc or .bashrc"
 	elog
 	elog "   export XMODIFIERS=\"@im=ibus\""
 	elog "   export GTK_IM_MODULES=\"ibus\""
 	elog "   export QT_IM_MODULES=\"ibus\""
 	elog "   ibus &"
 	if ! use qt4; then
-		ewarn "You might need qt4 USE flag if you want"
-		ewarn "to have ibus working in qt4 applications."
+		ewarn "Missing qt4 use flag, Ibus will not work with qt4 applications."
 	fi
 	elog
 
