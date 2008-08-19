@@ -3,24 +3,19 @@
 # $Header: $
 
 EAPI="1"
-inherit autotools eutils
+EGIT_REPO_URI="git://github.com/phuang/ibus-anthy.git"
 
-if [[ ${PV} == 9999 ]] ; then
-	EGIT_REPO_URI="git://github.com/phuang/ibus-anthy.git"
-	inherit git
-else
-	SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
-fi
+inherit autotools eutils git
 
 DESCRIPTION="The Anthy Engine for IBus Input Framework"
 HOMEPAGE="http://ibus.googlecode.com"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="" #~x86 ~amd64
+KEYWORDS=""
 IUSE="nls"
 
-# Yeh, we really need cvs, please have a look at Bug #152872
+# Yeh, autopoint needs cvs, please have a look at Bug #152872
 DEPEND="app-i18n/anthy
 	dev-lang/python:2.5
 	dev-lang/swig
@@ -29,24 +24,22 @@ DEPEND="app-i18n/anthy
 RDEPEND="app-i18n/ibus
 	app-i18n/anthy"
 
-if [[ ${PV} == 9999 ]] ; then
-	src_unpack() {
-		git_src_unpack
-		autopoint && eautoreconf
-	}
-fi
+src_unpack() {
+	git_src_unpack
+	autopoint && eautoreconf
+}
 
 src_compile() {
 	econf $(use_enable nls) \
 		--enable-maintainer-mode \
 		--disable-option-checking \
 		--disable-rpath
-		emake || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
-	#dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_postinst() {

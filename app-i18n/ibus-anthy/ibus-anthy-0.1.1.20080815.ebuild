@@ -11,7 +11,7 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86" # ~amd64
+KEYWORDS="~x86 ~amd64"
 IUSE="nls"
 
 DEPEND="app-i18n/anthy
@@ -26,7 +26,7 @@ src_compile() {
 		--enable-maintainer-mode \
 		--disable-option-checking \
 		--disable-rpath
-		emake || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -36,6 +36,6 @@ src_install() {
 
 pkg_postinst() {
 	elog
-	elog "To enable this input engine, you need to run ibus-setup"
+	elog "To enable this input engine, you need to run ibus-setup."
 	elog
 }
