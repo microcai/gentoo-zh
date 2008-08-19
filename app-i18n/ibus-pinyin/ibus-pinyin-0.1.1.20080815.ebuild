@@ -3,9 +3,10 @@
 # $Header: $
 
 EAPI="1"
+PYDBTAR="pinyin-database-0.1.10.5.tar.bz2"
+
 inherit eutils
 
-PYDBTAR="pinyin-database-0.1.10.5.tar.bz2"
 DESCRIPTION="The PinYin Engine for IBus Input Framework"
 HOMEPAGE="http://ibus.googlecode.com"
 SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz
@@ -13,7 +14,7 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86" # ~amd64
+KEYWORDS="~x86 ~amd64"
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
@@ -29,7 +30,7 @@ src_compile() {
 	econf $(use_enable nls) \
 		--disable-option-checking \
 		--disable-rpath
-		emake || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -39,7 +40,6 @@ src_install() {
 
 pkg_postinst() {
 	elog
-	elog "Please run ibus-setup and choose pinyin as the"
-	elog "default input engine"
+	elog "To enable this engine you need to run ibus-setup."
 	elog
 }

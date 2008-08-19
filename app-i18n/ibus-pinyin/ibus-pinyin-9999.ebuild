@@ -3,24 +3,18 @@
 # $Header: $
 
 EAPI="1"
-inherit eutils
+EGIT_REPO_URI="git://github.com/phuang/ibus-pinyin.git"
+PYDBTAR="pinyin-database-0.1.10.5.tar.bz2"
 
-PYDB_VER="0.1.10.5"
-if [[ ${PV} == 9999 ]] ; then
-	EGIT_REPO_URI="git://github.com/phuang/ibus-pinyin.git"
-	inherit autotools git
-	SRC_URI="http://scim-python.googlecode.com/files/pinyin-database-${PYDB_VER}.tar.bz2"
-else
-	SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz
-		http://scim-python.googlecode.com/files/pinyin-database-${PYDB_VER}.tar.bz2"
-fi
+inherit eutils autotools git
 
 DESCRIPTION="The PinYin Engine for IBus Input Framework"
 HOMEPAGE="http://ibus.googlecode.com"
+SRC_URI="http://scim-python.googlecode.com/files/${PYDBTAR}"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="" #~x86 ~amd64
+KEYWORDS=""
 IUSE="nls"
 
 # To run autopoint you need cvs.
@@ -32,26 +26,25 @@ RDEPEND="app-i18n/ibus
 src_unpack() {
 	git_src_unpack
 	autopoint && eautoreconf
-	cp "${DISTDIR}"/pinyin-database-${PYDB_VER}.tar.bz2 engine
+	cp "${DISTDIR}/${PYDBTAR}" engine
 }
 
 src_compile() {
 	econf $(use_enable nls) \
 		--disable-option-checking \
 		--disable-rpath
-		emake || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
-	#dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_postinst() {
-	ewarn "This package is very experimental, please report your bug here:"
+	ewarn "This is a highly experimental package, please report your bug here:"
 	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
-	elog "Please run ibus-setup and choose pinyin as the"
-	elog "default input engine"
+	elog "To enable this engine you need to run ibus-setup."
 	elog
 }
