@@ -1,0 +1,26 @@
+qt-bugs@ issue :
+Trolltech task ID :
+bugs.kde.org number :
+applied: no
+author: Dirk Mueller <mueller@kde.org>
+
+merge screens even if they're identical in size but overlaying
+
+--- src/gui/kernel/qdesktopwidget_x11.cpp
++++ src/gui/kernel/qdesktopwidget_x11.cpp
+@@ -183,10 +183,11 @@ void QDesktopWidgetPrivate::init()
+         // merge a "cloned" screen with the previous, hiding all crtcs
+         // that are currently showing a sub-rect of the previous screen
+         rects[j].setRect(x, y, w, h);
+-        if (j > 0 && rects[j-1].intersects(rects[j]) &&
+-                (rects[j].width()*rects[j].height()) >
+-                (rects[j-1].width()*rects[j-1].height())) {
+-            rects[j-1] = rects[j];
++        if (j> 0)
++        if (j > 0 && rects[j-1].intersects(rects[j])) {
++            if ((rects[j].width()*rects[j].height()) >
++                (rects[j-1].width()*rects[j-1].height()))
++                rects[j-1] = rects[j];
+            j--;
+         }
+         workareas[i] = QRect();

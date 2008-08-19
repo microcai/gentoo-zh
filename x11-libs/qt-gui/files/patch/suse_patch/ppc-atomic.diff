@@ -1,0 +1,396 @@
+--- src/corelib/arch/qatomic_powerpc.h
++++ src/corelib/arch/qatomic_powerpc.h
+@@ -111,15 +111,14 @@ inline bool QBasicAtomicInt::ref()
+ {
+     register int originalValue;
+     register int newValue;
+-    asm volatile("lwarx  %[originalValue], 0, %[_q_value]\n"
++    asm volatile("lwarx  %[originalValue], %y[_q_value]\n"
+                  "addi   %[newValue], %[originalValue], %[one]\n"
+-                 "stwcx. %[newValue], 0, %[_q_value]\n"
++                 "stwcx. %[newValue], %y[_q_value]\n"
+                  "bne-   $-12\n"
+                  : [originalValue] "=&b" (originalValue),
+-                   "+m" (_q_value),
++                   [_q_value] "+Z" (_q_value),
+                    [newValue] "=&r" (newValue)
+-                 : [_q_value] "r" (&_q_value),
+-                   [one] "i" (1)
++                 : [one] "i" (1)
+                  : "cc", "memory");
+     return newValue != 0;
+ }
+@@ -128,15 +127,14 @@ inline bool QBasicAtomicInt::deref()
+ {
+     register int originalValue;
+     register int newValue;
+-    asm volatile("lwarx  %[originalValue], 0, %[_q_value]\n"
++    asm volatile("lwarx  %[originalValue], %y[_q_value]\n"
+                  "addi   %[newValue], %[originalValue], %[minusOne]\n"
+-                 "stwcx. %[newValue], 0, %[_q_value]\n"
++                 "stwcx. %[newValue], %y[_q_value]\n"
+                  "bne-   $-12\n"
+                  : [originalValue] "=&b" (originalValue),
+-                   "+m" (_q_value),
++                   [_q_value] "+Z" (_q_value),
+                    [newValue] "=&r" (newValue)
+-                 : [_q_value] "r" (&_q_value),
+-                   [minusOne] "i" (-1)
++                 : [minusOne] "i" (-1)
+                  : "cc", "memory");
+     return newValue != 0;
+ }
+@@ -144,15 +142,14 @@ inline bool QBasicAtomicInt::deref()
+ inline bool QBasicAtomicInt::testAndSetRelaxed(int expectedValue, int newValue)
+ {
+     register int result;
+-    asm volatile("lwarx  %[result], 0, %[_q_value]\n"
++    asm volatile("lwarx  %[result], %y[_q_value]\n"
+                  "xor.   %[result], %[result], %[expectedValue]\n"
+                  "bne    $+12\n"
+-                 "stwcx. %[newValue], 0, %[_q_value]\n"
++                 "stwcx. %[newValue], %y[_q_value]\n"
+                  "bne-   $-16\n"
+                  : [result] "=&r" (result),
+-                   "+m" (_q_value)
+-                 : [_q_value] "r" (&_q_value),
+-                   [expectedValue] "r" (expectedValue),
++                   [_q_value] "+Z" (_q_value)
++                 : [expectedValue] "r" (expectedValue),
+                    [newValue] "r" (newValue)
+                  : "cc", "memory");
+     return result == 0;
+@@ -161,16 +158,15 @@ inline bool QBasicAtomicInt::testAndSetR
+ inline bool QBasicAtomicInt::testAndSetAcquire(int expectedValue, int newValue)
+ {
+     register int result;
+-    asm volatile("lwarx  %[result], 0, %[_q_value]\n"
++    asm volatile("lwarx  %[result], %y[_q_value]\n"
+                  "xor.   %[result], %[result], %[expectedValue]\n"
+                  "bne    $+16\n"
+-                 "stwcx. %[newValue], 0, %[_q_value]\n"
++                 "stwcx. %[newValue], %y[_q_value]\n"
+                  "bne-   $-16\n"
+                  "isync\n"
+                  : [result] "=&r" (result),
+-                   "+m" (_q_value)
+-                 : [_q_value] "r" (&_q_value),
+-                   [expectedValue] "r" (expectedValue),
++                   [_q_value] "+Z" (_q_value)
++                 : [expectedValue] "r" (expectedValue),
+                    [newValue] "r" (newValue)
+                  : "cc", "memory");
+     return result == 0;
+@@ -180,15 +176,14 @@ inline bool QBasicAtomicInt::testAndSetR
+ {
+     register int result;
+     asm volatile("eieio\n"
+-                 "lwarx  %[result], 0, %[_q_value]\n"
++                 "lwarx  %[result], %y[_q_value]\n"
+                  "xor.   %[result], %[result], %[expectedValue]\n"
+                  "bne    $+12\n"
+-                 "stwcx. %[newValue],0,%[_q_value]\n"
++                 "stwcx. %[newValue],%y[_q_value]\n"
+                  "bne-   $-16\n"
+                  : [result] "=&r" (result),
+-                   "+m" (_q_value)
+-                 : [_q_value] "r" (&_q_value),
+-                   [expectedValue] "r" (expectedValue),
++                   [_q_value] "+Z" (_q_value)
++                 : [expectedValue] "r" (expectedValue),
+                    [newValue] "r" (newValue)
+                  : "cc", "memory");
+     return result == 0;
+@@ -197,13 +192,12 @@ inline bool QBasicAtomicInt::testAndSetR
+ inline int QBasicAtomicInt::fetchAndStoreRelaxed(int newValue)
+ {
+     register int originalValue;
+-    asm volatile("lwarx  %[originalValue], 0, %[_q_value]\n"
+-                 "stwcx. %[newValue], 0, %[_q_value]\n"
++    asm volatile("lwarx  %[originalValue], %y[_q_value]\n"
++                 "stwcx. %[newValue], %y[_q_value]\n"
+                  "bne-   $-8\n"
+                  : [originalValue] "=&r" (originalValue),
+-                   "+m" (_q_value)
+-                 : [_q_value] "r" (&_q_value),
+-                   [newValue] "r" (newValue)
++                   [_q_value] "+Z" (_q_value)
++                 : [newValue] "r" (newValue)
+                  : "cc", "memory");
+     return originalValue;
+ }
+@@ -211,14 +205,13 @@ inline int QBasicAtomicInt::fetchAndStor
+ inline int QBasicAtomicInt::fetchAndStoreAcquire(int newValue)
+ {
+     register int originalValue;
+-    asm volatile("lwarx  %[originalValue], 0, %[_q_value]\n"
+-                 "stwcx. %[newValue], 0, %[_q_value]\n"
++    asm volatile("lwarx  %[originalValue], %y[_q_value]\n"
++                 "stwcx. %[newValue], %y[_q_value]\n"
+                  "bne-   $-8\n"
+                  "isync\n"
+                  : [originalValue] "=&r" (originalValue),
+-                   "+m" (_q_value)
+-                 : [_q_value] "r" (&_q_value),
+-                   [newValue] "r" (newValue)
++                   [_q_value] "+Z" (_q_value)
++                 : [newValue] "r" (newValue)
+                  : "cc", "memory");
+     return originalValue;
+ }
+@@ -227,13 +220,12 @@ inline int QBasicAtomicInt::fetchAndStor
+ {
+     register int originalValue;
+     asm volatile("eieio\n"
+-                 "lwarx  %[originalValue], 0, %[_q_value]\n"
+-                 "stwcx. %[newValue], 0, %[_q_value]\n"
++                 "lwarx  %[originalValue], %y[_q_value]\n"
++                 "stwcx. %[newValue], %y[_q_value]\n"
+                  "bne-   $-8\n"
+                  : [originalValue] "=&r" (originalValue),
+-                   "+m" (_q_value)
+-                 : [_q_value] "r" (&_q_value),
+-                   [newValue] "r" (newValue)
++                   [_q_value] "+Z" (_q_value)
++                 : [newValue] "r" (newValue)
+                  : "cc", "memory");
+     return originalValue;
+ }
+@@ -242,15 +234,14 @@ inline int QBasicAtomicInt::fetchAndAddR
+ {
+     register int originalValue;
+     register int newValue;
+-    asm volatile("lwarx  %[originalValue], 0, %[_q_value]\n"
++    asm volatile("lwarx  %[originalValue], %y[_q_value]\n"
+                  "add    %[newValue], %[originalValue], %[valueToAdd]\n"
+-                 "stwcx. %[newValue], 0, %[_q_value]\n"
++                 "stwcx. %[newValue], %y[_q_value]\n"
+                  "bne-   $-12\n"
+                  : [originalValue] "=&r" (originalValue),
+                    [newValue] "=&r" (newValue),
+-                   "+m" (_q_value)
+-                 : [_q_value] "r" (&_q_value),
+-                   [valueToAdd] "r" (valueToAdd)
++                   [_q_value] "+Z" (_q_value)
++                 : [valueToAdd] "r" (valueToAdd)
+                  : "cc", "memory");
+     return originalValue;
+ }
+@@ -259,16 +250,15 @@ inline int QBasicAtomicInt::fetchAndAddA
+ {
+     register int originalValue;
+     register int newValue;
+-    asm volatile("lwarx  %[originalValue], 0, %[_q_value]\n"
++    asm volatile("lwarx  %[originalValue], %y[_q_value]\n"
+                  "add    %[newValue], %[originalValue], %[valueToAdd]\n"
+-                 "stwcx. %[newValue], 0, %[_q_value]\n"
++                 "stwcx. %[newValue], %y[_q_value]\n"
+                  "bne-   $-12\n"
+                  "isync\n"
+                  : [originalValue] "=&r" (originalValue),
+                    [newValue] "=&r" (newValue),
+-                   "+m" (_q_value)
+-                 : [_q_value] "r" (&_q_value),
+-                   [valueToAdd] "r" (valueToAdd)
++                   [_q_value] "+Z" (_q_value)
++                 : [valueToAdd] "r" (valueToAdd)
+                  : "cc", "memory");
+     return originalValue;
+ }
+@@ -278,15 +268,14 @@ inline int QBasicAtomicInt::fetchAndAddR
+     register int originalValue;
+     register int newValue;
+     asm volatile("eieio\n"
+-                 "lwarx  %[originalValue], 0, %[_q_value]\n"
++                 "lwarx  %[originalValue], %y[_q_value]\n"
+                  "add    %[newValue], %[originalValue], %[valueToAdd]\n"
+-                 "stwcx. %[newValue], 0, %[_q_value]\n"
++                 "stwcx. %[newValue], %y[_q_value]\n"
+                  "bne-   $-12\n"
+                  : [originalValue] "=&r" (originalValue),
+                    [newValue] "=&r" (newValue),
+-                   "+m" (_q_value)
+-                 : [_q_value] "r" (&_q_value),
+-                   [valueToAdd] "r" (valueToAdd)
++                   [_q_value] "+Z" (_q_value)
++                 : [valueToAdd] "r" (valueToAdd)
+                  : "cc", "memory");
+     return originalValue;
+ }
+@@ -303,15 +292,14 @@ template <typename T>
+ Q_INLINE_TEMPLATE bool QBasicAtomicPointer<T>::testAndSetRelaxed(T *expectedValue, T *newValue)
+ {
+     register void *result;
+-    asm volatile(LPARX"  %[result], 0, %[_q_value]\n"
++    asm volatile(LPARX"  %[result], %y[_q_value]\n"
+                  "xor.   %[result], %[result], %[expectedValue]\n"
+                  "bne    $+12\n"
+-                 STPCX"  %[newValue], 0, %[_q_value]\n"
++                 STPCX"  %[newValue], %y[_q_value]\n"
+                  "bne-   $-16\n"
+                  : [result] "=&r" (result),
+-                   "+m" (_q_value)
+-                 : [_q_value] "r" (&_q_value),
+-                   [expectedValue] "r" (expectedValue),
++                   [_q_value] "+Z" (_q_value)
++                 : [expectedValue] "r" (expectedValue),
+                    [newValue] "r" (newValue)
+                  : "cc", "memory");
+     return result == 0;
+@@ -321,16 +309,15 @@ template <typename T>
+ Q_INLINE_TEMPLATE bool QBasicAtomicPointer<T>::testAndSetAcquire(T *expectedValue, T *newValue)
+ {
+     register void *result;
+-    asm volatile(LPARX"  %[result], 0, %[_q_value]\n"
++    asm volatile(LPARX"  %[result], %y[_q_value]\n"
+                  "xor.   %[result], %[result], %[expectedValue]\n"
+                  "bne    $+16\n"
+-                 STPCX"  %[newValue], 0, %[_q_value]\n"
++                 STPCX"  %[newValue], %y[_q_value]\n"
+                  "bne-   $-16\n"
+                  "isync\n"
+                  : [result] "=&r" (result),
+-                   "+m" (_q_value)
+-                 : [_q_value] "r" (&_q_value),
+-                   [expectedValue] "r" (expectedValue),
++                   [_q_value] "+Z" (_q_value)
++                 : [expectedValue] "r" (expectedValue),
+                    [newValue] "r" (newValue)
+                  : "cc", "memory");
+     return result == 0;
+@@ -341,15 +328,14 @@ Q_INLINE_TEMPLATE bool QBasicAtomicPoint
+ {
+     register void *result;
+     asm volatile("eieio\n"
+-                 LPARX"  %[result], 0, %[_q_value]\n"
++                 LPARX"  %[result], %y[_q_value]\n"
+                  "xor.   %[result], %[result], %[expectedValue]\n"
+                  "bne    $+12\n"
+-                 STPCX"  %[newValue], 0, %[_q_value]\n"
++                 STPCX"  %[newValue], %y[_q_value]\n"
+                  "bne-   $-16\n"
+                  : [result] "=&r" (result),
+-                   "+m" (_q_value)
+-                 : [_q_value] "r" (&_q_value),
+-                   [expectedValue] "r" (expectedValue),
++                   [_q_value] "+Z" (_q_value)
++                 : [expectedValue] "r" (expectedValue),
+                    [newValue] "r" (newValue)
+                  : "cc", "memory");
+     return result == 0;
+@@ -359,13 +345,12 @@ template <typename T>
+ Q_INLINE_TEMPLATE T *QBasicAtomicPointer<T>::fetchAndStoreRelaxed(T *newValue)
+ {
+     register T *originalValue;
+-    asm volatile(LPARX"  %[originalValue], 0, %[_q_value]\n"
+-                 STPCX"  %[newValue], 0, %[_q_value]\n"
++    asm volatile(LPARX"  %[originalValue], %y[_q_value]\n"
++                 STPCX"  %[newValue], %y[_q_value]\n"
+                  "bne-   $-8\n"
+                  : [originalValue] "=&r" (originalValue),
+-                   "+m" (_q_value)
+-                 : [_q_value] "r" (&_q_value),
+-                   [newValue] "r" (newValue)
++                   [_q_value] "+Z" (_q_value)
++                 : [newValue] "r" (newValue)
+                  : "cc", "memory");
+     return originalValue;
+ }
+@@ -374,14 +359,13 @@ template <typename T>
+ Q_INLINE_TEMPLATE T *QBasicAtomicPointer<T>::fetchAndStoreAcquire(T *newValue)
+ {
+     register T *originalValue;
+-    asm volatile(LPARX"  %[originalValue], 0, %[_q_value]\n"
+-                 STPCX"  %[newValue], 0, %[_q_value]\n"
++    asm volatile(LPARX"  %[originalValue], %y[_q_value]\n"
++                 STPCX"  %[newValue], %y[_q_value]\n"
+                  "bne-   $-8\n"
+                  "isync\n"
+                  : [originalValue] "=&r" (originalValue),
+-                   "+m" (_q_value)
+-                 : [_q_value] "r" (&_q_value),
+-                   [newValue] "r" (newValue)
++                   [_q_value] "+Z" (_q_value)
++                 : [newValue] "r" (newValue)
+                  : "cc", "memory");
+     return originalValue;
+ }
+@@ -391,13 +375,12 @@ Q_INLINE_TEMPLATE T *QBasicAtomicPointer
+ {
+     register T *originalValue;
+     asm volatile("eieio\n"
+-                 LPARX"  %[originalValue], 0, %[_q_value]\n"
+-                 STPCX"  %[newValue], 0, %[_q_value]\n"
++                 LPARX"  %[originalValue], %y[_q_value]\n"
++                 STPCX"  %[newValue], %y[_q_value]\n"
+                  "bne-   $-8\n"
+                  : [originalValue] "=&r" (originalValue),
+-                   "+m" (_q_value)
+-                 : [_q_value] "r" (&_q_value),
+-                   [newValue] "r" (newValue)
++                   [_q_value] "+Z" (_q_value)
++                 : [newValue] "r" (newValue)
+                  : "cc", "memory");
+     return originalValue;
+ }
+@@ -407,15 +390,14 @@ Q_INLINE_TEMPLATE T *QBasicAtomicPointer
+ {
+     register T *originalValue;
+     register T *newValue;
+-    asm volatile(LPARX"  %[originalValue], 0, %[_q_value]\n"
++    asm volatile(LPARX"  %[originalValue], %y[_q_value]\n"
+                  "add    %[newValue], %[originalValue], %[valueToAdd]\n"
+-                 STPCX"  %[newValue], 0, %[_q_value]\n"
++                 STPCX"  %[newValue], %y[_q_value]\n"
+                  "bne-   $-12\n"
+                  : [originalValue] "=&r" (originalValue),
+                    [newValue] "=&r" (newValue),
+-                   "+m" (_q_value)
+-                 : [_q_value] "r" (&_q_value),
+-                   [valueToAdd] "r" (valueToAdd * sizeof(T))
++                   [_q_value] "+Z" (_q_value)
++                 : [valueToAdd] "r" (valueToAdd * sizeof(T))
+                  : "cc", "memory");
+     return originalValue;
+ }
+@@ -425,16 +407,15 @@ Q_INLINE_TEMPLATE T *QBasicAtomicPointer
+ {
+     register T *originalValue;
+     register T *newValue;
+-    asm volatile(LPARX"  %[originalValue], 0, %[_q_value]\n"
++    asm volatile(LPARX"  %[originalValue], %y[_q_value]\n"
+                  "add    %[newValue], %[originalValue], %[valueToAdd]\n"
+-                 STPCX"  %[newValue], 0, %[_q_value]\n"
++                 STPCX"  %[newValue], %y[_q_value]\n"
+                  "bne-   $-12\n"
+                  "isync\n"
+                  : [originalValue] "=&r" (originalValue),
+                    [newValue] "=&r" (newValue),
+-                   "+m" (_q_value)
+-                 : [_q_value] "r" (&_q_value),
+-                   [valueToAdd] "r" (valueToAdd * sizeof(T))
++                   [_q_value] "+Z" (_q_value)
++                 : [valueToAdd] "r" (valueToAdd * sizeof(T))
+                  : "cc", "memory");
+     return originalValue;
+ }
+@@ -445,15 +426,14 @@ Q_INLINE_TEMPLATE T *QBasicAtomicPointer
+     register T *originalValue;
+     register T *newValue;
+     asm volatile("eieio\n"
+-                 LPARX"  %[originalValue], 0, %[_q_value]\n"
++                 LPARX"  %[originalValue], %y[_q_value]\n"
+                  "add    %[newValue], %[originalValue], %[valueToAdd]\n"
+-                 STPCX"  %[newValue], 0, %[_q_value]\n"
++                 STPCX"  %[newValue], %y[_q_value]\n"
+                  "bne-   $-12\n"
+                  : [originalValue] "=&r" (originalValue),
+                    [newValue] "=&r" (newValue),
+-                   "+m" (_q_value)
+-                 : [_q_value] "r" (&_q_value),
+-                   [valueToAdd] "r" (valueToAdd * sizeof(T))
++                   [_q_value] "+Z" (_q_value)
++                 : [valueToAdd] "r" (valueToAdd * sizeof(T))
+                  : "cc", "memory");
+     return originalValue;
+ }

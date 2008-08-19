@@ -1,0 +1,62 @@
+--- src/plugins/inputmethods/imsw-multi/qmultiinputcontext.cpp
++++ src/plugins/inputmethods/imsw-multi/qmultiinputcontext.cpp
+@@ -75,12 +75,14 @@ QMultiInputContext::QMultiInputContext()
+         if (keys.at(i).contains(QLatin1String("imsw")))
+             keys.removeAt(i);
+ 
++	m_keys = keys;
++
+     QString def = QLatin1String(getenv("QT_IM_MODULE"));
+     if (def.isEmpty()) {
+ 	QSettings settings;
+         def = settings.value(QLatin1String("/qt/DefaultInputMethod"), QLatin1String("xim")).toString();
+     }
+-    current = keys.indexOf(def);
++    current = m_keys.indexOf(def);
+     if (current < 0)
+         current = 0;
+ 
+@@ -89,13 +91,16 @@ QMultiInputContext::QMultiInputContext()
+     separator->setSeparator(true);
+ 
+     QActionGroup *group = new QActionGroup(this);
+-    for (int i = 0; i < keys.size(); ++i) {
+-        slaves.append(QInputContextFactory::create(keys.at(i), this));
+-        QAction *a = menu->addAction(slaves.at(i)->identifierName());
++    for (int i = 0; i < m_keys.size(); ++i) {
++        //slaves.append(QInputContextFactory::create(keys.at(i), this));
++		slaves.append(NULL);
++        QAction *a = menu->addAction(m_keys.at(i));
+         a->setCheckable(true);
+         group->addAction(a);
+-        if (i == current)
++        if (i == current) {
++			slaves.replace(current, QInputContextFactory::create(m_keys.at(i), this));
+             a->setChecked(true);
++		}
+     }
+     connect(group, SIGNAL(triggered(QAction*)), this, SLOT(changeSlave(QAction*)));
+ 
+@@ -187,8 +192,10 @@ QList<QAction *> QMultiInputContext::act
+ 
+ void QMultiInputContext::changeSlave(QAction *a)
+ {
+-    for (int i = 0; i < slaves.size(); ++i) {
+-        if (slaves.at(i)->identifierName() == a->text()) {
++    for (int i = 0; i < m_keys.size(); ++i) {
++        if (m_keys.at(i) == a->text()) {
++            if (NULL == slaves.at(i))
++				slaves.replace(i, QInputContextFactory::create(m_keys.at(i), this));
+             current = i;
+             return;
+         }
+--- src/plugins/inputmethods/imsw-multi/qmultiinputcontext.h
++++ src/plugins/inputmethods/imsw-multi/qmultiinputcontext.h
+@@ -109,6 +109,7 @@ private:
+     QList<QInputContext *> slaves;
+     QMenu *menu;
+     QAction *separator;
++	QStringList m_keys;
+ };
+ 
+ #endif // Q_NO_IM

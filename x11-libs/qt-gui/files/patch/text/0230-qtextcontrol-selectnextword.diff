@@ -1,0 +1,35 @@
+qt-bugs@ issue : N213258
+Trolltech task ID : 213259 (Status: closed; Version fix: 4.4.2)
+bugs.kde.org number : I guess there is one
+applied: no
+author: David Faure <faure@kde.org>
+
+Imagine a konqueror window with two tabs, and in the current tab there's a QTextEdit (in a web form).
+When typing Ctrl+Shift+Right, it is expected that the next word is selected.
+However, the QAction for "move this tab to the right" is triggered, which is unexpected.
+This wouldn't happen if the QTextEdit would react to the ShortcutOverride event which
+is sent first, for this exact purpose (so that widget-specific shortcuts are done first). 
+QTextControl already handles some ShortcutOverride events, but not all of them.
+The patch below adds a few useful ones, i.e. possibly-conflicting ones. I guess one could
+be exhaustive and list all possible shortcuts there....
+
+
+Index: src/gui/text/qtextcontrol.cpp
+===================================================================
+--- src/gui/text/qtextcontrol.cpp	(revision 803104)
++++ src/gui/text/qtextcontrol.cpp	(working copy)
+@@ -1065,6 +1065,14 @@ void QTextControl::processEvent(QEvent *
+                            || ke == QKeySequence::MoveToPreviousWord
+                            || ke == QKeySequence::MoveToStartOfDocument
+                            || ke == QKeySequence::MoveToEndOfDocument
++                           || ke == QKeySequence::SelectNextWord
++                           || ke == QKeySequence::SelectPreviousWord
++                           || ke == QKeySequence::SelectStartOfLine
++                           || ke == QKeySequence::SelectEndOfLine
++                           || ke == QKeySequence::SelectStartOfBlock
++                           || ke == QKeySequence::SelectEndOfBlock
++                           || ke == QKeySequence::SelectStartOfDocument
++                           || ke == QKeySequence::SelectEndOfDocument
+                           ) {
+                     ke->accept();
+ #endif

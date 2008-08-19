@@ -1,0 +1,22 @@
+qt-bugs@ issue : 178507
+Trolltech task ID : 179170
+applied: no
+author: Matthew Woehlke <mw_triad@users.sourceforge.net>
+
+This patch fixes incorrect setting of the palette color group in
+QListView that resulted in alternate rows being drawn with the Active
+AlternateBase color even for inactive widgets (while the rest of the
+widget is drawn correctly). Please let me know if QListView is not
+the only culprit. (QTreeView was fixed by TT already.)
+
+--- src/gui/itemviews/qlistview.cpp
++++ src/gui/itemviews/qlistview.cpp
+@@ -1071,7 +1071,7 @@
+                 option.state &= ~QStyle::State_Enabled;
+                 cg = QPalette::Disabled;
+             } else {
+-                cg = QPalette::Normal;
++                cg = window()->isActiveWindow() ? QPalette::Active : QPalette::Inactive;
+             }
+             option.palette.setCurrentColorGroup(cg);
+         }

@@ -1,0 +1,11 @@
+--- src/gui/widgets/qstatusbar.cpp
++++ src/gui/widgets/qstatusbar.cpp
+@@ -643,7 +643,7 @@ void QStatusBar::hideOrShow()
+     }
+ 
+     emit messageChanged(d->tempItem);
+-    repaint();
++    update();
+ }
+ 
+ /*!

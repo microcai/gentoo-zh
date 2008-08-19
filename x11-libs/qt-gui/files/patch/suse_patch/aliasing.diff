@@ -1,0 +1,47 @@
+--- src/corelib/io/qprocess_unix.cpp
++++ src/corelib/io/qprocess_unix.cpp
+@@ -839,10 +839,14 @@ bool QProcessPrivate::processStarted()
+ 
+ qint64 QProcessPrivate::bytesAvailableFromStdout() const
+ {
+-    size_t nbytes = 0;
++#if defined (Q_OS_IRIX)
++    off_t nbytes = 0;
++#else
++    int nbytes = 0;
++#endif
+     qint64 available = 0;
+     if (::ioctl(stdoutChannel.pipe[0], FIONREAD, (char *) &nbytes) >= 0)
+-        available = (qint64) *((int *) &nbytes);
++        available = (qint64) nbytes;
+ #if defined (QPROCESS_DEBUG)
+     qDebug("QProcessPrivate::bytesAvailableFromStdout() == %lld", available);
+ #endif
+--- src/network/socket/qnativesocketengine_unix.cpp
++++ src/network/socket/qnativesocketengine_unix.cpp
+@@ -515,18 +515,18 @@ qint64 QNativeSocketEnginePrivate::nativ
+       ioctl() to be an int, which is normally 32-bit even on 64-bit
+       machines.
+ 
+-      IRIX, on the other hand, expects a size_t, which is 64-bit on
++      IRIX, on the other hand, expects a off_t, which is 64-bit on
+       64-bit machines.
+-
+-      So, the solution is to use size_t initialized to zero to make
+-      sure all bits are set to zero, preventing underflow with the
+-      FreeBSD/Linux/Solaris ioctls.
+     */
+-    size_t nbytes = 0;
++#if defined (Q_OS_IRIX)
++    off_t nbytes = 0;
++#else
++    int nbytes = 0;
++#endif
+     // gives shorter than true amounts on Unix domain sockets.
+     qint64 available = 0;
+     if (::ioctl(socketDescriptor, FIONREAD, (char *) &nbytes) >= 0)
+-        available = (qint64) *((int *) &nbytes);
++        available = (qint64) nbytes;
+ 
+ #if defined (QNATIVESOCKETENGINE_DEBUG)
+     qDebug("QNativeSocketEnginePrivate::nativeBytesAvailable() == %lli", available);

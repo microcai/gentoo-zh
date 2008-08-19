@@ -1,0 +1,11 @@
+diff -Nur qt-x11-opensource-src-4.4.1.orig/src/gui/text/qfontengine_ft.cpp qt-x11-opensource-src-4.4.1/src/gui/text/qfontengine_ft.cpp
+--- qt-x11-opensource-src-4.4.1.orig/src/gui/text/qfontengine_ft.cpp	2008-08-14 13:34:46.152348586 +0800
++++ qt-x11-opensource-src-4.4.1/src/gui/text/qfontengine_ft.cpp	2008-08-15 10:09:17.809348052 +0800
+@@ -665,6 +665,7 @@
+ 
+     if (transform)
+         load_flags |= FT_LOAD_NO_BITMAP;
++    load_flags |= FT_LOAD_IGNORE_GLOBAL_ADVANCE_WIDTH;
+ 
+     FT_Face face = freetype->face;
+     FT_Error err = FT_Load_Glyph(face, glyph, load_flags);

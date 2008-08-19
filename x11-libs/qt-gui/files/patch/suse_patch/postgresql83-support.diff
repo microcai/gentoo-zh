@@ -1,0 +1,72 @@
+--- qt-x11-opensource-src-4.4.0.orig/configure
++++ qt-x11-opensource-src-4.4.0/configure
+@@ -4166,7 +4166,7 @@
+                 if "$WHICH" pg_config >/dev/null 2>&1; then
+                     QT_CFLAGS_PSQL=`pg_config --includedir 2>/dev/null`
+                     QT_LFLAGS_PSQL=`pg_config --libdir 2>/dev/null`
+-                    QT_LIBS_PSQL=`pg_config --libs 2>/dev/null`
++                    QT_LIBS_PSQL="-lpq"
+                 fi
+                 [ -z "$QT_CFLAGS_PSQL" ] || QT_CFLAGS_PSQL="-I$QT_CFLAGS_PSQL"
+                 [ -z "$QT_LFLAGS_PSQL" ] || QT_LFLAGS_PSQL="-L$QT_LFLAGS_PSQL $QT_LIBS_PSQL"
+--- qt-x11-opensource-src-4.4.0.orig/src/sql/drivers/psql/qsql_psql.cpp
++++ qt-x11-opensource-src-4.4.0/src/sql/drivers/psql/qsql_psql.cpp
+@@ -641,6 +641,9 @@
+                 case 2:
+                     serverVersion = QPSQLDriver::Version82;
+                     break;
++                case 3:
++                    serverVersion = QPSQLDriver::Version83;
++                    break;
+                 }
+                 break;
+             default:
+@@ -896,7 +899,7 @@
+ 
+     switch(d->pro) {
+     case QPSQLDriver::Version6:
+-        stmt = QLatin1String("select pg_att1.attname, int(pg_att1.atttypid), pg_cl.relname "
++        stmt = QLatin1String("select pg_att1.attname, pg_att1.atttypid::int, pg_cl.relname "
+                 "from pg_attribute pg_att1, pg_attribute pg_att2, pg_class pg_cl, pg_index pg_ind "
+                 "where lower(pg_cl.relname) = '%1_pkey' "
+                 "and pg_cl.oid = pg_ind.indexrelid "
+@@ -921,6 +924,7 @@
+     case QPSQLDriver::Version8:
+     case QPSQLDriver::Version81:
+     case QPSQLDriver::Version82:
++    case QPSQLDriver::Version83:
+         stmt = QLatin1String("SELECT pg_attribute.attname, pg_attribute.atttypid::int, "
+                 "pg_class.relname "
+                 "FROM pg_attribute, pg_class "
+@@ -960,9 +964,9 @@
+     QString stmt;
+     switch(d->pro) {
+     case QPSQLDriver::Version6:
+-        stmt = QLatin1String("select pg_attribute.attname, int(pg_attribute.atttypid), "
++        stmt = QLatin1String("select pg_attribute.attname, pg_attribute.atttypid::int, "
+                 "pg_attribute.attnotnull, pg_attribute.attlen, pg_attribute.atttypmod, "
+-                "int(pg_attribute.attrelid), pg_attribute.attnum "
++                "pg_attribute.attrelid::int, pg_attribute.attnum "
+                 "from pg_class, pg_attribute "
+                 "where lower(pg_class.relname) = '%1' "
+                 "and pg_attribute.attnum > 0 "
+@@ -994,6 +998,7 @@
+     case QPSQLDriver::Version8:
+     case QPSQLDriver::Version81:
+     case QPSQLDriver::Version82:
++    case QPSQLDriver::Version83:
+         stmt = QLatin1String("select pg_attribute.attname, pg_attribute.atttypid::int, "
+                 "pg_attribute.attnotnull, pg_attribute.attlen, pg_attribute.atttypmod, "
+                 "pg_attrdef.adsrc "
+--- qt-x11-opensource-src-4.4.0.orig/src/sql/drivers/psql/qsql_psql.h
++++ qt-x11-opensource-src-4.4.0/src/sql/drivers/psql/qsql_psql.h
+@@ -106,7 +106,8 @@
+         Version74 = 10,
+         Version8 = 11,
+         Version81 = 12,
+-        Version82 = 13
++        Version82 = 13,
++        Version83 = 14
+     };
+ 
+     explicit QPSQLDriver(QObject *parent=0);

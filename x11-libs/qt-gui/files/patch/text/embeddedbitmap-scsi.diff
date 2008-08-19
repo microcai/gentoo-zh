@@ -1,0 +1,50 @@
+diff -Nur qt-x11-opensource-src-4.4.1.orig/src/gui/text/qfontengine_ft.cpp qt-x11-opensource-src-4.4.1/src/gui/text/qfontengine_ft.cpp
+--- qt-x11-opensource-src-4.4.1.orig/src/gui/text/qfontengine_ft.cpp	2008-08-14 13:34:46.152348586 +0800
++++ qt-x11-opensource-src-4.4.1/src/gui/text/qfontengine_ft.cpp	2008-08-15 09:13:14.684347169 +0800
+@@ -524,6 +524,7 @@
+     subpixelType = Subpixel_None;
+     defaultGlyphFormat = Format_None;
+     canUploadGlyphsToServer = false;
++    embeddedbitmap = true;
+ }
+ 
+ QFontEngineFT::~QFontEngineFT()
+@@ -653,7 +654,7 @@
+ 
+     }
+ #ifndef Q_WS_QWS
+-    if (format != Format_Mono)
++    if (format != Format_Mono && !embeddedbitmap)
+         load_flags |= FT_LOAD_NO_BITMAP;
+ #endif
+ 
+diff -Nur qt-x11-opensource-src-4.4.1.orig/src/gui/text/qfontengine_ft_p.h qt-x11-opensource-src-4.4.1/src/gui/text/qfontengine_ft_p.h
+--- qt-x11-opensource-src-4.4.1.orig/src/gui/text/qfontengine_ft_p.h	2008-08-14 13:34:46.152348586 +0800
++++ qt-x11-opensource-src-4.4.1/src/gui/text/qfontengine_ft_p.h	2008-08-15 09:14:00.744348911 +0800
+@@ -280,6 +280,8 @@
+     SubpixelAntialiasingType subpixelType;
+     bool canUploadGlyphsToServer;
+ 
++    bool embeddedbitmap;
++
+ private:
+     GlyphFormat defaultGlyphFormat;
+     FT_Matrix matrix;
+diff -Nur qt-x11-opensource-src-4.4.1.orig/src/gui/text/qfontengine_x11.cpp qt-x11-opensource-src-4.4.1/src/gui/text/qfontengine_x11.cpp
+--- qt-x11-opensource-src-4.4.1.orig/src/gui/text/qfontengine_x11.cpp	2008-08-14 13:34:46.160350812 +0800
++++ qt-x11-opensource-src-4.4.1/src/gui/text/qfontengine_x11.cpp	2008-08-15 09:15:00.822347064 +0800
+@@ -950,6 +950,14 @@
+     }
+ #endif
+ 
++#ifdef FC_EMBEDDED_BITMAP
++    {
++        FcBool b;
++        if (FcPatternGetBool(pattern, FC_EMBEDDED_BITMAP, 0, &b) == FcResultMatch)
++            embeddedbitmap = b;
++    }
++#endif
++
+     GlyphFormat defaultFormat = Format_None;
+ 
+ #ifndef QT_NO_XRENDER

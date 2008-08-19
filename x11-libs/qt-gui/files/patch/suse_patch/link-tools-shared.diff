@@ -1,0 +1,230 @@
+--- src/src.pro
++++ src/src.pro
+@@ -49,7 +49,7 @@ src_plugins.target = sub-plugins
+ 
+ #CONFIG += ordered
+ !ordered {
+-   src_corelib.depends = src_tools_moc src_tools_rcc
++   src_corelib.depends = src_tools_moc
+    src_gui.depends = src_corelib src_tools_uic
+    src_xml.depends = src_corelib
+    src_svg.depends = src_xml src_gui
+@@ -58,7 +58,9 @@ src_plugins.target = sub-plugins
+    src_opengl.depends = src_gui
+    src_sql.depends = src_corelib
+    src_qt3support.depends = src_gui src_xml src_network src_sql
++   src_tools_rcc.depends = src_corelib src_xml
+    src_tools_uic3.depends = src_qt3support src_xml
++   src_tools_uic.depends = src_corelib src_xml
+    src_tools_idc.depends = src_corelib
+    src_tools_activeqt.depends = src_tools_idc src_gui
+    src_plugins.depends = src_gui src_sql src_svg
+--- src/tools/uic/uic.pro
++++ src/tools/uic/uic.pro
+@@ -1,14 +1,12 @@
+ TEMPLATE = app
+-QT = xml core
+-CONFIG += warn_on console no_batch
++QT = core xml
++CONFIG += warn_on console no_batch core
+ CONFIG -= app_bundle
+ build_all:!build_pass {
+     CONFIG -= build_all
+     CONFIG += release
+ }
+ 
+-unix:!contains(QT_CONFIG, zlib):LIBS        += -lz
+-
+ TARGET = uic
+ DESTDIR = ../../../bin
+ 
+@@ -17,7 +15,6 @@ DEFINES	       += QT_BOOTSTRAPPED QT_UIC
+ 	          QT_NO_SYSTEMLOCALE QT_NO_GEOM_VARIANT
+ win32:DEFINES += QT_NODLL
+ 
+-CONFIG -= qt
+ INCLUDEPATH	 = ../../corelib/arch/generic $$QT_BUILD_TREE/include . \
+                    $$QT_BUILD_TREE/include/QtCore $$QT_BUILD_TREE/include/QtXml
+ DEPENDPATH	+= $$INCLUDEPATH ../../corelib/base ../../corelib/tools ../../corelib/io ../../corelib/codecs ../../xml
+@@ -27,76 +24,11 @@ include(cpp/cpp.pri)
+ 
+ SOURCES += main.cpp
+ 
+-
+-# Qt tools needed to link rcc
+-SOURCES	+= ../../corelib/global/qglobal.cpp \
+-           ../../corelib/global/qnumeric.cpp \
+-	   ../../corelib/io/qbuffer.cpp \
+-	   ../../corelib/io/qdir.cpp		\
+-	   ../../corelib/io/qdiriterator.cpp		\
+-	   ../../corelib/io/qfile.cpp		\
+-	   ../../corelib/io/qfileinfo.cpp	\
+-	   ../../corelib/io/qfsfileengine.cpp	\
+-	   ../../corelib/io/qfsfileengine_iterator.cpp	\
+-	   ../../corelib/io/qiodevice.cpp	\
+-	   ../../corelib/io/qtemporaryfile.cpp \
+-	   ../../corelib/io/qtextstream.cpp \
+-	   ../../corelib/io/qurl.cpp \
+-	   ../../corelib/tools/qbytearraymatcher.cpp \
+-	   ../../corelib/tools/qdatetime.cpp	\
+-	   ../../corelib/tools/qhash.cpp		\
+-	   ../../corelib/tools/qlistdata.cpp		\
+-	   ../../corelib/tools/qlocale.cpp \
+-	   ../../corelib/tools/qmap.cpp		\
+-	   ../../corelib/tools/qstring.cpp		\
+-	   ../../corelib/tools/qstringlist.cpp	\
+-	   ../../corelib/tools/qvector.cpp          \
+-           ../../corelib/io/qabstractfileengine.cpp  \
+-           ../../corelib/tools/qbytearray.cpp	\
+-           ../../corelib/tools/qbitarray.cpp	\
+-           ../../corelib/tools/qvsnprintf.cpp \
+-           ../../corelib/tools/qregexp.cpp \
+-           ../../corelib/kernel/qmetatype.cpp \
+-           ../../corelib/kernel/qvariant.cpp \
+-           ../../corelib/codecs/qtextcodec.cpp \
+-           ../../corelib/codecs/qutfcodec.cpp \
+-           ../../corelib/codecs/qisciicodec.cpp \
+-           ../../corelib/codecs/qtsciicodec.cpp \
+-           ../../corelib/codecs/qlatincodec.cpp \
+-           ../../corelib/codecs/qsimplecodec.cpp \
+-           ../../xml/qdom.cpp \
+-           ../../xml/qxmlutils_p.cpp \
+-	   ../../xml/qxml.cpp
+-
+-unix:SOURCES += ../../corelib/io/qfsfileengine_unix.cpp ../../corelib/io/qfsfileengine_iterator_unix.cpp
+-
+-win32:SOURCES += ../../corelib/io/qfsfileengine_win.cpp ../../corelib/io/qfsfileengine_iterator_win.cpp
+-
+ macx: {
+    QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.3 #enables weak linking for 10.3 (exported)
+-   SOURCES += ../../corelib/kernel/qcore_mac.cpp
+    LIBS += -framework CoreServices
+ }
+ 
+-contains(QT_CONFIG, zlib) {
+-   INCLUDEPATH += ../../3rdparty/zlib
+-   SOURCES+= \
+-	../3rdparty/zlib/adler32.c \
+-	../3rdparty/zlib/compress.c \
+-	../3rdparty/zlib/crc32.c \
+-	../3rdparty/zlib/deflate.c \
+-	../3rdparty/zlib/gzio.c \
+-	../3rdparty/zlib/inffast.c \
+-	../3rdparty/zlib/inflate.c \
+-	../3rdparty/zlib/inftrees.c \
+-	../3rdparty/zlib/trees.c \
+-	../3rdparty/zlib/uncompr.c \
+-	../3rdparty/zlib/zutil.c
+-} else:!contains(QT_CONFIG, no-zlib) {
+-   unix:LIBS += -lz
+-#  win32:LIBS += libz.lib
+-}
+-
+ target.path=$$[QT_INSTALL_BINS]
+ INSTALLS += target
+ 
+--- src/tools/rcc/rcc.pro
++++ src/tools/rcc/rcc.pro
+@@ -1,5 +1,6 @@
+ TARGET = rcc
+-CONFIG += console
++QT = core xml
++CONFIG += console core
+ mac:CONFIG -= app_bundle
+ build_all:!build_pass {
+     CONFIG -= build_all
+@@ -12,7 +13,6 @@ DEFINES	       += QT_BOOTSTRAPPED \
+ 
+ win32:DEFINES += QT_NODLL
+ 
+-CONFIG -= qt
+ INCLUDEPATH	 = ../../corelib/arch/generic $$QT_BUILD_TREE/include . \
+                    $$QT_BUILD_TREE/include/QtCore $$QT_BUILD_TREE/include/QtXml
+ DEPENDPATH	+= $$INCLUDEPATH ../../corelib/base ../../corelib/tools ../../corelib/io ../../corelib/codecs ../../xml
+@@ -20,75 +20,12 @@ DEPENDPATH	+= $$INCLUDEPATH ../../coreli
+ HEADERS += rcc.h
+ SOURCES += main.cpp rcc.cpp
+ 
+-# Qt tools needed to link rcc
+-SOURCES	+= ../../corelib/global/qglobal.cpp \
+-           ../../corelib/global/qnumeric.cpp \
+-	   ../../corelib/io/qbuffer.cpp \
+-	   ../../corelib/io/qdir.cpp		\
+-	   ../../corelib/io/qdiriterator.cpp		\
+-	   ../../corelib/io/qfile.cpp		\
+-	   ../../corelib/io/qfileinfo.cpp	\
+-	   ../../corelib/io/qfsfileengine.cpp	\
+-	   ../../corelib/io/qfsfileengine_iterator.cpp	\
+-	   ../../corelib/io/qiodevice.cpp	\
+-	   ../../corelib/io/qtemporaryfile.cpp \
+-	   ../../corelib/io/qtextstream.cpp \
+-	   ../../corelib/tools/qbytearraymatcher.cpp \
+-	   ../../corelib/tools/qdatetime.cpp	\
+-	   ../../corelib/tools/qhash.cpp		\
+-	   ../../corelib/tools/qlistdata.cpp		\
+-	   ../../corelib/tools/qlocale.cpp \
+-	   ../../corelib/tools/qmap.cpp		\
+-	   ../../corelib/tools/qstring.cpp		\
+-	   ../../corelib/tools/qstringlist.cpp	\
+-	   ../../corelib/kernel/qvariant.cpp          \
+-	   ../../corelib/kernel/qmetatype.cpp          \
+-	   ../../corelib/io/qurl.cpp          \
+-	   ../../corelib/tools/qvector.cpp          \
+-           ../../corelib/io/qabstractfileengine.cpp  \
+-           ../../corelib/tools/qbytearray.cpp	\
+-           ../../corelib/tools/qbitarray.cpp	\
+-           ../../corelib/tools/qvsnprintf.cpp \
+-           ../../corelib/tools/qregexp.cpp \
+-           ../../corelib/codecs/qtextcodec.cpp \
+-           ../../corelib/codecs/qutfcodec.cpp \
+-           ../../corelib/codecs/qisciicodec.cpp \
+-           ../../corelib/codecs/qtsciicodec.cpp \
+-           ../../corelib/codecs/qlatincodec.cpp \
+-           ../../corelib/codecs/qsimplecodec.cpp \
+-           ../../xml/qdom.cpp \
+-           ../../xml/qxmlutils_p.cpp \
+-	   ../../xml/qxml.cpp 
+-
+-unix:SOURCES += ../../corelib/io/qfsfileengine_unix.cpp ../../corelib/io/qfsfileengine_iterator_unix.cpp
+-
+-win32:SOURCES += ../../corelib/io/qfsfileengine_win.cpp ../../corelib/io/qfsfileengine_iterator_win.cpp
+-
+ macx: {
+    QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.3 #enables weak linking for 10.3 (exported)
+    SOURCES += ../../corelib/kernel/qcore_mac.cpp
+    LIBS += -framework CoreServices
+ }
+ 
+-contains(QT_CONFIG, zlib) {
+-   INCLUDEPATH += ../../3rdparty/zlib
+-   SOURCES+= \
+-	../3rdparty/zlib/adler32.c \
+-	../3rdparty/zlib/compress.c \
+-	../3rdparty/zlib/crc32.c \
+-	../3rdparty/zlib/deflate.c \
+-	../3rdparty/zlib/gzio.c \
+-	../3rdparty/zlib/inffast.c \
+-	../3rdparty/zlib/inflate.c \
+-	../3rdparty/zlib/inftrees.c \
+-	../3rdparty/zlib/trees.c \
+-	../3rdparty/zlib/uncompr.c \
+-	../3rdparty/zlib/zutil.c
+-} else:!contains(QT_CONFIG, no-zlib) {
+-   unix:LIBS += -lz
+-#  win32:LIBS += libz.lib
+-}
+-
+ target.path=$$[QT_INSTALL_BINS]
+ INSTALLS += target
+ 
+--- src/src.pro
++++ src/src.pro
+@@ -3,7 +3,7 @@ TEMPLATE = subdirs
+ # this order is important
+ unset(SRC_SUBDIRS)
+ win32:SRC_SUBDIRS += src_winmain
+-SRC_SUBDIRS += src_tools_moc src_tools_rcc src_tools_uic src_corelib src_xml src_gui src_sql src_network src_svg src_script
++SRC_SUBDIRS += src_tools_moc src_corelib src_xml src_tools_rcc src_tools_uic src_gui src_sql src_network src_svg src_script
+ contains(QT_CONFIG, opengl): SRC_SUBDIRS += src_opengl
+ contains(QT_CONFIG, qt3support): SRC_SUBDIRS += src_qt3support
+ !cross_compile {

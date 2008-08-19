@@ -1,0 +1,11 @@
+--- configure
++++ configure
+@@ -1750,7 +1750,7 @@
+         ;;
+      Linux:*)
+         case "$UNAME_MACHINE" in
+-            x86_64|s390x)
++            x86_64|s390x|ppc64)
+                 PLATFORM=linux-g++-64
+                 ;;
+             *)

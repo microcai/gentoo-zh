@@ -1,0 +1,32 @@
+qt-bugs@ issue : N217716
+Trolltech task ID : 217788
+bugs.kde.org number : no report
+applied: yes
+author: Tobias Koenig <tokoe@kde.org>
+
+This patch will fix the handling of connections to
+mysql server in a multithreaded environment
+
+--- src/sql/drivers/mysql/qsql_mysql.cpp	(revision 804421)
++++ src/sql/drivers/mysql/qsql_mysql.cpp	(working copy)
+@@ -1215,6 +1215,10 @@
+     d->preparedQuerysEnabled = false;
+ #endif
+ 
++#ifndef QT_NO_THREAD
++    mysql_thread_init();
++#endif
++
+     setOpen(true);
+     setOpenError(false);
+     return true;
+@@ -1223,6 +1227,9 @@
+ void QMYSQLDriver::close()
+ {
+     if (isOpen()) {
++#ifndef QT_NO_THREAD
++        mysql_thread_end();
++#endif
+         mysql_close(d->mysql);
+         setOpen(false);
+         setOpenError(false);

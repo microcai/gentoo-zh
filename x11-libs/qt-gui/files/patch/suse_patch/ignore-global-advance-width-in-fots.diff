@@ -1,0 +1,11 @@
+--- src/gui/text/qfontengine_ft.cpp
++++ src/gui/text/qfontengine_ft.cpp
+@@ -507,7 +507,7 @@
+     kerning_pairs_loaded = false;
+     transform = false;
+     antialias = true;
+-    default_load_flags = 0;
++    default_load_flags = FT_LOAD_IGNORE_GLOBAL_ADVANCE_WIDTH;
+     subpixelType = Subpixel_None;
+     defaultGlyphFormat = Format_None;
+     canUploadGlyphsToServer = false;

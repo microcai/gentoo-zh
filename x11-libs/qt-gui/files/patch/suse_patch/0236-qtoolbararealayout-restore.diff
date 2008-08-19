@@ -1,0 +1,23 @@
+qt-bugs@ issue : N218280
+Trolltech task ID : 218280
+bugs.kde.org number : none
+applied: yes
+author: TT
+
+QMainWindow::restoreState doesn't layout toolbars properly, regression
+from Qt-4.4
+
+Index: src/gui/widgets/qtoolbararealayout.cpp
+===================================================================
+--- src/gui/widgets/qtoolbararealayout.cpp	(revision 829449)
++++ src/gui/widgets/qtoolbararealayout.cpp	(working copy)
+@@ -1323,7 +1323,8 @@ bool QToolBarAreaLayout::restoreState(QD
+                 toolBar->setVisible(shown);
+                 toolBar->d_func()->setWindowState(floating, true, rect);
+ 
+-                item.extraSpace = item.size - pick(line.o, item.sizeHint());
++                //if it is -1, it means we should use the default size
++                item.extraSpace = (item.size == -1) ? 0 : item.size - pick(line.o, item.sizeHint());
+ 
+ 
+                 line.toolBarItems.append(item);

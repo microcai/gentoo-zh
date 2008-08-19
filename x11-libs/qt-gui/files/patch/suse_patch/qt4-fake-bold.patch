@@ -1,0 +1,227 @@
+--- src/gui/text/qfontdatabase_x11.cpp
++++ src/gui/text/qfontdatabase_x11.cpp
+@@ -783,6 +783,13 @@
+                        ? QFont::StyleOblique
+                        : QFont::StyleNormal);
+ 
++    FcBool embolden;
++#ifdef FC_EMBOLDEN
++    if (FcPatternGetBool(pattern, FC_EMBOLDEN, 0, &embolden) != FcResultMatch)
++#endif
++       embolden = false;
++    if(embolden)
++        fontDef.weight=QFont::Bold;
+ 
+     FcBool scalable;
+     if (FcPatternGetBool(pattern, FC_SCALABLE, 0, &scalable) != FcResultMatch)
+@@ -1329,10 +1336,25 @@
+                 if (! enc) continue; // should not happen either
+ 
+                 QtFontStyle::Key key = style->key;
+-
++                // does this style have a bold equivalent?
++                key.weight = QFont::Bold;
++                QtFontStyle *equiv = foundry->style(key);
++                if (!equiv) {
++                    // let's fake one...
++                    equiv = foundry->style(key, true);
++                    equiv->smoothScalable = true;
++
++                    QtFontSize *equiv_size = equiv->pixelSize(SMOOTH_SCALABLE, true);
++                    QtFontEncoding *equiv_enc = equiv_size->encodingID(-1, 0, 0, 0, 0, true);
++
++                    // keep the same pitch
++                    equiv_enc->pitch = enc->pitch;
++                    key.weight = QFont::Normal;
++                }
+                 // does this style have an italic equivalent?
+                 key.style = QFont::StyleItalic;
+-                QtFontStyle *equiv = foundry->style(key);
++//                QtFontStyle *equiv = foundry->style(key);
++                equiv = foundry->style( key );
+                 if (equiv) continue;
+ 
+                 // does this style have an oblique equivalent?
+@@ -1449,7 +1471,10 @@
+     else if (request.weight < (QFont::Bold + QFont::Black) / 2)
+         weight_value = FC_WEIGHT_BOLD;
+     FcPatternAddInteger(pattern, FC_WEIGHT, weight_value);
+-
++#ifdef FC_EMBOLDEN
++    if(request.weight == QFont::Bold)
++        FcPatternAddBool(pattern, FC_EMBOLDEN, true);
++#endif
+     int slant_value = FC_SLANT_ROMAN;
+     if (request.style == QFont::StyleItalic)
+         slant_value = FC_SLANT_ITALIC;
+--- src/gui/text/qfontengine_ft.cpp
++++ src/gui/text/qfontengine_ft.cpp
+@@ -65,7 +65,10 @@
+ #include FT_TRUETYPE_TABLES_H
+ #include FT_TYPE1_TABLES_H
+ #include FT_GLYPH_H
+-
++#ifdef FT_SYNTHESIS_H
++#define HAVE_FT_GLYPHSLOT_EMBOLDEN 1
++#include FT_SYNTHESIS_H
++#endif
+ QT_BEGIN_NAMESPACE
+ 
+ /*
+@@ -516,6 +519,7 @@
+     kerning_pairs_loaded = false;
+     transform = false;
+     antialias = true;
++    embolden = false;
+     default_load_flags = FT_LOAD_IGNORE_GLOBAL_ADVANCE_WIDTH;
+     subpixelType = Subpixel_None;
+     defaultGlyphFormat = Format_None;
+@@ -536,10 +540,11 @@
+         freeServerGlyphSet(transformedGlyphSets.at(i).id);
+ }
+ 
+-bool QFontEngineFT::init(FaceId faceId, bool antialias, GlyphFormat defaultFormat)
++bool QFontEngineFT::init(FaceId faceId, bool antialias, GlyphFormat defaultFormat, bool embolden)
+ {
+     defaultGlyphFormat = defaultFormat;
+     this->antialias = antialias;
++    this->embolden = embolden;
+     face_id = faceId;
+     freetype = QFreetypeFace::getFace(face_id);
+     if (!freetype) {
+@@ -680,7 +685,52 @@
+         return 0;
+ 
+     FT_GlyphSlot slot = face->glyph;
+-
++    if(embolden && (face->style_flags & FT_STYLE_FLAG_BOLD) == 0)
++    {
++        //if not antialias and no bitmap, for example, dongwensong English characters.
++        //for DongWenSong Chinese character, if it not antialias, it will use bitmap output.
++        if(!antialias && slot->format == FT_GLYPH_FORMAT_OUTLINE)
++        {
++            int left  = slot->metrics.horiBearingX;
++            int right = slot->metrics.horiBearingX + slot->metrics.width;
++            int top    = slot->metrics.horiBearingY;
++            int bottom = slot->metrics.horiBearingY - slot->metrics.height;
++            int hpixels = TRUNC(right - left)+4;
++            if (hsubpixel)
++                hpixels = hpixels*3 + 8;
++            int width = hpixels;
++            int height = TRUNC(top - bottom);
++            if (hsubpixel) {
++                width /= 3;
++            }
++            int pitch = (format == Format_Mono ? ((width + 31) & ~31) >> 3 :
++                    (format == Format_A8 ? (width + 3) & ~3 : width * 4));
++            int size = pitch * height;
++            uchar *glyph_buffer = new uchar[size];
++
++            slot->bitmap.rows = height*vfactor;
++            slot->bitmap.width = hpixels;
++            slot->bitmap.pitch = format == Format_Mono ? (((width + 31) & ~31) >> 3) : ((slot->bitmap.width + 3) & ~3);
++            slot->bitmap.buffer = new uchar[slot->bitmap.rows*slot->bitmap.pitch];
++            if (!hsubpixel && vfactor == 1)
++                slot->bitmap.buffer = glyph_buffer;
++            else
++                slot->bitmap.buffer = new uchar[slot->bitmap.rows*slot->bitmap.pitch];
++            memset(slot->bitmap.buffer, 0, slot->bitmap.rows*slot->bitmap.pitch);
++            slot->bitmap.pixel_mode = ft_pixel_mode_mono;
++            FT_Matrix matrix;
++            matrix.xx = (hsubpixel ? 3 : 1) << 16;
++            matrix.yy = vfactor << 16;
++            matrix.yx = matrix.xy = 0;
++            FT_Outline_Transform(&slot->outline, &matrix);
++            FT_Outline_Translate (&slot->outline, (hsubpixel ? -3*left +(4<<6) : -left), -bottom*vfactor);
++            FT_Outline_Get_Bitmap(qt_getFreetype(), &slot->outline, &slot->bitmap);
++            slot->format = FT_GLYPH_FORMAT_BITMAP;
++            FT_GlyphSlot_Embolden(slot);
++        }
++        else
++            FT_GlyphSlot_Embolden(slot);
++    }
+     int left  = slot->metrics.horiBearingX;
+     int right = slot->metrics.horiBearingX + slot->metrics.width;
+     int top    = slot->metrics.horiBearingY;
+@@ -725,6 +775,8 @@
+     top = CEIL(top);
+ 
+     int hpixels = TRUNC(right - left);
++    if(!antialias && embolden && (face->style_flags & FT_STYLE_FLAG_BOLD) == 0 && transform)
++        hpixels += 4;
+     if (hsubpixel)
+         hpixels = hpixels*3 + 8;
+     info.width = hpixels;
+@@ -1301,6 +1353,8 @@
+         FT_GlyphSlot g = face->glyph;
+         if (g->format != FT_GLYPH_FORMAT_OUTLINE)
+             continue;
++        if (embolden && (face->style_flags & FT_STYLE_FLAG_BOLD) == 0)
++            FT_GlyphSlot_Embolden (g);
+         QFreetypeFace::addGlyphToPath(face, g, positions[gl], path, xsize, ysize);
+     }
+     unlockFace();
+--- src/gui/text/qfontengine_ft_p.h
++++ src/gui/text/qfontengine_ft_p.h
+@@ -257,7 +257,7 @@
+     QFontEngineFT(const QFontDef &fd);
+     virtual ~QFontEngineFT();
+ 
+-    bool init(FaceId faceId, bool antiaalias, GlyphFormat defaultFormat = Format_None);
++    bool init(FaceId faceId, bool antiaalias, GlyphFormat defaultFormat = Format_None, bool embolden=false);
+ 
+     virtual HB_Error getPointInOutline(HB_Glyph glyph, int flags, hb_uint32 point, HB_Fixed *xpos, HB_Fixed *ypos, hb_uint32 *nPoints);
+ 
+@@ -273,6 +273,7 @@
+     int default_load_flags;
+ 
+     bool antialias;
++    bool embolden;
+     bool outline_drawing;
+     bool transform;
+     SubpixelAntialiasingType subpixelType;
+--- src/gui/text/qfontengine_x11.cpp
++++ src/gui/text/qfontengine_x11.cpp
+@@ -878,7 +878,7 @@
+ 
+ 
+ 
+-Q_GUI_EXPORT void qt_x11ft_convert_pattern(FcPattern *pattern, QByteArray *file_name, int *index, bool *antialias)
++static void qt_x11ft_convert_pattern(FcPattern *pattern, QByteArray *file_name, int *index, bool *antialias, bool *embolden)
+ {
+     FcChar8 *fileName;
+     FcPatternGetString(pattern, FC_FILE, 0, &fileName);
+@@ -888,6 +888,11 @@
+     FcBool b;
+     if (FcPatternGetBool(pattern, FC_ANTIALIAS, 0, &b) == FcResultMatch)
+         *antialias = b;
++    b = false;
++#ifdef FC_EMBOLDEN
++    if (FcPatternGetBool (pattern,FC_EMBOLDEN, 0, &b) == FcResultMatch)
++#endif
++        *embolden = b;
+ }
+ 
+ 
+@@ -897,9 +902,10 @@
+ //     FcPatternPrint(pattern);
+ 
+     bool antialias = X11->fc_antialias;
++    bool embolden = false;
+     QByteArray file_name;
+     int face_index;
+-    qt_x11ft_convert_pattern(pattern, &file_name, &face_index, &antialias);
++    qt_x11ft_convert_pattern(pattern, &file_name, &face_index, &antialias, &embolden);
+     QFontEngine::FaceId face_id;
+     face_id.filename = file_name;
+     face_id.index = face_index;
+@@ -972,8 +978,7 @@
+             defaultFormat = Format_Mono;
+     }
+ #endif
+-
+-    if (!init(face_id, antialias, defaultFormat)) {
++    if (!init(face_id, antialias, defaultFormat, embolden)) {
+         FcPatternDestroy(pattern);
+         return;
+     }

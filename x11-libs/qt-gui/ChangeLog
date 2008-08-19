@@ -1,0 +1,54 @@
+# ChangeLog for x11-libs/qt-gui
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.11 2008/08/11 13:03:14 yngwin Exp $
+
+*qt-gui-4.4.1 (11 Aug 2008)
+
+  11 Aug 2008; Ben de Groot <yngwin@gentoo.org> +qt-gui-4.4.1.ebuild:
+  Version bump
+
+  13 Jun 2008; Ingmar Vanhassel <ingmar@gentoo.org> qt-gui-4.4.0.ebuild:
+  Make all split Qt4 ebuilds block the old monolithic ebuild.
+
+  30 May 2008; Jeroen Roovers <jer@gentoo.org> qt-gui-4.4.0.ebuild:
+  Marked ~hppa (bug #223557).
+
+  27 May 2008; Raúl Porcel <armin76@gentoo.org> qt-gui-4.4.0.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #223557
+
+  25 May 2008; Markus Rothe <corsair@gentoo.org> qt-gui-4.4.0.ebuild:
+  Added ~ppc/~ppc64
+
+  16 May 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -qt-gui-4.4.0_rc1.ebuild:
+  Old.
+
+*qt-gui-4.4.0 (15 May 2008)
+
+  15 May 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +files/qt-gui-4.4.0-scrollbars.patch, +qt-gui-4.4.0.ebuild:
+  Version bump to Qt-4.4.0.
+
+  10 Apr 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -qt-gui-4.4.0_beta1.ebuild, +qt-gui-4.4.0_rc1.ebuild:
+  Version bump qt-gui to 4.4.0_rc1. Thanks to Bo Andresen and Bernd
+  Steinhauser.
+
+  05 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  -qt-gui-4.4.0_rc1.ebuild:
+  Old.
+
+*qt-gui-4.4.0_beta1 (05 Mar 2008)
+
+  05 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  +qt-gui-4.4.0_beta1.ebuild:
+  Added Qt-4.4.0_beta, note that the RC1 is an accidentally mislabelled
+  `technical preview`, so this will appear as a downgrade if you installed
+  that version.
+
+*qt-gui-4.4.0_rc1 (21 Dec 2007)
+
+  21 Dec 2007; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
+  +qt-gui-4.4.0_rc1.ebuild:
+  Initial ebuild
+

@@ -1,0 +1,20 @@
+qt-bugs@ issue : N218453
+Trolltech task ID : none
+bugs.kde.org number : none
+applied: no
+author: Michael Leupold <lemma@confuego.org>
+
+This patch dispatches synthesized timeout messages directly
+after handling them. This is neccessary in order to receive timeout
+errors to asynchroneous messages.
+
+--- src/dbus/qdbusintegrator.cpp	(Revision 827848)
++++ src/dbus/qdbusintegrator.cpp	(Arbeitskopie)
+@@ -988,6 +988,7 @@
+ {
+     DBusTimeout *timeout = timeouts.value(e->timerId(), 0);
+     q_dbus_timeout_handle(timeout);
++    doDispatch();
+ }
+ 
+ void QDBusConnectionPrivate::customEvent(QEvent *e)

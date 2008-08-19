@@ -1,0 +1,23 @@
+--- src/corelib/kernel/qeventdispatcher_unix.cpp
++++ src/corelib/kernel/qeventdispatcher_unix.cpp
+@@ -534,6 +534,20 @@ int QTimerInfoList::activateTimers()
+ 
+         if (!firstTimerInfo) {
+             firstTimerInfo = currentTimerInfo;
++            QObject* o = firstTimerInfo->obj;
++            static int debug_timer = -1;
++            if (debug_timer < 0)
++                debug_timer = getenv("QT_DEBUG_TIMER") ? 1 : 0;
++            if (debug_timer > 0) {
++                QString objPath = o->objectName();
++                for (; o->parent(); o = o->parent())
++                    if (!o->parent()->objectName().isEmpty())
++                        objPath.prepend(o->parent()->objectName() + "/");
++                    else
++                        objPath.prepend(QLatin1String("<") + o->parent()->metaObject()->className() + QLatin1String(">/"));
++                qDebug("activating %d ms timer for %s", firstTimerInfo->interval.tv_sec * 1000
++                        + firstTimerInfo->interval.tv_usec / 1000, qPrintable(objPath));
++            }
+         } else if (firstTimerInfo == currentTimerInfo) {
+             // avoid sending the same timer multiple times
+             break;

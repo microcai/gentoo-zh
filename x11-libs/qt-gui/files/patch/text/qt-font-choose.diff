@@ -1,0 +1,19 @@
+--- src/gui/text/qfontdatabase_x11.cpp
++++ src/gui/text/qfontdatabase_x11.cpp
+@@ -1484,14 +1484,14 @@
+         if (!family.isEmpty()) {
+             QByteArray cs = family.toUtf8();
+             value.u.s = (const FcChar8 *)cs.data();
+-            FcPatternAddWeak(pattern, FC_FAMILY, value, FcTrue);
++            FcPatternAdd(pattern, FC_FAMILY, value, FcTrue);
+         }
+         if (i == 0) {
+             ::match(script, request, family, foundry, -1, &desc);
+             if (!foundry.isEmpty()) {
+                 QByteArray cs = foundry.toUtf8();
+                 value.u.s = (const FcChar8 *)cs.data();
+-                FcPatternAddWeak(pattern, FC_FOUNDRY, value, FcTrue);
++                FcPatternAdd(pattern, FC_FOUNDRY, value, FcTrue);
+             }
+         }
+     }

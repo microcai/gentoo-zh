@@ -1,0 +1,11 @@
+--- configure
++++ configure
+@@ -474,7 +474,7 @@
+ unset QTDIR
+ 
+ # the minimum version of libdbus-1 that we require:
+-MIN_DBUS_1_VERSION=0.62
++MIN_DBUS_1_VERSION=0.60
+ 
+ # initalize internal variables
+ CFG_CONFIGURE_EXIT_ON_ERROR=yes

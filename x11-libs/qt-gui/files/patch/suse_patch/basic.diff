@@ -1,0 +1,65 @@
+--- src/gui/text/qfontengine_ft.cpp	2008-07-22 15:16:43.000000000 +0800
++++ src/gui/text/qfontengine_ft.cpp	2008-07-23 07:36:02.000000000 +0800
+@@ -636,14 +636,10 @@
+     int load_flags = FT_LOAD_DEFAULT | default_load_flags;
+     if (outline_drawing) {
+         load_flags = FT_LOAD_NO_BITMAP;
+-    } else if (format == Format_Mono) {
+-        load_flags |= FT_LOAD_TARGET_MONO;
+     } else if (format == Format_A32) {
+         if (subpixelType == QFontEngineFT::Subpixel_RGB || subpixelType == QFontEngineFT::Subpixel_BGR) {
+-            load_flags |= FT_LOAD_TARGET_LCD;
+             hsubpixel = true;
+         } else if (subpixelType == QFontEngineFT::Subpixel_VRGB || subpixelType == QFontEngineFT::Subpixel_VBGR) {
+-            load_flags |= FT_LOAD_TARGET_LCD_V;
+             vfactor = 3;
+         }
+ 
+--- src/gui/text/qfontengine_x11.cpp	2008-07-22 15:16:39.000000000 +0800
++++ src/gui/text/qfontengine_x11.cpp	2008-07-23 07:36:06.000000000 +0800
+@@ -923,19 +923,34 @@
+             case FC_RGBA_VBGR: subpixelType = Subpixel_VBGR; break;
+             default: break;
+         }
+-    }
+-
+ #ifdef FC_HINT_STYLE
+-    {
+-        int hint_style = 0;
+-        if (FcPatternGetInteger (pattern, FC_HINT_STYLE, 0, &hint_style) == FcResultNoMatch)
+-            hint_style = X11->fc_hint_style;
+-        if (hint_style == FC_HINT_NONE)
+-            default_load_flags |= FT_LOAD_NO_HINTING;
+-        else if (hint_style < FC_HINT_FULL)
+-            default_load_flags |= FT_LOAD_TARGET_LIGHT;
+-    }
++        {
++            int hint_style = 0;
++            if (FcPatternGetInteger (pattern, FC_HINT_STYLE, 0, &hint_style) == FcResultNoMatch)
++                hint_style = X11->fc_hint_style;
++
++            switch (hint_style) {
++                case FC_HINT_NONE: default_load_flags |= FT_LOAD_NO_HINTING; break;
++                case FC_HINT_SLIGHT: default_load_flags |= FT_LOAD_TARGET_LIGHT; break;
++                case FC_HINT_MEDIUM:
++                default:
++                    break;
++                case FC_HINT_FULL:
++                    switch (subpixelType) {
++                        case Subpixel_None: break;
++                        case Subpixel_RGB:
++                        case Subpixel_BGR:
++                            default_load_flags |= FT_LOAD_TARGET_LCD; break;
++                        case Subpixel_VRGB:
++                        case Subpixel_VBGR:
++                            default_load_flags |= FT_LOAD_TARGET_LCD_V; break;
++                    }
++            }
++        }
+ #endif
++    }
++    else
++        default_load_flags |= FT_LOAD_TARGET_MONO;
+ 
+ #if defined(FC_AUTOHINT) && defined(FT_LOAD_FORCE_AUTOHINT)
+     {
