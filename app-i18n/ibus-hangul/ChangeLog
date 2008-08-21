@@ -1,0 +1,8 @@
+# ChangeLog for app-i18n/ibus-hangul
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  21 Aug 2008; Hong Hao <oahong@gmail.com> +ibus-hangul-9999.ebuild,
+  +metadata.xml:
+  Initial import from my personal overlay.
+
