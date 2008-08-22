@@ -43,6 +43,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-configure.in-EST.diff
 	epatch "${FILESDIR}"/${P}-gconf-m4.diff
+	epatch "${FILESDIR}"/${P}-gcc4.3.patch
 	AT_M4DIR="m4" eautoreconf
 	gnome2_omf_fix
 }

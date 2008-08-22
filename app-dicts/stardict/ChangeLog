@@ -2,6 +2,10 @@
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.34 2007/03/26 06:49:29 kevquinn Exp $
 
+  22 Aug 2008; Zhang Le <r0bertz@gentoo.org> stardict-3.0.1-r2.ebuild,
+  +files/stardict-3.0.1-gcc4.3.patch:
+  added stardict-3.0.1-gcc4.3.patch
+
   20 Apr 2008; Zhang Le <r0bertz@gentoo.org> stardict-3.0.1-r2.ebuild:
   fixed dependency, >=gnome-base/libgnomeui-2.20
 
