@@ -8,7 +8,7 @@ IUSE=""
 DESCRIPTION="Library for Chinese Phonetic input method"
 HOMEPAGE="http://chewing.csie.net/"
 SRC_URI="http://chewing.csie.net/download/libchewing/${P}.tar.gz
-	http://gentoo-china-overlay.googlecode.com/files/libchewing-0.3.0-patches-fc9.tar.bz2"
+	http://gentoo-china-overlay.googlecode.com/svn/distfiles/libchewing-0.3.0-fc9-patches.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -18,12 +18,7 @@ DEPEND="virtual/libc"
 src_unpack() {
 	unpack "${P}".tar.gz
 	#patches from federa core
-	epatch "${DISTDIR}/${P}"-patches-fc9.tar.bz2
-}
-
-src_compile() {
-	econf || die
-	emake || die
+	epatch "${DISTDIR}/${P}"-fc9-patches.tar.bz2
 }
 
 src_install() {
