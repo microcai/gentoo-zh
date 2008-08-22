@@ -22,7 +22,7 @@ HOMEPAGE="http://ibus.googlecode.com"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="" #~x86 ~amd64
+KEYWORDS="~x86" #~amd64
 IUSE="nls"
 
 # Yeh, we really need cvs, please have a look at Bug #152872
