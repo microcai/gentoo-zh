@@ -39,7 +39,7 @@ src_compile() {
 		--enable-maintainer-mode \
 		--disable-option-checking \
 		--disable-rpath
-		emake || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
