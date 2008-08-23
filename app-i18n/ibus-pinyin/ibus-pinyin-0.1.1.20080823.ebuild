@@ -18,8 +18,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
-RDEPEND="app-i18n/ibus
-	dev-python/pygtk"
+RDEPEND="app-i18n/ibus"
 
 src_unpack() {
 	unpack ${P}.tar.gz
