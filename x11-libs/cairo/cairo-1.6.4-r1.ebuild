@@ -72,6 +72,10 @@ pkg_setup () {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	
+	# libpng's API changed as of 1.2.30, this is backwards compat with
+	# older libpng's as well. bug #235072
+	epatch "${FILESDIR}"/${PN}-1.6.4-libpng-api-change.patch
 
 	if use newspr; then
 		epatch "${FILESDIR}"/${PN}-1.6.4-0ubuntu1.diff.bz2 || die
@@ -79,10 +83,6 @@ src_unpack() {
 
 	# for embedded bitmap font
 	epatch "${FILESDIR}/${PN}"-1.6.4-freetype-Fake-bitmap-glyph-on-certain-condition.patch.bz2 || die
-
-	# libpng's API changed as of 1.2.30, this is backwards compat with
-	# older libpng's as well. bug #235072
-	epatch "${FILESDIR}"/${PN}-1.6.4-libpng-api-change.patch
 
 	# We need to run elibtoolize to ensure correct so versioning on FreeBSD
 	elibtoolize
