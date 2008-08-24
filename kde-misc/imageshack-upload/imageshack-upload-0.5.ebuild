@@ -1,4 +1,4 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -9,11 +9,12 @@ SRC_URI="http://kde-apps.org/CONTENT/content-files/51247-${P/-/_}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="kde"
+IUSE="kde kde4"
 
 DEPEND=""
 RDEPEND="net-misc/curl
-	kde? ( || ( ( kde-base/konqueror kde-base/kdialog ) kde-base/kdebase ) )"
+	kde? ( || ( ( kde-base/konqueror:3.5 kde-base/kdialog:3.5 ) kde-base/kdebase:3.5 ) )
+	kde4? ( kde-base/konqueror:4.1 kde-base/kdialog:4.1 )"
 
 S=$WORKDIR/imageshack_upload
 
