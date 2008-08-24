@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  24 Aug 2008; Yu Yuwei <acevery@gmail.com> metadata.xml:
+  Add necessary USE in metadata for GLEP56
+
   24 Aug 2008; Yu Yuwei <acevery@gmail.com> +cairo-1.6.4-r1.ebuild,
   +files/cairo-1.6.4-libpng-api-change.patch:
   Update to offical ebuild

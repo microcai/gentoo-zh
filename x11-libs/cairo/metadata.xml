@@ -7,5 +7,9 @@
 <name>Yu Yuwei</name>
 </maintainer>
 <longdescription>A vector graphics library with cross-device output support</longdescription>
+<use>
+  <flag name='newspr'>Enable Freetype subpixel font rendering</flag>
+  <flag name='glitz'>Build with glitz support, which replaces some software render operations with Mesa OpenGL operations</flag>
+</use>
 </pkgmetadata>
 
