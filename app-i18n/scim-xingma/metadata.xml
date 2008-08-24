@@ -13,5 +13,6 @@
   <flag name='wubi'>Install WuBi86 Input Method</flag>
   <flag name='erbi-qs'>Install Erbi QingSong Input Method</flag>
   <flag name='cangjie5'>Install CangJie 5th Input Method</flag>
+  <flag name='compose'>Support for Compose Key Style Input Method</flag>
 </use>
 </pkgmetadata>

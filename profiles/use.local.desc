@@ -22,6 +22,6 @@ media-tv/gmlive:nslive - Enable nslive
 media-tv/gmlive:sopcast - Enable sopcast
 media-tv/gmlive:totem - Enable totem plugin
 net-misc/xmuruijie:firewall - Add support for iptables firewall
-x11-libs/cairo:newspr - Enable Freetype subpixel font rendering
 x11-libs/cairo:glitz - Build with glitz support, which replaces some software render operations with Mesa OpenGL operations
+x11-libs/cairo:newspr - Enable Freetype subpixel font rendering
 x11-libs/libXft:newspr - Enable Freetype subpixel font rendering
