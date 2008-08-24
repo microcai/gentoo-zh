@@ -1,0 +1,27 @@
+diff -ru cairo-1.6.4/src/cairo-png.c cairo-1.6.4-mod/src/cairo-png.c
+--- cairo-1.6.4/src/cairo-png.c	2008-04-11 17:07:25.000000000 -0400
++++ cairo-1.6.4-mod/src/cairo-png.c	2008-08-19 17:19:36.682399853 -0400
+@@ -119,6 +119,14 @@
+ }
+ 
+ 
++/* Starting with libpng-1.2.30, we must explicitly specify an output_flush_fn. 
++ * Otherwise, we will segfault if we are writing to a stream. */
++static void
++png_simple_output_flush_fn (png_structp png_ptr)
++{
++    return;
++}
++
+ static cairo_status_t
+ write_png (cairo_surface_t	*surface,
+ 	   png_rw_ptr		write_func,
+@@ -179,7 +187,7 @@
+ 	goto BAIL3;
+ #endif
+ 
+-    png_set_write_fn (png, closure, write_func, NULL);
++    png_set_write_fn (png, closure, write_func, png_simple_output_flush_fn);
+ 
+     switch (image->format) {
+     case CAIRO_FORMAT_ARGB32:
