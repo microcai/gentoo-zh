@@ -8,7 +8,7 @@ EGIT_PATCHES="horizental_orientation.patch"
 
 inherit eutils autotools git
 
-DESCRIPTION="Next Generation Input Bus for Linux"
+DESCRIPTION="Next Generation Input Framework for Linux"
 HOMEPAGE="http://ibus.googlecode.com"
 
 LICENSE="LGPL-2"
@@ -67,9 +67,8 @@ pkg_postinst() {
 	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
 	elog "To use ibus, you should:"
-	elog "1. Have an input engine ,currently both"
-	elog "   app-i18n/ibus-pinyin and app-i18n/ibus-anthy"
-	elog "   are available"
+	elog "1. Get an input engine, currently we already have"
+	elog "   app-i18n/ibus-{pinyin,chewing,anthy,hangul}"
 	elog "2. Set the following in your"
 	elog "   user startup scripts such as .xinitrc or .bashrc"
 	elog
@@ -79,6 +78,7 @@ pkg_postinst() {
 	elog "   ibus &"
 	if ! use qt4; then
 		ewarn "Missing qt4 use flag, Ibus will not work with qt4 applications."
+		ebeep 3
 	fi
 	elog
 

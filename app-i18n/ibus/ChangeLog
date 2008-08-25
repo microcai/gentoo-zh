@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  25 Aug 2008; Hong Hao <oahong@gmail.com> ibus-0.1.1.20080825.ebuild,
+  ibus-9999.ebuild:
+  Updated package desc and info in pkg_postinst phase
+
   25 Aug 2008; Hong Hao <oahong@gmail.com> -ibus-0.1.1.20080823.ebuild,
   +ibus-0.1.1.20080825.ebuild:
   再次更新的最新的snapshot
