@@ -20,8 +20,14 @@ IUSE="nls"
 # To run autopoint you need cvs.
 DEPEND="nls? ( sys-devel/gettext )
 	dev-util/cvs"
-RDEPEND="app-i18n/ibus
-	dev-python/pygtk"
+RDEPEND="app-i18n/ibus"
+
+pkg_setup() {
+	if ! built_with_use 'dev-lang/python:2.5' sqlite; then
+		ewarn "To use ibus-pinyin you need build dev-lang/python with \"sqlite\" USE flag"
+		die "To use ibus-pinyin you need build dev-lang/python against sqlit"
+	fi
+}
 
 src_unpack() {
 	git_src_unpack

@@ -20,6 +20,13 @@ IUSE="nls"
 DEPEND="nls? ( sys-devel/gettext )"
 RDEPEND="app-i18n/ibus"
 
+pkg_setup() {
+	if ! built_with_use 'dev-lang/python:2.5' sqlite; then
+		ewarn "To use ibus-pinyin you need build dev-lang/python with \"sqlite\" USE flag"
+		die "To use ibus-pyinyin you have to build python against sqlite"
+	fi
+}
+
 src_unpack() {
 	unpack ${P}.tar.gz
 	cp "${DISTDIR}/${PYDBTAR}" "${S}"/engine
@@ -38,6 +45,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	ewarn "This is a highly experimental package, please report your bug here:"
+	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
 	elog "To enable this engine you need to run ibus-setup."
 	elog
