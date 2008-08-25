@@ -5,7 +5,7 @@
 EAPI="1"
 inherit eutils
 
-DESCRIPTION="The Anthy Engine for IBus Input Framework"
+DESCRIPTION="Japanese input method Anthy IMEngine for IBus Input Framework"
 HOMEPAGE="http://ibus.googlecode.com"
 SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 
@@ -35,6 +35,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	ewarn "This package is very experimental, please report your bug here:"
+	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
 	elog "To enable this input engine, you need to run ibus-setup."
 	elog

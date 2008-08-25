@@ -7,7 +7,7 @@ EGIT_REPO_URI="git://github.com/phuang/ibus-anthy.git"
 
 inherit autotools eutils git
 
-DESCRIPTION="The Anthy Engine for IBus Input Framework"
+DESCRIPTION="Japanese input method Anthy IMEngine for IBus Input Framework"
 HOMEPAGE="http://ibus.googlecode.com"
 
 LICENSE="LGPL-2"
