@@ -2,6 +2,14 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  25 Aug 2008; Hong Hao <oahong@gmail.com> -ibus-0.1.1.20080823.ebuild,
+  +ibus-0.1.1.20080825.ebuild:
+  再次更新的最新的snapshot
+  
+  加入以下特性：
+  1.可设置是否自动隐藏语言栏；
+  2.支持自定义字体。
+
   21 Aug 2008; Hong Hao <oahong@gmail.com> -ibus-0.1.1.20080815.ebuild,
   +ibus-0.1.1.20080821.ebuild:
   Version Bump to 20080821 snapshot.
