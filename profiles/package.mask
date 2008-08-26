@@ -1,0 +1,3 @@
+# Hong Hao <oahong@gmail.com> (26 Aug 2008)
+# Testing. might not work.
+app-i18n/ibus-table
