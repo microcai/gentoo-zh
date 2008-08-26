@@ -34,6 +34,7 @@ src_compile() {
 		--enable-maintainer-mode \
 		--disable-option-checking \
 		--disable-rpath
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 

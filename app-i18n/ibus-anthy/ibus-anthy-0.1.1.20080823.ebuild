@@ -26,6 +26,7 @@ src_compile() {
 		--enable-maintainer-mode \
 		--disable-option-checking \
 		--disable-rpath
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 
@@ -38,6 +39,6 @@ pkg_postinst() {
 	ewarn "This package is very experimental, please report your bug here:"
 	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
-	elog "To enable this input engine, you need to run ibus-setup."
+	elog "To enable this input engine, you need to run ibus-setup"
 	elog
 }

@@ -17,7 +17,7 @@ else
 	SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 fi
 
-DESCRIPTION="The Hangul Engine for IBus Input Framework"
+DESCRIPTION="Korean input method Hangul IMEngine for IBus Input Framework"
 HOMEPAGE="http://ibus.googlecode.com"
 
 LICENSE="LGPL-2"
@@ -39,6 +39,7 @@ src_compile() {
 		--enable-maintainer-mode \
 		--disable-option-checking \
 		--disable-rpath
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 
