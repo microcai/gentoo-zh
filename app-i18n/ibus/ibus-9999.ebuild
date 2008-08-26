@@ -73,8 +73,8 @@ pkg_postinst() {
 	elog "   user startup scripts such as .xinitrc or .bashrc"
 	elog
 	elog "   export XMODIFIERS=\"@im=ibus\""
-	elog "   export GTK_IM_MODULES=\"ibus\""
-	elog "   export QT_IM_MODULES=\"ibus\""
+	elog "   export GTK_IM_MODULE=\"ibus\""
+	elog "   export QT_IM_MODULE=\"ibus\""
 	elog "   ibus &"
 	if ! use qt4; then
 		ewarn "Missing qt4 use flag, Ibus will not work with qt4 applications."
