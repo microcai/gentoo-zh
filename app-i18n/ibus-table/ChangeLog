@@ -1,0 +1,8 @@
+# ChangeLog for app-i18n/ibus-table
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  26 Aug 2008; Hong Hao <oahong@gmail.com> +ibus-table-9999.ebuild:
+  Initial import a live ebuild for CangJie, ErBi, WuBi and ZengMa input
+  method. (___For_testing_purpose_only___).
+
