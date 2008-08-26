@@ -2,9 +2,13 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Aug 2008; Hong Hao <oahong@gmail.com>
+  ibus-pinyin-0.1.1.20080823.ebuild, ibus-pinyin-9999.ebuild:
+  Fixed typos and enabled maintainer mode by default.
+
   25 Aug 2008; Hong Hao <oahong@gmail.com>
   ibus-pinyin-0.1.1.20080823.ebuild, ibus-pinyin-9999.ebuild, metadata.xml:
-  Fixed rdep. Die if dev-lang/python doesn't build against sqlit (To import
+  Fixed rdep. Die if dev-lang/python doesn't build against sqlite (To import
   pydb we need sqlite USE flag, Thanks goes to acevery)
 
   21 Aug 2008; Hong Hao <oahong@gmail.com>

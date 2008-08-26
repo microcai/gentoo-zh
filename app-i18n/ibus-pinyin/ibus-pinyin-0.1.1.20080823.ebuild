@@ -7,10 +7,9 @@ PYDBTAR="pinyin-database-0.1.10.5.tar.bz2"
 
 inherit eutils
 
-DESCRIPTION="The PinYin Engine for IBus Input Framework"
+DESCRIPTION="PinYin IMEngine for IBus Input Framework"
 HOMEPAGE="http://ibus.googlecode.com"
-SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz
-	http://scim-python.googlecode.com/files/${PYDBTAR}"
+SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz http://scim-python.googlecode.com/files/${PYDBTAR}"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -22,8 +21,8 @@ RDEPEND="app-i18n/ibus"
 
 pkg_setup() {
 	if ! built_with_use 'dev-lang/python:2.5' sqlite; then
-		ewarn "To use ibus-pinyin you need build dev-lang/python with \"sqlite\" USE flag"
-		die "To use ibus-pyinyin you have to build python against sqlite"
+		eerror "To use ibus-pinyin you need build dev-lang/python with \"sqlite\" USE flag!"
+		die "To use ibus-pinyin you have to build dev-lang/python against sqlite!"
 	fi
 }
 
@@ -34,8 +33,10 @@ src_unpack() {
 
 src_compile() {
 	econf $(use_enable nls) \
+		--enable-maintainer-mode \
 		--disable-option-checking \
-		--disable-rpath
+		--disable-rpath \
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 
