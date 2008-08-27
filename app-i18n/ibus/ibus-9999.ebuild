@@ -21,8 +21,7 @@ DEPEND="dev-lang/python:2.5
 	dev-libs/dbus-glib
 	dev-util/cvs
 	qt4? (
-		|| ( ( x11-libs/qt-gui x11-libs/qt-core )
-		>=x11-libs/qt-4.3.2 )
+		|| ( ( x11-libs/qt-gui x11-libs/qt-core ) ( >=x11-libs/qt-4.3.2 ) )
 	)
 	nls? ( sys-devel/gettext )
 	x11-libs/gtk+:2"
@@ -67,8 +66,9 @@ pkg_postinst() {
 	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
 	elog "To use ibus, you should:"
-	elog "1. Get an input engine, currently we already have"
-	elog "   app-i18n/ibus-{pinyin,chewing,anthy,hangul}"
+	elog "1. Get an IM Engine from gentoo-china-overlay."
+	elog "   Run \"emerge -s ibus-\" in your favorite terminal"
+	elog "   for a list of packages we already have."
 	elog "2. Set the following in your"
 	elog "   user startup scripts such as .xinitrc or .bashrc"
 	elog
