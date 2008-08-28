@@ -18,7 +18,7 @@ IUSE=""
 
 DEPEND="media-libs/libpng
 	media-sound/esound
-	gtk+? ( >=x11-libs/gtk+-2.12 )"
+	 >=x11-libs/gtk+-2.12"
 
 RDEPEND="${DEPEND}"
 
