@@ -13,12 +13,12 @@ SLOT="2"
 S=${WORKDIR}
 
 DEPEND="x11-apps/smproxy
-		x11-wm/openbox
-		x11-misc/lxsession
-		x11-misc/lxde-common
-		media-gfx/gpicview
-		app-misc/pcmanfm
-		>=x11-misc/lxpanel-0.2.4"
+	x11-wm/openbox
+	lxde-base/lxsession
+	lxde-base/lxde-common
+	media-gfx/gpicview
+	app-misc/pcmanfm
+	>=lxde-base/lxpanel-0.2.4"
 pkg_postinst() {
     einfo
 	einfo "Install and setup LXDE:"
