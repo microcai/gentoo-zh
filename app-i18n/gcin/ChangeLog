@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/gcin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  28 Aug 2008; scsi <scsichen@gmail.com> -gcin-1.4.3_pre5.ebuild,
+  +gcin-1.4.3_pre6.ebuild, +files/gcin-1.4.3.pre6-qt4_fix.patch:
+  app-i18n/gcin: version bump
+
   07 Aug 2008; scsi <scsichen@gmail.com> -files/gcin-1.0.9-gcc344.patch,
   -files/gcin-1.2.5-qt3.patch, -files/gcin-1.2.7-gtkaltgr.patch,
   -files/gcin-1.2.7-pho.patch, -files/gcin-qtimm_fix-1.2.8.patch,
