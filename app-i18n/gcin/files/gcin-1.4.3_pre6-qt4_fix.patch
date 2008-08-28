@@ -17,9 +17,8 @@ diff -Nur gcin-1.4.3.pre6.orig/qt4-im/Makefile gcin-1.4.3.pre6/qt4-im/Makefile
  include ../config.mak
  QT=qt4
 -QTIM=$(QT)/plugins/lib/inputmethods
--IMMODULES=$(libdir)/$(QTIM)
 +QTIM=$(QT)/plugins/inputmethods
-+IMMODULES=$(DESTDIR)/$(libdir)/$(QTIM)
+ IMMODULES=$(libdir)/$(QTIM)
  ifeq ($(LIB), lib64)
  	IMMODULES_LOCAL=/usr/lib/qt4/plugins/lib64/inputmethods
  else
@@ -34,7 +33,7 @@ diff -Nur gcin-1.4.3.pre6.orig/qt4-im/Makefile gcin-1.4.3.pre6/qt4-im/Makefile
  OBJS= moc_gcin-qt.o gcin-qt.o im-gcin-qt.o gcin-imcontext-qt.o
  .SUFFIXES:	.c .cpp .a .so .E .h
 -LDFLAGS=-L/usr/lib/$(QT)/$(LIB) -L/usr/X11R6/$(LIB) -L../im-client -lQtGui -lQtCore -lmng -ljpeg -lpng -lz \
-+LDFLAGS=-L$(libdir)/$(QT) -L/usr/X11R6/$(LIB) -L../im-client -lQtGui -lQtCore -lmng -ljpeg -lpng -lz \
++LDFLAGS=-L/usr/$(LIB)/$(QT) -L/usr/X11R6/$(LIB) -L../im-client -lQtGui -lQtCore -lmng -ljpeg -lpng -lz \
  -lXrender -lXrandr  -lXft -lfontconfig -lgcin-im-client \
  -lXext -lX11 -lm -lSM -lICE -ldl -lpthread
  all:    im-gcin.so
