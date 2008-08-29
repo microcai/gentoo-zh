@@ -3,7 +3,21 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
+	<email>acevery@gmail.org</email>
+	<name>Yu Yuwei</name>
 	<email>oahong@gmail.com</email>
 	<name>Hong Hao</name>
 </maintainer>
+<longdescription lang="C">
+	IBus-Table - Table based Input Method Framework for IBus
+</longdescription>
+<use>
+  <flag name='zhengma'>Generate ZhengMa Engine</flag>
+  <flag name='wubi98'>Generate WuBi98 Engine</flag>
+  <flag name='wubi86'>Generate WuBi86 Engine</flag>
+  <flag name='cangjie5'>Generate CangJie5 Engine</flag>
+  <flag name='erbi-qs'>Generate ErBi-QS Engine</flag>
+  <flag name='additional'>Generate additional Engine</flag>
+  <flag name='extra-phrases'>Add extra phrases into built Engine</flag>
+</use>
 </pkgmetadata>
