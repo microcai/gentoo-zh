@@ -25,7 +25,7 @@ src_compile() {
 	econf $(use_enable nls) \
 		--enable-maintainer-mode \
 		--disable-option-checking \
-		--disable-rpath
+		--disable-rpath \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
