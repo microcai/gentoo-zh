@@ -6,8 +6,7 @@ EAPI="1"
 inherit eutils
 
 if [[ ${PV} == 9999 ]] ; then
-	#EGIT_REPO_URI="git://github.com/acevery/ibus-table.git"
-	EGIT_REPO_URI="/home/acevery/study/programing/git-source/ibus-table"
+	EGIT_REPO_URI="git://github.com/acevery/ibus-table.git"
 	inherit autotools git
 else
 	SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
