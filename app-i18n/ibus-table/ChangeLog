@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  29 Aug 2008; Hong Hao <oahong@gmail.com>
+  +ibus-table-0.1.1.20080829.ebuild, ibus-table-9999.ebuild, metadata.xml:
+  Added 20080829 snapshot. Fixed some QA issues.
+
   26 Aug 2008; Hong Hao <oahong@gmail.com> +ibus-table-9999.ebuild:
   Initial import a live ebuild for CangJie, ErBi, WuBi and ZengMa input
   method. (___For_testing_purpose_only___).

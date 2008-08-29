@@ -5,38 +5,26 @@
 EAPI="1"
 inherit eutils
 
-if [[ ${PV} == 9999 ]] ; then
-	EGIT_REPO_URI="git://github.com/acevery/ibus-table.git"
-	inherit autotools git
-else
-	SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
-fi
-
 DESCRIPTION="The Table Engine for IBus Input Framework"
+SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 HOMEPAGE="http://ibus.googlecode.com"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="" #~x86 ~amd64
+KEYWORDS="~x86" #~amd64
 IUSE="nls zhengma wubi86 wubi98 cangjie5 erbi-qs +additional +extra-phrases"
 
 # To run autopoint you need cvs.
 RDEPEND="app-i18n/ibus
 	dev-lang/python:2.5"
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )
-	dev-util/cvs"
+	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
 	if ! built_with_use 'dev-lang/python:2.5' sqlite; then
-		eerror "You need build dev-lang/python-2.5 with \"sqlite\" USE flag!"
-		die "You need build dev-lang/python-2.5 with \"sqlite\" USE flag!"
+		eerror "You have to build dev-lang/python-2.5 with \"sqlite\" USE flag!"
+		die "You have to build dev-lang/python-2.5 with \"sqlite\" USE flag!"
 	fi
-}
-
-src_unpack() {
-	git_src_unpack
-	autopoint && eautoreconf
 }
 
 src_compile() {
@@ -63,6 +51,6 @@ pkg_postinst() {
 	ewarn "This package is very experimental, please report your bug here:"
 	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
-	elog "Don't forget to run ibus-setup and enable the IM Engine you want to use!"
+	elog "Don't forget to run ibus-setup and enable the IM Engine you need!"
 	elog
 }
