@@ -15,14 +15,14 @@ SLOT="0"
 KEYWORDS=""
 IUSE="nls"
 
-RDEPEND="app-i18n/ibus
-	app-i18n/anthy
-	dev-lang/python:2.5"
 # Yeh, autopoint needs cvs, please have a look at Bug #152872
-DEPEND="${RDEPEND}
+DEPEND="app-i18n/anthy
+	dev-lang/python:2.5
 	dev-lang/swig
 	dev-util/cvs
 	nls? ( sys-devel/gettext )"
+RDEPEND="app-i18n/ibus
+	app-i18n/anthy"
 
 src_unpack() {
 	git_src_unpack
@@ -47,6 +47,6 @@ pkg_postinst() {
 	ewarn "This package is very experimental, please report your bug here:"
 	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
-	elog "To enable this input engine, you need to run ibus-setup!"
+	elog "To enable this input engine, you need to run ibus-setup"
 	elog
 }

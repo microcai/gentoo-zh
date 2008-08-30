@@ -25,21 +25,20 @@ SLOT="0"
 KEYWORDS="" #~x86 ~amd64
 IUSE="nls"
 
-RDEPEND="app-i18n/ibus
-	app-i18n/libhangul
-	dev-lang/python:2.5"
 # Yeh, we really need cvs, please have a look at Bug #152872
 # FIXME: it's really a mess, someone please fix the depends.
 DEPEND="${EXTDEPEND}
-	${RDEPEND}
+	app-i18n/libhangul
+	dev-lang/python:2.5
 	dev-lang/swig
 	nls? ( sys-devel/gettext )"
+RDEPEND="app-i18n/ibus"
 
 src_compile() {
 	econf $(use_enable nls) \
 		--enable-maintainer-mode \
 		--disable-option-checking \
-		--disable-rpath \
+		--disable-rpath
 		|| die "econf failed"
 	emake || die "emake failed"
 }
@@ -53,6 +52,6 @@ pkg_postinst() {
 	ewarn "This package is very experimental, please report your bug here:"
 	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
-	elog "To enable this input engine, you need to run ibus-setup!"
+	elog "To enable this input engine, you need to run ibus-setup"
 	elog
 }

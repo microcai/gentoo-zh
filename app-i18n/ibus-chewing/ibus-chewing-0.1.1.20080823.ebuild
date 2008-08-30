@@ -22,25 +22,23 @@ HOMEPAGE="http://ibus.googlecode.com"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86" # ~amd64
+KEYWORDS="~x86"
 IUSE="nls"
 
-RDEPEND="app-i18n/ibus
-	dev-libs/libchewing
-	dev-lang/python:2.5"
 # Yeh, we really need cvs, please have a look at Bug #152872
 DEPEND="${EXTDEPEND}
-	${RDEPEND}
+	dev-libs/libchewing
+	dev-lang/python:2.5
 	dev-lang/swig
 	nls? ( sys-devel/gettext )"
+RDEPEND="app-i18n/ibus"
 
 src_compile() {
 	econf $(use_enable nls) \
 		--enable-maintainer-mode \
 		--disable-option-checking \
-		--disable-rpath \
-		|| die "econf failed"
-	emake || die "emake failed"
+		--disable-rpath
+		emake || die "emake failed"
 }
 
 src_install() {
@@ -52,6 +50,6 @@ pkg_postinst() {
 	ewarn "This package is very experimental, please report your bug here:"
 	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
-	elog "To enable this input engine, you need to run ibus-setup!"
+	elog "To enable this input engine, you need to run ibus-setup"
 	elog
 }
