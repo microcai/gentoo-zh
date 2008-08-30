@@ -18,9 +18,11 @@ KEYWORDS=""
 IUSE="nls"
 
 # To run autopoint you need cvs.
-DEPEND="nls? ( sys-devel/gettext )
+RDEPEND="app-i18n/ibus
+	dev-lang/python:2.5"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )
 	dev-util/cvs"
-RDEPEND="app-i18n/ibus"
 
 pkg_setup() {
 	if ! built_with_use 'dev-lang/python:2.5' sqlite; then
@@ -53,6 +55,6 @@ pkg_postinst() {
 	ewarn "This is a highly experimental package, please report your bug here:"
 	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
-	elog "To enable this engine you need to run ibus-setup."
+	elog "To enable this engine you need to run ibus-setup!"
 	elog
 }

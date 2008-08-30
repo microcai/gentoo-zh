@@ -14,12 +14,12 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="nls"
 
-DEPEND="app-i18n/anthy
-	dev-lang/python:2.5
+RDEPEND="app-i18n/ibus
+	app-i18n/anthy
+	dev-lang/python:2.5"
+DEPEND="${RDEPEND}
 	dev-lang/swig
 	nls? ( sys-devel/gettext )"
-RDEPEND="app-i18n/ibus
-	app-i18n/anthy"
 
 src_compile() {
 	econf $(use_enable nls) \
@@ -39,6 +39,6 @@ pkg_postinst() {
 	ewarn "This package is very experimental, please report your bug here:"
 	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
-	elog "To enable this input engine, you need to run ibus-setup"
+	elog "To enable this input engine, you need to run ibus-setup!"
 	elog
 }

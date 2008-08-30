@@ -23,8 +23,6 @@ DEPEND="${RDEPEND}
 
 ESVN_REPO_URI="http://fcitx.googlecode.com/svn/trunk"
 
-S="${WORKDIR}/${P/_pre*}"
-
 src_unpack() {
 	subversion_src_unpack
 	eautoreconf
@@ -37,7 +35,6 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-
 	dodoc AUTHORS ChangeLog README THANKS TODO
 
 	rm -rf "${D}"/usr/share/fcitx/doc/
