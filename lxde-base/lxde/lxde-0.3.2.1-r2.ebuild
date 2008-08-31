@@ -17,7 +17,7 @@ RDEPEND="x11-apps/smproxy
 	x11-wm/openbox
 	lxde-base/lxappearance
 	lxde-base/lxde-common
-	eeemod? (lxde-base/lxlauncher )
+	eeemod? ( lxde-base/lxlauncher )
 	lxde-base/lxpanel
 	lxde-base/lxrandr
 	lxde-base/lxsession-lite
