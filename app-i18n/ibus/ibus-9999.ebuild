@@ -4,26 +4,26 @@
 
 EAPI="1"
 EGIT_REPO_URI="git://github.com/phuang/ibus.git"
-EGIT_PATCHES="horizental_orientation.patch"
 
-inherit eutils autotools git
+inherit autotools eutils git
 
-DESCRIPTION="Next Generation Input Framework for Linux"
+DESCRIPTION="Intelligent Input Bus for Linux/Unix OS"
 HOMEPAGE="http://ibus.googlecode.com"
+SRC_URI=""
 
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS=""
 IUSE="nls qt4"
 
-# autopoint needs cvs
-DEPEND="dev-lang/python:2.5
+DEPEND=">=dev-lang/python-2.5
 	dev-libs/dbus-glib
 	dev-util/cvs
 	qt4? (
-		|| ( ( x11-libs/qt-gui x11-libs/qt-core ) ( >=x11-libs/qt-4.3.2 ) )
+		|| ( ( x11-libs/qt-gui x11-libs/qt-core )
+		( >=x11-libs/qt-4.3.2 ) )
 	)
-	nls? ( sys-devel/gettext )
+	sys-devel/gettext
 	x11-libs/gtk+:2"
 RDEPEND=">=dev-python/dbus-python-0.83.0
 	dev-python/gnome-python
@@ -41,7 +41,8 @@ get_gtk_confdir() {
 
 src_unpack() {
 	git_src_unpack
-	autopoint && eautoreconf
+	autopoint || die "failed to run autopoint"
+	eautoreconf
 }
 
 src_compile() {
@@ -51,9 +52,8 @@ src_compile() {
 		--disable-rpath"
 	econf $myconf \
 		$(use_enable nls) \
-		$(use_enable qt4 qt4-immodule) \
-		|| die "config failed"
-	emake || die "emake failed"
+		$(use_enable qt4 qt4-immodule)
+	emake || die "make failed"
 }
 
 src_install() {
@@ -62,11 +62,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "This is a highly experimental package, please report your bug here:"
+	ewarn "This package is very experimental, please report your bug to"
 	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
 	elog "To use ibus, you should:"
-	elog "1. Get an IM Engine from gentoo-china-overlay."
+	elog "1. Get input engines from gentoo-china-overlay."
 	elog "   Run \"emerge -s ibus-\" in your favorite terminal"
 	elog "   for a list of packages we already have."
 	elog "2. Set the following in your"
@@ -76,8 +76,9 @@ pkg_postinst() {
 	elog "   export GTK_IM_MODULE=\"ibus\""
 	elog "   export QT_IM_MODULE=\"ibus\""
 	elog "   ibus &"
+	elog
 	if ! use qt4; then
-		ewarn "Missing qt4 use flag, Ibus will not work with qt4 applications."
+		ewarn "Missing qt4 use flag, ibus will not work in qt4 applications."
 		ebeep 3
 	fi
 	elog
