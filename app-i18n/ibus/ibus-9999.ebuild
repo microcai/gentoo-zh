@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI="1"
-EGIT_REPO_URI="git://github.com/phuang/ibus.git"
+EGIT_REPO_URI="http://github.com/phuang/ibus.git"
 
 inherit autotools eutils git
 

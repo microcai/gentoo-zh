@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  01 Sep 2008; Hong Hao <oahong@gmail.com> ibus-0.1.1.20080901.ebuild,
+  ibus-9999.ebuild:
+  改由http协议下载代码，这样教育网的用户可能方便一些，
+  谢谢cnyegle提的建议。
+
   30 Aug 2008; Hong Hao <oahong@gmail.com> -ibus-0.1.1.20080825.ebuild,
   +ibus-0.1.1.20080830.ebuild:
   Bump again.
