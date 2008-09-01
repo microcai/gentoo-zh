@@ -3,24 +3,22 @@
 # $Header: $
 
 EAPI="1"
-EGIT_REPO_URI="http://github.com/phuang/ibus-pinyin.git"
 
-inherit autotools eutils git
+inherit eutils
 
 PYDB_TAR="pinyin-database-0.1.10.5.tar.bz2"
 DESCRIPTION="PinYin IMEngine for IBus Framework"
 HOMEPAGE="http://ibus.googlecode.com"
-SRC_URI="http://scim-python.googlecode.com/files/${PYDB_TAR}"
+SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz
+	http://scim-python.googlecode.com/files/${PYDB_TAR}"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="" #~x86 ~amd64
+KEYWORDS="~x86 ~amd64"
 IUSE="nls"
 
-# To run autopoint you need cvs.
 DEPEND=">=dev-lang/python-2.5
-	dev-util/cvs
-	sys-devel/gettext"
+	nls? ( sys-devel/gettext )"
 RDEPEND="app-i18n/ibus
 	>=dev-lang/python-2.5"
 
@@ -32,10 +30,8 @@ pkg_setup() {
 }
 
 src_unpack() {
-	git_src_unpack
-	autopoint || die "failed to run autopoint"
-	eautoreconf
-	cp "${DISTDIR}/${PYDB_TAR}" engine/
+	unpack ${P}.tar.gz
+	cp "${DISTDIR}/${PYDB_TAR}" "${S}"/engine
 }
 
 src_compile() {
