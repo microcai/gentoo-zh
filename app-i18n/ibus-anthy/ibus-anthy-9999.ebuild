@@ -5,9 +5,9 @@
 EAPI="1"
 EGIT_REPO_URI="git://github.com/phuang/ibus-anthy.git"
 
-inherit autotools eutils git
+inherit autotools git
 
-DESCRIPTION="Japanese input method Anthy IMEngine for IBus Input Framework"
+DESCRIPTION="Japanese input method Anthy IMEngine for IBus Framework"
 HOMEPAGE="http://ibus.googlecode.com"
 
 LICENSE="LGPL-2"
@@ -15,26 +15,27 @@ SLOT="0"
 KEYWORDS=""
 IUSE="nls"
 
-# Yeh, autopoint needs cvs, please have a look at Bug #152872
+# autopoint needs cvs. Bug #152872
 DEPEND="app-i18n/anthy
-	dev-lang/python:2.5
+	>=dev-lang/python-2.5
 	dev-lang/swig
-	dev-util/cvs
-	nls? ( sys-devel/gettext )"
+	sys-devel/gettext
+	dev-util/cvs"
 RDEPEND="app-i18n/ibus
-	app-i18n/anthy"
+	app-i18n/anthy
+	>=dev-lang/python-2.5"
 
 src_unpack() {
 	git_src_unpack
-	autopoint && eautoreconf
+	autopoint || die "failed to run autopoint"
+	eautoreconf
 }
 
 src_compile() {
 	econf $(use_enable nls) \
 		--enable-maintainer-mode \
 		--disable-option-checking \
-		--disable-rpath \
-		|| die "econf failed"
+		--disable-rpath
 	emake || die "emake failed"
 }
 
@@ -44,9 +45,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "This package is very experimental, please report your bug here:"
+	ewarn "This package is very experimental, please report your bugs to"
 	ewarn "http://ibus.googlecode.com/issues/list"
-	elog
-	elog "To enable this input engine, you need to run ibus-setup"
-	elog
+	elog "You should run ibus-setup and enable IM Engines you want to use."
 }

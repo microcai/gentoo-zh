@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Sep 2008; Hong Hao <oahong@gmail.com>
+  -ibus-anthy-0.1.1.20080828.ebuild, +ibus-anthy-0.1.1.20080901.ebuild,
+  ibus-anthy-9999.ebuild:
+  Bump to 20080901
+
   29 Aug 2008; Hong Hao <oahong@gmail.com>
   -ibus-anthy-0.1.1.20080823.ebuild, +ibus-anthy-0.1.1.20080828.ebuild,
   ibus-anthy-9999.ebuild:
