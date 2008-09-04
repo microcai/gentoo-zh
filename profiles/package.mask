@@ -1,0 +1,11 @@
+# Hong Hao <oahong@gmail.com>
+# Ibus is on the way to sunrise.
+# If you really want to use it, please
+# run the following command:
+# layman -a sunrise 
+# emerge ibus(or whatever IMEngines you
+# want to have.)
+app-i18n/ibus
+app-i18n/ibus-pinyin
+app-i18n/ibus-hangul
+app-i18n/ibus-anthy
