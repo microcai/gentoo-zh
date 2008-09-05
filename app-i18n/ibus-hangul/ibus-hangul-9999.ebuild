@@ -3,43 +3,40 @@
 # $Header: $
 
 EAPI="1"
-inherit eutils
+inherit git autotools
 
-if [[ ${PV} == 9999 ]] ; then
-	EGIT_REPO_URI="git://github.com/phuang/ibus-hangul.git"
-	inherit git autotools
-	EXTDEPEND="dev-util/cvs"
-	src_unpack() {
-		git_src_unpack
-		autopoint && eautoreconf
-	}
-else
-	SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
-fi
+EGIT_REPO_URI="git://github.com/phuang/ibus-hangul.git"
 
-DESCRIPTION="Korean input method Hangul IMEngine for IBus Input Framework"
+DESCRIPTION="Korean input method Hangul IMEngine for IBus Framework"
 HOMEPAGE="http://ibus.googlecode.com"
+SRC_URI=""
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="" #~x86 ~amd64
+KEYWORDS=""
 IUSE="nls"
 
-# Yeh, we really need cvs, please have a look at Bug #152872
-# FIXME: it's really a mess, someone please fix the depends.
-DEPEND="${EXTDEPEND}
-	app-i18n/libhangul
-	dev-lang/python:2.5
+# autopoint need cvs to work. Bug #152872
+DEPEND="app-i18n/libhangul
+	>=dev-lang/python-2.5
 	dev-lang/swig
-	nls? ( sys-devel/gettext )"
-RDEPEND="app-i18n/ibus"
+	dev-util/cvs
+	sys-devel/gettext"
+RDEPEND="app-i18n/ibus
+	app-i18n/libhangul
+	>=dev-lang/python-2.5"
+
+src_unpack() {
+	git_src_unpack
+	autopoint || die "failed to run autopoint"
+	eautoreconf
+}
 
 src_compile() {
 	econf $(use_enable nls) \
 		--enable-maintainer-mode \
 		--disable-option-checking \
-		--disable-rpath \
-		|| die "econf failed"
+		--disable-rpath
 	emake || die "emake failed"
 }
 
@@ -49,9 +46,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "This package is very experimental, please report your bug here:"
+	ewarn "This package is very experimental, please report your bugs to:"
 	ewarn "http://ibus.googlecode.com/issues/list"
-	elog
-	elog "To enable this input engine, you need to run ibus-setup"
-	elog
+	elog "You should run ibus-setup and enable IMEngines you want to use."
 }
