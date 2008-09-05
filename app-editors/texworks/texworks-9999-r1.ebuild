@@ -9,7 +9,7 @@ DESCRIPTION="An environment for authoring TeX (LaTeX, ConTeXt, etc) documentsfor
 HOMEPAGE="http://code.google.com/p/texworks"
 
 ESVN_REPO_URI="http://texworks.googlecode.com/svn/trunk/"
-ESVN_PATCHES="${PN}-hunspell-1.2.x.patch"
+ESVN_PATCHES=""
 
 LICENSE="GPL-2"
 SLOT="0"
