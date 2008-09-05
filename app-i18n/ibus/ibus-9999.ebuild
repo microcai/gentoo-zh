@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI="1"
-EGIT_REPO_URI="http://github.com/phuang/ibus.git"
+EGIT_REPO_URI="git://github.com/phuang/ibus.git"
 
 inherit autotools eutils git
 
@@ -62,11 +62,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "This package is very experimental, please report your bug to"
+	ewarn "This package is very experimental, please report your bugs to"
 	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
 	elog "To use ibus, you should:"
-	elog "1. Get input engines from gentoo-china-overlay."
+	elog "1. Get input engines from sunrise overlay."
 	elog "   Run \"emerge -s ibus-\" in your favorite terminal"
 	elog "   for a list of packages we already have."
 	elog "2. Set the following in your"
