@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Sep 2008; Zhang Le <r0bertz@gentoo.org> chmsee-1.0.1.ebuild:
+  changed the logic to determine the value of --with-gecko parameter, if has
+  =net-libs/xulrunner-1.9*, then use libxul unconditionally
+
   11 Jul 2008; lidaibin <lidaibin@gmail.com> chmsee-1.0.1.ebuild:
   fixed dependency, chmsee-1.0.1 depends on xulrunner-1.9
 
