@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>tex</herd>
+<maintainer>
+  <email>acevery@gmail.com</email>
+</maintainer>
+<longdescription>Unicode-math is an XeLaTeX package for using unicode/OpenType maths fonts to substitute Computer Modern fonts, now only support "Cambria Math" and "Asana Math".</longdescription>
+</pkgmetadata>
