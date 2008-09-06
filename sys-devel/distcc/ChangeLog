@@ -1,0 +1,15 @@
+# ChangeLog for sys-devel/distcc
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  06 Sep 2008; Zhang Le <r0bertz@gentoo.org> +files/2.18, +files/2.18-r1,
+  +files/2.18/conf, +distcc-2.18.3-r13.ebuild, +files/2.18-r1/conf,
+  +files/2.18-r1/init, +files/2.18/distcc-config.patch, +files/2.18/init,
+  +files/distcc-as-needed.patch, +files/distcc-avahi-configure.patch,
+  +files/distcc-config, +files/distcc-create-dir.patch,
+  +files/distcc-freedesktop.patch, +files/distcc-gentoo-multilib.patch,
+  +files/distcc-gentoo-multilib-r1.patch,
+  +files/distcc-2.18.3-r13-zeroconf-multiple-gcc-registration.patch,
+  +files/distcc-march-native.patch:
+  added distcc-2.18.3-r13 with zeroconf-multiple-gcc-registration.patch
+

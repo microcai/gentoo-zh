@@ -1,0 +1,130 @@
+diff --git a/src/gcc-id.c b/src/gcc-id.c
+index 1c57cf6..fe256fb 100644
+--- a/src/gcc-id.c
++++ b/src/gcc-id.c
+@@ -66,6 +66,48 @@ char* dcc_get_gcc_machine(char *s, size_t nbytes) {
+     return read_string_from_popen("cc -dumpmachine", s, nbytes);
+ }
+ 
++char* dcc_get_gcc_profile(char *s, size_t nbytes) {
++    static FILE *p = NULL;
++    char *cmdline = "gcc-config -l | cut -d ' ' -f 3 | sed -e '/^$/d'";
++    char **ret = NULL;
++
++    errno = 0;
++    if (p == NULL && !(p = popen(cmdline, "r"))) {
++        rs_log_warning("Failed to get gcc profiles, not registering DNS-SD service subtype!");
++        goto fail;
++    }
++
++    if (!fgets(s, (int) nbytes, p)) {
++        goto fail;
++    }
++
++    s[nbytes-1] = 0;
++    s[strcspn(s, " \t\n\r")] = 0;
++
++    ret = s;
++
++    return ret;
++
++fail:
++
++    if (p)
++        pclose(p);
++
++    return ret;
++}
++
++char* dcc_get_gcc_machine_from_profile(char *s, size_t nbytes, char *profile) {
++    char cmdline[128];
++    snprintf(cmdline, sizeof(cmdline), "gcc-config -S %s | cut -d ' ' -f 1", profile);
++    return read_string_from_popen(cmdline, s, nbytes);
++}
++
++char* dcc_get_gcc_version_from_profile(char *s, size_t nbytes, char *profile) {
++    char cmdline[128];
++    snprintf(cmdline, sizeof(cmdline), "gcc-config -S %s | cut -d ' ' -f 2", profile);
++    return read_string_from_popen(cmdline, s, nbytes);
++}
++
+ char* dcc_make_dnssd_subtype(char *stype, size_t nbytes, const char *v, const char *m) {
+     char version[64], machine[64];
+ 
+diff --git a/src/zeroconf-reg.c b/src/zeroconf-reg.c
+index ed3283a..2f3e29a 100644
+--- a/src/zeroconf-reg.c
++++ b/src/zeroconf-reg.c
+@@ -48,7 +48,7 @@ static void register_stuff(struct context *ctx) {
+     }
+ 
+     if (avahi_entry_group_is_empty(ctx->group)) {
+-        char cpus[32], machine[64] = "cc_machine=", version[64] = "cc_version=", *m, *v;
++        char profile[128], cpus[32], machine[64] = "cc_machine=", version[64] = "cc_version=", *m, *v;
+ 
+         snprintf(cpus, sizeof(cpus), "cpus=%i", ctx->n_cpus);
+         v = dcc_get_gcc_version(version+11, sizeof(version)-11);
+@@ -77,25 +77,30 @@ static void register_stuff(struct context *ctx) {
+             goto fail;
+         }
+ 
+-        if (v && m) {
+-            char stype[128];
+-
+-            dcc_make_dnssd_subtype(stype, sizeof(stype), v, m);
+-
+-            if (avahi_entry_group_add_service_subtype(
+-                        ctx->group,
+-                        AVAHI_IF_UNSPEC,
+-                        AVAHI_PROTO_UNSPEC,
+-                        0,
+-                        ctx->name,
+-                        DCC_DNS_SERVICE_TYPE,
+-                        NULL,
+-                        stype) < 0) {
+-                rs_log_crit("Failed to add service: %s\n", avahi_strerror(avahi_client_errno(ctx->client)));
+-                goto fail;
+-            }
+-        } else
+-            rs_log_warning("Failed to determine CC version, not registering DNS-SD service subtype!");
++        while (dcc_get_gcc_profile(profile, sizeof(profile))) {
++            v = dcc_get_gcc_version_from_profile(version+11, sizeof(version)-11, profile);
++            m = dcc_get_gcc_machine_from_profile(machine+11, sizeof(machine)-11, profile);
++
++            if (v && m) {
++                char stype[128];
++
++                dcc_make_dnssd_subtype(stype, sizeof(stype), v, m);
++
++                if (avahi_entry_group_add_service_subtype(
++                            ctx->group,
++                            AVAHI_IF_UNSPEC,
++                            AVAHI_PROTO_UNSPEC,
++                            0,
++                            ctx->name,
++                            DCC_DNS_SERVICE_TYPE,
++                            NULL,
++                            stype) < 0) {
++                    rs_log_crit("Failed to add service: %s\n", avahi_strerror(avahi_client_errno(ctx->client)));
++                    goto fail;
++                }
++            } else
++                rs_log_warning("Failed to get cc machine and version, not registering DNS-SD service subtype for profile: %s!", profile);
++        }
+ 
+         if (avahi_entry_group_commit(ctx->group) < 0) {
+             rs_log_crit("Failed to commit entry group: %s\n", avahi_strerror(avahi_client_errno(ctx->client)));
+diff --git a/src/zeroconf.h b/src/zeroconf.h
+index 6445d12..fefb26e 100644
+--- a/src/zeroconf.h
++++ b/src/zeroconf.h
+@@ -10,6 +10,9 @@ int dcc_zeroconf_unregister(void*);
+ 
+ char* dcc_get_gcc_version(char *s, size_t nbytes);
+ char* dcc_get_gcc_machine(char *s, size_t nbytes);
++char* dcc_get_gcc_profile(char *s, size_t nbytes);
++char* dcc_get_gcc_machine_from_profile(char *s, size_t nbytes, char *profile);
++char* dcc_get_gcc_version_from_profile(char *s, size_t nbytes, char *profile);
+ 
+ char* dcc_make_dnssd_subtype(char *stype, size_t nbytes, const char *v, const char *m);
+ 

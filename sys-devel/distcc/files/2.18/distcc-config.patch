@@ -1,0 +1,35 @@
+--- /usr/bin/distcc-config	2005-04-02 16:08:44.000000000 +0100
++++ distcc-config-adq	2005-04-07 14:06:23.000000000 +0100
+@@ -65,7 +65,22 @@
+ def permissions(path,user,group):
+ 	for file in os.listdir(path):
+ 		#print 'Configuring',path+file+'...'
+-		os.chown(path+file,user,group)
++		os.chmod(path+file,0755)
++
++def installoverrides(chost):
++	for file in ['gcc', 'cc', 'c++', 'g++']:
++		path = '/usr/lib/distcc/bin/'
++		if os.path.exists('/usr/bin/'+chost+'-'+file):
++			if os.path.exists(path+file):
++				os.unlink(path+file)
++			override_cmd = open(path+file, 'w')
++			override_cmd.write('#!/bin/sh\n')
++			override_cmd.write('exec '+chost+'-'+file+' \"$@\"\n');
++			os.chown(path+file,user,group)
++	override_cmd = open(path+'cc', 'w')
++	override_cmd.write('#!/bin/sh\n')
++	override_cmd.write('exec '+chost+'-gcc'+' \"$@\"\n');
++	os.chown(path+'cc',user,group)
+ 
+ def installlinks(chost=''):
+ 	for file in ['gcc', 'cc', 'c++', 'g++']:
+@@ -139,7 +154,7 @@
+ 	makeconf = open('/etc/make.conf', 'r').read()
+ 	chost = re.compile('CHOST="(.*)"').search(makeconf).group(1)
+ 	print 'Creating symlinks...'
+-	installlinks()
++	installoverrides(chost)
+ 	installlinks(chost)
+ 
+ 	print 'Checking permissions...'
