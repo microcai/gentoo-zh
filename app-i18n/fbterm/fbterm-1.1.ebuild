@@ -3,6 +3,7 @@
 # $Header: $
 
 EAPI="1"
+inherit linux-info
 
 DESCRIPTION="fast FrameBuffer based TERMinal emulator for Linux"
 HOMEPAGE="http://fbterm.googlecode.com"
@@ -17,6 +18,13 @@ RDEPEND="media-libs/fontconfig
 	media-libs/freetype:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+pkg_config() {
+	if !(linux_chkconfig_present FB_UVESA || linux_chkconfig_present FB_VESA); then
+		eerror "You don't framebuffer support, please check your kernel configuration!"
+		die "You don't framebuffer support, please check your kernel configuration!"
+	fi
+}
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
