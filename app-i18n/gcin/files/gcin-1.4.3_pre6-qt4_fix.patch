@@ -6,7 +6,7 @@ diff -Nur gcin-1.4.3.pre6.orig/configure gcin-1.4.3.pre6/configure
  
  QT4_IM='N'
 -QT4_IM_DIR=/usr/lib/qt4/plugins/lib/inputmethods
-+QT4_IM_DIR=/usr/$(LIB)/qt4/plugins/inputmethods
++QT4_IM_DIR=/usr/$LIB/qt4/plugins/inputmethods
  echo "testing if you have qt4 support"
  if [ -d  $QT4_IM_DIR ]; then
    QT4_IM='Y'
