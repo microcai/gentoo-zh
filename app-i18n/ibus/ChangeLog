@@ -1,0 +1,22 @@
+# ChangeLog for app-i18n/ibus
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  08 Sep 2008; Hong Hao <oahong@gmail.com> +ibus-9999.ebuild, +metadata.xml:
+  从sunrise中移回9999版本的ebuild
+
+  06 Sep 2008; Hong Hao <oahong@gmail.com> -ibus-0.1.1.20080901.ebuild:
+  Drop snapshot (In portage)
+
+  01 Sep 2008; Hong Hao <oahong@gmail.com> ibus-0.1.1.20080901.ebuild,
+  ibus-9999.ebuild:
+  Added ~amd64 keyword, fixed a typo.
+
+  01 Sep 2008; Hong Hao <oahong@gmail.com> -ibus-0.1.1.20080830.ebuild,
+  +ibus-0.1.1.20080901.ebuild, ibus-9999.ebuild:
+  Bump to snapshot 20080901
+
+  31 Aug 2008; Hong Hao <oahong@gmail.com> +ibus-0.1.1.20080830.ebuild,
+  +ibus-9999.ebuild, +files/horizental_orientation.patch, +metadata.xml:
+  New ebuild for bug #236277, Thanks a lot, tommy(at gentoo.org)
+
