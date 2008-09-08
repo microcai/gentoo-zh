@@ -44,6 +44,7 @@ QT4_TARGET_DIRECTORIES="
 src/gui
 tools/designer
 tools/linguist
+src/plugins/inputmethods/imsw-multi
 src/plugins/imageformats/gif
 src/plugins/imageformats/ico
 src/plugins/imageformats/jpeg"

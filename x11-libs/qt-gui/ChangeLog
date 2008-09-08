@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.11 2008/08/11 13:03:14 yngwin Exp $
 
+  08 Sep 2008; scsi <scsichen@gmail.com> qt-gui-4.4.1.ebuild:
+  x11-libs/qt-gui: fix missing im modules
+
 *qt-gui-4.4.1 (11 Aug 2008)
 
   11 Aug 2008; Ben de Groot <yngwin@gentoo.org> +qt-gui-4.4.1.ebuild:
