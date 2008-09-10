@@ -3,14 +3,9 @@
 # $Header: $
 
 EAPI="1"
-inherit eutils
+EGIT_REPO_URI="git://github.com/acevery/ibus-table.git"
 
-if [[ ${PV} == 9999 ]] ; then
-	EGIT_REPO_URI="git://github.com/acevery/ibus-table.git"
-	inherit autotools git
-else
-	SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
-fi
+inherit autotools eutils git
 
 DESCRIPTION="The Table Engine for IBus Input Framework"
 HOMEPAGE="http://ibus.googlecode.com"
@@ -18,7 +13,7 @@ HOMEPAGE="http://ibus.googlecode.com"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="" #~x86 ~amd64
-IUSE="nls zhengma wubi86 wubi98 cangjie5 erbi-qs +additional +extra-phrases"
+IUSE="nls zhengma wubi cangjie5 erbi-qs +additional extra-phrases"
 
 # To run autopoint you need cvs.
 RDEPEND="app-i18n/ibus
@@ -36,7 +31,8 @@ pkg_setup() {
 
 src_unpack() {
 	git_src_unpack
-	autopoint && eautoreconf
+	autopoint || die "failed to run autopoint"
+	eautoreconf
 }
 
 src_compile() {
@@ -47,11 +43,9 @@ src_compile() {
 		$(use_enable cangjie5) \
 		$(use_enable erbi-qs) \
 		$(use_enable extra-phrases) \
-		$(use_enable additional) \
-		--disable-option-checking \
-		--disable-rpath \
-		|| die "econf failed"
-	emake || die "emake failed"
+		$(use_enable additional)
+	# Parallel make uses a lot of memory to generate databases.
+	emake -j1 || die
 }
 
 src_install() {
