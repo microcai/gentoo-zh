@@ -38,8 +38,8 @@ src_unpack() {
 src_compile() {
 	econf $(use_enable nls) \
 		$(use_enable zhengma) \
-		$(use_enable wubi86) \
-		$(use_enable wubi98) \
+		$(use_enable wubi wubi86) \
+		$(use_enable wubi wubi98) \
 		$(use_enable cangjie5) \
 		$(use_enable erbi-qs) \
 		$(use_enable extra-phrases) \
