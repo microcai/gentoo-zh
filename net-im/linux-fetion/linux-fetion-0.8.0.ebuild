@@ -18,15 +18,15 @@ IUSE=""
 RESTRICT="mirror"
 
 
-DEPEND="|| ( ( x11-libs/qt-gui
+RDEPEND="|| ( ( x11-libs/qt-gui
 	x11-libs/qt-qt3support )
 	>=x11-libs/qt-4.3 )
 	virtual/libstdc++
-	>=sys-devel/automake-1.5
+	net-misc/curl
 	"
 
-RDEPEND="${DEPEND}
-	net-misc/curl
+DEPEND="${RDEPEND}
+	>=sys-devel/automake-1.5
 	"
 
 

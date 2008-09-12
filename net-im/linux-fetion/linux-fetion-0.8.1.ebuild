@@ -18,15 +18,15 @@ IUSE=""
 RESTRICT="primaryuri"
 
 
-DEPEND="|| ( ( x11-libs/qt-gui
+RDEPEND="|| ( ( x11-libs/qt-gui
 	x11-libs/qt-qt3support )
 	>=x11-libs/qt-4.3 )
 	virtual/libstdc++
-	>=sys-devel/automake-1.5
+	net-misc/curl
 	"
 
-RDEPEND="${DEPEND}
-	net-misc/curl
+DEPEND="${RDEPEND}
+	>=sys-devel/automake-1.5
 	"
 
 
@@ -52,13 +52,13 @@ src_install()
 	doins -r image
 
 	insinto /usr/share/applications
-	doins LibFetion.desktop
+	doins misc/LibFetion.desktop
 
 	insinto /usr/share/pixmaps
-	doins fetion.png
+	doins misc/fetion.png
 
 	insinto /usr/share/app-install/icons
-	doins fetion.png
+	doins misc/fetion.png
 
 	dobin ${PN}
 }

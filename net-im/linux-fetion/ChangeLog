@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Sep 2008; Yu Yuwei <acevery@gmail.com> linux-fetion-0.2.2.ebuild,
+  linux-fetion-0.8.0.ebuild, linux-fetion-0.8.1.ebuild:
+  fix desktop file and icon path error, alternate the DEPEND and RDEPEND
+
   16 Jul 2008; Zhang Le <r0bertz@gentoo.org> Manifest:
   fixed linux-fetion-0.2.2.tar.gz's digest
 
