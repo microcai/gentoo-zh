@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header$
+# $Header: $
 
 inherit eutils
 
@@ -8,19 +8,22 @@ DESCRIPTION="Console version of stardict, cross-platform and international dicti
 HOMEPAGE="http://sdcv.sourceforge.net/"
 SRC_URI="mirror://sourceforge/sdcv/${P}.tar.bz2"
 
-RESTRICT="test mirror"
 LICENSE="GPL-2"
 SLOT="0"
-# when adding keywords, remember to add to stardict.eclass
-KEYWORDS="~x86"
+KEYWORDS="~x86" # when adding keywords, remember to add to stardict.eclass
+IUSE=""
 
+DEPEND="dev-util/pkgconfig"
 RDEPEND=">app-dicts/stardict-3.0"
 
-src_compile() {
-	econf
-	emake || die "compile problem"
+RESTRICT="test primaryuri"
+
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-gcc-4.3.patch
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}" || die "install failed"
 }

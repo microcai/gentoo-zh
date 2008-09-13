@@ -1,0 +1,12 @@
+# ChangeLog for app-dicts/sdcv
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  13 Sep 2008; Hong Hao <oahong@gmail.com> sdcv-0.4.2.ebuild,
+  +files/sdcv-gcc-4.3.patch, +metadata.xml:
+  Added a patch to fix compile problems with gcc-4.3.
+  Fixed some QA issues.
+
+  12 Sep 2008; Hong Hao <oahong@gmail.com> sdcv-0.4.2.ebuild:
+  Removed redundent src_compile function. Fixed some qa issues.
+
