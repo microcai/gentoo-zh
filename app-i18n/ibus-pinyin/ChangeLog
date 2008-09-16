@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  16 Sep 2008; Hong Hao <oahong@gmail.com> ibus-pinyin-9999.ebuild:
+  Using an updated pinyin database. (
+  http://github.com/phuang/ibus-pinyin/commit/0892216bb1e017e9990f8ad6a86af5bc
+  332632de )
+
   08 Sep 2008; Hong Hao <oahong@gmail.com> +ibus-pinyin-9999.ebuild,
   +metadata.xml:
   从sunrise移回ibus-pinyin的live ebuild
