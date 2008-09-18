@@ -17,7 +17,7 @@ KEYWORDS=""
 IUSE="nls"
 
 # Autopoint needs cvs. Bug #152872
-COMMON_DEPEND="dev-libs/libchewing"
+COMMON_DEPEND=">=dev-libs/libchewing-0.3.0-r1"
 DEPEND="${COMMON_DEPEND}
 	dev-lang/swig
 	dev-util/cvs
