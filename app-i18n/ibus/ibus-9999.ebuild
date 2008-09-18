@@ -7,7 +7,7 @@ EGIT_REPO_URI="http://github.com/phuang/ibus.git"
 
 inherit autotools multilib git
 
-DESCRIPTION="Intelligent Input Bus for Linux/Unix OS"
+DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://ibus.googlecode.com"
 SRC_URI=""
 
@@ -43,8 +43,11 @@ src_unpack() {
 }
 
 src_configure() {
+	# We don't need another copy of dev-python/gconf-python
+	# So we'll never active this "--enable-pygconf" option.
 	econf $(use_enable nls) \
-		$(use_enable qt4 qt4-immodule)
+		$(use_enable qt4 qt4-immodule) \
+		--disable-pygconf
 }
 
 src_install() {
