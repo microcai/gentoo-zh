@@ -17,7 +17,7 @@ KEYWORDS=""
 IUSE="nls"
 
 # Autopoint needs cvs. Bug #152872
-COMMON_DEPEND=">=dev-libs/libchewing-0.3.0-r1"
+COMMON_DEPEND=">=dev-libs/libchewing-0.3.0.901"
 DEPEND="${COMMON_DEPEND}
 	dev-lang/swig
 	dev-util/cvs
@@ -45,5 +45,7 @@ src_install() {
 pkg_postinst() {
 	ewarn "This package is very experimental, please report your bugs to"
 	ewarn "http://ibus.googlecode.com/issues/list"
+	echo
 	elog "You should run ibus-setup and enable IMEngines you want to use."
+	echo
 }
