@@ -6,6 +6,12 @@
 app-dicts/stardict:espeak - Pull in espeak for stardict
 app-dicts/stardict:festival - Pull in festival for stardict
 app-dicts/stardict:gucharmap - Enable gucharmap plugin for stardict
+app-i18n/ibus-table:additional - Enable to generate additional Engine
+app-i18n/ibus-table:cangjie5 - Enable to generate CangJie5 Engine
+app-i18n/ibus-table:erbi-qs - Enable to generate ErBi-QS Engine
+app-i18n/ibus-table:extra-phrases - Add extra phrases into builded Engine
+app-i18n/ibus-table:wubi - Enable to generate WuBi86 and WuBi98 Engine
+app-i18n/ibus-table:zhengma - Enable to generate ZhengMa Engine
 app-i18n/scim-python:enwriter - Build English Writer Input Method
 app-i18n/scim-python:pinyin - Build PinYin Input Method
 app-i18n/scim-python:xingma - Build XingMa Input Method Engine
