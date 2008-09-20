@@ -3,29 +3,36 @@
 # $Header: $
 
 EAPI="1"
-EGIT_REPO_URI="git://github.com/acevery/ibus-table.git"
 
+EGIT_REPO_URI="http://github.com/acevery/${PN}.git"
 inherit autotools eutils git
 
-DESCRIPTION="The Table Engine for IBus Input Framework"
+DESCRIPTION="General Table Engine for IBus Framework"
 HOMEPAGE="http://ibus.googlecode.com"
+SRC_URI=""
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="" #~x86 ~amd64
-IUSE="nls zhengma wubi cangjie5 erbi-qs +additional extra-phrases"
+KEYWORDS=""
+IUSE="+additional cangjie5 erbi-qs extra-phrases nls wubi zhengma"
 
-# To run autopoint you need cvs.
+# Autopoint needs cvs to work. Bug #152872
+# NOTE(to myself):
+# 1.autopoint is part of gettext, so we
+#   don't need the conditional USE flag 'nls' *here*.
+# 2.ibus seems to work without gettext (tested on my box).
+# 3.extra-phrases is suggested by acevery (the upstream)?.
+DEPEND="dev-util/cvs
+	dev-util/pkgconfig
+	>=dev-lang/python-2.5
+	sys-devel/gettext"
 RDEPEND="app-i18n/ibus
-	dev-lang/python:2.5"
-DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )
-	dev-util/cvs"
+	>=dev-lang/python-2.5"
 
 pkg_setup() {
-	if ! built_with_use 'dev-lang/python:2.5' sqlite; then
-		eerror "You need build dev-lang/python-2.5 with \"sqlite\" USE flag!"
-		die "You need build dev-lang/python-2.5 with \"sqlite\" USE flag!"
+	if ! built_with_use '>=dev-lang/python-2.5' sqlite; then
+		eerror "You need build dev-lang/python with \"sqlite\" USE flag!"
+		die "Please rebuild dev-lang/python with \"sqlite\" USE flag!"
 	fi
 }
 
@@ -35,18 +42,21 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
-	econf $(use_enable nls) \
-		$(use_enable zhengma) \
-		$(use_enable wubi wubi86) \
-		$(use_enable wubi wubi98) \
+src_configure() {
+	econf $(use_enable additional) \
 		$(use_enable cangjie5) \
 		$(use_enable erbi-qs) \
 		$(use_enable extra-phrases) \
-		$(use_enable additional)
-	# Parallel make uses a lot of memory to generate databases.
-	emake -j1 || die
+		$(use_enable nls) \
+		$(use_enable wubi wubi86) \
+		$(use_enable wubi wubi98) \
+		$(use_enable zhengma)
 }
+
+#src_compile() {
+#	# Parallel make uses a lot of memory to generate databases.
+#	MAKEOPTS="-j1" emake || die
+#}
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
@@ -54,9 +64,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "This package is very experimental, please report your bug here:"
+	ewarn "This package is very experimental, please report your bugs to"
 	ewarn "http://ibus.googlecode.com/issues/list"
-	elog
-	elog "Don't forget to run ibus-setup and enable the IM Engine you want to use!"
-	elog
+	echo
+	elog "You should set USE flag properly before installing this package."
+	elog "Don't forget to run ibus-setup and enable the IM Engines you want to use."
+	echo
 }
