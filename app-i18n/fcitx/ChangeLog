@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  23 Sep 2008; Hong Hao <oahong@gmail.com> fcitx-9999.ebuild,
+  +files/remove-empty-xpm-dir.patch:
+  Added a patch and also econf dies on itself.
+
   09 Aug 2008; Hong Hao <oahong@gmail.com> +fcitx-9999.ebuild,
   +metadata.xml:
   Added a live ebuild for fcitx, new upstream fcitx.googlecode.com

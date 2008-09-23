@@ -1,0 +1,11 @@
+Source: Hong Hao <oahong@gmail.com>
+diff -ur fcitx-scm/Makefile.am.orig fcitx-scm/Makefile.am
+--- fcitx-scm/Makefile.am.orig	2008-09-21 15:04:12.000000000 +0000
++++ fcitx-scm/Makefile.am	2008-09-21 15:04:19.000000000 +0000
+@@ -1,5 +1,5 @@
+ AUTOMAKE_OPTIONS = foreign
+-SUBDIRS = doc xpm lib src tools data
++SUBDIRS = doc lib src tools data
+ EXTRA_DIST = autogen.sh fcitx.spec
+ 
+ MAINTAINERCLEANFILES = \

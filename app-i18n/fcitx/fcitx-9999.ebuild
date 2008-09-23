@@ -2,6 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+ESVN_REPO_URI="http://fcitx.googlecode.com/svn/trunk"
+# We never need an empty /usr/share/fcitx/xpm dir. So remove it from system.
+ESVN_PATCHES="remove-empty-xpm-dir.patch"
+
 inherit autotools subversion
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
@@ -21,23 +25,18 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-ESVN_REPO_URI="http://fcitx.googlecode.com/svn/trunk"
-
-S="${WORKDIR}/${P/_pre*}"
-
 src_unpack() {
 	subversion_src_unpack
 	eautoreconf
 }
 
 src_compile() {
-	econf $(use_enable truetype xft) || die "configure failed"
+	econf $(use_enable truetype xft)
 	emake || die "make failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-
 	dodoc AUTHORS ChangeLog README THANKS TODO
 
 	rm -rf "${D}"/usr/share/fcitx/doc/
