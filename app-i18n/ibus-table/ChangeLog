@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  23 Sep 2008; Yu Yuwei <acevery@gmail.com> ibus-table-9999.ebuild:
+  should use git no http as EGIT_REPO
+
   20 Sep 2008; Hong Hao <oahong@gmail.com> ibus-table-9999.ebuild:
   Clean up. Don't use slot depends here for python.
 

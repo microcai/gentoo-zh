@@ -4,7 +4,7 @@
 
 EAPI="1"
 
-EGIT_REPO_URI="http://github.com/acevery/${PN}.git"
+EGIT_REPO_URI="git://github.com/acevery/${PN}.git"
 inherit autotools eutils git
 
 DESCRIPTION="General Table Engine for IBus Framework"
