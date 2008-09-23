@@ -42,7 +42,7 @@ src_unpack() {
 	eautoreconf
 }
 
-src_configure() {
+src_compile() {
 	econf $(use_enable additional) \
 		$(use_enable cangjie5) \
 		$(use_enable erbi-qs) \
@@ -51,12 +51,10 @@ src_configure() {
 		$(use_enable wubi wubi86) \
 		$(use_enable wubi wubi98) \
 		$(use_enable zhengma)
+	# Parallel make uses a lot of memory to generate databases.
+	MAKEOPTS="-j1"
+	emake || die "emake failed"
 }
-
-#src_compile() {
-#	# Parallel make uses a lot of memory to generate databases.
-#	MAKEOPTS="-j1" emake || die
-#}
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"

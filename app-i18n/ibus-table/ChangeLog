@@ -3,6 +3,9 @@
 # $Header: $
 
   23 Sep 2008; Yu Yuwei <acevery@gmail.com> ibus-table-9999.ebuild:
+  should use src_compile not src_configure(not exist) in ebuild
+
+  23 Sep 2008; Yu Yuwei <acevery@gmail.com> ibus-table-9999.ebuild:
   should use git no http as EGIT_REPO
 
   20 Sep 2008; Hong Hao <oahong@gmail.com> ibus-table-9999.ebuild:
