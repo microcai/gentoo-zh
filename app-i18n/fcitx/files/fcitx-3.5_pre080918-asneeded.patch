@@ -1,0 +1,11 @@
+Index: fcitx-3.5/src/Makefile.am
+===================================================================
+--- fcitx-3.5.orig/src/Makefile.am
++++ fcitx-3.5/src/Makefile.am
+@@ -32,5 +32,4 @@ fcitx_SOURCES = IC.c IC.h \
+ 		fcitx.h extra.c extra.h \
+ 		internalVersion.c
+ 		
+-fcitx_LDADD = ../lib/libXimd.a
+-fcitx_LDFLAGS = -lXpm
++fcitx_LDADD = ../lib/libXimd.a -lXpm
