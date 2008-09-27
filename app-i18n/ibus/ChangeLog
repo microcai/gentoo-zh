@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  27 Sep 2008; Hong Hao <oahong@gmail.com> ibus-9999.ebuild:
+  Fixed (*hopefully*) depends here, also included some EAPI-2 features.
+
   18 Sep 2008; Hong Hao <oahong@gmail.com> ibus-9999.ebuild:
   Ibus now has its own copy of dev-python/gconf-python. It really make no
   sense to our gentoo user. Gentoo already split up the whole gnome-python
