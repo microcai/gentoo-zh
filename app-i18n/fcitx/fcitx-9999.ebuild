@@ -27,6 +27,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	subversion_src_unpack
+	# Quick and dirty hack, ensure we never install
+	# the empty "/usr/share/fcitx/xpm" dir.
+	sed -i -e 's:xpm[[:space:]]::g' Makefile.am
 	eautoreconf
 }
 

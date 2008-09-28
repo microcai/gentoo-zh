@@ -6,7 +6,7 @@ inherit autotools
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://fcitx.googlecode.com"
-SRC_URI="http://dev/null/${P/_pre/-}.tar.bz2"
+SRC_URI="http://gentoo-china-overlay.googlecode.com/svn/distfiles/${P/_pre/-}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,25 +21,14 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-RESTRICT="fetch"
-
 S="${WORKDIR}/${P/_pre*}"
-
-pkg_nofetch() {
-	echo
-	ewarn "内部测试版本!"
-	ewarn "请自己下载相关源码包，放置在${DISTDIR}"
-	ewarn "并更名为${P/-pre/-}.tar.bz2谢谢! ;-)"
-	ewarn ";-) 如有任何问题，请咨询 Yuking!别找我来着^.^"
-	echo
-}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
 	# Quick and dirty hack, ensure we never install
-	# the empty /usr/share/fcitx/xpm dir.
+	# the empty "/usr/share/fcitx/xpm" dir.
 	sed -i -e 's:xpm[[:space:]]::g' Makefile.am
 	epatch "${FILESDIR}"/${P}-asneeded.patch
 	eautomake

@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Sep 2008; Hong Hao <oahong@gmail.com> fcitx-3.5_pre080918.ebuild,
+  fcitx-9999.ebuild:
+  修改了一下SRC_URI。现在直接emerge
+  fcitx就可以安装0918版本的fcitx了。
+
   27 Sep 2008; Hong Hao <oahong@gmail.com> +fcitx-3.5_pre080918.ebuild,
   +files/fcitx-3.5_pre080918-asneeded.patch:
   Added an (ugly) ebuild for fcitx-20080918
