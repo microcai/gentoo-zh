@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="1"
+EAPI="2"
 
 EGIT_REPO_URI="git://github.com/acevery/${PN}.git"
 inherit autotools eutils git
@@ -14,35 +14,40 @@ SRC_URI=""
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="+additional cangjie5 erbi-qs extra-phrases nls wubi zhengma"
+IUSE="+additional cangjie5 extra-phrases erbi-qs wubi nls zhengma"
 
-# Autopoint needs cvs to work. Bug #152872
-# NOTE(to myself):
-# 1.autopoint is part of gettext, so we
-#   don't need the conditional USE flag 'nls' *here*.
-# 2.ibus seems to work without gettext (tested on my box).
+# NOTES to myself:
+# 1.autopoint is part of gettext, so here we
+#   don't need a conditional USE flag 'nls'.
+# 2.ibus seems to work without gettext (no rdep! tested on my box).
 # 3.extra-phrases is suggested by acevery (the upstream)?.
+# 4.Autopoint needs cvs to work. Bug #152872
 DEPEND="dev-util/cvs
 	dev-util/pkgconfig
-	>=dev-lang/python-2.5
+	>=dev-lang/python-2.5[sqlite]
 	sys-devel/gettext"
 RDEPEND="app-i18n/ibus
-	>=dev-lang/python-2.5"
+	>=dev-lang/python-2.5[sqlite]"
 
 pkg_setup() {
-	if ! built_with_use '>=dev-lang/python-2.5' sqlite; then
-		eerror "You need build dev-lang/python with \"sqlite\" USE flag!"
-		die "Please rebuild dev-lang/python with \"sqlite\" USE flag!"
+	if ! use cangjie5 && ! use erbi-qs && ! use wubi && ! use zhengma; then
+		echo
+		ewarn "To install ${PN}, you should set at least one of following USE flags:"
+		ewarn "\"cangjie5 erbi-qs wubi zhengma\""
+		ewarn "For more info about them please run \"quse -D use-flag-here\""
+		ewarn "or \"eix ibus-table\"."
+		ewarn "You can press CTRL+C to abort the installation process."
+		echo
+		ebeep 10
 	fi
 }
 
-src_unpack() {
-	git_src_unpack
+src_prepare() {
 	autopoint || die "failed to run autopoint"
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf $(use_enable additional) \
 		$(use_enable cangjie5) \
 		$(use_enable erbi-qs) \
@@ -51,9 +56,11 @@ src_compile() {
 		$(use_enable wubi wubi86) \
 		$(use_enable wubi wubi98) \
 		$(use_enable zhengma)
+}
+
+src_compile() {
 	# Parallel make uses a lot of memory to generate databases.
-	MAKEOPTS="-j1"
-	emake || die "emake failed"
+	MAKEOPTS="${MAKEOPTS} -j1" emake || die
 }
 
 src_install() {
@@ -65,7 +72,6 @@ pkg_postinst() {
 	ewarn "This package is very experimental, please report your bugs to"
 	ewarn "http://ibus.googlecode.com/issues/list"
 	echo
-	elog "You should set USE flag properly before installing this package."
-	elog "Don't forget to run ibus-setup and enable the IM Engines you want to use."
+	elog "Don't forget to run ibus-setup and enable the IM Engines you want to use!"
 	echo
 }

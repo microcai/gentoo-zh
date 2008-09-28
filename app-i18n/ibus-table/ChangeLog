@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Sep 2008; Hong Hao <oahong@gmail.com> ibus-table-9999.ebuild:
+  EAPI-2, you need >=sys-apps/portage-2.2_rc11. <
+  http://dev.gentoo.org/~yngwin/pms/pms.html#x1-149000D >
+
   23 Sep 2008; Yu Yuwei <acevery@gmail.com> ibus-table-9999.ebuild:
   should use src_compile not src_configure(not exist) in ebuild
 
