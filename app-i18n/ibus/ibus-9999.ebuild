@@ -44,17 +44,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Quick and dirty hack to remove empty dirs.
-	ebegin "Removing empty dirs"
-	sed -i -e \
-		'/gconf/d' util/Makefile.am
 	autopoint || die "failed to run autopoint"
-	eend $?
 	eautoreconf
 }
 
 src_configure() {
-	# We don't need another copy of dev-python/gconf-python here.
+	# We never use the internal copy of gconf-python.
 	econf $(use_enable nls) \
 		$(use_enable qt4 qt4-immodule)
 		--disable-pygconf
@@ -70,9 +65,9 @@ pkg_postinst() {
 	ewarn "http://ibus.googlecode.com/issues/list"
 	echo
 	elog "To use ibus, you need to:"
-	elog "1. Install input engines before you can actually use it."
+	elog "1. Install input engines before you can use it."
 	elog "   Run \"emerge -s ibus-\" in your favorite terminal"
-	elog "   for a list of IMEngines we already have."
+	elog "   for a list of Input Engines we already have."
 	elog "2. Set the following in your"
 	elog "   user startup scripts such as .xinitrc or .bashrc"
 	echo
