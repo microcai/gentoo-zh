@@ -2,10 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="1"
+EAPI="2"
 EGIT_REPO_URI="git://github.com/phuang/ibus-pinyin.git"
 
-inherit autotools eutils git
+inherit autotools git
 
 PYDB_TAR="pinyin-database-0.1.10.6.tar.bz2"
 DESCRIPTION="Chinese PinYin IMEngine for IBus Framework"
@@ -17,23 +17,17 @@ SLOT="0"
 KEYWORDS=""
 IUSE="nls"
 
-# autopoint needs cvs. bug #152872
-DEPEND=">=dev-lang/python-2.5
+# NOTES:
+# 1. Autopoint needs cvs. bug #152872
+# 2. To convert the pinyin database we need sqlite module of python.
+DEPEND=">=dev-lang/python-2.5[sqlite]
 	dev-util/cvs
 	dev-util/pkgconfig
 	sys-devel/gettext"
 RDEPEND="app-i18n/ibus
-	>=dev-lang/python-2.5"
+	>=dev-lang/python-2.5[sqlite]"
 
-pkg_setup() {
-	if ! built_with_use '>=dev-lang/python-2.5' sqlite; then
-		eerror "To use ibus-pinyin you have to build dev-lang/python with \"sqlite\" USE flag!"
-		die "To use ibus-pinyin you have to build dev-lang/python with \"sqlite\" USE flag!"
-	fi
-}
-
-src_unpack() {
-	git_src_unpack
+src_prepare() {
 	autopoint || die "failed to run autopoint"
 	eautoreconf
 	cp "${DISTDIR}/${PYDB_TAR}" "${S}"/engine
@@ -51,7 +45,7 @@ src_install() {
 pkg_postinst() {
 	ewarn "This package is very experimental, please report your bugs to"
 	ewarn "http://ibus.googlecode.com/issues/list"
-	elog
+	echo
 	elog "You should run ibus-setup and enable the IMEngines you want to use!"
-	elog
+	echo
 }
