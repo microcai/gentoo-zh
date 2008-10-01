@@ -16,15 +16,15 @@ SLOT="0"
 KEYWORDS=""
 IUSE="nls qt4"
 
-# Notes to maintainer:
-# 1. Gentoo already split up the whole gnome-python(>=2.22.1) package
-# 2. Autopoint(part of gettext) needs cvs. Bug #152872
-# 3. To run ibus, we don't need gettext.
+# Notes:
+# 1. Autopoint(part of gettext) needs cvs. Bug #152872
+# 2. To run ibus, we don't need gettext.
 COMMOM_DEPEND=">=dev-lang/python-2.5
 	dev-libs/dbus-glib
 	qt4? ( x11-libs/qt-gui x11-libs/qt-core )
 	x11-libs/gtk+:2"
 RDEPEND="${COMMOM_DEPEND}
+	app-text/iso-codes
 	>=dev-python/dbus-python-0.83.0
 	|| (
 		dev-python/gconf-python
@@ -49,7 +49,7 @@ src_prepare() {
 }
 
 src_configure() {
-	# We never use the internal copy of gconf-python.
+	# Ensure we never use the internal copy of gconf-python.
 	econf $(use_enable nls) \
 		$(use_enable qt4 qt4-immodule)
 		--disable-pygconf
