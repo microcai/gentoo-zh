@@ -2,6 +2,14 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  01 Oct 2008; Hong Hao <oahong@gmail.com> eva-0.4.1.ebuild,
+  eva-9999.ebuild, -eva-20070630.ebuild, -eva-20070723.ebuild,
+  -eva-20080120.ebuild, eva-20080127.ebuild, +metadata.xml:
+  稍微改了改ebuild，修正QA问题/删除老的eva版本并切换到sour
+  ceforge的源 <
+  https://groups.google.com/group/gentoo-china/browse_thread/thread/13227bca05
+  738f8f > 。搞定 issue 18.我没有qt3,没办法进行太多的测试.
+
   5 May 2008; yetist <yetist@gmail.com> +eva-20080127.ebuild:
   add eva-20080127.ebuild file.
 
