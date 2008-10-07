@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  07 Oct 2008; Yu Yuwei <acevery@gmail.com> +cairo-1.8.0.ebuild,
+  +files/cairo-1.8.0-lcdfilter.patch:
+  Add cairo-1.8.0
+
   24 Aug 2008; Yu Yuwei <acevery@gmail.com> metadata.xml:
   Add necessary USE in metadata for GLEP56
 
