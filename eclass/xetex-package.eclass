@@ -55,8 +55,12 @@
 
 inherit base
 
-DEPEND="app-text/xetex
-	>=sys-apps/texinfo-4.2-r5"
+RDEPEND="|| (
+				>=dev-texlive/texlive-xetex-2008
+				app-text/xetex
+		)"
+DEPEND="${RDEPEND}
+		>=sys-apps/texinfo-4.2-r5"
 HOMEPAGE="http://www.tug.org/"
 SRC_URI="ftp://tug.ctan.org/macros/xetex/"
 S=${WORKDIR}/${P}
