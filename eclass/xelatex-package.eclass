@@ -57,7 +57,7 @@ inherit base
 
 RDEPEND="|| (
 				>=dev-texlive/texlive-xetex-2008
-				app-text/xetex
+				>=app-text/xetex-0.997
 		)"
 DEPEND="${RDEPEND}
 		>=sys-apps/texinfo-4.2-r5"
