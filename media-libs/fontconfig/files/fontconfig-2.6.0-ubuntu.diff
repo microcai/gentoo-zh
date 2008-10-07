@@ -1,6 +1,6 @@
 diff -Naur fontconfig-2.6.0.orig/conf.d/30-metric-aliases.conf fontconfig-2.6.0/conf.d/30-metric-aliases.conf
 --- fontconfig-2.6.0.orig/conf.d/30-metric-aliases.conf	2007-11-06 00:38:03.000000000 +0100
-+++ fontconfig-2.6.0/conf.d/30-metric-aliases.conf	2008-06-12 21:58:00.000000000 +0200
++++ fontconfig-2.6.0/conf.d/30-metric-aliases.conf	2008-10-03 23:24:26.000000000 +0200
 @@ -46,6 +46,12 @@
  
  		3) Alias each generic to its specifics.
@@ -78,7 +78,7 @@ diff -Naur fontconfig-2.6.0.orig/conf.d/30-metric-aliases.conf fontconfig-2.6.0/
  </fontconfig>
 diff -Naur fontconfig-2.6.0.orig/conf.d/30-urw-aliases.conf fontconfig-2.6.0/conf.d/30-urw-aliases.conf
 --- fontconfig-2.6.0.orig/conf.d/30-urw-aliases.conf	2007-11-06 00:38:03.000000000 +0100
-+++ fontconfig-2.6.0/conf.d/30-urw-aliases.conf	2008-06-12 22:01:04.000000000 +0200
++++ fontconfig-2.6.0/conf.d/30-urw-aliases.conf	2008-10-03 23:24:26.000000000 +0200
 @@ -5,6 +5,13 @@
    URW provides metric and shape compatible fonts for some Adobe families.
    Helvetica, Courier, and Times are handled in 30-metric-aliases.conf.
@@ -202,7 +202,7 @@ diff -Naur fontconfig-2.6.0.orig/conf.d/30-urw-aliases.conf fontconfig-2.6.0/con
  	    <string>Symbol</string>
 diff -Naur fontconfig-2.6.0.orig/conf.d/40-nonlatin.conf fontconfig-2.6.0/conf.d/40-nonlatin.conf
 --- fontconfig-2.6.0.orig/conf.d/40-nonlatin.conf	2008-05-25 00:45:51.000000000 +0200
-+++ fontconfig-2.6.0/conf.d/40-nonlatin.conf	2008-06-12 22:04:27.000000000 +0200
++++ fontconfig-2.6.0/conf.d/40-nonlatin.conf	2008-10-03 23:24:26.000000000 +0200
 @@ -51,6 +51,7 @@
  		<family>Baekmuk Dotum</family>
  		<family>SimSun</family>
@@ -213,7 +213,7 @@ diff -Naur fontconfig-2.6.0.orig/conf.d/40-nonlatin.conf fontconfig-2.6.0/conf.d
  		<family>ZYSong18030</family>
 diff -Naur fontconfig-2.6.0.orig/conf.d/Makefile.am fontconfig-2.6.0/conf.d/Makefile.am
 --- fontconfig-2.6.0.orig/conf.d/Makefile.am	2008-01-10 19:43:05.000000000 +0100
-+++ fontconfig-2.6.0/conf.d/Makefile.am	2008-06-12 22:03:00.000000000 +0200
++++ fontconfig-2.6.0/conf.d/Makefile.am	2008-10-03 23:24:26.000000000 +0200
 @@ -25,7 +25,12 @@
  	README
  
@@ -256,7 +256,7 @@ diff -Naur fontconfig-2.6.0.orig/conf.d/Makefile.am fontconfig-2.6.0/conf.d/Make
  	65-nonlatin.conf \
 diff -Naur fontconfig-2.6.0.orig/fontconfig/fontconfig.h fontconfig-2.6.0/fontconfig/fontconfig.h
 --- fontconfig-2.6.0.orig/fontconfig/fontconfig.h	2008-06-01 04:24:34.000000000 +0200
-+++ fontconfig-2.6.0/fontconfig/fontconfig.h	2008-06-12 21:52:58.000000000 +0200
++++ fontconfig-2.6.0/fontconfig/fontconfig.h	2008-10-03 23:24:26.000000000 +0200
 @@ -112,6 +112,7 @@
  #define FC_EMBEDDED_BITMAP  "embeddedbitmap"	/* Bool - true to enable embedded bitmaps */
  #define FC_DECORATIVE	    "decorative"	/* Bool - true if style is a decorative variant */
@@ -265,3 +265,36 @@ diff -Naur fontconfig-2.6.0.orig/fontconfig/fontconfig.h fontconfig-2.6.0/fontco
  
  #define FC_CACHE_SUFFIX		    ".cache-"FC_CACHE_VERSION
  #define FC_DIR_CACHE_FILE	    "fonts.cache-"FC_CACHE_VERSION
+diff -Naur fontconfig-2.6.0.orig/src/fcint.h fontconfig-2.6.0/src/fcint.h
+--- fontconfig-2.6.0.orig/src/fcint.h	2008-05-04 04:31:41.000000000 +0200
++++ fontconfig-2.6.0/src/fcint.h	2008-10-03 23:26:04.000000000 +0200
+@@ -849,7 +849,8 @@
+ #define FC_EMBEDDED_BITMAP_OBJECT	39
+ #define FC_DECORATIVE_OBJECT	40
+ #define FC_LCD_FILTER_OBJECT	41
+-#define FC_MAX_BASE_OBJECT	FC_LCD_FILTER_OBJECT
++#define FC_ANY_METRICS_OBJECT   42
++#define FC_MAX_BASE_OBJECT	FC_ANY_METRICS_OBJECT
+ 
+ FcPrivate FcBool
+ FcNameBool (const FcChar8 *v, FcBool *result);
+diff -Naur fontconfig-2.6.0.orig/src/fcname.c fontconfig-2.6.0/src/fcname.c
+--- fontconfig-2.6.0.orig/src/fcname.c	2008-05-04 04:31:41.000000000 +0200
++++ fontconfig-2.6.0/src/fcname.c	2008-10-03 23:28:53.000000000 +0200
+@@ -76,6 +76,7 @@
+     { FC_EMBEDDED_BITMAP,   FcTypeBool },
+     { FC_DECORATIVE,	FcTypeBool },
+     { FC_LCD_FILTER,	FcTypeInteger }, /* 41 */
++    { FC_ANY_METRICS,  FcTypeBool }, /* 42 */
+ };
+ 
+ #define NUM_OBJECT_TYPES    (sizeof _FcBaseObjectTypes / sizeof _FcBaseObjectTypes[0])
+@@ -440,6 +441,8 @@
+     { (FcChar8 *) "lcddefault",	    "lcdfilter",    FC_LCD_DEFAULT },
+     { (FcChar8 *) "lcdlight",	    "lcdfilter",    FC_LCD_LIGHT },
+     { (FcChar8 *) "lcdlegacy",	    "lcdfilter",    FC_LCD_LEGACY },
++    { (FcChar8 *) "lcdfilterlegacy","lcdfilter",    FC_LCD_LEGACY },
++    { (FcChar8 *) "anymetrics",     "anymetrics",   FcTrue },
+ };
+ 
+ #define NUM_FC_CONSTANTS   (sizeof _FcBaseConstants/sizeof _FcBaseConstants[0])

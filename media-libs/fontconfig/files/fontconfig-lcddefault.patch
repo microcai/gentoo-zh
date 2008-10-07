@@ -1,0 +1,34 @@
+diff -Naur fontconfig-2.6.0.orig/conf.d/11-lcd-filter-lcddefault.conf fontconfig-2.6.0/conf.d/11-lcd-filter-lcddefault.conf
+--- fontconfig-2.6.0.orig/conf.d/11-lcd-filter-lcddefault.conf	1970-01-01 01:00:00.000000000 +0100
++++ fontconfig-2.6.0/conf.d/11-lcd-filter-lcddefault.conf	2008-10-03 23:15:55.000000000 +0200
+@@ -0,0 +1,11 @@
++<?xml version="1.0"?>
++<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
++<!-- conf.d/lcd-filter-lcddefault.conf -->
++<fontconfig>
++<!--  Use lcddefault as default for LCD filter -->
++  <match target="font">
++    <edit mode="assign" name="lcdfilter">
++      <const>lcddefault</const>
++    </edit>
++  </match>
++</fontconfig>
+diff -Naur fontconfig-2.6.0.orig/conf.d/Makefile.am fontconfig-2.6.0/conf.d/Makefile.am
+--- fontconfig-2.6.0.orig/conf.d/Makefile.am	2008-10-03 23:15:28.000000000 +0200
++++ fontconfig-2.6.0/conf.d/Makefile.am	2008-10-03 23:16:24.000000000 +0200
+@@ -37,6 +37,7 @@
+ 	10-sub-pixel-vbgr.conf \
+ 	10-sub-pixel-vrgb.conf \
+ 	10-unhinted.conf \
++	11-lcd-filter-lcddefault.conf \
+ 	20-fix-globaladvance.conf \
+ 	20-unhint-small-vera.conf \
+ 	25-unhint-nonlatin.conf \
+@@ -63,6 +64,7 @@
+  	10-hinting.conf \
+  	10-hinting-medium.conf \
+ 	10-no-sub-pixel.conf \
++	11-lcd-filter-lcddefault.conf \
+ 	20-fix-globaladvance.conf \
+ 	20-unhint-small-vera.conf \
+ 	30-urw-aliases.conf \
