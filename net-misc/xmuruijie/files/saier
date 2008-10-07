@@ -21,18 +21,12 @@ start() {
 	echo "nameserver 210.34.0.18" > /etc/resolv.conf
 	/etc/init.d/net.${DEV} start
 	eend $?
-	ebegin "Modify firewall rules"
-	/etc/init.d/localip start
-	eend $?
 	ebegin "Start XMU-Ruijie"
 		/usr/sbin/xmuruijie -d
 	eend $?
 }
 
 stop() {
-	ebegin "Modify firewall rules"
-	/etc/init.d/localip stop
-	eend $?
 	ebegin "Stopping XMU-Ruijie"
 		/usr/sbin/xmuruijie -p
 	eend $?
