@@ -36,7 +36,8 @@ RDEPEND="${COMMOM_DEPEND}
 DEPEND="${COMMOM_DEPEND}
 	dev-util/cvs
 	dev-util/pkgconfig
-	sys-devel/gettext"
+	sys-devel/gettext
+	x11-libs/libX11"
 
 pkg_setup() {
 	# An arch specific config directory is used on multilib systems

@@ -3,6 +3,9 @@
 # $Header: $
 
   07 Oct 2008; Hong Hao <oahong@gmail.com> ibus-9999.ebuild:
+  Another fix.
+
+  07 Oct 2008; Hong Hao <oahong@gmail.com> ibus-9999.ebuild:
   Updated runtime depends (ibus requires notification-daemon). License
   switched to LGPL-2.1
 
