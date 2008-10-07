@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  07 Oct 2008; Hong Hao <oahong@gmail.com> ibus-9999.ebuild:
+  Updated runtime depends (ibus requires notification-daemon). License
+  switched to LGPL-2.1
+
   01 Oct 2008; Hong Hao <oahong@gmail.com> ibus-9999.ebuild:
   Fixed runtime depend on iso-codes.
 

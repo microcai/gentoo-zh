@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI="2"
-EGIT_REPO_URI="http://github.com/phuang/ibus.git"
+EGIT_REPO_URI="git://github.com/phuang/ibus.git"
 
 inherit autotools multilib git
 
@@ -11,7 +11,7 @@ DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://ibus.googlecode.com"
 SRC_URI=""
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
 IUSE="nls qt4"
@@ -31,7 +31,8 @@ RDEPEND="${COMMOM_DEPEND}
 		dev-python/gnome-python
 	)
 	>=dev-python/pygtk-2.12.1
-	dev-python/pyxdg"
+	dev-python/pyxdg
+	x11-misc/notification-daemon"
 DEPEND="${COMMOM_DEPEND}
 	dev-util/cvs
 	dev-util/pkgconfig
@@ -49,7 +50,7 @@ src_prepare() {
 }
 
 src_configure() {
-	# Ensure we never use the internal copy of gconf-python.
+	# We never use the internal copy of gconf-python.
 	econf $(use_enable nls) \
 		$(use_enable qt4 qt4-immodule)
 		--disable-pygconf
@@ -57,6 +58,9 @@ src_configure() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
+
+	# Remove empty directory.
+	rmdir "${D}"/usr/share/ibus/engine
 	dodoc AUTHORS ChangeLog NEWS README
 }
 
@@ -65,9 +69,9 @@ pkg_postinst() {
 	ewarn "http://ibus.googlecode.com/issues/list"
 	echo
 	elog "To use ibus, you need to:"
-	elog "1. Install input engines before you can use it."
+	elog "1. Install input engines."
 	elog "   Run \"emerge -s ibus-\" in your favorite terminal"
-	elog "   for a list of Input Engines we already have."
+	elog "   for a list of IMEngines we already have."
 	elog "2. Set the following in your"
 	elog "   user startup scripts such as .xinitrc or .bashrc"
 	echo
@@ -81,9 +85,11 @@ pkg_postinst() {
 		ebeep 3
 	fi
 
-	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > "${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
+	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > \
+		"${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
 }
 
 pkg_postrm() {
-	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > "${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
+	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > \
+		"${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
 }
