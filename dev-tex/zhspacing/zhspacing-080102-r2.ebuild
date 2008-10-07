@@ -22,3 +22,12 @@ src_unpack() {
 	cp "${DISTDIR}"/*.pdf "${S}/"
 }
 
+pkg_postinst() {
+	einfo "Running mktexlsr to rebuild ls-R database...."
+	mktexlsr
+}
+
+pkg_postrm() {
+	einfo "Running mktexlsr to rebuild ls-R database...."
+	mktexlsr
+}
