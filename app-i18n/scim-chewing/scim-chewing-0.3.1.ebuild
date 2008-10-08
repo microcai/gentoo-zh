@@ -1,4 +1,4 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /home/cvsroot/ebuildteam/app-i18n/scim-chewing/scim-chewing-0.3.1.ebuild,v 1.1 2006/07/12 06:19:40 scsi Exp $
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~amd64"
 IUSE=""
 
 DEPEND=">=app-i18n/scim-1.4
-		>=dev-libs/libchewing-0.3"
+		=dev-libs/libchewing-0.3.0*"
 
 src_unpack() {
 	unpack "${A}"

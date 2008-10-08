@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/darts
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /home/cvsroot/ebuildteam/app-i18n/scim-chewing/ChangeLog,v 1.6 2006/05/15 08:26:21 palatis Exp $
+
+  08 Oct 2008; scsi <scsichen@gmail.com> -scim-chewing-0.1.1.ebuild,
+  -scim-chewing-0.2.0.ebuild, -scim-chewing-0.2.1.ebuild,
+  -scim-chewing-0.3.0.ebuild, scim-chewing-0.3.1.ebuild,
+  +scim-chewing-0.3.2.ebuild, +metadata.xml:
+  app-i18n/scim-chewing: version bump
 
 *scim-chewing-0.3.1 (5 May 2005)
 

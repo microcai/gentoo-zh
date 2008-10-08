@@ -1,20 +1,24 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/ebuildteam/app-i18n/scim-chewing/scim-chewing-0.3.0.ebuild,v 1.1 2006/05/15 08:26:21 palatis Exp $
+# $Header: /home/cvsroot/ebuildteam/app-i18n/scim-chewing/scim-chewing-0.3.1.ebuild,v 1.1 2006/07/12 06:19:40 scsi Exp $
 
 inherit eutils
 
 DESCRIPTION="Chewing Input Method for SCIM"
 HOMEPAGE="http://chewing.csie.net/"
-SRC_URI="http://chewing.csie.net/download/scim/${P}.tar.gz"
+SRC_URI="http://chewing.csie.net/download/scim/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 
 DEPEND=">=app-i18n/scim-1.4
-		>=dev-libs/libchewing-0.3"
+		>=dev-libs/libchewing-0.3.1"
+
+src_unpack() {
+	unpack "${A}"
+}
 
 src_compile() {
 	econf || die
@@ -22,7 +26,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS THANKS README
 }
