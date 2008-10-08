@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Oct 2008; Hong Hao <oahong@gmail.com> linux-fetion-0.8.0.ebuild,
+  linux-fetion-0.8.1.ebuild:
+  依赖关系中去除libstdc++
+
   08 Oct 2008; Hong Hao <oahong@gmail.com> -linux-fetion-0.2.2.ebuild,
   linux-fetion-0.8.0.ebuild, linux-fetion-0.8.1.ebuild:
   Kill old. Fix some QA issues.
