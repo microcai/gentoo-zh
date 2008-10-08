@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libchewing
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /home/cvsroot/ebuildteam/dev-libs/libchewing/ChangeLog,v 1.9 2006/05/15 08:26:21 palatis Exp $
+
+  08 Oct 2008; scsi <scsichen@gmail.com> -libchewing-0.2.4.ebuild,
+  -libchewing-0.2.5.ebuild, -libchewing-0.2.6.ebuild,
+  -libchewing-0.2.7.ebuild, +libchewing-0.3.1.ebuild:
+  dev-libs/libchewing: version bump
 
 *libchewing-0.2.7 (5 May 2005)
   5 May 2005; Palatis <palatis@gentoo.org.tw>

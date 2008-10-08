@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/ebuildteam/dev-libs/libchewing/libchewing-0.3.0.ebuild,v 1.2 2006/07/12 06:17:35 scsi Exp $
+# $Header: $
 
 inherit flag-o-matic eutils
 
@@ -20,5 +20,5 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "install failed"
+	make install DESTDIR="${D}" || die "install failed"
 }

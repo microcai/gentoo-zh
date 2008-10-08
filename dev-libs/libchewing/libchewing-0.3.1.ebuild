@@ -1,17 +1,17 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/ebuildteam/dev-libs/libchewing/libchewing-0.2.5.ebuild,v 1.3 2005/08/21 03:57:19 scsi Exp $
+# $Header: $
 
 inherit flag-o-matic eutils
 
 IUSE=""
 DESCRIPTION="Library for Chinese Phonetic input method"
 HOMEPAGE="http://chewing.csie.net/"
-SRC_URI="http://chewing.csie.net/download/libchewing/${P}.tar.gz"
+SRC_URI="http://chewing.csie.net/download/libchewing/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="ppc x86"
+KEYWORDS="x86 ~amd64"
 DEPEND="virtual/libc"
 
 src_compile() {
@@ -20,5 +20,5 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "install failed"
+	make install DESTDIR="${D}" || die "install failed"
 }
