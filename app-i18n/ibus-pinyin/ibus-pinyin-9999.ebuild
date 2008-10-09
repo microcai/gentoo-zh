@@ -12,7 +12,7 @@ DESCRIPTION="Chinese PinYin IMEngine for IBus Framework"
 HOMEPAGE="http://ibus.googlecode.com"
 SRC_URI="http://ibus.googlecode.com/files/${PYDB_TAR}"
 
-LICENSE="LGPL-2"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 IUSE="nls"

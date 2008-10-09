@@ -11,12 +11,12 @@ DESCRIPTION="General Table Engine for IBus Framework"
 HOMEPAGE="http://ibus.googlecode.com"
 SRC_URI=""
 
-LICENSE="LGPL-2"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 IUSE="+additional cangjie5 extra-phrases erbi-qs wubi nls zhengma"
 
-# NOTES to myself:
+# NOTES:
 # 1.autopoint is part of gettext, so here we
 #   don't need a conditional USE flag 'nls'.
 # 2.ibus seems to work without gettext (no rdep! tested on my box).
@@ -32,7 +32,7 @@ RDEPEND="app-i18n/ibus
 pkg_setup() {
 	if ! use cangjie5 && ! use erbi-qs && ! use wubi && ! use zhengma; then
 		echo
-		ewarn "To install ${PN}, you should set at least one of following USE flags:"
+		ewarn "To install ${PN}, you should set at least one of the following USE flags:"
 		ewarn "\"cangjie5 erbi-qs wubi zhengma\""
 		ewarn "For more info about them please run \"quse -D use-flag-here\""
 		ewarn "or \"eix ibus-table\"."

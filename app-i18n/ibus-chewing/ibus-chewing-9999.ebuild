@@ -11,7 +11,7 @@ DESCRIPTION="Chinese Chewing Engine for IBus Framework"
 HOMEPAGE="http://ibus.googlecode.com"
 SRC_URI=""
 
-LICENSE="LGPL-2"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 IUSE="nls"
@@ -43,6 +43,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	echo
 	ewarn "This package is very experimental, please report your bugs to"
 	ewarn "http://ibus.googlecode.com/issues/list"
 	echo
