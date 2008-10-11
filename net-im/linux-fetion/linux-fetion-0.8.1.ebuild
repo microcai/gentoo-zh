@@ -4,7 +4,7 @@
 
 inherit qt4
 
-DESCRIPTION="Linux Fetion, a Qt4 IM client using CHINA MOBILE's fetion protocol"
+DESCRIPTION="Linux Fetion, a QT4 IM client using CHINA MOBILE's Fetion Protocol"
 HOMEPAGE="http://www.libfetion.cn/"
 SRC_URI="http://www.libfetion.cn/download/App/${P}.tar.gz"
 
@@ -13,13 +13,11 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-# FIXME:
-RDEPEND="net-misc/curl
-	|| (
-		( x11-libs/qt-gui x11-libs/qt-qt3support )
-		>=x11-libs/qt-4.3
-	)"
-DEPEND="${RDEPEND}"
+DEPEND="dev-libs/openssl
+	net-misc/curl
+	|| ( ( x11-libs/qt-gui x11-libs/qt-qt3support )
+		( >=x11-libs/qt-4.3 ) )"
+RDEPEND="${DEPEND}"
 
 RESTRICT="primaryuri"
 
