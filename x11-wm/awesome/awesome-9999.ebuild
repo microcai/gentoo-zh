@@ -13,8 +13,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
-#IUSE="dbus doc +imlib bash-completion"
+KEYWORDS=""
 IUSE="dbus doc +imlib"
 
 COMMON_DEPEND=">=dev-lang/lua-5.1
@@ -42,10 +41,8 @@ DEPEND="${RDEPEND}
 		dev-util/luadoc
 		media-gfx/graphviz
 	)"
-
 RDEPEND="${COMMON_DEPEND}
 	app-shells/bash"
-#	bash-completion? ( app-shells/bash-completion )
 
 DOCS="AUTHORS BUGS PATCHES README STYLE"
 
