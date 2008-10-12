@@ -1,0 +1,8 @@
+# ChangeLog for x11-wm/awesome
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  12 Oct 2008; Hong Hao <oahong@gmail.com> +awesome-9999.ebuild,
+  +files/awesome-session, +metadata.xml:
+  参照portage的ebuild改了一个9999版的awesome.
+
