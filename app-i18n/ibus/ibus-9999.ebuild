@@ -59,9 +59,7 @@ src_configure() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
-
-	# Remove empty directory.
-	rmdir "${D}"/usr/share/ibus/engine
+	keepdir /usr/share/ibus/engine
 	dodoc AUTHORS ChangeLog NEWS README
 }
 
