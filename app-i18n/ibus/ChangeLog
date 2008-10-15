@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Oct 2008; Hong Hao <oahong@gmail.com> ibus-9999.ebuild:
+  Fixed some QA issues.
+
   07 Oct 2008; Hong Hao <oahong@gmail.com> ibus-9999.ebuild:
   Another fix.
 

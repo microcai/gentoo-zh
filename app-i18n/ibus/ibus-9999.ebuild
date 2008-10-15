@@ -3,9 +3,10 @@
 # $Header: $
 
 EAPI="2"
-EGIT_REPO_URI="git://github.com/phuang/ibus.git"
 
-inherit autotools multilib git
+EGIT_REPO_URI="git://github.com/phuang/ibus.git"
+NEED_PYTHON="2.5"
+inherit autotools multilib git python
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://ibus.googlecode.com"
@@ -19,10 +20,11 @@ IUSE="nls qt4"
 # Notes:
 # 1. Autopoint(part of gettext) needs cvs. Bug #152872
 # 2. To run ibus, we don't need gettext.
-COMMOM_DEPEND=">=dev-lang/python-2.5
+COMMOM_DEPEND=">=dev-libs/glib-2
 	dev-libs/dbus-glib
 	qt4? ( x11-libs/qt-gui x11-libs/qt-core )
-	x11-libs/gtk+:2"
+	x11-libs/gtk+:2
+	x11-libs/libX11"
 RDEPEND="${COMMOM_DEPEND}
 	app-text/iso-codes
 	>=dev-python/dbus-python-0.83.0
@@ -36,8 +38,7 @@ RDEPEND="${COMMOM_DEPEND}
 DEPEND="${COMMOM_DEPEND}
 	dev-util/cvs
 	dev-util/pkgconfig
-	sys-devel/gettext
-	x11-libs/libX11"
+	sys-devel/gettext"
 
 pkg_setup() {
 	# An arch specific config directory is used on multilib systems
@@ -86,9 +87,17 @@ pkg_postinst() {
 
 	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > \
 		"${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
+
+	# Refer to: http://www.gentoo.org/proj/en/Python/developersguide.xml
+	python_version
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/${PN} /usr/share/${PN}
 }
 
 pkg_postrm() {
 	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > \
 		"${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
+
+	python_version
+	python_mod_cleanup
+	python_mod_cleanup /usr/share/${PN}
 }
