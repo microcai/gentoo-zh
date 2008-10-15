@@ -27,12 +27,12 @@ RDEPEND=">=gnome-base/gnome-desktop-2.12
 	>=gnome-base/gconf-2.6.1
 	>=gnome-base/gnome-menus-2.11.1
 	>=gnome-base/libbonobo-2
-	>=x11-libs/liblunar-1.0.0
 	gnome-base/librsvg
 	>=dev-libs/dbus-glib-0.71
 	>=sys-apps/dbus-1.1.2
 	x11-libs/libXau
 	>=x11-libs/cairo-1.0.0
+	lunar? ( >=x11-libs/liblunar-1.0.0 )
 	eds? ( >=gnome-extra/evolution-data-server-1.6 )
 	networkmanager? ( >=net-misc/networkmanager-0.6 )"
 DEPEND="${RDEPEND}
@@ -61,8 +61,10 @@ src_unpack() {
 	# FIXME : uh yeah, this is nice
 	# We should patch in a switch here and send it upstream
 	sed -i 's:--load:-v:' "${S}/gnome-panel/Makefile.in" || die "sed failed"
-	epatch ${FILESDIR}/lunar.patch
-	gnome-autogen.sh
+	if use lunar; then
+		epatch ${FILESDIR}/lunar.patch
+		gnome-autogen.sh
+	fi
 }
 
 pkg_postinst() {
