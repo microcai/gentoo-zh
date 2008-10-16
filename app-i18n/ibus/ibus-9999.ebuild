@@ -90,14 +90,13 @@ pkg_postinst() {
 
 	# Refer to: http://www.gentoo.org/proj/en/Python/developersguide.xml
 	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/${PN} /usr/share/${PN}
+	python_mod_optimize "$(python_get_sitedir)"/${PN} /usr/share/${PN}
 }
 
 pkg_postrm() {
 	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > \
 		"${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
 
-	python_version
 	python_mod_cleanup
 	python_mod_cleanup /usr/share/${PN}
 }
