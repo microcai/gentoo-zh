@@ -22,8 +22,8 @@ DEPEND="${RDEPEND}
 pkg_config() {
 	# FIXME
 	if !(linux_chkconfig_present FB_UVESA || linux_chkconfig_present FB_VESA); then
-		eerror "You don't framebuffer support, please check your kernel configuration!"
-		die "You don't framebuffer support, please check your kernel configuration!"
+		eerror "You don't have framebuffer support, please check your kernel configuration!"
+		die "You don't have framebuffer support, please check your kernel configuration!"
 	fi
 }
 

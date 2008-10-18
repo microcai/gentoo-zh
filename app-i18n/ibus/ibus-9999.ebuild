@@ -89,7 +89,6 @@ pkg_postinst() {
 		"${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
 
 	# Refer to: http://www.gentoo.org/proj/en/Python/developersguide.xml
-	python_version
 	python_mod_optimize "$(python_get_sitedir)"/${PN} /usr/share/${PN}
 }
 
