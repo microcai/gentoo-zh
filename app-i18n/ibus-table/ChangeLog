@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Oct 2008; Hong Hao <oahong@gmail.com> ibus-table-9999.ebuild:
+  Revert to EAPI-1. Fix license.
+
   28 Sep 2008; Hong Hao <oahong@gmail.com> ibus-table-9999.ebuild:
   EAPI-2, you need >=sys-apps/portage-2.2_rc11. <
   http://dev.gentoo.org/~yngwin/pms/pms.html#x1-149000D >
