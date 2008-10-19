@@ -1,0 +1,53 @@
+# ChangeLog for app-i18n/zhcon
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.12 2008/06/09 12:46:04 flameeyes Exp $
+
+  09 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/zhcon-0.2.6+gcc-4.3.patch, zhcon-0.2.6.ebuild:
+  Add patch to build with GCC 4.3. Thanks to Peter Alfredsen (loki_val) in
+  bug #219769.
+
+  08 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Fix metadata.
+
+  24 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/zhcon-0.2.3-CAN-2005-0072.patch,
+  -files/zhcon-0.2.3-assert-gentoo.diff, -files/zhcon-0.2.3-gcc34.patch,
+  -files/zhcon-0.2.3-gentoo.diff, -zhcon-0.2.3.ebuild,
+  -zhcon-0.2.3-r1.ebuild, zhcon-0.2.6.ebuild:
+  Use -j1 for make install, thanks Zhang Le in bug #144944. Remove old
+  versions, that don't work anyway.
+
+  22 Oct 2006; Joshua Jackson <tsunam@gentoo.org> zhcon-0.2.3.ebuild,
+  zhcon-0.2.3-r1.ebuild:
+  Moving back to ~x86, as nothing depends on it from searching and it doesn't
+  build on x86
+
+*zhcon-0.2.6 (22 Oct 2006)
+
+  22 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/zhcon-0.2.5.make-fix.patch, +files/zhcon-0.2.6.configure.in.patch,
+  +files/zhcon-0.2.6.sysconfdir.patch, metadata.xml, +zhcon-0.2.6.ebuild:
+  Version bump for zhcon, thanks to Zhang Le (bug #144944) who's also going
+  to be the proxied maintainer for this package.
+
+*zhcon-0.2.3-r1 (25 Jan 2005)
+
+  25 Jan 2005; Alastair Tse <liquidx@gentoo.org>
+  +files/zhcon-0.2.3-CAN-2005-0072.patch, +zhcon-0.2.3-r1.ebuild:
+  security patch for unauthorised file access (CAN-2005-0072) bug #78117
+
+  25 Aug 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/zhcon-0.2.3-gcc34.patch, zhcon-0.2.3.ebuild:
+  Fixed compile problems with gcc-34. Bug #61381. Thanks to Jackey Yang
+
+  25 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> zhcon-0.2.3.ebuild:
+  Marked stable on x86
+
+*zhcon-0.2.3 (14 Mar 2004)
+
+  14 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> zhcon-0.2.3.ebuild,
+  files/zhcon-0.2.3-assert-gentoo.diff, files/zhcon-0.2.3-gentoo.diff:
+  Initial import. Ebuild submitted by Ray Tsang <rayt@9pnet.com>,
+  closing bug #33746
+
