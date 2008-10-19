@@ -2,14 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-ESVN_REPO_URI="http://fcitx.googlecode.com/svn/trunk"
-# We never need an empty /usr/share/fcitx/xpm dir. So remove it from system.
-ESVN_PATCHES="remove-empty-xpm-dir.patch"
+ESVN_REPO_URI="https://fcitx.svn.sourceforge.net/svnroot/fcitx"
 
 inherit autotools subversion
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
-HOMEPAGE="http://fcitx.googlecode.com"
+HOMEPAGE="http://www.fcitx.org"
 SRC_URI=""
 
 LICENSE="GPL-2"
@@ -27,9 +25,6 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	subversion_src_unpack
-	# Quick and dirty hack, ensure we never install
-	# the empty "/usr/share/fcitx/xpm" dir.
-	sed -i -e 's:xpm[[:space:]]::g' Makefile.am
 	eautoreconf
 }
 
@@ -40,14 +35,18 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+
 	dodoc AUTHORS ChangeLog README THANKS TODO
 
+	# Remove empty directory
+	rmdir "${D}"/usr/share/fcitx/xpm
 	rm -rf "${D}"/usr/share/fcitx/doc/
 	dodoc doc/pinyin.txt doc/cjkvinput.txt
 	dohtml doc/wb_fh.htm
 }
 
 pkg_postinst() {
+	echo
 	elog "You should export the following variables to use fcitx"
 	elog " export XMODIFIERS=\"@im=fcitx\""
 	elog " export XIM=fcitx"
@@ -57,5 +56,5 @@ pkg_postinst() {
 	elog " cp /usr/share/fcitx/data/wbx.mb ~/.fcitx"
 	elog " cp /usr/share/fcitx/data/erbi.mb ~/.fcitx"
 	elog " cp /usr/share/fcitx/data/tables.conf ~/.fcitx"
-	elog ""
+	echo
 }
