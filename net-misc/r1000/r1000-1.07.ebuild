@@ -15,7 +15,7 @@ SRC_URI="ftp://61.56.86.122/cn/nic/${MY_P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE=""
 DEPEND="sys-kernel/linux-headers"
