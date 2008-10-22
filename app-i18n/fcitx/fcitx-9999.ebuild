@@ -2,12 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-ESVN_REPO_URI="https://fcitx.svn.sourceforge.net/svnroot/fcitx"
+ESVN_REPO_URI="http://fcitx.googlecode.com/svn/trunk"
 
 inherit autotools subversion
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
-HOMEPAGE="http://www.fcitx.org"
+HOMEPAGE="http://fcitx.googlecode.com"
 SRC_URI=""
 
 LICENSE="GPL-2"
@@ -35,11 +35,11 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-
 	dodoc AUTHORS ChangeLog README THANKS TODO
 
 	# Remove empty directory
 	rmdir "${D}"/usr/share/fcitx/xpm
+
 	rm -rf "${D}"/usr/share/fcitx/doc/
 	dodoc doc/pinyin.txt doc/cjkvinput.txt
 	dohtml doc/wb_fh.htm
@@ -51,7 +51,7 @@ pkg_postinst() {
 	elog " export XMODIFIERS=\"@im=fcitx\""
 	elog " export XIM=fcitx"
 	elog " export XIM_PROGRAM=fcitx"
-	elog ""
+	echo
 	elog "If you want to use WuBi or ErBi"
 	elog " cp /usr/share/fcitx/data/wbx.mb ~/.fcitx"
 	elog " cp /usr/share/fcitx/data/erbi.mb ~/.fcitx"

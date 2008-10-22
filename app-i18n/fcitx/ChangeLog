@@ -2,8 +2,8 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-  19 Oct 2008; Hong Hao <oahong@gmail.com> fcitx-9999.ebuild:
-  换成yuking上传到sf的源，有兴趣的玩一玩吧。
+  22 Oct 2008; Hong Hao <oahong@gmail.com> fcitx-9999.ebuild:
+  Rolling back changes in r643
 
   28 Sep 2008; Hong Hao <oahong@gmail.com> fcitx-3.5_pre080918.ebuild,
   fcitx-9999.ebuild:
