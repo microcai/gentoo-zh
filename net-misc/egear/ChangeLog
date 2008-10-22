@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/egear
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  22 Oct 2008; Hong Hao <oahong@gmail.com> egear-0.0.2.ebuild,
+  egear-9999.ebuild, +metadata.xml:
+  Fixed deps and some QA issues. Added metadata.xml.
+
