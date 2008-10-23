@@ -28,7 +28,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}.configure.in.patch
 	epatch "${FILESDIR}"/${P}+gcc-4.3.patch
 	epatch "${FILESDIR}"/${P}-lrmi.c.patch
-	epatch "${FILESDIR}"/${P}-amd64.c.patch
+	epatch "${FILESDIR}"/${P}-amd64.patch
 	eautoreconf
 }
 
