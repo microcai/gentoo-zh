@@ -17,7 +17,7 @@ KEYWORDS=""
 IUSE="dbus doc"
 
 # bash in system set.
-RDEPEND=">=dev-lang/lua-5.1
+COMMOM_DEPEND=">=dev-lang/lua-5.1
 	dev-libs/libev
 	>=dev-libs/glib-2
 	dev-util/gperf
@@ -30,7 +30,7 @@ RDEPEND=">=dev-lang/lua-5.1
 	>=x11-libs/xcb-util-0.3
 	dbus? ( >=sys-apps/dbus-1 )
 	>=x11-proto/xproto-7.0.11"
-DEPEND="${RDEPEND}
+DEPEND="${COMMOM_DEPEND}
 	app-text/asciidoc
 	app-text/xmlto
 	>=dev-util/cmake-2.6
@@ -41,6 +41,10 @@ DEPEND="${RDEPEND}
 		dev-util/luadoc
 		media-gfx/graphviz
 	)"
+# Runtime depends for awsetbg.
+RDEPEND="${COMMOM_DEPEND}
+	x11-apps/xmessage
+	media-gfx/feh"
 
 DOCS="AUTHORS BUGS README STYLE"
 
@@ -66,7 +70,7 @@ src_install() {
 	cmake-utils_src_install
 
 	if use doc ; then
-		set -x # paludis sucks!!!
+		set -x
 		dohtml -r "${WORKDIR}"/${PN}_build/doc/html/*
 		mv "${D}"/usr/share/doc/${PN}/luadoc "${D}"/usr/share/doc/${PF}/html/luadoc || die
 	fi
