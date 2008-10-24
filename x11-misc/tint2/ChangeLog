@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  24 Oct 2008; Hong Hao <oahong@gmail.com> tint2-0.6.0.ebuild:
+  tint -> tin2
+
   22 Oct 2008; Hong Hao <oahong@gmail.com> +tint2-0.6.0.ebuild,
   +metadata.xml:
   Initial import tint2 (a lightweight panel/taskbar) from my personal overlay.

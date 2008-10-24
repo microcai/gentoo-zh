@@ -26,14 +26,15 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN/2}/src
 
 src_prepare() {
-	# no strip
+	# Portage can do this.
 	sed -i \
 		-e "/strip/d" Makefile \
 		|| die "sed failed"
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "install failed"
+	exeinto /usr/bin
+	newexe tint tint2
 
 	cd ${WORKDIR}/${PN/2}
 	dodoc ChangeLog README doc/*
@@ -44,6 +45,6 @@ src_install() {
 pkg_postinst() {
 	echo
 	elog "For more info about how to use/config ${PN},"
-	elog "please read docs in /usr/share/doc/${P}."
+	elog "please consult document in /usr/share/doc/${P}."
 	echo
 }
