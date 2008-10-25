@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
+<maintainer>
+        <email>xijiaosdq@gmail.com</email>
+        <name>(unknow)传说中的夕角大仙</name>
+</maintainer>
 </pkgmetadata>
