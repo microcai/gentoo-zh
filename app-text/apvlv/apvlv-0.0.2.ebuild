@@ -11,7 +11,7 @@ SRC_URI="http://apvlv.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 RESTICT="primaryuri"
