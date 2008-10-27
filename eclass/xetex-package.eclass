@@ -51,12 +51,15 @@
 # you must either grab each file individually, or find a place to mirror an
 # archive of them.  (iBiblio)
 #
-# It inherits base.
 
+# Use EAPI2 to make USE dependency easy to specify
+EAPI="2"
+
+# It inherits base.
 inherit base
 
 RDEPEND="|| (
-				>=dev-texlive/texlive-xetex-2008
+				>=app-text/texlive-2008[xetex]
 				>=app-text/xetex-0.997
 		)"
 DEPEND="${RDEPEND}
