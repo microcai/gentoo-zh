@@ -1,0 +1,26 @@
+% encoding: UTF-8
+% this is the example to use zhspacing When your Gentoo Box
+% do not have SimSun, SimHei, Fangsong, Kaiti_GB2312 installed.
+% 
+% Suppose that we have ``Adobe Song Std'', ``Adobe Heiti Std'',
+% ``Adobe Kaiti Std'', and ``Adobe Fangsong Std'', then
+% 
+% Bad news is that, this is only applicable you use zhspacing,
+% when you use zhfont, this will not help :(
+% 
+% I think package option support need to be include in zhspacing,
+% and I will try to hack it in the spare time. 
+%                               Yu Yuwei <acevery@gmail.com>
+%
+\documentclass{article}
+\usepackage{fontspec}
+\newfontfamily\zhfont[BoldFont=Adobe Heiti Std,ItalicFont=Adobe Kaiti Std]{Adobe Song Std}
+\newfontfamily\zhpunctfont{Adobe Song Std}
+\usepackage{zhspacing}
+%\makeglossary
+
+\begin{document}
+\zhspacing
+中文从这里开始。
+
+\end{document}
