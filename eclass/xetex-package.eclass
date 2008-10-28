@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xetex-package.eclass,v 1.33 2008/02/17 19:03:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xetex-package.eclass,v 1.37 2008/08/30 13:49:28 aballier Exp $
 
 # @ECLASS: xetex-package.eclass
 # @MAINTAINER:
@@ -51,11 +51,11 @@
 # you must either grab each file individually, or find a place to mirror an
 # archive of them.  (iBiblio)
 #
-
 # Use EAPI2 to make USE dependency easy to specify
 EAPI="2"
-
+#
 # It inherits base.
+
 inherit base
 
 RDEPEND="|| (
@@ -63,7 +63,7 @@ RDEPEND="|| (
 				>=app-text/xetex-0.997
 		)"
 DEPEND="${RDEPEND}
-		>=sys-apps/texinfo-4.2-r5"
+	>=sys-apps/texinfo-4.2-r5"
 HOMEPAGE="http://www.tug.org/"
 SRC_URI="ftp://tug.ctan.org/macros/xetex/"
 S=${WORKDIR}/${P}
@@ -120,8 +120,9 @@ xetex-package_src_doinstall() {
 			"dvi" | "ps" | "pdf")
 				for i in `find . -maxdepth 1 -type f -name "*.${1}"`
 				do
-					insinto /usr/share/doc/${P}
-					doins $i || "doins $i failed"
+					insinto /usr/share/doc/${PF}
+					doins $i || die "doins $i failed"
+					dosym /usr/share/doc/${PF}/$(basename ${i}) ${TEXMF}/doc/xetex/${PN}/${i}
 					#dodoc -u $i
 				done
 				;;
@@ -129,7 +130,7 @@ xetex-package_src_doinstall() {
 				for i in `find . -maxdepth 1 -type f -name "*.${1}"`
 				do
 					einfo "Making documentation: $i"
-					texi2dvi -q -c --language=xetex $i &> /dev/null
+					texi2dvi -q -c --language=latex $i &> /dev/null
 					done
 				;;
 			"tfm" | "vf" | "afm")
