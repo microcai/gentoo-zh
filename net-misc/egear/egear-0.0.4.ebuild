@@ -33,7 +33,7 @@ src_install() {
 	doins res/egear.png
 
 	insinto /usr/share/applications
-	doins egear.desktop
+	doins misc/egear.desktop
 
 	dobin ${PN}
 }
