@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  01 Nov 2008; Hong Hao <oahong@gmail.com> app-i18n/ibus/ibus-9999.ebuild:
+  Update dependency. (ibus requires >=dev-libs/glib-2.16)
+
   16 Oct 2008; Hong Hao <oahong@gmail.com> ibus-9999.ebuild:
   Remove unnecessary 'python_version' call from pkg_postrm phrase
 

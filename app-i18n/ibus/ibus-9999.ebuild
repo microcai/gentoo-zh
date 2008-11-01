@@ -20,7 +20,7 @@ IUSE="nls qt4"
 # Notes:
 # 1. Autopoint(part of gettext) needs cvs. Bug #152872
 # 2. To run ibus, we don't need gettext.
-COMMOM_DEPEND=">=dev-libs/glib-2
+COMMOM_DEPEND=">=dev-libs/glib-2.16
 	dev-libs/dbus-glib
 	qt4? ( x11-libs/qt-gui x11-libs/qt-core )
 	x11-libs/gtk+:2
@@ -96,6 +96,5 @@ pkg_postrm() {
 	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > \
 		"${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
 
-	python_mod_cleanup
-	python_mod_cleanup /usr/share/${PN}
+	python_mod_cleanup && python_mod_cleanup /usr/share/${PN}
 }
