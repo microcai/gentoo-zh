@@ -11,7 +11,7 @@ SRC_URI="http://tint2.googlecode.com/files/${P/2}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="doc"
+IUSE="+doc"
 
 RDEPEND="dev-libs/glib:2
 	x11-libs/cairo

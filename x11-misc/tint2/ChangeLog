@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Nov 2008; Hong Hao <oahong@gmail.com>
+  x11-misc/tint2/tint2-0.6.0.ebuild:
+  默认开启doc USE flag.
+
   29 Oct 2008; Hong Hao <oahong@gmail.com>
   x11-misc/tint2/tint2-0.6.0.ebuild:
   加上doc的USE flag.
