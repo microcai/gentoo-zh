@@ -2,6 +2,13 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  01 Nov 2008; Yu Yuwei <acevery@gmail.com> cairo-1.6.4-r1.ebuild,
+  +cairo-1.8.2.ebuild, +files/cairo-01_directfb-no-accel.patch,
+  +files/cairo-02_no-private-symbol-export.patch,
+  +files/cairo-03_fix_ftbfs_withing_xcb.patch,
+  +files/cairo-04_lcd_filter.patch:
+  Update from forums.gentoo.org
+
   07 Oct 2008; Yu Yuwei <acevery@gmail.com> +cairo-1.8.0.ebuild,
   +files/cairo-1.8.0-lcdfilter.patch:
   Add cairo-1.8.0

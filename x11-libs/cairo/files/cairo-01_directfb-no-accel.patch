@@ -1,0 +1,30 @@
+diff -Naur cairo-1.8.2.orig/src/cairo-directfb-surface.c cairo-1.8.2.debian-1/src/cairo-directfb-surface.c
+--- cairo-1.8.2.orig/src/cairo-directfb-surface.c	2008-10-30 15:34:25.000000000 +0100
++++ cairo-1.8.2.debian-1/src/cairo-directfb-surface.c	2008-11-01 16:17:26.000000000 +0100
+@@ -1856,7 +1856,7 @@
+     if (done)
+ 	return;
+ 
+-    if (getenv ("CAIRO_DIRECTFB_NO_ACCEL")) {
++/*    if (getenv ("CAIRO_DIRECTFB_NO_ACCEL")) { */
+ #if DFB_RECTANGLES
+ 	_cairo_directfb_surface_backend.fill_rectangles = NULL;
+ #endif
+@@ -1872,7 +1872,7 @@
+ 	_cairo_directfb_surface_backend.show_glyphs = NULL;
+ #endif
+ 	D_DEBUG_AT (CairoDFB_Surface, "Acceleration disabled.\n");
+-    } else {
++/*    } else {
+ 	DFBGraphicsDeviceDescription dsc;
+ 
+ 	dfb->GetDeviceDescription (dfb, &dsc);
+@@ -1886,7 +1886,7 @@
+ 	//        if (!(dsc.acceleration_mask & DFXL_TEXTRIANGLES))
+ 	//            _cairo_directfb_surface_backend.composite_trapezoids = NULL;
+ #endif
+-    }
++    } */
+ 
+     if (getenv ("CAIRO_DIRECTFB_ARGB_FONT")) {
+ 	_directfb_argb_font = 1;
