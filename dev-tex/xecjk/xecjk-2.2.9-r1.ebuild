@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit xetex-package
+inherit xelatex-package
 
 DESCRIPTION="xeCJK is a package written for XeLaTeX which allows users to typeset CJK scripts easily"
 HOMEPAGE="http://bbs.ctex.org/viewthread.php?tid=40232&extra=page%3D1&page=1"
@@ -22,8 +22,8 @@ src_install() {
 	# Workaround to make paludis happier so that
 	# it won't complain about missing directory
 	# any more. :-)
-	dodir /usr/share/texmf/doc/xetex/${PN}
-	xetex-package_src_install
+	dodir /usr/share/texmf/doc/xetex/latex/${PN}
+	xelatex-package_src_install
 }
 
 pkg_postinst() {
