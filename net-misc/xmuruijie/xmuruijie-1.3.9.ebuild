@@ -27,13 +27,13 @@ src_install(){
 	exeinto /usr/sbin
 	newexe xmuruijie.py xmuruijie
 	if use firewall; then
-		newins "${FILESDIR}/iptables_rules.bak iptables_rules.bak"
-		newinitd "${FILESDIR}/localip" localip
-		newinitd "${FILESDIR}/saier-fw" saier
-		newinitd "${FILESDIR}/ruijie-fw" ruijie
+		newins "${FILESDIR}"/iptables_rules.bak iptables_rules.bak
+		newinitd "${FILESDIR}"/localip localip
+		newinitd "${FILESDIR}"/saier-fw saier
+		newinitd "${FILESDIR}"/ruijie-fw ruijie
 	else
-		newinitd "${FILESDIR}/saier" saier
-		newinitd "${FILESDIR}/ruijie" ruijie
+		newinitd "${FILESDIR}"/saier saier
+		newinitd "${FILESDIR}"/ruijie ruijie
 	fi
 }
 
