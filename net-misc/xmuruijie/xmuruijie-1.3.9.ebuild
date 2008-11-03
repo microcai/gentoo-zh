@@ -18,7 +18,6 @@ DEPEND=">=dev-lang/python-2.4"
 RDEPEND=">=dev-lang/python-2.4
 		firewall? ( net-misc/l7-filter )"
 
-S=${WORKDIR}/${PN}
 
 src_install(){
 	dodoc README
