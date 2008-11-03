@@ -58,8 +58,17 @@ EAPI="2"
 
 inherit base
 
+# here we check three different case for installing xetex,
+# first is the standard texlive-2008 installation,
+# second is suppose to be the minimal installation of texlive-xetex-2008
+# this case is not very certain, but may work.
+# last is the solo xetex
 RDEPEND="|| (
 				>=app-text/texlive-2008[xetex]
+				(
+					>=dev-texlive/texlive-xetex-2008
+					virtual/latex-base
+				)
 				>=app-text/xetex-0.997
 		)"
 DEPEND="${RDEPEND}
