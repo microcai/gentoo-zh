@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /etc/init.d/ruijie$
 
@@ -7,10 +7,10 @@
 #	
 #}
 checkconfig() {
-        if [ ! -f "/etc/xmuruijie.conf" ] ; then
-        	eerror "You must set configs in /etc/xmuruijie.conf first"
-        	return 1
-        fi
+		if [ ! -f "/etc/xmuruijie.conf" ] ; then
+			eerror "You must set configs in /etc/xmuruijie.conf first"
+			return 1
+		fi
 }
 
 DEV=$(sed -n '/interface/p' /etc/xmuruijie.conf | awk '{print $2}')
@@ -19,7 +19,7 @@ start() {
 	checkconfig || return 1
 
 	ebegin "Starting XMU-Ruijie"
-		/usr/sbin/xmuruijie -d
+		/usr/sbin/xmuruijie -dD
 	eend $?
 	ebegin "Running dhcp client to get ip address"
 	if [ -f "/sbin/dhcpcd" ] ; then
@@ -29,13 +29,13 @@ start() {
 fi
 	eend $?
 	ebegin "Modify firewall rules"
-	/etc/init.d/localip restart
+		/etc/init.d/localip restart
 	eend $?
 }
 
 stop() {
 	ebegin "Modify firewall rules"
-	/etc/init.d/localip stop
+		/etc/init.d/localip stop
 	eend $?
 	ebegin "Stopping dhcp client"
 	if [ -f "/sbin/dhcpcd" ] ; then
