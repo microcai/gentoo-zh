@@ -2,8 +2,12 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  05 Nov 2008; Hong Hao <oahong@gmail.com> +fcitx-3.5_pre081104.ebuild,
+  -files/remove-empty-xpm-dir.patch:
+  Bump to 081104. Remove useless patch.
+
   22 Oct 2008; Hong Hao <oahong@gmail.com> fcitx-9999.ebuild:
-  Rolling back changes in r643
+  Rolling back changes in r642
 
   28 Sep 2008; Hong Hao <oahong@gmail.com> fcitx-3.5_pre080918.ebuild,
   fcitx-9999.ebuild:
@@ -16,7 +20,7 @@
 
   23 Sep 2008; Hong Hao <oahong@gmail.com> fcitx-9999.ebuild,
   +files/remove-empty-xpm-dir.patch:
-  Added a patch and also econf dies on itself.
+  econf dies on itself. Also added a patch.
 
   09 Aug 2008; Hong Hao <oahong@gmail.com> +fcitx-9999.ebuild,
   +metadata.xml:
