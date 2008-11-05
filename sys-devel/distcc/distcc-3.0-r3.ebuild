@@ -50,6 +50,9 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	epatch "${FILESDIR}/${P}-svn617.patch"
 	epatch "${FILESDIR}/${P}-xinetd.patch"
+	if use avahi; then
+		epatch "${FILESDIR}/distcc-2.18.3-r13-zeroconf-multiple-gcc-registration.patch"
+	fi
 	sed -i -e "/PATH/s:\$distcc_location:${DCCC_PATH}:" pump.in || die
 }
 
