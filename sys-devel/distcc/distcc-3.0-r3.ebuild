@@ -66,7 +66,7 @@ src_compile() {
 		$(use_with gnome) \
 		$(use_enable ipv6 rfc2553) \
 		--with-docdir="/usr/share/doc/${PF}" || die "econf failed"
-	emake || die "emake failed"
+	emake WERROR_CFLAGS="" || die "emake failed"
 }
 
 src_install() {
