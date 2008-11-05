@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  05 Nov 2008; Hong Hao <oahong@gmail.com> -sopcast-1.1.1.ebuild,
+  +sopcast-3.0.1.ebuild:
+  升级，顺便清除老版本.
+
   16 Jun 2008; lidaibin <lidaibin@gmail.com> sopcast-1.1.1.ebuild:
   fixed the dependency relationship of the ebuild sopcast
 
