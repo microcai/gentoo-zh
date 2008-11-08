@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Nov 2008; Hong Hao <oahong@gmail.com> fcitx-9999.ebuild:
+  Change default version naming scheme.
+
   05 Nov 2008; Hong Hao <oahong@gmail.com> +fcitx-3.5_pre081104.ebuild,
   -files/remove-empty-xpm-dir.patch:
   Bump to 081104. Remove useless patch.

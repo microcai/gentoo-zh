@@ -25,6 +25,10 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	subversion_src_unpack
+	# change default version naming scheme
+	sed -i -e \
+		's:3.5-\([[:alnum:]]*\):3.5-\1\(SVN-R${ESVN_WC_REVISION}\):' \
+		configure.in
 	eautoreconf
 }
 
@@ -35,6 +39,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+
 	dodoc AUTHORS ChangeLog README THANKS TODO
 
 	# Remove empty directory
@@ -46,15 +51,12 @@ src_install() {
 }
 
 pkg_postinst() {
+	einfo "This is not an official release. Please report you bugs to:"
+	einfo "http://code.google.com/p/fcitx/issues/list"
 	echo
 	elog "You should export the following variables to use fcitx"
 	elog " export XMODIFIERS=\"@im=fcitx\""
 	elog " export XIM=fcitx"
 	elog " export XIM_PROGRAM=fcitx"
-	echo
-	elog "If you want to use WuBi or ErBi"
-	elog " cp /usr/share/fcitx/data/wbx.mb ~/.fcitx"
-	elog " cp /usr/share/fcitx/data/erbi.mb ~/.fcitx"
-	elog " cp /usr/share/fcitx/data/tables.conf ~/.fcitx"
 	echo
 }
