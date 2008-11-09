@@ -2,6 +2,13 @@
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.34 2007/03/26 06:49:29 kevquinn Exp $
 
+  09 Nov 2008; Yu Yuwei <acevery@gmail.com> +stardict-3.0.1-r3.ebuild,
+  +files/stardict-3.0.1-changelog-minor-typo-fixes.patch,
+  +files/stardict-3.0.1-esd.patch,
+  +files/stardict-3.0.1-transparent_trayicon.patch:
+  Add esd patch, which enable gnome support without esd; pull two patches from
+  portage.
+
   24 Aug 2008; Zhang Le <r0bertz@gentoo.org> metadata.xml:
   added use description to startdict's metadata.xml
 

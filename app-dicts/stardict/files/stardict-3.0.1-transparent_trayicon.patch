@@ -1,0 +1,168 @@
+--- stardict-3.0.1/src/docklet.cpp	2007-10-25 10:57:22.000000000 +0400
++++ stardict/src/docklet.cpp	2008-02-25 16:32:08.000000000 +0300
+@@ -25,15 +25,15 @@
+ void DockLet::create_docklet()
+ {
+ 	docklet_ = egg_tray_icon_new("StarDict");
+-	box_ = gtk_event_box_new();
++	gtk_widget_add_events (GTK_WIDGET(docklet_), GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK);
+ 	if (is_hide_state()) {
+-		gtk_widget_set_tooltip_text(box_, _("StarDict"));
++		gtk_widget_set_tooltip_text(GTK_WIDGET(docklet_), _("StarDict"));
+ 		image_ = gtk_image_new_from_pixbuf(normal_icon_);
+ 	} else if (is_scan_on()) {
+-		gtk_widget_set_tooltip_text(box_, _("StarDict - Scanning"));
++		gtk_widget_set_tooltip_text(GTK_WIDGET(docklet_), _("StarDict - Scanning"));
+ 		image_ = gtk_image_new_from_pixbuf(scan_icon_);
+ 	} else {
+-		gtk_widget_set_tooltip_text(box_, _("StarDict - Stopped"));
++		gtk_widget_set_tooltip_text(GTK_WIDGET(docklet_), _("StarDict - Stopped"));
+ 		image_ = gtk_image_new_from_pixbuf(stop_icon_);
+ 	}
+ 
+@@ -41,11 +41,10 @@
+ 			 G_CALLBACK(on_embedded), this);
+ 	g_signal_connect(G_OBJECT(docklet_), "destroy",
+ 			 G_CALLBACK(on_destroyed), this);
+-	g_signal_connect(G_OBJECT(box_), "button-press-event",
++	g_signal_connect(G_OBJECT(docklet_), "button-press-event",
+ 			 G_CALLBACK(on_btn_press), this);
+ 
+-	gtk_container_add(GTK_CONTAINER(box_), image_);
+-	gtk_container_add(GTK_CONTAINER(docklet_), box_);
++	gtk_container_add(GTK_CONTAINER(docklet_), image_);
+ 	gtk_widget_show_all(GTK_WIDGET(docklet_));
+ 
+ 	/* ref the docklet_ before we bandy it about the place */
+@@ -179,13 +178,13 @@
+ 
+ void DockLet::scan_on()
+ {
+-        gtk_widget_set_tooltip_text(box_, _("StarDict - Scanning"));
++        gtk_widget_set_tooltip_text(GTK_WIDGET(docklet_), _("StarDict - Scanning"));
+         gtk_image_set_from_pixbuf(GTK_IMAGE(image_), scan_icon_);
+ }
+ 
+ void DockLet::scan_off()
+ {
+-        gtk_widget_set_tooltip_text(box_, _("StarDict - Stopped"));
++        gtk_widget_set_tooltip_text(GTK_WIDGET(docklet_), _("StarDict - Stopped"));
+         gtk_image_set_from_pixbuf(GTK_IMAGE(image_), stop_icon_);
+ }
+ 
+@@ -193,7 +192,7 @@
+ {
+         if (!image_)
+                 return;
+-        gtk_widget_set_tooltip_text(box_, _("StarDict"));
++        gtk_widget_set_tooltip_text(GTK_WIDGET(docklet_), _("StarDict"));
+         gtk_image_set_from_pixbuf(GTK_IMAGE(image_), normal_icon_);
+ }
+ 
+--- stardict-3.0.1/src/docklet.h	2007-10-25 10:53:06.000000000 +0400
++++ stardict/src/docklet.h	2008-02-25 16:32:08.000000000 +0300
+@@ -16,7 +16,6 @@
+ 	void set_scan_mode(bool);
+ private:
+ 	EggTrayIcon *docklet_;
+-	GtkWidget *box_;
+ 	GtkWidget *image_; //icon image.
+ 	typedef  ResourceWrapper<GtkWidget, GtkWidget, gtk_widget_destroy> GMenu;
+         GMenu menu_;
+--- stardict-3.0.1/src/eggtrayicon.c	2007-07-10 11:16:04.000000000 +0400
++++ stardict/src/eggtrayicon.c	2008-02-25 16:32:08.000000000 +0300
+@@ -66,6 +66,8 @@
+ 
+ static void egg_tray_icon_realize   (GtkWidget *widget);
+ static void egg_tray_icon_unrealize (GtkWidget *widget);
++static void egg_tray_icon_add (GtkContainer *container,
++                               GtkWidget *widget);
+ 
+ #ifdef GDK_WINDOWING_X11
+ static void egg_tray_icon_update_manager_window    (EggTrayIcon *icon,
+@@ -113,6 +115,7 @@
+ {
+   GObjectClass *gobject_class = (GObjectClass *)klass;
+   GtkWidgetClass *widget_class = (GtkWidgetClass *)klass;
++  GtkContainerClass *container_class = (GtkContainerClass *)klass;
+ 
+   parent_class = g_type_class_peek_parent (klass);
+ 
+@@ -121,6 +124,8 @@
+   widget_class->realize   = egg_tray_icon_realize;
+   widget_class->unrealize = egg_tray_icon_unrealize;
+ 
++  container_class->add = egg_tray_icon_add;
++
+   g_object_class_install_property (gobject_class,
+ 				   PROP_ORIENTATION,
+ 				   g_param_spec_enum ("orientation",
+@@ -159,6 +164,35 @@
+ }
+ 
+ #ifdef GDK_WINDOWING_X11
++static gboolean
++transparent_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer user_data)
++{
++	gdk_window_clear_area (widget->window, event->area.x, event->area.y,
++	                      event->area.width, event->area.height);
++	return FALSE;
++}
++
++static void
++make_transparent_again (GtkWidget *widget, GtkStyle *previous_style,
++                       gpointer user_data)
++{
++	gdk_window_set_back_pixmap(widget->window, NULL, TRUE);
++}
++
++static void
++make_transparent (GtkWidget *widget, gpointer user_data)
++{
++	if (GTK_WIDGET_NO_WINDOW (widget) || GTK_WIDGET_APP_PAINTABLE (widget))
++		return;
++
++	gtk_widget_set_app_paintable (widget, TRUE);
++	gtk_widget_set_double_buffered (widget, FALSE);
++	gdk_window_set_back_pixmap (widget->window, NULL, TRUE);
++	g_signal_connect (widget, "expose_event",
++	                 G_CALLBACK (transparent_expose_event), NULL);
++	g_signal_connect_after (widget, "style_set",
++	                       G_CALLBACK (make_transparent_again), NULL);
++}
+ 
+ static void
+ egg_tray_icon_get_orientation_property (EggTrayIcon *icon)
+@@ -238,10 +272,22 @@
+     }
+   return GDK_FILTER_CONTINUE;
+ }
+-
++#else
++static void
++make_transparent (GtkWidget *widget, gpointer user_data)
++{
++}
+ #endif  
+ 
+ static void
++egg_tray_icon_add (GtkContainer *container, GtkWidget *widget)
++{
++	g_signal_connect (widget, "realize",
++	                 G_CALLBACK (make_transparent), NULL);
++	GTK_CONTAINER_CLASS (parent_class)->add (container, widget);
++}
++
++static void
+ egg_tray_icon_unrealize (GtkWidget *widget)
+ {
+ #ifdef GDK_WINDOWING_X11
+@@ -381,6 +427,8 @@
+   if (GTK_WIDGET_CLASS (parent_class)->realize)
+     GTK_WIDGET_CLASS (parent_class)->realize (widget);
+ 
++  make_transparent (widget, NULL);
++
+   screen = gtk_widget_get_screen (widget);
+   display = gdk_screen_get_display (screen);
+   xdisplay = gdk_x11_display_get_xdisplay (display);
