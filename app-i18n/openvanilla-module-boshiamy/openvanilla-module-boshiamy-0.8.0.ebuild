@@ -25,11 +25,14 @@ src_unpack() {
 	subversion_fetch ${repo_uri}/Mk ../Mk
 	subversion_fetch ${repo_uri}/SharedHeaders ../SharedHeaders
 	subversion_fetch ${repo_uri}/SharedSource ../SharedSource
+
 	cd "${S}"
+	mkdir ../SharedHeaders/OpenVanilla
+	wget --continue --directory-prefix=../SharedHeaders/OpenVanilla	${repo_uri}/../Framework/Headers/OpenVanilla.h 
+	wget --continue --directory-prefix=../SharedHeaders/OpenVanilla	${repo_uri}/../Framework/Headers/OVLibrary.h
+	wget --continue --directory-prefix=../SharedHeaders/OpenVanilla	${repo_uri}/../Framework/Headers/OVUtility.h
+
 	mkdir ../SharedData/
-	#wget --continue --directory-prefix=../SharedData ${repo_uri}/SharedData/bpmf.cin 
-	#wget --continue --directory-prefix=../SharedData ${repo_uri}/SharedData/bpmf-ext.cin 
-	#wget --continue --directory-prefix=../SharedData ${repo_uri}/SharedData/punctuations.cin
 }
 
 src_compile() {

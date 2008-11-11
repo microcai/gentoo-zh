@@ -3,7 +3,7 @@
 # $Header: $
 
 inherit eutils subversion
-DESCRIPTION="OpenVanilla Module for Phonetic"
+DESCRIPTION="OpenVanilla Module for Generic Table"
 
 HOMEPAGE="http://openvanilla.org/"
 SRC_URI=""
@@ -12,16 +12,13 @@ LICENSE="bsd"
 SLOT="0"
 KEYWORDS="~x86"
 DEPEND="app-i18n/openvanilla-framework"
-
-# Run-time dependencies. Must be defined to whatever this depends on to run.
-# The below is valid if the same run-time depends are required to compile.
 RDEPEND="${DEPEND}"
 
 src_unpack() {
 
 	local repo_uri=${ESVN_REPO_URI}
 
-	subversion_fetch ${repo_uri}/OVIMPhonetic
+	subversion_fetch ${repo_uri}/OVIMGeneric
 	subversion_fetch ${repo_uri}/Mk ../Mk
 	subversion_fetch ${repo_uri}/SharedHeaders ../SharedHeaders
 	subversion_fetch ${repo_uri}/SharedSource ../SharedSource
@@ -32,9 +29,12 @@ src_unpack() {
 	wget --continue --directory-prefix=../SharedHeaders/OpenVanilla	${repo_uri}/../Framework/Headers/OVUtility.h
 
 	mkdir ../SharedData/
-	wget --continue --directory-prefix=../SharedData ${repo_uri}/SharedData/bpmf.cin 
-	wget --continue --directory-prefix=../SharedData ${repo_uri}/SharedData/bpmf-ext.cin 
-	wget --continue --directory-prefix=../SharedData ${repo_uri}/SharedData/punctuations.cin
+	wget --continue --directory-prefix=../SharedData ${repo_uri}/SharedData/cj.cin
+	wget --continue --directory-prefix=../SharedData ${repo_uri}/SharedData/dayi3.cin
+	wget --continue --directory-prefix=../SharedData ${repo_uri}/SharedData/ehq-symbols.cin
+	wget --continue --directory-prefix=../SharedData ${repo_uri}/SharedData/pinyin.cin
+	wget --continue --directory-prefix=../SharedData ${repo_uri}/SharedData/simplex.cin
+	wget --continue --directory-prefix=../SharedData ${repo_uri}/SharedData/wubizixing.cin
 }
 
 src_compile() {
