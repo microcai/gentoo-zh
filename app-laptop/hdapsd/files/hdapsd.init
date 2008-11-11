@@ -1,0 +1,51 @@
+#!/sbin/runscript
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2
+
+depend() {
+    need localmount
+}
+
+checkconfig() {
+    if [[ -z ${DISK} || -z ${THRESHOLD} ]] ; then
+	eerror "You should setup DISK and THRESHOLD in /etc/conf.d/hdapsd."
+	return 1
+    fi
+
+    if [[ ! -e /sys/block/${DISK}/queue/protect ]] ; then
+        if [[ ! -e /sys/block/${DISK}/device/unload_heads ]] ; then
+	    eerror "No protect entry for ${DISK}!"
+	    eerror "Make sure your kernel is patched with the blk_freeze patch"
+	    return 1
+        fi
+    fi
+
+    # Load the tp_smapi module first
+    # This is not a requirement, but it helps hdapsd adaptive mode
+    if [[ ! -e /sys/devices/platform/smapi ]] ; then
+	modprobe tp_smapi 2>/dev/null
+    fi
+	
+    if [[ ! -d /sys/devices/platform/hdaps ]]; then
+	ebegin "Loading hdaps module"
+        modprobe hdaps
+	eend $? || return 1
+    fi
+}
+
+start() {
+    checkconfig || return 1
+
+    ebegin "Starting Hard Drive Active Protection System daemon"
+    start-stop-daemon --start --exec /usr/sbin/hdapsd \
+	--pidfile /var/run/hdapsd.pid \
+	-- -b -p -d "${DISK}" -s "${THRESHOLD}" ${OPTIONS}
+    eend $?
+}
+	
+stop() {
+    ebegin "Stopping Hard Drive Active Protection System daemon"
+    start-stop-daemon --stop --exec /usr/sbin/hdapsd \
+	--pidfile /var/run/hdapsd.pid
+    eend $?
+}
