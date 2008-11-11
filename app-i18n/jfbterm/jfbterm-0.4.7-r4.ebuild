@@ -13,12 +13,14 @@ SRC_URI="mirror://sourceforge.jp/${PN}/13501/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="debug ucimf"
 
-DEPEND="ucimf? ( app-i18n/libucimf )"
+DEPEND=">=sys-libs/ncurses-5.6
+		ucimf? ( app-i18n/libucimf )"
 RDEPEND="media-fonts/unifont
-media-fonts/font-misc-misc
+	media-fonts/font-misc-misc
+	media-fonts/intlfonts
 ucimf? ( app-i18n/libucimf )"
 
 src_unpack() {
@@ -26,22 +28,19 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-sigchld-debian.patch"
 	epatch "${FILESDIR}/${P}-no-kernel-headers.patch"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
+
+	if use ucimf; then
 	epatch "${FILESDIR}/${P}-ucimf.patch"
+	fi
 
 	eautoreconf
-
-	sed -i -e 's/a18/8x16/' \
-		-e 's:/usr/X11R6/lib/X11/fonts:/usr/share/fonts:' \
-		-e 's:/usr/share/fonts/misc/unifont:/usr/share/fonts/unifont/unifont:' \
-		jfbterm.conf.sample
 }
 
 src_compile() {
 	append-ldflags $(bindnow-flags)
 
-	econf \
-		$(use_enable debug) \
-		|| die "econf failed"
+	econf $(use_enable debug) || die "econf failed"
 	emake || die "emake failed"
 }
 
@@ -53,6 +52,6 @@ src_install() {
 
 	doman jfbterm.1 jfbterm.conf.5
 
-	dodoc AUTHORS ChangeLog INSTALL* NEWS README*
+	dodoc AUTHORS ChangeLog NEWS README*
 	dodoc jfbterm.conf.sample*
 }

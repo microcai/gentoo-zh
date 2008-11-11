@@ -11,10 +11,7 @@ ESVN_REPO_URI="http://openvanilla.googlecode.com/svn/trunk/Modules"
 LICENSE="bsd"
 SLOT="0"
 KEYWORDS="~x86"
-DEPEND="app-i18n/openvanilla-framework dev-db/sqlite"
-
-# Run-time dependencies. Must be defined to whatever this depends on to run.
-# The below is valid if the same run-time depends are required to compile.
+DEPEND="dev-db/sqlite"
 RDEPEND="${DEPEND}"
 
 src_unpack() {

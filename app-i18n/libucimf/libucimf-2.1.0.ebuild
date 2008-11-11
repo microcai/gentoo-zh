@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="openvanilla"
-DEPEND="openvanilla? ( app-i18n/openvanilla-framework )"
+DEPEND=""
 RDEPEND="openvanilla? ( app-i18n/openvanilla-module-generic )"
 
 src_compile() {

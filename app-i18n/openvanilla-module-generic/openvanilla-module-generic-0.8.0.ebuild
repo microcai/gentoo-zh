@@ -11,7 +11,7 @@ ESVN_REPO_URI="http://openvanilla.googlecode.com/svn/trunk/Modules"
 LICENSE="bsd"
 SLOT="0"
 KEYWORDS="~x86"
-DEPEND="app-i18n/openvanilla-framework"
+DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_unpack() {
