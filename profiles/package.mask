@@ -1,0 +1,3 @@
+# Hong Hao <oahong@gmail.com> (12 Nov 2008)
+# p.masked, might not work.
+=app-laptop/hdapsd-20081005
