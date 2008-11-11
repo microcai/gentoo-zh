@@ -14,11 +14,12 @@ SRC_URI="mirror://sourceforge.jp/${PN}/13501/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="debug"
+IUSE="debug ucimf"
 
-DEPEND=""
+DEPEND="ucimf? ( app-i18n/libucimf )"
 RDEPEND="media-fonts/unifont
-	media-fonts/font-misc-misc"
+media-fonts/font-misc-misc
+ucimf? ( app-i18n/libucimf )"
 
 src_unpack() {
 	unpack ${A}
