@@ -17,6 +17,7 @@ IUSE=""
 
 DEPEND="dev-libs/openssl
 		net-misc/curl
+		=dev-lang/python-2.5*
 		|| (
 			( x11-libs/qt-core x11-libs/qt-gui )
 			( >=x11-libs/qt-4.3 )
