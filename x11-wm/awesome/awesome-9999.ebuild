@@ -16,7 +16,6 @@ SLOT="0"
 KEYWORDS=""
 IUSE="dbus doc"
 
-# bash in system set.
 COMMOM_DEPEND=">=dev-lang/lua-5.1
 	dev-libs/libev
 	>=dev-libs/glib-2
@@ -41,7 +40,7 @@ DEPEND="${COMMOM_DEPEND}
 		dev-util/luadoc
 		media-gfx/graphviz
 	)"
-# Runtime depends for awsetbg.
+# Runtime depends for awsetbg. (bash already in system set.)
 RDEPEND="${COMMOM_DEPEND}
 	x11-apps/xmessage
 	media-gfx/feh"
@@ -70,9 +69,11 @@ src_install() {
 	cmake-utils_src_install
 
 	if use doc ; then
-		set -x
-		dohtml -r "${WORKDIR}"/${PN}_build/doc/html/*
-		mv "${D}"/usr/share/doc/${PN}/luadoc "${D}"/usr/share/doc/${PF}/html/luadoc || die
+		ebegin "Be patient! This might take a long time."
+			# paludis sucks.
+			set -x && dohtml -r "${WORKDIR}"/${PN}_build/doc/html/*
+			mv "${D}"/usr/share/doc/${PN}/luadoc "${D}"/usr/share/doc/${PF}/html/luadoc || die
+		eend $?
 	fi
 	rm -rf "${D}"/usr/share/doc/${PN} || die
 
@@ -81,4 +82,7 @@ src_install() {
 
 	insinto /usr/share/xsessions
 	doins ${PN}.desktop
+
+	einfo "Try to remove awesome (that means emerge -Cav awesome)"
+	einfo "first if you experienced some problem during \"Installation\" process."
 }

@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Nov 2008; Hong Hao <oahong@gmail.com> awesome-9999.ebuild:
+  More info.
+
   24 Oct 2008; Hong Hao <oahong@gmail.com> awesome-9999.ebuild:
   Added missing runtime dependencies for awsetbg.
 
