@@ -4,8 +4,9 @@
 
 EAPI="2"
 
-EGIT_REPO_URI="git://github.com/phuang/ibus.git"
 NEED_PYTHON="2.5"
+#EGIT_BRANCH="c_impl"
+EGIT_REPO_URI="git://github.com/phuang/ibus.git"
 inherit autotools multilib git python
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
@@ -15,30 +16,31 @@ SRC_URI=""
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
-IUSE="nls qt4"
+IUSE="nls qt4 test" #doc
 
-# Notes:
-# 1. Autopoint(part of gettext) needs cvs. Bug #152872
-# 2. To run ibus, we don't need gettext.
+# Notes: Autopoint(part of gettext) needs cvs. Bug #152872
+# FIXME: We have gio-standalone package?
 COMMOM_DEPEND=">=dev-libs/glib-2.16
 	dev-libs/dbus-glib
 	qt4? ( x11-libs/qt-gui x11-libs/qt-core )
 	x11-libs/gtk+:2
 	x11-libs/libX11"
-RDEPEND="${COMMOM_DEPEND}
-	app-text/iso-codes
-	>=dev-python/dbus-python-0.83.0
-	|| (
-		dev-python/gconf-python
-		dev-python/gnome-python
-	)
-	>=dev-python/pygtk-2.12.1
-	dev-python/pyxdg
-	x11-misc/notification-daemon"
 DEPEND="${COMMOM_DEPEND}
 	dev-util/cvs
 	dev-util/pkgconfig
+	gnome-base/librsvg
 	sys-devel/gettext"
+#	>=dev-util/gtk-doc-1.9"
+RDEPEND="${COMMOM_DEPEND}
+	app-text/iso-codes
+	>=dev-python/dbus-python-0.83.0
+	>=dev-python/pygtk-2.12.1
+	dev-python/pyxdg
+	x11-misc/notification-daemon
+	|| (
+		dev-python/gconf-python
+		dev-python/gnome-python
+	)"
 
 pkg_setup() {
 	# An arch specific config directory is used on multilib systems
@@ -48,6 +50,7 @@ pkg_setup() {
 
 src_prepare() {
 	autopoint || die "failed to run autopoint"
+#	gtkdocize --flavour no-tmpl || die "gtkdocize failed"
 	eautoreconf
 }
 
@@ -56,6 +59,7 @@ src_configure() {
 	econf $(use_enable nls) \
 		$(use_enable qt4 qt4-immodule)
 		--disable-pygconf
+#		$(use_enable gtk-doc)
 }
 
 src_install() {
@@ -70,15 +74,15 @@ pkg_postinst() {
 	echo
 	elog "To use ibus, you need to:"
 	elog "1. Install input engines."
-	elog "   Run \"emerge -s ibus-\" in your favorite terminal"
-	elog "   for a list of IMEngines we already have."
+	elog "	 Run \"emerge -s ibus-\" in your favorite terminal"
+	elog "	 for a list of IMEngines we already have."
 	elog "2. Set the following in your"
-	elog "   user startup scripts such as .xinitrc or .bashrc"
+	elog "	 user startup scripts such as .xinitrc or .bashrc"
 	echo
-	elog "   export XMODIFIERS=\"@im=ibus\""
-	elog "   export GTK_IM_MODULE=\"ibus\""
-	elog "   export QT_IM_MODULE=\"ibus\""
-	elog "   ibus &"
+	elog "	 export XMODIFIERS=\"@im=ibus\""
+	elog "	 export GTK_IM_MODULE=\"ibus\""
+	elog "	 export QT_IM_MODULE=\"ibus\""
+	elog "	 ibus &"
 	echo
 	if ! use qt4; then
 		ewarn "Missing qt4 use flag, ibus will not work in qt4 applications."
