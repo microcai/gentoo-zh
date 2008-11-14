@@ -32,11 +32,11 @@ pkg_setup() {
 src_install() {
 	ebegin "Installing package"
 		insinto /opt/${PN}/bin
-		doins * || einfo $@ || die "doins failed"
+		doins * || die "doins failed"
 	eend $?
 
 	insinto /opt/${PN}/icons
-	newins "${FILESDIR}/qq.png" linuxqq.png || die "newins failed"
+	newins "${FILESDIR}"/qq.png linuxqq.png || die "newins failed"
 	insinto /usr/share/applications
 	newins "${FILESDIR}"/qq.desktop linuxqq.desktop || die "newins failed"
 	# t?e?n_cent ?= ten cent...比M$还$
