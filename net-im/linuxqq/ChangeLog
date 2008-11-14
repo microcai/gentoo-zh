@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  14 Nov 2008; Hong Hao <oahong@gmail.com> +linuxqq-1.0_p3-r2.ebuild:
+  Style.
+
   14 Nov 2008; Yu Yuwei <acevery@gmail.com> -linuxqq-1.0_p3.ebuild,
   +linuxqq-1.0_p3-r1.ebuild, +files/qq.desktop:
   fix typos and use desktop file as suggested, thanks Yang Zhang.
