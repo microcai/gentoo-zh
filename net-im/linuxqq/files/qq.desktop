@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=QQ for Linux
+Comment=Tencent offical client for QQ IM protocal 
+Exec=/usr/bin/qq
+TryExec=qq
+Icon=/opt/linuxqq/icons/linuxqq.png
+Terminal=false
+Type=Application
+Categories=Network;InstantMessaging;
+StartupNotify=true
+Name[zh_CN]=QQ for Linux
+Comment[zh_CN]=腾讯 QQ 即时聊天工具
