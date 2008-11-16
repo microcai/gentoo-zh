@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  16 Nov 2008; Yu Yuwei <acevery@gmail.com> +linuxqq-1.0_pre3.ebuild,
+  -linuxqq-1.0_p3-r2.ebuild, -linuxqq-1.0_p3-r3.ebuild:
+  use _pre3 instead of _p3.
+
   16 Nov 2008; Yu Yuwei <acevery@gmail.com> -linuxqq-1.0_p3-r1.ebuild,
   +linuxqq-1.0_p3-r3.ebuild:
   Add ~amd64 USE and related check

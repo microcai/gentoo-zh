@@ -4,8 +4,8 @@
 
 inherit eutils
 
-MY_P=${PN}_v${PV/_p/-preview}_i386
-DESCRIPTION="linux QQ"
+MY_P=${PN}_v${PV/_pre/-preview}_i386
+DESCRIPTION="QQ for Linux"
 HOMEPAGE="http://im.qq.com/qq/linux"
 SRC_URI="http://dl_dir.qq.com/linuxqq/${MY_P}.tar.gz"
 
