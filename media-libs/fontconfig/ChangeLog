@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  17 Nov 2008; Yu Yuwei <acevery@gmail.com> fontconfig-2.6.0-r2.ebuild:
+  stablize as portage
+
   07 Oct 2008; Yu Yuwei <acevery@gmail.com> fontconfig-2.6.0-r2.ebuild,
   files/fontconfig-2.6.0-ubuntu.diff, +files/fontconfig-lcd-filtering.patch,
   +files/fontconfig-lcddefault.patch:
