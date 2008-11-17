@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  17 Nov 2008; Yu Yuwei <acevery@gmail.com> cairo-1.6.4.ebuild,
+  cairo-1.6.4-r1.ebuild:
+  stablize 1.6.4 and 1.6.4-r1
+
   01 Nov 2008; Yu Yuwei <acevery@gmail.com> cairo-1.6.4-r1.ebuild,
   +cairo-1.8.2.ebuild, +files/cairo-01_directfb-no-accel.patch,
   +files/cairo-02_no-private-symbol-export.patch,
