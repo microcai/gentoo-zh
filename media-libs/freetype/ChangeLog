@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  17 Nov 2008; Yu Yuwei <acevery@gmail.com> freetype-2.3.7.ebuild,
+  metadata.xml:
+  stablize 2.3.7 follow portage
+
   30 Jun 2008; Yu Yuwei <acevery@gmail.com> +freetype-2.3.7.ebuild:
   update to new version
 

@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/freetype/${P/_/}.tar.bz2
 EAPI="1"
 LICENSE="FTL GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="X bindist debug doc utils +ubuntu"
 
 DEPEND="X?	( x11-libs/libX11
@@ -64,7 +64,7 @@ src_unpack() {
 		epatch "${FILESDIR}"/331-hmtx-no-shorts.diff
 		epatch "${FILESDIR}"/${PN}-bdflib-large-encodings.patch
 	fi
-	
+
 	epatch "${FILESDIR}"/${PN}-2.3.2-enable-valid.patch
 
 	if use utils; then
