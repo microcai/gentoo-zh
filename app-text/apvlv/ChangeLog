@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Nov 2008; Hong Hao <oahong@gmail.com> -apvlv-0.0.2-r1.ebuild,
+  +apvlv-0.0.3.ebuild:
+  Bump to version 0.0.3
+
   27 Oct 2008; Hong Hao <oahong@gmail.com> -apvlv-0.0.2.ebuild,
   +apvlv-0.0.2-r1.ebuild, +metadata.xml:
   Various fixes. Remove trailing spaces, fix dependencies and convert the
