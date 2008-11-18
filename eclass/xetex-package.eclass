@@ -5,7 +5,7 @@
 # @ECLASS: xetex-package.eclass
 # @MAINTAINER:
 # TeX team <tex@gentoo.org>
-# 
+#
 # Author Matthew Turk <satai@gentoo.org>
 # Martin Ehmsen <ehmsen@gentoo.org>
 # @BLURB: An eclass for easy installation of LaTeX packages
@@ -75,14 +75,13 @@ DEPEND="${RDEPEND}
 	>=sys-apps/texinfo-4.2-r5"
 HOMEPAGE="http://www.tug.org/"
 SRC_URI="ftp://tug.ctan.org/macros/xetex/"
-S=${WORKDIR}/${P}
 TEXMF="/usr/share/texmf"
 
 # @ECLASS-VARIABLE: SUPPLIER
 # @DESCRIPTION:
 # This refers to the font supplier; it should be overridden (see eclass
 # DESCRIPTION above)
-SUPPLIER="misc" 
+SUPPLIER="misc"
 
 # @FUNCTION: xetex-package_has_tetex3
 # @RETURN: true if at least one of (>=tetex-3 or >=ptex-3.1.8 or >=texlive-core-2007) is installed, else false
@@ -190,6 +189,14 @@ xetex-package_src_doinstall() {
 	done
 }
 
+# @FUNCTION: xetex_src_configure
+# @DESCRIPTION:
+# Overide base_src_configure phrase which is inherited from base.eclass
+# ( http://rafb.net/p/HgzEoq71.html )
+xetex-package_src_configure() {
+	einfo "Nothing to configure."
+}
+
 # @FUNCTION: xetex-package_src_compile
 # @DESCRIPTION:
 # Calls xetex for each *.ins in the current directory in order to generate the
@@ -244,4 +251,4 @@ xetex-package_rehash() {
 	fi
 }
 
-EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_postrm
+EXPORT_FUNCTIONS src_configure src_compile src_install pkg_postinst pkg_postrm

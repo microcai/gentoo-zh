@@ -190,6 +190,15 @@ xelatex-package_src_doinstall() {
 	done
 }
 
+# @FUNCTION: xelatex_src_configure
+# @DESCRIPTION:
+# Overide base_src_configure phrase which is inherited from base.eclass
+# ( http://rafb.net/p/HgzEoq71.html )
+xelatex-package_src_configure() {
+	einfo "Nothing to configure."
+}
+
+
 # @FUNCTION: xelatex-package_src_compile
 # @DESCRIPTION:
 # Calls xelatex for each *.ins in the current directory in order to generate the
@@ -244,4 +253,4 @@ xelatex-package_rehash() {
 	fi
 }
 
-EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_postrm
+EXPORT_FUNCTIONS src_configure src_compile src_install pkg_postinst pkg_postrm
