@@ -6,5 +6,11 @@
   <email>lidaibin@gmail.com</email>
   <description>maintaining in gentoo china overlay</description>
 </maintainer>
-<longdescription>The gtk front-end of the iptv "mms" and "sopcast" and "nslive"</longdescription>
+<longdescription>
+	The gtk front-end of the iptv "mms" and "sopcast" and "nslive"
+</longdescription>
+<use>
+	<flag name='sopcast'>Enable support for <pkg>media-tv/sopcast</pkg></flag>
+	<flag name='totem'>Enable totem plugin support</flag>
+</use>
 </pkgmetadata>

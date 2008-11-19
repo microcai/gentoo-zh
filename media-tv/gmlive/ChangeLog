@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  19 Nov 2008; Hong Hao <oahong@gmail.com> -gmlive-0.20.2.ebuild,
+  +gmlive-0.21.1.ebuild, metadata.xml:
+  Bump to lastest release. Remove old version.
+
   29 May 2008; lidaibin <lidaibin@gmail.com> gmlive-0.20.2.ebuild:
   regenerate the digest of the gmlive
 
