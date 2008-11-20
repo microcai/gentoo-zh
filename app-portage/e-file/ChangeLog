@@ -1,0 +1,8 @@
+# ChangeLog for app-portage/e-file
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  20 Nov 2008; Hong Hao <oahong@gmail.com> +e-file-20081120.ebuild,
+  +metadata.xml:
+  加入骨头的e-file,欢迎多多支持，测试;-)
+
