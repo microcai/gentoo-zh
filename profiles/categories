@@ -5,6 +5,7 @@ app-editors
 app-emulation
 app-i18n
 app-laptop
+app-portage
 app-text
 app-vim
 dev-python
