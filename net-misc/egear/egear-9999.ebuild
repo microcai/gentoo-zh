@@ -38,5 +38,8 @@ src_install() {
 	insinto /usr/share/applications
 	doins misc/egear.desktop
 
+	insinto /usr/lib/egear/plugins
+	doins plugins/file_scanner.py
+
 	dobin ${PN}
 }
