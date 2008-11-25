@@ -2,10 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-MY_P=${P/file-/file.}
+EAPI="2"
+
 DESCRIPTION="e-file is like apt-file for gentoo, but data is online"
-HOMEPAGE="http://li2z.cn/2008/11/20/e-file"
-SRC_URI="http://linuxfire.com.cn/~lily/${MY_P}"
+HOMEPAGE="http://li2z.cn/category/e-file"
+SRC_URI="http://linuxfire.com.cn/~lily/${PN} -> ${P}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,8 +18,8 @@ RDEPEND="www-client/w3m"
 
 S=${WORKDIR}
 
-src_unpack() {
-	cp "${DISTDIR}"/${MY_P} ${PN}
+src_prepare() {
+	cp "${DISTDIR}"/${P} ${PN}
 }
 
 src_install() {
