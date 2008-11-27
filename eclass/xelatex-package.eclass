@@ -67,6 +67,7 @@ RDEPEND="|| (
 				>=app-text/texlive-2008[xetex]
 				(
 					>=dev-texlive/texlive-xetex-2008
+					>=dev-texlive/texlive-fontsrecommended-2008
 					virtual/latex-base
 				)
 				>=app-text/xetex-0.997
