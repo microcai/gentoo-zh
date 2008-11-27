@@ -1,8 +1,0 @@
-# ChangeLog for x11-drivers/xf86-video-radeonhd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  09 Aug 2008; Hong Hao <oahong@gmail.com> +xf86-video-radeonhd-9999.ebuild,
-  +metadata.xml:
-  Live ebuild for xf86-video-radeonhd
-
