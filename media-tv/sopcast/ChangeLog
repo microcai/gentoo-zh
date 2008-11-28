@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Nov 2008; Zhang Le <r0bertz@gentoo.org> Manifest:
+  fixed sopcast-3.0.1's digest
+
   05 Nov 2008; Hong Hao <oahong@gmail.com> -sopcast-1.1.1.ebuild,
   +sopcast-3.0.1.ebuild:
   升级，顺便清除老版本.
