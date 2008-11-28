@@ -25,20 +25,24 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	subversion_src_unpack
-	# change default version naming scheme
-	sed -i -e \
-		's:3.5-\([[:alnum:]]*\):3.5-\1\(SVN-R${ESVN_WC_REVISION}\):' \
+
+	# change homepage and version naming scheme
+	sed -i \
+		-e "s#\(3.5-\)[[:alnum:]]*#\1svn-r${ESVN_WC_REVISION}#" \
 		configure.in
+	sed -i \
+		-e "s#http://www\.fcitx\.org#${HOMEPAGE}#" \
+		src/InputWindow.c
 	eautoreconf
 }
 
 src_compile() {
 	econf $(use_enable truetype xft)
-	emake || die "make failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "Install failed"
 
 	dodoc AUTHORS ChangeLog README THANKS TODO
 
