@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header :$
 
-ESVN_REPO_URI="http://egear.googlecode.com/svn/trunk/"
+ESVN_REPO_URI="http://egear.googlecode.com/svn/branches/egear-0.1"
 
 inherit qt4 subversion
 
