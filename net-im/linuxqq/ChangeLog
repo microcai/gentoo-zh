@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Nov 2008; Hong Hao <oahong@gmail.com> linuxqq-1.0_pre3.ebuild,
+  +files/linuxqq.desktop, +files/linuxqq.png, -files/qq.desktop,
+  -files/qq.png, -files/qq.sh:
+  Merge some changes from my personal repository.
+
   16 Nov 2008; Yu Yuwei <acevery@gmail.com> +linuxqq-1.0_pre3.ebuild,
   -linuxqq-1.0_p3-r2.ebuild, -linuxqq-1.0_p3-r3.ebuild:
   use _pre3 instead of _p3.
