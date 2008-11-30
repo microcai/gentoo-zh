@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Nov 2008; Hong Hao <oahong@gmail.com> +linux-fetion-0.9.0.ebuild:
+  New upstream release 0.9.0
+
   25 Oct 2008; Hong Hao <oahong@gmail.com> linux-fetion-0.8.1.ebuild,
   linux-fetion-9999.ebuild:
   Fixed compile problem (typos in ebuild) on amd64 platform. Thanks goes to
