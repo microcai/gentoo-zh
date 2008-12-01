@@ -6,7 +6,7 @@ EAPI="2"
 
 DESCRIPTION="e-file is like apt-file in debian,it's used to search package name via filename for gentoo"
 HOMEPAGE="http://li2z.cn/category/e-file"
-SRC_URI="http://linuxfire.com.cn/~lily/${P} -> ${PN}"
+SRC_URI="http://linuxfire.com.cn/~lily/${PN} -> ${P}"
 
 LICENSE="GPL-2"
 SLOT="0"
