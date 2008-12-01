@@ -6,7 +6,7 @@ EAPI="2"
 
 DESCRIPTION="e-file is like apt-file for gentoo, but data is online"
 HOMEPAGE="http://li2z.cn/category/e-file"
-SRC_URI="http://linuxfire.com.cn/~lily/${PN} -> ${P}"
+SRC_URI="http://linuxfire.com.cn/~lily/${P} -> ${PN}"
 
 LICENSE="GPL-2"
 SLOT="0"
