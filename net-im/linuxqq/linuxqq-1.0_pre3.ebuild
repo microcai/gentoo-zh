@@ -30,10 +30,9 @@ RESTRICT="mirror"
 pkg_setup() {
 	# x86 binary package, we need multilib
 	# FIXME:
-	# Double checked? Is it the right way? (To acevery.)
 	# multilib profile should always have mutlilib USE flag ON,
-	# so we can safely get rid of multilib USE flag check?
-	if use amd64 && ( ! has_multilib_profile || ! use multilib ) ; then
+	# so we can safely get rid of multilib USE flag check here?
+	if use amd64 && ! has_multilib_profile ; then
 		eerror "We need multilib profile to run Tencent QQ client!"
 		die "We need multilib profile to run Tencent QQ client!"
 	fi

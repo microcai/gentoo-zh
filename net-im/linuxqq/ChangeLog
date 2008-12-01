@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  01 Dec 2008; Hong Hao <oahong@gmail.com> linuxqq-1.0_pre3.ebuild:
+  Remove duplicate check.
+
   30 Nov 2008; Hong Hao <oahong@gmail.com> linuxqq-1.0_pre3.ebuild,
   +files/linuxqq.desktop, +files/linuxqq.png, -files/qq.desktop,
   -files/qq.png, -files/qq.sh:
