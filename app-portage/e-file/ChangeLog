@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  03 Dec 2008; bones7456 <bones7456@gmail.com> e-file-20081125.ebuild,
+  e-file-20081201.ebuild:
+  e-file add amd64 support
+
   01 Dec 2008; bones7456 <bones7456@gmail.com> e-file-20081201.ebuild:
   改进e-file 的 ebuild
 
