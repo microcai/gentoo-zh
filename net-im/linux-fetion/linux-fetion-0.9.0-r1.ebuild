@@ -6,7 +6,7 @@ inherit flag-o-matic qt4
 
 DESCRIPTION="Linux Fetion, a QT4 IM client using CHINA MOBILE's Fetion Protocol"
 HOMEPAGE="http://www.libfetion.cn/"
-SRC_URI="http://libfetion-gui.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://libfetion-gui.googlecode.com/files/${P}_fix64build.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,10 +23,10 @@ RESTRICT="primaryuri"
 src_compile() {
 	filter-ldflags -Wl,--as-needed
 
-	if use amd64 ; then
-		sed -i -e "/libfetion.a/c    LIBS +=  -lcurl ./lib/libfetion_64.a" ${PN}.pro
-		sed -i -e "/libfetion_32.a/c    LIBS +=  -lcurl ./lib/libfetion_64.a" ${PN}.pro
-	fi
+	use amd64 && sed -i \
+		-e "/libfetion_32.a/c    LIBS +=  -lcurl ./lib/libfetion_64.a" \
+		-e "/libfetion.a/c    LIBS +=  -lcurl ./lib/libfetion_64.a" \
+		${PN}.pro
 
 	# eqmake4 dies on itself.
 	eqmake4
