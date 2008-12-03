@@ -6,7 +6,7 @@ inherit eutils
 
 DESCRIPTION="Array Input Method for SCIM"
 HOMEPAGE="http://scimarray.openfoundry.org/"
-SRC_URI="http://rt.openfoundry.org/Foundry/Project/Download/Attachment/102654/69468/scim-array-1.0.0.tar.gz"
+SRC_URI="http://of.openfoundry.org/download_path/scimarray/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
