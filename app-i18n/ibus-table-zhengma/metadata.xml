@@ -10,6 +10,6 @@
 	This package provide Chinese input Method -- ZhengMa on IBus Table.
 </longdescription>
 <use>
-	<flag name='extra-phrases'>Add extra phrases into builded Engine</flag>
+	<flag name='extra-phrases'>Add extra phrases into built Engine</flag>
 </use>
 </pkgmetadata>
