@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>cjk</herd>
+<maintainer>
+<email>acevery@gmail.com</email>
+<name>Yu Yuwei</name>
+</maintainer>
+<longdescription>
+	This package provide Chinese input Method -- WuBi on IBus Table.
+	You can choose to use Wubi86 or Wubi98.
+</longdescription>
+<use>
+	<flag name='extra-phrases'>Add extra phrases into built Engine</flag>
+	<flag name='wubi86'>Build Wubi86 Engine</flag>
+	<flag name='wubi98'>Build Wubi98 Engine</flag>
+</use>
+</pkgmetadata>
