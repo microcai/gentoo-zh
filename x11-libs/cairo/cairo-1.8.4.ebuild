@@ -72,9 +72,7 @@ src_unpack() {
 	cd "${S}"
 
 	if use newspr; then
-		epatch "${FILESDIR}"/${PN}-01_directfb-no-accel.patch
 		epatch "${FILESDIR}"/${PN}-02_no-private-symbol-export.patch
-		epatch "${FILESDIR}"/${PN}-03_fix_ftbfs_withing_xcb.patch
 		epatch "${FILESDIR}"/${PN}-04_lcd_filter.patch
 	fi
 
