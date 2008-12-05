@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  05 Dec 2008; Yu Yuwei <acevery@gmail.com> ibus-table-9999.ebuild:
+  update ebuild for splited ibus-table
+
   18 Oct 2008; Hong Hao <oahong@gmail.com> ibus-table-9999.ebuild:
   Revert to EAPI-1. Fix license.
 
