@@ -53,6 +53,7 @@ ibus-tables_src_compile() {
 	debug-print-function ${FUNCNAME} "$@"
 	USE_ENABLE=""
 	for e in ${IUSE}; do
+		e=${e/+/}
 		USE_ENABLE="${USE_ENABLE} $(useq ${e} && echo --enable-${e}\
 		|| echo --disable-${e})"
 	done
