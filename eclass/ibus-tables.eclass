@@ -22,7 +22,7 @@ else
 	SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 fi
 
-DESCRIPTION="${PN/ibus-table} code-table for ibus-table input engine"
+DESCRIPTION="${PN/ibus-table-} code-table for ibus-table input engine"
 HOMEPAGE="http://ibus.googlecode.com"
 
 LICENSE="GPL-3"
@@ -52,8 +52,7 @@ ibus-tables_src_unpack() {
 ibus-tables_src_compile() {
 	debug-print-function ${FUNCNAME} "$@"
 	USE_ENABLE=""
-	for e in ${IUSE}; do
-		e=${e/+/}
+	for e in ${IUSE/+}; do
 		USE_ENABLE="${USE_ENABLE} $(useq ${e} && echo --enable-${e}\
 		|| echo --disable-${e})"
 	done
