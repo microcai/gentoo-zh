@@ -1,0 +1,64 @@
+From 540de34453d16092acd2978b513831a02f01f59f Mon Sep 17 00:00:00 2001
+From: Chris Wilson<chris@chris-wilson.co.uk>
+Date: Sun, 26  Oct  2008  12:53:29  +0000
+Subject: [matrix] Optimise invert for simple scaling|translation matrices.
+
+Peter Hercek reported, and provided a very useful test case for, a bug
+that caused his applications to crash with Cairo detecting an
+non-invertible pattern matrix and thus asserting the impossible happened.
+Bisecting revealed that the bug first appeared with 3c18d95 and
+disappeared with 0d0c6a1. Since neither of these explain the crash,
+further investigation revealed a compiler bug (gcc 4.3.3 20081130,
+earlier versions have different bugs!) that caused the matrix inversion
+to be invalid iff _cairo_matrix_scalar_multiply() was inlined (i.e. -O0,
+or an explicit noinline atttribute on that function prevented the bug, as
+did -msse.) So we apply this workaround to hide the bug in the stable
+series...
+
+The matrix is quite often just a simple scale and translate (or even
+identity!). For this class of matrix, we can skip the full adjoint
+rearrangement and determinant calculation and just compute the inverse
+directly.
+(cherry picked from commit 0d0c6a199c5b631299c72dce80d66ac0f4936a64)
+---
+diff --git a/src/cairo-matrix.c b/src/cairo-matrix.c
+index ca18323..6a29aec 100644
+--- a/src/cairo-matrix.c
++++ b/src/cairo-matrix.c
+@@ -485,9 +485,33 @@ _cairo_matrix_compute_adjoint (cairo_matrix_t *matrix)
+ cairo_status_t
+ cairo_matrix_invert (cairo_matrix_t *matrix)
+ {
+-    /* inv (A) = 1/det (A) * adj (A) */
+     double det;
+ 
++    /* Simple scaling|translation matrices are quite common... */
++    if (matrix->xy == 0. && matrix->yx == 0.) {
++	matrix->x0 = -matrix->x0;
++	matrix->y0 = -matrix->y0;
++
++	if (matrix->xx != 1.) {
++	    if (matrix->xx == 0.)
++		return _cairo_error (CAIRO_STATUS_INVALID_MATRIX);
++
++	    matrix->xx = 1. / matrix->xx;
++	    matrix->x0 *= matrix->xx;
++	}
++
++	if (matrix->yy != 1.) {
++	    if (matrix->yy == 0.)
++		return _cairo_error (CAIRO_STATUS_INVALID_MATRIX);
++
++	    matrix->yy = 1. / matrix->yy;
++	    matrix->y0 *= matrix->yy;
++	}
++
++	return CAIRO_STATUS_SUCCESS;
++    }
++
++    /* inv (A) = 1/det (A) * adj (A) */
+     det = _cairo_matrix_compute_determinant (matrix);
+ 
+     if (! ISFINITE (det))
+--
+cgit v0.8.1-24-ge5fb

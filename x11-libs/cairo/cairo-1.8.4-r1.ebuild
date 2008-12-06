@@ -74,6 +74,8 @@ src_unpack() {
 	if use newspr; then
 		epatch "${FILESDIR}"/${PN}-02_no-private-symbol-export.patch
 		epatch "${FILESDIR}"/${PN}-04_lcd_filter.patch
+		epatch "${FILESDIR}"/${PN}-1.8.2-memoryleak.patch
+		epatch "${FILESDIR}"/${P}-optimise-invert.patch
 	fi
 
 	# We need to run elibtoolize to ensure correct so versioning on FreeBSD
