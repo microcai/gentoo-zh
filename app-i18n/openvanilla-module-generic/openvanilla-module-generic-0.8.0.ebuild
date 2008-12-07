@@ -22,7 +22,9 @@ src_unpack() {
 	subversion_fetch ${repo_uri}/Mk ../Mk
 	subversion_fetch ${repo_uri}/SharedHeaders ../SharedHeaders
 	subversion_fetch ${repo_uri}/SharedSource ../SharedSource
+
 	cd "${S}"
+	rm -vf ../SharedHeaders/OpenVanilla 
 	mkdir ../SharedHeaders/OpenVanilla
 	wget --continue --directory-prefix=../SharedHeaders/OpenVanilla	${repo_uri}/../Framework/Headers/OpenVanilla.h 
 	wget --continue --directory-prefix=../SharedHeaders/OpenVanilla	${repo_uri}/../Framework/Headers/OVLibrary.h
