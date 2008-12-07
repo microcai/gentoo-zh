@@ -1,0 +1,8 @@
+# ChangeLog for x11-libs/pango
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  07 Dec 2008; Yu Yuwei <acevery@gmail.com> +files/pango-1.2.5-lib64.patch,
+  +files/pango-r2742-r2748.patch, +pango-1.22.3-r1.ebuild, +metadata.xml:
+  added into overlay before next version release
+
