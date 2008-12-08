@@ -1,7 +1,10 @@
 # ChangeLog for x11-misc/qterm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.25 2008/05/14 17:33:36 matsuu Exp $
-  
+
+  08 Dec 2008; Zhang Le <r0bertz@gentoo.org> qterm-0.5.3.ebuild:
+  added as-needed patch back
+
   28 Nov 2008; Dennis.yxun <dennis.yxun@gmail.com> ChangeLog:
   version bump, to upstream 0.5.3
 

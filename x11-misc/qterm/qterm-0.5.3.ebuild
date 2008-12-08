@@ -26,6 +26,7 @@ MAKEOPTS="-j1"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/qterm-0.5.2-as-needed.patch"
 	sed -i -e '/^Exec/s/qterm/QTerm/' src/qterm.desktop.in || die
 	# fix the broken language files
 	lrelease src/po/qterm_ch*.ts || die
