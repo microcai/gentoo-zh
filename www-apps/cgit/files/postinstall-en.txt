@@ -1,0 +1,3 @@
+You need to provide cgit with the list of available repositories.
+Look at the examples in the file /etc/cgit/cgitrc.example by
+searching for repo.path.

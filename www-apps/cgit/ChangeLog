@@ -1,0 +1,9 @@
+# ChangeLog for www-apps/cgit
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  08 Dec 2008; Hong Hao <oahong@gmail.com> +cgit-9999.ebuild,
+  +files/cgitrc.example, +files/postinstall-en.txt, +metadata.xml:
+  Initial ebuid with reference to Gentoo bug #223339 ( ebuild based on
+  Christoph <egore> Brill's work. )
+

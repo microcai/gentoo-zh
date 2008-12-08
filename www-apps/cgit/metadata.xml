@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<longdescription>
+    Cgit is a cgi application implemented in C , an alternative to gitweb (which
+    comes with git). It's basically (yet) another git command used to generate html
+    Cgit also has a built-in cache, the generated html is stored on disk for the
+    benefit of later requests.
+</longdescription>
+</pkgmetadata>
