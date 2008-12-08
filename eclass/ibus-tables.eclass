@@ -16,7 +16,7 @@ inherit base autotools
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://github.com/acevery/${PN}.git"
 	EGIT_BRANCH="master"
-#	EGIT_OFFLINE="yup"
+#	EGIT_OFFLINE="YES_PLEASE" # offline mode for testing. (no update from github)
 	inherit git
 else
 	SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
@@ -36,13 +36,14 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	extra-phrases? ( >=app-i18n/ibus-table-extraphrase-0.1.2 )"
 
-DOCS="AUTHORS README"
+DOCS=""
 
 ibus-tables_src_unpack() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	if [[ ${PV} == "9999" ]] ; then
 		git_src_unpack
+		# hmm...eauto{,re}conf/econf dies on itself.
 		eautoreconf || die "fail to run autoreconf"
 	else
 		base_src_unpack
@@ -51,10 +52,12 @@ ibus-tables_src_unpack() {
 
 ibus-tables_src_compile() {
 	debug-print-function ${FUNCNAME} "$@"
-	USE_ENABLE=""
+
+	local USE_ENABLE=""
 	for e in ${IUSE/+}; do
-		USE_ENABLE="${USE_ENABLE} $(useq ${e} && echo --enable-${e}\
-		|| echo --disable-${e})"
+		USE_ENABLE="${USE_ENABLE} $(useq ${e} && \
+			echo --enable-${e} || \
+			echo --disable-${e})"
 	done
 
 	econf \
@@ -66,9 +69,17 @@ ibus-tables_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	base_src_install
-	ebegin "dodoc" 
-		dodoc ${DOCS} 2> /dev/null
-	eend $?
+
+	dodoc ${DOCS} 2> /dev/null
 }
 
-EXPORT_FUNCTIONS src_unpack src_compile src_install
+ibus-tables_pkg_postinst() {
+	debug-print-function ${FUNCNAME} "$@"
+
+	echo
+	ewarn "Please offer your suggestions and/or report your bugs to"
+	ewarn "http://ibus.googlecode.com/issues/list"
+	echo
+}
+
+EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst
