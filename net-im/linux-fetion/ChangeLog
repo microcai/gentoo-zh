@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Dec 2008; Hong Hao <oahong@gmail.com> linux-fetion-0.9.1.ebuild,
+  linux-fetion-9999.ebuild:
+  die.
+
   13 Dec 2008; Hong Hao <oahong@gmail.com> -linux-fetion-0.9.0-r1.ebuild,
   +linux-fetion-0.9.1.ebuild:
   Bump again.

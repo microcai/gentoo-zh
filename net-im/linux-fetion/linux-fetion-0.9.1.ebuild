@@ -35,15 +35,15 @@ src_compile() {
 
 src_install() {
 	insinto /usr/share/libfetion
-	doins fetion_utf8_CN.qm
-	doins -r skins sound
+	doins fetion_utf8_CN.qm || die "doins failed"
+	doins -r skins sound || die "doins failed"
 
 	insinto /usr/share/pixmaps
-	doins misc/fetion.png
+	doins misc/fetion.png || die "doins failed"
 
 	if use doc ; then
 		insinto /usr/share/doc/${PF}
-		dohtml APIDocs/html/*
+		dohtml APIDocs/html/* || die "dohtml failed"
 	fi
 
 	ebegin "Remove empty directories"
@@ -51,9 +51,9 @@ src_install() {
 	eend $?
 
 	insinto /usr/share/applications
-	doins misc/LibFetion.desktop
+	doins misc/LibFetion.desktop || die "failed to install desktop entry"
 
-	dobin ${PN}
+	dobin ${PN} || die "dobin failed"
 }
 
 pkg_postinst() {
