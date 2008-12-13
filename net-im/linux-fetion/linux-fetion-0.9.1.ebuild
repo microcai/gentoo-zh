@@ -6,7 +6,7 @@ inherit flag-o-matic qt4
 
 DESCRIPTION="Linux Fetion, a QT4 IM client using CHINA MOBILE's Fetion Protocol"
 HOMEPAGE="http://www.libfetion.cn/"
-SRC_URI="http://libfetion-gui.googlecode.com/files/${P}_fix64build.tar.gz"
+SRC_URI="http://libfetion-gui.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
