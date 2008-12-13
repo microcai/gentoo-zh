@@ -2,6 +2,10 @@
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
 
   13 Dec 2008; Hydonsingore Cia <hydonsingore@educities.edu.tw>
+  gcin-1.4.3_pre12.ebuild:
+  Remove KEYWORDS until we can successfully build it.
+
+  13 Dec 2008; Hydonsingore Cia <hydonsingore@educities.edu.tw>
   +gcin-1.4.3_pre12.ebuild:
   Version bump.
 

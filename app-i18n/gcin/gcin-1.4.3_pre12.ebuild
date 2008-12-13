@@ -11,7 +11,7 @@ SRC_URI="http://cle.linux.org.tw/gcin/download/${P/_/.}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ia64 ~ppc ~hppa"
+KEYWORDS=""
 IUSE="immqt immqt-bc filter-nobopomofo chinese-sound"
 DEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/glib-2.4
