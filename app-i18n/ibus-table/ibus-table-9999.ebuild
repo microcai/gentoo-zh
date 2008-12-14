@@ -12,23 +12,25 @@ DESCRIPTION="General Table Engine for IBus Framework"
 HOMEPAGE="http://ibus.googlecode.com"
 SRC_URI=""
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
-IUSE="+additional nls"
+IUSE="+additional cangjie5 erbi-qs extra-phrases nls wubi zhengma"
 
-# NOTES:
-# 1.autopoint is part of gettext, so here we
-#   don't need a conditional USE flag 'nls'.
-# 2.ibus seems to work without gettext (tested on my box).
-# 4.Autopoint needs cvs to work. Bug #152872
+# 1.autopoint needs cvs to work. Bug #152872
+# 2.autopoint is part of gettext
 DEPEND="dev-util/cvs
 	dev-util/pkgconfig
 	sys-devel/gettext"
 RDEPEND="app-i18n/ibus"
+PDEPEND="cangjie5? ( app-i18n/ibus-table-cangjie )
+	erbi-qs? ( app-i18n/ibus-table-erbi )
+	extra-phrases? ( app-i18n/ibus-table-extraphrase )
+	wubi? ( app-i18n/ibus-table-wubi )
+	zhengma? ( app-i18n/ibus-table-zhengma )"
 
 pkg_setup() {
-	# Should I use use dependencies? (eapi-2)
+	# We could use USE dependencies? (eapi-2 feature.)
 	if ! python_mod_exists sqlite3 ; then
 		eerror "We need sqlite module for python to generate table databases!"
 		die "Please compile your python with \"sqlite\" USE flag!"
@@ -38,6 +40,7 @@ pkg_setup() {
 src_unpack() {
 	git_src_unpack
 	autopoint || die "failed to run autopoint"
+	# eautoreconf dies on itself.
 	eautoreconf || die "failed to run autoreconf"
 }
 
@@ -50,7 +53,7 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
-	dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS README
 }
 
 pkg_postinst() {
@@ -64,7 +67,8 @@ pkg_postinst() {
 	elog "Then, don't forget to run ibus-setup and enable the IM Engines you want to use!"
 	einfo
 
-	# Really useful? (python_mod_optimize/python_mod_cleanup)
+	# Really useful?
+	# http://www.gentoo.org/proj/en/Python/developersguide.xml#doc_chap2
 	python_mod_optimize /usr/share/${PN}
 }
 

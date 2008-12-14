@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  14 Dec 2008; Hong Hao <oahong@gmail.com> ibus-table-9999.ebuild:
+  Fix license. use pdepend.
+
   05 Dec 2008; Yu Yuwei <acevery@gmail.com> ibus-table-9999.ebuild:
   update ebuild for splited ibus-table
 
