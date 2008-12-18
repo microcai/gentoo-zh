@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Dec 2008; Hong Hao <oahong@gmail.com> fbterm-1.2-r1.ebuild,
+  +files/fbterm-1.2-ucimf.patch:
+  Add patch for ucimf.
+
   18 Dec 2008; Hong Hao <oahong@gmail.com> +fbterm-1.2-r1.ebuild,
   metadata.xml:
   Revision bump with ucimf support.

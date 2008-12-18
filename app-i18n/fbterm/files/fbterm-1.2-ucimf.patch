@@ -1,0 +1,96 @@
+diff -r 2a141e2b5637 src/fbshell.cpp
+--- a/src/fbshell.cpp	Fri Oct 31 22:35:06 2008 +0800
++++ b/src/fbshell.cpp	Sat Nov 01 01:20:57 2008 +0800
+@@ -27,6 +27,8 @@
+ #include "fbconfig.h"
+ #include "fbterm.h"
+ #include "screen.h"
++#include "font.h"
++#include <ucimf.h>
+ 
+ #define manager (FbShellManager::instance())
+ #define screen (Screen::instance())
+@@ -122,6 +124,12 @@
+ {
+ 	if (manager->activeShell() != this || mCursor.x >= w() || mCursor.y >= h()) return;
+ 	mCursor.showed ^= true;
++
++	/* update UCIMF's position */
++	ucimf_cursor_position( 
++			Font::instance()->width() * mCursor.x,
++			Font::instance()->height() * mCursor.y
++			);      
+ 	
+ 	u16 shape = mode(CursorShape);
+ 	if (shape == CurDefault) {
+diff -r 2a141e2b5637 src/input.cpp
+--- a/src/input.cpp	Fri Oct 31 22:35:06 2008 +0800
++++ b/src/input.cpp	Sat Nov 01 01:20:57 2008 +0800
+@@ -29,6 +29,8 @@
+ #include "input_key.h"
+ #include "fbshell.h"
+ #include "fbterm.h"
++#include <ucimf.h>
++#include <iostream>
+ 
+ static termios oldTm;
+ static long oldKbMode;
+@@ -47,6 +49,9 @@
+ 		printf("stdin isn't a interactive tty!\n");
+ 		return 0;
+ 	}
++
++	/* UCIMF initialization */
++	ucimf_init();
+ 
+ 	return new TtyInput();
+ }
+@@ -71,6 +76,9 @@
+ 
+ TtyInput::~TtyInput()
+ {
++	// Exit UCIMF
++	ucimf_exit();
++
+ 	tcsetattr(STDIN_FILENO, TCSAFLUSH, &oldTm);
+ 	switchVc(false);
+ }
+@@ -159,5 +167,11 @@
+ 		FbTerm::instance()->processSysKey(c);
+ 	}
+ 
+-	if (i > start && shell) shell->keyInput(buf + start, i - start);
++	if (i > start && shell){
++		/* intercept input here to use UCIMF */
++		ucimf_switch( (unsigned char*) buf, (int*) &i );
++		ucimf_process_stdin( (char*) buf, (int*) &i );
++
++		shell->keyInput(buf + start, i - start);
++	}
+ }
+diff -r 2a141e2b5637 src/lib/shell.cpp
+--- a/src/lib/shell.cpp	Fri Oct 31 22:35:06 2008 +0800
++++ b/src/lib/shell.cpp	Sat Nov 01 01:20:57 2008 +0800
+@@ -29,6 +29,7 @@
+ #include <sys/ioctl.h>
+ #include <sys/wait.h>
+ #include "shell.h"
++#include <ucimf.h>
+ 
+ u8 Shell::default_fcolor;
+ u8 Shell::default_bcolor;
+@@ -105,9 +106,14 @@
+ 
+ void Shell::keyInput(s8 *buf, u32 len)
+ {
++	ucimf_refresh_begin();
++
+ 	clearMousePointer();
+ 	resetTextSelect();
+ 	write(buf, len);
++
++	ucimf_refresh_end();
++
+ }
+ 
+ void Shell::mouseInput(u16 x, u16 y, s32 type, s32 buttons)

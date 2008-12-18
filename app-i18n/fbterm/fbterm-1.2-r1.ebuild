@@ -6,8 +6,7 @@ inherit eutils linux-info
 
 DESCRIPTION="fast FrameBuffer based TERMinal emulator for Linux"
 HOMEPAGE="http://fbterm.googlecode.com"
-SRC_URI="http://fbterm.googlecode.com/files/${P}.tar.gz
-	ucimf? ( https://ucimf.svn.sf.net/svnroot/ucimf/console/${PN}/patches/${P}-ucimf.patch )"
+SRC_URI="http://fbterm.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -33,7 +32,7 @@ src_unpack() {
 
 	# patch from Chun-Yu Lee (Mat) http://ucimf.sourceforge.net
 	if use ucimf ; then
-		cd "${S}" && epatch ${DISTFILES}/${P}-ucimf.patch
+		cd "${S}" && epatch "${FILESDIR}"/${P}-ucimf.patch
 	fi
 }
 
