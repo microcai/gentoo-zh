@@ -11,12 +11,13 @@ SRC_URI="http://cle.linux.org.tw/gcin/download/${P/_/.}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~hppa"
 IUSE="immqt immqt-bc filter-nobopomofo chinese-sound"
 DEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/glib-2.4
 	>=dev-libs/atk-1.0.1
 	>=x11-libs/pango-1.4
+	>=app-i18n/anthy-9100
 	immqt? ( =x11-libs/qt-3* )
 	immqt-bc? ( =x11-libs/qt-3* )"
 #    "amd64? ( app-emulation/emul-linux-x86-gtklibs )"
