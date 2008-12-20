@@ -11,9 +11,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="dev-libs/glib  \
-		dev-util/pkgconfig \
-    	>=dev-util/intltool-0.33 \
+DEPEND="gnome-base/gconf
 		>=x11-libs/gtk+-2.10.14"
 
 RDEPEND="${DEPEND}"
