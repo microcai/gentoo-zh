@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  20 Dec 2008; Hong Hao <oahong@gmail.com> +fbterm-1.3.ebuild:
+  New upstream release.
+
   18 Dec 2008; Hong Hao <oahong@gmail.com> fbterm-1.2-r1.ebuild,
   +files/fbterm-1.2-ucimf.patch:
   Add patch for ucimf.
