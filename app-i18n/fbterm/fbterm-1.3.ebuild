@@ -10,7 +10,7 @@ SRC_URI="http://fbterm.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="media-libs/fontconfig
