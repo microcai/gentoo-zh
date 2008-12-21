@@ -6,12 +6,12 @@ EAPI="2"
 
 DESCRIPTION="apvlv is a PDF Viewer which behavior like Vim"
 HOMEPAGE="http://code.google.com/p/apvlv/"
-SRC_URI="http://apvlv.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://apvlv.googlecode.com/files/${P}-${PR/r}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="" #debug
+IUSE="debug"
 
 RESTICT="primaryuri"
 
@@ -23,12 +23,13 @@ DEPEND="${RDEPEND}
 #	app-text/dvipdfm
 #	virtual/latex-base
 
-# TODO: debug
-#src_configure() {
-#	econf \
-#		$(use_enable debug) \
-#		--disable-dependency-tracking
-#}
+# FIXME: debug really works?
+src_configure() {
+	# use_enable doesn't work as expected
+	econf \
+		$(useq debug && echo --enable-debug) \
+		--disable-dependency-tracking
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
