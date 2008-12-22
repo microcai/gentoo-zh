@@ -1,0 +1,218 @@
+diff -ru fbterm-1.3/config.h.in fbterm-1.3.new/config.h.in
+--- fbterm-1.3/config.h.in	2008-12-22 11:44:59.000000000 +0800
++++ fbterm-1.3.new/config.h.in	2008-12-22 11:37:22.000000000 +0800
+@@ -6,9 +6,6 @@
+ /* Define to 1 if you have the <fcntl.h> header file. */
+ #undef HAVE_FCNTL_H
+ 
+-/* */
+-#undef HAVE_FS_CAPABILITY
+-
+ /* Define to 1 if you have the `getpagesize' function. */
+ #undef HAVE_GETPAGESIZE
+ 
+diff -ru fbterm-1.3/configure fbterm-1.3.new/configure
+--- fbterm-1.3/configure	2008-12-22 11:44:36.000000000 +0800
++++ fbterm-1.3.new/configure	2008-12-22 11:36:49.000000000 +0800
+@@ -707,8 +707,6 @@
+ CPP
+ GREP
+ EGREP
+-HAVE_FS_CAPABILITY_TRUE
+-HAVE_FS_CAPABILITY_FALSE
+ LIBOBJS
+ LTLIBOBJS'
+ ac_subst_files=''
+@@ -5684,27 +5682,6 @@
+ fi
+ 
+ 
+-
+-
+-
+-FS_CAP=
+-if `which setcap > /dev/null` && test "`uname -r`" ">" "2.6.26"; then
+-  FS_CAP=1
+-  cat >>confdefs.h <<\_ACEOF
+-#define HAVE_FS_CAPABILITY 1
+-_ACEOF
+-
+-fi
+-
+- if test -n "$FS_CAP"; then
+-  HAVE_FS_CAPABILITY_TRUE=
+-  HAVE_FS_CAPABILITY_FALSE='#'
+-else
+-  HAVE_FS_CAPABILITY_TRUE='#'
+-  HAVE_FS_CAPABILITY_FALSE=
+-fi
+-
+-
+ # Checks for library functions.
+ if test $ac_cv_c_compiler_gnu = yes; then
+     { echo "$as_me:$LINENO: checking whether $CC needs -traditional" >&5
+@@ -6685,13 +6662,6 @@
+ Usually this means the macro was only invoked conditionally." >&2;}
+    { (exit 1); exit 1; }; }
+ fi
+-if test -z "${HAVE_FS_CAPABILITY_TRUE}" && test -z "${HAVE_FS_CAPABILITY_FALSE}"; then
+-  { { echo "$as_me:$LINENO: error: conditional \"HAVE_FS_CAPABILITY\" was never defined.
+-Usually this means the macro was only invoked conditionally." >&5
+-echo "$as_me: error: conditional \"HAVE_FS_CAPABILITY\" was never defined.
+-Usually this means the macro was only invoked conditionally." >&2;}
+-   { (exit 1); exit 1; }; }
+-fi
+ 
+ : ${CONFIG_STATUS=./config.status}
+ ac_clean_files_save=$ac_clean_files
+@@ -7322,12 +7292,11 @@
+ CPP!$CPP$ac_delim
+ GREP!$GREP$ac_delim
+ EGREP!$EGREP$ac_delim
+-HAVE_FS_CAPABILITY_TRUE!$HAVE_FS_CAPABILITY_TRUE$ac_delim
+-HAVE_FS_CAPABILITY_FALSE!$HAVE_FS_CAPABILITY_FALSE$ac_delim
+ LIBOBJS!$LIBOBJS$ac_delim
++LTLIBOBJS!$LTLIBOBJS$ac_delim
+ _ACEOF
+ 
+-  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 97; then
++  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 96; then
+     break
+   elif $ac_last_try; then
+     { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5
+@@ -7363,50 +7332,6 @@
+ _ACEOF
+ 
+ 
+-ac_delim='%!_!# '
+-for ac_last_try in false false false false false :; do
+-  cat >conf$$subs.sed <<_ACEOF
+-LTLIBOBJS!$LTLIBOBJS$ac_delim
+-_ACEOF
+-
+-  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 1; then
+-    break
+-  elif $ac_last_try; then
+-    { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5
+-echo "$as_me: error: could not make $CONFIG_STATUS" >&2;}
+-   { (exit 1); exit 1; }; }
+-  else
+-    ac_delim="$ac_delim!$ac_delim _$ac_delim!! "
+-  fi
+-done
+-
+-ac_eof=`sed -n '/^CEOF[0-9]*$/s/CEOF/0/p' conf$$subs.sed`
+-if test -n "$ac_eof"; then
+-  ac_eof=`echo "$ac_eof" | sort -nru | sed 1q`
+-  ac_eof=`expr $ac_eof + 1`
+-fi
+-
+-cat >>$CONFIG_STATUS <<_ACEOF
+-cat >"\$tmp/subs-2.sed" <<\CEOF$ac_eof
+-/@[a-zA-Z_][a-zA-Z_0-9]*@/!b end
+-_ACEOF
+-sed '
+-s/[,\\&]/\\&/g; s/@/@|#_!!_#|/g
+-s/^/s,@/; s/!/@,|#_!!_#|/
+-:n
+-t n
+-s/'"$ac_delim"'$/,g/; t
+-s/$/\\/; p
+-N; s/^.*\n//; s/[,\\&]/\\&/g; s/@/@|#_!!_#|/g; b n
+-' >>$CONFIG_STATUS <conf$$subs.sed
+-rm -f conf$$subs.sed
+-cat >>$CONFIG_STATUS <<_ACEOF
+-:end
+-s/|#_!!_#|//g
+-CEOF$ac_eof
+-_ACEOF
+-
+-
+ # VPATH may cause trouble with some makes, so we remove $(srcdir),
+ # ${srcdir} and @srcdir@ from VPATH if srcdir is ".", strip leading and
+ # trailing colons and then remove the whole line if VPATH becomes empty
+@@ -7656,7 +7581,7 @@
+ s&@INSTALL@&$ac_INSTALL&;t t
+ s&@MKDIR_P@&$ac_MKDIR_P&;t t
+ $ac_datarootdir_hack
+-" $ac_file_inputs | sed -f "$tmp/subs-1.sed" | sed -f "$tmp/subs-2.sed" >$tmp/out
++" $ac_file_inputs | sed -f "$tmp/subs-1.sed" | sed 's/|#_!!_#|//g' >$tmp/out
+ 
+ test -z "$ac_datarootdir_hack$ac_datarootdir_seen" &&
+   { ac_out=`sed -n '/\${datarootdir}/p' "$tmp/out"`; test -n "$ac_out"; } &&
+diff -ru fbterm-1.3/src/fbterm.cpp fbterm-1.3.new/src/fbterm.cpp
+--- fbterm-1.3/src/fbterm.cpp	2008-12-22 11:43:57.000000000 +0800
++++ fbterm-1.3.new/src/fbterm.cpp	2008-12-22 11:35:49.000000000 +0800
+@@ -241,9 +241,7 @@
+ 
+ void FbTerm::initChildProcess()
+ {
+-#ifndef HAVE_FS_CAPABILITY
+     setuid(getuid());
+-#endif
+ 
+ #ifdef HAVE_SIGNALFD
+ 	sigprocmask(SIG_SETMASK, &oldSigmask, 0);
+@@ -252,16 +250,12 @@
+ 	signal(SIGPIPE, SIG_DFL);
+ }
+ 
+-#ifndef HAVE_FS_CAPABILITY
+ u32 effective_uid;
+-#endif
+ 
+ int main(int argc, char **argv)
+ {
+-#ifndef HAVE_FS_CAPABILITY
+ 	effective_uid = geteuid();
+ 	seteuid(getuid());
+-#endif
+ 
+ 	if (Config::instance()->parseArgs(argc, argv)) {
+ 		FbTerm::instance()->run();
+diff -ru fbterm-1.3/src/input.cpp fbterm-1.3.new/src/input.cpp
+--- fbterm-1.3/src/input.cpp	2008-12-22 11:43:57.000000000 +0800
++++ fbterm-1.3.new/src/input.cpp	2008-12-22 11:35:23.000000000 +0800
+@@ -26,7 +26,6 @@
+ #include <sys/vt.h>
+ #include <linux/kd.h>
+ #include <linux/input.h>
+-#include "config.h"
+ #include "input.h"
+ #include "input_key.h"
+ #include "fbshell.h"
+@@ -124,10 +123,8 @@
+ 
+ 	if (!syskey_saved && restore) return;
+ 
+-#ifndef HAVE_FS_CAPABILITY
+ 	extern s32 effective_uid;
+ 	seteuid(effective_uid);
+-#endif
+ 
+ 	for (u32 i = 0; i < sizeof(sysKeyTable) / sizeof(KeyEntry); i++) {
+ 		kbentry entry;
+@@ -145,9 +142,7 @@
+ 
+ 	if (!syskey_saved && !restore) syskey_saved = true;
+ 
+-#ifndef HAVE_FS_CAPABILITY
+ 	seteuid(getuid());
+-#endif
+ }
+ 
+ void TtyInput::readyRead(s8 *buf, u32 len)
+diff -ru fbterm-1.3/src/Makefile.in fbterm-1.3.new/src/Makefile.in
+--- fbterm-1.3/src/Makefile.in	2008-12-22 11:44:34.000000000 +0800
++++ fbterm-1.3.new/src/Makefile.in	2008-12-22 11:40:10.000000000 +0800
+@@ -729,8 +729,8 @@
+ 
+ 
+ install-exec-hook:
+-@HAVE_FS_CAPABILITY_TRUE@	setcap 'cap_sys_tty_config+ep' $(DESTDIR)$(bindir)/fbterm$(EXEEXT)
+-@HAVE_FS_CAPABILITY_FALSE@	chmod u+s $(DESTDIR)$(bindir)/fbterm$(EXEEXT)
++	setcap 'cap_sys_tty_config+ep' $(DESTDIR)$(bindir)/fbterm$(EXEEXT) 2>/dev/null || \
++	chmod u+s $(DESTDIR)$(bindir)/fbterm$(EXEEXT)
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
