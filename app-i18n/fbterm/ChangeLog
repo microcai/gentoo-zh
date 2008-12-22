@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  22 Dec 2008; Hong Hao <oahong@gmail.com> fbterm-1.3-r1.ebuild:
+  Simplified ebuild:remove checks. Fix typos and syntax error.
+
   22 Dec 2008; Hong Hao <oahong@gmail.com> +fbterm-1.3-r1.ebuild,
   +files/fscap-remove.patch:
   Add a patch from upstream, this should fix installation problem on kernel >=
