@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  23 Dec 2008; Hong Hao <oahong@gmail.com> fbterm-1.3-r1.ebuild:
+  Gentoo bug 226953
+
   22 Dec 2008; Hong Hao <oahong@gmail.com> fbterm-1.3-r1.ebuild:
   Simplified ebuild:remove checks. Fix typos and syntax error.
 

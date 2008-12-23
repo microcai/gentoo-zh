@@ -19,10 +19,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 # http://code.google.com/p/fbterm/issues/detail?id=8#c6
-# temporary workaround (patch from upstream, thanks goes to zgchan317)
 PATCHES=( "${FILESDIR}/fscap-remove.patch" )
-# /usr/bin/fbterm is setXid, dyn linked, and using lazy bindings
-append-ldflags "-Wl,-z,now"
 
 src_install() {
 	base_src_install
@@ -36,10 +33,10 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	elog "To use ${PN}, ensure you are in video group."
+	ewarn "To use ${PN}, ensure you are in video group and have framebuffer support."
 	if use doc ; then
-		elog "It would be very useful to take a look at /usr/share/doc/${PF}/im"
-		elog "directory, if you were really interested in developing im server for ${PN}"
+		ewarn "It would be very useful to take a look at /usr/share/doc/${PF}/im"
+		ewarn "directory, if you were really interested in developing im server for ${PN}"
 	fi
 	echo
 }
