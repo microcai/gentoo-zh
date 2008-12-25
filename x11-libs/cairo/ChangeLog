@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  25 Dec 2008; Yu Yuwei <acevery@gmail.com> +cairo-1.8.6.ebuild,
+  +files/cairo-05_respect-fontconfig.patch:
+  update to 1.8.6
+
   06 Dec 2008; Yu Yuwei <acevery@gmail.com>
   +files/cairo-1.8.2-memoryleak.patch, -cairo-1.8.4.ebuild,
   +cairo-1.8.4-r1.ebuild, +files/cairo-1.8.4-optimise-invert.patch:
