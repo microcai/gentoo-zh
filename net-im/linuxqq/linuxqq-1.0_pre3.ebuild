@@ -11,10 +11,10 @@ SRC_URI="http://dl_dir.qq.com/linuxqq/${MY_P}.tar.gz"
 
 LICENSE="Tencent"
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64" # only works on amd64/x86 platform
+KEYWORDS="-* ~x86 ~amd64"
 IUSE=""
 
-# FIXME: dependency. We have no amd64 env. still missing something here?
+# FIXME: missing something here?
 # http://www.gentoo.org/proj/en/base/amd64/emul/content.xml
 DEPEND=""
 RDEPEND="x86? ( >=x11-libs/gtk+-2.10.8 )
@@ -25,49 +25,34 @@ RDEPEND="x86? ( >=x11-libs/gtk+-2.10.8 )
 	)"
 
 S=${WORKDIR}/${MY_P}
-RESTRICT="mirror"
+RESTRICT="mirror strip"
 
 pkg_setup() {
-	# x86 binary package, we need multilib
-	# FIXME:
-	# multilib profile should always have mutlilib USE flag ON,
-	# so we can safely get rid of multilib USE flag check here?
+	#XXX: x86 binary package, we need multilib.
 	if use amd64 && ! has_multilib_profile ; then
 		eerror "We need multilib profile to run Tencent QQ client!"
 		die "We need multilib profile to run Tencent QQ client!"
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_install() {
+	dodir /opt/${PN}
+	mv "${S}"/* "${D}"/opt/${PN}
 
-	cat << DONE > qq.sh
+	insinto /usr/share/pixmaps
+	doins "${FILESDIR}"/linuxqq.png || die "doins failed"
+	insinto /usr/share/applications
+	doins "${FILESDIR}"/linuxqq.desktop || die "doins failed"
+
+	# If we could have something like herebin in exheres ...
+	cat > qq << DONE
 #!/bin/bash
 # for launch qq from every directory
-pushd /opt/linuxqq/bin > /dev/null
-./qq &
+pushd /opt/linuxqq > /dev/null
+./qq 2> /dev/null &
 popd > /dev/null
 DONE
-}
-
-src_install() {
-	ebegin "Installing package"
-		insinto /opt/${PN}/bin
-		doins qq res.db || die "doins failed"
-	eend $?
-
-	ebegin "Installing icon, menu entry and launch script"
-		insinto /opt/${PN}/icons
-		doins "${FILESDIR}"/linuxqq.png || die "doins failed"
-		insinto /usr/share/applications
-		doins "${FILESDIR}"/linuxqq.desktop || die "doins failed"
-		newbin qq.sh qq || die "newbin failed"
-	eend $?
-
-	ebegin "Fixing file permissions"
-		fperms a+x /opt/${PN}/bin/qq || die "fperms failed"
-	eend $?
+	dobin qq || die "dobin failed"
 }
 
 pkg_postinst() {
