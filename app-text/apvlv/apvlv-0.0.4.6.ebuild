@@ -17,7 +17,7 @@ RESTICT="primaryuri"
 
 RDEPEND=">=x11-libs/gtk+-2.6
 	>=app-text/poppler-0.5.4
-	>=app-text/poppler-bindings-0.5.4[gtk]"
+	>=app-text/poppler-bindings-0.5.4[cairo,gtk]"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0"
 #	app-text/dvipdfm

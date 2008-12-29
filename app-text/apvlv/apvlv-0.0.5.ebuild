@@ -6,7 +6,7 @@ EAPI="2"
 
 DESCRIPTION="apvlv is a PDF Viewer which behavior like Vim"
 HOMEPAGE="http://code.google.com/p/apvlv/"
-SRC_URI="http://apvlv.googlecode.com/files/${P}-${PR/r}.tar.gz"
+SRC_URI="http://apvlv.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,9 +23,7 @@ DEPEND="${RDEPEND}
 #	app-text/dvipdfm
 #	virtual/latex-base
 
-# FIXME: debug really works?
 src_configure() {
-	# use_enable doesn't work as expected
 	econf \
 		$(useq debug && echo --enable-debug) \
 		--disable-dependency-tracking
