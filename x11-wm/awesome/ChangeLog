@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  29 Dec 2008; Hong Hao <oahong@gmail.com> awesome-9999.ebuild:
+  Update dependency: set minimum pango version requirement.
+
   13 Nov 2008; Hong Hao <oahong@gmail.com> awesome-9999.ebuild:
   More info.
 

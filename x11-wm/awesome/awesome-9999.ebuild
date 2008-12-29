@@ -2,8 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI="2"
 
+#EGIT_BRANCH="next"
 EGIT_REPO_URI="git://git.naquadah.org/awesome.git"
 inherit cmake-utils git
 
@@ -25,7 +26,7 @@ COMMOM_DEPEND=">=dev-lang/lua-5.1
 	x11-libs/cairo[xcb]
 	x11-libs/libX11[xcb]
 	>=x11-libs/libxcb-1.1
-	x11-libs/pango
+	>=x11-libs/pango-1.19.3
 	>=x11-libs/xcb-util-0.3
 	dbus? ( >=sys-apps/dbus-1 )
 	>=x11-proto/xproto-7.0.11"
@@ -40,7 +41,7 @@ DEPEND="${COMMOM_DEPEND}
 		dev-util/luadoc
 		media-gfx/graphviz
 	)"
-# Runtime depends for awsetbg. (bash already in system set.)
+# hmm, bash in system set?
 RDEPEND="${COMMOM_DEPEND}
 	x11-apps/xmessage
 	media-gfx/feh"
@@ -69,20 +70,16 @@ src_install() {
 	cmake-utils_src_install
 
 	if use doc ; then
-		ebegin "Be patient! This might take a long time."
-			# paludis sucks.
-			set -x && dohtml -r "${WORKDIR}"/${PN}_build/doc/html/*
-			mv "${D}"/usr/share/doc/${PN}/luadoc "${D}"/usr/share/doc/${PF}/html/luadoc || die
-		eend $?
+		einfo "Be patient! This might take a very long time."
+		# paludis sucks!!!
+		set -x && dohtml -r "${WORKDIR}"/${PN}_build/doc/html/* || die "dohtml failed"
+		mv "${D}"/usr/share/doc/${PN}/luadoc "${D}"/usr/share/doc/${PF}/html/luadoc || die
 	fi
-	rm -rf "${D}"/usr/share/doc/${PN} || die
+	rm -rf "${D}"/usr/share/doc/${PN} || die "dodoc failed"
 
 	exeinto /etc/X11/Sessions
-	newexe "${FILESDIR}"/${PN}-session ${PN}
+	newexe "${FILESDIR}"/${PN}-session ${PN} || die "failed to install X session file"
 
 	insinto /usr/share/xsessions
-	doins ${PN}.desktop
-
-	einfo "Try to remove awesome (that means emerge -Cav awesome)"
-	einfo "first if you experienced some problem during \"Installation\" process."
+	doins ${PN}.desktop || die "failed to install desktop entry"
 }
