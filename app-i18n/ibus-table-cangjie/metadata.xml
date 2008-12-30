@@ -9,4 +9,8 @@
 <longdescription>
 	This package provide Chinese input Method -- Cangjie5 on IBus Table.
 </longdescription>
+<use>
+	<flag name='cangjie3'>Build CangJie3 Engine</flag>
+	<flag name='cangjie5'>Build CangJie5 Engine</flag>
+</use>
 </pkgmetadata>

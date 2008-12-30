@@ -7,6 +7,6 @@ EAPI="1"
 inherit ibus-tables
 
 KEYWORDS=""
-IUSE=""
+IUSE="+cangjie5 cangjie3"
 
 DOCS="AUTHORS"

@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Dec 2008; Yu Yuwei <acevery@gmail.com> ibus-table-cangjie-9999.ebuild,
+  metadata.xml:
+  add cangjie3/5 USE
+
   05 Dec 2008; Yu Yuwei <acevery@gmail.com> +ibus-table-cangjie-9999.ebuild,
   +metadata.xml:
   added into overlay
