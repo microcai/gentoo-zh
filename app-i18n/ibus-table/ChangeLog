@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Dec 2008; Hong Hao <oahong@gmail.com> ibus-table-9999.ebuild,
+  metadata.xml:
+  s/cangjie5/cangjie
+
   14 Dec 2008; Hong Hao <oahong@gmail.com> ibus-table-9999.ebuild:
   Fix license. use pdepend.
 
