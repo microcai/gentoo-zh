@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  31 Dec 2008; Hong Hao <oahong@gmail.com> -linux-fetion-0.8.1.ebuild,
+  linux-fetion-0.9.1.ebuild, linux-fetion-9999.ebuild:
+  Cleanup, kill old version. Ebuilds converted to eapi2 since we use a *nice*
+  feature to ensure curl built against openssl.
+
   13 Dec 2008; Hong Hao <oahong@gmail.com> linux-fetion-0.9.1.ebuild,
   linux-fetion-9999.ebuild:
   die.
