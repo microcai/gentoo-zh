@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils multilib
+inherit multilib
 
 MY_P=${PN}_v${PV/_pre/-preview}_i386
 DESCRIPTION="Tencent QQ for Linux"
@@ -49,7 +49,7 @@ src_install() {
 #!/bin/bash
 # for launch qq from every directory
 pushd /opt/linuxqq > /dev/null
-./qq 2> /dev/null &
+./qq &
 popd > /dev/null
 DONE
 	dobin qq || die "dobin failed"
