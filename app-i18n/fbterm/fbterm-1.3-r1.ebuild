@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit base flag-o-matic
+inherit base
 
 DESCRIPTION="fast FrameBuffer based TERMinal emulator for Linux"
 HOMEPAGE="http://fbterm.googlecode.com"
@@ -11,7 +11,7 @@ SRC_URI="http://fbterm.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc"
+IUSE="examples"
 
 RDEPEND="media-libs/fontconfig
 	>=media-libs/freetype-2"
@@ -23,20 +23,21 @@ PATCHES=( "${FILESDIR}/fscap-remove.patch" )
 
 src_install() {
 	base_src_install
-	dodoc AUTHORS NEWS README im/inputmethod.txt
+	dodoc AUTHORS NEWS README
 
-	if use doc; then
-		docinto samplecode
-		dodoc im/*.{cpp,c,h} im/Makefile*
+	if use examples; then
+		docinto imexample
+		dodoc im/*.{cpp,c,h} im/Makefile*  im/inputmethod.txt
 	fi
 }
 
 pkg_postinst() {
 	echo
 	ewarn "To use ${PN}, ensure you are in video group and have framebuffer support."
-	if use doc ; then
-		ewarn "It would be very useful to take a look at /usr/share/doc/${PF}/im"
-		ewarn "directory, if you were really interested in developing im server for ${PN}"
+	if use examples ; then
+		echo
+		ewarn "It would be very useful to take a look at /usr/share/sample/${PF}/imexample"
+		ewarn "directory, if you were really interested in developing im server(s) for ${PN}"
 	fi
 	echo
 }
