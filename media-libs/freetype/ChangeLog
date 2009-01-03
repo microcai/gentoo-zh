@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/freetype
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  03 Jan 2009; Yu Yuwei <acevery@gmail.com> +freetype-2.3.7-r1.ebuild,
+  +files/freetype-2.3.7-b.g.o-247104.patch,
+  +files/freetype-2.3.7-b.g.o-253029.patch,
+  +files/freetype-2.3.7-fix-incorrect-scaling.patch,
+  +files/freetype-2.3.7-no-segfault-on-load_mac_face.patch:
+  update according portage
 
   17 Nov 2008; Yu Yuwei <acevery@gmail.com> freetype-2.3.7.ebuild,
   metadata.xml:
