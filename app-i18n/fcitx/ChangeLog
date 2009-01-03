@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/fcitx
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  03 Jan 2009; Hong Hao <oahong@gmail.com> -fcitx-3.5_pre081104.ebuild,
+  +fcitx-3.5_pre090102.ebuild:
+  Bump to 090102
 
   28 Nov 2008; Hong Hao <oahong@gmail.com> fcitx-9999.ebuild:
   Fix quotes

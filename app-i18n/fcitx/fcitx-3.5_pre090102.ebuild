@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-ESVN_REPO_URI="http://fcitx.googlecode.com/svn/trunk@156"
+ESVN_REPO_URI="http://fcitx.googlecode.com/svn/trunk@167"
 
 inherit autotools subversion
 
