@@ -1,11 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI="2"
+#EGIT_BOOTSTRAP="autopoint"
 EGIT_REPO_URI="git://github.com/phuang/ibus-pinyin.git"
 
-inherit autotools git
+inherit autotools python git
 
 PYDB_TAR="pinyin-database-0.1.10.6.tar.bz2"
 DESCRIPTION="Chinese PinYin IMEngine for IBus Framework"
@@ -17,9 +18,6 @@ SLOT="0"
 KEYWORDS=""
 IUSE="nls"
 
-# NOTES:
-# 1. Autopoint needs cvs. bug #152872
-# 2. To convert the pinyin database we need sqlite module of python.
 DEPEND=">=dev-lang/python-2.5[sqlite]
 	dev-util/cvs
 	dev-util/pkgconfig
@@ -30,7 +28,11 @@ RDEPEND="app-i18n/ibus
 src_prepare() {
 	autopoint || die "failed to run autopoint"
 	eautoreconf
-	cp "${DISTDIR}/${PYDB_TAR}" "${S}"/engine
+
+	# Disable pyc compiling
+	echo "#! /bin/bash" > py-compile
+	einfo "Preparing pinyin database"
+	cp "${DISTDIR}/${PYDB_TAR}" engine || die
 }
 
 src_configure() {
@@ -48,4 +50,11 @@ pkg_postinst() {
 	echo
 	elog "You should run ibus-setup and enable the IMEngines you want to use!"
 	echo
+
+	# http://www.gentoo.org/proj/en/Python/developersguide.xml#doc_chap2
+	python_mod_optimize /usr/share/${PN}
+}
+
+pkg_postrm() {
+	python_mod_cleanup /usr/share/${PN}
 }
