@@ -1,6 +1,10 @@
 # ChangeLog for app-text/apvlv
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  04 Jan 2009; Hong Hao <oahong@gmail.com> -apvlv-0.0.4-r3.ebuild,
+  -apvlv-0.0.5.ebuild, +apvlv-0.0.5.2.ebuild:
+  Version bump. Remove old
 
   29 Dec 2008; Hong Hao <oahong@gmail.com> apvlv-0.0.4-r3.ebuild,
   apvlv-0.0.4.6.ebuild, +apvlv-0.0.5.ebuild:
