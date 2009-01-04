@@ -1,11 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI="2"
 
 NEED_PYTHON="2.5"
-#EGIT_BRANCH="c_impl"
 EGIT_REPO_URI="git://github.com/phuang/ibus.git"
 inherit autotools multilib git python
 
@@ -16,21 +15,23 @@ SRC_URI=""
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
-IUSE="nls qt4 test" #doc
+IUSE="nls qt4"
 
-# Notes: Autopoint(part of gettext) needs cvs. Bug #152872
-# FIXME: We have gio-standalone package?
-COMMOM_DEPEND=">=dev-libs/glib-2.16
+COMMOM_DEPEND=">=dev-libs/glib-2.18
 	dev-libs/dbus-glib
-	qt4? ( x11-libs/qt-gui x11-libs/qt-core )
+	dev-python/pygobject
+	sys-libs/glibc
 	x11-libs/gtk+:2
-	x11-libs/libX11"
+	x11-libs/libX11
+	qt4? (
+		x11-libs/qt-gui
+		x11-libs/qt-core
+	)"
 DEPEND="${COMMOM_DEPEND}
 	dev-util/cvs
 	dev-util/pkgconfig
 	gnome-base/librsvg
 	sys-devel/gettext"
-#	>=dev-util/gtk-doc-1.9"
 RDEPEND="${COMMOM_DEPEND}
 	app-text/iso-codes
 	>=dev-python/dbus-python-0.83.0
@@ -49,17 +50,18 @@ pkg_setup() {
 }
 
 src_prepare() {
-	autopoint || die "failed to run autopoint"
-#	gtkdocize --flavour no-tmpl || die "gtkdocize failed"
+	autopoint || die "autopoint failed"
 	eautoreconf
+
+	# disable pyc compiling
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile
 }
 
 src_configure() {
-	# We never use the internal copy of gconf-python.
 	econf $(use_enable nls) \
-		$(use_enable qt4 qt4-immodule)
+		$(use_enable qt4 qt4-immodule) \
 		--disable-pygconf
-#		$(use_enable gtk-doc)
 }
 
 src_install() {
@@ -92,7 +94,7 @@ pkg_postinst() {
 	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > \
 		"${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
 
-	# Refer to: http://www.gentoo.org/proj/en/Python/developersguide.xml
+	#http://www.gentoo.org/proj/en/Python/developersguide.xml
 	python_mod_optimize "$(python_get_sitedir)"/${PN} /usr/share/${PN}
 }
 
