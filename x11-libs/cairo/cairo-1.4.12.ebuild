@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -24,7 +24,7 @@ RDEPEND="media-libs/fontconfig
 				x11-libs/libXrender
 				x11-libs/libXext
 				x11-libs/libX11
-				virtual/xft
+				x11-libs/libXft
 				xcb? ( x11-libs/libxcb
 						x11-libs/xcb-util )
 			)
