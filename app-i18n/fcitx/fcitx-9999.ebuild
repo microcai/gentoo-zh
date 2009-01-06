@@ -13,13 +13,13 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="truetype"
+IUSE="xft"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXpm
 	x11-libs/libXrender
 	x11-libs/libXt
-	truetype? ( x11-libs/libXft )"
+	xft? ( x11-libs/libXft )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -37,7 +37,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_enable truetype xft)
+	econf $(use_enable xft)
 	emake || die "emake failed"
 }
 

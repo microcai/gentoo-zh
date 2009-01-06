@@ -12,13 +12,13 @@ SRC_URI="http://fcitx.googlecode.com/files/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="truetype"
+IUSE="xft"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXpm
 	x11-libs/libXrender
 	x11-libs/libXt
-	truetype? ( x11-libs/libXft )"
+	xft? ( x11-libs/libXft )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -32,7 +32,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_enable truetype xft)
+	econf $(use_enable xft)
 	emake || die "make failed"
 }
 
@@ -49,16 +49,20 @@ src_install() {
 }
 
 pkg_postinst() {
-	# FIXME
 	echo
 	elog "You should export the following variables to use fcitx"
 	elog " export XMODIFIERS=\"@im=fcitx\""
 	elog " export XIM=fcitx"
 	elog " export XIM_PROGRAM=fcitx"
-	elog ""
-	elog "If you want to use WuBi or ErBi"
+	elog
+	elog "If you want to use WuBi ,ErBi or something else."
 	elog " cp /usr/share/fcitx/data/wbx.mb ~/.fcitx"
 	elog " cp /usr/share/fcitx/data/erbi.mb ~/.fcitx"
 	elog " cp /usr/share/fcitx/data/tables.conf ~/.fcitx"
 	echo
+	if !use xft; then
+		ewarn "NOTICE: We have changed the original \"truetype\" USE flag."
+		ewarn "NOTICE: (Switch over to global \"xft\" USE flag.)"
+		ewarn "NOTICE: Please re-merge your fcitx with xft on."
+	fi
 }
