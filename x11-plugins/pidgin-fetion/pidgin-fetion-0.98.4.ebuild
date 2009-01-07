@@ -24,10 +24,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "This is not a official gentoo package, please report your"
+	einfo "This is not an official gentoo package, please report your"
 	einfo "bugs to http://www.donews.net/gradetwo"
 	einfo
 	elog "Select the 'fetion' protocol to use this plugin"
-	elog "Server IP 221.130.44.193"
+	elog "Server IP is 221.130.44.193"
 	einfo
 }
