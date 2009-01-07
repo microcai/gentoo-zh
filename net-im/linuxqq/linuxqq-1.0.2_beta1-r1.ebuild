@@ -41,16 +41,7 @@ src_install() {
 
 	doicon "${FILESDIR}"/linuxqq.png
 	domenu "${FILESDIR}"/linuxqq.desktop
-
-	# If we could have something like herebin in exheres ...
-	cat > qq << DONE
-#!/bin/bash
-# for launch qq from every directory
-pushd /opt/linuxqq > /dev/null
-./qq &
-popd > /dev/null
-DONE
-	dobin qq || die "dobin failed"
+	make_wrapper qq ./qq "/opt/${PN}"
 }
 
 pkg_postinst() {

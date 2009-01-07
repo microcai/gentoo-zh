@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  07 Jan 2009; Hong Hao <oahong@gmail.com> -linuxqq-1.0.2_beta1.ebuild,
+  +linuxqq-1.0.2_beta1-r1.ebuild:
+  Revison bump.(bugfix release)
+
   04 Jan 2009; Hong Hao <oahong@gmail.com> +linuxqq-1.0.2_beta1.ebuild:
   Version bump to linuxqq-1.0.2-beta1
 
