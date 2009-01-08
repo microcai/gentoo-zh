@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Jan 2009; Hong Hao <oahong@gmail.com> -apvlv-0.0.5.2-r1.ebuild,
+  +apvlv-0.0.5.3.ebuild:
+  Version bump.
+
   04 Jan 2009; Hong Hao <oahong@gmail.com> -apvlv-0.0.5.2.ebuild,
   +apvlv-0.0.5.2-r1.ebuild:
   Fixed a compile issue with gcc-4.3.2.

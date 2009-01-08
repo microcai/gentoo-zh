@@ -23,15 +23,10 @@ DEPEND="${RDEPEND}
 #	app-text/dvipdfm
 #	virtual/latex-base
 
-src_prepare() {
-	sed -i \
-		-e '/iostream/ a\
-		#include <stdlib.h>' src/ApvlvCore.cpp || die
-}
-
 src_configure() {
 	econf \
 		$(useq debug && echo --enable-debug) \
+		--with-docdir="/usr/share/doc/${P}" \
 		--disable-dependency-tracking
 }
 
