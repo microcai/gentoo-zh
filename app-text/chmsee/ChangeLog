@@ -1,6 +1,9 @@
 # ChangeLog for app-text/chmsee
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  08 Jan 2009; Hong Hao <oahong@gmail.com> +chmsee-1.0.2.ebuild:
+  Version bump.
 
   06 Sep 2008; Zhang Le <r0bertz@gentoo.org> chmsee-1.0.1.ebuild:
   changed the logic to determine the value of --with-gecko parameter, if has
