@@ -44,5 +44,7 @@ src_compile() {
 
 src_install() {
 	gnome2_src_install
+
+	# QA: removing empty directory.
 	rm -rf  "${D}/var/"
 }
