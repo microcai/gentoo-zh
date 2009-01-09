@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/ibus-table
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  09 Jan 2009; Hong Hao <oahong@gmail.com> ibus-table-9999.ebuild,
+  metadata.xml:
+  Merge some changes from portage: fix qa warnings / change use flag(replace
+  addtional with minimal) / drop pdeps.
 
   30 Dec 2008; Hong Hao <oahong@gmail.com> ibus-table-9999.ebuild,
   metadata.xml:

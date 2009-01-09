@@ -13,12 +13,4 @@
 <longdescription lang="en">
 	This package contains general Table engine for IBus platform.
 </longdescription>
-<use>
-	<flag name='additional'>Enable to generate additional Engine</flag>
-	<flag name='cangjie'>Enable to generate CangJie Engine</flag>
-	<flag name='erbi-qs'>Enable to generate ErBi-QS Engine</flag>
-	<flag name='extra-phrases'>Add extra phrases into builded Engine</flag>
-	<flag name='wubi'>Enable to generate WuBi86 and WuBi98 Engine</flag>
-	<flag name='zhengma'>Enable to generate ZhengMa Engine</flag>
-</use>
 </pkgmetadata>

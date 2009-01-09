@@ -1,8 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
-
-EAPI="1"
 
 NEED_PYTHON="2.5"
 EGIT_REPO_URI="git://github.com/acevery/${PN}.git"
@@ -15,19 +13,12 @@ SRC_URI=""
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
-IUSE="+additional cangjie erbi-qs extra-phrases nls wubi zhengma"
+IUSE="minimal nls"
 
-# 1.autopoint needs cvs to work. Bug #152872
-# 2.autopoint is part of gettext
 DEPEND="dev-util/cvs
 	dev-util/pkgconfig
 	sys-devel/gettext"
 RDEPEND="app-i18n/ibus"
-PDEPEND="cangjie? ( app-i18n/ibus-table-cangjie )
-	erbi-qs? ( app-i18n/ibus-table-erbi )
-	extra-phrases? ( app-i18n/ibus-table-extraphrase )
-	wubi? ( app-i18n/ibus-table-wubi )
-	zhengma? ( app-i18n/ibus-table-zhengma )"
 
 pkg_setup() {
 	if ! python_mod_exists sqlite3 ; then
@@ -39,20 +30,23 @@ pkg_setup() {
 src_unpack() {
 	git_src_unpack
 	autopoint || die "failed to run autopoint"
-	# eautoreconf dies on itself.
-	eautoreconf || die "failed to run autoreconf"
+	# econf/eautoreconf needs no die.
+	eautoreconf
+
+	# QA: disable pyc compiling
+	mv py-compile py-compile.orgin
+	ln -s $(type -P true) py-compile
 }
 
 src_compile() {
-	econf $(use_enable additional) \
+	econf $(use_enable !minimal additional) \
 		$(use_enable nls)
-
 	emake || die
 }
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
-	dodoc AUTHORS README
+	dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_postinst() {
