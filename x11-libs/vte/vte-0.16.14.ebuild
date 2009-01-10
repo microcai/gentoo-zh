@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.16.14.ebuild,v 1.8 2009/01/05 13:29:29 remi Exp $
 
 inherit eutils gnome2 autotools
 
@@ -9,9 +9,9 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 # pcre is broken in this release
-IUSE="debug doc python opengl zh_TW"
+IUSE="debug doc python opengl"
 
 RDEPEND=">=dev-libs/glib-2.9
 	>=x11-libs/gtk+-2.6
@@ -28,7 +28,7 @@ RDEPEND=">=dev-libs/glib-2.9
 		>=dev-lang/python-2.4.4-r5
 	)
 	x11-libs/libX11
-	virtual/xft"
+	x11-libs/libXft"
 
 DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1.0 )
@@ -52,6 +52,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-0.13.2-no-lazy-bindings.patch"
 	use zh_TW && epatch "${FILESDIR}/vte_input_method.patch"
 	use zh_TW && epatch "${FILESDIR}/98_ambiguous_width.patch"
+
 	cd "${S}/gnome-pty-helper"
 
 	# eautoreconf will break on systems without gtk-doc

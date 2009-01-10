@@ -1,5 +1,9 @@
 # ChangeLog for x11-libs/vte
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+
+  10 Jan 2009; scsi <scsichen@gmail.com> vte-0.16.13.ebuild,
+  vte-0.16.14.ebuild:
+  fix virtual/xft musked error
 
   01 Aug 2008; Hydonsingore Cia <hydonsingore@educities.edu.tw>
   +files/98_ambiguous_width.patch, vte-0.16.14.ebuild:
