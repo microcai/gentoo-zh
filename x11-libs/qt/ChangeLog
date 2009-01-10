@@ -1,0 +1,9 @@
+# ChangeLog for x11-libs/qt
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  10 Jan 2009; scsi <scsichen@gmail.com> -qt-3.3.8-r3.ebuild,
+  qt-3.3.8-r4.ebuild, +files/qt-3.3.8-fix-compiler-detection.patch,
+  +files/qt-3.3.8-immqt+gcc-4.3.patch:
+  fix virtual/xft musked error
+
