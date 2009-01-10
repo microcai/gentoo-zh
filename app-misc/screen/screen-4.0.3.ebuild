@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# 
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3.ebuild,v 1.18 2008/06/07 19:05:56 swegener Exp $
 
 WANT_AUTOCONF="2.5"
 
@@ -31,12 +31,51 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# Bug 34599: integer overflow in 4.0.1
+	# (Nov 29 2003 -solar)
+	epatch "${FILESDIR}"/screen-4.0.1-int-overflow-fix.patch
+
+	# Bug 31070: configure problem which affects alpha
+	# (13 Jan 2004 agriffis)
+	epatch "${FILESDIR}"/screen-4.0.1-vsprintf.patch
+
+	# uclibc doesnt have sys/stropts.h
+	if ! (echo '#include <sys/stropts.h>' | $(tc-getCC) -E - &>/dev/null) ; then
+		epatch "${FILESDIR}"/4.0.2-no-pty.patch
+	fi
+
+	# Don't use utempter even if it is found on the system
+	epatch "${FILESDIR}"/4.0.2-no-utempter.patch
+
+	# Don't link against libelf even if it is found on the system
+	epatch "${FILESDIR}"/4.0.2-no-libelf.patch
+
+	# Patch for time function on 64bit systems
+	epatch "${FILESDIR}"/4.0.2-64bit-time.patch
+
+	# Patch that makes %u work for windowlist -b formats
+	epatch "${FILESDIR}"/4.0.2-windowlist-multiuser-fix.patch
+
+	# Open tty in non-blocking mode
+	epatch "${FILESDIR}"/4.0.2-nonblock.patch
+
+	# compability for sys-devel/autoconf-2.62
+	epatch "${FILESDIR}"/screen-4.0.3-config.h-autoconf-2.62.patch
+	
 	if use zh_TW
 	then
 		epatch "${FILESDIR}"/patch-poorman-drawing
 		epatch "${FILESDIR}"/patch-cjkwidth
-		cp "${FILESDIR}"/18 "${S}"/utf8encodings/
+		cp "${FILESDIR}"/18	"${S}"/utf8encodings/
 	fi
+
+	# Allow for more rendition (color/attribute) changes in status bars
+	sed -i \
+		-e "s:#define MAX_WINMSG_REND 16:#define MAX_WINMSG_REND 64:" \
+		screen.c \
+		|| die "sed screen.c failed"
+
 	# Fix manpage.
 	sed -i \
 		-e "s:/usr/local/etc/screenrc:/etc/screenrc:g" \
@@ -47,11 +86,12 @@ src_unpack() {
 		doc/screen.1 \
 		|| die "sed doc/screen.1 failed"
 
+	# reconfigure
+	eautoconf
 }
 
 src_compile() {
 	append-flags "-DMAXWIN=${MAX_SCREEN_WINDOWS:-100}"
-	append-ldflags $(bindnow-flags)
 
 	use nethack || append-flags "-DNONETHACK"
 	use debug && append-flags "-DDEBUG"
