@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: Exp $
 
-inherit eutils linux-info
+inherit eutils linux-info toolchain-funcs
 
 PROTECT_VER="3"
 
@@ -20,7 +20,7 @@ RDEPEND=">=app-laptop/tp_smapi-0.32"
 
 S="${WORKDIR}"
 
-src_compile() {
+pkg_setup() {
 	# We require the hdaps module; problem is that it can come from either
 	# kernel sources or from the tp_smapi package. This hack is required because
 	# the linux-info eclass doesn't export any more suitable config checkers.
@@ -32,9 +32,10 @@ src_compile() {
 		ERROR_SENSORS_HDAPS="${P} requires support for HDAPS (CONFIG_SENSORS_HDAPS)"
 		linux-info_pkg_setup
 	fi
+}
 
-	cd "${WORKDIR}"
-	gcc ${CFLAGS} "${P}".c -o hdapsd || die "failed to compile"
+src_compile() {
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} "${P}".c -o hdapsd || die "failed to compile"
 }
 
 src_install() {
@@ -42,8 +43,8 @@ src_install() {
 	newconfd "${FILESDIR}"/hdapsd.conf hdapsd
 	newinitd "${FILESDIR}"/hdapsd.init hdapsd
 
-	# Install our kernel patches
-	# Ecompress is no-op in paludis, so here we use doins not dodoc.
+	# We don't want compressed kernel patches so use doins not dodoc.
+	# (Ecompress is no-op in paludis, this is difference to pkgcore/portage)
 	insinto /usr/share/doc/${PF}
 	doins *.patch "${FILESDIR}"/hdaps-Z60m.patch
 
@@ -96,8 +97,8 @@ pkg_config() {
 }
 
 pkg_postinst(){
-	# Small change for new disk-protect interface in 2.6.27
-	# http://article.gmane.org/gmane.linux.drivers.hdaps.devel/1372
+	# We have new disk-protection interface in >=2.6.27
+	# wrt: http://article.gmane.org/gmane.linux.drivers.hdaps.devel/1372
 	[[ -n $(ls "${ROOT}"/sys/block/*/queue/protect 2>/dev/null) ]] || \
 	[[ -n $(ls "${ROOT}"/sys/block/*/device/unload_heads 2>/dev/null) ]] && \
 	return 0
