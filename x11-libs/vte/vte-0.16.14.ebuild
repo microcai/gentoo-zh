@@ -11,7 +11,7 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 # pcre is broken in this release
-IUSE="debug doc python opengl"
+IUSE="debug doc python opengl zh_TW"
 
 RDEPEND=">=dev-libs/glib-2.9
 	>=x11-libs/gtk+-2.6
