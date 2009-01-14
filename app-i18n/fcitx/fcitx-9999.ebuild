@@ -2,18 +2,19 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-ESVN_REPO_URI="http://fcitx.googlecode.com/svn/trunk"
+EAPI="1"
 
+ESVN_REPO_URI="http://fcitx.googlecode.com/svn/trunk"
 inherit autotools subversion
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://fcitx.googlecode.com"
-SRC_URI=""
+SRC_URI="http://gentoo-china-overlay.googlecode.com/svn/distfiles/zhengma.tbz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="xft"
+IUSE="+xft" # zhengma
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXpm
@@ -25,10 +26,17 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	subversion_src_unpack
+	unpack ${A}
+
+	# Add zhengma support
+	#if use zhengma ; then
+		mv "${S}"/zhm "${S}"/data/zhengma.txt
+		epatch "${FILESDIR}"/add-zhengma-support.diff
+	#fi
 
 	# change homepage and version naming scheme
 	sed -i \
-		-e "s#\(3.5-\)[[:alnum:]]*#\1svn-r${ESVN_WC_REVISION}#" \
+		-e "s#\(\([[:digit:]]\.\)\+[[:digit:]]\-*\)[[:alnum:]]*#\1-SVN-r${ESVN_WC_REVISION}#" \
 		configure.in
 	sed -i \
 		-e "s#http://www\.fcitx\.org#${HOMEPAGE}#" \
@@ -47,7 +55,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog README THANKS TODO
 
 	# Remove empty directory
-	rmdir "${D}"/usr/share/fcitx/xpm
+	#rmdir "${D}"/usr/share/fcitx/xpm
 
 	rm -rf "${D}"/usr/share/fcitx/doc/
 	dodoc doc/pinyin.txt doc/cjkvinput.txt
@@ -62,5 +70,11 @@ pkg_postinst() {
 	elog " export XMODIFIERS=\"@im=fcitx\""
 	elog " export XIM=fcitx"
 	elog " export XIM_PROGRAM=fcitx"
+	einfo
+	elog "If you want to use WuBi, ErBi or zhengma"
+	elog " cp /usr/share/fcitx/data/wbx.mb ~/.fcitx"
+	elog " cp /usr/share/fcitx/data/erbi.mb ~/.fcitx"
+	elog " cp /usr/share/fcitx/data/zhengma.mb ~/.fcitx"
+	elog " cp /usr/share/fcitx/data/tables.conf ~/.fcitx"
 	echo
 }
