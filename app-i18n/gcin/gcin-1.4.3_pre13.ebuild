@@ -36,6 +36,7 @@ src_unpack() {
 	if use=immqt || immqt-bc; then
 		epatch "${FILESDIR}/gcin-1.4.3_pre5-qt3_fix.patch"
 		epatch "${FILESDIR}/gcin-1.4.3_pre6-qt4_fix.patch"
+		epatch "${FILESDIR}/anthy-amd64.patch"
 	fi
 }
 
