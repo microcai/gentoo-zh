@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  16 Jan 2009; Hong Hao <oahong@gmail.com> files/add-zhengma-support.diff:
+  Fix issue 31.
+
   14 Jan 2009; Hong Hao <oahong@gmail.com> fcitx-9999.ebuild,
   +files/add-zhengma-support.diff:
   Merge various changes to fcitx-9999 from http://tinyurl.com/cnexheres . Fix
