@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  17 Jan 2009; Hong Hao <oahong@gmail.com> files/add-zhengma-support.diff:
+  Set pinyin key to ` as suggested by acevery in issue 31.
+
   16 Jan 2009; Hong Hao <oahong@gmail.com> files/add-zhengma-support.diff:
   Fix issue 31.
 
