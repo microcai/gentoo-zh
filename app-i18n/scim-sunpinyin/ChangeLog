@@ -1,0 +1,8 @@
+# ChangeLog for app-i18n/scim-sunpinyin
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  18 Jan 2009; Hong Hao <oahong@gmail.com> +scim-sunpinyin-20090106.ebuild,
+  +files/ic_history.h.diff, +metadata.xml:
+  Initial scim-sunpinyin, close issue 30
+

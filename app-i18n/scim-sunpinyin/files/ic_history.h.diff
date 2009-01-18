@@ -1,0 +1,14 @@
+--- sunpinyin/ime/src/ic_history.h.orig 2008-05-21 00:03:35.000000000 +0800
++++ sunpinyin/ime/src/ic_history.h      2008-06-28 02:50:18.000000000 +0800
+@@ -39,7 +39,8 @@
+ #define _SUNPINYIN_CONTEXT_HISTORY_H
+
+ #include "portability.h"
+-
++#include <stdio.h>
++#include <stdlib.h>
+ #include <map>
+ #include <deque>
+ #include <set>
+
+
