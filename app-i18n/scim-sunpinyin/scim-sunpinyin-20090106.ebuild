@@ -43,7 +43,7 @@ src_unpack() {
 
 	sed -i \
 		-e 's/^DISTFILES = ChangeLog /DISTFILES = /' \
-		po/Makefile.in.in
+		po/Makefile.in.in || die "sed failed"
 }
 
 src_compile() {
