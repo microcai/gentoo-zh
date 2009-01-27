@@ -1,3 +1,10 @@
-You need to provide cgit with the list of available repositories.
-Look at the examples in the file /etc/cgit/cgitrc.example by
-searching for repo.path.
+Before actually using this package, you need to modify configuration(s) in
+/etc/cgit directory. Take a Look at configuration examples and README
+to learn more.
+
+To auto-generate a list of available repositories, just run the
+following command:
+
+/usr/share/webapps/cgit/cgit-9999/htdocs/cgit.cgi --scan-tree=/your/git/repos
+
+( That's the list of repositories you need to specify in configuration file. )

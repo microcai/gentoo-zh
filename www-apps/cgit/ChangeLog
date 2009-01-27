@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/cgit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  27 Jan 2009; Hong Hao <oahong@gmail.com> cgit-9999.ebuild,
+  files/postinstall-en.txt:
+  Clean up postinst message, cgit needs git version 1.6.1.
 
   08 Dec 2008; Hong Hao <oahong@gmail.com> +cgit-9999.ebuild,
   +files/cgitrc.example, +files/postinstall-en.txt, +metadata.xml:
