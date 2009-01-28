@@ -1,32 +1,36 @@
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
-
 # Keep it sorted.
 
-app-dicts/stardict:espeak - Pull in espeak for stardict
-app-dicts/stardict:festival - Pull in festival for stardict
-app-dicts/stardict:gucharmap - Enable gucharmap plugin for stardict
-app-i18n/ibus-table:additional - Enable to generate additional Engine
-app-i18n/ibus-table:cangjie5 - Enable to generate CangJie5 Engine
-app-i18n/ibus-table:erbi-qs - Enable to generate ErBi-QS Engine
-app-i18n/ibus-table:extra-phrases - Add extra phrases into builded Engine
-app-i18n/ibus-table:wubi - Enable to generate WuBi86 and WuBi98 Engine
-app-i18n/ibus-table:zhengma - Enable to generate ZhengMa Engine
-app-i18n/scim-python:enwriter - Build English Writer Input Method
-app-i18n/scim-python:pinyin - Build PinYin Input Method
-app-i18n/scim-python:xingma - Build XingMa Input Method Engine
-app-i18n/scim-xingma:cangjie5 - Support for CangJie 5th Input Method
+app-dicts/stardict:espeak - Enables text to speech engine app-accessibility/espeak
+app-dicts/stardict:festival - Enables text to speech engine app-accessibility/festival
+app-dicts/stardict:gnome - Enables gnome-base/gnome support
+app-dicts/stardict:gucharmap - Enables gnome-extra/gucharmap plugin
+app-dicts/stardict:spell - Enables spell checking capability using app-text/enchant
+app-i18n/fbterm:ucimf - Enable support for Unicode Console InputMethod Framework
+app-i18n/ibus-table-cangjie:cangjie3 - Build CangJie3 Engine
+app-i18n/ibus-table-cangjie:cangjie5 - Build CangJie5 Engine
+app-i18n/ibus-table-erbi:extra-phrases - Add extra phrases into built Engine
+app-i18n/ibus-table-wubi:extra-phrases - Add extra phrases into built Engine
+app-i18n/ibus-table-wubi:wubi86 - Build Wubi86 Engine
+app-i18n/ibus-table-wubi:wubi98 - Build Wubi98 Engine
+app-i18n/ibus-table-zhengma:extra-phrases - Add extra phrases into built Engine
+app-i18n/scim-python:enwriter - Build English Writer Input Method.
+app-i18n/scim-python:pinyin - Build Pin Yin Input Method.
+app-i18n/scim-python:xingma - Build XingMa Input Method Engine.
+app-i18n/scim-xingma:cangjie5 - Install CangJie 5th Input Method
 app-i18n/scim-xingma:compose - Support for Compose Key Style Input Method
-app-i18n/scim-xingma:erbi-qs - Support for ErBi QingSong Input Method
-app-i18n/scim-xingma:wubi - Support for WuBi 86 Input Method
-app-i18n/scim-xingma:zhengma - Support for ZhengMa Input Method
+app-i18n/scim-xingma:erbi-qs - Install Erbi QingSong Input Method
+app-i18n/scim-xingma:wubi - Install WuBi86 Input Method
+app-i18n/scim-xingma:zhengma - Install ZhengMa Input Method
+app-text/chmsee:xulrunner - If enabled, will pull in net-libs/xulrunner; otherwise, will use mozilla-firefox or seamonkey
 app-text/texlive-core:xetex - Use TeXLive packed XeTeX
 media-libs/fontconfig:ubuntu - Enable the lcd patch from Ubuntu
 media-libs/freetype:ubuntu - Enable the lcd patch from Ubuntu
-media-sound/mac-port:asm - Enable use of asm routines to improve performance
-media-tv/gmlive:nslive - Enable nslive
-media-tv/gmlive:sopcast - Enable sopcast
-media-tv/gmlive:totem - Enable totem plugin
+media-libs/freetype:utils - Install utilities and examples from ft2demos
+media-tv/gmlive:sopcast - Enable support for media-tv/sopcast
+media-tv/gmlive:totem - Enable totem plugin support
+net-im/eva:additional - Enable to generate additional Engine
 net-misc/xmuruijie:firewall - Add support for iptables firewall
 x11-libs/cairo:glitz - Build with glitz support, which replaces some software render operations with Mesa OpenGL operations
 x11-libs/cairo:newspr - Enable Freetype subpixel font rendering
