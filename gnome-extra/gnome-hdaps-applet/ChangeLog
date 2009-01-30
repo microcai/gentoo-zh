@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Jan 2009; Hong Hao <oahong@gmail.com>
+  gnome-hdaps-applet-20081204.ebuild:
+  Remove unnecessary {eutils,linux-info} inherit.
+
   19 Jan 2009; Hong Hao <oahong@gmail.com>
   +gnome-hdaps-applet-20081204.ebuild, +metadata.xml:
   Initial gnome-hdaps-applet

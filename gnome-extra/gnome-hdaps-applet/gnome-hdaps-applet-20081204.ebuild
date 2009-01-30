@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils linux-info toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="Gnome applet displaying the hard disk protection status"
 HOMEPAGE="http://www.zen24593.zen.co.uk/hdaps"
