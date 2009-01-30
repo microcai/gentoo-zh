@@ -1,0 +1,46 @@
+--- configure.orig	2009-01-30 22:47:44.000000000 +0800
++++ configure	2009-01-30 22:48:18.000000000 +0800
+@@ -126,7 +126,7 @@
+ 
+ 
+ QT4_IM='N'
+-QT4_IM_DIR=/usr/lib/qt4/plugins/lib/inputmethods
++QT4_IM_DIR=/usr/$LIB/qt4/plugins/lib/inputmethods
+ echo "testing if you have qt4 support"
+ if [ -d  $QT4_IM_DIR ]; then
+   QT4_IM='Y'
+--- qt4-im/Makefile.orig	2009-01-30 22:48:38.000000000 +0800
++++ qt4-im/Makefile	2009-01-30 22:50:57.000000000 +0800
+@@ -1,20 +1,20 @@
+ include ../config.mak
+ QT=qt4
+-QTIM=$(QT)/plugins/lib/inputmethods
++QTIM=$(QT)/plugins/inputmethods
+ IMMODULES=$(libdir)/$(QTIM)
+ ifeq ($(LIB), lib64)
+ 	IMMODULES_LOCAL=/usr/$(LIB)/qt4/plugins/lib64/inputmethods
+ else
+ 	IMMODULES_LOCAL=/usr/$(LIB)/$(QTIM)
+ endif
+-QTINC=/usr/lib/$(QT)/include
++QTINC=/usr/include/$(QT)
+ 
+ INCS=-I../im-client -I$(QTINC) -I/usr/include/X11 -I$(QTINC)/QtGui -I$(QTINC)/QtCore
+ CXXFLAGS=$(OPTFLAGS) $(INCS) -Wall -D_REENTRANT -fPIC  -DQT4 -DQT_SHARED \
+ -DQT_IMMODULE -DPIC
+ OBJS= moc_gcin-qt.o gcin-qt.o im-gcin-qt.o gcin-imcontext-qt.o
+ .SUFFIXES:	.c .cpp .a .so .E .h
+-LDFLAGS=-L/usr/lib/$(QT)/$(LIB) -L/usr/X11R6/$(LIB) -L../im-client -lQtGui -lQtCore -lmng -ljpeg -lpng -lz \
++LDFLAGS=-L/usr/$(LIB)/$(QT) -L/usr/X11R6/$(LIB) -L../im-client -lQtGui -lQtCore -lmng -ljpeg -lpng -lz \
+ -lXrender -lXrandr  -lXft -lfontconfig -lgcin-im-client \
+ -lXext -lX11 -lm -lSM -lICE -ldl -lpthread
+ all:    im-gcin.so
+@@ -23,7 +23,7 @@
+ 	$(CXX) -E $(CFLAGS) $(INCS) $< > $@
+ 
+ moc_gcin-qt.cpp:	gcin-qt.h
+-	/usr/lib/$(QT)/bin/moc $< -o moc_gcin-qt.cpp
++	/usr/bin/moc $< -o moc_gcin-qt.cpp
+ 
+ im-gcin.so: $(OBJS)
+ 	export LD_RUN_PATH=$(gcinlibdir) ;\
