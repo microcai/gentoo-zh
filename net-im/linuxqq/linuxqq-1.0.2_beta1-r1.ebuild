@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils multilib
+inherit eutils
 
 MY_P=${PN}_v${PV/_/-}_i386
 DESCRIPTION="Tencent QQ for Linux"
@@ -26,14 +26,6 @@ RDEPEND="x86? ( >=x11-libs/gtk+-2.10.8 )
 
 S=${WORKDIR}/${MY_P}
 RESTRICT="mirror strip"
-
-pkg_setup() {
-	#XXX: x86 binary package, we need multilib?
-	if use amd64 && ! has_multilib_profile ; then
-		eerror "We need multilib profile to run Tencent QQ client!"
-		die "We need multilib profile to run Tencent QQ client!"
-	fi
-}
 
 src_install() {
 	dodir /opt/${PN}

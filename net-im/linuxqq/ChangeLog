@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  31 Jan 2009; Hong Hao <oahong@gmail.com> linuxqq-1.0_pre3.ebuild,
+  linuxqq-1.0.2_beta1-r1.ebuild:
+  Drop unnecessary check in pkg_setup phase. (Thanks
+  tommy_NO_SPAM_at_gentoo_DOT_org)
+
   07 Jan 2009; Hong Hao <oahong@gmail.com> -linuxqq-1.0.2_beta1.ebuild,
   +linuxqq-1.0.2_beta1-r1.ebuild:
   Revison bump.(bugfix release)
