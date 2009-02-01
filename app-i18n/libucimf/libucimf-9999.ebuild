@@ -24,7 +24,7 @@ src_compile() {
 	if use openvanilla; then
 		cd ${S}/ucimf-openvanilla/
 		autoreconf --install --symlink
-		econf --includedir=${S}/ucimf/trunk/include  || die "econf failed"
+		econf --includedir=${S}/libucimf/include  || die "econf failed"
 		emake || die "emake failed"
 	fi	
 
