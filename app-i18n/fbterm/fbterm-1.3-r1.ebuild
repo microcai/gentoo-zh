@@ -28,16 +28,22 @@ src_install() {
 	if use examples; then
 		docinto imexample
 		dodoc im/*.{cpp,c,h} im/Makefile*  im/inputmethod.txt
+		dobin im/imexample
 	fi
 }
 
 pkg_postinst() {
-	echo
-	ewarn "To use ${PN}, ensure you are in video group and have framebuffer support."
+	# Copied from debian patch
+	einfo
+	elog "${PN} won't work with vga16fb. You have to use other native"
+	elog "framebuffer drivers or vesa driver."
+	elog "See /usr/share/doc/${PVR}/README for details."
+	elog "To use ${PN}, ensure You are in video group."
+	elog "To input Chinese merge \"app-i18n/fbterm-ucimf\" in gentoo-taiwan overlay."
 	if use examples ; then
-		echo
-		ewarn "It would be very useful to take a look at /usr/share/sample/${PF}/imexample"
-		ewarn "directory, if you were really interested in developing im server(s) for ${PN}"
+		einfo
+		elog "It would be very useful to take a look at /usr/share/sample/${PF}/imexample"
+		elog "directory if you were really interested in developing im server(s) for ${PN}"
 	fi
-	echo
+	einfo
 }

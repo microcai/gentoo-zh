@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  01 Feb 2009; Hong Hao <oahong@gmail.com> fbterm-1.3.ebuild,
+  fbterm-1.3-r1.ebuild:
+  Added a howto-input-Chinese section in postinst message.
+
   02 Jan 2009; Hong Hao <oahong@gmail.com> fbterm-1.3-r1.ebuild:
   Switch USE from doc to examples, remove unused "inherit flag-o-matic."
 
