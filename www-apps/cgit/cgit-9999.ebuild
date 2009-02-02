@@ -3,7 +3,7 @@
 # $Header: $
 
 EGIT_REPO_URI="git://hjemli.net/pub/git/cgit"
-WANT_GIT="git-1.6.1"
+WANT_GIT="git-1.6.1.1"
 
 inherit git webapp
 

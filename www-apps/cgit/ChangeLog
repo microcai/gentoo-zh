@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Feb 2009; Hong Hao <oahong@gmail.com> cgit-9999.ebuild:
+  Use git 1.6.1.1
+
   27 Jan 2009; Hong Hao <oahong@gmail.com> cgit-9999.ebuild,
   files/postinstall-en.txt:
   Clean up postinst message, cgit needs git version 1.6.1.
