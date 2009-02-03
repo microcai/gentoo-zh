@@ -6,7 +6,7 @@ inherit autotools eutils
 
 MY_P="inputmethod-repo-snapshot-${PV}"
 DESCRIPTION="SunPinyin is a SLM (Statistical Language Model) based IME"
-HOMEPAGE="http://www.opensolaris.org/os/project/input-method/"
+HOMEPAGE="http://www.opensolaris.org/os/project/input-method"
 SRC_URI="${HOMEPAGE}/files/${MY_P}.tar.bz2
 	http://src.opensolaris.org/source/raw/nv-g11n/inputmethod/sunpinyin/ime/data/lm_sc.t3g.le
 	http://src.opensolaris.org/source/raw/nv-g11n/inputmethod/sunpinyin/ime/data/pydict_sc.bin.le"

@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  03 Feb 2009; Hong Hao <oahong@gmail.com> scim-sunpinyin-20090106.ebuild:
+  Fix HOMEPAGE/SRC_URI
+
   19 Jan 2009; Hong Hao <oahong@gmail.com> scim-sunpinyin-20090106.ebuild:
   Die on failure.
 
