@@ -1,0 +1,8 @@
+# ChangeLog for app-antivirus/avast4workstation
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  03 Feb 2009; Hong Hao <oahong@gmail.com> +avast4workstation-1.3.0.ebuild,
+  +metadata.xml:
+  Initial avast!.
+
