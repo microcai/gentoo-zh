@@ -2,7 +2,6 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-# autotools for dependencies.
 inherit autotools eutils
 
 MY_P="inputmethod-repo-snapshot-${PV}"
@@ -29,13 +28,17 @@ RESTRICT="mirror"
 S=${WORKDIR}/${MY_P}/sunpinyin/ime
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
+	unpack ${A} && cd "${S}"
+
+	einfo "Running glib-gettextize -c -f..."
+	$(type -p glib-gettextize) -c -f > /dev/null  || die "glib-gettexize failed"
+	sed -i \
+		-e 's/^DISTFILES = ChangeLog /DISTFILES = /' \
+		po/Makefile.in.in || die "sed failed"
+	eautoreconf
+
 	cp "${DISTDIR}"/{pydict_sc.bin,lm_sc.t3g}.le data
 	epatch "${FILESDIR}"/ic_history.h.diff
-
-	# Should I use eautoreconf ?
-	./autogen.sh --do-not-run-configure
 }
 
 src_compile() {
