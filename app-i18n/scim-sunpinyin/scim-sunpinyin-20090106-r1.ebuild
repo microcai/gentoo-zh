@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+# autotools for dependencies.
 inherit autotools eutils
 
 MY_P="inputmethod-repo-snapshot-${PV}"
@@ -33,17 +34,8 @@ src_unpack() {
 	cp "${DISTDIR}"/{pydict_sc.bin,lm_sc.t3g}.le data
 	epatch "${FILESDIR}"/ic_history.h.diff
 
-	eautoreconf
-
-	# Stolen from enlightenment.eclass
-	cp $(type -p gettextize) "${T}/" || die "Could not copy gettextize"
-	sed -i -e 's:read dummy < /dev/tty::' "${T}/gettextize"
-	einfo "Running gettextize -f --no-changelog..."
-	( "${T}/gettextize" -f --no-changelog > /dev/null ) || die "gettexize failed"
-
-	sed -i \
-		-e 's/^DISTFILES = ChangeLog /DISTFILES = /' \
-		po/Makefile.in.in || die "sed failed"
+	# Should I use eautoreconf ?
+	./autogen.sh --do-not-run-configure
 }
 
 src_compile() {
