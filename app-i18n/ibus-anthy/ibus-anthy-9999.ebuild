@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EGIT_REPO_URI="git://github.com/phuang/ibus-anthy.git"
-
-inherit autotools git
+NEED_PYTHON="2.5"
+EGIT_REPO_URI="git://github.com/phuang/${PN}.git"
+inherit autotools git python
 
 DESCRIPTION="Japanese input method Anthy IMEngine for IBus Framework"
 HOMEPAGE="http://ibus.googlecode.com"
@@ -16,14 +16,12 @@ IUSE="nls"
 
 # autopoint needs cvs. Bug #152872
 DEPEND="app-i18n/anthy
-	>=dev-lang/python-2.5
 	dev-lang/swig
 	dev-util/cvs
 	dev-util/pkgconfig
-	sys-devel/gettext"
-RDEPEND="app-i18n/ibus
-	app-i18n/anthy
-	>=dev-lang/python-2.5"
+	>=sys-devel/gettext-0.16.1"
+RDEPEND=">=app-i18n/ibus-1.0
+	app-i18n/anthy"
 
 src_unpack() {
 	git_src_unpack
@@ -41,10 +39,17 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
+	einfo
 	ewarn "This package is very experimental, please report your bugs to"
 	ewarn "http://ibus.googlecode.com/issues/list"
-	echo
-	elog "You should run ibus-setup and enable IM Engines you want to use."
-	echo
+	einfo
+	elog "You should run ibus-setup and enable IMEngines you want to use."
+	einfo
+
+	# http://www.gentoo.org/proj/en/Python/developersguide.xml#doc_chap2
+	python_mod_optimize && python_mod_optimize /usr/share/${PN}
+}
+
+pkg_postrm() {
+	python_mod_cleanup && python_mod_cleanup /usr/share/${PN}
 }
