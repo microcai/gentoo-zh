@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EGIT_REPO_URI="http://github.com/phuang/ibus-hangul.git"
+EGIT_REPO_URI="git://github.com/phuang/${PN}.git"
 inherit git autotools
 
 DESCRIPTION="Korean input method Hangul IMEngine for IBus Framework"
@@ -14,15 +14,12 @@ SLOT="0"
 KEYWORDS=""
 IUSE="nls"
 
-# autopoint need cvs to work. Bug #152872
+# autopoint needs cvs to work. Bug #152872
 DEPEND="app-i18n/libhangul
-	>=dev-lang/python-2.5
-	dev-lang/swig
 	dev-util/cvs
 	sys-devel/gettext"
-RDEPEND="app-i18n/ibus
-	app-i18n/libhangul
-	>=dev-lang/python-2.5"
+RDEPEND=">=app-i18n/ibus-1.0
+	app-i18n/libhangul"
 
 src_unpack() {
 	git_src_unpack
@@ -40,10 +37,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
 	ewarn "This package is very experimental, please report your bugs to:"
 	ewarn "http://ibus.googlecode.com/issues/list"
-	echo
 	elog "You should run ibus-setup and enable IMEngines you want to use."
-	echo
 }
