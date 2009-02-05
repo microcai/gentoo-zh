@@ -1,0 +1,25 @@
+--- gcin-1.4.4.orig/win-kbm.c
++++ gcin-1.4.4/win-kbm.c
+@@ -272,7 +272,9 @@
+       }
+       break;
+     case 10:
++#if USE_ANTHY
+     case 12:
++#endif
+       break;
+     default:
+       if (!cur_inmd || !cur_inmd->DefChars)
+--- gcin-1.4.4.orig/win-sym.c
++++ gcin-1.4.4/win-sym.c
+@@ -181,8 +181,10 @@
+        tsin_reset_in_pho();
+        break;
+ #endif
++#if USE_ANTHY
+     case 12:
+        break;
++#endif
+     default:
+        reset_gtab_all();
+        break;

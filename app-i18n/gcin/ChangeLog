@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/gcin
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  05 Feb 2009; scsi <scsichen@gmail.com> +gcin-1.4.4-r1.ebuild,
+  +files/auto-detect_anthy-02.diff, +files/auto-detect_anthy.diff:
+  anthy auto detect
+
   30 Jan 2009; Hydonsingore Cia <hydonsingore@educities.edu.tw>
   gcin-1.4.4.ebuild, +files/gcin-1.4.4-qt3_fix.patch,
   +files/gcin-1.4.4-qt4_fix.patch:
