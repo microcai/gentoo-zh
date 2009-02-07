@@ -5,7 +5,7 @@
 EAPI="2"
 
 NEED_PYTHON="2.5"
-EGIT_REPO_URI="git://github.com/phuang/ibus.git"
+EGIT_REPO_URI="git://github.com/phuang/${PN}.git"
 inherit autotools multilib git python
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
@@ -73,7 +73,6 @@ src_configure() {
 }
 
 src_install() {
-	keepdir /usr/share/ibus/engine
 	emake install DESTDIR="${D}" || die "Install failed"
 	dodoc AUTHORS ChangeLog NEWS README
 }
