@@ -28,6 +28,9 @@ RDEPEND=">=net-libs/libesmtp-1.0.3
 		>=x11-libs/gtk+-2.0.9
 		>=dev-libs/atk-1.0.3 )"
 
+RESTRICT="strip"
+QA_TEXTRELS="opt/${PN}/lib/libavastengine-4.so.7.0.5"
+
 pkg_setup() {
 		# This is a binary x86 package => ABI=x86
 		# Please keep this in future versions
@@ -36,25 +39,29 @@ pkg_setup() {
 }
 
 src_install() {
-	oprefix="lib/${PN}"
-	dobin bin/avast-update || die "dobin failed"
-	doman share/man/man1/avast.1 || die "doman failed"
-	dodoc share/doc/${P}/{FAQ,INSTALL,README,avast.pot} || die "dodoc failed"
-
-	domenu ${oprefix}/share/avast/desktop/avast.desktop
-	insinto /usr/share/pixmaps
-	newins ${oprefix}/share/avast/icons/avast-appicon.png avastgui.png || die
-
 	dodir /opt/${PN}/share
-	mv ${oprefix}/{bin,lib,var} "${D}"/opt/${PN} || die
-	mv ${oprefix}/share/avast "${D}"/opt/${PN}/share || die
+	mv share "${D}"/opt/${PN}
 
-	# XXX: set prefix.
-	dodir /etc/env.d && echo "AVAST_PREFIX=/opt/avast4workstation" > "${D}"/etc/env.d/82avast
+	cd lib/${PN}
+	domenu share/avast/desktop/avast.desktop
+	insinto /usr/share/pixmaps
+	newins share/avast/icons/avast-appicon.png avastgui.png || die
 
-	dosym /opt/${PN}/lib/libavastengine-4.so.7.0.5 /usr/$(get_libdir)/libavastengine-4.so.7
-	dosym /opt/${PN}/bin/wrapper-script.sh /usr/bin/avast
-	dosym /opt/${PN}/bin/wrapper-script.sh /usr/bin/avastgui
+	mv share/avast "${D}"/opt/${PN}/share || die
+	mv lib var "${D}"/opt/${PN} || die
+
+	exeinto /opt/${PN}/bin
+	doexe bin/avast{,gui} bin/wrapper-script.sh
+
+	cat > 82avast << DONE
+AVAST_PREFIX="/opt/${PN}"
+MANPATH="/opt/${PN}/share/man"
+DONE
+	doenvd 82avast
+
+	dosym /opt/${PN}/bin/wrapper-script.sh /opt/bin/avast
+	dosym /opt/${PN}/bin/wrapper-script.sh /opt/bin/avastgui
+	dosym /opt/${PN}/bin/avast-update /opt/bin/avast-update
 }
 
 pkg_postinst() {
