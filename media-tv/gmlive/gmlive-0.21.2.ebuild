@@ -26,6 +26,12 @@ RDEPEND="${RDEPEND}
 	media-plugins/gst-plugins-libmms
 	media-video/mplayer"
 
+src_prepare() {
+	sed -i \
+		-e 's:channel.sopcast.com:channel.sopcast.cn:' \
+		src/MainWindow.cpp || die "sed failed"
+}
+
 src_configure() {
 	econf $(use_enable totem plugin)
 }
