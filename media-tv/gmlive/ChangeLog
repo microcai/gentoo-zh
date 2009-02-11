@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/gmlive
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  11 Feb 2009; Hong Hao <oahong@gmail.com> -gmlive-0.21.1.ebuild,
+  +gmlive-0.21.2.ebuild:
+  Version bump per wd_afei's request, Nuke old version.
 
   19 Nov 2008; Hong Hao <oahong@gmail.com> -gmlive-0.20.2.ebuild,
   +gmlive-0.21.1.ebuild, metadata.xml:

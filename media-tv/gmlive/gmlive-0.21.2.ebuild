@@ -1,10 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI="2"
+
 DESCRIPTION="The gtk frontend of the iptv \"mms\" and \"sopcast\""
 HOMEPAGE="http://gmlive.googlecode.com"
-SRC_URI="http://gmlive.googlecode.com/files/${P}.tar.bz2"
+SRC_URI="${HOMEPAGE}/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -14,22 +16,18 @@ IUSE="sopcast totem"
 RDEPEND="dev-libs/libxml2
 	>=dev-cpp/libglademm-2.4
 	>=dev-cpp/gtkmm-2.4
-	>=dev-cpp/glibmm-2.6
-	totem? ( media-video/totem )"
+	totem? ( >=media-video/totem-2.20[python] )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/pkgconfig-0.19
 	>=dev-util/intltool-0.35"
 RDEPEND="${RDEPEND}
+	sopcast? ( media-tv/sopcast )
 	media-plugins/gst-plugins-libmms
-	media-video/mplayer
-	sopcast? ( media-tv/sopcast )"
+	media-video/mplayer"
 
-RESTRICT="primaryuri"
-
-src_compile() {
+src_configure() {
 	econf $(use_enable totem plugin)
-	emake || die "emake failed"
 }
 
 src_install() {
