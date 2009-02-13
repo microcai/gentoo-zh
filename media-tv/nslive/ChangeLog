@@ -1,8 +1,0 @@
-# ChangeLog for media-tv/nslive
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  21 Apr 2008; lidaibin <lidaibin@gmail.com> nslive-0.1.0.ebuild,
-  +metadata.xml:
-  fixed nslive ebuild
-
