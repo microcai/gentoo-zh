@@ -1,0 +1,35 @@
+
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 08_desktop.dpatch by LI Daobing <lidaobing@gmail.com>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: install desktop and icon
+## DP: see http://sourceforge.net/support/tracker.php?aid=2445215
+## DP: see http://sourceforge.net/support/tracker.php?aid=2481904
+## DP: see http://sourceforge.net/support/tracker.php?aid=2485278
+
+@DPATCH@
+diff -urNad qterm~/src/CMakeLists.txt qterm/src/CMakeLists.txt
+--- qterm~/src/CMakeLists.txt	2009-01-04 19:19:24.000000000 +0800
++++ qterm/src/CMakeLists.txt	2009-01-04 19:19:45.000000000 +0800
+@@ -124,6 +124,9 @@
+ endif(WIN32)
+ install(TARGETS qterm DESTINATION bin)
+ install(FILES ${qterm_MISC} DESTINATION share/qterm)
++configure_file(${CMAKE_CURRENT_SOURCE_DIR}/qterm.desktop.in ${CMAKE_CURRENT_BINARY_DIR}/qterm.desktop)
++install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qterm.desktop DESTINATION share/applications)
++install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/qterm.png DESTINATION share/icons)
+ add_subdirectory(pic)
+ add_subdirectory(cursor)
+ add_subdirectory(schema)
+diff -urNad qterm~/src/qterm.desktop.in qterm/src/qterm.desktop.in
+--- qterm~/src/qterm.desktop.in	2009-01-04 19:19:24.000000000 +0800
++++ qterm/src/qterm.desktop.in	2009-01-04 19:19:56.000000000 +0800
+@@ -8,5 +8,5 @@
+ GenericName[zh_CN]=BBS 客户端程序
+ GenericName[zh_TW]=BBS 客戶端程式
+ Comment=BBS client based on Qt library in linux
+-MimeTypes=
+ Terminal=false
++Icon=@CMAKE_INSTALL_PREFIX@/share/icons/qterm.png
+
