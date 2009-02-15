@@ -49,7 +49,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i -e '/^enable_qt4=no$/d' configure.ac || die
+#	sed -i -e '/^enable_qt4=no$/d' configure.ac || die
 	sed -i -e "/TEMPLATE/ i\QMAKE_STRIP = true" client/qt4/${PN}.pro || die
 
 	autopoint || die "autopoint failed"
