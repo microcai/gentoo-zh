@@ -15,11 +15,12 @@ SRC_URI=""
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
-IUSE="nls qt4 doc" # test
+IUSE="nls qt4 doc test"
 
 COMMOM_DEPEND=">=dev-libs/glib-2.18
 	dev-libs/dbus-glib
 	>=dev-python/pygobject-2.15
+	sys-apps/dbus
 	>=gnome-base/gconf-2.11.1
 	x11-libs/gtk+:2
 	x11-libs/libX11
@@ -35,15 +36,11 @@ DEPEND="${COMMOM_DEPEND}
 	>=dev-util/gtk-doc-1.9"
 RDEPEND="${COMMOM_DEPEND}
 	app-text/iso-codes
-	>=dev-python/dbus-python-0.83.0
-	>=dev-python/pygtk-2.12.1
 	dev-python/pyxdg
 	gnome-base/librsvg
-	x11-misc/notification-daemon
-	|| (
-		dev-python/gconf-python
-		dev-python/gnome-python
-	)"
+	>=dev-python/pygtk-2.12.1
+	>=dev-python/dbus-python-0.83.0
+	x11-misc/notification-daemon"
 
 pkg_setup() {
 	# An arch specific config directory is used on multilib systems
@@ -52,12 +49,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	#FIXME:no stripping
-	#sed -i -e "/TEMPLATE/ i\QMAKE_STRIP = true" client/qt4/${PN}.pro
-	#cat client/qt4/${PN}.pro
+	sed -i -e '/^enable_qt4=no$/d' configure.ac || die
+	sed -i -e "/TEMPLATE/ i\QMAKE_STRIP = true" client/qt4/${PN}.pro || die
 
 	autopoint || die "autopoint failed"
-	gtkdocize || die "gtkdocize failed"
+	gtkdocize --copy || die "gtkdocize failed"
 	eautoreconf
 
 	# disable pyc compiling
@@ -75,17 +71,16 @@ src_configure() {
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
 	dodoc AUTHORS ChangeLog NEWS README
-}
 
-#src_test() {
-#	PYTHONPATH="${D}/$(python_get_sitedir)/${PN}" "${python}" test/test_client.py || die "tests failed"
-#}
+	rmdir "${D}"/usr/share/ibus/engine
+}
 
 pkg_postinst() {
 	ewarn "This package is very experimental, please report your bugs to"
 	ewarn "http://ibus.googlecode.com/issues/list"
 	echo
 	elog "User documentation: http://code.google.com/p/ibus/wiki/ReadMe"
+	echo
 	if ! use qt4; then
 		ewarn "Missing qt4 use flag, ibus will not work with qt4 applications."
 		ebeep 5
@@ -102,5 +97,5 @@ pkg_postrm() {
 	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > \
 		"${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
 
-	python_mod_cleanup && python_mod_cleanup /usr/share/${PN}
+	python_mod_cleanup "$(python_get_sitedir)"/${PN} /usr/share/${PN}
 }
