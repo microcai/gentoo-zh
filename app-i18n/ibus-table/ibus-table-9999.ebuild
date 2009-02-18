@@ -2,11 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-NEED_PYTHON="2.5"
+EAPI="2"
+
 EGIT_REPO_URI="git://github.com/acevery/${PN}.git"
 inherit autotools git python
 
-DESCRIPTION="General Table Engine for IBus Framework"
+DESCRIPTION="General table engines for IBus Framework"
 HOMEPAGE="http://ibus.googlecode.com"
 SRC_URI=""
 
@@ -15,22 +16,15 @@ SLOT="0"
 KEYWORDS=""
 IUSE="minimal nls"
 
-DEPEND="dev-util/cvs
+RDEPEND=">=app-i18n/ibus-1.1
+	>=dev-lang/python-2.5[sqlite]"
+DEPEND="${RDEPEND}
+	dev-util/cvs
 	dev-util/pkgconfig
 	sys-devel/gettext"
-RDEPEND="app-i18n/ibus"
 
-pkg_setup() {
-	if ! python_mod_exists sqlite3 ; then
-		eerror "We need sqlite module for python to generate table databases!"
-		die "Please compile your python with \"sqlite\" USE flag!"
-	fi
-}
-
-src_unpack() {
-	git_src_unpack
+src_prepare() {
 	autopoint || die "failed to run autopoint"
-	# econf/eautoreconf needs no die.
 	eautoreconf
 
 	# QA: disable pyc compiling
@@ -38,15 +32,16 @@ src_unpack() {
 	ln -s $(type -P true) py-compile
 }
 
-src_compile() {
+src_configure() {
 	econf $(use_enable !minimal additional) \
 		$(use_enable nls)
-	emake || die
 }
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
-	dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS README
+
+	rm "${D}"//usr/share/ibus-table/engine/speedmeter.py || die
 }
 
 pkg_postinst() {
