@@ -16,13 +16,13 @@ SLOT="0"
 KEYWORDS=""
 IUSE="minimal nls"
 
+# autopoint needs cvs.
 RDEPEND=">=app-i18n/ibus-1.1
 	>=dev-lang/python-2.5[sqlite]"
 DEPEND="${RDEPEND}
 	dev-util/cvs
 	dev-util/pkgconfig
 	sys-devel/gettext"
-RDEPEND="dev-python/elementtree"
 
 src_prepare() {
 	autopoint || die "failed to run autopoint"
@@ -42,7 +42,7 @@ src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
 	dodoc AUTHORS README
 
-#	rm "${D}"//usr/share/ibus-table/engine/speedmeter.py || die
+	rm "${D}"//usr/share/ibus-table/engine/speedmeter.py || die
 }
 
 pkg_postinst() {
