@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -20,6 +20,7 @@ DEPEND="dev-libs/openssl
 	net-misc/curl[ssl]
 	x11-libs/qt-gui
 	x11-libs/qt-qt3support"
+RDEPEND=${DEPEND}
 
 src_prepare() {
 	if use amd64 ; then

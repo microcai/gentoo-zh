@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -8,7 +8,9 @@ inherit flag-o-matic qt4
 
 DESCRIPTION="Linux Fetion, a QT4 IM client using CHINA MOBILE's Fetion Protocol"
 HOMEPAGE="http://www.libfetion.cn/"
-SRC_URI="http://libfetion-gui.googlecode.com/files/${P}.tar.gz"
+MY_P=${PN/-/_}_${PV}
+S=${WORKDIR}/${MY_P}
+SRC_URI="http://libfetion-gui.googlecode.com/files/${PN/-/_}_${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -19,6 +21,7 @@ DEPEND="dev-libs/openssl
 	net-misc/curl[ssl]
 	x11-libs/qt-gui
 	x11-libs/qt-qt3support"
+RDEPEND=${DEPEND}
 
 RESTRICT="primaryuri"
 
