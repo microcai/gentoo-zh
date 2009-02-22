@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 inherit eutils cmake-utils
 
-DESCRIPTION="FQTerm, a modern terminal emulator"
+DESCRIPTION="a modern terminal emulator for Linux"
 HOMEPAGE="http://fqterm.googlecode.com"
 SRC_URI="http://fqterm.googlecode.com/files/${P}-src-r569.zip"
 
@@ -14,13 +14,10 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="x11-libs/qt-core
-	x11-libs/qt-qt3support
 	x11-libs/qt-gui
-	x11-libs/qt-script
 	dev-libs/openssl"
 DEPEND="${RDEPEND}
-	app-arch/unzip
-	>=dev-util/cmake-2.4.2"
+	app-arch/unzip"
 
 S=${WORKDIR}/${PN}
 

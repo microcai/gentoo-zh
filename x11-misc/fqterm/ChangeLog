@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/fqterm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  22 Feb 2009; Hong Hao <oahong@gmail.com> fqterm-0.9.3.ebuild,
+  +fqterm-9999.ebuild, +files/fqterm-9999-as-needed.patch, metadata.xml:
+  Fix dependency, add a live ebuild for fqterm, close issue 34.
 
   24 Sep 2008; Hong Hao <oahong@gmail.com> +fqterm-0.9.3.ebuild,
   +files/fqterm-0.9.3-qad-openssl-fix.patch, +metadata.xml:
