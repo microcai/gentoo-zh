@@ -14,7 +14,7 @@ KEYWORDS="x86 ~amd64"
 IUSE="arts"
 
 need-kde 3
-
+PREFIX=/usr/kde/3.5
 src_unpack() {
 	kde_src_unpack
 
