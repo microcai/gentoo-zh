@@ -3,3 +3,6 @@ app-admin/eselect-xim:gcin - add gcin support
 app-admin/eselect-xim:oxim - add oxim support
 app-i18n/gcin:filter-nobopomofo - support nobopomofo plugin
 app-i18n/gcin:chinese-sound - support chinese sound
+x11-libs/qt:immqt - Enable binary incompatible version of immodule for Qt
+x11-libs/qt:immqt-bc - Enable binary compatible version of immodule for Qt
+x11-libs/qt:zh_TW - add GOT's chinese patch

@@ -143,6 +143,8 @@ ifc - use ifc instead of g77 to build
 imagemagick - Enables support for Imagemagick (image converter)
 imap - Adds support for IMAP (Internet Mail Application Protocol)
 imlib - Adds support for imlib, an image loading and rendering library
+immqt-bc - Enable binary compatible version of immodule for x11-libs/qt
+immqt - Enable immodule for x11-libs/qt support
 informix - Adds support for Informix database
 inifile - Adds dbm support for .ini files
 innodb - Adds innodb support for mySQL (transaction support)
