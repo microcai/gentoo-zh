@@ -14,9 +14,10 @@ KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="media-sound/amarok"
+RDEPEND="media-sound/amarok:0"
 
 need-kde 3.2
+PREFIX=/usr/kde/3.5
 
 S=${WORKDIR}/${P/_beta/Beta}
 
