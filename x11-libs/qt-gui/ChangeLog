@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-gui
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.11 2008/08/11 13:03:14 yngwin Exp $
+
+  25 Feb 2009; scsi <scsichen@gmail.com>
+  +files/0254-fix-qgraphicsproxywidget-deletion-crash.diff,
+  +qt-gui-4.4.2-r1.ebuild:
+  version bump
 
   25 Sep 2008; scsi <scsichen@gmail.com> +files/qt-gui-designer-4.4.1.patch,
   +qt-gui-4.4.2.ebuild:
