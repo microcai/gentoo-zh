@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Feb 2009; Zhang Le <r0bertz@gentoo.org> chmsee-1.0.3.ebuild:
+  change chmsee-1.0.3 to EAPI 1, set xulrunner to default use flag
+
   12 Jan 2009; Hong Hao <oahong@gmail.com> chmsee-1.0.2.ebuild,
   +chmsee-1.0.3.ebuild:
   Bump.
