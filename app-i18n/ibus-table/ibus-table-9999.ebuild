@@ -41,8 +41,6 @@ src_configure() {
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
 	dodoc AUTHORS README
-
-	rm "${D}"//usr/share/ibus-table/engine/speedmeter.py || die
 }
 
 pkg_postinst() {
