@@ -66,7 +66,7 @@ src_configure() {
 	econf $(use_enable nls) \
 		$(use_enable qt4 qt4-immodule) \
 		$(use_enable doc gtk-doc) \
-		--disable-iso-codes-check
+		--disable-iso-codes-check \
 		--disable-dbus-python-check
 }
 
