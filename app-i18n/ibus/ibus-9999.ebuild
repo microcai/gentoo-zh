@@ -5,6 +5,8 @@
 EAPI="2"
 
 NEED_PYTHON="2.5"
+#EGIT_OFFLINE="yes_do_it"
+#EGIT_PATCHES="ibus-daemon-not-ibus.diff"
 EGIT_REPO_URI="git://github.com/phuang/${PN}.git"
 inherit autotools multilib git python
 
@@ -19,9 +21,8 @@ IUSE="nls qt4 doc test"
 
 COMMOM_DEPEND=">=dev-libs/glib-2.18
 	dev-libs/dbus-glib
-	>=dev-python/pygobject-2.15
 	sys-apps/dbus
-	>=gnome-base/gconf-2.11.1
+	>=gnome-base/gconf-2.12
 	x11-libs/gtk+:2
 	x11-libs/libX11
 	sys-libs/glibc
@@ -49,7 +50,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-#	sed -i -e '/^enable_qt4=no$/d' configure.ac || die
+	sed -i -e '/^enable_qt4=no$/d' configure.ac || die
 	sed -i -e "/TEMPLATE/ i\QMAKE_STRIP = true" client/qt4/${PN}.pro || die
 
 	autopoint || die "autopoint failed"
@@ -66,6 +67,7 @@ src_configure() {
 		$(use_enable qt4 qt4-immodule) \
 		$(use_enable doc gtk-doc) \
 		--disable-iso-codes-check
+		--disable-dbus-python-check
 }
 
 src_install() {
