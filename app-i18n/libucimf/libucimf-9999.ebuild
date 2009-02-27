@@ -7,10 +7,10 @@ inherit eutils subversion
 DESCRIPTION="Unicode Console InputMethod Framework"
 HOMEPAGE="http://ucimf.sourceforge.net/"
 SRC_URI=""
-ESVN_REPO_URI="https://ucimf.svn.sourceforge.net/svnroot/ucimf"
+ESVN_REPO_URI="http://ucimf.googlecode.com/svn/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="openvanilla"
 DEPEND=""
 RDEPEND="openvanilla? ( app-i18n/openvanilla-module-generic )"
@@ -24,7 +24,7 @@ src_compile() {
 	if use openvanilla; then
 		cd ${S}/ucimf-openvanilla/
 		autoreconf --install --symlink
-		econf --includedir=${S}/libucimf/include  || die "econf failed"
+		econf CPPFLAGS=-I${S}/libucimf/include  || die "econf failed"
 		emake || die "emake failed"
 	fi	
 

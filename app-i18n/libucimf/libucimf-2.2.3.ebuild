@@ -6,8 +6,8 @@ inherit eutils
 
 DESCRIPTION="Unicode Console InputMethod Framework"
 HOMEPAGE="http://ucimf.sourceforge.net/"
-SRC_URI="http://downloads.sourceforge.net/ucimf/libucimf-2.2.0.tar.gz 
-http://downloads.sourceforge.net/ucimf/ucimf-openvanilla-2.10.0.tar.gz"
+SRC_URI="http://ucimf.googlecode.com/files/libucimf-2.2.3.tar.gz
+http://ucimf.googlecode.com/files/ucimf-openvanilla-2.10.3.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
@@ -16,24 +16,24 @@ DEPEND=""
 RDEPEND="openvanilla? ( app-i18n/openvanilla-module-generic )"
 
 src_compile() {
-	cd ${S}/libucimf-2.2.0
+	cd ${S}/libucimf-2.2.3
 	econf || die "econf failed"
 	emake || die "emake failed"
 
 	if use openvanilla; then
-		cd ${S}/ucimf-openvanilla-2.10.0
-		econf CPPFLAGS=-I${S}/libucimf-2.2.0/include  || die "econf failed"
+		cd ${S}/ucimf-openvanilla-2.10.3
+		econf CPPFLAGS=-I${S}/libucimf-2.2.3/include  || die "econf failed"
 		emake || die "emake failed"
 	fi
 
 }
 
 src_install() {
-	cd ${S}/libucimf-2.2.0
+	cd ${S}/libucimf-2.2.3
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	if use openvanilla; then
-		cd ${S}/ucimf-openvanilla-2.10.0                                                               
+		cd ${S}/ucimf-openvanilla-2.10.3
 		emake DESTDIR="${D}" install || die "emake install failed"
 	fi
 }

@@ -10,7 +10,7 @@ SRC_URI="http://downloads.sourceforge.net/ucimf/libucimf-2.2.1.tar.gz
 http://downloads.sourceforge.net/ucimf/ucimf-openvanilla-2.10.1.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="openvanilla"
 DEPEND=""
 RDEPEND="openvanilla? ( app-i18n/openvanilla-module-generic )"
@@ -22,7 +22,7 @@ src_compile() {
 
 	if use openvanilla; then
 		cd ${S}/ucimf-openvanilla-2.10.0
-		econf --includedir=${S}/libucimf-2.2.0/include  || die "econf failed"
+		econf CPPFLAGS=-I${S}/libucimf-2.2.0/include  || die "econf failed"
 		emake || die "emake failed"
 	fi
 
