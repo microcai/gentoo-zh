@@ -6,7 +6,7 @@ inherit eutils
 
 DESCRIPTION="UCIMF input method support for FbTerm"
 HOMEPAGE="http://ucimf.sourceforge.net/"
-SRC_URI="http://downloads.sourceforge.net/ucimf/fbterm_ucimf-0.2.0.tar.gz"
+SRC_URI="http://ucimf.googlecode.com/files/fbterm_ucimf-0.2.3.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
@@ -16,7 +16,7 @@ src_unpack() {
 	unpack ${A}
 
 	SRCDIR="$(dirname ${S})"
-	S="${SRCDIR}/fbterm_ucimf-0.2.0"
+	S="${SRCDIR}/fbterm_ucimf-0.2.3"
 }
 
 src_install() {

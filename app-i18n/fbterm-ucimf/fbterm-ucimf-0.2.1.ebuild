@@ -9,7 +9,7 @@ HOMEPAGE="http://ucimf.sourceforge.net/"
 SRC_URI="http://downloads.sourceforge.net/ucimf/fbterm_ucimf-0.2.1.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 DEPEND="app-i18n/fbterm app-i18n/libucimf"
 
 src_unpack() {

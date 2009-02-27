@@ -10,7 +10,7 @@ SRC_URI=""
 ESVN_REPO_URI="http://openvanilla.googlecode.com/svn/trunk/Modules"
 LICENSE="bsd"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 DEPEND=""
 RDEPEND="${DEPEND}"
 
