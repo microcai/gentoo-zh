@@ -1,25 +1,31 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils 
-
+MY_P=${P/-/_}
 DESCRIPTION="UCIMF input method support for FbTerm"
 HOMEPAGE="http://ucimf.sourceforge.net/"
-SRC_URI="http://ucimf.googlecode.com/files/fbterm_ucimf-0.2.3.tar.gz"
+SRC_URI="https://ucimf.googlecode.com/files/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-DEPEND="app-i18n/fbterm app-i18n/libucimf"
+IUSE="debug"
 
-src_unpack() {
-	unpack ${A}
+DEPEND="app-i18n/libucimf
+	media-libs/fontconfig"
+RDEPEND="${DEPEND}"
 
-	SRCDIR="$(dirname ${S})"
-	S="${SRCDIR}/fbterm_ucimf-0.2.3"
+S=${WORKDIR}/${MY_P}
+
+src_compile() {
+	econf $(use_enable debug )
+	emake || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "Install failed"
+	dodoc AUTHORS ChangeLog NEWS README
 }
+
 
