@@ -2,26 +2,18 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-ESVN_REPO_URI="http://ucimf.googlecode.com/svn/ucimf-openvanilla"
-inherit autotools subversion
-
 DESCRIPTION="The OpenVanilla IMF module for UCIMF"
 HOMEPAGE="http://ucimf.googlecode.com"
-SRC_URI=""
+SRC_URI="${HOMEPAGE}/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="debug minimal"
 
 DEPEND="app-i18n/libucimf"
 RDEPEND="${DEPEND}"
 PDEPEND="!minimal? ( app-i18n/openvanilla-module-generic )"
-
-src_unpack() {
-	subversion_src_unpack
-	eautoreconf
-}
 
 src_compile() {
 	econf $(use_enable debug)
