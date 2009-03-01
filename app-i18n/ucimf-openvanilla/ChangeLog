@@ -1,0 +1,8 @@
+# ChangeLog for app-i18n/ucimf-openvanilla
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  01 Mar 2009; Hong Hao <oahong@gmail.com> +ucimf-openvanilla-9999.ebuild,
+  +metadata.xml:
+  Initial ucimf-openvanilla.
+
