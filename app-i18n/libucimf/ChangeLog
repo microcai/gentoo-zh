@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Mar 2009; Hong Hao <oahong@gmail.com> libucimf-2.2.5.ebuild,
+  libucimf-9999.ebuild:
+  EAPI-2.
+
   01 Mar 2009; Hong Hao <oahong@gmail.com> -libucimf-2.2.0.ebuild,
   -libucimf-2.2.1.ebuild, -libucimf-2.2.3.ebuild, -libucimf-2.2.4.ebuild,
   +libucimf-2.2.5.ebuild:
