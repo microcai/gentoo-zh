@@ -1,3 +1,16 @@
+####################################################################
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9531 2009/02/28 10:02:02 mrness Exp $
+#
+# When you add an entry to the top of this file, add your name, the date, and
+# an explanation of why something is getting masked. Please be extremely
+# careful not to commit atoms that are not valid, as it can cause large-scale
+# breakage, especially if it ends up in the daily snapshot.
+
+# Hong Hao <oahong@gmail.com> (3 Mar 2009)
+# Pending to remove in 2 weeks. please use
+# app-i18n/openvanilla-modules
+openvanilla-module-generic
+
 # scsi <scsichen@gmail.com> (16 Nov 2007)
 # can not be compile, need fix
 =gnome-extra/drwright-0.18
@@ -9,4 +22,3 @@
 # scsi <scsichen@gmail.com> (01 Nov 2007)
 # source URL broken
 <=x11-misc/xim-select-0.0.3
-
