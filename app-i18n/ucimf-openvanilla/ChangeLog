@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Mar 2009; Hong Hao <oahong@gmail.com> ucimf-openvanilla-2.10.4.ebuild,
+  ucimf-openvanilla-9999.ebuild:
+  openvanilla-modules is an alternative dependency.
+
   01 Mar 2009; Hong Hao <oahong@gmail.com> +ucimf-openvanilla-2.10.4.ebuild:
   Add ucimf-openvanilla-2.10.4.
 

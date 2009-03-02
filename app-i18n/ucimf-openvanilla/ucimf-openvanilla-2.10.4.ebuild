@@ -13,7 +13,9 @@ IUSE="debug minimal"
 
 DEPEND="app-i18n/libucimf"
 RDEPEND="${DEPEND}"
-PDEPEND="!minimal? ( app-i18n/openvanilla-module-generic )"
+PDEPEND="!minimal? (
+	|| ( app-i18n/openvanilla-modules app-i18n/openvanilla-module-generic )
+)"
 
 src_compile() {
 	econf $(use_enable debug)
