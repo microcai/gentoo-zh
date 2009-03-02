@@ -1,0 +1,8 @@
+# ChangeLog for app-i18n/openvanilla-modules
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  02 Mar 2009; Hong Hao <oahong@gmail.com>
+  +openvanilla-modules-0.8.0.5.ebuild, +metadata.xml:
+  Initial ebuild.
+
