@@ -5,7 +5,7 @@
 MY_P=${P/-/_}
 DESCRIPTION="UCIMF input method support for FbTerm"
 HOMEPAGE="http://ucimf.sourceforge.net/"
-SRC_URI="https://ucimf.googlecode.com/files/${MY_P}.tar.gz"
+SRC_URI="http://ucimf.googlecode.com/files/fbterm_ucimf-0.2.3.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
