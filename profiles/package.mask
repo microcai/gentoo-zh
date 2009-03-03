@@ -9,7 +9,7 @@
 # Hong Hao <oahong@gmail.com> (3 Mar 2009)
 # Pending to remove in 2 weeks. please use
 # app-i18n/openvanilla-modules
-openvanilla-module-generic
+=app-i18n/openvanilla-module-generic-0.8.0
 
 # scsi <scsichen@gmail.com> (16 Nov 2007)
 # can not be compile, need fix
