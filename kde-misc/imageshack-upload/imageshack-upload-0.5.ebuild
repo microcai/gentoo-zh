@@ -14,7 +14,7 @@ IUSE="kde kde4"
 DEPEND=""
 RDEPEND="net-misc/curl
 	kde? ( || ( ( kde-base/konqueror:3.5 kde-base/kdialog:3.5 ) kde-base/kdebase:3.5 ) )
-	kde4? ( kde-base/konqueror:4.1 kde-base/kdialog:4.2 )"
+	kde4? ( kde-base/konqueror:4.2 kde-base/kdialog:4.2 )"
 
 S=$WORKDIR/imageshack_upload
 

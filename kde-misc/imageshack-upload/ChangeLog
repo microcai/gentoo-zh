@@ -3,6 +3,9 @@
 # $Header: $
 
   03 Mar 2009; scsi <scsichen@gmail.com> imageshack-upload-0.5.ebuild:
+  fix kde4 dependance issus
+
+  03 Mar 2009; scsi <scsichen@gmail.com> imageshack-upload-0.5.ebuild:
   fix dependence
 
   24 Aug 2008; scsi <scsichen@gmail.com> imageshack-upload-0.5.ebuild:
