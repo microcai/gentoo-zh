@@ -1,5 +1,9 @@
 # ChangeLog for x11-misc/qterm
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+
+  05 Mar 2009; Hong Hao <oahong@gmail.com> metadata.xml,
+  +qterm-0.5.4.ebuild:
+  Version bump.
 
   08 Dec 2008; Zhang Le <r0bertz@gentoo.org> qterm-0.5.3.ebuild:
   added as-needed patch back
