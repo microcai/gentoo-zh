@@ -46,7 +46,7 @@ src_install() {
 
 pkg_postinst() {
 	ewarn "This package is very experimental, please report your bugs to"
-	ewarn "http://ibus.googlecode.com/issues/list"
+	ewarn "http://code.google.com/p/ibus/issues"
 	echo
 	elog "You should run ibus-setup and enable the IMEngines you want to use!"
 	echo

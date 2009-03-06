@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Mar 2009; Yu Yuwei <acevery@gmail.com> ibus-pinyin-9999.ebuild:
+  fix bugreport issues
+
   04 Jan 2009; Hong Hao <oahong@gmail.com> ibus-pinyin-9999.ebuild:
   QA: Disable python byte compiling during src_install phrase.
 
