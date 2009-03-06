@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/qterm
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  06 Mar 2009; Zhang Le <r0bertz@gentoo.org>
+  +files/qterm-0.5.4-debian-gcc-4.4.patch:
+  added qterm-0.5.4-debian-gcc-4.4.patch
+
   05 Mar 2009; Hong Hao <oahong@gmail.com> metadata.xml,
   +qterm-0.5.4.ebuild:
   Version bump.
