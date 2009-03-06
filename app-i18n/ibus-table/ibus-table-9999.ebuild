@@ -8,7 +8,7 @@ EGIT_REPO_URI="git://github.com/acevery/${PN}.git"
 inherit autotools git python
 
 DESCRIPTION="General table engines for IBus Framework"
-HOMEPAGE="http://ibus.googlecode.com"
+HOMEPAGE="http://code.google.com/p/ibus"
 SRC_URI=""
 
 LICENSE="LGPL-2.1"
@@ -45,7 +45,7 @@ src_install() {
 
 pkg_postinst() {
 	ewarn "This package is very experimental, please report your bugs to"
-	ewarn "http://ibus.googlecode.com/issues/list"
+	ewarn "http://code.google.com/p/ibus/issues"
 	einfo
 	elog "You need to emerge specific IMEs to use IBus-Table."
 	elog "such as ibus-table-zhengma, ibus-table-wubi,"
