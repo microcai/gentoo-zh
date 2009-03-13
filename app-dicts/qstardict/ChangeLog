@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Mar 2009; scsi <scsichen@gmail.com> ChangeLog:
+  replace with qstardict official ebuild
+
   13 Mar 2009; scsi <scsichen@gmail.com> qstardict-0.13.1.ebuild:
   replace with qstardict official ebuild
 
