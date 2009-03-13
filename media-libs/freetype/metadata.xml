@@ -3,6 +3,9 @@
 <pkgmetadata>
 <herd>fonts</herd>
 <use>
+  <flag name="fontforge">Install internal headers required for truetype
+	debugger in <pkg>media-gfx/fontforge</pkg> (built with
+	USE=fontforge-debugger)</flag>
   <flag name='ubuntu'>Enable the lcd patch from Ubuntu</flag>
   <flag name="utils">Install utilities and examples from ft2demos</flag>
 </use>

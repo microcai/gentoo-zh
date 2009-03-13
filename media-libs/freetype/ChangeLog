@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Mar 2009; Zhang Le <r0bertz@gentoo.org> +freetype-2.3.8.ebuild,
+  metadata.xml:
+  added freetype-2.3.8.ebuild
+
   03 Jan 2009; Yu Yuwei <acevery@gmail.com> +freetype-2.3.7-r1.ebuild,
   +files/freetype-2.3.7-b.g.o-247104.patch,
   +files/freetype-2.3.7-b.g.o-253029.patch,
