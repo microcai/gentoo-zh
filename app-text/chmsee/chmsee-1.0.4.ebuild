@@ -2,14 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-MY_P=${P/_/-}
 DESCRIPTION="HTML Help viewer for Unix/Linux"
 HOMEPAGE="http://chmsee.googlecode.com"
-SRC_URI="http://chmsee.googlecode.com/files/${MY_P}.tar.gz"
+SRC_URI="http://chmsee.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
 RDEPEND=">=gnome-base/libglade-2.4
@@ -23,7 +22,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 RESTRICT="mirror"
-S=${WORKDIR}/${MY_P}
 DOCS="AUTHORS NEWS README TODO"
 
 src_compile() {

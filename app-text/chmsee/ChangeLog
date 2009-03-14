@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  14 Mar 2009; Hong Hao <oahong@gmail.com> ++, -chmsee-1.0.4_pre1.ebuild:
+  Bump again.
+
   14 Mar 2009; Hong Hao <oahong@gmail.com> +chmsee-1.0.4_pre1.ebuild:
   Version bump, remove old version firefox (<3.0) support for 1.0.4_pre1.
 
