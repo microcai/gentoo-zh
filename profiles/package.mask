@@ -6,11 +6,6 @@
 # careful not to commit atoms that are not valid, as it can cause large-scale
 # breakage, especially if it ends up in the daily snapshot.
 
-# Hong Hao <oahong@gmail.com> (3 Mar 2009)
-# Pending to remove in 2 weeks. please use
-# app-i18n/openvanilla-modules
-=app-i18n/openvanilla-module-generic-0.8.0
-
 # scsi <scsichen@gmail.com> (16 Nov 2007)
 # can not be compile, need fix
 =gnome-extra/drwright-0.18
