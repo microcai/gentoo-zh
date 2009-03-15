@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Header: $
 
 DESCRIPTION="The OpenVanilla IMF module for UCIMF"
 HOMEPAGE="http://ucimf.googlecode.com"
@@ -12,10 +12,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug minimal"
 
 DEPEND="app-i18n/libucimf"
-RDEPEND="${DEPEND}"
-PDEPEND="!minimal? (
-	|| ( app-i18n/openvanilla-modules app-i18n/openvanilla-module-generic )
-)"
+RDEPEND="${DEPEND}
+	!minimal? ( app-i18n/openvanilla-modules )"
 
 src_compile() {
 	econf $(use_enable debug)

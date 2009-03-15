@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Header: $
 
 ESVN_REPO_URI="http://ucimf.googlecode.com/svn/ucimf-openvanilla"
 inherit autotools subversion
@@ -15,10 +15,8 @@ KEYWORDS=""
 IUSE="debug minimal"
 
 DEPEND="app-i18n/libucimf"
-RDEPEND="${DEPEND}"
-PDEPEND="!minimal? (
-	|| ( app-i18n/openvanilla-modules app-i18n/openvanilla-module-generic )
-)"
+RDEPEND="${DEPEND}
+	!minimal? ( app-i18n/openvanilla-modules )"
 
 src_unpack() {
 	subversion_src_unpack
