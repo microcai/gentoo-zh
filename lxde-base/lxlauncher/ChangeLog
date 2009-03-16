@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxsession-lite
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.34 2007/03/26 06:49:29 kevquinn Exp $
+
+  16 Mar 2009; scsi <scsichen@gmail.com> Manifest:
+  fix manifest not match
 
 * lxlauncher-0.2
 
