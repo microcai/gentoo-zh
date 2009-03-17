@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header$
 
@@ -48,6 +48,10 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-transparent_trayicon.patch
 	epatch "${FILESDIR}"/${P}-changelog-minor-typo-fixes.patch
 	epatch "${FILESDIR}"/${P}-esd.patch
+
+	# Fix compatibility with gucharmap-2, bug #240728
+	epatch "${FILESDIR}/${P}-gucharmap2.patch"
+
 	AT_M4DIR="m4" eautoreconf
 	gnome2_omf_fix
 }

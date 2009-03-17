@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/stardict
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.34 2007/03/26 06:49:29 kevquinn Exp $
+
+  17 Mar 2009; Yu Yuwei <acevery@gmail.com> -stardict-3.0.1-r2.ebuild,
+  -stardict-3.0.1-r3.ebuild, +stardict-3.0.1-r4.ebuild,
+  +files/stardict-3.0.1-gucharmap2.patch:
+  port gucharmap2 patch from portage
 
   09 Nov 2008; Yu Yuwei <acevery@gmail.com> +stardict-3.0.1-r3.ebuild,
   +files/stardict-3.0.1-changelog-minor-typo-fixes.patch,
