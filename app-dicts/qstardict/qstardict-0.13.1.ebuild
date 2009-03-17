@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=1
+EAPI=2
 
 inherit eutils qt4
 DESCRIPTION="QStarDict is a StarDict clone written with using Qt"
