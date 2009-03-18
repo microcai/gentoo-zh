@@ -2,8 +2,6 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit base
-
 DESCRIPTION="fast FrameBuffer based TERMinal emulator for Linux"
 HOMEPAGE="http://fbterm.googlecode.com"
 SRC_URI="http://fbterm.googlecode.com/files/${P}.tar.gz"
@@ -11,7 +9,7 @@ SRC_URI="http://fbterm.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="examples"
+IUSE=""
 
 RDEPEND="sys-libs/glibc
 	media-libs/fontconfig
@@ -20,11 +18,9 @@ DEPEND="${RDEPEND}
 	sys-libs/ncurses
 	dev-util/pkgconfig"
 
-# http://code.google.com/p/fbterm/issues/detail?id=8#c6
-#PATCHES=( "${FILESDIR}/fscap-remove.patch" )
-
 src_install() {
-	base_src_install
+	emake install DESTDIR="${D}" || die "Install failed"
+
 	dodoc AUTHORS NEWS README doc/inputmethod.txt
 	$(type -P tic) -o "${D}/usr/share/terminfo/" \
 		"${S}"/terminfo/fbterm || die "Failed to generate terminfo database"
@@ -39,8 +35,9 @@ pkg_postinst() {
 	elog "\tTo use ${PN}, ensure You are in video group."
 	elog "\tTo input CJK merge \"app-i18n/fbterm-ucimf\""
 	einfo
-	elog "Starting from ${PV}, fbterm has 256 color mode support. To enable this"
-	elog "feature set the following environment in your virtual terminal:"
+	elog "Starting from version 1.4, fbterm has internal 256 color mode"
+	elog "support. To enable this feature set the following environment"
+	elog "in your virtual terminal before running it:"
 	elog "export TERM=fbterm"
 	einfo
 }
