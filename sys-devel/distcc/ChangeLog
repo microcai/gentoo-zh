@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  19 Mar 2009; Zhang Le <r0bertz@gentoo.org> +files/distcc-3.1-python.patch,
+  +files/3.1, +files/3.1/init, +distcc-3.1-r3.ebuild:
+  added distcc-3.1-r3.ebuild
+
   25 Feb 2009; Zhang Le <r0bertz@gentoo.org>
   +files/distcc-3.0-fix-fortify.patch, +files/distcc-3.1-freedesktop.patch,
   +metadata.xml:
