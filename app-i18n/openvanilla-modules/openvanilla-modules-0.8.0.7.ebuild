@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI="2"
 inherit versionator
 
 #MYLANG="ja ko th vi zh_CN zh_HK zh_TW"
@@ -13,7 +13,7 @@ SRC_URI="http://ucimf.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-#KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="linguas_ja linguas_ko linguas_th linguas_vi linguas_zh_CN linguas_zh_HK linguas_zh_TW"
 
 DEPEND=">=dev-db/sqlite-3"
