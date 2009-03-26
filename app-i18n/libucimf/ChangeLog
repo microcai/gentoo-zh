@@ -4,6 +4,10 @@
 
   26 Mar 2009; Hong Hao <oahong@gmail.com> libucimf-2.2.8.ebuild,
   libucimf-9999.ebuild:
+  Fix commit r186.
+
+  26 Mar 2009; Hong Hao <oahong@gmail.com> libucimf-2.2.8.ebuild,
+  libucimf-9999.ebuild:
   Fix headers.
 
   26 Mar 2009; Hong Hao <oahong@gmail.com> -libucimf-2.2.5.ebuild,
