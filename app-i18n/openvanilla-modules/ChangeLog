@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Mar 2009; Hong Hao <oahong@gmail.com>
+  +openvanilla-modules-0.8.0.9.ebuild:
+  Add openvanilla-modules 0.8.0.9
+
   24 Mar 2009; Hong Hao <oahong@gmail.com>
   -openvanilla-modules-0.8.0.5.ebuild, -openvanilla-modules-0.8.0.7.ebuild,
   +openvanilla-modules-0.8.0.8.ebuild:
