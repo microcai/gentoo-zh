@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Mar 2009; Hong Hao <oahong@gmail.com> -libucimf-2.2.5.ebuild,
+  -libucimf-2.2.6.ebuild, -libucimf-2.2.7.ebuild, +libucimf-2.2.8.ebuild,
+  libucimf-9999.ebuild:
+  Version bump, Clean up old versions.
+
   23 Mar 2009; Hong Hao <oahong@gmail.com> +libucimf-2.2.7.ebuild:
   Add new upstream release 2.2.7.
 

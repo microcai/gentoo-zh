@@ -8,20 +8,21 @@ ESVN_REPO_URI="http://ucimf.googlecode.com/svn/${PN}"
 inherit autotools eutils subversion
 
 DESCRIPTION="Unicode Console InputMethod Framework"
-HOMEPAGE="http://ucimf.googlecode.com"
+HOMEPAGE="http://ucimf.googlecode.com
+	doc? ( ${HOMEPAGE}/files/UserManual.pdf )"
 SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="debug"
+IUSE="debug doc"
 
 # FIXME: sys-libs/zlib
 DEPEND="media-libs/freetype:2"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	# Make sure utmp group exists, as it's used in install-exec-hook.
+	# Make sure utmp group exists.
 	enewgroup utmp 406
 }
 
@@ -36,4 +37,5 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
 	dodoc AUTHORS ChangeLog README TODO
+	use doc && dodoc UserManual.pdf || die "dodoc failed"
 }

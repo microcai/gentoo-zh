@@ -3,24 +3,24 @@
 # $Id$
 
 EAPI="2"
-
 inherit eutils
 
 DESCRIPTION="Unicode Console InputMethod Framework"
 HOMEPAGE="http://ucimf.googlecode.com"
-SRC_URI="${HOMEPAGE}/files/${P}.tar.gz"
+SRC_URI="${HOMEPAGE}/files/${P}.tar.gz
+	doc? ( ${HOMEPAGE}/files/UserManual.pdf )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug"
+IUSE="debug doc"
 
-# FIXME: sys-libs/zlib
-DEPEND="media-libs/freetype:2"
+DEPEND="sys-libs/zlib
+	media-libs/freetype:2"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	# Make sure utmp group exists, as it's used in install-exec-hook.
+	# Make sure utmp group exists.
 	enewgroup utmp 406
 }
 
@@ -30,5 +30,6 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
-	dodoc AUTHORS ChangeLog README TODO
+	dodoc AUTHORS ChangeLog README TODO || die "dodoc failed"
+	use doc && dodoc UserManual.pdf || die "dodoc failed"
 }
