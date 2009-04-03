@@ -1,7 +1,7 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
-
+EAPI="2"
 inherit eutils
 
 DESCRIPTION="llk for linux"
@@ -18,7 +18,7 @@ IUSE=""
 
 DEPEND="media-libs/libpng
 	media-sound/esound
-	 >=x11-libs/gtk+-2.12"
+	 >=x11-libs/gtk+-2.12[jpeg]"
 
 RDEPEND="${DEPEND}"
 
@@ -30,9 +30,9 @@ src_unpack() {
 	cd "${S}"
 	epatch ${EPATCH_SOURCE}
 }
+
 src_compile() {
 	einfo "Running autoreconf"
-	built_with_use --missing die -o x11-libs/gtk+ jpeg || die "Please build gtk+ with USE=jpeg"
 	cd "${S}"
 	autoreconf -f -i || die "autoreconf failed"
 	econf || die "econf failed"

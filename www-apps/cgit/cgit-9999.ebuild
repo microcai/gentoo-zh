@@ -44,7 +44,6 @@ src_install() {
 
 	dodir /var/cache/cgit
 	keepdir /var/cache/cgit
-
 	# This is just plain wrong, how to do it correctly?
 	fperms +x "${MY_HTDOCSDIR}"/*.cgi || die "fperms failed"
 
