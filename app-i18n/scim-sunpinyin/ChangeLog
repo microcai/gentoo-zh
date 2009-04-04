@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 Apr 2009; Hong Hao <oahong@gmail.com> +scim-sunpinyin-20090322.ebuild:
+  Add sunpinyin-20090322.
+
   04 Feb 2009; Hong Hao <oahong@gmail.com>
   scim-sunpinyin-20090106-r1.ebuild:
   Use autotools.eclass
