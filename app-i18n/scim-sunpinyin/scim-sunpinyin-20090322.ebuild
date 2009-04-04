@@ -13,16 +13,15 @@ SRC_URI="http://oahong.googlepages.com/${MY_P}.tar.bz2
 	http://src.opensolaris.org/source/raw/nv-g11n/inputmethod/sunpinyin/ime/data/lm_sc.t3g.le
 	http://src.opensolaris.org/source/raw/nv-g11n/inputmethod/sunpinyin/ime/data/pydict_sc.bin.le"
 
-LICENSE="|| ( LGPL-2.1 CDDL )"
+LICENSE="LGPL-2.1 CDDL"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="debug"
 
 # FIXME:
 RDEPEND="x11-libs/gtk+
-	sys-libs/glibc
-	>=app-i18n/scim-1.4
-	virtual/libintl"
+	>=dev-libs/glib-2
+	>=app-i18n/scim-1.4"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
