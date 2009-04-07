@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  07 Apr 2009; Hong Hao <oahong@gmail.com> ++, -pidgin-fetion-0.98.4.ebuild:
+  Version bump. Close issue 40.
+
   07 Jan 2009; Hong Hao <oahong@gmail.com> pidgin-fetion-0.98.4.ebuild:
   typo.
 
