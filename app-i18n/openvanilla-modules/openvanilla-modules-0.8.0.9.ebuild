@@ -5,7 +5,6 @@
 EAPI="2"
 inherit versionator
 
-#MYLANG="ja ko th vi zh_CN zh_HK zh_TW"
 MY_P=${PN}-$(replace_version_separator 3 '_')
 DESCRIPTION="Input methods modules and tables for OpenVanilla Input Method Framework"
 HOMEPAGE="http://openvanilla.org http://ucimf.googlecode.com"
@@ -23,18 +22,18 @@ S=${WORKDIR}/${MY_P}
 
 src_configure() {
 	# use_with doesn't work here.
-	local myoptions="--without-asia "
-	use linguas_ja && myoptions+="--with-jp_JP "
-	use linguas_ko && myoptions+="--with-ko_KR "
-	use linguas_th && myoptions+="--with-th_TH "
-	use linguas_vi && myoptions+="--with-vi_VN "
-	use linguas_zh_CN && myoptions+="--with-zh_CN "
-	use linguas_zh_HK && myoptions+="--with-zh_HK "
-	use linguas_zh_TW && \
-		myoptions+="--with-zh_TW --with-zh_TW_hakka --with-zh_TW_taigi "
 	econf \
-		${myoptions} \
-		--disable-dependency-tracking
+		$(useq linguas_ja && echo --with-jp_JP ) \
+		$(useq linguas_ko && echo --with-ko_KR ) \
+		$(useq linguas_th && echo --with-th_TH ) \
+		$(useq linguas_vi && echo --with-vi_VN ) \
+		$(useq linguas_zh_CN && echo --with-zh_CN ) \
+		$(useq linguas_zh_HK && echo --with-zh_HK ) \
+		$(useq linguas_zh_TW && echo --with-zh_TW ) \
+		$(useq linguas_zh_TW && echo --with-zh_TW_hakka --with-zh_TW_taigi ) \
+		--without-asia \
+		--disable-dependency-tracking \
+		--enable-fast-install
 }
 
 src_install() {
