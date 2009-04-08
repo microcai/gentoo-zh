@@ -54,6 +54,7 @@ src_prepare() {
 	sed -i -e "/TEMPLATE/ i\QMAKE_STRIP = true" client/qt4/${PN}.pro || die
 
 	autopoint || die "autopoint failed"
+	intltoolize --copy --force || die "intltoolize failed"
 	gtkdocize --copy || die "gtkdocize failed"
 	eautoreconf
 

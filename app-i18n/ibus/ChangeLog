@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Apr 2009; Yu Yuwei <acevery@gmail.com> ibus-9999.ebuild:
+  run intltoolize before configure
+
   27 Feb 2009; Hong Hao <oahong@gmail.com> ibus-9999.ebuild:
   typo
 
