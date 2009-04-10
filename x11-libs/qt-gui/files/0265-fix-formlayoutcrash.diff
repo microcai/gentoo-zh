@@ -1,0 +1,21 @@
+qt-bugs@ issue : 177767
+Trolltech task ID : 240759
+applied: no
+author: Alexis Menard <alexis.menard@trolltech.com>
+
+Fix a crash in QFormLayout when a layout is alone in a row
+Included in 4.4.4
+
+Index: src/gui/kernel/qlayoutitem.cpp
+===================================================================
+--- src/gui/kernel/qlayoutitem.cpp      (revision 910196)
++++ src/gui/kernel/qlayoutitem.cpp      (working copy)
+@@ -383,6 +383,8 @@ QSizePolicy::ControlTypes QLayoutItem::controlTypes() const
+     if (const QWidget *widget = const_cast<QLayoutItem*>(this)->widget()) {
+         return widget->sizePolicy().controlType();
+     } else if (const QLayout *layout = const_cast<QLayoutItem*>(this)->layout()) {
++        if (layout->count() == 0)
++            return QSizePolicy::DefaultType;
+         QSizePolicy::ControlTypes types;
+         for (int i = layout->count() - 1; i >= 0; --i)
+             types |= layout->itemAt(i)->controlTypes();

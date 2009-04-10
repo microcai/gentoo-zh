@@ -1,0 +1,43 @@
+qt-bugs@ issue : N227210
+Trolltech task ID : 228764
+bugs.kde.org number : 167739
+applied: no
+author: Germain Garand <germain@ebooksfrance.org>
+
+QWidgetPrivate::scrollRect doesn't account for it's rect argument
+but rather examine the whole widget surface when pondering if
+it can apply accelerated blitting, resulting in unnecessarily slow 
+and non-blitting QWidget::scroll calls.
+
+A modified version of this patch is in Qt 4.5
+
+Index: src/gui/painting/qbackingstore.cpp
+===================================================================
+--- src/gui/painting/qbackingstore.cpp	(révision 860438)
++++ src/gui/painting/qbackingstore.cpp	(copie de travail)
+@@ -523,7 +523,8 @@
+     }
+ 
+     bool overlapped = false;
+-    bool accelerateScroll = accelEnv &&  isOpaque() && !(overlapped = isOverlapped(data.crect));
++    QRect cRect = clipRect();
++    bool accelerateScroll = accelEnv &&  isOpaque() && !(overlapped = isOverlapped(rect & cRect));
+ 
+ #if defined(Q_WS_QWS)
+     QWSWindowSurface *surface;
+@@ -558,13 +559,13 @@
+ #ifdef Q_WS_QWS
+         QWSWindowSurface *surface = static_cast<QWSWindowSurface*>(wbs->windowSurface);
+         const QRegion clip = surface->clipRegion().translated(-toplevelOffset)
+-                             & clipRect();
++                             & cRect;
+         const QRect scrollRect = rect & clip.boundingRect();
+         const QRect destRect = scrollRect.translated(dx, dy)
+                                & scrollRect
+                                &  clip.boundingRect();
+ #else
+-        QRect scrollRect = rect & clipRect();
++        QRect scrollRect = rect & cRect;
+ 
+         QRect destRect = scrollRect.isValid() ? scrollRect.translated(dx,dy).intersected(scrollRect) : QRect();
+ 

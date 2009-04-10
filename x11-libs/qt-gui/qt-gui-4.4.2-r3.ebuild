@@ -1,22 +1,21 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.4.2-r1.ebuild,v 1.9 2009/02/18 19:55:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.4.2-r3.ebuild,v 1.4 2009/04/05 16:48:44 klausman Exp $
 
 EAPI="1"
 inherit eutils qt4-build
 
-DESCRIPTION="The GUI module(s) for the Qt toolkit."
+DESCRIPTION="The GUI module for the Qt toolkit"
 HOMEPAGE="http://www.trolltech.com/"
 
 LICENSE="|| ( GPL-3 GPL-2 )"
 SLOT="4"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE_INPUT_DEVICES="input_devices_wacom"
-IUSE="+accessibility cups dbus debug glib mng nas nis tiff +qt3support xinerama ${IUSE_INPUT_DEVICES}"
+IUSE="+accessibility cups +dbus debug +glib mng nas nis tiff +qt3support xinerama ${IUSE_INPUT_DEVICES}"
 
-RDEPEND="!<=x11-libs/qt-4.4.0_alpha:${SLOT}
-	media-libs/fontconfig
+RDEPEND="media-libs/fontconfig
 	>=media-libs/freetype-2
 	media-libs/jpeg
 	media-libs/libpng
@@ -46,7 +45,9 @@ tools/designer
 tools/linguist
 src/plugins/imageformats/gif
 src/plugins/imageformats/ico
-src/plugins/imageformats/jpeg"
+src/plugins/imageformats/jpeg
+src/plugins/inputmethods"
+
 QT4_EXTRACT_DIRECTORIES="
 src/tools/rcc/
 tools/shared/"
@@ -69,15 +70,35 @@ src_unpack() {
 
 	qt4-build_src_unpack
 
-	# fix for bug 253044
+	# Apply bugfix patches from qt-copy (KDE)
+	epatch "${FILESDIR}"/0195-compositing-properties.diff
+	epatch "${FILESDIR}"/0203-qtexthtmlparser-link-color.diff
+	epatch "${FILESDIR}"/0224-fast-qpixmap-fill.diff
+	epatch "${FILESDIR}"/0225-invalidate-tabbar-geometry-on-refresh.patch
+	epatch "${FILESDIR}"/0226-qtreeview-column_resize_when_needed.diff
+	epatch "${FILESDIR}"/0238-fix-qt-qttabbar-size.diff
+	epatch "${FILESDIR}"/0245-fix-randr-changes-detecting.diff
+	epatch "${FILESDIR}"/0248-fix-qwidget-scroll-slowness.diff
 	epatch "${FILESDIR}"/0254-fix-qgraphicsproxywidget-deletion-crash.diff
+	epatch "${FILESDIR}"/0255-qtreeview-selection-columns-hidden.diff
+	epatch "${FILESDIR}"/0256-fix-recursive-backingstore-sync-crash.diff
+	epatch "${FILESDIR}"/0258-windowsxpstyle-qbrush.diff
+	epatch "${FILESDIR}"/0260-fix-qgraphicswidget-deletionclearFocus.diff
+	epatch "${FILESDIR}"/0261-sync-before-reset-errorhandler.patch
+	epatch "${FILESDIR}"/0262-fix-treeview-animation-crash.diff
+	epatch "${FILESDIR}"/0263-fix-fontconfig-handling.diff
+	epatch "${FILESDIR}"/0264-fix-zero-height-qpixmap-isnull.diff
+	epatch "${FILESDIR}"/0265-fix-formlayoutcrash.diff
+	epatch "${FILESDIR}"/0266-fix-focusChain1.diff
+	epatch "${FILESDIR}"/0267-fix-focusChain2.diff
 
 	# Don't build plugins this go around, because they depend on qt3support lib
 	sed -i -e "s:CONFIG(shared:# &:g" "${S}"/tools/designer/src/src.pro
-	cd ${S}
+
+	# gentoo.tw
 	epatch ${FILESDIR}/patch/text/use-freetype-default.diff
 	#epatch ${FILESDIR}/patch/text/qt-font-choose.diff
-	epatch ${FILESDIR}/patch/text/0203-qtexthtmlparser-link-color.diff
+	#epatch ${FILESDIR}/patch/text/0203-qtexthtmlparser-link-color.diff
 	#epatch ${FILESDIR}/patch/text/qt4-fake-bold-scsi.patch
 	#epatch ${FILESDIR}/patch/text/0230-qtextcontrol-selectnextword.diff
 	epatch ${FILESDIR}/patch/text/ignore-global-advance-width-in-fots.diff
@@ -88,6 +109,7 @@ src_unpack() {
 	epatch ${FILESDIR}/patch/text/synthetic-bold-scsi.diff
 	#epatch ${FILESDIR}/patch/text/ftlcdfil-scsi.diff
 	#epatch ${FILESDIR}/patch/text/use-freetype-default-legacy-scsi.diff
+
 }
 
 src_compile() {
@@ -114,7 +136,7 @@ src_compile() {
 
 	# Explictly don't compile these packages.
 	# Emerge "qt-webkit", "qt-phonon", etc for their functionality.
-	myconf="${myconf} -no-webkit -no-phonon -no-dbus -opengl"
+	myconf="${myconf} -no-webkit -no-phonon -no-dbus -no-opengl"
 
 	qt4-build_src_compile
 }

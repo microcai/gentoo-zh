@@ -2,6 +2,30 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.11 2008/08/11 13:03:14 yngwin Exp $
 
+  10 Apr 2009; scsi <scsichen@gmail.com>
+  +files/0195-compositing-properties.diff,
+  +files/0203-qtexthtmlparser-link-color.diff,
+  +files/0224-fast-qpixmap-fill.diff,
+  +files/0225-invalidate-tabbar-geometry-on-refresh.patch,
+  +files/0226-qtreeview-column_resize_when_needed.diff,
+  +files/0238-fix-qt-qttabbar-size.diff,
+  +files/0245-fix-randr-changes-detecting.diff,
+  +files/patch/synthetic-bold-4.5.diff,
+  +files/0248-fix-qwidget-scroll-slowness.diff,
+  +files/0255-qtreeview-selection-columns-hidden.diff,
+  +files/0256-fix-recursive-backingstore-sync-crash.diff,
+  +files/0258-windowsxpstyle-qbrush.diff,
+  +files/0261-sync-before-reset-errorhandler.patch,
+  +files/0262-fix-treeview-animation-crash.diff,
+  +files/0264-fix-zero-height-qpixmap-isnull.diff, qt-gui-4.4.2-r1.ebuild,
+  +files/kde-4.5-bold.patch, +files/0263-fix-fontconfig-handling.diff,
+  +qt-gui-4.4.2-r3.ebuild, +files/patch/text/synthetic-bold-4.5.diff,
+  +files/0260-fix-qgraphicswidget-deletionclearFocus.diff,
+  +files/0265-fix-formlayoutcrash.diff, +files/0266-fix-focusChain1.diff,
+  +files/0267-fix-focusChain2.diff, +qt-gui-4.5.0.ebuild,
+  +files/hardcoded_fonts.patch, files/patch/patch/55.synthetic-bold.diff:
+  version bump
+
   25 Feb 2009; scsi <scsichen@gmail.com>
   +files/0254-fix-qgraphicsproxywidget-deletion-crash.diff,
   +qt-gui-4.4.2-r1.ebuild:

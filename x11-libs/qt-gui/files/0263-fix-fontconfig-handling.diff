@@ -1,0 +1,32 @@
+Trolltech task ID : none
+bugs.kde.org number : none
+applied: no
+author: from Trolltech (fixed in Qt 4.5)
+
+Legacy font-name mappings are also applied when fontconfig is used,
+which breaks fontconfig configuration in subtle ways (sans serif
+is mapped to helvetica for example). Avoid this legacy substitution
+when font config is used.
+
+--- src/gui/text/qfont.cpp
++++ src/gui/text/qfont.cpp
+@@ -59,6 +59,7 @@
+ 
+ #ifdef Q_WS_X11
+ #include "qx11info_x11.h"
++#include <private/qt_x11_p.h>
+ #endif
+ #ifdef Q_WS_QWS
+ #include "qscreen_qws.h"
+@@ -1781,6 +1782,11 @@ static void initFontSubst()
+     if (!fontSubst->isEmpty())
+         return;
+ 
++#if defined(Q_WS_X11) && !defined(QT_NO_FONTCONFIG)
++    if (X11->has_fontconfig)
++        return;
++#endif
++
+     for (int i=0; initTbl[i] != 0; i += 2) {
+         QStringList &list = (*fontSubst)[QString::fromLatin1(initTbl[i])];
+         list.append(QString::fromLatin1(initTbl[i+1]));

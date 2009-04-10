@@ -1,0 +1,46 @@
+Trolltech task ID : 236454
+bugs.kde.org number : 176045
+applied: no
+author: Olivier Goffart
+
+This patch makes sure no deleted items are being accessed during an animation of the treeview
+It will also be contained in the upcoming Qt snapshots
+Index: src/gui/itemviews/qtreeview.cpp
+===================================================================
+--- src/gui/itemviews/qtreeview.cpp	(revision 889029)
++++ src/gui/itemviews/qtreeview.cpp	(working copy)
+@@ -2802,10 +2802,9 @@
+     q->setState(oldState);
+ 
+     if (emitSignal) {
++        emit q->expanded(index);
+         if (animationsEnabled)
+             beginAnimatedOperation();
+-        else
+-            emit q->expanded(index);
+     }
+     if (model->canFetchMore(index))
+         model->fetchMore(index);
+@@ -2843,10 +2842,9 @@
+     q->setState(oldState);
+ 
+     if (emitSignal) {
++        emit q->collapsed(modelIndex);
+         if (animationsEnabled)
+             beginAnimatedOperation();
+-        else
+-            emit q->collapsed(modelIndex);
+     }
+ }
+ 
+@@ -2901,10 +2899,6 @@
+     animatedOperation.before = QPixmap();
+     animatedOperation.after = QPixmap();
+     q->setState(QAbstractItemView::NoState);
+-    if (animatedOperation.type == AnimatedOperation::Expand)
+-        emit q->expanded(viewItems.at(animatedOperation.item).index);
+-    else // operation == AnimatedOperation::Collapse
+-        emit q->collapsed(viewItems.at(animatedOperation.item).index);
+     q->updateGeometries();
+     viewport->update();
+ }

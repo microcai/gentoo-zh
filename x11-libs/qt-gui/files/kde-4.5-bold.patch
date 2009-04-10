@@ -1,0 +1,73 @@
+diff -Naur qt-x11-opensource-src-4.5.0.orig/src/gui/text/qfontengine_ft.cpp qt-x11-opensource-src-4.5.0/src/gui/text/qfontengine_ft.cpp
+--- qt-x11-opensource-src-4.5.0.orig/src/gui/text/qfontengine_ft.cpp	2009-02-26 10:09:23.000000000 +1300
++++ qt-x11-opensource-src-4.5.0/src/gui/text/qfontengine_ft.cpp	2009-03-29 14:23:38.624379465 +1300
+@@ -60,6 +60,7 @@
+ #include <ft2build.h>
+ #include FT_FREETYPE_H
+ #include FT_OUTLINE_H
++#include FT_SYNTHESIS_H
+ #include FT_TRUETYPE_TABLES_H
+ #include FT_TYPE1_TABLES_H
+ #include FT_GLYPH_H
+@@ -605,6 +606,7 @@
+     cache_cost = 100;
+     kerning_pairs_loaded = false;
+     transform = false;
++    embolden = false;
+     antialias = true;
+     default_load_flags = 0;
+     default_hint_style = HintNone;
+@@ -671,6 +673,9 @@
+         freetype->matrix = matrix;
+         if (fake_oblique)
+             transform = true;
++        // fake bold
++        if ((fontDef.weight == QFont::Bold) && !(face->style_flags & FT_STYLE_FLAG_BOLD))
++            embolden = true;
+     } else {
+         // copied from QFontEngineQPF
+         // ad hoc algorithm
+@@ -863,6 +868,7 @@
+ 
+     if (set->outline_drawing)
+         load_flags |= FT_LOAD_NO_BITMAP;
++    load_flags |= FT_LOAD_IGNORE_GLOBAL_ADVANCE_WIDTH;
+ 
+     if (format == Format_Mono) {
+         load_target = FT_LOAD_TARGET_MONO;
+@@ -896,6 +902,7 @@
+ 
+     if (transform)
+         load_flags |= FT_LOAD_NO_BITMAP;
++    load_flags |= FT_LOAD_IGNORE_GLOBAL_ADVANCE_WIDTH;
+ 
+     FT_Face face = freetype->face;
+     FT_Error err = FT_Load_Glyph(face, glyph, load_flags);
+@@ -915,6 +922,7 @@
+         return 0;
+ 
+     FT_GlyphSlot slot = face->glyph;
++    if (embolden) FT_GlyphSlot_Embolden(slot);
+     FT_Library library = qt_getFreetype();
+ 
+     info.xOff = TRUNC(ROUND(slot->advance.x));
+@@ -1176,6 +1184,8 @@
+     int s = 0;
+     if ((fontDef.style != QFont::StyleNormal) && !(freetype->face->style_flags & FT_STYLE_FLAG_ITALIC))
+         s = SynthesizedItalic;
++    if ((fontDef.weight == QFont::Bold) && !(freetype->face->style_flags & FT_STYLE_FLAG_BOLD))
++        s |= SynthesizedBold;
+     if (fontDef.stretch != 100 && FT_IS_SCALABLE(freetype->face))
+         s |= SynthesizedStretch;
+     return s;
+diff -Naur qt-x11-opensource-src-4.5.0.orig/src/gui/text/qfontengine_ft_p.h qt-x11-opensource-src-4.5.0/src/gui/text/qfontengine_ft_p.h
+--- qt-x11-opensource-src-4.5.0.orig/src/gui/text/qfontengine_ft_p.h	2009-02-26 10:09:23.000000000 +1300
++++ qt-x11-opensource-src-4.5.0/src/gui/text/qfontengine_ft_p.h	2009-03-29 14:23:38.624379465 +1300
+@@ -288,6 +288,7 @@
+ 
+     bool antialias;
+     bool transform;
++    bool embolden;
+     SubpixelAntialiasingType subpixelType;
+     int lcdFilterType;
+     bool canUploadGlyphsToServer;
