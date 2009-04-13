@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -29,11 +29,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/gcin-FF3_gtkim.patch"
-	# apply gcc34 patch
-	#epatch ${FILESDIR}/gcin-1.0.9-gcc344.patch
+	
 	# apply qt im-module patch
 	#
-	if use=immqt || immqt-bc; then
+	if use immqt || use immqt-bc; then
 		epatch "${FILESDIR}/gcin-qtimm_fix-1.3.5_pre1.patch"
 	fi
 }

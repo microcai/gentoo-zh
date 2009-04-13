@@ -30,10 +30,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	# apply gcc34 patch
-	#epatch ${FILESDIR}/gcin-1.0.9-gcc344.patch
-	# apply qt im-module patch
-	#
-	if use=immqt || immqt-bc; then
+	if use immqt || use immqt-bc; then
 		epatch "${FILESDIR}/gcin-1.4.4-qt3_fix.patch"
 		epatch "${FILESDIR}/gcin-1.4.4-qt4_fix.patch"
 	fi
