@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/gcin
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  13 Apr 2009; scsi <scsichen@gmail.com> files/gcin-1.4.4-qt4_fix.patch,
+  +gcin-1.4.5_pre2-r1.ebuild, +files/gcin-1.4.5.pre2-qt4_fix.patch:
+  fix qt4 support not compiled
+
   02 Mar 2009; scsi <scsichen@gmail.com> +gcin-1.4.5_pre2.ebuild:
   version bump
 
