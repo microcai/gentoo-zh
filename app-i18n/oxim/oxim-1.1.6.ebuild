@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 inherit eutils
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86  amd64"
 IUSE="nls gtk-im qt-im qt4 bimsphone chewing no-setup-tool"
-
+RESTRICT="mirror"
 DEPEND="|| ( x11-libs/libXft virtual/x11 )
     dev-util/pkgconfig
     !app-i18n/oxim-cvs
