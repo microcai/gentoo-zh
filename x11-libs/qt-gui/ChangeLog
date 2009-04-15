@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.11 2008/08/11 13:03:14 yngwin Exp $
 
+  15 Apr 2009; scsi <scsichen@gmail.com> +qt-gui-4.5.0-r1.ebuild:
+  version bump
+
   10 Apr 2009; scsi <scsichen@gmail.com>
   +files/0195-compositing-properties.diff,
   +files/0203-qtexthtmlparser-link-color.diff,
