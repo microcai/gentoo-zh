@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -56,7 +56,7 @@ src_install()
 }
 resetplugin()
 {
-	use firefox && /usr/lib/mozilla-firefox/regxpcom
+	use firefox && /usr/lib/xulrunner/regxpcom
 }
 
 pkg_postinst()

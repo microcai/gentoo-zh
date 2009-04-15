@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pcmanx-gtk2
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  15 Apr 2009; scsi <scsichen@gmail.com> pcmanx-gtk2-0.3.8-r1.ebuild:
+  fix regxpcom path
 
   18 Aug 2008; scsi <scsichen@gmail.com> pcmanx-gtk2-0.3.8-r1.ebuild:
   fix wrong keyword fireofx to firefox
