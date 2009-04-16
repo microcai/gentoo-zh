@@ -1,8 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $
+# $Header: $
 
-inherit libtool
+EAPI="2"
+
+inherit eutils #libtool
 
 DESCRIPTION="fcitx ported to scim platform"
 HOMEPAGE="http://www.fcitx.org/"
@@ -15,31 +17,23 @@ IUSE="nls"
 
 RESTRICT="primaryuri"
 
-DEPEND="|| ( >=app-i18n/scim-1.2 >=app-i18n/scim-cvs-1.2 )
+RDEPEND="|| ( >=app-i18n/scim-1.2 >=app-i18n/scim-cvs-1.2 )
 	virtual/libintl"
-DEPEND="${DEPEND}
-	sys-devel/gettext
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
 
-MAKEOPTS=""
-S="${WORKDIR}/fcitx/"
+S=${WORKDIR}/${PN#scim-}
+MAKEOPTS="${MAKEOPTS} -j1"
 
-src_unpack() {
-	unpack ${A}
-
-	elibtoolize
-}
-
-src_compile() {
-	econf \
-		--disable-static \
-		--disable-dependency-tracking || die "econf failed"
-	emake || die "emake failed"
+src_prepare() {
+	# http://gentoo-china-overlay.googlecode.com/issues/attachment?aid=5755634360147105360&name=scim_fcitx.patch
+	epatch "${FILESDIR}"/${PN}-missing-headers.patch
+	#elibtoolize
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-
+	emake DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS THANKS README
 }
 

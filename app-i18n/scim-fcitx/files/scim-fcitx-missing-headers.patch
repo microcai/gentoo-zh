@@ -1,0 +1,33 @@
+diff -Naur fcitx/src/ime.cpp fcitx_new/src/ime.cpp
+--- fcitx/src/ime.cpp	2005-05-21 23:21:48.000000000 +0800
++++ fcitx_new/src/ime.cpp	2009-04-15 08:49:10.000000000 +0800
+@@ -16,6 +16,7 @@
+ #include "tools.h"
+ #include "sp.h"
+ #include "qw.h"
++#include "string.h"
+ 
+ 
+ int             iCursorPos;
+diff -Naur fcitx/src/scim_fcitx_imengine.cpp fcitx_new/src/scim_fcitx_imengine.cpp
+--- fcitx/src/scim_fcitx_imengine.cpp	2005-05-20 22:41:12.000000000 +0800
++++ fcitx_new/src/scim_fcitx_imengine.cpp	2009-04-15 08:49:28.000000000 +0800
+@@ -39,6 +39,7 @@
+ #include "scim_fcitx_imengine.h"
+ #include "main.h"
+ #include "ime.h"
++#include "string.h"
+ 
+ #define scim_module_init fcitx_LTX_scim_module_init
+ #define scim_module_exit fcitx_LTX_scim_module_exit
+diff -Naur fcitx/src/sp.cpp fcitx_new/src/sp.cpp
+--- fcitx/src/sp.cpp	2005-05-09 00:11:29.000000000 +0800
++++ fcitx_new/src/sp.cpp	2009-04-15 08:49:51.000000000 +0800
+@@ -16,6 +16,7 @@
+ #include "sp.h"
+ #include "pyMapTable.h"
+ #include "pyParser.h"
++#include "string.h"
+ 
+ 
+ SP_C            SPMap_C[] = {
