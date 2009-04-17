@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
@@ -16,16 +16,10 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-RDEPEND=">=x11-libs/qt-4.3.2
-	 >=app-text/poppler-0.8.0
-	 >=app-text/poppler-bindings-0.8.0
+RDEPEND=">=x11-libs/qt-4.5.0
+	 >=virtual/poppler-0.10.6
+	 >=virtual/poppler-qt4-0.10.6
 	 >=app-text/hunspell-1.2.2"
-pkg_setup() {
-	if  ! built_with_use "app-text/poppler-bindings" qt4 ;then
-		eerror "You should build app-text/poppler-binding with \"qt4\" USE flag."
-		die "app-text/poppler-bindings build with \"-qt4\" USE"
-	fi
-}
 
 src_compile() {
 	qmake || die "TeXworks qmake failed!"
