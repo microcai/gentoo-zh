@@ -37,7 +37,8 @@ RDEPEND="${DEP}
 
 DEPEND="${DEP}
 	>=dev-util/intltool-0.22
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	dev-libs/libsigc++"
 
 src_unpack() {
 	unpack ${A}
