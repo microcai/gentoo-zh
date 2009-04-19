@@ -12,5 +12,7 @@
 <use>
 	<flag name='cangjie3'>Build CangJie3 Engine</flag>
 	<flag name='cangjie5'>Build CangJie5 Engine</flag>
+	<flag name='quick3'>Build Quick3 Engine</flag>
+	<flag name='quick5'>Build Quick5 Engine</flag>
 </use>
 </pkgmetadata>
