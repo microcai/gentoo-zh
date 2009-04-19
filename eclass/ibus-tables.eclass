@@ -43,6 +43,7 @@ ibus-tables_src_unpack() {
 
 	if [[ ${PV} == "9999" ]] ; then
 		git_src_unpack
+		cd ${S}
 		# hmm...eauto{,re}conf/econf dies on itself.
 		eautoreconf || die "fail to run autoreconf"
 	else
