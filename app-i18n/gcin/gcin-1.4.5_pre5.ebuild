@@ -13,7 +13,7 @@ SRC_URI="http://cle.linux.org.tw/gcin/download/${P/_/.}.tar.bz2
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~hppa"
-IUSE="qt3 filter-nobopomofo chinese-sound anthy qt4"
+IUSE="qt3 filter-nobopomofo chinese-sound +anthy qt4"
 
 # XXX: Missing QT4 dependencies.
 DEPEND=">=x11-libs/gtk+-2
