@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  20 Apr 2009; Hong Hao <oahong@gmail.com> -libucimf-2.2.8.ebuild,
+  +libucimf-2.2.8-r1.ebuild, libucimf-9999.ebuild:
+  Fix missing dependency: dialog is required to run ucimf_start.
+
   26 Mar 2009; Hong Hao <oahong@gmail.com> libucimf-2.2.8.ebuild,
   libucimf-9999.ebuild:
   Fix commit r186.

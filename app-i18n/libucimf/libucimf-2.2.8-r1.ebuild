@@ -14,9 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DEPEND="sys-libs/zlib
-	media-libs/freetype:2"
-RDEPEND="${DEPEND}"
+DEPEND="media-libs/freetype:2"
+RDEPEND="${DEPEND}
+	dev-util/dialog"
 
 pkg_setup() {
 	# Make sure utmp group exists.

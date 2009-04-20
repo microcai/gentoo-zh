@@ -16,10 +16,9 @@ SLOT="0"
 KEYWORDS=""
 IUSE="debug doc"
 
-# FIXME: sys-libs/zlib
 DEPEND="media-libs/freetype:2"
-RDEPEND="${DEPEND}"
-
+RDEPEND="${DEPEND}
+	dev-util/dialog"
 
 pkg_setup() {
 	# Make sure utmp group exists.
