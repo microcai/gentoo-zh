@@ -4,27 +4,31 @@
 
 EAPI="2"
 
-DESCRIPTION="apvlv is a PDF Viewer which behavior like Vim"
+WANT_AUTOMAKE="1.7"
+ESVN_REPO_URI="http://apvlv.googlecode.com/svn/trunk"
+inherit autotools subversion toolchain-funcs
+
+DESCRIPTION="a PDF Viewer which behaviors like Vim"
 HOMEPAGE="http://code.google.com/p/apvlv/"
-SRC_URI="http://apvlv.googlecode.com/files/${P}.tar.gz"
+SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS=""
 IUSE="debug"
-
-RESTICT="primaryuri"
 
 RDEPEND=">=x11-libs/gtk+-2.6
 	>=app-text/poppler-0.5.4
 	>=app-text/poppler-bindings-0.5.4[cairo,gtk]"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0"
-#	app-text/dvipdfm
-#	virtual/latex-base
+
+src_prepare() {
+	eautoreconf
+}
 
 src_configure() {
-	econf \
+	LD="$(tc-getLD)" econf \
 		$(useq debug && echo --enable-debug) \
 		--with-docdir="/usr/share/doc/${P}" \
 		--disable-dependency-tracking
