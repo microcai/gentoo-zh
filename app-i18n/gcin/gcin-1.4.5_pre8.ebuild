@@ -51,11 +51,6 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 
-	if use xim-select ; then
-		insinto /etc/xim-select
-		doins "${FILESDIR}"/extras/gcin || die
-	fi
-
 	if use filter-nobopomofo ; then
 		insinto /usr/share/pixmaps/gcin
 		doins "${FILESDIR}"/nobopomofo/{SS1135_ST,SS1208_DT}.jpg || die
