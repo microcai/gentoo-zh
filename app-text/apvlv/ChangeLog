@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  23 Apr 2009; Hong Hao <oahong@gmail.com> apvlv-9999:
+  Fix dependencies for Gentoo Bug #264230
+
   21 Apr 2009; Hong Hao <oahong@gmail.com> apvlv-0.0.4.6, apvlv-0.0.5.3,
   apvlv-9999:
   Only keep live ebuild for apvlv.
