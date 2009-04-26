@@ -1,0 +1,9 @@
+# ChangeLog for app-text/foxitreader
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  26 Apr 2009; Hong Hao <oahong@gmail.com> +foxitreader-1.0.1.ebuild,
+  +files/foxit-reader.desktop, +files/fx-icon.png, +metadata.xml:
+  Initial import for issue 44. Ebuild based upon submissions by
+  mygarfield7<hjhee@163.com>
+

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=FoxitReader
+GenericName=Foxit PDF Reader
+Comment=Read PDF Document
+Exec=foxitreader %U
+Icon=fx-icon
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Office;Viewer;
+Name[zh_CN]=福昕阅读器
+Comment[zh_CN]=一个小巧的 PDF 文档阅读器
+MimeType=application/pdf;application/x-bzpdf;application/x-gzpdf;
