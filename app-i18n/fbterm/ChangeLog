@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Apr 2009; Hong Hao <oahong@gmail.com> +fbterm-1.5.ebuild:
+  Add fbterm-1.5
+
   18 Mar 2009; Hong Hao <oahong@gmail.com> fbterm-1.4.ebuild:
   Fix IUSE, remove "inherit base" statement.
 
