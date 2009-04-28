@@ -12,8 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DEPEND="app-i18n/libucimf
-	media-libs/fontconfig"
+DEPEND="app-i18n/libucimf"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
