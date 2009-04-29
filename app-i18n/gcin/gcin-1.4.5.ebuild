@@ -32,7 +32,8 @@ S=${WORKDIR}/${P/_/.}
 
 src_prepare() {
 	epatch "${FILESDIR}/gcin-1.4.4-qt3_fix.patch" \
-		"${FILESDIR}/gcin-1.4.4-qt4_fix.patch"
+		"${FILESDIR}/gcin-1.4.4-qt4_fix.patch" \
+		"${FILESDIR}/anthy.diff"
 }
 
 src_configure() {
@@ -50,11 +51,6 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-
-	if use xim-select ; then
-		insinto /etc/xim-select
-		doins "${FILESDIR}"/extras/gcin || die
-	fi
 
 	if use filter-nobopomofo ; then
 		insinto /usr/share/pixmaps/gcin
