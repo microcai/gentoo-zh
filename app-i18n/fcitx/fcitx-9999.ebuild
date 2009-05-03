@@ -37,10 +37,10 @@ src_unpack() {
 	# change homepage and version naming scheme
 	sed -i \
 		-e "s#\(\([[:digit:]]\.\)\+[[:digit:]]\-*\)[[:alnum:]]*#\1SVN-$(date +%y%m%d)#"
-		configure.in
+		configure.in || die "sed failed 1"
 	sed -i \
 		-e "s#http://www\.fcitx\.org#${HOMEPAGE}#" \
-		src/InputWindow.c
+		src/InputWindow.c || die "sed failed 2"
 	eautoreconf
 }
 
@@ -57,7 +57,7 @@ src_install() {
 	# Remove empty directory
 	#rmdir "${D}"/usr/share/fcitx/xpm
 
-	rm -rf "${D}"/usr/share/fcitx/doc/
+	rm -rf "${D}"/usr/share/fcitx/doc/ || die "failed to rm docs"
 	dodoc doc/pinyin.txt doc/cjkvinput.txt
 	dohtml doc/wb_fh.htm
 }
