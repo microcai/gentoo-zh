@@ -6,7 +6,7 @@
 MY_P=${P/_p/-svn-}
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://fcitx.googlecode.com"
-SRC_URI="http://gentoo-china-overlay.googlecode.com/files/${MY_P}.tar.gz"
+SRC_URI="http://gentoo-china-overlay.googlecode.com/svn/distfiles/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

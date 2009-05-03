@@ -14,13 +14,13 @@ SRC_URI="http://gentoo-china-overlay.googlecode.com/svn/distfiles/zhengma.tbz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="+xft" # zhengma
+IUSE="" # zhengma
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXpm
 	x11-libs/libXrender
 	x11-libs/libXt
-	xft? ( x11-libs/libXft )"
+	x11-libs/libXft"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -36,7 +36,7 @@ src_unpack() {
 
 	# change homepage and version naming scheme
 	sed -i \
-		-e "s#\(\([[:digit:]]\.\)\+[[:digit:]]\-*\)[[:alnum:]]*#\1-SVN-r${ESVN_WC_REVISION}#" \
+		-e "s#\(\([[:digit:]]\.\)\+[[:digit:]]\-*\)[[:alnum:]]*#\1SVN-$(date +%y%m%d)#"
 		configure.in
 	sed -i \
 		-e "s#http://www\.fcitx\.org#${HOMEPAGE}#" \
