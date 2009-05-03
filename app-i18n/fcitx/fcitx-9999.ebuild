@@ -36,7 +36,7 @@ src_unpack() {
 
 	# change homepage and version naming scheme
 	sed -i \
-		-e "s#\(\([[:digit:]]\.\)\+[[:digit:]]\-*\)[[:alnum:]]*#\1SVN-$(date +%y%m%d)#"
+		-e "s#\(\([[:digit:]]\.\)\+[[:digit:]]\-*\)[[:alnum:]]*#\1SVN-$(date +%y%m%d)#" \
 		configure.in || die "sed failed 1"
 	sed -i \
 		-e "s#http://www\.fcitx\.org#${HOMEPAGE}#" \
@@ -45,7 +45,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_enable xft)
+	econf --enable-xft
 	emake || die "emake failed"
 }
 
