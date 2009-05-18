@@ -2,6 +2,15 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 May 2009; Yu Yuwei <acevery@gmail.com>
+  +files/freetype-2.2.1-memcpy-fix.patch,
+  +files/freetype-2.2.1-subpixel-disable-quantization.diff,
+  -freetype-2.3.6.ebuild, freetype-2.3.6-r1.ebuild, -freetype-2.3.7.ebuild,
+  freetype-2.3.7-r1.ebuild, -freetype-2.3.9.ebuild,
+  +freetype-2.3.9-r1.ebuild, +files/freetype-2.3.9-CVE-2009-0946.patch,
+  metadata.xml:
+  port ebuild and patches from devnull overlay
+
   17 Mar 2009; Zhang Le <r0bertz@gentoo.org> +freetype-2.3.9.ebuild:
   added freetype-2.3.9
 
