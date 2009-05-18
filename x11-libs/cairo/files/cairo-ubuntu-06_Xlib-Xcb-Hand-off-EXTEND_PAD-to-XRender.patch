@@ -1,0 +1,31 @@
+diff -Naur cairo-1.8.6.orig/src/cairo-xcb-surface.c cairo-1.8.6/src/cairo-xcb-surface.c
+--- cairo-1.8.6.orig/src/cairo-xcb-surface.c	Wed Feb 18 15:55:39 2009
++++ cairo-1.8.6/src/cairo-xcb-surface.c	Wed Feb 18 15:59:24 2009
+@@ -844,8 +844,11 @@
+     case CAIRO_EXTEND_REPEAT:
+ 	_cairo_xcb_surface_set_repeat (surface, 1);
+ 	break;
+-    case CAIRO_EXTEND_REFLECT:
+     case CAIRO_EXTEND_PAD:
++	_cairo_xcb_surface_set_repeat (surface, 2);
++	break;
++    case CAIRO_EXTEND_REFLECT:
++    default:
+ 	return CAIRO_INT_STATUS_UNSUPPORTED;
+     }
+ 
+diff -Naur cairo-1.8.6.orig/src/cairo-xlib-surface.c cairo-1.8.6/src/cairo-xlib-surface.c
+--- cairo-1.8.6.orig/src/cairo-xlib-surface.c	Wed Feb 18 15:55:39 2009
++++ cairo-1.8.6/src/cairo-xlib-surface.c	Wed Feb 18 15:59:24 2009
+@@ -1424,8 +1424,10 @@
+     case CAIRO_EXTEND_REPEAT:
+ 	_cairo_xlib_surface_set_repeat (surface, RepeatNormal);
+ 	break;
+-    case CAIRO_EXTEND_REFLECT:
+     case CAIRO_EXTEND_PAD:
++	_cairo_xlib_surface_set_repeat (surface, RepeatPad);
++	break;
++    case CAIRO_EXTEND_REFLECT:
+     default:
+ 	return CAIRO_INT_STATUS_UNSUPPORTED;
+     }

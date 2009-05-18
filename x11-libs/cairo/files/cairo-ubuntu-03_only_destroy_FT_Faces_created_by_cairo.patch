@@ -1,0 +1,13 @@
+diff -Naur cairo-1.8.6.orig/src/cairo-ft-font.c cairo-1.8.6/src/cairo-ft-font.c
+--- cairo-1.8.6.orig/src/cairo-ft-font.c	Wed Feb 18 15:50:16 2009
++++ cairo-1.8.6/src/cairo-ft-font.c	Wed Feb 18 15:52:15 2009
+@@ -528,7 +528,8 @@
+ {
+     cairo_ft_unscaled_font_t *unscaled = entry;
+ 
+-    return (unscaled->lock_count == 0 && unscaled->face);
++    return (unscaled->lock_count == 0 &&
++	    unscaled->face && !unscaled->from_face);
+ }
+ 
+ /* Ensures that an unscaled font has a face object. If we exceed

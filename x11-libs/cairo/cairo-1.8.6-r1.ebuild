@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="1"
+#EAPI="2"
 
 inherit eutils flag-o-matic libtool
 
@@ -12,15 +12,14 @@ SRC_URI="http://cairographics.org/releases/${P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="debug directfb doc glitz +newspr opengl svg X xcb"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="cleartype debug directfb doc glitz opengl svg ubuntu X xcb"
 
 # Test causes a circular depend on gtk+... since gtk+ needs cairo but test needs gtk+ so we need to block it
 RESTRICT="test"
 
 RDEPEND="media-libs/fontconfig
-		newspr? ( >=media-libs/freetype-2.3.5-r2 )
-		!newspr? ( >=media-libs/freetype-2.1.9 )
+	>=media-libs/freetype-2.1.9
 	sys-libs/zlib
 	media-libs/libpng
 	>=x11-libs/pixman-0.12.0
@@ -33,6 +32,13 @@ RDEPEND="media-libs/fontconfig
 		x11-libs/libXft )
 	xcb? (	>=x11-libs/libxcb-0.92
 		x11-libs/xcb-util )"
+
+#   ubuntu? ( >=media-libs/freetype-2.1.9[-cleartype] )
+#   cleartype? ( >=media-libs/freetype-2.1.9[-ubuntu] )
+
+#       ubuntu? ( x11-libs/libXft[-cleartype] )
+#       cleartype? ( x11-libs/libXft[-ubuntu] )
+
 #	test? (
 #	pdf test
 #	x11-libs/pango
@@ -51,19 +57,16 @@ DEPEND="${RDEPEND}
 	X? ( x11-proto/renderproto )
 	xcb? ( x11-proto/xcb-proto )"
 
-#pkg_setup() {
+pkg_setup() {
 #	if ! built_with_use app-text/poppler-bindings gtk ; then
 #		eerror 'poppler-bindings with gtk is required for the pdf backend'
 #		die 'poppler-bindings built without gtk support'
 #	fi
-#}
 
-pkg_setup () {
-	if use newspr && \
-		! built_with_use --missing false x11-libs/libXft newspr; then
-		eerror "You need to rebuild libXft with newspr USE enabled"
-		eerror "before you can compile cairo with newspr."
-		die "Please rebuild libXft with newspr enabled."
+	if use cleartype && use ubuntu; then
+		eerror "The cleartype and ubuntu useflags are mutually exclusive,"
+		eerror "you must disable one of them."
+		die "Either disable the cleartype or the ubuntu useflag."
 	fi
 }
 
@@ -71,10 +74,18 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	if use newspr; then
-		epatch "${FILESDIR}"/${PN}-02_no-private-symbol-export.patch
-		epatch "${FILESDIR}"/${PN}-04_lcd_filter.patch
-		epatch "${FILESDIR}"/${PN}-05_respect-fontconfig.patch
+	epatch "${FILESDIR}"/${PN}-respect-fontconfig.patch
+
+	epatch "${FILESDIR}"/${PN}-1.8.6-status-return-fix.patch
+
+	if use cleartype; then
+		# ClearType-like patches applied by ArchLinux
+		epatch "${FILESDIR}"/${PN}-1.2.4-lcd-cleartype-like.diff
+	elif use ubuntu; then
+		epatch "${FILESDIR}"/${PN}-ubuntu-02_no-private-symbol-export.patch
+		epatch "${FILESDIR}"/${PN}-ubuntu-03_only_destroy_FT_Faces_created_by_cairo.patch
+		epatch "${FILESDIR}"/${PN}-ubuntu-04_lcd_filter.patch
+		epatch "${FILESDIR}"/${PN}-ubuntu-06_Xlib-Xcb-Hand-off-EXTEND_PAD-to-XRender.patch
 	fi
 
 	# We need to run elibtoolize to ensure correct so versioning on FreeBSD
@@ -93,7 +104,7 @@ src_compile() {
 		$(use_enable directfb) $(use_enable xcb) \
 		$(use_enable svg) $(use_enable glitz) $(use_enable X xlib-xrender) \
 		$(use_enable debug test-surfaces) --enable-pdf  --enable-png \
-		--enable-freetype --enable-ps \
+		--enable-ft --enable-ps \
 		|| die "configure failed"
 
 	emake || die "compile failed"
@@ -114,7 +125,7 @@ pkg_postinst() {
 		ewarn "http://lists.freedesktop.org/archives/xcb/2008-December/004139.html"
 	fi
 	echo
-	elog "DO NOT report bugs to Gentoo's bugzilla"
-	elog "See http://forums.gentoo.org/viewtopic-t-511382.html for support topic on Gentoo forums."
+	ewarn "DO NOT report bugs to Gentoo's bugzilla"
+	ewarn "See http://forums.gentoo.org/viewtopic-t-511382.html for support topic on Gentoo forums."
 	echo
 }

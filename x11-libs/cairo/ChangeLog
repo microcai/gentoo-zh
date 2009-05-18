@@ -2,6 +2,16 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 May 2009; Yu Yuwei <acevery@gmail.com>
+  +files/cairo-1.2.4-lcd-cleartype-like.diff, -cairo-1.8.6.ebuild,
+  +cairo-1.8.6-r1.ebuild, +files/cairo-1.8.6-status-return-fix.patch,
+  +files/cairo-ubuntu-02_no-private-symbol-export.patch,
+  +files/cairo-ubuntu-03_only_destroy_FT_Faces_created_by_cairo.patch,
+  +files/cairo-ubuntu-04_lcd_filter.patch,
+  +files/cairo-ubuntu-06_Xlib-Xcb-Hand-off-EXTEND_PAD-to-XRender.patch,
+  +files/cairo-respect-fontconfig.patch, metadata.xml:
+  port ebuild and patches from devnull overlay
+
   05 Jan 2009; Hong Hao <oahong@gmail.com> cairo-1.4.12.ebuild,
   cairo-1.4.14.ebuild, cairo-1.6.4.ebuild, cairo-1.6.4-r1.ebuild,
   cairo-1.8.0.ebuild, cairo-1.8.4-r1.ebuild, cairo-1.8.6.ebuild:

@@ -1,0 +1,22 @@
+From efa9e1088cbf1b5331cc0bab3348520f3b91ae4b Mon Sep 17 00:00:00 2001
+From: M Joonas Pihlaja <jpihlaja@cc.helsinki.fi>
+Date: Thu, 13 Nov 2008 10:11:12 +0000
+Subject: [clip] Fix uninitialised status return in _cairo_clip_intersect_mask() for empty extents.
+
+This fixes the clip-all test case crashing for me.
+---
+diff --git a/src/cairo-clip.c b/src/cairo-clip.c
+index 5bbffd7..726896e 100644
+--- a/src/cairo-clip.c
++++ b/src/cairo-clip.c
+@@ -423,7 +423,7 @@ _cairo_clip_intersect_mask (cairo_clip_t      *clip,
+     cairo_box_t extents;
+     cairo_rectangle_int_t surface_rect, target_rect;
+     cairo_surface_t *surface = NULL;
+-    cairo_status_t status;
++    cairo_status_t status = CAIRO_STATUS_SUCCESS;
+ 
+     if (clip->all_clipped)
+ 	return CAIRO_STATUS_SUCCESS;
+--
+cgit v0.8.2
