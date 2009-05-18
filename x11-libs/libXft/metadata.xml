@@ -8,7 +8,8 @@
 </maintainer>
 <longdescription>X.Org Xft library.</longdescription>
 <use>
-  <flag name='newspr'>Enable Freetype subpixel font rendering</flag>
+  <flag name='cleartype'>Enable Freetype subpixel font rendering</flag>
+  <flag name='ubuntu'>Use Freetype subpixel rendering patch from Ubuntu</flag>
 </use>
 </pkgmetadata>
 

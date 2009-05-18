@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libXft
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  18 May 2009; Yu Yuwei <acevery@gmail.com>
+  +files/libXft-2.1.10-lcd-cleartype.diff,
+  +files/libXft-ubuntu-002_embeddedbitmap_property.patch,
+  +files/libXft-ubuntu-003_lcd-filter-3.patch, metadata.xml:
+  port ebuild and patches from devnull overlay
 
   24 Jul 2008; Yu Yuwei <acevery@gmail.com> -libXft-2.1.12.ebuild,
   +libXft-2.1.13.ebuild:
