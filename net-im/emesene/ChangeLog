@@ -1,6 +1,11 @@
 # ChangeLog for net-im/emesene
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  19 May 2009; Yu Yuwei <acevery@gmail.com>
+  +files/emesene-r1616-msnoim.patch, -emesene-9999.ebuild,
+  +emesene-9999-r1.ebuild:
+  add uuid patch for python-2.6, see ticket 4372
 
   30 Jun 2008; Yu Yuwei <acevery@gmail.com>
   -files/emesene-r1382-soap-get.patch, emesene-9999.ebuild:
