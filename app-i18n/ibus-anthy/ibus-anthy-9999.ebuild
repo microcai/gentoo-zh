@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI="2"
+
 NEED_PYTHON="2.5"
 EGIT_REPO_URI="git://github.com/phuang/${PN}.git"
 inherit autotools git python
@@ -23,8 +25,7 @@ DEPEND="app-i18n/anthy
 RDEPEND=">=app-i18n/ibus-1.0
 	app-i18n/anthy"
 
-src_unpack() {
-	git_src_unpack
+src_prepare() {
 	autopoint || die "failed to run autopoint"
 	eautoreconf
 }
