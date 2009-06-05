@@ -1,0 +1,13 @@
+Index: gnome-control-center-2.24.0.1/libslab/directory-tile.c
+===================================================================
+--- gnome-control-center-2.24.0.1.orig/libslab/directory-tile.c
++++ gnome-control-center-2.24.0.1/libslab/directory-tile.c
+@@ -623,7 +623,7 @@ static void
+ disown_spawned_child (gpointer user_data)
+ {
+ 	setsid  ();
+-	setpgrp ();
++	setpgid (0,0);
+ }
+ 
+ static void

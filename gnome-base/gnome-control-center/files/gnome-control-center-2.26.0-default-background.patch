@@ -1,0 +1,174 @@
+diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN gnome-control-center-2.26.0.orig/capplets/appearance/appearance-desktop.c gnome-control-center-2.26.0/capplets/appearance/appearance-desktop.c
+--- gnome-control-center-2.26.0.orig/capplets/appearance/appearance-desktop.c	2008-11-04 11:09:46.000000000 -0500
++++ gnome-control-center-2.26.0/capplets/appearance/appearance-desktop.c	2009-04-24 16:01:30.000000000 -0400
+@@ -32,6 +32,11 @@
+ #include <libgnomeui/gnome-desktop-thumbnail.h>
+ #include <libgnomeui/gnome-bg.h>
+ 
++#ifdef HAVE_POLKIT
++#include <dbus/dbus-glib.h>
++#include <polkit-gnome/polkit-gnome.h>
++#endif /* HAVE_POLKIT */
++
+ enum {
+   TARGET_URI_LIST,
+   TARGET_BGIMAGE
+@@ -988,12 +993,65 @@ wp_select_after_realize (GtkWidget *widg
+   select_item (data, item, TRUE);
+ }
+ 
++#ifdef HAVE_POLKIT
++static void
++set_background (GtkAction *action, gpointer data)
++{
++  AppearanceData *adata = (AppearanceData *)data;
++  DBusGProxy *proxy;
++  DBusGConnection *connection;
++  GError *error;
++  char *keys[7] = {
++    "/desktop/gnome/background/picture_filename",
++    "/desktop/gnome/background/picture_opacity",
++    "/desktop/gnome/background/picture_options",
++    "/desktop/gnome/background/color_shading_type",
++    "/desktop/gnome/background/primary_color",
++    "/desktop/gnome/background/secondary_color",
++    NULL
++  };
++
++  gconf_client_suggest_sync (adata->client, NULL);
++
++  error = NULL;
++  connection = dbus_g_bus_get (DBUS_BUS_SYSTEM, &error);
++  if (error != NULL) {
++    g_warning ("failed to get system bus connection: %s", error->message);
++    g_error_free (error);
++    return;
++  }
++
++  proxy = dbus_g_proxy_new_for_name (connection,
++                                     "org.gnome.GConf.Defaults",
++                                     "/",
++                                     "org.gnome.GConf.Defaults");
++  if (proxy == NULL) {
++    g_warning ("Cannot connect to defaults mechanism");
++    return;
++  }
++
++  dbus_g_proxy_call (proxy, "SetSystem",
++                     &error,
++                     G_TYPE_STRV, keys,
++                     G_TYPE_STRV, NULL,
++                     G_TYPE_INVALID,
++                     G_TYPE_INVALID);
++
++  g_object_unref (proxy);
++}
++#endif /* HAVE_POLKIT */
++
+ void
+ desktop_init (AppearanceData *data,
+ 	      const gchar **uris)
+ {
+   GtkWidget *add_button;
+   GtkCellRenderer *cr;
++#ifdef HAVE_POLKIT
++  PolKitAction *pk_action;
++  PolKitGnomeAction *action;
++  GtkWidget *widget, *box, *button;
++#endif /* HAVE_POLKIT */
+ 
+   g_object_set (gtk_settings_get_default (), "gtk-tooltip-timeout", 500, NULL);
+ 
+@@ -1114,6 +1172,26 @@ desktop_init (AppearanceData *data,
+   /* create the file selector later to save time on startup */
+   data->wp_filesel = NULL;
+ 
++#ifdef HAVE_POLKIT
++  widget = glade_xml_get_widget (data->xml, "background_vbox");
++  box = gtk_hbox_new (FALSE, 0);
++  gtk_box_pack_end (GTK_BOX (widget), box, FALSE, FALSE, 0);
++ 
++  pk_action = polkit_action_new ();
++  polkit_action_set_action_id (pk_action, "org.gnome.gconf.defaults.set-default-background");
++ 
++  action = polkit_gnome_action_new_default ("set-system", 
++                                            pk_action,
++                                            _("Make Default"),
++                                            _("Set the current background as the system-wide default"));
++  g_object_set (action, "no-visible", FALSE, NULL);
++          
++  polkit_action_unref (pk_action);
++  button = polkit_gnome_action_create_button (action);
++  gtk_box_pack_end (GTK_BOX (box), button, FALSE, FALSE, 0);
++
++  g_signal_connect (action, "activate", G_CALLBACK (set_background), data);
++#endif /* HAVE_POLKIT */
+ }
+ 
+ void
+diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN gnome-control-center-2.26.0.orig/capplets/appearance/Makefile.am gnome-control-center-2.26.0/capplets/appearance/Makefile.am
+--- gnome-control-center-2.26.0.orig/capplets/appearance/Makefile.am	2009-01-27 07:48:42.000000000 -0500
++++ gnome-control-center-2.26.0/capplets/appearance/Makefile.am	2009-04-24 15:53:58.000000000 -0400
+@@ -44,7 +44,8 @@ gnome_appearance_properties_LDADD = \
+ 	$(top_builddir)/capplets/common/libcommon.la \
+ 	$(GNOMECC_CAPPLETS_LIBS) \
+ 	$(FONT_CAPPLET_LIBS) \
+-	$(METACITY_LIBS)
++	$(METACITY_LIBS) \
++	$(POLKIT_GNOME_LIBS) 
+ gnome_appearance_properties_LDFLAGS = -export-dynamic
+ 
+ gladedir = $(pkgdatadir)/glade
+@@ -55,6 +56,7 @@ INCLUDES = \
+ 	$(METACITY_CFLAGS) \
+ 	$(GNOMECC_CAPPLETS_CFLAGS) \
+ 	$(FONT_CAPPLET_CFLAGS) \
++	$(POLKIT_GNOME_CFLAGS) \
+ 	-DGNOMELOCALEDIR="\"$(datadir)/locale\"" \
+ 	-DGNOMECC_DATA_DIR="\"$(pkgdatadir)\"" \
+ 	-DGNOMECC_GLADE_DIR="\"$(gladedir)\"" \
+diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN gnome-control-center-2.26.0.orig/configure.in gnome-control-center-2.26.0/configure.in
+--- gnome-control-center-2.26.0.orig/configure.in	2009-04-24 15:57:18.000000000 -0400
++++ gnome-control-center-2.26.0/configure.in	2009-04-24 15:59:04.000000000 -0400
+@@ -186,6 +186,19 @@ fi
+ 
+ CAPPLET_LIBS="$CAPPLET_LIBS $XCURSOR_LIBS"
+ 
++dnl For about-me and appearance
++AC_ARG_ENABLE([policykit-gnome],
++	AC_HELP_STRING([--enable-policykit-gnome],
++	[Enable PolicyKit-gnome support @<:@default=yes@:>@]),
++	enable_polkit=$enableval, enable_polkit=yes)
++
++if test "x$enable_polkit" = "xyes"; then
++PKG_CHECK_MODULES(POLKIT_GNOME, [polkit-gnome],
++	    [AC_DEFINE([HAVE_POLKIT], 1,
++  	    [Define if PolicyKit-gnome is available])], 		    
++	    has_polkit=false)
++fi
++
+ dnl ==============
+ dnl gswitchit
+ dnl ==============
+@@ -208,21 +221,10 @@ AC_ARG_ENABLE([aboutme],
+    [enable_aboutme=no])
+ AC_MSG_RESULT([$enable_aboutme])
+ 
+-AC_ARG_ENABLE([policykit-gnome],
+-	AC_HELP_STRING([--enable-policykit-gnome],
+-	[Enable PolicyKit-gnome support @<:@default=yes@:>@]),
+-	enable_polkit=$enableval, enable_polkit=yes)
+-
+ if test "x$enable_aboutme" = "xyes"; then
+   PKG_CHECK_MODULES(LIBEBOOK, [libebook-1.2 >= 1.7.90],
+                     [AC_DEFINE([HAVE_LIBEBOOK], 1,
+                     [Define if evolution-data-server libebook-1.2 is available])])
+-  if test "x$enable_polkit" = "xyes"; then
+-  PKG_CHECK_MODULES(POLKIT_GNOME, [polkit-gnome],
+-  		    [AC_DEFINE([HAVE_POLKIT], 1,
+-  		    [Define if PolicyKit-gnome is available])], 		    
+-		    has_polkit=false)
+-  fi
+ fi
+ 
+ AM_CONDITIONAL(BUILD_ABOUTME, test "x$enable_aboutme" = "xyes")
