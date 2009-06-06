@@ -4,16 +4,14 @@
 
 EAPI="2"
 
-ESVN_REPO_URI="http://tint2.googlecode.com/svn/trunk"
-inherit subversion toolchain-funcs
-
+MY_P=${P/_/-}
 DESCRIPTION="tint2 is a lightweight panel/taskbar based on ttm code"
 HOMEPAGE="http://tint2.googlecode.com"
-SRC_URI=""
+SRC_URI="http://tint2.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="dev-libs/glib:2
@@ -27,6 +25,8 @@ DEPEND="${RDEPEND}
 	x11-proto/xineramaproto
 	dev-util/pkgconfig"
 
+S=${WORKDIR}/${MY_P}
+
 src_prepare() {
 	mv src/* .
 	sed -i \
@@ -35,11 +35,9 @@ src_prepare() {
 		Makefile || die "failed sed Makefile"
 }
 
-src_compile() {
-	emake CC="$(tc-getCC)" LDFLAGS="${LDFLAGS}" CFLAGS="${CFLAGS}" ||die
-}
-
 src_install() {
-	emake install DESTDIR="${D}" || die "install failed"
-	dodoc ChangeLog README tintrc* doc/tint2*
+	emake install DESTDIR="${D}" || die "Install failed"
+
+	dodoc ChangeLog README tintrc0[2-7]
+	dodoc doc/*
 }

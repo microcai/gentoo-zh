@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Jun 2009; Hong Hao <oahong@gmail.com> -tint2-0.6.0.ebuild,
+  +tint2-0.7_beta1.ebuild, tint2-9999.ebuild:
+  Fix dependencies, add tint2-0.7-beta1.
+
   05 Mar 2009; Hong Hao <oahong@gmail.com> +tint2-9999.ebuild:
   Add live ebuild.
 
