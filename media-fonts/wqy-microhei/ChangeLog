@@ -1,0 +1,8 @@
+# ChangeLog for media-fonts/wqy-microhei
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  06 Jun 2009; Hong Hao <oahong@gmail.com> +wqy-microhei-0.2.0_beta.ebuild,
+  +metadata.xml:
+  Initial exheres for wqy-microhei.
+
