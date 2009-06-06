@@ -45,7 +45,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --enable-xft
+	econf --enable-xft --enable-tray
 	emake || die "emake failed"
 }
 

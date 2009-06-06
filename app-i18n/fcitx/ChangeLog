@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Jun 2009; Hong Hao <oahong@gmail.com> -fcitx-3.5_pre080918.ebuild,
+  -fcitx-3.6.0_p090329.ebuild, -fcitx-3.6.0_p090503.ebuild,
+  +fcitx-3.6.0_p090530.ebuild, fcitx-9999.ebuild:
+  Clean up old versions, add snapshot 090530.
+
   29 Mar 2009; Hong Hao <oahong@gmail.com> ++:
   Add fcitx-3.6.0_090329
 
