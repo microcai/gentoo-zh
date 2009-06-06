@@ -3,18 +3,16 @@
 # $Header: $
 
 EAPI="2"
-
-ESVN_REPO_URI="http://fqterm.googlecode.com/svn/trunk"
-ESVN_PATCHES="${P}-as-needed.patch"
-inherit cmake-utils subversion
+inherit eutils cmake-utils versionator
 
 DESCRIPTION="a modern terminal emulator for Linux"
 HOMEPAGE="http://fqterm.googlecode.com"
-SRC_URI="${HOMEPAGE}/files/QQWry.Dat.zip"
+SRC_URI="${HOMEPAGE}/files/${PN}_$(replace_all_version_separators '_')_r770.zip
+	${HOMEPAGE}/files/QQWry.Dat.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="x11-libs/qt-core[ssl,qt3support]
@@ -24,13 +22,17 @@ RDEPEND="x11-libs/qt-core[ssl,qt3support]
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
+RESTRICT="primaryuri"
+S=${WORKDIR}/${PN/term}
+
 src_unpack() {
-	subversion_src_unpack
 	unpack ${A}
+	# patch partially based upon qterm-0.5.2-as-needed.patch
+	epatch "${FILESDIR}"/${P}-as-needed.patch
 }
 
 src_install() {
 	cmake-utils_src_install
 	insinto /usr/share/FQTerm
-	doins "${S}"/QQWry.Dat  || die
+	doins "${WORKDIR}"/QQWry.Dat  || die
 }

@@ -2,6 +2,12 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Jun 2009; Hong Hao <oahong@gmail.com> -fqterm-0.9.3.ebuild,
+  -files/fqterm-0.9.3-qad-openssl-fix.patch, +fqterm-0.9.4.2.ebuild,
+  +files/fqterm-0.9.4.2-as-needed.patch, fqterm-9999.ebuild,
+  files/fqterm-9999-as-needed.patch:
+  Version bump to fqterm-0.9.4.2, using an updated qqwry database.
+
   22 Feb 2009; Hong Hao <oahong@gmail.com> fqterm-0.9.3.ebuild,
   +fqterm-9999.ebuild, +files/fqterm-9999-as-needed.patch, metadata.xml:
   Fix dependency, add a live ebuild for fqterm, close issue 34.
