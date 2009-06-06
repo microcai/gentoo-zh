@@ -1,0 +1,23 @@
+Source: Hong Hao <oahong@gmail.com>
+Upstream: mail sent
+Reasons: Fix missing headers, gcc 4.4 is much stricker than earlier versions.
+--- sunpinyin-20090507/sunpinyin/ime/src/lexicon/pytrie.h.orig	2009-05-07 23:32:06.216938733 +0800
++++ sunpinyin-20090507/sunpinyin/ime/src/lexicon/pytrie.h	2009-05-07 23:49:41.173634896 +0800
+@@ -42,6 +42,7 @@
+ 
+ #include "../portability.h"
+ 
++#include <stdint.h>
+ #include <string>
+ #include <vector>
+ #include <map>
+--- sunpinyin-20090507/sunpinyin/ime/src/ic_history.cpp.orig	2009-05-08 00:04:52.003634998 +0800
++++ sunpinyin-20090507/sunpinyin/ime/src/ic_history.cpp	2009-05-08 00:07:39.854663663 +0800
+@@ -40,6 +40,7 @@
+ #endif
+ #include <algorithm>
+ #include "ic_history.h"
++#include <stdint.h>
+ 
+ const unsigned int CICHistory::DCWID = (unsigned int)-1;
+ 

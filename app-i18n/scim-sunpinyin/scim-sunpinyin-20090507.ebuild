@@ -30,6 +30,7 @@ RESTRICT="mirror"
 S=${WORKDIR}/${MY_P}/sunpinyin/ime
 
 src_prepare() {
+	epatch "${FILESDIR}"/${MY_P}-gcc-4.4.diff
 	einfo "Running glib-gettextize -c -f..."
 	$(type -p glib-gettextize) -c -f > /dev/null || \
 		die "glib-gettexize failed"
