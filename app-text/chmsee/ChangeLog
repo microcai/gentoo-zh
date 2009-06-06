@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Jun 2009; Hong Hao <oahong@gmail.com> -chmsee-1.0.2.ebuild,
+  -chmsee-1.0.3.ebuild, -chmsee-1.0.4.ebuild, +chmsee-1.0.5.ebuild,
+  metadata.xml:
+  Version bump, chmsee use cmake now. Nuke old version.
+
   14 Mar 2009; Hong Hao <oahong@gmail.com> ++, -chmsee-1.0.4_pre1.ebuild:
   Bump again.
 
