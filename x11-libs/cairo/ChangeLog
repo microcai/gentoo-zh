@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Jun 2009; Yu Yuwei <acevery@gmail.com> cairo-1.4.12.ebuild,
+  cairo-1.4.14.ebuild, cairo-1.6.4.ebuild, cairo-1.6.4-r1.ebuild,
+  cairo-1.8.0.ebuild, cairo-1.8.4-r1.ebuild:
+  update old ebuilds to depend on cleartype USE with libXft instead of newspr
+
   12 Jun 2009; Yu Yuwei <acevery@gmail.com> cairo-1.8.6-r1.ebuild:
   mark 1.8.6-r1 as stable according to offical portage
 

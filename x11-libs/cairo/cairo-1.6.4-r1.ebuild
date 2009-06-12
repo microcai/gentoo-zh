@@ -62,10 +62,10 @@ RESTRICT="test"
 
 pkg_setup () {
 	if use newspr && \
-		! built_with_use --missing false x11-libs/libXft newspr; then
-		eerror "You need to rebuild libXft with newspr USE enabled"
-		eerror "before you can compile cairo with newspr."
-		die "Please rebuild libXft with newspr enabled."
+		! built_with_use --missing false x11-libs/libXft cleartype; then
+		eerror "You need to rebuild libXft with cleartype USE enabled"
+		eerror "before you can compile cairo with cleartype."
+		die "Please rebuild libXft with cleartype enabled."
 	fi
 }
 

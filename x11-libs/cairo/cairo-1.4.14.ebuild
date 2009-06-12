@@ -55,10 +55,10 @@ src_unpack() {
 
 pkg_setup() {
 	if use newspr; then
-		if ! built_with_use 'x11-libs/libXft' newspr; then
+		if ! built_with_use 'x11-libs/libXft' cleartype; then
 			echo
-			ewarn "You must build x11-libs/libXft with \"newspr\" USE flag,"
-			ewarn "otherwise, the \"newspr\" USE flag in cairo won't work!"
+			ewarn "You must build x11-libs/libXft with \"cleartype\" USE flag,"
+			ewarn "otherwise, the \"cleartype\" USE flag in cairo won't work!"
 			echo
 			ebeep 3
 		fi
