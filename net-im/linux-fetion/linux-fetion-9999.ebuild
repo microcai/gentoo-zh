@@ -40,7 +40,7 @@ src_compile() {
 src_install() {
 	insinto /usr/share/libfetion
 	doins fetion_utf8_CN.qm || die
-	doins -r skins sound || die
+	doins -r skins sound faces_image || die
 
 	insinto /usr/share/pixmaps
 	doins misc/fetion.png || die
