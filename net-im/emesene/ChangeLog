@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  01 Jul 2009; Yu Yuwei <acevery@gmail.com>
+  -files/emesene-r1385-setup.patch, -emesene-9999-r1.ebuild,
+  -files/emesene-r1616-msnoim.patch, +emesene-9999-r2.ebuild:
+  remove old patches
+
   19 May 2009; Yu Yuwei <acevery@gmail.com>
   +files/emesene-r1616-msnoim.patch, -emesene-9999.ebuild,
   +emesene-9999-r1.ebuild:
