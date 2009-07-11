@@ -14,13 +14,14 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=net-libs/libesmtp-1.0.3
+RDEPEND="
 	amd64? (
 		app-emulation/emul-linux-x86-baselibs
 		app-emulation/emul-linux-x86-gtklibs
 		app-emulation/emul-linux-x86-xlibs
 	)
 	x86? (
+		>=net-libs/libesmtp-1.0.3
 		>=dev-libs/glib-2.0.7
 		x11-libs/libX11
 		x11-libs/libXext
@@ -40,18 +41,24 @@ pkg_setup() {
 
 src_install() {
 	dodir /opt/${PN}/share
-	mv share "${D}"/opt/${PN}
+	mv share "${D}"/opt/${PN} || die "mv failed 1"
+
+	exeinto /opt/${PN}/bin
+	doexe bin/avast-update || die "doexec failed"
 
 	cd lib/${PN}
 	domenu share/avast/desktop/avast.desktop
 	insinto /usr/share/pixmaps
-	newins share/avast/icons/avast-appicon.png avastgui.png || die
+	newins share/avast/icons/avast-appicon.png avastgui.png || die "newins failed"
 
-	mv share/avast "${D}"/opt/${PN}/share || die
-	mv lib var "${D}"/opt/${PN} || die
+	mv share/avast "${D}"/opt/${PN}/share || die "mv failed 2"
+	mv lib var "${D}"/opt/${PN} || die "mv failed 3"
+	if use amd64 ; then
+		mv lib-esmtp/* "${D}"/opt/${PN}/lib || die "failed to install libesmtp"
+	fi
 
 	exeinto /opt/${PN}/bin
-	doexe bin/avast{,gui} bin/wrapper-script.sh
+	doexe bin/avast{,gui} bin/wrapper-script.sh || die "doexec failed"
 
 	cat > 82avast << DONE
 AVAST_PREFIX="/opt/${PN}"
@@ -65,11 +72,7 @@ DONE
 }
 
 pkg_postinst() {
-	if use amd64 ; then
-		ewarn "Please report back to oahong@gmail.com"
-		ewarn "if you have a success story on this package. Thanks!"
-	fi
-	einfo "To update virus database automatically, add avasta-update"
+	einfo "To update virus database automatically, add avast-update"
 	einfo "to your user crontab. See following link for more details:"
 	einfo "http://www.gentoo.org/doc/en/cron-guide.xml"
 }
