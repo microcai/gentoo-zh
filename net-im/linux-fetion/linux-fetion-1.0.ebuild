@@ -6,11 +6,11 @@ EAPI="2"
 
 inherit flag-o-matic qt4
 
-DESCRIPTION="Linux Fetion, a QT4 IM client using CHINA MOBILE's Fetion Protocol"
+MY_P=${PN/-/_}_v${PV}
+
+DESCRIPTION="A QT4 IM client using CHINA MOBILE's Fetion Protocol"
 HOMEPAGE="http://www.libfetion.cn/"
-MY_P=${PN/-/_}_${PV}
-S=${WORKDIR}/${MY_P}
-SRC_URI="http://libfetion-gui.googlecode.com/files/${PN/-/_}_${PV}.tar.gz"
+SRC_URI="http://libfetion-gui.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -24,6 +24,7 @@ DEPEND="dev-libs/openssl
 RDEPEND=${DEPEND}
 
 RESTRICT="primaryuri"
+S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	if use amd64 ; then
@@ -32,6 +33,8 @@ src_prepare() {
 			-e "/libfetion.a/c    LIBS +=  -lcurl ./lib/libfetion_64.a" \
 			${PN}.pro || die "sed failed"
 	fi
+	sed -i \
+		-e 's/;Network/&;/' misc/LibFetion.desktop || die "failed to fix desktop entry"
 }
 
 src_compile() {
@@ -43,7 +46,7 @@ src_compile() {
 src_install() {
 	insinto /usr/share/libfetion
 	doins fetion_utf8_CN.qm || die
-	doins -r skins sound || die
+	doins -r skins sound faces_image || die
 
 	insinto /usr/share/pixmaps
 	doins misc/fetion.png || die
