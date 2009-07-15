@@ -11,7 +11,7 @@ DESCRIPTION="Linux Fetion, a QT4 IM client using CHINA MOBILE's Fetion Protocol"
 HOMEPAGE="http://www.libfetion.cn/"
 SRC_URI=""
 
-LICENSE="LGPL-2.1"
+LICENSE="as-is"
 SLOT="0"
 KEYWORDS=""
 IUSE="doc"
@@ -29,6 +29,8 @@ src_prepare() {
 			-e "/libfetion.a/c    LIBS +=  -lcurl ./lib/libfetion_64.a" \
 			${PN}.pro || die "sed failed"
 	fi
+	sed -i \
+		-e 's/;Network/&;/' misc/LibFetion.desktop || die "failed to fix desktop entry"
 }
 
 src_compile() {
@@ -53,4 +55,5 @@ src_install() {
 	fi
 
 	dobin ${PN} || die "dobin failed"
+	dodoc README
 }
