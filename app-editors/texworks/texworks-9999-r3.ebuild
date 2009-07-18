@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-RDEPEND=">=x11-libs/qt-4.5.0
+RDEPEND=">=x11-libs/qt-core-4.5.0
 	 >=virtual/poppler-0.10.6
 	 >=virtual/poppler-qt4-0.10.6
 	 >=app-text/hunspell-1.2.2"
