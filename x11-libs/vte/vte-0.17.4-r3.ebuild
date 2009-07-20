@@ -52,6 +52,6 @@ src_unpack() {
 	# Bug #249618
 	epatch "${FILESDIR}/${P}-no-null-backspace.patch"
 	use zh_TW && epatch "${FILESDIR}/vte_input_method.patch"
-	use zh_TW && epatch "${FILESDIR}/98_ambiguous_width.patch"
+	#use zh_TW && epatch "${FILESDIR}/98_ambiguous_width.patch"
 
 }
