@@ -73,7 +73,7 @@ src_configure() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
-	dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS NEWS README
 
 	rmdir "${D}"/usr/share/ibus/engine
 }
