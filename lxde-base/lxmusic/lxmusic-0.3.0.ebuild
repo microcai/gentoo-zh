@@ -13,6 +13,7 @@ SLOT="0"
 
 DEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/glib-2
+	media-sound/xmms2
 	x11-libs/vte"
 RDEPEND="${DEPEND}
 	dev-util/pkgconfig
