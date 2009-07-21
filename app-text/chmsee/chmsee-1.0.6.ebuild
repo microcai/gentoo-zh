@@ -26,5 +26,6 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.37"
 
+PATCHES="${FILESDIR}/${P}-disable-libxul-maxver.patch"
 RESTRICT="mirror"
 DOCS="NEWS* README* AUTHORS ChangeLog*"
