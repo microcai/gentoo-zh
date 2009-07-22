@@ -1,0 +1,14 @@
+# ChangeLog for app-emulation/skyeye
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/skyeye/ChangeLog,v 1.2 2007/02/08 21:50:48 flameeyes Exp $
+
+  22 Jul 2009; Dennis Yxun <dennis.yxun@gmail.com> ChangeLog:
+  Update to version 1.2.8
+
+  08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+*skyeye-1.0.0 (26 Sep 2005)
+
+  26 Sep 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.

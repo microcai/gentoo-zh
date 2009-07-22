@@ -1,0 +1,12 @@
+--- skyeye-1.2.8_rc1_a/device/nandflash/nandflash_smallblock.c	2009-07-22 13:17:50.437543678 +0800
++++ skyeye-1.2.8_rc1/device/nandflash/nandflash_smallblock.c	2009-07-22 13:18:31.717542674 +0800
+@@ -516,7 +516,8 @@
+ #endif
+ 	nf->writebuffer=(u8*)malloc(dev->pagedumpsize);
+ 	//nf->memsize=528*32*4096;
+-       if ((nf->fdump= open(dev->dump, FILE_FLAG)) < 0)
++       if ((nf->fdump= open(dev->dump, FILE_FLAG,
++		S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH)) < 0)
+        {
+        	free(nf);
+        	printf("error open nandflash dump!\n");
