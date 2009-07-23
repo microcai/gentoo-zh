@@ -26,10 +26,7 @@ COMMOM_DEPEND=">=dev-libs/glib-2.18
 	x11-libs/gtk+:2
 	x11-libs/libX11
 	sys-libs/glibc
-	qt4? (
-		x11-libs/qt-core
-		x11-libs/qt-dbus
-	)"
+	qt4? ( app-i18n/ibus-qt )"
 DEPEND="${COMMOM_DEPEND}
 	dev-util/cvs
 	dev-util/pkgconfig
@@ -42,6 +39,10 @@ RDEPEND="${COMMOM_DEPEND}
 	>=dev-python/pygtk-2.12.1
 	>=dev-python/dbus-python-0.83.0
 	x11-misc/notification-daemon"
+#	qt4? (
+#		x11-libs/qt-core
+#		x11-libs/qt-dbus
+#	)"
 
 pkg_setup() {
 	# An arch specific config directory is used on multilib systems
@@ -50,9 +51,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i -e '/^enable_qt4=no$/d' configure.ac || die
-	sed -i -e "/TEMPLATE/ i\QMAKE_STRIP = true" client/qt4/${PN}.pro || die
-
 	autopoint || die "autopoint failed"
 	intltoolize --copy --force || die "intltoolize failed"
 	gtkdocize --copy || die "gtkdocize failed"
@@ -65,10 +63,10 @@ src_prepare() {
 
 src_configure() {
 	econf $(use_enable nls) \
-		$(use_enable qt4 qt4-immodule) \
 		$(use_enable doc gtk-doc) \
 		--disable-iso-codes-check \
 		--disable-dbus-python-check
+#		$(use_enable qt4 qt4-immodule) \
 }
 
 src_install() {
@@ -82,12 +80,8 @@ pkg_postinst() {
 	ewarn "This package is very experimental, please report your bugs to"
 	ewarn "http://ibus.googlecode.com/issues/list"
 	echo
-	elog "User documentation: http://code.google.com/p/ibus/wiki/ReadMe"
+	ewarn "upstream documentation: http://code.google.com/p/ibus/wiki/ReadMe"
 	echo
-	if ! use qt4; then
-		ewarn "Missing qt4 use flag, ibus will not work with qt4 applications."
-		ebeep 5
-	fi
 
 	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > \
 		"${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
