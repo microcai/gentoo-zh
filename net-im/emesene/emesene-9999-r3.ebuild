@@ -7,9 +7,7 @@ inherit distutils subversion
 DESCRIPTION="Platform independent MSN Messenger client written in Python+GTK"
 HOMEPAGE="http://emesene.org/"
 ESVN_REPO_URI="https://emesene.svn.sourceforge.net/svnroot/emesene/trunk/emesene"
-ESVN_PATCHES="${PN}-group-p4.patch
-	${PN}-r1387-aplay.patch
-	"
+ESVN_PATCHES="${PN}-r1387-aplay.patch"
 
 LICENSE="GPL-2"
 SLOT="0"
