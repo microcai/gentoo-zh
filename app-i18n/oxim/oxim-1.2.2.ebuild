@@ -10,7 +10,7 @@ SRC_URI="ftp://140.111.128.66/odp/OXIM/Source/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64"
-IUSE="nls gtk-im qt-im chewing +setup-tool"
+IUSE="nls gtk-im qt-im chewing setup-tool"
 RESTRICT="mirror"
 DEPEND="|| ( x11-libs/libXft virtual/x11 )
     dev-util/pkgconfig
