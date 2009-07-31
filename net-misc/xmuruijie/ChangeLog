@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/xmuruijie
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  31 Jul 2009; Yu Yuwei <acevery@gmail.com> xmuruijie-1.3.9-r1.ebuild:
+  Change RDEPEND to iptables
 
   03 Nov 2008; Yu Yuwei <acevery@gmail.com> -xmuruijie-1.3.6-r1.ebuild,
   -xmuruijie-1.3.7.ebuild, -xmuruijie-1.3.9.ebuild,

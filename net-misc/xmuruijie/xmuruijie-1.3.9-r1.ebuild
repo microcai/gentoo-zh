@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header:$
 
@@ -16,7 +16,7 @@ RESTRICT="mirror"
 
 DEPEND=">=dev-lang/python-2.4"
 RDEPEND=">=dev-lang/python-2.4
-		firewall? ( net-misc/l7-filter )"
+		firewall? ( net-firewall/iptables )"
 
 
 src_install(){
