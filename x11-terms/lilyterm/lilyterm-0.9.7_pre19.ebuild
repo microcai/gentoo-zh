@@ -1,16 +1,20 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 inherit fdo-mime
+inherit versionator
+MY_P=${PN}-$(replace_version_separator 3 '~')
+S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A light and easy to use libvte based X Terminal Emulator"
 HOMEPAGE="http://lilyterm.luna.com.tw/"
-SRC_URI="http://lilyterm.luna.com.tw/${P}.tar.gz"
+SRC_URI="http://lilyterm.luna.com.tw/${MY_P}.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.14
@@ -26,7 +30,7 @@ DEPEND="${RDEPEND}
 	dev-perl/XML-Parser"
 
 src_compile() {
-	cd ${S}
+	cd ${S} 
 	./autogen.sh
 	econf 
 	emake || die "emake failed."
