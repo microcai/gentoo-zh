@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -26,15 +26,14 @@ DEPEND="${RDEPEND}
 	dev-perl/XML-Parser"
 
 src_compile() {
-	cd ${S}
 	./autogen.sh
-	econf 
+	econf
 	emake || die "emake failed."
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS ChangeLog TODO 
+	dodoc AUTHORS ChangeLog TODO
 }
 
 pkg_postinst() {

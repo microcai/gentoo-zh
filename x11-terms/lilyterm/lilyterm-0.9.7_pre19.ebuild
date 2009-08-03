@@ -2,49 +2,46 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit fdo-mime
-inherit versionator
+EAPI="2"
+WANT_AUTOCONF="2.5"  # not needed? I can't test.
+WANT_AUTOMAKE="1.10" # please try to remove those two lines.
+inherit versionator autotools
+
 MY_P=${PN}-$(replace_version_separator 3 '~')
-S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A light and easy to use libvte based X Terminal Emulator"
-HOMEPAGE="http://lilyterm.luna.com.tw/"
-SRC_URI="http://lilyterm.luna.com.tw/${MY_P}.tar.gz"
-RESTRICT="nomirror"
+HOMEPAGE="http://lilyterm.luna.com.tw"
+SRC_URI="${HOMEPAGE}/${MY_P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
-
-RDEPEND=">=dev-libs/glib-2.14
-	>=x11-libs/gtk+-2.10
-	>=x11-libs/vte-0.13"
+RDEPEND=">=x11-libs/gtk+-2.10
+	>=x11-libs/vte-0.13
+	>=dev-libs/glib-2.14"
 
 DEPEND="${RDEPEND}
-	sys-devel/automake
-	sys-devel/autoconf
 	dev-util/pkgconfig
 	dev-util/intltool
-	sys-devel/gettext
-	dev-perl/XML-Parser"
+	sys-devel/gettext"
+# intltool depends on this:
+#	dev-perl/XML-Parser"
 
-src_compile() {
-	cd ${S} 
-	./autogen.sh
-	econf 
-	emake || die "emake failed."
+S=${WORKDIR}/${MY_P}
+RESTRICT="mirror"
+
+src_prepare() {
+	sed -e '/examplesdir/s/\$(PACKAGE)/&-\${PV}/' \
+		-i data/Makefile.am || die "sed failed"
+
+	# we need this for -pre19
+	echo "src/profile.c" >> po/POTFILES.in || die "echo failed"
+
+	./autogen.sh || die "autogen.sh failed with exit code $?"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS ChangeLog TODO 
-}
-
-pkg_postinst() {
-	fdo-mime_desktop_database_update
-}
-
-pkg_postrm() {
-	fdo-mime_desktop_database_update
+	dodoc AUTHORS ChangeLog README TODO
 }
