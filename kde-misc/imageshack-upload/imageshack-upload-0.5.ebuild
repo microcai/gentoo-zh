@@ -9,12 +9,11 @@ SRC_URI="http://kde-apps.org/CONTENT/content-files/51247-${P/-/_}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="kde kde4"
+IUSE="kde"
 
 DEPEND=""
 RDEPEND="net-misc/curl
-	kde? ( || ( ( kde-base/konqueror:3.5 kde-base/kdialog:3.5 ) kde-base/kdebase:3.5 ) )
-	kde4? ( kde-base/konqueror:4.2 kde-base/kdialog:4.2 )"
+	kde4? ( kde-base/konqueror kde-base/kdialog )"
 
 S=$WORKDIR/imageshack_upload
 

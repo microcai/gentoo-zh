@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  05 Aug 2009; scsi <scsichen@gmail.com> imageshack-upload-0.5.ebuild:
+  fix kde dependence
+
   03 Mar 2009; scsi <scsichen@gmail.com> imageshack-upload-0.5.ebuild:
   fix kde4 dependance issus
 
