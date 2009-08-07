@@ -3,10 +3,11 @@
 # $Header: $
 
 EAPI="2"
+inherit eutils
 
-DESCRIPTION="The gtk frontend of the iptv \"mms\" and \"sopcast\""
+DESCRIPTION="The gtk frontend of the iptv \"mms\", \"pplive\"and \"sopcast\""
 HOMEPAGE="http://gmlive.googlecode.com"
-SRC_URI="${HOMEPAGE}/files/${P}.tar.bz2"
+SRC_URI="${HOMEPAGE}/files/${P/_/-}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,17 +17,22 @@ IUSE="sopcast totem"
 RDEPEND="dev-libs/libxml2
 	>=dev-cpp/libglademm-2.4
 	>=dev-cpp/gtkmm-2.4
-	totem? ( >=media-video/totem-2.20[python] )"
+	totem? (
+		>=media-video/totem-2.20[python]
+		media-plugins/gst-plugins-libmms
+	)"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/pkgconfig-0.19
 	>=dev-util/intltool-0.35"
 RDEPEND="${RDEPEND}
 	sopcast? ( media-tv/sopcast )
-	media-plugins/gst-plugins-libmms
 	media-video/mplayer"
 
+S=${S%_beta}
+
 src_prepare() {
+	epatch "${FILESDIR}"/${P%_beta}-totem-plugin.patch
 	sed -i \
 		-e 's:channel.sopcast.com:channel.sopcast.cn:' \
 		src/MainWindow.cpp || die "sed failed"
