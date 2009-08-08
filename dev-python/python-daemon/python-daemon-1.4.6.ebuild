@@ -13,3 +13,6 @@ SLOT="0"
 KEYWORDS="~x86"
 RESTRICT="mirror"
 IUSE=""
+
+DEPEND=">=dev-python/lockfile-0.7"
+RDEPEND="${DEPEND}"
