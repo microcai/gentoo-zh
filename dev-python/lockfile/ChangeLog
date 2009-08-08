@@ -1,0 +1,8 @@
+# ChangeLog for dev-python/lockfile
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  08 Aug 2009; Zhang Le <r0bertz@gentoo.org> +lockfile-0.8.ebuild,
+  +metadata.xml:
+  initial commit of lockfile
+
