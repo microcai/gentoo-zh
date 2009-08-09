@@ -3,8 +3,8 @@
 # $Header: $
 
 EAPI="2"
-WANT_AUTOCONF="2.5"  # not needed? I can't test.
-WANT_AUTOMAKE="1.10" # please try to remove those two lines.
+#WANT_AUTOCONF="2.5"  # not needed? I can't test.
+#WANT_AUTOMAKE="1.10" # please try to remove those two lines.
 inherit versionator autotools
 
 MY_P=${PN}-$(replace_version_separator 3 '~')
