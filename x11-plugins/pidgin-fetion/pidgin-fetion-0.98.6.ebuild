@@ -5,7 +5,8 @@
 MY_P=${P/pidgin-//}
 DESCRIPTION="Fetion protocol plugin for libpurple"
 HOMEPAGE="http://blog.donews.com/gradetwo/category/137031.aspx"
-SRC_URI="http://www.logvinov.ru/files/dist/fetion/${MY_P}.tar.bz2"
+SRC_URI="http://exherbo-cn.googlecode.com/files/${MY_P}.tar.bz2"
+#http://www.logvinov.ru/files/dist/fetion/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -29,5 +30,8 @@ pkg_postinst() {
 	einfo
 	elog "Select the 'fetion' protocol to use this plugin"
 	elog "Server IP 221.130.44.193"
+	elog "Read the following link if you get certification"
+	elog "error while using this plugin:"
+	elog "http://www.linuxsir.org/bbs/post2006922-693.html"
 	einfo
 }
