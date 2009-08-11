@@ -46,6 +46,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-configure.in-EST.diff
 	epatch "${FILESDIR}"/${P}-gconf-m4.diff
 	epatch "${FILESDIR}"/${P}-gcc4.3.patch
+	epatch "${FILESDIR}"/${P}-gcc4.4.patch
 	epatch "${FILESDIR}"/${P}-transparent_trayicon.patch
 	epatch "${FILESDIR}"/${P}-changelog-minor-typo-fixes.patch
 	epatch "${FILESDIR}"/${P}-esd.patch
