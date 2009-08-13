@@ -4,6 +4,7 @@
 
 EAPI="2"
 
+inherit eutils
 MY_P=${P/-port/}-u4-b5
 S=${WORKDIR}/${MY_P}
 RESTRICT="mirror"
