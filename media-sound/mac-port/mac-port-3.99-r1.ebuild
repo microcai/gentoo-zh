@@ -23,7 +23,7 @@ DEPEND="asm? ( dev-lang/yasm )"
 RDEPEND=""
 
 src_prepare() {
-	epatch ${FILESDIR}/${PNV}-gcc-4.4.patch
+	epatch ${FILESDIR}/${P}-gcc-4.4.patch
 }
 
 src_configure() {
