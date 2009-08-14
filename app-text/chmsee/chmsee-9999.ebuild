@@ -4,28 +4,28 @@
 
 EAPI="2"
 
-inherit cmake-utils
+inherit cmake-utils git
 
 DESCRIPTION="HTML Help viewer for Unix/Linux"
 HOMEPAGE="http://chmsee.googlecode.com"
-SRC_URI="${HOMEPAGE}/files/${P}.tar.gz"
+SRC_URI=""
+EGIT_REPO_URI="git://github.com/lidaobing/chmsee.git"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.8:2
-	dev-libs/libxml2
-	>=gnome-base/libglade-2.4:2.0
-	>=x11-libs/gtk+-2.8:2
-	dev-libs/chmlib
-	dev-libs/libgcrypt
-	net-libs/xulrunner"
+dev-libs/libxml2
+>=gnome-base/libglade-2.4:2.0
+>=x11-libs/gtk+-2.8:2
+dev-libs/chmlib
+dev-libs/libgcrypt
+net-libs/xulrunner"
 DEPEND="${RDEPEND}
-	sys-devel/gettext
-	>=dev-util/intltool-0.37"
+sys-devel/gettext
+>=dev-util/intltool-0.37"
 
-PATCHES=("${FILESDIR}/${P}-disable-libxul-maxver.patch")
 RESTRICT="mirror"
 DOCS="NEWS* README* AUTHORS ChangeLog*"
