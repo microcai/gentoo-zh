@@ -3,12 +3,12 @@
 # $Header: $
 
 EAPI="2"
+
 inherit eutils versionator
 
 MY_PN="FoxitReader"
-MY_P="${MY_PN}-$(replace_version_separator 2 '-').i386"
+MY_P="${MY_PN}-${PV}"
 SRC_BASE="http://mirrors.foxitsoftware.com/pub/foxit/reader/desktop/linux"
-
 DESCRIPTION="Foxit Reader for desktop Linux"
 HOMEPAGE="http://www.foxitsoftware.com/pdf/desklinux"
 SRC_URI="${SRC_BASE}/$(get_major_version).x/$(get_version_component_range 1-2)/enu/${MY_P}.tar.bz2"
@@ -16,7 +16,10 @@ SRC_URI="${SRC_BASE}/$(get_major_version).x/$(get_version_component_range 1-2)/e
 LICENSE="Foxit-EULA"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE=""
+LANGS="de fr ja zh_CN zh_TW"
+for X in ${LANGS} ; do
+	IUSE="${IUSE} linguas_${X}"
+done
 
 DEPEND=""
 RDEPEND="
@@ -25,12 +28,22 @@ RDEPEND="
 	x86? ( media-libs/freetype:2
 		>=x11-libs/gtk+-2.12 )"
 
+S="${WORKDIR}/$(get_version_component_range 1-2)-release"
 RESTRICT="mirror strip"
 
 src_install() {
 	ebegin "Installing package"
+		for X in ${LANGS} ; do
+			if use linguas_${X} ; then
+				insinto /usr/share/locale/${X}/LC_MESSAGES
+				doins "${S}"/po/${X}/${MY_PN}.mo \
+					|| die "failed to install languages files"
+			fi
+		done
+		rm -R "${S}"/po
+
 		insinto /opt/${PN}
-		doins "${WORKDIR}"/* || die "failed to install program files"
+		doins "${S}"/* || die "failed to install program files"
 		fperms 0755 /opt/${PN}/${MY_PN}
 	eend $? || die "failed to install package"
 
