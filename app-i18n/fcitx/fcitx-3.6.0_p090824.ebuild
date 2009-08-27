@@ -20,14 +20,13 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXt
 	x11-libs/libXft"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	app-arch/xz-utils"
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 RESTRICT="mirror"
 
 src_configure() {
-	econf --enable-xft --enable-tray
+	econf --enable-xft --enable-tray --disable-log
 }
 
 src_install() {
