@@ -29,7 +29,8 @@ src_unpack()
 {
 	unpack ${A}
 	cd ${S}
-	use firefox && epatch ${FILESDIR}/pcmanx-gtk2-0.3.8-xulrunner.patch
+	(has_version ">=net-libs/xulrunner-1.9" && use firefox ) &&\
+		epatch "${FILESDIR}/${P}-xulrunner.patch"	
 	eautoreconf
 }
 
