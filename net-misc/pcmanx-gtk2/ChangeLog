@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Aug 2009; scsi <scsichen@gmail.com> +pcmanx-gtk2-0.3.8-r2.ebuild,
+  +files/pcmanx-gtk2-0.3.8-xulrunner.patch:
+  add a patch to fix compiling error with xulrunner-1.9
+
   15 Apr 2009; scsi <scsichen@gmail.com> pcmanx-gtk2-0.3.8-r1.ebuild:
   fix regxpcom path
 
