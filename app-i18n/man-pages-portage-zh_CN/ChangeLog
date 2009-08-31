@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  31 Aug 2009: Shuge Lee <shuge.lee@gmail.com>
+  mv man-pages-portage-zh-20090826 man-pages-portage-zh_CN-20090826
+
   31 Aug 2009; Zhang Le <r0bertz@gentoo.org> Manifest:
   man-pages-portage-zh-20090826: fixed Manifest
 
