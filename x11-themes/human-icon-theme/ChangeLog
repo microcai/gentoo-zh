@@ -1,0 +1,8 @@
+# ChangeLog for x11-themes/human-icon-theme
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  31 Aug 2009; Coderoar <coderoar@gmail.com>
+  +human-icon-theme-0.33.6-r2.ebuild, +metadata.xml:
+  initial commit
+
