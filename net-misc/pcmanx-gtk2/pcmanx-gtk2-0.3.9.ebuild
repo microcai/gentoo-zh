@@ -31,7 +31,7 @@ RESTRICT="mirror"
 
 src_prepare() {
 	(has_version ">=net-libs/xulrunner-1.9" && use nsplugin ) && \
-		epatch "${FILESDIR}/${P}-xulrunner.patch"
+		epatch "${FILESDIR}/${PN}-0.3.8-xulrunner.patch"
 }
 
 src_configure() {
@@ -49,24 +49,4 @@ src_install(){
 	emake DESTDIR="${D}" install || die "emake failed"
 	insinto /usr/$(get_libdir)/nsbrowser/plugins
 	doins plugin/src/pcmanx-plugin.so || die "failed to install firefox plugin"
-}
-
-# XXX: Really needs this function and pkg_post{in,rm} phases?
-# firefox should respect MOZ_PLUGIN_PATH settings.
-resetplugin() {
-	use nsplugin && /usr/lib/xulrunner/regxpcom
-}
-
-pkg_postinst() {
-	resetplugin
-	if use nsplugin ; then
-		web=firefox
-		einfo "You must restart $web to take effect."
-		einfo "if still not effect, please remove compreg.dat in ~/<$web working directory> ."
-	fi
-}
-
-pkg_postrm()
-{
-	resetplugin
 }
