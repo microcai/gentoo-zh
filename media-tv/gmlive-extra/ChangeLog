@@ -1,0 +1,10 @@
+# ChangeLog for media-tv/gmlive-extra
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*gmlive-extra-0.2 (02 Sep 2009)
+
+  02 Sep 2009; Coderoar <coderoar@gmail.com> +gmlive-extra-0.2.ebuild,
+  +metadata.xml:
+  initial commit
+
