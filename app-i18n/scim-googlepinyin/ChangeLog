@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/scim-googlepinyin
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*scim-googlepinyin-9999 (02 Sep 2009)
+
+  02 Sep 2009; Coderoar <coderoar@gmail.com> +scim-googlepinyin-9999.ebuild,
+  +metadata.xml:
+  initial commit
+
