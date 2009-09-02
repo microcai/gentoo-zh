@@ -12,5 +12,6 @@
 <use>
 	<flag name='sopcast'>Enable support for <pkg>media-tv/sopcast</pkg></flag>
 	<flag name='totem'>Enable totem plugin support</flag>
+	<flag name='extra'>Enable support for PPLive and PPS IPTV</flag>
 </use>
 </pkgmetadata>

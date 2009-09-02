@@ -2,6 +2,12 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*gmlive-0.22.1 (02 Sep 2009)
+
+  02 Sep 2009; Coderoar <coderoar@gmail.com> +gmlive-0.22.1.ebuild,
+  metadata.xml:
+  Bump to lastest release
+
   11 Feb 2009; Hong Hao <oahong@gmail.com> gmlive-0.21.2.ebuild:
   Use channel list on www.sopcast.cn
 
