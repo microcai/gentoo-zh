@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<maintainer>
-		<email>coder.oar@gmail.com</email>
+		<email>coderoar@gmail.com</email>
 	</maintainer>
 	<use>
 		<flag name='ubuntulooks'>use ubuntulooks instead of clearlooks in the Human theme</flag>
