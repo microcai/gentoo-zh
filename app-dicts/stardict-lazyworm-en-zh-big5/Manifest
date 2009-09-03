@@ -1,8 +1,4 @@
 DIST stardict-lazyworm-ec-big5-2.4.2.tar.bz2 9872176 RMD160 b77d27324ae78aa2dc2e83e2cdc3d0ea1fc2ba2e SHA1 772b574e464f3d5b2ff54be28588679e0f7c247f SHA256 789ed57fa74e80381c293cce6b64d7e794acf875d827cf4045c5d0b33ae337da
-EBUILD stardict-lazyworm-en-zh-big5-2.4.2.ebuild 473 RMD160 5a64649c6f5eac9b6f2802850fc9c6e89592c5dc SHA1 6b09cd1a4752796b5ad9691d23789ba8b88cce54 SHA256 eea5ad01ac0cc6f334cd91b28e8b53e8910d9863a08531a6ad7a17929ced27e6
-MD5 883362640701db9ca98a5f196fb4a2c2 stardict-lazyworm-en-zh-big5-2.4.2.ebuild 473
-RMD160 5a64649c6f5eac9b6f2802850fc9c6e89592c5dc stardict-lazyworm-en-zh-big5-2.4.2.ebuild 473
-SHA256 eea5ad01ac0cc6f334cd91b28e8b53e8910d9863a08531a6ad7a17929ced27e6 stardict-lazyworm-en-zh-big5-2.4.2.ebuild 473
-MD5 029a3046bc2df7566b881c2075670a3f files/digest-stardict-lazyworm-en-zh-big5-2.4.2 301
-RMD160 335de2218649422c802f125603f275abc8958589 files/digest-stardict-lazyworm-en-zh-big5-2.4.2 301
-SHA256 de14bb49e5676b6f065ff39a0d83634e0d75eb8daa09748480434d6a90e1ef7b files/digest-stardict-lazyworm-en-zh-big5-2.4.2 301
+EBUILD stardict-lazyworm-en-zh-big5-2.4.2.ebuild 513 RMD160 c7341d6af3bbaf7e9295e46f712e798e076ed766 SHA1 bcfb5ae242910a2496245db43e72e4b11dc6cb60 SHA256 2e1eb75ca1771e3d80231fe8e6d1e0f18ff9b70f6eaeecac4766f75183b5eaf4
+MISC ChangeLog 267 RMD160 2f70e452b4eb86bb88a14c62aa4cbd7985ab48b1 SHA1 4a13dd4ccc57a587b3eed4acbfbf00a63f3d9038 SHA256 2231c4e5055315e312bfc1c68c104713172701f525affe2807d42dcc3b3885fa
+MISC metadata.xml 169 RMD160 bbd2a695d790bc88f16435175c1e13f398241104 SHA1 bfeb8021300c243d81735d8a68b02a7ec87d25fc SHA256 88df7ceb659a779f52e9683da719cac92e4b4b48f6c3fb0a9a90a8428abf5e18
