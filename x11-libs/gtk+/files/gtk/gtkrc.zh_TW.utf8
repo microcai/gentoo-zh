@@ -1,6 +1,0 @@
-style "gtk-default-zh-tw" {
-	fontset = "-adobe-helvetica-medium-r-normal--16-*-*-*-*-*-iso8859-1,\
-		   -misc-ming(for iso10646)-medium-r-normal--16-*-*-*-*-*-iso10646-1,\
-		   -*-*-medium-r-normal--16-*-*-*-*-*-iso10646-1,*-r-*"
-}
-class "GtkWidget" style "gtk-default-zh-tw"
