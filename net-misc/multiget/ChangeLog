@@ -3,6 +3,10 @@
 # $Header: $
 
   06 Sep 2009; Coderoar <coderoar@gmail.com> multiget-1.2.0.ebuild,
+  files/multiget.desktop:
+  fixed zh_TW Comment of multiget.desktop
+
+  06 Sep 2009; Coderoar <coderoar@gmail.com> multiget-1.2.0.ebuild,
   +metadata.xml:
   add missing metadata.xml
 

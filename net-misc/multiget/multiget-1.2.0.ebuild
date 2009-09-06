@@ -11,6 +11,7 @@ SRC_URI="mirror://sourceforge/multiget/${P}.src.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE=""
 
 DEPEND=""
 RDEPEND="
@@ -28,6 +29,6 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
-	domenu ${FILESDIR}/multiget.desktop
-	doicon ${FILESDIR}/multiget.png
+	domenu "${FILESDIR}"/multiget.desktop
+	doicon "${FILESDIR}"/multiget.png
 }
