@@ -4,12 +4,12 @@
 
 inherit eutils
 
-MY_PN="MultiGet"
-MY_P="${MY_PN}-${PV}-linux"
+MY_PN="${PN/-bin/}"
+MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A multi thread download tool liked flashget based wxGTK"
 HOMEPAGE="http://sourceforge.net/projects/multiget"
-SRC_URI="mirror://sourceforge/multiget/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/multiget/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

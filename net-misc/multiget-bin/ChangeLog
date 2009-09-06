@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/multiget-bin
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*multiget-bin-1.2.0 (06 Sep 2009)
+
+  06 Sep 2009; Coderoar <coderoar@gmail.com> multiget-bin-1.1.2.ebuild,
+  +multiget-bin-1.2.0.ebuild, +metadata.xml:
+  version bump
+
