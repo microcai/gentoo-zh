@@ -15,7 +15,7 @@ SRC_URI="${SRC_BASE}/$(get_major_version).x/$(get_version_component_range 1-2)/e
 
 LICENSE="Foxit-EULA"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
@@ -28,6 +28,10 @@ RDEPEND="
 RESTRICT="mirror strip"
 
 src_install() {
+	mv "${WORKDIR}"/{Readme.txt,README}
+	dodoc "${WORKDIR}"/README
+	rm "${WORKDIR}"/README
+
 	ebegin "Installing package"
 		insinto /opt/${PN}
 		doins "${WORKDIR}"/* || die "failed to install program files"

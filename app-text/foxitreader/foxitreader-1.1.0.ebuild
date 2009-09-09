@@ -15,7 +15,8 @@ SRC_URI="${SRC_BASE}/$(get_major_version).x/$(get_version_component_range 1-2)/e
 
 LICENSE="Foxit-EULA"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
 LANGS="de fr ja zh_CN zh_TW"
 for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
@@ -32,6 +33,9 @@ S="${WORKDIR}/$(get_version_component_range 1-2)-release"
 RESTRICT="mirror strip"
 
 src_install() {
+	mv "${S}"/Readme.txt "${WORKDIR}"/README
+	dodoc "${WORKDIR}"/README
+
 	ebegin "Installing package"
 		for X in ${LANGS} ; do
 			if use linguas_${X} ; then
