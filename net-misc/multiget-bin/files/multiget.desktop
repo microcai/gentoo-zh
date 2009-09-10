@@ -1,10 +1,16 @@
 [Desktop Entry]
 Version=1.0
 Encoding=UTF-8
-Exec=MultiGet
+Name=MultiGet
+Name[zh_CN]=MultiGet
+Name[zh_HK]=MultiGet
+Name[zh_TW]=MultiGet
+GenericName=Downloader
+GenericName[zh_CN]=下载工具
+GenericName[zh_HK]=下載工具
+GenericName[zh_TW]=下載工具
+Exec=multiget
 Terminal=false
 Type=Application
-Icon=multiget.png
+Icon=multiget
 Categories=Application;Network;
-Name=MultiGet
-Name[zh_CN]=MultiGet下载工具
