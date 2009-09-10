@@ -1,10 +1,17 @@
 [Desktop Entry]
 Version=1.0
 Encoding=UTF-8
+Name=gsopcast
+Name[zh_CN]=gsopcast网络电视
+Name[zh_HK]=gsopcast網路電視
+Name[zh_TW]=gsopcast網路電視
+GenericName=Internet TV
+GenericName[zh_CN]=网络电视
+GenericName[zh_HK]=網路電視
+GenericName[zh_TW]=網路電視
 Exec=gsopcast
+Icon=gnome-term-night
 Terminal=false
 Type=Application
-Icon=gnome-term-night.png
-Categories=Application;Network;
-Name=gsopcast
-Name[zh_CN]=网络电视
+Categories=Application;AudioVideo;
+
