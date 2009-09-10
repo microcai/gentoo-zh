@@ -1,11 +1,18 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=TeX Editor
-Name[zh_CN]=TeX 编辑器
-GenericName=TeXworks
-GenericName[zh_CN]=TeXworks
-Comment=A simple interface for working with TeX documents
-Comment[zh_CN]=可以让你轻松地编辑 TeX 文档的工具
+Version=1.0
+Name=TeXworks
+Name[zh_CN]=TeXworks
+Name[zh_HK]=TeXworks
+Name[zh_TW]=TeXworks
+GenericName=TeX Editor
+GenericName[zh_CN]=TeX编辑器
+GenericName[zh_HK]=TeX編輯器
+GenericName[zh_TW]=TeX編輯器
+Comment=Edit TeX documents
+Comment[zh_CN]=编辑TeX文档
+Comment[zh_HK]=編輯TeX文檔
+Comment[zh_TW]=編輯TeX文檔
 Exec=texworks
 Icon=texworks
 Terminal=false
