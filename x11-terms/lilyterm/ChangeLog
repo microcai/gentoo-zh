@@ -1,5 +1,11 @@
 # ChangeLog for x11-terms/lilyterm
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+
+*lilyterm-0.9.7 (11 Sep 2009)
+
+  11 Sep 2009; Hong Hao <oahong@gmail.com> -lilyterm-0.9.7_pre21.ebuild,
+  +lilyterm-0.9.7.ebuild:
+  Bump version to 0.9.7.
 
   02 Aug 2009; Hydonsingore Cia <hydonsingore@educities.edu.tw>
   -lilyterm-0.9.4.ebuild, -lilyterm-0.9.5.ebuild,

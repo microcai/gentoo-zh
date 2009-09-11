@@ -18,13 +18,10 @@ IUSE=""
 RDEPEND=">=x11-libs/gtk+-2.10
 	>=x11-libs/vte-0.13
 	>=dev-libs/glib-2.14"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
-# intltool depends on this:
-#	dev-perl/XML-Parser"
 
 S=${WORKDIR}/${MY_P}
 RESTRICT="mirror"
@@ -32,8 +29,6 @@ RESTRICT="mirror"
 src_prepare() {
 	sed -e '/examplesdir/s/\$(PACKAGE)/&-\${PV}/' \
 		-i data/Makefile.am || die "sed failed"
-
-	echo "src/profile.c" >> po/POTFILES.in || die "echo failed"
 
 	./autogen.sh || die "autogen.sh failed with exit code $?"
 }
