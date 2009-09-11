@@ -17,15 +17,15 @@ KEYWORDS=""
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.8:2
-dev-libs/libxml2
->=gnome-base/libglade-2.4:2.0
->=x11-libs/gtk+-2.8:2
-dev-libs/chmlib
-dev-libs/libgcrypt
-net-libs/xulrunner"
+	dev-libs/libxml2
+	>=gnome-base/libglade-2.4:2.0
+	>=x11-libs/gtk+-2.8:2
+	dev-libs/chmlib
+	dev-libs/libgcrypt
+	>=net-libs/xulrunner-1.9.1"
 DEPEND="${RDEPEND}
-sys-devel/gettext
->=dev-util/intltool-0.37"
+	sys-devel/gettext
+	>=dev-util/intltool-0.37"
 
 RESTRICT="mirror"
 DOCS="NEWS* README* AUTHORS ChangeLog*"

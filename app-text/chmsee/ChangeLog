@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  11 Sep 2009; Coderoar <coderoar@gmail.com> chmsee-1.0.5.ebuild,
+  chmsee-1.0.6.ebuild, chmsee-9999.ebuild:
+  fixed xulrunner dependency
+
   14 Aug 2009; Yu Yuwei <acevery@gmail.com> chmsee-1.0.6.ebuild,
   +chmsee-9999.ebuild:
   add git version for xulrunner-1.9.1
