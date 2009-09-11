@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*scim-sunpinyin-9999 (11 Sep 2009)
+
+  11 Sep 2009; Coderoar <coderoar@gmail.com> +scim-sunpinyin-9999.ebuild:
+  add live ebuild
+
   06 Jun 2009; Hong Hao <oahong@gmail.com> -scim-sunpinyin-20090322.ebuild,
   +scim-sunpinyin-20090507.ebuild, +files/sunpinyin-20090507-gcc-4.4.diff:
   Version bump to 20090507.
