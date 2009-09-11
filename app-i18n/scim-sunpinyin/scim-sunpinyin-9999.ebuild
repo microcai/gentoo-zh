@@ -13,7 +13,7 @@ EHG_REPO_URI="ssh://anon@hg.opensolaris.org/hg/nv-g11n/inputmethod"
 
 LICENSE="LGPL-2.1 CDDL"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="debug"
 
 RDEPEND="x11-libs/gtk+
