@@ -5,27 +5,21 @@
 EAPI="2"
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/~jinghua/totem-pps"
-inherit git autotools
+inherit git autotools base
 
 DESCRIPTION="PPStream browser for totem"
 HOMEPAGE="http://cgit.freedesktop.org/~jinghua/totem-pps"
 SRC_URI=""
 
-LICENSE="LGPL"
+LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="media-video/totem[python]"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
 	>=dev-util/intltool-0.40.0
 	sys-devel/gettext"
 
 src_prepare() {
-	NOCONFIGURE=1 ./autogen.sh || die "autogen.sh failed"
+	eautoreconf
 }
-
-src_install() {
-	emake install DESTDIR="${D}" || die "Install failed"
-}
-
