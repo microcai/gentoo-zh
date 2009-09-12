@@ -9,11 +9,10 @@ inherit autotools git
 DESCRIPTION="An SCIM port of android Google Pinyin IME"
 HOMEPAGE="http://code.google.com/p/scim-googlepinyin/"
 EGIT_REPO_URI="git://github.com/tchaikov/${PN}.git"
-EGIT_BOOTSTRAP="autogen.sh"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="
@@ -21,6 +20,17 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
+
+src_prepare() {
+	# autogen.sh does more than just run autotools
+	sed -i \
+		-e 's:^libtoolize:_elibtoolize:' \
+		-e 's:^acl:eacl:' \
+		-e 's:^auto:eauto:' \
+		-e 's:^\.\/configure:#\.\/configure:' \
+		 autogen.sh || die "sed failed"
+	(. ./autogen.sh) || die "autogen.sh failed"
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
