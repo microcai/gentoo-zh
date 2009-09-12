@@ -5,21 +5,25 @@
 EAPI="2"
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/~jinghua/libppswrapper"
-inherit git autotools
+inherit git autotools flag-o-matic
 
 DESCRIPTION="A libpps wrapper"
 HOMEPAGE="http://cgit.freedesktop.org/~jinghua"
 SRC_URI=""
 
-LICENSE="LGPL"
+LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-util/intltool-0.40.0
+DEPEND=">=dev-util/intltool-0.37.0
 		dev-util/pkgconfig
 		sys-devel/gettext"
-RDEPEND="${DEPEND}"
+RDEPEND=""
+
+pkg_setup() {
+	filter-ldflags -Wl,--as-needed
+}
 
 src_prepare() {
 	NOCONFIGURE=1 ./autogen.sh || die "autogen.sh failed"
@@ -28,4 +32,3 @@ src_prepare() {
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
 }
-
