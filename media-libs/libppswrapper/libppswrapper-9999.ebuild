@@ -5,7 +5,7 @@
 EAPI="2"
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/~jinghua/libppswrapper"
-inherit git autotools flag-o-matic
+inherit git autotools flag-o-matic base
 
 DESCRIPTION="A libpps wrapper"
 HOMEPAGE="http://cgit.freedesktop.org/~jinghua"
@@ -16,19 +16,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-util/intltool-0.37.0
-		dev-util/pkgconfig
-		sys-devel/gettext"
-RDEPEND=""
+DEPEND="media-tv/gmlive-extra[pps]"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	filter-ldflags -Wl,--as-needed
 }
 
 src_prepare() {
-	NOCONFIGURE=1 ./autogen.sh || die "autogen.sh failed"
-}
-
-src_install() {
-	emake install DESTDIR="${D}" || die "Install failed"
+	AT_M4DIR="m4" eautoreconf
 }
