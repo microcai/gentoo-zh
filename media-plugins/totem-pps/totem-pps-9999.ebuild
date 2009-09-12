@@ -5,7 +5,7 @@
 EAPI="2"
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/~jinghua/totem-pps"
-inherit git autotools base
+inherit autotools base git
 
 DESCRIPTION="PPStream browser for totem"
 HOMEPAGE="http://cgit.freedesktop.org/~jinghua/totem-pps"

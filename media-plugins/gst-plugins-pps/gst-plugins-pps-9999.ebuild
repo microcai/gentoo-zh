@@ -5,7 +5,7 @@
 EAPI="2"
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/~jinghua/gst-plugins-pps"
-inherit git autotools base
+inherit autotools base git
 
 DESCRIPTION="PPStream plugin for gstreamer"
 HOMEPAGE="http://cgit.freedesktop.org/~jinghua/gst-plugins-pps"

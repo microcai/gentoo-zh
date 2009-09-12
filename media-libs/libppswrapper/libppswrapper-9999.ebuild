@@ -5,7 +5,7 @@
 EAPI="2"
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/~jinghua/libppswrapper"
-inherit git autotools flag-o-matic base
+inherit autotools flag-o-matic base git
 
 DESCRIPTION="A libpps wrapper"
 HOMEPAGE="http://cgit.freedesktop.org/~jinghua"
