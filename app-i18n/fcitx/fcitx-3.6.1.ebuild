@@ -2,12 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+inherit autotools
 
-#MY_P=${P/_p/-}
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://fcitx.googlecode.com"
-SRC_URI="http://gentoo-china-overlay.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://www.fcitx.org/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,34 +21,36 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-#S="${WORKDIR}/${MY_P}"
-RESTRICT="primaryuri"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	eautoreconf
+}
 
-src_configure() {
-	econf --enable-xft --enable-tray
+src_compile() {
+	econf --enable-xft --enable-tray || die "configure failed"
+	emake || die "make failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die
 
-	rm -rf "${D}"/usr/share/${PN}/doc || die "rm failed"
-	# it's ok if dodoc/dohtml failed.
 	dodoc AUTHORS ChangeLog README THANKS TODO
+
 	dodoc doc/pinyin.txt doc/cjkvinput.txt
 	dohtml doc/wb_fh.htm
 }
 
 pkg_postinst() {
-	einfo
+	elog
 	elog "You should export the following variables to use fcitx"
 	elog " export XMODIFIERS=\"@im=fcitx\""
 	elog " export XIM=fcitx"
 	elog " export XIM_PROGRAM=fcitx"
-	einfo
-	elog "If you want to use WuBi ,ErBi or Zhengma"
+	elog
+	elog "If you want to use WuBi ,ErBi or something else."
 	elog " cp /usr/share/fcitx/data/wbx.mb ~/.fcitx"
 	elog " cp /usr/share/fcitx/data/erbi.mb ~/.fcitx"
-	elog " cp /usr/share/fcitx/data/zhengma.mb ~/.fcitx"
 	elog " cp /usr/share/fcitx/data/tables.conf ~/.fcitx"
-	einfo
+	elog
 }
