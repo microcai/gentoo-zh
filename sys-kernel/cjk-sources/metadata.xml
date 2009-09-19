@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>cjk</herd>
+	<herd>mobile</herd>
+	<herd>kernel</herd>
+	<maintainer>
+		<email>gentoo-china@googlegroups.com</email>
+		<name>Gentoo China Overlay</name>
+	</maintainer>
+</pkgmetadata>
