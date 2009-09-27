@@ -6,5 +6,6 @@
     <email>yetist@gmail.com</email>
     <description>maintaining in gentoo china overlay</description>
   </maintainer>
-  <longdescription>a Chinese lunar library.</longdescription>
+  <longdescription>Chinese Lunar Library</longdescription>
 </pkgmetadata>
+

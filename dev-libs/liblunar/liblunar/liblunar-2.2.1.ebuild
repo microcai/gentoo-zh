@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit gnome2
+inherit autotools
 
-DESCRIPTION="Chinese Lunar Translate library"
+DESCRIPTION="Chinese Lunar Library"
 HOMEPAGE="http://liblunar.googlecode.com"
 SRC_URI="http://liblunar.googlecode.com/files/${P}.tar.gz"
 
@@ -15,10 +15,7 @@ IUSE="doc python"
 
 RDEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )
-	python? (
-		>=dev-python/pygobject-2.11.5
-		>=dev-python/pygtk-2.9.7
-	)"
+	python? ( >=dev-python/pygobject-2.11.5 )"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
@@ -28,6 +25,10 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-pkg_setup() {
-	G2CONF="$(use_enable python) $(use_enable doc)"
+src_compile() {
+	econf $(use_enable python) $(use_enable doc) || die "compile failed"
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die "make install failed"
 }

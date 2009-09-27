@@ -1,6 +1,138 @@
 # ChangeLog for gnome-base/gnome-panel
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.257 2008/08/12 13:54:00 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.283 2009/07/09 21:14:07 eva Exp $
+
+*gnome-panel-2.26.3 (09 Jul 2009)
+
+  09 Jul 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-panel-2.26.1.ebuild, +gnome-panel-2.26.3.ebuild:
+  Version bump. Raise dependency of gnome-desktop to 2.26, bug #272225.
+  Small fixes, notably critical warning (bug #272012), translation updates.
+
+  03 Jun 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-panel-2.26.2.ebuild:
+  libtool-2 screws us if we eautomake and micro version of installed
+  automake is different leading to an unwanted eautoreconf, bug #271652.
+
+  28 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-panel-2.26.2.ebuild:
+  Bump to 2.26.2. Small bug fixes and translation updates.
+
+*gnome-panel-2.26.2 (28 May 2009)
+
+  28 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-panel-2.26.2.ebuild:
+  Bump to 2.26.2. Small bug fixes and translation updates.
+
+  13 May 2009; Daniel Gryniewicz <dang@gentoo.org>
+  gnome-panel-2.26.1.ebuild:
+  undo Fix0r bug 269683; turns out it was a misunderstanding
+
+  13 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gnome-panel-2.26.1.ebuild:
+  Fix0r bug 269683 -- x11-libs/cairo[X]
+
+*gnome-panel-2.26.1 (11 May 2009)
+
+  11 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-panel-2.20.3.ebuild, -gnome-panel-2.22.2.ebuild,
+  -gnome-panel-2.24.3.ebuild, +gnome-panel-2.26.1.ebuild:
+  New version for GNOME 2.26. Drop libgnome/libgnomeui dependencies. Real
+  transparency in notification area. Clean up old revisions.
+
+  27 Apr 2009; Jeroen Roovers <jer@gentoo.org> gnome-panel-2.24.3-r1:
+  Stable for HPPA (bug #260063).
+
+  27 Apr 2009; Raúl Porcel <armin76@gentoo.org>
+  gnome-panel-2.24.3-r1.ebuild:
+  arm stable
+
+  12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
+  gnome-panel-2.24.3-r1.ebuild:
+  Stable on sparc, bug #260063
+
+  18 Mar 2009; Raúl Porcel <armin76@gentoo.org>
+  gnome-panel-2.24.3-r1.ebuild:
+  alpha/ia64 stable wrt #260063
+
+  15 Mar 2009; Markus Meier <maekke@gentoo.org>
+  gnome-panel-2.24.3-r1.ebuild:
+  x86 stable, bug #260063
+
+  11 Mar 2009; Daniel Gryniewicz <dang@gentoo.org>
+  gnome-panel-2.24.3-r1.ebuild:
+  Marked stable on amd64
+
+  06 Mar 2009; Brent Baude <ranger@gentoo.org> gnome-panel-2.24.3-r1.ebuild:
+  Marking gnome-panel-2.24.3-r1 ppc stable for bug 260063
+
+  05 Mar 2009; Brent Baude <ranger@gentoo.org> gnome-panel-2.24.3-r1.ebuild:
+  Marking gnome-panel-2.24.3-r1 ppc64 stable for bug 260063
+
+*gnome-panel-2.24.3-r1 (26 Feb 2009)
+
+  26 Feb 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/gnome-panel-2.24.1-logout.patch.gz,
+  +files/gnome-panel-2.24.3-shutdown.patch, -gnome-panel-2.24.2-r1.ebuild,
+  +gnome-panel-2.24.3-r1.ebuild:
+  Bump to 2.24.3-r1. Add patch to allow shutdown without gdm, #259138.
+  Clean up old revisions.
+
+  05 Feb 2009; Alexis Ballier <aballier@gentoo.org>
+  +files/gnome-panel-2.24.3-daylight.patch, gnome-panel-2.24.3.ebuild:
+  Add a patch to build on FreeBSD and rekeyword it; bug #256859
+
+  01 Feb 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-panel-2.20.3.ebuild, -gnome-panel-2.24.1.ebuild,
+  -gnome-panel-2.24.1-r1.ebuild, -gnome-panel-2.24.2.ebuild,
+  gnome-panel-2.24.2-r1.ebuild, gnome-panel-2.24.3.ebuild:
+  Clean up old revisions. Update libbonobo dependency per bug #254872.
+
+*gnome-panel-2.24.3 (26 Jan 2009)
+
+  26 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-panel-2.24.3.ebuild:
+  Bump to 2.24.3. Bug fixes and translation updates.
+
+  24 Jan 2009; Raúl Porcel <armin76@gentoo.org>
+  gnome-panel-2.24.2-r1.ebuild:
+  Add ~arm/~sh
+
+*gnome-panel-2.24.2-r1 (23 Dec 2008)
+
+  23 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-panel-2.24.2-r1.ebuild:
+  Bump to 2.24.2-r1, fix locale patch, bug #252159.
+
+*gnome-panel-2.24.2 (21 Dec 2008)
+
+  21 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-panel-2.24.2.ebuild:
+  Bump to 2.24.2. Restored translation of logout dialog and fix bug #249514
+  and #249847.
+
+  24 Nov 2008; Mart Raudsepp <leio@gentoo.org> gnome-panel-2.24.1-r1.ebuild:
+  Fix tests
+
+*gnome-panel-2.24.1-r1 (16 Nov 2008)
+
+  16 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/gnome-panel-2.24.1-logout.patch.gz, +gnome-panel-2.24.1-r1.ebuild:
+  Bump to 2.24.1-r1, add patch to support setup with <gnome-session-2.24,
+  bug #246170.
+
+  13 Nov 2008; Brent Baude <ranger@gentoo.org> gnome-panel-2.22.2.ebuild:
+  Marking gnome-panel-2.22.2 ppc64 stable for bug 236971
+
+*gnome-panel-2.24.1 (06 Nov 2008)
+
+  06 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-panel-2.24.1.ebuild:
+  New version for GNOME 2.24. Bug fixes and uses gnome-session D-Bus API for
+  logout/shutdown (might require gnome-session 2.24).
+
+  25 Sep 2008; Jeroen Roovers <jer@gentoo.org> gnome-panel-2.22.2.ebuild:
+  Stable for HPPA (bug #236971).
 
   12 Aug 2008; Raúl Porcel <armin76@gentoo.org> gnome-panel-2.22.2.ebuild:
   alpha/ia64/sparc stable wrt #229709

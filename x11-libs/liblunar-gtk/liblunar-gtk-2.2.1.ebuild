@@ -4,7 +4,7 @@
 
 inherit gnome2
 
-DESCRIPTION="Chinese Lunar Translate library"
+DESCRIPTION="Chinese Lunar Library Gtk+ widget"
 HOMEPAGE="http://liblunar.googlecode.com"
 SRC_URI="http://liblunar.googlecode.com/files/${P}.tar.gz"
 
@@ -14,6 +14,7 @@ KEYWORDS="~x86"
 IUSE="doc python"
 
 RDEPEND="${RDEPEND}
+	>=dev-libs/liblunar-2.2.1
 	doc? ( >=dev-util/gtk-doc-1 )
 	python? (
 		>=dev-python/pygobject-2.11.5
@@ -23,8 +24,7 @@ RDEPEND="${RDEPEND}
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/pkgconfig-0.9
-	>=dev-util/intltool-0.35
-	>=app-text/gnome-doc-utils-0.3.2"
+	>=dev-util/intltool-0.35"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 

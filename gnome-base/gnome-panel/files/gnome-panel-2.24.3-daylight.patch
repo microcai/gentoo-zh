@@ -1,0 +1,25 @@
+http://bugzilla.gnome.org/show_bug.cgi?id=569737
+https://bugs.gentoo.org/show_bug.cgi?id=256859
+
+--- gnome-panel-2.24.3/applets/clock/clock.c.old	2009-01-29 21:59:18 +0000
++++ gnome-panel-2.24.3/applets/clock/clock.c	2009-01-29 21:59:29 +0000
+@@ -653,7 +653,7 @@
+                 time (&now_t);
+                 localtime_r (&now_t, &now);
+ 
+-                if (daylight && now.tm_isdst) {
++                if (now.tm_isdst>0) {
+                         zone = tzname[1];
+                 } else {
+                         zone = tzname[0];
+--- gnome-panel-2.24.3/applets/clock/clock-location.c.old	2009-01-29 22:00:15 +0000
++++ gnome-panel-2.24.3/applets/clock/clock-location.c	2009-01-29 22:00:29 +0000
+@@ -337,7 +337,7 @@
+         now_t = time (NULL);
+         localtime_r (&now_t, &now);
+ 
+-        if (daylight && now.tm_isdst) {
++        if (now.tm_isdst>0) {
+                 clock_location_set_tzname (this, tzname[1]);
+         } else {
+                 clock_location_set_tzname (this, tzname[0]);
