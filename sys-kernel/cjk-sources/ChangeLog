@@ -2,6 +2,15 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*cjk-sources-2.6.31-r1 (02 Oct 2009)
+
+  02 Oct 2009; Coderoar <coderoar@gmail.com> cjk-sources-2.6.28-r10.ebuild,
+  cjk-sources-2.6.28-r11.ebuild, -cjk-sources-2.6.29-r3.ebuild,
+  cjk-sources-2.6.29-r4.ebuild, -cjk-sources-2.6.30-r6.ebuild,
+  -cjk-sources-2.6.30-r7.ebuild, -cjk-sources-2.6.31.ebuild,
+  +cjk-sources-2.6.31-r1.ebuild:
+  version bump, removed old
+
 *cjk-sources-2.6.31 (19 Sep 2009)
 *cjk-sources-2.6.30-r7 (19 Sep 2009)
 *cjk-sources-2.6.30-r6 (19 Sep 2009)

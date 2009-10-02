@@ -39,10 +39,10 @@ K_EXTRAELOG="If there are issues with this kernel, please direct any
 queries to the tuxonice-users mailing list:
 http://lists.tuxonice.net/mailman/listinfo/tuxonice-users/"
 
-src_install(){
+src_unpack() {
+	kernel-2_src_unpack
 	mv "${S}"/{linux-2.6.29.1,}/drivers/video/console/fonts_utf8.h || die
 	rm -Rf "${S}"/linux-2.6.29.1
-	kernel-2_src_install
 }
 
 pkg_postinst() {
