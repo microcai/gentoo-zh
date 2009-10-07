@@ -11,7 +11,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="KVideoEncoder is a GUI for mencoder and transcode"
 HOMEPAGE="http://www.kde-look.org/content/show.php?content=31385"
 SRC_URI="mirror://sourceforge/kvideoencoder/${MY_P}.tar.bz2"
-RESTRICT="mirror"
+RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"

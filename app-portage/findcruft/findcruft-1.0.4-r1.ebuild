@@ -10,7 +10,7 @@ HOMEPAGE="http://forums.gentoo.org/viewtopic.php?t=254197 http://gentoo-wiki.com
 IUSE=""
 KEYWORDS="x86 ~amd64"
 LICENSE="GPL-2"
-RESTRICT="mirror"
+RESTRICT="nomirror"
 SLOT="0"
 SRC_URI="http://user.cs.tu-berlin.de/~sean/${P}.tar.bz2 \
          http://ifp.loeber1.de/findcruft-config-20050807.tar.bz2"

@@ -13,5 +13,5 @@ KEYWORDS="x86"
 IUSE=""
 SLOT="0"
 #S=${WORKDIR}/$PN
-RESTRICT="mirror"
+RESTRICT="nomirror"
 

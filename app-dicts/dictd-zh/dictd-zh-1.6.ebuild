@@ -6,7 +6,7 @@ MY_P=${P/td/t}
 DESCRIPTION="Four traditional Chinese dictionaries for dict"
 HOMEPAGE=""
 SRC_URI="ftp://freebsd.csie.ntu.edu.tw/users/rafan/${MY_P}.tar.gz"
-RESTRICT="mirror"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"

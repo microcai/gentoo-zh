@@ -16,6 +16,6 @@ KEYWORDS="x86 ~amd64 ~ppc"
 IUSE=""
 SLOT="0"
 
-RESTRICT="mirror $RESTRICT"
+RESTRICT="nomirror $RESTRICT"
 
 S=$WORKDIR/desklist

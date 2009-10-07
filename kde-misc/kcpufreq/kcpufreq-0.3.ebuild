@@ -16,5 +16,5 @@ IUSE="cpufreq"
 SLOT="0"
 
 DEPEND="cpufreq? (sys-power/cpufrequtils)"
-RESTRICT="mirror $RESTRICT"
+RESTRICT="nomirror $RESTRICT"
 S=${WORKDIR}/${PN}

@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 SLOT="0"
-RESTRICT="mirror"
+RESTRICT="nomirror"
 DEPEND="dev-util/cmake"
 
 need-kde 3.4
