@@ -15,6 +15,6 @@ KEYWORDS="x86 ~amd64 ~ppc"
 IUSE=""
 SLOT="0"
 
-RESTRICT="nomirror $RESTRICT"
+RESTRICT="mirror $RESTRICT"
 
 #S=$WORKDIR/

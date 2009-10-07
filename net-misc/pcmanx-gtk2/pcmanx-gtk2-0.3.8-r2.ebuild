@@ -7,7 +7,7 @@ inherit flag-o-matic eutils autotools multilib
 DESCRIPTION="PCMan is an easy-to-use telnet client mainly targets BBS users formerly writen by gtk2"
 SRC_URI="http://pcmanx.csie.net/release/${P}.tar.bz2"
 HOMEPAGE="http://pcmanx.csie.net/"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 KEYWORDS="x86 ~ppc amd64"
 SLOT="0"

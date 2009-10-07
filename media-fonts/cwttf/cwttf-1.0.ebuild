@@ -22,7 +22,7 @@ S=${WORKDIR}/${PN}
 FONT_S="${S}"
 FONT_SUFFIX="ttf"
 DOCS="AUTHORS COPYING Changes-big5.txt Changes-en.txt Readme-big5.cwttf Readme-en.cwttf Readme.cm-lgc Readme.un-fonts"
-RESTRICT="nostrip nomirror"
+RESTRICT="nostrip mirror"
 
 src_unpack()
 {

@@ -10,7 +10,7 @@ SRC_URI="http://hydonsingore.myweb.hinet.net/mirror/hinedo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 SLOT="0"
 DEPEND="=x11-libs/gtk+-2*
 	dev-lang/python

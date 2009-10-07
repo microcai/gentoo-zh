@@ -16,7 +16,7 @@ IUSE="cpufreq"
 SLOT="0"
 
 DEPEND="cpufreq? (sys-power/cpufrequtils)"
-RESTRICT="nomirror $RESTRICT"
+RESTRICT="mirror $RESTRICT"
 S=${WORKDIR}/${PN}
 src_unpack()
 {

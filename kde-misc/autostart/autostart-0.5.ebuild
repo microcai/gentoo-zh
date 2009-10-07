@@ -10,7 +10,7 @@ SRC_URI="http://beta.smileaf.org/files/autostart/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc x86"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 IUSE=""
 SLOT="0"
 DEPEND="=sys-devel/automake-1.6*"

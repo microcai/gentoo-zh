@@ -4,7 +4,7 @@
 
 inherit rpm
 
-RESTRICT="nomirror nostrip"
+RESTRICT="mirror nostrip"
 
 RPM_V=1.0
 
