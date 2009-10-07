@@ -3,7 +3,6 @@ app-dicts
 app-i18n
 app-misc
 app-portage
-app-shells
 app-vim
 dev-db
 dev-java
@@ -11,7 +10,6 @@ dev-libs
 dev-php
 gnome-extra
 kde-misc
-lxde-base
 media-fonts
 media-gfx
 media-libs
