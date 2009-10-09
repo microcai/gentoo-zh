@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/gpick
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*gpick-0.1.74 (09 Oct 2009)
+
+  09 Oct 2009; Coderoar <coderoar@gmail.com> +gpick-0.1.74.ebuild,
+  +metadata.xml:
+  initial commit
+
