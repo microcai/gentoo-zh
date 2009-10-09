@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*fcitx-3.6.2 (09 Oct 2009)
+
+  09 Oct 2009; Coderoar <coderoar@gmail.com> +fcitx-3.6.2.ebuild:
+  version bump
+
   26 Sep 2009; Coderoar <coderoar@gmail.com> -fcitx-3.6.ebuild,
   -fcitx-3.6.1.ebuild:
   removed obsolete
