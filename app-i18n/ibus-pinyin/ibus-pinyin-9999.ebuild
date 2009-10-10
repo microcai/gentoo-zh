@@ -3,14 +3,14 @@
 # $Header: $
 
 EAPI="2"
-#EGIT_BOOTSTRAP="autopoint"
-EGIT_REPO_URI="git://github.com/phuang/ibus-pinyin.git"
 
-inherit autotools python git
+inherit python git autotools
+
+EGIT_REPO_URI="git://github.com/phuang/ibus-pinyin.git"
 
 PYDB_TAR="pinyin-database-0.1.10.6.tar.bz2"
 DESCRIPTION="Chinese PinYin IMEngine for IBus Framework"
-HOMEPAGE="http://ibus.googlecode.com"
+HOMEPAGE="http://code.google.com/p/ibus/"
 SRC_URI="http://ibus.googlecode.com/files/${PYDB_TAR}"
 
 LICENSE="GPL-2"
@@ -18,40 +18,42 @@ SLOT="0"
 KEYWORDS=""
 IUSE="nls"
 
-DEPEND=">=dev-lang/python-2.5[sqlite]
+RDEPEND=">=app-i18n/ibus-1.1.0
+	>=dev-lang/python-2.5[sqlite]
+	nls? ( virtual/libintl )"
+DEPEND="${RDEPEND}
 	dev-util/cvs
 	dev-util/pkgconfig
-	sys-devel/gettext"
-RDEPEND="app-i18n/ibus
-	>=dev-lang/python-2.5[sqlite]"
+	nls? ( >=sys-devel/gettext-0.16.1 )"
 
 src_prepare() {
+	echo "AM_GNU_GETTEXT_VERSION(0.16.1)" >> "${S}"/configure.ac
 	autopoint || die "failed to run autopoint"
+	intltoolize --copy --force || die "intltoolize failed"
 	eautoreconf
 
-	# Disable pyc compiling
-	echo "#! /bin/bash" > py-compile
-	einfo "Preparing pinyin database"
-	cp "${DISTDIR}/${PYDB_TAR}" engine || die
+	mv py-compile py-compile.orig || die
+	ln -s "$(type -P true)" py-compile || die
+	cp "${DISTDIR}/${PYDB_TAR}" "${S}"/engine
 }
 
 src_configure() {
-	econf $(use_enable nls)
+	econf $(use_enable nls) || die
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "Install failed"
+	emake DESTDIR="${D}" install || die
+
 	dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_postinst() {
 	ewarn "This package is very experimental, please report your bugs to"
-	ewarn "http://code.google.com/p/ibus/issues"
-	echo
-	elog "You should run ibus-setup and enable the IMEngines you want to use!"
-	echo
+	ewarn "http://ibus.googlecode.com/issues/list"
+	elog
+	elog "You should run ibus-setup and enable IM Engines you want to use!"
+	elog
 
-	# http://www.gentoo.org/proj/en/Python/developersguide.xml#doc_chap2
 	python_mod_optimize /usr/share/${PN}
 }
 
