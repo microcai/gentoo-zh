@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-inherit eutils multilib python git autotools
+inherit multilib python git autotools
 
 EGIT_REPO_URI="git://github.com/phuang/${PN}.git"
 
