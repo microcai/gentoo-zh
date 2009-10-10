@@ -1,14 +1,16 @@
-app-arch
 app-antivirus
+app-arch
 app-benchmarks
 app-dicts
 app-editors
 app-emulation
 app-i18n
 app-laptop
+app-misc
 app-portage
 app-text
 app-vim
+dev-libs
 dev-python
 dev-tex
 dev-texlive
@@ -25,6 +27,8 @@ media-video
 net-im
 net-misc
 sys-devel
+sys-kernel
 x11-libs
 x11-misc
 x11-plugins
+x11-themes
