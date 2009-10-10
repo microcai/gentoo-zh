@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Oct 2009; Coderoar <coderoar@gmail.com> ibus-9999.ebuild:
+  fixed missing AM_GNU_GETTEXT_VERSION in configure.ac
+
   20 Jul 2009; Yu Yuwei <acevery@gmail.com> ibus-9999.ebuild:
   remove ChangeLog from dodoc
 
