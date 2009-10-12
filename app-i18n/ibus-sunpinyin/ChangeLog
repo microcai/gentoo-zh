@@ -1,0 +1,13 @@
+# ChangeLog for app-i18n/ibus-sunpinyin
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*ibus-sunpinyin-9999 (12 Oct 2009)
+
+  12 Oct 2009; Coderoar <coderoar@gmail.com> +ibus-sunpinyin-9999.ebuild,
+  +files/data/Makefile.am, +files/data/cnpunc.svg, +files/data/eng.svg,
+  +files/data/enpunc.svg, +files/data/fullwidth.svg,
+  +files/data/halfwidth.svg, +files/data/han.svg, +files/data/setup.svg,
+  +files/data/sunpinyin_logo.xpm, +files/ibus-sunpinyin-icon.patch:
+  initial commit
+

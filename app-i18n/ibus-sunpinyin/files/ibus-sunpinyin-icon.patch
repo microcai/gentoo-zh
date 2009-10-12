@@ -1,0 +1,47 @@
+diff -aur sunpinyin2/wrapper/ibus/src/Makefile.am sunpinyin2-new/wrapper/ibus/src/Makefile.am
+--- sunpinyin2/wrapper/ibus/src/Makefile.am	2009-10-12 09:47:46.912131107 +0800
++++ sunpinyin2-new/wrapper/ibus/src/Makefile.am	2009-10-12 11:03:23.911110319 +0800
+@@ -188,10 +188,10 @@
+ icon_DATA                = $(top_builddir)/data/sunpinyin_logo.xpm \
+                            $(top_builddir)/data/eng.svg            \
+                            $(top_builddir)/data/han.svg            \
+-                           $(top_builddir)/data/cnpunc.png         \
+-                           $(top_builddir)/data/enpunc.png         \
+-                           $(top_builddir)/data/fullwidth.png      \
+-                           $(top_builddir)/data/halfwidth.png      \
++                           $(top_builddir)/data/cnpunc.svg         \
++                           $(top_builddir)/data/enpunc.svg         \
++                           $(top_builddir)/data/fullwidth.svg      \
++                           $(top_builddir)/data/halfwidth.svg      \
+                            $(top_builddir)/data/setup.svg
+ 
+ test: ibus-engine-sunpinyin
+diff -aur sunpinyin2/wrapper/ibus/src/sunpinyin_property.cpp sunpinyin2-new/wrapper/ibus/src/sunpinyin_property.cpp
+--- sunpinyin2/wrapper/ibus/src/sunpinyin_property.cpp	2009-10-12 09:47:46.911132224 +0800
++++ sunpinyin2-new/wrapper/ibus/src/sunpinyin_property.cpp	2009-10-12 11:03:01.853123378 +0800
+@@ -79,10 +79,10 @@
+ {
+     SunPinyinProperty *prop = new SunPinyinProperty(engine, PROP_LETTER);
+     prop->m_info[0].label = ibus_text_new_from_ucs4((const gunichar*) L"Aa");
+-    prop->m_info[0].icon  = SUNPINYIN_ICON_DIR"/halfwidth.png";
++    prop->m_info[0].icon  = SUNPINYIN_ICON_DIR"/halfwidth.svg";
+     prop->m_info[0].tooltip = ibus_text_new_from_static_string(_("Switch to full-width letter input mode"));
+     prop->m_info[1].label = ibus_text_new_from_ucs4((const gunichar*) L"Ａａ");
+-    prop->m_info[1].icon  = SUNPINYIN_ICON_DIR"/fullwidth.png";
++    prop->m_info[1].icon  = SUNPINYIN_ICON_DIR"/fullwidth.svg";
+     prop->m_info[1].tooltip = ibus_text_new_from_static_string(_("Switch to half-width letter input mode"));
+     prop->init(state);
+     return prop;
+@@ -93,10 +93,10 @@
+ {
+     SunPinyinProperty *prop = new SunPinyinProperty(engine, PROP_PUNCT);
+     prop->m_info[0].label = ibus_text_new_from_ucs4((const gunichar*) L",.");
+-    prop->m_info[0].icon  = SUNPINYIN_ICON_DIR"/enpunc.png";
++    prop->m_info[0].icon  = SUNPINYIN_ICON_DIR"/enpunc.svg";
+     prop->m_info[0].tooltip = ibus_text_new_from_static_string(_("Switch to Chinese punctuation"));
+     prop->m_info[1].label = ibus_text_new_from_ucs4((const gunichar*) L"，。");
+-    prop->m_info[1].icon  = SUNPINYIN_ICON_DIR"/cnpunc.png";
++    prop->m_info[1].icon  = SUNPINYIN_ICON_DIR"/cnpunc.svg";
+     prop->m_info[1].tooltip = ibus_text_new_from_static_string(_("Switch to English punctuation"));
+     prop->init(state);
+     return prop;
