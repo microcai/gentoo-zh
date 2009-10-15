@@ -54,5 +54,5 @@ src_install() {
 	doicon "${FILESDIR}"/${PN}.png
 	domenu "${FILESDIR}"/${PN}.desktop
 
-	make_wrapper ${PN} ./${MY_PN} /opt/${PN}
+	make_wrapper ${PN} /opt/${PN}/${MY_PN}
 }

@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Oct 2009; Coderoar <coderoar@gmail.com> foxitreader-1.0.1.ebuild,
+  foxitreader-1.1.0.ebuild:
+  fixed issue of relative path to pdf file
+
   09 Sep 2009; Coderoar <coderoar@gmail.com> foxitreader-1.0.1.ebuild,
   foxitreader-1.1.0.ebuild, files/foxitreader.desktop:
   support more linguas in .desktop
