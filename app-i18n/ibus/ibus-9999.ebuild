@@ -92,6 +92,10 @@ pkg_postinst() {
 
 	[ "${ROOT}" = "/" -a -x /usr/bin/gtk-query-immodules-2.0 ] && \
 		gtk-query-immodules-2.0 > "${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
+	
+	[ "${ROOT}" = "/" -a -x /usr/bin/gtk-update-icon-cache ] && \
+		gtk-update-icon-cache "/usr/share/icons/hicolor"
+	
 
 	python_mod_optimize "$(python_get_sitedir)"/${PN} /usr/share/${PN}
 }
@@ -99,6 +103,9 @@ pkg_postinst() {
 pkg_postrm() {
 	[ "${ROOT}" = "/" -a -x /usr/bin/gtk-query-immodules-2.0 ] && \
 		gtk-query-immodules-2.0 > "${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
+	
+	[ "${ROOT}" = "/" -a -x /usr/bin/gtk-update-icon-cache ] && \
+		gtk-update-icon-cache "/usr/share/icons/hicolor"
 
 	python_mod_cleanup "$(python_get_sitedir)"/${PN} /usr/share/${PN}
 }
