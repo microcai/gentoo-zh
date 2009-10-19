@@ -42,7 +42,7 @@ RDEPEND="dev-libs/glib:2
 		mms? ( media-libs/libmms )
 		modplug? ( media-libs/libmodplug )
 		mpg123? ( >=media-sound/mpg123-1.5.1 )
-		musepack? ( media-libs/libmpcdec )
+		musepack? ( media-sound/musepack-tools )
 		ofa? ( media-libs/libofa )
 		pulseaudio? ( media-sound/pulseaudio )
 		samba? ( net-fs/samba )
