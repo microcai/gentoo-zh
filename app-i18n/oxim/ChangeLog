@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  19 Oct 2009; scsi <scsichen@gmail.com> +oxim-1.4.0.ebuild:
+  version bump
+
   30 Jul 2009; scsi <scsichen@gmail.com> oxim-1.2.2.ebuild:
   do not force install setup tool
 
