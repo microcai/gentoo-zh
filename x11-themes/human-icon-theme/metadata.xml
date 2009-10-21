@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>x11</herd>
-	<maintainer>
-		<email>coderoar@gmail.com</email>
-	</maintainer>
 </pkgmetadata>

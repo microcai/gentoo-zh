@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>gnome</herd>
-	<maintainer>
-		<email>coderoar@gmail.com</email>
-	</maintainer>
 	<use>
 		<flag name='ubuntulooks'>use ubuntulooks instead of clearlooks in the Human theme</flag>
 	</use>
