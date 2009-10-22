@@ -64,8 +64,8 @@ src_install() {
 		fperms 0755 /usr/bin/xpplive
 
 		use x86 || multilib_toolchain_setup x86
-		insinto /usr/$(get_libdir)
-		tar xvf lib_pps.tar.gz
-		doins lib/*
+		dodir /usr
+		tar xvf lib_pps.tar.gz -C "${D}"/usr
+		mv "${D}"/usr/{lib,$(get_libdir)}
 	fi
 }
