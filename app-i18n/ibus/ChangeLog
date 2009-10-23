@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  23 Oct 2009; Yu Yuwei <acevery@gmail.com> ibus-9999.ebuild:
+  add gtk-doc as DEPEND
+
   15 Oct 2009; Yu Yuwei <acevery@gmail.com> ibus-9999.ebuild:
   call gtk-update-icon-cache after install an uninstall
 

@@ -32,7 +32,7 @@ RDEPEND=">=dev-libs/glib-2.18
 DEPEND="${RDEPEND}
 	dev-util/cvs
 	dev-util/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1.9 )
+	>=dev-util/gtk-doc-1.9
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 RDEPEND="${RDEPEND}
 	dev-python/pygtk
