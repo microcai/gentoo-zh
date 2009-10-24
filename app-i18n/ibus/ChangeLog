@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  24 Oct 2009; Coderoar <coderoar@gmail.com> ibus-9999.ebuild:
+  use eclass instead of directly calling gtk-update-icon-cache
+
   23 Oct 2009; Yu Yuwei <acevery@gmail.com> ibus-9999.ebuild:
   add gtk-doc as DEPEND
 

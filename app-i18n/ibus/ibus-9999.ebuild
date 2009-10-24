@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-inherit multilib python git autotools
+inherit gnome2-utils multilib python git autotools
 
 EGIT_REPO_URI="git://github.com/phuang/${PN}.git"
 
@@ -30,9 +30,11 @@ RDEPEND=">=dev-libs/glib-2.18
 	qt4? ( app-i18n/ibus-qt )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	dev-util/cvs
+	>=dev-lang/perl-5.8.1
+	dev-perl/XML-Parser
 	dev-util/pkgconfig
 	>=dev-util/gtk-doc-1.9
+	dev-util/cvs
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 RDEPEND="${RDEPEND}
 	dev-python/pygtk
@@ -65,6 +67,9 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 
+	# bug 289547
+	keepdir /usr/share/ibus/{engine,icons}
+
 	dodoc AUTHORS NEWS README
 	rmdir "${S}"/usr/share/ibus/engine
 }
@@ -92,20 +97,15 @@ pkg_postinst() {
 
 	[ "${ROOT}" = "/" -a -x /usr/bin/gtk-query-immodules-2.0 ] && \
 		gtk-query-immodules-2.0 > "${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
-	
-	[ "${ROOT}" = "/" -a -x /usr/bin/gtk-update-icon-cache ] && \
-		gtk-update-icon-cache "/usr/share/icons/hicolor"
-	
 
-	python_mod_optimize "$(python_get_sitedir)"/${PN} /usr/share/${PN}
+	python_mod_optimize /usr/share/${PN} "$(python_get_sitedir)"/${PN}
+	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
 	[ "${ROOT}" = "/" -a -x /usr/bin/gtk-query-immodules-2.0 ] && \
 		gtk-query-immodules-2.0 > "${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
-	
-	[ "${ROOT}" = "/" -a -x /usr/bin/gtk-update-icon-cache ] && \
-		gtk-update-icon-cache "/usr/share/icons/hicolor"
 
-	python_mod_cleanup "$(python_get_sitedir)"/${PN} /usr/share/${PN}
+	python_mod_cleanup /usr/share/${PN} "$(python_get_sitedir)"/${PN}
+	gnome2_icon_cache_update
 }
