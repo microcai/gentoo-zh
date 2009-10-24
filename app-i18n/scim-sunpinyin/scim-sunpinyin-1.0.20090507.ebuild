@@ -3,9 +3,10 @@
 # $Header: $
 
 EAPI="2"
-inherit autotools
 
-MY_P="${P##scim-}"
+inherit autotools versionator
+
+MY_P="${PN##scim-}-$(get_version_component_range 3)"
 DESCRIPTION="SunPinyin is a SLM (Statistical Language Model) based IME"
 HOMEPAGE="http://www.opensolaris.org/os/project/input-method"
 # le -> little endian data files / be -> big endian datafiles.
@@ -18,7 +19,6 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="debug"
 
-# FIXME:
 RDEPEND="x11-libs/gtk+
 	>=dev-libs/glib-2
 	>=app-i18n/scim-1.4"
@@ -26,8 +26,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
-RESTRICT="mirror"
 S=${WORKDIR}/${MY_P}/sunpinyin/ime
+RESTRICT="mirror"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${MY_P}-gcc-4.4.diff
