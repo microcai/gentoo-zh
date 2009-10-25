@@ -9,7 +9,7 @@ inherit qt4 versionator eutils
 MY_P="${PN}-$(replace_version_separator 2 '-')"
 DESCRIPTION="Linux 1g1g is a desktop application for 1g1g.com."
 HOMEPAGE="http://linux1g1g.mrcongwang.com/"
-SRC_URI="https://sites.google.com/site/${PN}/home/${MY_P}-src.tar.bz2?attredirects=0 -> ${MY_P}-src.tar.bz2"
+SRC_URI="http://yedown.cz.cc/1g1g/${PN}/${MY_P}-src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,11 +24,10 @@ RDEPEND="${DEPEND}
 	www-plugins/adobe-flash
 	x11-misc/xbindkeys"
 
-S="${WORKDIR}/${PN}"
-RESTRICT="mirror"
+S=${WORKDIR}/${PN}
 
 src_configure(){
-	eqmake4
+	eqmake4 || die "eqmake4 failed"
 }
 
 src_install(){
