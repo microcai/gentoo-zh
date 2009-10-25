@@ -3,10 +3,10 @@
 <pkgmetadata>
 	<herd>net-p2p</herd>
 	<use>
-		<flag name="daemon">Enable amule daemon</flag>
-		<flag name="dlp">Enable Dynamic Leecher Protection</flag>
-		<flag name="remote">Enable remote controlling of the client</flag>
-		<flag name="stats">Enable statistic reporting</flag>
-		<flag name="upnp">Enables support for Intel UPnP stack.</flag>
+		<flag name='daemon'>Enable amule daemon</flag>
+		<flag name='dlp'>Enable Dynamic Leecher Protection</flag>
+		<flag name='remote'>Enable remote controlling of the client</flag>
+		<flag name='stats'>Enable statistic reporting</flag>
+		<flag name='upnp'>Enables support for Intel UPnP stack.</flag>
 	</use>
 </pkgmetadata>
