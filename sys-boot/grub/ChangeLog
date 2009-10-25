@@ -1,0 +1,13 @@
+# ChangeLog for sys-boot/grub
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*grub-9999-r1 (25 Oct 2009)
+*grub-1.97_beta4 (25 Oct 2009)
+*grub-1.97_beta3 (25 Oct 2009)
+
+  25 Oct 2009; Coderoar <coderoar@gmail.com> +grub-1.97_beta3.ebuild,
+  +grub-1.97_beta4.ebuild, +files/grub-1.97-genkernel.patch,
+  +grub-9999-r1.ebuild, +metadata.xml:
+  initial commit
+
