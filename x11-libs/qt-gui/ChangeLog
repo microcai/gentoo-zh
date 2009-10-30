@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.11 2008/08/11 13:03:14 yngwin Exp $
 
+  30 Oct 2009; scsi <scsichen@gmail.com> -qt-gui-4.4.2-r1.ebuild,
+  +qt-gui-4.5.3-r2.ebuild, +files/qt-4.5.3-glib-event-loop.patch:
+  version bump
+
   05 Oct 2009; scsi <scsichen@gmail.com> +qt-gui-4.5.3-r1.ebuild:
   version bump
 
