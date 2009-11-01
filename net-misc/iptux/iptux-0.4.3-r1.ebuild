@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -8,17 +8,17 @@ SRC_URI="http://iptux.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="gnome-base/gconf
-		>=x11-libs/gtk+-2.10.14"
+DEPEND="
+	gnome-base/gconf
+	>=x11-libs/gtk+-2.10.14"
 
 RDEPEND="${DEPEND}"
 
-RESTRICT="mirror"  #for overlay
-
+RESTRICT="primaryuri"
 
 src_install() {
-	einstall || "einstall failed"
+	emake DESTDIR="${D}" install || die "install failed"
 }
