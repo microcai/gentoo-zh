@@ -12,8 +12,8 @@ SRC_BASE="http://dl.google.com/linux/deb/pool/main/${MY_PN:0:1}/${MY_PN}/"
 DESCRIPTION="A browser that combines a minimal design with sophisticated technology"
 HOMEPAGE="http://www.google.com/chrome"
 SRC_URI="
-	x86? ( ${SRC_BASE}${MY_P}-r29900_i386.deb )
-	amd64? ( ${SRC_BASE}${MY_P}-r29916_amd64.deb )"
+	x86? ( ${SRC_BASE}${MY_P}_i386.deb )
+	amd64? ( ${SRC_BASE}${MY_P}_amd64.deb )"
 
 LICENSE="BSD"
 SLOT="0"
