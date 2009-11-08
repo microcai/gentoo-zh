@@ -16,8 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="media-libs/gstreamer:0.10
-	media-libs/gst-plugins-base:0.10
-	media-libs/libppswrapper"
+	media-libs/gst-plugins-base:0.10"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
