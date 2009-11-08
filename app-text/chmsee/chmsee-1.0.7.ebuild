@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.8:2
 	>=x11-libs/gtk+-2.8:2
 	dev-libs/chmlib
 	dev-libs/libgcrypt
-	<net-libs/xulrunner-1.9.1"
+	net-libs/xulrunner"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.37"
