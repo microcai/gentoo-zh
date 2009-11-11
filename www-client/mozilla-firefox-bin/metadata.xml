@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>mozilla</herd>
+<use>
+	<flag name='restrict-javascript'>Pull in <pkg>x11-plugins/noscript</pkg>
+		extension to disable javascript globally, putting the user fully in
+		control of the sites he/she visits</flag>
+</use>
+</pkgmetadata>
