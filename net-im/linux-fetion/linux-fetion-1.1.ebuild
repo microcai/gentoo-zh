@@ -18,7 +18,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="doc"
 
 DEPEND="dev-libs/openssl
-	net-misc/curl
+	net-misc/curl[openssl]
 	x11-libs/qt-gui
 	x11-libs/qt-core"
 RDEPEND=${DEPEND}
