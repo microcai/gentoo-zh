@@ -11,6 +11,7 @@ MY_P=${PN/-/_}_v${PV}
 DESCRIPTION="A QT4 IM client using CHINA MOBILE's Fetion Protocol"
 HOMEPAGE="http://www.libfetion.cn/"
 SRC_URI="http://libfetion-gui.googlecode.com/files/${MY_P}.tar.gz"
+RESTRICT="mirror"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -18,12 +19,12 @@ KEYWORDS="~x86 ~amd64"
 IUSE="doc"
 
 DEPEND="dev-libs/openssl
-	net-misc/curl[openssl]
+	|| ( >=net-misc/curl-7.19.7[openssl] net-misc/curl[ssl] )
+	x11-libs/qt-xmlpatterns
 	x11-libs/qt-gui
 	x11-libs/qt-core"
 RDEPEND=${DEPEND}
 
-RESTRICT="primaryuri"
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {

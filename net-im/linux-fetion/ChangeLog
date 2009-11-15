@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Nov 2009; Yu Yuwei <acevery@gmail.com> linux-fetion-1.1.ebuild,
+  linux-fetion-9999.ebuild:
+  allow linux-fetion to build either with curl[openssl] or curl[ssl]
+
   12 Jun 2009; Hong Hao <oahong@gmail.com> linux-fetion-9999.ebuild:
   Add missing faces image.
 
