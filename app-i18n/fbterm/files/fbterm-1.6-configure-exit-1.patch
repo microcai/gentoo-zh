@@ -1,0 +1,24 @@
+diff -ru fbterm-1.6.old/configure fbterm-1.6/configure
+--- fbterm-1.6.old/configure	2009-11-14 09:00:00.000000000 +0800
++++ fbterm-1.6/configure	2009-11-15 09:45:40.000000000 +0800
+@@ -5754,6 +5754,11 @@
+ [ "$SIGNALFD" = "yes" ] && $as_echo "#define HAVE_SIGNALFD 1" >>confdefs.h
+ 
+ 
++[ "$GPM_WARN" = "yes" ] && { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: gpm.h doesn't exist! gpm mouse support will be disabled!" >&5
++$as_echo "$as_me: WARNING: gpm.h doesn't exist! gpm mouse support will be disabled!" >&2;}
++[ "$VESA_WARN" = "yes" ] && { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: libx86.h doesn't exist! VESA support will be disabled!" >&5
++$as_echo "$as_me: WARNING: libx86.h doesn't exist! VESA support will be disabled!" >&2;}
++
+ ac_config_files="$ac_config_files Makefile src/Makefile src/lib/Makefile im/Makefile terminfo/Makefile doc/Makefile doc/fbterm.1"
+ 
+ ac_config_links="$ac_config_links im/input_key.h:src/input_key.h im/immessage.h:src/immessage.h"
+@@ -7236,8 +7241,3 @@
+ $as_echo "$as_me: WARNING: unrecognized options: $ac_unrecognized_opts" >&2;}
+ fi
+ 
+-
+-[ "$GPM_WARN" = "yes" ] && { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: gpm.h doesn't exist! gpm mouse support will be disabled!" >&5
+-$as_echo "$as_me: WARNING: gpm.h doesn't exist! gpm mouse support will be disabled!" >&2;}
+-[ "$VESA_WARN" = "yes" ] && { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: libx86.h doesn't exist! VESA support will be disabled!" >&5
+-$as_echo "$as_me: WARNING: libx86.h doesn't exist! VESA support will be disabled!" >&2;}

@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Nov 2009; Hong Hao <oahong@gmail.com> fbterm-1.6.ebuild,
+  +files/fbterm-1.6-configure-exit-1.patch:
+  Fix upstream issue 25. kudos goes to MatLinuxer2.
+
   26 Apr 2009; Hong Hao <oahong@gmail.com> +fbterm-1.5.ebuild:
   Add fbterm-1.5
 

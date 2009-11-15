@@ -2,6 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI="2"
+inherit eutils
+
 DESCRIPTION="fast FrameBuffer based TERMinal emulator for Linux"
 HOMEPAGE="http://fbterm.googlecode.com"
 SRC_URI="http://fbterm.googlecode.com/files/${P}.tar.gz"
@@ -9,19 +12,28 @@ SRC_URI="http://fbterm.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="gpm video_cards_vesa"
 
-RDEPEND="virtual/libc
+RDEPEND=">=media-libs/freetype-2
+	gpm? ( sys-libs/gpm )
 	media-libs/fontconfig
-	>=media-libs/freetype-2"
+	video_cards_vesa? ( dev-libs/libx86 )"
 DEPEND="${RDEPEND}
 	sys-libs/ncurses
 	dev-util/pkgconfig"
 
+src_prepare() {
+	epatch ${FILESDIR}/${P}-configure-exit-1.patch
+}
+
+src_configure() {
+	econf $(use_enable gpm) $(use_enable video_cards_vesa vesa)
+}
+
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
 
-	dodoc AUTHORS NEWS README doc/inputmethod.txt
+	dodoc AUTHORS NEWS README
 	$(type -P tic) -o "${D}/usr/share/terminfo/" \
 		"${S}"/terminfo/fbterm || die "Failed to generate terminfo database"
 }
