@@ -45,7 +45,9 @@ QA_PRESTRIPPED="
 	opt/google/chrome/libavutil.so.50
 	opt/google/chrome/libavformat.so.52
 	opt/google/chrome/libavcodec.so.52"
-QA_TEXTRELS="opt/google/chrome/libavcodec.so.52"
+QA_TEXTRELS="
+	opt/google/chrome/libavcodec.so.52
+	opt/google/chrome/libffmpegsumo.so"
 
 pkg_nofetch() {
 	elog "Please download"
