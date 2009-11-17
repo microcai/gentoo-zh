@@ -56,8 +56,8 @@ tools/shared/"
 
 PATCHES=(
 	"${FILESDIR}/qt-${PV}-glib-event-loop.patch"
-	"${FILESDIR}/patch/text/add-missing-style-scsi.diff"
-	"${FILESDIR}/patch/synthetic-bold-4.5.diff"
+	"${FILESDIR}/add-missing-style-scsi.diff"
+	"${FILESDIR}/synthetic-bold-4.5.diff"
 )
 
 pkg_setup() {
