@@ -2,6 +2,12 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Nov 2009; Coderoar <coderoar@gmail.com>
+  mozilla-firefox-bin-3.6_beta1.ebuild,
+  mozilla-firefox-bin-3.6_beta2.ebuild,
+  mozilla-firefox-bin-3.6_beta3.ebuild:
+  minor fix
+
 *mozilla-firefox-bin-3.6_beta3 (18 Nov 2009)
 
   18 Nov 2009; Coderoar <coderoar@gmail.com>
