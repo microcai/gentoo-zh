@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/inputmethod/${MY_PN}2
 
 src_prepare() {
-	./autogen.sh || die "autogen.sh failed"
+	(./autogen.sh) || die "autogen.sh failed"
 }
 
 src_configure() {
