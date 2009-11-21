@@ -1,103 +1,86 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
-inherit eutils
+EAPI="2"
+inherit eutils multilib
 
 DESCRIPTION="Chinese Open X Input Method Developed by Firefly "
-HOMEPAGE="http://opendesktop.org.tw/"
+HOMEPAGE="http://opendesktop.org.tw"
 SRC_URI="ftp://140.111.128.66/odp/OXIM/Source/${P}.tar.gz
-filters? ( ftp://140.111.128.66/odp/OXIM/Source/oxim-filters.tar.gz )"
+	filters? ( ftp://140.111.128.66/odp/OXIM/Source/oxim-filters.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
-IUSE="nls gtk-im qt-im chewing +filters"
+KEYWORDS="~amd64 ~x86"
+IUSE="chewing eeepc +filters nls qt3 setup-tool"
 RESTRICT="mirror"
-DEPEND="|| ( x11-libs/libXft virtual/x11 )
-    dev-util/pkgconfig
-    !app-i18n/oxim-cvs
-    gtk-im? ( >=x11-libs/gtk+-2 )
-	qt-im? ( x11-libs/qt )
-    chewing? ( >=dev-libs/libchewing-0.2.5 )    
-    nls? ( sys-devel/gettext )"
-RDEPEND="${DEPEND}
-		setup-tool? ( =app-i18n/oxim-setup-${PV} )
-		"
-src_unpack() {
-	unpack ${A}
-	cd ${S}
+
+#FIXME: libchewing[<0.3.0|>=0.3.0]
+COMMON_DEP="chewing? ( >=dev-libs/libchewing-0.2.5 )
+	qt3? ( x11-libs/qt:3 )
+	>=x11-libs/gtk+-2.2.0
+	x11-libs/libX11
+	x11-libs/libXext
+	>=x11-libs/libXft-2.0
+	>=x11-libs/libXpm-2.0.0
+	>=x11-libs/libXtst-1.0.0"
+DEPEND="${COMMON_DEP}
+	dev-util/pkgconfig
+	nls? ( sys-devel/gettext )
+	x11-proto/xproto"
+RDEPEND="${COMMON_DEP}
+	setup-tool? ( =app-i18n/oxim-setup-${PV} )"
+
+pkg_setup() {
+	# An arch specific config directory is used on multilib systems
+	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
+	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
 }
 
-src_compile() {
-#	CFLAGS="$CFLAGS -I/usr/qt/3/mkspecs/linux-g++/"
-#	export CFLAGS
-	
-	if use gtk-im ; then
-		myconf="${myconf} --enable-gtk-immodule=yes"
-	else
-		myconf="${myconf} --enable-gtk-immodule=no"
-	fi
-	if use qt-im ; then
-		myconf="${myconf} --enable-qt-immodule=yes"
-	else
-		myconf="${myconf} --enable-qt-immodule=no"
-	fi
-	
-	if use chewing ; then
-		myconf="${myconf} --enable-chewing-module=yes"
-	else
-		myconf="${myconf} --enable-chewing-module=no"
-	fi
+src_prepare() {
+	epatch "${FILESDIR}"/qt-im-include-fix.patch
+}
 
+src_configure() {
 	econf \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--with-conf-dir=/etc/oxim \
-		--mandir=/usr/share/man \
-		 ${myconf}|| die "econf failed"
-	
-	if use qt-im ; then
-	 	cd ${S}/src/qt-immodule
-		epatch ${FILESDIR}/qt-im-include-fix.patch
-		cd -
-	fi
-
-	emake || {
-				eerror "upgreade oxim error!"
-				eerror "Please unemerge old oxim and emerge oxim again."
-				eerror "If problem still occur, please contract to GOT Ebuild"
-				die "make failed"
-			}
+		--enable-gtk-immodule \
+		--enable-unicode-module \
+		$(use_enable chewing chewing-module) \
+		$(use_enable eeepc EeePC) \
+		$(use_enable nls) \
+		$(use_enable qt3 qt-immodule)
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die "Install failed"
 	dodoc ChangeLog AUTHORS NEWS README
-	if use filters
-	then
-		cd ${WORKDIR}/oxim-filters
+	if use filters ; then
+		cd "${WORKDIR}"/oxim-filters
+		insinto /usr/lib/oxim/filters
 		for filter in speak speed t2s-s2t unicode compose relate
 		do
 			einfo "install filter: $filter"
-			insinto /usr/lib/oxim/filters
 			doins $filter/oxim_*
 		done
-		exeinto /usr/bin
-		doexe compose/zhocompose
-		doexe relate/zhorelate
+		dobin compose/zhocompose relate/zhorelate
 	fi
 }
 
 pkg_postinst() {
+	$(type -p gtk-query-immodules-2.0) > "${ROOT}"/${GTK2_CONFDIR}/gtk.immodules
+
 	einfo
 	einfo "Add below settings in your .xinitrc or .xsession :"
-	einfo 
+	einfo
 	einfo "export LANG=your_locale (e.g. zh_CN.UTF-8 or zh_TW.UTF-8)"
 	einfo "export XMODIFIERS=@im=oxim"
 	einfo "export GTK_IM_MODULE=oxim"
 	einfo "export QT_IM_MODULE=oxim"
 	einfo "oxim &"
-	einfo 
+	einfo
 }
 
+pkg_postrm() {
+	$(type -p gtk-query-immodules-2.0) > "${ROOT}"/${GTK2_CONFDIR}/gtk.immodules
+}
