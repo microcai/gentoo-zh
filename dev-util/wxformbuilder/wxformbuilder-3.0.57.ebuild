@@ -12,9 +12,9 @@ HOMEPAGE="http://wxformbuilder.org"
 #SRC_URI="mirror://sourceforge/${PN}/wxFormBuilder_v${PV}-src.tar.bz2"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-LICENSE=""
+LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 DEPEND="x11-libs/wxGTK:2.8[debug=]
@@ -57,4 +57,3 @@ src_install() {
 	newicon "${S}"/output/resources/icons/logo.png ${PN}.png
 	make_desktop_entry ${mybin} "WxFormBuilder" ${PN} Development
 }
-
