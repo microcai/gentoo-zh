@@ -1,0 +1,59 @@
+From 94a089901574835c4f96e322a129c24bc73b76e6 Mon Sep 17 00:00:00 2001
+From: Alexander Gavrilov <angavrilov@gmail.com>
+Date: Sun, 7 Sep 2008 00:41:08 +0400
+Subject: [PATCH] Trying to fix KDE BUG#167982
+
+The bug is caused by preedit string update events that were sent by
+scim-bridge during the focus change sequence. Problems:
+
+1) QInputContext::setFocusWidget() is called before focus_out()
+2) Preedit string hide event is sent even if it wasn't displayed.
+
+As a result, when the focus is switched in, the _target_ Kate widget
+receives a preedit event, and trashes its selection.
+
+This patch is an obvious stopgap measure that seems unlikely to cause
+regression, but requires attention of people with better understanding
+of the affected interfaces.
+
+Signed-off-by: Alexander Gavrilov <angavrilov@gmail.com>
+---
+ client-qt/qt4/scim-bridge-client-imcontext-qt.cpp |   13 +++++++++++++
+ 1 files changed, 13 insertions(+), 0 deletions(-)
+
+diff --git a/client-qt/qt4/scim-bridge-client-imcontext-qt.cpp b/client-qt/qt4/scim-bridge-client-imcontext-qt.cpp
+index f65ad02..fbdb327 100644
+--- a/client-qt/qt4/scim-bridge-client-imcontext-qt.cpp
++++ b/client-qt/qt4/scim-bridge-client-imcontext-qt.cpp
+@@ -219,6 +219,12 @@ void ScimBridgeClientIMContextImpl::widgetDestroyed (QWidget *widget)
+ void ScimBridgeClientIMContextImpl::setFocusWidget (QWidget *widget)
+ {
+     scim_bridge_pdebugln (4, "ScimBridgeClientIMContextImpl::setFocusWidget ()");
++
++    if (focused_imcontext != NULL) {
++        focused_imcontext->focus_out ();
++        focused_imcontext = NULL;
++    }
++
+     QInputContext::setFocusWidget (widget);
+     focus_in ();
+     update ();
+@@ -442,8 +448,15 @@ void ScimBridgeClientIMContextImpl::focus_out ()
+         }
+     }
+ 
++#ifdef QT4
++    if (preedit_shown) {
++        set_preedit_shown (false);
++        update_preedit ();
++    }
++#else
+     set_preedit_shown (false);
+     update_preedit ();
++#endif
+ 
+     focused_imcontext = NULL;
+ }
+-- 
+1.6.0.20.g6148bc
+
