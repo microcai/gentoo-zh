@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.30 2009/10/10 15:43:53 armin76 Exp $
 
+  27 Nov 2009; Zhang Le <r0bertz@gentoo.org> scim-bridge-0.4.16-r1.ebuild,
+  +files/scim-bridge-0.4.16-configure.ac.patch:
+  added scim-bridge-0.4.16-configure.ac.patch, #280887
+
   10 Oct 2009; Raúl Porcel <armin76@gentoo.org> scim-bridge-0.4.9.ebuild:
   Drop to ~sparc
 

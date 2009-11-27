@@ -52,6 +52,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.4.15.2-qt4.patch"
 	epatch "${FILESDIR}/${PN}-0.4.15.2-gcc43.patch"
 	epatch "${FILESDIR}/${P}+gcc-4.4.patch"
+	epatch "${FILESDIR}/${P}-configure.ac.patch"
 
 	# bug #241954
 	intltoolize --force
