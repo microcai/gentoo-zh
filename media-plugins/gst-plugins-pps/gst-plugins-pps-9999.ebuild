@@ -4,8 +4,9 @@
 
 EAPI="2"
 
-EGIT_REPO_URI="git://anongit.freedesktop.org/~jinghua/gst-plugins-pps"
 inherit autotools base git
+
+EGIT_REPO_URI="git://anongit.freedesktop.org/~jinghua/gst-plugins-pps"
 
 DESCRIPTION="PPStream plugin for gstreamer"
 HOMEPAGE="http://cgit.freedesktop.org/~jinghua/gst-plugins-pps"
@@ -13,13 +14,18 @@ SRC_URI=""
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
+IUSE=""
 
-RDEPEND="media-libs/gstreamer:0.10
-	media-libs/gst-plugins-base:0.10"
+RDEPEND="
+	media-libs/gstreamer:0.10
+	media-libs/gst-plugins-base:0.10
+	media-libs/libppswrapper"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/cvs
+	dev-util/pkgconfig
+	sys-devel/gettext"
 
 src_prepare() {
-	AT_M4DIR="m4" eautoreconf
+	(NOCONFIGURE=1 ./autogen.sh) || die "autogen.sh failed"
 }
