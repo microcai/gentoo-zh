@@ -4,8 +4,9 @@
 
 EAPI="2"
 
-EGIT_REPO_URI="git://anongit.freedesktop.org/~jinghua/libppswrapper"
 inherit autotools flag-o-matic base git
+
+EGIT_REPO_URI="git://anongit.freedesktop.org/~jinghua/libppswrapper"
 
 DESCRIPTION="A libpps wrapper"
 HOMEPAGE="http://cgit.freedesktop.org/~jinghua"
@@ -13,10 +14,12 @@ SRC_URI=""
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
-DEPEND="media-tv/gmlive-extra[pps]"
+DEPEND="
+	=media-tv/gmlive-extra-0.2*
+	media-tv/gmlive-extra[pps]"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {

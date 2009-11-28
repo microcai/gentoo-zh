@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Nov 2009; Coderoar <coderoar@gmail.com> libppswrapper-9999.ebuild,
+  metadata.xml:
+  update deps
+
   11 Sep 2009; Hong Hao <oahong@gmail.com> libppswrapper-9999.ebuild:
   Remove unnecessary deps.
 
