@@ -4,8 +4,9 @@
 
 EAPI="2"
 
-EGIT_REPO_URI="git://anongit.freedesktop.org/~jinghua/totem-pps"
 inherit autotools base git
+
+EGIT_REPO_URI="git://anongit.freedesktop.org/~jinghua/totem-pps"
 
 DESCRIPTION="PPStream browser for totem"
 HOMEPAGE="http://cgit.freedesktop.org/~jinghua/totem-pps"
@@ -13,9 +14,12 @@ SRC_URI=""
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
+IUSE=""
 
-RDEPEND="media-video/totem[python]"
+RDEPEND="
+	media-plugins/gst-plugins-pps
+	media-video/totem[python]"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40.0
 	sys-devel/gettext"
