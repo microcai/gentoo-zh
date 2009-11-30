@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Nov 2009; Coderoar <coderoar@gmail.com> -fcitx-3.6.2.ebuild:
+  removed ebuild already in portage
+
 *fcitx-3.6.2 (09 Oct 2009)
 
   09 Oct 2009; Coderoar <coderoar@gmail.com> +fcitx-3.6.2.ebuild:
