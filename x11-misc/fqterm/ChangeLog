@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Nov 2009; Coderoar <coderoar@gmail.com> -fqterm-0.9.4.2.ebuild,
+  -files/fqterm-0.9.4.2-as-needed.patch, fqterm-9999.ebuild:
+  removed obsolete
+
   06 Jun 2009; Hong Hao <oahong@gmail.com> -fqterm-0.9.3.ebuild,
   -files/fqterm-0.9.3-qad-openssl-fix.patch, +fqterm-0.9.4.2.ebuild,
   +files/fqterm-0.9.4.2-as-needed.patch, fqterm-9999.ebuild,

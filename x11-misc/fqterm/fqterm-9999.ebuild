@@ -4,9 +4,10 @@
 
 EAPI="2"
 
-ESVN_REPO_URI="http://fqterm.googlecode.com/svn/trunk"
-ESVN_PATCHES="${P}-as-needed.patch"
 inherit cmake-utils subversion
+
+ESVN_PATCHES="${P}-as-needed.patch"
+ESVN_REPO_URI="http://fqterm.googlecode.com/svn/trunk"
 
 DESCRIPTION="a modern terminal emulator for Linux"
 HOMEPAGE="http://fqterm.googlecode.com"
@@ -17,10 +18,11 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-RDEPEND="x11-libs/qt-core[ssl,qt3support]
-	x11-libs/qt-gui
+RDEPEND="
+	dev-libs/openssl
 	media-libs/alsa-lib
-	dev-libs/openssl"
+	x11-libs/qt-core[ssl,qt3support]
+	x11-libs/qt-gui"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
@@ -32,5 +34,5 @@ src_unpack() {
 src_install() {
 	cmake-utils_src_install
 	insinto /usr/share/FQTerm
-	doins "${S}"/QQWry.Dat  || die
+	doins "${S}"/QQWry.Dat || die
 }
