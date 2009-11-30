@@ -46,6 +46,5 @@ x11-libs/cairo:newspr - Enable Freetype subpixel font rendering
 x11-libs/cairo:ubuntu - Enable lcd rendering patches from Ubuntu
 x11-libs/libXft:cleartype - Enable Freetype subpixel font rendering
 x11-libs/libXft:ubuntu - Use Freetype subpixel rendering patch from Ubuntu
-x11-misc/fqterm:qqwry - Enable QQWry plugin, which provides information (in Chinese language) about geographical positions, owner, etc. for IP addresses
 x11-misc/qterm:phonon - Enable support for the Phonon multimedia package
 x11-themes/gnome-themes-human:ubuntulooks - use ubuntulooks instead of clearlooks in the Human theme
