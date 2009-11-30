@@ -13,7 +13,7 @@ SRC_URI=""
 
 LICENSE="LGPL-2.1" #FIXME
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 IUSE=""
 
 DEPEND="sys-apps/dbus
