@@ -4,7 +4,7 @@
 
 DESCRIPTION="Iptux is a ipmsg client in linux"
 HOMEPAGE="http://code.google.com/p/iptux/"
-SRC_URI="http://iptux.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://iptux.googlecode.com/files/${PN}-0.5.1-2.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
