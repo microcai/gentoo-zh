@@ -1,14 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-ESVN_REPO_URI="https://evaq.svn.sourceforge.net/svnroot/evaq/branches/eva-qt3-bugfix/eva/"
-
 inherit kde subversion
 
+ESVN_REPO_URI="https://evaq.svn.sourceforge.net/svnroot/evaq/branches/eva-qt3-bugfix/eva/"
+
 DESCRIPTION="A kde implement of QQ"
-SRC_URI=""
 HOMEPAGE="http://sourceforge.net/projects/evaq"
+SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
