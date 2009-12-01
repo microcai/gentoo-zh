@@ -32,7 +32,6 @@ media-tv/gmlive:sopcast - Enable support for media-tv/sopcast
 media-tv/gmlive:totem - Enable totem plugin support
 media-tv/gmlive-extra:pplive - Enable support for PPLive P2P IPTV
 media-tv/gmlive-extra:pps - Enable support for PPS P2P IPTV
-net-im/eva:additional - Enable to generate additional Engine
 net-misc/xmuruijie:firewall - Add support for iptables firewall
 net-p2p/amule:daemon - Enable amule daemon
 net-p2p/amule:dlp - Enable Dynamic Leecher Protection
