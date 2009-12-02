@@ -10,7 +10,7 @@ SRC_URI="http://gpick.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-util/scons"
