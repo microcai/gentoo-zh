@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 Dec 2009; Coderoar <coderoar@gmail.com> eva-0.4.1.ebuild:
+  amd64 x86 stable, updated restrict for mirror
+
   01 Dec 2009; Coderoar <coderoar@gmail.com> eva-0.4.1.ebuild,
   eva-9999.ebuild, -eva-20080127.ebuild, metadata.xml:
   removed obsolete
