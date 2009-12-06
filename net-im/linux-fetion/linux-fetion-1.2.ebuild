@@ -30,8 +30,8 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	if use amd64 ; then
 		sed -i \
-			-e "/libfetion_32.a/c    LIBS +=  -lcurl ./lib/libfetion_64.a" \
-			-e "/libfetion.a/c    LIBS +=  -lcurl ./lib/libfetion_64.a" \
+			-e "/libfetion_32.a/c    ./libfetion/lib/libfetion_64.a" \
+			-e "/libfetion.a/c    ./libfetion/lib/libfetion_64.a" \
 			${PN}.pro || die "sed failed"
 	fi
 	sed -i \
