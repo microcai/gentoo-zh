@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/gcin
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  07 Dec 2009; scsi <scsichen@gmail.com> Manifest:
+  mask 1.4.6_pr12 until patch fix
+
   07 Dec 2009; scsi <scsichen@gmail.com> -gcin-1.4.6_pre11.ebuild,
   +gcin-1.4.6_pre12.ebuild:
   version bump
