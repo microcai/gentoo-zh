@@ -6,7 +6,7 @@ EAPI="2"
 
 inherit eutils toolchain-funcs versionator
 
-MY_PN="${PN%-bin}-unstable"
+MY_PN="${PN%-bin}-beta"
 MY_P="${MY_PN}_${PV/_p/-r}"
 SRC_BASE="http://dl.google.com/linux/deb/pool/main/${MY_PN:0:1}/${MY_PN}/"
 DESCRIPTION="A browser that combines a minimal design with sophisticated technology"

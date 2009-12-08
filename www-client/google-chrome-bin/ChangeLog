@@ -2,6 +2,13 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*google-chrome-bin-4.0.249.30_p33928 (08 Dec 2009)
+
+  08 Dec 2009; Coderoar <coderoar@gmail.com>
+  -google-chrome-bin-4.0.249.22_p33427.ebuild,
+  +google-chrome-bin-4.0.249.30_p33928.ebuild:
+  version bump, removed obsolete
+
 *google-chrome-bin-4.0.249.22_p33427 (03 Dec 2009)
 
   03 Dec 2009; Coderoar <coderoar@gmail.com>
