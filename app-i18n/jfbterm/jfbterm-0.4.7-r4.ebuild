@@ -38,8 +38,6 @@ src_unpack() {
 }
 
 src_compile() {
-	append-ldflags $(bindnow-flags)
-
 	econf $(use_enable debug) || die "econf failed"
 	emake || die "emake failed"
 }
