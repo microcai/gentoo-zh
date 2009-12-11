@@ -11,16 +11,16 @@ SRC_URI="http://gemanx.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug iplookup libnotify mmx socks5"
 
 RDEPEND="
 	firefox? ( www-client/mozilla-firefox )
 	>=x11-libs/gtk+-2.4
 	libnotify? ( x11-libs/libnotify )
-    x11-libs/libXft"
+	x11-libs/libXft"
 DEPEND="${RDEPEND}
-    dev-util/intltool"
+	dev-util/intltool"
 
 S=${WORKDIR}/${MY_P}
 RESTRICT="primaryuri"

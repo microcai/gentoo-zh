@@ -4,16 +4,14 @@
 
 EAPI="2"
 
-inherit subversion
-
+MY_P="${PN}-gtk2-${PV}"
 DESCRIPTION="GeMan X is a branch of PCMan X."
 HOMEPAGE="http://code.google.com/p/gemanx/"
-ESVN_REPO_URI="http://gemanx.googlecode.com/svn/trunk/"
-ESVN_BOOTSTRAP="autogen.sh"
+SRC_URI="http://gemanx.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="debug iplookup libnotify mmx socks5"
 
 RDEPEND="
@@ -23,6 +21,9 @@ RDEPEND="
 	x11-libs/libXft"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
+
+S=${WORKDIR}/${MY_P}
+RESTRICT="primaryuri"
 
 src_configure() {
 	econf \
