@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Nov 2009; Coderoar <coderoar@gmail.com> -gmlive-extra-0.2-r1.ebuild,
+  gmlive-extra-0.3.ebuild, files/gmlive-extra-0.3.patch, metadata.xml:
+  fixed build error on amd64
+
 *gmlive-extra-0.2-r1 (22 Oct 2009)
 
   22 Oct 2009; Coderoar <coderoar@gmail.com> -gmlive-extra-0.2.ebuild,

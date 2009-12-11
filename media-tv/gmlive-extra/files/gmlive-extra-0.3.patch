@@ -14,5 +14,5 @@
  install:
 -	cp xpps /usr/bin/
 -	mv libppswrapper-preload.* /usr/lib/
-+	cp xpps ${DESTDIR}/usr/bin/
-+	mv libppswrapper-preload.* ${DESTDIR}/usr/lib/
++	mv xpps "${DESTDIR}"/usr/bin/
++	mv libppswrapper-preload.* "${DESTDIR}"/usr/lib/

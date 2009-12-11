@@ -52,16 +52,15 @@ QA_TEXTRELS="
 	usr/lib32/libppsapi.so.0
 	usr/lib32/libppsapi.so.0.1.826"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	use amd64 && epatch ${FILESDIR}/${P}.patch
+src_prepare() {
+	use amd64 && epatch "${FILESDIR}/${P}.patch"
 }
 
 src_compile() {
 	if use pps ; then
-		cd ${S}/ppstream
-		emake || die "make failed."
+		cd ppstream
+		tar xvf ../lib-826.tar.gz
+		emake || die "emake failed"
 	fi
 }
 
@@ -69,24 +68,21 @@ src_install() {
 	insinto /usr/bin
 
 	if use pplive ; then
-		cd ${S}
 		doins xpplive
 		fperms 0755 /usr/bin/xpplive
-
-		use x86 || multilib_toolchain_setup x86
-		dodir /usr
-		tar xvf lib-826.tar.gz -C "${D}"/usr
-		mv "${D}"/usr/{lib,$(get_libdir)}
 	fi
 
 	if use pps ; then
-		cd ${S}/ppstream
 		dodir /usr/lib
-		emake DESTDIR="${D}" install || die "install failed."
+		cd "${S}"/ppstream
+		emake DESTDIR="${D}" install || die "install failed"
+
+		use x86 || multilib_toolchain_setup x86
+		mv {lib,"${D}"/usr/$(get_libdir)}
+		cd -
 	fi
 
 	if use sopcast ; then
-		cd ${S}
 		doins sp-sc-auth
 		fperms 0755 /usr/bin/sp-sc-auth
 	fi

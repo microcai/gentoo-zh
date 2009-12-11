@@ -57,15 +57,15 @@ src_install() {
 	if use pps ; then
 		doins xpps
 		fperms 4755 /usr/bin/xpps
+
+		use x86 || multilib_toolchain_setup x86
+		dodir /usr
+		tar xvf lib_pps.tar.gz
+		mv {lib,"${D}"/usr/$(get_libdir)}
 	fi
 
 	if use pplive ; then
 		doins xpplive
 		fperms 0755 /usr/bin/xpplive
-
-		use x86 || multilib_toolchain_setup x86
-		dodir /usr
-		tar xvf lib_pps.tar.gz -C "${D}"/usr
-		mv "${D}"/usr/{lib,$(get_libdir)}
 	fi
 }
