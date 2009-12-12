@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<use>
-		<flag name='iplookup'>enable IP location lookup. For Simplified Chinese users. Need qqwry.dat</flag>
+		<flag name='imageview'>enable external image viewer</flag>
+		<flag name='iplookup'>enable IP location lookup for Simplified Chinese users. Need qqwry.dat</flag>
 	</use>
 </pkgmetadata>

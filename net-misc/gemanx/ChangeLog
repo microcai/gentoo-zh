@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Dec 2009; Coderoar <coderoar@gmail.com> gemanx-0.1.0.1.ebuild,
+  gemanx-0.1.0.3.ebuild, gemanx-9999.ebuild, metadata.xml:
+  add missing deps
+
 *gemanx-0.1.0.3 (11 Dec 2009)
 
   11 Dec 2009; Coderoar <coderoar@gmail.com> gemanx-0.1.0.1.ebuild,

@@ -14,10 +14,12 @@ ESVN_BOOTSTRAP="autogen.sh"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="debug iplookup libnotify mmx socks5"
+IUSE="debug +imageview iplookup libnotify mmx socks5"
 
 RDEPEND="
-	firefox? ( www-client/mozilla-firefox )
+	imageview? (
+		net-misc/curl
+		sys-apps/file )
 	>=x11-libs/gtk+-2.4
 	libnotify? ( x11-libs/libnotify )
 	x11-libs/libXft"
@@ -27,11 +29,11 @@ DEPEND="${RDEPEND}
 src_configure() {
 	econf \
 		$(use_enable debug) \
+		$(use_enable imageview) \
 		$(use_enable iplookup) \
 		$(use_enable libnotify) \
 		$(use_enable mmx) \
-		$(use_enable socks5 proxy) \
-		--enable-imageview
+		$(use_enable socks5 proxy)
 }
 
 src_install() {
