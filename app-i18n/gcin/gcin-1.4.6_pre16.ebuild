@@ -12,7 +12,7 @@ SRC_URI="http://cle.linux.org.tw/gcin/download/${P/_/.}.tar.bz2
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~hppa"
 IUSE="qt3 filter-nobopomofo chinese-sound anthy qt4"
 
 # XXX: Missing QT4 dependencies.
@@ -31,8 +31,7 @@ S=${WORKDIR}/${P/_/.}
 
 
 src_prepare() {
-	epatch "${FILESDIR}/gcin-1.4.4-qt3_fix.patch" \
-		"${FILESDIR}/gcin-1.4.4-qt4_fix.patch" 
+	epatch "${FILESDIR}/gcin-1.4.6.pre16-qt4-fix.patch"
 }
 
 src_configure() {
