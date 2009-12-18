@@ -38,10 +38,6 @@ pkg_setup() {
 	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
 }
 
-src_prepare() {
-	epatch "${FILESDIR}"/qt-im-include-fix.patch
-}
-
 src_configure() {
 	econf \
 		--enable-gtk-immodule \

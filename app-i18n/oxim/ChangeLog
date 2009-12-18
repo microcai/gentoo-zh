@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Dec 2009; scsi <scsichen@gmail.com> oxim-1.4.1.ebuild:
+  fix patch error
+
   18 Nov 2009; scsi <scsichen@gmail.com> Manifest:
   fix manifest error
 
