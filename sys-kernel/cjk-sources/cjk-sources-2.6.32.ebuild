@@ -4,7 +4,7 @@
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="8"
+K_GENPATCHES_VER="1"
 
 inherit kernel-2
 detect_version
@@ -29,7 +29,7 @@ TUXONICE_URI="http://www.tuxonice.net/downloads/all/${TUXONICE_SRC}.bz2"
 UTF8_BASE="http://zdbr.net.cn/download"
 UTF8_CORE="utf8-kernel-${PV}-core-1.patch.bz2"
 UTF8_FONTS="utf8-kernel-${KV_MAJOR}.${KV_MINOR}-fonts-2.patch.bz2"
-UTF8_FBCONDECOR="utf8-kernel-${KV_MAJOR}.${KV_MINOR}.28-fbcondecor-1.patch.bz2"
+UTF8_FBCONDECOR="utf8-kernel-${KV_MAJOR}.${KV_MINOR}.31-fbcondecor-1.patch.bz2"
 
 UNIPATCH_LIST="${DISTDIR}/${TUXONICE_SRC}.bz2 ${DISTDIR}/${UTF8_CORE} ${DISTDIR}/${UTF8_FONTS} ${DISTDIR}/${UTF8_FBCONDECOR}"
 UNIPATCH_STRICTORDER="yes"

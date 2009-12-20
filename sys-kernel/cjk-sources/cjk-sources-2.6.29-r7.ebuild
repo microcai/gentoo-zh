@@ -15,7 +15,7 @@ HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches/ http://www.tuxonice.net http://
 IUSE=""
 
 TUXONICE_SNAPSHOT=""
-TUXONICE_VERSION="3.0.99.41"
+TUXONICE_VERSION="3.0.1"
 TUXONICE_TARGET="${PV}"
 
 if [[ -n "${TUXONICE_SNAPSHOT}" ]]; then
