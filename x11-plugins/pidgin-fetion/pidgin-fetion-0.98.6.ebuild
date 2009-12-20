@@ -2,15 +2,18 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI="2"
+
+inherit autotools
+
 MY_P=${P/pidgin-//}
 DESCRIPTION="Fetion protocol plugin for libpurple"
 HOMEPAGE="http://blog.donews.com/gradetwo/category/137031.aspx"
-SRC_URI="http://exherbo-cn.googlecode.com/files/${MY_P}.tar.bz2"
-#http://www.logvinov.ru/files/dist/fetion/${MY_P}.tar.bz2"
+SRC_URI="http://gentoo-china-overlay.googlecode.com/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-libs/glib
@@ -19,6 +22,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	eautoreconf
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
