@@ -10,13 +10,14 @@ MY_P="${PN##scim-}-$(get_version_component_range 3)"
 DESCRIPTION="SunPinyin is a SLM (Statistical Language Model) based IME"
 HOMEPAGE="http://www.opensolaris.org/os/project/input-method"
 # le -> little endian data files / be -> big endian datafiles.
-SRC_URI="http://oahong.googlepages.com/${MY_P}.tar.bz2
+SRC_URI="
+	http://gentoo-china-overlay.googlecode.com/files/${MY_P}.tar.bz2
 	http://src.opensolaris.org/source/raw/nv-g11n/inputmethod/sunpinyin/ime/data/lm_sc.t3g.le
 	http://src.opensolaris.org/source/raw/nv-g11n/inputmethod/sunpinyin/ime/data/pydict_sc.bin.le"
 
 LICENSE="LGPL-2.1 CDDL"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 RDEPEND="x11-libs/gtk+
@@ -27,7 +28,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 S=${WORKDIR}/${MY_P}/sunpinyin/ime
-RESTRICT="mirror"
+RESTRICT="primaryuri"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${MY_P}-gcc-4.4.diff
