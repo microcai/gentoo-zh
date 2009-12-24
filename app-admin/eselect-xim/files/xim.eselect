@@ -9,7 +9,7 @@ VERSION=$(svn_date_to_version "${SVN_DATE}" )
 
 user_xim="${HOME}/.gentoo/eselect-xim/current-user-xim"
 system_xim="/etc/eselect-xim/current-system-xim"
-XIMDIR=/etc/eselect-xim/xim.d
+XIMDIR=/usr/share/eselect-xim/xim.d
 TARGETS=( $( ls $XIMDIR ) )
 
 if [ -z "${UID}" ] ; then

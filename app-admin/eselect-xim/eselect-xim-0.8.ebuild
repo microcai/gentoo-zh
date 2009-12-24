@@ -18,7 +18,8 @@ RDEPEND=">=app-admin/eselect-1.0.6
 	ibus? ( app-i18n/ibus )"
 
 src_install() {
-	insinto /etc/eselect-xim/xim.d
+	dodir /etc/eselect-xim/
+	insinto /usr/share/eselect-xim/xim.d
 	use scim && doins "${FILESDIR}/xim.d/scim"
 	use gcin && doins "${FILESDIR}/xim.d/gcin"
 	use oxim && doins "${FILESDIR}/xim.d/oxim"

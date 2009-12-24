@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  24 Dec 2009; scsi <scsichen@gmail.com> -eselect-xim-0.7.ebuild,
+  +eselect-xim-0.8.ebuild, files/xim.eselect:
+  version bump
+
   24 Dec 2009; scsi <scsichen@gmail.com> -eselect-xim-0.6.ebuild,
   +eselect-xim-0.7.ebuild, -files/oxim.sh, +files/xim.d/ibus,
   files/xim.d/oxim:
