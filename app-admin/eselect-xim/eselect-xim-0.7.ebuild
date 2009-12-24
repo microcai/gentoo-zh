@@ -8,21 +8,25 @@ HOMEPAGE="http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 x86"
-IUSE="scim gcin oxim"
+IUSE="scim gcin oxim ibus"
 
 RDEPEND=">=app-admin/eselect-1.0.6
 	scim? ( app-i18n/scim )
 	scim? ( app-i18n/scim-bridge )
 	gcin? ( app-i18n/gcin )
-	oxim? ( app-i18n/oxim )"
+	oxim? ( app-i18n/oxim )
+	ibus? ( app-i18n/ibus )"
 
 src_install() {
 	insinto /etc/eselect-xim/xim.d
 	use scim && doins "${FILESDIR}/xim.d/scim"
 	use gcin && doins "${FILESDIR}/xim.d/gcin"
 	use oxim && doins "${FILESDIR}/xim.d/oxim"
-	insinto /etc/profile.d
-	doins "${FILESDIR}/xim-select.sh" || die
+	use ibus && doins "${FILESDIR}/xim.d/ibus"
+#	insinto /etc/profile.d
+#	doins "${FILESDIR}/xim-select.sh" || die
+	exeinto /etc/X11/xinit/xinitrc.d
+	newexe "${FILESDIR}/xim-select.sh" 99-xim-select
 	insinto /usr/share/eselect/modules
 	doins "${FILESDIR}/xim.eselect" || die
 }
