@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  27 Dec 2009; Coderoar <coderoar@gmail.com> ibus-9999.ebuild:
+  updated deps, This fixes Issue #74
+
   24 Oct 2009; Coderoar <coderoar@gmail.com> ibus-9999.ebuild:
   use eclass instead of directly calling gtk-update-icon-cache
 

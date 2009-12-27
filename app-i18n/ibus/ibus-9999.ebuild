@@ -19,9 +19,9 @@ IUSE="doc nls qt4"
 
 RDEPEND=">=dev-libs/glib-2.18
 	>=x11-libs/gtk+-2
-	>=gnome-base/gconf-2.12
+	>=gnome-base/gconf-2.12.0
 	>=gnome-base/librsvg-2
-	sys-apps/dbus
+	>=sys-apps/dbus-1.2.4
 	dev-libs/dbus-glib
 	app-text/iso-codes
 	x11-libs/libX11
@@ -38,7 +38,8 @@ DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 RDEPEND="${RDEPEND}
 	dev-python/pygtk
-	>=dev-python/dbus-python-0.83
+	dev-python/notify-python
+	>=dev-python/dbus-python-0.83.0
 	dev-python/pyxdg"
 
 pkg_setup() {
