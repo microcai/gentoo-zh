@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.6.0-r1.ebuild,v 1.1 2009/12/07 15:19:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.6.0-r2.ebuild,v 1.1 2009/12/25 15:40:44 abcd Exp $
 
 EAPI="2"
 inherit eutils qt4-build
 
 DESCRIPTION="The GUI module for the Qt toolkit"
 SLOT="4"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="+accessibility cups dbus +glib gtk mng nas nis raster tiff qt3support xinerama"
 
 RDEPEND="media-libs/fontconfig
@@ -15,28 +15,32 @@ RDEPEND="media-libs/fontconfig
 	media-libs/jpeg
 	media-libs/libpng
 	sys-libs/zlib
-	x11-libs/libX11
-	x11-libs/libXext
-	x11-libs/libXrandr
-	x11-libs/libXcursor
-	x11-libs/libXfont
-	x11-libs/libSM
-	x11-libs/libXi
-	~x11-libs/qt-core-${PV}[debug=,glib=,qt3support=]
-	~x11-libs/qt-script-${PV}[debug=]
+	~x11-libs/qt-core-${PV}[aqua=,debug=,glib=,qt3support=]
+	~x11-libs/qt-script-${PV}[aqua=,debug=]
+	!aqua? (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXrandr
+		x11-libs/libXcursor
+		x11-libs/libXfont
+		x11-libs/libSM
+		x11-libs/libXi
+	)
 	cups? ( net-print/cups )
-	dbus? ( ~x11-libs/qt-dbus-${PV}[debug=] )
-	gtk? ( x11-libs/gtk+:2 )
+	dbus? ( ~x11-libs/qt-dbus-${PV}[aqua=,debug=] )
+	gtk? ( x11-libs/gtk+:2[aqua=] )
 	mng? ( >=media-libs/libmng-1.0.9 )
 	nas? ( >=media-libs/nas-1.5 )
 	tiff? ( media-libs/tiff )
 	xinerama? ( x11-libs/libXinerama )
 	"
 DEPEND="${RDEPEND}
-	xinerama? ( x11-proto/xineramaproto )
-	x11-proto/xextproto
-	x11-proto/inputproto"
-PDEPEND="qt3support? ( ~x11-libs/qt-qt3support-${PV}[debug=] )"
+	!aqua? (
+		x11-proto/xextproto
+		x11-proto/inputproto
+	)
+	xinerama? ( x11-proto/xineramaproto )"
+PDEPEND="qt3support? ( ~x11-libs/qt-qt3support-${PV}[aqua=,debug=] )"
 
 QT4_TARGET_DIRECTORIES="
 src/gui
@@ -142,10 +146,6 @@ src_install() {
 
 	qt4-build_src_install
 
-	# remove some unnecessary headers
-	rm -f "${D}${QTHEADERDIR}"/{Qt,QtGui}/{qmacstyle_mac.h,qwindowdefs_win.h} \
-		"${D}${QTHEADERDIR}"/QtGui/QMacStyle
-
 	# qt-creator
 	# some qt-creator headers are located
 	# under /usr/include/qt4/QtDesigner/private.
@@ -163,12 +163,12 @@ src_install() {
 		tools/designer/src/designer/images/designer.png \
 		|| die "doicon failed"
 	# Note: absolute image path required here!
-	make_desktop_entry /usr/bin/linguist Linguist \
-			/usr/share/pixmaps/linguist-128-32.png \
+	make_desktop_entry "${EPREFIX}"/usr/bin/linguist Linguist \
+			"${EPREFIX}"/usr/share/pixmaps/linguist-128-32.png \
 			'Qt;Development;GUIDesigner' \
 			|| die "linguist make_desktop_entry failed"
-	make_desktop_entry /usr/bin/designer Designer \
-			/usr/share/pixmaps/designer.png \
+	make_desktop_entry "${EPREFIX}"/usr/bin/designer Designer \
+			"${EPREFIX}"/usr/share/pixmaps/designer.png \
 			'Qt;Development;GUIDesigner' \
 			|| die "designer make_desktop_entry failed"
 }
