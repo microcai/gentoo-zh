@@ -2,6 +2,13 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*mozilla-firefox-bin-3.7_alpha1_pre2009123003 (31 Dec 2009)
+
+  31 Dec 2009; Coderoar <coderoar@gmail.com>
+  -mozilla-firefox-bin-3.7_alpha1_pre2009112003.ebuild,
+  +mozilla-firefox-bin-3.7_alpha1_pre2009123003.ebuild:
+  version bump, remove obsolete
+
 *mozilla-firefox-bin-3.6_beta5 (19 Dec 2009)
 *mozilla-firefox-bin-3.6_beta4 (19 Dec 2009)
 

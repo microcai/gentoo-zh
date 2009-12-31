@@ -9,7 +9,7 @@ MY_PV="3.7a1pre"
 MY_P="${PN/-bin/}-${MY_PV}"
 
 DESCRIPTION="Firefox Web Browser"
-REL_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/2009-11-20-03-tracemonkey"
+REL_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/2009-12-30-03-tracemonkey"
 SRC_URI="
 	x86? ( ${REL_URI}/firefox-${MY_PV}.en-US.linux-i686.tar.bz2 )
 	amd64? ( ${REL_URI}/firefox-${MY_PV}.en-US.linux-x86_64.tar.bz2 )"
