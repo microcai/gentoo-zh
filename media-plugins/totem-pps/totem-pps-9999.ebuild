@@ -18,6 +18,7 @@ KEYWORDS=""
 IUSE=""
 
 RDEPEND="
+	dev-python/beautifulsoup
 	media-plugins/gst-plugins-pps
 	media-video/totem[python]"
 DEPEND="${RDEPEND}
