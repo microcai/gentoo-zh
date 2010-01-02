@@ -35,15 +35,19 @@ src_install() {
 
 	doicon "${FILESDIR}"/${PN}.png
 	domenu "${FILESDIR}"/${PN}.desktop
-	dodir /usr/bin
-	cat <<EOF >"${D}"/usr/bin/qq
+	if use amd64; then
+		dodir /usr/bin
+		cat <<EOF >"${D}"/usr/bin/qq
 #!/bin/sh
 export GDK_PIXBUF_MODULE_FILE=/etc/gtk-2.0/i686-pc-linux-gnu/gdk-pixbuf.loaders
 export GTK_IM_MODULE_FILE=/etc/gtk-2.0/i686-pc-linux-gnu/gtk.immodules
 cd "/opt/${PN}"
 exec /opt/linuxqq/qq "\$@"
 EOF
-	fperms 0755 /usr/bin/qq
+		fperms 0755 /usr/bin/qq
+	elif use x86; then
+		make_wrapper qq ./qq /opt/${PN}
+	fi
 }
 
 pkg_postinst() {
