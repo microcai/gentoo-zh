@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 EAPI="2"
@@ -10,7 +10,7 @@ MY_P="${PN/-bin/}-${MY_PV}"
 
 DESCRIPTION="Firefox Web Browser"
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/"
-SRC_URI="${REL_URI}/${MY_PV}/linux-i686/en-US/firefox-${MY_PV}.tar.bz2"
+SRC_URI="${REL_URI}/${MY_PV}/linux-i686/en-US/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip primaryuri"
 

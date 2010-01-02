@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 EAPI="2"
@@ -11,8 +11,8 @@ MY_P="${PN/-bin/}-${MY_PV}"
 DESCRIPTION="Firefox Web Browser"
 REL_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/2009-12-30-03-tracemonkey"
 SRC_URI="
-	x86? ( ${REL_URI}/firefox-${MY_PV}.en-US.linux-i686.tar.bz2 )
-	amd64? ( ${REL_URI}/firefox-${MY_PV}.en-US.linux-x86_64.tar.bz2 )"
+	x86? ( ${REL_URI}/${MY_P}.en-US.linux-i686.tar.bz2 )
+	amd64? ( ${REL_URI}/${MY_P}.en-US.linux-x86_64.tar.bz2 )"
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip primaryuri"
 

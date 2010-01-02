@@ -1,6 +1,18 @@
-# ChangeLog for www-client/mozilla-firefox-bin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# ChangeLog for www-client/firefox-bin
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*firefox-bin-3.7_alpha1_pre2009123003 (02 Jan 2010)
+*firefox-bin-3.6_beta5 (02 Jan 2010)
+*firefox-bin-3.6_beta4 (02 Jan 2010)
+
+  02 Jan 2010; Coderoar <coderoar@gmail.com> +files/10firefox-bin,
+  +files/71firefox-bin, +firefox-bin-3.6_beta4.ebuild,
+  +firefox-bin-3.6_beta5.ebuild,
+  +firefox-bin-3.7_alpha1_pre2009123003.ebuild,
+  +files/icon/firefox-bin.desktop, +files/icon/firefox-bin-icon.png,
+  +metadata.xml:
+  renamed mozilla-firefox-bin to firefox-bin
 
 *mozilla-firefox-bin-3.7_alpha1_pre2009123003 (31 Dec 2009)
 
