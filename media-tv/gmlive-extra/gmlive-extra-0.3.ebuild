@@ -60,7 +60,7 @@ src_compile() {
 	if use pps ; then
 		cd ppstream
 		tar xvf ../lib-826.tar.gz
-		emake || die "emake failed"
+		#emake || die "emake failed" # use libppswrapper
 	fi
 }
 
@@ -73,9 +73,8 @@ src_install() {
 	fi
 
 	if use pps ; then
-		dodir /usr/lib
 		cd "${S}"/ppstream
-		emake DESTDIR="${D}" install || die "install failed"
+		#emake DESTDIR="${D}" install || die "install failed"
 
 		use x86 || multilib_toolchain_setup x86
 		mv {lib,"${D}"/usr/$(get_libdir)}

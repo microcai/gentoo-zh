@@ -18,7 +18,6 @@ KEYWORDS=""
 IUSE=""
 
 DEPEND="
-	=media-tv/gmlive-extra-0.2*
 	media-tv/gmlive-extra[pps]"
 RDEPEND="${DEPEND}"
 

@@ -18,9 +18,9 @@ KEYWORDS=""
 IUSE=""
 
 RDEPEND="
+	media-libs/libppswrapper
 	media-libs/gstreamer:0.10
-	media-libs/gst-plugins-base:0.10
-	media-libs/libppswrapper"
+	media-libs/gst-plugins-base:0.10"
 DEPEND="${RDEPEND}
 	dev-util/cvs
 	dev-util/pkgconfig
