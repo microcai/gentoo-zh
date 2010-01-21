@@ -5,16 +5,15 @@ EAPI="2"
 
 inherit eutils mozilla-launcher multilib mozextension
 
-MY_PV="${PV/_beta/b}"
-MY_P="${PN/-bin/}-${MY_PV}"
+MY_P="${PN/-bin/}-${PV}"
 
 DESCRIPTION="Firefox Web Browser"
-REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/"
-SRC_URI="${REL_URI}/${MY_PV}/linux-i686/en-US/${MY_P}.tar.bz2"
+REL_URI="ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases"
+SRC_URI="${REL_URI}/${PV}/linux-i686/en-US/firefox-${PV}.tar.bz2"
 HOMEPAGE="http://www.mozilla.com/firefox"
-RESTRICT="strip primaryuri"
+RESTRICT="strip mirror"
 
-KEYWORDS=""
+KEYWORDS="amd64 x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="restrict-javascript"

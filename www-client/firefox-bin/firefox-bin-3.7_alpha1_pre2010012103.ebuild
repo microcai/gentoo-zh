@@ -3,14 +3,16 @@
 # $Header: $
 EAPI="2"
 
-inherit eutils mozilla-launcher multilib mozextension
+inherit eutils mozilla-launcher mozextension
 
-MY_PV="${PV/_beta/b}"
+MY_PV="3.7a1pre"
 MY_P="${PN/-bin/}-${MY_PV}"
 
 DESCRIPTION="Firefox Web Browser"
-REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/"
-SRC_URI="${REL_URI}/${MY_PV}/linux-i686/en-US/firefox-${MY_PV}.tar.bz2"
+REL_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/2010-01-21-03-tracemonkey"
+SRC_URI="
+	x86? ( ${REL_URI}/${MY_P}.en-US.linux-i686.tar.bz2 )
+	amd64? ( ${REL_URI}/${MY_P}.en-US.linux-x86_64.tar.bz2 )"
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip primaryuri"
 
@@ -24,27 +26,12 @@ RDEPEND="dev-libs/dbus-glib
 	x11-libs/libXrender
 	x11-libs/libXt
 	x11-libs/libXmu
-	x86? (
-		>=x11-libs/gtk+-2.2
-		 >=media-libs/alsa-lib-1.0.16
-	)
-	amd64? (
-		>=app-emulation/emul-linux-x86-baselibs-1.0
-		>=app-emulation/emul-linux-x86-gtklibs-1.0
-		>=app-emulation/emul-linux-x86-soundlibs-20080418
-		app-emulation/emul-linux-x86-compat
-	)"
+	>=x11-libs/gtk+-2.2
+	>=media-libs/alsa-lib-1.0.16"
 
 PDEPEND="restrict-javascript? ( www-plugins/noscript )"
 
 S="${WORKDIR}/firefox"
-
-pkg_setup() {
-	# This is a binary x86 package => ABI=x86
-	# Please keep this in future versions
-	# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
-	has_multilib_profile && ABI="x86"
-}
 
 src_install() {
 	declare MOZILLA_FIVE_HOME=/opt/firefox
@@ -83,26 +70,18 @@ EOF
 }
 
 pkg_postinst() {
-	if use x86; then
-		if ! has_version 'gnome-base/gconf' || ! has_version 'gnome-base/orbit' \
-			|| ! has_version 'net-misc/curl'; then
-			einfo
-			einfo "For using the crashreporter, you need gnome-base/gconf,"
-			einfo "gnome-base/orbit and net-misc/curl emerged."
-			einfo
-		fi
-		if has_version 'net-misc/curl' && built_with_use --missing \
-			true 'net-misc/curl' nss; then
-			einfo
-			einfo "Crashreporter won't be able to send reports"
-			einfo "if you have curl emerged with the nss USE-flag"
-			einfo
-		fi
-	else
+	if ! has_version 'gnome-base/gconf' || ! has_version 'gnome-base/orbit' \
+		|| ! has_version 'net-misc/curl'; then
 		einfo
-		einfo "NB: You just installed a 32-bit firefox"
+		einfo "For using the crashreporter, you need gnome-base/gconf,"
+		einfo "gnome-base/orbit and net-misc/curl emerged."
 		einfo
-		einfo "Crashreporter won't work on amd64"
+	fi
+	if has_version 'net-misc/curl' && built_with_use --missing \
+		true 'net-misc/curl' nss; then
+		einfo
+		einfo "Crashreporter won't be able to send reports"
+		einfo "if you have curl emerged with the nss USE-flag"
 		einfo
 	fi
 	update_mozilla_launcher_symlinks
