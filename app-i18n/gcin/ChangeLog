@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/gcin
 # Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
 
+  02 Feb 2010; scsi <scsichen@gmail.com> -gcin-1.4.7_pre3.ebuild,
+  +gcin-1.4.7_pre8.ebuild:
+  version bump
+
   11 Jan 2010; scsi <scsichen@gmail.com> +gcin-1.4.7_pre3.ebuild:
   version bump
 
