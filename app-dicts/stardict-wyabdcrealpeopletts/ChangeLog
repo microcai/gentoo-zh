@@ -1,0 +1,8 @@
+# ChangeLog for app-dicts/stardict-wyabdcrealpeopletts
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  04 Feb 2010; scsi <scsichen@gmail.com>
+  stardict-wyabdcrealpeopletts-1.0.ebuild, +metadata.xml:
+  fix depend error
+
