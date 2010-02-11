@@ -2,6 +2,14 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*firefox-bin-3.7_alpha2_pre2010021004 (11 Feb 2010)
+
+  11 Feb 2010; Coderoar <coderoar@gmail.com>
+  -firefox-bin-3.7_alpha2_pre2010021003.ebuild,
+  +firefox-bin-3.7_alpha2_pre2010021004.ebuild, +files/firefox-bin.desktop,
+  -files/icon/firefox-bin.desktop, -files/icon/firefox-bin-icon.png:
+  version bump, remove obsolete
+
 *firefox-bin-3.7_alpha2_pre2010021003 (11 Feb 2010)
 
   11 Feb 2010; Coderoar <coderoar@gmail.com>

@@ -10,14 +10,14 @@ MY_PN="${PN/-bin}"
 MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="Firefox Web Browser"
-REL_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/2010-02-10-03-tracemonkey"
+REL_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/2010-02-10-04-mozilla-central"
 SRC_URI="
 	x86? ( ${REL_URI}/${MY_P}.en-US.linux-i686.tar.bz2 )
 	amd64? ( ${REL_URI}/${MY_P}.en-US.linux-x86_64.tar.bz2 )"
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip mirror"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS=""
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="restrict-javascript startup-notification"
