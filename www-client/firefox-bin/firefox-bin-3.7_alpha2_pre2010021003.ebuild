@@ -5,21 +5,22 @@ EAPI="2"
 
 inherit eutils mozilla-launcher mozextension
 
-MY_PV="3.7a1pre"
-MY_P="${PN/-bin/}-${MY_PV}"
+MY_PV="3.7a2pre"
+MY_PN="${PN/-bin}"
+MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="Firefox Web Browser"
-REL_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/2010-01-21-03-tracemonkey"
+REL_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/2010-02-10-03-tracemonkey"
 SRC_URI="
 	x86? ( ${REL_URI}/${MY_P}.en-US.linux-i686.tar.bz2 )
 	amd64? ( ${REL_URI}/${MY_P}.en-US.linux-x86_64.tar.bz2 )"
 HOMEPAGE="http://www.mozilla.com/firefox"
-RESTRICT="strip primaryuri"
+RESTRICT="strip mirror"
 
-KEYWORDS=""
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="restrict-javascript"
+IUSE="restrict-javascript startup-notification"
 
 DEPEND="app-arch/unzip"
 RDEPEND="dev-libs/dbus-glib
@@ -31,14 +32,14 @@ RDEPEND="dev-libs/dbus-glib
 
 PDEPEND="restrict-javascript? ( www-plugins/noscript )"
 
-S="${WORKDIR}/firefox"
+S="${WORKDIR}/${MY_PN}"
 
 src_install() {
-	declare MOZILLA_FIVE_HOME=/opt/firefox
+	declare MOZILLA_FIVE_HOME=/opt/${MY_PN}
 
 	# Install icon and .desktop for menu entry
 	newicon "${S}"/chrome/icons/default/default48.png ${PN}-icon.png
-	domenu "${FILESDIR}"/icon/${PN}.desktop
+	domenu "${FILESDIR}"/${PN}.desktop
 
 	# Add StartupNotify=true bug 237317
 	if use startup-notification; then
@@ -51,22 +52,22 @@ src_install() {
 
 		# Create /usr/bin/firefox-bin
 		dodir /usr/bin/
-		cat <<EOF >"${D}"/usr/bin/firefox-bin
+		cat <<EOF >"${D}"/usr/bin/${PN}
 #!/bin/sh
 unset LD_PRELOAD
-exec /opt/firefox/firefox "\$@"
+exec /opt/${MY_PN}/${MY_PN} "\$@"
 EOF
-		fperms 0755 /usr/bin/firefox-bin
+		fperms 0755 /usr/bin/${PN}
 
 	# revdep-rebuild entry
 	insinto /etc/revdep-rebuild
-	doins "${FILESDIR}"/10firefox-bin
+	doins "${FILESDIR}"/10${PN} || die
 
 	# install ldpath env.d
-	doenvd "${FILESDIR}"/71firefox-bin
+	doenvd "${FILESDIR}"/71${PN} || die
 
 	rm -rf "${D}"${MOZILLA_FIVE_HOME}/plugins
-	dosym /usr/"$(get_libdir)"/nsbrowser/plugins ${MOZILLA_FIVE_HOME}/plugins
+	dosym /usr/"$(get_libdir)"/nsbrowser/plugins ${MOZILLA_FIVE_HOME}/plugins || die
 }
 
 pkg_postinst() {
