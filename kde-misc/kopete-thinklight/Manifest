@@ -1,8 +1,0 @@
-DIST 47886-kopete-thinklight-0.3.tar.bz2 405682 RMD160 df41e8cb41044963bea93cb71992ce91e81856b2 SHA1 ee0a8108ad9ed44fb80ac44cb3ea0e6114d35f6f SHA256 40448410992859d848bcb5a85d301d35d2930d7a1bb95d8a374741bb5bb03063
-EBUILD kopete-thinklight-0.3.ebuild 610 RMD160 cb226356a7a56d8480eec5b0641ec4d15fa17e3e SHA1 59d8d639670998d8495890ba6cd306228537b4d5 SHA256 0610ca5ab08def80b1ca9fda1105e6d34eab2d74c1e4e9cdf8d8fb1d500e2e4e
-MD5 a477ba56aa9bf7fb89e4efe9b710308d kopete-thinklight-0.3.ebuild 610
-RMD160 cb226356a7a56d8480eec5b0641ec4d15fa17e3e kopete-thinklight-0.3.ebuild 610
-SHA256 0610ca5ab08def80b1ca9fda1105e6d34eab2d74c1e4e9cdf8d8fb1d500e2e4e kopete-thinklight-0.3.ebuild 610
-MD5 8f5d4638bbc0217dd7c1f9bdd69ffec6 files/digest-kopete-thinklight-0.3 286
-RMD160 699f2874d100079cf873b5ecf2aad4f5a3b5a9d3 files/digest-kopete-thinklight-0.3 286
-SHA256 76df03909e49b86346e16bef616ff75322157498e69b346393a7ef9671b787de files/digest-kopete-thinklight-0.3 286

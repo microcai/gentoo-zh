@@ -1,8 +1,0 @@
-DIST 53118-desktoptext-config-0.3.tar.bz2 438180 RMD160 ec656a0e034baacf9d5e27e628e3a819f84c3f70 SHA1 6fd29177d9f510674cf08f3b686e288c49c5a3bc SHA256 2052a2c961e49b505cfa3203cf198b304d1a5bcb0350961c50be02df7b3584ff
-EBUILD desktoptext-config-0.3.ebuild 669 RMD160 883e8b0944f98a7347eca66e5a6de3fb2674e0b9 SHA1 e0642abc35e69804e063c69cc17d1e3691712347 SHA256 850b9f561fd247de5e9c86b724df1e1db3066a792ae5e0c2a41d156e8fdb0d2d
-MD5 3cad9277e5871f8a9dc116cefe2ce960 desktoptext-config-0.3.ebuild 669
-RMD160 883e8b0944f98a7347eca66e5a6de3fb2674e0b9 desktoptext-config-0.3.ebuild 669
-SHA256 850b9f561fd247de5e9c86b724df1e1db3066a792ae5e0c2a41d156e8fdb0d2d desktoptext-config-0.3.ebuild 669
-MD5 7678f6e6a39dd63df83fdf75687614a0 files/digest-desktoptext-config-0.3 289
-RMD160 ec48045e0dead21f2ca4d864dac8f0af0ec4d1e8 files/digest-desktoptext-config-0.3 289
-SHA256 66e62e272994a42648f254805361b09527873915077a8c12a7faad5b64386fcb files/digest-desktoptext-config-0.3 289
