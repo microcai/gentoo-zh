@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/amule
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  25 Feb 2010; Coderoar <coderoar@gmail.com> -amule-2.2.6.ebuild,
+  amule-2.2.6-r1.ebuild:
+  remove obsolete
 
 *amule-2.2.6-r1 (11 Dec 2009)
 

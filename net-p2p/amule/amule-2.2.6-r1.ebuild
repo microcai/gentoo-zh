@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.6.ebuild,v 1.1 2009/09/18 14:59:45 patrick Exp $
 
@@ -6,13 +6,14 @@ EAPI="2"
 
 inherit eutils flag-o-matic wxwidgets
 
+DLP_P="DLP3904"
 MY_P=${PN/m/M}-${PV}
 S="${WORKDIR}"/${MY_P}
 
 DESCRIPTION="aMule, the all-platform eMule p2p client"
 HOMEPAGE="http://www.amule.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
-	http://libantixunlei.googlecode.com/files/${MY_P}-DLP3904.patch"
+	http://libantixunlei.googlecode.com/files/${MY_P}-${DLP_P}.patch"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -52,7 +53,7 @@ pkg_preinst() {
 }
 
 src_prepare() {
-	use dlp && epatch "${DISTDIR}"/${MY_P}-DLP3904.patch
+	use dlp && epatch "${DISTDIR}"/${MY_P}-${DLP_P}.patch
 }
 
 src_configure() {
