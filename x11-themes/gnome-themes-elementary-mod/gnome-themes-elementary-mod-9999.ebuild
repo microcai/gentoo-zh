@@ -20,7 +20,7 @@ RDEPEND="
 	x11-themes/dmz-cursor-theme
 	x11-themes/elementary-icon-theme
 	x11-themes/gtk-engines-aurora
-	x11-themes/gtk-engines-murrine"
+	=x11-themes/gtk-engines-murrine-9999"
 
 RESTRICT="binchecks strip"
 
