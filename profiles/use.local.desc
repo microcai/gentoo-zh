@@ -50,3 +50,7 @@ x11-libs/libXft:cleartype - Enable Freetype subpixel font rendering
 x11-libs/libXft:ubuntu - Use Freetype subpixel rendering patch from Ubuntu
 x11-misc/qterm:phonon - Enable support for the Phonon multimedia package
 x11-themes/gnome-themes-human:ubuntulooks - use ubuntulooks instead of clearlooks in the Human theme
+net-firewall/west-chamber:cui - The CUI target sends obfuscating packets upon incoming SYN to make the connection invisible to third-party intrusion detection.
+net-firewall/west-chamber:gfw - The gfw match allows to match on gfw packet fingerprints.
+net-firewall/west-chamber:ipset - Kernel module for IP set management
+net-firewall/west-chamber:zhang - The ZHANG target sends obfuscating packets upon incoming SYN/ACK to make the connection invisible to third-party intrusion detection.
