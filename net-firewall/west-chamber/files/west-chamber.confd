@@ -1,0 +1,3 @@
+# conf.d file for west-chamber
+
+ipsets="GOOGLE YOUTUBE"

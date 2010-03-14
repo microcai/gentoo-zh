@@ -2,13 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+# Modified from xtables_addon by zhixun.lin@gmail.com
+# TODO:
+#   change some modules as default
+
 EAPI="2"
 
 inherit eutils linux-mod linux-info
-
-# modified from xtables_addon by zhixun.lin@gmail.com
-# TODO:
-#   change some modules as default
 
 DESCRIPTION="xtables addons that may crash GFW, named after the Romance_of_the_West_Chamber"
 HOMEPAGE="http://code.google.com/p/scholarzhang/"
@@ -16,13 +16,12 @@ SRC_URI="http://scholarzhang.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror"
-IUSE=""
+IUSE="+ipset"
 
-MODULES="gfw zhang cui ipset"
+MODULES="gfw zhang cui"
 
-#IUSE="+CUI +ZHANG +gfw ipset"
 for mod in ${MODULES}; do
 	IUSE="${IUSE} xtables_addons_${mod}"
 done
@@ -30,7 +29,7 @@ done
 RDEPEND="virtual/modutils
 	>=net-firewall/iptables-1.4.4
 	>virtual/linux-sources-2.6.22
-	xtables_addons_ipset? ( !net-firewall/ipset )"
+	ipset? ( net-firewall/ipset )"
 
 DEPEND="${RDEPEND}"
 
@@ -88,6 +87,7 @@ XA_get_module_name() {
 }
 
 src_prepare() {
+	sed -e 's/build_ipset=m//' -i mconfig || die
 	XA_qa_check
 	XA_has_something_to_build
 
@@ -125,10 +125,22 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	linux-mod_src_install
-	dodoc README USAGE INSTALL examples/*|| die
+
+	dodoc README USAGE INSTALL || die
+
+	insinto /etc/west-chamber
+	doins examples/*
+
+	newinitd "${FILESDIR}/${PN}.initd" west-chamber
+	newconfd "${FILESDIR}/${PN}.confd" west-chamber
+
 	find "${D}" -type f -name '*.la' -exec rm -rf '{}' '+'
 }
 
 pkg_postinst() {
-	einfo "For usage please refer to: http://www.linuxsir.org/bbs/thread364811.html"
+	linux-mod_pkg_postinst
+	einfo "This ebuild comes from: http://www.linuxsir.org/bbs/thread364811.html"
+	einfo "Thanks to the contributors!"
+	einfo "Usage:"
+	einfo "    # /etc/init.d/west-chamber start"
 }
