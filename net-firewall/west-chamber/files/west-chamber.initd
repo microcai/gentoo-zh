@@ -7,36 +7,40 @@ ipset_cmd=/sbin/ipset
 iptables_cmd=/sbin/iptables
 
 depend() {
-        after modules
-        before net
-        use logger
+	after modules
+	before net
+	use logger
 }
 
 start() {
-        cd /etc/west-chamber
-        for set in $ipsets; do
-            cat ${set} | $ipset_cmd -R
-        done
-        cat NOCLIP | $ipset_cmd -R
+	ebegin "Starting West Chamber"
+	cd /etc/west-chamber
+	for set in $ipsets; do
+			cat ${set} | $ipset_cmd -R
+	done
+	cat NOCLIP | $ipset_cmd -R
 
-        $iptables_cmd -A INPUT -p tcp --sport 80 --tcp-flags FIN,SYN,RST,ACK SYN,ACK -m state --state ESTABLISHED -m set --match-set NOCLIP src -j ZHANG
-        $iptables_cmd -A INPUT -p tcp --sport 80 -m state --state ESTABLISHED -m gfw -j LOG --log-level info --log-prefix "gfw: "
-        $iptables_cmd -A INPUT -p udp --sport 53 -m state --state ESTABLISHED -m gfw -j DROP
+	$iptables_cmd -A INPUT -p tcp --sport 80 --tcp-flags FIN,SYN,RST,ACK SYN,ACK -m state --state ESTABLISHED -m set --match-set NOCLIP src -j ZHANG
+	$iptables_cmd -A INPUT -p tcp --sport 80 -m state --state ESTABLISHED -m gfw -j LOG --log-level info --log-prefix "gfw: "
+	$iptables_cmd -A INPUT -p udp --sport 53 -m state --state ESTABLISHED -m gfw -j DROP
+	eend $?
 }
 
 stop() {
-       rules=`$iptables_cmd -L INPUT | sed '1,2d' | grep -n gfw | awk -F: '{print  $1}' | sort -r`
-       for h in $rules; do
-           $iptables_cmd -D INPUT $h
-       done
+	ebegin "Stoping West Chamber"
+	rules=`$iptables_cmd -L INPUT | sed '1,2d' | grep -n gfw | awk -F: '{print  $1}' | sort -r`
+	for h in $rules; do
+		$iptables_cmd -D INPUT $h
+	done
 
-       rules=`$iptables_cmd -L INPUT | sed '1,2d' | grep -n ZHANG | awk -F: '{print  $1}' | sort -r`
-       for h in $rules; do
-           $iptables_cmd -D INPUT $h
-       done
+	rules=`$iptables_cmd -L INPUT | sed '1,2d' | grep -n ZHANG | awk -F: '{print  $1}' | sort -r`
+	for h in $rules; do
+		$iptables_cmd -D INPUT $h
+	done
 
-       $ipset_cmd -X NOCLIP
-       for set in $ipsets; do
-           $ipset_cmd -X $set
-       done
+	$ipset_cmd -X NOCLIP
+	for set in $ipsets; do
+		$ipset_cmd -X $set
+	done
+	eend $?
 }
