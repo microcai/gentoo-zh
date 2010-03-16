@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  16 Mar 2010; Zhang Le <r0bertz@gentoo.org> files/west-chamber.confd,
+  files/west-chamber.initd:
+  west-chamber: added ip set CHINA and iptable rule for CUI target
+
   14 Mar 2010; Zhang Le <r0bertz@gentoo.org> -west-chamber-0.0.1-r1.ebuild,
   +west-chamber-0.0.1-r2.ebuild, files/west-chamber.initd:
   west-chamber: improved initscript

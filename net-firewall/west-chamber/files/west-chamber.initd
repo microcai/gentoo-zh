@@ -21,6 +21,7 @@ start() {
 	cat NOCLIP | $ipset_cmd -R
 
 	$iptables_cmd -A INPUT -p tcp --sport 80 --tcp-flags FIN,SYN,RST,ACK SYN,ACK -m state --state ESTABLISHED -m set --match-set NOCLIP src -j ZHANG
+	$iptables_cmd -A INPUT -p tcp --dport 80 --tcp-flags FIN,SYN,RST,ACK SYN -m state --state NEW -m set --match-set CHINA src -j CUI
 	$iptables_cmd -A INPUT -p tcp --sport 80 -m state --state ESTABLISHED -m gfw -j LOG --log-level info --log-prefix "gfw: "
 	$iptables_cmd -A INPUT -p udp --sport 53 -m state --state ESTABLISHED -m gfw -j DROP
 	eend $?
