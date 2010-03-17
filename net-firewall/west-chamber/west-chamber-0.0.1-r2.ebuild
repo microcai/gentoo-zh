@@ -29,7 +29,7 @@ done
 RDEPEND="virtual/modutils
 	>=net-firewall/iptables-1.4.4
 	>virtual/linux-sources-2.6.22
-	ipset? ( net-firewall/ipset )"
+	ipset? ( >=net-firewall/ipset-4.2 )"
 
 DEPEND="${RDEPEND}"
 
