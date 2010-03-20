@@ -2,6 +2,12 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  20 Mar 2010; Zhang Le <r0bertz@gentoo.org> -west-chamber-0.0.1-r3.ebuild,
+  +west-chamber-0.0.1-r4.ebuild, files/west-chamber.confd,
+  files/west-chamber.initd, +files/wikipedia.patch:
+  west-chamber: start before iptables; let user choose which rule to add and
+  which site to be included in NOCLIP; added wikipedia
+
   18 Mar 2010; Zhang Le <r0bertz@gentoo.org> -west-chamber-0.0.1-r2.ebuild,
   +west-chamber-0.0.1-r3.ebuild, +files/facebook.patch,
   files/west-chamber.confd:

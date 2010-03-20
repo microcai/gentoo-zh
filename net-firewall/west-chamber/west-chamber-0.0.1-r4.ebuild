@@ -89,6 +89,7 @@ XA_get_module_name() {
 src_prepare() {
 	sed -e 's/build_ipset=m//' -i mconfig || die
 	epatch "${FILESDIR}/facebook.patch"
+	epatch "${FILESDIR}/wikipedia.patch"
 	XA_qa_check
 	XA_has_something_to_build
 
