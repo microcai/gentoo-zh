@@ -13,4 +13,4 @@ HOMEPAGE="http://stardict.sourceforge.net/Dictionaries_Quick.php"
 KEYWORDS="~x86 ~ppc ~sparc"
 IUSE=""
 
-RDEPEND=">=app-dicts/stardict-2.4.2"
+RDEPEND=">=app-text/stardict-2.4.2"
