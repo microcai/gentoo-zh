@@ -3,6 +3,9 @@
 # $Header: $
 
   24 Mar 2010; Coderoar <coderoar@gmail.com> ibus-sunpinyin-9999.ebuild:
+  update deps
+
+  24 Mar 2010; Coderoar <coderoar@gmail.com> ibus-sunpinyin-9999.ebuild:
   update SRC URI
 
   23 Mar 2010; Coderoar <coderoar@gmail.com> ibus-sunpinyin-9999.ebuild:

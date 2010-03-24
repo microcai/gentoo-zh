@@ -4,11 +4,11 @@
 
 EAPI="2"
 
-inherit autotools python git
+inherit autotools git python
 
-MY_PN="${PN##ibus-}"
-EGIT_PROJECT="${MY_PN}"
+EGIT_PROJECT="${PN##ibus-}"
 EGIT_REPO_URI="git://github.com/sunpinyin/sunpinyin.git"
+
 DESCRIPTION="SunPinyin is a SLM (Statistical Language Model) based IME"
 HOMEPAGE="http://sunpinyin.org/"
 SRC_URI="
@@ -18,20 +18,22 @@ SRC_URI="
 LICENSE="LGPL-2.1 CDDL"
 SLOT="0"
 KEYWORDS=""
-IUSE="debug"
+IUSE="debug nls"
 
-RDEPEND="x11-libs/gtk+
-	>=dev-libs/glib-2
+RDEPEND="x11-libs/gtk+:2
+	dev-libs/glib:2
+	dev-db/sqlite:3
 	app-i18n/ibus
 	!app-i18n/scim-sunpinyin
-	>=dev-lang/python-2.5"
+	>=dev-lang/python-2.5
+	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	sys-devel/gettext"
+	nls? ( sys-devel/gettext )"
 
 src_prepare() {
+	eautoreconf
 	ln -s "${DISTDIR}"/{dict.utf8,lm_sc.t3g.arpa}.tar.bz2 "${S}"/raw
-	(./autogen.sh) || die "autogen.sh failed"
 	mv py-compile py-compile.orig || die
 	ln -s "$(type -P true)" py-compile || die
 }
@@ -39,18 +41,20 @@ src_prepare() {
 src_configure() {
 	econf \
 		$(use_enable debug) \
-		--enable-ibus
+		$(use_enable nls) \
+		--enable-ibus || die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README || die
+	emake install DESTDIR="${D}" || die "Install failed"
+
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }
 
 pkg_postinst() {
-	python_mod_optimize /usr/share/${PN}
+	python_mod_optimize /usr/share/${PN}/setup
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/share/${PN}
+	python_mod_cleanup /usr/share/${PN}/setup
 }
