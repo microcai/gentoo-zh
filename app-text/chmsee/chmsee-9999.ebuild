@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,10 +6,11 @@ EAPI="2"
 
 inherit cmake-utils git
 
-DESCRIPTION="HTML Help viewer for Unix/Linux"
-HOMEPAGE="http://chmsee.googlecode.com"
-SRC_URI=""
 EGIT_REPO_URI="git://github.com/lidaobing/chmsee.git"
+
+DESCRIPTION="HTML Help viewer for Unix/Linux"
+HOMEPAGE="http://code.google.com/p/chmsee/"
+SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"

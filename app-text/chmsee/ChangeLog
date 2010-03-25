@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  25 Mar 2010; Coderoar <coderoar@gmail.com> chmsee-1.0.6.ebuild,
+  chmsee-1.0.7.ebuild, chmsee-9999.ebuild:
+  mask 1.0.6, 1.0.7 stable
+
   25 Mar 2010; Coderoar <coderoar@gmail.com> chmsee-1.0.7.ebuild,
   +files/chmsee-1.0.7-xul-versiondetect.patch:
   fixed 1.0.7 xulrunner version detecting
