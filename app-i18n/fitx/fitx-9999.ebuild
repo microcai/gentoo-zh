@@ -1,33 +1,26 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils subversion
+inherit python subversion
+
+ESVN_REPO_URI="http://fitx.googlecode.com/svn/trunk"
 
 DESCRIPTION="Fun Input Toy for Linux"
 HOMEPAGE="http://code.google.com/p/fitx"
-
-ESVN_REPO_URI="http://fitx.googlecode.com/svn/trunk"
-ESVN_PROJECT="fitx"
+SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="app-i18n/scim
-	app-i18n/scim-python
-	gnustep-base/gnustep-make
-	gnustep-base/gnustep-base
+DEPEND="app-i18n/ibus
 	dev-db/sqlite
-	virtual/libiconv
-	"
-RDEPEND=""
-
-src_unpack() {
-	einfo "Unpacking packages"
-	subversion_src_unpack
-}
+	gnustep-base/gnustep-base
+	virtual/libiconv"
+RDEPEND="${DEPEND}
+	gnustep-base/gnustep-make"
 
 src_compile() {
 	#hould the build use multiprocessing? Not enabled by default, as it tends to break
@@ -37,12 +30,19 @@ src_compile() {
 	#fi
 	export MAKEOPTS="-j1"
 
-	einfo "Compiling packages"
 	. /usr/GNUstep/System/Library/Makefiles/GNUstep.sh
 	emake || die "Make fail"
 }
 
 src_install() {
-	einfo "Install fitx"
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die
+	rm -R "${D}"/usr/share/scim-python
+}
+
+pkg_postinst() {
+	python_mod_optimize /usr/share/ibus-${PN}
+}
+
+pkg_postrm() {
+	python_mod_cleanup /usr/share/ibus-${PN}
 }

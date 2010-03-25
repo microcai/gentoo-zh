@@ -1,6 +1,10 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# ChangeLog for app-i18n/fitx
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  25 Mar 2010; Coderoar <coderoar@gmail.com> -fitx-0.2.0-r0.ebuild,
+  fitx-9999.ebuild:
+  update deps
 
 *fitx-9999 (03 AUG 2008)
   03 AUG 2008; LanYixun <dennis.yxun@gmail.com> ChangeLog:
