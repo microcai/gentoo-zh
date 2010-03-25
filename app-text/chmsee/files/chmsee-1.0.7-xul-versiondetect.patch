@@ -1,0 +1,31 @@
+--- CMakeLists.txt	2009-09-14 21:51:03.000000000 +0800
++++ CMakeLists.txt.new	2010-03-25 09:24:42.596659540 +0800
+@@ -4,7 +4,7 @@
+ find_package(PkgConfig)
+ 
+ pkg_check_modules (CHMSEE REQUIRED gthread-2.0 glib-2.0 libxml-2.0 gtk+-2.0 libglade-2.0 nspr)
+-pkg_search_module(XULRUNNER REQUIRED libxul-embedding-unstable>=1.9 xulrunner-gtkmozembed>=1.8)
++pkg_search_module(XULRUNNER REQUIRED libxul-embedding-unstable>=1.9 xulrunner-gtkmozembed>=1.8 mozilla-gtkmozembed-embedding>=1.9 xulrunner-gtkmozembed>=1.9)
+ set(CHMSEE_INCLUDE_DIRS ${CHMSEE_INCLUDE_DIRS} ${XULRUNNER_INCLUDE_DIRS})
+ set(CHMSEE_CFLAGS_OTHER ${CHMSEE_CFLAGS_OTHER} ${XULRUNNER_CFLAGS_OTHER} -Wall)
+ set(CHMSEE_LIBRARY_DIRS ${CHMSEE_LIBRARY_DIRS} ${XULRUNNER_LIBRARY_DIRS})
+@@ -14,19 +14,6 @@
+ 	set(CHMSEE_LIBRARIES ${CHMSEE_LIBRARIES} md)
+ endif()
+ 
+-if(XULRUNNER_VERSION MATCHES "1\\.8\\..*")
+-	set(XULRUNNER18 1)
+-endif()
+-if(XULRUNNER_VERSION MATCHES "1\\.9\\..*")
+-	set(XULRUNNER19 1)
+-endif()
+-if(XULRUNNER_VERSION MATCHES "1\\.9\\.0\\..*")
+-	set(XULRUNNER190 1)
+-endif()
+-if(XULRUNNER_VERSION MATCHES "1\\.9\\.1\\..*")
+-	set(XULRUNNER191 1)
+-endif()
+-
+ set(CHMSEE_BOOKMARK_FILE "chmsee_bookmarks")
+ set(CHMSEE_BOOKINFO_FILE "chmsee_bookinfo")
+ set(CHMSEE_NO_LINK "chmsee_no_link")

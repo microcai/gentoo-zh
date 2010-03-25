@@ -1,6 +1,10 @@
 # ChangeLog for app-text/chmsee
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  25 Mar 2010; Coderoar <coderoar@gmail.com> chmsee-1.0.7.ebuild,
+  +files/chmsee-1.0.7-xul-versiondetect.patch:
+  fixed 1.0.7 xulrunner version detecting
 
   11 Sep 2009; Coderoar <coderoar@gmail.com> chmsee-1.0.5.ebuild,
   chmsee-1.0.6.ebuild, chmsee-9999.ebuild:
