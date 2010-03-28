@@ -2,6 +2,12 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*chmsee-1.1.0_beta (28 Mar 2010)
+
+  28 Mar 2010; Coderoar <coderoar@gmail.com> +chmsee-1.1.0_beta.ebuild,
+  chmsee-9999.ebuild:
+  version bump
+
   25 Mar 2010; Coderoar <coderoar@gmail.com> chmsee-1.0.6.ebuild,
   chmsee-1.0.7.ebuild, chmsee-9999.ebuild:
   mask 1.0.6, 1.0.7 stable

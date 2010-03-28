@@ -4,17 +4,16 @@
 
 EAPI="2"
 
-inherit cmake-utils git
+inherit cmake-utils
 
-EGIT_REPO_URI="git://github.com/lidaobing/chmsee.git"
-
+MY_P=${P/_/-}
 DESCRIPTION="HTML Help viewer for Unix/Linux"
 HOMEPAGE="http://code.google.com/p/chmsee/"
-SRC_URI=""
+SRC_URI="http://chmsee.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.8:2
@@ -27,6 +26,8 @@ RDEPEND=">=dev-libs/glib-2.8:2
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.37"
+
+S=${WORKDIR}/${MY_P}
 
 RESTRICT="mirror"
 DOCS="NEWS* README* AUTHORS ChangeLog*"
