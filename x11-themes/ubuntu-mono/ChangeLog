@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/ubuntu-mono
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*ubuntu-mono-0.0.12 (30 Mar 2010)
+
+  30 Mar 2010; Coderoar <coderoar@gmail.com> +ubuntu-mono-0.0.12.ebuild,
+  +metadata.xml:
+  initial commit
+
