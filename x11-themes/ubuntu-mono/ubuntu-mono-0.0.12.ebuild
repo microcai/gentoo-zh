@@ -6,13 +6,11 @@ EAPI="2"
 
 inherit gnome2-utils
 
-MY_P="${PN}_${PV}"
-
 DESCRIPTION="Dark and Light panel icons to make your desktop beautiful"
 HOMEPAGE="http://www.ubuntu.com/"
-SRC_URI="https://launchpad.net/ubuntu/+archive/primary/+files/${MY_P}.tar.gz"
+SRC_URI="mirror://ubuntu/pool/main/u/${PN}/${PN}_${PV}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
@@ -33,6 +31,8 @@ RESTRICT="binchecks mirror strip"
 src_install() {
 	dodir /usr/share/icons
 	cp -r LoginIcons ${PN}* "${D}"/usr/share/icons
+
+	dodoc "${S}"/debian/{changelog,copyright} || die "install doc failed."
 }
 
 pkg_preinst() { gnome2_icon_savelist; }
