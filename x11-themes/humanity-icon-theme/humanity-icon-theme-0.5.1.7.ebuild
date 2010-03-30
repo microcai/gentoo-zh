@@ -6,11 +6,11 @@ EAPI="2"
 
 inherit gnome2-utils
 
-MY_P="${PN/-icon-theme/}_${PV}"
+MY_P="${PN}_${PV}"
 
 DESCRIPTION="Elementary Icons for Humans."
 HOMEPAGE="https://launchpad.net/humanity"
-SRC_URI="https://launchpad.net/humanity/0.4/0.4/+download/${MY_P}.tar.gz"
+SRC_URI="https://launchpad.net/ubuntu/+archive/primary/+files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -27,7 +27,6 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext"
 
-S="${WORKDIR}/${MY_P}"
 RESTRICT="binchecks mirror strip"
 
 src_install() {
