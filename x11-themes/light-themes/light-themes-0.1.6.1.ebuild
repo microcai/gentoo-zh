@@ -17,7 +17,7 @@ RDEPEND="
 	x11-themes/humanity-icon-theme
 	x11-themes/ubuntu-mono"
 
-RESTRICT="binchecks strip"
+RESTRICT="binchecks mirror strip"
 
 src_install() {
 	dodir /usr/share/themes
