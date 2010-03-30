@@ -6,11 +6,9 @@ EAPI="2"
 
 inherit gnome2-utils
 
-MY_P="${PN}_${PV}"
-
 DESCRIPTION="Elementary Icons for Humans."
 HOMEPAGE="https://launchpad.net/humanity"
-SRC_URI="https://launchpad.net/ubuntu/+archive/primary/+files/${MY_P}.tar.gz"
+SRC_URI="mirror://ubuntu/pool/main/h/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
