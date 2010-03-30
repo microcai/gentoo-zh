@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/light-themes
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*light-themes-0.1.6.1 (30 Mar 2010)
+
+  30 Mar 2010; Coderoar <coderoar@gmail.com> +light-themes-0.1.6.1.ebuild,
+  +metadata.xml:
+  initial commit
+
