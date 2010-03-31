@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/dmz-cursor-theme
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  31 Mar 2010; Coderoar <coderoar@gmail.com> dmz-cursor-theme-0.4.1.ebuild:
+  minor fix
 
   31 Aug 2009; Coderoar <coderoar@gmail.com> +dmz-cursor-theme-0.4.1.ebuild,
   +metadata.xml:
