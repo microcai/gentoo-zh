@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Mozilla Firefox (bin)
-Comment=Mozilla Firefox Web Browser
-Exec=/usr/bin/firefox-bin %U
-Icon=firefox-bin-icon
-Terminal=false
-Type=Application
-Categories=Application;Network;
