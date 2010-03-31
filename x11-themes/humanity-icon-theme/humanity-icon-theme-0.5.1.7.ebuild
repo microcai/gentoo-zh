@@ -29,7 +29,7 @@ RESTRICT="binchecks mirror strip"
 
 src_install() {
 	insinto /usr/share/icons
-	doins -r Humanity*
+	doins -r Humanity* || die "install failed."
 }
 
 pkg_preinst() { gnome2_icon_savelist; }
