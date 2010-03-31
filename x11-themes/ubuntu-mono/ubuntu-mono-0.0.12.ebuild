@@ -30,7 +30,7 @@ RESTRICT="binchecks mirror strip"
 
 src_install() {
 	dodir /usr/share/icons
-	cp -r LoginIcons ${PN}* "${D}"/usr/share/icons
+	cp -r LoginIcons ${PN}* "${D}"/usr/share/icons || die "install failed."
 
 	dodoc "${S}"/debian/{changelog,copyright} || die "install doc failed."
 }
