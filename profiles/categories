@@ -17,6 +17,7 @@ dev-texlive
 dev-util
 games-board
 games-misc
+gnome-base
 gnome-extra
 media-fonts
 media-libs
@@ -30,7 +31,6 @@ net-misc
 net-p2p
 sys-devel
 sys-kernel
-www-client
 x11-libs
 x11-misc
 x11-plugins
