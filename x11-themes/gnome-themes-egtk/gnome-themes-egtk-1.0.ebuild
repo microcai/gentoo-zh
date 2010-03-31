@@ -23,7 +23,6 @@ S="${WORKDIR}"
 RESTRICT="binchecks mirror strip"
 
 src_install() {
-	insinto /usr/share/themes
-	doins -r *
-	mv "${D}"/usr/share/themes/{eGTK,elementary}
+	dodir /usr/share/themes
+	cp -r * "${D}"/usr/share/themes/elementary || die "install failed."
 }
