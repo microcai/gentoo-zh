@@ -21,7 +21,7 @@ RESTRICT="binchecks mirror strip"
 
 src_install() {
 	dodir /usr/share/themes
-	cp -R *iance "${D}"/usr/share/themes
+	cp -R *iance "${D}"/usr/share/themes || die "install failed."
 
 	dodoc "${S}"/debian/{changelog,copyright} || die "install doc failed."
 }
