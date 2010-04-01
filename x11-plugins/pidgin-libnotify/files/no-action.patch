@@ -1,0 +1,48 @@
+diff -Nur pidgin-libnotify-0.14/src/pidgin-libnotify.c pidgin-libnotify-0.14-no-action/src/pidgin-libnotify.c
+--- pidgin-libnotify-0.14/src/pidgin-libnotify.c	2008-12-15 01:45:51.000000000 +0800
++++ pidgin-libnotify-0.14-no-action/src/pidgin-libnotify.c	2009-04-28 19:12:38.000000000 +0800
+@@ -169,35 +169,6 @@
+ 	return icon;
+ }
+ 
+-static void
+-action_cb (NotifyNotification *notification,
+-		   gchar *action, gpointer user_data)
+-{
+-	PurpleBuddy *buddy = NULL;
+-	PurpleConversation *conv = NULL;
+-
+-	purple_debug_info (PLUGIN_ID, "action_cb(), "
+-					"notification: 0x%x, action: '%s'", notification, action);
+-
+-	buddy = (PurpleBuddy *)g_object_get_data (G_OBJECT(notification), "buddy");
+-
+-	if (!buddy) {
+-		purple_debug_warning (PLUGIN_ID, "Got no buddy!");
+-		return;
+-	}
+-
+-	conv = purple_find_conversation_with_account (PURPLE_CONV_TYPE_ANY, buddy->name, buddy->account);
+-
+-	if (!conv) {
+-		conv = purple_conversation_new (PURPLE_CONV_TYPE_IM,
+-									  buddy->account,
+-									  buddy->name);
+-	}
+-	conv->ui_ops->present (conv);
+-
+-	notify_notification_close (notification, NULL);
+-}
+-
+ static gboolean
+ closed_cb (NotifyNotification *notification)
+ {
+@@ -317,8 +288,6 @@
+ 
+ 	notify_notification_set_urgency (notification, NOTIFY_URGENCY_NORMAL);
+ 
+-	notify_notification_add_action (notification, "show", _("Show"), action_cb, NULL, NULL);
+-
+ 	if (!notify_notification_show (notification, NULL)) {
+ 		purple_debug_error (PLUGIN_ID, "notify(), failed to send notification\n");
+ 	}

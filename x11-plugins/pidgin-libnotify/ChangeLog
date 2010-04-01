@@ -1,0 +1,11 @@
+# ChangeLog for x11-plugins/pidgin-libnotify
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*pidgin-libnotify-0.14 (01 Apr 2010)
+
+  01 Apr 2010; Coderoar <coderoar@gmail.com> +pidgin-libnotify-0.14.ebuild,
+  +files/no-action.patch, +files/pidgin-libnotify-showbutton.patch,
+  +metadata.xml:
+  initial commit, fork from TualatriX's overlay
+
