@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>freedesktop</herd>
+	<use>
+		<flag name='notify-osd'>Hack to support notify-osd</flag>
+	</use>
+</pkgmetadata>
