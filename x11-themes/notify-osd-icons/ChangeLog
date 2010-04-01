@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/notify-osd-icons
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*notify-osd-icons-0.3 (01 Apr 2010)
+
+  01 Apr 2010; Coderoar <coderoar@gmail.com> +notify-osd-icons-0.3.ebuild,
+  +metadata.xml:
+  initial commit
+
