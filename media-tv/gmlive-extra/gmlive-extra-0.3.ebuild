@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -22,7 +22,7 @@ RDEPEND=""
 RESTRICT="primaryuri"
 
 QA_PRESTRIPPED="
-	usr/bin/sp-sc-auth
+	opt/sopcast/sp-sc-auth
 	usr/lib32/libppsvodnet.so
 	usr/lib32/libppsvodres.so.0
 	usr/lib32/libppsfds.so
@@ -60,29 +60,28 @@ src_compile() {
 	if use pps ; then
 		cd ppstream
 		tar xvf ../lib-826.tar.gz
-		#emake || die "emake failed" # use libppswrapper
 	fi
 }
 
 src_install() {
-	insinto /usr/bin
+	exeinto /usr/bin
 
 	if use pplive ; then
-		doins xpplive
-		fperms 0755 /usr/bin/xpplive
+		doexe xpplive
 	fi
 
 	if use pps ; then
 		cd "${S}"/ppstream
-		#emake DESTDIR="${D}" install || die "install failed"
-
 		use x86 || multilib_toolchain_setup x86
 		mv {lib,"${D}"/usr/$(get_libdir)}
 		cd -
 	fi
 
 	if use sopcast ; then
-		doins sp-sc-auth
-		fperms 0755 /usr/bin/sp-sc-auth
+		exeinto /opt/sopcast
+		doexe sp-sc-auth
+
+		dodir /opt/bin
+		dosym /opt/{sopcast/sp-sc-auth,bin}
 	fi
 }

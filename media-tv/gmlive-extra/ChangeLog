@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/gmlive-extra
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  03 Apr 2010; Coderoar <coderoar@gmail.com> gmlive-extra-0.3.ebuild:
+  sopcast binary MUST exeinto /opt to avoid revdep-rebuild check
 
   28 Nov 2009; Coderoar <coderoar@gmail.com> -gmlive-extra-0.2-r1.ebuild,
   gmlive-extra-0.3.ebuild, files/gmlive-extra-0.3.patch, metadata.xml:
