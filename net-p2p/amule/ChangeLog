@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  07 Apr 2010; Zhang Le <r0bertz@gentoo.org> Manifest:
+  fixed amule's Manifest
+
   07 Apr 2010; Coderoar <coderoar@gmail.com> amule-2.2.6-r1.ebuild:
   minor fix
 
