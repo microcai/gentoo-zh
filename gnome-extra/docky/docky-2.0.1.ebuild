@@ -4,18 +4,16 @@
 
 EAPI="2"
 
-inherit gnome2-utils mono eutils bzr
-
-EBZR_REPO_URI="https://code.launchpad.net/~docky-core/docky/trunk"
+inherit gnome2-utils mono eutils
 
 DESCRIPTION="Docky is a full fledged dock application that makes opening \
 common applications and managing windows easier and quicker."
 HOMEPAGE="https://launchpad.net/docky"
-SRC_URI=""
+SRC_URI="http://launchpad.net/${PN}/2.0/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 # keep the same dependence as gnome-do
@@ -39,9 +37,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	dev-util/pkgconfig"
 
-src_prepare() {
-	(./autogen.sh) || die "autogen.sh failed"  #--prefix=/usr
-}
+RESTRICT="mirror"
 
 src_install() {
 	emake install DESTDIR="${D}"  || die "Install failed"
