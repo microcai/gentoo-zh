@@ -15,7 +15,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-misc/notification-daemon
+RDEPEND=">=dev-libs/atk-1.30
+	sys-libs/glibc
+	x11-libs/cairo
 	sys-apps/dbus
-	>=x11-libs/gtk+-2.14"
-RDEPEND="${DEPEND}"
+	dev-libs/dbus-glib
+	gnome-base/gconf
+	dev-libs/glib
+	>=x11-libs/gtk+-2.18
+	x11-libs/pango
+	x11-libs/pixman
+	x11-libs/libwnck
+	x11-libs/libX11"
+DEPEND="${DEPEND}"
