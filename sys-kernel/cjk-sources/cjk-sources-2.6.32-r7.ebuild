@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="1"
+K_GENPATCHES_VER="9"
 
 inherit kernel-2
 detect_version
@@ -15,7 +15,7 @@ HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches/ http://www.tuxonice.net http://
 IUSE=""
 
 TUXONICE_SNAPSHOT=""
-TUXONICE_VERSION="3.0.99.41"
+TUXONICE_VERSION="3.1"
 TUXONICE_TARGET="${PV}"
 
 if [[ -n "${TUXONICE_SNAPSHOT}" ]]; then

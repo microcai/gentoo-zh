@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -35,7 +35,7 @@ UNIPATCH_LIST="${DISTDIR}/${TUXONICE_SRC}.bz2 ${DISTDIR}/${UTF8_CORE} ${DISTDIR}
 UNIPATCH_STRICTORDER="yes"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${TUXONICE_URI} ${UTF8_BASE}/${UTF8_CORE} ${UTF8_BASE}/${UTF8_FONTS} ${UTF8_BASE}/${UTF8_FBCONDECOR}"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 RDEPEND="${RDEPEND}
 	>=sys-apps/tuxonice-userui-1.0
