@@ -1,6 +1,18 @@
+# Copyright 1999-2010 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
-# Keep it sorted.
+# Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
+# Declaring the locale for the sort is critical to avoid flapping.
+###########
+## NOTICE!!
+###########
+# This file is deprecated as per GLEP 56 in favor of metadata.xml. Please add
+# your descriptions to your package's metadata.xml ONLY.
+# use.local.desc is now generated automatically, and manual editing of it is
+# disallowed.
+# Test for commit block
 
 app-i18n/ibus-table-cangjie:cangjie3 - Build CangJie3 Engine
 app-i18n/ibus-table-cangjie:cangjie5 - Build CangJie5 Engine
@@ -11,11 +23,6 @@ app-i18n/ibus-table-wubi:extra-phrases - Add extra phrases into built Engine
 app-i18n/ibus-table-wubi:wubi86 - Build Wubi86 Engine
 app-i18n/ibus-table-wubi:wubi98 - Build Wubi98 Engine
 app-i18n/ibus-table-zhengma:extra-phrases - Add extra phrases into built Engine
-app-i18n/scim-xingma:cangjie5 - Install CangJie 5th Input Method
-app-i18n/scim-xingma:compose - Support for Compose Key Style Input Method
-app-i18n/scim-xingma:erbi-qs - Install Erbi QingSong Input Method
-app-i18n/scim-xingma:wubi - Install WuBi86 Input Method
-app-i18n/scim-xingma:zhengma - Install ZhengMa Input Method
 app-text/stardict:espeak - Enables text to speech engine app-accessibility/espeak
 app-text/stardict:festival - Enables text to speech engine app-accessibility/festival
 app-text/stardict:gnome - Enables gnome-base/gnome support
@@ -24,6 +31,7 @@ app-text/stardict:spell - Enables spell checking capability using app-text/encha
 app-text/texlive-core:xetex - Use TeXLive packed XeTeX
 gnome-base/nautilus:beagle - Enables support for searching using the Beagle (app-misc/beagle) desktop search tool
 gnome-base/nautilus:elementary - Use the branch modified by the elementary project
+gnome-base/nautilus:mod - Use the nautilus-mod
 gnome-base/nautilus:tracker - Enables support for searching using the Tracker (app-misc/tracker) search tool
 media-libs/fontconfig:ubuntu - Enable the lcd patch from Ubuntu
 media-libs/freetype:cleartype - Enable subpixel patch
@@ -42,7 +50,6 @@ net-firewall/west-chamber:xtables_addons_gfw - The gfw match allows to match on 
 net-firewall/west-chamber:xtables_addons_zhang - The CUI target sends obfuscating packets upon incoming SYN to make the connection invisible to third-party intrusion detection.
 net-misc/gemanx:imageview - enable external image viewer
 net-misc/gemanx:iplookup - enable IP location lookup for Simplified Chinese users. Need qqwry.dat
-net-misc/tsclient:vnc - add basic VNC support
 net-misc/xmuruijie:firewall - Add support for iptables firewall
 net-p2p/amule:daemon - Enable amule daemon
 net-p2p/amule:dlp - Enable Dynamic Leecher Protection
@@ -55,5 +62,5 @@ x11-libs/cairo:newspr - Enable Freetype subpixel font rendering
 x11-libs/cairo:ubuntu - Enable lcd rendering patches from Ubuntu
 x11-libs/libXft:cleartype - Enable Freetype subpixel font rendering
 x11-libs/libXft:ubuntu - Use Freetype subpixel rendering patch from Ubuntu
+x11-misc/notification-daemon:notify-osd - Hack to support notify-osd
 x11-misc/qterm:phonon - Enable support for the Phonon multimedia package
-x11-themes/gnome-themes-human:ubuntulooks - use ubuntulooks instead of clearlooks in the Human theme
