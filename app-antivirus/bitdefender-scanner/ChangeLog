@@ -1,0 +1,10 @@
+# ChangeLog for app-antivirus/bitdefender-scanner
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header$
+
+*bitdefender-scanner-7.6.4 (12 Apr 2010)
+
+  12 Apr 2010; Coderoar <coderoar@gmail.com>
+  +bitdefender-scanner-7.6.4.ebuild, +metadata.xml:
+  initial commit, fork from coderoar-overlay
+
