@@ -1,6 +1,13 @@
-# ChangeLog for app-i18n/ibus-sunpinyin
+# ChangeLog for app-i18n/sunpinyin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*sunpinyin-9999 (12 Apr 2010)
+*sunpinyin-2.0.1 (12 Apr 2010)
+
+  12 Apr 2010; Coderoar <coderoar@gmail.com> +sunpinyin-2.0.1.ebuild,
+  +sunpinyin-9999.ebuild, +metadata.xml:
+  rename ibus-sunpinyin to sunpinyin, update REPO_URI
 
   24 Mar 2010; Coderoar <coderoar@gmail.com> ibus-sunpinyin-9999.ebuild:
   update deps
