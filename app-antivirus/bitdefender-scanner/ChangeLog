@@ -2,6 +2,12 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header$
 
+*bitdefender-scanner-7.6.4-r1 (13 Apr 2010)
+
+  13 Apr 2010; Coderoar <coderoar@gmail.com>
+  -bitdefender-scanner-7.6.4.ebuild, +bitdefender-scanner-7.6.4-r1.ebuild:
+  fix obsolete update server
+
 *bitdefender-scanner-7.6.4 (12 Apr 2010)
 
   12 Apr 2010; Coderoar <coderoar@gmail.com>

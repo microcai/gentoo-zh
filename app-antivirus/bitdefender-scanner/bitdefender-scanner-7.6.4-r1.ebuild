@@ -17,7 +17,7 @@ SRC_URI="
 LICENSE="BitDefender-ASU-EUSLA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bash-completion gtk"
+IUSE="bash-completion examples gtk"
 
 DEPEND=""
 RDEPEND="!app-antivirus/bitdefender-console
@@ -72,7 +72,7 @@ pkg_nofetch() {
 	einfo
 }
 
-pkg_setup() { enewuser bitdefender; }
+pkg_setup() { enewgroup bitdefender; }
 
 src_unpack() {
 	unpack_makeself ${SRC_NAME}
@@ -91,7 +91,11 @@ src_unpack() {
 src_install() {
 	cp -r * "${D}" || die "Install failed"
 
-	echo "LDPATH=/$DIR/var/lib" > /etc/env.d/08${PN} || die "env.d failed"
+	cat > 82${PN} << DONE
+LDPATH=/$DIR/var/lib
+MANPATH=/$DIR/share/man
+DONE
+	doenvd 82${PN}
 
 	dodir /opt/bin
 	cd "${D}"/$DIR/bin && for bin in *; do
@@ -101,32 +105,28 @@ src_install() {
 	mv "${D}"/{$DIR/share/doc/examples,usr/share}/icons
 	sed -i -e 's|^Icon=.*|Icon=bitdefender|' "${D}"/usr/share/applications/bdgui.desktop
 
-	mv "${D}"/{$DIR,usr}/share/man || die
-
 	dodir /etc/$BASE
 	dosym /$DIR/etc/certs /etc/$BASE
 
 	cd "${D}"/$DIR
 
 	if use bash-completion; then
-		bashcomp=share/contrib/bash_completion/bdscan
-		dobashcompletion ${bashcomp}
-		rm ${bashcomp}
+		dobashcompletion share/contrib/bash_completion/bdscan
+		rm -r share/contrib
 	fi
 
+	use examples || rm -r share/{doc/examples,integration}
+
 	# generate configuration
-	sed "s|\$\$DIR|\/$DIR|g" < etc/$CONF.dist > etc/$CONF
+	BDSCAN_CONF=${D}/etc/$BASE/$CONF
+	sed "s|\$\$DIR|\/$DIR|g" < etc/$CONF.dist > "${BDSCAN_CONF}"
 
 	# add "LicenseAccepted = True" to $CONF
-	grep -v "LicenseAccepted" etc/$CONF > etc/$CONF.tmp
-	echo "" >> etc/$CONF.tmp
-	echo "LicenseAccepted = True" >> etc/$CONF.tmp
-	mv etc/$CONF.tmp "${D}"/etc/$BASE/$CONF
+	echo "" >> "${BDSCAN_CONF}"
+	echo "LicenseAccepted = True" >> "${BDSCAN_CONF}"
 
-	# extract the plugins
-	dodir /$DIR/var/lib/scan/Plugins
-	tar -C var/lib/scan/Plugins -xzf share/engines/Plugins.tar.gz
-	rm -r share/engines
+	# fix obsolete update server
+	sed -i -e "s|upgrade\.bitdefender\.com|upgrade1\.bitdefender\.com|g" "${BDSCAN_CONF}"
 
 	if use gtk ; then
 		# generate GUI configuration
@@ -141,9 +141,21 @@ src_install() {
 pkg_preinst() { gnome2_icon_savelist; }
 
 pkg_postinst() {
-	chown -R bitdefender:bitdefender /etc/$BASE /$DIR
-	chmod +s /$DIR/bin/ultool
+	cd /$DIR
+
+	# extract the plugins
+	mkdir -p var/lib/scan/Plugins
+	tar -C var/lib/scan/Plugins \
+		-kxf share/engines/Plugins.tar.gz 2>&1 | \
+		grep -v "Cannot open: File exists" | \
+		grep -v "Exiting with failure status due to previous errors"
+
+	chgrp -R bitdefender . /etc/$BASE
+	chmod +s bin/ultool
+
 	gnome2_icon_cache_update
+
+	elog "You must be in the bitdefender group to use BitDefender Antivirus Scanner."
 }
 
 pkg_prerm() {
