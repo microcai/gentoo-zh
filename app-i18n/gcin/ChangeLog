@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/gcin
 # Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
 
+  19 Apr 2010; scsi <scsichen@gmail.com> gcin-1.4.7_pre22.ebuild,
+  +files/gcin-1.4.7.pre22-utf8_bom_fix.patch:
+  remove im-client/gcin-im-client.cpp utf bom to fix compile error.
+
   14 Apr 2010; scsi <scsichen@gmail.com> -gcin-1.4.7_pre21.ebuild,
   +gcin-1.4.7_pre22.ebuild:
   version bump
