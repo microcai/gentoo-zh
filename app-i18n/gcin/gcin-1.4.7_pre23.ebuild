@@ -32,7 +32,7 @@ S=${WORKDIR}/${P/_/.}
 
 src_prepare() {
 	epatch "${FILESDIR}/gcin-1.4.6.pre16-qt4-fix.patch"
-	epatch "${FILESDIR}/gcin-1.4.7.pre22-utf8_bom_fix.patch"
+	#epatch "${FILESDIR}/gcin-1.4.7.pre22-utf8_bom_fix.patch"
 }
 
 src_configure() {
