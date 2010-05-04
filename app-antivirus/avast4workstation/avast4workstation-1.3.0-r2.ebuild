@@ -49,6 +49,8 @@ src_install() {
 	dosym /opt/${PN}/bin/wrapper-script.sh /opt/bin/avastgui
 	dosym /opt/${PN}/bin/avast-update /opt/bin/avast-update
 
+	sed -i -e "s|^Categories=.*|Categories=Application;Security;System;|" \
+		"${LIBDIR}"/share/avast/desktop/avast.desktop || die
 	domenu "${LIBDIR}"/share/avast/desktop/avast.desktop || die "domenu failed"
 	rm -r "${LIBDIR}"/share/avast/desktop
 	dodir /usr/share/pixmaps
