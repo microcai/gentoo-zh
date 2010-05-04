@@ -4,7 +4,7 @@
 
 EAPI="2"
 PYTHON_DEPEND="ibus? 2:2.5"
-inherit autotools confutils eutils git python
+inherit autotools confutils git python
 
 EGIT_REPO_URI="git://github.com/sunpinyin/sunpinyin.git"
 
@@ -36,11 +36,12 @@ DEPEND="${RDEPEND}
 RESTRICT="mirror"
 
 pkg_setup() {
-	confutils_require_any uim xim
+	confutils_require_any ibus xim
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-mkdir.patch"
+	sed -i -e 's|mkdir(config_dir, 0600);|mkdir(config_dir, 0700);|' \
+		wrapper/xim/settings.c || die
 	eautoreconf
 	ln -s "${DISTDIR}"/{dict.utf8,lm_sc.t3g.arpa}.tar.bz2 "${S}"/raw
 	mv py-compile py-compile.orig || die
