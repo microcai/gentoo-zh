@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>cjk</herd>
+<use>
+<flag name='ibus'>Enable support for <pkg>app-i18n/ibus</pkg> input method</flag>
+<flag name='xim'>Enable support for XIM</flag>
+</use>
 </pkgmetadata>

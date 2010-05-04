@@ -3,8 +3,8 @@
 # $Header: $
 
 EAPI="2"
-
-inherit autotools git python
+PYTHON_DEPEND="ibus? 2:2.5"
+inherit autotools confutils eutils git python
 
 EGIT_REPO_URI="git://github.com/sunpinyin/sunpinyin.git"
 
@@ -16,33 +16,31 @@ SRC_URI="https://open-gram.googlecode.com/files/dict.utf8.tar.bz2
 LICENSE="LGPL-2.1 CDDL"
 SLOT="0"
 KEYWORDS=""
-IUSE_IM="ibus xim"
-IUSE="debug nls ${IUSE_IM}"
+IUSE="debug ibus nls +xim"
 
-RDEPEND="x11-libs/gtk+:2
-	dev-libs/glib:2
-	dev-db/sqlite:3
-	ibus? ( app-i18n/ibus )
-	xim? ( x11-libs/libX11 )
-	!app-i18n/ibus-sunpinyin
-	!app-i18n/scim-sunpinyin
-	>=dev-lang/python-2.5
-	nls? ( virtual/libintl )"
+RDEPEND="dev-db/sqlite:3
+	ibus? (
+		>=app-i18n/ibus-1.1
+		!app-i18n/ibus-sunpinyin
+	)
+	nls? ( virtual/libintl )
+	xim? (
+		>=x11-libs/gtk+-2.12:2
+		x11-libs/libX11
+	)"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	xim? ( x11-proto/xproto )
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	xim? ( x11-proto/xproto )"
+
+RESTRICT="mirror"
 
 pkg_setup() {
-	for im in ${IUSE_IM}; do
-		use ${im} && return;
-	done
-	eerror "You need to specify at least one input method to build."
-	eerror "Valid input methods are: ${IUSE_IM}."
-	die "No input methods were specified to build."
+	confutils_require_any uim xim
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-mkdir.patch"
 	eautoreconf
 	ln -s "${DISTDIR}"/{dict.utf8,lm_sc.t3g.arpa}.tar.bz2 "${S}"/raw
 	mv py-compile py-compile.orig || die
@@ -52,19 +50,24 @@ src_prepare() {
 src_configure() {
 	econf \
 		$(use_enable debug) \
-		$(use_enable nls) \
 		$(use_enable ibus) \
+		$(use_enable nls) \
 		$(use_enable xim) || die
 }
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
 
-	dodoc AUTHORS ChangeLog NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO || die
 }
 
 pkg_postinst() {
 	use ibus && python_mod_optimize /usr/share/ibus-${PN}/setup
+	if use xim ; then
+		elog "To use sunpinyin with XIM, you should use the following"
+		elog "in your user startup scripts such as .xinitrc or .xprofile:"
+		elog "XMODIFIERS=@im=xsunpinyin ; export XMODIFIERS"
+	fi
 }
 
 pkg_postrm() {
