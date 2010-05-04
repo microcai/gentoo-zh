@@ -14,6 +14,7 @@
 # disallowed.
 # Test for commit block
 
+app-antivirus/bitdefender-scanner:gtk - Enable the graphical user interface based on x11-libs/gtk+
 app-i18n/ibus-table-cangjie:cangjie3 - Build CangJie3 Engine
 app-i18n/ibus-table-cangjie:cangjie5 - Build CangJie5 Engine
 app-i18n/ibus-table-cangjie:quick3 - Build Quick3 Engine
@@ -23,6 +24,8 @@ app-i18n/ibus-table-wubi:extra-phrases - Add extra phrases into built Engine
 app-i18n/ibus-table-wubi:wubi86 - Build Wubi86 Engine
 app-i18n/ibus-table-wubi:wubi98 - Build Wubi98 Engine
 app-i18n/ibus-table-zhengma:extra-phrases - Add extra phrases into built Engine
+app-i18n/sunpinyin:ibus - Enable support for app-i18n/ibus input method
+app-i18n/sunpinyin:xim - Enable support for XIM
 app-text/stardict:espeak - Enables text to speech engine app-accessibility/espeak
 app-text/stardict:festival - Enables text to speech engine app-accessibility/festival
 app-text/stardict:gnome - Enables gnome-base/gnome support
@@ -38,6 +41,8 @@ media-libs/freetype:cleartype - Enable subpixel patch
 media-libs/freetype:fontforge - Install internal headers required for truetype debugger in media-gfx/fontforge (built with USE=fontforge-debugger)
 media-libs/freetype:ubuntu - Enable the lcd patch from Ubuntu
 media-libs/freetype:utils - Install utilities and examples from ft2demos
+media-plugins/osd-lyrics:mpd - Enable support for MPD
+media-plugins/osd-lyrics:xmms2 - Enable support for XMMS2
 media-tv/gmlive:extra - Enable support for PPLive and PPS IPTV
 media-tv/gmlive:sopcast - Enable support for media-tv/sopcast
 media-tv/gmlive:totem - Enable totem plugin support

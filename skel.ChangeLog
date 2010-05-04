@@ -14,7 +14,7 @@
 
   DD MMM YYYY; YOUR_NAME <YOUR_EMAIL> changed_file1, changed_file2: this is
   an earlier ChangeLog entry.
- 
+
 -- Explanation of ChangeLog format:
 
   ***************************************************************************
@@ -33,10 +33,10 @@
   top of the file like a good boy/girl. Even do this if it's clear that you're
   adding an entry to a b0rked ChangeLog.
   ***************************************************************************
-  
+
   This changelog is targeted to users. This means that the comments should be
   well explained and written in clean English.
- 
+
   Every new version or revision of the package should be marked by a '*'
   separator line as above to indicate where in the chronology it was first
   added to our CVS tree. Any changes since the last revision, really _any
@@ -46,10 +46,10 @@
   files and add your entry to the top of the ChangeLog. Resist the temptation
   to "organize" your ChangeLog entries by placing them under the "correct" "*"
   entries -- this isn't the purpose of the "*" entries.
-  
+
   This means that you start with header line that has the following format,
   indented two spaces:
-  
+
   DD MMM YYYY; your_name <your_email> changed_file1, changed_file2: Your
   explanation should follow. It should be indented and wrapped at a line width
   of 80 characters.  The changed_files can be omitted if they are obvious; for
