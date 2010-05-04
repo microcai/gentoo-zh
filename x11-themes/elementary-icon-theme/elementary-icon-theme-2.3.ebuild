@@ -29,8 +29,8 @@ DEPEND="${RDEPEND}
 RESTRICT="binchecks mirror strip"
 
 src_install() {
-	insinto /usr/share/icons
-	doins -r "${PN}"/elementary* || die "install failed."
+	dodir /usr/share/icons
+	cp -r elementary* "${D}"/usr/share/icons || die "install failed."
 }
 
 pkg_preinst() { gnome2_icon_savelist; }

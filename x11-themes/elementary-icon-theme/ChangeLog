@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 May 2010; Coderoar <coderoar@gmail.com>
+  elementary-icon-theme-2.4.ebuild:
+  minor fix
+
 *elementary-icon-theme-2.4 (10 Apr 2010)
 
   10 Apr 2010; Coderoar <coderoar@gmail.com>
