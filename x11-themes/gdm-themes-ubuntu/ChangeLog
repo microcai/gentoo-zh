@@ -1,8 +1,0 @@
-# ChangeLog for x11-themes/gdm-themes-ubuntu
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  31 Aug 2009; Coderoar <coderoar@gmail.com> +gdm-themes-ubuntu-0.32.ebuild,
-  +metadata.xml:
-  x11-themes/gdm-themes-ubuntu: initial commit
-
