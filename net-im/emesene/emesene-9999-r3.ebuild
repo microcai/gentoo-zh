@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -12,6 +12,7 @@ ESVN_PATCHES="${PN}-r1387-aplay.patch"
 LICENSE="GPL-2"
 SLOT="0"
 
+IUSE=""
 KEYWORDS=""
 
 DEPEND=">=dev-lang/python-2.4.3
@@ -27,7 +28,6 @@ src_unpack() {
 	subversion_src_unpack
 }
 
-
 src_install() {
 	insinto /usr/share/emesene
 #	rm GPL PSF LGPL
@@ -35,7 +35,7 @@ src_install() {
 	echo -e '#!/bin/sh \n python /usr/share/emesene/Controller.py'>> emesene-start
 	dobin emesene-start
 	newicon "${S}"/themes/default/icon96.png ${PN}.png
-	make_desktop_entry emesene-start "EmeSeNe" ${PN}.png
+	make_desktop_entry emesene-start "EmeSeNe" ${PN}
 }
 
 pkg_postinst() {

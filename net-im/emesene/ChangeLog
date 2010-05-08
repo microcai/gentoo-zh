@@ -1,6 +1,9 @@
 # ChangeLog for net-im/emesene
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  08 May 2010; Yu Yuwei <acevery@gmail.com> emesene-9999-r3.ebuild:
+  fix QAs
 
   27 Jul 2009; Yu Yuwei <acevery@gmail.com> -files/emesene-group-p4.patch,
   -emesene-9999-r2.ebuild, +emesene-9999-r3.ebuild:
