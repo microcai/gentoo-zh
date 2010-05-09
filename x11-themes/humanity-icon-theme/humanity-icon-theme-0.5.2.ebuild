@@ -8,7 +8,7 @@ inherit gnome2-utils
 
 DESCRIPTION="Elementary Icons for Humans."
 HOMEPAGE="https://launchpad.net/humanity"
-SRC_URI="mirror://ubuntu/pool/main/h/${PN}/${PN}_${PV}.tar.gz"
+SRC_URI="mirror://ubuntu/pool/main/h/${PN}/${PN}_${PV}_all.deb"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,16 +20,18 @@ RDEPEND="
 	media-gfx/imagemagick
 	>=gnome-base/librsvg-2.26.0
 	>=x11-themes/hicolor-icon-theme-0.10"
-DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	dev-util/intltool
-	sys-devel/gettext"
+DEPEND=""
 
+S=${WORKDIR}
 RESTRICT="binchecks mirror strip"
 
+src_unpack() {
+	default_src_unpack
+	unpack ./data.tar.gz
+}
+
 src_install() {
-	insinto /usr/share/icons
-	doins -r Humanity* || die "install failed."
+	cp -r usr "${D}"
 }
 
 pkg_preinst() { gnome2_icon_savelist; }
