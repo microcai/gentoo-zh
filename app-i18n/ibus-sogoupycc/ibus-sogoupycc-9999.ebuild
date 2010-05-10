@@ -17,7 +17,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS=""
 
-RDEPEND=">=app-i18n/ibus-1.2.0.20100111
+RDEPEND=">=app-i18n/ibus-1.2.0
 	>=dev-lang/lua-5.1
 	dev-db/sqlite:3
 	dev-libs/glib
