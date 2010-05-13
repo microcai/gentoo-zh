@@ -1,0 +1,56 @@
+Index: third_party/skia/include/core/SkTypeface.h
+===================================================================
+--- third_party/skia/include/core/SkTypeface.h	(版本 341)
++++ third_party/skia/include/core/SkTypeface.h	(工作副本)
+@@ -39,6 +39,7 @@
+         kNormal = 0,
+         kBold   = 0x01,
+         kItalic = 0x02,
++        kEmbeddedBitmap = 0x04,
+ 
+         // helpers
+         kBoldItalic = 0x03
+@@ -55,6 +56,10 @@
+     /** Returns true if getStyle() has the kItalic bit set.
+     */
+     bool isItalic() const { return (fStyle & kItalic) != 0; }
++
++    /** Returns true if getStyle() has the kEmbeddedBitmap bit set.
++    */
++    bool hasEmbeddedBitmap() const { return (fStyle & kEmbeddedBitmap) != 0; }
+     
+     /** Return a 32bit value for this typeface, unique for the underlying font
+         data. Will never return 0.
+Index: third_party/skia/include/core/SkScalerContext.h
+===================================================================
+--- third_party/skia/include/core/SkScalerContext.h	(版本 341)
++++ third_party/skia/include/core/SkScalerContext.h	(工作副本)
+@@ -166,6 +166,7 @@
+         SkScalar    fPost2x2[2][2];
+         SkScalar    fFrameWidth, fMiterLimit;
+         bool        fSubpixelPositioning;
++        bool        fHasEmbeddedBitmap;
+         uint8_t     fMaskFormat;
+         uint8_t     fStrokeJoin;
+         uint8_t     fFlags;
+Index: third_party/skia/src/ports/SkFontHost_FreeType.cpp
+===================================================================
+--- third_party/skia/src/ports/SkFontHost_FreeType.cpp	(版本 341)
++++ third_party/skia/src/ports/SkFontHost_FreeType.cpp	(工作副本)
+@@ -377,4 +377,5 @@
+         if ((fRec.fFlags & SkScalerContext::kEmbeddedBitmapText_Flag) == 0) 
+-            loadFlags |= FT_LOAD_NO_BITMAP;
++            if (!fRec.fHasEmbeddedBitmap)
++                loadFlags |= FT_LOAD_NO_BITMAP;
+ 
+         fLoadGlyphFlags = loadFlags;
+Index: third_party/skia/src/core/SkPaint.cpp
+===================================================================
+--- third_party/skia/src/core/SkPaint.cpp	(版本 341)
++++ third_party/skia/src/core/SkPaint.cpp	(工作副本)
+@@ -1313,4 +1313,5 @@
+     rec->fSubpixelPositioning = paint.isSubpixelText();
++    rec->fHasEmbeddedBitmap = paint.getTypeface()->hasEmbeddedBitmap();
+     rec->fMaskFormat = SkToU8(computeMaskFormat(paint));
+     rec->fFlags = SkToU8(flags);
+     rec->setHinting(computeHinting(paint));

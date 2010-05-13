@@ -1,0 +1,38 @@
+--- src/net/base/mime_util.cc.orig	2010-04-14 17:22:50.000000000 +0200
++++ src/net/base/mime_util.cc	2010-04-14 17:25:13.000000000 +0200
+@@ -189,18 +189,20 @@
+   "audio/ogg",
+   "application/ogg",
+ 
+-#if defined(GOOGLE_CHROME_BUILD)
++#if defined(GENTOO_CHROMIUM_H264_ENABLED)
+   // MPEG-4.
+   "video/mp4",
+   "video/x-m4v",
+   "audio/mp4",
+   "audio/x-m4a",
++#endif  // defined(GENTOO_CHROMIUM_H264_ENABLED)
+ 
++#if defined(GENTOO_CHROMIUM_MP3_ENABLED)
+   // MP3.
+   "audio/mp3",
+   "audio/x-mp3",
+   "audio/mpeg",
+-#endif
++#endif  // defined(GENTOO_CHROMIUM_MP3_ENABLED)
+ };
+ 
+ // List of supported codecs when passed in with <source type="...">.
+@@ -208,10 +210,10 @@
+ // Refer to http://wiki.whatwg.org/wiki/Video_type_parameters#Browser_Support
+ // for more information.
+ static const char* const supported_media_codecs[] = {
+-#if defined(GOOGLE_CHROME_BUILD)
++#if defined(GENTOO_CHROMIUM_H264_ENABLED)
+   "avc1",
+   "mp4a",
+-#endif
++#endif  // defined(GENTOO_CHROMIUM_H264_ENABLED)
+   "theora",
+   "vorbis",
+ };
