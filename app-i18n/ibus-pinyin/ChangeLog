@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/ibus-pinyin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  02 Jun 2010; Zhang Le <r0bertz@gentoo.org> ibus-pinyin-9999.ebuild,
+  metadata.xml:
+  updated ibus-pinyin-9999.ebuild, thanks to mathfeel@linuxsir
 
   10 Oct 2009; Coderoar <coderoar@gmail.com> ibus-pinyin-9999.ebuild:
   fixed missing AM_GNU_GETTEXT_VERSION in configure.ac

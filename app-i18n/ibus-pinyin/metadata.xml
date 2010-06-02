@@ -5,4 +5,7 @@
 <longdescription lang="en">
 	Chinese pinyin engine for ibus framework.
 </longdescription>
+<use>
+	<flag name='open-phrase'>Enable open-phrase-db</flag>
+</use>
 </pkgmetadata>

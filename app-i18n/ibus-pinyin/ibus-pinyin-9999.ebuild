@@ -1,14 +1,16 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI="2"
+PYTHON_DEPEND="2:2.5"
+PYTHON_USE_WITH="sqlite"
 
 inherit python git autotools
 
 EGIT_REPO_URI="git://github.com/phuang/ibus-pinyin.git"
 
-PYDB_TAR="pinyin-database-0.1.10.6.tar.bz2"
+PYDB_TAR="pinyin-database-1.2.99.tar.bz2"
 DESCRIPTION="Chinese PinYin IMEngine for IBus Framework"
 HOMEPAGE="http://code.google.com/p/ibus/"
 SRC_URI="http://ibus.googlecode.com/files/${PYDB_TAR}"
@@ -16,13 +18,13 @@ SRC_URI="http://ibus.googlecode.com/files/${PYDB_TAR}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="nls"
+IUSE="nls +open-phrase"
 
 RDEPEND=">=app-i18n/ibus-1.1.0
-	>=dev-lang/python-2.5[sqlite]
+	>=dev-libs/boost-1.39
+	sys-apps/util-linux
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	dev-util/cvs
 	dev-util/pkgconfig
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 
@@ -32,13 +34,13 @@ src_prepare() {
 	intltoolize --copy --force || die "intltoolize failed"
 	eautoreconf
 
+	cp "${DISTDIR}/${PYDB_TAR}" "${S}"/data/db/open-phrase/ || die
 	mv py-compile py-compile.orig || die
 	ln -s "$(type -P true)" py-compile || die
-	cp "${DISTDIR}/${PYDB_TAR}" "${S}"/engine
 }
 
 src_configure() {
-	econf $(use_enable nls) || die
+	econf $(use_enable nls) $(use_enable open-phrase db-open-phrase) || die
 }
 
 src_install() {
