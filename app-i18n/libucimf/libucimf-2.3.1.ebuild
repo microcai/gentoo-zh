@@ -3,18 +3,16 @@
 # $Header: $
 
 EAPI="2"
-
-ESVN_REPO_URI="http://ucimf.googlecode.com/svn/${PN}"
-inherit autotools eutils subversion
+inherit eutils
 
 DESCRIPTION="Unicode Console InputMethod Framework"
 HOMEPAGE="http://ucimf.googlecode.com"
-SRC_URI="${HOMEPAGE}/files/UserManual.pdf"
+SRC_URI="${HOMEPAGE}/files/${P}.tar.gz ${HOMEPAGE}/files/UserManual.pdf"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE="debug doc"
+KEYWORDS="~amd64 ~x86"
+IUSE="debug"
 
 DEPEND="media-libs/freetype:2 media-libs/fontconfig"
 RDEPEND="${DEPEND}
@@ -26,7 +24,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	eautoreconf
 	cp "${DISTDIR}"/UserManual.pdf .
 }
 
