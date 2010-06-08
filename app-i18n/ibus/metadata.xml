@@ -5,4 +5,7 @@
 <longdescription lang="en">
 	IBus (Intelligent Input Bus) is a new input framework for Linux OS.
 </longdescription>
+<use>
+  <flag name='introspection'>Enable Gobject-Introspection support</flag>
+</use>
 </pkgmetadata>

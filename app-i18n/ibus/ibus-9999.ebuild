@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -15,7 +15,7 @@ SRC_URI=""
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
-IUSE="doc nls qt4"
+IUSE="doc nls qt4 introspection"
 
 RDEPEND=">=dev-libs/glib-2.18
 	>=x11-libs/gtk+-2
@@ -35,6 +35,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/gtk-doc-1.9
 	dev-util/cvs
+	>=dev-libs/gobject-introspection-0.6.8
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 RDEPEND="${RDEPEND}
 	dev-python/pygtk
@@ -62,6 +63,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		$(use_enable doc gtk-doc) \
+		$(use_enable introspection introspection)\
 		$(use_enable nls) || die
 }
 
