@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Jun 2010; Yuwei Yu <acevery@gmail.com> ibus-9999.ebuild:
+  fix icon cache update bug
+
   08 Jun 2010; Yu Yuwei <acevery@gmail.com> ibus-9999.ebuild, metadata.xml:
   Add gobject-introspection in to deps, because we need it when building from git
 

@@ -8,6 +8,8 @@ inherit gnome2-utils multilib python git autotools
 
 EGIT_REPO_URI="git://github.com/phuang/${PN}.git"
 
+GNOME2_ECLASS_ICONS="usr/share/icons/hicolor"
+
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://code.google.com/p/ibus/"
 SRC_URI=""
