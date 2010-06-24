@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.70.ebuild,v 1.1 2010/06/04 07:46:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.86.ebuild,v 1.1 2010/06/24 07:55:31 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic multilib pax-utils toolchain-funcs
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="http://build.chromium.org/buildbot/official/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -70,20 +70,12 @@ src_prepare() {
 src_configure() {
 	export CHROMIUM_HOME=/usr/$(get_libdir)/chromium-browser
 
+	# Workaround for bug #318969.
+	# TODO: remove when http://crbug.com/43778 is fixed.
+	append-flags -D__STDC_CONSTANT_MACROS
+
 	# Fails to build on arm if we don't do this
 	use arm && append-flags -fno-tree-sink
-
-	# CFLAGS/LDFLAGS
-	mkdir -p "${S}"/.gyp || die "cflags mkdir failed"
-	cat << EOF > "${S}"/.gyp/include.gypi || die "cflags cat failed"
-{
-	'target_defaults': {
-		'cflags': [ '${CFLAGS// /','}' ],
-		'ldflags': [ '${LDFLAGS// /','}' ],
-	},
-}
-EOF
-	export HOME="${S}"
 
 	# Configuration options (system libraries)
 	local myconf="-Duse_system_zlib=1 -Duse_system_bzip2=1 -Duse_system_ffmpeg=1 -Duse_system_libevent=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1"
@@ -100,6 +92,10 @@ EOF
 	# Disable tcmalloc memory allocator. It causes problems,
 	# for example bug #320419.
 	myconf="${myconf} -Dlinux_use_tcmalloc=0"
+
+	# Disable gpu rendering, it is incompatible with nvidia-drivers,
+	# bug #319331.
+	myconf="${myconf} -Denable_gpu=0"
 
 	# Use target arch detection logic from bug #296917.
 	local myarch="$ABI"
