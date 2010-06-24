@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -22,8 +22,8 @@ RDEPEND="
 	media-libs/gstreamer:0.10
 	media-libs/gst-plugins-base:0.10"
 DEPEND="${RDEPEND}
-	dev-util/cvs
 	dev-util/pkgconfig
+	dev-vcs/cvs
 	sys-devel/gettext"
 
 src_prepare() {
