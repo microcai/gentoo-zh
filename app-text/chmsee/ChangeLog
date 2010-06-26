@@ -2,6 +2,12 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Jun 2010; Coderoar <coderoar@gmail.com> -chmsee-1.0.6.ebuild,
+  -files/chmsee-1.0.6-disable-libxul-maxver.patch, -chmsee-1.0.7.ebuild,
+  -files/chmsee-1.0.7-xul-versiondetect.patch, -chmsee-1.1.0.ebuild,
+  chmsee-9999.ebuild:
+  remove current and obsolete, already in portage
+
 *chmsee-1.1.0 (12 Apr 2010)
 
   12 Apr 2010; Coderoar <coderoar@gmail.com> -chmsee-1.1.0_beta.ebuild,
