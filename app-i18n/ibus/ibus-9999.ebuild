@@ -4,11 +4,10 @@
 
 EAPI="2"
 
-inherit gnome2-utils multilib python git autotools
+PYTHON_DEPEND="python? 2:2.5"
+inherit eutils gnome2-utils multilib python git autotools
 
 EGIT_REPO_URI="git://github.com/phuang/${PN}.git"
-
-GNOME2_ECLASS_ICONS="usr/share/icons/hicolor"
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -17,20 +16,23 @@ SRC_URI=""
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
-IUSE="doc nls qt4 introspection"
+IUSE="doc nls gtk gconf +python vala"
 
 RDEPEND=">=dev-libs/glib-2.18
-	>=x11-libs/gtk+-2
-	>=gnome-base/gconf-2.12.0
+	gconf? ( >=gnome-base/gconf-2.12.0 )
 	>=gnome-base/librsvg-2
-	>=sys-apps/dbus-1.2.4
-	dev-libs/dbus-glib
 	app-text/iso-codes
-	x11-libs/libX11
-	>=dev-lang/python-2.5
-	>=dev-python/pygobject-2.14
-	qt4? ( app-i18n/ibus-qt )
-	nls? ( virtual/libintl )"
+	dev-libs/dbus-glib
+	gtk? (
+		x11-libs/libX11
+		x11-libs/gtk+:2
+	)
+	python? (
+		dev-python/notify-python
+		>=dev-python/dbus-python-0.83
+	)
+	nls? ( virtual/libintl )
+	vala? ( dev-lang/vala )"
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5.8.1
 	dev-perl/XML-Parser
@@ -40,15 +42,26 @@ DEPEND="${RDEPEND}
 	>=dev-libs/gobject-introspection-0.6.8
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 RDEPEND="${RDEPEND}
-	dev-python/pygtk
-	dev-python/notify-python
-	>=dev-python/dbus-python-0.83.0
-	dev-python/pyxdg"
+	python? (
+		dev-python/pygtk
+		dev-python/pyxdg
+	)"
+RESTRICT="test"
+
+GNOME2_ECLASS_ICONS="usr/share/icons/hicolor"
+
+update_gtk_immodules() {
+	if [ -x /usr/bin/gtk-query-immodules-2.0 ] ; then
+		GTK2_CONFDIR="/etc/gtk-2.0"
+		# An arch specific config directory is used on multilib systems
+		has_multilib_profile && GTK2_CONFDIR="${GTK2_CONFDIR}/${CHOST}"
+		mkdir -p "${ROOT}${GTK2_CONFDIR}"
+		gtk-query-immodules-2.0 > "${ROOT}${GTK2_CONFDIR}/gtk.immodules"
+	fi
+}
 
 pkg_setup() {
-	# An arch specific config directory is used on multilib systems
-	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
-	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
+	python_set_active_version 2
 }
 
 src_prepare() {
@@ -60,13 +73,20 @@ src_prepare() {
 
 	mv py-compile py-compile.orig || die
 	ln -s "$(type -P true)" py-compile || die
+	echo "ibus/_config.py" >> po/POTFILES.skip || die
+	sed -i -e "s/python/python2/" setup/ibus-setup.in ui/gtk/ibus-ui-gtk.in || die
 }
 
 src_configure() {
 	econf \
 		$(use_enable doc gtk-doc) \
-		$(use_enable introspection introspection)\
-		$(use_enable nls) || die
+		$(use_enable nls) \
+		$(use_enable gconf) \
+		$(use_enable gtk gtk2) \
+		$(use_enable gtk xim) \
+		$(use_enable nls) \
+		$(use_enable python) \
+		$(use_enable vala) || die
 }
 
 src_install() {
@@ -100,17 +120,15 @@ pkg_postinst() {
 	elog "   export QT_IM_MODULE=\"xim\""
 	elog "   ibus-daemon -d -x"
 
-	[ "${ROOT}" = "/" -a -x /usr/bin/gtk-query-immodules-2.0 ] && \
-		gtk-query-immodules-2.0 > "${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
+	use gtk && update_gtk_immodules
 
-	python_mod_optimize /usr/share/${PN} "$(python_get_sitedir)"/${PN}
+	use python && python_mod_optimize /usr/share/${PN} "$(python_get_sitedir)"/${PN}
 	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
-	[ "${ROOT}" = "/" -a -x /usr/bin/gtk-query-immodules-2.0 ] && \
-		gtk-query-immodules-2.0 > "${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
+	use gtk && update_gtk_immodules
 
-	python_mod_cleanup /usr/share/${PN} "$(python_get_sitedir)"/${PN}
+	use python && python_mod_cleanup /usr/share/${PN} "$(python_get_sitedir)"/${PN}
 	gnome2_icon_cache_update
 }

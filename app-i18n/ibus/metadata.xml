@@ -3,9 +3,12 @@
 <pkgmetadata>
 <herd>cjk</herd>
 <longdescription lang="en">
-	IBus (Intelligent Input Bus) is a new input framework for Linux OS.
+IBus means Intelligent Input Bus. It is a new input framework for Linux OS. It provides
+full featured and user friendly input method user interface. It also may help
+developers to develop input method easily.
 </longdescription>
 <use>
-  <flag name='introspection'>Enable Gobject-Introspection support</flag>
+  <flag name='gconf'>Enable support for <pkg>gnome-base/gconf</pkg></flag>
+  <flag name='vala'>Enable support for <pkg>dev-lang/vala</pkg></flag>
 </use>
 </pkgmetadata>
