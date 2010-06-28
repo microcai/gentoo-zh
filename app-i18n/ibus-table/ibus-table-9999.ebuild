@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -20,7 +20,7 @@ IUSE="minimal nls"
 RDEPEND=">=app-i18n/ibus-1.1
 	>=dev-lang/python-2.5[sqlite]"
 DEPEND="${RDEPEND}
-	dev-util/cvs
+	dev-vcs/cvs
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
