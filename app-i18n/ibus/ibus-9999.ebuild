@@ -36,7 +36,7 @@ DEPEND="${RDEPEND}
 	dev-perl/XML-Parser
 	dev-util/pkgconfig
 	>=dev-util/gtk-doc-1.9
-	dev-util/cvs
+	dev-vcs/cvs
 	>=dev-libs/gobject-introspection-0.6.8
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 RDEPEND="${RDEPEND}
