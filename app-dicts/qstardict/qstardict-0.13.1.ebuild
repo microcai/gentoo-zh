@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -23,6 +23,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 PROVIDE="virtual/stardict"
 
+PATCHES=( "$FILESDIR/qstardict-gcc-4.4.patch" )
 src_compile() {
 	QMAKE_FLAGS=""
 	if ! use dbus; then
