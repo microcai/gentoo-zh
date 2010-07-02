@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-ESVN_REPO_URI="http://ucimf.googlecode.com/svn/ucimf-openvanilla"
+ESVN_REPO_URI="http://ucimf.googlecode.com/svn/trunk/${PN}"
 inherit autotools subversion
 
 DESCRIPTION="The OpenVanilla IMF module for UCIMF"

@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-ESVN_REPO_URI="http://ucimf.googlecode.com/svn/${PN}"
+ESVN_REPO_URI="http://ucimf.googlecode.com/svn/trunk/${PN}"
 inherit autotools eutils subversion
 
 DESCRIPTION="Unicode Console InputMethod Framework"
