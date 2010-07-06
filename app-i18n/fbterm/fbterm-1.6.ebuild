@@ -12,11 +12,12 @@ SRC_URI="http://fbterm.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gpm video_cards_vesa"
+IUSE="gpm video_cards_vesa caps"
 
 RDEPEND=">=media-libs/freetype-2
 	gpm? ( sys-libs/gpm )
 	media-libs/fontconfig
+	caps? ( sys-libs/libcap ) 
 	video_cards_vesa? ( dev-libs/libx86 )"
 DEPEND="${RDEPEND}
 	sys-libs/ncurses
@@ -39,6 +40,13 @@ src_install() {
 }
 
 pkg_postinst() {
+	#
+	if use caps ;then
+		setcap "cap_sys_tty_config+ep" "${ROOT}"/usr/bin/fbterm
+	else
+		chmod u+s "${ROOT}"/usr/bin/fbterm
+	fi
+
 	# Copied from debian patch
 	einfo
 	elog "${PN} won't work with vga16fb. You have to use other native"
