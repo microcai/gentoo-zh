@@ -1,0 +1,51 @@
+Michael Weber Jun 5th 2010
+  Possibility to pass /usr/lib64 on multilib/64bit systems.
+  Dropped the hard compiler options for compartibility on older chips.
+
+--- Makefile	2010-06-05 16:38:48.000000000 +0200
++++ Makefile	2010-06-05 16:41:43.000000000 +0200
+@@ -7,6 +7,7 @@
+ 
+ build ?= debug
+ prefix ?= /usr/local
++libprefix ?= $(prefix)/lib
+ 
+ OBJDIR := build/$(build)
+ GENDIR := build/generated
+@@ -314,8 +315,8 @@
+ 	rm -rf build
+ 
+ install: $(DIRS) $(APPS) $(MUPDF_LIB)
+-	install -d $(prefix)/bin $(prefix)/lib $(prefix)/include
++	install -d $(prefix)/bin $(libprefix) $(prefix)/include
+ 	install $(APPS) $(prefix)/bin
+-	install $(MUPDF_LIB) $(prefix)/lib
++	install $(MUPDF_LIB) $(libprefix)
+ 	install $(MUPDF_HDR) $(prefix)/include
+ 
+--- Makerules	2010-06-05 16:38:48.000000000 +0200
++++ Makerules	2010-06-05 16:49:44.000000000 +0200
+@@ -4,8 +4,8 @@
+ OS := $(OS:MINGW%=MINGW)
+ 
+ LIBS := -ljbig2dec -lopenjpeg -ljpeg -lz -lm
+-CFLAGS := -Wall --std=gnu99 -Ifitz -Imupdf $(THIRD_INCS)
+-LDFLAGS =
++CFLAGS += -Wall --std=gnu99 -Ifitz -Imupdf $(THIRD_INCS)
++LDFLAGS +=
+ CC = cc
+ LD = $(CC)
+ AR = ar
+@@ -23,10 +23,10 @@
+ CFLAGS += `pkg-config --cflags freetype2`
+ LDFLAGS += `pkg-config --libs freetype2`
+ endif
+-X11LIBS = -lX11 -lXext
++X11LIBS = `pkg-config --libs x11 xext`
+ PDFVIEW_EXE = $(X11VIEW_EXE)
+ ifeq  "$(build)" "release"
+-CFLAGS += -mmmx -ftree-vectorize -msse -msse2 -march=k8 -DARCH_X86
++CFLAGS += 
+ ARCH_SRC = archx86.c
+ endif
+ endif
