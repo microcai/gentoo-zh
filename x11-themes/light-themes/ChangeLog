@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Jul 2010; Coderoar <coderoar@gmail.com> light-themes-0.1.6.5.ebuild:
+  update deps
+
 *light-themes-0.1.6.5 (09 May 2010)
 
   09 May 2010; Coderoar <coderoar@gmail.com> -light-themes-0.1.6.1.ebuild,

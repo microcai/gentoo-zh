@@ -13,7 +13,7 @@ IUSE=""
 
 RDEPEND="
 	x11-themes/dmz-cursor-theme
-	=x11-themes/gtk-engines-murrine-9999
+	>=x11-themes/gtk-engines-murrine-0.90.3-r1
 	x11-themes/humanity-icon-theme
 	x11-themes/ubuntu-mono"
 
