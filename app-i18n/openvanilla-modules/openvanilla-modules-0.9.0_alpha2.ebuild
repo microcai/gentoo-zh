@@ -13,7 +13,7 @@ SRC_URI="http://ucimf.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="linguas_ja linguas_ko linguas_th linguas_vi linguas_zh_CN linguas_zh_HK linguas_zh_TW"
 
 DEPEND=">=dev-db/sqlite-3"
