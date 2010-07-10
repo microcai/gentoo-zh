@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Jul 2010; Zhang Le <r0bertz@gentoo.org> west-chamber-0.0.1-r4.ebuild:
+  fix sandbox violation
+
   20 Mar 2010; Zhang Le <r0bertz@gentoo.org> -west-chamber-0.0.1-r3.ebuild,
   +west-chamber-0.0.1-r4.ebuild, files/west-chamber.confd,
   files/west-chamber.initd, +files/wikipedia.patch:

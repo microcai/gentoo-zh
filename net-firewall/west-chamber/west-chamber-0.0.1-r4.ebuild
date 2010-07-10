@@ -109,6 +109,7 @@ src_prepare() {
 	sed -e '/^all-local:/{s: modules::}' \
 		-e '/^install-exec-local:/{s: modules_install::}' \
 			-i extensions/Makefile.am || die
+	sed -e 's/$(make -sC ${kbuilddir} kernelrelease)/${KV}/' -i configure.ac
 }
 
 src_configure() {
