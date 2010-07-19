@@ -1,6 +1,20 @@
 # ChangeLog for app-i18n/gcin
 # Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
 
+  19 Jul 2010; scsi <scsichen@gmail.com>
+  -files/gcin-qtimm_fix-1.3.5_pre1.patch, -gcin-1.4.0-r1.ebuild,
+  -gcin-1.4.1.ebuild, -gcin-1.4.2.ebuild, -gcin-1.4.3.ebuild,
+  -files/gcin-1.4.3_pre5-qt4_fix.patch, -gcin-1.4.4.ebuild,
+  -gcin-1.4.4-r1.ebuild, -files/gcin-FF3_gtkim.patch,
+  -files/gcin-1.4.3_pre5-qt3_fix.patch,
+  -files/gcin-1.4.3_pre6-qt4_fix.patch, -files/gcin-1.4.4-qt4_fix.patch,
+  -gcin-1.4.5.ebuild, -files/gcin-1.4.5.pre2-qt4_fix.patch,
+  -gcin-1.4.6.ebuild, -files/gcin-1.4.7.pre22-utf8_bom_fix.patch,
+  -gcin-1.4.9.ebuild, -files/auto-detect_anthy-02.diff, -files/anthy.diff,
+  -files/anthy-amd64.patch, -files/gcin-1.4.4-qt3_fix.patch,
+  -files/auto-detect_anthy.diff:
+  remove old version
+
   14 Jul 2010; scsi <scsichen@gmail.com> -gcin-1.5.5_pre8.ebuild,
   +gcin-1.5.5_pre9.ebuild:
   version bump
