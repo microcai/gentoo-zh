@@ -1,0 +1,26 @@
+--- src/fx_login.c.orig	2010-07-29 02:52:43.089700758 +0800
++++ src/fx_login.c	2010-07-29 02:55:24.252985630 +0800
+@@ -484,7 +484,8 @@
+ 	gdk_threads_leave();
+ 
+ 	/**
+-	 *  if there is not a buddylist name "未分组" or "陌生人", create one
++	 *  if there is not a buddylist name "未分组" , create one
++	 *  no group named "陌生人" any more , since china mobile's rules changed
+ 	 */
+ 	if(fetion_group_list_find_by_id(user->groupList , BUDDY_LIST_NOT_GROUPED) == NULL)
+ 	{
+@@ -493,13 +494,6 @@
+ 		strcpy(group->groupname , "未分组");
+ 		fetion_group_list_append(user->groupList , group);
+ 	}
+-	if(fetion_group_list_find_by_id(user->groupList , BUDDY_LIST_STRANGER) == NULL)
+-	{
+-		group = fetion_group_new();
+-		group->groupid = BUDDY_LIST_STRANGER;
+-		strcpy(group->groupname , "陌生人");
+-		fetion_group_list_prepend(user->groupList , group);
+-	}
+ 
+ 	gdk_threads_enter();
+ 	fx_login_free(fxlogin);

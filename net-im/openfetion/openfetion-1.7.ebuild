@@ -26,6 +26,8 @@ RDEPEND=${DEPEND}
 src_prepare() {
 	#seg fault without this patch on my x86 box
 	epatch "${FILESDIR}/${P}-treeview-fixed.patch"
+	#fixed ui order
+	epatch "${FILESDIR}/${P}-no-stranger.patch"
 	#fixed gentoo QA warning
 	epatch "${FILESDIR}/${PN}-gentoo-qa-warning.patch"
 }
