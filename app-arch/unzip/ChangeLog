@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/unzip
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.50 2008/02/08 15:09:57 cla Exp $
+
+  29 Jul 2010; Zhang Le <r0bertz@gentoo.org> -files/unzip-5.50-dotdot.patch,
+  -unzip-5.52-r2.ebuild, -files/unzip-5.52-no-exec-stack.patch,
+  +unzip-6.0-r1.ebuild, +files/unzip-6.0-no-exec-stack.patch:
+  unzip bump to 6.0-r1
 
   01 Mar 2008; Zhang Le <r0bertz@gentoo.org> -unzip-5.52-r1.ebuild,
   +unzip-5.52-r2.ebuild:
