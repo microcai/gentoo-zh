@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.86.ebuild,v 1.1 2010/06/24 07:55:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.125.ebuild,v 1.4 2010/07/31 15:59:41 truedfx Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://build.chromium.org/buildbot/official/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE="+plugins-symlink"
 
 RDEPEND="app-arch/bzip2
@@ -44,13 +44,6 @@ RDEPEND+="
 	x11-apps/xmessage
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
-
-# Incompatible system plugins:
-# www-plugins/gecko-mediaplayer, bug #309231.
-RDEPEND+="
-	plugins-symlink? (
-		!www-plugins/gecko-mediaplayer[gnome]
-	)"
 
 src_prepare() {
 	# Prevent automatic -march=pentium4 -msse2 enabling on x86, http://crbug.com/9007
@@ -126,10 +119,10 @@ src_configure() {
 src_compile() {
 	emake -r V=1 chrome chrome_sandbox BUILDTYPE=Release \
 		rootdir="${S}" \
-		CC=$(tc-getCC) \
-		CXX=$(tc-getCXX) \
-		AR=$(tc-getAR) \
-		RANLIB=$(tc-getRANLIB) \
+		CC="$(tc-getCC)" \
+		CXX="$(tc-getCXX)" \
+		AR="$(tc-getAR)" \
+		RANLIB="$(tc-getRANLIB)" \
 		|| die "compilation failed"
 }
 
