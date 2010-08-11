@@ -25,6 +25,7 @@ RDEPEND=">=dev-lang/mono-2.0
 	>=dev-dotnet/glade-sharp-2.12.6
 	dev-dotnet/dbus-sharp
 	dev-dotnet/dbus-glib-sharp
+	>=dev-dotnet/gio-sharp-2.0
 	>=dev-dotnet/gnome-desktop-sharp-2.24.0
 	>=dev-dotnet/gnome-keyring-sharp-1.0.0
 	>=dev-dotnet/gnome-sharp-2.24.0
