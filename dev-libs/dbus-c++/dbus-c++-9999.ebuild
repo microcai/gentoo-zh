@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	git_src_unpack
 	cd "${S}"
+	epatch "${FILESDIR}/fix_deadlock.patch"
 	NOCONFIGURE=yes ./autogen.sh || die
 }
 
