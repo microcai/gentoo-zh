@@ -2,31 +2,30 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: 
 
-EGIT_REPO_URI="git://gitorious.org/dbus-cplusplus/mainline.git"
+EAPI="2"
+
 inherit git autotools
 
 DESCRIPTION="dbus-c++ attempts to provide a C++ API for D-BUS."
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/dbus-c++"
 
+EGIT_REPO_URI="git://gitorious.org/dbus-cplusplus/mainline.git"
+EGIT_BOOTSTRAP="./autogen.sh"
+EGIT_COMMIT="9ac4f0252f0784e8594b41e578e6d04f89835d13"
+#EGIT_PATCHES=""
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="debug"
 
 # probably needs more/less crap listed here ...
-RDEPEND="sys-apps/dbus
-	"
+RDEPEND="sys-apps/dbus"
 DEPEND="${RDEPEND}
 	dev-vcs/git
 	dev-util/pkgconfig"
 
-src_unpack() {
-	git_src_unpack
-	cd "${S}"
-	NOCONFIGURE=yes ./autogen.sh || die
-}
-
-src_install() {
-	emake install DESTDIR="${D}" || die
-	dodoc AUTHORS ChangeLog MAINTAINERS NEWS README TODO
+src_compile() {
+	econf $(use_enable debug ) || die
+	emake -j1 || die "emake failed"
 }
