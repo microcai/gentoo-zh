@@ -1,0 +1,31 @@
+diff -urN gtkdatabox-0.9.1.1-orig/gtk/Makefile.am gtkdatabox-0.9.1.1/gtk/Makefile.am
+--- gtkdatabox-0.9.1.1-orig/gtk/Makefile.am	2009-04-18 05:15:02.000000000 +0800
++++ gtkdatabox-0.9.1.1/gtk/Makefile.am	2010-07-28 12:13:44.000000000 +0800
+@@ -7,7 +7,7 @@
+ 			gtkdatabox_scale.c\
+ 			gtkdatabox_graph.c\
+ 			gtkdatabox_xyc_graph.c\
+- 			gtkdatabox_points.c\
++			gtkdatabox_points.c\
+                         gtkdatabox_lines.c\
+                         gtkdatabox_bars.c\
+ 			gtkdatabox_markers.c\
+@@ -28,7 +28,7 @@
+ 			gtkdatabox_scale.h\
+ 			gtkdatabox_graph.h\
+ 			gtkdatabox_xyc_graph.h\
+- 			gtkdatabox_points.h\
++			gtkdatabox_points.h\
+                         gtkdatabox_lines.h\
+                         gtkdatabox_bars.h\
+ 			gtkdatabox_markers.h\
+@@ -52,9 +52,5 @@
+ AM_CFLAGS			=\
+ 			-O2\
+ 			-W -Wall -pedantic\
+-			-DG_DISABLE_DEPRECATED\
+-			-DGDK_DISABLE_DEPRECATED\
+-			-DGDK_PIXBUF_DISABLE_DEPRECATED\
+-			-DGTK_DISABLE_DEPRECATED\
+ 			-DGTK_MULTIHEAD_SAFE=1\
+ 			`pkg-config gtk+-2.0 --cflags`
