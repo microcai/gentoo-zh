@@ -15,7 +15,7 @@ SRC_URI="http://open-gram.googlecode.com/files/dict.utf8.tar.bz2
 
 LICENSE="LGPL-2.1 CDDL"
 SLOT="0"
-KiEYWORDS=""
+KEYWORDS=""
 IUSE_FRONTEND="ibus xim"
 IUSE="${IUSE_FRONTEND} nls"
 
@@ -77,7 +77,7 @@ src_compile() {
 src_install() {
 	_scons_do_all "install"
 
-	dodoc AUTHORS COPYING LGPL.LICENSE OPENSOLARIS.LICENSE README || die
+	dodoc AUTHORS README || die
 }
 
 pkg_postinst() {
