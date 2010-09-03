@@ -4,19 +4,20 @@
 
 EAPI="2"
 PYTHON_DEPEND="ibus? 2:2.5"
-inherit autotools confutils git python
+inherit confutils git python
 
 EGIT_REPO_URI="git://github.com/sunpinyin/sunpinyin.git"
 
 DESCRIPTION="SunPinyin is a SLM (Statistical Language Model) based IME"
 HOMEPAGE="http://sunpinyin.org/"
-SRC_URI="https://open-gram.googlecode.com/files/dict.utf8.tar.bz2
-	https://open-gram.googlecode.com/files/lm_sc.t3g.arpa.tar.bz2"
+SRC_URI="http://open-gram.googlecode.com/files/dict.utf8.tar.bz2
+	http://open-gram.googlecode.com/files/lm_sc.t3g.arpa.tar.bz2"
 
 LICENSE="LGPL-2.1 CDDL"
 SLOT="0"
-KEYWORDS=""
-IUSE="debug ibus nls +xim"
+KiEYWORDS=""
+IUSE_FRONTEND="ibus xim"
+IUSE="${IUSE_FRONTEND} nls"
 
 RDEPEND="dev-db/sqlite:3
 	ibus? (
@@ -30,36 +31,53 @@ RDEPEND="dev-db/sqlite:3
 	)"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
+	dev-util/scons
 	nls? ( sys-devel/gettext )
 	xim? ( x11-proto/xproto )"
 
-RESTRICT="mirror"
+RESTRICT="primaryuri"
 
 pkg_setup() {
 	confutils_require_any ibus xim
 }
 
 src_prepare() {
-	sed -i -e 's|mkdir(config_dir, 0600);|mkdir(config_dir, 0700);|' \
-		wrapper/xim/settings.c || die
-	eautoreconf
 	ln -s "${DISTDIR}"/{dict.utf8,lm_sc.t3g.arpa}.tar.bz2 "${S}"/raw
-	mv py-compile py-compile.orig || die
-	ln -s "$(type -P true)" py-compile || die
+	epatch "${FILESDIR}/${PN}"-disable-checkpkg.patch
 }
 
-src_configure() {
-	econf \
-		$(use_enable debug) \
-		$(use_enable ibus) \
-		$(use_enable nls) \
-		$(use_enable xim) || die
+_scons_do_all() {
+	_scons_do() {
+		if [ "${1}" == "compile" ]; then
+			operation=""
+		else
+			operation=${1}
+		fi
+		scons --prefix=/usr "${operation}" || die "compile failed"
+	}
+
+	_scons_do_use() {
+		if use $2; then
+			cd "${S}/wrapper/$2"
+			_scons_do "$1"
+		fi
+	}
+
+	_scons_do "$1"
+	for wrapper in ${IUSE_FRONTEND}; do
+		_scons_do_use "$1" "${wrapper}"
+	done
+	cd "${S}"
+}
+
+src_compile() {
+	_scons_do_all "compile"
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "Install failed"
+	_scons_do_all "install"
 
-	dodoc AUTHORS ChangeLog NEWS README TODO || die
+	dodoc AUTHORS COPYING LGPL.LICENSE OPENSOLARIS.LICENSE README || die
 }
 
 pkg_postinst() {

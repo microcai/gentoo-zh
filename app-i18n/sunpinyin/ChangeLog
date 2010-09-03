@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  03 Sep 2010; Coderoar <coderoar@gmail.com> sunpinyin-9999.ebuild,
+  +files/sunpinyin-disable-checkpkg.patch:
+  disable dependency checking
+
   04 May 2010; Coderoar <coderoar@gmail.com>
   -files/sunpinyin-2.0.1-mkdir.patch, sunpinyin-9999.ebuild:
   minor fix
