@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-inherit bash-completion eutils gnome2-utils rpm versionator
+inherit bash-completion gnome2-utils rpm versionator
 
 DOWNLOAD_PAGE="http://www.bitdefender.com/site/Downloads/browseEvaluationVersion/2/80/"
 SRC_NAME_BASE="BitDefender-Antivirus-Scanner-$(replace_version_separator 2 '-').linux-gcc4x.ARCH.rpm.run"
@@ -39,7 +39,6 @@ RDEPEND="!app-antivirus/bitdefender-console
 	>=sys-libs/glibc-2.3.1"
 
 RESTRICT="fetch"
-PROPERTIES="interactive"
 
 QA_PRESTRIPPED="
 	opt/BitDefender-scanner/bin/bdgui
@@ -76,7 +75,6 @@ pkg_setup() { enewgroup bitdefender; }
 
 src_unpack() {
 	unpack_makeself ${SRC_NAME}
-	check_license "${WORKDIR}"/LICENSE
 
 	mkdir ${P}
 	mv *.rpm ${P}
