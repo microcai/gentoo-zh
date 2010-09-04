@@ -3,15 +3,15 @@
 # $Header: $
 
 EAPI="2"
+
 PYTHON_DEPEND="ibus? 2:2.5"
+
 inherit confutils git python
 
 EGIT_REPO_URI="git://github.com/sunpinyin/sunpinyin.git"
 
 DESCRIPTION="SunPinyin is a SLM (Statistical Language Model) based IME"
 HOMEPAGE="http://sunpinyin.org/"
-SRC_URI="http://open-gram.googlecode.com/files/dict.utf8.tar.bz2
-	http://open-gram.googlecode.com/files/lm_sc.t3g.arpa.tar.bz2"
 
 LICENSE="LGPL-2.1 CDDL"
 SLOT="0"
@@ -19,7 +19,8 @@ KEYWORDS=""
 IUSE_FRONTEND="ibus xim"
 IUSE="${IUSE_FRONTEND} nls"
 
-RDEPEND="dev-db/sqlite:3
+RDEPEND="app-i18n/sunpinyin-core
+	dev-db/sqlite:3
 	ibus? (
 		>=app-i18n/ibus-1.1
 		!app-i18n/ibus-sunpinyin
@@ -35,25 +36,20 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	xim? ( x11-proto/xproto )"
 
-RESTRICT="primaryuri"
-
 pkg_setup() {
 	confutils_require_any ibus xim
-}
-
-src_prepare() {
-	ln -s "${DISTDIR}"/{dict.utf8,lm_sc.t3g.arpa}.tar.bz2 "${S}"/raw
-	epatch "${FILESDIR}/${PN}"-disable-checkpkg.patch
 }
 
 _scons_do_all() {
 	_scons_do() {
 		if [ "${1}" == "compile" ]; then
+			dest=""
 			operation=""
-		else
-			operation=${1}
+		elif [ "${1}" == "install" ]; then
+			dest="--install-sandbox=${D}"
+			operation="${1}"
 		fi
-		scons --prefix=/usr "${operation}" || die "compile failed"
+		scons --prefix=/usr "${dest}" "${operation}" || die "${1} failed"
 	}
 
 	_scons_do_use() {
@@ -63,7 +59,6 @@ _scons_do_all() {
 		fi
 	}
 
-	_scons_do "$1"
 	for wrapper in ${IUSE_FRONTEND}; do
 		_scons_do_use "$1" "${wrapper}"
 	done
@@ -76,8 +71,6 @@ src_compile() {
 
 src_install() {
 	_scons_do_all "install"
-
-	dodoc AUTHORS README || die
 }
 
 pkg_postinst() {
