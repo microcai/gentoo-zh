@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/sunpinyin-core
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*sunpinyin-core-9999 (04 Sep 2010)
+
+  04 Sep 2010; Coderoar <coderoar@gmail.com> +sunpinyin-core-9999.ebuild,
+  +metadata.xml:
+  initial commit
+
