@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/flashget
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*flashget-1.0.3 (08 Sep 2010)
+
+  08 Sep 2010; Coderoar <coderoar@gmail.com> +flashget-1.0.3.ebuild,
+  +metadata.xml:
+  initial commit
+
