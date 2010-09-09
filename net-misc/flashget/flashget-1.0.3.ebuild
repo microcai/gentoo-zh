@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=2
 
-inherit gnome2-utils
+inherit eutils gnome2-utils
 
 DESCRIPTION="A download manager"
 HOMEPAGE="http://www.flashget.com/cn/product_Linux.html"
@@ -31,21 +31,20 @@ RESTRICT="primaryuri"
 QA_PRESTRIPPED="/opt/flashget/flashget"
 
 src_prepare() {
+	# fixed lib name mismatch
 	sed -b -i -e 's|libexpat\.so\.0|libexpat\.so\.1|g' ${PN}
+	# fixed path
 	sed -i -e 's|/.*/||g' ${PN}.desktop
 }
 
 src_install() {
 	exeinto /opt/${PN}
 	doexe ${PN} || die
-
 	dodir /opt/bin
 	dosym /opt/{${PN}/${PN},bin}
 
-	insinto /usr/share/applications
-	doins ${PN}.desktop
-	insinto /usr/share/icons/hicolor/48x48/apps/
-	doins ${PN}.png
+	domenu ${PN}.desktop
+	doicon ${PN}.png
 
 	dodoc README
 }
