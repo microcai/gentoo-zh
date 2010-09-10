@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/MiguMusic
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*MiguMusic-1.0.1_beta1 (10 Sep 2010)
+
+  10 Sep 2010; Coderoar <coderoar@gmail.com> +MiguMusic-1.0.1_beta1.ebuild,
+  +files/MiguMusic, +files/MiguMusic.desktop, +metadata.xml:
+  initial commit
+
