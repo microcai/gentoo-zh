@@ -1,0 +1,6 @@
+Section "InputClass"
+Identifier "touchpad catchall"
+MatchIsTouchpad "on"
+MatchDevicePath "/dev/input/event*"
+Driver "synaptics"
+EndSection

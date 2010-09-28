@@ -1,0 +1,294 @@
+# ChangeLog for x11-drivers/xf86-input-synaptics
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.52 2010/09/10 13:27:03 chithanh Exp $
+
+  28 Sep 2010; Yuwei Yu <acevery@gmail.com> +files/1.2.2-xorg-inputclass,
+  +xf86-input-synaptics-1.3.0.ebuild,
+  +files/xf86-input-synaptics-1.3.0-clickpad.patch, +metadata.xml:
+  Add Clickpad patch
+
+  10 Sep 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-input-synaptics-1.3.0.ebuild:
+  Drop hal USE flag
+
+*xf86-input-synaptics-1.3.0 (08 Sep 2010)
+
+  08 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xf86-input-synaptics-1.2.2.ebuild, -xf86-input-synaptics-1.2.2-r2.ebuild,
+  +xf86-input-synaptics-1.3.0.ebuild:
+  Version bump. Drop old.
+
+*xf86-input-synaptics-1.2.2-r2 (21 Apr 2010)
+
+  21 Apr 2010; <chainsaw@gentoo.org> -xf86-input-synaptics-1.2.2-r1.ebuild,
+  +xf86-input-synaptics-1.2.2-r2.ebuild:
+  Indeed, I got the priorities wrong. It is last match, not first match.
+
+*xf86-input-synaptics-1.2.2-r1 (21 Apr 2010)
+
+  21 Apr 2010; <chainsaw@gentoo.org> +files/1.2.2-xorg-inputclass,
+  +xf86-input-synaptics-1.2.2-r1.ebuild:
+  Install an X.Org 1.8 InputClass policy control file to actually use the
+  driver we installed. With thanks to Hanno Boeck & Stephen "steve"
+  Klimaszewski, closes bug #314989.
+
+  10 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  xf86-input-synaptics-1.2.2.ebuild:
+  Fix bool logic for warning printing.
+
+  07 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  xf86-input-synaptics-1.2.1.ebuild, xf86-input-synaptics-1.2.2.ebuild:
+  Fix warning message displaying. Per bug #298227.
+
+*xf86-input-synaptics-1.2.2 (02 Apr 2010)
+
+  02 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +xf86-input-synaptics-1.2.2.ebuild:
+  Version bump.
+
+  24 Feb 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xf86-input-synaptics-1.2.0.ebuild:
+  Drop old.
+
+  15 Feb 2010; Joseph Jezak <josejx@gentoo.org>
+  xf86-input-synaptics-1.2.1.ebuild:
+  Marked ppc/ppc64 stable for bug #302046.
+
+  08 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  xf86-input-synaptics-1.2.1.ebuild:
+  stable x86, bug 302046
+
+  30 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xf86-input-synaptics-1.2.1.ebuild:
+  amd64 stable wrt #302046
+
+  23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xf86-input-synaptics-1.0.0.ebuild, -xf86-input-synaptics-1.1.3.ebuild:
+  rm
+
+  27 Dec 2009; Joseph Jezak <josejx@gentoo.org>
+  xf86-input-synaptics-1.2.0.ebuild:
+  Marked ppc stable for bug #294958.
+
+  15 Dec 2009; Brent Baude <ranger@gentoo.org>
+  xf86-input-synaptics-1.2.0.ebuild:
+  Marking xf86-input-synaptics-1.2.0 ppc64 stable for bug 294958
+
+*xf86-input-synaptics-1.2.1 (15 Dec 2009)
+
+  15 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +xf86-input-synaptics-1.2.1.ebuild:
+  Version bump.
+
+  14 Dec 2009; Jeremy Olexa <darkside@gentoo.org>
+  xf86-input-synaptics-1.2.0.ebuild:
+  QA: s/linux_chkconfig_exists/linux_config_exists/ 
+
+  13 Dec 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  xf86-input-synaptics-1.2.0.ebuild:
+  Don't die if .config is not present, bug #296578.
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  xf86-input-synaptics-1.2.0.ebuild:
+  x86 stable, bug 294958
+
+  10 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  xf86-input-synaptics-1.2.0.ebuild:
+  amd64 stable wrt #294958
+
+  12 Oct 2009; Rémi Cardona <remi@gentoo.org>
+  xf86-input-synaptics-1.2.0.ebuild:
+  complete overhaul, sync with x11 overlay
+
+  11 Oct 2009; nixnut <nixnut@gentoo.org> xf86-input-synaptics-1.1.3.ebuild:
+  ppc stable #282290
+
+*xf86-input-synaptics-1.2.0 (10 Oct 2009)
+
+  10 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xf86-input-synaptics-1.1.2.ebuild, +xf86-input-synaptics-1.2.0.ebuild:
+  Version bump. Remove obsolete.
+
+  05 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
+  xf86-input-synaptics-1.1.3.ebuild:
+  x86 stable, bug 282290
+
+  30 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
+  xf86-input-synaptics-1.1.3.ebuild:
+  amd64 stable wrt #282290
+
+  16 Sep 2009; Rémi Cardona <remi@gentoo.org>
+  xf86-input-synaptics-1.0.0.ebuild, xf86-input-synaptics-1.1.2.ebuild,
+  xf86-input-synaptics-1.1.3.ebuild, -files/rc.conf, -files/rc.init:
+  punt syndaemon init script (see bug #37767)
+
+*xf86-input-synaptics-1.1.3 (03 Aug 2009)
+
+  03 Aug 2009; Rémi Cardona <remi@gentoo.org>
+  +xf86-input-synaptics-1.1.3.ebuild:
+  bump to 1.1.3
+
+  02 Jun 2009; Rémi Cardona <remi@gentoo.org> metadata.xml:
+  changing herd metadata from x11-drivers to x11
+
+*xf86-input-synaptics-1.1.2 (01 Jun 2009)
+
+  01 Jun 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +xf86-input-synaptics-1.1.2.ebuild, metadata.xml:
+  Version bump, bug #270961.
+
+  05 Apr 2009; Markus Meier <maekke@gentoo.org>
+  xf86-input-synaptics-1.0.0.ebuild:
+  x86 stable, bug #251832
+
+  05 Apr 2009; Olivier Crête <tester@gentoo.org>
+  xf86-input-synaptics-1.0.0.ebuild:
+  Stable on amd64, bug #251832
+
+  03 Apr 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking xf86-input-synaptics-1.0.0 ppc64 stable for bug 251832
+
+  03 Apr 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking xf86-input-synaptics-1.0.0 ppc stable for bug 251832
+
+  20 Mar 2009; <chainsaw@gentoo.org> -files/0.99.2-fdi-comments.patch,
+  -files/synaptics-fix-xinerama.patch,
+  -xf86-input-synaptics-0.15.2-r2.ebuild,
+  -xf86-input-synaptics-0.99.1.ebuild, -xf86-input-synaptics-0.99.2.ebuild,
+  -xf86-input-synaptics-0.99.2-r1.ebuild,
+  -xf86-input-synaptics-0.99.3.ebuild,
+  -xf86-input-synaptics-0.99.3-r1.ebuild, xf86-input-synaptics-1.0.0.ebuild:
+  Phrasing of the HAL FDI instructions was awkward, now clarified so user
+  changes are not lost. Closes bug #258293 by Scott Stubbs. Remove
+  overelaborate INPUT_EVDEV kernel check and just add an elog instead,
+  closes bug #262000 by cyrillic <cyrilmaley@hotmail.com>. Removed old
+  ebuilds.
+
+*xf86-input-synaptics-1.0.0 (03 Feb 2009)
+
+  03 Feb 2009; <chainsaw@gentoo.org> +xf86-input-synaptics-1.0.0.ebuild:
+  Version bump, comments patch was merged upstream. With thanks to Donnie
+  Berkholz <dberkholz@gentoo.org> for forwarding the release announcement.
+
+*xf86-input-synaptics-0.99.3-r1 (05 Jan 2009)
+
+  05 Jan 2009; <chainsaw@gentoo.org> +xf86-input-synaptics-0.99.3-r1.ebuild:
+  Reintroduce hal USE-flag by request of Ryan Tandy <tarpman@gmail.com>.
+  This makes sense now that ABI=0 X servers are supported. Closes bug
+  #253872.
+
+  04 Jan 2009; <chainsaw@gentoo.org> xf86-input-synaptics-0.99.3.ebuild:
+  Remove the HAL USE-flag more thoroughly, as requested by Mr_Bones.
+
+*xf86-input-synaptics-0.99.3 (18 Dec 2008)
+
+  18 Dec 2008; <chainsaw@gentoo.org> +xf86-input-synaptics-0.99.3.ebuild:
+  Version bump, adds support for input ABI 0 (older X servers), which users
+  apparently expect. Closes bug #250112 filed by Chris Slycord
+  <cslycord@gmail.com>. With thanks to Donnie Berkholz
+  <dberkholz@gentoo.org> for forwarding the release announcement.
+
+*xf86-input-synaptics-0.99.2-r1 (09 Dec 2008)
+
+  09 Dec 2008; <chainsaw@gentoo.org> +files/0.99.2-fdi-comments.patch,
+  +xf86-input-synaptics-0.99.2-r1.ebuild:
+  More helpful FDI file comments by Bernard Cafarelli <voyageur@gentoo.org>
+  so users can modify the FDI file easier. Removed the HAL USE-flag,
+  upstream behaviour changes mean you need it now. Added messages to that
+  effect. Revision bumped.
+
+*xf86-input-synaptics-0.99.2 (04 Dec 2008)
+
+  04 Dec 2008; <chainsaw@gentoo.org> +xf86-input-synaptics-0.99.2.ebuild:
+  Release candidate 2 for the 1.0 release. Improved tap processing, ignores
+  moves reported without a finger down. Simplified FDI matches on
+  input.touchpad instead of on specific product names. With thanks to Donnie
+  Berkholz <dberkholz@gentoo.org> for forwarding the announcement.
+
+*xf86-input-synaptics-0.99.1 (15 Nov 2008)
+
+  15 Nov 2008; <chainsaw@gentoo.org> +xf86-input-synaptics-0.99.1.ebuild:
+  First release candidate for the 1.0 release. With thanks to Donnie
+  Berkholz for alerting me of the release.
+
+*xf86-input-synaptics-0.15.2-r2 (16 Sep 2008)
+
+  16 Sep 2008; <chainsaw@gentoo.org> -files/11-x11-synaptics.fdi,
+  -xf86-input-synaptics-0.15.2-r1.ebuild,
+  +xf86-input-synaptics-0.15.2-r2.ebuild:
+  Apparently using autotools correctly is hard. Reinstate the previous
+  install hack as regenerating the configure script would take longer than
+  the compile itself. Closes bug #237620 by Alexey Charkov
+  <alchark@gmail.com>.
+
+*xf86-input-synaptics-0.15.2-r1 (12 Sep 2008)
+
+  12 Sep 2008; <chainsaw@gentoo.org> -files/synaptics-fix-explosion.patch,
+  -files/synaptics-xorg-version.patch,
+  -xf86-input-synaptics-0.15.1-r1.ebuild,
+  -xf86-input-synaptics-0.15.2.ebuild,
+  +xf86-input-synaptics-0.15.2-r1.ebuild:
+  Install upstream FDI file instead of trying to overwrite it with our own.
+  Upstream has added more data to the file then our copy ever had. Delete
+  older ebuilds.
+
+*xf86-input-synaptics-0.15.2 (11 Sep 2008)
+
+  11 Sep 2008; <chainsaw@gentoo.org> -xf86-input-synaptics-0.15.0-r1.ebuild,
+  -xf86-input-synaptics-0.15.1.ebuild, +xf86-input-synaptics-0.15.2.ebuild:
+  Version bump, as requested by papillon81 on IRC. Deleted old ebuilds.
+
+*xf86-input-synaptics-0.15.1-r1 (10 Sep 2008)
+
+  10 Sep 2008; <chainsaw@gentoo.org> +files/synaptics-fix-explosion.patch,
+  +xf86-input-synaptics-0.15.1-r1.ebuild:
+  Add explosion avoidance to the driver, upstream patch found by Kamil
+  Kamiński <kamil@mrblur.net>. Closes bug #237074.
+
+  08 Sep 2008; Joseph Jezak <josejx@gentoo.org>
+  xf86-input-synaptics-0.15.1.ebuild:
+  Marked ~ppc for bug #235464.
+
+*xf86-input-synaptics-0.15.1 (08 Sep 2008)
+
+  08 Sep 2008; <chainsaw@gentoo.org> +xf86-input-synaptics-0.15.1.ebuild:
+  Version bump, closes bug #237034 by Kamil Kamiński <kamil@mrblur.net>.
+  X.Org version patch was applied upstream.
+
+  24 Aug 2008; Markus Rothe <corsair@gentoo.org>
+  xf86-input-synaptics-0.15.0-r1.ebuild:
+  Added ~ppc64; bug #235464
+
+  23 Aug 2008; Markus Meier <maekke@gentoo.org>
+  xf86-input-synaptics-0.15.0-r1.ebuild:
+  add ~x86, bug #235464
+
+*xf86-input-synaptics-0.15.0-r1 (23 Aug 2008)
+
+  23 Aug 2008; <chainsaw@gentoo.org> +files/synaptics-xorg-version.patch,
+  -xf86-input-synaptics-0.15.0.ebuild,
+  +xf86-input-synaptics-0.15.0-r1.ebuild:
+  Patch out a reference to XF86_CURRENT_VERSION which recently disappeared
+  in upstream X.Org git and block against the older synaptics ebuild. Both
+  thanks to papillon81 on IRC.
+
+  22 Aug 2008; <chainsaw@gentoo.org> files/11-x11-synaptics.fdi:
+  Have FDI file also trigger for appletouch devices, from upstream commit
+  http://cgit.freedesktop.org/xorg/driver/xf86-input-synaptics/diff/?id=a4a8
+  e89a27f24f9c4012c2e28850f108fec7a8fd. As pointed out by papillon81 on IRC.
+  Can go in without revbump, only applies to PowerPC for which this ebuild
+  has not been keyworded yet.
+
+  22 Aug 2008; <chainsaw@gentoo.org> xf86-input-synaptics-0.15.0.ebuild:
+  Update HOMEPAGE to cgit (from gitweb) by request of Donnie Berkholz
+  <dberkholz@gentoo.org>.
+
+*xf86-input-synaptics-0.15.0 (22 Aug 2008)
+
+  22 Aug 2008; <chainsaw@gentoo.org> +files/11-x11-synaptics.fdi,
+  +files/rc.conf, +files/rc.init, +files/synaptics-fix-xinerama.patch,
+  +metadata.xml, +xf86-input-synaptics-0.15.0.ebuild:
+  Initial commit, ebuild patching and suggestions by Nirbheek Chauhan
+  <nirbheek.chauhan@gmail.com>, closes bug #234794 by Christian Loosli
+  <fuchs@fuchsnet.ch>.
+

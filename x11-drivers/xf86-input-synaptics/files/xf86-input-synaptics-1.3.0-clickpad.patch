@@ -1,0 +1,125 @@
+diff -urN xf86-input-synaptics-1.3.0-orig/src/eventcomm.c xf86-input-synaptics-1.3.0/src/eventcomm.c
+--- xf86-input-synaptics-1.3.0-orig/src/eventcomm.c	2010-08-17 09:33:41.000000000 +0800
++++ xf86-input-synaptics-1.3.0/src/eventcomm.c	2010-09-28 16:18:54.000000000 +0800
+@@ -258,6 +258,13 @@
+ 	   strcat(buf, " double");
+ 	if ((priv->has_triple = (TEST_BIT(BTN_TOOL_TRIPLETAP, keybits) != 0)))
+ 	   strcat(buf, " triple");
++	
++	/* clickpad device reports only the single left button mask */
++	if (priv->has_left && !priv->has_right && !priv->has_middle) {
++	    priv->is_clickpad = TRUE;
++	    xf86Msg(X_INFO, "%s: is Clickpad device\n", local->name);
++  }
++
+ 
+ 	if ((TEST_BIT(BTN_0, keybits) != 0) ||
+ 	    (TEST_BIT(BTN_1, keybits) != 0) ||
+diff -urN xf86-input-synaptics-1.3.0-orig/src/synaptics.c xf86-input-synaptics-1.3.0/src/synaptics.c
+--- xf86-input-synaptics-1.3.0-orig/src/synaptics.c	2010-08-20 09:11:24.000000000 +0800
++++ xf86-input-synaptics-1.3.0/src/synaptics.c	2010-09-28 16:16:12.000000000 +0800
+@@ -506,6 +506,18 @@
+         vertResolution = priv->resy;
+     }
+ 
++    /* Clickpad mode -- bottom area is used as buttons */
++    if (priv->is_clickpad) {
++	int button_bottom;
++	/* Clickpad devices usually the button area at the bottom, and
++	 * its size seems ca. 20% of the touchpad height no matter how
++	 * large the pad is.
++	 */ 
++	button_bottom = priv->maxy - (abs(priv->maxy - priv->miny) * 20) / 100; 
++	if (button_bottom < b && button_bottom >= t)
++	    b = button_bottom;
++    }
++
+     /* set the parameters */
+     pars->left_edge = xf86SetIntOption(opts, "LeftEdge", l);
+     pars->right_edge = xf86SetIntOption(opts, "RightEdge", r);
+@@ -2153,6 +2165,59 @@
+     }
+ }
+ 
++/* clickpad event handling */
++static void
++handle_clickpad(LocalDevicePtr local, struct SynapticsHwState *hw, edge_type edge)
++{
++    SynapticsPrivate *priv = (SynapticsPrivate *) (local->private);
++    SynapticsParameters *para = &priv->synpara;
++
++    if (edge & BOTTOM_EDGE) {
++	/* button area */
++	int width = priv->maxx - priv->minx;
++	int left_button_x, right_button_x;
++
++	/* left and right clickpad button ranges;
++	 * the gap between them is interpreted as a middle-button click
++	 */
++	left_button_x = width * 2/ 5 + priv->minx;
++	right_button_x = width * 3 / 5 + priv->minx;
++
++	/* clickpad reports only one button, and we need
++	 * to fake left/right buttons depending on the touch position
++	 */
++	if (hw->left) { /* clicked? */
++	    hw->left = 0;
++	    if (hw->x < left_button_x)
++		hw->left = 1;
++	    else if (hw->x > right_button_x)
++		hw->right = 1;
++	    else
++		hw->middle = 1;
++	}
++
++	/* Don't move pointer position in the button area during clicked,
++	 * except for horiz/vert scrolling is enabled.
++	 *
++	 * The synaptics driver tends to be pretty sensitive.  This hack
++	 * is to avoid that the pointer moves slightly and misses the
++	 * poistion you aimed to click.
++	 *
++	 * Also, when the pointer movement is reported, the dragging
++	 * (with a sort of multi-touching) doesn't work well, too.
++	 */
++	if (hw->left || !(para->scroll_edge_horiz ||
++			  ((edge & RIGHT_EDGE) && para->scroll_edge_vert)))
++	    hw->z = 0; /* don't move pointer */
++
++    } else if (hw->left) {
++	/* dragging */
++	hw->left = priv->prev_hw.left;
++	hw->right = priv->prev_hw.right;
++	hw->middle = priv->prev_hw.middle;
++    }
++    priv->prev_hw = *hw;
++}
+ 
+ /* Update the hardware state in shared memory. This is read-only these days,
+  * nothing in the driver reads back from SHM. SHM configuration is a thing of the past.
+@@ -2226,6 +2291,12 @@
+     SynapticsPrivate *priv = (SynapticsPrivate *) (local->private);
+     SynapticsParameters *para = &priv->synpara;
+ 
++    edge_type edge = edge_detection(priv, hw->x, hw->y);
++
++    /* Clickpad handling for button area */
++    if (priv->is_clickpad)
++	handle_clickpad(local, hw, edge);
++
+     /* Treat the first two multi buttons as up/down for now. */
+     hw->up |= hw->multi[0];
+     hw->down |= hw->multi[1];
+diff -urN xf86-input-synaptics-1.3.0-orig/src/synapticsstr.h xf86-input-synaptics-1.3.0/src/synapticsstr.h
+--- xf86-input-synaptics-1.3.0-orig/src/synapticsstr.h	2010-08-20 09:11:04.000000000 +0800
++++ xf86-input-synaptics-1.3.0/src/synapticsstr.h	2010-09-28 16:00:53.000000000 +0800
+@@ -235,6 +235,9 @@
+     Bool has_pressure;			/* device reports pressure */
+     Bool has_width;			/* device reports finger width */
+     Bool has_scrollbuttons;		/* device has physical scrollbuttons */
++    Bool is_clickpad;			/* is Clickpad device (one-button) */
++    struct SynapticsHwState prev_hw;	/* previous h/w state (for clickpad) */
++
+ 
+     enum TouchpadModel model;          /* The detected model */
+ } SynapticsPrivate;
