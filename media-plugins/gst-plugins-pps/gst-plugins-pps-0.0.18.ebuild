@@ -22,7 +22,6 @@ RDEPEND="
 	media-libs/gstreamer:0.10
 	media-libs/gst-plugins-base:0.10"
 DEPEND="${RDEPEND}
-	dev-util/cvs
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
