@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-DESCRIPTION="A makefile generation tool"
-HOMEPAGE="http://premake.berlios.de/"
+DESCRIPTION="A build script generator"
+HOMEPAGE="http://premake.sourceforge.net/"
 SRC_URI="mirror://sourceforge/premake/${PN}-src-${PV}.zip"
 
 LICENSE="GPL-2"
