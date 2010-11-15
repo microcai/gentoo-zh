@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/cairo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  15 Nov 2010; Coderoar <coderoar@gmail.com> -cairo-1.4.12.ebuild,
+  -cairo-1.4.14.ebuild, -cairo-1.6.4.ebuild, -cairo-1.6.4-r1.ebuild,
+  -cairo-1.8.0.ebuild, -cairo-1.8.4-r1.ebuild:
+  remove obsolete
 
   12 Jun 2009; Yu Yuwei <acevery@gmail.com> cairo-1.4.12.ebuild,
   cairo-1.4.14.ebuild, cairo-1.6.4.ebuild, cairo-1.6.4-r1.ebuild,
