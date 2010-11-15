@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  15 Nov 2010; Coderoar <coderoar@gmail.com> -freetype-2.3.6-r1.ebuild,
+  -freetype-2.3.7-r1.ebuild, -freetype-2.3.8.ebuild:
+  remove obsolete
 
   18 May 2009; Yu Yuwei <acevery@gmail.com>
   +files/freetype-2.2.1-memcpy-fix.patch,
