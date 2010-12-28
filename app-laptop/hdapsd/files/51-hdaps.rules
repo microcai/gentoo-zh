@@ -1,1 +1,0 @@
-KERNEL=="event[0-9]*", ATTRS{phys}=="hdaps/input1",ATTRS{modalias}=="input:b0019v1014p5054e4801-*",SYMLINK+="input/hdaps/accelerometer-event"
