@@ -1,0 +1,59 @@
+--- fcitx-scm/configure.in.orig	2010-11-25 20:58:07.200563002 +0800
++++ fcitx-scm/configure.in	2010-11-25 20:59:05.905562999 +0800
+@@ -31,11 +31,9 @@
+ case "$host" in
+     *-*-*freebsd*)
+     HOST_LIBS="-lexecinfo -pthread"
+-    md5prog=gmd5sum
+     ;;
+     *-*-linux*)
+     HOST_LIBS="-ldl -lpthread"
+-    md5prog=md5sum
+     ;;
+ esac
+ 
+@@ -53,14 +51,8 @@
+     AC_MSG_ERROR([You need to install tar])
+ fi
+ 
+-AC_PATH_PROGS(MD5SUM, $md5prog, no)
+-if test "x$MD5SUM" = "xno";
+-then
+-    AC_MSG_ERROR([You need to install md5sum])
+-fi
+ AC_SUBST(WGET)
+ AC_SUBST(TAR)
+-AC_SUBST(MD5SUM)
+ 
+ # x11
+ AC_PATH_X
+--- fcitx-scm/data/Makefile.am.orig	2010-11-25 20:58:16.863563002 +0800
++++ fcitx-scm/data/Makefile.am	2010-11-25 20:59:36.921563002 +0800
+@@ -41,12 +41,10 @@
+ 	$(MAKE) -C ../tools
+ 
+ $(pyorg_data): $(py_tar)
+-	cd $(srcdir) && $(MD5SUM) -c $(py_tar).md5 || ( $(RM) $(py_tar); exit 1 )
+ 	cd $(srcdir) && $(TAR) xzmvf $(py_tar)
+ 
+ $(py_tar):
+ 	$(WGET) -O $(py_tar) $(py_url)
+-	$(WGET) -O $(py_tar).md5 $(py_url).md5
+ 
+ all-local: tools  $(py_data) @srcdir@/desc.po
+ 	rm -f pyERROR
+--- fcitx-scm/data/table/Makefile.am.orig	2010-11-25 20:58:21.660563000 +0800
++++ fcitx-scm/data/table/Makefile.am	2010-11-25 20:59:58.673563004 +0800
+@@ -50,12 +50,10 @@
+ $(txt_m_data): @srcdir@/cj.txt ;
+ 
+ @srcdir@/cj.txt: $(table_tar)
+-	cd $(srcdir) && $(MD5SUM) -c $(table_tar).md5 || ( $(RM) $(table_tar); exit 1)
+ 	cd $(srcdir) && $(TAR) xzmvf $(table_tar)
+ 
+ $(table_tar):
+ 	$(WGET) -O $(table_tar) $(table_url)
+-	$(WGET) -O $(table_tar).md5 $(table_url).md5
+ 
+ all-local: tools $(txt_data) $(mb_data)
+ 

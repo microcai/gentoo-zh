@@ -4,3 +4,7 @@
 =media-libs/freetype-2.3.9-r1
 =x11-libs/cairo-1.8.6-r1
 =x11-libs/libXft-2.1.14
+
+# Hong Hao <oahong@gmail.com> (28 Dec 2010)
+# Use eapi 4, needs portage 2.2.0
+~app-i18n/fcitx-9999
