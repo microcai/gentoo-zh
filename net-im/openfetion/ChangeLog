@@ -1,0 +1,10 @@
+# ChangeLog for net-im/openfetion
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*openfetion-2.1.0 (30 Dec 2010)
+
+  30 Dec 2010; Hong Hao <oahong@gmail.com> -openfetion-1.7-r1.ebuild,
+  -openfetion-1.8.ebuild, +openfetion-2.1.0.ebuild, -files:
+  ÖØÐ´ fetion 2.1.0 ebuild
+
