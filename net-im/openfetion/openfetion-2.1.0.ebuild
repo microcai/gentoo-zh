@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -8,7 +8,7 @@ MY_PNV=${PN}-all-${PV}
 CMAKE_MIN_VERSION="2.8"
 inherit cmake-utils
 
-DESCRIPTION="A GTK IM client using CHINA MOBILE's Fetion Protocol 4"
+DESCRIPTION="Free and open source implemention of Fetion protocol library and client"
 HOMEPAGE="http://code.google.com/p/ofetion"
 SRC_URI="http://ofetion.googlecode.com/files/${MY_PNV}.tar.gz"
 
@@ -30,16 +30,17 @@ RDEPEND="dev-db/sqlite:3
 		dev-libs/dbus-glib
 	)
 	xscreensaver? ( x11-libs/libXScrnSaver )"
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
 RESTRICT="mirror"
 S=${WORKDIR}/${MY_PNV}
 DOCS=( AUTHORS README ChangeLog )
+PATCHES=( "${FILESDIR}"/${PN}-fix-hardcode.patch )
 
 src_configure() {
-	mycmakeargs=(
+	local mycmakeargs=(
 		$(cmake-utils_use_with gstreamer GSTREAMER )
 		$(cmake-utils_use_with libnotify LIBNOTIFY )
 		$(cmake-utils_use_with networkmanager NETWORKMANAGER )
