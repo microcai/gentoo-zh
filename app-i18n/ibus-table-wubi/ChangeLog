@@ -1,8 +1,0 @@
-# ChangeLog for app-i18n/ibus-table-wubi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  05 Dec 2008; Yu Yuwei <acevery@gmail.com> +ibus-table-wubi-9999.ebuild,
-  +metadata.xml:
-  added into overlay
-
