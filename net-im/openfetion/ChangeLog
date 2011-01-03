@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*openfetion-9999 (03 Jan 2011)
+
+  03 Jan 2011; Hong Hao <oahong@gmail.com> +openfetion-9999.ebuild:
+  应上游(casparant)要求添加 live ebuild,拆分客户端和library
+
   01 Jan 2011; Hong Hao <oahong@gmail.com> openfetion-2.1.0.ebuild,
   +files/openfetion-fix-hardcode.patch:
   修正issue 100
