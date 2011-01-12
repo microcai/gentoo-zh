@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -22,8 +22,7 @@ RDEPEND="dev-db/sqlite:3
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/scons
-	nls? ( sys-devel/gettext )
-	xim? ( x11-proto/xproto )"
+	nls? ( sys-devel/gettext )"
 
 _scons_do() {
 	if [ "${1}" == "compile" ]; then
