@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  16 Jan 2011; Caspar Zhang <casparant@gmail.com> +metadata.xml:
+  net-im/cliofetion: updated 2.1.0 version
+
 *cliofetion-9999 (03 Jan 2011)
 
   03 Jan 2011; Hong Hao <oahong@gmail.com> +cliofetion-9999.ebuild:
