@@ -5,13 +5,11 @@
 EAPI="3"
 
 CMAKE_MIN_VERSION="2.6"
-EHG_PROJECT="openfetion"
-EHG_REPO_URI="https://ofetion.googlecode.com/hg"
-inherit cmake-utils mercurial
+inherit cmake-utils
 
 DESCRIPTION="A command-line version of openfetion"
 HOMEPAGE="http://code.google.com/p/ofetion"
-SRC_URI=""
+SRC_URI="http://ofetion.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,12 +20,4 @@ RDEPEND="~net-im/libofetion-${PV}"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-S=${WORKDIR}/${PN}
 DOCS=( AUTHORS README ChangeLog )
-
-src_unpack() {
-	# workaround
-	# http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/eclass/mercurial.eclass?revision=1.15&view=markup
-	local S=${WORKDIR}
-	mercurial_src_unpack
-}
