@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/e-file
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  09 Feb 2011; bones7456 <bones7456@gmail.com> -e-file-20081125.ebuild,
+  -e-file-20081201.ebuild, +e-file-20110209.ebuild:
+  e-file update to 20110209
 
   30 Dec 2008; bones7456 <bones7456@gmail.com> +e-file-20081230.ebuild:
   e-file update to 20081230
