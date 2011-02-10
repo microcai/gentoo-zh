@@ -7,7 +7,8 @@ inherit eutils
 
 DESCRIPTION="fast FrameBuffer based TERMinal emulator for Linux"
 HOMEPAGE="http://fbterm.googlecode.com"
-SRC_URI="http://fbterm.googlecode.com/files/${P}.tar.gz"
+#SRC_URI="http://fbterm.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://fbterm.googlecode.com/files/${P}.0.tar.gz" # workaround naming
 
 LICENSE="GPL-2"
 SLOT="0"
