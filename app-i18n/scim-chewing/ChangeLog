@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/darts
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 2000-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /home/cvsroot/ebuildteam/app-i18n/scim-chewing/ChangeLog,v 1.6 2006/05/15 08:26:21 palatis Exp $
+
+  02 Mar 2011; scsi <scsichen@gmail.com> +scim-chewing-0.3.4.ebuild:
+  version bump
 
   16 Jul 2009; scsi <scsichen@gmail.com> scim-chewing-0.3.3.ebuild:
   use mutil SRC_URI because main uri often fail
