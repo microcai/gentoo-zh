@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.11 2008/08/11 13:03:14 yngwin Exp $
 
+  02 Mar 2011; scsi <scsichen@gmail.com> +qt-gui-4.7.2.ebuild:
+  version bump
+
   11 Jan 2011; scsi <scsichen@gmail.com> +files/synthetic-bold-4_7_1.diff,
   +qt-gui-4.7.1-r1.ebuild, +files/add-missing-style-scsi-4_7_1.diff:
   fix bold issus
