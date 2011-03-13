@@ -1,0 +1,7 @@
+# ChangeLog for x11-plugins/pidgin-openfetion
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  11 Mar 2011; Havanna Sha <havanna.sha@gmail.com>
+  +Manifest, +metadata.xml, +pidgin-qq-9999.ebuild:
+  first commit of x11-plugins/pidgin-qq, version 9999
