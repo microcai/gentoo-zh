@@ -11,7 +11,7 @@ HOMEPAGE="http://libqq-pidgin.googlecode.com"
 SRC_URI=""
 ESVN_REPO_URI="${HOMEPAGE}/svn/trunk/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
