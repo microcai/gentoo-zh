@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-encryption/pidgin-qq-9999.ebuild $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-qq/pidgin-qq-9999.ebuild $
 
 EAPI="2"
 
