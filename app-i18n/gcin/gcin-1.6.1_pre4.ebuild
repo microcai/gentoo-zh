@@ -7,8 +7,8 @@ inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Another Traditional Chinese IM."
 HOMEPAGE="http://www.csie.nctu.edu.tw/~cp76/gcin/ http://cle.linux.org.tw/trac/wiki/GcinGirlForNoBopomofo"
-SRC_URI="http://cle.linux.org.tw/gcin/download/${P/_/.}.tar.bz2
-	chinese-sound? ( http://cle.linux.org.tw/gcin/download/ogg.tgz )"
+SRC_URI="http://www.csie.nctu.edu.tw/~cp76/gcin/download/${P/_/.}.tar.bz2
+	chinese-sound? ( http://www.csie.nctu.edu.tw/~cp76/gcin/download/ogg.tgz )"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
