@@ -24,3 +24,18 @@ DEPEND="${RDEPEND}
 	sys-apps/util-linux
 	"
 
+src_compile() {
+	emake CC="$(tc-getCC)" || die "emake failed"
+}
+
+src_install () {
+	einstall PREFIX="${D}" STRIP="true" || die "einstall failed"
+
+	newinitd "${FILESDIR}"/${PN}-init.d ${PN}
+	newconfd "${FILESDIR}"/${PN}-conf.d ${PN}
+}
+
+pkg_postinst() {
+	elog "Please correct the external interface in the top of the two"
+	elog "scripts in /etc/miniupnpd and edit the config file in there too"
+}
