@@ -6,10 +6,11 @@ EAPI="3"
 
 inherit cmake-utils
 
-MY_PN="pidgin-ofetion"
+MY_PN="${PN/openfetion/ofetion}"
+MY_P="${MY_PN}-${PV}"
 DESCRIPTION="A fetion plugin for fetion using libofetion"
 HOMEPAGE="http://code.google.com/p/ofetion/"
-SRC_URI="http://ofetion.googlecode.com/files/${MY_PN}-${PV}.tar.gz"
+SRC_URI="http://ofetion.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,6 +23,8 @@ DEPEND="dev-libs/libxml2
 RDEPEND="${DEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
+
+S=${WORKDIR}/${MY_P}
 
 src_configure() {
 	mycmakeargs=(
