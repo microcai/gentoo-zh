@@ -9,7 +9,7 @@ MY_P="${P/tool/Tool}"
 
 DESCRIPTION="jToolkit is a Python web application framework built on modpython and Apache"
 HOMEPAGE="http://jtoolkit.sourceforge.net/"
-SRC_URI="http://jtoolkit.sourceforge.net/snapshot/${MY_P}/${MY_P}.tar.gz"
+SRC_URI="http://jtoolkit.sourceforge.net/snapshots/${MY_P}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
