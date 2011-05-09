@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 May 2011; Caspar Zhang <casparant@gmail.com> +openfetion-2.2.1.ebuild:
+  update to version 2.2.1
+
   16 Jan 2011; Caspar Zhang <casparant@gmail.com>
   +openfetion-2.1.0-r1.ebuild, +files/openfetion-2.1.0-r1-fix-version.patch,
   openfetion-9999.ebuild, +metadata.xml:
