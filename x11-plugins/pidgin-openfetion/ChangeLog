@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 May 2011; Caspar Zhang <casparant@gmail.com>
+  +pidgin-openfetion-0.2.ebuild:
+  update to version 0.2
+
   16 Jan 2011; Caspar Zhang <casparant@gmail.com>
   +pidgin-openfetion-0.1.ebuild, +pidgin-openfetion-9999.ebuild,
   +metadata.xml:
