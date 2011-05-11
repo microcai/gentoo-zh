@@ -1,7 +1,9 @@
 # ChangeLog for app-dicts/stardict
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.34 2007/03/26 06:49:29 kevquinn Exp $
-
+  11 May 2011; microcai <microcaicai@gmail.com>
+  add stardict-3.0.2 ebuild
+  
   17 Apr 2009; Yu Yuwei <acevery@gmail.com> -stardict-3.0.1-r4.ebuild,
   +stardict-3.0.1-r5.ebuild:
   add dev-libs/libsigc++ as dependency
@@ -63,13 +65,13 @@
 
 *stardict-2.4.6-r1 (20 Jan 2006)
 
-  20 Jan 2006; Harald van Dĳk <truedfx@gentoo.org> -stardict-2.4.6.ebuild,
+  20 Jan 2006; Harald van D某k <truedfx@gentoo.org> -stardict-2.4.6.ebuild,
   +stardict-2.4.6-r1.ebuild:
   Upstream re-released 2.4.6.
 
 *stardict-2.4.6 (19 Jan 2006)
 
-  19 Jan 2006; Harald van Dĳk <truedfx@gentoo.org> +stardict-2.4.6.ebuild:
+  19 Jan 2006; Harald van D某k <truedfx@gentoo.org> +stardict-2.4.6.ebuild:
   Version bump, making a bunch of GNOME deps optional
 
   19 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> stardict-2.4.2.ebuild:

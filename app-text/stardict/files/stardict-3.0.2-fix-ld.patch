@@ -1,0 +1,25 @@
+From f966ea7af08a2dcae6b21514f4b21159aab9f317 Mon Sep 17 00:00:00 2001
+From: microcai <microcai@fedoraproject.org>
+Date: Wed, 11 May 2011 21:06:51 +0800
+Subject: [PATCH] b
+
+---
+ tests/Makefile.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/tests/Makefile.in b/tests/Makefile.in
+index b4ef85c..598559f 100644
+--- a/tests/Makefile.in
++++ b/tests/Makefile.in
+@@ -359,7 +359,7 @@ t_xml_SOURCES = t_xml.cpp
+ t_res_database_SOURCES = t_res_database.cpp
+ t_res_database_DEPENDENCIES = $(top_builddir)/src/lib/libstardict.a
+ LDADD = @STARDICT_LIBS@ $(top_builddir)/src/lib/libstardict.a \
+-	$(LOCAL_SIGCPP_LIBFILE)
++	$(LOCAL_SIGCPP_LIBFILE) @STARDICT_LIBS@
+ 
+ AM_CPPFLAGS = @STARDICT_CFLAGS@ $(LOCAL_SIGCPP_INCLUDE) -I$(top_builddir) \
+ 	-I$(top_srcdir) -I$(top_srcdir)/src -I$(top_srcdir)/src/lib
+-- 
+1.7.5.rc3
+
