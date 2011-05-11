@@ -67,8 +67,8 @@ src_install(){
 
 	cd ../zinnia-tomoe-0.6.0-20080911
 
-	install handwriting-ja.model ${D}/usr/share/ibus-handwrite/data/ || die
-	install handwriting-zh_CN.model ${D}/usr/share/ibus-handwrite/data/ || die
+	einstall handwriting-ja.model ${D}/usr/share/ibus-handwrite/data/ || die
+	einstall handwriting-zh_CN.model ${D}/usr/share/ibus-handwrite/data/ || die
 
 	fi
 
