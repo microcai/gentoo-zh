@@ -1,6 +1,8 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+  11 May 2011; 菜菜 <microcaicai@gmail.com> ibus-9999.ebuild, metadata.xml:
+  add use flag gtk3 and introspection 
 
   28 Jun 2010; Yuwei Yu <acevery@gmail.com> ibus-9999.ebuild, metadata.xml:
   update ebuild for trunk

@@ -16,7 +16,7 @@ SRC_URI=""
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
-IUSE="doc nls gtk gtk3 gconf +python vala +X"
+IUSE="doc nls gtk gtk3 gconf +python vala +X +introspection"
 
 RDEPEND=">=dev-libs/glib-2.18
 	gconf? ( >=gnome-base/gconf-2.12.0 )
