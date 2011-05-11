@@ -58,6 +58,8 @@ src_prepare(){
 		$(use_enable spell)
 		$(use_enable gucharmap)
 		$(use_enable espeak espeak)
+		$(use_enable gpe gpe-support)
+
 		--disable-festival
 		--disable-espeak
 		--disable-advertisement
