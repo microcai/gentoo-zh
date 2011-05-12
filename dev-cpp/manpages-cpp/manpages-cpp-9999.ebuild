@@ -25,5 +25,6 @@ RDEPEND=""
 PYTHON_MODNAME="cppman"
 
 src_prepare() {
-sed -i -e 's/^cat.*/man "$1"/' lib/viewer.sh || die "sed failed"
+	sed -i -e "/'share\/doc'/d" setup.py || die "sed failed"
+	sed -i -e 's/^cat.*/man "$1"/' lib/viewer.sh || die "sed failed"
 }
