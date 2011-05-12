@@ -1,12 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header:$
+EAPI="3"
 
-inherit flag-o-matic
+inherit flag-o-matic googlecode
 
 DESCRIPTION="Red Gaint (RuiJie) EAP-MD5 authentication client in Linux"
-HOMEPAGE="http://code.google.com/p/xmuruijie"
-SRC_URI="http://xmuruijie.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
