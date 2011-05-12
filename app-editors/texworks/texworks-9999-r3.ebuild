@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
+EAPI="3"
+
 inherit eutils subversion
 
 DESCRIPTION="An environment for authoring TeX (LaTeX, ConTeXt, etc) documentsfor casual and non-technical users."
@@ -17,8 +19,7 @@ KEYWORDS=""
 IUSE=""
 
 RDEPEND=">=x11-libs/qt-core-4.5.0
-	 >=virtual/poppler-0.10.6
-	 >=virtual/poppler-qt4-0.10.6
+	 >=app-text/poppler-0.10.6[qt4]
 	 >=app-text/hunspell-1.2.2"
 
 src_compile() {
