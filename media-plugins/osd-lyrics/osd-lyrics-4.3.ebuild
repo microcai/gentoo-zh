@@ -18,13 +18,7 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0"
-
-if [ "${PV##*.}" = "9999" ]; then
-	KEYWORDS=""
-else
-	KEYWORDS="~amd64 ~x86"
-fi
-
+KEYWORDS="~amd64 ~x86"
 IUSE="mpd xmms2"
 
 RDEPEND="
