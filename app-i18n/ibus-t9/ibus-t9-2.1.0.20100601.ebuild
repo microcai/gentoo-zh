@@ -4,32 +4,29 @@
 
 EAPI="3"
 
-inherit eutils autotools
+inherit eutils autotools googlecode
+
+if [ "${PV##*.}" = "9999" ]; then
+	inherit git
+fi
 
 DESCRIPTION="T9 input engine using ibus"
-HOMEPAGE="http://code.google.com/p/${PN}"
 EGIT_REPO_URI="git://github.com/microcai/${PN}.git"
-
 SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="x86 amd64"
-IUSE="+nls"
+
 
 RDEPEND="
 	>=app-i18n/ibus-1.2
-	nls? ( virtual/libintl )
+	 virtual/libintl 
 	"
-
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	nls? ( >=sys-devel/gettext-0.16.1 )"
-
-src_install(){
-	emake install DESTDIR=${D} || die
-}
+	 >=sys-devel/gettext-0.16.1 "
 
 
 
