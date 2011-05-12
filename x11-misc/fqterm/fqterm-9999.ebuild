@@ -34,5 +34,5 @@ src_unpack() {
 src_install() {
 	cmake-utils_src_install
 	insinto /usr/share/FQTerm
-	doins "${S}"/QQWry.Dat || die
+	doins "${S}"/../QQWry.Dat || die
 }
