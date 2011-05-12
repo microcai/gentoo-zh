@@ -28,7 +28,12 @@ HOMEPAGE="http://${PN}.googlecode.com"
 fi
 
 ESVN_REPO_URI="${HOMEPAGE}/svn/trunk/"
+
+if [ "${TAR_SUFFIX}" = "" ] ; then
 SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
+else
+SRC_URI="http://${PN}.googlecode.com/files/${P}.${TAR_SUFFIX}"
+fi
 
 
 googlecode_src_install(){

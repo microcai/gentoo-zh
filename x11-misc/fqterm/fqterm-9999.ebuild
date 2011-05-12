@@ -2,20 +2,18 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI="3"
 
-inherit cmake-utils subversion
+inherit cmake-utils googlecode
 
 ESVN_PATCHES="${P}-as-needed.patch"
-ESVN_REPO_URI="http://fqterm.googlecode.com/svn/trunk"
 
 DESCRIPTION="a modern terminal emulator for Linux"
-HOMEPAGE="http://fqterm.googlecode.com"
 SRC_URI="${HOMEPAGE}/files/QQWry.Dat.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="

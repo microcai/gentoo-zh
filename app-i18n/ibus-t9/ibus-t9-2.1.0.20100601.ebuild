@@ -4,6 +4,8 @@
 
 EAPI="3"
 
+TAR_SUFFIX="tar.gz"
+
 inherit eutils autotools googlecode
 
 if [ "${PV##*.}" = "9999" ]; then
@@ -12,7 +14,6 @@ fi
 
 DESCRIPTION="T9 input engine using ibus"
 EGIT_REPO_URI="git://github.com/microcai/${PN}.git"
-SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL"
 SLOT="0"
