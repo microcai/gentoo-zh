@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI="3"
 
 inherit gnome2-utils mono eutils
 
@@ -18,6 +18,7 @@ IUSE=""
 
 # keep the same dependence as gnome-do
 RDEPEND=">=dev-lang/mono-2.0
+	<dev-lang/mono-2.8
 	>=dev-dotnet/gconf-sharp-2.24.0
 	>=dev-dotnet/gtk-sharp-2.12.6
 	>=dev-dotnet/glade-sharp-2.12.6
