@@ -11,6 +11,10 @@
 
 inherit eutils autotools
 
+if [ "${PV##*.}" = "9999" ]; then
+	inherit subversion
+fi
+
 case "${EAPI:-0}" in
 	3|4)
 		EXPORT_FUNCTIONS src_install
