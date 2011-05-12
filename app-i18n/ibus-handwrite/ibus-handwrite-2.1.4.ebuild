@@ -7,22 +7,24 @@ EAPI="3"
 inherit eutils autotools
 
 DESCRIPTION="hand write recognition/input using ibus IM engine"
-HOMEPAGE="http://code.google.com/p/ibus-handwrite/"
+HOMEPAGE="http://code.google.com/p/${PN}/"
 EGIT_REPO_URI="git://github.com/microcai/${PN}.git"
 
 SRC_URI="
-	http://ibus-handwrite.googlecode.com/files/${P}.tar.bz2
+	http://${PN}.googlecode.com/files/${P}.tar.bz2
 	zinnia? ( mirror://sourceforge/zinnia/zinnia-tomoe/0.6.0-20080911/zinnia-tomoe-0.6.0-20080911.tar.bz2 )"
 
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="+zinnia +nls"
+IUSE="+zinnia +nls +opengl"
 
 RDEPEND="
 	>=app-i18n/ibus-1.2
 	nls? ( virtual/libintl )
-	zinnia? ( app-i18n/zinnia )"
+	zinnia? ( app-i18n/zinnia )
+	opengl? ( >=x11-libs/gtkglext-1.0 )
+	"
 
 
 DEPEND="${RDEPEND}
