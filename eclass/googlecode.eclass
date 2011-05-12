@@ -23,8 +23,10 @@ case "${EAPI:-0}" in
 esac
 
 
-
+if [ "$HOMEPAGE" = "" ]; then
 HOMEPAGE="http://${PN}.googlecode.com"
+fi
+
 ESVN_REPO_URI="${HOMEPAGE}/svn/trunk/"
 SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
 
