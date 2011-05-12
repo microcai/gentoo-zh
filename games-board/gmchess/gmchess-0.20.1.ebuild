@@ -10,11 +10,15 @@ SRC_URI="http://gmchess.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="nls"
 RESTRICT="mirror"
 
-DEPEND="dev-cpp/gtkmm"
+DEPEND="
+dev-cpp/gtkmm
+dev-cpp/libglademm
+
+"
 RDEPEND="${DEPEND}"
 
 src_compile() {
