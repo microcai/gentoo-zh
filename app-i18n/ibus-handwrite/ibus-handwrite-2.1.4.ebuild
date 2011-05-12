@@ -4,14 +4,12 @@
 
 EAPI="3"
 
-inherit eutils autotools
+inherit eutils autotools googlecode
 
 DESCRIPTION="hand write recognition/input using ibus IM engine"
-HOMEPAGE="http://code.google.com/p/${PN}/"
 EGIT_REPO_URI="git://github.com/microcai/${PN}.git"
 
-SRC_URI="
-	http://${PN}.googlecode.com/files/${P}.tar.bz2
+SRC_URI="$SRC_URI
 	zinnia? ( mirror://sourceforge/zinnia/zinnia-tomoe/0.6.0-20080911/zinnia-tomoe-0.6.0-20080911.tar.bz2 )"
 
 LICENSE="GPL"
@@ -63,14 +61,15 @@ src_compile(){
 }
 
 src_install(){
-	emake install DESTDIR=${D} || die
+
+	googlecode_src_install
 
 	if use zinnia ; then
 
 	cd ../zinnia-tomoe-0.6.0-20080911
 
-	einstall handwriting-ja.model ${D}/usr/share/ibus-handwrite/data/ || die
-	einstall handwriting-zh_CN.model ${D}/usr/share/ibus-handwrite/data/ || die
+	install handwriting-ja.model ${D}/usr/share/ibus-handwrite/data/ || die
+	install handwriting-zh_CN.model ${D}/usr/share/ibus-handwrite/data/ || die
 
 	fi
 
