@@ -20,7 +20,6 @@ DEPEND=""
 RDEPEND="
 	amd64? (
 		app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-compat
 		app-emulation/emul-linux-x86-gtklibs )
 	x86? ( >=x11-libs/gtk+-2 )"
 
