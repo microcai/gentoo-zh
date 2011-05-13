@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/stardict
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.34 2007/03/26 06:49:29 kevquinn Exp $
+  13 May 2011; microcai <microcaicai@gmail.com>
+  remove all old ebuild
+
   11 May 2011; microcai <microcaicai@gmail.com>
   add stardict-3.0.2 ebuild
   
