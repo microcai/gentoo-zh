@@ -24,7 +24,7 @@ is_cross \
 	&& SLOT="${CTARGET}" \
 	|| SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
-IUSE="expat multitarget nls python test vanilla"
+IUSE="expat multitarget nls python heap-command test vanilla"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2
 	sys-libs/readline
@@ -38,7 +38,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${FILESDIR}/${PN}-heap-command.patch
+	use heap-command && epatch ${FILESDIR}/${PN}-heap-command.patch
 	use vanilla || [[ -n ${PATCH_VER} ]] && EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
 	strip-linguas -u bfd/po opcodes/po
 }
