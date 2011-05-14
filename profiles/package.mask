@@ -3,3 +3,7 @@
 ~app-i18n/fcitx-9999
 
 <=media-video/realplayer-10.0.9
+
+
+# mask for removal
+=x11-libs/pango-1.22.3-r1
