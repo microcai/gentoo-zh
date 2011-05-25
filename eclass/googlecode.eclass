@@ -11,8 +11,19 @@
 
 inherit eutils autotools
 
+if [ "$HOMEPAGE" = "" ]; then
+HOMEPAGE="http://${PN}.googlecode.com"
+fi
+
 if [ "${PV##*.}" = "9999" ]; then
 	inherit subversion
+ESVN_REPO_URI="${HOMEPAGE}/svn/trunk/"
+else
+	if [ "${TAR_SUFFIX}" = "" ] ; then
+		SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
+	else
+	SRC_URI="http://${PN}.googlecode.com/files/${P}.${TAR_SUFFIX}"
+	fi
 fi
 
 case "${EAPI:-0}" in
@@ -21,20 +32,6 @@ case "${EAPI:-0}" in
 		;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
-
-
-if [ "$HOMEPAGE" = "" ]; then
-HOMEPAGE="http://${PN}.googlecode.com"
-fi
-
-ESVN_REPO_URI="${HOMEPAGE}/svn/trunk/"
-
-if [ "${TAR_SUFFIX}" = "" ] ; then
-SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
-else
-SRC_URI="http://${PN}.googlecode.com/files/${P}.${TAR_SUFFIX}"
-fi
-
 
 googlecode_src_install(){
 	emake install DESTDIR=${D} || die
