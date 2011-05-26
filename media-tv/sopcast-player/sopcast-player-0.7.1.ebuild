@@ -18,14 +18,13 @@ IUSE=""
 
 S=${WORKDIR}/${PN}
 
-RDEPEND="dev-python/pygtk
+DEPEND="dev-lang/python[sqlite]
+	sys-devel/gettext"
+RDEPEND="${DEPEND}
+	dev-python/pygtk
 	dev-python/pygobject
 	media-tv/sopcast-bin
-	=media-video/vlc-1.1*
-	sys-devel/gettext"
-
-DEPEND="${REPEND}
-	dev-lang/python[sqlite]"
+	=media-video/vlc-1.1*"
 
 src_install() {
 	emake DESTDIR=${D} install \
