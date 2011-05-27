@@ -1,0 +1,22 @@
+x11-libs/gtk+ dev-util/pkgconfig dev-util/intltool || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 >=sys-devel/libtool-2.2.6b
+x11-libs/gtk+
+0
+http://jpegserv.com/linux/obmixer/obmixer-0.11.tar.bz2
+
+http://jpegserv.com/obmixer
+GPL-3
+A GTK mixer applet for window managers.
+~amd64 ~x86
+autotools eutils libtool multilib portability toolchain-funcs
+
+
+
+
+2
+
+install postinst prepare
+
+
+
+
+

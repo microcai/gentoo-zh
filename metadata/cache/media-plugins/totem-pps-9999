@@ -1,0 +1,22 @@
+dev-python/beautifulsoup media-plugins/gst-plugins-pps media-video/totem[python] >=dev-util/intltool-0.40.0 sys-devel/gettext || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 >=sys-devel/libtool-2.2.6b >=dev-vcs/git-1.6
+dev-python/beautifulsoup media-plugins/gst-plugins-pps media-video/totem[python]
+0
+
+
+http://cgit.freedesktop.org/~jinghua/totem-pps
+LGPL-2
+PPStream browser for totem
+
+autotools base eutils git libtool multilib portability toolchain-funcs
+
+
+
+
+2
+
+compile configure install prepare unpack
+
+
+
+
+

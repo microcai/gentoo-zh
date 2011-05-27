@@ -1,0 +1,22 @@
+dev-libs/dbus-glib gnome-base/libglade net-misc/curl x11-libs/gtk+ mpd? ( media-libs/libmpd ) xmms2? ( media-sound/xmms2 )
+dev-libs/dbus-glib gnome-base/libglade net-misc/curl x11-libs/gtk+ mpd? ( media-libs/libmpd ) xmms2? ( media-sound/xmms2 )
+0
+http://osd-lyrics.googlecode.com/files/osdlyrics-0.3.20100211.tar.gz
+mirror
+http://code.google.com/p/osd-lyrics/
+GPL-3
+An OSD lyric show supporting multiple media players and downloading.
+~amd64 ~x86
+eutils multilib portability toolchain-funcs versionator
+mpd xmms2
+
+
+
+2
+
+configure install
+
+
+
+
+

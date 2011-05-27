@@ -1,0 +1,22 @@
+media-libs/fontconfig x11-libs/cairo[X] x11-libs/libX11 x11-libs/libXrender dbus? ( sys-apps/dbus ) pango? ( x11-libs/pango ) dev-util/intltool dev-util/pkgconfig sys-devel/gettext x11-proto/xproto || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 >=sys-devel/libtool-2.2.6b dev-vcs/mercurial
+media-libs/fontconfig x11-libs/cairo[X] x11-libs/libX11 x11-libs/libXrender dbus? ( sys-apps/dbus ) pango? ( x11-libs/pango )
+0
+http://fcitx.googlecode.com/files/pinyin.tar.gz http://fcitx.googlecode.com/files/table.tar.gz
+mirror
+http://fcitx.googlecode.com
+GPL-2
+Free Chinese Input Toy for X. Another Chinese XIM Input Method
+
+autotools eutils libtool mercurial multilib portability toolchain-funcs
+dbus debug +pango
+
+
+
+4
+
+configure prepare unpack
+
+
+
+
+

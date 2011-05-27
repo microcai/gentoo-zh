@@ -1,0 +1,22 @@
+
+virtual/man
+0
+http://egentoo.googlecode.com/svn/trunk/shuge-utils/man-pages-portage-zh_CN-20090826.tar.gz
+
+http://code.google.com/p/egentoo
+FDL-1.2
+Portage English-Chinese Bilingual Manual Page
+alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86
+
+
+
+
+
+
+
+compile install postinst unpack
+
+
+
+
+

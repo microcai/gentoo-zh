@@ -1,0 +1,22 @@
+|| ( >=app-text/texlive-2008[xetex] ( >=dev-texlive/texlive-xetex-2008 >=dev-texlive/texlive-fontsrecommended-2008 virtual/latex-base ) >=app-text/xetex-0.997 ) >=sys-apps/texinfo-4.2-r5
+|| ( >=app-text/texlive-2008[xetex] ( >=dev-texlive/texlive-xetex-2008 >=dev-texlive/texlive-fontsrecommended-2008 virtual/latex-base ) >=app-text/xetex-0.997 )
+0
+http://zhspacing.googlecode.com/files/zhspacing080102.tar.bz2 -> zhspacing-080102.tar.bz2 http://zhspacing.googlecode.com/files/zhs-man071211.pdf
+mirror
+http://code.google.com/p/zhspacing/
+LGPL-3
+zhspacing fine-tunes several details in typesetting Chinese using XeTeX and XeLaTeX
+~x86 ~amd64 ~ppc
+base eutils multilib portability toolchain-funcs xetex-package
+
+
+
+
+2
+
+compile configure install postinst postrm prepare unpack
+
+
+
+
+

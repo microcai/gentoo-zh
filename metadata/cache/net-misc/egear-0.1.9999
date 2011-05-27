@@ -1,0 +1,22 @@
+dev-libs/openssl net-misc/curl =dev-lang/python-2.5* || ( ( x11-libs/qt-core x11-libs/qt-gui ) ( >=x11-libs/qt-4.3 ) ) dev-vcs/subversion net-misc/rsync
+dev-libs/openssl net-misc/curl =dev-lang/python-2.5* || ( ( x11-libs/qt-core x11-libs/qt-gui ) ( >=x11-libs/qt-4.3 ) )
+0
+
+primaryuri
+egear.googlecode.com
+GPL-3
+eGear, a download tool written in QT4
+
+base eutils multilib portability qt4 subversion toolchain-funcs versionator
+
+
+
+
+
+
+compile install preinst setup unpack
+
+
+
+
+

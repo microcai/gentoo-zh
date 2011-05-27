@@ -1,0 +1,22 @@
+X? ( x11-libs/libXmu x11-libs/libXp x11-libs/libXpm x11-libs/libICE x11-libs/libSM x11-libs/libXaw x11-libs/libXfont ) !app-text/ptex !app-text/tetex !<app-text/texlive-2007 xetex? ( !app-text/xetex ) !dev-tex/xmltex !dev-tex/vntex sys-libs/zlib >=media-libs/libpng-1.2.1 =media-libs/freetype-2* media-libs/fontconfig sys-apps/ed sys-devel/flex app-arch/unzip || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 >=sys-devel/libtool-2.2.6b
+X? ( x11-libs/libXmu x11-libs/libXp x11-libs/libXpm x11-libs/libICE x11-libs/libSM x11-libs/libXaw x11-libs/libXfont ) !app-text/ptex !app-text/tetex !<app-text/texlive-2007 xetex? ( !app-text/xetex ) !dev-tex/xmltex !dev-tex/vntex sys-libs/zlib >=media-libs/libpng-1.2.1 =media-libs/freetype-2* media-libs/fontconfig
+0
+mirror://gentoo/texlive-core-2007.tar.bz2 mirror://gentoo/texlive-module-bin-bibtex-2007.zip mirror://gentoo/texlive-module-bin-dvipsk-2007.zip mirror://gentoo/texlive-module-bin-etex-2007.zip mirror://gentoo/texlive-module-bin-getnonfreefonts-2007.zip mirror://gentoo/texlive-module-bin-gsftopk-2007.zip mirror://gentoo/texlive-module-bin-kpathsea-2007.zip mirror://gentoo/texlive-module-bin-makeindex-2007.zip mirror://gentoo/texlive-module-bin-metafont-2007.zip mirror://gentoo/texlive-module-bin-mfware-2007.zip mirror://gentoo/texlive-module-bin-pdftex-2007.zip mirror://gentoo/texlive-module-bin-tetex-2007.zip mirror://gentoo/texlive-module-bin-tex-2007.zip mirror://gentoo/texlive-module-bin-texconfig-2007.zip mirror://gentoo/texlive-module-lib-regex-2007.zip mirror://gentoo/texlive-module-lib-zlib-2007.zip mirror://gentoo/texlive-module-bin-afm2pl-2007.zip mirror://gentoo/texlive-module-bin-fontware-2007.zip mirror://gentoo/texlive-module-bin-ps2pkm-2007.zip mirror://gentoo/texlive-module-fontinst-2007.zip mirror://gentoo/texlive-module-mft-2007.zip mirror://gentoo/texlive-module-bin-bibtex8-2007.zip mirror://gentoo/texlive-module-bin-chktex-2007.zip mirror://gentoo/texlive-module-bin-ctie-2007.zip mirror://gentoo/texlive-module-bin-cweb-2007.zip mirror://gentoo/texlive-module-bin-dtl-2007.zip mirror://gentoo/texlive-module-bin-dvi2tty-2007.zip mirror://gentoo/texlive-module-bin-dvicopy-2007.zip mirror://gentoo/texlive-module-bin-dvidvi-2007.zip mirror://gentoo/texlive-module-bin-dviljk-2007.zip mirror://gentoo/texlive-module-bin-lacheck-2007.zip mirror://gentoo/texlive-module-bin-patgen-2007.zip mirror://gentoo/texlive-module-bin-pdftools-2007.zip mirror://gentoo/texlive-module-bin-seetexk-2007.zip mirror://gentoo/texlive-module-bin-texdoc-2007.zip mirror://gentoo/texlive-module-bin-texware-2007.zip mirror://gentoo/texlive-module-bin-thumbpdf-2007.zip mirror://gentoo/texlive-module-bin-tie-2007.zip mirror://gentoo/texlive-module-bin-tpic2pdftex-2007.zip mirror://gentoo/texlive-module-bin-vpe-2007.zip mirror://gentoo/texlive-module-bin-web-2007.zip mirror://gentoo/texlive-module-bin-xpdf-2007.zip mirror://gentoo/texlive-module-cweb-2007.zip mirror://gentoo/texlive-module-mkind-english-2007.zip mirror://gentoo/texlive-module-bin-aleph-2007.zip mirror://gentoo/texlive-module-bin-omega-2007.zip xetex? ( mirror://gentoo/texlive-module-bin-xetex-2007.zip ) mirror://gentoo/texlive-core-2007-updated-config.ps.bz2 mirror://gentoo/texlive-core-patches-6.tar.bz2 mirror://gentoo/texlive-core-2007-texmf.d-2.tar.bz2
+
+http://tug.org/texlive/
+GPL-2 LPPL-1.3c
+A complete TeX distribution
+~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+autotools eutils flag-o-matic libtool multilib portability texlive-common toolchain-funcs
+X doc xetex
+
+
+
+
+
+compile install postinst test unpack
+
+
+
+
+
