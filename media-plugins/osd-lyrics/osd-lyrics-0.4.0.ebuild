@@ -8,8 +8,12 @@ TAR_SUFFIX=tar.gz
 
 inherit eutils autotools googlecode versionator
 
+MY_PN=osdlyrics
+MY_P=${MY_PN}-${PV}
+S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="An OSD lyric show supporting multiple media players and downloading."
-SRC_URI="http://${PN}.googlecode.com/files/osdlyrics-${PV}.${TAR_SUFFIX}"
+SRC_URI="http://${PN}.googlecode.com/files/${MY_P}.${TAR_SUFFIX}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
