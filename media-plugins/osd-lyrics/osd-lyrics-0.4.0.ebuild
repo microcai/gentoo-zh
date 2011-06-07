@@ -2,16 +2,14 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI="3"
 
-inherit versionator
+TAR_SUFFIX=tar.gz
 
-MY_PN="${PN/-/}"
-MY_P="${MY_PN}-${PV}"
+inherit eutils autotools googlecode versionator
+
 DESCRIPTION="An OSD lyric show supporting multiple media players and downloading."
-HOMEPAGE="http://code.google.com/p/osd-lyrics/"
-SRC_URI="http://osd-lyrics.googlecode.com/files/${MY_P}.tar.gz"
-
+SRC_URI="http://${PN}.googlecode.com/files/osdlyrics-${PV}.${TAR_SUFFIX}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -25,9 +23,6 @@ RDEPEND="
 	mpd? ( media-libs/libmpd )
 	xmms2? ( media-sound/xmms2 )"
 DEPEND="${RDEPEND}"
-
-S=${WORKDIR}/${MY_P}
-RESTRICT="mirror"
 
 use_disable() {
 	use $1 || echo "--disable-$1"
