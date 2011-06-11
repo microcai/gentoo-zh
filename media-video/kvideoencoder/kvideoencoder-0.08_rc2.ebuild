@@ -2,8 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 #
 # ebuild v 1.02
-
-inherit kde versionator
+EAPI=3
+inherit kde4-base versionator
 
 MY_P="KVideoEncoder-"$(replace_version_separator 2 '')
 S=${WORKDIR}/${MY_P}
@@ -28,10 +28,14 @@ pkg_setup() {
 	fi
 }
 
-src_compile() {
+src_configure(){
 	# look for qmake at /usr/qt/3/bin/qmake first, in case more than one Qt is installed:
 	sed -i "s:qmake=\"\`which qmake\`\":qmake=\"\`which /usr/qt/3/bin/qmake\`\"; if [ \"\$qmake\" = \"\" ]; then qmake=\"\`which qmake\`\"; fi:" configure
 	./configure --prefix=/usr || die "configure failed"
+
+}
+
+src_compile() {
 	emake || die "emake failed"
 }
 
