@@ -1,0 +1,49 @@
+--- src/kernel/qapplication_x11.cpp.sav	2006-06-01 13:31:04.000000000 +0200
++++ src/kernel/qapplication_x11.cpp	2006-06-01 13:33:07.000000000 +0200
+@@ -271,6 +271,7 @@ Atom		qt_net_wm_frame_strut		= 0;	// KDE
+ Atom		qt_net_wm_state_stays_on_top	= 0;	// KDE extension
+ Atom		qt_net_wm_pid		= 0;
+ Atom		qt_net_wm_user_time	= 0;
++Atom            qt_net_wm_full_placement = 0; // KDE extension
+ // Enlightenment support
+ Atom		qt_enlightenment_desktop	= 0;
+ 
+@@ -1922,6 +1923,7 @@ void qt_init_internal( int *argcptr, cha
+ 			    &qt_net_wm_state_stays_on_top );
+ 	qt_x11_intern_atom( "_NET_WM_PID", &qt_net_wm_pid );
+ 	qt_x11_intern_atom( "_NET_WM_USER_TIME", &qt_net_wm_user_time );
++	qt_x11_intern_atom( "_NET_WM_FULL_PLACEMENT", &qt_net_wm_full_placement );
+ 	qt_x11_intern_atom( "ENLIGHTENMENT_DESKTOP", &qt_enlightenment_desktop );
+ 	qt_x11_intern_atom( "_NET_WM_NAME", &qt_net_wm_name );
+ 	qt_x11_intern_atom( "_NET_WM_ICON_NAME", &qt_net_wm_icon_name );
+--- src/dialogs/qdialog.cpp.sav	2006-03-17 14:33:44.000000000 +0100
++++ src/dialogs/qdialog.cpp	2006-06-01 13:38:00.000000000 +0200
+@@ -670,6 +670,11 @@ bool QDialog::event( QEvent *e )
+ 
+ #if defined(Q_WS_X11)
+ extern "C" { int XSetTransientForHint( Display *, unsigned long, unsigned long ); }
++#include <private/qt_x11_p.h>
++#undef FocusIn
++// defined in qapplication_x11.cpp
++extern Atom qt_net_wm_full_placement;
++extern bool qt_net_supports(Atom atom);
+ #endif // Q_WS_X11
+ 
+ /*!
+@@ -691,10 +696,12 @@ void QDialog::show()
+ 
+     if ( !did_resize )
+ 	adjustSize();
+-    if ( has_relpos && !did_move ) {
+-	adjustPositionInternal( parentWidget(), TRUE );
+-    } else if ( !did_move ) {
+-	adjustPositionInternal( parentWidget() );
++    if( !qt_net_supports( qt_net_wm_full_placement )) {
++	if ( has_relpos && !did_move ) {
++	    adjustPositionInternal( parentWidget(), TRUE );
++	} else if ( !did_move ) {
++	    adjustPositionInternal( parentWidget() );
++	}
+     }
+ 
+     if (windowState() != state)

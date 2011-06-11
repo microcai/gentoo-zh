@@ -1,0 +1,17 @@
+# ChangeLog for x11-libs/vte
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+
+  12 Jan 2009; scsi <scsichen@gmail.com> vte-0.16.14.ebuild:
+  add zh_TW in IUSE to fix missing iuse error
+
+  10 Jan 2009; scsi <scsichen@gmail.com> vte-0.16.13.ebuild,
+  vte-0.16.14.ebuild:
+  fix virtual/xft musked error
+
+  01 Aug 2008; Hydonsingore Cia <hydonsingore@educities.edu.tw>
+  +files/98_ambiguous_width.patch, vte-0.16.14.ebuild:
+  Add the CJK_WIDTH patch.
+
+  03 Jul 2008; Hydonsingore Cia <hydonsingore@educities.edu.tw> :
+  Branch started.
+  Add patch from Tetralet to allow input method startup keys.

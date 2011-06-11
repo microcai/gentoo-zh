@@ -1,0 +1,57 @@
+--- fontconfig/fontconfig/fontconfig.h.slighthint	Sun Aug 11 14:10:41 2002
++++ fontconfig/fontconfig/fontconfig.h	Mon Aug 12 16:23:51 2002
+@@ -55,6 +55,7 @@
+ #define FC_FOUNDRY	    "foundry"		/* String */
+ #define FC_ANTIALIAS	    "antialias"		/* Bool (depends) */
+ #define FC_HINTING	    "hinting"		/* Bool (true) */
++#define FC_HINT_STYLE	    "hintstyle"		/* Int */
+ #define FC_VERTICAL_LAYOUT  "verticallayout"	/* Bool (false) */
+ #define FC_AUTOHINT	    "autohint"		/* Bool (false) */
+ #define FC_GLOBAL_ADVANCE   "globaladvance"	/* Bool (true) */
+@@ -102,6 +103,12 @@
+ #define FC_RGBA_VRGB	    3
+ #define FC_RGBA_VBGR	    4
+ 
++/* hinting style */
++#define FC_HINT_NONE        0
++#define FC_HINT_SLIGHT      1
++#define FC_HINT_MEDIUM      2
++#define FC_HINT_FULL        3
++ 
+ typedef enum _FcType {
+     FcTypeVoid, 
+     FcTypeInteger, 
+--- fontconfig/src/fcdefault.c.slighthint	Tue Jul  9 18:08:14 2002
++++ fontconfig/src/fcdefault.c	Mon Aug 12 16:22:01 2002
+@@ -137,4 +137,9 @@
+ 		FcPatternAddString (pattern, FC_LANG, (FcChar8 *) lang);
+ 	}
+     }
++
++    if (FcPatternGet (pattern, FC_HINT_STYLE, 0, &v) == FcResultNoMatch)
++    {
++	FcPatternAddInteger (pattern, FC_HINT_STYLE, FC_HINT_FULL);
++    }
+ }
+--- fontconfig/src/fcname.c.slighthint	Sun Aug 11 14:10:42 2002
++++ fontconfig/src/fcname.c	Mon Aug 12 16:24:28 2002
+@@ -40,6 +40,7 @@
+     { FC_FOUNDRY,	FcTypeString, },
+ /*    { FC_CORE,		FcTypeBool, }, */
+     { FC_ANTIALIAS,	FcTypeBool, },
++    { FC_HINT_STYLE,    FcTypeInteger, },
+     { FC_HINTING,	FcTypeBool, },
+     { FC_VERTICAL_LAYOUT,   FcTypeBool, },
+     { FC_AUTOHINT,	FcTypeBool, },
+@@ -158,6 +158,11 @@
+     { (FcChar8 *) "vrgb",	    "rgba",	    FC_RGBA_VRGB },
+     { (FcChar8 *) "vbgr",	    "rgba",	    FC_RGBA_VBGR },
+     { (FcChar8 *) "none",	    "rgba",	    FC_RGBA_NONE },
++	
++    { (FcChar8 *) "hintnone",	    "hintstyle",   FC_HINT_NONE },
++    { (FcChar8 *) "hintslight",	    "hintstyle",   FC_HINT_SLIGHT },
++    { (FcChar8 *) "hintmedium",	    "hintstyle",   FC_HINT_MEDIUM },
++    { (FcChar8 *) "hintfull",	    "hintstyle",   FC_HINT_FULL },
+ };
+ 
+ #define NUM_FC_CONSTANTS   (sizeof _FcBaseConstants/sizeof _FcBaseConstants[0])

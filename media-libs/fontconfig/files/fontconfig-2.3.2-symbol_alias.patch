@@ -1,0 +1,22 @@
+--- fontconfig-2.3.2/fonts.conf.in	2005-04-03 23:07:50.000000000 +0200
++++ fontconfig-2.3.2/fonts.conf.in.new	2006-04-07 13:10:55.000000000 +0200
+@@ -311,6 +311,19 @@
+ 		</prefer>
+ 	</alias>
+ 
++<!--
++ Suitable free alias for Symbol font
++ -->
++
++	<alias>
++		<family>Symbol</family>
++		<accept><family>Standard Symbols L</family></accept>
++	</alias>
++	<alias>
++		<family>ZapfDingbats</family>
++		<accept><family>Dingbats</family></accept>
++	</alias>
++
+ <!-- 
+  Artificial oblique for fonts without an italic or oblique version
+  -->

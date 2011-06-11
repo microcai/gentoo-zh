@@ -1,0 +1,20 @@
+--- stardict-3.0.0/src/prefsdlg.cpp.orig	2007-08-14 02:22:40.000000000 +0800
++++ stardict-3.0.0/src/prefsdlg.cpp	2007-08-14 02:24:47.000000000 +0800
+@@ -726,7 +726,7 @@
+ 	GtkWidget *vbox1 = gtk_vbox_new(false, 6);
+ 	gtk_box_pack_start(GTK_BOX(vbox),vbox1,false,false, 0);
+ 
+-	GtkWidget *check_button;
++	GtkWidget *check_button, *label;
+ 	check_button = gtk_check_button_new_with_mnemonic(_("_Enable sound event."));
+ 	bool enable=
+ 		conf->get_bool_at("dictionary/enable_sound_event");
+@@ -748,7 +748,7 @@
+ 	gtk_box_pack_start(GTK_BOX(vbox1), hbox2, FALSE, FALSE, 0);
+ #endif
+ 
+-	GtkWidget *label = gtk_label_new(_("RealPeopleTTS search path:"));
++	label = gtk_label_new(_("RealPeopleTTS search path:"));
+ 	gtk_misc_set_alignment(GTK_MISC(label), 0, .5);
+ 	gtk_box_pack_start(GTK_BOX(vbox1),label,false,false,0);
+ 	tts_textview = gtk_text_view_new();

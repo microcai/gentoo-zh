@@ -1,0 +1,44 @@
+# ChangeLog for net-misc/pcmanx-gtk2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  04 Dec 2009; scsi <scsichen@gmail.com> +pcmanx-gtk2-0.3.9-r1.ebuild:
+  fix flag nsplugin error
+
+  28 Aug 2009; scsi <scsichen@gmail.com> pcmanx-gtk2-0.3.8-r2.ebuild:
+  fix the apply patch time
+
+  28 Aug 2009; scsi <scsichen@gmail.com> +pcmanx-gtk2-0.3.8-r2.ebuild,
+  +files/pcmanx-gtk2-0.3.8-xulrunner.patch:
+  add a patch to fix compiling error with xulrunner-1.9
+
+  15 Apr 2009; scsi <scsichen@gmail.com> pcmanx-gtk2-0.3.8-r1.ebuild:
+  fix regxpcom path
+
+  18 Aug 2008; scsi <scsichen@gmail.com> pcmanx-gtk2-0.3.8-r1.ebuild:
+  fix wrong keyword fireofx to firefox
+
+  13 Aug 2008; scsi <palatis@gmail.com> pcmanx-gtk2-0.3.8-r1.ebuild:
+  fix problems with USE="firefox". modify IUSE="-wget socks5".
+  "wget" new enabled by default, "socks5" for proxy support.
+
+  12 Aug 2008; scsi <scsichen@gmail.com> pcmanx-gtk2-0.3.8.ebuild:
+  fix patch error
+
+  11 Aug 2008; scsi <scsichen@gmail.com> +pcmanx-gtk2-0.3.8.ebuild:
+  version bump
+
+  03 Jan 2008; scsi <scsichen@gmail.com> pcmanx-gtk2-0.3.7.ebuild:
+  move install message from preinstall to postinstall
+
+  03 Jan 2008; scsi <scsichen@gmail.com>
+  +files/firefox-xpcom-fix-0.3.7.patch, +pcmanx-gtk2-0.3.7.ebuild:
+  version bump
+
+  12 Oct 2007; scsi <scsichen@gmail.com> pcmanx-gtk2-0.3.6.ebuild:
+  remove unnecessary depend
+
+  12 Oct 2007; scsi <scsichen@gmail.com> +metadata.xml,
+  pcmanx-gtk2-0.3.6.ebuild:
+  fix depend
+

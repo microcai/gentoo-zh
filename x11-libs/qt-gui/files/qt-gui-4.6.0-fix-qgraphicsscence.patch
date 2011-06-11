@@ -1,0 +1,40 @@
+From 705880f0045ac39140f980d69aec68869213e379 Mon Sep 17 00:00:00 2001
+From: Alexis Menard <alexis.menard@nokia.com>
+Date: Thu, 26 Nov 2009 13:47:34 +0100
+Subject: [PATCH] Fix a crash in KDE/Plasma with QGraphicsView. TopLevel list of items
+ was corrupted.
+
+This nasty bug was triggered when the index sort the top level list of
+items. We forgot to set the flag topLevelSequentialOrdering to false
+so when an item was removed from the top level list it was using the
+sibling index which can be not valid anymore since the list is not
+sorted by sequential order. So it let some dangling pointers in the
+list which make processDirtyItemRecursive crash the next paint event.
+
+Reviewed-by:bnilsen
+Reviewed-by:andreas
+---
+ src/gui/graphicsview/qgraphicsscene_p.h          |    3 +-
+ 2 files changed, 34 insertions(+), 1 deletions(-)
+
+diff --git a/src/gui/graphicsview/qgraphicsscene_p.h b/src/gui/graphicsview/qgraphicsscene_p.h
+index a1d0496..69e4d5b 100644
+--- a/src/gui/graphicsview/qgraphicsscene_p.h
++++ b/src/gui/graphicsview/qgraphicsscene_p.h
+@@ -78,7 +78,7 @@ class QGraphicsSceneIndex;
+ class QGraphicsView;
+ class QGraphicsWidget;
+ 
+-class QGraphicsScenePrivate : public QObjectPrivate
++class Q_AUTOTEST_EXPORT QGraphicsScenePrivate : public QObjectPrivate
+ {
+     Q_DECLARE_PUBLIC(QGraphicsScene)
+ public:
+@@ -265,6 +265,7 @@ public:
+     {
+         if (needSortTopLevelItems) {
+             qSort(topLevelItems.begin(), topLevelItems.end(), qt_notclosestLeaf);
++            topLevelSequentialOrdering = false;
+             needSortTopLevelItems = false;
+         }
+     }

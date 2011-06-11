@@ -1,0 +1,18 @@
+# ChangeLog for app-i18n/ucimf-openvanilla
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  26 Mar 2009; Hong Hao <oahong@gmail.com> +ucimf-openvanilla-2.10.5.ebuild:
+  Add ucimf-openvanilla-2.10.5
+
+  02 Mar 2009; Hong Hao <oahong@gmail.com> ucimf-openvanilla-2.10.4.ebuild,
+  ucimf-openvanilla-9999.ebuild:
+  openvanilla-modules is an alternative dependency.
+
+  01 Mar 2009; Hong Hao <oahong@gmail.com> +ucimf-openvanilla-2.10.4.ebuild:
+  Add ucimf-openvanilla-2.10.4.
+
+  01 Mar 2009; Hong Hao <oahong@gmail.com> +ucimf-openvanilla-9999.ebuild,
+  +metadata.xml:
+  Initial ucimf-openvanilla.
+

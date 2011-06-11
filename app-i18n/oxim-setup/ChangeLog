@@ -1,0 +1,14 @@
+# ChangeLog for app-i18n/oxim-setup
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  16 Apr 2010; scsi <scsichen@gmail.com> +oxim-setup-1.4.3.ebuild:
+  version bump
+
+  12 Nov 2009; scsi <scsichen@gmail.com> +oxim-setup-1.4.1.ebuild:
+  version bump
+
+  19 Oct 2009; scsi <scsichen@gmail.com> +oxim-setup-1.4.0.ebuild,
+  +metadata.xml:
+  version bump, but build failure, need fix
+

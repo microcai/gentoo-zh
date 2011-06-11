@@ -1,0 +1,14 @@
+# ChangeLog for app-misc/screen
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  10 Jan 2009; scsi <scsichen@gmail.com>
+  +files/screen-4.0.1-int-overflow-fix.patch,
+  +files/screen-4.0.1-vsprintf.patch, +screen-4.0.3.ebuild,
+  +files/screen-4.0.3-config.h-autoconf-2.62.patch,
+  +files/4.0.2-64bit-time.patch, +files/4.0.2-no-libelf.patch,
+  +files/4.0.2-no-pty.patch, +files/4.0.2-no-utempter.patch,
+  +files/4.0.2-nonblock.patch, +files/4.0.2-windowlist-multiuser-fix.patch,
+  -screen-4.0.3-r1.ebuild:
+  downgrade to official version number and add official patch
+

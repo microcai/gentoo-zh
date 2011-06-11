@@ -1,0 +1,41 @@
+# ChangeLog for app-i18n/libucimf
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  20 Apr 2009; Hong Hao <oahong@gmail.com> -libucimf-2.2.8.ebuild,
+  +libucimf-2.2.8-r1.ebuild, libucimf-9999.ebuild:
+  Fix missing dependency: dialog is required to run ucimf_start.
+
+  26 Mar 2009; Hong Hao <oahong@gmail.com> libucimf-2.2.8.ebuild,
+  libucimf-9999.ebuild:
+  Fix commit r186.
+
+  26 Mar 2009; Hong Hao <oahong@gmail.com> libucimf-2.2.8.ebuild,
+  libucimf-9999.ebuild:
+  Fix headers.
+
+  26 Mar 2009; Hong Hao <oahong@gmail.com> -libucimf-2.2.5.ebuild,
+  -libucimf-2.2.6.ebuild, -libucimf-2.2.7.ebuild, +libucimf-2.2.8.ebuild,
+  libucimf-9999.ebuild:
+  Version bump, Clean up old versions.
+
+  23 Mar 2009; Hong Hao <oahong@gmail.com> +libucimf-2.2.7.ebuild:
+  Add new upstream release 2.2.7.
+
+  02 Mar 2009; Hong Hao <oahong@gmail.com> +libucimf-2.2.6.ebuild:
+  Bump
+
+  02 Mar 2009; Hong Hao <oahong@gmail.com> libucimf-2.2.5.ebuild,
+  libucimf-9999.ebuild:
+  EAPI-2.
+
+  01 Mar 2009; Hong Hao <oahong@gmail.com> -libucimf-2.2.0.ebuild,
+  -libucimf-2.2.1.ebuild, -libucimf-2.2.3.ebuild, -libucimf-2.2.4.ebuild,
+  +libucimf-2.2.5.ebuild:
+  Version bump, nuke old. Introduce pkg_setup phase to ensure utmp group
+  exists before installing this package. Fix HOMEPAGE and ESVN_REPO_URI.
+
+  01 Mar 2009; Hong Hao <oahong@gmail.com> libucimf-9999.ebuild,
+  +metadata.xml:
+  Split up libucimf and ucimf-openvanilla
+

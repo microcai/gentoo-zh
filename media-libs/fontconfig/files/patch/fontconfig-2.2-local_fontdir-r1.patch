@@ -1,0 +1,14 @@
+diff -ur fontconfig-2.1.94/fonts.conf.in fontconfig-2.1.94.patched/fonts.conf.in
+--- fontconfig-2.1.94/fonts.conf.in	2003-04-16 23:57:38.000000000 +0200
++++ fontconfig-2.1.94.patched/fonts.conf.in	2003-04-18 02:59:54.000000000 +0200
+@@ -25,6 +25,10 @@
+ 
+ 	<dir>@FC_DEFAULT_FONTS@</dir>
+ 	@FC_FONTPATH@
++	<dir>/usr/share/fonts</dir>
++	<dir>/usr/local/share/fonts</dir>
++	<dir>/usr/X11R6/lib/X11/fonts/75dpi</dir>
++	<dir>/usr/X11R6/lib/X11/fonts/100dpi</dir>
+ 	<dir>~/.fonts</dir>
+ 
+ <!--

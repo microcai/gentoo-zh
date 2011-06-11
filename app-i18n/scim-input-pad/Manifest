@@ -1,0 +1,16 @@
+DIST scim-input-pad-0.1.0.tar.gz 542238
+DIST scim-input-pad-0.1.1.tar.gz 562010
+EBUILD scim-input-pad-0.1.0.ebuild 893 RMD160 5e34fe7c86110c313a8d0ed6feb6c3777bd8cbf6 SHA1 4cf4a7731c736baf0424cede8cfb075e414a64c1 SHA256 68e424d991ef623724f835cee800258854b64ef26e7315c363b2d9401426f729
+MD5 8d98c98863387e27081e1ac06fc3f66d scim-input-pad-0.1.0.ebuild 893
+RMD160 5e34fe7c86110c313a8d0ed6feb6c3777bd8cbf6 scim-input-pad-0.1.0.ebuild 893
+SHA256 68e424d991ef623724f835cee800258854b64ef26e7315c363b2d9401426f729 scim-input-pad-0.1.0.ebuild 893
+EBUILD scim-input-pad-0.1.1.ebuild 893 RMD160 dadb7f5df68e9b244bc3e76297d438ccd854ece3 SHA1 80578a8f846eb7b749fa2d1302ca698dab1d3cf2 SHA256 bfd4316656057e470e293957c44019750cb2b7a05bc21ca63a350a85d4b36a2d
+MD5 c14b02cb520d0533e3173e4b753bba01 scim-input-pad-0.1.1.ebuild 893
+RMD160 dadb7f5df68e9b244bc3e76297d438ccd854ece3 scim-input-pad-0.1.1.ebuild 893
+SHA256 bfd4316656057e470e293957c44019750cb2b7a05bc21ca63a350a85d4b36a2d scim-input-pad-0.1.1.ebuild 893
+MD5 d3fbfcd7e90f990b518ca23f8922a82a files/digest-scim-input-pad-0.1.0 72
+RMD160 5d90ec174c78b30f49e987e6cb4ada4da7cac6bc files/digest-scim-input-pad-0.1.0 72
+SHA256 5b44d8eb73e7735ddc0b680a41d5192aef448c87d4eba581ded90aef4cbe7b14 files/digest-scim-input-pad-0.1.0 72
+MD5 26b313ffc1c0e12a317d1d8b5856661d files/digest-scim-input-pad-0.1.1 72
+RMD160 e3890d21911f1341f4b7b824a3772445b8b28e1c files/digest-scim-input-pad-0.1.1 72
+SHA256 e21b5f1b06cc073cf7154f795b81a40f6d6d2f894fbd6dce606dc244d322b9e0 files/digest-scim-input-pad-0.1.1 72

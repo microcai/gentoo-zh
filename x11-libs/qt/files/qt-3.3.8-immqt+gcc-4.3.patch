@@ -1,0 +1,20 @@
+--- plugins/src/inputmethods/imsw-none/qnoneinputcontextplugin.cpp~	2007-04-05 09:47:44.000000000 +0000
++++ plugins/src/inputmethods/imsw-none/qnoneinputcontextplugin.cpp	2007-04-05 09:48:08.000000000 +0000
+@@ -44,6 +44,7 @@
+ #include "qnoneinputcontextplugin.h"
+ #include <qinputcontextfactory.h>
+ #include <qsettings.h>
++#include <cstdlib>
+ 
+ 
+ QNoneInputContextPlugin::QNoneInputContextPlugin()
+--- plugins/src/inputmethods/simple/qsimpleinputcontext.cpp~	2007-04-05 09:48:46.000000000 +0000
++++ plugins/src/inputmethods/simple/qsimpleinputcontext.cpp	2007-04-05 09:48:54.000000000 +0000
+@@ -45,6 +45,7 @@
+ #include <qnamespace.h>
+ #include <qevent.h>
+ #include <qglobal.h>
++#include <algorithm>
+ 
+ static const int ignoreKeys[] = {
+     Qt::Key_Shift,

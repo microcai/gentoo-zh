@@ -1,0 +1,2 @@
+portdbapi.auxdbmodule = portage_db_cdb.database
+eclass_cache.dbmodule = portage_db_cdb.database

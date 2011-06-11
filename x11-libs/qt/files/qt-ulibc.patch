@@ -1,0 +1,13 @@
+--- qt-x11-free-3.3.4.orig/src/tools/qlocale.cpp        2005-01-21 17:16:05.000000000 +0000
++++ qt-x11-free-3.3.4/src/tools/qlocale.cpp     2005-02-18 13:36:59.000000000 +0000
+@@ -55,6 +55,10 @@
+ #   undef INFINITY
+ #endif
+ 
++#if defined(Q_OS_LINUX) && defined(__UCLIBC__)
++#   undef Q_OS_LINUX
++#endif
++
+ #ifdef Q_OS_LINUX
+ #    include <fenv.h>
+ #endif

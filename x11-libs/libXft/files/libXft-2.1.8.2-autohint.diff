@@ -1,0 +1,11 @@
+--- libXft-2.1.8.2.orig/src/xftfreetype.c	2006-05-03 12:33:45.000000000 +0800
++++ libXft-2.1.8.2/src/xftfreetype.c	2006-05-03 12:39:12.000000000 +0800
+@@ -625,6 +625,8 @@ XftFontInfoFill (Display *dpy, _Xconst F
+ 
+     if (autohint)
+ 	fi->load_flags |= FT_LOAD_FORCE_AUTOHINT;
++    else
++    	fi->load_flags |= FT_LOAD_NO_AUTOHINT;
+ 
+     /* disable global advance width (for broken DynaLab TT CJK fonts) */
+     switch (FcPatternGetBool (pattern, FC_GLOBAL_ADVANCE, 0, &global_advance)) {

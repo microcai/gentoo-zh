@@ -1,0 +1,32 @@
+# ChangeLog for app-i18n/openvanilla-modules
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*openvanilla-modules-0.8.0.13 (17 Oct 2009)
+
+  17 Oct 2009; Hong Hao <oahong@gmail.com>
+  -openvanilla-modules-0.8.0.12.ebuild,
+  +openvanilla-modules-0.8.0.13.ebuild:
+  Version bump to 0.8.0.13, fix gcc 4.4 compilation.
+
+  07 Apr 2009; Hong Hao <oahong@gmail.com>
+  openvanilla-modules-0.8.0.9.ebuild:
+  Use *useq*. Fix inherit: autotools.eclass is not needed.
+
+  26 Mar 2009; Hong Hao <oahong@gmail.com>
+  +openvanilla-modules-0.8.0.9.ebuild:
+  Add openvanilla-modules 0.8.0.9
+
+  24 Mar 2009; Hong Hao <oahong@gmail.com>
+  -openvanilla-modules-0.8.0.5.ebuild, -openvanilla-modules-0.8.0.7.ebuild,
+  +openvanilla-modules-0.8.0.8.ebuild:
+  Version bump to latest release, remove old versions.
+
+  21 Mar 2009; Hong Hao <oahong@gmail.com> ++,
+  -openvanilla-modules-0.8.0.6.ebuild:
+  Version bump
+
+  02 Mar 2009; Hong Hao <oahong@gmail.com>
+  +openvanilla-modules-0.8.0.5.ebuild, +metadata.xml:
+  Initial ebuild.
+

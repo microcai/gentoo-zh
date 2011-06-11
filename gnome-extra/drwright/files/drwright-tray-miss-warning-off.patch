@@ -1,0 +1,19 @@
+diff -uNrp drwright-0.17.orig/src/main.c drwright-0.17/src/main.c
+--- drwright-0.17.orig/src/main.c	2003-06-14 01:32:52.000000000 +0800
++++ drwright-0.17/src/main.c	2003-10-25 00:16:42.000000000 +0800
+@@ -133,6 +133,7 @@ main (int argc, char *argv[])
+ 	}
+ 
+ 	if (!no_check && !have_tray ()) {
++/*
+ 		GtkWidget *dialog;
+ 
+ 		dialog = gtk_message_dialog_new (NULL, 0,
+@@ -146,6 +147,7 @@ main (int argc, char *argv[])
+ 		gtk_dialog_run (GTK_DIALOG (dialog));
+ 
+ 		gtk_widget_destroy (dialog);
++*/
+ 	}
+ 	
+ 	client = gnome_master_client ();

@@ -1,0 +1,12 @@
+diff -up ./src/mod_aux.c.chewing_zuin ./src/mod_aux.c
+--- ./src/mod_aux.c.chewing_zuin	2009-09-30 11:11:56.000000000 +1000
++++ ./src/mod_aux.c	2009-09-30 11:20:31.000000000 +1000
+@@ -90,7 +90,7 @@ CHEWING_API char *chewing_zuin_String( C
+ 		if ( ctx->output->zuinBuf[ i ].s[ 0 ] != '\0' ) {
+ 			strcat( s, (char *) (ctx->output->zuinBuf[ i ].s) );
+ 			if ( zuin_count )
+-				*zuin_count++;
++				(*zuin_count)++;
+ 		}
+ 	}
+ 	return s;

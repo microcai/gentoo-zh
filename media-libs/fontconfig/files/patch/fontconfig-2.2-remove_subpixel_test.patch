@@ -1,0 +1,13 @@
+diff -ur fontconfig-2.2.0/local.conf fontconfig-2.2.0.patched/local.conf
+--- fontconfig-2.2.0/local.conf	2003-04-04 22:17:40.000000000 +0200
++++ fontconfig-2.2.0.patched/local.conf	2003-05-14 18:48:16.000000000 +0200
+@@ -5,9 +5,6 @@
+ <!--
+   Enable sub-pixel rendering
+ 	<match target="font">
+-		<test qual="all" name="rgba">
+-			<const>unknown</const>
+-		</test>
+ 		<edit name="rgba" mode="assign"><const>rgb</const></edit>
+ 	</match>
+ -->
