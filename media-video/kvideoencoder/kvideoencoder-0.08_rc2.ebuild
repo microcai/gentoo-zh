@@ -28,11 +28,8 @@ pkg_setup() {
 	fi
 }
 
-src_configure(){
-	# look for qmake at /usr/qt/3/bin/qmake first, in case more than one Qt is installed:
+src_prepare(){
 	sed -i "s:qmake=\"\`which qmake\`\":qmake=\"\`which /usr/qt/3/bin/qmake\`\"; if [ \"\$qmake\" = \"\" ]; then qmake=\"\`which qmake\`\"; fi:" configure
-	./configure --prefix=/usr || die "configure failed"
-
 }
 
 src_compile() {
