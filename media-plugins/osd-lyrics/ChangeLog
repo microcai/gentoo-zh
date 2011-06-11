@@ -1,0 +1,29 @@
+# ChangeLog for media-plugins/osd-lyrics
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*osd-lyrics-osd-lyrics-0.4.0.ebuild (7 Jun 2011)
++osd-lyrics-osd-lyrics-0.4.0.ebuild
+-osd-lyrics-osd-lyrics-4.3.ebuild
+
+*osd-lyrics-9999 (12 May 2011)
+*osd-lyrics-osd-lyrics-4.3.ebuild (12 Sep 2011)
+  11 May 2011; mocrocai <microcaicai@gmail.com>
+   Change osd-lyrics-9999,
+  +osd-lyrics-osd-lyrics-4.3.ebuild
+   
+
+*osd-lyrics-0.2.20080828-r1 (04 May 2010)
+  04 May 2010; Coderoar <coderoar@gmail.com>
+  -osd-lyrics-0.2.20080828-r1.ebuild, -osd-lyrics-0.2.20091227.ebuild,
+  osd-lyrics-0.3.20100211.ebuild, osd-lyrics-9999.ebuild, metadata.xml:
+  fix use flag
+
+*osd-lyrics-9999 (12 Sep 2009)
+*osd-lyrics-0.2.20080828-r1 (12 Sep 2009)
+
+  12 Sep 2009; Coderoar <coderoar@gmail.com>
+  +osd-lyrics-0.2.20080828-r1.ebuild, +osd-lyrics-9999.ebuild,
+  +metadata.xml:
+  initial commit
+

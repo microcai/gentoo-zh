@@ -1,0 +1,8 @@
+# ChangeLog for dev-python/jtoolkit
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  05 Jan 2008; Zhang Le <r0bertz@gentoo.org> +metadata.xml,
+  +jtoolkit-0.7.8.ebuild:
+  initial commit of jtoolkit
+

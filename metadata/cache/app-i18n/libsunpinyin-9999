@@ -1,0 +1,22 @@
+dev-db/sqlite:3 dev-util/intltool dev-util/pkgconfig sys-devel/gettext >=dev-vcs/git-1.6 dev-util/scons
+dev-db/sqlite:3
+0
+http://sunpinyin.googlecode.com/files/lm_sc.t3g.arpa.tar.bz2 http://sunpinyin.googlecode.com/files/dict.utf8.tar.bz2
+
+http://www.sunpinyin.org
+CDDL LGPL-2.1
+A statistical language model based Chinese input method library
+
+eutils git multilib portability scons-utils toolchain-funcs
+
+
+
+
+3
+
+compile install prepare unpack
+
+
+
+
+

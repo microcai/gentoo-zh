@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>tex</herd>
+<maintainer>
+	<email>acevery@gmail.com</email>
+	<name>Yu Yuwei</name>
+</maintainer>
+<maintainer>
+	<email>gentoo-china@googlegroups.com</email>
+	<name>Gentoo China</name>
+	</maintainer>
+<longdescription>
+xeCJK is a package written for XeLaTeX which allows users to typeset
+CJK scripts easily.
+ - different default fonts for CJK and other characters;
+ - spaces automatically ignored between CJK characters;
+ - special effects on full-width CJK punctuation; and
+ - automatic adjustment of the space between CJK and other characters.
+</longdescription>
+</pkgmetadata>

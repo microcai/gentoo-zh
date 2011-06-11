@@ -1,0 +1,22 @@
+virtual/libc || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 >=sys-devel/libtool-2.2.6b dev-vcs/subversion net-misc/rsync
+virtual/libc
+0
+
+
+http://myqq3.googlecode.com
+GPL-3
+A portable open source qq CLI client
+~amd64 ~x86
+autotools eutils googlecode libtool multilib portability subversion toolchain-funcs
+
+
+
+
+3
+
+compile install preinst prepare unpack
+
+
+
+
+

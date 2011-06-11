@@ -1,0 +1,22 @@
+dev-db/sqlite:3 nls? ( virtual/libintl ) dev-util/pkgconfig dev-util/scons nls? ( sys-devel/gettext ) >=dev-vcs/git-1.6 >=app-admin/eselect-python-20091230
+dev-db/sqlite:3 nls? ( virtual/libintl ) >=app-admin/eselect-python-20091230
+0
+
+
+http://sunpinyin.org/
+LGPL-2.1 CDDL
+SunPinyin is a SLM (Statistical Language Model) based IME
+
+eutils git multilib portability python toolchain-funcs
+nls
+
+
+
+2
+
+compile install prepare unpack
+
+
+
+
+

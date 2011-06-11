@@ -1,0 +1,13 @@
+# ChangeLog for app-i18n/scim-googlepinyin
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+  12 may 2011; microcai <microcaicai@gmail.com>
+  add opengl use flag
+
+*ibus-handwrite-2.1.4 (11 May 2011)
+
+  11 May 2011; microcai <microcaicai@gmail.com> 
+  +ibus-handwrite-2.1.4.ebuild,
+  +metadata.xml:
+  initial commit
+

@@ -1,0 +1,11 @@
+--- player_all-bingo-beta-20040615/build/lib/sysinfo.py	2004-06-04 09:24:43.000000000 +0900
++++ player_all-bingo-beta-20040615_2/build/lib/sysinfo.py	2004-07-08 18:20:57.000000000 +0900
+@@ -818,7 +818,7 @@
+             set_platform('linux-2.0-libc6-i386')
+             return
+ 
+-        gcc_version=os.popen("gcc -v 2>&1 | sed -n 's/^gcc version //gp'").read()
++        gcc_version=os.popen("gcc -dumpversion").read()
+         gcc_version=string.strip(gcc_version)
+ 
+         if gcc_version[0] == "3":

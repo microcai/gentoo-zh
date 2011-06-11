@@ -1,0 +1,23 @@
+# ChangeLog for media-tv/gmlive-extra
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  03 Apr 2010; Coderoar <coderoar@gmail.com> gmlive-extra-0.3.ebuild:
+  sopcast binary MUST exeinto /opt to avoid revdep-rebuild check
+
+  28 Nov 2009; Coderoar <coderoar@gmail.com> -gmlive-extra-0.2-r1.ebuild,
+  gmlive-extra-0.3.ebuild, files/gmlive-extra-0.3.patch, metadata.xml:
+  fixed build error on amd64
+
+*gmlive-extra-0.2-r1 (22 Oct 2009)
+
+  22 Oct 2009; Coderoar <coderoar@gmail.com> -gmlive-extra-0.2.ebuild,
+  +gmlive-extra-0.2-r1.ebuild:
+  fixed wrong operation with symbolic link
+
+*gmlive-extra-0.2 (02 Sep 2009)
+
+  02 Sep 2009; Coderoar <coderoar@gmail.com> +gmlive-extra-0.2.ebuild,
+  +metadata.xml:
+  initial commit
+

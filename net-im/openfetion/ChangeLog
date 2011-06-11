@@ -1,0 +1,28 @@
+# ChangeLog for net-im/openfetion
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  09 May 2011; Caspar Zhang <casparant@gmail.com> +openfetion-2.2.1.ebuild:
+  update to version 2.2.1
+
+  16 Jan 2011; Caspar Zhang <casparant@gmail.com>
+  +openfetion-2.1.0-r1.ebuild, +files/openfetion-2.1.0-r1-fix-version.patch,
+  openfetion-9999.ebuild, +metadata.xml:
+  added net-im/openfetion-2.1.0-r1, it's a new version with library excluded.
+
+*openfetion-9999 (03 Jan 2011)
+
+  03 Jan 2011; Hong Hao <oahong@gmail.com> +openfetion-9999.ebuild:
+  应上游(casparant)要求添加 live ebuild,拆分客户端和library
+
+  01 Jan 2011; Hong Hao <oahong@gmail.com> openfetion-2.1.0.ebuild,
+  +files/openfetion-fix-hardcode.patch:
+  修正issue 100
+  感谢havanna.sha
+
+*openfetion-2.1.0 (30 Dec 2010)
+
+  30 Dec 2010; Hong Hao <oahong@gmail.com> -openfetion-1.7-r1.ebuild,
+  -openfetion-1.8.ebuild, +openfetion-2.1.0.ebuild, -files:
+  更新到 fetion 2.1.0 ebuild
+

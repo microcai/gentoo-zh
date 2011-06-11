@@ -1,0 +1,187 @@
+Index: itcl/itcl/Makefile.in
+===================================================================
+RCS file: /cvs/src/src/itcl/itcl/Makefile.in,v
+retrieving revision 1.5
+diff -u -p -r1.5 Makefile.in
+--- itcl/itcl/Makefile.in	1 Sep 2005 05:32:08 -0000	1.5
++++ itcl/itcl/Makefile.in	7 Mar 2007 23:26:29 -0000
+@@ -272,16 +272,16 @@ install-binaries: binaries install-lib-b
+ #========================================================================
+ 
+ install-libraries: libraries
+-	$(mkinstalldirs) $(includedir)
+-	@echo "Installing header files in $(includedir)"
++	$(mkinstalldirs) $(DESTDIR)$(includedir)
++	@echo "Installing header files in $(DESTDIR)$(includedir)"
+ 	@for i in $(GENERIC_HDRS) ; do \
+ 	    echo "Installing $$i" ; \
+-	    $(INSTALL_DATA) $$i $(includedir) ; \
++	    $(INSTALL_DATA) $$i $(DESTDIR)$(includedir) ; \
+ 	done;
+-	@echo "Installing library files in $(ITCL_LIBRARY)"
++	@echo "Installing library files in $(DESTDIR)$(ITCL_LIBRARY)"
+ 	@for i in $(srcdir)/library/*.tcl ; do \
+ 	    echo "Installing $$i" ; \
+-	    $(INSTALL_DATA) $$i $(ITCL_LIBRARY) ; \
++	    $(INSTALL_DATA) $$i $(DESTDIR)$(ITCL_LIBRARY) ; \
+ 	done;
+ 
+ #========================================================================
+@@ -290,14 +290,14 @@ install-libraries: libraries
+ #========================================================================
+ 
+ install-doc: doc
+-	$(mkinstalldirs) $(mandir)/mann
+-	@echo "Installing man pages in $(mandir)"
++	$(mkinstalldirs) $(DESTDIR)$(mandir)/mann
++	@echo "Installing man pages in $(DESTDIR)$(mandir)"
+ 	@cd $(srcdir)/doc; for i in *.n; \
+ 	    do \
+ 	    echo "Installing $$i"; \
+ 	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
+-		$$i > $(mandir)/mann/$$i; \
+-	    chmod 444 $(mandir)/mann/$$i; \
++		$$i > $(DESTDIR)$(mandir)/mann/$$i; \
++	    chmod 444 $(DESTDIR)$(mandir)/mann/$$i; \
+ 	    done
+ 
+ test: $(TCLSH_PROG)
+@@ -447,7 +447,7 @@ install-lib-binaries: installdirs
+ 	    $(RANLIB) $(DESTDIR)$(libdir)/$$p; \
+ 	  else :; fi; \
+ 	done
+-	$(INSTALL_DATA) pkgIndex.tcl $(pkglibdir)
++	$(INSTALL_DATA) pkgIndex.tcl $(DESTDIR)$(pkglibdir)
+ 
+ #========================================================================
+ # Install binary executables (e.g. .exe files)
+@@ -485,7 +485,7 @@ installdirs:
+ 	$(mkinstalldirs)  $(DESTDIR)$(libdir)
+ 	$(mkinstalldirs)  $(DESTDIR)$(bindir)
+ 	$(mkinstalldirs)  $(DESTDIR)$(pkglibdir)
+-	$(mkinstalldirs)  $(ITCL_LIBRARY)
++	$(mkinstalldirs)  $(DESTDIR)$(ITCL_LIBRARY)
+ 
+ .PHONY: all binaries clean depend distclean doc install installdirs \
+ libraries test
+Index: itcl/itk/Makefile.in
+===================================================================
+RCS file: /cvs/src/src/itcl/itk/Makefile.in,v
+retrieving revision 1.5
+diff -u -p -r1.5 Makefile.in
+--- itcl/itk/Makefile.in	1 Sep 2005 05:32:09 -0000	1.5
++++ itcl/itk/Makefile.in	7 Mar 2007 23:26:29 -0000
+@@ -267,16 +267,16 @@ install-binaries: binaries install-lib-b
+ #========================================================================
+ 
+ install-libraries: libraries
+-	$(mkinstalldirs) $(includedir)
+-	@echo "Installing header files in $(includedir)"
++	$(mkinstalldirs) $(DESTDIR)$(includedir)
++	@echo "Installing header files in $(DESTDIR)$(includedir)"
+ 	@for i in $(GENERIC_HDRS) ; do \
+ 	    echo "Installing $$i" ; \
+-	    $(INSTALL_DATA) $$i $(includedir) ; \
++	    $(INSTALL_DATA) $$i $(DESTDIR)$(includedir) ; \
+ 	done;
+-	@echo "Installing library files in $(ITK_LIBRARY)"
++	@echo "Installing library files in $(DESTDIR)$(ITK_LIBRARY)"
+ 	@for i in $(srcdir)/library/*.* $(srcdir)/library/tclIndex ; do \
+ 	    echo "Installing $$i" ; \
+-	    $(INSTALL_DATA) $$i $(ITK_LIBRARY) ; \
++	    $(INSTALL_DATA) $$i $(DESTDIR)$(ITK_LIBRARY) ; \
+ 	done;
+ 
+ #========================================================================
+@@ -285,14 +285,14 @@ install-libraries: libraries
+ #========================================================================
+ 
+ install-doc: doc
+-	$(mkinstalldirs) $(mandir)/mann
+-	@echo "Installing man pages in $(mandir)"
++	$(mkinstalldirs) $(DESTDIR)$(mandir)/mann
++	@echo "Installing man pages in $(DESTDIR)$(mandir)"
+ 	@cd $(srcdir)/doc; for i in *.n; \
+ 	    do \
+ 	    echo "Installing $$i info $(mandir)/mann"; \
+ 	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
+-		$$i > $(mandir)/mann/$$i; \
+-	    chmod 444 $(mandir)/mann/$$i; \
++		$$i > $(DESTDIR)$(mandir)/mann/$$i; \
++	    chmod 444 $(DESTDIR)$(mandir)/mann/$$i; \
+ 	    done
+ 
+ test: $(TCLSH_PROG)
+@@ -421,7 +421,7 @@ install-lib-binaries: installdirs
+ 	    $(RANLIB) $(DESTDIR)$(libdir)/$$p; \
+ 	  else :; fi; \
+ 	done
+-	$(INSTALL_DATA) pkgIndex.tcl $(pkglibdir)
++	$(INSTALL_DATA) pkgIndex.tcl $(DESTDIR)$(pkglibdir)
+ 
+ #========================================================================
+ # Install binary executables (e.g. .exe files)
+@@ -459,7 +459,7 @@ installdirs:
+ 	$(mkinstalldirs)  $(DESTDIR)$(libdir)
+ 	$(mkinstalldirs)  $(DESTDIR)$(bindir)
+ 	$(mkinstalldirs)  $(DESTDIR)$(pkglibdir)
+-	$(mkinstalldirs)  $(ITK_LIBRARY)
++	$(mkinstalldirs)  $(DESTDIR)$(ITK_LIBRARY)
+ 
+ .PHONY: all binaries clean depend distclean doc install installdirs \
+ libraries test
+Index: itcl/iwidgets/Makefile.in
+===================================================================
+RCS file: /cvs/src/src/itcl/iwidgets/Makefile.in,v
+retrieving revision 1.2
+diff -u -p -r1.2 Makefile.in
+--- itcl/iwidgets/Makefile.in	25 Feb 2003 00:42:12 -0000	1.2
++++ itcl/iwidgets/Makefile.in	7 Mar 2007 23:26:29 -0000
+@@ -36,13 +36,13 @@ bindir = @bindir@
+ # to be different than those used for actually reference files at
+ # run-time.  INSTALL_ROOT is prepended to $prefix and $exec_prefix
+ # when installing files.
+-INSTALL_ROOT =
++INSTALL_ROOT = $(DESTDIR)
+ 
+ # Path name to use when installing library scripts:
+ 
+ # REDHAT LOCAL
+ #SCRIPT_INSTALL_DIR = $(INSTALL_ROOT)$(prefix)/lib/iwidgets$(IWIDGETS_VERSION)
+-SCRIPT_INSTALL_DIR = @datadir@/iwidgets$(IWIDGETS_VERSION)
++SCRIPT_INSTALL_DIR = $(INSTALL_ROOT)@datadir@/iwidgets$(IWIDGETS_VERSION)
+ # END REDHAT LOCAL
+ 
+ # Directory in which to install the archive libtcl.a:
+Index: tcl/unix/Makefile.in
+===================================================================
+RCS file: /cvs/src/src/tcl/unix/Makefile.in,v
+retrieving revision 1.7
+diff -u -p -r1.7 Makefile.in
+--- tcl/unix/Makefile.in	21 Jan 2003 19:40:18 -0000	1.7
++++ tcl/unix/Makefile.in	7 Mar 2007 23:26:29 -0000
+@@ -38,7 +38,7 @@ mandir			= @mandir@
+ # to be different than those used for actually reference files at
+ # run-time.  INSTALL_ROOT is prepended to $prefix and $exec_prefix
+ # when installing files.
+-INSTALL_ROOT		=
++INSTALL_ROOT		= $(DESTDIR)
+ 
+ # Path for the platform independent Tcl scripting libraries:
+ # REDHAT LOCAL
+Index: tk/unix/Makefile.in
+===================================================================
+RCS file: /cvs/src/src/tk/unix/Makefile.in,v
+retrieving revision 1.8
+diff -u -p -r1.8 Makefile.in
+--- tk/unix/Makefile.in	21 Jan 2003 20:24:51 -0000	1.8
++++ tk/unix/Makefile.in	7 Mar 2007 23:26:30 -0000
+@@ -41,7 +41,7 @@ mandir			= @mandir@
+ # to be different than those used for actually reference files at
+ # run-time.  INSTALL_ROOT is prepended to $prefix and $exec_prefix
+ # when installing files.
+-INSTALL_ROOT		=
++INSTALL_ROOT		= $(DESTDIR)
+ 
+ # Directory from which applications will reference the library of Tcl
+ # scripts (note: you can set the TK_LIBRARY environment variable at

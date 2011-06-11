@@ -1,0 +1,25 @@
+# ChangeLog for app-editors/texworks
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  10 Sep 2009; Coderoar <coderoar@gmail.com> files/texworks.desktop:
+  support more linguas in .desktop
+
+  18 Jul 2009; Yu Yuwei <acevery@gmail.com> -texworks-9999-r2.ebuild,
+  +texworks-9999-r3.ebuild:
+  change RDEPEND from qt to qt-core
+
+  17 Apr 2009; Yu Yuwei <acevery@gmail.com> -texworks-9999-r1.ebuild,
+  +texworks-9999-r2.ebuild:
+  updated for splitted poppler, thanks Yanrui Li
+
+  05 Sep 2008; Yu Yuwei <acevery@gmail.com>
+  -files/texworks-hunspell-1.2.x.patch, -texworks-9999.ebuild,
+  +texworks-9999-r1.ebuild:
+  Remove hunspell patch
+
+  21 Jul 2008; Yu Yuwei <acevery@gmail.com>
+  +files/texworks-hunspell-1.2.x.patch, +texworks-9999.ebuild, +files/icon,
+  +files/icon/texworks.png, +files/texworks.desktop, +metadata.xml:
+  add into overlay, ebuild by LiYanrui
+

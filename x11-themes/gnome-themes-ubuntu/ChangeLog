@@ -1,0 +1,16 @@
+# ChangeLog for x11-themes/gnome-themes-ubuntu
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*gnome-themes-ubuntu-0.6.1 (31 Mar 2010)
+
+  31 Mar 2010; Coderoar <coderoar@gmail.com>
+  -gnome-themes-ubuntu-0.3.ebuild, -gnome-themes-ubuntu-0.4.ebuild,
+  +gnome-themes-ubuntu-0.6.1.ebuild:
+  version bump, remove obsolete
+
+  31 Aug 2009; Coderoar <coderoar@gmail.com>
+  +gnome-themes-ubuntu-0.3.ebuild, +gnome-themes-ubuntu-0.4.ebuild,
+  +metadata.xml:
+  initial commit
+

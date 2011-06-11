@@ -1,0 +1,45 @@
+# ChangeLog for app-misc/gpick
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*gpick-0.2.2 (12 Jun 2010)
+
+  12 Jun 2010; Coderoar <coderoar@gmail.com> -gpick-0.1.92.ebuild,
+  -gpick-0.1.104.ebuild, -gpick-0.2.0.ebuild, gpick-0.2.1.ebuild,
+  +gpick-0.2.2.ebuild:
+  version bump, remove obsolete
+
+*gpick-0.2.1 (24 Apr 2010)
+
+  24 Apr 2010; Coderoar <coderoar@gmail.com> gpick-0.1.104.ebuild,
+  +gpick-0.2.1.ebuild:
+  version bump
+
+*gpick-0.2.0 (21 Feb 2010)
+
+  21 Feb 2010; Coderoar <coderoar@gmail.com> +gpick-0.2.0.ebuild:
+  version bump
+
+*gpick-0.1.104 (02 Dec 2009)
+
+  02 Dec 2009; Coderoar <coderoar@gmail.com> gpick-0.1.92.ebuild,
+  +gpick-0.1.104.ebuild:
+  version bump, 0.1.92 stable
+
+*gpick-0.1.92 (24 Nov 2009)
+
+  24 Nov 2009; Coderoar <coderoar@gmail.com> -gpick-0.1.74.ebuild,
+  -gpick-0.1.76.ebuild, +gpick-0.1.92.ebuild:
+  version bump, removed obsolete
+
+*gpick-0.1.76 (10 Oct 2009)
+
+  10 Oct 2009; Coderoar <coderoar@gmail.com> +gpick-0.1.76.ebuild:
+  version bump
+
+*gpick-0.1.74 (09 Oct 2009)
+
+  09 Oct 2009; Coderoar <coderoar@gmail.com> +gpick-0.1.74.ebuild,
+  +metadata.xml:
+  initial commit
+

@@ -1,0 +1,47 @@
+# ChangeLog for net-misc/xmuruijie
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  10 Jun 2011; Yuwei Yu <acevery@gmail.com> +xmuruijie-1.4.2.ebuild:
+  update to 1.4.2
+
+  06 May 2011; Yuwei Yu <acevery@gmail.com> -xmuruijie-1.3.9-r1.ebuild,
+  xmuruijie-1.4.0.ebuild, +xmuruijie-1.4.1.ebuild:
+  1.4.1 version bump
+
+  09 Jun 2010; Yu Yuwei <acevery@gmail.com> xmuruijie-1.3.9-r1.ebuild,
+  +xmuruijie-1.4.0.ebuild:
+  add new version for md5->hashlib
+
+  31 Jul 2009; Yu Yuwei <acevery@gmail.com> xmuruijie-1.3.9-r1.ebuild:
+  Change RDEPEND to iptables
+
+  03 Nov 2008; Yu Yuwei <acevery@gmail.com> -xmuruijie-1.3.6-r1.ebuild,
+  -xmuruijie-1.3.7.ebuild, -xmuruijie-1.3.9.ebuild,
+  +xmuruijie-1.3.9-r1.ebuild:
+  fix ebuild error and clean old versions
+
+  03 Nov 2008; Yu Yuwei <acevery@gmail.com> +xmuruijie-1.3.9.ebuild,
+  files/ruijie, files/ruijie-fw, files/saier, files/saier-fw:
+  version bump, fix static authentication bug
+
+  07 Oct 2008; Yu Yuwei <acevery@gmail.com> files/saier:
+  fix saier runscript USE error
+
+  10 Jun 2008; Yu Yuwei <acevery@gmail.com> +xmuruijie-1.3.7.ebuild:
+  add ebuild for new bugfix version
+
+  30 Mar 2008; Yu Yuwei <acevery@gmail.com> -xmuruijie-1.3.6.ebuild,
+  +xmuruijie-1.3.6-r1.ebuild:
+  fix conf file path error
+
+  28 Mar 2008; Yu Yuwei <acevery@gmail.com> -xmuruijie-1.3.5.ebuild,
+  +xmuruijie-1.3.6.ebuild:
+  Fix a message exception when server return non-message for authentication
+  failure
+
+  27 Mar 2008; Yu Yuwei <acevery@gmail.com> +xmuruijie-1.3.5.ebuild,
+  +files/iptables_rules.bak, +files/localip, +files/ruijie,
+  +files/ruijie-fw, +files/saier, +files/saier-fw, +metadata.xml:
+  Init in gentoo-china overlay
+

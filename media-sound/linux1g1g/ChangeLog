@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/linux1g1g
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  25 Oct 2009; Coderoar <coderoar@gmail.com> linux1g1g-0.9.2.ebuild,
+  metadata.xml:
+  updated SRC_URI
+
+  11 Sep 2009; Coderoar <coderoar@gmail.com> ChangeLog:
+  add .desktop files
+

@@ -1,0 +1,13 @@
+# ChangeLog for x11-themes/gnome-themes-egtk
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  31 Mar 2010; Coderoar <coderoar@gmail.com> gnome-themes-egtk-1.0.ebuild:
+  minor fix
+
+*gnome-themes-egtk-1.0 (23 Feb 2010)
+
+  23 Feb 2010; Coderoar <coderoar@gmail.com> +gnome-themes-egtk-1.0.ebuild,
+  +metadata.xml:
+  initial commit
+

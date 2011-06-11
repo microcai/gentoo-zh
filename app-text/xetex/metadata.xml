@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+    <pkgmetadata>
+        <herd>tex</herd>
+        <maintainer>
+            <email>acevery@gmail.com</email>
+            <name>Yu Yuwei</name>
+        </maintainer>
+        <longdescription lang="en">
+	  Extended version of unicode (La)TeX written by Jonathan Kew
+	  at SIL.  Allows many more languages to be typeset including
+	  those requiring vertical layout and mixed direction layouts.
+        </longdescription>
+    </pkgmetadata>
+

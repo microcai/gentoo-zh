@@ -1,0 +1,51 @@
+# ChangeLog for app-text/apvlv
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  23 Apr 2009; Hong Hao <oahong@gmail.com> apvlv-9999:
+  Fix dependencies for Gentoo Bug #264230
+
+  21 Apr 2009; Hong Hao <oahong@gmail.com> apvlv-0.0.4.6, apvlv-0.0.5.3,
+  apvlv-9999:
+  Only keep live ebuild for apvlv.
+
+  08 Jan 2009; Hong Hao <oahong@gmail.com> -apvlv-0.0.5.2-r1.ebuild,
+  +apvlv-0.0.5.3.ebuild:
+  Version bump.
+
+  04 Jan 2009; Hong Hao <oahong@gmail.com> -apvlv-0.0.5.2.ebuild,
+  +apvlv-0.0.5.2-r1.ebuild:
+  Fixed a compile issue with gcc-4.3.2.
+
+  04 Jan 2009; Hong Hao <oahong@gmail.com> -apvlv-0.0.4-r3.ebuild,
+  -apvlv-0.0.5.ebuild, +apvlv-0.0.5.2.ebuild:
+  Version bump. Remove old
+
+  29 Dec 2008; Hong Hao <oahong@gmail.com> apvlv-0.0.4-r3.ebuild,
+  apvlv-0.0.4.6.ebuild, +apvlv-0.0.5.ebuild:
+  Version Bump. Fix missing use dependencies.
+
+  27 Dec 2008; Hong Hao <oahong@gmail.com> -apvlv-0.0.4.4.ebuild,
+  +apvlv-0.0.4.6.ebuild:
+  Update to 0.0.4 bugfix 6
+
+  22 Dec 2008; Hong Hao <oahong@gmail.com> -apvlv-0.0.4-r4.ebuild,
+  +apvlv-0.0.4.4.ebuild:
+  Bump to match upstream's version naming scheme change.
+
+  22 Dec 2008; Hong Hao <oahong@gmail.com> +apvlv-0.0.4-r4.ebuild:
+  Upgrade to version 0.0.4-bugfix-4
+
+  21 Dec 2008; Hong Hao <oahong@gmail.com> -apvlv-0.0.3.ebuild,
+  +apvlv-0.0.4-r3.ebuild, metadata.xml:
+  Another bump.
+
+  18 Nov 2008; Hong Hao <oahong@gmail.com> -apvlv-0.0.2-r1.ebuild,
+  +apvlv-0.0.3.ebuild:
+  Bump to version 0.0.3
+
+  27 Oct 2008; Hong Hao <oahong@gmail.com> -apvlv-0.0.2.ebuild,
+  +apvlv-0.0.2-r1.ebuild, +metadata.xml:
+  Various fixes. Remove trailing spaces, fix dependencies and convert the
+  ebuild to EAPI-2.
+

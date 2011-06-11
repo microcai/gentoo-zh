@@ -1,0 +1,14 @@
+# ChangeLog for media-plugins/totem-pps
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  31 Dec 2009; Coderoar <coderoar@gmail.com> totem-pps-9999.ebuild:
+  updated deps
+
+  28 Nov 2009; Coderoar <coderoar@gmail.com> totem-pps-9999.ebuild,
+  metadata.xml:
+  added missing dependency, masked on all arches
+
+  11 Sep 2009; Hong Hao <oahong@gmail.com> totem-pps-9999.ebuild:
+  Update deps, fix license.
+

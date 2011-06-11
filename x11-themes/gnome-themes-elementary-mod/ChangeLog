@@ -1,0 +1,18 @@
+# ChangeLog for x11-themes/gnome-themes-elementary-mod
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  31 Mar 2010; Coderoar <coderoar@gmail.com>
+  gnome-themes-elementary-mod-9999.ebuild:
+  minor fix
+
+  12 Mar 2010; Coderoar <coderoar@gmail.com>
+  gnome-themes-elementary-mod-9999.ebuild:
+  update deps
+
+*gnome-themes-elementary-mod-9999 (23 Feb 2010)
+
+  23 Feb 2010; Coderoar <coderoar@gmail.com>
+  +gnome-themes-elementary-mod-9999.ebuild, +metadata.xml:
+  initial commit
+

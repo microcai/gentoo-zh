@@ -1,0 +1,33 @@
+# ChangeLog for x11-themes/ubuntu-mono
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*ubuntu-mono-0.0.22 (09 Jan 2011)
+
+  09 Jan 2011; Coderoar <coderoar@gmail.com> -ubuntu-mono-0.0.18.ebuild,
+  +ubuntu-mono-0.0.22.ebuild:
+  version bump, remove obsolete
+
+*ubuntu-mono-0.0.20 (03 Sep 2010)
+
+  03 Sep 2010; Coderoar <coderoar@gmail.com> +ubuntu-mono-0.0.20.ebuild:
+  version bump
+
+*ubuntu-mono-0.0.18 (09 May 2010)
+
+  09 May 2010; Coderoar <coderoar@gmail.com> -ubuntu-mono-0.0.12.ebuild,
+  +ubuntu-mono-0.0.18.ebuild:
+  version bump
+
+  31 Mar 2010; Coderoar <coderoar@gmail.com> ubuntu-mono-0.0.12.ebuild:
+  minor fix
+
+  30 Mar 2010; Coderoar <coderoar@gmail.com> ubuntu-mono-0.0.12.ebuild:
+  minor fix
+
+*ubuntu-mono-0.0.12 (30 Mar 2010)
+
+  30 Mar 2010; Coderoar <coderoar@gmail.com> +ubuntu-mono-0.0.12.ebuild,
+  +metadata.xml:
+  initial commit
+

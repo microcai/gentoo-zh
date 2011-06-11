@@ -1,0 +1,9 @@
+# ChangeLog for gnome-extra/lunar-applet
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*lunar-applet-2.0 (17 Apr 2008)
+  
+  21 Apr 2008; yetist <yetist@gmail.com> lunar-applet-1.6.ebuild,
+  lunar-applet-2.0.ebuild, +metadata.xml, +ChangeLog:
+  fixed Leading Space Syntax Error. added metadata.xml and ChangeLog.

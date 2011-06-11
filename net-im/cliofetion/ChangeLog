@@ -1,0 +1,15 @@
+# ChangeLog for net-im/cliofetion
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  09 May 2011; Caspar Zhang <casparant@gmail.com> +cliofetion-2.2.0.ebuild:
+  net-im/cliofetion: update to 2.2.0
+
+  16 Jan 2011; Caspar Zhang <casparant@gmail.com> +metadata.xml:
+  net-im/cliofetion: updated 2.1.0 version
+
+*cliofetion-9999 (03 Jan 2011)
+
+  03 Jan 2011; Hong Hao <oahong@gmail.com> +cliofetion-9999.ebuild:
+  添加 casparant 的 cliofetion 9999 ebuild
+

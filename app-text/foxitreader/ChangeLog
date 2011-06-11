@@ -1,0 +1,23 @@
+# ChangeLog for app-text/foxitreader
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  15 Oct 2009; Coderoar <coderoar@gmail.com> foxitreader-1.0.1.ebuild,
+  foxitreader-1.1.0.ebuild:
+  fixed issue of relative path to pdf file
+
+  09 Sep 2009; Coderoar <coderoar@gmail.com> foxitreader-1.0.1.ebuild,
+  foxitreader-1.1.0.ebuild, files/foxitreader.desktop:
+  support more linguas in .desktop
+
+  24 Aug 2009; Coderoar <coderoar@gmail.com>
+  -files/foxit-reader.desktop, +files/foxitreader.desktop,
+  +files/foxitreader.png, -files/fx-icon.png,
+  foxitreader-1.0.1.ebuild, +foxitreader-1.1.0.ebuild:
+  Version bump. Add amd64 support.
+
+  26 Apr 2009; Hong Hao <oahong@gmail.com> +foxitreader-1.0.1.ebuild,
+  +files/foxit-reader.desktop, +files/fx-icon.png, +metadata.xml:
+  Initial import for issue 44. Ebuild based upon submissions by
+  mygarfield7<hjhee@163.com>
+

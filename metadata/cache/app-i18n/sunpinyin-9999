@@ -1,0 +1,22 @@
+app-i18n/sunpinyin-core dev-db/sqlite:3 ibus? ( >=app-i18n/ibus-1.1 !app-i18n/ibus-sunpinyin ) nls? ( virtual/libintl ) xim? ( >=x11-libs/gtk+-2.12:2 x11-libs/libX11 ) dev-util/pkgconfig dev-util/scons nls? ( sys-devel/gettext ) xim? ( x11-proto/xproto ) >=dev-vcs/git-1.6 >=app-admin/eselect-python-20091230 ibus? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) )
+app-i18n/sunpinyin-core dev-db/sqlite:3 ibus? ( >=app-i18n/ibus-1.1 !app-i18n/ibus-sunpinyin ) nls? ( virtual/libintl ) xim? ( >=x11-libs/gtk+-2.12:2 x11-libs/libX11 ) >=app-admin/eselect-python-20091230 ibus? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) )
+0
+
+
+http://sunpinyin.org/
+LGPL-2.1 CDDL
+SunPinyin is a SLM (Statistical Language Model) based IME
+
+confutils eutils git multilib portability python toolchain-funcs
+ibus xim nls
+
+
+
+2
+
+compile install postinst postrm prepare setup unpack
+
+
+
+
+

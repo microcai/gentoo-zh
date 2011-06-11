@@ -1,0 +1,38 @@
+# ChangeLog for net-firewall/west-chamber
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  10 Jul 2010; Zhang Le <r0bertz@gentoo.org> west-chamber-0.0.1-r4.ebuild:
+  fix sandbox violation
+
+  20 Mar 2010; Zhang Le <r0bertz@gentoo.org> -west-chamber-0.0.1-r3.ebuild,
+  +west-chamber-0.0.1-r4.ebuild, files/west-chamber.confd,
+  files/west-chamber.initd, +files/wikipedia.patch:
+  west-chamber: start before iptables; let user choose which rule to add and
+  which site to be included in NOCLIP; added wikipedia
+
+  18 Mar 2010; Zhang Le <r0bertz@gentoo.org> -west-chamber-0.0.1-r2.ebuild,
+  +west-chamber-0.0.1-r3.ebuild, +files/facebook.patch,
+  files/west-chamber.confd:
+  west-chamber: added facebook
+
+  17 Mar 2010; Zhang Le <r0bertz@gentoo.org> west-chamber-0.0.1-r2.ebuild:
+  west-chamber: ipset should >= 4.2
+
+  16 Mar 2010; Zhang Le <r0bertz@gentoo.org> files/west-chamber.confd,
+  files/west-chamber.initd:
+  west-chamber: added ip set CHINA and iptable rule for CUI target
+
+  14 Mar 2010; Zhang Le <r0bertz@gentoo.org> -west-chamber-0.0.1-r1.ebuild,
+  +west-chamber-0.0.1-r2.ebuild, files/west-chamber.initd:
+  west-chamber: improved initscript
+
+  14 Mar 2010; Zhang Le <r0bertz@gentoo.org> -west-chamber-0.0.1.ebuild,
+  +west-chamber-0.0.1-r1.ebuild, +files/west-chamber.confd,
+  +files/west-chamber.initd, metadata.xml:
+  west-chamber added initscript, removed internal ipset, use system ipset instead
+
+  12 Mar 2010; Zhang Le <r0bertz@gentoo.org> +west-chamber-0.0.1.ebuild,
+  +metadata.xml:
+  added west-chamber
+

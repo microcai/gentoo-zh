@@ -1,0 +1,69 @@
+# ChangeLog for net-im/linuxqq
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*linuxqq-1.0.2_beta1-r3 (02 Jan 2010)
+
+  02 Jan 2010; Coderoar <coderoar@gmail.com> -linuxqq-1.0.2_beta1-r2.ebuild,
+  +linuxqq-1.0.2_beta1-r3.ebuild:
+  fixed wrapper script in issue #76
+
+*linuxqq-1.0.2_beta1-r2 (01 Jan 2010)
+
+  01 Jan 2010; Coderoar <coderoar@gmail.com> -linuxqq-1.0_pre3.ebuild,
+  -linuxqq-1.0.2_beta1-r1.ebuild, +linuxqq-1.0.2_beta1-r2.ebuild:
+  fixed issue with GDK_PIXBUF_MODULE_FILE
+
+  10 Sep 2009; Coderoar <coderoar@gmail.com> files/linuxqq.desktop:
+  support more linguas in .desktop
+
+  31 Jan 2009; Hong Hao <oahong@gmail.com> linuxqq-1.0_pre3.ebuild,
+  linuxqq-1.0.2_beta1-r1.ebuild:
+  Drop unnecessary check in pkg_setup phase. (Thanks
+  tommy_NO_SPAM_at_gentoo_DOT_org)
+
+  07 Jan 2009; Hong Hao <oahong@gmail.com> -linuxqq-1.0.2_beta1.ebuild,
+  +linuxqq-1.0.2_beta1-r1.ebuild:
+  Revison bump.(bugfix release)
+
+  04 Jan 2009; Hong Hao <oahong@gmail.com> +linuxqq-1.0.2_beta1.ebuild:
+  Version bump to linuxqq-1.0.2-beta1
+
+  31 Dec 2008; Hong Hao <oahong@gmail.com> linuxqq-1.0_pre3.ebuild:
+  This package doesn't use eutils.
+
+  27 Dec 2008; Hong Hao <oahong@gmail.com> linuxqq-1.0_pre3.ebuild,
+  files/linuxqq.desktop:
+  Small cleanup: removing a bunch of ebegins/eends.
+
+  01 Dec 2008; Hong Hao <oahong@gmail.com> linuxqq-1.0_pre3.ebuild:
+  Remove duplicate check.
+
+  30 Nov 2008; Hong Hao <oahong@gmail.com> linuxqq-1.0_pre3.ebuild,
+  +files/linuxqq.desktop, +files/linuxqq.png, -files/qq.desktop,
+  -files/qq.png, -files/qq.sh:
+  Merge some changes from my personal repository.
+
+  16 Nov 2008; Yu Yuwei <acevery@gmail.com> +linuxqq-1.0_pre3.ebuild,
+  -linuxqq-1.0_p3-r2.ebuild, -linuxqq-1.0_p3-r3.ebuild:
+  use _pre3 instead of _p3.
+
+  16 Nov 2008; Yu Yuwei <acevery@gmail.com> -linuxqq-1.0_p3-r1.ebuild,
+  +linuxqq-1.0_p3-r3.ebuild:
+  Add ~amd64 USE and related check
+
+  14 Nov 2008; Hong Hao <oahong@gmail.com> linuxqq-1.0_p3-r2.ebuild:
+  typo
+
+  14 Nov 2008; Hong Hao <oahong@gmail.com> +linuxqq-1.0_p3-r2.ebuild:
+  Style.
+
+  14 Nov 2008; Yu Yuwei <acevery@gmail.com> -linuxqq-1.0_p3.ebuild,
+  +linuxqq-1.0_p3-r1.ebuild, +files/qq.desktop:
+  fix typos and use desktop file as suggested, thanks Yang Zhang.
+
+  14 Nov 2008; Yu Yuwei <acevery@gmail.com> +linuxqq-1.0_p3.ebuild,
+  +files/qq.png, +files/qq.sh, +metadata.xml:
+  Add linuxqq into overlay, thanks to Yang Zhang for the suggestion for
+  Tencent license
+
