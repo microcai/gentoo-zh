@@ -1,0 +1,22 @@
+>=dev-vcs/git-1.6
+
+0
+
+
+http://live.debian.net/
+GPL-2
+Debian Live - System Build Scripts
+
+base eutils git multilib portability toolchain-funcs
+debug
+
+
+
+3
+
+compile configure install prepare unpack
+
+
+
+
+

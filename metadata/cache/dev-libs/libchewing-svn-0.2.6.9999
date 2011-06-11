@@ -1,0 +1,22 @@
+!dev-libs/libchewing virtual/libc dev-vcs/subversion net-misc/rsync
+!dev-libs/libchewing virtual/libc
+0
+
+
+http://chewing.csie.net/
+GPL-2
+Library for Chinese Phonetic input method
+~x86
+eutils flag-o-matic multilib portability subversion toolchain-funcs
+
+
+
+
+
+
+compile install preinst unpack
+
+
+
+
+

@@ -1,0 +1,22 @@
+>=x11-libs/gtk+-2.0.4 >=x11-libs/pango-1.2 >=dev-libs/glib-2.0.3 >=gnome-base/gconf-1.2 >=gnome-base/libgnomeui-2 >=gnome-base/libglade-2 >=dev-util/pkgconfig-0.12.0 >=sys-apps/sed-4
+>=x11-libs/gtk+-2.0.4 >=x11-libs/pango-1.2 >=dev-libs/glib-2.0.3 >=gnome-base/gconf-1.2 >=gnome-base/libgnomeui-2 >=gnome-base/libglade-2
+0
+mirror://gnome/sources/drwright/0.17/drwright-0.17.tar.bz2
+
+http://www.imendio.com/projects/drwright/
+GPL-2
+A GNOME2 Applet that forces you to take regular breaks to prevent RSI.
+x86 ~amd64 sparc ~ppc
+eutils fdo-mime flag-o-matic gnome.org gnome2 gnome2-utils libtool multilib portability toolchain-funcs versionator
+debug
+
+
+
+
+
+compile install postinst postrm preinst unpack
+
+
+
+
+

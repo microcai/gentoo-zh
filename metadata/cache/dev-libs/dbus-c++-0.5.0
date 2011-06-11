@@ -1,0 +1,22 @@
+sys-apps/dbus dev-vcs/git dev-util/pkgconfig >=dev-vcs/git-1.6 || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 >=sys-devel/libtool-2.2.6b
+sys-apps/dbus
+0
+
+
+http://www.freedesktop.org/wiki/Software/dbus-c++
+GPL-2
+dbus-c++ attempts to provide a C++ API for D-BUS.
+
+autotools eutils git libtool multilib portability toolchain-funcs
+debug
+
+
+
+2
+
+compile prepare unpack
+
+
+
+
+

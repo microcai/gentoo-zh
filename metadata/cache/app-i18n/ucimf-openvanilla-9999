@@ -1,0 +1,22 @@
+app-i18n/libucimf || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 >=sys-devel/libtool-2.2.6b dev-vcs/subversion net-misc/rsync
+app-i18n/libucimf !minimal? ( app-i18n/openvanilla-modules )
+0
+
+
+http://ucimf.googlecode.com
+GPL-2
+The OpenVanilla IMF module for UCIMF
+
+autotools eutils libtool multilib portability subversion toolchain-funcs
+debug minimal
+
+
+
+
+
+compile install preinst unpack
+
+
+
+
+
