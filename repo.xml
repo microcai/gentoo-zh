@@ -9,6 +9,6 @@
       <email>microcaicai@gmail.com, robert.zhangle@gmail.com</email>
       <name>gentoo-zh</name>
     </owner>
-    <source type="svn">http://gentoo-zh.googlecode.com/svn/trunk/</source>
+    <source type="git">git://github.com/microcai/gentoo-zh.git</source>
   </repo>
 </repositories>
