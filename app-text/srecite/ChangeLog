@@ -1,0 +1,25 @@
+# ChangeLog for app-text/srecite
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  25 Oct 2009; coderoar <coderoar@gmail.com> +metadata.xml:
+  app-text/: add missing metadata.xml
+
+
+  14 Mar 2008; acevery <acevery@gmail.com> srecite-0.6.2.ebuild:
+  checkin
+
+  03 Feb 2008; robert.zhangle <robert.zhangle@gmail.com> srecite-0.6.2.ebuild,
+  -files/digest-srecite-0.6.2:
+  removed digest files
+
+  27 Jan 2008; robert.zhangle <robert.zhangle@gmail.com> srecite-0.6.2.ebuild:
+  repo wide QA fixes
+
+*srecite-0.6.2 (08 Jun 2007)
+
+  08 Jun 2007; lidaibin <lidaibin@gmail.com> +files/digest-srecite-0.6.2,
+  +files/srecite.rc.patch, +srecite-0.6.2.ebuild:
+  add the srecite
+
+

@@ -1,0 +1,68 @@
+# ChangeLog for games-misc/fortune-mod-zh
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  25 Oct 2009; coderoar <coderoar@gmail.com> +metadata.xml:
+  add missing metadata.xml
+
+
+  03 Feb 2008; robert.zhangle <robert.zhangle@gmail.com>
+  -files/digest-fortune-mod-zh-1.2.2:
+  removed digest files
+
+  27 Jan 2008; robert.zhangle <robert.zhangle@gmail.com>
+  fortune-mod-zh-1.2.2.ebuild:
+  repo wide QA fixes
+
+  12 Nov 2007; robert.zhangle <robert.zhangle@gmail.com>
+  fortune-mod-zh-1.2.2.ebuild:
+  polished fortune-mod-zh's ebuild
+
+*fortune-mod-zh-1.2.2 (19 Aug 2007)
+
+  19 Aug 2007; robert.zhangle <robert.zhangle@gmail.com>
+  -fortune-mod-zh-1.2.ebuild, +fortune-mod-zh-1.2.2.ebuild,
+  -files/digest-fortune-mod-zh-1.2, +files/digest-fortune-mod-zh-1.2.2:
+  bump fortune-mod-zh to 1.2.2, remove deprecated fortune-mod-zh modules
+
+  19 Aug 2007; robert.zhangle <robert.zhangle@gmail.com>
+  files/digest-fortune-mod-zh-1.2:
+  re-digest fortune-mod-zh-1.2
+
+*fortune-mod-zh-1.2 (19 Aug 2007)
+
+  19 Aug 2007; robert.zhangle <robert.zhangle@gmail.com>
+  -fortune-mod-zh-1.1.ebuild, +fortune-mod-zh-1.2.ebuild,
+  -files/digest-fortune-mod-zh-1.1, +files/digest-fortune-mod-zh-1.2:
+  add fortune-mod-zh-1.2
+
+  24 Sep 2006; robert.zhangle <robert.zhangle@gmail.com>
+  -files/digest-fortune-mod-zh-1.0, +files/digest-fortune-mod-zh-1.1:
+  add digest for fortune-mod-zh-1.1
+
+
+*fortune-mod-zh-1.1 (22 Aug 2006)
+
+  22 Aug 2006; robert.zhangle <robert.zhangle@gmail.com>
+  -fortune-mod-zh-1.0.ebuild, +fortune-mod-zh-1.1.ebuild:
+  replace fortune-mod-zh-1.0.ebuild with fortune-mod-zh-1.1.ebuild
+
+  20 Aug 2006; robert.zhangle <robert.zhangle@gmail.com>
+  files/digest-fortune-mod-zh-1.0:
+  update digest file
+
+  20 Aug 2006; robert.zhangle <robert.zhangle@gmail.com>
+  -files/digest-fortune-mod-zh-1, files/digest-fortune-mod-zh-1.0:
+  update digest file
+
+  20 Aug 2006; robert.zhangle <robert.zhangle@gmail.com>
+  fortune-mod-zh-1.0.ebuild, files/digest-fortune-mod-zh-1.0:
+  Add RESTRICT="mirror"
+
+*fortune-mod-zh-1.0 (20 Aug 2006)
+
+  20 Aug 2006; robert.zhangle <robert.zhangle@gmail.com>
+  +fortune-mod-zh-1.0.ebuild, +files/digest-fortune-mod-zh-1,
+  +files/digest-fortune-mod-zh-1.0:
+  Add Chinese fortune
+

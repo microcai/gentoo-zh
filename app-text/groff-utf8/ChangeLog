@@ -1,0 +1,21 @@
+# ChangeLog for app-text/groff-utf8
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  25 Oct 2009; coderoar <coderoar@gmail.com> +metadata.xml:
+  app-text/: add missing metadata.xml
+
+
+  03 Feb 2008; robert.zhangle <robert.zhangle@gmail.com>
+  -files/digest-groff-utf8-0:
+  removed digest files
+
+  27 Jan 2008; robert.zhangle <robert.zhangle@gmail.com> groff-utf8-0.ebuild:
+  repo wide QA fixes
+
+*groff-utf8-0 (24 Nov 2007)
+
+  24 Nov 2007; robert.zhangle <robert.zhangle@gmail.com> +groff-utf8-0.ebuild,
+  +files/digest-groff-utf8-0:
+  added groff-utf8
+

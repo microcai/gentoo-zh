@@ -1,0 +1,82 @@
+# ChangeLog for app-text/mupdf
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  06 Jul 2010; robert.zhangle <robert.zhangle@gmail.com>
+  +files/mupdf-0.6-buildsystem.patch:
+  add a patch for mupdf back
+
+*mupdf-0.6 (06 Jul 2010)
+
+  06 Jul 2010; robert.zhangle <robert.zhangle@gmail.com> +metadata.xml,
+  +mupdf-0.6.ebuild:
+  re-add mupdf
+
+  06 Jul 2010; robert.zhangle <robert.zhangle@gmail.com>
+  -files/mupdf-0.6-buildsystem.patch, -metadata.xml, -mupdf-0.6.ebuild:
+  remove mupdf, will re-add later
+
+*mupdf-0.6 (06 Jul 2010)
+
+  06 Jul 2010; gogonkt <gogonkt@gmail.com> +files/mupdf-0.6-buildsystem.patch,
+  +metadata.xml, +mupdf-0.6.ebuild:
+  redo mupdf (.svn bugfix)
+
+  06 Jul 2010; gogonkt <gogonkt@gmail.com> -files/.svn/all-wcprops,
+  -files/.svn/entries,
+  -files/.svn/text-base/mupdf-0.6-buildsystem.patch.svn-base,
+  -files/mupdf-0.6-buildsystem.patch, -metadata.xml, -mupdf-0.6.ebuild:
+  update mupdf (.svn bugfix)
+
+  06 Jul 2010; gogonkt <gogonkt@gmail.com> -.svn/all-wcprops, -.svn/entries,
+  -.svn/text-base/ChangeLog.svn-base, -.svn/text-base/Manifest.svn-base,
+  -.svn/text-base/metadata.xml.svn-base,
+  -.svn/text-base/mupdf-0.6.ebuild.svn-base:
+  update mupdf ebuild from sunrise(roomkeeping work)
+
+*mupdf-0.6 (06 Jul 2010)
+
+  06 Jul 2010; gogonkt <gogonkt@gmail.com> +.svn/all-wcprops, +.svn/entries,
+  +.svn/text-base/ChangeLog.svn-base, +.svn/text-base/Manifest.svn-base,
+  +.svn/text-base/metadata.xml.svn-base,
+  +.svn/text-base/mupdf-0.6.ebuild.svn-base, +files/.svn/all-wcprops,
+  +files/.svn/entries,
+  +files/.svn/text-base/mupdf-0.6-buildsystem.patch.svn-base,
+  +files/mupdf-0.6-buildsystem.patch, +mupdf-0.6.ebuild:
+  update mupdf ebuild from sunrise
+
+  06 Jul 2010; gogonkt <gogonkt@gmail.com> metadata.xml, -mupdf-0.5.ebuild:
+  update mupdf ebuild from sunrise
+
+  22 Apr 2010; gogonkt <gogonkt@gmail.com> mupdf-0.5.ebuild:
+  Fixed: mupdf website url
+
+  21 Apr 2010; gogonkt <gogonkt@gmail.com> mupdf-0.5.ebuild:
+  Fixed: mupdf author changed website
+
+  21 Feb 2010; gogonkt <gogonkt@gmail.com> mupdf-0.5.ebuild:
+  modified:   Manifest
+  modified:   mupdf-0.5.ebuild
+  fix bug of mupdf-0.5
+
+  20 Feb 2010; gogonkt <gogonkt@gmail.com> -mupdf-20090707.ebuild:
+  modified:   Manifest
+  deleted:    mupdf-20090707.ebuild
+  remove old mupdf-20090707.ebuild
+
+*mupdf-0.5 (20 Feb 2010)
+
+  20 Feb 2010; gogonkt <gogonkt@gmail.com> +mupdf-0.5.ebuild:
+  modified:   Manifest
+  new file:   mupdf-0.5.ebuild
+  update mupdf of 0.5 release at 19-Feb-2010 17:49 3.4M
+
+  25 Oct 2009; coderoar <coderoar@gmail.com> +metadata.xml:
+  app-text/: add missing metadata.xml
+
+
+*mupdf-20090707 (29 Aug 2009)
+
+  29 Aug 2009; gogonkt <gogonkt@gmail.com> +mupdf-20090707.ebuild:
+  added app-text/mupdf
+

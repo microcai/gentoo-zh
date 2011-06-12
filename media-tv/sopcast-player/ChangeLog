@@ -1,0 +1,14 @@
+# ChangeLog for media-tv/sopcast-player
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  26 May 2011; microcai <microcaicai@gmail.com> sopcast-player-0.7.1.ebuild:
+  change depend
+
+*sopcast-player-0.7.1 (26 May 2011)
+
+  26 May 2011; microcai <microcaicai@gmail.com> +sopcast-player-0.7.1.ebuild:
+  add sopcast-player
+
+
+

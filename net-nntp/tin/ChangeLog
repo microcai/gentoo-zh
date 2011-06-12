@@ -1,0 +1,14 @@
+# ChangeLog for net-nntp/tin
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*tin-1.8.3-r1 (23 Dec 2008)
+
+  23 Dec 2008; pokkys <pokkys@gmail.com> +files/1.8.2-various.patch,
+  +files/patch-attrib.c, +files/patch-charset.c, +files/patch-cook.c,
+  +files/patch-init.c, +files/patch-lang.c, +files/patch-mail.c,
+  +files/patch-misc.c, +files/patch-page.c, +files/patch-tin_defaults,
+  +files/tin.defaults, +files/tinrc, +metadata.xml, +tin-1.8.3-r1.ebuild:
+  add CJK patch for tin
+
+

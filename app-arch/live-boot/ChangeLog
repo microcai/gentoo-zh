@@ -1,0 +1,10 @@
+# ChangeLog for app-arch/live-boot
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*live-boot-9999 (14 Apr 2011)
+
+  14 Apr 2011; MatLinuxer2 <MatLinuxer2@gmail.com> +live-boot-9999.ebuild:
+  * Add ebuilds for debian-live scripts.
+
+

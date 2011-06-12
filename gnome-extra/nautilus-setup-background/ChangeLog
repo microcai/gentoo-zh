@@ -1,0 +1,30 @@
+# ChangeLog for gnome-extra/nautilus-setup-background
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  25 Oct 2009; coderoar <coderoar@gmail.com> +metadata.xml:
+  add missing metadata.xml
+
+
+  03 Feb 2008; robert.zhangle <robert.zhangle@gmail.com>
+  -files/digest-nautilus-setup-background-0.1:
+  removed digest files
+
+  27 Jan 2008; robert.zhangle <robert.zhangle@gmail.com>
+  nautilus-setup-background-0.1.ebuild:
+  repo wide QA fixes
+
+*nautilus-setup-background-0.1 (21 Aug 2007)
+
+  21 Aug 2007; yetist <yetist@gmail.com>
+  +nautilus-setup-background-0.1.ebuild,
+  +files/digest-nautilus-setup-background-0.1:
+  2007-08-21  yetist  <yetist@gmail.com>
+
+      * gnome-extra/nautilus-setup-background:
+      Add nautilus-setup-background-0.1.ebuild
+      * gnome-extra/lunar-applet:
+      Add lunar-applet-1.6.ebuild
+
+
+

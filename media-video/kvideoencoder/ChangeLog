@@ -1,0 +1,32 @@
+# ChangeLog for media-video/kvideoencoder
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  11 Jun 2011; microcai <microcai@fedoraproject.org>
+  kvideoencoder-0.08_rc2.ebuild:
+  kvideoencoder fix
+
+  11 Jun 2011; microcai <microcai@fedoraproject.org>
+  kvideoencoder-0.08_rc2.ebuild:
+  fix media-video/kvideoencoder/
+
+  07 Oct 2009; oahong <oahong@gmail.com> kvideoencoder-0.08_rc2.ebuild:
+  Rolling back changes from revision 283 to r282. s/nomirror/mirror/g is
+  complete meaningless
+
+  07 Oct 2009; oahong <oahong@gmail.com> kvideoencoder-0.08_rc2.ebuild:
+  restrict=mirror not nomirror.
+
+
+  07 Aug 2008; palatis <palatis@gmail.com>
+  -files/digest-kvideoencoder-0.08_rc2:
+  portage does not use `digest-PKGNAME-VERSION' anymore.
+  they now populate checksums in the `Manifest' file.
+
+
+*kvideoencoder-0.08_rc2 (26 May 2008)
+
+  26 May 2008; scsichen <scsichen@gmail.com> +kvideoencoder-0.08_rc2.ebuild,
+  +files/digest-kvideoencoder-0.08_rc2:
+  first import
+

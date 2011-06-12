@@ -1,0 +1,9 @@
+# ChangeLog for app-i18n/scim-chrasis
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*scim-chrasis-9999.0.0.1 (26 May 2008)
+
+  26 May 2008; scsichen <scsichen@gmail.com> +scim-chrasis-9999.0.0.1.ebuild:
+  first import
+

@@ -1,0 +1,14 @@
+# ChangeLog for net-misc/minissdpd
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  05 May 2011; MatLinuxer2 <MatLinuxer2@gmail.com> minissdpd-1.0.ebuild:
+  * fix empty image dir
+
+
+*minissdpd-1.0 (05 May 2011)
+
+  05 May 2011; MatLinuxer2 <MatLinuxer2@gmail.com> +minissdpd-1.0.ebuild:
+  * add minissdpd ebuild
+
+

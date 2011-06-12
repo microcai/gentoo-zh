@@ -1,0 +1,52 @@
+# ChangeLog for x11-misc/gimmie
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  25 Oct 2009; coderoar <coderoar@gmail.com> +metadata.xml:
+  add missing metadata.xml
+
+
+  03 Feb 2008; robert.zhangle <robert.zhangle@gmail.com>
+  -files/digest-gimmie-0.2.8:
+  removed digest files
+
+  27 Jan 2008; robert.zhangle <robert.zhangle@gmail.com> gimmie-0.2.8.ebuild:
+  repo wide QA fixes
+
+*gimmie-0.2.8 (13 Jan 2008)
+
+  13 Jan 2008; lidaibin <lidaibin@gmail.com> -gimmie-0.2.7.ebuild,
+  +gimmie-0.2.8.ebuild, +files/digest-gimmie-0.2.8:
+  upgrade gimmie from 0.2.7 to 0.2.8
+
+
+*gimmie-0.2.7 (04 Jul 2007)
+
+  04 Jul 2007; lidaibin <lidaibin@gmail.com> -gimmie-0.2.3.ebuild,
+  -gimmie-0.2.6.ebuild, +gimmie-0.2.7.ebuild, -files/digest-gimmie-0.2.3,
+  -files/digest-gimmie-0.2.6:
+  upgrade gimmie 0.2.6 to 0.2.7
+
+
+*gimmie-0.2.6 (05 Apr 2007)
+
+  05 Apr 2007; lidaibin <lidaibin@gmail.com> -gimmie-0.2.1.ebuild,
+  +gimmie-0.2.6.ebuild, -files/digest-gimmie-0.2.1,
+  +files/digest-gimmie-0.2.6:
+  upgrade gimmie to 0.2.6
+
+
+*gimmie-0.2.3 (10 Feb 2007)
+
+  10 Feb 2007; lidaibin <lidaibin@gmail.com> +gimmie-0.2.3.ebuild,
+  +files/digest-gimmie-0.2.3:
+  upgrade gimmie to 0.2.3
+
+
+*gimmie-0.2.1 (28 Jan 2007)
+
+  28 Jan 2007; lidaibin <lidaibin@gmail.com> +gimmie-0.2.1.ebuild,
+  +files/digest-gimmie-0.2.1:
+  add gimmie
+
+

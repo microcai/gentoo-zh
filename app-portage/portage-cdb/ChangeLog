@@ -1,0 +1,21 @@
+# ChangeLog for app-portage/portage-cdb
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  07 Aug 2008; palatis <palatis@gmail.com> -files/digest-portage-cdb-0.0.1,
+  -files/digest-portage-cdb-0.0.2, -files/digest-portage-cdb-0.2.1:
+  portage does not use `digest-PKGNAME-VERSION' anymore.
+  they now populate checksums in the `Manifest' file.
+
+
+*portage-cdb-0.2.1 (26 May 2008)
+*portage-cdb-0.0.2 (26 May 2008)
+*portage-cdb-0.0.1 (26 May 2008)
+
+  26 May 2008; scsichen <scsichen@gmail.com> +files/cdb.py,
+  +files/digest-portage-cdb-0.0.1, +files/digest-portage-cdb-0.0.2,
+  +files/digest-portage-cdb-0.2.1, +files/modules, +files/modules-2.1,
+  +files/portage_db_cdb.py, +portage-cdb-0.0.1.ebuild,
+  +portage-cdb-0.0.2.ebuild, +portage-cdb-0.2.1.ebuild:
+  first import
+

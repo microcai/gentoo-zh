@@ -1,0 +1,19 @@
+# ChangeLog for media-sound/kalsamix
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  11 Jun 2011; microcai <microcai@fedoraproject.org>
+  kalsamix-1.0.0_beta2.ebuild:
+  update media-sound/kalsamix/
+
+  07 Aug 2008; palatis <palatis@gmail.com> -files/digest-kalsamix-1.0.0_beta2:
+  portage does not use `digest-PKGNAME-VERSION' anymore.
+  they now populate checksums in the `Manifest' file.
+
+
+*kalsamix-1.0.0_beta2 (26 May 2008)
+
+  26 May 2008; scsichen <scsichen@gmail.com> +kalsamix-1.0.0_beta2.ebuild,
+  +files/digest-kalsamix-1.0.0_beta2:
+  first import
+

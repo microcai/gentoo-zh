@@ -1,0 +1,17 @@
+Title: Gentoo-zh overlay for Chinese users
+Author: microcai <mirocaicai@gmail.com>
+Content-Type: text/plain
+Posted: 2011-06-12
+Revision: 1
+News-Item-Format: 1.0
+
+On 2011-06-12, gentoo-zh overlay is merged from gentoo-china overlay and
+gentoo-taiwan overlay. All users of gentoo-china overlay and gentoo-taiwan
+overlay is encouraged to migrate to gentoo-zh overlay, The two overlays will
+stop updating eventually,
+
+run: layman -f 
+run: layman -d gentoo-china ; layman -d gentoo-taiwan 
+run: layman -a gentoo-zh
+
+

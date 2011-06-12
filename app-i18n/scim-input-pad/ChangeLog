@@ -1,0 +1,18 @@
+# ChangeLog for app-i18n/scim-input-pad
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  07 Aug 2008; palatis <palatis@gmail.com> -files/digest-scim-input-pad-0.1.0,
+  -files/digest-scim-input-pad-0.1.1:
+  portage does not use `digest-PKGNAME-VERSION' anymore.
+  they now populate checksums in the `Manifest' file.
+
+
+*scim-input-pad-0.1.1 (26 May 2008)
+*scim-input-pad-0.1.0 (26 May 2008)
+
+  26 May 2008; scsichen <scsichen@gmail.com> +scim-input-pad-0.1.0.ebuild,
+  +scim-input-pad-0.1.1.ebuild, +files/digest-scim-input-pad-0.1.0,
+  +files/digest-scim-input-pad-0.1.1:
+  first import
+

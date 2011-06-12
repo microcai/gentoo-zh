@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/omnitty
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*omnitty-0.3.0 (08 Jan 2009)
+
+  08 Jan 2009; pokkys <pokkys@gmail.com> +metadata.xml, +omnitty-0.3.0.ebuild:
+  add omnitty and it's depend lib.
+
+
