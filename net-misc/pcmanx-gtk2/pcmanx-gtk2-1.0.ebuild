@@ -2,37 +2,43 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
-inherit flag-o-matic eutils multilib
+EAPI="3"
+
+inherit flag-o-matic eutils multilib autotools googlecode
 
 DESCRIPTION="PCMan is an easy-to-use telnet client mainly targets BBS users formerly writen by gtk2"
-HOMEPAGE="http://pcmanx-gtk2.googlecode.com"
-SRC_URI="${HOMEPAGE}/svn/website/release/${P}.tar.bz2"
+#HOMEPAGE="http://pcmanx-gtk2.googlecode.com"
+#SRC_URI="${HOMEPAGE}/svn/website/release/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="nsplugin libnotify socks5"
+IUSE="nsplugin +libnotify +proxy iplookup +wget"
 
 # FIXME:
 # pcmanx-gtk2 needs xulrunner
-RDEPEND="libnotify? ( x11-libs/libnotify )
-	net-misc/wget
-	nsplugin? ( >=www-client/mozilla-firefox-3.0 )
+COMMON_DEPEND="
+	libnotify? ( x11-libs/libnotify )
 	x11-libs/libXft
 	>=x11-libs/gtk+-2.4
 "
-DEPEND="${RDEPEND}
+
+RDEPEND="
+${COMMON_DEPEND}
+	wget? ( net-misc/wget )
+	nsplugin? ( >=net-libs/xulrunner-1.9 )
+"
+DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	sys-devel/gettext
 "
 
 RESTRICT="mirror"
 
-src_prepare() {
-	(has_version ">=net-libs/xulrunner-1.9" && use nsplugin ) && \
-		epatch "${FILESDIR}/${PN}-0.3.8-xulrunner.patch"
-}
+#src_prepare() {
+#	(has_version ">=net-libs/xulrunner-1.9" && use nsplugin ) && \
+#		epatch "${FILESDIR}/${PN}-0.3.8-xulrunner.patch"
+#}
 
 src_configure() {
 	# better move this to pkg_setup phase?
@@ -40,9 +46,10 @@ src_configure() {
 	filter-flags -ftree-vectorize
 
 	econf $(use_enable nsplugin plugin) \
-		$(use_enable socks5 proxy) \
+		$(use_enable proxy) \
 		$(use_enable libnotify) \
-		--enable-wget
+		$(use_enable wget)\
+		$(use_enable iplookup)
 }
 
 src_install(){
