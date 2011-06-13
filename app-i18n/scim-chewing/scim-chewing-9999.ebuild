@@ -1,6 +1,7 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /home/cvsroot/ebuildteam/app-i18n/scim-chewing-svn/scim-chewing-svn-0.2.0.9999.ebuild,v 1.1 2005/04/19 00:08:13 scsi Exp $
+EAPI=3
 
 inherit eutils subversion
 
@@ -8,30 +9,23 @@ DESCRIPTION="Chewing Input Method for SCIM"
 HOMEPAGE="http://chewing.csie.net/"
 #SRC_URI="http://chewing.csie.net/download/scim/${P}.tar.gz"
 
+ESVN_REPO_URI="https://svn.csie.net/chewing/scim-chewing/trunk"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="!app-i18n/scim-chewing
-		>=app-i18n/scim-1.0.0
-		dev-libs/libchewing-svn"
+DEPEND=">=app-i18n/scim-1.0.0
+		dev-libs/libchewing"
 
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-
-	ESVN_REPO_URI="https://svn.csie.net/chewing/scim-chewing/trunk"
-	ESVN_PROJECT="scim-chewing"
-	#ESVN_PATCHES="*.diff"
-	#ESVN_BOOTSTRAP="./autogen.sh"
-	subversion_src_unpack
-
+src_configure(){
+	eautoreconf || die
 }
 
 src_compile() {
-	glib-gettextize -f
-	./autogen.sh
-	econf || die
 	emake || die
 }
 
