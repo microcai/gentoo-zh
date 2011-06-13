@@ -1,78 +1,58 @@
 # ChangeLog for dev-libs/libchewing
-# Copyright 2000-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /home/cvsroot/ebuildteam/dev-libs/libchewing/ChangeLog,v 1.9 2006/05/15 08:26:21 palatis Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
 
-  02 Mar 2011; scsi <scsichen@gmail.com> +libchewing-0.3.3.ebuild:
+*libchewing-9999 (13 Jun 2011)
+
+  13 Jun 2011; microcai <microcai@fedoraproject.org>
+  -files/libchewing-0.3.2.chewing_zuin.patch, -libchewing-0.3.0.ebuild,
+  -libchewing-0.3.1.ebuild, -libchewing-0.3.2.ebuild,
+  -libchewing-0.3.2-r1.ebuild, -libchewing-0.3.3.ebuild,
+  +libchewing-9999.ebuild:
+  remove libchewing that already in portage
+
+*libchewing-0.3.3 (02 Mar 2011)
+
+  02 Mar 2011; scsichen <scsichen@gmail.com> +libchewing-0.3.3.ebuild:
   version bump
 
-  15 Jan 2010; scsi <scsichen@gmail.com> +libchewing-0.3.2-r1.ebuild,
-  +files/libchewing-0.3.2.chewing_zuin.patch:
-  fix issus discripted from http://code.google.com/p/chewing/issues/detail?id=352
+*libchewing-0.3.2-r1 (15 Jan 2010)
 
-  02 Dec 2008; scsi <scsichen@gmail.com> +libchewing-0.3.2.ebuild:
-  dev-libs/libchewing: version bump
+  15 Jan 2010; scsichen <scsichen@gmail.com>
+  +files/libchewing-0.3.2.chewing_zuin.patch, +libchewing-0.3.2-r1.ebuild:
+  fix issus discripted from
+  http://code.google.com/p/chewing/issues/detail?id=352
 
-  08 Oct 2008; scsi <scsichen@gmail.com> -libchewing-0.2.4.ebuild,
+*libchewing-0.3.2 (02 Dec 2008)
+
+  02 Dec 2008; scsichen <scsichen@gmail.com> +libchewing-0.3.2.ebuild:
+  version bump
+
+*libchewing-0.3.1 (08 Oct 2008)
+
+  08 Oct 2008; scsichen <scsichen@gmail.com> -libchewing-0.2.4.ebuild,
   -libchewing-0.2.5.ebuild, -libchewing-0.2.6.ebuild,
-  -libchewing-0.2.7.ebuild, +libchewing-0.3.1.ebuild:
-  dev-libs/libchewing: version bump
+  -libchewing-0.2.7.ebuild, libchewing-0.3.0.ebuild, +libchewing-0.3.1.ebuild:
+  version bump
 
-*libchewing-0.2.7 (5 May 2005)
-  5 May 2005; Palatis <palatis@gentoo.org.tw>
-  libchewing-0.3.0.ebuild
-    version bump (unstable release)
+  07 Aug 2008; palatis <palatis@gmail.com> -files/digest-libchewing-0.2.4,
+  -files/digest-libchewing-0.2.5, -files/digest-libchewing-0.2.6,
+  -files/digest-libchewing-0.2.7, -files/digest-libchewing-0.3.0:
+  portage does not use `digest-PKGNAME-VERSION' anymore.
+  they now populate checksums in the `Manifest' file.
 
-*libchewing-0.2.6 (28 Feb 2005)
-  28 Feb 2005; Palatis <palatis@gentoo.org.tw>
-  libchewing-0.2.6.ebuild
-    version bump.
 
-  25 Feb 2005; Palatis <palatis@gentoo.org.tw>
-  libchewing-0.2.5.901.ebuild
-    New beta version. KEKWORDS="".
+*libchewing-0.3.0 (26 May 2008)
+*libchewing-0.2.7 (26 May 2008)
+*libchewing-0.2.6 (26 May 2008)
+*libchewing-0.2.5 (26 May 2008)
+*libchewing-0.2.4 (26 May 2008)
 
-*libchewing-0.2.5 (28 Dec 2004)
-  28 Dec 2004; bennyc <bennyc@gentoo.org>
-    version bump
-
-*libchewing-0.2.4 (1 Dec 2004)
-   21 Dec 2004; scsi <scsi@gentoo.org.tw>
-     change source and homepage to chewing project homepage.
-   1  Dec 2004; scsi <scsi@gentoo.org.tw>
-   libchewing-0.2.4.ebuild:
-     fix configure parameter and make install error in ebuild file.
-     change keywords from ~x86 to x86
-   libchewing-0.2.3.ebuild:
-     fix configure parameter and make install error in ebuild file.
-   libchewing-0.2.2.ebuild:
-     fix configure parameter and make install error in ebuild file.
-
-*libchewing-0.2.4 (7 Oct 2004)
-
-  7 Oct 2004: Victor Tseng <palatis@gentoo.org.tw>
-    version bump to 0.2.4.
-
-*libchewing-0.2.3 (17 Aug 2004)
-
-  17 Aug 2004: Victor Tseng <palatis@gentoo.org.tw>
-    version bump to 0.2.3.
-
-  07 Jul 2004; Benny Chuang <bennyc@gentoo.org>
-    libchewing 0.2.2 thanks to Lloyd Huang
-  
-  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
-  libchewing-0.2.1.ebuild:
-    virtual/glibc -> virtual/libc
-
-  23 Jun 2004; David Holm <dholm@gentoo.org> libchewing-0.2.1.ebuild:
-    Added to ~ppc.
-
-  23 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> libchewing-0.2.1.ebuild:
-    Respect CFLAGS. Thanks to Palatis <palatis@gentoo.org.tw>
-
-*libchewing-0.2.1 (21 Jun 2004)
-
-  21 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> +libchewing-0.2.1.ebuild:
-    Initial import. Ebuild submitted by Benny Chuang <bennyc@gentoo.org>,
-    see bug #52133
+  26 May 2008; scsichen <scsichen@gmail.com> +libchewing-0.2.4.ebuild,
+  +libchewing-0.2.5.ebuild, +libchewing-0.2.6.ebuild,
+  +libchewing-0.2.7.ebuild, +libchewing-0.3.0.ebuild,
+  +files/digest-libchewing-0.2.4, +files/digest-libchewing-0.2.5,
+  +files/digest-libchewing-0.2.6, +files/digest-libchewing-0.2.7,
+  +files/digest-libchewing-0.3.0, +metadata.xml:
+  first import
 

@@ -1,5 +1,5 @@
-!dev-libs/libchewing virtual/libc dev-vcs/subversion net-misc/rsync
-!dev-libs/libchewing virtual/libc
+virtual/libc dev-util/pkgconfig dev-vcs/subversion net-misc/rsync
+virtual/libc
 0
 
 
