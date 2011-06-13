@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Jun 2011; microcai <microcai@fedoraproject.org> wangttf-1.3.ebuild:
+  wangttf: manifest change
+
   07 Aug 2008; palatis <palatis@gmail.com> -files/digest-wangttf-1.3:
   portage does not use `digest-PKGNAME-VERSION' anymore.
   they now populate checksums in the `Manifest' file.
