@@ -1,28 +1,28 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
-EAPI="2"
-inherit eutils
+EAPI="3"
+inherit eutils fdo-mime
 
+MY_PV="${PV/_beta/beta}"
 DESCRIPTION="llk for linux"
-HOMEPAGE="http://llk-linux.sourceforge.net/ \
-http://linuxfans.org/nuke/modules.php?name=Forums&file=viewforum&f=65"
-SRC_URI="http://llk-linux.sourceforge.net/dist/${PN}-2.3beta1.tar.gz"
+HOMEPAGE="http://llk-linux.sourceforge.net"
+SRC_URI="${HOMEPAGE}/dist/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 RESTRICT="mirror"
 KEYWORDS="~amd64 ~x86"
-
 IUSE=""
 
 DEPEND="media-libs/libpng
 	media-sound/esound
-	 >=x11-libs/gtk+-2.12[jpeg]"
-
+	x11-libs/gtk+:2"
 RDEPEND="${DEPEND}"
 
-EPATCH_SOURCE="${FILESDIR}/${P}-pthread.patch \
+S="${WORKDIR}/${PN}-2.3"
+
+EPATCH_SOURCE="${FILESDIR}/llk_linux-2.3-pthread.patch \
 	${FILESDIR}/score-segv.patch"
 
 src_unpack() {
@@ -31,15 +31,11 @@ src_unpack() {
 	epatch ${EPATCH_SOURCE}
 }
 
-src_compile() {
-	einfo "Running autoreconf"
-	cd "${S}"
-	autoreconf -f -i || die "autoreconf failed"
-	econf || die "econf failed"
-
-	emake || die "emake failed"
-}
-
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	newmenu "${S}"/llk_linux.desktop llk_linux.desktop
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
 }
