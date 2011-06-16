@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="net-im/pidgin[-qq]
+RDEPEND="
+	|| ( >=net-im/pidgin-2.7.11[-qq]  >=net-im/pidgin-2.8.0 )
 	x11-libs/gtk+:2
 	>=dev-libs/nss-3.11"
 
@@ -25,6 +26,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	./autogen.sh || die "autogen.sh failed"
+#	./autogen.sh || die "autogen.sh failed"
 	eautoreconf
 }
