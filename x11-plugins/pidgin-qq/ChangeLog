@@ -2,6 +2,32 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-  11 Mar 2011; Havanna Sha <havanna.sha@gmail.com>
-  +Manifest, +metadata.xml, +pidgin-qq-9999.ebuild:
-  first commit of x11-plugins/pidgin-qq, version 9999
+  16 Jun 2011; microcai <microcai@fedoraproject.org> pidgin-qq-9999.ebuild:
+  fix pidgin-qq dependencies
+
+  12 May 2011; microcai <microcaicai@gmail.com> pidgin-qq-9999.ebuild:
+  update pidgin-qq to use googlecode eclass
+
+  13 Mar 2011; havanna.sha <havanna.sha@gmail.com> pidgin-qq-9999.ebuild:
+  fix license
+
+  13 Mar 2011; havanna.sha <havanna.sha@gmail.com> pidgin-qq-9999.ebuild:
+  fix some
+
+  13 Mar 2011; havanna.sha <havanna.sha@gmail.com> pidgin-qq-9999.ebuild:
+  fix IUSE
+
+*pidgin-qq-9999 (13 Mar 2011)
+
+  13 Mar 2011; havanna.sha <havanna.sha@gmail.com> +pidgin-qq-9999.ebuild:
+  refresh Manifest and pidgin-qq-9999.ebuild
+
+  13 Mar 2011; havanna.sha <havanna.sha@gmail.com> -pidgin-qq-9999.ebuild:
+  refresh Manifest and pidgin-qq-9999.ebuild
+
+*pidgin-qq-9999 (13 Mar 2011)
+
+  13 Mar 2011; havanna.sha <havanna.sha@gmail.com> +metadata.xml,
+  +pidgin-qq-9999.ebuild:
+  add x11-plugins/pidgin-qq
+
