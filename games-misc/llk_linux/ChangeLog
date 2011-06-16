@@ -1,13 +1,31 @@
-# ChangeLog for games-misc/llk_linu
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# ChangeLog for games-misc/llk_linux
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-  11 Jun 2008; Lan Yixun <dennis.yxun@gmail.com> ChangeLog:
-  update
+*llk_linux-2.3_beta1-r1 (15 Jun 2011)
 
-*llk_linux-2.3-beta1 (05 MAY 2008)
+  15 Jun 2011; Havanna <danny.sha@163.com> +llk_linux-2.3_beta1-r1.ebuild,
+  -llk_linux-2.3.ebuild:
+  fix llk_linux ebuild
 
-  05 MAY 2008; LanYixun <dennis.yxun@gmail.com> ChangeLog:
-  +llk_linux-2.3-beta1.ebuild:
-  Initial import.  Ebuild submitted by me
+  03 Apr 2009; dennis.yxun <dennis.yxun@gmail.com> llk_linux-2.3.ebuild:
+  epa2 support for llk_linux
+
+  Signed-off-by: dennis.yxun <dennis.yxun@gmail.com>
+
+  28 Aug 2008; dennis.yxun <dennis.yxun@gmail.com> llk_linux-2.3.ebuild:
+  remove Conditional gtk+ flag
+
+  07 Aug 2008; dennis.yxun <dennis.yxun@gmail.com> llk_linux-2.3.ebuild:
+  correct llk_linux DEPEND
+
+  07 Aug 2008; dennis.yxun <dennis.yxun@gmail.com> llk_linux-2.3.ebuild:
+  commit
+
+*llk_linux-2.3 (05 Aug 2008)
+
+  05 Aug 2008; dennis.yxun <dennis.yxun@gmail.com>
+  +files/llk_linux-2.3-pthread.patch, +files/score-segv.patch,
+  +llk_linux-2.3.ebuild, +metadata.xml:
+  checkin
 
