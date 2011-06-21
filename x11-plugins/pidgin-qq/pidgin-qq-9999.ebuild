@@ -27,5 +27,6 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 #	./autogen.sh || die "autogen.sh failed"
+	mkdir -pv ${S}/m4
 	eautoreconf
 }
