@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*pidgin-qq-195 (21 Jun 2011)
+
+  21 Jun 2011; microcai <microcai@fedoraproject.org> +pidgin-qq-195.ebuild:
+  add pigin-qq-195 to checkout v195
+
   21 Jun 2011; microcai <microcai@fedoraproject.org> pidgin-qq-9999.ebuild:
   fix pidgin-qq m4/ dir not found error
 
