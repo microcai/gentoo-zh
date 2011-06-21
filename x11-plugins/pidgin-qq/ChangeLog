@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  21 Jun 2011; microcai <microcai@fedoraproject.org> pidgin-qq-9999.ebuild:
+  fix pidgin-qq m4/ dir not found error
+
   16 Jun 2011; microcai <microcai@fedoraproject.org> pidgin-qq-9999.ebuild:
   fix pidgin-qq dependencies
 
