@@ -6,41 +6,44 @@ EAPI="2"
 inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Another Traditional Chinese IM."
-HOMEPAGE="http://www.csie.nctu.edu.tw/~cp76/gcin/ http://cle.linux.org.tw/trac/wiki/GcinGirlForNoBopomofo"
+HOMEPAGE="http://hyperrate.com/dir.php?eid=67"
 SRC_URI="http://www.csie.nctu.edu.tw/~cp76/gcin/download/${P/_/.}.tar.bz2
 	chinese-sound? ( http://www.csie.nctu.edu.tw/~cp76/gcin/download/ogg.tgz )"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~hppa"
-IUSE="qt3 filter-nobopomofo chinese-sound anthy qt4"
+KEYWORDS="~x86 ~amd64"
+IUSE="filter-nobopomofo chinese-sound anthy chewing gtk3 qt4"
 
-# XXX: Missing QT4 dependencies.
 DEPEND=">=x11-libs/gtk+-2
-	>=dev-libs/glib-2.4
-	>=dev-libs/atk-1.0.1
-	>=x11-libs/pango-1.4
 	anthy? ( >=app-i18n/anthy-9100 )
-	qt3? ( x11-libs/qt:3 )
+	chewing? ( dev-libs/libchewing )
+	gtk3? ( x11-libs/gtk+:3 )
 	qt4? ( x11-libs/qt-core:4 x11-libs/qt-gui )"
 RDEPEND="${DEPEND}
 	chinese-sound? ( media-sound/vorbis-tools[ogg123] )"
+DEPEND="${DEPEND}
+	dev-util/pkgconfig
+	sys-devel/gettext"
 
 RESTRICT="mirror"
 S=${WORKDIR}/${P/_/.}
 
 
 src_prepare() {
-	epatch "${FILESDIR}/gcin-1.4.6.pre16-qt4-fix.patch"
-	#epatch "${FILESDIR}/gcin-1.4.7.pre22-utf8_bom_fix.patch"
+	echo "${P}" > ${S}/VERSION.gcin
+	#epatch "${FILESDIR}/gcin-1.4.6.pre16-qt4-fix.patch"
+	epatch "${FILESDIR}/gcin-1.6.4_pre23_moc_path_fix.patch"
 }
 
 src_configure() {
-	default
-	# To avoid magic dependencies.
-	! use anthy && echo "USE_ANTH=NO" >> config.mak
-	! use qt3 && echo "QT_IM=NO" >> config.mak
-	! use qt4 && echo "QT4_IM=NO" >> config.mak
+	econf --use_i18n=Y \
+		--use_tsin=Y \
+		--use_qt3=N \
+		$(! use anthy && echo --use_anthy=N ) \
+		$(! use chewing && echo --use_chewing=N ) \
+		$(! use qt4 && echo --use_qt4=N ) \
+		$(! use gtk3 && echo --use_gtk3=N )
 }
 
 src_compile() {
