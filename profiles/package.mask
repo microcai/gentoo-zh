@@ -2,14 +2,6 @@
 # Use eapi 4, needs portage >=2.1.9.27
 ~app-i18n/fcitx-9999
 
-# bones7456 <bones7456@gmail.com> (09 Feb 2011)
-# Masked for removal in 30 days. 
-# Portage app-portage/pfl already contain this program.
-# please install app-portage/pfl instead.
-app-portage/e-file
-
-
-
 # scsi <scsichen@gmail.com> (16 Nov 2007)
 # can not be compile, need fix
 =gnome-extra/drwright-0.18
@@ -22,4 +14,7 @@ app-portage/e-file
 # source URL broken
 <=x11-misc/xim-select-0.0.3
 
+# microcai <microcaicai@gmail.com> ( 21, June 2011)
+# mask -9999 version
+>=x11-plugins/pidgin-qq-9999
 
