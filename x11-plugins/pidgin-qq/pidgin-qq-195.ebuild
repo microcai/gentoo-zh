@@ -6,9 +6,11 @@ EAPI="3"
 
 HOMEPAGE="http://libqq-pidgin.googlecode.com"
 
-inherit autotools googlecode
+inherit autotools googlecode subversion
 
 DESCRIPTION="Pidgin QQ2010 PlugIn"
+
+ESVN_REPO_URI="${HOMEPAGE}/svn/trunk/"
 
 SRC_URI=""
 
