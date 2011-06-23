@@ -4,7 +4,7 @@
 
 EAPI=3
 
-inherit googlecode
+inherit toolchain-funcs googlecode
 
 
 DESCRIPTION="A portable open source qq CLI client"
@@ -19,10 +19,9 @@ RDEPEND="${DEPEND}"
 
 src_compile(){
 	emake -C src -flinux.mak \
-	CC="${CHOST}-gcc" \
+	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
 	CFLAGS="${CFLAGS} -c -Wall" \
-	LDFLAGS="${LDFLAGS} -lpthread" \
-	LD="${CHOST}-gcc"
+	LDFLAGS="${LDFLAGS} -lpthread"
 }
 
 src_install(){
