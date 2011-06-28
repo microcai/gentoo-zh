@@ -3,6 +3,10 @@
 
 *gcin-1.6.4_pre23 (21 Jun 2011)
 
+  28 Jun 2011; scsi <scsichen@gmail.com> -gcin-1.6.4_pre23.ebuild,
+  +gcin-1.6.4_pre25.ebuild:
+  version bump
+
   21 Jun 2011; scsi <scsichen@gmail.com> -gcin-1.6.4_pre10.ebuild,
   +gcin-1.6.4_pre23.ebuild, +files/gcin-1.6.4_pre23_moc_path_fix.patch:
   version bump
