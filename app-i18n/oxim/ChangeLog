@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/oxim
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*oxim-1.4.4 (30 Jun 2011)
+
+  30 Jun 2011; scsi <scsichen@gmail.com> -oxim-1.4.3.ebuild,
+  +oxim-1.4.4.ebuild:
+  version bump
 
   06 Jul 2010; scsi <scsichen@gmail.com> Manifest:
   fix manifest file checksum error
