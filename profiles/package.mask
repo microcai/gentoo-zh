@@ -18,3 +18,7 @@
 # mask -9999 version
 >=x11-plugins/pidgin-qq-9999
 
+# microcai <microcaicai@gmail.com> ( 21, June 2011)
+# mask for test
+net-im/instantbird
+
