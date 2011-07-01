@@ -15,29 +15,15 @@ S="${WORKDIR}/${P}-src"
 LICENSE=""
 SLOT="0"
 KEYWORDS="~amd64 ~86"
-IUSE="+system-xulrunner +system-libpurple system-sqlite"
+IUSE="+system-libpurple system-sqlite"
 
 RDEPEND="
 	system-libpurple? ( net-im/pidgin[gtk] )
-	system-xulrunner? (  >=net-libs/xulrunner-2.0 )
-	!system-xulrunner? ( 
-
-	>=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.12.9
-	>=dev-libs/nspr-4.8.7
-	>=dev-libs/glib-2.26
-	media-libs/libpng[apng]
-	dev-libs/libffi
-		system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
-
-	)
-
-
+	>=net-libs/xulrunner-2.0
 	"
 # We don't use PYTHON_DEPEND/PYTHON_USE_WITH for some silly reason
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	=dev-lang/python-2*[sqlite]"
+	dev-util/pkgconfig"
 
 src_configure(){
 	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
@@ -63,8 +49,8 @@ src_configure(){
 	mozconfig_annotate '' --with-system-png
 	use system-libpurple && mozconfig_annotate '' --enable-purple-plugins
 
-	use system-xulrunner &&	mozconfig_annotate '' --with-system-libxul
-	use system-xulrunner &&	mozconfig_annotate '' --with-libxul-sdk="${EPREFIX}/usr/$(get_libdir)/xulrunner-devel"
+	mozconfig_annotate '' --with-system-libxul
+	mozconfig_annotate '' --with-libxul-sdk="$(pkg-config --variable=sdkdir libxul)"
 
 	# Other ff-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
@@ -86,8 +72,10 @@ src_configure(){
 }
 
 src_compile(){
+	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" \
+	LDFLAGS="$LDFLAGS -Wl,-rpath,${MOZILLA_FIVE_HOME}" \
 	emake -f client.mk build || die "emake failed"
 }
 
@@ -95,7 +83,10 @@ src_install() {
 	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" \
-	emake -f client.mk DESTDIR="${D}" install || die "emake install failed" 
+
+	emake -f client.mk DESTDIR="${D}" install || die "emake install failed"
+
+	# TODO install icon
 }
 
 pkg_preinst() {
