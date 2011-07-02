@@ -4,7 +4,7 @@
 
 EAPI=3
 
-inherit toolchain-funcs qt4-r2 subversion
+inherit qt4-r2 subversion
 
 DESCRIPTION="UMPlayer is cross-platform and installer packages are available for
 the Windows, Mac and GNU / Linux operating systems. It is completely free to use
@@ -14,32 +14,30 @@ SRC_URI=""
 
 ESVN_REPO_URI="https://${PN}.svn.sourceforge.net/svnroot/${PN}/${PN}/trunk@r172"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~86 ~mingw32"
 IUSE=""
 
-RDEPEND="x11-libs/qt-core:4
-x11-libs/qt-gui:4
-dev-libs/glib:2
+RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
-src_prepare(){
-	echo CONF_PREFIX=/ >> Makefile
-	echo REFIX=/usr >> Makefile
-	echo CC="$(tc-getCC)" >> Makefile
-	echo CXX=$(tc-getCXX) >> Makefile
-	echo LD=$(tc-getLD) >> Makefile
-	echo LINK='$LD' >> Makefile
+src_prepare() {
+	sed -i -e 's/\$(QMAKE).\$(QMAKE_OPTS).\&\&.//' Makefile || die "Sed failed!"
+	sed -i -e 's/PREFIX=\/usr\/local/PREFIX=\/usr/' Makefile || die "Sed failed!"
 }
 
-src_compile(){
-	emake CONF_PREFIX=/ PREFIX=/usr \
-	CC=$(tc-getCC) CXX=$(tc-getCXX) LD=$(tc-getLD) LINK=$(tc-getLD) || die
+src_configure() {
+	cd src/
+	eqmake4
 }
 
-src_install(){
-	emake DESTDIR="${D}" INSTALL_ROOT="${D}" CONF_PREFIX=/ PREFIX=/usr install || die
+src_compile() {
+	emake || die "emake failed"
+}
+
+src_install() {
+	emake DESTDIR="${D}" PREFIX="/usr" install || die
 }
 
