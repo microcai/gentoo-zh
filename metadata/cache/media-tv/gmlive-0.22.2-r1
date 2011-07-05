@@ -8,7 +8,7 @@ GPL-2
 The gtk frontend of the iptv "mms", "pplive", "pps" and "sopcast"
 ~amd64 ~x86
 eutils multilib portability toolchain-funcs
-extra
+extra totem
 
 
 

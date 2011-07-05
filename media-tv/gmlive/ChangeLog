@@ -1,38 +1,106 @@
 # ChangeLog for media-tv/gmlive
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*gmlive-0.22.3 (05 Jul 2011)
+
+  05 Jul 2011; microcai <microcai@fedoraproject.org> +gmlive-0.22.3.ebuild:
+  gmlive version bump
+
+*gmlive-0.22.2-r1 (05 Jul 2011)
+
+  05 Jul 2011; microcai <microcai@fedoraproject.org> -gmlive-0.22.2.ebuild,
+  +gmlive-0.22.2-r1.ebuild:
+  add missing totem use flag
+
+*gmlive-0.22.2 (08 Nov 2009)
+
+  08 Nov 2009; lidaibin <lidaibin@gmail.com> +gmlive-0.22.2.ebuild:
+  Merge sopcast and libppswrapper into gmlive-extra.
+  upgrade gmlive to version 0.22.2.
+  upgrade iptux to version 0.5.1.
+
 
 *gmlive-0.22.1 (02 Sep 2009)
 
-  02 Sep 2009; Coderoar <coderoar@gmail.com> +gmlive-0.22.1.ebuild,
+  02 Sep 2009; coderoar <coderoar@gmail.com> +gmlive-0.22.1.ebuild,
   metadata.xml:
-  Bump to lastest release
+  Version bump to 0.22.1
 
-  11 Feb 2009; Hong Hao <oahong@gmail.com> gmlive-0.21.2.ebuild:
+*gmlive-0.22 (24 Aug 2009)
+
+  24 Aug 2009; oahong <oahong@gmail.com> -gmlive-0.22_beta.ebuild,
+  +gmlive-0.22.ebuild:
+  Bump gmlive.
+
+*gmlive-0.22_beta (07 Aug 2009)
+
+  07 Aug 2009; oahong <oahong@gmail.com>
+  +files/gmlive-0.22-totem-plugin.patch, -gmlive-0.21.2.ebuild,
+  +gmlive-0.22_beta.ebuild:
+  Bump gmlive
+  http://linuxtoy.org/archives/gmlive-022-beta-gets-pplive-support.html
+
+  11 Feb 2009; oahong <oahong@gmail.com> gmlive-0.21.2.ebuild:
   Use channel list on www.sopcast.cn
 
-  11 Feb 2009; Hong Hao <oahong@gmail.com> -gmlive-0.21.1.ebuild,
+*gmlive-0.21.2 (11 Feb 2009)
+
+  11 Feb 2009; oahong <oahong@gmail.com> -gmlive-0.21.1.ebuild,
   +gmlive-0.21.2.ebuild:
   Version bump per wd_afei's request, Nuke old version.
 
-  19 Nov 2008; Hong Hao <oahong@gmail.com> -gmlive-0.20.2.ebuild,
+*gmlive-0.21.1 (19 Nov 2008)
+
+  19 Nov 2008; oahong <oahong@gmail.com> -gmlive-0.20.2.ebuild,
   +gmlive-0.21.1.ebuild, metadata.xml:
   Bump to lastest release. Remove old version.
 
-  29 May 2008; lidaibin <lidaibin@gmail.com> gmlive-0.20.2.ebuild:
-  regenerate the digest of the gmlive
+  29 May 2008; lidaibin <lidaibin@gmail.com> gmlive-0.20.2.ebuild,
+  +metadata.xml:
+  Add the USE flag "totem" to the gmlive
+
+*gmlive-0.20.2 (17 May 2008)
 
   17 May 2008; lidaibin <lidaibin@gmail.com> -gmlive-0.20.1.ebuild,
   +gmlive-0.20.2.ebuild:
   Upgrade the gmlive to 0.20.2 Upgrade the gmlive to 0.20.2 -v
 
-  20 Apr 2008; Zhang Le <r0bertz@gentoo.org> Manifest:
-  fixed manifest
-
-  20 Apr 2008; Zhang Le <r0bertz@gentoo.org> gmlive-0.20.1.ebuild:
+  20 Apr 2008; robert.zhangle <robert.zhangle@gmail.com> gmlive-0.20.1.ebuild:
   added RESTRICT mirror
 
-  20 Apr 2008; Zhang Le <r0bertz@gentoo.org> gmlive-0.20.1.ebuild:
+  20 Apr 2008; robert.zhangle <robert.zhangle@gmail.com> gmlive-0.20.1.ebuild:
   added necessary space after ( and before ) in dependency specification;
   removed ~ppc keyword since sopcast won't work on ppc
+
+  17 Apr 2008; lidaibin <lidaibin@gmail.com> gmlive-0.20.1.ebuild:
+  fixed the ebuild "gmlive"
+
+
+*gmlive-0.20.1 (25 Feb 2008)
+
+  25 Feb 2008; lidaibin <lidaibin@gmail.com> -gmlive-0.20.ebuild,
+  +gmlive-0.20.1.ebuild:
+  upgrade gmlive to version 0.20.1
+
+
+  16 Feb 2008; lidaibin <lidaibin@gmail.com> gmlive-0.20.ebuild:
+  delete the transmission and fixed the dependency relationship for gmlive
+
+
+  14 Feb 2008; lidaibin <lidaibin@gmail.com> gmlive-0.20.ebuild:
+  modified the tips for the ebuild gmlive, the command "nslive -p 33" should
+  be executed after install nslive
+
+
+  14 Feb 2008; lidaibin <lidaibin@gmail.com> gmlive-0.20.ebuild:
+  Modified the dependency relationship for the gmlive ebuild, add the package
+  "media-video/mplayer" to "DEPEND"
+
+
+*gmlive-0.20 (14 Feb 2008)
+
+  14 Feb 2008; lidaibin <lidaibin@gmail.com> +gmlive-0.20.ebuild:
+  Add the ebuild "nslive" and "gmlive"
+
 
