@@ -8,7 +8,7 @@ http://www.instantbird.com/
 
 ~amd64 ~86
 eutils flag-o-matic gnome2-utils mozconfig-3 mozcoreconf-2 multilib portability python toolchain-funcs
-+system-libpurple system-sqlite custom-optimization +alsa +dbus debug libnotify startup-notification system-sqlite wifi
++system-libpurple system-sqlite custom-cflags custom-optimization +alsa +dbus debug libnotify startup-notification system-sqlite wifi
 
 
 
