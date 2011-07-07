@@ -1,0 +1,26 @@
+# ChangeLog for gnome-extra/nautilus-dropbox
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/ChangeLog,v 1.4 2011/05/11 15:34:32 hwoarang Exp $
+
+*nautilus-dropbox-0.6.7-r1 (11 May 2011)
+
+  11 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  +nautilus-dropbox-0.6.7-r1.ebuild:
+  Use system's rst2man module. Thanks to Arfrever Frehtes Taifersar Arahesis
+  <arfrever@gentoo.org>. Bug #365181
+
+  06 May 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  nautilus-dropbox-0.6.7.ebuild:
+  Use Python 2 (bug #366287).
+
+  16 Feb 2011; Jeremy Olexa <darkside@gentoo.org>
+  nautilus-dropbox-0.6.7.ebuild:
+  Apply fixes for Gentoo Prefix, bug 353578 by Dan Wallis
+
+*nautilus-dropbox-0.6.7 (28 Jan 2011)
+
+  28 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  +nautilus-dropbox-0.6.7.ebuild, +metadata.xml:
+  Moved from sunrise overlay. Thanks to everybody from bug 237433 that helped
+  developing this ebuild
+
