@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -7,7 +7,7 @@ EAPI=2
 inherit eutils qt4
 DESCRIPTION="QStarDict is a StarDict clone written with using Qt"
 HOMEPAGE="http://qstardict.ylsoftware.com/"
-SRC_URI="http://qstardict.ylsoftware.com/files/${P}.tar.bz2"
+SRC_URI="http://qstardict.ylsoftware.com/files/${P}.tar.bz2 -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ia64"
@@ -23,7 +23,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 PROVIDE="virtual/stardict"
 
-PATCHES=( "$FILESDIR/qstardict-gcc-4.4.patch" )
+#PATCHES=( "$FILESDIR/qstardict-gcc-4.4.patch" )
 src_compile() {
 	QMAKE_FLAGS=""
 	if ! use dbus; then
