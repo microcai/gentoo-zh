@@ -1,0 +1,22 @@
+
+x11-libs/libgtk+:2 x11-libs/libpng:1.2
+0
+https://download.alipay.com/alipaysc/linux/aliedit/1.0.3.20/aliedit.tar.gz
+
+https://securitycenter.alipay.com/sc/aliedit/intro.htm
+Other
+支付宝安全控件对密码输入进行保护
+~amd64 ~x86
+eutils multilib nsplugins portability toolchain-funcs
+
+
+
+
+4
+
+compile install unpack
+
+
+
+
+
