@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Jul 2011; microcai <microcai@fedoraproject.org> aliedit-1.0.3.20.ebuild:
+  fix depend
+
 *aliedit-1.0.3.20 (12 Jul 2011)
 
   12 Jul 2011; microcai <microcai@fedoraproject.org> +aliedit-1.0.3.20.ebuild:

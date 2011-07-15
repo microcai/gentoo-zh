@@ -1,5 +1,5 @@
 
-x11-libs/libgtk+:2 x11-libs/libpng:1.2
+x11-libs/libgtk+:2 media-libs/libpng:1.2
 0
 https://download.alipay.com/alipaysc/linux/aliedit/1.0.3.20/aliedit.tar.gz
 
