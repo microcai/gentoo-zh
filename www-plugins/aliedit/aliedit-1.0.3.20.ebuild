@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="x11-libs/libgtk+:2
-	x11-libs/libpng:1.2"
+	media-libs/libpng:1.2"
 
 S="${WORKDIR}"
 
