@@ -15,6 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+# we can not mirror it
+RESTRICT="mirror"
+
 DEPEND=""
 RDEPEND="x11-libs/libgtk+:2
 	media-libs/libpng:1.2"
