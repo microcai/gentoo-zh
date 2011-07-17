@@ -104,5 +104,5 @@ src_install() {
 	# Do not compress docs as we need it for deadbeef's help function.
 	PORTAGE_DOCOMPRESS_SKIP+=( "/usr/share/doc/${PF}" )
 
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 }
