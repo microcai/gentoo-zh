@@ -19,7 +19,7 @@ IUSE=""
 RESTRICT="mirror"
 
 DEPEND=""
-RDEPEND="x11-libs/libgtk+:2
+RDEPEND="x11-libs/gtk+:2
 	media-libs/libpng:1.2"
 
 S="${WORKDIR}"
