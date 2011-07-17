@@ -3,6 +3,9 @@
 # $Header: $
 
   17 Jul 2011; microcai <microcai@fedoraproject.org> aliedit-1.0.3.20.ebuild:
+  aliedit: fix dep
+
+  17 Jul 2011; microcai <microcai@fedoraproject.org> aliedit-1.0.3.20.ebuild:
   aliedit-1.0.3.20.ebuild use RESTRICT="mirror" cause we cannot mirror it
 
   15 Jul 2011; microcai <microcai@fedoraproject.org> aliedit-1.0.3.20.ebuild:
