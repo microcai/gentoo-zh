@@ -1,184 +1,55 @@
-# ChangeLog for app-dicts/stardict
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.34 2007/03/26 06:49:29 kevquinn Exp $
+# ChangeLog for app-text/stardict
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*stardict-3.0.3 (12 Aug 2011)
+
+  12 Aug 2011; microcai <microcai@fedoraproject.org>
+  -files/stardict-3.0.2-fix-ld.patch, -stardict-3.0.2.ebuild,
+  +stardict-3.0.3.ebuild:
+  startdict version bump
+
+  16 May 2011; microcai <microcaicai@gmail.com> stardict-3.0.2.ebuild:
+  添加 ~amd64 keywords
+
   13 May 2011; microcai <microcaicai@gmail.com>
-  remove all old ebuild
+  -files/stardict-3.0.1-changelog-minor-typo-fixes.patch,
+  -files/stardict-3.0.1-configure.in-EST.diff,
+  -files/stardict-3.0.1-esd.patch, -files/stardict-3.0.1-gcc4.3.patch,
+  -files/stardict-3.0.1-gcc4.4.patch, -files/stardict-3.0.1-gconf-m4.diff,
+  -files/stardict-3.0.1-gucharmap2.patch,
+  -files/stardict-3.0.1-transparent_trayicon.patch, -stardict-3.0.1-r5.ebuild:
+  clean up ibus and old stardict ebuild
+
+
+  11 May 2011; microcai <microcaicai@gmail.com> stardict-3.0.2.ebuild:
+  EAPI=3 ! very important for us!
+
+
+  11 May 2011; microcai <microcaicai@gmail.com> stardict-3.0.2.ebuild:
+  stardict-3.0.2,
+
+  add:
+
+  use_enable epg gpe-support
+
+
+*stardict-3.0.2 (11 May 2011)
 
   11 May 2011; microcai <microcaicai@gmail.com>
-  add stardict-3.0.2 ebuild
-  
-  17 Apr 2009; Yu Yuwei <acevery@gmail.com> -stardict-3.0.1-r4.ebuild,
-  +stardict-3.0.1-r5.ebuild:
-  add dev-libs/libsigc++ as dependency
+  +files/stardict-3.0.2-fix-ld.patch, +stardict-3.0.2.ebuild:
+  添加了 stardict-3.0.2
 
-  17 Mar 2009; Yu Yuwei <acevery@gmail.com> -stardict-3.0.1-r2.ebuild,
-  -stardict-3.0.1-r3.ebuild, +stardict-3.0.1-r4.ebuild,
-  +files/stardict-3.0.1-gucharmap2.patch:
-  port gucharmap2 patch from portage
 
-  09 Nov 2008; Yu Yuwei <acevery@gmail.com> +stardict-3.0.1-r3.ebuild,
+*stardict-3.0.1-r5 (04 Feb 2010)
+
+  04 Feb 2010; acevery <acevery@gmail.com>
   +files/stardict-3.0.1-changelog-minor-typo-fixes.patch,
-  +files/stardict-3.0.1-esd.patch,
-  +files/stardict-3.0.1-transparent_trayicon.patch:
-  Add esd patch, which enable gnome support without esd; pull two patches from
-  portage.
+  +files/stardict-3.0.1-configure.in-EST.diff,
+  +files/stardict-3.0.1-esd.patch, +files/stardict-3.0.1-gcc4.3.patch,
+  +files/stardict-3.0.1-gcc4.4.patch, +files/stardict-3.0.1-gconf-m4.diff,
+  +files/stardict-3.0.1-gucharmap2.patch,
+  +files/stardict-3.0.1-transparent_trayicon.patch, +metadata.xml,
+  +stardict-3.0.1-r5.ebuild:
+  mv stardict to app-text
 
-  24 Aug 2008; Zhang Le <r0bertz@gentoo.org> metadata.xml:
-  added use description to startdict's metadata.xml
-
-  22 Aug 2008; Zhang Le <r0bertz@gentoo.org> stardict-3.0.1-r2.ebuild,
-  +files/stardict-3.0.1-gcc4.3.patch:
-  added stardict-3.0.1-gcc4.3.patch
-
-  20 Apr 2008; Zhang Le <r0bertz@gentoo.org> stardict-3.0.1-r2.ebuild:
-  fixed dependency, >=gnome-base/libgnomeui-2.20
-
-  26 Mar 2007; Kevin F. Quinn <kevquinn@gentoo.org>
-  -files/stardict-config.sh:
-  Remove insecure legacy script from files/ - bug #159543
-
-  22 Mar 2007; MATSUU Takuto <matsuu@gentoo.org> stardict-2.4.6-r1.ebuild,
-  stardict-2.4.8.ebuild:
-  Fixed dependency, bug #171597
-
-  25 Jan 2007; Marius Mauch <genone@gentoo.org> stardict-2.4.2.ebuild,
-  stardict-2.4.6-r1.ebuild, stardict-2.4.8.ebuild:
-  Replacing einfo with elog
-
-  03 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org>
-  stardict-2.4.6-r1.ebuild:
-  Stable on sparc
-
-  30 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
-  stardict-2.4.6-r1.ebuild:
-  ppc stable
-
-*stardict-2.4.8 (27 Jul 2006)
-
-  27 Jul 2006; Alastair Tse <liquidx@gentoo.org> -stardict-2.2.1.ebuild,
-  -stardict-2.4.1.ebuild, stardict-2.4.2.ebuild, -stardict-2.4.3.ebuild,
-  -stardict-2.4.4.ebuild, stardict-2.4.6-r1.ebuild, +stardict-2.4.8.ebuild:
-  version bump (#130608). stable bump for x86 for 2.4.6-r1.
-
-  07 May 2006; Markus Rothe <corsair@gentoo.org> stardict-2.4.6-r1.ebuild:
-  Stable on ppc64; bug #108571
-
-  23 Jan 2006; Markus Rothe <corsair@gentoo.org> stardict-2.4.6-r1.ebuild:
-  Added ~ppc64; bug #108571
-
-*stardict-2.4.6-r1 (20 Jan 2006)
-
-  20 Jan 2006; Harald van D某k <truedfx@gentoo.org> -stardict-2.4.6.ebuild,
-  +stardict-2.4.6-r1.ebuild:
-  Upstream re-released 2.4.6.
-
-*stardict-2.4.6 (19 Jan 2006)
-
-  19 Jan 2006; Harald van D某k <truedfx@gentoo.org> +stardict-2.4.6.ebuild:
-  Version bump, making a bunch of GNOME deps optional
-
-  19 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> stardict-2.4.2.ebuild:
-  Stable on sparc
-
-  02 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> stardict-2.4.2.ebuild,
-  stardict-2.4.3.ebuild, stardict-2.4.4.ebuild:
-  Keyworded ~sparc
-
-*stardict-2.4.4 (13 Jan 2005)
-
-  13 Jan 2005; Alastair Tse <liquidx@gentoo.org> +stardict-2.4.4.ebuild:
-  version bump (#73584)
-
-  22 Nov 2004; Jason Huebel,,, <jhuebel@gentoo.org> stardict-2.4.3.ebuild:
-  ~amd64
-
-*stardict-2.4.3 (22 Sep 2004)
-
-  22 Sep 2004; Alastair Tse <liquidx@gentoo.org> +stardict-2.4.3.ebuild:
-  version bump
-
-  19 Aug 2004; foser <foser@gentoo.org> stardict-2.2.1,2.4.1.ebuild :
-  Also fix for gtk+-2.4 issues (#45791)
-
-  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> stardict-2.4.2.ebuild:
-  Add inherit eutils
-
-  22 Apr 2004; <khai@gentoo.org> +files/stardict-gtk24.patch,
-  stardict-2.4.2.ebuild:
-  Applied patch to fix compilation against gtk+-2.4.
-
-  06 Mar 2004; Alastair Tse <liquidx@gentoo.org> stardict-2.4.2.ebuild:
-  make tools executable (#43719)
-
-*stardict-2.4.2 (07 Jan 2004)
-
-  07 Jan 2004; Alastair Tse <liquidx@gentoo.org> stardict-2.4.1.ebuild,
-  stardict-2.4.2.ebuild:
-  version bump. 2.4.2 requires a new modified dictionary format. you'll have to
-  remerge your dictionaries to the same version 2.4.2
-
-*stardict-2.4.1 (30 Oct 2003)
-
-  30 Oct 2003; Alastair Tse <liquidx@gentoo.org> stardict-2.4.0.ebuild:
-  version bump
-
-*stardict-2.4.0 (12 Sep 2003)
-
-  12 Sep 2003; Alastair Tse <liquidx@gentoo.org> stardict-2.0.0.ebuild,
-  stardict-2.2.0.ebuild, stardict-2.2.1.ebuild, stardict-2.4.0.ebuild:
-  version bump
-
-  12 Sep 2003; Alastair Tse <liquidx@gentoo.org> stardict-2.0.0.ebuild,
-  stardict-2.2.0.ebuild, stardict-2.2.1.ebuild:
-  removing bonobo deps and clean up
-
-  09 Jul 2003; Alastair Tse <liquidx@gentoo.org> stardict-2.0.0.ebuild,
-  stardict-2.2.0.ebuild, stardict-2.2.1.ebuild:
-  add pkgconfig dep
-
-*stardict-2.2.1 (01 Jul 2003)
-
-  01 Jul 2003; Alastair Tse <liquidx@gentoo.org> stardict-2.2.0.ebuild,
-  stardict-2.2.1.ebuild:
-  version bump and bumping 2.2.0 to stable
-
-  19 Jun 2003; Alastair Tse <liquidx@gentoo.org> stardict-2.2.0.ebuild:
-  digest fixes
-
-*stardict-2.2.0 (04 Jun 2003)
-
-  04 Jun 2003; Alastair Tse <liquidx@gentoo.org> stardict-2.2.0.ebuild:
-  version bump. dictionary files are now distributed seperately. you must
-  install them by merging the appropriate ones named app-dicts/stardict-*
-
-  21 May 2003; Alastair Tse <liquidx@gentoo.org> stardict-1.3.ebuild,
-  stardict-1.3.ebuild, stardict-2.0.0.ebuild, stardict-2.0.0_pre2.ebuild,
-  stardict-2.0.0_pre2.ebuild:
-  marking stardict 2.0.0 as stable and cleanups
-
-*stardict-2.0.0 (04 May 2003)
-
-  04 May 2003; Alastair Tse <liquidx@gentoo.org> stardict-2.0.0.ebuild:
-  version bump
-
-*stardict-2.0.0_pre2 (01 May 2003)
-
-  01 May 2003; Alastair Tse <liquidx@gentoo.org> stardict-2.0.0_pre2.ebuild:
-  bump to gnome2 version. very neat, thanks to Lloyd Huang
-  <lloyd@coventive.com> (#20151)
-
-*stardict-1.3 (08 Nov 2002)
-
-  29 Mar 2003; Alastair Tse <liquidx@gentoo.org> stardict-1.3.ebuild:
-  Replacing openmotif with virtual/motif
-
-  03 Dec 2002; Seemant Kulleen <seemant@gentoo.org> * :
-
-  Moved to app-dicts
-
-  08 Nov 2002; Stuart Bouyer <stubear@gentoo.org> stardict-1.3.ebuild,
-  ChangeLog, files/digest-stardict-1.3, files/stardict-config.sh,
-  files/stardict-gentoo.patch :
-
-  Initial ebuild submitted and created by Lloyd Huang (Huang YU HSIN)
-  <lloyd@coventive.com>.

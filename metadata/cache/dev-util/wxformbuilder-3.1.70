@@ -7,14 +7,14 @@ http://wxformbuilder.org/
 GPL-2
 The OpenSource wxWidgets Designer, GUI Builder, and RAD Tool.
 ~amd64 ~x86
-base eutils multilib portability toolchain-funcs wxwidgets
+eutils multilib portability toolchain-funcs wxwidgets
 debug
 
 
 
 2
 
-compile configure install prepare unpack
+compile install prepare
 
 
 

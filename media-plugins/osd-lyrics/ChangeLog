@@ -1,29 +1,54 @@
 # ChangeLog for media-plugins/osd-lyrics
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*osd-lyrics-osd-lyrics-0.4.0.ebuild (7 Jun 2011)
-+osd-lyrics-osd-lyrics-0.4.0.ebuild
--osd-lyrics-osd-lyrics-4.3.ebuild
+*osd-lyrics-0.4.1 (02 Aug 2011)
 
-*osd-lyrics-9999 (12 May 2011)
-*osd-lyrics-osd-lyrics-4.3.ebuild (12 Sep 2011)
-  11 May 2011; mocrocai <microcaicai@gmail.com>
-   Change osd-lyrics-9999,
-  +osd-lyrics-osd-lyrics-4.3.ebuild
-   
+  02 Aug 2011; microcai <kiki@kiki.EeePC> -osd-lyrics-0.4.0.ebuild,
+  +osd-lyrics-0.4.1.ebuild:
+  osd-lyrics version bump
 
-*osd-lyrics-0.2.20080828-r1 (04 May 2010)
-  04 May 2010; Coderoar <coderoar@gmail.com>
+  07 Jun 2011; microcai <microcaicai@gmail.com> osd-lyrics-0.4.0.ebuild:
+  fix build failed for osd-lyrics
+
+*osd-lyrics-0.4.0 (07 Jun 2011)
+
+  07 Jun 2011; microcai <microcaicai@gmail.com>
+  -osd-lyrics-0.3.20100211.ebuild, +osd-lyrics-0.4.0.ebuild,
+  -osd-lyrics-4.3.ebuild:
+  osd-lyrics version bump
+
+*osd-lyrics-4.3 (12 May 2011)
+
+  12 May 2011; microcai <microcaicai@gmail.com> +osd-lyrics-4.3.ebuild,
+  osd-lyrics-9999.ebuild:
+  add osd-lyrics-4.3.ebuild
+
+  04 May 2010; coderoar <coderoar@gmail.com> metadata.xml,
   -osd-lyrics-0.2.20080828-r1.ebuild, -osd-lyrics-0.2.20091227.ebuild,
-  osd-lyrics-0.3.20100211.ebuild, osd-lyrics-9999.ebuild, metadata.xml:
+  osd-lyrics-0.3.20100211.ebuild, osd-lyrics-9999.ebuild:
   fix use flag
+
+*osd-lyrics-0.3.20100211 (25 Feb 2010)
+
+  25 Feb 2010; lidaibin <lidaibin@gmail.com> +osd-lyrics-0.3.20100211.ebuild:
+  Upgrade osd-lyrics to version 0.3.20100211
+
+
+*osd-lyrics-0.2.20091227 (16 Jan 2010)
+
+  16 Jan 2010; lidaibin <lidaibin@gmail.com> +osd-lyrics-0.2.20091227.ebuild:
+  fixed libppswrapper and gmlive-extra, upgrade osd-lyrics to 0.2.20091227
+
+
+  25 Oct 2009; coderoar <coderoar@gmail.com> metadata.xml:
+  media-plugins/: add missing metadata.xml
+
 
 *osd-lyrics-9999 (12 Sep 2009)
 *osd-lyrics-0.2.20080828-r1 (12 Sep 2009)
 
-  12 Sep 2009; Coderoar <coderoar@gmail.com>
-  +osd-lyrics-0.2.20080828-r1.ebuild, +osd-lyrics-9999.ebuild,
-  +metadata.xml:
+  12 Sep 2009; coderoar <coderoar@gmail.com> +metadata.xml,
+  +osd-lyrics-0.2.20080828-r1.ebuild, +osd-lyrics-9999.ebuild:
   initial commit
 
