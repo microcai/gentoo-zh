@@ -10,10 +10,10 @@ inherit gnome2 eutils autotools
 #       their indexes seem to be in a different format. So we'll keep them
 #       seperate for now.
 
-IUSE="festival espeak gnome gucharmap spell esd gpe"
+IUSE="festival espeak gnome gucharmap spell esd gpe qqwry"
 DESCRIPTION="A GNOME2 international dictionary supporting fuzzy and glob style matching"
-HOMEPAGE="http://stardict.sourceforge.net/"
-SRC_URI="mirror://sourceforge/stardict/${P}.tar.bz2"
+HOMEPAGE="http://code.google.com/p/stardict-3/"
+SRC_URI="http://stardict-3.googlecode.com/files/${P}.tar.bz2"
 
 RESTRICT="test mirror"
 LICENSE="GPL-2"
@@ -48,18 +48,14 @@ DEPEND="${DEP}
 
 
 src_prepare(){
-#	Fix build test by reorder the linker flag
-	epatch "${FILESDIR}"/${P}-fix-ld.patch
-
-	echo 'STARDICT_DATA_DIR = ${DESTDIR}$(datadir)/stardict' >> help/Makefile.in
-
 	G2CONF="$(use_enable gnome gnome-support)
 		$(use_enable esd esd-support)
 		$(use_enable spell)
 		$(use_enable gucharmap)
 		$(use_enable espeak espeak)
 		$(use_enable gpe gpe-support)
-
+		$(use_enable qqwry)
+		--disable-tools
 		--disable-festival
 		--disable-espeak
 		--disable-advertisement
