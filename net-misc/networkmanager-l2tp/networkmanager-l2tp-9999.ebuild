@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.8.ebuild,v 1.2 2011/03/29 12:52:08 angelos Exp $
+# $Header: $
 
 EAPI="3"
 
-inherit eutils gnome.org git
+inherit eutils gnome.org git-2 autotools
 
 # NetworkManager likes itself with capital letters
 MY_PN="${PN/networkmanager/NetworkManager}"
@@ -19,13 +19,13 @@ EGIT_REPO_URI="git://github.com/microcai/NetworkManager-l2tp.git"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gnome test"
+IUSE="gnome"
 
 RDEPEND="
-	>=net-misc/networkmanager-0.8.998
+	>=net-misc/networkmanager-0.8.1
 	>=dev-libs/dbus-glib-0.74
 	net-dialup/ppp
-	|| ( net-dialup/rp-l2tp net-dialup/xl2tpd )
+	net-dialup/xl2tpd
 	gnome? (
 		>=x11-libs/gtk+-2.6:2
 		gnome-base/gconf:2
@@ -40,9 +40,14 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
+src_prepare() {
+	mkdir -p m4
+	intltoolize --copy --force --automake
+	eautoreconf
+}
+
 src_configure() {
-	ECONF="--disable-more-warnings
-		$(use_with test tests)
+	ECONF="--with-pppd-plugin-dir=/usr/lib/pppd/2.4.5
 		$(use_with gnome)"
 
 	econf ${ECONF}
