@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit fdo-mime
+inherit fdo-mime eutils
 
 DESCRIPTION="foobar2000-like music player."
 HOMEPAGE="http://deadbeef.sourceforge.net/"
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="aac adplug alsa cdda cover curl dts encode ffmpeg flac gme +gtk
 	hotkeys imlib lastfm libnotify libsamplerate m3u mac midi mms mp3
 	musepack nls null oss pulseaudio shellexec sid sndfile supereq threads
-	tta vorbis vtx wavpack zip"
+	tta vorbis vtx wavpack zip gbk"
 
 REQUIRED_USE="encode? ( gtk )
 	cover? ( curl )
@@ -54,6 +54,10 @@ src_prepare() {
 		# set default gentoo path
 		sed -e 's;/etc/timidity++/timidity-freepats.cfg;/usr/share/timidity/freepats/timidity.cfg;g' \
 			-i "${S}/plugins/wildmidi/wildmidiplug.c"
+	fi
+
+	if use gbk; then
+		epatch "${FILESDIR}/gbk.patch"
 	fi
 }
 
