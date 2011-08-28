@@ -133,7 +133,10 @@ RDEPEND="${RDEPEND}
 SRC_URI=""
 SLOT="0"
 LICENSE="GPL-2 public-domain"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+
+#mask by keywords
+KEYWORDS=""
+#"~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 # the blank is intended - an empty string would result in building ALL backends.
 BACKENDS=" "
