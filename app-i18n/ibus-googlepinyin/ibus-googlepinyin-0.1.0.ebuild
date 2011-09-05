@@ -6,7 +6,7 @@ EAPI=3
 
 HOMEPAGE="http://libgooglepinyin,googlecode.com/"
 
-inherit googlecode
+inherit googlecode cmake-utils
 
 SRC_URI="http://libgooglepinyin.googlecode.com/files/libgooglepinyin-${PV}.tar.bz2"
 
@@ -29,6 +29,3 @@ DEPEND="${COMM_DEPEND}"
 MY_P=libgooglepinyin-$PV
 S=${WORKDIR}/${MY_P}
 
-src_configure(){
-	cmake -DCMAKE_INSTALL_PREFIX=/usr
-}
