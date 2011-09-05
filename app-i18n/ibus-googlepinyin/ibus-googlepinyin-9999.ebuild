@@ -31,3 +31,8 @@ DEPEND="${COMM_DEPEND}"
 MY_P=libgooglepinyin-$PV
 S=${WORKDIR}/${MY_P}
 
+src_prepare(){
+	epatch "${FILESDIR}/${PN}-pagesizepatch.patch"
+	cmake_src_prepare
+
+}
