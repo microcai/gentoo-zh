@@ -1,14 +1,17 @@
-# HG changeset patch
-# User microcai
-# Date 1315205147 -28800
-# Node ID 2494b3af05bcb934c2b7ca1ccf4fd4f137c333d2
-# Parent  eac5918c0e4c0a7c2d23b7b6315dafedb2614e16
-en
+From c406218562245056f5fde2c782c3907d2e8497cb Mon Sep 17 00:00:00 2001
+From: microcai <microcai@fedoraproject.org>
+Date: Wed, 7 Sep 2011 20:47:49 +0800
+Subject: [PATCH] b
 
-diff -r eac5918c0e4c -r 2494b3af05bc wrapper/ibus/engine.py
---- a/wrapper/ibus/engine.py	Sun Sep 04 22:45:37 2011 +0800
-+++ b/wrapper/ibus/engine.py	Mon Sep 05 14:45:47 2011 +0800
-@@ -63,7 +63,7 @@
+---
+ engine.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/engine.py b/engine.py
+index afd7f7a..29c93a5 100644
+--- a/engine.py
++++ b/engine.py
+@@ -63,7 +63,7 @@ class Engine(ibus.EngineBase):
          im_open_decoder()
          self.__is_invalidate = False
          self.__prepinyin_string = u""
@@ -17,3 +20,6 @@ diff -r eac5918c0e4c -r 2494b3af05bc wrapper/ibus/engine.py
  
          # 0 = english input mode
          # 1 = chinese input mode
+-- 
+1.7.6.1
+

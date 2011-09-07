@@ -8,29 +8,27 @@ HOMEPAGE="http://libgooglepinyin,googlecode.com/"
 
 inherit googlecode cmake-utils
 
-SRC_URI="http://libgooglepinyin.googlecode.com/files/libgooglepinyin-${PV}.tar.bz2"
+SRC_URI="http://libgooglepinyin.googlecode.com/files/${P}.tar.bz2"
 
-DESCRIPTION="A fork from google pinyin on android "
+DESCRIPTION="wrapper libgooglepinyin for IBus"
 
-LICENSE="Apache"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-COMM_DEPEND=">=app-i18n/ibus-1.3.99
+COMM_DEPEND="
+>=app-i18n/libgooglepinyin-0.1.1
+>=app-i18n/ibus-1.3.99
 dev-lang/python
 "
 #app-i18n/opencc"
 
-RDEPEND="${COMM_DEPEND}
+DEPEND="${COMM_DEPEND}
 	dev-util/cmake"
-DEPEND="${COMM_DEPEND}"
-
-MY_P=libgooglepinyin-$PV
-S=${WORKDIR}/${MY_P}
+RDEPEND="${COMM_DEPEND}"
 
 src_prepare(){
 	epatch "${FILESDIR}/${PN}-pagesizepatch.patch"
-	cmake_src_prepare
-
+	cmake-utils_src_prepare
 }
