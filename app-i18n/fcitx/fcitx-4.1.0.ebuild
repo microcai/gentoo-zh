@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	dev-util/pkgconfig"
 
-PDEPEND="kde? ( app-i18n/kcm-fcitx )
+PDEPEND="kde? ( kde-misc/kcm-fcitx )
 	gtk? ( >=app-i18n/fcitx-configtool-0.3.0 )"
 
 src_prepare() {
