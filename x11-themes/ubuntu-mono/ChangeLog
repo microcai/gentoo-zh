@@ -2,6 +2,12 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*ubuntu-mono-0.0.30 (09 Sep 2011)
+
+  09 Sep 2011; Coderoar <coderoar@gmail.com> -ubuntu-mono-0.0.20.ebuild,
+  -ubuntu-mono-0.0.22.ebuild, +ubuntu-mono-0.0.30.ebuild:
+  version bump, remove obsolete
+
 *ubuntu-mono-0.0.22 (09 Jan 2011)
 
   09 Jan 2011; Coderoar <coderoar@gmail.com> -ubuntu-mono-0.0.18.ebuild,
