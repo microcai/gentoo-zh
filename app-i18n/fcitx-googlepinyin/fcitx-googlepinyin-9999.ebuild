@@ -17,7 +17,7 @@ KEYWORDS=""
 IUSE=""
 
 RDEPEND=">=app-i18n/fcitx-4.1.1
-	dev-libs/libgooglepinyin"
+	>=app-i18n/libgooglepinyin-0.1.1"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
 
