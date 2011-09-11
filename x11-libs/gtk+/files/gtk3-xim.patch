@@ -1,0 +1,43 @@
+From edc435dfe8a079dceff78c70119640dbe2f160a6 Mon Sep 17 00:00:00 2001
+From: Carlos Garnacho <carlosg@gnome.org>
+Date: Sat, 2 Apr 2011 11:46:42 +0200
+Subject: [PATCH] xi2: Handle XIM modules that replace events
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Fixes Bug 645993 - XIM has wierd behaviors. Some XIM modules
+filter every key event, possibly replacing it with their own
+one. These events usually have serial=0, so make
+GdkDeviceManagerXI2 also listen on these.
+---
+ gdk/x11/gdkdevicemanager-xi2.c |    7 ++++++-
+ 1 files changed, 6 insertions(+), 1 deletions(-)
+
+diff --git a/gdk/x11/gdkdevicemanager-xi2.c b/gdk/x11/gdkdevicemanager-xi2.c
+index 3a520c1..7d23e7e 100644
+--- a/gdk/x11/gdkdevicemanager-xi2.c
++++ b/gdk/x11/gdkdevicemanager-xi2.c
+@@ -936,13 +936,18 @@ gdk_x11_device_manager_xi2_translate_core_event (GdkEventTranslator *translator,
+   gboolean keyboard = FALSE;
+   GdkDevice *device;
+ 
+-  if (xevent->type == KeyPress && xevent->xkey.keycode == 0)
++  if ((xevent->type == KeyPress || xevent->type == KeyRelease) &&
++      (xevent->xkey.keycode == 0 || xevent->xkey.serial == 0))
+     {
+       /* The X input methods (when triggered via XFilterEvent)
+        * generate a core key press event with keycode 0 to signal the
+        * end of a key sequence. We use the core translate_event
+        * implementation to translate this event.
+        *
++       * Other less educated IM modules like to filter every keypress,
++       * only to have these replaced by their own homegrown events,
++       * these events oddly have serial=0, so we try to catch these.
++       *
+        * This is just a bandaid fix to keep xim working with a single
+        * keyboard until XFilterEvent learns about XI2.
+        */
+-- 
+1.7.4.2
+
