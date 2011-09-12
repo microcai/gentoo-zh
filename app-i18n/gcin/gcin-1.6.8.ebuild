@@ -2,12 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI="3"
 inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Another Traditional Chinese IM."
 HOMEPAGE="http://hyperrate.com/dir.php?eid=67"
-SRC_URI="http://www.csie.nctu.edu.tw/~cp76/gcin/download/${P/_/.}.tar.bz2
+SRC_URI="http://www.csie.nctu.edu.tw/~cp76/gcin/download/${P/_/.}.tar.xz
 	chinese-sound? ( http://www.csie.nctu.edu.tw/~cp76/gcin/download/ogg.tgz )"
 
 LICENSE="LGPL-2.1"
@@ -28,7 +28,6 @@ DEPEND="${DEPEND}
 
 RESTRICT="mirror"
 S=${WORKDIR}/${P/_/.}
-
 
 src_prepare() {
 	echo "${P}" > ${S}/VERSION.gcin
