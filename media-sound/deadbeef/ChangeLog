@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Sep 2011; transtone <zm3345@gmail.com> deadbeef-0.5.1-r1.ebuild:
+  change USE: "gbk" to "langaus_zh-CN"
+
   17 Jul 2011; microcai <microcai@fedoraproject.org> deadbeef-0.5.1-r1.ebuild:
   fix ebuid
 
