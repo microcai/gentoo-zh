@@ -1,0 +1,57 @@
+--- mupdf-0.8.165/apps/man/mupdf.1
++++ mupdf-0.8.165/apps/man/mupdf.1
+@@ -37,6 +37,15 @@
+ .B \+, \-
+ Zoom in or out.
+ .TP
++.B _
++Reset zoom to default (72dpi).
++.TP
++.B z
++Zoom page size to fit into the window frame.
++.TP
++.B Z
++Zoom page size to fill the window frame.
++.TP
+ .B w
+ Shrinkwrap window to fit the page.
+ .TP
+--- mupdf-0.8.165/apps/pdfapp.c
++++ mupdf-0.8.165/apps/pdfapp.c
+@@ -736,6 +736,20 @@
+ 		pdfapp_showpage(app, 0, 1, 1);
+ 		break;
+ 
++	case '_': // zoom to default resolution
++		app->resolution = 72;
++		pdfapp_showpage(app, 0, 1, 1);
++		break;
++
++	case 'z': // zoom to fit window
++	case 'Z': // zoom to fill window
++		if ( ( c == 'Z' ) ^ ( app->image->w * app->winh > app->winw * app->image->h ) ) 
++			app->resolution = ( app->resolution * app->winw ) / app->image->w;
++		else
++			app->resolution = ( app->resolution * app->winh ) / app->image->h;
++		pdfapp_showpage(app, 0, 1, 1);
++		break; 
++
+ 	case 'L':
+ 		app->rotate -= 90;
+ 		pdfapp_showpage(app, 0, 1, 1);
+@@ -859,6 +873,7 @@
+ 		break;
+ 
+ 	case 'b':
++	case '\b': //backspace
+ 		panto = DONT_PAN;
+ 		if (app->numberlen > 0)
+ 			app->pageno -= atoi(app->number);
+@@ -867,6 +882,7 @@
+ 		break;
+ 
+ 	case ' ':
++	case 'f':
+ 		panto = DONT_PAN;
+ 		if (app->numberlen > 0)
+ 			app->pageno += atoi(app->number);

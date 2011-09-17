@@ -2,6 +2,15 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*mupdf-0.9 (05 Sep 2011)
+  17 Sep 2011; transtone <zm3345@gmail.com>
+  Version bump
+
+*mupdf-0.8 (12 Jun 2011)
+  12 Jun 2011; Michael Weber <xmw@gentoo.org> +mupdf-0.8.165.ebuild,
+  +files/mupdf-0.8.165-buildsystem.patch, +files/mupdf-0.8.165-zoom.patch:
+  Version bump
+
   06 Jul 2010; robert.zhangle <robert.zhangle@gmail.com>
   +files/mupdf-0.6-buildsystem.patch:
   add a patch for mupdf back
