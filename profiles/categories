@@ -38,6 +38,7 @@ net-misc
 net-nntp
 net-p2p
 net-proxy
+sys-block
 sys-devel
 sys-kernel
 www-servers
