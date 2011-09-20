@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/phus/goagent"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 EGIT_REPO_URI="git://github.com/phus/goagent.git"
 EGIT_BRANCH="1.0"
@@ -24,14 +24,8 @@ src_prepare() {
 }
 
 src_install() {
-	insinto "/opt/goagent/server"
-	doins "${S}"/server/*
-
-	insinto "/opt/goagent/local"
-	doins "${S}"/local/*
-
-	insinto "/opt/goagent/local/certs"
-	doins "${S}"/local/certs/*
+	insinto "/opt/goagent"
+	doins -r "${S}"/local "${S}"/server
 
 	newinitd "${FILESDIR}"/goagent-initd goagent
 	dosym "/opt/goagent/local/proxy.ini" /etc/goagent
@@ -40,10 +34,11 @@ src_install() {
 pkg_postinst() {
 	elog
 	elog "config file: /etc/goagent"
-	elog "init script: /etc/init.d/goagent"
+	elog "daemon: /etc/init.d/goagent"
 	elog "Usage:"
 	elog "sudo vim /etc/goagent"
 	elog "sudo vim /opt/goagent/server/fetch.py"
+	elog "sudo vim /opt/goagent/server/app.yaml"
 	elog "sudo python2 /opt/goagent/server/uploader.py"
-	elog "sudo /etc/init.d/goagent start|stop|restart"
+	elog "sudo /etc/init.d/goagent start"
 }

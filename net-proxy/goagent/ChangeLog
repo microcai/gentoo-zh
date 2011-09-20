@@ -1,0 +1,8 @@
+# ChangeLog for net-proxy/goagent
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  15 Sep 2011; Havanna <Skykiss_2000@163.com> +metadata.xml,
+  files/goagent-initd:
+  add metadata.xml
+
