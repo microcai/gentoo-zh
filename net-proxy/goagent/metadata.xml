@@ -6,7 +6,7 @@
 		<email>skykiss_2000@163.com</email>
 		<name>Havanna</name>
 	</maintainer>
-	<longdescription>
+	<longdescription lang="en">
 		A GAE proxy forked from gappproxy/wallproxy.
 	</longdescription>
 </pkgmetadata>

@@ -34,11 +34,11 @@ src_install() {
 pkg_postinst() {
 	elog
 	elog "config file: /etc/goagent"
-	elog "daemon: /etc/init.d/goagent"
+	elog "init script: /etc/init.d/goagent"
 	elog "Usage:"
 	elog "sudo vim /etc/goagent"
 	elog "sudo vim /opt/goagent/server/fetch.py"
 	elog "sudo vim /opt/goagent/server/app.yaml"
 	elog "sudo python2 /opt/goagent/server/uploader.py"
-	elog "sudo /etc/init.d/goagent start"
+	elog "sudo /etc/init.d/goagent start|stop|restart"
 }
