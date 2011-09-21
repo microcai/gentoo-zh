@@ -6,9 +6,11 @@ EAPI="4"
 
 inherit fdo-mime eutils
 
+LANGS="zh-CN"
 DESCRIPTION="foobar2000-like music player."
 HOMEPAGE="http://deadbeef.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+RESTRICT="strip mirror"
 LICENSE="GPL-2 ZLIB"
 
 SLOT="0"
@@ -16,7 +18,11 @@ KEYWORDS="~x86 ~amd64"
 IUSE="aac adplug alsa cdda cover curl dts encode ffmpeg flac gme +gtk
 	hotkeys imlib lastfm libnotify libsamplerate m3u mac midi mms mp3
 	musepack nls null oss pulseaudio shellexec sid sndfile supereq threads
-	tta vorbis vtx wavpack zip gbk"
+	tta vorbis vtx wavpack zip"
+
+for x in ${LINGUAS}; do
+	IUSE="${IUSE} linguas_${x}"
+done
 
 REQUIRED_USE="encode? ( gtk )
 	cover? ( curl )
@@ -56,7 +62,7 @@ src_prepare() {
 			-i "${S}/plugins/wildmidi/wildmidiplug.c"
 	fi
 
-	if use gbk; then
+	if use linguas_zh-CN; then
 		epatch "${FILESDIR}/gbk.patch"
 	fi
 }

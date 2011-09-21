@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI="3"
 
 inherit cmake-utils mercurial
 
@@ -12,12 +12,13 @@ EHG_REVISION="default"
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="https://fcitx.googlecode.com"
 SRC_URI="${HOMEPAGE}/files/pinyin.tar.gz
-	${HOMEPAGE}/files/table.tar.gz"
+	${HOMEPAGE}/files/table.tar.gz
+	https://github.com/transtone/transconfig/raw/master/zm.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="+cairo +gtk3 +gtk debug opencc +pango qt static-libs +table test"
+IUSE="+cairo +gtk3 +gtk debug opencc +pango qt static-libs +table test zhengma"
 RESTRICT="mirror"
 
 RDEPEND="cairo? ( x11-libs/cairo[X]
@@ -61,6 +62,18 @@ update_gtk3_immodules() {
 src_prepare() {
 	cp ${DISTDIR}/pinyin.tar.gz ${S}/data || die
 	cp ${DISTDIR}/table.tar.gz ${S}/data/table || die
+
+	if use zhengma ; then
+		cp -v "${DISTDIR}"/zm.tar.gz "${S}"/data/table || die "failed to copy zhengma table"
+		cp "${FILESDIR}"/zhengma.conf.in "${S}"/data/table/zhengma.conf.in
+		cp "${FILESDIR}"/fcitx-zhengma.png "${S}"/data/png/fcitx-zhengma.png
+		cp "${FILESDIR}"/fcitx-zhengma-22.png "${S}"/skin/dark/zhengma.png
+		cp "${FILESDIR}"/fcitx-zhengma-16.png "${S}"/skin/classic/zhengma.png
+		cp "${FILESDIR}"/fcitx-zhengma-16.png "${S}"/skin/default/zhengma.png
+		epatch "${FILESDIR}"/zhengma.diff
+	fi
+
+
 }
 
 src_configure() {
@@ -82,6 +95,14 @@ src_configure() {
 pkg_postinst() {
 	use gtk && update_gtk_immodules
 	use gtk3 && update_gtk3_immodules
+	elog
+	elog "You should export the following variables to use fcitx"
+	elog " export XMODIFIERS=\"@im=fcitx\""
+	elog " export XIM=fcitx"
+	elog " export XIM_PROGRAM=fcitx"
+	elog " export GTK_IM_MODULE=fcitx "
+	elog " export QT_IM_MODULE=fcitx "
+	elog
 }
 
 pkg_postrm() {

@@ -1,0 +1,24 @@
+--- mupdf-0.8.165/Makerules
++++ mupdf-0.8.165/Makerules
+@@ -3,10 +3,10 @@
+ OS ?= $(shell uname)
+ OS := $(OS:MINGW%=MINGW)
+ 
+-CFLAGS += -Wall
++CFLAGS +=
+ 
+ ifeq "$(build)" "debug"
+-CFLAGS += -pipe -g
++CFLAGS +=
+ else ifeq "$(build)" "profile"
+ CFLAGS += -pipe -O2 -DNDEBUG -pg
+ LDFLAGS += -pg
+@@ -20,7 +20,7 @@
+ 
+ ifeq "$(OS)" "Linux"
+ SYS_FREETYPE_INC := `pkg-config --cflags freetype2`
+-X11_LIBS := -lX11 -lXext
++X11_LIBS := `pkg-config --libs x11 xext`
+ endif
+ 
+ ifeq "$(OS)" "FreeBSD"
