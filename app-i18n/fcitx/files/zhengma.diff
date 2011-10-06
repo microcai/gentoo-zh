@@ -23,7 +23,7 @@ diff -ur data/table/CMakeLists.txt data.new/table/CMakeLists.txt
 -set(TABLE_NAME db erbi qxm wanfeng wbpy wbx zrm cj)
 -set(TABLE_CONF db.conf erbi.conf qxm.conf wanfeng.conf wbpy.conf wbx.conf zrm.conf cangjie.conf)
 +set(TABLE_NAME db erbi qxm wanfeng wbpy wbx zrm cj zm)
-+set(TABLE_CONF db.conf erbi.conf qxm.conf wanfeng.conf wbpy.conf wbx.confi zrm.conf cangjie.conf zhengma.conf)
++set(TABLE_CONF db.conf erbi.conf qxm.conf wanfeng.conf wbpy.conf wbx.conf zrm.conf cangjie.conf zhengma.conf)
  set(TABLE_URL http://fcitx.googlecode.com/files/table.tar.gz)
  set(TABLE_TAR ${CMAKE_CURRENT_SOURCE_DIR}/table.tar.gz)
 +set(ZM_URL https://github.com/transtone/transconfig/raw/master/zm.tar.gz)
