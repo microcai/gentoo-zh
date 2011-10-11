@@ -14,8 +14,8 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="x86? ( >=x11-libs/qt-core-4.4.0
-               >=x11-libs/qt-gui-4.4.0
-		       >=x11-libs/qt-webkit-4.4.0 )
+			   >=x11-libs/qt-gui-4.4.0
+			   >=x11-libs/qt-webkit-4.4.0 )
 		amd64? ( app-emulation/emul-linux-x86-qtlibs )
 		media-video/mplayer"
 RDEPEND="${DEPEND}"
@@ -27,6 +27,8 @@ src_unpack() {
 }
 
 src_install() {
+	local lib
+
 	insinto /opt/pps/share
 	doins opt/pps/share/default_background.gif || die "doins failed."
 
@@ -34,7 +36,14 @@ src_install() {
 	doexe opt/pps/bin/* || die "doexe failed."
 
 	exeinto /opt/pps/lib
-	doexe opt/pps/lib/* || die "doins failed."
+	for f in opt/pps/lib/lib*.so.0.1*; do
+		local l=`basename $f`
+		doexe ${f} || die "doexe failed."
+		dosym ${l} /opt/pps/lib/${l%.so.*}.so || die
+		dosym ${l} /opt/pps/lib/${l%.so.*}.so.0 || die
+		dosym /opt/pps/lib/${l} /usr/lib/${l%.so.*}.so || die
+		dosym /opt/pps/lib/${l} /usr/lib/${l%.so.*}.so.0 || die
+	done
 
 	insinto /usr/share/applications
 	doins usr/share/applications/pps.desktop || die "doins failed."
@@ -45,9 +54,5 @@ src_install() {
 	insinto /etc
 	doins etc/ems.conf || die "doins failed."
 
-	dosym /opt/pps/bin/PPStream /usr/bin/PPStream || die
-	dosym /opt/pps/lib/libemscore.so.0.1.* /usr/bin/libemscore.so || die
-	dosym /opt/pps/lib/libemsnet.so.0.1.* /usr/bin/libemsnet.so || die
-	dosym /opt/pps/lib/libemscore.so.0.1.* /usr/lib/libemscore.so.0 || die
-	dosym /opt/pps/lib/libemsnet.so.0.1.* /usr/lib/libemsnet.so.0 || die
+	dosym /opt/pps/bin/PPStream /opt/bin/PPStream || die
 }
