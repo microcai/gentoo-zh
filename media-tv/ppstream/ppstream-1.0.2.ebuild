@@ -17,7 +17,7 @@ DEPEND="x86? ( >=x11-libs/qt-core-4.4.0
 			   >=x11-libs/qt-gui-4.4.0
 			   >=x11-libs/qt-webkit-4.4.0 )
 		amd64? ( app-emulation/emul-linux-x86-qtlibs )
-		media-video/mplayer"
+		|| ( media-video/mplayer media-video/mplayer2 )"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
@@ -55,4 +55,10 @@ src_install() {
 	doins etc/ems.conf || die "doins failed."
 
 	dosym /opt/pps/bin/PPStream /opt/bin/PPStream || die
+}
+
+pkg_postinst() {
+	elog
+	elog " \" ln -sv /usr/bin/mplayer2 /usr/bin/mplayer \" for mplayer2 users. "
+	elog
 }
