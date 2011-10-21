@@ -6,7 +6,7 @@ EAPI="2"
 
 inherit cmake-utils git-2
 
-EHG_REPO_URI="http://code.google.com/p/fcitx.fcitx-googlepinyin/"
+EGIT_REPO_URI="http://code.google.com/p/fcitx.fcitx-googlepinyin/"
 
 DESCRIPTION="Fcitx Wrapper for googlepinyin"
 HOMEPAGE="https://code.google.com/p/fcitx"
