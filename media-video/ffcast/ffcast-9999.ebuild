@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-RDEPEND="media-video/ffmpeg[x264]
+RDEPEND=">=app-shells/bash-4.2_p8-r1
+	media-video/ffmpeg[x264]
 	x11-apps/xwininfo
 	x11-libs/libX11"
 DEPEND="${RDEPEND}"
