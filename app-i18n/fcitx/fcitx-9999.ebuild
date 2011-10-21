@@ -4,10 +4,10 @@
 
 EAPI="3"
 
-inherit cmake-utils mercurial
+inherit cmake-utils git-2
 
-EHG_REPO_URI="http://fcitx.googlecode.com/hg/"
-EHG_REVISION="default"
+EGIT_REPO_URI="http://code.google.com/p/fcitx/"
+#EHG_REVISION="default"
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="https://fcitx.googlecode.com"
