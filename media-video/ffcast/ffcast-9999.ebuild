@@ -23,9 +23,9 @@ RDEPEND="media-video/ffmpeg[x264]
 DEPEND="${RDEPEND}"
 
 src_install() {
-#	emake DESTDIR="{D}" install || die "failed to install"
-	newbin ffcast.bash ffcast || die
-	dobin xrectsel || die
-	dodoc README || die
+	emake DESTDIR="{D}" install || die "failed to install"
+#	newbin ffcast.bash ffcast || die
+#	dobin xrectsel || die
+#	dodoc README || die
 }
 
