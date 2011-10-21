@@ -48,6 +48,9 @@ DEPEND="${DEP}
 
 
 src_prepare(){
+	# gcc-4.6.1 complain about missing stdio.h header, err: NULL not defined
+	epatch "${FILESDIR}/$P-stdio.patch"
+
 	G2CONF="$(use_enable gnome gnome-support)
 		$(use_enable esd esd-support)
 		$(use_enable spell)
@@ -60,7 +63,6 @@ src_prepare(){
 		--disable-espeak
 		--disable-advertisement
 		--disable-updateinfo"
-
 }
 
 pkg_postinst() {
