@@ -4,9 +4,9 @@
 
 EAPI="2"
 
-inherit cmake-utils mercurial
+inherit cmake-utils git-2
 
-EHG_REPO_URI="https://fcitx-config.fcitx.googlecode.com/hg/"
+EHG_REPO_URI="http://code.google.com/p/fcitx.fcitx-config/"
 
 DESCRIPTION="A gtk GUI to edit fcitx settings"
 HOMEPAGE="https://fcitx.googlecode.com"
