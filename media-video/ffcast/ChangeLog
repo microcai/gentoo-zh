@@ -1,0 +1,18 @@
+# ChangeLog for media-video/ffcast
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*ffcast-1.0_rc1 (21 Oct 2011)
+
+  21 Oct 2011; Havanna <skykiss_2000@163.com> +ffcast-1.0_rc1.ebuild,
+  ffcast-9999.ebuild:
+  add ffcast-1.0_rc1.ebuild
+
+*ffcast2-9999 (18 Oct 2011)
+
+  18 Oct 2011; Havanna <skykiss_2000@163.com> +ffcast2-9999.ebuild:
+  upgrade to FFcast2
+
+  14 Sep 2011; Havanna <skykiss_2000@163.com> +ChangeLog:
+  add ChangeLog file
+
