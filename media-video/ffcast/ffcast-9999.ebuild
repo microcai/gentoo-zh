@@ -17,8 +17,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-RDEPEND="sys-devel/bc
-	media-video/ffmpeg[x264]
+RDEPEND="media-video/ffmpeg[x264]
 	x11-apps/xwininfo
 	x11-libs/libX11"
 DEPEND="${RDEPEND}"

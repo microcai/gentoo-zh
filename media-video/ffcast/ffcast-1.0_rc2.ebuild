@@ -18,7 +18,6 @@ KEYWORDS="~amd64 ~x86 amd64 x86"
 IUSE=""
 
 RDEPEND="media-video/ffmpeg[x264]
-	sys-devel/bc
 	x11-apps/xwininfo
 	x11-libs/libX11"
 DEPEND="${RDEPEND}"
