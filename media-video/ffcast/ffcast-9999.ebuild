@@ -24,9 +24,9 @@ RDEPEND=">=app-shells/bash-4.2_p8-r1
 DEPEND="${RDEPEND}"
 
 src_install() {
-	emake DESTDIR="{D}" install || die "failed to install"
-#	newbin ffcast.bash ffcast || die
-#	dobin xrectsel || die
+#	emake DESTDIR="{D}" install || die "failed to install"
+	newbin ffcast.bash ffcast || die
+	dobin xrectsel || die
 #	dodoc README || die
 }
 
