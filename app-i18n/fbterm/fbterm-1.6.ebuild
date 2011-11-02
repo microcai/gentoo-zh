@@ -51,7 +51,7 @@ pkg_postinst() {
 	einfo
 	elog "${PN} won't work with vga16fb. You have to use other native"
 	elog "framebuffer drivers or vesa driver."
-	elog "  See /usr/share/doc/${PVR}/README for details."
+	elog "  See /usr/share/doc/${P}/README for details."
 	elog "  To use ${PN}, ensure You are in video group."
 	elog "  To input CJK merge \"app-i18n/fbterm-ucimf\""
 	einfo
