@@ -4,11 +4,11 @@
 
 EAPI=3
 
-DESCRIPTION="A chinese p2p streaming video player."
+DESCRIPTION="A P2P TV player"
 HOMEPAGE="http://www.ppstream.com"
 SRC_URI="http://download.ppstream.com/linux/PPStream.deb"
 
-LICENSE=""
+LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
@@ -23,7 +23,7 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 	unpack ${A}
 	einfo "Unpacking application binary ..."
-	tar xvf ${WORKDIR}/data.tar.gz || die "Unpack application binary failed."
+	tar xvf "${WORKDIR}"/data.tar.gz || die "Unpack application binary failed."
 }
 
 src_install() {
