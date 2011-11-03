@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/version_encode.diff
+	epatch "${FILESDIR}"/fix_revision_information.diff
 }
 src_compile() {
 	use unique && WITH_UNIQUE=yes
