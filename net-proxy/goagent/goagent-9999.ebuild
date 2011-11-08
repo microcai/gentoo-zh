@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-inherit git
+inherit git-2
 
 DESCRIPTION="A GAE proxy forked from gappproxy/wallproxy"
 HOMEPAGE="https://github.com/phus/goagent"
