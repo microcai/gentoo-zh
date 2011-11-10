@@ -37,7 +37,7 @@ RDEPEND="
 		!imlib? ( virtual/jpeg media-libs/libpng )
 	)
 	curl? ( net-misc/curl )
-	ffmpeg? ( media-video/ffmpeg )
+	ffmpeg? ( virtual/ffmpeg )
 	flac? ( media-libs/flac )
 	gtk? ( x11-libs/gtk+:2 )
 	hotkeys? ( x11-libs/libX11 )
