@@ -4,14 +4,14 @@
 
 EAPI="2"
 
-inherit git
+inherit git-2
 
 DESCRIPTION="A GAE proxy forked from gappproxy/wallproxy"
 HOMEPAGE="https://github.com/phus/goagent"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 EGIT_REPO_URI="git://github.com/phus/goagent.git"
 EGIT_BRANCH="1.0"
@@ -39,6 +39,6 @@ pkg_postinst() {
 	elog "sudo vim /etc/goagent"
 	elog "sudo vim /opt/goagent/server/fetch.py"
 	elog "sudo vim /opt/goagent/server/app.yaml"
-	elog "sudo python2 /opt/goagent/server/uploader.py"
+	elog "sudo python2 /opt/goagent/server/appcfg.zip update ./"
 	elog "sudo /etc/init.d/goagent start|stop|restart"
 }

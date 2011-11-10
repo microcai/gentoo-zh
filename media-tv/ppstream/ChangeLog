@@ -1,0 +1,7 @@
+# ChangeLog for media-tv/ppstream
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  02 Nov 2011; Coderoar <coderoar@gmail.com> +metadata.xml:
+  update Manifest
+

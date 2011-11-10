@@ -3,8 +3,14 @@
 # $Header: $
 
 *gpick-0.2.4 (01 Nov 2011)
-  
-  01 Nov 2011; transtone <zm3345@gmail.com> -gpick-0.2.2.ebuild, 
+
+  01 Nov 2011; transtone <zm3345@gmail.com> -version_encode.diff,
+  +fix_revision_information.diff:
+  add authos's patch. bug: http://code.google.com/p/gpick/issues/detail?id=29
+
+*gpick-0.2.4 (01 Nov 2011)
+
+  01 Nov 2011; transtone <zm3345@gmail.com> -gpick-0.2.2.ebuild,
   +gpick-0.2.4.ebuild:
   version bump, dirty fix the version_encode bug: http://code.google.com/p/gpick/issues/detail?id=29
 

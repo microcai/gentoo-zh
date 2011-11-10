@@ -14,7 +14,7 @@ SRC_URI="http://gpick.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE="debug unique dbus"
 
 RDEPEND=">=x11-libs/gtk+-2.12.0
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/version_encode.diff
+	epatch "${FILESDIR}"/fix_revision_information.diff
 }
 src_compile() {
 	use unique && WITH_UNIQUE=yes
