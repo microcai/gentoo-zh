@@ -1,0 +1,39 @@
+diff -ru deadbeef-0.5.1/plugins/ffmpeg/ffmpeg.c deadbeef-0.5.1.orig/plugins/ffmpeg/ffmpeg.c
+--- deadbeef-0.5.1/plugins/ffmpeg/ffmpeg.c	2011-05-22 21:58:53.000000000 +0800
++++ deadbeef-0.5.1.orig/plugins/ffmpeg/ffmpeg.c	2011-11-10 18:39:37.064457165 +0800
+@@ -140,7 +140,7 @@
+     for (i = 0; i < info->fctx->nb_streams; i++)
+     {
+         info->ctx = info->fctx->streams[i]->codec;
+-        if (info->ctx->codec_type == CODEC_TYPE_AUDIO)
++        if (info->ctx->codec_type == AVMEDIA_TYPE_AUDIO)
+         {
+             info->codec = avcodec_find_decoder (info->ctx->codec_id);
+             if (info->codec != NULL) {
+@@ -490,7 +490,7 @@
+     for (i = 0; i < fctx->nb_streams; i++)
+     {
+         ctx = fctx->streams[i]->codec;
+-        if (ctx->codec_type == CODEC_TYPE_AUDIO)
++        if (ctx->codec_type == AVMEDIA_TYPE_AUDIO)
+         {
+             codec = avcodec_find_decoder(ctx->codec_id);
+             if (codec != NULL && !strcasecmp (codec->name, "alac")) { // only open alac streams
+@@ -704,7 +704,7 @@
+     ffmpeg_init_exts ();
+     avcodec_init ();
+     av_register_all ();
+-    av_register_protocol (&vfswrapper);
++    av_register_protocol2 (&vfswrapper, sizeof(vfswrapper));
+     return 0;
+ }
+ 
+@@ -745,7 +745,7 @@
+     for (i = 0; i < fctx->nb_streams; i++)
+     {
+         ctx = fctx->streams[i]->codec;
+-        if (ctx->codec_type == CODEC_TYPE_AUDIO)
++        if (ctx->codec_type == AVMEDIA_TYPE_AUDIO)
+         {
+             codec = avcodec_find_decoder(ctx->codec_id);
+             if (codec != NULL)
