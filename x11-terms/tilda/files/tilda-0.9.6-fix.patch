@@ -1,10 +1,10 @@
-From 6a7a42650d914cd5d74fe8f02882940c1650b540 Mon Sep 17 00:00:00 2001
+From b9c7476295af33fd0af6cdd57c571a2867507590 Mon Sep 17 00:00:00 2001
 From: microcai <microcai@fedoraproject.org>
 Date: Fri, 18 Nov 2011 21:34:40 +0800
-Subject: [PATCH 2/2] use gtk3
+Subject: [PATCH] use gtk3
 
 ---
- configure.ac          |    3 +-
+ configure.ac          |    5 +-
  src/Makefile.am       |    3 -
  src/eggaccelerators.c |   20 +-
  src/eggaccelerators.h |    4 +-
@@ -14,13 +14,13 @@ Subject: [PATCH 2/2] use gtk3
  src/tomboykeybinder.c |    9 +-
  src/wizard.c          |  121 ++---
  tilda.glade           | 1410 +++++++++++++++++++++++++++++++------------------
- 10 files changed, 1018 insertions(+), 666 deletions(-)
+ 10 files changed, 1019 insertions(+), 667 deletions(-)
 
 diff --git a/configure.ac b/configure.ac
-index aa4ae97..ae2fa20 100644
+index aa4ae97..50868c5 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -53,9 +53,8 @@ esac
+@@ -53,10 +53,9 @@ esac
  
  # Checks for libraries.
  PKG_PROG_PKG_CONFIG
@@ -28,9 +28,11 @@ index aa4ae97..ae2fa20 100644
 +PKG_CHECK_MODULES([GTK], [gtk+-3.0])
  PKG_CHECK_MODULES([GTHREAD], [gthread-2.0])
 -PKG_CHECK_MODULES([LIBGLADE], [libglade-2.0])
- PKG_CHECK_MODULES([VTE], [vte])
+-PKG_CHECK_MODULES([VTE], [vte])
++PKG_CHECK_MODULES([VTE], [vte-2.90])
  PKG_CHECK_MODULES([LIBCONFUSE], [libconfuse])
  
+ # Checks for header files.
 diff --git a/src/Makefile.am b/src/Makefile.am
 index d512b4f..00128fc 100644
 --- a/src/Makefile.am
@@ -3347,5 +3349,5 @@ index 4a8ae19..9037a86 100644
 +  </object>
 +</interface>
 -- 
-1.7.8.rc1
+1.7.8.rc3
 

@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND=">=x11-libs/vte-0.29
+RDEPEND=">=x11-libs/vte-0.30.1
 	>=dev-libs/glib-2.8.4
 	>=x11-libs/gtk+-3.0
 	dev-libs/confuse"
