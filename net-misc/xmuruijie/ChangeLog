@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Nov 2011; Yuwei Yu <acevery@gmail.com> -xmuruijie-1.4.0.ebuild,
+  -xmuruijie-1.4.1.ebuild, -xmuruijie-1.4.2.ebuild, +xmuruijie-1.4.3.ebuild:
+  verion bump; clean old ebuilds.
+
   10 Jun 2011; Yuwei Yu <acevery@gmail.com> +xmuruijie-1.4.2.ebuild:
   update to 1.4.2
 
