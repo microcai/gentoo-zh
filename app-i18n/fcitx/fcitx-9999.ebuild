@@ -13,7 +13,7 @@ DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="https://fcitx.googlecode.com"
 SRC_URI="${HOMEPAGE}/files/pinyin.tar.gz
 	${HOMEPAGE}/files/table.tar.gz
-	https://github.com/transtone/transconfig/raw/master/zm.tar.gz"
+	zhengma? ( https://github.com/transtone/transconfig/raw/master/zm.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"

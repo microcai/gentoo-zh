@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -19,7 +19,6 @@ RDEPEND="
 		app-emulation/emul-linux-x86-gtklibs
 		app-emulation/emul-linux-x86-xlibs )
 	x86? (
-		>=net-libs/libesmtp-1.0.3
 		>=dev-libs/glib-2.0.7
 		x11-libs/libX11
 		x11-libs/libXext
@@ -58,7 +57,7 @@ src_install() {
 
 	mv share "${LIBDIR}"/{lib,var} "${DESTDIR}" || die "install failed"
 	mv "${LIBDIR}"/share/avast "${DESTDIR}"/share || die "install failed"
-	use amd64 && mv "${LIBDIR}"/lib-esmtp/* "${DESTDIR}"/lib || die "install failed"
+	mv "${LIBDIR}"/lib-esmtp/* "${DESTDIR}"/lib || die "install failed"
 
 	cat > 82avast << DONE
 AVAST_PREFIX="/opt/${PN}"

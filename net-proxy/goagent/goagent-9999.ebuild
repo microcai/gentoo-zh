@@ -43,6 +43,6 @@ pkg_postinst() {
 	elog "sudo vim /etc/goagent"
 	elog "sudo vim /opt/goagent/server/fetch.py"
 	elog "sudo vim /opt/goagent/server/app.yaml"
-	elog "sudo python2 /opt/goagent/server/uploader.py"
+	elog "sudo python2 /opt/goagent/server/appcfg.zip update ./"
 	elog "sudo /etc/init.d/goagent start|stop|restart"
 }

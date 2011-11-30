@@ -14,12 +14,16 @@ SRC_URI="http://downloads.sourceforge.net/reciteword/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="alsa"
 
 RDEPEND=">=x11-libs/gtk+-2.6
-		media-sound/esound"
+	!alsa? ( media-sound/esound ) "
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-gcc4.patch"
+	if use alsa; then
+		epatch "${FILESDIR}/${PN}-alsa.patch"
+	fi
 }
 
 src_install() {
