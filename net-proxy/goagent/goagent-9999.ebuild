@@ -1,17 +1,17 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v3
 # $Header: $
 
-EAPI="2"
+EAPI="3"
 
-inherit git
+inherit git-2
 
 DESCRIPTION="A GAE proxy forked from gappproxy/wallproxy"
 HOMEPAGE="https://github.com/phus/goagent"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 EGIT_REPO_URI="git://github.com/phus/goagent.git"
 EGIT_BRANCH="1.0"
@@ -24,11 +24,15 @@ src_prepare() {
 }
 
 src_install() {
+	insinto "/etc/"
+	newins "${S}/local/proxy.ini" goagent
+	rm "${S}/local/proxy.ini"
+
 	insinto "/opt/goagent"
 	doins -r "${S}"/local "${S}"/server
 
 	newinitd "${FILESDIR}"/goagent-initd goagent
-	dosym "/opt/goagent/local/proxy.ini" /etc/goagent
+	dosym /etc/goagent "/opt/goagent/local/proxy.ini"
 }
 
 pkg_postinst() {
