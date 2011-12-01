@@ -1,0 +1,46 @@
+--- src/corelib/global/qnamespace.qdoc.sav	2011-08-23 14:02:27.000000000 +0200
++++ src/corelib/global/qnamespace.qdoc	2011-11-22 13:06:00.879288001 +0100
+@@ -167,6 +167,10 @@
+            attribute is true. This attribute must be set after QApplication is
+            constructed. This is only supported in Symbian^3 and later Symbian releases.
+ 
++    \value AA_X11InitThreads Calls XInitThreads() as part of the QApplication
++           construction in order to make Xlib calls thread-safe.
++
++
+     \omitvalue AA_AttributeCount
+ */
+ 
+--- src/corelib/global/qnamespace.h.sav	2011-08-23 14:02:27.000000000 +0200
++++ src/corelib/global/qnamespace.h	2011-11-22 13:07:35.925288002 +0100
+@@ -544,6 +544,7 @@ public:
+         AA_MacDontSwapCtrlAndMeta = 7,
+         AA_S60DontConstructApplicationPanes = 8,
+         AA_S60DisablePartialScreenInputMode = 9,
++        AA_X11InitThreads = 10,
+ 
+         // Add new attributes before this line
+         AA_AttributeCount
+--- src/gui/kernel/qapplication_x11.cpp.sav	2011-08-23 14:02:27.000000000 +0200
++++ src/gui/kernel/qapplication_x11.cpp	2011-11-22 13:06:00.881288001 +0100
+@@ -1739,6 +1739,9 @@ void qt_init(QApplicationPrivate *priv,
+     } else {
+         // Qt controls everything (default)
+ 
++        if (QApplication::testAttribute(Qt::AA_X11InitThreads))
++            XInitThreads();
++
+         // Set application name and class
+         char *app_class = 0;
+         if (argv && argv[0]) {
+--- src/gui/image/qpixmap.cpp.sav	2011-08-23 14:02:27.000000000 +0200
++++ src/gui/image/qpixmap.cpp	2011-11-22 13:06:39.723288001 +0100
+@@ -99,7 +99,7 @@ static bool qt_pixmap_thread_test()
+         return false;
+     }
+ #ifndef Q_WS_WIN
+-    if (qApp->thread() != QThread::currentThread()) {
++    if (!QApplication::testAttribute(Qt::AA_X11InitThreads) && qApp->thread() != QThread::currentThread()) {
+         qWarning("QPixmap: It is not safe to use pixmaps outside the GUI thread");
+         return false;
+     }
