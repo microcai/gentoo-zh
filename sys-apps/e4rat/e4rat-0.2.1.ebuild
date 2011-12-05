@@ -15,12 +15,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+
 DEPEND="dev-lang/perl
 	>=dev-libs/boost-1.42[static-libs]
 	sys-fs/e2fsprogs
 	sys-process/audit"
 
-RDEPEND="${DEPEND}"
+RDEPEND="sys-fs/e2fsprogs"
 
 CMAKE_BUILD_TYPE=release
 PREFIX=/
