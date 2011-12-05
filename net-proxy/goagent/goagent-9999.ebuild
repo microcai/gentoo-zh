@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-20011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v3
 # $Header: $
 
-EAPI="2"
+EAPI="3"
 
 inherit git-2
 
@@ -24,11 +24,15 @@ src_prepare() {
 }
 
 src_install() {
+	insinto "/etc/"
+	newins "${S}/local/proxy.ini" goagent
+	rm "${S}/local/proxy.ini"
+
 	insinto "/opt/goagent"
 	doins -r "${S}"/local "${S}"/server
 
 	newinitd "${FILESDIR}"/goagent-initd goagent
-	dosym "/opt/goagent/local/proxy.ini" /etc/goagent
+	dosym /etc/goagent "/opt/goagent/local/proxy.ini"
 }
 
 pkg_postinst() {
@@ -36,13 +40,11 @@ pkg_postinst() {
 	elog "config file: /etc/goagent"
 	elog "init script: /etc/init.d/goagent"
 	elog
-	elog "Edit:"
+	elog "Usage:"
 	elog "vim /etc/goagent"
 	elog "vim /opt/goagent/server/fetch.py"
 	elog "vim /opt/goagent/server/app.yaml"
-	elog "Upload:"
 	elog "cd /opt/goagent/server"
 	elog "python2 appcfg.zip update ./"
-	elog "Run:"
 	elog "/etc/init.d/goagent start|stop|restart"
 }
