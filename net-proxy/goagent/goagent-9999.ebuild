@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-20011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v3
 # $Header: $
 
@@ -39,10 +39,12 @@ pkg_postinst() {
 	elog
 	elog "config file: /etc/goagent"
 	elog "init script: /etc/init.d/goagent"
+	elog
 	elog "Usage:"
-	elog "sudo vim /etc/goagent"
-	elog "sudo vim /opt/goagent/server/fetch.py"
-	elog "sudo vim /opt/goagent/server/app.yaml"
-	elog "sudo python2 /opt/goagent/server/appcfg.zip update ./"
-	elog "sudo /etc/init.d/goagent start|stop|restart"
+	elog "vim /etc/goagent"
+	elog "vim /opt/goagent/server/fetch.py"
+	elog "vim /opt/goagent/server/app.yaml"
+	elog "cd /opt/goagent/server"
+	elog "python2 appcfg.zip update ./"
+	elog "/etc/init.d/goagent start|stop|restart"
 }
