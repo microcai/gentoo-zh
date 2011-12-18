@@ -26,6 +26,8 @@ src_prepare() {
 #	epatch "${FILESDIR}/${P}-gdk_resources.patch"
 	epatch "${FILESDIR}/${P}-resizehotkey.patch"
 	epatch "${FILESDIR}/${P}-fix.patch"
+	epatch "${FILESDIR}/${P}-fix-composite.patch"
+
 	eautoreconf
 }
 
