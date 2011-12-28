@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 EGIT_REPO_URI="git://github.com/phus/goagent.git"
-#EGIT_BRANCH="golang"
+EGIT_BRANCH="1.0"
 
 RDEPEND="dev-lang/python:2.7[ssl]"
 
