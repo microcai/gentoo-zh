@@ -27,6 +27,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-resizehotkey.patch"
 	epatch "${FILESDIR}/${P}-fix.patch"
 	epatch "${FILESDIR}/${P}-fix-composite.patch"
+	epatch "${FILESDIR}/${P}-fix-glib_h-error.h"
 
 	eautoreconf
 }
