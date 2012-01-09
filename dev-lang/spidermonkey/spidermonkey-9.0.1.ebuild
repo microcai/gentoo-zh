@@ -89,6 +89,11 @@ EOF
 
 	cd "${BUILDDIR}"
 	emake DESTDIR="${D}" install || die
+
+	# install more
+	cp -a dist/include/mozilla ${D}/usr/include/js/
+	cp -a dist/include/vm  ${D}/usr/include/js/
+
 	dobin shell/js ||die
 	pax-mark m "${ED}/usr/bin/js"
 
