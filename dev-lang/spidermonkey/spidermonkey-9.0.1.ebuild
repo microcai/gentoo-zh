@@ -15,7 +15,9 @@ SRC_URI="https://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/${PV}/source
 
 LICENSE="NPL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+
+KEYWORDS=""
+
 IUSE="debug static-libs test"
 
 S="${WORKDIR}/mozilla-release"
@@ -91,8 +93,15 @@ EOF
 	emake DESTDIR="${D}" install || die
 
 	# install more
-	cp -a dist/include/mozilla ${D}/usr/include/js/
-	cp -a dist/include/vm  ${D}/usr/include/js/
+	dodir /usr/include/js/mozilla
+	dodir /usr/include/js/vm
+
+	pushd dist/include/mozilla
+		cp *  ${D}/usr/include/js/mozilla/
+	popd
+	pushd dist/include/vm
+		cp *  ${D}/usr/include/js/vm/
+	popd
 
 	dobin shell/js ||die
 	pax-mark m "${ED}/usr/bin/js"
