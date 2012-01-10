@@ -1,0 +1,24 @@
+# ChangeLog for dev-libs/gjs
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/ChangeLog,v 1.4 2011/11/15 09:06:58 nirbheek Exp $
+
+  15 Nov 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gjs-1.30.0.ebuild:
+  Port to EAPI 4
+
+*gjs-1.30.0 (30 Sep 2011)
+
+  30 Sep 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -gjs-1.29.0.ebuild,
+  +gjs-1.30.0.ebuild:
+  Bump to 1.30.0, from gnome-next, make it spidermonkey-only
+
+*gjs-1.29.0 (14 Jun 2011)
+
+  14 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +gjs-1.29.0.ebuild:
+  Bump to 1.29.0, developmental version
+
+*gjs-0.7.14 (01 May 2011)
+
+  01 May 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +gjs-0.7.14.ebuild,
+  +files/gjs-drop-js-config.patch, +metadata.xml:
+  Move gjs from gnome overlay to the tree
+
