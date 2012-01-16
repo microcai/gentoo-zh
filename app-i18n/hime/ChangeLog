@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/hime
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*hime-0.9.9 (16 Jan 2012)
+
+  16 Jan 2012; scsi <scsichen@gmail.com> +hime-0.9.9.ebuild:
+  version bump
 
 *hime-0.9 (18 Dec 2011)
 
