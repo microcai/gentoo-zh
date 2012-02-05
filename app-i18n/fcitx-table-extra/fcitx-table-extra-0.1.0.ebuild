@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=app-i18n/fcitx-4.1.2[table]"
+RDEPEND=">=app-i18n/fcitx-4.2.0[table]"
 RDEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext"
