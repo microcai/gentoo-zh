@@ -12,13 +12,12 @@ EGIT_REPO_URI="http://code.google.com/p/fcitx/"
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="https://fcitx.googlecode.com"
 SRC_URI="${HOMEPAGE}/files/pinyin.tar.gz
-	${HOMEPAGE}/files/table.tar.gz
-	zhengma? ( https://github.com/transtone/transconfig/raw/master/zm.tar.gz )"
+	${HOMEPAGE}/files/table.tar.gz "
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="+cairo +gtk3 +gtk debug opencc +pango qt static-libs +table test zhengma"
+IUSE="+cairo +gtk3 +gtk debug opencc +pango qt static-libs +table table-extra test "
 RESTRICT="mirror"
 
 RDEPEND="cairo? ( x11-libs/cairo[X]
@@ -32,6 +31,7 @@ RDEPEND="cairo? ( x11-libs/cairo[X]
 		dev-libs/glib:2
 		dev-libs/dbus-glib )
 	opencc? ( app-i18n/opencc )
+	table-extra? ( app-i18n/fcitx-table-extra )
 	qt? ( x11-libs/qt-gui:4
 		x11-libs/qt-dbus:4 )
 	x11-libs/libX11"
@@ -62,18 +62,6 @@ update_gtk3_immodules() {
 src_prepare() {
 	cp ${DISTDIR}/pinyin.tar.gz ${S}/data || die
 	cp ${DISTDIR}/table.tar.gz ${S}/data/table || die
-
-	if use zhengma ; then
-		cp -v "${DISTDIR}"/zm.tar.gz "${S}"/data/table || die "failed to copy zhengma table"
-		cp "${FILESDIR}"/zhengma.conf.in "${S}"/data/table/zhengma.conf.in
-		cp "${FILESDIR}"/fcitx-zhengma.png "${S}"/data/png/fcitx-zhengma.png
-		cp "${FILESDIR}"/fcitx-zhengma-22.png "${S}"/skin/dark/zhengma.png
-		cp "${FILESDIR}"/fcitx-zhengma-16.png "${S}"/skin/classic/zhengma.png
-		cp "${FILESDIR}"/fcitx-zhengma-16.png "${S}"/skin/default/zhengma.png
-		epatch "${FILESDIR}"/zhengma.diff
-	fi
-
-
 }
 
 src_configure() {
