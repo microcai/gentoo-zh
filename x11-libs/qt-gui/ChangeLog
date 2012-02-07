@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/qt-gui
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.11 2008/08/11 13:03:14 yngwin Exp $
+
+*qt-gui-4.8.0-r2 (07 Feb 2012)
+
+  07 Feb 2012; scsi <scsichen@gmail.com>
+  +files/add-missing-style-scsi-4_8_0.diff, -qt-gui-4.5.3-r2.ebuild,
+  -qt-gui-4.6.0-r2.ebuild, -qt-gui-4.7.1-r1.ebuild, -qt-gui-4.7.3.ebuild,
+  +files/synthetic-bold-4_8_0.diff, -qt-gui-4.7.3-r1.ebuild,
+  +qt-gui-4.8.0-r2.ebuild:
+  version bump
 
 *qt-gui-4.7.4-r1 (01 Dec 2011)
 
