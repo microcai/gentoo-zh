@@ -1,23 +1,21 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="3"
+EAPI=3
 
-inherit cmake-utils git-2
+inherit cmake-utils eutils
 
-EGIT_REPO_URI="http://code.google.com/p/fcitx/"
-#EHG_REVISION="default"
+DESCRIPTION="Free Chinese Input Toy of X - Input Method Server for X window system"
+HOMEPAGE="http://code.google.com/p/fcitx/"
 
-DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
-HOMEPAGE="https://fcitx.googlecode.com"
-SRC_URI="${HOMEPAGE}/files/pinyin.tar.gz
-	${HOMEPAGE}/files/table.tar.gz "
+SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.bz2
+		http://fcitx.googlecode.com/files/${P}_dict.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE="+cairo +gtk3 +gtk debug opencc +pango qt static-libs +table table-extra test "
+KEYWORDS="~amd64 ~x86"
+IUSE="+cairo debug gtk gtk3 opencc +pango qt static-libs +table test"
 RESTRICT="mirror"
 
 RDEPEND="cairo? ( x11-libs/cairo[X]
@@ -31,7 +29,6 @@ RDEPEND="cairo? ( x11-libs/cairo[X]
 		dev-libs/glib:2
 		dev-libs/dbus-glib )
 	opencc? ( app-i18n/opencc )
-	table-extra? ( app-i18n/fcitx-table-extra )
 	qt? ( x11-libs/qt-gui:4
 		x11-libs/qt-dbus:4 )
 	x11-libs/libX11"
@@ -59,10 +56,10 @@ update_gtk3_immodules() {
 	fi
 }
 
-src_prepare() {
-	cp ${DISTDIR}/pinyin.tar.gz ${S}/data || die
-	cp ${DISTDIR}/table.tar.gz ${S}/data/table || die
-}
+#src_prepare() {
+#	cp ${DISTDIR}/pinyin.tar.gz ${S}/data || die
+#	cp ${DISTDIR}/table.tar.gz ${S}/data/table || die
+#}
 
 src_configure() {
 	local mycmakeargs=(
@@ -83,14 +80,6 @@ src_configure() {
 pkg_postinst() {
 	use gtk && update_gtk_immodules
 	use gtk3 && update_gtk3_immodules
-	elog
-	elog "You should export the following variables to use fcitx"
-	elog " export XMODIFIERS=\"@im=fcitx\""
-	elog " export XIM=fcitx"
-	elog " export XIM_PROGRAM=fcitx"
-	elog " export GTK_IM_MODULE=fcitx "
-	elog " export QT_IM_MODULE=fcitx "
-	elog
 }
 
 pkg_postrm() {
