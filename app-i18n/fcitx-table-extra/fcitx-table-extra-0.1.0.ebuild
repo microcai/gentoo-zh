@@ -6,8 +6,8 @@ EAPI=3
 
 inherit cmake-utils
 
-DESCRIPTION="light weight xlib and xft based ui for fcitx."
-HOMEPAGE="http://code.google.com/p/fcitx"
+DESCRIPTION="fcitx-table-extra provides extra table for Fcitx, including Boshiamy, Zhengma, and Cangjie3, Cangjie5."
+HOMEPAGE="http://code.google.com/p/fcitx https://github.com/fcitx/fcitx-table-extra"
 SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=app-i18n/fcitx-4.2.0[table]"
+RDEPEND=">=app-i18n/fcitx-4.1.2[table]"
 RDEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext"
