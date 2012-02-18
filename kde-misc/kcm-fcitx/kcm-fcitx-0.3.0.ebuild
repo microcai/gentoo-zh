@@ -4,10 +4,10 @@
 
 EAPI=4
 
-inherit cmake-utils
+inherit kde4-base
 
-DESCRIPTION="Fcitx Wrapper for googlepinyin."
-HOMEPAGE="http://code.google.com/p/fcitx"
+DESCRIPTION="KDE Config Module for Fcitx"
+HOMEPAGE="https://github.com/fcitx/kcm-fcitx"
 SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-3"
@@ -17,7 +17,6 @@ IUSE=""
 RESTRICT="mirror"
 
 RDEPEND=">=app-i18n/fcitx-4.2.0
-	>=app-i18n/libgooglepinyin-0.1.2"
-DEPEND="${RDEPEND}
-	dev-util/intltool"
+	kde-base/systemsettings"
+DEPEND="${RDEPEND}"
 
