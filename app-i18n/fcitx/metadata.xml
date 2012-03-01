@@ -5,7 +5,15 @@
 <maintainer>
 	<email>oahong@gmail.com</email>
 </maintainer>
+<maintainer>
+	<email>Amesists@gmail.com</email>
+</maintainer>
 <use>
 	<flag name='pango'>Enable pango support for better multilingual text rendering</flag>
+	<flag name='gtk'>Install the GTK2's IM Module</flag>
+	<flag name='gtk3'>Install the GTK3's IM Module</flag>
+	<flag name='opencc'>Enable OpenCC for Chinese Transform</flag>
+	<flag name='qt'>Install the Qt4's IM Module</flag>
+	<flag name='table'>Adds suppport for Wubi, Erbi, etc.</flag>
 </use>
 </pkgmetadata>

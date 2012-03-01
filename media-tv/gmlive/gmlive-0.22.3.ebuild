@@ -16,7 +16,7 @@ IUSE="extra"
 
 # FIXME: better remove gst-plugin-libmms?
 RDEPEND=">=dev-libs/libxml2-2.6
-	>=dev-cpp/gtkmm-2.6
+	dev-cpp/gtkmm:2.4
 "
 DEPEND="${RDEPEND}
 	sys-devel/gettext

@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/fcitx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  18 Feb 2012; Amesists <amesists@gmail.com> fcitx-4.2.0.ebuild, metadata.xml:
+  Minor fix for fcitx 4.2.0.
 
   13 Sep 2011; transtone <zm3345@gmail.com> fcitx-9999.ebuild:
   加入郑码支持。

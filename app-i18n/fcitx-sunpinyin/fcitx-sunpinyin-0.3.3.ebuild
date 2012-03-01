@@ -6,18 +6,18 @@ EAPI=4
 
 inherit cmake-utils
 
-DESCRIPTION="Fcitx Wrapper for googlepinyin."
+DESCRIPTION="Fcitx Wrapper for sunpinyin."
 HOMEPAGE="http://code.google.com/p/fcitx"
 SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.bz2"
 
-LICENSE="GPL-3"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
 RDEPEND=">=app-i18n/fcitx-4.2.0
-	>=app-i18n/libgooglepinyin-0.1.2"
+	=app-i18n/sunpinyin-9999"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
 
