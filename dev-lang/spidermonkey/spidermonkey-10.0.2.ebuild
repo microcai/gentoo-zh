@@ -16,14 +16,14 @@ SRC_URI="https://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/${PV}/source
 LICENSE="NPL-1.1"
 SLOT="0"
 
-KEYWORDS="~alpha ~arm ~sparc ~x86-fbsd  x86 amd64"
+KEYWORDS=""
 
 IUSE="debug static-libs test"
 
 S="${WORKDIR}/mozilla-release"
 BUILDDIR="${S}/js/src"
 
-RDEPEND=">=dev-libs/nspr-4.7.0"
+RDEPEND=">=dev-libs/nspr-4.8"
 DEPEND="${RDEPEND}
 	app-arch/zip
 	=dev-lang/python-2*[threads]
@@ -84,31 +84,26 @@ includedir=/usr/include
 Name: SpiderMonkey ${PV}
 Description: The Mozilla library for JavaScript ${PV}
 Version: ${PV}
-Requires: nspr >= 4.7
+Requires: nspr >= 4.8
 Libs: -L\${libdir} -lmozjs
 Cflags: -I\${includedir}/js
 EOF
 
-	cd "${BUILDDIR}"
-	emake DESTDIR="${D}" install || die
+	cd "${BUILDDIR}" 
+	
+	dodir /usr/$(get_libdir)
+	dodir /usr/bin
+	dodir /usr/include/js
 
-	# install more
-	dodir /usr/include/js/mozilla
-	dodir /usr/include/js/vm
-
-	pushd dist/include/mozilla
-		cp *  ${D}/usr/include/js/mozilla/
+	pushd dist/lib
+		cp -L libmozjs.so ${D}/usr/$(get_libdir)/
+		use static-libs && cp -L libjs_static.a ${D}/usr/$(get_libdir)/libmozjs.a
 	popd
-	pushd dist/include/vm
-		cp *  ${D}/usr/include/js/vm/
+	
+	pushd dist/include
+		cp -aL * ${D}/usr/include/js/
 	popd
 
 	dobin shell/js ||die
 	pax-mark m "${ED}/usr/bin/js"
-
-	if ! use static-libs; then
-		# We can't actually disable building of static libraries
-		# They're used by the tests and in a few other places
-		find "${D}" -iname '*.a' -delete || die
-	fi
 }
