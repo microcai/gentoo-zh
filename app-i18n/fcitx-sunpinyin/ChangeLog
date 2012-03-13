@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*fcitx-sunpinyin-0.3.4 (13 Mar 2012)
+
+  13 Mar 2012; Amesists <amesists@gmail.com> +fcitx-sunpinyin-0.3.4.ebuild:
+  Version bump to 0.3.4.
+
 *fcitx-sunpinyin-0.3.3 (18 Feb 2012)
 
   18 Feb 2012; Amesists <amesists@gmail.com> +fcitx-sunpinyin-0.3.3.ebuild:

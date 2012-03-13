@@ -1,18 +1,20 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=4
 
-inherit cmake-utils eutils git-2
+inherit cmake-utils
 
 DESCRIPTION="Free Chinese Input Toy of X - Input Method Server for X window system"
 HOMEPAGE="http://code.google.com/p/fcitx/"
-EGIT_REPO_URI="http://code.google.com/p/fcitx/"
+SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz
+	http://fcitx.googlecode.com/files/pinyin.tar.gz
+	table? ( http://fcitx.googlecode.com/files/table.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="+cairo debug gtk gtk3 opencc +pango qt static-libs +table test"
 RESTRICT="mirror"
 
@@ -31,9 +33,7 @@ RDEPEND="cairo? ( x11-libs/cairo[X]
 		x11-libs/qt-dbus:4 )
 	x11-libs/libX11"
 DEPEND="${RDEPEND}
-	app-arch/tar
-	dev-util/intltool
-	sys-devel/gettext"
+	dev-util/intltool"
 
 update_gtk_immodules() {
 	local GTK2_CONFDIR="/etc/gtk-2.0"
@@ -54,10 +54,12 @@ update_gtk3_immodules() {
 	fi
 }
 
-#src_prepare() {
-#	cp ${DISTDIR}/pinyin.tar.gz ${S}/data || die
-#	cp ${DISTDIR}/table.tar.gz ${S}/data/table || die
-#}
+src_prepare() {
+	cp ${DISTDIR}/pinyin.tar.gz ${S}/data || die
+	if use table ; then
+		cp ${DISTDIR}/table.tar.gz ${S}/data/table || die
+	fi
+}
 
 src_configure() {
 	local mycmakeargs=(
@@ -84,4 +86,3 @@ pkg_postrm() {
 	use gtk && update_gtk_immodules
 	use gtk3 && update_gtk3_immodules
 }
-

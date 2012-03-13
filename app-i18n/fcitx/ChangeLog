@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*fcitx-4.2.1 (13 Mar 2012)
+
+  13 Mar 2012; Amesists <amesists@gmail.com> +fcitx-4.2.1.ebuild:
+  Version bump to 4.2.1.
+
   18 Feb 2012; Amesists <amesists@gmail.com> fcitx-4.2.0.ebuild, metadata.xml:
   Minor fix for fcitx 4.2.0.
 
