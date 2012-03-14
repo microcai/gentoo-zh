@@ -27,7 +27,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "This is free trial verion of Ultra Eidtor Linux"
+	ewarn "This is free trial verion of Ultra Editor Linux"
 	ewarn "Only 30 days period"
 	ewarn "if you like it, got to official Web for registration"
 }
