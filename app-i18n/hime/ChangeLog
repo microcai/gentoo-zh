@@ -2,6 +2,9 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  21 Mar 2012; scsi <scsichen@gmail.com> hime-0.9.9.ebuild:
+  fix patch error
+
 *hime-0.9.9 (16 Jan 2012)
 
   16 Jan 2012; scsi <scsichen@gmail.com> +hime-0.9.9.ebuild:

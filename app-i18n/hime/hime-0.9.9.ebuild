@@ -31,7 +31,6 @@ S=${WORKDIR}/${P/_/.}
 
 src_prepare() {
 	echo "${P}" > ${S}/VERSION.hime
-	epatch "${FILESDIR}/hime-0.9_moc_path_fix.patch"
 }
 
 src_configure() {
