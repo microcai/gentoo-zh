@@ -22,8 +22,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.50.0"
 
 src_unpack() {
-	tar -zxf "${DISTDIR}"/"${PV%_p*}.${PV#*_p}" -C "${WORKDIR}" && \
-		mv "${WORKDIR}"/* "${WORKDIR}"/${PF} || die "unpacking source failed"
+	mv "${DISTDIR}/${PV%_p*}.${PV#*_p}" "${DISTDIR}/${PV%_p*}.${PV#*_p}.tar.gz"
+	unpack "${A}.tar.gz"
+	mv "${WORKDIR}"/* "${WORKDIR}/${PF}" || die "unpacking source failed"
 }
 
 src_prepare() {
