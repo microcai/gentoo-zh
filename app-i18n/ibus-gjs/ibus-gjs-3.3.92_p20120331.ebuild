@@ -22,9 +22,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.50.0"
 
 src_unpack() {
-	mkdir "${WORKDIR}"/${PF} && \
-		tar -zxf "${DISTDIR}"/"ibus-gjs_3+ubuntu04.orig.tar.gz" -C "${WORKDIR}"/${PF} \
-			|| die "unpacking source failed"
+	mkdir "${WORKDIR}/${PF}" && cd "${WORKDIR}/${PF}"
+	unpack "${A}"
 }
 
 src_prepare() {
