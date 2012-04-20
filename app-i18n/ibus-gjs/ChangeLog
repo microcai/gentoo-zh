@@ -1,0 +1,20 @@
+# ChangeLog for app-i18n/ibus-gjs
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*ibus-gjs-3.3.92_p20120327-r1 (20 Apr 2012)
+
+  20 Apr 2012; Tong Ju <jtshs256@gmail.com> +ibus-gjs-3.2.1_p20120302.ebuild:
+  Added another snapshot for Gnome 3.4* users
+
+*ibus-gjs-3.3.92_p20120327 (19 Apr 2012)
+*ibus-gjs-3.2.1_p20120302 (19 Apr 2012)
+
+  19 Apr 2012; Tong Ju <jtshs256@gmail.com> +ibus-gjs-3.2.1_p20120302.ebuild,
+  +metadata.xml:
+  Added snapshots for Gnome 3.2*/3.4* users
+
+*ibus-gjs-9999 (13 Mar 2012)
+
+  13 Mar 2012; Tong Ju <jtshs256@gmail.com> +ibus-gjs-9999.ebuild:
+  Added the live ebuild for ibus-gjs
