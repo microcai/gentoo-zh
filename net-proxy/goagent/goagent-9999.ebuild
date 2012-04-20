@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v3
 # $Header: $
 
@@ -45,6 +45,6 @@ pkg_postinst() {
 	elog "vim /opt/goagent/server/golang/fetch/fetch.go"
 	elog "vim /opt/goagent/server/golang/app.yaml"
 	elog "cd /opt/goagent/server"
-	elog "python2 appcfg.zip"
+	elog "python2 uploader.zip"
 	elog "/etc/init.d/goagent start|stop|restart"
 }
