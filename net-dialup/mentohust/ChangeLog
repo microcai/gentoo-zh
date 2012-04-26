@@ -1,0 +1,8 @@
+# ChangeLog for net-dialup/mentohust
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*mentohust-9999 (26 Apr 2012)
+
+  26 Apr 2012; Jack River <ritksm@gmail.com> +mentohust-9999.ebuild:
+  * Add a new ebuild.
