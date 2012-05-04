@@ -32,7 +32,7 @@ src_install() {
 
 	insinto "/usr/share/deepin-screenshot"
 	doins -r ${S}/locale ${S}/src ${S}/theme
-	fperms 0755 /usr/share/deepin-screenshot/src/*
+	fperms 0755 -R /usr/share/deepin-screenshot/src/
 
 	dosym /usr/share/${PN}/src/${PN} /usr/bin/${PN}
 }
