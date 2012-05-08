@@ -2,6 +2,14 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 May 2012; Gao Xiang <qasdfgtyuiop@gmail.com> west-chamber-0.0.1-r4.ebuild:
+  fix dependency error:
+    emerge: there are no ebuilds to satisfy ">virtual/linux-sources-2.6.22".
+    (dependency required by "net-firewall/west-chamber-0.0.1-r4" [ebuild])
+    (dependency required by "west-chamber" [argument])
+  trying to depend on virtual/linux-sources is a bad choice, see:
+  http://archives.gentoo.org/gentoo-dev/msg_adb45dedc05bc023de23be90015e8629.xml
+
   10 Jul 2010; Zhang Le <r0bertz@gentoo.org> west-chamber-0.0.1-r4.ebuild:
   fix sandbox violation
 
