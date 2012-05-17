@@ -1,0 +1,8 @@
+# ChangeLog for games-misc/llk_linux
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*gtkqq-9999 (17 May 2012)
+
+  17 May 2012; Lan Yixun <dennis.yxun@gmail.org> +gtkqq-9999.ebuild,
+  added gtkqq, base on dev branch
