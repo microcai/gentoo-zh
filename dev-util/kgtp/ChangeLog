@@ -1,0 +1,6 @@
+# ChangeLog for dev-util/kgtp
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  22 May 2012; Lan Yixun<dennis.yxun@gmail.com> +kgtp-9999.ebuild:
+  added kgtp-9999.ebuild
