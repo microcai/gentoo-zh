@@ -2,6 +2,9 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  25 May 2012; <amesists@gentoo.org> fcitx-configtool-9999.ebuild:
+  Change the git repo uri.
+
 *fcitx-configtool-0.4.2 (30 Apr 2012)
 
   30 Apr 2012; <amesists@gentoo.org> +fcitx-configtool-0.4.2.ebuild:

@@ -2,6 +2,9 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  25 May 2012; <amesists@gentoo.org> fcitx-googlepinyin-9999.ebuild:
+  Change the git repo uri.
+
 *fcitx-googlepinyin-0.1.5 (13 Mar 2012)
 
   13 Mar 2012; Amesists <amesists@gmail.com> +fcitx-googlepinyin-0.1.5.ebuild:

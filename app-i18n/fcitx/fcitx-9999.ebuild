@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -8,7 +8,7 @@ inherit cmake-utils eutils git-2
 
 DESCRIPTION="Free Chinese Input Toy of X - Input Method Server for X window system"
 HOMEPAGE="http://code.google.com/p/fcitx/"
-EGIT_REPO_URI="http://code.google.com/p/fcitx/"
+EGIT_REPO_URI="https://github.com/fcitx/fcitx.git"
 
 LICENSE="GPL-2"
 SLOT="0"

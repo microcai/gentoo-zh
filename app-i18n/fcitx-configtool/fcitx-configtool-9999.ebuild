@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,7 +6,7 @@ EAPI="2"
 
 inherit cmake-utils git-2
 
-EGIT_REPO_URI="http://code.google.com/p/fcitx.fcitx-config/"
+EGIT_REPO_URI="https://github.com/fcitx/fcitx-configtool.git"
 
 DESCRIPTION="A gtk GUI to edit fcitx settings"
 HOMEPAGE="https://fcitx.googlecode.com"
