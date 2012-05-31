@@ -1,0 +1,166 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-44-r1.ebuild,v 1.2 2012/05/24 02:36:59 vapier Exp $
+
+EAPI=4
+
+inherit autotools-utils bash-completion-r1 linux-info pam systemd user
+
+DESCRIPTION="System and service manager for Linux"
+HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
+SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ~arm ~x86"
+IUSE="-keymap -quota -coredump acl audit cryptsetup lzma pam plymouth selinux tcpd"
+
+# We need to depend on sysvinit for sulogin which is used in the rescue
+# mode. Bug #399615.
+
+# A little higher than upstream requires
+# but I had real trouble with 2.6.37 and systemd.
+MINKV="3.3"
+
+# dbus version because of systemd units
+# sysvinit for sulogin
+COMDEPEND=">=sys-apps/dbus-1.4.10
+	>=sys-apps/kmod-5
+	sys-apps/sysvinit
+	>=sys-apps/util-linux-2.19
+	sys-libs/libcap
+	acl? ( sys-apps/acl )
+	audit? ( >=sys-process/audit-2 )
+	cryptsetup? ( sys-fs/cryptsetup )
+	lzma? ( app-arch/xz-utils )
+	pam? ( virtual/pam )
+	plymouth? ( sys-boot/plymouth )
+	selinux? ( sys-libs/libselinux )
+	tcpd? ( sys-apps/tcp-wrappers )"
+
+RDEPEND="${COMDEPEND}
+	=sys-fs/udev-${PV}"
+
+DEPEND="${COMDEPEND}
+	app-arch/xz-utils
+	app-text/docbook-xsl-stylesheets
+	dev-libs/libxslt
+	dev-util/gperf
+	dev-util/intltool
+	>=sys-kernel/linux-headers-${MINKV}
+	sys-apps/usbutils"
+
+pkg_setup() {
+	enewgroup lock # used by var-lock.mount
+	enewgroup tty 5 # used by mount-setup for /dev/pts
+}
+
+src_configure() {
+	local myeconfargs=(
+		--with-distro=gentoo
+		# install everything to /usr
+		--with-rootprefix=/usr
+		--with-rootlibdir=/usr/$(get_libdir)
+		# but pam modules have to lie in /lib*
+		--with-pamlibdir=/$(get_libdir)/security
+		--localstatedir=/var
+		# make sure we get /bin:/sbin in $PATH
+		--enable-split-usr
+		$(use_enable acl)
+		$(use_enable audit)
+		$(use_enable cryptsetup libcryptsetup)
+		$(use_enable lzma xz)
+		$(use_enable pam)
+		$(use_enable plymouth)
+		$(use_enable selinux)
+		$(use_enable tcpd tcpwrap)
+		# now in sys-apps/systemd-ui
+		--disable-gtk
+		--disable-vconsole
+		$(use_enable quota quotacheck)
+		$(use_enable coredump)
+		$(use_enable keymap)
+		--enable-split-usr
+	)
+
+	econf $(myeconfargs)
+}
+
+src_compile(){
+	emake
+}
+
+src_install() {
+	emake install DESTDIR="${D}" 
+
+	# compat for init= use
+	dosym ../usr/lib/systemd/systemd /bin/systemd
+	dosym ../lib/systemd/systemd /usr/bin/systemd
+	# rsyslog.service depends on it...
+	dosym ../usr/bin/systemctl /bin/systemctl
+
+	# move files as necessary
+	newbashcomp "${D}"/etc/bash_completion.d/systemd-bash-completion.sh ${PN}
+	rm -rf "${D}/etc/bash_completion.d" || die
+
+	# we just keep sysvinit tools, so no need for the mans
+	rm -rf "${D}"/usr/share/man/man8/{halt,poweroff,reboot,runlevel,shutdown,telinit}.8 \
+	rm "${D}"/usr/share/man/man1/init.1 
+
+	# Create /run/lock as required by new baselay/OpenRC compat.
+	insinto /usr/lib/tmpfiles.d
+	doins "${FILESDIR}"/gentoo-run.conf
+}
+
+pkg_preinst() {
+	local CONFIG_CHECK="~AUTOFS4_FS ~CGROUPS ~DEVTMPFS ~FANOTIFY ~IPV6"
+	kernel_is -ge ${MINKV//./ } || ewarn "Kernel version at least ${MINKV} required"
+	check_extra_config
+}
+
+optfeature() {
+	local i desc=${1} text
+	shift
+
+	text="  [\e[1m$(has_version ${1} && echo I || echo ' ')\e[0m] ${1}"
+	shift
+
+	for i; do
+		elog "${text}"
+		text="& [\e[1m$(has_version ${1} && echo I || echo ' ')\e[0m] ${1}"
+	done
+	elog "${text} (${desc})"
+}
+
+pkg_postinst() {
+	mkdir -p "${ROOT}"/run || ewarn "Unable to mkdir /run, this could mean trouble."
+	if [[ ! -L "${ROOT}"/etc/mtab ]]; then
+		ewarn "Upstream suggests that the /etc/mtab file should be a symlink to /proc/mounts."
+		ewarn "It is known to cause users being unable to unmount user mounts. If you don't"
+		ewarn "require that specific feature, please call:"
+		ewarn "	$ ln -sf '${ROOT}proc/self/mounts' '${ROOT}etc/mtab'"
+		ewarn
+	fi
+
+	elog "You may need to perform some additional configuration for some programs"
+	elog "to work, see the systemd manpages for loading modules and handling tmpfiles:"
+	elog "	$ man modules-load.d"
+	elog "	$ man tmpfiles.d"
+	elog
+
+	elog "To get additional features, a number of optional runtime dependencies may"
+	elog "be installed:"
+	optfeature 'for systemd-analyze' \
+		'dev-lang/python:2.7' 'dev-python/dbus-python'
+	optfeature 'for systemd-analyze plotting ability' \
+		'dev-python/pycairo[svg]'
+	optfeature 'for GTK+ systemadm UI and gnome-ask-password-agent' \
+		'sys-apps/systemd-ui'
+	elog
+
+	ewarn "Please note this is a work-in-progress and many packages in Gentoo"
+	ewarn "do not supply systemd unit files yet. You are testing it on your own"
+	ewarn "responsibility. Please remember than you can pass:"
+	ewarn "	init=/sbin/init"
+	ewarn "to your kernel to boot using sysvinit / OpenRC."
+}
