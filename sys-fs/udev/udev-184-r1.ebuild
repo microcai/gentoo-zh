@@ -14,5 +14,7 @@ IUSE="build selinux debug +rule_generator hwdb gudev introspection
 
 RDEPEND="=sys-apps/systemd-${PV}"
 
+DEPEND="!<sys-fs/udev-183"
+
 KEYWORDS="~amd64 ~x86"
 

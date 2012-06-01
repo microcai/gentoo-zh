@@ -110,6 +110,8 @@ src_install() {
 	# Create /run/lock as required by new baselay/OpenRC compat.
 	insinto /usr/lib/tmpfiles.d
 	doins "${FILESDIR}"/gentoo-run.conf
+	#move pam_systemd
+	mv "${D}/usr/${get_libdir}/security/pam_systemd.so" "${D}/${get_libdir}/security/pam_systemd.so"
 }
 
 pkg_preinst() {
@@ -148,19 +150,5 @@ pkg_postinst() {
 	elog "	$ man tmpfiles.d"
 	elog
 
-	elog "To get additional features, a number of optional runtime dependencies may"
-	elog "be installed:"
-	optfeature 'for systemd-analyze' \
-		'dev-lang/python:2.7' 'dev-python/dbus-python'
-	optfeature 'for systemd-analyze plotting ability' \
-		'dev-python/pycairo[svg]'
-	optfeature 'for GTK+ systemadm UI and gnome-ask-password-agent' \
-		'sys-apps/systemd-ui'
-	elog
-
-	ewarn "Please note this is a work-in-progress and many packages in Gentoo"
-	ewarn "do not supply systemd unit files yet. You are testing it on your own"
-	ewarn "responsibility. Please remember than you can pass:"
-	ewarn "	init=/sbin/init"
-	ewarn "to your kernel to boot using sysvinit / OpenRC."
+	ewarn "Add session optional pam_systemd.so to /etc/pam.d/login"
 }
