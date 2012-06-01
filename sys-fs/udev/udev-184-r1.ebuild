@@ -12,7 +12,7 @@ SLOT="0"
 IUSE="build selinux debug +rule_generator hwdb gudev introspection
 	keymap floppy doc static-libs +openrc"
 
-RDEPEND="=sys-apps/systemd-${PV}"
+RDEPEND=">=sys-apps/systemd-${PV}"
 
 DEPEND="!<sys-fs/udev-183"
 

@@ -24,7 +24,7 @@ MINKV="3.3"
 
 # dbus version because of systemd units
 # sysvinit for sulogin
-COMDEPEND=">=sys-apps/dbus-1.4.10
+RDEPEND=">=sys-apps/dbus-1.4.10
 	>=sys-apps/kmod-5
 	sys-apps/sysvinit
 	>=sys-apps/util-linux-2.19
@@ -38,10 +38,8 @@ COMDEPEND=">=sys-apps/dbus-1.4.10
 	selinux? ( sys-libs/libselinux )
 	tcpd? ( sys-apps/tcp-wrappers )"
 
-RDEPEND="${COMDEPEND}
-	=sys-fs/udev-${PV}"
 
-DEPEND="${COMDEPEND}
+DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
