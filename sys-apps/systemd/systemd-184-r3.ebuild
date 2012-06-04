@@ -93,8 +93,6 @@ src_install() {
 	# compat for init= use
 	dosym ../usr/lib/systemd/systemd /bin/systemd
 	dosym ../lib/systemd/systemd /usr/bin/systemd
-	# rsyslog.service depends on it...
-	dosym ../usr/bin/systemctl /bin/systemctl
 
 	# move files as necessary
 	newbashcomp "${D}"/etc/bash_completion.d/systemd-bash-completion.sh ${PN}
