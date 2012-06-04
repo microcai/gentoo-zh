@@ -26,3 +26,8 @@ net-im/instantbird
 # microcai <microcaicai@gmail.com> ( 1, Mar  2012)
 # can't work with mozilla-js-8.0
 >=dev-libs/gjs-1.31.10
+
+#mask  systemd
+>=sys-apps/systemd-184
+>=sys-fs/udev-184
+
