@@ -46,7 +46,7 @@ DEPEND="${RDEPEND}
 	dev-util/gperf
 	dev-util/intltool
 	>=sys-kernel/linux-headers-${MINKV}
-	sys-apps/usbutils"
+	>=sys-apps/usbutils-005-r1"
 
 pkg_setup() {
 	enewgroup lock # used by var-lock.mount
