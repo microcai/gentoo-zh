@@ -78,10 +78,9 @@ src_configure() {
 		$(use_enable quota quotacheck)
 		$(use_enable coredump)
 		$(use_enable keymap)
-		--enable-split-usr
 	)
 
-	econf $(myeconfargs)
+	econf ${myeconfargs[*]}
 }
 
 src_compile(){
