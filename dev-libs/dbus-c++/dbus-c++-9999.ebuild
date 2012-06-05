@@ -11,8 +11,6 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/dbus-c++"
 
 EGIT_REPO_URI="git://gitorious.org/dbus-cplusplus/mainline.git"
 EGIT_BOOTSTRAP="./autogen.sh"
-#EGIT_COMMIT=""
-#EGIT_PATCHES="${FILESDIR}/fix_deadlock.patch"
 
 LICENSE="GPL-2"
 SLOT="0"
