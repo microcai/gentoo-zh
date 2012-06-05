@@ -1,0 +1,575 @@
+# ChangeLog for sys-kernel/dracut
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.62 2012/05/18 08:12:04 aidecoe Exp $
+
+  18 May 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-018-r1.ebuild:
+  Added 'bootchart' module.
+
+  18 May 2012; Lance Albertson <ramereth@gentoo.org> metadata.xml:
+  remove myself as a maintainer
+
+*dracut-018-r1 (16 May 2012)
+
+  16 May 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-018-r1.ebuild,
+  +files/dracut-018-lsinitrd-support-symlinks.patch:
+  Fixes bug #411821.  Thanks to Nikoli <nikoli@lavabit.com> for the patch.
+
+  09 May 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-017-r1.ebuild,
+  -dracut-017-r2.ebuild, -dracut-017-r3.ebuild,
+  -files/dracut-017-convertfs-fix-check-for-usr-bin.patch,
+  -files/dracut-017-crypt-simplify-rd.luks.uuid-testing.patch,
+  -files/dracut-017-fstab-sys-no-check-for-dev.patch,
+  -files/dracut-017-fstab-sys-remove-bashism.patch,
+  -files/dracut-017-inst_symlink-parent-dir.patch,
+  -files/dracut-017-multipath-udev-rules.patch,
+  -files/dracut-017-tmpdir-option.patch,
+  -files/dracut-017-usrmount-fstab-comments.patch,
+  -files/dracut-017-usrmount-newroot-etc-check.patch:
+  Removed 017, because 018 fixes bugs which are not going to be backported to
+  017.
+
+  26 Apr 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-018.ebuild:
+  Removed use of WITH_SWITCH_ROOT variables.
+
+*dracut-018 (05 Apr 2012)
+
+  05 Apr 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-018.ebuild,
+  +files/dracut-018-multipath-udev-rules.patch:
+  Version bump. Fixes btw bug #408669.
+
+  Build time dependencies are no longer required, because man pages and html
+  doc are already built.  Therefore compile phase in empty.
+
+  NEWS
+  ~~~~
+  (Taken from NEWS file. Lines which don't apply to Gentoo package are
+  removed.)
+
+  - lvm: ignore lvm mirrors
+  - lsinitrd: handle LZMA images
+  - iscsi: add rd.iscsi.param
+  - iscsi: add iscsi interface binding
+  - fixed fstab.sys handling
+  - new dracut option "--tmpdir"
+  - new dracut option "--no-hostonly"
+  - nbd: name based nbd connects
+  - write-ifcfg fixes and cleanups
+  - ifup is now done in the initqueue
+  - netroot cleanup
+  - initqueue/online is now for hooks, which require network
+  - no more /tmp/root.info
+  - 98pollcdrom: factored out the ugly cdrom polling in the main loop
+  - simplified rd.luks.uuid testing
+  - removed "egrep" and "ls" calls
+  - speedup kernel module installation
+  - lots of bugfixes
+
+*dracut-017-r3 (27 Mar 2012)
+
+  27 Mar 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-017-r3.ebuild,
+  +files/dracut-017-fstab-sys-no-check-for-dev.patch,
+  +files/dracut-017-fstab-sys-remove-bashism.patch:
+  Fixed fstab-sys not working with dash wrt bug #406755.
+
+  Applied also patch removing check for existing /dev, because "there are a lot
+  of filesystems, which do not need an actual device node".
+
+*dracut-017-r2 (26 Mar 2012)
+
+  26 Mar 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-017-r2.ebuild,
+  +files/dracut-017-inst_symlink-parent-dir.patch,
+  +files/dracut-017-tmpdir-option.patch:
+  Fixes "inst_symlink will not create directory containing the symlink"
+  (bug #409167) and adds new tiny feature - tmpdir option (bug #409177).
+
+  05 Mar 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-017-r1.ebuild:
+  Warn if kernel config cannot be checked.
+
+*dracut-017-r1 (01 Mar 2012)
+
+  01 Mar 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-017.ebuild,
+  +dracut-017-r1.ebuild:
+  Don't create broken misplaced symlink.
+
+  29 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-010-r3.ebuild,
+  -files/dracut-010-empty-etc-ld.so.conf.d.patch,
+  -files/dracut-010-multipath-udev-rules.patch,
+  -files/dracut-010-rd.driver.post-fixed.patch,
+  -files/dracut-010-rd.driver.pre-and-blacklist-fix.patch,
+  -dracut-013-r2.ebuild, -files/dracut-013-integrated-initramfs-fix.patch,
+  -files/dracut-013-livenet-gentoo-ca-bundle-path.patch,
+  -files/dracut-013-makefile-manpages.patch,
+  -files/dracut-013-multipath-udev-rules.patch, -dracut-016.ebuild,
+  -files/dracut-016-multipath-udev-rules.patch:
+  Removed old versions. Left 014 because it is most stable and 017 because this
+  is the latest with important fixes.
+
+*dracut-017 (29 Feb 2012)
+
+  29 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-017.ebuild,
+  +files/dracut-017-convertfs-fix-check-for-usr-bin.patch,
+  +files/dracut-017-crypt-simplify-rd.luks.uuid-testing.patch,
+  +files/dracut-017-multipath-udev-rules.patch,
+  +files/dracut-017-usrmount-fstab-comments.patch,
+  +files/dracut-017-usrmount-newroot-etc-check.patch:
+  Version bump.
+
+  Backported patches:
+  - fixes for usrmount (bug #406023)
+  - workaround for broken dm-setup not detecting /dev/dm-* (bug #405921)
+  - fix for convertfs
+
+  NEWS
+  ~~~~
+  - a _lot_ faster than dracut-016 in image creation
+  - systemd service dracut-shutdown.service
+  - livenet fixes
+  - ssh-client module install fix
+  - root=iscsi:... fixed
+  - lots of restructuring and optimizing in dracut-functions.sh
+  - usrmount: honor fs_passno in /etc/fstab
+  - renamed all shell scripts to .sh
+  - new option "--omit-drivers" and config option "omit_drivers"
+  - hostonly mode fixups
+
+  27 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-010-r3.ebuild,
+  dracut-013-r2.ebuild, dracut-014-r2.ebuild, dracut-016.ebuild:
+  Depend on module-init-tools or >kmod-5[tools] explicitly instead of
+  virtual/modutils. Rels bug #405827 and bug #402557.
+
+  21 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-016.ebuild:
+  Check kernel config for CONFIG_MODULES. Added -f option to rm_module
+  function, btw.
+
+  18 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-016.ebuild,
+  metadata.xml:
+  Renamed 'dm' flag to 'device-mapper', because the later is used also by lilo,
+  grub and parted.
+
+  16 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-010-r3.ebuild,
+  dracut-013-r2.ebuild, dracut-014-r2.ebuild, dracut-016.ebuild:
+  Depend on virtual/modutils instead of sys-apps/module-init-tools.  Dracut
+  should work with kmod tools which is alternative to module-init-tools,
+  although it hasn't been well tested yet.
+
+  16 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-016.ebuild,
+  metadata.xml:
+  Remove network or dm related modules when USE flags 'net' or 'dm' are
+  disabled. Modules depending on networking or device-mapper have corresponding
+  flags which depend on 'net' or 'dm'.
+
+  'ssh-client' dracut_module was added and net-misc/curl dependency to 'net'
+  because of new url-lib module.
+
+*dracut-016 (15 Feb 2012)
+
+  15 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-016.ebuild,
+  +files/dracut-016-multipath-udev-rules.patch:
+  Version bump.
+
+  New modules come:
+  - convertfs
+  - ssh-client
+  - terminfo
+
+  Kernel options are checked starting with this ebuild. CONFIG_BLK_DEV_INITRD
+  is obvious and was always required and since dracut 015 CONFIG_DEVTMPFS is
+  required, too.
+
+  usrmount module doesn't enforce /usr being mount ro anymore.
+
+  NEWS
+  ~~~~
+  Extracted from Dracut NEWS file - merged news from version 015 and 016,
+  because 015 was skipped in Portage:
+
+  - fixed lsinitrd
+  - honor binaries in sbin first
+  - fixed usrmount module
+  - added systemd service for shutdown
+  - fixed terminfo on distros with /usr/share/terminfo
+  - reload udev rules after "pre-trigger" hook
+  - improved test suite
+  - new parameter "--omit-drivers" and new conf param omit_drivers
+  - "--offroot" support for mdraid
+  - new libs: net-lib.sh, nfs-lib.sh, url-lib.sh, img-lib.sh
+  full of functions to use in your dracut module
+  - hostonly mode automatically adds command line options for root and /usr
+  - --add-fstab --mount parameters
+  - ssh-client module
+  - --ctty option: add job control
+  - cleanup /run/initramfs
+  - convertfs module
+  - /sbin/ifup can be called directly
+  - support kernel modules compressed with xz
+  - s390 iscsi modules added
+  - terminfo module
+  - lsinitrd can handle concatened images
+  - lsinitrd can sort by size
+
+*dracut-014-r2 (30 Jan 2012)
+
+  30 Jan 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-014-r1.ebuild,
+  +dracut-014-r2.ebuild:
+  Depend on >=sys-apps/util-linux-2.20. Fixes bug #399213.
+
+  12 Jan 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-013-r2.ebuild,
+  dracut-014-r1.ebuild:
+  Removed unused variables.
+
+  12 Jan 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-014.ebuild:
+  Removed old 014 revision.
+
+*dracut-014-r1 (12 Jan 2012)
+
+  12 Jan 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-014-r1.ebuild,
+  +files/dracut-014-usrmount-fsck-fix.patch:
+  Fixed fsck usage error on /usr mount wrt bug #396575.
+
+  11 Jan 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-010-r3.ebuild,
+  +files/dracut-010-empty-etc-ld.so.conf.d.patch,
+  +files/dracut-010-multipath-udev-rules.patch,
+  +files/dracut-010-rd.driver.post-fixed.patch,
+  +files/dracut-010-rd.driver.pre-and-blacklist-fix.patch:
+  Restored 010-r3, because some people need it for ZFS support.  Fixes
+  bug #398213.
+
+  27 Dec 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-014.ebuild:
+  Removed dracut_modules_xen from ebuild modules list and dependencies.
+
+  27 Dec 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-013.ebuild,
+  -dracut-013-r1.ebuild:
+  Removed old 013 revisions.
+
+*dracut-014 (27 Dec 2011)
+
+  27 Dec 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-014.ebuild,
+  +files/dracut-014-multipath-udev-rules.patch:
+  Version bump.
+
+  This version provides new modules:
+  - usrmount
+  - securityfs
+
+  Following modules were removed:
+  - xen
+
+
+  NEWS
+  ~~~~
+  From Dracut NEWS file:
+
+  - new dracut arguments:
+    --lvmconf
+    --nolvmconf
+    --fscks [LIST]
+    --nofscks
+  - new .conf options:
+    install_items
+    fscks
+    nofscks
+  - new kernel options:
+    rd.md.ddf
+    rd.md.waitclean
+    plymouth.enable
+  - dracut move from /sbin to /usr/bin
+  - dracut modules dir moved from /usr/share/dracut to /usr/lib/dracut
+  - profiling with "dracut --profile"
+  - speedup of initramfs creation
+  - ask_for_password fallback to CLI
+  - mdraid completely switched to incremental assembly
+  - no more cdrom polling
+  - "switch_root" breakpoint is now very late
+  - /dev/live is gone
+  - /dev/root is gone
+  - fs-lib dracut module for fscks added
+  - usb mass storage kernel drivers now included
+  - usrmount dracut module added:
+    mount /usr if found in /sysroot/etc/fstab
+  - only include fsck helper needed for hostonly
+  - support iSCSI drivers: qla4xxx, cxgb3i, cxgb4i, bnx2i, be2iscsi
+  - add install_items to dracut.conf
+    install_items+=" <file>[ <file> ...] "
+
+  16 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-010-r3.ebuild,
+  -files/dracut-010-empty-etc-ld.so.conf.d.patch,
+  -files/dracut-010-multipath-udev-rules.patch,
+  -files/dracut-010-rd.driver.post-fixed.patch,
+  -files/dracut-010-rd.driver.pre-and-blacklist-fix.patch, -dracut-011.ebuild,
+  -dracut-011-r1.ebuild, -files/dracut-011-integrated-initramfs-fix.patch,
+  -files/dracut-011-multipath-udev-rules.patch:
+  Removed old versions: 010 and 011.
+
+*dracut-013-r2 (16 Nov 2011)
+
+  16 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-013-r2.ebuild,
+  +files/dracut-013-makefile-manpages.patch:
+  Patched Makefile to install man pages properly. Fixes bug #390629. Btw, use
+  single call to epatch.
+
+  09 Sep 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-010-r3.ebuild,
+  dracut-011.ebuild, dracut-011-r1.ebuild, dracut-013.ebuild,
+  dracut-013-r1.ebuild:
+  Added app-arch/cpio dependency, because it's going to be removed from system
+  set.
+
+  04 Sep 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-008-r1.ebuild:
+  Removed left 008-r1 ebuild.
+
+*dracut-013-r1 (04 Sep 2011)
+*dracut-011-r1 (04 Sep 2011)
+
+  04 Sep 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-011-r1.ebuild,
+  +files/dracut-011-integrated-initramfs-fix.patch, +dracut-013-r1.ebuild,
+  +files/dracut-013-integrated-initramfs-fix.patch:
+  Fixed bug #380111 - "kernels with integrated initramfs and dracut failed to
+  boot"
+
+  31 Aug 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-007.ebuild,
+  -files/dracut-007-dm-udev-rules.patch,
+  -files/dracut-007-multipath-udev-rules.patch, -dracut-008.ebuild,
+  -files/dracut-008-dm-udev-rules.patch,
+  -files/dracut-008-i18n-config-file-parsing-in-hostonly.patch,
+  -files/dracut-008-multipath-udev-rules.patch, -dracut-009-r1.ebuild,
+  -files/dracut-009-don-t-skip-zero-length-string-outfile.patch,
+  -files/dracut-009-multipath-udev-rules.patch, metadata.xml:
+  Removed older ebuilds (<010) with corresponding files. metadata.xml was
+  cleaned up from flags descriptions which are used no more.
+
+  31 Aug 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-013.ebuild:
+  Added 'crypt' requirement for 'crypt-gpg'.
+
+*dracut-013 (21 Aug 2011)
+
+  21 Aug 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-013.ebuild,
+  +files/dracut-013-livenet-gentoo-ca-bundle-path.patch,
+  +files/dracut-013-multipath-udev-rules.patch:
+  Version bump to 013 and EAPI bump to 4.
+
+  This version provides new modules:
+  - livenet
+  - fs-lib
+
+  sys-fs/udev-164 is OK after all. Some dependencies were removed, because
+  they are optional:
+  - net-misc/ifenslave
+  - net-misc/bridge-utils
+  - virtual/eject
+  dracut will warn if something optional is missing, but will continue build an
+  image without issues.
+
+  New important for bug #378863 option was introduced: --force-add
+
+  Dracut can now mount /usr if it's defined in /etc/fstab on destination
+  rootfs.
+
+*dracut-011 (18 Jul 2011)
+
+  18 Jul 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-011.ebuild,
+  +files/dracut-011-multipath-udev-rules.patch:
+  Version bump.
+
+  This version provides new modules:
+  - crypt-gpg
+  - shutdown
+
+  sys-fs/udev version was restricted to 168 and above and
+  sys-apps/module-init-tools to 3.8 or above.
+
+  30 Jun 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-010.ebuild,
+  -dracut-010-r1.ebuild, -dracut-010-r2.ebuild:
+  Removed old revisions of version 010.
+
+*dracut-010-r3 (30 Jun 2011)
+
+  30 Jun 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-010-r3.ebuild,
+  +files/dracut-010-rd.driver.post-fixed.patch,
+  +files/dracut-010-rd.driver.pre-and-blacklist-fix.patch:
+  rd.driver.* kernel args handling patches. Fixes bug #373007.
+
+  23 Jun 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-009-r1.ebuild,
+  dracut-010.ebuild, dracut-010-r1.ebuild, dracut-010-r2.ebuild:
+  Missing RESTRICT="test" fixed. Refs bug #298014.
+
+*dracut-010-r2 (07 Jun 2011)
+
+  07 Jun 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-010-r2.ebuild:
+  Added missing net-misc/ifenslave runtime dependency.
+
+*dracut-010-r1 (01 Apr 2011)
+
+  01 Apr 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-010-r1.ebuild,
+  +files/dracut-010-empty-etc-ld.so.conf.d.patch:
+  Rev-bump. Fixes #361603.
+
+*dracut-010 (01 Apr 2011)
+
+  01 Apr 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-010.ebuild,
+  +files/dracut-010-multipath-udev-rules.patch:
+  Version bump. No, it's not a joke. It's generally a bugfix release.
+
+  31 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> dracut-007.ebuild,
+  dracut-008.ebuild, dracut-008-r1.ebuild, dracut-009-r1.ebuild:
+  Use virtual/eject instead of sys-apps/eject.
+
+  29 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  -files/dracut-002-add-missing-functions.patch,
+  -files/dracut-002-custom-paths.patch, -files/dracut-002-dir-symlinks.patch,
+  -files/dracut-002-gencmdline-check-for-keyboard-i18n-files.patch,
+  -files/dracut-002-makefile-add-with_switch_root.patch,
+  -files/dracut-002-unmount.patch,
+  -files/dracut-006-console_init-not-necessary.patch,
+  -files/dracut-006-dhcp6.patch, -files/dracut-006-dm-udev-rules.patch,
+  -files/dracut-006-lc-all-c.patch:
+  Removed patches of not existing ebuilds.
+
+  29 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-002-r1.ebuild,
+  -dracut-003.ebuild, -dracut-004.ebuild, -dracut-006.ebuild,
+  -dracut-006-r1.ebuild, -dracut-009.ebuild, metadata.xml:
+  Removed ancient versions and broken dracut-009.ebuild.
+
+*dracut-009-r1 (29 Mar 2011)
+
+  29 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-009-r1.ebuild:
+  Not removing 97biosdevname module anymore.
+
+*dracut-009 (28 Mar 2011)
+
+  28 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-009.ebuild,
+  +files/dracut-009-don-t-skip-zero-length-string-outfile.patch,
+  +files/dracut-009-multipath-udev-rules.patch:
+  Version bump.
+
+  This version provides new modules:
+  - biosdevname
+  - caps
+
+  sys-block/open-iscsi is restricted to 2.0.871.3 and above because of required
+  iBFT support which starts with this version.
+
+  net-misc/dhcp restricted to 4.2.1-r1 and above because dhcp-3 doesn't work
+  with Qemu and dhcp-4 is already ~arch keyworded.
+
+  21 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-002-r1.ebuild,
+  dracut-003.ebuild, dracut-004.ebuild, dracut-006.ebuild,
+  dracut-006-r1.ebuild, dracut-007.ebuild, dracut-008.ebuild,
+  dracut-008-r1.ebuild:
+  Tests are restricted for all ebuilds. See bug #298014.
+
+  16 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-002-r1.ebuild,
+  dracut-003.ebuild, dracut-004.ebuild, dracut-006.ebuild,
+  dracut-006-r1.ebuild, dracut-007.ebuild, dracut-008.ebuild,
+  dracut-008-r1.ebuild:
+  Project's home page update.
+
+*dracut-008-r1 (07 Mar 2011)
+
+  07 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-008-r1.ebuild:
+  Revision bump. Added plymouth module. Related to bug #353577.
+
+  02 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-007.ebuild:
+  Propagated few improvements from dracut-008.ebuild. Resolves bug #348085.
+
+  Changes include:
+  - removed mount-boot and mkdir of /boot/dracut (user can create it
+    him/herself if really needed)
+
+  01 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-007.ebuild:
+  Added dependency on baselayout-1.12.14-r1 or above.
+
+  01 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-008.ebuild:
+  Added notice about new options format.
+
+*dracut-008 (01 Mar 2011)
+
+  01 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-008.ebuild,
+  +files/dracut-008-dm-udev-rules.patch,
+  +files/dracut-008-i18n-config-file-parsing-in-hostonly.patch,
+  +files/dracut-008-multipath-udev-rules.patch:
+  Version bump, resolves bug #353577
+
+  Changes:
+  - modules controlled by DRACUT_MODULES USE_EXPAND instead of regular IUSE
+    (except of 'debug' and 'selinux')
+  - removed mount-boot and mkdir of /boot/dracut (user can create it
+    him/herself if really needed)
+  - added dependency on baselayout-1.12.14-r1 or above
+  - few minor fixes in the ebuild like missing 'die' and so
+
+  Other notes:
+  - removing biosdevname module (there's no package yet)
+  - removing broken modules: bootchart and busybox
+
+  Thanks to
+    Lucian Muresan <lucianm@users.sourceforge.net>
+    and Xake <xake@rymdraket.net>
+  for report and comments.
+
+  09 Jan 2011; Mike Frysinger <vapier@gentoo.org> dracut-007.ebuild:
+  Use new mount-boot_pkg_postinst helper.
+
+  25 Aug 2010; Lance Albertson <ramereth@gentoo.org> dracut-006-r1.ebuild,
+  dracut-007.ebuild:
+  Fixes bug #334347 (dm related dependencies). Thanks to Akos Szalkai
+  <szalkai@szalkai.net> for report and patch.
+
+*dracut-007 (17 Aug 2010)
+*dracut-006-r1 (17 Aug 2010)
+
+  17 Aug 2010; Lance Albertson <ramereth@gentoo.org> +dracut-006-r1.ebuild,
+  +files/dracut-006-console_init-not-necessary.patch,
+  +files/dracut-006-dm-udev-rules.patch, +dracut-007.ebuild,
+  +files/dracut-007-dm-udev-rules.patch,
+  +files/dracut-007-multipath-udev-rules.patch, metadata.xml:
+  Version bump and revision update
+
+  Update 006 with patches from #329003, bump to 007 to resolve #331903.
+  Thanks to Amadeusz Żołnowski for contributing the ebuilds and patches.
+
+*dracut-006 (07 Jul 2010)
+
+  07 Jul 2010; Lance Albertson <ramereth@gentoo.org> +dracut-006.ebuild,
+  +files/dracut-006-dhcp6.patch, +files/dracut-006-lc-all-c.patch,
+  metadata.xml:
+  Version bump, resolves bug #324705
+
+  Thanks to Amadeusz Żołnowski for submitting the ebuild and patches.
+
+  22 Mar 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fixed herd.
+
+*dracut-004 (02 Feb 2010)
+
+  02 Feb 2010; Lance Albertson <ramereth@gentoo.org> -dracut-002.ebuild,
+  +dracut-004.ebuild:
+  Version bump
+
+*dracut-003 (09 Dec 2009)
+*dracut-002-r1 (09 Dec 2009)
+
+  09 Dec 2009; Lance Albertson <ramereth@gentoo.org> +dracut-002-r1.ebuild,
+  +files/dracut-002-makefile-add-with_switch_root.patch, +dracut-003.ebuild:
+  Version bump, fix switch_root issues #293178, & remove system deps
+
+  Force package dep >=sys-apps/util-linux-2.16 which includes switch_root by
+  default. Otherwise dracut would have a file conflict with util-linux.
+  Backport upstream Makefile patch b3611b525 for version 002 instead of patch
+  included in the bug report. 
+
+  29 Sep 2009; Lance Albertson <ramereth@gentoo.org> dracut-002.ebuild,
+  +files/dracut-002-add-missing-functions.patch,
+  +files/dracut-002-gencmdline-check-for-keyboard-i18n-files.patch:
+  Fix dracut-gencmdline issues
+
+*dracut-002 (27 Sep 2009)
+
+  27 Sep 2009; Lance Albertson <ramereth@gentoo.org> +dracut-002.ebuild,
+  +files/dracut-002-custom-paths.patch,
+  +files/dracut-002-dir-symlinks.patch, +files/dracut-002-unmount.patch,
+  +metadata.xml:
+  Initial ebuild based from #278442
+
+  Thanks to Ambroz Bizjak <ambro@b4ever.net> for the initial ebuild and
+  patches
+

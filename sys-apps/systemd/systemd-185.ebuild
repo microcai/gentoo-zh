@@ -26,7 +26,7 @@ MINKV="3.3"
 # sysvinit for sulogin
 RDEPEND=">=sys-apps/dbus-1.4.10
 	>=sys-apps/kmod-5
-	sys-apps/sysvinit
+	!sys-apps/sysvinit
 	>=sys-apps/util-linux-2.19
 	sys-libs/libcap
 	acl? ( sys-apps/acl )
@@ -97,10 +97,6 @@ src_install() {
 	# move files as necessary
 	newbashcomp "${D}"/etc/bash_completion.d/systemd-bash-completion.sh ${PN}
 	rm -rf "${D}/etc/bash_completion.d" || die
-
-	# we just keep sysvinit tools, so no need for the mans
-	rm -rf "${D}"/usr/share/man/man8/{halt,poweroff,reboot,runlevel,shutdown,telinit}.8 \
-	rm "${D}"/usr/share/man/man1/init.1 
 
 	# Create /run/lock as required by new baselay/OpenRC compat.
 	insinto /usr/lib/tmpfiles.d
