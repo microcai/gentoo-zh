@@ -93,7 +93,14 @@ src_install() {
 	# compat for init= use
 	dosym ../usr/lib/systemd/systemd /bin/systemd
 	dosym ../lib/systemd/systemd /usr/bin/systemd
+	dosym ../usr/lib/systemd/systemd /sbin/init
 
+	dosym 	systemctl /bin/halt
+	dosym	systemctl /bin/reboot
+	dosym	systemctl /bin/poweroff
+	dosym	systemctl /bin/telinit
+	dosym	systemctl /bin/shutdown 
+	
 	# move files as necessary
 	newbashcomp "${D}"/etc/bash_completion.d/systemd-bash-completion.sh ${PN}
 	rm -rf "${D}/etc/bash_completion.d" || die
