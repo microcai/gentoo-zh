@@ -36,7 +36,8 @@ RDEPEND=">=sys-apps/dbus-1.4.10
 	pam? ( virtual/pam )
 	plymouth? ( sys-boot/plymouth )
 	selinux? ( sys-libs/libselinux )
-	tcpd? ( sys-apps/tcp-wrappers )"
+	tcpd? ( sys-apps/tcp-wrappers )
+	>=sys-apps/pciutils-3.1"
 
 
 DEPEND="${RDEPEND}
