@@ -2,6 +2,12 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*goagent-1.8.9 (07 Jun 2012)
+
+  07 Jun 2012; Havanna <skykiss_2000@163.com> +goagent-1.8.9.ebuild,
+  goagent-9999.ebuild, files/goagent-initd, metadata.xml:
+  add goagent-1.8.9.ebuild 
+
   20 Apr 2012; Yuwei Yu <acevery@gmail.com> goagent-9999.ebuild:
   Update upload method indication for user.
 

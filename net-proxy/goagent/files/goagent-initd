@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -7,8 +7,9 @@ GOAGENT_PID="--pidfile /var/run/goagent.pid"
 GOAGENT_LOG="/var/log/goagent.log"
 
 depend() {
-	need net
-	use netmount logger
+#	need net
+#	use netmount logger
+	use logger
 } 
 
 start() {
