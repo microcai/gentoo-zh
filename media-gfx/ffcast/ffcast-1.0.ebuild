@@ -14,11 +14,14 @@ SRC_URI="https://github.com/downloads/lolilolicon/FFcast2/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 amd64 x86"
-IUSE=""
+KEYWORDS="~amd64 ~x86"
+IUSE="+encode vorbis vpx +x264 xvid"
 
 RDEPEND=">=app-shells/bash-4.2_p8-r1
-	media-video/ffmpeg[x264]
+	|| (
+		media-video/ffmpeg[encode?,vorbis?,vpx?,x264?,xvid?]
+		media-video/libav[encode?,vorbis?,vpx?,x264?,xvid?]
+	)
 	x11-apps/xwininfo
 	x11-libs/libX11"
 DEPEND="${RDEPEND}"
@@ -26,9 +29,9 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_install() {
-#	emake DESTDIR="{D}" install || die "failed to install"
 	newbin ffcast.bash ffcast || die
 	dobin xrectsel || die
-#	dodoc README || die
+	newdoc README.asciidoc README || die
+	doman ${PN}.1 || die
 }
 
