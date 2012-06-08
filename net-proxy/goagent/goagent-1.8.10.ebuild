@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-S="${WORKDIR}/phus-${PN}-5ac8aa8"
+S="${WORKDIR}/phus-${PN}-b30a699"
 
 DESCRIPTION="A GAE proxy forked from gappproxy/wallproxy"
 HOMEPAGE="https://github.com/phus/goagent"
@@ -26,7 +26,7 @@ src_prepare() {
 src_install() {
 	insinto "/etc/"
 	newins "${S}/local/proxy.ini" goagent
-	rm ${S}/*/*.{bat,exe,vbs,dll,manifest,plist,ini} || die
+	rm ${S}/*/*.{bat,exe,vbs,dll,manifest,ini} || die
 
 	insinto "/opt/goagent"
 	doins -r "${S}/local" "${S}/server"

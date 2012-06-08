@@ -2,6 +2,12 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*goagent-1.8.10 (08 Jun 2012)
+
+  08 Jun 2012; Havanna <skykiss_2000@163.com> +goagent-1.8.10.ebuild,
+  goagent-9999.ebuild, files/goagent-initd, metadata.xml:
+  net-proxy/goagent: version bump to 1.8.10
+
 *goagent-1.8.9 (07 Jun 2012)
 
   07 Jun 2012; Havanna <skykiss_2000@163.com> +goagent-1.8.9.ebuild,
