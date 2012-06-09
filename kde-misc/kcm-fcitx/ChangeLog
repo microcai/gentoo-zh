@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 Jun 2012; Wang Jiajun <Amesists@gmail.com> -kcm-fcitx-0.1.0.ebuild,
+  -kcm-fcitx-0.1.1.ebuild, -kcm-fcitx-0.2.0.ebuild, -kcm-fcitx-0.3.0.ebuild,
+  -kcm-fcitx-0.3.1.ebuild, -kcm-fcitx-0.3.2.ebuild, +kcm-fcitx-0.3.3.ebuild:
+  Version bump to 0.3.3.
+
 *kcm-fcitx-0.3.2 (30 Apr 2012)
 
   30 Apr 2012; <amesists@gentoo.org> +kcm-fcitx-0.3.2.ebuild:

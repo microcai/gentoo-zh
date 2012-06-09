@@ -16,6 +16,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-RDEPEND=">=app-i18n/fcitx-4.2.1
+RDEPEND=">=app-i18n/fcitx-4.2.4
 	kde-base/systemsettings"
 DEPEND="${RDEPEND}"

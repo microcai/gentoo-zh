@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 Jun 2012; Amesists <amesists@gmail.com> -fcitx-cloudpinyin-0.1.0.ebuild,
+  -fcitx-cloudpinyin-0.1.1.ebuild, -fcitx-cloudpinyin-0.1.2.ebuild,
+  -fcitx-cloudpinyin-0.2.0.ebuild, -fcitx-cloudpinyin-0.2.1.ebuild:
+  Remove fcitx-cloudpinyin. It has been in the portage.
+
 *fcitx-cloudpinyin-0.2.1 (13 Mar 2012)
 
   13 Mar 2012; Amesists <amesists@gmail.com> +fcitx-cloudpinyin-0.2.1.ebuild,

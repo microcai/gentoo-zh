@@ -1,9 +1,0 @@
-# ChangeLog for app-i18n/fcitx-keyboard
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-*fcitx-keyboard-0.1.1 (13 Mar 2012)
-
-  13 Mar 2012; Amesists <amesists@gmail.com> +fcitx-keyboard-0.1.1.ebuild:
-  Initial import.
-

@@ -2,12 +2,12 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-  25 May 2012; <amesists@gentoo.org> fcitx-9999.ebuild:
+  25 May 2012; Amesists <amesists@gmail.com> fcitx-9999.ebuild:
   Change the git repo uri.
 
 *fcitx-4.2.2 (30 Apr 2012)
 
-  30 Apr 2012; <amesists@gentoo.org> +fcitx-4.2.2.ebuild:
+  30 Apr 2012; Amesists <amesists@gmail.com> +fcitx-4.2.2.ebuild:
   Version bump to 4.2.2.
 
 *fcitx-4.2.1 (13 Mar 2012)
