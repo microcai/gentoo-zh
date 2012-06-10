@@ -48,6 +48,9 @@ pkg_postinst() {
 	elog "upload={golang|python|php} python2.6 uploader.zip"
 	elog "/etc/init.d/goagent start|stop|restart"
 	elog
-	elog "you need dev-lang/python:2.6 to upload"
+	elog "if you get some error in the uploading,"
+	elog "please upload through other proxy."
+	elog "e.g. 'export https_proxy=127.0.0.1:8087',"
+	elog "and then upload again."
 	elog
 }
