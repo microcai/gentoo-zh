@@ -2,10 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.47.ebuild,v 1.1 2010/06/15 17:06:53 xarthisius Exp $
 
+EAPI=3
 PYTHON_USE_WITH="sqlite"
 PYTHON_DEPEND="2:2.5"
-
-EAPI=3
 
 inherit distutils eutils fdo-mime virtualx bzr
 
