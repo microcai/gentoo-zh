@@ -31,3 +31,4 @@ net-im/instantbird
 >=sys-apps/systemd-184
 >=sys-fs/udev-184
 
+=app-arch/unzip-6.10_beta
