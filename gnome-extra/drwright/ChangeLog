@@ -1,8 +1,0 @@
-# ChangeLog for gnome-extra/drwright
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  16 Nov 2007; scsi <scsichen@gmail.com> +metadata.xml,
-  +drwright-0.18.ebuild:
-  change keyword
-
