@@ -13,15 +13,16 @@ SRC_URI="mirror://sourceforge/synfig/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="imagemagick ffmpeg dv openexr truetype jpeg tiff fontconfig"
+
+IUSE="+imagemagick +ffmpeg dv +openexr +truetype +jpeg +tiff +fontconfig"
 
 DEPEND=">=dev-libs/libsigc++-2.0.0
 	>=dev-cpp/libxmlpp-2.6.1
-	>=media-libs/libpng-1.5
-	>=dev-cpp/ETL-0.04.14
+	media-libs/libpng
+	>=dev-cpp/ETL-0.04.15
 	ffmpeg? ( virtual/ffmpeg )
 	openexr? ( media-libs/openexr )
-	truetype? ( >=media-libs/freetype-2.1.9 )
+	truetype? ( media-libs/freetype )
 	fontconfig? ( media-libs/fontconfig )
 	jpeg? ( virtual/jpeg )
 	tiff? ( media-libs/tiff )"
@@ -31,8 +32,8 @@ RDEPEND="${DEPEND}
 	imagemagick? ( media-gfx/imagemagick )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/synfig_libpng14.patch
-	epatch "${FILESDIR}"/synfig_libpng15.patch
+	#epatch "${FILESDIR}"/synfig_libpng15.patch
+	base_src_prepare
 }
 
 src_configure() {
