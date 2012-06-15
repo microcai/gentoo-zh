@@ -29,8 +29,8 @@ RDEPEND="${DEPEND}"
 
 DEPEND="${DEPEND}
 app-arch/tar
-app-arch/unzip"
-
+app-arch/unzip
+sys-apps/findutils"
 
 S="${WORKDIR}"
 
@@ -38,8 +38,9 @@ src_install(){
 	lnks="yozo-calc.desktop yozo.desktop yozofileconvert.desktop  yozo-impress.desktop yozo-pdf.desktop  yozo-writer.desktop"
 	# 解压
 	tar -xf data.tar.gz -C "${D}"
-
+	
 	cd "${D}"
+
 	
 	sed -i -e "s/\/usr\/local/\/opt/g"  "etc/Yozosoft/Yozo_Office/installinfo.cfg"
 	
@@ -85,9 +86,11 @@ src_install(){
 
 	$unpackP -r ${D}/opt/Yozosoft/Yozo_Office/Yozo_Office.pack.gz ${D}/opt/Yozosoft/Yozo_Office/Yozo_Office.jar 
 
+	cd ${D}
+	chown root:root -R ${D}
 
-
-
+	find -type f -exec chmod 0644 {} +
+	find -type d -exec chmod 0755 {} +
 }
 
 pkg_postinst(){
