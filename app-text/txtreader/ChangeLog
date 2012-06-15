@@ -1,9 +1,0 @@
-# ChangeLog for app-text/txtreader
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-*txtreader-0.6.5 (11 Jul 2011)
-
-  11 Jul 2011; microcai <microcai@fedoraproject.org> +txtreader-0.6.5.ebuild:
-  add txtreader4linux
-

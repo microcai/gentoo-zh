@@ -1,9 +1,0 @@
-# ChangeLog for app-i18n/fcitx-table-extra
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-*fcitx-table-extra-0.2.0 (13 Mar 2012)
-
-  13 Mar 2012; Amesists <amesists@gmail.com> +fcitx-table-extra-0.2.0.ebuild:
-  Version bump to 0.2.0.
-

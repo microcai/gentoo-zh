@@ -1,8 +1,0 @@
-# ChangeLog for dev-libs/electric-fence
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  20 Apr 2010; Zhang Le <r0bertz@gentoo.org>
-  +electric-fence-2.1.13_pre1.ebuild, +metadata.xml:
-  added electric-fence
-

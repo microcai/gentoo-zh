@@ -1,8 +1,0 @@
-# ChangeLog for dev-python/pootle
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  05 Jan 2008; Zhang Le <r0bertz@gentoo.org> +metadata.xml,
-  +pootle-1.0.2.ebuild:
-  initial commit of pootle
-
