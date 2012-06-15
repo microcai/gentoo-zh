@@ -6,6 +6,7 @@ EAPI=4
 EGIT_BRANCH="dev"
 EGIT_REPO_URI="git://github.com/kernelhcy/gtkqq.git"
 
+WANT_AUTOMAKE="1.11" # bug 419455
 inherit git-2 autotools eutils
 
 DESCRIPTION="a qq client based on gtk+ uses webqq protocol"
