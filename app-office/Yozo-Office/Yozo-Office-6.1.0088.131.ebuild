@@ -91,12 +91,9 @@ src_install(){
 
 	find -type f -exec chmod 0644 {} +
 	find -type d -exec chmod 0755 {} +
-<<<<<<< HEAD
 	find -name '*.bin' -exec chmod 0755 {} +
 	cd opt/bin
 	find -exec chmod 0755 {} + 
-=======
->>>>>>> 5a53880645ae65bd5e91cd6a361cebbf9ac8f79b
 }
 
 pkg_postinst(){
