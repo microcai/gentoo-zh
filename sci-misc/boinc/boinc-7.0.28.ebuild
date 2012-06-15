@@ -24,7 +24,7 @@ RDEPEND="
 	!app-admin/quickswitch
 	>=app-misc/ca-certificates-20120212
 	dev-libs/openssl
-	net-misc/curl[ssl,-gnutls]
+	net-misc/curl[curl_ssl_openssl,-curl_ssl_gnutls]
 	sys-apps/util-linux
 	sys-libs/zlib
 	cuda? (
