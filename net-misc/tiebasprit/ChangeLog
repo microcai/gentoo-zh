@@ -1,9 +1,0 @@
-# ChangeLog for net-misc/tiebasprit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-*tiebasprit-0.3.1 (07 Jul 2011)
-
-  07 Jul 2011; microcai <microcai@fedoraproject.org> +tiebasprit-0.3.1.ebuild:
-  add net-misc/tiebasrpit
-

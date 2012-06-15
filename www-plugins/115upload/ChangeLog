@@ -1,9 +1,0 @@
-# ChangeLog for www-plugins/115upload
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-*115upload-1.5.7.0 (18 Feb 2012)
-
-  18 Feb 2012; <amesists@gmail.com> +115upload-1.5.7.0.ebuild:
-  Add 115upload ebuild.
-

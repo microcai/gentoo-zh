@@ -1,9 +1,0 @@
-# ChangeLog for app-antivirus/bitdefender-scanner
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header$
-
-
-*bash-completion-pinyin-20110119
-	11 May 2011, microcai <microcaicai@gmail.com> 
-	initial commit, from microcai overlay
-

@@ -1,8 +1,0 @@
-# ChangeLog for app-editors/uex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  20 Mar 2010; Openfree <dennis.yxun@gmail.com> +uex-1.1.0.0.ebuild,
-  +metadata.xml:
-  initial commit of uex, created
-

@@ -1,8 +1,0 @@
-# ChangeLog for app-i18n/lunar
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  16 Jan 2009; Hong Hao <oahong@gmail.com> -lunar-2.2-r3.ebuild,
-  +lunar-2.2-r4.ebuild, +metadata.xml:
-  Revision bump: honour CC,CFLAGS,LDFLAGS, fix SRC_UIR.
-

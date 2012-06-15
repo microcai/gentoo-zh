@@ -1,8 +1,0 @@
-# ChangeLog for media-plugins/audacious-mac
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  07 Oct 2009; Coderoar <coderoar@gmail.com> audacious-mac-0.2.0.ebuild,
-  audacious-mac-0.3.10.ebuild, +metadata.xml:
-  changed dependencies from mac-port (in this overlay) to mac (in portage)
-

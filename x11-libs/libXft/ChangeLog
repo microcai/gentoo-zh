@@ -1,8 +1,0 @@
-# ChangeLog for x11-libs/libXft
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  05 Dec 2007; scsi <scsichen@gmail.com> +metadata.xml,
-  libXft-2.1.12.ebuild:
-  fix keyword
-

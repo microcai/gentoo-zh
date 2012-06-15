@@ -1,7 +1,0 @@
-# ChangeLog for x11-libs/liblunar-gtk
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  05 Nov 2009; bones7456 <bones7456@gmail.com> +liblunar-gtk-2.2.4.ebuild:
-  x11-libs/liblunar-gtk update to 2.2.4
-
