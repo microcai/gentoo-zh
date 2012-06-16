@@ -26,7 +26,7 @@ src_prepare() {
 src_install() {
 	insinto "/etc/"
 	newins "${S}/local/proxy.ini" goagent
-	rm -rf ${S}/*/*.{bat,exe,vbs,dll,manifest,plist,ini} || die
+	rm ${S}/*/*.{bat,exe,vbs,dll,manifest,ini} || die
 
 	insinto "/opt/goagent"
 	doins -r "${S}/local" "${S}/server"
