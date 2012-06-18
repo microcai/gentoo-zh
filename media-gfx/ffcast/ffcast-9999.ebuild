@@ -1,20 +1,31 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v3
 # $Header: $
 
-EAPI="2"
+EAPI="4"
 
-inherit eutils git-2
+if [[ ${PV} == "9999" ]]; then
+	EGIT_REPO_URI="git://github.com/lolilolicon/FFcast2.git"
+	KEYWORDS=""
+	RESTRICT="mirror"
+	FFCAST_SRC_URI=""
+	FFCAST_ECLASS="git-2"
+else
+	FFCAST_SRC_URI="https://github.com/lolilolicon/FFcast2/tarball/${PV} -> ${P}.tar.gz"
+	RESTRICT="mirror"
+	FFCAST_ECLASS="vcs-snapshot"
+	KEYWORDS="~amd64 ~x86"
+fi
 
-EGIT_REPO_URI="git://github.com/lolilolicon/FFcast2.git"
+inherit eutils ${FFCAST_ECLASS}
 
 DESCRIPTION="Takes screencast of one or more interactively selected screen
 region or window"
-HOMEPAGE="http://github.com/lolilolicon/FFcast2"
+HOMEPAGE="https://github.com/lolilolicon/FFcast2"
+SRC_URI="${FFCAST_SRC_URI}"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
 IUSE="+encode vorbis vpx +x264 xvid"
 
 RDEPEND=">=app-shells/bash-4.2_p8-r1
@@ -25,6 +36,10 @@ RDEPEND=">=app-shells/bash-4.2_p8-r1
 	x11-apps/xwininfo
 	x11-libs/libX11"
 DEPEND="${RDEPEND}"
+
+src_unpack() {
+	${FFCAST_ECLASS}_src_unpack
+}
 
 src_install() {
 	newbin ffcast.bash ffcast || die
