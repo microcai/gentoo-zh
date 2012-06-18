@@ -4,7 +4,7 @@
 
 EAPI=3
 
-HOMEPAGE="http://libgooglepinyin,googlecode.com/"
+HOMEPAGE="http://libgooglepinyin.googlecode.com/"
 
 inherit googlecode cmake-utils
 
