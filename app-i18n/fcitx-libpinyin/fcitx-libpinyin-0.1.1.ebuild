@@ -14,7 +14,9 @@ SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+
+IUSE="+pinyin +shuangpin +zhuyin"
+
 RESTRICT="mirror"
 
 RDEPEND=">=app-i18n/fcitx-4.2.0
@@ -22,6 +24,29 @@ RDEPEND=">=app-i18n/fcitx-4.2.0
 DEPEND="${RDEPEND}
 	dev-util/intltool"
 
+pkg_setup(){
+	local uu=false;
+
+	for u in "pinyin shuangpin zhuyin" ; do
+		use $u && uu=true
+	done
+
+	$uu || die "You must spicify at least one input method!
+try 'USE=pinyin emerge $PN' again"
+
+}
+
 src_prepare() {
 	cp "${DISTDIR}/model.text.tar.gz" "${S}/data" || die "model.text.tar.gz is not found"
+}
+
+src_install(){
+	cmake-utils_src_install
+	
+	# filter out unneeded input method
+	
+	use pinyin || rm ${D}/usr/share/fcitx/inputmethod/pinyin-libpinyin.conf
+	use shuangpin || rm ${D}/usr/share/fcitx/inputmethod/shuangpin-libpinyin.conf
+	use zhuyin || rm ${D}/usr/share/fcitx/inputmethod/zhuyin-libpinyin.conf
+	use zhuyin || rm -rf ${D}/usr/share/fcitx/libpinyin/zhuyin_data
 }
