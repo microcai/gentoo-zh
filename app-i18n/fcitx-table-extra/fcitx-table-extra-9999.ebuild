@@ -18,7 +18,8 @@ fi
 
 inherit cmake-utils ${FCITX_TABLE_EXTRA_ECLASS}
 
-DESCRIPTION="light weight xlib and xft based ui for fcitx."
+DESCRIPTION="fcitx-table-extra provides extra table for Fcitx, including
+Boshiamy, Zhengma, and Cangjie3, Cangjie5."
 HOMEPAGE="http://fcitx.google.com"
 SRC_URI="${FCITX_TABLE_EXTRA_SRC_URI}"
 
