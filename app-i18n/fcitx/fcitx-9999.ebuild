@@ -2,38 +2,59 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI="4"
 
-inherit cmake-utils eutils git-2
-
+HOMEPAGE="https://fcitx.googlecode.com"
 DESCRIPTION="Free Chinese Input Toy of X - Input Method Server for X window system"
-HOMEPAGE="http://code.google.com/p/fcitx/"
-EGIT_REPO_URI="https://github.com/fcitx/fcitx.git"
-
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE="+cairo debug gtk gtk3 opencc +pango qt static-libs +table test"
-RESTRICT="mirror"
+
+IUSE="+cairo debug +gtk +gtk3 introspection lua opencc +pango qt4 snooper static-libs table test"
+
+if [[ ${PV} == "9999" ]]; then
+	EGIT_REPO_URI="git://github.com/fcitx/fcitx.git"
+	FCITX_SRC_URI="${HOMEPAGE}/files/pinyin.tar.gz
+		table? ( ${HOMEPAGE}/files/table.tar.gz )"
+	FCITX_ECLASS="git-2"
+	KEYWORDS=""
+else
+	FCITX_SRC_URI="https://github.com/fcitx/fcitx/tarball/${PV} -> ${P}.tar.gz
+		${HOMEPAGE}/files/pinyin.tar.gz
+		table? ( ${HOMEPAGE}/files/table.tar.gz )"
+	RESTRICT="mirror"
+	FCITX_ECLASS="vcs-snapshot"
+	KEYWORDS="~amd64 ~x86"
+fi
+
+inherit cmake-utils ${FCITX_ECLASS}
+
+SRC_URI="${FCITX_SRC_URI}"
 
 RDEPEND="cairo? ( x11-libs/cairo[X]
 		pango? ( x11-libs/pango[X] )
 		!pango? ( media-libs/fontconfig ) )
 	sys-apps/dbus
-	gtk? ( x11-libs/gtk+:2
-		dev-libs/glib:2
-		dev-libs/dbus-glib )
 	gtk3? ( x11-libs/gtk+:3
 		dev-libs/glib:2
 		dev-libs/dbus-glib )
+	gtk? ( x11-libs/gtk+:2
+		dev-libs/glib:2
+		dev-libs/dbus-glib )
+	introspection? ( dev-libs/gobject-introspection )
 	opencc? ( app-i18n/opencc )
-	qt? ( x11-libs/qt-gui:4
+	qt4? ( x11-libs/qt-gui:4
 		x11-libs/qt-dbus:4 )
+	lua? ( dev-lang/lua )
 	x11-libs/libX11"
 DEPEND="${RDEPEND}
 	app-arch/tar
+	app-arch/xz-utils
+	app-text/iso-codes
+	app-text/enchant
+	dev-libs/icu
 	dev-util/intltool
-	sys-devel/gettext"
+	app-arch/xz-utils
+	x11-libs/libxkbfile"
 
 update_gtk_immodules() {
 	local GTK2_CONFDIR="/etc/gtk-2.0"
@@ -44,7 +65,7 @@ update_gtk_immodules() {
 	mkdir -p "${EPREFIX}${GTK2_CONFDIR}"
 	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-2.0" ]; then
 		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0" > \
-		"${EPREFIX}/${GTK2_CONFDIR}/gtk.immodules"
+		"${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
 	fi
 }
 
@@ -54,10 +75,16 @@ update_gtk3_immodules() {
 	fi
 }
 
-#src_prepare() {
-#	cp ${DISTDIR}/pinyin.tar.gz ${S}/data || die
-#	cp ${DISTDIR}/table.tar.gz ${S}/data/table || die
-#}
+src_unpack() {
+	${FCITX_ECLASS}_src_unpack
+}
+
+src_prepare() {
+	cp ${DISTDIR}/pinyin.tar.gz ${S}/data || die
+	if use table; then
+		cp ${DISTDIR}/table.tar.gz ${S}/data/table || die
+	fi
+}
 
 src_configure() {
 	local mycmakeargs=(
@@ -65,10 +92,13 @@ src_configure() {
 			$(cmake-utils_use_enable debug DEBUG ) \
 			$(cmake-utils_use_enable gtk GTK2_IM_MODULE ) \
 			$(cmake-utils_use_enable gtk3 GTK3_IM_MODULE ) \
+			$(cmake-utils_use_enable introspection GIR ) \
+			$(cmake-utils_use_enable lua LUA ) \
 			$(cmake-utils_use_enable opencc OPENCC ) \
 			$(cmake-utils_use_enable pango PANGO ) \
-			$(cmake-utils_use_enable qt QT_IM_MODULE ) \
+			$(cmake-utils_use_enable qt4 QT_IM_MODULE ) \
 			$(cmake-utils_use_enable static-libs STATIC ) \
+			$(cmake-utils_use_enable snooper SNOOPER ) \
 			$(cmake-utils_use_enable table TABLE ) \
 			$(cmake-utils_use_enable test TEST )
 	)
@@ -76,12 +106,12 @@ src_configure() {
 }
 
 pkg_postinst() {
-	use gtk && update_gtk_immodules
 	use gtk3 && update_gtk3_immodules
+	use gtk && update_gtk_immodules
 }
 
 pkg_postrm() {
-	use gtk && update_gtk_immodules
 	use gtk3 && update_gtk3_immodules
+	use gtk && update_gtk_immodules
 }
 
