@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=4
-
+AUTOTOOLS_IN_SOURCE_BUILD=1
 DESCRIPTION="MonkVG is an OpenVG 1.1 like vector graphics API implementation
 currently using an OpenGL ES backend"
 HOMEPAGE="https://github.com/micahpearlman/MonkVG"
@@ -19,11 +19,15 @@ LICENSE="BSD"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="static-libs"
 
 RDEPEND="virtual/opengl"
 DEPEND="${RDEPEND}"
 
 src_prepare(){
 	eautoreconf
+}
+
+src_configure(){
+	econf $(use_enable static-libs static)
 }
