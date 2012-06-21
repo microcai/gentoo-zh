@@ -10,10 +10,13 @@
 </maintainer>
 <use>
 	<flag name='pango'>Enable pango support for better multilingual text rendering</flag>
+	<flag name='introspection'>Enable GObject Introspection</flag>
+	<flag name='lua'>Enable Lua support</flag>
 	<flag name='gtk'>Install the GTK2's IM Module</flag>
 	<flag name='gtk3'>Install the GTK3's IM Module</flag>
 	<flag name='opencc'>Enable OpenCC for Chinese Transform</flag>
-	<flag name='qt'>Install the Qt4's IM Module</flag>
+	<flag name='qt4'>Install the Qt4's IM Module</flag>
+	<flag name='snooper'>Enable Key Snooper for gtk app</flag>
 	<flag name='table'>Adds suppport for Wubi, Erbi, etc.</flag>
 </use>
 </pkgmetadata>
