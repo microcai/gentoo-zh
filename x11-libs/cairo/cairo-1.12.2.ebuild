@@ -29,7 +29,7 @@ RDEPEND="media-libs/fontconfig
 	directfb? ( dev-libs/DirectFB )
 	glib? ( >=dev-libs/glib-2.28.6:2 )
 	opengl? ( virtual/opengl )
-	openvg? ( media-libs/mesa[openvg] )
+	openvg? ( virtual/openvg )
 	qt4? ( >=x11-libs/qt-gui-4.8:4 )
 	svg? ( dev-libs/libxml2 )
 	X? (
