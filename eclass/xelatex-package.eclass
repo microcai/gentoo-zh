@@ -51,8 +51,6 @@
 # you must either grab each file individually, or find a place to mirror an
 # archive of them.  (iBiblio)
 #
-# Use EAPI2 to make USE dependency easy to specify
-EAPI="2"
 #
 # It inherits base.
 

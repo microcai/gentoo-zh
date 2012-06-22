@@ -52,7 +52,7 @@
 # archive of them.  (iBiblio)
 #
 # Use EAPI2 to make USE dependency easy to specify
-EAPI="2"
+EAPI="4"
 #
 # It inherits base.
 

@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=4
+
 inherit xelatex-package
 
 DESCRIPTION="xeCJK is a package written for XeLaTeX which allows users to typeset CJK scripts easily"
