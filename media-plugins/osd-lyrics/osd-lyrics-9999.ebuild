@@ -7,11 +7,11 @@ EAPI="3"
 inherit eutils autotools googlecode versionator git 
 
 DESCRIPTION="An OSD lyric show supporting multiple media players and downloading."
-EGIT_REPO_URI="http://github.com/tigersoldier/${PN}.git"
+EGIT_REPO_URI="git://github.com/osdlyrics/${PN}.git"
 SRC_URI=""
 
 if [ "${PV##*.}" = "9999" ]; then
-	EGIT_BRANCH="develop"
+	EGIT_BRANCH="master"
 else
 	EGIT_COMMIT="4e55d088c9306d2d6cd8"
 fi

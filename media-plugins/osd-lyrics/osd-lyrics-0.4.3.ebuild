@@ -2,40 +2,42 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="3"
+EAPI="4"
 
 TAR_SUFFIX=tar.gz
 
-inherit eutils autotools googlecode versionator
 
 MY_PN=osdlyrics
 MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
 
+inherit eutils autotools googlecode
+
 DESCRIPTION="An OSD lyric show supporting multiple media players and downloading."
 SRC_URI="http://${PN}.googlecode.com/files/${MY_P}.${TAR_SUFFIX}"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="mpd xmms2"
+KEYWORDS="amd64 x86"
+IUSE="+mpd +xmms2 -appindicator"
 
 RDEPEND="
 	dev-libs/dbus-glib
-	gnome-base/libglade
 	net-misc/curl
-	x11-libs/gtk+
+	>=x11-libs/gtk+-2.20:2
+	>=x11-libs/libnotify-0.7.1
+	>=dev-db/sqlite-3.3
 	mpd? ( media-libs/libmpd )
-	xmms2? ( media-sound/xmms2 )"
+	xmms2? ( media-sound/xmms2 )
+	appindicator? ( dev-libs/libappindicator )"
 DEPEND="${RDEPEND}"
 
 use_disable() {
-	use $1 || echo "--disable-$1"
+	[[ -z $2 ]] && $2=$1
+	use $1 || echo "--disable-$2"
 }
 
 src_configure() {
-	econf \
-		$(use_disable mpd) \
-		$(use_disable xmms2)
+	econf $(use_disable mpd) $(use_disable xmms2) $(use_enable appindicator)
 }
 
 src_install() {
