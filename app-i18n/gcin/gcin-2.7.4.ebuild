@@ -65,3 +65,27 @@ src_install() {
 		doins -r "${WORKDIR}"/ogg || die
 	fi
 }
+
+update_gtk_immodules() {
+	local GTK2_CONFDIR="/etc/gtk-2.0"
+	# bug #366889
+	if has_version '>=x11-libs/gtk+-2.22.1-r1:2' || has_multilib_profile ; then
+		GTK2_CONFDIR="${GTK2_CONFDIR}/$(get_abi_CHOST)"
+	fi
+	mkdir -p "${EPREFIX}${GTK2_CONFDIR}"
+
+	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-2.0" ] ; then
+		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0" > "${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
+	fi
+}
+
+pkg_postinst() {
+	use gtk && update_gtk_immodules
+	gnome2_icon_cache_update
+
+}
+
+pkg_postrm() {
+	use gtk && update_gtk_immodules
+	gnome2_icon_cache_update
+}
