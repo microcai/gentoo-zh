@@ -23,7 +23,7 @@ DEPEND="dev-lang/python[sqlite]
 RDEPEND="${DEPEND}
 	dev-python/pygtk
 	dev-python/pygobject
-	media-tv/sopcast-bin
+	net-p2p/sopcast-bin
 	=media-video/vlc-1.1*"
 
 src_install() {
