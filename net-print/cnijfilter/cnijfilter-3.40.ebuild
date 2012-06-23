@@ -99,7 +99,13 @@ src_unpack() {
     mv ${PN}-source-${PV}-1 ${P} || die # Correcting directory-structure
 
     cd "${S}"
-    #epatch "${FILESDIR}"/cnijfilter-3.40-bjcupsmon_ui.c.patch
+}
+
+src_prepare(){
+    epatch "${FILESDIR}"/cnnijfilter-fix-missing-pppd_file_t-error.patch 
+    epatch "${FILESDIR}"/cnnijfilter-fix-newpng.patch 
+	#cnijfilter-3.40-bjcupsmon_ui.c.patch
+
 }
 
 src_compile() {
