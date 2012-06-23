@@ -12,7 +12,7 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="" #~amd64 ~arm ~x86"
 IUSE="-keymap -quota -coredump acl audit cryptsetup lzma pam plymouth selinux tcpd"
 
 # We need to depend on sysvinit for sulogin which is used in the rescue
