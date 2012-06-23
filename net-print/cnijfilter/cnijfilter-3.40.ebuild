@@ -54,7 +54,7 @@ pkg_setup() {
         LINGUAS="en"
     fi
 
-    _prefix="/usr/local"
+    _prefix="/usr/"
     _bindir="${_prefix}/bin"
     _libdir="/usr/$(get_libdir)" # either lib or lib32
     _cupsdir1="/usr/lib/cups"
