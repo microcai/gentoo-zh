@@ -16,5 +16,5 @@ RDEPEND=">=sys-apps/systemd-${PV}"
 
 DEPEND="!<sys-fs/udev-183"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 
