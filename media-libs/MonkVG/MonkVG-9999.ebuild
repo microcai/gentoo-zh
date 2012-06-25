@@ -21,7 +21,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="static-libs"
 
-RDEPEND="virtual/opengl"
+RDEPEND="virtual/opengl
+	media-libs/glew"
 DEPEND="${RDEPEND}"
 
 src_prepare(){
