@@ -9,7 +9,7 @@ inherit eutils flag-o-matic wxwidgets googlecode
 MY_P="aMule-${PV}-DLP4401"
 S="${WORKDIR}/aMule-${PV}"
 
-DESCRIPTION="$PN, aMlue with DLP patch"
+DESCRIPTION="$PN, aMule with DLP patch"
 SRC_URI="http://${PN}.googlecode.com/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
