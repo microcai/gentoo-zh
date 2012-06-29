@@ -8,7 +8,7 @@ EAPI=4
 inherit toolchain-funcs git-2
 
 DESCRIPTION="fastboot is a util to control android bootloader"
-HOMEPAGE=""
+HOMEPAGE="android.googlesource.com"
 SRC_URI=""
 
 EGIT_REPO_URI="https://android.googlesource.com/platform/system/core.git"

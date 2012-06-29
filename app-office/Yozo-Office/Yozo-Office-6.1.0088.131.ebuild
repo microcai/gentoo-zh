@@ -14,7 +14,7 @@ FEATURES="mirror"
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~amd64 ～x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="amd64? ( app-emulation/emul-linux-x86-xlibs 
