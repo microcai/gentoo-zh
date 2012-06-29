@@ -10,7 +10,7 @@ if [[ ${PV} == "9999" ]]; then
 	FCITX_TABLE_EXTRA_ECLASS="git-2"
 	KEYWORDS=""
 else
-	FCITX_TABLE_EXTRA_SRC_URI="https://github.com/fcitx/fcitx-table-extra/tarball/${PV} -> ${P}.tar.gz"
+	FCITX_TABLE_EXTRA_SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
 	RESTRICT="mirror"
 	FCITX_TABLE_EXTRA_ECLASS="vcs-snapshot"
 	KEYWORDS="~amd64 ~x86"
