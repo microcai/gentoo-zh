@@ -18,7 +18,10 @@ RDEPEND="net-p2p/amule-dlp[dynamic]"
 S=${WORKDIR}/amule-dlp.antileech
 
 src_prepare() {
-	mkdir m4
-	eautoreconf
+	eautoreconf || die
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die
 }
 
