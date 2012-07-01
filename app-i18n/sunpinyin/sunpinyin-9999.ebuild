@@ -4,7 +4,7 @@
 
 EAPI=4
 
-inherit git scons-utils multilib
+inherit git-2 scons-utils
 
 LM_DICT="dict.utf8.tar.bz2"
 LM_DATA="lm_sc.t3g.arpa.tar.bz2"
@@ -13,7 +13,7 @@ DESCRIPTION="A statistical language model based Chinese input method library"
 HOMEPAGE="http://code.google.com/p/sunpinyin/"
 SRC_URI="http://open-gram.googlecode.com/files/${LM_DICT}
 	http://open-gram.googlecode.com/files/${LM_DATA}"
-EGIT_PROJECT="sunpinyin"
+EGIT_PROJECT="${PN}"
 EGIT_REPO_URI="https://github.com/sunpinyin/sunpinyin.git"
 
 LICENSE="CDDL LGPL-2.1"
@@ -29,13 +29,22 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 src_prepare() {
-	cp -v "${DISTDIR}"/{${LM_DICT},${LM_DATA}} "${S}/raw" || die
+	cp -v "${DISTDIR}"/{${LM_DICT},${LM_DATA}} "${S}/raw" || die "dict file not found"
+}
+
+src_configure() {
+	myesconsargs=(
+		--prefix=/usr
+	)
 }
 
 src_compile() {
-	escons --prefix=/usr
+	escons
 }
 
 src_install() {
-	escons install --prefix=/usr --install-sandbox="${D}"
+	# use -j1 to prevent the bug when do scons install parallelly
+	# see : https://github.com/sunpinyin/sunpinyin/issues/14
+	SCONSOPTS="-j1"
+	escons --install-sandbox="${D}" install
 }
