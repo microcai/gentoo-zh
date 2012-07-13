@@ -98,6 +98,7 @@ pkg_setup() {
 
 src_prepare(){
 	epatch "$FILESDIR/${PN}-${PV}-udev-fix.patch"
+	epatch "$FILESDIR/${PN}-${PV}-xdg-runtime-dir.patch"
 }
 
 src_configure() {
