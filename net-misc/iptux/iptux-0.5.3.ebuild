@@ -20,6 +20,8 @@ RDEPEND="${DEPEND}"
 
 RESTRICT="primaryuri"
 
+S="${WORKDIR}"
+
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 }
