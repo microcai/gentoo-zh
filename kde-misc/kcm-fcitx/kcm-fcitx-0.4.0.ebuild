@@ -21,8 +21,6 @@ RDEPEND=">=app-i18n/fcitx-4.2.4
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	echo "patching"
 	# fix the bug sometimes cannot build due to automoc4
 	epatch "${FILESDIR}/${P}-fix-build.patch"
-	echo "done patching"
 }
