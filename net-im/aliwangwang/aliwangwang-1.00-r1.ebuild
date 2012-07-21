@@ -15,8 +15,15 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 IUSE=""
 
 RDEPEND="
-	x11-libs/qt-webkit
-	x11-libs/qt-sql"
+	>=x11-libs/qt-gui-4.7
+	>=x11-libs/qt-webkit-4.7
+	>=x11-libs/qt-core-4.7
+	>=x11-libs/qt-sql-4.7
+	>=dev-libs/openssl-1.0
+	>=media-libs/fontconfig-2.8
+	>=media-libs/freetype-2.4
+	>=dev-libs/glib-2.32
+	>=media-libs/libpng-1.5"
 DEPEND=""
 
 S=${WORKDIR}
@@ -24,6 +31,7 @@ S=${WORKDIR}
 src_unpack() {
 	default_src_unpack
 	unpack ./data.tar.gz
+	# not need for the crapy update
 	rm usr/bin/AliWWAutoUpdate
 }
 
