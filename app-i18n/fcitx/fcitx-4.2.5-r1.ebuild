@@ -120,7 +120,7 @@ src_install() {
 	echo "export XIM_PROGRAM=fcitx" >> "${XINITRCFCITX}"
 
 	#echo gtk module
-	if [[ use gtk || use gtk3 ]]; then
+	if use gtk || use gtk3 ; then
 		echo "export GTK_IM_MODULE=fcitx" >> "${XINITRCFCITX}"
 	fi
 	if use qt4 ; then
