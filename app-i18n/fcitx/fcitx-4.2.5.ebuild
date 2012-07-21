@@ -106,6 +106,27 @@ src_install() {
 	rm -rf "${ED}"/usr/share/fcitx/doc/ || die
 	dodoc doc/pinyin.txt doc/cjkvinput.txt || die
 	dohtml doc/wb_fh.htm || die
+
+	dodir /etc/X11/xinit/xinitrc.d/
+
+	XINITRCFCITX="${D}/etc/X11/xinit/xinitrc.d/01-input"
+
+	# fix firefox issue
+	echo "#! /bin/bash"  > "${XINITRCFCITX}"
+
+	# echo XIM 
+	echo "export XMODIFIERS=\"@im=fcitx\""  >> "${XINITRCFCITX}"
+	echo "export XIM=fcitx" >> "${XINITRCFCITX}"
+	echo "export XIM_PROGRAM=fcitx" >> "${XINITRCFCITX}"
+
+	#echo gtk module
+	if [[ use gtk || use gtk3 ]]; then
+		echo "export GTK_IM_MODULE=fcitx" >> "${XINITRCFCITX}"
+	fi
+	if use qt4 ; then
+		echo "export QT_IM_MODULE=fcitx" >> "${XINITRCFCITX}"
+	fi
+	chmod 0755 "${XINITRCFCITX}"
 }
 
 pkg_postinst() {
