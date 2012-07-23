@@ -9,14 +9,14 @@ inherit cmake-utils git
 EGIT_REPO_URI="git://github.com/fcitx/fcitx-cloudpinyin.git"
 
 DESCRIPTION="This is a standalone module for fcitx,it can use pinyin API on the internet to input."
-HOMEPAGE="https://github.com/csslayer/fcitx-cloudpinyin"
+HOMEPAGE="https://github.com/fcitx/fcitx-cloudpinyin"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-RDEPEND=">=app-i18n/fcitx-4.1.1"
+RDEPEND=">=app-i18n/fcitx-4.2.5"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
 
