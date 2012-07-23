@@ -6,7 +6,7 @@ EAPI="2"
 
 inherit cmake-utils git
 
-EGIT_REPO_URI="git://github.com/csslayer/fcitx-cloudpinyin.git"
+EGIT_REPO_URI="git://github.com/fcitx/fcitx-cloudpinyin.git"
 
 DESCRIPTION="This is a standalone module for fcitx,it can use pinyin API on the internet to input."
 HOMEPAGE="https://github.com/csslayer/fcitx-cloudpinyin"
