@@ -2,9 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=4
 
-HOMEPAGE="http://libgooglepinyin,googlecode.com/"
+HOMEPAGE="http://libgooglepinyin.googlecode.com/"
+
+CMAKE_IN_SOURCE_BUILD=1
 
 inherit googlecode cmake-utils
 
@@ -27,6 +29,8 @@ dev-lang/python
 DEPEND="${COMM_DEPEND}
 	dev-util/cmake"
 RDEPEND="${COMM_DEPEND}"
+
+S="${WORKDIR}/${PN}"
 
 src_prepare(){
 	epatch "${FILESDIR}/${PN}-pagesizepatch.patch"
