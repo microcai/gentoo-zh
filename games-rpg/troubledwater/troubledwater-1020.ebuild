@@ -7,10 +7,10 @@ EAPI=4
 inherit games
 
 if use amd64 ; then
-MY_P=TroubledWater_x64
+MY_P=TroubledWater-${PV}-x64.tar.gz
 MY_PATCH=${PV}_x64
 elif use x86 ; then
-MY_P=TroubledWater
+MY_P=TroubledWater-${PV}-x86.tar.gz
 MY_PATCH=${PV}
 fi
 
@@ -18,10 +18,9 @@ S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="国产Linux网游《时空浩劫》"
 HOMEPAGE="http://113.105.223.84/bbs/"
-SRC_URI="amd64? ( mirror://troubledwater/download/TroubledWater_x64.tar.gz )
-		x86? ( mirror://troubledwater/download/TroubledWater.tar.gz )
-		http://113.105.223.84/bbs/download/file.php?id=254 
-> interface.zip "
+SRC_URI="amd64? ( mirror://troubledwater/download/TroubledWater_x64.tar.gz -> TroubledWater-${PV}-x64.tar.gz )
+		x86? ( mirror://troubledwater/download/TroubledWater.tar.gz -> TroubledWater-${PV}-x86.tar.gz )
+		http://113.105.223.84/bbs/download/file.php?id=254  -> interface.zip "
 
 LICENSE="freeware"
 SLOT="0"
