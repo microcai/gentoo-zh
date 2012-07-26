@@ -7,20 +7,20 @@ EAPI=4
 inherit games
 
 if use amd64 ; then
-MY_P=TroubledWater-${PV}-x64.tar.gz
-MY_PATCH=${PV}_x64
+MY_P=TroubledWater-${PV}-x64
+MY_PATH="TroubledWater_x64"
 elif use x86 ; then
-MY_P=TroubledWater-${PV}-x86.tar.gz
-MY_PATCH=${PV}
+MY_P=TroubledWater-${PV}-x86
+MY_PATH="TroubledWater"
 fi
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${MY_PATH}"
 
 DESCRIPTION="国产Linux网游《时空浩劫》"
 HOMEPAGE="http://113.105.223.84/bbs/"
 SRC_URI="amd64? ( mirror://troubledwater/download/TroubledWater_x64.tar.gz -> TroubledWater-${PV}-x64.tar.gz )
 		x86? ( mirror://troubledwater/download/TroubledWater.tar.gz -> TroubledWater-${PV}-x86.tar.gz )
-		http://113.105.223.84/bbs/download/file.php?id=254  -> interface.zip "
+		http://113.105.223.84/bbs/download/file.php?id=254  -> interface-${PV}.zip "
 
 LICENSE="freeware"
 SLOT="0"
@@ -56,8 +56,7 @@ pkg_nofetch(){
 src_unpack(){
 	unpack	interface.zip
 	unpack ${MY_P}.tar.gz
-	cd ${MY_P}
-	unpack ${MY_PATCH}.tar.gz
+	cd ${MY_PATH}
 	rm interface/addons/achieve/achieve.lua 
 	mkdir -p interface/addons/achieve
 	cp  ${WORKDIR}/interface/addons/achieve/achieve.lua interface/addons/achieve/achieve.lua
