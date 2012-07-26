@@ -18,17 +18,16 @@ S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="国产Linux网游《时空浩劫》"
 HOMEPAGE="http://113.105.223.84/bbs/"
-SRC_URI="amd64? ( mirror://troubledwater/download/TroubledWater_x64.tar.gz 
-			mirror://troubledwater/download/${PV}_x64.tar.gz )
-	   x86? ( mirror://troubledwater/download/TroubledWater.tar.gz
-		    mirror://troubledwater/download/${PV}.tar.gz ) "
-
-RESTRICT="strip"
+SRC_URI="amd64? ( mirror://troubledwater/download/TroubledWater_x64.tar.gz )
+		x86? ( mirror://troubledwater/download/TroubledWater.tar.gz )
+		http://113.105.223.84/bbs/download/file.php?id=254 
+> interface.zip "
 
 LICENSE="freeware"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+RESTRICT="mirror strip"
 
 RDEPEND="x11-libs/gtk+:2
 	   media-libs/openal
@@ -45,20 +44,24 @@ pkg_nofetch(){
 	# manul fetch, because we think it's fater for users to fetch it manuly
 
 	einfo "Warning , the source file is hurge, please manully download it from"
-	einfo " http://113.105.223.84/bbs/viewtopic.php?f=14&t=169 "
+	einfo " http://113.105.223.84/bbs/"
 	if use amd64 ; then
-	einfo "Download TroubledWater_x64.tar.gz and 1009_64.tar.gz"
+	einfo "Download TroubledWater_x64.tar.gz"
 	elif use x86 ; then
-	einfo "Download TroubledWater.tar.gz and 1009.tar.gz"
+	einfo "Download TroubledWater.tar.gz"
 	fi
 	einfo "and put them into ${DISTDIR}"
 }
 
 
 src_unpack(){
+	unpack	interface.zip
 	unpack ${MY_P}.tar.gz
 	cd ${MY_P}
 	unpack ${MY_PATCH}.tar.gz
+	rm interface/addons/achieve/achieve.lua 
+	mkdir -p interface/addons/achieve
+	cp  ${WORKDIR}/interface/addons/achieve/achieve.lua interface/addons/achieve/achieve.lua
 }
 
 
