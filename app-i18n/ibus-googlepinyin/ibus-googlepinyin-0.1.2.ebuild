@@ -20,8 +20,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 COMM_DEPEND="
->=app-i18n/libgooglepinyin-0.1.1
->=app-i18n/ibus-1.3.99
+>=app-i18n/libgooglepinyin-${PV}
+>=app-i18n/ibus-1.4
 dev-lang/python
 "
 #app-i18n/opencc"
