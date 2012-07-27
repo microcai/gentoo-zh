@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 IUSE=""
-DEPEND="app-i18n/sunpinyin
-	app-i18n/fcitx
+DEPEND="app-i18n/fcitx
 	sys-devel/gettext"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	app-i18n/fbterm"

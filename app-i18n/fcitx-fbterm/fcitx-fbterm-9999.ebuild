@@ -16,10 +16,10 @@ SLOT="0"
 KEYWORDS=""
 
 IUSE=""
-DEPEND="app-i18n/sunpinyin
-	app-i18n/fcitx
+DEPEND="app-i18n/fcitx
 	sys-devel/gettext"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	app-18n/fbterm"
 
 src_unpack() {
 	git-2_src_unpack
