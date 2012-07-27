@@ -19,7 +19,7 @@ IUSE=""
 DEPEND="app-i18n/fcitx
 	sys-devel/gettext"
 RDEPEND="${DEPEND}
-	app-18n/fbterm"
+	app-i18n/fbterm"
 
 src_unpack() {
 	git-2_src_unpack
