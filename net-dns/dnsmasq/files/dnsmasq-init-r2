@@ -1,0 +1,25 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/files/dnsmasq-init-r2,v 1.1 2012/03/07 21:59:19 chutzpah Exp $
+
+extra_started_commands="reload"
+
+pidfile="/var/run/dnsmasq.pid"
+command="/usr/sbin/dnsmasq"
+command_args="-x ${pidfile} ${DNSMASQ_OPTS}"
+start_stop_daemon_args="--retry TERM/3/TERM/5"
+
+depend() {
+	provide dns
+	need localmount net
+	after bootmisc
+	use logger
+}
+
+reload() {
+	ebegin "Reloading ${SVCNAME}"
+	start-stop-daemon --stop --oknodo --signal HUP \
+		--exec ${command} --pidfile ${pidfile}
+	eend $?
+}
