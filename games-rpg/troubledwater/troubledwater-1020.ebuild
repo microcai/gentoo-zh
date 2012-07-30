@@ -54,7 +54,7 @@ pkg_nofetch(){
 
 
 src_unpack(){
-	unpack	interface.zip
+	unpack	interface-${PV}.zip
 	unpack ${MY_P}.tar.gz
 	cd ${MY_PATH}
 	rm interface/addons/achieve/achieve.lua 

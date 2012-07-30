@@ -105,6 +105,31 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
+src_install() {
+	cmake-utils_src_install
+
+	dodir /etc/X11/xinit/xinitrc.d/
+
+	XINITRCFCITX="${D}/etc/X11/xinit/xinitrc.d/01-input"
+
+	# fix firefox issue
+	echo "#! /bin/bash"  > "${XINITRCFCITX}"
+
+	# echo XIM 
+	echo "export XMODIFIERS=\"@im=fcitx\""  >> "${XINITRCFCITX}"
+	echo "export XIM=fcitx" >> "${XINITRCFCITX}"
+	echo "export XIM_PROGRAM=fcitx" >> "${XINITRCFCITX}"
+
+	#echo gtk module
+	if use gtk || use gtk3 ; then
+		echo "export GTK_IM_MODULE=fcitx" >> "${XINITRCFCITX}"
+	fi
+	if use qt4 ; then
+		echo "export QT_IM_MODULE=fcitx" >> "${XINITRCFCITX}"
+	fi
+	chmod 0755 "${XINITRCFCITX}"
+}
+
 pkg_postinst() {
 	use gtk3 && update_gtk3_immodules
 	use gtk && update_gtk_immodules
