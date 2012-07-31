@@ -20,6 +20,6 @@ RDEPEND="dev-db/sqlite:3
 	dev-libs/libxml2
 	dev-libs/openssl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS README ChangeLog )

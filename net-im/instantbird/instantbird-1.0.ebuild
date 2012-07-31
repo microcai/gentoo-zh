@@ -23,7 +23,7 @@ RDEPEND="
 	"
 # We don't use PYTHON_DEPEND/PYTHON_USE_WITH for some silly reason
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure(){
 	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"

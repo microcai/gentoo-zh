@@ -26,7 +26,7 @@ RDEPEND="${COMMON_DEPEND}
 	x11-apps/xsetroot
 	media-fonts/font-misc-misc"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${PN}
 

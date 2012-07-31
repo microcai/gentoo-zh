@@ -20,7 +20,7 @@ RDEPEND=">=x11-libs/vte-0.30.1
 	dev-libs/confuse"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die

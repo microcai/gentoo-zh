@@ -20,7 +20,7 @@ IUSE=""
 
 RDEPEND="~net-im/libofetion-${PV}"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${PN}
 DOCS=( AUTHORS README ChangeLog )

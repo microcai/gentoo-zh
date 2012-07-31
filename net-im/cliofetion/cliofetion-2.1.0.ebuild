@@ -18,6 +18,6 @@ IUSE=""
 
 RDEPEND="~net-im/libofetion-${PV}"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS README ChangeLog )

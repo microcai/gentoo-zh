@@ -23,7 +23,7 @@ RDEPEND="
 	>=dev-lang/mono-2
 	>=dev-libs/glib-2.22:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/autoconf
 	sys-devel/automake"
 

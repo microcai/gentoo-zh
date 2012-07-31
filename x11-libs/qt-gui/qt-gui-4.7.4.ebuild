@@ -34,7 +34,7 @@ RDEPEND="media-libs/fontconfig
 	tiff? ( media-libs/tiff )
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	!aqua? (
 		x11-proto/xextproto
 		x11-proto/inputproto

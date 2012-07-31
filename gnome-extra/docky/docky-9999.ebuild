@@ -38,7 +38,7 @@ RDEPEND=">=dev-lang/mono-2.0
 	!<gnome-extra/gnome-do-plugins-0.8"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	(./autogen.sh) || die "autogen.sh failed"  #--prefix=/usr

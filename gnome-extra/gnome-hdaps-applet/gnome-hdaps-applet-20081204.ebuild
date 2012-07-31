@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="app-laptop/hdapsd"
 DEPEND="${DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	gnome-base/gnome-panel"
 
 S=${WORKDIR}

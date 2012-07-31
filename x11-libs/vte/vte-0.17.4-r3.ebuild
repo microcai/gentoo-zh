@@ -33,7 +33,7 @@ RDEPEND=">=dev-libs/glib-2.14
 DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1.0 )
 	>=dev-util/intltool-0.35
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README"

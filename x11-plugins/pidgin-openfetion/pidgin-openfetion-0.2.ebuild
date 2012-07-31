@@ -21,7 +21,7 @@ DEPEND="dev-libs/libxml2
 	dev-libs/openssl
 	>=net-im/pidgin-2.7.0"
 RDEPEND="${DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${MY_P}

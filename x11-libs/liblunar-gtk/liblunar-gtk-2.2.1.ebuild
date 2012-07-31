@@ -23,7 +23,7 @@ RDEPEND="${RDEPEND}
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35"
 
 DOCS="AUTHORS ChangeLog NEWS README"

@@ -19,7 +19,7 @@ RDEPEND=">=gnome-base/gnome-panel-2.16
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35
 	>=app-text/gnome-doc-utils-0.3.2
 	doc? ( >=dev-util/gtk-doc-1 )"

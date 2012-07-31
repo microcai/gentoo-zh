@@ -19,7 +19,7 @@ IUSE=""
 RDEPEND="dev-libs/glib
 	>=net-im/pidgin-2.3.1"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 

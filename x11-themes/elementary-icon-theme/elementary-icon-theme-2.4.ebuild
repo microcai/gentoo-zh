@@ -23,7 +23,7 @@ RDEPEND="
 	x11-themes/gnome-icon-theme
 	>=x11-themes/hicolor-icon-theme-0.10"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
 
