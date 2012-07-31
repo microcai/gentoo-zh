@@ -1,40 +1,38 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/mozc-1.5.1090.102.ebuild,v 1.2 2012/07/23 04:20:12 naota Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
-inherit eutils elisp-common eutils multilib multiprocessing python toolchain-funcs
+inherit elisp-common eutils multilib multiprocessing python toolchain-funcs
 
-DESCRIPTION="A Japanese Input Method for Chromium OS, Windows, Mac and Linux (the Open Source Edition of Google Japanese Input) - With Fcitx Support"
+DESCRIPTION="The Mozc engine for IBus Framework"
 HOMEPAGE="http://code.google.com/p/mozc/"
 
-MY_P="${P/fcitx-}"
 PROTOBUF_VER="2.4.1"
 GMOCK_VER="403"
-MOZC_URL="http://mozc.googlecode.com/files/${MY_P}.tar.bz2"
+MOZC_URL="http://mozc.googlecode.com/files/${P}.tar.bz2"
 PROTOBUF_URL="http://protobuf.googlecode.com/files/protobuf-${PROTOBUF_VER}.tar.bz2"
 SRC_URI="${MOZC_URL} ${PROTOBUF_URL}"
 
 LICENSE="Apache-2.0 BSD Boost-1.0 ipadic public-domain unicode"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="emacs scim +qt4 renderer"
+IUSE="emacs +ibus scim fcitx +qt4 renderer"
 
 RDEPEND="dev-libs/glib:2
 	dev-libs/openssl
 	emacs? ( virtual/emacs )
-	>=app-i18n/fcitx-4.2.1
+	ibus? ( >=app-i18n/ibus-1.4 )
 	renderer? ( x11-libs/gtk+:2 )
 	scim? ( app-i18n/scim )
+	fcitx? ( >=app-i18n/fcitx-4.2.1 )
 	qt4? (
 		x11-libs/qt-gui:4
 		app-i18n/zinnia
 	)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
-
-S="${WORKDIR}/${MY_P}"
 
 BUILDTYPE="${BUILDTYPE:-Release}"
 
@@ -55,7 +53,9 @@ src_unpack() {
 }
 
 src_prepare() {
-	EPATCH_OPTS="-p2" epatch "${FILESDIR}/${P}.1.patch"
+	if use fcitx ; then
+		EPATCH_OPTS="-p2" epatch "${FILESDIR}/fcitx-${P}.1.patch"
+	fi
 }
 
 src_configure() {
@@ -83,9 +83,10 @@ src_compile() {
 
 	local mytarget="server/server.gyp:mozc_server"
 	use emacs && mytarget="${mytarget} unix/emacs/emacs.gyp:mozc_emacs_helper"
-	mytarget="${mytarget} unix/fcitx/fcitx.gyp:fcitx-mozc"
+	use ibus && mytarget="${mytarget} unix/ibus/ibus.gyp:ibus_mozc"
 	use scim && \
 		mytarget="${mytarget} unix/scim/scim.gyp:scim_mozc unix/scim/scim.gyp:scim_mozc_setup"
+	use fcitx && mytarget="${mytarget} unix/fcitx/fcitx.gyp:fcitx-mozc"
 	use renderer && mytarget="${mytarget} renderer/renderer.gyp:mozc_renderer"
 	if use qt4 ; then
 		export QTDIR="${EPREFIX}/usr"
@@ -111,22 +112,22 @@ src_install() {
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}" ${PN} || die
 	fi
 
-	exeinto /usr/$(get_libdir)/fcitx || die
-	doexe "out_linux/${BUILDTYPE}/fcitx-mozc.so" || die
-	insinto /usr/share/fcitx/addon || die
-	doins "unix/fcitx/fcitx-mozc.conf" || die
-	insinto /usr/share/fcitx/inputmethod || die
-	doins "unix/fcitx/mozc.conf" || die
-	insinto /usr/share/fcitx/mozc/icon || die
-	(
-		cd data/images
-		newins product_icon_32bpp-128.png mozc.png || die
-		cd unix
-		for f in ui-*
-		do
-			newins ${f} "mozc-${f/ui-}" || die
-		done
-	)
+	if use ibus ; then
+		exeinto /usr/libexec || die
+		newexe "out_linux/${BUILDTYPE}/ibus_mozc" ibus-engine-mozc || die
+		insinto /usr/share/ibus/component || die
+		doins "out_linux/${BUILDTYPE}/obj/gen/unix/ibus/mozc.xml" || die
+		insinto /usr/share/ibus-mozc || die
+		(
+			cd data/images/unix
+			newins ime_product_icon_opensource-32.png product_icon.png || die
+			for f in ui-*
+			do
+				newins ${f} ${f/ui-} || die
+			done
+		)
+
+	fi
 
 	if use scim ; then
 		exeinto "$(pkg-config --variable=moduledir scim)/IMEngine/" || die
@@ -140,6 +141,25 @@ src_install() {
 			for f in ui-*
 			do
 				newins ${f} ${f/ui-/scim-mozc-} || die
+			done
+		)
+	fi
+
+	if use fcitx ; then
+		exeinto /usr/$(get_libdir)/fcitx || die
+		doexe "out_linux/${BUILDTYPE}/fcitx-mozc.so" || die
+		insinto /usr/share/fcitx/addon || die
+		doins "unix/fcitx/fcitx-mozc.conf" || die
+		insinto /usr/share/fcitx/inputmethod || die
+		doins "unix/fcitx/mozc.conf" || die
+		insinto /usr/share/fcitx/mozc/icon || die
+		(
+			cd data/images
+			newins product_icon_32bpp-128.png mozc.png || die
+			cd unix
+			for f in ui-*
+			do
+				newins ${f} "mozc-${f/ui-}" || die
 			done
 		)
 	fi
