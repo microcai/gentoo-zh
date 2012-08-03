@@ -23,7 +23,7 @@ RDEPEND="
 	>=dev-libs/nss-3.11"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 #	./autogen.sh || die "autogen.sh failed"

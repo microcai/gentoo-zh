@@ -30,7 +30,7 @@ RDEPEND="dev-libs/glib:2
 	)
 	xscreensaver? ( x11-libs/libXScrnSaver )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 S=${WORKDIR}/${PN}

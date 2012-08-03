@@ -24,7 +24,7 @@ RDEPEND=">=dev-lang/python-2.3.0
 	dbus? ( dev-python/dbus-python )"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9.0"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 

@@ -37,7 +37,7 @@ RDEPEND=">=gnome-base/gnome-desktop-2.12
 	eds? ( >=gnome-extra/evolution-data-server-1.6 )"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35
 	>=app-text/gnome-doc-utils-0.3.2
 	~app-text/docbook-xml-dtd-4.1.2

@@ -25,7 +25,7 @@ RDEPEND=">=dev-libs/libxml2-2.0
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

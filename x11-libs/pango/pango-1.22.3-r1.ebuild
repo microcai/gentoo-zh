@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2.17.3
 				x11-libs/libXft
 			)"
 DEPEND="${RDEPEND}
-		>=dev-util/pkgconfig-0.9
+		virtual/pkgconfig
 		doc? (
 				>=dev-util/gtk-doc-1
 				~app-text/docbook-xml-dtd-4.1.2

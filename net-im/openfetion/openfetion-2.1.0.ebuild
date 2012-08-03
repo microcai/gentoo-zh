@@ -31,7 +31,7 @@ RDEPEND="dev-db/sqlite:3
 	)
 	xscreensaver? ( x11-libs/libXScrnSaver )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 RESTRICT="mirror"

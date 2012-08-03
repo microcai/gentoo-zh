@@ -15,7 +15,7 @@ SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${MY_P}.tar.lzma"
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="conntrack dbus +dhcp idn ipv6 lua nls script tftp"
+IUSE="conntrack dbus +dhcp idn ipv6 lua nls script tftp systemd"
 
 RDEPEND="dbus? ( sys-apps/dbus )
 	idn? ( net-dns/libidn )
@@ -28,7 +28,8 @@ RDEPEND="dbus? ( sys-apps/dbus )
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	|| ( app-arch/xz-utils app-arch/lzma )"
+	|| ( app-arch/xz-utils app-arch/lzma )
+	systemd? ( >=sys-apps/systemd-44 )"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
@@ -62,7 +63,7 @@ src_prepare() {
 	sed -i -r 's:lua5.[0-9]+:lua:' Makefile
 
 	# apply systemd patch
-	epatch "${FILESDIR}/${P}-systemd.patch"
+	use systemd && epatch "${FILESDIR}/${P}-systemd.patch"
 }
 
 src_configure() {

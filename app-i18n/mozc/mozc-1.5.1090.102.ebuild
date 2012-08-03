@@ -53,7 +53,9 @@ src_unpack() {
 }
 
 src_prepare() {
-	EPATCH_OPTS="-p2" epatch "${FILESDIR}/fcitx-${P}.1.patch"
+	if use fcitx ; then
+		EPATCH_OPTS="-p2" epatch "${FILESDIR}/fcitx-${P}.1.patch"
+	fi
 }
 
 src_configure() {

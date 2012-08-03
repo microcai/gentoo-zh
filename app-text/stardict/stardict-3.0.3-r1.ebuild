@@ -43,7 +43,7 @@ RDEPEND="${DEP}
 
 DEPEND="${DEP}
 	>=dev-util/intltool-0.22
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-libs/libsigc++"
 
 

@@ -21,7 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	>=virtual/poppler-0.5.4
 	>=virtual/poppler-glib-0.5.4"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9.0"
+	virtual/pkgconfig"
 
 src_prepare() {
 	eautoreconf

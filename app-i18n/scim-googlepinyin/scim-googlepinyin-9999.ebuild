@@ -18,7 +18,7 @@ IUSE=""
 RDEPEND="
 	|| ( >=app-i18n/scim-1.1 >=app-i18n/scim-cvs-1.1 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_prepare() {

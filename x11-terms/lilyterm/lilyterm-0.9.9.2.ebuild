@@ -20,7 +20,7 @@ RDEPEND="gtk3? ( >=x11-libs/gtk+-3.0 )
 	!gtk3? ( >=x11-libs/vte-0.12:0 )
 	>=dev-libs/glib-2.14"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( dev-util/intltool )
 	nls? ( sys-devel/gettext )"
 

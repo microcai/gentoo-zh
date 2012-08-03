@@ -23,7 +23,7 @@ RDEPEND="dev-libs/libxml2
 	)"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	>=dev-util/pkgconfig-0.19
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35"
 RDEPEND="${RDEPEND}
 	media-video/mplayer

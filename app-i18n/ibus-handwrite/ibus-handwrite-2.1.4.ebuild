@@ -26,7 +26,7 @@ RDEPEND="
 
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 
 src_unpack(){

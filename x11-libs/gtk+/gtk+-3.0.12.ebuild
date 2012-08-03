@@ -51,7 +51,7 @@ COMMON_DEPEND="!aqua? (
 	cups? ( net-print/cups )
 	introspection? ( >=dev-libs/gobject-introspection-0.10.1 )"
 DEPEND="${COMMON_DEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	!aqua? (
 		x11-proto/xextproto
 		x11-proto/xproto

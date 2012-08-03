@@ -19,7 +19,7 @@ KEYWORDS="~x86"
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
-    dev-util/pkgconfig
+    virtual/pkgconfig
 	"
 
 src_configure(){

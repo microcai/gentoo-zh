@@ -21,7 +21,7 @@ RDEPEND=">=media-libs/freetype-2
 	video_cards_vesa? ( dev-libs/libx86 )"
 DEPEND="${RDEPEND}
 	sys-libs/ncurses
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch ${FILESDIR}/${P}-configure-exit-1.patch

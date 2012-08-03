@@ -18,7 +18,7 @@ DEPEND="gnome-base/libgnomeui \
 		dev-libs/glib  \
 		ssl? ( dev-libs/openssl ) \
 		applet? ( >=gnome-base/gnome-panel-2 ) \
-		dev-util/pkgconfig \
+		virtual/pkgconfig \
     	>=dev-util/intltool-0.33 \
 		>=x11-libs/gtk+-2.10.14"
 

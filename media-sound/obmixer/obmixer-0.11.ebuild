@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND="x11-libs/gtk+"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool"
 
 src_prepare() {

@@ -20,7 +20,7 @@ RDEPEND=">=x11-libs/gtk+-2.3.1
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29
-	>=dev-util/pkgconfig-0.9"
+	virtual/pkgconfig"
 
 RESTRICT="primaryuri"
 

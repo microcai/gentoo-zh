@@ -16,7 +16,7 @@ RDEPEND="sys-libs/glibc
 	>=media-libs/freetype-2"
 DEPEND="${RDEPEND}
 	sys-libs/ncurses
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"

@@ -21,7 +21,7 @@ IUSE="debug"
 RDEPEND="sys-apps/dbus"
 DEPEND="${RDEPEND}
 	dev-vcs/git
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	econf $(use_enable debug ) || die

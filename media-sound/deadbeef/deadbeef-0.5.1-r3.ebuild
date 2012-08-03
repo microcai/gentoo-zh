@@ -47,7 +47,7 @@ RDEPEND="
 	zip? ( sys-libs/zlib )
 	"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( virtual/libintl dev-util/intltool )
 	"
 

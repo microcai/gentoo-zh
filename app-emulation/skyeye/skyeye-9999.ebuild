@@ -19,7 +19,7 @@ RDEPEND="sys-libs/ncurses
 	dev-libs/glib:2
 	x11-libs/pango"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	dobin skyeye || die "install skyeye"

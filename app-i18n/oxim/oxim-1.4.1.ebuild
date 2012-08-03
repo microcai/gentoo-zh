@@ -26,7 +26,7 @@ COMMON_DEP="chewing? ( >=dev-libs/libchewing-0.2.5 )
 	>=x11-libs/libXpm-2.0.0
 	>=x11-libs/libXtst-1.0.0"
 DEPEND="${COMMON_DEP}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 	x11-proto/xproto"
 RDEPEND="${COMMON_DEP}
