@@ -20,7 +20,7 @@ fi
 inherit ${GOAGENT_ECLASS}
 
 DESCRIPTION="A GAE proxy forked from gappproxy/wallproxy"
-HOMEPAGE="https://github.com/phus/goagent"
+HOMEPAGE="https://github.com/goagent/goagent"
 SRC_URI="${GOAGENT_SRC_URI}"
 
 LICENSE="GPL-3"
