@@ -6,7 +6,7 @@ EAPI="4"
 
 if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="git://github.com/phus/goagent.git"
-	EGIT_BRANCH="master"
+	EGIT_BRANCH=""
 	KEYWORDS=""
 	RESTRICT="mirror"
 	GOAGENT_SRC_URI=""
