@@ -5,14 +5,14 @@
 EAPI="4"
 
 if [[ ${PV} == "9999" ]]; then
-	EGIT_REPO_URI="git://github.com/phus/goagent.git"
+	EGIT_REPO_URI="git://github.com/goagent/goagent.git"
 	EGIT_BRANCH=""
 	KEYWORDS=""
 	RESTRICT="mirror"
 	GOAGENT_SRC_URI=""
 	GOAGENT_ECLASS="git-2"
 else
-	GOAGENT_SRC_URI="https://github.com/phus/goagent/tarball/v${PV} -> ${P}.tar.gz"
+	GOAGENT_SRC_URI="https://github.com/goagent/goagent/tarball/v${PV} -> ${P}.tar.gz"
 	GOAGENT_ECLASS="vcs-snapshot"
 	KEYWORDS="~amd64 ~x86"
 fi
