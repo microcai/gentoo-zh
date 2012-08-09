@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI="4"
 
 ESVN_REPO_URI="http://ucimf.googlecode.com/svn/trunk/${PN}"
 inherit autotools eutils subversion
@@ -27,7 +27,6 @@ pkg_setup() {
 
 src_prepare() {
 	eautoreconf
-	cp "${DISTDIR}"/UserManual.pdf .
 }
 
 src_configure() {
@@ -35,6 +34,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
-	dodoc AUTHORS ChangeLog README TODO UserManual.pdf || die "dodoc failed"
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS ChangeLog README TODO
+	use doc && dodoc "${DISTDIR}"/UserManual.pdf
 }
