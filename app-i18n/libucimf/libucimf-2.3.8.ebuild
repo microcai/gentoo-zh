@@ -22,6 +22,10 @@ RDEPEND="${DEPEND}
 	openvanilla? ( app-i18n/ucimf-openvanilla )
 	dev-util/dialog"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-unistd.patch
+}
+
 src_configure() {
 	econf $(use_enable debug)
 }
