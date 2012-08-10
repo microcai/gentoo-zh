@@ -2,17 +2,18 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI="4"
 inherit eutils
 
 DESCRIPTION="Unicode Console InputMethod Framework"
 HOMEPAGE="http://ucimf.googlecode.com"
-SRC_URI="${HOMEPAGE}/files/${P}.tar.gz ${HOMEPAGE}/files/UserManual.pdf"
+SRC_URI="${HOMEPAGE}/files/${P}.tar.gz
+	doc? ( ${HOMEPAGE}/files/UserManual.pdf )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug sunpinyin chewing openvanilla"
+IUSE="doc debug sunpinyin chewing openvanilla"
 
 DEPEND="media-libs/freetype:2 media-libs/fontconfig"
 RDEPEND="${DEPEND}
@@ -22,7 +23,7 @@ RDEPEND="${DEPEND}
 	dev-util/dialog"
 
 src_prepare() {
-	cp "${DISTDIR}"/UserManual.pdf .
+	epatch "${FILESDIR}"/${PN}-unistd.patch
 }
 
 src_configure() {
@@ -30,6 +31,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
-	dodoc AUTHORS ChangeLog README TODO UserManual.pdf || die "dodoc failed"
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS ChangeLog README TODO
+	use doc && dodoc "${DISTDIR}"/UserManual.pdf
 }
