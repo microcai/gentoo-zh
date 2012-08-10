@@ -4,6 +4,9 @@
 
 EAPI=4
 AUTOTOOLS_IN_SOURCE_BUILD=1
+
+inherit git-2 autotools-utils
+
 DESCRIPTION="MonkVG is an OpenVG 1.1 like vector graphics API implementation
 currently using an OpenGL ES backend"
 HOMEPAGE="https://github.com/micahpearlman/MonkVG"
@@ -13,7 +16,6 @@ EGIT_REPO_URI="git://github.com/microcai/MonkVG.git"
 
 #git://github.com/micahpearlman/${PN}.git"
 
-inherit git-2 autotools-utils
 
 LICENSE="BSD"
 
