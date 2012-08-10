@@ -1,1 +1,2 @@
-DIST cnijfilter-source-3.40-1.tar.gz 9586720 RMD160 f596be6061e4c0987b22ee08c452bd9a5214adcc SHA1 610a888484a51885186e5aa833852acd6172e9fe SHA256 a95dd4ca491a9e8acc3e4ee35cc84904680e82d89ff04a23dda1b0ccffbb8a7a
+DIST cnijfilter-source-3.40-1.tar.gz 9586720 SHA256 a95dd4ca491a9e8acc3e4ee35cc84904680e82d89ff04a23dda1b0ccffbb8a7a
+DIST cnijfilter-source-3.50-1.tar.gz 6219202 SHA256 e3b00bad3065fcbfc0e9bf340ab830ad9fda91cbde784753a45d239128438aa2
