@@ -4,20 +4,28 @@
 
 EAPI=4
 
-inherit git-2
+if [[ "${PV}" == "9999" ]] ; then
+	S=${WORKDIR}/${PN}
+	inherit git-2
+	EGIT_REPO_URI="git://github.com/lotem/${PN}.git"
+else
+	inherit vcs-snapshot
+	RESTRICT="primaryuri"
+	KEYWORDS="~amd64 ~x86"
+	SRC_URI="https://github.com/lotem/${PN}/tarball/rime-${PV} -> ${P}.tar.gz"
+fi
+
 DESCRIPTION="Brise, data resource for Rime Input Method Engine"
 HOMEPAGE="http://code.google.com/p/rimeime/"
-EGIT_REPO_URI="git://github.com/lotem/${PN}.git"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
 IUSE=""
 
 RDEPEND=""
 DEPEND="app-i18n/librime"
 
-S=${WORKDIR}/${PN}
+
 
 src_prepare() {
 	cp ${FILESDIR}/Makefile $S || die
