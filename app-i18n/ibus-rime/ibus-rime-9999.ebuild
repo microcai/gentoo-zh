@@ -16,6 +16,7 @@ KEYWORDS=""
 IUSE=""
 
 RDEPEND="
+	app-i18n/brise
 	app-i18n/ibus
 	app-i18n/librime
 	x11-libs/libnotify
