@@ -17,13 +17,15 @@ IUSE=""
 RESTRICT="primaryuri"
 
 RDEPEND="
-	app-i18n/brise
 	app-i18n/ibus
 	app-i18n/librime
 	x11-libs/libnotify
 	"
 DEPEND="${RDEPEND}
 	dev-util/cmake"
+
+RDEPEND="$RDEPEND
+	app-i18n/brise"
 
 src_prepare() {
 	sed -i -e 's|rime-data|rime/data|g' \
