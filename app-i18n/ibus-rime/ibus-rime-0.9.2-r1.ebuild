@@ -16,15 +16,14 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="primaryuri"
 
-RDEPEND="
+COMMON_DEPEND="
 	app-i18n/ibus
 	app-i18n/librime
 	x11-libs/libnotify
 	"
-DEPEND="${RDEPEND}
+DEPEND="${COMMON_DEPEND}
 	dev-util/cmake"
-
-RDEPEND="$RDEPEND
+RDEPEND="${COMMON_DEPEND}
 	app-i18n/brise"
 
 src_prepare() {
