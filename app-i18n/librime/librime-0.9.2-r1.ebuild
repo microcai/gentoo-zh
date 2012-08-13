@@ -12,7 +12,7 @@ SRC_URI="https://github.com/lotem/${PN}/tarball/rime-${PV} -> ${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="static"
+IUSE="static-libs"
 
 RDEPEND="
 	app-i18n/opencc
@@ -33,7 +33,7 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
-		$(cmake-utils_use_build static)
+		$(cmake-utils_use_build static-libs STATIC)
 		-DBUILD_DATA=OFF
 	)
 	cmake-utils_src_configure
