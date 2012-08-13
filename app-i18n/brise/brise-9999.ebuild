@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-RDEPEND="app-i18n/librime"
-DEPEND="${RDEPEND}"
+RDEPEND=""
+DEPEND="app-i18n/librime"
 
 S=${WORKDIR}/${PN}
 

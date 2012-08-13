@@ -15,8 +15,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="primaryuri"
 
-RDEPEND="app-i18n/librime"
-DEPEND="${RDEPEND}"
+RDEPEND=""
+DEPEND="app-i18n/librime"
 
 src_prepare() {
 	cp ${FILESDIR}/Makefile $S || die
