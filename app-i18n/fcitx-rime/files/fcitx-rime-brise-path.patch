@@ -1,0 +1,14 @@
+diff --git a/cmake/FindBrise.cmake b/cmake/FindBrise.cmake
+index e9d5cb6..f262553 100644
+--- a/cmake/FindBrise.cmake
++++ b/cmake/FindBrise.cmake
+@@ -8,7 +8,8 @@ set(BRISE_FIND_DIR "${PROJECT_SOURCE_DIR}/../brise"
+                    "${CMAKE_INSTALL_PREFIX}/share/brise"
+                    "${CMAKE_INSTALL_PREFIX}/share/rime/brise"
+                    "/usr/share/brise"
+-                   "/usr/share/rime/brise")
++                   "/usr/share/rime/brise"
++                   "/usr/share/rime/data")
+ 
+ set(BRISE_FOUND FALSE)
+ 
