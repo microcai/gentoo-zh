@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-2.0-r1.ebuild,v 1.1 2012/06/13 11:54:50 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-2.1.ebuild,v 1.1 2012/07/19 12:28:33 ford_prefect Exp $
 
 EAPI=4
 
@@ -18,9 +18,7 @@ SRC_URI="http://freedesktop.org/software/pulseaudio/releases/${P}.tar.xz"
 LICENSE="!gdbm? ( LGPL-2.1 ) gdbm? ( GPL-2 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="+alsa avahi +caps equalizer jack lirc oss tcpd +X dbus libsamplerate gnome
-bluetooth +asyncns +glib gtk test doc +udev ipv6 system-wide realtime +orc ssl
-+gdbm +webrtc-aec xen video_cards_nvidia"
+IUSE="+alsa avahi +caps equalizer jack lirc oss tcpd +X dbus libsamplerate gnome bluetooth +asyncns +glib gtk test doc +udev ipv6 system-wide realtime +orc ssl +gdbm +webrtc-aec xen systemd"
 
 RDEPEND=">=media-libs/libsndfile-1.0.20
 	X? (
@@ -59,6 +57,7 @@ RDEPEND=">=media-libs/libsndfile-1.0.20
 	gdbm? ( sys-libs/gdbm )
 	webrtc-aec? ( media-libs/webrtc-audio-processing )
 	xen? ( app-emulation/xen )
+	systemd? ( >=sys-apps/systemd-39 )
 	dev-libs/json-c
 	>=sys-devel/libtool-2.2.4" # it's a valid RDEPEND, libltdl.so is used
 
@@ -96,11 +95,6 @@ pkg_setup() {
 	enewuser pulse -1 -1 /var/run/pulse pulse,audio
 }
 
-src_prepare(){
-	epatch "$FILESDIR/${PN}-${PV}-udev-fix.patch"
-	epatch "$FILESDIR/${PN}-${PV}-xdg-runtime-dir.patch"
-}
-
 src_configure() {
 	# It's a binutils bug, once I can find time to fix that I'll add a
 	# proper dependency and fix this up. — flameeyes
@@ -135,6 +129,7 @@ src_configure() {
 		$(use_enable X x11) \
 		$(use_enable test default-build-tests) \
 		$(use_enable udev) \
+		$(use_enable systemd) \
 		$(use_enable ipv6) \
 		$(use_enable ssl openssl) \
 		$(use_enable webrtc-aec) \
@@ -202,10 +197,8 @@ src_install() {
 
 	find "${D}" -name '*.la' -delete
 
-	# if use NVIDIA cards, you need this patch
-
-	if use video_cards_nvidia ; then
-		cat "${D}/usr/share/pulseaudio/alsa-mixer/profile-sets/extra-hdmi.conf"  >> "${D}/usr/share/pulseaudio/alsa-mixer/profile-sets/default.conf"
+	if use video_cards_nvidia || use video_cards_nouveau ; then
+	cat "${D}/usr/share/pulseaudio/alsa-mixer/profile-sets/extra-hdmi.conf"  >> "${D}/usr/share/pulseaudio/alsa-mixer/profile-sets/default.conf"
 	fi
 }
 

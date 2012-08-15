@@ -2,8 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.3.ebuild,v 1.3 2011/03/09 11:55:40 hwoarang Exp $
 
-EAPI=3
-inherit prefix
+EAPI=4
+inherit bash-completion-r1
 
 DESCRIPTION="chsdir completion for bash"
 HOMEPAGE="http://code.google.com/p/easyscripts/"
@@ -21,16 +21,13 @@ RDEPEND="app-admin/eselect
 
 PDEPEND="app-shells/gentoo-bashcomp"
 
-src_prepare() { :; } # no-op
+RESTRICT="nomirror"
 
-src_configure() { :; } # no-op
-src_compile() { :; } # no-op
+S="${WORKDIR}/${PN}"
 
 src_install() {
 	# Gentoo specific bash-completion.sh file.
-	install -c -D bash-completion-pinyin/chsdir ${D}/usr/bin/chsdir
-	install -c -D bash-completion-pinyin/chs_completion ${D}/usr/share/bash-completion/chs_completion
-
+	dodir /usr/bin
+	install -c -D chsdir ${D}/usr/bin/chsdir
+	newbashcomp chs_completion ${PN}
 }
-
-pkg_postinst() { :; }
