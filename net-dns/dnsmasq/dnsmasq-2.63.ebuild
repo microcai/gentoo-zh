@@ -10,7 +10,7 @@ MY_P="${P/_/}"
 MY_PV="${PV/_/}"
 DESCRIPTION="Small forwarding DNS server"
 HOMEPAGE="http://www.thekelleys.org.uk/dnsmasq/"
-SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${MY_P}.tar.lzma"
+SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${MY_P}.tar.xz"
 
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
@@ -29,7 +29,7 @@ RDEPEND="dbus? ( sys-apps/dbus )
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	|| ( app-arch/xz-utils app-arch/lzma )
-	systemd? ( >=sys-apps/systemd-44 )"
+	systemd? ( >=sys-apps/systemd-184 )"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
