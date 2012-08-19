@@ -8,7 +8,7 @@ inherit cmake-utils
 
 DESCRIPTION="This is a standalone module for fcitx, it can use pinyin API on the
 internet to input."
-HOMEPAGE="https://github.com/csslayer/fcitx-cloudpinyin"
+HOMEPAGE="https://github.com/fcitx/fcitx-cloudpinyin"
 SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
 
 LICENSE="GPL-2"
