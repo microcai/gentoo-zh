@@ -20,6 +20,7 @@ RDEPEND="
 	dev-db/kyotocabinet
 	dev-cpp/yaml-cpp
 	>=dev-libs/boost-1.46.0
+	!=dev-libs/boost-1.49
 	sys-libs/zlib
 	x11-proto/xproto"
 DEPEND="${RDEPEND}"
