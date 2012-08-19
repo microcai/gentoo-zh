@@ -2,18 +2,20 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI="4"
 
 DESCRIPTION="Library to deal with pinyin."
-HOMEPAGE="https://github.com/libpinyin/libpinyin"
-SRC_URI="https://github.com/downloads/libpinyin/libpinyin/libpinyin-0.6.0.tar.gz"
+HOMEPAGE="https://github.com/libpinyin/${PN}"
+SRC_URI="https://github.com/downloads/libpinyin/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="mirror"
 
-DEPEND=">=sys-libs/db-4"
+DEPEND=">=sys-libs/db-4
+	>=dev-libs/glib-2.4.0
+"
 RDEPEND="${DEPEND}"
 
