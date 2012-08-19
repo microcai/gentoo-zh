@@ -13,18 +13,17 @@ S="${WORKDIR}/Sublime Text 2"
 DESCRIPTION="Sublime Text is a sophisticated text editor for code, html and prose"
 HOMEPAGE="http://www.sublimetext.com"
 COMMON_URI="http://c758482.r82.cf2.rackcdn.com"
-SRC_URI="amd64? ( ${COMMON_URI}/${MY_P}%20x64.tar.bz2 )
-x86? ( ${COMMON_URI}/${MY_P}.tar.bz2 )"
+SRC_URI="amd64? ( ${COMMON_URI}/${MY_P}%20x64.tar.bz2 -> ${P}-x64.tar.bz2 )
+x86? ( ${COMMON_URI}/${MY_P}.tar.bz2 -> ${P}-x86.tar.bz2 )"
 LICENSE="Sublime"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
-#RDEPEND=">=media-libs/libpng-1.2.46
-#		>=x11-libs/gtk+-2.24.8-r1:2"
 RDEPEND=">=x11-libs/gtk+-2.24.8-r1:2"
 
 src_install() {
+	dodir /opt/${PN}
 	insinto /opt/${PN}
 	into /opt/${PN}
 	exeinto /opt/${PN}
