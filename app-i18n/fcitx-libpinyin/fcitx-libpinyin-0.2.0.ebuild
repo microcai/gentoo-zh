@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI="4"
 
 inherit cmake-utils
 
@@ -19,7 +19,7 @@ IUSE="+pinyin +shuangpin +zhuyin"
 
 RESTRICT="mirror"
 
-RDEPEND=">=app-i18n/fcitx-4.2.0
+RDEPEND=">=app-i18n/fcitx-4.2.4
 	>=app-i18n/libpinyin-0.5.0"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
@@ -34,6 +34,10 @@ pkg_setup(){
 	$uu || die "You must spicify at least one input method!
 try 'USE=pinyin emerge $PN' again"
 
+}
+
+src_unpack(){
+	unpack ${P}.tar.xz
 }
 
 src_prepare() {
