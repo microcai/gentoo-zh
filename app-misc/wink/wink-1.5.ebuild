@@ -1,50 +1,47 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+EAPI='4'
 
 inherit eutils
 
 DESCRIPTION="A Tutorial and Presentation creation software, primarily aimed at creating tutorials on how to use software"
 HOMEPAGE="http://www.debugmode.com/wink/"
-SRC_URI="http://yet.another.linux-nerd.com/wink/download/wink15.tar.gz"
-RESTRICT="strip fetch"
+SRC_URI="http://dl9.afterdawn.com/download/29cd08e08dca1d685657a7bbae8ddda2/5030af09/n-z/wink15_b1060.tar.gz -> wink15.tar.gz"
+
+RESTRICT="strip"
 
 KEYWORDS="~x86"
 SLOT="0"
 LICENSE="FREEWARE"
 IUSE=""
 
-RDEPEND=""
+RDEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs
+				app-emulation/emul-linux-x86-gtklibs  )
+		x86? ( >=dev-libs/expat-2.0 
+				x11-libs/gtk+:2
+				) "
 
-S="${WORKDIR}"
-
-pkg_nofetch()
-{
-	einfo " Hihi...download file here:"
-	einfo ""
-	einfo " $SRC_URI "
-	einfo ""
-	einfo ""
+src_unpack(){
+	unpack wink15.tar.gz
+	mkdir -p $S
 }
 
-src_unpack() {
-	tar -xzf "${DISTDIR}/wink15.tar.gz" 
-	epatch "${FILESDIR}/installer.sh.patch"
-}
-
-src_compile() {
-	einfo "Nothing to compile."
+src_prepare() {
+	tar -xvf "${WORKDIR}/installdata.tar.gz" -C "$S"
 }
 
 src_install() {
-	dodir /opt/wink
 	dodir /opt/bin
-
-	./installer.sh ${D}/opt/wink
-
 	exeinto /opt/bin
 	newexe ${FILESDIR}/wink.sh wink
 
-	dodir /etc/env.d
-	echo -e "PATH=/opt/wink\n" > ${D}/etc/env.d/20wink
+	cp -a "${S}" ${D}/opt/wink
+
+	# add libexpact.so.0 
+	if use amd64 ; then
+		dosym	/usr/lib32/libexpat.so.1 /opt/wink/libexpat.so.0
+	elif use x86 ; then
+		dosym	/usr/lib/libexpat.so.1 /opt/wink/libexpat.so.0
+	fi
 }
