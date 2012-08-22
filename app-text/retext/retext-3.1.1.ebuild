@@ -34,7 +34,8 @@ src_install(){
 	dodir /usr/lib/${PN}
 	dodir /usr/bin
 
-	cp -a icons ${D}/usr/share/
+	newicon icons/${PN}.png ${PN}.png
+	newicon icons/${PN}.svg ${PN}.svg
 
 	exeinto /usr/lib/${PN}
 
