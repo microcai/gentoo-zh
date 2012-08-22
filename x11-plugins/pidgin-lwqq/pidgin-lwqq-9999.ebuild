@@ -11,12 +11,16 @@ webqq protocol"
 HOMEPAGE="https://github.com/xiehuc/pidgin-lwqq"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/xiehuc/pidgin-lwqq.git"
-
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="unstable"
+
+EGIT_REPO_URI="git://github.com/xiehuc/pidgin-lwqq.git"
+
+if use unstable ; then
+EGIT_BRANCH="dev"
+fi
 
 COMMON_DEPEND=">=net-im/pidgin-2.10[gstreamer]
 	>=net-misc/curl-7.22"
