@@ -38,6 +38,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	confutils_require_any ibus xim
+	python_pkg_setup
 }
 
 src_configure() {

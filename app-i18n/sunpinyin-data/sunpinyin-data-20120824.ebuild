@@ -22,7 +22,7 @@ src_unpack() {
 	default
 	mkdir ${S}
 	cp -s ${WORKDIR}/{lm_sc.t3g.arpa,dict.utf8} ${S}
-	ln -s /usr/share/doc/sunpinyin/SLM-inst.mk ${S}/Makefile
+	bzcat /usr/share/doc/sunpinyin/SLM-inst.mk > ${S}/Makefile
 }
 
 src_compile() {
