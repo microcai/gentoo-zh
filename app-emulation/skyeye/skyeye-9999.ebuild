@@ -1,27 +1,33 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
-inherit eutils subversion
+EAPI=4
+inherit eutils git-2
 
 DESCRIPTION="an ARM embedded hardware simulator"
 HOMEPAGE="http://www.skyeye.org/"
-ESVN_REPO_URI="https://skyeye.svn.sourceforge.net/svnroot/skyeye/skyeye-v1/trunk"
+EGIT_REPO_URI="git://skyeye.git.sourceforge.net/gitroot/skyeye/skyeye"
+EGIT_BRANCH="dyncom_arm_ppc"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~x86"
 IUSE=""
 
-RDEPEND="sys-libs/ncurses
-	media-libs/freetype
-	x11-libs/gtk+:2
+RDEPEND="
 	dev-libs/glib:2
+	media-libs/freetype
+	=sys-devel/llvm-3.0*
+	sys-libs/ncurses
+	x11-libs/gtk+:2
 	x11-libs/pango"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-src_install() {
-	dobin skyeye || die "install skyeye"
-	dodoc ChangeLog README
+DOCS=( ChangeLog README TODO )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-{iconv,arm,common,testsuite,utils,llvm}.patch
 }
+
