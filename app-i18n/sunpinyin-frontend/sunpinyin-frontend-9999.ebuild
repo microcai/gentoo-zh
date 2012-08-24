@@ -68,7 +68,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	use ibus && python_mod_optimize /usr/share/ibus-${PN}/setup
+	use ibus && python_mod_optimize /usr/share/ibus-sunpinyin/setup
 	if use xim ; then
 		elog "To use sunpinyin with XIM, you should use the following"
 		elog "in your user startup scripts such as .xinitrc or .xprofile:"
@@ -77,6 +77,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	use ibus && python_mod_cleanup /usr/share/ibus-${PN}/setup
+	use ibus && python_mod_cleanup /usr/share/ibus-sunpinyin/setup
 }
 
