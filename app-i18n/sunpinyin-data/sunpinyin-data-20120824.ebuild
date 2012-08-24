@@ -9,7 +9,6 @@ HOMEPAGE="http://sunpinyin.org/"
 LICENSE="LGPL-2.1 CDDL"
 SLOT="0"
 KEYWORDS=""
-IUSE="nls"
 RESTRICT="primaryuri"
 
 SRC_URI="http://open-gram.googlecode.com/files/lm_sc.t3g.arpa-20120212.tar.bz2
