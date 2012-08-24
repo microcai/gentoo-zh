@@ -11,8 +11,6 @@ LM_DATA="lm_sc.t3g.arpa.tar.bz2"
 
 DESCRIPTION="A statistical language model based Chinese input method library"
 HOMEPAGE="http://code.google.com/p/sunpinyin/"
-SRC_URI="http://open-gram.googlecode.com/files/${LM_DICT}
-	http://open-gram.googlecode.com/files/${LM_DATA}"
 EGIT_PROJECT="${PN}"
 EGIT_REPO_URI="https://github.com/sunpinyin/sunpinyin.git"
 
@@ -27,10 +25,7 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	virtual/pkgconfig
 	sys-devel/gettext"
-
-src_prepare() {
-	cp -v "${DISTDIR}"/{${LM_DICT},${LM_DATA}} "${S}/raw" || die "dict file not found"
-}
+PDEPEND="app-i18n/sunpinyin-data"
 
 src_configure() {
 	myesconsargs=(
@@ -48,3 +43,4 @@ src_install() {
 	SCONSOPTS="-j1"
 	escons --install-sandbox="${D}" install
 }
+
