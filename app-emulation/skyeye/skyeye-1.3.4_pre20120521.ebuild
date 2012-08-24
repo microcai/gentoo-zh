@@ -3,12 +3,12 @@
 # $Header: $
 
 EAPI=4
-inherit eutils git-2
+
+inherit eutils
 
 DESCRIPTION="an ARM embedded hardware simulator"
 HOMEPAGE="http://www.skyeye.org/"
-EGIT_REPO_URI="git://skyeye.git.sourceforge.net/gitroot/skyeye/skyeye"
-EGIT_BRANCH="dyncom_arm_ppc"
+SRC_URI="http://skyeye.git.sourceforge.net/gitroot/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
