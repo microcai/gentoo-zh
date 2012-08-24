@@ -4,21 +4,20 @@
 
 EAPI=4
 
-inherit eutils
+inherit eutils libtool autotools
 
 DESCRIPTION="an ARM embedded hardware simulator"
 HOMEPAGE="http://www.skyeye.org/"
-SRC_URI="http://skyeye.git.sourceforge.net/gitroot/${P}.tar.bz2"
+SRC_URI="http://gentoo-china-overlay.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 RDEPEND="
 	dev-libs/glib:2
 	media-libs/freetype
-	=sys-devel/llvm-3.0*
 	sys-libs/ncurses
 	x11-libs/gtk+:2
 	x11-libs/pango"
@@ -27,7 +26,20 @@ DEPEND="${RDEPEND}
 
 DOCS=( ChangeLog README TODO )
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-{iconv,arm,common,testsuite,utils,llvm}.patch
+pkg_setup(){
+	eerror "The CODE QULITY of ${PN} is _TOTALLY_ _SHIT_ , don't report any bug to the maintainer, please flood the upstream."
 }
 
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-{iconv,arm,common,testsuite,utils,llvm,malloc}.patch
+	eautoreconf
+}
+
+src_configure(){
+	export CFLAGS="$CFLAGS -DPACKAGE=${PN} -DPACKAGE_VERSION=${PV}"
+	econf 
+}
+
+pkg_postinst(){
+	eerror "The CODE QULITY of ${PN} is _TOTALLY_ _SHIT_ , don't report any bug to the maintainer, please flood the upstream."
+}

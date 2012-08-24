@@ -12,7 +12,7 @@ EGIT_BRANCH="dyncom_arm_ppc"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="
