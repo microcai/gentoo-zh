@@ -12,7 +12,7 @@ KEYWORDS=""
 RESTRICT="primaryuri"
 
 SRC_URI="http://open-gram.googlecode.com/files/lm_sc.t3g.arpa-20120212.tar.bz2
-	http://open-gram.googlecode.com/files/dict.utf8-20120824.tar.bz2"
+	http://open-gram.googlecode.com/files/dict.utf8-20120825.tar.bz2"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
