@@ -6,13 +6,13 @@ EAPI="4"
 
 if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="git://github.com/goagent/goagent.git"
-	EGIT_BRANCH=""
+	EGIT_BRANCH="1.0"
 	KEYWORDS=""
-	RESTRICT="mirror"
 	GOAGENT_SRC_URI=""
 	GOAGENT_ECLASS="git-2"
 else
 	GOAGENT_SRC_URI="https://github.com/goagent/goagent/tarball/v${PV} -> ${P}.tar.gz"
+	RESTRICT="mirror"
 	GOAGENT_ECLASS="vcs-snapshot"
 	KEYWORDS="~amd64 ~x86"
 fi
@@ -27,7 +27,8 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-lang/python:2.7[ssl]"
+RDEPEND="dev-lang/python:2.7[ssl]
+	dev-python/pyopenssl"
 
 src_unpack() {
 	${GOAGENT_ECLASS}_src_unpack
@@ -57,8 +58,6 @@ pkg_postinst() {
 	elog
 	elog "Usage:"
 	elog "vim /etc/goagent"
-	elog "vim /opt/goagent/server/golang/fetch/fetch.go"
-	elog "vim /opt/goagent/server/golang/app.yaml"
 	elog "cd /opt/goagent/server"
 	elog "upload={golang|python|php} python2.7 uploader.zip"
 	elog "/etc/init.d/goagent start|stop|restart"
