@@ -4,7 +4,9 @@
 
 EAPI="3"
 
-inherit eutils autotools googlecode versionator git 
+inherit eutils autotools versionator git 
+
+HOMEPAGE="http://code.google.com/p/osd-lyrics/"
 
 DESCRIPTION="An OSD lyric show supporting multiple media players and downloading."
 EGIT_REPO_URI="git://github.com/osdlyrics/${PN}.git"

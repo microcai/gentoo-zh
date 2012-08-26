@@ -6,10 +6,12 @@ EAPI="4"
 
 TAR_SUFFIX=tar.gz
 
-inherit eutils autotools googlecode
+inherit eutils autotools
+
+HOMEPAGE="http://code.google.com/p/osd-lyrics/"
 
 DESCRIPTION="An OSD lyric show supporting multiple media players and downloading."
-SRC_URI="http://${PN}.googlecode.com/files/${P}.${TAR_SUFFIX}"
+SRC_URI="http://osd-lyrics.googlecode.com/files/${P}.${TAR_SUFFIX}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
