@@ -28,8 +28,10 @@ DEPEND="${RDEPEND}
 PDEPEND="app-i18n/sunpinyin-data"
 
 src_configure() {
+	# use -j1 to prevent the bug when running scons parallelly
+	# see : https://github.com/sunpinyin/sunpinyin/issues/14
 	myesconsargs=(
-		--prefix=/usr
+		-j1 --prefix=/usr
 	)
 }
 
@@ -38,9 +40,6 @@ src_compile() {
 }
 
 src_install() {
-	# use -j1 to prevent the bug when do scons install parallelly
-	# see : https://github.com/sunpinyin/sunpinyin/issues/14
-	SCONSOPTS="-j1"
 	escons --install-sandbox="${D}" install
 }
 
