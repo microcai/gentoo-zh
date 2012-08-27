@@ -11,7 +11,7 @@ all:
 	@cp supplement/*.yaml  ${DATA}
 	@cp preset/*.yaml  ${DATA}
 	rime_deployer --build  ${DATA}
-	@rm ${DATA}/rime.log
+	@rm -rf ${DATA}/rime.log
 
 install:
 	@echo "install rime IM data resource"
