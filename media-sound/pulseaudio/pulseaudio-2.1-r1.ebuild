@@ -4,7 +4,7 @@
 
 EAPI=4
 
-inherit eutils flag-o-matic user versionator
+inherit eutils flag-o-matic user versionator toolchain-funcs
 
 DESCRIPTION="A networked sound server with an advanced plugin system"
 HOMEPAGE="http://www.pulseaudio.org/"
@@ -96,6 +96,9 @@ pkg_setup() {
 }
 
 src_configure() {
+	local udevdir=/lib/udev
+	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+
 	# It's a binutils bug, once I can find time to fix that I'll add a
 	# proper dependency and fix this up. — flameeyes
 	append-ldflags $(no-as-needed)
@@ -139,7 +142,7 @@ src_configure() {
 		--disable-adrian-aec \
 		--disable-esound \
 		--localstatedir="${EPREFIX}"/var \
-		--with-udev-rules-dir="${EPREFIX}/lib/udev/rules.d" \
+		--with-udev-rules-dir="${EPREFIX}/${udevdir}"/rules.d \
 		${myconf}
 
 	if use doc; then

@@ -28,11 +28,7 @@ DEPEND="${RDEPEND}
 PDEPEND="app-i18n/sunpinyin-data"
 
 src_configure() {
-	# use -j1 to prevent the bug when running scons parallelly
-	# see : https://github.com/sunpinyin/sunpinyin/issues/14
-	myesconsargs=(
-		-j1 --prefix=/usr
-	)
+	myesconsargs=( --prefix=/usr )
 }
 
 src_compile() {
