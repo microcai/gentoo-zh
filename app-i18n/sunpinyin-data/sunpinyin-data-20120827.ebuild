@@ -29,11 +29,25 @@ src_unpack() {
 		die 'cannot find SLM-inst.mk'
 }
 
+src_configure() {
+	if use alpha || use amd64 || use amd64-fbsd || use arm ||
+		use hurd-i386 || use ia64 || use sh || use x86 || use x86-fbsd
+	then
+		endianness="le"
+	elif use hppa || use m68k || use mips || use ppc ||
+		use ppc64 || use s390 || use sparc || use sparc-fbsd
+	then
+		endianness="be"
+	else
+		die "cannot determine endianness of the platform"
+	fi
+}
+
 src_compile() {
-	emake
+	emake ENDIANNESS=${endianness}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake ENDIANNESS=${endianness} DESTDIR="${D}" install
 }
 

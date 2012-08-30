@@ -3,12 +3,10 @@
 # Sample Makefile for lexicon generation and installation.
 # Copied and modified doc/SLM-inst.mk from sunpinyin project.
 
-# Little endian platforms: alpha amd64 arm hurd-i386 i386 ia64 mipsel sh3 sh4
-# Big endian platforms: hppa m68k mips powerpc ppc64 sparc s390
-# Considering popularity of desktop platforms, here we default to le.
-ifndef ENDIANNESS
-	ENDIANNESS = le
-endif
+# The variable ${ENDIANNESS} needs to be set to either `le' or `le'.
+# Little endian arch's: alpha amd64 amd64-fbsd arm hurd-i386 ia64 sh x86 x86-fbsd
+# Big endian arch's: hppa m68k mips powerpc ppc64 s390 sparc sparc-fbsd
+# Here we do not give a default choice.
 
 DICT_FILE = dict.utf8
 
