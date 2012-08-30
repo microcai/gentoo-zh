@@ -25,7 +25,7 @@ src_unpack() {
 	mkdir ${S}
 	cp -s ${WORKDIR}/{lm_sc.t3g.arpa,dict.utf8} ${S} ||
 		die 'cannot make links for dict files'
-	bzcat /usr/share/doc/sunpinyin/SLM-inst.mk.bz2 > ${S}/Makefile ||
+	cp ${FILESDIR}/SLM-inst.mk ${S}/Makefile ||
 		die 'cannot find SLM-inst.mk'
 }
 
