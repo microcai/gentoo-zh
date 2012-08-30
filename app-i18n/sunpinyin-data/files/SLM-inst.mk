@@ -18,7 +18,7 @@ TSLM3_DIST_FILE = ${SLM_TARGET}.t3g
 PYTRIE3_FILE = pydict3_sc.bin
 PYTRIE3_LOG_FILE = pydict3_sc.log
 
-SYSTEM_DATA_DIR = ${DESTDIR}/usr/share/doc/sunpinyin
+SYSTEM_DATA_DIR = ${DESTDIR}/usr/share/sunpinyin
 
 all: slm3_dist
 install: slm3_install
