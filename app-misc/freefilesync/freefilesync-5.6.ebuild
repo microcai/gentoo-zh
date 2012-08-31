@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 MY_P="FreeFileSync"
 
@@ -54,4 +54,10 @@ src_compile(){
 src_install(){
 	einstall
 	use realtime && einstall -C RealtimeSync
+
+	unzip BUILD/Resources.zip FreeFileSync.png
+
+	newicon FreeFileSync.png FreeFileSync.png
+
+	make_desktop_entry "FreeFileSync" "Synchronize files and folders" "FreeFileSync" "System;Utility"
 }
