@@ -24,11 +24,13 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	# dont build data resource here, already provided by app-i18n/brise
+	# dont build data resource here, already provided by app-i18n/rime-data
 	sed -i -e 's|add_subdirectory(data)||' CMakeLists.txt || die
 	# search correct data path
 	sed -i -e 's|/usr/share/rime/brise|/usr/share/rime-data|' \
 		cmake/FindBrise.cmake || die
+	# change the patch
 	sed -i -e '/ibus_rime_traits\.shared_data_dir/s/= shared_data_dir/= \
 		\"\/usr\/share\/rime-data\"/' src/fcitx-rime.c || die
 }
+
