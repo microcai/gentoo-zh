@@ -1,0 +1,9 @@
+
+[Desktop Entry]
+Name=Limbo
+Type=Application
+Comment=The game Limbo
+Exec=limbo
+TryExec=limbo
+Icon=limbo
+Categories=Game;
