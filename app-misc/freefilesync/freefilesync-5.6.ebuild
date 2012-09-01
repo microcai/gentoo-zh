@@ -17,8 +17,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+realtime"
 
-DEPEND="x11-libs/wxGTK[X]
-	dev-libs/boost
+DEPEND=">=x11-libs/wxGTK-2.8.12.1[X]
+	>=dev-libs/boost-1.50
+	!<dev-libs/boost-1.50
 	x11-libs/gtk+:2"
 
 RDEPEND="${DEPEND}"
