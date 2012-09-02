@@ -17,7 +17,8 @@ DEPEND=""
 RDEPEND="${DEPEND}
 		media-libs/gstreamer
 		x11-libs/gtk+
-		dev-db/sqlite"
+		dev-db/sqlite
+		net-misc/curl"
 
 src_unpack(){
 	unpack ${A}
