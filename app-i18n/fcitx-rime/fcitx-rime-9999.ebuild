@@ -27,5 +27,8 @@ src_prepare() {
 	# dont build data resource here, already provided by app-i18n/brise
 	sed -i -e 's|add_subdirectory(data)||' CMakeLists.txt || die
 	# search correct data path
-	epatch "${FILESDIR}"/${PN}-brise-path.patch
+	sed -i -e 's|/usr/share/rime/brise|/usr/share/rime-data|' \
+		cmake/FindBrise.cmake || die
+	sed -i -e '/ibus_rime_traits\.shared_data_dir/s/= shared_data_dir/= \
+		\"\/usr\/share\/rime-data\"/' src/fcitx-rime.c || die
 }
