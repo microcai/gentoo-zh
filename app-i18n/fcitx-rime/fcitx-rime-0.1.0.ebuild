@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	app-i18n/brise
+	app-i18n/rime-data
 	>=app-i18n/fcitx-4.2.5
 	app-i18n/librime
 	x11-libs/libnotify
