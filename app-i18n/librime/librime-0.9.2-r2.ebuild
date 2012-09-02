@@ -28,8 +28,6 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	# patch the cmake system to make it disable data resource build
 	epatch "${FILESDIR}"/${PN}-data-option.patch
-	# change path from rime-data to rime/data, make it more consist
-	sed -i -e 's|/rime-data|/rime/data|g' CMakeLists.txt Makefile || die
 }
 
 src_configure() {
