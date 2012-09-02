@@ -39,9 +39,3 @@ src_configure() {
 	)
 	cmake-utils_src_configure
 }
-
-pkg_postinst() {
-	elog "Since we try to seperate the rime data from this ebuild"
-	elog "Please do make sure you do following to make rime work"
-	elog " $ emerge brise"
-}
