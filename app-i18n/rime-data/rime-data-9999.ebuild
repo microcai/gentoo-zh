@@ -18,8 +18,3 @@ IUSE=""
 RDEPEND=""
 DEPEND="app-i18n/librime"
 
-
-
-src_prepare() {
-	cp ${FILESDIR}/Makefile $S || die
-}
