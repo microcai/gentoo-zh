@@ -3,7 +3,6 @@
 # $Header: $
 
 EAPI=4
-
 inherit eutils vcs-snapshot
 
 MY_USER="herenvarno"
@@ -30,5 +29,5 @@ src_configure(){
 
 src_install(){
 	make DESTDIR="$D" install
-	newicon data/linnya.svg ${PN}.svg
+	newicon data/${PN}.svg ${PN}.svg
 }
