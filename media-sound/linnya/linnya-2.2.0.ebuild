@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=4
-inherit eutils
+inherit eutils vcs-snapshot
 
 MY_USER="herenvarno"
 DESCRIPTION="A free music player"
@@ -21,7 +21,7 @@ RDEPEND="${DEPEND}
 		x11-libs/gtk+
 		dev-db/sqlite
 		net-misc/curl"
-S="${WORKDIR}/${MY_USER}-${PN}-6724a9b"
+#S="${WORKDIR}/${MY_USER}-${PN}-6724a9b"
 #src_unpack(){
 #	unpack ${A}
 #	mv *-${PN}-* "${S}"
