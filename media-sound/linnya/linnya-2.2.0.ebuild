@@ -30,5 +30,5 @@ src_configure(){
 
 src_install(){
 	make DESTDIR="$D" install
-	newicon data/linnya.svg
+	newicon data/linnya.svg ${PN}.svg
 }
