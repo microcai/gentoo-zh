@@ -3,6 +3,8 @@
 # $Header: $
 
 EAPI=4
+inherit eutils
+
 MY_USER="herenvarno"
 DESCRIPTION="A free music player"
 HOMEPAGE="http://www.linnya.org"
@@ -19,11 +21,11 @@ RDEPEND="${DEPEND}
 		x11-libs/gtk+
 		dev-db/sqlite
 		net-misc/curl"
-
-src_unpack(){
-	unpack ${A}
-	mv *-${PN}-* "${S}"
-}
+S="${WORKDIR}/${MY_USER}-${PN}-6724a9b"
+#src_unpack(){
+#	unpack ${A}
+#	mv *-${PN}-* "${S}"
+#}
 
 src_configure(){
 	./autogen
@@ -32,5 +34,5 @@ src_configure(){
 
 src_install(){
 	make DESTDIR="$D" install
-	dosym /usr/share/icons/hicolor/scalable/apps/linnya.svg /usr/share/pixmaps/linnya.svg
+	newicon data/${PN}.svg ${PN}.svg
 }
