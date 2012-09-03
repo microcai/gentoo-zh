@@ -3,6 +3,9 @@
 # $Header: $
 
 EAPI=4
+
+inherit eutils vcs-snapshot
+
 MY_USER="herenvarno"
 DESCRIPTION="A free music player"
 HOMEPAGE="http://www.linnya.org"
@@ -20,11 +23,6 @@ RDEPEND="${DEPEND}
 		dev-db/sqlite
 		net-misc/curl"
 
-src_unpack(){
-	unpack ${A}
-	mv *-${PN}-* "${S}"
-}
-
 src_configure(){
 	./autogen
 	./configure --prefix=/usr
@@ -32,5 +30,5 @@ src_configure(){
 
 src_install(){
 	make DESTDIR="$D" install
-	dosym /usr/share/icons/hicolor/scalable/apps/linnya.svg /usr/share/pixmaps/linnya.svg
+	newicon data/linnya.svg
 }
