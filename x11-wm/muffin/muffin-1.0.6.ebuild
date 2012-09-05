@@ -24,7 +24,7 @@ COMMON_DEPEND=">=x11-libs/pango-1.2[X,introspection?]
 	>=x11-libs/gtk+-2.91.7:3[introspection?]
 	>=gnome-base/gconf-2:2
 	>=dev-libs/glib-2.14:2
-	>=media-libs/clutter-1.7.5:1.0[introspection?]
+	>=media-libs/clutter-1.10[introspection?]
 	>=media-libs/libcanberra-0.26[gtk3]
 	>=x11-libs/startup-notification-0.7
 	>=x11-libs/libXcomposite-0.2
