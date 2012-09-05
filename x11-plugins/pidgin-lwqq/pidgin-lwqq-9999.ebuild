@@ -26,3 +26,9 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="${COMMON_DEPEND}"
 
+src_prepare(){
+	if use amd64 ;then
+		sed "s/\/lib\/purple-/\/lib64\/purple-/g" -i CMakeLists.txt
+	fi
+}
+
