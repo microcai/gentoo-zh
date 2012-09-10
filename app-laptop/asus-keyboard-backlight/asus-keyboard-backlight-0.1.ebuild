@@ -14,8 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND=""
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	dev-lang/python
+	sys-power/acpid"
 
 S="${WORKDIR}/asus-kbd-backlight-${PV}"
 
