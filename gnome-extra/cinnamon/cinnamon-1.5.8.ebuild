@@ -25,7 +25,7 @@ KEYWORDS="~amd64 ~x86"
 # latest g-c-c is needed due to https://bugs.gentoo.org/show_bug.cgi?id=360057
 # libXfixes-5.0 needed for pointer barriers
 # gnome-menus-3.2.0.1-r1 needed for new 10-xdg-menu-gnome
-COMMON_DEPEND=">=dev-libs/glib-2.29.10:2
+COMMON_DEPEND=">=dev-libs/glib-2.30:2
 	>=dev-libs/gjs-1.29.18
 	>=dev-libs/gobject-introspection-0.10.1
 	x11-libs/gdk-pixbuf:2[introspection]
@@ -34,16 +34,16 @@ COMMON_DEPEND=">=dev-libs/glib-2.29.10:2
 	app-misc/ca-certificates
 	>=dev-libs/folks-0.5.2
 	>=dev-libs/json-glib-0.13.2
-	>=gnome-base/gnome-desktop-2.91.2:3[introspection]
-	>=gnome-base/gsettings-desktop-schemas-2.91.91
-	>=gnome-extra/evolution-data-server-2.91.6
+	>=gnome-base/gnome-desktop-3.4:3[introspection]
+	>=gnome-base/gsettings-desktop-schemas-3.4
+	>=gnome-extra/evolution-data-server-3.4
 	>=media-libs/gstreamer-0.10.16:0.10
 	>=media-libs/gst-plugins-base-0.10.16:0.10
 	>=net-im/telepathy-logger-0.2.4[introspection]
 	net-libs/libsoup:2.4[introspection]
 	>=net-libs/telepathy-glib-0.15.5[introspection]
 	>=sys-auth/polkit-0.100[introspection]
-	>=x11-wm/muffin-1.0.2[introspection]
+	>=x11-wm/muffin-1.0.9
 
 	dev-libs/dbus-glib
 	dev-libs/libxml2:2
@@ -51,7 +51,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.29.10:2
 	>=dev-libs/libcroco-0.6.2:0.6
 
 	gnome-base/gconf:2[introspection]
-	>=gnome-base/gnome-menus-3.2.0.1-r1:3[introspection]
+	>=gnome-base/gnome-menus-3.4:3[introspection]
 	gnome-base/librsvg
 	media-libs/libcanberra
 	media-sound/pulseaudio
