@@ -23,3 +23,7 @@
 net-im/instantbird
 
 =app-arch/unzip-6.10_beta
+
+# microcai <microcaicai@gmail.com> ( 16, Sep 2012 )
+# mask for more test
+=app-vim/eclim-2.2.1
