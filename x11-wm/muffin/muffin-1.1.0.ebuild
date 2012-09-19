@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~x86"
 COMMON_DEPEND=">=x11-libs/pango-1.2[X,introspection]
 	>=x11-libs/cairo-1.10[X]
 	x11-libs/gdk-pixbuf:2[introspection]
-	>=x11-libs/gtk+-3.2:3[introspection]
+	>=x11-libs/gtk+-3.4:3[introspection]
 	>=gnome-base/gconf-2:2
 	>=dev-libs/glib-2.30
 	>=media-libs/clutter-1.10[introspection]

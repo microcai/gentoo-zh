@@ -29,7 +29,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.30:2
 	>=dev-libs/gjs-1.29.18
 	>=dev-libs/gobject-introspection-0.10.1
 	x11-libs/gdk-pixbuf:2[introspection]
-	>=x11-libs/gtk+-3.0.0:3[introspection]
+	>=x11-libs/gtk+-3.4[introspection]
 	>=media-libs/clutter-1.7.5:1.0[introspection]
 	app-misc/ca-certificates
 	>=dev-libs/folks-0.5.2
@@ -43,7 +43,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.30:2
 	net-libs/libsoup:2.4[introspection]
 	>=net-libs/telepathy-glib-0.15.5[introspection]
 	>=sys-auth/polkit-0.100[introspection]
-	>=x11-wm/muffin-1.0.9
+	>=x11-wm/muffin-1.1.0
 
 	dev-libs/dbus-glib
 	dev-libs/libxml2:2
