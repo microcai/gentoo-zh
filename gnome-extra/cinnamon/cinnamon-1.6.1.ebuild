@@ -26,8 +26,8 @@ KEYWORDS="~amd64 ~x86"
 # libXfixes-5.0 needed for pointer barriers
 # gnome-menus-3.2.0.1-r1 needed for new 10-xdg-menu-gnome
 COMMON_DEPEND=">=dev-libs/glib-2.30:2
-	>=dev-libs/gjs-1.29.18
-	>=dev-libs/gobject-introspection-0.10.1
+	>=dev-libs/gjs-1.32
+	>=dev-libs/gobject-introspection-1.30
 	x11-libs/gdk-pixbuf:2[introspection]
 	>=x11-libs/gtk+-3.4[introspection]
 	>=media-libs/clutter-1.7.5:1.0[introspection]
@@ -37,13 +37,13 @@ COMMON_DEPEND=">=dev-libs/glib-2.30:2
 	>=gnome-base/gnome-desktop-3.4:3[introspection]
 	>=gnome-base/gsettings-desktop-schemas-3.4
 	>=gnome-extra/evolution-data-server-3.4
-	>=media-libs/gstreamer-0.10.16:0.10
-	>=media-libs/gst-plugins-base-0.10.16:0.10
+	>=media-libs/gstreamer-0.10.16
+	>=media-libs/gst-plugins-base-0.10.16
 	>=net-im/telepathy-logger-0.2.4[introspection]
 	net-libs/libsoup:2.4[introspection]
 	>=net-libs/telepathy-glib-0.15.5[introspection]
 	>=sys-auth/polkit-0.100[introspection]
-	>=x11-wm/muffin-1.1.0
+	>=x11-wm/muffin-1.1.1
 
 	dev-libs/dbus-glib
 	dev-libs/libxml2:2
@@ -61,7 +61,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.30:2
 	>=x11-libs/libXfixes-5.0
 	x11-apps/mesa-progs
 
-	bluetooth? ( >=net-wireless/gnome-bluetooth-3.1.0[introspection] )
+	bluetooth? ( >=net-wireless/gnome-bluetooth-3.2.0[introspection] )
 	networkmanager? (
 		gnome-base/libgnome-keyring
 		>=net-misc/networkmanager-0.8.999[introspection] )"
