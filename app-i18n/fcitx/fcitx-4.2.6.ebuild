@@ -8,13 +8,11 @@ inherit multilib cmake-utils eutils
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://www.fcitx.org/"
-SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz
-		http://fcitx.googlecode.com/files/pinyin.tar.gz
-		table? ( http://fcitx.googlecode.com/files/table.tar.gz )"
+SRC_URI="http://fcitx.googlecode.com/files/${P}_dict.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS="amd64 ~x86"
 IUSE="+cairo debug gtk gtk3 introspection lua opencc +pango qt4 snooper static-libs +table test"
 RESTRICT="mirror"
 
@@ -69,13 +67,6 @@ update_gtk_immodules() {
 update_gtk3_immodules() {
 	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-3.0" ] ; then
 		"${EPREFIX}/usr/bin/gtk-query-immodules-3.0" --update-cache
-	fi
-}
-
-src_prepare() {
-	cp "${DISTDIR}/pinyin.tar.gz" "${S}/data" || die "pinyin.tar.gz is not found"
-	if use table ; then
-		cp "${DISTDIR}/table.tar.gz" "${S}/data/table" || die "table.tar.gz is not found"
 	fi
 }
 
