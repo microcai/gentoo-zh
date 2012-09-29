@@ -8,8 +8,7 @@ inherit cmake-utils
 
 DESCRIPTION="Libpinyin Wrapper for Fcitx."
 HOMEPAGE="https://github.com/fcitx/fcitx-libpinyin"
-SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz
-	https://github.com/downloads/fcitx/fcitx-libpinyin/model.text.tar.gz"
+SRC_URI="http://fcitx.googlecode.com/files/${P}_dict.tar.xz"
 
 LICENSE="GPL"
 SLOT="0"
@@ -34,14 +33,6 @@ pkg_setup(){
 	$uu || die "You must spicify at least one input method!
 try 'USE=pinyin emerge $PN' again"
 
-}
-
-src_unpack(){
-	unpack ${P}.tar.xz
-}
-
-src_prepare() {
-	cp "${DISTDIR}/model.text.tar.gz" "${S}/data" || die "model.text.tar.gz is not found"
 }
 
 src_install(){
