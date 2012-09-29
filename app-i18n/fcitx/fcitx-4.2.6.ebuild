@@ -14,7 +14,7 @@ SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="-*"
 IUSE="+cairo debug gtk gtk3 introspection lua opencc +pango qt4 snooper static-libs +table test"
 RESTRICT="mirror"
 
