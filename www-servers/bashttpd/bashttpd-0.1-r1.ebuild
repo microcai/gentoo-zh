@@ -4,7 +4,7 @@
 
 EAPI=3
 
-inherit googlecode
+inherit systemd googlecode
 
 S=""
 
@@ -14,14 +14,24 @@ SRC_URI="${HOMEPAGE}/files/${P}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86 arm mips alpha"
-IUSE=""
+IUSE="systemd"
 
 RDEPEND="${DEPEND}
 	app-shells/bash
 	sys-apps/coreutils
+	systemd? ( sys-apps/systemd )
 "
 
 src_install(){
 	dodir /usr/bin
 	install ${DISTDIR}/${P} ${D}/usr/bin/bashttpd
+
+	if use systemd ; then
+		systemd_dounit ${FILESDIR}/http-alt.socket
+		systemd_dounit ${FILESDIR}/http-alt@.service
+
+		systemd_dounit ${FILESDIR}/http.socket
+		systemd_dounit ${FILESDIR}/http@.service
+
+	fi
 }
