@@ -20,7 +20,7 @@ RDEPEND=">=app-i18n/fcitx-4.2.4
 	kde-base/systemsettings"
 DEPEND="${RDEPEND}"
 
-src_prepare() {
+#src_prepare() {
 	# fix the bug sometimes cannot build due to automoc4
-	epatch "${FILESDIR}/${P}-fix-build.patch"
-}
+	#epatch "${FILESDIR}/${P}-fix-build.patch"
+#}#
