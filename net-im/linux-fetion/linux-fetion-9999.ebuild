@@ -5,7 +5,7 @@
 EAPI="2"
 
 ESVN_REPO_URI="http://libfetion-gui.googlecode.com/svn/trunk/qt4_src"
-inherit flag-o-matic qt4 subversion
+inherit flag-o-matic qt4-r2 subversion
 
 DESCRIPTION="Linux Fetion, a QT4 IM client using CHINA MOBILE's Fetion Protocol"
 HOMEPAGE="http://www.libfetion.cn/"

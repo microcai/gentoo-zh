@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-inherit flag-o-matic qt4
+inherit flag-o-matic qt4-r2
 
 MY_P=${PN/-/_}_v${PV}
 

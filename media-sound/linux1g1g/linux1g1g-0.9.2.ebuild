@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-inherit qt4 versionator eutils
+inherit qt4-r2 versionator eutils
 
 MY_P="${PN}-$(replace_version_separator 2 '-')"
 DESCRIPTION="Linux 1g1g is a desktop application for 1g1g.com."

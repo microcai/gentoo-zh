@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit eutils qt4
+inherit eutils qt4-r2
 DESCRIPTION="QStarDict is a StarDict clone written with using Qt"
 HOMEPAGE="http://qstardict.ylsoftware.com/"
 SRC_URI="http://qstardict.ylsoftware.com/files/${P}.tar.bz2 -> ${P}.tar.gz"

@@ -4,7 +4,7 @@
 
 ESVN_REPO_URI="http://egear.googlecode.com/svn/branches/egear-0.1"
 
-inherit qt4 subversion
+inherit qt4-r2 subversion
 
 DESCRIPTION="eGear, a download tool written in QT4"
 HOMEPAGE="egear.googlecode.com"

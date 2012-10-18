@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit googlecode  qt4
+inherit googlecode  qt4-r2
 
 DESCRIPTION="An open-source Qt4 implementation of IP Messenger for linux."
 
