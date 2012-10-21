@@ -1,6 +1,7 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header :$
+EAPI=4
 
 ESVN_REPO_URI="http://egear.googlecode.com/svn/branches/egear-0.1"
 
