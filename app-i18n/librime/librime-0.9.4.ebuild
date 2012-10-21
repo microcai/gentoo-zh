@@ -8,7 +8,7 @@ inherit cmake-utils multilib vcs-snapshot
 
 DESCRIPTION="Rime Input Method Engine library"
 HOMEPAGE="http://code.google.com/p/rimeime/"
-SRC_URI="https://github.com/lotem/${PN}/tarball/rime-${PV} -> ${P}.tar.gz"
+SRC_URI="http://rimeime.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -23,11 +23,6 @@ RDEPEND="app-i18n/opencc
 	sys-libs/zlib
 	x11-proto/xproto"
 DEPEND="${RDEPEND}"
-
-src_prepare() {
-	# patch the cmake system to make it disable data resource build
-	epatch "${FILESDIR}"/${PN}-data-option.patch
-}
 
 src_configure() {
 	local mycmakeargs=(
