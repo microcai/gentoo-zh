@@ -1,0 +1,31 @@
+From a36b871255e0a05690f95942ed2a6be57c24ba1e Mon Sep 17 00:00:00 2001
+From: Peter Jones <pjones@redhat.com>
+Date: Wed, 28 Sep 2011 17:03:39 -0400
+Subject: [PATCH] Fix strange compilation problem.
+
+the compiler seems to be optimizing finish_param_parse out and doing a
+poor job of it.  So make it a non-static function and that doesn't
+happen.
+---
+ efi/efidp.c |    5 ++++-
+ 1 files changed, 4 insertions(+), 1 deletions(-)
+
+diff --git a/efi/efidp.c b/efi/efidp.c
+index d8ca03d..f4ca452 100644
+--- a/efi/efidp.c
++++ b/efi/efidp.c
+@@ -578,7 +578,10 @@ dpname_matches(char *str, char *candidate)
+     return rc;
+ }
+ 
+-static void
++extern void
++finish_param_parse(char *pos, char **end, char *tmp);
++
++void
+ finish_param_parse(char *pos, char **end, char *tmp)
+ {
+   if (!pos || !end || !tmp)
+-- 
+1.7.6
+
