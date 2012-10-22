@@ -1,0 +1,381 @@
+Sun Jun 21 23:56:49 EDT 2009  Geoff Reedy <geoff@programmer-monk.net>
+  * track currently processing event
+
+Mon Jun 22 01:19:11 EDT 2009  Geoff Reedy <geoff@programmer-monk.net>
+  * implement the ICCCM WM_TAKE_FOCUS protocol
+
+Sat Oct 10 19:19:07 EDT 2009  Geoff Reedy <geoff@programmer-monk.net>
+  * Give focus to windows that don't set the input hint
+
+Mon Feb 22 09:45:12 EST 2010  Adam Vogt <vogt.adam@gmail.com>
+  * Resolve conflicts Geoff Reedy's window focus hack.
+
+New patches:
+
+[track currently processing event
+Geoff Reedy <geoff@programmer-monk.net>**20090622035649
+ Ignore-this: da2e82037548ab176a4333056c94a07a
+] {
+hunk ./XMonad/Core.hs 90
+     , mousePosition :: !(Maybe (Position, Position))
+                                       -- ^ position of the mouse according to
+                                       -- the event currently being processed
++    , currentEvent :: !(Maybe Event)
++                                      -- ^ event currently being processed
+     }
+ 
+ -- todo, better name
+merger 0.0 (
+hunk ./XMonad/Main.hsc 125
+-        st = XState
+-            { windowset     = initialWinset
+-            , mapped        = S.empty
+-            , waitingUnmap  = M.empty
+-            , dragging      = Nothing }
+hunk ./XMonad/Main.hsc 124
+-            , mousePosition = Nothing }
++            , mousePosition = Nothing
++            , currentEvent  = Nothing }
+)
+hunk ./XMonad/Main.hsc 173
+         prehandle e = let mouse = do guard (ev_event_type e `elem` evs)
+                                      return (fromIntegral (ev_x_root e)
+                                             ,fromIntegral (ev_y_root e))
+-                      in local (\c -> c { mousePosition = mouse }) (handleWithHook e)
++                      in local (\c -> c { mousePosition = mouse, currentEvent = Just e }) (handleWithHook e)
+         evs = [ keyPress, keyRelease, enterNotify, leaveNotify
+               , buttonPress, buttonRelease]
+ 
+}
+[implement the ICCCM WM_TAKE_FOCUS protocol
+Geoff Reedy <geoff@programmer-monk.net>**20090622051911
+ Ignore-this: 5b397417dfcf9014ac515a64484cc314
+] {
+hunk ./XMonad/Core.hs 31
+     runX, catchX, userCode, userCodeDef, io, catchIO, installSignalHandlers, uninstallSignalHandlers,
+     withDisplay, withWindowSet, isRoot, runOnWorkspaces,
+     getAtom, spawn, spawnPID, xfork, getXMonadDir, recompile, trace, whenJust, whenX,
+-    atom_WM_STATE, atom_WM_PROTOCOLS, atom_WM_DELETE_WINDOW, ManageHook, Query(..), runQuery
++    atom_WM_STATE, atom_WM_PROTOCOLS, atom_WM_DELETE_WINDOW, atom_WM_TAKE_FOCUS, ManageHook, Query(..), runQuery
+   ) where
+ 
+ import XMonad.StackSet hiding (modify)
+hunk ./XMonad/Core.hs 212
+ getAtom str = withDisplay $ \dpy -> io $ internAtom dpy str False
+ 
+ -- | Common non-predefined atoms
+-atom_WM_PROTOCOLS, atom_WM_DELETE_WINDOW, atom_WM_STATE :: X Atom
++atom_WM_PROTOCOLS, atom_WM_DELETE_WINDOW, atom_WM_STATE, atom_WM_TAKE_FOCUS :: X Atom
+ atom_WM_PROTOCOLS       = getAtom "WM_PROTOCOLS"
+ atom_WM_DELETE_WINDOW   = getAtom "WM_DELETE_WINDOW"
+ atom_WM_STATE           = getAtom "WM_STATE"
+hunk ./XMonad/Core.hs 216
++atom_WM_TAKE_FOCUS      = getAtom "WM_TAKE_FOCUS"
+ 
+ ------------------------------------------------------------------------
+ -- LayoutClass handling. See particular instances in Operations.hs
+merger 0.0 (
+hunk ./XMonad/Operations.hs 329
+-    io $ do setInputFocus dpy w revertToPointerRoot 0
+-            -- raiseWindow dpy w
++    io $ setInputFocus dpy w revertToPointerRoot 0
+hunk ./XMonad/Operations.hs 329
+-    io $ do setInputFocus dpy w revertToPointerRoot 0
+-            -- raiseWindow dpy w
++
++    hints <- io $ getWMHints dpy w
++    protocols <- io $ getWMProtocols dpy w
++    wmprot <- atom_WM_PROTOCOLS
++    wmtf <- atom_WM_TAKE_FOCUS
++    currevt <- asks currentEvent
++
++    when (wmh_input hints) $ io $ do setInputFocus dpy w revertToPointerRoot 0
++    when (wmtf `elem` protocols) $
++      io $ allocaXEvent $ \ev -> do
++        setEventType ev clientMessage
++        setClientMessageEvent ev w wmprot 32 wmtf $ maybe currentTime event_time currevt
++        sendEvent dpy w False noEventMask ev
++        where event_time ev =
++                if (ev_event_type ev) `elem` timedEvents then
++                  ev_time ev
++                else
++                  currentTime
++              timedEvents = [ keyPress, keyRelease, buttonPress, buttonRelease, enterNotify, leaveNotify, selectionRequest ]
+)
+}
+[Give focus to windows that don't set the input hint
+Geoff Reedy <geoff@programmer-monk.net>**20091010231907
+ Ignore-this: 4ffb55dd97b59234703e0411c06b4901
+] {
+hunk ./XMonad/Operations.hs 28
+ import Data.Maybe
+ import Data.Monoid          (Endo(..))
+ import Data.List            (nub, (\\), find)
+-import Data.Bits            ((.|.), (.&.), complement)
++import Data.Bits            ((.|.), (.&.), complement, testBit)
+ import Data.Ratio
+ import qualified Data.Map as M
+ import qualified Data.Set as S
+merger 0.0 (
+merger 0.0 (
+hunk ./XMonad/Operations.hs 329
+-    io $ do setInputFocus dpy w revertToPointerRoot 0
+-            -- raiseWindow dpy w
++
++    hints <- io $ getWMHints dpy w
++    protocols <- io $ getWMProtocols dpy w
++    wmprot <- atom_WM_PROTOCOLS
++    wmtf <- atom_WM_TAKE_FOCUS
++    currevt <- asks currentEvent
++
++    when (wmh_input hints) $ io $ do setInputFocus dpy w revertToPointerRoot 0
++    when (wmtf `elem` protocols) $
++      io $ allocaXEvent $ \ev -> do
++        setEventType ev clientMessage
++        setClientMessageEvent ev w wmprot 32 wmtf $ maybe currentTime event_time currevt
++        sendEvent dpy w False noEventMask ev
++        where event_time ev =
++                if (ev_event_type ev) `elem` timedEvents then
++                  ev_time ev
++                else
++                  currentTime
++              timedEvents = [ keyPress, keyRelease, buttonPress, buttonRelease, enterNotify, leaveNotify, selectionRequest ]
+hunk ./XMonad/Operations.hs 329
+-    io $ do setInputFocus dpy w revertToPointerRoot 0
+-            -- raiseWindow dpy w
++    io $ setInputFocus dpy w revertToPointerRoot 0
+)
+hunk ./XMonad/Operations.hs 335
++    let inputHintSet = wmh_flags hints `testBit` inputHintBit
+)
+merger 0.0 (
+merger 0.0 (
+hunk ./XMonad/Operations.hs 335
++    let inputHintSet = wmh_flags hints `testBit` inputHintBit
+merger 0.0 (
+hunk ./XMonad/Operations.hs 329
+-    io $ do setInputFocus dpy w revertToPointerRoot 0
+-            -- raiseWindow dpy w
++
++    hints <- io $ getWMHints dpy w
++    protocols <- io $ getWMProtocols dpy w
++    wmprot <- atom_WM_PROTOCOLS
++    wmtf <- atom_WM_TAKE_FOCUS
++    currevt <- asks currentEvent
++
++    when (wmh_input hints) $ io $ do setInputFocus dpy w revertToPointerRoot 0
++    when (wmtf `elem` protocols) $
++      io $ allocaXEvent $ \ev -> do
++        setEventType ev clientMessage
++        setClientMessageEvent ev w wmprot 32 wmtf $ maybe currentTime event_time currevt
++        sendEvent dpy w False noEventMask ev
++        where event_time ev =
++                if (ev_event_type ev) `elem` timedEvents then
++                  ev_time ev
++                else
++                  currentTime
++              timedEvents = [ keyPress, keyRelease, buttonPress, buttonRelease, enterNotify, leaveNotify, selectionRequest ]
+hunk ./XMonad/Operations.hs 329
+-    io $ do setInputFocus dpy w revertToPointerRoot 0
+-            -- raiseWindow dpy w
++    io $ setInputFocus dpy w revertToPointerRoot 0
+)
+)
+hunk ./XMonad/Operations.hs 337
+-    when (wmh_input hints) $ io $ do setInputFocus dpy w revertToPointerRoot 0
++    when ((inputHintSet && wmh_input hints) || (not inputHintSet)) $
++      io $ do setInputFocus dpy w revertToPointerRoot 0
+)
+}
+[Resolve conflicts Geoff Reedy's window focus hack.
+Adam Vogt <vogt.adam@gmail.com>**20100222144512
+ Ignore-this: a71f3cb0507642e828f4bdfdc7ccd289
+] 
+<
+[implement the ICCCM WM_TAKE_FOCUS protocol
+Geoff Reedy <geoff@programmer-monk.net>**20090622051911
+ Ignore-this: 5b397417dfcf9014ac515a64484cc314
+] 
+[Give focus to windows that don't set the input hint
+Geoff Reedy <geoff@programmer-monk.net>**20091010231907
+ Ignore-this: 4ffb55dd97b59234703e0411c06b4901
+] 
+> {
+hunk ./XMonad/Main.hsc 124
+             , keyActions    = keys xmc xmc
+             , buttonActions = mouseBindings xmc xmc
+             , mouseFocused  = False
+-            , mousePosition = Nothing }
+-        st = XState
+-            { windowset     = initialWinset
+-            , mapped        = S.empty
+-            , waitingUnmap  = M.empty
+-            , dragging      = Nothing }
++            , mousePosition = Nothing
++            , currentEvent  = Nothing }
+ 
+         st = XState
+             { windowset       = initialWinset
+hunk ./XMonad/Operations.hs 329
+ 
+     -- If we ungrab buttons on the root window, we lose our mouse bindings.
+     whenX (not <$> isRoot w) $ setButtonGrab False w
+-    io $ do setInputFocus dpy w revertToPointerRoot 0
+-            -- raiseWindow dpy w
++
++    hints <- io $ getWMHints dpy w
++    protocols <- io $ getWMProtocols dpy w
++    wmprot <- atom_WM_PROTOCOLS
++    wmtf <- atom_WM_TAKE_FOCUS
++    currevt <- asks currentEvent
++    let inputHintSet = wmh_flags hints `testBit` inputHintBit
++
++    when ((inputHintSet && wmh_input hints) || (not inputHintSet)) $
++      io $ do setInputFocus dpy w revertToPointerRoot 0
++    when (wmtf `elem` protocols) $
++      io $ allocaXEvent $ \ev -> do
++        setEventType ev clientMessage
++        setClientMessageEvent ev w wmprot 32 wmtf $ maybe currentTime event_time currevt
++        sendEvent dpy w False noEventMask ev
++        where event_time ev =
++                if (ev_event_type ev) `elem` timedEvents then
++                  ev_time ev
++                else
++                  currentTime
++              timedEvents = [ keyPress, keyRelease, buttonPress, buttonRelease, enterNotify, leaveNotify, selectionRequest ]
+ 
+ ------------------------------------------------------------------------
+ -- Message handling
+}
+
+Context:
+
+[loc.hs: hlintify
+gwern0@gmail.com**20100213231537
+ Ignore-this: c447928ce68d0a968b55af3539c979fa
+] 
+[Various clean-ups suggested by HLint
+Spencer Janssen <spencerjanssen@gmail.com>**20100214025750
+ Ignore-this: ccaa6e774f2f8169e6083eddcffe31b6
+] 
+[Make the --replace docs consistent
+Spencer Janssen <spencerjanssen@gmail.com>**20100213002647
+ Ignore-this: c99526bce66ae1154fbf5713622f035d
+] 
+[Add --replace flag with documentation (issue 99).
+Adam Vogt <vogt.adam@gmail.com>**20091220183529
+ Ignore-this: c56000295b75c66309913e29e1671d88
+] 
+[Fix compile error when using base-3 (thanks bogner).
+Adam Vogt <vogt.adam@gmail.com>**20100211063938
+ Ignore-this: 60ba65613bc746e7e88f11a7e30b050f
+] 
+[Broadcast PropertyChange events (needed for layouts with decoration)
+Daniel Schoepe <daniel.schoepe@gmail.com>**20100113204017
+ Ignore-this: c8315f438fed66b12282c9bfe70a4d0b
+] 
+[Rename numlockMask to numberlockMask to help users of the template config.
+Adam Vogt <vogt.adam@gmail.com>**20100118162256
+ Ignore-this: 4050ed2d1ad373386c2e2b44145f07d9
+ 
+ Without the change, the errors are like:
+ 
+ >     [ unrelated error messages ]
+ >     No constructor has all these fields: `numlockMask',
+ >       `terminal', [every other field set]
+ 
+ With the change:
+ 
+ >     `numlockMask' is not a record selector
+ >     [ context where numlockMask is named ]
+] 
+[Correct warnings with ghc-6.12
+Adam Vogt <vogt.adam@gmail.com>**20100118181532
+ Ignore-this: a48ed095b72aedec9eeb88781ace66dc
+ 
+ Changes include:
+   - compatibility with base-4 or 3 (base-2 untested) by using
+     extensible-exceptions. This adds an additional dependency for users of
+     ghc<6.10)
+   - list all dependencies again when -ftesting (change in Cabal-1.8.0.2)
+   - remove unnecessary imports
+   - suppress -fwarn-unused-do-bind, with appropriate Cabal-1.8 workaround,
+     described here:
+     http://www.haskell.org/pipermail/xmonad/2010-January/009554.html
+] 
+[Add xfork: a forkProcess that works around process global state
+Spencer Janssen <spencerjanssen@gmail.com>**20091223061623
+ Ignore-this: 3f968260d8c1b6710c82566520c47c43
+] 
+[TAG 0.9.1
+Spencer Janssen <spencerjanssen@gmail.com>**20091216233643
+ Ignore-this: 856abdca8283155bbb8bdf003797ba34
+] 
+[extra-source-files for the new manpage
+Spencer Janssen <spencerjanssen@gmail.com>**20091216232005
+ Ignore-this: 919d964238198dd56d96a5052c2419c7
+] 
+[Bump to 0.9.1
+Spencer Janssen <spencerjanssen@gmail.com>**20091216231110
+ Ignore-this: 8a03850d758e1e4030d930cd8bf08ba9
+] 
+[Determine numlockMask automatically, fixes #120
+Spencer Janssen <spencerjanssen@gmail.com>**20091216012140
+ Ignore-this: d80c82dd0a23dc7a77fdc32fd2792130
+] 
+[Update for X11 1.5.0.0
+Spencer Janssen <spencerjanssen@gmail.com>**20091216011700
+ Ignore-this: 669c764c4c0ca516c8bdc1dfa35cd66
+] 
+[Safer X11 version dependency
+Spencer Janssen <spencerjanssen@gmail.com>**20091216010330
+ Ignore-this: 8297f7a6a65c5c97f83f860f642fc25
+] 
+[man/xmonad.hs: remove reference to deprecated 'dynamicLogDzen' function
+Brent Yorgey <byorgey@cis.upenn.edu>**20091126053908
+ Ignore-this: 7aeeac9791ffd3e6ac22bf158ea86536
+] 
+[A few tweaks to --verbose-version
+Spencer Janssen <spencerjanssen@gmail.com>**20091208040729
+ Ignore-this: cf3d6a904d23891829c10f4966974673
+] 
+[Generalize the type of (<+>). It can be used for keybindings too.
+Adam Vogt <vogt.adam@gmail.com>**20091205233611
+ Ignore-this: af15248be5e483d1a6e924f786fcc1c4
+] 
+[Main.hs +--verbose-version flag
+gwern0@gmail.com**20091128144840
+ Ignore-this: 61a081f33adb460ea459950a750dd93f
+ This resolves http://code.google.com/p/xmonad/issues/detail?id=320 by adding a
+ --verbose-version option yielding output like "xmonad 0.9 compiled by ghc 6.10 for linux/i386"
+] 
+[Swap the order that windows are mapped/unmapped.  Addresses #322
+Spencer Janssen <spencerjanssen@gmail.com>**20091119025440
+ Ignore-this: 22087204f1b84dae98a3cf2b7f116d3f
+] 
+[Add GPL warning to GenerateManpage
+Spencer Janssen <spencerjanssen@gmail.com>**20091111000106
+ Ignore-this: ea24691b8198976a4088a2708e0b4c94
+] 
+[Add a basic header to the html manpage output
+Adam Vogt <vogt.adam@gmail.com>**20091028033042
+ Ignore-this: 2641e0fb3179616075fa7549b57740f3
+] 
+[Use pandoc to convert a markdown manpage tranlation to html and man.
+Adam Vogt <vogt.adam@gmail.com>**20091028030639
+ Ignore-this: cdf7cdc8e44b21de8fc7725bde299792
+] 
+[Support for extensible state in contrib modules.
+Daniel Schoepe <daniel.schoepe@gmail.com>**20091106115050
+ Ignore-this: d04ee1989313ed5710c94f9d7fda3f2a
+] 
+[Set SIGPIPE to default in forked processes
+Spencer Janssen <spencerjanssen@gmail.com>**20091106223743
+ Ignore-this: f73943e4fe6c5f08967ddb82afad3eaa
+] 
+[TAG 0.9
+Spencer Janssen <spencerjanssen@gmail.com>**20091026004641
+ Ignore-this: 80347d432f3b606c8d722536d0d729aa
+] 
+Patch bundle hash:
+1d44b9c75f095044a2d86b0715a127f417b8a91f
