@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=4
+
 inherit qt4-r2
 
 DESCRIPTION="eGear, a download tool written in QT4"
