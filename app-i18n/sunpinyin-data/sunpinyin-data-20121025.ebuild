@@ -11,8 +11,8 @@ SLOT="0"
 KEYWORDS=""
 RESTRICT="primaryuri"
 
-LM_VERSION="20120212"
-DICT_VERSION="${PV}"
+DICT_VERSION="20120830"
+LM_VERSION="${PV}"
 SRC_URI="http://open-gram.googlecode.com/files/dict.utf8-${DICT_VERSION}.tar.bz2
 	http://open-gram.googlecode.com/files/lm_sc.t3g.arpa-${LM_VERSION}.tar.bz2"
 
