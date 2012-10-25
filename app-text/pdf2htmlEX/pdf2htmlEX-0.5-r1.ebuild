@@ -11,7 +11,7 @@ DESCRIPTION="Convert PDF to HTML without losing format. Text is preserved as
 much as possible."
 HOMEPAGE="https://github.com/coolwanglu/pdf2htmlEX"
 
-SRC_URI="https://github.com/coolwanglu/pdf2htmlEX/tarball/v${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/coolwanglu/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 
 #EGIT_REPO_URI="git://github.com/coolwanglu/pdf2htmlEX.git"
 
