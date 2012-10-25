@@ -22,9 +22,6 @@ KEYWORDS="~amd64 ~86"
 
 IUSE=""
 
-#want c++11
-LATESTCXX="|| ( >=sys-devel/gcc-4.7  >=sys-devel/gcc-4.6  )"
-
 COMMON_DEPEND="
 	>=media-libs/libpng-1.5
 	>=app-text/poppler-0.20[cxx,cairo,cjk]
@@ -32,12 +29,11 @@ COMMON_DEPEND="
 "
 
 
-DEPEND="$LATESTCXX
-	${COMMON_DEPEND}"
+DEPEND="${COMMON_DEPEND}"
 
 RDEPEND="${COMMON_DEPEND}"
 
 pkg_setup(){
-	einfo "You need to have gcc-4.7 and set gcc-4.7 active"
+	einfo "You need to have at least gcc-4.5"
 }
 
