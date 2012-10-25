@@ -20,18 +20,18 @@ SLOT="0"
 
 KEYWORDS="~amd64 ~86"
 
-IUSE=""
+IUSE="+autohint"
 
 COMMON_DEPEND="
 	>=media-libs/libpng-1.5
 	>=app-text/poppler-0.20[cxx,cairo,cjk]
-	>=media-gfx/fontforge-20110222-r1
-"
+	>=media-gfx/fontforge-20110222-r1"
 
 
 DEPEND="${COMMON_DEPEND}"
 
-RDEPEND="${COMMON_DEPEND}"
+RDEPEND="${COMMON_DEPEND}
+	autohint? ( media-gfx/ttfautohint )"
 
 pkg_setup(){
 	einfo "You need to have at least gcc-4.5"
