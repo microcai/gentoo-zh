@@ -15,8 +15,8 @@ TSLM3_TEXT_FILE = ${SLM_TARGET}.t3g.arpa
 TSLM3_ORIG_FILE = ${SLM_TARGET}.t3g.orig
 TSLM3_DIST_FILE = ${SLM_TARGET}.t3g
 
-PYTRIE3_FILE = pydict3_sc.bin
-PYTRIE3_LOG_FILE = pydict3_sc.log
+PYTRIE_FILE = pydict_sc.bin
+PYTRIE_LOG_FILE = pydict_sc.log
 
 SYSTEM_DATA_DIR = ${DESTDIR}/usr/share/sunpinyin
 
@@ -31,13 +31,12 @@ tslm3_dist: ${TSLM3_DIST_FILE}
 ${TSLM3_DIST_FILE}: ${TSLM3_ORIG_FILE}
 	tslmendian -e ${ENDIANNESS} -i $^ -o $@
 
-lexicon3: ${PYTRIE3_FILE}
-${PYTRIE3_FILE}: ${DICT_FILE} ${TSLM3_ORIG_FILE}
-	genpyt -e ${ENDIANNESS} -i ${DICT_FILE} \
-		-s ${TSLM3_ORIG_FILE} -l ${PYTRIE3_LOG_FILE} -o $@
+lexicon3: ${DICT_FILE} ${TSLM3_ORIG_FILE}
+	genpyt -e ${ENDIANNESS} -i ${DICT_FILE} -s ${TSLM3_ORIG_FILE} \
+		-l ${PYTRIE_LOG_FILE} -o ${PYTRIE_FILE}
 
-slm3_dist: ${TSLM3_DIST_FILE} ${PYTRIE3_FILE}
-slm3_install: ${TSLM3_DIST_FILE} ${PYTRIE3_FILE}
+slm3_dist: ${TSLM3_DIST_FILE} lexicon3
+slm3_install: ${TSLM3_DIST_FILE} ${PYTRIE_FILE}
 	install -d ${SYSTEM_DATA_DIR}
 	install -Dm644 $^ ${SYSTEM_DATA_DIR}
 
