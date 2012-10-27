@@ -25,3 +25,23 @@ DEPEND="${RDEPEND}
 src_install() {
 	emake DESTDIR="${D}" install || die
 }
+
+echo_patch(){
+cat << _EOF
+diff --git a/src/cilda.c b/src/cilda.c
+index 2db1155..1bdaf86 100644
+--- a/src/cilda.c
++++ b/src/cilda.c
+@@ -219,6 +219,7 @@ int main (int argc, char *argv[])
+     gboolean need_wizard = FALSE;
+     gchar *config_file;
+ 
++    chdir(g_get_home_dir());
+ 
+     config_file = get_config_file_name ();
+_EOF
+}
+
+src_prepare(){
+	echo_patch | patch -p1
+}
