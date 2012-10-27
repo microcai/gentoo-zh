@@ -22,15 +22,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Sample usage:"
-	elog "$ groff-utf8 -Tutf8 -mandoc find.vi.1 | less"
-	elog "$ groff-utf8 -Thtml -mandoc find.vi.1 > find.html; mozilla find.html"
-	elog
-	elog "You can also modify the TROFF/NROFF settings in your /etc/man.conf"
-	elog "to make it use groff-utf8 instead of groff."
-	elog "For example:"
-	elog "NROFF       /usr/bin/groff-utf8 -Tutf8 -c -mandoc"
-	elog
-	elog "The whole idea is only a workaround. The ideal solution is to merge"
-	elog "this package with groff, maybe sometime in the future. "
+	sed	's/^NROFF.*\/usr\/bin\/nroff -mandoc/NROFF\t\t\/usr\/bin\/groff-utf8 -Tutf8 -c -mandoc/' -i /etc/man.conf
+}
+
+pkg_postrm(){
+	sed	's/groff-utf8 -Tutf8 -c -mandoc/nroff -mandoc/g' -i /etc/man.conf
 }
