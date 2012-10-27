@@ -8,7 +8,7 @@ inherit vim-plugin vcs-snapshot
 DESCRIPTION="vim plugin: use clang for completing C/C++ code."
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=3526"
 SRC_URI="https://github.com/Rip-Rip/${PN}/tarball/v${PV} -> ${P}.tar.gz"
-LICENSE=""
+LICENSE="as-is"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
