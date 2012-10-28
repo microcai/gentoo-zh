@@ -49,6 +49,7 @@ sys-devel
 sys-fs
 sys-kernel
 sys-libs
+www-client
 www-plugins
 www-servers
 x11-libs
