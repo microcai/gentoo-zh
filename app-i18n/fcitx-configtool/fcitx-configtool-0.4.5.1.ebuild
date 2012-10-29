@@ -2,22 +2,20 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI=4
 
-inherit cmake-utils git-2
+inherit cmake-utils
 
-EGIT_REPO_URI="https://github.com/fcitx/fcitx-configtool.git"
-
-DESCRIPTION="A gtk GUI to edit fcitx settings"
-HOMEPAGE="https://fcitx.googlecode.com"
-SRC_URI=""
+DESCRIPTION="A GTK+ GUI to edit fcitx settings"
+HOMEPAGE="http://fcitx.googlecode.com/"
+SRC_URI="${HOMEPAGE}files/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-RESTRICT="mirror"
+KEYWORDS="~amd64 ~x86"
 IUSE="gtk +gtk3"
 REQUIRED_USE="|| ( gtk gtk3 )"
+RESTRICT="mirror"
 
 RDEPEND=">=app-i18n/fcitx-4.2.6
 	dev-libs/glib:2
