@@ -17,6 +17,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-RDEPEND=">=app-i18n/fcitx-4.2.5"
+RDEPEND=">=app-i18n/fcitx-4.2.6"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
