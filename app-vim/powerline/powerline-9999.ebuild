@@ -16,13 +16,7 @@ IUSE=""
 
 VIM_PLUGIN_HELPFILES="Powerline"
 
-src_unpack() {
-	git-2_src_unpack
-	cd "${S}"
-	rm -r .git
-	rm .gitignore
+src_prepare() {
+	rm -r .git*
 }
 
-#src_install() {
-#	vim-plugin_src_install
-#}
