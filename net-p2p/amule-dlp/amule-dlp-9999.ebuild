@@ -48,7 +48,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/amule-scanner-header.patch"
+	epatch "${FILESDIR}/${PN}-scanner-header.patch"
+	epatch "${FILESDIR}/${P}-flex-size_t.patch"
 }
 
 pkg_preinst() {
