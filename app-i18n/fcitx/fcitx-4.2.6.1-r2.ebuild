@@ -73,6 +73,9 @@ update_gtk_immodules() {
 	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-2.0" ] ; then
 		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0" > "${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
 	fi
+	( if use multilib && use 32bit ; then
+		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0-32" > ${EPREFIX}/etc/gtk-2.0/i686-pc-linux-gnu/gtk.immodules
+	fi )
 }
 
 update_gtk3_immodules() {
@@ -157,10 +160,13 @@ src_install() {
 		einstall -C lib
 		
 		cd  "frontend" || die
-
-		use gtk  && 	install gtk2/im-fcitx.so -d  "${D}/usr/lib32/gtk-2.0/2.10.0/immodules/"
-		use gtk3  && 	install gtk3/im-fcitx.so -d  "${D}/usr/lib32/gtk-2.0/2.10.0/immodules/"
-		use qt4  && 	install qt/libqtim-fcitx.so -d "${D}/usr/lib32/qt4/plugins/inputmethods/"
+		use gtk && 	dodir /usr/lib32/gtk-2.0/2.10.0/immodules/
+		use gtk3 &&	dodir /usr/lib32/gtk-3.0/3.0.0/immodules/
+		use qt4 && dodir /usr/lib32/qt4/plugins/inputmethods/
+		
+		use gtk  && 	install gtk2/im-fcitx.so  "${D}/usr/lib32/gtk-2.0/2.10.0/immodules/"
+		use gtk3  && 	install gtk3/im-fcitx.so   "${D}/usr/lib32/gtk-3.0/3.0.0/immodules/"
+		use qt4  && 	install qt/libqtim-fcitx.so  "${D}/usr/lib32/qt4/plugins/inputmethods/"
 
 		popd
 	fi
