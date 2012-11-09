@@ -13,7 +13,7 @@ SRC_URI="http://fcitx.googlecode.com/files/${P}_dict.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
-IUSE="+cairo debug gtk gtk3 icu introspection lua opencc +pango qt4 snooper static-libs +table test +xml"
+IUSE="+32bit +cairo debug gtk gtk3 icu introspection lua opencc +pango qt4 snooper static-libs +table test +xml"
 RESTRICT="mirror"
 
 RDEPEND="sys-apps/dbus
@@ -45,7 +45,16 @@ RDEPEND="sys-apps/dbus
 		app-text/iso-codes
 		dev-libs/libxml2
 		x11-libs/libxkbfile
-	)"
+	)
+	x11-libs/libxkbfile[multilib=]
+	multilib? (
+		32bit? (
+			gtk? (  app-emulation/emul-linux-x86-gtklibs )
+			gtk3? (  app-emulation/emul-linux-x86-gtklibs )
+			qt4? ( app-emulation/emul-linux-x86-qtlibs )
+		)
+	)
+	"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	app-text/enchant
@@ -90,10 +99,72 @@ src_configure() {
 		$(cmake-utils_use_enable table TABLE)
 		$(cmake-utils_use_enable test TEST)
 		$(cmake-utils_use_enable xml LIBXML2)"
-	cmake-utils_src_configure
+
+		cmake-utils_src_configure
+
+	( if use multilib && use 32bit ; then
+		mkdir -p "${WORKDIR}/${P}_build32"
+		cd "${WORKDIR}/${P}_build32"
+
+	
+		CFLAGS="$CFLAGS -m32"
+		CXXFLAGS="$CXXFLAGS -m32"
+		LDFLAGS="$LDFLAGS -m32 -L/usr/lib32/qt4"
+
+		local mycmakeargs=(
+			-DCMAKE_INSTALL_PREFIX=${D}/usr
+			-DLIB_INSTALL_DIR=${D}/usr/lib32
+			$(cmake-utils_use_enable gtk GTK2_IM_MODULE)
+			$(cmake-utils_use_enable gtk3 GTK3_IM_MODULE)
+			$(cmake-utils_use_enable qt4 QT_IM_MODULE)
+			$(cmake-utils_use_enable debug DEBUG)
+			$(cmake-utils_use_enable cairo CARIO)
+			$(cmake-utils_use_enable pango PANGO)
+			-DENABLE_GIR=OFF
+			-DENABLE_TABLE=OFF
+			-DENABLE_LIBXML2=OFF
+			-DENABLE_STATIC=OFF
+			-DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
+		)
+		
+		"${CMAKE_BINARY}" "${mycmakeargs[@]}" "${CMAKE_USE_DIR}" || die
+	fi )
+}
+
+src_compile(){
+	cmake-utils_src_compile
+
+	if use multilib && use 32bit ; then
+		cd ${WORKDIR}/${P}_build32/src/
+		make -C lib
+
+		use gtk  && 	emake -C frontend/gtk2
+		use gtk3  && 	emake -C frontend/gtk3
+		
+		if use qt4 ; then
+			make -C frontend/qt || ( 
+				cd frontend/qt && 	c++ -m32 -shared -Wl,-soname,libqtim-fcitx.so -o libqtim-fcitx.so  CMakeFiles/qtim-fcitx.dir/*.o   -Wl,-z,defs -L/usr/lib32/qt4 -lQtCore -lQtDBus -lQtGui ../../lib/fcitx-utils/libfcitx-utils.so.0.1  -lX11 ../../lib/fcitx-config/libfcitx-config.so.4
+			)
+		fi		
+	fi
 }
 
 src_install() {
+
+	if use multilib && use 32bit ; then
+		
+		pushd "${WORKDIR}/${P}_build32/src"
+		einstall -C lib
+		
+		cd  "frontend" || die
+
+		use gtk  && 	install gtk2/im-fcitx.so -d  "${D}/usr/lib32/gtk-2.0/2.10.0/immodules/"
+		use gtk3  && 	install gtk3/im-fcitx.so -d  "${D}/usr/lib32/gtk-2.0/2.10.0/immodules/"
+		use qt4  && 	install qt/libqtim-fcitx.so -d "${D}/usr/lib32/qt4/plugins/inputmethods/"
+
+		popd
+	fi
+
 	cmake-utils_src_install
 
 	dodoc AUTHORS ChangeLog README THANKS TODO || die
