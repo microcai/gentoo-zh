@@ -4,109 +4,115 @@
 
 EAPI="4"
 
-HOMEPAGE="https://fcitx.googlecode.com"
-DESCRIPTION="Free Chinese Input Toy of X - Input Method Server for X window system"
-LICENSE="GPL-2"
-SLOT="0"
+inherit multilib cmake-utils eutils ${FCITX_ECLASS}
 
-IUSE="+cairo debug +gtk +gtk3 introspection lua opencc +pango qt4 snooper static-libs table test"
+if [[ ${PV} == "9999" ]]; then
+	inherit git-2
+fi
 
 if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="git://github.com/fcitx/fcitx.git"
-	FCITX_SRC_URI="${HOMEPAGE}/files/pinyin.tar.gz
+	SRC_URI="${HOMEPAGE}/files/pinyin.tar.gz
 		table? ( ${HOMEPAGE}/files/table.tar.gz )"
-	FCITX_ECLASS="git-2"
 	KEYWORDS=""
 else
-	FCITX_SRC_URI="https://github.com/fcitx/fcitx/tarball/${PV} -> ${P}.tar.gz
-		${HOMEPAGE}/files/pinyin.tar.gz
-		table? ( ${HOMEPAGE}/files/table.tar.gz )"
+	SRC_URI="http://fcitx.googlecode.com/files/${P}_dict.tar.xz"
 	RESTRICT="mirror"
-	FCITX_ECLASS="vcs-snapshot"
 	KEYWORDS="~amd64 ~x86"
 fi
 
-inherit cmake-utils ${FCITX_ECLASS}
+DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
+HOMEPAGE="http://www.fcitx.org/"
 
-SRC_URI="${FCITX_SRC_URI}"
+LICENSE="GPL-2"
+SLOT="0"
+IUSE="+cairo debug gtk gtk3 icu introspection lua opencc +pango qt4 snooper static-libs +table test +xml"
 
-RDEPEND="cairo? ( x11-libs/cairo[X]
+RDEPEND="sys-apps/dbus
+	x11-libs/libX11
+	cairo? (
+		x11-libs/cairo[X]
 		pango? ( x11-libs/pango[X] )
-		!pango? ( media-libs/fontconfig ) )
-	sys-apps/dbus
-	gtk3? ( x11-libs/gtk+:3
+		!pango? ( media-libs/fontconfig )
+	)
+	gtk? (
+		x11-libs/gtk+:2
 		dev-libs/glib:2
-		dev-libs/dbus-glib )
-	gtk? ( x11-libs/gtk+:2
+		dev-libs/dbus-glib
+	)
+	gtk3? (
+		x11-libs/gtk+:3
 		dev-libs/glib:2
-		dev-libs/dbus-glib )
+		dev-libs/dbus-glib
+	)
+	icu? ( dev-libs/icu )
 	introspection? ( dev-libs/gobject-introspection )
-	opencc? ( app-i18n/opencc )
-	qt4? ( x11-libs/qt-gui:4
-		x11-libs/qt-dbus:4 )
 	lua? ( dev-lang/lua )
-	x11-libs/libX11"
+	opencc? ( app-i18n/opencc )
+	qt4? (
+		x11-libs/qt-gui:4
+		x11-libs/qt-dbus:4
+	)
+	xml? (
+		app-text/iso-codes
+		dev-libs/libxml2
+		x11-libs/libxkbfile
+	)"
 DEPEND="${RDEPEND}
-	app-arch/tar
 	app-arch/xz-utils
-	app-text/iso-codes
 	app-text/enchant
-	dev-libs/icu
 	dev-util/intltool
-	app-arch/xz-utils
-	x11-libs/libxkbfile"
+	virtual/pkgconfig
+	x11-proto/xproto"
 
 update_gtk_immodules() {
 	local GTK2_CONFDIR="/etc/gtk-2.0"
 	# bug #366889
-	if has_version '>=x11-libs/gtk+-2.22.1-r1:2' || has_multilib_profile; then
+	if has_version '>=x11-libs/gtk+-2.22.1-r1:2' || has_multilib_profile ; then
 		GTK2_CONFDIR="${GTK2_CONFDIR}/$(get_abi_CHOST)"
 	fi
 	mkdir -p "${EPREFIX}${GTK2_CONFDIR}"
-	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-2.0" ]; then
-		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0" > \
-		"${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
+
+	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-2.0" ] ; then
+		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0" > "${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
 	fi
 }
 
 update_gtk3_immodules() {
-	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-3.0" ]; then
+	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-3.0" ] ; then
 		"${EPREFIX}/usr/bin/gtk-query-immodules-3.0" --update-cache
 	fi
 }
 
-src_unpack() {
-	${FCITX_ECLASS}_src_unpack
-}
-
-src_prepare() {
-	cp ${DISTDIR}/pinyin.tar.gz ${S}/data || die
-	if use table; then
-		cp ${DISTDIR}/table.tar.gz ${S}/data/table || die
-	fi
-}
-
 src_configure() {
-	local mycmakeargs=(
-			$(cmake-utils_use_enable cairo CAIRO ) \
-			$(cmake-utils_use_enable debug DEBUG ) \
-			$(cmake-utils_use_enable gtk GTK2_IM_MODULE ) \
-			$(cmake-utils_use_enable gtk3 GTK3_IM_MODULE ) \
-			$(cmake-utils_use_enable introspection GIR ) \
-			$(cmake-utils_use_enable lua LUA ) \
-			$(cmake-utils_use_enable opencc OPENCC ) \
-			$(cmake-utils_use_enable pango PANGO ) \
-			$(cmake-utils_use_enable qt4 QT_IM_MODULE ) \
-			$(cmake-utils_use_enable static-libs STATIC ) \
-			$(cmake-utils_use_enable snooper SNOOPER ) \
-			$(cmake-utils_use_enable table TABLE ) \
-			$(cmake-utils_use_enable test TEST )
-	)
+	local mycmakeargs="
+		-DLIB_INSTALL_DIR=/usr/$(get_libdir)
+		$(cmake-utils_use_enable cairo CARIO)
+		$(cmake-utils_use_enable debug DEBUG)
+		$(cmake-utils_use_enable gtk GTK2_IM_MODULE)
+		$(cmake-utils_use_enable gtk3 GTK3_IM_MODULE)
+		$(cmake-utils_use_enable icu ICU)
+		$(cmake-utils_use_enable introspection GIR)
+		$(cmake-utils_use_enable lua LUA)
+		$(cmake-utils_use_enable opencc OPENCC)
+		$(cmake-utils_use_enable pango PANGO)
+		$(cmake-utils_use_enable qt4 QT_IM_MODULE)
+		$(cmake-utils_use_enable snooper SNOOPER)
+		$(cmake-utils_use_enable static-libs STATIC)
+		$(cmake-utils_use_enable table TABLE)
+		$(cmake-utils_use_enable test TEST)
+		$(cmake-utils_use_enable xml LIBXML2)"
 	cmake-utils_src_configure
 }
 
 src_install() {
 	cmake-utils_src_install
+
+	dodoc AUTHORS ChangeLog README THANKS TODO || die
+
+	rm -rf "${ED}"/usr/share/doc/${PN} || die
+	dodoc AUTHORS ChangeLog README THANKS TODO doc/pinyin.txt doc/cjkvinput.txt
+	dohtml doc/wb_fh.htm
 
 	dodir /etc/X11/xinit/xinitrc.d/
 
@@ -115,7 +121,7 @@ src_install() {
 	# fix firefox issue
 	echo "#! /bin/bash"  > "${XINITRCFCITX}"
 
-	# echo XIM 
+	# echo XIM
 	echo "export XMODIFIERS=\"@im=fcitx\""  >> "${XINITRCFCITX}"
 	echo "export XIM=fcitx" >> "${XINITRCFCITX}"
 	echo "export XIM_PROGRAM=fcitx" >> "${XINITRCFCITX}"
@@ -131,12 +137,18 @@ src_install() {
 }
 
 pkg_postinst() {
-	use gtk3 && update_gtk3_immodules
 	use gtk && update_gtk_immodules
+	use gtk3 && update_gtk3_immodules
+	elog
+	elog "You should export the following variables to use fcitx"
+	elog " export XMODIFIERS=\"@im=fcitx\""
+	elog " export XIM=fcitx"
+	elog " export XIM_PROGRAM=fcitx"
+	elog
 }
 
 pkg_postrm() {
-	use gtk3 && update_gtk3_immodules
 	use gtk && update_gtk_immodules
+	use gtk3 && update_gtk3_immodules
 }
 

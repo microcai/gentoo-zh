@@ -12,11 +12,12 @@ SRC_URI="http://fcitx.googlecode.com/files/${P}_dict.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
-IUSE="+cairo debug gtk gtk3 introspection lua opencc +pango qt4 snooper static-libs +table test"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+IUSE="+cairo debug gtk gtk3 icu introspection lua opencc +pango qt4 snooper static-libs +table test +xml"
 RESTRICT="mirror"
 
-RDEPEND="
+RDEPEND="sys-apps/dbus
+	x11-libs/libX11
 	cairo? (
 		x11-libs/cairo[X]
 		pango? ( x11-libs/pango[X] )
@@ -32,6 +33,7 @@ RDEPEND="
 		dev-libs/glib:2
 		dev-libs/dbus-glib
 	)
+	icu? ( dev-libs/icu )
 	introspection? ( dev-libs/gobject-introspection )
 	lua? ( dev-lang/lua )
 	opencc? ( app-i18n/opencc )
@@ -39,16 +41,16 @@ RDEPEND="
 		x11-libs/qt-gui:4
 		x11-libs/qt-dbus:4
 	)
-	sys-apps/dbus
-	x11-libs/libX11"
+	xml? (
+		app-text/iso-codes
+		dev-libs/libxml2
+		x11-libs/libxkbfile
+	)"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	app-text/enchant
-	app-text/iso-codes
-	dev-libs/icu
 	dev-util/intltool
 	virtual/pkgconfig
-	x11-libs/libxkbfile
 	x11-proto/xproto"
 
 update_gtk_immodules() {
@@ -77,6 +79,7 @@ src_configure() {
 		$(cmake-utils_use_enable debug DEBUG)
 		$(cmake-utils_use_enable gtk GTK2_IM_MODULE)
 		$(cmake-utils_use_enable gtk3 GTK3_IM_MODULE)
+		$(cmake-utils_use_enable icu ICU)
 		$(cmake-utils_use_enable introspection GIR)
 		$(cmake-utils_use_enable lua LUA)
 		$(cmake-utils_use_enable opencc OPENCC)
@@ -85,7 +88,8 @@ src_configure() {
 		$(cmake-utils_use_enable snooper SNOOPER)
 		$(cmake-utils_use_enable static-libs STATIC)
 		$(cmake-utils_use_enable table TABLE)
-		$(cmake-utils_use_enable test TEST)"
+		$(cmake-utils_use_enable test TEST)
+		$(cmake-utils_use_enable xml LIBXML2)"
 	cmake-utils_src_configure
 }
 
@@ -94,9 +98,9 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog README THANKS TODO || die
 
-	rm -rf "${ED}"/usr/share/fcitx/doc/ || die
-	dodoc doc/pinyin.txt doc/cjkvinput.txt || die
-	dohtml doc/wb_fh.htm || die
+	rm -rf "${ED}"/usr/share/doc/${PN} || die
+	dodoc AUTHORS ChangeLog README THANKS TODO doc/pinyin.txt doc/cjkvinput.txt
+	dohtml doc/wb_fh.htm
 
 	dodir /etc/X11/xinit/xinitrc.d/
 
