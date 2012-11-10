@@ -24,7 +24,7 @@ HOMEPAGE="https://github.com/goagent/goagent"
 SRC_URI="${GOAGENT_SRC_URI}"
 
 LICENSE="GPL-3"
-SLOT="2"
+SLOT="2.1"
 IUSE=""
 
 RDEPEND="dev-lang/python:2.7[ssl]
