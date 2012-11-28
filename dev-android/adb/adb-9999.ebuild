@@ -6,11 +6,11 @@ EAPI=4
 
 inherit toolchain-funcs git-2
 
-DESCRIPTION="fastboot is a util to control android bootloader"
+DESCRIPTION="android debug bridge"
 HOMEPAGE="android.googlesource.com"
 
-EGIT_ANDROID="http://android.googlesource.com/platform"
-EGIT_REPO_URI=""$EGIT_ANDROID"/system/core"
+EGIT_REPO_URI="http://android.googlesource.com/platform/system/core.git"
+EGIT_BRANCH="tools_r21"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -20,14 +20,12 @@ DEPEND="sys-libs/zlib"
 RDEPEND="${DEPEND}"
 
 src_compile(){
-	cd fastboot
-	git clone "$EGIT_ANDROID"/system/extras
-	git clone "$EGIT_ANDROID"/external/libselinux
+	cd adb
 	cp ${FILESDIR}/Makefile Makefile	
 	emake
 }
 
 src_install(){
-	cd fastboot
+	cd adb
 	einstall DESTDIR=${D}
 }
