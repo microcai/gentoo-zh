@@ -8,7 +8,8 @@ inherit eutils versionator
 
 MY_PN="FoxitReader"
 MY_P="${MY_PN}-${PV}"
-SRC_BASE="http://mirrors.foxitsoftware.com/pub/foxit/reader/desktop/linux"
+
+SRC_BASE="cdn04.foxitsoftware.com/pub/foxit/reader/desktop/linux/"
 DESCRIPTION="Foxit Reader for desktop Linux"
 HOMEPAGE="http://www.foxitsoftware.com/pdf/desklinux"
 SRC_URI="${SRC_BASE}/$(get_major_version).x/$(get_version_component_range 1-2)/enu/${MY_P}.tar.bz2"
