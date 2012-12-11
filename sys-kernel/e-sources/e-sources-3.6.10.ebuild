@@ -46,7 +46,7 @@ cjk_src="${cjk_url}/patch/611e97828af5c42355c870b9c7e4137e166b7220 -> vt-fix-255
 	${cjk_url}/patch/60b2ff855ccbcf6cbacd5e8beba0285712eb0929 -> vt-add-cjk-font-that-has-65536-chars.patch
 	${cjk_url}/patch/8ff71e69d24ffa02fb8d79b4c88e292a9b9303e3 -> vt-default-to-cjk-font.patch"
 
-reiser4_version="3.6.2"
+reiser4_version="3.6.4"
 reiser4_url="http://sourceforge.net/projects/reiser4"
 reiser4_src="${reiser4_url}/files/reiser4-for-linux-3.x/reiser4-for-${reiser4_version}.patch.gz"
 use reiser4 && REISER4_PATCHES="${DISTDIR}/reiser4-for-${reiser4_version}.patch.gz:1"
