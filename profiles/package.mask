@@ -27,3 +27,6 @@ net-im/instantbird
 # microcai <microcaicai@gmail.com> ( 16, Sep 2012 )
 # mask for more test
 =app-vim/eclim-2.2.1
+
+# if you want to use pacman in your gentoo not chroot environment, unmask it
+sys-apps/pacman
