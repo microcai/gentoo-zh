@@ -26,14 +26,17 @@ USE_ENABLE() {
 	case ${USE} in
 
 		ck)		ck_url="http://ck.kolivas.org/patches"
-				ck_src="${ck_url}/${KMSV}/${KMV}/${KMV}-ck${ck_version}/patch-${KMV}-ck${ck_version}.bz2"
+				ck_src="${ck_url}/${KMSV}/${KMV}/${KMV}-ck${ck_version}/patch-${KMV}-ck${ck_version}.lrz"
 				HOMEPAGE="${HOMEPAGE} ${ck_url}"
 				SRC_URI="
 					${SRC_URI}
 					ck?	( ${ck_src} )
 				"
-				CK_PATCHES="${DISTDIR}/patch-${KMV}-ck${ck_version}.bz2:1"
-				UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_PATCHES}"
+				CK_PATCH() {
+					lrunzip -dq "${DISTDIR}/patch-${KMV}-ck${ck_version}.lrz" \
+					-o "${S}/patch-${KMV}-ck${ck_version}"  > /dev/null 2>&1
+					epatch patch-${KMV}-ck${ck_version}
+				}
 			;;
 		bfq)		bfq_url="http://algo.ing.unimo.it/people/paolo/disk_sched"
 				bfq_src="${bfq_url}/patches/${bfq_kernel_version}-v${bfq_version}/0001-block-cgroups-kconfig-build-bits-for-BFQ-v${bfq_version}-${KMV}.patch ${bfq_url}/patches/${bfq_kernel_version}-v${bfq_version}/0002-block-introduce-the-BFQ-v${bfq_version}-I-O-sched-for-${KMV}.patch"
@@ -52,7 +55,7 @@ USE_ENABLE() {
 					${SRC_URI}
 					cjk?	( ${cjk_src} )
 				"
-				cjk_patch() {
+				CJK_PATCH() {
 					epatch "${DISTDIR}"/vt-fix-255-glyph-limit-prepare-for-CJK-font-support.patch
 					epatch "${DISTDIR}"/vt-diable-setfont-if-we-have-cjk-font-in-kernel.patch
 					epatch "${DISTDIR}"/vt-add-cjk-font-that-has-65536-chars.patch
@@ -117,10 +120,10 @@ src_unpack() {
 	sed -i -e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" Makefile
 
 	if [ "${SUPPORTED_USE/ck/}" != "$SUPPORTED_USE" ];
-		then use ck && sed -i -e 's/\(^EXTRAVERSION :=.*$\)/# \1/' "${S}/Makefile";
+		then use ck && CK_PATCH && sed -i -e 's/\(^EXTRAVERSION :=.*$\)/# \1/' "${S}/Makefile";
 	fi
 
 	if [ "${SUPPORTED_USE/cjk/}" != "$SUPPORTED_USE" ];
-		then use cjk && cjk_patch;
+		then use cjk && CJK_PATCH;
 	fi
 }
