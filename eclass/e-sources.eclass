@@ -3,15 +3,18 @@ inherit kernel-2 versionator
 
 RESTRICT="mirror"
 
+K_DEBLOB_AVAILABLE="1"
 K_NOSETEXTRAVERSION="yes"
 K_SECURITY_UNSUPPORTED="1"
 
 KMV="$(get_version_component_range 1-2)"
 KMSV="$(get_version_component_range 1).0"
 
-KV_FULL="${PVR}-e"
 SLOT="${KMV}"
-S="${WORKDIR}/linux-${KV_FULL}"
+RDEPEND=">=sys-devel/gcc-4.5"
+KEYWORDS="~amd64 ~x86"
+
+DESCRIPTION="Full sources for the Linux kernel including: ck, bfq and other patches"
 
 KNOWN_FEATURES="ck bfq cjktty uksm reiser4 fbcondecor"
 
@@ -32,7 +35,7 @@ USE_ENABLE() {
 					${SRC_URI}
 					ck?	( ${ck_src} )
 				"
-				CK_PATCHES="${DISTDIR}/patch-${KMV}-ck${ck_version}.bz2:1"
+				CK_PATCHES="${CK_PRE_PATCH} ${DISTDIR}/patch-${KMV}-ck${ck_version}.bz2:1 ${CK_POST_PATCH}"
 			;;
 		bfq)		bfq_url="http://algo.ing.unimo.it/people/paolo/disk_sched"
 				bfq_src="${bfq_url}/patches/${bfq_kernel_version}-v${bfq_version}/0001-block-cgroups-kconfig-build-bits-for-BFQ-v${bfq_version}-${KMV}.patch ${bfq_url}/patches/${bfq_kernel_version}-v${bfq_version}/0002-block-introduce-the-BFQ-v${bfq_version}-I-O-sched-for-${KMV}.patch"
@@ -55,7 +58,7 @@ USE_ENABLE() {
 				fi
 			;;
 		uksm)		uksm_url="http://kerneldedup.org"
-				uksm_sub_version="$(echo $uksm_kernel_version | cut -f 3 -d .)"
+				uksm_sub_version="${uksm_kernel_version/$KMV./}"
 				uksm_src="${uksm_url}/download/uksm/${uksm_version}/uksm-${uksm_version}-for-v${KMV}.ge.${uksm_sub_version}.patch"
 				HOMEPAGE="${HOMEPAGE} ${uksm_url}"
 				SRC_URI="
@@ -91,6 +94,8 @@ for I in ${SUPPORTED_USE}; do
 	USE_ENABLE "${I}"
 done
 
+IUSE="${IUSE} deblob"
+
 use ck && UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_PATCHES}"
 use bfq && UNIPATCH_LIST="${UNIPATCH_LIST} ${BFQ_PATCHES}"
 use cjktty && UNIPATCH_LIST="${UNIPATCH_LIST} ${CJKTTY_PATCHES}"
@@ -116,6 +121,6 @@ src_unpack() {
 	sed -i -e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" Makefile
 
 	if [ "${SUPPORTED_USE/ck/}" != "$SUPPORTED_USE" ];
-		then use ck && sed -i -e 's/\(^EXTRAVERSION :=.*$\)/# \1/' "${S}/Makefile";
+		then use ck && sed -i -e 's/\(^EXTRAVERSION :=.*$\)/# \1/' "Makefile";
 	fi
 }

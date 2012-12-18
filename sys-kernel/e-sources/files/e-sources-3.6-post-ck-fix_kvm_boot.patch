@@ -1,0 +1,11 @@
+--- kernel/sched/bfs.c.orig
++++ kernel/sched/bfs.c
+@@ -4655,8 +4655,6 @@
+ static void __cond_resched(void)
+ {
+ 	/* NOT a real fix but will make voluntary preempt work. 馬鹿な事 */
+-	if (unlikely(system_state != SYSTEM_RUNNING))
+-		return;
+ 
+ 	add_preempt_count(PREEMPT_ACTIVE);
+ 	schedule();
