@@ -11,11 +11,11 @@ uksm_version="0.1.2.1"
 fbcondecor_version="0.9.6"
 
 bfq_kernel_version="3.6.0"
-cjktty_kernel_version="3.6.0"
+cjktty_kernel_version="3.5.0"
 uksm_kernel_version="3.6.2"
 reiser4_kernel_version="3.6.4"
 
-SUPPORTED_USE="ck bfq cjktty uksm reiser4 fbcondecor"
+SUPPORTED_USE="ck bfq cjktty reiser4 uksm fbcondecor"
 
 CK_POST_PATCH="${FILESDIR}/${PN}-3.6-post-ck-fix_kvm_boot.patch"
 

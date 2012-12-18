@@ -1,0 +1,17 @@
+sys-kernel/e-sources Full sources for the Linux kernel including:
+
+	ck - Con Kolivas' high performance patchset
+	cjktty - CJK tty font support
+	bfq - Budget Fair Queueing Budget I/O Scheduler
+	imq - Intermediate Queueing Device
+	reiser4 - Reiser4 file system
+	uksm - ultra kernel samepage merging
+	fbcondecor - display pictures in the background of system consoles
+	..
+
+Kernel version:
+
+3.4.y : +ck +bfq -cjktty +imq -reiser4 +uksm +fbcondecor
+3.5.y : +ck +bfq +cjktty +imq +reiser4 +uksm +fbcondecor
+3.6.y : +ck +bfq +cjktty -imq +reiser4 +uksm +fbcondecor
+3.7.y : +ck +bfq +cjktty -imq -reiser4 -uksm -fbcondecor

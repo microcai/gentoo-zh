@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="Full sources for the Linux kernel including: ck, bfq and other patches"
 
-KNOWN_FEATURES="ck bfq cjktty uksm reiser4 fbcondecor"
+KNOWN_FEATURES="ck bfq imq cjktty uksm reiser4 fbcondecor"
 
 USE_ENABLE() {
 	local USE="${1/-/}"
@@ -56,6 +56,15 @@ USE_ENABLE() {
 				if [ "${SUPPORTED_USE/cjktty/}" != "$SUPPORTED_USE" ];
 					then CJKTTY_PATCHES="${DISTDIR}/cjktty-for-${cjktty_kernel_version}.patch.xz:1";
 				fi
+			;;
+		imq)		imq_url="http://www.linuximq.net"
+				imq_src="${imq_url}/patches/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
+				HOMEPAGE="${HOMEPAGE} ${imq_url}"
+				SRC_URI="
+					${SRC_URI}
+					imq?	( ${imq_src} )
+				"
+				IMQ_PATCHES="${DISTDIR}/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
 			;;
 		uksm)		uksm_url="http://kerneldedup.org"
 				uksm_sub_version="${uksm_kernel_version/$KMV./}"
@@ -99,6 +108,7 @@ IUSE="${IUSE} deblob"
 use ck && UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_PATCHES}"
 use bfq && UNIPATCH_LIST="${UNIPATCH_LIST} ${BFQ_PATCHES}"
 use cjktty && UNIPATCH_LIST="${UNIPATCH_LIST} ${CJKTTY_PATCHES}"
+use imq && UNIPATCH_LIST="${UNIPATCH_LIST} ${IMQ_PATCHES}"
 use uksm && UNIPATCH_LIST="${UNIPATCH_LIST} ${UKSM_PATCHES}"
 use reiser4 && UNIPATCH_LIST="${UNIPATCH_LIST} ${REISER4_PATCHES}"
 use fbcondecor && UNIPATCH_LIST="${UNIPATCH_LIST} ${FBCONDECOR_PATCHES}"

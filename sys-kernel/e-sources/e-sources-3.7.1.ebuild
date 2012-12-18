@@ -9,7 +9,7 @@ ck_version="1"
 bfq_version="5r1"
 
 bfq_kernel_version="3.7.0"
-cjktty_kernel_version="3.6.0"
+cjktty_kernel_version="3.5.0"
 
 SUPPORTED_USE="ck bfq cjktty"
 
