@@ -49,6 +49,7 @@ cdinstall - Copies files from the CD rather than asking the user to copy them, m
 cdparanoia - Enables cdparanoia (audio CD ripper) support
 cdr - Adds support for CD writer hardware
 chasen - Enable chasen (Japanese Morphological Analysis System) support
+chewing - Support for Chewing input method
 cjk - Adds support for Multi-byte character languages (Chinese, Japanese, Korean)
 clamav - Adds support for Clam AntiVirus software (usually with a plugin)
 cracklib - Support for cracklib strong password checking
