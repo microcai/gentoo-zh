@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/ebuildteam/media-fonts/hkscs-ming/hkscs-ming-1.0_pre20040423.ebuild,v 1.4 2004/12/21 10:27:57 scsi Exp $
+# $Header: $
 
 inherit rpm
 

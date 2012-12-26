@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.21-r1.ebuild,v 1.2 2010/09/01 21:21:56 phosphan Exp $
+# $Header: $
 
 EAPI="1"
 

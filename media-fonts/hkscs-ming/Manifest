@@ -1,4 +1,1 @@
-DIST setup.bin 17105645
-MD5 b66bf4237a488e7a47d627d47d5ceb7f files/digest-hkscs-ming-1.0_pre20040423 56
-RMD160 a8fe565b84d69a140d45d1f66b7803bbdaf28f9a files/digest-hkscs-ming-1.0_pre20040423 56
-SHA256 f8d75be6f5fdcea785519bbca7e4e7ef71f6c74016417bf19cfac8224eb2f5b1 files/digest-hkscs-ming-1.0_pre20040423 56
+DIST setup.bin 2353 SHA256 ddea4d9cbe122acbcfa323fc87e7d4c7f9dca5075d0dbb2ba987841db69d022f

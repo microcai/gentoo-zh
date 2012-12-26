@@ -35,4 +35,3 @@ RDEPEND="${RDEPEND}
 src_unpack() {
 	${FCITX_TABLE_EXTRA_ECLASS}_src_unpack
 }
-

@@ -38,4 +38,3 @@ src_compile() {
 src_install() {
 	escons --install-sandbox="${D}" install
 }
-

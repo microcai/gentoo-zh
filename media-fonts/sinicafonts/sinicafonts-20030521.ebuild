@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/ebuildteam/media-fonts/sinicafonts/sinicafonts-20030521.ebuild,v 1.4 2006/05/27 11:45:49 palatis Exp $
+# $Header: $
 
 RESTRICT="nostrip"
 

@@ -22,4 +22,3 @@ RDEPEND="
 	x11-libs/libnotify
 	"
 DEPEND="${RDEPEND}"
-

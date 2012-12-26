@@ -17,4 +17,3 @@ IUSE=""
 DEPEND="media-libs/MonkVG"
 
 RDEPEND="${DEPEND}"
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.7.4.ebuild,v 1.1 2011/09/08 09:20:08 wired Exp $
+# $Header: $
 
 EAPI="3"
 inherit confutils qt4-build

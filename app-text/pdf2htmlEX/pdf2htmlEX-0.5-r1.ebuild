@@ -1,7 +1,7 @@
-
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+
 
 EAPI=4
 
@@ -36,4 +36,3 @@ RDEPEND="${COMMON_DEPEND}
 pkg_setup(){
 	einfo "You need to have at least gcc-4.5"
 }
-

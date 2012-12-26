@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/ebuildteam/app-portage/portage-cdb/portage-cdb-0.0.1.ebuild,v 1.3 2006/06/14 11:54:35 scsi Exp $
+# $Header: $
 
 DESCRIPTION="increase portage's speed after syncing, and for calculating dependencies. This method uses a database, rather than a bunch of flat files to store its metadata."
 HOMEPAGE="http://gentoo-wiki.com/TIP_speed_up_portage_with_cdb"

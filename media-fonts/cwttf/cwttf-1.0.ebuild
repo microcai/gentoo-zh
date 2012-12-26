@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/ebuildteam/media-fonts/cwttf/cwttf-1.0.ebuild,v 1.2 2006/05/27 11:40:24 palatis Exp $
+# $Header: $
 
 inherit font-got
 
@@ -41,5 +41,3 @@ src_unpack()
 		die 1
 	}
 }
-
-

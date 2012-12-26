@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r13.ebuild,v 1.3 2012/07/24 15:49:35 vapier Exp $
+# $Header: $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -138,4 +138,3 @@ src_install() {
 pkg_postinst() {
 	elog "copy /usr/lib/grub/grub.efi to EFI partition and use efibootmgr to set boot entry for grub"
 }
-

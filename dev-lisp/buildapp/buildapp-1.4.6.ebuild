@@ -1,4 +1,4 @@
-# Copyright 2008-2012 Funtoo Technologies
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -30,4 +30,3 @@ src_install() {
 	dodoc README
 	dohtml doc/{LICENSE,index.html,style.css}
 }
-

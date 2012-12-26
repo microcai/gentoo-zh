@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/ebuildteam/app-dicts/dictd-zh/dictd-zh-1.6.ebuild,v 1.1 2006/10/02 16:01:27 hydonsingore Exp $
+# $Header: $
 
 MY_P=${P/td/t}
 DESCRIPTION="Four traditional Chinese dictionaries for dict"

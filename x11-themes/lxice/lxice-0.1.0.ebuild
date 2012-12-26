@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/ebuildteam/x11-themes/lxice/lxice-0.1.0.ebuild,v 1.1 2006/11/11 08:12:47 palatis Exp $
+# $Header: $
 
 DESCRIPTION="LXDE theme for IceWM"
 HOMEPAGE="http://lxde.sf.net/"

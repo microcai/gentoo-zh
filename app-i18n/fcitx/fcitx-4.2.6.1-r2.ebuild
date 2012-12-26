@@ -216,4 +216,3 @@ pkg_postrm() {
 	use gtk && update_gtk_immodules
 	use gtk3 && update_gtk3_immodules
 }
-

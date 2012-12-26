@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -14,4 +14,3 @@ KEYWORDS="x86"
 SRC_URI="http://ftp.inlsd.org/${PN}/${P}.tar.bz2"
 
 DOCS="AUTHORS ChangeLog* NEWS README"
-

@@ -1,2 +1,2 @@
-DIST BitDefender-Antivirus-Scanner-7.6-4.linux-gcc4x.amd64.rpm.run 42811409 RMD160 9a2299bde9f2004169842b7b743ca39a09709a9a SHA1 cb23dad5d0a15bf1cefcb2dee407824fad0a2de4 SHA256 bb0f2895ac2c82451e64a877bd4e7d8587c72b6f628dc053cebdb7eaa3f765e7
-DIST BitDefender-Antivirus-Scanner-7.6-4.linux-gcc4x.i586.rpm.run 42002446 RMD160 31fe7c5aad7b7c6b64356422292e9a1987dd399d SHA1 e3c47f326b0efaf67522fc4abe97c0c25fc98574 SHA256 4b1e700696842f53874f9abd8a88bc4cc88bb2b457f6427aa49db7a6f69d30e5
+DIST BitDefender-Antivirus-Scanner-7.6-4.linux-gcc4x.amd64.rpm.run 42811409 SHA256 bb0f2895ac2c82451e64a877bd4e7d8587c72b6f628dc053cebdb7eaa3f765e7
+DIST BitDefender-Antivirus-Scanner-7.6-4.linux-gcc4x.i586.rpm.run 42002446 SHA256 4b1e700696842f53874f9abd8a88bc4cc88bb2b457f6427aa49db7a6f69d30e5

@@ -30,4 +30,3 @@ DOCS=( ChangeLog README TODO )
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-{iconv,arm,common,testsuite,utils,llvm}.patch
 }
-

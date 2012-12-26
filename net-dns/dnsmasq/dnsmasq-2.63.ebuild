@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.60.ebuild,v 1.1 2012/03/07 21:59:18 chutzpah Exp $
+# $Header: $
 
 EAPI=4
 
@@ -129,4 +129,3 @@ pkg_postinst(){
 		einfo "when you enable it in the ${PN} configure file"
 	fi
 }
-

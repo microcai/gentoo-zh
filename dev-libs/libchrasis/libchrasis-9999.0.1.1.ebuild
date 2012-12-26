@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/ebuildteam/dev-libs/libchewing-svn/libchewing-svn-0.2.6.9999.ebuild,v 1.1 2005/04/19 00:08:13 scsi Exp $
+# $Header: $
 
 inherit flag-o-matic eutils subversion
 

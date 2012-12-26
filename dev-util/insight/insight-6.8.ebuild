@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.8.ebuild,v 1.1 2008/07/12 12:21:10 tester Exp $
+# $Header: $
 
 inherit eutils flag-o-matic
 

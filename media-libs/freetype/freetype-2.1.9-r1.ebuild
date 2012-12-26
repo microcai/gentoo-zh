@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/ebuildteam/media-libs/freetype/freetype-2.1.9-r1.ebuild,v 1.6 2006/07/13 02:44:24 scsi Exp $
+# $Header: $
 
 inherit eutils flag-o-matic gnuconfig libtool
 

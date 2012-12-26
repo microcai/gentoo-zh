@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-1.0.2-r1.ebuild,v 1.4 2012/05/22 06:41:16 tetromino Exp $
+# $Header: $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -81,4 +81,3 @@ src_prepare(){
 
 	eautoreconf
 }
-

@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -27,4 +27,3 @@ S="${WORKDIR}/${PN}_${PV}_src"
 src_install(){
 	./install.sh -p ${D}
 }
-

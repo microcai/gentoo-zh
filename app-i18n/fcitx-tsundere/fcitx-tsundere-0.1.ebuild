@@ -1,7 +1,8 @@
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
-EAPI=4
-
+EAPI="4"
 inherit cmake-utils
 DESCRIPTION="Fcitx Tsundere Addon"
 HOMEPAGE="https://github.com/felixonmars/fcitx-tsundere"
@@ -15,4 +16,3 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}
 >=app-i18n/fcitx-4.2.0"
-

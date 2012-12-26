@@ -1,6 +1,6 @@
-EAPI=3
-WANT_AUTOCONF="2.5"
-inherit git-2 autotools
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
 DESCRIPTION="jzmq"
 HOMEPAGE="http://www.zeromq.org/bindings:java"

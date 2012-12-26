@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -13,7 +13,7 @@ IUSE="kde"
 
 DEPEND=""
 RDEPEND="net-misc/curl
-	kde4? ( kde-base/konqueror kde-base/kdialog )"
+	kde? ( kde-base/konqueror kde-base/kdialog )"
 
 S=$WORKDIR/imageshack_upload
 

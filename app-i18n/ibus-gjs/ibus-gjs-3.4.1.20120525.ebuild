@@ -21,4 +21,3 @@ RDEPEND=">=app-i18n/ibus-1.4.99
 DEPEND="${RDEPEND}
 	>=dev-libs/gjs-1.32.0
 	>=dev-util/intltool-0.50.0"
-

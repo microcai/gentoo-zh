@@ -1,7 +1,7 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/ebuildteam/app-i18n/scim-chewing-svn/scim-chewing-svn-0.2.0.9999.ebuild,v 1.1 2005/04/19 00:08:13 scsi Exp $
-EAPI=3
+# $Header: $
+
 
 inherit eutils subversion
 
@@ -44,4 +44,3 @@ pkg_postinst() {
 	einfo "export XMODIFIERS=@im=SCIM"
 	einfo
 }
-

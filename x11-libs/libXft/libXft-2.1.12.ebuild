@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/ebuildteam/x11-libs/libXft/libXft-2.1.12.ebuild,v 1.2 2007/02/09 04:19:30 scsi Exp $
+# $Header: $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"

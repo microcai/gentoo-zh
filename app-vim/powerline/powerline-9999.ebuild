@@ -1,6 +1,6 @@
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-
-EAPI=4
+# $Header: $
 
 #VIM_PLUGIN_VIM_VERSION="7.0"
 inherit git-2 vim-plugin
@@ -19,4 +19,3 @@ VIM_PLUGIN_HELPFILES="Powerline"
 src_prepare() {
 	rm -r .git*
 }
-

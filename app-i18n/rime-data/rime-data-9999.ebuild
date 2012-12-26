@@ -17,4 +17,3 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="app-i18n/librime"
-

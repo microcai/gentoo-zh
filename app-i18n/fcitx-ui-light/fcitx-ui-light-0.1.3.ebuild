@@ -19,4 +19,3 @@ RESTRICT="mirror"
 RDEPEND=">=app-i18n/fcitx-4.2.0"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
-

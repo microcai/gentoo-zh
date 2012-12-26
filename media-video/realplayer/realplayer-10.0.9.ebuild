@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}
 			X? ( app-emulation/emul-linux-x86-gtklibs )
 			app-emulation/emul-linux-x86-compat
 		)"
-RESTRICT="strip mirror test fetch"
+RESTRICT="strip mirror test"
 
 QA_TEXTRELS="opt/RealPlayer/codecs/raac.so
 	opt/RealPlayer/codecs/cvt1.so

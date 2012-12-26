@@ -1,7 +1,7 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
-# Nonofficial ebuild by Ycarus. For new version look here : http://gentoo.zugaina.org/
+
 
 inherit linux-info toolchain-funcs eutils
 

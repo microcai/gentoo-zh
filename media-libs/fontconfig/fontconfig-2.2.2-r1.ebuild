@@ -1,13 +1,12 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/ebuildteam/media-libs/fontconfig/fontconfig-2.2.2-r1.ebuild,v 1.1 2004/06/23 15:48:45 palatis Exp $
+# $Header: $
 
 inherit eutils
 
 DESCRIPTION="A library for configuring and customizing font access"
 HOMEPAGE="http://freedesktop.org/Software/fontconfig"
-#SRC_URI="http://pdx.freedesktop.org/software/fontconfig/releases/${P}.tar.gz"
-SRC_URI="http://freedesktop.org/~fontconfig/release/${P}.tar.gz"
+SRC_URI="http://fontconfig.org/release/${P}.tar.gz"
 
 LICENSE="fontconfig"
 SLOT="1.0"

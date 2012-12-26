@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/ebuildteam/app-vim/icomplete/icomplete-0.4.ebuild,v 1.2 2007/03/20 03:39:20 scsi Exp $
+# $Header: $
 
 inherit vim-plugin
 

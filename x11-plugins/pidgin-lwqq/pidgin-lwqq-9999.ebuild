@@ -31,4 +31,3 @@ src_prepare(){
 		sed "s/\/lib\/purple-/\/lib64\/purple-/g" -i CMakeLists.txt
 	fi
 }
-

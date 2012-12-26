@@ -106,4 +106,3 @@ pkg_prerm(){
 	/opt/Yozosoft/Yozo_Office/Jre/bin/java -client -jar /opt/Yozosoft/Yozo_Office/Mimelnk/fileAssociate.jar -u
 	rm /opt/Yozosoft/Yozo_Office/System/ -rf
 }
-

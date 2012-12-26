@@ -20,4 +20,3 @@ RDEPEND=">=app-i18n/fcitx-4.1.1
 	>=app-i18n/libgooglepinyin-0.1.1"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
-

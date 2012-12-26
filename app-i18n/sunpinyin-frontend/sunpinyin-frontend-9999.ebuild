@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -79,4 +79,3 @@ pkg_postinst() {
 pkg_postrm() {
 	use ibus && python_mod_cleanup /usr/share/ibus-sunpinyin/setup
 }
-

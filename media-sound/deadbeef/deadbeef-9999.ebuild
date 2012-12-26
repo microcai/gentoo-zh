@@ -1,7 +1,7 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
-EGIT_REPO_URI="git://deadbeef.git.sourceforge.net/gitroot/deadbeef/deadbeef"
 
 inherit autotools git
 
@@ -35,4 +35,3 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
 }
-

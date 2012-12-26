@@ -271,5 +271,3 @@ src_install_pr()
 	cp -a ${_prid}/database/* ${D}${_libdir}/cnijlib || die
 	cp -a ppd/canon${_pr}.ppd ${D}${_ppddir} || die
 }
-
-

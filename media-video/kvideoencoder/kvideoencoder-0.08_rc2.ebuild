@@ -1,7 +1,7 @@
-# ebuild written by Rene Gass <kde-package@gmx.de>
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-#
-# ebuild v 1.02
+# $Header: $
+
 EAPI=3
 inherit kde4-base versionator
 
@@ -40,4 +40,3 @@ src_install() {
 	make DESTDIR="${D}" install || die "install failed"
 	rm -rf "${D}"/etc # no need for the file /etc/kvideoencoder if we install to /usr
 }
-

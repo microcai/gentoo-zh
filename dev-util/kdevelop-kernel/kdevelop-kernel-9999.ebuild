@@ -21,5 +21,3 @@ IUSE=""
 
 DEPEND=">=dev-util/kdevelop-4.3.90"
 RDEPEND="${DEPEND}"
-
-
