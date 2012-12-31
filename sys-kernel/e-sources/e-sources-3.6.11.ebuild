@@ -7,12 +7,12 @@ ETYPE="sources"
 
 ck_version="1"
 bfq_version="5r1"
-uksm_version="0.1.2.1"
+uksm_version="0.1.2.2"
 fbcondecor_version="0.9.6"
 
 bfq_kernel_version="3.6.0"
 cjktty_kernel_version="3.5.0"
-uksm_kernel_version="3.6.2"
+uksm_kernel_version="3.6.11"
 reiser4_kernel_version="3.6.4"
 
 SUPPORTED_USE="ck bfq cjktty reiser4 uksm fbcondecor"

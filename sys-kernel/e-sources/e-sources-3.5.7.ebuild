@@ -7,7 +7,7 @@ ETYPE="sources"
 
 ck_version="1"
 bfq_version="5r1"
-uksm_version="0.1.2.1"
+uksm_version="0.1.2.2"
 fbcondecor_version="0.9.6"
 
 bfq_kernel_version="3.5.0"
