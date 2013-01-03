@@ -26,6 +26,9 @@ S=${WORKDIR}/${PN}-${MY_VER}
 src_prepare() {
 	rm -rf debian || die
 	rm locale/*.po* 
+
+	# add patch for mplayer binary name problem
+	epatch ${FILESDIR}/deepin-media-player-backend.patch
 }
 
 src_install() {
