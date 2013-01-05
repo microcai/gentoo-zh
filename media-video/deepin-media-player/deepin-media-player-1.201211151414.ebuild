@@ -44,6 +44,7 @@ src_install() {
 	dosym /usr/share/${PN}/src/main.py /usr/bin/${PN}
 
 	doicon -s 128 ${FILESDIR}/${PN}.png
+	dosym /usr/share/icons/hicolor/128x128/apps/${PN}.png /usr/share/pixmaps/${PN}.png
 
 	insinto "/usr/share/applications"
 	doins ${FILESDIR}/${PN}.desktop
