@@ -43,7 +43,7 @@ src_install() {
 	dosym /usr/share/${PN}/src/${PN} /usr/bin/${PN}
 
 	insinto "/usr/share/applications"
-	doins ${FILEiSDIR}/${PN}.desktop
+	doins ${FILESDIR}/${PN}.desktop
 }
 
 pkg_postinst() {
