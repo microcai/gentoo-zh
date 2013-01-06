@@ -14,11 +14,12 @@ HOMEPAGE="https://github.com/linuxdeepin/deepin-media-player"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/deepin-ui-1.201209101328
 	sci-libs/scipy
+	dev-python/chardet
 	dev-python/formencode
 	media-video/mplayer2"
 DEPEND="${RDEPEND}"
