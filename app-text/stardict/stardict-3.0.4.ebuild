@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="3"
+EAPI="4"
 
 inherit gnome2 eutils autotools
 
@@ -35,7 +35,7 @@ DEP="gnome? ( >=gnome-base/libbonobo-2.2.0
 	)
 	>=sys-libs/zlib-1.1.4
 	>=x11-libs/gtk+-2.12
-	>=dev-libs/glib-2.16"
+	>=dev-libs/glib-2.18"
 
 RDEPEND="${DEP}
 	espeak? ( >=app-accessibility/espeak-1.29 )
@@ -46,11 +46,11 @@ DEPEND="${DEP}
 	virtual/pkgconfig
 	dev-libs/libsigc++"
 
-
 src_prepare(){
-	# gcc-4.6.1 complain about missing stdio.h header, err: NULL not defined
-	epatch "${FILESDIR}/$P-stdio.patch"
+	epatch "${FILESDIR}/stardict-3.0.4-templatefix.patch"
+}
 
+src_configure(){
 	G2CONF="$(use_enable gnome gnome-support)
 		$(use_enable esd esd-support)
 		$(use_enable spell)
@@ -63,6 +63,7 @@ src_prepare(){
 		--disable-espeak
 		--disable-advertisement
 		--disable-updateinfo"
+	gnome2_src_configure
 }
 
 pkg_postinst() {
