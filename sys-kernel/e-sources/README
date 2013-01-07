@@ -12,4 +12,4 @@ sys-kernel/e-sources : full sources for the Linux kernel including:
 3.4.y : ck bfq imq uksm fbcondecor
 3.5.y (EOL) : ck bfq cjktty imq reiser4 uksm fbcondecor
 3.6.y (EOL) : ck bfq cjktty reiser4 uksm fbcondecor
-3.7.y : ck bfq imq uksm cjktty
+3.7.y : ck bfq imq uksm cjktty reiser4 uksm

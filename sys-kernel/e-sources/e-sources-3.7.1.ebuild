@@ -13,7 +13,8 @@ bfq_kernel_version="3.7.0"
 cjktty_kernel_version="3.5.0"
 imq_kernel_version="3.7.0"
 uksm_kernel_version="3.7.1"
+reiser4_kernel_version="3.7.1"
 
-SUPPORTED_USE="ck bfq imq cjktty uksm"
+SUPPORTED_USE="ck bfq imq cjktty reiser4 uksm"
 
 inherit e-sources
