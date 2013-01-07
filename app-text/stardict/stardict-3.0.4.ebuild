@@ -58,8 +58,8 @@ src_configure(){
 		$(use_enable gpe gpe-support)
 		$(use_enable qqwry)
 		$(use_enable espeak)
+		$(use_enable festival)
 		--disable-tools
-		--disable-festival
 		--disable-advertisement
 		--disable-updateinfo"
 	if use gnome ; then
