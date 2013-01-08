@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="3"
+EAPI="4"
 
 inherit gnome2 eutils autotools
 
@@ -10,7 +10,7 @@ inherit gnome2 eutils autotools
 #       their indexes seem to be in a different format. So we'll keep them
 #       seperate for now.
 
-IUSE="festival espeak gnome gucharmap spell esd gpe qqwry"
+IUSE="festival espeak gnome gucharmap spell gpe qqwry"
 DESCRIPTION="A GNOME2 international dictionary supporting fuzzy and glob style matching"
 HOMEPAGE="http://code.google.com/p/stardict-3/"
 SRC_URI="http://stardict-3.googlecode.com/files/${P}.tar.bz2"
@@ -27,7 +27,6 @@ DEP="gnome? ( >=gnome-base/libbonobo-2.2.0
 		>=gnome-base/gconf-2.6
 		>=gnome-base/orbit-2.6
 		app-text/scrollkeeper )
-	esd? ( media-sound/esound )
 	spell? ( app-text/enchant )
 	gucharmap? ( >=gnome-extra/gucharmap-2.22.1 )
 	gpe? (
@@ -35,7 +34,7 @@ DEP="gnome? ( >=gnome-base/libbonobo-2.2.0
 	)
 	>=sys-libs/zlib-1.1.4
 	>=x11-libs/gtk+-2.12
-	>=dev-libs/glib-2.16"
+	>=dev-libs/glib-2.18"
 
 RDEPEND="${DEP}
 	espeak? ( >=app-accessibility/espeak-1.29 )
@@ -46,23 +45,29 @@ DEPEND="${DEP}
 	virtual/pkgconfig
 	dev-libs/libsigc++"
 
-
 src_prepare(){
-	# gcc-4.6.1 complain about missing stdio.h header, err: NULL not defined
-	epatch "${FILESDIR}/$P-stdio.patch"
+	epatch "${FILESDIR}/stardict-3.0.4-templatefix.patch"
+}
 
-	G2CONF="$(use_enable gnome gnome-support)
-		$(use_enable esd esd-support)
+src_configure(){
+	G2CONF="--disable-esd-support
+		$(use_enable gnome gnome-support)
 		$(use_enable spell)
 		$(use_enable gucharmap)
 		$(use_enable espeak espeak)
 		$(use_enable gpe gpe-support)
 		$(use_enable qqwry)
+		$(use_enable espeak)
+		$(use_enable festival)
 		--disable-tools
-		--disable-festival
-		--disable-espeak
 		--disable-advertisement
 		--disable-updateinfo"
+	if use gnome ; then
+		G2CONF+="--enable-scrollkeeper"
+	else
+		G2CONF+="--disable-scrollkeeper"				
+	fi
+	gnome2_src_configure
 }
 
 pkg_postinst() {
