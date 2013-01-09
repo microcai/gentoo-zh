@@ -13,7 +13,7 @@ DESCRIPTION="Snapshot tools for linux deepin."
 HOMEPAGE="https://github.com/linuxdeepin/deepin-screenshot"
 
 LICENSE="LGPL-3"
-SLOT="1"
+SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
