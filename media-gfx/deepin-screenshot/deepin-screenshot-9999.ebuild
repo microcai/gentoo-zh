@@ -26,6 +26,7 @@ src_prepare() {
 	sh updateTranslate.sh || die "failed to update Translate"
 	rm -rf po || die
 	rm -rf debian || die
+	sed -i 's|\.\/screenshot\.py|python2\ \.\/screenshot\.py|g' src/${PN}
 }
 
 src_install() {

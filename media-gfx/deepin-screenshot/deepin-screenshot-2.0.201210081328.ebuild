@@ -28,6 +28,7 @@ S=${WORKDIR}
 src_prepare() {
 	rm -rf debian || die
 	rm locale/*.po* 
+	sed -i 's|\.\/screenshot\.py|python2\ \.\/screenshot\.py|g' src/${PN}
 }
 
 src_install() {
