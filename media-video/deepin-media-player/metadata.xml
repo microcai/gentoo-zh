@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>video</herd>
+	<maintainer>
+		<email>atenzd@gmail.com</email>
+		<name>Aten Zhang</name>
+	</maintainer>
+	<longdescription lang="en">
+		New multimedia player with brilliant and tweakful UI. 
+		PyGtk and Deepin-ui Mplayer2 front-end, with features likes smplayer, but has a brilliant and tweakful UI.
+	</longdescription>
+</pkgmetadata>
+

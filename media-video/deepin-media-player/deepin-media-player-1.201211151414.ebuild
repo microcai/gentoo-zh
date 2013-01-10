@@ -42,7 +42,10 @@ src_install() {
 	doins -r  ${S}/src ${S}/app_theme ${S}/skin
 	fperms 0755 -R /usr/share/${PN}/src/
 
-	dosym /usr/share/${PN}/src/main.py /usr/bin/${PN}
+	#dosym /usr/share/${PN}/src/main.py /usr/bin/${PN}
+	echo "#!/bin/sh" > ${PN}
+	echo "python2 /usr/share/${PN}/src/main.py" >> ${PN}
+	dobin ${PN}
 
 	doicon -s 128 ${FILESDIR}/${PN}.png
 	dosym /usr/share/icons/hicolor/128x128/apps/${PN}.png /usr/share/pixmaps/${PN}.png
