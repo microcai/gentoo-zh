@@ -3,9 +3,9 @@
 # $Header: $
 
 EAPI=4
-PYTHON_DEPEND="2:2.7"
+PYTHON_DEPEND="2"
 
-inherit git-2
+inherit python git-2
 
 EGIT_REPO_URI="git://github.com/iambus/xunlei-lixian.git"
 
@@ -17,15 +17,28 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_prepare() {
-	sed -i -e 's#/usr/bin/env python#/usr/bin/python2#' lixian_{cli,hash,batch}.py || die "sed failed"
+	python_convert_shebangs -r $(python_get_version) .
 }
 
 src_install() {
-	insinto "/usr/share/${PN}"
-	doins -r *.py
-	fperms 0755 /usr/share/${PN}/lixian_{cli,hash,batch}.py
-	dosym /usr/share/${PN}/lixian_cli.py /usr/bin/xunlei-lixian-cli
-	dosym /usr/share/${PN}/lixian_hash.py /usr/bin/xunlei-lixian-hash
-	dosym /usr/share/${PN}/lixian_batch.py /usr/bin/xunlei-lixian-batch
+	exeinto "$(python_get_sitedir)"/${PN}
+	doexe *.py || die
+
+	dosym "$(python_get_sitedir)"/${PN}/lixian_cli.py /usr/bin/${PN}-cli || die
+	dosym "$(python_get_sitedir)"/${PN}/lixian_hash.py /usr/bin/${PN}-hash || die
+	dosym "$(python_get_sitedir)"/${PN}/lixian_batch.py /usr/bin/${PN}-batch || die
+}
+
+pkg_postinst() {
+	python_mod_optimize ${PN}
+}
+
+pkg_postrm() {
+	python_mod_cleanup ${PN}
 }
