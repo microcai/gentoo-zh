@@ -14,7 +14,7 @@ HOMEPAGE="https://github.com/linuxdeepin/deepin-music-player"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="+hotkey"
 
 RDEPEND=">=x11-libs/deepin-ui-1.201209101028
 	dev-python/gst-python
@@ -26,7 +26,8 @@ RDEPEND=">=x11-libs/deepin-ui-1.201209101028
 	media-libs/mutagen
 	dev-python/chardet
 	dev-python/dbus-python
-	dev-python/pyquery"
+	dev-python/pyquery
+	hotkey? ( media-plugins/python-mmkeys )"
 DEPEND="${RDEPEND}"
 #S=${WORKDIR}/${PN}-$(get_version_component_range \
 #	1)+git$(get_version_component_range 2)
@@ -46,7 +47,10 @@ src_install() {
 	doins -r  ${S}/src ${S}/app_theme ${S}/skin ${S}/wizard
 	fperms 0755 -R /usr/share/${PN}/src/
 
-	dosym /usr/share/${PN}/src/main.py /usr/bin/${PN}
+	#dosym /usr/share/${PN}/src/main.py /usr/bin/${PN}
+	echo "#!/bin/sh" > ${PN}
+	echo "python2 /usr/share/${PN}/src/main.py" >> ${PN}
+	dobin ${PN}
 
 #	mkdir -p /usr/share/icons/hicolor/128x128/apps
 	doicon -s 128 ${FILESDIR}/${PN}.png

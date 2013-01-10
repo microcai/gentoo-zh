@@ -13,7 +13,7 @@ DESCRIPTION="Snapshot tools for linux deepin."
 HOMEPAGE="https://github.com/linuxdeepin/deepin-screenshot"
 
 LICENSE="LGPL-3"
-SLOT="1"
+SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
@@ -28,6 +28,7 @@ S=${WORKDIR}
 src_prepare() {
 	rm -rf debian || die
 	rm locale/*.po* 
+	sed -i 's|\.\/screenshot\.py|python2\ \.\/screenshot\.py|g' src/${PN}
 }
 
 src_install() {
@@ -53,3 +54,4 @@ pkg_postinst() {
 pkg_postrm() {
 	fdo-mime_desktop_database_update
 }
+
