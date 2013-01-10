@@ -37,6 +37,6 @@
 	*)	Every ebuild change should not produce compile error before commit
 
 	*)	Every ebuild should be tested in every ARCH that it KEYWORDS for.
-		if not, don't clain that you support that keyword.
+		if not, don't claim that you support that keyword.
 
 
