@@ -28,18 +28,8 @@ src_prepare() {
 }
 
 src_install() {
-	exeinto "$(python_get_sitedir)"/${PN}
-	doexe ${PN} || die
-	dosym $(python_get_sitedir)/${PN}/${PN} /usr/bin/${PN} || die
+	dobin you-get
 
-	insinto $(python_get_sitedir)/${PN}
-	doins -r you_get/* || die
-}
-
-pkg_postinst() {
-	python_mod_optimize ${PN}
-}
-
-pkg_postrm() {
-	python_mod_cleanup ${PN}
+	insinto $(python_get_sitedir)
+	doins -r you_get || die
 }
