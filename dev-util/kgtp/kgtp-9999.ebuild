@@ -5,7 +5,7 @@
 EAPI=4
 
 ESVN_REPO_URI="http://kgtp.googlecode.com/svn/trunk"
-inherit linux-info linux-mod subversion
+inherit linux-mod subversion
 DESCRIPTION="A realtime and lightweight Linux debugger and tracer."
 HOMEPAGE="http://kgtp.googlecode.com"
 
@@ -17,19 +17,17 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-CONFIG_CHECK="MODULES KPROBES DEBUG_FS DEBUG_INFO"
+pkg_setup() {
+	BUILD_TARGETS="default"
+	BUILD_PARAMS="KERNELSRC=${KERNEL_DIR}"
+	CONFIG_CHECK="MODULES KPROBES DEBUG_FS DEBUG_INFO"
 
-src_install() {
-	insinto "/lib/modules/${KV_FULL}/kernel/drivers/kgtp/"
-	doins gtp.ko 
-	dobin getframe getmod getmod.py getgtprsp.pl add-ons/*
-	dodoc howto.txt howtocn.txt quickstart.txt
+	linux-mod_pkg_setup
+	MODULE_NAMES="gtp(extra:${S}:${S})"
 }
 
-pkg_postinst() {
-	if [ "${ROOT}" = "/" ]
-	then
-		depmod -a
-	fi
-	einfo "If you have problems loading the module, please check the \"dmesg\" output."
+src_install() {
+	linux-mod_src_install || die "failed to install modules"
+	dobin getframe getmod putgtprsp getmod.py getgtprsp.pl add-ons/*
+	dodoc howto.txt howtocn.txt quickstart.txt
 }
