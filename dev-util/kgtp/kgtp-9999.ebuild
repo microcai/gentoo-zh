@@ -5,7 +5,7 @@
 EAPI=4
 
 ESVN_REPO_URI="http://kgtp.googlecode.com/svn/trunk"
-inherit linux-info subversion
+inherit linux-info linux-mod subversion
 DESCRIPTION="A realtime and lightweight Linux debugger and tracer."
 HOMEPAGE="http://kgtp.googlecode.com"
 
@@ -16,6 +16,8 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}"
+
+CONFIG_CHECK="MODULES KPROBES DEBUG_FS DEBUG_INFO"
 
 src_install() {
 	insinto "/lib/modules/${KV_FULL}/kernel/drivers/kgtp/"
