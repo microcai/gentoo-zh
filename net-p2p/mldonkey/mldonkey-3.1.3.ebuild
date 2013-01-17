@@ -53,7 +53,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-gcc.patch"
+	epatch "${FILESDIR}/${P}-gcc.patch"
+	epatch "${FILESDIR}/${P}-png.patch"
 	epatch_user
 	cd "${S}"/config
 	eautoconf
