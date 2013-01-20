@@ -16,7 +16,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="libtorrent"
 
-DEPEND=">=dev-libs/boost-1.49"
+DEPEND=">=dev-libs/boost-1.49[threads,static-libs]
+		libtorrent? ( dev-libs/openssl )
+		media-libs/libsdl"
 RDEPEND="${DEPEND}"
 
 
