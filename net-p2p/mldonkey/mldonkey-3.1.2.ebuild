@@ -1,15 +1,16 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI="2"
 WANT_AUTOCONF=2.5
 
-inherit flag-o-matic eutils autotools toolchain-funcs
+inherit user flag-o-matic eutils autotools toolchain-funcs
 
 IUSE="bittorrent doc fasttrack gd gnutella gtk guionly magic +ocamlopt"
 
-DESCRIPTION="MLDonkey is a multi-network P2P application written in Ocaml, coming with its own Gtk GUI, web and telnet interface."
+DESCRIPTION="MLDonkey is a multi-network P2P application written in Ocaml,
+coming with multi interface."
 HOMEPAGE="http://mldonkey.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
@@ -53,7 +54,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-gcc.patch"
+	epatch "${FILESDIR}/${PN}-3.1.3-gcc.patch"
 	epatch_user
 	cd "${S}"/config
 	eautoconf
