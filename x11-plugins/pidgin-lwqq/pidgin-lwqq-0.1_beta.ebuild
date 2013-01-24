@@ -10,7 +10,8 @@ DESCRIPTION="a pidgin plugin based on lwqq, a excellent safe useful library for
 webqq protocol"
 HOMEPAGE="https://github.com/xiehuc/pidgin-lwqq"
 SRC_URI="https://github.com/xiehuc/${PN}/archive/0.1-b.tar.gz
-			-> pidgin-lwqq-0.1_beta.tar.gz"
+			-> ${P}.tar.gz"
+S="${WORKDIR}/${PN}-0.1-b"
 
 LICENSE="GPL"
 SLOT="0"
