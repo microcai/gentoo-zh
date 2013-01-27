@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit cmake-utils
+inherit cmake-utils gnome2-utils
 
 DESCRIPTION="unikey support for fcitx."
 HOMEPAGE="https://github.com/fcitx/fcitx-unikey"
@@ -31,4 +31,12 @@ src_configure() {
 	)
 
 	cmake-utils_src_configure
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
