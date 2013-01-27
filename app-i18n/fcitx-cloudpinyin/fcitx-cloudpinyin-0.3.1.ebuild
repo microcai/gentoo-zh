@@ -19,4 +19,8 @@ RESTRICT="mirror"
 
 RDEPEND=">=app-i18n/fcitx-4.2.7
 	net-misc/curl"
-DEPEND="dev-util/intltool"
+DEPEND="${RDEPEND}
+	app-arch/xz-utils
+	dev-util/intltool
+	sys-devel/gettext
+	virtual/pkgconfig"
