@@ -6,8 +6,8 @@ EAPI=5
 
 inherit cmake-utils
 
-DESCRIPTION="Add fbterm support to fcitx"
-HOMEPAGE="https://github.com/fcitx/fcitx-fbterm"
+DESCRIPTION="m17n support for fcitx."
+HOMEPAGE="https://github.com/fcitx/fcitx-m17n"
 SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
 
 LICENSE="GPL-2"
@@ -16,8 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-RDEPEND=">=app-i18n/fcitx-4.2.6
-	app-i18n/fbterm"
+RDEPEND=">=app-i18n/fcitx-4.2.7
+	dev-libs/m17n-lib"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
+	app-arch/xz-utils
 	sys-devel/gettext"

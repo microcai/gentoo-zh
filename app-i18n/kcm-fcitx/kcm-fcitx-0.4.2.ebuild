@@ -4,20 +4,20 @@
 
 EAPI=5
 
-inherit cmake-utils
+inherit eutils kde4-base
 
-DESCRIPTION="Add fbterm support to fcitx"
-HOMEPAGE="https://github.com/fcitx/fcitx-fbterm"
+DESCRIPTION="KDE Config Module for Fcitx"
+HOMEPAGE="https://github.com/fcitx/kcm-fcitx"
 SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-RDEPEND=">=app-i18n/fcitx-4.2.6
-	app-i18n/fbterm"
+RDEPEND=">=app-i18n/fcitx-4.2.7"
 DEPEND="${RDEPEND}
+	app-arch/xz-utils
 	virtual/pkgconfig
 	sys-devel/gettext"

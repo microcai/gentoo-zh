@@ -6,8 +6,9 @@ EAPI=5
 
 inherit cmake-utils
 
-DESCRIPTION="Add fbterm support to fcitx"
-HOMEPAGE="https://github.com/fcitx/fcitx-fbterm"
+DESCRIPTION="A standalone module for fcitx that uses web API to provide better
+pinyin result."
+HOMEPAGE="https://github.com/fcitx/fcitx-cloudpinyin"
 SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
 
 LICENSE="GPL-2"
@@ -16,8 +17,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-RDEPEND=">=app-i18n/fcitx-4.2.6
-	app-i18n/fbterm"
+RDEPEND=">=app-i18n/fcitx-4.2.7
+	net-misc/curl"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	sys-devel/gettext"
+	app-arch/xz-utils
+	dev-util/intltool
+	sys-devel/gettext
+	virtual/pkgconfig"
