@@ -51,8 +51,8 @@ RDEPEND="
 	)
 	multilib? (
 		32bit? (
-			gtk? (  app-emulation/emul-linux-x86-gtklibs )
-			gtk3? (  app-emulation/emul-linux-x86-gtklibs )
+			gtk? ( app-emulation/emul-linux-x86-gtklibs )
+			gtk3? ( app-emulation/emul-linux-x86-gtklibs )
 			qt4? ( app-emulation/emul-linux-x86-qtlibs )
 		)
 	)"
