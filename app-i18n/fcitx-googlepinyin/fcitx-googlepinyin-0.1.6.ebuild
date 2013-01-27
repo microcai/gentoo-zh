@@ -2,12 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
-inherit cmake-utils
+inherit cmake-utils gnome2-utils
 
 DESCRIPTION="Fcitx Wrapper for googlepinyin."
-HOMEPAGE="http://code.google.com/p/fcitx"
+HOMEPAGE="https://github.com/fcitx/fcitx-googlepinyin"
 SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
 
 LICENSE="GPL-3"
@@ -16,7 +16,18 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-RDEPEND=">=app-i18n/fcitx-4.2.1
+RDEPEND=">=app-i18n/fcitx-4.2.0
 	>=app-i18n/libgooglepinyin-0.1.2"
 DEPEND="${RDEPEND}
-	dev-util/intltool"
+	app-arch/xz-utils
+	dev-util/intltool
+	sys-devel/gettext
+	virtual/libiconv"
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
+}
