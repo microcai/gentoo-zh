@@ -2,21 +2,22 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI=5
 
 inherit cmake-utils
 
-DESCRIPTION="fcitx-fbterm, add fbterm support to fcitx"
-HOMEPAGE="http://fcitx.googlecode.com"
-SRC_URI="${HOMEPAGE}/files/${P}.tar.xz"
-RESTRICT="mirror"
+DESCRIPTION="Add fbterm support to fcitx"
+HOMEPAGE="https://github.com/fcitx/fcitx-fbterm"
+SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-
 IUSE=""
-DEPEND="app-i18n/fcitx
-	sys-devel/gettext"
-RDEPEND="${DEPEND}
+RESTRICT="mirror"
+
+RDEPEND=">=app-i18n/fcitx-4.2.6
 	app-i18n/fbterm"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig
+	sys-devel/gettext"
