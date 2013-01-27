@@ -18,5 +18,6 @@ RESTRICT="mirror"
 
 RDEPEND=">=app-i18n/fcitx-4.2.7
 	dev-libs/m17n-lib"
-DEPEND="app-arch/xz-utils
+DEPEND="${RDEPEND}
+	app-arch/xz-utils
 	sys-devel/gettext"
