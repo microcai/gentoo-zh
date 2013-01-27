@@ -7,7 +7,7 @@ EAPI=5
 inherit cmake-utils
 
 DESCRIPTION="A gtk based configure tool for fcitx."
-HOMEPAGE="http://github.com/fcitx/fcitx-configtool"
+HOMEPAGE="https://github.com/fcitx/fcitx-configtool"
 SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
 
 LICENSE="GPL-2"
