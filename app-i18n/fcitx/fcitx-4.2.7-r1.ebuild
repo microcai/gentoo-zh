@@ -94,6 +94,11 @@ update_gtk2_immodules() {
 	fi )
 }
 
+src_prepare() {
+	# patch fcitx to let fcitx-sunpinyin to build with gcc 4.6
+	epatch "${FILESDIR}/${P}-gcc46-compatible.patch"
+}
+
 src_configure() {
 	local mycmakeargs=(
 		-DLIB_INSTALL_DIR=/usr/$(get_libdir)
@@ -222,11 +227,28 @@ pkg_postinst() {
 	fdo-mime_mime_database_update
 	use gtk && update_gtk2_immodules
 	use gtk3 && gnome2_query_immodules_gtk3
+
 	elog
 	elog "You should at least install one of app-i18n/kcm-fcitx or"
 	elog "app-i18n/fcitx-configtool to have a GUI config tool for fcitx."
 	elog "Otherwise, you will have to manually edit the conf file."
 	elog
+
+	if use autostart; then
+		elog "You have enabled the autostart USE flag."
+		elog "It works if you are running a XDG compatible desktop, such as"
+		elog "Gnome, KDE, LXDE, Xfce, etc."
+		elog "If you ~/.xinitrc, you have to put fcitx to your ~/.xinitrc to"
+		elog "start it."
+		elog
+	fi
+
+	if ! use gtk || ! use gtk3 || !use qt4; then
+		ewarn "You haven't built all im modules."
+		ewarn "It's highly recommended to use im module instead of XIM,"
+		ewarn "in order to avoid unresolvable problem."
+		ewarn
+	fi
 }
 
 pkg_postrm() {

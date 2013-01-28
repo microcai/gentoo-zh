@@ -17,11 +17,17 @@ IUSE=""
 RESTRICT="mirror"
 
 RDEPEND=">=app-i18n/fcitx-4.2.7
-	>app-i18n/sunpinyin-2.0.3"
+	>app-i18n/sunpinyin-2.0.3
+	app-i18n/sunpinyin-data"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	dev-util/intltool
 	sys-devel/gettext"
+
+src_prepare() {
+	# can use gcc 4.6 to build
+	epatch "${FILESDIR}/${P}-gcc46-compatible.patch"
+}
 
 pkg_postinst() {
 	gnome2_icon_cache_update
