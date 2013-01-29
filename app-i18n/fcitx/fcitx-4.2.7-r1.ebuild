@@ -169,15 +169,17 @@ src_compile(){
 		use gtk3  && 	emake -C frontend/gtk3
 
 		if use qt4 ; then
-			make -C frontend/qt || (
-				cd frontend/qt && 	c++ -m32 -shared -Wl,-soname,libqtim-fcitx.so -o libqtim-fcitx.so  CMakeFiles/qtim-fcitx.dir/*.o   -Wl,-z,defs -L/usr/lib32/qt4 -lQtCore -lQtDBus -lQtGui ../../lib/fcitx-utils/libfcitx-utils.so.0.1  -lX11 ../../lib/fcitx-config/libfcitx-config.so.4
-			)
+			sed -i "s/lib64/lib32/g" \
+				frontend/qt/CMakeFiles/qtim-fcitx.dir/link.txt \
+				lib/fcitx-qt/CMakeFiles/fcitx-qt.dir/link.txt \
+ 				lib/fcitx-qt/test/CMakeFiles/testqconnection.dir/link.txt \
+				lib/fcitx-qt/cmake_install.cmake
+			emake -C frontend/qt 
 		fi
 	fi
 }
 
 src_install() {
-	cmake-utils_src_install
 
 	if use multilib && use 32bit ; then
 
@@ -195,6 +197,8 @@ src_install() {
 
 		popd
 	fi
+	rm -rf "${D}/usr/include"
+	cmake-utils_src_install
 
 	# Remove the doc install by fcitx, We will install it manually.
 	rm -rf "${ED}"/usr/share/doc/${PN} || die
