@@ -17,7 +17,7 @@ uksm_kernel_version="3.4.24"
 
 SUPPORTED_USE="ck bfq imq uksm fbcondecor"
 
-CK_PRE_PATCH="${FILESDIR}/${PN}-3.4-3.5-pre-ck-fix_task_group.patch"
-CK_POST_PATCH="${FILESDIR}/${PN}-3.4-3.5-post-ck-fix_task_group.patch ${FILESDIR}/${PN}-3.4-post-ck-fix_calc_load_idle.patch"
+CK_PRE_PATCH="${FILESDIR}/${PN}-3.4-pre-ck-fix_task_group.patch"
+CK_POST_PATCH="${FILESDIR}/${PN}-3.4-post-ck-fix_task_group.patch ${FILESDIR}/${PN}-3.4-post-ck-fix_calc_load_idle.patch"
 
 inherit e-sources
