@@ -79,19 +79,11 @@ HTML_DOCS=(
 )
 
 update_gtk2_immodules() {
-	local GTK2_CONFDIR="/etc/gtk-2.0"
-	# bug #366889
-	if has_version '>=x11-libs/gtk+-2.22.1-r1:2' || has_multilib_profile ; then
-		GTK2_CONFDIR="${GTK2_CONFDIR}/$(get_abi_CHOST)"
-	fi
-	mkdir -p "${EPREFIX}${GTK2_CONFDIR}"
+	gnome2_query_immodules_gtk2
 
-	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-2.0" ] ; then
-		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0" > "${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
-	fi
-	( if use multilib && use 32bit ; then
+	if use multilib && use 32bit ; then
 		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0-32" > ${EPREFIX}/etc/gtk-2.0/i686-pc-linux-gnu/gtk.immodules
-	fi )
+	fi
 }
 
 src_prepare() {
@@ -134,27 +126,38 @@ src_configure() {
 		mkdir -p "${WORKDIR}/${P}_build32"
 		cd "${WORKDIR}/${P}_build32"
 
-		CFLAGS="$CFLAGS -m32"
-		CXXFLAGS="$CXXFLAGS -m32"
-		LDFLAGS="$LDFLAGS -m32 -L/usr/lib32/qt4"
+		local CFLAGS="$CFLAGS -m32"
+		local CXXFLAGS="$CXXFLAGS -m32"
+		local LDFLAGS="$LDFLAGS -m32 -L/usr/lib32/qt4"
 
 		local mycmakeargs=(
-			-DCMAKE_INSTALL_PREFIX=${D}/usr
-			-DLIB_INSTALL_DIR=${D}/usr/lib32
-			$(cmake-utils_use_enable gtk GTK2_IM_MODULE)
-			$(cmake-utils_use_enable gtk3 GTK3_IM_MODULE)
-			$(cmake-utils_use_enable qt4 QT_IM_MODULE)
-			$(cmake-utils_use_enable debug DEBUG)
-			$(cmake-utils_use_enable cairo CARIO)
-			$(cmake-utils_use_enable pango PANGO)
+			-DCMAKE_INSTALL_PREFIX=/usr
+			-DLIB_INSTALL_DIR=/usr/lib32
+			-DENABLE_OPENCC=OFF
+			-DENABLE_ENCHANT=OFF
+			-DENABLE_PRESAGE=OFF
+			-DENABLE_CARIO=OFF
+			-DENABLE_PANGO=OFF
+			-DENABLE_ICU=OFF
 			-DENABLE_GIR=OFF
 			-DENABLE_TABLE=OFF
 			-DENABLE_LIBXML2=OFF
 			-DENABLE_STATIC=OFF
+			$(cmake-utils_use_enable gtk GTK2_IM_MODULE)
+			$(cmake-utils_use_enable gtk3 GTK3_IM_MODULE)
+			$(cmake-utils_use_enable qt4 QT)
+			$(cmake-utils_use_enable qt4 QT_IM_MODULE)
+			$(cmake-utils_use_enable debug DEBUG)
 			-DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
 		)
 
 		"${CMAKE_BINARY}" "${mycmakeargs[@]}" "${CMAKE_USE_DIR}" || die
+
+		sed -i "s|/usr/lib64/qt4|/usr/lib32/qt4|g" \
+			`grep -rl /usr/lib64/qt4 ./src` || die
+		sed -i "s|lib64|lib32|g" \
+			src/frontend/gtk2/cmake_install.cmake \
+			src/frontend/gtk3/cmake_install.cmake || die
 	fi
 }
 
@@ -163,41 +166,27 @@ src_compile(){
 
 	if use multilib && use 32bit ; then
 		cd ${WORKDIR}/${P}_build32/src/
-		make -C lib
+		emake -C lib || die
 
-		use gtk  && 	emake -C frontend/gtk2
-		use gtk3  && 	emake -C frontend/gtk3
-
-		if use qt4 ; then
-			sed -i "s/lib64/lib32/g" \
-				frontend/qt/CMakeFiles/qtim-fcitx.dir/link.txt \
-				lib/fcitx-qt/CMakeFiles/fcitx-qt.dir/link.txt \
- 				lib/fcitx-qt/test/CMakeFiles/testqconnection.dir/link.txt \
-				lib/fcitx-qt/cmake_install.cmake
-			emake -C frontend/qt 
-		fi
+		use gtk && emake -C frontend/gtk2 || die
+		use gtk3 && emake -C frontend/gtk3 || die
+		use qt4 && emake -C frontend/qt || die
 	fi
 }
 
 src_install() {
-
 	if use multilib && use 32bit ; then
-
 		pushd "${WORKDIR}/${P}_build32/src"
-		einstall -C lib
+		emake DESTDIR="${D}" -C lib install || die
 
-		cd  "frontend" || die
-		use gtk && 	dodir /usr/lib32/gtk-2.0/2.10.0/immodules/
-		use gtk3 &&	dodir /usr/lib32/gtk-3.0/3.0.0/immodules/
-		use qt4 && dodir /usr/lib32/qt4/plugins/inputmethods/
-
-		use gtk  && 	install gtk2/im-fcitx.so  "${D}/usr/lib32/gtk-2.0/2.10.0/immodules/"
-		use gtk3  && 	install gtk3/im-fcitx.so   "${D}/usr/lib32/gtk-3.0/3.0.0/immodules/"
-		use qt4  && 	install qt/libqtim-fcitx.so  "${D}/usr/lib32/qt4/plugins/inputmethods/"
+		use gtk  && emake DESTDIR="${D}" -C frontend/gtk2 install || die
+		use gtk3  && emake DESTDIR="${D}" -C frontend/gtk3 install || die
+		use qt4  && emake DESTDIR="${D}" -C frontend/qt install || die
 
 		popd
 	fi
-	rm -rf "${D}/usr/include"
+	rm -rf "${D}/usr/include" "${D}/usr/lib32/pkgconfig"
+
 	cmake-utils_src_install
 
 	# Remove the doc install by fcitx, We will install it manually.
