@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 COMMON_DEPEND="app-i18n/ibus
-	>=app-i18n/librime-0.9.4
+	>=app-i18n/librime-0.9.7
 	x11-libs/libnotify"
 DEPEND="${COMMON_DEPEND}
 	dev-util/cmake"
