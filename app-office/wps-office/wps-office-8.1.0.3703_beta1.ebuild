@@ -8,24 +8,38 @@ inherit fdo-mime font unpacker versionator
 
 
 MY_PV="$(get_version_component_range 1-4)"
-MY_A="$(get_version_component_range 5)"
-MY_ALPHA=${MY_A/alpha/a}
+MY_V="$(get_version_component_range 5)"
+
+if [ -z "$(get_version_component_range 6)" ]; then
+	MY_SP=""
+else
+	MY_SP="$(get_version_component_range 6)"
+fi
+
+case ${PV} in
+	*_alpha*)
+		SLOT="alpha"
+		KEYWORDS=""
+		MY_VV=${MY_PV}~${MY_V/alpha/a}${MY_SP}
+		;;
+	*_beta*)
+		SLOT="beta"
+		KEYWORDS="~amd64 ~x86"
+		MY_VV=${MY_PV}~${MY_V/beta/b}${MY_SP}
+		;;
+	*)
+		die "Invalid value for \${PV}: ${PV}"
+		;;
+esac
 
 DESCRIPTION="WPS Office is an office productivity suite. This is an ALPHA
 package. Use it at your own risk."
 HOMEPAGE="http://www.wps.cn"
 
-if [ -z "$(get_version_component_range 6)" ]; then
-	SRC_URI="http://wdl.cache.ijinshan.com/wps/download/Linux/unstable/${PN}_${MY_PV}~${MY_ALPHA}_i386.deb"
-else
-	MY_SP="$(get_version_component_range 6)"
-	SRC_URI="http://wdl.cache.ijinshan.com/wps/download/Linux/unstable/${PN}_${MY_PV}~${MY_ALPHA}${MY_SP}_i386.deb"
-fi
+SRC_URI="http://wdl.cache.ijinshan.com/wps/download/Linux/unstable/${PN}_${MY_VV}_i386.deb"
 
 RESTRICT="strip mirror"
 LICENSE="WPS-EULA"
-KEYWORDS=""
-SLOT="alpha"
 IUSE="corefonts"
 
 RDEPEND="
