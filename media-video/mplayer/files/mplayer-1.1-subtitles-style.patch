@@ -1,0 +1,56 @@
+From b34d84bc27ad1298537b700983cef4e8769272b0 Mon Sep 17 00:00:00 2001
+From: stlifey joe <stlifey@gmail.com>
+Date: Sat, 7 Jul 2012 03:14:27 +0800
+Subject: [PATCH] subtitles: change default libass rendering style
+
+Change the default style used for rendering plaintext subtitles with
+libass. The following attributes change:
+
+* FontSize: Increase the size multiplier used with the default
+  -subfont-autoscale 3 from 1.4 to 1.7, thus making the font 21%
+  larger. Actually implementing the -subfont-autoscale modes other
+  than 1 would give a multiplier of 5/3=1.67 for 4:3 aspect ratio
+  video, sqrt(337)/9=2.04 for 16:9.
+
+* PrimaryColour: Change color from yellow to white.
+
+* Outline: Before this was 2 regardless of user font size choice. Make
+  it FontSize/16 instead. With default font size this is about half
+  the previous width.
+---
+ sub/ass_mp.c |    8 ++++----
+ 1 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/sub/ass_mp.c b/sub/ass_mp.c
+index b4b7312..8540d28 100644
+--- a/sub/ass_mp.c
++++ b/sub/ass_mp.c
+@@ -67,21 +67,21 @@ static void init_style(ASS_Style *style, const char *name, double playres)
+ 	if (subtitle_autoscale == 2)
+ 		fs *= 1.3;
+ 	else if (subtitle_autoscale == 3)
+-		fs *= 1.4;
+-	style->FontSize = fs;
++		fs *= 1.7;
+ 
+ 	if (ass_color) c1 = strtoll(ass_color, NULL, 16);
+-	else c1 = 0xFFFF0000;
++	else c1 = 0xFFFFFF00;
+ 	if (ass_border_color) c2 = strtoll(ass_border_color, NULL, 16);
+ 	else c2 = 0x00000000;
+ 
++	style->FontSize = fs;
+ 	style->PrimaryColour = c1;
+ 	style->SecondaryColour = c1;
+ 	style->OutlineColour = c2;
+ 	style->BackColour = 0x00000000;
+ 	style->BorderStyle = 1;
+ 	style->Alignment = 2;
+-	style->Outline = 2;
++	style->Outline = fs / 16;
+ 	style->MarginL = 10;
+ 	style->MarginR = 10;
+ 	style->MarginV = 5;
+-- 
+1.7.8.6
+
