@@ -79,6 +79,11 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}
 
+src_prepare() {
+	sed -i -e '/Categories/s/Spreadsheets/Spreadsheet/g' \
+		"${S}"/usr/share/applications/wps-office-et.desktop
+}
+
 src_install() {
 	exeinto /usr/bin
 	exeopts -m0755
