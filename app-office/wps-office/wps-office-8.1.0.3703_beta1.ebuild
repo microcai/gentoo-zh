@@ -18,12 +18,10 @@ fi
 
 case ${PV} in
 	*_alpha*)
-		SLOT="alpha"
 		KEYWORDS=""
 		MY_VV=${MY_PV}~${MY_V/alpha/a}${MY_SP}
 		;;
 	*_beta*)
-		SLOT="beta"
 		KEYWORDS="~amd64 ~x86"
 		MY_VV=${MY_PV}~${MY_V/beta/b}${MY_SP}
 		;;
@@ -38,6 +36,7 @@ HOMEPAGE="http://www.wps.cn"
 
 SRC_URI="http://wdl.cache.ijinshan.com/wps/download/Linux/unstable/${PN}_${MY_VV}_i386.deb"
 
+SLOT="0"
 RESTRICT="strip mirror"
 LICENSE="WPS-EULA"
 IUSE="corefonts"
@@ -66,8 +65,8 @@ RDEPEND="
 	)
 	amd64? (
 		app-emulation/emul-linux-x86-baselibs
+		app-emulation/emul-linux-x86-opengl
 		app-emulation/emul-linux-x86-xlibs
-		app-emulation/emul-linux-x86-compat
 		sys-devel/gcc[multilib]
 		sys-libs/glibc[multilib]
 	)
