@@ -15,7 +15,7 @@ cjktty_kernel_version="3.4.0"
 imq_kernel_version="3.3.0"
 uksm_kernel_version="3.4.24"
 
-SUPPORTED_USE="ck bfq imq uksm fbcondecor"
+SUPPORTED_USE="+ck +bfq +imq +uksm +fbcondecor"
 
 CK_PRE_PATCH="${FILESDIR}/${PN}-3.4-pre-ck-fix_task_group.patch"
 CK_POST_PATCH="${FILESDIR}/${PN}-3.4-post-ck-fix_task_group.patch ${FILESDIR}/${PN}-3.4-post-ck-fix_calc_load_idle.patch"
