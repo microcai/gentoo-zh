@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
-inherit multilib cmake-utils eutils gnome2-utils fdo-mime
+inherit multilib multilib-build cmake-utils eutils gnome2-utils fdo-mime
 
 DESCRIPTION="Flexible Context-aware Input Tool with eXtension"
 HOMEPAGE="http://fcitx-im.org/wiki/Fcitx"
@@ -47,10 +47,11 @@ RDEPEND="
 	xml? (
 		app-text/iso-codes
 		dev-libs/libxml2
-		x11-libs/libxkbfile[multilib=]
+		x11-libs/libxkbfile
 	)
-	abi_x86_32 ? (
+	abi_x86_32? (
 		32bit? (
+			x11-libs/libxkbfile[multilib]
 			gtk? ( app-emulation/emul-linux-x86-gtklibs )
 			gtk3? ( app-emulation/emul-linux-x86-gtklibs )
 			qt4? ( app-emulation/emul-linux-x86-qtlibs )
