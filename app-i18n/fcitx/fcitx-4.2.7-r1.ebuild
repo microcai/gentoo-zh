@@ -49,7 +49,7 @@ RDEPEND="
 		dev-libs/libxml2
 		x11-libs/libxkbfile[multilib=]
 	)
-	multilib? (
+	abi_x86_32 ? (
 		32bit? (
 			gtk? ( app-emulation/emul-linux-x86-gtklibs )
 			gtk3? ( app-emulation/emul-linux-x86-gtklibs )
