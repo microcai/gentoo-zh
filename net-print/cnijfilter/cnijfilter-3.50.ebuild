@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
 inherit eutils flag-o-matic multilib
 
@@ -50,6 +50,7 @@ _prid=("356" "370" "369" "373" "375" "374" "376" "377" "380" "381" "382" "383" "
 _prcomp=("mp250series" "mp280series" "mp495series" "mg5100series" "ip4800series" "mg5200series" "mg6100series" "mg8100series" "mx360series" "mx410series" "mx420series" "mx880series" "ix6500series")
 _max=$((${#_pruse[@]}-1)) # used for iterating through these arrays
 
+REQUIRED_USE="?? (mp250 mp280 mp495 mg5100 ip4800 mg5200 mg6100 mg8100 mx360 mx410 mx420 mx880 ix6550)"
 ###
 #   Standard Ebuild-functions
 ###
