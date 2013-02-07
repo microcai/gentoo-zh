@@ -1,1 +1,2 @@
 move kde-misc/kcm-fcitx app-i18n/kcm-fcitx
+move dev-libs/liblunar dev-libs/lunar-date
