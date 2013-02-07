@@ -6,7 +6,7 @@ EAPI="4"
 ETYPE="sources"
 
 ck_version="1"
-bfq_version="5r1"
+bfq_version="6"
 uksm_version="0.1.2.2"
 fbcondecor_version="0.9.6"
 
