@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=4
+
 inherit gnome2
 
 DESCRIPTION="Chinese Lunar Library Gtk+ widget"
@@ -9,17 +11,14 @@ HOMEPAGE="http://liblunar.googlecode.com"
 SRC_URI="http://liblunar.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="~x86"
-IUSE="doc python"
+SLOT="3"
+KEYWORDS="~x86 ~amd64"
+IUSE=""
 
 RDEPEND="${RDEPEND}
-	>=dev-libs/liblunar-2.2.4
-	doc? ( >=dev-util/gtk-doc-1 )
-	python? (
-		>=dev-python/pygobject-2.11.5
-		>=dev-python/pygtk-2.9.7
-	)"
+	>=dev-libs/lunnar-date-2.4.0
+	x11-libs/gtk+:3
+	"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
