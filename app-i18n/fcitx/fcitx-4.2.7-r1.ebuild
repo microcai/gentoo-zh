@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="+autostart +cairo +dbus debug +glib +gtk +gtk3 +icu +introspection lua
-+pango +qt4 +snooper static-libs +table test +X +xml 32bit"
++pango +qt4 +snooper static-libs +table test +X +xml"
 RESTRICT="mirror"
 
 RDEPEND="
@@ -50,12 +50,10 @@ RDEPEND="
 		x11-libs/libxkbfile
 	)
 	abi_x86_32? (
-		32bit? (
-			x11-libs/libxkbfile[multilib]
-			gtk? ( app-emulation/emul-linux-x86-gtklibs )
-			gtk3? ( app-emulation/emul-linux-x86-gtklibs )
-			qt4? ( app-emulation/emul-linux-x86-qtlibs )
-		)
+		x11-libs/libxkbfile[multilib]
+		gtk? ( app-emulation/emul-linux-x86-gtklibs )
+		gtk3? ( app-emulation/emul-linux-x86-gtklibs )
+		qt4? ( app-emulation/emul-linux-x86-qtlibs )
 	)"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
@@ -82,7 +80,7 @@ HTML_DOCS=(
 update_gtk2_immodules() {
 	gnome2_query_immodules_gtk2
 
-	if use multilib && use 32bit ; then
+	if use abi_x86_32 ; then
 		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0-32" > ${EPREFIX}/etc/gtk-2.0/i686-pc-linux-gnu/gtk.immodules
 	fi
 }
@@ -123,7 +121,7 @@ src_configure() {
 
 	cmake-utils_src_configure
 
-	if use multilib && use 32bit ; then
+	if use abi_x86_32 ; then
 		mkdir -p "${WORKDIR}/${P}_build32"
 		cd "${WORKDIR}/${P}_build32"
 
@@ -165,7 +163,7 @@ src_configure() {
 src_compile(){
 	cmake-utils_src_compile
 
-	if use multilib && use 32bit ; then
+	if use abi_x86_32 ; then
 		cd ${WORKDIR}/${P}_build32/src/
 		emake -C lib || die
 
@@ -176,7 +174,7 @@ src_compile(){
 }
 
 src_install() {
-	if use multilib && use 32bit ; then
+	if use abi_x86_32 ; then
 		pushd "${WORKDIR}/${P}_build32/src"
 		emake DESTDIR="${D}" -C lib install || die
 
