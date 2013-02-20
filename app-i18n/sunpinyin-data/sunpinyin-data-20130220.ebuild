@@ -11,8 +11,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 RESTRICT="primaryuri"
 
-DICT_VERSION="20120830"
-LM_VERSION="${PV}"
+DICT_VERSION="${PV}"
+LM_VERSION="20121025"
 SRC_URI="http://open-gram.googlecode.com/files/dict.utf8-${DICT_VERSION}.tar.bz2
 	http://open-gram.googlecode.com/files/lm_sc.t3g.arpa-${LM_VERSION}.tar.bz2"
 
