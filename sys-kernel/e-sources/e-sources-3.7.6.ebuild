@@ -11,7 +11,7 @@ uksm_version="0.1.2.2"
 fbcondecor_version="0.9.6"
 
 bfq_kernel_version="3.7.0"
-cjktty_kernel_version="3.5.0"
+cjktty_kernel_version="3.7.0"
 imq_kernel_version="3.7.0"
 uksm_kernel_version="3.7.1"
 reiser4_kernel_version="3.7.1"
