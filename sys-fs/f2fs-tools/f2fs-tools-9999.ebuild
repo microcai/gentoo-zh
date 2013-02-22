@@ -21,5 +21,10 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_prepare() {
+	echo 'mkfs_f2fs_LDFLAGS = ' >> mkfs/Makefile.am
 	eautoreconf
+}
+
+src_configure(){
+	econf --disable-static
 }
