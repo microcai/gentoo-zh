@@ -1,10 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1-r1.ebuild,v 1.20 2013/02/08 13:41:43 aballier Exp $
 
 EAPI=4
 
-inherit toolchain-funcs eutils flag-o-matic multilib base
+EGIT_REPO_URI="git://git.videolan.org/ffmpeg.git"
+ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
+[[ ${PV} = *9999* ]] && SVN_ECLASS="subversion git-2" || SVN_ECLASS=""
+
+inherit toolchain-funcs eutils flag-o-matic multilib base ${SVN_ECLASS}
 
 IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua bidi bindist bl bluray
 bs2b cddb +cdio cdparanoia cpudetection debug dga
@@ -13,9 +17,9 @@ ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
 +libass libcaca libmpeg2 lirc +live lzo mad md5sum +mmx mmxext mng +mp3 nas
 +network nut openal +opengl +osdmenu oss png pnm pulseaudio pvr +quicktime
 radio +rar +real +rtc rtmp samba +shm sdl +speex sse sse2 ssse3
-tga +theora +tremor +truetype +toolame +twolame +unicode v4l vdpau vaapi
-vidix +vorbis win32codecs +X +x264 xanim xinerama +xscreensaver +xv +xvid
-xvmc zoran"
+tga +theora +tremor +truetype +toolame +twolame +unicode v4l vdpau vaapi vidix
++vorbis win32codecs +X +x264 xanim xinerama +xscreensaver +xv +xvid xvmc
+zoran"
 
 VIDEO_CARDS="s3virge mga tdfx"
 for x in ${VIDEO_CARDS}; do
@@ -27,7 +31,9 @@ FONT_URI="
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2
 "
-if [ "${PV%_rc*}" = "${PV}" ]; then
+if [[ ${PV} == *9999* ]]; then
+	RELEASE_URI=""
+elif [ "${PV%_rc*}" = "${PV}" ]; then
 	MY_P="MPlayer-${PV}"
 	S="${WORKDIR}/${MY_P}"
 	RELEASE_URI="mirror://mplayer/releases/${MY_P}.tar.xz"
@@ -155,7 +161,11 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+if [[ ${PV} != *9999* ]]; then
+	KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+else
+	KEYWORDS=""
+fi
 
 # faac codecs are nonfree, win32codecs are nonfree
 # libcdio support: prefer libcdio over cdparanoia and don't check for cddb w/cdio
@@ -182,12 +192,23 @@ REQUIRED_USE="bindist? ( !faac !win32codecs )
 	xvmc? ( xv )"
 
 PATCHES=(
+	"${FILESDIR}/${PN}-1.0_rc4-pkg-config.patch"
 	"${FILESDIR}/${P}-ffmpeg.patch"
-	"${FILESDIR}/${P}-vaapi.patch"
-	"${FILESDIR}/${P}-subtitles-style.patch"
+	"${FILESDIR}/${P}-libav-0.8.patch"
+	"${FILESDIR}/${P}-codecid.patch"
+        "${FILESDIR}/${P}-vaapi.patch"
+        "${FILESDIR}/${P}-subtitles-style.patch"
 )
 
 pkg_setup() {
+	if [[ ${PV} == *9999* ]]; then
+		elog
+		elog "This is a live ebuild which installs the latest from upstream's"
+		elog "subversion repository, and is unsupported by Gentoo."
+		elog "Everything but bugs in the ebuild itself will be ignored."
+		elog
+	fi
+
 	if use cpudetection; then
 		ewarn
 		ewarn "You've enabled the cpudetection flag. This feature is"
@@ -202,9 +223,16 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
+	if [[ ${PV} = *9999* ]]; then
+		subversion_src_unpack
+		cd "${WORKDIR}"
+		rm -rf "${WORKDIR}/${P}/ffmpeg/"
+		( S="${WORKDIR}/${P}/ffmpeg/" git-2_src_unpack )
+	else
+		unpack ${A}
+	fi
 
-	if [[ "${PV%_rc*}" = "${PV}" ]]; then
+	if [[ ${PV} = *9999* ]] || [[ "${PV%_rc*}" = "${PV}" ]]; then
 		cd "${S}"
 		cp "${FILESDIR}/dump_ffmpeg.sh" . || die
 		chmod +x dump_ffmpeg.sh
@@ -220,6 +248,11 @@ src_unpack() {
 
 src_prepare() {
 	local svf=snapshot_version
+	if [[ ${PV} = *9999* ]]; then
+		# Set SVN version manually
+		subversion_wc_info
+		printf "${ESVN_WC_REVISION}" > $svf
+	fi
 	if [ ! -f VERSION ] ; then
 		[ -f "$svf" ] || die "Missing ${svf}. Did you generate your snapshot with prepare_mplayer.sh?"
 		local sv=$(<$svf)
@@ -237,6 +270,11 @@ src_prepare() {
 	fi
 
 	base_src_prepare
+	if has_version '>=media-video/libav-9_rc' || has_version '>=media-video/ffmpeg-1.1' ; then
+		epatch "${FILESDIR}/${P}-libav-9.patch" \
+			"${FILESDIR}/${P}-planaraudio.patch" \
+			"${FILESDIR}/${P}-missingbreak.patch"
+	fi
 }
 
 src_configure() {
@@ -417,12 +455,6 @@ src_configure() {
 
 	# internal
 	use real || myconf+=" --disable-real"
-
-	# Real binary codec support only available on x86, amd64
-	if use real; then
-		use x86 && myconf+=" --codecsdir=/opt/RealPlayer/codecs"
-		use amd64 && myconf+=" --codecsdir=/usr/$(get_libdir)/codecs"
-	fi
 	myconf+=" $(use_enable win32codecs win32dll)"
 
 	################
@@ -437,7 +469,7 @@ src_configure() {
 	use fbcon && use video_cards_s3virge && myconf+=" --enable-s3fb"
 	use libcaca || myconf+=" --disable-caca"
 	use zoran || myconf+=" --disable-zr"
-	use vaapi && myconf+=" --enable-vaapi"
+        use vaapi && myconf+=" --enable-vaapi"
 
 	if ! use kernel_linux || ! use video_cards_mga; then
 		 myconf+=" --disable-mga --disable-xmga"
