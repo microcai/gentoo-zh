@@ -31,7 +31,7 @@ src_install() {
 	exeinto "$(python_get_sitedir)"/${PN}
 	doexe *.py || die
 
-	cp -r lixian_plugins "${D}"/"$(python_get_sitedir)"/${PN}
+	cp -r {lixian_commands,lixian_plugins} "${D}/$(python_get_sitedir)/${PN}"
 
 	dosym "$(python_get_sitedir)"/${PN}/lixian_cli.py /usr/bin/${PN}-cli || die
 	dosym "$(python_get_sitedir)"/${PN}/lixian_hash.py /usr/bin/${PN}-hash || die
