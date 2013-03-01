@@ -39,6 +39,9 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.13.0-fix-codegen-location.patch"
 	epatch "${FILESDIR}/${PN}-2.14.1-libdir-pc.patch"
 
+	# Fix memory leak in _wrap_pango_cairo_create_layout
+	epatch "${FILESDIR}/${PN}-2.24.0-fix-create-layout-unref.patch"
+
 	# Examples is handled "manually"
 	sed -e 's/\(SUBDIRS = .* \)examples/\1/' \
 		-i Makefile.am Makefile.in || die
