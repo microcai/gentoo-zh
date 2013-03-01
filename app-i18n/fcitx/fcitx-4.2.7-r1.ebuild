@@ -41,20 +41,20 @@ RDEPEND="
 		x11-libs/qt-gui:4
 	)
 	X? (
-		x11-libs/libX11
-		x11-libs/libXinerama
+		x11-libs/libX11[abi_x86_32=]
+		x11-libs/libXinerama[abi_x86_32=]
 	)
 	xml? (
 		app-text/iso-codes
 		dev-libs/libxml2
 		x11-libs/libxkbfile
 	)
-	abi_x86_32? (
+	amd64? ( abi_x86_32? (
 		x11-libs/libxkbfile[multilib]
 		gtk? ( app-emulation/emul-linux-x86-gtklibs )
 		gtk3? ( app-emulation/emul-linux-x86-gtklibs )
 		qt4? ( app-emulation/emul-linux-x86-qtlibs )
-	)"
+	) )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	introspection? ( dev-libs/gobject-introspection )
