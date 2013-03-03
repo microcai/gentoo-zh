@@ -1,1 +1,0 @@
-../../eclass/e-sources.eclass
