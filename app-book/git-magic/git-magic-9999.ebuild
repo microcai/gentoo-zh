@@ -32,15 +32,15 @@ for x in "${LANGS[@]}" ; do
 done
 
 bookmake(){
-	emake -j1 boot-$@.html || die
+	emake -j1 book-$@.html || die
 	if use pdf ; then
-		emake -j1 boot-$@.pdf || die 
+		emake -j1 book-$@.pdf || die 
 	fi
 }
 
 bookins(){
-	doins boot-$@.html
-	use pdf && doins boot-$@.pdf
+	doins book-$@.html
+	use pdf && doins book-$@.pdf
 }
 
 src_compile(){
