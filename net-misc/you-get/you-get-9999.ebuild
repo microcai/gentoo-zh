@@ -31,5 +31,5 @@ src_install() {
 	dobin you-get
 
 	insinto $(python_get_sitedir)
-	doins -r you_get || die
+	doins -r src/you_get || die
 }
