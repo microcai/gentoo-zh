@@ -15,8 +15,8 @@ RDEPEND="media-libs/fontconfig
 	virtual/jpeg
 	media-libs/libpng
 	sys-libs/zlib
-	~x11-libs/qt-core-${PV}[aqua=,debug=,glib=,qt3support=]
-	~x11-libs/qt-script-${PV}[aqua=,debug=]
+	~dev-qt/qtcore-${PV}[aqua=,debug=,glib=,qt3support=]
+	~dev-qt/qtscript-${PV}[aqua=,debug=]
 	!aqua? (
 		x11-libs/libX11
 		x11-libs/libXext
@@ -27,7 +27,7 @@ RDEPEND="media-libs/fontconfig
 		x11-libs/libXi
 	)
 	cups? ( net-print/cups )
-	dbus? ( ~x11-libs/qt-dbus-${PV}[aqua=,debug=] )
+	dbus? ( ~dev-qt/qtdbus-${PV}[aqua=,debug=] )
 	mng? ( >=media-libs/libmng-1.0.9 )
 	nas? ( >=media-libs/nas-1.5 )
 	tiff? ( media-libs/tiff )
@@ -39,7 +39,7 @@ DEPEND="${RDEPEND}
 		x11-proto/inputproto
 	)
 	xinerama? ( x11-proto/xineramaproto )"
-PDEPEND="qt3support? ( ~x11-libs/qt-qt3support-${PV}[aqua=,debug=] )"
+PDEPEND="qt3support? ( ~dev-qt/qtqt3support-${PV}[aqua=,debug=] )"
 
 # "${FILESDIR}/add-missing-style-scsi-4_7_1.diff"
 # "${FILESDIR}/synthetic-bold-4_7_1.diff"

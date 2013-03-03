@@ -17,9 +17,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 # xbindkeys for bindkeys.sh
-DEPEND="x11-libs/qt-core
-	x11-libs/qt-gui
-	>=x11-libs/qt-webkit-4.5.0"
+DEPEND="dev-qt/qtcore
+	dev-qt/qtgui
+	>=dev-qt/qtwebkit-4.5.0"
 RDEPEND="${DEPEND}
 	www-plugins/adobe-flash
 	x11-misc/xbindkeys"

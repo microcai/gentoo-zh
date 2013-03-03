@@ -21,8 +21,8 @@ DEPEND="dev-libs/openssl
 		net-misc/curl
 		=dev-lang/python-2.5*
 		|| (
-			( x11-libs/qt-core x11-libs/qt-gui )
-			( >=x11-libs/qt-4.3 )
+			( dev-qt/qtcore dev-qt/qtgui )
+			( >=dev-qt/qt4.3 )
 		)"
 RDEPEND="${DEPEND}"
 

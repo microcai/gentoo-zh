@@ -1,5 +1,5 @@
-dev-libs/openssl net-misc/curl[ssl] x11-libs/qt-gui x11-libs/qt-core
-dev-libs/openssl net-misc/curl[ssl] x11-libs/qt-gui x11-libs/qt-core
+dev-libs/openssl net-misc/curl[ssl] dev-qt/qtgui dev-qt/qtcore
+dev-libs/openssl net-misc/curl[ssl] dev-qt/qtgui dev-qt/qtcore
 0
 http://libfetion-gui.googlecode.com/files/linux_fetion_v1.0.tar.gz
 primaryuri

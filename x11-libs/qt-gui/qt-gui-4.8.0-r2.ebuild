@@ -17,8 +17,8 @@ RDEPEND="
 	media-libs/libpng:0
 	sys-libs/zlib
 	virtual/jpeg
-	~x11-libs/qt-core-${PV}[aqua=,c++0x=,qpa=,debug=,glib=,qt3support=]
-	~x11-libs/qt-script-${PV}[aqua=,c++0x=,qpa=,debug=]
+	~dev-qt/qtcore-${PV}[aqua=,c++0x=,qpa=,debug=,glib=,qt3support=]
+	~dev-qt/qtscript-${PV}[aqua=,c++0x=,qpa=,debug=]
 	!aqua? (
 		x11-libs/libX11
 		x11-libs/libXext
@@ -29,7 +29,7 @@ RDEPEND="
 		x11-libs/libXi
 	)
 	cups? ( net-print/cups )
-	dbus? ( ~x11-libs/qt-dbus-${PV}[aqua=,c++0x=,qpa=,debug=] )
+	dbus? ( ~dev-qt/qtdbus-${PV}[aqua=,c++0x=,qpa=,debug=] )
 	gtkstyle? ( x11-libs/gtk+:2[aqua=] )
 	mng? ( >=media-libs/libmng-1.0.9 )
 	nas? ( >=media-libs/nas-1.5 )
@@ -43,7 +43,7 @@ DEPEND="${RDEPEND}
 	xinerama? ( x11-proto/xineramaproto )"
 RDEPEND="${RDEPEND}
 	!~x11-themes/qgtkstyle-4.7.2"
-PDEPEND="qt3support? ( ~x11-libs/qt-qt3support-${PV}[aqua=,c++0x=,qpa=,debug=] )"
+PDEPEND="qt3support? ( ~dev-qt/qtqt3support-${PV}[aqua=,c++0x=,qpa=,debug=] )"
 
 PATCHES=(
 "${FILESDIR}/add-missing-style-scsi-4_8_0.diff"
@@ -55,7 +55,7 @@ pkg_setup() {
 	# was planning to use a dep, but to reproduce this you have to
 	# clean-emerge qt-gui[gtkstyle] while having cairo[qt4] installed.
 	# no need to restrict normal first time users for that :)
-	if use gtkstyle && ! has_version x11-libs/qt-gui && has_version x11-libs/cairo[qt4]; then
+	if use gtkstyle && ! has_version dev-qt/qtgui && has_version x11-libs/cairo[qt4]; then
 		echo
 		eerror "When building qt-gui[gtkstyle] from scratch with cairo present,"
 		eerror "cairo must have the qt4 use flag disabled, otherwise the gtk"

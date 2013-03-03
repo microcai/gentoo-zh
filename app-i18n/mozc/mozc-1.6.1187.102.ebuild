@@ -28,7 +28,7 @@ RDEPEND="dev-libs/glib:2
 	ibus? ( >=app-i18n/ibus-1.4.1 )
 	renderer? ( x11-libs/gtk+:2 )
 	qt4? (
-		x11-libs/qt-gui:4
+		dev-qt/qtgui:4
 		app-i18n/zinnia
 	)"
 DEPEND="${RDEPEND}

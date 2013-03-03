@@ -1,5 +1,5 @@
-dev-libs/openssl media-libs/alsa-lib x11-libs/qt-core[ssl,qt3support] x11-libs/qt-gui app-arch/unzip >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/subversion net-misc/rsync
-dev-libs/openssl media-libs/alsa-lib x11-libs/qt-core[ssl,qt3support] x11-libs/qt-gui
+dev-libs/openssl media-libs/alsa-lib dev-qt/qtcore[ssl,qt3support] dev-qt/qtgui app-arch/unzip >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/subversion net-misc/rsync
+dev-libs/openssl media-libs/alsa-lib dev-qt/qtcore[ssl,qt3support] dev-qt/qtgui
 0
 http://fqterm.googlecode.com/files/QQWry.Dat.zip
 

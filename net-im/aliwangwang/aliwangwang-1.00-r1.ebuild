@@ -15,10 +15,10 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 IUSE=""
 
 RDEPEND="
-	>=x11-libs/qt-gui-4.7
-	>=x11-libs/qt-webkit-4.7
-	>=x11-libs/qt-core-4.7
-	>=x11-libs/qt-sql-4.7
+	>=dev-qt/qtgui-4.7
+	>=dev-qt/qtwebkit-4.7
+	>=dev-qt/qtcore-4.7
+	>=dev-qt/qtsql-4.7
 	>=dev-libs/openssl-1.0
 	>=media-libs/fontconfig-2.8
 	>=media-libs/freetype-2.4

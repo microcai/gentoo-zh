@@ -19,8 +19,8 @@ IUSE=""
 RDEPEND="
 	dev-libs/openssl
 	media-libs/alsa-lib
-	x11-libs/qt-core[ssl,qt3support]
-	x11-libs/qt-gui"
+	dev-qt/qtcore[ssl,qt3support]
+	dev-qt/qtgui"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 

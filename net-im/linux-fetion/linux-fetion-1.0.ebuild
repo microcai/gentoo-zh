@@ -19,8 +19,8 @@ IUSE="doc"
 
 DEPEND="dev-libs/openssl
 	net-misc/curl[ssl]
-	x11-libs/qt-gui
-	x11-libs/qt-core"
+	dev-qt/qtgui
+	dev-qt/qtcore"
 RDEPEND=${DEPEND}
 
 RESTRICT="primaryuri"

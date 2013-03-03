@@ -36,9 +36,9 @@ RDEPEND="
 	icu? ( dev-libs/icu )
 	lua? ( dev-lang/lua )
 	qt4? (
-		x11-libs/qt-core:4
-		x11-libs/qt-dbus:4
-		x11-libs/qt-gui:4
+		dev-qt/qtcore:4
+		dev-qt/qtdbus:4
+		dev-qt/qtgui:4
 	)
 	X? (
 		x11-libs/libX11[abi_x86_32=]

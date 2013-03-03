@@ -28,7 +28,7 @@ RDEPEND="dev-libs/glib:2
 	scim? ( app-i18n/scim )
 	fcitx? ( >=app-i18n/fcitx-4.2.1 )
 	qt4? (
-		x11-libs/qt-gui:4
+		dev-qt/qtgui:4
 		app-i18n/zinnia
 	)"
 DEPEND="${RDEPEND}

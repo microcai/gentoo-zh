@@ -20,9 +20,9 @@ IUSE=""
 
 DEPEND="dev-libs/openssl
 	|| ( >=net-misc/curl-7.19.7[openssl] net-misc/curl[ssl] )
-	x11-libs/qt-xmlpatterns
-	x11-libs/qt-gui
-	x11-libs/qt-core"
+	dev-qt/qtxmlpatterns
+	dev-qt/qtgui
+	dev-qt/qtcore"
 RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${MY_P}

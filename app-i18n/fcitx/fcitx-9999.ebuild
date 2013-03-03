@@ -50,8 +50,8 @@ RDEPEND="sys-apps/dbus
 	lua? ( dev-lang/lua )
 	opencc? ( app-i18n/opencc )
 	qt4? (
-		x11-libs/qt-gui:4
-		x11-libs/qt-dbus:4
+		dev-qt/qtgui:4
+		dev-qt/qtdbus:4
 	)
 	xml? (
 		app-text/iso-codes

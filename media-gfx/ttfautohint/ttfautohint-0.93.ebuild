@@ -16,7 +16,7 @@ KEYWORDS="~amd64"
 IUSE="+qt"
 
 DEPEND=">=media-libs/freetype-2.4.10
-	qt? ( >=x11-libs/qt-gui-4.8 )
+	qt? ( >=dev-qt/qtgui-4.8 )
 	"
 RDEPEND="${DEPEND}"
 

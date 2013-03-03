@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI=5
 
 inherit eutils qt4-r2
 DESCRIPTION="QStarDict is a StarDict clone written with using Qt"
@@ -13,12 +13,9 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ia64"
 IUSE="dbus nls"
 RDEPEND="
- || ( 
-		( x11-libs/qt-core
-		  x11-libs/qt-gui )
-		=x11-libs/qt-4.3*
-	)
-	dbus? ( || ( x11-libs/qt-dbus <x11-libs/qt-4.4[dbus] ) )
+	dev-qt/qtcore
+	dev-qt/qtgui
+	dbus? ( || ( dev-qt/qtdbus <dev-qt/qt4.4[dbus] ) )
 	>=dev-libs/glib-2.0"
 DEPEND="${RDEPEND}"
 PROVIDE="virtual/stardict"

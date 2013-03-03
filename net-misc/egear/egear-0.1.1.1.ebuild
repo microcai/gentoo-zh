@@ -18,8 +18,8 @@ IUSE=""
 DEPEND="dev-libs/openssl
 	net-misc/curl
 	|| (
-		( x11-libs/qt-core x11-libs/qt-gui x11-libs/qt-dbus )
-		( >=x11-libs/qt-4.3 )
+		( dev-qt/qtcore dev-qt/qtgui dev-qt/qtdbus )
+		( >=dev-qt/qt4.3 )
 	)"
 RDEPEND="${DEPEND}"
 

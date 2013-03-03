@@ -35,12 +35,12 @@ RDEPEND="
 			x11-libs/gtk+ )
 		!qt-static? (
 			media-sound/phonon[gstreamer=]
-			x11-libs/qt-core:4
-			x11-libs/qt-dbus:4
-			x11-libs/qt-gui:4[accessibility,dbus]
-			x11-libs/qt-sql:4[sqlite]
-			x11-libs/qt-webkit:4
-			x11-libs/qt-xmlpatterns:4 ) )
+			dev-qt/qtcore:4
+			dev-qt/qtdbus:4
+			dev-qt/qtgui:4[accessibility,dbus]
+			dev-qt/qtsql:4[sqlite]
+			dev-qt/qtwebkit:4
+			dev-qt/qtxmlpatterns:4 ) )
 		sys-devel/gcc
 		sys-libs/glibc"
 DEPEND=""

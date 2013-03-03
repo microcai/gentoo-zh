@@ -1,5 +1,5 @@
->=x11-libs/qt-core-4.3 >=x11-libs/qt-gui-4.3 || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
->=x11-libs/qt-core-4.3 >=x11-libs/qt-gui-4.3
+>=dev-qt/qtcore-4.3 >=dev-qt/qtgui-4.3 || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+>=dev-qt/qtcore-4.3 >=dev-qt/qtgui-4.3
 0
 http://qipmsg.googlecode.com/files/qipmsg-1.0.0.tar.bz2
 

@@ -19,11 +19,11 @@ COMMON_DEPEND="
 	app-text/poppler[qt4]
 	x11-libs/libX11
 	x11-libs/libXext
-	>=x11-libs/qt-gui-4.6.1:4
-	>=x11-libs/qt-core-4.6.1:4
-	>=x11-libs/qt-script-4.6.1:4
-	>=x11-libs/qt-test-4.6.1:4
-	>=x11-libs/qt-webkit-4.6.1:4
+	>=dev-qt/qtgui-4.6.1:4
+	>=dev-qt/qtcore-4.6.1:4
+	>=dev-qt/qtscript-4.6.1:4
+	>=dev-qt/qttest-4.6.1:4
+	>=dev-qt/qtwebkit-4.6.1:4
 	video? ( media-libs/phonon )"
 RDEPEND="${COMMON_DEPEND}
 	virtual/latex-base

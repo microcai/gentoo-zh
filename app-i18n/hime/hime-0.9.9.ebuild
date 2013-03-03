@@ -19,7 +19,7 @@ DEPEND=">=x11-libs/gtk+-2
 	anthy? ( >=app-i18n/anthy-9100 )
 	chewing? ( dev-libs/libchewing )
 	gtk3? ( x11-libs/gtk+:3 )
-	qt4? ( x11-libs/qt-core:4 x11-libs/qt-gui )"
+	qt4? ( dev-qt/qtcore:4 dev-qt/qtgui )"
 RDEPEND="${DEPEND}
 	chinese-sound? ( media-sound/vorbis-tools[ogg123] )"
 DEPEND="${DEPEND}

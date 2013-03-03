@@ -19,8 +19,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/qt-core
-x11-libs/qt-gui"
+DEPEND="dev-qt/qtcore
+dev-qt/qtgui"
 RDEPEND="${DEPEND}"
 
 
