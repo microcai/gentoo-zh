@@ -99,7 +99,7 @@ src_configure() {
 		-DENABLE_BACKTRACE=ON
 		-DENABLE_GETTEXT=ON
 		$(cmake-utils_use_enable autostart XDGAUTOSTART)
-		$(cmake-utils_use_enable cairo CARIO)
+		$(cmake-utils_use_enable cairo CAIRO)
 		$(cmake-utils_use_enable dbus DBUS)
 		$(cmake-utils_use_enable debug DEBUG)
 		$(cmake-utils_use_enable glib GLIB2)
