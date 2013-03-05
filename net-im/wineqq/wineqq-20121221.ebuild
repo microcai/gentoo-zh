@@ -16,9 +16,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="amd64? (
-			emul-linux-x86-gtklibs
+			app-emulation/emul-linux-x86-gtklibs
         )
-		>=app-emulation/wine-1.5.23[wine32,-win64,fontconfig,mp3,truetype,X,nls,xml]
+		>=app-emulation/wine-1.5.23[abi_x86_32,-abi_x86_x32,-abi_x86_64,fontconfig,mp3,truetype,X,nls,xml]
 		!amd64? ( x11-libs/gtk+:2 )
 		"
 
