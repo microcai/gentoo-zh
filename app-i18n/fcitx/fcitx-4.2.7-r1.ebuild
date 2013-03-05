@@ -127,11 +127,11 @@ src_configure() {
 
 		local CFLAGS="$CFLAGS -m32"
 		local CXXFLAGS="$CXXFLAGS -m32"
-		local LDFLAGS="$LDFLAGS -m32 -L/usr/lib32/qt4"
+		local LDFLAGS="$LDFLAGS -m32 -L/usr/lib/qt4"
 
 		local mycmakeargs=(
 			-DCMAKE_INSTALL_PREFIX=/usr
-			-DLIB_INSTALL_DIR=/usr/lib32
+			-DLIB_INSTALL_DIR=/usr/lib
 			-DENABLE_OPENCC=OFF
 			-DENABLE_ENCHANT=OFF
 			-DENABLE_PRESAGE=OFF
@@ -152,9 +152,9 @@ src_configure() {
 
 		"${CMAKE_BINARY}" "${mycmakeargs[@]}" "${CMAKE_USE_DIR}" || die
 
-		sed -i "s|/usr/lib64/qt4|/usr/lib32/qt4|g" \
+		sed -i "s|/usr/lib64/qt4|/usr/lib/qt4|g" \
 			`grep -rl /usr/lib64/qt4 ./src` || die
-		sed -i "s|lib64|lib32|g" \
+		sed -i "s|lib64|lib|g" \
 			src/frontend/gtk2/cmake_install.cmake \
 			src/frontend/gtk3/cmake_install.cmake || die
 	fi
@@ -184,7 +184,7 @@ src_install() {
 
 		popd
 	fi
-	rm -rf "${D}/usr/include" "${D}/usr/lib32/pkgconfig"
+	rm -rf "${D}/usr/include" "${D}/usr/lib/pkgconfig"
 
 	cmake-utils_src_install
 
