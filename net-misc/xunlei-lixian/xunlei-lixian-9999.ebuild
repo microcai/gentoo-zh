@@ -3,14 +3,15 @@
 # $Header: $
 
 EAPI=4
-PYTHON_DEPEND="2"
+PYTHON_DEPEND=2
 
 inherit python git-2
 
-EGIT_REPO_URI="git://github.com/iambus/xunlei-lixian.git"
-
 DESCRIPTION="Download scripts for xunlei vip users"
 HOMEPAGE="https://github.com/iambus/xunlei-lixian"
+
+EGIT_REPO_URI="git://github.com/iambus/xunlei-lixian.git"
+EGIT_BRANCH="master"
 
 LICENSE="MIT"
 SLOT="0"
@@ -29,6 +30,8 @@ src_prepare() {
 src_install() {
 	exeinto "$(python_get_sitedir)"/${PN}
 	doexe *.py || die
+
+	cp -r lixian_plugins "${D}"/"$(python_get_sitedir)"/${PN}
 
 	dosym "$(python_get_sitedir)"/${PN}/lixian_cli.py /usr/bin/${PN}-cli || die
 	dosym "$(python_get_sitedir)"/${PN}/lixian_hash.py /usr/bin/${PN}-hash || die

@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
-inherit multilib cmake-utils eutils gnome2-utils fdo-mime
+inherit multilib multilib-build cmake-utils eutils gnome2-utils fdo-mime
 
 DESCRIPTION="Flexible Context-aware Input Tool with eXtension"
 HOMEPAGE="http://fcitx-im.org/wiki/Fcitx"
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="+autostart +cairo +dbus debug +glib +gtk +gtk3 +icu +introspection lua
-+pango +qt4 +snooper static-libs +table test +X +xml 32bit"
++pango +qt4 +snooper static-libs +table test +X +xml"
 RESTRICT="mirror"
 
 RDEPEND="
@@ -47,14 +47,13 @@ RDEPEND="
 	xml? (
 		app-text/iso-codes
 		dev-libs/libxml2
-		x11-libs/libxkbfile[multilib=]
+		x11-libs/libxkbfile
 	)
-	multilib? (
-		32bit? (
-			gtk? ( app-emulation/emul-linux-x86-gtklibs )
-			gtk3? ( app-emulation/emul-linux-x86-gtklibs )
-			qt4? ( app-emulation/emul-linux-x86-qtlibs )
-		)
+	abi_x86_32? (
+		x11-libs/libxkbfile[multilib]
+		gtk? ( app-emulation/emul-linux-x86-gtklibs )
+		gtk3? ( app-emulation/emul-linux-x86-gtklibs )
+		qt4? ( app-emulation/emul-linux-x86-qtlibs )
 	)"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
@@ -81,7 +80,7 @@ HTML_DOCS=(
 update_gtk2_immodules() {
 	gnome2_query_immodules_gtk2
 
-	if use multilib && use 32bit ; then
+	if use abi_x86_32 ; then
 		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0-32" > ${EPREFIX}/etc/gtk-2.0/i686-pc-linux-gnu/gtk.immodules
 	fi
 }
@@ -122,7 +121,7 @@ src_configure() {
 
 	cmake-utils_src_configure
 
-	if use multilib && use 32bit ; then
+	if use abi_x86_32 ; then
 		mkdir -p "${WORKDIR}/${P}_build32"
 		cd "${WORKDIR}/${P}_build32"
 
@@ -164,7 +163,7 @@ src_configure() {
 src_compile(){
 	cmake-utils_src_compile
 
-	if use multilib && use 32bit ; then
+	if use abi_x86_32 ; then
 		cd ${WORKDIR}/${P}_build32/src/
 		emake -C lib || die
 
@@ -175,7 +174,7 @@ src_compile(){
 }
 
 src_install() {
-	if use multilib && use 32bit ; then
+	if use abi_x86_32 ; then
 		pushd "${WORKDIR}/${P}_build32/src"
 		emake DESTDIR="${D}" -C lib install || die
 

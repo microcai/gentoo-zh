@@ -2,7 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=5
+
 inherit flag-o-matic eutils subversion
+
+ESVN_REPO_URI="svn://svn.berlios.de/chrasis/Engine/libchrasis/trunk"
+ESVN_PROJECT="libchrasis"
 
 IUSE=""
 DESCRIPTION="Library for Chinese Character Recognition As-Is"
@@ -16,16 +21,6 @@ DEPEND="dev-cpp/libxmlpp
 	!dev-libs/libchrasis
 	virtual/libc"
 RDEPEND="${DEPEND}"
-
-src_unpack() {
-	for I in "download" "confirm";do
-		ESVN_REPO_URI="svn://svn.berlios.de/chrasis/Engine/libchrasis/trunk"
-		ESVN_PROJECT="libchrasis"
-		#ESVN_PATCHES="*.diff"
-		#ESVN_BOOTSTRAP="./autogen.sh"
-		subversion_src_unpack
-	done
-}
 
 src_compile() {
 	glib-gettextize -f

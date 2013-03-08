@@ -1,33 +1,35 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+EAPI=4
 
-inherit gnome2
+inherit autotools
 
-DESCRIPTION="Chinese Lunar Library Gtk+ widget"
+DESCRIPTION="Chinese Lunar Library"
 HOMEPAGE="http://liblunar.googlecode.com"
 SRC_URI="http://liblunar.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 amd64"
 IUSE="doc python"
 
 RDEPEND="${RDEPEND}
-	>=dev-libs/liblunar-2.2.4
-	doc? ( >=dev-util/gtk-doc-1 )
-	python? (
-		>=dev-python/pygobject-2.11.5
-		>=dev-python/pygtk-2.9.7
-	)"
+	python? ( >=dev-python/pygobject-2.11.5 )"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig
-	>=dev-util/intltool-0.35"
+	>=dev-util/intltool-0.35
+	dev-util/gtk-doc
+	>=app-text/gnome-doc-utils-0.3.2"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-pkg_setup() {
-	G2CONF="$(use_enable python) $(use_enable doc)"
+src_compile() {
+	econf $(use_enable python) $(use_enable doc) || die "compile failed"
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die "make install failed"
 }

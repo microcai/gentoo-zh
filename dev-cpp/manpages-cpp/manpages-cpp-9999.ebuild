@@ -10,9 +10,9 @@ RESTRICT_PYTHON_ABIS="3.*"
 inherit distutils git
 
 DESCRIPTION="Generates C++ man pages from cplusplus.com"
-HOMEPAGE="https://github.com/Aitjcize/manpages-cpp/"
+HOMEPAGE="https://github.com/Aitjcize/cppman/"
 SRC_URI=""
-EGIT_REPO_URI="git://github.com/Aitjcize/manpages-cpp.git"
+EGIT_REPO_URI="git://github.com/aitjcize/cppman.git"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -20,16 +20,15 @@ KEYWORDS="~amd64 ~x86 ~arm"
 IUSE=""
 
 DEPEND="dev-python/setuptools"
-RDEPEND=""
+RDEPEND="dev-python/sqlite3dbm
+         sys-apps/groff"
 
 PYTHON_MODNAME="cppman"
 
-src_prepare() {
-	sed -i -e "/'share\/doc'/d" setup.py || die "sed failed"
-	sed -i -e 's/^cat.*/man "$1"/' lib/viewer.sh || die "sed failed"
+src_compile () {
+	distutils_src_compile || die "compile failed"
 }
 
 src_install () {
-	distutils_src_install
-	rm ${ED}/usr/bin/cppman-* || die "rm failed"
+	distutils_src_install || die "install failed"
 }

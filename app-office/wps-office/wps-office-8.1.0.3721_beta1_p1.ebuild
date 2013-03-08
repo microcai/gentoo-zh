@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
 
 inherit fdo-mime font unpacker versionator
 
@@ -39,7 +39,7 @@ SRC_URI="http://wdl.cache.ijinshan.com/wps/download/Linux/unstable/${PN}_${MY_VV
 SLOT="0"
 RESTRICT="strip mirror"
 LICENSE="WPS-EULA"
-IUSE="corefonts"
+IUSE="corefonts +sharedfonts"
 
 RDEPEND="
 	x86? (
@@ -86,18 +86,22 @@ src_install() {
 	doexe ${S}/usr/bin/wpp
 	doexe ${S}/usr/bin/et
 
+	if ! use sharedfonts; then
+		insinto /opt/kingsoft/wps-office/office6/fonts
+		doins -r ${S}/usr/share/fonts/wps-office/*
+		rm -rf ${S}/usr/share/fonts || die
+	fi
+
 	insinto /usr
 	doins -r ${S}/usr/share
 
 	insinto /
 	doins -r ${S}/opt
-	fperms 0755 /opt/kingsoft/wps-office/office6/wps
-	fperms 0755 /opt/kingsoft/wps-office/office6/wpp
-	fperms 0755 /opt/kingsoft/wps-office/office6/et
+	fperms 0755 /opt/kingsoft/wps-office/office6/{wps,wpp,et}
 }
 
 pkg_postinst() {
-	font_pkg_postinst
+	use sharedfonts && font_pkg_postinst
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 }
