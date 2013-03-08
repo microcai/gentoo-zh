@@ -33,9 +33,9 @@ RDEPEND="virtual/ttf-fonts
 		x11-libs/libXext
 		x11-libs/libXScrnSaver
 		x11-libs/libXv
-		x11-libs/qt-core:4
-		x11-libs/qt-dbus:4
-		x11-libs/qt-gui:4[accessibility,dbus]
+		dev-qt/qtcore:4
+		dev-qt/qtdbus:4
+		dev-qt/qtgui:4[accessibility,dbus]
 	)
 	selinux? ( sec-policy/selinux-skype )"
 
