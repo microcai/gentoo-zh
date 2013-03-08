@@ -4,19 +4,30 @@
 
 EAPI=5
 
-inherit multilib multilib-build cmake-utils eutils gnome2-utils fdo-mime git-2
+inherit multilib multilib-build cmake-utils eutils gnome2-utils fdo-mime
+
+if [[ ${PV} == "9999" ]]; then
+	inherit git-2
+fi
+
+if [[ ${PV} == "9999" ]]; then
+	EGIT_REPO_URI="git://github.com/fcitx/fcitx.git"
+	SRC_URI="${HOMEPAGE}/files/pinyin.tar.gz
+		table? ( ${HOMEPAGE}/files/table.tar.gz )"
+	KEYWORDS=""
+else
+	SRC_URI="http://fcitx.googlecode.com/files/${P}_dict.tar.xz"
+	RESTRICT="mirror"
+	KEYWORDS="~amd64 ~x86"
+fi
 
 DESCRIPTION="Flexible Context-aware Input Tool with eXtension"
 HOMEPAGE="http://fcitx-im.org/wiki/Fcitx"
-EGIT_REPO_URI="git://github.com/fcitx/fcitx.git"
-SRC_URI="http://fcitx.googlecode.com/files/${P}_dict.tar.xz"
-
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="+autostart +cairo +dbus debug +glib +gtk +gtk3 +icu +introspection lua
 +pango +qt4 +snooper static-libs +table test +X +xml"
-RESTRICT="mirror"
 
 RDEPEND="
 	cairo? (
