@@ -1,5 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
+# Distributed under the terms of the GNU General Public License v3
 # $Header: $
 
 EAPI="4"
@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]]; then
 	GOAGENT_SRC_URI=""
 	GOAGENT_ECLASS="git-2"
 else
-	GOAGENT_SRC_URI="https://github.com/goagent/goagent/tarball/${PV} -> ${P}.tar.gz"
+	GOAGENT_SRC_URI="https://github.com/goagent/goagent/archive/${PV}.tar.gz -> ${P}.tar.gz"
 	RESTRICT="mirror"
 	GOAGENT_ECLASS="vcs-snapshot"
 	KEYWORDS="~amd64 ~x86"
@@ -24,10 +24,11 @@ HOMEPAGE="https://github.com/goagent/goagent"
 SRC_URI="${GOAGENT_SRC_URI}"
 
 LICENSE="GPL-3"
-SLOT="1"
+SLOT="2.1"
 IUSE=""
 
 RDEPEND="dev-lang/python:2.7[ssl]
+	dev-python/gevent
 	dev-python/pyopenssl"
 
 src_unpack() {
