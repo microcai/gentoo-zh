@@ -26,7 +26,8 @@ DEP="gnome? ( >=gnome-base/libbonobo-2.2.0
 		>=gnome-base/libgnomeui-2.20
 		>=gnome-base/gconf-2.6
 		>=gnome-base/orbit-2.6
-		app-text/scrollkeeper )
+		app-text/scrollkeeper
+		app-text/gnome-doc-utils )
 	spell? ( app-text/enchant )
 	gucharmap? ( >=gnome-extra/gucharmap-2.22.1 )
 	gpe? (
@@ -62,11 +63,12 @@ src_configure(){
 		$(use_enable festival)
 		--disable-tools
 		--disable-advertisement
-		--disable-updateinfo"
+		--disable-updateinfo
+		"
 	if use gnome ; then
-		G2CONF+="--enable-scrollkeeper"
+		G2CONF+="--enable-scrollkeeper "
 	else
-		G2CONF+="--disable-scrollkeeper"				
+		G2CONF+="--disable-scrollkeeper "				
 	fi
 	gnome2_src_configure
 }
