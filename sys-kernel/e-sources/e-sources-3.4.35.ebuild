@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI="4"
-ETYPE="sources"
+K_GENPATCHES_VER="17"
 
 ck_version="3"
 bfq_version="6"
