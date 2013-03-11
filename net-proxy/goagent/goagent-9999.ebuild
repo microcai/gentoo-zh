@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]]; then
 	GOAGENT_SRC_URI=""
 	GOAGENT_ECLASS="git-2"
 else
-	GOAGENT_SRC_URI="https://github.com/goagent/goagent/tarball/v${PV} -> ${P}.tar.gz"
+	GOAGENT_SRC_URI="https://github.com/goagent/goagent/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	RESTRICT="mirror"
 	GOAGENT_ECLASS="vcs-snapshot"
 	KEYWORDS="~amd64 ~x86"
