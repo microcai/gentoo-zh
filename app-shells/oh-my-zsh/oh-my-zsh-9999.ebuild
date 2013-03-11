@@ -24,4 +24,8 @@ src_install() {
 	dodir /usr/share/${PN}
 	insinto /usr/share/${PN}
 	doins -r ${S}/*
+	
+	dosed 's:$HOME/.oh-my-zsh:/usr/share/oh-my-zsh:g' /usr/share/${PN}/templates/zshrc.zsh-template
+	dodir /etc/skel
+	cp ${D}/usr/share/${PN}/templates/zshrc.zsh-template ${D}/etc/skel/.zshrc 
 }
