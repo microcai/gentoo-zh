@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=5
 
 EGIT_BRANCH="master"
 EGIT_REPO_URI="git://github.com/robbyrussell/oh-my-zsh.git"
@@ -25,7 +26,7 @@ src_install() {
 	insinto /usr/share/${PN}
 	doins -r ${S}/*
 	
-	dosed 's:$HOME/.oh-my-zsh:/usr/share/oh-my-zsh:g' /usr/share/${PN}/templates/zshrc.zsh-template
+	sed 's:$HOME/.oh-my-zsh:/usr/share/oh-my-zsh:g' ${D}/usr/share/${PN}/templates/zshrc.zsh-template
 	dodir /etc/skel
 	cp ${D}/usr/share/${PN}/templates/zshrc.zsh-template ${D}/etc/skel/.zshrc 
 }
