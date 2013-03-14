@@ -20,6 +20,7 @@ SRCS+= zipfile.c
 VPATH+= extras/ext4_utils
 SRCS+= allocate.c
 SRCS+= contents.c
+SRCS+= crc16.c
 SRCS+= ext4_utils.c
 SRCS+= extent.c
 SRCS+= indirect.c
