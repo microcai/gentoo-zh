@@ -20,11 +20,6 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/biabiamiamia_v${PV}"
 
-src_prepare(){
-	cd ${S}
-
-}
-
 src_install(){
 	cd ${BUILD_DIR}
 	dodir /usr/bin
