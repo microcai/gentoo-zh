@@ -92,7 +92,7 @@ RDEPEND="${DEPEND}"
 # you only need to call it if you need a different behaviour.
 # This function is available only in EAPI 2 and later.
 src_configure() {
-      qmake_opts="DEFINES=`usex hal hal``usex udisks udisks``usex udisks2 udisks2`"
+      qmake_opts="PREFIX=/usr DEFINES=`usex hal hal``usex udisks udisks``usex udisks2 udisks2`"
       eqmake4 $qmake_opts
 }
 
