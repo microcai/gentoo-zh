@@ -12,7 +12,7 @@ SRC_URI="https://github.com/avplayer/avbot/tarball/v${PV} -> avbot-${PV}.tar.gz
 
 LICENSE="GPL"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 inherit cmake-utils vcs-snapshot
