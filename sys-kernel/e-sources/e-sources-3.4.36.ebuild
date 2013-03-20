@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI="4"
-K_GENPATCHES_VER="17"
+K_GENPATCHES_VER="18"
 
 ck_version="3"
 bfq_version="6"
@@ -13,7 +13,7 @@ fbcondecor_version="0.9.6"
 bfq_kernel_version="3.4.0"
 cjktty_kernel_version="3.4.0"
 imq_kernel_version="3.3.0"
-uksm_kernel_version="3.4.24"
+uksm_kernel_version="3.4.36"
 
 SUPPORTED_USE="+ck +bfq +imq +uksm +fbcondecor"
 
