@@ -97,10 +97,10 @@ update_gtk2_immodules() {
 	fi
 }
 
-src_prepare() {
+#src_prepare() {
 	# patch fcitx to let fcitx-sunpinyin to build with gcc 4.6
-	epatch "${FILESDIR}/${P}-gcc46-compatible.patch"
-}
+#	epatch "${FILESDIR}/${P}-gcc46-compatible.patch"
+#}
 
 src_configure() {
 	local mycmakeargs=(

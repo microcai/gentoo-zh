@@ -28,8 +28,10 @@ RESTRICT="mirror strip"
 
 QA_PRESTRIPPED="opt/linuxqq/qq"
 
+S=$WORKDIR
+
 src_install() {
-	tar xzvf data.tar.gz -C ${D}/
+	tar xzvf data.tar.gz -C ${D}/	
 	chmod 755 ${D}/opt
 	chmod 755 ${D}/usr
 	cp ${FILESDIR}/qq2012.sh ${D}/opt/bin/qq2012.sh
