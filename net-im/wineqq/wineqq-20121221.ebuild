@@ -34,7 +34,8 @@ src_install() {
 	tar xzvf data.tar.gz -C ${D}/	
 	chmod 755 ${D}/opt
 	chmod 755 ${D}/usr
-	cp ${FILESDIR}/qq2012.sh ${D}/opt/bin/qq2012.sh
+	cp -f ${FILESDIR}/qq2012.sh ${D}/opt/longene/qq2012/qq2012.sh
+	cp ${D}/opt/longene/qq2012/qq2012-test.desktop ${D}/usr/share/applications/
 	rm -rf ${D}/opt/longene/qq2012/wine
 }
 
