@@ -19,7 +19,7 @@ REQUIRED_USE="|| ( pinyin shuangpin zhuyin )"
 RESTRICT="mirror"
 
 RDEPEND=">=app-i18n/fcitx-4.2.4
-	app-i18n/libpinyin
+	>=app-i18n/libpinyin-0.8.93
 	dev-libs/glib:2"
 DEPEND="${RDEPEND}
 	dev-util/intltool
