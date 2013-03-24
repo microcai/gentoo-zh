@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,9 +6,9 @@ EAPI="4"
 
 DESCRIPTION="Library to deal with pinyin."
 HOMEPAGE="https://github.com/libpinyin/libpinyin"
-SRC_URI="https://github.com/downloads/${PN}/${PN}/${PN}-lite-${PV}.tar.gz
+SRC_URI="http://downloads.sourceforge.net/${PN}/libpinyin/${PN}-lite-${PV}.tar.gz
 		-> ${P}.tar
-	https://github.com/downloads/${PN}/${PN}/model.text.tar.gz"
+	http://downloads.sourceforge.net/${PN}/models/model5.text.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
