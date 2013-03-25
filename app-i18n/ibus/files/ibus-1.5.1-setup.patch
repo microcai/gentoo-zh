@@ -1,0 +1,30 @@
+From 8ac534fc002356b93e2015a8866f1ea89e3895f9 Mon Sep 17 00:00:00 2001
+From: fujiwarat <takao.fujiwara1@gmail.com>
+Date: Sat, 15 Dec 2012 17:40:18 +0900
+Subject: [PATCH] Use Variant.unpack() instead of Variant.dup_strv().
+
+Variant.dup_strv() returns a tuple in pygobject 3.2, e.g. (['<Control>space'], 1L), and a list in pygobject 3.4, e.g. ['<Control>space'] .
+
+BUG=RH#887153
+
+Review URL: https://codereview.appspot.com/6941051
+---
+ setup/main.py |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup/main.py b/setup/main.py
+index a8acc7a..707faa4 100644
+--- a/setup/main.py
++++ b/setup/main.py
+@@ -87,7 +87,7 @@ def __init_hotkey(self):
+         label = 'switch_engine'
+         variant = self.__config.get_value('general/hotkey', name)
+         if variant != None:
+-            shortcuts = variant.dup_strv()
++            shortcuts = variant.unpack()
+         else:
+             shortcuts =  ['<Control>space']
+ 
+-- 
+1.7.10
+
