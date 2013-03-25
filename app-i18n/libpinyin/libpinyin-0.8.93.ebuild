@@ -21,9 +21,11 @@ DEPEND=">=sys-libs/db-4
 "
 RDEPEND="${DEPEND}"
 
-src_prepare() {
-	ln -s "${DISTDIR}/model.text.tar.gz" "${S}/data" || die "link file error"
-	sed -i '/wget.*model\.text\.tar\.gz/ d' "${S}/data/Makefile.am"
 
-	default_src_prepare
+src_prepare() {
+	ln -s "${DISTDIR}"/model.text.tar.gz data || die
+	sed -e '/wget/d' -i data/Makefile.am || die
+	epatch_user
+	eautoreconf
 }
+
