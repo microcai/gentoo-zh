@@ -1,7 +1,7 @@
 From 0eb1fd90d2b8c6135e81acca1fb5066012bbba4d Mon Sep 17 00:00:00 2001
 From: Weng Xuetian <wengxt@gmail.com>
 Date: Sun, 24 Feb 2013 10:04:31 -0500
-Subject: [PATCH 2/3] [rime] fix preedit
+Subject: [PATCH 3/4] [rime] fix preedit
 
 ---
  src/fcitx-rime.c | 3 ---

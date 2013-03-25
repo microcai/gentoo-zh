@@ -23,8 +23,7 @@ RDEPEND=">=app-i18n/fcitx-4.2.7
 DEPEND="${RDEPEND}"
 
 src_prepare(){
-	epatch "${FILESDIR}/0001-rime-Fix-Issue-7.patch"
-	epatch "${FILESDIR}/0002-rime-fix-preedit.patch"
+	EPATCH_SOURCE="${FILESDIR}" EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" epatch
 }
 
 pkg_postinst() {
