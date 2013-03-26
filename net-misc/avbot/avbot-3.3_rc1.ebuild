@@ -4,11 +4,16 @@
 
 EAPI=4
 
+AVHTTP_SHA1="3260f5e7136da45cc28e10a96a713942c05ffa16"
+AVPROXY_SHA1="a179afc0b814ce4827515ff1d6ffe4d4a0f4aa5e"
+
+RESTRICT="mirror"
+
 DESCRIPTION="avbot connects QQ/XMPP/IRC"
 HOMEPAGE="http://qqbot.avplayer.org"
 SRC_URI="https://github.com/avplayer/avbot/tarball/v${PV} -> avbot-${PV}.tar.gz
-		https://github.com/avplayer/avhttp/tarball/9f9d1b09141226b537cbe98c257017c8b4478c6e ->
-		avbot-avhttp-${PV}.tar.gz"
+		https://github.com/avplayer/avhttp/tarball/${AVHTTP_SHA1} -> avbot-avhttp-${PV}.tar.gz
+		https://github.com/avplayer/avproxy/tarball/${AVPROXY_SHA1} -> avbot-avproxy-${PV}.tar.gz"
 
 LICENSE="GPL"
 SLOT="0"
@@ -28,11 +33,13 @@ src_unpack(){
 	vcs-snapshot_src_unpack
 	rm avbot-${PV}/libwebqq/avhttp -rf
 	mv avbot-avhttp-${PV} avbot-${PV}/libwebqq/avhttp
+	rm avbot-${PV}/avproxy -rf
+	mv avbot-avproxy-${PV} avbot-${PV}/avproxy
 }
 
 
 src_configure(){
-	local mycmakeargs=(
+	local amycmakeargs=(
 		-DINTERNALGLOOX=OFF
 	)
 	cmake-utils_src_configure
