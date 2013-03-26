@@ -22,7 +22,7 @@ HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches"
 DESCRIPTION="Full sources for the Linux kernel including: gentoo, ck, bfq and other patches"
 SRC_URI="${GENPATCHES_URI}"
 
-KNOWN_FEATURES="ck bfq imq cjktty uksm reiser4 fbcondecor"
+KNOWN_FEATURES="ck bfq ice imq cjktty uksm reiser4 fbcondecor"
 
 USE_ENABLE() {
 	local USE=$1
@@ -56,10 +56,29 @@ USE_ENABLE() {
 				HOMEPAGE="${HOMEPAGE} ${cjktty_url}"
 				SRC_URI="
 					${SRC_URI}
-					cjktty?		( ${cjktty_src} )
+					cjktty?	( ${cjktty_src} )
 				"
 				if [ "${SUPPORTED_USE/cjktty/}" != "$SUPPORTED_USE" ];
 					then CJKTTY_PATCHES="${DISTDIR}/cjktty-for-${cjktty_kernel_version}.patch.xz:1";
+				fi
+			;;
+		ice)		ice_url="http://tuxonice.net"
+				if [ "${ice_kernel_version/$KMV./}" = 0 ]
+					then ice_src="${ice_url}/downloads/all/tuxonice-for-linux-${ice_kernel_version}-${ice_version//./-}.patch.bz2"
+					else ice_src="${ice_url}/downloads/all/tuxonice-for-linux-${KMV}-${ice_kernel_version/$KMV./}-${ice_version//./-}.patch.bz2"
+				fi
+				HOMEPAGE="${HOMEPAGE} ${ice_url}"
+				SRC_URI="
+					${SRC_URI}
+					ice?	( ${ice_src} )
+				"
+				RDEPEND="
+					${RDEPEND}
+					ice?	( >=sys-apps/tuxonice-userui-1.0 ( || ( >=sys-power/hibernate-script-2.0 sys-power/pm-utils ) ) )
+				"
+				if [ "${ice_kernel_version/$KMV./}" = 0 ]
+					then ICE_PATCHES="${DISTDIR}/tuxonice-for-linux-${ice_kernel_version}-${ice_version//./-}.patch.bz2:1"
+					else ICE_PATCHES="${DISTDIR}/tuxonice-for-linux-${KMV}-${ice_kernel_version/$KMV./}-${ice_version//./-}.patch.bz2:1"
 				fi
 			;;
 		imq)		imq_url="http://www.linuximq.net"
@@ -110,6 +129,7 @@ done
 use ck && UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_PATCHES}"
 use bfq && UNIPATCH_LIST="${UNIPATCH_LIST} ${BFQ_PATCHES}"
 use cjktty && UNIPATCH_LIST="${UNIPATCH_LIST} ${CJKTTY_PATCHES}"
+use ice && UNIPATCH_LIST="${UNIPATCH_LIST} ${ICE_PATCHES}"
 use imq && UNIPATCH_LIST="${UNIPATCH_LIST} ${IMQ_PATCHES}"
 use uksm && UNIPATCH_LIST="${UNIPATCH_LIST} ${UKSM_PATCHES}"
 use reiser4 && UNIPATCH_LIST="${UNIPATCH_LIST} ${REISER4_PATCHES}"

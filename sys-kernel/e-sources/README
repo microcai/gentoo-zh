@@ -3,13 +3,14 @@ sys-kernel/e-sources : full sources for the Linux kernel including:
 	ck - Con Kolivas' high performance patchset
 	cjktty - CJK tty font support
 	bfq - budget fair queueing budget I/O scheduler
-	genpatches - a kernel patchset aims to support the entire range of Gentoo-supported architectures
+	genpatches - a gentoo offical supported kernel patchset
+	ice - another linux hibernate kernel patchset 
 	imq - intermediate queueing device
 	reiser4 - Reiser4 file system
 	uksm - ultra kernel samepage merging
 	fbcondecor - display pictures in the background of system consoles
 	..
 
-3.4.y : ck bfq imq uksm fbcondecor
-3.7.y : ck bfq imq uksm cjktty reiser4 uksm fbcondecor
-3.8.y : ck bfq cjktty fbcondecor
+3.4.y : ck bfq ice imq uksm fbcondecor
+3.7.y : ck bfq ice imq uksm cjktty reiser4 uksm fbcondecor
+3.8.y : ck bfq ice cjktty uksm fbcondecor
