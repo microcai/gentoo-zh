@@ -50,6 +50,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-scanner-header.patch"
 	epatch "${FILESDIR}/${P}-flex-size_t.patch"
+	epatch "${FILESDIR}/${P}-this.patch"
 }
 
 pkg_preinst() {
