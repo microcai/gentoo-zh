@@ -12,7 +12,7 @@ SRC_URI="http://packages.linuxdeepin.com/deepin/pool/main/f/fcitx-sogoupinyin/${
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE=""
 RESTRICT="mirror"
 
