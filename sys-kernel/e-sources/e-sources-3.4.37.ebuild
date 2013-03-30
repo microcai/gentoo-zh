@@ -7,17 +7,17 @@ K_GENPATCHES_VER="19"
 
 ck_version="3"
 bfq_version="6"
-ice_version="2013.02.23"
 uksm_version="0.1.2.2"
 fbcondecor_version="0.9.6"
+tuxonice_version="2013.02.23"
 
 bfq_kernel_version="3.4.0"
 cjktty_kernel_version="3.4.0"
-ice_kernel_version="3.4.33"
 imq_kernel_version="3.3.0"
 uksm_kernel_version="3.4.36"
+tuxonice_kernel_version="3.4.33"
 
-SUPPORTED_USE="+ck +bfq +ice imq +uksm +fbcondecor"
+SUPPORTED_USE="+ck +bfq +tuxonice imq +uksm +fbcondecor"
 
 CK_PRE_PATCH="${FILESDIR}/${PN}-3.4-pre-ck-fix_task_group.patch"
 CK_POST_PATCH="${FILESDIR}/${PN}-3.4-post-ck-fix_task_group.patch ${FILESDIR}/${PN}-3.4-post-ck-fix_calc_load_idle.patch"
