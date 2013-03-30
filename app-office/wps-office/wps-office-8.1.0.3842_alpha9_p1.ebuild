@@ -18,7 +18,7 @@ fi
 
 case ${PV} in
 	*_alpha*)
-		KEYWORDS="~amd64 ~x86"
+		KEYWORDS=""
 		MY_VV=${MY_PV}~${MY_V/alpha/a}${MY_SP}
 		;;
 	*_beta*)
