@@ -12,12 +12,12 @@ EGIT_REPO_URI="git://github.com/mpv-player/mpv.git"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 x86"
 
-IUSE="+alsa aqua bluray bs2b cddb +cdio debug +dts dvb +dvd +enca encode fbcon ftp
-+iconv ipv6 jack joystick jpeg kernel_linux ladspa lcms +libass libcaca lirc mng +mp3
-+network -openal +opengl oss portaudio +postproc pulseaudio pvr quvi radio samba +shm
-v4l vcd vdpau +X xinerama +xscreensaver +xv"
+IUSE="+alsa aqua bluray bs2b cddb +cdio debug +dts dvb dvd +enca encode fbcon ftp
++iconv ipv6 jack joystick jpeg kernel_linux ladspa lcms +libass libcaca lirc mng mp3
+network openal opengl oss portaudio +postproc pulseaudio pvr quvi radio samba +shm
+v4l vcd vdpau +X xinerama xscreensaver xv"
 
 REQUIRED_USE="
 	cddb? ( cdio network )
@@ -149,7 +149,6 @@ src_configure() {
 		myconf+="
 			--disable-lirc
 			--disable-lircc
-			--disable-apple-ir
 		"
 	fi
 
@@ -176,7 +175,6 @@ src_configure() {
 	#####################################
 	# DVB / Video4Linux / Radio support #
 	#####################################
-	myconf+=" --disable-tv-bsdbt848"
 	if { use dvb || use v4l || use pvr || use radio; }; then
 		use dvb || myconf+=" --disable-dvb"
 		use pvr || myconf+=" --disable-pvr"
@@ -189,7 +187,6 @@ src_configure() {
 		else
 			myconf+="
 				--disable-radio-v4l2
-				--disable-radio-bsdbt848
 			"
 		fi
 	else
@@ -198,7 +195,6 @@ src_configure() {
 			--disable-tv-v4l2
 			--disable-radio
 			--disable-radio-v4l2
-			--disable-radio-bsdbt848
 			--disable-dvb
 			--disable-pvr"
 	fi
