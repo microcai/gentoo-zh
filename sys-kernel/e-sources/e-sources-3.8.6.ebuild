@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI="4"
-K_GENPATCHES_VER="8"
+K_GENPATCHES_VER="9"
 
 ck_version="1"
 bfq_version="6"
@@ -14,8 +14,9 @@ fbcondecor_version="0.9.6"
 bfq_kernel_version="3.8.0"
 cjktty_kernel_version="3.8.1"
 tuxonice_kernel_version="3.8.0"
+reiser4_kernel_version="3.8.5"
 uksm_kernel_version="3.8.3"
 
-SUPPORTED_USE="+ck +bfq +cjktty +tuxonice +uksm fbcondecor"
+SUPPORTED_USE="+ck +bfq +cjktty +tuxonice +reiser4 +uksm fbcondecor"
 
 inherit e-sources

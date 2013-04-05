@@ -20,6 +20,6 @@ reiser4_kernel_version="3.7.1"
 
 SUPPORTED_USE="+ck +bfq +tuxonice imq +cjktty reiser4 +uksm fbcondecor"
 
-CK_POST_PATCH="${FILESDIR}/${PN}-3.7-post-bfs426-427.patch"
+CK_POST_PATCH="${FILESDIR}/${PN}-3.7-bfs426-427.patch"
 
 inherit e-sources
