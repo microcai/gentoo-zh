@@ -43,3 +43,14 @@ src_install(){
 	doins -r ${S}/usr/share/locale
 }
 
+pkg_postinst(){
+	einfo
+	einfo "After install the fcitx-sogoupinyin, a restart of fcitx is"
+	einfo "expected."
+	einfo
+	einfo "If you could not find Sogoupinyin in the Fcitx Input Method"
+	einfo "choice box, you may need to remove your configure file of"
+	einfo "fcitx-cloudpinyin, which locate in ~/.config/fcitx/addon and"
+	einfo "~/.config/fcitx/conf."
+	einfo
+}
