@@ -5,9 +5,12 @@
 EAPI="4"
 K_DEBLOB_AVAILABLE=0
 
+tuxonice_version="2013.04.09"
+
 cjktty_kernel_version="3.8.1"
+tuxonice_kernel_version="3.9.0-rc6"
 
 KEYWORDS=""
-SUPPORTED_USE="+cjktty"
+SUPPORTED_USE="+cjktty +tuxonice"
 
 inherit e-sources

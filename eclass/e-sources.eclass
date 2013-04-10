@@ -61,7 +61,7 @@ USE_ENABLE() {
 				fi
 			;;
 		tuxonice)		tuxonice_url="http://tuxonice.net"
-				if [ "${tuxonice_kernel_version/$KMV./}" = 0 ]
+				if [[ "${tuxonice_kernel_version/$KMV./}" =~ "0" ]]
 					then tuxonice_src="${tuxonice_url}/downloads/all/tuxonice-for-linux-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2"
 					else tuxonice_src="${tuxonice_url}/downloads/all/tuxonice-for-linux-${KMV}-${tuxonice_kernel_version/$KMV./}-${tuxonice_version//./-}.patch.bz2"
 				fi
@@ -74,7 +74,7 @@ USE_ENABLE() {
 					${RDEPEND}
 					tuxonice?	( >=sys-apps/tuxonice-userui-1.0 ( || ( >=sys-power/hibernate-script-2.0 sys-power/pm-utils ) ) )
 				"
-				if [ "${tuxonice_kernel_version/$KMV./}" = 0 ]
+				if [[ "${tuxonice_kernel_version/$KMV./}" =~ "0" ]]
 					then ICE_PATCHES="${DISTDIR}/tuxonice-for-linux-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2:1"
 					else ICE_PATCHES="${DISTDIR}/tuxonice-for-linux-${KMV}-${tuxonice_kernel_version/$KMV./}-${tuxonice_version//./-}.patch.bz2:1"
 				fi
