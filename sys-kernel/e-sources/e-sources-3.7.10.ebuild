@@ -4,6 +4,7 @@
 
 EAPI="4"
 K_GENPATCHES_VER="13"
+K_DEBLOB_AVAILABLE="1"
 
 ck_version="1"
 bfq_version="6"
@@ -18,6 +19,7 @@ imq_kernel_version="3.7.0"
 uksm_kernel_version="3.7.10"
 reiser4_kernel_version="3.7.1"
 
+KEYWORDS="~amd64 ~x86"
 SUPPORTED_USE="+ck +bfq +tuxonice imq +cjktty reiser4 +uksm fbcondecor"
 
 CK_POST_PATCH="${FILESDIR}/${PN}-3.7-bfs426-427.patch"

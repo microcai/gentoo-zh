@@ -13,3 +13,4 @@ sys-kernel/e-sources : full linux kernel sources based on sys-kernel/gentoo-sour
 
 3.7.y : ck bfq cjktty fbcondecor imq reiser4 tuxonice uksm
 3.8.y : ck bfq cjktty fbcondecor reiser4 tuxonice uksm
+3.9.y : cjktty

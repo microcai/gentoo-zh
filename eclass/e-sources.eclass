@@ -4,7 +4,6 @@ RESTRICT="mirror"
 K_WANT_GENPATCHES="base extras"
 K_NOSETEXTRAVERSION="yes"
 K_SECURITY_UNSUPPORTED="1"
-K_DEBLOB_AVAILABLE="1"
 
 ETYPE="sources"
 inherit kernel-2
@@ -16,7 +15,6 @@ KMSV="$(get_version_component_range 1).0"
 
 SLOT="${KMV}"
 RDEPEND=">=sys-devel/gcc-4.5"
-KEYWORDS="~amd64 ~x86"
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches"
 
 DESCRIPTION="Full sources for the Linux kernel including: gentoo, ck, bfq and other patches"
