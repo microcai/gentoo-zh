@@ -1,5 +1,6 @@
 SRCS+= adb.c
 SRCS+= adb_client.c
+SRCS+= adb_auth_host.c
 SRCS+= commandline.c
 SRCS+= console.c
 SRCS+= fdevent.c
@@ -28,11 +29,15 @@ SRCS+= centraldir.c
 SRCS+= zipfile.c
 
 CPPFLAGS+= -DADB_HOST=1
+CPPFLAGS+= -DADB_HOST_ON_TARGET=1
 CPPFLAGS+= -DHAVE_FORKEXEC=1
+CPPFLAGS+= -Wno-unused-parameter
+CPPFLAGS+= -D_XOPEN_SOURCE
+CPPFLAGS+= -D_GNU_SOURCE
 CPPFLAGS+= -I.
 CPPFLAGS+= -I../include
 
-LIBS+= -lpthread -lz
+LIBS+= -lcrypto -lpthread -lz
 
 OBJS= $(SRCS:.c=.o)
 
