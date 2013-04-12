@@ -10,7 +10,6 @@ DESCRIPTION="android debug bridge"
 HOMEPAGE="android.googlesource.com"
 
 EGIT_REPO_URI="http://android.googlesource.com/platform/system/core.git"
-EGIT_BRANCH="tools_r21"
 
 LICENSE="Apache-2.0"
 SLOT="0"
