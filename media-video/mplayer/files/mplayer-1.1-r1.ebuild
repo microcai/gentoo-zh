@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1-r1.ebuild,v 1.21 2013/03/21 07:08:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1-r1.ebuild,v 1.20 2013/02/08 13:41:43 aballier Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
 +libass libcaca libmpeg2 lirc +live lzo mad md5sum +mmx mmxext mng +mp3 nas
 +network nut openal +opengl +osdmenu oss png pnm pulseaudio pvr +quicktime
 radio +rar +real +rtc rtmp samba +shm sdl +speex sse sse2 ssse3
-tga +theora +tremor +truetype +toolame +twolame +unicode v4l vaapi vdpau vidix
+tga +theora +tremor +truetype +toolame +twolame +unicode v4l vdpau vaapi vidix
 +vorbis win32codecs +X +x264 xanim xinerama +xscreensaver +xv +xvid xvmc
 zoran"
 
@@ -196,6 +196,8 @@ PATCHES=(
 	"${FILESDIR}/${P}-ffmpeg.patch"
 	"${FILESDIR}/${P}-libav-0.8.patch"
 	"${FILESDIR}/${P}-codecid.patch"
+        "${FILESDIR}/${P}-vaapi.patch"
+        "${FILESDIR}/${P}-subtitles-style.patch"
 )
 
 pkg_setup() {
@@ -273,10 +275,6 @@ src_prepare() {
 			"${FILESDIR}/${P}-planaraudio.patch" \
 			"${FILESDIR}/${P}-missingbreak.patch"
 	fi
-
-	# Use sane default for >=virtual/udev-197
-	sed -i -e '/default_dvd_device/s:/dev/dvd:/dev/cdrom:' configure || die
-	use vaapi && epatch "${FILESDIR}/${P}-vaapi.patch"
 }
 
 src_configure() {
@@ -471,6 +469,7 @@ src_configure() {
 	use fbcon && use video_cards_s3virge && myconf+=" --enable-s3fb"
 	use libcaca || myconf+=" --disable-caca"
 	use zoran || myconf+=" --disable-zr"
+        use vaapi && myconf+=" --enable-vaapi"
 
 	if ! use kernel_linux || ! use video_cards_mga; then
 		 myconf+=" --disable-mga --disable-xmga"
