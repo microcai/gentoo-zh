@@ -304,6 +304,7 @@ src_configure() {
 		--disable-kai
 		$(use_enable network networking)
 		$(use_enable joystick)
+		$(use_enable vaapi)
 	"
 	uses="bl bluray enca ftp rtc" # nemesi <- not working with in-tree ebuild
 	myconf+=" --disable-nemesi" # nemesi automagic disable
