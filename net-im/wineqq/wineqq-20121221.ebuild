@@ -13,16 +13,17 @@ SRC_URI="http://www.longene.org/download/WineQQ2012-${PV}-Longene.deb"
 LICENSE="Tencent"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="system-wine"
 
-DEPEND="amd64? (
-			app-emulation/emul-linux-x86-gtklibs
+RDEPEND="amd64? (
+		app-emulation/emul-linux-x86-gtklibs
         )
-		>=app-emulation/wine-1.5.23[abi_x86_32,-abi_x86_x32,-abi_x86_64,fontconfig,mp3,truetype,X,nls,xml]
-		!amd64? ( x11-libs/gtk+:2 )
-		"
-
-RDEPEND="${DEPEND}"
+	system-wine? (
+		>=app-emulation/wine-1.5.23[abi_x86_32,-abi_x86_x32,-abi_x86_64,fontconfig,mp3,truetype,X,nls,xml] 
+		<=app-emulation/wine-1.5.26[abi_x86_32,-abi_x86_x32,-abi_x86_64,fontconfig,mp3,truetype,X,nls,xml] 
+	)
+	!amd64? ( x11-libs/gtk+:2 )
+"
 
 RESTRICT="mirror strip"
 
@@ -34,8 +35,9 @@ src_install() {
 	tar xzvf data.tar.gz -C ${D}/	
 	chmod 755 ${D}/opt
 	chmod 755 ${D}/usr
-	cp -f ${FILESDIR}/qq2012.sh ${D}/opt/longene/qq2012/qq2012.sh
 	cp ${D}/opt/longene/qq2012/qq2012-test.desktop ${D}/usr/share/applications/
-	rm -rf ${D}/opt/longene/qq2012/wine
+	if use system-wine ; then
+	    cp -f ${FILESDIR}/qq2012.sh ${D}/opt/longene/qq2012/qq2012.sh
+	    rm -rf ${D}/opt/longene/qq2012/wine
+	fi
 }
-
