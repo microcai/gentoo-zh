@@ -12,6 +12,7 @@ uksm_version="0.1.2.2"
 fbcondecor_version="0.9.6"
 tuxonice_version="2013.02.20"
 
+aufs_kernel_version="3.7.10"
 bfq_kernel_version="3.7.0"
 cjktty_kernel_version="3.7.0"
 tuxonice_kernel_version="3.7.9"
@@ -20,7 +21,7 @@ uksm_kernel_version="3.7.10"
 reiser4_kernel_version="3.7.1"
 
 KEYWORDS="~amd64 ~x86"
-SUPPORTED_USE="+ck +bfq +tuxonice imq +cjktty reiser4 +uksm fbcondecor"
+SUPPORTED_USE="+aufs +ck +bfq +tuxonice imq +cjktty reiser4 +uksm fbcondecor"
 
 CK_POST_PATCH="${FILESDIR}/${PN}-3.7-bfs426-427.patch"
 

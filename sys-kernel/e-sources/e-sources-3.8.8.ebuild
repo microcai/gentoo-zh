@@ -6,6 +6,7 @@ EAPI="4"
 K_GENPATCHES_VER="10"
 K_DEBLOB_AVAILABLE="1"
 
+aufs_version="2013.04.01"
 ck_version="1"
 bfq_version="6"
 tuxonice_version="2013.02.20"
@@ -19,6 +20,6 @@ reiser4_kernel_version="3.8.5"
 uksm_kernel_version="3.8.3"
 
 KEYWORDS="~amd64 ~x86"
-SUPPORTED_USE="+ck +bfq +cjktty +tuxonice +reiser4 +uksm fbcondecor"
+SUPPORTED_USE="+aufs +ck +bfq +cjktty +tuxonice +reiser4 +uksm fbcondecor"
 
 inherit e-sources

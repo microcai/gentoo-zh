@@ -20,7 +20,7 @@ HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches"
 DESCRIPTION="Full sources for the Linux kernel including: gentoo, ck, bfq and other patches"
 SRC_URI="${GENPATCHES_URI}"
 
-KNOWN_FEATURES="ck bfq tuxonice imq cjktty uksm reiser4 fbcondecor"
+KNOWN_FEATURES="aufs ck bfq tuxonice imq cjktty uksm reiser4 fbcondecor"
 
 USE_ENABLE() {
 	local USE=$1
@@ -31,6 +31,24 @@ USE_ENABLE() {
 
 	case ${USE} in
 
+		aufs)		aufs_url="http://aufs.sourceforge.net"
+				if [ "${aufs_kernel_version}" != "" ]; then
+					aufs_tarball="aufs-sources-${aufs_kernel_version}.tar.xz"
+				else
+					aufs_tarball="aufs-sources-${KMV}_p${aufs_version//./}.tar.xz"
+				fi
+				aufs_src="http://dev.gentoo.org/~jlec/distfiles/${aufs_tarball}"
+				HOMEPAGE="${HOMEPAGE} ${aufs_url}"
+				SRC_URI="
+					${SRC_URI}
+					aufs?	( ${aufs_src} )
+				"
+				RDEPEND="
+					${RDEPEND}
+					aufs?	( >=sys-fs/aufs-util-3.8 )
+				"
+				AUFS_PATCHES=""${WORKDIR}"/aufs3-base.patch "${WORKDIR}"/aufs3-proc_map.patch "${WORKDIR}"/aufs3-kbuild.patch "${WORKDIR}"/aufs3-standalone.patch"
+			;;
 		ck)		ck_url="http://ck.kolivas.org/patches"
 				ck_src="${ck_url}/${KMSV}/${KMV}/${KMV}-ck${ck_version}/patch-${KMV}-ck${ck_version}.bz2"
 				HOMEPAGE="${HOMEPAGE} ${ck_url}"
@@ -75,8 +93,8 @@ USE_ENABLE() {
 					tuxonice?	( >=sys-apps/tuxonice-userui-1.0 ( || ( >=sys-power/hibernate-script-2.0 sys-power/pm-utils ) ) )
 				"
 				if [[ "${tuxonice_kernel_version/$KMV./}" =~ "0" ]]
-					then ICE_PATCHES="${DISTDIR}/tuxonice-for-linux-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2:1"
-					else ICE_PATCHES="${DISTDIR}/tuxonice-for-linux-${KMV}-${tuxonice_kernel_version/$KMV./}-${tuxonice_version//./-}.patch.bz2:1"
+					then TUXONICE_PATCHES="${DISTDIR}/tuxonice-for-linux-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2:1"
+					else TUXONICE_PATCHES="${DISTDIR}/tuxonice-for-linux-${KMV}-${tuxonice_kernel_version/$KMV./}-${tuxonice_version//./-}.patch.bz2:1"
 				fi
 			;;
 		imq)		imq_url="http://www.linuximq.net"
@@ -106,7 +124,7 @@ USE_ENABLE() {
 				"
 				REISER4_PATCHES="${DISTDIR}/reiser4-for-${reiser4_kernel_version}.patch.gz:1"
 			;;
-		fbcondecor) 	fbcondecor_url="http://dev.gentoo.org/~mpagano/genpatches"
+		fbcondecor) 	fbcondecor_url="http://sources.gentoo.org/cgi-bin/viewvc.cgi/linux-patches/genpatches-2.6"
 				fbcondecor_src="${fbcondecor_url}/trunk/${KMV}/4200_fbcondecor-${fbcondecor_version}.patch -> 4200_fbcondecor-${KMV}-${fbcondecor_version}.patch"
 				HOMEPAGE="${HOMEPAGE} ${fbcondecor_url}"
 				SRC_URI="
@@ -126,6 +144,7 @@ done
 
 UNIPATCH_EXCLUDE="4200_fbcondecor-0.9.6.patch"
 
+use aufs && UNIPATCH_LIST="${UNIPATCH_LIST} ${AUFS_PATCHES}"
 use ck && UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_PATCHES}"
 use bfq && UNIPATCH_LIST="${UNIPATCH_LIST} ${BFQ_PATCHES}"
 use cjktty && UNIPATCH_LIST="${UNIPATCH_LIST} ${CJKTTY_PATCHES}"
@@ -148,6 +167,11 @@ SRC_URI="
 UNIPATCH_STRICTORDER="yes"
 
 src_unpack() {
+
+	if use aufs; then
+		unpack ${aufs_tarball}
+	fi
+
 	kernel-2_src_unpack
 
 	sed -i -e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" Makefile
@@ -155,4 +179,15 @@ src_unpack() {
 	if [ "${SUPPORTED_USE/ck/}" != "$SUPPORTED_USE" ];
 		then use ck && sed -i -e 's/\(^EXTRAVERSION :=.*$\)/# \1/' "Makefile";
 	fi
+
+}
+
+src_prepare() {
+
+	if use aufs; then
+		cp -i "${WORKDIR}"/include/linux/aufs_type.h include/linux/aufs_type.h || die
+		cp -i "${WORKDIR}"/include/uapi/linux/aufs_type.h include/uapi/linux/aufs_type.h || die
+		cp -ri "${WORKDIR}"/{Documentation,fs} . || die
+	fi
+
 }
