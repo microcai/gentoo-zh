@@ -9,14 +9,14 @@ inherit cmake-utils
 DESCRIPTION="a pidgin plugin based on lwqq, a excellent safe useful library for
 webqq protocol"
 HOMEPAGE="https://github.com/xiehuc/pidgin-lwqq"
-SRC_URI="https://github.com/xiehuc/${PN}/archive/0.1-b.tar.gz
+SRC_URI="https://github.com/xiehuc/${PN}/archive/0.1-d.tar.gz
 			-> ${P}.tar.gz"
-S="${WORKDIR}/${PN}-0.1-b"
+S="${WORKDIR}/${PN}-0.1-d"
 
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+libev"
+IUSE="-libev"
 
 RESTRICT="mirror"
 
