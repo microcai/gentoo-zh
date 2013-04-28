@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 arm"
 IUSE=""
 
 inherit cmake-utils
@@ -32,16 +32,6 @@ DEPEND="
 	net-libs/gloox
 "
 RDEPEND="${DEPEND}"
-
-
-#src_unpack(){
-#	vcs-snapshot_src_unpack
-#	rm avbot-${PV}/libwebqq/avhttp -rf
-#	mv avbot-avhttp-${PV} avbot-${PV}/libwebqq/avhttp
-#	rm avbot-${PV}/avproxy -rf
-#	mv avbot-avproxy-${PV} avbot-${PV}/avproxy
-#}
-
 
 src_configure(){
 	local mycmakeargs=(
