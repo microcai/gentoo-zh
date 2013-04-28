@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI="4"
-K_GENPATCHES_VER="12"
+K_GENPATCHES_VER="13"
 K_DEBLOB_AVAILABLE="1"
 
 aufs_version="2013.04.01"
