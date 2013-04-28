@@ -96,6 +96,8 @@ src_prepare() {
 	cp -a ../skin . || die 'copying fixed pngs failed' #465658
 	# patch fcitx to let fcitx-sunpinyin to build with gcc 4.6
 	epatch "${FILESDIR}/${P}-gcc46-compatible.patch"
+	# patch to fix png16 problem
+	epatch "${FILESDIR}/${P}-png.patch"
 	epatch_user
 }
 
