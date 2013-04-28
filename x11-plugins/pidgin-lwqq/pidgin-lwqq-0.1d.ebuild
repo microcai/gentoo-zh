@@ -4,25 +4,27 @@
 
 EAPI=4
 
-inherit cmake-utils
+EGIT_REPO_URI="git://github.com/xiehuc/pidgin-lwqq.git"
+
+EGIT_COMMIT="700323e2a3a8fa08cef4400050f5f1b61f9aa144"
+
+inherit cmake-utils git-2
 
 DESCRIPTION="a pidgin plugin based on lwqq, a excellent safe useful library for
 webqq protocol"
 HOMEPAGE="https://github.com/xiehuc/pidgin-lwqq"
-SRC_URI="https://github.com/xiehuc/${PN}/archive/0.1-d.tar.gz
-			-> ${P}.tar.gz"
-S="${WORKDIR}/${PN}-0.1-d"
+SRC_URI=""
 
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="-libev"
+IUSE=""
 
 RESTRICT="mirror"
 
 COMMON_DEPEND=">=net-im/pidgin-2.10[gstreamer]
 	>=net-misc/curl-7.22
-	libev? ( dev-libs/libev )"
+	dev-libs/libev "
 
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
@@ -32,7 +34,6 @@ RDEPEND="${COMMON_DEPEND}"
 src_configure(){
 	mycmakeargs=(
 		-DUOA=Off
-		$(cmake-utils_use_with libev LIBEV)
 	)
 	cmake-utils_src_configure
 }
