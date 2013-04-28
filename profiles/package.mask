@@ -1,5 +1,5 @@
 # Hong Hao <oahong@gmail.com> (28 Dec 2010)
-# Use eapi 4, needs portage >=2.1.9.27
+# mask live ebuild
 ~app-i18n/fcitx-9999
 
 # microcai, ibus-1.5 it all about shit

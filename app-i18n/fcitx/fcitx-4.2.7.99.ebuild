@@ -6,18 +6,14 @@ EAPI=5
 
 inherit multilib multilib-build cmake-utils eutils gnome2-utils fdo-mime
 
-if [[ ${PV} == "9999" ]]; then
-	inherit git-2
-fi
+inherit git-2
 
-if [[ ${PV} == "9999" ]]; then
-	EGIT_REPO_URI="git://github.com/fcitx/fcitx.git"
-	SRC_URI="${HOMEPAGE}/files/pinyin.tar.gz
-		table? ( ${HOMEPAGE}/files/table.tar.gz )"
-else
-	SRC_URI="http://fcitx.googlecode.com/files/${P}_dict.tar.xz"
-	RESTRICT="mirror"
-fi
+EGIT_COMMIT="e138df32d9e9df8d2e7bca03d3cb6fa2a693ddb1"
+
+EGIT_REPO_URI="git://github.com/fcitx/fcitx.git"
+SRC_URI="${HOMEPAGE}/files/pinyin.tar.gz
+	table? ( ${HOMEPAGE}/files/table.tar.gz )"
+RESTRICT="mirror"
 
 DESCRIPTION="Flexible Context-aware Input Tool with eXtension"
 HOMEPAGE="http://fcitx-im.org/wiki/Fcitx"
@@ -94,11 +90,6 @@ update_gtk2_immodules() {
 		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0-32" > ${EPREFIX}/etc/gtk-2.0/i686-pc-linux-gnu/gtk.immodules
 	fi
 }
-
-#src_prepare() {
-	# patch fcitx to let fcitx-sunpinyin to build with gcc 4.6
-#	epatch "${FILESDIR}/${P}-gcc46-compatible.patch"
-#}
 
 src_configure() {
 	local mycmakeargs=(
