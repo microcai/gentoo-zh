@@ -13,8 +13,8 @@ HOMEPAGE="http://fcitx-im.org/wiki/Fcitx"
 EGIT_COMMIT="e138df32d9e9df8d2e7bca03d3cb6fa2a693ddb1"
 
 EGIT_REPO_URI="git://github.com/fcitx/fcitx.git"
-SRC_URI="${HOMEPAGE}/files/pinyin.tar.gz
-	table? ( ${HOMEPAGE}/files/table.tar.gz )"
+SRC_URI="https://fcitx.googlecode.com/files/pinyin.tar.gz
+	table? ( https://fcitx.googlecode.com/files/table.tar.gz )"
 RESTRICT="mirror"
 
 DESCRIPTION="Flexible Context-aware Input Tool with eXtension"
@@ -89,6 +89,14 @@ update_gtk2_immodules() {
 
 	if use abi_x86_32 ; then
 		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0-32" > ${EPREFIX}/etc/gtk-2.0/i686-pc-linux-gnu/gtk.immodules
+	fi
+}
+
+src_prepare() {
+	cp "${DISTDIR}/pinyin.tar.gz" "${S}/data" || die "pinyin data file is not found"
+	if use table ; then
+		cp "${DISTDIR}/table.tar.gz" "${S}/data/table" \
+			|| die "table data file is not found"
 	fi
 }
 
