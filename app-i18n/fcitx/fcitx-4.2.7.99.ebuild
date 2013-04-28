@@ -8,6 +8,8 @@ inherit multilib multilib-build cmake-utils eutils gnome2-utils fdo-mime
 
 inherit git-2
 
+HOMEPAGE="http://fcitx-im.org/wiki/Fcitx"
+
 EGIT_COMMIT="e138df32d9e9df8d2e7bca03d3cb6fa2a693ddb1"
 
 EGIT_REPO_URI="git://github.com/fcitx/fcitx.git"
@@ -16,7 +18,6 @@ SRC_URI="${HOMEPAGE}/files/pinyin.tar.gz
 RESTRICT="mirror"
 
 DESCRIPTION="Flexible Context-aware Input Tool with eXtension"
-HOMEPAGE="http://fcitx-im.org/wiki/Fcitx"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
