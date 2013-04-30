@@ -41,3 +41,11 @@ src_install() {
 	    rm -rf ${D}/opt/longene/qq2012/wine
 	fi
 }
+
+pkg_postinit() {
+	elog
+	elog "Some user reported that some fonts could not display."
+	elog "It was a system environment related issue."
+	elog "If you have that issue, check Issue #92 (https://github.com/microcai/gentoo-zh/issues/92) to find out possible solution."
+	elog
+}
