@@ -42,7 +42,7 @@ src_install() {
 	fi
 }
 
-pkg_postinit() {
+pkg_postinst() {
 	elog
 	elog "Some user reported that some fonts could not display."
 	elog "It was a system environment related issue."
