@@ -1,7 +1,11 @@
 
 RESTRICT="mirror"
 
-K_WANT_GENPATCHES="base extras"
+if [ "${SUPPORTED_USE/gentoo/}" != "$SUPPORTED_USE" ]; then
+	K_GENPATCHES_VER="$gentoo_version"
+	K_WANT_GENPATCHES="base extras"
+fi
+
 K_NOSETEXTRAVERSION="yes"
 K_SECURITY_UNSUPPORTED="1"
 
@@ -15,12 +19,14 @@ KMSV="$(get_version_component_range 1).0"
 
 SLOT="${KMV}"
 RDEPEND=">=sys-devel/gcc-4.5"
-HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches"
 
-DESCRIPTION="Full sources for the Linux kernel including: gentoo, ck, bfq and other patches"
-SRC_URI="${GENPATCHES_URI}"
+if [ "${SUPPORTED_USE/gentoo/}" != "$SUPPORTED_USE" ]; then
+	HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches"
+	DESCRIPTION="Full sources for the Linux kernel including: gentoo, ck, bfq and other patches"
+	SRC_URI="${GENPATCHES_URI}"
+fi
 
-KNOWN_FEATURES="aufs ck bfq tuxonice imq cjktty uksm reiser4 fbcondecor"
+KNOWN_FEATURES="aufs bfq cjktty ck fbcondecor gentoo imq reiser4 tuxonice uksm"
 
 USE_ENABLE() {
 	local USE=$1
@@ -49,15 +55,7 @@ USE_ENABLE() {
 				"
 				AUFS_PATCHES=""${WORKDIR}"/aufs3-base.patch "${WORKDIR}"/aufs3-proc_map.patch "${WORKDIR}"/aufs3-kbuild.patch "${WORKDIR}"/aufs3-standalone.patch"
 			;;
-		ck)		ck_url="http://ck.kolivas.org/patches"
-				ck_src="${ck_url}/${KMSV}/${KMV}/${KMV}-ck${ck_version}/patch-${KMV}-ck${ck_version}.bz2"
-				HOMEPAGE="${HOMEPAGE} ${ck_url}"
-				SRC_URI="
-					${SRC_URI}
-					ck?	( ${ck_src} )
-				"
-				CK_PATCHES="${CK_PRE_PATCH} ${DISTDIR}/patch-${KMV}-ck${ck_version}.bz2:1 ${CK_POST_PATCH}"
-			;;
+
 		bfq)		bfq_url="http://algo.ing.unimo.it/people/paolo/disk_sched"
 				bfq_src="${bfq_url}/patches/${bfq_kernel_version}-v${bfq_version}/0001-block-cgroups-kconfig-build-bits-for-BFQ-v${bfq_version}-${KMV}.patch ${bfq_url}/patches/${bfq_kernel_version}-v${bfq_version}/0002-block-introduce-the-BFQ-v${bfq_version}-I-O-sched-for-${KMV}.patch"
 				HOMEPAGE="${HOMEPAGE} ${bfq_url}"
@@ -67,6 +65,7 @@ USE_ENABLE() {
 				"
 				BFQ_PATCHES="${DISTDIR}/0001-block-cgroups-kconfig-build-bits-for-BFQ-v${bfq_version}-${KMV}.patch:1 ${DISTDIR}/0002-block-introduce-the-BFQ-v${bfq_version}-I-O-sched-for-${KMV}.patch:1"
 			;;
+
 		cjktty)		cjktty_url="http://sourceforge.net/projects/cjktty"
 				cjktty_src="${cjktty_url}/files/cjktty-for-linux-3.x/cjktty-for-${cjktty_kernel_version}.patch.xz"
 				HOMEPAGE="${HOMEPAGE} ${cjktty_url}"
@@ -78,6 +77,49 @@ USE_ENABLE() {
 					then CJKTTY_PATCHES="${DISTDIR}/cjktty-for-${cjktty_kernel_version}.patch.xz:1";
 				fi
 			;;
+
+		ck)		ck_url="http://ck.kolivas.org/patches"
+				ck_src="${ck_url}/${KMSV}/${KMV}/${KMV}-ck${ck_version}/patch-${KMV}-ck${ck_version}.bz2"
+				HOMEPAGE="${HOMEPAGE} ${ck_url}"
+				SRC_URI="
+					${SRC_URI}
+					ck?	( ${ck_src} )
+				"
+				CK_PATCHES="${CK_PRE_PATCH} ${DISTDIR}/patch-${KMV}-ck${ck_version}.bz2:1 ${CK_POST_PATCH}"
+			;;
+
+		fbcondecor) 	fbcondecor_url="http://sources.gentoo.org/cgi-bin/viewvc.cgi/linux-patches/genpatches-2.6"
+				fbcondecor_src="${fbcondecor_url}/trunk/${KMV}/4200_fbcondecor-${fbcondecor_version}.patch -> 4200_fbcondecor-${KMV}-${fbcondecor_version}.patch"
+				HOMEPAGE="${HOMEPAGE} ${fbcondecor_url}"
+				SRC_URI="
+					${SRC_URI}
+					fbcondecor?		( ${fbcondecor_src} )
+				"
+				if [ "${SUPPORTED_USE/fbcondecor/}" != "$SUPPORTED_USE" ];
+					then FBCONDECOR_PATCHES="${DISTDIR}/4200_fbcondecor-${KMV}-${fbcondecor_version}.patch:1";
+				fi
+			;;
+
+		imq)		imq_url="http://www.linuximq.net"
+				imq_src="${imq_url}/patches/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
+				HOMEPAGE="${HOMEPAGE} ${imq_url}"
+				SRC_URI="
+					${SRC_URI}
+					imq?	( ${imq_src} )
+				"
+				IMQ_PATCHES="${DISTDIR}/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
+			;;
+
+		reiser4) 	reiser4_url="http://sourceforge.net/projects/reiser4"
+				reiser4_src="${reiser4_url}/files/reiser4-for-linux-3.x/reiser4-for-${reiser4_kernel_version}.patch.gz"
+				HOMEPAGE="${HOMEPAGE} ${reiser4_url}"
+				SRC_URI="
+					${SRC_URI}
+					reiser4?		( ${reiser4_src} )
+				"
+				REISER4_PATCHES="${DISTDIR}/reiser4-for-${reiser4_kernel_version}.patch.gz:1"
+			;;
+
 		tuxonice)		tuxonice_url="http://tuxonice.net"
 				if [[ "${tuxonice_kernel_version/$KMV./}" =~ "0" ]]
 					then tuxonice_src="${tuxonice_url}/downloads/all/tuxonice-for-linux-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2"
@@ -97,15 +139,7 @@ USE_ENABLE() {
 					else TUXONICE_PATCHES="${DISTDIR}/tuxonice-for-linux-${KMV}-${tuxonice_kernel_version/$KMV./}-${tuxonice_version//./-}.patch.bz2:1"
 				fi
 			;;
-		imq)		imq_url="http://www.linuximq.net"
-				imq_src="${imq_url}/patches/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
-				HOMEPAGE="${HOMEPAGE} ${imq_url}"
-				SRC_URI="
-					${SRC_URI}
-					imq?	( ${imq_src} )
-				"
-				IMQ_PATCHES="${DISTDIR}/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
-			;;
+
 		uksm)		uksm_url="http://kerneldedup.org"
 				uksm_src="${uksm_url}/download/uksm/${uksm_version}/uksm-${uksm_version}-for-v${KMV}.ge.${uksm_kernel_version/$KMV./}.patch"
 				HOMEPAGE="${HOMEPAGE} ${uksm_url}"
@@ -115,26 +149,7 @@ USE_ENABLE() {
 				"
 				UKSM_PATCHES="${DISTDIR}/uksm-${uksm_version}-for-v${KMV}.ge.${uksm_kernel_version/$KMV./}.patch:1"
 			;;
-		reiser4) 	reiser4_url="http://sourceforge.net/projects/reiser4"
-				reiser4_src="${reiser4_url}/files/reiser4-for-linux-3.x/reiser4-for-${reiser4_kernel_version}.patch.gz"
-				HOMEPAGE="${HOMEPAGE} ${reiser4_url}"
-				SRC_URI="
-					${SRC_URI}
-					reiser4?		( ${reiser4_src} )
-				"
-				REISER4_PATCHES="${DISTDIR}/reiser4-for-${reiser4_kernel_version}.patch.gz:1"
-			;;
-		fbcondecor) 	fbcondecor_url="http://sources.gentoo.org/cgi-bin/viewvc.cgi/linux-patches/genpatches-2.6"
-				fbcondecor_src="${fbcondecor_url}/trunk/${KMV}/4200_fbcondecor-${fbcondecor_version}.patch -> 4200_fbcondecor-${KMV}-${fbcondecor_version}.patch"
-				HOMEPAGE="${HOMEPAGE} ${fbcondecor_url}"
-				SRC_URI="
-					${SRC_URI}
-					fbcondecor?		( ${fbcondecor_src} )
-				"
-				if [ "${SUPPORTED_USE/fbcondecor/}" != "$SUPPORTED_USE" ];
-					then FBCONDECOR_PATCHES="${DISTDIR}/4200_fbcondecor-${KMV}-${fbcondecor_version}.patch:1";
-				fi
-			;;
+
 	esac
 }
 
@@ -144,15 +159,54 @@ done
 
 UNIPATCH_EXCLUDE="4200_fbcondecor-0.9.6.patch"
 
-use aufs && UNIPATCH_LIST="${UNIPATCH_LIST} ${AUFS_PATCHES}"
-use ck && UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_PATCHES}"
-use bfq && UNIPATCH_LIST="${UNIPATCH_LIST} ${BFQ_PATCHES}"
-use cjktty && UNIPATCH_LIST="${UNIPATCH_LIST} ${CJKTTY_PATCHES}"
-use tuxonice && UNIPATCH_LIST="${UNIPATCH_LIST} ${TUXONICE_PATCHES}"
-use imq && UNIPATCH_LIST="${UNIPATCH_LIST} ${IMQ_PATCHES}"
-use uksm && UNIPATCH_LIST="${UNIPATCH_LIST} ${UKSM_PATCHES}"
-use reiser4 && UNIPATCH_LIST="${UNIPATCH_LIST} ${REISER4_PATCHES}"
-use fbcondecor && UNIPATCH_LIST="${UNIPATCH_LIST} ${FBCONDECOR_PATCHES}"
+PATCH_ADD() {
+	local PATCH=$1
+	PATCH="${PATCH/+/}" PATCH="${PATCH/-/}"
+
+	case ${PATCH} in
+
+		aufs)
+			use aufs && UNIPATCH_LIST="${UNIPATCH_LIST} ${AUFS_PATCHES}"
+			;;
+
+		bfq)
+			use bfq && UNIPATCH_LIST="${UNIPATCH_LIST} ${BFQ_PATCHES}"
+			;;
+
+		cjktty)
+			use cjktty && UNIPATCH_LIST="${UNIPATCH_LIST} ${CJKTTY_PATCHES}"
+			;;
+
+		ck)
+			use ck && UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_PATCHES}"
+			;;
+
+		fbcondecor)
+			use fbcondecor && UNIPATCH_LIST="${UNIPATCH_LIST} ${FBCONDECOR_PATCHES}"
+			;;
+
+		imq)
+			use imq && UNIPATCH_LIST="${UNIPATCH_LIST} ${IMQ_PATCHES}"
+			;;
+
+		reiser4)
+			use reiser4 && UNIPATCH_LIST="${UNIPATCH_LIST} ${REISER4_PATCHES}"
+			;;
+
+		tuxonice)
+			use tuxonice && UNIPATCH_LIST="${UNIPATCH_LIST} ${TUXONICE_PATCHES}"
+			;;
+
+		uksm)
+			use uksm && UNIPATCH_LIST="${UNIPATCH_LIST} ${UKSM_PATCHES}"
+			;;
+
+	esac
+}
+
+for I in ${SUPPORTED_USE}; do
+	PATCH_ADD "${I}"
+done
 
 if [ "${SUPPORTED_USE/cjktty/}" != "$SUPPORTED_USE" -a "${SUPPORTED_USE/fbcondecor/}" != "$SUPPORTED_USE" ];
 	then REQUIRED_USE="cjktty? ( !fbcondecor )";
@@ -189,5 +243,8 @@ src_prepare() {
 		cp -i "${WORKDIR}"/include/uapi/linux/aufs_type.h include/uapi/linux/aufs_type.h || die
 		cp -ri "${WORKDIR}"/{Documentation,fs} . || die
 	fi
+
+	rm -rf {a,b,Documentation/*,drivers/video/logo/*}
+	touch {{Documentation,drivers/video/logo}/Makefile,drivers/video/logo/Kconfig}
 
 }
