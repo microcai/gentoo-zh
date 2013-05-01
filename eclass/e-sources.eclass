@@ -22,9 +22,10 @@ RDEPEND=">=sys-devel/gcc-4.5"
 
 if [ "${SUPPORTED_USE/gentoo/}" != "$SUPPORTED_USE" ]; then
 	HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches"
-	DESCRIPTION="Full sources for the Linux kernel including: gentoo, ck, bfq and other patches"
 	SRC_URI="${GENPATCHES_URI}"
 fi
+
+DESCRIPTION="Full sources for the Linux kernel including: gentoo, ck, bfq and other patches"
 
 KNOWN_FEATURES="aufs bfq cjktty ck fbcondecor gentoo imq reiser4 tuxonice uksm"
 
@@ -101,13 +102,13 @@ USE_ENABLE() {
 			;;
 
 		imq)		imq_url="http://www.linuximq.net"
-				imq_src="${imq_url}/patches/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
+				#imq_src="${imq_url}/patches/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
 				HOMEPAGE="${HOMEPAGE} ${imq_url}"
-				SRC_URI="
-					${SRC_URI}
-					imq?	( ${imq_src} )
-				"
-				IMQ_PATCHES="${DISTDIR}/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
+				#SRC_URI="
+				#	${SRC_URI}
+				#	imq?	( ${imq_src} )
+				#"
+				IMQ_PATCHES="${FILESDIR}/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
 			;;
 
 		reiser4) 	reiser4_url="http://sourceforge.net/projects/reiser4"
@@ -243,8 +244,5 @@ src_prepare() {
 		cp -i "${WORKDIR}"/include/uapi/linux/aufs_type.h include/uapi/linux/aufs_type.h || die
 		cp -ri "${WORKDIR}"/{Documentation,fs} . || die
 	fi
-
-	rm -rf {a,b,Documentation/*,drivers/video/logo/*}
-	touch {{Documentation,drivers/video/logo}/Makefile,drivers/video/logo/Kconfig}
 
 }
