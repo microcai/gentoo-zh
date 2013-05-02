@@ -21,7 +21,7 @@ cjktty_kernel_version="3.8.1"
 tuxonice_kernel_version="3.9.0"
 # uksm_kernel_version=""
 
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 
 # KNOWN_FEATURES="aufs bfq cjktty ck fbcondecor gentoo imq reiser4 tuxonice uksm"
 SUPPORTED_USE="+cjktty +gentoo fbcondecor +tuxonice"
