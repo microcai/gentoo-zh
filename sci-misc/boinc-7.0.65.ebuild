@@ -1,35 +1,33 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-7.0.29.ebuild,v 1.1 2012/07/18 12:56:44 alexxy Exp $
 
 EAPI=4
 
-inherit flag-o-matic eutils wxwidgets autotools base subversion
+WANT_AUTOMAKE="1.11"
+
+inherit flag-o-matic eutils wxwidgets autotools base user
 
 DESCRIPTION="The Berkeley Open Infrastructure for Network Computing"
-HOMEPAGE="http://boinc.berkeley.edu/"
-ESVN_REPO_URI="http://boinc.berkeley.edu/svn/tags/boinc_core_release_7_0_28/"
-
-#SRC_URI="boinc-source-${PV}.tar.bz2"
-#S="${WORKDIR}/boinc-source-${PV}"
-#RESTRICT="mirror fetch"
+HOMEPAGE="http://boinc.ssl.berkeley.edu/"
+SRC_URI="http://www.gentoo.org.cn/distfiles/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="+X -cuda"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="X cuda"
 
 RDEPEND="
 	!sci-misc/boinc-bin
 	!app-admin/quickswitch
-	>=app-misc/ca-certificates-20120212
+	>=app-misc/ca-certificates-20080809
 	dev-libs/openssl
-	net-misc/curl[curl_ssl_openssl,-curl_ssl_gnutls]
+	net-misc/curl[ssl,-gnutls(-),-nss(-),curl_ssl_openssl(+)]
 	sys-apps/util-linux
 	sys-libs/zlib
 	cuda? (
-		>=dev-util/nvidia-cuda-toolkit-4.0
-		>=x11-drivers/nvidia-drivers-270.41
+		>=dev-util/nvidia-cuda-toolkit-2.1
+		>=x11-drivers/nvidia-drivers-180.22
 	)
 	X? (
 		dev-db/sqlite:3
@@ -50,14 +48,10 @@ DEPEND="${RDEPEND}
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_prepare() {
-	mkdir -pv "$S"/curl
-	# use system ssl certificates
-	ln -svf /etc/ssl/certs/ca-certificates.crt "${S}"/curl/ca-bundle.crt
+	# prevent bad changes in compile flags, bug 286701
+	sed -i -e "s:BOINC_SET_COMPILE_FLAGS::" configure.ac || die "sed failed"
 
 	base_src_prepare
-	
-	sed  -e  's/AC_PROG_CXX/AC_PROG_CXX\nAC_PROG_OBJCXX/g' -i  configure.ac
-	sed  -e  's/BOINC_SET_COMPILE_FLAGS//g' -i  configure.ac
 
 	eautoreconf
 }
@@ -79,12 +73,8 @@ src_configure() {
 
 	econf \
 		--disable-server \
-		--disable-fcgi \
-		--disable-install-headers \
 		--enable-client \
-		--enable-optimize \
-		--disable-generic-processor \
-		--disable-dynamic-client-linkage \
+		--enable-dynamic-client-linkage \
 		--disable-static \
 		--enable-unicode \
 		--with-ssl \
@@ -107,8 +97,6 @@ src_install() {
 
 	# cleanup cruft
 	rm -rf "${D}"/etc/
-	# cleanup unused lib
-	rm -rf "${D}"/usr/lib*
 
 	newinitd "${FILESDIR}"/${PN}.init ${PN}
 	newconfd "${FILESDIR}"/${PN}.conf ${PN}
