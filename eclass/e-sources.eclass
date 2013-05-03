@@ -1,7 +1,13 @@
 
 RESTRICT="mirror"
 
-if [ "${SUPPORTED_USE/gentoo/}" != "$SUPPORTED_USE" ]; then
+features() {
+	if [ "${SUPPORTED_USE/$1/}" != "$SUPPORTED_USE" ];
+		then return 0; else return 1;
+	fi
+}
+
+if features gentoo; then
 	K_GENPATCHES_VER="$gentoo_version"
 	K_WANT_GENPATCHES="base extras"
 fi
@@ -10,7 +16,7 @@ K_NOSETEXTRAVERSION="yes"
 K_SECURITY_UNSUPPORTED="1"
 
 ETYPE="sources"
-inherit kernel-2
+inherit kernel-2 eutils
 detect_version
 detect_arch
 
@@ -20,7 +26,7 @@ KMSV="$(get_version_component_range 1).0"
 SLOT="${KMV}"
 RDEPEND=">=sys-devel/gcc-4.5"
 
-if [ "${SUPPORTED_USE/gentoo/}" != "$SUPPORTED_USE" ]; then
+if features gentoo; then
 	HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches"
 	SRC_URI="${GENPATCHES_URI}"
 fi
@@ -33,18 +39,14 @@ USE_ENABLE() {
 	local USE=$1
 	[ "${USE}" == "" ] && die "Feature not defined!"
 
-	expr index "${KNOWN_FEATURES}" "${USE}" >/dev/null || die "${USE} is not known"
+	expr index "${KNOWN_FEATURES}" "${USE}" > /dev/null || die "${USE} is not known"
 	IUSE="${IUSE} ${USE}" USE="${USE/+/}" USE="${USE/-/}"
 
 	case ${USE} in
 
 		aufs)		aufs_url="http://aufs.sourceforge.net"
-				if [ "${aufs_kernel_version}" != "" ]; then
-					aufs_tarball="aufs-sources-${aufs_kernel_version}.tar.xz"
-				else
-					aufs_tarball="aufs-sources-${KMV}_p${aufs_version//./}.tar.xz"
-				fi
-				aufs_src="http://dev.gentoo.org/~jlec/distfiles/${aufs_tarball}"
+				aufs_tarball="aufs-sources-${aufs_kernel_version}.tar.xz"
+				aufs_src="http://dev.gentoo.org/~jlec/distfiles/aufs-sources-${aufs_kernel_version}.tar.xz"
 				HOMEPAGE="${HOMEPAGE} ${aufs_url}"
 				SRC_URI="
 					${SRC_URI}
@@ -54,7 +56,7 @@ USE_ENABLE() {
 					${RDEPEND}
 					aufs?	( >=sys-fs/aufs-util-3.8 )
 				"
-				AUFS_PATCHES=""${WORKDIR}"/aufs3-base.patch "${WORKDIR}"/aufs3-proc_map.patch "${WORKDIR}"/aufs3-kbuild.patch "${WORKDIR}"/aufs3-standalone.patch"
+				AUFS_PATCHES="${WORKDIR}/aufs3-base.patch ${WORKDIR}/aufs3-proc_map.patch ${WORKDIR}/aufs3-kbuild.patch ${WORKDIR}/aufs3-standalone.patch"
 			;;
 
 		bfq)		bfq_url="http://algo.ing.unimo.it/people/paolo/disk_sched"
@@ -74,9 +76,7 @@ USE_ENABLE() {
 					${SRC_URI}
 					cjktty?	( ${cjktty_src} )
 				"
-				if [ "${SUPPORTED_USE/cjktty/}" != "$SUPPORTED_USE" ];
-					then CJKTTY_PATCHES="${DISTDIR}/cjktty-for-${cjktty_kernel_version}.patch.xz:1";
-				fi
+				CJKTTY_PATCHES="${DISTDIR}/cjktty-for-${cjktty_kernel_version}.patch.xz:1"
 			;;
 
 		ck)		ck_url="http://ck.kolivas.org/patches"
@@ -96,19 +96,17 @@ USE_ENABLE() {
 					${SRC_URI}
 					fbcondecor?		( ${fbcondecor_src} )
 				"
-				if [ "${SUPPORTED_USE/fbcondecor/}" != "$SUPPORTED_USE" ];
-					then FBCONDECOR_PATCHES="${DISTDIR}/4200_fbcondecor-${KMV}-${fbcondecor_version}.patch:1";
-				fi
+				FBCONDECOR_PATCHES="${DISTDIR}/4200_fbcondecor-${KMV}-${fbcondecor_version}.patch:1"
 			;;
 
 		imq)		imq_url="http://www.linuximq.net"
-				#imq_src="${imq_url}/patches/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
+				imq_src="${imq_url}/patches/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
 				HOMEPAGE="${HOMEPAGE} ${imq_url}"
-				#SRC_URI="
-				#	${SRC_URI}
-				#	imq?	( ${imq_src} )
-				#"
-				IMQ_PATCHES="${FILESDIR}/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
+				SRC_URI="
+					${SRC_URI}
+					imq?	( ${imq_src} )
+				"
+				IMQ_PATCHES="${DISTDIR}/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
 			;;
 
 		reiser4) 	reiser4_url="http://sourceforge.net/projects/reiser4"
@@ -160,56 +158,28 @@ done
 
 UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 4200_fbcondecor-0.9.6.patch"
 
-PATCH_ADD() {
+PATCH_APPEND() {
 	local PATCH=$1
 	PATCH="${PATCH/+/}" PATCH="${PATCH/-/}"
 
 	case ${PATCH} in
-
-		aufs)
-			use aufs && UNIPATCH_LIST="${UNIPATCH_LIST} ${AUFS_PATCHES}"
-			;;
-
-		bfq)
-			use bfq && UNIPATCH_LIST="${UNIPATCH_LIST} ${BFQ_PATCHES}"
-			;;
-
-		cjktty)
-			use cjktty && UNIPATCH_LIST="${UNIPATCH_LIST} ${CJKTTY_PATCHES}"
-			;;
-
-		ck)
-			use ck && UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_PATCHES}"
-			;;
-
-		fbcondecor)
-			use fbcondecor && UNIPATCH_LIST="${UNIPATCH_LIST} ${FBCONDECOR_PATCHES}"
-			;;
-
-		imq)
-			use imq && UNIPATCH_LIST="${UNIPATCH_LIST} ${IMQ_PATCHES}"
-			;;
-
-		reiser4)
-			use reiser4 && UNIPATCH_LIST="${UNIPATCH_LIST} ${REISER4_PATCHES}"
-			;;
-
-		tuxonice)
-			use tuxonice && UNIPATCH_LIST="${UNIPATCH_LIST} ${TUXONICE_PATCHES}"
-			;;
-
-		uksm)
-			use uksm && UNIPATCH_LIST="${UNIPATCH_LIST} ${UKSM_PATCHES}"
-			;;
-
+		aufs)		use aufs && UNIPATCH_LIST="${UNIPATCH_LIST} ${AUFS_PATCHES}" ;;
+		bfq)		use bfq && UNIPATCH_LIST="${UNIPATCH_LIST} ${BFQ_PATCHES}" ;;
+		cjktty)		use cjktty && UNIPATCH_LIST="${UNIPATCH_LIST} ${CJKTTY_PATCHES}" ;;
+		ck)		use ck && UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_PATCHES}" ;;
+		fbcondecor)	use fbcondecor && UNIPATCH_LIST="${UNIPATCH_LIST} ${FBCONDECOR_PATCHES}" ;;
+		imq)		use imq && UNIPATCH_LIST="${UNIPATCH_LIST} ${IMQ_PATCHES}" ;;
+		reiser4)	use reiser4 && UNIPATCH_LIST="${UNIPATCH_LIST} ${REISER4_PATCHES}" ;;
+		tuxonice)	use tuxonice && UNIPATCH_LIST="${UNIPATCH_LIST} ${TUXONICE_PATCHES}" ;;
+		uksm)		use uksm && UNIPATCH_LIST="${UNIPATCH_LIST} ${UKSM_PATCHES}" ;;
 	esac
 }
 
 for I in ${SUPPORTED_USE}; do
-	PATCH_ADD "${I}"
+	PATCH_APPEND "${I}"
 done
 
-if [ "${SUPPORTED_USE/cjktty/}" != "$SUPPORTED_USE" -a "${SUPPORTED_USE/fbcondecor/}" != "$SUPPORTED_USE" ];
+if features cjktty && features fbcondecor;
 	then REQUIRED_USE="cjktty? ( !fbcondecor )";
 fi
 
@@ -222,27 +192,17 @@ SRC_URI="
 UNIPATCH_STRICTORDER="yes"
 
 src_unpack() {
-
-	if use aufs; then
-		unpack ${aufs_tarball}
-	fi
-
+	features aufs && use aufs && unpack ${aufs_tarball}
 	kernel-2_src_unpack
-
 	sed -i -e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" Makefile
-
-	if [ "${SUPPORTED_USE/ck/}" != "$SUPPORTED_USE" ];
-		then use ck && sed -i -e 's/\(^EXTRAVERSION :=.*$\)/# \1/' "Makefile";
-	fi
+	features ck && use ck && sed -i -e 's/\(^EXTRAVERSION :=.*$\)/# \1/' "Makefile"
 
 }
 
 src_prepare() {
-
-	if use aufs; then
+	features aufs && if use aufs; then
 		cp -i "${WORKDIR}"/include/linux/aufs_type.h include/linux/aufs_type.h || die
 		cp -i "${WORKDIR}"/include/uapi/linux/aufs_type.h include/uapi/linux/aufs_type.h || die
 		cp -ri "${WORKDIR}"/{Documentation,fs} . || die
 	fi
-
 }

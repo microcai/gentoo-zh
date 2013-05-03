@@ -13,5 +13,5 @@ sys-kernel/e-sources : full linux kernel sources including :
 
 	..
 
-3.8.y : aufs bfq cjktty ck fbcondecor gentoo imq reiser4 tuxonice uksm
+3.8.y : aufs bfq cjktty ck fbcondecor gentoo reiser4 tuxonice uksm
 3.9.y : cjktty
