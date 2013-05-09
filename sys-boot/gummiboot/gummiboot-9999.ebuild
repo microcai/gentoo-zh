@@ -15,9 +15,9 @@ KEYWORDS="~amd64"
 IUSE=""
 
 
-RDEPEND=">=sys-boot/gnu-efi-3.0q"
+RDEPEND=">=sys-boot/gnu-efi-3.0s"
 
-DEPEND=""
+DEPEND=">=sys-boot/gnu-efi-3.0s"
 
 pkg_setup(){
 	local iarch
