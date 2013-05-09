@@ -27,7 +27,7 @@ else
 fi
 
 case "${EAPI:-0}" in
-	3|4)
+	4|5)
 		EXPORT_FUNCTIONS src_install
 		;;
 	*) die "EAPI=${EAPI} is not supported" ;;
