@@ -93,6 +93,7 @@ pkg_setup() {
 
 src_prepare() {
 	local d i
+	append-cflags "-D_IPP_PRIVATE_STRUCTURES"
 
 	# missing macros directory make aclocal fail
 	mkdir printui/m4 || die
@@ -102,7 +103,16 @@ src_prepare() {
 		"${FILESDIR}/${MY_PN}"-3.70-ppd.patch \
 		"${FILESDIR}/${MY_PN}"-3.70-ppd2.patch \
 		"${FILESDIR}/${MY_PN}"-3.70-libexec-cups.patch \
-		"${FILESDIR}/${MY_PN}"-3.70-libexec-backend.patch
+		"${FILESDIR}/${MY_PN}"-3.70-libexec-backend.patch \
+		"${FILESDIR}/cnijfilter-3.80-cups1.6.patch"
+
+	find . -name configure.in -exec \
+		sed "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g" \
+		-i \{\} + 
+
+	find . -name configure.in -exec \
+		sed "s/AM_PROG_CC_STDC/AC_PROG_CC/g" \
+		-i \{\} + 
 
 	_dir_build "${DIRS_PRINTER}" "eautoreconf"
 
@@ -122,10 +132,12 @@ src_prepare() {
 src_configure() {
 	local d i
 
+	append-cflags "-D_IPP_PRIVATE_STRUCTURES"
 	_printer_dir_build "econf"
 }
 
 src_compile() {
+	append-cflags "-D_IPP_PRIVATE_STRUCTURES"
 	_printer_dir_build "emake"
 }
 
