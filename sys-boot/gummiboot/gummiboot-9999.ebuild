@@ -44,7 +44,6 @@ src_compile(){
 }
 
 pkg_postinst(){
-	einfo	"To use ${PN}, copy /usr/$(get_libdir)/${PN}/${PN}.efi"
-	einfo "to ESP(Efi System Partion) "
-	einfo "and call efbootimgr to add that"
+	einfo	"To use ${PN}, excute"
+	einfo 	"gummiboot --path \"path to ESP(Efi system partition)\" install "
 }
