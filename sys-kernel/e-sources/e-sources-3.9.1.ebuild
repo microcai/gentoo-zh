@@ -8,7 +8,7 @@ K_DEBLOB_AVAILABLE="1"
 # bfq_version=" "
 # ck_version=" "
 fbcondecor_version="0.9.6"
-gentoo_version="1"
+gentoo_version="4"
 tuxonice_version="2013.05.01"
 # uksm_version=" "
 
