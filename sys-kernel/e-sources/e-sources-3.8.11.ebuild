@@ -22,11 +22,20 @@ uksm_kernel_version="3.8.3"
 
 KEYWORDS="~amd64 ~x86"
 
-# KNOWN_FEATURES="aufs bfq cjktty ck fbcondecor gentoo imq reiser4 tuxonice uksm"
 SUPPORTED_USE="+aufs +bfq +cjktty +ck fbcondecor +gentoo +reiser4 +tuxonice +uksm"
 
-# CK_PRE_PATCH=" "
-# CK_POST_PATCH=" "
-# UNIPATCH_EXCLUDE=" "
+CK_PRE_PATCH=""
+CK_POST_PATCH=""
+UNIPATCH_EXCLUDE=""
+
+OVERRIDE_AUFS_PATCHES=""
+OVERRIDE_BFQ_PATCHES=""
+OVERRIDE_CJKTTY_PATCHES=""
+OVERRIDE_CK_PATCHES=""
+OVERRIDE_FBCONDECOR_PATCHES=""
+OVERRIDE_IMQ_PATCHES=""
+OVERRIDE_REISER4_PATCHES=""
+OVERRIDE_TUXONICE_PATCHES=""
+OVERRIDE_UKSM_PATCHES=""
 
 inherit e-sources
