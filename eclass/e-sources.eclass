@@ -1,3 +1,21 @@
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# Author stlifey <stlifey@gmail.com>
+# $Header: $
+#
+# e-sources.eclass - Eclass for building sys-kernel/e-sources-* packages , provide patchest including :
+#
+#	aufs - Advanced multi layered unification filesystem
+#	bfq - budget fair queueing budget I/O scheduler
+#	cjktty - CJK tty font support
+#	ck - Con Kolivas' high performance patchset
+#	fbcondecor - display pictures in the background of system consoles
+#	gentoo - genpatches
+#	imq - intermediate queueing device
+#	reiser4 - Reiser4 file system
+#	tuxonice - another linux hibernate kernel patchset
+#	uksm - ultra kernel samepage merging
+#
 
 RESTRICT="mirror"
 
@@ -40,10 +58,6 @@ USE_ENABLE() {
 				aufs_tarball="aufs-sources-${aufs_kernel_version}.tar.xz"
 				aufs_src="http://dev.gentoo.org/~jlec/distfiles/aufs-sources-${aufs_kernel_version}.tar.xz"
 				HOMEPAGE="${HOMEPAGE} ${aufs_url}"
-				SRC_URI="
-					${SRC_URI}
-					aufs?	( ${aufs_src} )
-				"
 				RDEPEND="
 					${RDEPEND}
 					aufs?	( >=sys-fs/aufs-util-3.8 )
@@ -51,34 +65,51 @@ USE_ENABLE() {
 				if [ "${OVERRIDE_AUFS_PATCHES}" != "" ]; then
 					AUFS_PATCHES="${OVERRIDE_AUFS_PATCHES}"
 				else
-					AUFS_PATCHES="${WORKDIR}/aufs3-base.patch ${WORKDIR}/aufs3-proc_map.patch ${WORKDIR}/aufs3-kbuild.patch ${WORKDIR}/aufs3-standalone.patch"
+					SRC_URI="
+						${SRC_URI}
+						aufs?	( ${aufs_src} )
+					"
+					AUFS_PATCHES="
+						${WORKDIR}/aufs3-base.patch
+						${WORKDIR}/aufs3-proc_map.patch
+						${WORKDIR}/aufs3-kbuild.patch
+						${WORKDIR}/aufs3-standalone.patch
+					"
 				fi
 			;;
 
 		bfq)		bfq_url="http://algo.ing.unimo.it/people/paolo/disk_sched"
-				bfq_src="${bfq_url}/patches/${bfq_kernel_version}-v${bfq_version}/0001-block-cgroups-kconfig-build-bits-for-BFQ-v${bfq_version}-${KMV}.patch ${bfq_url}/patches/${bfq_kernel_version}-v${bfq_version}/0002-block-introduce-the-BFQ-v${bfq_version}-I-O-sched-for-${KMV}.patch"
-				HOMEPAGE="${HOMEPAGE} ${bfq_url}"
-				SRC_URI="
-					${SRC_URI}
-					bfq?	( ${bfq_src} )
+				bfq_src="
+					${bfq_url}/patches/${bfq_kernel_version}-v${bfq_version/./r}/0001-block-cgroups-kconfig-build-bits-for-BFQ-v${bfq_version/./r}-${KMV}.patch
+					${bfq_url}/patches/${bfq_kernel_version}-v${bfq_version/./r}/0002-block-introduce-the-BFQ-v${bfq_version/./r}-I-O-sched-for-${KMV}.patch
+					${bfq_url}/patches/${bfq_kernel_version}-v${bfq_version/./r}/0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v${bfq_version/./r}-for-${bfq_kernel_version}.patch
 				"
+				HOMEPAGE="${HOMEPAGE} ${bfq_url}"
 				if [ "${OVERRIDE_BFQ_PATCHES}" != "" ]; then
 					BFQ_PATCHES="${OVERRIDE_BFQ_PATCHES}"
 				else
-					BFQ_PATCHES="${DISTDIR}/0001-block-cgroups-kconfig-build-bits-for-BFQ-v${bfq_version}-${KMV}.patch:1 ${DISTDIR}/0002-block-introduce-the-BFQ-v${bfq_version}-I-O-sched-for-${KMV}.patch:1"
+					SRC_URI="
+						${SRC_URI}
+						bfq?	( ${bfq_src} )
+					"
+					BFQ_PATCHES="
+						${DISTDIR}/0001-block-cgroups-kconfig-build-bits-for-BFQ-v${bfq_version/./r}-${KMV}.patch:1
+						${DISTDIR}/0002-block-introduce-the-BFQ-v${bfq_version/./r}-I-O-sched-for-${KMV}.patch:1
+						${DISTDIR}/0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v${bfq_version/./r}-for-${bfq_kernel_version}.patch:1
+					"
 				fi
 			;;
 
 		cjktty)		cjktty_url="http://sourceforge.net/projects/cjktty"
 				cjktty_src="${cjktty_url}/files/cjktty-for-linux-3.x/cjktty-for-${cjktty_kernel_version}.patch.xz"
 				HOMEPAGE="${HOMEPAGE} ${cjktty_url}"
-				SRC_URI="
-					${SRC_URI}
-					cjktty?	( ${cjktty_src} )
-				"
 				if [ "${OVERRIDE_CJKTTY_PATCHES}" != "" ]; then
 					CJKTTY_PATCHES="${OVERRIDE_CJKTTY_PATCHES}"
 				else
+					SRC_URI="
+						${SRC_URI}
+						cjktty?	( ${cjktty_src} )
+					"
 					CJKTTY_PATCHES="${DISTDIR}/cjktty-for-${cjktty_kernel_version}.patch.xz:1"
 				fi
 			;;
@@ -86,13 +117,13 @@ USE_ENABLE() {
 		ck)		ck_url="http://ck.kolivas.org/patches"
 				ck_src="${ck_url}/${KMSV}/${KMV}/${KMV}-ck${ck_version}/patch-${KMV}-ck${ck_version}.bz2"
 				HOMEPAGE="${HOMEPAGE} ${ck_url}"
-				SRC_URI="
-					${SRC_URI}
-					ck?	( ${ck_src} )
-				"
 				if [ "${OVERRIDE_CK_PATCHES}" != "" ]; then
 					CK_PATCHES="${OVERRIDE_CK_PATCHES}"
 				else
+					SRC_URI="
+						${SRC_URI}
+						ck?	( ${ck_src} )
+					"
 					CK_PATCHES="${CK_PRE_PATCH} ${DISTDIR}/patch-${KMV}-ck${ck_version}.bz2:1 ${CK_POST_PATCH}"
 				fi
 			;;
@@ -100,13 +131,13 @@ USE_ENABLE() {
 		fbcondecor) 	fbcondecor_url="http://sources.gentoo.org/cgi-bin/viewvc.cgi/linux-patches/genpatches-2.6"
 				fbcondecor_src="${fbcondecor_url}/trunk/${KMV}/4200_fbcondecor-${fbcondecor_version}.patch -> 4200_fbcondecor-${KMV}-${fbcondecor_version}.patch"
 				HOMEPAGE="${HOMEPAGE} ${fbcondecor_url}"
-				SRC_URI="
-					${SRC_URI}
-					fbcondecor?		( ${fbcondecor_src} )
-				"
 				if [ "${OVERRIDE_FBCONDECOR_PATCHES}" != "" ]; then
 					FBCONDECOR_PATCHES="${OVERRIDE_FBCONDECOR_PATCHES}"
 				else
+					SRC_URI="
+						${SRC_URI}
+						fbcondecor?		( ${fbcondecor_src} )
+					"
 					FBCONDECOR_PATCHES="${DISTDIR}/4200_fbcondecor-${KMV}-${fbcondecor_version}.patch:1"
 				fi
 			;;
@@ -114,13 +145,13 @@ USE_ENABLE() {
 		imq)		imq_url="http://www.linuximq.net"
 				imq_src="${imq_url}/patches/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
 				HOMEPAGE="${HOMEPAGE} ${imq_url}"
-				SRC_URI="
-					${SRC_URI}
-					imq?	( ${imq_src} )
-				"
 				if [ "${OVERRIDE_IMQ_PATCHES}" != "" ]; then
 					IMQ_PATCHES="${OVERRIDE_IMQ_PATCHES}"
 				else
+					SRC_URI="
+						${SRC_URI}
+						imq?	( ${imq_src} )
+					"
 					IMQ_PATCHES="${DISTDIR}/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
 				fi
 			;;
@@ -128,13 +159,13 @@ USE_ENABLE() {
 		reiser4) 	reiser4_url="http://sourceforge.net/projects/reiser4"
 				reiser4_src="${reiser4_url}/files/reiser4-for-linux-3.x/reiser4-for-${reiser4_kernel_version}.patch.gz"
 				HOMEPAGE="${HOMEPAGE} ${reiser4_url}"
-				SRC_URI="
-					${SRC_URI}
-					reiser4?		( ${reiser4_src} )
-				"
 				if [ "${OVERRIDE_REISER4_PATCHES}" != "" ]; then
 					REISER4_PATCHES="${OVERRIDE_REISER4_PATCHES}"
 				else
+					SRC_URI="
+						${SRC_URI}
+						reiser4?		( ${reiser4_src} )
+					"
 					REISER4_PATCHES="${DISTDIR}/reiser4-for-${reiser4_kernel_version}.patch.gz:1"
 				fi
 			;;
@@ -145,10 +176,6 @@ USE_ENABLE() {
 					else tuxonice_src="${tuxonice_url}/downloads/all/tuxonice-for-linux-${KMV}-${tuxonice_kernel_version/$KMV./}-${tuxonice_version//./-}.patch.bz2"
 				fi
 				HOMEPAGE="${HOMEPAGE} ${tuxonice_url}"
-				SRC_URI="
-					${SRC_URI}
-					tuxonice?	( ${tuxonice_src} )
-				"
 				RDEPEND="
 					${RDEPEND}
 					tuxonice?	( >=sys-apps/tuxonice-userui-1.0 ( || ( >=sys-power/hibernate-script-2.0 sys-power/pm-utils ) ) )
@@ -156,6 +183,10 @@ USE_ENABLE() {
 				if [ "${OVERRIDE_TUXONICE_PATCHES}" != "" ]; then
 					TUXONICE_PATCHES="${OVERRIDE_TUXONICE_PATCHES}"
 				else
+					SRC_URI="
+						${SRC_URI}
+						tuxonice?	( ${tuxonice_src} )
+					"
 					if [[ "${tuxonice_kernel_version/$KMV./}" = "0" ]]
 						then TUXONICE_PATCHES="${DISTDIR}/tuxonice-for-linux-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2:1"
 						else TUXONICE_PATCHES="${DISTDIR}/tuxonice-for-linux-${KMV}-${tuxonice_kernel_version/$KMV./}-${tuxonice_version//./-}.patch.bz2:1"
@@ -166,13 +197,13 @@ USE_ENABLE() {
 		uksm)		uksm_url="http://kerneldedup.org"
 				uksm_src="${uksm_url}/download/uksm/${uksm_version}/uksm-${uksm_version}-for-v${KMV}.ge.${uksm_kernel_version/$KMV./}.patch"
 				HOMEPAGE="${HOMEPAGE} ${uksm_url}"
-				SRC_URI="
-					${SRC_URI}
-					uksm?		( ${uksm_src} )
-				"
 				if [ "${OVERRIDE_UKSM_PATCHES}" != "" ]; then
 					UKSM_PATCHES="${OVERRIDE_UKSM_PATCHES}";
 				else
+					SRC_URI="
+						${SRC_URI}
+						uksm?		( ${uksm_src} )
+					"
 					UKSM_PATCHES="${DISTDIR}/uksm-${uksm_version}-for-v${KMV}.ge.${uksm_kernel_version/$KMV./}.patch:1"
 				fi
 			;;
