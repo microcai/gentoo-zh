@@ -1,13 +1,25 @@
+From c81bd94581582c845ac0b0cf2d60e7894721a653 Mon Sep 17 00:00:00 2001
+From: microcai <microcai@fedoraproject.org>
+Date: Fri, 17 May 2013 23:22:25 +0800
+Subject: [PATCH] b
+
+---
+ src/cff/cffobjs.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
 diff --git a/src/cff/cffobjs.c b/src/cff/cffobjs.c
 index ebcf189..3f2ce6b 100644
 --- a/src/cff/cffobjs.c
 +++ b/src/cff/cffobjs.c
 @@ -1056,7 +1056,7 @@
+ 
+ 
+     /* set default property values */
+-    driver->hinting_engine    = FT_CFF_HINTING_FREETYPE;
++    driver->hinting_engine    = FT_CFF_HINTING_ADOBE;
+     driver->no_stem_darkening = FALSE;
+ 
+     return FT_Err_Ok;
+-- 
+1.8.2.1
 
-
-/* set default property values */
-- driver->hinting_engine = FT_CFF_HINTING_FREETYPE;
-+ driver->hinting_engine = FT_CFF_HINTING_ADOBE;
-driver->no_stem_darkening = FALSE;
-
-return FT_Err_Ok;
