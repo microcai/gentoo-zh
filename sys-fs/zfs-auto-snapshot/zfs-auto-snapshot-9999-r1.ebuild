@@ -44,5 +44,13 @@ pkg_postinst() {
 	elog "# zfs set com.sun:auto-snapshot:weekly=true rpool"
 	elog
 	elog "for detail pls visit http://docs.oracle.com/cd/E19082-01/817-2271/ghzuk/"
-}
+	elog
+	ewarn "if you are using fcron as system crontab. frequent snapshot may not"
+	ewarn "work. you should add below setting to job list by execute"
+	ewarn "'fcrontab -e' manually:"
+	use default-exclude && \
+		ewarn "*/15 * * * * zfs-auto-snapshot --default-exclude -q -g --label=frequent --keep=4  //" || \
+		ewarn "*/15 * * * * zfs-auto-snapshot -q -g --label=frequent --keep=4  //"
+	elog
 
+}
