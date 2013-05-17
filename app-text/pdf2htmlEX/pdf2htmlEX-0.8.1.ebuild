@@ -12,17 +12,10 @@ SRC_URI="https://github.com/coolwanglu/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE=""
 
-IUSE="+autohint"
-
-COMMON_DEPEND=">=app-text/poppler-0.20[cxx,cjk,png,cairo]
-	>=media-libs/libpng-1.5
-	>=media-gfx/fontforge-20110222-r1"
-
-RDEPEND="${COMMON_DEPEND}
-	autohint? ( media-gfx/ttfautohint )"
-	
-DEPEND="${COMMON_DEPEND}
+RDEPEND=">=app-text/poppler-0.20[cjk,png]
+	media-gfx/fontforge"
+DEPEND="${RDEPEND}
 	virtual/pkgconfig"
