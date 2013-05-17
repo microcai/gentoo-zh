@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<name>loong0</name>
+		<email>longlene@gmail.com</email>
+	</maintainer>
+	<longdescription>
+
+		Android Studio is a new Android development environment based on IntelliJ IDEA. Similar to Eclipse with the ADT Plugin, Android Studio provides integrated Android developer tools for development and debugging. On top of the capabilities you expect from IntelliJ, Android Studio offers:
+
+		Gradle-based build support.
+		Android-specific refactoring and quick fixes.
+		Lint tools to catch performance, usability, version compatibility and other problems.
+		ProGuard and app-signing capabilities.
+		Template-based wizards to create common Android designs and components.
+		A rich layout editor that allows you to drag-and-drop UI components, preview layouts on multiple screen configurations, and much more.
+	</longdescription>
+</pkgmetadata>
