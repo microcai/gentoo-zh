@@ -18,11 +18,11 @@ fi
 
 case ${PV} in
 	*_alpha*)
-		KEYWORDS=""
+		KEYWORDS="~amd64 ~x86"
 		MY_VV=${MY_PV}~${MY_V/alpha/a}${MY_SP}
 		;;
 	*_beta*)
-		KEYWORDS="~amd64 ~x86"
+		KEYWORDS="amd64 x86"
 		MY_VV=${MY_PV}~${MY_V/beta/b}${MY_SP}
 		;;
 	*)
@@ -34,7 +34,9 @@ DESCRIPTION="WPS Office is an office productivity suite. This is an ALPHA
 package. Use it at your own risk."
 HOMEPAGE="http://www.wps.cn"
 
-SRC_URI="http://wdl.cache.ijinshan.com/wps/download/Linux/unstable/${PN}_${MY_VV}_i386.deb"
+MY_PN=kingsoft-office
+
+SRC_URI="http://wdl.cache.ijinshan.com/wps/download/Linux/unstable/${MY_PN}_${MY_VV}_i386.deb"
 
 SLOT="0"
 RESTRICT="strip mirror"
