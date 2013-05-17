@@ -1,0 +1,13 @@
+diff --git a/src/cff/cffobjs.c b/src/cff/cffobjs.c
+index ebcf189..3f2ce6b 100644
+--- a/src/cff/cffobjs.c
++++ b/src/cff/cffobjs.c
+@@ -1056,7 +1056,7 @@
+
+
+/* set default property values */
+- driver->hinting_engine = FT_CFF_HINTING_FREETYPE;
++ driver->hinting_engine = FT_CFF_HINTING_ADOBE;
+driver->no_stem_darkening = FALSE;
+
+return FT_Err_Ok;
