@@ -10,7 +10,7 @@ inherit git-2
 
 HOMEPAGE="http://fcitx-im.org/wiki/Fcitx"
 
-EGIT_COMMIT="e138df32d9e9df8d2e7bca03d3cb6fa2a693ddb1"
+EGIT_COMMIT="e9465792340cffde5d6acb317f8ddc1fde1fe120"
 
 EGIT_REPO_URI="git://github.com/fcitx/fcitx.git"
 SRC_URI="https://fcitx.googlecode.com/files/pinyin.tar.gz
