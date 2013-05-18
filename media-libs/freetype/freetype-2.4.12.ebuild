@@ -10,13 +10,12 @@ DESCRIPTION="A high-quality and portable font engine"
 HOMEPAGE="http://www.freetype.org/"
 SRC_URI="mirror://sourceforge/freetype/${P/_/}.tar.bz2
 	utils?	( mirror://sourceforge/freetype/ft2demos-${PV}.tar.bz2 )
-	doc?	( mirror://sourceforge/freetype/${PN}-doc-${PV}.tar.bz2 )
-	infinality? ( http://dev.gentoo.org/~polynomial-c/${PN}-2.4.11-infinality-patches.tar.xz )"
+	doc?	( mirror://sourceforge/freetype/${PN}-doc-${PV}.tar.bz2 )"
 
 LICENSE="|| ( FTL GPL-2+ )"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
-IUSE="X auto-hinter bindist bzip2 +adobe-cff debug doc fontforge infinality static-libs utils"
+IUSE="X auto-hinter bindist bzip2 +adobe-cff debug doc fontforge static-libs utils"
 
 # Note: replace emul-linux dep when bzip2 becomes multilib-aware
 # (and all [${MULTILIB_USEDEP}] on it then!)
@@ -27,7 +26,6 @@ DEPEND="sys-libs/zlib
 		  x11-libs/libXau
 		  x11-libs/libXdmcp )"
 RDEPEND="${DEPEND}
-	infinality? ( media-libs/fontconfig-infinality )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-xlibs-20130224 )"
 
 src_prepare() {
@@ -61,15 +59,6 @@ src_prepare() {
 	if use debug; then
 		enable_option FT_DEBUG_LEVEL_TRACE
 		enable_option FT_DEBUG_MEMORY
-	fi
-
-	if use infinality; then
-		epatch "${WORKDIR}"/patches/freetype-enable-subpixel-hinting-infinality.patch
-		epatch "${WORKDIR}"/patches/freetype-entire-infinality-patchset.patch
-
-		# FT_CONFIG_OPTION_SUBPIXEL_RENDERING is already enabled in
-		# freetype-2.4.11
-		enable_option TT_CONFIG_OPTION_SUBPIXEL_HINTING
 	fi
 
 	epatch "${FILESDIR}"/${PN}-2.3.2-enable-valid.patch
