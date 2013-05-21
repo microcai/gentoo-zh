@@ -3,21 +3,18 @@
 # Author stlifey <stlifey@gmail.com>
 # $Header: $
 #
-# e-sources.eclass - Eclass for building sys-kernel/e-sources-* packages , provide patchest including :
+# e-sources.eclass - Eclass for building sys-kernel/e-sources-* packages , provide patchests including :
 #
 #	aufs - Advanced multi layered unification filesystem
 #	bfq - budget fair queueing budget I/O scheduler
 #	cjktty - CJK tty font support
 #	ck - Con Kolivas' high performance patchset
-#	fbcondecor - display pictures in the background of system consoles
 #	gentoo - genpatches
 #	imq - intermediate queueing device
 #	reiser4 - Reiser4 file system
 #	tuxonice - another linux hibernate kernel patchset
 #	uksm - ultra kernel samepage merging
 #
-
-RESTRICT="mirror"
 
 features() { if [ "${SUPPORTED_USE/$1/}" != "$SUPPORTED_USE" ]; then return 0; else return 1; fi }
 
@@ -126,20 +123,7 @@ USE_ENABLE() {
 					"
 					CK_PATCHES="${CK_PRE_PATCH} ${DISTDIR}/patch-${KMV}-ck${ck_version}.bz2:1 ${CK_POST_PATCH}"
 				fi
-			;;
-
-		fbcondecor) 	fbcondecor_url="http://sources.gentoo.org/cgi-bin/viewvc.cgi/linux-patches/genpatches-2.6"
-				fbcondecor_src="${fbcondecor_url}/trunk/${KMV}/4200_fbcondecor-${fbcondecor_version}.patch -> 4200_fbcondecor-${KMV}-${fbcondecor_version}.patch"
-				HOMEPAGE="${HOMEPAGE} ${fbcondecor_url}"
-				if [ "${OVERRIDE_FBCONDECOR_PATCHES}" != "" ]; then
-					FBCONDECOR_PATCHES="${OVERRIDE_FBCONDECOR_PATCHES}"
-				else
-					SRC_URI="
-						${SRC_URI}
-						fbcondecor?		( ${fbcondecor_src} )
-					"
-					FBCONDECOR_PATCHES="${DISTDIR}/4200_fbcondecor-${KMV}-${fbcondecor_version}.patch:1"
-				fi
+				UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 4200_fbcondecor-0.9.6.patch"
 			;;
 
 		imq)		imq_url="http://www.linuximq.net"
@@ -215,8 +199,6 @@ for I in ${SUPPORTED_USE}; do
 	USE_ENABLE "${I}"
 done
 
-UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 4200_fbcondecor-0.9.6.patch"
-
 PATCH_APPEND() {
 	local PATCH=$1
 	PATCH="${PATCH/+/}" PATCH="${PATCH/-/}"
@@ -226,7 +208,6 @@ PATCH_APPEND() {
 		bfq)		use bfq && UNIPATCH_LIST="${UNIPATCH_LIST} ${BFQ_PATCHES}" ;;
 		cjktty)		use cjktty && UNIPATCH_LIST="${UNIPATCH_LIST} ${CJKTTY_PATCHES}" ;;
 		ck)		use ck && UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_PATCHES}" ;;
-		fbcondecor)	use fbcondecor && UNIPATCH_LIST="${UNIPATCH_LIST} ${FBCONDECOR_PATCHES}" ;;
 		imq)		use imq && UNIPATCH_LIST="${UNIPATCH_LIST} ${IMQ_PATCHES}" ;;
 		reiser4)	use reiser4 && UNIPATCH_LIST="${UNIPATCH_LIST} ${REISER4_PATCHES}" ;;
 		tuxonice)	use tuxonice && UNIPATCH_LIST="${UNIPATCH_LIST} ${TUXONICE_PATCHES}" ;;
@@ -237,10 +218,6 @@ PATCH_APPEND() {
 for I in ${SUPPORTED_USE}; do
 	PATCH_APPEND "${I}"
 done
-
-if features cjktty && features fbcondecor;
-	then REQUIRED_USE="cjktty? ( !fbcondecor )";
-fi
 
 SRC_URI="
 	${SRC_URI}
