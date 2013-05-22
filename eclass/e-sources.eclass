@@ -109,6 +109,7 @@ USE_ENABLE() {
 					"
 					CJKTTY_PATCHES="${DISTDIR}/cjktty-for-${cjktty_kernel_version}.patch.xz:1"
 				fi
+				UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 4200_fbcondecor-0.9.6.patch"
 			;;
 
 		ck)		ck_url="http://ck.kolivas.org/patches"
@@ -123,7 +124,6 @@ USE_ENABLE() {
 					"
 					CK_PATCHES="${CK_PRE_PATCH} ${DISTDIR}/patch-${KMV}-ck${ck_version}.bz2:1 ${CK_POST_PATCH}"
 				fi
-				UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 4200_fbcondecor-0.9.6.patch"
 			;;
 
 		imq)		imq_url="http://www.linuximq.net"
