@@ -17,7 +17,7 @@ ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
 +libass libcaca libmpeg2 lirc +live lzo mad md5sum +mmx mmxext mng +mp3 nas
 +network nut openal +opengl +osdmenu oss png pnm pulseaudio pvr +quicktime
 radio +rar +real +rtc rtmp samba +shm sdl +speex sse sse2 ssse3
-tga +theora +tremor +truetype +toolame +twolame +unicode v4l vaapi vdpau vidix
+tga +theora +tremor +truetype +toolame +twolame +unicode v4l vdpau vidix
 +vorbis win32codecs +X +x264 xanim xinerama +xscreensaver +xv +xvid xvmc
 zoran"
 
