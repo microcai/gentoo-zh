@@ -28,6 +28,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="dev-lang/python:3.3[ssl]
+	dev-libs/nss[utils]
 	dev-python/gevent
 	dev-python/pyopenssl
 	x11-libs/vte:0[python]"
@@ -65,7 +66,6 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 	elog
 	elog "config file: /etc/goagent"
-	elog "init script: /etc/init.d/goagent"
 	elog
 	elog "Usage:"
 	elog "goagent-gtk"
