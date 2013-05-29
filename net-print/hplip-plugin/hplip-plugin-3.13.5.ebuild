@@ -56,7 +56,8 @@ src_install() {
 		newexe ${plugin} ${plugin/-${hplip_arch}}
 	done
 
-	cat >> "${ED}/var/lib/hp/hplip.state" << _EOF_
+	mkdir -p "${D}/var/lib/hp" || die
+	cat >> "${D}/var/lib/hp/hplip.state" << _EOF_ || die
 [plugin]
 installed = 1
 eula = 1
