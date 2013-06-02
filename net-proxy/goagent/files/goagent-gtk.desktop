@@ -2,7 +2,7 @@
 Type=Application
 Categories=System;Network;
 Exec=/usr/bin/goagent-gtk %f
-Icon=/opt/goagent/local/goagent-logo.png
+Icon=goagent-logo
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true

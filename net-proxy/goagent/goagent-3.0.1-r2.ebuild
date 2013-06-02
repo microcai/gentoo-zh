@@ -40,7 +40,7 @@ src_unpack() {
 src_prepare() {
 #	find ${S}/local -type f -name *.py \
 #	-exec sed -i -re "1s/python2?/python2/" {} \; || die "Failed to sed"
-	sed -i -re "1s/python3?/python3/" local/goagent-gtk.py || die "Failed to sed"
+	sed -i -re "1s/python2?/python2/" local/goagent-gtk.py || die "Failed to sed"
 }
 
 src_install() {
@@ -54,6 +54,11 @@ src_install() {
 
 	insinto "/usr/share/applications"
 	doins "${FILESDIR}/goagent-gtk.desktop"
+
+	cp -rf ${FILESDIR}/goagent-logo.png ${S}/local/ || die
+
+	insinto "/usr/share/pixmaps"
+	doins "${FILESDIR}/goagent-logo.png"
 
 #	newinitd "${FILESDIR}/goagent-initd" goagent
 	dosym /etc/goagent "/opt/goagent/local/proxy.ini"
