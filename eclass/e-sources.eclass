@@ -110,7 +110,6 @@ USE_ENABLE() {
 					"
 					CJKTTY_PATCHES="${DISTDIR}/cjktty-for-${cjktty_kernel_version}.patch.xz:1"
 				fi
-				UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 4200_fbcondecor-0.9.6.patch"
 			;;
 
 		ck)		ck_url="http://ck.kolivas.org/patches"
@@ -236,6 +235,8 @@ for I in ${SUPPORTED_USE}; do
 done
 
 UNIPATCH_LIST="${UNIPATCH_LIST} ${ADDITION_PATCHES}"
+
+features cjktty && use cjktty && UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 4200_fbcondecor-0.9.6.patch"
 
 SRC_URI="
 	${SRC_URI}
