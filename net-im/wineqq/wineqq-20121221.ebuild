@@ -27,7 +27,7 @@ RDEPEND="amd64? (
 
 RESTRICT="mirror strip"
 
-REQUIRED_USE="amd64? ( !!system-wine )"
+REQUIRED_USE="amd64? ( !system-wine )"
 
 QA_PRESTRIPPED="opt/linuxqq/qq"
 
