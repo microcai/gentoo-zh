@@ -5,7 +5,7 @@
 EAPI="5"
 K_DEBLOB_AVAILABLE="1"
 
-bfq_version="6.1"
+bfq_version="6.2"
 ck_version="1"
 fbcondecor_version="0.9.6"
 gentoo_version="10"
