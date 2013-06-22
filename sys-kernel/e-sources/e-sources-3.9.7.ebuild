@@ -19,13 +19,13 @@ reiser4_kernel_version="3.9.2"
 tuxonice_kernel_version="3.9.5"
 uksm_kernel_version="3.9.1"
 
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 
 SUPPORTED_USE="+aufs +cjktty +ck +gentoo +imq +optimization +reiser4 +tuxonice +uksm"
 
 CK_PRE_PATCH=""
 CK_POST_PATCH=""
-UNIPATCH_EXCLUDE=""
+UNIPATCH_EXCLUDE="1801_block-cgroups-kconfig-build-bits-for-BFQ-v6r2-3.9.patch 1802_block-introduce-the-BFQ-v6r2-I-O-sched-for-3.9.patch 1803_block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v6r2-for-3.9.0.patch"
 
 OVERRIDE_AUFS_PATCHES=""
 OVERRIDE_BFQ_PATCHES=""
