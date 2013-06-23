@@ -6,7 +6,6 @@
 # e-sources.eclass - Eclass for building sys-kernel/e-sources-* packages , provide patchests including :
 #
 #	aufs - Advanced multi layered unification filesystem
-#	bfq - budget fair queueing budget I/O scheduler
 #	cjktty - CJK tty font support
 #	ck - Con Kolivas' high performance patchset
 #	gentoo - genpatches
@@ -41,7 +40,7 @@ if features gentoo; then
 	SRC_URI="${GENPATCHES_URI}"
 fi
 
-DESCRIPTION="Full sources for the Linux kernel including: gentoo, ck, bfq and other patches"
+DESCRIPTION="Full sources for the Linux kernel including: gentoo, ck and other patches"
 
 USE_ENABLE() {
 	local USE=$1
@@ -72,28 +71,6 @@ USE_ENABLE() {
 						${WORKDIR}/aufs3-proc_map.patch
 						${WORKDIR}/aufs3-kbuild.patch
 						${WORKDIR}/aufs3-standalone.patch
-					"
-				fi
-			;;
-
-		bfq)		bfq_url="http://algo.ing.unimo.it/people/paolo/disk_sched"
-				bfq_src="
-					${bfq_url}/patches/${bfq_kernel_version}-v${bfq_version/./r}/0001-block-cgroups-kconfig-build-bits-for-BFQ-v${bfq_version/./r}-${KMV}.patch
-					${bfq_url}/patches/${bfq_kernel_version}-v${bfq_version/./r}/0002-block-introduce-the-BFQ-v${bfq_version/./r}-I-O-sched-for-${KMV}.patch
-					${bfq_url}/patches/${bfq_kernel_version}-v${bfq_version/./r}/0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v${bfq_version/./r}-for-${bfq_kernel_version}.patch
-				"
-				HOMEPAGE="${HOMEPAGE} ${bfq_url}"
-				if [ "${OVERRIDE_BFQ_PATCHES}" != "" ]; then
-					BFQ_PATCHES="${OVERRIDE_BFQ_PATCHES}"
-				else
-					SRC_URI="
-						${SRC_URI}
-						bfq?	( ${bfq_src} )
-					"
-					BFQ_PATCHES="
-						${DISTDIR}/0001-block-cgroups-kconfig-build-bits-for-BFQ-v${bfq_version/./r}-${KMV}.patch:1
-						${DISTDIR}/0002-block-introduce-the-BFQ-v${bfq_version/./r}-I-O-sched-for-${KMV}.patch:1
-						${DISTDIR}/0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v${bfq_version/./r}-for-${bfq_kernel_version}.patch:1
 					"
 				fi
 			;;
@@ -219,7 +196,6 @@ PATCH_APPEND() {
 
 	case ${PATCH} in
 		aufs)		use aufs && UNIPATCH_LIST="${UNIPATCH_LIST} ${AUFS_PATCHES}" ;;
-		bfq)		use bfq && UNIPATCH_LIST="${UNIPATCH_LIST} ${BFQ_PATCHES}" ;;
 		cjktty)		use cjktty && UNIPATCH_LIST="${UNIPATCH_LIST} ${CJKTTY_PATCHES}" ;;
 		ck)		use ck && UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_PATCHES}" ;;
 		imq)		use imq && UNIPATCH_LIST="${UNIPATCH_LIST} ${IMQ_PATCHES}" ;;
