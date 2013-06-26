@@ -25,17 +25,10 @@ RDEPEND="
 	virtual/opengl
 	virtual/ffmpeg
 "
+
 DEPEND="${RDEPEND}"
 
 DOCS=(ChangeLog README.md)
-
-RESTRICT="test"
-
-src_prepare() {
-	cmake-utils_src_prepare
-	sed -e '/add_definitions/s, -ggdb,,' -i CMakeLists.txt || die
-	sed -e "/^install /s, lib/, $(get_libdir)/," -i CMakeLists.txt || die
-}
 
 pkg_postinst() {
 	einfo "In order to use vdpau hardware video acceleration via ${PN}"
