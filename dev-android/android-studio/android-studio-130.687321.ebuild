@@ -8,7 +8,7 @@ DESCRIPTION="a new Android development environment based on IntelliJ IDEA"
 HOMEPAGE="https://developer.android.com/sdk/installing/studio.html"
 SRC_URI="http://dl.google.com/android/studio/android-studio-bundle-${PV}-linux.tgz -> ${P}.tgz"
 
-LICENSE="apache-2"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
