@@ -27,7 +27,7 @@ inherit cmake-utils
 # vcs-snapshot
 
 DEPEND="
-	>=dev-libs/boost-1.48[nls,threads]
+	>=dev-libs/boost-1.50[nls,threads]
 	dev-libs/openssl
 	net-libs/gloox
 "
