@@ -20,14 +20,12 @@ RDEPEND="amd64? (
         )
 
 	system-wine? (
-		>=app-emulation/wine-1.5.23[abi_x86_32,-abi_x86_x32,-abi_x86_64,fontconfig,mp3,truetype,X,nls,xml] 
+		>=app-emulation/wine-1.6_rc3[abi_x86_32,-abi_x86_x32,-abi_x86_64,fontconfig,mp3,truetype,X,nls,xml] 
 	)
 	!amd64? ( x11-libs/gtk+:2 )
 "
 
 RESTRICT="mirror strip"
-
-REQUIRED_USE="amd64? ( !system-wine )"
 
 QA_PRESTRIPPED="opt/linuxqq/qq"
 
