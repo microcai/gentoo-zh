@@ -3,24 +3,24 @@
 # $Header: $
 
 EAPI="5"
-K_DEBLOB_AVAILABLE="1"
+K_DEBLOB_AVAILABLE="0"
 
-#ck_version="1"
-#fbcondecor_version="0.9.6"
+ck_version="1"
 gentoo_version="2"
-#optimization_version="1"
-#tuxonice_version="2013.06.08"
-#uksm_version="0.1.2.2"
+optimization_version="1"
+tuxonice_version="2013.06.08"
+uksm_version="0.1.2.2"
 
-#aufs_kernel_version="3.9_p20130520"
+aufs_kernel_version="3.9_p20130520"
 cjktty_kernel_version="3.8.1"
-#imq_kernel_version="3.9.0"
-#reiser4_kernel_version="3.9.2"
-#tuxonice_kernel_version="3.9.5"
-#uksm_kernel_version="3.9.1"
+imq_kernel_version="3.9.0"
+reiser4_kernel_version="3.9.2"
+tuxonice_kernel_version="3.9.5"
+uksm_kernel_version="3.9.1"
 
 KEYWORDS=""
 
+# aufs cjktty ck gentoo imq optimization reiser4 tuxonice uksm
 SUPPORTED_USE="+cjktty +gentoo"
 
 CK_PRE_PATCH=""
@@ -32,11 +32,11 @@ OVERRIDE_BFQ_PATCHES=""
 OVERRIDE_CJKTTY_PATCHES=""
 OVERRIDE_CK_PATCHES=""
 OVERRIDE_FBCONDECOR_PATCHES=""
-OVERRIDE_IMQ_PATCHES="${FILESDIR}/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
+OVERRIDE_IMQ_PATCHES=""
 OVERRIDE_REISER4_PATCHES=""
 OVERRIDE_TUXONICE_PATCHES=""
 OVERRIDE_UKSM_PATCHES=""
 
-ADDITION_PATCHES="${FILESDIR}/enable-ivb-pstate.patch"
+ADDITION_PATCHES=""
 
 inherit e-sources

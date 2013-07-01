@@ -44,9 +44,6 @@ DESCRIPTION="Full sources for the Linux kernel including: gentoo, ck and other p
 
 USE_ENABLE() {
 	local USE=$1
-	if [ "${USE/\*/}" != "$USE" ];
-		then USE="";
-	fi
 	IUSE="${IUSE} ${USE}" USE="${USE/+/}" USE="${USE/-/}"
 
 	case ${USE} in

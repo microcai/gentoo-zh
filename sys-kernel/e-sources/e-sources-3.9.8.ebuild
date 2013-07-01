@@ -6,9 +6,8 @@ EAPI="5"
 K_DEBLOB_AVAILABLE="1"
 
 ck_version="1"
-fbcondecor_version="0.9.6"
 gentoo_version="13"
-optimization_version="1"
+optimization_version="2"
 tuxonice_version="2013.06.08"
 uksm_version="0.1.2.2"
 
@@ -21,6 +20,7 @@ uksm_kernel_version="3.9.1"
 
 KEYWORDS="~amd64 ~x86"
 
+# aufs cjktty ck gentoo imq optimization reiser4 tuxonice uksm
 SUPPORTED_USE="+aufs +cjktty +ck +gentoo +imq +optimization +reiser4 +tuxonice +uksm"
 
 CK_PRE_PATCH=""
