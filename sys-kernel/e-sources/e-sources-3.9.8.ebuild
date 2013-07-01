@@ -7,7 +7,7 @@ K_DEBLOB_AVAILABLE="1"
 
 ck_version="1"
 fbcondecor_version="0.9.6"
-gentoo_version="12"
+gentoo_version="13"
 optimization_version="1"
 tuxonice_version="2013.06.08"
 uksm_version="0.1.2.2"
