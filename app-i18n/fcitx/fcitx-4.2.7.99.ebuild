@@ -128,7 +128,7 @@ src_configure() {
 
 	cmake-utils_src_configure
 
-	if use amd64 && use abi_x86_32 ; then
+	if use abi_x86_32 ; then
 		mkdir -p "${WORKDIR}/${P}_build32"
 		cd "${WORKDIR}/${P}_build32"
 
@@ -170,7 +170,7 @@ src_configure() {
 src_compile(){
 	cmake-utils_src_compile
 
-	if use amd64 && use abi_x86_32 ; then
+	if use abi_x86_32 ; then
 		cd ${WORKDIR}/${P}_build32/src/
 		emake -C lib || die
 
@@ -181,7 +181,7 @@ src_compile(){
 }
 
 src_install() {
-	if use amd64 && use abi_x86_32 ; then
+	if use abi_x86_32 ; then
 		pushd "${WORKDIR}/${P}_build32/src"
 		emake DESTDIR="${D}" -C lib install || die
 

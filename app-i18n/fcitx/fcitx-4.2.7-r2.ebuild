@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,26 +6,17 @@ EAPI=5
 
 inherit multilib multilib-build cmake-utils eutils gnome2-utils fdo-mime
 
-if [[ ${PV} == "9999" ]]; then
-	inherit git-2
-fi
-
-if [[ ${PV} == "9999" ]]; then
-	EGIT_REPO_URI="git://github.com/fcitx/fcitx.git"
-	SRC_URI="${HOMEPAGE}/files/pinyin.tar.gz
-		table? ( ${HOMEPAGE}/files/table.tar.gz )"
-else
-	SRC_URI="http://fcitx.googlecode.com/files/${P}_dict.tar.xz"
-	RESTRICT="mirror"
-fi
-
 DESCRIPTION="Flexible Context-aware Input Tool with eXtension"
 HOMEPAGE="http://fcitx-im.org/wiki/Fcitx"
+SRC_URI="http://fcitx.googlecode.com/files/${P}_dict.tar.xz
+	http://dev.gentoo.org/~yngwin/distfiles/${P}-fixed-pngs.tgz" #465658
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="+autostart +cairo +dbus debug +glib +gtk +gtk3 +icu +introspection lua
 +pango +qt4 +snooper static-libs +table test +X +xml"
+RESTRICT="mirror"
 
 RDEPEND="
 	cairo? (
@@ -90,15 +81,25 @@ HTML_DOCS=(
 update_gtk2_immodules() {
 	gnome2_query_immodules_gtk2
 
-	if use abi_x86_32 ; then
+	if use abi_x86_64 && use abi_x86_32 ; then
 		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0-32" > ${EPREFIX}/etc/gtk-2.0/i686-pc-linux-gnu/gtk.immodules
 	fi
 }
 
-#src_prepare() {
+src_prepare() {
+	use autostart && DOC_CONTENTS="You have enabled the autostart USE flag,
+	which will let fcitx start automatically on XDG compatible desktop
+	environments, such as Gnome, KDE, LXDE, Razor-qt and Xfce. If you use
+	~/.xinitrc to configure your desktop, make sure to include the fcitx
+	command to start it."
+
+	cp -a ../skin . || die 'copying fixed pngs failed' #465658
 	# patch fcitx to let fcitx-sunpinyin to build with gcc 4.6
-#	epatch "${FILESDIR}/${P}-gcc46-compatible.patch"
-#}
+	epatch "${FILESDIR}/${P}-gcc46-compatible.patch"
+	# patch to fix png16 problem
+	epatch "${FILESDIR}/${P}-png.patch"
+	epatch_user
+}
 
 src_configure() {
 	local mycmakeargs=(
@@ -131,7 +132,7 @@ src_configure() {
 
 	cmake-utils_src_configure
 
-	if use abi_x86_32 ; then
+	if use abi_x86_64 && use abi_x86_32 ; then
 		mkdir -p "${WORKDIR}/${P}_build32"
 		cd "${WORKDIR}/${P}_build32"
 
@@ -173,7 +174,7 @@ src_configure() {
 src_compile(){
 	cmake-utils_src_compile
 
-	if use abi_x86_32 ; then
+	if use abi_x86_64 && use abi_x86_32 ; then
 		cd ${WORKDIR}/${P}_build32/src/
 		emake -C lib || die
 
@@ -184,7 +185,7 @@ src_compile(){
 }
 
 src_install() {
-	if use abi_x86_32 ; then
+	if use abi_x86_64 && use abi_x86_32 ; then
 		pushd "${WORKDIR}/${P}_build32/src"
 		emake DESTDIR="${D}" -C lib install || die
 
@@ -260,4 +261,3 @@ pkg_postrm() {
 	use gtk && update_gtk2_immodules
 	use gtk3 && gnome2_query_immodules_gtk3
 }
-
