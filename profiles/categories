@@ -8,10 +8,13 @@ app-emulation
 app-i18n
 app-misc
 app-office
+app-pda
 app-portage
 app-shells
 app-text
 app-vim
+dde-base
+dde-extra
 dev-android
 dev-cpp
 dev-db
@@ -25,6 +28,7 @@ dev-texlive
 dev-util
 games-board
 games-misc
+gnome-base
 gnome-extra
 kde-misc
 media-fonts
