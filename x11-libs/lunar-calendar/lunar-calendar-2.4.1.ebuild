@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="doc python"
 
 RDEPEND="${RDEPEND}
-	>=dev-libs/lunnar-date-2.4.0
+	>=dev-libs/lunar-date-2.4.0
 	doc? ( >=dev-util/gtk-doc-1 )
 	python? (
 		>=dev-python/pygobject-2.11.5

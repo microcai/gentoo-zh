@@ -22,8 +22,8 @@ RDEPEND="dev-lang/python:2.7
 		dde-base/deepin-system-settings
 		dev-python/dtk-widget
 		dev-libs/lunar-date
-		dev-libs/lunar-calendar
-		dev-python/deepin-lunar"
+		x11-libs/lunar-calendar
+		dev-python/deepin-lunar:deepin"
 DEPEND=""
 S="${WORKDIR}/${DSS}-${MY_VER}/modules/date_time"
 

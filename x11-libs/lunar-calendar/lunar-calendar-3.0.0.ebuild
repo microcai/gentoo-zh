@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 RDEPEND="${RDEPEND}
-	>=dev-libs/lunnar-date-2.4.0
+	>=dev-libs/lunar-date-2.4.0
 	x11-libs/gtk+:3
 	"
 
