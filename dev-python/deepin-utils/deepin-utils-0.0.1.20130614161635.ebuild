@@ -22,7 +22,7 @@ RDEPEND=">=dev-lang/python-2.7:2.7
 		dev-python/pycairo
 		x11-libs/gtk+:2
 		dev-python/pygtk:2
-		net-libs/webkit-gtk
+		net-libs/webkit-gtk:2
 		dev-python/python-xlib"
 DEPEND="${RDEPEND}
 		dev-python/setuptools"
@@ -30,11 +30,6 @@ S=${WORKDIR}/${PN}-$(get_version_component_range 1-3)
 
 pkg_setup() {
 	python_set_active_version 2.7
-}
-
-src_prepare() {
-	sed -i 's|webkit-1.0|webkitgtk-3.0|g' $S/setup.py || die "Sed failed!"
-	sed -i 's|webkitgtk-1.0|webkitgtk-3.0|g' $S/setup.py || die "Sed failed!"
 }
 
 src_install() {

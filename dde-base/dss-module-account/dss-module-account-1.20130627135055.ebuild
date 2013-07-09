@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit fdo-mime versionator eutils python
+inherit fdo-mime versionator eutils python systemd
 
 DSS="deepin-system-settings"
 MY_VER="$(get_version_component_range 1)+git$(get_version_component_range 2)~9f146c62a7"

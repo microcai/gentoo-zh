@@ -31,7 +31,6 @@ src_install() {
 
 	insinto "/usr/share/${PN}"
 	doins -r  ${S}/src
-	fperms 0755 -R /usr/share/${PN}/src/
 
 }
 
