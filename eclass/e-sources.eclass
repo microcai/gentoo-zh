@@ -167,7 +167,10 @@ USE_ENABLE() {
 			;;
 
 		uksm)		uksm_url="http://kerneldedup.org"
-				uksm_src="${uksm_url}/download/uksm/${uksm_version}/uksm-${uksm_version}-for-v${KMV}.ge.${uksm_kernel_version/$KMV./}.patch"
+				if [[ "${uksm_kernel_version/$KMV./}" = "0" ]]
+					then uksm_src="${uksm_url}/download/uksm/${uksm_version}/uksm-${uksm_version}-for-v${KMV}.patch"
+					else uksm_src="${uksm_url}/download/uksm/${uksm_version}/uksm-${uksm_version}-for-v${KMV}.ge.${uksm_kernel_version/$KMV./}.patch"
+				fi
 				HOMEPAGE="${HOMEPAGE} ${uksm_url}"
 				if [ "${OVERRIDE_UKSM_PATCHES}" != "" ]; then
 					UKSM_PATCHES="${OVERRIDE_UKSM_PATCHES}";
@@ -176,7 +179,10 @@ USE_ENABLE() {
 						${SRC_URI}
 						uksm?		( ${uksm_src} )
 					"
-					UKSM_PATCHES="${DISTDIR}/uksm-${uksm_version}-for-v${KMV}.ge.${uksm_kernel_version/$KMV./}.patch:1"
+					if [[ "${uksm_kernel_version/$KMV./}" = "0" ]]
+						then UKSM_PATCHES="${DISTDIR}/uksm-${uksm_version}-for-v${KMV}.ge.patch:1"
+						else UKSM_PATCHES="${DISTDIR}/uksm-${uksm_version}-for-v${KMV}.ge.${uksm_kernel_version/$KMV./}.patch:1"
+					fi
 				fi
 			;;
 
