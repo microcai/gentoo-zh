@@ -16,12 +16,12 @@ cjktty_kernel_version="3.8.1"
 imq_kernel_version="3.9.0"
 reiser4_kernel_version="3.9.2"
 tuxonice_kernel_version="3.9.5"
-uksm_kernel_version="3.9.1"
+uksm_kernel_version="3.10" # no "ge" in this version, so it is broken
 
 KEYWORDS=""
 
 # aufs cjktty ck gentoo imq optimization reiser4 tuxonice uksm
-SUPPORTED_USE="+cjktty +gentoo"
+SUPPORTED_USE="+cjktty +gentoo +uksm"
 
 CK_PRE_PATCH=""
 CK_POST_PATCH=""
@@ -35,7 +35,7 @@ OVERRIDE_FBCONDECOR_PATCHES=""
 OVERRIDE_IMQ_PATCHES=""
 OVERRIDE_REISER4_PATCHES=""
 OVERRIDE_TUXONICE_PATCHES=""
-OVERRIDE_UKSM_PATCHES=""
+OVERRIDE_UKSM_PATCHES="uksm-0.1.2.2-for-v3.10.patch"
 
 ADDITION_PATCHES=""
 
