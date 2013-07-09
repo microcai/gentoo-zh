@@ -1,0 +1,47 @@
+Respect intltool's LINGUAS variable for building translations.
+
+--- a/webkit-1.7.5/GNUmakefile.am
++++ b/webkit-1.7.5/GNUmakefile.am
+@@ -54,6 +54,9 @@
+ IDL_BINDINGS :=
+ TEST_PROGS :=
+ POFILES :=
++PO_LINGUAS :=
++USER_LINGUAS :=
++USE_LINGUAS :=
+ MOFILES :=
+ dom_binding_idls :=
+ wtf_cppflags:=
+--- a/webkit-1.7.5/Source/WebKit/gtk/po/GNUmakefile.am
++++ b/webkit-1.7.5/Source/WebKit/gtk/po/GNUmakefile.am
+@@ -27,7 +27,15 @@
+ 
+ POFILES += $(shell ls $(srcdir)/Source/WebKit/gtk/po/*.po)
+ 
+-MOFILES += $(shell echo $(POFILES) | tr ' ' '\n' | sed "s,^$(srcdir)/,,g" | sed 's/\.po/.mo/g')
++PO_LINGUAS += $(patsubst $(srcdir)/Source/WebKit/gtk/po/%.po,%,$(POFILES))
++
++USER_LINGUAS += $(filter $(LINGUAS),$(PO_LINGUAS))
++
++USE_LINGUAS += $(shell if test -n "$(USER_LINGUAS)" -o -n "$(LINGUAS)"; then LLINGUAS="$(USER_LINGUAS)"; else LLINGUAS="$(PO_LINGUAS)"; fi; for lang in $$LLINGUAS; do printf "$$lang "; done)
++
++MOFILES += $(USE_LINGUAS:%=Source/WebKit/gtk/po/%.mo)
++
++ALL_MOFILES := $(shell echo $(POFILES) | tr ' ' '\n' | sed "s,^$(srcdir)/,,g" | sed 's/\.po/.mo/g')
+ 
+ .po.mo:
+ 	test -d Source/WebKit/gtk/po/ || mkdir -p Source/WebKit/gtk/po/
+@@ -124,11 +132,11 @@
+ 	$(top_builddir)/stamp-po
+ 
+ MAINTAINERCLEANFILES += \
+-	$(MOFILES) \
++	$(ALL_MOFILES) \
+ 	$(top_builddir)/Source/WebKit/gtk/po/$(DOMAIN).pot
+ 
+ DISTCLEANFILES += \
+-	$(MOFILES) \
++	$(ALL_MOFILES) \
+ 	$(top_builddir)/Source/WebKit/gtk/po/$(DOMAIN).pot
+ 
+ po-install-data-local: all
