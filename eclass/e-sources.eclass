@@ -180,7 +180,7 @@ USE_ENABLE() {
 						uksm?		( ${uksm_src} )
 					"
 					if [[ "${uksm_kernel_version/$KMV./}" = "0" ]]
-						then UKSM_PATCHES="${DISTDIR}/uksm-${uksm_version}-for-v${KMV}.ge.patch:1"
+						then UKSM_PATCHES="${DISTDIR}/uksm-${uksm_version}-for-v${KMV}.patch:1"
 						else UKSM_PATCHES="${DISTDIR}/uksm-${uksm_version}-for-v${KMV}.ge.${uksm_kernel_version/$KMV./}.patch:1"
 					fi
 				fi
