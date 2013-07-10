@@ -16,18 +16,16 @@ RESTRICT="mirror"
 
 RDEPEND=">=app-i18n/fcitx-4.2.6"
 DEPEND="${RDEPEND}"
-S=${WORKDIR}/${PN}-release-${PV}
+S=${WORKDIR}
 
 src_configure(){
 	#unpack "
-	#	x86? ( arch/data.i386.tar.xz )
-	#	amd64? ( arch/data.amd64.tar.xz )"
-	echo "Current Directory"
-	pwd
+	#	x86? ( arch/data.i386.tar.gz )
+	#	amd64? ( arch/data.amd64.tar.gz )"
 	if use x86; then
-		unpack ./arch/data.i386.tar.xz
+		unpack ./arch/data.i386.tar.gz
 	elif use amd64; then
-		unpack ./arch/data.amd64.tar.xz
+		unpack ./arch/data.amd64.tar.gz
 	fi
 }
 
