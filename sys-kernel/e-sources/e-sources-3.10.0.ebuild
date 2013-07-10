@@ -8,7 +8,7 @@ K_DEBLOB_AVAILABLE="0"
 ck_version="1"
 gentoo_version="3"
 optimization_version="1"
-tuxonice_version="2013.06.29"
+tuxonice_version="2013.07.10"
 uksm_version="0.1.2.2"
 
 aufs_kernel_version="3.10_p20130708"
@@ -21,7 +21,7 @@ uksm_kernel_version="3.10.0"
 KEYWORDS=""
 
 # aufs cjktty ck gentoo imq optimization reiser4 tuxonice uksm
-SUPPORTED_USE="+aufs +cjktty +gentoo +optimization +uksm"
+SUPPORTED_USE="+aufs +cjktty +ck +gentoo +optimization +uksm"
 
 CK_PRE_PATCH=""
 CK_POST_PATCH=""
