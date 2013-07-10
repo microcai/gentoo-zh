@@ -9,7 +9,7 @@ inherit cmake-utils
 DESCRIPTION="A standalone module for fcitx that uses web API to provide better
 pinyin result."
 HOMEPAGE="https://github.com/fcitx/fcitx-cloudpinyin"
-SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
+SRC_URI="http://download.fcitx-im.org/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-RDEPEND=">=app-i18n/fcitx-4.2.7
+RDEPEND=">=app-i18n/fcitx-4.2.8
 	net-misc/curl"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
