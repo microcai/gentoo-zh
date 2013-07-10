@@ -8,7 +8,7 @@ inherit cmake-utils
 
 DESCRIPTION="m17n support for fcitx."
 HOMEPAGE="https://github.com/fcitx/fcitx-m17n"
-SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
+SRC_URI="http://download.fcitx-im.org/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-RDEPEND=">=app-i18n/fcitx-4.2.7
+RDEPEND=">=app-i18n/fcitx-4.2.8
 	dev-libs/m17n-lib"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
