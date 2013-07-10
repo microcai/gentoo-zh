@@ -1,0 +1,29 @@
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+EAPI="5"
+inherit autotools eutils
+
+DESCRIPTION="Library to deal with Pinyin."
+HOMEPAGE="https://github.com/libpinyin/libpinyin"
+SRC_URI="https://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz
+	     http://downloads.sourceforge.net/${PN}/model6.text.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
+RESTRICT="mirror"
+
+DEPEND=">=sys-libs/db-4
+	dev-libs/glib:2
+"
+RDEPEND="${DEPEND}"
+
+src_prepare() {
+	ln -s "${DISTDIR}/model6.text.tar.gz" "${S}/data" || die "link file error"
+	sed -i '/wget.*model6\.text\.tar\.gz/ d' "${S}/data/Makefile.am"
+	epatch_user
+	eautoreconf
+}
