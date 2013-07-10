@@ -8,7 +8,7 @@ inherit cmake-utils gnome2-utils
 
 DESCRIPTION="Provides some other tables for fcitx, fork from ibus-table-others, scim-tables."
 HOMEPAGE="https://github.com/fcitx/fcitx-table-other"
-SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
+SRC_URI="http://download.fcitx-im.org/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-3+"
 SLOT="0"
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-RDEPEND=">=app-i18n/fcitx-4.2.4[table]"
+RDEPEND=">=app-i18n/fcitx-4.2.8[table]"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	sys-devel/gettext"
