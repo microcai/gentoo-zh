@@ -6,9 +6,9 @@ EAPI=5
 
 inherit cmake-utils gnome2-utils
 
-DESCRIPTION="Libpinyin Wrapper for Fcitx."
+DESCRIPTION="Libpinyin Wrapper for Fcitx, library to deal with Pinyin."
 HOMEPAGE="https://github.com/fcitx/fcitx-libpinyin"
-SRC_URI="http://fcitx.googlecode.com/files/${P}_dict.tar.xz"
+SRC_URI="http://download.fcitx-im.org/${PN}/${P}_dict.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,8 +18,8 @@ REQUIRED_USE="|| ( pinyin shuangpin zhuyin )"
 
 RESTRICT="mirror"
 
-RDEPEND=">=app-i18n/fcitx-4.2.4
-	>=app-i18n/libpinyin-0.8.93
+RDEPEND=">=app-i18n/fcitx-4.2.8
+	>=app-i18n/libpinyin-0.9.93
 	dev-libs/glib:2"
 DEPEND="${RDEPEND}
 	dev-util/intltool
