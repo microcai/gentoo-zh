@@ -10,7 +10,7 @@ if [[ ${PV} == "9999" ]]; then
 	FCITX_TABLE_EXTRA_ECLASS="git-2"
 	KEYWORDS=""
 else
-	FCITX_TABLE_EXTRA_SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
+	FCITX_TABLE_EXTRA_SRC_URI="http://download.fcitx-im.org/${PN}/${P}.tar.xz"
 	FCITX_TABLE_EXTRA_ECLASS=""
 	KEYWORDS="~amd64 ~x86"
 	RESTRICT="mirror"
@@ -26,7 +26,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-RDEPEND=">=app-i18n/fcitx-4.2.5[table]"
+RDEPEND=">=app-i18n/fcitx-4.2.8[table]"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	sys-devel/gettext"
