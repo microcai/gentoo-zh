@@ -144,7 +144,7 @@ USE_ENABLE() {
 
 		tuxonice)	tuxonice_url="http://tuxonice.net"
 				if [[ "${tuxonice_kernel_version/$KMV./}" = "0" ]]
-					then tuxonice_src="${tuxonice_url}/downloads/all/tuxonice-for-linux-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2"
+					then tuxonice_src="${tuxonice_url}/downloads/all/tuxonice-for-linux-head-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2"
 					else tuxonice_src="${tuxonice_url}/downloads/all/tuxonice-for-linux-${KMV}-${tuxonice_kernel_version/$KMV./}-${tuxonice_version//./-}.patch.bz2"
 				fi
 				HOMEPAGE="${HOMEPAGE} ${tuxonice_url}"
@@ -160,7 +160,7 @@ USE_ENABLE() {
 						tuxonice?	( ${tuxonice_src} )
 					"
 					if [[ "${tuxonice_kernel_version/$KMV./}" = "0" ]]
-						then TUXONICE_PATCHES="${DISTDIR}/tuxonice-for-linux-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2:1"
+						then TUXONICE_PATCHES="${DISTDIR}/tuxonice-for-linux-head-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2:1"
 						else TUXONICE_PATCHES="${DISTDIR}/tuxonice-for-linux-${KMV}-${tuxonice_kernel_version/$KMV./}-${tuxonice_version//./-}.patch.bz2:1"
 					fi
 				fi
