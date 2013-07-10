@@ -8,7 +8,7 @@ inherit cmake-utils
 
 DESCRIPTION="A gtk based configure tool for fcitx."
 HOMEPAGE="https://github.com/fcitx/fcitx-configtool"
-SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
+SRC_URI="http://download.fcitx-im.org/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,7 +17,7 @@ IUSE="gtk +gtk3"
 REQUIRED_USE="|| ( gtk gtk3 )"
 RESTRICT="mirror"
 
-RDEPEND=">=app-i18n/fcitx-4.2.7
+RDEPEND=">=app-i18n/fcitx-4.2.8
 	dev-libs/glib:2
 	gtk? ( x11-libs/gtk+:2 )
 	gtk3? ( x11-libs/gtk+:3 )"
