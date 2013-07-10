@@ -78,11 +78,12 @@ HTML_DOCS=(
 )
 
 update_gtk2_immodules() {
-	gnome2_query_immodules_gtk2
-
+	# HACK: don't swap them.
 	if use abi_x86_64 && use abi_x86_32 ; then
 		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0-32" > ${EPREFIX}/etc/gtk-2.0/i686-pc-linux-gnu/gtk.immodules
 	fi
+
+	gnome2_query_immodules_gtk2
 }
 
 src_prepare() {
