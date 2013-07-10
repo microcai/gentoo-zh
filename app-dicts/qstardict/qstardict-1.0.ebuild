@@ -15,7 +15,7 @@ IUSE="dbus nls"
 RDEPEND="
 	dev-qt/qtcore
 	dev-qt/qtgui
-	dbus? ( || ( dev-qt/qtdbus <dev-qt/qt4.4[dbus] ) )
+	dbus? ( dev-qt/qtdbus )
 	>=dev-libs/glib-2.0"
 DEPEND="${RDEPEND}"
 PROVIDE="virtual/stardict"

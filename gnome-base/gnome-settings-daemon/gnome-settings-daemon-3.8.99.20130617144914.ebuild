@@ -92,7 +92,9 @@ src_prepare() {
 # 
  	# Make colord and wacom optional; requires eautoreconf
  	epatch "${FILESDIR}/${PN}-3.8.99-optional-color-wacom.patch"
- 
+	sed -i "/SUBDIRS =/a\	debian			\\\ " ${S}/Makefile.am
+	cp ${FILESDIR}/gnome-update-wallpaper-cache-Makefile.am ${S}/debian/Makefile.am
+	sed -i "/gnome-settings-daemon\/Makefile/a\debian/Makefile" ${S}/configure.ac
  	eautoreconf
  	gnome2_src_prepare
 }
@@ -103,6 +105,7 @@ src_configure() {
 	gnome2_src_configure \
 		--disable-static \
 		--enable-man \
+		--libexecdir=/usr/$(get_libdir)/gnome-settings-daemon
 		$(use_enable colord color) \
 		$(use_enable cups) \
 		$(use_enable debug) \
@@ -116,4 +119,9 @@ src_configure() {
 
 src_test() {
 	Xemake check
+}
+
+src_install() {
+	gnome2_src_install
+	dosym /usr/$(get_libdir)/${PN}/${PN} /usr/bin/${PN} 
 }

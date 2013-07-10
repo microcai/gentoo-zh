@@ -22,7 +22,7 @@ RDEPEND="dev-lang/python:2.7
 		dev-python/pygtk:2
 		dev-libs/dtk-widget
 		dev-libs/lunar-date
-		dev-libs/lunar-calendar"
+		x11-libs/lunar-calendar:deepin"
 DEPEND="${RDEPEND}
 		dev-python/setuptools"
 S=${WORKDIR}

@@ -20,10 +20,8 @@ IUSE=""
 DEPEND="dev-libs/openssl
 		net-misc/curl
 		=dev-lang/python-2.5*
-		|| (
-			( dev-qt/qtcore dev-qt/qtgui )
-			( >=dev-qt/qt4.3 )
-		)"
+		dev-qt/qtcore 
+		dev-qt/qtgui"
 RDEPEND="${DEPEND}"
 
 RESTRICT="primaryuri"
