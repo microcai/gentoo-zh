@@ -2,13 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
 inherit eutils kde4-base
 
 DESCRIPTION="KDE Config Module for Fcitx"
 HOMEPAGE="https://github.com/fcitx/kcm-fcitx"
-SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
+SRC_URI="https://github.com/fcitx/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -16,11 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-RDEPEND=">=app-i18n/fcitx-4.2.4
-	kde-base/systemsettings"
-DEPEND="${RDEPEND}"
-
-#src_prepare() {
-	# fix the bug sometimes cannot build due to automoc4
-	#epatch "${FILESDIR}/${P}-fix-build.patch"
-#}#
+RDEPEND=">=app-i18n/fcitx-4.2.8"
+DEPEND="${RDEPEND}
+	app-arch/xz-utils
+	virtual/pkgconfig
+	sys-devel/gettext"
