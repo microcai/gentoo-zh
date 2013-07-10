@@ -7,7 +7,7 @@ EAPI="4"
 inherit fdo-mime versionator eutils python systemd
 
 DSS="deepin-system-settings"
-MY_VER="$(get_version_component_range 1)+git$(get_version_component_range 2)~9f146c62a7"
+MY_VER="$(get_version_component_range 1)+git$(get_version_component_range 2)~7295fcb0a0"
 SRC_URI="http://packages.linuxdeepin.com/deepin/pool/main/d/${DSS}/${DSS}_${MY_VER}.tar.gz"
 
 DESCRIPTION="Deepin System Settings module for configuring accounts"
@@ -47,6 +47,7 @@ src_install() {
 	insinto "/etc/dbus-1/system.d/"
 	doins ${S}/src/com.deepin.passwdservice.conf
 
+	libopts -m755
 	dolib ${S}/src/passwdservice.py
 
 	insinto "/var/lib/AccountsService/icons/"
@@ -58,6 +59,7 @@ src_install() {
 	
 	insinto "/usr/share/${DSS}/modules/account/src"
 	doins ${S}/src/*.py
+	fperms 0755 /usr/share/${DSS}/modules/account/src/{passwdservice.py,webcam.py}
 
 	rm ${D}/usr/share/${DSS}/modules/account/locale/*.po*
 

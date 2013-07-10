@@ -7,7 +7,7 @@ EAPI="4"
 inherit fdo-mime versionator eutils
 
 DSS="deepin-system-settings"
-MY_VER="$(get_version_component_range 1)+git$(get_version_component_range 2)~9f146c62a7"
+MY_VER="$(get_version_component_range 1)+git$(get_version_component_range 2)~7295fcb0a0"
 SRC_URI="http://packages.linuxdeepin.com/deepin/pool/main/d/${DSS}/${DSS}_${MY_VER}.tar.gz"
 
 DESCRIPTION="Deepin System Settings module for configuring network"
@@ -38,6 +38,7 @@ src_install() {
 	insinto "/etc/dbus-1/system.d/"
 	doins ${S}/src/nmlib/com.deepin.network.conf
 
+	libopts -m0755
 	dolib ${S}/src/nmlib/network_service.py
 
 	insinto "/usr/share/dbus-1/system-services"
@@ -50,7 +51,7 @@ src_install() {
 	doins -r ${S}/src ${S}/locale ${S}/__init__.py ${S}/config.ini
 
 	rm ${D}/usr/share/${DSS}/modules/network/locale/*.po*
-	fperms 0755 -R /usr/share/${DSS}/modules/network/src/main*.py
+	fperms 0755 -R /usr/share/${DSS}/modules/network/src
 
 }
 

@@ -6,7 +6,7 @@ EAPI="4"
 
 inherit fdo-mime versionator eutils
 
-MY_VER="$(get_version_component_range 1)+git$(get_version_component_range 2)~9f146c62a7"
+MY_VER="$(get_version_component_range 1)+git$(get_version_component_range 2)~7295fcb0a0"
 SRC_URI="http://packages.linuxdeepin.com/deepin/pool/main/d/${PN}/${PN}_${MY_VER}.tar.gz"
 
 DESCRIPTION="Deepin System Settings"
@@ -38,7 +38,7 @@ src_install() {
 
 	insinto "/usr/share/${PN}"
 	doins -r ${S}/app_theme  ${S}/dss ${S}/image ${S}/locale ${S}/search_db ${S}/skin
-	fperms 0755 -R /usr/share/${PN}/dss/
+	fperms 0755 -R /usr/share/${PN}/dss/{action_bar.py,bluetooth_dialog.py,content_page.py,foot_box.py,main.py,module_info.py,navigate_page.py,search_page.py,theme.py}
 	rm ${D}/usr/share/${PN}/locale/*.po* 
 
 	#dosym /usr/share/${PN}/src/main.py /usr/bin/${PN}

@@ -17,10 +17,9 @@ IUSE=""
 
 DEPEND="dev-libs/openssl
 	net-misc/curl
-	|| (
-		( dev-qt/qtcore dev-qt/qtgui dev-qt/qtdbus )
-		( >=dev-qt/qt4.3 )
-	)"
+	dev-qt/qtcore 
+	dev-qt/qtgui 
+	dev-qt/qtdbus"
 RDEPEND="${DEPEND}"
 
 RESTRICT="primaryuri"

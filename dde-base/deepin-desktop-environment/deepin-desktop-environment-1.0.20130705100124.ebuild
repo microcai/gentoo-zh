@@ -6,7 +6,7 @@ EAPI=4
 
 inherit cmake-utils versionator
 
-MY_VER="$(get_version_component_range 1-2)+git$(get_version_component_range 3)~4a98fdabe7"
+MY_VER="$(get_version_component_range 1-2)+git$(get_version_component_range 3)~04659e085e"
 
 DESCRIPTION="basic modules and resources for Deepin Desktop Environment"
 HOMEPAGE="http://www.linuxdeepin.com"

@@ -18,6 +18,5 @@ RDEPEND="dde-base/deepin-system-settings
 		dde-base/deepin-desktop-environment
 		dde-base/deepin-notifications
 		dde-base/deepin-system-tray
-		dde-base/deepin-xsession-settings
 		dde-base/deepin-session
 		sys-auth/consolekit"

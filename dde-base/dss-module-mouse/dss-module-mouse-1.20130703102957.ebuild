@@ -7,10 +7,10 @@ EAPI="4"
 inherit fdo-mime versionator eutils
 
 DSS="deepin-system-settings"
-MY_VER="$(get_version_component_range 1)+git$(get_version_component_range 2)~9f146c62a7"
+MY_VER="$(get_version_component_range 1)+git$(get_version_component_range 2)~7295fcb0a0"
 SRC_URI="http://packages.linuxdeepin.com/deepin/pool/main/d/${DSS}/${DSS}_${MY_VER}.tar.gz"
 
-DESCRIPTION="Deepin System Settings module for configuring tray power icon"
+DESCRIPTION="Deepin System Settings module for configuring mouse"
 HOMEPAGE="http://www.linuxdeepin.com"
 
 LICENSE="GPL-2+"
@@ -20,13 +20,14 @@ IUSE=""
 
 RDEPEND="dde-base/deepin-system-settings"
 DEPEND=""
-S="${WORKDIR}/${DSS}-${MY_VER}/modules/tray_power"
+S="${WORKDIR}/${DSS}-${MY_VER}/modules/mouse"
 
 src_install() {
 
-	insinto "/usr/share/${DSS}/modules/tray_power"
-	doins -r ${S}/locale ${S}/src ${S}/clear.py ${S}/__init__.py ${S}/config.ini
+	insinto "/usr/share/${DSS}/modules/mouse"
+	doins -r ${S}/locale ${S}/src ${S}/__init__.py ${S}/config.ini
 	
-	rm ${D}/usr/share/${DSS}/modules/tray_power/locale/*.po*
+	rm ${D}/usr/share/${DSS}/modules/mouse/locale/*.po*
+	fperms 0755 -R /usr/share/${DSS}/modules/mouse/src/
 
 }
