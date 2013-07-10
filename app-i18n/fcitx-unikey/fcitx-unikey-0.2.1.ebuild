@@ -8,7 +8,7 @@ inherit cmake-utils gnome2-utils
 
 DESCRIPTION="unikey support for fcitx."
 HOMEPAGE="https://github.com/fcitx/fcitx-unikey"
-SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
+SRC_URI="http://download.fcitx-im.org/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -16,14 +16,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+qt4"
 RESTRICT="mirror"
 
-RDEPEND=">=app-i18n/fcitx-4.2.7"
+RDEPEND=">=app-i18n/fcitx-4.2.8"
 DEPEND="app-arch/xz-utils
 	sys-devel/gettext"
-
-src_prepare() {
-	# Add cmake option to build the qt based macro editor or not
-	epatch "${FILESDIR}/${P}-cmake-qt-option.patch"
-}
 
 src_configure() {
 	local mycmakeargs=(
