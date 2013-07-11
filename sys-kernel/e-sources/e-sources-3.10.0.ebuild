@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI="5"
-K_DEBLOB_AVAILABLE="0"
+K_DEBLOB_AVAILABLE="1"
 
 ck_version="1"
 gentoo_version="3"
