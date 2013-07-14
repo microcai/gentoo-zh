@@ -6,22 +6,22 @@ EAPI="5"
 K_DEBLOB_AVAILABLE="1"
 
 ck_version="1"
-gentoo_version="14"
-optimization_version="2"
-tuxonice_version="2013.06.29"
+gentoo_version="4"
+optimization_version="1"
+tuxonice_version="2013.07.10"
 uksm_version="0.1.2.2"
 
-aufs_kernel_version="3.9_p20130520"
+aufs_kernel_version="3.10_p20130708"
 cjktty_kernel_version="3.8.1"
-imq_kernel_version="3.9.0"
+imq_kernel_version="3.10.0"
 reiser4_kernel_version="3.9.2"
-tuxonice_kernel_version="3.9.8"
-uksm_kernel_version="3.9.1"
+tuxonice_kernel_version="3.10.0"
+uksm_kernel_version="3.10.0"
 
 KEYWORDS="~amd64 ~x86"
 
 # aufs cjktty ck gentoo imq optimization reiser4 tuxonice uksm
-SUPPORTED_USE="+aufs +cjktty +ck +gentoo +imq +optimization +reiser4 +tuxonice +uksm"
+SUPPORTED_USE="+aufs +cjktty +ck +gentoo +imq +optimization +tuxonice +uksm"
 
 CK_PRE_PATCH=""
 CK_POST_PATCH=""
@@ -37,6 +37,6 @@ OVERRIDE_REISER4_PATCHES=""
 OVERRIDE_TUXONICE_PATCHES=""
 OVERRIDE_UKSM_PATCHES=""
 
-ADDITION_PATCHES="${FILESDIR}/enable-ivb-pstate.patch"
+ADDITION_PATCHES=""
 
 inherit e-sources
