@@ -56,133 +56,130 @@ USE_ENABLE() {
 					${RDEPEND}
 					aufs?	( >=sys-fs/aufs-util-3.8 )
 				"
-				if [ "${OVERRIDE_AUFS_PATCHES}" != "" ]; then
-					AUFS_PATCHES="${OVERRIDE_AUFS_PATCHES}"
-				else
-					SRC_URI="
-						${SRC_URI}
-						aufs?	( ${aufs_src} )
-					"
-					AUFS_PATCHES="
-						${WORKDIR}/aufs3-base.patch
-						${WORKDIR}/aufs3-proc_map.patch
-						${WORKDIR}/aufs3-kbuild.patch
-						${WORKDIR}/aufs3-standalone.patch
-					"
-				fi
+				SRC_URI="
+					${SRC_URI}
+					aufs?	( ${aufs_src} )
+				"
+				AUFS_PATCHES="
+					${WORKDIR}/aufs3-base.patch
+					${WORKDIR}/aufs3-proc_map.patch
+					${WORKDIR}/aufs3-kbuild.patch
+					${WORKDIR}/aufs3-standalone.patch
+				"
 			;;
 
 		cjktty)		cjktty_url="http://sourceforge.net/projects/cjktty"
-				cjktty_src="${cjktty_url}/files/cjktty-for-linux-3.x/cjktty-for-${cjktty_kernel_version}.patch.xz"
+				cjktty_patch="cjktty-for-${cjktty_kernel_version}.patch.xz"
+				cjktty_src="${cjktty_url}/files/cjktty-for-linux-3.x/${cjktty_patch}"
 				HOMEPAGE="${HOMEPAGE} ${cjktty_url}"
-				if [ "${OVERRIDE_CJKTTY_PATCHES}" != "" ]; then
-					CJKTTY_PATCHES="${OVERRIDE_CJKTTY_PATCHES}"
+				if [ "${OVERRIDE_CJKTTY_PATCHES}" = 1 ]; then
+					CJKTTY_PATCHES="${FILESDIR}/${cjktty_patch}"
 				else
 					SRC_URI="
 						${SRC_URI}
 						cjktty?	( ${cjktty_src} )
 					"
-					CJKTTY_PATCHES="${DISTDIR}/cjktty-for-${cjktty_kernel_version}.patch.xz:1"
+					CJKTTY_PATCHES="${DISTDIR}/${cjktty_patch}"
 				fi
 			;;
 
 		ck)		ck_url="http://ck.kolivas.org/patches"
-				ck_src="${ck_url}/${KMSV}/${KMV}/${KMV}-ck${ck_version}/patch-${KMV}-ck${ck_version}.bz2"
+				ck_patch="patch-${KMV}-ck${ck_version}.bz2"
+				ck_src="${ck_url}/${KMSV}/${KMV}/${KMV}-ck${ck_version}/${ck_patch}"
 				HOMEPAGE="${HOMEPAGE} ${ck_url}"
-				if [ "${OVERRIDE_CK_PATCHES}" != "" ]; then
-					CK_PATCHES="${OVERRIDE_CK_PATCHES}"
+				if [ "${OVERRIDE_CK_PATCHES}" = 1 ]; then
+					CK_PATCHES="${FILESDIR}/${CK_PRE_PATCH} ${FILESDIR}/${ck_patch} ${FILESDIR}/${CK_POST_PATCH}"
 				else
 					SRC_URI="
 						${SRC_URI}
 						ck?	( ${ck_src} )
 					"
-					CK_PATCHES="${CK_PRE_PATCH} ${DISTDIR}/patch-${KMV}-ck${ck_version}.bz2:1 ${CK_POST_PATCH}"
+					CK_PATCHES="${FILESDIR}/${CK_PRE_PATCH} ${DISTDIR}/${ck_patch} ${FILESDIR}/${CK_POST_PATCH}"
 				fi
 			;;
 
 		imq)		imq_url="http://www.linuximq.net"
-				imq_src="${imq_url}/patches/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
+				imq_patch="patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
+				imq_src="${imq_url}/patches/${imq_patch}"
 				HOMEPAGE="${HOMEPAGE} ${imq_url}"
-				if [ "${OVERRIDE_IMQ_PATCHES}" != "" ]; then
-					IMQ_PATCHES="${OVERRIDE_IMQ_PATCHES}"
+				if [ "${OVERRIDE_IMQ_PATCHES}" = 1 ]; then
+					IMQ_PATCHES="${FILESDIR}/${imq_patch}"
 				else
 					SRC_URI="
 						${SRC_URI}
 						imq?	( ${imq_src} )
 					"
-					IMQ_PATCHES="${DISTDIR}/patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
+					IMQ_PATCHES="${DISTDIR}/${imq_patch}"
 				fi
 			;;
 
 		optimization)	optimization_url="https://raw.github.com/graysky2/kernel_gcc_patch"
-				optimization_src="${optimization_url}/master/kernel-${KMV/./}-gcc48-${optimization_version}.patch"
+				optimization_patch="kernel-${KMV/./}-gcc48-${optimization_version}.patch"
+				optimization_src="${optimization_url}/master/${optimization_patch}"
 				HOMEPAGE="${HOMEPAGE} ${optimization_url}"
-				if [ "${OVERRIDE_OPTIMIZATION_PATCHES}" != "" ]; then
-					OPTIMIZATION_PATCHES="${OVERRIDE_OPTIMIZATION_PATCHES}"
+				if [ "${OVERRIDE_OPTIMIZATION_PATCHES}" = 1 ]; then
+					OPTIMIZATION_PATCHES="${FILESDIR}/${optimization_patch}"
 				else
 					SRC_URI="
 						${SRC_URI}
 						optimization?		( ${optimization_src} )
 					"
-					OPTIMIZATION_PATCHES="${DISTDIR}/kernel-${KMV/./}-gcc48-${optimization_version}.patch"
+					OPTIMIZATION_PATCHES="${DISTDIR}/${optimization_patch}"
 				fi
 			;;
 
 		reiser4) 	reiser4_url="http://sourceforge.net/projects/reiser4"
-				reiser4_src="${reiser4_url}/files/reiser4-for-linux-3.x/reiser4-for-${reiser4_kernel_version}.patch.gz"
+				reiser4_patch="reiser4-for-${reiser4_kernel_version}.patch.gz"
+				reiser4_src="${reiser4_url}/files/reiser4-for-linux-3.x/${reiser4_patch}"
 				HOMEPAGE="${HOMEPAGE} ${reiser4_url}"
-				if [ "${OVERRIDE_REISER4_PATCHES}" != "" ]; then
-					REISER4_PATCHES="${OVERRIDE_REISER4_PATCHES}"
+				if [ "${OVERRIDE_REISER4_PATCHES}" = 1 ]; then
+					REISER4_PATCHES="${FILESDIR}/${reiser4_patch}"
 				else
 					SRC_URI="
 						${SRC_URI}
 						reiser4?		( ${reiser4_src} )
 					"
-					REISER4_PATCHES="${DISTDIR}/reiser4-for-${reiser4_kernel_version}.patch.gz:1"
+					REISER4_PATCHES="${DISTDIR}/${reiser4_patch}"
 				fi
 			;;
 
 		tuxonice)	tuxonice_url="http://tuxonice.net"
 				if [[ "${tuxonice_kernel_version/$KMV./}" = "0" ]]
-					then tuxonice_src="${tuxonice_url}/downloads/all/tuxonice-for-linux-head-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2"
-					else tuxonice_src="${tuxonice_url}/downloads/all/tuxonice-for-linux-${KMV}-${tuxonice_kernel_version/$KMV./}-${tuxonice_version//./-}.patch.bz2"
+					then tuxonice_patch="tuxonice-for-linux-head-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2"
+					else tuxonice_patch="tuxonice-for-linux-${KMV}-${tuxonice_kernel_version/$KMV./}-${tuxonice_version//./-}.patch.bz2"
 				fi
+				tuxonice_src="${tuxonice_url}/downloads/all/${tuxonice_patch}"
 				HOMEPAGE="${HOMEPAGE} ${tuxonice_url}"
 				RDEPEND="
 					${RDEPEND}
 					tuxonice?	( >=sys-apps/tuxonice-userui-1.0 ( || ( >=sys-power/hibernate-script-2.0 sys-power/pm-utils ) ) )
 				"
-				if [ "${OVERRIDE_TUXONICE_PATCHES}" != "" ]; then
-					TUXONICE_PATCHES="${OVERRIDE_TUXONICE_PATCHES}"
+				if [ "${OVERRIDE_TUXONICE_PATCHES}" = 1 ]; then
+					TUXONICE_PATCHES="${FILESDIR}/${tuxonice_patch}"
 				else
 					SRC_URI="
 						${SRC_URI}
 						tuxonice?	( ${tuxonice_src} )
 					"
-					if [[ "${tuxonice_kernel_version/$KMV./}" = "0" ]]
-						then TUXONICE_PATCHES="${DISTDIR}/tuxonice-for-linux-head-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2:1"
-						else TUXONICE_PATCHES="${DISTDIR}/tuxonice-for-linux-${KMV}-${tuxonice_kernel_version/$KMV./}-${tuxonice_version//./-}.patch.bz2:1"
-					fi
+					TUXONICE_PATCHES="${DISTDIR}/${tuxonice_patch}"
 				fi
 			;;
 
 		uksm)		uksm_url="http://kerneldedup.org"
 				if [[ "${uksm_kernel_version/$KMV./}" = "0" ]]
-					then uksm_src="${uksm_url}/download/uksm/${uksm_version}/uksm-${uksm_version}-for-v${KMV}.patch"
-					else uksm_src="${uksm_url}/download/uksm/${uksm_version}/uksm-${uksm_version}-for-v${KMV}.ge.${uksm_kernel_version/$KMV./}.patch"
+					then uksm_patch="uksm-${uksm_version}-for-v${KMV}.patch"
+					else uksm_patch="uksm-${uksm_version}-for-v${KMV}.ge.${uksm_kernel_version/$KMV./}.patch"
 				fi
+				uksm_src="${uksm_url}/download/uksm/${uksm_version}/${uksm_patch}"
 				HOMEPAGE="${HOMEPAGE} ${uksm_url}"
-				if [ "${OVERRIDE_UKSM_PATCHES}" != "" ]; then
-					UKSM_PATCHES="${OVERRIDE_UKSM_PATCHES}";
+				if [ "${OVERRIDE_UKSM_PATCHES}" = 1 ]; then
+					UKSM_PATCHES="${FILESDIR}/${uksm_patch}"
 				else
 					SRC_URI="
 						${SRC_URI}
 						uksm?		( ${uksm_src} )
 					"
-					if [[ "${uksm_kernel_version/$KMV./}" = "0" ]]
-						then UKSM_PATCHES="${DISTDIR}/uksm-${uksm_version}-for-v${KMV}.patch:1"
-						else UKSM_PATCHES="${DISTDIR}/uksm-${uksm_version}-for-v${KMV}.ge.${uksm_kernel_version/$KMV./}.patch:1"
-					fi
+					UKSM_PATCHES="${DISTDIR}/${uksm_patch}"
 				fi
 			;;
 
