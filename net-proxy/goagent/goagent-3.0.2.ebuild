@@ -65,6 +65,10 @@ src_install() {
 	doins -r "${S}/local" "${S}/server"
 }
 
+pkg_prerm() {
+	rm ${ROOT}/opt/goagent/local/certs/* || die
+}
+
 pkg_postinst() {
 	fdo-mime_desktop_database_update
 	elog
