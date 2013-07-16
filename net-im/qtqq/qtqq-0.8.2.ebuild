@@ -18,6 +18,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="dev-qt/qtgui"
+DEPEND="dev-qt/qtgui
+       dev-qt/qtsql
+       dev-qt/qtwebkit"
 RDEPEND="${DEPEND}"
 
