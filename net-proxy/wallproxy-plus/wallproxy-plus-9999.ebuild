@@ -80,4 +80,8 @@ pkg_postinst() {
 	elog
 	elog "    /etc/init.d/wallproxy"
 	elog "        An OpenRC script so that you can launch wallproxy automatically."
+	elog
+	elog
+	elog "For https cerfiticate error, please import /opt/wallproxy/local/cert.crt"
+	elog "to your broswer"
 }
