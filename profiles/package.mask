@@ -2,6 +2,11 @@
 # mask live ebuild
 ~app-i18n/fcitx-9999
 
+# microcai
+# mask for testing
+=dev-libs/boost-1.54.0
+=dev-util/boost-build-1.54.0
+
 # microcai, ibus-1.5 it all about shit
 >=app-i18n/ibus-1.4.3
 
