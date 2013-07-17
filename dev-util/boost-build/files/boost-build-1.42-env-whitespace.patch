@@ -1,0 +1,25 @@
+diff --git a/tools/jam/src/build.jam b/tools/jam/src/build.jam
+index e30e854..7b397a3 100644
+--- a/tools/jam/src/build.jam
++++ b/tools/jam/src/build.jam
+@@ -2,6 +2,20 @@
+ #~ Distributed under the Boost Software License, Version 1.0.
+ #~ (See accompanying file LICENSE_1_0.txt or http://www.boost.org/LICENSE_1_0.txt)
+ 
++# Clean env vars of any "extra" empty values.
++for local v in ARGV CC CFLAGS
++{
++	local values ;
++	for local x in $($(v))
++	{
++		if $(x) != ""
++		{
++			values += $(x) ;
++		}
++	}
++	$(v) = $(values) ;
++}
++
+ # Platform related specifics.
+ if $(NT) { rule .path { return "$(<:J=\\)" ; } ./ = "/" ; }
+ else if $(OS2) { rule .path { return "$(<:J=\\)" ; } ./ = "/" ; }
