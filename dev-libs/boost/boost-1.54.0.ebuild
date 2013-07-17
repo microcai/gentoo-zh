@@ -100,9 +100,6 @@ src_configure() {
 		[[ $(gcc-version) > 4.3 ]] && append-flags -mno-altivec
 	fi
 
-	# Do _not_ use C++11 yet, make sure to force GNU C++ 98 standard.
-	append-cxxflags -std=gnu++98
-
 	use icu && OPTIONS+=" -sICU_PATH=${EPREFIX}/usr"
 	use icu || OPTIONS+=" --disable-icu boost.locale.icu=off"
 	use mpi || OPTIONS+=" --without-mpi"
