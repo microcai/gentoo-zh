@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v3
 # $Header: $
 
@@ -25,15 +25,16 @@ SRC_URI="${GOAGENT_SRC_URI}"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="gtk"
-
-DEPEND="gtk? ( x11-libs/vte:0[python] dev-lang/python:2.7 )"
+IUSE="+gtk"
 
 RDEPEND="dev-lang/python:3.3[ssl]
 	dev-libs/nss[utils]
 	dev-python/gevent
 	dev-python/pyopenssl
-"
+	gtk? (
+		x11-libs/vte:0[python]
+		dev-lang/python:2.7
+	)"
 
 src_unpack() {
 	${GOAGENT_ECLASS}_src_unpack
@@ -50,7 +51,7 @@ src_prepare() {
 src_install() {
 	insinto "/etc/"
 	newins "${S}/local/proxy.ini" goagent
-	rm ${S}/*/*.{bat,exe,vbs,dll,ini} || die
+	rm ${S}/*/*.{bat,exe,vbs,dll,ini,manifest,command} || die
 	rm ${S}/local/python{27,33}.zip || die
 
 	if use gtk ; then
@@ -72,23 +73,22 @@ src_install() {
 
 	insinto "/opt/goagent"
 	doins -r "${S}/local" "${S}/server"
+
 	newinitd "${FILESDIR}/goagent-initd" goagent
 }
 
 pkg_prerm() {
-	rm ${ROOT}/opt/goagent/local/certs/* || die
+	find ${ROOT}/opt/goagent/local/certs/ -type f -exec rm {} + || die
 }
 
 pkg_postinst() {
-	if use gtk ; then
-		fdo-mime_desktop_database_update
-	fi
+	use gtk && fdo-mime_desktop_database_update
 
 	elog
 	elog "config file: /etc/goagent"
 	elog "init script: /etc/init.d/goagent"
 	elog
-	if use gtk; then
+	if usev gtk; then
 		elog "Usage:"
 		elog "goagent-gtk"
 	else
@@ -107,7 +107,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	if use gtk ; then
-		fdo-mime_desktop_database_update
-	fi
+	use gtk && fdo-mime_desktop_database_update
 }
