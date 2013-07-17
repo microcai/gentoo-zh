@@ -146,7 +146,7 @@ USE_ENABLE() {
 		tuxonice)	tuxonice_url="http://tuxonice.net"
 				if [[ "${tuxonice_kernel_version/$KMV./}" = "0" ]]
 					then tuxonice_patch="tuxonice-for-linux-head-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2"
-					else tuxonice_patch="tuxonice-for-linux-${KMV}-${tuxonice_kernel_version/$KMV./}-${tuxonice_version//./-}.patch.bz2"
+					else tuxonice_patch="tuxonice-for-linux-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2"
 				fi
 				tuxonice_src="${tuxonice_url}/downloads/all/${tuxonice_patch}"
 				HOMEPAGE="${HOMEPAGE} ${tuxonice_url}"
@@ -236,4 +236,7 @@ src_prepare() {
 		cp -i "${WORKDIR}"/include/uapi/linux/aufs_type.h include/uapi/linux/aufs_type.h || die
 		cp -ri "${WORKDIR}"/{Documentation,fs} . || die
 	fi
+
+	rm -rf {a,b,Documentation/*,drivers/video/logo/*}
+	touch {{Documentation,drivers/video/logo}/Makefile,drivers/video/logo/Kconfig}
 }
