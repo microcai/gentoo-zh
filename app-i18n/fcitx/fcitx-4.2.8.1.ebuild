@@ -8,7 +8,7 @@ inherit multilib multilib-build cmake-utils eutils gnome2-utils fdo-mime
 
 DESCRIPTION="Flexible Context-aware Input Tool with eXtension"
 HOMEPAGE="http://fcitx-im.org/wiki/Fcitx"
-SRC_URI="http://download.fcitx-im.org/fcitx/fcitx-4.2.8_dict.tar.xz"
+SRC_URI="http://download.fcitx-im.org/fcitx/fcitx-${PV}_dict.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
