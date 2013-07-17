@@ -129,7 +129,7 @@ USE_ENABLE() {
 			;;
 
 		reiser4) 	reiser4_url="http://sourceforge.net/projects/reiser4"
-				reiser4_patch="reiser4-for-${reiser4_kernel_version}.patch.gz"
+				reiser4_patch="reiser4-for-${reiser4_kernel_version/.0/}.patch.gz"
 				reiser4_src="${reiser4_url}/files/reiser4-for-linux-3.x/${reiser4_patch}"
 				HOMEPAGE="${HOMEPAGE} ${reiser4_url}"
 				if [ "${OVERRIDE_REISER4_PATCHES}" = 1 ]; then
@@ -236,7 +236,4 @@ src_prepare() {
 		cp -i "${WORKDIR}"/include/uapi/linux/aufs_type.h include/uapi/linux/aufs_type.h || die
 		cp -ri "${WORKDIR}"/{Documentation,fs} . || die
 	fi
-
-	rm -rf {a,b,Documentation/*,drivers/video/logo/*}
-	touch {{Documentation,drivers/video/logo}/Makefile,drivers/video/logo/Kconfig}
 }
