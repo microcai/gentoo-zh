@@ -33,7 +33,6 @@ RDEPEND="dev-lang/python:3.3[ssl]
 	dev-python/pyopenssl
 	gtk? (
 		x11-libs/vte:0[python]
-		dev-lang/python:2.7
 	)"
 
 src_unpack() {
@@ -88,7 +87,7 @@ pkg_postinst() {
 	elog "config file: /etc/goagent"
 	elog "init script: /etc/init.d/goagent"
 	elog
-	if usev gtk; then
+	if use gtk; then
 		elog "Usage:"
 		elog "goagent-gtk"
 	else
