@@ -25,10 +25,6 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-fix-importdict.patch
-}
-
 src_install() {
 	cmake-utils_src_install
 
