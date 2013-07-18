@@ -33,7 +33,6 @@ RDEPEND="dev-lang/python:3.3[ssl]
 	dev-python/pyopenssl
 	gtk? (
 		x11-libs/vte:0[python]
-		dev-lang/python:2.7
 	)"
 
 src_unpack() {
