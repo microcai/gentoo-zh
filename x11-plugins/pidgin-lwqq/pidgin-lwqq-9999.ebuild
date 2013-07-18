@@ -17,11 +17,11 @@ EGIT_HAS_SUBMODULES=1
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS=""
-IUSE="+libev"
+IUSE="+libuv"
 
 COMMON_DEPEND=">=net-im/pidgin-2.10[gstreamer]
 	>=net-misc/curl-7.22
-	libev? ( dev-libs/libev )"
+	libuv? ( dev-libs/libuv )"
 
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
@@ -31,7 +31,7 @@ RDEPEND="${COMMON_DEPEND}"
 src_configure(){
 	mycmakeargs=(
 		-DUOA=Off
-		$(cmake-utils_use_with libev LIBEV)
+		$(cmake-utils_use_with libuv LIBUV)
 	)
 	cmake-utils_src_configure
 }
