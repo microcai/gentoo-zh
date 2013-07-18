@@ -12,6 +12,7 @@ HOMEPAGE="https://github.com/xiehuc/pidgin-lwqq"
 SRC_URI=""
 
 EGIT_REPO_URI="git://github.com/xiehuc/pidgin-lwqq.git"
+EGIT_HAS_SUBMODULES=1
 
 LICENSE="GPL"
 SLOT="0"
