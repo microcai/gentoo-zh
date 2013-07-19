@@ -8,7 +8,7 @@ inherit cmake-utils
 
 DESCRIPTION="Add fbterm support to fcitx"
 HOMEPAGE="https://github.com/fcitx/fcitx-fbterm"
-SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
+SRC_URI="http://download.fcitx-im.org/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
