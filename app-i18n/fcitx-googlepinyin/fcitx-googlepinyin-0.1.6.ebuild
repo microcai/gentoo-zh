@@ -8,7 +8,7 @@ inherit cmake-utils gnome2-utils
 
 DESCRIPTION="Fcitx Wrapper for googlepinyin."
 HOMEPAGE="https://github.com/fcitx/fcitx-googlepinyin"
-SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
+SRC_URI="http://download.fcitx-im.org/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
