@@ -18,6 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/deepin-ui-1.201209101328
+    dev-python/deepin-gsettings
 	sci-libs/scipy
 	dev-python/chardet
 	dev-python/formencode
