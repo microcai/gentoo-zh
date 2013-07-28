@@ -1,0 +1,19 @@
+------------------------------------------------------------------------
+r84947 | danieljames | 2013-07-03 22:57:56 +0100 (Wed, 03 Jul 2013) | 4 lines
+
+coroutine: fix typo in Jamfile
+
+From [84622], by olli
+
+------------------------------------------------------------------------
+--- 1_54_0/libs/coroutine/build/Jamfile.v2	(revision 84946)
++++ 1_54_0/libs/coroutine/build/Jamfile.v2	(revision 84947)
+@@ -40,7 +40,7 @@
+     : detail/standard_stack_allocator_posix.cpp
+     ;
+ 
+-explicit yield_sources ;
++explicit allocator_sources ;
+ 
+ lib boost_coroutine
+     : allocator_sources

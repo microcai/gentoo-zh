@@ -1,0 +1,16 @@
+------------------------------------------------------------------------
+r84966 | andysem | 2013-07-07 11:43:20 +0100 (Sun, 07 Jul 2013) | 1 line
+
+Backported fix for BOOST_LOG_ONCE_BLOCK_FLAG macro definition.
+------------------------------------------------------------------------
+--- 1_54_0/boost/log/utility/once_block.hpp	(revision 84965)
++++ 1_54_0/boost/log/utility/once_block.hpp	(revision 84966)
+@@ -176,7 +176,7 @@
+  * been executed.
+  */
+ #define BOOST_LOG_ONCE_BLOCK_FLAG(flag_var)\
+-    BOOST_LOG_ONCE_BLOCK_INTERNAL(\
++    BOOST_LOG_ONCE_BLOCK_FLAG_INTERNAL(\
+         flag_var,\
+         BOOST_LOG_UNIQUE_IDENTIFIER_NAME(_boost_log_once_block_sentry_))
+ 
