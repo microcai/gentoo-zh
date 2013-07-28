@@ -1,0 +1,19 @@
+------------------------------------------------------------------------
+r84948 | danieljames | 2013-07-03 23:02:30 +0100 (Wed, 03 Jul 2013) | 4 lines
+
+In C++11 the shared_ptr -> bool conversion is explicit. In custom time zone code, make the cast explicit. Fixes compilation failure in C++11
+
+From [84626], by marshall.
+
+------------------------------------------------------------------------
+--- 1_54_0/boost/date_time/local_time/custom_time_zone.hpp	(revision 84947)
++++ 1_54_0/boost/date_time/local_time/custom_time_zone.hpp	(revision 84948)
+@@ -64,7 +64,7 @@
+     //! True if zone uses daylight savings adjustments
+     virtual bool has_dst() const
+     {
+-      return (dst_calc_rules_); //if calc_rule is set the tz has dst
++      return (bool) dst_calc_rules_; //if calc_rule is set the tz has dst
+     }
+     //! Local time that DST starts -- NADT if has_dst is false
+     virtual posix_time::ptime dst_local_start_time(gregorian::greg_year y) const

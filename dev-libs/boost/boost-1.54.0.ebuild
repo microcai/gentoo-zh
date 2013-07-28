@@ -69,7 +69,11 @@ src_prepare() {
 		"${FILESDIR}/${PN}-1.48.0-no_strict_aliasing_python2.patch" \
 		"${FILESDIR}/${PN}-1.48.0-disable_libboost_python3.patch" \
 		"${FILESDIR}/${PN}-1.48.0-python_linking.patch" \
-		"${FILESDIR}/${PN}-1.48.0-disable_icu_rpath.patch"
+		"${FILESDIR}/${PN}-1.48.0-disable_icu_rpath.patch" \
+		"${FILESDIR}/${P}-coroutine.patch" \
+		"${FILESDIR}/${P}-date-time.patch" \
+		"${FILESDIR}/${P}-log.patch" \
+		"${FILESDIR}/${P}-thread.patch"
 }
 
 ejam() {
