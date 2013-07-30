@@ -23,7 +23,7 @@ if features gentoo; then
 	K_WANT_GENPATCHES="base extras"
 fi
 
-K_NOSETEXTRAVERSION="yes"
+K_NOSETEXTRAVERSION=""
 K_SECURITY_UNSUPPORTED="1"
 
 ETYPE="sources"
@@ -73,13 +73,13 @@ USE_ENABLE() {
 				cjktty_src="${cjktty_url}/files/cjktty-for-linux-3.x/${cjktty_patch}"
 				HOMEPAGE="${HOMEPAGE} ${cjktty_url}"
 				if [ "${OVERRIDE_CJKTTY_PATCHES}" = 1 ]; then
-					CJKTTY_PATCHES="${FILESDIR}/${cjktty_patch}"
+					CJKTTY_PATCHES="${FILESDIR}/${cjktty_patch}:1"
 				else
 					SRC_URI="
 						${SRC_URI}
 						cjktty?	( ${cjktty_src} )
 					"
-					CJKTTY_PATCHES="${DISTDIR}/${cjktty_patch}"
+					CJKTTY_PATCHES="${DISTDIR}/${cjktty_patch}:1"
 				fi
 			;;
 
@@ -88,13 +88,13 @@ USE_ENABLE() {
 				ck_src="${ck_url}/${KMSV}/${KMV}/${KMV}-ck${ck_version}/${ck_patch}"
 				HOMEPAGE="${HOMEPAGE} ${ck_url}"
 				if [ "${OVERRIDE_CK_PATCHES}" = 1 ]; then
-					CK_PATCHES="${FILESDIR}/${CK_PRE_PATCH} ${FILESDIR}/${ck_patch} ${FILESDIR}/${CK_POST_PATCH}"
+					CK_PATCHES="${FILESDIR}/${CK_PRE_PATCH} ${FILESDIR}/${ck_patch}:1 ${FILESDIR}/${CK_POST_PATCH}"
 				else
 					SRC_URI="
 						${SRC_URI}
 						ck?	( ${ck_src} )
 					"
-					CK_PATCHES="${FILESDIR}/${CK_PRE_PATCH} ${DISTDIR}/${ck_patch} ${FILESDIR}/${CK_POST_PATCH}"
+					CK_PATCHES="${FILESDIR}/${CK_PRE_PATCH} ${DISTDIR}/${ck_patch}:1 ${FILESDIR}/${CK_POST_PATCH}"
 				fi
 			;;
 
@@ -103,13 +103,13 @@ USE_ENABLE() {
 				imq_src="${imq_url}/patches/${imq_patch}"
 				HOMEPAGE="${HOMEPAGE} ${imq_url}"
 				if [ "${OVERRIDE_IMQ_PATCHES}" = 1 ]; then
-					IMQ_PATCHES="${FILESDIR}/${imq_patch}"
+					IMQ_PATCHES="${FILESDIR}/${imq_patch}:1"
 				else
 					SRC_URI="
 						${SRC_URI}
 						imq?	( ${imq_src} )
 					"
-					IMQ_PATCHES="${DISTDIR}/${imq_patch}"
+					IMQ_PATCHES="${DISTDIR}/${imq_patch}:1"
 				fi
 			;;
 
@@ -118,13 +118,13 @@ USE_ENABLE() {
 				optimization_src="${optimization_url}/master/${optimization_patch}"
 				HOMEPAGE="${HOMEPAGE} ${optimization_url}"
 				if [ "${OVERRIDE_OPTIMIZATION_PATCHES}" = 1 ]; then
-					OPTIMIZATION_PATCHES="${FILESDIR}/${optimization_patch}"
+					OPTIMIZATION_PATCHES="${FILESDIR}/${optimization_patch}:1"
 				else
 					SRC_URI="
 						${SRC_URI}
 						optimization?		( ${optimization_src} )
 					"
-					OPTIMIZATION_PATCHES="${DISTDIR}/${optimization_patch}"
+					OPTIMIZATION_PATCHES="${DISTDIR}/${optimization_patch}:1"
 				fi
 			;;
 
@@ -133,13 +133,13 @@ USE_ENABLE() {
 				reiser4_src="${reiser4_url}/files/reiser4-for-linux-3.x/${reiser4_patch}"
 				HOMEPAGE="${HOMEPAGE} ${reiser4_url}"
 				if [ "${OVERRIDE_REISER4_PATCHES}" = 1 ]; then
-					REISER4_PATCHES="${FILESDIR}/${reiser4_patch}"
+					REISER4_PATCHES="${FILESDIR}/${reiser4_patch}:1"
 				else
 					SRC_URI="
 						${SRC_URI}
 						reiser4?		( ${reiser4_src} )
 					"
-					REISER4_PATCHES="${DISTDIR}/${reiser4_patch}"
+					REISER4_PATCHES="${DISTDIR}/${reiser4_patch}:1"
 				fi
 			;;
 
@@ -155,13 +155,13 @@ USE_ENABLE() {
 					tuxonice?	( >=sys-apps/tuxonice-userui-1.0 ( || ( >=sys-power/hibernate-script-2.0 sys-power/pm-utils ) ) )
 				"
 				if [ "${OVERRIDE_TUXONICE_PATCHES}" = 1 ]; then
-					TUXONICE_PATCHES="${FILESDIR}/${tuxonice_patch}"
+					TUXONICE_PATCHES="${FILESDIR}/${tuxonice_patch}:1"
 				else
 					SRC_URI="
 						${SRC_URI}
 						tuxonice?	( ${tuxonice_src} )
 					"
-					TUXONICE_PATCHES="${DISTDIR}/${tuxonice_patch}"
+					TUXONICE_PATCHES="${DISTDIR}/${tuxonice_patch}:1"
 				fi
 			;;
 
@@ -173,13 +173,13 @@ USE_ENABLE() {
 				uksm_src="${uksm_url}/download/uksm/${uksm_version}/${uksm_patch}"
 				HOMEPAGE="${HOMEPAGE} ${uksm_url}"
 				if [ "${OVERRIDE_UKSM_PATCHES}" = 1 ]; then
-					UKSM_PATCHES="${FILESDIR}/${uksm_patch}"
+					UKSM_PATCHES="${FILESDIR}/${uksm_patch}:1"
 				else
 					SRC_URI="
 						${SRC_URI}
 						uksm?		( ${uksm_src} )
 					"
-					UKSM_PATCHES="${DISTDIR}/${uksm_patch}"
+					UKSM_PATCHES="${DISTDIR}/${uksm_patch}:1"
 				fi
 			;;
 
@@ -228,7 +228,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	sed -i -e "s:^\(EXTRAVERSION =\).*: \1 ${EXTRAVERSION}:" "Makefile"
 	features ck && use ck && sed -i -e 's/\(^EXTRAVERSION :=.*$\)/# \1/' "Makefile"
 
 	features aufs && if use aufs; then
