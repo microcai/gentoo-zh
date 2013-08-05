@@ -120,12 +120,16 @@ src_configure() {
 		local mycmakeargs="
 			-DLIB_INSTALL_DIR=/usr/lib32
 			$(cmake-utils_use_enable gtk GTK2_IM_MODULE)
-			$(cmake-utils_use_enable gtk SNOOPER)
 			$(cmake-utils_use_enable gtk3 GTK3_IM_MODULE)
-			$(cmake-utils_use_enable gtk3 SNOOPER)
 			$(cmake-utils_use_enable qt4 QT)
 			$(cmake-utils_use_enable qt4 QT_IM_MODULE)
-			$(cmake-utils_use_enable qt4 QT_GUI)"
+			-DENABLE_X11=OFF
+			-DENABLE_QT_GUI=OFF
+			-DENABLE_GLIB2=OFF
+			-DENABLE_PANGO=OFF
+			-DENABLE_GIR=OFF
+			-DENABLE_STATIC=OFF
+			-DENABLE_OPENCC=OFF"
 
 		"${CMAKE_BINARY}" "${mycmakeargs[@]}" "${CMAKE_USE_DIR}" || die
 
