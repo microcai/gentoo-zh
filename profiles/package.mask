@@ -41,3 +41,6 @@ net-im/instantbird
 
 # if you want to use pacman in your gentoo not chroot environment, unmask it
 sys-apps/pacman
+
+# mask for Deepin, if you want to install deepin, unmask it
+gnome-settings-daemon-3.8.99.20130617144914
