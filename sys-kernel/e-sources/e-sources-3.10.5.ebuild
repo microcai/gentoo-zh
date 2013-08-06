@@ -21,7 +21,7 @@ uksm_kernel_version="3.10.0"
 KEYWORDS="~amd64 ~x86"
 
 # aufs cjktty ck gentoo imq optimization reiser4 tuxonice uksm
-SUPPORTED_USE="+aufs +cjktty +ck +gentoo +imq +optimization +reiser4 +tuxonice +uksm"
+SUPPORTED_USE="+aufs +cjktty +ck +gentoo +optimization +reiser4 +tuxonice +uksm"
 
 CK_PRE_PATCH=""
 CK_POST_PATCH=""
