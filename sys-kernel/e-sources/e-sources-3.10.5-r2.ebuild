@@ -11,7 +11,7 @@ optimization_version="1"
 tuxonice_version="2013.08.04"
 uksm_version="0.1.2.2"
 
-aufs_kernel_version="3.10_p20130722"
+aufs_kernel_version="3.10_p20130807"
 cjktty_kernel_version="3.8.1"
 imq_kernel_version="3.10.0"
 reiser4_kernel_version="3.10.0"
