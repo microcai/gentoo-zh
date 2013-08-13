@@ -9,7 +9,6 @@
 #	cjktty - CJK tty font support
 #	ck - Con Kolivas' high performance patchset
 #	gentoo - genpatches
-#	imq - intermediate queueing device
 #	optimization - more optimized gcc options for additional CPUs
 #	reiser4 - Reiser4 file system
 #	tuxonice - another linux hibernate kernel patchset
@@ -33,7 +32,8 @@ KMV="$(get_version_component_range 1-2)"
 KMSV="$(get_version_component_range 1).0"
 
 SLOT="${KMV}"
-RDEPEND=">=sys-devel/gcc-4.8"
+
+features optimization && use optimization && RDEPEND=">=sys-devel/gcc-4.8"
 
 if features gentoo; then
 	HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches"
@@ -95,21 +95,6 @@ USE_ENABLE() {
 						ck?	( ${ck_src} )
 					"
 					CK_PATCHES="${FILESDIR}/${CK_PRE_PATCH} ${DISTDIR}/${ck_patch}:1 ${FILESDIR}/${CK_POST_PATCH}"
-				fi
-			;;
-
-		imq)		imq_url="http://www.linuximq.net"
-				imq_patch="patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
-				imq_src="${imq_url}/patches/${imq_patch}"
-				HOMEPAGE="${HOMEPAGE} ${imq_url}"
-				if [ "${OVERRIDE_IMQ_PATCHES}" = 1 ]; then
-					IMQ_PATCHES="${FILESDIR}/${imq_patch}:1"
-				else
-					SRC_URI="
-						${SRC_URI}
-						imq?	( ${imq_src} )
-					"
-					IMQ_PATCHES="${DISTDIR}/${imq_patch}:1"
 				fi
 			;;
 
@@ -198,7 +183,6 @@ PATCH_APPEND() {
 		aufs)		use aufs && UNIPATCH_LIST="${UNIPATCH_LIST} ${AUFS_PATCHES}" ;;
 		cjktty)		use cjktty && UNIPATCH_LIST="${UNIPATCH_LIST} ${CJKTTY_PATCHES}" ;;
 		ck)		use ck && UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_PATCHES}" ;;
-		imq)		use imq && UNIPATCH_LIST="${UNIPATCH_LIST} ${IMQ_PATCHES}" ;;
 		optimization)	use optimization && UNIPATCH_LIST="${UNIPATCH_LIST} ${OPTIMIZATION_PATCHES}" ;;
 		reiser4)	use reiser4 && UNIPATCH_LIST="${UNIPATCH_LIST} ${REISER4_PATCHES}" ;;
 		tuxonice)	use tuxonice && UNIPATCH_LIST="${UNIPATCH_LIST} ${TUXONICE_PATCHES}" ;;
