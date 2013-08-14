@@ -21,7 +21,7 @@ RDEPEND="
 	media-libs/flac
 	app-cdr/cuetools
 	flake? ( media-sound/flake )
-	mac? ( media-libs/mac media-sound/apetag )
+	mac? ( media-sound/mac media-sound/apetag )
 	tta? ( media-sound/ttaenc )
 	shorten? ( media-sound/shorten )
 	wavpack? ( media-sound/wavpack media-sound/apetag )
