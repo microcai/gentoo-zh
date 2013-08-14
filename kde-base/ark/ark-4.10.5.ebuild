@@ -24,7 +24,7 @@ RESTRICT="test"
 # dbus problem
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-unrar5.patch"
+	epatch "${FILESDIR}/${PN}-unrar5.patch"
 }
 
 src_configure() {
