@@ -32,6 +32,6 @@ OVERRIDE_REISER4_PATCHES="0"
 OVERRIDE_TUXONICE_PATCHES="0"
 OVERRIDE_UKSM_PATCHES="0"
 
-ADDITION_PATCHES=""
+ADDITION_PATCHES="${FILESDIR}/enable-thinkpad-hardware-mute-control.patch"
 
 inherit e-sources
