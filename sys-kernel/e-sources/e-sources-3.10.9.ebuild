@@ -6,15 +6,15 @@ EAPI="5"
 K_DEBLOB_AVAILABLE="1"
 
 ck_version="1"
-gentoo_version="13"
+gentoo_version="15"
 optimization_version="1"
-tuxonice_version="2013.08.13"
+tuxonice_version="2013.08.21"
 uksm_version="0.1.2.2"
 
 aufs_kernel_version="3.10_p20130812"
 cjktty_kernel_version="3.8.1"
 reiser4_kernel_version="3.10.0"
-tuxonice_kernel_version="3.10.6"
+tuxonice_kernel_version="3.10.9"
 uksm_kernel_version="3.10.0"
 
 KEYWORDS="~amd64 ~x86"
