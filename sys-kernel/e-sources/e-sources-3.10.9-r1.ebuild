@@ -7,7 +7,7 @@ K_DEBLOB_AVAILABLE="1"
 
 ck_version="1"
 gentoo_version="16"
-optimization_version="1"
+optimization_version="2"
 tuxonice_version="2013.08.21"
 uksm_version="0.1.2.2"
 
