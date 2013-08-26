@@ -73,7 +73,8 @@ src_prepare() {
 		"${FILESDIR}/${P}-coroutine.patch" \
 		"${FILESDIR}/${P}-date-time.patch" \
 		"${FILESDIR}/${P}-log.patch" \
-		"${FILESDIR}/${P}-thread.patch"
+		"${FILESDIR}/${P}-thread.patch" \
+		"${FILESDIR}/${P}-cstdint.patch" 
 }
 
 ejam() {
