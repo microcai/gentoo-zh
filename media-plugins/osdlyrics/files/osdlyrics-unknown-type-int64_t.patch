@@ -1,5 +1,6 @@
---- ol_singleton.c.orig	2013-08-28 17:14:57.875828623 +0800
-+++ ol_singleton.c.new	2013-08-28 17:14:50.884828871 +0800
+diff -u a/ol_singleton.c b/ol_singleton.c
+--- a/ol_singleton.c	2013-08-28 17:14:57.875828623 +0800
++++ b/ol_singleton.c	2013-08-28 17:14:50.884828871 +0800
 @@ -23,6 +23,7 @@
  #include <fcntl.h>
  #include <errno.h>
