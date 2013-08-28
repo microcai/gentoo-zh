@@ -39,7 +39,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-unknown-type-int64_t.patch"
+	epatch "${FILESDIR}/${PN}-unknown-type-int64_t.patch"
 	eautoreconf
 }
 
