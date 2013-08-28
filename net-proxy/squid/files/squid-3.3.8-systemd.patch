@@ -1,6 +1,6 @@
 diff -Nru a/squid-3.3.8/src/comm.cc b/squid-3.3.8/src/comm.cc
 --- a/squid-3.3.8/src/comm.cc	2013-07-13 21:25:14.000000000 +0800
-+++ b/squid-3.3.8/src/comm.cc	2013-08-28 20:44:13.437920504 +0800
++++ b/squid-3.3.8/src/comm.cc	2013-08-28 22:14:19.927908426 +0800
 @@ -86,6 +86,8 @@
  #include <errno.h>
  #endif
@@ -48,32 +48,35 @@ diff -Nru a/squid-3.3.8/src/comm.cc b/squid-3.3.8/src/comm.cc
      /* under IPv6 there is the possibility IPv6 is present but disabled. */
      /* try again as IPv4-native if possible */
      if ( new_socket < 0 && Ip::EnableIpv6 && addr.IsIPv6() && addr.SetIPv4() ) {
-@@ -663,6 +685,8 @@
+@@ -663,6 +685,7 @@
      assert(AI);
      const int sock_type = AI->ai_socktype;
  
-+    int sd_listen_fd = sd_listen_fds(0);
 +
      if (!(flags & COMM_NOCLOEXEC))
          commSetCloseOnExec(new_socket);
  
-@@ -681,10 +705,14 @@
+@@ -681,16 +704,17 @@
  
      /* MUST be done before binding or face OS Error: "(99) Cannot assign requested address"... */
      if ((flags & COMM_TRANSPARENT)) {
 -        comm_set_transparent(new_socket);
 +
-+    	if(sd_listen_fd > 0 )
-+    		fd_table[new_socket].flags.transparent = 1;
-+    	else
-+    		comm_set_transparent(new_socket);
++    	comm_set_transparent(new_socket);
      }
  
 -    if ( (flags & COMM_DOBIND) || addr.GetPort() > 0 || !addr.IsAnyAddr() ) {
-+    if ( sd_listen_fd <= 0 && ( (flags & COMM_DOBIND) || addr.GetPort() > 0 || !addr.IsAnyAddr() )) {
++    if ( ( (flags & COMM_DOBIND) || addr.GetPort() > 0 || !addr.IsAnyAddr() )) {
          if ( !(flags & COMM_DOBIND) && addr.IsAnyAddr() )
              debugs(5, DBG_IMPORTANT,"WARNING: Squid is attempting to bind() port " << addr << " without being a listener.");
          if ( addr.IsNoAddr() )
+             debugs(5,0,"CRITICAL: Squid is attempting to bind() port " << addr << "!!");
+ 
+-        if (commBind(new_socket, *AI) != COMM_OK) {
++        if ( (new_socket >  (3 + sd_listen_fds(0)))  && commBind(new_socket, *AI) != COMM_OK) {
+             comm_close(new_socket);
+             return -1;
+         }
 diff -Nru a/squid-3.3.8/src/comm.cc.orig b/squid-3.3.8/src/comm.cc.orig
 --- a/squid-3.3.8/src/comm.cc.orig	1970-01-01 08:00:00.000000000 +0800
 +++ b/squid-3.3.8/src/comm.cc.orig	2013-07-13 21:25:14.000000000 +0800
