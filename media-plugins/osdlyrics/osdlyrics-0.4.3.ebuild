@@ -33,6 +33,10 @@ use_disable() {
 	use $1 || echo "--disable-$2"
 }
 
+src_prepare() {
+	epatch "${FILESDIR}/${P}-unknown-type-int64_t.patch"
+}
+
 src_configure() {
 	econf $(use_disable mpd) $(use_disable xmms2) $(use_enable appindicator)
 }
