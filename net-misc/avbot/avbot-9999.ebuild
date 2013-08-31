@@ -25,7 +25,7 @@ inherit cmake-utils git-2
 
 
 DEPEND="
-	>=dev-libs/boost-1.54[nls,threads]
+	>=dev-libs/boost-1.54[nls,threads,static-libs]
 	dev-libs/openssl
 	net-libs/gloox
 "
