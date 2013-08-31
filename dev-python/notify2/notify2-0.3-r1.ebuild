@@ -16,6 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x64-macos"
 IUSE="examples"
 
+RDEPEND="dev-python/dbus-python[${PYTHON_USEDEP}]"
+
 python_test() {
    python_execute_function testing
    "${PYTHON}" setup.py test || die
