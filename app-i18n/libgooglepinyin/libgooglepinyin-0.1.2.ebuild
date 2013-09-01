@@ -27,3 +27,10 @@ RDEPEND="${COMM_DEPEND}"
 
 MY_P=libgooglepinyin-$PV
 S=${WORKDIR}/${MY_P}
+
+src_configure() {
+	local mycmakeargs=(
+			-DLIB_INSTALL_DIR="${EPREFIX}/usr/$(get_libdir)"
+	)
+	cmake-utils_src_configure
+}
