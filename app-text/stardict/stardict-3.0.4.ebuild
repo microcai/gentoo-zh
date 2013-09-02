@@ -47,8 +47,8 @@ DEPEND="${DEP}
 	dev-libs/libsigc++"
 
 src_prepare(){
-	#epatch "${FILESDIR}/stardict-3.0.4-templatefix.patch"
 	epatch "${FILESDIR}/stardict-3.0.3-zlib-1.2.5.2.patch"
+	epatch "${FILESDIR}/stardict-3.0.4-gmodule.patch"
 }
 
 src_configure(){
