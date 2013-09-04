@@ -12,7 +12,7 @@ tuxonice_version="2013.09.03"
 uksm_version="0.1.2.2"
 
 aufs_kernel_version="3.10_p20130812"
-cjktty_kernel_version="3.8.1"
+cjktty_kernel_version="3.11.0"
 reiser4_kernel_version="3.10.0"
 tuxonice_kernel_version="3.11.0"
 uksm_kernel_version="3.10.0"
