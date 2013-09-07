@@ -22,5 +22,6 @@ src_install() {
 	dodir /opt/p7zip-nsis/
 	cp -R . "${D}/opt/p7zip-nsis/" || die "Install failed"
 
-	dosym /opt/p7zip-nsis/7z-nsis /usr/bin/7z-nsis
+	exeinto /usr/bin/
+	newexe "${FILESDIR}/7z-nsis" 7z-nsis
 }
