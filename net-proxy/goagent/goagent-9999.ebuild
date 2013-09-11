@@ -51,8 +51,8 @@ src_prepare() {
 src_install() {
 	insinto "/etc/"
 	newins "${S}/local/proxy.ini" goagent
-	rm ${S}/*/*.{bat,exe,vbs,dll,ini,manifest,command} || die
-	rm ${S}/local/python{27,33}.zip || die
+	rm -f ${S}/*/*.{bat,exe,vbs,dll,ini,manifest,command} || die
+	rm -f ${S}/local/python{27,33}.zip || die
 
 	if use gtk ; then
 		exeinto "/usr/bin"
@@ -88,7 +88,7 @@ pkg_postinst() {
 	elog "config file: /etc/goagent"
 	elog "init script: /etc/init.d/goagent"
 	elog
-	if usev gtk; then
+	if use gtk; then
 		elog "Usage:"
 		elog "goagent-gtk"
 	else
