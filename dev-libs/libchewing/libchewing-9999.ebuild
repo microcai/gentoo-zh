@@ -2,32 +2,40 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit flag-o-matic eutils subversion
+EAPI="3"
 
-IUSE=""
+inherit autotools git
+
 DESCRIPTION="Library for Chinese Phonetic input method"
-HOMEPAGE="http://chewing.csie.net/"
-#SRC_URI="http://chewing.csie.net/download/libchewing/${P}.tar.gz"
-ESVN_REPO_URI="https://svn.csie.net/chewing/libchewing/trunk"
-ESVN_PROJECT="libchewing"
-#ESVN_PATCHES="*.diff"
-#ESVN_BOOTSTRAP="./autogen.sh"
+HOMEPAGE="http://chewing.im/"
+EGIT_REPO_URI="git://github.com/chewing/${PN}.git"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
+IUSE=""
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
     virtual/pkgconfig
 	"
 
-src_configure(){
-	eautoreconf || die "./configure failed"
+src_prepare() {
+	eautoreconf
+}
+
+src_configure() {
+	econf $(use_enable debug)
 }
 
 src_compile(){
 	emake -j1 || die "make failed"
+}
+
+src_test() {
+	# test subdirectory is not enabled by default; this means that we
+	# have to make it explicit.
+	emake -C test check || die "emake check failed"
 }
 
 src_install(){
