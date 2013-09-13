@@ -9,7 +9,7 @@ inherit cmake-utils
 DESCRIPTION="A very light weight ui for fcitx, only using xlib and xpm, like go
 back to 3.6.x times."
 HOMEPAGE="https://github.com/fcitx/fcitx-ui-light"
-SRC_URI="http://download.fcitx-im.org/${PN}/${P}.tar.xz"
+SRC_URI="http://download.fcitx-im.org/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
