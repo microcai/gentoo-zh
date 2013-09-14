@@ -151,9 +151,15 @@ USE_ENABLE() {
 			;;
 
 		uksm)		uksm_url="http://kerneldedup.org"
-				if [[ "${uksm_kernel_version/$KMV./}" = "0" ]]
-					then uksm_patch="uksm-${uksm_version}-for-v${KMV}.patch"
-					else uksm_patch="uksm-${uksm_version}-for-v${KMV}.ge.${uksm_kernel_version/$KMV./}.patch"
+				if [[ "${uksm_kernel_version/$KMV./}" = "0" ]]; then
+					# the first version of a new series.
+					uksm_patch="uksm-${uksm_version}-for-v${KMV}.patch"
+				elif [[ "${uksm_kernel_version/$KMV./}" = ${uksm_kernel_version} ]]; then
+					# a newer kernel, but the patch is for last-series. $uksm_kernel_version must the full uksm version number.
+					uksm_patch="uksm-${uksm_version}-for-v${uksm_kernel_version}.patch"
+				else
+					# a bug-fix version of the series.
+					uksm_patch="uksm-${uksm_version}-for-v${KMV}.ge.${uksm_kernel_version/$KMV./}.patch"
 				fi
 				uksm_src="${uksm_url}/download/uksm/${uksm_version}/${uksm_patch}"
 				HOMEPAGE="${HOMEPAGE} ${uksm_url}"

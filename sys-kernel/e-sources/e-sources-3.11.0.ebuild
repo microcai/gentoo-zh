@@ -6,16 +6,16 @@ EAPI="5"
 K_DEBLOB_AVAILABLE="1"
 
 ck_version="1"
-gentoo_version="1"
+gentoo_version="3"
 optimization_version="1"
-tuxonice_version="2013.09.03"
+tuxonice_version="2013.09.11"
 uksm_version="0.1.2.2"
 
 aufs_kernel_version="3.10_p20130812"
 cjktty_kernel_version="3.11.0"
 reiser4_kernel_version="3.10.0"
 tuxonice_kernel_version="3.11.0"
-uksm_kernel_version="3.10.0"
+uksm_kernel_version="3.10"
 
 KEYWORDS=""
 
