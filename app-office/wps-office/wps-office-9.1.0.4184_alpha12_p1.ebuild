@@ -36,7 +36,8 @@ HOMEPAGE="http://www.wps.cn"
 
 MY_PN=kingsoft-office
 
-SRC_URI="http://wdl.cache.ijinshan.com/wps/download/Linux/unstable/${MY_PN}_${MY_VV}_i386.deb"
+SRC_URI="http://wdl.cache.ijinshan.com/wps/download/Linux/unstable/${MY_PN}_${MY_VV}_i386.deb
+         http://wps-community.org/download/tools/wps_merge_old_conf.sh"
 
 SLOT="0"
 RESTRICT="strip mirror"
@@ -88,6 +89,9 @@ src_install() {
 	doexe ${S}/usr/bin/wps
 	doexe ${S}/usr/bin/wpp
 	doexe ${S}/usr/bin/et
+	
+	cp "${DISTDIR}/wps_merge_old_conf.sh" "${S}/usr/bin"
+    doexe ${S}/usr/bin/wps_merge_old_conf.sh
 
 	if ! use sharedfonts; then
 		insinto /opt/kingsoft/wps-office/office6/fonts
@@ -107,6 +111,10 @@ pkg_postinst() {
 	use sharedfonts && font_pkg_postinst
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
+	elog
+	elog "Config File Formats changed in this version. To migrate your personal configs,"
+	elog "Please run wps_merge_old_conf.sh before you use (don't run it as root)."
+	elog "Or you'll lose all of your configs."
 }
 
 pkg_postrm() {
