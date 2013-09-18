@@ -15,6 +15,7 @@ LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+RDEPEND="dev-libs/libsodium"
 
 pkg_setup() {
 enewgroup dnscrypt
