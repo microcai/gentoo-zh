@@ -111,10 +111,10 @@ pkg_postinst() {
 	use sharedfonts && font_pkg_postinst
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
-	elog
-	elog "Config File Formats changed in this version. To migrate your personal configs,"
-	elog "Please run wps_merge_old_conf.sh before you use (don't run it as root)."
-	elog "Or you'll lose all of your configs."
+	ewarn
+	ewarn "Config File Formats changed in this version. To migrate your personal configs,"
+	ewarn "Please run wps_merge_old_conf.sh before you use (don't run it as root)."
+	ewarn "Or you'll lose all of your configs."
 }
 
 pkg_postrm() {
