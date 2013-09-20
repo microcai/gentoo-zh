@@ -19,7 +19,7 @@ uksm_kernel_version="3.10"
 
 KEYWORDS=""
 
-SUPPORTED_USE="+cjktty +ck +gentoo +optimization +tuxonice"
+SUPPORTED_USE="+cjktty +ck +gentoo +experimental +optimization +tuxonice"
 
 CK_PRE_PATCH=""
 CK_POST_PATCH=""

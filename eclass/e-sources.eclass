@@ -19,7 +19,7 @@ features() { if [ "${SUPPORTED_USE/$1/}" != "$SUPPORTED_USE" ]; then return 0; e
 
 if features gentoo; then
 	K_GENPATCHES_VER="$gentoo_version"
-	K_WANT_GENPATCHES="base extras"
+	K_WANT_GENPATCHES="base extras experimental"
 fi
 
 K_NOSETEXTRAVERSION=""
