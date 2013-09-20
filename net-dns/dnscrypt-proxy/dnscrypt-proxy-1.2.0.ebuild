@@ -8,7 +8,7 @@ inherit eutils flag-o-matic systemd
 
 DESCRIPTION="A tool for securing communications between a client and a DNS resolver"
 HOMEPAGE="http://www.opendns.com/technology/dnscrypt/"
-SRC_URI="http://download.dnscrypt.org/${PN}/${P}.tar.gz"
+SRC_URI="http://download.dnscrypt.org/${PN}/old/${P}.tar.gz"
 RESTRICT="mirror"
 
 LICENSE="BSD"
