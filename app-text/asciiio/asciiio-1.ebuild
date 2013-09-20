@@ -17,7 +17,6 @@ DEPEND=""
 
 RDEPEND="
 =dev-lang/python-2*
-virtual/python-json
 "
 
 S="${WORKDIR}"
