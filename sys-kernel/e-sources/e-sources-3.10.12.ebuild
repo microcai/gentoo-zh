@@ -8,30 +8,28 @@ K_DEBLOB_AVAILABLE="1"
 ck_version="1"
 gentoo_version="19"
 optimization_version="2"
-tuxonice_version="2013.09.10"
+tuxonice_version="2013.09.22"
 uksm_version="0.1.2.2"
 
 aufs_kernel_version="3.10_p20130915"
 cjktty_kernel_version="3.8.1"
+imq_kernel_version="3.10.0"
 reiser4_kernel_version="3.10.0"
-tuxonice_kernel_version="3.10.11"
+tuxonice_kernel_version="3.10.12"
 uksm_kernel_version="3.10.0"
 
 KEYWORDS="~amd64 ~x86"
 
-SUPPORTED_USE="+aufs +cjktty +ck +gentoo +optimization +reiser4 +tuxonice +uksm"
+SUPPORTED_USE="+additional +aufs +cjktty +ck +imq +gentoo +experimental +optimization +reiser4 +tuxonice +uksm"
+UNSUPPORTED_USE=""
 
-CK_PRE_PATCH=""
-CK_POST_PATCH=""
 UNIPATCH_EXCLUDE=""
 
-OVERRIDE_CJKTTY_PATCHES="0"
-OVERRIDE_CK_PATCHES="0"
-OVERRIDE_FBCONDECOR_PATCHES="0"
-OVERRIDE_REISER4_PATCHES="0"
-OVERRIDE_TUXONICE_PATCHES="0"
-OVERRIDE_UKSM_PATCHES="0"
-
-ADDITION_PATCHES="${FILESDIR}/enable-thinkpad-hardware-mute-control.patch"
+OVERRIDE_CJKTTY_PATCHES=""
+OVERRIDE_CK_PATCHES=""
+OVERRIDE_IMQ_PATCHES="1"
+OVERRIDE_REISER4_PATCHES=""
+OVERRIDE_TUXONICE_PATCHES=""
+OVERRIDE_UKSM_PATCHES=""
 
 inherit e-sources
