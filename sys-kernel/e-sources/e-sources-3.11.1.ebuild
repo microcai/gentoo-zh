@@ -16,12 +16,12 @@ cjktty_kernel_version="3.11.0"
 imq_kernel_version="3.10.0"
 reiser4_kernel_version="3.11.1"
 tuxonice_kernel_version="3.11.1"
-uksm_kernel_version="3.10"
+uksm_kernel_version="3.10.0"
 
 KEYWORDS="~amd64 ~x86"
 
 SUPPORTED_USE="+additional +cjktty +ck +gentoo +experimental +optimization +reiser4 +tuxonice +uksm"
-UNSUPPORTED_USE="+aufs +imq"
+UNSUPPORTED_USE="aufs imq"
 
 UNIPATCH_EXCLUDE=""
 

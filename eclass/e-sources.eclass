@@ -152,7 +152,8 @@ USE_ENABLE() {
 			;;
 
 		tuxonice)	tuxonice_url="http://tuxonice.net"
-				if [[ "${tuxonice_kernel_version/$KMV./}" = "0" ]]
+				ICEKMV=${tuxonice_kernel_version:0:4}
+				if [[ "${tuxonice_kernel_version/$ICEKMV./}" = "0" ]]
 					then tuxonice_patch="tuxonice-for-linux-head-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2"
 					else tuxonice_patch="tuxonice-for-linux-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2"
 				fi
@@ -174,16 +175,10 @@ USE_ENABLE() {
 			;;
 
 		uksm)		uksm_url="http://kerneldedup.org"
-
-				if [[ "${uksm_kernel_version/$KMV./}" = "0" ]]; then
-					# the first version of a new series.
-					uksm_patch="uksm-${uksm_version}-for-v${KMV}.patch"
-				elif [[ "${uksm_kernel_version/$KMV./}" = ${uksm_kernel_version} ]]; then
-					# a newer kernel, but the patch is for last-series. $uksm_kernel_version must the full uksm version number.
-					uksm_patch="uksm-${uksm_version}-for-v${uksm_kernel_version}.patch"
-				else
-					# a bug-fix version of the series.
-					uksm_patch="uksm-${uksm_version}-for-v${KMV}.ge.${uksm_kernel_version/$KMV./}.patch"
+				UKSMKMV=${uksm_kernel_version:0:4}
+				if [[ "${uksm_kernel_version/$UKSMKMV./}" = "0" ]]
+					then uksm_patch="uksm-${uksm_version}-for-v${UKSMKMV}.patch"
+					else uksm_patch="uksm-${uksm_version}-for-v${UKSMKMV}.ge.${uksm_kernel_version/$UKSMKMV./}.patch"
 				fi
 				uksm_src="${uksm_url}/download/uksm/${uksm_version}/${uksm_patch}"
 				HOMEPAGE="${HOMEPAGE} ${uksm_url}"
