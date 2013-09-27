@@ -40,7 +40,8 @@ KMSV="$(get_version_component_range 1).0"
 
 SLOT="${KMV}"
 
-features optimization && RDEPEND=">=sys-devel/gcc-4.8"
+features optimization && \
+RDEPEND="optimization? ( >=sys-devel/gcc-4.8 )"
 
 if features gentoo; then
 	HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches"
@@ -247,7 +248,4 @@ src_prepare() {
 		cp -i "${WORKDIR}"/include/uapi/linux/aufs_type.h include/uapi/linux/aufs_type.h || die
 		cp -ri "${WORKDIR}"/{Documentation,fs} . || die
 	fi
-
-	rm -rf {a,b,Documentation/*,drivers/video/logo/*}
-	touch {{Documentation,drivers/video/logo}/Makefile,drivers/video/logo/Kconfig}
 }
