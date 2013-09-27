@@ -16,7 +16,7 @@ cjktty_kernel_version="3.11.0"
 imq_kernel_version="3.10.0"
 reiser4_kernel_version="3.11.1"
 tuxonice_kernel_version="3.11.1"
-uksm_kernel_version="3.10.0"
+uksm_kernel_version="3.10"
 
 KEYWORDS="~amd64 ~x86"
 
