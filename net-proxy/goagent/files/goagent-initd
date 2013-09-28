@@ -15,7 +15,7 @@ start() {
     ebegin "Starting GoAgent"
     start-stop-daemon --start --name goagent \
     $GOAGENT_PID --make-pid \
-    --exec python3 /opt/goagent/local/proxy.py &> $GOAGENT_LOG &
+    --exec python3 /opt/goagent/local/proxy.py > $GOAGENT_LOG 2>&1 &
     eend $?
 }
 
