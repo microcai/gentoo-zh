@@ -81,7 +81,7 @@ USE_ENABLE() {
 				cjktty_src="${cjktty_url}/files/cjktty-for-linux-3.x/${cjktty_patch}"
 				HOMEPAGE="${HOMEPAGE} ${cjktty_url}"
 				if [ "${OVERRIDE_CJKTTY_PATCHES}" = 1 ]; then
-					CJKTTY_PATCHES="${FILESDIR}/${KMV}/${cjktty_patch}:1"
+					CJKTTY_PATCHES="${FILESDIR}/${PV}/${cjktty_patch}:1"
 				else
 					SRC_URI="
 						${SRC_URI}
@@ -96,7 +96,7 @@ USE_ENABLE() {
 				ck_src="${ck_url}/${KMSV}/${KMV}/${KMV}-ck${ck_version}/${ck_patch}"
 				HOMEPAGE="${HOMEPAGE} ${ck_url}"
 				if [ "${OVERRIDE_CK_PATCHES}" = 1 ]; then
-					CK_PATCHES="${FILESDIR}/${KMV}/${ck_patch}:1"
+					CK_PATCHES="${FILESDIR}/${PV}/${ck_patch}:1"
 				else
 					SRC_URI="
 						${SRC_URI}
@@ -111,7 +111,7 @@ USE_ENABLE() {
 				imq_src="${imq_url}/patches/${imq_patch}"
 				HOMEPAGE="${HOMEPAGE} ${imq_url}"
 				if [ "${OVERRIDE_IMQ_PATCHES}" = 1 ]; then
-					IMQ_PATCHES="${FILESDIR}/${KMV}/${imq_patch}:1"
+					IMQ_PATCHES="${FILESDIR}/${PV}/${imq_patch}:1"
 				else
 					SRC_URI="
 						${SRC_URI}
@@ -126,7 +126,7 @@ USE_ENABLE() {
 				optimization_src="${optimization_url}/master/${optimization_patch}"
 				HOMEPAGE="${HOMEPAGE} ${optimization_url}"
 				if [ "${OVERRIDE_OPTIMIZATION_PATCHES}" = 1 ]; then
-					OPTIMIZATION_PATCHES="${FILESDIR}/${KMV}/${optimization_patch}:1"
+					OPTIMIZATION_PATCHES="${FILESDIR}/${PV}/${optimization_patch}:1"
 				else
 					SRC_URI="
 						${SRC_URI}
@@ -141,7 +141,7 @@ USE_ENABLE() {
 				reiser4_src="${reiser4_url}/files/reiser4-for-linux-3.x/${reiser4_patch}"
 				HOMEPAGE="${HOMEPAGE} ${reiser4_url}"
 				if [ "${OVERRIDE_REISER4_PATCHES}" = 1 ]; then
-					REISER4_PATCHES="${FILESDIR}/${KMV}/${reiser4_patch}:1"
+					REISER4_PATCHES="${FILESDIR}/${PV}/${reiser4_patch}:1"
 				else
 					SRC_URI="
 						${SRC_URI}
@@ -164,7 +164,7 @@ USE_ENABLE() {
 					tuxonice?	( >=sys-apps/tuxonice-userui-1.0 ( || ( >=sys-power/hibernate-script-2.0 sys-power/pm-utils ) ) )
 				"
 				if [ "${OVERRIDE_TUXONICE_PATCHES}" = 1 ]; then
-					TUXONICE_PATCHES="${FILESDIR}/${KMV}/${tuxonice_patch}:1"
+					TUXONICE_PATCHES="${FILESDIR}/${PV}/${tuxonice_patch}:1"
 				else
 					SRC_URI="
 						${SRC_URI}
@@ -183,7 +183,7 @@ USE_ENABLE() {
 				uksm_src="${uksm_url}/download/uksm/${uksm_version}/${uksm_patch}"
 				HOMEPAGE="${HOMEPAGE} ${uksm_url}"
 				if [ "${OVERRIDE_UKSM_PATCHES}" = 1 ]; then
-					UKSM_PATCHES="${FILESDIR}/${KMV}/${uksm_patch}:1"
+					UKSM_PATCHES="${FILESDIR}/${PV}/${uksm_patch}:1"
 				else
 					SRC_URI="
 						${SRC_URI}
