@@ -1,22 +1,23 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.54.0.ebuild,v 1.3 2013/09/05 18:29:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.55.0.ebuild,v 1.1 2013/11/14 17:19:04 pinkbyte Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
 inherit eutils flag-o-matic multilib multiprocessing python-r1 toolchain-funcs versionator
 
-MY_P=${PN}_$(replace_all_version_separators _)
+MY_P="${PN}_$(replace_all_version_separators _)"
+MAJOR_V="$(get_version_component_range 1-2)"
 
 DESCRIPTION="Boost Libraries for C++"
 HOMEPAGE="http://www.boost.org/"
 SRC_URI="mirror://sourceforge/boost/${MY_P}.tar.bz2"
 
 LICENSE="Boost-1.0"
-MAJOR_V="$(get_version_component_range 1-2)"
-SLOT="0/${MAJOR_V}"
+SLOT="0/${PV}" # ${PV} instead ${MAJOR_V} due to bug 486122
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x86-fbsd ~x86-linux"
+
 IUSE="debug doc icu +nls mpi python static-libs +threads tools"
 
 RDEPEND="icu? ( >=dev-libs/icu-3.6:= )
@@ -30,7 +31,14 @@ DEPEND="${RDEPEND}
 	=dev-util/boost-build-${MAJOR_V}*"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
+
+# the tests will never fail because these are not intended as sanity
+# tests at all. They are more a way for upstream to check their own code
+# on new compilers. Since they would either be completely unreliable
+# (failing for no good reason) or completely useless (never failing)
+# there is no point in having them in the ebuild to begin with.
+RESTRICT="test"
 
 create_user-config.jam() {
 	local compiler compiler_version compiler_executable
@@ -63,19 +71,12 @@ __EOF__
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}/${PN}-1.48.0-mpi_python3.patch" \
 		"${FILESDIR}/${PN}-1.51.0-respect_python-buildid.patch" \
 		"${FILESDIR}/${PN}-1.51.0-support_dots_in_python-buildid.patch" \
 		"${FILESDIR}/${PN}-1.48.0-no_strict_aliasing_python2.patch" \
 		"${FILESDIR}/${PN}-1.48.0-disable_libboost_python3.patch" \
 		"${FILESDIR}/${PN}-1.48.0-python_linking.patch" \
-		"${FILESDIR}/${PN}-1.48.0-disable_icu_rpath.patch" \
-		"${FILESDIR}/${P}-coroutine.patch" \
-		"${FILESDIR}/${P}-date-time.patch" \
-		"${FILESDIR}/${P}-log.patch" \
-		"${FILESDIR}/${P}-thread.patch" \
-		"${FILESDIR}/${P}-cstdint.patch" \
-		"${FILESDIR}/${PN}-1.53.0-library_status.patch" # bug 459112
+		"${FILESDIR}/${PN}-1.48.0-disable_icu_rpath.patch"
 }
 
 ejam() {
@@ -106,15 +107,16 @@ src_configure() {
 		[[ $(gcc-version) > 4.3 ]] && append-flags -mno-altivec
 	fi
 
-	# Do _not_ use C++11 yet, make sure to force GNU C++ 98 standard.
-
 	use icu && OPTIONS+=" -sICU_PATH=${EPREFIX}/usr"
 	use icu || OPTIONS+=" --disable-icu boost.locale.icu=off"
 	use mpi || OPTIONS+=" --without-mpi"
 	use python || OPTIONS+=" --without-python"
 	use nls || OPTIONS+=" --without-locale"
 
-	OPTIONS+=" pch=off --boost-build=${EPREFIX}/usr/share/boost-build --prefix=\"${ED}usr\" --layout=system threading=$(usex threads multi single) link=$(usex static-libs shared,static shared)"
+	OPTIONS+=" pch=off"
+	OPTIONS+=" --boost-build=${EPREFIX}/usr/share/boost-build --prefix=\"${ED}usr\""
+	OPTIONS+=" --layout=system"
+	OPTIONS+=" threading=$(usex threads multi single) link=$(usex static-libs shared,static shared)"
 
 	[[ ${CHOST} == *-winnt* ]] && OPTIONS+=" -sNO_BZIP2=1"
 }
@@ -324,10 +326,3 @@ pkg_preinst() {
 		[[ -L ${symlink} ]] && rm -f "${symlink}"
 	done
 }
-
-# the tests will never fail because these are not intended as sanity
-# tests at all. They are more a way for upstream to check their own code
-# on new compilers. Since they would either be completely unreliable
-# (failing for no good reason) or completely useless (never failing)
-# there is no point in having them in the ebuild to begin with.
-src_test() { :; }
