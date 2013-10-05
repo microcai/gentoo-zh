@@ -12,7 +12,7 @@ SRC_URI=""
 #EGIT_REPO_URI="https://github.com/Shougo/neocomplete.vim.git"
 EGIT_REPO_URI="git@github.com:Shougo/neocomplete.vim.git"
 
-LICENSE=""
+LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
