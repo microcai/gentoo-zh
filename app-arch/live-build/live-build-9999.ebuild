@@ -4,7 +4,7 @@
 
 EAPI="3"
 
-inherit base git
+inherit base git-2
 
 DESCRIPTION="Debian Live - System Build Scripts"
 HOMEPAGE="http://live.debian.net/"
