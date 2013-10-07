@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit cmake-utils git
+inherit cmake-utils git-2
 
 EGIT_REPO_URI="git://github.com/fcitx/fcitx-cloudpinyin.git"
 
