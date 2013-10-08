@@ -7,7 +7,7 @@ PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils git
+inherit distutils git-2
 
 DESCRIPTION="Generates C++ man pages from cplusplus.com"
 HOMEPAGE="https://github.com/Aitjcize/cppman/"
