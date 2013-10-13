@@ -20,14 +20,14 @@ uksm_kernel_version="3.10.0"
 
 KEYWORDS="~amd64 ~x86"
 
-SUPPORTED_USE="+additional +aufs +cjktty +ck +gentoo +experimental +optimization +reiser4 +tuxonice +uksm"
-UNSUPPORTED_USE="imq"
+SUPPORTED_USE="+additional +aufs +cjktty +ck +gentoo +experimental +optimization +reiser4 +tuxonice +uksm +imq"
+UNSUPPORTED_USE=""
 
 UNIPATCH_EXCLUDE=""
 
 OVERRIDE_CJKTTY_PATCHES=""
 OVERRIDE_CK_PATCHES=""
-OVERRIDE_IMQ_PATCHES=""
+OVERRIDE_IMQ_PATCHES="${FILEDIR}/linux-imqmq-3.11.patch"
 OVERRIDE_REISER4_PATCHES=""
 OVERRIDE_TUXONICE_PATCHES=""
 OVERRIDE_UKSM_PATCHES=""
