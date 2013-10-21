@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-inherit autotools base git
+inherit autotools base git-2
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/~jinghua/gst-plugins-pps"
 

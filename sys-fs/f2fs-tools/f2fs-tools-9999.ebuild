@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit autotools git
+inherit autotools git-2
 
 DESCRIPTION="Tools for Flash-Friendly File System (F2FS)"
 HOMEPAGE="http://sourceforge.net/projects/f2fs-tools/"

@@ -3,7 +3,7 @@
 # $Header: $
 
 
-inherit autotools git
+inherit autotools git-2
 
 DESCRIPTION="mp3/ogg/flac/sid/mod/nsf music player based on GTK2"
 HOMEPAGE="http://deadbeef.sourceforge.net/"

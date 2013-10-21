@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-inherit git mono
+inherit git-2 mono
 
 EGIT_BOOTSTRAP="autogen-2.22.sh"
 

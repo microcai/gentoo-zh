@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-inherit git autotools 
+inherit git-2 autotools
 
 DESCRIPTION="dbus-c++ attempts to provide a C++ API for D-BUS."
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/dbus-c++"
