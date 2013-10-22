@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-inherit autotools flag-o-matic base git
+inherit autotools flag-o-matic base git-2
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/~jinghua/libppswrapper"
 

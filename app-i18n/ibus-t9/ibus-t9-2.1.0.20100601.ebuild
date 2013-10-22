@@ -9,7 +9,7 @@ TAR_SUFFIX="tar.gz"
 inherit eutils autotools googlecode
 
 if [ "${PV##*.}" = "9999" ]; then
-	inherit git
+	inherit git-2
 fi
 
 DESCRIPTION="T9 input engine using ibus"

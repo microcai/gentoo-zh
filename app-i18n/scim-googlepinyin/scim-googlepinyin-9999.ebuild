@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-inherit autotools git
+inherit autotools git-2
 
 DESCRIPTION="An SCIM port of android Google Pinyin IME"
 HOMEPAGE="http://code.google.com/p/scim-googlepinyin/"
