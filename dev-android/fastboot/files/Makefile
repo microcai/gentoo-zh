@@ -2,6 +2,7 @@ SRCS+=bootimg.c
 SRCS+=engine.c
 SRCS+=fastboot.c
 SRCS+=protocol.c
+SRCS+=util.c
 SRCS+=usb_linux.c
 SRCS+=util_linux.c
 
