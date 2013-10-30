@@ -6,6 +6,10 @@
 		<email>skykiss_2000@163.com</email>
 		<name>Havanna</name>
 	</maintainer>
+	<maintainer>
+		<email>biergaizi2009@gmail.com</email>
+		<name>Biergaizi</name>
+	</maintainer>
 	<longdescription lang="en">
 		A GAE proxy forked from gappproxy/wallproxy.
 	</longdescription>

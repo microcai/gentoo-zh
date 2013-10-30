@@ -27,7 +27,7 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE="+gtk"
 
-RDEPEND="dev-lang/python:3.3[ssl]
+RDEPEND="dev-lang/python:2.7[ssl]
 	dev-libs/nss[utils]
 	dev-python/gevent
 	dev-python/pyopenssl
