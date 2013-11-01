@@ -50,8 +50,8 @@ src_prepare() {
 src_install() {
 	insinto "/etc/"
 	newins "${S}/local/proxy.ini" goagent
-	rm ${S}/*/*.{bat,exe,vbs,dll,ini,manifest,command} || die
-	rm ${S}/local/python{27,33}.zip || die
+	rm ${S}/*/*.{bat,exe,vbs,dll,ini,manifest,command}
+	rm ${S}/local/python{27,33}.zip
 
 	if use gtk ; then
 		exeinto "/usr/bin"
