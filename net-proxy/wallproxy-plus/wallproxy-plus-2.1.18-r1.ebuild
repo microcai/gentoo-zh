@@ -20,7 +20,7 @@ fi
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="ssl"
 
-inherit ${WALLPROXY_ECLASS} python
+inherit ${WALLPROXY_ECLASS} python systemd
 
 DESCRIPTION="New version of wallproxy, a general purpose proxy framework in Python."
 HOMEPAGE="https://github.com/wallproxy/wallproxy"
@@ -57,6 +57,7 @@ src_install() {
 	doexe "${FILESDIR}/wallproxy-uploader"
 
 	newinitd "${FILESDIR}/wallproxy.init" "wallproxy"
+	systemd_dounit "${FILESDIR}"/${PN}.service
 
 	chmod 755 "${D}/opt/wallproxy/local/startup.py" || die
 	chmod 755 "${D}/opt/wallproxy/server/uploader.py" || die
@@ -81,7 +82,6 @@ pkg_postinst() {
 	elog "    /etc/init.d/wallproxy"
 	elog "        An OpenRC script so that you can launch wallproxy automatically."
 	elog
-	elog
-	elog "For https cerfiticate error, please import /opt/wallproxy/local/cert.crt"
+	elog "For https cerfiticate error, please import /opt/wallproxy/local/CA.crt"
 	elog "to your broswer"
 }
