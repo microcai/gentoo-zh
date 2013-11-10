@@ -31,9 +31,7 @@ RDEPEND="dev-lang/python:2.7[ssl]
 	dev-libs/nss[utils]
 	dev-python/gevent
 	dev-python/pyopenssl
-	gtk? (
-		x11-libs/vte:0[python]
-	)"
+	gtk? ( x11-libs/vte:0[python] )"
 
 src_unpack() {
 	${GOAGENT_ECLASS}_src_unpack
@@ -50,8 +48,8 @@ src_prepare() {
 src_install() {
 	insinto "/etc/"
 	newins "${S}/local/proxy.ini" goagent
-	rm ${S}/*/*.{bat,exe,vbs,dll,ini,manifest,command}
-	rm ${S}/local/python{27,33}.zip
+	rm ${S}/*/*.{bat,exe,js,dll,ini,manifest,command} || die
+	rm ${S}/local/python27.zip || die
 
 	if use gtk ; then
 		exeinto "/usr/bin"
@@ -77,9 +75,9 @@ src_install() {
 	systemd_dounit "${FILESDIR}/goagent.service"
 }
 
-pkg_prerm() {
-	find ${ROOT}/opt/goagent/local/certs/ -type f -exec rm {} + || die
-}
+#pkg_prerm() {
+#	find ${ROOT}/opt/goagent/local/certs/ -type f -exec rm {} + || die
+#}
 
 pkg_postinst() {
 	use gtk && fdo-mime_desktop_database_update

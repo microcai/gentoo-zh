@@ -17,7 +17,7 @@ else
 	KEYWORDS="~amd64 ~x86"
 fi
 
-inherit ${GOAGENT_ECLASS} fdo-mime python
+inherit ${GOAGENT_ECLASS} fdo-mime python systemd
 
 DESCRIPTION="A GAE proxy forked from gappproxy/wallproxy"
 HOMEPAGE="https://github.com/goagent/goagent"
@@ -27,14 +27,11 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE="+gtk"
 
-RDEPEND="dev-lang/python:3.3[ssl]
+RDEPEND="dev-lang/python:2.7[ssl]
 	dev-libs/nss[utils]
 	dev-python/gevent
 	dev-python/pyopenssl
-	gtk? (
-		x11-libs/vte:0[python]
-		dev-lang/python:2.7
-	)"
+	gtk? ( x11-libs/vte:0[python] )"
 
 src_unpack() {
 	${GOAGENT_ECLASS}_src_unpack
@@ -51,8 +48,8 @@ src_prepare() {
 src_install() {
 	insinto "/etc/"
 	newins "${S}/local/proxy.ini" goagent
-	rm -f ${S}/*/*.{bat,exe,vbs,dll,ini,manifest,command} || die
-	rm -f ${S}/local/python{27,33}.zip || die
+	rm ${S}/*/*.{bat,exe,js,dll,ini,manifest,command} || die
+	rm ${S}/local/python27.zip || die
 
 	if use gtk ; then
 		exeinto "/usr/bin"
@@ -75,11 +72,12 @@ src_install() {
 	doins -r "${S}/local" "${S}/server"
 
 	newinitd "${FILESDIR}/goagent-initd" goagent
+	systemd_dounit "${FILESDIR}/goagent.service"
 }
 
-pkg_prerm() {
-	find ${ROOT}/opt/goagent/local/certs/ -type f -exec rm {} + || die
-}
+#pkg_prerm() {
+#	find ${ROOT}/opt/goagent/local/certs/ -type f -exec rm {} + || die
+#}
 
 pkg_postinst() {
 	use gtk && fdo-mime_desktop_database_update
