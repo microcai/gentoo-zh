@@ -208,7 +208,7 @@ pkg_postinst() {
 	use gtk3 && gnome2_query_immodules_gtk3
 	use autostart && readme.gentoo_pkg_postinst
 
-	if ! use gtk || ! use gtk3 || !use qt4; then
+	if ! use gtk || ! use gtk3 || ! use qt4; then
 		ewarn "You haven't built all im modules."
 		ewarn "It's highly recommended to use im module instead of XIM,"
 		ewarn "in order to avoid unresolvable problem."
@@ -220,6 +220,6 @@ pkg_postrm() {
 	gnome2_icon_cache_update
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
-	use gtk && update_gtk2_immodules
+	use gtk && gnome2_query_immodules_gtk2
 	use gtk3 && gnome2_query_immodules_gtk3
 }
