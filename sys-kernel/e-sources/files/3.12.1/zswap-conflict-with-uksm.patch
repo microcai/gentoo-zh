@@ -1,0 +1,11 @@
+diff -urN a/mm/Kconfig b/mm/Kconfig
+--- a/mm/Kconfig	2013-09-29 02:24:06.000000000 +0800
++++ b/mm/Kconfig	2013-09-29 02:28:04.248126990 +0800
+@@ -517,6 +517,7 @@
+ config ZSWAP
+ 	bool "Compressed cache for swap pages (EXPERIMENTAL)"
+ 	depends on FRONTSWAP && CRYPTO=y
++	depends on !UKSM
+ 	select CRYPTO_LZO
+ 	select ZBUD
+ 	default n
