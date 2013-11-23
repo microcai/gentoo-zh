@@ -20,14 +20,14 @@ uksm_kernel_version="3.12.0"
 
 KEYWORDS=""
 
-SUPPORTED_USE="+additional +aufs +ck +experimental +gentoo +optimization +tuxonice +uksm +cjktty"
-UNSUPPORTED_USE="+imq +reiser4"
+SUPPORTED_USE="+additional +aufs +ck +experimental +gentoo +optimization +tuxonice +uksm +cjktty +imq"
+UNSUPPORTED_USE="+reiser4"
 
 UNIPATCH_EXCLUDE=""
 
 OVERRIDE_CJKTTY_PATCHES=""
 OVERRIDE_CK_PATCHES=""
-OVERRIDE_IMQ_PATCHES=""
+OVERRIDE_IMQ_PATCHES="1"
 OVERRIDE_REISER4_PATCHES=""
 OVERRIDE_TUXONICE_PATCHES=""
 OVERRIDE_UKSM_PATCHES=""
