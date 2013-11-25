@@ -11,7 +11,7 @@ inherit eutils gnome2
 
 DESCRIPTION="GNOME applet for changing network proxy configuration from gnome panel"
 HOMEPAGE="http://www.andreafabrizi.it/?proxyapplet"
-SRC_URI="http://www.andreafabrizi.it/download.php?file=${P}.tar.gz"
+SRC_URI="http://www.andreafabrizi.it/download.php?file=${P}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="0"
