@@ -80,6 +80,7 @@ src_prepare() {
 src_configure() {
 	local mycmakeargs="
 		-DLIB_INSTALL_DIR=/usr/$(get_libdir)
+		-DSYSCONFDIR=/etc
 		$(cmake-utils_use_enable X X11)
 		$(cmake-utils_use_enable autostart XDGAUTOSTART)
 		$(cmake-utils_use_enable cairo CAIRO)
@@ -118,6 +119,7 @@ src_configure() {
 		local LDFLAGS="$LDFLAGS -m32 -L/usr/lib32/qt4"
 
 		local mycmakeargs="
+			-DSYSCONFDIR=/etc
 			-DLIB_INSTALL_DIR=/usr/lib32
 			$(cmake-utils_use_enable gtk GTK2_IM_MODULE)
 			$(cmake-utils_use_enable gtk3 GTK3_IM_MODULE)
