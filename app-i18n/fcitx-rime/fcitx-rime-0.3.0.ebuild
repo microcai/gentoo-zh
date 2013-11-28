@@ -17,8 +17,9 @@ IUSE=""
 RESTRICT="mirror"
 
 RDEPEND=">=app-i18n/fcitx-4.2.8
-	app-i18n/librime
-	app-i18n/rime-data
+	
+	>=app-i18n/librime-1.0
+	>=app-i18n/rime-data-0.3.0
 	x11-libs/libnotify"
 DEPEND="${RDEPEND}"
 
