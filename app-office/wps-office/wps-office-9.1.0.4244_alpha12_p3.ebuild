@@ -89,7 +89,7 @@ src_install() {
 	doexe ${S}/usr/bin/wps
 	doexe ${S}/usr/bin/wpp
 	doexe ${S}/usr/bin/et
-	
+
 	cp "${DISTDIR}/wps_merge_old_conf.sh" "${S}/usr/bin"
     doexe ${S}/usr/bin/wps_merge_old_conf.sh
 
@@ -112,9 +112,10 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 	ewarn
-	ewarn "Config File Formats changed in this version. To migrate your personal configs,"
 	ewarn "Please run wps_merge_old_conf.sh before you use (don't run it as root)."
-	ewarn "Or you'll lose all of your configs."
+	ewarn "Config File Formats changed in a12p1. If you upgrade from earlier version,"
+	ewarn "Please migrate your personal configs."
+	ewarn "Run wps_merge_old_conf.sh before you use (don't run it as root)."
 }
 
 pkg_postrm() {
