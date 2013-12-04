@@ -5,17 +5,17 @@
 EAPI="5"
 K_DEBLOB_AVAILABLE="1"
 
-ck_version="1"
-gentoo_version="2"
+ck_version="2"
+gentoo_version="3"
 optimization_version="1"
-tuxonice_version="2013.11.22"
+tuxonice_version="2013.11.30"
 uksm_version="0.1.2.2"
 
 aufs_kernel_version="3.12_p20131111"
 cjktty_kernel_version="3.11.0"
 imq_kernel_version="3.11.0"
 reiser4_kernel_version="3.11.1"
-tuxonice_kernel_version="3.12.1"
+tuxonice_kernel_version="3.12.2"
 uksm_kernel_version="3.12.0"
 
 KEYWORDS=""
