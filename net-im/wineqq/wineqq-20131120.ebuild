@@ -36,10 +36,10 @@ src_install() {
 
 	chmod 755 ${D}/opt
 	chmod 755 ${D}/usr
-	cp ${D}/opt/longene/qq2013/qq2013-test.desktop ${D}/usr/share/applications/
+	cp ${D}/opt/longene/qq/qq-test.desktop ${D}/usr/share/applications/
 	if use system-wine ; then
-	    cp -f ${FILESDIR}/qq2013.sh ${D}/opt/longene/qq2013/qq2013.sh
-	    rm -rf ${D}/opt/longene/qq2013/wine
+	    cp -f ${FILESDIR}/qq.sh ${D}/opt/longene/qq/qq.sh
+	    rm -rf ${D}/opt/longene/qq/wine
 	fi
 }
 
