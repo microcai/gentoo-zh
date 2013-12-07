@@ -3,13 +3,12 @@
 # Author stlifey <stlifey@gmail.com>
 # $Header: $
 #
-# e-sources.eclass - Eclass for building sys-kernel/e-sources-* packages , provide patchests including :
+# e-sources.eclass - Eclass for building sys-kernel/e-sources-* packages , provide patches including :
 #
 #	aufs - Add advanced multi layered unification filesystem support.
 #	cjktty - Add CJK font support for tty.
 #	ck - Apply Con Kolivas' high performance patchset.
 #	gentoo - Apply Gentoo linux kernel patches called genpatches.
-#	imq - Add intermediate queueing device support.
 #	optimization - more optimized gcc options for additional CPUs.
 #	reiser4 - Add Reiser4 filesystem support.
 #	tuxonice - Add TuxOnIce support - another linux hibernate kernel patches.
@@ -70,7 +69,7 @@ USE_ENABLE() {
 				"
 				AUFS_PATCHES="
 					${WORKDIR}/aufs3-base.patch
-					${WORKDIR}/aufs3-proc_map.patch
+					${WORKDIR}/aufs3-mmap.patch
 					${WORKDIR}/aufs3-kbuild.patch
 					${WORKDIR}/aufs3-standalone.patch
 				"
@@ -103,21 +102,6 @@ USE_ENABLE() {
 						ck?	( ${ck_src} )
 					"
 					CK_PATCHES="${DISTDIR}/${ck_patch}:1"
-				fi
-			;;
-
-		imq)		imq_url="http://www.linuximq.net"
-				imq_patch="patch-imqmq-${imq_kernel_version/.0/}.diff.xz"
-				imq_src="${imq_url}/patches/${imq_patch}"
-				HOMEPAGE="${HOMEPAGE} ${imq_url}"
-				if [ "${OVERRIDE_IMQ_PATCHES}" = 1 ]; then
-					IMQ_PATCHES="${FILESDIR}/${PV}/${imq_patch}:1"
-				else
-					SRC_URI="
-						${SRC_URI}
-						imq?  ( ${imq_src} )
-					"
-					IMQ_PATCHES="${DISTDIR}/${imq_patch}:1"
 				fi
 			;;
 
@@ -208,7 +192,6 @@ PATCH_APPEND() {
 		aufs)		use aufs && UNIPATCH_LIST="${UNIPATCH_LIST} ${AUFS_PATCHES}" ;;
 		cjktty)		use cjktty && UNIPATCH_LIST="${UNIPATCH_LIST} ${CJKTTY_PATCHES}" ;;
 		ck)		use ck && UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_PATCHES}" ;;
-		imq)		use imq && UNIPATCH_LIST="${UNIPATCH_LIST} ${IMQ_PATCHES}" ;; 
 		optimization)	use optimization && UNIPATCH_LIST="${UNIPATCH_LIST} ${OPTIMIZATION_PATCHES}" ;;
 		reiser4)	use reiser4 && UNIPATCH_LIST="${UNIPATCH_LIST} ${REISER4_PATCHES}" ;;
 		tuxonice)	use tuxonice && UNIPATCH_LIST="${UNIPATCH_LIST} ${TUXONICE_PATCHES}" ;;
@@ -233,21 +216,22 @@ SRC_URI="
 UNIPATCH_STRICTORDER="yes"
 
 src_unpack() {
-	features aufs && use aufs && unpack ${aufs_tarball}
+	enable aufs && unpack ${aufs_tarball}
 	kernel-2_src_unpack
 
 	if enable additional; then
-		EPATCH_SOURCE="${FILESDIR}/${PV}" EPATCH_SUFFIX="patch" \
-        	EPATCH_FORCE="yes" epatch
+		EPATCH_SOURCE="${FILESDIR}/${PV}" EPATCH_FORCE="yes"  \
+		EPATCH_SUFFIX="diff" epatch
+		EPATCH_SOURCE="${FILESDIR}/${PV}" EPATCH_FORCE="yes"  \
+		EPATCH_SUFFIX="patch" epatch
 	fi
 }
 
 src_prepare() {
 	enable ck && sed -i -e 's/\(^EXTRAVERSION :=.*$\)/# \1/' "Makefile"
 
-	features aufs && if use aufs; then
-		cp -i "${WORKDIR}"/include/linux/aufs_type.h include/linux/aufs_type.h || die
-		cp -i "${WORKDIR}"/include/uapi/linux/aufs_type.h include/uapi/linux/aufs_type.h || die
-		cp -ri "${WORKDIR}"/{Documentation,fs} . || die
+	if enable aufs; then
+		cp -f "${WORKDIR}"/include/uapi/linux/aufs_type.h include/uapi/linux/aufs_type.h || die
+		cp -rf "${WORKDIR}"/{Documentation,fs} . || die
 	fi
 }

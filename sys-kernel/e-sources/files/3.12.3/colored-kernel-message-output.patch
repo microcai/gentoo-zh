@@ -36,10 +36,10 @@ index dc34a5b..020118b 100644
  
  /* Follow the VC cursor*/
 diff --git a/drivers/net/netconsole.c b/drivers/net/netconsole.c
-index 4822aaf..fb8fb38 100644
+index adeee61..86f6dcf 100644
 --- a/drivers/net/netconsole.c
 +++ b/drivers/net/netconsole.c
-@@ -719,7 +719,8 @@ static int netconsole_netdev_event(struct notifier_block *this,
+@@ -727,7 +727,8 @@ static int netconsole_netdev_event(struct notifier_block *this,
  	.notifier_call  = netconsole_netdev_event,
  };
  
@@ -166,7 +166,7 @@ index 978db34..63e7160 100644
  	bool
  	depends on VT && !UML
 diff --git a/drivers/tty/serial/8250/8250_core.c b/drivers/tty/serial/8250/8250_core.c
-index 86c00b1c..3480291 100644
+index 570df9d..a62aa35 100644
 --- a/drivers/tty/serial/8250/8250_core.c
 +++ b/drivers/tty/serial/8250/8250_core.c
 @@ -2850,7 +2850,8 @@ static void serial8250_console_putchar(struct uart_port *port, int ch)
@@ -180,7 +180,7 @@ index 86c00b1c..3480291 100644
  	struct uart_8250_port *up = &serial8250_ports[co->index];
  	struct uart_port *port = &up->port;
 diff --git a/drivers/tty/serial/8250/8250_early.c b/drivers/tty/serial/8250/8250_early.c
-index 946ddd2..9b0700c 100644
+index c100d63..bb28b49 100644
 --- a/drivers/tty/serial/8250/8250_early.c
 +++ b/drivers/tty/serial/8250/8250_early.c
 @@ -98,7 +98,7 @@ static void __init serial_putc(struct uart_port *port, int c)
@@ -193,7 +193,7 @@ index 946ddd2..9b0700c 100644
  	struct uart_port *port = &early_device.port;
  	unsigned int ier;
 diff --git a/drivers/tty/vt/vt.c b/drivers/tty/vt/vt.c
-index c677829..393859c 100644
+index 9a8e8c5..6f30c9b 100644
 --- a/drivers/tty/vt/vt.c
 +++ b/drivers/tty/vt/vt.c
 @@ -71,6 +71,7 @@
@@ -310,7 +310,7 @@ index 7571a16..af01c35 100644
  	struct tty_driver *(*device)(struct console *, int *);
  	void	(*unblank)(void);
 diff --git a/kernel/printk/printk.c b/kernel/printk/printk.c
-index 5b5a708..7a19b9a 100644
+index b4e8500..1bbe017 100644
 --- a/kernel/printk/printk.c
 +++ b/kernel/printk/printk.c
 @@ -1282,7 +1282,7 @@ static void call_console_drivers(int level, const char *text, size_t len)
