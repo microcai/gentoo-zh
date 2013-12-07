@@ -13,7 +13,7 @@ SRC_URI="http://www.longene.org/download/WineQQ2013-${PV}-Longene.deb"
 LICENSE="Tencent"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="system-wine zd423"
+IUSE="system-wine"
 
 RDEPEND="amd64? (
 		app-emulation/emul-linux-x86-gtklibs
