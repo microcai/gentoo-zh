@@ -13,8 +13,8 @@ RESTRICT="primaryuri"
 
 DICT_VERSION="${PV}"
 LM_VERSION="20121025"
-SRC_URI="http://open-gram.googlecode.com/files/dict.utf8-${DICT_VERSION}.tar.bz2
-	http://open-gram.googlecode.com/files/lm_sc.t3g.arpa-${LM_VERSION}.tar.bz2"
+SRC_URI="https://open-gram.googlecode.com/files/dict.utf8-${DICT_VERSION}.tar.bz2
+	https://open-gram.googlecode.com/files/lm_sc.t3g.arpa-${LM_VERSION}.tar.bz2"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
