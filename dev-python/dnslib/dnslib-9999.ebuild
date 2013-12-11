@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/json-tools/json-tools-0.3.2.ebuild,v 1.1 2013/10/10 22:23:34 radhermit Exp $
+# $Header: $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
