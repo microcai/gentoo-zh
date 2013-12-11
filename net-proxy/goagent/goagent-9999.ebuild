@@ -25,12 +25,14 @@ SRC_URI="${GOAGENT_SRC_URI}"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="+gtk"
+IUSE="crypto dns +gtk"
 
-RDEPEND="dev-lang/python:2.7[ssl]
+RDEPEND="crypto? ( dev-python/pycrypto )
+	dev-lang/python:2.7[ssl]
 	dev-libs/nss[utils]
-	dev-python/gevent
 	dev-python/pyopenssl
+	dns? ( >=dev-python/gevent-1.0
+		dev-python/dnslib )
 	gtk? ( x11-libs/vte:0[python] )"
 
 src_unpack() {
