@@ -8,7 +8,7 @@ inherit autotools eutils
 DESCRIPTION="Library to deal with Pinyin."
 HOMEPAGE="https://github.com/libpinyin/libpinyin"
 SRC_URI="https://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz
-	     http://downloads.sourceforge.net/${PN}/model6.text.tar.gz"
+	     http://downloads.sourceforge.net/${PN}/model7.text.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,8 +22,8 @@ DEPEND=">=sys-libs/db-4
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	ln -s "${DISTDIR}/model6.text.tar.gz" "${S}/data" || die "link file error"
-	sed -i '/wget.*model6\.text\.tar\.gz/ d' "${S}/data/Makefile.am"
+	ln -s "${DISTDIR}/model7.text.tar.gz" "${S}/data" || die "link file error"
+	sed -i '/wget.*model7\.text\.tar\.gz/ d' "${S}/data/Makefile.am"
 	epatch_user
 	eautoreconf
 }
