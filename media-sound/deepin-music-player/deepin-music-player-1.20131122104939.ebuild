@@ -5,7 +5,7 @@
 EAPI="4"
 
 inherit fdo-mime versionator eutils gnome2-utils
-MY_VER="$(get_version_component_range 1)+git$(get_version_component_range 2)~7efe2488a6"
+MY_VER="$(get_version_component_range 1)+git$(get_version_component_range 2)~00f61cb069"
 SRC_URI="http://packages.linuxdeepin.com/deepin/pool/main/d/${PN}/${PN}_${MY_VER}.tar.gz"
 
 DESCRIPTION="Deepin Music Player."
