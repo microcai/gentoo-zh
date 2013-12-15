@@ -7,7 +7,7 @@ PYTHON_DEPEND=2:2.7
 
 inherit python versionator
 
-MY_VER="$(get_version_component_range 1)+git$(get_version_component_range 2)~90b6485f6c"
+MY_VER="$(get_version_component_range 1)+git$(get_version_component_range 2)~e369b783df"
 SRC_URI="http://packages.linuxdeepin.com/deepin/pool/main/d/${PN}/${PN}_${MY_VER}.tar.gz"
 
 DESCRIPTION="UI toolkit for Linux Deepin."
