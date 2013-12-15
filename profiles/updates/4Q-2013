@@ -1,0 +1,2 @@
+move dev-android/adb dev-util/android-tools
+move dev-android/fastboot dev-util/android-tools
