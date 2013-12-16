@@ -7,9 +7,9 @@ EAPI="4"
 DESCRIPTION="Maxthon for Linux"
 HOMEPAGE="http://www.maxthon.cn"
 SRC_URI="amd64? ( http://dl.maxthon.cn/mx_linux/package/maxthon_${PV}_amd64_cn.deb )
-	x86? ( http://dl.maxthon.cn/mx_linux/package/maxthon_${PV}_i386.deb )"
+	x86? ( http://dl.maxthon.cn/mx_linux/package/maxthon_${PV}_i386_cn.deb )"
 
-
+inherit multilib
 LICENSE="Maxthon"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -50,34 +50,16 @@ S=${WORKDIR}
 
 src_install() {
 	tar xzvf data.tar.gz -C ${D}/
-	chmod 755 ${D}/opt
-	chmod 755 ${D}/usr
-	chmod 4755 /opt/maxthon/maxthon_sandbox
-
-	if use amd64 ; then
-
-	  if [ -f "/lib64/libudev.so.0" ]; then
-	    ln -snf "/lib64/libudev.so.0" "/opt/maxthon/libudev.so.0"
-	    elif[ -f "/lib64/libudev.so.1" ]; then
-	      ln -snf "/lib64/libudev.so.1" "/opt/maxthon/libudev.so.0"
-	    fi
-
-	 elif use x86; then
-	   if [ -f "/lib/libudev.so.0" ]; then
-	   ln -snf "/lib/libudev.so.0" "/opt/maxthon/libudev.so.0"
-	   elif [ -f "/lib/libudev.so.1" ]; then
-	     ln -snf "/lib/libudev.so.1" "/opt/maxthon/libudev.so.0"
-	   fi
-
-	 fi
-
-	 chmod 755 /opt/maxthon/libudev.so.0
-
+	chmod 755 "${D}/opt"
+	chmod 755 "${D}/usr"
+	rm "${D}/opt/${PN}/Contents/Contents"
+	chmod u+s "${D}/opt/${PN}/maxthon_sandbox"
+	dosym "/usr/$(get_libdir)/libudev.so"  "/opt/${PN}/libudev.so.0"
 }
-pkg_postinst() {	
+pkg_postinst() {
 	elog
 	elog "A browser that combines a minimal design with sophisticated technology to make the web faster, safer, and easier."
-	elog "注意：本版测试版本需要验证激活才能测试，你可以加傲游Linux版体验群：304417046，加群时请注明：傲游Linux版。"
+	elog "注意：本版测试版需验证激活才能测试,你可以加傲游Linux版体验群:304417046,加群时请注明:傲游Linux版。"
 	elog "获取激活码请加群找群主索取。"
 	elog
 }
