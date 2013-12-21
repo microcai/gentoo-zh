@@ -36,6 +36,7 @@ src_install() {
 
 	chmod 755 ${D}/opt
 	chmod 755 ${D}/usr
+	chown -R root:root ${D}
 	cp ${D}/opt/longene/qq/qq-test.desktop ${D}/usr/share/applications/
 	if use system-wine ; then
 	    cp -f ${FILESDIR}/qq.sh ${D}/opt/longene/qq/qq.sh
