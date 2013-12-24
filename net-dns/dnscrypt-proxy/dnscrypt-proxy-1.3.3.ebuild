@@ -7,7 +7,7 @@ EAPI=5
 inherit eutils flag-o-matic systemd
 
 DESCRIPTION="A tool for securing communications between a client and a DNS resolver"
-HOMEPAGE="http://www.opendns.com/technology/dnscrypt/"
+HOMEPAGE="http://dnscrypt.org/"
 SRC_URI="http://download.dnscrypt.org/${PN}/${P}.tar.gz"
 RESTRICT="mirror"
 
@@ -18,26 +18,25 @@ IUSE=""
 RDEPEND="dev-libs/libsodium"
 
 pkg_setup() {
-enewgroup dnscrypt
-enewuser dnscrypt -1 -1 /var/empty dnscrypt
+	enewgroup dnscrypt
+	enewuser dnscrypt -1 -1 /var/empty dnscrypt
 }
 
 src_configure() {
-if [[ ! -e configure ]] ; then
-./autogen.sh || die "autogen failed"
-fi
-append-ldflags -Wl,-z,noexecstack
-econf --enable-nonblocking-random
+	if [[ ! -e configure ]] ; then
+		./autogen.sh || die "autogen failed"
+	fi
+	append-ldflags -Wl,-z,noexecstack
+	econf --enable-nonblocking-random
 }
 
 src_install() {
-default
-#emake DESTDIR="${D}" install || die "emake install failed"
+	default
 
-newinitd "${FILESDIR}/${PN}.initd" ${PN}
-newconfd "${FILESDIR}/${PN}.confd" ${PN}
+	newinitd "${FILESDIR}/${PN}.initd" ${PN}
+	newconfd "${FILESDIR}/${PN}.confd" ${PN}
 
-systemd_dounit "${FILESDIR}"/${PN}.service
+	systemd_dounit "${FILESDIR}"/${PN}.service
 
-dodoc {AUTHORS,COPYING,INSTALL,NEWS,README,README.markdown,TECHNOTES,THANKS}
+	dodoc {AUTHORS,COPYING,INSTALL,NEWS,README,README.markdown,TECHNOTES,THANKS}
 }
