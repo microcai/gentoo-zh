@@ -106,7 +106,8 @@ USE_ENABLE() {
 			;;
 
 		optimization)	optimization_url="https://raw.github.com/graysky2/kernel_gcc_patch"
-				optimization_patch="kernel-${KMV/./}-gcc48-${optimization_version}.patch"
+				# HACK: Patches are included in a single file now
+				optimization_patch="enable_additional_cpu_optimizations_for_gcc.patch"  
 				optimization_src="${optimization_url}/master/${optimization_patch}"
 				HOMEPAGE="${HOMEPAGE} ${optimization_url}"
 				if [ "${OVERRIDE_OPTIMIZATION_PATCHES}" = 1 ]; then
