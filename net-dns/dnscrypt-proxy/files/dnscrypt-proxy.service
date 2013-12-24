@@ -10,6 +10,9 @@ ExecStart=/usr/sbin/dnscrypt-proxy --daemonize \
 	--pidfile=/var/run/dnscrypt-proxy.pid \
 	--logfile=/var/log/dnscrypt-proxy.log \
 	--local-address=${DNSCRYPT_LOCALIP}:${DNSCRYPT_LOCALPORT} \
+	--resolver-address=${DNSCRYPT_RESOLVERIP}:${DNSCRYPT_RESOLVERPORT} \
+	--provider-name=${DNSCRYPT_PROVIDER_NAME} \
+	--provider-key=${DNSCRYPT_PROVIDER_KEY} \
 	--user=${DNSCRYPT_USER}
 Restart=on-abort
 
