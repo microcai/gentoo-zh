@@ -1,3 +1,8 @@
+# Casper Ti. Vector <CasperVector@gmail.com> (15 Dec 2013)
+# Candidate list disruption seemingly because of problem within
+# sunpinyin internals, masked for now.
+=app-i18n/sunpinyin-data-20131214
+
 # Hong Hao <oahong@gmail.com> (28 Dec 2010)
 # mask live ebuild
 ~app-i18n/fcitx-9999

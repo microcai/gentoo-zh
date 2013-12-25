@@ -1,0 +1,5 @@
+# egencache autostuff, shamelessly copied from the gentoo-haskell overlay ;)
+metadata/cache/
+metadata/md5-cache/
+profiles/use.local.desc
+
