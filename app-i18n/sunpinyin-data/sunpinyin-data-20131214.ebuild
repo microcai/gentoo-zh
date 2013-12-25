@@ -3,6 +3,8 @@
 # $Header: $
 
 EAPI=5
+inherit toolchain-funcs
+
 DESCRIPTION="SunPinyin is a SLM (Statistical Language Model) based IME"
 HOMEPAGE="http://sunpinyin.org/"
 
@@ -30,17 +32,11 @@ src_unpack() {
 }
 
 src_configure() {
-	if use alpha || use amd64 || use amd64-fbsd || use arm ||
-		use hurd-i386 || use ia64 || use sh || use x86 || use x86-fbsd
-	then
-		endianness="le"
-	elif use hppa || use m68k || use mips || use ppc ||
-		use ppc64 || use s390 || use sparc || use sparc-fbsd
-	then
-		endianness="be"
-	else
-		die "cannot determine endianness of the platform"
-	fi
+	case "$(tc-endian)" in
+		'little') endianness='le';;
+		'big') endianness='be';;
+		*) die 'cannot determine endianness of the platform';;
+	esac
 }
 
 src_compile() {
