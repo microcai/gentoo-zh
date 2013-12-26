@@ -30,6 +30,9 @@ RESTRICT="primaryuri"
 
 QA_PRESTRIPPED="/opt/flashget/flashget"
 
+pkg_nofetch() {
+	eerror "如果下载地址失效,请尝试在 http://pan.baidu.com/s/1sjnRDLj 下载."
+}
 src_prepare() {
 	# fixed lib name mismatch
 	sed -b -i -e 's|libexpat\.so\.0|libexpat\.so\.1|g' ${PN}
