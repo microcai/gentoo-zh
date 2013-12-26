@@ -9,8 +9,8 @@ HOMEPAGE="http://www.maxthon.cn"
 SRC_URI="amd64? ( http://dl.maxthon.cn/mx_linux/package/maxthon_${PV}_amd64_cn.deb )
 	x86? ( http://dl.maxthon.cn/mx_linux/package/maxthon_${PV}_i386_cn.deb )"
 
-inherit multilib
-LICENSE="Maxthon"
+inherit multilib eutils  unpacker  gnome2-utils  fdo-mime 
+LICENSE="Maxthon"  
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
@@ -49,17 +49,22 @@ DEPEND=""
 S=${WORKDIR}
 
 src_install() {
-	tar xzvf data.tar.gz -C ${D}/
-	chmod 755 "${D}/opt"
-	chmod 755 "${D}/usr"
-	rm "${D}/opt/${PN}/Contents/Contents"
-	chmod u+s "${D}/opt/${PN}/maxthon_sandbox"
-	dosym "/usr/$(get_libdir)/libudev.so"  "/opt/${PN}/libudev.so.0"
+	MAXTHON_HOME="opt/maxthon"
+	mv opt usr "${D}" || die
+	cd "${D}" || die
+	rm "${MAXTHON_HOME}/Default/zh"
+	chmod u+s "${MAXTHON_HOME}/maxthon_sandbox"
+
+	domenu "${MAXTHON_HOME}"/${PN}-browser.desktop
+	local size
+	for size in 22 24 32 48 64 128 256 ; do
+		newicon -s ${size} "${MAXTHON_HOME}/product_logo_${size}.png" ${PN}-browser.png
+	done
+
+	dosym "/usr/$(get_libdir)/libudev.so"  "${MAXTHON_HOME}/libudev.so.0"	
 }
 pkg_postinst() {
-	elog
-	elog "A browser that combines a minimal design with sophisticated technology to make the web faster, safer, and easier."
-	elog "注意：本版测试版需验证激活才能测试,你可以加傲游Linux版体验群:304417046,加群时请注明:傲游Linux版。"
-	elog "获取激活码请加群找群主索取。"
-	elog
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+	elog "如果flash显示不正常 请尝试修改启动命令 maxthon --ppapi-flash-path=/opt/google/chrome/PepperFlash/libpepflashplayer.so"
 }
