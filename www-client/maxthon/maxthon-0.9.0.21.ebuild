@@ -55,7 +55,7 @@ src_install() {
 	rm "${MAXTHON_HOME}/Default/zh"
 	chmod u+s "${MAXTHON_HOME}/maxthon_sandbox"
 
-	domenu "${MAXTHON_HOME}"/${PN}-browser.desktop
+	domenu "${MAXTHON_HOME}"/${PN}.desktop
 	local size
 	for size in 22 24 32 48 64 128 256 ; do
 		newicon -s ${size} "${MAXTHON_HOME}/product_logo_${size}.png" ${PN}-browser.png
