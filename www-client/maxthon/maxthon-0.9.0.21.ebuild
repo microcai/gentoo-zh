@@ -6,9 +6,22 @@ EAPI="4"
 
 DESCRIPTION="Maxthon for Linux"
 HOMEPAGE="http://www.maxthon.cn"
-SRC_URI="amd64? ( http://dl.maxthon.cn/mx_linux/package/maxthon_${PV}_amd64_cn.deb )
-	x86? ( http://dl.maxthon.cn/mx_linux/package/maxthon_${PV}_i386_cn.deb )"
 
+# Bundle a copy of libgcrypt, bug 494596
+LIBGCRYPT="libgcrypt.so.11.8.2"
+
+	  
+SRC_URI="
+	amd64? (
+		http://dl.maxthon.cn/mx_linux/package/maxthon_${PV}_amd64_cn.deb
+		http://dev.gentoo.org/~floppym/dist/${LIBGCRYPT}-amd64.xz
+	)
+	x86? (
+		http://dl.maxthon.cn/mx_linux/package/maxthon_${PV}_i386_cn.deb
+		http://dev.gentoo.org/~floppym/dist/${LIBGCRYPT}-x86.xz
+	)
+"		  
+	
 inherit multilib eutils  unpacker  gnome2-utils  fdo-mime 
 LICENSE="Maxthon"  
 SLOT="0"
@@ -16,19 +29,22 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	sys-fs/e2fsprogs
-	dev-libs/atk
 	app-arch/bzip2
-	x11-libs/cairo
+	app-misc/ca-certificates
+	dev-libs/atk
+	dev-libs/expat
+	dev-libs/glib:2
+	dev-libs/libgcrypt
+	dev-libs/nspr
+	dev-libs/nss
+	gnome-base/gconf:2
+	media-libs/alsa-lib
+	media-libs/fontconfig
+	media-libs/freetype
+	net-print/cups
 	sys-apps/dbus
-	dev-libs/dbus-glib
-	gnome-base/gconf
-	sys-libs/glibc
-	dev-libs/gmp
-	net-libs/gnutls
-	media-gfx/graphite2
-	media-libs/harfbuzz
-	dev-libs/libffi
+	sys-libs/libcap
+	>=sys-devel/gcc-4.4.0[cxx]
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
 	x11-libs/gtk+:2
@@ -46,6 +62,7 @@ RDEPEND="
 	x11-misc/xdg-utils"
 DEPEND=""
 
+
 S=${WORKDIR}
 
 src_install() {
@@ -62,9 +79,11 @@ src_install() {
 	done
 
 	dosym "/usr/$(get_libdir)/libudev.so"  "${MAXTHON_HOME}/libudev.so.0"	
+	
+	insinto "${MAXTHON_HOME}"
+	newins "${WORKDIR}/${LIBGCRYPT}-$(usev amd64)$(usev x86)" libgcrypt.so.11
 }
 pkg_postinst() {
 	fdo-mime_desktop_database_update
 	gnome2_icon_cache_update
-	elog "如果flash显示不正常 请尝试修改启动命令 maxthon --ppapi-flash-path=/opt/google/chrome/PepperFlash/libpepflashplayer.so"
 }
