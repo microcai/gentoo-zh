@@ -17,7 +17,7 @@ reiser4_kernel_version="3.12.0"
 tuxonice_kernel_version="3.12.4"
 uksm_kernel_version="3.12.0"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~mips"
 
 SUPPORTED_USE="+ck +additional +aufs +cjktty +experimental +gentoo +optimization +reiser4 +tuxonice +uksm"
 UNSUPPORTED_USE=""
