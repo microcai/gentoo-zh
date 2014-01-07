@@ -71,17 +71,19 @@ src_install() {
 	cd "${D}" || die
 	rm "${MAXTHON_HOME}/Default/zh"
 	chmod u+s "${MAXTHON_HOME}/maxthon_sandbox"
-
-	domenu "${MAXTHON_HOME}"/${PN}.desktop
+	
 	local size
 	for size in 22 24 32 48 64 128 256 ; do
 		newicon -s ${size} "${MAXTHON_HOME}/product_logo_${size}.png" ${PN}-browser.png
 	done
 
 	dosym "/usr/$(get_libdir)/libudev.so"  "${MAXTHON_HOME}/libudev.so.0"	
+	domenu "${MAXTHON_HOME}"/${PN}.desktop
 	
 	insinto "${MAXTHON_HOME}"
 	newins "${WORKDIR}/${LIBGCRYPT}-$(usev amd64)$(usev x86)" libgcrypt.so.11
+		
+
 }
 pkg_postinst() {
 	fdo-mime_desktop_database_update
