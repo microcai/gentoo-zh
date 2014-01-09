@@ -8,20 +8,17 @@ inherit eutils
 
 DESCRIPTION="Tencent QQ for Linux by longine"
 HOMEPAGE="http://www.longene.org/"
-SRC_URI="http://www.longene.org/download/WineQQ2013-${PV}-Longene.deb"
+SRC_URI="http://www.longene.org/download/WineQQ2013SP6-${PV}-Longene.deb"
 
 LICENSE="Tencent"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="system-wine"
+IUSE=""
 
 RDEPEND="amd64? (
 		app-emulation/emul-linux-x86-gtklibs
         )
 
-	system-wine? (
-		>=app-emulation/wine-1.6_rc3[abi_x86_32,-abi_x86_x32,-abi_x86_64,fontconfig,mp3,truetype,X,nls,xml] 
-	)
 	!amd64? ( x11-libs/gtk+:2 )
 "
 
@@ -38,10 +35,7 @@ src_install() {
 	chmod 755 ${D}/usr
 	chown -R root:root ${D}
 	cp ${D}/opt/longene/qq/qq-test.desktop ${D}/usr/share/applications/
-	if use system-wine ; then
-	    cp -f ${FILESDIR}/qq.sh ${D}/opt/longene/qq/qq.sh
-	    rm -rf ${D}/opt/longene/qq/wine
-	fi
+
 }
 
 pkg_postinst() {
