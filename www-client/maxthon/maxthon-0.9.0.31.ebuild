@@ -62,6 +62,7 @@ RDEPEND="
 	x11-misc/xdg-utils"
 DEPEND=""
 
+RESTRICT="mirror strip"
 
 S=${WORKDIR}
 
