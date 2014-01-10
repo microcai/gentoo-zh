@@ -50,6 +50,8 @@ DEPEND="${RDEPEND}
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_prepare() {
+	epatch "${FILESDIR}/boinc-7.2.0-fix_subdirs.patch"
+
 	# prevent bad changes in compile flags, bug 286701
 	sed -i -e "s:BOINC_SET_COMPILE_FLAGS::" configure.ac || die "sed failed"
 
