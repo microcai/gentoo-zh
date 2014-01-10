@@ -1,21 +1,23 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-7.0.29.ebuild,v 1.1 2012/07/18 12:56:44 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-7.2.0.ebuild,v 1.1 2013/06/30 14:52:47 jlec Exp $
 
-EAPI=4
+EAPI=5
 
-WANT_AUTOMAKE="1.11"
+#WANT_AUTOMAKE="1.11"
 
-inherit flag-o-matic eutils wxwidgets autotools base user
+AUTOTOOLS_AUTORECONF=true
+
+inherit autotools-utils flag-o-matic eutils wxwidgets user
 
 DESCRIPTION="The Berkeley Open Infrastructure for Network Computing"
 HOMEPAGE="http://boinc.ssl.berkeley.edu/"
-SRC_URI="http://www.gentoo.org.cn/distfiles/${P}.tar.xz"
+SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="X cuda"
+IUSE="X cuda static-libs"
 
 RDEPEND="
 	!sci-misc/boinc-bin
@@ -51,9 +53,7 @@ src_prepare() {
 	# prevent bad changes in compile flags, bug 286701
 	sed -i -e "s:BOINC_SET_COMPILE_FLAGS::" configure.ac || die "sed failed"
 
-	base_src_prepare
-
-	eautoreconf
+	autotools-utils_src_prepare
 }
 
 src_configure() {
@@ -71,21 +71,22 @@ src_configure() {
 		wxconf+=" --without-wxdir"
 	fi
 
-	econf \
-		--disable-server \
-		--enable-client \
-		--enable-dynamic-client-linkage \
-		--disable-static \
-		--enable-unicode \
-		--with-ssl \
-		$(use_with X x) \
-		$(use_enable X manager) \
+	local myeconfargs=(
+		--disable-server
+		--enable-client
+		--enable-dynamic-client-linkage
+		--disable-static
+		--enable-unicode
+		--with-ssl
+		$(use_with X x)
+		$(use_enable X manager)
 		${wxconf}
+	)
+	autotools-utils_src_configure
 }
 
 src_install() {
-	default
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	autotools-utils_src_install
 
 	dodir /var/lib/${PN}/
 	keepdir /var/lib/${PN}/
@@ -96,7 +97,7 @@ src_install() {
 	fi
 
 	# cleanup cruft
-	rm -rf "${D}"/etc/
+	rm -rf "${ED}"/etc/
 
 	newinitd "${FILESDIR}"/${PN}.init ${PN}
 	newconfd "${FILESDIR}"/${PN}.conf ${PN}
