@@ -19,8 +19,8 @@ uksm_kernel_version="3.12.0"
 
 KEYWORDS="~amd64 ~x86 ~mips"
 
-SUPPORTED_USE="+ck +additional +aufs +cjktty +experimental +gentoo +optimization +reiser4 +tuxonice +uksm"
-UNSUPPORTED_USE=""
+SUPPORTED_USE="+ck +additional +cjktty +experimental +gentoo +optimization +reiser4 +tuxonice +uksm"
+UNSUPPORTED_USE="+aufs"
 
 UNIPATCH_EXCLUDE=""
 
