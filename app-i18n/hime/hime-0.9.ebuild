@@ -7,7 +7,7 @@ inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="HIME Input Method Editor"
 HOMEPAGE="http://hime.luna.com.tw/"
-SRC_URI="https://github.com/downloads/caleb-/hime/${P/_/.}.tar.xz
+SRC_URI="https://github.com/downloads/hime-ime/hime/${P/_/.}.tar.xz
 	chinese-sound? ( http://www.csie.nctu.edu.tw/~cp76/hime/download/ogg.tgz )"
 
 LICENSE="LGPL-2.1"
