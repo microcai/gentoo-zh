@@ -34,5 +34,5 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	sed -e 's/Categories=KDE;QT;Utility;/Categories=KDE;Qt;Utility;/' \
-		-i share/applications/wiznote.desktop || die
+		-i build/common/wiznote.desktop || die
 }
