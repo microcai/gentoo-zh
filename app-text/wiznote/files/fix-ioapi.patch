@@ -1,0 +1,16 @@
+diff --git a/lib/quazip/ioapi.h b/lib/quazip/ioapi.h
+index f4c2180..700df79 100644
+--- a/lib/quazip/ioapi.h
++++ b/lib/quazip/ioapi.h
+@@ -11,6 +11,11 @@
+ #ifndef _ZLIBIOAPI_H
+ #define _ZLIBIOAPI_H
+ 
++#ifdef _Z_OF
++#undef OF
++#define OF _Z_OF
++#endif
++
+ 
+ #define ZLIB_FILEFUNC_SEEK_CUR (1)
+ #define ZLIB_FILEFUNC_SEEK_END (2)

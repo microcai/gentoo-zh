@@ -33,6 +33,5 @@ RDEPEND="dev-qt/qtcore:4
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	sed -e 's/Categories=KDE;QT;Utility;/Categories=KDE;Qt;Utility;/' \
-		-i share/applications/wiznote.desktop || die
+	epatch "${FILESDIR}/fix-ioapi.patch"
 }
