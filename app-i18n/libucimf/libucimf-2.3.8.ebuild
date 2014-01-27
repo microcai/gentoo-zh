@@ -17,10 +17,10 @@ IUSE="doc debug sunpinyin chewing openvanilla"
 
 DEPEND="media-libs/freetype:2 media-libs/fontconfig"
 RDEPEND="${DEPEND}
-	sunpinyin? ( app-i18n/ucimf-sunpinyin )
-	chewing? ( app-i18n/ucimf-chewing )
-	openvanilla? ( app-i18n/ucimf-openvanilla )
 	dev-util/dialog"
+PDEPEND="sunpinyin? ( app-i18n/ucimf-sunpinyin )
+	chewing? ( app-i18n/ucimf-chewing )
+	openvanilla? ( app-i18n/ucimf-openvanilla )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-unistd.patch
