@@ -22,6 +22,10 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	virtual/pkgconfig
 	sys-devel/gettext"
+PDEPEND="
+	app-i18n/sunpinyin-frontend
+	app-i18n/sunpinyin-data
+"
 
 src_configure() {
 	myesconsargs=( --prefix=/usr )
