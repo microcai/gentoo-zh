@@ -13,11 +13,11 @@ LIBGCRYPT="libgcrypt.so.11.8.2"
 	  
 SRC_URI="
 	amd64? (
-		http://dl.maxthon.cn/mx_linux/package/maxthon_${PV}_amd64_cn.deb
+		http://dl.maxthon.com/linux/deb/packages/amd64/maxthon-browser-beta_${PV}_amd64.deb
 		http://dev.gentoo.org/~floppym/dist/${LIBGCRYPT}-amd64.xz
 	)
 	x86? (
-		http://dl.maxthon.cn/mx_linux/package/maxthon_${PV}_i386_cn.deb
+		http://dl.maxthon.com/linux/deb/packages/i386/maxthon-browser-beta_${PV}_i386.deb
 		http://dev.gentoo.org/~floppym/dist/${LIBGCRYPT}-x86.xz
 	)
 "		  
