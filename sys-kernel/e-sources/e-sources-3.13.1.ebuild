@@ -14,13 +14,13 @@ uksm_version="0.1.2.2"
 #aufs_kernel_version="3.12_p20140114"
 cjktty_kernel_version="3.11.0"
 #reiser4_kernel_version="3.12.0"
-tuxonice_kernel_version="head-3.13.0-rc8"
+#tuxonice_kernel_version="head-3.13.0-rc8"
 uksm_kernel_version="3.13.0"
 
 KEYWORDS="~amd64 ~x86 ~mips"
 
-SUPPORTED_USE="+additional +cjktty +experimental +gentoo +optimization +tuxonice +uksm"
-UNSUPPORTED_USE="+aufs +ck +reiser4"
+SUPPORTED_USE="+additional +cjktty +experimental +gentoo +optimization +uksm"
+UNSUPPORTED_USE="+aufs +ck +reiser4 +tuxonice"
 
 UNIPATCH_EXCLUDE=""
 
