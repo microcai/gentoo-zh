@@ -1,8 +1,8 @@
 diff --git a/arch/x86/kernel/early_printk.c b/arch/x86/kernel/early_printk.c
-index d15f575..1cb8d08 100644
+index 01d1c18..2a02d82 100644
 --- a/arch/x86/kernel/early_printk.c
 +++ b/arch/x86/kernel/early_printk.c
-@@ -24,7 +24,8 @@
+@@ -26,7 +26,8 @@
  static int max_ypos = 25, max_xpos = 80;
  static int current_ypos = 25, current_xpos;
  
@@ -12,7 +12,7 @@ index d15f575..1cb8d08 100644
  {
  	char c;
  	int  i, k, j;
-@@ -102,7 +103,8 @@ static int early_serial_putc(unsigned char ch)
+@@ -104,7 +105,8 @@ static int early_serial_putc(unsigned char ch)
  	return timeout ? 0 : -1;
  }
  
@@ -36,10 +36,10 @@ index dc34a5b..020118b 100644
  
  /* Follow the VC cursor*/
 diff --git a/drivers/net/netconsole.c b/drivers/net/netconsole.c
-index adeee61..86f6dcf 100644
+index ba2f5e7..b649820 100644
 --- a/drivers/net/netconsole.c
 +++ b/drivers/net/netconsole.c
-@@ -727,7 +727,8 @@ static int netconsole_netdev_event(struct notifier_block *this,
+@@ -728,7 +728,8 @@ static int netconsole_netdev_event(struct notifier_block *this,
  	.notifier_call  = netconsole_netdev_event,
  };
  
@@ -166,7 +166,7 @@ index 978db34..63e7160 100644
  	bool
  	depends on VT && !UML
 diff --git a/drivers/tty/serial/8250/8250_core.c b/drivers/tty/serial/8250/8250_core.c
-index 570df9d..a62aa35 100644
+index e33d38cb..d73fdfb 100644
 --- a/drivers/tty/serial/8250/8250_core.c
 +++ b/drivers/tty/serial/8250/8250_core.c
 @@ -2850,7 +2850,8 @@ static void serial8250_console_putchar(struct uart_port *port, int ch)
@@ -193,7 +193,7 @@ index c100d63..bb28b49 100644
  	struct uart_port *port = &early_device.port;
  	unsigned int ier;
 diff --git a/drivers/tty/vt/vt.c b/drivers/tty/vt/vt.c
-index 9a8e8c5..6f30c9b 100644
+index 61b1137..f1fa906 100644
 --- a/drivers/tty/vt/vt.c
 +++ b/drivers/tty/vt/vt.c
 @@ -71,6 +71,7 @@
@@ -204,7 +204,7 @@ index 9a8e8c5..6f30c9b 100644
  #include <linux/types.h>
  #include <linux/sched.h>
  #include <linux/tty.h>
-@@ -2421,16 +2422,44 @@ int vt_kmsg_redirect(int new)
+@@ -2430,16 +2431,44 @@ int vt_kmsg_redirect(int new)
  		return kmsg_con;
  }
  
@@ -251,7 +251,7 @@ index 9a8e8c5..6f30c9b 100644
  	static DEFINE_SPINLOCK(printing_lock);
  	const ushort *start;
  	ushort cnt = 0;
-@@ -2466,11 +2495,20 @@ static void vt_console_print(struct console *co, const char *b, unsigned count)
+@@ -2475,11 +2504,20 @@ static void vt_console_print(struct console *co, const char *b, unsigned count)
  
  	start = (ushort *)vc->vc_pos;
  
@@ -272,7 +272,7 @@ index 9a8e8c5..6f30c9b 100644
  			if (cnt > 0) {
  				if (CON_IS_VISIBLE(vc))
  					vc->vc_sw->con_putcs(vc, start, cnt, vc->vc_y, vc->vc_x);
-@@ -2483,6 +2521,7 @@ static void vt_console_print(struct console *co, const char *b, unsigned count)
+@@ -2492,6 +2530,7 @@ static void vt_console_print(struct console *co, const char *b, unsigned count)
  				bs(vc);
  				start = (ushort *)vc->vc_pos;
  				myx = vc->vc_x;
@@ -280,7 +280,7 @@ index 9a8e8c5..6f30c9b 100644
  				continue;
  			}
  			if (c != 13)
-@@ -2490,6 +2529,7 @@ static void vt_console_print(struct console *co, const char *b, unsigned count)
+@@ -2499,6 +2538,7 @@ static void vt_console_print(struct console *co, const char *b, unsigned count)
  			cr(vc);
  			start = (ushort *)vc->vc_pos;
  			myx = vc->vc_x;
@@ -288,7 +288,7 @@ index 9a8e8c5..6f30c9b 100644
  			if (c == 10 || c == 13)
  				continue;
  		}
-@@ -2512,6 +2552,7 @@ static void vt_console_print(struct console *co, const char *b, unsigned count)
+@@ -2521,6 +2561,7 @@ static void vt_console_print(struct console *co, const char *b, unsigned count)
  			vc->vc_need_wrap = 1;
  		}
  	}
@@ -310,7 +310,7 @@ index 7571a16..af01c35 100644
  	struct tty_driver *(*device)(struct console *, int *);
  	void	(*unblank)(void);
 diff --git a/kernel/printk/printk.c b/kernel/printk/printk.c
-index b4e8500..1bbe017 100644
+index be7c86b..8517cbe 100644
 --- a/kernel/printk/printk.c
 +++ b/kernel/printk/printk.c
 @@ -1282,7 +1282,7 @@ static void call_console_drivers(int level, const char *text, size_t len)

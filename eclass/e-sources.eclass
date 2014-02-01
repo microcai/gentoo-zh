@@ -5,14 +5,18 @@
 #
 # e-sources.eclass - Eclass for building sys-kernel/e-sources-* packages , provide patches including :
 #
-#	aufs - Add advanced multi layered unification filesystem support.
-#	cjktty - Add CJK font support for tty.
-#	ck - Apply Con Kolivas' high performance patchset.
-#	gentoo - Apply Gentoo linux kernel patches called genpatches.
-#	optimization - more optimized gcc options for additional CPUs.
-#	reiser4 - Add Reiser4 filesystem support.
-#	tuxonice - Add TuxOnIce support - another linux hibernate kernel patches.
-#	uksm - Add ultra kernel samepage merging support.
+#	additional	- misc kernel patch
+#	aufs		- advanced multi layered unification filesystem
+#	cjktty		- cjk font support for tty
+#	ck		- con kolivas's high performance patchset
+#	exfat		- exfat filesystem support from samsung
+#	gentoo		- gentoo linux kernel patches called genpatches
+#	imq		- intermediate queueing device
+#	optimization	- more optimized gcc options for additional CPUs
+#	reiser4		- reiser4 filesystem support
+#	thinkpad	- a set of lenovo thinkpad patches
+#	tuxonice	- tuxonice support - another linux hibernate system
+#	uksm		- ultra kernel samepage merging support
 #
 
 features() {
@@ -67,17 +71,26 @@ USE_ENABLE() {
 					${SRC_URI}
 					aufs?	( ${aufs_src} )
 				"
-				AUFS_PATCHES="
-					${WORKDIR}/aufs3-base.patch
-					${WORKDIR}/aufs3-mmap.patch
-					${WORKDIR}/aufs3-kbuild.patch
-					${WORKDIR}/aufs3-standalone.patch
-				"
+				if [ "${OVERRIDE_AUFS_PATCHES}" = 1 ]; then
+					AUFS_PATCHES="
+						${FILESDIR}/${PV}/aufs/aufs3-kbuild.patch
+						${FILESDIR}/${PV}/aufs/aufs3-base.patch
+						${FILESDIR}/${PV}/aufs/aufs3-mmap.patch
+						${FILESDIR}/${PV}/aufs/aufs3-standalone.patch
+					"
+				else
+					AUFS_PATCHES="
+						${WORKDIR}/aufs3-kbuild.patch
+						${WORKDIR}/aufs3-base.patch
+						${WORKDIR}/aufs3-mmap.patch
+						${WORKDIR}/aufs3-standalone.patch
+					"
+				fi
 			;;
 
 		cjktty)		cjktty_url="http://sourceforge.net/projects/cjktty"
-				cjktty_patch="cjktty-for-${cjktty_kernel_version}.patch.xz"
-				cjktty_src="${cjktty_url}/files/cjktty-for-linux-3.x/${cjktty_patch}"
+				cjktty_patch="${cjktty_kernel_version/.0/}-utf8.diff"
+				cjktty_src="https://github.com/gentoo-zh/linux-cjktty/compare/${cjktty_patch}"
 				HOMEPAGE="${HOMEPAGE} ${cjktty_url}"
 				if [ "${OVERRIDE_CJKTTY_PATCHES}" = 1 ]; then
 					CJKTTY_PATCHES="${FILESDIR}/${PV}/${cjktty_patch}:1"
@@ -105,21 +118,6 @@ USE_ENABLE() {
 				fi
 			;;
 
-		optimization)	optimization_url="https://raw.github.com/graysky2/kernel_gcc_patch"
-				# HACK: Patches are included in a single file now
-				optimization_patch="enable_additional_cpu_optimizations_for_gcc.patch"  
-				optimization_src="${optimization_url}/master/${optimization_patch}"
-				HOMEPAGE="${HOMEPAGE} ${optimization_url}"
-				if [ "${OVERRIDE_OPTIMIZATION_PATCHES}" = 1 ]; then
-					OPTIMIZATION_PATCHES="${FILESDIR}/${PV}/${optimization_patch}:1"
-				else
-					SRC_URI="
-						${SRC_URI}
-						optimization?		( ${optimization_src} )
-					"
-					OPTIMIZATION_PATCHES="${DISTDIR}/${optimization_patch}:1"
-				fi
-			;;
 
 		reiser4) 	reiser4_url="http://sourceforge.net/projects/reiser4"
 				reiser4_patch="reiser4-for-${reiser4_kernel_version/.0/}.patch.gz"
@@ -193,7 +191,6 @@ PATCH_APPEND() {
 		aufs)		use aufs && UNIPATCH_LIST="${UNIPATCH_LIST} ${AUFS_PATCHES}" ;;
 		cjktty)		use cjktty && UNIPATCH_LIST="${UNIPATCH_LIST} ${CJKTTY_PATCHES}" ;;
 		ck)		use ck && UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_PATCHES}" ;;
-		optimization)	use optimization && UNIPATCH_LIST="${UNIPATCH_LIST} ${OPTIMIZATION_PATCHES}" ;;
 		reiser4)	use reiser4 && UNIPATCH_LIST="${UNIPATCH_LIST} ${REISER4_PATCHES}" ;;
 		tuxonice)	use tuxonice && UNIPATCH_LIST="${UNIPATCH_LIST} ${TUXONICE_PATCHES}" ;;
 		uksm)		use uksm && UNIPATCH_LIST="${UNIPATCH_LIST} ${UKSM_PATCHES}" ;;
@@ -206,7 +203,7 @@ done
 
 features gentoo && REQUIRED_USE=" experimental? ( gentoo ) "
 
-enable cjktty && UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 4200_fbcondecor-0.9.6.patch"
+enable cjktty && UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} *fbcondecor*"
 
 SRC_URI="
 	${SRC_URI}
@@ -226,6 +223,16 @@ src_unpack() {
 		EPATCH_SOURCE="${FILESDIR}/${PV}" EPATCH_FORCE="yes"  \
 		EPATCH_SUFFIX="patch" epatch
 	fi
+
+	local patch
+	for patch in exfat imq optimization thinkpad ; do
+	if enable ${patch}; then
+		EPATCH_SOURCE="${FILESDIR}/${PV}/${patch}" EPATCH_FORCE="yes"  \
+		EPATCH_SUFFIX="diff" epatch
+		EPATCH_SOURCE="${FILESDIR}/${PV}/${patch}" EPATCH_FORCE="yes"  \
+		EPATCH_SUFFIX="patch" epatch
+	fi
+	done
 }
 
 src_prepare() {
