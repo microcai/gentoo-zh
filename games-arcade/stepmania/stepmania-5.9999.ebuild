@@ -2,15 +2,15 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI="5"
 
-inherit games autotools eutils mercurial
+inherit games autotools eutils git-2
 
 DESCRIPTION="Stepmania 5 sm-ssc branch"
-HOMEPAGE="http://sm-ssc.googlecode.com"
+HOMEPAGE="https://github.com/stepmania/stepmania"
 SRC_URI=""
 
-EHG_REPO_URI="http://sm-ssc.googlecode.com/hg/"
+EGIT_REPO_URI="git://github.com/stepmania/stepmania.git"
 
 LICENSE="MIT"
 SLOT="0"
@@ -26,10 +26,9 @@ DEPEND="gtk? ( x11-libs/gtk+:2 )
 	ffmpeg? ( >=virtual/ffmpeg-0.5 )
 	virtual/glu
 	x11-libs/libXrandr
+	media-libs/glew
 	virtual/opengl
 	!bundled-libs? ( dev-libs/libpcre )"
-
-S="${WORKDIR}/hg"
 
 remove_bundled_lib() {
 	local blib_prefix
