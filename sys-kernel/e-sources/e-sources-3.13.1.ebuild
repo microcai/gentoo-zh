@@ -10,7 +10,7 @@ gentoo_version="3"
 tuxonice_version=""
 uksm_version="0.1.2.2"
 
-aufs_kernel_version=""
+aufs_kernel_version="3.13_p20140127"
 cjktty_kernel_version="3.11.0"
 reiser4_kernel_version=""
 tuxonice_kernel_version=""
@@ -18,7 +18,7 @@ uksm_kernel_version="3.13.0"
 
 KEYWORDS="~amd64 ~x86 ~mips"
 
-SUPPORTED_USE="+additional +cjktty +experimental +gentoo +optimization +uksm"
+SUPPORTED_USE="+additional +aufs +cjktty +experimental +gentoo +optimization +uksm"
 UNSUPPORTED_USE="aufs ck reiser4 tuxonice"
 
 UNIPATCH_EXCLUDE=""
