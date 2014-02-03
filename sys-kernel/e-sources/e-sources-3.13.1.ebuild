@@ -19,7 +19,7 @@ uksm_kernel_version="3.13.0"
 KEYWORDS="~amd64 ~x86 ~mips"
 
 SUPPORTED_USE="+additional +aufs +cjktty +experimental +gentoo +optimization +uksm"
-UNSUPPORTED_USE="aufs ck reiser4 tuxonice"
+UNSUPPORTED_USE="ck reiser4 tuxonice"
 
 UNIPATCH_EXCLUDE=""
 
