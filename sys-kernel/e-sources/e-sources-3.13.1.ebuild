@@ -18,7 +18,7 @@ uksm_kernel_version="3.13.0"
 
 KEYWORDS="~amd64 ~x86 ~mips"
 
-SUPPORTED_USE="+additional +aufs +cjktty +experimental +gentoo +optimization +uksm"
+SUPPORTED_USE="+additional +aufs +cjktty +exfat +experimental +gentoo +optimization +thinkpad +uksm"
 UNSUPPORTED_USE="ck reiser4 tuxonice"
 
 UNIPATCH_EXCLUDE=""
