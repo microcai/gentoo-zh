@@ -217,15 +217,8 @@ src_unpack() {
 	enable aufs && unpack ${aufs_tarball}
 	kernel-2_src_unpack
 
-	if enable additional; then
-		EPATCH_SOURCE="${FILESDIR}/${PV}" EPATCH_FORCE="yes"  \
-		EPATCH_SUFFIX="diff" epatch
-		EPATCH_SOURCE="${FILESDIR}/${PV}" EPATCH_FORCE="yes"  \
-		EPATCH_SUFFIX="patch" epatch
-	fi
-
 	local patch
-	for patch in exfat imq optimization thinkpad ; do
+	for patch in additional exfat imq optimization thinkpad ; do
 	if enable ${patch}; then
 		EPATCH_SOURCE="${FILESDIR}/${PV}/${patch}" EPATCH_FORCE="yes"  \
 		EPATCH_SUFFIX="diff" epatch
