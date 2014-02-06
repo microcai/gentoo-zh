@@ -18,7 +18,7 @@ uksm_kernel_version="3.10.0"
 
 KEYWORDS="amd64 x86 mips"
 
-SUPPORTED_USE="+additional +aufs +cjktty +exfat +ck +experimental +gentoo +imq +reiser4 +thinkpad +tuxonice +uksm"
+SUPPORTED_USE="+additional +aufs +cjktty +ck +exfat +experimental +gentoo +imq +optimization +reiser4 +thinkpad +tuxonice +uksm"
 UNSUPPORTED_USE=""
 
 UNIPATCH_EXCLUDE="*BFQ*"
