@@ -40,7 +40,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf
+	econf --with-pkgprovider="Gentoo Foundation"
 }
 
 src_compile() {
