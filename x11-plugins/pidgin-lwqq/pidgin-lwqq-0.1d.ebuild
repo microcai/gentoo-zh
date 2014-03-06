@@ -5,6 +5,7 @@
 EAPI=4
 
 EGIT_REPO_URI="git://github.com/xiehuc/pidgin-lwqq.git"
+
 EGIT_COMMIT="700323e2a3a8fa08cef4400050f5f1b61f9aa144"
 
 
