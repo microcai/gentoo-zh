@@ -37,3 +37,11 @@ src_configure(){
 	)
 	cmake-utils_src_configure
 }
+
+pkg_postinst(){
+	ewarn
+	ewarn "If your pidgin-lwqq installed via gentoo-zh donesn't work"
+	ewarn "Please clone the source code from https://github.com/xiehuc/pidgin-lwqq"
+	ewarn "build pidgin-lwqq manully, you can get help from README.md"
+	ewarn 
+}
