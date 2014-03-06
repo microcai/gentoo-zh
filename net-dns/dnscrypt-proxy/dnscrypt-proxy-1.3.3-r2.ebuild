@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit eutils flag-o-matic systemd
+inherit eutils flag-o-matic systemd user
 
 DESCRIPTION="A tool for securing communications between a client and a DNS resolver"
 HOMEPAGE="http://dnscrypt.org/"
