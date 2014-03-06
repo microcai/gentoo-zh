@@ -8,7 +8,6 @@ EGIT_REPO_URI="git://github.com/xiehuc/pidgin-lwqq.git"
 
 EGIT_COMMIT="700323e2a3a8fa08cef4400050f5f1b61f9aa144"
 
-
 inherit cmake-utils git-2
 
 DESCRIPTION="a pidgin plugin based on lwqq, a excellent safe useful library for
