@@ -1,233 +1,6 @@
-diff --git a/fs/Kconfig b/fs/Kconfig
-index c229f82..183aedf 100644
---- a/fs/Kconfig
-+++ b/fs/Kconfig
-@@ -92,6 +92,7 @@ if BLOCK
- menu "DOS/FAT/NT Filesystems"
- 
- source "fs/fat/Kconfig"
-+source "fs/exfat/Kconfig"
- source "fs/ntfs/Kconfig"
- 
- endmenu
-diff --git a/fs/Makefile b/fs/Makefile
-index 4fe6df3..3a903fd 100644
---- a/fs/Makefile
-+++ b/fs/Makefile
-@@ -77,6 +77,7 @@ obj-$(CONFIG_HUGETLBFS)		+= hugetlbfs/
- obj-$(CONFIG_CODA_FS)		+= coda/
- obj-$(CONFIG_MINIX_FS)		+= minix/
- obj-$(CONFIG_FAT_FS)		+= fat/
-+obj-$(CONFIG_EXFAT_FS)		+= exfat/
- obj-$(CONFIG_BFS_FS)		+= bfs/
- obj-$(CONFIG_ISO9660_FS)	+= isofs/
- obj-$(CONFIG_HFSPLUS_FS)	+= hfsplus/ # Before hfs to find wrapped HFS+
-diff --git a/fs/exfat/.gitignore b/fs/exfat/.gitignore
-new file mode 100644
-index 0000000..241505f
---- /dev/null
-+++ b/fs/exfat/.gitignore
-@@ -0,0 +1,7 @@
-+*.cmd
-+*.ko
-+*.mod.c
-+modules.order
-+Module.symvers
-+*.o
-+.tmp_versions
-diff --git a/fs/exfat/Kconfig b/fs/exfat/Kconfig
-new file mode 100644
-index 0000000..78b32aa
---- /dev/null
-+++ b/fs/exfat/Kconfig
-@@ -0,0 +1,39 @@
-+config EXFAT_FS
-+	tristate "exFAT fs support"
-+	select NLS
-+	help
-+	  This adds support for the exFAT file system.
-+
-+config EXFAT_DISCARD
-+	bool "enable discard support"
-+	depends on EXFAT_FS
-+	default y
-+
-+config EXFAT_DELAYED_SYNC
-+	bool "enable delayed sync"
-+	depends on EXFAT_FS
-+	default n
-+
-+config EXFAT_KERNEL_DEBUG
-+	bool "enable kernel debug features via ioctl"
-+	depends on EXFAT_FS
-+	default n
-+
-+config EXFAT_DEBUG_MSG
-+	bool "print debug messages"
-+	depends on EXFAT_FS
-+	default n
-+
-+config EXFAT_DEFAULT_CODEPAGE
-+	int "Default codepage for exFAT"
-+	default 437
-+	depends on EXFAT_FS
-+	help
-+	  This option should be set to the codepage of your exFAT filesystems.
-+
-+config EXFAT_DEFAULT_IOCHARSET
-+	string "Default iocharset for exFAT"
-+	default "utf8"
-+	depends on EXFAT_FS
-+	help
-+	  Set this to the default input/output character set you'd like exFAT to use.
-diff --git a/fs/exfat/Makefile b/fs/exfat/Makefile
-new file mode 100644
-index 0000000..28bfa2d
---- /dev/null
-+++ b/fs/exfat/Makefile
-@@ -0,0 +1,56 @@
-+#
-+# Makefile for Linux FAT12/FAT16/FAT32(VFAT)/FAT64(ExFAT) filesystem driver.
-+#
-+
-+ifneq ($(KERNELRELEASE),)
-+# call from kernel build system
-+
-+obj-$(CONFIG_EXFAT_FS) += exfat.o
-+
-+exfat-objs := exfat_core.o exfat_super.o exfat_api.o exfat_blkdev.o exfat_cache.o \
-+			   exfat_data.o exfat_bitmap.o exfat_nls.o exfat_oal.o exfat_upcase.o
-+
-+else
-+# external module build
-+
-+EXTRA_FLAGS += -I$(PWD)
-+
-+#
-+# KDIR is a path to a directory containing kernel source.
-+# It can be specified on the command line passed to make to enable the module to 
-+# be built and installed for a kernel other than the one currently running.
-+# By default it is the path to the symbolic link created when 
-+# the current kernel's modules were installed, but
-+# any valid path to the directory in which the target kernel's source is located
-+# can be provided on the command line.
-+#
-+KDIR	:= /lib/modules/$(shell uname -r)/build
-+MDIR	:= /lib/modules/$(shell uname -r)
-+PWD	:= $(shell pwd)
-+KREL	:= $(shell cd ${KDIR} && make -s kernelrelease)
-+MDIR	:= /lib/modules/${KREL}
-+PWD	:= $(shell pwd)
-+
-+export CONFIG_EXFAT_FS := m
-+
-+all:
-+	$(MAKE) -C $(KDIR) M=$(PWD) modules
-+
-+clean:
-+	$(MAKE) -C $(KDIR) M=$(PWD) clean
-+
-+help:
-+	$(MAKE) -C $(KDIR) M=$(PWD) help
-+
-+install: exfat.ko
-+	rm -f ${MDIR}/kernel/fs/exfat/exfat.ko
-+	install -m644 -b -D exfat.ko ${MDIR}/kernel/fs/exfat/exfat.ko
-+	depmod -aq
-+
-+uninstall:
-+	rm -rf ${MDIR}/kernel/fs/exfat
-+	depmod -aq
-+
-+endif
-+
-+.PHONY : all clean install uninstall 
-diff --git a/fs/exfat/README.md b/fs/exfat/README.md
-new file mode 100644
-index 0000000..a9caac2
---- /dev/null
-+++ b/fs/exfat/README.md
-@@ -0,0 +1,75 @@
-+exfat-nofuse
-+============
-+
-+Linux non-fuse read/write kernel driver for the exFAT, FAT12, FAT16 and vfat (FAT32) file systems.<br />
-+Originally ported from android kernel v3.0.
-+
-+
-+Kudos to ksv1986 for the mutex patch!<br />
-+Thanks to JackNorris for being awesome and providing the clear_inode() patch.<br />
-+<br />
-+Big thanks to lqs for completing the driver!
-+Big thanks to benpicco for fixing 3.11.y compatibility!
-+
-+
-+Special thanks to github user AndreiLux for spreading the word about the leak!<br />
-+
-+
-+Installing as a stand-alone module:
-+====================================
-+
-+    make
-+    sudo make install
-+
-+To load the driver manually, run this as root:
-+
-+    modprobe exfat
-+
-+You may also specify custom toolchains by using CROSS_COMPILE flag, in my case:
-+>CROSS_COMPILE=../dorimanx-SG2-I9100-Kernel/android-toolchain/bin/arm-eabi-
-+
-+Installing as a part of the kernel:
-+======================================
-+
-+Let's take [linux] as the path to your kernel source dir...
-+
-+	cd [linux]
-+	cp -rvf exfat-nofuse [linux]/fs/exfat
-+
-+edit [linux]/fs/Kconfig
-+```
-+ menu "DOS/FAT/NT Filesystems"
-+  
-+  source "fs/fat/Kconfig"
-+ +source "fs/exfat/Kconfig"
-+  source "fs/ntfs/Kconfig"
-+```
-+  
-+  endmenu
-+
-+edit [linux]/fs/Makefile
-+```
-+  obj-$(CONFIG_FAT_FS)    += fat/
-+ +obj-$(CONFIG_EXFAT_FS)  += exfat/
-+  obj-$(CONFIG_BFS_FS)    += bfs/
-+```
-+
-+	cd [linux]
-+	make menuconfig
-+
-+Go to:
-+> File systems > DOS/FAT/NT
-+>   check exfat as MODULE (M)
-+>   (437) Default codepage for exFAT
-+>   (utf8) Default iocharset for exFAT
-+
-+> ESC to main menu
-+> Save an Alternate Configuration File
-+> ESC ESC
-+
-+build your kernel
-+
-+Have fun.
-+
-+Free Software for the Free Minds!
-+=================================
-diff --git a/fs/exfat/exfat_api.c b/fs/exfat/exfat_api.c
-new file mode 100644
-index 0000000..3a9943b
---- /dev/null
-+++ b/fs/exfat/exfat_api.c
+diff -uprN linux-3.13/fs/exfat/exfat_api.c linux-3.13-exfat/fs/exfat/exfat_api.c
+--- linux-3.13/fs/exfat/exfat_api.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_api.c	2014-03-07 22:33:58.080834100 +0800
 @@ -0,0 +1,530 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -759,11 +532,9 @@ index 0000000..3a9943b
 +/*======================================================================*/
 +
 +/* end of exfat_api.c */
-diff --git a/fs/exfat/exfat_api.h b/fs/exfat/exfat_api.h
-new file mode 100644
-index 0000000..a924e4d
---- /dev/null
-+++ b/fs/exfat/exfat_api.h
+diff -uprN linux-3.13/fs/exfat/exfat_api.h linux-3.13-exfat/fs/exfat/exfat_api.h
+--- linux-3.13/fs/exfat/exfat_api.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_api.h	2014-03-07 22:33:58.081834134 +0800
 @@ -0,0 +1,208 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -973,11 +744,9 @@ index 0000000..a924e4d
 +#endif /* _EXFAT_API_H */
 +
 +/* end of exfat_api.h */
-diff --git a/fs/exfat/exfat_bitmap.c b/fs/exfat/exfat_bitmap.c
-new file mode 100644
-index 0000000..b0672dd
---- /dev/null
-+++ b/fs/exfat/exfat_bitmap.c
+diff -uprN linux-3.13/fs/exfat/exfat_bitmap.c linux-3.13-exfat/fs/exfat/exfat_bitmap.c
+--- linux-3.13/fs/exfat/exfat_bitmap.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_bitmap.c	2014-03-07 22:33:58.081834134 +0800
 @@ -0,0 +1,63 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -1042,11 +811,9 @@ index 0000000..b0672dd
 +{
 +	bitmap[BITMAP_LOC(i)] &= ~(0x01 << BITMAP_SHIFT(i));
 +} /* end of Bitmap_clear */
-diff --git a/fs/exfat/exfat_bitmap.h b/fs/exfat/exfat_bitmap.h
-new file mode 100644
-index 0000000..4f482c7
---- /dev/null
-+++ b/fs/exfat/exfat_bitmap.h
+diff -uprN linux-3.13/fs/exfat/exfat_bitmap.h linux-3.13-exfat/fs/exfat/exfat_bitmap.h
+--- linux-3.13/fs/exfat/exfat_bitmap.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_bitmap.h	2014-03-07 22:33:58.081834134 +0800
 @@ -0,0 +1,55 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -1103,11 +870,9 @@ index 0000000..4f482c7
 +void	exfat_bitmap_clear(u8 *bitmpa, int i);
 +
 +#endif /* _EXFAT_BITMAP_H */
-diff --git a/fs/exfat/exfat_blkdev.c b/fs/exfat/exfat_blkdev.c
-new file mode 100644
-index 0000000..b671b27
---- /dev/null
-+++ b/fs/exfat/exfat_blkdev.c
+diff -uprN linux-3.13/fs/exfat/exfat_blkdev.c linux-3.13-exfat/fs/exfat/exfat_blkdev.c
+--- linux-3.13/fs/exfat/exfat_blkdev.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_blkdev.c	2014-03-07 22:33:58.081834134 +0800
 @@ -0,0 +1,199 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -1308,11 +1073,9 @@ index 0000000..b671b27
 +}
 +
 +/* end of exfat_blkdev.c */
-diff --git a/fs/exfat/exfat_blkdev.h b/fs/exfat/exfat_blkdev.h
-new file mode 100644
-index 0000000..f10dfd4
---- /dev/null
-+++ b/fs/exfat/exfat_blkdev.h
+diff -uprN linux-3.13/fs/exfat/exfat_blkdev.h linux-3.13-exfat/fs/exfat/exfat_blkdev.h
+--- linux-3.13/fs/exfat/exfat_blkdev.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_blkdev.h	2014-03-07 22:33:58.081834134 +0800
 @@ -0,0 +1,75 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -1389,11 +1152,9 @@ index 0000000..f10dfd4
 +#endif /* _EXFAT_BLKDEV_H */
 +
 +/* end of exfat_blkdev.h */
-diff --git a/fs/exfat/exfat_cache.c b/fs/exfat/exfat_cache.c
-new file mode 100644
-index 0000000..36a9717
---- /dev/null
-+++ b/fs/exfat/exfat_cache.c
+diff -uprN linux-3.13/fs/exfat/exfat_cache.c linux-3.13-exfat/fs/exfat/exfat_cache.c
+--- linux-3.13/fs/exfat/exfat_cache.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_cache.c	2014-03-07 22:33:58.081834134 +0800
 @@ -0,0 +1,782 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -2177,11 +1938,9 @@ index 0000000..36a9717
 +} /* end of buf_cache_move_to_lru */
 +
 +/* end of exfat_cache.c */
-diff --git a/fs/exfat/exfat_cache.h b/fs/exfat/exfat_cache.h
-new file mode 100644
-index 0000000..8d4b577
---- /dev/null
-+++ b/fs/exfat/exfat_cache.h
+diff -uprN linux-3.13/fs/exfat/exfat_cache.h linux-3.13-exfat/fs/exfat/exfat_cache.h
+--- linux-3.13/fs/exfat/exfat_cache.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_cache.h	2014-03-07 22:33:58.081834134 +0800
 @@ -0,0 +1,87 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -2270,11 +2029,9 @@ index 0000000..8d4b577
 +#endif /* _EXFAT_CACHE_H */
 +
 +/* end of exfat_cache.h */
-diff --git a/fs/exfat/exfat_config.h b/fs/exfat/exfat_config.h
-new file mode 100644
-index 0000000..fd8928e
---- /dev/null
-+++ b/fs/exfat/exfat_config.h
+diff -uprN linux-3.13/fs/exfat/exfat_config.h linux-3.13-exfat/fs/exfat/exfat_config.h
+--- linux-3.13/fs/exfat/exfat_config.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_config.h	2014-03-07 22:33:58.081834134 +0800
 @@ -0,0 +1,71 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -2347,11 +2104,9 @@ index 0000000..fd8928e
 +#endif /* _EXFAT_CONFIG_H */
 +
 +/* end of exfat_config.h */
-diff --git a/fs/exfat/exfat_core.c b/fs/exfat/exfat_core.c
-new file mode 100644
-index 0000000..c99897f
---- /dev/null
-+++ b/fs/exfat/exfat_core.c
+diff -uprN linux-3.13/fs/exfat/exfat_core.c linux-3.13-exfat/fs/exfat/exfat_core.c
+--- linux-3.13/fs/exfat/exfat_core.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_core.c	2014-03-07 22:33:58.082834168 +0800
 @@ -0,0 +1,5116 @@
 +/* Some of the source code in this file came from "linux/fs/fat/misc.c".  */
 +/*
@@ -7469,11 +7224,9 @@ index 0000000..c99897f
 +} /* end of multi_sector_write */
 +
 +/* end of exfat_core.c */
-diff --git a/fs/exfat/exfat_core.h b/fs/exfat/exfat_core.h
-new file mode 100644
-index 0000000..9724d61
---- /dev/null
-+++ b/fs/exfat/exfat_core.h
+diff -uprN linux-3.13/fs/exfat/exfat_core.h linux-3.13-exfat/fs/exfat/exfat_core.h
+--- linux-3.13/fs/exfat/exfat_core.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_core.h	2014-03-07 22:33:58.082834168 +0800
 @@ -0,0 +1,671 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -8146,11 +7899,9 @@ index 0000000..9724d61
 +s32   multi_sector_write(struct super_block *sb, u32 sec, struct buffer_head *bh, s32 num_secs, s32 sync);
 +
 +#endif /* _EXFAT_H */
-diff --git a/fs/exfat/exfat_data.c b/fs/exfat/exfat_data.c
-new file mode 100644
-index 0000000..41c74ec2
---- /dev/null
-+++ b/fs/exfat/exfat_data.c
+diff -uprN linux-3.13/fs/exfat/exfat_data.c linux-3.13-exfat/fs/exfat/exfat_data.c
+--- linux-3.13/fs/exfat/exfat_data.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_data.c	2014-03-07 22:33:58.082834168 +0800
 @@ -0,0 +1,71 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -8223,11 +7974,9 @@ index 0000000..41c74ec2
 +BUF_CACHE_T buf_cache_hash_list[BUF_CACHE_HASH_SIZE];
 +
 +/* end of exfat_data.c */
-diff --git a/fs/exfat/exfat_data.h b/fs/exfat/exfat_data.h
-new file mode 100644
-index 0000000..317e827
---- /dev/null
-+++ b/fs/exfat/exfat_data.h
+diff -uprN linux-3.13/fs/exfat/exfat_data.h linux-3.13-exfat/fs/exfat/exfat_data.h
+--- linux-3.13/fs/exfat/exfat_data.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_data.h	2014-03-07 22:33:58.082834168 +0800
 @@ -0,0 +1,60 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -8289,11 +8038,9 @@ index 0000000..317e827
 +#endif /* _EXFAT_DATA_H */
 +
 +/* end of exfat_data.h */
-diff --git a/fs/exfat/exfat_nls.c b/fs/exfat/exfat_nls.c
-new file mode 100644
-index 0000000..382bdc3
---- /dev/null
-+++ b/fs/exfat/exfat_nls.c
+diff -uprN linux-3.13/fs/exfat/exfat_nls.c linux-3.13-exfat/fs/exfat/exfat_nls.c
+--- linux-3.13/fs/exfat/exfat_nls.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_nls.c	2014-03-07 22:33:58.082834168 +0800
 @@ -0,0 +1,446 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -8741,11 +8488,9 @@ index 0000000..382bdc3
 +} /* end of convert_uni_to_ch */
 +
 +/* end of exfat_nls.c */
-diff --git a/fs/exfat/exfat_nls.h b/fs/exfat/exfat_nls.h
-new file mode 100644
-index 0000000..69eedc9
---- /dev/null
-+++ b/fs/exfat/exfat_nls.h
+diff -uprN linux-3.13/fs/exfat/exfat_nls.h linux-3.13-exfat/fs/exfat/exfat_nls.h
+--- linux-3.13/fs/exfat/exfat_nls.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_nls.h	2014-03-07 22:33:58.082834168 +0800
 @@ -0,0 +1,93 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -8840,11 +8585,9 @@ index 0000000..69eedc9
 +#endif /* _EXFAT_NLS_H */
 +
 +/* end of exfat_nls.h */
-diff --git a/fs/exfat/exfat_oal.c b/fs/exfat/exfat_oal.c
-new file mode 100644
-index 0000000..814a919
---- /dev/null
-+++ b/fs/exfat/exfat_oal.c
+diff -uprN linux-3.13/fs/exfat/exfat_oal.c linux-3.13-exfat/fs/exfat/exfat_oal.c
+--- linux-3.13/fs/exfat/exfat_oal.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_oal.c	2014-03-07 22:33:58.082834168 +0800
 @@ -0,0 +1,188 @@
 +/* Some of the source code in this file came from "linux/fs/fat/misc.c".  */
 +/*
@@ -9034,11 +8777,9 @@ index 0000000..814a919
 +} /* end of tm_current */
 +
 +/* end of exfat_oal.c */
-diff --git a/fs/exfat/exfat_oal.h b/fs/exfat/exfat_oal.h
-new file mode 100644
-index 0000000..b9ad234
---- /dev/null
-+++ b/fs/exfat/exfat_oal.h
+diff -uprN linux-3.13/fs/exfat/exfat_oal.h linux-3.13-exfat/fs/exfat/exfat_oal.h
+--- linux-3.13/fs/exfat/exfat_oal.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_oal.h	2014-03-07 22:33:58.082834168 +0800
 @@ -0,0 +1,76 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -9116,12 +8857,10 @@ index 0000000..b9ad234
 +#endif /* _EXFAT_OAL_H */
 +
 +/* end of exfat_oal.h */
-diff --git a/fs/exfat/exfat_super.c b/fs/exfat/exfat_super.c
-new file mode 100644
-index 0000000..eea339b
---- /dev/null
-+++ b/fs/exfat/exfat_super.c
-@@ -0,0 +1,2302 @@
+diff -uprN linux-3.13/fs/exfat/exfat_super.c linux-3.13-exfat/fs/exfat/exfat_super.c
+--- linux-3.13/fs/exfat/exfat_super.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_super.c	2014-03-07 22:33:58.082834168 +0800
+@@ -0,0 +1,2474 @@
 +/* Some of the source code in this file came from "linux/fs/fat/file.c","linux/fs/fat/inode.c" and "linux/fs/fat/misc.c".  */
 +/*
 + *  linux/fs/fat/file.c
@@ -9384,6 +9123,150 @@ index 0000000..eea339b
 +	sbi->s_dirt = 0;
 +#endif
 +}
++
++static int __exfat_revalidate(struct dentry *dentry)
++{
++	return 0;
++}
++
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,7,00)
++static int exfat_revalidate(struct dentry *dentry, unsigned int flags)
++#else
++static int exfat_revalidate(struct dentry *dentry, struct nameidata *nd)
++#endif
++{
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,7,00)
++	if (flags & LOOKUP_RCU)
++		return -ECHILD;
++#elif LINUX_VERSION_CODE >= KERNEL_VERSION(3,0,00)
++	if (nd && nd->flags & LOOKUP_RCU)
++		return -ECHILD;
++#endif
++
++	if (dentry->d_inode)
++		return 1;
++	return __exfat_revalidate(dentry);
++}
++
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,7,00)
++static int exfat_revalidate_ci(struct dentry *dentry, unsigned int flags)
++#else
++static int exfat_revalidate_ci(struct dentry *dentry, struct nameidata *nd)
++#endif
++{
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,7,00)
++	if (flags & LOOKUP_RCU)
++		return -ECHILD;
++#elif LINUX_VERSION_CODE >= KERNEL_VERSION(3,0,00)
++	unsigned int flags;
++
++	if (nd && nd->flags & LOOKUP_RCU)
++		return -ECHILD;
++
++	flags = nd ? nd->flags : 0;
++#else
++	flags = nd ? nd->flags : 0;
++#endif
++
++	if (dentry->d_inode)
++		return 1;
++
++	if (!flags)
++		return 0;
++
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,0,00)
++	if (flags & (LOOKUP_CREATE | LOOKUP_RENAME_TARGET))
++		return 0;
++#else
++	if (!(nd->flags & (LOOKUP_CONTINUE | LOOKUP_PARENT))) {
++		if (nd->flags & (LOOKUP_CREATE | LOOKUP_RENAME_TARGET))
++			return 0;
++	}
++#endif
++
++	return __exfat_revalidate(dentry);
++}
++
++static unsigned int __exfat_striptail_len(unsigned int len, const char *name)
++{
++	while (len && name[len - 1] == '.')
++		len--;
++	return len;
++}
++
++static unsigned int exfat_striptail_len(const struct qstr *qstr)
++{
++	return __exfat_striptail_len(qstr->len, qstr->name);
++}
++
++static int exfat_d_hash(const struct dentry *dentry, const struct inode *inode,
++		struct qstr *qstr)
++{
++	qstr->hash = full_name_hash(qstr->name, exfat_striptail_len(qstr));
++	return 0;
++}
++
++static int exfat_d_hashi(const struct dentry *dentry, const struct inode *inode,
++		struct qstr *qstr)
++{
++	struct nls_table *t = EXFAT_SB(dentry->d_sb)->nls_io;
++	const unsigned char *name;
++	unsigned int len;
++	unsigned long hash;
++
++	name = qstr->name;
++	len = exfat_striptail_len(qstr);
++
++	hash = init_name_hash();
++	while (len--)
++		hash = partial_name_hash(nls_tolower(t, *name++), hash);
++	qstr->hash = end_name_hash(hash);
++
++	return 0;
++}
++
++static int exfat_cmpi(const struct dentry *parent, const struct inode *pinode,
++		const struct dentry *dentry, const struct inode *inode,
++		unsigned int len, const char *str, const struct qstr *name)
++{
++	struct nls_table *t = EXFAT_SB(parent->d_sb)->nls_io;
++	unsigned int alen, blen;
++
++	alen = exfat_striptail_len(name);
++	blen = __exfat_striptail_len(len, str);
++	if (alen == blen) {
++		if (nls_strnicmp(t, name->name, str, alen) == 0)
++			return 0;
++	}
++	return 1;
++}
++
++static int exfat_cmp(const struct dentry *parent, const struct inode *pinode,
++		const struct dentry *dentry, const struct inode *inode,
++		unsigned int len, const char *str, const struct qstr *name)
++{
++	unsigned int alen, blen;
++
++	alen = exfat_striptail_len(name);
++	blen = __exfat_striptail_len(len, str);
++	if (alen == blen) {
++		if (strncmp(name->name, str, alen) == 0)
++			return 0;
++	}
++	return 1;
++}
++
++static const struct dentry_operations exfat_ci_dentry_ops = {
++	.d_revalidate   = exfat_revalidate_ci,
++	.d_hash         = exfat_d_hashi,
++	.d_compare      = exfat_cmpi,
++};
++
++static const struct dentry_operations exfat_dentry_ops = {
++	.d_revalidate   = exfat_revalidate,
++	.d_hash         = exfat_d_hash,
++	.d_compare      = exfat_cmp,
++};
 +
 +/*======================================================================*/
 +/*  Directory Entry Operations                                          */
@@ -10528,13 +10411,17 @@ index 0000000..eea339b
 +	return err;
 +}
 +
-+#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,14,0)
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,15,0)
 +static ssize_t exfat_direct_IO(int rw, struct kiocb *iocb, struct iov_iter *iter,
 +				loff_t offset)
 +#else
 +static ssize_t exfat_direct_IO(int rw, struct kiocb *iocb,
++#ifdef CONFIG_AIO_OPTIMIZATION
++				struct iov_iter *iter, loff_t offset)
++#else
 +				const struct iovec *iov,
 +				loff_t offset, unsigned long nr_segs)
++#endif
 +#endif
 +{
 +	struct inode *inode = iocb->ki_filp->f_mapping->host;
@@ -10544,20 +10431,30 @@ index 0000000..eea339b
 +	ssize_t ret;
 +
 +	if (rw == WRITE) {
-+#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,14,0)
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,15,0)
 +		if (EXFAT_I(inode)->mmu_private < (offset + iov_iter_count(iter)))
 +#else
++#ifdef CONFIG_AIO_OPTIMIZATION
++		if (EXFAT_I(inode)->mmu_private <
++					(offset + iov_iter_count(iter)))
++#else
 +		if (EXFAT_I(inode)->mmu_private < (offset + iov_length(iov, nr_segs)))
++#endif
 +#endif
 +			return 0;
 +	}
 +#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,2,00)
-+#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,14,0)
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,15,0)
 +	ret = blockdev_direct_IO(rw, iocb, inode, iter,
 +					offset, exfat_get_block);
 +#else
++#ifdef CONFIG_AIO_OPTIMIZATION
++	ret = blockdev_direct_IO(rw, iocb, inode, iter, offset,
++					exfat_get_block);
++#else
 +	ret = blockdev_direct_IO(rw, iocb, inode, iov,
 +					offset, nr_segs, exfat_get_block);
++#endif
 +#endif
 +#else
 +        ret = blockdev_direct_IO(rw, iocb, inode, inode->i_sb->s_bdev, iov,
@@ -10566,10 +10463,14 @@ index 0000000..eea339b
 +
 +#if LINUX_VERSION_CODE > KERNEL_VERSION(2,6,34)
 +	if ((ret < 0) && (rw & WRITE))
-+#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,14,0)
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,15,0)
++		exfat_write_failed(mapping, offset+iov_iter_count(iter));
++#else
++#ifdef CONFIG_AIO_OPTIMIZATION
 +		exfat_write_failed(mapping, offset+iov_iter_count(iter));
 +#else
 +		exfat_write_failed(mapping, offset+iov_length(iov, nr_segs));
++#endif
 +#endif
 +#endif
 +	return ret;
@@ -11204,6 +11105,14 @@ index 0000000..eea339b
 +	return 0;
 +}
 +
++static void setup_dops(struct super_block *sb)
++{
++	if (EXFAT_SB(sb)->options.casesensitive == 0)
++		sb->s_d_op = &exfat_ci_dentry_ops;
++	else
++		sb->s_d_op = &exfat_dentry_ops;
++}
++
 +static int exfat_fill_super(struct super_block *sb, void *data, int silent)
 +{
 +	struct inode *root_inode = NULL;
@@ -11232,6 +11141,8 @@ index 0000000..eea339b
 +	error = parse_options(data, silent, &debug, &sbi->options);
 +	if (error)
 +		goto out_fail;
++
++	setup_dops(sb);
 +
 +	error = -EIO;
 +	sb_min_blocksize(sb, 512);
@@ -11424,11 +11335,9 @@ index 0000000..eea339b
 +#ifdef MODULE_ALIAS_FS
 +MODULE_ALIAS_FS("exfat");
 +#endif
-diff --git a/fs/exfat/exfat_super.h b/fs/exfat/exfat_super.h
-new file mode 100644
-index 0000000..916811e
---- /dev/null
-+++ b/fs/exfat/exfat_super.h
+diff -uprN linux-3.13/fs/exfat/exfat_super.h linux-3.13-exfat/fs/exfat/exfat_super.h
+--- linux-3.13/fs/exfat/exfat_super.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_super.h	2014-03-07 22:33:58.083834202 +0800
 @@ -0,0 +1,171 @@
 +/* Some of the source code in this file came from "linux/fs/fat/fat.h".  */
 +
@@ -11601,11 +11510,9 @@ index 0000000..916811e
 +}
 +
 +#endif /* _EXFAT_LINUX_H */
-diff --git a/fs/exfat/exfat_upcase.c b/fs/exfat/exfat_upcase.c
-new file mode 100644
-index 0000000..457ee8d
---- /dev/null
-+++ b/fs/exfat/exfat_upcase.c
+diff -uprN linux-3.13/fs/exfat/exfat_upcase.c linux-3.13-exfat/fs/exfat/exfat_upcase.c
+--- linux-3.13/fs/exfat/exfat_upcase.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_upcase.c	2014-03-07 22:33:58.083834202 +0800
 @@ -0,0 +1,407 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -12014,11 +11921,9 @@ index 0000000..457ee8d
 +};
 +
 +/* end of exfat_upcase.c */
-diff --git a/fs/exfat/exfat_version.h b/fs/exfat/exfat_version.h
-new file mode 100644
-index 0000000..ac24433
---- /dev/null
-+++ b/fs/exfat/exfat_version.h
+diff -uprN linux-3.13/fs/exfat/exfat_version.h linux-3.13-exfat/fs/exfat/exfat_version.h
+--- linux-3.13/fs/exfat/exfat_version.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/exfat_version.h	2014-03-07 22:33:58.083834202 +0800
 @@ -0,0 +1,19 @@
 +/************************************************************************/
 +/*                                                                      */
@@ -12038,4 +11943,129 @@ index 0000000..ac24433
 +/*                                                                      */
 +/************************************************************************/
 +
-+#define EXFAT_VERSION  "1.2.7"
++#define EXFAT_VERSION  "1.2.8"
+diff -uprN linux-3.13/fs/exfat/Kconfig linux-3.13-exfat/fs/exfat/Kconfig
+--- linux-3.13/fs/exfat/Kconfig	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/Kconfig	2014-03-07 22:33:58.080834100 +0800
+@@ -0,0 +1,39 @@
++config EXFAT_FS
++	tristate "exFAT fs support"
++	select NLS
++	help
++	  This adds support for the exFAT file system.
++
++config EXFAT_DISCARD
++	bool "enable discard support"
++	depends on EXFAT_FS
++	default y
++
++config EXFAT_DELAYED_SYNC
++	bool "enable delayed sync"
++	depends on EXFAT_FS
++	default n
++
++config EXFAT_KERNEL_DEBUG
++	bool "enable kernel debug features via ioctl"
++	depends on EXFAT_FS
++	default n
++
++config EXFAT_DEBUG_MSG
++	bool "print debug messages"
++	depends on EXFAT_FS
++	default n
++
++config EXFAT_DEFAULT_CODEPAGE
++	int "Default codepage for exFAT"
++	default 437
++	depends on EXFAT_FS
++	help
++	  This option should be set to the codepage of your exFAT filesystems.
++
++config EXFAT_DEFAULT_IOCHARSET
++	string "Default iocharset for exFAT"
++	default "utf8"
++	depends on EXFAT_FS
++	help
++	  Set this to the default input/output character set you'd like exFAT to use.
+diff -uprN linux-3.13/fs/exfat/Makefile linux-3.13-exfat/fs/exfat/Makefile
+--- linux-3.13/fs/exfat/Makefile	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.13-exfat/fs/exfat/Makefile	2014-03-07 22:33:58.080834100 +0800
+@@ -0,0 +1,56 @@
++#
++# Makefile for Linux FAT12/FAT16/FAT32(VFAT)/FAT64(ExFAT) filesystem driver.
++#
++
++ifneq ($(KERNELRELEASE),)
++# call from kernel build system
++
++obj-$(CONFIG_EXFAT_FS) += exfat.o
++
++exfat-objs := exfat_core.o exfat_super.o exfat_api.o exfat_blkdev.o exfat_cache.o \
++			   exfat_data.o exfat_bitmap.o exfat_nls.o exfat_oal.o exfat_upcase.o
++
++else
++# external module build
++
++EXTRA_FLAGS += -I$(PWD)
++
++#
++# KDIR is a path to a directory containing kernel source.
++# It can be specified on the command line passed to make to enable the module to 
++# be built and installed for a kernel other than the one currently running.
++# By default it is the path to the symbolic link created when 
++# the current kernel's modules were installed, but
++# any valid path to the directory in which the target kernel's source is located
++# can be provided on the command line.
++#
++KDIR	:= /lib/modules/$(shell uname -r)/build
++MDIR	:= /lib/modules/$(shell uname -r)
++PWD	:= $(shell pwd)
++KREL	:= $(shell cd ${KDIR} && make -s kernelrelease)
++MDIR	:= /lib/modules/${KREL}
++PWD	:= $(shell pwd)
++
++export CONFIG_EXFAT_FS := m
++
++all:
++	$(MAKE) -C $(KDIR) M=$(PWD) modules
++
++clean:
++	$(MAKE) -C $(KDIR) M=$(PWD) clean
++
++help:
++	$(MAKE) -C $(KDIR) M=$(PWD) help
++
++install: exfat.ko
++	rm -f ${MDIR}/kernel/fs/exfat/exfat.ko
++	install -m644 -b -D exfat.ko ${MDIR}/kernel/fs/exfat/exfat.ko
++	depmod -aq
++
++uninstall:
++	rm -rf ${MDIR}/kernel/fs/exfat
++	depmod -aq
++
++endif
++
++.PHONY : all clean install uninstall 
+diff -uprN linux-3.13/fs/Kconfig linux-3.13-exfat/fs/Kconfig
+--- linux-3.13/fs/Kconfig	2014-01-20 10:40:07.000000000 +0800
++++ linux-3.13-exfat/fs/Kconfig	2014-03-07 22:35:38.235269811 +0800
+@@ -92,6 +92,7 @@ if BLOCK
+ menu "DOS/FAT/NT Filesystems"
+ 
+ source "fs/fat/Kconfig"
++source "fs/exfat/Kconfig"
+ source "fs/ntfs/Kconfig"
+ 
+ endmenu
+diff -uprN linux-3.13/fs/Makefile linux-3.13-exfat/fs/Makefile
+--- linux-3.13/fs/Makefile	2014-01-20 10:40:07.000000000 +0800
++++ linux-3.13-exfat/fs/Makefile	2014-03-07 22:36:09.732348476 +0800
+@@ -77,6 +77,7 @@ obj-$(CONFIG_HUGETLBFS)		+= hugetlbfs/
+ obj-$(CONFIG_CODA_FS)		+= coda/
+ obj-$(CONFIG_MINIX_FS)		+= minix/
+ obj-$(CONFIG_FAT_FS)		+= fat/
++obj-$(CONFIG_EXFAT_FS)		+= exfat/
+ obj-$(CONFIG_BFS_FS)		+= bfs/
+ obj-$(CONFIG_ISO9660_FS)	+= isofs/
+ obj-$(CONFIG_HFSPLUS_FS)	+= hfsplus/ # Before hfs to find wrapped HFS+
