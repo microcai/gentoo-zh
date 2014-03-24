@@ -36,7 +36,7 @@ HOMEPAGE="http://www.wps.cn"
 
 MY_PN=kingsoft-office
 
-SRC_URI="http://wdl.cache.ijinshan.com/wps/download/Linux/unstable/${MY_PN}_${MY_VV}_i386.deb
+SRC_URI="http://kdl.cc.ksosoft.com/wps-community/${MY_PN}_${MY_VV}_i386.deb
          http://wps-community.org/download/tools/wps_merge_old_conf.sh"
 
 SLOT="0"
