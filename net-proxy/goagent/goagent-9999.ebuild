@@ -33,7 +33,7 @@ RDEPEND="crypto? ( dev-python/pycrypto )
 	dev-python/pyopenssl
 	dns? ( >=dev-python/gevent-1.0
 		dev-python/dnslib )
-	gtk? ( x11-libs/vte:0[python] )"
+	gtk? ( x11-libs/vte:2.9 )"
 
 src_unpack() {
 	${GOAGENT_ECLASS}_src_unpack
