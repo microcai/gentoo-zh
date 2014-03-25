@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.55.0.ebuild,v 1.1 2013/11/14 17:19:04 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.55.0-r1.ebuild,v 1.1 2013/12/27 17:08:26 pinkbyte Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -18,7 +18,7 @@ LICENSE="Boost-1.0"
 SLOT="0/${PV}" # ${PV} instead ${MAJOR_V} due to bug 486122
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x86-fbsd ~x86-linux"
 
-IUSE="debug doc icu +nls mpi python static-libs +threads tools"
+IUSE="context debug doc icu +nls mpi python static-libs +threads tools"
 
 RDEPEND="icu? ( >=dev-libs/icu-3.6:= )
 	!icu? ( virtual/libiconv )
@@ -76,7 +76,8 @@ src_prepare() {
 		"${FILESDIR}/${PN}-1.48.0-no_strict_aliasing_python2.patch" \
 		"${FILESDIR}/${PN}-1.48.0-disable_libboost_python3.patch" \
 		"${FILESDIR}/${PN}-1.48.0-python_linking.patch" \
-		"${FILESDIR}/${PN}-1.48.0-disable_icu_rpath.patch"
+		"${FILESDIR}/${PN}-1.48.0-disable_icu_rpath.patch" \
+		"${FILESDIR}/${PN}-1.55.0-context-x32.patch"
 }
 
 ejam() {
@@ -112,6 +113,7 @@ src_configure() {
 	use mpi || OPTIONS+=" --without-mpi"
 	use python || OPTIONS+=" --without-python"
 	use nls || OPTIONS+=" --without-locale"
+	use context || OPTIONS+=" --without-context --without-coroutine"
 
 	OPTIONS+=" pch=off"
 	OPTIONS+=" --boost-build=${EPREFIX}/usr/share/boost-build --prefix=\"${ED}usr\""
@@ -245,6 +247,11 @@ EOF
 
 	if ! use nls; then
 		rm -r "${ED}"/usr/include/boost/locale || die
+	fi
+
+	if ! use context; then
+		rm -r "${ED}"/usr/include/boost/context || die
+		rm -r "${ED}"/usr/include/boost/coroutine || die
 	fi
 
 	if use doc; then
