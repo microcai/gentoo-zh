@@ -3,9 +3,11 @@
 # $Header: $
 
 EAPI=4
-inherit eutils waf-utils gnome2-utils
+PYTHON_DEPEND="2:2.6"
 
-DESCRIPTION="Plugin for Thunar that adds context-menu items for Dropbox"
+inherit gnome2-utils multilib python waf-utils
+
+DESCRIPTION="Plugin for thunar that adds context-menu items for dropbox."
 HOMEPAGE="http://www.softwarebakery.com/maato/thunar-dropbox.html"
 SRC_URI="http://www.softwarebakery.com/maato/files/${PN}/${P}.tar.bz2"
 
@@ -14,30 +16,23 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-COMMON_DEPEND="dev-libs/glib:2
-	xfce-base/thunar
-"
-DEPEND="${COMMON_DEPEND}
-	virtual/pkgconfig
-"
-RDEPEND="${COMMON_DEPEND}
-	net-misc/dropbox
-"
+RDEPEND="net-misc/dropbox
+>=xfce-base/thunar-1.2"
+DEPEND="${RDEPEND}
+virtual/pkgconfig"
+
+DOCS=( AUTHORS ChangeLog )
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-wscript.patch"
+	sed -e "s:gtk-update-icon-cache.*:/bin/true':" \
+		-e "s:/lib/:/$(get_libdir)/:" -i wscript || die "sed failed"
 }
 
-pkg_preinst() {
-	gnome2_icon_savelist
-}
-
-pkg_postinst() {
-	gnome2_icon_cache_update /usr/share/icons/hicolor
-	gtk-update-icon-cache
-}
-
-pkg_postrm() {
-	gnome2_icon_cache_update /usr/share/icons/hicolor
-	gtk-update-icon-cache
-}
+pkg_preinst() { gnome2_icon_savelist; }
+pkg_postinst() { gnome2_icon_cache_update /usr/share/icons/hicolor; }
+pkg_postrm() { gnome2_icon_cache_update /usr/share/icons/hicolor; }
