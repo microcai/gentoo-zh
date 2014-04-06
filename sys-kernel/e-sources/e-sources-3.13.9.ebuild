@@ -6,7 +6,7 @@ EAPI="5"
 K_DEBLOB_AVAILABLE="1"
 
 ck_version="1"
-gentoo_version="11"
+gentoo_version="12"
 tuxonice_version="2014.03.17"
 uksm_version="0.1.2.2"
 
@@ -18,8 +18,8 @@ uksm_kernel_version="3.13.0"
 
 KEYWORDS="~amd64 ~x86 ~mips"
 
-SUPPORTED_USE="+additional +aufs +cjktty +ck +exfat +experimental +gentoo +reiser4 +thinkpad +tuxonice +uksm"
-UNSUPPORTED_USE="imq"
+SUPPORTED_USE="+additional +aufs +cjktty +ck +experimental +gentoo +reiser4 +thinkpad +tuxonice +uksm"
+UNSUPPORTED_USE="exfat imq"
 
 UNIPATCH_EXCLUDE=""
 
