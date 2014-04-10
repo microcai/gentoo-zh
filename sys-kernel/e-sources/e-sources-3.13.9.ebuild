@@ -14,7 +14,7 @@ aufs_kernel_version="3.13_p20140310"
 cjktty_kernel_version="3.11.0"
 reiser4_kernel_version="3.13.1"
 tuxonice_kernel_version="3.13.6"
-uksm_kernel_version="3.13.0"
+uksm_kernel_version="3.13.9"
 
 KEYWORDS="~amd64 ~x86 ~mips"
 
