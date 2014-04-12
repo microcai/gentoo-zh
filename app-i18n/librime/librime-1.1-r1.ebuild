@@ -19,7 +19,7 @@ RDEPEND="app-i18n/opencc
 	dev-cpp/glog
 	>=dev-cpp/yaml-cpp-0.5.0
 	dev-db/kyotocabinet
-	>=dev-libs/boost-1.46.0[threads(+)]
+	>=dev-libs/boost-1.48.0[threads(+)]
 	sys-libs/zlib
 	x11-proto/xproto"
 DEPEND="${RDEPEND}
@@ -34,6 +34,25 @@ pkg_pretend() {
 	fi
 }
 
+src_prepare(){
+	// compile test and decide to apply the patch
+
+cat > test.cpp  << _EOF
+#include <boost/filesystem.hpp>
+int main()
+{    boost::filesystem::copy_file("a", "b");}
+_EOF
+
+	if  g++ test.cpp  -lboost_system -lboost_filesystem ; then
+		epatch "${FILESDIR}/${P}-BOOST_NO_SCOPED_ENUMS.patch" ;
+	else
+		epatch "${FILESDIR}/${P}-fix-boost.patch" ;
+	fi
+
+	epatch "${FILESDIR}/${P}-gcc53613.patch"
+
+}
+
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_build static-libs STATIC)
@@ -44,6 +63,5 @@ src_configure() {
 	)
 
 	# Do _not_ use C++11 yet, make sure to force GNU C++ 98 standard.
-	append-cxxflags -std=gnu++98
 	cmake-utils_src_configure
 }
