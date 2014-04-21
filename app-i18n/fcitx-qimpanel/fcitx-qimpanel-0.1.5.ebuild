@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~86"
 IUSE=""
 
-DEPEND=">=app-i18n/fcitx-4.2.8[qt4,dbus]"
+DEPEND=">=app-i18n/fcitx-4.2.8
+dev-qt/qtgui:4"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/fcitx-qimpanel-fcitx-qimpanel-${PV}"
