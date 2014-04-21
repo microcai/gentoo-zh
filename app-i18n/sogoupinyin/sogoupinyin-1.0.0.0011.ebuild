@@ -25,6 +25,7 @@ src_compile(){
   tar xf ${WORKDIR}/data.tar.xz
   rm control.tar.gz  data.tar.xz  debian-binary
 #  rm -rf usr/share/fcitx-qimpanel
+  rm -rf usr/share/upstart
 }
 
 src_install(){
@@ -38,6 +39,7 @@ src_install(){
   dodir /usr/share
   insinto /usr/share
   doins -r ${S}/usr/share/*
+
   dodir /usr/bin
   insinto /usr/bin
   doins  ${S}/usr/bin/*
