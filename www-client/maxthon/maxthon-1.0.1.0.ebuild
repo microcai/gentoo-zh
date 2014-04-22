@@ -88,8 +88,4 @@ src_install() {
 pkg_postinst() {
 	fdo-mime_desktop_database_update
 	gnome2_icon_cache_update
-	elog
-	elog "添加新功能~~"
-	elog "任意地方光标选词 然后 ctrl+alt 即可在浏览器搜索"
-	elog
 }
