@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="Sogou Pinyin input method."
 HOMEPAGE="http://pinyin.sogou.com/linux/"
@@ -17,7 +17,10 @@ IUSE=""
 RESTRICT="mirror"
 
 RDEPEND=">=app-i18n/fcitx-4.2.8[qt4,X,dbus]
-!app-i18n/fcitx-qimpanel"
+!app-i18n/fcitx-qimpanel
+dev-qt/qtdeclarative:4
+dev-qt/qtgui:4
+!app-i18n/fcitx-sogoupinyin"
 DEPEND="${RDEPEND}"
 S=${WORKDIR}
 
