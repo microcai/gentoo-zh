@@ -13,13 +13,17 @@ SRC_URI="http://www.longene.org/download/WineQQ2013SP6-${PV}-Longene.deb"
 LICENSE="Tencent"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="system-wine"
 
 RDEPEND="amd64? (
 		app-emulation/emul-linux-x86-gtklibs
         )
 
 	!amd64? ( x11-libs/gtk+:2 )
+
+	system-wine? (
+		>=app-emulation/wine-1.7.16[abi_x86_32,-abi_x86_x32,-abi_x86_64,fontconfig,mp3,truetype,X,nls,xml]
+	)
 "
 
 RESTRICT="mirror strip"
@@ -35,7 +39,9 @@ src_install() {
 	chmod 755 ${D}/usr
 	chown -R root:root ${D}
 	cp ${D}/opt/longene/qq/qq-test.desktop ${D}/usr/share/applications/
-
+	if use system-wine ; then
+		ln -svf /usr/bin  ${D}/opt/longene/qq/wine-lib/bin
+	fi
 }
 
 pkg_postinst() {
