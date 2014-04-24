@@ -40,7 +40,9 @@ src_install() {
 	chown -R root:root ${D}
 	cp ${D}/opt/longene/qq/qq-test.desktop ${D}/usr/share/applications/
 	if use system-wine ; then
+		rm ${D}/opt/longene/qq/wine-lib/bin -rf
 		ln -svf /usr/bin  ${D}/opt/longene/qq/wine-lib/bin
+		rm -rf ${D}/opt/longene/qq/wine-lib/lib
 	fi
 }
 
