@@ -7,9 +7,6 @@
 # mask live ebuild
 ~app-i18n/fcitx-9999
 
-# mask live ebuild
-~net-misc/avbot-9999
-
 # microcai
 # mask for testing
 =dev-libs/boost-1.54.0

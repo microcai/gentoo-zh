@@ -18,7 +18,7 @@ SRC_URI=""
 LICENSE="GPL3"
 
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS=""
 IUSE=""
 
 inherit cmake-utils git-2
