@@ -78,6 +78,7 @@ src_prepare() {
 		"${FILESDIR}/${PN}-1.48.0-python_linking.patch" \
 		"${FILESDIR}/${PN}-1.48.0-disable_icu_rpath.patch" \
 		"${FILESDIR}/${PN}-1.55.0-context-x32.patch"
+	epatch_user
 }
 
 ejam() {

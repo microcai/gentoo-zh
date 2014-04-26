@@ -15,7 +15,7 @@ EGIT_REPO_URI="git://github.com/stepmania/stepmania.git"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug X gtk +jpeg +mad +vorbis +network +ffmpeg bundled-libs"
+IUSE="debug X gtk +jpeg +mad +vorbis +network +ffmpeg sse2 bundled-libs"
 
 DEPEND="gtk? ( x11-libs/gtk+:2 )
 	media-libs/alsa-lib
@@ -28,11 +28,11 @@ DEPEND="gtk? ( x11-libs/gtk+:2 )
 	x11-libs/libXrandr
 	media-libs/glew
 	virtual/opengl
-	!bundled-libs? ( dev-libs/libpcre )"
+	!bundled-libs? ( dev-libs/libpcre dev-libs/jsoncpp )"
 
 remove_bundled_lib() {
 	local blib_prefix
-	blib_prefix="${S}/src"
+	blib_prefix="${S}/extern"
 	einfo "Removing bundled library $1 ..."
 	rm -rf "${blib_prefix}/$1" || die "Failed removing bundled library $1"
 }
@@ -81,7 +81,7 @@ src_configure() {
 	myconf=""
 	if ! use bundled-libs; then
 		einfo "Disabling bundled libraries.."
-		myconf="${myconf} --with-system-pcre"
+		myconf="${myconf} --with-system-pcre --with-system-ffmpeg"
 	fi
 	egamesconf \
 	--disable-dependency-tracking \
@@ -95,6 +95,7 @@ src_configure() {
 	$(use_with vorbis) \
 	$(use_with network) \
 	$(use_with ffmpeg) \
+	$(use_with sse2) \
 	${myconf}
 }
 
