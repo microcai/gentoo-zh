@@ -25,15 +25,16 @@ SRC_URI="${GOAGENT_SRC_URI}"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="crypto dns +gtk"
+IUSE="+gtk"
 
-RDEPEND="crypto? ( dev-python/pycrypto )
+RDEPEND="dev-python/pycrypto
 	dev-lang/python:2.7[ssl]
 	dev-libs/nss[utils]
+	>=dev-python/gevent-1.0
+	dev-python/geoip-python
 	dev-python/pyopenssl
-	dns? ( >=dev-python/gevent-1.0
-		dev-python/dnslib )
-	gtk? ( x11-libs/vte:0[python] )"
+	gtk? ( x11-libs/vte:0[python] )
+	net-libs/pacparser"
 
 src_unpack() {
 	${GOAGENT_ECLASS}_src_unpack
@@ -45,12 +46,16 @@ src_prepare() {
 	else
 		rm ${S}/local/goagent-gtk.py || die
 	fi
+
+	sed -e "s|^#!/usr/bin/env python|#!/usr/bin/env python2|" \
+		-e 's|^    geoip = .*)\( if.*\)$|    geoip = pygeoip.GeoIP("/usr/share/GeoIP/GeoIP.dat")\1|' \
+		-i ${S}/local/proxy.py
 }
 
 src_install() {
 	insinto "/etc/"
-	newins "${S}/local/proxy.ini" goagent
-	rm ${S}/*/*.{bat,exe,js,dll,ini,manifest,command} || die
+	newins "${FILESDIR}/goagent" goagent
+	rm ${S}/*/*.{bat,exe,js,dll,manifest,command} || die
 	rm ${S}/local/python27.zip || die
 
 	if use gtk ; then
@@ -68,7 +73,7 @@ src_install() {
 		"/opt/goagent/local/goagent-logo.png"
 	fi
 
-	dosym /etc/goagent "/opt/goagent/local/proxy.ini"
+	dosym /etc/goagent "/opt/goagent/local/proxy.user.ini"
 
 	insinto "/opt/goagent"
 	doins -r "${S}/local" "${S}/server"
