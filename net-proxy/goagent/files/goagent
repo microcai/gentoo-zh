@@ -1,0 +1,9 @@
+; From 3.1.2-2, /etc/goagent becomes user configuration for goagent. Put any customization there, not the default settings.
+
+[gae]
+appid = your_appid
+password = yourpassword
+
+[dns]
+enable = 1
+listen = 127.0.0.1:5353
