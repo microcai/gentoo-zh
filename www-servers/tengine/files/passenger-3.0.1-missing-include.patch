@@ -1,0 +1,12 @@
+diff --git a/ext/common/RandomGenerator.h b/ext/common/RandomGenerator.h
+index 4a72a5e..836bf66 100644
+--- a/ext/common/RandomGenerator.h
++++ b/ext/common/RandomGenerator.h
+@@ -26,6 +26,7 @@
+ #define _PASSENGER_RANDOM_GENERATOR_H_
+ 
+ #include <string>
++#include <cerrno>
+ 
+ #include <boost/noncopyable.hpp>
+ #include <boost/shared_ptr.hpp>
