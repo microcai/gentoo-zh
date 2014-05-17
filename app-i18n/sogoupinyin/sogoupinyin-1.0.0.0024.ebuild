@@ -6,8 +6,8 @@ EAPI=5
 
 DESCRIPTION="Sogou Pinyin input method."
 HOMEPAGE="http://pinyin.sogou.com/linux/"
-SRC_URI="amd64? ( http://download.ime.sogou.com/1399632797/sogou_pinyin_linux_${PV}_amd64.deb )
- x86? ( http://download.ime.sogou.com/1399632797/sogou_pinyin_linux_${PV}_i386.deb )
+SRC_URI="amd64? ( http://download.ime.sogou.com/1400320511/sogou_pinyin_linux_${PV}_amd64.deb )
+ x86? ( http://download.ime.sogou.com/1400320114/sogou_pinyin_linux_${PV}_i386.deb )
 "
 
 LICENSE="Fcitx-Sogou"
@@ -18,6 +18,8 @@ RESTRICT="mirror"
 
 RDEPEND=">=app-i18n/fcitx-4.2.8[qt4,X,dbus]
 !app-i18n/fcitx-qimpanel
+net-libs/libssh2
+media-video/rtmpdump
 dev-qt/qtdeclarative:4
 dev-qt/qtgui:4
 !app-i18n/fcitx-sogoupinyin"
@@ -53,6 +55,8 @@ src_install(){
   dodir /usr/lib
   insinto /usr/lib
   dosym libcurl.so.4 /usr/lib/libcurl-gnutls.so.4
+  dosym libgnutls.so /usr/lib/libgnutls.so.26
+  dosym librtmp.so /usr/lib/librtmp.so.0
 }
 
 pkg_postinst(){
