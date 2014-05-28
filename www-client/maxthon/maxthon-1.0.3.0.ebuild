@@ -59,6 +59,7 @@ RDEPEND="
 	x11-libs/libXScrnSaver
 	x11-libs/libXtst
 	x11-libs/pango
+	x11-libs/gtkhotkey
 	x11-misc/xdg-utils"
 DEPEND=""
 
@@ -85,7 +86,12 @@ src_install() {
 		
 
 }
+
 pkg_postinst() {
 	fdo-mime_desktop_database_update
 	gnome2_icon_cache_update
+	
+	elog
+	elog "选词之后<Control><Shift>X 发现更多精彩~"
+	elog
 }
