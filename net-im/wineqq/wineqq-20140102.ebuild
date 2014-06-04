@@ -15,11 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="system-wine"
 
-RDEPEND="amd64? (
-		app-emulation/emul-linux-x86-gtklibs
-        )
-
-	!amd64? ( x11-libs/gtk+:2 )
+RDEPEND="
+	x11-libs/gtk+:2[x86_abi_32]
 
 	system-wine? (
 		>=app-emulation/wine-1.7.16[abi_x86_32,-abi_x86_x32,-abi_x86_64,fontconfig,mp3,truetype,X,nls,xml]
