@@ -25,7 +25,7 @@ DEPEND="x11-misc/xclip
 RDEPEND="${DEPEND}"
 
 src_prepare(){
-        sed -i '1s/from BeautifulSoup/from bs4/' fusionyoudao.py || die "patch error"
+        sed -i '1,5s/BeautifulSoup/bs4/' fusionyoudao.py || die "patch error"
 }
 
 src_install(){
