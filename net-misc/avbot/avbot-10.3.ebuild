@@ -6,6 +6,8 @@ EAPI=5
 
 RESTRICT="mirror"
 
+EGIT_COMMIT=v${PV}
+
 EGIT_REPO_URI="git://github.com/avplayer/avbot.git"
 
 DESCRIPTION="avbot connects QQ/XMPP/IRC/POP3/SMTP"
@@ -16,7 +18,7 @@ SRC_URI=""
 LICENSE="GPL3"
 
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="x86 amd64"
 IUSE="python zmq lua"
 
 inherit cmake-utils git-r3
