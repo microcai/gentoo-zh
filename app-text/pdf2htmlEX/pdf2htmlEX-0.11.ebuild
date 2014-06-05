@@ -15,7 +15,15 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND=">=app-text/poppler-0.20[cjk,png,jpeg2k]
+RDEPEND=">=app-text/poppler-0.26[cjk,png,jpeg2k]
 	media-gfx/fontforge"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+src_prepare(){
+	
+	epatch_user
+	
+	cmake-utils_src_parpare
+	vcs-snapshot_src_parpare
+}
