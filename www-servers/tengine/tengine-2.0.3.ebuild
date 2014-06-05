@@ -27,19 +27,19 @@ HTTP_UPLOAD_PROGRESS_MODULE_PV="0.9.0"
 HTTP_UPLOAD_PROGRESS_MODULE_P="ngx_upload_progress-${HTTP_UPLOAD_PROGRESS_MODULE_PV}"
 #HTTP_UPLOAD_PROGRESS_MODULE_SHA1="a788dea"
 
-# http_headers_more (http://github.com/agentzh/headers-more-nginx-module, BSD license)
+# http_headers_more (http://github.com/openresty/headers-more-nginx-module, BSD license)
 HTTP_HEADERS_MORE_MODULE_PV="0.25"
 HTTP_HEADERS_MORE_MODULE_P="ngx-http-headers-more-${HTTP_HEADERS_MORE_MODULE_PV}"
-#HTTP_HEADERS_MORE_MODULE_SHA1="0c6e05d"
+HTTP_HEADERS_MORE_MODULE_SHA1="0c6e05d"
 
 # http_redis (http://wiki.nginx.org/HttpRedis)
 #HTTP_REDIS_MODULE_P="ngx_http_redis-0.3.5"
 
-# http_redis (https://github.com/agentzh/redis2-nginx-module, BSD license)
+# http_redis (https://github.com/openresty/redis2-nginx-module, BSD license)
 HTTP_REDIS_MODULE_PV="0.11"
 HTTP_REDIS_MODULE_P="ngx_redis-${HTTP_REDIS_MODULE_PV}"
 HTTP_REDIS_MODULE_SHA1="828803d"
-HTTP_REDIS_MODULE_URI="http://github.com/agentzh/redis2-nginx-module/tarball/v${HTTP_REDIS_MODULE_PV}"
+HTTP_REDIS_MODULE_URI="http://github.com/openresty/redis2-nginx-module/tarball/v${HTTP_REDIS_MODULE_PV}"
 
 # http_push (http://pushmodule.slact.net/, MIT license)
 HTTP_PUSH_MODULE_PV="0.692"
@@ -62,18 +62,18 @@ HTTP_EY_BALANCER_MODULE_P="nginx-ey-balancer-${HTTP_EY_BALANCER_MODULE_PV}"
 # NginX DevKit module (https://github.com/simpl/ngx_devel_kit, BSD)
 HTTP_NDK_MODULE_PV="0.2.19"
 HTTP_NDK_MODULE_P="ngx_devel_kit-${HTTP_NDK_MODULE_PV}"
-#HTTP_NDK_MODULE_SHA1="8dd0df5"
+HTTP_NDK_MODULE_SHA1="8dd0df5"
 
 # NginX Lua module (https://github.com/chaoslawful/lua-nginx-module, BSD)
 #HTTP_LUA_MODULE_PV="0.3.1rc19"
 #HTTP_LUA_MODULE_P="lua-nginx-module-${HTTP_LUA_MODULE_PV}"
 #HTTP_LUA_MODULE_SHA1="b25d06b"
 
-# http_lua (https://github.com/chaoslawful/lua-nginx-module, BSD license)
-HTTP_LUA_MODULE_PV="0.9.5rc2"
+# http_lua (https://github.com/openresty/lua-nginx-module, BSD license)
+HTTP_LUA_MODULE_PV="0.9.8"
 HTTP_LUA_MODULE_P="ngx_lua-${HTTP_LUA_MODULE_PV}"
-#HTTP_LUA_MODULE_SHA1="df7bf56"
-HTTP_LUA_MODULE_URI="http://github.com/chaoslawful/lua-nginx-module/tarball/v${HTTP_LUA_MODULE_PV}"
+HTTP_LUA_MODULE_SHA1="73e831f"
+HTTP_LUA_MODULE_URI="http://github.com/openresty/lua-nginx-module/tarball/v${HTTP_LUA_MODULE_PV}"
 
 HTTP_DRIZZLE_MODULE_PV="0.1.2rc2"
 HTTP_DRIZZLE_MODULE_P="drizzle-nginx-module-${HTTP_DRIZZLE_MODULE_PV}"
@@ -84,38 +84,38 @@ HTTP_FORM_INPUT_MODULE_PV="0.07"
 HTTP_FORM_INPUT_MODULE_P="form-input-nginx-module-${HTTP_FORM_INPUT_MODULE_PV}"
 #HTTP_FORM_INPUT_MODULE_SHA1="78de845"
 
-# NginX echo module (https://github.com/agentzh/echo-nginx-module, BSD)
+# NginX echo module (https://github.com/openresty/echo-nginx-module, BSD)
 HTTP_ECHO_MODULE_PV="0.37rc7"
 HTTP_ECHO_MODULE_P="echo-nginx-module-${HTTP_ECHO_MODULE_PV}"
 #HTTP_ECHO_MODULE_SHA1="b7ea185"
 
-# NginX Featured mecached module (https://github.com/agentzh/memc-nginx-module, BSD)
+# NginX Featured mecached module (https://github.com/openresty/memc-nginx-module, BSD)
 HTTP_MEMC_MODULE_PV="0.14"
 HTTP_MEMC_MODULE_P="memc-nginx-module-${HTTP_MEMC_MODULE_PV}"
 #HTTP_MEMC_MODULE_SHA1="de4cf86"
 
-# NginX RDS-JSON module (https://github.com/agentzh/rds-json-nginx-module, BSD)
+# NginX RDS-JSON module (https://github.com/openresty/rds-json-nginx-module, BSD)
 HTTP_RDS_JSON_MODULE_PV="0.13"
 HTTP_RDS_JSON_MODULE_P="rds-json-nginx-module-${HTTP_RDS_JSON_MODULE_PV}"
 #HTTP_RDS_JSON_MODULE_SHA1="8292070"
 
-# NginX SRCache module (https://github.com/agentzh/srcache-nginx-module, BSD)
+# NginX SRCache module (https://github.com/openresty/srcache-nginx-module, BSD)
 HTTP_SRCACHE_MODULE_PV="0.25"
 HTTP_SRCACHE_MODULE_P="srcache-nginx-module-${HTTP_SRCACHE_MODULE_PV}"
 #HTTP_SRCACHE_MODULE_SHA1="f25fe90"
 
-# NginX Set-Misc module (https://github.com/agentzh/set-misc-nginx-module, BSD)
+# NginX Set-Misc module (https://github.com/openresty/set-misc-nginx-module, BSD)
 HTTP_SET_MISC_MODULE_PV="0.24"
 HTTP_SET_MISC_MODULE_P="set-misc-nginx-module-${HTTP_SET_MISC_MODULE_PV}"
 #HTTP_SET_MISC_MODULE_SHA1="36fd035"
-HTTP_SET_MISC_MODULE_URI="http://github.com/agentzh/set-misc-nginx-module/tarball/v${HTTP_SET_MISC_MODULE_PV}"
+HTTP_SET_MISC_MODULE_URI="http://github.com/openresty/set-misc-nginx-module/tarball/v${HTTP_SET_MISC_MODULE_PV}"
 
-# NginX XSS module (https://github.com/agentzh/xss-nginx-module, BSD)
+# NginX XSS module (https://github.com/openresty/xss-nginx-module, BSD)
 HTTP_XSS_MODULE_PV="0.04"
 HTTP_XSS_MODULE_P="xss-nginx-module-${HTTP_XSS_MODULE_PV}"
 #HTTP_XSS_MODULE_SHA1="7e37038"
 
-# NginX Array-Var module (https://github.com/agentzh/array-var-nginx-module, BSD)
+# NginX Array-Var module (https://github.com/openresty/array-var-nginx-module, BSD)
 HTTP_ARRAY_VAR_MODULE_PV="0.03"
 HTTP_ARRAY_VAR_MODULE_P="array-var-nginx-module-${HTTP_ARRAY_VAR_MODULE_PV}"
 #HTTP_ARRAY_VAR_MODULE_SHA1="4676747"
@@ -154,7 +154,7 @@ HTTP_SLOWFS_CACHE_MODULE_P="ngx_slowfs_cache-${HTTP_SLOWFS_CACHE_MODULE_PV}"
 CHUNKIN_MODULE_PV="0.22rc2"
 CHUNKIN_MODULE_SHA1="b46dd27"
 
-inherit eutils ssl-cert toolchain-funcs perl-module ruby-ng flag-o-matic systemd
+inherit eutils user ssl-cert toolchain-funcs perl-module ruby-ng flag-o-matic systemd
 
 DESCRIPTION="Robust, small and high performance http and reverse proxy server"
 HOMEPAGE="http://sysoev.ru/nginx/
@@ -162,7 +162,7 @@ HOMEPAGE="http://sysoev.ru/nginx/
 	http://tengine.taobao.org/
 	http://labs.frickle.com/nginx_ngx_cache_purge/"
 SRC_URI="http://tengine.taobao.org/download/${P}.tar.gz
-	nginx_modules_http_headers_more? ( https://github.com/agentzh/headers-more-nginx-module/tarball/v${HTTP_HEADERS_MORE_MODULE_PV} -> ${HTTP_HEADERS_MORE_MODULE_P}.tar.gz )
+	nginx_modules_http_headers_more? ( https://github.com/openresty/headers-more-nginx-module/tarball/v${HTTP_HEADERS_MORE_MODULE_PV} -> ${HTTP_HEADERS_MORE_MODULE_P}.tar.gz )
 	nginx_modules_http_passenger? ( https://github.com/FooBarWidget/passenger/tarball/master -> passenger-git-${PASSENGER_PV}.tar.gz )
 	nginx_modules_http_redis? ( ${HTTP_REDIS_MODULE_URI} ->	${HTTP_REDIS_MODULE_P}.tar.gz )
 	nginx_modules_http_push? ( http://pushmodule.slact.net/downloads/${HTTP_PUSH_MODULE_P}.tar.gz )
@@ -170,17 +170,17 @@ SRC_URI="http://tengine.taobao.org/download/${P}.tar.gz
 	nginx_modules_http_upload? ( http://www.grid.net.ru/nginx/download/${HTTP_UPLOAD_MODULE_P}.tar.gz )
 	nginx_modules_http_ey_balancer? ( https://github.com/msva/nginx-ey-balancer/tarball/v${HTTP_EY_BALANCER_MODULE_PV} -> ${HTTP_EY_BALANCER_MODULE_P}.tar.gz )
 	nginx_modules_http_ndk? ( https://github.com/simpl/ngx_devel_kit/tarball/v${HTTP_NDK_MODULE_PV} -> ${HTTP_NDK_MODULE_P}.tar.gz )
-	nginx_modules_http_lua? ( https://github.com/chaoslawful/lua-nginx-module/tarball/v${HTTP_LUA_MODULE_PV} -> ${HTTP_LUA_MODULE_P}.tar.gz )
+	nginx_modules_http_lua? ( https://github.com/openresty/lua-nginx-module/tarball/v${HTTP_LUA_MODULE_PV} -> ${HTTP_LUA_MODULE_P}.tar.gz )
 	nginx_modules_http_drizzle? ( https://github.com/chaoslawful/drizzle-nginx-module/tarball/v${HTTP_DRIZZLE_MODULE_PV} -> ${HTTP_DRIZZLE_MODULE_P}.tar.gz )
 	nginx_modules_http_form_input? ( https://github.com/calio/form-input-nginx-module/tarball/v${HTTP_FORM_INPUT_MODULE_PV} -> ${HTTP_FORM_INPUT_MODULE_P}.tar.gz )
-	nginx_modules_http_echo? ( https://github.com/agentzh/echo-nginx-module/tarball/v${HTTP_ECHO_MODULE_PV} -> ${HTTP_ECHO_MODULE_P}.tar.gz )
-	nginx_modules_http_rds_json? ( https://github.com/agentzh/rds-json-nginx-module/tarball/v${HTTP_RDS_JSON_MODULE_PV} -> ${HTTP_RDS_JSON_MODULE_P}.tar.gz )
-	nginx_modules_http_srcache? ( https://github.com/agentzh/srcache-nginx-module/tarball/v${HTTP_SRCACHE_MODULE_PV} -> ${HTTP_SRCACHE_MODULE_P}.tar.gz )
+	nginx_modules_http_echo? ( https://github.com/openresty/echo-nginx-module/tarball/v${HTTP_ECHO_MODULE_PV} -> ${HTTP_ECHO_MODULE_P}.tar.gz )
+	nginx_modules_http_rds_json? ( https://github.com/openresty/rds-json-nginx-module/tarball/v${HTTP_RDS_JSON_MODULE_PV} -> ${HTTP_RDS_JSON_MODULE_P}.tar.gz )
+	nginx_modules_http_srcache? ( https://github.com/openresty/srcache-nginx-module/tarball/v${HTTP_SRCACHE_MODULE_PV} -> ${HTTP_SRCACHE_MODULE_P}.tar.gz )
 	nginx_modules_http_set_misc? ( ${HTTP_SET_MISC_MODULE_URI} -> ${HTTP_SET_MISC_MODULE_P}.tar.gz )
-	nginx_modules_http_xss? ( https://github.com/agentzh/xss-nginx-module/tarball/v${HTTP_XSS_MODULE_PV} -> ${HTTP_XSS_MODULE_P}.tar.gz )
-	nginx_modules_http_array_var? ( https://github.com/agentzh/array-var-nginx-module/tarball/v${HTTP_ARRAY_VAR_MODULE_PV} -> ${HTTP_ARRAY_VAR_MODULE_P}.tar.gz )
+	nginx_modules_http_xss? ( https://github.com/openresty/xss-nginx-module/tarball/v${HTTP_XSS_MODULE_PV} -> ${HTTP_XSS_MODULE_P}.tar.gz )
+	nginx_modules_http_array_var? ( https://github.com/openresty/array-var-nginx-module/tarball/v${HTTP_ARRAY_VAR_MODULE_PV} -> ${HTTP_ARRAY_VAR_MODULE_P}.tar.gz )
 	nginx_modules_http_iconv? ( https://github.com/calio/iconv-nginx-module/tarball/v${HTTP_ICONV_MODULE_PV} -> ${HTTP_ICONV_MODULE_P}.tar.gz )
-	nginx_modules_http_memc? ( https://github.com/agentzh/memc-nginx-module/tarball/v${HTTP_MEMC_MODULE_PV} -> ${HTTP_MEMC_MODULE_P}.tar.gz )
+	nginx_modules_http_memc? ( https://github.com/openresty/memc-nginx-module/tarball/v${HTTP_MEMC_MODULE_PV} -> ${HTTP_MEMC_MODULE_P}.tar.gz )
 	nginx_modules_http_postgres? ( https://codeload.github.com/FRiCKLE/ngx_postgres/tar.gz/${HTTP_POSTGRES_MODULE_PV} -> ${HTTP_POSTGRES_MODULE_P}.tar.gz )
 	nginx_modules_http_coolkit? ( http://labs.frickle.com/files/${HTTP_COOLKIT_MODULE_P}.tar.gz )
 	nginx_modules_http_upload_progress? ( https://github.com/masterzen/nginx-upload-progress-module/tarball/v${HTTP_UPLOAD_PROGRESS_MODULE_PV} -> ${HTTP_UPLOAD_PROGRESS_MODULE_P}.tar.gz )
@@ -188,7 +188,7 @@ SRC_URI="http://tengine.taobao.org/download/${P}.tar.gz
 	nginx_modules_http_slowfs_cache? ( http://labs.frickle.com/files/${HTTP_SLOWFS_CACHE_MODULE_P}.tar.gz )
 	pam? ( http://web.iti.upv.es/~sto/nginx/ngx_http_auth_pam_module-1.1.tar.gz )
 	rrd? ( http://wiki.nginx.org/images/9/9d/Mod_rrd_graph-0.2.0.tar.gz )
-	chunk? ( https://github.com/agentzh/chunkin-nginx-module/tarball/v${CHUNKIN_MODULE_PV} -> chunkin-nginx-module-${CHUNKIN_MODULE_PV}.tgz )"
+	chunk? ( https://github.com/openresty/chunkin-nginx-module/tarball/v${CHUNKIN_MODULE_PV} -> chunkin-nginx-module-${CHUNKIN_MODULE_PV}.tgz )"
 #	nginx_modules_http_set_cconv? ( http://github.com/liseen/set-cconv-nginx-module/tarball/v${HTTP_SET_CCONV_MODULE_PV} -> ${HTTP_SET_CCON_MODULE_P}.tar.gz )
 	# nginx_modules_http_supervisord? ( http://labs.frickle.com/files/${HTTP_SUPERVISORD_MODULE_P}.tar.gz )
 
@@ -199,11 +199,10 @@ KEYWORDS="~amd64 ~x86"
 
 NGINX_MODULES_STD="access auth_basic autoindex browser charset empty_gif fastcgi
 geo gzip limit_req limit_zone map memcached proxy referer rewrite scgi ssi
-split_clients upstream_ip_hash userid uwsgi"
-NGINX_MODULES_OPT="addition dav degradation flv geoip gzip_static image_filter
+split_clients upstream_ip_hash userid uwsgi "
+NGINX_MODULES_OPT="addition concat sysguard spdy dav degradation flv geoip gzip_static image_filter
 mp4 perl random_index realip secure_link stub_status sub xslt"
 NGINX_MODULES_MAIL="imap pop3 smtp"
-
 NGINX_MODULES_3RD="http_cache_purge http_headers_more http_passenger http_redis http_push
 http_upload http_ey_balancer http_slowfs_cache http_ndk http_lua http_form_input
 http_echo http_memc http_drizzle http_rds_json http_postgres http_coolkit
@@ -383,7 +382,7 @@ src_configure() {
 # (**) http_set_misc
 	if use nginx_modules_http_set_misc; then
 		http_enabled=1
-		myconf+=" --add-module=${WORKDIR}/agentzh-set-misc-nginx-module-${HTTP_SET_MISC_MODULE_SHA1}"
+		myconf+=" --add-module=${WORKDIR}/openresty-set-misc-nginx-module-${HTTP_SET_MISC_MODULE_SHA1}"
 	fi
 
 # (**)http_ auth_request
@@ -395,13 +394,13 @@ src_configure() {
 # (**) http_echo
 	if use nginx_modules_http_echo; then
 		http_enabled=1
-		myconf+=" --add-module=${WORKDIR}/agentzh-echo-nginx-module-${HTTP_ECHO_MODULE_SHA1}"
+		myconf+=" --add-module=${WORKDIR}/openresty-echo-nginx-module-${HTTP_ECHO_MODULE_SHA1}"
 	fi
 
 # (**) http_memc
 	if use nginx_modules_http_memc; then
 		http_enabled=1
-		myconf+=" --add-module=${WORKDIR}/agentzh-memc-nginx-module-${HTTP_MEMC_MODULE_SHA1}"
+		myconf+=" --add-module=${WORKDIR}/openresty-memc-nginx-module-${HTTP_MEMC_MODULE_SHA1}"
 	fi
 
 # (**) http_lua
@@ -414,19 +413,19 @@ src_configure() {
 			export LUA_LIB=$(pkg-config --variable libdir lua)
 			export LUA_INC=$(pkg-config --variable includedir lua)
 		fi
-		myconf+=" --add-module=${WORKDIR}/chaoslawful-lua-nginx-module-${HTTP_LUA_MODULE_SHA1}"
+		myconf+=" --add-module=${WORKDIR}/openresty-lua-nginx-module-${HTTP_LUA_MODULE_SHA1}"
 	fi
 
 # (**) http_headers_more
 	if use nginx_modules_http_headers_more; then
 		http_enabled=1
-		myconf+=" --add-module=${WORKDIR}/agentzh-headers-more-nginx-module-${HTTP_HEADERS_MORE_MODULE_SHA1}"
+		myconf+=" --add-module=${WORKDIR}/openresty-headers-more-nginx-module-${HTTP_HEADERS_MORE_MODULE_SHA1}"
 	fi
 
 # (**) http_srcache
 	if use nginx_modules_http_srcache; then
 		http_enabled=1
-		myconf+=" --add-module=${WORKDIR}/agentzh-srcache-nginx-module-${HTTP_SRCACHE_MODULE_SHA1}"
+		myconf+=" --add-module=${WORKDIR}/openresty-srcache-nginx-module-${HTTP_SRCACHE_MODULE_SHA1}"
 	fi
 
 
@@ -439,7 +438,7 @@ src_configure() {
 # (**) http_rds_json
 	if use nginx_modules_http_rds_json; then
 		http_enabled=1
-		myconf+=" --add-module=${WORKDIR}/agentzh-rds-json-nginx-module-${HTTP_RDS_JSON_MODULE_SHA1}"
+		myconf+=" --add-module=${WORKDIR}/openresty-rds-json-nginx-module-${HTTP_RDS_JSON_MODULE_SHA1}"
 	fi
 
 # http_postgres
@@ -476,13 +475,13 @@ src_configure() {
 # http_xss
 	if use nginx_modules_http_xss; then
 		http_enabled=1
-		myconf+=" --add-module=${WORKDIR}/agentzh-xss-nginx-module-${HTTP_XSS_MODULE_SHA1}"
+		myconf+=" --add-module=${WORKDIR}/openresty-xss-nginx-module-${HTTP_XSS_MODULE_SHA1}"
 	fi
 
 # http_array_var
 	if use nginx_modules_http_array_var; then
 		http_enabled=1
-		myconf="${myconf} --add-module=${WORKDIR}/agentzh-array-var-nginx-module-${HTTP_ARRAY_VAR_MODULE_SHA1}"
+		myconf="${myconf} --add-module=${WORKDIR}/openresty-array-var-nginx-module-${HTTP_ARRAY_VAR_MODULE_SHA1}"
 	fi
 
 # http_form_input
@@ -553,7 +552,7 @@ src_configure() {
 
 	use perftools && myconf+=" --with-google_perftools_module"
 	use rrd && myconf+=" --add-module=${WORKDIR}/mod_rrd_graph-0.2.0"
-	use chunk && myconf+=" --add-module=${WORKDIR}/agentzh-chunkin-nginx-module-${CHUNKIN_MODULE_SHA1}"
+	use chunk && myconf+=" --add-module=${WORKDIR}/openresty-chunkin-nginx-module-${CHUNKIN_MODULE_SHA1}"
 	use pam && myconf+=" --add-module=${WORKDIR}/ngx_http_auth_pam_module-1.1"
 	use nginx_modules_http_syslog && myconf+=" --with-syslog"
 
@@ -673,7 +672,7 @@ src_install() {
 # http_lua
 	if use nginx_modules_http_lua; then
 		docinto "${HTTP_LUA_MODULE_P}"
-		dodoc "${WORKDIR}"/"chaoslawful-lua-nginx-module-${HTTP_LUA_MODULE_SHA1}"/{Changes,README}
+		dodoc "${WORKDIR}"/"openresty-lua-nginx-module-${HTTP_LUA_MODULE_SHA1}"/{Changes,README.markdown}
 	fi
 
 # http_form_input
@@ -685,19 +684,19 @@ src_install() {
 # http_echo
 	if use nginx_modules_http_echo; then
 		docinto "${HTTP_ECHO_MODULE_P}"
-		dodoc "${WORKDIR}"/"agentzh-echo-nginx-module-${HTTP_ECHO_MODULE_SHA1}"/README
+		dodoc "${WORKDIR}"/"openresty-echo-nginx-module-${HTTP_ECHO_MODULE_SHA1}"/README
 	fi
 
 # http_srcache
 	if use nginx_modules_http_srcache; then
 		docinto "${HTTP_SRCACHE_MODULE_P}"
-		dodoc "${WORKDIR}"/"agentzh-srcache-nginx-module-${HTTP_SRCACHE_MODULE_SHA1}"/README
+		dodoc "${WORKDIR}"/"openresty-srcache-nginx-module-${HTTP_SRCACHE_MODULE_SHA1}"/README
 	fi
 
 # http_memc
 	if use nginx_modules_http_memc; then
 		docinto "${HTTP_MEMC_MODULE_P}"
-		dodoc "${WORKDIR}"/"agentzh-memc-nginx-module-${HTTP_MEMC_MODULE_SHA1}"/README
+		dodoc "${WORKDIR}"/"openresty-memc-nginx-module-${HTTP_MEMC_MODULE_SHA1}"/README
 	fi
 
 # http_drizzle
@@ -709,7 +708,7 @@ src_install() {
 # http_rds_json
 	if use nginx_modules_http_rds_json; then
 		docinto "${HTTP_RDS_JSON_MODULE_P}"
-		dodoc "${WORKDIR}"/"agentzh-rds-json-nginx-module-${HTTP_RDS_JSON_MODULE_SHA1}"/README
+		dodoc "${WORKDIR}"/"openresty-rds-json-nginx-module-${HTTP_RDS_JSON_MODULE_SHA1}"/README
 	fi
 
 # http_postgres
@@ -727,19 +726,19 @@ src_install() {
 # http_set_misc
 	if use nginx_modules_http_set_misc; then
 		docinto "${HTTP_SET_MISC_MODULE_P}"
-		dodoc "${WORKDIR}"/"agentzh-set-misc-nginx-module-${HTTP_SET_MISC_MODULE_SHA1}"/README
+		dodoc "${WORKDIR}"/"openresty-set-misc-nginx-module-${HTTP_SET_MISC_MODULE_SHA1}"/README
 	fi
 
 # http_xss
 	if use nginx_modules_http_xss; then
 		docinto "${HTTP_XSS_MODULE_P}"
-		dodoc "${WORKDIR}"/"agentzh-xss-nginx-module-${HTTP_XSS_MODULE_SHA1}"/README
+		dodoc "${WORKDIR}"/"openresty-xss-nginx-module-${HTTP_XSS_MODULE_SHA1}"/README
 	fi
 
 # http_array_var
 	if use nginx_modules_http_array_var; then
 		docinto "${HTTP_ARRAY_VAR_MODULE_P}"
-		dodoc "${WORKDIR}"/"agentzh-array-var-nginx-module-${HTTP_ARRAY_VAR_MODULE_SHA1}"/README
+		dodoc "${WORKDIR}"/"openresty-array-var-nginx-module-${HTTP_ARRAY_VAR_MODULE_SHA1}"/README
 	fi
 
 # http_iconv
@@ -772,7 +771,7 @@ src_install() {
 		rake fakeroot
 	fi
 
-	use chunk   && newdoc "${WORKDIR}/agentzh-chunkin-nginx-module-${CHUNKIN_MODULE_SHA1}"/README README.chunkin
+	use chunk   && newdoc "${WORKDIR}/openresty-chunkin-nginx-module-${CHUNKIN_MODULE_SHA1}"/README README.chunkin
 	use pam && newdoc "${WORKDIR}"/ngx_http_auth_pam_module-1.1/README README.pam
 }
 
