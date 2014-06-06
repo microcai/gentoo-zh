@@ -49,6 +49,7 @@ src_compile() {
 src_install() {
 	export XDG_RUNTIME_DIR=${S}
 	$PYTHON ./setup.py install  --root=${D} || die "Install failed"
+	python_fix_shebang "${ED}"usr/bin
 }
 
 pkg_postinst() {
