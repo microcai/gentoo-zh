@@ -4,8 +4,7 @@
 
 EAPI=5
 
-#PYTHON_COMPAT=(python{3_3,3_4})
-PYTHON_COMPAT="python3_3"
+PYTHON_COMPAT=(python{3_3,3_4})
 
 PYTHON_REQ_USE="sqlite3(+)"
 
@@ -23,16 +22,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="${PYTHON_DEPS}
+	dev-python/pycrypto[${PYTHON_USEDEP}]
 	dev-python/urllib3[${PYTHON_USEDEP}]
 	dev-python/pygobject[${PYTHON_USEDEP}]
 	dev-python/keyring[${PYTHON_USEDEP}]
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	x11-themes/gnome-icon-theme-symbolic"
-DEPEND=""
+
+DEPEND="${RDEPEND}"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-IUSE="-python_target_python3_4"
+IUSE="+python_single_target_python3_3 -python_single_target_python3_4"
 
 S=${WORKDIR}/${P}
 
