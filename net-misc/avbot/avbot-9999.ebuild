@@ -23,7 +23,7 @@ inherit cmake-utils git-r3
 
 
 DEPEND="
-	>=dev-libs/boost-1.55[nls,threads,static-libs,python=]
+	>=dev-libs/boost-1.55[nls,threads,context,static-libs,python=]
 	dev-libs/openssl
 	net-libs/gloox
 	sys-libs/zlib
