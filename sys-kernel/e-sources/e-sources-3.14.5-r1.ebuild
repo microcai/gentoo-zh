@@ -6,7 +6,7 @@ EAPI="5"
 K_DEBLOB_AVAILABLE="1"
 
 ck_version="1"
-gentoo_version="8"
+gentoo_version="9"
 tuxonice_version="2014.06.02"
 uksm_version="0.1.2.2"
 
