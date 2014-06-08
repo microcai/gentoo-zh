@@ -1,0 +1,39 @@
+diff --git a/aclocal/ax_lib_event.m4 b/aclocal/ax_lib_event.m4
+index 7d2f98a..d4d2774 100644
+--- a/aclocal/ax_lib_event.m4
++++ b/aclocal/ax_lib_event.m4
+@@ -138,7 +138,7 @@ AC_DEFUN([AX_LIB_EVENT_DO_CHECK],
+ 
+ AC_DEFUN([AX_LIB_EVENT],
+          [
+-
++          success=no
+           dnl Allow search path to be overridden on the command line.
+           AC_ARG_WITH([libevent],
+                       AS_HELP_STRING([--with-libevent@<:@=DIR@:>@], [use libevent [default=yes]. Optionally specify the root prefix dir where libevent is installed]),
+diff --git a/aclocal/ax_lib_zlib.m4 b/aclocal/ax_lib_zlib.m4
+index 8c10ab4..d4ac4f8 100644
+--- a/aclocal/ax_lib_zlib.m4
++++ b/aclocal/ax_lib_zlib.m4
+@@ -110,7 +110,7 @@ AC_DEFUN([AX_LIB_ZLIB_DO_CHECK],
+ 
+ AC_DEFUN([AX_LIB_ZLIB],
+          [
+-
++          success=no
+           dnl Allow search path to be overridden on the command line.
+           AC_ARG_WITH([zlib],
+                       AS_HELP_STRING([--with-zlib@<:@=DIR@:>@], [use zlib (default is yes) - it is possible to specify an alternate root directory for zlib]),
+diff --git a/configure.ac b/configure.ac
+index 7eea98f..8a275be 100755
+--- a/configure.ac
++++ b/configure.ac
+@@ -23,7 +23,7 @@ AC_INIT([thrift], [1.0.0-dev])
+ 
+ AC_CONFIG_AUX_DIR([.])
+ 
+-AM_INIT_AUTOMAKE([1.11 tar-ustar])
++AM_INIT_AUTOMAKE([1.11 tar-ustar subdir-objects])
+ PKG_PROG_PKG_CONFIG
+ 
+ AC_ARG_VAR([PY_PREFIX], [Prefix for installing Python modules.
