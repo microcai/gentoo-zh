@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Iptux is a ipmsg client in linux"
 HOMEPAGE="https://github.com/iptux-src/iptux"
 
-SRC_URI="https://github.com/iptux-src/iptux/archive/v${PV}.zip"
+SRC_URI="https://github.com/iptux-src/iptux/archive/v${PV}.zip -> ${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
