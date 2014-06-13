@@ -1,0 +1,160 @@
+--- a/fs/attr.c	2014-06-11 19:56:10.729668444 -0400
++++ b/fs/attr.c	2014-06-11 20:19:09.719657538 -0400
+@@ -50,14 +50,14 @@ int inode_change_ok(const struct inode *
+ 	if ((ia_valid & ATTR_UID) &&
+ 	    (!uid_eq(current_fsuid(), inode->i_uid) ||
+ 	     !uid_eq(attr->ia_uid, inode->i_uid)) &&
+-	    !inode_capable(inode, CAP_CHOWN))
++	    !capable_wrt_inode_uidgid(inode, CAP_CHOWN))
+ 		return -EPERM;
+ 
+ 	/* Make sure caller can chgrp. */
+ 	if ((ia_valid & ATTR_GID) &&
+ 	    (!uid_eq(current_fsuid(), inode->i_uid) ||
+ 	    (!in_group_p(attr->ia_gid) && !gid_eq(attr->ia_gid, inode->i_gid))) &&
+-	    !inode_capable(inode, CAP_CHOWN))
++		!capable_wrt_inode_uidgid(inode, CAP_CHOWN))
+ 		return -EPERM;
+ 
+ 	/* Make sure a caller can chmod. */
+@@ -67,7 +67,7 @@ int inode_change_ok(const struct inode *
+ 		/* Also check the setgid bit! */
+ 		if (!in_group_p((ia_valid & ATTR_GID) ? attr->ia_gid :
+ 				inode->i_gid) &&
+-		    !inode_capable(inode, CAP_FSETID))
++			!capable_wrt_inode_uidgid(inode, CAP_FSETID))
+ 			attr->ia_mode &= ~S_ISGID;
+ 	}
+ 
+@@ -160,7 +160,7 @@ void setattr_copy(struct inode *inode, c
+ 		umode_t mode = attr->ia_mode;
+ 
+ 		if (!in_group_p(inode->i_gid) &&
+-		    !inode_capable(inode, CAP_FSETID))
++			!capable_wrt_inode_uidgid(inode, CAP_FSETID))
+ 			mode &= ~S_ISGID;
+ 		inode->i_mode = mode;
+ 	}
+--- a/fs/inode.c	2014-06-11 19:56:23.489668343 -0400
++++ b/fs/inode.c	2014-06-11 20:06:19.049663633 -0400
+@@ -1840,14 +1840,18 @@ EXPORT_SYMBOL(inode_init_owner);
+  * inode_owner_or_capable - check current task permissions to inode
+  * @inode: inode being checked
+  *
+- * Return true if current either has CAP_FOWNER to the inode, or
+- * owns the file.
++ * Return true if current either has CAP_FOWNER in a namespace with the
++ * inode owner uid mapped, or owns the file
+  */
+ bool inode_owner_or_capable(const struct inode *inode)
+ {
++	struct user_namespace *ns;
++
+ 	if (uid_eq(current_fsuid(), inode->i_uid))
+ 		return true;
+-	if (inode_capable(inode, CAP_FOWNER))
++
++	ns = current_user_ns();
++	if (ns_capable(ns, CAP_FOWNER) && kuid_has_mapping(ns, inode->i_uid))
+ 		return true;
+ 	return false;
+ }
+--- a/fs/namei.c	2014-06-11 19:56:33.039668268 -0400
++++ b/fs/namei.c	2014-06-11 20:10:37.189661592 -0400
+@@ -332,10 +332,11 @@ int generic_permission(struct inode *ino
+ 
+ 	if (S_ISDIR(inode->i_mode)) {
+ 		/* DACs are overridable for directories */
+-		if (inode_capable(inode, CAP_DAC_OVERRIDE))
++        if (capable_wrt_inode_uidgid(inode, CAP_DAC_OVERRIDE))
+ 			return 0;
+ 		if (!(mask & MAY_WRITE))
+-			if (inode_capable(inode, CAP_DAC_READ_SEARCH))
++            if (capable_wrt_inode_uidgid(inode,
++                             CAP_DAC_READ_SEARCH))
+ 				return 0;
+ 		return -EACCES;
+ 	}
+@@ -345,7 +346,7 @@ int generic_permission(struct inode *ino
+ 	 * at least one exec bit set.
+ 	 */
+ 	if (!(mask & MAY_EXEC) || (inode->i_mode & S_IXUGO))
+-		if (inode_capable(inode, CAP_DAC_OVERRIDE))
++        if (capable_wrt_inode_uidgid(inode, CAP_DAC_OVERRIDE))
+ 			return 0;
+ 
+ 	/*
+@@ -353,7 +354,7 @@ int generic_permission(struct inode *ino
+ 	 */
+ 	mask &= MAY_READ | MAY_WRITE | MAY_EXEC;
+ 	if (mask == MAY_READ)
+-		if (inode_capable(inode, CAP_DAC_READ_SEARCH))
++        if (capable_wrt_inode_uidgid(inode, CAP_DAC_READ_SEARCH))
+ 			return 0;
+ 
+ 	return -EACCES;
+@@ -2370,7 +2371,7 @@ static inline int check_sticky(struct in
+ 		return 0;
+ 	if (uid_eq(dir->i_uid, fsuid))
+ 		return 0;
+-	return !inode_capable(inode, CAP_FOWNER);
++    return !capable_wrt_inode_uidgid(inode, CAP_FOWNER);
+ }
+ 
+ /*
+--- a/fs/xfs/xfs_ioctl.c	2014-06-11 19:57:03.309668028 -0400
++++ b/fs/xfs/xfs_ioctl.c	2014-06-11 20:11:15.719661287 -0400
+@@ -1241,7 +1241,7 @@ xfs_ioctl_setattr(
+ 		 * cleared upon successful return from chown()
+ 		 */
+ 		if ((ip->i_d.di_mode & (S_ISUID|S_ISGID)) &&
+-		    !inode_capable(VFS_I(ip), CAP_FSETID))
++            !capable_wrt_inode_uidgid(VFS_I(ip), CAP_FSETID))
+ 			ip->i_d.di_mode &= ~(S_ISUID|S_ISGID);
+ 
+ 		/*
+--- a/include/linux/capability.h	2014-06-11 19:57:21.319667886 -0400
++++ b/include/linux/capability.h	2014-06-11 20:11:52.129660999 -0400
+@@ -210,7 +210,7 @@ extern bool has_ns_capability_noaudit(st
+ 				      struct user_namespace *ns, int cap);
+ extern bool capable(int cap);
+ extern bool ns_capable(struct user_namespace *ns, int cap);
+-extern bool inode_capable(const struct inode *inode, int cap);
++extern bool capable_wrt_inode_uidgid(const struct inode *inode, int cap);
+ extern bool file_ns_capable(const struct file *file, struct user_namespace *ns, int cap);
+ 
+ /* audit system wants to get cap info from files as well */
+--- a/kernel/capability.c	2014-06-11 20:00:58.389666169 -0400
++++ b/kernel/capability.c	2014-06-11 20:13:46.629660094 -0400
+@@ -433,23 +433,19 @@ bool capable(int cap)
+ EXPORT_SYMBOL(capable);
+ 
+ /**
+- * inode_capable - Check superior capability over inode
++ * capable_wrt_inode_uidgid - Check nsown_capable and uid and gid mapped
+  * @inode: The inode in question
+  * @cap: The capability in question
+  *
+- * Return true if the current task has the given superior capability
+- * targeted at it's own user namespace and that the given inode is owned
+- * by the current user namespace or a child namespace.
+- *
+- * Currently we check to see if an inode is owned by the current
+- * user namespace by seeing if the inode's owner maps into the
+- * current user namespace.
+- *
++ * Return true if the current task has the given capability targeted at
++ * its own user namespace and that the given inode's uid and gid are
++ * mapped into the current user namespace
+  */
+-bool inode_capable(const struct inode *inode, int cap)
++bool capable_wrt_inode_uidgid(const struct inode *inode, int cap)
+ {
+ 	struct user_namespace *ns = current_user_ns();
+ 
+-	return ns_capable(ns, cap) && kuid_has_mapping(ns, inode->i_uid);
++	return ns_capable(ns, cap) && kuid_has_mapping(ns, inode->i_uid) &&
++		kgid_has_mapping(ns, inode->i_gid);
+ }
+-EXPORT_SYMBOL(inode_capable);
++EXPORT_SYMBOL(capable_wrt_inode_uidgid);
