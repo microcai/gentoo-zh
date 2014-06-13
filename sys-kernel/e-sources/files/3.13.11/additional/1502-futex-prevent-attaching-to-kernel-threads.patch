@@ -1,0 +1,52 @@
+From: Thomas Gleixner <tglx@linutronix.de>
+Date: Mon, 12 May 2014 20:45:35 +0000
+Subject: futex: Prevent attaching to kernel threads
+Git-commit: f0d71b3dcb8332f7971b5f2363632573e6d9486a
+
+We happily allow userspace to declare a random kernel thread to be the
+owner of a user space PI futex.
+
+Found while analysing the fallout of Dave Jones syscall fuzzer.
+
+We also should validate the thread group for private futexes and find
+some fast way to validate whether the "alleged" owner has RW access on
+the file which backs the SHM, but that's a separate issue.
+
+Signed-off-by: Thomas Gleixner <tglx@linutronix.de>
+Cc: Dave Jones <davej@redhat.com>
+Cc: Linus Torvalds <torvalds@linux-foundation.org>
+Cc: Peter Zijlstra <peterz@infradead.org>
+Cc: Darren Hart <darren@dvhart.com>
+Cc: Davidlohr Bueso <davidlohr@hp.com>
+Cc: Steven Rostedt <rostedt@goodmis.org>
+Cc: Clark Williams <williams@redhat.com>
+Cc: Paul McKenney <paulmck@linux.vnet.ibm.com>
+Cc: Lai Jiangshan <laijs@cn.fujitsu.com>
+Cc: Roland McGrath <roland@hack.frob.com>
+Cc: Carlos ODonell <carlos@redhat.com>
+Cc: Jakub Jelinek <jakub@redhat.com>
+Cc: Michael Kerrisk <mtk.manpages@gmail.com>
+Cc: Sebastian Andrzej Siewior <bigeasy@linutronix.de>
+Link: http://lkml.kernel.org/r/20140512201701.194824402@linutronix.de
+Signed-off-by: Thomas Gleixner <tglx@linutronix.de>
+Cc: stable@vger.kernel.org
+---
+ kernel/futex.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+Index: linux-3.12/kernel/futex.c
+===================================================================
+--- linux-3.12.orig/kernel/futex.c
++++ linux-3.12/kernel/futex.c
+@@ -668,6 +668,11 @@ lookup_pi_state(u32 uval, struct futex_h
+ 	if (!p)
+ 		return -ESRCH;
+ 
++	if (!p->mm) {
++		put_task_struct(p);
++		return -EPERM;
++	}
++
+ 	/*
+ 	 * We need to look at the task state flags to figure out,
+ 	 * whether the task is exiting. To protect against the do_exit

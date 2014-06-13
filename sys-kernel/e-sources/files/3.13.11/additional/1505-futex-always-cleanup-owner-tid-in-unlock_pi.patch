@@ -1,0 +1,99 @@
+From: Thomas Gleixner <tglx@linutronix.de>
+Date: Tue, 3 Jun 2014 12:27:07 +0000
+Subject: futex: Always cleanup owner tid in unlock_pi
+Git-commit: 13fbca4c6ecd96ec1a1cfa2e4f2ce191fe928a5e
+
+If the owner died bit is set at futex_unlock_pi, we currently do not
+cleanup the user space futex.  So the owner TID of the current owner
+(the unlocker) persists.  That's observable inconsistant state,
+especially when the ownership of the pi state got transferred.
+
+Clean it up unconditionally.
+
+Signed-off-by: Thomas Gleixner <tglx@linutronix.de>
+Cc: Kees Cook <keescook@chromium.org>
+Cc: Will Drewry <wad@chromium.org>
+Cc: Darren Hart <dvhart@linux.intel.com>
+Cc: stable@vger.kernel.org
+Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
+---
+ kernel/futex.c | 40 ++++++++++++++++++----------------------
+ 1 file changed, 18 insertions(+), 22 deletions(-)
+
+Index: linux-3.12/kernel/futex.c
+===================================================================
+--- linux-3.12.orig/kernel/futex.c
++++ linux-3.12/kernel/futex.c
+@@ -905,6 +905,7 @@ static int wake_futex_pi(u32 __user *uad
+ 	struct task_struct *new_owner;
+ 	struct futex_pi_state *pi_state = this->pi_state;
+ 	u32 uninitialized_var(curval), newval;
++	int ret = 0;
+ 
+ 	if (!pi_state)
+ 		return -EINVAL;
+@@ -928,23 +929,19 @@ static int wake_futex_pi(u32 __user *uad
+ 		new_owner = this->task;
+ 
+ 	/*
+-	 * We pass it to the next owner. (The WAITERS bit is always
+-	 * kept enabled while there is PI state around. We must also
+-	 * preserve the owner died bit.)
+-	 */
+-	if (!(uval & FUTEX_OWNER_DIED)) {
+-		int ret = 0;
+-
+-		newval = FUTEX_WAITERS | task_pid_vnr(new_owner);
+-
+-		if (cmpxchg_futex_value_locked(&curval, uaddr, uval, newval))
+-			ret = -EFAULT;
+-		else if (curval != uval)
+-			ret = -EINVAL;
+-		if (ret) {
+-			raw_spin_unlock(&pi_state->pi_mutex.wait_lock);
+-			return ret;
+-		}
++	 * We pass it to the next owner. The WAITERS bit is always
++	 * kept enabled while there is PI state around. We cleanup the
++	 * owner died bit, because we are the owner.
++	 */
++	newval = FUTEX_WAITERS | task_pid_vnr(new_owner);
++
++	if (cmpxchg_futex_value_locked(&curval, uaddr, uval, newval))
++		ret = -EFAULT;
++	else if (curval != uval)
++		ret = -EINVAL;
++	if (ret) {
++		raw_spin_unlock(&pi_state->pi_mutex.wait_lock);
++		return ret;
+ 	}
+ 
+ 	raw_spin_lock_irq(&pi_state->owner->pi_lock);
+@@ -2189,9 +2186,10 @@ retry:
+ 	/*
+ 	 * To avoid races, try to do the TID -> 0 atomic transition
+ 	 * again. If it succeeds then we can return without waking
+-	 * anyone else up:
++	 * anyone else up. We only try this if neither the waiters nor
++	 * the owner died bit are set.
+ 	 */
+-	if (!(uval & FUTEX_OWNER_DIED) &&
++	if (!(uval & ~FUTEX_TID_MASK) &&
+ 	    cmpxchg_futex_value_locked(&uval, uaddr, vpid, 0))
+ 		goto pi_faulted;
+ 	/*
+@@ -2223,11 +2221,9 @@ retry:
+ 	/*
+ 	 * No waiters - kernel unlocks the futex:
+ 	 */
+-	if (!(uval & FUTEX_OWNER_DIED)) {
+-		ret = unlock_futex_pi(uaddr, uval);
+-		if (ret == -EFAULT)
+-			goto pi_faulted;
+-	}
++	ret = unlock_futex_pi(uaddr, uval);
++	if (ret == -EFAULT)
++		goto pi_faulted;
+ 
+ out_unlock:
+ 	spin_unlock(&hb->lock);

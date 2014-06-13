@@ -1,0 +1,53 @@
+From: Thomas Gleixner <tglx@linutronix.de>
+Date: Tue, 3 Jun 2014 12:27:06 +0000
+Subject: futex: Validate atomic acquisition in futex_lock_pi_atomic()
+Git-commit: b3eaa9fc5cd0a4d74b18f6b8dc617aeaf1873270
+
+We need to protect the atomic acquisition in the kernel against rogue
+user space which sets the user space futex to 0, so the kernel side
+acquisition succeeds while there is existing state in the kernel
+associated to the real owner.
+
+Verify whether the futex has waiters associated with kernel state.  If
+it has, return -EINVAL.  The state is corrupted already, so no point in
+cleaning it up.  Subsequent calls will fail as well.  Not our problem.
+
+[ tglx: Use futex_top_waiter() and explain why we do not need to try
+  	restoring the already corrupted user space state. ]
+
+Signed-off-by: Darren Hart <dvhart@linux.intel.com>
+Cc: Kees Cook <keescook@chromium.org>
+Cc: Will Drewry <wad@chromium.org>
+Cc: stable@vger.kernel.org
+Signed-off-by: Thomas Gleixner <tglx@linutronix.de>
+Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
+---
+ kernel/futex.c | 14 +++++++++++---
+ 1 file changed, 11 insertions(+), 3 deletions(-)
+
+Index: linux-3.12/kernel/futex.c
+===================================================================
+--- linux-3.12.orig/kernel/futex.c
++++ linux-3.12/kernel/futex.c
+@@ -764,10 +764,18 @@ retry:
+ 		return -EDEADLK;
+ 
+ 	/*
+-	 * Surprise - we got the lock. Just return to userspace:
++	 * Surprise - we got the lock, but we do not trust user space at all.
+ 	 */
+-	if (unlikely(!curval))
+-		return 1;
++	if (unlikely(!curval)) {
++		/*
++		 * We verify whether there is kernel state for this
++		 * futex. If not, we can safely assume, that the 0 ->
++		 * TID transition is correct. If state exists, we do
++		 * not bother to fixup the user space state as it was
++		 * corrupted already.
++		 */
++		return futex_top_waiter(hb, key) ? -EINVAL : 1;
++	}
+ 
+ 	uval = curval;
+ 
