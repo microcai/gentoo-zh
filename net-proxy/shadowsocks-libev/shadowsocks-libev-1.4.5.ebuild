@@ -26,17 +26,5 @@ src_prepare() {
 }
 
 src_configure() {
-	if use debug; then
-		econf
-	else
-		econf --disable-assert
-	fi
-}
-
-src_compile() {
-	emake
-}
-
-src_install() {
-	emake DESTDIR="${D}" install
+	econf $(use_enable debug assert)
 }
