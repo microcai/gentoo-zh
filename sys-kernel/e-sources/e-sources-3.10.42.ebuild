@@ -7,7 +7,7 @@ K_DEBLOB_AVAILABLE="1"
 
 ck_version="1"
 cjktty_kernel_version="3.10.0"
-gentoo_version="50"
+gentoo_version="52"
 tuxonice_version="2014.06.02"
 uksm_version="0.1.2.2"
 
