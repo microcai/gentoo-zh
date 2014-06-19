@@ -6,8 +6,8 @@ EAPI=4
 PYTHON_DEPEND="ibus? 2:2.5"
 inherit confutils git-2 python scons-utils
 
-DESCRIPTION="SunPinyin is a SLM (Statistical Language Model) based IME"
-HOMEPAGE="http://sunpinyin.org/"
+DESCRIPTION="IME frontends for Sunpinyin"
+HOMEPAGE="https://code.google.com/p/sunpinyin/"
 
 LICENSE="LGPL-2.1 CDDL"
 SLOT="0"

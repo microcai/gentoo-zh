@@ -5,8 +5,8 @@
 EAPI=5
 inherit toolchain-funcs
 
-DESCRIPTION="SunPinyin is a SLM (Statistical Language Model) based IME"
-HOMEPAGE="http://sunpinyin.org/"
+DESCRIPTION="Data sets for Sunpinyin"
+HOMEPAGE="https://code.google.com/p/open-gram/"
 
 LICENSE="LGPL-2.1 CDDL"
 SLOT="0"
