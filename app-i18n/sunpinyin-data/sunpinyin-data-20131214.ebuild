@@ -24,10 +24,10 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	default
-	mkdir ${S}
-	cp -s ${WORKDIR}/{lm_sc.t3g.arpa,dict.utf8} ${S} ||
-		die 'cannot make links for dict files'
-	cp ${FILESDIR}/SLM-inst.mk ${S}/Makefile ||
+	mkdir "${S}" || die 'cannot mkdir ${S}'
+	mv "${WORKDIR}"/{lm_sc.t3g.arpa,dict.utf8} "${S}" ||
+		die 'cannot move dict files'
+	cp "${FILESDIR}"/SLM-inst.mk "${S}"/Makefile ||
 		die 'cannot find SLM-inst.mk'
 }
 
@@ -40,9 +40,9 @@ src_configure() {
 }
 
 src_compile() {
-	emake ENDIANNESS=${endianness}
+	emake ENDIANNESS="${endianness}"
 }
 
 src_install() {
-	emake ENDIANNESS=${endianness} DESTDIR="${D}" install
+	emake ENDIANNESS="${endianness}" DESTDIR="${D}" install
 }
