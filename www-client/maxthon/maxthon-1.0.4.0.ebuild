@@ -6,19 +6,13 @@ EAPI="4"
 
 DESCRIPTION="Maxthon for Linux"
 HOMEPAGE="http://www.maxthon.cn"
-
-# Bundle a copy of libgcrypt, bug 494596
-LIBGCRYPT="libgcrypt.so.11.8.2"
-
 	  
 SRC_URI="
 	amd64? (
-		http://dl.maxthon.cn/linux/deb/packages/amd64/maxthon-browser-beta_${PV}_amd64.deb
-		http://dev.gentoo.org/~floppym/dist/${LIBGCRYPT}-amd64.xz
+		http://dl.maxthon.cn/linux/deb/packages/amd64/maxthon-browser-beta_${PV}_amd64.deb		
 	)
 	x86? (
 		http://dl.maxthon.cn/linux/deb/packages/i386/maxthon-browser-beta_${PV}_i386.deb
-		http://dev.gentoo.org/~floppym/dist/${LIBGCRYPT}-x86.xz
 	)
 "		  
 	
@@ -34,7 +28,7 @@ RDEPEND="
 	dev-libs/atk
 	dev-libs/expat
 	dev-libs/glib:2
-	dev-libs/libgcrypt
+	dev-libs/libgcrypt:11
 	dev-libs/nspr
 	dev-libs/nss
 	gnome-base/gconf:2
@@ -81,10 +75,6 @@ src_install() {
 	dosym "/usr/$(get_libdir)/libudev.so"  "${MAXTHON_HOME}/libudev.so.0"	
 	domenu "${MAXTHON_HOME}"/${PN}.desktop
 	
-	insinto "${MAXTHON_HOME}"
-	newins "${WORKDIR}/${LIBGCRYPT}-$(usev amd64)$(usev x86)" libgcrypt.so.11
-		
-
 }
 
 pkg_postinst() {
