@@ -7,7 +7,7 @@ EAPI=5
 inherit git-2 scons-utils
 
 DESCRIPTION="A statistical language model based Chinese input method library"
-HOMEPAGE="http://code.google.com/p/sunpinyin/"
+HOMEPAGE="https://code.google.com/p/sunpinyin/"
 EGIT_PROJECT="${PN}"
 EGIT_REPO_URI="https://github.com/sunpinyin/sunpinyin.git"
 
