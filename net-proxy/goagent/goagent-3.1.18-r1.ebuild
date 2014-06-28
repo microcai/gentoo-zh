@@ -47,9 +47,9 @@ src_prepare() {
 		rm ${S}/local/goagent-gtk.py || die
 	fi
 
-	sed -e "s|^#!/usr/bin/env python|#!/usr/bin/env python2|" \
-		-e 's|^    geoip = .*)\( if.*\)$|    geoip = pygeoip.GeoIP("/usr/share/GeoIP/GeoIP.dat")\1|' \
-		-i ${S}/local/proxy.py
+	#sed -e "s|^#!/usr/bin/env python|#!/usr/bin/env python2|" \
+	#	-e 's|^    geoip = .*)\( if.*\)$|    geoip = pygeoip.GeoIP("/usr/share/GeoIP/GeoIP.dat")\1|' \
+	#	-i ${S}/local/proxy.py
 }
 
 src_install() {
