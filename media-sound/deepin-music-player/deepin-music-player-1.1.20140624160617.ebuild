@@ -5,7 +5,9 @@
 EAPI="4"
 
 inherit fdo-mime versionator eutils gnome2-utils
-MY_VER="$(get_version_component_range 1)+git$(get_version_component_range 2)~00f61cb069"
+
+GIT_REV="d3cc9dac81"
+MY_VER="$(get_version_component_range 1-2)-$(get_version_component_range 3)~${GIT_REV}"
 SRC_URI="http://packages.linuxdeepin.com/deepin/pool/main/d/${PN}/${PN}_${MY_VER}.tar.gz"
 
 DESCRIPTION="Deepin Music Player."
@@ -55,7 +57,7 @@ src_install() {
 	dobin ${PN}
 
 #	mkdir -p /usr/share/icons/hicolor/128x128/apps
-	doicon -s 128 ${S}/debian/${PN}.png
+	doicon -s 128 ${S}/debian/${PN}.svg
 	
 	insinto "/usr/share/applications/"
 	doins ${S}/debian/${PN}.desktop
