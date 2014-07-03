@@ -22,7 +22,6 @@ start() {
 stop() {
     ebegin "Stopping GoAgent"
     start-stop-daemon --stop --name goagent $GOAGENT_PID \
-    --exec python2 /opt/goagent/local/proxy.py
     eend $?
 }
 
