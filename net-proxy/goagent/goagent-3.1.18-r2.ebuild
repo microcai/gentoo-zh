@@ -25,7 +25,7 @@ SRC_URI="${GOAGENT_SRC_URI}"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="+gtk"
+IUSE="+gtk systemd"
 
 RDEPEND="dev-python/pycrypto
 	dev-lang/python:2.7[ssl]
@@ -79,7 +79,7 @@ src_install() {
 	doins -r "${S}/local" "${S}/server"
 
 	newinitd "${FILESDIR}/goagent-initd" goagent
-	systemd_dounit "${FILESDIR}/goagent.service"
+	use systemd && systemd_dounit "${FILESDIR}/goagent.service"
 }
 
 #pkg_prerm() {
