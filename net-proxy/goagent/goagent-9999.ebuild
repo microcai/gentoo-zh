@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v3
 # $Header: $
 
@@ -29,9 +29,9 @@ IUSE="+gtk"
 
 RDEPEND="dev-python/pycrypto
 	dev-lang/python:2.7[ssl]
+	dev-lang/pygeoip
 	dev-libs/nss[utils]
 	>=dev-python/gevent-1.0
-	dev-python/geoip-python
 	dev-python/pyopenssl
 	gtk? ( x11-libs/vte:0[python] )
 	net-libs/pacparser"
@@ -47,9 +47,9 @@ src_prepare() {
 		rm ${S}/local/goagent-gtk.py || die
 	fi
 
-	sed -e "s|^#!/usr/bin/env python|#!/usr/bin/env python2|" \
-		-e 's|^    geoip = .*)\( if.*\)$|    geoip = pygeoip.GeoIP("/usr/share/GeoIP/GeoIP.dat")\1|' \
-		-i ${S}/local/proxy.py
+	#sed -e "s|^#!/usr/bin/env python|#!/usr/bin/env python2|" \
+	#	-e 's|^    geoip = .*)\( if.*\)$|    geoip = pygeoip.GeoIP("/usr/share/GeoIP/GeoIP.dat")\1|' \
+	#	-i ${S}/local/proxy.py
 }
 
 src_install() {
