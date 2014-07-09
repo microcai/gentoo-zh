@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit kde4-base git-2
+inherit kde4-base git-r3
 
 DESCRIPTION="load kde session faster"
 HOMEPAGE="https://dantti.wordpress.com/2013/02/27/1-2-3-plasma/"
