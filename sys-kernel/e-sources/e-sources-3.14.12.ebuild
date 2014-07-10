@@ -16,7 +16,7 @@ reiser4_kernel_version="3.14.1"
 tuxonice_kernel_version="3.14.9"
 uksm_kernel_version="3.14.10"
 
-KEYWORDS="~x86 ~amd64 ~mips"
+KEYWORDS="x86 amd64 mips ~x86 ~amd64 ~mips"
 
 SUPPORTED_USE="+additional +aufs +cjktty +ck +exfat +experimental +gentoo +thinkpad +reiser4 +tuxonice +uksm"
 UNSUPPORTED_USE="imq"
