@@ -14,7 +14,7 @@ SRC_URI="https://github.com/madeye/${PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 x86 amd64"
 IUSE="debug"
 
 DEPEND="dev-libs/openssl"
