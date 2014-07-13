@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86 arm amd64"
 IUSE="static-libs"
 
-DEPEND="x11-libs/libxkbcommon"
+DEPEND="x11-libs/libxkbcommon
+  !<sys-apps/kmscon-8"
 RDEPEND="${DEPEND}"
 
 src_configure(){
