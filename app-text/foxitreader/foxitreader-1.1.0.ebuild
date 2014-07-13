@@ -51,9 +51,9 @@ src_install() {
 	doins fum.fhd fpdfcjk.bin || die
 
 	insopts -m755
-	doins ${PN} || die
+	doins FoxitReader || die
 
-	make_wrapper ${PN} ./${PN} /opt/${PN}
+	make_wrapper ${PN} ./FoxitReader /opt/${PN}
 	doicon "${FILESDIR}"/${PN}.png || die
 	make_desktop_entry ${PN} ${PN} ${PN} "Application;Office;Viewer;" "MimeType=application/pdf;"
 
