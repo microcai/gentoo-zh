@@ -7,6 +7,6 @@
 	<name>Havanna</name>
 </maintainer>
 	<longdescription lang="en">
-		Source Han Sans is an OpenType/CFF Pan-CJK font family. This open source project provides all of the source files that were used to build these OpenType fonts by using the AFDKO makeotf, sfntedit, and otf2otc tools.
+		Source Han Sans is an OpenType/CFF Pan-CJK font family.
 	</longdescription>
 </pkgmetadata>
