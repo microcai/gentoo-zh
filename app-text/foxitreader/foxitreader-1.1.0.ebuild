@@ -1,59 +1,71 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI=2
 
-inherit eutils versionator
+inherit eutils fdo-mime versionator
 
-MY_PN="FoxitReader"
-MY_P="${MY_PN}-${PV}"
+MY_PV1=$(get_major_version)
+MY_PV2=$(get_version_component_range 1-2)
 
-SRC_BASE="cdn04.foxitsoftware.com/pub/foxit/reader/desktop/linux/"
-DESCRIPTION="Foxit Reader for desktop Linux"
-HOMEPAGE="http://www.foxitsoftware.com/pdf/desklinux"
-SRC_URI="${SRC_BASE}/$(get_major_version).x/$(get_version_component_range 1-2)/enu/${MY_P}.tar.bz2"
+DESCRIPTION="A free PDF document viewer, featuring small size, quick startup, and fast page rendering"
+HOMEPAGE="http://www.foxitsoftware.com/pdf/desklinux/"
+SRC_URI="http://cdn04.foxitsoftware.com/pub/foxit/reader/desktop/linux/${MY_PV1}.x/${MY_PV2}/enu/FoxitReader-${PV}.tar.bz2"
 
-LICENSE="Foxit-EULA"
+LICENSE="${PN}"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 -*"
 IUSE=""
-LANGS="de fr ja zh_CN zh_TW"
-for X in ${LANGS} ; do
-	IUSE="${IUSE} linguas_${X}"
+MY_LANGS="de fr ja zh_CN zh_TW"
+for MY_LANG in ${MY_LANGS} ; do
+	IUSE="${IUSE} linguas_${MY_LANG}"
 done
 
-DEPEND=""
 RDEPEND="
-	amd64? ( app-emulation/emul-linux-x86-xlibs
-		app-emulation/emul-linux-x86-gtklibs )
-	x86? ( media-libs/freetype:2
-		>=x11-libs/gtk+-2.12 )"
+	x86? ( dev-libs/atk
+		dev-libs/glib:2
+		media-libs/freetype:2
+		net-print/cups
+		x11-libs/cairo
+		x11-libs/gtk+:2
+		x11-libs/pango )
+	amd64? ( app-emulation/emul-linux-x86-baselibs
+		app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-gtklibs )"
 
-S="${WORKDIR}/$(get_version_component_range 1-2)-release"
-RESTRICT="mirror strip"
+S=${WORKDIR}/${MY_PV2}-release
+
+QA_PRESTRIPPED="/opt/FoxitReader/FoxitReader"
 
 src_install() {
-	mv "${S}"/Readme.txt "${WORKDIR}"/README
-	dodoc "${WORKDIR}"/README
+	insinto /opt/${PN}/po
+	local my_lang
+	for my_lang in ${MY_LANGS} ; do
+		if use linguas_${my_lang} ; then
+			doins -r po/${my_linguas} || die
+		fi
+	done
 
-	ebegin "Installing package"
-		for X in ${LANGS} ; do
-			if use linguas_${X} ; then
-				insinto /usr/share/locale/${X}/LC_MESSAGES
-				doins "${S}"/po/${X}/${MY_PN}.mo \
-					|| die "failed to install languages files"
-			fi
-		done
-		rm -R "${S}"/po
+	insinto /opt/${PN}
+	doins fum.fhd fpdfcjk.bin || die
 
-		insinto /opt/${PN}
-		doins "${S}"/* || die "failed to install program files"
-		fperms 0755 /opt/${PN}/${MY_PN}
-	eend $? || die "failed to install package"
+	insopts -m755
+	doins FoxitReader || die
 
-	doicon "${FILESDIR}"/${PN}.png
-	domenu "${FILESDIR}"/${PN}.desktop
+	make_wrapper ${PN} ./FoxitReader /opt/${PN}
+	doicon "${FILESDIR}"/${PN}.png || die
+	make_desktop_entry ${PN} ${PN} ${PN} "Application;Office;Viewer;" "MimeType=application/pdf;"
 
-	make_wrapper ${PN} /opt/${PN}/${MY_PN}
+	dodoc Readme.txt || die
+}
+
+pkg_postinst() {
+	fdo-mime_mime_database_update
+	fdo-mime_desktop_database_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
 }

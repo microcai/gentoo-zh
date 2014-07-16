@@ -97,7 +97,7 @@ src_configure() {
 	# CFLAGS has to be undefined running econf, else -fno-stack-protector detection fails.
 	# STAGE2_CFLAGS is not allowed to be used on emake command-line, it overwrites
 	# -fno-stack-protector detected by configure, removed from netboot's emake.
-	use custom-cflags || CFLAGS="-O0 -g -fno-strict-aliasing -Wall -Wno-shadow -Wno-unused -Wno-pointer-sign"
+	use custom-cflags || CFLAGS="-O0 -g -fno-strict-aliasing -Wall -Wno-shadow -Wno-unused -Wno-pointer-sign -fno-stack-protector"
 
 	export CFLAGS
 

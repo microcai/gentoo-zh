@@ -120,17 +120,23 @@ src_configure() {
 		local mycmakeargs="
 			-DSYSCONFDIR=/etc
 			-DLIB_INSTALL_DIR=/usr/lib32
+			-DCMAKE_INSTALL_PREFIX=/usr
 			$(cmake-utils_use_enable gtk GTK2_IM_MODULE)
 			$(cmake-utils_use_enable gtk3 GTK3_IM_MODULE)
 			$(cmake-utils_use_enable qt4 QT)
 			$(cmake-utils_use_enable qt4 QT_IM_MODULE)
 			-DENABLE_X11=OFF
 			-DENABLE_QT_GUI=OFF
-			-DENABLE_GLIB2=OFF
 			-DENABLE_PANGO=OFF
-			-DENABLE_GIR=OFF
 			-DENABLE_STATIC=OFF
-			-DENABLE_OPENCC=OFF"
+			-DENABLE_OPENCC=OFF
+			-DENABLE_GIR=OFF
+			-DENABLE_CAIRO=OFF
+			-DENABLE_LIBXML2=OFF
+			-DENABLE_PINYIN=OFF
+			-DENABLE_TABLE=OFF
+			-DENABLE_LUA=OFF
+			-DENABLE_SNOOPER=OFF"
 
 		"${CMAKE_BINARY}" "${mycmakeargs[@]}" "${CMAKE_USE_DIR}" || die
 
@@ -138,7 +144,17 @@ src_configure() {
 			`grep -rl /usr/lib64/qt4 ./src` || die
 		sed -i "s|lib64|lib32|g" \
 			src/frontend/gtk2/cmake_install.cmake \
-			src/frontend/gtk3/cmake_install.cmake || die
+			src/frontend/gtk3/cmake_install.cmake \
+			|| die
+		sed -i 's|/usr/local/lib|/usr/lib32|g' \
+			src/lib/fcitx-utils/cmake_install.cmake  \
+			src/lib/fcitx-config/cmake_install.cmake \
+			src/lib/fcitx-gclient/cmake_install.cmake \
+			src/lib/fcitx-gclient/cmake_install.cmake \
+			src/lib/fcitx-qt/cmake_install.cmake \
+			src/frontend/gtk2/cmake_install.cmake \
+			src/frontend/gtk3/cmake_install.cmake \
+			|| die
 	fi
 }
 
@@ -147,9 +163,9 @@ src_compile(){
 
 	if use abi_x86_64 && use abi_x86_32 ; then
 		cd ${WORKDIR}/${P}_build32/src/
-		emake -C lib || die
+		make -C lib || echo
 
-		use gtk && emake -C frontend/gtk2 || die
+		use gtk && emake -C frontend/gtk2 || die	
 		use gtk3 && emake -C frontend/gtk3 || die
 		use qt4 && emake -C frontend/qt || die
 	fi
@@ -158,7 +174,9 @@ src_compile(){
 src_install() {
 	if use abi_x86_64 && use abi_x86_32 ; then
 		pushd "${WORKDIR}/${P}_build32/src"
-		emake DESTDIR="${D}" -C lib install || die
+		emake DESTDIR="${D}" -C lib/fcitx-config install || die
+		emake DESTDIR="${D}" -C lib/fcitx-utils install || die
+		use qt4  && emake DESTDIR="${D}" -C lib/fcitx-qt install || die
 
 		use gtk  && emake DESTDIR="${D}" -C frontend/gtk2 install || die
 		use gtk3  && emake DESTDIR="${D}" -C frontend/gtk3 install || die
@@ -167,6 +185,7 @@ src_install() {
 		popd
 	fi
 	rm -rf "${D}/usr/include" "${D}/usr/lib32/pkgconfig"
+	rm -rf "${D}/usr/local"
 
 	cmake-utils_src_install
 	rm -rf "${ED}"/usr/share/doc/${PN} || die
