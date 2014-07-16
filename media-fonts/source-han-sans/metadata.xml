@@ -6,6 +6,10 @@
 	<email>registerdedicated@yeah.net</email>
 	<name>Havanna</name>
 </maintainer>
+<maintainer>
+	<email>biergaizi@member.fsf.org</email>
+	<name>Tom Li</name>
+</maintainer>
 	<longdescription lang="en">
 		Source Han Sans is an OpenType/CFF Pan-CJK font family.
 	</longdescription>
