@@ -6,7 +6,7 @@ EAPI=5
 
 inherit font
 
-MY_PN="SourceHanSansOTF"
+MY_PN="SourceHanSansOTC"
 
 DESCRIPTION="Source Han Sans is an OpenType/CFF Pan-CJK font family."
 HOMEPAGE="https://github.com/adobe-fonts/source-han-sans"
@@ -22,11 +22,17 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 FONT_S="${S}"
-FONT_SUFFIX="otf"
+FONT_SUFFIX="ttc"
 
 FONT_CONF=(
-	${FILESDIR}/42-source-han-sans-normal.conf
-    ${FILESDIR}/42-source-han-sans-regular.conf
+	${FILESDIR}/42-source-han-sans-sc-normal.conf
+    ${FILESDIR}/42-source-han-sans-sc-regular.conf
+	${FILESDIR}/42-source-han-sans-tc-normal.conf
+    ${FILESDIR}/42-source-han-sans-tc-regular.conf
+	${FILESDIR}/42-source-han-sans-j-normal.conf
+    ${FILESDIR}/42-source-han-sans-j-regular.conf
+	${FILESDIR}/42-source-han-sans-k-normal.conf
+    ${FILESDIR}/42-source-han-sans-k-regular.conf
 )
 
 # Only installs fonts
@@ -36,12 +42,24 @@ pkg_postinst() {
 	unset FONT_CONF # override default message
 	font_pkg_postinst
 	elog
-	elog "This font installs two fontconfig configuration files."
+	elog "This font installs 8 fontconfig configuration files."
+	elog
+	elog "Include Simplified Chinese (sc), Traditional Chinese (tc),"
+	elog "Japanese (j) and Korean (k)"
+	elog
+	elog 'Both Regular (regular) and Normal (normal) styles are available'
+	elog "for each language."
 	elog
 	elog "To activate preferred rendering, run:"
-	elog "eselect fontconfig enable 42-source-han-sans-normal.conf"
-	elog "or"
-	elog "eselect fontconfig enable 42-source-han-sans-regular.conf"
-	elog "(don't enable them at the same time)"
+	elog "eselect fontconfig enable 42-source-han-sans-(language)-(style).conf"
+    elog
+	elog "For example, run"
+	elog "eselect fontconfig enable 42-source-han-sans-j-regular.conf"
+	elog "to set Japanese with Regular style as the preferred font."
+	elog
+	elog "eselect fontconfig enable 42-source-han-sans-sc-normal.conf"
+	elog "to set Simplified Chinese with Normal style as the preferred font."
+	elog
+	elog "You shouldn't enable two or more config at the same time."
 	elog
 }
