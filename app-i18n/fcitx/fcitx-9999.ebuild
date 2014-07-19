@@ -23,7 +23,7 @@ DESCRIPTION="Flexible Context-aware Input Tool with eXtension"
 HOMEPAGE="http://fcitx-im.org/wiki/Fcitx"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS=""
 IUSE="+autostart +cairo +dbus debug +glib +gtk +gtk3 +icu +introspection lua
 +pango +qt4 +snooper static-libs +table test +X +xml"
 
