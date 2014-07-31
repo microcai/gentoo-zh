@@ -17,7 +17,9 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-RDEPEND=""
+DEPEND="${PYTHON_DEPS}
+		dev-python/pycurl[${PYTHON_USEDEP}]"
+RDEPEND="$DEPEND"
 
 S="${WORKDIR}/rpweibo-${PV}"
 
