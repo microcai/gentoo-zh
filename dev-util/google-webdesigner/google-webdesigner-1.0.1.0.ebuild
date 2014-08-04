@@ -12,11 +12,11 @@ HOMEPAGE="https://www.google.com/webdesigner/index.html"
 LIBGCRYPT="libgcrypt.so.11.8.2"
 
 
-SRC_URI="amd64? ( https://dl.google.com/linux/direct/google-webdesigner_current_x86_64.rpm -> ${P}-x86_64.rpm 
+SRC_URI="amd64? ( https://dl.google.com/linux/direct/google-webdesigner_current_x86_64.rpm -> ${P}-x86_64.rpm
     http://dev.gentoo.org/~floppym/dist/${LIBGCRYPT}-amd64.xz
   )
   x86? (
-  https://dl.google.com/linux/direct/google-webdesigner_current_i386.rpm -> ${P}-i386.rpm 
+  https://dl.google.com/linux/direct/google-webdesigner_current_i386.rpm -> ${P}-i386.rpm
   http://dev.gentoo.org/~floppym/dist/${LIBGCRYPT}-x86.xz
 )
 "
@@ -44,7 +44,7 @@ RDEPEND="
 S="${WORKDIR}"
 
 src_install(){
- rpm2tar -O ${DISTDIR}/${P}-x86_64.rpm | tar -xvf - -C ${D}
+ rpm2tar -O ${DISTDIR}/${P}-*.rpm | tar -xvf - -C ${D}
  rm -rf ${D}/etc
  install -m 0755 ${LIBGCRYPT}-* ${D}/opt/google/webdesigner/libgcrypt.so.11
  ln -svf /usr/lib/libudev.so.1 ${D}/opt/google/webdesigner/libudev.so.0
