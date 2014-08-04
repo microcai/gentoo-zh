@@ -18,8 +18,8 @@ tuxonice_kernel_version="head-3.16.0-rc7"
 
 KEYWORDS=""
 
-SUPPORTED_USE="+additional +cjktty +exfat +experimental +gentoo +thinkpad +tuxonice"
-UNSUPPORTED_USE="aufs ck imq reiser4 uksm"
+SUPPORTED_USE="+additional +cjktty +experimental +gentoo +thinkpad +tuxonice"
+UNSUPPORTED_USE="aufs ck exfat imq reiser4 uksm"
 
 UNIPATCH_EXCLUDE=""
 
