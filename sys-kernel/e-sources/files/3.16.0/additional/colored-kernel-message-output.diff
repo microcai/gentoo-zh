@@ -1,0 +1,333 @@
+diff --git a/arch/x86/kernel/early_printk.c b/arch/x86/kernel/early_printk.c
+index 01d1c18..2a02d82 100644
+--- a/arch/x86/kernel/early_printk.c
++++ b/arch/x86/kernel/early_printk.c
+@@ -26,7 +26,8 @@
+ static int max_ypos = 25, max_xpos = 80;
+ static int current_ypos = 25, current_xpos;
+ 
+-static void early_vga_write(struct console *con, const char *str, unsigned n)
++static void early_vga_write(struct console *con, const char *str, unsigned n,
++                            unsigned int loglevel)
+ {
+ 	char c;
+ 	int  i, k, j;
+@@ -104,7 +105,8 @@ static int early_serial_putc(unsigned char ch)
+ 	return timeout ? 0 : -1;
+ }
+ 
+-static void early_serial_write(struct console *con, const char *s, unsigned n)
++static void early_serial_write(struct console *con, const char *s, unsigned n,
++                               unsigned int loglevel)
+ {
+ 	while (*s && n-- > 0) {
+ 		if (*s == '\n')
+diff --git a/drivers/accessibility/braille/braille_console.c b/drivers/accessibility/braille/braille_console.c
+index dc34a5b..020118b 100644
+--- a/drivers/accessibility/braille/braille_console.c
++++ b/drivers/accessibility/braille/braille_console.c
+@@ -116,7 +116,7 @@ static void braille_write(u16 *buf)
+ 	*c++ = csum;
+ 	*c++ = ETX;
+ 
+-	braille_co->write(braille_co, data, c - data);
++	braille_co->write(braille_co, data, c - data, 0);
+ }
+ 
+ /* Follow the VC cursor*/
+diff --git a/drivers/net/netconsole.c b/drivers/net/netconsole.c
+index ba2f5e7..b649820 100644
+--- a/drivers/net/netconsole.c
++++ b/drivers/net/netconsole.c
+@@ -728,7 +728,8 @@ static int netconsole_netdev_event(struct notifier_block *this,
+ 	.notifier_call  = netconsole_netdev_event,
+ };
+ 
+-static void write_msg(struct console *con, const char *msg, unsigned int len)
++static void write_msg(struct console *con, const char *msg, unsigned int len,
++                      unsigned int loglevel)
+ {
+ 	int frag, left;
+ 	unsigned long flags;
+diff --git a/drivers/tty/Kconfig b/drivers/tty/Kconfig
+index 978db34..63e7160 100644
+--- a/drivers/tty/Kconfig
++++ b/drivers/tty/Kconfig
+@@ -75,6 +75,111 @@ config VT_CONSOLE_SLEEP
+ 	def_bool y
+ 	depends on VT_CONSOLE && PM_SLEEP
+ 
++menuconfig VT_CKO
++	bool "Colored kernel message output"
++	depends on VT_CONSOLE
++	---help---
++	  This option enables kernel messages to be emitted in
++	  colors other than the default.
++
++	  The color value you need to enter is composed (OR-ed)
++	  of a foreground and a background color.
++
++	  Foreground:
++	  0x00 = black,   0x08 = dark gray,
++	  0x01 = red,     0x09 = light red,
++	  0x02 = green,   0x0A = light green,
++	  0x03 = brown,   0x0B = yellow,
++	  0x04 = blue,    0x0C = light blue,
++	  0x05 = magenta, 0x0D = light magenta,
++	  0x06 = cyan,    0x0E = light cyan,
++	  0x07 = gray,    0x0F = white,
++
++	  (Foreground colors 0x08 to 0x0F do not work when a VGA
++	  console font with 512 glyphs is used.)
++
++	  Background:
++	  0x00 = black,   0x40 = blue,
++	  0x10 = red,     0x50 = magenta,
++	  0x20 = green,   0x60 = cyan,
++	  0x30 = brown,   0x70 = gray,
++
++	  For example, 0x1F would yield white on red.
++
++	  If unsure, say N.
++
++config VT_PRINTK_EMERG_COLOR
++	hex "Emergency messages color"
++	range 0x00 0xFF
++	depends on VT_CKO
++	default 0x07
++	---help---
++	  This option defines with which color kernel emergency messages will
++	  be printed to the console.
++
++config VT_PRINTK_ALERT_COLOR
++	hex "Alert messages color"
++	range 0x00 0xFF
++	depends on VT_CKO
++	default 0x07
++	---help---
++	  This option defines with which color kernel alert messages will
++	  be printed to the console.
++
++config VT_PRINTK_CRIT_COLOR
++	hex "Critical messages color"
++	range 0x00 0xFF
++	depends on VT_CKO
++	default 0x07
++	---help---
++	  This option defines with which color kernel critical messages will
++	  be printed to the console.
++
++config VT_PRINTK_ERR_COLOR
++	hex "Error messages color"
++	range 0x00 0xFF
++	depends on VT_CKO
++	default 0x07
++	---help---
++	  This option defines with which color kernel error messages will
++	  be printed to the console.
++
++config VT_PRINTK_WARNING_COLOR
++	hex "Warning messages color"
++	range 0x00 0xFF
++	depends on VT_CKO
++	default 0x07
++	---help---
++	  This option defines with which color kernel warning messages will
++	  be printed to the console.
++
++config VT_PRINTK_NOTICE_COLOR
++	hex "Notice messages color"
++	range 0x00 0xFF
++	depends on VT_CKO
++	default 0x07
++	---help---
++	  This option defines with which color kernel notice messages will
++	  be printed to the console.
++
++config VT_PRINTK_INFO_COLOR
++	hex "Information messages color"
++	range 0x00 0xFF
++	depends on VT_CKO
++	default 0x07
++	---help---
++	  This option defines with which color kernel information messages will
++	  be printed to the console.
++
++config VT_PRINTK_DEBUG_COLOR
++	hex "Debug messages color"
++	range 0x00 0xFF
++	depends on VT_CKO
++	default 0x07
++	---help---
++	  This option defines with which color kernel debug messages will
++	  be printed to the console.
++
+ config HW_CONSOLE
+ 	bool
+ 	depends on VT && !UML
+diff --git a/drivers/tty/serial/8250/8250_core.c b/drivers/tty/serial/8250/8250_core.c
+index e33d38cb..d73fdfb 100644
+--- a/drivers/tty/serial/8250/8250_core.c
++++ b/drivers/tty/serial/8250/8250_core.c
+@@ -2850,7 +2850,8 @@ static void serial8250_console_putchar(struct uart_port *port, int ch)
+  *	The console_lock must be held when we get here.
+  */
+ static void
+-serial8250_console_write(struct console *co, const char *s, unsigned int count)
++serial8250_console_write(struct console *co, const char *s, unsigned int count,
++                         unsigned int loglevel)
+ {
+ 	struct uart_8250_port *up = &serial8250_ports[co->index];
+ 	struct uart_port *port = &up->port;
+diff --git a/drivers/tty/serial/8250/8250_early.c b/drivers/tty/serial/8250/8250_early.c
+index c100d63..bb28b49 100644
+--- a/drivers/tty/serial/8250/8250_early.c
++++ b/drivers/tty/serial/8250/8250_early.c
+@@ -98,7 +98,7 @@ static void __init serial_putc(struct uart_port *port, int c)
+ }
+ 
+ static void __init early_serial8250_write(struct console *console,
+-					const char *s, unsigned int count)
++          const char *s, unsigned int count, unsigned int loglevel)
+ {
+ 	struct uart_port *port = &early_device.port;
+ 	unsigned int ier;
+diff --git a/drivers/tty/vt/vt.c b/drivers/tty/vt/vt.c
+index 61b1137..f1fa906 100644
+--- a/drivers/tty/vt/vt.c
++++ b/drivers/tty/vt/vt.c
+@@ -71,6 +71,7 @@
+  */
+ 
+ #include <linux/module.h>
++#include <linux/moduleparam.h>
+ #include <linux/types.h>
+ #include <linux/sched.h>
+ #include <linux/tty.h>
+@@ -2430,16 +2431,44 @@ int vt_kmsg_redirect(int new)
+ 		return kmsg_con;
+ }
+ 
++#ifdef CONFIG_VT_CKO
++static unsigned int printk_color[8] __read_mostly = {
++	CONFIG_VT_PRINTK_EMERG_COLOR,	/* KERN_EMERG */
++	CONFIG_VT_PRINTK_ALERT_COLOR,	/* KERN_ALERT */
++	CONFIG_VT_PRINTK_CRIT_COLOR,	/* KERN_CRIT */
++	CONFIG_VT_PRINTK_ERR_COLOR,	/* KERN_ERR */
++	CONFIG_VT_PRINTK_WARNING_COLOR,	/* KERN_WARNING */
++	CONFIG_VT_PRINTK_NOTICE_COLOR,	/* KERN_NOTICE */
++	CONFIG_VT_PRINTK_INFO_COLOR,	/* KERN_INFO */
++	CONFIG_VT_PRINTK_DEBUG_COLOR,	/* KERN_DEBUG */
++};
++module_param_array(printk_color, uint, NULL, S_IRUGO | S_IWUSR);
++
++static inline void vc_set_color(struct vc_data *vc, unsigned char color)
++{
++	vc->vc_color = color_table[color & 0xF] |
++	               (color_table[(color >> 4) & 0x7] << 4) |
++	               (color & 0x80);
++	update_attr(vc);
++}
++#else
++static unsigned int printk_color[8];
++static inline void vc_set_color(const struct vc_data *vc, unsigned char c)
++{
++}
++#endif
++
+ /*
+  *	Console on virtual terminal
+  *
+  * The console must be locked when we get here.
+  */
+ 
+-static void vt_console_print(struct console *co, const char *b, unsigned count)
++static void vt_console_print(struct console *co, const char *b, unsigned count,
++			     unsigned int loglevel)
+ {
+ 	struct vc_data *vc = vc_cons[fg_console].d;
+-	unsigned char c;
++	unsigned char current_color, c;
+ 	static DEFINE_SPINLOCK(printing_lock);
+ 	const ushort *start;
+ 	ushort cnt = 0;
+@@ -2475,11 +2504,20 @@ static void vt_console_print(struct console *co, const char *b, unsigned count)
+ 
+ 	start = (ushort *)vc->vc_pos;
+ 
++	/*
++	 * We always get a valid loglevel - <8> and "no level" is transformed
++	 * to <4> in the typical kernel.
++	 */
++	current_color = printk_color[loglevel];
++	vc_set_color(vc, current_color);
++
++
+ 	/* Contrived structure to try to emulate original need_wrap behaviour
+ 	 * Problems caused when we have need_wrap set on '\n' character */
+ 	while (count--) {
+ 		c = *b++;
+ 		if (c == 10 || c == 13 || c == 8 || vc->vc_need_wrap) {
++			vc_set_color(vc, vc->vc_def_color);
+ 			if (cnt > 0) {
+ 				if (CON_IS_VISIBLE(vc))
+ 					vc->vc_sw->con_putcs(vc, start, cnt, vc->vc_y, vc->vc_x);
+@@ -2492,6 +2530,7 @@ static void vt_console_print(struct console *co, const char *b, unsigned count)
+ 				bs(vc);
+ 				start = (ushort *)vc->vc_pos;
+ 				myx = vc->vc_x;
++				vc_set_color(vc, current_color);
+ 				continue;
+ 			}
+ 			if (c != 13)
+@@ -2499,6 +2538,7 @@ static void vt_console_print(struct console *co, const char *b, unsigned count)
+ 			cr(vc);
+ 			start = (ushort *)vc->vc_pos;
+ 			myx = vc->vc_x;
++			vc_set_color(vc, current_color);
+ 			if (c == 10 || c == 13)
+ 				continue;
+ 		}
+@@ -2521,6 +2561,7 @@ static void vt_console_print(struct console *co, const char *b, unsigned count)
+ 			vc->vc_need_wrap = 1;
+ 		}
+ 	}
++	vc_set_color(vc, vc->vc_def_color);
+ 	set_cursor(vc);
+ 	notify_update(vc);
+ 
+diff --git a/include/linux/console.h b/include/linux/console.h
+index 7571a16..af01c35 100644
+--- a/include/linux/console.h
++++ b/include/linux/console.h
+@@ -118,7 +118,7 @@ static inline int con_debug_leave(void)
+ 
+ struct console {
+ 	char	name[16];
+-	void	(*write)(struct console *, const char *, unsigned);
++	void	(*write)(struct console *, const char *, unsigned, unsigned int);
+ 	int	(*read)(struct console *, char *, unsigned);
+ 	struct tty_driver *(*device)(struct console *, int *);
+ 	void	(*unblank)(void);
+diff --git a/kernel/printk/printk.c b/kernel/printk/printk.c
+index be7c86b..8517cbe 100644
+--- a/kernel/printk/printk.c
++++ b/kernel/printk/printk.c
+@@ -1282,7 +1282,7 @@ static void call_console_drivers(int level, const char *text, size_t len)
+ 		if (!cpu_online(smp_processor_id()) &&
+ 		    !(con->flags & CON_ANYTIME))
+ 			continue;
+-		con->write(con, text, len);
++		con->write(con, text, len, level);
+ 	}
+ }
+ 
+@@ -1732,7 +1732,7 @@ void early_vprintk(const char *fmt, va_list ap)
+ 		char buf[512];
+ 		int n = vscnprintf(buf, sizeof(buf), fmt, ap);
+ 
+-		early_console->write(early_console, buf, n);
++		early_console->write(early_console, buf, n, 0);
+ 	}
+ }
+ 
