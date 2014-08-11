@@ -12,7 +12,7 @@ EGIT_REPO_URI="git://github.com/mruby/mruby.git"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 DEPEND=""
