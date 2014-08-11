@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{3_2,3_3} )
+PYTHON_COMPAT=( python{3_2,3_3,3_4} )
 PYTHON_REQ_USE="threads,xml"
 inherit eutils python-r1 git-2 autotools
 
@@ -31,7 +31,7 @@ DEPEND="${PYTHON_DEPS}
 
 RDEPEND="${PYTHON_DEPS}
 		 dev-python/notify2
-		 dev-python/sinaweibopy3
+		 dev-python/rpweibo
 		 dev-python/PyQt4[dbus,X,${PYTHON_USEDEP}]"
 
 

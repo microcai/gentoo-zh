@@ -32,7 +32,7 @@ follow rule no.1 and no.2
   should think carfully befor committing.
 
 * If you want to discuss your commit/patch, push to *another branch*
-  and discuss in the mail list or with the maintainer.
+  and discuss in the mailing list, GitHub Issue or talk to the maintainer directly.
 
 * Every ebuild change should not produce compile error before
   committing.

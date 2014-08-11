@@ -8,11 +8,15 @@ EAPI=5
 
 AUTOTOOLS_AUTORECONF=true
 
-inherit autotools-utils flag-o-matic eutils wxwidgets user
+inherit autotools-utils flag-o-matic eutils wxwidgets user git-r3
 
 DESCRIPTION="The Berkeley Open Infrastructure for Network Computing"
 HOMEPAGE="http://boinc.ssl.berkeley.edu/"
-SRC_URI="http://gentoo.org.cn/distfiles/${P}.tar.xz"
+
+#SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
+
+EGIT_REPO_URI="git://boinc.berkeley.edu/boinc-v2.git"
+EGIT_COMMIT="client_release/7.2/${PV}"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -22,14 +26,13 @@ IUSE="X cuda static-libs"
 RDEPEND="
 	!sci-misc/boinc-bin
 	!app-admin/quickswitch
-	>=app-misc/ca-certificates-20080809
+	>=app-misc/ca-certificates-20130906-r1
 	dev-libs/openssl
 	net-misc/curl[ssl,-gnutls(-),-nss(-),curl_ssl_openssl(+)]
 	sys-apps/util-linux
 	sys-libs/zlib
 	cuda? (
-		>=dev-util/nvidia-cuda-toolkit-2.1
-		>=x11-drivers/nvidia-drivers-180.22
+		>=dev-util/nvidia-cuda-toolkit-6.0
 	)
 	X? (
 		dev-db/sqlite:3
@@ -50,8 +53,6 @@ DEPEND="${RDEPEND}
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_prepare() {
-	epatch "${FILESDIR}/boinc-7.2.0-fix_subdirs.patch"
-
 	# prevent bad changes in compile flags, bug 286701
 	sed -i -e "s:BOINC_SET_COMPILE_FLAGS::" configure.ac || die "sed failed"
 
