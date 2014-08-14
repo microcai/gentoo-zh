@@ -20,11 +20,6 @@ IUSE="debug"
 DEPEND="dev-libs/openssl"
 RDEPEND="${DEPEND}"
 
-src_prepare() {
-	epatch "${FILESDIR}/${P}-tcp-fastopen-runtime-checking.patch"
-	eautoreconf
-}
-
 src_configure() {
 	econf $(use_enable debug assert)
 }
