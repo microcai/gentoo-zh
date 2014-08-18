@@ -23,3 +23,12 @@ RDEPEND="${DEPEND}"
 src_configure() {
 	econf $(use_enable debug assert)
 }
+
+src_install() {
+	emake DESTDIR="${D}" install || die "emake install failed"
+
+	insinto "/etc/"
+	newins "${FILESDIR}/shadowsocks.json" shadowsocks.json
+
+	newinitd "${FILESDIR}/shadowsocks-initd" shadowsocks
+}
