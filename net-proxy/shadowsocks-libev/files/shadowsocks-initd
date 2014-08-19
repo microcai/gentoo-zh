@@ -7,7 +7,6 @@ ss_config="/etc/shadowsocks.json"
 
 ss_pidfile="/run/shadowsocks.pid"
 ss_command="/usr/bin/ss-local"
-ss_command_args="-c ${ss_config}"
 
 depend() {
     need net
@@ -26,7 +25,7 @@ start() {
 
     ebegin "Starting Shadowsocks"
     start-stop-daemon --start --exec ${ss_command} \
-    -- -c ${ss_config} -f ${ss_pidfile} 2>&1 &
+    -- -c ${ss_config} -f ${ss_pidfile} >/dev/null 2>&1 &
     eend $?
 }
 
