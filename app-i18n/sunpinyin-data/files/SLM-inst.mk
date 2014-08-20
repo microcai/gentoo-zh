@@ -4,17 +4,15 @@
 # Copied and modified doc/SLM-inst.mk from sunpinyin project.
 
 # The variable ${ENDIANNESS} needs to be set to either `le' or `le'.
-# Little endian arch's: alpha amd64 amd64-fbsd arm hurd-i386 ia64 sh x86 x86-fbsd
-# Big endian arch's: hppa m68k mips powerpc ppc64 s390 sparc sparc-fbsd
 # Here we do not give a default choice.
 
-DICT_FILE = dict.utf8
-
 SLM_TARGET = lm_sc
-TSLM3_TEXT_FILE = ${SLM_TARGET}.t3g.arpa
+SLM3_TEXT_FILE = ${SLM_TARGET}.3gm.arpa
+SLM3_FILE = ${SLM_TARGET}.3gm
 TSLM3_ORIG_FILE = ${SLM_TARGET}.t3g.orig
 TSLM3_DIST_FILE = ${SLM_TARGET}.t3g
 
+DICT_FILE = dict.utf8
 PYTRIE_FILE = pydict_sc.bin
 PYTRIE_LOG_FILE = pydict_sc.log
 
@@ -23,9 +21,13 @@ SYSTEM_DATA_DIR = ${DESTDIR}/usr/share/sunpinyin
 all: slm3_dist
 install: slm3_install
 
+slm3: ${SLM3_FILE}
+${SLM3_FILE}: ${SLM3_TEXT_FILE} ${DICT_FILE}
+	slmpack $^ $@
+
 tslm3_orig: ${TSLM3_ORIG_FILE}
-${TSLM3_ORIG_FILE}: ${DICT_FILE} ${TSLM3_TEXT_FILE}
-	tslmpack ${TSLM3_TEXT_FILE} ${DICT_FILE} $@
+${TSLM3_ORIG_FILE}: ${SLM3_FILE}
+	slmthread $^ $@
 
 tslm3_dist: ${TSLM3_DIST_FILE}
 ${TSLM3_DIST_FILE}: ${TSLM3_ORIG_FILE}

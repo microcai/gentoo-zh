@@ -1,8 +1,3 @@
-# Casper Ti. Vector <CasperVector@gmail.com> (15 Dec 2013)
-# Candidate list disruption seemingly because of problem within
-# sunpinyin internals, masked for now.
-=app-i18n/sunpinyin-data-20131214
-
 # microcai
 # mask for testing
 =dev-libs/boost-1.54.0
