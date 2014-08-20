@@ -29,7 +29,7 @@ pkg_setup() {
 
 src_unpack() {
 	default
-	mkdir "${S}" || die 'cannot mkdir ${S}'
+	mkdir "${S}" || die "cannot mkdir ${S}"
 	mv "${WORKDIR}"/{lm_sc.3gm.arpa,dict.utf8} "${S}" ||
 		die 'cannot move dict files'
 	cp "${FILESDIR}"/SLM-inst.mk "${S}"/Makefile ||
