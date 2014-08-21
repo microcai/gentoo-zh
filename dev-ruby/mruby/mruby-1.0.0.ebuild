@@ -2,17 +2,13 @@
 
 EAPI=4
 
-inherit git-2
-
 DESCRIPTION="mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard."
 HOMEPAGE="https://github.com/mruby/mruby"
-SRC_URI=""
-
-EGIT_REPO_URI="git://github.com/mruby/mruby.git"
+SRC_URI="https://github.com/mruby/mruby/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
@@ -26,5 +22,4 @@ src_install() {
 
 	insinto /usr/include/
 	doins -r include/{mrbconf.h,mruby,mruby.h}
-	exeinto /usr/include
 }
