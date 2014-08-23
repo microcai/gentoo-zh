@@ -40,3 +40,10 @@ follow rule no.1 and no.2
 * Every ebuild should be tested in every ARCH that it KEYWORDS for.
   if not, don't claim that you support that keyword.
 
+* If you are writing ebuild for a font, and you are using stantard font.eclass to
+  install the font, I could grant an exception for the must-tested-in-every-ARCH
+  rule. You could use something like
+
+  `KEYWORDS="alpha amd64 arm hppa ia64 ppc mips ~s390 ~sh sparc x86 ~x86-fbsd"`
+
+  But please don't abuse this exception. It must be a pure font package.
