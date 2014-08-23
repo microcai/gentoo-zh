@@ -1,48 +1,26 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 
+EAPI="4"
+
 inherit font
 
-DESCRIPTION="Chinese TrueType and Type1 fonts from Dr. Hann-Tzong Wang"
-HOMEPAGE="ftp://cle.linux.org.tw/pub2/fonts/wangfonts/"
+DESCRIPTION="Free Chinese TrueType fonts donated by Prof. Hann-Tzong Wang"
+HOMEPAGE="https://code.google.com/p/wangfonts/"
+SRC_URI="https://wangfonts.googlecode.com/files/${P}.tar.gz"
 
-BASE_SRC_URI="ftp://cle.linux.org.tw/pub2/fonts/wangfonts/"
-SRC_URI="
-	${BASE_SRC_URI}/wp010-05.ttf
-	${BASE_SRC_URI}/wp010-08.ttf
-	${BASE_SRC_URI}/wp110-05.ttf
-	${BASE_SRC_URI}/wp110-08.ttf
-	${BASE_SRC_URI}/wp210-05.ttf
-	${BASE_SRC_URI}/wp210-08.ttf
-	${BASE_SRC_URI}/wp310-05.ttf
-	${BASE_SRC_URI}/wp310-08.ttf
-	${BASE_SRC_URI}/wts11.ttf
-	${BASE_SRC_URI}/wts43.ttf
-	${BASE_SRC_URI}/wts47.ttf
-	${BASE_SRC_URI}/wts55.ttf
-"
+RESTRICT="mirror strip binchecks"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc mips ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
+RDEPEND=""
 
-S="${WORKDIR}"
+S="${WORKDIR}/${PN}"
 FONT_S="${S}"
 FONT_SUFFIX="ttf"
-DOCS="
-	COPYING
-	Changes.txt
-	README.b5
-	FOP-wangnew.tar.gz
-	Changes-WCL.txt
-	FOP-wcl.tar.gz"
-
-src_unpack() {
-	cd ${DISTDIR}
-	cp -g ${A} ${S}
-}
