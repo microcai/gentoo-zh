@@ -27,7 +27,7 @@ SRC_URI="
 
 RESTRICT="mirror strip binchecks"
 
-LICENSE="GPL-2"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc mips ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE=""
@@ -40,8 +40,12 @@ FONT_S="${S}"
 FONT_SUFFIX="ttf TTF"
 
 src_unpack() {
-	cd ${S}
-	cp ${DISTDIR}/siddam.zip ./
+	:;
+}
+
+src_install() {
+	unpack siddam.zip
 	cp ${DISTDIR}/*.ttf ./
-	unpack ./siddam.zip
+
+	font_src_install
 }
