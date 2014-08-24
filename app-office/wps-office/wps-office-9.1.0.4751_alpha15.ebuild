@@ -147,9 +147,6 @@ src_install() {
 	doexe ${S}/usr/bin/wpp
 	doexe ${S}/usr/bin/et
 
-	cp "${DISTDIR}/wps_merge_old_conf.sh" "${S}/usr/bin"
-    doexe ${S}/usr/bin/wps_merge_old_conf.sh
-
 	if ! use sharedfonts; then
 		insinto /opt/kingsoft/wps-office/office6/fonts
 		doins -r ${S}/usr/share/fonts/wps-office/*
