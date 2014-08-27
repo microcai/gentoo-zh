@@ -24,10 +24,14 @@ RDEPEND="${DEPEND}
 	dev-python/cssselect
 	x11-themes/gnome-icon-theme-symbolic
 	dev-python/dbus-python[${PYTHON_USEDEP}]
-	dev-python/keyring[${PYTHON_USEDEP}] 
+	dev-python/keyring[${PYTHON_USEDEP}]
 	dev-python/pycrypto[${PYTHON_USEDEP}]
 	x11-libs/libnotify
 	"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-fix-vcodestr.patch
+}
+
 src_install() {
 	python_foreach_impl python_domodule ${PN}
 	dobin bcloud-gui
