@@ -12,7 +12,7 @@ uksm_version="0.1.2.3"
 
 aufs_kernel_version="3.15_p20140811"
 cjktty_kernel_version="3.14"
-reiser4_kernel_version="3.15.1"
+reiser4_kernel_version="3.15.2"
 tuxonice_kernel_version="3.15.8"
 uksm_kernel_version="3.15.3"
 
