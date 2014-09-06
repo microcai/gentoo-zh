@@ -7,24 +7,24 @@ EAPI=5
 inherit font
 
 MY_PN="SourceHanSans"
+SRC_PREFIX="mirror://sourceforge/${PN}.adobe/${MY_PN}"
+SRC_SUFFIX="-${PV}.zip"
 
 DESCRIPTION="Source Han Sans is an OpenType/CFF Pan-CJK font family."
 HOMEPAGE="https://github.com/adobe-fonts/source-han-sans"
 
-SRC_URI="otc? ( mirror://sourceforge/${PN}.adobe/${MY_PN}OTC-${PV}.zip )
-		 cn? ( mirror://sourceforge/${PN}.adobe/${MY_PN}CN-${PV}.zip )
-		 jp? ( mirror://sourceforge/${PN}.adobe/${MY_PN}JP-${PV}.zip )
-		 kr? ( mirror://sourceforge/${PN}.adobe/${MY_PN}KR-${PV}.zip )
-		 twhk? ( mirror://sourceforge/${PN}.adobe/${MY_PN}TWHK-${PV}.zip )
+SRC_URI="otc? ( ${SRC_PREFIX}OTC${SRC_SUFFIX} )
+	cn? ( ${SRC_PREFIX}CN${SRC_SUFFIX} )
+	jp? ( ${SRC_PREFIX}JP${SRC_SUFFIX} )
+	kr? ( ${SRC_PREFIX}KR${SRC_SUFFIX} )
+	twhk? ( ${SRC_PREFIX}TWHK${SRC_SUFFIX} )
 "
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc mips ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE="+otc cn jp kr twhk"
-REQUIRED_USE="|| ( otc cn jp kr twhk )
-              otc? ( !cn !jp !kr !twhk )
-"
+REQUIRED_USE="|| ( otc cn jp kr twhk )"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
