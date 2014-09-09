@@ -28,9 +28,6 @@ RDEPEND="${DEPEND}
 	dev-python/pycrypto[${PYTHON_USEDEP}]
 	x11-libs/libnotify
 	"
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-fix-vcodestr.patch
-}
 
 src_install() {
 	python_foreach_impl python_domodule ${PN}
