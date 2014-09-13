@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=5
 
 EGIT_BRANCH="dev"
 EGIT_REPO_URI="git://github.com/kernelhcy/gtkqq.git"
