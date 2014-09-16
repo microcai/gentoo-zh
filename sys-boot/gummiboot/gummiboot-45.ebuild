@@ -16,9 +16,12 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND=">=sys-boot/gnu-efi-3.0u"
+COMMON_DEPEND="sys-apps/util-linux"
 
-DEPEND=">=sys-boot/gnu-efi-3.0u"
+RDEPEND="${COMMON_DEPEND}"
+
+DEPEND="${COMMON_DEPEND}
+>=sys-boot/gnu-efi-3.0u"
 
 pkg_setup(){
 	local iarch
