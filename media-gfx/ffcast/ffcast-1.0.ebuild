@@ -33,6 +33,8 @@ RDEPEND=">=app-shells/bash-4.2_p8-r1
 		media-video/ffmpeg[encode?,vorbis?,vpx?,x264?,xvid?]
 		media-video/libav[encode?,vorbis?,vpx?,x264?,xvid?]
 	)
+	x11-apps/xprop
+	x11-apps/xdpyinfo
 	x11-apps/xwininfo
 	x11-libs/libX11"
 DEPEND="${RDEPEND}"
