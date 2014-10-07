@@ -12,7 +12,7 @@ DESCRIPTION="A video downloader for youtube/youku"
 HOMEPAGE="http://www.soimort.org/you-get"
 
 EGIT_REPO_URI="git://github.com/soimort/you-get.git"
-EGIT_BRANCH="master"
+EGIT_BRANCH="develop"
 
 LICENSE="MIT"
 SLOT="0"
