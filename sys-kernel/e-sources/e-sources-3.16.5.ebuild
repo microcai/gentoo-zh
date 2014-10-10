@@ -16,7 +16,7 @@ cjktty_kernel_version="3.14"
 tuxonice_kernel_version="head-3.16.0"
 uksm_kernel_version="3.16.1"
 
-KEYWORDS=""
+KEYWORDS="~x86 ~amd64 ~mips"
 
 SUPPORTED_USE="+aufs +additional +cjktty +ck +exfat +experimental +gentoo +thinkpad +tuxonice +uksm"
 UNSUPPORTED_USE="imq reiser4"
