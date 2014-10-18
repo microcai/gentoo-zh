@@ -4,11 +4,11 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python3_3 )
+PYTHON_COMPAT=( python3_3 python3_4 )
 
 inherit eutils distutils-r1 git-2
 
-DESCRIPTION="A video downloader for youtube/youku"
+DESCRIPTION="A video downloader for YouTube, Youku, niconico and a few other sites"
 HOMEPAGE="http://www.soimort.org/you-get"
 
 EGIT_REPO_URI="git://github.com/soimort/you-get.git"
