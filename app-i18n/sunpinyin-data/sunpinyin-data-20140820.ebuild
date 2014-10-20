@@ -15,8 +15,9 @@ RESTRICT="primaryuri"
 
 DICT_VERSION="20131214"
 LM_VERSION="${PV}"
-SRC_URI="https://open-gram.googlecode.com/git/dict.utf8-${DICT_VERSION}.tar.bz2
-	https://open-gram.googlecode.com/git/lm_sc.3gm.arpa-${LM_VERSION}.tar.bz2"
+SRC_URI="
+	mirror://sourceforge/open-gram/dict.utf8-${DICT_VERSION}.tar.bz2
+	mirror://sourceforge/open-gram/lm_sc.3gm.arpa-${LM_VERSION}.tar.bz2"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
