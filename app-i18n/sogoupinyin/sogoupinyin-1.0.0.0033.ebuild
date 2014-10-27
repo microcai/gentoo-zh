@@ -66,6 +66,6 @@ pkg_postinst(){
 	einfo "After install the fcitx-sogoupinyin, a restart of fcitx is"
 	einfo "expected."
 	einfo
-	einfo "if you see 请启用fcitx-qimpanel面板程序，以便更好的享受搜狗输入法！"
-	einfo "relogin to your desktop, or just start fcitx-qimpanal"
+	einfo "if you see 请启用sogou-qimpanel面板程序，以便更好的享受搜狗输入法！"
+	einfo "relogin to your desktop, or just start sogou-qimpanel"
 }
