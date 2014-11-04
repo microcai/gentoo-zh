@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.8.5.ebuild,v 1.1 2014/11/02 07:36:01 yngwin Exp $
 
 EAPI=5
 
 inherit eutils gnome2-utils fdo-mime multilib multilib-build cmake-utils readme.gentoo
 
-DESCRIPTION="Flexible Context-aware Input Tool with eXtension"
-HOMEPAGE="http://fcitx-im.org/wiki/Fcitx"
-SRC_URI="http://download.fcitx-im.org/fcitx/fcitx-${PV}_dict.tar.xz"
+DESCRIPTION="Flexible Contect-aware Input Tool with eXtension support"
+HOMEPAGE="http://fcitx-im.org/"
+SRC_URI="http://download.fcitx-im.org/fcitx/${P}_dict.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -79,7 +79,7 @@ src_prepare() {
 src_configure() {
 	local mycmakeargs="
 		-DLIB_INSTALL_DIR=/usr/$(get_libdir)
-		-DSYSCONFDIR=/etc
+		-DSYSCONFDIR=/etc/
 		$(cmake-utils_use_enable X X11)
 		$(cmake-utils_use_enable autostart XDGAUTOSTART)
 		$(cmake-utils_use_enable cairo CAIRO)
