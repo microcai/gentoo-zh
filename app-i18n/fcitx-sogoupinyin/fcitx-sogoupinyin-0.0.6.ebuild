@@ -6,7 +6,7 @@ EAPI=4
 
 DESCRIPTION="Fcitx Wrapper for sogoupinyin."
 HOMEPAGE="http://code.google.com/p/fcitx"
-SRC_URI="http://packages.linuxdeepin.com/deepin/pool/non-free/f/fcitx-sogoupinyin-release/${PN}-release_${PV}.orig.tar.gz"
+SRC_URI="http://packages.linuxdeepin.com/deepin/pool/non-free/f/fcitx-sogoupinyin-release/${PN}-release_${PV}.orig.tar.xz"
 
 LICENSE="Fcitx-Sogou"
 SLOT="0"
