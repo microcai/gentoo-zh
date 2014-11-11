@@ -8,7 +8,7 @@ inherit cmake-utils
 
 DESCRIPTION="An input method frontend for fcitx."
 HOMEPAGE="https://github.com/lenky0401/fcitx-qimpanel"
-SRC_URI="https://github.com/lenky0401/fcitx-qimpanel/archive/fcitx-qimpanel-0.1.5.tar.gz"
+SRC_URI="https://github.com/lenky0401/fcitx-qimpanel/archive/${P}.tar.gz"
 
 LICENSE="GPL2"
 SLOT="0"
