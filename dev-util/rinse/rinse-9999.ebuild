@@ -2,14 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI="4"
 
-inherit mercurial
+inherit git-2
 
 DESCRIPTION="RPM based distributions bootstrap scripts"
-HOMEPAGE="http://www.xen-tools.org/software/rinse"
-EHG_REPO_BASE="rinse.repository.steve.org.uk"
-EHG_REPO_URI="http://${EHG_REPO_BASE}/"
+HOMEPAGE="http://collab-maint.alioth.debian.org/rinse/"
+EGIT_REPO_URI="git://anonscm.debian.org/collab-maint/rinse.git"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,8 +19,6 @@ DEPEND=""
 RDEPEND="
 	app-arch/rpm
 	dev-perl/libwww-perl"
-
-S=${WORKDIR}/${EHG_REPO_BASE}
 
 src_install() {
 	emake PREFIX="${D}" install || die "install failed"
