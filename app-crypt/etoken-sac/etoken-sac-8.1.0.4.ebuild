@@ -27,7 +27,7 @@ REQUIRED_USE="amd64? ( multilib )"
 # TODO: minimal useflag (I can't do it now, since
 # it seems like I brake my token and it is uninitialized now)
 RDEPEND="
-	>=sys-apps/pcsc-lite-1.4.99
+	>=sys-apps/pcsc-lite-1.8.13-r1
 	|| (
 		dev-libs/libusb-compat
 		dev-libs/libusb:0
@@ -65,7 +65,6 @@ src_unpack() {
 
 	      tar -xf "${FILESDIR}/dist/libhal_amd64_lib32.txz" -C rpmcontent
 	      tar -xf "${FILESDIR}/dist/libhal_amd64_lib64.txz" -C rpmcontent
-	      tar -xf "${FILESDIR}/dist/pcsc_amd64.txz" -C rpmcontent
 	fi
 	
 	if use x86 ; then
