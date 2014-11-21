@@ -55,7 +55,12 @@ RDEPEND="
 	amd64? ( abi_x86_32? (
 		gtk? ( app-emulation/emul-linux-x86-gtklibs )
 		gtk3? ( app-emulation/emul-linux-x86-gtklibs )
-		qt4? ( app-emulation/emul-linux-x86-qtlibs )
+		qt4? (
+		  || ( app-emulation/emul-linux-x86-qtlibs
+		      dev-qt/qtgui:4[abi_x86_32] )
+		   || ( app-emulation/emul-linux-x86-qtlibs
+		      dev-qt/qtdbus:4[abi_x86_32] )
+	      )
 	) )"
 
 DEPEND="${RDEPEND}
