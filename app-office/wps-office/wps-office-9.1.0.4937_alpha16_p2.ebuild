@@ -33,7 +33,7 @@ MY_VV=${MY_PV}~${MY_BRANCH}${MY_SP}
 
 DESCRIPTION="WPS Office is an office productivity suite. This is an ALPHA
 package. Use it at your own risk."
-HOMEPAGE="http://www.wps.cn"
+HOMEPAGE="http://linux.wps.cn/"
 
 SRC_URI="http://kdl.cc.ksosoft.com/wps-community/download/${MY_BRANCH}/${PN}_${MY_VV}_i386.deb"
 

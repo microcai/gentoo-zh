@@ -6,8 +6,8 @@ EAPI=5
 
 DESCRIPTION="Sogou Pinyin input method."
 HOMEPAGE="http://pinyin.sogou.com/linux/"
-SRC_URI="amd64? ( http://download.ime.sogou.com/1397738329/sogou_pinyin_linux_${PV}_amd64.deb )
- x86? ( http://download.ime.sogou.com/1397738329/sogou_pinyin_linux_${PV}_i386.deb )
+SRC_URI="amd64? ( http://download.ime.sogou.com/1408440412/sogou_pinyin_linux_${PV}_amd64.deb )
+ x86? ( http://download.ime.sogou.com/1408440412/sogou_pinyin_linux_${PV}_i386.deb )
 "
 
 LICENSE="Fcitx-Sogou"
@@ -18,8 +18,14 @@ RESTRICT="mirror"
 
 RDEPEND=">=app-i18n/fcitx-4.2.8[qt4,X,dbus]
 !app-i18n/fcitx-qimpanel
+net-dns/libidn
+app-i18n/opencc
+net-libs/libssh2
+media-video/rtmpdump
 dev-qt/qtdeclarative:4
 dev-qt/qtgui:4
+x11-apps/xprop
+sys-apps/lsb-release
 !app-i18n/fcitx-sogoupinyin"
 DEPEND="${RDEPEND}"
 S=${WORKDIR}
@@ -49,6 +55,12 @@ src_install(){
   dodir /etc/xdg/autostart
   insinto /etc/xdg/autostart
   doins ${S}/etc/xdg/autostart/*
+
+  dodir /usr/lib
+  insinto /usr/lib
+  dosym libcurl.so.4 /usr/lib/libcurl-gnutls.so.4
+#  dosym libgnutls.so /usr/lib/libgnutls.so.26
+  dosym librtmp.so /usr/lib/librtmp.so.0
 }
 
 pkg_postinst(){
@@ -56,6 +68,6 @@ pkg_postinst(){
 	einfo "After install the fcitx-sogoupinyin, a restart of fcitx is"
 	einfo "expected."
 	einfo
-	einfo "if you see 请启用fcitx-qimpanel面板程序，以便更好的享受搜狗输入法！"
-	einfo "relogin to your desktop, or just start fcitx-qimpanal"
+	einfo "if you see 请启用sogou-qimpanel面板程序，以便更好的享受搜狗输入法！"
+	einfo "relogin to your desktop, or just start sogou-qimpanel"
 }
