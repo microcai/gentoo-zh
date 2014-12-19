@@ -27,6 +27,7 @@ DEPEND="
 	dev-libs/openssl
 	net-libs/gloox
 	sys-libs/zlib
+	dev-libs/protobuf
 	lua? ( >=dev-lang/luajit-2.0 )
 "
 RDEPEND="${DEPEND}"
