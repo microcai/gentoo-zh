@@ -17,7 +17,7 @@ LICENSE="GPL3"
 
 SLOT="0"
 KEYWORDS=""
-IUSE="python zmq lua"
+IUSE="python lua"
 
 inherit cmake-utils git-r3
 
@@ -37,7 +37,6 @@ src_configure(){
 		-DINTERNALGLOOX=OFF
 		$(cmake-utils_use_enable python PYTHON)
 		$(cmake-utils_use_enable lua LUA)
-		$(cmake-utils_use_enable zmq ZMQ)
 	)
 	cmake-utils_src_configure
 }
