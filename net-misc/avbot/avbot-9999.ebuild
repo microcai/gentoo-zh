@@ -28,6 +28,7 @@ DEPEND="
 	net-libs/gloox
 	sys-libs/zlib
 	dev-libs/protobuf
+	>=dev-db/soci-3.2
 	lua? ( >=dev-lang/luajit-2.0 )
 "
 RDEPEND="${DEPEND}"
