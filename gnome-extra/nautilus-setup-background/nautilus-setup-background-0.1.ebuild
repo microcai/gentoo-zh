@@ -10,6 +10,7 @@ HOMEPAGE="http://dev.inlsd.org/projects/nautilus-setup-background"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+EAPI="5"
 
 SRC_URI="http://ftp.inlsd.org/${PN}/${P}.tar.bz2"
 
