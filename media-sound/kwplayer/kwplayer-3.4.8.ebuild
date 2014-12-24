@@ -20,11 +20,13 @@ DEPEND="${PYTHON_DEPS}"
 RDEPEND="${DEPEND}
 	dev-python/pygobject:3
 	dev-python/dbus-python
+	dev-python/html2text
 	media-libs/gstreamer:1.0
 	media-libs/gst-plugins-base:1.0
 	media-libs/gst-plugins-good:1.0
 	media-libs/gst-plugins-ugly:1.0
 	media-plugins/gst-plugins-libav:1.0
+	x11-themes/gnome-icon-theme
 	x11-themes/gnome-icon-theme-symbolic
 	"
 src_compile() {

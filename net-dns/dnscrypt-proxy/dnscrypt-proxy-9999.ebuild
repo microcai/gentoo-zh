@@ -4,27 +4,20 @@
 
 EAPI=5
 
-inherit eutils flag-o-matic systemd user ${GIT_ECLASS}
+inherit eutils systemd user git-r3
 
 DESCRIPTION="A tool for securing communications between a client and a DNS resolver"
 HOMEPAGE="http://dnscrypt.org/"
-RESTRICT="mirror"
+EGIT_REPO_URI="https://github.com/jedisct1/${PN}"
 
 LICENSE="ISC"
 SLOT="0"
-if [[ ${PV} == "9999" ]];then
-	GIT_ECLASS="git-r3"
-	EGIT_REPO_URI="https://github.com/jedisct1/${PN}"
-	KEYWORDS=""
-else
-	SRC_URI="http://download.dnscrypt.org/${PN}/${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
-fi
+KEYWORDS=""
 IUSE="+plugins ldns systemd"
 
-DEPEND=""
-RDEPEND="dev-libs/libsodium
-	ldns? ( net-libs/ldns )
+DEPEND="dev-libs/libsodium
+	ldns? ( net-libs/ldns )"
+RDEPEND="${DEPEND}
 	systemd? ( sys-apps/systemd )"
 
 DOCS=( AUTHORS ChangeLog COPYING NEWS README.markdown README-PLUGINS.markdown
@@ -36,7 +29,8 @@ pkg_setup() {
 }
 
 src_configure() {
-	econf $(use_enable plugins) \
+	econf \
+		$(use_enable plugins) \
 		$(use_with systemd )
 }
 
@@ -45,8 +39,5 @@ src_install() {
 
 	newinitd "${FILESDIR}/${PN}.initd" ${PN}
 	newconfd "${FILESDIR}/${PN}.confd" ${PN}
-
-	if use systemd; then
-		systemd_dounit "${FILESDIR}"/${PN}.service
-	fi
+	systemd_dounit "${FILESDIR}"/${PN}.service
 }
