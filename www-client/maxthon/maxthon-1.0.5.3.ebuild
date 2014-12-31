@@ -9,10 +9,10 @@ HOMEPAGE="http://www.maxthon.cn"
 	  
 SRC_URI="
 	amd64? (
-		http://dl.maxthon.cn/linux/deb/packages/amd64/maxthon-browser-beta_${PV}_amd64.deb		
+		http://dl.maxthon.cn/linux/deb/packages/amd64/maxthon-browser-stable_${PV}_amd64.deb	
 	)
 	x86? (
-		http://dl.maxthon.cn/linux/deb/packages/i386/maxthon-browser-beta_${PV}_i386.deb
+		http://dl.maxthon.cn/linux/deb/packages/i386/maxthon-browser-stable_${PV}_i386.deb
 	)
 "		  
 	
