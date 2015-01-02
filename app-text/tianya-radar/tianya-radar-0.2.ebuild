@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-qt/qtwidgets:5
+DEPEND=">=dev-qt/qtwidgets-5.4:5
   dev-libs/boost[context,threads]"
 
 RDEPEND="${DEPEND}"
