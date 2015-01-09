@@ -6,8 +6,8 @@ EAPI=5
 
 DESCRIPTION="KuaiPan is one of the most popular cloud storage service in China. "
 HOMEPAGE="http://www.ubuntukylin.com/applications/showimg.php?lang=cn&id=21"
-SRC_URI="amd64? ( https://launchpad.net/kuaipan4uk/2.0/2.0-beta/+download/kuaipan4uk_1404_${PV}_amd64.deb )
- x86? ( https://launchpad.net/kuaipan4uk/2.0/2.0-beta/+download/kuaipan4uk_1404_${PV}_i386.deb )
+SRC_URI="amd64? ( https://launchpadlibrarian.net/180448424/${PN}_1404_${PV}_amd64.deb )
+ x86? ( https://launchpadlibrarian.net/180448408/kuaipan4uk_1404_${PV}_i386.deb )
 "
 
 LICENSE=" "
@@ -58,8 +58,7 @@ src_install(){
   insinto /usr/share
   doins -r ${S}/usr/share/*
   
-  if [ ! -e /usr/lib/libboost_iostreams.so.1.54.0 ];
-  	then dosym /usr/lib/libboost_iostreams.so  /opt/ubuntukylin/kuaipan4uk/lib/libboost_iostreams.so.1.54.0;
-  fi;
-  
+  if [ ! -e /usr/lib/libboost_iostreams.so.1.56.0 ];
+  	then dosym /usr/lib/libboost_iostreams.so  /opt/ubuntukylin/kuaipan4uk/lib/libboost_iostreams.so.1.56.0;
+  fi;  
 }
