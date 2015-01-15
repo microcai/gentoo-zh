@@ -17,16 +17,18 @@ LICENSE="GPL3"
 
 SLOT="0"
 KEYWORDS=""
-IUSE="python zmq lua"
+IUSE="python lua"
 
 inherit cmake-utils git-r3
 
 
 DEPEND="
-	>=dev-libs/boost-1.55[nls,threads,context,static-libs,python=]
+	>=dev-libs/boost-1.57[nls,threads,context,static-libs,python=]
 	dev-libs/openssl
 	net-libs/gloox
 	sys-libs/zlib
+	dev-libs/protobuf
+	>=dev-db/soci-3.2[sqlite,boost]
 	lua? ( >=dev-lang/luajit-2.0 )
 "
 RDEPEND="${DEPEND}"
@@ -36,7 +38,6 @@ src_configure(){
 		-DINTERNALGLOOX=OFF
 		$(cmake-utils_use_enable python PYTHON)
 		$(cmake-utils_use_enable lua LUA)
-		$(cmake-utils_use_enable zmq ZMQ)
 	)
 	cmake-utils_src_configure
 }
