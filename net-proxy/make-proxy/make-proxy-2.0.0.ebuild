@@ -21,11 +21,11 @@ RDEPEND="${DEPEND}"
 
 src_compile() {
 	if use client ; then
-		make server
+		make client
 	fi
 
 	if use server ; then
-		make client
+		make server
 	fi
 }
 
