@@ -13,7 +13,7 @@ SRC_URI="https://github.com/yueyoum/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="make-proxy"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="server client systemd"
+IUSE="+client server systemd"
 
 DEPEND="dev-lang/erlang
 	systemd? ( sys-apps/systemd ) "
