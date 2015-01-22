@@ -24,7 +24,6 @@ DEPEND="app-arch/tar"
 
 RDEPEND=">=dev-libs/openssl-1.0
         net-misc/curl
-        dev-qt/qtnetwork:4
         dev-qt/qtsql:4
         dev-qt/qtcore:4[glib]
         dev-qt/qtgui:4[glib]"
