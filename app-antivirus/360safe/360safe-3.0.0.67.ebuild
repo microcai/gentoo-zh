@@ -23,6 +23,7 @@ S="${WORKDIR}"
 DEPEND="app-arch/tar"
 
 RDEPEND=">=dev-libs/openssl-1.0
+        sys-auth/polkit[pam]
         net-misc/curl
         dev-qt/qtsql:4
         dev-qt/qtcore:4[glib]
@@ -30,4 +31,10 @@ RDEPEND=">=dev-libs/openssl-1.0
 
 src_install(){
   tar -xvf ${WORKDIR}/data.tar.xz -C "${D}"
+  
+  cat << EOF > ${D}/opt/360safeforlinux/start360.sh
+#! /bin/sh
+exec pkexec "/opt/360safeforlinux/s360SafeForLinux" --user="\$USER" "\$@"
+EOF
+
 }
