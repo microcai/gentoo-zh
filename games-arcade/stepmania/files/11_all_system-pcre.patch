@@ -1,7 +1,7 @@
-diff -r 01e2906a1f72 configure.ac
---- a/configure.ac	Thu Jul 26 17:27:45 2012 -0500
-+++ b/configure.ac	Sat Jul 28 14:50:55 2012 -0700
-@@ -277,6 +277,21 @@
+diff -ru stepmania-5.9999.old/configure.ac stepmania-5.9999/configure.ac
+--- stepmania-5.9999.old/configure.ac	2015-01-15 23:43:14.480532494 +0300
++++ stepmania-5.9999/configure.ac	2015-01-15 23:54:43.906807439 +0300
+@@ -382,6 +382,21 @@
  AC_ARG_ENABLE(lua-binaries, AS_HELP_STRING([--enable-lua-binaries],[Build lua and luac]), enable_lua_binaries=$enableval, enable_lua_binaries=no)
  AM_CONDITIONAL(BUILD_LUA_BINARIES, test "$enable_lua_binaries" = "yes" )
  
@@ -10,60 +10,58 @@ diff -r 01e2906a1f72 configure.ac
 +AM_CONDITIONAL(USE_SYSTEM_PCRE, test "$with_system_pcre" == "yes")
 +
 +if test "$with_system_pcre" == "yes"; then
-+	have_libpcre=yes
-+	AC_CHECK_HEADER(pcre.h, , have_libpcre=no)
-+	if test "$have_libpcre" = "no"; then
-+		AC_MSG_ERROR([If you want to use system libpcre, please make sure that it is installed. Otherwise please configure with --without-system-pcre.])
-+	else
-+		AC_DEFINE([USE_SYSTEM_PCRE], 1, [Build with system libpcre])
-+		LIBS="$LIBS -lpcre"
-+	fi
++   have_libpcre=yes
++   AC_CHECK_HEADER(pcre.h, , have_libpcre=no)
++   if test "$have_libpcre" = "no"; then
++       AC_MSG_ERROR([If you want to use system libpcre, please make sure that it is installed. Otherwise please configure with --without-system-pcre.])
++   else
++       AC_DEFINE([USE_SYSTEM_PCRE], 1, [Build with system libpcre])
++       LIBS="$LIBS -lpcre"
++   fi
 +fi
 +
- AC_CONFIG_FILES(Makefile)
- AC_CONFIG_FILES(src/Makefile)
- AC_OUTPUT
-diff -r 01e2906a1f72 src/Makefile.am
---- a/src/Makefile.am	Thu Jul 26 17:27:45 2012 -0500
-+++ b/src/Makefile.am	Sat Jul 28 14:50:55 2012 -0700
-@@ -374,8 +374,13 @@
- ScoreDisplayPercentage.cpp ScoreDisplayPercentage.h ScoreDisplayRave.cpp ScoreDisplayRave.h \
+ AC_SUBST(RESFLAGS)
+ 
+ dnl Add these after all tests are done as they don't exist just yet.
+Только в stepmania-5.9999.old: .configure.ac.swp
+diff -ru stepmania-5.9999.old/src/Makefile.am stepmania-5.9999/src/Makefile.am
+--- stepmania-5.9999.old/src/Makefile.am	2015-01-15 23:43:13.573853213 +0300
++++ stepmania-5.9999/src/Makefile.am	2015-01-15 23:58:23.859879075 +0300
+@@ -479,7 +479,13 @@
  SongPosition.cpp SongPosition.h
  
--PCRE = ../extern/pcre/get.c ../extern/pcre/internal.h ../extern/pcre/maketables.c ../extern/pcre/pcre.c ../extern/pcre/pcre.h ../extern/pcre/study.c
+ PCRE = ../extern/pcre/get.c ../extern/pcre/internal.h ../extern/pcre/maketables.c ../extern/pcre/pcre.c ../extern/pcre/pcre.h ../extern/pcre/study.c
+-EXTRA_DIST += ../extern/pcre/chartables.c
 +Rage =
 +all_test_SOURCES =
 +if !USE_SYSTEM_PCRE
 +Rage + = ../extern/pcre/get.c ../extern/pcre/internal.h ../extern/pcre/maketables.c ../extern/pcre/pcre.c ../extern/pcre/pcre.h ../extern/pcre/study.c
 +all_test_SOURCES += ../extern/pcre/get.c ../extern/pcre/internal.h ../extern/pcre/maketables.c ../extern/pcre/pcre.c ../extern/pcre/pcre.h ../extern/pcre/study.c
- EXTRA_DIST += ../extern/pcre/chartables.c
++  EXTRA_DIST += ../extern/pcre/chartables.c
 +endif
  
  Lua = ../extern/lua-5.1/src/lapi.c ../extern/lua-5.1/src/lauxlib.c ../extern/lua-5.1/src/lbaselib.c ../extern/lua-5.1/src/lcode.c ../extern/lua-5.1/src/ldblib.c \
  ../extern/lua-5.1/src/ldebug.c ../extern/lua-5.1/src/ldo.c ../extern/lua-5.1/src/ldump.c ../extern/lua-5.1/src/lfunc.c ../extern/lua-5.1/src/lgc.c ../extern/lua-5.1/src/linit.c \
-@@ -411,7 +416,7 @@
+@@ -515,7 +521,7 @@
  RageFileDriverSlice.cpp RageFileDriverSlice.h \
  RageFileDriverTimeout.cpp RageFileDriverTimeout.h
  
 -Rage = $(PCRE) $(Lua) $(jsoncpp) $(RageFile) $(RageSoundFileReaders) \
 +Rage += $(Lua) $(jsoncpp) $(RageFile) $(RageSoundFileReaders) \
+ CubicSpline.cpp CubicSpline.h \
  RageBitmapTexture.cpp RageBitmapTexture.h \
  RageDisplay.cpp RageDisplay.h \
- RageDisplay_OGL.cpp RageDisplay_OGL.h \
-@@ -650,9 +655,8 @@
- GtkModule_so_SOURCES = arch/LoadingWindow/LoadingWindow_GtkModule.cpp
- endif
+@@ -763,7 +769,6 @@
  
--all_test_SOURCES = \
-+all_test_SOURCES += \
+ all_test_SOURCES = \
  		$(ArchUtils) \
 -		$(PCRE) \
  		$(RageFile) \
  		$(Lua) \
  		$(ArchHooks) \
-diff -r 01e2906a1f72 src/RageUtil.cpp
---- a/src/RageUtil.cpp	Thu Jul 26 17:27:45 2012 -0500
-+++ b/src/RageUtil.cpp	Sat Jul 28 14:50:55 2012 -0700
+diff -ru stepmania-5.9999.old/src/RageUtil.cpp stepmania-5.9999/src/RageUtil.cpp
+--- stepmania-5.9999.old/src/RageUtil.cpp	2015-01-15 23:43:13.653854325 +0300
++++ stepmania-5.9999/src/RageUtil.cpp	2015-01-16 00:01:17.248956597 +0300
 @@ -1342,7 +1342,11 @@
  	return true;
  }
