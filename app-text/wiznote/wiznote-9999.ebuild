@@ -31,8 +31,3 @@ RDEPEND="dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	dev-qt/qtwebkit:4"
 DEPEND="${RDEPEND}"
-
-src_prepare() {
-	sed -e 's/Categories=KDE;QT;Utility;/Categories=KDE;Qt;Utility;/' \
-		-i build/common/wiznote.desktop || die
-}
