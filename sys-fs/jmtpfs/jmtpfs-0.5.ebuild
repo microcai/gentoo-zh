@@ -10,11 +10,11 @@ SRC_URI="https://github.com/JasonFerrara/jmtpfs/archive/v${PV}.tar.gz -> ${P}.ta
 
 LICENSE="GPL3"
 SLOT="0"
-KEYWORDS="~amd64 ~86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-fs/fuse
-		media-libs/libmtp"
+	media-libs/libmtp"
 RDEPEND="${DEPEND}"
 
 pkg_postinst() {
