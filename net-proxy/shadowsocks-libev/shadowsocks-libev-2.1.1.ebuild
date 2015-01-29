@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit eutils
+inherit eutils systemd
 
 DESCRIPTION="A lightweight secured scoks5 proxy for embedded devices and low end boxes"
 HOMEPAGE="https://github.com/shadowsocks/shadowsocks-libev"
@@ -15,10 +15,11 @@ SRC_URI="https://github.com/shadowsocks/${PN}/archive/${MY_PV}.tar.gz -> ${P}.ta
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug +openssl polarssl"
+IUSE="debug +openssl polarssl systemd"
 
 DEPEND="openssl? ( dev-libs/openssl )
 	polarssl? ( net-libs/polarssl )
+	systemd? ( sys-apps/systemd )
 	"
 RDEPEND="${DEPEND}"
 
@@ -40,6 +41,11 @@ src_install() {
 	newinitd "${FILESDIR}/shadowsocks.initd" shadowsocks
 	dosym /etc/init.d/shadowsocks /etc/init.d/shadowsocks.server
 	dosym /etc/init.d/shadowsocks /etc/init.d/shadowsocks.client
+
+	if use systemd ; then
+		systemd_dounit "${FILESDIR}/shadowsocks-server.service"
+		systemd_dounit "${FILESDIR}/shadowsocks-client.service"
+	fi
 }
 
 pkg_setup() {
