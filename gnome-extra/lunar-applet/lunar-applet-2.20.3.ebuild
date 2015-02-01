@@ -2,9 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-P="gnome-panel-2.20.3"
-PN="gnome-panel"
-
+EAPI=5
 inherit autotools eutils gnome2
 
 DESCRIPTION="The GNOME panel"

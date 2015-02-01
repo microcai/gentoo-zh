@@ -7,6 +7,7 @@
 # ************************ General Portage Overlay ************************
 # ==========================================================================
 
+EAPI=5
 inherit gnome2
 
 DESCRIPTION="Gnome OSD notification system"
