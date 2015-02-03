@@ -31,7 +31,3 @@ RDEPEND="dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	dev-qt/qtwebkit:4"
 DEPEND="${RDEPEND}"
-
-src_prepare() {
-	epatch "${FILESDIR}/fix-ioapi.patch"
-}
