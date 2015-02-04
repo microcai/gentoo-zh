@@ -5,7 +5,7 @@ EAPI=5
 inherit git-2 eutils
 
 DESCRIPTION="Weaponized web shell"
-HOMEPAGE="https://github.com/epinna/weevely"
+HOMEPAGE="https://github.com/epinna/weevely3"
 SRC_URL=""
 
 EGIT_REPO_URI="https://git@github.com/epinna/weevely3.git"
