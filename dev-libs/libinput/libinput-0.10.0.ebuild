@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libinput/libinput-0.7.0.ebuild,v 1.2 2014/12/30 19:52:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libinput/libinput-0.9.0.ebuild,v 1.1 2015/02/04 16:15:54 chithanh Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.freedesktop.org/software/${PN}/${P}.tar.xz"
 
 # License appears to be a variant of libtiff
 LICENSE="libtiff"
-SLOT="0/5"
+SLOT="0/7"
 KEYWORDS="~amd64 ~arm"
 IUSE="test"
 
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 "
 # tests can even use: dev-util/valgrind
 
-src_prepare() {
+src_configure() {
 	# Doc handling in kinda strange but everything
 	# is available in the tarball already.
 	sed -e 's/^\(SUBDIRS =.*\)doc\(.*\)$/\1\2/' \
@@ -36,7 +36,9 @@ src_prepare() {
 
 src_configure() {
 	# gui can be built but will not be installed
+	# building documentation silently fails with graphviz syntax errors
 	econf \
+		--disable-documentation \
 		--disable-event-gui \
 		$(use_enable test tests)
 }
