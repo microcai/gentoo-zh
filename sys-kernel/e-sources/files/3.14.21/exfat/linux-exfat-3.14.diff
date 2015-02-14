@@ -1,6 +1,6 @@
-diff -uprN linux-3.16/fs/exfat/exfat_api.c linux-3.16-exfat/fs/exfat/exfat_api.c
---- linux-3.16/fs/exfat/exfat_api.c	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_api.c	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_api.c linux-3.19/fs/exfat/exfat_api.c
+--- linux-3.19.orig/fs/exfat/exfat_api.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_api.c	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,528 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -530,9 +530,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_api.c linux-3.16-exfat/fs/exfat/exfat_api.c
 +/*======================================================================*/
 +/*  Local Function Definitions                                          */
 +/*======================================================================*/
-diff -uprN linux-3.16/fs/exfat/exfat_api.h linux-3.16-exfat/fs/exfat/exfat_api.h
---- linux-3.16/fs/exfat/exfat_api.h	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_api.h	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_api.h linux-3.19/fs/exfat/exfat_api.h
+--- linux-3.19.orig/fs/exfat/exfat_api.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_api.h	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,206 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -740,9 +740,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_api.h linux-3.16-exfat/fs/exfat/exfat_api.h
 +s32 FsReleaseCache(struct super_block *sb);
 +
 +#endif /* _EXFAT_API_H */
-diff -uprN linux-3.16/fs/exfat/exfat_bitmap.c linux-3.16-exfat/fs/exfat/exfat_bitmap.c
---- linux-3.16/fs/exfat/exfat_bitmap.c	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_bitmap.c	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_bitmap.c linux-3.19/fs/exfat/exfat_bitmap.c
+--- linux-3.19.orig/fs/exfat/exfat_bitmap.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_bitmap.c	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,63 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -807,9 +807,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_bitmap.c linux-3.16-exfat/fs/exfat/exfat_bi
 +{
 +	bitmap[BITMAP_LOC(i)] &= ~(0x01 << BITMAP_SHIFT(i));
 +} /* end of Bitmap_clear */
-diff -uprN linux-3.16/fs/exfat/exfat_bitmap.h linux-3.16-exfat/fs/exfat/exfat_bitmap.h
---- linux-3.16/fs/exfat/exfat_bitmap.h	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_bitmap.h	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_bitmap.h linux-3.19/fs/exfat/exfat_bitmap.h
+--- linux-3.19.orig/fs/exfat/exfat_bitmap.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_bitmap.h	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,55 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -866,9 +866,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_bitmap.h linux-3.16-exfat/fs/exfat/exfat_bi
 +void	exfat_bitmap_clear(u8 *bitmpa, int i);
 +
 +#endif /* _EXFAT_BITMAP_H */
-diff -uprN linux-3.16/fs/exfat/exfat_blkdev.c linux-3.16-exfat/fs/exfat/exfat_blkdev.c
---- linux-3.16/fs/exfat/exfat_blkdev.c	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_blkdev.c	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_blkdev.c linux-3.19/fs/exfat/exfat_blkdev.c
+--- linux-3.19.orig/fs/exfat/exfat_blkdev.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_blkdev.c	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,197 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -1067,9 +1067,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_blkdev.c linux-3.16-exfat/fs/exfat/exfat_bl
 +
 +	return sync_blockdev(sb->s_bdev);
 +}
-diff -uprN linux-3.16/fs/exfat/exfat_blkdev.h linux-3.16-exfat/fs/exfat/exfat_blkdev.h
---- linux-3.16/fs/exfat/exfat_blkdev.h	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_blkdev.h	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_blkdev.h linux-3.19/fs/exfat/exfat_blkdev.h
+--- linux-3.19.orig/fs/exfat/exfat_blkdev.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_blkdev.h	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,73 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -1144,9 +1144,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_blkdev.h linux-3.16-exfat/fs/exfat/exfat_bl
 +s32 bdev_sync(struct super_block *sb);
 +
 +#endif /* _EXFAT_BLKDEV_H */
-diff -uprN linux-3.16/fs/exfat/exfat_cache.c linux-3.16-exfat/fs/exfat/exfat_cache.c
---- linux-3.16/fs/exfat/exfat_cache.c	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_cache.c	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_cache.c linux-3.19/fs/exfat/exfat_cache.c
+--- linux-3.19.orig/fs/exfat/exfat_cache.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_cache.c	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,780 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -1928,9 +1928,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_cache.c linux-3.16-exfat/fs/exfat/exfat_cac
 +	bp->next->prev = bp->prev;
 +	push_to_lru(bp, list);
 +} /* end of buf_cache_move_to_lru */
-diff -uprN linux-3.16/fs/exfat/exfat_cache.h linux-3.16-exfat/fs/exfat/exfat_cache.h
---- linux-3.16/fs/exfat/exfat_cache.h	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_cache.h	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_cache.h linux-3.19/fs/exfat/exfat_cache.h
+--- linux-3.19.orig/fs/exfat/exfat_cache.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_cache.h	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,85 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -2017,9 +2017,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_cache.h linux-3.16-exfat/fs/exfat/exfat_cac
 +void   buf_sync(struct super_block *sb);
 +
 +#endif /* _EXFAT_CACHE_H */
-diff -uprN linux-3.16/fs/exfat/exfat_config.h linux-3.16-exfat/fs/exfat/exfat_config.h
---- linux-3.16/fs/exfat/exfat_config.h	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_config.h	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_config.h linux-3.19/fs/exfat/exfat_config.h
+--- linux-3.19.orig/fs/exfat/exfat_config.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_config.h	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,69 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -2090,9 +2090,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_config.h linux-3.16-exfat/fs/exfat/exfat_co
 +#endif
 +
 +#endif /* _EXFAT_CONFIG_H */
-diff -uprN linux-3.16/fs/exfat/exfat_core.c linux-3.16-exfat/fs/exfat/exfat_core.c
---- linux-3.16/fs/exfat/exfat_core.c	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_core.c	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_core.c linux-3.19/fs/exfat/exfat_core.c
+--- linux-3.19.orig/fs/exfat/exfat_core.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_core.c	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,5114 @@
 +/* Some of the source code in this file came from "linux/fs/fat/misc.c".  */
 +/*
@@ -7208,9 +7208,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_core.c linux-3.16-exfat/fs/exfat/exfat_core
 +
 +	return ret;
 +} /* end of multi_sector_write */
-diff -uprN linux-3.16/fs/exfat/exfat_core.h linux-3.16-exfat/fs/exfat/exfat_core.h
---- linux-3.16/fs/exfat/exfat_core.h	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_core.h	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_core.h linux-3.19/fs/exfat/exfat_core.h
+--- linux-3.19.orig/fs/exfat/exfat_core.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_core.h	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,671 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -7883,9 +7883,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_core.h linux-3.16-exfat/fs/exfat/exfat_core
 +s32   multi_sector_write(struct super_block *sb, u32 sec, struct buffer_head *bh, s32 num_secs, s32 sync);
 +
 +#endif /* _EXFAT_H */
-diff -uprN linux-3.16/fs/exfat/exfat_data.c linux-3.16-exfat/fs/exfat/exfat_data.c
---- linux-3.16/fs/exfat/exfat_data.c	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_data.c	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_data.c linux-3.19/fs/exfat/exfat_data.c
+--- linux-3.19.orig/fs/exfat/exfat_data.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_data.c	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,69 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -7956,9 +7956,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_data.c linux-3.16-exfat/fs/exfat/exfat_data
 +BUF_CACHE_T buf_cache_array[BUF_CACHE_SIZE];
 +BUF_CACHE_T buf_cache_lru_list;
 +BUF_CACHE_T buf_cache_hash_list[BUF_CACHE_HASH_SIZE];
-diff -uprN linux-3.16/fs/exfat/exfat_data.h linux-3.16-exfat/fs/exfat/exfat_data.h
---- linux-3.16/fs/exfat/exfat_data.h	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_data.h	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_data.h linux-3.19/fs/exfat/exfat_data.h
+--- linux-3.19.orig/fs/exfat/exfat_data.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_data.h	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,58 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -8018,10 +8018,10 @@ diff -uprN linux-3.16/fs/exfat/exfat_data.h linux-3.16-exfat/fs/exfat/exfat_data
 +#define BUF_CACHE_HASH_SIZE     64
 +
 +#endif /* _EXFAT_DATA_H */
-diff -uprN linux-3.16/fs/exfat/exfat_nls.c linux-3.16-exfat/fs/exfat/exfat_nls.c
---- linux-3.16/fs/exfat/exfat_nls.c	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_nls.c	2014-08-15 18:37:39.578583119 +0800
-@@ -0,0 +1,444 @@
+diff -uprN linux-3.19.orig/fs/exfat/exfat_nls.c linux-3.19/fs/exfat/exfat_nls.c
+--- linux-3.19.orig/fs/exfat/exfat_nls.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_nls.c	2015-02-14 12:22:42.715827657 +0800
+@@ -0,0 +1,448 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
 + *
@@ -8377,7 +8377,11 @@ diff -uprN linux-3.16/fs/exfat/exfat_nls.c linux-3.16-exfat/fs/exfat/exfat_nls.c
 +		lossy = TRUE;
 +
 +	if (nls == NULL) {
++#if LINUX_VERSION_CODE < KERNEL_VERSION(3,3,0)
++		i = utf8s_to_utf16s(p_cstring, MAX_NAME_LENGTH, uniname);
++#else
 +		i = utf8s_to_utf16s(p_cstring, MAX_NAME_LENGTH, UTF16_HOST_ENDIAN, uniname, MAX_NAME_LENGTH);
++#endif
 +		for (j = 0; j < i; j++)
 +			SET16_A(upname + j * 2, nls_upper(sb, uniname[j]));
 +		uniname[i] = '\0';
@@ -8466,9 +8470,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_nls.c linux-3.16-exfat/fs/exfat/exfat_nls.c
 +	return len;
 +
 +} /* end of convert_uni_to_ch */
-diff -uprN linux-3.16/fs/exfat/exfat_nls.h linux-3.16-exfat/fs/exfat/exfat_nls.h
---- linux-3.16/fs/exfat/exfat_nls.h	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_nls.h	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_nls.h linux-3.19/fs/exfat/exfat_nls.h
+--- linux-3.19.orig/fs/exfat/exfat_nls.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_nls.h	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,91 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -8561,9 +8565,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_nls.h linux-3.16-exfat/fs/exfat/exfat_nls.h
 +void   nls_cstring_to_uniname(struct super_block *sb, UNI_NAME_T *p_uniname, u8 *p_cstring, s32 *p_lossy);
 +
 +#endif /* _EXFAT_NLS_H */
-diff -uprN linux-3.16/fs/exfat/exfat_oal.c linux-3.16-exfat/fs/exfat/exfat_oal.c
---- linux-3.16/fs/exfat/exfat_oal.c	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_oal.c	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_oal.c linux-3.19/fs/exfat/exfat_oal.c
+--- linux-3.19.orig/fs/exfat/exfat_oal.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_oal.c	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,186 @@
 +/* Some of the source code in this file came from "linux/fs/fat/misc.c".  */
 +/*
@@ -8751,9 +8755,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_oal.c linux-3.16-exfat/fs/exfat/exfat_oal.c
 +
 +	return tp;
 +} /* end of tm_current */
-diff -uprN linux-3.16/fs/exfat/exfat_oal.h linux-3.16-exfat/fs/exfat/exfat_oal.h
---- linux-3.16/fs/exfat/exfat_oal.h	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_oal.h	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_oal.h linux-3.19/fs/exfat/exfat_oal.h
+--- linux-3.19.orig/fs/exfat/exfat_oal.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_oal.h	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,74 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -8829,10 +8833,10 @@ diff -uprN linux-3.16/fs/exfat/exfat_oal.h linux-3.16-exfat/fs/exfat/exfat_oal.h
 +TIMESTAMP_T *tm_current(TIMESTAMP_T *tm);
 +
 +#endif /* _EXFAT_OAL_H */
-diff -uprN linux-3.16/fs/exfat/exfat_super.c linux-3.16-exfat/fs/exfat/exfat_super.c
---- linux-3.16/fs/exfat/exfat_super.c	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_super.c	2014-08-15 18:37:39.578583119 +0800
-@@ -0,0 +1,2490 @@
+diff -uprN linux-3.19.orig/fs/exfat/exfat_super.c linux-3.19/fs/exfat/exfat_super.c
+--- linux-3.19.orig/fs/exfat/exfat_super.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_super.c	2015-02-14 12:22:42.715827657 +0800
+@@ -0,0 +1,2516 @@
 +/* Some of the source code in this file came from "linux/fs/fat/file.c","linux/fs/fat/inode.c" and "linux/fs/fat/misc.c".  */
 +/*
 + *  linux/fs/fat/file.c
@@ -9189,7 +9193,7 @@ diff -uprN linux-3.16/fs/exfat/exfat_super.c linux-3.16-exfat/fs/exfat/exfat_sup
 +		struct qstr *qstr)
 +#endif
 +{
-+	struct nls_table *t = EXFAT_SB(dentry->d_sb)->nls_io;
++	struct super_block *sb = dentry->d_sb;
 +	const unsigned char *name;
 +	unsigned int len;
 +	unsigned long hash;
@@ -9199,7 +9203,7 @@ diff -uprN linux-3.16/fs/exfat/exfat_super.c linux-3.16-exfat/fs/exfat/exfat_sup
 +
 +	hash = init_name_hash();
 +	while (len--)
-+		hash = partial_name_hash(nls_tolower(t, *name++), hash);
++		hash = partial_name_hash(nls_upper(sb, *name++), hash);
 +	qstr->hash = end_name_hash(hash);
 +
 +	return 0;
@@ -9220,7 +9224,10 @@ diff -uprN linux-3.16/fs/exfat/exfat_super.c linux-3.16-exfat/fs/exfat/exfat_sup
 +	alen = exfat_striptail_len(name);
 +	blen = __exfat_striptail_len(len, str);
 +	if (alen == blen) {
-+		if (nls_strnicmp(t, name->name, str, alen) == 0)
++		if (t == NULL) {
++			if (strnicmp(name->name, str, alen) == 0)
++				return 0;
++		} else if (nls_strnicmp(t, name->name, str, alen) == 0)
 +			return 0;
 +	}
 +	return 1;
@@ -9405,7 +9412,11 @@ diff -uprN linux-3.16/fs/exfat/exfat_super.c linux-3.16-exfat/fs/exfat/exfat_sup
 +#endif
 +{
 +#if !(LINUX_VERSION_CODE < KERNEL_VERSION(2,6,36))
-+	struct inode *inode = filp->f_dentry->d_inode;
++    #if !(LINUX_VERSION_CODE < KERNEL_VERSION(3,18,3))
++		  struct inode *inode = filp->f_path.dentry->d_inode;
++    #else
++		  struct inode *inode = filp->f_dentry->d_inode;
++	#endif
 +#endif
 +#ifdef CONFIG_EXFAT_KERNEL_DEBUG
 +	unsigned int flags;
@@ -10409,9 +10420,14 @@ diff -uprN linux-3.16/fs/exfat/exfat_super.c linux-3.16-exfat/fs/exfat/exfat_sup
 +}
 +
 +#if LINUX_VERSION_CODE < KERNEL_VERSION(3,16,0)
++#ifdef CONFIG_AIO_OPTIMIZATION
++static ssize_t exfat_direct_IO(int rw, struct kiocb *iocb,
++						struct iov_iter *iter, loff_t offset)
++#else
 +static ssize_t exfat_direct_IO(int rw, struct kiocb *iocb,
 +					   const struct iovec *iov,
 +					   loff_t offset, unsigned long nr_segs)
++#endif
 +#else
 +static ssize_t exfat_direct_IO(int rw, struct kiocb *iocb,
 +					   struct iov_iter *iter, loff_t offset)
@@ -10425,7 +10441,12 @@ diff -uprN linux-3.16/fs/exfat/exfat_super.c linux-3.16-exfat/fs/exfat/exfat_sup
 +
 +	if (rw == WRITE) {
 +#if LINUX_VERSION_CODE < KERNEL_VERSION(3,16,0)
++#ifdef CONFIG_AIO_OPTIMIZATION
++		if (EXFAT_I(inode)->mmu_private <
++					(offset + iov_iter_count(iter)))
++#else
 +		if (EXFAT_I(inode)->mmu_private < (offset + iov_length(iov, nr_segs)))
++#endif
 +#else
 +		if (EXFAT_I(inode)->mmu_private < (offset + iov_iter_count(iter)))
 +#endif
@@ -10435,8 +10456,13 @@ diff -uprN linux-3.16/fs/exfat/exfat_super.c linux-3.16-exfat/fs/exfat/exfat_sup
 +	ret = blockdev_direct_IO(rw, iocb, inode, iter,
 +					offset, exfat_get_block);
 +#elif LINUX_VERSION_CODE >= KERNEL_VERSION(3,1,0)
++#ifdef CONFIG_AIO_OPTIMIZATION
++	ret = blockdev_direct_IO(rw, iocb, inode, iter,
++					offset, exfat_get_block);
++#else
 +	ret = blockdev_direct_IO(rw, iocb, inode, iov,
 +					offset, nr_segs, exfat_get_block);
++#endif
 +#else
 +        ret = blockdev_direct_IO(rw, iocb, inode, inode->i_sb->s_bdev, iov,
 +					offset, nr_segs, exfat_get_block, NULL);
@@ -10447,7 +10473,11 @@ diff -uprN linux-3.16/fs/exfat/exfat_super.c linux-3.16-exfat/fs/exfat/exfat_sup
 +		exfat_write_failed(mapping, offset+iov_iter_count(iter));
 +#elif LINUX_VERSION_CODE > KERNEL_VERSION(2,6,34)
 +	if ((ret < 0) && (rw & WRITE))
++#ifdef CONFIG_AIO_OPTIMIZATION
++		exfat_write_failed(mapping, offset+iov_iter_count(iter));
++#else
 +		exfat_write_failed(mapping, offset+iov_length(iov, nr_segs));
++#endif
 +#endif
 +	return ret;
 +}
@@ -10699,7 +10729,7 @@ diff -uprN linux-3.16/fs/exfat/exfat_super.c linux-3.16-exfat/fs/exfat/exfat_sup
 +	if (!inode->i_nlink)
 +		i_size_write(inode, 0);
 +	invalidate_inode_buffers(inode);
-+#if LINUX_VERSION_CODE < KERNEL_VERSION(3,5,0)
++#if LINUX_VERSION_CODE < KERNEL_VERSION(3,4,80)
 +	end_writeback(inode);
 +#else
 +	clear_inode(inode);
@@ -11323,9 +11353,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_super.c linux-3.16-exfat/fs/exfat/exfat_sup
 +MODULE_ALIAS_FS("exfat");
 +#endif
 +#endif
-diff -uprN linux-3.16/fs/exfat/exfat_super.h linux-3.16-exfat/fs/exfat/exfat_super.h
---- linux-3.16/fs/exfat/exfat_super.h	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_super.h	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_super.h linux-3.19/fs/exfat/exfat_super.h
+--- linux-3.19.orig/fs/exfat/exfat_super.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_super.h	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,171 @@
 +/* Some of the source code in this file came from "linux/fs/fat/fat.h".  */
 +
@@ -11498,9 +11528,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_super.h linux-3.16-exfat/fs/exfat/exfat_sup
 +}
 +
 +#endif /* _EXFAT_LINUX_H */
-diff -uprN linux-3.16/fs/exfat/exfat_upcase.c linux-3.16-exfat/fs/exfat/exfat_upcase.c
---- linux-3.16/fs/exfat/exfat_upcase.c	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_upcase.c	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_upcase.c linux-3.19/fs/exfat/exfat_upcase.c
+--- linux-3.19.orig/fs/exfat/exfat_upcase.c	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_upcase.c	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,405 @@
 +/*
 + *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
@@ -11540,7 +11570,7 @@ diff -uprN linux-3.16/fs/exfat/exfat_upcase.c linux-3.16-exfat/fs/exfat/exfat_up
 +
 +#include "exfat_nls.h"
 +
-+u8 uni_upcase[NUM_UPCASE<<1] = {
++const u8 uni_upcase[NUM_UPCASE<<1] = {
 +	0x00, 0x00, 0x01, 0x00, 0x02, 0x00, 0x03, 0x00, 0x04, 0x00, 0x05, 0x00, 0x06, 0x00, 0x07, 0x00,
 +	0x08, 0x00, 0x09, 0x00, 0x0A, 0x00, 0x0B, 0x00, 0x0C, 0x00, 0x0D, 0x00, 0x0E, 0x00, 0x0F, 0x00,
 +	0x10, 0x00, 0x11, 0x00, 0x12, 0x00, 0x13, 0x00, 0x14, 0x00, 0x15, 0x00, 0x16, 0x00, 0x17, 0x00,
@@ -11907,9 +11937,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_upcase.c linux-3.16-exfat/fs/exfat/exfat_up
 +	0xF2, 0xFF, 0xF3, 0xFF, 0xF4, 0xFF, 0xF5, 0xFF, 0xF6, 0xFF, 0xF7, 0xFF, 0xF8, 0xFF, 0xF9, 0xFF,
 +	0xFA, 0xFF, 0xFB, 0xFF, 0xFC, 0xFF, 0xFD, 0xFF, 0xFE, 0xFF, 0xFF, 0xFF
 +};
-diff -uprN linux-3.16/fs/exfat/exfat_version.h linux-3.16-exfat/fs/exfat/exfat_version.h
---- linux-3.16/fs/exfat/exfat_version.h	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/exfat_version.h	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/exfat_version.h linux-3.19/fs/exfat/exfat_version.h
+--- linux-3.19.orig/fs/exfat/exfat_version.h	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/exfat_version.h	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,19 @@
 +/************************************************************************/
 +/*                                                                      */
@@ -11930,9 +11960,9 @@ diff -uprN linux-3.16/fs/exfat/exfat_version.h linux-3.16-exfat/fs/exfat/exfat_v
 +/************************************************************************/
 +
 +#define EXFAT_VERSION  "1.2.9"
-diff -uprN linux-3.16/fs/exfat/Kconfig linux-3.16-exfat/fs/exfat/Kconfig
---- linux-3.16/fs/exfat/Kconfig	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/Kconfig	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/Kconfig linux-3.19/fs/exfat/Kconfig
+--- linux-3.19.orig/fs/exfat/Kconfig	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/Kconfig	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,39 @@
 +config EXFAT_FS
 +	tristate "exFAT fs support"
@@ -11973,9 +12003,9 @@ diff -uprN linux-3.16/fs/exfat/Kconfig linux-3.16-exfat/fs/exfat/Kconfig
 +	depends on EXFAT_FS
 +	help
 +	  Set this to the default input/output character set you'd like exFAT to use.
-diff -uprN linux-3.16/fs/exfat/Makefile linux-3.16-exfat/fs/exfat/Makefile
---- linux-3.16/fs/exfat/Makefile	1970-01-01 08:00:00.000000000 +0800
-+++ linux-3.16-exfat/fs/exfat/Makefile	2014-08-15 18:37:39.578583119 +0800
+diff -uprN linux-3.19.orig/fs/exfat/Makefile linux-3.19/fs/exfat/Makefile
+--- linux-3.19.orig/fs/exfat/Makefile	1970-01-01 08:00:00.000000000 +0800
++++ linux-3.19/fs/exfat/Makefile	2015-02-14 12:22:42.715827657 +0800
 @@ -0,0 +1,56 @@
 +#
 +# Makefile for Linux FAT12/FAT16/FAT32(VFAT)/FAT64(ExFAT) filesystem driver.
@@ -12033,10 +12063,10 @@ diff -uprN linux-3.16/fs/exfat/Makefile linux-3.16-exfat/fs/exfat/Makefile
 +endif
 +
 +.PHONY : all clean install uninstall
-diff -uprN linux-3.16/fs/Kconfig linux-3.16-exfat/fs/Kconfig
---- linux-3.16/fs/Kconfig	2014-08-04 06:25:02.000000000 +0800
-+++ linux-3.16-exfat/fs/Kconfig	2014-08-15 18:37:59.729313270 +0800
-@@ -88,6 +88,7 @@ if BLOCK
+diff -uprN linux-3.19.orig/fs/Kconfig linux-3.19/fs/Kconfig
+--- linux-3.19.orig/fs/Kconfig	2015-02-14 12:21:51.145824913 +0800
++++ linux-3.19/fs/Kconfig	2015-02-14 12:23:04.569162153 +0800
+@@ -89,6 +89,7 @@ if BLOCK
  menu "DOS/FAT/NT Filesystems"
  
  source "fs/fat/Kconfig"
@@ -12044,9 +12074,9 @@ diff -uprN linux-3.16/fs/Kconfig linux-3.16-exfat/fs/Kconfig
  source "fs/ntfs/Kconfig"
  
  endmenu
-diff -uprN linux-3.16/fs/Makefile linux-3.16-exfat/fs/Makefile
---- linux-3.16/fs/Makefile	2014-08-04 06:25:02.000000000 +0800
-+++ linux-3.16-exfat/fs/Makefile	2014-08-15 18:38:25.826258781 +0800
+diff -uprN linux-3.19.orig/fs/Makefile linux-3.19/fs/Makefile
+--- linux-3.19.orig/fs/Makefile	2015-02-14 12:21:51.145824913 +0800
++++ linux-3.19/fs/Makefile	2015-02-14 12:23:41.312497442 +0800
 @@ -76,6 +76,7 @@ obj-$(CONFIG_HUGETLBFS)		+= hugetlbfs/
  obj-$(CONFIG_CODA_FS)		+= coda/
  obj-$(CONFIG_MINIX_FS)		+= minix/
