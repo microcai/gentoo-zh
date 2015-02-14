@@ -38,3 +38,48 @@ sys-apps/pacman
 # mask for Deepin, if you want to install deepin, unmask it
 =gnome-base/gnome-settings-daemon-3.8.99.20130617144914
 =gnome-base/nautilus-3.8.51
+
+# Tom Li <biergaizi@member.fsf.org> (14 Feb 2015)
+# There are multiple issues related to Deepin-based packages, no maintainer,
+# will be removed.
+media-sound/deepin-music-player
+media-video/deepin-media-player
+x11-libs/deepin-ui
+dde-extra/dde-plugins-weather
+dde-extra/deepin-desktop-environment-plugins
+dde-extra/dde-plugins-clock
+dde-extra/dde-plugins-audio-helper
+dde-extra/dde-meta-multimedia
+dde-base/dss-module-desktop
+dde-base/dss-module-account
+dde-base/dss-module-mouse
+dde-base/deepin-session
+dde-base/deepin-system-tray
+dde-base/dss-module-network
+dde-base/deepin-desktop-environment
+dde-base/dss-module-keyboard
+dde-base/dss-module-printer
+dde-base/dss-module-bluetooth
+dde-base/dss-module-display
+dde-base/dss-module-mount-media
+dde-base/dss-module-power
+dde-base/dss-module-a11y
+dde-base/dss-module-individuation
+dde-base/deepin-webkit
+dde-base/dss-modules-meta
+dde-base/dss-module-tray-power
+dde-base/deepin-artwork
+dde-base/dss-module-application-associate
+dde-base/deepin-notifications
+dde-base/deepin-system-settings
+dde-base/dss-module-driver
+dde-base/dss-module-date-time
+dde-base/dss-module-system-information
+dde-base/dde-meta
+dde-base/dss-module-touchpad
+dde-base/dss-module-sound
+media-gfx/deepin-screenshot
+dev-python/deepin-lunar
+dev-python/deepin-utils
+dev-python/deepin-gsettings
+dev-python/deepin-xrandr
