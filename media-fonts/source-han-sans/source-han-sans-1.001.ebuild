@@ -7,8 +7,8 @@ EAPI=5
 inherit font
 
 MY_PN="SourceHanSans"
-SRC_PREFIX="mirror://sourceforge/${PN}.adobe/${MY_PN}"
-SRC_SUFFIX="-${PV}.zip"
+SRC_PREFIX="https://gentoo.org.cn/distfiles/${MY_PN}"
+SRC_SUFFIX="-${PV}.tar.xz"
 
 DESCRIPTION="Source Han Sans is an OpenType/CFF Pan-CJK font family."
 HOMEPAGE="https://github.com/adobe-fonts/source-han-sans"
@@ -17,7 +17,7 @@ SRC_URI="otc? ( ${SRC_PREFIX}OTC${SRC_SUFFIX} )
 	linguas_ja? ( ${SRC_PREFIX}JP${SRC_SUFFIX} )
 	linguas_ko? ( ${SRC_PREFIX}KR${SRC_SUFFIX} )
 	linguas_zh_CN? ( ${SRC_PREFIX}CN${SRC_SUFFIX} )
-	linguas_zh_TW? ( ${SRC_PREFIX}TWHK${SRC_SUFFIX} )
+	linguas_zh_TW? ( ${SRC_PREFIX}TW${SRC_SUFFIX} )
 "
 
 LICENSE="Apache-2.0"
@@ -49,7 +49,7 @@ src_prepare() {
 		mv -vf "${WORKDIR}/${MY_PN}CN-${PV}/"* ${S} || die
 	fi
 	if use linguas_zh_TW ; then
-		mv -vf "${WORKDIR}/${MY_PN}TWHK-${PV}/"* ${S} || die
+		mv -vf "${WORKDIR}/${MY_PN}TW-${PV}/"* ${S} || die
 	fi
 }
 
@@ -74,7 +74,7 @@ src_install() {
 		has_linguas=true
 	fi
 	if use linguas_zh_TW ; then
-		FONT_CONF+=(${FILESDIR}/81-source-han-sans-twhk.conf)
+		FONT_CONF+=(${FILESDIR}/81-source-han-sans-tw.conf)
 		has_linguas=true
 	fi
 
