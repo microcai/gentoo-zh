@@ -9,7 +9,7 @@ _PN="Numix"
 DESCRIPTION="A modern flat theme that supports Gnome, Unity, XFCE and Openbox."
 HOMEPAGE="https://numixproject.org"
 
-SRC_URI="https://github.com/shimmerproject/${_PN}/archive/master.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/shimmerproject/${_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3.0+"
 SLOT="0"
