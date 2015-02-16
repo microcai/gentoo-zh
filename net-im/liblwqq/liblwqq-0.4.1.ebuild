@@ -20,8 +20,7 @@ DEPEND="
 	>=dev-db/sqlite-3.8.6
 	>=net-misc/curl-7.22
 	dev-libs/libev
-	sys-libs/zlib
-	x11-plugins/purple-plugin_pack"
+	sys-libs/zlib"
 RDEPEND="${DEPEND}"
 
 src_unpack(){
