@@ -29,6 +29,10 @@ src_unpack(){
 	mv ${WORKDIR}/lwqq-${PV} ${S}
 }
 
+src_prepare(){
+	epatch ${FILESDIR}/0001-Fix-username-or-passwd-error.patch
+}
+
 src_configure(){
 	mycmakeargs=(
 		-DUOA=Off
