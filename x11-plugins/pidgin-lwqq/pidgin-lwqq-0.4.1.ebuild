@@ -19,8 +19,7 @@ IUSE=""
 RESTRICT="mirror"
 
 COMMON_DEPEND=">=net-im/pidgin-2.10[gstreamer]
-	=net-im/liblwqq-${PV}
-	x11-plugins/purple-plugin_pack"
+	=net-im/liblwqq-${PV}"
 
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
