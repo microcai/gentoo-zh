@@ -1,0 +1,31 @@
+From 7a1ad123e8347867fd25e7b587099db8ab1f9e97 Mon Sep 17 00:00:00 2001
+From: EricInBj <ericinbj@hotmail.com>
+Date: Thu, 29 Jan 2015 14:23:37 +0800
+Subject: [PATCH] =?UTF-8?q?Fix:=20=E4=B8=80=E7=9B=B4=E6=8F=90=E7=A4=BA?=
+ =?UTF-8?q?=E7=94=A8=E6=88=B7=E5=90=8D=E6=88=96=E5=AF=86=E7=A0=81=E9=94=99?=
+ =?UTF-8?q?=E8=AF=AF=E6=97=A0=E6=B3=95=E7=99=BB=E5=BD=95=E7=9A=84=E9=97=AE?=
+ =?UTF-8?q?=E9=A2=98?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ lib/login.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/lib/login.c b/lib/login.c
+index 78b06ce..aa8b90f 100644
+--- a/lib/login.c
++++ b/lib/login.c
+@@ -129,7 +129,7 @@ static LwqqAsyncEvent* check_need_verify(LwqqClient *lc,const char* appid)
+ 	srand48(time(NULL));
+ 	double random = drand48();
+ 	snprintf(url, sizeof(url), WEBQQ_CHECK_HOST"/check?uin=%s&appid=%s&"
+-			"js_ver=10037&js_type=0&%s%s&u1=http%%3A%%2F%%2Fweb2.qq.com%%2Floginproxy.html&r=%.16lf",
++			"js_ver=10112&js_type=0&%s%s&pt_tea=1&r=%.16lf",
+ 			lc->username, appid,
+ 			lc->login_sig?"login_sig=":"",
+ 			lc->login_sig?:"",
+-- 
+2.0.5
+
