@@ -4,24 +4,21 @@
 
 EAPI=5
 
+inherit git-r3
+
 _PN="Numix"
-_P="${_PN}-${PV}"
 
 DESCRIPTION="A modern flat theme that supports Gnome, Unity, XFCE and Openbox."
 HOMEPAGE="https://numixproject.org"
 
-SRC_URI="https://github.com/shimmerproject/${_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI=""
+EGIT_REPO_URI="https://github.com/shimmerproject/${_PN}.git"
+KEYWORDS=""
 LICENSE="GPL-3.0+"
 SLOT="0"
-KEYWORDS="amd64 x86"
 
 DEPEND="x11-themes/gtk-engines-murrine"
 RDEPEND="${DEPEND}"
-
-src_unpack() {
-	unpack "${A}"
-	mv "${_P}" "${P}"
-}
 
 src_install() {
 	insinto /usr/share/themes/Numix
