@@ -6,26 +6,25 @@ EAPI=5
 
 inherit eutils erlang-pkg
 
-DESCRIPTION="Small, Fast event processing and monitoring for Erlang/OTP applications"
-HOMEPAGE="https://github.com/DeadZen/goldrush"
+DESCRIPTION="Ibrowse is a HTTP client written in Erlang"
+HOMEPAGE="https://github.com/cmullaparthi/ibrowse"
 
 if [[ ${PV} == "9999" ]] ; then
 	inherit git-r3
 	SRC_URI=""
-	EGIT_REPO_URI="https://github.com/DeadZen/${PN}.git"
+	EGIT_REPO_URI="https://github.com/cmullaparthi/${PN}.git"
 	KEYWORDS=""
 else
-	SRC_URI="https://github.com/DeadZen/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/cmullaparthi/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"
 fi
 
-LICENSE="goldrush"
+LICENSE="|| ( BSD LGPL )"
 SLOT="0"
-IUSE="src doc"
+IUSE="doc src"
 
-RDEPEND="dev-lang/erlang"
-DEPEND="${RDEPEND}
-	dev-util/rebar"
+DEPEND="dev-lang/erlang"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	emake
@@ -38,11 +37,11 @@ src_compile() {
 src_install() {
 	erlang-pkg_doebin
 
-	if use src ; then
-		erlang-pkg_dosrc
-	fi
-
 	if use doc ; then
 		erlang-pkg_dodoc
+	fi
+
+	if use src ; then
+		erlang-pkg_dosrc
 	fi
 }

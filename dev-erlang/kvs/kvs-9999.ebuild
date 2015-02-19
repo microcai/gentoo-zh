@@ -6,43 +6,43 @@ EAPI=5
 
 inherit eutils erlang-pkg
 
-DESCRIPTION="Small, Fast event processing and monitoring for Erlang/OTP applications"
-HOMEPAGE="https://github.com/DeadZen/goldrush"
+DESCRIPTION="Key-Value Storages Framework for Erlang"
+HOMEPAGE="http://slid.es/maximsokhatsky/kvs"
 
 if [[ ${PV} == "9999" ]] ; then
 	inherit git-r3
 	SRC_URI=""
-	EGIT_REPO_URI="https://github.com/DeadZen/${PN}.git"
+	EGIT_REPO_URI="https://github.com/synrc/${PN}.git"
 	KEYWORDS=""
 else
-	SRC_URI="https://github.com/DeadZen/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/synrc/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"
 fi
 
-LICENSE="goldrush"
+LICENSE="synrc"
 SLOT="0"
-IUSE="src doc"
+IUSE="doc src"
 
 RDEPEND="dev-lang/erlang"
-DEPEND="${RDEPEND}
+DEPEND="${DEPEND}
 	dev-util/rebar"
 
 src_compile() {
-	emake
+	rebar compile
 
 	if use doc ; then
-		emake docs
+		rebar doc
 	fi
 }
 
 src_install() {
 	erlang-pkg_doebin
 
-	if use src ; then
-		erlang-pkg_dosrc
-	fi
-
 	if use doc ; then
 		erlang-pkg_dodoc
+	fi
+
+	if use src ; then
+		erlang-pkg_dosrc
 	fi
 }

@@ -19,7 +19,7 @@ else
 	KEYWORDS="~amd64"
 fi
 
-LICENSE="Custom"
+LICENSE="goldrush"
 SLOT="0"
 IUSE="src doc"
 
