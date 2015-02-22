@@ -19,8 +19,8 @@ nls opencc +pango +qt4 static-libs table test +xml"
 
 RDEPEND="
 	X? (
-		x11-libs/libX11[abi_x86_32=]
-		x11-libs/libXinerama[abi_x86_32=]
+		x11-libs/libX11[abi_x86_32?]
+		x11-libs/libXinerama[abi_x86_32?]
 	)
 	cairo? (
 		x11-libs/cairo[X]
@@ -30,38 +30,27 @@ RDEPEND="
 	dbus? ( sys-apps/dbus )
 	enchant? ( app-text/enchant )
 	gtk? (
-		x11-libs/gtk+:2
-		dev-libs/glib:2
-		dev-libs/dbus-glib
+		x11-libs/gtk+:2[abi_x86_32?]
+		dev-libs/glib:2[abi_x86_32?]
+		dev-libs/dbus-glib[abi_x86_32?]
 	)
 	gtk3? (
-		x11-libs/gtk+:3
-		dev-libs/glib:2
-		dev-libs/dbus-glib
+		x11-libs/gtk+:3[abi_x86_32?]
+		dev-libs/glib:2[abi_x86_32?]
+		dev-libs/dbus-glib[abi_x86_32?]
 	)
 	icu? ( dev-libs/icu:= )
 	lua? ( dev-lang/lua )
 	opencc? ( app-i18n/opencc )
 	qt4? (
-		dev-qt/qtgui:4[dbus(+),glib]
-		dev-qt/qtdbus:4
+		dev-qt/qtgui:4[dbus(+),glib,abi_x86_32?]
+		dev-qt/qtdbus:4[abi_x86_32?]
 	)
 	xml? (
 		app-text/iso-codes
-		dev-libs/libxml2
+		dev-libs/libxml2[abi_x86_32?]
 		x11-libs/libxkbfile
-	)
-
-	amd64? ( abi_x86_32? (
-		gtk? ( app-emulation/emul-linux-x86-gtklibs )
-		gtk3? ( app-emulation/emul-linux-x86-gtklibs )
-		qt4? (
-		  || ( app-emulation/emul-linux-x86-qtlibs
-		      dev-qt/qtgui:4[abi_x86_32] )
-		   || ( app-emulation/emul-linux-x86-qtlibs
-		      dev-qt/qtdbus:4[abi_x86_32] )
-	      )
-	) )"
+	)"
 
 DEPEND="${RDEPEND}
 	introspection? ( dev-libs/gobject-introspection )
@@ -181,6 +170,7 @@ src_install() {
 		pushd "${WORKDIR}/${P}_build32/src"
 		emake DESTDIR="${D}" -C lib/fcitx-config install || die
 		emake DESTDIR="${D}" -C lib/fcitx-utils install || die
+		emake DESTDIR="${D}" -C lib/fcitx-gclient install || die
 		use qt4  && emake DESTDIR="${D}" -C lib/fcitx-qt install || die
 
 		use gtk  && emake DESTDIR="${D}" -C frontend/gtk2 install || die
@@ -189,6 +179,7 @@ src_install() {
 
 		popd
 	fi
+
 	rm -rf "${D}/usr/include" "${D}/usr/lib32/pkgconfig"
 	rm -rf "${D}/usr/local"
 
@@ -235,9 +226,9 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
-	fdo-mime_desktop_database_update
-	fdo-mime_mime_database_update
-	use gtk && gnome2_query_immodules_gtk2
-	use gtk3 && gnome2_query_immodules_gtk3
+        gnome2_icon_cache_update
+        fdo-mime_desktop_database_update
+        fdo-mime_mime_database_update
+        gnome2_query_immodules_gtk2
+        gnome2_query_immodules_gtk3
 }

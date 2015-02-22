@@ -27,44 +27,40 @@ KEYWORDS=""
 IUSE="+autostart +cairo +dbus debug +glib +gtk +gtk3 +icu +introspection lua
 +pango +qt4 +snooper static-libs +table test +X +xml"
 
-RDEPEND="
-	cairo? (
-		x11-libs/cairo[X]
-		pango? ( x11-libs/pango[X] )
-		!pango? ( media-libs/fontconfig )
-	)
-	dbus? ( sys-apps/dbus )
-	glib? ( dev-libs/glib:2 )
-	gtk? (
-		x11-libs/gtk+:2
-		dev-libs/dbus-glib
-	)
-	gtk3? (
-		x11-libs/gtk+:3
-		dev-libs/dbus-glib
-	)
-	icu? ( dev-libs/icu )
-	lua? ( dev-lang/lua )
-	qt4? (
-		dev-qt/qtcore:4
-		dev-qt/qtdbus:4
-		dev-qt/qtgui:4
-	)
-	X? (
-		x11-libs/libX11[abi_x86_32=]
-		x11-libs/libXinerama[abi_x86_32=]
-	)
-	xml? (
-		app-text/iso-codes
-		dev-libs/libxml2
-		x11-libs/libxkbfile
-	)
-	amd64? ( abi_x86_32? (
-		x11-libs/libxkbfile[multilib]
-		gtk? ( app-emulation/emul-linux-x86-gtklibs )
-		gtk3? ( app-emulation/emul-linux-x86-gtklibs )
-		qt4? ( app-emulation/emul-linux-x86-qtlibs )
-	) )"
+RDEPEND=RDEPEND="
+        X? (
+                x11-libs/libX11[abi_x86_32?]
+                x11-libs/libXinerama[abi_x86_32?]
+        )
+        cairo? (
+                x11-libs/cairo[X]
+                pango? ( x11-libs/pango[X] )
+                !pango? ( media-libs/fontconfig )
+        )
+        dbus? ( sys-apps/dbus )
+        enchant? ( app-text/enchant )
+        gtk? (
+                x11-libs/gtk+:2[abi_x86_32?]
+                dev-libs/glib:2[abi_x86_32?]
+                dev-libs/dbus-glib[abi_x86_32?]
+        )
+        gtk3? (
+                x11-libs/gtk+:3[abi_x86_32?]
+                dev-libs/glib:2[abi_x86_32?]
+                dev-libs/dbus-glib[abi_x86_32?]
+        )
+        icu? ( dev-libs/icu:= )
+        lua? ( dev-lang/lua )
+        opencc? ( app-i18n/opencc )
+        qt4? (
+                dev-qt/qtgui:4[dbus(+),glib,abi_x86_32?]
+                dev-qt/qtdbus:4[abi_x86_32?]
+        )
+        xml? (
+                app-text/iso-codes
+                dev-libs/libxml2[abi_x86_32?]
+                x11-libs/libxkbfile
+        )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	introspection? ( dev-libs/gobject-introspection )
@@ -164,17 +160,22 @@ src_compile(){
 }
 
 src_install() {
-	if use abi_x86_64 && use abi_x86_32 ; then
-		pushd "${WORKDIR}/${P}_build32/src"
-		emake DESTDIR="${D}" -C lib install || die
+        if use abi_x86_64 && use abi_x86_32 ; then
+                pushd "${WORKDIR}/${P}_build32/src"
+                emake DESTDIR="${D}" -C lib/fcitx-config install || die
+                emake DESTDIR="${D}" -C lib/fcitx-utils install || die
+                emake DESTDIR="${D}" -C lib/fcitx-gclient install || die
+                use qt4  && emake DESTDIR="${D}" -C lib/fcitx-qt install || die
 
-		use gtk  && emake DESTDIR="${D}" -C frontend/gtk2 install || die
-		use gtk3  && emake DESTDIR="${D}" -C frontend/gtk3 install || die
-		use qt4  && emake DESTDIR="${D}" -C frontend/qt install || die
+                use gtk  && emake DESTDIR="${D}" -C frontend/gtk2 install || die
+                use gtk3  && emake DESTDIR="${D}" -C frontend/gtk3 install || die
+                use qt4  && emake DESTDIR="${D}" -C frontend/qt install || die
 
-		popd
-	fi
-	rm -rf "${D}/usr/include" "${D}/usr/lib32/pkgconfig"
+                popd
+        fi
+
+        rm -rf "${D}/usr/include" "${D}/usr/lib32/pkgconfig"
+        rm -rf "${D}/usr/local"
 
 	cmake-utils_src_install
 	rm -rf "${ED}"/usr/share/doc/${PN} || die
