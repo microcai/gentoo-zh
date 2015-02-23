@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,11 +6,19 @@ EAPI=5
 
 DESCRIPTION="Modular widget library for x11-wm/awesome"
 HOMEPAGE="http://awesome.naquadah.org/wiki/Vicious"
-SRC_URI="http://git.sysphere.org/${PN}/snapshot/${P}.tar.xz"
+
+if [[ ${PV} == "9999" ]] ; then
+	inherit git-r3
+	EGIT_REPO_URI="http://git.sysphere.org/${PN}"
+	SRC_URI=""
+	KEYWORDS=""
+else
+	SRC_URI="http://git.sysphere.org/${PN}/snapshot/${P}.tar.xz"
+	KEYWORDS="~amd64 ~arm ~x86"
+fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
 IUSE="contrib"
 
 DEPEND=""
