@@ -15,12 +15,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-qt/qtmultimedia-5.3[widgets,gstreamer]
-        >=dev-qt/qtxml-5.3
-        >=dev-qt/qtdbus-5.3
-        >=dev-qt/qtnetwork-5.3
+DEPEND=">=dev-qt/qtmultimedia-5.4[widgets,gstreamer]
+        >=dev-qt/qtxml-5.4
+        >=dev-qt/qtdbus-5.4
+        >=dev-qt/qtnetwork-5.4
+        >=dev-qt/qtsvg-5.4
         >=dev-libs/boost-1.55[threads(+),context]
-		>=dev-util/cmake-3.1"
+        >=dev-util/cmake-3.1"
 
 RDEPEND="${DEPEND}"
 
