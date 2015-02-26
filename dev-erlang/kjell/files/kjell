@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+erl -run start_kjell $@ -noshell
