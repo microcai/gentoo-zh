@@ -19,6 +19,7 @@ DEPEND=">=dev-qt/qtmultimedia-5.4[widgets,gstreamer]
         >=dev-qt/qtxml-5.4
         >=dev-qt/qtdbus-5.4
         >=dev-qt/qtnetwork-5.4
+        >=dev-qt/qtwidgets-5.4
         >=dev-qt/qtsvg-5.4
         >=dev-libs/boost-1.55[threads(+),context]
         >=dev-util/cmake-3.1"
@@ -26,3 +27,5 @@ DEPEND=">=dev-qt/qtmultimedia-5.4[widgets,gstreamer]
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/bilibili_player-${PV}"
+
+RESTRICT="mirror"
