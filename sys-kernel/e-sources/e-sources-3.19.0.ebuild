@@ -7,7 +7,7 @@ K_DEBLOB_AVAILABLE="1"
 
 ck_version="1"
 gentoo_version="1"
-tuxonice_version="2015.02.14"
+#tuxonice_version="2015.02.14"  it is buggy
 #uksm_version="0.1.2.3"
 
 aufs_kernel_version="3.19_p20150216"
@@ -18,8 +18,8 @@ tuxonice_kernel_version="head-3.19.0"
 
 KEYWORDS="~x86 ~amd64 ~mips"
 
-SUPPORTED_USE="+additional +aufs +cjktty +ck +exfat +experimental +gentoo +thinkpad +tuxonice"
-UNSUPPORTED_USE="imq reiser4 uksm"
+SUPPORTED_USE="+additional +aufs +cjktty +ck +exfat +experimental +gentoo +thinkpad"
+UNSUPPORTED_USE="imq reiser4 tuxonice uksm"
 
 UNIPATCH_EXCLUDE=""
 
