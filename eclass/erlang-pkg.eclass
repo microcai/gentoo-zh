@@ -132,6 +132,20 @@ erlang-pkg_dosrc() {
 }
 
 # ------------------------------------------------------------------------------
+# @eclass_docustom
+#
+# Copy custom file in ${S} into /usr/lib/erlang/lib/${P}/
+# ------------------------------------------------------------------------------
+erlang-pkg_docustom() {
+	dodir /usr/lib/erlang/lib/${P}
+
+	for file in $@ ; do
+		cp -R "${S}/${file}" "${D}usr/lib/erlang/lib/${P}/" \
+			|| die "failed to install ${file}"
+	done
+}
+
+# ------------------------------------------------------------------------------
 # @eclass-src_install
 #
 # Default src_install for erlang packages
