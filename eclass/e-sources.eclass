@@ -34,7 +34,7 @@ else
 fi
 
 ETYPE="sources"
-inherit kernel-2
+inherit kernel-2 versionator
 
 K_SECURITY_UNSUPPORTED="1"
 
@@ -104,7 +104,12 @@ USE_ENABLE() {
 			;;
 
 		ck)		ck_url="http://ck.kolivas.org/patches"
-				ck_patch="patch-${KMV}-ck${ck_version}.bz2"
+				if version_is_at_least "3.19" ${KMV}; then
+					ck_compress_type="xz"
+				else
+					ck_compress_type="bz2"
+				fi
+				ck_patch="patch-${KMV}-ck${ck_version}.${ck_compress_type}"
 				ck_src="${ck_url}/${KMSV}/${KMV}/${KMV}-ck${ck_version}/${ck_patch}"
 				HOMEPAGE="${HOMEPAGE} ${ck_url}"
 				if [ "${OVERRIDE_CK_PATCHES}" = 1 ]; then
