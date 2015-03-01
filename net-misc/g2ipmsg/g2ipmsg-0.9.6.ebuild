@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=5
 inherit gnome2
 
 DESCRIPTION="IP messenger clone for GNOME2 environments"

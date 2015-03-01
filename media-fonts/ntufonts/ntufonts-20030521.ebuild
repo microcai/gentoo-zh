@@ -1,15 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-RESTRICT="nostrip"
+EAPI="4"
+
+inherit font
 
 DESCRIPTION="Chinese Fonts from National Taiwan University, Includes kai, Lei, Funsong, and Thin."
-HOMEPAGE="
-	http://www.csie.ntu.edu.tw/
-	ftp://cle.linux.org.tw/pub2/fonts/ttf/big5/ntu/"
+HOMEPAGE="http://www.csie.ntu.edu.tw/"
 
-BASE_SRC_URI="ftp://cle.linux.org.tw/pub2/fonts/ttf/big5/ntu/"
+BASE_SRC_URI="http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/ttf/big5/ntu/"
 SRC_URI="
 	${BASE_SRC_URI}/NTU_FS_M.TTF
 	${BASE_SRC_URI}/NTU_KAI.TTF
@@ -19,52 +19,36 @@ SRC_URI="
 	${BASE_SRC_URI}/NTU_MR.TTF
 	${BASE_SRC_URI}/NTU_TW.TTF"
 
-TRUETYPE_FONTS="NTU_FS_M.TTF
-	NTU_KAI.TTF
-	NTU_LI_M.TTF
-	NTU_MB.TTF
-	NTU_MM.TTF
-	NTU_MR.TTF
-	NTU_TW.TTF"
+RESTRICT="mirror strip binchecks"
 
-LICENSE="GPL-2"
+LICENSE="ntufonts"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc mips ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
-S=${WORKDIR}
+RDEPEND=""
+
+FONT_S="${S}"
+FONT_SUFFIX="TTF"
 
 src_unpack() {
-	einfo "Nothing to do for unpack."
-	return
+	mkdir ${S}
 }
 
-src_compile() {
-	einfo "Nothing to do for compile, either."
-	return
+src_prepare() {
+	cp ${DISTDIR}/*.TTF ${S}
 }
 
-src_install() {
-	insinto /usr/share/fonts/ttf/chinese/${PN}
-	for I in ${TRUETYPE_FONTS}; do
-		doins ${DISTDIR}/${I}
-	done
-}
 pkg_postinst() {
-        einfo "Creating fonts.scale and fonts.dir info for TrueType fonts"
-        cd /usr/share/fonts/ttf/chinese/${PN}
-	mkfontscale -e /usr/share/fonts/encodings/large -e /usr/share/fonts/encodings
-        mkfontdir -e /usr/share/fonts/encodings/large -e /usr/share/fonts/encodings
-
-	einfo "Creating font cache... This may take *SOME* times."
-	fc-cache -f
-
-        einfo
-        if (  `grep -e "^.*FontPath.*\"/usr/share/fonts/ttf/chinese/${PN}\"" /etc/X11/XF86Config -q` ); then
-                einfo "Font path for ${PN} is listed in /etc/X11/XF86Config."
-        else
-                einfo "You must add /usr/share/fonts/ttf/chinese/${PN} to your font path"
-                einfo "to be able to use your new ${PN} fonts."
-        fi
+	font_pkg_postinst
+	ewarn "These problematic legacy fonts were kept for their"
+	ewarn "historical significance."
+	ewarn
+	ewarn "They are using BIG-5 instead of UTF-8 for the metadata."
+	ewarn "They may trigger warnings or errors when some programs dealing"
+	ewarn "with them. And you may see question marks, boxes, or other "
+	ewarn "symbols (Mojibake) as the fonts name and other information."
+	ewarn
+	ewarn "USE AT YOUR OWN RISK."
 }

@@ -1,14 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-RESTRICT="nostrip"
+EAPI="4"
+
+inherit font
 
 DESCRIPTION="Chinese and Siddam fonts provided by SINICA, Taiwan."
-HOMEPAGE="http://www.sinica.edu.tw/~cdp/
-	ftp://cle.linux.org.tw/pub2/fonts/sinica/"
+HOMEPAGE="http://cdp.sinica.edu.tw/"
 
-BASE_SRC_URI="ftp://cle.linux.org.tw/pub2/fonts/sinica/"	
+BASE_SRC_URI="http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/sinica"
 SRC_URI="
 	${BASE_SRC_URI}/hzk1.ttf
 	${BASE_SRC_URI}/hzk2.ttf
@@ -24,75 +25,27 @@ SRC_URI="
 	${BASE_SRC_URI}/hzkc.ttf
 	${BASE_SRC_URI}/siddam.zip"
 
-TRUETYPE_FONTS="hzk1.ttf
-	hzk2.ttf
-	hzk3.ttf
-	hzk4.ttf
-	hzk5.ttf
-	hzk6.ttf
-	hzk7.ttf
-	hzk8.ttf
-	hzk9.ttf
-	hzka.ttf
-	hzkb.ttf
-	hzkc.ttf"
+RESTRICT="mirror strip binchecks"
 
-LICENSE="GPL-2"
+LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc mips ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="app-arch/unzip"
+DEPEND="app-arch/unzip"
+RDEPEND=""
+
 S=${WORKDIR}
+FONT_S="${S}"
+FONT_SUFFIX="ttf TTF"
 
 src_unpack() {
-	cd ${S}
-	unzip ${DISTDIR}/siddam.zip
-}
-
-src_compile() {
-	return
+	:;
 }
 
 src_install() {
-	insinto /usr/share/fonts/ttf/chinese/sinica
-	for I in ${TRUETYPE_FONTS}; do
-		doins ${DISTDIR}/${I}
-	done
+	unpack siddam.zip
+	cp ${DISTDIR}/*.ttf ./
 
-	insinto /usr/share/fonts/ttf/chinese/sinica/siddam
-	cd ${S}
-	doins foreign1.TTF
-	doins SIDDAM.TTF
-}
-
-pkg_postinst() {
-        einfo "Creating fonts.scale and fonts.dir info for SINICA fonts"
-        cd /usr/share/fonts/ttf/chinese/sinica
-	mkfontscale -e /usr/share/fonts/encodings/large -e /usr/share/fonts/encodings
-        mkfontdir -e /usr/share/fonts/encodings/large -e /usr/share/fonts/encodings
-
-        einfo "Creating fonts.scale and fonts.dir info for siddam fonts"
-        cd /usr/share/fonts/ttf/chinese/sinica/siddam
-	mkfontscale -e /usr/share/fonts/encodings/large -e /usr/share/fonts/encodings
-        mkfontdir -e /usr/share/fonts/encodings/large -e /usr/share/fonts/encodings
-
-	einfo "Creating font cache... This may take *SOME* times."
-	fc-cache -f
-
-        einfo
-        if (  `grep -e "^.*FontPath.*\"/usr/share/fonts/ttf/chinese/sinica\"" /etc/X11/XF86Config -q` ); then
-                einfo "Font path for sinica fonts is listed in /etc/X11/XF86Config."
-        else
-                einfo "You must add /usr/share/fonts/ttf/chinese/sinica to your font path"
-                einfo "to be able to use your new sinica fonts."
-        fi
-
-        einfo
-        if (  `grep -e "^.*FontPath.*\"/usr/share/fonts/ttf/chinese/sinica/siddam\"" /etc/X11/XF86Config -q` ); then
-                einfo "Font path for sinica siddam fonts is listed in /etc/X11/XF86Config."
-        else
-                einfo "You must add /usr/share/fonts/ttf/chinese/sinica/siddam to your font path"
-                einfo "to be able to use your new siddam fonts."
-        fi
+	font_src_install
 }

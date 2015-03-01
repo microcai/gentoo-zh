@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 #
 # /etc/screenrc
@@ -114,12 +114,12 @@ defnonblock on
 # xterm understands both im/ic and doesn't have a status line.
 # Note: Do not specify im and ic in the real termcap/info file as
 # some programs (e.g. vi) will not work anymore.
-  termcap  xterm hs@:cs=\E[%i%d;%dr:im=\E[4h:ei=\E[4l
-  terminfo xterm hs@:cs=\E[%i%p1%d;%p2%dr:im=\E[4h:ei=\E[4l
+  termcap  xterm* hs@:cs=\E[%i%d;%dr:im=\E[4h:ei=\E[4l
+  terminfo xterm* hs@:cs=\E[%i%p1%d;%p2%dr:im=\E[4h:ei=\E[4l
 
 # 80/132 column switching must be enabled for ^AW to work
 # change init sequence to not switch width
-  termcapinfo  xterm Z0=\E[?3h:Z1=\E[?3l:is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l
+  termcapinfo  xterm* Z0=\E[?3h:Z1=\E[?3l:is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l
 
 # Make the output buffer large for (fast) xterms.
 # termcapinfo xterm* OL=10000
@@ -127,25 +127,25 @@ defnonblock on
 
 # tell screen that xterm can switch to dark background and has function
 # keys.
-  termcapinfo xterm 'VR=\E[?5h:VN=\E[?5l'
-  termcapinfo xterm 'k1=\E[11~:k2=\E[12~:k3=\E[13~:k4=\E[14~'
-  termcapinfo xterm 'kh=\EOH:kI=\E[2~:kD=\E[3~:kH=\EOF:kP=\E[5~:kN=\E[6~'
+  termcapinfo xterm* 'VR=\E[?5h:VN=\E[?5l'
+  termcapinfo xterm* 'k1=\E[11~:k2=\E[12~:k3=\E[13~:k4=\E[14~'
+  termcapinfo xterm* 'kh=\EOH:kI=\E[2~:kD=\E[3~:kH=\EOF:kP=\E[5~:kN=\E[6~'
 
 # special xterm hardstatus: use the window title.
-  termcapinfo xterm 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+  termcapinfo xterm* 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
 
 #terminfo xterm 'vb=\E[?5h$<200/>\E[?5l'
-  termcapinfo xterm 'vi=\E[?25l:ve=\E[34h\E[?25h:vs=\E[34l'
+  termcapinfo xterm* 'vi=\E[?25l:ve=\E[34h\E[?25h:vs=\E[34l'
 
 # emulate part of the 'K' charset
-  termcapinfo xterm 'XC=K%,%\E(B,[\304,\\\\\326,]\334,{\344,|\366,}\374,~\337'
+  termcapinfo xterm* 'XC=K%,%\E(B,[\304,\\\\\326,]\334,{\344,|\366,}\374,~\337'
 
 # xterm-52 tweaks:
 # - uses background color for delete operations
   termcapinfo xterm* be
 
 # Do not use xterm's alternative window buffer, it breaks scrollback (see bug #61195)
-  termcapinfo xterm|xterms|xs ti@:te=\E[2J
+  termcapinfo xterm*|xs ti@:te=\E[2J
 
 # WYSE TERMINALS
 # ===============================================================
