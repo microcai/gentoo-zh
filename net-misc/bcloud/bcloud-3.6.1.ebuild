@@ -20,6 +20,7 @@ fi
 
 inherit python-r1 ${scm_eclass}
 
+RESTRICT="mirror"
 DESCRIPTION="Baidu Pan client for Linux Desktop users"
 HOMEPAGE="https://github.com/LiuLang/bcloud"
 
