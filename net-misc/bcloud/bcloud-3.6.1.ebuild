@@ -28,6 +28,8 @@ LICENSE="GPL-3"
 SLOT="0"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
+IUSE+="+indicator"
+
 DEPEND="${PYTHON_DEPS}"
 RDEPEND="${DEPEND}
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
@@ -39,6 +41,7 @@ RDEPEND="${DEPEND}
 	x11-themes/gnome-icon-theme
 	x11-themes/gnome-icon-theme-symbolic
 	x11-libs/libnotify
+	indicator? ( dev-libs/libappindicator:3 )
 	"
 
 src_install() {
