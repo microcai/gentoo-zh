@@ -30,6 +30,7 @@ DEPEND="
 	dev-libs/protobuf
 	>=dev-db/soci-3.2[sqlite,boost]
 	lua? ( >=dev-lang/luajit-2.0 )
+	dev-lang/spidermonkey
 "
 RDEPEND="${DEPEND}"
 
