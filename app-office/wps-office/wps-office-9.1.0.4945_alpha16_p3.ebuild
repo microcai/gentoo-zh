@@ -70,7 +70,8 @@ NATIVE_DEPEND="
 		x11-libs/libXext[abi_x86_32]
 		x11-libs/libXfixes[abi_x86_32]
 		x11-libs/libXrender[abi_x86_32]
-		x11-libs/libXxf86vm[abi_x86_32]"
+		x11-libs/libXxf86vm[abi_x86_32]
+		media-libs/libmng[abi_x86_32]"
 
 RDEPEND="
 	${NATIVE_DEPEND}
