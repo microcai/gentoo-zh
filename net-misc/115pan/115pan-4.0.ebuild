@@ -13,20 +13,12 @@ SRC_URI="http://pc.115.com/download/linux/115wangpan_linux_v${PV}.deb"
 	
 LICENSE=" "
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
-	x86? (
-		sys-libs/glibc
-		sys-devel/gcc
-	)
-	amd64? (
-		app-emulation/emul-linux-x86-xlibs
-		sys-devel/gcc[multilib]
-		sys-libs/glibc[multilib]
-	)		
-	x11-libs/libXau	
+	x11-libs/libXau[abi_x86_32]
 "
+
 DEPEND=""
 
 S=$WORKDIR

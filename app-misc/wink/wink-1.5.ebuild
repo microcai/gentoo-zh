@@ -17,13 +17,10 @@ SLOT="0"
 LICENSE="FREEWARE"
 IUSE=""
 
-RDEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs
-				app-emulation/emul-linux-x86-gtklibs
-				|| ( sys-libs/libstdc++-v3 sys-libs/libstdc++-v3-bin )
-				)
-		x86? ( >=dev-libs/expat-2.0 
-				x11-libs/gtk+:2
-				) "
+RDEPEND=" >=x11-libs/gtk+-2.4:2[abi_x86_32]
+		|| ( sys-libs/libstdc++-v3 sys-libs/libstdc++-v3-bin )
+			>=dev-libs/expat-2.0
+		"
 
 src_unpack(){
 	unpack wink15.tar.gz

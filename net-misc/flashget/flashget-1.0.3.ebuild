@@ -17,14 +17,11 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="
-	amd64? (
-		app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-gtklibs )
-	x86? (
 		dev-libs/expat
-		dev-libs/glib:2
-		x11-libs/cairo
-		x11-libs/gtk+:2 )"
+		dev-libs/glib:2[abi_x86_abi]
+		x11-libs/cairo[abi_x86_abi]
+		x11-libs/gtk+:2[abi_x86_abi]
+"
 
 RESTRICT="primaryuri"
 
