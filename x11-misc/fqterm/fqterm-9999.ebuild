@@ -4,16 +4,14 @@
 
 EAPI="4"
 
-inherit cmake-utils googlecode
-
-ESVN_PATCHES="${P}-as-needed.patch"
+inherit cmake-utils git-r3
 
 DESCRIPTION="a modern terminal emulator for Linux"
-SRC_URI="${HOMEPAGE}/files/QQWry.Dat.zip"
+EGIT_REPO_URI="https://github.com/mytbk/fqterm.git"
+HOMEPAGE="https://github.com/mytbk/fqterm"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
@@ -21,16 +19,8 @@ RDEPEND="
 	media-libs/alsa-lib
 	dev-qt/qtcore[ssl,qt3support]
 	dev-qt/qtgui"
-DEPEND="${RDEPEND}
-	app-arch/unzip"
+DEPEND="${RDEPEND}"
 
-src_unpack() {
-	subversion_src_unpack
-	unpack ${A}
-}
-
-src_install() {
-	cmake-utils_src_install
-	insinto /usr/share/FQTerm
-	doins "${S}"/../QQWry.Dat || die
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-as-needed.patch"
 }
