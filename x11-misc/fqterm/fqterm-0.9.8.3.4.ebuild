@@ -4,14 +4,17 @@
 
 EAPI="5"
 
-inherit cmake-utils git-r3
+inherit cmake-utils
 
+PV0="0.9.8.3.r4"
 DESCRIPTION="a modern terminal emulator for Linux"
-EGIT_REPO_URI="https://github.com/mytbk/fqterm.git"
+SRC_URI="https://github.com/mytbk/fqterm/archive/${PV0}.tar.gz -> ${PN}-${PV0}.tar.gz"
 HOMEPAGE="https://github.com/mytbk/fqterm"
+S="${WORKDIR}/${PN}-${PV0}"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
