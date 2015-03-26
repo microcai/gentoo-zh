@@ -6,7 +6,7 @@ EAPI=5
 
 inherit eutils kde5-functions kde5
 
-DESCRIPTION="KDE Config Module for Fcitx"
+DESCRIPTION="KDE5 control Module for Fcitx"
 HOMEPAGE="https://github.com/fcitx/kcm-fcitx"
 SRC_URI="http://download.fcitx-im.org/${PN}/${P}.tar.xz"
 #SRC_URI="https://github.com/fcitx/kcm-fcitx/archive/${PV}.tar.gz -> ${P}.tar.gz"
