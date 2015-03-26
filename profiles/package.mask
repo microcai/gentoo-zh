@@ -33,7 +33,7 @@ net-im/instantbird
 =app-vim/eclim-2.2.1
 
 # if you want to use pacman in your gentoo not chroot environment, unmask it
-sys-apps/pacman
+=sys-apps/pacman-4.0.3
 
 # mask for Deepin, if you want to install deepin, unmask it
 =gnome-base/gnome-settings-daemon-3.8.99.20130617144914
