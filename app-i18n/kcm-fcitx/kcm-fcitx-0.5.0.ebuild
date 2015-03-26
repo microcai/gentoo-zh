@@ -4,11 +4,12 @@
 
 EAPI=5
 
-inherit eutils kde4-base
+inherit eutils kde5-functions kde5
 
 DESCRIPTION="KDE Config Module for Fcitx"
 HOMEPAGE="https://github.com/fcitx/kcm-fcitx"
-SRC_URI="http://download.fcitx-im.org/${PN}/${P}.tar.xz"
+#SRC_URI="http://download.fcitx-im.org/${PN}/${P}.tar.xz"
+SRC_URI="https://github.com/fcitx/kcm-fcitx/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -16,8 +17,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-RDEPEND=">=app-i18n/fcitx-4.2.8"
+RDEPEND=">=app-i18n/fcitx-4.2.8.6[dbus]
+$(add_frameworks_dep plasma)"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	virtual/pkgconfig
 	sys-devel/gettext"
+
+src_prepare(){
+	echo
+}
