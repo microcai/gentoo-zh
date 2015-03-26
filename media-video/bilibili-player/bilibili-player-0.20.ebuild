@@ -24,7 +24,9 @@ DEPEND=">=dev-qt/qtmultimedia-5.4[widgets,gstreamer]
         >=dev-qt/qtsvg-5.4
         >=dev-libs/boost-1.55[threads(+),context]
 		sci-physics/bullet
-        >=dev-util/cmake-3.1"
+        media-libs/libass
+        x11-libs/libXrandr
+        "
 
 RDEPEND="${DEPEND}
 	|| (
@@ -41,6 +43,11 @@ RDEPEND="${DEPEND}
 		( media-plugins/gst-plugins-pulse:0.10 media-video/ffmpeg[pulseaudio] )
 		( media-plugins/gst-plugins-alsa:0.10 media-video/ffmpeg[alsa] )
 	)
+"
+
+DEPEND="${DEPEND}
+	virtual/pkgconfig
+	>=dev-util/cmake-3.1
 "
 
 S="${WORKDIR}/bilibili_player-${PV}"
