@@ -56,6 +56,8 @@ src_prepare() {
 
 	WANT_AUTOCONF="2.5" eautoreconf
 	WANT_AUTOMAKE="1.7" eautomake
+
+	epatch "${FILESDIR}/amule-dlp-scanner-header.patch"
 }
 
 src_configure() {
