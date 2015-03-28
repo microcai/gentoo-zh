@@ -49,13 +49,12 @@ pkg_preinst() {
 }
 
 src_prepare() {
-	WANT_AUTOCONF="2.5" eautoreconf
-
 	# hack because of non-standard generation
 	cd src/pixmaps/flags_xpm
 	./makeflags.sh
 	cd "$OLDPWD"
 
+	WANT_AUTOCONF="2.5" eautoreconf
 	WANT_AUTOMAKE="1.7" eautomake
 }
 
