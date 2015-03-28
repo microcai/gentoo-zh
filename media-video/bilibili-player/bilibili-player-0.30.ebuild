@@ -47,7 +47,7 @@ RDEPEND="${DEPEND}
 
 DEPEND="${DEPEND}
 	virtual/pkgconfig
-	>=dev-util/cmake-3.1
+	dev-util/cmake
 "
 
 S="${WORKDIR}/bilibili_player-${PV}"
