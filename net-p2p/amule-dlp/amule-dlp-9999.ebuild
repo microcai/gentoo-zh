@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-inherit eutils flag-o-matic wxwidgets user git-2
+inherit autotools eutils flag-o-matic wxwidgets user git-2
 
 
 DESCRIPTION="aMule with DLP patch, the all-platform eMule p2p client"
@@ -46,6 +46,11 @@ pkg_preinst() {
 		enewgroup p2p
 		enewuser p2p -1 -1 /home/p2p p2p
 	fi
+}
+
+src_prepare() {
+	WANT_AUTOCONF="2.5" eautoreconf
+	WANT_AUTOMAKE="1.7" eautomake
 }
 
 src_configure() {
