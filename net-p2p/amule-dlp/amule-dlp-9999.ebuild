@@ -10,6 +10,7 @@ inherit autotools eutils flag-o-matic wxwidgets user git-2
 DESCRIPTION="aMule with DLP patch, the all-platform eMule p2p client"
 HOMEPAGE="https://github.com/persmule/amule-dlp"
 EGIT_REPO_URI="git://github.com/persmule/amule-dlp.git"
+EGIT_BRANCH="develop"
 
 LICENSE="GPL-2"
 SLOT="0"
