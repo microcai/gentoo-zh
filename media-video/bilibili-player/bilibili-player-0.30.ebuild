@@ -16,17 +16,19 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-qt/qtmultimedia-5.4[widgets,gstreamer]
-        >=dev-qt/qtxml-5.4
-        >=dev-qt/qtdbus-5.4
-        >=dev-qt/qtnetwork-5.4
-        >=dev-qt/qtwidgets-5.4
-		>=dev-qt/qtgui-5.4[opengl]
-        >=dev-qt/qtx11extras-5.4
-        >=dev-libs/boost-1.55[threads(+),context]
-		sci-physics/bullet
-        media-libs/libass
-        x11-libs/libXrandr
-        "
+	>=dev-qt/qtxml-5.4
+	>=dev-qt/qtdbus-5.4
+	>=dev-qt/qtnetwork-5.4
+	>=dev-qt/qtwidgets-5.4
+	>=dev-qt/qtx11extras-5.4
+	>=dev-qt/qtgui-5.4[opengl]
+	>=dev-qt/qtsvg-5.4
+	>=dev-libs/boost-1.55[threads(+),context]
+	sci-physics/bullet
+	media-libs/libass
+	x11-libs/libXrandr
+	media-video/ffmpeg[x264]
+"
 
 RDEPEND="${DEPEND}
 	|| (
