@@ -25,6 +25,7 @@ RDEPEND="${DEPEND}
 	media-libs/gst-plugins-base:1.0
 	media-libs/gst-plugins-good:1.0
 	media-libs/gst-plugins-ugly:1.0
+	media-libs/gst-plugins-bad:1.0
 	media-plugins/gst-plugins-libav:1.0
 	x11-themes/gnome-icon-theme
 	x11-themes/gnome-icon-theme-symbolic
