@@ -27,7 +27,7 @@ DEPEND=">=dev-qt/qtmultimedia-5.4[widgets,pulseaudio=,alsa=]
 	sci-physics/bullet
 	media-libs/libass
 	x11-libs/libXrandr
-	media-video/ffmpeg[x264,aac,aacplus,mp3,network,threads,http,zlib,opengl,vaapi=,vdpau=]
+	media-video/ffmpeg[x264,aac,aacplus,mp3,network,threads,zlib,opengl,vaapi=,vdpau=]
 "
 
 RDEPEND="${DEPEND}"
