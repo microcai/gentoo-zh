@@ -6,7 +6,7 @@ EAPI=5
 
 inherit qt5-build
 
-DESCRIPTION="A lightweight and ultra-fast shadowsocks library written in C++/Qt "
+DESCRIPTION="A lightweight and ultra-fast shadowsocks library written in C++/Qt"
 KEYWORDS="~amd64 ~x86"
 SRC_URI="https://github.com/librehat/libQtShadowsocks/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 RESTRICT="mirror"
