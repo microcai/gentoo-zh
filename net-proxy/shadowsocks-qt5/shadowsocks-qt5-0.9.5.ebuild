@@ -14,6 +14,7 @@ RESTRICT="mirror"
 IUSE=""
 
 RDEPEND=">dev-libs/botan-1.10
+	net-proxy/libQtShadowsocks
 	dev-qt/qtcore:5
 	dev-qt/qtnetwork
 	dev-qt/qtconcurrent
