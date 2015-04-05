@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND=">dev-libs/botan-1.10
 	dev-qt/qtcore:5
-	dev-qt/qtnetwork[networkmanager]
+	dev-qt/qtnetwork
 	dev-qt/qtconcurrent
 	dev-qt/qtdbus:5
 	media-gfx/zbar
