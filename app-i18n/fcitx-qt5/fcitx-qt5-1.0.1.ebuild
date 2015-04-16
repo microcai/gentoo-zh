@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=app-i18n/fcitx-4.2.8[dbus]
-	dev-libs/extra-cmake-modules
+	kde-frameworks/extra-cmake-modules
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5=
