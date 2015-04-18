@@ -104,11 +104,7 @@ USE_ENABLE() {
 			;;
 
 		ck)		ck_url="http://ck.kolivas.org/patches"
-				if version_is_at_least "3.19" ${KMV}; then
-					ck_compress_type="xz"
-				else
-					ck_compress_type="bz2"
-				fi
+				ck_compress_type="bz2"
 				ck_patch="patch-${KMV}-ck${ck_version}.${ck_compress_type}"
 				ck_src="${ck_url}/${KMSV}/${KMV}/${KMV}-ck${ck_version}/${ck_patch}"
 				HOMEPAGE="${HOMEPAGE} ${ck_url}"
