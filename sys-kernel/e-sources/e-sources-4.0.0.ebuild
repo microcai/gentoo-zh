@@ -18,7 +18,7 @@ gentoo_version="1"
 
 KEYWORDS="~x86 ~amd64 ~mips"
 
-SUPPORTED_USE="+additional +cjktty +ck +exfat +experimental +gentoo +thinkpad"
+SUPPORTED_USE="+additional +ck +exfat +experimental +gentoo +thinkpad"
 UNSUPPORTED_USE="aufs cjktty imq reiser4 tuxonice uksm"
 
 UNIPATCH_EXCLUDE=""
