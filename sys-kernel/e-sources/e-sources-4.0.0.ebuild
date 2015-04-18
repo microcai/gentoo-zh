@@ -11,7 +11,7 @@ gentoo_version="1"
 #uksm_version=""
 
 #aufs_kernel_version=""
-cjktty_kernel_version="3.19"
+#cjktty_kernel_version="3.19"
 #reiser4_kernel_version="3.17.2"
 #tuxonice_kernel_version=""
 #uksm_kernel_version="3.18.0"
@@ -19,7 +19,7 @@ cjktty_kernel_version="3.19"
 KEYWORDS="~x86 ~amd64 ~mips"
 
 SUPPORTED_USE="+additional +cjktty +ck +exfat +experimental +gentoo +thinkpad"
-UNSUPPORTED_USE="aufs imq reiser4 tuxonice uksm"
+UNSUPPORTED_USE="aufs cjktty imq reiser4 tuxonice uksm"
 
 UNIPATCH_EXCLUDE=""
 
