@@ -14,7 +14,7 @@ EGIT_REPO_URI="https://github.com/microcai/bilibili_player.git"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="+vaapi +vdpau -alsa +pulseaudio"
 
 DEPEND=">=dev-qt/qtmultimedia-5.4[widgets,pulseaudio=,alsa=]
