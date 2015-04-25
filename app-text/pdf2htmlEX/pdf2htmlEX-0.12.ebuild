@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 ~x86"
 IUSE="+svg"
 
-RDEPEND=">=app-text/poppler-0.26[cjk,png,jpeg2k]
-	>=media-gfx/fontforge-20141014
+RDEPEND=">=app-text/poppler-0.32[cjk,png,jpeg2k]
+	>=media-gfx/fontforge-20150228
 	svg? (
 	  >=x11-libs/cairo-1.10[svg]
 	  media-libs/freetype
