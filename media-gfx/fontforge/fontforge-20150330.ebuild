@@ -20,12 +20,8 @@ inherit eutils fdo-mime python-single-r1 autotools
 
 DESCRIPTION="postscript font editor and converter"
 HOMEPAGE="http://fontforge.github.io"
-#SRC_URI="https://github.com/fontforge/fontforge/releases/download/${PV}/fontforge-${PV}.tar.gz"
 
-SRC_URI="https://github.com/fontforge/fontforge/archive/${PV}.tar.gz -> fontforge-lite-${PV}.tar.gz
-http://git.savannah.gnu.org/cgit/gnulib.git/snapshot/gnulib-0.1.tar.gz -> fontforge-gnulib-0.1.tar.gz
-https://github.com/troydhanson/uthash/archive/v1.9.9.tar.gz -> uthash-1.9.9.tar.gz
-"
+SRC_URI="https://github.com/fontforge/fontforge/releases/download/${PV}/fontforge-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -76,13 +72,21 @@ pkg_setup() {
 }
 
 src_prepare() {
-	mv ../uthash-* uthash
-	mv ../gnulib-0.1 gnulib
-	./bootstrap
+	#mv ../uthash-* uthash
+	#mv ../gnulib-0.1 gnulib
+	use zmq && export LIBZMQ_LIBS=-lzmq
+	
+	pushd m4
+	rm argz.m4
+	popd
+
+	./bootstrap --force
 }
 
 src_configure() {
 	# no real way of disabling gettext/nls ...
+	use zmq && export LIBZMQ_LIBS=-lzmq
+
 	use nls || export ac_cv_header_libintl_h=no
 	econf \
 		$(use_enable debug) \
@@ -118,12 +122,6 @@ src_install() {
 	dodoc AUTHORS README* || die
 
 	prune_libtool_files
-
-
-# # # 	if use cjk; then #129518
-# # # 		insinto /usr/share/fontforge
-# # # 		doins "${WORKDIR}"/*.cidmap || die
-# # # 	fi
 }
 
 pkg_postrm() {
