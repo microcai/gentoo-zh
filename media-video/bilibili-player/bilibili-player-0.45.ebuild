@@ -13,9 +13,9 @@ SRC_URI="https://codeload.github.com/microcai/bilibili_player/tar.gz/v${PV} -> $
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+vaapi +vdpau -alsa +pulseaudio"
+IUSE=""
 
-DEPEND=">=dev-qt/qtmultimedia-5.4[widgets,pulseaudio=,alsa=]
+DEPEND=">=dev-qt/qtmultimedia-5.4[widgets,gstreamer]
 	>=dev-qt/qtxml-5.4
 	>=dev-qt/qtdbus-5.4
 	>=dev-qt/qtnetwork-5.4
@@ -27,10 +27,25 @@ DEPEND=">=dev-qt/qtmultimedia-5.4[widgets,pulseaudio=,alsa=]
 	sci-physics/bullet
 	media-libs/libass
 	x11-libs/libXrandr
-	media-video/ffmpeg[x264,aac,aacplus,mp3,network,threads,zlib,opengl,vaapi=,vdpau=]
+	media-video/ffmpeg[x264]
 "
 
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	|| (
+		media-plugins/gst-plugins-soup:0.10 
+		media-plugins/gst-plugins-neon:0.10
+	)
+
+	|| (
+		( media-plugins/gst-plugins-ffmpeg:0.10 media-video/ffmpeg[x264] )
+		media-plugins/gst-plugins-x264:0.10
+	)
+
+	|| (
+		( media-plugins/gst-plugins-pulse:0.10 media-video/ffmpeg[pulseaudio] )
+		( media-plugins/gst-plugins-alsa:0.10 media-video/ffmpeg[alsa] )
+	)
+"
 
 DEPEND="${DEPEND}
 	virtual/pkgconfig
