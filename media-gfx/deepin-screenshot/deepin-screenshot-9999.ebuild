@@ -29,7 +29,7 @@ RDEPEND="dev-lang/python
 	dev-python/sip
 	dev-python/libwnck-python
 	x11-libs/xpyb
-	dev-python/PyQt5
+	dev-python/PyQt5[multimedia]
 	sharing? ( net-misc/deepin-social-sharing )
 	!media-gfx/deepin-screenshot:2"
 DEPEND="dev-python/deepin-gettext-tools"
