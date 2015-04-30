@@ -1,0 +1,17 @@
+Title: media-gfx/deepin-screenshot SLOT changed
+Author: zhtengw <atenzd@gmail.com>
+Content-Type: text/plain
+Posted: 2015-04-29
+Revision: 1
+News-Item-Format: 1.0
+Display-If-Installed: media-gfx/deepin-screenshot
+
+由于deepin-screenshot 3.0版本（依赖于PyQt5）和原来的2.0版本差别太大，
+已将media-gfx/deepin-screenshot的SLOT改为:2和:3，不再有SLOT :0，请安装
+了2.0版deepin-screenshot升级到SLOT :2:
+
+  emerge -1 media-gfx/deepin-screenshot:2
+  
+或者尝试新的3.0版本:
+
+  emerge -1 media-gfx/deepin-screenshot:3

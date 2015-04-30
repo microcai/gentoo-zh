@@ -6,7 +6,7 @@ EAPI="4"
 
 inherit fdo-mime versionator eutils python
 
-MY_VER="$(get_version_component_range 1-3)+$(get_version_component_range 4)~8aaf2a6f00"
+MY_VER="$(get_version_component_range 1-3)-1+git$(get_version_component_range 4)ubuntu2"
 SRC_URI="http://packages.linuxdeepin.com/deepin/pool/main/d/${PN}/${PN}_${MY_VER}.tar.gz"
 
 DESCRIPTION="Utils of DeepinUI Toolkit modules"
@@ -31,7 +31,7 @@ RDEPEND=">=sys-libs/glibc-2.14
 		>=net-libs/libsoup-2.26.1"
 DEPEND="${RDEPEND}
 		dev-python/setuptools"
-S="${WORKDIR}/${PN}-$(get_version_component_range 1-3)+$(get_version_component_range 4)~8aaf2a6f00"
+S=${WORKDIR}/${PN}-$(get_version_component_range 1-3)
 
 pkg_setup() {
 	python_set_active_version 2.7

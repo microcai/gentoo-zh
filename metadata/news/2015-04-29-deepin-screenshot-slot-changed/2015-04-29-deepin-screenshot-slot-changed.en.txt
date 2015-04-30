@@ -1,0 +1,18 @@
+Title: media-gfx/deepin-screenshot SLOT changed
+Author: zhtengw <atenzd@gmail.com>
+Content-Type: text/plain
+Posted: 2015-04-29
+Revision: 1
+News-Item-Format: 1.0
+Display-If-Installed: media-gfx/deepin-screenshot
+
+Since the deepin-screenshot v3(depends on PyQt5) is very different to v2, the SLOT of 
+media-gfx/deepin-screenshot has changed to :2 and :3, and no more slot :0 survived. 
+If you have installed the old media-gfx/deepin-screenshot, you may reinstall it:
+  
+  emerge -1 media-gfx/deepin-screenshot:2
+  
+or you can try the new version:
+  
+  emerge -1 media-gfx/deepin-screenshot:3
+

@@ -22,15 +22,19 @@ DESCRIPTION="Snapshot tools for linux deepin."
 HOMEPAGE="https://github.com/linuxdeepin/deepin-screenshot"
 
 LICENSE="LGPL-3"
-SLOT="0"
+SLOT="2"
 IUSE=""
 
-RDEPEND=">=x11-libs/deepin-ui-1.201209291421
+RDEPEND=">=dev-lang/python-2.7.1:2.7
+	>=x11-libs/deepin-ui-1.0.201209291421
 	dev-python/pywebkitgtk
 	dev-python/libwnck-python
 	dev-python/pyxdg
 	dev-python/pycurl
-	dev-python/python-xlib"
+	dev-python/python-xlib
+	gnome-base/gconf:2
+	dev-python/deepin-gsettings
+	!media-gfx/deepin-screenshot:3"
 DEPEND="dev-python/epydoc"
 
 src_prepare() {
