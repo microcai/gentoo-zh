@@ -7,9 +7,11 @@ EAPI="5"
 _PN="coffeescript"
 _P="${_PN}-${PV}"
 
+inherit npm
+
 DESCRIPTION="The official CoffeeScript compiler"
 HOMEPAGE="http://coffeescript.org"
-SRC_URI="http://github.com/jashkenas/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+#SRC_URI="http://github.com/jashkenas/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -17,21 +19,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="net-libs/nodejs"
-DEPEND="${RDEPEND}"
-
-src_unpack() {
-	unpack "${A}"
-	mv "${_P}" "${P}"
-}
-
-src_compile() {
-	node bin/cake build
-}
-
-src_test() {
-	node bin/cake test
-}
-
-src_install() {
-	node bin/cake --prefix "${D}"/usr install
-}
+DEPEND="${RDEPEND}
+dev-nodejs/underscore
+"

@@ -22,6 +22,7 @@ dev-dotnet
 dev-erlang
 dev-lang
 dev-libs
+dev-nodejs
 dev-php
 dev-python
 dev-tex
