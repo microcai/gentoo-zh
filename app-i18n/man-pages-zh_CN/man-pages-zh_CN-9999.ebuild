@@ -15,10 +15,12 @@ EGIT_REPO_URI="git://github.com/lidaobing/manpages-zh.git"
 
 LICENSE="FDL-1.2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND="virtual/man"
+RDEPEND=">=sys-apps/man-1.6g
+	>=sys-apps/man-pages-3.83
+"
 
 inherit autotools git-2
 
