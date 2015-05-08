@@ -15,7 +15,7 @@ SRC_URI="http://cdn04.foxitsoftware.com/pub/foxit/reader/desktop/linux/${MY_PV1}
 
 LICENSE="${PN}"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 -*"
+KEYWORDS="amd64 x86 -*"
 IUSE=""
 MY_LANGS="de fr ja zh_CN zh_TW"
 for MY_LANG in ${MY_LANGS} ; do
@@ -23,16 +23,14 @@ for MY_LANG in ${MY_LANGS} ; do
 done
 
 RDEPEND="
-	x86? ( dev-libs/atk
-		dev-libs/glib:2
-		media-libs/freetype:2
+	dev-libs/atk[abi_x86_32]
+		dev-libs/glib:2[abi_x86_32]
+		media-libs/freetype:2[abi_x86_32]
 		net-print/cups
-		x11-libs/cairo
-		x11-libs/gtk+:2
-		x11-libs/pango )
-	amd64? ( app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-xlibs
-		app-emulation/emul-linux-x86-gtklibs )"
+		x11-libs/cairo[abi_x86_32]
+		x11-libs/gtk+:2[abi_x86_32]
+		x11-libs/pango[abi_x86_32]
+"
 
 S=${WORKDIR}/${MY_PV2}-release
 

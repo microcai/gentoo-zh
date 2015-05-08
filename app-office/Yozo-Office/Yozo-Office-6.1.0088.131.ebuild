@@ -17,13 +17,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="amd64? ( app-emulation/emul-linux-x86-xlibs 
-app-emulation/emul-linux-x86-soundlibs )
-x86? ( x11-libs/libXext 
-x11-libs/libXrender
-x11-libs/libXtst
-x11-libs/libXi
-media-libs/alsa-lib )"
+DEPEND=" x11-libs/libXext[abi_x86_32]
+x11-libs/libXrender[abi_x86_32]
+x11-libs/libXtst[abi_x86_32]
+x11-libs/libXi[abi_x86_32]
+media-libs/alsa-lib[abi_x86_32]"
 
 RDEPEND="${DEPEND}"
 

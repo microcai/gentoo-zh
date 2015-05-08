@@ -13,11 +13,9 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND="x86? ( >=dev-qt/qtcore-4.4.0
-			   >=dev-qt/qtgui-4.4.0
-			   >=dev-qt/qtwebkit-4.4.0 )
-		amd64? ( app-emulation/emul-linux-x86-qtlibs )
-		|| ( media-video/mplayer media-video/mplayer2 )"
+DEPEND="   >=dev-qt/qtgui:4[abi_x86_32]
+		   >=dev-qt/qtwebkit:4[abi_x86_32]
+	|| ( media-video/mplayer media-video/mplayer2 )"
 RDEPEND="${DEPEND}"
 
 src_unpack() {

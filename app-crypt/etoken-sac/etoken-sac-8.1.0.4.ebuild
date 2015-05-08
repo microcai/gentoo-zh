@@ -27,10 +27,10 @@ REQUIRED_USE="amd64? ( multilib )"
 # TODO: minimal useflag (I can't do it now, since
 # it seems like I brake my token and it is uninitialized now)
 RDEPEND="
-	>=sys-apps/pcsc-lite-1.8.13-r1
+	>=sys-apps/pcsc-lite-1.8.13-r1[abi_x86_32]
 	|| (
-		dev-libs/libusb-compat
-		dev-libs/libusb:0
+		dev-libs/libusb-compat[abi_x86_32]
+		dev-libs/libusb:0[abi_x86_32]
 	)
 	sys-apps/dbus
 	media-libs/libpng:1.2

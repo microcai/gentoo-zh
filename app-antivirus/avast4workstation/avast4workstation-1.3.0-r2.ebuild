@@ -14,17 +14,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	amd64? (
-		app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-gtklibs
-		app-emulation/emul-linux-x86-xlibs )
-	x86? (
-		>=dev-libs/glib-2.0.7
-		x11-libs/libX11
-		x11-libs/libXext
-		>=x11-libs/pango-1.0.5
-		>=x11-libs/gtk+-2.0.9
-		>=dev-libs/atk-1.0.3 )"
+		>=dev-libs/glib-2.0.7[abi_x86_32]
+		x11-libs/libX11[abi_x86_32]
+		x11-libs/libXext[abi_x86_32]
+		>=x11-libs/pango-1.0.5[abi_x86_32]
+		>=x11-libs/gtk+-2.0.9:2[abi_x86_32]
+		>=dev-libs/atk-1.0.3[abi_x86_32]"
 DEPEND=""
 
 RESTRICT="mirror"

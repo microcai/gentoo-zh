@@ -4,8 +4,9 @@
 
 EAPI=5
 
-inherit fdo-mime font unpacker versionator
+MULTILIB_COMPAT=(abi_x86_32)
 
+inherit fdo-mime font unpacker versionator multilib-build
 
 MY_PV="$(get_version_component_range 1-4)"
 MY_V="$(get_version_component_range 5)"
@@ -46,92 +47,40 @@ REQUIRED_USE="abi_x86_32"  # for now; will add abi_x86_64 once available
 NATIVE_DEPEND="
 		app-arch/bzip2
 		dev-libs/expat
-		dev-libs/glib:2
-		dev-libs/libffi
-		dev-libs/libxml2:2
-		media-libs/fontconfig:1.0
-		media-libs/freetype:2
-		media-libs/glu
-		media-libs/gst-plugins-base:0.10
-		media-libs/gstreamer:0.10
-		media-libs/libpng:1.2
-		virtual/opengl
-		media-libs/tiff:3
+		dev-libs/glib:2[${MULTILIB_USEDEP}]
+		dev-libs/libffi[${MULTILIB_USEDEP}]
+		dev-libs/libxml2:2[${MULTILIB_USEDEP}]
+		media-libs/fontconfig:1.0[${MULTILIB_USEDEP}]
+		media-libs/freetype:2[${MULTILIB_USEDEP}]
+		media-libs/glu[${MULTILIB_USEDEP}]
+		media-libs/gst-plugins-base:0.10[${MULTILIB_USEDEP}]
+		media-libs/gstreamer:0.10[${MULTILIB_USEDEP}]
+		media-libs/libpng:1.2[${MULTILIB_USEDEP}]
+		virtual/opengl[${MULTILIB_USEDEP}]
+		media-libs/tiff:3[${MULTILIB_USEDEP}]
 		sys-apps/util-linux
-		sys-devel/gcc
-		sys-libs/glibc
-		sys-libs/zlib
-		x11-libs/libdrm
-		x11-libs/libICE
-		x11-libs/libSM
-		x11-libs/libX11
-		x11-libs/libXau
-		x11-libs/libxcb
-		x11-libs/libXdamage
-		x11-libs/libXdmcp
-		x11-libs/libXext
-		x11-libs/libXfixes
-		x11-libs/libXrender
-		x11-libs/libXxf86vm"
+		sys-libs/zlib[${MULTILIB_USEDEP}]
+		x11-libs/libdrm[${MULTILIB_USEDEP}]
+		x11-libs/libICE[${MULTILIB_USEDEP}]
+		x11-libs/libSM[${MULTILIB_USEDEP}]
+		x11-libs/libX11[${MULTILIB_USEDEP}]
+		x11-libs/libXau[${MULTILIB_USEDEP}]
+		x11-libs/libxcb[${MULTILIB_USEDEP}]
+		x11-libs/libXdamage[${MULTILIB_USEDEP}]
+		x11-libs/libXdmcp[${MULTILIB_USEDEP}]
+		x11-libs/libXext[${MULTILIB_USEDEP}]
+		x11-libs/libXfixes[${MULTILIB_USEDEP}]
+		x11-libs/libXrender[${MULTILIB_USEDEP}]
+		x11-libs/libXxf86vm[${MULTILIB_USEDEP}]
+		media-libs/libmng[${MULTILIB_USEDEP}]
+		net-print/cups[${MULTILIB_USEDEP}]"
 
 RDEPEND="
-	!amd64? (
-		${NATIVE_DEPEND}
-	)
+	${NATIVE_DEPEND}
 	amd64? (
-		abi_x86_32? (
 			sys-devel/gcc[multilib]
 			sys-libs/glibc[multilib]
-			( || (
-				app-emulation/emul-linux-x86-baselibs
-				(
-					app-arch/bzip2[abi_x86_32]
-					dev-libs/expat[abi_x86_32]
-					dev-libs/glib:2[abi_x86_32]
-					dev-libs/libffi[abi_x86_32]
-					dev-libs/libxml2:2[abi_x86_32]
-					media-libs/libpng:1.2[abi_x86_32]
-					media-libs/tiff:3[abi_x86_32]
-					sys-apps/util-linux[abi_x86_32]
-					sys-libs/zlib[abi_x86_32]
-				)
-			) )
-			( || (
-				app-emulation/emul-linux-x86-medialibs
-				(
-					media-libs/gst-plugins-base:0.10[abi_x86_32]
-					media-libs/gstreamer:0.10[abi_x86_32]
-				)
-			) )
-			( || (
-				app-emulation/emul-linux-x86-opengl
-				(
-					media-libs/glu[abi_x86_32]
-					virtual/opengl[abi_x86_32]
-					x11-libs/libdrm[abi_x86_32]
-				)
-			) )
-			( || (
-				app-emulation/emul-linux-x86-xlibs
-				(
-					media-libs/fontconfig:1.0[abi_x86_32]
-					media-libs/freetype:2[abi_x86_32]
-					x11-libs/libICE[abi_x86_32]
-					x11-libs/libSM[abi_x86_32]
-					x11-libs/libX11[abi_x86_32]
-					x11-libs/libXau[abi_x86_32]
-					x11-libs/libxcb[abi_x86_32]
-					x11-libs/libXdamage[abi_x86_32]
-					x11-libs/libXdmcp[abi_x86_32]
-					x11-libs/libXext[abi_x86_32]
-					x11-libs/libXfixes[abi_x86_32]
-					x11-libs/libXrender[abi_x86_32]
-					x11-libs/libXxf86vm[abi_x86_32]
-				)
-			) )
-		)
 	)
-
 	corefonts? ( media-fonts/corefonts )
 	net-nds/openldap
 	dev-db/sqlite:3"
