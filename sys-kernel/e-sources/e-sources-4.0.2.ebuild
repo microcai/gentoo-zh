@@ -6,20 +6,20 @@ EAPI="5"
 K_DEBLOB_AVAILABLE="1"
 
 ck_version="1"
-gentoo_version="1"
-#tuxonice_version=""
+gentoo_version="4"
+tuxonice_version="2015.04.25"
 #uksm_version=""
 
-#aufs_kernel_version=""
+aufs_kernel_version="4.0_p20150504"
 #cjktty_kernel_version="3.19"
 #reiser4_kernel_version="3.17.2"
-#tuxonice_kernel_version=""
+tuxonice_kernel_version="head-4.0.0"
 #uksm_kernel_version="3.18.0"
 
 KEYWORDS="~x86 ~amd64 ~mips"
 
-SUPPORTED_USE="+additional +ck +exfat +experimental +gentoo +thinkpad"
-UNSUPPORTED_USE="aufs cjktty imq reiser4 tuxonice uksm"
+SUPPORTED_USE="+additional +aufs +ck +exfat +experimental +gentoo +thinkpad +tuxonice"
+UNSUPPORTED_USE="cjktty imq reiser4 uksm"
 
 UNIPATCH_EXCLUDE=""
 
