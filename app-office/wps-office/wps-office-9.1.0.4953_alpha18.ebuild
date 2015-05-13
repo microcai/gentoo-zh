@@ -38,8 +38,8 @@ DESCRIPTION="WPS Office is an office productivity suite. This is an ALPHA
 package. Use it at your own risk."
 HOMEPAGE="http://linux.wps.cn/"
 
-SRC_URI="x86? ( http://kdl.cc.ksosoft.com/wps-community/download/${MY_BRANCH}/${PN}_${MY_VV}_i386.deb )"
-SRC_URI="amd64? ( http://kdl.cc.ksosoft.com/wps-community/download/${MY_BRANCH}/${PN}_${MY_VV}_amd64.deb )"
+SRC_URI="x86? ( http://kdl.cc.ksosoft.com/wps-community/download/${MY_BRANCH}/${PN}_${MY_VV}_i386.deb )
+ amd64? ( http://kdl.cc.ksosoft.com/wps-community/download/${MY_BRANCH}/${PN}_${MY_VV}_amd64.deb )"
 
 SLOT="0"
 RESTRICT="strip mirror"
