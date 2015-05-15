@@ -12,8 +12,8 @@ RDEPEND=">=x11-base/xorg-server-1.16[udev]
 	dev-libs/libevdev
 	sys-libs/mtdev"
 DEPEND="${RDEPEND}
-	>=x11-proto/inputproto-2.1.99.3
-	>=dev-libs/libinput-0.8.0
+	>=x11-proto/inputproto-2.3.1
+	>=dev-libs/libinput-0.14.1
 	>=sys-kernel/linux-headers-3.10"
 
 pkg_pretend() {
