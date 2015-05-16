@@ -6,14 +6,14 @@ EAPI="5"
 K_DEBLOB_AVAILABLE="1"
 
 ck_version="1"
-gentoo_version="4"
-tuxonice_version="2015.04.25"
+gentoo_version="5"
+tuxonice_version="2015.05.11"
 #uksm_version=""
 
-aufs_kernel_version="4.0_p20150504"
+aufs_kernel_version="4.0_p20150511"
 #cjktty_kernel_version="3.19"
 #reiser4_kernel_version="3.17.2"
-tuxonice_kernel_version="head-4.0.0"
+tuxonice_kernel_version="4.0.2"
 #uksm_kernel_version="3.18.0"
 
 KEYWORDS="~x86 ~amd64 ~mips"
