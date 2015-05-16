@@ -44,9 +44,9 @@ src_prepare() {
 src_configure() {
 	# kde seems to be kde3 only
 	econf \
-		--disable-rpath
-		--without-kde
-		$(use_enable nls)
-		$(use_enable threads threading)
+		--disable-rpath \
+		--without-kde \
+		$(use_enable nls) \
+		$(use_enable threads threading) \
 		$(use_with xinerama)
 }
