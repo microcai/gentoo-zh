@@ -6,11 +6,11 @@ EAPI="5"
 K_DEBLOB_AVAILABLE="1"
 
 ck_version="1"
-gentoo_version="5"
+gentoo_version="6"
 tuxonice_version="2015.05.11"
 #uksm_version=""
 
-aufs_kernel_version="4.0_p20150511"
+aufs_kernel_version="4.0_p20150518"
 #cjktty_kernel_version="3.19"
 #reiser4_kernel_version="3.17.2"
 tuxonice_kernel_version="4.0.2"
