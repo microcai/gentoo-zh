@@ -23,10 +23,10 @@ RDEPEND="
 	dev-libs/glib:2
 	gnome-base/libglade:2.0
 	x11-libs/gtk+:2
-	sci-libs/libticalcs2
-	sci-libs/libticables2
-	sci-libs/libtifiles2
-	sci-libs/libticonv
+	=sci-libs/libticalcs2-9999
+	=sci-libs/libticables2-9999
+	=sci-libs/libtifiles2-9999
+	=sci-libs/libticonv-9999
 	nls? ( virtual/libintl )
 	xinerama? ( x11-libs/libXinerama )"
 
