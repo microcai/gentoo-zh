@@ -11,12 +11,13 @@ KEYWORDS="~amd64 ~x86"
 SRC_URI="https://github.com/librehat/libQtShadowsocks/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 RESTRICT="mirror"
 
+LICENSE="GPL-3"
+
 IUSE=""
 
-RDEPEND=">dev-libs/botan-1.10
+RDEPEND=">dev-libs/botan-1.10[threads]
+	dev-qt/qtconcurrent
 	dev-qt/qtcore:5
-	dev-qt/qtnetwork
-	dev-qt/qtconcurrent"
-DEPEND="${RDEPEND}"
+	dev-qt/qtnetwork"
 
 S="${WORKDIR}/${P}"
