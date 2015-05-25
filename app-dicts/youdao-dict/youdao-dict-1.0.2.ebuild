@@ -24,6 +24,8 @@ dev-python/requests
 dev-python/pillow
 dev-python/python3-xlib
 app-text/tesseract[linguas_zh_CN,linguas_zh_TW]
+dev-qt/qtgraphicaleffects:5
+dev-qt/qtquickcontrols:5
 "
 
 DEPEND="${RDEPEND}"
