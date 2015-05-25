@@ -19,7 +19,7 @@ RESTRICT="mirror"
 RESTRICT_PYTHON_ABIS="3.*"
 
 RDEPEND=">=dev-lang/python-3.0.0
-dev-python/PyQt5
+dev-python/PyQt5[webkit]
 dev-python/requests
 dev-python/pillow
 dev-python/python3-xlib
@@ -46,11 +46,11 @@ src_install(){
   
   dodir /usr/share/dbus-1/services
   insinto /usr/share/dbus-1/services
-  doins ${R}/data/com.youdao.backend.service
+  doins ${S}/data/com.youdao.backend.service
 
   dodir /usr/share/applications
   insinto /usr/share/applications
-  doins ${R}/data/youdao-dict.desktop
+  doins ${S}/data/youdao-dict.desktop
 	
   dodir /etc/xdg/autostart
   insinto /etc/xdg/autostart
