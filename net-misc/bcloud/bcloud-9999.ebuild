@@ -35,6 +35,7 @@ RDEPEND="${DEPEND}
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	dev-python/keyring[${PYTHON_USEDEP}]
 	dev-python/pycrypto[${PYTHON_USEDEP}]
+	dev-python/pyinotify[${PYTHON_USEDEP}]
 	x11-themes/gnome-icon-theme-symbolic
 	x11-libs/libnotify
 	"
