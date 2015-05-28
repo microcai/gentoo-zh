@@ -9,10 +9,7 @@
 #	aufs		- advanced multi layered unification filesystem
 #	cjktty		- cjk font support for tty
 #	ck		- con kolivas's high performance patchset
-#	exfat		- exfat filesystem support from samsung
 #	gentoo		- gentoo linux kernel patches called genpatches
-#	imq		- intermediate queueing device
-#	optimization	- more optimized gcc options for additional CPUs
 #	reiser4		- reiser4 filesystem support
 #	thinkpad	- a set of lenovo thinkpad patches
 #	tuxonice	- tuxonice support - another linux hibernate system
@@ -39,6 +36,7 @@ inherit kernel-2 versionator
 K_SECURITY_UNSUPPORTED="1"
 
 KMV="$(get_version_component_range 1-2)"
+KMMV="$(get_version_component_range 1)"
 KMSV="$(get_version_component_range 1).0"
 
 SLOT="${KMV}"
@@ -73,27 +71,31 @@ USE_ENABLE() {
 				"
 				if [ "${OVERRIDE_AUFS_PATCHES}" = 1 ]; then
 					AUFS_PATCHES="
-						${FILESDIR}/${PV}/aufs/aufs3-kbuild.patch
-						${FILESDIR}/${PV}/aufs/aufs3-base.patch
-						${FILESDIR}/${PV}/aufs/aufs3-mmap.patch
-						${FILESDIR}/${PV}/aufs/aufs3-standalone.patch
+						${FILESDIR}/${KMV}/aufs/aufs${KMMV}-kbuild.patch
+						${FILESDIR}/${KMV}/aufs/aufs${KMMV}-base.patch
+						${FILESDIR}/${KMV}/aufs/aufs${KMMV}-mmap.patch
+						${FILESDIR}/${KMV}/aufs/aufs${KMMV}-standalone.patch
 					"
 				else
 					AUFS_PATCHES="
-						${WORKDIR}/aufs3-kbuild.patch
-						${WORKDIR}/aufs3-base.patch
-						${WORKDIR}/aufs3-mmap.patch
-						${WORKDIR}/aufs3-standalone.patch
+						${WORKDIR}/aufs${KMMV}-kbuild.patch
+						${WORKDIR}/aufs${KMMV}-base.patch
+						${WORKDIR}/aufs${KMMV}-mmap.patch
+						${WORKDIR}/aufs${KMMV}-standalone.patch
 					"
 				fi
 			;;
 
 		cjktty)		cjktty_url="http://sourceforge.net/projects/cjktty"
-				cjktty_patch="${cjktty_kernel_version/.0/}-utf8.diff"
+				CJKKMV="$(get_version_component_range 1-2 $cjktty_kernel_version)"
+				if [[ "${cjktty_kernel_version/$CJKKMV./}" = "0" ]]
+					then cjktty_patch="${CJKKMV}-utf8.diff"
+					else cjktty_patch="${cjktty_kernel_version}-utf8.diff"
+				fi
 				cjktty_src="https://github.com/gentoo-zh/linux-cjktty/compare/${cjktty_patch}"
 				HOMEPAGE="${HOMEPAGE} ${cjktty_url}"
 				if [ "${OVERRIDE_CJKTTY_PATCHES}" = 1 ]; then
-					CJKTTY_PATCHES="${FILESDIR}/${PV}/${cjktty_patch}:1"
+					CJKTTY_PATCHES="${FILESDIR}/${KMV}/${cjktty_patch}:1"
 				else
 					SRC_URI="
 						${SRC_URI}
@@ -104,18 +106,17 @@ USE_ENABLE() {
 			;;
 
 		ck)		ck_url="http://ck.kolivas.org/patches"
-				ck_compress_type="bz2"
-				ck_patch="patch-${KMV}-ck${ck_version}.${ck_compress_type}"
+				ck_patch="${KMV}-ck${ck_version}-broken-out.tar.bz2"
 				ck_src="${ck_url}/${KMSV}/${KMV}/${KMV}-ck${ck_version}/${ck_patch}"
 				HOMEPAGE="${HOMEPAGE} ${ck_url}"
 				if [ "${OVERRIDE_CK_PATCHES}" = 1 ]; then
-					CK_PATCHES="${FILESDIR}/${PV}/${ck_patch}:1"
+					CK_PATCHES="${FILESDIR}/${KMV}/${ck_patch}"
 				else
 					SRC_URI="
 						${SRC_URI}
 						ck?	( ${ck_src} )
 					"
-					CK_PATCHES="${DISTDIR}/${ck_patch}:1"
+					CK_PATCHES="${DISTDIR}/${ck_patch}"
 				fi
 			;;
 
@@ -125,7 +126,7 @@ USE_ENABLE() {
 				reiser4_src="${reiser4_url}/files/reiser4-for-linux-3.x/${reiser4_patch}"
 				HOMEPAGE="${HOMEPAGE} ${reiser4_url}"
 				if [ "${OVERRIDE_REISER4_PATCHES}" = 1 ]; then
-					REISER4_PATCHES="${FILESDIR}/${PV}/${reiser4_patch}:1"
+					REISER4_PATCHES="${FILESDIR}/${KMV}/${reiser4_patch}:1"
 				else
 					SRC_URI="
 						${SRC_URI}
@@ -136,7 +137,7 @@ USE_ENABLE() {
 			;;
 
 		tuxonice)	tuxonice_url="http://tuxonice.net"
-				ICEKMV=${tuxonice_kernel_version:0:4}
+				ICEKMV="$(get_version_component_range 1-2 $tuxonice_kernel_version)"
 				if [[ "${tuxonice_kernel_version/$ICEKMV./}" = "0" ]]
 					then tuxonice_patch="tuxonice-for-linux-head-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2"
 					else tuxonice_patch="tuxonice-for-linux-${tuxonice_kernel_version}-${tuxonice_version//./-}.patch.bz2"
@@ -148,7 +149,7 @@ USE_ENABLE() {
 					tuxonice?	( >=sys-apps/tuxonice-userui-1.0 ( || ( >=sys-power/hibernate-script-2.0 sys-power/pm-utils ) ) )
 				"
 				if [ "${OVERRIDE_TUXONICE_PATCHES}" = 1 ]; then
-					TUXONICE_PATCHES="${FILESDIR}/${PV}/${tuxonice_patch}:1"
+					TUXONICE_PATCHES="${FILESDIR}/${KMV}/${tuxonice_patch}:1"
 				else
 					SRC_URI="
 						${SRC_URI}
@@ -160,14 +161,22 @@ USE_ENABLE() {
 
 		uksm)		uksm_url="http://kerneldedup.org"
 				UKSMKMV=${uksm_kernel_version:0:4}
+				UKSMKMV="$(get_version_component_range 1-2 $uksm_kernel_version)"
 				if [[ "${uksm_kernel_version/$UKSMKMV./}" = "0" ]]
-					then uksm_patch="uksm-${uksm_version}-for-v${UKSMKMV}.patch"
+					then
+						if [[ $uksm_version == *beta* ]]
+							then uksm_patch="uksm-${uksm_version}-for-linux-v${UKSMKMV}.patch"
+							else uksm_patch="uksm-${uksm_version}-for-v${UKSMKMV}.patch"
+						fi
 					else uksm_patch="uksm-${uksm_version}-for-v${UKSMKMV}.ge.${uksm_kernel_version/$UKSMKMV./}.patch"
 				fi
-				uksm_src="${uksm_url}/download/uksm/${uksm_version}/${uksm_patch}"
+				if [[ $uksm_version == *beta* ]]
+					then uksm_src="${uksm_url}/download/uksm/beta/${uksm_patch}"
+					else uksm_src="${uksm_url}/download/uksm/${uksm_version}/${uksm_patch}"
+				fi
 				HOMEPAGE="${HOMEPAGE} ${uksm_url}"
 				if [ "${OVERRIDE_UKSM_PATCHES}" = 1 ]; then
-					UKSM_PATCHES="${FILESDIR}/${PV}/${uksm_patch}:1"
+					UKSM_PATCHES="${FILESDIR}/${KMV}/${uksm_patch}:1"
 				else
 					SRC_URI="
 						${SRC_URI}
@@ -219,11 +228,11 @@ src_unpack() {
 	kernel-2_src_unpack
 
 	local patch
-	for patch in additional exfat imq optimization thinkpad ; do
+	for patch in additional ck thinkpad tuxonice ; do
 	if enable ${patch}; then
-		EPATCH_SOURCE="${FILESDIR}/${PV}/${patch}" EPATCH_FORCE="yes"  \
+		EPATCH_SOURCE="${FILESDIR}/${KMV}/${patch}" EPATCH_FORCE="yes"  \
 		EPATCH_SUFFIX="diff" epatch
-		EPATCH_SOURCE="${FILESDIR}/${PV}/${patch}" EPATCH_FORCE="yes"  \
+		EPATCH_SOURCE="${FILESDIR}/${KMV}/${patch}" EPATCH_FORCE="yes"  \
 		EPATCH_SUFFIX="patch" epatch
 	fi
 	done
