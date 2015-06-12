@@ -123,7 +123,7 @@ USE_ENABLE() {
 
 		reiser4) 	reiser4_url="http://sourceforge.net/projects/reiser4"
 				reiser4_patch="reiser4-for-${reiser4_kernel_version/.0/}.patch.gz"
-				reiser4_src="${reiser4_url}/files/reiser4-for-linux-3.x/${reiser4_patch}"
+				reiser4_src="${reiser4_url}/files/reiser4-for-linux-${KMMV}.x/${reiser4_patch}"
 				HOMEPAGE="${HOMEPAGE} ${reiser4_url}"
 				if [ "${OVERRIDE_REISER4_PATCHES}" = 1 ]; then
 					REISER4_PATCHES="${FILESDIR}/${KMV}/${reiser4_patch}:1"
