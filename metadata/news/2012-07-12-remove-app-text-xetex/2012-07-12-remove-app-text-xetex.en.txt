@@ -1,0 +1,10 @@
+Title: app-text/xetex remove
+Author: microcai <microcaicai@gmail.org>
+Content-Type: text/plain
+Posted: 2012-07-12
+Revision: 3
+News-Item-Format: 1.0
+Display-If-Installed: app-text/texlive-core
+
+use  dev-texlive/texlive-xetex instead of app-text/xetex
+

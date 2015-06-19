@@ -1,0 +1,15 @@
+--- Rakefile.org	2009-10-15 18:45:30.000000000 +0100
++++ Rakefile	2009-10-16 12:17:25.000000000 +0100
+@@ -39,11 +39,7 @@
+ CC  = "gcc"
+ CXX = "g++"
+ LIBEXT = PlatformInfo.library_extension
+-if OPTIMIZE
+-	OPTIMIZATION_FLAGS = "#{PlatformInfo.debugging_cflags} -O2 -DBOOST_DISABLE_ASSERTS"
+-else
+-	OPTIMIZATION_FLAGS = "#{PlatformInfo.debugging_cflags} -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS"
+-end
++OPTIMIZATION_FLAGS = "#{ENV['CXXFLAGS']} -DNDEBUG -DBOOST_DISABLE_ASSERTS"
+ 
+ # Extra compiler flags that should always be passed to the C/C++ compiler.
+ # Should be included last in the command string, even after PlatformInfo.portability_cflags.

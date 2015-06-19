@@ -1,0 +1,23 @@
+INCLUDES = \
+	-DLIBEXECDIR=\""$(libexecdir)"\" 			\
+	$(GNOME_DESKTOP_CFLAGS)					\
+	$(NULL)
+
+libexec_PROGRAMS = gnome-update-wallpaper-cache
+
+gnome_update_wallpaper_cache_SOURCES = \
+	gnome-update-wallpaper-cache.c 
+
+gnome_update_wallpaper_cache_CPPFLAGS = \
+	$(AM_CPPFLAGS)
+
+gnome_update_wallpaper_cache_CFLAGS =	\
+	$(SETTINGS_PLUGIN_CFLAGS)	\
+	$(AM_CFLAGS)
+
+gnome_update_wallpaper_cache_LDADD =	\
+	$(SETTINGS_PLUGIN_LIBS)		\
+	$(GNOME_DESKTOP_LIBS)		\
+	$(NULL)
+
+@INTLTOOL_DESKTOP_RULE@

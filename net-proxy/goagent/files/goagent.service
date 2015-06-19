@@ -1,0 +1,10 @@
+[Unit]
+Description=GoAgent Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python2 /opt/goagent/local/proxy.py
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=very simple HTTP index daemon
+
+
+[Socket]
+Accept=yes
+
+ListenStream=8000
+[Install]
+WantedBy=sockets.target
+
+

@@ -1,0 +1,12 @@
+diff -rpu a/scanfile.c b/scanfile.c
+--- a/scanfile.c	2012-07-11 12:13:03.912093273 +0800
++++ b/scanfile.c	2012-07-11 12:13:50.831095404 +0800
+@@ -386,7 +386,7 @@ EXIT:
+ 
+ void write_data_for_png( png_structp png_ptr, png_bytep data, png_size_t length )
+ {
+-	FileControlWriteFile( *( (int *)png_ptr->io_ptr ), (CNMSLPSTR)data, length );
++	FileControlWriteFile( png_get_io_ptr(png_ptr) , (CNMSLPSTR)data, length );
+ 
+ 	return;
+ }

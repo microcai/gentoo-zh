@@ -1,0 +1,10 @@
+diff -rtub tint2-svn.orig/src/tint2conf/CMakeLists.txt tint2-svn/src/tint2conf/CMakeLists.txt
+--- tint2-svn.orig/src/tint2conf/CMakeLists.txt	2013-01-06 13:35:36.058104968 -0800
++++ tint2-svn/src/tint2conf/CMakeLists.txt	2013-01-06 13:36:22.939105361 -0800
+@@ -48,4 +48,5 @@
+ install( PROGRAMS tintwizard.py DESTINATION bin )
+ install( FILES taskbar.svg DESTINATION ${DATADIR}/icons/hicolor/scalable/apps )
+ install( FILES tint2conf.desktop DESTINATION ${DATADIR}/applications )
+-install( CODE "execute_process(COMMAND gtk-update-icon-cache -f -t ${DATADIR}/icons/hicolor WORKING_DIRECTORY ${CMAKE_INSTALL_PREFIX})" )
++# Causes sandbox violations
++# install( CODE "execute_process(COMMAND gtk-update-icon-cache -f -t ${DATADIR}/icons/hicolor WORKING_DIRECTORY ${CMAKE_INSTALL_PREFIX})" )
