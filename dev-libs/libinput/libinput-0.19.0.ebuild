@@ -1,20 +1,22 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libinput/libinput-0.9.0.ebuild,v 1.1 2015/02/04 16:15:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libinput/libinput-0.18.0.ebuild,v 1.1 2015/06/23 09:44:43 eva Exp $
 
 EAPI="5"
 
-inherit eutils
+inherit eutils udev
 
 DESCRIPTION="Library to handle input devices in Wayland"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/libinput/"
 SRC_URI="http://www.freedesktop.org/software/${PN}/${P}.tar.xz"
 
-# License appears to be a variant of libtiff
-LICENSE="libtiff"
-SLOT="0/7"
-KEYWORDS="~amd64 ~arm"
+LICENSE="MIT"
+SLOT="0/10"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="test"
+# Tests require write access to udev rules directory which is a no-no for live system.
+# Other tests are just about logs, exported symbols and autotest of the test library.
+RESTRICT="test"
 
 RDEPEND="
 	>=dev-libs/libevdev-0.4
@@ -23,9 +25,11 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	test? ( >=dev-libs/check-0.9.10 )
 "
-# tests can even use: dev-util/valgrind
+#	test? (
+#		>=dev-libs/check-0.9.10
+#		dev-util/valgrind
+#		sys-libs/libunwind )
 
 src_configure() {
 	# Doc handling in kinda strange but everything
@@ -40,11 +44,12 @@ src_configure() {
 	econf \
 		--disable-documentation \
 		--disable-event-gui \
-		$(use_enable test tests)
+		$(use_enable test tests) \
+		--with-udev-dir="$(get_udevdir)"
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}"
 	dodoc -r doc/html
 	prune_libtool_files
 }
