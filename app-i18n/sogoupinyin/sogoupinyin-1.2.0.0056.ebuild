@@ -6,8 +6,8 @@ EAPI=5
 
 DESCRIPTION="Sogou Pinyin input method."
 HOMEPAGE="http://pinyin.sogou.com/linux/"
-SRC_URI="amd64? ( http://download.ime.sogou.com/1408440412/sogou_pinyin_linux_${PV}_amd64.deb )
- x86? ( http://download.ime.sogou.com/1408440412/sogou_pinyin_linux_${PV}_i386.deb )
+SRC_URI="amd64? ( http://download.ime.sogou.com/1432523940/sogoupinyin_${PV}_amd64.deb )
+ x86? ( http://download.ime.sogou.com/1432524151/sogoupinyin_${PV}_i386.deb )
 "
 
 LICENSE="Fcitx-Sogou"
@@ -34,7 +34,8 @@ src_compile(){
   tar xf ${WORKDIR}/data.tar.xz
   rm control.tar.gz  data.tar.xz  debian-binary
 #  rm -rf usr/share/fcitx-qimpanel
-  rm -rf usr/share/upstart
+  rm -rf usr/share/keyrings
+  rm -rf etc/X11
 }
 
 src_install(){
@@ -44,7 +45,7 @@ src_install(){
   doins ${S}/usr/lib/*-linux-gnu/fcitx/*
   dodir /usr/share/mime-info
   insinto /usr/share/mime-info
-  install -D ${S}/usr/lib/mime/packages/fcitx-ui-qimpanel fcitx-ui-qimpanel.keys
+  install -D ${S}/usr/lib/mime/packages/fcitx-ui-sogou-qimpanel fcitx-ui-sogou-qimpanel.keys
   dodir /usr/share
   insinto /usr/share
   doins -r ${S}/usr/share/*
@@ -58,9 +59,9 @@ src_install(){
 
   dodir /usr/lib
   insinto /usr/lib
-  dosym libcurl.so.4 /usr/lib/libcurl-gnutls.so.4
+#  dosym libcurl.so.4 /usr/lib/libcurl-gnutls.so.4
 #  dosym libgnutls.so /usr/lib/libgnutls.so.26
-  dosym librtmp.so /usr/lib/librtmp.so.0
+#  dosym librtmp.so /usr/lib/librtmp.so.0
 }
 
 pkg_postinst(){
