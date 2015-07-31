@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND=">=sys-apps/man-1.6g
+RDEPEND="virtual/man
 	>=sys-apps/man-pages-3.83
 "
 
