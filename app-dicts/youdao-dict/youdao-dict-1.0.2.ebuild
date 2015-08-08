@@ -46,11 +46,11 @@ src_install(){
   
   dodir /usr/share/dbus-1/services
   insinto /usr/share/dbus-1/services
-  doins ${R}/data/com.youdao.backend.service
+  doins ${S}/data/com.youdao.backend.service
 
   dodir /usr/share/applications
   insinto /usr/share/applications
-  doins ${R}/data/youdao-dict.desktop
+  doins ${S}/data/youdao-dict.desktop
 	
   dodir /etc/xdg/autostart
   insinto /etc/xdg/autostart
