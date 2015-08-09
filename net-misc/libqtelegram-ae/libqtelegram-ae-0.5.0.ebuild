@@ -11,7 +11,7 @@ MY_PV=${PV}-stable
 DESCRIPTION="A fork of libqtelegram by Aseman Team"
 HOMEPAGE="https://github.com/Aseman-Land/libqtelegram-aseman-edition"
 SRC_URI="https://github.com/Aseman-Land/libqtelegram-aseman-edition/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
-RESTRICT="mirrors"
+RESTRICT="mirror"
 
 LICENSE="GPLv3"
 SLOT="0"
