@@ -9,6 +9,8 @@ inherit eutils systemd
 DESCRIPTION="A lightweight secured scoks5 proxy for embedded devices and low end boxes"
 HOMEPAGE="https://github.com/shadowsocks/shadowsocks-libev"
 
+RESTRICT="mirror"
+
 if [[ ${PV} == "9999" ]] ; then
 	inherit git-r3
 	SRC_URI=""
@@ -17,6 +19,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	SRC_URI="https://github.com/shadowsocks/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
+
 fi
 
 LICENSE="GPL-3+"
