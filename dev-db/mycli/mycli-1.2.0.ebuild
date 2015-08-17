@@ -27,6 +27,11 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 
+src_prepare() {
+	epatch "${FILESDIR}/avoid-to-use-print-statement-for-py3k.patch"
+	distutils_src_compile
+}
+
 src_compile() {
 	distutils_src_compile
 }
