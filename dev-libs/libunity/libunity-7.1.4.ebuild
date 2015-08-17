@@ -26,6 +26,7 @@ DEPEND=">=dev-libs/dee-1.2.5:=
 	x11-libs/gtk+:3
 	${PYTHON_DEPS}
 	$(vala_depend)"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	# Fix compile error
