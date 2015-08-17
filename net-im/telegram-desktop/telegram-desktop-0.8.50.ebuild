@@ -21,7 +21,7 @@ SRC_URI="(
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="gtkstyle"
 
 RDEPEND="
 	x11-base/xorg-server[xvfb]
@@ -84,6 +84,12 @@ src_prepare(){
 
 src_configure(){
 	cd ${QSTATIC}
+	optional=''
+
+	if use gtkstyle; then
+		optional='-gtkstyle'
+	fi
+
 	./configure -prefix "${WORKDIR}/qt" \
 			-release \
 			-opensource \
@@ -94,7 +100,9 @@ src_configure(){
 			-nomake examples \
 			-nomake tests \
 			-skip qtquick1 \
-			-skip qtdeclarative
+			-skip qtdeclarative \
+			${optional}
+	
 }
 
 src_compile(){
