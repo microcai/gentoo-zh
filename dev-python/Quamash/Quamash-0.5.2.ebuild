@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-DEPEND="doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
+DEPEND="doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
+	|| ( || ( dev-python/PyQt4 dev-python/PyQt5 ) dev-python/PySide )"
 RDEPEND="${DEPEND}"
 
 python_compile_all() {
