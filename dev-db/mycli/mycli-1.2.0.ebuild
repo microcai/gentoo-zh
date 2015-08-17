@@ -16,7 +16,16 @@ KEYWORDS="~amd64  ~x86"
 
 IUSE=""
 
-RDEPEND=""
+RDEPEND="
+	>=dev-python/click-4.1
+	>=dev-python/pygments-2.0
+	=dev-python/prompt_toolkit-0.46
+	>=dev-python/pymysql-0.6.6
+	=dev-python/python-sqlparse-0.1.14
+	>=dev-python/configobj-5.0.6
+"
+
+DEPEND="${RDEPEND}"
 
 src_compile() {
 	distutils_src_compile
