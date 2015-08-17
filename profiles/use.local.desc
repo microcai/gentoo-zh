@@ -1,5 +1,5 @@
-# This file is deprecated as per GLEP 56 in favor of metadata.xml. Please add
-# your descriptions to your package's metadata.xml ONLY.
+# This file is deprecated as per GLEP 56 in favor of metadata.xml.
+# Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
 app-antivirus/bitdefender-scanner:gtk - Enable the graphical user interface based on x11-libs/gtk+
