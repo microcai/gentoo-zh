@@ -15,7 +15,7 @@ inherit eutils
 DESCRIPTION="Desktop client of Telegram, the messaging app."
 HOMEPAGE="https://telegram.org"
 SRC_URI="(
-	http://download.qt-project.org/official_releases/qt/${_qtver_short}/$_qtver/single/qt-everywhere-opensource-src-$_qtver.tar.xz -> qt.tar.xz
+	http://download.qt-project.org/official_releases/qt/${_qtver_short}/$_qtver/single/qt-everywhere-opensource-src-${_qtver}.tar.xz
 )"
 
 LICENSE="GPL-3"
