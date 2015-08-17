@@ -4,7 +4,7 @@
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils  git-r3 
+inherit distutils git-r3
 
 DESCRIPTION="NetEase-MusicBox"
 HOMEPAGE="https://github.com/darknessomi/musicbox"
@@ -17,7 +17,13 @@ KEYWORDS="~amd64  ~x86"
 
 IUSE=""
 
-RDEPEND=""
+RDEPEND="
+	dev-python/requests
+	dev-python/beautifulsoup:4
+	dev-python/pycrypto
+"
+
+DEPEND="${RDEPEND}"
 
 src_compile() {
 	distutils_src_compile
