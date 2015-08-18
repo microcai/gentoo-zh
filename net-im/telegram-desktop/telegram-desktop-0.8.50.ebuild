@@ -24,7 +24,6 @@ KEYWORDS="~amd64"
 IUSE="gtkstyle"
 
 RDEPEND="
-	x11-base/xorg-server[xvfb]
 	dev-libs/icu
 	virtual/ffmpeg
 	media-libs/jasper
@@ -43,6 +42,7 @@ DEPEND="
 	${RDEPEND}
 	dev-vcs/git
 	dev-libs/libunity
+	x11-base/xorg-server[xvfb]
 "
 QSTATIC=${WORKDIR}/Libraries/QtStatic
 
