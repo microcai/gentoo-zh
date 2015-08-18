@@ -10,7 +10,7 @@ _qtver_short=5.5
 REPO_URI="git://github.com/telegramdesktop/tdesktop.git"
 COMMIT="d32e476d96d8ef2ec2496f8929833334d4ed884a"
 
-inherit eutils
+inherit eutils gnome2-utils fdo-mime
 
 DESCRIPTION="Desktop client of Telegram, the messaging app."
 HOMEPAGE="https://telegram.org"
@@ -145,4 +145,9 @@ src_install(){
 
 	insinto /usr/share/applications
 	doins ${FILESDIR}/telegramdesktop.desktop
+}
+
+pkg_postinst(){
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
 }
