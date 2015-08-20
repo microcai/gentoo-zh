@@ -192,6 +192,7 @@ dev-libs/libchewing 0.3.5 9999: Library for Chinese Phonetic input method
 dev-libs/libchrasis 9999.0.1.1: Library for Chinese Character Recognition As-Is
 dev-libs/libdwarf 20140208: Library to deal with DWARF Debugging Information Format
 dev-libs/libtsm 3: TSM is a state machine for DEC VT100-VT520 compatible terminal emulators.
+dev-libs/libunity 7.1.4: Library for instrumenting and integrating with all aspects of the Unity shell
 dev-libs/lunar-date 2.4.0: Chinese Lunar Library
 dev-libs/thrift 0.9.1: Lightweight, language-independent software stack with associated code generation mechanism for RPC
 dev-lisp/buildapp 1.4.6: Create executables with SBCL
@@ -327,6 +328,7 @@ net-im/myqq3 9999: A portable open source qq CLI client
 net-im/openfetion 2.1.0 2.1.0-r1 2.2.1 2.2.2 9999: Free and open source implementation of Fetion client based on GTK+2
 net-im/qipmsg 1.0.0: An open-source Qt4 implementation of IP Messenger for linux.
 net-im/qtqq 0.8.2: Tencent QQ written in Qt
+net-im/telegram-desktop 0.8.50: Desktop client of Telegram, the messaging app.
 net-im/wineqq 20140102: Tencent QQ for Linux by longine
 net-libs/jzmq 9999: jzmq
 net-misc/TelegramQML 0.8.0: Telegram API tools for QtQML and Qml
