@@ -109,6 +109,9 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	einfo "If you can't enable AutoBackup, execute"
+	einfo "sed -i '/ForceAutoBackupEnabled/d' ~/.config/Kingsoft/Office.conf to fix it"
+
 	use sharedfonts && font_pkg_postinst
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
