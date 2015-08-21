@@ -5,21 +5,21 @@
 EAPI="5"
 K_DEBLOB_AVAILABLE="1"
 
-#ck_version=""
-gentoo_version="7"
-tuxonice_version="2015.07.23"
+ck_version="2"
+gentoo_version="10"
+tuxonice_version="2015.08.14"
 #uksm_version=""
 
 aufs_kernel_version="4.1_p20150629"
 cjktty_kernel_version="3.18.14"
-#reiser4_kernel_version=""
-tuxonice_kernel_version="4.1.3"
+reiser4_kernel_version="4.1.4"
+tuxonice_kernel_version="4.1.5"
 #uksm_kernel_version=""
 
 KEYWORDS="~amd64 ~x86 ~mips"
 
-SUPPORTED_USE="+additional +aufs +cjktty +experimental +gentoo +thinkpad +tuxonice"
-UNSUPPORTED_USE="ck reiser4 uksm"
+SUPPORTED_USE="+additional +aufs +cjktty +ck +experimental +gentoo +reiser4 +thinkpad +tuxonice"
+UNSUPPORTED_USE="uksm"
 
 UNIPATCH_EXCLUDE=""
 
