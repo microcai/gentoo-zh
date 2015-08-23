@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="Implementation of the PEP 3156 Event-Loop with Qt."
 HOMEPAGE="http://pypi.python.org/pypi/quamash"
-SRC_URI="mirror://pypi/Q/${PN}/${P}.tar.gz"
+SRC_URI="mirror://pypi/Q/Quamash/Quamash-0.5.2.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
