@@ -405,7 +405,6 @@ sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/yaffs2utils 0.3.0: Utilities to create/extract a yaffs2 image on Linux
 sys-fs/zfs-auto-snapshot 9999 9999-r1: Automatic snapshots for ZFS on Linux
 sys-kernel/dkms 2.2.0.3: Dynamic Kernel Module Support
-sys-kernel/e-sources 3.18.14 4.0.5 4.1.6: Full sources for the Linux kernel including: gentoo, ck and other patches
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libixp 9999: Standalone client/server 9P library
 sys-process/nocache 0.9: nocache - minimize filesystem caching effects
