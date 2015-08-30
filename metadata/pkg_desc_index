@@ -48,7 +48,7 @@ app-i18n/fcitx-hangul 0.3.0: Korean input support for fcitx.
 app-i18n/fcitx-libpinyin 0.3.1: Libpinyin Wrapper for Fcitx, library to deal with Pinyin.
 app-i18n/fcitx-m17n 0.2.1: m17n support for fcitx.
 app-i18n/fcitx-qimpanel 1.0.0: An input method frontend for fcitx.
-app-i18n/fcitx-qt5 1.0.1: Qt5 input module for Fcitx
+app-i18n/fcitx-qt5 1.0.1 1.0.4: Qt5 input module for Fcitx
 app-i18n/fcitx-rime 0.3.0 9999: Rime Support for Fcitx
 app-i18n/fcitx-sayura 0.1.1: Sayura port for fcitx.
 app-i18n/fcitx-sogoupinyin 0.0.6: Fcitx Wrapper for sogoupinyin.
