@@ -20,7 +20,8 @@ KEYWORDS=""
 IUSE=""
 
 DEPEND="${PYTHON_DEPS}
-		dev-python/pycurl[${PYTHON_USEDEP}]"
+		dev-python/pycurl[${PYTHON_USEDEP}]
+		dev-python/rsa[${PYTHON_USEDEP}]"
 RDEPEND="$DEPEND"
 
 python_install_all() {

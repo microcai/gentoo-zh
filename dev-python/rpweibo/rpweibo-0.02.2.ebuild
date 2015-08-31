@@ -18,7 +18,8 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="${PYTHON_DEPS}
-		dev-python/pycurl[${PYTHON_USEDEP}]"
+		dev-python/pycurl[${PYTHON_USEDEP}]
+		dev-python/rsa[${PYTHON_USEDEP}]"
 RDEPEND="$DEPEND"
 
 S="${WORKDIR}/rpweibo-${PV}"
