@@ -14,7 +14,7 @@ EGIT_BRANCH="master"
 # The developers of netease-musicbox don't even know how to
 # use "git tag" to release a new version, we have to check
 # everything in "git log" manually.
-EGIT_COMMIT="1fe9c607890b5b5067fa2e2edb22caeda0a3684b"
+EGIT_COMMIT="d8530060ca0ebac47561517aae8dbc9f59cd4131"
 
 LICENSE="MIT License "
 SLOT="0"
