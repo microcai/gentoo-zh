@@ -400,6 +400,7 @@ sys-boot/gummiboot 48: Simple UEFI Boot Manager
 sys-cluster/apache-zookeeper 3.3.6: ZooKeeper is a high-performance coordination service for distributed applications.
 sys-devel/crash 5.0.5: Tool to investigate kernel core dumps
 sys-devel/gdb 7.1: GNU debugger
+sys-devel/libabigail 9999: The ABI Generic Analysis and Instrumentation Library
 sys-devel/ucc 1.1: UCC is an ANSI C Compiler
 sys-firmware/intel-ucode 20130906: Intel IA32 microcode update data
 sys-fs/exfat-nofuse 9999: A kernel module that enables you to call ACPI methods
