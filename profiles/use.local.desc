@@ -101,6 +101,7 @@ net-firewall/west-chamber:xtables_addons_gfw - The gfw match allows to match on 
 net-firewall/west-chamber:xtables_addons_zhang - The CUI target sends obfuscating packets upon incoming SYN to make the connection invisible to third-party intrusion detection.
 net-misc/gemanx:imageview - enable external image viewer
 net-misc/gemanx:iplookup - enable IP location lookup for Simplified Chinese users. Need qqwry.dat
+net-misc/teamviewer:system-wine - Use app-emulation/wine instead of bundled wine.
 net-misc/xmuruijie:firewall - Add support for iptables firewall
 net-proxy/make-proxy:client - Add make proxy client support
 net-proxy/make-proxy:server - Add make proxy server support
