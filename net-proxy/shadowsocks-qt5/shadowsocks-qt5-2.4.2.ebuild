@@ -7,7 +7,7 @@ EAPI=5
 inherit qt5-build gnome2-utils
 
 DESCRIPTION="A cross-platform GUI shadowsocks client"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 SRC_URI="https://github.com/librehat/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 RESTRICT="mirror"
 
@@ -27,6 +27,11 @@ DEPEND="${RDEPEND}
 	dev-qt/qtnetwork"
 
 S="${WORKDIR}/${P}"
+
+PATCHES=(
+	# https://github.com/librehat/shadowsocks-qt5/issues/190
+	"${FILESDIR}/remove-gnome-from-appindicator-de-list.patch"
+)
 
 post_postinst() {
 	gnome2_icon_cache_update
