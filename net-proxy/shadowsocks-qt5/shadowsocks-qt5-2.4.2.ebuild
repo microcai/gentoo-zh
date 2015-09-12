@@ -33,6 +33,10 @@ PATCHES=(
 	"${FILESDIR}/remove-gnome-from-appindicator-de-list.patch"
 )
 
-post_postinst() {
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
 	gnome2_icon_cache_update
 }
