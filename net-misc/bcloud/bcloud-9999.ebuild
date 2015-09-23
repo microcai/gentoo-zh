@@ -27,6 +27,8 @@ LICENSE="GPL-3"
 SLOT="0"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
+IUSE+="gnome-keyring"
+
 DEPEND="${PYTHON_DEPS}"
 RDEPEND="${DEPEND}
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
@@ -38,6 +40,7 @@ RDEPEND="${DEPEND}
 	dev-python/pyinotify[${PYTHON_USEDEP}]
 	x11-themes/gnome-icon-theme-symbolic
 	x11-libs/libnotify
+	gnome-keyring? ( gnome-base/libgnome-keyring  )
 	"
 
 src_install() {
