@@ -38,6 +38,7 @@ RDEPEND="${DEPEND}
 	dev-python/pyinotify[${PYTHON_USEDEP}]
 	x11-themes/gnome-icon-theme-symbolic
 	x11-libs/libnotify
+	gnome-base/libgnome-keyring
 	"
 
 src_install() {
