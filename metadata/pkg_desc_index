@@ -338,7 +338,7 @@ net-misc/TelegramQML 0.8.0: Telegram API tools for QtQML and Qml
 net-misc/WeCase 0.06_beta8 9999: A Sina Weibo Client Focusing on Linux.
 net-misc/avbot 9999: avbot connects QQ/XMPP/IRC/POP3/SMTP
 net-misc/avsocks 9999: 科学操长城软件
-net-misc/bcloud 3.7.1 9999: Baidu Pan client for Linux Desktop users
+net-misc/bcloud 3.8.1 9999: Baidu Pan client for Linux Desktop users
 net-misc/biabiamiamia 0.1 0.1.20130305 1.3.20130307 1.5.20130315: 百毒歌曲批量下
 net-misc/bypy 9999: Python client for Baidu Yun Cloud Storage
 net-misc/egear 0.1.1.1 0.1.9999: eGear, a download tool written in QT4
