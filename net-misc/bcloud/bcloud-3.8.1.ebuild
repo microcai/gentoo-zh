@@ -43,6 +43,7 @@ RDEPEND="${DEPEND}
 	x11-themes/gnome-icon-theme-symbolic
 	x11-libs/libnotify
 	indicator? ( dev-libs/libappindicator:3 )
+	gnome-base/libgnome-keyring
 	"
 
 src_install() {
