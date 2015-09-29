@@ -11,7 +11,7 @@ MY_PV=${PV}-stable
 DESCRIPTION="Telegram API tools for QtQML and Qml"
 HOMEPAGE="https://github.com/Aseman-Land/TelegramQML"
 SRC_URI="https://github.com/Aseman-Land/TelegramQML/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
-RESTRICT="mirrors"
+RESTRICT="mirror"
 
 LICENSE="GPLv3"
 SLOT="0"

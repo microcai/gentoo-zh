@@ -20,6 +20,7 @@ fi
 
 inherit python-r1 ${scm_eclass}
 
+RESTRICT="mirror"
 DESCRIPTION="Baidu Pan client for Linux Desktop users"
 HOMEPAGE="https://github.com/LiuLang/bcloud"
 
@@ -27,7 +28,7 @@ LICENSE="GPL-3"
 SLOT="0"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-IUSE+="gnome-keyring"
+IUSE+="+indicator gnome-keyring"
 
 DEPEND="${PYTHON_DEPS}"
 RDEPEND="${DEPEND}
@@ -38,9 +39,11 @@ RDEPEND="${DEPEND}
 	dev-python/keyring[${PYTHON_USEDEP}]
 	dev-python/pycrypto[${PYTHON_USEDEP}]
 	dev-python/pyinotify[${PYTHON_USEDEP}]
+	x11-themes/gnome-icon-theme
 	x11-themes/gnome-icon-theme-symbolic
 	x11-libs/libnotify
-	gnome-keyring? ( gnome-base/libgnome-keyring  )
+	indicator? ( dev-libs/libappindicator:3 )
+	gnome-keyring? ( gnome-base/libgnome-keyring )
 	"
 
 src_install() {

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI="5"
 
 #VIM_PLUGIN_VIM_VERSION="7.0"
 inherit vim-plugin vcs-snapshot
