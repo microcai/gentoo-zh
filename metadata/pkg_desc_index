@@ -258,7 +258,7 @@ gnome-extra/nautilus-terminal 1.0: Nautilus Terminal is a terminal embedded in N
 gnome-extra/proxy_applet 0.2: GNOME applet for changing network proxy configuration from gnome panel
 kde-misc/imageshack-upload 0.5: A service menu tor upload images on Imageshack.
 kde-misc/sessionk 9999: load kde session faster
-kde-plasma/kcm-fcitx 0.5.0: KDE5 control Module for Fcitx
+kde-plasma/kcm-fcitx 0.5.2: KDE5 control Module for Fcitx
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/ntufonts 20030521: Chinese Fonts from National Taiwan University, Includes kai, Lei, Funsong, and Thin.
 media-fonts/sinicafonts 20030521: Chinese and Siddam fonts provided by SINICA, Taiwan.
