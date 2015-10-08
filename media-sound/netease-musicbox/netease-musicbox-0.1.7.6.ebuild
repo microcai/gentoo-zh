@@ -26,6 +26,7 @@ RDEPEND="
 	dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/beautifulsoup:4[${PYTHON_USEDEP}]
 	dev-python/pycrypto[${PYTHON_USEDEP}]
+	media-sound/mpg123
 "
 
 DEPEND="${RDEPEND}
