@@ -19,7 +19,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="
-	>=net-misc/TelegramQML-0.8.0
+	>=net-misc/TelegramQML-0.9.1
 	dev-qt/qtwebkit:5
 	dev-qt/qtmultimedia:5
 "
