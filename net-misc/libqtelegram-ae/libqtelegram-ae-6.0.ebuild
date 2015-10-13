@@ -19,12 +19,11 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-# FIXME: the qtmultimedia fails with gstreamer
 DEPEND="
 	dev-qt/qtcore:5
 	dev-qt/qtdeclarative:5
 	dev-qt/qtsql:5
-	dev-qt/qtmultimedia:5[qml,-gstreamer]
+	dev-qt/qtmultimedia:5[qml]
 	dev-qt/qtquick1:5
 	dev-qt/qtgraphicaleffects:5
 	dev-qt/qtgui:5
