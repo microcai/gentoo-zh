@@ -6,7 +6,8 @@ EAPI=5
 
 inherit qmake-utils
 
-MY_PV=${PV}-stable
+MY_PV=${PV}
+#-stable
 
 DESCRIPTION="A fork of libqtelegram by Aseman Team"
 HOMEPAGE="https://github.com/Aseman-Land/libqtelegram-aseman-edition"
