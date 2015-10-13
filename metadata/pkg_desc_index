@@ -319,7 +319,7 @@ net-firewall/west-chamber 0.0.1-r4: xtables addons that may crash GFW, named aft
 net-im/aliwangwang 1.00-r1: AliWangWang for Linux
 net-im/avim 0.1: avim is a secure IM build around RSA
 net-im/cliofetion 2.1.0 2.2.0 9999: A command-line version of openfetion
-net-im/cutegram 2.5.0: A different telegram client from Aseman team forked from Sigram by Sialan Labs.
+net-im/cutegram 2.7.0: A different telegram client from Aseman team forked from Sigram by Sialan Labs.
 net-im/emesene 9999-r3: Platform independent MSN Messenger client written in Python+GTK
 net-im/freetalk 3.2: Console based Jabber client
 net-im/gtkqq 9999: a qq client based on gtk+ uses webqq protocol
@@ -334,7 +334,7 @@ net-im/qtqq 0.8.2: Tencent QQ written in Qt
 net-im/telegram-desktop 0.8.50: Desktop client of Telegram, the messaging app.
 net-im/wineqq 20140102: Tencent QQ for Linux by longine
 net-libs/jzmq 9999: jzmq
-net-misc/TelegramQML 0.8.0: Telegram API tools for QtQML and Qml
+net-misc/TelegramQML 0.9.1: Telegram API tools for QtQML and Qml
 net-misc/WeCase 0.06_beta8 9999: A Sina Weibo Client Focusing on Linux.
 net-misc/avbot 9999: avbot connects QQ/XMPP/IRC/POP3/SMTP
 net-misc/avsocks 9999: 科学操长城软件
@@ -348,7 +348,7 @@ net-misc/gemanx 0.1.0.1 0.1.0.3 9999: GeMan X is a branch of PCMan X.
 net-misc/iptux 0.6.2 9999: Iptux is a ipmsg client in linux
 net-misc/kuaipan4uk 2.0.0.3-r1 2.0.0.5: KuaiPan is one of the most popular cloud storage service in China.
 net-misc/libipmsg 0.1.6 0.1.7: libipmsg - IP Messenger library for UNIX
-net-misc/libqtelegram-ae 0.5.0: A fork of libqtelegram by Aseman Team
+net-misc/libqtelegram-ae 6.0: A fork of libqtelegram by Aseman Team
 net-misc/logjam 4.5.3: GTK2-based LiveJournal client
 net-misc/networkmanager-l2tp 9999: NetworkManager L2TP plugin
 net-misc/omnitty 0.3.0: ncurses-based ssh multiplexer for cluster administration
