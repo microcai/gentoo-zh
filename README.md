@@ -35,6 +35,10 @@ follow rule no.1 and no.2
   Pull Request and discuss in the GitHub Issue, mailing list, or talk to the maintainer
   directly.
 
+* If you are sending a new pull request, make sure it contains all necessary commits
+  for a single contribution, e.g. don't send two pull requsets for an ebuild and its
+  `Manifest`.
+
 * Every ebuild change should not produce compile error before
   committing.
 
