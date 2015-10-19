@@ -19,7 +19,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="
-	>=net-misc/libqtelegram-ae-0.5.0
+	>=net-misc/libqtelegram-ae-6.0
 	dev-qt/qtxml:5
 	dev-qt/qtimageformats:5
 "
