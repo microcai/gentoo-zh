@@ -213,8 +213,6 @@ done
 
 features gentoo && REQUIRED_USE=" experimental? ( gentoo ) "
 
-enable cjktty && UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} *fbcondecor*"
-
 SRC_URI="
 	${SRC_URI}
 	${ARCH_URI}
@@ -222,6 +220,11 @@ SRC_URI="
 "
 
 UNIPATCH_STRICTORDER="yes"
+
+pkg_setup() {
+	# never (directly or indirectly) call `use` in global scope
+	enable cjktty && UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} *fbcondecor*"
+}
 
 src_unpack() {
 	enable aufs && unpack ${aufs_tarball}
