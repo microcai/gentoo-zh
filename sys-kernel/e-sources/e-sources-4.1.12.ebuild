@@ -7,13 +7,13 @@ K_DEBLOB_AVAILABLE="1"
 
 ck_version="2"
 gentoo_version="10"
-tuxonice_version="2015.08.14"
+tuxonice_version="2015.10.30"
 #uksm_version=""
 
 aufs_kernel_version="4.1_p20150629"
 cjktty_kernel_version="3.18.14"
 reiser4_kernel_version="4.1.4"
-tuxonice_kernel_version="4.1.5"
+tuxonice_kernel_version="4.1.12"
 #uksm_kernel_version=""
 
 KEYWORDS="~amd64 ~x86 ~mips"
