@@ -22,7 +22,8 @@ $(add_frameworks_dep plasma)"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	virtual/pkgconfig
-	sys-devel/gettext"
+	sys-devel/gettext
+	app-i18n/fcitx-qt5"
 
 src_prepare(){
 	echo
