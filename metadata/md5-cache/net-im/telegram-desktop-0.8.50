@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare unpack
+DEPEND=dev-libs/icu virtual/ffmpeg media-libs/jasper media-libs/libexif media-libs/libmng media-libs/libwebp x11-libs/libxkbcommon x11-libs/gtk+:2 sys-libs/mtdev media-libs/openal media-libs/opus dev-libs/glib:2 dev-libs/libappindicator dev-vcs/git dev-libs/libunity x11-base/xorg-server[xvfb] >=sys-apps/sed-4
+DESCRIPTION=Desktop client of Telegram, the messaging app.
+EAPI=5
+HOMEPAGE=https://telegram.org
+IUSE=gtkstyle
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=dev-libs/icu virtual/ffmpeg media-libs/jasper media-libs/libexif media-libs/libmng media-libs/libwebp x11-libs/libxkbcommon x11-libs/gtk+:2 sys-libs/mtdev media-libs/openal media-libs/opus dev-libs/glib:2 dev-libs/libappindicator
+SLOT=0
+SRC_URI=( http://download.qt-project.org/official_releases/qt/5.5/5.5.0/single/qt-everywhere-opensource-src-5.5.0.tar.xz )
+_eclass_exported_funcs=pkg_postinst:- src_unpack:- src_prepare:- src_configure:- src_compile:- src_install:-
+_eclasses_=eutils	f20548a2f7b0128068388cd2ec26708a	fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	gnome2-utils	588052cacdf74572e68bdfeaece20534	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_md5_=6bcd503cf1caed6552f8493f79a02989

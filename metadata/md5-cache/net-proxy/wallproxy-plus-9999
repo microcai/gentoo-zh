@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst prepare setup unpack
+DEPEND=dev-vcs/git =dev-lang/python-2* =dev-lang/python-2*[ssl] virtual/pkgconfig
+DESCRIPTION=New version of wallproxy, a general purpose proxy framework in Python.
+EAPI=5
+HOMEPAGE=https://github.com/wallproxy/wallproxy
+LICENSE=GPL-3
+RDEPEND=dev-libs/nss[utils] dev-python/gevent dev-python/pyopenssl =dev-lang/python-2* =dev-lang/python-2*[ssl]
+SLOT=0
+_eclass_exported_funcs=pkg_postinst:- pkg_setup:python src_unpack:- src_prepare:- src_install:-
+_eclasses_=eutils	f20548a2f7b0128068388cd2ec26708a	git-2	df00117322129fb906bb0a53c3d6a020	multilib	3972ca401cf7dbb430df9995f5d8d580	python	0c2c16ea4f9074d3248bd4365d03890c	systemd	6b4f0cefa642270eded7e6ca816fd181	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_md5_=3c433a903c8a37b704cfbe16cb330909

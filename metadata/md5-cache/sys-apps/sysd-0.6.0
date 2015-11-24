@@ -1,0 +1,14 @@
+DEFINED_PHASES=-
+DEPEND=dev-lang/go
+DESCRIPTION=The daemon who supplies firsthand system data
+EAPI=5
+HOMEPAGE=https://github.com/hacking-thursday/sysd
+IUSE=test
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RDEPEND=dev-lang/go
+SLOT=0
+SRC_URI=https://github.com/hacking-thursday/sysd/releases/download/v0.6.0/sysd-0.6.0.tar.gz
+_eclass_exported_funcs=-
+_eclasses_=eutils	f20548a2f7b0128068388cd2ec26708a	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_md5_=43ff3533ceaa1dec9f627c0521b12b6c

@@ -1,0 +1,13 @@
+DEFINED_PHASES=unpack
+DEPEND=app-i18n/librime
+DESCRIPTION=Data resources for Rime Input Method Engine
+EAPI=5
+HOMEPAGE=http://code.google.com/p/rimeime/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=app-i18n/librime
+SLOT=0
+SRC_URI=http://rimeime.googlecode.com/files/brise-0.32.tar.gz
+_eclass_exported_funcs=src_unpack:vcs-snapshot
+_eclasses_=vcs-snapshot	b45be87e7012be0af8424e8a5644da1d
+_md5_=9d78b387b1c321d0ff6fe54c73a06e76

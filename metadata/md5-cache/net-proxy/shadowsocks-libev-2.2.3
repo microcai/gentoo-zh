@@ -1,0 +1,16 @@
+DEFINED_PHASES=configure install setup
+DEPEND=openssl? ( dev-libs/openssl ) polarssl? ( net-libs/polarssl ) systemd? ( sys-apps/systemd ) virtual/pkgconfig
+DESCRIPTION=A lightweight secured scoks5 proxy for embedded devices and low end boxes
+EAPI=5
+HOMEPAGE=https://github.com/shadowsocks/shadowsocks-libev
+IUSE=debug +openssl polarssl systemd
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3+
+RDEPEND=openssl? ( dev-libs/openssl ) polarssl? ( net-libs/polarssl ) systemd? ( sys-apps/systemd )
+REQUIRED_USE=^^ ( openssl polarssl )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/shadowsocks/shadowsocks-libev/archive/v2.2.3.tar.gz -> shadowsocks-libev-2.2.3.tar.gz
+_eclass_exported_funcs=pkg_setup:- src_configure:- src_install:-
+_eclasses_=eutils	f20548a2f7b0128068388cd2ec26708a	multilib	3972ca401cf7dbb430df9995f5d8d580	systemd	6b4f0cefa642270eded7e6ca816fd181	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_md5_=ed01d5b093cdf130b9d0de7148285f80

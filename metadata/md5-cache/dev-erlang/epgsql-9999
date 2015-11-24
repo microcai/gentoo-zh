@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install unpack
+DEPEND=dev-util/rebar >=dev-lang/erlang-15.2.3 >=dev-vcs/git-1.8.2.1
+DESCRIPTION=Erlang PostgreSQL client library
+EAPI=5
+HOMEPAGE=https://github.com/epgsql/epgsql
+IUSE=src
+LICENSE=epgsql
+RDEPEND=dev-lang/erlang >=dev-lang/erlang-15.2.3
+SLOT=0
+_eclass_exported_funcs=src_unpack:git-r3 src_compile:- src_install:-
+_eclasses_=erlang-pkg	5c6dc206e957a848a7f1e35de2dcbe81	eutils	f20548a2f7b0128068388cd2ec26708a	git-r3	b00a846f415f26e5b66e5c44c7dc87dc	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_md5_=957600ac40d65f93a1253501f77ac8bc

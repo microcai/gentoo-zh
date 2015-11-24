@@ -1,0 +1,15 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=dev-libs/glib:2 >=virtual/udev-172 x11-libs/libxkbcommon dbus? ( sys-apps/dbus ) drm? ( x11-libs/libdrm >=media-libs/mesa-8.0.3[egl,gbm] ) gles2? ( >=media-libs/mesa-8.0.3[gles2] ) pango? ( x11-libs/pango ) systemd? ( sys-apps/systemd ) udev? ( virtual/udev ) pixman? ( x11-libs/pixman ) wayland? ( dev-libs/wayland ) dev-libs/libtsm virtual/pkgconfig x11-proto/xproto doc? ( dev-util/gtk-doc ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig
+DESCRIPTION=KMS/DRM based virtual Console Emulator
+EAPI=5
+HOMEPAGE=http://www.freedesktop.org/wiki/Software/kmscon
+IUSE=dbus debug doc +drm +fbdev +gles2 multiseat +optimizations +unifont pango pixman static-libs systemd udev wayland
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT LGPL-2.1 BSD-2
+RDEPEND=dev-libs/glib:2 >=virtual/udev-172 x11-libs/libxkbcommon dbus? ( sys-apps/dbus ) drm? ( x11-libs/libdrm >=media-libs/mesa-8.0.3[egl,gbm] ) gles2? ( >=media-libs/mesa-8.0.3[gles2] ) pango? ( x11-libs/pango ) systemd? ( sys-apps/systemd ) udev? ( virtual/udev ) pixman? ( x11-libs/pixman ) wayland? ( dev-libs/wayland ) dev-libs/libtsm x11-misc/xkeyboard-config
+REQUIRED_USE=gles2? ( drm ) multiseat? ( systemd )
+SLOT=0
+SRC_URI=http://www.freedesktop.org/software/kmscon/releases/kmscon-8.tar.xz
+_eclass_exported_funcs=src_prepare:- src_configure:- src_install:-
+_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	f20548a2f7b0128068388cd2ec26708a	flag-o-matic	85dc1eac3c64d8141374490ed64122e5	libtool	b75230758539a7da029e24afdb693960	multilib	3972ca401cf7dbb430df9995f5d8d580	systemd	6b4f0cefa642270eded7e6ca816fd181	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_md5_=7aa0d9446085a3ece62ba0f1a2705308

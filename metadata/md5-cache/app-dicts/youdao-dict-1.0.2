@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install
+DEPEND=>=dev-lang/python-3.0.0 dev-python/PyQt5 dev-python/requests dev-python/pillow dev-python/python3-xlib app-text/tesseract[linguas_zh_CN,linguas_zh_TW]
+DESCRIPTION=有道词典
+EAPI=5
+HOMEPAGE=http://cidian.youdao.com/index-linux.html
+KEYWORDS=~amd64 ~x86
+LICENSE=Youdao
+RDEPEND=>=dev-lang/python-3.0.0 dev-python/PyQt5 dev-python/requests dev-python/pillow dev-python/python3-xlib app-text/tesseract[linguas_zh_CN,linguas_zh_TW]
+RESTRICT=mirror
+SLOT=0
+SRC_URI=amd64? ( http://codown.youdao.com/cidian/linux/youdao-dict_1.0.2~binary_amd64.tar.gz ) x86? ( http://codown.youdao.com/cidian/linux/youdao-dict_1.0.2~binary_i386.tar.gz )
+_eclass_exported_funcs=src_compile:- src_install:-
+_md5_=7380cd008b51a350ff9a928cf07158a0
