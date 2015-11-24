@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst postrm setup unpack
+DEPEND=dev-db/sqlite:3 ibus? ( >=app-i18n/ibus-1.1 !app-i18n/ibus-sunpinyin ) nls? ( virtual/libintl ) xim? ( >=x11-libs/gtk+-2.12:2 x11-libs/libX11 ) app-i18n/sunpinyin virtual/pkgconfig dev-util/scons nls? ( sys-devel/gettext ) xim? ( x11-proto/xproto ) dev-vcs/git ibus? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) ) dev-util/scons
+DESCRIPTION=IME frontends for Sunpinyin
+EAPI=4
+HOMEPAGE=https://code.google.com/p/sunpinyin/
+IUSE=ibus xim nls
+LICENSE=LGPL-2.1 CDDL
+RDEPEND=dev-db/sqlite:3 ibus? ( >=app-i18n/ibus-1.1 !app-i18n/ibus-sunpinyin ) nls? ( virtual/libintl ) xim? ( >=x11-libs/gtk+-2.12:2 x11-libs/libX11 ) ibus? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) )
+SLOT=0
+_eclass_exported_funcs=pkg_postrm:- pkg_postinst:- pkg_setup:- src_unpack:git-2 src_configure:- src_compile:- src_install:-
+_eclasses_=confutils	18995f74ac4ffafb7ad853dfe133f209	eutils	f20548a2f7b0128068388cd2ec26708a	git-2	df00117322129fb906bb0a53c3d6a020	multilib	3972ca401cf7dbb430df9995f5d8d580	python	0c2c16ea4f9074d3248bd4365d03890c	scons-utils	b7d634f772db55c8af429f50aeec6ee0	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_md5_=fb753a6cf394e348cbe5112008c54a7d

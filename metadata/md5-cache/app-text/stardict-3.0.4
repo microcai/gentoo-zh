@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
+DEPEND=gnome? ( >=gnome-base/libbonobo-2.2.0 >=gnome-base/libgnome-2.2.0 >=gnome-base/libgnomeui-2.20 >=gnome-base/gconf-2.6 >=gnome-base/orbit-2.6 app-text/scrollkeeper app-text/gnome-doc-utils ) spell? ( app-text/enchant ) gucharmap? ( >=gnome-extra/gucharmap-2.22.1 ) gpe? ( >=gpe-base/libgpewidget-0.109 ) >=sys-libs/zlib-1.1.4 >=x11-libs/gtk+-2.12 >=dev-libs/glib-2.18 >=dev-util/intltool-0.22 virtual/pkgconfig dev-libs/libsigc++ app-arch/xz-utils >=sys-apps/sed-4 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=A GNOME2 international dictionary supporting fuzzy and glob style matching
+EAPI=4
+HOMEPAGE=http://code.google.com/p/stardict-3/
+IUSE=festival espeak gnome gucharmap spell gpe qqwry debug
+KEYWORDS=~sparc ~x86 ~amd64
+LICENSE=GPL-2
+RDEPEND=gnome? ( >=gnome-base/libbonobo-2.2.0 >=gnome-base/libgnome-2.2.0 >=gnome-base/libgnomeui-2.20 >=gnome-base/gconf-2.6 >=gnome-base/orbit-2.6 app-text/scrollkeeper app-text/gnome-doc-utils ) spell? ( app-text/enchant ) gucharmap? ( >=gnome-extra/gucharmap-2.22.1 ) gpe? ( >=gpe-base/libgpewidget-0.109 ) >=sys-libs/zlib-1.1.4 >=x11-libs/gtk+-2.12 >=dev-libs/glib-2.18 espeak? ( >=app-accessibility/espeak-1.29 ) festival? ( =app-accessibility/festival-1.96_beta )
+RESTRICT=test mirror
+SLOT=0
+SRC_URI=http://stardict-3.googlecode.com/files/stardict-3.0.4.tar.bz2
+_eclass_exported_funcs=pkg_preinst:gnome2 pkg_postrm:gnome2 pkg_postinst:- src_unpack:gnome2 src_prepare:- src_configure:- src_compile:gnome2 src_install:gnome2
+_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	f20548a2f7b0128068388cd2ec26708a	fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	gnome.org	ad34f378a3d57a6f2f2b8b4aaca4543e	gnome2	56d268cae832738430a9de86a5765fa1	gnome2-utils	588052cacdf74572e68bdfeaece20534	libtool	b75230758539a7da029e24afdb693960	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=2a83adb11e59c434bc333367c5555b25

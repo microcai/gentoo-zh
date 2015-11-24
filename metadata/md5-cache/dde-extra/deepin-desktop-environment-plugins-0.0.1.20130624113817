@@ -1,0 +1,10 @@
+DEFINED_PHASES=-
+DESCRIPTION=Plugins for Deepin Desktop Environment (meta package)
+EAPI=4
+HOMEPAGE=http://www.linuxdeepin.com
+KEYWORDS=~amd64 ~x86
+LICENSE=metapackage
+RDEPEND==dde-extra/dde-plugins-clock-0.0.1.20130624113817 =dde-extra/dde-plugins-weather-0.0.1.20130624113817 =dde-extra/dde-plugins-audio-helper-0.0.1.20130624113817
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=cecab968b8f270206d8c0bd91d829643

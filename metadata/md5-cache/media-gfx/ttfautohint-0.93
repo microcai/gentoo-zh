@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare unpack
+DEPEND=>=media-libs/freetype-2.4.10 qt? ( >=dev-qt/qtgui-4.8 )
+DESCRIPTION=automated hinting process for web fonts
+EAPI=4
+HOMEPAGE=http://www.freetype.org/ttfautohint/
+IUSE=+qt
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=>=media-libs/freetype-2.4.10 qt? ( >=dev-qt/qtgui-4.8 )
+SLOT=0
+SRC_URI=mirror://sourceforge/freetype/ttfautohint-0.93.tar.gz
+_eclass_exported_funcs=src_unpack:qt4-r2 src_prepare:- src_configure:- src_compile:qt4-r2 src_install:qt4-r2
+_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	f20548a2f7b0128068388cd2ec26708a	multilib	3972ca401cf7dbb430df9995f5d8d580	qmake-utils	bd69cb386c63df4642cf1392b50c8d81	qt4-r2	cb2cb5856695b300266b425da70e82d8	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_md5_=cbb8264d4ab325ecb18a90d60213deaa

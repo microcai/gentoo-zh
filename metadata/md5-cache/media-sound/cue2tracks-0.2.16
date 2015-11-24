@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst
+DESCRIPTION=Bash script for split audio CD image files with cue sheet to tracks and write tags.
+EAPI=0
+HOMEPAGE=http://code.google.com/p/cue2tracks/
+IUSE=flake mac tta shorten wavpack mp3 m4a vorbis
+KEYWORDS=~x86 ~amd64
+LICENSE=GPL-2
+RDEPEND=>=media-sound/shntool-3.0.0 app-shells/bash media-libs/flac app-cdr/cuetools flake? ( media-sound/flake ) mac? ( media-sound/mac media-sound/apetag ) tta? ( media-sound/ttaenc ) shorten? ( media-sound/shorten ) wavpack? ( media-sound/wavpack media-sound/apetag ) mp3? ( media-sound/lame media-sound/id3v2 ) vorbis? ( media-sound/vorbis-tools ) m4a? ( media-video/mpeg4ip media-libs/faac media-libs/faad2 )
+SLOT=0
+SRC_URI=http://cue2tracks.googlecode.com/files/cue2tracks-0.2.16.tar.gz
+_eclass_exported_funcs=pkg_postinst:- src_install:-
+_eclasses_=eutils	f20548a2f7b0128068388cd2ec26708a	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_md5_=c76eec5e37a2e7a33cf9853e96a78036

@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare unpack
+DEPEND=x11-misc/xclip dev-python/pywebkitgtk dev-python/python-xlib dev-python/lxml dev-python/beautifulsoup dev-vcs/git
+DESCRIPTION=openyoudao is a youdao client for linux.
+EAPI=4
+HOMEPAGE=http://openyoudao.org
+KEYWORDS=~x86 ~amd64
+LICENSE=GPL-3
+RDEPEND=x11-misc/xclip dev-python/pywebkitgtk dev-python/python-xlib dev-python/lxml dev-python/beautifulsoup
+SLOT=0
+_eclass_exported_funcs=src_unpack:git-2 src_prepare:- src_install:-
+_eclasses_=git-2	df00117322129fb906bb0a53c3d6a020
+_md5_=3a6f7e4e40e03de9196f4518f546a98d

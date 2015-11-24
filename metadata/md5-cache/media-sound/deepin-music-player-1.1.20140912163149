@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst postrm prepare
+DEPEND=>=x11-libs/deepin-ui-1.201209101328 dev-python/gst-python media-libs/gst-plugins-bad media-libs/gst-plugins-ugly sci-libs/scipy media-plugins/gst-plugins-ffmpeg dev-python/python-xlib media-libs/mutagen dev-python/chardet dev-python/cddb-py dev-python/dbus-python dev-python/pycurl dev-python/pyquery dev-libs/keybinder:0[python] hotkey? ( media-plugins/python-mmkeys ) >=sys-apps/sed-4
+DESCRIPTION=Deepin Music Player.
+EAPI=4
+HOMEPAGE=https://github.com/linuxdeepin/deepin-music-player
+IUSE=+hotkey
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-3
+RDEPEND=>=x11-libs/deepin-ui-1.201209101328 dev-python/gst-python media-libs/gst-plugins-bad media-libs/gst-plugins-ugly sci-libs/scipy media-plugins/gst-plugins-ffmpeg dev-python/python-xlib media-libs/mutagen dev-python/chardet dev-python/cddb-py dev-python/dbus-python dev-python/pycurl dev-python/pyquery dev-libs/keybinder:0[python] hotkey? ( media-plugins/python-mmkeys )
+SLOT=0
+SRC_URI=http://packages.linuxdeepin.com/deepin/pool/main/d/deepin-music-player/deepin-music-player_1.1+20140912163149~eb0790460a.tar.gz
+_eclass_exported_funcs=pkg_postrm:- pkg_postinst:- src_prepare:- src_install:-
+_eclasses_=eutils	f20548a2f7b0128068388cd2ec26708a	fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	gnome2-utils	588052cacdf74572e68bdfeaece20534	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=92aeba372cbf59324bb2959c6528e9c4

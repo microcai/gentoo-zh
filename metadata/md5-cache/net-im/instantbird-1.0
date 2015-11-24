@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst setup
+DEPEND=system-libpurple? ( net-im/pidgin[gtk] ) >=net-libs/xulrunner-2.0 virtual/pkgconfig >=sys-apps/sed-4 x11-libs/libXrender x11-libs/libXt >=sys-libs/zlib-1.1.4 virtual/pkgconfig || ( >=dev-lang/python-2.7.5-r2:2.7[threads,sqlite] ) app-arch/zip app-arch/unzip >=app-text/hunspell-1.2 dev-libs/expat >=dev-libs/libevent-1.4.7 >=x11-libs/cairo-1.8[X] >=x11-libs/gtk+-2.8.6:2 >=x11-libs/pango-1.10.1[X] virtual/jpeg:0 alsa? ( media-libs/alsa-lib ) virtual/freedesktop-icon-theme dbus? ( >=dev-libs/dbus-glib-0.72 ) libnotify? ( >=x11-libs/libnotify-0.4 ) startup-notification? ( >=x11-libs/startup-notification-0.8 ) wifi? ( net-wireless/wireless-tools )
+EAPI=3
+HOMEPAGE=http://www.instantbird.com/
+IUSE=+system-libpurple system-sqlite custom-cflags custom-optimization +alsa +dbus debug libnotify startup-notification system-sqlite wifi
+KEYWORDS=~amd64 ~86
+RDEPEND=system-libpurple? ( net-im/pidgin[gtk] ) >=net-libs/xulrunner-2.0 x11-libs/libXrender x11-libs/libXt >=sys-libs/zlib-1.1.4 app-arch/zip app-arch/unzip >=app-text/hunspell-1.2 dev-libs/expat >=dev-libs/libevent-1.4.7 >=x11-libs/cairo-1.8[X] >=x11-libs/gtk+-2.8.6:2 >=x11-libs/pango-1.10.1[X] virtual/jpeg:0 alsa? ( media-libs/alsa-lib ) virtual/freedesktop-icon-theme dbus? ( >=dev-libs/dbus-glib-0.72 ) libnotify? ( >=x11-libs/libnotify-0.4 ) startup-notification? ( >=x11-libs/startup-notification-0.8 ) wifi? ( net-wireless/wireless-tools )
+SLOT=0
+SRC_URI=http://www.instantbird.com/downloads/1.0/instantbird-1.0.src.tgz
+_eclass_exported_funcs=pkg_preinst:- pkg_postrm:- pkg_postinst:- pkg_setup:python-any-r1 src_configure:- src_compile:- src_install:-
+_eclasses_=eutils	f20548a2f7b0128068388cd2ec26708a	flag-o-matic	85dc1eac3c64d8141374490ed64122e5	gnome2-utils	588052cacdf74572e68bdfeaece20534	mozconfig-3	2755deeae171d57a61d30ab1943a4107	mozcoreconf-2	037f21de62e7b97b90823a7144cbf691	multilib	3972ca401cf7dbb430df9995f5d8d580	python-any-r1	60a62ae0ee8cd93b4ba99a4c1371eb8b	python-utils-r1	7d52f592fc09a002ea150d69507b5bad	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=8eab9b9ac6739defda12824f64f1036f

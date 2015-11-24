@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install
+DEPEND=media-sound/audacious media-sound/mac
+DESCRIPTION=Monkey's Audio Codec plugin for audacious
+EAPI=0
+HOMEPAGE=http://www.netswarm.net/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=media-sound/audacious
+RESTRICT=primaryuri
+SLOT=0
+SRC_URI=http://www.netswarm.net/misc/audacious-mac-0.2.0.tar.gz
+_eclass_exported_funcs=src_compile:- src_install:-
+_md5_=bba2438fa9463eb364ab99558c2562ee

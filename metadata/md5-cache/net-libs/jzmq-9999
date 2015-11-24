@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DEPEND=net-libs/zeromq
+DESCRIPTION=jzmq
+EAPI=0
+HOMEPAGE=http://www.zeromq.org/bindings:java
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=LGPL-3
+SLOT=0
+_eclass_exported_funcs=src_prepare:- src_configure:- src_install:-
+_md5_=464e7ac404341f762c816a3c18380ec1

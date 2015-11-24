@@ -1,0 +1,13 @@
+DEFINED_PHASES=install
+DESCRIPTION=Chinese fortune shell script
+EAPI=0
+HOMEPAGE=http://code.google.com/p/chinese-fortune
+IUSE=gnome
+KEYWORDS=alpha amd64 hppa ia64 mips ppc ppc64 sparc x86
+LICENSE=GPL-2
+RDEPEND=games-misc/fortune-mod app-i18n/zh-autoconvert gnome? ( >=gnome-extra/zenity-2.10.1 )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=http://chinese-fortune.googlecode.com/files/fortune-mod-zh-1.2.2.tar.bz2
+_eclass_exported_funcs=src_install:-
+_md5_=91bc14820d89bb5548a5e1ad9ea93902

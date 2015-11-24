@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install preinst prepare unpack
+DEPEND=dev-libs/openssl || ( >=net-misc/curl-7.19.7[openssl] net-misc/curl[ssl] ) dev-qt/qtxmlpatterns dev-qt/qtgui dev-qt/qtcore || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
+DESCRIPTION=Linux Fetion, a QT4 IM client using CHINA MOBILE's Fetion Protocol
+EAPI=2
+HOMEPAGE=http://www.libfetion.cn/
+IUSE=doc
+LICENSE=as-is
+RDEPEND=dev-libs/openssl || ( >=net-misc/curl-7.19.7[openssl] net-misc/curl[ssl] ) dev-qt/qtxmlpatterns dev-qt/qtgui dev-qt/qtcore
+SLOT=0
+_eclass_exported_funcs=pkg_preinst:subversion src_unpack:subversion src_prepare:- src_configure:qt4-r2 src_compile:- src_install:-
+_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	f20548a2f7b0128068388cd2ec26708a	flag-o-matic	85dc1eac3c64d8141374490ed64122e5	multilib	3972ca401cf7dbb430df9995f5d8d580	qmake-utils	bd69cb386c63df4642cf1392b50c8d81	qt4-r2	cb2cb5856695b300266b425da70e82d8	subversion	4fee0a764150bb4dda27ed4d2c4ed7ce	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_md5_=59b6ca4e61b2c00a7d5746393c181600
