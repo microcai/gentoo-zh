@@ -3,7 +3,7 @@
 
 EAPI=5
 PYTHON_COMPAT=( python{3_3,3_4} )
-# SUPPORT_PYTHON_ABIS="1"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
@@ -17,12 +17,12 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-# RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.*"
 
-# PYTHON_MODNAME="Xlib"
+PYTHON_MODNAME="Xlib"
 
 src_compile() {
-	distutils-r1_src_compile
+	distutils_src_compile
 }
 
 src_test() {
@@ -39,5 +39,5 @@ src_test() {
 }
 
 src_install () {
-	distutils-r1_src_install
+	distutils_src_install
 }
