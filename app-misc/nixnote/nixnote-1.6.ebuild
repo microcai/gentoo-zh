@@ -7,7 +7,7 @@ EAPI=2
 inherit eutils
 
 DESCRIPTION="An open source Evernote clone"
-HOMEPAGE="http://nevernote.sourceforge.net/index.htm"
+HOMEPAGE="http://sourceforge.net/projects/nevernote/"
 SRC_URI="x86?    ( mirror://sourceforge/nevernote/${P}_i386.tar.gz )
 		 amd64?  ( mirror://sourceforge/nevernote/${P}_amd64.tar.gz )"
 
