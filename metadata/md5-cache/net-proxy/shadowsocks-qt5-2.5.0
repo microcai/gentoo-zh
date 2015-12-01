@@ -11,5 +11,5 @@ RESTRICT=mirror
 SLOT=5
 SRC_URI=https://github.com/librehat/shadowsocks-qt5/archive/v2.5.0.tar.gz -> shadowsocks-qt5-2.5.0.tar.gz
 _eclass_exported_funcs=pkg_postrm:- pkg_postinst:- src_unpack:qt5-build src_prepare:qt5-build src_configure:qt5-build src_compile:qt5-build src_test:qt5-build src_install:qt5-build
-_eclasses_=eutils	f20548a2f7b0128068388cd2ec26708a	flag-o-matic	85dc1eac3c64d8141374490ed64122e5	gnome2-utils	968e31c6fcd13eb2eaf6852e88dfdd36	multilib	3972ca401cf7dbb430df9995f5d8d580	qt5-build	c1b04235b7f45baca7573b58c44cd655	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85	virtualx	31995099f3454bb5fc3e8b5cdd3af7a8	xdg-utils	e2b2bd56125ce8cf59ce30c642b59d48
+_eclasses_=eutils	d9bd2ddd85a58e470b49ca997e255a4c	flag-o-matic	85dc1eac3c64d8141374490ed64122e5	gnome2-utils	968e31c6fcd13eb2eaf6852e88dfdd36	multilib	3972ca401cf7dbb430df9995f5d8d580	qt5-build	c1b04235b7f45baca7573b58c44cd655	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85	virtualx	31995099f3454bb5fc3e8b5cdd3af7a8	xdg-utils	e2b2bd56125ce8cf59ce30c642b59d48
 _md5_=2dda5c5ec30f0637f93a71e93bd004a3
