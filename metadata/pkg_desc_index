@@ -74,7 +74,7 @@ app-i18n/librime 1.1-r1 9999: Rime Input Method Engine library
 app-i18n/libucimf 2.2.8-r1 2.2.9.1 2.3.1 2.3.5 2.3.7 2.3.8 9999: Unicode Console InputMethod Framework
 app-i18n/lunar 2.2-r4: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
-app-i18n/mozc 1.5.1090.102 1.6.1187.102: The Mozc engine for IBus Framework
+app-i18n/mozc 1.5.1090.102 1.6.1187.102 1.13.1651.102: The Mozc engine for IBus Framework
 app-i18n/openvanilla-modules 0.8.0.13 0.8.0.14 0.9.0_alpha1 0.9.0_alpha2 0.9.0_alpha3 0.9.0_alpha4 0.9.1: Input methods modules and tables for OpenVanilla Input Method Framework
 app-i18n/oxim 1.4.1 1.4.4: Chinese Open X Input Method Developed by Firefly
 app-i18n/oxim-setup 1.2.2 1.4.0 1.4.1 1.4.4: OXIM setup tool
@@ -265,6 +265,7 @@ media-fonts/sinicafonts 20030521: Chinese and Siddam fonts provided by SINICA, T
 media-fonts/wangfonts 1.3.0: Free Chinese TrueType fonts donated by Prof. Hann-Tzong Wang
 media-gfx/deepin-screenshot 2.0.20130618155753 9999: Snapshot tools for linux deepin.
 media-gfx/ffcast 2.4.1: FFcast has almost nothing to do with FFmpeg or screencast ;)
+media-gfx/fontforge 20150330: postscript font editor and converter
 media-gfx/sane-backends 9999: Scanner Access Now Easy - Backends
 media-gfx/scangearmp 1.60: Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
 media-gfx/synfig 0.63.05: Film-Quality Vector Animation (core engine)
