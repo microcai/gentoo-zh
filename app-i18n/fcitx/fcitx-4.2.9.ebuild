@@ -65,6 +65,7 @@ DEPEND="${RDEPEND}
 	introspection? ( dev-libs/gobject-introspection )
 	virtual/libintl
 	virtual/pkgconfig
+	kde-frameworks/extra-cmake-modules
 	nls? ( sys-devel/gettext )"
 DOCS=( AUTHORS ChangeLog README THANKS TODO
 	doc/pinyin.txt doc/cjkvinput.txt doc/API.txt doc/Develop_Readme )
