@@ -353,7 +353,7 @@ net-misc/logjam 4.5.3: GTK2-based LiveJournal client
 net-misc/networkmanager-l2tp 9999: NetworkManager L2TP plugin
 net-misc/omnitty 0.3.0: ncurses-based ssh multiplexer for cluster administration
 net-misc/pcmanx-gtk2 1.1 1.2: PCMan is an easy-to-use telnet client mainly targets BBS users formerly writen by gtk2
-net-misc/teamviewer 9.0.32150 10.0.41499-r1 10.0.46203: All-In-One Solution for Remote Access and Support over the Internet
+net-misc/teamviewer 9.0.32150 10.0.41499-r1 10.0.46203 11.0.53191: All-In-One Solution for Remote Access and Support over the Internet
 net-misc/tiebasprit 0.3.1: 百度贴吧守护精灵 - 百度贴吧广告删贴机器人
 net-misc/xmuruijie 1.4.3: Red Gaint (RuiJie) EAP-MD5 authentication client in Linux
 net-misc/xunlei-lixian 9999: Download scripts for xunlei vip users
