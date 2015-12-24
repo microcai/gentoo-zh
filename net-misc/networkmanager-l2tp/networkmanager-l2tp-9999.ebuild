@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="3"
+EAPI="5"
 
 inherit eutils gnome.org git-2 autotools
 
@@ -22,15 +22,14 @@ KEYWORDS="~amd64 ~x86"
 IUSE="gnome"
 
 RDEPEND="
-	>=net-misc/networkmanager-0.8.1
-	>=dev-libs/dbus-glib-0.74
+	>=net-misc/networkmanager-1.0[ppp]
+	dev-libs/dbus-glib
 	net-dialup/ppp
 	net-dialup/xl2tpd
+	>=dev-libs/glib-2.32
 	gnome? (
-		>=x11-libs/gtk+-2.6:2
-		gnome-base/gconf:2
-		gnome-base/gnome-keyring
-		gnome-base/libglade:2.0
+		>=x11-libs/gtk+-3.4:4
+		gnome-base/libgnome-keyring
 	)"
 
 DEPEND="${RDEPEND}
@@ -47,7 +46,7 @@ src_prepare() {
 }
 
 src_configure() {
-	ECONF="--with-pppd-plugin-dir=/usr/lib/pppd/2.4.5
+	ECONF="--with-pppd-plugin-dir=/usr/lib/pppd/2.4.7
 		$(use_with gnome)"
 
 	econf ${ECONF}
