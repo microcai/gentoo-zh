@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Categories=Network;
+Exec=/usr/lib/lantern/lantern-binary %f
+Icon=lantern
+Hidden=false
+NoDisplay=false
+Name=Lantern
+Comment=lantern Launcher
