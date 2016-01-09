@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+sys-libs/ncurses"
 
 src_prepare() {
 	# remove the CFLAGS and LDFLAGS defination in Makefile, use default option in make.conf as the binary will be stripped automatically
