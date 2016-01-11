@@ -18,6 +18,7 @@ IUSE=""
 RDEPEND=">dev-libs/botan-1.10[threads]
 	dev-qt/qtconcurrent
 	dev-qt/qtcore:5
-	dev-qt/qtnetwork"
+	dev-qt/qtnetwork
+	dev-qt/qttest:5"
 
 S="${WORKDIR}/${P}"
