@@ -54,9 +54,9 @@ src_install() {
 	fperms 0755 /usr/lib/lantern/lantern-binary
 
 	insinto /usr/share/applications
-	doins "${FILESDIR}/lantern.desktop"
+	doins "${FILESDIR}/lantern-bin.desktop"
 
-	use systemd && systemd_dounit "${FILESDIR}/lantern.service"
+	use systemd && systemd_dounit "${FILESDIR}/lantern-bin.service"
 }
 
 pkg_postinst() {
