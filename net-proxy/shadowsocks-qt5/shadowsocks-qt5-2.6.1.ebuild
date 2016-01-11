@@ -16,7 +16,7 @@ LICENSE="GPL-3"
 IUSE=""
 
 RDEPEND="dev-libs/libappindicator:2
-	>=net-proxy/libQtShadowsocks-1.7.0
+	>=net-proxy/libQtShadowsocks-1.8.0
 	media-gfx/zbar
 	media-gfx/qrencode"
 DEPEND="${RDEPEND}
