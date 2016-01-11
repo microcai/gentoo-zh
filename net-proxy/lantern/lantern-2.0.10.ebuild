@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit gnome2-utils unpacker
+inherit gnome2-utils unpacker systemd
 
 DESCRIPTION="A free desktop application that delivers fast, reliable and secure access to the open Internet for users in censored regions."
 HOMEPAGE="https://github.com/getlantern/lantern"
@@ -16,7 +16,7 @@ SLOT="0"
 RESTRICT="mirror"
 LICENSE="Apache-2.0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="systemd"
 
 DEPEND="
 	app-arch/bzip2
@@ -29,7 +29,7 @@ DEPEND="
 	media-libs/libepoxy
 	media-libs/mesa
 	sys-apps/dbus
-	sys-apps/systemd
+	systemd? ( sys-apps/systemd )
 	sys-libs/glibc:2.2
 	sys-libs/libcap
 	sys-libs/zlib
@@ -46,12 +46,17 @@ src_prepare() {
 }
 
 src_install() {
+	# remove /usr/bin/lantern
+	rm ${S}/usr/bin/lantern
+
 	insinto /
 	doins -r "${S}/usr"
 	fperms 0755 /usr/lib/lantern/lantern-binary
 
 	insinto /usr/share/applications
 	doins "${FILESDIR}/lantern.desktop"
+
+	use systemd && systemd_dounit "${FILESDIR}/lantern.service"
 }
 
 pkg_postinst() {
