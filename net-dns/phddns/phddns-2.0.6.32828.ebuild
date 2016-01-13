@@ -8,7 +8,7 @@ inherit eutils
 MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
 
-DESCRIPTION="Audacious Player - Your music, your way, no exceptions"
+DESCRIPTION="Phddns"
 HOMEPAGE="http://hsk.oray.com/"
 SRC_URI="http://developer.oray.com/download/Peanuthull%20dynamic%20DNS%20SDK.rar -> ${P}.rar"
 
