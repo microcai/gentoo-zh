@@ -317,6 +317,7 @@ net-dialup/mentohust 9999: A Ruijie and Cernet supplicant on Linux and MacOS
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
 net-dns/dnscrypt-proxy 9999: A tool for securing communications between a client and a DNS resolver
 net-dns/dnsmasq 2.63: Small forwarding DNS server
+net-dns/phddns 2.0.6.32828: Phddns
 net-firewall/west-chamber 0.0.1-r4: xtables addons that may crash GFW, named after the Romance_of_the_West_Chamber
 net-im/aliwangwang 1.00-r1: AliWangWang for Linux
 net-im/avim 0.1: avim is a secure IM build around RSA
