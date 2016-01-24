@@ -109,22 +109,8 @@ src_cross_configure(){
 
 	cmake-utils_src_configure
 
-
-	sed -i "s|/usr/lib64/qt4|/usr/lib32/qt4|g" \
-		`grep -rl /usr/lib64/qt4 ./src` || die
-	sed -i "s|lib64|lib32|g" \
-		src/frontend/gtk2/cmake_install.cmake \
-		src/frontend/gtk3/cmake_install.cmake \
-		|| die
-	sed -i 's|/usr/local/lib|/usr/lib32|g' \
-		src/lib/fcitx-utils/cmake_install.cmake  \
-		src/lib/fcitx-config/cmake_install.cmake \
-		src/lib/fcitx-gclient/cmake_install.cmake \
-		src/lib/fcitx-gclient/cmake_install.cmake \
-		src/lib/fcitx-qt/cmake_install.cmake \
-		src/frontend/gtk2/cmake_install.cmake \
-		src/frontend/gtk3/cmake_install.cmake \
-		|| die
+	sed -i "s|/usr/lib/lib|/usr/lib32/lib|g" \
+		`grep -rl /usr/lib/lib .` || die
 }
 
 src_native_configure(){
