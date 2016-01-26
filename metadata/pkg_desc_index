@@ -8,7 +8,6 @@ app-arch/live-build 9999: Debian Live - System Build Scripts
 app-arch/p7zip-nsis 0.4-r1: A binary version of p7zip to decompress nsis. Lastest version of p7zip doesn't decompress some nsis.
 app-arch/unzip 6.10_beta: unzipper for pkzip-compressed files
 app-book/git-magic 9999: A guild to Git
-app-crypt/etoken-sac 8.1.0.4: SafeNet (Aladdin) eToken Middleware for eTokenPRO, eTokenNG OTP, eTokenNG Flash, eToken Pro (Java)
 app-dicts/dictd-zh 1.6: Four traditional Chinese dictionaries for dict
 app-dicts/gnetdict 0.2.5.1: GTK+ interface for free online dict
 app-dicts/qstardict 1.0: QStarDict is a StarDict clone written with using Qt
@@ -30,7 +29,6 @@ app-dicts/stardict-quick-eng-eng 2.4.2: Stardict Dictionary English to French
 app-dicts/stardict-soothill-buddhist-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
 app-dicts/stardict-wyabdcrealpeopletts 1.0: 
 app-dicts/youdao-dict 1.0.2: 有道词典
-app-doc/doxygen 1.7.1: documentation system for C++, C, Java, Objective-C, Python, IDL, and other languages
 app-editors/sublime-text 3_beta3083: Sublime Text is a sophisticated text editor for code, html and prose
 app-editors/texworks 9999-r3: An environment for authoring TeX (LaTeX, ConTeXt, etc) documentsfor casual and non-technical users.
 app-editors/uex 2.1.0.5: Ultra Editor for Linux
@@ -91,7 +89,6 @@ app-i18n/ucimf-chewing 0.3: The Chewing IMF module for UCIMF
 app-i18n/ucimf-openvanilla 2.10.4 2.10.5 2.10.6 2.10.7 2.10.9 2.10.10 2.10.11 9999: The OpenVanilla IMF module for UCIMF
 app-i18n/ucimf-sunpinyin 0.4 0.5: The SunPinyin IMF module for UCIMF
 app-i18n/zh-autoconvert 0.3.16-r3: Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
-app-laptop/asus-keyboard-backlight 0.1: Configure the brightness of the keyboard's backlight on ASUS laptops.
 app-misc/freefilesync 5.6: Visual folder comparison and synchronization
 app-misc/geeknote 9999: Console client for Evernote
 app-misc/gpick 0.2.4: Advanced color picker written in C++ using GTK+ toolkit
@@ -196,7 +193,6 @@ dev-libs/libtsm 3: TSM is a state machine for DEC VT100-VT520 compatible termina
 dev-libs/libunity 7.1.4: Library for instrumenting and integrating with all aspects of the Unity shell
 dev-libs/lunar-date 2.4.0: Chinese Lunar Library
 dev-libs/thrift 0.9.1: Lightweight, language-independent software stack with associated code generation mechanism for RPC
-dev-lisp/buildapp 1.4.6: Create executables with SBCL
 dev-php/pecl-solr 2.1.0 2.3.0: Solr client
 dev-php/phc 0.3.0.1: The open source php compiler
 dev-php/phpsh 0.0.1: An interactive shell for php
@@ -222,8 +218,6 @@ dev-python/quamash 0.5.2: Implementation of the PEP 3156 Event-Loop with Qt.
 dev-python/rpweibo 0.02.2 9999: A Weibo API wrapper based on cURL + Python.
 dev-python/sinaweibopy3 1.1.3 9999: A SDK for Sina Weibo, WeCase's fork.
 dev-python/xappy 0.5: An easy-to-use interface to the Xapian search engine
-dev-qt/qtquickcontrols 9999: Qt Quick Controls (Former Qt Desktop Components)
-dev-ruby/mruby 1.0.0 9999: mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
 dev-util/be 9999: Bugs Everywere distributed bug tracker
 dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 files
 dev-util/c 0.06: Compile and execute C "scripts" in one go!
@@ -242,12 +236,9 @@ dev-util/webstorm 10.0.2: WebStorm is a lightweight yet powerful IDE, perfectly 
 dev-util/wxformbuilder 3.0.57 3.1.70: The OpenSource wxWidgets Designer, GUI Builder, and RAD Tool.
 dev-util/yabasic 2.9.15: Yet Another BASIC
 dev-util/zeal 0.1.1: Simple offline API documentation browser
-games-arcade/stepmania 5.9999: Stepmania 5 sm-ssc branch
 games-board/othello 0.2.0 0.2.1: Othello is a classic strategy game, also known as Reversi
 games-misc/fortune-mod-zh 1.2.2: Chinese fortune shell script
 games-misc/llk_linux 2.3_beta1-r1: llk for linux
-games-puzzle/limbo 0: Limbo
-games-strategy/total-annihilation 3.1: Total Annihilation
 gnome-base/gnome-settings-daemon 3.8.99.20130617144914: LinuxDeepin fork of Gnome Settings Daemon
 gnome-base/nautilus 3.8.51: LinuxDeepin fork of Nautilus for Deepin Desktop Environment
 gnome-extra/docky 9999: Docky is a full fledged dock application that makes opening common applications and managing windows easier and quicker.
@@ -314,10 +305,6 @@ media-video/lightworks 11.5 11.5.1: Lightworks is the fastest, most accessible a
 media-video/simplescreenrecorder 0.3.3-r1 9999: A Simple Screen Recorder
 media-video/umplayer 0.95: UMPlayer is cross-platform and installer packages are available for the Windows, Mac and GNU / Linux operating systems. It is completely free to use and distribute so feel free to share UMPlayer with all your friends.
 net-dialup/mentohust 9999: A Ruijie and Cernet supplicant on Linux and MacOS
-net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
-net-dns/dnscrypt-proxy 9999: A tool for securing communications between a client and a DNS resolver
-net-dns/dnsmasq 2.63: Small forwarding DNS server
-net-dns/phddns 2.0.6.32828: Phddns
 net-firewall/west-chamber 0.0.1-r4: xtables addons that may crash GFW, named after the Romance_of_the_West_Chamber
 net-im/aliwangwang 1.00-r1: AliWangWang for Linux
 net-im/avim 0.1: avim is a secure IM build around RSA
@@ -336,7 +323,6 @@ net-im/qipmsg 1.0.0: An open-source Qt4 implementation of IP Messenger for linux
 net-im/qtqq 0.8.2: Tencent QQ written in Qt
 net-im/telegram-desktop 0.8.50: Desktop client of Telegram, the messaging app.
 net-im/wineqq 20140102: Tencent QQ for Linux by longine
-net-libs/jzmq 9999: jzmq
 net-misc/TelegramQML 0.9.1: Telegram API tools for QtQML and Qml
 net-misc/WeCase 0.06_beta8 9999: A Sina Weibo Client Focusing on Linux.
 net-misc/avbot 9999: avbot connects QQ/XMPP/IRC/POP3/SMTP
@@ -379,11 +365,6 @@ net-proxy/shadowsocks-qt5 2.6.1: A cross-platform GUI shadowsocks client
 net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
 net-proxy/squid 3.3.9: A full-featured web proxy cache
 net-proxy/wallproxy-plus 2.1.18-r1 2.1.19 9999: New version of wallproxy, a general purpose proxy framework in Python.
-sci-calculators/tilp2 9999: Communication program for Texas Instruments calculators
-sci-libs/libticables2 9999: Library to handle different link cables for TI calculators
-sci-libs/libticalcs2 9999: Library for communication with TI calculators
-sci-libs/libticonv 9999: Charset conversion library for TI calculators
-sci-libs/libtifiles2 9999: Library for TI calculator files
 sci-misc/boinc 7.2.42: The Berkeley Open Infrastructure for Network Computing
 sys-apps/afulnx 5.05.04: AMI AFULNX Flasher - Linux based AMI BIOS Firmware Update flasher
 sys-apps/e4rat 0.2.1: Toolset to accelerate the boot process and application startup
@@ -399,14 +380,10 @@ sys-apps/uksmstat 9999: Small tool to show UKSM statistics.
 sys-apps/yaourt 1.2.2: A pacman wrapper with extended features and AUR support
 sys-block/imagewriter 9999: Utility for writing raw disk images & hybrid isos to USB keys
 sys-block/ioping 9999: simple disk I/0 latency measuring tool
-sys-boot/grub-efi 0.97-r84: GNU GRUB Legacy boot loader
-sys-boot/gummiboot 48: Simple UEFI Boot Manager
-sys-cluster/apache-zookeeper 3.3.6: ZooKeeper is a high-performance coordination service for distributed applications.
 sys-devel/crash 5.0.5: Tool to investigate kernel core dumps
 sys-devel/gdb 7.1: GNU debugger
 sys-devel/libabigail 9999: The ABI Generic Analysis and Instrumentation Library
 sys-devel/ucc 1.1: UCC is an ANSI C Compiler
-sys-firmware/intel-ucode 20130906: Intel IA32 microcode update data
 sys-fs/exfat-nofuse 9999: A kernel module that enables you to call ACPI methods
 sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
@@ -415,12 +392,6 @@ sys-fs/zfs-auto-snapshot 9999 9999-r1: Automatic snapshots for ZFS on Linux
 sys-kernel/dkms 2.2.0.3: Dynamic Kernel Module Support
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libixp 9999: Standalone client/server 9P library
-sys-process/nocache 0.9: nocache - minimize filesystem caching effects
-sys-process/toolsched 0.17: Simple scripts for automatically starting commands
-virtual/linux-sources 1: Virtual for Linux kernel sources
-virtual/openvg 1.1: OpenVG is an API designed for hardware-accelerated 2D vector graphics.
-www-apps/weevely3 9999: Weaponized web shell
-www-client/maxthon 1.0.5.3: Maxthon for Linux
 www-plugins/115upload 1.5.7.0: 115.com big file upload control
 www-plugins/aliedit 1.0.3.20: 支付宝安全控件对密码输入进行保护
 www-plugins/freshplayerplugin 0.2.3: PPAPI-host NPAPI-plugin adapter
@@ -429,7 +400,6 @@ www-plugins/upeditor 1.0.0.6: unionpay security control plugin
 www-servers/bashttpd 0.1-r1: Simple HTTP Daemon Written in BASH
 www-servers/darkhttpd 1.8: A small, static webserver
 www-servers/tengine 2.0.3: Robust, small and high performance http and reverse proxy server
-x11-drivers/xf86-input-libinput 0.9.0 0.11.0: X.org input driver based on libinput
 x11-libs/deepin-ui 1.1.20140912173234: UI toolkit for Linux Deepin.
 x11-libs/libvdpau-va-gl 9999: VDPAU driver with VA-API/OpenGL backend.
 x11-libs/lunar-calendar 0.3.1 2.4.1 3.0.0: Chinese Lunar Library Gtk+ widget
@@ -463,4 +433,3 @@ x11-wm/compiz 0.9.99.20130608170409: OpenGL compositing window manager.
 x11-wm/wmii 9999: A dynamic window manager for X11
 x11-wm/xmonad 9999: A tiling window manager
 x11-wm/xmonad-contrib 9999: Third party extensions for xmonad
-xfce-extra/thunar-dropbox 0.2.0: Plugin for thunar that adds context-menu items for dropbox.
