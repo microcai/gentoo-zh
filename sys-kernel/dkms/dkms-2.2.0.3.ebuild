@@ -2,7 +2,7 @@
 
 EAPI="4"
 
-inherit eutils bash-completion
+inherit eutils bash-completion-r1
 
 DESCRIPTION="Dynamic Kernel Module Support"
 SRC_URI="http://linux.dell.com/dkms/permalink/${P}.tar.gz"
