@@ -9,5 +9,5 @@ RDEPEND=>=x11-libs/deepin-ui-1.201209101328 dev-python/deepin-gsettings sci-libs
 SLOT=0
 SRC_URI=http://packages.linuxdeepin.com/deepin/pool/main/d/deepin-media-player/deepin-media-player_1+git20130625110339~07834f54d2.tar.gz
 _eclass_exported_funcs=pkg_postrm:- pkg_postinst:- src_prepare:- src_install:-
-_eclasses_=eutils	8982475656ba7ade9b3201397efbd612	fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_eclasses_=eutils	28fb3e5852485af1c348d446b0b98389	fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
 _md5_=e21bafb7cc052e56ec09880011c2607c
