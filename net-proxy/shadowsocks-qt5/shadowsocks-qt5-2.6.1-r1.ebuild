@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit qt5-build gnome2-utils
+inherit qmake-utils gnome2-utils
 
 DESCRIPTION="A cross-platform GUI shadowsocks client"
 KEYWORDS="~amd64 ~x86"
@@ -12,6 +12,7 @@ SRC_URI="https://github.com/librehat/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 RESTRICT="mirror"
 
 LICENSE="GPL-3"
+SLOT="0"
 
 IUSE=""
 
@@ -26,12 +27,14 @@ DEPEND="${RDEPEND}
 	dev-qt/qtdbus:5
 	dev-qt/qtnetwork"
 
-S="${WORKDIR}/${P}"
-
 pkg_postinst() {
 	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
 	gnome2_icon_cache_update
+}
+
+src_compile() {
+	eqmake5 INSTALL_PREFIX="${D}"/usr
 }

@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit qt5-build
+inherit qmake-utils
 
 DESCRIPTION="A lightweight and ultra-fast shadowsocks library written in C++/Qt"
 KEYWORDS="~amd64 ~x86"
@@ -12,6 +12,7 @@ SRC_URI="https://github.com/librehat/libQtShadowsocks/archive/v${PV}.tar.gz -> $
 RESTRICT="mirror"
 
 LICENSE="GPL-3"
+SLOT="0"
 
 IUSE=""
 
@@ -21,4 +22,14 @@ RDEPEND=">dev-libs/botan-1.10[threads]
 	dev-qt/qtnetwork
 	dev-qt/qttest:5"
 
-S="${WORKDIR}/${P}"
+src_compile() {
+	eqmake5 INSTALL_PREFIX="${D}"/usr
+}
+
+src_install() {
+	emake install DESTDIR="${D}"
+}
+
+pkg_preinst() {
+	sed -i 's/^prefix.*/prefix\=\/usr/' "${D}"/usr/lib/pkgconfig/QtShadowsocks.pc
+}
