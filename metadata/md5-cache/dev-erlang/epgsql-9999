@@ -8,5 +8,5 @@ LICENSE=epgsql
 RDEPEND=dev-lang/erlang >=dev-lang/erlang-15.2.3
 SLOT=0
 _eclass_exported_funcs=src_unpack:git-r3 src_compile:- src_install:-
-_eclasses_=erlang-pkg	5c6dc206e957a848a7f1e35de2dcbe81	eutils	28fb3e5852485af1c348d446b0b98389	git-r3	ef66dfc3db09f327af21cf32f140fb2b	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_eclasses_=erlang-pkg	5c6dc206e957a848a7f1e35de2dcbe81	eutils	9d81603248f2ba3ec59124320d123e5e	git-r3	ef66dfc3db09f327af21cf32f140fb2b	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
 _md5_=957600ac40d65f93a1253501f77ac8bc
