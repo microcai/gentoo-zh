@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI="5"
 # needed by make_desktop_entry
@@ -18,7 +18,7 @@ IUSE="+dbus +imfix"
 
 DESCRIPTION="Sublime Text is a sophisticated text editor for code, html and prose"
 HOMEPAGE="http://www.sublimetext.com"
-COMMON_URI="http://c758482.r82.cf2.rackcdn.com"
+COMMON_URI="https://download.sublimetext.com"
 SRC_URI="amd64? ( ${COMMON_URI}/sublime_text_3_build_${RV}_x64.tar.bz2 )
 x86? ( ${COMMON_URI}/sublime_text_3_build_${RV}_x32.tar.bz2 )"
 
