@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure prepare unpack
+DEPEND=libnotify? ( x11-libs/libnotify ) x11-libs/libXft >=x11-libs/gtk+-2.4 dev-util/intltool sys-devel/gettext !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1
+DESCRIPTION=PCMan is an easy-to-use telnet client mainly targets BBS users formerly writen by gtk2
+EAPI=5
+HOMEPAGE=https://github.com/pcman-bbs/pcmanx
+IUSE=+libnotify +proxy iplookup +wget
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=libnotify? ( x11-libs/libnotify ) x11-libs/libXft >=x11-libs/gtk+-2.4 wget? ( net-misc/wget )
+SLOT=0
+_eclass_exported_funcs=src_unpack:git-r3 src_prepare:- src_configure:-
+_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	9d81603248f2ba3ec59124320d123e5e	flag-o-matic	d270fa247153df66074f795fa42dba3e	git-r3	ef66dfc3db09f327af21cf32f140fb2b	libtool	b75230758539a7da029e24afdb693960	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_md5_=0013b2d78d9d64f293cccec01fcbc5f5
