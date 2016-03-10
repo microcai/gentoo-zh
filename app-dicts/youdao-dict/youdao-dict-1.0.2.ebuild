@@ -19,11 +19,13 @@ RESTRICT="mirror"
 RESTRICT_PYTHON_ABIS="3.*"
 
 RDEPEND=">=dev-lang/python-3.0.0
-dev-python/PyQt5
+dev-python/PyQt5[webkit]
 dev-python/requests
 dev-python/pillow
 dev-python/python3-xlib
 app-text/tesseract[linguas_zh_CN,linguas_zh_TW]
+dev-qt/qtgraphicaleffects:5
+dev-qt/qtquickcontrols:5
 "
 
 DEPEND="${RDEPEND}"

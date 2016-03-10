@@ -6,7 +6,7 @@ EAPI="4"
 
 inherit fdo-mime versionator eutils python
 
-MY_VER="$(get_version_component_range 1-2)+git$(get_version_component_range 3)"
+MY_VER="$(get_version_component_range 1-2)+git$(get_version_component_range 3)ubuntu1"
 SRC_URI="http://packages.linuxdeepin.com/deepin/pool/main/d/${PN}/${PN}_${MY_VER}.tar.gz"
 
 DESCRIPTION="Deepin gsettings Python Bindings"
@@ -18,7 +18,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/python:2.7
-		dev-libs/glib"
+		>=dev-libs/glib-2.30.0:2
+		>=sys-libs/glibc-2.2.5"
 DEPEND="${RDEPEND}
 		dev-python/setuptools"
 S=${WORKDIR}/${PN}-${MY_VER}
