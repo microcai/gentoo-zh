@@ -59,14 +59,6 @@ dev-erlang/sh:doc - Adds extra documentation.
 dev-erlang/sh:src - Adds source files.
 dev-erlang/uuid:doc - Adds extra documentation.
 dev-erlang/uuid:src - Adds source files.
-gnome-base/gnome-settings-daemon:colord - Support color management using x11-misc/colord
-gnome-base/gnome-settings-daemon:i18n - Enable support for enhanced input methods through app-i18n/ibus
-gnome-base/gnome-settings-daemon:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
-gnome-base/gnome-settings-daemon:short-touchpad-timeout - Change the touchpad timeout so that it's effective for fast typists
-gnome-base/nautilus:packagekit - Use packagekit to search for programs to open unknown file types
-gnome-base/nautilus:previewer - Use gnome-extra/sushi to preview files from the file mananger
-gnome-base/nautilus:sendto - Enable the nautilus-sendto extension to send files to various locations/devices
-gnome-base/nautilus:tracker - Add support for app-misc/tracker search
 media-plugins/osdlyrics:mpd - Enable support for MPD
 media-plugins/osdlyrics:xmms2 - Enable support for XMMS2
 media-sound/deadbeef:adplug - adplug player (OPL2/OPL3 emulation)
@@ -85,7 +77,6 @@ media-sound/deadbeef:supereq - Equalizer based on Super EQ library by Naoki Shib
 media-sound/deadbeef:tta - TTA player plugin
 media-sound/deadbeef:vtx - vtx file player (ay8910/12 emulation)
 media-sound/deadbeef:zip - zip archive support
-media-sound/deepin-music-player:hotkey - Enable global hotkey via media-plugins/python-mmkeys
 media-tv/gmlive:extra - Enable support for PPLive and PPS IPTV
 media-tv/gmlive:sopcast - Enable support for media-tv/sopcast
 media-tv/gmlive:totem - Enable totem plugin support
