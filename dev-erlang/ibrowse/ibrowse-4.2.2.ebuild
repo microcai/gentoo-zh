@@ -26,6 +26,10 @@ IUSE="doc src"
 DEPEND="dev-lang/erlang"
 RDEPEND="${DEPEND}"
 
+src_prepare() {
+    sed -i '/REBAR ?=/s/rebar3/rebar/' Makefile
+}
+
 src_compile() {
 	emake
 
