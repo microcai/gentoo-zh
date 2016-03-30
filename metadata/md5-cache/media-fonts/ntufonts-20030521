@@ -10,5 +10,5 @@ RESTRICT=mirror strip binchecks
 SLOT=0
 SRC_URI=http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/ttf/big5/ntu//NTU_FS_M.TTF http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/ttf/big5/ntu//NTU_KAI.TTF http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/ttf/big5/ntu//NTU_LI_M.TTF http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/ttf/big5/ntu//NTU_MB.TTF http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/ttf/big5/ntu//NTU_MM.TTF http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/ttf/big5/ntu//NTU_MR.TTF http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/ttf/big5/ntu//NTU_TW.TTF
 _eclass_exported_funcs=pkg_postrm:font pkg_postinst:- pkg_setup:font src_unpack:- src_prepare:- src_install:font
-_eclasses_=eutils	9d81603248f2ba3ec59124320d123e5e	font	cd7790315ca5b8c505e1e0513df6acce	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_eclasses_=eutils	9d81603248f2ba3ec59124320d123e5e	font	cd7790315ca5b8c505e1e0513df6acce	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
 _md5_=338b1840de7daf590373c32a98370032
