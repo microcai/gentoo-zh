@@ -29,6 +29,7 @@ app-dicts/stardict-quick-eng-eng 2.4.2: Stardict Dictionary English to French
 app-dicts/stardict-soothill-buddhist-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
 app-dicts/stardict-wyabdcrealpeopletts 1.0: 
 app-dicts/youdao-dict 1.0.2: 有道词典
+app-editors/marketo 9999: A note-taking KDE application with the power of lightweight markup language
 app-editors/sublime-text 3_beta3103: Sublime Text is a sophisticated text editor for code, html and prose
 app-editors/texworks 9999-r3: An environment for authoring TeX (LaTeX, ConTeXt, etc) documentsfor casual and non-technical users.
 app-editors/uex 2.1.0.5: Ultra Editor for Linux
@@ -156,6 +157,7 @@ dev-libs/libappindicator 12.10.0-r200: A library to allow applications to export
 dev-libs/libchewing 0.3.5 9999: Library for Chinese Phonetic input method
 dev-libs/libchrasis 9999.0.1.1: Library for Chinese Character Recognition As-Is
 dev-libs/libdwarf 20140208: Library to deal with DWARF Debugging Information Format
+dev-libs/libmdcpp 9999: implementation of the Markdown markup language in CPP (library)
 dev-libs/libtsm 3: TSM is a state machine for DEC VT100-VT520 compatible terminal emulators.
 dev-libs/libunity 7.1.4: Library for instrumenting and integrating with all aspects of the Unity shell
 dev-libs/lunar-date 2.4.0: Chinese Lunar Library
