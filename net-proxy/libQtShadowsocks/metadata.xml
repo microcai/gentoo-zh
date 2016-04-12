@@ -4,7 +4,7 @@
 	<herd>net-proxy</herd>
 	<maintainer>
 		<email>registerdedicated@gmail.com</email>
-		<name>Havanna</name>
+		<name>Register</name>
 	</maintainer>
 	<longdescription lang="en">
 		A lightweight and ultra-fast shadowsocks library written in C++/Qt
