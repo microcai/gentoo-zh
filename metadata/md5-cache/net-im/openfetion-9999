@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/glib:2 ~net-im/libofetion-9999 x11-libs/gdk-pixbuf:2 x11-libs/gtk+:2 gstreamer? ( media-libs/gstreamer:0.10 ) libnotify? ( x11-libs/libnotify ) networkmanager? ( net-misc/networkmanager dev-libs/dbus-glib ) xscreensaver? ( x11-libs/libXScrnSaver )
 SLOT=0
 _eclass_exported_funcs=src_unpack:- src_prepare:cmake-utils src_configure:- src_compile:cmake-utils src_test:cmake-utils src_install:cmake-utils
-_eclasses_=cmake-utils	422bbd1bee2557490177a34dbe0a662b	eutils	9d81603248f2ba3ec59124320d123e5e	flag-o-matic	d270fa247153df66074f795fa42dba3e	mercurial	789038b352d112bcff9dff083aa40d8d	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_eclasses_=cmake-utils	422bbd1bee2557490177a34dbe0a662b	eutils	9d81603248f2ba3ec59124320d123e5e	flag-o-matic	d270fa247153df66074f795fa42dba3e	mercurial	789038b352d112bcff9dff083aa40d8d	multilib	23ae8c186171e6476af098d2a50d0ee0	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
 _md5_=bb15825826fc80b73052089ee7fef289
