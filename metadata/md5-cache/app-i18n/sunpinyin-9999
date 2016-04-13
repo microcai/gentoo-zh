@@ -9,5 +9,5 @@ RDEPEND=dev-db/sqlite:3
 RESTRICT=mirror
 SLOT=0
 _eclass_exported_funcs=src_unpack:git-2 src_configure:- src_compile:- src_install:-
-_eclasses_=git-2	df00117322129fb906bb0a53c3d6a020	scons-utils	6a35944612b7ecb18a3803359554badc
+_eclasses_=git-2	672c3929a162f221a53b4ccb4d25d8a2	scons-utils	6a35944612b7ecb18a3803359554badc
 _md5_=f930300a2a9d508a4db90f6425166283
