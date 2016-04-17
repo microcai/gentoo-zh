@@ -16,7 +16,7 @@ EGIT_BRANCH="master"
 # everything in "git log" manually.
 EGIT_COMMIT="50bd51356e70e7eb0eceb4fb9b7c1f5084df9dd4"
 
-LICENSE="MIT License "
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64  ~x86"
 
