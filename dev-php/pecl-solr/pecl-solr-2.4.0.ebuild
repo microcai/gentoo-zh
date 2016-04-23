@@ -6,7 +6,7 @@ EAPI=5
 
 PHP_EXT_NAME="solr"
 
-USE_PHP="php5-6 php5-5"
+USE_PHP="php5-6 php5-5 php7-0"
 
 RESTRICT="mirror"
 
