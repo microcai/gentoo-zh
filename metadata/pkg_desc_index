@@ -162,7 +162,7 @@ dev-libs/libtsm 3: TSM is a state machine for DEC VT100-VT520 compatible termina
 dev-libs/libunity 7.1.4: Library for instrumenting and integrating with all aspects of the Unity shell
 dev-libs/lunar-date 2.4.0: Chinese Lunar Library
 dev-libs/thrift 0.9.1: Lightweight, language-independent software stack with associated code generation mechanism for RPC
-dev-php/pecl-solr 2.1.0 2.3.0: Solr client
+dev-php/pecl-solr 2.3.0 2.4.0: Solr client
 dev-php/phc 0.3.0.1: The open source php compiler
 dev-php/phpsh 0.0.1: An interactive shell for php
 dev-python/dnslib 9999: A simple library to encode/decode DNS wire-format packets.
