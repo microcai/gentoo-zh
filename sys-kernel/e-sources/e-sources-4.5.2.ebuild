@@ -4,7 +4,7 @@
 
 EAPI="5"
 K_DEBLOB_AVAILABLE="0"
-K_KDBUS_AVAILABLE="0"
+K_KDBUS_AVAILABLE="1"
 
 
 ck_version="1"
