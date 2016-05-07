@@ -10,7 +10,6 @@ HOMEPAGE="https://github.com/lidaobing/manpages-zh"
 RESTRICT="mirror"
 SRC_URL=""
 
-EGIT_HAS_SUBMODULES=0
 EGIT_REPO_URI="git://github.com/lidaobing/manpages-zh.git"
 
 LICENSE="FDL-1.2"
@@ -22,7 +21,7 @@ RDEPEND="virtual/man
 	>=sys-apps/man-pages-3.83
 "
 
-inherit autotools git-2
+inherit autotools git-r3
 
 src_prepare() {
 	eautoreconf
