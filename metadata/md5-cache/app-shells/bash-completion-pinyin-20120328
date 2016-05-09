@@ -11,5 +11,5 @@ RESTRICT=nomirror
 SLOT=0
 SRC_URI=http://easyscripts.googlecode.com/files/chsdir_20120328.tar.gz
 _eclass_exported_funcs=src_install:-
-_eclasses_=bash-completion-r1	acf715fa09463f043fbfdc1640f3fb85	multilib	23ae8c186171e6476af098d2a50d0ee0	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_eclasses_=bash-completion-r1	acf715fa09463f043fbfdc1640f3fb85	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
 _md5_=a8ce12de52ddc841d2b9ce5ed4730800
