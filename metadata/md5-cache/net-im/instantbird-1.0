@@ -8,5 +8,5 @@ RDEPEND=system-libpurple? ( net-im/pidgin[gtk] ) >=net-libs/xulrunner-2.0 x11-li
 SLOT=0
 SRC_URI=http://www.instantbird.com/downloads/1.0/instantbird-1.0.src.tgz
 _eclass_exported_funcs=pkg_preinst:- pkg_postrm:- pkg_postinst:- pkg_setup:python-any-r1 src_configure:- src_compile:- src_install:-
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	d270fa247153df66074f795fa42dba3e	gnome2-utils	c6dcdf3a2c22b578b16adb945dc85c35	mozconfig-3	2755deeae171d57a61d30ab1943a4107	mozcoreconf-2	037f21de62e7b97b90823a7144cbf691	multilib	d062ae4ba2fc40a19c11de2ad89b6616	python-any-r1	8eb13cdf35f6e43c48107b911900b2cc	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	versionator	99ae9d758cbe7cfed19170e7d48f5a9c	xdg-utils	e2b2bd56125ce8cf59ce30c642b59d48
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	d270fa247153df66074f795fa42dba3e	gnome2-utils	c6dcdf3a2c22b578b16adb945dc85c35	mozconfig-3	2755deeae171d57a61d30ab1943a4107	mozcoreconf-2	037f21de62e7b97b90823a7144cbf691	multilib	d062ae4ba2fc40a19c11de2ad89b6616	python-any-r1	8eb13cdf35f6e43c48107b911900b2cc	python-utils-r1	00f984fbfe2fde78b718d7a0cfe1dddd	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	versionator	99ae9d758cbe7cfed19170e7d48f5a9c	xdg-utils	e2b2bd56125ce8cf59ce30c642b59d48
 _md5_=8eab9b9ac6739defda12824f64f1036f
