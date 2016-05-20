@@ -1,0 +1,15 @@
+DEFINED_PHASES=install postinst postrm unpack
+DEPEND=app-arch/bzip2 app-arch/lz4 dev-libs/glib:2[xattr] dev-libs/libappindicator:3 media-libs/fontconfig:1.0 media-libs/freetype:2 media-libs/harfbuzz[graphite] media-libs/libepoxy media-libs/mesa sys-apps/dbus systemd? ( sys-apps/systemd ) sys-libs/glibc:2.2 sys-libs/libcap sys-libs/zlib x11-base/xorg-server x11-libs/cairo x11-libs/gdk-pixbuf:2[X] >=sys-apps/sed-4 virtual/pkgconfig
+DESCRIPTION=A free desktop application that delivers fast, reliable and secure access to the open Internet for users in censored regions.
+EAPI=5
+HOMEPAGE=https://github.com/getlantern/lantern
+IUSE=systemd
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RDEPEND=app-arch/bzip2 app-arch/lz4 dev-libs/glib:2[xattr] dev-libs/libappindicator:3 media-libs/fontconfig:1.0 media-libs/freetype:2 media-libs/harfbuzz[graphite] media-libs/libepoxy media-libs/mesa sys-apps/dbus systemd? ( sys-apps/systemd ) sys-libs/glibc:2.2 sys-libs/libcap sys-libs/zlib x11-base/xorg-server x11-libs/cairo x11-libs/gdk-pixbuf:2[X]
+RESTRICT=mirror
+SLOT=0
+SRC_URI=x86? ( https://raw.githubusercontent.com/getlantern/lantern-binaries/50a596fb21468f75bb771c7601bf09b5162d9852/lantern-installer-32-bit.deb -> lantern-bin-2.2.4.x86.deb ) amd64? ( https://raw.githubusercontent.com/getlantern/lantern-binaries/50a596fb21468f75bb771c7601bf09b5162d9852/lantern-installer-64-bit.deb -> lantern-bin-2.2.4.amd64.deb )
+_eclass_exported_funcs=pkg_postrm:- pkg_postinst:- src_unpack:unpacker src_install:-
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	gnome2-utils	c6dcdf3a2c22b578b16adb945dc85c35	multilib	d062ae4ba2fc40a19c11de2ad89b6616	systemd	3165c885f3c71ffae7a867d931fb0e07	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	unpacker	45d07319df5f40ee6af58418b0f930be	xdg-utils	e2b2bd56125ce8cf59ce30c642b59d48
+_md5_=752f8d553ca263255bb0d83ed90837c8
