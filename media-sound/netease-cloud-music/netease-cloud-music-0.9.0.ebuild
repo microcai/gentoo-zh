@@ -39,10 +39,10 @@ src_prepare() {
 src_install() {
 	exeinto /usr/bin
 	exeopts -m0755
-	doexe /usr/bin/netease-cloud-music
+	doexe "${S}/usr/bin/netease-cloud-music"
 	
 	insinto /
-	doins -r /usr
+	doins -r "${S}/usr"
 
 	fperms 0755 /usr/lib/netease-cloud-music/netease-cloud-music
 }
