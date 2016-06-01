@@ -1,0 +1,12 @@
+--- old/usr/share/applications/netease-cloud-music.desktop	2016-05-26 18:28:24.024158239 +0800
++++ new/usr/share/applications/netease-cloud-music.desktop	2016-05-26 18:33:55.697924240 +0800
+@@ -9,8 +9,7 @@
+ Comment[zh_TW]=網易雲音樂
+ Icon=netease-cloud-music
+ Exec=netease-cloud-music %U
+-Comment=NetEase Cloud Music
+-Categories=Music;Player;
++Categories=AudioVideo;Audio;Player;
+ Terminal=false
+ StartupNotify=true
+ MimeType=audio/aac;audio/flac;audio/mp3;audio/mp4;audio/mpeg;audio/ogg;audio/x-ape;audio/x-flac;audio/x-mp3;audio/x-mpeg;audio/x-ms-wma;audio/x-vorbis;audio/x-vorbis+ogg;audio/x-wav;
