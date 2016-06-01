@@ -24,7 +24,10 @@ DEPEND="
 	dev-qt/qtx11extras
 	media-libs/alsa-lib
 	media-libs/gst-plugins-ugly
+	media-libs/libcue
 	media-libs/taglib
+	media-plugins/gst-plugins-good
+	media-plugins/gst-plugins-libav
 	x11-libs/gtk+
 	x11-libs/libXScrnSaver
 "
