@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# apply hidpi fix if exists
+[ -x /usr/lib/netease-cloud-music/netease-cloud-music-hidpi ] && \
+    source /usr/lib/netease-cloud-music/netease-cloud-music-hidpi
+
+exec /usr/lib/netease-cloud-music/netease-cloud-music $NETEASE_ARGS
