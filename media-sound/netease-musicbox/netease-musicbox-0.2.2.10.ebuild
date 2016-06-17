@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -14,9 +14,9 @@ EGIT_BRANCH="master"
 # The developers of netease-musicbox don't even know how to
 # use "git tag" to release a new version, we have to check
 # everything in "git log" manually.
-EGIT_COMMIT="d8530060ca0ebac47561517aae8dbc9f59cd4131"
+EGIT_COMMIT="15824774eadc9d1d7581c8ad7bd2defe30249f5b"
 
-LICENSE="MIT License "
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64  ~x86"
 
