@@ -9,5 +9,5 @@ RDEPEND=x11-themes/dmz-cursor-theme x11-themes/elementary-icon-theme x11-themes/
 RESTRICT=binchecks mirror strip
 SLOT=0
 _eclass_exported_funcs=src_unpack:bzr src_prepare:bzr src_install:-
-_eclasses_=bzr	745bed5705ae699c707ba26ca9e8929a	eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	c9d9187f4caa4026a0ceddd8dfceb3c1
+_eclasses_=bzr	745bed5705ae699c707ba26ca9e8929a	eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
 _md5_=b35bf0e4cd19a311a90df5818ff0e8d4
