@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/python-2.4.3 >=x11-libs/gtk+-2.8.20 >=dev-python/pygtk-2.8.6 dev-python/notify-python dev-lang/python
 SLOT=0
 _eclass_exported_funcs=pkg_preinst:subversion pkg_postrm:distutils pkg_postinst:- src_unpack:- src_prepare:subversion src_compile:distutils src_install:-
-_eclasses_=distutils	ad9e4720eb3e69090dd968b152fc611b	eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	python	efc1c55fc44c5b7272fc2ffba73c3e6f	subversion	4fee0a764150bb4dda27ed4d2c4ed7ce	toolchain-funcs	77f907363e91028a361ce5a3e9e7ed1e
+_eclasses_=distutils	ad9e4720eb3e69090dd968b152fc611b	eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	python	efc1c55fc44c5b7272fc2ffba73c3e6f	subversion	4fee0a764150bb4dda27ed4d2c4ed7ce	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=1fb514b932b29bf7cb786f4d18edf3f5
