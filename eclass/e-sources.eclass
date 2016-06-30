@@ -212,10 +212,6 @@ PATCH_APPEND() {
 	esac
 }
 
-for I in ${SUPPORTED_USE}; do
-	PATCH_APPEND "${I}"
-done
-
 features gentoo && REQUIRED_USE=" experimental? ( gentoo ) "
 
 SRC_URI="
@@ -228,6 +224,10 @@ UNIPATCH_STRICTORDER="yes"
 
 pkg_setup() {
 	# never (directly or indirectly) call `use` in global scope
+	for I in ${SUPPORTED_USE}; do
+		PATCH_APPEND "${I}"
+	done
+
 	enable cjktty && UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} *fbcondecor*"
 }
 
