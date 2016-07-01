@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=x11-libs/libXft x11-libs/libXext x11-libs/libXrandr x11-libs/libXrender x11-libs/libX11 x11-libs/libXinerama >=media-libs/freetype-2 x11-apps/xmessage x11-apps/xsetroot media-fonts/font-misc-misc
 SLOT=0
 _eclass_exported_funcs=pkg_setup:- src_unpack:mercurial src_compile:- src_install:-
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	df9add8bc729ce892cd54769ba937d77	mercurial	789038b352d112bcff9dff083aa40d8d	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	8632fcd33a047954f007dee9a137bdcc	mercurial	789038b352d112bcff9dff083aa40d8d	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=c3d6d35cc38bd4845091cd34ed58e0af
