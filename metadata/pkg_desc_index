@@ -287,7 +287,6 @@ net-im/cutegram 2.7.0: A different telegram client from Aseman team forked from 
 net-im/emesene 9999-r3: Platform independent MSN Messenger client written in Python+GTK
 net-im/freetalk 3.2: Console based Jabber client
 net-im/gtkqq 9999: a qq client based on gtk+ uses webqq protocol
-net-im/instantbird 1.0: 
 net-im/liblwqq 0.4.2 0.6.1: A Cross Platform WebQQ Protocol
 net-im/libofetion 2.1.0 2.2.0 9999: Free and open source implemention of Fetion library
 net-im/linux-fetion 1.0 1.1 1.2 9999: Linux Fetion, a QT4 IM client using CHINA MOBILE's Fetion Protocol
