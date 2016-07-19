@@ -76,6 +76,7 @@ NATIVE_DEPEND="
 RDEPEND="
 	${NATIVE_DEPEND}
 	corefonts? ( media-fonts/corefonts )
+	sharedfonts? ( media-fonts/wps-office-fonts )
 	net-nds/openldap
 	dev-db/sqlite:3
 "
