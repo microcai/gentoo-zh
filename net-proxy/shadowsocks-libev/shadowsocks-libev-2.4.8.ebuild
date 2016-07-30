@@ -29,6 +29,7 @@ IUSE="debug +openssl polarssl systemd"
 DEPEND="openssl? ( dev-libs/openssl )
 	polarssl? ( net-libs/polarssl )
 	systemd? ( sys-apps/systemd )
+	app-text/asciidoc
 	"
 RDEPEND="${DEPEND}"
 
