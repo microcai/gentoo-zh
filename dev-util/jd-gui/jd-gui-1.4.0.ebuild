@@ -16,7 +16,7 @@ SRC_URI="https://github.com/java-decompiler/jd-gui/releases/download/v${PV}/${MY
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=""
@@ -28,9 +28,6 @@ src_install() {
 	dodir /opt/"${MY_PN}"
 	insinto /opt/"${MY_PN}"
 	doins "${MY_P}.jar"
-
-	doicon jd_icon_128.png
-	domenu jd-gui.desktop
 
 	echo -e "#!/bin/sh\njava -jar /opt/${MY_PN}/${MY_P}.jar >/dev/null 2>&1 &\n" > "${MY_PN}"
 	dobin "${MY_PN}"
