@@ -6,6 +6,8 @@ After=network.target
 Type=simple
 User=nobody
 ExecStart=/usr/bin/ss-server -c /etc/shadowsocks.json
+Restart=on-failure
+RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target
