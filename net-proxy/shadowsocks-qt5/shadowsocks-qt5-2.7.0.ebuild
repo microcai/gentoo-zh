@@ -16,16 +16,15 @@ SLOT="0"
 
 IUSE=""
 
-RDEPEND="dev-libs/libappindicator:2
-	>=net-proxy/libQtShadowsocks-1.8.0
-	media-gfx/zbar
-	media-gfx/qrencode"
-DEPEND="${RDEPEND}
-	>dev-libs/botan-1.10[threads]
+DEPEND=">dev-libs/botan-1.10[threads]
+	dev-libs/libappindicator:2
+	>=dev-qt/libQtShadowsocks-1.9.0
 	dev-qt/qtconcurrent
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
-	dev-qt/qtnetwork"
+	dev-qt/qtnetwork
+	media-gfx/zbar
+	media-gfx/qrencode"
 
 pkg_postinst() {
 	gnome2_icon_cache_update
