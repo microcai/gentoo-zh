@@ -34,3 +34,7 @@ net-im/instantbird
 
 # if you want to use pacman in your gentoo not chroot environment, unmask it
 =sys-apps/pacman-4.0.3
+
+# Register <registerdedicated@gmail.com> (26 Aug 2016)
+# move net-proxy/libQtShadowsocks dev-qt/libQtShadowsocks
+<net-proxy/libQtShadowsocks-1.9.0
