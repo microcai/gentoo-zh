@@ -18,7 +18,7 @@ IUSE="daemon debug +dynamic geoip +gtk nls remote stats unicode upnp"
 REQUIRED_USE="|| ( gtk remote daemon )"
 
 DEPEND="
-	=x11-libs/wxGTK-2.8*
+	=x11-libs/wxGTK-3.0*
 	>=dev-libs/crypto++-5
 	>=sys-libs/zlib-1.2.1
 	stats? ( >=media-libs/gd-2.0.26[jpeg] )
@@ -63,7 +63,7 @@ src_prepare() {
 src_configure() {
 	local myconf
 
-	WX_GTK_VER="2.8"
+	WX_GTK_VER="3.0"
 
 	if use gtk; then
 		einfo "wxGTK with X / GTK support will be used"
