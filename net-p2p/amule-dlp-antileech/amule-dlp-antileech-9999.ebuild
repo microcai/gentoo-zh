@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND=">=x11-libs/wxGTK:3.0"
+DEPEND="x11-libs/wxGTK:3.0"
 RDEPEND="net-p2p/amule-dlp[dynamic]"
 S=${WORKDIR}/amule-dlp.antileech
 
