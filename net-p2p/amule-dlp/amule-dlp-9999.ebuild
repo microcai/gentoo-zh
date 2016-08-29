@@ -49,6 +49,9 @@ pkg_preinst() {
 }
 
 src_prepare() {
+	# fix the missing amule.xpm
+	cp "${FILESDIR}/amule.xpm" ./
+
 	# hack because of non-standard generation
 	cd src/pixmaps/flags_xpm
 	./makeflags.sh
