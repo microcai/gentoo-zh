@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-inherit autotools git-2
+inherit autotools git-2 wxwidgets
 DESCRIPTION="$PN, dynamic DLP library for amule-dlp"
 HOMEPAGE="https://github.com/persmule/amule-dlp.antileech"
 EGIT_REPO_URI="git://github.com/persmule/amule-dlp.antiLeech.git"
@@ -12,16 +12,28 @@ EGIT_REPO_URI="git://github.com/persmule/amule-dlp.antiLeech.git"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="X"
 
 DEPEND="x11-libs/wxGTK:3.0"
 RDEPEND="net-p2p/amule-dlp[dynamic]"
 S=${WORKDIR}/amule-dlp.antileech
 
 src_prepare() {
+	eautoreconf || die
+}
+
+src_configure() {
 	WX_GTK_VER="3.0"
 
-	eautoreconf || die
+	if use X; then
+		einfo "wxGTK with X / GTK support will be used"
+		need-wxwidgets unicode
+	else
+		einfo "wxGTK without X support will be used"
+		need-wxwidgets base-unicode
+	fi
+
+	econf
 }
 
 src_install() {
