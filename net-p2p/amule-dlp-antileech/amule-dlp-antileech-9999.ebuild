@@ -19,6 +19,8 @@ RDEPEND="net-p2p/amule-dlp[dynamic]"
 S=${WORKDIR}/amule-dlp.antileech
 
 src_prepare() {
+	WX_GTK_VER="3.0"
+
 	eautoreconf || die
 }
 
