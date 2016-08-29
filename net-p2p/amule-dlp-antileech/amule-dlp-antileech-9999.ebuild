@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-inherit autotools git-2
+inherit autotools git-2 wxwidgets
 DESCRIPTION="$PN, dynamic DLP library for amule-dlp"
 HOMEPAGE="https://github.com/persmule/amule-dlp.antileech"
 EGIT_REPO_URI="git://github.com/persmule/amule-dlp.antiLeech.git"
@@ -23,8 +23,6 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
-
 	WX_GTK_VER="3.0"
 
 	if use X; then
@@ -35,7 +33,7 @@ src_configure() {
 		need-wxwidgets base-unicode
 	fi
 
-	econf --with-wx-config=${WX_CONFIG}
+	econf
 }
 
 src_install() {
