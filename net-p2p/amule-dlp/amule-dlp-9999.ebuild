@@ -19,6 +19,7 @@ REQUIRED_USE="|| ( gtk remote daemon )"
 
 DEPEND="
 	=x11-libs/wxGTK-3.0*
+	>=dev-libs/boost-1.57[nls,threads,context]
 	>=dev-libs/crypto++-5
 	>=sys-libs/zlib-1.2.1
 	stats? ( >=media-libs/gd-2.0.26[jpeg] )
@@ -92,6 +93,7 @@ src_configure() {
 
 	econf \
 		--with-wx-config=${WX_CONFIG} \
+		--with-boost \
 		--enable-amulecmd \
 		$(use_enable debug) \
 		$(use_enable !debug optimize) \
