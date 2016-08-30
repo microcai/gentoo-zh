@@ -7,6 +7,7 @@ EAPI=5
 inherit qmake-utils gnome2-utils
 
 DESCRIPTION="A cross-platform GUI shadowsocks client"
+HOMEPAGE="https://github.com/shadowsocks/libQtShadowsocks"
 KEYWORDS="~amd64 ~x86"
 SRC_URI="https://github.com/librehat/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 RESTRICT="mirror"
