@@ -9,5 +9,5 @@ RDEPEND=>=app-i18n/ibus-1.2 virtual/libintl
 SLOT=0
 SRC_URI=http://ibus-t9.googlecode.com/files/ibus-t9-2.1.0.20100601.tar.gz
 _eclass_exported_funcs=src_install:googlecode
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	b83a2420b796f7c6eff682679d08fe25	googlecode	cd502b62f566ceefe9fc31a496f7b531	libtool	4890219c51da247200223277f993e054	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	6198c04daba0e1307bd844df7d37f423
+_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	b83a2420b796f7c6eff682679d08fe25	googlecode	cd502b62f566ceefe9fc31a496f7b531	libtool	4890219c51da247200223277f993e054	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	6198c04daba0e1307bd844df7d37f423
 _md5_=6cbe5bd2702f81b575efe7aa38c6200d
