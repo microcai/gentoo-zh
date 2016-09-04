@@ -190,6 +190,7 @@ dev-python/xappy 0.5: An easy-to-use interface to the Xapian search engine
 dev-qt/libQtShadowsocks 1.9.0: A lightweight and ultra-fast shadowsocks library written in C++/Qt
 dev-qt/qtquickcontrols 9999: Qt Quick Controls (Former Qt Desktop Components)
 dev-ruby/mruby 1.0.0 9999: mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
+dev-scheme/chez-scheme 9.4 9999: Chez Scheme is an implementation of the Revised 6 Report on Scheme (R6RS) with numerous language and programming environment extensions.
 dev-util/be 9999: Bugs Everywere distributed bug tracker
 dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 files
 dev-util/c 0.06: Compile and execute C "scripts" in one go!
