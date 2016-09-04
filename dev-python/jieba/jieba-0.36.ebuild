@@ -11,7 +11,8 @@ inherit distutils-r1
 DESCRIPTION="Chinese text segmentation: built to be the best Python Chinese word segmentation module."
 
 HOMEPAGE="https://github.com/fxsjy/jieba"
-SRC_URI="https://github.com/fxsjy/${PN}/archive/v${PV}.tar.gz"
+SRC_URI="https://github.com/fxsjy/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+RESTRICT="mirror"
 
 LICENSE="MIT"
 SLOT="0"
