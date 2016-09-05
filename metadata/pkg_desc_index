@@ -173,6 +173,7 @@ dev-python/dnslib 9999: A simple library to encode/decode DNS wire-format packet
 dev-python/dtk-widget 0.5.20130617042230: Deepin widget of Chinese Lunar library
 dev-python/evernote-sdk-python 9999: Evernote SDK for Python
 dev-python/google-appengine 1.7.4: Google App Engine SDK for Python
+dev-python/jieba 0.36: Chinese text segmentation: built to be the best Python Chinese word segmentation module.
 dev-python/jtoolkit 0.7.8: jToolkit is a Python web application framework built on modpython and Apache
 dev-python/notify2 0.3-r1: Python interface to DBus notifications.
 dev-python/pootle 1.0.2: PO-based Online Translation / Localization Engine
