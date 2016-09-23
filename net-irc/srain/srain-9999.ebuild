@@ -4,9 +4,9 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python{3_3,3_4,3_5} )
+PYTHON_COMPAT=( python3_4 )
 
-inherit eutils autotools git-r3
+inherit autotools git-r3
 
 
 DESCRIPTION="It does not look like an IRC client"
