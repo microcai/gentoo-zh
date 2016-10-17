@@ -11,5 +11,5 @@ RESTRICT=bindist mirror strip
 SLOT=0
 SRC_URI=amd64? ( https://download.sublimetext.com/sublime_text_3_build_3126_x64.tar.bz2 ) x86? ( https://download.sublimetext.com/sublime_text_3_build_3126_x32.tar.bz2 )
 _eclass_exported_funcs=src_unpack:- src_compile:- src_install:-
-_eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	git-r3	00f60a84fc7b499c99edfe99caea9f95	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	6198c04daba0e1307bd844df7d37f423
+_eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	git-r3	86ff3e88fc8a07b4f595afa27e416341	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	6198c04daba0e1307bd844df7d37f423
 _md5_=f73a3c0ec02dc8996bde1f533a2d32e9
