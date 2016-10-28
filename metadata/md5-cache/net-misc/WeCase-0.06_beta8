@@ -1,15 +1,15 @@
 DEFINED_PHASES=compile configure install prepare
-DEPEND=python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3[threads,xml] ) python_targets_python3_4? ( dev-lang/python:3.4[threads,xml] ) >=dev-lang/python-exec-2:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] app-arch/tar app-arch/bzip2 dev-python/PyQt4 dev-qt/qtcore !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=python_targets_python3_4? ( dev-lang/python:3.4[threads,xml] ) >=dev-lang/python-exec-2:=[python_targets_python3_4(-)?,-python_single_target_python3_4(-)] app-arch/tar app-arch/bzip2 dev-python/PyQt4 dev-qt/qtcore !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=A Sina Weibo Client Focusing on Linux.
 EAPI=5
 HOMEPAGE=http://wecase.org/
-IUSE=python_targets_python3_3 python_targets_python3_4
+IUSE=python_targets_python3_4
 KEYWORDS=~x86 ~amd64
 LICENSE=GPL-3+ LGPL-2.1 LGPL-3+ Apache-2.0
-RDEPEND=python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3[threads,xml] ) python_targets_python3_4? ( dev-lang/python:3.4[threads,xml] ) >=dev-lang/python-exec-2:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] dev-python/notify2 dev-python/rpweibo dev-python/PyQt4[dbus,X,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
+RDEPEND=python_targets_python3_4? ( dev-lang/python:3.4[threads,xml] ) >=dev-lang/python-exec-2:=[python_targets_python3_4(-)?,-python_single_target_python3_4(-)] dev-python/notify2 dev-python/rpweibo dev-python/PyQt4[dbus,X,python_targets_python3_4(-)?,-python_single_target_python3_4(-)]
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/WeCase/WeCase/archive/0.06-beta8.tar.gz -> WeCase-0.06_beta8.tar.gz
 _eclass_exported_funcs=src_prepare:- src_configure:- src_compile:- src_install:-
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	b83a2420b796f7c6eff682679d08fe25	libtool	4890219c51da247200223277f993e054	multibuild	742139c87a9fa3766f0c2b155e5522bf	multilib	165fc17c38d1b11dac2008280dab6e80	python-r1	0f6937650a475d673baa5d0c8c0b37b3	python-utils-r1	1797277ea0e7cee5c7de7ce74cf8acd8	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	b83a2420b796f7c6eff682679d08fe25	libtool	4890219c51da247200223277f993e054	multibuild	742139c87a9fa3766f0c2b155e5522bf	multilib	165fc17c38d1b11dac2008280dab6e80	python-r1	0f6937650a475d673baa5d0c8c0b37b3	python-utils-r1	d142329ab093dd20c1dd0edb5f094108	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
 _md5_=59e4d95077d28f22c3509399ff08f3ba
