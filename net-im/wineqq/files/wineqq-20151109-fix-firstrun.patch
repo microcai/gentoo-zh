@@ -1,0 +1,30 @@
+--- qq.sh.bak	2015-11-09 15:08:14.000000000 +0800
++++ qq.sh	2016-11-02 11:08:43.029184885 +0800
+@@ -67,8 +67,13 @@
+ #	echo "Check firstrun...."	
+ 	if [ ! -e $WINEPREFIX_DIR/firstrun ];then
+ 		echo "*	Seems the first time to run. Here we go!"
++		if [ ! -e "$WINEPREFIX_DIR/drive_c/Program Files/Tencent/QQ/Bin/QQ.exe" ]; then
++			mkdir -p $HOME/.longene
++			tar -jxf $QQ_DIR/$TAR_NAME -C $HOME/.longene
++		fi
+ #		$QQ_DIR/longene_gtk
+ 		$QQ_DIR/firstrun $WINEPREFIX_DIR/firstrun &
++		touch $WINEPREFIX_DIR/firstrun
+ #		echo "Bingoo" >$WINEPREFIX_DIR/firstrun
+ 	fi	
+ }
+@@ -78,13 +83,6 @@
+ 	check_firstrun
+ 	if [ ! -e "$WINE_DIR/bin/wine" ]; then
+ 		tar -jxf $QQ_DIR/$WINELIB_TAR -C $QQ_DIR
+-		rm -f $QQ_DIR/$WINELIB_TAR
+-		if [ ! -e "$WINEPREFIX_DIR/drive_c/Program Files/Tencent/QQ/Bin/QQ.exe" ]; then
+-			mkdir -p $HOME/.longene
+-			tar -jxf $QQ_DIR/$TAR_NAME -C $HOME/.longene
+-			rm -f $QQ_DIR/$TAR_NAME
+-		fi
+-		touch $WINEPREFIX_DIR/firstrun
+ 	fi
+ 	WINEDEBUG=-all env WINEPREFIX=$WINEPREFIX_DIR $WINE_DIR/bin/wine $WINEPREFIX_DIR/drive_c/Program\ Files/Tencent/QQ/Bin/QQ.exe
+ }
