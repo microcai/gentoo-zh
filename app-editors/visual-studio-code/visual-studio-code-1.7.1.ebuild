@@ -45,9 +45,9 @@ src_install(){
 	insinto "/usr/share/pixmaps"
 	doins ${FILESDIR}/${PN}.png
 	fperms +x "/opt/${PN}/code"
-	fperms +x "/opt/${PN}/libgcrypt.so.11"
+	fperms +x "/opt/${PN}/bin/code"
+	fperms +x "/opt/${PN}/libffmpeg.so"
 	fperms +x "/opt/${PN}/libnode.so"
-	fperms +x "/opt/${PN}/libnotify.so.4"
 	insinto "/usr/share/licenses/${PN}"
 	newins "resources/app/LICENSE.txt" "LICENSE"
 }
