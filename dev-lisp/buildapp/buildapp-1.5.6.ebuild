@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
 inherit common-lisp-2
 
 DESCRIPTION="Create executables with SBCL"
 HOMEPAGE="http://www.xach.com/lisp/buildapp/"
-SRC_URI="http://www.xach.com/lisp/${PN}.tgz -> ${P}.tgz"
+SRC_URI="https://codeload.github.com/xach/buildapp/tar.gz/release-${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -18,6 +18,8 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}
 		dev-lisp/sbcl"
+
+S="${WORKDIR}/${PN}-release-${PV}"
 
 src_compile() {
 	emake || die "emake failed"
