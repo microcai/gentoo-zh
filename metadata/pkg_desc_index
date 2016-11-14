@@ -303,7 +303,7 @@ net-im/qipmsg 1.0.0: An open-source Qt4 implementation of IP Messenger for linux
 net-im/qtqq 0.8.2: Tencent QQ written in Qt
 net-im/telegram-desktop 0.8.50: Desktop client of Telegram, the messaging app.
 net-im/telegram-purple 1.3.0 9999: Libpurple (Pidgin) plugin for using a Telegram account
-net-im/wineqq 20140102: Tencent QQ for Linux by longine
+net-im/wineqq 20140102 20151109: Tencent QQ for Linux by longine
 net-libs/jzmq 9999: jzmq
 net-misc/TelegramQML 0.9.1: Telegram API tools for QtQML and Qml
 net-misc/WeCase 0.06_beta8 9999: A Sina Weibo Client Focusing on Linux.
