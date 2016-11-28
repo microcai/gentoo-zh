@@ -16,7 +16,7 @@ else
 	S="${WORKDIR}/${PN}2-${MY_PV}"
 fi
 
-SLOT="2"   
+SLOT="2"
 DESCRIPTION="Nixnote - A clone of Evernote for Linux"
 HOMEPAGE="http://sourceforge.net/projects/nevernote/"
 
@@ -27,7 +27,7 @@ IUSE="qt4 qt5 +opencv3"
 REQUIRED_USE="^^ ( qt4 qt5 )
 		      qt5? ( opencv3 )
 		      "
-		
+
 DEPEND="dev-libs/boost
 	      app-text/hunspell
 	      
@@ -37,8 +37,6 @@ DEPEND="dev-libs/boost
 		      dev-qt/qtcore:4
 		      dev-qt/qtgui:4
 		      dev-qt/qtsql:4
-		      opencv3? ( media-libs/opencv:0/3.0[qt4] )
-		      !opencv3? ( media-libs/opencv:0/2.4[qt4] )
 	      )
 	      qt5? (
 		      app-text/poppler[qt5]
@@ -46,11 +44,18 @@ DEPEND="dev-libs/boost
 		      dev-qt/qtcore:5
 		      dev-qt/qtgui:5
 		      dev-qt/qtsql:5
-		      media-libs/opencv[qt5]
 	      )
+		  
+		  opencv3? ( media-libs/opencv:0/3.0 )
+		  !opencv3? ( media-libs/opencv:0/2.4 )
 	      "
 RDEPEND="${DEPEND}
 		app-text/htmltidy"
+
+# After commit 836482e, NixNote2 can not be compiled with qt4 any more
+if [[ "${PV}" == *9999* ]] && use qt4; then
+	EGIT_COMMIT="836482e00c93618560c2896bbac87d3f89d17299"
+fi
 
 src_prepare() {
 
@@ -73,7 +78,7 @@ src_prepare() {
 
 src_install() {
 	insinto /usr/share/nixnote2
-	doins -r certs help images java qss translations changelog.txt license.html shortcuts.txt *.ini
+	doins -r  help images java qss translations changelog.txt license.html shortcuts.txt *.ini
 
 	rm -r ${D}/usr/share/nixnote2/translations/*.ts
 	
