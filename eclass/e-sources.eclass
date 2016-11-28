@@ -37,6 +37,7 @@ K_SECURITY_UNSUPPORTED="1"
 
 KMV="$(get_version_component_range 1-2)"
 KMMV="$(get_version_component_range 1)"
+KMINOR="$(get_version_component_range 2)"
 KMSV="$(get_version_component_range 1).0"
 
 SLOT="${KMV}"
@@ -106,7 +107,11 @@ USE_ENABLE() {
 			;;
 
 		ck)		ck_url="http://ck.kolivas.org/patches"
-				ck_patch="${KMV}-ck${ck_version}-broken-out.tar.bz2"
+				if [[ "${KMMV}" < "4" || "${KMINOR}" < "2" ]]; then
+					ck_patch="${KMV}-ck${ck_version}-broken-out.tar.bz2"
+				else
+					ck_patch="${KMV}-ck${ck_version}-broken-out.tar.xz"
+				fi
 				ck_src="${ck_url}/${KMSV}/${KMV}/${KMV}-ck${ck_version}/${ck_patch}"
 				HOMEPAGE="${HOMEPAGE} ${ck_url}"
 				if [ "${OVERRIDE_CK_PATCHES}" = 1 ]; then
@@ -122,7 +127,7 @@ USE_ENABLE() {
 
 
 		reiser4) 	reiser4_url="http://sourceforge.net/projects/reiser4"
-				reiser4_patch="reiser4-for-${reiser4_kernel_version%.0}.patch.gz"
+				reiser4_patch="reiser4-for-${reiser4_kernel_version}.patch.gz"
 				reiser4_src="${reiser4_url}/files/reiser4-for-linux-${KMMV}.x/${reiser4_patch}"
 				HOMEPAGE="${HOMEPAGE} ${reiser4_url}"
 				if [ "${OVERRIDE_REISER4_PATCHES}" = 1 ]; then
@@ -207,10 +212,6 @@ PATCH_APPEND() {
 	esac
 }
 
-for I in ${SUPPORTED_USE}; do
-	PATCH_APPEND "${I}"
-done
-
 features gentoo && REQUIRED_USE=" experimental? ( gentoo ) "
 
 SRC_URI="
@@ -223,6 +224,10 @@ UNIPATCH_STRICTORDER="yes"
 
 pkg_setup() {
 	# never (directly or indirectly) call `use` in global scope
+	for I in ${SUPPORTED_USE}; do
+		PATCH_APPEND "${I}"
+	done
+
 	enable cjktty && UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} *fbcondecor*"
 }
 
