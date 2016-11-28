@@ -53,9 +53,9 @@ RDEPEND="${DEPEND}
 		app-text/htmltidy"
 
 # After commit 836482e, NixNote2 can not be compiled with qt4 any more
-if [[ "${PV}" == *9999* ]] && use qt4; then
-	EGIT_COMMIT="836482e00c93618560c2896bbac87d3f89d17299"
-fi
+#if [[ "${PV}" == *9999* ]] && use qt4; then
+#	EGIT_COMMIT="836482e00c93618560c2896bbac87d3f89d17299"
+#fi
 
 src_prepare() {
 
@@ -63,6 +63,11 @@ src_prepare() {
 	if use opencv3; then
 		sed -i 's/LIBS += /LIBS +=  -lopencv_videoio/g' NixNote2.pro
 		sed -i '/\#include "opencv\/cv.h"/i\#include "opencv2\/videoio.hpp"' dialog/webcamcapturedialog.h
+	fi
+	
+	if use qt4; then
+		sed -i 's|Q_PLUGIN_METADATA|// Q_PLUGIN_METADATA|g' plugins/webcam/webcamplugin.h 
+		sed -i 's|Q_PLUGIN_METADATA|// Q_PLUGIN_METADATA|g' plugins/hunspell/hunspellplugin.h   
 	fi
 	
 	lupdate -pro NixNote2.pro -no-obsolete || die
