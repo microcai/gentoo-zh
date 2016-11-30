@@ -3,6 +3,7 @@
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_4 python3_5)
+PYTHON_REQ_USE="ssl(+)?,xml(+)"
 
 inherit distutils-r1 git-r3
 
