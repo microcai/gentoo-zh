@@ -15,15 +15,11 @@ LIBGCRYPT="libgcrypt.so.11.8.2"
 SRC_URI="amd64? ( https://dl.google.com/linux/direct/google-webdesigner_current_x86_64.rpm -> ${P}-x86_64.rpm
     http://dev.gentoo.org/~floppym/dist/${LIBGCRYPT}-amd64.xz
   )
-  x86? (
-  https://dl.google.com/linux/direct/google-webdesigner_current_i386.rpm -> ${P}-i386.rpm
-  http://dev.gentoo.org/~floppym/dist/${LIBGCRYPT}-x86.xz
-)
 "
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="app-arch/rpm2targz"
