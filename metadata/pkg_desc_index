@@ -233,7 +233,7 @@ dev-util/elfembed 0.3: Resource Compiler for ELF binaries
 dev-util/fernflower 1: Fernflower is the first actually working analytical decompiler for Java and probably for a high-level programming language in general
 dev-util/global 6.3.4: GNU Global is a tag system to find the locations of a specified object in various sources
 dev-util/glslang 9999: 
-dev-util/google-webdesigner 1.0.1.0: Bring ideas to life across screens
+dev-util/google-webdesigner 1.3.10.0: Bring ideas to life across screens
 dev-util/jd-gui 1.4.0: A standalone graphical utility that displays Java source codes of .class file
 dev-util/kdevelop-control-flow-graph 9999: A plugin for KDevelop 4 that visualizes the information from it's static code analysis in graphs.
 dev-util/kdevelop-kernel 9999: This plugin offers a "Linux Kernel" project type to KDevelop that makes it easy and comfortable to work on the Linux kernel.
