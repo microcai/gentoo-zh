@@ -26,6 +26,9 @@ app-i18n/mozc:fcitx - Enable support for app-i18n/fcitx
 app-i18n/mozc:ibus - Enable support for app-i18n/ibus
 app-i18n/mozc:renderer - Enable native candidate window.
 app-i18n/mozc:scim - Enable support for app-i18n/scim
+app-misc/nixnote:hunspell - Enable spellchecking plugin using app-text/hunspell
+app-misc/nixnote:opencv3 - Use media-libs/opencv:0/3.0 for WebCam instead media-libs/opencv:0/2.4
+app-misc/nixnote:webcam - Enable WebCam plugin
 app-text/stardict:espeak - Enables text to speech engine app-accessibility/espeak
 app-text/stardict:festival - Enables text to speech engine app-accessibility/festival
 app-text/stardict:gnome - Enables gnome-base/gnome support
