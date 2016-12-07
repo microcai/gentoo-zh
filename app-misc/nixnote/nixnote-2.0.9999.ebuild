@@ -22,14 +22,12 @@ HOMEPAGE="http://sourceforge.net/projects/nevernote/"
 
 LICENSE="GPL-2"
 [[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~x86"
-IUSE="qt4 qt5 +opencv3 plugins"
+IUSE="qt4 qt5 opencv3 hunspell webcam"
 
-REQUIRED_USE="^^ ( qt4 qt5 )
-		      qt5? ( opencv3 )
-		      "
+REQUIRED_USE="^^ ( qt4 qt5 )"
 
 DEPEND="dev-libs/boost
-	      app-text/hunspell
+		  net-misc/curl
 	      
 	      qt4? (
 		      app-text/poppler[qt4]
@@ -44,31 +42,34 @@ DEPEND="dev-libs/boost
 		      dev-qt/qtcore:5
 		      dev-qt/qtgui:5
 		      dev-qt/qtsql:5
+			  dev-qt/qtxml:5
+			  dev-qt/qtnetwork:5
+			  dev-qt/qtwidgets:5
+			  dev-qt/qtprintsupport:5
+			  dev-qt/qtdbus:5
 	      )
+
+		  hunspell? ( app-text/hunspell )
 		  
-		  opencv3? ( =media-libs/opencv-3* )
-		  !opencv3? ( media-libs/opencv:0/2.4 )
-	      "
+		  webcam?  (
+		  	  opencv3? ( >=media-libs/opencv-3.0.0:0= )
+		      !opencv3? ( <media-libs/opencv-3.0.0:0= )
+		  )
+		"
 RDEPEND="${DEPEND}
 		app-text/htmltidy"
-
-# After commit 836482e, NixNote2 can not be compiled with qt4 any more
-#if [[ "${PV}" == *9999* ]] && use qt4; then
-#	EGIT_COMMIT="836482e00c93618560c2896bbac87d3f89d17299"
-#fi
 
 src_prepare() {
 
 	# fix VideoCapture undefined reference error with opencv-3
-	if use opencv3; then
-		sed -i 's/LIBS += /LIBS +=  -lopencv_videoio/g' NixNote2.pro
-		sed -i '/\#include "opencv\/cv.h"/i\#include "opencv2\/videoio.hpp"' dialog/webcamcapturedialog.h
-	fi
-	
-	if use qt4; then
-		sed -i 's|Q_PLUGIN_METADATA|// Q_PLUGIN_METADATA|g' plugins/webcam/webcamplugin.h 
-		sed -i 's|Q_PLUGIN_METADATA|// Q_PLUGIN_METADATA|g' plugins/hunspell/hunspellplugin.h   
-	fi
+#	if use opencv3; then
+#		sed -i '/\#include "opencv\/cv.h"/i\#include "opencv2\/videoio.hpp"' dialog/webcamcapturedialog.h
+#	fi
+#	
+#	if use qt4; then
+#		sed -i 's|Q_PLUGIN_METADATA|// Q_PLUGIN_METADATA|g' plugins/webcam/webcamplugin.h 
+#		sed -i 's|Q_PLUGIN_METADATA|// Q_PLUGIN_METADATA|g' plugins/hunspell/hunspellplugin.h   
+#	fi
 	
 	lupdate -pro NixNote2.pro -no-obsolete || die
 	lrelease NixNote2.pro || die
@@ -79,10 +80,13 @@ src_configure() {
 	if use qt4; then
 		eqmake4 NixNote2.pro
 
-		if use plugins; then
+		if use hunspell; then
 			cd ${S}/plugins/hunspell
 			eqmake4 Hunspell.pro
 	
+			cd ${S}
+		fi
+		if use webcam; then
 			cd ${S}/plugins/webcam
 			eqmake4 WebCam.pro
 
@@ -92,10 +96,13 @@ src_configure() {
 	if use qt5; then
 		eqmake5 NixNote2.pro
 		
-		if use plugins; then
+		if use hunspell; then
 			cd ${S}/plugins/hunspell
 			eqmake5 Hunspell.pro
 
+			cd ${S}
+		fi
+		if use webcam; then
 			cd ${S}/plugins/webcam
 			eqmake5 WebCam.pro
 
@@ -107,10 +114,13 @@ src_configure() {
 src_compile() {
 	emake || die "build Nixnote failed"
 
-	if use plugins; then
+	if use hunspell; then
 		cd ${S}/plugins/hunspell
 		emake || die "plugin Hunspell build failed"
 
+		cd ${S}
+	fi
+	if use webcam; then
 		cd ${S}/plugins/webcam
 		emake || die "plugin WebCam build failed"
 		
@@ -124,10 +134,14 @@ src_install() {
 
 	rm -r ${D}/usr/share/nixnote2/translations/*.ts
 	
-	if use plugins; then
+	if use hunspell; then
 		insinto /usr/share/nixnote2/plugins
-		doins plugins/libhunspellplugin.so plugins/libwebcamplugin.so
+		doins plugins/libhunspellplugin.so
 		fperms 0755 /usr/share/nixnote2/plugins/libhunspellplugin.so
+	fi
+	if use webcam; then
+		insinto /usr/share/nixnote2/plugins
+		doins plugins/libwebcamplugin.so
 		fperms 0755 /usr/share/nixnote2/plugins/libwebcamplugin.so
 	fi
 	dobin nixnote2
