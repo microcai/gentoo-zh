@@ -73,6 +73,7 @@ app-editors/uex 2.1.0.5: Ultra Editor for Linux
 app-editors/visual-studio-code 1.7.1: Multiplatform Visual Studio Code from Microsoft
 app-emulation/docker-swarm 1.2.5: A Docker-native clustering system
 app-emulation/skyeye 1.3.4_pre20120521 9999: an ARM embedded hardware simulator
+app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1: The kbd keymap for Programmer Dvorak.
 app-i18n/fbterm-ucimf 0.2.3 0.2.5 0.2.6 0.2.7 0.2.8 0.2.9: UCIMF input method support for FbTerm
 app-i18n/fcitx 4.2.9.1 9999: Flexible Context-aware Input Tool with eXtension
@@ -329,17 +330,12 @@ net-im/cliofetion 2.1.0 2.2.0 9999: A command-line version of openfetion
 net-im/cutegram 2.7.0: A different telegram client from Aseman team forked from Sigram by Sialan Labs.
 net-im/emesene 9999-r3: Platform independent MSN Messenger client written in Python+GTK
 net-im/freetalk 3.2: Console based Jabber client
-net-im/gtkqq 9999: a qq client based on gtk+ uses webqq protocol
-net-im/liblwqq 0.4.2 0.6.1: A Cross Platform WebQQ Protocol
 net-im/libofetion 2.1.0 2.2.0 9999: Free and open source implemention of Fetion library
 net-im/linux-fetion 1.0 1.1 1.2 9999: Linux Fetion, a QT4 IM client using CHINA MOBILE's Fetion Protocol
-net-im/myqq3 9999: A portable open source qq CLI client
 net-im/openfetion 2.1.0 2.1.0-r1 2.2.1 2.2.2 9999: Free and open source implementation of Fetion client based on GTK+2
 net-im/qipmsg 1.0.0: An open-source Qt4 implementation of IP Messenger for linux.
-net-im/qtqq 0.8.2: Tencent QQ written in Qt
 net-im/telegram-desktop 0.8.50: Desktop client of Telegram, the messaging app.
 net-im/telegram-purple 1.3.0 9999: Libpurple (Pidgin) plugin for using a Telegram account
-net-im/wineqq 20140102 20151109: Tencent QQ for Linux by longine
 net-libs/jzmq 9999: jzmq
 net-misc/TelegramQML 0.9.1: Telegram API tools for QtQML and Qml
 net-misc/WeCase 0.06_beta8 9999: A Sina Weibo Client Focusing on Linux.
