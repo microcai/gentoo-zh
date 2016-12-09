@@ -3,6 +3,7 @@
 # * generated automatically using pmaint *
 
 app-antivirus/bitdefender-scanner:gtk - Enable the graphical user interface based on x11-libs/gtk+
+app-emulation/crossover-bin:capi - Enable ISDN support via CAPI
 app-emulation/winetricks-zh:rar - Pull in app-arch/unrar for extraction of rar-compressed game files
 app-i18n/fcitx:32bit - For amd64-multilib, installs the 32-it im modules.
 app-i18n/fcitx:autostart - Enable xdg autostart desktop file installion
