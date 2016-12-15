@@ -19,7 +19,7 @@ IUSE=""
 
 DEPEND=">dev-libs/botan-1.10[threads]
 	dev-libs/libappindicator:2
-	>=dev-qt/libQtShadowsocks-1.9.0
+	>=dev-qt/libQtShadowsocks-1.10.0
 	dev-qt/qtconcurrent
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
