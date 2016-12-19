@@ -163,7 +163,7 @@ app-text/srecite 0.6.2: Smart Reciting
 app-text/stardict 3.0.4: A GNOME2 international dictionary supporting fuzzy and glob style matching
 app-text/tianya-radar 0.2: 天涯小说搜索神器
 app-text/txtreader 0.6.5: Txt Reader for linux（小说阅读器 for linux）,and it supports windows too.
-app-text/wiznote 2.1.14 9999: WizNote lets you capture anything you might to remember: create text notes, clip content from the web, snap photos and have all of these notes avaliable you on any device.
+app-text/wiznote 2.1.14 2.4.0 9999: WizNote lets you capture anything you might to remember: create text notes, clip content from the web, snap photos and have all of these notes avaliable you on any device.
 app-text/xdvipdfmx 9999: Extended xdvi for use with XeTeX and other unicode TeXs.
 app-vim/clang_complete 1.8: vim plugin: use clang for completing C/C++ code.
 app-vim/easymotion 1.3: vim plugin: Vim motions on speed!

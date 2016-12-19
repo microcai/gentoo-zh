@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtwebkit:4 dev-vcs/git sys-devel/make >=dev-util/cmake-2.8.12
+DEPEND=dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwebkit:5 dev-qt/qtwidgets:5 dev-qt/qtxml:5 dev-qt/qtnetwork:5 dev-qt/qtprintsupport:5 dev-qt/qtwebsockets:5 >=dev-qt/qtwebengine-5.7[widgets] dev-vcs/git sys-devel/make >=dev-util/cmake-2.8.12
 DESCRIPTION=WizNote lets you capture anything you might to remember: create text notes, clip content from the web, snap photos and have all of these notes avaliable you on any device.
 EAPI=5
 HOMEPAGE=http://www.wiz.cn/index.html
 LICENSE=GPL-3
-RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtwebkit:4
+RDEPEND=dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwebkit:5 dev-qt/qtwidgets:5 dev-qt/qtxml:5 dev-qt/qtnetwork:5 dev-qt/qtprintsupport:5 dev-qt/qtwebsockets:5 >=dev-qt/qtwebengine-5.7[widgets]
 SLOT=0
 _eclass_exported_funcs=src_unpack:git-2 src_prepare:cmake-utils src_configure:cmake-utils src_compile:cmake-utils src_test:cmake-utils src_install:cmake-utils
 _eclasses_=cmake-utils	16e40479aefbbed67ea20779992ab90e	eutils	b83a2420b796f7c6eff682679d08fe25	flag-o-matic	7366202dd55cb8f018f5d450d54e7749	git-2	7af5d170bfc02983b4bcd3167dc5edd4	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=0aa34090550e6f02c24a663b7027c9c4
+_md5_=a4debeb86fb09bc9185f5e0e3c26d806
