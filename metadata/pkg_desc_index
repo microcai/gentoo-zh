@@ -124,7 +124,7 @@ app-i18n/scim-chewing 0.3.1 0.3.2 0.3.3 0.3.4 9999: Chewing Input Method for SCI
 app-i18n/scim-chrasis 9999.0.0.1: Chrasis SCIM binding for chinese character recognition.
 app-i18n/scim-googlepinyin 9999: An SCIM port of android Google Pinyin IME
 app-i18n/sogoupinyin 1.2.0.0042 1.2.0.0048 1.2.0.0056 2.0.0.0066 2.0.0.0082: Sogou Pinyin input method.
-app-i18n/sunpinyin 9999: A statistical language model based Chinese input method library
+app-i18n/sunpinyin 3.0.0_rc1 9999: A statistical language model based Chinese input method library
 app-i18n/sunpinyin-data 20140820: Data sets for Sunpinyin
 app-i18n/sunpinyin-frontend 9999: IME frontends for Sunpinyin
 app-i18n/ucimf-chewing 0.3: The Chewing IMF module for UCIMF
