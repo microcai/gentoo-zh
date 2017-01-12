@@ -71,7 +71,7 @@ app-editors/sublime-text 3_beta3126: Sublime Text is a sophisticated text editor
 app-editors/texworks 9999-r3: An environment for authoring TeX (LaTeX, ConTeXt, etc) documentsfor casual and non-technical users.
 app-editors/uex 2.1.0.5: Ultra Editor for Linux
 app-editors/visual-studio-code 1.7.1: Multiplatform Visual Studio Code from Microsoft
-app-emulation/crossover-bin 15.3.1: Commercial version of app-emulation/wine with paid support.
+app-emulation/crossover-bin 16.0.0: Commercial version of app-emulation/wine with paid support.
 app-emulation/docker-swarm 1.2.5: A Docker-native clustering system
 app-emulation/skyeye 1.3.4_pre20120521 9999: an ARM embedded hardware simulator
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
