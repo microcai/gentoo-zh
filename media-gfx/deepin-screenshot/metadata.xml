@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>graphics</herd>
+	<maintainer>
+		<email>atenzd@gmail.com</email>
+		<name>Aten Zhang</name>
+	</maintainer>
+	<longdescription lang="en">
+		Snapshot tools for linux deepin.
+	</longdescription>
+</pkgmetadata>
+
