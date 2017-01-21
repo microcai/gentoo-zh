@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=graphviz? ( media-gfx/graphviz ) latex? ( virtual/latex-base app-text/dvipng ) screenshot? ( media-gfx/scrot ) spell? ( dev-python/gtkspell-python ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) || ( =dev-lang/python-2.7*[sqlite] =dev-lang/python-2.6*[sqlite] =dev-lang/python-2.5*[sqlite] )
 SLOT=0
 _eclass_exported_funcs=pkg_postrm:- pkg_postinst:- pkg_setup:- src_unpack:bzr src_prepare:- src_compile:distutils src_test:- src_install:-
-_eclasses_=bzr	745bed5705ae699c707ba26ca9e8929a	distutils	ad9e4720eb3e69090dd968b152fc611b	eutils	017377e73405d964cd0137088cddb9c3	fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	multilib	165fc17c38d1b11dac2008280dab6e80	python	efc1c55fc44c5b7272fc2ffba73c3e6f	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	virtualx	86c9305a59b3e0459e7fbef3a5f30b96
+_eclasses_=bzr	5272f165267e987795a8e13fd8f42f4f	distutils	ad9e4720eb3e69090dd968b152fc611b	eutils	017377e73405d964cd0137088cddb9c3	fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	multilib	165fc17c38d1b11dac2008280dab6e80	python	efc1c55fc44c5b7272fc2ffba73c3e6f	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	virtualx	86c9305a59b3e0459e7fbef3a5f30b96
 _md5_=5e2ac1b5f1cce1f76cafdccac1b78331
