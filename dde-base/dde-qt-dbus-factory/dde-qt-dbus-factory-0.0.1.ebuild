@@ -19,6 +19,7 @@ RDEPEND="dev-qt/qtcore:5
 		 dev-qt/qtdbus:5"
 
 DEPEND="${RDEPEND}
+		dev-qt/qtgui:5
 		dev-lang/python:2.7"
 
 src_prepare() {

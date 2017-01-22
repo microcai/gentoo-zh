@@ -33,12 +33,19 @@ DEPEND="${RDEPEND}
 	     "
 
 src_prepare() {
-		sed -i "s|dtkbase-0-2\ dtkwidget-0-2|dtkbase\ dtkwidget|g" dde-file-manager-lib/dde-file-manager-lib.pro
-		sed -i "s|dtkbase-0-2\ dtkutil-0-2\ dtkwidget-0-2|dtkbase\ dtkutil\ dtkwidget|g" dde-file-manager/dde-file-manager.pro
-		sed -i "s|dtkbase-0-2\ dtkutil-0-2|dtkbase\ dtkutil|g" dde-file-manager-daemon/dde-file-manager-daemon.pro
+		sed -i "s|-0-2||g" dde-file-manager*/dde-file-manager*.pro
 		eqmake5	PREFIX=/usr
 }
 
 src_install() {
 		emake INSTALL_ROOT=${D} install
+		dobin ${FILESDIR}/dfmterm 
+		dobin ${FILESDIR}/x-terminal-emulator
+}
+
+pkg_postinst() {
+	einfo "${PN} needs x-terminal-emulator command to make OpenInTermial"
+	einfo "function work. A command dfmterm is added to generate it. For"
+	einfo "example, use 'dfmterm xterm' to set xterm as the terminal when"
+	einfo "click 'Open In Terminal'"
 }
