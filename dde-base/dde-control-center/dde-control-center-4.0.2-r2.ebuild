@@ -17,6 +17,7 @@ IUSE=""
 
 RDEPEND="x11-libs/gtk+:2
 		 dev-qt/qtsvg:5
+        dev-qt/qtsql:5
 		 dev-qt/qtx11extras:5
 		 dev-qt/qtdeclarative:5
 		 dev-qt/qtmultimedia:5
