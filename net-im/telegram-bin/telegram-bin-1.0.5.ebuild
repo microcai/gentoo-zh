@@ -11,12 +11,11 @@ HOMEPAGE="https://telegram.org/"
 
 SRC_URI="
 	amd64? ( https://updates.tdesktop.com/tlinux/tsetup.${PV}.tar.xz )
-	x86? ( https://updates.tdesktop.com/tlinux32/tsetup32.${PV}.tar.xz )
 "
 
 LICENSE="GPLv3"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 RESTRICT="strip mirror"
