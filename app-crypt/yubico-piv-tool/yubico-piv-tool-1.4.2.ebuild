@@ -12,7 +12,6 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 RESTRICT="mirror"
-#DEPEND="dev-util/gtk-doc"
-
-#inherit autotools
-#flag-o-matic
+DEPEND="sys-apps/pcsc-lite
+        dev-libs/openssl"
+RDEPEND="${DEPEND}"
