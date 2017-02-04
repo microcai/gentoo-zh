@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI=5
 
 MY_P="${PN}-gtk2-${PV}"
 DESCRIPTION="GeMan X is a branch of PCMan X."
