@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
 EGIT_REPO_URI="https://code.google.com/p/ioping/"
 inherit git-2
 
