@@ -2,13 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI=5
 
 inherit autotools eutils
 
 DESCRIPTION="Console based Jabber client"
 HOMEPAGE="http://www.gnu.org/software/freetalk/"
-SRC_URI="http://savannah.gnu.org/download/${PN}/${P}.tar.gz"
+SRC_URI="http://ftp.gnu.org/gnu/freetalk/freetalk-${PV}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
