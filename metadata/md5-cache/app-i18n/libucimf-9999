@@ -1,13 +1,13 @@
-DEFINED_PHASES=configure install preinst prepare setup unpack
+DEFINED_PHASES=install preinst prepare setup unpack
 DEPEND=media-libs/freetype:2 media-libs/fontconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
 DESCRIPTION=Unicode Console InputMethod Framework
-EAPI=4
+EAPI=5
 HOMEPAGE=http://ucimf.googlecode.com
 IUSE=debug doc
 LICENSE=GPL-2
 RDEPEND=media-libs/freetype:2 media-libs/fontconfig dev-util/dialog
 SLOT=0
 SRC_URI=http://ucimf.googlecode.com/files/UserManual.pdf
-_eclass_exported_funcs=pkg_preinst:subversion pkg_setup:- src_unpack:subversion src_prepare:- src_configure:- src_install:-
+_eclass_exported_funcs=pkg_preinst:subversion pkg_setup:- src_unpack:subversion src_prepare:- src_install:-
 _eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	ea170b525f6a38a006be05c9d9429f13	libtool	4890219c51da247200223277f993e054	multilib	165fc17c38d1b11dac2008280dab6e80	subversion	750f91bd0705a41b26ba01bcee93aaad	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=94b0735eb56a512053df9017dc8136fd
+_md5_=27771aab4839b8c0cabce9d83e8a5bc8

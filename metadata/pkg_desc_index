@@ -106,12 +106,9 @@ app-i18n/jfbterm 0.4.7-r4: The J Framebuffer Terminal/Multilingual Enhancement w
 app-i18n/libgooglepinyin 0.1.2: A fork from google pinyin on android
 app-i18n/libpinyin 1.0.0: Library to deal with Pinyin.
 app-i18n/librime 1.1-r1 9999: Rime Input Method Engine library
-app-i18n/libucimf 2.2.8-r1 2.2.9.1 2.3.1 2.3.5 2.3.7 2.3.8 9999: Unicode Console InputMethod Framework
+app-i18n/libucimf 2.3.8 9999: Unicode Console InputMethod Framework
 app-i18n/lunar 2.2-r4: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
-app-i18n/openvanilla-modules 0.8.0.13 0.8.0.14 0.9.0_alpha1 0.9.0_alpha2 0.9.0_alpha3 0.9.0_alpha4 0.9.1: Input methods modules and tables for OpenVanilla Input Method Framework
-app-i18n/oxim 1.4.1 1.4.4: Chinese Open X Input Method Developed by Firefly
-app-i18n/oxim-setup 1.2.2 1.4.0 1.4.1 1.4.4: OXIM setup tool
 app-i18n/rime-data 0.32 9999: Brise, data resource for Rime Input Method Engine
 app-i18n/scim-array 1.0.0 1.0.1: Array Input Method for SCIM
 app-i18n/scim-chewing 0.3.1 0.3.2 0.3.3 0.3.4 9999: Chewing Input Method for SCIM

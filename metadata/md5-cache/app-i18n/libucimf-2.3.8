@@ -1,15 +1,15 @@
-DEFINED_PHASES=configure install prepare
-DEPEND=media-libs/freetype:2 media-libs/fontconfig
+DEFINED_PHASES=install prepare
+DEPEND=media-libs/freetype:2 media-libs/fontconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Unicode Console InputMethod Framework
-EAPI=4
+EAPI=5
 HOMEPAGE=http://ucimf.googlecode.com
-IUSE=doc debug sunpinyin chewing openvanilla
+IUSE=doc sunpinyin chewing openvanilla
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 PDEPEND=sunpinyin? ( app-i18n/ucimf-sunpinyin ) chewing? ( app-i18n/ucimf-chewing ) openvanilla? ( app-i18n/ucimf-openvanilla )
 RDEPEND=media-libs/freetype:2 media-libs/fontconfig dev-util/dialog
 SLOT=0
 SRC_URI=http://ucimf.googlecode.com/files/libucimf-2.3.8.tar.gz doc? ( http://ucimf.googlecode.com/files/UserManual.pdf )
-_eclass_exported_funcs=src_prepare:- src_configure:- src_install:-
-_eclasses_=eutils	ea170b525f6a38a006be05c9d9429f13	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=ea67d8ae4b7d78bf6d221bf9622ca9a8
+_eclass_exported_funcs=src_prepare:- src_install:-
+_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	ea170b525f6a38a006be05c9d9429f13	libtool	4890219c51da247200223277f993e054	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_md5_=332c495e1f50e97cbbfbc95b06df72d0
