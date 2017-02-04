@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI=5
 
 inherit eutils fdo-mime versionator
 
@@ -10,12 +10,12 @@ MY_PV1=$(get_major_version)
 MY_PV2=$(get_version_component_range 1-2)
 
 DESCRIPTION="A free PDF document viewer, featuring small size, quick startup, and fast page rendering"
-HOMEPAGE="http://www.foxitsoftware.com/pdf/desklinux/"
-SRC_URI="http://cdn04.foxitsoftware.com/pub/foxit/reader/desktop/linux/${MY_PV1}.x/${MY_PV2}/enu/FoxitReader-${PV}.tar.bz2"
+HOMEPAGE="https://www.foxitsoftware.cn/downloads/"
+SRC_URI="http://cdn07.foxitsoftware.cn/pub/foxit/reader/desktop/linux/2.x/2.3/en_us/FoxitReader${PV}_Server_x64_enu_Setup.run.tar.gz"
 
 LICENSE="${PN}"
 SLOT="0"
-KEYWORDS="amd64 x86 -*"
+KEYWORDS="amd64 -*"
 IUSE=""
 MY_LANGS="de fr ja zh_CN zh_TW"
 for MY_LANG in ${MY_LANGS} ; do
@@ -23,13 +23,13 @@ for MY_LANG in ${MY_LANGS} ; do
 done
 
 RDEPEND="
-	dev-libs/atk[abi_x86_32]
-		dev-libs/glib:2[abi_x86_32]
-		media-libs/freetype:2[abi_x86_32]
+	dev-libs/atk
+		dev-libs/glib:2
+		media-libs/freetype:2
 		net-print/cups
-		x11-libs/cairo[abi_x86_32]
-		x11-libs/gtk+:2[abi_x86_32]
-		x11-libs/pango[abi_x86_32]
+		x11-libs/cairo
+		x11-libs/gtk+:2
+		x11-libs/pango
 "
 
 S=${WORKDIR}/${MY_PV2}-release
