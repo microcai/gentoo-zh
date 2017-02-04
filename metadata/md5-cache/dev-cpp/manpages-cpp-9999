@@ -1,12 +1,12 @@
-DEFINED_PHASES=compile install postinst postrm prepare unpack
+DEFINED_PHASES=compile install postinst postrm prepare setup unpack
 DEPEND=dev-python/setuptools =dev-lang/python-2* dev-vcs/git
 DESCRIPTION=Generates C++ man pages from cplusplus.com
-EAPI=3
+EAPI=5
 HOMEPAGE=https://github.com/Aitjcize/cppman/
 KEYWORDS=~amd64 ~x86 ~arm
 LICENSE=GPL-3
 RDEPEND=dev-python/sqlite3dbm sys-apps/groff =dev-lang/python-2*
 SLOT=0
-_eclass_exported_funcs=pkg_postrm:distutils pkg_postinst:distutils src_unpack:git-2 src_prepare:distutils src_compile:- src_install:-
+_eclass_exported_funcs=pkg_postrm:distutils pkg_postinst:distutils pkg_setup:python src_unpack:git-2 src_prepare:distutils src_compile:- src_install:-
 _eclasses_=distutils	ad9e4720eb3e69090dd968b152fc611b	git-2	7af5d170bfc02983b4bcd3167dc5edd4	multilib	165fc17c38d1b11dac2008280dab6e80	python	efc1c55fc44c5b7272fc2ffba73c3e6f	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=955fa67354ec233e2e58d3c777e46b4f
+_md5_=f8d9cf457f3ddb3c02d1837582b1ac9a

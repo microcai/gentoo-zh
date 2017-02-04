@@ -24,10 +24,6 @@ app-i18n/ibus:gtk3 - Enable support for gtk+3
 app-i18n/ibus:introspection - Use dev-libs/gobject-introspection for introspection
 app-i18n/ibus:vala - Enable support for dev-lang/vala
 app-i18n/ibus-gjs:debug - Enable maintainer mode
-app-i18n/mozc:fcitx - Enable support for app-i18n/fcitx
-app-i18n/mozc:ibus - Enable support for app-i18n/ibus
-app-i18n/mozc:renderer - Enable native candidate window.
-app-i18n/mozc:scim - Enable support for app-i18n/scim
 app-misc/nixnote:hunspell - Enable spellchecking plugin using app-text/hunspell
 app-misc/nixnote:opencv3 - Use media-libs/opencv:0/3.0 for WebCam instead media-libs/opencv:0/2.4
 app-misc/nixnote:webcam - Enable WebCam plugin
@@ -82,12 +78,6 @@ media-sound/deadbeef:supereq - Equalizer based on Super EQ library by Naoki Shib
 media-sound/deadbeef:tta - TTA player plugin
 media-sound/deadbeef:vtx - vtx file player (ay8910/12 emulation)
 media-sound/deadbeef:zip - zip archive support
-media-tv/gmlive:extra - Enable support for PPLive and PPS IPTV
-media-tv/gmlive:sopcast - Enable support for media-tv/sopcast
-media-tv/gmlive:totem - Enable totem plugin support
-media-tv/gmlive-extra:pplive - Enable support for PPLive P2P IPTV
-media-tv/gmlive-extra:pps - Enable support for PPS P2P IPTV
-media-tv/gmlive-extra:sopcast - Enable support for SopCast P2P IPTV
 media-video/simplescreenrecorder:vpx - Enables vp8 codec support using libvpx from ffmpeg/libav
 net-dns/dnsmasq:dhcp - Enable support for reading ISC DHCPd lease files
 net-dns/dnsmasq:tftp - Enables built in TFTP server for netbooting
@@ -126,7 +116,3 @@ sys-apps/kmscon:pixman - Enable pixman font rendering
 sys-devel/gdb:multitarget - Support all known targets in one gdb binary
 x11-wm/compiz:fuse - Enables support for the filesystem in userspace plugin through sys-fs/fuse.
 x11-wm/compiz:kde - Compile the kde4 window decorator and add support for kde-base/kdebase-startkde.
-x11-wm/xmonad:default-term - Pull terminal specified in default xmonad config to be a bit less hostile by default.
-x11-wm/xmonad:icccm - fix WM_TAKE_FOCUS protocol. Option is disable by default, for details see http://code.google.com/p/xmonad/issues/detail?id=177#c33
-x11-wm/xmonad:pass-focus-click - Apply patches that add option to allow focusing click to be also passed to window it focuses. Option is disabled by default, for details see http://code.google.com/p/xmonad/issues/detail?id=225
-x11-wm/xmonad-contrib:icccwm-focus - fix WM_TAKE_FOCUS protocol. Option is disable by default, for details see http://code.google.com/p/xmonad/issues/detail?id=177
