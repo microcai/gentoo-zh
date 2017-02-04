@@ -2,10 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI=5
 
 ESVN_REPO_URI="http://ucimf.googlecode.com/svn/trunk/${PN}"
-inherit autotools eutils subversion
+inherit eutils autotools subversion
 
 DESCRIPTION="Unicode Console InputMethod Framework"
 HOMEPAGE="http://ucimf.googlecode.com"
@@ -27,10 +27,6 @@ pkg_setup() {
 
 src_prepare() {
 	eautoreconf
-}
-
-src_configure() {
-	econf $(use_enable debug)
 }
 
 src_install() {
