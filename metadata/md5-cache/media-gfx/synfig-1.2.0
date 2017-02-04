@@ -1,14 +1,14 @@
 DEFINED_PHASES=configure install prepare
 DEPEND=>=dev-libs/libsigc++-2.0.0 >=dev-cpp/libxmlpp-2.6.1 media-libs/libpng >=dev-cpp/ETL-0.04.15 ffmpeg? ( virtual/ffmpeg ) openexr? ( media-libs/openexr ) truetype? ( media-libs/freetype ) fontconfig? ( media-libs/fontconfig ) jpeg? ( virtual/jpeg ) tiff? ( media-libs/tiff )
 DESCRIPTION=Film-Quality Vector Animation (core engine)
-EAPI=2
+EAPI=5
 HOMEPAGE=http://www.synfig.org/
 IUSE=+imagemagick +ffmpeg dv +openexr +truetype +jpeg +tiff +fontconfig
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/libsigc++-2.0.0 >=dev-cpp/libxmlpp-2.6.1 media-libs/libpng >=dev-cpp/ETL-0.04.15 ffmpeg? ( virtual/ffmpeg ) openexr? ( media-libs/openexr ) truetype? ( media-libs/freetype ) fontconfig? ( media-libs/fontconfig ) jpeg? ( virtual/jpeg ) tiff? ( media-libs/tiff ) dv? ( media-libs/libdv ) imagemagick? ( media-gfx/imagemagick )
 SLOT=0
-SRC_URI=mirror://sourceforge/synfig/synfig-0.63.05.tar.gz
+SRC_URI=mirror://sourceforge/synfig/synfig-1.2.0.tar.gz
 _eclass_exported_funcs=src_prepare:- src_configure:- src_install:-
 _eclasses_=eutils	ea170b525f6a38a006be05c9d9429f13	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=e58a859bbcf8883f76c77048d9218886
+_md5_=1e0154a32f4916ca7af4a84e5957d616
