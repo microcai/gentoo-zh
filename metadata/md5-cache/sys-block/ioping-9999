@@ -1,11 +1,11 @@
 DEFINED_PHASES=install unpack
 DEPEND=dev-vcs/git
 DESCRIPTION=simple disk I/0 latency measuring tool
-EAPI=3
+EAPI=5
 HOMEPAGE=http://code.google.com/p/ioping/
 KEYWORDS=~x86
 LICENSE=GPL-2
 SLOT=0
 _eclass_exported_funcs=src_unpack:git-2 src_install:-
 _eclasses_=git-2	7af5d170bfc02983b4bcd3167dc5edd4
-_md5_=4955278bb8bc0ae2b9fe42979197d550
+_md5_=053ac9e0d809878e545829b25870e950

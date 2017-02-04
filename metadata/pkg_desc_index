@@ -7,7 +7,6 @@ app-arch/live-boot 9999: Debian Live - System Build Scripts
 app-arch/live-build 9999: Debian Live - System Build Scripts
 app-arch/p7zip-nsis 0.4-r1: A binary version of p7zip to decompress nsis. Lastest version of p7zip doesn't decompress some nsis.
 app-arch/unzip 6.10_beta: unzipper for pkzip-compressed files
-app-book/git-magic 9999: A guild to Git
 app-crypt/etoken-sac 8.1.0.4: SafeNet (Aladdin) eToken Middleware for eTokenPRO, eTokenNG OTP, eTokenNG Flash, eToken Pro (Java)
 app-crypt/yubico-piv-tool 1.4.2: The Yubico PIV Tool allows you to configure a PIV-enabled YubiKey through a command line interface.
 app-crypt/yubikey-piv-manager 1.4.0: The YubiKey PIV Manager enables you to configure a PIV-enabled YubiKey through a graphical user interface.
@@ -65,7 +64,6 @@ app-dicts/stardict-xdict-en-zh-big5 2.4.2: Stardict Dictionary English to Tradit
 app-dicts/stardict-xdict-en-zh-gb 2.4.2: Stardict Dictionary English to Simplified Chinese (GB)
 app-dicts/stardict-xdict-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
 app-dicts/stardict-xdict-zh-en-gb 2.4.2: Stardict Dictionary Simplified Chinese (GB) to English
-app-doc/doxygen 1.7.1: documentation system for C++, C, Java, Objective-C, Python, IDL, and other languages
 app-editors/marketo 9999: A note-taking KDE application with the power of lightweight markup language
 app-editors/sublime-text 3_beta3126: Sublime Text is a sophisticated text editor for code, html and prose
 app-editors/texworks 9999-r3: An environment for authoring TeX (LaTeX, ConTeXt, etc) documentsfor casual and non-technical users.
@@ -162,7 +160,6 @@ app-text/reciteword-skins-rw_en 0.8.2: Reciteword's rw_en skin.
 app-text/srecite 0.6.2: Smart Reciting
 app-text/stardict 3.0.4: A GNOME2 international dictionary supporting fuzzy and glob style matching
 app-text/tianya-radar 0.2: 天涯小说搜索神器
-app-text/txtreader 0.6.5: Txt Reader for linux（小说阅读器 for linux）,and it supports windows too.
 app-text/wiznote 2.1.14 2.4.0 9999: WizNote lets you capture anything you might to remember: create text notes, clip content from the web, snap photos and have all of these notes avaliable you on any device.
 app-text/xdvipdfmx 9999: Extended xdvi for use with XeTeX and other unicode TeXs.
 app-vim/clang_complete 1.8: vim plugin: use clang for completing C/C++ code.
@@ -197,7 +194,6 @@ dev-erlang/uuid 0.5.0 9999: This module implements UUID v1, v3, v4, and v5 as of
 dev-libs/dbus-c++ 9999: dbus-c++ attempts to provide a C++ API for D-BUS.
 dev-libs/dtk-widget 0.5.20130617042230: Deepin widget of Chinese Lunar library
 dev-libs/libappindicator 12.10.0-r200: A library to allow applications to export a menu into the Unity Menu bar
-dev-libs/libchewing 0.3.5 9999: Library for Chinese Phonetic input method
 dev-libs/libchrasis 9999.0.1.1: Library for Chinese Character Recognition As-Is
 dev-libs/libdwarf 20140208: Library to deal with DWARF Debugging Information Format
 dev-libs/libmdcpp 9999: implementation of the Markdown markup language in CPP (library)
@@ -207,8 +203,6 @@ dev-libs/lunar-date 2.4.0: Chinese Lunar Library
 dev-libs/thrift 0.9.1: Lightweight, language-independent software stack with associated code generation mechanism for RPC
 dev-lisp/buildapp 1.5.6: Create executables with SBCL
 dev-php/pecl-solr 2.3.0 2.4.0: Solr client
-dev-php/phc 0.3.0.1: The open source php compiler
-dev-php/phpsh 0.0.1: An interactive shell for php
 dev-python/dnslib 9999: A simple library to encode/decode DNS wire-format packets.
 dev-python/dtk-widget 0.5.20130617042230: Deepin widget of Chinese Lunar library
 dev-python/evernote-sdk-python 9999: Evernote SDK for Python
@@ -254,7 +248,6 @@ games-arcade/stepmania 5.9999: Stepmania 5 sm-ssc branch
 games-board/othello 0.2.0 0.2.1: Othello is a classic strategy game, also known as Reversi
 games-misc/fortune-mod-zh 1.2.2: Chinese fortune shell script
 games-misc/llk_linux 2.3_beta1-r1: llk for linux
-games-puzzle/limbo 0: Limbo
 games-strategy/total-annihilation 3.1: Total Annihilation
 gnome-extra/docky 9999: Docky is a full fledged dock application that makes opening common applications and managing windows easier and quicker.
 gnome-extra/gdmap 0.8.1-r1: GTK+ disk space visualizer
@@ -262,7 +255,6 @@ gnome-extra/gnome-hdaps-applet 20081204: Gnome applet displaying the hard disk p
 gnome-extra/gnome-osd 0.12.2: Gnome OSD notification system
 gnome-extra/lunar-applet 1.6 2.0 2.20.3: The GNOME panel
 gnome-extra/nautilus-setup-background 0.1: A nautilus extension for setup background
-gnome-extra/nautilus-terminal 1.0: Nautilus Terminal is a terminal embedded in Nautilus
 gnome-extra/proxy_applet 0.2: GNOME applet for changing network proxy configuration from gnome panel
 kde-misc/imageshack-upload 0.5: A service menu tor upload images on Imageshack.
 kde-misc/plasma-applet-netspeed-widget 1.3 9999: Plasma 5 widget that displays the currently used network bandwidth.
@@ -317,7 +309,6 @@ media-video/bilibili-player 0.45 9999: bilibili 弹幕播放器 for Linux
 media-video/kvideoencoder 0.08_rc2: KVideoEncoder is a GUI for mencoder and transcode
 media-video/lightworks 11.5 11.5.1: Lightworks is the fastest, most accessible and focused NLE in the industry
 media-video/simplescreenrecorder 0.3.3-r1 9999: A Simple Screen Recorder
-media-video/umplayer 0.95: UMPlayer is cross-platform and installer packages are available for the Windows, Mac and GNU / Linux operating systems. It is completely free to use and distribute so feel free to share UMPlayer with all your friends.
 net-dialup/mentohust 9999: A Ruijie and Cernet supplicant on Linux and MacOS
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
 net-dns/dnscrypt-proxy 9999: A tool for securing communications between a client and a DNS resolver
@@ -367,7 +358,6 @@ net-print/cnijfilter 3.80: Canon InkJet Printer Driver for Linux (Pixus/Pixma-Se
 net-print/cnijfilter-drivers 3.20 3.40 3.60 3.70 3.80: Canon InkJet Printer Driver for Linux (Pixus/Pixma-Series).
 net-print/cups-tsc 0.1.26: The driver of TSC printers for Linux and CUPS
 net-print/hplip-plugin 3.14.1: Binary plugin for HPs hplip printer driver library
-net-proxy/autoproxy 1.4.0: Forward/transparent proxy server that route destinations based on URLs
 net-proxy/goagent 3.2.2 9999: A GAE proxy forked from gappproxy/wallproxy
 net-proxy/lantern-bin 2.0.13 2.0.16 2.2.4 3.0.4: A free desktop application that delivers fast, reliable and secure access to the open Internet for users in censored regions.
 net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
@@ -400,7 +390,6 @@ sys-block/ioping 9999: simple disk I/0 latency measuring tool
 sys-boot/grub-efi 0.97-r84: GNU GRUB Legacy boot loader
 sys-boot/gummiboot 48: Simple UEFI Boot Manager
 sys-cluster/apache-zookeeper 3.3.6: ZooKeeper is a high-performance coordination service for distributed applications.
-sys-devel/crash 5.0.5: Tool to investigate kernel core dumps
 sys-devel/gdb 7.1: GNU debugger
 sys-devel/libabigail 9999: The ABI Generic Analysis and Instrumentation Library
 sys-devel/ucc 1.1: UCC is an ANSI C Compiler
@@ -455,7 +444,6 @@ x11-themes/smplayer-themes-nonfree 0.1.0 0.1.1: Icon themes for smplayer
 x11-themes/ubuntu-mono 0.0.45: Dark and Light panel icons to make your desktop beautiful
 x11-wm/9wm 1.1: A window manager emulation of the Plan 9 window manager 8-1/2.
 x11-wm/compiz 0.9.99.20130608170409: OpenGL compositing window manager.
-x11-wm/wmii 9999: A dynamic window manager for X11
 x11-wm/xmonad 9999: A tiling window manager
 x11-wm/xmonad-contrib 9999: Third party extensions for xmonad
 xfce-extra/thunar-dropbox 0.2.0: Plugin for thunar that adds context-menu items for dropbox.
