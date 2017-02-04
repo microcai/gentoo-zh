@@ -2,37 +2,23 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-
-inherit eutils subversion
+EAPI=5
+inherit eutils
 
 DESCRIPTION="Chewing Input Method for SCIM"
 HOMEPAGE="http://chewing.csie.net/"
-#SRC_URI="http://chewing.csie.net/download/scim/${P}.tar.gz"
-
-ESVN_REPO_URI="https://svn.csie.net/chewing/scim-chewing/trunk"
-
+SRC_URI="https://github.com/chewing/scim-chewing/releases/tag/v${PV} -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~amd64"
 IUSE=""
-
-DEPEND=">=app-i18n/scim-1.0.0
-		dev-libs/libchewing"
-
-RDEPEND="${DEPEND}"
-
-src_configure(){
-	eautoreconf || die
-}
-
-src_compile() {
-	emake || die
-}
+RESTRICT="mirror"
+DEPEND=">=app-i18n/scim-1.4
+		>=dev-libs/libchewing-0.5.1"
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
-
-	dodoc AUTHORS THANKS README
+	make DESTDIR="${D}" install || die "make install failed"
+	dodoc AUTHORS README
 }
 
 pkg_postinst() {
@@ -40,7 +26,7 @@ pkg_postinst() {
 	einfo "To use SCIM with both GTK2 and XIM, you should use the following"
 	einfo "in your user startup scripts such as .gnomerc or .xinitrc:"
 	einfo
-	einfo "LC_ALL='your_language' scim -d"
+	einfo "LANG='your_language' scim -d"
 	einfo "export XMODIFIERS=@im=SCIM"
 	einfo
 }
