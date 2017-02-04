@@ -2,13 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="3"
+EAPI=5
 inherit eutils toolchain-funcs flag-o-matic
 
-DESCRIPTION="Another Traditional Chinese IM."
-HOMEPAGE="http://hyperrate.com/dir.php?eid=67"
-SRC_URI="http://www.csie.nctu.edu.tw/~cp76/gcin/download/${P/_/.}.tar.xz
-	chinese-sound? ( http://www.csie.nctu.edu.tw/~cp76/gcin/download/ogg.tgz )"
+DESCRIPTION="HIME Input Method Editor"
+HOMEPAGE="http://hime.luna.com.tw/"
+SRC_URI="http://hime.luna.com.tw/hime-${PV}.tar.xz
+	chinese-sound? ( http://www.csie.nctu.edu.tw/~cp76/hime/download/ogg.tgz )"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -30,8 +30,7 @@ RESTRICT="mirror"
 S=${WORKDIR}/${P/_/.}
 
 src_prepare() {
-	echo "${P}" > ${S}/VERSION.gcin
-	epatch "${FILESDIR}/gcin-2.6.6_qtmoc_fix.patch"
+	echo "${P}" > ${S}/VERSION.hime
 }
 
 src_configure() {
@@ -53,39 +52,15 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 
 	if use filter-nobopomofo ; then
-		insinto /usr/share/pixmaps/gcin
+		insinto /usr/share/pixmaps/hime
 		doins "${FILESDIR}"/nobopomofo/{SS1135_ST,SS1208_DT}.jpg || die
-		exeinto /usr/share/gcin/script
-		doexe "${FILESDIR}"/nobopomofo/gcin-filter-nobopomofo || die
-		doenvd "${FILESDIR}"/nobopomofo/99gcin-filter-nobopomofo || die
+		exeinto /usr/share/hime/script
+		doexe "${FILESDIR}"/nobopomofo/hime-filter-nobopomofo || die
+		doenvd "${FILESDIR}"/nobopomofo/99hime-filter-nobopomofo || die
 	fi
 
 	if use chinese-sound ; then
 		insinto /usr/share/${PN}
 		doins -r "${WORKDIR}"/ogg || die
 	fi
-}
-
-update_gtk_immodules() {
-	local GTK2_CONFDIR="/etc/gtk-2.0"
-	# bug #366889
-	if has_version '>=x11-libs/gtk+-2.22.1-r1:2' || has_multilib_profile ; then
-		GTK2_CONFDIR="${GTK2_CONFDIR}/$(get_abi_CHOST)"
-	fi
-	mkdir -p "${EPREFIX}${GTK2_CONFDIR}"
-
-	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-2.0" ] ; then
-		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0" > "${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
-	fi
-}
-
-pkg_postinst() {
-	use gtk && update_gtk_immodules
-	gnome2_icon_cache_update
-
-}
-
-pkg_postrm() {
-	use gtk && update_gtk_immodules
-	gnome2_icon_cache_update
 }
