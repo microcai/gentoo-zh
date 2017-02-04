@@ -2,15 +2,17 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI=5
 
 WX_GTK_VER=2.8
 
 inherit multilib wxwidgets
 
 DESCRIPTION="The OpenSource wxWidgets Designer, GUI Builder, and RAD Tool."
-HOMEPAGE="http://wxformbuilder.org/"
-SRC_URI="mirror://sourceforge/${PN}/${PN}/${PV}/wxFormBuilder_v${PV}-src.tar.bz2"
+HOMEPAGE="https://github.com/wxFormBuilder/wxFormBuilder"
+SRC_URI="https://github.com/wxFormBuilder/wxFormBuilder/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+
+RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"
