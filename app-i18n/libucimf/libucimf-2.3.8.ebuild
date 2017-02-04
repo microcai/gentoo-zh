@@ -2,8 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
-inherit eutils
+EAPI=5
+inherit eutils autotools
 
 DESCRIPTION="Unicode Console InputMethod Framework"
 HOMEPAGE="http://ucimf.googlecode.com"
@@ -13,7 +13,7 @@ SRC_URI="${HOMEPAGE}/files/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc debug sunpinyin chewing openvanilla"
+IUSE="doc sunpinyin chewing openvanilla"
 
 DEPEND="media-libs/freetype:2 media-libs/fontconfig"
 RDEPEND="${DEPEND}
@@ -24,10 +24,6 @@ PDEPEND="sunpinyin? ( app-i18n/ucimf-sunpinyin )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-unistd.patch
-}
-
-src_configure() {
-	econf $(use_enable debug)
 }
 
 src_install() {
