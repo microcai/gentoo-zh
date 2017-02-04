@@ -437,7 +437,6 @@ x11-misc/gimmie 0.2.8: Gimmie is an experimental panel replacement for the Gnome
 x11-misc/zim 9999: A desktop wiki
 x11-plugins/pidgin-appindicator 0.9: plugin for Pidgin to use SNI protocol to show systray icon in Unity or KDE Plasma-Next
 x11-plugins/pidgin-fetion 0.98.6: Fetion protocol plugin for libpurple
-x11-plugins/pidgin-lwqq 0.1d 0.2d 0.4.1 0.6.1 9999: a pidgin plugin based on lwqq, a excellent safe useful library for webqq protocol
 x11-plugins/pidgin-qq 195 9999: Pidgin QQ2010 PlugIn
 x11-plugins/vicious 2.1.3 9999: Modular widget library for x11-wm/awesome
 x11-terms/cilda 0.9.8: cilda = Cai forked Tilda
