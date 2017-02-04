@@ -2,13 +2,14 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="3"
+EAPI=5
+
 inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Another Traditional Chinese IM."
 HOMEPAGE="http://hyperrate.com/dir.php?eid=67"
-SRC_URI="http://www.csie.nctu.edu.tw/~cp76/gcin/download/${P/_/.}.tar.xz
-	chinese-sound? ( http://www.csie.nctu.edu.tw/~cp76/gcin/download/ogg.tgz )"
+SRC_URI="http://hyperrate.com/gcin-source/gcin-${PV}.tar.xz
+	chinese-sound? ( http://ftp.twaren.net/local-distfiles/gcin/ogg.tgz )"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -23,7 +24,7 @@ DEPEND=">=x11-libs/gtk+-2
 RDEPEND="${DEPEND}
 	chinese-sound? ( media-sound/vorbis-tools[ogg123] )"
 DEPEND="${DEPEND}
-	virtual/pkgconfig
+	dev-util/pkgconfig
 	sys-devel/gettext"
 
 RESTRICT="mirror"
@@ -31,7 +32,7 @@ S=${WORKDIR}/${P/_/.}
 
 src_prepare() {
 	echo "${P}" > ${S}/VERSION.gcin
-	epatch "${FILESDIR}/gcin-2.6.6_qtmoc_fix.patch"
+	#epatch "${FILESDIR}/gcin-2.6.6_qtmoc_fix.patch"
 }
 
 src_configure() {
