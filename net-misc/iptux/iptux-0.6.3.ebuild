@@ -4,15 +4,16 @@
 
 EAPI=5
 
-inherit eutils git-2
+inherit eutils
 
 DESCRIPTION="Iptux is a ipmsg client in linux"
 HOMEPAGE="https://github.com/iptux-src/iptux"
-EGIT_REPO_URI="git://github.com/iptux-src/iptux.git"
+
+SRC_URI="https://github.com/iptux-src/iptux/archive/v${PV}.zip -> ${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="
