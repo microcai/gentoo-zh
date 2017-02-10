@@ -31,13 +31,11 @@ RDEPEND="dev-qt/qtwidgets:5
 		"
 
 DEPEND="${RDEPEND}
-		dde-base/deepin-tool-kit:=
 		x11-libs/xcb-util
 		x11-libs/libxcb
 	    "
 
 src_prepare() {
-	sed -i "s|image/|/usr/share/${PN}/image/|g" main.cpp
 	sed -i "s|qApp->applicationDirPath()|\"/usr/share/${PN}\"|g" main_window.cpp
 	sed -i "s|qApp->applicationDirPath()|\"/usr/share/${PN}\"|g" record_process.cpp
 	eqmake5
