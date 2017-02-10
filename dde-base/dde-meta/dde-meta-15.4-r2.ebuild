@@ -11,7 +11,7 @@ SRC_URI=""
 LICENSE="metapackage"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="+policykit"
 
 RDEPEND=">=dde-base/dde-control-center-4.0.0
 		dde-base/startdde
@@ -23,5 +23,6 @@ RDEPEND=">=dde-base/dde-control-center-4.0.0
 		dde-base/dde-session-ui
 		dde-base/deepin-notifications
 		>=x11-wm/deepin-wm-1.9.0
+		policykit? ( dde-base/dde-polkit-agent )
 		"
 
