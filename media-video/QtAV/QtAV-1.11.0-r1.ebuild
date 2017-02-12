@@ -22,7 +22,7 @@ DEPEND="
 	media-libs/libass
 	dev-util/desktop-file-utils
 	dev-qt/qtdeclarative:5
-	dev-libs/uchardet
+	|| ( dev-libs/uchardet app-i18n/uchardet )
 	x11-libs/libXv
 	"
 

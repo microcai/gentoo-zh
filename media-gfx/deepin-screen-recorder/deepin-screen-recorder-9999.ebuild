@@ -7,7 +7,7 @@ EAPI=5
 inherit qmake-utils
 
 DESCRIPTION="Deepin Screencasting Application"
-HOMEPAGE="https://github.com/manateelazycat/deepin-recorder/"
+HOMEPAGE="https://github.com/manateelazycat/deepin-screen-recorder/"
 
 if [[ "${PV}" == *9999* ]] ; then
 	inherit git-r3
@@ -36,9 +36,10 @@ DEPEND="${RDEPEND}
 	    "
 
 src_prepare() {
-	sed -i "s|qApp->applicationDirPath()|\"/usr/share/${PN}\"|g" main_window.cpp
-	sed -i "s|qApp->applicationDirPath()|\"/usr/share/${PN}\"|g" record_process.cpp
-	eqmake5
+#	sed -i "s|qApp->applicationDirPath()|\"/usr/share/${PN}\"|g" main_window.cpp
+#	sed -i "s|qApp->applicationDirPath()|\"/usr/share/${PN}\"|g" record_process.cpp
+	sed -i "s|qApp->applicationDirPath()|\"/usr/share/${PN}/image\"|g" src/utils.cpp
+	eqmake5 src/${PN}.pro
 }
 
 src_install() {
@@ -46,4 +47,7 @@ src_install() {
 	dobin ${PN}
 	insinto /usr/share/${PN}
 	doins -r image
+
+	insinto /usr/share/applications
+	doins ${PN}.desktop
 }
