@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit qmake-utils
+inherit qmake-utils eutils
 
 DESCRIPTION="Deepin Screencasting Application"
 HOMEPAGE="https://github.com/manateelazycat/deepin-screen-recorder/"
@@ -47,6 +47,8 @@ src_install() {
 	dobin ${PN}
 	insinto /usr/share/${PN}
 	doins -r image
+
+	doicon image/${PN}.png image/${PN}.svg
 
 	insinto /usr/share/applications
 	doins ${PN}.desktop
