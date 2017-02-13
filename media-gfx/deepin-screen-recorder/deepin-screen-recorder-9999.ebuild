@@ -39,7 +39,7 @@ src_prepare() {
 #	sed -i "s|qApp->applicationDirPath()|\"/usr/share/${PN}\"|g" main_window.cpp
 #	sed -i "s|qApp->applicationDirPath()|\"/usr/share/${PN}\"|g" record_process.cpp
 	sed -i "s|qApp->applicationDirPath()|\"/usr/share/${PN}/image\"|g" src/utils.cpp
-	eqmake5 src/${PN}.pro
+	eqmake5 ${PN}.pro
 }
 
 src_install() {
