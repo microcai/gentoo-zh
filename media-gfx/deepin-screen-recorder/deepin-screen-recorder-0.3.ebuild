@@ -26,6 +26,7 @@ RDEPEND="dev-qt/qtwidgets:5
 		dev-qt/qtgui:5
 		dev-qt/qtdbus:5
 		dev-qt/qtx11extras:5
+		>=dde-base/deepin-notifications-2.3.8
 		gif? ( media-gfx/byzanz )
 		mp4? ( virtual/ffmpeg )
 		"
@@ -36,20 +37,9 @@ DEPEND="${RDEPEND}
 	    "
 
 src_prepare() {
-#	sed -i "s|qApp->applicationDirPath()|\"/usr/share/${PN}\"|g" main_window.cpp
-#	sed -i "s|qApp->applicationDirPath()|\"/usr/share/${PN}\"|g" record_process.cpp
-	sed -i "s|qApp->applicationDirPath()|\"/usr/share/${PN}/image\"|g" src/utils.cpp
 	eqmake5 ${PN}.pro
 }
 
 src_install() {
-#	emake INSTALL_ROOT=${D} install
-	dobin ${PN}
-	insinto /usr/share/${PN}
-	doins -r image
-
-	doicon image/${PN}.png image/${PN}.svg
-
-	insinto /usr/share/applications
-	doins ${PN}.desktop
+	emake INSTALL_ROOT=${D} install
 }
