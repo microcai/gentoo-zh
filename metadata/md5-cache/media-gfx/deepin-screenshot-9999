@@ -1,0 +1,12 @@
+DEFINED_PHASES=prepare unpack
+DEPEND=dev-lang/python:2.7 dev-python/sip[python_targets_python2_7] dev-python/pyopengl[python_targets_python2_7] dev-python/libwnck-python dev-python/PyQt5[python_targets_python2_7,multimedia] dde-base/deepin-menu dde-extra/deepin-qml-widgets dev-python/xpybutil sharing? ( dde-extra/deepin-social-sharing ) !media-gfx/deepin-screenshot:2 dde-extra/deepin-gettext-tools dev-vcs/git
+DESCRIPTION=Snapshot tools for linux deepin.
+EAPI=5
+HOMEPAGE=https://github.com/linuxdeepin/deepin-screenshot
+IUSE=sharing
+LICENSE=GPL-3+
+RDEPEND=dev-lang/python:2.7 dev-python/sip[python_targets_python2_7] dev-python/pyopengl[python_targets_python2_7] dev-python/libwnck-python dev-python/PyQt5[python_targets_python2_7,multimedia] dde-base/deepin-menu dde-extra/deepin-qml-widgets dev-python/xpybutil sharing? ( dde-extra/deepin-social-sharing ) !media-gfx/deepin-screenshot:2
+SLOT=3
+_eclass_exported_funcs=src_unpack:git-2 src_prepare:-
+_eclasses_=eutils	ea170b525f6a38a006be05c9d9429f13	fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	git-2	7af5d170bfc02983b4bcd3167dc5edd4	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_md5_=582ad3576e97cc03d4e8a19d6c015be2

@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=media-video/mediainfo dev-python/python-ass[python_targets_python2_7] dev-python/dbus-python[python_targets_python2_7] sys-apps/file[python,python_targets_python2_7] dev-python/pyopengl[python_targets_python2_7] dev-python/peewee[python_targets_python2_7] dev-python/xpybutil dev-python/sip[python_targets_python2_7] dev-python/PyQt5[python_targets_python2_7] dev-python/bottle[python_targets_python2_7] dev-python/pysrt[python_targets_python2_7] media-video/QtAV dev-python/deepin-utils dde-extra/deepin-gettext-tools
+DESCRIPTION=QML Movie Player based on QtAV
+EAPI=5
+HOMEPAGE=https://github.com/linuxdeepin/deepin-movie
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3+
+RDEPEND=media-video/mediainfo dev-python/python-ass[python_targets_python2_7] dev-python/dbus-python[python_targets_python2_7] sys-apps/file[python,python_targets_python2_7] dev-python/pyopengl[python_targets_python2_7] dev-python/peewee[python_targets_python2_7] dev-python/xpybutil dev-python/sip[python_targets_python2_7] dev-python/PyQt5[python_targets_python2_7] dev-python/bottle[python_targets_python2_7] dev-python/pysrt[python_targets_python2_7] media-video/QtAV dev-python/deepin-utils dde-extra/deepin-gettext-tools dde-base/deepin-menu dde-extra/deepin-qml-widgets
+SLOT=0
+SRC_URI=https://github.com/linuxdeepin/deepin-movie/archive/2.2.11.tar.gz -> deepin-movie-2.2.11.tar.gz
+_eclass_exported_funcs=src_prepare:- src_compile:- src_install:-
+_md5_=dbbe825dd9fa3760ff8aec8ee2987372

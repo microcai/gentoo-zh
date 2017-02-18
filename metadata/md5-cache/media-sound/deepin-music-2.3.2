@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=>=x11-libs/deepin-ui-1.0.201209101328 dev-python/gst-python:0.10 media-libs/gst-plugins-meta:0.10[mp3,flac] >=media-libs/mutagen-1.8 dev-python/chardet dev-python/cddb-py dev-python/dbus-python dev-python/pycurl dev-python/pyquery dev-libs/keybinder:0[python] hotkey? ( || ( media-plugins/python-mmkeys media-sound/sonata ) ) dde-extra/deepin-gettext-tools >=sys-apps/sed-4
+DESCRIPTION=Deepin Music Player.
+EAPI=4
+HOMEPAGE=https://github.com/linuxdeepin/deepin-music-player
+IUSE=+hotkey
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=>=x11-libs/deepin-ui-1.0.201209101328 dev-python/gst-python:0.10 media-libs/gst-plugins-meta:0.10[mp3,flac] >=media-libs/mutagen-1.8 dev-python/chardet dev-python/cddb-py dev-python/dbus-python dev-python/pycurl dev-python/pyquery dev-libs/keybinder:0[python] hotkey? ( || ( media-plugins/python-mmkeys media-sound/sonata ) )
+SLOT=0
+SRC_URI=https://github.com/linuxdeepin/deepin-music/archive/2.3.2.tar.gz -> deepin-music-2.3.2.tar.gz
+_eclass_exported_funcs=src_prepare:- src_compile:- src_install:-
+_eclasses_=eutils	ea170b525f6a38a006be05c9d9429f13	fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	gnome2-utils	c6dcdf3a2c22b578b16adb945dc85c35	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	xdg-utils	e2b2bd56125ce8cf59ce30c642b59d48
+_md5_=83fa744dd0162af32950340becea85c5

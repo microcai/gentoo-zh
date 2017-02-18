@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=dev-libs/dbus-glib >=dev-libs/glib-2.30:2 gnome-base/libgtop:2 x11-libs/libX11 x11-libs/gtk+:3 x11-libs/libwnck:3 || ( dev-lang/vala:0.34[vapigen(+)] dev-lang/vala:0.32[vapigen(+)] dev-lang/vala:0.30[vapigen(+)] dev-lang/vala:0.28[vapigen(+)] dev-lang/vala:0.26[vapigen(+)] ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=BAMF Application Matching Framework
+EAPI=4
+HOMEPAGE=https://launchpad.net/bamf
+IUSE=+introspection
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3 LGPL-3
+RDEPEND=dev-libs/dbus-glib >=dev-libs/glib-2.30:2 gnome-base/libgtop:2 x11-libs/libX11 x11-libs/gtk+:3 x11-libs/libwnck:3
+SLOT=3
+SRC_URI=http://launchpad.net/bamf/0.2/0.2.118/+download/bamf-0.2.118.tar.gz
+_eclass_exported_funcs=src_prepare:- src_configure:- src_install:-
+_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	ea170b525f6a38a006be05c9d9429f13	libtool	4890219c51da247200223277f993e054	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	vala	ca3f1c504058f5de407febddfae73167
+_md5_=ddaf771bc3d239818ae61d21e67ce088

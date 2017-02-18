@@ -1,0 +1,12 @@
+DEFINED_PHASES=prepare
+DEPEND=x11-wm/deepin-metacity media-libs/libcanberra app-text/poppler dev-go/go-dbus-generator dev-go/go-gir-generator dev-go/deepin-go-lib dev-go/dbus-factory >=dde-base/dde-api-2.92.2
+DESCRIPTION=Deepin file manager backend
+EAPI=5
+HOMEPAGE=https://github.com/linuxdeepin/deepin-file-manager-backend
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=x11-wm/deepin-metacity media-libs/libcanberra app-text/poppler
+SLOT=0
+SRC_URI=https://github.com/linuxdeepin/deepin-file-manager-backend/archive/0.1.16.tar.gz -> deepin-file-manager-backend-0.1.16.tar.gz
+_eclass_exported_funcs=src_prepare:-
+_md5_=cb4f7663b08bf563b2c98d42cc77774b

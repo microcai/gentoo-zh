@@ -1,0 +1,13 @@
+DEFINED_PHASES=install setup
+DEPEND=>=dev-lang/python-2.7:2.7 x11-libs/gtk+:2 x11-libs/cairo dev-python/pygtk:2 net-libs/webkit-gtk dev-python/pywebkitgtk sci-libs/scipy dev-python/python-xlib dev-python/deepin-utils dev-python/deepin-gsettings || ( dev-python/imaging dev-python/pillow ) dev-python/pycairo dev-python/setuptools sys-devel/gettext =dev-lang/python-2.7*
+DESCRIPTION=UI toolkit for Linux Deepin.
+EAPI=4
+HOMEPAGE=https://github.com/linuxdeepin/deepin-ui
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-3
+RDEPEND=>=dev-lang/python-2.7:2.7 x11-libs/gtk+:2 x11-libs/cairo dev-python/pygtk:2 net-libs/webkit-gtk dev-python/pywebkitgtk sci-libs/scipy dev-python/python-xlib dev-python/deepin-utils dev-python/deepin-gsettings || ( dev-python/imaging dev-python/pillow ) =dev-lang/python-2.7*
+SLOT=0
+SRC_URI=http://packages.linuxdeepin.com/deepin/pool/main/d/deepin-ui/deepin-ui_1+git20130618094833~90b6485f6cprecise2.tar.gz
+_eclass_exported_funcs=pkg_setup:- src_install:-
+_eclasses_=eutils	ea170b525f6a38a006be05c9d9429f13	multilib	165fc17c38d1b11dac2008280dab6e80	python	efc1c55fc44c5b7272fc2ffba73c3e6f	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=71c5f86bc375ce30dd1a005a5455a434

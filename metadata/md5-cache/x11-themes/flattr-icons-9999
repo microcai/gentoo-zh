@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst postrm preinst unpack
+DEPEND=>=sys-apps/sed-4 >=dev-vcs/git-1.8.2.1
+DESCRIPTION=an icon theme inspired by the latest flat design trend
+EAPI=5
+HOMEPAGE=https://github.com/NitruxSA/flattr-icons
+LICENSE=CC-BY-NC-SA-4.0
+RDEPEND=x11-themes/hicolor-icon-theme
+RESTRICT=binchecks strip
+SLOT=0
+_eclass_exported_funcs=pkg_preinst:- pkg_postrm:- pkg_postinst:- src_unpack:git-r3 src_install:-
+_eclasses_=eutils	ea170b525f6a38a006be05c9d9429f13	git-r3	6efc2d7de07a77bf72c7207b48d0e123	gnome2-utils	c6dcdf3a2c22b578b16adb945dc85c35	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	xdg-utils	e2b2bd56125ce8cf59ce30c642b59d48
+_md5_=78287bbcbc6e6cb1bc18a265d24e3ce7
