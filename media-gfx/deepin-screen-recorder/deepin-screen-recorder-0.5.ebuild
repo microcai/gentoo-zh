@@ -34,6 +34,7 @@ RDEPEND="dev-qt/qtwidgets:5
 DEPEND="${RDEPEND}
 		x11-libs/xcb-util
 		x11-libs/libxcb
+		dde-base/deepin-tool-kit
 	    "
 
 src_prepare() {
