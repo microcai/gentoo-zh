@@ -33,7 +33,6 @@ DEPEND="${RDEPEND}
 	     "
 
 src_prepare() {
-		sed -i "s|dtkbase-0-2\ dtkutil-0-2\ dtkwidget-0-2|dtkbase\ dtkutil\ dtkwidget|g" build.pri
 		eqmake5	PREFIX=/usr
 }
 
