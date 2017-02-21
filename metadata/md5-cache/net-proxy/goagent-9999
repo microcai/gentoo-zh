@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-python/pycrypto dev-lang/python:2.7[ssl] dev-python/pygeoip dev-libs/nss[utils] >=dev-python/gevent-1.0 dev-python/pyopenssl gtk? ( x11-libs/vte:0[python] ) net-libs/pacparser
 SLOT=0
 _eclass_exported_funcs=pkg_postrm:- pkg_postinst:- pkg_setup:python src_unpack:- src_prepare:- src_install:-
-_eclasses_=fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	git-2	7af5d170bfc02983b4bcd3167dc5edd4	multilib	165fc17c38d1b11dac2008280dab6e80	python	efc1c55fc44c5b7272fc2ffba73c3e6f	systemd	5b6ca8b2fc1307ca593223f327342c96	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_eclasses_=fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	git-2	7af5d170bfc02983b4bcd3167dc5edd4	multilib	165fc17c38d1b11dac2008280dab6e80	python	8b7143ec94293338ed5da8a7ef97cfdb	systemd	5b6ca8b2fc1307ca593223f327342c96	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
 _md5_=c44aa0387854a6f0c9be8338d4eb0695

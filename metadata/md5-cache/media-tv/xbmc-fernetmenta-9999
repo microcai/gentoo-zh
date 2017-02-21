@@ -9,5 +9,5 @@ RDEPEND=virtual/glu virtual/opengl app-arch/bzip2 app-arch/unzip app-arch/zip ap
 REQUIRED_USE=pvr? ( mysql )
 SLOT=0
 _eclass_exported_funcs=pkg_postinst:- pkg_setup:- src_unpack:- src_prepare:- src_configure:- src_install:-
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	ea170b525f6a38a006be05c9d9429f13	git-2	7af5d170bfc02983b4bcd3167dc5edd4	libtool	4890219c51da247200223277f993e054	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	python	efc1c55fc44c5b7272fc2ffba73c3e6f	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	ea170b525f6a38a006be05c9d9429f13	git-2	7af5d170bfc02983b4bcd3167dc5edd4	libtool	4890219c51da247200223277f993e054	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	python	8b7143ec94293338ed5da8a7ef97cfdb	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
 _md5_=b7cd55b520a5f3b767555bfdd0a3cbd9
