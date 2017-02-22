@@ -9,5 +9,5 @@ RDEPEND=>=dev-libs/glib-2.32:2 dev-libs/libgee:0.8 >=x11-libs/gtk+-3.4:3 app-cry
 SLOT=0
 SRC_URI=https://github.com/manateelazycat/deepin-terminal/archive/2.1.12.tar.gz -> deepin-terminal-2.1.12.tar.gz
 _eclass_exported_funcs=src_prepare:- src_configure:- src_compile:cmake-utils src_test:cmake-utils src_install:cmake-utils
-_eclasses_=cmake-utils	014267c4475c1a625ecec5b16e0db1e6	eutils	ea170b525f6a38a006be05c9d9429f13	flag-o-matic	35067884fbff37bc0c8e7421c5315558	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	vala	ca3f1c504058f5de407febddfae73167	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_eclasses_=cmake-utils	014267c4475c1a625ecec5b16e0db1e6	eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	vala	ca3f1c504058f5de407febddfae73167	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
 _md5_=48ba365e623c3efa58ef1f1e9f94fdb0

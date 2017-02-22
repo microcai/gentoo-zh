@@ -10,5 +10,5 @@ RDEPEND=dev-lang/erlang >=dev-lang/erlang-17.0.0
 SLOT=0
 SRC_URI=https://github.com/talentdeficit/jsx/archive/2.8.0.tar.gz -> jsx-2.8.0.tar.gz
 _eclass_exported_funcs=src_prepare:- src_compile:- src_install:-
-_eclasses_=erlang-pkg	40c849564b68378e720d65139814a52b	eutils	ea170b525f6a38a006be05c9d9429f13	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_eclasses_=erlang-pkg	40c849564b68378e720d65139814a52b	eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
 _md5_=ec0774515ad43554305e3c5afa2ed94d

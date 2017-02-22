@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1 CDDL
 RDEPEND=dev-db/sqlite:3 ibus? ( >=app-i18n/ibus-1.1 !app-i18n/ibus-sunpinyin ) nls? ( virtual/libintl ) xim? ( >=x11-libs/gtk+-2.12:2 x11-libs/libX11 ) ibus? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) )
 SLOT=0
 _eclass_exported_funcs=pkg_postrm:- pkg_postinst:- pkg_setup:- src_unpack:git-2 src_configure:- src_compile:- src_install:-
-_eclasses_=confutils	18995f74ac4ffafb7ad853dfe133f209	eutils	ea170b525f6a38a006be05c9d9429f13	git-2	7af5d170bfc02983b4bcd3167dc5edd4	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	python	8b7143ec94293338ed5da8a7ef97cfdb	scons-utils	d42c1726f481bb5812cc2ce1f236db1d	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_eclasses_=confutils	1c51f2ef481b47e7a39ab083b5807009	eutils	708f85bc1bf00876604e223fb56e062a	git-2	7af5d170bfc02983b4bcd3167dc5edd4	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	python	8b7143ec94293338ed5da8a7ef97cfdb	scons-utils	d42c1726f481bb5812cc2ce1f236db1d	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
 _md5_=fb753a6cf394e348cbe5112008c54a7d

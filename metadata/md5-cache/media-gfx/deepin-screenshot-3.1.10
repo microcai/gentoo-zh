@@ -10,5 +10,5 @@ RDEPEND=dev-lang/python:2.7 dev-python/sip[python_targets_python2_7] dev-python/
 SLOT=3
 SRC_URI=https://github.com/linuxdeepin/deepin-screenshot/archive/3.1.10.tar.gz -> deepin-screenshot-3.1.10.tar.gz
 _eclass_exported_funcs=src_prepare:-
-_eclasses_=eutils	ea170b525f6a38a006be05c9d9429f13	fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
 _md5_=582ad3576e97cc03d4e8a19d6c015be2
