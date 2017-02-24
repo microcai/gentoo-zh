@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 	     "
 
 src_prepare() {
-		eqmake5	PREFIX=/usr
+		eqmake5	PREFIX=/usr WITHOUT_UNINSTALL_APP=YES
 }
 
 src_install() {
