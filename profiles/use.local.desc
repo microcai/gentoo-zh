@@ -32,6 +32,9 @@ app-text/stardict:festival - Enables text to speech engine app-accessibility/fes
 app-text/stardict:gnome - Enables gnome-base/gnome support
 app-text/stardict:gucharmap - Enables gnome-extra/gucharmap plugin
 app-text/stardict:spell - Enables spell checking capability using app-text/enchant
+dde-base/dde-meta:manual - Install dde-extra/dde-help package for Help files
+dde-base/dde-meta:multimedia - Install dde-extra/dde-meta-multimedia meta package
+dde-base/dde-meta:terminal - Install dde-extra/deepin-terminal package
 dev-erlang/bson:doc - Adds extra documentation.
 dev-erlang/bson:src - Adds source files.
 dev-erlang/epgsql:src - Adds source files.

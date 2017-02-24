@@ -1,0 +1,11 @@
+DEFINED_PHASES=-
+DESCRIPTION=Deepin Desktop Enviroment (meta package)
+EAPI=4
+HOMEPAGE=http://www.linuxdeepin.com
+IUSE=+policykit manual terminal multimedia
+KEYWORDS=~amd64 ~x86
+LICENSE=metapackage
+RDEPEND=>=dde-base/dde-control-center-4.0.0 dde-base/startdde dde-base/dde-file-manager >=dde-base/dde-desktop-4.0.0 dde-base/dde-launcher dde-base/dde-dock dde-base/deepin-desktop-base dde-base/dde-session-ui dde-base/deepin-notifications >=x11-wm/deepin-wm-1.9.0 policykit? ( dde-base/dde-polkit-agent ) manual? ( =dde-extra/dde-help-15.4* ) terminal? ( dde-extra/deepin-terminal ) multimedia? ( dde-extra/dde-meta-multimedia )
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=689afd803247aac668d706477ec21234
