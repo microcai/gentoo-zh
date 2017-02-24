@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>atenzd@gmail.com</email>
+		<name>Aten Zhang</name>
+	</maintainer>
+	<use>
+		<flag name="manual">Install <pkg>dde-extra/dde-help</pkg> package for Help files</flag>
+		<flag name="multimedia">Install <pkg>dde-extra/dde-meta-multimedia</pkg> meta package</flag>
+		<flag name="terminal">Install <pkg>dde-extra/deepin-terminal</pkg> package</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">linuxdeepin</remote-id>
+		<bugs-to>https://github.com/linuxdeepin/developer-center/</bugs-to>
+	</upstream>
+</pkgmetadata>

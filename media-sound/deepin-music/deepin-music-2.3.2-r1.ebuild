@@ -10,13 +10,13 @@ DESCRIPTION="Deepin Music Player."
 HOMEPAGE="https://github.com/linuxdeepin/deepin-music-player"
 
 LICENSE="GPL-3"
-SLOT="0"
+SLOT="2"
 KEYWORDS="~amd64 ~x86"
 IUSE="+hotkey"
 
 RDEPEND=">=x11-libs/deepin-ui-1.0.201209101328
 	dev-python/gst-python:0.10
-	media-libs/gst-plugins-meta:0.10[mp3,flac]
+	media-plugins/gst-plugins-meta:0.10[mp3,flac]
 	>=media-libs/mutagen-1.8
 	dev-python/chardet
 	dev-python/cddb-py

@@ -1,16 +1,16 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
-EAPI=4
-PYTHON_DEPEND=2:2.4
+EAPI="5"
 
-inherit python flag-o-matic
+PYTHON_COMPAT=( python2_7 )
+inherit flag-o-matic python-single-r1
 DESCRIPTION="Multimedia key support as a PyGTK object"
 HOMEPAGE="http://sonata.berlios.de"
 SRC_URI="http://codingteam.net/project/sonata/download/file/sonata-${PV}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
@@ -20,11 +20,6 @@ DEPEND="dev-python/pygtk
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/sonata-${PV}/mmkeys
-
-pkg_setup() {
-	python_set_active_version 2.7
-	python_pkg_setup
-}
 
 src_compile() {
 	# mmkeys have import error--"undefined symbol: gdk_display" with "--as-needed" LDFLAGS
