@@ -2,9 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI="4"
+EAPI="5"
 
-inherit fdo-mime versionator eutils python
+PYTHON_COMPAT=( python2_7 )
+DISTUTILS_SINGLE_IMPL=true
+inherit versionator distutils-r1
 
 MY_VER="$(get_version_component_range 1-3)+$(get_version_component_range 4)~8aaf2a6f00"
 SRC_URI="http://packages.linuxdeepin.com/deepin/pool/main/d/${PN}/${PN}_${MY_VER}.tar.gz"
@@ -33,11 +35,3 @@ DEPEND="${RDEPEND}
 		dev-python/setuptools"
 S="${WORKDIR}/${PN}-$(get_version_component_range 1-3)+$(get_version_component_range 4)~8aaf2a6f00"
 
-pkg_setup() {
-	python_set_active_version 2.7
-}
-
-src_install() {
-
-	python setup.py install --root=${D} || die "Install failed"
-}

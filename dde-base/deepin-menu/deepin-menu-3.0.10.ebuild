@@ -21,6 +21,7 @@ RDEPEND="dev-lang/python:2.7
 	      "
 DEPEND="${RDEPEND}
 		>=dde-base/deepin-tool-kit-0.2.2:=
+		dde-base/dde-qt-dbus-factory
 		dev-qt/qtx11extras:5
 		dev-qt/qtdeclarative:5
 	    "

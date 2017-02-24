@@ -2,10 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI="4"
-PYTHON_DEPEND=2:2.7
-
-inherit python versionator
+EAPI="5"
+PYTHON_COMPAT=( python2_7 )
+DISTUTILS_SINGLE_IMPL=true
+inherit distutils-r1 versionator
 
 MY_VER="$(get_version_component_range 1-2)+$(get_version_component_range 3)~5a86faec50"
 SRC_URI="http://packages.linuxdeepin.com/deepin/pool/main/d/${PN}/${PN}_${MY_VER}.tar.gz"
@@ -36,25 +36,4 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}-${MY_VER}
 
-pkg_setup() {
-	python_set_active_version 2.7
-	python_pkg_setup
-}
-
-#src_prepare() {
-#	sed -i 's|webkit-1.0|webkitgtk-3.0|g' $S/setup.py || die "Sed failed!"
-#	sed -i 's|webkitgtk-1.0|webkitgtk-3.0|g' $S/setup.py || die "Sed failed!"
-#}
-src_install() {
-	python setup.py install \
-		--root="${D}" \
-		--optimize=2 || die "Install failed!"
-
-#	mv ${D}/usr/dtk/theme ${D}/usr/$(get_libdir)/python2.7/site-packages/dtk || die
-#	mv ${D}/usr/dtk/locale ${D}/usr/share/ || die
-#	rm ${D}/usr/share/locale/*.po*
-#	rm -r ${D}/usr/dtk
-
-
-}
 

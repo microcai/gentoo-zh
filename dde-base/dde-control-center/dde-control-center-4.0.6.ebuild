@@ -43,7 +43,7 @@ DEPEND="${RDEPEND}
 	     "
 
 src_prepare() {
-		eqmake5	PREFIX=/usr WITH_MODULE_GRUB=NO WITH_MODULE_REMOTE_ASSIST=NO WITH_MODULE_SYSINFO_UPDATE=NO
+		eqmake5	PREFIX=/usr DISABLE_SYS_UPDATE=YES
 }
 
 src_install() {
