@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
-inherit python distutils git-2
+inherit python distutils-r1 git-2
 
 DESCRIPTION="Evernote SDK for Python"
 HOMEPAGE="http://dev.evernote.com"
@@ -33,5 +33,5 @@ src_prepare() {
 }
 
 src_install() {
-	distutils_src_install
+	distutils-r1_src_install
 }
