@@ -5,7 +5,7 @@ EAPI=5
 PYTHON_COMPAT=( python{3_3,3_4} )
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="python3 version of python-xlib"
 HOMEPAGE="https://github.com/LiuLang/python3-xlib https://pypi.python.org/pypi/python3-xlib"
@@ -21,9 +21,6 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 PYTHON_MODNAME="Xlib"
 
-src_compile() {
-	distutils_src_compile
-}
 
 src_test() {
 	cd test
@@ -38,6 +35,3 @@ src_test() {
 	python_execute_function testing
 }
 
-src_install () {
-	distutils_src_install
-}

@@ -1,10 +1,10 @@
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=4
+EAPI=5
 
 PYTHON_DEPEND="2"
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="dtrx: Intelligent archive extraction"
 HOMEPAGE="http://brettcsmith.org/2007/dtrx/"
