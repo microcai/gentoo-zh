@@ -162,8 +162,8 @@ app-vim/neocomplete 9999: vim plugin: Next generation completion framework after
 app-vim/powerline 9999: vim plugin: The ultimate vim statusline utility.
 dde-base/dde-account-faces 1.0.10: Deepin Account face Images
 dde-base/dde-api 3.0.15 3.1.2: Go-lang bingdings for dde-daemon
-dde-base/dde-control-center 3.0.24 4.0.6: Control Center of Deepin Desktop Environment
-dde-base/dde-daemon 3.0.24 3.1.2: Daemon handling the DDE session settings
+dde-base/dde-control-center 3.0.24 4.0.7: Control Center of Deepin Desktop Environment
+dde-base/dde-daemon 3.0.24 3.1.3: Daemon handling the DDE session settings
 dde-base/dde-desktop 3.0.15 4.0.2: Deepin desktop environment - Desktop module
 dde-base/dde-dock 4.0.8-r1 4.1.3: Deepin desktop environment - Dock module
 dde-base/dde-file-manager 1.3.8 2.0.9999: Deepin File Manager
@@ -171,7 +171,7 @@ dde-base/dde-launcher 4.0.7: Deepin desktop environment - Launcher module
 dde-base/dde-meta 15.3-r2 15.4-r3: Deepin Desktop Enviroment (meta package)
 dde-base/dde-polkit-agent 0.0.3: PolicyKit agent for DDE
 dde-base/dde-qt-dbus-factory 0.0.4: A repository stores auto-generated Qt5 dbus code used by DDE
-dde-base/dde-qt5integration 0.1.0: DDE system integration plugin for Qt5
+dde-base/dde-qt5integration 0.1.1: DDE system integration plugin for Qt5
 dde-base/dde-session-ui 3.0.23 3.0.27: Deepin desktop environment - Session UI module
 dde-base/deepin-artwork-themes 15.12.4: Deepin artwork themes
 dde-base/deepin-desktop-base 2016.11.29: Base components for Deepin Desktop
@@ -180,13 +180,13 @@ dde-base/deepin-file-manager-backend 0.1.16: Deepin file manager backend
 dde-base/deepin-gtk-theme 15.12.8: Deepin GTK Theme
 dde-base/deepin-icon-theme 15.12.32: Deepin Icons
 dde-base/deepin-menu 3.0.7 3.0.10: Deepin menu service for building beautiful menus
-dde-base/deepin-notifications 2.3.10 2.3.12: System notifications for Deepin Desktop Environment
+dde-base/deepin-notifications 2.3.10 3.0.0: System notifications for Deepin Desktop Environment
 dde-base/deepin-sound-theme 15.10.1: Deepin Sound themes
-dde-base/deepin-tool-kit 0.2.0 0.2.1 0.2.3: Base development tool of all C++/Qt Developer work on Deepin
+dde-base/deepin-tool-kit 0.2.0 0.2.1 0.2.4: Base development tool of all C++/Qt Developer work on Deepin
 dde-base/deepin-wallpapers 1.3: Deepin Wallpapers
 dde-base/deepin-wm-switcher 1.1.0: Window manager switcher for Deepin
 dde-base/dtksettings 0.1.2 9999: DtkSettings is a powerfull tool to generation config form json.
-dde-base/startdde 3.0.13 3.1.1: starter of Deepin Desktop Environment
+dde-base/startdde 3.0.13 3.1.2: starter of Deepin Desktop Environment
 dde-extra/dde-calendar 1.0.4: Calendar for Deepin Desktop Environment
 dde-extra/dde-help 15.3.1: Help files for Deepin Desktop Environment
 dde-extra/dde-meta-multimedia 0.1-r1: Deepin Multimedia Softwares (meta package)
@@ -471,7 +471,7 @@ x11-themes/smplayer-themes-nonfree 0.1.0 0.1.1: Icon themes for smplayer
 x11-themes/ubuntu-mono 0.0.45: Dark and Light panel icons to make your desktop beautiful
 x11-wm/9wm 1.1: A window manager emulation of the Plan 9 window manager 8-1/2.
 x11-wm/compiz 0.9.99.20130608170409: OpenGL compositing window manager.
-x11-wm/deepin-metacity 3.20.6 3.22.2: Legacy window manager for Deepin
-x11-wm/deepin-mutter 3.20.9: Deepin fork version of mutter
-x11-wm/deepin-wm 1.2 1.9.4: Deepin Window Manager
+x11-wm/deepin-metacity 3.20.6 3.22.3: Legacy window manager for Deepin
+x11-wm/deepin-mutter 3.20.11: Deepin fork version of mutter
+x11-wm/deepin-wm 1.2 1.9.5: Deepin Window Manager
 xfce-extra/thunar-dropbox 0.2.0: Plugin for thunar that adds context-menu items for dropbox.
