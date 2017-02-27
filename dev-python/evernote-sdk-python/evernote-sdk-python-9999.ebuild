@@ -3,8 +3,9 @@
 # $Header: $
 
 EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
-inherit python distutils-r1 git-2
+inherit python-r1 distutils-r1 git-2
 
 DESCRIPTION="Evernote SDK for Python"
 HOMEPAGE="http://dev.evernote.com"
