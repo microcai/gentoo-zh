@@ -10,5 +10,5 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://gentoo/PhapViet47K.zip
 _eclass_exported_funcs=src_compile:stardict src_install:stardict
-_eclasses_=stardict	f2fd36b0af07ceaba9852e6caec6ac7f
+_eclasses_=stardict	8d4771fbbd2a9aee09ef8040f10f28b3
 _md5_=3fb8ac31fd60b52892c2179c2f4e218f

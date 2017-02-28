@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND==dev-lang/python-2*
 SLOT=0
 _eclass_exported_funcs=pkg_postrm:- pkg_postinst:- pkg_setup:- src_unpack:git-2 src_prepare:- src_install:-
-_eclasses_=git-2	7af5d170bfc02983b4bcd3167dc5edd4	multilib	165fc17c38d1b11dac2008280dab6e80	python	8b7143ec94293338ed5da8a7ef97cfdb	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_eclasses_=git-2	195a672bfaf52d868442171c9469bbb6	multilib	0236be304ee52e7f179ed2f337075515	python	bc5dc5d43bf20a6e1f59f99b5f49df4f	toolchain-funcs	53b75b4a49cf3e61530a523804045432
 _md5_=ad51038bc2a80b8c0e55ad2d694d4f7e

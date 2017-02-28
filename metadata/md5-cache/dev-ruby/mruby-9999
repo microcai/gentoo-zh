@@ -7,5 +7,5 @@ LICENSE=MIT
 RDEPEND=sys-devel/bison dev-lang/ruby
 SLOT=0
 _eclass_exported_funcs=src_unpack:git-2 src_install:-
-_eclasses_=git-2	7af5d170bfc02983b4bcd3167dc5edd4
+_eclasses_=git-2	195a672bfaf52d868442171c9469bbb6
 _md5_=6e238bfd78a8a042682aeae19c392828
