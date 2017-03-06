@@ -35,7 +35,7 @@ RDEPEND="${DEPEND}
 	>=net-libs/libpcap-0.9.8
 	media-sound/pulseaudio
 	media-libs/glu
-	media-libs/mesa[opencl]
+	media-libs/mesa
 	dev-libs/udis86
 	sys-libs/zlib
 	media-libs/libv4l"
