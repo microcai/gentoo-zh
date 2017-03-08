@@ -7,5 +7,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/nss[utils] dev-python/gevent dev-python/pyopenssl =dev-lang/python-2* =dev-lang/python-2*[ssl]
 SLOT=0
 _eclass_exported_funcs=pkg_postinst:- pkg_setup:python src_unpack:- src_prepare:- src_install:-
-_eclasses_=git-2	195a672bfaf52d868442171c9469bbb6	multilib	0236be304ee52e7f179ed2f337075515	python	bc5dc5d43bf20a6e1f59f99b5f49df4f	systemd	ec2e9154031d942186c75c0aabb41900	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_eclasses_=git-2	195a672bfaf52d868442171c9469bbb6	multilib	0236be304ee52e7f179ed2f337075515	python	bc5dc5d43bf20a6e1f59f99b5f49df4f	systemd	ec2e9154031d942186c75c0aabb41900	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
 _md5_=3c433a903c8a37b704cfbe16cb330909

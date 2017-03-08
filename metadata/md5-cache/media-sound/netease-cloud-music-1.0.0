@@ -10,5 +10,5 @@ RESTRICT=mirror strip
 SLOT=0
 SRC_URI=amd64? ( http://s1.music.126.net/download/pc/netease-cloud-music_1.0.0_amd64_ubuntu16.04.deb ) x86? ( http://s1.music.126.net/download/pc/netease-cloud-music_1.0.0_i386_ubuntu16.04.deb )
 _eclass_exported_funcs=src_unpack:unpacker src_install:-
-_eclasses_=unpacker	76ddf385f3c212c12857bb8ec2a8bd35
+_eclasses_=unpacker	f40f7b4bd5aa88c2a4ba7b0d1e0ded70
 _md5_=f6a63b97f611ecf9d8b211bab50196b1

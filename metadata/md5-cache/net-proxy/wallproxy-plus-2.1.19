@@ -10,5 +10,5 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/wallproxy/wallproxy/archive/v2.1.19.tar.gz -> wallproxy-plus-2.1.19.tar.gz
 _eclass_exported_funcs=pkg_postinst:- pkg_setup:python src_unpack:- src_prepare:- src_install:-
-_eclasses_=multilib	0236be304ee52e7f179ed2f337075515	python	bc5dc5d43bf20a6e1f59f99b5f49df4f	systemd	ec2e9154031d942186c75c0aabb41900	toolchain-funcs	53b75b4a49cf3e61530a523804045432	vcs-snapshot	03289f51c769cf409d200d2d628cdd6e
+_eclasses_=multilib	0236be304ee52e7f179ed2f337075515	python	bc5dc5d43bf20a6e1f59f99b5f49df4f	systemd	ec2e9154031d942186c75c0aabb41900	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	vcs-snapshot	03289f51c769cf409d200d2d628cdd6e
 _md5_=3c433a903c8a37b704cfbe16cb330909
