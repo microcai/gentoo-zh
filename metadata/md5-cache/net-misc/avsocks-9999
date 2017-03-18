@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-libs/boost dev-libs/openssl sys-devel/make >=dev-util/cmake-3.6.3 dev-vcs/git
+DEPEND=dev-libs/boost dev-libs/openssl sys-devel/make >=dev-util/cmake-3.7.2 dev-vcs/git
 DESCRIPTION=科学操长城软件
 EAPI=5
 HOMEPAGE=https://github.com/avplayer/avsocks
@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~x86
 RDEPEND=dev-libs/boost dev-libs/openssl
 SLOT=0
 _eclass_exported_funcs=src_unpack:git-2 src_prepare:cmake-utils src_configure:cmake-utils src_compile:cmake-utils src_test:cmake-utils src_install:cmake-utils
-_eclasses_=cmake-utils	dd1d263f83f0791bd433b134f40db39b	eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	61cad4fb5d800b29d484b27cb033f59b	git-2	195a672bfaf52d868442171c9469bbb6	multilib	0236be304ee52e7f179ed2f337075515	multiprocessing	284a473719153462f3e974d86c8cb81c	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=cmake-utils	a69f3a404abc4ade0a99e523f51b989d	eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	61cad4fb5d800b29d484b27cb033f59b	git-2	195a672bfaf52d868442171c9469bbb6	multilib	0236be304ee52e7f179ed2f337075515	multiprocessing	284a473719153462f3e974d86c8cb81c	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	versionator	c80ccf29e90adea7c5cae94b42eb76d0
 _md5_=67a421feac35de1f318ae369a6647d66
