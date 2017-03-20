@@ -42,7 +42,7 @@ SRC_URI="${SRC_URI} mirror://kernel/linux/kernel/v3.x/${LINUX_SOURCES}"
 RDEPEND="sys-apps/hwids
 		>=dev-libs/glib-2.6
 		tcpd? ( sys-apps/tcp-wrappers )
-		!sys-power/pmtools"
+		!<sys-power/pmtools-20130209"
 DEPEND="${RDEPEND}
 		virtual/pkgconfig"
 
