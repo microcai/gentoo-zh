@@ -20,7 +20,7 @@ HOMEPAGE="http://www.etokenonlinux.org"
 LICENSE="EULA"
 SLOT="0"
 KEYWORDS="-* ~x86 ~amd64"
-IUSE="ssl multilib"
+IUSE="multilib"
 
 REQUIRED_USE="amd64? ( multilib )"
 
@@ -35,7 +35,6 @@ RDEPEND="
 	sys-apps/dbus
 	media-libs/libpng:1.2
 	media-libs/fontconfig
-	ssl? ( dev-libs/engine_pkcs11 )
 "
 DEPEND="
   app-arch/unzip
