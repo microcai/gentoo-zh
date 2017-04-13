@@ -3,24 +3,21 @@
 
 EAPI=6
 
-inherit unpacker
+inherit unpacker versionator
 
-DESCRIPTION="Tencent QQ for Linux by Deepin"
+DESCRIPTION="Deepin Version of Wine"
 HOMEPAGE="https://www.deepin.org"
 
 COMMON_URI="http://packages.deepin.com/deepin/pool/non-free/d"
-QQPN="deepin.com.qq.im"
-DWV="1.9-17"
+DWV=$(replace_version_separator 2 '-' )
 
-SRC_URI="${COMMON_URI}/${QQPN}/${QQPN}_${PV}deepin9_i386.deb
-	${COMMON_URI}/deepin-wine/deepin-fonts-wine_${DWV}_all.deb
+SRC_URI="${COMMON_URI}/deepin-wine/deepin-fonts-wine_${DWV}_all.deb
 	${COMMON_URI}/deepin-wine/deepin-libwine_${DWV}_i386.deb
 	${COMMON_URI}/deepin-wine/deepin-wine32_${DWV}_i386.deb
-	${COMMON_URI}/deepin-wine/deepin-wine_${DWV}_all.deb
-	${COMMON_URI}/deepin-wine-helper/deepin-wine-helper_1.0deepin6_i386.deb"
+	${COMMON_URI}/deepin-wine/deepin-wine_${DWV}_all.deb"
 
 
-LICENSE="Tencent"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
@@ -37,23 +34,14 @@ RDEPEND="${DEPEND}
 	media-libs/glu
 	media-libs/mesa
 	dev-libs/udis86
-	sys-libs/zlib
-	media-libs/libv4l"
+	sys-libs/zlib"
 
 S=${WORKDIR}
 
 src_install() {
-	mv ${S}/usr/local/share/* ${S}/usr/share
-	rm -r ${S}/usr/local
-	
-	insinto /lib/udev/rules.d
-	doins etc/udev/rules.d/ukeys.rules
-	
 	insinto /
-	doins -r opt usr
+	doins -r lib usr
 	
-	fperms 755 /usr/bin/deepin-wine
+	fperms 755 -R /usr/bin/
 	fperms 755 -R /usr/lib/
-	fperms 755 /opt/deepinwine/apps/Deepin-QQ/run.sh
-	fperms 755 -R /opt/deepinwine/tools/
 }
