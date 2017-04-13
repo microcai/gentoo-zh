@@ -12,12 +12,16 @@ LICENSE="LGPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-
-DEPEND="x11-themes/flattr-icons"
+DEPEND=""
+#DEPEND="x11-themes/flattr-icons"
 
 src_prepare() {
-	sed -i "s|flattr|Flattr|g" deepin/index.theme
+#	sed -i "s|flattr|Flattr|g" deepin/index.theme
 
 	default_src_prepare
 }
+
+pkg_preinst() { gnome2_icon_savelist; }
+pkg_postinst() { gnome2_icon_cache_update; }
+pkg_postrm() { gnome2_icon_cache_update; }
 

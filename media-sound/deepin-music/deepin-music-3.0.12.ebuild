@@ -35,7 +35,7 @@ src_prepare() {
 	LIBDIR=$(qt5_get_libdir)
 	sed -i "s|/usr/lib|${LIBDIR}|g" plugin/netease-meta-search/netease-meta-search.pro libdmusic/libdmusic.pro
 	
-	sed -i "s|-0-2||g" music-player/music-player.pro
+#	sed -i "s|-0-2||g" music-player/music-player.pro
 	eqmake5	PREFIX=/usr
 }
 

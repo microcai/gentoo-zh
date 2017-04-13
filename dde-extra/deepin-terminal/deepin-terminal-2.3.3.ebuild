@@ -9,8 +9,8 @@ VALA_MIN_API_VERSION=0.22
 inherit vala cmake-utils
 
 DESCRIPTION="Deepin Terminal"
-HOMEPAGE="https://github.com/manateelazycat/deepin-terminal"
-SRC_URI="https://github.com/manateelazycat/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://github.com/linuxdeepin/deepin-terminal"
+SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"

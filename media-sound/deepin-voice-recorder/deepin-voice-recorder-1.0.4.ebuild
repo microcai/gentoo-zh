@@ -7,13 +7,13 @@ EAPI=5
 inherit qmake-utils eutils
 
 DESCRIPTION="Deepin Voice Recorder"
-HOMEPAGE="https://github.com/manateelazycat/deepin-voice-recorder/"
+HOMEPAGE="https://github.com/linuxdeepin/deepin-voice-recorder/"
 
 if [[ "${PV}" == *9999* ]] ; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/manateelazycat/${PN}.git"
+	EGIT_REPO_URI="https://github.com/linuxdeepin/${PN}.git"
 else
-	SRC_URI="https://github.com/manateelazycat/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 

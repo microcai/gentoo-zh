@@ -12,7 +12,7 @@ SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.g
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="wacom"
+IUSE="miracast"
 
 RDEPEND="x11-wm/deepin-metacity
 		x11-libs/libxkbfile
@@ -26,6 +26,7 @@ RDEPEND="x11-wm/deepin-metacity
 		net-wireless/bluez
 		gnome-base/gvfs
 		>sys-power/upower-0.99
+		miracast? ( net-wireless/iw )
 	"
 DEPEND="${RDEPEND}
 	      dev-go/go-dbus-generator

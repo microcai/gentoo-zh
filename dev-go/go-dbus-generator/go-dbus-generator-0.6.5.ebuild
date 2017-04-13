@@ -19,7 +19,7 @@ DEPEND="sys-devel/gcc[go]
 	dev-lang/go
 	dev-qt/qtdeclarative:5
 	dev-go/deepin-go-lib"
-	
+
 src_prepare() {
 	 export GOPATH="${S}:/usr/share/gocode"
 }

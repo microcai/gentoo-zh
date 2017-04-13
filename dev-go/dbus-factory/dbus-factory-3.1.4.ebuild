@@ -14,9 +14,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-devel/gcc[go]
-		dev-lang/go
-		dev-go/go-dbus-generator"
+	dev-lang/go
+	dev-go/go-dbus-generator"
 
 src_prepare() {
-	 export GOPATH="/usr/share/gocode"
+	export GOPATH="/usr/share/gocode"
 }
