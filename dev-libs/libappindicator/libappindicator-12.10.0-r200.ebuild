@@ -18,6 +18,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+introspection"
 
 RDEPEND="
+	dev-python/pygtk:2
+	dev-python/pygobject:2
 	>=dev-libs/dbus-glib-0.98
 	>=dev-libs/glib-2.26:2
 	>=dev-libs/libdbusmenu-12.10.2-r2[gtk,introspection?]
