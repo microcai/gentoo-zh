@@ -33,7 +33,7 @@ RDEPEND="x11-libs/gsettings-qt
 		 app-crypt/libsecret
 		 media-video/ffmpegthumbnailer
 		 net-misc/socat
-		 >=dde-base/dde-dock-4.0.5
+		 >=dde-base/dde-dock-4.2.0
 		 dde-base/dde-qt5integration
 		 dde-base/startdde
 		 !dde-base/dde-desktop
