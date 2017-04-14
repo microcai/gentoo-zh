@@ -24,17 +24,17 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}
-	>=media-libs/alsa-lib-1.0.16
-	>=media-libs/lcms-2.2
-	>=net-nds/openldap-2.4.7
-	>=media-sound/mpg123-1.13.7
-	>=media-libs/openal-1.14
-	>=net-libs/libpcap-0.9.8
-	media-sound/pulseaudio
-	media-libs/glu
-	media-libs/mesa
-	dev-libs/udis86
-	sys-libs/zlib"
+	>=media-libs/alsa-lib-1.0.16[abi_x86_32]
+	>=media-libs/lcms-2.2[abi_x86_32]
+	>=net-nds/openldap-2.4.7[abi_x86_32]
+	>=media-sound/mpg123-1.13.7[abi_x86_32]
+	>=media-libs/openal-1.14[abi_x86_32]
+	>=net-libs/libpcap-0.9.8[abi_x86_32]
+	media-sound/pulseaudio[abi_x86_32]
+	media-libs/glu[abi_x86_32]
+	media-libs/mesa[abi_x86_32]
+	dev-libs/udis86[abi_x86_32]
+	sys-libs/zlib[abi_x86_32]"
 
 S=${WORKDIR}
 
