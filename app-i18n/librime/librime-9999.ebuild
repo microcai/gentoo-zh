@@ -19,6 +19,7 @@ RDEPEND="
 	dev-cpp/glog
 	>=dev-cpp/yaml-cpp-0.5.0
 	dev-db/kyotocabinet
+	dev-libs/leveldb
 	>=dev-libs/boost-1.46.0
 	dev-libs/marisa
 	sys-libs/zlib
