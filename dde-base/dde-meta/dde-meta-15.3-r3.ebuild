@@ -11,23 +11,22 @@ SRC_URI=""
 LICENSE="metapackage"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+policykit manual terminal multimedia"
+IUSE="manual terminal multimedia"
 
-RDEPEND=">=dde-base/dde-control-center-4.0.0
+RDEPEND="=dde-base/dde-control-center-3.0*
 		dde-base/startdde
-		|| (
-			 =dde-base/dde-file-manager-4*
-			 >=dde-base/dde-desktop-4.0.0 
-		)
+		=dde-base/dde-file-manager-1*
+		=dde-base/dde-desktop-3.0*
 		dde-base/dde-launcher
 		dde-base/dde-dock
 		dde-base/deepin-desktop-base
 		dde-base/dde-session-ui
 		dde-base/deepin-notifications
-		>=x11-wm/deepin-wm-1.9.0
-		policykit? ( dde-base/dde-polkit-agent )
 		manual? ( =dde-extra/dde-help-${PV}* )
-        terminal? ( dde-extra/deepin-terminal )
+		terminal? ( dde-extra/deepin-terminal )
 	    multimedia? ( dde-extra/dde-meta-multimedia )
 		"
 
+pkg_postinst() {
+	use terminal && dfmterm deepin-terminal
+}
