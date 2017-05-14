@@ -41,6 +41,7 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	eqmake5 ${MY_PN}.pro
+	sed -i "s|cr\.deepin\.io|github\.com\/linuxdeepin|g" platformplugin/linux.pri
 }
 
 src_install() {
