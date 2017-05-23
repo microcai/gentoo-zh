@@ -9,4 +9,4 @@ RDEPEND=x11-misc/xclip dev-python/pywebkitgtk dev-python/python-xlib dev-python/
 SLOT=0
 _eclass_exported_funcs=src_unpack:git-2 src_prepare:- src_install:-
 _eclasses_=git-2	195a672bfaf52d868442171c9469bbb6
-_md5_=3a6f7e4e40e03de9196f4518f546a98d
+_md5_=16286adf7224518847710c59108cb4b4
