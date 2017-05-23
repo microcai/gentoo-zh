@@ -5,7 +5,7 @@
 EAPI="5"
 
 if [[ ${PV} == "9999" ]]; then
-	EGIT_REPO_URI="git://github.com/goagent/goagent.git"
+	EGIT_REPO_URI="https://github.com/goagent/goagent.git"
 	EGIT_BRANCH="3.0"
 	KEYWORDS=""
 	GOAGENT_SRC_URI=""

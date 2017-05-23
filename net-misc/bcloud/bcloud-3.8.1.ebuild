@@ -9,7 +9,7 @@ PYTHON_REQ_USE="sqlite"
 if [[ $PV = *9999* ]]; then
 	scm_eclass=git-r3
 	EGIT_REPO_URI="
-		git://github.com/LiuLang/bcloud.git
+		https://github.com/LiuLang/bcloud.git
 		https://github.com/LiuLang/bcloud.git"
 	SRC_URI=""
 	KEYWORDS=""

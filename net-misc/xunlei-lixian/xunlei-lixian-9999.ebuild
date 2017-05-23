@@ -10,7 +10,7 @@ inherit python git-2
 DESCRIPTION="Download scripts for xunlei vip users"
 HOMEPAGE="https://github.com/iambus/xunlei-lixian"
 
-EGIT_REPO_URI="git://github.com/iambus/xunlei-lixian.git"
+EGIT_REPO_URI="https://github.com/iambus/xunlei-lixian.git"
 EGIT_BRANCH="master"
 
 LICENSE="MIT"

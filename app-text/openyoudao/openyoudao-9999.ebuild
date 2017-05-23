@@ -9,7 +9,7 @@ inherit git-2
 DESCRIPTION="openyoudao is a youdao client for linux."
 HOMEPAGE="http://openyoudao.org"
 
-EGIT_REPO_URI="git://github.com/justzx2011/openyoudao.git"
+EGIT_REPO_URI="https://github.com/justzx2011/openyoudao.git"
 
 LICENSE="GPL-3"
 SLOT="0"

@@ -5,7 +5,7 @@
 EAPI=5
 
 EGIT_BRANCH="master"
-EGIT_REPO_URI="git://github.com/robbyrussell/oh-my-zsh.git"
+EGIT_REPO_URI="https://github.com/robbyrussell/oh-my-zsh.git"
 
 inherit git-2 eutils
 

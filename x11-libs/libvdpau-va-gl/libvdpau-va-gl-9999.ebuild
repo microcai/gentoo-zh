@@ -8,7 +8,7 @@ inherit cmake-utils multilib git-2
 
 DESCRIPTION="VDPAU driver with VA-API/OpenGL backend."
 HOMEPAGE="https://github.com/i-rinat/libvdpau-va-gl/"
-EGIT_REPO_URI="git://github.com/i-rinat/libvdpau-va-gl.git"
+EGIT_REPO_URI="https://github.com/i-rinat/libvdpau-va-gl.git"
 
 LICENSE="LGPL-3"
 SLOT="0"

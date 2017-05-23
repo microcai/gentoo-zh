@@ -8,7 +8,7 @@ DESCRIPTION="mruby is the lightweight implementation of the Ruby language comply
 HOMEPAGE="https://github.com/mruby/mruby"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/mruby/mruby.git"
+EGIT_REPO_URI="https://github.com/mruby/mruby.git"
 
 LICENSE="MIT"
 SLOT="0"

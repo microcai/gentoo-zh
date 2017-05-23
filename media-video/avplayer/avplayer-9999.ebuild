@@ -9,7 +9,7 @@ DESCRIPTION="avplayer is a p2p video downloader and player"
 HOMEPAGE="http://avplayer.avplayer.org"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/avplayer/avplayer.git"
+EGIT_REPO_URI="https://github.com/avplayer/avplayer.git"
 
 LICENSE="GPL-3"
 SLOT="0"

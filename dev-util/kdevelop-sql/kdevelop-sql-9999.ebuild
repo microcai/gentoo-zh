@@ -12,7 +12,7 @@ DESCRIPTION="KDevelop Plugin for SQL Language Support"
 HOMEPAGE="https://projects.kde.org/projects/playground/devtools/plugins/kdev-sql"
 SRC_URI=""
 
-EGIT_REPO_URI="git://anongit.kde.org/kdev-sql"
+EGIT_REPO_URI="https://anongit.kde.org/kdev-sql"
 
 LICENSE="GPL-2"
 SLOT="0"
