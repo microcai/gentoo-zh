@@ -27,7 +27,7 @@ HTTP_UPLOAD_PROGRESS_MODULE_PV="0.9.0"
 HTTP_UPLOAD_PROGRESS_MODULE_P="ngx_upload_progress-${HTTP_UPLOAD_PROGRESS_MODULE_PV}"
 #HTTP_UPLOAD_PROGRESS_MODULE_SHA1="a788dea"
 
-# http_headers_more (http://github.com/openresty/headers-more-nginx-module, BSD license)
+# http_headers_more (https://github.com/openresty/headers-more-nginx-module, BSD license)
 HTTP_HEADERS_MORE_MODULE_PV="0.25"
 HTTP_HEADERS_MORE_MODULE_P="ngx-http-headers-more-${HTTP_HEADERS_MORE_MODULE_PV}"
 HTTP_HEADERS_MORE_MODULE_SHA1="0c6e05d"
@@ -39,7 +39,7 @@ HTTP_HEADERS_MORE_MODULE_SHA1="0c6e05d"
 HTTP_REDIS_MODULE_PV="0.11"
 HTTP_REDIS_MODULE_P="ngx_redis-${HTTP_REDIS_MODULE_PV}"
 HTTP_REDIS_MODULE_SHA1="828803d"
-HTTP_REDIS_MODULE_URI="http://github.com/openresty/redis2-nginx-module/tarball/v${HTTP_REDIS_MODULE_PV}"
+HTTP_REDIS_MODULE_URI="https://github.com/openresty/redis2-nginx-module/tarball/v${HTTP_REDIS_MODULE_PV}"
 
 # http_push (http://pushmodule.slact.net/, MIT license)
 HTTP_PUSH_MODULE_PV="0.692"
@@ -73,7 +73,7 @@ HTTP_NDK_MODULE_SHA1="8dd0df5"
 HTTP_LUA_MODULE_PV="0.9.8"
 HTTP_LUA_MODULE_P="ngx_lua-${HTTP_LUA_MODULE_PV}"
 HTTP_LUA_MODULE_SHA1="73e831f"
-HTTP_LUA_MODULE_URI="http://github.com/openresty/lua-nginx-module/tarball/v${HTTP_LUA_MODULE_PV}"
+HTTP_LUA_MODULE_URI="https://github.com/openresty/lua-nginx-module/tarball/v${HTTP_LUA_MODULE_PV}"
 
 HTTP_DRIZZLE_MODULE_PV="0.1.2rc2"
 HTTP_DRIZZLE_MODULE_P="drizzle-nginx-module-${HTTP_DRIZZLE_MODULE_PV}"
@@ -108,7 +108,7 @@ HTTP_SRCACHE_MODULE_P="srcache-nginx-module-${HTTP_SRCACHE_MODULE_PV}"
 HTTP_SET_MISC_MODULE_PV="0.24"
 HTTP_SET_MISC_MODULE_P="set-misc-nginx-module-${HTTP_SET_MISC_MODULE_PV}"
 #HTTP_SET_MISC_MODULE_SHA1="36fd035"
-HTTP_SET_MISC_MODULE_URI="http://github.com/openresty/set-misc-nginx-module/tarball/v${HTTP_SET_MISC_MODULE_PV}"
+HTTP_SET_MISC_MODULE_URI="https://github.com/openresty/set-misc-nginx-module/tarball/v${HTTP_SET_MISC_MODULE_PV}"
 
 # NginX XSS module (https://github.com/openresty/xss-nginx-module, BSD)
 HTTP_XSS_MODULE_PV="0.04"
@@ -189,7 +189,7 @@ SRC_URI="http://tengine.taobao.org/download/${P}.tar.gz
 	pam? ( http://web.iti.upv.es/~sto/nginx/ngx_http_auth_pam_module-1.1.tar.gz )
 	rrd? ( http://wiki.nginx.org/images/9/9d/Mod_rrd_graph-0.2.0.tar.gz )
 	chunk? ( https://github.com/openresty/chunkin-nginx-module/tarball/v${CHUNKIN_MODULE_PV} -> chunkin-nginx-module-${CHUNKIN_MODULE_PV}.tgz )"
-#	nginx_modules_http_set_cconv? ( http://github.com/liseen/set-cconv-nginx-module/tarball/v${HTTP_SET_CCONV_MODULE_PV} -> ${HTTP_SET_CCON_MODULE_P}.tar.gz )
+#	nginx_modules_http_set_cconv? ( https://github.com/liseen/set-cconv-nginx-module/tarball/v${HTTP_SET_CCONV_MODULE_PV} -> ${HTTP_SET_CCON_MODULE_P}.tar.gz )
 	# nginx_modules_http_supervisord? ( http://labs.frickle.com/files/${HTTP_SUPERVISORD_MODULE_P}.tar.gz )
 
 LICENSE="BSD BSD-2 GPL-2 MIT

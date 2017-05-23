@@ -10,7 +10,7 @@ DESCRIPTION="load kde session faster"
 HOMEPAGE="https://dantti.wordpress.com/2013/02/27/1-2-3-plasma/"
 SRC_URI=""
 
-EGIT_REPO_URI="git://anongit.kde.org/scratch/dantti/sessionk.git"
+EGIT_REPO_URI="https://anongit.kde.org/scratch/dantti/sessionk.git"
 
 LICENSE="GPL-2"
 SLOT="0"

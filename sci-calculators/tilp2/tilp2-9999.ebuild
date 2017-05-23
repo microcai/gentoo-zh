@@ -10,7 +10,7 @@ DESCRIPTION="Communication program for Texas Instruments calculators "
 HOMEPAGE="http://lpg.ticalc.org/prj_tilp"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/debrouxl/tilp_and_gfm.git"
+EGIT_REPO_URI="https://github.com/debrouxl/tilp_and_gfm.git"
 
 MY_PN="tilp"
 

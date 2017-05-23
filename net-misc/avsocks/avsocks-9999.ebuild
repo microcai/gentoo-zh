@@ -10,7 +10,7 @@ SRC_URI=""
 
 inherit cmake-utils git-2
 
-EGIT_REPO_URI="git://github.com/avplayer/avsocks.git"
+EGIT_REPO_URI="https://github.com/avplayer/avsocks.git"
 
 LICENSE=""
 SLOT="0"

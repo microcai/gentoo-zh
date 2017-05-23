@@ -12,7 +12,7 @@ DESCRIPTION="A plugin for KDevelop 4 that visualizes the information from it's s
 HOMEPAGE="https://projects.kde.org/projects/playground/devtools/plugins/kdev-control-flow-graph"
 SRC_URI=""
 
-EGIT_REPO_URI="git://anongit.kde.org/kdev-control-flow-graph"
+EGIT_REPO_URI="https://anongit.kde.org/kdev-control-flow-graph"
 
 LICENSE="GPL-2"
 SLOT="0"

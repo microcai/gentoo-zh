@@ -8,7 +8,7 @@ inherit cmake-utils git-2
 
 DESCRIPTION="Rime Support for Fcitx"
 HOMEPAGE="http://code.google.com/p/rimeime/"
-EGIT_REPO_URI="git://github.com/fcitx/${PN}.git"
+EGIT_REPO_URI="https://github.com/fcitx/${PN}.git"
 
 LICENSE="GPL-2"
 SLOT="0"

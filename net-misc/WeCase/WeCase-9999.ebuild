@@ -15,7 +15,7 @@ RESTRICT="mirror"
 SRC_URI=""
 
 EGIT_HAS_SUBMODULES=1
-EGIT_REPO_URI="git://github.com/WeCase/WeCase.git"
+EGIT_REPO_URI="https://github.com/WeCase/WeCase.git"
 EGIT_BRANCH="dev-0.06"
 
 LICENSE="GPL-3+ LGPL-2.1 LGPL-3+ Apache-2.0"

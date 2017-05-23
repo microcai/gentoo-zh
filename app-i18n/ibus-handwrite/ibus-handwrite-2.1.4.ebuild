@@ -7,7 +7,7 @@ EAPI="4"
 inherit eutils autotools googlecode
 
 DESCRIPTION="hand write recognition/input using ibus IM engine"
-EGIT_REPO_URI="git://github.com/microcai/${PN}.git"
+EGIT_REPO_URI="https://github.com/microcai/${PN}.git"
 
 SRC_URI="$SRC_URI
 	zinnia? ( mirror://sourceforge/zinnia/zinnia-tomoe/0.6.0-20080911/zinnia-tomoe-0.6.0-20080911.tar.bz2 )"

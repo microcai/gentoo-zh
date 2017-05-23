@@ -9,7 +9,7 @@ inherit eutils git-2
 DESCRIPTION="A fast, safe VPN based on libsodium"
 HOMEPAGE="http://shadowvpn.org/"
 
-EGIT_REPO_URI="git://github.com/clowwindy/shadowvpn.git"
+EGIT_REPO_URI="https://github.com/clowwindy/shadowvpn.git"
 
 LICENSE="GPL-3+"
 SLOT="0"

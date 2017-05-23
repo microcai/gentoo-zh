@@ -6,7 +6,7 @@ EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 
-EGIT_REPO_URI="git://github.com/houtianze/bypy.git"
+EGIT_REPO_URI="https://github.com/houtianze/bypy.git"
 
 inherit git-r3 distutils-r1
 DESCRIPTION="Python client for Baidu Yun Cloud Storage"

@@ -10,7 +10,7 @@ DESCRIPTION="Tools for Flash-Friendly File System (F2FS)"
 HOMEPAGE="http://sourceforge.net/projects/f2fs-tools/"
 SRC_URI=""
 
-EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git"
+EGIT_REPO_URI="https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git"
 
 LICENSE="GPL-2"
 SLOT="0"

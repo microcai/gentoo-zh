@@ -8,8 +8,8 @@ if [[ $PV = *9999* ]]; then
 	scm_eclass=git-2
 	EGIT_REPO_URI="
 				git://people.freedesktop.org/~dvdhrm/${PN}
-				git://github.com/dvdhrm/${PN}.git
-				git://github.com/dvdhrm/${PN}.git"
+				https://github.com/dvdhrm/${PN}.git
+				https://github.com/dvdhrm/${PN}.git"
 	SRC_URI=""
 	KEYWORDS=""
 else
