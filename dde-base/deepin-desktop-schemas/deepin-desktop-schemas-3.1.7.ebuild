@@ -3,6 +3,7 @@
 # $Id$
 
 EAPI=4
+inherit gnome2-utils
 
 DESCRIPTION="GSettings deepin desktop-wide schemas"
 HOMEPAGE="https://github.com/linuxdeepin/deepin-desktop-schemas"
@@ -16,3 +17,9 @@ IUSE=""
 DEPEND="gnome-base/dconf"
 
 
+src_compile() {
+	emake ARCH=x86
+}
+pkg_preinst() { gnome2_schemas_savelist;}
+pkg_postinst() { gnome2_schemas_update; }
+pkg_postrm() { gnome2_schemas_update; }

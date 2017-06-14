@@ -3,6 +3,7 @@
 # $Id$
 
 EAPI=5
+inherit gnome2-utils
 
 DESCRIPTION="Deepin Icons"
 HOMEPAGE="https://github.com/linuxdeepin/deepin-icon-theme"

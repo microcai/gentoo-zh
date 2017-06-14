@@ -21,15 +21,16 @@ IUSE=""
 
 RDEPEND="dde-base/dde-daemon
  		dde-base/deepin-wm-switcher
+		>=dde-base/deepin-desktop-schemas-3.1.7
 		"
 
 DEPEND="${RDEPEND}
-	      net-libs/webkit-gtk
 	      dev-lang/coffee-script
 	      dev-go/go-dbus-generator
 	      dev-util/cmake
-	      dev-go/deepin-go-lib
-	      dev-go/dbus-factory"
+		  >=dde-base/dde-api-3.1.8
+	      >=dev-go/deepin-go-lib-1.0.4
+	      >=dev-go/dbus-factory-3.1.5"
 
 src_prepare() {
 # 	  sed -i 's|${GOPATH}:${CURDIR}/${GOBUILD_DIR}|${CURDIR}/${GOBUILD_DIR}:${GOPATH}|g' Makefile

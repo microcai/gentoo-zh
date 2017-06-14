@@ -31,9 +31,9 @@ RDEPEND="sys-devel/gcc[go]
 
 DEPEND="${RDEPEND}
 	      dev-go/go-dbus-generator
-	      dev-go/deepin-go-lib
+	      >=dev-go/deepin-go-lib-1.0.4
 		  dev-go/go-gir-generator
-	      dev-go/dbus-factory"
+	      >=dev-go/dbus-factory-3.1.5"
 
 src_prepare() {
 	export GOPATH="${S}:/usr/share/gocode"
