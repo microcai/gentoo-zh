@@ -50,6 +50,7 @@ src_prepare() {
 		git clone https://github.com/BurntSushi/graphics-go.git || die
 		git clone https://github.com/golang/sys.git || die
 		git clone https://github.com/golang/net.git || die
+		git clone https://github.com/axgle/mahonia || die
 		git clone https://github.com/go-check/check || die
 		
 		cd check
@@ -67,13 +68,15 @@ src_prepare() {
 				${WORKDIR}/src/github.com/alecthomas/ \
 				${WORKDIR}/src/github.com/fsnotify/ \
 				${WORKDIR}/src/golang.org/x/	\
-				${WORKDIR}/src/launchpad.net/
+				${WORKDIR}/src/launchpad.net/ \
+				${WORKDIR}/src/github.com/axgle
 
 		cp -r ${S}/xgb ${WORKDIR}/src/github.com/BurntSushi/
 		cp -r ${S}/xgbutil ${WORKDIR}/src/github.com/BurntSushi/
 		cp -r ${S}/freetype-go ${WORKDIR}/src/github.com/BurntSushi/
 		cp -r ${S}/graphics-go ${WORKDIR}/src/github.com/BurntSushi/
 		cp -r ${S}/imaging ${WORKDIR}/src/github.com/disintegration/
+		cp -r ${S}/mahonia ${WORKDIR}/src/github.com/axgle/
 		cp -r ${S}/image ${WORKDIR}/src/golang.org/x/
 		cp -r ${S}/sys ${WORKDIR}/src/golang.org/x/
 		cp -r ${S}/net ${WORKDIR}/src/golang.org/x/
@@ -85,6 +88,7 @@ src_prepare() {
 		cp -r ${S}/units ${WORKDIR}/src/github.com/alecthomas/
 		cp -r ${S}/fsnotify-1.4.2 ${WORKDIR}/src/github.com/fsnotify/fsnotify
 
+#		go get -d -f -u -v github.com/axgle/mahonia 
 #		go get -d -f -u -v launchpad.net/gocheck || die 
 #		go get -d -f -u -v gopkg.in/alecthomas/kingpin.v2 
 #			  github.com/disintegration/imaging  \

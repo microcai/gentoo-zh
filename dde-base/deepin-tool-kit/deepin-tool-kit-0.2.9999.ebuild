@@ -8,8 +8,13 @@ inherit qmake-utils
 
 DESCRIPTION="Base development tool of all C++/Qt Developer work on Deepin"
 HOMEPAGE="https://github.com/linuxdeepin/deepin-tool-kit"
-SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
+if [[ "${PV}" == *9999* ]] ; then
+     inherit git-r3
+     EGIT_REPO_URI="https://github.com/linuxdeepin/${PN}.git"
+else
+     SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+fi
 LICENSE="GPL-3"
 SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86"

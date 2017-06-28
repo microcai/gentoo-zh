@@ -13,15 +13,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+policykit manual terminal multimedia"
 
-RDEPEND=">=dde-base/dde-control-center-4.0.0
-		dde-base/startdde
-		|| (
-			 =dde-base/dde-file-manager-4*
-			 >=dde-base/dde-desktop-4.0.0 
-		)
-		dde-base/dde-launcher
-		dde-base/dde-dock
-		dde-base/deepin-desktop-base
+RDEPEND=">=dde-base/dde-control-center-4.2.0
+		>=dde-base/startdde-3.1.10
+		>=dde-base/dde-file-manager-4.1.5
+		>=dde-base/dde-launcher-4.1.0
+		>=dde-base/dde-dock-4.3.0
+		>=dde-base/deepin-desktop-base-2016.12.1
 		dde-base/dde-session-ui
 		dde-base/deepin-notifications
 		>=x11-wm/deepin-wm-1.9.0

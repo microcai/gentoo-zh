@@ -32,18 +32,30 @@ RDEPEND="
 	dev-qt/qtnetwork:5
 	dev-qt/qtx11extras:5
 	dev-qt/qtdbus:5
+	dev-qt/qtsvg:5
+	dev-qt/qtmultimedia:5
 	dde-base/deepin-menu
+	dde-base/dde-daemon
+	>=dde-base/deepin-notifications-2.3.9
 
-	sharing? ( dde-extra/deepin-social-sharing )
 	!media-gfx/deepin-screenshot:2
 	!media-gfx/deepin-screenshot:3
 	"
 DEPEND="${RDEPEND}
+	dev-libs/glib
+	sys-libs/mtdev
 	x11-libs/libxcb
 	x11-libs/xcb-util
 	x11-libs/libXtst
 	x11-libs/libX11
 	x11-libs/libXext
+	x11-libs/libXrender
+	x11-libs/startup-notification
+	virtual/libudev
+	media-libs/fontconfig
+	media-libs/freetype
+	x11-proto/xextproto
+	x11-proto/recordproto
 	dde-base/deepin-tool-kit"
 
 src_prepare() {

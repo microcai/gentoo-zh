@@ -2,12 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 inherit qmake-utils
 
-DESCRIPTION="Deepin desktop environment - Desktop module"
-HOMEPAGE="https://github.com/linuxdeepin/dde-desktop"
+DESCRIPTION="Deepin desktop environment - Session UI module"
+HOMEPAGE="https://github.com/linuxdeepin/dde-session-ui"
 SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
@@ -18,21 +18,23 @@ IUSE=""
 RDEPEND="x11-libs/gsettings-qt
 		 x11-misc/lightdm[qt5]
 		 x11-libs/gtk+:2
+		 x11-apps/xrandr
 		 dev-qt/qtsvg:5
-		 dev-qt/qtx11extras:5
-		 dev-libs/libqtxdg
-		 >dde-base/deepin-menu-2.90.1
 		 dde-base/dde-daemon
 		 >dde-base/deepin-desktop-schemas-2.91.2
-		 dde-base/dde-file-manager
 		 dde-base/startdde
 	     "
 DEPEND="${RDEPEND}
-		 dde-base/deepin-tool-kit:=
+		>=dde-base/deepin-tool-kit-0.2.2:=
+		dde-extra/deepin-gettext-tools
+		 dde-base/dde-qt-dbus-factory:=
 	     "
 
 src_prepare() {
-		eqmake5	PREFIX=/usr
+	LIBDIR=$(get_libdir)
+	sed -i "s|lib/deepin-daemon|${LIBDIR}/deepin-daemon|g" dde-*/*.pro
+	eqmake5	PREFIX=/usr
+	default_src_prepare
 }
 
 src_install() {
