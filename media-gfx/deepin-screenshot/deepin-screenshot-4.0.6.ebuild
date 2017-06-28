@@ -36,6 +36,7 @@ RDEPEND="
 	dev-qt/qtmultimedia:5
 	dde-base/deepin-menu
 	dde-base/dde-daemon
+	>=dde-extra/deepin-shortcut-viewer-1.3.1
 	>=dde-base/deepin-notifications-2.3.9
 
 	!media-gfx/deepin-screenshot:2
