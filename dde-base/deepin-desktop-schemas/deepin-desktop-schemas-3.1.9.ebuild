@@ -17,9 +17,9 @@ IUSE=""
 DEPEND="gnome-base/dconf"
 
 
-src_compile() {
-	emake ARCH=x86
-}
+#src_compile() {
+#	emake ARCH=x86
+#}
 pkg_preinst() { gnome2_schemas_savelist;}
 pkg_postinst() { gnome2_schemas_update; }
 pkg_postrm() { gnome2_schemas_update; }
