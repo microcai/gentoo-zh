@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 inherit cmake-utils git-2
 
 DESCRIPTION="avplayer is a p2p video downloader and player"
