@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
-
-inherit python
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
+inherit python-single-r1
 
 DESCRIPTION="Google App Engine SDK for Python"
 HOMEPAGE="http://appengine.google.com/"
@@ -16,21 +16,20 @@ KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
 RDEPEND="
-	dev-python/mysql-python
-	dev-python/lxml
-	dev-python/imaging
-	dev-python/numpy
-	dev-python/pycrypto
-	dev-python/django
-	dev-python/jinja
-	dev-python/markupsafe
-	dev-python/pyopenssl
-	dev-python/pyyaml
-	dev-python/webob
+	dev-python/mysql-python[${PYTHON_USEDEP}]
+	dev-python/lxml[${PYTHON_USEDEP}]
+	dev-python/imaging[${PYTHON_USEDEP}]
+	dev-python/numpy[${PYTHON_USEDEP}]
+	dev-python/pycrypto[${PYTHON_USEDEP}]
+	dev-python/django[${PYTHON_USEDEP}]
+	dev-python/jinja[${PYTHON_USEDEP}]
+	dev-python/markupsafe[${PYTHON_USEDEP}]
+	dev-python/pyopenssl[${PYTHON_USEDEP}]
+	dev-python/pyyaml[${PYTHON_USEDEP}]
+	dev-python/webob[${PYTHON_USEDEP}]
 	media-libs/libpng:1.2
+	${PYTHON_DEPS}
 "
-
-PYTHON_DEPEND="2"
 
 S="${WORKDIR}/${PN/-/_}"
 

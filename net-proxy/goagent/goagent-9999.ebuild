@@ -17,7 +17,9 @@ else
 	KEYWORDS="~amd64 ~x86"
 fi
 
-inherit ${GOAGENT_ECLASS} fdo-mime python systemd
+PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE="ssl(+)"
+inherit ${GOAGENT_ECLASS} fdo-mime python-single-r1 systemd
 
 DESCRIPTION="A GAE proxy forked from gappproxy/wallproxy"
 HOMEPAGE="https://github.com/goagent/goagent"
@@ -27,13 +29,13 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE="+gtk systemd"
 
-RDEPEND="dev-python/pycrypto
-	dev-lang/python:2.7[ssl]
-	dev-python/pygeoip
+RDEPEND="${PYTHON_DEPS}
+	dev-python/pycrypto[${PYTHON_USEDEP}]
+	dev-python/pygeoip[${PYTHON_USEDEP}]
 	dev-libs/nss[utils]
-	>=dev-python/gevent-1.0
-	dev-python/pyopenssl
-	gtk? ( x11-libs/vte:0[python] )
+	>=dev-python/gevent-1.0[${PYTHON_USEDEP}]
+	dev-python/pyopenssl[${PYTHON_USEDEP}]
+	gtk? ( x11-libs/vte:0[python,${PYTHON_USEDEP}] )
 	net-libs/pacparser"
 
 src_unpack() {
