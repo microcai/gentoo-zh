@@ -8,4 +8,4 @@ RDEPEND=app-i18n/ibus app-i18n/librime x11-libs/libnotify app-i18n/rime-data
 SLOT=0
 _eclass_exported_funcs=src_unpack:git-2 src_prepare:-
 _eclasses_=git-2	195a672bfaf52d868442171c9469bbb6
-_md5_=d607f05b97d07f31e99ead1588728cd8
+_md5_=ef5da3223e4875f9e89094ba0138f2de

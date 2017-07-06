@@ -1,11 +1,12 @@
 DEFINED_PHASES=install postinst prepare setup unpack
-DEPEND=dev-vcs/git =dev-lang/python-2* =dev-lang/python-2*[ssl] virtual/pkgconfig
+DEPEND=dev-vcs/git virtual/pkgconfig
 DESCRIPTION=New version of wallproxy, a general purpose proxy framework in Python.
 EAPI=5
 HOMEPAGE=https://github.com/wallproxy/wallproxy
+IUSE=python_targets_python2_7
 LICENSE=GPL-3
-RDEPEND=dev-libs/nss[utils] dev-python/gevent dev-python/pyopenssl =dev-lang/python-2* =dev-lang/python-2*[ssl]
+RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[ssl(+)] ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),python_single_target_python2_7(+)] dev-libs/nss[utils] dev-python/gevent[python_targets_python2_7(-)?,-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),python_single_target_python2_7(+)] dev-python/pyopenssl[python_targets_python2_7(-)?,-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),python_single_target_python2_7(+)]
 SLOT=0
-_eclass_exported_funcs=pkg_postinst:- pkg_setup:python src_unpack:- src_prepare:- src_install:-
-_eclasses_=git-2	195a672bfaf52d868442171c9469bbb6	multilib	0236be304ee52e7f179ed2f337075515	python	bc5dc5d43bf20a6e1f59f99b5f49df4f	systemd	ec2e9154031d942186c75c0aabb41900	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=3c433a903c8a37b704cfbe16cb330909
+_eclass_exported_funcs=pkg_postinst:- pkg_setup:python-single-r1 src_unpack:- src_prepare:- src_install:-
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	9c113d6a64826c40154cad7be15d95ea	git-2	195a672bfaf52d868442171c9469bbb6	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	python-single-r1	317a2557b4d7319a7418225f65accf77	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	systemd	e12dd5e3cf1f359292cea2a70abeba5f	toolchain-funcs	8fec6b1eb195836560e70b66d98fb163
+_md5_=a6184e7db62dd44018da5592330997c9

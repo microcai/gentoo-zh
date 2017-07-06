@@ -1,12 +1,13 @@
-DEFINED_PHASES=install postinst postrm prepare setup unpack
-DEPEND==dev-lang/python-2* dev-vcs/git
+DEFINED_PHASES=install prepare setup unpack
+DEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),python_single_target_python2_7(+)] dev-vcs/git
 DESCRIPTION=Download scripts for xunlei vip users
-EAPI=4
+EAPI=5
 HOMEPAGE=https://github.com/iambus/xunlei-lixian
+IUSE=python_targets_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=MIT
-RDEPEND==dev-lang/python-2*
+RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),python_single_target_python2_7(+)]
 SLOT=0
-_eclass_exported_funcs=pkg_postrm:- pkg_postinst:- pkg_setup:- src_unpack:git-2 src_prepare:- src_install:-
-_eclasses_=git-2	195a672bfaf52d868442171c9469bbb6	multilib	0236be304ee52e7f179ed2f337075515	python	bc5dc5d43bf20a6e1f59f99b5f49df4f	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=ad51038bc2a80b8c0e55ad2d694d4f7e
+_eclass_exported_funcs=pkg_setup:python-single-r1 src_unpack:git-2 src_prepare:- src_install:-
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	9c113d6a64826c40154cad7be15d95ea	git-2	195a672bfaf52d868442171c9469bbb6	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	python-single-r1	317a2557b4d7319a7418225f65accf77	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	toolchain-funcs	8fec6b1eb195836560e70b66d98fb163
+_md5_=9ac50e9d0b45787f9cbc9f40b3a0258c

@@ -17,13 +17,6 @@ app-i18n/fcitx:qt4 - Install the Qt4's IM Module
 app-i18n/fcitx:snooper - Enable Key Snooper for gtk app
 app-i18n/fcitx:table - Adds suppport for Wubi, Erbi, etc.
 app-i18n/fcitx-configtool:gtk3 - Use GTK+3 instead of 2
-app-i18n/ibus:dconf - Enable support for gnome-base/dconf
-app-i18n/ibus:deprecated - install the deprecated ibus python library
-app-i18n/ibus:gconf - Enable support for gnome-base/gconf
-app-i18n/ibus:gtk3 - Enable support for gtk+3
-app-i18n/ibus:introspection - Use dev-libs/gobject-introspection for introspection
-app-i18n/ibus:vala - Enable support for dev-lang/vala
-app-i18n/ibus-gjs:debug - Enable maintainer mode
 app-misc/nixnote:hunspell - Enable spellchecking plugin using app-text/hunspell
 app-misc/nixnote:opencv3 - Use media-libs/opencv:0/3.0 for WebCam instead media-libs/opencv:0/2.4
 app-misc/nixnote:webcam - Enable WebCam plugin
@@ -114,5 +107,6 @@ sys-apps/kmscon:optimizations - Enable optimizations
 sys-apps/kmscon:pango - Enable pango font rendering
 sys-apps/kmscon:pixman - Enable pixman font rendering
 sys-devel/gdb:multitarget - Support all known targets in one gdb binary
+sys-kernel/hardened-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 x11-wm/compiz:fuse - Enables support for the filesystem in userspace plugin through sys-fs/fuse.
 x11-wm/compiz:kde - Compile the kde4 window decorator and add support for kde-base/kdebase-startkde.

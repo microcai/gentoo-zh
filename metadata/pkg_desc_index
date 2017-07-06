@@ -65,8 +65,9 @@ app-editors/marketo 9999: A note-taking KDE application with the power of lightw
 app-editors/sublime-text 3_beta3126: Sublime Text is a sophisticated text editor for code, html and prose
 app-editors/uex 2.1.0.5: Ultra Editor for Linux
 app-editors/visual-studio-code 1.7.1: Multiplatform Visual Studio Code from Microsoft
-app-emulation/crossover-bin 16.0.0: Commercial version of app-emulation/wine with paid support.
+app-emulation/crossover-bin 16.2.0: Commercial version of app-emulation/wine with paid support.
 app-emulation/docker-swarm 1.2.5: A Docker-native clustering system
+app-emulation/genymotion-bin 2.9.0: Complete set of tools that provide a virtual environment for Android
 app-emulation/skyeye 1.3.4_pre20120521 9999: an ARM embedded hardware simulator
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1: The kbd keymap for Programmer Dvorak.
@@ -94,8 +95,6 @@ app-i18n/fcitx-ui-light 0.1.3: A very light weight ui for fcitx, only using xlib
 app-i18n/fcitx-unikey 0.2.2: unikey support for fcitx.
 app-i18n/gcin 2.8.4: Another Traditional Chinese IM.
 app-i18n/hime 0.9.10: HIME Input Method Editor
-app-i18n/ibus 1.4.2-r2: Intelligent Input Bus for Linux / Unix OS
-app-i18n/ibus-gjs 3.4.1.20120525 9999: GNOME-Shell GJS Plugin for IBus
 app-i18n/ibus-googlepinyin 0.1.2: wrapper libgooglepinyin for IBus
 app-i18n/ibus-handwrite 2.1.4: hand write recognition/input using ibus IM engine
 app-i18n/ibus-rime 9999: Rime Input Method Engine for IBus Framework
@@ -113,7 +112,7 @@ app-i18n/scim-array 1.0.0 1.0.1: Array Input Method for SCIM
 app-i18n/scim-chewing 0.5.1: Chewing Input Method for SCIM
 app-i18n/scim-chrasis 9999.0.0.1: Chrasis SCIM binding for chinese character recognition.
 app-i18n/scim-googlepinyin 9999: An SCIM port of android Google Pinyin IME
-app-i18n/sogoupinyin 1.2.0.0042 1.2.0.0048 1.2.0.0056 2.0.0.0066 2.0.0.0082: Sogou Pinyin input method.
+app-i18n/sogoupinyin 1.2.0.0042 1.2.0.0048 1.2.0.0056 2.0.0.0066 2.0.0.0082 2.0.0.0086: Sogou Pinyin input method.
 app-i18n/sunpinyin 3.0.0_rc1 9999: A statistical language model based Chinese input method library
 app-i18n/sunpinyin-data 20140820: Data sets for Sunpinyin
 app-i18n/sunpinyin-frontend 9999: IME frontends for Sunpinyin
@@ -125,6 +124,7 @@ app-laptop/asus-keyboard-backlight 0.1: Configure the brightness of the keyboard
 app-misc/freefilesync 5.6: Visual folder comparison and synchronization
 app-misc/geeknote 9999: Console client for Evernote
 app-misc/gpick 0.2.5: Advanced color picker written in C++ using GTK+ toolkit
+app-misc/icdiff 1.9.0: Colourized diff that supports side-by-side diffing
 app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience within the shell
 app-misc/nixnote 2.0_beta11 2.0.9999: Nixnote - A clone of Evernote for Linux
 app-misc/screen 4.2.1-r2: Full-screen window manager that multiplexes physical terminals between several processes
@@ -132,7 +132,7 @@ app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/wink 1.5: A Tutorial and Presentation creation software, primarily aimed at creating tutorials on how to use software
 app-misc/xmind-portable 3.2.1.201011212218: XMind is a brainstorming and mind mapping software tool.
 app-office/Yozo-Office 6.1.0088.131: Yozo Office -- Fully Functional Office Suite
-app-office/wps-office 10.1.0.5672_alpha21: WPS Office is an office productivity suite
+app-office/wps-office 10.1.0.5672_alpha21 10.1.0.5707_alpha21: WPS Office is an office productivity suite
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-portage/findcruft 1.0.4-r1: Yet another script to find obsolete files
 app-portage/portage-cdb 0.2.1: increase portage's speed after syncing, and for calculating dependencies. This method uses a database, rather than a bunch of flat files to store its metadata.
@@ -328,9 +328,8 @@ media-sound/kalsamix 1.0.0_beta2: A mixer for KDE and ALSA from kamix.
 media-sound/kwplayer 3.5.2: An elegant music player which can get songs from kuwo.cn
 media-sound/linnya 2.2.0: A free music player
 media-sound/netease-cloud-music 1.0.0: Netease cloud music player
-media-sound/netease-musicbox 0.2.3.7: NetEase-MusicBox
+media-sound/netease-musicbox 0.2.4.0 0.2.4.1: NetEase-MusicBox
 media-tv/sopcast-player 0.7.1: A GTK+ front-end for the SopCast P2P TV player
-media-tv/xbmc-fernetmenta 9999: XBMC is a free and open source media-player and entertainment hub. This is FernetMentas branch of XBMC with support for AMD XVBA.
 media-video/QtAV 1.11.0-r1: A cross-platform multimedia framework based on Qt and FFmpeg.
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/bilibili-player 0.45 9999: bilibili 弹幕播放器 for Linux
@@ -348,7 +347,7 @@ net-im/avim 0.1: avim is a secure IM build around RSA
 net-im/cutegram 2.7.0: A different telegram client from Aseman team forked from Sigram by Sialan Labs.
 net-im/freetalk 4.1: Console based Jabber client
 net-im/qipmsg 1.0.0: An open-source Qt4 implementation of IP Messenger for linux.
-net-im/telegram-bin 1.0.5: Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.
+net-im/telegram-bin 1.0.14: Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.
 net-im/telegram-desktop 0.8.50: Desktop client of Telegram, the messaging app.
 net-im/telegram-purple 1.3.0 9999: Libpurple (Pidgin) plugin for using a Telegram account
 net-libs/jzmq 9999: jzmq
@@ -426,6 +425,7 @@ sys-fs/yaffs2utils 0.3.0: Utilities to create/extract a yaffs2 image on Linux
 sys-fs/zfs-auto-snapshot 9999 9999-r1: Automatic snapshots for ZFS on Linux
 sys-kernel/dkms 2.2.0.3: Dynamic Kernel Module Support
 sys-kernel/e-sources 3.18.14 4.0.9 4.1.12 4.2.5 4.5.2: Full sources for the Linux kernel including: gentoo, ck and other patches
+sys-kernel/hardened-sources 4.9.29: Hardened kernel sources (kernel series 4.9)
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libixp 9999: Standalone client/server 9P library
 sys-process/nocache 0.9: nocache - minimize filesystem caching effects
@@ -474,4 +474,4 @@ x11-wm/compiz 0.9.99.20130608170409: OpenGL compositing window manager.
 x11-wm/deepin-metacity 3.20.6 3.22.3: Legacy window manager for Deepin
 x11-wm/deepin-mutter 3.20.11: Deepin fork version of mutter
 x11-wm/deepin-wm 1.2 1.9.5: Deepin Window Manager
-xfce-extra/thunar-dropbox 0.2.0: Plugin for thunar that adds context-menu items for dropbox.
+xfce-extra/thunar-dropbox 0.2.1: Plugin for thunar that adds context-menu items for dropbox.
