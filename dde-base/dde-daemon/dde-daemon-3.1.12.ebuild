@@ -25,6 +25,7 @@ RDEPEND="x11-wm/deepin-metacity
 		net-misc/networkmanager
 		net-wireless/bluez
 		gnome-base/gvfs
+		sys-libs/pam
 		>sys-power/upower-0.99
 		miracast? ( net-wireless/iw )
 	"
@@ -39,7 +40,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 
-	export GOPATH="/usr/share/gocode"	
+	export GOPATH="${S}:/usr/share/gocode"	
+	go get -d -f -u -v github.com/msteinert/pam || die
 	LIBDIR=$(get_libdir)
 	sed -i "s|lib/deepin-daemon|${LIBDIR}/deepin-daemon|g" Makefile
 	default_src_prepare
