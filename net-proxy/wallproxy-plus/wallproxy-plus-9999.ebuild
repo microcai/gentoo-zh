@@ -17,10 +17,9 @@ else
 	KEYWORDS="~amd64 ~x86"
 fi
 
-PYTHON_DEPEND="2"
-PYTHON_USE_WITH="ssl"
-
-inherit ${WALLPROXY_ECLASS} python systemd
+PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE="ssl(+)"
+inherit ${WALLPROXY_ECLASS} python-single-r1 systemd
 
 DESCRIPTION="New version of wallproxy, a general purpose proxy framework in Python."
 HOMEPAGE="https://github.com/wallproxy/wallproxy"
@@ -30,9 +29,10 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-libs/nss[utils]
-	dev-python/gevent
-	dev-python/pyopenssl"
+RDEPEND="${PYTHON_DEPS}
+	dev-libs/nss[utils]
+	dev-python/gevent[${PYTHON_USEDEP}]
+	dev-python/pyopenssl[${PYTHON_USEDEP}]"
 
 src_unpack() {
 	${WALLPROXY_ECLASS}_src_unpack
