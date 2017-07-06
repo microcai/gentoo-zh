@@ -16,7 +16,9 @@ LICENSE="GPL-3+"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-lang/python:2.7
+RDEPEND="dev-lang/python
+		dev-perl/Config-Tiny
+		dev-perl/XML-LibXML
 		sys-devel/gettext"
 DEPEND="${RDEPEND}
 		dev-qt/qtdeclarative:5
@@ -24,8 +26,6 @@ DEPEND="${RDEPEND}
 
 
 src_prepare() {
-	# fix python version
-	find -iname "*.py" | xargs sed -i 's=\(^#! */usr/bin.*\)python *$=\1python2='
 
 	# remove sudo in generate_mo.py
 	sed -e 's/sudo cp/cp/' -i src/generate_mo.py || die "sed failed"
