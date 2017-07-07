@@ -18,8 +18,9 @@ IUSE=""
 RDEPEND="x11-libs/gtk+:2
 		 dev-qt/qtsvg:5
 		 dev-qt/qtx11extras:5
-		 >dde-base/deepin-menu-2.90.1
+		 >=dde-base/deepin-menu-3.0.0
 		 dde-base/dde-daemon
+		 >=dde-base/deepin-desktop-schemas-3.1.11
 		 x11-libs/gsettings-qt
 	     "
 DEPEND="${RDEPEND}
