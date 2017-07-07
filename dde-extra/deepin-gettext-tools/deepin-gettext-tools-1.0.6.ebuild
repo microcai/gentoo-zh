@@ -19,6 +19,7 @@ IUSE=""
 RDEPEND="dev-lang/python
 		dev-perl/Config-Tiny
 		dev-perl/XML-LibXML
+		dev-perl/XML-LibXML-PrettyPrint
 		sys-devel/gettext"
 DEPEND="${RDEPEND}
 		dev-qt/qtdeclarative:5

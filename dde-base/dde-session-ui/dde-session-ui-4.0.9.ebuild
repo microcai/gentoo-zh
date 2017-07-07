@@ -26,9 +26,9 @@ RDEPEND="x11-libs/gsettings-qt
 	     "
 DEPEND="${RDEPEND}
 		>=dde-base/deepin-tool-kit-0.2.2:=
-		dde-extra/deepin-gettext-tools
-		 dde-base/dde-qt-dbus-factory:=
-	     "
+		>=dde-extra/deepin-gettext-tools-1.0.6
+		dde-base/dde-qt-dbus-factory:=
+	    "
 
 src_prepare() {
 	LIBDIR=$(get_libdir)
