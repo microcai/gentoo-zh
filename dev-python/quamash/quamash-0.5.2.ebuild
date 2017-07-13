@@ -11,6 +11,8 @@ DESCRIPTION="Implementation of the PEP 3156 Event-Loop with Qt."
 HOMEPAGE="http://pypi.python.org/pypi/quamash"
 SRC_URI="mirror://pypi/Q/Quamash/Quamash-0.5.2.tar.gz"
 
+MY_P="Quamash"
+
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -19,6 +21,8 @@ IUSE="doc"
 DEPEND="doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	( || ( || ( dev-python/PyQt4 dev-python/PyQt5 ) dev-python/PySide ) )"
 RDEPEND="${DEPEND}"
+
+S="${WORKDIR}/${MY_P}-${PV}"
 
 python_compile_all() {
 	if use doc; then
