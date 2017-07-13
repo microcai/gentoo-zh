@@ -56,6 +56,7 @@ dev-qt/qtsql[sqlite]
 gtkstyle? ( >=dev-qt/qtgui-5.0.2[gtkstyle] )
 media-libs/libcue
 media-plugins/gst-plugins-meta:1.0
+media-plugins/gst-plugins-soup:1.0
 x11-libs/libXScrnSaver
 x11-libs/libXext
 x11-libs/libXfixes
