@@ -327,7 +327,7 @@ media-sound/kalsamix 1.0.0_beta2: A mixer for KDE and ALSA from kamix.
 media-sound/kwplayer 3.5.2: An elegant music player which can get songs from kuwo.cn
 media-sound/linnya 2.2.0: A free music player
 media-sound/netease-cloud-music 1.0.0: Netease cloud music player
-media-sound/netease-musicbox 0.2.4.0 0.2.4.1: NetEase-MusicBox
+media-sound/netease-musicbox 0.2.4.1: NetEase-MusicBox
 media-tv/sopcast-player 0.7.1: A GTK+ front-end for the SopCast P2P TV player
 media-video/QtAV 1.11.0-r1: A cross-platform multimedia framework based on Qt and FFmpeg.
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
