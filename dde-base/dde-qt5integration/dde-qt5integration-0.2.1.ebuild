@@ -20,6 +20,7 @@ fi
 
 LICENSE="GPL-2+"
 SLOT="0"
+IUSE=""
 
 RDEPEND="
 	>=dev-libs/libqtxdg-2.0.0

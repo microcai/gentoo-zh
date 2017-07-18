@@ -23,7 +23,7 @@ HOMEPAGE="https://github.com/linuxdeepin/deepin-screenshot"
 
 LICENSE="GPL-3+"
 SLOT="4"
-IUSE="sharing"
+IUSE=""
 
 
 RDEPEND="

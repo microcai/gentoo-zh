@@ -12,7 +12,7 @@ SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.g
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="miracast"
+IUSE="bluetooth miracast"
 
 RDEPEND="x11-wm/deepin-metacity
 		x11-libs/libxkbfile
@@ -23,11 +23,11 @@ RDEPEND="x11-wm/deepin-metacity
 		gnome-extra/polkit-gnome
 		dde-base/deepin-desktop-schemas
 		net-misc/networkmanager
-		net-wireless/bluez
 		gnome-base/gvfs
 		sys-libs/pam
 		>sys-power/upower-0.99
 		miracast? ( net-wireless/iw )
+		bluetooth? ( net-wireless/bluez )
 	"
 DEPEND="${RDEPEND}
 	      dev-go/go-dbus-generator

@@ -6,7 +6,7 @@ EAPI=4
 
 
 DESCRIPTION="Convert dbus interfaces to go-lang or qml wrapper code"
-HOMEPAGE="https://gitcafe.com/Deepin/go-dbus-generator"
+HOMEPAGE="https://github.com/linuxdeepin/go-dbus-generator"
 SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3+"

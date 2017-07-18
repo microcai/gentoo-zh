@@ -23,7 +23,7 @@ RDEPEND=">=dde-base/dde-control-center-4.2.0
 		dde-base/deepin-notifications
 		>=x11-wm/deepin-wm-1.9.0
 		policykit? ( dde-base/dde-polkit-agent )
-		manual? ( =dde-extra/dde-help-${PV}* )
+		manual? ( >=dde-extra/dde-help-15.4.5 )
         terminal? ( dde-extra/deepin-terminal )
 	    multimedia? ( dde-extra/dde-meta-multimedia )
 		"

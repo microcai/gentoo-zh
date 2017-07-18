@@ -6,7 +6,7 @@ EAPI=4
 
 
 DESCRIPTION="Generate static golang bindings for GObject"
-HOMEPAGE="https://gitcafe.com/Deepin/go-gir-generator"
+HOMEPAGE="https://github.com/linuxdeepin/go-gir-generator"
 SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
