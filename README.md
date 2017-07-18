@@ -16,11 +16,9 @@ follow rule no.1 and no.2
 
         [category/package]: one line short description message
         {empty line}
-        [
-            multiple lines of description about why you change this.
-            if you change to fix the bug, and if there is an google code
-            issue entry for that bug, then point the bug link here.
-        ]
+        multiple lines of description about why you change this.
+        if you change to fix the bug, and if there is an google code
+        issue entry for that bug, then point the bug link here.
 
 * for version bump commit, commit message should be like this:
 
