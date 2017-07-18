@@ -7,7 +7,7 @@ EAPI="5"
 inherit fdo-mime eutils
 
 if [[ ${PV} == 9999* ]]; then
-	EGIT_REPO_URI="git://github.com/linuxdeepin/deepin-screenshot.git"
+	EGIT_REPO_URI="https://github.com/linuxdeepin/deepin-screenshot.git"
 	inherit git-2
 	SRC_URI=""
 	#KEYWORDS=""

@@ -8,7 +8,7 @@ inherit fdo-mime eutils qmake-utils
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="git://github.com/linuxdeepin/deepin-screenshot.git"
+	EGIT_REPO_URI="https://github.com/linuxdeepin/deepin-screenshot.git"
 	EGIT_BRANCH="develop"
 	SRC_URI=""
 	#KEYWORDS=""
