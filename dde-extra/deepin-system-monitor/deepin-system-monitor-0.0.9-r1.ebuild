@@ -42,14 +42,11 @@ DEPEND="${RDEPEND}
 	    "
 
 src_prepare() {
-	eqmake5 ${PN}.pro
+	eqmake5 PREFIX=/usr ${PN}.pro
 }
 
 src_install() {
-	dobin ${PN}
-	doicon -s scalable image/${PN}.svg
-	domenu debian/${PN}.desktop
-#	emake INSTALL_ROOT=${D} install
+	emake INSTALL_ROOT=${D} install
 }
 
 pkg_postinst() {
