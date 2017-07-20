@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]]; then
 fi
 
 if [[ ${PV} == "9999" ]]; then
-	EGIT_REPO_URI="git://github.com/fcitx/fcitx.git"
+	EGIT_REPO_URI="https://github.com/fcitx/fcitx.git"
 	SRC_URI="${HOMEPAGE}/files/pinyin.tar.gz
 		table? ( ${HOMEPAGE}/files/table.tar.gz )"
 else

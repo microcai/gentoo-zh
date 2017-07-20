@@ -2,15 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
-PYTHON_DEPEND=2
-
-inherit python git-2
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
+inherit python-single-r1 git-2
 
 DESCRIPTION="Download scripts for xunlei vip users"
 HOMEPAGE="https://github.com/iambus/xunlei-lixian"
-
-EGIT_REPO_URI="git://github.com/iambus/xunlei-lixian.git"
+EGIT_REPO_URI="https://github.com/iambus/xunlei-lixian.git"
 EGIT_BRANCH="master"
 
 LICENSE="MIT"
@@ -18,10 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
+DEPEND="${PYTHON_DEPS}"
+RDEPEND="${PYTHON_DEPS}"
 
 src_prepare() {
 	python_convert_shebangs -r $(python_get_version) .
@@ -36,12 +32,4 @@ src_install() {
 	dosym "$(python_get_sitedir)"/${PN}/lixian_cli.py /usr/bin/${PN}-cli || die
 	dosym "$(python_get_sitedir)"/${PN}/lixian_hash.py /usr/bin/${PN}-hash || die
 	dosym "$(python_get_sitedir)"/${PN}/lixian_batch.py /usr/bin/${PN}-batch || die
-}
-
-pkg_postinst() {
-	python_mod_optimize ${PN}
-}
-
-pkg_postrm() {
-	python_mod_cleanup ${PN}
 }

@@ -10,7 +10,7 @@ HOMEPAGE="https://github.com/lidaobing/manpages-zh"
 RESTRICT="mirror"
 SRC_URL=""
 
-EGIT_REPO_URI="git://github.com/lidaobing/manpages-zh.git"
+EGIT_REPO_URI="https://github.com/lidaobing/manpages-zh.git"
 
 LICENSE="FDL-1.2"
 SLOT="0"

@@ -9,7 +9,7 @@ inherit eutils autotools versionator git-2
 HOMEPAGE="http://code.google.com/p/osd-lyrics/"
 
 DESCRIPTION="An OSD lyric show supporting multiple media players and downloading."
-EGIT_REPO_URI="git://github.com/osdlyrics/${PN}.git"
+EGIT_REPO_URI="https://github.com/osdlyrics/${PN}.git"
 SRC_URI=""
 
 if [ "${PV##*.}" = "9999" ]; then

@@ -8,7 +8,7 @@ inherit git-2
 
 DESCRIPTION="Rime Input Method Engine for IBus Framework"
 HOMEPAGE="http://code.google.com/p/rimeime/"
-EGIT_REPO_URI="git://github.com/lotem/${PN}.git"
+EGIT_REPO_URI="https://github.com/lotem/${PN}.git"
 
 LICENSE="GPL-3"
 SLOT="0"

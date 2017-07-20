@@ -10,7 +10,7 @@ DESCRIPTION="Library for TI calculator files"
 HOMEPAGE="http://lpg.ticalc.org/prj_tilp/"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/debrouxl/tilibs.git"
+EGIT_REPO_URI="https://github.com/debrouxl/tilibs.git"
 
 MY_PN="libtifiles"
 

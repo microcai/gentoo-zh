@@ -7,7 +7,7 @@ EAPI=5
 _qtver=5.5.0
 _qtver_short=5.5
 
-REPO_URI="git://github.com/telegramdesktop/tdesktop.git"
+REPO_URI="https://github.com/telegramdesktop/tdesktop.git"
 COMMIT="d32e476d96d8ef2ec2496f8929833334d4ed884a"
 
 inherit eutils gnome2-utils fdo-mime

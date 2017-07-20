@@ -10,7 +10,7 @@ DESCRIPTION="Stepmania 5 sm-ssc branch"
 HOMEPAGE="https://github.com/stepmania/stepmania"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/stepmania/stepmania.git"
+EGIT_REPO_URI="https://github.com/stepmania/stepmania.git"
 
 LICENSE="MIT"
 SLOT="0"

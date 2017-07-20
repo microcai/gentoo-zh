@@ -12,7 +12,7 @@ DESCRIPTION="This plugin offers a \"Linux Kernel\" project type to KDevelop that
 HOMEPAGE="https://github.com/Gnurou/kdev-kernel"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/Gnurou/kdev-kernel.git"
+EGIT_REPO_URI="https://github.com/Gnurou/kdev-kernel.git"
 
 LICENSE="GPL-2"
 SLOT="0"
