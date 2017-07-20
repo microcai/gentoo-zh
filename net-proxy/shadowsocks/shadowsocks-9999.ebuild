@@ -11,7 +11,7 @@ inherit eutils distutils-r1 git-2
 DESCRIPTION=" A fast tunnel proxy that helps you bypass firewalls"
 HOMEPAGE="http://shadowsocks.org/"
 
-EGIT_REPO_URI="git://github.com/shadowsocks/shadowsocks.git"
+EGIT_REPO_URI="https://github.com/shadowsocks/shadowsocks.git"
 
 LICENSE="MIT"
 SLOT="0"

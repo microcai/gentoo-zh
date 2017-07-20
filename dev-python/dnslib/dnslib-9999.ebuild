@@ -8,7 +8,7 @@ inherit distutils-r1 git-2
 
 DESCRIPTION="A simple library to encode/decode DNS wire-format packets."
 HOMEPAGE="https://bitbucket.org/paulc/dnslib"
-EGIT_REPO_URI="git://github.com/paulchakravarti/dnslib.git"
+EGIT_REPO_URI="https://github.com/paulchakravarti/dnslib.git"
 SRC_URI=""
 
 LICENSE="BSD"

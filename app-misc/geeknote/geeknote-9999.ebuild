@@ -11,7 +11,7 @@ inherit bash-completion-r1 eutils distutils-r1 git-2
 DESCRIPTION="Console client for Evernote"
 HOMEPAGE="http://geeknote.me"
 
-EGIT_REPO_URI="git://github.com/VitaliyRodnenko/geeknote.git"
+EGIT_REPO_URI="https://github.com/VitaliyRodnenko/geeknote.git"
 EGIT_BRANCH="master"
 
 LICENSE=""

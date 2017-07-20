@@ -8,7 +8,7 @@ inherit eutils git-2
 
 DESCRIPTION="Iptux is a ipmsg client in linux"
 HOMEPAGE="https://github.com/iptux-src/iptux"
-EGIT_REPO_URI="git://github.com/iptux-src/iptux.git"
+EGIT_REPO_URI="https://github.com/iptux-src/iptux.git"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -9,7 +9,7 @@ inherit distutils-r1 git-r3
 
 DESCRIPTION="NetEase-MusicBox"
 HOMEPAGE="https://github.com/darknessomi/musicbox"
-EGIT_REPO_URI="git://github.com/darknessomi/musicbox.git"
+EGIT_REPO_URI="https://github.com/darknessomi/musicbox.git"
 EGIT_BRANCH="master"
 
 # The developers of netease-musicbox don't even know how to

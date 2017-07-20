@@ -6,7 +6,7 @@ EAPI=5
 
 RESTRICT="mirror"
 
-EGIT_REPO_URI="git://github.com/avplayer/avbot.git"
+EGIT_REPO_URI="https://github.com/avplayer/avbot.git"
 
 DESCRIPTION="avbot connects QQ/XMPP/IRC/POP3/SMTP"
 HOMEPAGE="http://qqbot.avplayer.org"

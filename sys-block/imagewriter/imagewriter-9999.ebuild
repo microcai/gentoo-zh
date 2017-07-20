@@ -13,7 +13,7 @@ HOMEPAGE="https://github.com/mbarringer/imagewriter"
 
 # Point to any required sources; these will be automatically downloaded by
 # Portage.
-EGIT_REPO_URI="git://github.com/mbarringer/imagewriter.git"
+EGIT_REPO_URI="https://github.com/mbarringer/imagewriter.git"
 
 
 # License of the package.  This must match the name of file(s) in

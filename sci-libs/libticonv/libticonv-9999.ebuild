@@ -10,7 +10,7 @@ DESCRIPTION="Charset conversion library for TI calculators"
 HOMEPAGE="http://lpg.ticalc.org/prj_tilp/"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/debrouxl/tilibs.git"
+EGIT_REPO_URI="https://github.com/debrouxl/tilibs.git"
 
 LICENSE="GPL-2"
 SLOT="0"
