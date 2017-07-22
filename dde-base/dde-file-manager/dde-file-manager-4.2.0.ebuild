@@ -19,28 +19,43 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
+IUSE="samba"
 
-RDEPEND="x11-libs/gsettings-qt
+RDEPEND="sys-apps/file
+		 x11-libs/gsettings-qt
 		 x11-libs/gtk+:2
 		 dev-qt/qtsvg:5
 		 dev-qt/qtx11extras:5
 		 dev-qt/qtconcurrent:5
+		 dev-qt/qtmultimedia:5
+		 dev-qt/qtdeclarative:5
 		 sys-auth/polkit-qt[qt5]
 		 app-text/poppler
 		 dev-libs/libqtxdg
-		 dde-base/dde-daemon
 		 app-crypt/libsecret
+		 x11-libs/libxcb
+		 x11-proto/xproto
+		 x11-libs/xcb-util
+		 x11-libs/xcb-util-wm
+		 dev-cpp/treefrog-framework
 		 media-video/ffmpegthumbnailer
+		 media-libs/taglib
+		 media-video/mpv[libmpv]
+		 dde-extra/deepin-shortcut-viewer
+		 media-libs/gst-plugins-good
 		 net-misc/socat
 		 >=dde-base/dde-dock-4.2.0
+		 dde-base/dde-qt-dbus-factory
 		 dde-base/dde-qt5integration
+		 dde-base/dde-daemon
 		 dde-base/startdde
 		 !dde-base/dde-desktop
+		 samba? ( net-fs/samba )
 	     "
 DEPEND="${RDEPEND}
 		 >=dde-base/deepin-tool-kit-0.2.4:=
 		 >=dde-base/dtksettings-0.1.3
+		 dde-extra/deepin-gettext-tools
 	     "
 
 src_prepare() {
