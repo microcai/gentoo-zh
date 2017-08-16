@@ -51,24 +51,22 @@ src_prepare() {
 		git clone https://github.com/golang/sys.git || die
 		git clone https://github.com/golang/net.git || die
 		git clone https://github.com/axgle/mahonia || die
+		# need by dde-base/dde-daemon
+		git clone https://github.com/nfnt/resize || die
 		git clone https://github.com/go-check/check || die
 		
-		cd check
-		git checkout 7001e3a65c8aa37ef1f78f3395b425e5bbf8c507 || die
-		cd ${S}
-
 		find ${S}/ | grep '\.git$' | xargs rm -r
 
 		mkdir -p ${WORKDIR}/src/github.com/BurntSushi/ \
 				${WORKDIR}/src/github.com/howeyc/ \
 				${WORKDIR}/src/github.com/disintegration/ \
 				${WORKDIR}/src/github.com/mattn/ \
-				${WORKDIR}/src/launchpad.net/ \
+				${WORKDIR}/src/github.com/nfnt/ \
+				${WORKDIR}/src/gopkg.in/ \
 				${WORKDIR}/src/gopkg.in/alecthomas/ \
 				${WORKDIR}/src/github.com/alecthomas/ \
 				${WORKDIR}/src/github.com/fsnotify/ \
 				${WORKDIR}/src/golang.org/x/	\
-				${WORKDIR}/src/launchpad.net/ \
 				${WORKDIR}/src/github.com/axgle
 
 		cp -r ${S}/xgb ${WORKDIR}/src/github.com/BurntSushi/
@@ -77,25 +75,26 @@ src_prepare() {
 		cp -r ${S}/graphics-go ${WORKDIR}/src/github.com/BurntSushi/
 		cp -r ${S}/imaging ${WORKDIR}/src/github.com/disintegration/
 		cp -r ${S}/mahonia ${WORKDIR}/src/github.com/axgle/
+		cp -r ${S}/resize ${WORKDIR}/src/github.com/nfnt/
 		cp -r ${S}/image ${WORKDIR}/src/golang.org/x/
 		cp -r ${S}/sys ${WORKDIR}/src/golang.org/x/
 		cp -r ${S}/net ${WORKDIR}/src/golang.org/x/
 		cp -r ${S}/fsnotify-0.9.0 ${WORKDIR}/src/github.com/howeyc/fsnotify
 		cp -r ${S}/go-sqlite3-1.2.0 ${WORKDIR}/src/github.com/mattn/go-sqlite3
-		cp -r ${S}/check ${WORKDIR}/src/launchpad.net/gocheck
+		cp -r ${S}/check ${WORKDIR}/src/gopkg.in/check.v1
 		cp -r ${S}/kingpin-2.2.3 ${WORKDIR}/src/gopkg.in/alecthomas/kingpin.v2
 		cp -r ${S}/template ${WORKDIR}/src/github.com/alecthomas/
 		cp -r ${S}/units ${WORKDIR}/src/github.com/alecthomas/
 		cp -r ${S}/fsnotify-1.4.2 ${WORKDIR}/src/github.com/fsnotify/fsnotify
 
 #		go get -d -f -u -v github.com/axgle/mahonia 
-#		go get -d -f -u -v launchpad.net/gocheck || die 
+#		go get -d -f -u -v gopkg.in/check.v1 || die 
 #		go get -d -f -u -v gopkg.in/alecthomas/kingpin.v2 
 #			  github.com/disintegration/imaging  \
 #			  github.com/BurntSushi/xgb \
 #			  github.com/BurntSushi/xgbutil \
 #			  github.com/howeyc/fsnotify	\
-#			  launchpad.net/gocheck \
+#			  github.com/nfnt/resize \
 #			  github.com/mattn/go-sqlite3 || die " get dependent sources failed "
 
 }

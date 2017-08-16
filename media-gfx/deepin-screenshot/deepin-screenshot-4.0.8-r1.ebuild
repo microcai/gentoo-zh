@@ -23,7 +23,7 @@ HOMEPAGE="https://github.com/linuxdeepin/deepin-screenshot"
 
 LICENSE="GPL-3+"
 SLOT="4"
-IUSE=""
+IUSE="+dtk1"
 
 
 RDEPEND="
@@ -57,9 +57,14 @@ DEPEND="${RDEPEND}
 	media-libs/freetype
 	x11-proto/xextproto
 	x11-proto/recordproto
-	dde-base/deepin-tool-kit"
+	dtk1? ( >=dde-base/deepin-tool-kit-0.3.4:= )
+    !dtk1? ( >=dde-base/dtkwidget-0.3.3:= )
+	"
 
 src_prepare() {
+    if use dtk1; then
+        sed -i "s|dtkwidget|dtkwidget1|g" ${PN}.pro 
+    fi   
 	eqmake5 PREFIX=/usr
 }
 

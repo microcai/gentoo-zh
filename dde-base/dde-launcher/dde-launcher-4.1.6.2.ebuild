@@ -13,7 +13,7 @@ SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.g
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="+dtk1"
 
 RDEPEND="x11-libs/gtk+:2
 		 dev-qt/qtsvg:5
@@ -24,12 +24,16 @@ RDEPEND="x11-libs/gtk+:2
 		 x11-libs/gsettings-qt
 	     "
 DEPEND="${RDEPEND}
-		 dde-base/deepin-tool-kit:=
-		 dde-base/dde-qt-dbus-factory:=
+        dtk1? ( >=dde-base/deepin-tool-kit-0.3.4:= )
+        !dtk1? ( >=dde-base/dtkwidget-0.3.3:= )
+		dde-base/dde-qt-dbus-factory:=
 	     "
 
 src_prepare() {
-		eqmake5	PREFIX=/usr WITHOUT_UNINSTALL_APP=YES
+    if use dtk1; then
+        sed -i "s|dtkwidget|dtkwidget1|g" ${PN}.pro 
+    fi   
+	eqmake5	PREFIX=/usr WITHOUT_UNINSTALL_APP=YES
 }
 
 src_install() {

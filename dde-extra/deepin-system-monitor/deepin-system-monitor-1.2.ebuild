@@ -38,7 +38,8 @@ RDEPEND="sys-process/procps
 	"
 
 DEPEND="${RDEPEND}
-		>=dde-base/deepin-tool-kit-0.2.11
+		>=dde-base/dtkwidget-0.3.3
+		dde-base/dtkwm
 	    "
 
 src_prepare() {

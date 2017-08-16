@@ -35,6 +35,7 @@ RDEPEND="x11-libs/gtk+:3
 	media-libs/libcanberra[gtk]
 	gnome-base/libgtop
 	gnome-extra/zenity
+	dde-base/deepin-menu
 	xinerama? ( x11-libs/libXinerama )
 	!x11-misc/expocity"
 DEPEND="${RDEPEND}

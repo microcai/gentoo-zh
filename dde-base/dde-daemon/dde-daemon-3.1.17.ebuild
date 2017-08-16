@@ -32,7 +32,7 @@ RDEPEND="x11-wm/deepin-metacity
 DEPEND="${RDEPEND}
 	      dev-go/go-dbus-generator
 	      dev-go/deepin-go-lib
-		  >=dev-go/dde-go-essential-20170627
+		  >=dev-go/dde-go-essential-20170807
 	      >=dev-go/dbus-factory-3.0.8
 	      >=dde-base/dde-api-3.1.3
 	      dev-db/sqlite:3

@@ -19,7 +19,7 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="samba"
+IUSE="samba +dtk1"
 
 RDEPEND="sys-apps/file
 		 x11-libs/gsettings-qt
@@ -53,21 +53,26 @@ RDEPEND="sys-apps/file
 		 samba? ( net-fs/samba )
 	     "
 DEPEND="${RDEPEND}
-		 >=dde-base/deepin-tool-kit-0.2.4:=
-		 >=dde-base/dtksettings-0.1.3
-		 dde-extra/deepin-gettext-tools
-	     "
+		dde-extra/deepin-gettext-tools
+
+		dtk1? ( >=dde-base/dtksettings-0.1.3
+			    >=dde-base/deepin-tool-kit-0.3.4:= )
+		!dtk1? ( >=dde-base/dtkwidget-0.3.3:= )
+	    "
 
 src_prepare() {
-#	sed -i "s|-0-2||g" dde-file-manager*/dde-file-manager*.pro
-#	sed -i "s|-0-2||g" usb-device-formatter/usb-device-formatter.pro
-#	sed -i "s|-0-2||g" dde-dock-plugins/disk-mount/disk-mount.pro
-#	sed -i "s|-0-2||g" dde-desktop/dde-desktop-build.pri
+	if use dtk1; then
+		sed -i "s|dtkwidget|dtkwidget1|g" dde-file-manager*/dde-file-manager*.pro
+		sed -i "s|dtkwidget|dtkwidget1|g" usb-device-formatter/usb-device-formatter.pro
+		sed -i "s|dtkwidget|dtkwidget1|g" dde-dock-plugins/disk-mount/disk-mount.pro
+		sed -i "s|dtkwidget|dtkwidget1|g" dde-dock-plugins/trash/trash.pro
+		sed -i "s|dtkwidget|dtkwidget1|g" dde-desktop/dde-desktop-build.pri
+	fi
 
 	LIBDIR=$(get_libdir)
 	sed -i "s|{PREFIX}/lib/|{PREFIX}/${LIBDIR}/|g" dde-dock-plugins/disk-mount/disk-mount.pro
 
-	eqmake5	PREFIX=/usr VERSION=${PV} LIB_INSTALL_DIR=/usr/$(get_libdir)
+	eqmake5	PREFIX=/usr LIB_INSTALL_DIR=/usr/$(get_libdir)
 	default_src_prepare
 }
 

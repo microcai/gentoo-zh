@@ -26,6 +26,7 @@ RDEPEND="
 	>=x11-libs/gtk+-3.4:3
 	x11-wm/deepin-mutter
 	gnome-base/gnome-desktop:3
+	dde-base/deepin-menu
 	>=dde-base/deepin-desktop-schemas-2.90.0"
 DEPEND="${RDEPEND}
 	$(vala_depend)

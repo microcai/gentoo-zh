@@ -13,7 +13,7 @@ SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.g
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="+dtk1"
 
 RDEPEND="dev-qt/qtsvg:5
 		dev-qt/qtconcurrent:5
@@ -26,11 +26,14 @@ RDEPEND="dev-qt/qtsvg:5
 		"
 
 DEPEND="${RDEPEND}
-		>=dde-base/deepin-tool-kit-0.2.4:=
+        dtk1? ( >=dde-base/deepin-tool-kit-0.3.4:= )
+		!dtk1? ( >=dde-base/dtkwidget-0.3.3:= )
 	    "
 
 src_prepare() {
-#	sed -i 's|-0-2||g' viewer/viewer.pro
+    if use dtk1; then
+        sed -i "s|dtkwidget|dtkwidget1|g" viewer/viewer.pro
+    fi   
 	eqmake5
 }
 
