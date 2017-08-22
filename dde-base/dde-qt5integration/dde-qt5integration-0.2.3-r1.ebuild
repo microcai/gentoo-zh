@@ -33,10 +33,11 @@ RDEPEND="
 	x11-libs/xcb-util-wm
 	x11-libs/xcb-util-keysyms
 	x11-libs/gtk+:2
+	dev-qt/qtstyleplugins:5
 	"
 DEPEND="${RDEPEND}
-        >=dde-base/dtkwidget-2.0.0:=
-	"
+    	>=dde-base/dtkwidget-2.0.0:=
+		"
 
 S=${WORKDIR}/${MY_P}
 
