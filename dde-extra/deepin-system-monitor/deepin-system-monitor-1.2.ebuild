@@ -38,8 +38,8 @@ RDEPEND="sys-process/procps
 	"
 
 DEPEND="${RDEPEND}
-		>=dde-base/dtkwidget-0.3.3
-		dde-base/dtkwm
+		>=dde-base/dtkwidget-2.0.0:=
+		dde-base/dtkwm:=
 	    "
 
 src_prepare() {

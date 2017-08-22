@@ -35,8 +35,8 @@ RDEPEND="dev-qt/qtwidgets:5
 DEPEND="${RDEPEND}
 		x11-libs/xcb-util
 		x11-libs/libxcb
-		>=dde-base/dtkwidget-0.3.3
-		dde-base/dtkwm
+		>=dde-base/dtkwidget-2.0.0:=
+		dde-base/dtkwm:=
 	    "
 
 src_prepare() {

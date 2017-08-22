@@ -20,7 +20,7 @@ fi
 
 LICENSE="GPL-2+"
 SLOT="0"
-IUSE="+dtk1"
+IUSE=""
 
 RDEPEND="
 	>=dev-libs/libqtxdg-2.0.0
@@ -35,16 +35,12 @@ RDEPEND="
 	x11-libs/gtk+:2
 	"
 DEPEND="${RDEPEND}
-        dtk1? ( >=dde-base/deepin-tool-kit-0.3.4:= )
-        !dtk1? ( >=dde-base/dtkwidget-0.3.3:= )
+        >=dde-base/dtkwidget-2.0.0:=
 	"
 
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-    if use dtk1; then
-        sed -i "s|dtkwidget|dtkwidget1|g" dstyleplugin/dstyleplugin.pro
-    fi   
 	eqmake5 ${MY_PN}.pro
 	sed -i "s|cr\.deepin\.io|github\.com\/linuxdeepin|g" platformplugin/linux.pri
 }

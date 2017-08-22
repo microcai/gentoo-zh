@@ -13,7 +13,7 @@ SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.g
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+dtk1"
+IUSE="dtk1"
 
 RDEPEND="dev-qt/qtsvg:5
 		 dev-qt/qtx11extras:5
@@ -22,14 +22,21 @@ RDEPEND="dev-qt/qtsvg:5
 		 dde-base/dde-qt5integration
 	     "
 DEPEND="${RDEPEND}
-        dtk1? ( >=dde-base/deepin-tool-kit-0.3.4:= )
-        !dtk1? ( >=dde-base/dtkwidget-0.3.3:= )
-	     "
+		virtual/pkgconfig
+		x11-libs/xcb-util-image
+		x11-libs/libxcb
+		x11-libs/xcb-util-wm
+		x11-libs/libXtst
+		dde-base/dde-qt-dbus-factory
+		x11-libs/gsettings-qt
+        dtk1? ( >=dde-base/deepin-tool-kit-1.0.0:= )
+        !dtk1? ( >=dde-base/dtkwidget-2.0.0:= )
+	    "
 
 src_prepare() {
     if use dtk1; then
-        sed -i "s|dtkwidget|dtkwidget1|g" frame/frame.pro 
-        sed -i "s|dtkwidget|dtkwidget1|g" plugins/*/*.pro
+        sed -i "s|dtkwidget|dtkwidget1\ dtkbase1\ dtkutil1|g" frame/frame.pro 
+        sed -i "s|dtkwidget|dtkwidget1\ dtkbase1|g" plugins/*/*.pro
     fi   
 	LIBDIR=$(get_libdir)
 	sed -i "s|{PREFIX}/lib/|{PREFIX}/${LIBDIR}/|g" plugins/*/*.pro

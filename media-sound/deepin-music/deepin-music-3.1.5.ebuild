@@ -13,7 +13,7 @@ SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.g
 LICENSE="GPL-3+"
 SLOT="3"
 KEYWORDS="~amd64 ~x86"
-IUSE="+mp3 +flac +ogg +aac +dtk1"
+IUSE="+mp3 +flac +ogg +aac"
 
 RDEPEND="dev-qt/qtmultimedia:5[gstreamer]
 	dev-libs/icu
@@ -27,17 +27,10 @@ RDEPEND="dev-qt/qtmultimedia:5[gstreamer]
 	media-plugins/gst-plugins-meta:1.0[mp3=,flac=,ogg=,aac=]
 	"
 DEPEND="${RDEPEND}
-	dtk1? ( >=dde-base/deepin-tool-kit-0.3.4:=
-			dde-base/dtksettings )
-	!dtk1? ( >=dde-base/dtkwidget-0.3.3:= )
+	>=dde-base/dtkwidget-2.0.0:=
 	"
 
 src_prepare() {
-    if use dtk1; then
-        sed -i "s|dtkwidget|dtkwidget1|g" music-player/music-player.pro 
-        sed -i "s|dtkwidget|dtkwidget1|g" music-player/build.pri
-        sed -i "s|dtkwidget|dtkwidget1|g" vendor/src/build.pri 
-    fi   
 	LIBDIR=$(qt5_get_libdir)
 	sed -i "s|/usr/lib|${LIBDIR}|g" plugin/netease-meta-search/netease-meta-search.pro libdmusic/libdmusic.pro
 	

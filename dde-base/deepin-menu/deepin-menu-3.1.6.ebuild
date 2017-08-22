@@ -15,25 +15,19 @@ SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.g
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+dtk1"
+IUSE=""
 
 RDEPEND="dev-lang/python:2.7
 	      "
 DEPEND="${RDEPEND}
 		x11-libs/libX11
 		x11-libs/libxcb
-
-        dtk1? ( >=dde-base/deepin-tool-kit-0.3.4:= )
-        !dtk1? ( >=dde-base/dtkwidget-0.3.3:= )
-
+        >=dde-base/dtkwidget-2.0.0:=
 		dde-base/dde-qt-dbus-factory
 		dev-qt/qtx11extras:5
 		dev-qt/qtdeclarative:5
 	    "
 src_prepare() {
-    if use dtk1; then
-        sed -i "s|dtkwidget|dtkwidget1|g" ${PN}.pro 
-    fi   
 	distutils-r1_python_prepare_all
 	eqmake5
 	default_src_prepare

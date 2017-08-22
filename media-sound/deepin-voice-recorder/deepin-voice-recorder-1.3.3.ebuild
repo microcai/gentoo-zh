@@ -30,7 +30,7 @@ RDEPEND="dev-qt/qtcore:5
 	"
 
 DEPEND="${RDEPEND}
-		>=dde-base/dtkwidget-0.3.3
+		>=dde-base/dtkwidget-2.0.0:=
 	    "
 
 src_prepare() {

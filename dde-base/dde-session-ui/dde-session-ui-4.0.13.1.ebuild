@@ -13,7 +13,7 @@ SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.g
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+dtk1"
+IUSE=""
 
 RDEPEND="x11-libs/gsettings-qt
 		 x11-misc/lightdm[qt5]
@@ -25,18 +25,12 @@ RDEPEND="x11-libs/gsettings-qt
 		 dde-base/startdde
 	     "
 DEPEND="${RDEPEND}
-        dtk1? ( >=dde-base/deepin-tool-kit-0.3.4:= )
-        !dtk1? ( >=dde-base/dtkwidget-0.3.3:= )
+        >=dde-base/dtkwidget-2.0.0:=
 		>=dde-extra/deepin-gettext-tools-1.0.6
 		dde-base/dde-qt-dbus-factory:=
 	    "
 
 src_prepare() {
-    if use dtk1; then
-        sed -i "s|dtkwidget|dtkwidget1|g" widgets/widgets.pri
-        sed -i "s|dtkwidget|dtkwidget1|g" lightdm-deepin-greeter/lightdm-deepin-greeter.pro
-        sed -i "s|dtkwidget|dtkwidget1|g" dde-*/*.pro
-    fi   
 	LIBDIR=$(get_libdir)
 	sed -i "s|lib/deepin-daemon|${LIBDIR}/deepin-daemon|g" dde-*/*.pro
 	eqmake5	PREFIX=/usr

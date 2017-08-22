@@ -6,8 +6,8 @@ EAPI=6
 
 inherit qmake-utils
 
-DESCRIPTION="Base development tool of all C++/Qt Developer work on Deepin"
-HOMEPAGE="https://github.com/linuxdeepin/deepin-tool-kit"
+DESCRIPTION="Deepin graphical user interface library"
+HOMEPAGE="https://github.com/linuxdeepin/dtkwm"
 
 if [[ "${PV}" == *9999* ]] ; then
      inherit git-r3
@@ -27,22 +27,24 @@ RDEPEND="dev-qt/qtmultimedia:5[widgets]
 		 dev-qt/qtwidgets:5
 		 dev-qt/qtx11extras:5
 		 >=dev-qt/qtcore-5.5:5
+		 x11-libs/libXrender
 		 x11-libs/libxcb
+		 x11-libs/libXext
 		 x11-libs/xcb-util
-		 x11-libs/startup-notification
+		 x11-proto/xextproto
+		 sys-libs/mtdev
+		 media-libs/mesa
 	     "
 DEPEND="${RDEPEND}
-		dde-base/dtksettings
-	     "
+		dde-base/dtkcore
+	    "
 
 src_prepare() {
-	epatch ${FILESDIR}/${PN}-0.2.7-lrelease.patch
 	eqmake5 PREFIX=/usr LIB_INSTALL_DIR=/usr/$(get_libdir)
 	default_src_prepare
 }
 
 src_install() {
 	emake INSTALL_ROOT=${D} install
-	rm -r ${D}/usr/share
 }
 

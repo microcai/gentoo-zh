@@ -13,7 +13,7 @@ SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.g
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+dtk1"
+IUSE=""
 
 RDEPEND="dev-qt/qtsvg:5
          dev-qt/qtsql:5
@@ -37,19 +37,11 @@ RDEPEND="dev-qt/qtsvg:5
 		 dde-base/dde-qt5integration
 	     "
 DEPEND="${RDEPEND}
-		dtk1? ( >=dde-base/deepin-tool-kit-0.3.4:= )
-		!dtk1? ( >=dde-base/dtkwidget-0.3.3:= )
-		 >=dde-base/dde-qt-dbus-factory-0.0.7
-	     "
+		>=dde-base/dtkwidget-2.0.0:=
+		>=dde-base/dde-qt-dbus-factory-0.3.0:=
+	    "
 
 src_prepare() {
-    if use dtk1; then
-        sed -i "s|dtkwidget|dtkwidget1|g" dialogs/reboot-reminder-dialog/reboot-reminder-dialog.pro
-        sed -i "s|dtkwidget|dtkwidget1|g" frame/frame.pro
-        sed -i "s|dtkwidget|dtkwidget1|g" plugins/notify/notify.pro
-        sed -i "s|dtkwidget|dtkwidget1|g" plugins/weather/weather.pro
-        sed -i "s|dtkwidget|dtkwidget1|g" widgets/widgets.pri
-    fi  
 	LIBDIR=$(get_libdir)
 	sed -i "s|{PREFIX}/lib/|{PREFIX}/${LIBDIR}/|g" plugins/*/*.pro
 	sed -i "s|usr/lib/|usr/${LIBDIR}/|g" dialogs/reboot-reminder-dialog/reboot-reminder-dialog.pro
