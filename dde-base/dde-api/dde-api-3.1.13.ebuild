@@ -31,7 +31,7 @@ RDEPEND="sys-devel/gcc[go]
 
 DEPEND="${RDEPEND}
 	      dev-go/go-dbus-generator
-	      >=dev-go/deepin-go-lib-1.0.4
+	      >=dev-go/deepin-go-lib-1.1.0
 		  dev-go/go-gir-generator
 	      >=dev-go/dbus-factory-3.1.5"
 

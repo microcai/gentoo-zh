@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="sys-devel/gcc[go]
 		dev-lang/go
-		dev-go/dde-go-essential"
+		>=dev-go/dde-go-essential-20170807"
 
 DEPEND="${RDEPEND}"
 

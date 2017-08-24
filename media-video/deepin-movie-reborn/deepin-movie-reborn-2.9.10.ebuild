@@ -16,7 +16,7 @@ else
 fi
 
 LICENSE="GPL-3+"
-SLOT="0"
+SLOT="3"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
@@ -45,6 +45,6 @@ RDEPEND="${DEPEND}
 		"
 
 src_prepare() {
-	sed -i "s|p->property|(*p)->property|g" src/common/actions.cpp
+#	sed -i "s|p->property|(*p)->property|g" src/common/actions.cpp
 	default_src_prepare
 }

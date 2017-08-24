@@ -9,7 +9,7 @@ HOMEPAGE="https://github.com/linuxdeepin/deepin-movie"
 SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3+"
-SLOT="0"
+SLOT="2"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
@@ -26,7 +26,6 @@ DEPEND="media-video/mediainfo
 		dev-python/bottle[${PY_TAR_VER}]
 		dev-python/pysrt[${PY_TAR_VER}]
 		media-video/QtAV
-		dev-python/deepin-utils
 		dde-extra/deepin-gettext-tools
 		"
 RDEPEND="${DEPEND}

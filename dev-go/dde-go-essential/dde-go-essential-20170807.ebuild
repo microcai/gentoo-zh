@@ -12,8 +12,7 @@ EAPI=5
 
 DESCRIPTION="Essential go sources for DDE"
 HOMEPAGE="https://github.com/linuxdeepin/go-lib#installation"
-SRC_URI="https://github.com/howeyc/fsnotify/archive/v0.9.0.tar.gz -> fsnotify-0.9.0.tar.gz
-		https://github.com/mattn/go-sqlite3/archive/v1.2.0.tar.gz -> go-sqlite3-1.2.0.tar.gz
+SRC_URI="https://github.com/mattn/go-sqlite3/archive/v1.2.0.tar.gz -> go-sqlite3-1.2.0.tar.gz
 		https://github.com/alecthomas/kingpin/archive/v2.2.3.tar.gz -> kingpin-2.2.3.tar.gz
 		https://github.com/fsnotify/fsnotify/archive/v1.4.2.tar.gz -> fsnotify-1.4.2.tar.gz"
 #		http://packages.linuxdeepin.com/deepin/pool/main/g/golang-gocheck/golang-gocheck_0.0~bzr20131118%2b85.orig.tar.gz -> gocheck.tar.gz"
@@ -58,7 +57,6 @@ src_prepare() {
 		find ${S}/ | grep '\.git$' | xargs rm -r
 
 		mkdir -p ${WORKDIR}/src/github.com/BurntSushi/ \
-				${WORKDIR}/src/github.com/howeyc/ \
 				${WORKDIR}/src/github.com/disintegration/ \
 				${WORKDIR}/src/github.com/mattn/ \
 				${WORKDIR}/src/github.com/nfnt/ \
@@ -79,7 +77,6 @@ src_prepare() {
 		cp -r ${S}/image ${WORKDIR}/src/golang.org/x/
 		cp -r ${S}/sys ${WORKDIR}/src/golang.org/x/
 		cp -r ${S}/net ${WORKDIR}/src/golang.org/x/
-		cp -r ${S}/fsnotify-0.9.0 ${WORKDIR}/src/github.com/howeyc/fsnotify
 		cp -r ${S}/go-sqlite3-1.2.0 ${WORKDIR}/src/github.com/mattn/go-sqlite3
 		cp -r ${S}/check ${WORKDIR}/src/gopkg.in/check.v1
 		cp -r ${S}/kingpin-2.2.3 ${WORKDIR}/src/gopkg.in/alecthomas/kingpin.v2

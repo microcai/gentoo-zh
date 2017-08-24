@@ -19,9 +19,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dde-base/dde-daemon
+RDEPEND=">=dde-base/dde-daemon-3.1.17
  		dde-base/deepin-wm-switcher
-		>=dde-base/deepin-desktop-schemas-3.1.7
+		>=dde-base/deepin-desktop-schemas-3.1.15
 		"
 
 DEPEND="${RDEPEND}
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 	      dev-go/go-dbus-generator
 	      dev-util/cmake
 		  >=dde-base/dde-api-3.1.8
-	      >=dev-go/deepin-go-lib-1.0.4
+	      >=dev-go/deepin-go-lib-1.1.0
 	      >=dev-go/dbus-factory-3.1.5"
 
 src_prepare() {

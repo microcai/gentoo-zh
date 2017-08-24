@@ -31,7 +31,8 @@ RDEPEND="x11-wm/deepin-metacity
 	"
 DEPEND="${RDEPEND}
 	      dev-go/go-dbus-generator
-	      dev-go/deepin-go-lib
+		  >=dev-go/go-x11-client-0.0.2
+	      >=dev-go/deepin-go-lib-1.1.0
 		  >=dev-go/dde-go-essential-20170807
 	      >=dev-go/dbus-factory-3.0.8
 	      >=dde-base/dde-api-3.1.3
