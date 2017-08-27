@@ -1,9 +1,0 @@
-DEFINED_PHASES=compile install prepare
-DESCRIPTION=Utilities to create/extract a yaffs2 image on Linux
-EAPI=5
-HOMEPAGE=https://code.google.com/p/yaffs2utils/
-KEYWORDS=~amd64
-SLOT=0
-SRC_URI=https://yaffs2utils.googlecode.com/files/latest.tar.gz
-_eclass_exported_funcs=src_prepare:- src_compile:- src_install:-
-_md5_=5bd6b42757537f487125c1348f6f7871
