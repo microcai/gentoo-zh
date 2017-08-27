@@ -1,0 +1,15 @@
+DEFINED_PHASES=install prepare
+DEPEND=dev-libs/boost app-text/hunspell qt4? ( app-text/poppler[qt4] dev-qt/qtwebkit:4 dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsql:4 ) qt5? ( app-text/poppler[qt5] dev-qt/qtwebkit:5 dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtsql:5 ) opencv3? ( =media-libs/opencv-3* ) !opencv3? ( media-libs/opencv:0/2.4 )
+DESCRIPTION=Nixnote - A clone of Evernote for Linux
+EAPI=5
+HOMEPAGE=http://sourceforge.net/projects/nevernote/
+IUSE=qt4 qt5 +opencv3
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/boost app-text/hunspell qt4? ( app-text/poppler[qt4] dev-qt/qtwebkit:4 dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsql:4 ) qt5? ( app-text/poppler[qt5] dev-qt/qtwebkit:5 dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtsql:5 ) opencv3? ( =media-libs/opencv-3* ) !opencv3? ( media-libs/opencv:0/2.4 ) app-text/htmltidy
+REQUIRED_USE=^^ ( qt4 qt5 ) qt5? ( opencv3 )
+SLOT=2
+SRC_URI=https://github.com/baumgarr/nixnote2/archive/v2.0-beta11.tar.gz -> nixnote2-2.0-beta11.tar.gz
+_eclass_exported_funcs=src_prepare:- src_install:-
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	9c113d6a64826c40154cad7be15d95ea	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	qmake-utils	990448b067cb3cfe1443bc25fb57239c	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=9667ff642ed9193cc7b4669633f17ec8

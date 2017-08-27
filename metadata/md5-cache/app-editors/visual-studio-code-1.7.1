@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst
+DEPEND=>=media-libs/libpng-1.2.46 >=x11-libs/gtk+-2.24.8-r1:2 x11-libs/cairo gnome-base/gconf
+DESCRIPTION=Multiplatform Visual Studio Code from Microsoft
+EAPI=5
+HOMEPAGE=https://code.visualstudio.com
+KEYWORDS=~amd64
+LICENSE=Microsoft
+RDEPEND=>=media-libs/libpng-1.2.46 >=x11-libs/gtk+-2.24.8-r1:2 x11-libs/cairo gnome-base/gconf
+RESTRICT=mirror
+SLOT=0
+SRC_URI=amd64? ( https://az764295.vo.msecnd.net/stable/02611b40b24c9df2726ad8b33f5ef5f67ac30b44/code-stable-code_1.7.1-1478180561_amd64.tar.gz -> visual-studio-code-1.7.1-amd64.tar.gz )
+_eclass_exported_funcs=pkg_postinst:- src_install:-
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	9c113d6a64826c40154cad7be15d95ea	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=2bb373278ebf092ed7bf805c98f6eb05

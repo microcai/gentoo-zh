@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst
+DESCRIPTION=An elegant music player which can get songs from kuwo.cn
+EAPI=5
+HOMEPAGE=https://github.com/LiuLang/kwplayer
+IUSE=+python_single_target_python3_3 python_single_target_python3_4
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=dev-python/pygobject:3 dev-python/dbus-python dev-python/html2text media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 media-libs/gst-plugins-good:1.0 media-libs/gst-plugins-ugly:1.0 media-libs/gst-plugins-bad:1.0 media-plugins/gst-plugins-libav:1.0 x11-themes/gnome-icon-theme x11-themes/gnome-icon-theme-symbolic
+SLOT=0
+SRC_URI=https://pypi.python.org/packages/source/k/kwplayer/kwplayer-3.5.2.tar.gz
+_eclass_exported_funcs=pkg_postinst:- src_compile:- src_install:-
+_md5_=7cbe96aba401138636abc81b87e99d60

@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install unpack
+DEPEND=dev-lang/erlang dev-lang/rebar >=dev-lang/erlang-17.0.0 >=dev-vcs/git-1.8.2.1
+DESCRIPTION=The BSON implementation for Erlang.
+EAPI=5
+HOMEPAGE=https://github.com/yunba/bson-erlang
+IUSE=doc src
+LICENSE=all-rights-reserved
+RDEPEND=dev-lang/erlang >=dev-lang/erlang-17.0.0
+SLOT=0
+_eclass_exported_funcs=src_unpack:git-r3 src_compile:- src_install:-
+_eclasses_=erlang-pkg	40c849564b68378e720d65139814a52b	git-r3	78651c07ca1c1373bf81545d39eb9769
+_md5_=4f67e1a255e358429a27039206ac5017

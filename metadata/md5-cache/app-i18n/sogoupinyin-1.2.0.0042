@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst
+DEPEND=>=app-i18n/fcitx-4.2.8[qt4,X,dbus] !app-i18n/fcitx-qimpanel net-dns/libidn app-i18n/opencc net-libs/libssh2 media-video/rtmpdump dev-qt/qtdeclarative:4 dev-qt/qtgui:4 x11-apps/xprop sys-apps/lsb-release !app-i18n/fcitx-sogoupinyin
+DESCRIPTION=Sogou Pinyin input method.
+EAPI=5
+HOMEPAGE=http://pinyin.sogou.com/linux/
+KEYWORDS=~amd64 ~x86
+LICENSE=Fcitx-Sogou
+RDEPEND=>=app-i18n/fcitx-4.2.8[qt4,X,dbus] !app-i18n/fcitx-qimpanel net-dns/libidn app-i18n/opencc net-libs/libssh2 media-video/rtmpdump dev-qt/qtdeclarative:4 dev-qt/qtgui:4 x11-apps/xprop sys-apps/lsb-release !app-i18n/fcitx-sogoupinyin
+RESTRICT=mirror
+SLOT=0
+SRC_URI=amd64? ( http://download.ime.sogou.com/1422868314/sogoupinyin_1.2.0.0042_amd64.deb ) x86? ( http://download.ime.sogou.com/1422868314/sogoupinyin_1.2.0.0042_i386.deb )
+_eclass_exported_funcs=pkg_postinst:- src_compile:- src_install:-
+_md5_=e3fd45aede7942cae36660a24018060f

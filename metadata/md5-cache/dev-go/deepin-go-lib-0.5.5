@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare
+DEPEND=sys-devel/gcc[go] dev-lang/go dev-vcs/git dev-vcs/bzr
+DESCRIPTION=Deepin GoLang Library
+EAPI=5
+HOMEPAGE=https://github.com/linuxdeepin/go-lib
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3+
+RDEPEND=sys-devel/gcc[go] dev-lang/go
+SLOT=0
+SRC_URI=https://github.com/linuxdeepin/go-lib/archive/0.5.5.tar.gz -> deepin-go-lib-0.5.5.tar.gz https://github.com/howeyc/fsnotify/archive/v0.9.0.tar.gz -> fsnotify-0.9.0.tar.gz https://github.com/mattn/go-sqlite3/archive/v1.2.0.tar.gz -> go-sqlite3-1.2.0.tar.gz https://github.com/alecthomas/kingpin/archive/v2.2.3.tar.gz -> kingpin-2.2.3.tar.gz https://github.com/fsnotify/fsnotify/archive/v1.4.2.tar.gz -> fsnotify-1.4.2.tar.gz
+_eclass_exported_funcs=src_prepare:- src_install:-
+_md5_=73b236d247e5b2f4e7810e3e33d58100

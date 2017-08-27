@@ -1,0 +1,15 @@
+DEFINED_PHASES=postinst prepare unpack
+DEPEND=app-arch/unzip app-arch/rpm2targz app-arch/tar >=sys-apps/pcsc-lite-1.8.13-r1[abi_x86_32] || ( dev-libs/libusb-compat[abi_x86_32] dev-libs/libusb:0[abi_x86_32] ) sys-apps/dbus media-libs/libpng:1.2 media-libs/fontconfig >=app-arch/rpm2targz-9.0.0.3g
+DESCRIPTION=SafeNet (Aladdin) eToken Middleware for eTokenPRO, eTokenNG OTP, eTokenNG Flash, eToken Pro (Java)
+EAPI=5
+HOMEPAGE=http://www.etokenonlinux.org
+IUSE=multilib
+KEYWORDS=-* ~x86 ~amd64
+LICENSE=EULA
+RDEPEND=>=sys-apps/pcsc-lite-1.8.13-r1[abi_x86_32] || ( dev-libs/libusb-compat[abi_x86_32] dev-libs/libusb:0[abi_x86_32] ) sys-apps/dbus media-libs/libpng:1.2 media-libs/fontconfig
+REQUIRED_USE=amd64? ( multilib )
+SLOT=0
+SRC_URI=http://www.sadvisor.com/etoken/610-011815-002_SAC_Linux_v8.1.zip
+_eclass_exported_funcs=pkg_postinst:- src_unpack:- src_prepare:-
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	9c113d6a64826c40154cad7be15d95ea	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	rpm	f52cfa3a435468d86d3b49c357b9cb35	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=5f056724a288c74e61935496fd4c286a

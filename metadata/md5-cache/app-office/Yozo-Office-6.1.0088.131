@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst prerm
+DEPEND=x11-libs/libXext[abi_x86_32] x11-libs/libXrender[abi_x86_32] x11-libs/libXtst[abi_x86_32] x11-libs/libXi[abi_x86_32] media-libs/alsa-lib[abi_x86_32] app-arch/tar app-arch/unzip sys-apps/findutils
+DESCRIPTION=Yozo Office -- Fully Functional Office Suite
+EAPI=4
+HOMEPAGE=http://www.yozosoft.com/person/
+KEYWORDS=~amd64 ~x86
+RDEPEND=x11-libs/libXext[abi_x86_32] x11-libs/libXrender[abi_x86_32] x11-libs/libXtst[abi_x86_32] x11-libs/libXi[abi_x86_32] media-libs/alsa-lib[abi_x86_32]
+SLOT=0
+SRC_URI=http://download.yozosoft.com/free/zh/2012/Yozo_Office_6.1.0088.131ZH.deb
+_eclass_exported_funcs=pkg_prerm:- pkg_postinst:- src_install:-
+_md5_=aac298b547372a84446979cfce86a549

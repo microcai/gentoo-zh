@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install unpack
+DEPEND=dev-db/sqlite:3 dev-util/intltool virtual/pkgconfig sys-devel/gettext dev-vcs/git dev-util/scons
+DESCRIPTION=A statistical language model based Chinese input method library
+EAPI=5
+HOMEPAGE=https://code.google.com/p/sunpinyin/
+LICENSE=CDDL LGPL-2.1
+PDEPEND=app-i18n/sunpinyin-data
+RDEPEND=dev-db/sqlite:3
+RESTRICT=mirror
+SLOT=0
+_eclass_exported_funcs=src_unpack:git-2 src_configure:- src_compile:- src_install:-
+_eclasses_=git-2	195a672bfaf52d868442171c9469bbb6	multiprocessing	284a473719153462f3e974d86c8cb81c	scons-utils	fcace052aef60e6b0eb3023c26aa585a
+_md5_=f930300a2a9d508a4db90f6425166283
