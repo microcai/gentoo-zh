@@ -93,6 +93,7 @@ app-i18n/fcitx-table-other 0.2.2: Provides some other tables for fcitx, fork fro
 app-i18n/fcitx-tsundere 0.1: Fcitx Tsundere Addon
 app-i18n/fcitx-ui-light 0.1.3: A very light weight ui for fcitx, only using xlib and xpm, like go back to 3.6.x times.
 app-i18n/fcitx-unikey 0.2.2: unikey support for fcitx.
+app-i18n/gcin 2.8.5: Another Traditional Chinese IM.
 app-i18n/hime 0.9.10: HIME Input Method Editor
 app-i18n/ibus-googlepinyin 0.1.2: wrapper libgooglepinyin for IBus
 app-i18n/ibus-handwrite 2.1.4: hand write recognition/input using ibus IM engine
