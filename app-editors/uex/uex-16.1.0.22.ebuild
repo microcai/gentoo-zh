@@ -8,11 +8,11 @@ inherit eutils
 
 DESCRIPTION="Ultra Editor for Linux"
 HOMEPAGE="http://www.ultraedit.com/"
-SRC_URI="http://www.ultraedit.com/files/uex/Other/${P}_i386.tar.gz"
+SRC_URI="https://downloads.ultraedit.com/main/ue/linux/tar/uex-16.1.0.22_amd64.tar.gz"
 
 LICENSE="GPL2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64"
 IUSE=""
 RESTRICT="strip mirror"
 
