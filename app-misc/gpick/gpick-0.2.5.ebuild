@@ -2,11 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI=5
 
 inherit eutils
-
-MY_P="${PN}_${PV}"
 
 DESCRIPTION="Advanced color picker written in C++ using GTK+ toolkit"
 HOMEPAGE="https://github.com/thezbyg/gpick"
@@ -18,7 +16,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="debug unique dbus"
 
 RDEPEND=">=x11-libs/gtk+-2.12.0
-	>=dev-lang/lua-5.1
+	>=dev-lang/lua-5.2
 	dev-libs/boost
 	dbus? ( >=dev-libs/dbus-glib-0.76 )
 	unique? ( >=dev-libs/libunique-1.0.8 )
@@ -27,11 +25,8 @@ RDEPEND=">=x11-libs/gtk+-2.12.0
 DEPEND="${RDEPEND}
 	>=dev-util/scons-1.0.0"
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/gpick-gpick-${PV}"
 
-src_prepare() {
-	epatch "${FILESDIR}"/fix_revision_information.diff
-}
 src_compile() {
 	use unique && WITH_UNIQUE=yes
 	use dbus && WITH_DBUSGLIB=yes
