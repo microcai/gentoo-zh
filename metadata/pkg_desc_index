@@ -126,7 +126,7 @@ app-misc/geeknote 9999: Console client for Evernote
 app-misc/gpick 0.2.5: Advanced color picker written in C++ using GTK+ toolkit
 app-misc/icdiff 1.9.0: Colourized diff that supports side-by-side diffing
 app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience within the shell
-app-misc/nixnote 2.0_beta11 2.0.9999: Nixnote - A clone of Evernote for Linux
+app-misc/nixnote 2.0 2.0.9999: Nixnote - A clone of Evernote for Linux
 app-misc/screen 4.2.1-r2: Full-screen window manager that multiplexes physical terminals between several processes
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/wink 1.5: A Tutorial and Presentation creation software, primarily aimed at creating tutorials on how to use software
