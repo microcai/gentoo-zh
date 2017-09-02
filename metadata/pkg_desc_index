@@ -93,7 +93,6 @@ app-i18n/fcitx-table-other 0.2.2: Provides some other tables for fcitx, fork fro
 app-i18n/fcitx-tsundere 0.1: Fcitx Tsundere Addon
 app-i18n/fcitx-ui-light 0.1.3: A very light weight ui for fcitx, only using xlib and xpm, like go back to 3.6.x times.
 app-i18n/fcitx-unikey 0.2.2: unikey support for fcitx.
-app-i18n/gcin 2.8.4: Another Traditional Chinese IM.
 app-i18n/hime 0.9.10: HIME Input Method Editor
 app-i18n/ibus-googlepinyin 0.1.2: wrapper libgooglepinyin for IBus
 app-i18n/ibus-handwrite 2.1.4: hand write recognition/input using ibus IM engine
@@ -131,7 +130,6 @@ app-misc/screen 4.2.1-r2: Full-screen window manager that multiplexes physical t
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/wink 1.5: A Tutorial and Presentation creation software, primarily aimed at creating tutorials on how to use software
 app-misc/xmind-portable 3.2.1.201011212218: XMind is a brainstorming and mind mapping software tool.
-app-office/Yozo-Office 6.1.0088.131: Yozo Office -- Fully Functional Office Suite
 app-office/wps-office 10.1.0.5672_alpha21 10.1.0.5707_alpha21: WPS Office is an office productivity suite
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-portage/findcruft 1.0.4-r1: Yet another script to find obsolete files
