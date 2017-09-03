@@ -10,5 +10,5 @@ RDEPEND=dev-lang/erlang systemd? ( sys-apps/systemd )
 SLOT=0
 SRC_URI=https://github.com/yueyoum/make-proxy/archive/v2.0.0.tar.gz -> make-proxy-2.0.0.tar.gz
 _eclass_exported_funcs=src_compile:- src_install:-
-_eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	systemd	15a3154d9241313a8b9b625618ce981b	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	systemd	34815d3b76e745c5ca33eec9f95074c2	toolchain-funcs	185a06792159ca143528e7010368e8af
 _md5_=970d1b9cf8fd886f6b8d0920cb4cf64e
