@@ -17,8 +17,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+imagemagick +ffmpeg dv +openexr +truetype +jpeg +tiff +fontconfig"
 
 DEPEND=">=dev-libs/libsigc++-2.0.0
-	>=dev-cpp/libxmlpp-2.6.1
+	dev-cpp/libxmlpp:2.6
+	media-libs/mlt
 	media-libs/libpng
+	sci-libs/fftw
 	>=dev-cpp/ETL-0.04.15
 	ffmpeg? ( virtual/ffmpeg )
 	openexr? ( media-libs/openexr )
