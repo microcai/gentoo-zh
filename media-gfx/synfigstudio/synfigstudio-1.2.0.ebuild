@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=sys-devel/libtool-1.3.5
-	>=dev-cpp/gtkmm-2.4.0
+	dev-cpp/gtkmm:3.0
 	>=dev-libs/libsigc++-2.0
 	>=media-gfx/synfig-${PV}"
 
