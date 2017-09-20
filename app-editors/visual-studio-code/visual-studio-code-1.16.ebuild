@@ -9,7 +9,7 @@ inherit eutils
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
 SRC_URI="
-	amd64? ( https://az764295.vo.msecnd.net/stable/41abd21afdf7424c89319ee7cb0445cc6f376959/code-stable-code_1.15.1-1502903936_amd64.tar.gz -> ${P}-amd64.tar.gz )
+	amd64? ( https://go.microsoft.com/fwlink/?LinkID=620884 -> ${P}-amd64.tar.gz )
 	"
 RESTRICT="mirror"
 
@@ -19,6 +19,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="
+	app-crypt/libsecret
 	>=media-libs/libpng-1.2.46
 	>=x11-libs/gtk+-2.24.8-r1:2
 	x11-libs/cairo
