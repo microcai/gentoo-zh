@@ -1,0 +1,14 @@
+Title: new package dev-go/dde-go-essential
+Author: zhtengw <atenzd@gmail.com>
+Content-Type: text/plain
+Posted: 2017-03-26
+Revision: 1
+News-Item-Format: 1.0
+Display-If-Installed: dev-go/deepin-go-lib
+
+The depended go codes of dev-go/deepin-go-lib have splited to an indivitual
+package named dev-go/dde-go-essential. If you have dev-go/deepin-go-lib
+installed, please unmerge it first and then remerge it.
+  
+  emerge -C deepin-go-lib && emerge -1 deepin-go-lib
+  
