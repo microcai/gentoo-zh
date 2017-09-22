@@ -6,12 +6,8 @@
 		<name>Aten Zhang</name>
 	</maintainer>
 	<use>
-		<flag name="manual">Install <pkg>dde-extra/dde-help</pkg> package for Help files</flag>
-		<flag name="multimedia">Install <pkg>dde-extra/dde-meta-multimedia</pkg> meta package</flag>
-		<flag name="terminal">Install <pkg>dde-extra/deepin-terminal</pkg> package</flag>
+		<flag name="manual">Install <pkg>dde-extra/dde-help</pkg> User Manual</flag>
+		<flag name="terminal">Install <pkg>dde-extra/deepin-terminal</pkg> Terminal Emulator</flag>
+		<flag name="multimedia">Install Deepin multimedia suite</flag>
 	</use>
-	<upstream>
-		<remote-id type="github">linuxdeepin</remote-id>
-		<bugs-to>https://github.com/linuxdeepin/developer-center/</bugs-to>
-	</upstream>
 </pkgmetadata>
