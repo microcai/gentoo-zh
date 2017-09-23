@@ -59,10 +59,12 @@ RDEPEND="
 		app-text/iso-codes
 		dev-libs/libxml2[${MULTILIB_USEDEP}]
 		x11-libs/libxkbfile
-	)"
+	)
+	"
 
 DEPEND="${RDEPEND}
 	introspection? ( dev-libs/gobject-introspection )
+	!!<app-i18n/fcitx-4.2.9.3
 	virtual/libintl
 	virtual/pkgconfig
 	kde-frameworks/extra-cmake-modules
