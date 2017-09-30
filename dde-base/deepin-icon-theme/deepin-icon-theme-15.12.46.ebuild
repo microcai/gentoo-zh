@@ -13,7 +13,7 @@ LICENSE="LGPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-DEPEND=""
+DEPEND="dev-util/gtk-update-icon-cache"
 #DEPEND="x11-themes/flattr-icons"
 
 src_prepare() {

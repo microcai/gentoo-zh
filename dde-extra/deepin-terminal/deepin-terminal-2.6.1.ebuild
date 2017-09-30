@@ -34,6 +34,7 @@ src_prepare() {
 	vala_src_prepare
 	sed -i 's|return __FILE__;|return "/usr/share/deepin-terminal/project_path.c";|' project_path.c
 	sed -i -e "/NAMES/s:valac:${VALAC}:" cmake/FindVala.cmake || die 
+	rm "${S}/vapi/gee-0.8.vapi" || die
 	cmake-utils_src_prepare
 }
 

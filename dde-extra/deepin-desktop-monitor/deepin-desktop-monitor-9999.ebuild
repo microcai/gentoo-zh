@@ -16,7 +16,7 @@ else
 	SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 fi
 
-	KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
@@ -40,10 +40,10 @@ RDEPEND="sys-process/procps
 
 DEPEND="${RDEPEND}
 		>=dde-base/dtkwidget-2.0.0:=
-	    "
+		"
 
 src_prepare() {
-	eqmake5 PREFIX=/usr ${PN}.pro
+	QT_SELECT=qt5 eqmake5 PREFIX=/usr ${PN}.pro
 }
 
 src_install() {

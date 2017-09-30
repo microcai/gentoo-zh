@@ -40,7 +40,7 @@ src_prepare() {
     fi   
 	LIBDIR=$(get_libdir)
 	sed -i "s|{PREFIX}/lib/|{PREFIX}/${LIBDIR}/|g" plugins/*/*.pro
-	eqmake5	PREFIX=/usr
+	QT_SELECT=qt5 eqmake5	PREFIX=/usr
 	default_src_prepare
 }
 

@@ -23,7 +23,7 @@ RDEPEND="x11-wm/deepin-metacity
 		gnome-extra/polkit-gnome
 		dde-base/deepin-desktop-schemas
 		net-misc/networkmanager
-		gnome-base/gvfs
+		gnome-base/gvfs[udisks]
 		sys-libs/pam
 		>sys-power/upower-0.99
 		miracast? ( net-wireless/iw )
@@ -36,6 +36,7 @@ DEPEND="${RDEPEND}
 		  >=dev-go/dde-go-essential-20170807
 	      >=dev-go/dbus-factory-3.0.8
 	      >=dde-base/dde-api-3.1.3
+		  dev-libs/libinput
 	      dev-db/sqlite:3
 	      "
 

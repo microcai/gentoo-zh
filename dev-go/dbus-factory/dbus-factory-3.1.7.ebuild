@@ -4,7 +4,7 @@
 
 EAPI=5
 
-DESCRIPTION="Dbus library binding for golang"
+DESCRIPTION="D-Bus library binding for golang"
 HOMEPAGE="https://github.com/linuxdeepin/dbus-factory"
 SRC_URI="https://github.com/linuxdeepin/dbus-factory/archive/${PV}.tar.gz -> ${P}.tar.gz"
 

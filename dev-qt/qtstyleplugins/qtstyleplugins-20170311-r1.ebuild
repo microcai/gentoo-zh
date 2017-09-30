@@ -7,25 +7,25 @@ EAPI=6
 inherit git-r3 qmake-utils
 
 DESCRIPTION="Additional style plugins for Qt"
-HOMEPAGE="http://code.qt.io/cgit/qt/qtstyleplugins.git/"
+HOMEPAGE="https://code.qt.io/cgit/qt/qtstyleplugins.git/"
 LICENSE="LGPL-2"
 SLOT="5"
 
-EGIT_REPO_URI="http://code.qt.io/cgit/qt/qtstyleplugins.git"
+EGIT_REPO_URI="https://code.qt.io/cgit/qt/qtstyleplugins.git"
 EGIT_COMMIT="335dbece103e2cbf6c7cf819ab6672c2956b17b3"
 SRC_URI=""
 KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
-RDEPEND="dev-qt/qtcore:5
+RDEPEND="dev-qt/qtgui:5[dbus]
 		 dev-qt/qtwidgets:5
          x11-libs/gtk+:2
          x11-libs/libX11"
 DEPEND="${RDEPEND}"
 
 src_configure() {
-	eqmake5
+	QT_SELECT=qt5 eqmake5
 }
 
 src_install() {

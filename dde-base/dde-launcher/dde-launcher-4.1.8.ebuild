@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 	    "
 
 src_prepare() {
-	eqmake5	PREFIX=/usr WITHOUT_UNINSTALL_APP=YES
+	QT_SELECT=qt5 eqmake5	PREFIX=/usr WITHOUT_UNINSTALL_APP=YES
 }
 
 src_install() {

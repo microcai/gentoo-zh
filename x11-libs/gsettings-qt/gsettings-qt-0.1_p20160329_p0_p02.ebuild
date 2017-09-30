@@ -44,7 +44,7 @@ src_prepare() {
 }
 
 src_configure() {
-	eqmake5
+	QT_SELECT=qt5 eqmake5
 }
 
 src_install () {

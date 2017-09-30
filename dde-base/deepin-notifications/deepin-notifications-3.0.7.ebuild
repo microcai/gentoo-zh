@@ -19,15 +19,15 @@ RDEPEND="x11-libs/gtk+:2
 		 dev-qt/qtsvg:5
 		 dev-qt/qtdeclarative:5
 		 dev-qt/qtsql:5[sqlite]
-	     "
+		"
 DEPEND="${RDEPEND}
-        >=dde-base/dtkwidget-2.0.0:=
-	     "
+		>=dde-base/dtkwidget-2.0.0:=
+		"
 
 src_prepare() {
 	LIBDIR=$(get_libdir)
 	sed -i "s|{PREFIX}/lib/|{PREFIX}/${LIBDIR}/|g" ${PN}.pro
-	eqmake5	PREFIX=/usr
+	QT_SELECT=qt5 eqmake5	PREFIX=/usr
 	default_src_prepare
 }
 

@@ -25,6 +25,7 @@ RDEPEND="dev-qt/qtmultimedia:5[widgets]
 		 dev-qt/qtgui:5
 		 dev-qt/qtnetwork:5
 		 dev-qt/qtwidgets:5
+		 dev-qt/qtconcurrent:5
 		 dev-qt/qtx11extras:5
 		 >=dev-qt/qtcore-5.5:5
 		 x11-libs/libXrender
@@ -40,15 +41,15 @@ RDEPEND="dev-qt/qtmultimedia:5[widgets]
 		 media-libs/mesa
 		 virtual/libudev
 		 !<=dde-base/deepin-tool-kit-0.3.3
-	     "
+		"
 DEPEND="${RDEPEND}
 		dev-libs/glib:2
 		dde-base/dtkcore
 		dev-qt/linguist-tools:5
-	    "
+		"
 
 src_prepare() {
-	eqmake5 PREFIX=/usr LIB_INSTALL_DIR=/usr/$(get_libdir)
+	QT_SELECT=qt5 eqmake5 PREFIX=/usr LIB_INSTALL_DIR=/usr/$(get_libdir)
 	default_src_prepare
 }
 

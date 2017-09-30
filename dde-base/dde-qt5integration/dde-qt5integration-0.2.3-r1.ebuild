@@ -27,7 +27,12 @@ RDEPEND="
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
-	x11-libs/libxcb
+	dev-qt/qtdbus:5
+	dev-qt/qtx11extras:5
+	dev-qt/qtmultimedia:5[widgets]
+	dev-qt/qtsvg:5
+	dev-qt/qtopengl
+	x11-libs/libxcb[xkb]
 	x11-libs/xcb-util-renderutil
 	x11-libs/xcb-util-image
 	x11-libs/xcb-util-wm
@@ -36,13 +41,13 @@ RDEPEND="
 	dev-qt/qtstyleplugins:5
 	"
 DEPEND="${RDEPEND}
-    	>=dde-base/dtkwidget-2.0.0:=
+		>=dde-base/dtkwidget-2.0.0:=
 		"
 
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	eqmake5 ${MY_PN}.pro
+	QT_SELECT=qt5 eqmake5 ${MY_PN}.pro
 	sed -i "s|cr\.deepin\.io|github\.com\/linuxdeepin|g" platformplugin/linux.pri
 }
 

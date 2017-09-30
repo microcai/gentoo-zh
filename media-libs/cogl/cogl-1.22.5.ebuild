@@ -14,7 +14,7 @@ LICENSE="MIT BSD"
 SLOT="1.0/20" # subslot = .so version
 
 # doc and profile disable for now due to bugs #484750 and #483332
-IUSE="debug examples gles2 gstreamer +introspection +kms +opengl +pango test video_cards_fglrx wayland" # doc profile
+IUSE="debug examples gles2 gstreamer +introspection +kms +opengl +pango jpeg test video_cards_fglrx wayland" # doc profile
 REQUIRED_USE="
 	wayland? ( gles2 )
 	|| ( gles2 opengl )
@@ -24,7 +24,7 @@ KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 COMMON_DEPEND="
 	>=dev-libs/glib-2.32:2
 	x11-libs/cairo:=
-	>=x11-libs/gdk-pixbuf-2:2
+	>=x11-libs/gdk-pixbuf-2:2[jpeg?]
 	x11-libs/libX11
 	>=x11-libs/libXcomposite-0.4
 	x11-libs/libXdamage

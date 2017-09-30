@@ -31,10 +31,10 @@ RDEPEND="dev-qt/qtcore:5
 
 DEPEND="${RDEPEND}
 		>=dde-base/dtkwidget-2.0.0:=
-	    "
+		"
 
 src_prepare() {
-	eqmake5 ${PN}.pro
+	QT_SELECT=qt5 eqmake5 ${PN}.pro
 }
 
 src_install() {

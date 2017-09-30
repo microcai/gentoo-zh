@@ -11,7 +11,7 @@ SRC_URI=""
 LICENSE="metapackage"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+policykit manual terminal multimedia"
+IUSE="+policykit manual +terminal multimedia"
 
 RDEPEND=">=dde-base/dde-control-center-4.2.0
 		>=dde-base/startdde-3.1.10

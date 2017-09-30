@@ -34,13 +34,13 @@ RDEPEND="dev-qt/qtmultimedia:5[widgets]
 		 x11-proto/xextproto
 		 sys-libs/mtdev
 		 media-libs/mesa
-	     "
+		"
 DEPEND="${RDEPEND}
 		dde-base/dtkcore
-	    "
+		"
 
 src_prepare() {
-	eqmake5 PREFIX=/usr LIB_INSTALL_DIR=/usr/$(get_libdir)
+	QT_SELECT=qt5 eqmake5 PREFIX=/usr LIB_INSTALL_DIR=/usr/$(get_libdir)
 	default_src_prepare
 }
 

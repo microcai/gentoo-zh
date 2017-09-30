@@ -4,7 +4,7 @@
 
 EAPI=6
 
-inherit qmake-utils
+inherit qmake-utils xdg-utils
 
 DESCRIPTION="Deepin File Manager and Desktop module for DDE"
 HOMEPAGE="https://github.com/linuxdeepin/dde-file-manager"
@@ -24,13 +24,16 @@ IUSE="samba"
 RDEPEND="sys-apps/file
 		 x11-libs/gsettings-qt
 		 x11-libs/gtk+:2
+		 dev-qt/qtcore:5
+		 dev-qt/qtgui:5[jpeg]
+		 dev-qt/qtwidgets:5
+		 dev-qt/qtdbus:5
 		 dev-qt/qtsvg:5
 		 dev-qt/qtx11extras:5
 		 dev-qt/qtconcurrent:5
-		 dev-qt/qtmultimedia:5
+		 dev-qt/qtmultimedia:5[widgets]
 		 dev-qt/qtdeclarative:5
 		 sys-auth/polkit-qt[qt5]
-		 app-text/poppler
 		 dev-libs/libqtxdg
 		 app-crypt/libsecret
 		 x11-libs/libxcb
@@ -38,7 +41,8 @@ RDEPEND="sys-apps/file
 		 x11-libs/xcb-util
 		 x11-libs/xcb-util-wm
 		 dev-cpp/treefrog-framework
-		 media-video/ffmpegthumbnailer
+		 app-text/poppler
+		 media-video/ffmpegthumbnailer[png]
 		 media-libs/taglib
 		 media-video/mpv[libmpv]
 		 dde-extra/deepin-shortcut-viewer
@@ -61,9 +65,9 @@ DEPEND="${RDEPEND}
 src_prepare() {
 
 	LIBDIR=$(get_libdir)
-	sed -i "s|{PREFIX}/lib/|{PREFIX}/${LIBDIR}/|g" dde-dock-plugins/disk-mount/disk-mount.pro
-
-	eqmake5	PREFIX=/usr LIB_INSTALL_DIR=/usr/$(get_libdir)
+	sed -i "s|{PREFIX}/lib/|{PREFIX}/${LIBDIR}/|g" dde-dock-plugins/disk-mount/disk-mount.pro dde-dock-plugins/trash/trash.pro
+	export QT_SELECT=qt5
+	eqmake5 PREFIX=/usr LIB_INSTALL_DIR=/usr/$(get_libdir)
 	default_src_prepare
 }
 
@@ -74,8 +78,15 @@ src_install() {
 }
 
 pkg_postinst() {
+    xdg_desktop_database_update
+    xdg_mimeinfo_database_update
 	einfo "${PN} needs x-terminal-emulator command to make OpenInTermial"
 	einfo "function work. A command dfmterm is added to generate it. For"
 	einfo "example, use 'dfmterm xterm' to set xterm as the terminal when"
 	einfo "click 'Open In Terminal'"
+}
+
+pkg_postrm() {
+    xdg_desktop_database_update
+    xdg_mimeinfo_database_update
 }

@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python3_{4,5} )
+PYTHON_COMPAT=( python3_{4,5,6} )
 
 inherit distutils-r1 python-r1
 
@@ -21,4 +21,4 @@ REQUIRED_USE="
      ${PYTHON_REQUIRED_USE}"
 
 DEPEND="dev-python/python-xlib[${PYTHON_USEDEP}]
-		dev-python/PyQt5[${PYTHON_USEDEP},webkit,declarative]"
+		dev-python/PyQt5[${PYTHON_USEDEP},webkit,declarative,gui,network,printsupport,widgets,dbus]"
