@@ -14,11 +14,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="media-sound/deepin-music
-		|| ( media-video/deepin-movie
-			 media-video/deepin-movie-reborn )
+		|| ( media-video/deepin-movie-reborn
+			 media-video/deepin-movie )
 		media-gfx/deepin-screenshot
 		media-gfx/deepin-screen-recorder
 		media-sound/deepin-voice-recorder
-		dde-extra/deepin-social-sharing
-		dde-extra/deepin-image-viewer
-		dde-extra/deepin-shortcut-viewer"
+		media-gfx/deepin-image-viewer
+		"

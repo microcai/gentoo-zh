@@ -6,7 +6,7 @@ EAPI=6
 
 inherit qmake-utils
 
-DESCRIPTION="A repository stores auto-generated Qt5 dbus code used by DDE"
+DESCRIPTION="A repository stores auto-generated Qt5 D-Bus code used by DDE"
 HOMEPAGE="https://github.com/linuxdeepin/dde-qt-dbus-factory"
 SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 		dev-lang/python"
 
 src_prepare() {
-	eqmake5	PREFIX=/usr LIB_INSTALL_DIR=/usr/$(get_libdir)
+	QT_SELECT=qt5 eqmake5	PREFIX=/usr LIB_INSTALL_DIR=/usr/$(get_libdir)
 	default_src_prepare
 }
 

@@ -9,8 +9,8 @@ inherit qmake-utils
 DESCRIPTION="Deepin QML widgets and dbus factory"
 HOMEPAGE="https://github.com/linuxdeepin/deepin-qml-widgets"
 QML_FACTORY_VER="3.0.6"
-SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz
-		https://github.com/linuxdeepin/dbus-factory/archive/${QML_FACTORY_VER}.tar.gz -> qml-dbus-factory-${QML_FACTORY_VER}.tar.gz"
+SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+#	https://github.com/linuxdeepin/dbus-factory/archive/${QML_FACTORY_VER}.tar.gz -> qml-dbus-factory-${QML_FACTORY_VER}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -29,27 +29,27 @@ DEPEND="${RDEPEND}
         >=dde-base/dtkwidget-2.0.0:=
 		"
 
-S=${WORKDIR}
+#S=${WORKDIR}
 
 src_prepare() {
 
 	export QT_SELECT=qt5
-	cd ${S}/${P}
+#	cd ${S}/${P}
 	eqmake5
 }
 
-src_compile() {
-	cd ${S}/${P}
-	emake
-
-	cd ${S}/dbus-factory-${QML_FACTORY_VER}
-	make build-qml
-}
+#src_compile() {
+#	cd ${S}/${P}
+#	emake
+#
+#	cd ${S}/dbus-factory-${QML_FACTORY_VER}
+#	make build-qml
+#}
 
 src_install() {
-	cd ${S}/${P}
+#	cd ${S}/${P}
 	emake INSTALL_ROOT=${D} install
 	
-	cd ${S}/dbus-factory-${QML_FACTORY_VER}
-	emake DESTDIR=${D} QT5_LIBDIR=$(qt5_get_libdir)/qt5 install-qml
+#	cd ${S}/dbus-factory-${QML_FACTORY_VER}
+#	emake DESTDIR=${D} QT5_LIBDIR=$(qt5_get_libdir)/qt5 install-qml
 }

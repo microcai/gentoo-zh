@@ -29,7 +29,7 @@ RDEPEND="dev-qt/qtwidgets:5
 		>=dde-base/deepin-notifications-2.3.8
 		x11-libs/libXtst
 		gif? ( media-gfx/byzanz )
-		mp4? ( virtual/ffmpeg )
+		mp4? ( media-video/ffmpeg[xcb] )
 		"
 
 DEPEND="${RDEPEND}
@@ -37,10 +37,10 @@ DEPEND="${RDEPEND}
 		x11-libs/libxcb
 		>=dde-base/dtkwidget-2.0.0:=
 		dde-base/dtkwm:=
-	    "
+		"
 
 src_prepare() {
-	eqmake5 ${PN}.pro
+	QT_SELECT=qt5 eqmake5 ${PN}.pro
 }
 
 src_install() {

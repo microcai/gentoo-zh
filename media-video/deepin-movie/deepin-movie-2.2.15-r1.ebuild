@@ -25,7 +25,7 @@ DEPEND="media-video/mediainfo
 		dev-python/PyQt5[${PY_TAR_VER}]
 		dev-python/bottle[${PY_TAR_VER}]
 		dev-python/pysrt[${PY_TAR_VER}]
-		media-video/QtAV
+		media-libs/qtav
 		dde-extra/deepin-gettext-tools
 		"
 RDEPEND="${DEPEND}

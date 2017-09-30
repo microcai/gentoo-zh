@@ -38,7 +38,6 @@ RDEPEND="
 	dde-base/dde-daemon
 	>=dde-extra/deepin-shortcut-viewer-1.3.1
 	>=dde-base/deepin-notifications-2.3.9
-
 	!media-gfx/deepin-screenshot:2
 	!media-gfx/deepin-screenshot:3
 	"
@@ -57,11 +56,11 @@ DEPEND="${RDEPEND}
 	media-libs/freetype
 	x11-proto/xextproto
 	x11-proto/recordproto
-    >=dde-base/dtkwidget-2.0.0:=
+	>=dde-base/dtkwidget-2.0.0:=
 	"
 
 src_prepare() {
-	eqmake5 PREFIX=/usr
+	QT_SELECT=qt5 eqmake5 PREFIX=/usr
 }
 
 src_install() {

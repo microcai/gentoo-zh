@@ -13,16 +13,17 @@ SRC_URI="https://github.com/linuxdeepin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.g
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="+jpeg +png +tiff raw mng jpeg2k"
 
 RDEPEND="dev-qt/qtsvg:5
 		dev-qt/qtconcurrent:5
 		dev-qt/qtgui:5
 		dev-qt/qtdbus:5
+		dev-qt/qtprintsupport:5
 		dev-qt/qtx11extras:5
 		media-libs/libraw
 		media-libs/libexif
-		media-libs/freeimage
+		media-libs/freeimage[jpeg?,png?,tiff?,raw?,mng?,jpeg2k?]
 		"
 
 DEPEND="${RDEPEND}
@@ -30,6 +31,7 @@ DEPEND="${RDEPEND}
 	    "
 
 src_prepare() {
+	export QT_SELECT=qt5
 	eqmake5
 }
 

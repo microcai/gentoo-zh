@@ -22,14 +22,14 @@ RDEPEND="dev-lang/python:2.7
 DEPEND="${RDEPEND}
 		x11-libs/libX11
 		x11-libs/libxcb
-        >=dde-base/dtkwidget-2.0.0:=
+		>=dde-base/dtkwidget-2.0.0:=
 		dde-base/dde-qt-dbus-factory
 		dev-qt/qtx11extras:5
 		dev-qt/qtdeclarative:5
 	    "
 src_prepare() {
 	distutils-r1_python_prepare_all
-	eqmake5
+	QT_SELECT=qt5 eqmake5
 	default_src_prepare
 }
 src_compile() {

@@ -45,7 +45,7 @@ src_prepare() {
 	LIBDIR=$(get_libdir)
 	sed -i "s|{PREFIX}/lib/|{PREFIX}/${LIBDIR}/|g" plugins/*/*.pro
 	sed -i "s|usr/lib/|usr/${LIBDIR}/|g" dialogs/reboot-reminder-dialog/reboot-reminder-dialog.pro
-	eqmake5	PREFIX=/usr DISABLE_SYS_UPDATE=YES
+	QT_SELECT=qt5 eqmake5	PREFIX=/usr DISABLE_SYS_UPDATE=YES
 	default_src_prepare
 }
 
@@ -57,4 +57,6 @@ pkg_postinst() {
 	elog "GeoIP databases are no longer installed by dev-libs/geoip ebuild."
 	elog "You must run 'geoipupdate.sh -f' first to download the databases,"
 	elog "otherwise, dde-control-center will run abnormally."
+
+	geoipupdate.sh -f
 }
