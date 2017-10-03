@@ -1,0 +1,10 @@
+DEFINED_PHASES=install prepare unpack
+DEPEND=>=dev-qt/qtcore-5.5:5 dev-qt/qtdbus dev-qt/qttest >=dev-vcs/git-1.8.2.1
+DESCRIPTION=Base development tool of all C++/Qt Developer work on Deepin - Core modules
+EAPI=6
+HOMEPAGE=https://github.com/linuxdeepin/dtkcore
+LICENSE=GPL-3
+RDEPEND=>=dev-qt/qtcore-5.5:5 dev-qt/qtdbus dev-qt/qttest
+SLOT=0/9999
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	git-r3	52a888802d25387c2c74cb845d1219bc	multilib	97f470f374f2e94ccab04a2fb21d811e	qmake-utils	990448b067cb3cfe1443bc25fb57239c	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=58d0792072d7bfa0ed9eb14381d7f295

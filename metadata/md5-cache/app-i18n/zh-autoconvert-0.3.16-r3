@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
+EAPI=0
+HOMEPAGE=http://packages.debian.org/stable/text/zh-autoconvert.html
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RESTRICT=mirror
+SLOT=0
+SRC_URI=mirror://debian/pool/main/z/zh-autoconvert/zh-autoconvert_0.3.16.orig.tar.gz mirror://debian/pool/main/z/zh-autoconvert/zh-autoconvert_0.3.16-3.diff.gz
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	227b041a120d309fdefbebb3b8c1dfa9	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=366045ddd1a4841bd83a0c70d8942e57

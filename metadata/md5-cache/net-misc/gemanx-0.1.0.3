@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install
+DEPEND=imageview? ( net-misc/curl sys-apps/file ) >=x11-libs/gtk+-2.4 libnotify? ( x11-libs/libnotify ) x11-libs/libXft dev-util/intltool
+DESCRIPTION=GeMan X is a branch of PCMan X.
+EAPI=5
+HOMEPAGE=http://code.google.com/p/gemanx/
+IUSE=debug +imageview iplookup libnotify mmx socks5
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=imageview? ( net-misc/curl sys-apps/file ) >=x11-libs/gtk+-2.4 libnotify? ( x11-libs/libnotify ) x11-libs/libXft
+RESTRICT=primaryuri
+SLOT=0
+SRC_URI=http://gemanx.googlecode.com/files/gemanx-gtk2-0.1.0.3.tar.gz
+_md5_=02ae6c70f92c9f92e59d054f093b9193

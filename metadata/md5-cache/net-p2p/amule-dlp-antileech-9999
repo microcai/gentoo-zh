@@ -1,0 +1,11 @@
+DEFINED_PHASES=configure install prepare unpack
+DEPEND=x11-libs/wxGTK:3.0 >=app-portage/elt-patches-20170422 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 dev-vcs/git
+DESCRIPTION=amule-dlp-antileech, dynamic DLP library for amule-dlp
+EAPI=5
+HOMEPAGE=https://github.com/persmule/amule-dlp.antileech
+IUSE=X
+LICENSE=GPL-2
+RDEPEND=net-p2p/amule-dlp[dynamic]
+SLOT=0
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	227b041a120d309fdefbebb3b8c1dfa9	flag-o-matic	2274fcc1e7ef6affaff5bcd636275417	git-2	195a672bfaf52d868442171c9469bbb6	libtool	0081a71a261724730ec4c248494f044d	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	185a06792159ca143528e7010368e8af	wxwidgets	04e063b0eff26daaea83d859dd9d6e05
+_md5_=358f3c97c88fe0fe7a3dfa35754c968a

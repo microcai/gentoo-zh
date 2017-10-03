@@ -1,0 +1,8 @@
+DEFINED_PHASES=install unpack
+EAPI=0
+HOMEPAGE=http://code.google.com/p/stardict-3/
+KEYWORDS=amd64 x86 ppc sparc alpha hppa
+LICENSE=GPL
+SLOT=0
+SRC_URI=http://stardict-3.googlecode.com/files/WyabdcRealPeopleTTS.tar.bz2
+_md5_=a8e32504448afb10f82a0ccafbb72cdf

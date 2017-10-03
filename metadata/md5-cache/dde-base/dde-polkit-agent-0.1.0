@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare
+DEPEND=dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtdbus:5 dev-qt/qtwidgets:5 sys-auth/polkit-qt[qt5(-)] >=dde-base/dtkwidget-2.0.0:=
+DESCRIPTION=PolicyKit agent for DDE
+EAPI=6
+HOMEPAGE=https://github.com/linuxdeepin/dde-polkit-agent
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtdbus:5 dev-qt/qtwidgets:5 sys-auth/polkit-qt[qt5(-)]
+SLOT=0
+SRC_URI=https://github.com/linuxdeepin/dde-polkit-agent/archive/0.1.0.tar.gz -> dde-polkit-agent-0.1.0.tar.gz
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	multilib	97f470f374f2e94ccab04a2fb21d811e	qmake-utils	990448b067cb3cfe1443bc25fb57239c	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=cbd5a8fb11636ed9662e0d121ae79020

@@ -62,17 +62,18 @@ app-dicts/stardict-xdict-en-zh-gb 2.4.2: Stardict Dictionary English to Simplifi
 app-dicts/stardict-xdict-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
 app-dicts/stardict-xdict-zh-en-gb 2.4.2: Stardict Dictionary Simplified Chinese (GB) to English
 app-editors/marketo 9999: A note-taking KDE application with the power of lightweight markup language
-app-editors/sublime-text 3_beta3126: Sublime Text is a sophisticated text editor for code, html and prose
+app-editors/sublime-text 3_beta3143: Sublime Text is a sophisticated text editor for code, html and prose
 app-editors/uex 16.1.0.22: Ultra Editor for Linux
-app-editors/visual-studio-code 1.15.1: Multiplatform Visual Studio Code from Microsoft
+app-editors/visual-studio-code 1.16: Multiplatform Visual Studio Code from Microsoft
 app-emulation/crossover-bin 16.2.0: Commercial version of app-emulation/wine with paid support.
 app-emulation/docker-swarm 1.2.5: A Docker-native clustering system
 app-emulation/genymotion-bin 2.9.0: Complete set of tools that provide a virtual environment for Android
+app-emulation/qtemu-zh 2.0.1: A graphical user interface for QEMU written in Qt4
 app-emulation/skyeye 1.3.4_pre20120521 9999: an ARM embedded hardware simulator
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1: The kbd keymap for Programmer Dvorak.
 app-i18n/fbterm-ucimf 0.2.3 0.2.5 0.2.6 0.2.7 0.2.8 0.2.9: UCIMF input method support for FbTerm
-app-i18n/fcitx 4.2.9.1 9999: Flexible Context-aware Input Tool with eXtension
+app-i18n/fcitx 4.2.9.3 9999: Flexible Context-aware Input Tool with eXtension
 app-i18n/fcitx-anthy 0.2.0: Anthy for fcitx.
 app-i18n/fcitx-chewing 0.2.1: Anthy for fcitx.
 app-i18n/fcitx-cloudpinyin 9999: A fcitx module to look up pinyin candidate words on the internet
@@ -121,12 +122,13 @@ app-i18n/ucimf-openvanilla 2.10.4 2.10.5 2.10.6 2.10.7 2.10.9 2.10.10 2.10.11 99
 app-i18n/ucimf-sunpinyin 0.4 0.5: The SunPinyin IMF module for UCIMF
 app-i18n/zh-autoconvert 0.3.16-r3: Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 app-laptop/asus-keyboard-backlight 0.1: Configure the brightness of the keyboard's backlight on ASUS laptops.
+app-misc/bcompare 3.3.13.18981 4.1.5.21031 4.2.2.22384: Beyond Compare -- Compare, sync, and merge files and folders
 app-misc/freefilesync 5.6: Visual folder comparison and synchronization
 app-misc/geeknote 9999: Console client for Evernote
 app-misc/gpick 0.2.5: Advanced color picker written in C++ using GTK+ toolkit
 app-misc/icdiff 1.9.0: Colourized diff that supports side-by-side diffing
 app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience within the shell
-app-misc/nixnote 2.0 2.0.9999: Nixnote - A clone of Evernote for Linux
+app-misc/nixnote 2.0 2.0.2 2.0.9999: Nixnote - A clone of Evernote for Linux
 app-misc/screen 4.2.1-r2: Full-screen window manager that multiplexes physical terminals between several processes
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/wink 1.5: A Tutorial and Presentation creation software, primarily aimed at creating tutorials on how to use software
@@ -160,47 +162,53 @@ app-vim/icomplete 0.4: vim plugin: an c/c++ auto-completion plugin that supports
 app-vim/neocomplete 9999: vim plugin: Next generation completion framework after neocomplcache
 app-vim/powerline 9999: vim plugin: The ultimate vim statusline utility.
 dde-base/dde-account-faces 1.0.10: Deepin Account face Images
-dde-base/dde-api 3.0.15 3.1.2: Go-lang bingdings for dde-daemon
-dde-base/dde-control-center 3.0.24 4.0.7: Control Center of Deepin Desktop Environment
-dde-base/dde-daemon 3.0.24 3.1.3: Daemon handling the DDE session settings
-dde-base/dde-desktop 3.0.15 4.0.2: Deepin desktop environment - Desktop module
-dde-base/dde-dock 4.0.8-r1 4.1.3: Deepin desktop environment - Dock module
-dde-base/dde-file-manager 1.3.8 2.0.9999: Deepin File Manager
-dde-base/dde-launcher 4.0.7: Deepin desktop environment - Launcher module
-dde-base/dde-meta 15.3-r2 15.4-r3: Deepin Desktop Enviroment (meta package)
-dde-base/dde-polkit-agent 0.0.3: PolicyKit agent for DDE
-dde-base/dde-qt-dbus-factory 0.0.4: A repository stores auto-generated Qt5 dbus code used by DDE
-dde-base/dde-qt5integration 0.1.1: DDE system integration plugin for Qt5
-dde-base/dde-session-ui 3.0.23 3.0.27: Deepin desktop environment - Session UI module
+dde-base/dde-api 3.1.13: Go-lang bingdings for dde-daemon
+dde-base/dde-control-center 4.2.5.10: Control Center of Deepin Desktop Environment
+dde-base/dde-daemon 3.1.19: Daemon handling the DDE session settings
+dde-base/dde-dock 4.3.4: Deepin desktop environment - Dock module
+dde-base/dde-file-manager 4.2.5-r2: Deepin File Manager and Desktop module for DDE
+dde-base/dde-launcher 4.1.8: Deepin desktop environment - Launcher module
+dde-base/dde-meta 15.4.1: Deepin Desktop Enviroment (meta package)
+dde-base/dde-polkit-agent 0.1.0: PolicyKit agent for DDE
+dde-base/dde-qt-dbus-factory 0.3.0: A repository stores auto-generated Qt5 D-Bus code used by DDE
+dde-base/dde-qt5integration 0.2.3-r1: DDE system integration plugin for Qt5
+dde-base/dde-session-ui 4.0.14-r2: Deepin desktop environment - Session UI module
 dde-base/deepin-artwork-themes 15.12.4: Deepin artwork themes
-dde-base/deepin-desktop-base 2016.11.29: Base components for Deepin Desktop
-dde-base/deepin-desktop-schemas 3.0.12 3.1.1: GSettings deepin desktop-wide schemas
-dde-base/deepin-file-manager-backend 0.1.16: Deepin file manager backend
-dde-base/deepin-gtk-theme 15.12.8: Deepin GTK Theme
-dde-base/deepin-icon-theme 15.12.32: Deepin Icons
-dde-base/deepin-menu 3.0.7 3.0.10: Deepin menu service for building beautiful menus
-dde-base/deepin-notifications 2.3.10 3.0.0: System notifications for Deepin Desktop Environment
+dde-base/deepin-desktop-base 2016.12.6: Base components for Deepin Desktop
+dde-base/deepin-desktop-schemas 3.1.16: GSettings deepin desktop-wide schemas
+dde-base/deepin-file-manager-backend 0.1.16-r1: Deepin file manager backend
+dde-base/deepin-gtk-theme 17.10.4: Deepin GTK Theme
+dde-base/deepin-icon-theme 15.12.46: Deepin Icons
+dde-base/deepin-menu 3.1.6: Deepin menu service for building beautiful menus
+dde-base/deepin-notifications 3.0.7: System notifications for Deepin Desktop Environment
 dde-base/deepin-sound-theme 15.10.1: Deepin Sound themes
-dde-base/deepin-tool-kit 0.2.0 0.2.1 0.2.4: Base development tool of all C++/Qt Developer work on Deepin
-dde-base/deepin-wallpapers 1.3: Deepin Wallpapers
-dde-base/deepin-wm-switcher 1.1.0: Window manager switcher for Deepin
-dde-base/dtksettings 0.1.2 9999: DtkSettings is a powerfull tool to generation config form json.
-dde-base/startdde 3.0.13 3.1.2: starter of Deepin Desktop Environment
-dde-extra/dde-calendar 1.0.4: Calendar for Deepin Desktop Environment
-dde-extra/dde-help 15.3.1: Help files for Deepin Desktop Environment
-dde-extra/dde-meta-multimedia 0.1-r1: Deepin Multimedia Softwares (meta package)
-dde-extra/deepin-gettext-tools 1.0.4: Deepin Internationalization utilities
-dde-extra/deepin-image-viewer 1.2.1: Deepin Image Viewer
+dde-base/deepin-tool-kit 1.0.0: Base development tool of all C++/Qt Developer work on Deepin
+dde-base/deepin-wallpapers 1.6: Deepin Wallpapers
+dde-base/deepin-wm-switcher 1.1.4: Window manager switcher for Deepin
+dde-base/dtkcore 2.0.0 9999: Base development tool of all C++/Qt Developer work on Deepin - Core modules
+dde-base/dtksettings 0.1.7: DtkSettings is a powerfull tool to generation config form json.
+dde-base/dtkwidget 2.0.0-r1 9999: Base development tool of all C++/Qt Developer work on Deepin - Widget modules
+dde-base/dtkwm 2.0.0: Deepin graphical user interface library
+dde-base/startdde 3.1.15: starter of Deepin Desktop Environment
+dde-extra/dde-calendar 1.0.12: Calendar for Deepin Desktop Environment
+dde-extra/dde-help 15.4.8: Help files for Deepin Desktop Environment
+dde-extra/dde-meta-multimedia 0.2-r1: Deepin Multimedia Softwares (meta package)
+dde-extra/deepin-clone 0.0.2: Deepin Disk and Partition Backup/Restore Tool
+dde-extra/deepin-desktop-monitor 9999: Deepin System Monitor
+dde-extra/deepin-gettext-tools 1.0.6: Deepin Internationalization utilities
 dde-extra/deepin-manual 1.0.6: Deepin User Manual
-dde-extra/deepin-qml-widgets 2.3.4: Deepin QML widgets and dbus factory
-dde-extra/deepin-shortcut-viewer 1.0.2: Deepin shortcut Viewer
+dde-extra/deepin-qml-widgets 2.3.6-r1: Deepin QML widgets and dbus factory
+dde-extra/deepin-shortcut-viewer 1.3.2: Deepin shortcut Viewer
 dde-extra/deepin-social-sharing 1.1.4: Deepin Social Sharing Service
-dde-extra/deepin-terminal 2.1.12: Deepin Terminal
+dde-extra/deepin-system-monitor 1.2: Deepin System Monitor
+dde-extra/deepin-terminal 2.6.1: Deepin Terminal
 dev-android/heimdall 1.3.2 1.4.1: Heimdall is a cross-platform open-source tool suite used to flash firmware (aka ROMs) onto Samsung Galaxy S devices
 dev-cpp/ETL 0.04.22: ETL is a multi-platform class and template library
 dev-cpp/cppformat 1.1.0: Small, safe and fast formatting library for C++
+dev-cpp/treefrog-framework 1.18.0: High-speed C++ MVC Framework for Web Application
 dev-db/dbdesigner 4.0.5.4: DBDesigner 4 is a visual database design system that integrates database design, modeling, creation and maintenance.
 dev-db/mycli 1.3.0 1.6.0: CLI for MySQL Database with auto-completion and syntax highlighting
+dev-db/pgcli 1.6.0: CLI for Postgres Database. with auto-completion and syntax highlighting.
 dev-erlang/bson 0.1.3 9999: The BSON implementation for Erlang.
 dev-erlang/epgsql 3.1.1 9999: Erlang PostgreSQL client library
 dev-erlang/eredis 1.0.8 9999: Non-blocking Redis client with focus on performance and robustness
@@ -216,11 +224,12 @@ dev-erlang/mongodb 0.4.1 9999: MongoDB driver for Erlang.
 dev-erlang/mysql-otp 1.1.1 9999: A driver for connecting Erlang/OTP applications to MySQL databases.
 dev-erlang/sh 1.9 9999: Family of functions and ports involving interacting with the system shell, paths and external programs
 dev-erlang/uuid 0.5.0 9999: This module implements UUID v1, v3, v4, and v5 as of RFC 4122.
-dev-go/dbus-factory 3.0.7 3.1.0: Dbus library binding for golang
-dev-go/dde-go-essential 20151213: Essential go sources for DDE
-dev-go/deepin-go-lib 0.5.2 0.5.5: Deepin GoLang Library
-dev-go/go-dbus-generator 0.6.5: Convert dbus interfaces to go-lang or qml wrapper code
-dev-go/go-gir-generator 0.9.6: Generate static golang bindings for GObject
+dev-go/dbus-factory 3.1.7: D-Bus library binding for golang
+dev-go/dde-go-essential 20170807: Essential go sources for DDE
+dev-go/deepin-go-lib 1.1.0: Deepin GoLang Library
+dev-go/go-dbus-generator 0.6.6: Convert D-Bus interfaces to go-lang or qml wrapper code
+dev-go/go-gir-generator 1.0.1-r1 1.0.1-r2: Generate static golang bindings for GObject
+dev-go/go-x11-client 0.0.2: Deepin GoLang X11 client Library
 dev-lang/sassc 3.4.2: libsass command line driver
 dev-libs/dtk-widget 0.5.20130617042230: Deepin widget of Chinese Lunar library
 dev-libs/libappindicator 12.10.0-r200: A library to allow applications to export a menu into the Unity Menu bar
@@ -234,15 +243,17 @@ dev-libs/libunity 7.1.4: Library for instrumenting and integrating with all aspe
 dev-libs/lunar-date 2.4.0: Chinese Lunar Library
 dev-libs/thrift 0.9.1: Lightweight, language-independent software stack with associated code generation mechanism for RPC
 dev-lisp/buildapp 1.5.6: Create executables with SBCL
+dev-perl/XML-LibXML-PrettyPrint 0.6.0: XML::LibXML::PrettyPrint - add pleasant whitespace to a DOM tree
 dev-php/pecl-solr 2.3.0 2.4.0: Solr client
-dev-python/dae 1.0.2: Deepin App Engine
+dev-python/dae 1.0.2-r1: Deepin App Engine
 dev-python/deepin-gsettings 0.1.20131206094009-r1: Deepin gsettings Python Bindings
 dev-python/deepin-utils 0.0.2.20140703165416-r1: Utils of DeepinUI Toolkit modules
 dev-python/dnslib 9999: A simple library to encode/decode DNS wire-format packets.
 dev-python/dtk-widget 0.5.20130617042230: Deepin widget of Chinese Lunar library
 dev-python/google-appengine 1.7.4: Google App Engine SDK for Python
-dev-python/jieba 0.36 0.38: Chinese text segmentation: built to be the best Python Chinese word segmentation module.
+dev-python/jieba 0.38 0.39: Chinese text segmentation: built to be the best Python Chinese word segmentation module.
 dev-python/notify2 0.3-r1: Python interface to DBus notifications.
+dev-python/pgspecial 1.8.0: Meta-commands handler for Postgres Database.
 dev-python/pygeoip 0.3.1: Pure Python API for Maxmind's binary GeoIP databases.
 dev-python/pygtk 2.24.0-r4: GTK+2 bindings for Python
 dev-python/pystorm 0.1.20130426091936: Download library and tool for Linux Deepin project
@@ -254,6 +265,7 @@ dev-python/xappy 0.5: An easy-to-use interface to the Xapian search engine
 dev-python/xpybutil 0.0-r1: xcb-util for xpyb
 dev-qt/libQtShadowsocks 1.9.0 1.10.0: A lightweight and ultra-fast shadowsocks library written in C++/Qt
 dev-qt/qtquickcontrols 9999: Qt Quick Controls (Former Qt Desktop Components)
+dev-qt/qtstyleplugins 20170311-r1: Additional style plugins for Qt
 dev-ruby/mruby 1.0.0 9999: mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
 dev-scheme/chez-scheme 9.4 9999: Chez Scheme is an implementation of the Revised 6 Report on Scheme (R6RS) with numerous language and programming environment extensions.
 dev-util/be 9999: Bugs Everywere distributed bug tracker
@@ -294,9 +306,12 @@ media-fonts/ntufonts 20030521: Chinese Fonts from National Taiwan University, In
 media-fonts/sinicafonts 20030521: Chinese and Siddam fonts provided by SINICA, Taiwan.
 media-fonts/wangfonts 1.3.0: Free Chinese TrueType fonts donated by Prof. Hann-Tzong Wang
 media-fonts/wps-office-fonts 1.0: The wps-office-fonts package contains Founder Chinese fonts
+media-gfx/blur-effect 1.1.2: Off-screen image blurring utility using OpenGL ES 3.0
 media-gfx/byzanz 0.3.0.9999: Screencasting program that saves casts as GIF files
-media-gfx/deepin-screen-recorder 0.6: Deepin Screencasting Application
-media-gfx/deepin-screenshot 2.1.0 3.1.10 9999: Snapshot tools for linux deepin.
+media-gfx/deepin-draw 9999: Deepin Painting Tool
+media-gfx/deepin-image-viewer 1.2.15-r1: Deepin Image Viewer
+media-gfx/deepin-screen-recorder 2.5-r1: Deepin Screencasting Application
+media-gfx/deepin-screenshot 3.1.15 4.0.9: Snapshot tools for linux deepin.
 media-gfx/ffcast 2.4.1: FFcast has almost nothing to do with FFmpeg or screencast ;)
 media-gfx/fontforge 20150330: postscript font editor and converter
 media-gfx/sane-backends 9999: Scanner Access Now Easy - Backends
@@ -306,7 +321,7 @@ media-gfx/synfigstudio 1.2.0: Synfig: Film-Quality Vector Animation (main UI)
 media-gfx/ttfautohint 0.93: automated hinting process for web fonts
 media-gfx/xrectsel 0.3.1: print the geometry of a rectangular screen region
 media-libs/MonkVG 9999: MonkVG is an OpenVG 1.1 like vector graphics API implementation currently using an OpenGL ES backend
-media-libs/cogl 1.22.3: A library for using 3D graphics hardware to draw pretty pictures
+media-libs/cogl 1.22.5: A library for using 3D graphics hardware to draw pretty pictures
 media-libs/ksquirrel-libs 0.7.2 0.7.4 0.7.5 0.8.0: Libs required by ksqirrel
 media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simplifies the drawing of beautiful curves.
 media-libs/libuninameslist 20140731: Library of unicode annotation data
@@ -320,7 +335,8 @@ media-sound/audio-convert-mod 3.45.2: A simple audio file converter supporting m
 media-sound/cantata 1.3.4-r1: Featureful and configurable Qt client for the music player daemon (MPD)
 media-sound/cue2tracks 0.2.16: Bash script for split audio CD image files with cue sheet to tracks and write tags.
 media-sound/deadbeef 0.5.1-r3 9999: mp3/ogg/flac/sid/mod/nsf music player based on GTK2
-media-sound/deepin-music 2.3.2-r1 3.0.1-r1: Deepin Music Player
+media-sound/deepin-music 3.1.6: Deepin Music Player
+media-sound/deepin-voice-recorder 1.3.3: Deepin Voice Recorder
 media-sound/hinedo 0.4: A desktop utility for Hinet Radio
 media-sound/kalsamix 1.0.0_beta2: A mixer for KDE and ALSA from kamix.
 media-sound/kwplayer 3.5.2: An elegant music player which can get songs from kuwo.cn
@@ -331,7 +347,8 @@ media-tv/sopcast-player 0.7.1: A GTK+ front-end for the SopCast P2P TV player
 media-video/QtAV 1.11.0-r1: A cross-platform multimedia framework based on Qt and FFmpeg.
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/bilibili-player 0.45 9999: bilibili 弹幕播放器 for Linux
-media-video/deepin-movie 2.2.11: QML Movie Player based on QtAV
+media-video/deepin-movie 2.2.15-r1: QML Movie Player based on QtAV
+media-video/deepin-movie-reborn 2.9.12 2.9.13: Deepin Movie Player
 media-video/kvideoencoder 0.08_rc2: KVideoEncoder is a GUI for mencoder and transcode
 media-video/lightworks 11.5 11.5.1: Lightworks is the fastest, most accessible and focused NLE in the industry
 media-video/simplescreenrecorder 0.3.3-r1 9999: A Simple Screen Recorder
@@ -360,7 +377,7 @@ net-misc/egear 0.1.1.1 0.1.9999: eGear, a download tool written in QT4
 net-misc/flashget 1.0.3: A download manager
 net-misc/g2ipmsg 0.9.5 0.9.6: IP messenger clone for GNOME2 environments
 net-misc/gemanx 0.1.0.3 9999: GeMan X is a branch of PCMan X.
-net-misc/iptux 0.6.3 9999: Iptux is a ipmsg client in linux
+net-misc/iptux 0.6.4 9999: Iptux is a ipmsg client in linux
 net-misc/kuaipan4uk 2.0.0.3-r1 2.0.0.5: KuaiPan is one of the most popular cloud storage service in China.
 net-misc/libipmsg 0.1.6 0.1.7: libipmsg - IP Messenger library for UNIX
 net-misc/libqtelegram-ae 6.0: A fork of libqtelegram by Aseman Team
@@ -423,7 +440,7 @@ sys-fs/yaffs2utils 0.3.0: Utilities to create/extract a yaffs2 image on Linux
 sys-fs/zfs-auto-snapshot 9999 9999-r1: Automatic snapshots for ZFS on Linux
 sys-kernel/dkms 2.2.0.3: Dynamic Kernel Module Support
 sys-kernel/e-sources 3.18.14 4.0.9 4.1.12 4.2.5 4.5.2: Full sources for the Linux kernel including: gentoo, ck and other patches
-sys-kernel/hardened-sources 4.9.29 4.9.44: Hardened kernel sources (kernel series 4.9)
+sys-kernel/hardened-sources 4.9.29 4.9.44 4.9.52: Hardened kernel sources (kernel series 4.9)
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libixp 9999: Standalone client/server 9P library
 sys-process/nocache 0.9: nocache - minimize filesystem caching effects
@@ -442,7 +459,7 @@ www-servers/darkhttpd 1.8: A small, static webserver
 www-servers/tengine 2.0.3: Robust, small and high performance http and reverse proxy server
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
 x11-drivers/xf86-input-libinput 0.9.0 0.11.0: X.org input driver based on libinput
-x11-libs/bamf 0.2.118: BAMF Application Matching Framework
+x11-libs/bamf 0.5.3: BAMF Application Matching Framework
 x11-libs/deepin-ui 1.1.20141229194712-r1: UI toolkit for Linux Deepin.
 x11-libs/gsettings-qt 0.1_p20160329_p0_p02: Qml bindings for GSettings.
 x11-libs/libvdpau-va-gl 9999: VDPAU driver with VA-API/OpenGL backend.
@@ -456,12 +473,13 @@ x11-plugins/pidgin-qq 195 9999: Pidgin QQ2010 PlugIn
 x11-plugins/vicious 2.1.3 9999: Modular widget library for x11-wm/awesome
 x11-themes/dmz-cursor-theme 0.4.1: Style neutral, scalable cursor theme
 x11-themes/elementary-icon-theme 2.3 2.4: Simple and appealing Tango-styled icon theme
-x11-themes/flattr-icons 9999: an icon theme inspired by the latest flat design trend
+x11-themes/flattr-icons 1.3-r1: an icon theme inspired by the latest flat design trend
 x11-themes/gnome-themes-egtk 1.0: The official elementary GTK theme designed to be smooth, attractive, fast, and usable.
 x11-themes/gnome-themes-elementary-mod 9999: Elementary-mod theme for GNOME
 x11-themes/gnome-themes-numix 2.5.1 9999: A modern flat theme that supports Gnome, Unity, XFCE and Openbox.
 x11-themes/gnome-themes-ubuntu 0.6.1: GNOME themes from Ubuntu
 x11-themes/humanity-icon-theme 0.6: Elementary Icons for Humans.
+x11-themes/kvantum 0.10.4 9999: An SVG-based theme engine for Qt
 x11-themes/lxice 0.1.0: LXDE theme for IceWM
 x11-themes/numix-icon-theme 9999: Official icon theme from the Numix project.
 x11-themes/numix-icon-theme-circle 9999: Numix Circle icon theme
@@ -469,7 +487,7 @@ x11-themes/smplayer-themes-nonfree 0.1.0 0.1.1: Icon themes for smplayer
 x11-themes/ubuntu-mono 0.0.45: Dark and Light panel icons to make your desktop beautiful
 x11-wm/9wm 1.1: A window manager emulation of the Plan 9 window manager 8-1/2.
 x11-wm/compiz 0.9.99.20130608170409: OpenGL compositing window manager.
-x11-wm/deepin-metacity 3.20.6 3.22.3: Legacy window manager for Deepin
-x11-wm/deepin-mutter 3.20.11: Deepin fork version of mutter
-x11-wm/deepin-wm 1.2 1.9.5: Deepin Window Manager
+x11-wm/deepin-metacity 3.22.10: Legacy window manager for Deepin
+x11-wm/deepin-mutter 3.20.21-r1: Deepin fork version of mutter
+x11-wm/deepin-wm 1.9.16: Deepin Window Manager
 xfce-extra/thunar-dropbox 0.2.1: Plugin for thunar that adds context-menu items for dropbox.

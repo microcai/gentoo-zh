@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare
+DEPEND=dev-qt/qtmultimedia:5[widgets] dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtwidgets:5 dev-qt/qtconcurrent:5 dev-qt/qtx11extras:5 >=dev-qt/qtcore-5.5:5 x11-libs/libXrender x11-libs/libxcb x11-libs/libXext x11-libs/xcb-util x11-libs/startup-notification x11-libs/gsettings-qt x11-proto/xextproto sys-libs/mtdev media-libs/freetype media-libs/fontconfig media-libs/mesa virtual/libudev !<=dde-base/deepin-tool-kit-0.3.3 dev-libs/glib:2 dde-base/dtkcore dev-qt/linguist-tools:5
+DESCRIPTION=Base development tool of all C++/Qt Developer work on Deepin - Widget modules
+EAPI=6
+HOMEPAGE=https://github.com/linuxdeepin/dtkwidget
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-qt/qtmultimedia:5[widgets] dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtwidgets:5 dev-qt/qtconcurrent:5 dev-qt/qtx11extras:5 >=dev-qt/qtcore-5.5:5 x11-libs/libXrender x11-libs/libxcb x11-libs/libXext x11-libs/xcb-util x11-libs/startup-notification x11-libs/gsettings-qt x11-proto/xextproto sys-libs/mtdev media-libs/freetype media-libs/fontconfig media-libs/mesa virtual/libudev !<=dde-base/deepin-tool-kit-0.3.3
+SLOT=0/2.0.0
+SRC_URI=https://github.com/linuxdeepin/dtkwidget/archive/2.0.0.tar.gz -> dtkwidget-2.0.0.tar.gz
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	multilib	97f470f374f2e94ccab04a2fb21d811e	qmake-utils	990448b067cb3cfe1443bc25fb57239c	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=009310f5cfb5212209598794132b828c

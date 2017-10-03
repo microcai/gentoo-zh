@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install
+DEPEND=net-im/pidgin dev-libs/openssl sys-libs/glibc libwebp? ( media-libs/libwebp )
+DESCRIPTION=Libpurple (Pidgin) plugin for using a Telegram account
+EAPI=5
+HOMEPAGE=https://github.com/majn/telegram-purple
+IUSE=+libwebp
+KEYWORDS=~x86 ~amd64
+LICENSE=LGPL-3
+RDEPEND=net-im/pidgin dev-libs/openssl sys-libs/glibc libwebp? ( media-libs/libwebp )
+SLOT=0
+SRC_URI=https://github.com/majn/telegram-purple/releases/download/v1.3.0/telegram-purple_1.3.0.orig.tar.gz
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	227b041a120d309fdefbebb3b8c1dfa9	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=3f42cda29c5586740cfbd62548e5601b

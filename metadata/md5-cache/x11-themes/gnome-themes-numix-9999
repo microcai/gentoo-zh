@@ -1,0 +1,10 @@
+DEFINED_PHASES=install unpack
+DEPEND=x11-themes/gtk-engines-murrine >=dev-vcs/git-1.8.2.1
+DESCRIPTION=A modern flat theme that supports Gnome, Unity, XFCE and Openbox.
+EAPI=5
+HOMEPAGE=https://numixproject.org
+LICENSE=GPL-3.0+
+RDEPEND=x11-themes/gtk-engines-murrine
+SLOT=0
+_eclasses_=git-r3	52a888802d25387c2c74cb845d1219bc
+_md5_=e51e6beefd02fe72f0fa5a9da4069a70

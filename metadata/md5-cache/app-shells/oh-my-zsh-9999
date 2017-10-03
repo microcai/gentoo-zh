@@ -1,0 +1,11 @@
+DEFINED_PHASES=install unpack
+DEPEND=app-shells/zsh dev-vcs/git
+DESCRIPTION=A community-driven framework for managing your zsh configuration. Includes 40+ optional plugins (rails, git, OSX, hub, capistrano, brew, ant, macports, etc), over 80 terminal themes to spice up your morning, and an auto-update tool so that makes it easy to keep up with the latest updates from the community.
+EAPI=5
+HOMEPAGE=https://github.com/robbyrussell/oh-my-zsh/
+KEYWORDS=x86 amd64
+LICENSE=GPL-3
+RDEPEND=app-shells/zsh
+SLOT=0
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	227b041a120d309fdefbebb3b8c1dfa9	git-2	195a672bfaf52d868442171c9469bbb6	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=e263e37c73e3699f726ae94893c10459

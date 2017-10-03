@@ -1,0 +1,11 @@
+DEFINED_PHASES=install prepare
+DEPEND=>=dde-base/dde-daemon-3.1.17 dde-base/deepin-wm-switcher >=dde-base/deepin-desktop-schemas-3.1.15 dev-lang/coffee-script dev-go/go-dbus-generator dev-util/cmake >=dde-base/dde-api-3.1.8 >=dev-go/deepin-go-lib-1.1.0 >=dev-go/dbus-factory-3.1.5
+DESCRIPTION=starter of Deepin Desktop Environment
+EAPI=6
+HOMEPAGE=https://github.com/linuxdeepin/startdde
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=>=dde-base/dde-daemon-3.1.17 dde-base/deepin-wm-switcher >=dde-base/deepin-desktop-schemas-3.1.15
+SLOT=0
+SRC_URI=https://github.com/linuxdeepin/startdde/archive/3.1.15.tar.gz -> startdde-3.1.15.tar.gz
+_md5_=228404910e0a8740ed679efc1c4eca86

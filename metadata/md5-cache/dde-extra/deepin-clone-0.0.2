@@ -1,0 +1,13 @@
+DEFINED_PHASES=install prepare
+DEPEND=dev-qt/qtcore:5 dev-qt/qtconcurrent:5 gui? ( dev-qt/qtgui:5 dev-qt/qtwidgets:5 dev-qt/qtnetwork:5 dev-qt/qtmultimedia:5[widgets] ) >=dde-base/dtkwidget-2.0.1:= virtual/pkgconfig
+DESCRIPTION=Deepin Disk and Partition Backup/Restore Tool
+EAPI=5
+HOMEPAGE=https://github.com/linuxdeepin/deepin-clone
+IUSE=+gui
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-qt/qtcore:5 dev-qt/qtconcurrent:5 gui? ( dev-qt/qtgui:5 dev-qt/qtwidgets:5 dev-qt/qtnetwork:5 dev-qt/qtmultimedia:5[widgets] )
+SLOT=0
+SRC_URI=https://github.com/linuxdeepin/deepin-clone/archive/0.0.2.tar.gz -> deepin-clone-0.0.2.tar.gz
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	227b041a120d309fdefbebb3b8c1dfa9	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	qmake-utils	990448b067cb3cfe1443bc25fb57239c	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=db13ba77e514d5804a726e167ecb279c

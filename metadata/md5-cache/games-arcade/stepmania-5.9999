@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
+DEPEND=gtk? ( x11-libs/gtk+:2 ) media-libs/alsa-lib mad? ( media-libs/libmad ) vorbis? ( media-libs/libvorbis ) media-libs/libpng jpeg? ( virtual/jpeg ) ffmpeg? ( >=virtual/ffmpeg-0.5 ) virtual/glu x11-libs/libXrandr media-libs/glew virtual/opengl !bundled-libs? ( dev-libs/libpcre dev-libs/jsoncpp ) >=app-portage/elt-patches-20170422 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 dev-vcs/git
+DESCRIPTION=Stepmania 5 sm-ssc branch
+EAPI=5
+HOMEPAGE=https://github.com/stepmania/stepmania
+IUSE=debug X gtk +jpeg +mad +vorbis +network +ffmpeg sse2 bundled-libs
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RDEPEND=games-misc/games-envd
+SLOT=0
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	base	df2aa567b3f0595aae0d0923889f7631	epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	227b041a120d309fdefbebb3b8c1dfa9	games	2bb3ede665927a68ffdb7c41eec7efde	git-2	195a672bfaf52d868442171c9469bbb6	libtool	0081a71a261724730ec4c248494f044d	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	185a06792159ca143528e7010368e8af	user	e4b567c44272a719fabf53f0f885d3f7
+_md5_=86f7c3b34f0efc86f3b5a4fd518b3b28

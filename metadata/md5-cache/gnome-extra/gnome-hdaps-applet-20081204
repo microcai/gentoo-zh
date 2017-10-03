@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install
+DEPEND=virtual/pkgconfig gnome-base/gnome-panel
+DESCRIPTION=Gnome applet displaying the hard disk protection status
+EAPI=0
+HOMEPAGE=http://www.zen24593.zen.co.uk/hdaps
+KEYWORDS=~x86
+LICENSE=GPL-2
+RDEPEND=app-laptop/hdapsd
+RESTRICT=primaryuri
+SLOT=0
+SRC_URI=http://www.zen24593.zen.co.uk/hdaps/gnome-hdaps-applet-20081204.tar.gz
+_eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=95e751dfd2033615aef99f89c9cb0623

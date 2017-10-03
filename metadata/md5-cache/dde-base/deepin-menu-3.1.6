@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-lang/python:2.7 x11-libs/libX11 x11-libs/libxcb >=dde-base/dtkwidget-2.0.0:= dde-base/dde-qt-dbus-factory dev-qt/qtx11extras:5 dev-qt/qtdeclarative:5 python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DESCRIPTION=Deepin menu service for building beautiful menus
+EAPI=6
+HOMEPAGE=https://github.com/linuxdeepin/deepin-menu
+IUSE=python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-lang/python:2.7 python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 )
+SLOT=0
+SRC_URI=https://github.com/linuxdeepin/deepin-menu/archive/3.1.6.tar.gz -> deepin-menu-3.1.6.tar.gz
+_eclasses_=distutils-r1	372bbe39047c0a2550319a3a82f3e063	estack	43ddf5aaffa7a8d0482df54d25a66a1f	multibuild	72647e255187a1fadc81097b3657e5c3	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	6f5991c7101863d0b29df63990ad852e	python-r1	e9350ec46bb5c9f3504b4fbe8b8d8987	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	qmake-utils	990448b067cb3cfe1443bc25fb57239c	toolchain-funcs	185a06792159ca143528e7010368e8af	xdg-utils	f2c8335407f0b935b0a96d4adf23ef25
+_md5_=a9ee98801aaecab22029880c49a6aa3b

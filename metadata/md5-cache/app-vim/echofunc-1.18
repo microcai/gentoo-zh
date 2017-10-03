@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm
+DEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
+DESCRIPTION=vim plugin: Echo the function declaration in the command line for C/C++.
+EAPI=0
+HOMEPAGE=http://www.vim.org/scripts/script.php?script_id=1735
+KEYWORDS=~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86
+LICENSE=vim
+RDEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=http://gentoo-china-overlay.googlecode.com/svn/distfiles/echofunc-1.18.tar.bz2
+_eclasses_=vim-doc	af2c81a1feeb0a99e91bee3e20769edb	vim-plugin	6f0171b0a2f2fce005c13b4c0685a0d8
+_md5_=836379297f97036c1fc53f1fd4a7c69e

@@ -25,9 +25,11 @@ app-text/stardict:festival - Enables text to speech engine app-accessibility/fes
 app-text/stardict:gnome - Enables gnome-base/gnome support
 app-text/stardict:gucharmap - Enables gnome-extra/gucharmap plugin
 app-text/stardict:spell - Enables spell checking capability using app-text/enchant
-dde-base/dde-meta:manual - Install dde-extra/dde-help package for Help files
-dde-base/dde-meta:multimedia - Install dde-extra/dde-meta-multimedia meta package
-dde-base/dde-meta:terminal - Install dde-extra/deepin-terminal package
+dde-base/dde-daemon:bluetooth - Enable Bluetooth Support
+dde-base/dde-daemon:miracast - Enable Miracast Support
+dde-base/dde-meta:manual - Install dde-extra/dde-help User Manual
+dde-base/dde-meta:multimedia - Install Deepin multimedia suite
+dde-base/dde-meta:terminal - Install dde-extra/deepin-terminal Terminal Emulator
 dev-erlang/bson:doc - Adds extra documentation.
 dev-erlang/bson:src - Adds source files.
 dev-erlang/epgsql:src - Adds source files.
@@ -56,6 +58,10 @@ dev-erlang/sh:doc - Adds extra documentation.
 dev-erlang/sh:src - Adds source files.
 dev-erlang/uuid:doc - Adds extra documentation.
 dev-erlang/uuid:src - Adds source files.
+media-gfx/deepin-screenshot:sharing - Install dde-extra/deepin-social-sharing for social media sharing
+media-libs/cogl:gles2 - Enable OpenGL ES 2.0 support
+media-libs/cogl:kms - Enable KMS support.
+media-libs/cogl:pango - Build cogl-pango library for x11-libs/pango integration
 media-plugins/osdlyrics:mpd - Enable support for MPD
 media-plugins/osdlyrics:xmms2 - Enable support for XMMS2
 media-sound/deadbeef:adplug - adplug player (OPL2/OPL3 emulation)
@@ -74,7 +80,6 @@ media-sound/deadbeef:supereq - Equalizer based on Super EQ library by Naoki Shib
 media-sound/deadbeef:tta - TTA player plugin
 media-sound/deadbeef:vtx - vtx file player (ay8910/12 emulation)
 media-sound/deadbeef:zip - zip archive support
-media-sound/deepin-music:hotkey - Enable global hotkey via media-plugins/python-mmkeys
 media-video/simplescreenrecorder:vpx - Enables vp8 codec support using libvpx from ffmpeg/libav
 net-dns/dnsmasq:dhcp - Enable support for reading ISC DHCPd lease files
 net-dns/dnsmasq:tftp - Enables built in TFTP server for netbooting
@@ -110,3 +115,4 @@ sys-devel/gdb:multitarget - Support all known targets in one gdb binary
 sys-kernel/hardened-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 x11-wm/compiz:fuse - Enables support for the filesystem in userspace plugin through sys-fs/fuse.
 x11-wm/compiz:kde - Compile the kde4 window decorator and add support for kde-base/kdebase-startkde.
+x11-wm/deepin-mutter:kms - Enable KMS support.
