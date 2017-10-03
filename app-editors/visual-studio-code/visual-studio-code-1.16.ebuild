@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=6
 
 inherit eutils
 
@@ -28,16 +28,17 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
-ARCH="$(uname -m)"
-
-if [[ $ARCH == "x86_64" ]];then
-	S="${WORKDIR}/VSCode-linux-x64"
-else
-	S="${WORKDIR}/VSCode-linux-ia32"
-fi
-
+S="${WORKDIR}"
 
 src_install(){
+	ARCH="$(uname -m)"
+	if [[ $ARCH == "x86_64" ]];then
+		cd VSCode-linux-x64
+	else
+		cd VSCode-linux-ia32
+	fi
+
+
 	insinto "/opt/${PN}"
 	doins -r *
 	dosym "/opt/${PN}/code" "/usr/bin/visual-studio-code"
