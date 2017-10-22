@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=CCPL-Attribution-ShareAlike-3.0
 RDEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 SLOT=0
-_eclasses_=git-2	195a672bfaf52d868442171c9469bbb6	vim-doc	af2c81a1feeb0a99e91bee3e20769edb	vim-plugin	6f0171b0a2f2fce005c13b4c0685a0d8
+_eclasses_=git-2	195a672bfaf52d868442171c9469bbb6	vim-doc	af2c81a1feeb0a99e91bee3e20769edb	vim-plugin	ff2ccbd2442c4638fc3edf62f08acc84
 _md5_=3faeb2d6bc46be20d8641ca339720b85
