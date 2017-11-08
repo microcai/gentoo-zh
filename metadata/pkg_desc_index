@@ -244,7 +244,6 @@ dev-libs/lunar-date 2.4.0: Chinese Lunar Library
 dev-libs/thrift 0.9.1: Lightweight, language-independent software stack with associated code generation mechanism for RPC
 dev-lisp/buildapp 1.5.6: Create executables with SBCL
 dev-perl/XML-LibXML-PrettyPrint 0.6.0: XML::LibXML::PrettyPrint - add pleasant whitespace to a DOM tree
-dev-php/pecl-solr 2.3.0 2.4.0: Solr client
 dev-python/dae 1.0.2-r1: Deepin App Engine
 dev-python/deepin-gsettings 0.1.20131206094009-r1: Deepin gsettings Python Bindings
 dev-python/deepin-utils 0.0.2.20140703165416-r1: Utils of DeepinUI Toolkit modules
