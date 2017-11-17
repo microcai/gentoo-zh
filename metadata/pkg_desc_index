@@ -64,7 +64,7 @@ app-dicts/stardict-xdict-zh-en-gb 2.4.2: Stardict Dictionary Simplified Chinese 
 app-editors/marketo 9999: A note-taking KDE application with the power of lightweight markup language
 app-editors/sublime-text 3_beta3143: Sublime Text is a sophisticated text editor for code, html and prose
 app-editors/uex 16.1.0.22: Ultra Editor for Linux
-app-editors/visual-studio-code 1.17.1: Multiplatform Visual Studio Code from Microsoft
+app-editors/visual-studio-code 1.18.1: Multiplatform Visual Studio Code from Microsoft
 app-emulation/crossover-bin 16.2.0: Commercial version of app-emulation/wine with paid support.
 app-emulation/docker-swarm 1.2.5: A Docker-native clustering system
 app-emulation/genymotion-bin 2.9.0: Complete set of tools that provide a virtual environment for Android
