@@ -1,0 +1,11 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=Tencent QQ for Linux by Deepin
+EAPI=6
+HOMEPAGE=https://www.deepin.org
+KEYWORDS=~amd64 ~x86
+LICENSE=Tencent
+RDEPEND=app-emulation/deepin-wine app-emulation/deepin-wine-helper
+SLOT=0
+SRC_URI=http://packages.deepin.com/deepin/pool/non-free/d/deepin.com.qq.im/deepin.com.qq.im_8.9.19983deepin16_i386.deb
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	227b041a120d309fdefbebb3b8c1dfa9	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	185a06792159ca143528e7010368e8af	unpacker	f40f7b4bd5aa88c2a4ba7b0d1e0ded70	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=3b96aa176a64b8018f2a141f1dc0f85b
