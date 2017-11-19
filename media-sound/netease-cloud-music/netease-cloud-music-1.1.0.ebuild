@@ -9,7 +9,7 @@ HOMEPAGE="http://music.163.com"
 COMMON_URI="http://cdimage.deepin.com/applications/netease-cloud-music"
 MY_PN=${PN//-/_}
 SRC_URI="
-amd64? ( ${COMMON_URI}/64/${MY_PN}_${PV}_amd64_binary.tar.gz -> ${MY_PN}_${PV}_amd64_binary.tar.xz )
+amd64? ( ${COMMON_URI}/64/${MY_PN}_${PV}_amd64_binary.tar.xz )
 "
 
 LICENSE=""
@@ -62,7 +62,7 @@ src_install() {
 
 	dobin ${S}/usr/bin/${PN}
 
-#	fperms 4755 /usr/lib/${PN}/chrome-sandbox
+	fperms 0755 /usr/$(get_libdir)/${PN}/lib/*
 
 	insinto /usr/
 	doins -r ${S}/usr/share
