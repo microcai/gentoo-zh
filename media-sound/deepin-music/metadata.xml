@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sound</herd>
 	<maintainer>
 		<email>atenzd@gmail.com</email>
 		<name>Aten Zhang</name>
 	</maintainer>
-	<longdescription lang="en">
-		Awesome music player with brilliant and tweakful UI Deepin-UI based, gstreamer front-end, with features likes search music by pinyin, quanpin, colorful lyrics supports, and more powerfull functions you will found.
-	</longdescription>
-	<use>
-		<flag name="hotkey">Enable global hotkey via
-			<pkg>media-plugins/python-mmkeys</pkg></flag>
-	</use>
+	<upstream>
+		<remote-id type="github">linuxdeepin/deepin-music</remote-id>
+	</upstream>
 </pkgmetadata>
-

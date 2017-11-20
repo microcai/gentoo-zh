@@ -5,12 +5,12 @@
 EAPI="5"
 
 DESCRIPTION="A somewhat comprehensive collection of Chinese Linux man pages"
-HOMEPAGE="https://github.com/lidaobing/manpages-zh"
+HOMEPAGE="https://github.com/man-pages-zh/manpages-zh"
 
 RESTRICT="mirror"
 SRC_URL=""
 
-EGIT_REPO_URI="https://github.com/lidaobing/manpages-zh.git"
+EGIT_REPO_URI="https://github.com/man-pages-zh/manpages-zh"
 
 LICENSE="FDL-1.2"
 SLOT="0"
