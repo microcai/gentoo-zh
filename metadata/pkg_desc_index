@@ -265,7 +265,6 @@ dev-python/quamash 0.5.2: Implementation of the PEP 3156 Event-Loop with Qt.
 dev-python/rpweibo 0.02.2 9999: A Weibo API wrapper based on cURL + Python.
 dev-python/xappy 0.5: An easy-to-use interface to the Xapian search engine
 dev-python/xpybutil 0.0-r1: xcb-util for xpyb
-dev-qt/libQtShadowsocks 1.9.0 1.10.0: A lightweight and ultra-fast shadowsocks library written in C++/Qt
 dev-qt/qtquickcontrols 9999: Qt Quick Controls (Former Qt Desktop Components)
 dev-qt/qtstyleplugins 20170311-r1: Additional style plugins for Qt
 dev-ruby/mruby 1.0.0 9999: mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
@@ -403,10 +402,11 @@ net-print/cups-tsc 0.1.26: The driver of TSC printers for Linux and CUPS
 net-print/hplip-plugin 3.14.1: Binary plugin for HPs hplip printer driver library
 net-proxy/goagent 3.2.2 9999: A GAE proxy forked from gappproxy/wallproxy
 net-proxy/lantern-bin 2.0.13 2.0.16 2.2.4 3.0.4: A free desktop application that delivers fast, reliable and secure access to the open Internet for users in censored regions.
+net-proxy/libQtShadowsocks 1.11.0: A lightweight and ultra-fast shadowsocks library written in C++/Qt
 net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
 net-proxy/shadowsocks 9999: A fast tunnel proxy that helps you bypass firewalls
 net-proxy/shadowsocks-libev 2.4.8 9999: A lightweight secured scoks5 proxy for embedded devices and low end boxes
-net-proxy/shadowsocks-qt5 2.7.0 2.8.0: A cross-platform GUI shadowsocks client
+net-proxy/shadowsocks-qt5 2.9.0: A cross-platform GUI shadowsocks client
 net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
 net-proxy/squid 3.3.9: A full-featured web proxy cache
 net-proxy/wallproxy-plus 2.1.18-r1 2.1.19 9999: New version of wallproxy, a general purpose proxy framework in Python.
