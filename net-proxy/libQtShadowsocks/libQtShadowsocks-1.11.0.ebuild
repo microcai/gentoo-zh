@@ -2,42 +2,32 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=6
-inherit qt5-build
+EAPI=5
+inherit cmake-utils
 
 DESCRIPTION="A lightweight and ultra-fast shadowsocks library written in C++/Qt"
 HOMEPAGE="https://github.com/shadowsocks/libQtShadowsocks"
-KEYWORDS="~amd64 ~x86"
 SRC_URI="https://github.com/librehat/libQtShadowsocks/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+
+KEYWORDS="~amd64 ~x86"
+SLOT="1"
 RESTRICT="mirror"
 
 LICENSE="GPL-3"
 
-IUSE="libqss"
+IUSE="static"
 
-DEPEND=">dev-libs/botan-1.10[threads]
+DEPEND="dev-libs/botan:2
 	dev-qt/qtconcurrent
 	dev-qt/qtcore:5
 	dev-qt/qtnetwork
 	dev-qt/qttest:5
-	sys-devel/gcc[cxx]"
-
-QT5_TARGET_SUBDIRS=(
-	lib
-)
-
-src_unpack() {
-	tar --no-same-owner -xof ${DISTDIR}/${P}.tar.gz -C ${WORKDIR} || die "tar error"
-	mv ${WORKDIR}/${P} ${WORKDIR}/${PN}-opensource-src-${PV} || die
-}
-
-pkg_setup() {
-	use libqss && QT5_TARGET_SUBDIRS+=(shadowsocks-libqss)
-}
+	>=sys-devel/gcc-4.9[cxx]"
 
 src_configure() {
-	local myconf=(
-		$(use libqss)
-	)
-	qt5-build_src_configure
+	local mycmakeargs="
+	-DLIB_INSTALL_DIR=/usr/$(get_libdir)
+	-DUSE_BOTAN2=ON"
+	! use static && mycmakeargs+=" -DBUILD_SHARED_LIBS=ON "
+	cmake-utils_src_configure
 }
