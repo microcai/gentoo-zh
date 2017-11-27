@@ -7,6 +7,6 @@
 		<name>Register</name>
 	</maintainer>
 	<longdescription lang="en">
-		A cross-platform GUI shadowsocks client
+		Shadowsocks-Qt5 is a native and cross-platform shadowsocks GUI client with advanced features.
 	</longdescription>
 </pkgmetadata>
