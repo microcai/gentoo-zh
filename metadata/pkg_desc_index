@@ -402,11 +402,11 @@ net-print/cups-tsc 0.1.26: The driver of TSC printers for Linux and CUPS
 net-print/hplip-plugin 3.14.1: Binary plugin for HPs hplip printer driver library
 net-proxy/goagent 3.2.2 9999: A GAE proxy forked from gappproxy/wallproxy
 net-proxy/lantern-bin 2.0.13 2.0.16 2.2.4 3.0.4: A free desktop application that delivers fast, reliable and secure access to the open Internet for users in censored regions.
-net-proxy/libQtShadowsocks 1.11.0: A lightweight and ultra-fast shadowsocks library written in C++/Qt
+net-proxy/libQtShadowsocks 1.11.0 2.0.0_beta: A lightweight and ultra-fast shadowsocks library written in C++/Qt
 net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
 net-proxy/shadowsocks 9999: A fast tunnel proxy that helps you bypass firewalls
 net-proxy/shadowsocks-libev 2.4.8 9999: A lightweight secured scoks5 proxy for embedded devices and low end boxes
-net-proxy/shadowsocks-qt5 2.9.0: A cross-platform GUI shadowsocks client
+net-proxy/shadowsocks-qt5 2.9.0 3.0.0_alpha: Shadowsocks-Qt5 is a native and cross-platform shadowsocks GUI client with advanced features.
 net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
 net-proxy/squid 3.3.9: A full-featured web proxy cache
 net-proxy/wallproxy-plus 2.1.18-r1 2.1.19 9999: New version of wallproxy, a general purpose proxy framework in Python.
