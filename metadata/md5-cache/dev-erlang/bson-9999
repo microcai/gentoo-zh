@@ -7,5 +7,5 @@ IUSE=doc src
 LICENSE=all-rights-reserved
 RDEPEND=dev-lang/erlang >=dev-lang/erlang-17.0.0
 SLOT=0
-_eclasses_=erlang-pkg	40c849564b68378e720d65139814a52b	git-r3	52a888802d25387c2c74cb845d1219bc
+_eclasses_=erlang-pkg	40c849564b68378e720d65139814a52b	git-r3	fec09a83ae965b041b47f5ff7c8ba29a
 _md5_=4f67e1a255e358429a27039206ac5017
