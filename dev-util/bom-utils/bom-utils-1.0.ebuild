@@ -18,6 +18,6 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/utf-bom-utils_src"
+S="${WORKDIR}/utf-bom-utils-master"
 
 
