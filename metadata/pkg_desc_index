@@ -427,6 +427,7 @@ sys-apps/package-query 1.1: Query ALPM and AUR
 sys-apps/pacman 4.0.3: Archlinux's binary package manager
 sys-apps/sysd 0.6.0 0.6.1 0.6.2 0.6.3 0.6.4: The daemon who supplies firsthand system data
 sys-apps/uksmstat 9999: Small tool to show UKSM statistics.
+sys-apps/usb_modeswitch 2.5.1: A tool for controlling 'flip flop' (multiple devices) USB gear like UMTS sticks
 sys-apps/yaourt 1.2.2: A pacman wrapper with extended features and AUR support
 sys-block/imagewriter 9999: Utility for writing raw disk images & hybrid isos to USB keys
 sys-block/ioping 9999: simple disk I/0 latency measuring tool

@@ -111,6 +111,7 @@ sys-apps/kmscon:multiseat - Enable multiseat support via systemd
 sys-apps/kmscon:optimizations - Enable optimizations
 sys-apps/kmscon:pango - Enable pango font rendering
 sys-apps/kmscon:pixman - Enable pixman font rendering
+sys-apps/usb_modeswitch:jimtcl - Use dev-lang/jimtcl instead of dev-lang/tcl for smaller memory footprint
 sys-devel/gdb:multitarget - Support all known targets in one gdb binary
 sys-kernel/hardened-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 x11-wm/compiz:fuse - Enables support for the filesystem in userspace plugin through sys-fs/fuse.
