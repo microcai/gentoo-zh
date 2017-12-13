@@ -9,5 +9,6 @@
 		<flag name="manual">Install <pkg>dde-extra/dde-help</pkg> User Manual</flag>
 		<flag name="terminal">Install <pkg>dde-extra/deepin-terminal</pkg> Terminal Emulator</flag>
 		<flag name="multimedia">Install Deepin multimedia suite</flag>
+		<flag name="grub">Install Deepin themes for <pkg>sys-boot/grub</pkg></flag>
 	</use>
 </pkgmetadata>

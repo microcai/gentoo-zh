@@ -8,6 +8,8 @@
 	<use>
 		<flag name="bluetooth">Enable Bluetooth Support</flag>
 		<flag name="miracast">Enable Miracast Support</flag>
+		<flag name="grub">Install Deepin themes for <pkg>sys-boot/grub</pkg></flag>
+		<flag name="fprint">Enables experimental fingerprint authentication using <pkg>sys-auth/fprintd</pkg></flag>
 	</use>
 	<upstream>
 		<remote-id type="github">linuxdeepin/dde-daemon</remote-id>
