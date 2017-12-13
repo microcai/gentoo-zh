@@ -14,15 +14,15 @@ follow rule no.1 and no.2
 
 * for non-version bump commit, commit message should be like this:
 
-        [category/package]: one line short description message
+        $category/$package: one line short description message
         {empty line}
         multiple lines of description about why you change this.
-        if you change to fix the bug, and if there is an google code
+        if you change to fix the bug, and if there is an GitHub
         issue entry for that bug, then point the bug link here.
 
 * for version bump commit, commit message should be like this:
 
-        [category/package]: version bump to [new version]
+        $category/$package: version bump to $new_version
 
 # package review
 
