@@ -62,7 +62,7 @@ src_install() {
 
 	dobin ${S}/usr/bin/${PN}
 
-	fperms 0755 /usr/$(get_libdir)/${PN}/lib/*
+	fperms 0755 /usr/bin/netease*
 
 	insinto /usr/
 	doins -r ${S}/usr/share
