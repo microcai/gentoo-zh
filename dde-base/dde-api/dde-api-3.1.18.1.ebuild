@@ -21,7 +21,8 @@ RDEPEND="sys-devel/gcc[go]
 		x11-libs/gdk-pixbuf:2
 		media-libs/libcanberra[pulseaudio]
 		x11-libs/libXfixes
-		net-wireless/rfkill
+		|| ( net-wireless/rfkill
+		>=sys-apps/util-linux-2.31 )
 		app-text/poppler[cairo]
 		x11-libs/libXcursor
 		x11-apps/xcur2png
