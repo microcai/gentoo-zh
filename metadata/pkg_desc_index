@@ -47,6 +47,8 @@ net-misc/g2ipmsg 0.9.5:
 net-misc/libipmsg 0.1.6 0.1.7: libipmsg - IP Messenger library for UNIX
 net-misc/omnitty 0.3.0: ncurses-based ssh multiplexer for cluster administration
 net-misc/pcmanx-gtk2 1.1 1.2: PCMan is an easy-to-use telnet client mainly targets BBS users formerly writen by gtk2
+net-print/cndrvcups-common-lb 3.40-r1: Common files for Canon drivers
+net-print/cndrvcups-lb 3.40-r1: Canon UFR II / LIPSLX Printer Driver for Linux
 net-print/hplip-plugin 3.14.1: Binary plugin for HPs hplip printer driver library
 sys-apps/afulnx 5.05.04: AMI AFULNX Flasher - Linux based AMI BIOS Firmware Update flasher
 sys-boot/grub-efi 0.97-r84: GNU GRUB Legacy boot loader
