@@ -48,6 +48,7 @@ DEPEND="dev-libs/boost
 			  dev-qt/qtprintsupport:5
 			  dev-qt/qtdbus:5
 			  dev-qt/qtdeclarative:5
+			  dev-qt/linguist-tools:5
 	      )
 
 		  hunspell? ( app-text/hunspell )
