@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-qt/qtcore-5.5:5 dev-qt/qtdbus dev-qt/qttest
 SLOT=0/2.0.0
 SRC_URI=https://github.com/linuxdeepin/dtkcore/archive/2.0.0.tar.gz -> dtkcore-2.0.0.tar.gz
-_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	multilib	97f470f374f2e94ccab04a2fb21d811e	qmake-utils	990448b067cb3cfe1443bc25fb57239c	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	multilib	97f470f374f2e94ccab04a2fb21d811e	qmake-utils	990448b067cb3cfe1443bc25fb57239c	toolchain-funcs	885c7d8dd70a58825f3d17e35a3cd1e9
 _md5_=60b84995a13b0286c6ddb4149b0bc240
