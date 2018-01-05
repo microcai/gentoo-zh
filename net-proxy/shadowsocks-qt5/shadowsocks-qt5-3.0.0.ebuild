@@ -10,7 +10,7 @@ MY_PV=${PV/_alpha/alpha}
 
 DESCRIPTION="Shadowsocks-Qt5 is a native and cross-platform shadowsocks GUI client with advanced features."
 HOMEPAGE="https://github.com/shadowsocks/libQtShadowsocks"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 SRC_URI="https://github.com/librehat/${PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
 RESTRICT="mirror"
 
@@ -23,7 +23,7 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 DEPEND="dev-libs/botan:2
 	dev-libs/libappindicator:2
-	>=net-proxy/libQtShadowsocks-2.0.0_beta
+	>=net-proxy/libQtShadowsocks-2.0.0
 	!!<net-proxy/shadowsocks-qt5-3.0.0_alpha
 	dev-qt/qtconcurrent
 	dev-qt/qtcore:5
