@@ -1,11 +1,12 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare test
-DEPEND=dev-libs/botan:2 dev-libs/libappindicator:2 >=net-proxy/libQtShadowsocks-2.0.0_beta !!<net-proxy/shadowsocks-qt5-3.0.0_alpha dev-qt/qtconcurrent dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtnetwork dev-qt/qtwidgets:5 media-gfx/zbar media-gfx/qrencode >=sys-devel/gcc-4.9[cxx] sys-devel/make >=dev-util/cmake-3.7.2 >=sys-apps/sed-4
+DEPEND=dev-libs/botan:2 dev-libs/libappindicator:2 >=net-proxy/libQtShadowsocks-2.0.0 !!<net-proxy/shadowsocks-qt5-3.0.0_alpha dev-qt/qtconcurrent dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtnetwork dev-qt/qtwidgets:5 media-gfx/zbar media-gfx/qrencode >=sys-devel/gcc-4.9[cxx] sys-devel/make >=dev-util/cmake-3.7.2 >=sys-apps/sed-4
 DESCRIPTION=Shadowsocks-Qt5 is a native and cross-platform shadowsocks GUI client with advanced features.
 EAPI=5
 HOMEPAGE=https://github.com/shadowsocks/libQtShadowsocks
+KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/librehat/shadowsocks-qt5/archive/v3.0.0alpha.tar.gz -> shadowsocks-qt5-3.0.0_alpha.tar.gz
+SRC_URI=https://github.com/librehat/shadowsocks-qt5/archive/v3.0.0.tar.gz -> shadowsocks-qt5-3.0.0.tar.gz
 _eclasses_=cmake-utils	202a2becc86cb78ba14baad148d06759	desktop	2ccd1dd1dd7bfb8795eea024a4f91bb6	epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	97ce9decef1ff4b6c5be700283f67343	flag-o-matic	02908f00f002f0f07c5b74783d778325	gnome2-utils	4d211d7614f303710fca59db6ec12c88	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	ebb2eaddc6331c4fa000b8eb8f6fe074	toolchain-funcs	885c7d8dd70a58825f3d17e35a3cd1e9	versionator	c80ccf29e90adea7c5cae94b42eb76d0	xdg-utils	f2c8335407f0b935b0a96d4adf23ef25
-_md5_=74db61b1bb4a6847e7f70c26deb65dcb
+_md5_=afeeb95c17c7ae7f5a657920854f3e12
