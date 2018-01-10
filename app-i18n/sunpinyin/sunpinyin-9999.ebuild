@@ -3,11 +3,11 @@
 # $Header: $
 
 EAPI=5
-
-inherit git-2 scons-utils
+PYTHON_COMPAT=( python2_7 )
+inherit eutils git-2 multilib python-any-r1 scons-utils toolchain-funcs
 
 DESCRIPTION="A statistical language model based Chinese input method library"
-HOMEPAGE="https://code.google.com/p/sunpinyin/"
+HOMEPAGE="https://github.com/sunpinyin/sunpinyin"
 EGIT_PROJECT="${PN}"
 EGIT_REPO_URI="https://github.com/sunpinyin/sunpinyin.git"
 
@@ -19,13 +19,22 @@ RESTRICT="mirror"
 
 RDEPEND="dev-db/sqlite:3"
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	dev-util/intltool
 	virtual/pkgconfig
 	sys-devel/gettext"
 PDEPEND="app-i18n/sunpinyin-data"
 
+src_prepare() {
+	epatch_user
+}
+
 src_configure() {
-	myesconsargs=( --prefix=/usr )
+	tc-export CXX
+	myesconsargs=(
+		--prefix="${EPREFIX}"/usr
+		--libdir="${EPREFIX}"/usr/$(get_libdir)
+	)
 }
 
 src_compile() {
