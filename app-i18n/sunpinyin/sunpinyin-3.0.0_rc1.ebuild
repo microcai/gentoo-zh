@@ -6,21 +6,16 @@ EAPI=5
 PYTHON_COMPAT=( python2_7 )
 inherit eutils multilib python-any-r1 scons-utils toolchain-funcs
 
-DESCRIPTION="A Statistical Language Model based Chinese input method library"
+DESCRIPTION="A statistical language model based Chinese input method library"
 HOMEPAGE="https://github.com/sunpinyin/sunpinyin"
-
 _PV=${PV//_/-}
-
 SRC_URI="https://github.com/sunpinyin/sunpinyin/archive/v${_PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="LGPL-2.1 CDDL"
 SLOT="0/1"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
-
 RESTRICT="mirror"
-
-S="${WORKDIR}/${PN}-${_PV}"
 
 RDEPEND="dev-db/sqlite:3"
 DEPEND="${RDEPEND}
@@ -29,6 +24,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig"
 PDEPEND="app-i18n/sunpinyin-data"
+S="${WORKDIR}/${PN}-${_PV}"
 
 src_prepare() {
 	epatch_user
