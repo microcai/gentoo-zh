@@ -18,7 +18,7 @@ else
 fi
 
 LICENSE="GPL-3+"
-SLOT="0"
+SLOT="2"
 IUSE=""
 
 DEPEND="dev-qt/qtcore:5
@@ -30,10 +30,11 @@ DEPEND="dev-qt/qtcore:5
 		virtual/pkgconfig
 	    "
 
-src_install() {
-	cmake-utils_src_install
+src_configure() {
+	local mycmakeargs=(
+		-DDMAN_MANUAL_DIR=/usr/share/dman
+		-DDMAN_RESOURCE_DIR=/usr/share/dman
+	)
 
-	insinto /usr/share/${PN}
-	doins -r PageRoot web
-
+	cmake-utils_src_configure
 }
