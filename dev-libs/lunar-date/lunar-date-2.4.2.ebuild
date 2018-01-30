@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
-EAPI=4
+EAPI=6
 
 inherit autotools
 
 DESCRIPTION="Chinese Lunar Library"
-HOMEPAGE="http://liblunar.googlecode.com"
-SRC_URI="http://liblunar.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="http://github.com/yetist/lunar-date"
+SRC_URI="http://github.com/yetist/lunar-date/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,15 +21,25 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig
 	>=dev-util/intltool-0.35
-	dev-util/gtk-doc
+	doc? ( dev-util/gtk-doc )
 	>=app-text/gnome-doc-utils-0.3.2"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-src_compile() {
+src_prepare() {
+	eapply_user
+	./autogen.sh || die "autoconf failed"
+}
+
+src_configure(){
 	econf $(use_enable python) $(use_enable doc) || die "compile failed"
+}
+
+src_compile(){
+	emake
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 }
+
