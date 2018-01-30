@@ -25,7 +25,7 @@ app-text/pdf2htmlEX 0.12: A PDF to HTML converter
 app-text/srecite 0.6.2: Smart Reciting
 dev-libs/libchewing 0.5.1: Library for Chinese Phonetic input method
 dev-libs/libtsm 3: TSM is a state machine for DEC VT100-VT520 compatible terminal emulators.
-dev-libs/lunar-date 2.4.0: Chinese Lunar Library
+dev-libs/lunar-date 2.4.2: Chinese Lunar Library
 dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 files
 dev-util/global 6.3.4: GNU Global is a tag system to find the locations of a specified object in various sources
 dev-util/webstorm 10.0.2: WebStorm is a lightweight yet powerful IDE, perfectly equipped for complex client-side development and server-side development with Node.js.
