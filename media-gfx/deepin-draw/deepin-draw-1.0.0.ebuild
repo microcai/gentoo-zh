@@ -30,6 +30,7 @@ RDEPEND="dev-qt/qtsvg:5
 		media-libs/libraw
 		media-libs/libexif
 		media-libs/freeimage[jpeg?,png?,tiff?,raw?,mng?,jpeg2k?]
+		dde-extra/deepin-picker
 		"
 
 DEPEND="${RDEPEND}
