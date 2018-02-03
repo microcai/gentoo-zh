@@ -21,6 +21,10 @@ RDEPEND="virtual/man
 	>=sys-apps/man-pages-3.83
 "
 
+DEPEND="
+	app-i18n/opencc
+"
+
 inherit autotools git-r3
 
 src_prepare() {
