@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=dev-libs/glib:2 >=virtual/udev-172 x11-libs/libxkbcommon dbus? ( sys-apps/dbus ) drm? ( x11-libs/libdrm >=media-libs/mesa-8.0.3[egl,gbm] ) gles2? ( >=media-libs/mesa-8.0.3[gles2] ) pango? ( x11-libs/pango ) systemd? ( sys-apps/systemd ) udev? ( virtual/udev ) pixman? ( x11-libs/pixman ) wayland? ( dev-libs/wayland ) dev-libs/libtsm virtual/pkgconfig x11-proto/xproto doc? ( dev-util/gtk-doc ) >=app-portage/elt-patches-20170422 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig
+DEPEND=dev-libs/glib:2 >=virtual/udev-172 x11-libs/libxkbcommon dbus? ( sys-apps/dbus ) drm? ( x11-libs/libdrm >=media-libs/mesa-8.0.3[egl,gbm] ) gles2? ( >=media-libs/mesa-8.0.3[gles2] ) pango? ( x11-libs/pango ) systemd? ( sys-apps/systemd ) udev? ( virtual/udev ) pixman? ( x11-libs/pixman ) wayland? ( dev-libs/wayland ) dev-libs/libtsm virtual/pkgconfig x11-proto/xproto doc? ( dev-util/gtk-doc ) >=app-portage/elt-patches-20170422 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15.1:1.15 >=sys-devel/automake-1.16:1.16 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig
 DESCRIPTION=KMS/DRM based virtual Console Emulator
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/kmscon
@@ -10,5 +10,5 @@ RDEPEND=dev-libs/glib:2 >=virtual/udev-172 x11-libs/libxkbcommon dbus? ( sys-app
 REQUIRED_USE=gles2? ( drm ) multiseat? ( systemd )
 SLOT=0
 SRC_URI=http://www.freedesktop.org/software/kmscon/releases/kmscon-8.tar.xz
-_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	desktop	2ccd1dd1dd7bfb8795eea024a4f91bb6	epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	b4eee44966573b7fb6761e507910b306	flag-o-matic	02908f00f002f0f07c5b74783d778325	libtool	0081a71a261724730ec4c248494f044d	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	preserve-libs	ef207dc62baddfddfd39a164d9797648	systemd	a31844b675f1a1fea87fbe1144aee5f5	toolchain-funcs	885c7d8dd70a58825f3d17e35a3cd1e9
+_eclasses_=autotools	5c7fb6f361f3a238f78e5328771febd0	desktop	2ccd1dd1dd7bfb8795eea024a4f91bb6	epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	b4eee44966573b7fb6761e507910b306	flag-o-matic	02908f00f002f0f07c5b74783d778325	libtool	0081a71a261724730ec4c248494f044d	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	preserve-libs	ef207dc62baddfddfd39a164d9797648	systemd	a31844b675f1a1fea87fbe1144aee5f5	toolchain-funcs	885c7d8dd70a58825f3d17e35a3cd1e9
 _md5_=798195c8af17b0126387214e852f7b78
