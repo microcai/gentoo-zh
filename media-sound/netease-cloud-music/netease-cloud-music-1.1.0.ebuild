@@ -60,11 +60,13 @@ src_install() {
 	insinto /usr/$(get_libdir)
 	doins -r ${S}/usr/lib/${PN}
 
-	dobin ${S}/usr/bin/${PN}
-
 	fperms 0755 /usr/$(get_libdir)/${PN}/lib/*
+
+	dodir /usr/bin
+	exeinto /usr/bin
+	doexe ${S}/usr/bin/${PN}
 
 	insinto /usr/
 	doins -r ${S}/usr/share
-
 }
+
