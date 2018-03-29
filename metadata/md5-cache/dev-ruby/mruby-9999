@@ -6,5 +6,5 @@ HOMEPAGE=https://github.com/mruby/mruby
 LICENSE=MIT
 RDEPEND=sys-devel/bison dev-lang/ruby
 SLOT=0
-_eclasses_=git-2	195a672bfaf52d868442171c9469bbb6
+_eclasses_=git-2	45ff482316b52b3f96ff6b7309b77f03
 _md5_=e8cd4484fd4e62fd4c6dd586d668d078
