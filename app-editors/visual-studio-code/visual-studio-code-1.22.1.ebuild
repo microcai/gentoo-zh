@@ -1,55 +1,58 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 EAPI=6
 
-inherit eutils
+inherit eutils pax-utils
 
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
+BASE_URI="https://vscode-update.azurewebsites.net/${PV}"
 SRC_URI="
-	amd64? ( https://go.microsoft.com/fwlink/?LinkID=620884 -> ${P}-amd64.tar.gz )
+	x86? ( ${BASE_URI}/linux-ia32/stable ->  ${P}-x86.tar.gz )
+	amd64? ( ${BASE_URI}/linux-x64/stable -> ${P}-amd64.tar.gz )
 	"
-RESTRICT="mirror"
+RESTRICT="mirror strip bindist"
 
-LICENSE="Microsoft"
+LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
-IUSE=""
+KEYWORDS="~x86 ~amd64"
+IUSE="libsecret"
 
 DEPEND="
-	app-crypt/libsecret
 	>=media-libs/libpng-1.2.46
 	>=x11-libs/gtk+-2.24.8-r1:2
 	x11-libs/cairo
 	gnome-base/gconf
+	x11-libs/libXtst
 "
 
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}
+	>=net-print/cups-2.0.0
+	x11-libs/libnotify
+	x11-libs/libXScrnSaver
+	libsecret? ( app-crypt/libsecret[crypt] )
+"
 
-S="${WORKDIR}"
+QA_PRESTRIPPED="opt/${PN}/code"
+QA_PREBUILT="opt/${PN}/code"
+
+pkg_setup(){
+	use amd64 && S="${WORKDIR}/VSCode-linux-x64" || S="${WORKDIR}/VSCode-linux-ia32"
+}
 
 src_install(){
-	ARCH="$(uname -m)"
-	if [[ $ARCH == "x86_64" ]];then
-		cd VSCode-linux-x64
-	else
-		cd VSCode-linux-ia32
-	fi
-
-
+	pax-mark m code
 	insinto "/opt/${PN}"
 	doins -r *
-	dosym "/opt/${PN}/code" "/usr/bin/visual-studio-code"
-	insinto "/usr/share/applications"
-	doins ${FILESDIR}/${PN}.desktop
-	insinto "/usr/share/pixmaps"
-	doins ${FILESDIR}/${PN}.png
+	dosym "/opt/${PN}/bin/code" "/usr/bin/${PN}"
+	make_desktop_entry "${PN}" "Visual Studio Code" "${PN}" "Development;IDE"
+	doicon ${FILESDIR}/${PN}.png
 	fperms +x "/opt/${PN}/code"
 	fperms +x "/opt/${PN}/bin/code"
-	fperms +x "/opt/${PN}/libffmpeg.so"
 	fperms +x "/opt/${PN}/libnode.so"
+	fperms +x "/opt/${PN}/resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg"
 	insinto "/usr/share/licenses/${PN}"
 	newins "resources/app/LICENSE.txt" "LICENSE"
 }
