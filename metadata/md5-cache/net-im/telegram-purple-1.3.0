@@ -9,5 +9,5 @@ LICENSE=LGPL-3
 RDEPEND=net-im/pidgin dev-libs/openssl sys-libs/glibc libwebp? ( media-libs/libwebp )
 SLOT=0
 SRC_URI=https://github.com/majn/telegram-purple/releases/download/v1.3.0/telegram-purple_1.3.0.orig.tar.gz
-_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	versionator	ce21313503c41896ebcd7d58b0607e37
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	versionator	26ca8a8bd95d6a74122c08ba98a4ee72
 _md5_=3f42cda29c5586740cfbd62548e5601b
