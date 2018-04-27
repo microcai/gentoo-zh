@@ -15,9 +15,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	>=dev-util/cmake-2.8.12
-	>=dev-libs/boost-1.54.0
-	>=dev-libs/openssl-1.0.2
+	dev-util/cmake
+	dev-libs/boost
+	dev-libs/openssl
 "
 RDEPEND="${DEPEND}"
 
