@@ -81,7 +81,12 @@ src_install() {
 
 	newinitd "${FILESDIR}/v2ray.initd" v2ray
 	systemd_dounit systemd/v2ray.service
-	sed '/Type=simple/a\CapabilityBoundingSet=CAP_NET_BIND_SERVICE' -i ${D}$(systemd_get_systemunitdir)/v2ray.service
 
 	popd
+}
+
+pkg_postinst() {
+	elog "You may need to add v2ray User&Group for security concerns."
+	elog "Then you need to modify the /lib/systemd/system/v2ray.service for systemd user"
+	elog "and /etc/init.d/v2ray for openRC user"
 }

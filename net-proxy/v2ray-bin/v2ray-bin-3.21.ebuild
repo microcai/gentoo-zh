@@ -22,10 +22,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm ~arm64 ~mips ~s390"
 IUSE=""
 
-DEPEND="
-	dev-lang/go
-	dev-vcs/git
-"
+DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_unpack() {
@@ -36,21 +33,28 @@ src_unpack() {
 }
 
 src_install() {
-	default
-	dobin "${S}/v2ray" v2ray
-	dobin "${S}/v2ctl" v2ctl
+	gobindir=`dirname ${S}/*/`
+	pushd $gobindir
 
-	dodir "/etc/v2ray"
-	insinto "/etc/v2ray"
-	newins "${S}/vpoint_socks_vmess.json" vpoint_socks_vmess.json
-	newins "${S}/vpoint_vmess_freedom.json" vpoint_vmess_freedom.json
+	dobin v2ray v2ctl
+
+	insinto /etc/v2ray
+	doins *.json
 
 	insinto /usr/share/v2ray
-	doins "${S}/geoip.dat" geoip.dat
-	doins "${S}/geosite.dat" geosite.dat
+	doins geoip.dat geosite.dat
 
 	dodoc readme.md
 
 	newinitd "${FILESDIR}/v2ray.initd" v2ray
-	systemd_newunit "${S}/systemd/v2ray.service" "v2ray.service"
+	systemd_dounit systemd/v2ray.service
+
+	popd
 }
+
+pkg_postinst() {
+	elog "You may need to add v2ray User&Group for security concerns."
+	elog "Then you need to modify the /lib/systemd/system/v2ray.service for systemd user"
+	elog "and /etc/init.d/v2ray for openRC user"
+}
+
