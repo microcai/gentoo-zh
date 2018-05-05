@@ -1,9 +1,0 @@
-DEFINED_PHASES=unpack
-DEPEND=app-i18n/librime dev-vcs/git
-DESCRIPTION=Brise, data resource for Rime Input Method Engine
-EAPI=4
-HOMEPAGE=http://code.google.com/p/rimeime/
-LICENSE=GPL-3
-SLOT=0
-_eclasses_=git-2	45ff482316b52b3f96ff6b7309b77f03
-_md5_=68c5b9705338ec260ed2489391ef24ff
