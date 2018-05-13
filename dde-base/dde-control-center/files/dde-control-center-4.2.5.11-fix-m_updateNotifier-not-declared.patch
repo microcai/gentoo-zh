@@ -1,0 +1,24 @@
+commit 19a33aa0fb69cb66567dce3e86565ca1f422b177
+Author: Felix Yan <felixonmars@archlinux.org>
+Date:   Wed Oct 25 22:18:56 2017 +0800
+
+    fix: build with DISABLE_SYS_UPDATE specified
+    
+    Change-Id: Ib744235d7809624fca7409ef9c445dded1158ba2
+
+diff --git a/frame/mainwidget.cpp b/frame/mainwidget.cpp
+index c4d88be2..61f1d1eb 100644
+--- a/frame/mainwidget.cpp
++++ b/frame/mainwidget.cpp
+@@ -246,7 +246,11 @@ void MainWidget::refershTimedate()
+ 
+ void MainWidget::updateMPRISEnable()
+ {
++#ifndef DISABLE_SYS_UPDATE
+     const bool update_visible = m_updateNotifier->isVisible();
++#else
++    const bool update_visible = false;
++#endif
+     const bool is_768 = qApp->primaryScreen()->geometry().height() == 768;
+ 
+     m_quickSettingsPanel->setMPRISEnable(!(update_visible && is_768));
