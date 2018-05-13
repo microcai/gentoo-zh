@@ -1,0 +1,116 @@
+diff --git a/misc/dde-daemon/gesture.json b/misc/dde-daemon/gesture.json
+index 2fc0ce60..9548d8f2 100644
+--- a/misc/dde-daemon/gesture.json
++++ b/misc/dde-daemon/gesture.json
+@@ -53,15 +53,6 @@
+             "Action": "ShowWindow"
+         }
+     },
+-    {
+-        "Name": "tap",
+-        "Direction": "none",
+-        "Fingers": 3,
+-        "Action": {
+-            "Type": "built-in",
+-            "Action": "MoveWindow"
+-        }
+-    },
+     {
+         "Name": "swipe",
+         "Direction": "up",
+diff --git a/system/gesture/core.c b/system/gesture/core.c
+index a54190b6..085b5f7c 100644
+--- a/system/gesture/core.c
++++ b/system/gesture/core.c
+@@ -211,16 +211,16 @@ handle_gesture_events(struct libinput_event *ev, int type)
+         }
+         raw_event_reset(raw);
+         break;
+-    case LIBINPUT_EVENT_GESTURE_TAP_BEGIN:
+-        break;
+-    case LIBINPUT_EVENT_GESTURE_TAP_END:
+-        if (libinput_event_gesture_get_cancelled(gesture)) {
+-                break;
+-        }
+-        raw->fingers = libinput_event_gesture_get_finger_count(gesture);
+-        printf("[Tap] fingers: %d\n", raw->fingers);
+-        handleGestureEvent(GESTURE_TYPE_TAP, GESTURE_DIRECTION_NONE, raw->fingers);
+-        break;
++    /* case LIBINPUT_EVENT_GESTURE_TAP_BEGIN: */
++    /*     break; */
++    /* case LIBINPUT_EVENT_GESTURE_TAP_END: */
++    /*     if (libinput_event_gesture_get_cancelled(gesture)) { */
++    /*             break; */
++    /*     } */
++    /*     raw->fingers = libinput_event_gesture_get_finger_count(gesture); */
++    /*     printf("[Tap] fingers: %d\n", raw->fingers); */
++    /*     handleGestureEvent(GESTURE_TYPE_TAP, GESTURE_DIRECTION_NONE, raw->fingers); */
++    /*     break; */
+     }
+ }
+ 
+@@ -279,12 +279,12 @@ handle_events(struct libinput *li)
+         case LIBINPUT_EVENT_GESTURE_PINCH_BEGIN:
+         case LIBINPUT_EVENT_GESTURE_PINCH_UPDATE:
+         case LIBINPUT_EVENT_GESTURE_PINCH_END:
++        /* case LIBINPUT_EVENT_GESTURE_TAP_BEGIN: */
++        /* case LIBINPUT_EVENT_GESTURE_TAP_UPDATE: */
++        /* case LIBINPUT_EVENT_GESTURE_TAP_END: */
+         case LIBINPUT_EVENT_GESTURE_SWIPE_BEGIN:
+         case LIBINPUT_EVENT_GESTURE_SWIPE_UPDATE:
+-        case LIBINPUT_EVENT_GESTURE_SWIPE_END:
+-        case LIBINPUT_EVENT_GESTURE_TAP_BEGIN:
+-        case LIBINPUT_EVENT_GESTURE_TAP_UPDATE:
+-        case LIBINPUT_EVENT_GESTURE_TAP_END:{
++        case LIBINPUT_EVENT_GESTURE_SWIPE_END:{
+             handle_gesture_events(ev, type);
+             break;
+         }
+diff --git a/system/gesture/core.h b/system/gesture/core.h
+index 78bffce2..cca771b6 100644
+--- a/system/gesture/core.h
++++ b/system/gesture/core.h
+@@ -22,10 +22,10 @@
+ 
+ #define GESTURE_TYPE_SWIPE 100
+ #define GESTURE_TYPE_PINCH 101
+-#define GESTURE_TYPE_TAP 102
++/* #define GESTURE_TYPE_TAP 102 */
+ 
+ // tap
+-#define GESTURE_DIRECTION_NONE 0
++/* #define GESTURE_DIRECTION_NONE 0 */
+ // swipe
+ #define GESTURE_DIRECTION_UP 10
+ #define GESTURE_DIRECTION_DOWN 11
+diff --git a/system/gesture/gesture.go b/system/gesture/gesture.go
+index adb06d40..dd1e485c 100644
+--- a/system/gesture/gesture.go
++++ b/system/gesture/gesture.go
+@@ -42,9 +42,9 @@ type GestureType int32
+ var (
+ 	GestureTypeSwipe = GestureType(C.GESTURE_TYPE_SWIPE)
+ 	GestureTypePinch = GestureType(C.GESTURE_TYPE_PINCH)
+-	GestureTypeTap   = GestureType(C.GESTURE_TYPE_TAP)
++	// GestureTypeTap   = GestureType(C.GESTURE_TYPE_TAP)
+ 
+-	GestureDirectionNone  = GestureType(C.GESTURE_DIRECTION_NONE)
++	// GestureDirectionNone  = GestureType(C.GESTURE_DIRECTION_NONE)
+ 	GestureDirectionUp    = GestureType(C.GESTURE_DIRECTION_UP)
+ 	GestureDirectionDown  = GestureType(C.GESTURE_DIRECTION_DOWN)
+ 	GestureDirectionLeft  = GestureType(C.GESTURE_DIRECTION_LEFT)
+@@ -59,10 +59,10 @@ func (t GestureType) String() string {
+ 		return "swipe"
+ 	case GestureTypePinch:
+ 		return "pinch"
+-	case GestureTypeTap:
+-		return "tap"
+-	case GestureDirectionNone:
+-		return "none"
++	// case GestureTypeTap:
++	// 	return "tap"
++	// case GestureDirectionNone:
++	// 	return "none"
+ 	case GestureDirectionUp:
+ 		return "up"
+ 	case GestureDirectionDown:

@@ -27,6 +27,7 @@ RDEPEND="dev-qt/qtmultimedia:5[widgets]
 		 dev-qt/qtwidgets:5
 		 dev-qt/qtconcurrent:5
 		 dev-qt/qtx11extras:5
+		 dev-qt/qtsvg:5
 		 >=dev-qt/qtcore-5.5:5
 		 x11-libs/libXrender
 		 x11-libs/libxcb
