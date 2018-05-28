@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DEPEND=>=sys-devel/libtool-1.3.5 dev-cpp/gtkmm:3.0 >=dev-libs/libsigc++-2.0 >=media-gfx/synfig-1.2.0
+DESCRIPTION=Synfig: Film-Quality Vector Animation (main UI)
+EAPI=5
+HOMEPAGE=http://www.synfig.com/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=sys-devel/libtool-1.3.5 dev-cpp/gtkmm:3.0 >=dev-libs/libsigc++-2.0 >=media-gfx/synfig-1.2.0
+SLOT=0
+SRC_URI=mirror://sourceforge/synfig/synfigstudio-1.2.0.tar.gz
+_md5_=6ef0d5378684df1d0f5241ed3c777a9a
