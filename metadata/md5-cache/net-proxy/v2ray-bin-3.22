@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst unpack
+DEPEND=virtual/pkgconfig
+DESCRIPTION=A platform for building proxies to bypass network restrictions.
+EAPI=6
+HOMEPAGE=https://www.v2ray.com/
+KEYWORDS=~amd64 ~x86 ~arm ~arm64 ~mips ~s390
+LICENSE=MIT
+SLOT=0
+SRC_URI=amd64? ( https://github.com/v2ray/v2ray-core/releases/download/v3.22/v2ray-linux-64.zip ) x86? ( https://github.com/v2ray/v2ray-core/releases/download/v3.22/v2ray-linux-32.zip ) arm? ( https://github.com/v2ray/v2ray-core/releases/download/v3.22/v2ray-linux-arm.zip ) arm64? ( https://github.com/v2ray/v2ray-core/releases/download/v3.22/v2ray-linux-arm64.zip ) mips? ( https://github.com/v2ray/v2ray-core/releases/download/v3.22/v2ray-linux-mips64.zip ) s390? ( https://github.com/v2ray/v2ray-core/releases/download/v3.22/v2ray-linux-s390x.zip )
+_eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	systemd	a31844b675f1a1fea87fbe1144aee5f5	toolchain-funcs	1e35303c63cd707f6c3422b4493d5607
+_md5_=85f31fc7aadc4817576326ded706e099

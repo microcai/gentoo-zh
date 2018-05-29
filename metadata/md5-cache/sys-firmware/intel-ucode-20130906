@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install postinst setup unpack
+DESCRIPTION=Intel IA32 microcode update data
+EAPI=5
+HOMEPAGE=http://downloadcenter.intel.com/Detail_Desc.aspx?DwnldID=22508
+KEYWORDS=~amd64 ~x86
+LICENSE=intel-ucode
+RDEPEND=!sys-apps/microcode-data
+SLOT=0
+SRC_URI=http://downloadmirror.intel.com/22508/eng/microcode-20130906.tgz
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	linux-info	ca370deef9d44125d829f2eb6ebc83e0	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	1e35303c63cd707f6c3422b4493d5607	versionator	26ca8a8bd95d6a74122c08ba98a4ee72
+_md5_=c08c894717885b5c73faed2d651bf26c

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=dev-libs/boost net-misc/curl qt4? ( app-text/poppler[qt4] dev-qt/qtwebkit:4 dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsql:4 dev-qt/qtscript:4 ) qt5? ( app-text/poppler[qt5] dev-qt/qtwebkit:5 dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtsql:5 dev-qt/qtxml:5 dev-qt/qtnetwork:5 dev-qt/qtwidgets:5 dev-qt/qtprintsupport:5 dev-qt/qtdbus:5 dev-qt/qtdeclarative:5 dev-qt/linguist-tools:5 ) hunspell? ( app-text/hunspell ) webcam? ( media-libs/opencv:0= )
+DESCRIPTION=Nixnote - A clone of Evernote for Linux
+EAPI=5
+HOMEPAGE=http://sourceforge.net/projects/nevernote/
+IUSE=qt4 +qt5 hunspell webcam
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/boost net-misc/curl qt4? ( app-text/poppler[qt4] dev-qt/qtwebkit:4 dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsql:4 dev-qt/qtscript:4 ) qt5? ( app-text/poppler[qt5] dev-qt/qtwebkit:5 dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtsql:5 dev-qt/qtxml:5 dev-qt/qtnetwork:5 dev-qt/qtwidgets:5 dev-qt/qtprintsupport:5 dev-qt/qtdbus:5 dev-qt/qtdeclarative:5 dev-qt/linguist-tools:5 ) hunspell? ( app-text/hunspell ) webcam? ( media-libs/opencv:0= ) app-text/htmltidy
+REQUIRED_USE=^^ ( qt4 qt5 )
+SLOT=2
+SRC_URI=https://github.com/baumgarr/nixnote2/archive/v2.0.2.tar.gz -> nixnote2-2.0.2.tar.gz
+_eclasses_=desktop	2ccd1dd1dd7bfb8795eea024a4f91bb6	epatch	9a5f039771f143195164a15a4faa41a1	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	63392afb034aad67f17fa129019eb4d9	ltprune	607e058da37aa6dabfa408b7d61da72e	multilib	97f470f374f2e94ccab04a2fb21d811e	preserve-libs	ef207dc62baddfddfd39a164d9797648	qmake-utils	990448b067cb3cfe1443bc25fb57239c	toolchain-funcs	1e35303c63cd707f6c3422b4493d5607	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf	versionator	26ca8a8bd95d6a74122c08ba98a4ee72
+_md5_=cc4ecfc297a46a482256db64a0ee61e8
