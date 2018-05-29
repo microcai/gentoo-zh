@@ -1,0 +1,12 @@
+DEFINED_PHASES=install unpack
+DEPEND=>=dev-vcs/bzr-2.6.0
+DESCRIPTION=Elementary-mod theme for GNOME
+EAPI=2
+HOMEPAGE=https://code.launchpad.net/~tualatrix/+junk/elementary-mod-theme
+KEYWORDS=~amd64 ~arm ~mips ~ppc ~sh ~x86 ~x86-fbsd
+LICENSE=GPL-2
+RDEPEND=x11-themes/dmz-cursor-theme x11-themes/elementary-icon-theme x11-themes/gtk-engines-aurora =x11-themes/gtk-engines-murrine-9999
+RESTRICT=binchecks mirror strip
+SLOT=0
+_eclasses_=bzr	2378e021cde927edeb1564ca0387b29a
+_md5_=b35bf0e4cd19a311a90df5818ff0e8d4
