@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
+DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 ) deblob? ( || ( >=dev-lang/python-2.7.5-r2:2.7 ) )
+DESCRIPTION=Full sources for the Linux kernel including: gentoo, ck and other patches
+EAPI=5
+HOMEPAGE=http://dev.gentoo.org/~mpagano/genpatches http://aufs.sourceforge.net http://sourceforge.net/projects/cjktty http://ck.kolivas.org/patches http://kerneldedup.org http://sourceforge.net/projects/reiser4 http://tuxonice.net
+IUSE=symlink build deblob +additional +aufs +cjktty +ck +experimental +gentoo +uksm +reiser4 +thinkpad +tuxonice
+KEYWORDS=x86 amd64 mips
+LICENSE=GPL-2 !deblob? ( linux-firmware )
+RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc virtual/libelf ) aufs? ( >=sys-fs/aufs-util-3.8 ) tuxonice? ( >=sys-apps/tuxonice-userui-1.0 ( || ( >=sys-power/hibernate-script-2.0 sys-power/pm-utils ) ) )
+REQUIRED_USE=experimental? ( gentoo )
+RESTRICT=binchecks strip
+SLOT=3.18
+SRC_URI=mirror://gentoo/genpatches-3.18-16.base.tar.xz mirror://gentoo/genpatches-3.18-16.extras.tar.xz experimental? ( mirror://gentoo/genpatches-3.18-16.experimental.tar.xz ) aufs? ( http://dev.gentoo.org/~jlec/distfiles/aufs-sources-3.18.1+_p20150518.tar.xz ) ck? ( http://ck.kolivas.org/patches/3.0/3.18/3.18-ck1/3.18-ck1-broken-out.tar.bz2 ) uksm? ( http://kerneldedup.org/download/uksm/0.1.2.3/uksm-0.1.2.3-for-v3.18.patch ) reiser4? ( http://sourceforge.net/projects/reiser4/files/reiser4-for-linux-3.x/reiser4-for-3.18.6.patch.gz ) tuxonice? ( http://tuxonice.net/downloads/all/tuxonice-for-linux-3.18.13-2015-05-11.patch.bz2 ) mirror://kernel/linux/kernel/v3.x/linux-3.18.tar.xz deblob? ( http://www.fsfla.org/svn/fsfla/software/linux-libre/releases/tags/3.18-gnu/deblob-3.18 http://www.fsfla.org/svn/fsfla/software/linux-libre/releases/tags/3.18-gnu/deblob-check -> deblob-check-3.18 )
+_eclasses_=desktop	2ccd1dd1dd7bfb8795eea024a4f91bb6	e-sources	603e0f4e0c2f8e91b0581a77157f9d4a	epatch	9a5f039771f143195164a15a4faa41a1	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	63392afb034aad67f17fa129019eb4d9	kernel-2	6e37f651408d80af441518a0264b59c7	ltprune	607e058da37aa6dabfa408b7d61da72e	multilib	97f470f374f2e94ccab04a2fb21d811e	preserve-libs	ef207dc62baddfddfd39a164d9797648	python-any-r1	6faea633ae2f79f6d55dcfd431b79fbf	python-utils-r1	3b2e27bcad216823f5a67d01d28b53a4	toolchain-funcs	1e35303c63cd707f6c3422b4493d5607	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf	versionator	26ca8a8bd95d6a74122c08ba98a4ee72
+_md5_=abe5b8046f6fcf6e87e232136a9bc174
