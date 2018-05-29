@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=dev-libs/glib:2 >=virtual/udev-172 x11-libs/libxkbcommon dbus? ( sys-apps/dbus ) drm? ( x11-libs/libdrm >=media-libs/mesa-8.0.3[egl,gbm] ) gles2? ( >=media-libs/mesa-8.0.3[gles2] ) pango? ( x11-libs/pango ) systemd? ( sys-apps/systemd ) udev? ( virtual/udev ) pixman? ( x11-libs/pixman ) wayland? ( dev-libs/wayland ) dev-libs/libtsm virtual/pkgconfig x11-proto/xproto doc? ( dev-util/gtk-doc ) >=app-portage/elt-patches-20170422 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig
+DESCRIPTION=KMS/DRM based virtual Console Emulator
+EAPI=5
+HOMEPAGE=http://www.freedesktop.org/wiki/Software/kmscon
+IUSE=dbus debug doc +drm +fbdev +gles2 multiseat +optimizations +unifont pango pixman static-libs systemd udev wayland
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT LGPL-2.1 BSD-2
+RDEPEND=dev-libs/glib:2 >=virtual/udev-172 x11-libs/libxkbcommon dbus? ( sys-apps/dbus ) drm? ( x11-libs/libdrm >=media-libs/mesa-8.0.3[egl,gbm] ) gles2? ( >=media-libs/mesa-8.0.3[gles2] ) pango? ( x11-libs/pango ) systemd? ( sys-apps/systemd ) udev? ( virtual/udev ) pixman? ( x11-libs/pixman ) wayland? ( dev-libs/wayland ) dev-libs/libtsm x11-misc/xkeyboard-config
+REQUIRED_USE=gles2? ( drm ) multiseat? ( systemd )
+SLOT=0
+SRC_URI=http://www.freedesktop.org/software/kmscon/releases/kmscon-8.tar.xz
+_eclasses_=autotools	d0e5375d47f4c809f406eb892e531513	desktop	2ccd1dd1dd7bfb8795eea024a4f91bb6	epatch	9a5f039771f143195164a15a4faa41a1	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	63392afb034aad67f17fa129019eb4d9	flag-o-matic	5128c4729303400bd8d4b0b966530955	libtool	0081a71a261724730ec4c248494f044d	ltprune	607e058da37aa6dabfa408b7d61da72e	multilib	97f470f374f2e94ccab04a2fb21d811e	preserve-libs	ef207dc62baddfddfd39a164d9797648	systemd	a31844b675f1a1fea87fbe1144aee5f5	toolchain-funcs	1e35303c63cd707f6c3422b4493d5607	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
+_md5_=798195c8af17b0126387214e852f7b78
