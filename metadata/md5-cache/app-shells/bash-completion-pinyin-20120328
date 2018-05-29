@@ -1,0 +1,14 @@
+DEFINED_PHASES=install
+DEPEND==dev-lang/python-2*
+DESCRIPTION=chsdir completion for bash
+EAPI=4
+HOMEPAGE=http://code.google.com/p/easyscripts/
+KEYWORDS=~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris
+LICENSE=GPL-2
+PDEPEND=app-shells/gentoo-bashcomp
+RDEPEND=app-admin/eselect || ( >=app-shells/bash-3.2 app-shells/zsh ) sys-apps/miscfiles
+RESTRICT=nomirror
+SLOT=0
+SRC_URI=http://easyscripts.googlecode.com/files/chsdir_20120328.tar.gz
+_eclasses_=bash-completion-r1	7e76462890d7d19cad453151876b0ecf	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	1e35303c63cd707f6c3422b4493d5607
+_md5_=a8ce12de52ddc841d2b9ce5ed4730800
