@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install setup unpack
+DEPEND=app-i18n/sunpinyin
+DESCRIPTION=Data sets for Sunpinyin
+EAPI=5
+HOMEPAGE=https://code.google.com/p/open-gram/
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2.1 CDDL
+RESTRICT=primaryuri
+SLOT=0
+SRC_URI=mirror://sourceforge/open-gram/dict.utf8-20131214.tar.bz2 mirror://sourceforge/open-gram/lm_sc.3gm.arpa-20140820.tar.bz2
+_eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	1e35303c63cd707f6c3422b4493d5607
+_md5_=bd6f628f19d1cd4377a174c19713fcbc
