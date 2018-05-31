@@ -5,6 +5,9 @@
 		<email>atenzd@gmail.com</email>
 		<name>Aten Zhang</name>
 	</maintainer>
+	<use>
+		<flag name="redshift">Install <pkg>x11-misc/redshift</pkg> to support screen color temperature adjusting</flag>
+	</use>
 	<upstream>
 		<remote-id type="github">linuxdeepin/dde-control-center</remote-id>
 	</upstream>
