@@ -22,7 +22,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_configure() {
-	cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ${S}
+	cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DSYSTEMD_SERVICE=ON ${S}
 	emake
 }
 
