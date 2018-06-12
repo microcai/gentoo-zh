@@ -6,7 +6,6 @@ EAPI=5
 inherit fdo-mime font gnome2-utils unpacker versionator
 
 MY_PV="$(get_version_component_range 1-4)"
-MY_V="$(get_version_component_range 5)"
 
 if [ -z "$(get_version_component_range 6)" ]; then
 	MY_SP=""
@@ -14,18 +13,9 @@ else
 	MY_SP="$(get_version_component_range 6)"
 fi
 
-case ${PV} in
-	*_alpha*)
-		MY_BRANCH=${MY_V/alpha/a}
-		;;
-	*_beta*)
-		MY_BRANCH=${MY_V/beta/b}
-		;;
-	*)
-		die "Invalid value for \${PV}: ${PV}"
-		;;
-esac
-MY_VV=${MY_PV}~${MY_BRANCH}${MY_SP}
+MY_BRANCH=$(get_version_component_range 4)
+
+MY_VV=${MY_PV}${MY_SP}
 
 DESCRIPTION="WPS Office is an office productivity suite"
 HOMEPAGE="http://linux.wps.cn/"
