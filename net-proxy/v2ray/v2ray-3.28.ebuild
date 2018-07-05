@@ -6,16 +6,16 @@ EAPI=6
 EGO_VENDOR=(
 	"websocket 17ef924799bd76d2e939bb6ccf8356bdfb19671d github.com/v2ray/websocket"
 
-	"github.com/miekg/dns f90eb8fb4590a3c81327ccca86ed4c4ca898c73d"
-	"golang.org/x/net db08ff08e8622530d9ed3a0e8ac279f6d4c02196 github.com/golang/net"
-	"golang.org/x/crypto 027cca12c2d63e3d62b670d901e8a2c95854feec github.com/golang/crypto"
-	"github.com/golang/protobuf 9f81198da99b79e14d70ca2c3cc1bbe44c6e69b6"
-	"golang.org/x/text 5cec4b58c438bd98288aeb248bab2c1840713d21 github.com/golang/text"
-	"google.golang.org/genproto 32ee49c4dd805befd833990acba36cb75042378c github.com/google/go-genproto"
+	"github.com/miekg/dns 3e6e47bc11bc7f93f9e2f1c7bd6481ba4802808b"
+	"golang.org/x/net ed29d75add3d7c4bf7ca65aac0c6df3d1420216f github.com/golang/net"
+	"golang.org/x/crypto a49355c7e3f8fe157a85be2f77e6e269a0f89602 github.com/golang/crypto"
+	"github.com/golang/protobuf 9eb2c01ac278a5d89ce4b2be68fe4500955d8179"
+	"golang.org/x/text c0fe8dde8a10c9b32154bd9bdf080b8b3d635127 github.com/golang/text"
+	"google.golang.org/genproto ff3583edef7de132f219f0efc00e097cabcc0ec0 github.com/google/go-genproto"
 
-	"golang.org/x/sys 6c888cc515d3ed83fc103cf1d84468aad274b0a7 github.com/golang/sys"
-	"github.com/google/go-github a83ae98ad5d09188c49d6056edb60ec9bdf202bd"
-	"golang.org/x/oauth2 1e0a3fa8ba9a5c9eb35c271780101fdaf1b205d7 github.com/golang/oauth2"
+	"golang.org/x/sys 151529c776cdc58ddbe7963ba9af779f3577b419 github.com/golang/sys"
+	"github.com/google/go-github 60f2773bd99aa86164bc80bf370be6ba63b47dea"
+	"golang.org/x/oauth2 ef147856a6ddbb60760db74283d2424e98c87bff github.com/golang/oauth2"
 	"github.com/gogo/protobuf 30cf7ac33676b5786e78c746683f0d4cd64fa75b"
 	"github.com/google/go-querystring 53e6ce116135b80d037921a7fdd5138cf32d7a8a"
 	)
@@ -25,10 +25,10 @@ DESCRIPTION="A platform for building proxies to bypass network restrictions"
 HOMEPAGE="https://www.v2ray.com"
 SRC_URI="https://github.com/v2ray/v2ray-core/archive/v${PV}.tar.gz -> ${PN}-core-${PV}.tar.gz
 	https://github.com/v2ray/ext/archive/v${PV}.tar.gz -> ${PN}-ext-${PV}.tar.gz
-	https://github.com/grpc/grpc-go/archive/7e6dc36bea3004a439649320dd630c9919537261.tar.gz -> github.com-grpc-grpc-go-7e6dc36bea3004a439649320dd630c9919537261.tar.gz
+	https://github.com/grpc/grpc-go/archive/40cd6b15e2880b88deb091b0fcb091694285fcb0.tar.gz -> github.com-grpc-grpc-go-40cd6b15e2880b88deb091b0fcb091694285fcb0.tar.gz
 	${EGO_VENDOR_URI}"
 declare -A GO_SRCS
-GO_SRCS[google.golang.org/grpc]="github.com-grpc-grpc-go-7e6dc36bea3004a439649320dd630c9919537261.tar.gz"
+GO_SRCS[google.golang.org/grpc]="github.com-grpc-grpc-go-40cd6b15e2880b88deb091b0fcb091694285fcb0.tar.gz"
 GO_SRCS[v2ray.com/core/...]="${PN}-core-${PV}.tar.gz"
 GO_SRCS[v2ray.com/ext/...]="${PN}-ext-${PV}.tar.gz"
 
