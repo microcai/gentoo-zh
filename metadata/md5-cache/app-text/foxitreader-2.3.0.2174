@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst postrm
+DESCRIPTION=A free PDF document viewer, featuring small size, quick startup, and fast page rendering
+EAPI=5
+HOMEPAGE=https://www.foxitsoftware.cn/downloads/
+IUSE=linguas_de linguas_fr linguas_ja linguas_zh_CN linguas_zh_TW
+KEYWORDS=amd64 -*
+LICENSE=foxitreader
+RDEPEND=dev-libs/atk dev-libs/glib:2 media-libs/freetype:2 net-print/cups x11-libs/cairo x11-libs/gtk+:2 x11-libs/pango
+SLOT=0
+SRC_URI=http://cdn07.foxitsoftware.cn/pub/foxit/reader/desktop/linux/2.x/2.3/en_us/FoxitReader2.3.0.2174_Server_x64_enu_Setup.run.tar.gz
+_eclasses_=desktop	1b286a7e7143d8c4ec89cd0d2743a097	epatch	9a5f039771f143195164a15a4faa41a1	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	b43d08fe0771faf2f5e7be19c2789d33	fdo-mime	995b19d3f30e956b4e1bc5a91fdc4ea7	ltprune	607e058da37aa6dabfa408b7d61da72e	multilib	97f470f374f2e94ccab04a2fb21d811e	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	1e35303c63cd707f6c3422b4493d5607	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf	versionator	26ca8a8bd95d6a74122c08ba98a4ee72
+_md5_=6825cc8ff25197eced9d49e2ad30aced
