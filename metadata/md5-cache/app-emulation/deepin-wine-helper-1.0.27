@@ -7,5 +7,5 @@ LICENSE=LGPL-2.1
 RDEPEND=app-emulation/deepin-wine app-arch/p7zip net-libs/gnutls media-libs/libv4l
 SLOT=0
 SRC_URI=http://packages.deepin.com/deepin/pool/non-free/d/deepin-wine-helper/deepin-wine-helper_1.0deepin27_i386.deb
-_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	unpacker	87633b2194cdb56adaa1f5a5c8862c44	versionator	26ca8a8bd95d6a74122c08ba98a4ee72
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	unpacker	87633b2194cdb56adaa1f5a5c8862c44	versionator	2352c3fc97241f6a02042773c8287748
 _md5_=866b51d16e997ad25648d1666353e2d2

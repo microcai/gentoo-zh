@@ -7,5 +7,5 @@ KEYWORDS=~x86 ~amd64
 LICENSE=GPL-3
 RDEPEND=x11-misc/xclip dev-python/pywebkitgtk dev-python/python-xlib dev-python/lxml dev-python/beautifulsoup
 SLOT=0
-_eclasses_=git-2	45ff482316b52b3f96ff6b7309b77f03
+_eclasses_=git-2	249c1a0962573f4ce2c28f0d5b6b35d4
 _md5_=16286adf7224518847710c59108cb4b4
