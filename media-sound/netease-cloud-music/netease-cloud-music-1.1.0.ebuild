@@ -60,10 +60,26 @@ src_install() {
 	insinto /usr/$(get_libdir)
 	doins -r ${S}/usr/lib/${PN}
 
+	insinto /usr/$(get_libdir)/${PN}/lib
+
+	doins ${S}/usr/lib/${PN}/lib/qcef/cef_extensions.pak
+	doins ${S}/usr/lib/${PN}/lib/qcef/icudtl.dat
+	doins ${S}/usr/lib/${PN}/lib/qcef/natives_blob.bin
+	doins ${S}/usr/lib/${PN}/lib/qcef/cef.pak
+	doins ${S}/usr/lib/${PN}/lib/qcef/snapshot_blob.bin
+	doins ${S}/usr/lib/${PN}/lib/qcef/chrome-sandbox
+	doins ${S}/usr/lib/${PN}/lib/qcef/cef_100_percent.pak
+	doins ${S}/usr/lib/${PN}/lib/qcef/cef_200_percent.pak
+
+	doins -r ${S}/usr/lib/${PN}/lib/qcef/locales
+
 	fperms 0755 -R /usr/$(get_libdir)/${PN}/lib/
 
 	dodir /usr/bin
 	exeinto /usr/bin
+	doexe ${FILESDIR}/${PN}
+
+	exeinto /usr/$(get_libdir)/${PN}/lib/
 	doexe ${S}/usr/bin/${PN}
 
 	insinto /usr/
