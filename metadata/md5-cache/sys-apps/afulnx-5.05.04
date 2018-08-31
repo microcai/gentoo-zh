@@ -1,0 +1,9 @@
+DEFINED_PHASES=install
+DESCRIPTION=AMI AFULNX Flasher - Linux based AMI BIOS Firmware Update flasher
+EAPI=5
+HOMEPAGE=https://www.wimsbios.com/amiflasher.jsp
+KEYWORDS=-* amd64 x86
+LICENSE=AS-IS
+SLOT=0
+SRC_URI=https://www.wimsbios.com/files/flashers/ami/afulnx/afulnx-5.05.04.zip
+_md5_=7fd55cd85e3de7f3b08e7a29aeacf7f9

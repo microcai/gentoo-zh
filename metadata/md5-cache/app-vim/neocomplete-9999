@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=MIT
 RDEPEND=|| ( >app-editors/vim-7.3.885[lua] >app-editors/gvim-7.3.885[lua] ) !app-vim/neocomplcache || ( >=app-editors/vim-7.0 >=app-editors/gvim-7.0 )
 SLOT=0
-_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	git-2	45ff482316b52b3f96ff6b7309b77f03	vim-doc	af2c81a1feeb0a99e91bee3e20769edb	vim-plugin	3160d9cb05ef44497be1485db0fe7590
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	git-2	249c1a0962573f4ce2c28f0d5b6b35d4	vim-doc	af2c81a1feeb0a99e91bee3e20769edb	vim-plugin	3160d9cb05ef44497be1485db0fe7590
 _md5_=1d30144de04e8617c0b7f9439589a090

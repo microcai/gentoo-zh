@@ -8,4 +8,4 @@ RDEPEND=>=gnome-base/gconf-3.2.5 >=dev-db/sqlite-3.5.9 >=dev-libs/atk-1.12.4 >=d
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=amd64? ( http://cdimage.deepin.com/applications/netease-cloud-music/64/netease_cloud_music_1.1.0_amd64_binary.tar.xz )
-_md5_=b333db3556f0e23fcac9cd283bf6014e
+_md5_=ddf1b613333ddd1d54ea717046d8e2c4

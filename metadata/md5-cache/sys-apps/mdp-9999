@@ -1,0 +1,11 @@
+DEFINED_PHASES=install prepare unpack
+DEPEND=dev-vcs/git
+DESCRIPTION=A command-line based markdown presentation tool
+EAPI=4
+HOMEPAGE=https://github.com/visit1985/mdp
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=sys-libs/ncurses
+SLOT=0
+_eclasses_=git-2	249c1a0962573f4ce2c28f0d5b6b35d4
+_md5_=6ec95c83fa786c5b25ce1414b983b31f
