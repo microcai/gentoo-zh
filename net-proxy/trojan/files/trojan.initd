@@ -2,7 +2,7 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-TJ_CONFIG="/etc/trojan.json"
+TJ_CONFIG="/etc/trojan/config.json"
 TJ_PIDFILE="/run/trojan.pid"
 TJ_LOG="/var/log/trojan.log"
 
