@@ -33,7 +33,7 @@ src_install() {
 }
 
 pkg_postinst(){
-	elog "To use trojan , you need to edit the /etc/trojan.json"
+	elog "To use trojan , you need to edit the /etc/trojan/config.json"
 	elog "OpenRC: rc-update add trojan"
 	elog "Systemd: systemctl enable trojan"
 }
