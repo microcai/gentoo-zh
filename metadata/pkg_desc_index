@@ -10,7 +10,6 @@ app-dicts/stardict-freedict-tur-deu 2.4.2: Stardict Dictionary Turkish to German
 app-dicts/stardict-freedict-tur-eng 2.4.2: Stardict Dictionary Turkish to English
 app-dicts/stardict-quick-ru-en 2.4.2: Quick but still useful Russian to English dictionary
 app-dicts/stardict-wyabdcrealpeopletts 1.0: 
-app-editors/sublime-text 3_beta3143: Sublime Text is a sophisticated text editor for code, html and prose
 app-i18n/dvp 1.2.1: The kbd keymap for Programmer Dvorak.
 app-i18n/ibus-t9 2.1.0.20100601: T9 input engine using ibus
 app-i18n/jfbterm 0.4.7-r4: The J Framebuffer Terminal/Multilingual Enhancement with UTF-8 support
