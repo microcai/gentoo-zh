@@ -2,38 +2,37 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI="5"
+EAPI="6"
 # needed by make_desktop_entry
-inherit toolchain-funcs eutils git-r3
+inherit desktop gnome2-utils toolchain-funcs eutils git-r3
 
-MV="${PV:0:1}"
-
-RV="${PV:6:4}"
+MV=${PV:0:1}
+RV=${PV#*_p}
 
 MY_PN="sublime_text_${MV}"
 MY_P="Sublime%20Text"
 S="${WORKDIR}/${MY_PN}"
 
-IUSE="+dbus +imfix"
-
-DESCRIPTION="Sublime Text is a sophisticated text editor for code, html and prose"
-HOMEPAGE="http://www.sublimetext.com"
+DESCRIPTION="Sophisticated text editor for code, markup and prose"
+HOMEPAGE="https://www.sublimetext.com"
 COMMON_URI="https://download.sublimetext.com"
-SRC_URI="amd64? ( ${COMMON_URI}/sublime_text_3_build_${RV}_x64.tar.bz2 )
-x86? ( ${COMMON_URI}/sublime_text_3_build_${RV}_x32.tar.bz2 )"
+SRC_URI="amd64? ( ${COMMON_URI}/sublime_text_${MV}_build_${RV}_x64.tar.bz2 )
+x86? ( ${COMMON_URI}/sublime_text_${MV}_build_${RV}_x32.tar.bz2 )"
 
 EGIT_REPO_URI="https://github.com/lyfeyaj/sublime-text-imfix.git"
 
 LICENSE="Sublime"
 SLOT="0"
-KEYWORDS="amd64 x86"
-
+KEYWORDS="~amd64 ~x86"
+IUSE="+dbus +imfix"
 RESTRICT="bindist mirror strip"
 
-RDEPEND=">=x11-libs/gtk+-2.24.8-r1:2
-dbus? ( sys-apps/dbus )
-imfix? ( app-i18n/fcitx )
-"
+RDEPEND="
+	dev-libs/glib:2
+	x11-libs/gtk+:2
+	x11-libs/libX11
+	imfix? ( app-i18n/fcitx )
+	dbus? ( sys-apps/dbus )"
 
 DEPEND="imfix? ( >=x11-libs/gtk+-2.24.8-r1:2 app-i18n/fcitx )"
 
