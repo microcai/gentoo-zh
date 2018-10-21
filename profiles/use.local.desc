@@ -2,6 +2,17 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+app-i18n/fcitx:32bit - For amd64-multilib, installs the 32-it im modules.
+app-i18n/fcitx:autostart - Enable xdg autostart desktop file installion
+app-i18n/fcitx:glib - Enable GLib2 as depenedency
+app-i18n/fcitx:gtk - Install the GTK2's IM Module
+app-i18n/fcitx:gtk3 - Install the GTK3's IM Module
+app-i18n/fcitx:introspection - Enable GObject Introspection
+app-i18n/fcitx:lua - Enable Lua support
+app-i18n/fcitx:pango - Enable pango support for better multilingual text rendering
+app-i18n/fcitx:qt4 - Install the Qt4's IM Module
+app-i18n/fcitx:snooper - Enable Key Snooper for gtk app
+app-i18n/fcitx:table - Adds suppport for Wubi, Erbi, etc.
 media-libs/cogl:gles2 - Enable OpenGL ES 2.0 support
 media-libs/cogl:kms - Enable KMS support.
 media-libs/cogl:pango - Build cogl-pango library for x11-libs/pango integration

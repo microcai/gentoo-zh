@@ -11,6 +11,7 @@ app-dicts/stardict-freedict-tur-eng 2.4.2: Stardict Dictionary Turkish to Englis
 app-dicts/stardict-quick-ru-en 2.4.2: Quick but still useful Russian to English dictionary
 app-dicts/stardict-wyabdcrealpeopletts 1.0: 
 app-i18n/dvp 1.2.1: The kbd keymap for Programmer Dvorak.
+app-i18n/fcitx 4.2.9.6: Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
 app-i18n/ibus-t9 2.1.0.20100601: T9 input engine using ibus
 app-i18n/jfbterm 0.4.7-r4: The J Framebuffer Terminal/Multilingual Enhancement with UTF-8 support
 app-i18n/librime 9999: Rime Input Method Engine library
