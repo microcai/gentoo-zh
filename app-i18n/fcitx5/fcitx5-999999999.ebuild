@@ -13,7 +13,7 @@ HOMEPAGE="https://fcitx-im.org/ https://gitlab.com/fcitx/fcitx"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE="+enchant test coverage doc presage qt4 qt5 gtk2 gtk3 systemd"
 REQUIRED_USE="coverage? ( test )"
 
