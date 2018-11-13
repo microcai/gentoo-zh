@@ -4,87 +4,49 @@
 EAPI="6"
 
 inherit cmake-utils gnome2-utils xdg-utils git-r3
-EGIT_REPO_URI="https://gitlab.com/fcitx/fcitx.git"
+EGIT_REPO_URI="https://gitlab.com/fcitx/fcitx5.git"
 
-if [[ "${PV}" =~ (^|\.)9999$ ]]; then
-else:
-	
-fi
+SRC_URI=""
 
-DESCRIPTION="Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework"
+DESCRIPTION="Fcitx5 Next generation of fcitx "
 HOMEPAGE="https://fcitx-im.org/ https://gitlab.com/fcitx/fcitx"
-if [[ "${PV}" =~ (^|\.)9999$ ]]; then
-	SRC_URI="https://download.fcitx-im.org/data/pinyin.tar.gz -> fcitx-data-pinyin.tar.gz
-		https://download.fcitx-im.org/data/table.tar.gz -> fcitx-data-table.tar.gz
-		https://download.fcitx-im.org/data/py_stroke-20121124.tar.gz -> fcitx-data-py_stroke-20121124.tar.gz
-		https://download.fcitx-im.org/data/py_table-20121124.tar.gz -> fcitx-data-py_table-20121124.tar.gz
-		https://download.fcitx-im.org/data/en_dict-20121020.tar.gz -> fcitx-data-en_dict-20121020.tar.gz"
-else
-	SRC_URI="https://download.fcitx-im.org/${PN}/${P}_dict.tar.xz"
-fi
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
-SLOT="4"
-KEYWORDS="amd64 ~hppa ppc ppc64 x86"
-IUSE="+X +autostart +cairo debug +enchant gtk2 +gtk3 +introspection lua nls opencc +pango static-libs +table test +xml"
-REQUIRED_USE="cairo? ( X ) pango? ( cairo )"
+SLOT="5"
+KEYWORDS="~amd64"
+IUSE="+enchant test coverage doc presage qt4 qt5 gtk2 gtk3 systemd"
+REQUIRED_USE="coverage? ( test )"
 
 RDEPEND="dev-libs/glib:2
 	sys-apps/dbus
+	dev-libs/libfmt
 	sys-apps/util-linux
 	virtual/libiconv
 	virtual/libintl
 	x11-libs/libxkbcommon
-	X? (
-		x11-libs/libX11
-		x11-libs/libXfixes
-		x11-libs/libXinerama
-		x11-libs/libXrender
-		xml? (
-			x11-libs/libxkbfile
-			x11-misc/xkeyboard-config
-		)
-	)
-	cairo? (
-		x11-libs/cairo[X]
-		x11-libs/libXext
-		pango? ( x11-libs/pango )
-		!pango? ( media-libs/fontconfig )
-	)
+	x11-libs/libX11
+	x11-libs/libXfixes
+	x11-libs/libXinerama
+	x11-libs/libXrender
+	x11-libs/libxkbfile
+	x11-libs/xcb-imdkit
+	x11-misc/xkeyboard-config
+	x11-libs/cairo[X]
+	x11-libs/libXext
+	x11-libs/pango
+	media-libs/fontconfig
 	enchant? ( app-text/enchant:0= )
-	gtk2? ( x11-libs/gtk+:2 )
-	gtk3? ( x11-libs/gtk+:3 )
-	introspection? ( dev-libs/gobject-introspection )
-	lua? ( dev-lang/lua:= )
-	nls? ( sys-devel/gettext )
-	opencc? ( app-i18n/opencc:= )
-	xml? (
-		app-text/iso-codes
-		dev-libs/libxml2
-	)"
+	gtk2? ( app-i18n/fcitx5-gtk[gtk2] )
+	gtk3? ( app-i18n/fcitx5-gtk[gtk3] )
+	qt5?  ( app-i18n/fcitx5-qt[qt5] )
+	qt4?  ( app-i18n/fcitx5-qt[qt4] )
+	app-text/iso-codes
+	dev-libs/libxml2"
 DEPEND="${RDEPEND}
 	kde-frameworks/extra-cmake-modules:5
 	virtual/pkgconfig"
 
-DOCS=(AUTHORS ChangeLog THANKS)
-
 src_prepare() {
-	if [[ "${PV}" =~ (^|\.)9999$ ]]; then
-		ln -s "${DISTDIR}/fcitx-data-pinyin.tar.gz" src/im/pinyin/data/pinyin.tar.gz || die
-		ln -s "${DISTDIR}/fcitx-data-table.tar.gz" src/im/table/data/table.tar.gz || die
-		ln -s "${DISTDIR}/fcitx-data-py_stroke-20121124.tar.gz" src/module/pinyin-enhance/data/py_stroke-20121124.tar.gz || die
-		ln -s "${DISTDIR}/fcitx-data-py_table-20121124.tar.gz" src/module/pinyin-enhance/data/py_table-20121124.tar.gz || die
-		ln -s "${DISTDIR}/fcitx-data-en_dict-20121020.tar.gz" src/module/spell/dict/en_dict-20121020.tar.gz || die
-	fi
-
-	# https://gitlab.com/fcitx/fcitx/issues/250
-	sed \
-		-e "/find_package(XkbFile REQUIRED)/i\\    if(ENABLE_X11)" \
-		-e "/find_package(XkbFile REQUIRED)/s/^/    /" \
-		-e "/find_package(XkbFile REQUIRED)/a\\        find_package(XKeyboardConfig REQUIRED)\n    endif(ENABLE_X11)" \
-		-e "/^find_package(XKeyboardConfig REQUIRED)/,+1d" \
-		-i CMakeLists.txt
-
 	cmake-utils_src_prepare
 	xdg_environment_reset
 }
@@ -93,55 +55,18 @@ src_configure() {
 	local mycmakeargs=(
 		-DLIB_INSTALL_DIR="${EPREFIX}/usr/$(get_libdir)"
 		-DSYSCONFDIR="${EPREFIX}/etc"
-		-DENABLE_CAIRO=$(usex cairo)
-		-DENABLE_DEBUG=$(usex debug)
-		-DENABLE_ENCHANT=$(usex enchant)
-		-DENABLE_GETTEXT=$(usex nls)
-		-DENABLE_GIR=$(usex introspection)
-		-DENABLE_GTK2_IM_MODULE=$(usex gtk2)
-		-DENABLE_GTK3_IM_MODULE=$(usex gtk3)
-		-DENABLE_LIBXML2=$(usex xml)
-		-DENABLE_LUA=$(usex lua)
-		-DENABLE_OPENCC=$(usex opencc)
-		-DENABLE_PANGO=$(usex pango)
-		-DENABLE_QT=OFF
-		-DENABLE_QT_GUI=OFF
-		-DENABLE_QT_IM_MODULE=OFF
-		-DENABLE_SNOOPER=$(if use gtk2 || use gtk3; then echo yes; else echo no; fi)
-		-DENABLE_STATIC=$(usex static-libs)
-		-DENABLE_TABLE=$(usex table)
 		-DENABLE_TEST=$(usex test)
-		-DENABLE_X11=$(usex X)
-		-DENABLE_XDGAUTOSTART=$(usex autostart)
+		-DENABLE_COVERAGE=$(usex coverage)
+		-DENABLE_ENCHANT=$(usex enchant)
+		-DENABLE_PRESAGE=$(usex presage)
+		-DENABLE_DOC=$(usex doc)
+		-DUSE_SYSTEMD=$(usex systemd)
 	)
-
 	cmake-utils_src_configure
 }
 
 src_install(){
 	cmake-utils_src_install
-	rm -r "${ED}usr/share/doc/${PN}"
-
-	dodir /etc/X11/xinit/xinitrc.d/
-
-	XINITRCFCITX="${D}/etc/X11/xinit/xinitrc.d/01-input"
-
-	# fix firefox issue
-	echo "#! /bin/bash"  > "${XINITRCFCITX}"
-
-	# echo XIM
-	echo "export XMODIFIERS=\"@im=fcitx\""  >> "${XINITRCFCITX}"
-	echo "export XIM=fcitx" >> "${XINITRCFCITX}"
-	echo "export XIM_PROGRAM=fcitx" >> "${XINITRCFCITX}"
-
-	#echo gtk module
-	if use gtk && use gtk3 ; then
-		echo "export GTK_IM_MODULE=fcitx" >> "${XINITRCFCITX}"
-	fi
-	if use qt4 ; then
-		echo "export QT_IM_MODULE=fcitx" >> "${XINITRCFCITX}"
-	fi
-	chmod 0755 "${XINITRCFCITX}"
 }
 
 pkg_postinst() {
@@ -152,8 +77,8 @@ pkg_postinst() {
 	use gtk3 && gnome2_query_immodules_gtk3
 
 	elog
-	elog "Quick Phrase Editor is provided by:"
-	elog "  app-i18n/fcitx-qt5:4"
+	elog "Follow the instrcutions of https://wiki.gentoo.org/wiki/Fcitx#Using_Fcitx"
+	elog "and change the fcitx to fcitx5"
 	elog
 }
 
