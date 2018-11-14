@@ -14,7 +14,7 @@ HOMEPAGE="https://fcitx-im.org/ https://gitlab.com/fcitx/fcitx"
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
 KEYWORDS=""
-IUSE="+enchant test coverage doc presage qt4 qt5 gtk2 gtk3 systemd"
+IUSE="+enchant test coverage doc presage qt5 gtk2 gtk3 systemd"
 REQUIRED_USE="coverage? ( test )"
 
 RDEPEND="dev-libs/glib:2
@@ -39,7 +39,6 @@ RDEPEND="dev-libs/glib:2
 	gtk2? ( app-i18n/fcitx5-gtk[gtk2] )
 	gtk3? ( app-i18n/fcitx5-gtk[gtk3] )
 	qt5?  ( app-i18n/fcitx5-qt[qt5] )
-	qt4?  ( app-i18n/fcitx5-qt[qt4] )
 	app-text/iso-codes
 	dev-libs/libxml2"
 DEPEND="${RDEPEND}
