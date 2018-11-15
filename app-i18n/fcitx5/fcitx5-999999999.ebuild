@@ -14,7 +14,7 @@ HOMEPAGE="https://fcitx-im.org/ https://gitlab.com/fcitx/fcitx"
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
 KEYWORDS=""
-IUSE="+enchant test coverage doc presage qt5 gtk2 gtk3 systemd"
+IUSE="+enchant test coverage doc presage systemd"
 REQUIRED_USE="coverage? ( test )"
 
 RDEPEND="dev-libs/glib:2
@@ -36,9 +36,6 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/pango
 	media-libs/fontconfig
 	enchant? ( app-text/enchant:0= )
-	gtk2? ( app-i18n/fcitx5-gtk[gtk2] )
-	gtk3? ( app-i18n/fcitx5-gtk[gtk3] )
-	qt5?  ( app-i18n/fcitx5-qt[qt5] )
 	app-text/iso-codes
 	dev-libs/libxml2"
 DEPEND="${RDEPEND}
@@ -72,8 +69,6 @@ pkg_postinst() {
 	gnome2_icon_cache_update
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
-	use gtk2 && gnome2_query_immodules_gtk2
-	use gtk3 && gnome2_query_immodules_gtk3
 
 	elog
 	elog "Follow the instrcutions of https://wiki.gentoo.org/wiki/Fcitx#Using_Fcitx"
@@ -85,6 +80,4 @@ pkg_postrm() {
 	gnome2_icon_cache_update
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
-	use gtk2 && gnome2_query_immodules_gtk2
-	use gtk3 && gnome2_query_immodules_gtk3
 }

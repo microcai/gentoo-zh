@@ -23,7 +23,8 @@ IUSE=""
 RDEPEND="app-i18n/fcitx5
 	>=app-i18n/librime-1.0
 	>=app-i18n/rime-data-0.3.0
-	x11-libs/libnotify"
+	x11-libs/libnotify
+	!app-i18n/fcitx-rime"
 
 DEPEND="${RDEPEND}"
 

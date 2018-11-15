@@ -13,15 +13,18 @@ SRC_URI=""
 
 DESCRIPTION="Fcitx5 Next generation of fcitx "
 HOMEPAGE="https://fcitx-im.org/ https://gitlab.com/fcitx/fcitx"
+SRC_URI="https://download.fcitx-im.org/data/en_dict-20121020.tar.gz -> fcitx-data-en_dict-20121020.tar.gz"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
 KEYWORDS="~amd64"
-IUSE="+enchant test coverage doc presage qt5 gtk2 gtk3 systemd"
+IUSE="+enchant test coverage doc presage systemd"
 REQUIRED_USE="coverage? ( test )"
+
 
 RDEPEND="dev-libs/glib:2
 	sys-apps/dbus
+	dev-libs/json-c
 	dev-libs/libfmt
 	sys-apps/util-linux
 	virtual/libiconv
@@ -39,9 +42,6 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/pango
 	media-libs/fontconfig
 	enchant? ( app-text/enchant:0= )
-	gtk2? ( app-i18n/fcitx5-gtk[gtk2] )
-	gtk3? ( app-i18n/fcitx5-gtk[gtk3] )
-	qt5?  ( app-i18n/fcitx5-qt[qt5] )
 	app-text/iso-codes
 	dev-libs/libxml2"
 DEPEND="${RDEPEND}
@@ -49,6 +49,9 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
+	pwd
+	ln -s "${DISTDIR}/fcitx-data-en_dict-20121020.tar.gz" src/modules/spell/dict/en_dict-20121020.tar.gz || die
+
 	cmake-utils_src_prepare
 	xdg_environment_reset
 }
@@ -75,8 +78,6 @@ pkg_postinst() {
 	gnome2_icon_cache_update
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
-	use gtk2 && gnome2_query_immodules_gtk2
-	use gtk3 && gnome2_query_immodules_gtk3
 
 	elog
 	elog "Follow the instrcutions of https://wiki.gentoo.org/wiki/Fcitx#Using_Fcitx"
@@ -88,6 +89,4 @@ pkg_postrm() {
 	gnome2_icon_cache_update
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
-	use gtk2 && gnome2_query_immodules_gtk2
-	use gtk3 && gnome2_query_immodules_gtk3
 }

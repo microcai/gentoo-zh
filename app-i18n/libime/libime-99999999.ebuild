@@ -3,10 +3,13 @@
 
 EAPI="6"
 
-inherit cmake-utils xdg-utils git-r3
+inherit cmake-utils gnome2-utils xdg-utils git-r3
 EGIT_REPO_URI="https://gitlab.com/fcitx/libime.git"
 
-SRC_URI=""
+SRC_URI="https://download.fcitx-im.org/data/lm_sc.3gm.arpa-20140820.tar.bz2 -> fcitx5-lm_sc.3gm.arpa-20140820.tar.bz2
+https://download.fcitx-im.org/data/dict.utf8-20170423.tar.xz -> fcitx5-dict.utf8-20170423.tar.xz
+https://download.fcitx-im.org/data/table.tar.gz -> fcitx5-table.tar.gz
+"
 
 DESCRIPTION="Fcitx5 Next generation of fcitx "
 HOMEPAGE="https://fcitx-im.org/ https://gitlab.com/fcitx/libime"
@@ -23,6 +26,9 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
+	ln -s "${DISTDIR}/fcitx5-lm_sc.3gm.arpa-20140820.tar.bz2" data/lm_sc.3gm.arpa-20140820.tar.bz2 || die
+	ln -s "${DISTDIR}/fcitx5-dict.utf8-20170423.tar.xz" data/dict.utf8-20170423.tar.xz || die
+	ln -s "${DISTDIR}/fcitx5-table.tar.gz" data/table.tar.gz || die
 	cmake-utils_src_prepare
 	xdg_environment_reset
 }
