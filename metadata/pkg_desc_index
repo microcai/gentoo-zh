@@ -14,7 +14,6 @@ app-i18n/dvp 1.2.1: The kbd keymap for Programmer Dvorak.
 app-i18n/fcitx 4.2.9.6: Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
 app-i18n/ibus-t9 2.1.0.20100601: T9 input engine using ibus
 app-i18n/jfbterm 0.4.7-r4: The J Framebuffer Terminal/Multilingual Enhancement with UTF-8 support
-app-i18n/librime 9999: Rime Input Method Engine library
 app-misc/bcompare 3.3.13.18981 4.1.5.21031 4.2.2.22384: Beyond Compare -- Compare, sync, and merge files and folders
 app-shells/bash-completion-pinyin 20120328: chsdir completion for bash
 app-shells/oh-my-zsh 9999: A community-driven framework for managing your zsh configuration. Includes 40+ optional plugins (rails, git, OSX, hub, capistrano, brew, ant, macports, etc), over 80 terminal themes to spice up your morning, and an auto-update tool so that makes it easy to keep up with the latest updates from the community.
