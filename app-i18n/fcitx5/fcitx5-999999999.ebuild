@@ -23,6 +23,8 @@ RDEPEND="dev-libs/glib:2
 	sys-apps/util-linux
 	virtual/libiconv
 	virtual/libintl
+	dev-libs/wayland-protocols
+	dev-libs/wayland
 	x11-libs/libxkbcommon
 	x11-libs/libX11
 	x11-libs/libXfixes

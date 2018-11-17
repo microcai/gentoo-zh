@@ -20,8 +20,6 @@ SLOT="5"
 KEYWORDS="~amd64"
 IUSE="+enchant test coverage doc presage systemd"
 REQUIRED_USE="coverage? ( test )"
-
-
 RDEPEND="dev-libs/glib:2
 	sys-apps/dbus
 	dev-libs/json-c
@@ -31,6 +29,8 @@ RDEPEND="dev-libs/glib:2
 	virtual/libintl
 	x11-libs/libxkbcommon
 	x11-libs/libX11
+	dev-libs/wayland
+	dev-libs/wayland-protocols
 	x11-libs/libXfixes
 	x11-libs/libXinerama
 	x11-libs/libXrender
