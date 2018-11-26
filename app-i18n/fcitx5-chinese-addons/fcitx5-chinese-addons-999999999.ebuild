@@ -20,6 +20,7 @@ REQUIRED_USE=""
 RDEPEND="app-i18n/fcitx5
 	app-i18n/libime
 	app-i18n/fcitx5-qt[qt5]
+	dev-qt/qtwebengine[widgets]
 	opencc? ( app-i18n/opencc:= )
 	gui? (dev-qt/qtwebengine:5)"
 DEPEND="${RDEPEND}
