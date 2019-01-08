@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst prepare unpack
+DEPEND=>=gnome-base/gconf-3.2.5 >=dev-db/sqlite-3.5.9 >=dev-libs/atk-1.12.4 >=dev-libs/expat-2.0.1 >=dev-libs/glib-2.31.8 >=dev-libs/nspr-4.9 >=dev-libs/nss-3.13.4 >=media-libs/fontconfig-2.10.0 >=media-libs/taglib-1.9.1 >=media-video/vlc-2.1.0 media-sound/pulseaudio >=net-print/cups-1.3.0 >=sys-apps/dbus-1.8.1 >=sys-devel/gcc-5.2 >=sys-libs/glibc-2.15 >=sys-libs/zlib-1.1.4 >=x11-libs/cairo-1.2.4 >=x11-libs/gdk-pixbuf-2.22.0 >=x11-libs/gtk+-2.24.0:2 >=x11-libs/libX11-1.4.99.1 >=x11-libs/libxcb-1.6 >=x11-libs/libXcomposite-0.3 >=x11-libs/libXdamage-1.1 >=x11-libs/libXi-1.2.99.4 >=x11-libs/libXrandr-1.2.99.3 >=x11-libs/pango-1.14.0 >x11-libs/libXcursor-1.1.2 >=dev-qt/qcef-1.1.4 x11-libs/libXScrnSaver x11-libs/libXext x11-libs/libXfixes x11-libs/libXrender x11-libs/libXtst >=sys-apps/sed-4
+DESCRIPTION=Netease cloud music player
+EAPI=6
+HOMEPAGE=http://music.163.com
+KEYWORDS=~amd64
+RDEPEND=>=gnome-base/gconf-3.2.5 >=dev-db/sqlite-3.5.9 >=dev-libs/atk-1.12.4 >=dev-libs/expat-2.0.1 >=dev-libs/glib-2.31.8 >=dev-libs/nspr-4.9 >=dev-libs/nss-3.13.4 >=media-libs/fontconfig-2.10.0 >=media-libs/taglib-1.9.1 >=media-video/vlc-2.1.0 media-sound/pulseaudio >=net-print/cups-1.3.0 >=sys-apps/dbus-1.8.1 >=sys-devel/gcc-5.2 >=sys-libs/glibc-2.15 >=sys-libs/zlib-1.1.4 >=x11-libs/cairo-1.2.4 >=x11-libs/gdk-pixbuf-2.22.0 >=x11-libs/gtk+-2.24.0:2 >=x11-libs/libX11-1.4.99.1 >=x11-libs/libxcb-1.6 >=x11-libs/libXcomposite-0.3 >=x11-libs/libXdamage-1.1 >=x11-libs/libXi-1.2.99.4 >=x11-libs/libXrandr-1.2.99.3 >=x11-libs/pango-1.14.0 >x11-libs/libXcursor-1.1.2 >=dev-qt/qcef-1.1.4 x11-libs/libXScrnSaver x11-libs/libXext x11-libs/libXfixes x11-libs/libXrender x11-libs/libXtst
+RESTRICT=mirror strip
+SLOT=0
+SRC_URI=amd64? ( http://packages.deepin.com/deepin/pool/main/n/netease-cloud-music/netease-cloud-music_1.1.3.1-1_amd64.deb )
+_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	gnome2-utils	c6060f4ab634aca444c4b2176b0f3877	ltprune	08f9e1d9ee0af8f5d9a7854efbcd8c0e	multilib	b2f01ad412baf81650c23fcf0975fa33	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	f164325a2cdb5b3ea39311d483988861	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf	xdg-utils	93b2dfbb00a09161e1e7f6360c0f7f6b
+_md5_=5382e19a15fa76216cd2018074c25206
