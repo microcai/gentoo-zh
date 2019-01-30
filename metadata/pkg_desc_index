@@ -20,7 +20,6 @@ app-shells/oh-my-zsh 9999: A community-driven framework for managing your zsh co
 app-text/asciiio 1: No nonsense asciicasting for serious hackers
 app-text/foxitreader 2.4.4.0911: A free PDF document viewer, featuring small size, quick startup, and fast page rendering
 app-text/groff-utf8 0-r1: GNU groff wrapper allowing UTF-8 input
-app-text/pdf2htmlEX 0.12: A PDF to HTML converter
 app-text/srecite 0.6.2: Smart Reciting
 dev-libs/libchewing 0.5.1: Library for Chinese Phonetic input method
 dev-libs/libtsm 3: TSM is a state machine for DEC VT100-VT520 compatible terminal emulators.
