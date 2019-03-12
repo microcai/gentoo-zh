@@ -16,7 +16,7 @@ LICENSE="GPL-3"
 PKGNAME="ssr"
 S=${WORKDIR}/${PKGNAME}-${PV}
 if [[ ${PV} = 9999 ]]; then
-	EGIT_REPO_URI="git://github.com/MaartenBaert/${PKGNAME}.git
+	EGIT_REPO_URI="https://github.com/MaartenBaert/${PKGNAME}.git
 		https://github.com/MaartenBaert/${PKGNAME}.git"
 	EGIT_BOOTSTRAP=""
 	KEYWORDS=""

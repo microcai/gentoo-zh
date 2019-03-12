@@ -13,7 +13,7 @@ if [ "${PV##*.}" = "9999" ]; then
 fi
 
 DESCRIPTION="T9 input engine using ibus"
-EGIT_REPO_URI="git://github.com/microcai/${PN}.git"
+EGIT_REPO_URI="https://github.com/microcai/${PN}.git"
 
 LICENSE="GPL"
 SLOT="0"

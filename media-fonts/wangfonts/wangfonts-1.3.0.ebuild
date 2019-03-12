@@ -2,14 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-
 EAPI="4"
-
 inherit font
 
 DESCRIPTION="Free Chinese TrueType fonts donated by Prof. Hann-Tzong Wang"
 HOMEPAGE="https://code.google.com/p/wangfonts/"
-SRC_URI="https://wangfonts.googlecode.com/files/${P}.tar.gz"
+SRC_URI="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/wangfonts/${P}.tar.gz"
 
 RESTRICT="mirror strip binchecks"
 

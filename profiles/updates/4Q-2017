@@ -1,0 +1,2 @@
+move dev-qt/libQtShadowsocks net-proxy/libQtShadowsocks
+move dde-extra/deepin-gettext-tools dde-base/deepin-gettext-tools

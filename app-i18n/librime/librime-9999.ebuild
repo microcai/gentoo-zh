@@ -7,11 +7,11 @@ EAPI=5
 inherit cmake-utils git-r3
 DESCRIPTION="Rime Input Method Engine library"
 HOMEPAGE="http://rime.im/"
-EGIT_REPO_URI="git://github.com/rime/${PN}.git"
+EGIT_REPO_URI="https://github.com/rime/${PN}.git"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="static-libs test"
 
 RDEPEND="

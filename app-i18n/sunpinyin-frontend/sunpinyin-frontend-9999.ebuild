@@ -2,25 +2,26 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
-PYTHON_DEPEND="ibus? 2:2.5"
-inherit confutils git-2 python scons-utils
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
+inherit git-2 python-single-r1 scons-utils
 
 DESCRIPTION="IME frontends for Sunpinyin"
 HOMEPAGE="https://code.google.com/p/sunpinyin/"
+EGIT_PROJECT="sunpinyin"
+EGIT_REPO_URI="https://github.com/sunpinyin/sunpinyin.git"
 
 LICENSE="LGPL-2.1 CDDL"
 SLOT="0"
 KEYWORDS=""
 IUSE_FRONTEND="ibus xim"
 IUSE="${IUSE_FRONTEND} nls"
-
-EGIT_PROJECT="sunpinyin"
-EGIT_REPO_URI="https://github.com/sunpinyin/sunpinyin.git"
+REQUIRED_USE="|| ( ${IUSE_FRONTEND} )"
 
 RDEPEND="
 	dev-db/sqlite:3
 	ibus? (
+		${PYTHON_DEPS}
 		>=app-i18n/ibus-1.1
 		!app-i18n/ibus-sunpinyin
 	)
@@ -35,11 +36,6 @@ DEPEND="${RDEPEND}
 	dev-util/scons
 	nls? ( sys-devel/gettext )
 	xim? ( x11-proto/xproto )"
-
-pkg_setup() {
-	confutils_require_any ibus xim
-	python_pkg_setup
-}
 
 src_configure() {
 	myesconsargs=(
@@ -68,14 +64,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	use ibus && python_mod_optimize /usr/share/ibus-sunpinyin/setup
 	if use xim ; then
 		elog "To use sunpinyin with XIM, you should use the following"
 		elog "in your user startup scripts such as .xinitrc or .xprofile:"
 		elog "XMODIFIERS=@im=xsunpinyin ; export XMODIFIERS"
 	fi
-}
-
-pkg_postrm() {
-	use ibus && python_mod_cleanup /usr/share/ibus-sunpinyin/setup
 }

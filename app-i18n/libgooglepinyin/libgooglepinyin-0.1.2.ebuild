@@ -8,7 +8,7 @@ HOMEPAGE="http://libgooglepinyin.googlecode.com/"
 
 inherit googlecode cmake-utils
 
-SRC_URI="http://libgooglepinyin.googlecode.com/files/${P}.tar.bz2"
+SRC_URI="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/libgooglepinyin/${P}.tar.bz2"
 
 DESCRIPTION="A fork from google pinyin on android "
 

@@ -8,7 +8,7 @@ inherit git-2 eutils
 
 DESCRIPTION="Enables USB charging for Apple devices."
 HOMEPAGE="https://github.com/mkorenkov/ipad_charge"
-EGIT_REPO_URI="git://github.com/mkorenkov/ipad_charge.git"
+EGIT_REPO_URI="https://github.com/mkorenkov/ipad_charge.git"
 
 LICENSE="GPL-2"
 SLOT="0"

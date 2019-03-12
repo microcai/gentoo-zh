@@ -7,7 +7,7 @@ EAPI="5"
 inherit autotools git-2 wxwidgets
 DESCRIPTION="$PN, dynamic DLP library for amule-dlp"
 HOMEPAGE="https://github.com/persmule/amule-dlp.antileech"
-EGIT_REPO_URI="git://github.com/persmule/amule-dlp.antiLeech.git"
+EGIT_REPO_URI="https://github.com/persmule/amule-dlp.antiLeech.git"
 
 LICENSE="GPL-2"
 SLOT="0"

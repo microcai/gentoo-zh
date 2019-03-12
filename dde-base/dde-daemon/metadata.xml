@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>atenzd@gmail.com</email>
+		<name>Aten Zhang</name>
+	</maintainer>
+	<use>
+		<flag name="bluetooth">Enable Bluetooth Support</flag>
+		<flag name="miracast">Enable Miracast Support</flag>
+		<flag name="grub">Install Deepin themes for <pkg>sys-boot/grub</pkg></flag>
+		<flag name="fprint">Enables experimental fingerprint authentication using <pkg>sys-auth/fprintd</pkg></flag>
+	</use>
+	<upstream>
+		<remote-id type="github">linuxdeepin/dde-daemon</remote-id>
+	</upstream>
+</pkgmetadata>

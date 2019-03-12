@@ -5,8 +5,9 @@
 EAPI=4
 
 DESCRIPTION="Convert X cursors to PNG images"
-HOMEPAGE="http://cli-apps.org/content/show.php/xcur2png?content=86010"
-SRC_URI="http://cli-apps.org/CONTENT/content-files/86010-${P}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://github.com/eworm-de/xcur2png"
+#SRC_URI="https://github.com/eworm-de/xcur2png/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/eworm-de/xcur2png/releases/download/${PV}/${P}.tar.gz"
 
 
 LICENSE="GPL-3"

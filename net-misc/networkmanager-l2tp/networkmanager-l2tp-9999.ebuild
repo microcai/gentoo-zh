@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 #SRC_URI="${SRC_URI//${PN}/${MY_PN}}"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/microcai/NetworkManager-l2tp.git"
+EGIT_REPO_URI="https://github.com/microcai/NetworkManager-l2tp.git"
 
 LICENSE="GPL-2"
 SLOT="0"

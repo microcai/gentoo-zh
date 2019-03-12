@@ -5,7 +5,7 @@
 EAPI=4
 inherit git-2
 DESCRIPTION="Small tool to show UKSM statistics."
-HOMEPAGE="http://github.com/pfactum/uksmstat"
+HOMEPAGE="https://github.com/pfactum/uksmstat"
 EGIT_REPO_URI="https://github.com/pfactum/uksmstat.git"
 
 LICENSE="GPL-3"
