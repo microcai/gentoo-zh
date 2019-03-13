@@ -47,6 +47,7 @@ media-sound/pulseaudio
 >=x11-libs/pango-1.14.0
 >x11-libs/libXcursor-1.1.2
 >=dev-qt/qcef-1.1.4
+>=dev-qt/qtsql-5.0.0
 x11-libs/libXScrnSaver
 x11-libs/libXext
 x11-libs/libXfixes
