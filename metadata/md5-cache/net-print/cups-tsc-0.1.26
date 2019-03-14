@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~x86
 RDEPEND=net-print/cups app-text/ghostscript-gpl
 SLOT=0
 SRC_URI=http://www.tscprinters.com/cms/upload/download_en/download_151TSC_Linux_32bit.zip.zip
-_eclasses_=multilib	b2f01ad412baf81650c23fcf0975fa33	toolchain-funcs	f164325a2cdb5b3ea39311d483988861
+_eclasses_=multilib	b2f01ad412baf81650c23fcf0975fa33	toolchain-funcs	b45201c4e6c096b98e250336954e64b9
 _md5_=4d7d6bc2b5a95a3aa2ec9a861131f88f
