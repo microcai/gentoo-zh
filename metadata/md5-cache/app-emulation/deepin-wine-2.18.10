@@ -8,4 +8,4 @@ RDEPEND=app-arch/p7zip >=media-libs/alsa-lib-1.0.16[abi_x86_32] >=media-libs/lcm
 SLOT=0
 SRC_URI=http://packages.deepin.com/deepin/pool/non-free/d/deepin-wine/deepin-fonts-wine_2.18-10_all.deb http://packages.deepin.com/deepin/pool/non-free/d/deepin-wine/deepin-libwine_2.18-10_i386.deb http://packages.deepin.com/deepin/pool/non-free/d/deepin-wine/deepin-wine32_2.18-10_i386.deb http://packages.deepin.com/deepin/pool/non-free/d/deepin-wine/deepin-wine_2.18-10_all.deb
 _eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	unpacker	3cd8bad0d31e525cd26be1bfa4e61631	versionator	2352c3fc97241f6a02042773c8287748
-_md5_=0b9ebf8cb3ad6043107dbf09965fac09
+_md5_=870a5c96e4071a35951c555262020359
