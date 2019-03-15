@@ -31,6 +31,5 @@ S=${WORKDIR}
 src_install() {
 	insinto /
 	doins -r opt
-	
 	fperms 755 -R /opt/deepinwine/tools/
 }

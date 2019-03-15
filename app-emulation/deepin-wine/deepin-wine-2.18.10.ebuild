@@ -51,7 +51,6 @@ S=${WORKDIR}
 src_install() {
 	insinto /
 	doins -r lib usr
-	
 	fperms 755 -R /usr/bin/
 	fperms 755 -R /usr/lib/
 }
