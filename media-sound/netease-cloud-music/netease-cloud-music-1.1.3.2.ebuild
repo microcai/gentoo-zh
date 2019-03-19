@@ -71,6 +71,8 @@ src_prepare() {
 
 src_install() {
 	cp -r usr "${D}"
+	cp ${FILESDIR}/netease-cloud-music.desktop ${D}/usr/share/applications/
+	cp ${FILESDIR}/netease-cloud-music-hidpi ${D}/usr/bin
 }
 
 pkg_postinst() {
