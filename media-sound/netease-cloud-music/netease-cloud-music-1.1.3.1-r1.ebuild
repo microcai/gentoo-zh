@@ -48,6 +48,7 @@ media-sound/pulseaudio
 >x11-libs/libXcursor-1.1.2
 >=dev-qt/qcef-1.1.4
 >=dev-qt/qtsql-5.0.0
+>=dev-qt/qtmultimedia-5.0.0[qml]
 x11-libs/libXScrnSaver
 x11-libs/libXext
 x11-libs/libXfixes
