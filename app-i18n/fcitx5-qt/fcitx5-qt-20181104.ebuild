@@ -39,7 +39,7 @@ src_configure() {
 	local mycmakeargs=(
 		-DLIB_INSTALL_DIR="${EPREFIX}/usr/$(get_libdir)"
 		-DSYSCONFDIR="${EPREFIX}/etc"
-		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/lib"
+		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
 		-DCMAKE_BUILD_TYPE=Release
 		-DENABLE_QT4=no
 		-DENABLE_QT5=$(usex qt5)
