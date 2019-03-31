@@ -25,6 +25,7 @@ REQUIRED_USE=""
 
 RDEPEND="app-i18n/fcitx5"
 DEPEND="${RDEPEND}
+	dev-libs/boost
 	kde-frameworks/extra-cmake-modules:5
 	virtual/pkgconfig"
 
