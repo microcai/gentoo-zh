@@ -96,8 +96,7 @@ src_install() {
 		doins -r "${S}"/opt/kingsoft/wps-office/office6
 		doins -r "${S}"/opt/kingsoft/wps-office/templates
 
-
-		fperms 0755 /opt/kingsoft/wps-office/office6/{wps,wpp,et}
+		fperms 0755 /opt/kingsoft/wps-office/office6/{wps,wpp,et,promecefpluginhost,wpsoffice,wpspdf}
 }
 
 pkg_preinst() {
