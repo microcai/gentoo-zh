@@ -96,7 +96,8 @@ src_install() {
 		doins -r "${S}"/opt/kingsoft/wps-office/office6
 		doins -r "${S}"/opt/kingsoft/wps-office/templates
 
-		fperms 0755 /opt/kingsoft/wps-office/office6/{wps,wpp,et,promecefpluginhost,wpsoffice,wpspdf}
+		# Don't allow wpsoffice to run, beacause it stops user to logout
+		fperms 0755 /opt/kingsoft/wps-office/office6/{wps,wpp,et,promecefpluginhost,wpspdf}
 }
 
 pkg_preinst() {
