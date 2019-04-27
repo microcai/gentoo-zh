@@ -37,7 +37,6 @@ media-fonts/wangfonts 1.3.0: Free Chinese TrueType fonts donated by Prof. Hann-T
 media-fonts/wps-office-fonts 1.0: The wps-office-fonts package contains Founder Chinese fonts
 media-libs/cogl 1.22.5: A library for using 3D graphics hardware to draw pretty pictures
 media-libs/libuninameslist 20140731: Library of unicode annotation data
-media-plugins/gst-plugins-meta 0.10-r8: Meta ebuild to pull in gst plugins for apps
 media-plugins/osdlyrics 0.4.3: An OSD lyric show supporting multiple media players and downloading.
 net-im/telegram-bin 1.0.14: Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.
 net-misc/biabiamiamia 0.1 0.1.20130305 1.3.20130307 1.5.20130315: 百毒歌曲批量下
