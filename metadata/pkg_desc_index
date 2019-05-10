@@ -49,6 +49,7 @@ net-print/cndrvcups-lb 3.40-r1: Canon UFR II / LIPSLX Printer Driver for Linux
 net-print/hplip-plugin 3.14.1: Binary plugin for HPs hplip printer driver library
 sys-apps/afulnx 5.05.04: AMI AFULNX Flasher - Linux based AMI BIOS Firmware Update flasher
 sys-boot/grub-efi 0.97-r84: GNU GRUB Legacy boot loader
+sys-fs/coda 7.0.5: Coda is an advanced network file system, similar to NFS
 sys-fs/zfs-auto-snapshot 9999 9999-r1: Automatic snapshots for ZFS on Linux
 sys-kernel/e-sources 3.18.14: Full sources for the Linux kernel including: gentoo, ck and other patches
 virtual/linux-sources 1: Virtual for Linux kernel sources
