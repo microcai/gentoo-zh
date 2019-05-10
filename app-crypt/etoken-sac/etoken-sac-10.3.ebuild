@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils multilib rpm
+inherit eutils multilib
 
 DESCRIPTION="SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)"
 
