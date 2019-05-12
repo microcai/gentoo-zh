@@ -21,7 +21,7 @@ RDEPEND="dev-lang/python:2.7
 		dde-extra/deepin-qml-widgets
 		"
 DEPEND="${RDEPEND}
-		dde-extra/deepin-gettext-tools
+		dde-base/deepin-gettext-tools
 		"
 
 

@@ -1,0 +1,149 @@
+From 36744c67e49a2a8de0a70e07f6e5aa80e77e7418 Mon Sep 17 00:00:00 2001
+From: kirigaya <kirigaya@mkacg.com>
+Date: Mon, 04 Dec 2017 18:12:29 +0800
+Subject: [PATCH] feat(rename): rename xmousearea to XEventMonitor
+
+Change-Id: I7065a77fe46ecf2b268fef71e990f8390b04e99d
+---
+
+diff --git a/xml/com.deepin.api.XEventMonitor.xml b/xml/com.deepin.api.XEventMonitor.xml
+new file mode 100644
+index 0000000..149a52b
+--- /dev/null
++++ b/xml/com.deepin.api.XEventMonitor.xml
+@@ -0,0 +1,63 @@
++<interface name="com.deepin.api.XEventMonitor">
++  <method name="RegisterArea">
++    <arg type="i" direction="in"/>
++    <arg type="i" direction="in"/>
++    <arg type="i" direction="in"/>
++    <arg type="i" direction="in"/>
++    <arg type="i" direction="in"/>
++    <arg type="s" direction="out"/>
++  </method>
++  <method name="RegisterAreas">
++    <arg type="a(iiii)" direction="in"/>
++    <arg type="i" direction="in"/>
++    <arg type="s" direction="out"/>
++    <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="AreaList"/>
++  </method>
++  <method name="RegisterFullScreen">
++    <arg type="s" direction="out"/>
++  </method>
++  <method name="UnregisterArea">
++    <arg type="s" direction="in"/>
++    <arg type="b" direction="out"/>
++  </method>
++  <signal name="CursorInto">
++    <arg type="i"/>
++    <arg type="i"/>
++    <arg type="s"/>
++  </signal>
++  <signal name="CursorOut">
++    <arg type="i"/>
++    <arg type="i"/>
++    <arg type="s"/>
++  </signal>
++  <signal name="CursorMove">
++    <arg type="i"/>
++    <arg type="i"/>
++    <arg type="s"/>
++  </signal>
++  <signal name="ButtonPress">
++    <arg type="i"/>
++    <arg type="i"/>
++    <arg type="i"/>
++    <arg type="s"/>
++  </signal>
++  <signal name="ButtonRelease">
++    <arg type="i"/>
++    <arg type="i"/>
++    <arg type="i"/>
++    <arg type="s"/>
++  </signal>
++  <signal name="KeyPress">
++    <arg type="s"/>
++    <arg type="i"/>
++    <arg type="i"/>
++    <arg type="s"/>
++  </signal>
++  <signal name="KeyRelease">
++    <arg type="s"/>
++    <arg type="i"/>
++    <arg type="i"/>
++    <arg type="s"/>
++  </signal>
++  <signal name="CancelAllArea"/>
++</interface>
+\ No newline at end of file
+diff --git a/xml/com.deepin.api.XMouseArea.xml b/xml/com.deepin.api.XMouseArea.xml
+deleted file mode 100644
+index 791795e..0000000
+--- a/xml/com.deepin.api.XMouseArea.xml
++++ /dev/null
+@@ -1,65 +0,0 @@
+-     <interface name="com.deepin.api.XMouseArea">
+-          <method name="RegisterArea">
+-               <arg type="i" direction="in"></arg>
+-               <arg type="i" direction="in"></arg>
+-               <arg type="i" direction="in"></arg>
+-               <arg type="i" direction="in"></arg>
+-               <arg type="i" direction="in"></arg>
+-               <arg type="s" direction="out"></arg>
+-          </method>
+-          <method name="RegisterAreas">
+-               <arg type="a(iiii)" direction="in"></arg>
+-               <arg type="i" direction="in"></arg>
+-               <arg type="s" direction="out"></arg>
+-               <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="AreaList"/>
+-          </method>
+-          <method name="RegisterFullScreen">
+-               <arg type="s" direction="out"></arg>
+-          </method>
+-          <method name="UnregisterArea">
+-               <arg type="s" direction="in"></arg>
+-          </method>
+-          <signal name="CursorInto">
+-               <arg type="i"></arg>
+-               <arg type="i"></arg>
+-               <arg type="s"></arg>
+-          </signal>
+-          <signal name="CursorOut">
+-               <arg type="i"></arg>
+-               <arg type="i"></arg>
+-               <arg type="s"></arg>
+-          </signal>
+-          <signal name="CursorMove">
+-               <arg type="i"></arg>
+-               <arg type="i"></arg>
+-               <arg type="s"></arg>
+-          </signal>
+-          <signal name="ButtonPress">
+-               <arg type="i"></arg>
+-               <arg type="i"></arg>
+-               <arg type="i"></arg>
+-               <arg type="s"></arg>
+-          </signal>
+-          <signal name="ButtonRelease">
+-               <arg type="i"></arg>
+-               <arg type="i"></arg>
+-               <arg type="i"></arg>
+-               <arg type="s"></arg>
+-          </signal>
+-          <signal name="KeyPress">
+-               <arg type="s"></arg>
+-               <arg type="i"></arg>
+-               <arg type="i"></arg>
+-               <arg type="s"></arg>
+-          </signal>
+-          <signal name="KeyRelease">
+-               <arg type="s"></arg>
+-               <arg type="i"></arg>
+-               <arg type="i"></arg>
+-               <arg type="s"></arg>
+-          </signal>
+-          <signal name="CancelArea">
+-               <arg type="s"></arg>
+-          </signal>
+-          <signal name="CancelAllArea"></signal>
+-     </interface>

@@ -16,8 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dde-base/dde-daemon
-		x11-wm/deepin-wm
-		x11-wm/deepin-metacity"
+		virtual/dde-wm"
 
 DEPEND="${RDEPEND}
-	      dev-qt/qtx11extras:5"
+		dev-qt/qtx11extras:5"

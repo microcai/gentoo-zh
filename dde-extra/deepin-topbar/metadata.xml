@@ -5,6 +5,9 @@
 		<email>atenzd@gmail.com</email>
 		<name>Aten Zhang</name>
 	</maintainer>
+	<use>
+		<flag name="albert">Install <pkg>x11-misc/albert</pkg> to Add an entrance for desktop searching</flag>
+	</use>
 	<upstream>
 		<remote-id type="github">kirigayakazushin/deepin-topbar</remote-id>
 	</upstream>
