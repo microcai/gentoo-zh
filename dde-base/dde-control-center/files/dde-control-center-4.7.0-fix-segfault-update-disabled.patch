@@ -1,0 +1,27 @@
+commit b2e9a0b181aebef867f61eadf02dcb01950ef9d9
+Author: Felix Yan <felixonmars@archlinux.org>
+Date:   Thu Oct 25 23:28:09 2018 +0800
+
+    fix: immediate segfault when sys update is disabled
+    
+    m_navWidget and m_notifyWidget were placed under the macro check, which
+    results in a segfault when later being added to m_pluginsLayout. Moving
+    them out of the macro fixes it.
+    
+    Change-Id: Ie6bbca787763af778d6410414f4c4f26ab287ed0
+
+diff --git a/frame/mainwidget.cpp b/frame/mainwidget.cpp
+index 0ef70954..1871aa03 100644
+--- a/frame/mainwidget.cpp
++++ b/frame/mainwidget.cpp
+@@ -55,9 +55,9 @@ MainWidget::MainWidget(FrameContentWrapper *parent)
+     , m_currentTimeLbl(new QLabel)
+     , m_currentDateLbl(new QLabel)
+     , m_pluginsLayout(new QStackedLayout)
+-#ifndef DISABLE_SYS_UPDATE
+     , m_navWidget(new NavWidget(this))
+     , m_notifyWidget(new NotifyWidget(this))
++#ifndef DISABLE_SYS_UPDATE
+     , m_updateNotifier(new UpdateNotifier)
+ #endif
+ {
