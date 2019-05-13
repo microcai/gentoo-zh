@@ -7,7 +7,7 @@ inherit eutils pax-utils
 
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
-BASE_URI="https://vscode-update.azurewebsites.net/${PV}"
+BASE_URI="https://update.code.visualstudio.com/${PV}"
 SRC_URI="
 	x86? ( ${BASE_URI}/linux-ia32/stable ->  ${P}-x86.tar.gz )
 	amd64? ( ${BASE_URI}/linux-x64/stable -> ${P}-amd64.tar.gz )
@@ -54,7 +54,7 @@ src_install(){
 	fperms +x "/opt/${PN}/libnode.so"
 	fperms +x "/opt/${PN}/resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg"
 	insinto "/usr/share/licenses/${PN}"
-	newins "resources/app/LICENSE.txt" "LICENSE"
+	newins "resources/app/LICENSE.rtf" "LICENSE"
 }
 
 pkg_postinst(){
