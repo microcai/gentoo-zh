@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
+DEPEND=>=dev-libs/glib-2.32:2 dev-libs/libgee:0.8 media-libs/clutter-gtk dev-libs/granite >=x11-libs/bamf-0.2.20 >=x11-libs/gtk+-3.4:3 >=x11-wm/deepin-mutter-3.20.30 gnome-base/gnome-desktop:3 dde-base/deepin-menu >=dde-base/deepin-desktop-schemas-2.90.0 || ( dev-lang/vala:0.44 dev-lang/vala:0.42 dev-lang/vala:0.40 dev-lang/vala:0.36 ) virtual/pkgconfig >=app-portage/elt-patches-20170815
+DESCRIPTION=Deepin Window Manager
+EAPI=5
+HOMEPAGE=https://github.com/linuxdeepin/deepin-wm
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3+
+RDEPEND=>=dev-libs/glib-2.32:2 dev-libs/libgee:0.8 media-libs/clutter-gtk dev-libs/granite >=x11-libs/bamf-0.2.20 >=x11-libs/gtk+-3.4:3 >=x11-wm/deepin-mutter-3.20.30 gnome-base/gnome-desktop:3 dde-base/deepin-menu >=dde-base/deepin-desktop-schemas-2.90.0
+SLOT=0
+SRC_URI=https://github.com/linuxdeepin/deepin-wm/archive/1.9.38.tar.gz -> deepin-wm-1.9.38.tar.gz
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	autotools-utils	696393cddf6200db17a31641f597b403	desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	gnome2-utils	532371cfcba45b2ab0d2950547c97d95	libtool	f143db5a74ccd9ca28c1234deffede96	ltprune	2729691420b6deeda2a90b1f1183fb55	multilib	1d91b03d42ab6308b5f4f6b598ed110e	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529	vala	cfb1d97eac9fead928d3240c8636b9ae	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=a2bdf1b894d02ec984304decdfbf341b

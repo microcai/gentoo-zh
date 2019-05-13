@@ -1,0 +1,9 @@
+DEFINED_PHASES=-
+DESCRIPTION=Deepin Extra Applications (meta package)
+EAPI=4
+HOMEPAGE=http://www.linuxdeepin.com
+KEYWORDS=~amd64 ~x86
+LICENSE=metapackage
+RDEPEND=dde-extra/dde-calendar dde-extra/deepin-boot-maker dde-extra/deepin-calculator dde-extra/deepin-clone dde-extra/deepin-editor dde-extra/deepin-font-installer dde-extra/deepin-picker dde-extra/deepin-system-monitor dde-extra/deepin-topbar media-gfx/deepin-draw
+SLOT=0
+_md5_=71bec3b067d2e3c0e0893ab76a6c0ac5

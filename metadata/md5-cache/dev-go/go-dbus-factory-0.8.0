@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install unpack
+DEPEND=dev-go/deepin-go-lib >=dev-lang/go-1.10
+DESCRIPTION=Go bindings to generate D-Bus services
+EAPI=6
+HOMEPAGE=https://github.com/linuxdeepin/go-dbus-factory
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3+
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/linuxdeepin/go-dbus-factory/archive/0.8.0.tar.gz -> go-dbus-factory-0.8.0.tar.gz https://github.com/golang/net/archive/aaf60122140d3fcf75376d319f0554393160eb50.tar.gz -> github.com-golang-net-aaf60122140d3fcf75376d319f0554393160eb50.tar.gz
+_eclasses_=golang-base	c57d2c3f9e1a02d0feb8b87c7b689892	golang-vcs-snapshot	12177e83bede6f7fb87eae383864b40b
+_md5_=d50ffac04ebb3940d6ed6fa4d6002fd7

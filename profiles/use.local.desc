@@ -13,6 +13,7 @@ app-i18n/fcitx:pango - Enable pango support for better multilingual text renderi
 app-i18n/fcitx:qt4 - Install the Qt4's IM Module
 app-i18n/fcitx:snooper - Enable Key Snooper for gtk app
 app-i18n/fcitx:table - Adds suppport for Wubi, Erbi, etc.
+dev-libs/granite:demo - Build the Granite demo application (to present all available UI features provided by the library)
 media-libs/cogl:gles2 - Enable OpenGL ES 2.0 support
 media-libs/cogl:kms - Enable KMS support.
 media-libs/cogl:pango - Build cogl-pango library for x11-libs/pango integration
