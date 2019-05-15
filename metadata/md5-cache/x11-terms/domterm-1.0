@@ -1,0 +1,11 @@
+DEFINED_PHASES=configure install
+DEPEND=dev-ruby/asciidoctor >=net-libs/libwebsockets-2.2.0
+DESCRIPTION=DOM/JavaScript-based terminal-emulator/console https://domterm.org
+EAPI=7
+HOMEPAGE=https://github.com/PerBothner/DomTerm
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=dev-ruby/asciidoctor >=net-libs/libwebsockets-2.2.0
+SLOT=0
+SRC_URI=https://github.com/PerBothner/DomTerm/releases/download/1.0/domterm-1.0.tar.gz
+_md5_=3da54ca855ea32b2654b1010d583c17f
