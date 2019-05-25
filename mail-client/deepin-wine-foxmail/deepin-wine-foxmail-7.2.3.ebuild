@@ -5,12 +5,12 @@ EAPI=6
 
 inherit unpacker versionator
 
-DESCRIPTION="Tencent WeChat for Linux by Deepin"
+DESCRIPTION="Foxmail mail client for Linux by Deepin"
 HOMEPAGE="https://www.deepin.org"
 
 COMMON_URI="http://packages.deepin.com/deepin/pool/non-free/d"
-MY_PN="deepin.com.wechat"
-MY_PV=$(replace_version_separator 4 'deepin' )
+MY_PN="deepin.com.foxmail"
+MY_PV=$(replace_version_separator 2 'deepin' )
 
 SRC_URI="${COMMON_URI}/${MY_PN}/${MY_PN}_${MY_PV}_i386.deb"
 
@@ -21,7 +21,6 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}
-	x11-apps/xwininfo
 	app-emulation/deepin-wine
 	app-emulation/deepin-wine-helper"
 
@@ -34,5 +33,5 @@ src_install() {
 	insinto /
 	doins -r opt usr
 	
-	fperms 755 /opt/deepinwine/apps/Deepin-WeChat/run.sh
+	fperms 755 /opt/deepinwine/apps/Deepin-Foxmail/run.sh
 }
