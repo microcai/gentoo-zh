@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm preinst setup
+DEPEND=app-arch/unzip kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources virtual/libelf )
+DESCRIPTION=rtl8812au rtl8821au kernel driver for AC1200 Wireless Dual-Band USB Adapter
+EAPI=7
+HOMEPAGE=https://github.com/abperiasamy/rtl8812AU_8821AU_linux
+IUSE=kernel_linux kernel_linux
+KEYWORDS=~amd64
+LICENSE=GPL-2.0
+RDEPEND=kernel_linux? ( virtual/modutils )
+SLOT=0
+SRC_URI=https://github.com/abperiasamy/rtl8812AU_8821AU_linux/archive/master.zip -> rtl8812au-9999.zip
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	linux-info	953c3b1c472dcadbf62098a9301327f2	linux-mod	dc67f5064036fbaf4bb77b68a9caeda0	multilib	1d91b03d42ab6308b5f4f6b598ed110e	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
+_md5_=7dab9fcb41dc0c6204101f70dbef82d0
