@@ -1,3 +1,4 @@
+
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
@@ -9,7 +10,7 @@ HOMEPAGE="http://music.163.com"
 COMMON_URI="http://packages.deepin.com/deepin/pool/main/n/netease-cloud-music"
 MY_PVR=${PVR//r/}
 SRC_URI="
-amd64? ( ${COMMON_URI}/${PN}_${MY_PVR}-1_amd64.deb )
+amd64? ( http://d1.music.126.net/dmusic/${PN}_${PV}_amd64_ubuntu_20190428.deb -> ${P}.deb )
 "
 
 LICENSE=""
@@ -73,6 +74,10 @@ src_prepare() {
 
 src_install() {
 	cp -r usr "${D}"
+	if [ -e opt ] ; then
+		cp -r opt "${D}"
+	fi
+
 	cp ${FILESDIR}/netease-cloud-music.desktop ${D}/usr/share/applications/
 	cp ${FILESDIR}/netease-cloud-music-hidpi ${D}/usr/bin
 }
