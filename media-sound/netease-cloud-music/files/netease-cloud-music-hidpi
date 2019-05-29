@@ -4,4 +4,8 @@
 export QT_AUTO_SCREEN_SCALE_FACTOR=2
 # and force scale factor to 2.
 
-exec netease-cloud-music --force-device-scale-factor=2
+if [ -e /opt/netease/netease-cloud-music/netease-cloud-music ] ; then
+	exec /opt/netease/netease-cloud-music/netease-cloud-music --force-device-scale-factor=2;
+else
+	exec netease-cloud-music --force-device-scale-factor=2 ;
+fi
