@@ -73,7 +73,7 @@ src_prepare() {
 }
 
 src_compile(){
-	rm -rf /opt/netease/netease-cloud-music/libs/
+	rm -rf ${S}/opt/netease/netease-cloud-music/libs/
 }
 
 src_install() {
