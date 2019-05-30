@@ -72,6 +72,10 @@ src_prepare() {
 	eapply_user
 }
 
+src_compile(){
+	rm -rf /opt/netease/netease-cloud-music/libs/
+}
+
 src_install() {
 	cp -r usr "${D}"
 	if [ -e opt ] ; then
