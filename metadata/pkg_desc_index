@@ -62,3 +62,4 @@ x11-plugins/pidgin-fetion 0.98.6: Fetion protocol plugin for libpurple
 x11-themes/gnome-themes-numix 2.5.1: A modern flat theme that supports Gnome, Unity, XFCE and Openbox.
 x11-themes/lxice 0.1.0: LXDE theme for IceWM
 x11-themes/smplayer-themes-nonfree 0.1.0 0.1.1: Icon themes for smplayer
+x11-wm/chamferwm 9999: A tiling X11 window manager with Vulkan compositor.
