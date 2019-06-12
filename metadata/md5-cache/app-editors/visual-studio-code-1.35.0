@@ -9,6 +9,6 @@ LICENSE=MIT
 RDEPEND=>=media-libs/libpng-1.2.46 >=x11-libs/gtk+-2.24.8-r1:2 x11-libs/cairo gnome-base/gconf x11-libs/libXtst >=net-print/cups-2.0.0 x11-libs/libnotify x11-libs/libXScrnSaver libsecret? ( app-crypt/libsecret[crypt] )
 RESTRICT=mirror strip bindist
 SLOT=0
-SRC_URI=x86? ( https://update.code.visualstudio.com/1.34.0/linux-ia32/stable -> visual-studio-code-1.34.0-x86.tar.gz ) amd64? ( https://update.code.visualstudio.com/1.34.0/linux-x64/stable -> visual-studio-code-1.34.0-amd64.tar.gz )
+SRC_URI=x86? ( https://update.code.visualstudio.com/1.35.0/linux-ia32/stable -> visual-studio-code-1.35.0-x86.tar.gz ) amd64? ( https://update.code.visualstudio.com/1.35.0/linux-x64/stable -> visual-studio-code-1.35.0-amd64.tar.gz )
 _eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	ltprune	2729691420b6deeda2a90b1f1183fb55	multilib	1d91b03d42ab6308b5f4f6b598ed110e	pax-utils	db85a3c508cf82c45f24b2723791cc93	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
 _md5_=a33c1b06df95dd89fd8d133b6658fccc
