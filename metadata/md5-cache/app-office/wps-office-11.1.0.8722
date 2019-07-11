@@ -10,4 +10,4 @@ RESTRICT=strip mirror
 SLOT=0
 SRC_URI=amd64? ( http://kdl.cc.ksosoft.com/wps-community/download/8722/wps-office_11.1.0.8722_amd64.deb )
 _eclasses_=unpacker	3cd8bad0d31e525cd26be1bfa4e61631	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=c93165ffe343857d3bae79da7e41324c
+_md5_=fc0713fb77edd59a4739d70ba5e70d6c
