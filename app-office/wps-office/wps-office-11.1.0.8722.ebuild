@@ -75,6 +75,7 @@ src_install() {
 	doexe "${S}"/usr/bin/wps
 	doexe "${S}"/usr/bin/wpp
 	doexe "${S}"/usr/bin/et
+	doexe "${S}"/usr/bin/wpspdf
 
 	insinto /usr/share
 	doins -r "${S}"/usr/share/{applications,desktop-directories,icons,mime,templates}
@@ -82,5 +83,5 @@ src_install() {
 	insinto /opt/kingsoft/wps-office
 	doins -r "${S}"/opt/kingsoft/wps-office/{office6,templates}
 
-	fperms 0755 /opt/kingsoft/wps-office/office6/{wps,wpp,et}
+	fperms 0755 /opt/kingsoft/wps-office/office6/{wps,wpp,et,wpspdf}
 }
