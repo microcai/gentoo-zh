@@ -125,6 +125,7 @@ src_prepare() {
 	cp "${FILESDIR}/TelegramTests.cmake" "${CMAKE_MODULES_DIR}"
 
 	cp "${FILESDIR}/ffmpeg_utility.cpp" Telegram/SourceFiles/ffmpeg/
+	cp "${FILESDIR}/qt_functions.cpp" Telegram/SourceFiles/
 
 	cmake-utils_src_prepare
 
