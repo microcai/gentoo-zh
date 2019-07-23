@@ -9,7 +9,7 @@ MY_PV="$(ver_cut 4)"
 DESCRIPTION="WPS Office is an office productivity suite"
 HOMEPAGE="http://www.wps.cn/product/wpslinux/ http://wps-community.org/"
 
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 SRC_URI="
 	amd64? ( http://kdl.cc.ksosoft.com/wps-community/download/${MY_PV}/${PN}_${PV}_amd64.deb )
@@ -36,14 +36,12 @@ RDEPEND="
 	dev-libs/glib:2
 	sys-libs/zlib:0
 	net-print/cups
-	media-libs/libpng:1.2
 	virtual/glu
 
 	dev-libs/libpcre:3
 	dev-libs/libffi
 	media-sound/pulseaudio
 	app-arch/bzip2:0
-	media-libs/libpng:0
 	dev-libs/expat
 	sys-apps/util-linux
 	dev-libs/libbsd
