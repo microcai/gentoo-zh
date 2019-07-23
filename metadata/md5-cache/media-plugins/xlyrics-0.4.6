@@ -1,11 +1,12 @@
-DEFINED_PHASES=compile install unpack
-DESCRIPTION=Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
+DEFINED_PHASES=install
+DEPEND=>=x11-libs/gtk+-2.4.0 >=dev-libs/glib-2.4.0
+DESCRIPTION=lyrics display plugin for xmms/bmp/audacious/amarok
 EAPI=0
-HOMEPAGE=http://packages.debian.org/stable/text/zh-autoconvert.html
-KEYWORDS=~amd64 ~x86
+HOMEPAGE=http://myget.sourceforge.net/xlyrics/
+KEYWORDS=~x86
 LICENSE=GPL-2
-RESTRICT=mirror
+RDEPEND=>=x11-libs/gtk+-2.4.0 >=dev-libs/glib-2.4.0
 SLOT=0
-SRC_URI=mirror://debian/pool/main/z/zh-autoconvert/zh-autoconvert_0.3.16.orig.tar.gz mirror://debian/pool/main/z/zh-autoconvert/zh-autoconvert_0.3.16-3.diff.gz
+SRC_URI=http://myget.sourceforge.net/xlyrics/xlyrics-0.4.6.tar.gz
 _eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	ltprune	2729691420b6deeda2a90b1f1183fb55	multilib	1d91b03d42ab6308b5f4f6b598ed110e	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	a3a237ef6c0c58546bf23b2c382f9e56	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
-_md5_=366045ddd1a4841bd83a0c70d8942e57
+_md5_=96f6a79623be3e0970f7a71c2d516808
