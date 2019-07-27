@@ -5,8 +5,9 @@ EAPI=2
 HOMEPAGE=https://code.launchpad.net/~tualatrix/+junk/elementary-mod-theme
 KEYWORDS=~amd64 ~arm ~mips ~ppc ~sh ~x86 ~x86-fbsd
 LICENSE=GPL-2
+PROPERTIES=live
 RDEPEND=x11-themes/dmz-cursor-theme x11-themes/elementary-icon-theme x11-themes/gtk-engines-aurora =x11-themes/gtk-engines-murrine-9999
 RESTRICT=binchecks mirror strip
 SLOT=0
-_eclasses_=bzr	a1b66b9c760a0ab5113e62cf9b64d1fe
+_eclasses_=bzr	3f634cedcaaefcc3cb718af555283204
 _md5_=b35bf0e4cd19a311a90df5818ff0e8d4
