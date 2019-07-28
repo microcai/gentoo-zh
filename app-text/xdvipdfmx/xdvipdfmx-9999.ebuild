@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=7
+
 inherit eutils subversion
 
 DESCRIPTION="Extended xdvi for use with XeTeX and other unicode TeXs."
@@ -18,7 +20,7 @@ DEPEND=">=media-libs/freetype-2.0
 
 src_compile() {
 	econf \
-		--with-ft2lib=/usr/lib/libfreetype.so \
+		--with-ft2lib=/usr/$(get_libdir)/libfreetype.so \
 		--with-ft2include=/usr/include/freetype2 || die "econf failed"
 
 	emake || die "emake failed"
