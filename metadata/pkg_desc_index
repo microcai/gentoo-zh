@@ -18,6 +18,7 @@ app-shells/oh-my-zsh 9999: A community-driven framework for managing your zsh co
 app-text/groff-utf8 0-r1: GNU groff wrapper allowing UTF-8 input
 app-text/pdf2htmlEX 0.12: A PDF to HTML converter
 app-text/srecite 0.6.2: Smart Reciting
+dev-lang/scala-bin 2.12.8 2.13.0: The Scala Programming Language
 dev-lang/swig 4.0.0: Simplified Wrapper and Interface Generator
 dev-libs/granite 5.2.1: Elementary OS library that extends Gtk+
 dev-libs/libchewing 0.5.1: Library for Chinese Phonetic input method
