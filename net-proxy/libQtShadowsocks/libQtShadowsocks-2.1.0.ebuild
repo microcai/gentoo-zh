@@ -19,7 +19,7 @@ LICENSE="GPL-3"
 
 IUSE="static"
 
-DEPEND="dev-libs/botan:2
+DEPEND="~dev-libs/botan-2.9.0
 	dev-qt/qtconcurrent
 	dev-qt/qtcore:5
 	dev-qt/qtnetwork
