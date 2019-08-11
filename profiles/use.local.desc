@@ -2,6 +2,9 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+app-antivirus/bitdefender-scanner:gtk - Enable the graphical user interface based on x11-libs/gtk+
+app-emulation/crossover-bin:capi - Enable ISDN support via CAPI
+app-emulation/winetricks-zh:rar - Pull in app-arch/unrar for extraction of rar-compressed game files
 app-i18n/fcitx:32bit - For amd64-multilib, installs the 32-it im modules.
 app-i18n/fcitx:autostart - Enable xdg autostart desktop file installion
 app-i18n/fcitx:glib - Enable GLib2 as depenedency
@@ -13,9 +16,123 @@ app-i18n/fcitx:pango - Enable pango support for better multilingual text renderi
 app-i18n/fcitx:qt4 - Install the Qt4's IM Module
 app-i18n/fcitx:snooper - Enable Key Snooper for gtk app
 app-i18n/fcitx:table - Adds suppport for Wubi, Erbi, etc.
+app-i18n/fcitx-configtool:gtk3 - Use GTK+3 instead of 2
+app-i18n/fcitx5:coverage - Build the project with gcov support (Need ENABLE_TEST=On)
+app-i18n/fcitx5:enchant - Enable enchant for word predication
+app-i18n/fcitx5:presage - Enable presage for word predication(not stable)
+app-i18n/fcitx5:test - Build Test
+app-misc/nixnote:hunspell - Enable spellchecking plugin using app-text/hunspell
+app-misc/nixnote:opencv3 - Use media-libs/opencv:0/3.0 for WebCam instead media-libs/opencv:0/2.4
+app-misc/nixnote:webcam - Enable WebCam plugin
+app-text/stardict:espeak - Enables text to speech engine app-accessibility/espeak
+app-text/stardict:festival - Enables text to speech engine app-accessibility/festival
+app-text/stardict:gnome - Enables gnome-base/gnome support
+app-text/stardict:gucharmap - Enables gnome-extra/gucharmap plugin
+app-text/stardict:spell - Enables spell checking capability using app-text/enchant
+dde-base/dde-control-center:redshift - Install x11-misc/redshift to support screen color temperature adjusting
+dde-base/dde-daemon:bluetooth - Enable Bluetooth Support
+dde-base/dde-daemon:fprint - Enables experimental fingerprint authentication using sys-auth/fprintd
+dde-base/dde-daemon:grub - Install Deepin themes for sys-boot/grub
+dde-base/dde-daemon:miracast - Enable Miracast Support
+dde-base/dde-meta:extra - Install extra applicaions developed by Deepin
+dde-base/dde-meta:grub - Install Deepin themes for sys-boot/grub
+dde-base/dde-meta:kwin - Use the WM based on kwin
+dde-base/dde-meta:manual - Install dde-extra/dde-help User Manual
+dde-base/dde-meta:multimedia - Install Deepin multimedia suite
+dde-base/dde-meta:mutter - Use the WM based on mutter
+dde-base/dde-meta:plymouth - Install Deepin themes for sys-boot/plymouth
+dde-base/dde-meta:terminal - Install dde-extra/deepin-terminal Terminal Emulator
+dde-base/dde-meta:turbo - Enable DTK Apps Turbo by dde-extra/deepin-turbo
+dde-extra/deepin-terminal:zssh - Enable access to remote server via GUI using net-misc/zssh
+dde-extra/deepin-topbar:albert - Install x11-misc/albert to Add an entrance for desktop searching
+dev-erlang/bson:doc - Adds extra documentation.
+dev-erlang/bson:src - Adds source files.
+dev-erlang/epgsql:src - Adds source files.
+dev-erlang/eredis:src - Adds source files.
+dev-erlang/goldrush:doc - Adds extra documentation.
+dev-erlang/goldrush:src - Adds source files.
+dev-erlang/ibrowse:doc - Adds extra documentation.
+dev-erlang/ibrowse:src - Adds source files.
+dev-erlang/jsx:doc - Adds extra documentation.
+dev-erlang/jsx:src - Adds source files.
+dev-erlang/kjell:doc - Adds extra documentation.
+dev-erlang/kjell:src - Adds source files.
+dev-erlang/kvs:doc - Adds extra documentation.
+dev-erlang/kvs:src - Adds source files.
+dev-erlang/lager:doc - Adds extra documentation.
+dev-erlang/lager:src - Adds source files.
+dev-erlang/mad:doc - Adds extra documentation.
+dev-erlang/mad:src - Adds source files.
+dev-erlang/mochiweb:doc - Adds extra documentation.
+dev-erlang/mochiweb:src - Adds source files.
+dev-erlang/mongodb:doc - Adds extra documentation.
+dev-erlang/mongodb:src - Adds source files.
+dev-erlang/mysql-otp:doc - Adds extra documentation.
+dev-erlang/mysql-otp:src - Adds source files.
+dev-erlang/sh:doc - Adds extra documentation.
+dev-erlang/sh:src - Adds source files.
+dev-erlang/uuid:doc - Adds extra documentation.
+dev-erlang/uuid:src - Adds source files.
 dev-libs/granite:demo - Build the Granite demo application (to present all available UI features provided by the library)
+media-gfx/deepin-screenshot:sharing - Install dde-extra/deepin-social-sharing for social media sharing
 media-libs/cogl:gles2 - Enable OpenGL ES 2.0 support
 media-libs/cogl:kms - Enable KMS support.
 media-libs/cogl:pango - Build cogl-pango library for x11-libs/pango integration
 media-plugins/osdlyrics:mpd - Enable support for MPD
 media-plugins/osdlyrics:xmms2 - Enable support for XMMS2
+media-sound/deadbeef:adplug - adplug player (OPL2/OPL3 emulation)
+media-sound/deadbeef:cover - Cover art plugin
+media-sound/deadbeef:gme - chiptune music player based on GME
+media-sound/deadbeef:hotkeys - Global hotkeys support
+media-sound/deadbeef:lastfm - last.fm scrobbler
+media-sound/deadbeef:m3u - M3U and PLS playlist support
+media-sound/deadbeef:mac - Monkey's audio (APE) decoder
+media-sound/deadbeef:midi - WildMidi player plugin
+media-sound/deadbeef:mms - mms streaming support
+media-sound/deadbeef:null - NULL output
+media-sound/deadbeef:shellexec - shell commands plugin
+media-sound/deadbeef:sid - SID player based on libsidplay2
+media-sound/deadbeef:supereq - Equalizer based on Super EQ library by Naoki Shibata
+media-sound/deadbeef:tta - TTA player plugin
+media-sound/deadbeef:vtx - vtx file player (ay8910/12 emulation)
+media-sound/deadbeef:zip - zip archive support
+media-video/simplescreenrecorder:vpx - Enables vp8 codec support using libvpx from ffmpeg/libav
+net-dns/dnsmasq:dhcp - Enable support for reading ISC DHCPd lease files
+net-dns/dnsmasq:tftp - Enables built in TFTP server for netbooting
+net-misc/gemanx:imageview - enable external image viewer
+net-misc/gemanx:iplookup - enable IP location lookup for Simplified Chinese users. Need qqwry.dat
+net-misc/teamviewer:system-wine - Use app-emulation/wine instead of bundled wine.
+net-misc/xmuruijie:firewall - Add support for iptables firewall
+net-proxy/make-proxy:client - Add make proxy client support
+net-proxy/make-proxy:server - Add make proxy server support
+net-proxy/shadowsocks-libev:openssl - Use dev-libs/openssl as crypto backend
+net-proxy/shadowsocks-libev:polarssl - Use net-libs/polarssl as crypto backend
+net-proxy/squid:ecap - Adds support for loadable content adaptation modules (http://www.e-cap.org)
+net-proxy/squid:epoll - Enables Linux epoll() support
+net-proxy/squid:icap-client - Adds ICAP client support
+net-proxy/squid:ipf-transparent - Adds transparent proxy support for systems using IP-Filter (only for *bsd)
+net-proxy/squid:kqueue - Enables *BSD kqueue() support
+net-proxy/squid:logrotate - Use app-admin/logrotate for rotating logs
+net-proxy/squid:pf-transparent - Adds transparent proxy support for systems using PF (only for *bsd)
+net-proxy/squid:qos - Adds support for Quality of Service using netfilter conntrack - see qos_flow directive for more info
+net-proxy/squid:ssl-crtd - Adds support for dynamic SSL certificate generation in SslBump environments
+net-proxy/squid:tproxy - Enables real Transparent Proxy support for Linux Netfilter TPROXY
+net-proxy/squid:zero-penalty-hit - Add Zero Penalty Hit patch (http://zph.bratcheda.org)
+sci-misc/boinc:cuda - Use nvidia cuda toolkit for speeding up computations. NOTE: works only for subset of nvidia graphic cards so make sure your card is supported before opening bug about it.
+sys-apps/irqbalance:numa - Support balancing IRQs across NUMA nodes
+sys-apps/kmscon:drm - Enable Linux DRM for backend
+sys-apps/kmscon:fbdev - Enable Linux FBDev for backend
+sys-apps/kmscon:gles2 - Enable GLES2 for backend
+sys-apps/kmscon:multiseat - Enable multiseat support via systemd
+sys-apps/kmscon:optimizations - Enable optimizations
+sys-apps/kmscon:pango - Enable pango font rendering
+sys-apps/kmscon:pixman - Enable pixman font rendering
+sys-apps/usb_modeswitch:jimtcl - Use dev-lang/jimtcl instead of dev-lang/tcl for smaller memory footprint
+sys-devel/gdb:multitarget - Support all known targets in one gdb binary
+sys-kernel/hardened-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
+virtual/dde-wm:kwin - Use the WM based on kwin
+virtual/dde-wm:minimal - Prefer x11-wm/deepin-metacity over other two WM
+virtual/dde-wm:mutter - Use the WM based on mutter
+x11-wm/compiz:fuse - Enables support for the filesystem in userspace plugin through sys-fs/fuse.
+x11-wm/compiz:kde - Compile the kde4 window decorator and add support for kde-base/kdebase-startkde.
+x11-wm/deepin-mutter:kms - Enable KMS support.
