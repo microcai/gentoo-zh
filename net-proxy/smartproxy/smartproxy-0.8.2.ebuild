@@ -17,19 +17,13 @@ KEYWORDS="amd64 x86"
 
 RESTRICT="mirror"
 
-RDEPEND="dev-libs/openssl
->=dev-libs/boost-1.70.0
-"
+RDEPEND="dev-libs/openssl"
 
-DEPEND="dev-libs/openssl
->=dev-libs/boost-1.70.0
-"
+DEPEND="dev-libs/openssl"
 
 src_configure(){
 	local mycmakeargs=(
 		-DUSE_SYSTEM_OPENSSL=ON
-		-DUSE_SYSTEM_BOOST=ON
-		-DBoost_USE_STATIC_LIBS=OFF
 	)
 	cmake-utils_src_configure
 }
