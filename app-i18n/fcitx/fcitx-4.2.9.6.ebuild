@@ -26,7 +26,7 @@ fi
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="4"
 KEYWORDS="amd64 ~hppa ppc ppc64 x86"
-IUSE="+X +autostart +cairo debug +enchant gtk2 +gtk3 +introspection lua nls opencc +pango static-libs +table test +xml"
+IUSE="+X +autostart +cairo debug +enchant gtk2 +gtk3 +introspection lua nls opencc +pango static-libs +table test +xml qt4"
 REQUIRED_USE="cairo? ( X ) pango? ( cairo )"
 
 RDEPEND="dev-libs/glib:2
@@ -63,6 +63,7 @@ RDEPEND="dev-libs/glib:2
 		dev-libs/libxml2
 	)"
 DEPEND="${RDEPEND}
+	dev-util/glib-utils
 	kde-frameworks/extra-cmake-modules:5
 	virtual/pkgconfig"
 
