@@ -11,9 +11,9 @@ set(GENERATED_SCHEME_SOURCES
 add_custom_command(
 	OUTPUT ${GENERATED_SCHEME_SOURCES}
 	COMMAND python ${CMAKE_SOURCE_DIR}/SourceFiles/codegen/scheme/codegen_scheme.py
-		-o${GENERATED_DIR} ${CMAKE_SOURCE_DIR}/Resources/scheme.tl
-	DEPENDS Resources/scheme.tl
-	COMMENT "Codegen scheme.tl"
+		-o${GENERATED_DIR} ${CMAKE_SOURCE_DIR}/Resources/tl/mtproto.tl ${CMAKE_SOURCE_DIR}/Resources/tl/api.tl
+	DEPENDS Resources/tl/mtproto.tl Resources/tl/api.tl
+	COMMENT "Codegen scheme.h"
 )
 list(APPEND GENERATED_SOURCES ${GENERATED_SCHEME_SOURCES})
 
