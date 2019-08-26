@@ -65,7 +65,7 @@ list(APPEND THIRDPARTY_INCLUDE_DIRS
 file(GLOB QRC_FILES
 	Resources/qrc/telegram_emoji_1.qrc  Resources/qrc/telegram_emoji_5.qrc        Resources/qrc/telegram.qrc
 	Resources/qrc/telegram_emoji_2.qrc  Resources/qrc/telegram_emoji_preview.qrc  Resources/qrc/telegram_sounds.qrc
-	Resources/qrc/telegram_emoji_3.qrc  Resources/qrc/telegram_linux.qrc
+	Resources/qrc/telegram_emoji_3.qrc
 	Resources/qrc/telegram_emoji_4.qrc
 	# This only disables system plugin search path
 	# We do not want this behavior for system build
