@@ -278,7 +278,7 @@ dev-python/pygeoip 0.3.1: Pure Python API for Maxmind's binary GeoIP databases.
 dev-python/pygtk 2.24.0-r4: GTK+2 bindings for Python
 dev-python/pystorm 0.1.20130426091936: Download library and tool for Linux Deepin project
 dev-python/xappy 0.5: An easy-to-use interface to the Xapian search engine
-dev-qt/qcef 1.1.6: Qt5 binding of Chromium Embedded Framework
+dev-qt/qcef 1.1.7: Qt5 binding of Chromium Embedded Framework
 dev-qt/qt5dxcb-plugin 1.2.0: XCB Qt5 platform plugin for DDE
 dev-qt/qtstyleplugins 20170311-r1: Additional style plugins for Qt
 dev-qt/qtxcb-private-headers 5.11.3 5.12.3: The Private Headers for the Qt5 Xcb
