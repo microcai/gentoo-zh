@@ -294,7 +294,7 @@ dev-util/fernflower 1: Fernflower is the first actually working analytical decom
 dev-util/global 6.3.4: GNU Global is a tag system to find the locations of a specified object in various sources
 dev-util/google-webdesigner 1.3.10.0: Bring ideas to life across screens
 dev-util/jd-gui 1.4.0: A standalone graphical utility that displays Java source codes of .class file
-dev-util/jetbrains-toolbox 1.15.5666: Manage all your JetBrains Projects and Tools
+dev-util/jetbrains-toolbox 1.15.5666 1.15.5796: Manage all your JetBrains Projects and Tools
 dev-util/rinse 1.7 9999: RPM based distributions bootstrap scripts
 dev-util/webstorm 10.0.2: WebStorm is a lightweight yet powerful IDE, perfectly equipped for complex client-side development and server-side development with Node.js.
 dev-util/wxformbuilder 3.6.0: The OpenSource wxWidgets Designer, GUI Builder, and RAD Tool.
