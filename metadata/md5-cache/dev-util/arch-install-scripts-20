@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=Arch Linux install tools (pacstrap, genfstab, arch-chroot)
+EAPI=6
+HOMEPAGE=https://projects.archlinux.org/arch-install-scripts.git/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=sys-apps/pacman
+SLOT=0
+SRC_URI=https://projects.archlinux.org/arch-install-scripts.git/snapshot/arch-install-scripts-20.tar.gz
+_md5_=b9e4deaa7bd59defaff782f1fc3d5505
