@@ -490,6 +490,7 @@ x11-libs/xcb-imdkit 20171205: An implementation of xim protocol in xcb
 x11-misc/9menu 1.8: Create X menus from the shell
 x11-misc/fqterm 0.9.8.3.4 9999: a modern terminal emulator for Linux
 x11-misc/gimmie 0.2.8: Gimmie is an experimental panel replacement for the Gnome desktop
+x11-misc/synergy 1.10.3: Lets you easily share a single mouse and keyboard between multiple computers
 x11-plugins/pidgin-appindicator 0.9: plugin for Pidgin to use SNI protocol to show systray icon in Unity or KDE Plasma-Next
 x11-plugins/pidgin-fetion 0.98.6: Fetion protocol plugin for libpurple
 x11-plugins/pidgin-qq 195 9999: Pidgin QQ2010 PlugIn
