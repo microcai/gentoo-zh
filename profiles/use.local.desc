@@ -128,6 +128,12 @@ sys-apps/kmscon:optimizations - Enable optimizations
 sys-apps/kmscon:pango - Enable pango font rendering
 sys-apps/kmscon:pixman - Enable pixman font rendering
 sys-apps/usb_modeswitch:jimtcl - Use dev-lang/jimtcl instead of dev-lang/tcl for smaller memory footprint
+sys-block/fio:aio - Enable AIO ioengine
+sys-block/fio:glusterfs - Enable GlusterFS gfapi support via sys-cluster/glusterfs
+sys-block/fio:gnuplot - Install tools for generating gnuplots
+sys-block/fio:numa - Enable numa support
+sys-block/fio:rbd - Enable Rados block device support via sys-cluster/ceph
+sys-block/fio:rdma - Enable infiniband support via sys-fabric/librdmacm
 sys-devel/gdb:multitarget - Support all known targets in one gdb binary
 sys-kernel/hardened-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 virtual/dde-wm:kwin - Use the WM based on kwin
