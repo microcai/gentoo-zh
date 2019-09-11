@@ -1,0 +1,24 @@
+diff --git a/Telegram/SourceFiles/mtproto/mtp_tcp_socket.h b/Telegram/SourceFiles/mtproto/mtp_tcp_socket.h
+index 487b2dcc0..be66a2043 100644
+--- a/Telegram/SourceFiles/mtproto/mtp_tcp_socket.h
++++ b/Telegram/SourceFiles/mtproto/mtp_tcp_socket.h
+@@ -7,6 +7,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
+ */
+ #pragma once
+ 
++#include <QTcpSocket>
+ #include "mtproto/mtp_abstract_socket.h"
+ 
+ namespace MTP {
+diff --git a/Telegram/SourceFiles/mtproto/mtp_tls_socket.h b/Telegram/SourceFiles/mtproto/mtp_tls_socket.h
+index df8742b34..8435d7ac6 100644
+--- a/Telegram/SourceFiles/mtproto/mtp_tls_socket.h
++++ b/Telegram/SourceFiles/mtproto/mtp_tls_socket.h
+@@ -7,6 +7,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
+ */
+ #pragma once
+ 
++#include <qsslsocket.h>
+ #include "mtproto/mtp_abstract_socket.h"
+ 
+ namespace MTP {
