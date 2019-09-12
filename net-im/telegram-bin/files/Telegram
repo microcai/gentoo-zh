@@ -1,3 +1,0 @@
-#!/bin/sh
-# wrapper for binary to make sure we do not receive updates behind portage
-exec "/opt/telegram-bin/Telegram" "-noupdate" "$@"
