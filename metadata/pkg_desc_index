@@ -418,7 +418,7 @@ net-proxy/shadowsocks-libev 2.4.8 9999: A lightweight secured scoks5 proxy for e
 net-proxy/shadowsocks-qt5 3.0.1: Shadowsocks-Qt5 is a native and cross-platform shadowsocks GUI client with advanced features.
 net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
 net-proxy/simple-obfs 0.0.5: A simple obfuscating tool
-net-proxy/smartproxy 0.9.2: A fast, proxy smart selector
+net-proxy/smartproxy 0.9.3: A fast, proxy smart selector
 net-proxy/squid 3.3.9: A full-featured web proxy cache
 net-proxy/trojan 1.4.3: An unidentifiable mechanism that helps you bypass GFW.
 net-proxy/v2ray 3.28: A platform for building proxies to bypass network restrictions
