@@ -3,6 +3,8 @@
 
 EAPI=6
 
+CMAKE_MIN_VERSION="3.8"
+
 inherit cmake-utils desktop flag-o-matic git-r3 gnome2-utils toolchain-funcs xdg
 
 DESCRIPTION="Official desktop client for Telegram"
