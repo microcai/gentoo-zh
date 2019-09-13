@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 dev-qt/qtdbus:5 dev-qt/qtx11extras:5 dev-qt/qtmultimedia:5[widgets] dev-qt/qtsvg:5 dev-qt/qtopengl dev-qt/qtxcb-private-headers x11-libs/libxcb[xkb] x11-libs/xcb-util-renderutil x11-libs/xcb-util-image x11-libs/xcb-util-wm x11-libs/xcb-util-keysyms !<=dde-base/dde-qt5integration-0.2.7
 SLOT=0
 SRC_URI=https://github.com/linuxdeepin/qt5dxcb-plugin/archive/1.2.0.tar.gz -> qt5dxcb-plugin-1.2.0.tar.gz
-_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	multilib	1d91b03d42ab6308b5f4f6b598ed110e	qmake-utils	bdf97e69a34b864d6d545f4ec3143ff7	toolchain-funcs	a3a237ef6c0c58546bf23b2c382f9e56
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	multilib	1d91b03d42ab6308b5f4f6b598ed110e	qmake-utils	bdf97e69a34b864d6d545f4ec3143ff7	toolchain-funcs	2f8b8f320bee13b71a8a54cc6d09e08a
 _md5_=37d7534a8b97d881517836b57225c9f1

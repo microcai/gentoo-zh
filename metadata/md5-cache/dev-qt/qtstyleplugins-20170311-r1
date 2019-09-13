@@ -8,5 +8,5 @@ LICENSE=LGPL-2
 PROPERTIES=live
 RDEPEND=dev-qt/qtgui:5[dbus] dev-qt/qtwidgets:5 x11-libs/gtk+:2 x11-libs/libX11
 SLOT=5
-_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	git-r3	562b380fc59ae6a8622171d0acb777d1	multilib	1d91b03d42ab6308b5f4f6b598ed110e	qmake-utils	bdf97e69a34b864d6d545f4ec3143ff7	toolchain-funcs	a3a237ef6c0c58546bf23b2c382f9e56
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	git-r3	562b380fc59ae6a8622171d0acb777d1	multilib	1d91b03d42ab6308b5f4f6b598ed110e	qmake-utils	bdf97e69a34b864d6d545f4ec3143ff7	toolchain-funcs	2f8b8f320bee13b71a8a54cc6d09e08a
 _md5_=64b2f4c365a6e6e7e230aad235866d12
