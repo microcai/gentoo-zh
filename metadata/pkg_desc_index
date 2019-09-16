@@ -423,7 +423,7 @@ net-proxy/smartproxy 0.9.3: A fast, proxy smart selector
 net-proxy/squid 3.3.9: A full-featured web proxy cache
 net-proxy/trojan 1.4.3: An unidentifiable mechanism that helps you bypass GFW.
 net-proxy/v2ray 3.28: A platform for building proxies to bypass network restrictions
-net-proxy/v2ray-bin 3.28: A platform for building proxies to bypass network restrictions.
+net-proxy/v2ray-bin 4.20.0: A platform for building proxies to bypass network restrictions.
 net-proxy/wallproxy-plus 2.1.18-r1 2.1.19 9999: New version of wallproxy, a general purpose proxy framework in Python.
 net-wireless/rtl8812au 9999-r1: rtl8812au rtl8821au kernel driver for AC1200 Wireless Dual-Band USB Adapter
 sci-calculators/tilp2 9999: Communication program for Texas Instruments calculators
