@@ -1,0 +1,41 @@
+#!/sbin/openrc-run
+# Copyright 1999-2015 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+config="/etc/shadowsocks-rust/config.json"
+pidfile="/run/shadowsocks-rust.pid"
+command_args="--config /etc/shadowsocks-rust/config.json"
+start_stop_daemon_args="--background --make-pidfile --stderr /var/log/shadowsocks-rust.log --stdout /var/log/shadowsocks-rust.log"
+name="Shadowsocks-rust fast tunnel proxy"
+depend() {
+    need net
+}
+
+checkconfig() {
+    if [ ! -f ${config} ]; then
+        ewarn "${config} does not exist."
+    fi
+
+    SS_SVCNAME="${RC_SVCNAME#*.}"
+    case ${SS_SVCNAME} in
+    local)
+        command="/usr/bin/sslocal"
+	return 0
+	;;
+    server)
+        command="/usr/bin/ssserver"
+	return 0
+	;;
+    *)
+    	eerror "please choose to run as server or client mode"
+    	eerror "  client: rc-update add shadowsocks-rust.local default"
+    	eerror "  server: rc-update add shadowsocks-rust.server default"
+        return 1
+    	;;
+    esac
+}
+
+start_pre() {
+	checkconfig || return 1
+	ebegin "Log file:/var/log/shadowsocks-rust.log"
+}
