@@ -1,0 +1,9 @@
+[Desktop Entry]
+Categories=Development
+Type=Application
+Name=JetBrains Toolbox
+Exec=/usr/bin/jetbrains-toolbox %u
+Icon=/usr/share/pixmaps/jetbrains-toolbox.svg
+StartupNotify=false
+Terminal=false
+MimeType=x-scheme-handler/jetbrains

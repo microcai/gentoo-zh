@@ -1,0 +1,180 @@
+From c0c06f39cdc8af1bd6e39751e243f276df325102 Mon Sep 17 00:00:00 2001
+From: kirigaya <kirigaya@mkacg.com>
+Date: Tue, 5 Dec 2017 14:04:50 +0800
+Subject: [PATCH] refactor(dockmenu): use DRegionMonitor
+
+Change-Id: I5e9c41d388ed6da2dd76f5350f165cb0f59906d4
+---
+ deepin-menu.pro   |  2 +-
+ src/ddockmenu.cpp | 62 ++++++++++++++-----------------------------------------
+ src/ddockmenu.h   | 12 +++++------
+ 3 files changed, 21 insertions(+), 55 deletions(-)
+
+diff --git a/deepin-menu.pro b/deepin-menu.pro
+index 8645feb..9ff9976 100644
+--- a/deepin-menu.pro
++++ b/deepin-menu.pro
+@@ -12,7 +12,7 @@ TARGET = deepin-menu
+ TEMPLATE = app
+ 
+ CONFIG += c++11 link_pkgconfig
+-PKGCONFIG += dtkwidget dframeworkdbus
++PKGCONFIG += dtkwidget
+ 
+ SOURCES += src/main.cpp \
+     src/ddesktopmenu.cpp \
+diff --git a/src/ddockmenu.cpp b/src/ddockmenu.cpp
+index 1e368f7..afae8e3 100644
+--- a/src/ddockmenu.cpp
++++ b/src/ddockmenu.cpp
+@@ -36,9 +36,7 @@
+ DDockMenu::DDockMenu(DDockMenu *parent):
+     DArrowRectangle(DArrowRectangle::ArrowBottom, parent),
+     m_menuContent(new DMenuContent(this)),
+-    m_mouseAreaInter(new com::deepin::api::XMouseArea("com.deepin.api.XMouseArea",
+-                                                      "/com/deepin/api/XMouseArea",
+-                                                      QDBusConnection::sessionBus(), this))
++    m_mouseAreaInter(new DRegionMonitor(this))
+ {
+     setWindowFlags(Qt::FramelessWindowHint | Qt::Tool);
+ 
+@@ -70,9 +68,9 @@ DDockMenu::DDockMenu(DDockMenu *parent):
+             ":/images/check_dark_inactive.png",
+             ":/images/arrow-dark.png"};
+ 
+-    connect(m_mouseAreaInter, &__XMouseArea::ButtonPress, this, &DDockMenu::onButtonPress);
+-    connect(m_mouseAreaInter, &__XMouseArea::CursorMove, this, &DDockMenu::onCursorMove);
+-    connect(m_mouseAreaInter, &__XMouseArea::KeyPress, this, &DDockMenu::onKeyPress);
++    connect(m_mouseAreaInter, &DRegionMonitor::buttonPress, this, &DDockMenu::onButtonPress);
++    connect(m_mouseAreaInter, &DRegionMonitor::cursorMove, this, &DDockMenu::onCursorMove);
++    connect(m_mouseAreaInter, &DRegionMonitor::keyPress, this, &DDockMenu::onKeyPress);
+ }
+ 
+ DDockMenu::~DDockMenu()
+@@ -153,23 +151,13 @@ void DDockMenu::grabFocus()
+         grabKeyboard();
+     });
+ 
+-    QDBusPendingCall call = m_mouseAreaInter->RegisterFullScreen();
+-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, this);
+-    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, watcher] {
+-        if (watcher->isError()) {
+-            qWarning() << "error registering mouse area: " << watcher->error().message();
+-        } else {
+-            QDBusReply<QString> reply = watcher->reply();
+-            m_mouseAreaKey = reply.value();
+-        }
+-    });
++    m_mouseAreaInter->registerRegion();
+ }
+ 
+ void DDockMenu::releaseFocus()
+ {
+     releaseMouse();
+     releaseKeyboard();
+-    m_mouseAreaInter->UnregisterArea(m_mouseAreaKey);
+ }
+ 
+ void DDockMenu::destroyAll()
+@@ -183,29 +171,23 @@ void DDockMenu::destroyAll()
+     });
+ }
+ 
+-void DDockMenu::onButtonPress(int, int in1, int in2, const QString &in3)
++void DDockMenu::onButtonPress(const QPoint &p, const int flag)
+ {
+-    if (in3 == m_mouseAreaKey) {
+-        qDebug() << "receive button press event from xmousearea: " << in1 << in2;
+-        const QPoint p = deviceScaledCoordinate(QPoint(in1, in2), qApp->devicePixelRatio());
+-        m_menuContent->processButtonClick(p.x(), p.y());
+-    }
++    Q_UNUSED(flag);
++
++    qDebug() << "receive button press event from xmousearea: " << p;
++    m_menuContent->processButtonClick(p.x(), p.y());
+ }
+ 
+-void DDockMenu::onCursorMove(int in0, int in1, const QString &in2)
++void DDockMenu::onCursorMove(const QPoint &p)
+ {
+-    if (in2 == m_mouseAreaKey) {
+-        const QPoint p = deviceScaledCoordinate(QPoint(in0, in1), qApp->devicePixelRatio());
+-        m_menuContent->processCursorMove(p.x(), p.y());
+-    }
++    m_menuContent->processCursorMove(p.x(), p.y());
+ }
+ 
+-void DDockMenu::onKeyPress(const QString &in0, int, int, const QString &in3)
++void DDockMenu::onKeyPress(const QString &keyname)
+ {
+-    if (in3 == m_mouseAreaKey) {
+-        qDebug() << "receive key press event from xmousearea: " << in0;
+-        m_menuContent->processKeyPress(in0);
+-    }
++    qDebug() << "receive key press event from xmousearea: " << keyname;
++    m_menuContent->processKeyPress(keyname);
+ }
+ 
+ void DDockMenu::onWMCompositeChanged()
+@@ -215,17 +197,3 @@ void DDockMenu::onWMCompositeChanged()
+     else
+         setBorderColor(QColor("#2C3238"));
+ }
+-
+-const QPoint DDockMenu::deviceScaledCoordinate(const QPoint &p, const double ratio) const
+-{
+-    for (const auto *s : qApp->screens())
+-    {
+-        const QRect &g(s->geometry());
+-        const QRect realRect(g.topLeft(), g.size() * ratio);
+-
+-        if (realRect.contains(p))
+-            return QPoint(realRect.topLeft() + (p - realRect.topLeft()) / ratio);
+-    }
+-
+-    return p / ratio;
+-}
+diff --git a/src/ddockmenu.h b/src/ddockmenu.h
+index f4d9074..5be68f2 100644
+--- a/src/ddockmenu.h
++++ b/src/ddockmenu.h
+@@ -23,7 +23,7 @@
+ #include <darrowrectangle.h>
+ #include "dabstractmenu.h"
+ #include <DWindowManagerHelper>
+-#include <com_deepin_api_xmousearea.h>
++#include <dregionmonitor.h>
+ 
+ DWIDGET_USE_NAMESPACE
+ 
+@@ -54,9 +54,9 @@ class DDockMenu : public DArrowRectangle, public DAbstractMenu
+     void itemClicked(const QString &id, bool checked);
+ 
+ private slots:
+-    void onButtonPress(int in0, int in1, int in2, const QString &in3);
+-    void onCursorMove(int in0, int in1, const QString &in2);
+-    void onKeyPress(const QString &in0, int in1, int in2, const QString &in3);
++    void onButtonPress(const QPoint &p, const int flag);
++    void onCursorMove(const QPoint &p);
++    void onKeyPress(const QString &keyname);
+     void onWMCompositeChanged();
+ 
+ private:
+@@ -65,7 +65,6 @@ private slots:
+     void showSubMenu(int x, int y, const QJsonObject &obj );
+ 
+     bool event(QEvent *event) Q_DECL_OVERRIDE;
+-    const QPoint deviceScaledCoordinate(const QPoint &p, const double ratio) const;
+ 
+ private:
+     friend class DMenuContent;
+@@ -75,8 +74,7 @@ private slots:
+     ItemStyle hoverStyle;
+     ItemStyle inactiveStyle;
+ 
+-    QString m_mouseAreaKey;
+-    com::deepin::api::XMouseArea *m_mouseAreaInter;
++    DRegionMonitor *m_mouseAreaInter;
+ 
+     DWindowManagerHelper *m_wmHelper;
+ };

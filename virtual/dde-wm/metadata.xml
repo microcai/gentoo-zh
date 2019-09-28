@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>atenzd@gmail.com</email>
+		<name>Aten Zhang</name>
+	</maintainer>
+	<use>
+		<flag name="mutter">
+				Use the WM based on mutter
+		</flag>
+		<flag name="kwin">
+				Use the WM based on kwin
+		</flag>
+		<flag name="minimal">
+				Prefer <pkg>x11-wm/deepin-metacity</pkg> over other two WM
+		</flag>
+	</use>
+</pkgmetadata>
