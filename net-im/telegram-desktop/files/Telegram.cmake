@@ -62,11 +62,17 @@ list(APPEND THIRDPARTY_INCLUDE_DIRS
 	ThirdParty/variant/include
 )
 
+
 file(GLOB QRC_FILES
-	Resources/qrc/telegram_emoji_1.qrc  Resources/qrc/telegram_emoji_5.qrc        Resources/qrc/telegram.qrc
-	Resources/qrc/telegram_emoji_2.qrc  Resources/qrc/telegram_emoji_preview.qrc  Resources/qrc/telegram_sounds.qrc
-	Resources/qrc/telegram_emoji_3.qrc
-	Resources/qrc/telegram_emoji_4.qrc
+	Resources/qrc/telegram/telegram.qrc
+	Resources/qrc/telegram/telegram_sounds.qrc
+	Resources/qrc/emoji_preview.qrc
+	Resources/qrc/emoji_1.qrc
+	Resources/qrc/emoji_2.qrc
+	Resources/qrc/emoji_3.qrc
+	Resources/qrc/emoji_4.qrc
+	Resources/qrc/emoji_5.qrc
+	Resources/qrc/fonts.qrc
 	# This only disables system plugin search path
 	# We do not want this behavior for system build
 	# Resources/qrc/telegram_linux.qrc
@@ -239,7 +245,10 @@ if(BUILD_TESTS)
 	include(TelegramTests)
 endif()
 
-set_target_properties(Telegram PROPERTIES OUTPUT_NAME "telegram-desktop")
+set_target_properties(Telegram PROPERTIES
+	AUTOMOC_MOC_OPTIONS -bSourceFiles/stdafx.h
+	OUTPUT_NAME "telegram-desktop"
+)
 
 install(TARGETS Telegram RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
