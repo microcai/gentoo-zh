@@ -24,7 +24,7 @@ if [[ ${PV} == 9999 ]]; then
 	KEYWORDS=""
 else
 	EGIT_COMMIT="v${PV}"
-	RANGE_V3_VER="0.5.0"
+	RANGE_V3_VER="0.9.1"
 	KEYWORDS="~amd64 ~x86"
 fi
 

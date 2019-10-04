@@ -1,6 +1,7 @@
 file(GLOB CODEGEN_COMMON_SOURCES
 	SourceFiles/codegen/common/*.h
 	SourceFiles/codegen/common/*.cpp
+	SourceFiles/base/crc32hash.cpp
 )
 
 add_library(codegen_common OBJECT ${CODEGEN_COMMON_SOURCES})

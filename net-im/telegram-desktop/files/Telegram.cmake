@@ -127,6 +127,9 @@ file(GLOB SUBDIRS_SOURCE_EXTRA_FILES
 	SourceFiles/history/feed/history_feed_section.cpp
 	SourceFiles/info/channels/info_channels_widget.cpp
 	SourceFiles/info/feed/*.cpp
+	SourceFiles/ui/platform/mac/*
+	SourceFiles/ui/platform/win/*
+	SourceFiles/platform/win/*
 )
 list(REMOVE_ITEM SUBDIRS_SOURCE_FILES ${SUBDIRS_SOURCE_EXTRA_FILES})
 
@@ -226,17 +229,11 @@ endif()
 target_sources(Telegram PRIVATE ${GENERATED_SOURCES})
 add_dependencies(Telegram telegram_codegen)
 
-include(PrecompiledHeader)
-add_precompiled_header(Telegram SourceFiles/stdafx.h)
-
 target_compile_definitions(Telegram PUBLIC ${TELEGRAM_COMPILE_DEFINITIONS})
 target_include_directories(Telegram PUBLIC ${TELEGRAM_INCLUDE_DIRS})
 target_link_libraries(Telegram ${TELEGRAM_LINK_LIBRARIES})
 
-set_target_properties(Telegram PROPERTIES
-	AUTOMOC_MOC_OPTIONS -bTelegram_pch/stdafx.h
-	OUTPUT_NAME "telegram-desktop"
-)
+target_compile_options(Telegram PUBLIC -include ${CMAKE_SOURCE_DIR}/SourceFiles/stdafx.h)
 
 if(BUILD_TESTS)
 	include(TelegramTests)
