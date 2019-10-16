@@ -313,7 +313,6 @@ gnome-extra/lunar-applet 1.6 2.0 2.20.3: The GNOME panel
 gnome-extra/nautilus-setup-background 0.1: A nautilus extension for setup background
 gnome-extra/proxy_applet 0.2: GNOME applet for changing network proxy configuration from gnome panel
 kde-misc/imageshack-upload 0.5: A service menu tor upload images on Imageshack.
-kde-misc/plasma-applet-netspeed-widget 1.4 9999: Plasma 5 widget that displays the currently used network bandwidth.
 mail-client/deepin-wine-foxmail 7.2.3: Foxmail mail client for Linux by Deepin
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/ntufonts 20030521: Chinese Fonts from National Taiwan University, Includes kai, Lei, Funsong, and Thin.
