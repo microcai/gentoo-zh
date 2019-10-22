@@ -9,5 +9,5 @@ PROPERTIES=live
 RDEPEND=x11-themes/dmz-cursor-theme x11-themes/elementary-icon-theme x11-themes/gtk-engines-aurora =x11-themes/gtk-engines-murrine-9999
 RESTRICT=binchecks mirror strip
 SLOT=0
-_eclasses_=bzr	f97eb9136cdd4b8cfccb3e033fd36db5
+_eclasses_=bzr	d53abbffb0f23594f6ead511cf15f811
 _md5_=b35bf0e4cd19a311a90df5818ff0e8d4
