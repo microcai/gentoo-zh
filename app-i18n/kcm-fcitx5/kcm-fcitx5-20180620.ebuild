@@ -1,10 +1,10 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
 
 inherit cmake-utils git-r3
-EGIT_REPO_URI="https://gitlab.com/fcitx/kcm-fcitx5.git"
+EGIT_REPO_URI="https://github.com/fcitx/kcm-fcitx5.git"
 
 if [[ ! "${PV}" =~ (^|\.)9999$ ]]; then
 	EGIT_COMMIT="62e087f3b79e758187303f07ebaf7edc6219ec9d"

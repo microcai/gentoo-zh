@@ -1,13 +1,13 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
 
 inherit cmake-utils gnome2-utils xdg-utils git-r3
-EGIT_REPO_URI="https://gitlab.com/fcitx/libime.git"
+EGIT_REPO_URI="https://github.com/fcitx/libime.git"
 
 if [[ ! "${PV}" =~ (^|\.)9999$ ]]; then
-	EGIT_COMMIT="d612e0722a3fed5ede2138195c8b54d61dca4798"
+	EGIT_COMMIT="32541593515f45e76f75831e324a5f20b7ffba94"
 fi
 SRC_URI="https://download.fcitx-im.org/data/lm_sc.3gm.arpa-20140820.tar.bz2 -> fcitx5-lm_sc.3gm.arpa-20140820.tar.bz2
 https://download.fcitx-im.org/data/dict.utf8-20170423.tar.xz -> fcitx5-dict.utf8-20170423.tar.xz

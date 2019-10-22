@@ -1,10 +1,10 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
 
 inherit cmake-utils gnome2-utils xdg-utils git-r3
-EGIT_REPO_URI="https://gitlab.com/fcitx/fcitx5-chinese-addons.git"
+EGIT_REPO_URI="https://github.com/fcitx/fcitx5-chinese-addons.git"
 
 if [[ ! "${PV}" =~ (^|\.)9999$ ]]; then
 	EGIT_COMMIT="cf54d3ab3d2369af7759b39baf202a7105fc67d5"
@@ -14,7 +14,7 @@ https://download.fcitx-im.org/data/py_table-20121124.tar.gz -> fcitx-data-py_tab
 "
 
 DESCRIPTION="Addons related to Chinese, including IME previous bundled inside fcitx4."
-HOMEPAGE="https://gitlab.com/fcitx/fcitx5-chinese-addons"
+HOMEPAGE="https://github.com/fcitx/fcitx5-chinese-addons"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"

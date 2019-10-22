@@ -1,15 +1,15 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
 
 inherit cmake-utils git-r3 gnome2-utils xdg-utils
-EGIT_REPO_URI="https://gitlab.com/fcitx/fcitx5-gtk.git"
+EGIT_REPO_URI="https://github.com/fcitx/fcitx5-gtk.git"
 
 SRC_URI=""
 
 DESCRIPTION="Gtk im module for fcitx5 and glib based dbus client library"
-HOMEPAGE="https://gitlab.com/fcitx/fcitx5-gtk"
+HOMEPAGE="https://github.com/fcitx/fcitx5-gtk"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"

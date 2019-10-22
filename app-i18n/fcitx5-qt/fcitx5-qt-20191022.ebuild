@@ -1,19 +1,19 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
 
 inherit cmake-utils git-r3
-EGIT_REPO_URI="https://gitlab.com/fcitx/fcitx5-qt.git"
+EGIT_REPO_URI="https://github.com/fcitx/fcitx5-qt.git"
 if [[ ! "${PV}" =~ (^|\.)9999$ ]]; then
-	EGIT_COMMIT="9ac0796e44beaf109dbc3dd2e4e7263499ad5c04"
+	EGIT_COMMIT="982888d9759a78671794ec44323f4f77b6c4f4c6"
 fi
 
 
 SRC_URI=""
 
 DESCRIPTION="Qt library and IM module for fcitx5"
-HOMEPAGE="https://gitlab.com/fcitx/fcitx5-qt"
+HOMEPAGE="https://github.com/fcitx/fcitx5-qt"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
@@ -51,4 +51,3 @@ src_configure() {
 src_install(){
 	cmake-utils_src_install
 }
-
