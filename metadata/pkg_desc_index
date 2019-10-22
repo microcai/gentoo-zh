@@ -99,10 +99,10 @@ app-i18n/fcitx-table-other 0.2.2: Provides some other tables for fcitx, fork fro
 app-i18n/fcitx-tsundere 0.1: Fcitx Tsundere Addon
 app-i18n/fcitx-ui-light 0.1.3: A very light weight ui for fcitx, only using xlib and xpm, like go back to 3.6.x times.
 app-i18n/fcitx-unikey 0.2.2: unikey support for fcitx.
-app-i18n/fcitx5 20181104 999999999: Fcitx5 Next generation of fcitx
+app-i18n/fcitx5 20191021 999999999: Fcitx5 Next generation of fcitx
 app-i18n/fcitx5-chinese-addons 20181104 999999999: Addons related to Chinese, including IME previous bundled inside fcitx4.
 app-i18n/fcitx5-gtk 20181020 999999999: Gtk im module for fcitx5 and glib based dbus client library
-app-i18n/fcitx5-qt 20181104 9999999999: Qt library and IM module for fcitx5
+app-i18n/fcitx5-qt 20191022 9999999999: Qt library and IM module for fcitx5
 app-i18n/fcitx5-rime 20180620 99999999: Rime Support for Fcitx5
 app-i18n/gcin 2.8.5: Another Traditional Chinese IM.
 app-i18n/hime 0.9.10: HIME Input Method Editor
@@ -114,7 +114,7 @@ app-i18n/ibus-xkb 1.4.99.20120525:
 app-i18n/jfbterm 0.4.7-r4: The J Framebuffer Terminal/Multilingual Enhancement with UTF-8 support
 app-i18n/kcm-fcitx5 20180620 99999999: KDE configuration module for Fcitx
 app-i18n/libgooglepinyin 0.1.2: A fork from google pinyin on android
-app-i18n/libime 20180817 99999999: Fcitx5 Next generation of fcitx
+app-i18n/libime 20190826 99999999: Fcitx5 Next generation of fcitx
 app-i18n/libpinyin 1.0.0: Library to deal with Pinyin.
 app-i18n/librime 1.1-r1 9999: Rime Input Method Engine library
 app-i18n/libucimf 2.3.8 9999: Unicode Console InputMethod Framework
@@ -486,7 +486,7 @@ x11-libs/deepin-ui 1.1.20141229194712-r1: UI toolkit for Linux Deepin.
 x11-libs/gsettings-qt 0.1_p20170824 0.2: Qml bindings for GSettings.
 x11-libs/libvdpau-va-gl 9999: VDPAU driver with VA-API/OpenGL backend.
 x11-libs/lunar-calendar 0.3.1 2.4.1 3.0.0: Chinese Lunar Library Gtk+ widget
-x11-libs/xcb-imdkit 20171205: An implementation of xim protocol in xcb
+x11-libs/xcb-imdkit 20190826: An implementation of xim protocol in xcb
 x11-misc/9menu 1.8: Create X menus from the shell
 x11-misc/fqterm 0.9.8.3.4 9999: a modern terminal emulator for Linux
 x11-misc/gimmie 0.2.8: Gimmie is an experimental panel replacement for the Gnome desktop
