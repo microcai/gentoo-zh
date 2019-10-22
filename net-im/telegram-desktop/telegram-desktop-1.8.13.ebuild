@@ -3,6 +3,8 @@
 
 EAPI=6
 
+CMAKE_MIN_VERSION="3.8"
+
 inherit cmake-utils desktop flag-o-matic git-r3 gnome2-utils toolchain-funcs xdg
 
 DESCRIPTION="Official desktop client for Telegram"
@@ -22,7 +24,7 @@ if [[ ${PV} == 9999 ]]; then
 	KEYWORDS=""
 else
 	EGIT_COMMIT="v${PV}"
-	RANGE_V3_VER="0.5.0"
+	RANGE_V3_VER="0.9.1"
 	KEYWORDS="~amd64 ~x86"
 fi
 
