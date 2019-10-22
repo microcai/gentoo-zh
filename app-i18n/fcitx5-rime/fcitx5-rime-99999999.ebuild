@@ -1,15 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 EAPI=6
 
 inherit cmake-utils gnome2-utils git-r3
 
 DESCRIPTION="Rime Support for Fcitx5"
-HOMEPAGE="https://gitlab.com/fcitx/fcitx5-rime"
+HOMEPAGE="https://github.com/fcitx/fcitx5-rime"
 
-EGIT_REPO_URI="https://gitlab.com/fcitx/fcitx5-rime.git"
+EGIT_REPO_URI="https://github.com/fcitx/fcitx5-rime.git"
 
 LICENSE="GPL-2"
 SLOT="5"

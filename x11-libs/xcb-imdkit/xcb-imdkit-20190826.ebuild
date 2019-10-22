@@ -1,13 +1,13 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
 
 inherit cmake-utils xdg-utils git-r3
-EGIT_REPO_URI="https://gitlab.com/fcitx/xcb-imdkit.git"
+EGIT_REPO_URI="https://github.com/fcitx/xcb-imdkit.git"
 
 if [[ ! "${PV}" =~ (^|\.)9999$ ]]; then
-	EGIT_COMMIT="b82eddb3432b25f0db4aa7db4f68c6744ad895c1"
+	EGIT_COMMIT="a607b1927b4e9487f01468786b2a2248aa42525f"
 fi
 SRC_URI=""
 
@@ -21,7 +21,7 @@ IUSE=""
 REQUIRED_USE=""
 
 RDEPEND="x11-libs/xcb-util
-    x11-libs/xcb-util-keysyms"
+	x11-libs/xcb-util-keysyms"
 DEPEND="${RDEPEND}
 	kde-frameworks/extra-cmake-modules:5
 	virtual/pkgconfig"
