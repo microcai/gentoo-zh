@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=6
+EAPI=7
 
 inherit kde5
 
@@ -19,6 +19,7 @@ fi
 LICENSE="GPL-2+"
 KEYWORDS="~amd64"
 IUSE=""
+RESTRICT="mirror"
 
 DEPEND="
 	$(add_frameworks_dep plasma)
