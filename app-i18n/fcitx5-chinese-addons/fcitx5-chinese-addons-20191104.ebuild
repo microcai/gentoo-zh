@@ -7,7 +7,7 @@ inherit cmake-utils gnome2-utils xdg-utils git-r3
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5-chinese-addons.git"
 
 if [[ ! "${PV}" =~ (^|\.)9999$ ]]; then
-	EGIT_COMMIT="cf54d3ab3d2369af7759b39baf202a7105fc67d5"
+	EGIT_COMMIT="cde40b27aa344ed49939ff4f3b450de95af6a8cc"
 fi
 SRC_URI="https://download.fcitx-im.org/data/py_stroke-20121124.tar.gz -> fcitx-data-py_stroke-20121124.tar.gz
 https://download.fcitx-im.org/data/py_table-20121124.tar.gz -> fcitx-data-py_table-20121124.tar.gz
