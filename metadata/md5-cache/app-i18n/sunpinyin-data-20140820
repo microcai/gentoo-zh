@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1 CDDL
 RESTRICT=primaryuri
 SLOT=0
 SRC_URI=mirror://sourceforge/open-gram/dict.utf8-20131214.tar.bz2 mirror://sourceforge/open-gram/lm_sc.3gm.arpa-20140820.tar.bz2
-_eclasses_=multilib	1d91b03d42ab6308b5f4f6b598ed110e	toolchain-funcs	2f8b8f320bee13b71a8a54cc6d09e08a
+_eclasses_=multilib	1d91b03d42ab6308b5f4f6b598ed110e	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
 _md5_=bd6f628f19d1cd4377a174c19713fcbc
