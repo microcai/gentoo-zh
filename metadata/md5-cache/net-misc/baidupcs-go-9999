@@ -1,0 +1,12 @@
+BDEPEND=>=dev-lang/go-1.10
+DEFINED_PHASES=compile install test unpack
+DESCRIPTION=The terminal utility for Baidu Network Disk (Golang Version).
+EAPI=7
+HOMEPAGE=https://github.com/iikira/BaiduPCS-Go
+LICENSE=Apache-2.0
+PROPERTIES=live
+RDEPEND=!net-misc/baidupcs-go-bin
+RESTRICT=strip
+SLOT=0
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	golang-base	c57d2c3f9e1a02d0feb8b87c7b689892	golang-build	dc25bafa8fc1305a4de66a0a448472e7	golang-vcs	87f98f69344c1cc36c538f6388ebebb9
+_md5_=3f3c0109c3b1e6232f0377434e056cf7

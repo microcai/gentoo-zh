@@ -382,6 +382,8 @@ net-libs/jzmq 9999: jzmq
 net-misc/TelegramQML 0.9.1: Telegram API tools for QtQML and Qml
 net-misc/avbot 9999: avbot connects QQ/XMPP/IRC/POP3/SMTP
 net-misc/avsocks 9999: 科学操长城软件
+net-misc/baidunetdisk 2.0.1 2.0.2: Baidu Net Disk is a cloud storage client (Linux Version)
+net-misc/baidupcs-go 3.5.6 3.6 9999: The terminal utility for Baidu Network Disk (Golang Version).
 net-misc/biabiamiamia 0.1 0.1.20130305 1.3.20130307 1.5.20130315: 百毒歌曲批量下
 net-misc/bypy 9999: Python client for Baidu Yun Cloud Storage
 net-misc/deepin-wine-thunderspeed 7.10.35.366.18: ThunderSpeed for Linux by Deepin
