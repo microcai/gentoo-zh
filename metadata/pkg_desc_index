@@ -66,7 +66,7 @@ app-editors/marketo 9999: A note-taking KDE application with the power of lightw
 app-editors/sublime-text 3_p3176: Sophisticated text editor for code, markup and prose
 app-editors/typora 20190909: markdown editor
 app-editors/uex 16.1.0.22: Ultra Editor for Linux
-app-editors/visual-studio-code 1.37: Multiplatform Visual Studio Code from Microsoft
+app-editors/visual-studio-code 1.40: Multiplatform Visual Studio Code from Microsoft
 app-emulation/crossover-bin 16.2.0 17.0.0 17.1.0: Commercial version of app-emulation/wine with paid support.
 app-emulation/deepin-wine 2.18.18_rc2: Deepin Version of Wine
 app-emulation/deepin-wine-helper 1.2.0: Deepin Version of Wine
