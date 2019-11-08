@@ -12,7 +12,14 @@ HOMEPAGE="https://desktop.telegram.org"
 
 EGIT_REPO_URI="https://github.com/telegramdesktop/tdesktop.git"
 EGIT_SUBMODULES=(
-	Telegram/ThirdParty/crl
+	Telegram/lib_crl
+	Telegram/lib_tl
+	Telegram/lib_rpl
+	Telegram/lib_base
+	Telegram/lib_ui
+	Telegram/lib_lottie
+	Telegram/lib_spellcheck
+	Telegram/codegen
 	Telegram/ThirdParty/libtgvoip
 	Telegram/ThirdParty/variant
 	Telegram/ThirdParty/GSL
@@ -116,9 +123,10 @@ src_prepare() {
 	local LIBTGVOIP_DIR="${THIRD_PARTY_DIR}/libtgvoip"
 
 	cp "${FILESDIR}/Telegram.cmake" "${S}/Telegram/CMakeLists.txt"
-	cp "${FILESDIR}/ThirdParty-crl.cmake" "${THIRD_PARTY_DIR}/crl/CMakeLists.txt"
+	cp "${FILESDIR}/ThirdParty-crl.cmake" "${S}/Telegram/lib_crl/CMakeLists.txt"
 	cp "${FILESDIR}/ThirdParty-libtgvoip.cmake" "${LIBTGVOIP_DIR}/CMakeLists.txt"
 	cp "${FILESDIR}/ThirdParty-rlottie.cmake" "${THIRD_PARTY_DIR}/rlottie/CMakeLists.txt"
+	cp "${FILESDIR}/linux.qrc" "${S}/Telegram/lib_ui/qt_conf/linux.qrc"
 
 	mkdir "${CMAKE_MODULES_DIR}" || die
 	cp "${FILESDIR}/FindBreakpad.cmake" "${CMAKE_MODULES_DIR}"

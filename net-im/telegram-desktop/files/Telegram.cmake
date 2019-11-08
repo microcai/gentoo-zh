@@ -16,7 +16,7 @@ list(APPEND CMAKE_MODULE_PATH
 )
 
 option(BUILD_TESTS "Build all available test suites" OFF)
-option(ENABLE_CRASH_REPORTS "Enable crash reports" ON)
+option(ENABLE_CRASH_REPORTS "Enable crash reports" OFF)
 option(ENABLE_GTK_INTEGRATION "Enable GTK integration" ON)
 option(ENABLE_OPENAL_EFFECTS "Enable OpenAL effects" ON)
 option(ENABLE_PULSEAUDIO "Enable pulseaudio" ON)
@@ -46,7 +46,7 @@ pkg_check_modules(LIBDRM REQUIRED libdrm)
 pkg_check_modules(LIBVA REQUIRED libva libva-drm libva-x11)
 pkg_check_modules(MINIZIP REQUIRED minizip)
 
-add_subdirectory(ThirdParty/crl)
+add_subdirectory(lib_crl)
 add_subdirectory(ThirdParty/libtgvoip)
 add_subdirectory(ThirdParty/rlottie)
 
@@ -55,7 +55,13 @@ set_property(SOURCE ${GENERATED_SOURCES} PROPERTY SKIP_AUTOMOC ON)
 
 include_directories(SourceFiles)
 list(APPEND THIRDPARTY_INCLUDE_DIRS
-	ThirdParty/crl/src
+	ThirdParty/lib_crl
+	lib_rpl
+	lib_ui
+	lib_tl
+	lib_spellcheck
+	lib_lottie
+	lib_ui/emoji_suggestions
 	ThirdParty/emoji_suggestions
 	ThirdParty/GSL/include
 	ThirdParty/libtgvoip
@@ -65,14 +71,17 @@ list(APPEND THIRDPARTY_INCLUDE_DIRS
 
 file(GLOB QRC_FILES
 	Resources/qrc/telegram/telegram.qrc
-	Resources/qrc/telegram/telegram_sounds.qrc
+	Resources/qrc/telegram/sounds.qrc
 	Resources/qrc/emoji_preview.qrc
 	Resources/qrc/emoji_1.qrc
 	Resources/qrc/emoji_2.qrc
 	Resources/qrc/emoji_3.qrc
 	Resources/qrc/emoji_4.qrc
 	Resources/qrc/emoji_5.qrc
-	Resources/qrc/fonts.qrc
+
+	lib_ui/qt_conf/linux.qrc
+	lib_ui/fonts/fonts.qrc
+
 	# This only disables system plugin search path
 	# We do not want this behavior for system build
 	# Resources/qrc/telegram_linux.qrc
@@ -101,8 +110,106 @@ file(GLOB FLAT_SOURCE_FILES
 	SourceFiles/storage/*.cpp
 	SourceFiles/storage/cache/*.cpp
 	SourceFiles/support/*.cpp
-	ThirdParty/emoji_suggestions/*.cpp
+#	lib_base/base/*.cpp
+#	lib_base/base/platform/*.cpp
+#	lib_base/base/platform/linux/*.cpp
+	lib_ui/emoji_suggestions/*.cpp
+
+	lib_lottie/lottie/*.cpp
+
+	lib_spellcheck/spellcheck/*.cpp
+	lib_spellcheck/spellcheck/platform/linux/*.cpp
 )
+
+set(LIBBASE_SOURCES
+
+	lib_base/base/platform/linux/base_file_utilities_linux.cpp
+	lib_base/base/platform/linux/base_file_utilities_linux.h
+	lib_base/base/platform/linux/base_info_linux.cpp
+	lib_base/base/platform/linux/base_info_linux.h
+	lib_base/base/platform/linux/base_last_input_linux.cpp
+	lib_base/base/platform/linux/base_last_input_linux.h
+	lib_base/base/platform/linux/base_layout_switch_linux.cpp
+	lib_base/base/platform/linux/base_layout_switch_linux.h
+	lib_base/base/platform/linux/base_process_linux.cpp
+	lib_base/base/platform/linux/base_process_linux.h
+	lib_base/base/platform/linux/base_url_scheme_linux.cpp
+	lib_base/base/platform/linux/base_url_scheme_linux.h
+	lib_base/base/platform/base_platform_info.h
+	lib_base/base/platform/base_platform_last_input.h
+	lib_base/base/platform/base_platform_layout_switch.h
+	lib_base/base/platform/base_platform_file_utilities.h
+	lib_base/base/platform/base_platform_process.h
+	lib_base/base/platform/base_platform_url_scheme.h
+	lib_base/base/algorithm.h
+	lib_base/base/assertion.cpp
+	lib_base/base/assertion.h
+	lib_base/base/basic_types.h
+	lib_base/base/binary_guard.h
+	lib_base/base/build_config.h
+	lib_base/base/bytes.h
+	lib_base/base/call_delayed.cpp
+	lib_base/base/call_delayed.h
+	lib_base/base/crash_report_header.cpp
+	lib_base/base/crash_report_header.h
+	lib_base/base/crc32hash.cpp
+	lib_base/base/crc32hash.h
+	lib_base/base/concurrent_timer.cpp
+	lib_base/base/concurrent_timer.h
+	lib_base/base/flags.h
+	lib_base/base/enum_mask.h
+	lib_base/base/event_filter.cpp
+	lib_base/base/event_filter.h
+	lib_base/base/base_file_utilities.cpp
+	lib_base/base/base_file_utilities.h
+	lib_base/base/flat_map.h
+	lib_base/base/flat_set.h
+	lib_base/base/functors.h
+	lib_base/base/index_based_iterator.h
+	lib_base/base/integration.cpp
+	lib_base/base/integration.h
+	lib_base/base/invoke_queued.h
+	lib_base/base/last_used_cache.h
+	lib_base/base/last_user_input.cpp
+	lib_base/base/last_user_input.h
+	lib_base/base/match_method.h
+	lib_base/base/object_ptr.h
+	lib_base/base/observer.cpp
+	lib_base/base/observer.h
+	lib_base/base/ordered_set.h
+	lib_base/base/openssl_help.h
+	lib_base/base/optional.h
+	lib_base/base/overload.h
+	lib_base/base/parse_helper.cpp
+	lib_base/base/parse_helper.h
+	lib_base/base/qthelp_regex.h
+	lib_base/base/qthelp_url.cpp
+	lib_base/base/qthelp_url.h
+	lib_base/base/qt_connection.h
+	lib_base/base/qt_signal_producer.h
+	lib_base/base/runtime_composer.cpp
+	lib_base/base/runtime_composer.h
+	lib_base/base/single_instance.cpp
+	lib_base/base/single_instance.h
+	lib_base/base/thread_safe_wrap.h
+	lib_base/base/timer.cpp
+	lib_base/base/timer.h
+	lib_base/base/timer_rpl.h
+	lib_base/base/type_traits.h
+	lib_base/base/unique_any.h
+	lib_base/base/unique_function.h
+	lib_base/base/unique_qptr.h
+	lib_base/base/unixtime.cpp
+	lib_base/base/unixtime.h
+	lib_base/base/value_ordering.h
+	lib_base/base/variant.h
+	lib_base/base/virtual_method.h
+	lib_base/base/weak_ptr.h
+	lib_base/base/zlib_help.h
+
+	lib_base/base/file_lock_posix.cpp
+)
+
 file(GLOB FLAT_EXTRA_FILES
 	SourceFiles/qt_static_plugins.cpp
 	SourceFiles/base/*_tests.cpp
@@ -128,18 +235,22 @@ file(GLOB_RECURSE SUBDIRS_SOURCE_FILES
 	SourceFiles/media/streaming/*.cpp
 	SourceFiles/ui/*.cpp
 	SourceFiles/window/*.cpp
+	SourceFiles/platform/win/*
+	lib_ui/ui/*.cpp
+	lib_ui/ui/style/*.cpp
+	lib_ui/ui/effects/*.cpp
 )
 file(GLOB SUBDIRS_SOURCE_EXTRA_FILES
 	SourceFiles/history/feed/history_feed_section.cpp
 	SourceFiles/info/channels/info_channels_widget.cpp
 	SourceFiles/info/feed/*.cpp
-	SourceFiles/ui/platform/mac/*
-	SourceFiles/ui/platform/win/*
+	lib_ui/ui/platform/mac/*
+	lib_ui/ui/platform/win/*
 	SourceFiles/platform/win/*
 )
 list(REMOVE_ITEM SUBDIRS_SOURCE_FILES ${SUBDIRS_SOURCE_EXTRA_FILES})
 
-add_executable(Telegram WIN32 ${QRC_FILES} ${FLAT_SOURCE_FILES} ${SUBDIRS_SOURCE_FILES})
+add_executable(Telegram WIN32 ${QRC_FILES} ${LIBBASE_SOURCES} ${FLAT_SOURCE_FILES} ${SUBDIRS_SOURCE_FILES})
 
 set(TELEGRAM_COMPILE_DEFINITIONS
 	Q_OS_LINUX64

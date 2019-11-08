@@ -11,15 +11,17 @@ set(GENERATED_SCHEME_SOURCES
 add_custom_command(
 	OUTPUT ${GENERATED_SCHEME_SOURCES}
 	COMMAND python ${CMAKE_SOURCE_DIR}/SourceFiles/codegen/scheme/codegen_scheme.py
-		-o${GENERATED_DIR} ${CMAKE_SOURCE_DIR}/Resources/tl/mtproto.tl ${CMAKE_SOURCE_DIR}/Resources/tl/api.tl
+		-o${GENERATED_DIR}/scheme ${CMAKE_SOURCE_DIR}/Resources/tl/mtproto.tl ${CMAKE_SOURCE_DIR}/Resources/tl/api.tl
 	DEPENDS Resources/tl/mtproto.tl Resources/tl/api.tl
 	COMMENT "Codegen scheme.h"
 )
 list(APPEND GENERATED_SOURCES ${GENERATED_SCHEME_SOURCES})
 
 file(GLOB_RECURSE STYLES
-	Resources/*.palette
-	Resources/*.style
+	lib_ui/ui/*.palette
+	lib_ui/ui/*.style
+	lib_ui/ui/widgets/*.style
+	lib_ui/ui/layers/*.style
 	SourceFiles/*.style
 )
 foreach(STYLE ${STYLES})
@@ -41,7 +43,7 @@ foreach(STYLE ${STYLES})
 	add_custom_command(
 		OUTPUT ${GENERATED_STYLE_SOURCES}
 		COMMAND ${CMAKE_BINARY_DIR}/codegen_style
-			-IResources -ISourceFiles -o${GENERATED_DIR}/styles ${STYLE}
+			-IResources -ISourceFiles -Ilib_ui -o${GENERATED_DIR}/styles ${STYLE}
 		WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
 		DEPENDS codegen_style ${STYLE}
 		COMMENT "Codegen style ${STYLE_FILENAME}"
@@ -49,7 +51,7 @@ foreach(STYLE ${STYLES})
 	list(APPEND GENERATED_SOURCES ${GENERATED_STYLE_SOURCES})
 endforeach()
 
-set(RES_EMOJI emoji_autocomplete.json)
+set(RES_EMOJI ../lib_ui/emoji_suggestions/emoji_autocomplete.json)
 set(GENERATED_EMOJI_SOURCES
 	${GENERATED_DIR}/emoji.h
 	${GENERATED_DIR}/emoji.cpp
