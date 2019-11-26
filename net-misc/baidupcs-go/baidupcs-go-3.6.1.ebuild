@@ -28,9 +28,7 @@ RDEPEND="${DEPEND}
 "
 BDEPEND=""
 
-S="${WORKDIR}/${P}/src/${EGO_PN}"
-
 src_install() {
-	default
 	newbin ${MY_PN} ${PN}
+	dodoc src/${EGO_PN}/README*
 }
