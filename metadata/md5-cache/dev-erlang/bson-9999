@@ -8,5 +8,5 @@ LICENSE=all-rights-reserved
 PROPERTIES=live
 RDEPEND=dev-lang/erlang >=dev-lang/erlang-17.0.0
 SLOT=0
-_eclasses_=erlang-pkg	40c849564b68378e720d65139814a52b	git-r3	562b380fc59ae6a8622171d0acb777d1
+_eclasses_=erlang-pkg	40c849564b68378e720d65139814a52b	git-r3	6d22636df236df4cc8475f7b7668bdcd
 _md5_=4f67e1a255e358429a27039206ac5017
