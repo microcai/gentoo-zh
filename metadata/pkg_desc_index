@@ -303,9 +303,6 @@ kde-misc/imageshack-upload 0.5: A service menu tor upload images on Imageshack.
 kde-misc/plasma-applet-netspeed-widget 1.8 9999: Plasma 5 widget that displays the currently used network bandwidth.
 mail-client/deepin-wine-foxmail 7.2.3: Foxmail mail client for Linux by Deepin
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
-media-fonts/ntufonts 20030521: Chinese Fonts from National Taiwan University, Includes kai, Lei, Funsong, and Thin.
-media-fonts/sinicafonts 20030521: Chinese and Siddam fonts provided by SINICA, Taiwan.
-media-fonts/wangfonts 1.3.0: Free Chinese TrueType fonts donated by Prof. Hann-Tzong Wang
 media-fonts/wps-office-fonts 1.0: The wps-office-fonts package contains Founder Chinese fonts
 media-gfx/blur-effect 1.1.3: Off-screen image blurring utility using OpenGL ES 3.0
 media-gfx/byzanz 0.3.0.9999: Screencasting program that saves casts as GIF files
