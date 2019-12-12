@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=7
 
 inherit qmake-utils
 
@@ -32,6 +32,7 @@ DEPEND="${RDEPEND}
 #S=${WORKDIR}
 
 src_prepare() {
+	eapply_user
 
 	export QT_SELECT=qt5
 #	cd ${S}/${P}

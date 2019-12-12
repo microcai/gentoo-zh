@@ -19,7 +19,6 @@ IUSE=""
 RDEPEND="dev-lang/python
 		dev-perl/Config-Tiny
 		dev-perl/XML-LibXML
-		dev-perl/XML-LibXML-PrettyPrint
 		sys-devel/gettext"
 DEPEND="${RDEPEND}
 		dev-qt/qtdeclarative:5
@@ -30,7 +29,7 @@ src_prepare() {
 
 	# remove sudo in generate_mo.py
 	sed -e 's/sudo cp/cp/' -i src/generate_mo.py || die "sed failed"
-	
+
 	LIBDIR=$(get_libdir)
 	sed -i "s|{PREFIX}/lib|{PREFIX}/${LIBDIR}|g" Makefile
 	default_src_prepare

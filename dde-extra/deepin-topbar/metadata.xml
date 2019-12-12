@@ -9,6 +9,6 @@
 		<flag name="albert">Install <pkg>x11-misc/albert</pkg> to Add an entrance for desktop searching</flag>
 	</use>
 	<upstream>
-		<remote-id type="github">kirigayakazushin/deepin-topbar</remote-id>
+		<remote-id type="github">justforlxz/deepin-topbar</remote-id>
 	</upstream>
 </pkgmetadata>

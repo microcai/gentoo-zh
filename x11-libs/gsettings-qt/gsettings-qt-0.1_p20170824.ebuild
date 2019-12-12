@@ -1,7 +1,7 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=7
 
 EBZR_REPO_URI="lp:gsettings-qt"
 
@@ -25,6 +25,7 @@ unset QT_QPA_PLATFORMTHEME
 MAKEOPTS="${MAKEOPTS} -j1"
 
 src_prepare() {
+	eapply_user
 
 	# Fix relocation error when rebuild with different Qt version
 	sed -i 's|LD_PRELOAD=../src/libgsettings-qt.so.1|LD_PRELOAD=../src/libgsettings-qt.so.1\:./libGSettingsQmlPlugin.so|g' ${S}/GSettings/gsettings-qt.pro

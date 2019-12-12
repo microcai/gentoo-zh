@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=7
 
 inherit qmake-utils eutils
 
@@ -43,6 +43,7 @@ DEPEND="${RDEPEND}
 		"
 
 src_prepare() {
+	eapply_user
 	QT_SELECT=qt5 eqmake5 PREFIX=/usr ${PN}.pro
 }
 

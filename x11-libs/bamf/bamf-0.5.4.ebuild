@@ -2,13 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=7
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 VALA_MIN_API_VERSION=0.20
 VALA_USE_DEPEND=vapigen
 
-inherit vala autotools-utils flag-o-matic python-r1
+inherit vala autotools flag-o-matic python-r1
 
 DESCRIPTION="BAMF Application Matching Framework"
 HOMEPAGE="https://launchpad.net/bamf"
@@ -44,19 +44,19 @@ src_prepare() {
 	sed -i 's/-Werror//' configure
 	sed -i 's/tests//' Makefile.am
 
-	autotools-utils_src_prepare
+	eapply_user
+	eautoreconf
 	vala_src_prepare
 }
 
 src_configure() {
 	append-flags "-Wno-deprecated-declarations"
-	local myeconfargs=(
+	local econfargs=(
 		--disable-gtktest
-		--disable-webapps
 		$(use_enable doc gtk-doc)
 		$(use_enable introspection)
 		VALA_API_GEN="${VAPIGEN}"
 	)
 	python_setup
-	autotools-utils_src_configure
+	econf "${econfargs[@]}" "$@"
 }

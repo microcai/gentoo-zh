@@ -5,7 +5,7 @@
 EAPI=4
 
 DESCRIPTION="Deepin Extra Applications (meta package)"
-HOMEPAGE="http://www.linuxdeepin.com"
+HOMEPAGE="https://www.deepin.org"
 SRC_URI=""
 
 LICENSE="metapackage"

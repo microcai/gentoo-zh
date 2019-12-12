@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=7
 
 inherit qmake-utils
 
@@ -34,6 +34,7 @@ DEPEND="${RDEPEND}
 	    "
 
 src_prepare() {
+	eapply_user
 	LIBDIR=$(get_libdir)
 
 	sed -i "s|lib/\$\${QMAKE_HOST.arch}-linux-gnu|${LIBDIR}|g" webview/webview.pro
