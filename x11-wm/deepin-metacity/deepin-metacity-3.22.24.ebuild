@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
-inherit base eutils gnome2 versionator
+inherit eutils gnome2 versionator
 
 DESCRIPTION="Legacy window manager for Deepin"
 HOMEPAGE="https://github.com/linuxdeepin/deepin-metacity"
@@ -52,7 +52,7 @@ DEPEND="${RDEPEND}
 	x11-base/xorg-proto"
 
 src_prepare() {
-	base_src_prepare
+	eapply_user
 	gnome2_src_prepare
 }
 

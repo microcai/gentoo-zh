@@ -5,7 +5,7 @@
 EAPI=4
 
 DESCRIPTION="Deepin Multimedia Softwares (meta package)"
-HOMEPAGE="http://www.linuxdeepin.com"
+HOMEPAGE="https://www.deepin.org"
 SRC_URI=""
 
 LICENSE="metapackage"

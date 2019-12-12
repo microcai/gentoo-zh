@@ -1,0 +1,12 @@
+--- a/dstyleplugin/style.cpp	2019-11-16 08:43:03.245556427 +0100
++++ b/dstyleplugin/style.cpp	2019-11-16 08:43:33.041960117 +0100
+@@ -1418,6 +1418,7 @@
+     }
+ }
+ 
+-#include "moc_style.cpp"
+ 
+ }
++
++#include "moc_style.cpp"
+
