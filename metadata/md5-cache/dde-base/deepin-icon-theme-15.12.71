@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare
+DEPEND=dev-util/gtk-update-icon-cache
+DESCRIPTION=Deepin Icons
+EAPI=7
+HOMEPAGE=https://github.com/linuxdeepin/deepin-icon-theme
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-3+
+SLOT=0
+SRC_URI=https://github.com/linuxdeepin/deepin-icon-theme/archive/15.12.71.tar.gz -> deepin-icon-theme-15.12.71.tar.gz
+_eclasses_=gnome2-utils	532371cfcba45b2ab0d2950547c97d95	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_md5_=b340f61330a27d49bcd02306ec046210

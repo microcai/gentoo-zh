@@ -34,6 +34,8 @@ dde-base/dde-daemon:bluetooth - Enable Bluetooth Support
 dde-base/dde-daemon:fprint - Enables experimental fingerprint authentication using sys-auth/fprintd
 dde-base/dde-daemon:grub - Install Deepin themes for sys-boot/grub
 dde-base/dde-daemon:miracast - Enable Miracast Support
+dde-base/dde-file-manager:avfs - Enable support for sys-fs/avfs
+dde-base/dde-file-manager:screensaver - Enable support for setting screensaver
 dde-base/dde-meta:extra - Install extra applicaions developed by Deepin
 dde-base/dde-meta:grub - Install Deepin themes for sys-boot/grub
 dde-base/dde-meta:kwin - Use the WM based on kwin
@@ -41,8 +43,10 @@ dde-base/dde-meta:manual - Install dde-extra/dde-help User Manual
 dde-base/dde-meta:multimedia - Install Deepin multimedia suite
 dde-base/dde-meta:mutter - Use the WM based on mutter
 dde-base/dde-meta:plymouth - Install Deepin themes for sys-boot/plymouth
+dde-base/dde-meta:screensaver - Install Deepin Screensaver module
 dde-base/dde-meta:terminal - Install dde-extra/deepin-terminal Terminal Emulator
 dde-base/dde-meta:turbo - Enable DTK Apps Turbo by dde-extra/deepin-turbo
+dde-extra/deepin-screensaver:bubbles - Add bubbles screensaver
 dde-extra/deepin-terminal:zssh - Enable access to remote server via GUI using net-misc/zssh
 dde-extra/deepin-topbar:albert - Install x11-misc/albert to Add an entrance for desktop searching
 dev-erlang/bson:doc - Adds extra documentation.

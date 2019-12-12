@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm prepare
+DEPEND=sys-apps/file sys-fs/cryptsetup x11-libs/gsettings-qt dev-qt/qtcore:5 dev-qt/qtgui:5[jpeg] dev-qt/qtwidgets:5 dev-qt/qtdbus:5 dev-qt/qtsvg:5 dev-qt/qtx11extras:5 dev-qt/qtconcurrent:5 dev-qt/qtmultimedia:5[widgets] dev-qt/qtdeclarative:5 sys-auth/polkit-qt[qt5(+)] app-crypt/libsecret >=dev-libs/disomaster-0.2.0 x11-libs/libxcb x11-base/xorg-proto x11-libs/xcb-util x11-libs/xcb-util-wm dde-base/udisks2-qt5 app-text/poppler media-video/ffmpegthumbnailer[png] media-libs/taglib media-video/deepin-movie-reborn dde-extra/deepin-shortcut-viewer kde-frameworks/kcodecs:5 net-misc/socat >=dde-base/dde-dock-4.2.0:= dde-base/dde-qt-dbus-factory dde-base/dde-qt5integration >=dde-base/dtkwidget-2.0.0:= screensaver? ( dde-extra/deepin-screensaver ) samba? ( net-fs/samba ) avfs? ( sys-fs/avfs ) dev-libs/jemalloc dde-base/deepin-anything dde-base/deepin-gettext-tools virtual/pkgconfig
+DESCRIPTION=Deepin File Manager and Desktop module for DDE
+EAPI=6
+HOMEPAGE=https://github.com/linuxdeepin/dde-file-manager
+IUSE=samba avfs screensaver
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=sys-apps/file sys-fs/cryptsetup x11-libs/gsettings-qt dev-qt/qtcore:5 dev-qt/qtgui:5[jpeg] dev-qt/qtwidgets:5 dev-qt/qtdbus:5 dev-qt/qtsvg:5 dev-qt/qtx11extras:5 dev-qt/qtconcurrent:5 dev-qt/qtmultimedia:5[widgets] dev-qt/qtdeclarative:5 sys-auth/polkit-qt[qt5(+)] app-crypt/libsecret >=dev-libs/disomaster-0.2.0 x11-libs/libxcb x11-base/xorg-proto x11-libs/xcb-util x11-libs/xcb-util-wm dde-base/udisks2-qt5 app-text/poppler media-video/ffmpegthumbnailer[png] media-libs/taglib media-video/deepin-movie-reborn dde-extra/deepin-shortcut-viewer kde-frameworks/kcodecs:5 net-misc/socat >=dde-base/dde-dock-4.2.0:= dde-base/dde-qt-dbus-factory dde-base/dde-qt5integration >=dde-base/dtkwidget-2.0.0:= screensaver? ( dde-extra/deepin-screensaver ) samba? ( net-fs/samba ) avfs? ( sys-fs/avfs )
+SLOT=0
+SRC_URI=https://github.com/linuxdeepin/dde-file-manager/archive/5.0.0.tar.gz -> dde-file-manager-5.0.0.tar.gz
+_eclasses_=estack	686eaab303305a908fd57b2fd7617800	multilib	1d91b03d42ab6308b5f4f6b598ed110e	qmake-utils	4eb5e05ef7ee630c003e3f0edc094135	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_md5_=004fc3c22042084c0d1e0db0f1d55b34

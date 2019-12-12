@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install prepare unpack
+DEPEND=dde-base/dde-file-manager dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtwebkit:5 dev-qt/qtwidgets:5 media-libs/fontconfig virtual/pkgconfig
+DESCRIPTION=Extra plugins for dde-file-manager
+EAPI=7
+HOMEPAGE=https://github.com/linuxdeepin/dde-file-manager-integration
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3+
+PROPERTIES=live
+RDEPEND=dde-base/dde-file-manager dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtwebkit:5 dev-qt/qtwidgets:5 media-libs/fontconfig
+SLOT=0
+_eclasses_=estack	686eaab303305a908fd57b2fd7617800	git-r3	6d22636df236df4cc8475f7b7668bdcd	multilib	1d91b03d42ab6308b5f4f6b598ed110e	qmake-utils	4eb5e05ef7ee630c003e3f0edc094135	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
+_md5_=612401871e6e85884f4463e0f916632b
