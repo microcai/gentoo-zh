@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=7
 
 VALA_MIN_API_VERSION=0.22
 
-inherit gnome2-utils vala autotools-utils
+inherit gnome2-utils vala autotools
 
 DESCRIPTION="Deepin Window Manager"
 HOMEPAGE="https://github.com/linuxdeepin/deepin-wm"
@@ -32,20 +32,22 @@ DEPEND="${RDEPEND}
 	$(vala_depend)
 	virtual/pkgconfig"
 
-AUTOTOOLS_AUTORECONF=1
+PATCHES=(
+	"${FILESDIR}/${PN}-old-clutter-vapi.patch"
+	"${FILESDIR}/${PN}-vala-0.44.patch"
+)
 
 src_prepare() {
-	epatch_user
-
-	autotools-utils_src_prepare
+	default
+	eautoreconf
 	vala_src_prepare
 }
 
 src_configure() {
-	local myeconfargs=(
+	local econfargs=(
 		VALAC="${VALAC}"
 	)
-	autotools-utils_src_configure
+	econf "${econfargs[@]}" "$@"
 }
 
 pkg_preinst() {

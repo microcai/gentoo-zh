@@ -12,6 +12,7 @@
 		<flag name="multimedia">Install Deepin multimedia suite</flag>
 		<flag name="grub">Install Deepin themes for <pkg>sys-boot/grub</pkg></flag>
 		<flag name="plymouth">Install Deepin themes for <pkg>sys-boot/plymouth</pkg></flag>
+		<flag name="screensaver">Install Deepin Screensaver module</flag>
 		<flag name="turbo">Enable DTK Apps Turbo by <pkg>dde-extra/deepin-turbo</pkg></flag>
 		<flag name="mutter">Use the WM based on mutter</flag>
 		<flag name="kwin">Use the WM based on kwin</flag>
