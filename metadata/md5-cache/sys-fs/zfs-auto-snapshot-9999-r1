@@ -9,5 +9,5 @@ LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=sys-fs/zfs virtual/cron
 SLOT=0
-_eclasses_=git-2	3aabf18eba60687bbe6855eba271f688
+_eclasses_=git-2	ff0c6913068da64bb51417d8eceff36a
 _md5_=6150959d9ca864b432b5d0223991d0dd

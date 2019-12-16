@@ -7,5 +7,5 @@ LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=app-arch/rpm dev-perl/libwww-perl
 SLOT=0
-_eclasses_=git-2	3aabf18eba60687bbe6855eba271f688
+_eclasses_=git-2	ff0c6913068da64bb51417d8eceff36a
 _md5_=2c4674ae165e638d5fcb296ab4958fbd

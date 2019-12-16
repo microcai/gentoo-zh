@@ -7,5 +7,5 @@ LICENSE=MIT
 PROPERTIES=live
 RDEPEND=sys-devel/bison dev-lang/ruby
 SLOT=0
-_eclasses_=git-2	3aabf18eba60687bbe6855eba271f688
+_eclasses_=git-2	ff0c6913068da64bb51417d8eceff36a
 _md5_=e8cd4484fd4e62fd4c6dd586d668d078
