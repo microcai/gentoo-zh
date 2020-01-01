@@ -139,6 +139,7 @@ app-misc/geeknote 9999: Console client for Evernote
 app-misc/gpick 0.2.5: Advanced color picker written in C++ using GTK+ toolkit
 app-misc/icdiff 1.9.0: Colourized diff that supports side-by-side diffing
 app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience within the shell
+app-misc/nixnote 2.1.3 2.1.5: Nixnote - Evernote desktop client for Linux
 app-misc/screen 4.2.1-r2: Full-screen window manager that multiplexes physical terminals between several processes
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/wink 1.5: A Tutorial and Presentation creation software, primarily aimed at creating tutorials on how to use software
@@ -374,8 +375,8 @@ net-im/tencent-qq 2.0.0_beta1: Official Linux version of Tencent QQ
 net-libs/jzmq 9999: jzmq
 net-misc/avbot 9999: avbot connects QQ/XMPP/IRC/POP3/SMTP
 net-misc/avsocks 9999: 科学操长城软件
-net-misc/baidunetdisk 2.0.1 2.0.2: Baidu Net Disk is a cloud storage client (Linux Version)
-net-misc/baidupcs-go 3.5.6 3.6 9999: The terminal utility for Baidu Network Disk (Golang Version).
+net-misc/baidunetdisk 2.0.1 2.0.2 3.0.1: Baidu Net Disk is a cloud storage client (Linux Version)
+net-misc/baidupcs-go 3.6 3.6.1 9999: The terminal utility for Baidu Network Disk (Golang Version).
 net-misc/biabiamiamia 0.1 0.1.20130305 1.3.20130307 1.5.20130315: 百毒歌曲批量下
 net-misc/bypy 9999: Python client for Baidu Yun Cloud Storage
 net-misc/deepin-wine-thunderspeed 7.10.35.366.18: ThunderSpeed for Linux by Deepin

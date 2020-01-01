@@ -21,9 +21,6 @@ app-i18n/fcitx5:coverage - Build the project with gcov support (Need ENABLE_TEST
 app-i18n/fcitx5:enchant - Enable enchant for word predication
 app-i18n/fcitx5:presage - Enable presage for word predication(not stable)
 app-i18n/fcitx5:test - Build Test
-app-misc/nixnote:hunspell - Enable spellchecking plugin using app-text/hunspell
-app-misc/nixnote:opencv3 - Use media-libs/opencv:0/3.0 for WebCam instead media-libs/opencv:0/2.4
-app-misc/nixnote:webcam - Enable WebCam plugin
 app-text/stardict:espeak - Enables text to speech engine app-accessibility/espeak
 app-text/stardict:festival - Enables text to speech engine app-accessibility/festival
 app-text/stardict:gnome - Enables gnome-base/gnome support
