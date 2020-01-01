@@ -45,7 +45,7 @@ RDEPEND="${DEPEND}
 	sys-devel/gettext[abi_x86_32]
 	virtual/jpeg[abi_x86_32]
 	virtual/opencl[abi_x86_32]
-	sys-libs/ncurses:5[abi_x86_32]
+	sys-libs/ncurses-compat:5[abi_x86_32]
 	sys-libs/zlib[abi_x86_32]"
 
 S=${WORKDIR}

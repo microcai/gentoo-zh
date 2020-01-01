@@ -5,13 +5,8 @@
 		<email>atenzd@gmail.com</email>
 		<name>Aten Zhang</name>
 	</maintainer>
-	<use>
-		<flag name="opencv3">Use media-libs/opencv:0/3.0 for WebCam instead media-libs/opencv:0/2.4</flag>
-		<flag name="hunspell">Enable spellchecking plugin using app-text/hunspell</flag>
-		<flag name="webcam">Enable WebCam plugin</flag>
-	</use>
 	<upstream>
 		<remote-id type="github">nixnote2</remote-id>
-		<bugs-to>https://github.com/baumgarr/nixnote2/issues</bugs-to>
+		<bugs-to>https://github.com/robert7/nixnote2/issues</bugs-to>
 	</upstream>
 </pkgmetadata>
