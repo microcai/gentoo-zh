@@ -369,7 +369,7 @@ net-im/deepin-wine-TIM 2.0.0.4: Tencent TIM for Linux by Deepin
 net-im/deepin-wine-wechat 2.6.2.31.0 2.6.8.52.0: Tencent WeChat for Linux by Deepin
 net-im/deepin-wine-wechat-work 2.4.16.1347.1: Tencent WeChat Work for Linux by Deepin
 net-im/freetalk 4.1: Console based Jabber client
-net-im/telegram-desktop 1.9.1: Official desktop client for Telegram
+net-im/telegram-desktop 1.9.3 9999: Official desktop client for Telegram
 net-im/telegram-purple 1.3.0 9999: Libpurple (Pidgin) plugin for using a Telegram account
 net-im/tencent-qq 2.0.0_beta1: Official Linux version of Tencent QQ
 net-libs/jzmq 9999: jzmq
