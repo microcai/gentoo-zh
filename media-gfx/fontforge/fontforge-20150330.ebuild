@@ -13,7 +13,7 @@
 # users. http://fontforge.sourceforge.net/faq.html#libraries. To see what
 # libraries fontforge thinks with use $ fontforge --library-status
 
-EAPI="5"
+EAPI=7
 
 PYTHON_COMPAT=( python2_7 )
 inherit eutils fdo-mime python-single-r1 autotools

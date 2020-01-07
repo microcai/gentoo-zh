@@ -14,7 +14,7 @@
 # 2010-03-20 GuS Version 3.20-r2 
 #            Replaced dependency of non-existing virtual/ghostscript with 
 #        dependency of app-text/ghostscript-gpl. 
-EAPI="4"
+EAPI=7
 
 inherit eutils flag-o-matic autotools multilib 
 

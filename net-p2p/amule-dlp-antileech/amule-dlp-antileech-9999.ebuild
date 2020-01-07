@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="5"
+EAPI=7
 
 inherit autotools git-2 wxwidgets
 DESCRIPTION="$PN, dynamic DLP library for amule-dlp"

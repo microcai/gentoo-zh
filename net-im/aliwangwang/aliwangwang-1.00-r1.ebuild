@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI=7
 
 DESCRIPTION="AliWangWang for Linux"
 HOMEPAGE="http://www.taobao.com/wangwang"

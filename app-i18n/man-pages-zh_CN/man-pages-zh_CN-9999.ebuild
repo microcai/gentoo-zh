@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-zh_CN/man-pages-zh_CN-1.5.ebuild,v 1.4 2010/10/19 10:25:16 leio Exp $
 
-EAPI="5"
+EAPI=7
 
 DESCRIPTION="A somewhat comprehensive collection of Chinese Linux man pages"
 HOMEPAGE="https://github.com/man-pages-zh/manpages-zh"

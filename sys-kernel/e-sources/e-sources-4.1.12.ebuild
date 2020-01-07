@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="5"
+EAPI=7
 K_DEBLOB_AVAILABLE="1"
 
 ck_version="2"

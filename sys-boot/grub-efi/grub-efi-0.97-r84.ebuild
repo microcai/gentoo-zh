@@ -16,7 +16,7 @@
 # qtbz2 -s -j ${PKGDIR}/${CAT}/${PF}.tbz2 && \
 # mv ${PF}.tar.bz2 ${DISTDIR}/grub-static-${PVR}.tar.bz2
 
-EAPI="4"
+EAPI=7
 
 inherit eutils toolchain-funcs linux-info flag-o-matic autotools pax-utils
 

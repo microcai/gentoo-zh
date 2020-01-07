@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v3
 # $Header: $
 
-EAPI="5"
+EAPI=7
 
 if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="https://github.com/wallproxy/wallproxy.git"
