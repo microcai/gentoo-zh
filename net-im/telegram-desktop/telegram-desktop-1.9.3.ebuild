@@ -35,6 +35,7 @@ IUSE="crashreporter custom-api-id +pulseaudio +spell test"
 # due to missing WITHOUT_PULSE in Telegram/cmake/lib_tgvoip.cmake:
 REQUIRED_USE="pulseaudio"
 
+BDEPEND=">=dev-util/cmake-3.16" 
 RDEPEND="
 	app-arch/lz4
 	app-arch/xz-utils
@@ -61,7 +62,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
-CMAKE_MIN_VERSION="3.8"
 
 PATCHES=( "${FILESDIR}/patches" )
 
