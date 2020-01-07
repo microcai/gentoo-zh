@@ -1,10 +1,10 @@
 DEFINED_PHASES=install
 DESCRIPTION=mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
-EAPI=4
+EAPI=7
 HOMEPAGE=https://github.com/mruby/mruby
 KEYWORDS=~amd64 ~x86
 LICENSE=MIT
 RDEPEND=sys-devel/bison dev-lang/ruby
 SLOT=0
 SRC_URI=https://github.com/mruby/mruby/archive/1.0.0.tar.gz -> mruby-1.0.0.tar.gz
-_md5_=aebb82353c39e76c8a7e87696f572753
+_md5_=171d631cac124b155a624350675947bc

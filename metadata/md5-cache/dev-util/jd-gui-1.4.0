@@ -1,12 +1,12 @@
 DEFINED_PHASES=install unpack
 DEPEND=>=app-arch/rpm2targz-9.0.0.3g
 DESCRIPTION=A standalone graphical utility that displays Java source codes of .class file
-EAPI=5
+EAPI=7
 HOMEPAGE=http://jd.benow.ca/
 KEYWORDS=~x86 ~amd64
 LICENSE=GPL-3
 RDEPEND=>=virtual/jdk-1.6
 SLOT=0
 SRC_URI=https://github.com/java-decompiler/jd-gui/releases/download/v1.4.0/jd-gui-1.4.0-0.noarch.rpm
-_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	686eaab303305a908fd57b2fd7617800	eutils	fcb2aa98e1948b835b5ae66ca52868c5	ltprune	2729691420b6deeda2a90b1f1183fb55	multilib	1d91b03d42ab6308b5f4f6b598ed110e	preserve-libs	ef207dc62baddfddfd39a164d9797648	rpm	f52cfa3a435468d86d3b49c357b9cb35	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
-_md5_=e1e5e3ab5d4ebcf69fc799626caddaa5
+_eclasses_=eutils	fcb2aa98e1948b835b5ae66ca52868c5	multilib	1d91b03d42ab6308b5f4f6b598ed110e	rpm	f52cfa3a435468d86d3b49c357b9cb35	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
+_md5_=cdd028366d9cb81b7e28f3b09ffbe0ef

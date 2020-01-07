@@ -1,7 +1,8 @@
+BDEPEND=virtual/pkgconfig
 DEFINED_PHASES=compile install
-DEPEND=dev-lang/erlang systemd? ( sys-apps/systemd ) virtual/pkgconfig
+DEPEND=dev-lang/erlang systemd? ( sys-apps/systemd )
 DESCRIPTION=Socks5 proxy written in Erlang
-EAPI=5
+EAPI=7
 HOMEPAGE=https://github.com/yueyoum/make-proxy
 IUSE=+client server systemd
 KEYWORDS=~amd64 ~x86
@@ -10,4 +11,4 @@ RDEPEND=dev-lang/erlang systemd? ( sys-apps/systemd )
 SLOT=0
 SRC_URI=https://github.com/yueyoum/make-proxy/archive/v2.0.0.tar.gz -> make-proxy-2.0.0.tar.gz
 _eclasses_=multilib	1d91b03d42ab6308b5f4f6b598ed110e	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
-_md5_=970d1b9cf8fd886f6b8d0920cb4cf64e
+_md5_=6c64dc1153ee52e037aa3db814658280

@@ -1,7 +1,8 @@
+BDEPEND=dev-util/ninja >=dev-util/cmake-3.9.6
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtwebkit:4 sys-devel/make >=dev-util/cmake-3.9.6
+DEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtwebkit:4
 DESCRIPTION=WizNote lets you capture anything you might to remember: create text notes, clip content from the web, snap photos and have all of these notes avaliable you on any device.
-EAPI=5
+EAPI=7
 HOMEPAGE=http://www.wiz.cn/index.html
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
@@ -9,5 +10,5 @@ RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtwebkit:4
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/WizTeam/WizQTClient/archive/v2.1.14.tar.gz -> wiznote-2.1.14.tar.gz
-_eclasses_=cmake-utils	be72eac95bd029ad1d81d5d656c3c83b	desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	686eaab303305a908fd57b2fd7617800	eutils	fcb2aa98e1948b835b5ae66ca52868c5	flag-o-matic	cabe101302b461f32ecbc3767dfb9e23	ltprune	2729691420b6deeda2a90b1f1183fb55	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf	vcs-snapshot	b1abf460a493fc59ebb25de0df3f09dd	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
-_md5_=0aa34090550e6f02c24a663b7027c9c4
+_eclasses_=cmake-utils	be72eac95bd029ad1d81d5d656c3c83b	eutils	fcb2aa98e1948b835b5ae66ca52868c5	flag-o-matic	cabe101302b461f32ecbc3767dfb9e23	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	vcs-snapshot	b1abf460a493fc59ebb25de0df3f09dd	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_md5_=d8f6e9763215d93f19fb5faadf326d3f

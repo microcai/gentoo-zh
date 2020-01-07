@@ -1,10 +1,10 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=No nonsense asciicasting for serious hackers
-EAPI=5
+EAPI=7
 HOMEPAGE=http://ascii.io
 KEYWORDS=amd64 x86
 LICENSE=as-is
 RDEPEND==dev-lang/python-2*
 SLOT=0
 SRC_URI=https://raw.github.com/sickill/ascii.io-cli/master/bin/asciiio
-_md5_=6d7b60bc9da1b06c06d8817c322c5d06
+_md5_=29988821d5773d88c2cb44161e092874

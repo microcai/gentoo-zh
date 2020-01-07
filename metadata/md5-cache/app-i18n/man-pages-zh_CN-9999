@@ -1,7 +1,8 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=app-i18n/opencc >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1[curl]
+DEPEND=app-i18n/opencc
 DESCRIPTION=A somewhat comprehensive collection of Chinese Linux man pages
-EAPI=5
+EAPI=7
 HOMEPAGE=https://github.com/man-pages-zh/manpages-zh
 KEYWORDS=~amd64
 LICENSE=FDL-1.2
@@ -10,4 +11,4 @@ RDEPEND=virtual/man >=sys-apps/man-pages-3.83
 RESTRICT=mirror
 SLOT=0
 _eclasses_=autotools	ea7865c8fba1ea8d3639f355fffe1a3c	git-r3	7d6c351ee8b1feb12ed8c8b0adae088b	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	1d91b03d42ab6308b5f4f6b598ed110e	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
-_md5_=0bde0c2ce386f097157b665f9a6965c8
+_md5_=397416f8fb2fd04866b5e82b16b59044

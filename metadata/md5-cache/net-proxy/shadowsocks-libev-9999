@@ -1,7 +1,8 @@
+BDEPEND=virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=configure install setup unpack
-DEPEND=openssl? ( dev-libs/openssl ) polarssl? ( net-libs/polarssl ) systemd? ( sys-apps/systemd ) virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl]
+DEPEND=openssl? ( dev-libs/openssl ) polarssl? ( net-libs/polarssl ) systemd? ( sys-apps/systemd )
 DESCRIPTION=A lightweight secured scoks5 proxy for embedded devices and low end boxes
-EAPI=5
+EAPI=7
 HOMEPAGE=https://github.com/shadowsocks/shadowsocks-libev
 IUSE=debug +openssl polarssl systemd
 LICENSE=GPL-3+
@@ -9,5 +10,5 @@ PROPERTIES=live
 RDEPEND=openssl? ( dev-libs/openssl ) polarssl? ( net-libs/polarssl ) systemd? ( sys-apps/systemd )
 REQUIRED_USE=^^ ( openssl polarssl )
 SLOT=0
-_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	686eaab303305a908fd57b2fd7617800	eutils	fcb2aa98e1948b835b5ae66ca52868c5	git-r3	7d6c351ee8b1feb12ed8c8b0adae088b	ltprune	2729691420b6deeda2a90b1f1183fb55	multilib	1d91b03d42ab6308b5f4f6b598ed110e	preserve-libs	ef207dc62baddfddfd39a164d9797648	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
-_md5_=b918d94ed2e0622fee8c40298f08c692
+_eclasses_=eutils	fcb2aa98e1948b835b5ae66ca52868c5	git-r3	7d6c351ee8b1feb12ed8c8b0adae088b	multilib	1d91b03d42ab6308b5f4f6b598ed110e	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
+_md5_=3812f8d8c511b5c2c82a5868786c69a7

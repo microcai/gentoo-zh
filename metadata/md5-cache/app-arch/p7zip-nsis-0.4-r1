@@ -1,10 +1,10 @@
 DEFINED_PHASES=install
 DESCRIPTION=A binary version of p7zip to decompress nsis. Lastest version of p7zip doesn't decompress some nsis.
-EAPI=5
+EAPI=7
 HOMEPAGE=http://p7zip.sourceforge.net/
 KEYWORDS=~x86 ~amd64
 LICENSE=LGPL-2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://gentoo.org.cn/distfiles/p7zip-nsis-0.4.tar.xz
-_md5_=15bc3846fd472f085734a52fd07f7870
+_md5_=babac317c2bfd1ea2fa5f0369f890d9b

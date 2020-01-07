@@ -1,10 +1,10 @@
 DEFINED_PHASES=-
 DEPEND=x11-themes/gtk-engines-murrine
 DESCRIPTION=Deepin GTK Theme
-EAPI=4
+EAPI=7
 HOMEPAGE=https://github.com/linuxdeepin/deepin-gtk-theme
 KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-3+
 SLOT=0
 SRC_URI=https://github.com/linuxdeepin/deepin-gtk-theme/archive/17.10.11.tar.gz -> deepin-gtk-theme-17.10.11.tar.gz
-_md5_=2d17c9f70829ea44ef3a5e413e37695c
+_md5_=de650320c52fb987f0303d8f9c5bf401
