@@ -4,7 +4,7 @@
 
 EAPI=7
 DISABLE_AUTOFORMATTING=true
-inherit font readme.gentoo unpacker
+inherit font unpacker
 
 DESCRIPTION="The wps-office-fonts package contains Founder Chinese fonts"
 HOMEPAGE="http://wenq.org/wqy2/index.cgi?ZenHei"
