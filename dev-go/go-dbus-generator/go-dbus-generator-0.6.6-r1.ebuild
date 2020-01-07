@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=4
+EAPI=7
 
 DESCRIPTION="Convert D-Bus interfaces to go-lang or qml wrapper code"
 HOMEPAGE="https://github.com/linuxdeepin/go-dbus-generator"

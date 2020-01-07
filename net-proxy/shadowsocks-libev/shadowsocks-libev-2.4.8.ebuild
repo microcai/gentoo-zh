@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-proxy/shadowsocks-libev/shadowsocks-libev-2.0.4.ebuild,v 1.1 2015/01/11 14:02:48 dlan Exp $
 
-EAPI=5
+EAPI=7
 
 inherit eutils systemd
 

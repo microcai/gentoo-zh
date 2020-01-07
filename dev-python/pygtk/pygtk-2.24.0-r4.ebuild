@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.24.0-r3.ebuild,v 1.1 2013/02/01 23:40:59 eva Exp $
 
-EAPI="5"
+EAPI=7
 GCONF_DEBUG="no"
 GNOME_TARBALL_SUFFIX="bz2"
 PYTHON_COMPAT=( python2_{6,7} )

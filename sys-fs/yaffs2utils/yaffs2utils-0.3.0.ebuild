@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=7
 
 DESCRIPTION="Utilities to create/extract a yaffs2 image on Linux"
 HOMEPAGE="https://code.google.com/p/yaffs2utils/"

@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=6
+EAPI=7
 
-inherit qmake-utils versionator
+inherit qmake-utils
 
 
 if [[ "${PV}" == *9999* ]] ; then

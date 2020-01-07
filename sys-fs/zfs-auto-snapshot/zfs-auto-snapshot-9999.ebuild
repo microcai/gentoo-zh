@@ -4,7 +4,7 @@
 
 # Maintainer: check IUSE-defaults at DefineOptions.cmake
 
-EAPI=4
+EAPI=7
 
 inherit eutils git-2
 

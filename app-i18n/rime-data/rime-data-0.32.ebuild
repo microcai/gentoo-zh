@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-i18n/rime-data/rime-data-0.32.ebuild,v 1.1 2014/01/11 01:10:00 dlan Exp $
 
-EAPI=5
+EAPI=7
 
 inherit vcs-snapshot
 MY_P=brise-${PV}
