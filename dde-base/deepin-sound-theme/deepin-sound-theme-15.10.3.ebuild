@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=4
+EAPI=7
 
 DESCRIPTION="Deepin Sound themes"
 HOMEPAGE="https://github.com/linuxdeepin/deepin-sound-theme"

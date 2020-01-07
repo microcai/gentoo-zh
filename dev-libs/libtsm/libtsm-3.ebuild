@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=7
 
 DESCRIPTION="TSM is a state machine for DEC VT100-VT520 compatible terminal emulators. "
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/libtsm/"

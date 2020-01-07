@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=7
 
 DESCRIPTION="A binary version of p7zip to decompress nsis. Lastest version of p7zip doesn't decompress some nsis."
 HOMEPAGE="http://p7zip.sourceforge.net/"

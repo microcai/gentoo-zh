@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=4
+EAPI=7
 
 DESCRIPTION="Deepin Extra Applications (meta package)"
 HOMEPAGE="https://www.deepin.org"

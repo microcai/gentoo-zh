@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=7
 
 inherit cmake-utils git-r3
 DESCRIPTION="Rime Input Method Engine library"

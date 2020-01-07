@@ -1,8 +1,0 @@
-[Unit]
-Description=the daemon who supplies firsthand system data
-
-[Service]
-ExecStart=/usr/sbin/sysd
-
-[Install]
-WantedBy=multi-user.target

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=7
 
 DESCRIPTION="The Yubico PIV Tool allows you to configure a PIV-enabled YubiKey through a command line interface."
 HOMEPAGE="https://developers.yubico.com/yubico-piv-tool/"

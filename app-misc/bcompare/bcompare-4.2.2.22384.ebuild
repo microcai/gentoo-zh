@@ -2,7 +2,7 @@
 # Distributed under the terms of the MIT License
 # $Header: $
 
-EAPI=5
+EAPI=7
 
 inherit eutils user
 

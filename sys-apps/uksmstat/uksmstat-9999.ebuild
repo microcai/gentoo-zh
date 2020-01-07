@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=7
 inherit git-2
 DESCRIPTION="Small tool to show UKSM statistics."
 HOMEPAGE="https://github.com/pfactum/uksmstat"
