@@ -94,9 +94,12 @@ app-i18n/fcitx5-rime 20180620 99999999: Rime Support for Fcitx5
 app-i18n/gcin 2.8.5: Another Traditional Chinese IM.
 app-i18n/hime 0.9.10: HIME Input Method Editor
 app-i18n/ibus-googlepinyin 0.1.2: wrapper libgooglepinyin for IBus
+app-i18n/ibus-handwrite 2.1.4: hand write recognition/input using ibus IM engine
+app-i18n/ibus-t9 2.1.0.20100601: T9 input engine using ibus
 app-i18n/ibus-xkb 1.4.99.20120525: 
 app-i18n/jfbterm 0.4.7-r4: The J Framebuffer Terminal/Multilingual Enhancement with UTF-8 support
 app-i18n/kcm-fcitx5 20180620 99999999: KDE configuration module for Fcitx
+app-i18n/libgooglepinyin 0.1.2: A fork from google pinyin on android
 app-i18n/libime 20190826 99999999: Fcitx5 Next generation of fcitx
 app-i18n/libpinyin 1.0.0: Library to deal with Pinyin.
 app-i18n/librime 1.1-r1 9999: Rime Input Method Engine library
@@ -114,7 +117,7 @@ app-misc/bcompare 4.2.2.22384: Beyond Compare -- Compare, sync, and merge files 
 app-misc/freefilesync 5.6: Visual folder comparison and synchronization
 app-misc/gpick 0.2.5: Advanced color picker written in C++ using GTK+ toolkit
 app-misc/icdiff 1.9.0: Colourized diff that supports side-by-side diffing
-app-misc/nixnote 2.1.5: Nixnote - Evernote desktop client for Linux
+app-misc/nixnote 2.1.5: Nixnote - A clone of Evernote for Linux
 app-misc/screen 4.2.1-r2: Full-screen window manager that multiplexes physical terminals between several processes
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/wink 1.5: A Tutorial and Presentation creation software, primarily aimed at creating tutorials on how to use software
@@ -237,6 +240,7 @@ media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cw
 media-fonts/ntufonts 20030521: Chinese Fonts from National Taiwan University, Includes kai, Lei, Funsong, and Thin.
 media-fonts/sinicafonts 20030521: Chinese and Siddam fonts provided by SINICA, Taiwan.
 media-fonts/wangfonts 1.3.0: Free Chinese TrueType fonts donated by Prof. Hann-Tzong Wang
+media-fonts/wps-office-fonts 1.0: The wps-office-fonts package contains Founder Chinese fonts
 media-gfx/blur-effect 1.1.3: Off-screen image blurring utility using OpenGL ES 3.0
 media-gfx/byzanz 0.3.0.9999: Screencasting program that saves casts as GIF files
 media-gfx/deepin-draw 1.0.0: Deepin Painting Tool
@@ -290,6 +294,8 @@ net-misc/logjam 4.5.3: GTK2-based LiveJournal client
 net-misc/omnitty 0.3.0: ncurses-based ssh multiplexer for cluster administration
 net-misc/pcmanx-gtk2 1.3 9999: PCMan is an easy-to-use telnet client mainly targets BBS users formerly writen by gtk2
 net-misc/prips 1.0.0: print the IP addresses in a range
+net-misc/tiebasprit 0.3.1: 百度贴吧守护精灵 - 百度贴吧广告删贴机器人
+net-misc/xmuruijie 1.4.3: Red Gaint (RuiJie) EAP-MD5 authentication client in Linux
 net-print/cndrvcups-common-lb 3.40-r1: Common files for Canon drivers
 net-print/cndrvcups-lb 3.40-r1: Canon UFR II / LIPSLX Printer Driver for Linux
 net-print/cups-tsc 0.1.26: The driver of TSC printers for Linux and CUPS
@@ -322,6 +328,7 @@ virtual/dde-wm 0: Virtual for DDE Window Manager
 virtual/linux-sources 1: Virtual for Linux kernel sources
 virtual/openvg 1.1: OpenVG is an API designed for hardware-accelerated 2D vector graphics.
 www-client/maxthon 1.0.5.3: Maxthon for Linux
+www-servers/bashttpd 0.1-r1: Simple HTTP Daemon Written in BASH
 www-servers/darkhttpd 1.8: A small, static webserver
 www-servers/tengine 2.0.3: Robust, small and high performance http and reverse proxy server
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images

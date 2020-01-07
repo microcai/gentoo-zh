@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm setup unpack
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=The wps-office-fonts package contains Founder Chinese fonts
+EAPI=7
+HOMEPAGE=http://wenq.org/wqy2/index.cgi?ZenHei
+IUSE=X
+KEYWORDS=amd64 arm ppc ppc64 x86 ~x86-fbsd
+LICENSE=as-is
+RESTRICT=binchecks strip test
+SLOT=0
+SRC_URI=http://kdl.cc.ksosoft.com/wps-community/download/fonts/wps-office-fonts_1.0_all.deb
+_eclasses_=font	af70de9a23b2f34d4fe4dcb222be0346	unpacker	3cd8bad0d31e525cd26be1bfa4e61631
+_md5_=119bee1a64aadf71787179d920fe8d69

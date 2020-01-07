@@ -1,0 +1,13 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=install
+DEPEND=>=app-i18n/ibus-1.2 virtual/libintl virtual/pkgconfig >=sys-devel/gettext-0.16.1
+DESCRIPTION=T9 input engine using ibus
+EAPI=7
+HOMEPAGE=http://ibus-t9.googlecode.com
+KEYWORDS=x86 amd64
+LICENSE=GPL
+RDEPEND=>=app-i18n/ibus-1.2 virtual/libintl
+SLOT=0
+SRC_URI=http://ibus-t9.googlecode.com/files/ibus-t9-2.1.0.20100601.tar.gz
+_eclasses_=autotools	ea7865c8fba1ea8d3639f355fffe1a3c	eutils	fcb2aa98e1948b835b5ae66ca52868c5	googlecode	2b7cf793e6c698f005e87eb6cebcc752	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	1d91b03d42ab6308b5f4f6b598ed110e	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
+_md5_=410a94302a34310cf2d59d0ebf79f0c5
