@@ -1,0 +1,11 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=media-video/ffmpeg media-libs/openal media-libs/libass dev-util/desktop-file-utils dev-qt/qtdeclarative:5 || ( dev-libs/uchardet app-i18n/uchardet ) x11-libs/libXv
+DESCRIPTION=A cross-platform multimedia framework based on Qt and FFmpeg.
+EAPI=7
+HOMEPAGE=http://qtav.org
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=https://github.com/wang-bin/QtAV/archive/v1.11.0.tar.gz -> QtAV-1.11.0.tar.gz
+_eclasses_=estack	686eaab303305a908fd57b2fd7617800	multilib	1d91b03d42ab6308b5f4f6b598ed110e	qmake-utils	4eb5e05ef7ee630c003e3f0edc094135	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
+_md5_=b33f2947524ead071b6c489b7e942cd7

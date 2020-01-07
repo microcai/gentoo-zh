@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=Free Chinese TrueType fonts donated by Prof. Hann-Tzong Wang
+EAPI=7
+HOMEPAGE=https://code.google.com/p/wangfonts/
+IUSE=X
+KEYWORDS=alpha amd64 arm hppa ia64 ppc mips ~s390 ~sh sparc x86 ~x86-fbsd
+LICENSE=GPL-2
+RESTRICT=mirror strip binchecks
+SLOT=0
+SRC_URI=https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/wangfonts/wangfonts-1.3.0.tar.gz
+_eclasses_=font	af70de9a23b2f34d4fe4dcb222be0346
+_md5_=c7f6ca17d39452a633fc9abbaee18e05
