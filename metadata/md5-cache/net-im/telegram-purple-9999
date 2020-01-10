@@ -8,5 +8,5 @@ LICENSE=LGPL-3
 PROPERTIES=live
 RDEPEND=net-im/pidgin dev-libs/openssl sys-libs/glibc libwebp? ( media-libs/libwebp )
 SLOT=0
-_eclasses_=git-r3	7d6c351ee8b1feb12ed8c8b0adae088b
+_eclasses_=git-r3	809e27702c573cbba31c08ed00bbad33
 _md5_=ffe47c507da419efba5be87d02d0c603
