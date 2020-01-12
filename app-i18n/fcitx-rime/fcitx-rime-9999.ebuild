@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit cmake-utils git-2
+inherit cmake-utils git-r3
 
 DESCRIPTION="Rime Support for Fcitx"
 HOMEPAGE="http://code.google.com/p/rimeime/"

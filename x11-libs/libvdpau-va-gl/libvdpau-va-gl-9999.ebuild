@@ -4,7 +4,7 @@
 
 EAPI=7
 
-inherit cmake-utils multilib git-2
+inherit cmake-utils multilib git-r3
 
 DESCRIPTION="VDPAU driver with VA-API/OpenGL backend."
 HOMEPAGE="https://github.com/i-rinat/libvdpau-va-gl/"

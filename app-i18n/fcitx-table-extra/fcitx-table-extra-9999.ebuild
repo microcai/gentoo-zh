@@ -7,7 +7,7 @@ EAPI=5
 if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx-table-extra.git"
 	FCITX_TABLE_EXTRA_SRC_URI=""
-	FCITX_TABLE_EXTRA_ECLASS="git-2"
+	FCITX_TABLE_EXTRA_ECLASS="git-r3"
 	KEYWORDS=""
 else
 	FCITX_TABLE_EXTRA_SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"

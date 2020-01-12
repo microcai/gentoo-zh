@@ -9,7 +9,7 @@ if [[ ${PV} == "9999" ]]; then
 	EGIT_BRANCH="${EGIT_MASTER}" 
 	KEYWORDS=""
 	WALLPROXY_SRC_URI=""
-	WALLPROXY_ECLASS="git-2"
+	WALLPROXY_ECLASS="git-r3"
 else
 	WALLPROXY_SRC_URI="https://github.com/wallproxy/wallproxy/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	RESTRICT="mirror"

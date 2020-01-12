@@ -2,7 +2,7 @@
 
 EAPI=7
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard."
 HOMEPAGE="https://github.com/mruby/mruby"

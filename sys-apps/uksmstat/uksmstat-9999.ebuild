@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=7
-inherit git-2
+inherit git-r3
 DESCRIPTION="Small tool to show UKSM statistics."
 HOMEPAGE="https://github.com/pfactum/uksmstat"
 EGIT_REPO_URI="https://github.com/pfactum/uksmstat.git"

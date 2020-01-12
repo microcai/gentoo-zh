@@ -4,7 +4,7 @@
 
 EAPI=7
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="Rime Input Method Engine for IBus Framework"
 HOMEPAGE="http://code.google.com/p/rimeime/"

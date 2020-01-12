@@ -4,7 +4,7 @@
 
 EAPI=7
 
-inherit games autotools eutils git-2
+inherit games autotools eutils git-r3
 
 DESCRIPTION="Stepmania 5 sm-ssc branch"
 HOMEPAGE="https://github.com/stepmania/stepmania"

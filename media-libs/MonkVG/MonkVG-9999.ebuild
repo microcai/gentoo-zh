@@ -5,7 +5,7 @@
 EAPI=7
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
-inherit git-2 autotools-utils
+inherit git-r3 autotools-utils
 
 DESCRIPTION="MonkVG is an OpenVG 1.1 like vector graphics API implementation
 currently using an OpenGL ES backend"

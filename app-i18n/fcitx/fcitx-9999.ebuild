@@ -7,7 +7,7 @@ EAPI=5
 inherit multilib multilib-build cmake-utils eutils gnome2-utils fdo-mime
 
 if [[ ${PV} == "9999" ]]; then
-	inherit git-2
+	inherit git-r3
 fi
 
 if [[ ${PV} == "9999" ]]; then
