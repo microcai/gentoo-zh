@@ -4,7 +4,7 @@
 
 EAPI=7
 
-inherit autotools eutils flag-o-matic wxwidgets user git-2
+inherit autotools eutils flag-o-matic wxwidgets user git-r3
 
 
 DESCRIPTION="aMule with DLP patch, the all-platform eMule p2p client"

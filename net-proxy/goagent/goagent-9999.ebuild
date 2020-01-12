@@ -9,7 +9,7 @@ if [[ ${PV} == "9999" ]]; then
 	EGIT_BRANCH="3.0"
 	KEYWORDS=""
 	GOAGENT_SRC_URI=""
-	GOAGENT_ECLASS="git-2"
+	GOAGENT_ECLASS="git-r3"
 else
 	GOAGENT_SRC_URI="https://github.com/goagent/goagent/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	RESTRICT="mirror"

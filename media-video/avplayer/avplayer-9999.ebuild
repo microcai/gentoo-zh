@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=5
-inherit cmake-utils git-2
+inherit cmake-utils git-r3
 
 DESCRIPTION="avplayer is a p2p video downloader and player"
 HOMEPAGE="http://avplayer.avplayer.org"

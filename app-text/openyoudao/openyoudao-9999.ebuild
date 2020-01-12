@@ -4,7 +4,7 @@
 
 EAPI=7
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="openyoudao is a youdao client for linux."
 HOMEPAGE="http://openyoudao.org"

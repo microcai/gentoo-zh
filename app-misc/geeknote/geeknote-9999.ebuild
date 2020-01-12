@@ -6,7 +6,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python2_7 )
 
-inherit bash-completion-r1 eutils distutils-r1 git-2
+inherit bash-completion-r1 eutils distutils-r1 git-r3
 
 DESCRIPTION="Console client for Evernote"
 HOMEPAGE="http://geeknote.me"

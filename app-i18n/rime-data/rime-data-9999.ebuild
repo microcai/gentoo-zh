@@ -5,7 +5,7 @@
 EAPI=7
 
 S=${WORKDIR}/brise
-inherit git-2
+inherit git-r3
 EGIT_REPO_URI="https://github.com/lotem/brise.git"
 
 DESCRIPTION="Brise, data resource for Rime Input Method Engine"
