@@ -1,0 +1,11 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DESCRIPTION=mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
+EAPI=7
+HOMEPAGE=https://github.com/mruby/mruby
+LICENSE=MIT
+PROPERTIES=live
+RDEPEND=sys-devel/bison dev-lang/ruby
+SLOT=0
+_eclasses_=git-r3	809e27702c573cbba31c08ed00bbad33
+_md5_=2216214393affdfee5005aa268917159

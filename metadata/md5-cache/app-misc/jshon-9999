@@ -1,0 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DESCRIPTION=Jshon is a JSON parser designed for maximum convenience within the shell
+EAPI=7
+HOMEPAGE=http://kmkeen.com/jshon/
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+PROPERTIES=live
+RDEPEND=dev-libs/jansson
+SLOT=0
+_eclasses_=git-r3	809e27702c573cbba31c08ed00bbad33
+_md5_=c1cf22638fab1e6bc4ffcedc663fdc02

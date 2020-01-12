@@ -1,0 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=prepare unpack
+DEPEND=app-i18n/ibus app-i18n/librime x11-libs/libnotify dev-util/cmake
+DESCRIPTION=Rime Input Method Engine for IBus Framework
+EAPI=7
+HOMEPAGE=http://code.google.com/p/rimeime/
+LICENSE=GPL-3
+PROPERTIES=live
+RDEPEND=app-i18n/ibus app-i18n/librime x11-libs/libnotify app-i18n/rime-data
+SLOT=0
+_eclasses_=git-r3	809e27702c573cbba31c08ed00bbad33
+_md5_=48a1117d54a3c4674327f17d1b9f1f5e

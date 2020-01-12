@@ -1,14 +1,12 @@
 BDEPEND=dev-util/ninja >=dev-util/cmake-3.9.6 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=app-i18n/opencc-1.0.2 dev-cpp/glog >=dev-cpp/yaml-cpp-0.5.0 dev-db/kyotocabinet dev-libs/leveldb >=dev-libs/boost-1.46.0 dev-libs/marisa sys-libs/zlib x11-proto/xproto test? ( dev-cpp/gtest )
-DESCRIPTION=Rime Input Method Engine library
+DEPEND=dev-libs/boost dev-libs/openssl
+DESCRIPTION=科学操长城软件
 EAPI=7
-HOMEPAGE=http://rime.im/
-IUSE=static-libs test
-KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
-LICENSE=GPL-3
+HOMEPAGE=https://github.com/avplayer/avsocks
+KEYWORDS=~amd64 ~x86
 PROPERTIES=live
-RDEPEND=>=app-i18n/opencc-1.0.2 dev-cpp/glog >=dev-cpp/yaml-cpp-0.5.0 dev-db/kyotocabinet dev-libs/leveldb >=dev-libs/boost-1.46.0 dev-libs/marisa sys-libs/zlib x11-proto/xproto
+RDEPEND=dev-libs/boost dev-libs/openssl
 SLOT=0
 _eclasses_=cmake-utils	be72eac95bd029ad1d81d5d656c3c83b	eutils	fcb2aa98e1948b835b5ae66ca52868c5	flag-o-matic	cabe101302b461f32ecbc3767dfb9e23	git-r3	809e27702c573cbba31c08ed00bbad33	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
-_md5_=7b9ca1d1c938d1f918fe4d8011e0d74f
+_md5_=36ca274bdde534891f6cad75f1da220e

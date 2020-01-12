@@ -95,6 +95,7 @@ app-i18n/gcin 2.8.5: Another Traditional Chinese IM.
 app-i18n/hime 0.9.10: HIME Input Method Editor
 app-i18n/ibus-googlepinyin 0.1.2: wrapper libgooglepinyin for IBus
 app-i18n/ibus-handwrite 2.1.4: hand write recognition/input using ibus IM engine
+app-i18n/ibus-rime 9999: Rime Input Method Engine for IBus Framework
 app-i18n/ibus-t9 2.1.0.20100601: T9 input engine using ibus
 app-i18n/ibus-xkb 1.4.99.20120525: 
 app-i18n/jfbterm 0.4.7-r4: The J Framebuffer Terminal/Multilingual Enhancement with UTF-8 support
@@ -102,10 +103,10 @@ app-i18n/kcm-fcitx5 20180620 99999999: KDE configuration module for Fcitx
 app-i18n/libgooglepinyin 0.1.2: A fork from google pinyin on android
 app-i18n/libime 20190826 99999999: Fcitx5 Next generation of fcitx
 app-i18n/libpinyin 1.0.0: Library to deal with Pinyin.
-app-i18n/librime 1.1-r1 9999: Rime Input Method Engine library
+app-i18n/librime 1.1-r1: Rime Input Method Engine library
 app-i18n/lunar 2.2-r4: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
-app-i18n/rime-data 0.32 9999: Data resources for Rime Input Method Engine
+app-i18n/rime-data 0.32 9999: Brise, data resource for Rime Input Method Engine
 app-i18n/scim-array 1.0.0 1.0.1: Array Input Method for SCIM
 app-i18n/scim-chewing 0.5.1: Chewing Input Method for SCIM
 app-i18n/scim-chrasis 9999.0.0.1: Chrasis SCIM binding for chinese character recognition.
@@ -115,18 +116,22 @@ app-i18n/ucimf-sunpinyin 0.4 0.5: The SunPinyin IMF module for UCIMF
 app-i18n/zh-autoconvert 0.3.16-r3: Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 app-misc/bcompare 4.2.2.22384: Beyond Compare -- Compare, sync, and merge files and folders
 app-misc/freefilesync 5.6: Visual folder comparison and synchronization
+app-misc/geeknote 9999: Console client for Evernote
 app-misc/gpick 0.2.5: Advanced color picker written in C++ using GTK+ toolkit
 app-misc/icdiff 1.9.0: Colourized diff that supports side-by-side diffing
+app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience within the shell
 app-misc/nixnote 2.1.5: Nixnote - A clone of Evernote for Linux
 app-misc/screen 4.2.1-r2: Full-screen window manager that multiplexes physical terminals between several processes
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/wink 1.5: A Tutorial and Presentation creation software, primarily aimed at creating tutorials on how to use software
 app-misc/xmind-portable 3.2.1.201011212218: XMind is a brainstorming and mind mapping software tool.
 app-office/wps-office 11.1.0.8865: WPS Office is an office productivity suite
+app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-portage/findcruft 1.0.4-r1: Yet another script to find obsolete files
 app-portage/portage-cdb 0.2.1: increase portage's speed after syncing, and for calculating dependencies. This method uses a database, rather than a bunch of flat files to store its metadata.
 app-text/asciiio 1: No nonsense asciicasting for serious hackers
 app-text/groff-utf8 0-r1: GNU groff wrapper allowing UTF-8 input
+app-text/openyoudao 9999: openyoudao is a youdao client for linux.
 app-text/reciteword 0.8.5: Reciteword is a education software to help people to study English, reciting english words. It have very beautiful interface, make reciting word being a interesting things.
 app-text/reciteword-books 0.8.3 0.8.4: Reciteword's books.
 app-text/reciteword-dicts 0.8.2: Reciteword's dictionary.
@@ -212,6 +217,7 @@ dev-libs/libchrasis 9999.0.1.1: Library for Chinese Character Recognition As-Is
 dev-libs/libdwarf 20140208: Library to deal with DWARF Debugging Information Format
 dev-libs/libtsm 3: TSM is a state machine for DEC VT100-VT520 compatible terminal emulators.
 dev-libs/lunar-date 2.4.2: Chinese Lunar Library
+dev-libs/tdlib 1.5.0: Cross-platform library for building Telegram clients
 dev-php/pecl-solr 2.4.0: Solr client
 dev-python/notify2 0.3-r1: Python interface to DBus notifications.
 dev-python/pgspecial 1.8.0: Meta-commands handler for Postgres Database.
@@ -221,9 +227,11 @@ dev-qt/qtstyleplugins 20170311-r1: Additional style plugins for Qt
 dev-qt/qtxcb-private-headers 5.12.3 5.12.5 5.13.2: The Private Headers for the Qt5 Xcb
 dev-ruby/mruby 1.0.0 9999: mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
 dev-util/arch-install-scripts 20: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
+dev-util/be 9999: Bugs Everywere distributed bug tracker
 dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 files
 dev-util/ccls 0.20190314.1: C/C++/ObjC language server protocol implementation
 dev-util/elfembed 0.3: Resource Compiler for ELF binaries
+dev-util/fernflower 1: Fernflower is the first actually working analytical decompiler for Java and probably for a high-level programming language in general
 dev-util/global 6.3.4: GNU Global is a tag system to find the locations of a specified object in various sources
 dev-util/jd-gui 1.4.0: A standalone graphical utility that displays Java source codes of .class file
 dev-util/jetbrains-toolbox 1.15.5666 1.15.5796: Manage all your JetBrains Projects and Tools
@@ -248,10 +256,13 @@ media-gfx/deepin-image-viewer 1.3.18 5.0.0: Deepin Image Viewer
 media-gfx/deepin-screen-recorder 2.8.1 5.0.0: Deepin Screencasting Application
 media-gfx/deepin-screenshot 4.2.2 5.0.0: Snapshot tools for linux deepin.
 media-gfx/fontforge 20150330: postscript font editor and converter
+media-gfx/sane-backends 9999: Scanner Access Now Easy - Backends
 media-gfx/scangearmp 1.60: Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
 media-gfx/xrectsel 0.3.1: print the geometry of a rectangular screen region
 media-libs/cogl 1.22.5-r1: A library for using 3D graphics hardware to draw pretty pictures
 media-libs/ksquirrel-libs 0.7.2 0.7.4 0.7.5 0.8.0: Libs required by ksqirrel
+media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simplifies the drawing of beautiful curves.
+media-libs/libuninameslist 20140731: Library of unicode annotation data
 media-plugins/audacious-mac 0.2.0 0.3.10: Monkey's Audio Codec plugin for audacious
 media-plugins/gimp-gap 2.6.0: Gimp Animation Package
 media-plugins/gst-plugins-meta 0.10-r8: Meta ebuild to pull in gst plugins for apps
@@ -259,7 +270,7 @@ media-plugins/osdlyrics 0.4.3 0.5.5_rc1 9999: An OSD lyric show supporting multi
 media-plugins/python-mmkeys 1.6.2.1-r1: Multimedia key support as a PyGTK object
 media-sound/audio-convert-mod 3.45.2: A simple audio file converter supporting many formats
 media-sound/cue2tracks 0.2.16: Bash script for split audio CD image files with cue sheet to tracks and write tags.
-media-sound/deadbeef 0.5.1-r3 9999: mp3/ogg/flac/sid/mod/nsf music player based on GTK2
+media-sound/deadbeef 0.5.1-r3 9999: foobar2000-like music player.
 media-sound/deepin-music 3.1.18 5.0.1: Deepin Music Player
 media-sound/deepin-voice-recorder 1.4.2 5.0.0: Deepin Voice Recorder
 media-sound/hinedo 0.4: A desktop utility for Hinet Radio
@@ -286,16 +297,21 @@ net-im/telegram-desktop 1.9.3 9999: Official desktop client for Telegram
 net-im/telegram-purple 1.3.0 9999: Libpurple (Pidgin) plugin for using a Telegram account
 net-im/tencent-qq 2.0.0_beta1: Official Linux version of Tencent QQ
 net-libs/jzmq 9999: jzmq
+net-misc/avsocks 9999: 科学操长城软件
 net-misc/baidunetdisk 2.0.1 2.0.2 3.0.1: Baidu Net Disk is a cloud storage client (Linux Version)
 net-misc/baidupcs-go 3.6 3.6.1 9999: The terminal utility for Baidu Network Disk (Golang Version).
 net-misc/deepin-wine-thunderspeed 7.10.35.366.18: ThunderSpeed for Linux by Deepin
 net-misc/libipmsg 0.1.6 0.1.7: libipmsg - IP Messenger library for UNIX
 net-misc/logjam 4.5.3: GTK2-based LiveJournal client
+net-misc/networkmanager-l2tp 9999: NetworkManager L2TP plugin
 net-misc/omnitty 0.3.0: ncurses-based ssh multiplexer for cluster administration
 net-misc/pcmanx-gtk2 1.3 9999: PCMan is an easy-to-use telnet client mainly targets BBS users formerly writen by gtk2
 net-misc/prips 1.0.0: print the IP addresses in a range
 net-misc/tiebasprit 0.3.1: 百度贴吧守护精灵 - 百度贴吧广告删贴机器人
 net-misc/xmuruijie 1.4.3: Red Gaint (RuiJie) EAP-MD5 authentication client in Linux
+net-misc/you-get 9999: A video downloader for YouTube, Youku, niconico and a few other sites
+net-p2p/amule-dlp 9999: aMule with DLP patch, the all-platform eMule p2p client
+net-p2p/amule-dlp-antileech 9999: amule-dlp-antileech, dynamic DLP library for amule-dlp
 net-print/cndrvcups-common-lb 3.40-r1: Common files for Canon drivers
 net-print/cndrvcups-lb 3.40-r1: Canon UFR II / LIPSLX Printer Driver for Linux
 net-print/cups-tsc 0.1.26: The driver of TSC printers for Linux and CUPS
@@ -304,8 +320,10 @@ net-proxy/goagent 3.2.2 9999: A GAE proxy forked from gappproxy/wallproxy
 net-proxy/lantern-bin 3.0.4: A free desktop application that delivers fast, reliable and secure access to the open Internet for users in censored regions.
 net-proxy/libQtShadowsocks 2.1.0: A lightweight and ultra-fast shadowsocks library written in C++/Qt
 net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
+net-proxy/shadowsocks 9999: A fast tunnel proxy that helps you bypass firewalls
 net-proxy/shadowsocks-libev 2.4.8 9999: A lightweight secured scoks5 proxy for embedded devices and low end boxes
 net-proxy/shadowsocks-qt5 3.0.1: Shadowsocks-Qt5 is a native and cross-platform shadowsocks GUI client with advanced features.
+net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
 net-proxy/simple-obfs 0.0.5: A simple obfuscating tool
 net-proxy/smartproxy 0.9.4: A fast, proxy smart selector
 net-proxy/trojan 1.4.3: An unidentifiable mechanism that helps you bypass GFW.
@@ -313,27 +331,42 @@ net-proxy/v2ray 3.28: A platform for building proxies to bypass network restrict
 net-proxy/v2ray-bin 4.20.0: A platform for building proxies to bypass network restrictions.
 net-proxy/wallproxy-plus 2.1.18-r1 2.1.19 9999: New version of wallproxy, a general purpose proxy framework in Python.
 net-wireless/rtl8812au 9999-r1: rtl8812au rtl8821au kernel driver for AC1200 Wireless Dual-Band USB Adapter
+sci-libs/libticables2 9999: Library to handle different link cables for TI calculators
+sci-libs/libticalcs2 9999: Library for communication with TI calculators
+sci-libs/libticonv 9999: Charset conversion library for TI calculators
+sci-libs/libtifiles2 9999: Library for TI calculator files
 sys-apps/inxi 2.2.19: A newer, better system information script for irc, administration, and system troubleshooters.
+sys-apps/mdp 9999: A command-line based markdown presentation tool
+sys-apps/uksmstat 9999: Small tool to show UKSM statistics.
 sys-apps/yaourt 1.2.2: A pacman wrapper with extended features and AUR support
 sys-boot/grub-efi 0.97-r84: GNU GRUB Legacy boot loader
 sys-devel/gdb 7.1: GNU debugger
 sys-devel/ucc 1.1-r0: UCC is an ANSI C Compiler
 sys-fs/coda 7.0.5: Coda is an advanced network file system, similar to NFS
+sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/yaffs2utils 0.3.0: Utilities to create/extract a yaffs2 image on Linux
+sys-fs/zfs-auto-snapshot 9999 9999-r1: Automatic snapshots for ZFS on Linux
 sys-kernel/dkms 2.2.0.3: Dynamic Kernel Module Support
+sys-kernel/e-sources 3.18.14 4.0.9 4.1.12 4.2.5 4.5.2: Full sources for the Linux kernel including: gentoo, ck and other patches
+sys-kernel/hardened-sources 4.9.29 4.9.44 4.9.52 4.9.65 4.9.74: Hardened kernel sources (kernel series 4.9)
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libixp 9999: Standalone client/server 9P library
 virtual/dde-wm 0: Virtual for DDE Window Manager
 virtual/linux-sources 1: Virtual for Linux kernel sources
 virtual/openvg 1.1: OpenVG is an API designed for hardware-accelerated 2D vector graphics.
 www-client/maxthon 1.0.5.3: Maxthon for Linux
+www-plugins/115upload 1.5.7.0: 115.com big file upload control
+www-plugins/aliedit 1.0.3.20: 支付宝安全控件对密码输入进行保护
+www-plugins/upeditor 1.0.0.6: unionpay security control plugin
 www-servers/bashttpd 0.1-r1: Simple HTTP Daemon Written in BASH
 www-servers/darkhttpd 1.8: A small, static webserver
 www-servers/tengine 2.0.3: Robust, small and high performance http and reverse proxy server
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
 x11-libs/bamf 0.5.4: BAMF Application Matching Framework
+x11-libs/deepin-ui 1.1.20141229194712-r1: UI toolkit for Linux Deepin.
 x11-libs/gsettings-qt 0.1_p20170824 0.2: Qml bindings for GSettings.
+x11-libs/libvdpau-va-gl 9999: VDPAU driver with VA-API/OpenGL backend.
 x11-libs/xcb-imdkit 20190826: An implementation of xim protocol in xcb
 x11-misc/9menu 1.8: Create X menus from the shell
 x11-misc/fqterm 0.9.8.3.4 9999: a modern terminal emulator for Linux

@@ -1,12 +1,13 @@
-DEFINED_PHASES=install postinst postrm unpack
-DEPEND=dev-vcs/git || ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install postinst postrm prepare unpack
+DEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 DESCRIPTION=vim plugin: The ultimate vim statusline utility.
-EAPI=0
+EAPI=7
 HOMEPAGE=http://www.vim.org/scripts/script.php?script_id=3881
 KEYWORDS=~amd64 ~x86
 LICENSE=CCPL-Attribution-ShareAlike-3.0
 PROPERTIES=live
 RDEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 SLOT=0
-_eclasses_=estack	686eaab303305a908fd57b2fd7617800	git-2	ff0c6913068da64bb51417d8eceff36a	vim-doc	af2c81a1feeb0a99e91bee3e20769edb	vim-plugin	3160d9cb05ef44497be1485db0fe7590
-_md5_=3faeb2d6bc46be20d8641ca339720b85
+_eclasses_=estack	686eaab303305a908fd57b2fd7617800	git-r3	809e27702c573cbba31c08ed00bbad33	vim-doc	af2c81a1feeb0a99e91bee3e20769edb	vim-plugin	3160d9cb05ef44497be1485db0fe7590
+_md5_=adef1d298c8617a494b7169009b16152

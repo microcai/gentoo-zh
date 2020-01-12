@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install postinst unpack
+DESCRIPTION=Automatic snapshots for ZFS on Linux
+EAPI=7
+HOMEPAGE=https://github.com/dajhorn/zfs-auto-snapshot/
+IUSE=+default-exclude
+KEYWORDS=amd64
+LICENSE=GPL-2
+PROPERTIES=live
+RDEPEND=sys-fs/zfs virtual/cron
+SLOT=0
+_eclasses_=git-r3	809e27702c573cbba31c08ed00bbad33
+_md5_=e836f41f3cba7f306ee9fa0fbb10af4b

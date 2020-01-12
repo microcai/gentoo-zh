@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=prepare unpack
+DEPEND=dev-libs/libusb:1
+DESCRIPTION=Enables USB charging for Apple devices.
+EAPI=7
+HOMEPAGE=https://github.com/mkorenkov/ipad_charge
+KEYWORDS=~x86 ~amd64
+LICENSE=GPL-2
+PROPERTIES=live
+RDEPEND=dev-libs/libusb:1
+SLOT=0
+_eclasses_=eutils	fcb2aa98e1948b835b5ae66ca52868c5	git-r3	809e27702c573cbba31c08ed00bbad33
+_md5_=7f3f57d80fc6f3d8810fa78997ed718d

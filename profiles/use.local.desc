@@ -19,11 +19,6 @@ app-i18n/fcitx5:coverage - Build the project with gcov support (Need ENABLE_TEST
 app-i18n/fcitx5:enchant - Enable enchant for word predication
 app-i18n/fcitx5:presage - Enable presage for word predication(not stable)
 app-i18n/fcitx5:test - Build Test
-app-text/stardict:espeak - Enables text to speech engine app-accessibility/espeak
-app-text/stardict:festival - Enables text to speech engine app-accessibility/festival
-app-text/stardict:gnome - Enables gnome-base/gnome support
-app-text/stardict:gucharmap - Enables gnome-extra/gucharmap plugin
-app-text/stardict:spell - Enables spell checking capability using app-text/enchant
 dde-base/dde-control-center:redshift - Install x11-misc/redshift to support screen color temperature adjusting
 dde-base/dde-daemon:bluetooth - Enable Bluetooth Support
 dde-base/dde-daemon:fprint - Enables experimental fingerprint authentication using sys-auth/fprintd
