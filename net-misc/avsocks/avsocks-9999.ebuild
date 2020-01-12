@@ -8,7 +8,7 @@ DESCRIPTION="科学操长城软件"
 HOMEPAGE="https://github.com/avplayer/avsocks"
 SRC_URI=""
 
-inherit cmake-utils git-2
+inherit cmake-utils git-r3
 
 EGIT_REPO_URI="https://github.com/avplayer/avsocks.git"
 

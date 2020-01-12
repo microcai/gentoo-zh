@@ -4,7 +4,7 @@
 
 EAPI=7
 
-inherit eutils autotools versionator git-2
+inherit eutils autotools versionator git-r3
 
 HOMEPAGE="http://code.google.com/p/osd-lyrics/"
 

@@ -6,7 +6,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python2_7 )
 
-inherit eutils distutils-r1 git-2
+inherit eutils distutils-r1 git-r3
 
 DESCRIPTION=" A fast tunnel proxy that helps you bypass firewalls"
 HOMEPAGE="http://shadowsocks.org/"

@@ -4,7 +4,7 @@
 
 EAPI=7
 
-inherit autotools eutils git-2
+inherit autotools eutils git-r3
 
 DESCRIPTION="Library to handle different link cables for TI calculators"
 HOMEPAGE="http://lpg.ticalc.org/prj_tilp/"

@@ -4,7 +4,7 @@
 
 EAPI=7
 
-inherit git-2 eutils
+inherit git-r3 eutils
 
 DESCRIPTION="Enables USB charging for Apple devices."
 HOMEPAGE="https://github.com/mkorenkov/ipad_charge"

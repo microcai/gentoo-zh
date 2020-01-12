@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=7
+EAPI=6
 K_DEBLOB_AVAILABLE="0"
 K_KDBUS_AVAILABLE="1"
 

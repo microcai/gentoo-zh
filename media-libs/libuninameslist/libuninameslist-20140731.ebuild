@@ -10,7 +10,7 @@ SRC_URI="https://github.com/fontforge/${PN}/archive/0.4.${PV}.tar.gz -> ${PN}-0.
 
 S="${WORKDIR}/${PN}-0.4.${PV}"
 
-inherit autotools-multilib
+inherit autotools
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -21,9 +21,33 @@ src_prepare(){
 	eautoreconf
 }
 
-multilib_src_configure(){
+src_configure(){
 	local myeconfargs=(
 		$(use_enable static-libs static)
 	)
-	autotools-utils_src_configure
+# Common args
+	local econfargs=()
+
+	_check_build_dir
+	if "${ECONF_SOURCE}"/configure --help 2>&1 | grep -q '^ *--docdir='; then
+		econfargs+=(
+			--docdir="${EPREFIX}"/usr/share/doc/${PF}
+		)
+	fi
+
+	# Handle static-libs found in IUSE, disable them by default
+	if in_iuse static-libs; then
+		econfargs+=(
+			--enable-shared
+			$(use_enable static-libs static)
+		)
+	fi
+
+	# Append user args
+	econfargs+=("${myeconfargs[@]}")
+
+	mkdir -p "${BUILD_DIR}" || die
+	pushd "${BUILD_DIR}" > /dev/null || die
+	econf "${econfargs[@]}" "$@"
+	popd > /dev/null || die
 }

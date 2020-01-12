@@ -2,8 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=7
+
 #VIM_PLUGIN_VIM_VERSION="7.0"
-inherit git-2 vim-plugin
+inherit git-r3 vim-plugin
 
 DESCRIPTION="vim plugin: The ultimate vim statusline utility."
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=3881"

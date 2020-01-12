@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python2_7 )
 inherit eutils distutils-r1 bash-completion-r1
 
 if [[ "${PV}" == "9999" ]] ; then
-	inherit git-2
+	inherit git-r3
 	EGIT_BRANCH="master"
 	EGIT_REPO_URI="git://gitorious.org/be/be.git"
 	SRC_URI=""
@@ -43,7 +43,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	if [[ "${PV}" == "9999" ]] ; then
-		git-2_src_unpack
+		git-r3_src_unpack
 	else
 		unpack "${A}"
 	fi

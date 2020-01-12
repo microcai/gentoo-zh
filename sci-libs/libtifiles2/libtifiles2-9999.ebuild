@@ -4,7 +4,7 @@
 
 EAPI=7
 
-inherit autotools eutils git-2
+inherit autotools eutils git-r3
 
 DESCRIPTION="Library for TI calculator files"
 HOMEPAGE="http://lpg.ticalc.org/prj_tilp/"

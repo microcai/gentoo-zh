@@ -6,7 +6,7 @@ EAPI=7
 
 EGIT_REPO_URI="https://github.com/zfsonlinux/${PN}.git"
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="Automatic snapshots for ZFS on Linux"
 HOMEPAGE="https://github.com/dajhorn/zfs-auto-snapshot/"

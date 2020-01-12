@@ -4,7 +4,7 @@
 
 EAPI=7
 
-inherit eutils git-2
+inherit eutils git-r3
 
 DESCRIPTION="A fast, safe VPN based on libsodium"
 HOMEPAGE="http://shadowvpn.org/"
