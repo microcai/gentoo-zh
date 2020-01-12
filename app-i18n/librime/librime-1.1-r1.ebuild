@@ -4,7 +4,7 @@
 
 EAPI=7
 
-inherit cmake-utils multilib versionator toolchain-funcs
+inherit cmake-utils multilib toolchain-funcs
 
 DESCRIPTION="Rime Input Method Engine library"
 HOMEPAGE="http://code.google.com/p/rimeime/"
