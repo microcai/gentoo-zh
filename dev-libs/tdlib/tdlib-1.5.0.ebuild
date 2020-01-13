@@ -25,10 +25,12 @@ BDEPEND=""
 PATCHES=( "${FILESDIR}/${P}-multilib.patch" )
 
 S="${WORKDIR}/td-${PV}"
+BUILD_DIR="${S}/build"
 
 src_configure(){
-	local mycmakeargs=(
-		-DLIB=$(get_libdir)
-	)
-	cmake-utils_src_configure
+	mkdir ${BUILD_DIR} && cd ${BUILD_DIR} || die
+	cmake -GNinja \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DLIB=$(get_libdir) ${S} || die "cmake failed"
 }
