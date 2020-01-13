@@ -7,7 +7,7 @@ inherit cmake-utils gnome2-utils xdg-utils git-r3
 EGIT_REPO_URI="https://github.com/fcitx/libime.git"
 
 if [[ ! "${PV}" =~ (^|\.)9999$ ]]; then
-	EGIT_COMMIT="32541593515f45e76f75831e324a5f20b7ffba94"
+	EGIT_COMMIT="5b6e89064fc176250ed5bf1767607315ae44578e"
 fi
 SRC_URI="https://download.fcitx-im.org/data/lm_sc.3gm.arpa-20140820.tar.bz2 -> fcitx5-lm_sc.3gm.arpa-20140820.tar.bz2
 https://download.fcitx-im.org/data/dict.utf8-20170423.tar.xz -> fcitx5-dict.utf8-20170423.tar.xz
