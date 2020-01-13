@@ -4,17 +4,6 @@
 
 app-emulation/crossover-bin:capi - Enable ISDN support via CAPI
 app-emulation/winetricks-zh:rar - Pull in app-arch/unrar for extraction of rar-compressed game files
-app-i18n/fcitx:32bit - For amd64-multilib, installs the 32-it im modules.
-app-i18n/fcitx:autostart - Enable xdg autostart desktop file installion
-app-i18n/fcitx:glib - Enable GLib2 as depenedency
-app-i18n/fcitx:gtk - Install the GTK2's IM Module
-app-i18n/fcitx:gtk3 - Install the GTK3's IM Module
-app-i18n/fcitx:introspection - Enable GObject Introspection
-app-i18n/fcitx:lua - Enable Lua support
-app-i18n/fcitx:pango - Enable pango support for better multilingual text rendering
-app-i18n/fcitx:qt4 - Install the Qt4's IM Module
-app-i18n/fcitx:snooper - Enable Key Snooper for gtk app
-app-i18n/fcitx:table - Adds suppport for Wubi, Erbi, etc.
 app-i18n/fcitx5:coverage - Build the project with gcov support (Need ENABLE_TEST=On)
 app-i18n/fcitx5:enchant - Enable enchant for word predication
 app-i18n/fcitx5:presage - Enable presage for word predication(not stable)
