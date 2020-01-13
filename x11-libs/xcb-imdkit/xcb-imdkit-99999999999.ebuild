@@ -16,7 +16,7 @@ HOMEPAGE="https://gitlab.com/fcitx/xcb-imdkit"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE=""
 REQUIRED_USE=""
 

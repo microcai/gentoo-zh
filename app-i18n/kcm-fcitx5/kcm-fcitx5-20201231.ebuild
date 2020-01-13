@@ -7,7 +7,7 @@ inherit cmake-utils git-r3
 EGIT_REPO_URI="https://github.com/fcitx/kcm-fcitx5.git"
 
 if [[ ! "${PV}" =~ (^|\.)9999$ ]]; then
-	EGIT_COMMIT="62e087f3b79e758187303f07ebaf7edc6219ec9d"
+	EGIT_COMMIT="d4e6ec571bc0f103eed873a52dd3e645b688d153"
 fi
 
 DESCRIPTION="KDE configuration module for Fcitx"

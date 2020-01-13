@@ -7,7 +7,7 @@ inherit cmake-utils gnome2-utils xdg-utils git-r3
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5.git"
 
 if [[ ! "${PV}" =~ (^|\.)9999$ ]]; then
-	EGIT_COMMIT="6f26a33f59e70a465e3fb4ca9c2b9493e82ab83f"
+	EGIT_COMMIT="8d889da135dbfe42bb9721f16fcaad70145f0e09"
 fi
 SRC_URI=""
 
