@@ -44,24 +44,6 @@ media-gfx/deepin-screenshot:sharing - Install dde-extra/deepin-social-sharing fo
 media-libs/cogl:gles2 - Enable OpenGL ES 2.0 support
 media-libs/cogl:kms - Enable KMS support.
 media-libs/cogl:pango - Build cogl-pango library for x11-libs/pango integration
-media-plugins/osdlyrics:mpd - Enable support for MPD
-media-plugins/osdlyrics:xmms2 - Enable support for XMMS2
-media-sound/deadbeef:adplug - adplug player (OPL2/OPL3 emulation)
-media-sound/deadbeef:cover - Cover art plugin
-media-sound/deadbeef:gme - chiptune music player based on GME
-media-sound/deadbeef:hotkeys - Global hotkeys support
-media-sound/deadbeef:lastfm - last.fm scrobbler
-media-sound/deadbeef:m3u - M3U and PLS playlist support
-media-sound/deadbeef:mac - Monkey's audio (APE) decoder
-media-sound/deadbeef:midi - WildMidi player plugin
-media-sound/deadbeef:mms - mms streaming support
-media-sound/deadbeef:null - NULL output
-media-sound/deadbeef:shellexec - shell commands plugin
-media-sound/deadbeef:sid - SID player based on libsidplay2
-media-sound/deadbeef:supereq - Equalizer based on Super EQ library by Naoki Shibata
-media-sound/deadbeef:tta - TTA player plugin
-media-sound/deadbeef:vtx - vtx file player (ay8910/12 emulation)
-media-sound/deadbeef:zip - zip archive support
 media-video/simplescreenrecorder:vpx - Enables vp8 codec support using libvpx from ffmpeg/libav
 net-misc/xmuruijie:firewall - Add support for iptables firewall
 net-proxy/make-proxy:client - Add make proxy client support
