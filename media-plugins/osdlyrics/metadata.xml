@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>sound</herd>
-<use>
-<flag name='mpd'>Enable support for MPD</flag>
-<flag name='xmms2'>Enable support for XMMS2</flag>
-</use>
-</pkgmetadata>
