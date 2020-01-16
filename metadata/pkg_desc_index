@@ -246,7 +246,7 @@ media-gfx/xrectsel 0.3.1: print the geometry of a rectangular screen region
 media-libs/cogl 1.22.5-r1: A library for using 3D graphics hardware to draw pretty pictures
 media-libs/ksquirrel-libs 0.7.2 0.7.4 0.7.5 0.8.0: Libs required by ksqirrel
 media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simplifies the drawing of beautiful curves.
-media-libs/libuninameslist 20140731: Library of unicode annotation data
+media-libs/libuninameslist 20140731 20190701: Library of unicode annotation data
 media-plugins/audacious-mac 0.2.0 0.3.10: Monkey's Audio Codec plugin for audacious
 media-plugins/gimp-gap 2.6.0: Gimp Animation Package
 media-plugins/gst-plugins-meta 0.10-r8: Meta ebuild to pull in gst plugins for apps
