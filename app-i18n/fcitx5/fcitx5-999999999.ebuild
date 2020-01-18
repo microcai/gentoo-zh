@@ -17,7 +17,7 @@ SRC_URI="https://download.fcitx-im.org/data/en_dict-20121020.tar.gz -> fcitx-dat
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE="+enchant test coverage doc presage systemd"
 REQUIRED_USE="coverage? ( test )"
 RDEPEND="dev-libs/glib:2
