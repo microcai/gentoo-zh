@@ -50,3 +50,5 @@ follow rule no.1 and no.2
   `KEYWORDS="alpha amd64 arm hppa ia64 ppc mips ~s390 ~sh sparc x86 ~x86-fbsd"`
 
   But please don't abuse this exception. It must be a pure font package.
+  
+  # See wiki for some package not working
