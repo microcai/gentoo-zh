@@ -22,7 +22,7 @@ RDEPEND="|| ( >=app-emulation/virtualbox-5.0.28 >=app-emulation/virtualbox-bin-5
 	virtual/opengl
 	media-libs/libpng:1.2
 	dev-libs/openssl
-	dev-qt/qtgui:5[libinput,xcb]
+	dev-qt/qtgui:5[libinput,X]
 	dev-qt/qtsql:5[sqlite]
 	dev-qt/qtwebkit:5
 	dev-qt/qtsvg:5
