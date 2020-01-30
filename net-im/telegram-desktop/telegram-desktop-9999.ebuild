@@ -41,10 +41,10 @@ RDEPEND="
 	dev-libs/openssl:0
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
-	dev-qt/qtgui:5[jpeg,png,xcb]
+	dev-qt/qtgui:5[jpeg,png,X]
 	dev-qt/qtnetwork:5
 	dev-qt/qtimageformats:5
-	dev-qt/qtwidgets:5[png,xcb]
+	dev-qt/qtwidgets:5[png,X]
 	media-libs/openal
 	media-libs/opus
 	sys-libs/zlib[minizip]
