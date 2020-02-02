@@ -272,8 +272,8 @@ net-im/avim 0.1: avim is a secure IM build around RSA
 net-im/deepin-wine-QQ 8.9.19983.23: Tencent QQ for Linux by Deepin
 net-im/deepin-wine-QQ-Light 7.9.14308.8: Tencent QQ light for Linux by Deepin
 net-im/deepin-wine-TIM 2.0.0.4: Tencent TIM for Linux by Deepin
-net-im/deepin-wine-wechat 2.6.2.31.0 2.6.8.52.0: Tencent WeChat for Linux by Deepin
-net-im/deepin-wine-wechat-work 2.4.16.1347.1: Tencent WeChat Work for Linux by Deepin
+net-im/deepin-wine-wechat 2.6.2.31.0 2.6.8.65.0: Tencent WeChat for Linux by Deepin
+net-im/deepin-wine-wechat-work 2.4.16.1347.0 2.8.10.2010.0: Tencent WeChat Work for Linux by Deepin
 net-im/freetalk 4.1: Console based Jabber client
 net-im/telegram-desktop 1.9.3 9999: Official desktop client for Telegram
 net-im/telegram-purple 1.3.0 9999: Libpurple (Pidgin) plugin for using a Telegram account
@@ -308,9 +308,7 @@ net-proxy/shadowsocks-qt5 3.0.1: Shadowsocks-Qt5 is a native and cross-platform 
 net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
 net-proxy/simple-obfs 0.0.5: A simple obfuscating tool
 net-proxy/smartproxy 0.9.4: A fast, proxy smart selector
-net-proxy/trojan 1.4.3: An unidentifiable mechanism that helps you bypass GFW.
-net-proxy/v2ray 3.28: A platform for building proxies to bypass network restrictions
-net-proxy/v2ray-bin 4.20.0: A platform for building proxies to bypass network restrictions.
+net-proxy/v2ray-bin 4.22.1: A platform for building proxies to bypass network restrictions.
 net-proxy/wallproxy-plus 2.1.18-r1 2.1.19 9999: New version of wallproxy, a general purpose proxy framework in Python.
 sci-libs/libticables2 9999: Library to handle different link cables for TI calculators
 sci-libs/libticalcs2 9999: Library for communication with TI calculators
