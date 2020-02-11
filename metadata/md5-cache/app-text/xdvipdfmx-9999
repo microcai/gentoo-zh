@@ -7,5 +7,5 @@ HOMEPAGE=http://scripts.sil.org/svn-view/xdvipdfmx/
 LICENSE=GPL-2-with-linking-exception
 PROPERTIES=live
 SLOT=0
-_eclasses_=estack	686eaab303305a908fd57b2fd7617800	eutils	fcb2aa98e1948b835b5ae66ca52868c5	subversion	1086a6c20b5a06e9f05f3128525fa694
+_eclasses_=estack	686eaab303305a908fd57b2fd7617800	eutils	fcb2aa98e1948b835b5ae66ca52868c5	subversion	4beaac7ba954403d7bbe4d4b8befdb82
 _md5_=42e9635558527c0d0b70a730e45193e2
