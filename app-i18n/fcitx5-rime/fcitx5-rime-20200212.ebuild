@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/fcitx/fcitx5-rime"
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5-rime.git"
 
 if [[ ! "${PV}" =~ (^|\.)9999$ ]]; then
-	EGIT_COMMIT="02afc3138d39c7ba773d3c3455404d3f32bfb14d"
+	EGIT_COMMIT="72a9df7910c2b41201e57d70e72f8843bf881505"
 fi
 
 LICENSE="GPL-2"
