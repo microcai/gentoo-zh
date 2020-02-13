@@ -67,14 +67,15 @@ app-emulation/deepin-wine-helper 1.2.0: Deepin Version of Wine
 app-emulation/deepin-wine-plugin 1.0.2: Deepin Version of Wine
 app-emulation/genymotion-bin 2.9.0: Complete set of tools that provide a virtual environment for Android
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
+app-i18n/cldr-emoji-annotation 36.12.120191002-r0 9999: Emoji annotation files in CLDR
 app-i18n/dvp 1.2.1: The kbd keymap for Programmer Dvorak.
 app-i18n/fbterm-ucimf 0.2.3 0.2.5 0.2.6 0.2.7 0.2.8 0.2.9: UCIMF input method support for FbTerm
 app-i18n/fcitx-unikey 0.2.2: unikey support for fcitx.
-app-i18n/fcitx5 20200113 999999999: Fcitx5 Next generation of fcitx
-app-i18n/fcitx5-chinese-addons 20191231 999999999: Addons related to Chinese, including IME previous bundled inside fcitx4.
+app-i18n/fcitx5 20200213 999999999: Fcitx5 Next generation of fcitx
+app-i18n/fcitx5-chinese-addons 20200212 999999999: Addons related to Chinese, including IME previous bundled inside fcitx4.
 app-i18n/fcitx5-gtk 20191111 999999999: Gtk im module for fcitx5 and glib based dbus client library
 app-i18n/fcitx5-qt 20200101 9999999999: Qt library and IM module for fcitx5
-app-i18n/fcitx5-rime 20200113 99999999: Rime Support for Fcitx5
+app-i18n/fcitx5-rime 20200212 99999999: Rime Support for Fcitx5
 app-i18n/gcin 2.8.5: Another Traditional Chinese IM.
 app-i18n/hime 0.9.10: HIME Input Method Editor
 app-i18n/ibus-googlepinyin 0.1.2: wrapper libgooglepinyin for IBus

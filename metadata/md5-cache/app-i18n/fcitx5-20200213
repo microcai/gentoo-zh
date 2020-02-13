@@ -5,6 +5,7 @@ DESCRIPTION=Fcitx5 Next generation of fcitx
 EAPI=7
 HOMEPAGE=https://fcitx-im.org/ https://gitlab.com/fcitx/fcitx
 IUSE=+enchant test coverage doc presage systemd
+KEYWORDS=~amd64
 LICENSE=BSD-1 GPL-2+ LGPL-2+ MIT
 PROPERTIES=live
 RDEPEND=dev-libs/glib:2 sys-apps/dbus dev-libs/json-c dev-libs/libfmt sys-apps/util-linux virtual/libiconv virtual/libintl x11-libs/libxkbcommon[X] x11-libs/libX11 dev-libs/wayland dev-libs/wayland-protocols x11-libs/libXfixes x11-libs/libXinerama x11-libs/libXrender x11-libs/libxkbfile x11-libs/xcb-imdkit x11-misc/xkeyboard-config x11-libs/cairo[X] x11-libs/libXext x11-libs/pango media-libs/fontconfig enchant? ( app-text/enchant:0= ) app-text/iso-codes app-i18n/cldr-emoji-annotation dev-libs/libxml2
