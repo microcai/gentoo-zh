@@ -6,5 +6,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=CC-BY-SA-4.0
 SLOT=0
 SRC_URI=https://github.com/linuxdeepin/deepin-grub2-themes/archive/1.0.0.tar.gz -> deepin-grub2-themes-1.0.0.tar.gz
-_eclasses_=mount-boot	e30bb691fbb26137f3d46438542bffe4
+_eclasses_=mount-boot	20014ae7a3e81eb2c65a4d4d86d2560d
 _md5_=9ac9a31b3cac88e5573cf0a52468cf58
