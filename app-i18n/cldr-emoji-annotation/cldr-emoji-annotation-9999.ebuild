@@ -13,8 +13,11 @@ SLOT="0"
 KEYWORDS="~amd64"
 SRC_URI=""
 
-DEPEND="!app-i18n/unicode-cldr"
-RDEPEND="${DEPEND}"
+DEPEND=""
+RDEPEND="
+	${DEPEND}
+	!app-i18n/unicode-cldr
+"
 BDEPEND=""
 
 TAG=${PV}_${PR/r/}
