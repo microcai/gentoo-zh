@@ -1,15 +1,17 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="6"
+EAPI=7
 
 inherit cmake-utils gnome2-utils xdg-utils git-r3
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5.git"
 
-if [[ ! "${PV}" =~ (^|\.)9999$ ]]; then
-	EGIT_COMMIT="8d889da135dbfe42bb9721f16fcaad70145f0e09"
+KEYWORDS="~amd64"
+if [[ "${PV}" != 999999999 ]]; then
+	EGIT_COMMIT="943641638d48bd2073f07847fa594999458dc3b0"
+else
+	KEYWORDS=""
 fi
-SRC_URI=""
 
 DESCRIPTION="Fcitx5 Next generation of fcitx "
 HOMEPAGE="https://fcitx-im.org/ https://gitlab.com/fcitx/fcitx"
@@ -17,7 +19,6 @@ SRC_URI="https://download.fcitx-im.org/data/en_dict-20121020.tar.gz -> fcitx-dat
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-KEYWORDS=""
 IUSE="+enchant test coverage doc presage systemd"
 REQUIRED_USE="coverage? ( test )"
 RDEPEND="dev-libs/glib:2
@@ -43,6 +44,7 @@ RDEPEND="dev-libs/glib:2
 	media-libs/fontconfig
 	enchant? ( app-text/enchant:0= )
 	app-text/iso-codes
+	app-i18n/cldr-emoji-annotation
 	dev-libs/libxml2"
 DEPEND="${RDEPEND}
 	kde-frameworks/extra-cmake-modules:5
