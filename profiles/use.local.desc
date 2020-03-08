@@ -33,6 +33,10 @@ media-gfx/deepin-screenshot:sharing - Install dde-extra/deepin-social-sharing fo
 media-libs/cogl:gles2 - Enable OpenGL ES 2.0 support
 media-libs/cogl:kms - Enable KMS support.
 media-libs/cogl:pango - Build cogl-pango library for x11-libs/pango integration
+media-sound/feeluown:local - add local music support for feeluown
+media-sound/feeluown:netease - add netease cloud music support for feeluown
+media-sound/feeluown:qqmusic - add qq music support for feeluown
+media-sound/feeluown:xiami - add xiami music support for feeluown
 media-video/simplescreenrecorder:vpx - Enables vp8 codec support using libvpx from ffmpeg/libav
 net-misc/xmuruijie:firewall - Add support for iptables firewall
 net-proxy/make-proxy:client - Add make proxy client support
