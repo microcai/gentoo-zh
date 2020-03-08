@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer>
+        <email>ak47m61@gmail.com</email>
+    </maintainer>
+    <use>
+        <flag name='xiami'>add xiami music support for feeluown</flag>
+        <flag name='netease'>add netease cloud music support for feeluown</flag>
+        <flag name='local'>add local music support for feeluown</flag>
+        <flag name='qqmusic'>add qq music support for feeluown</flag>
+    </use>
+</pkgmetadata>

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=FeelUOwn
+Comment=FeelUOwn Launcher
+Exec=feeluown
+Icon=/usr/share/feeluown/icons/FeelUOwn.png
+Categories=AudioVideo;Audio;Player;Qt;
+Terminal=false
+StartupNotify=true
