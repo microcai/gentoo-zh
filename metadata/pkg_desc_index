@@ -215,7 +215,6 @@ dev-python/qasync 0.9.4: Implementation of the asyncio (PEP 3156) event-loop wit
 dev-qt/qcef 1.1.7-r1: Qt5 binding of Chromium Embedded Framework
 dev-qt/qt5dxcb-plugin 1.2.6 5.0.1: XCB Qt5 platform plugin for DDE
 dev-qt/qtstyleplugins 20170311-r1: Additional style plugins for Qt
-dev-qt/qtxcb-private-headers 5.12.3 5.12.5 5.13.2: The Private Headers for the Qt5 Xcb
 dev-ruby/mruby 1.0.0 9999: mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
 dev-util/arch-install-scripts 20: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
 dev-util/be 9999: Bugs Everywere distributed bug tracker
