@@ -9,5 +9,5 @@ LICENSE=ntufonts
 RESTRICT=mirror strip binchecks
 SLOT=0
 SRC_URI=http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/ttf/big5/ntu//NTU_FS_M.TTF http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/ttf/big5/ntu//NTU_KAI.TTF http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/ttf/big5/ntu//NTU_LI_M.TTF http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/ttf/big5/ntu//NTU_MB.TTF http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/ttf/big5/ntu//NTU_MM.TTF http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/ttf/big5/ntu//NTU_MR.TTF http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/ttf/big5/ntu//NTU_TW.TTF
-_eclasses_=font	af70de9a23b2f34d4fe4dcb222be0346
+_eclasses_=font	4021fe3baa559f77681b3f3f58db27ce
 _md5_=78db70da29bbb738f3d6cc3e4be5366b

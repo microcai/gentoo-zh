@@ -9,5 +9,5 @@ LICENSE=as-is
 RESTRICT=binchecks strip test
 SLOT=0
 SRC_URI=http://kdl.cc.ksosoft.com/wps-community/download/fonts/wps-office-fonts_1.0_all.deb
-_eclasses_=font	af70de9a23b2f34d4fe4dcb222be0346	unpacker	3cd8bad0d31e525cd26be1bfa4e61631
+_eclasses_=font	4021fe3baa559f77681b3f3f58db27ce	unpacker	3cd8bad0d31e525cd26be1bfa4e61631
 _md5_=119bee1a64aadf71787179d920fe8d69
