@@ -11,5 +11,5 @@ RDEPEND=sys-libs/zlib >=dev-libs/glib-2.6 >=dev-libs/libxml2-2.6.7 >=media-libs/
 REQUIRED_USE=python? ( ^^ ( python_single_target_python2_7 ) ) even? ( python )
 SLOT=0
 SRC_URI=https://github.com/fontforge/fontforge/releases/download/20150330/fontforge-20150330.tar.gz
-_eclasses_=autotools	7d999b62b8749fad43fff00620cedf47	eutils	fcb2aa98e1948b835b5ae66ca52868c5	fdo-mime	995b19d3f30e956b4e1bc5a91fdc4ea7	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-single-r1	01eeb2dae449b6155b46f8deb0a2087d	python-utils-r1	89113cd44c8118e781d18387d4256fe3	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
+_eclasses_=autotools	7d999b62b8749fad43fff00620cedf47	eutils	fcb2aa98e1948b835b5ae66ca52868c5	fdo-mime	995b19d3f30e956b4e1bc5a91fdc4ea7	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-single-r1	151046e8d2ffc8cffc8329bbc50a686b	python-utils-r1	e03f98555f2634bb9fb3160a8e30e3ec	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
 _md5_=c5f37294af5113ede07fafcb8733a7eb
