@@ -261,7 +261,7 @@ media-sound/audio-convert-mod 3.45.2: A simple audio file converter supporting m
 media-sound/cue2tracks 0.2.16: Bash script for split audio CD image files with cue sheet to tracks and write tags.
 media-sound/deepin-music 3.1.18 5.0.1: Deepin Music Player
 media-sound/deepin-voice-recorder 1.4.2 5.0.0: Deepin Voice Recorder
-media-sound/feeluown 3.4_alpha3: A user-friendly and hackable music player
+media-sound/feeluown 3.4: A user-friendly and hackable music player
 media-sound/hinedo 0.4: A desktop utility for Hinet Radio
 media-sound/linnya 2.2.0: A free music player
 media-sound/netease-cloud-music 1.2.1: Netease cloud music player
