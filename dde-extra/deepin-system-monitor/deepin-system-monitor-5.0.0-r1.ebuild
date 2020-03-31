@@ -42,8 +42,12 @@ DEPEND="${RDEPEND}
 		dde-base/dtkwm:=
 		"
 
+PATCHES=(
+	"${FILESDIR}"/${P}-qt5.14.patch
+)
+
 src_prepare() {
-	eapply_user
+	default
 	QT_SELECT=qt5 eqmake5 PREFIX=/usr ${PN}.pro
 }
 

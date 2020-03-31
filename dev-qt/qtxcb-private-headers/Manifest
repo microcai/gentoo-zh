@@ -1,3 +1,2 @@
-DIST qtbase-everywhere-src-5.12.3.tar.xz 48382148 SHA256 fddfd8852ef7503febeed67b876d1425160869ae2b1ae8e10b3fb0fedc5fe701
-DIST qtbase-everywhere-src-5.12.5.tar.xz 48463288 SHA256 fc8abffbbda9da3e593d8d62b56bc17dbaab13ff71b72915ddda11dabde4d625
 DIST qtbase-everywhere-src-5.13.2.tar.xz 48735704 SHA256 26b6b686d66a7ad28eaca349e55e2894e5a735f3831e45f2049e93b1daa92121
+DIST qtbase-everywhere-src-5.14.1.tar.xz 49828188 SHA256 d9d423a6e7bcf1055c0372fc029f14a6fe67dd62c67b83095cde68b60b762cf7

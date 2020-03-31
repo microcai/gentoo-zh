@@ -30,7 +30,7 @@ RDEPEND="dev-qt/qtwidgets:5
 		dev-qt/qtx11extras:5
 		x11-libs/libXtst
 		gif? ( media-gfx/byzanz )
-		mp4? ( media-video/ffmpeg[xcb,x264] )
+		mp4? ( media-video/ffmpeg[x264] )
 		"
 
 DEPEND="${RDEPEND}

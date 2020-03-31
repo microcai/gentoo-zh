@@ -61,6 +61,9 @@ DEPEND="${RDEPEND}
 		dde-base/deepin-anything
 		dde-base/deepin-gettext-tools
 		"
+PATCHES=(                          
+    "${FILESDIR}"/${P}-qt5.14.patch
+)
 
 src_prepare() {
 	sed -i "s|\ systemd_service||g" dde-file-manager-daemon/dde-file-manager-daemon.pro
