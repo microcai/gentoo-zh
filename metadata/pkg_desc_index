@@ -62,7 +62,7 @@ app-dicts/stardict-xdict-zh-en-gb 2.4.2: Stardict Dictionary Simplified Chinese 
 app-editors/typora 20190909: markdown editor
 app-editors/visual-studio-code 1.41: Multiplatform Visual Studio Code from Microsoft
 app-emulation/crossover-bin 17.1.0: Commercial version of app-emulation/wine with paid support.
-app-emulation/deepin-wine 2.18.18_rc2 2.18.18: Deepin Version of Wine
+app-emulation/deepin-wine 2.18.18 2.18.22_rc0: Deepin Version of Wine
 app-emulation/deepin-wine-helper 1.2.0: Deepin Version of Wine
 app-emulation/deepin-wine-plugin 1.0.2: Deepin Version of Wine
 app-emulation/genymotion-bin 2.9.0: Complete set of tools that provide a virtual environment for Android
@@ -135,18 +135,18 @@ dde-base/dde-api 3.18.5 5.0.0: Go-lang bingdings for dde-daemon
 dde-base/dde-control-center 4.10.14 5.0.0: Control Center of Deepin Desktop Environment
 dde-base/dde-daemon 3.28.0 5.0.0: Daemon handling the DDE session settings
 dde-base/dde-dock 4.10.8 5.0.0: Deepin desktop environment - Dock module
-dde-base/dde-file-manager 4.8.8.1 5.0.0: Deepin File Manager and Desktop module for DDE
+dde-base/dde-file-manager 4.8.8.1 5.0.0-r1: Deepin File Manager and Desktop module for DDE
 dde-base/dde-launcher 4.6.14 5.0.0: Deepin desktop environment - Launcher module
 dde-base/dde-meta 15.10.1: Deepin Desktop Enviroment (meta package)
 dde-base/dde-network-utils 0.1.4 5.0.1: DDE Network Utils
 dde-base/dde-polkit-agent 0.3.0 5.0.0: PolicyKit agent for DDE
 dde-base/dde-qt-dbus-factory 5.0.0 5.0.1: A repository stores auto-generated Qt5 D-Bus code used by DDE
-dde-base/dde-qt5integration 5.0.0 5.0.0-r1: DDE system integration plugin for Qt5
+dde-base/dde-qt5integration 5.0.0-r2: DDE system integration plugin for Qt5
 dde-base/dde-session-ui 4.9.14 5.0.0: Deepin desktop environment - Session UI module
 dde-base/deepin-anything 0.1.0 5.0.1: Fast File Search Tool for DDE
 dde-base/deepin-artwork-themes 15.12.4: Deepin artwork themes
-dde-base/deepin-desktop-base 2019.07.10: Base components for Deepin Desktop
-dde-base/deepin-desktop-schemas 3.13.9: GSettings deepin desktop-wide schemas
+dde-base/deepin-desktop-base 2019.06.19 2019.07.10: Base components for Deepin Desktop
+dde-base/deepin-desktop-schemas 3.13.8 3.13.9: GSettings deepin desktop-wide schemas
 dde-base/deepin-file-manager-backend 0.1.16-r1: Deepin file manager backend
 dde-base/deepin-gettext-tools 1.0.8: Deepin Internationalization utilities
 dde-base/deepin-gtk-theme 17.10.11: Deepin GTK Theme
@@ -178,7 +178,7 @@ dde-extra/deepin-qml-widgets 2.3.6-r1: Deepin QML widgets and dbus factory
 dde-extra/deepin-screensaver 0.0.8: Deepin ScreenSaver
 dde-extra/deepin-shortcut-viewer 1.3.5 5.0.0: Deepin shortcut Viewer
 dde-extra/deepin-social-sharing 1.1.4: Deepin Social Sharing Service
-dde-extra/deepin-system-monitor 1.5.2 5.0.0: Deepin System Monitor
+dde-extra/deepin-system-monitor 1.5.2 5.0.0-r1: Deepin System Monitor
 dde-extra/deepin-terminal 3.2.7.1 5.0.0: Deepin Terminal
 dde-extra/deepin-topbar 0.6.5 0.6.6: A Desktop Topbar with some tools
 dde-extra/deepin-turbo 0.0.3-r1: Booster Daemon to Speed up DTK Applications
@@ -215,6 +215,7 @@ dev-python/qasync 0.9.4: Implementation of the asyncio (PEP 3156) event-loop wit
 dev-qt/qcef 1.1.7-r1: Qt5 binding of Chromium Embedded Framework
 dev-qt/qt5dxcb-plugin 1.2.6 5.0.1: XCB Qt5 platform plugin for DDE
 dev-qt/qtstyleplugins 20170311-r1: Additional style plugins for Qt
+dev-qt/qtxcb-private-headers 5.13.2 5.14.1: The Private Headers for the Qt5 Xcb
 dev-ruby/mruby 1.0.0 9999: mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
 dev-util/arch-install-scripts 20: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
 dev-util/be 9999: Bugs Everywere distributed bug tracker
@@ -243,7 +244,7 @@ media-gfx/blur-effect 1.1.3: Off-screen image blurring utility using OpenGL ES 3
 media-gfx/byzanz 0.3.0.9999: Screencasting program that saves casts as GIF files
 media-gfx/deepin-draw 1.0.0: Deepin Painting Tool
 media-gfx/deepin-image-viewer 1.3.18 5.0.0: Deepin Image Viewer
-media-gfx/deepin-screen-recorder 2.8.1 5.0.0: Deepin Screencasting Application
+media-gfx/deepin-screen-recorder 2.8.1 5.0.0-r1: Deepin Screencasting Application
 media-gfx/deepin-screenshot 4.2.2 5.0.0: Snapshot tools for linux deepin.
 media-gfx/fontforge 20150330: postscript font editor and converter
 media-gfx/sane-backends 9999: Scanner Access Now Easy - Backends
@@ -276,11 +277,11 @@ net-dns/dnscrypt-proxy 9999: A tool for securing communications between a client
 net-dns/phddns 2.0.6.32828: Phddns
 net-im/aliwangwang 1.00-r1: AliWangWang for Linux
 net-im/avim 0.1: avim is a secure IM build around RSA
-net-im/deepin-wine-QQ 8.9.19983.23: Tencent QQ for Linux by Deepin
+net-im/deepin-wine-QQ 8.9.19983.23 9.1.8.0: Tencent QQ for Linux by Deepin
 net-im/deepin-wine-QQ-Light 7.9.14308.8: Tencent QQ light for Linux by Deepin
 net-im/deepin-wine-TIM 2.0.0.4: Tencent TIM for Linux by Deepin
 net-im/deepin-wine-wechat 2.6.2.31.0 2.6.8.65.0: Tencent WeChat for Linux by Deepin
-net-im/deepin-wine-wechat-work 2.4.16.1347.0 2.8.10.2010.0: Tencent WeChat Work for Linux by Deepin
+net-im/deepin-wine-wechat-work 2.8.10.2010.0: Tencent WeChat Work for Linux by Deepin
 net-im/freetalk 4.1: Console based Jabber client
 net-im/telegram-purple 1.3.0 9999: Libpurple (Pidgin) plugin for using a Telegram account
 net-im/tencent-qq 2.0.0_beta1: Official Linux version of Tencent QQ
@@ -370,5 +371,5 @@ x11-wm/9wm 1.1: A window manager emulation of the Plan 9 window manager 8-1/2.
 x11-wm/chamferwm 9999: A tiling X11 window manager with Vulkan compositor.
 x11-wm/dde-kwin 0.1.0 5.0.0: KWin configures on DDE
 x11-wm/deepin-metacity 3.22.24: Legacy window manager for Deepin
-x11-wm/deepin-mutter 3.20.38-r1: Deepin fork version of mutter
+x11-wm/deepin-mutter 3.20.38-r2: Deepin fork version of mutter
 x11-wm/deepin-wm 1.9.38: Deepin Window Manager
