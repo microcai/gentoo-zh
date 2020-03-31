@@ -49,15 +49,8 @@ RDEPEND="dev-qt/qtwebchannel:5
 DEPEND="${RDEPEND}
 		virtual/pkgconfig
 		"
-src_prepare() {
-	sed -i \
-	-e '109c   dialog\-\>setOption(QFileDialog\:\:DontConfirmOverwrite, \!\(mode \& FILE_DIALOG_OVERWRITEPROMPT_FLAG\)\);' \
-	src/core/qcef_dialog_handler.cpp || die
-	cmake-utils_src_prepare
-}
 
 src_configure() {
-
 	local mycmakeargs=(
 		-DQCEF_INSTALL_PATH=/usr/$(get_libdir)
 	)
