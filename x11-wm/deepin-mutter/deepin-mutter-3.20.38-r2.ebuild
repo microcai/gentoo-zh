@@ -79,6 +79,10 @@ RDEPEND="${COMMON_DEPEND}
 	!x11-misc/expocity
 "
 
+PATCHES=(
+        "${FILESDIR}/${PN}-giscan.patch"
+)
+
 src_configure() {
 	if use elogind; then
 		sed -i "s|libsystemd|libelogind|g" configure.ac

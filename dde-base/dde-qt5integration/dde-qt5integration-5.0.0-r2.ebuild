@@ -42,6 +42,10 @@ DEPEND="${RDEPEND}
 	>=dde-base/dtkwidget-2.0.0:=
 	"
 
+PATCHES=(
+	"${FILESDIR}"/${P}-qt5.13.patch
+	"${FILESDIR}"/${P}-qt5.14.patch
+)
 
 src_prepare() {
 	QT_SELECT=qt5 eqmake5 ${MY_PN}.pro
