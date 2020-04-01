@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -12,9 +12,9 @@ LICENSE="Tencent"
 RESTRICT="bindist mirror"
 
 SRC_URI="
-	amd64? ( https://qd.myapp.com/myapp/qqteam/linuxQQ/linuxqq_2.0.0-b1-1024_x86_64.rpm )
-	arm64? ( https://qd.myapp.com/myapp/qqteam/linuxQQ/linuxqq_2.0.0-b1-1024_aarch64.rpm )
-	mips? ( https://qd.myapp.com/myapp/qqteam/linuxQQ/linuxqq_2.0.0-b1-1024_mips64el.rpm )
+	amd64? ( http://down.qq.com/qqweb/LinuxQQ/%E5%AE%89%E8%A3%85%E5%8C%85/linuxqq_2.0.0-b2-1076_x86_64.rpm )
+	arm64? ( http://down.qq.com/qqweb/LinuxQQ/%E5%AE%89%E8%A3%85%E5%8C%85/linuxqq_2.0.0-b2-1076_aarch64.rpm )
+	mips? ( http://down.qq.com/qqweb/LinuxQQ/%E5%AE%89%E8%A3%85%E5%8C%85/linuxqq_2.0.0-b2-1076_mips64el.rpm )
 "
 
 SLOT="0"
@@ -88,9 +88,10 @@ src_install() {
 	# doicon usr/share/tencent-qq/qq.png
 	domenu usr/share/applications/qq.desktop
 
-	insinto /opt
-	doins -r usr/share/tencent-qq
-	fperms 0755 /opt/tencent-qq/{crashpad_handler,qq}
+	insinto /opt/tencent-qq
+	exeinto /opt/tencent-qq
+	doexe usr/local/bin/{crashpad_handler,qq}
+	doins usr/local/share/tencent-qq/{qq.png,res.db}
 	dosym ../../opt/tencent-qq/qq usr/bin/qq
 }
 
