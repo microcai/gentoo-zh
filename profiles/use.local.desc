@@ -33,6 +33,8 @@ media-gfx/deepin-screenshot:sharing - Install dde-extra/deepin-social-sharing fo
 media-libs/cogl:gles2 - Enable OpenGL ES 2.0 support
 media-libs/cogl:kms - Enable KMS support.
 media-libs/cogl:pango - Build cogl-pango library for x11-libs/pango integration
+media-plugins/osdlyrics:gnome - add support for gnome
+media-plugins/osdlyrics:indicator - add support for appindicator
 media-sound/feeluown:local - add local music support for feeluown
 media-sound/feeluown:netease - add netease cloud music support for feeluown
 media-sound/feeluown:qqmusic - add qq music support for feeluown
