@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+	<email>ak47m61@gmail.com</email>
+</maintainer>
+<use>
+	<flag name='gnome'>add support for gnome</flag>
+	<flag name='indicator'>add support for appindicator</flag>
+</use>
+</pkgmetadata>
