@@ -4,18 +4,23 @@
 EAPI=7
 PYTHON_COMPAT=( python3_{6,7,8} pypy3 )
 
-inherit python-r1 autotools
+inherit python-r1 autotools git-r3
 
-DESCRIPTION="Fcitx5 Next generation of fcitx "
+DESCRIPTION="Standalone lyrics fetcher/displayer (windowed and OSD mode)."
 HOMEPAGE="https://github.com/osdlyrics/osdlyrics"
 
-MY_PVR="${PVR/r/rc}"
-S="${WORKDIR}/${PN}-${MY_PVR}"
-SRC_URI="https://github.com/osdlyrics/osdlyrics/archive/${MY_PVR}.tar.gz"
+EGIT_REPO_URI="https://github.com/osdlyrics/osdlyrics.git"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
+
+if [[ "${PV}" != 9999 ]]; then
+	EGIT_COMMIT="818bac81ea3454bd9754602888203e0786cfd50b"
+else
+	KEYWORDS=""
+fi
+
 IUSE="gnome indicator"
 
 RDEPEND="
