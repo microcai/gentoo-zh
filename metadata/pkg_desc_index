@@ -154,7 +154,6 @@ dde-base/deepin-icon-theme 15.12.71: Deepin Icons
 dde-base/deepin-menu 3.4.6 3.4.8: Deepin menu service for building beautiful menus
 dde-base/deepin-sound-theme 15.10.3: Deepin Sound themes
 dde-base/deepin-wallpapers 1.7.7-r1: Deepin Wallpapers
-dde-base/deepin-wm-switcher 1.1.9: Window manager switcher for Deepin
 dde-base/dtkcore 2.0.16.3 2.1.1: Base development tool of all C++/Qt Developer work on Deepin - Core modules
 dde-base/dtkwidget 2.0.16.1 2.1.1: Base development tool of all C++/Qt Developer work on Deepin - Widget modules
 dde-base/dtkwm 2.0.11-r1 2.0.12: Deepin graphical user interface library
@@ -174,10 +173,8 @@ dde-extra/deepin-font-installer 1.1.5.1 5.0.0: Install and Uninstall Font File f
 dde-extra/deepin-grub2-themes 1.0.0: Deepin theme for GRUB2
 dde-extra/deepin-manual 2.1.0 5.0.0: Deepin User Manual
 dde-extra/deepin-picker 1.6.6 5.0.1: Color picker tool for Deepin
-dde-extra/deepin-qml-widgets 2.3.6-r1: Deepin QML widgets and dbus factory
 dde-extra/deepin-screensaver 0.0.8: Deepin ScreenSaver
 dde-extra/deepin-shortcut-viewer 1.3.5 5.0.0: Deepin shortcut Viewer
-dde-extra/deepin-social-sharing 1.1.4: Deepin Social Sharing Service
 dde-extra/deepin-system-monitor 1.5.2 5.0.0-r1: Deepin System Monitor
 dde-extra/deepin-terminal 3.2.7.1 5.0.0: Deepin Terminal
 dde-extra/deepin-topbar 0.6.5 0.6.6: A Desktop Topbar with some tools
@@ -350,7 +347,6 @@ www-servers/darkhttpd 1.8: A small, static webserver
 www-servers/tengine 2.0.3: Robust, small and high performance http and reverse proxy server
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
 x11-libs/bamf 0.5.4: BAMF Application Matching Framework
-x11-libs/deepin-ui 1.1.20141229194712-r1: UI toolkit for Linux Deepin.
 x11-libs/gsettings-qt 0.1_p20170824 0.2: Qml bindings for GSettings.
 x11-libs/libvdpau-va-gl 9999: VDPAU driver with VA-API/OpenGL backend.
 x11-libs/xcb-imdkit 20191111 99999999999: An implementation of xim protocol in xcb
