@@ -254,7 +254,7 @@ media-libs/libuninameslist 20140731 20190701: Library of unicode annotation data
 media-plugins/audacious-mac 0.2.0 0.3.10: Monkey's Audio Codec plugin for audacious
 media-plugins/gimp-gap 2.6.0: Gimp Animation Package
 media-plugins/gst-plugins-meta 0.10-r8: Meta ebuild to pull in gst plugins for apps
-media-plugins/osdlyrics 0.5.5-r1: Fcitx5 Next generation of fcitx
+media-plugins/osdlyrics 9999 20200403: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-plugins/python-mmkeys 1.6.2.1-r1: Multimedia key support as a PyGTK object
 media-sound/audio-convert-mod 3.45.2: A simple audio file converter supporting many formats
 media-sound/cue2tracks 0.2.16: Bash script for split audio CD image files with cue sheet to tracks and write tags.
