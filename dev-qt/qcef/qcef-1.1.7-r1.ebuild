@@ -50,6 +50,10 @@ DEPEND="${RDEPEND}
 		virtual/pkgconfig
 		"
 
+src_prepare(){
+	eapply_user
+	epatch ${FILESDIR}/fixqcef.patch
+}
 src_configure() {
 	local mycmakeargs=(
 		-DQCEF_INSTALL_PATH=/usr/$(get_libdir)
