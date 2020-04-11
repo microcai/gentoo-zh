@@ -12,9 +12,9 @@ LICENSE="Tencent"
 RESTRICT="bindist mirror"
 
 SRC_URI="
-	amd64? ( http://down.qq.com/qqweb/LinuxQQ/%E5%AE%89%E8%A3%85%E5%8C%85/linuxqq_2.0.0-b2-1076_x86_64.rpm )
-	arm64? ( http://down.qq.com/qqweb/LinuxQQ/%E5%AE%89%E8%A3%85%E5%8C%85/linuxqq_2.0.0-b2-1076_aarch64.rpm )
-	mips? ( http://down.qq.com/qqweb/LinuxQQ/%E5%AE%89%E8%A3%85%E5%8C%85/linuxqq_2.0.0-b2-1076_mips64el.rpm )
+	amd64? ( http://down.qq.com/qqweb/LinuxQQ_1/linuxqq_2.0.0-b2-1082_x86_64.rpm )
+	arm64? ( http://down.qq.com/qqweb/LinuxQQ_1/linuxqq_2.0.0-ci-1077_aarch64.rpm )
+	mips? ( http://down.qq.com/qqweb/LinuxQQ_1/linuxqq_2.0.0-b2-1082_mips64el.rpm )
 "
 
 SLOT="0"
@@ -65,12 +65,13 @@ src_unpack() {
 src_prepare() {
 	default
 
-	# the original package installed into /usr/share/tencent-qq, which is insane
+	# the original package installed into /usr/local/share/tencent-qq, which is insane
 	# rewrite to /opt/tencent-qq
 	# also apply several fixes pointed out by QA notice
 	# fix some other properties as well, effectively rewriting the file
 	sed -i '
-		s@/usr/share/tencent-qq@/opt/tencent-qq@g;
+		s@/usr/local/bin@/opt/tencent-qq@g;
+		s@/usr/local/share/tencent-qq@/opt/tencent-qq@g;
 		/^Version=/d;
 		s/Application;//g;
 		s/;Tencent Software//g;
