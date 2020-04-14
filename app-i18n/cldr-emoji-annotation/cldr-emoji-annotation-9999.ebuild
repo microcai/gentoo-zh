@@ -20,10 +20,8 @@ RDEPEND="
 "
 BDEPEND=""
 
-TAG=${PV}_${PR/r/}
-
 if [[ "${PV}" != 9999 ]]; then
-	EGIT_COMMIT=${TAG}
+	EGIT_COMMIT="f8c894a865251d7fad7c93fe8f8837e79efa02ad"
 else
 	KEYWORDS=""
 fi
