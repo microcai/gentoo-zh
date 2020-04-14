@@ -9,4 +9,4 @@ PROPERTIES=live
 RDEPEND=!app-i18n/unicode-cldr
 SLOT=0
 _eclasses_=git-r3	86a0188f2ad9eb3d65e4d031ab8a0422
-_md5_=f06380adb3e1e41b3b9f6e3ab2aadafa
+_md5_=a8d642da4db71fa9352cb25e61faa18c
