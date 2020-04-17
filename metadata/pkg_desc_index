@@ -105,7 +105,7 @@ app-misc/geeknote 9999: Console client for Evernote
 app-misc/gpick 0.2.5: Advanced color picker written in C++ using GTK+ toolkit
 app-misc/icdiff 1.9.0: Colourized diff that supports side-by-side diffing
 app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience within the shell
-app-misc/nixnote 2.1.5: Nixnote - A clone of Evernote for Linux
+app-misc/nixnote 2.1.5 2.1.5-r1: Nixnote - A clone of Evernote for Linux
 app-misc/screen 4.2.1-r2: Full-screen window manager that multiplexes physical terminals between several processes
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/wink 1.5: A Tutorial and Presentation creation software, primarily aimed at creating tutorials on how to use software
@@ -268,6 +268,7 @@ media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/deepin-movie-reborn 3.2.24.2 3.2.24.3: Deepin Movie Player
 media-video/lightworks 11.5 11.5.1: Lightworks is the fastest, most accessible and focused NLE in the industry
 media-video/simplescreenrecorder 0.3.3-r1 9999: A Simple Screen Recorder
+media-video/tenvideo 1.0.10: Tencent videos
 net-dialup/mentohust 9999: A Ruijie and Cernet supplicant on Linux and MacOS
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
 net-dns/dnscrypt-proxy 9999: A tool for securing communications between a client and a DNS resolver
@@ -312,7 +313,7 @@ net-proxy/shadowsocks-qt5 3.0.1: Shadowsocks-Qt5 is a native and cross-platform 
 net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
 net-proxy/simple-obfs 0.0.5: A simple obfuscating tool
 net-proxy/smartproxy 0.9.4: A fast, proxy smart selector
-net-proxy/v2ray-bin 4.22.1: A platform for building proxies to bypass network restrictions.
+net-proxy/v2ray-bin 4.23.1: A platform for building proxies to bypass network restrictions.
 net-proxy/wallproxy-plus 2.1.18-r1 2.1.19 9999: New version of wallproxy, a general purpose proxy framework in Python.
 sci-libs/libticables2 9999: Library to handle different link cables for TI calculators
 sci-libs/libticalcs2 9999: Library for communication with TI calculators
