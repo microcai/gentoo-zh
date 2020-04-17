@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -22,7 +22,7 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_unpack() {
-	if [ "${A}" != "" ]; then
+	if [ -n ${A} ]; then
 		unpack ${A}
 	fi
 	S=${WORKDIR}
@@ -40,5 +40,5 @@ src_install() {
 
 	newinitd "${FILESDIR}/v2ray.initd" v2ray
 	systemd_dounit systemd/v2ray.service
+	systemd_newunit "${FILESDIR}/v2ray.service" "v2ray@.service"
 }
-
