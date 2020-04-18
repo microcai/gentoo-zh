@@ -43,8 +43,6 @@ media-video/simplescreenrecorder:vpx - Enables vp8 codec support using libvpx fr
 net-misc/xmuruijie:firewall - Add support for iptables firewall
 net-proxy/make-proxy:client - Add make proxy client support
 net-proxy/make-proxy:server - Add make proxy server support
-net-proxy/shadowsocks-libev:openssl - Use dev-libs/openssl as crypto backend
-net-proxy/shadowsocks-libev:polarssl - Use net-libs/polarssl as crypto backend
 sys-devel/gdb:multitarget - Support all known targets in one gdb binary
 sys-kernel/hardened-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 virtual/dde-wm:kwin - Use the WM based on kwin
