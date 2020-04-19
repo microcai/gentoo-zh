@@ -1,0 +1,31 @@
+#!/sbin/openrc-run
+# Copyright 2020 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+name="v2-ui daemon"
+description=""
+command=/opt/v2-ui/v2-ui
+command_args="${v2-ui_args}"
+
+V2_UI_LOG=/var/log/v2-ui.log
+V2_UI_PIDFILE=/run/v2-ui.pid
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting v2-ui"
+	ebegin "Log File : ${V2_UI_LOG}"
+	start-stop-daemon --start	\
+	-b -1 ${V2_UI_LOG}		\
+	-m -p ${V2_UI_PIDFILE}		\
+	--exec ${command}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping v2-ui"
+	start-stop-daemon --stop -p ${V2_UI_PIDFILE}
+	eend $?
+}
