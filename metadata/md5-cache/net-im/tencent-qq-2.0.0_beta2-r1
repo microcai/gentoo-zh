@@ -1,5 +1,5 @@
+BDEPEND=>=app-arch/rpm2targz-9.0.0.3g
 DEFINED_PHASES=install postinst postrm prepare unpack
-DEPEND=>=app-arch/rpm2targz-9.0.0.3g
 DESCRIPTION=Official Linux version of Tencent QQ
 EAPI=7
 HOMEPAGE=https://im.qq.com/linuxqq/download.html
@@ -11,5 +11,5 @@ REQUIRED_USE=arm64? ( !big-endian ) mips? ( !big-endian ) || ( abi_x86_64 abi_mi
 RESTRICT=bindist mirror
 SLOT=0
 SRC_URI=amd64? ( http://down.qq.com/qqweb/LinuxQQ_1/linuxqq_2.0.0-b2-1082_x86_64.rpm ) arm64? ( http://down.qq.com/qqweb/LinuxQQ_1/linuxqq_2.0.0-ci-1077_aarch64.rpm ) mips? ( http://down.qq.com/qqweb/LinuxQQ_1/linuxqq_2.0.0-b2-1082_mips64el.rpm )
-_eclasses_=desktop	7fd20552ce4cc97e8acb132a499a7dd8	estack	686eaab303305a908fd57b2fd7617800	eutils	fcb2aa98e1948b835b5ae66ca52868c5	multibuild	40fe59465edacd730c644ec2bc197809	multilib	318e8ae683e57fd3ccd0d31a769d8ee8	multilib-build	dfda7934df092a96e439c05b4aeac519	rpm	c1d552831d4ee9c7bb82c35545c264c8	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_eclasses_=desktop	7fd20552ce4cc97e8acb132a499a7dd8	estack	686eaab303305a908fd57b2fd7617800	eutils	fcb2aa98e1948b835b5ae66ca52868c5	multibuild	40fe59465edacd730c644ec2bc197809	multilib	318e8ae683e57fd3ccd0d31a769d8ee8	multilib-build	dfda7934df092a96e439c05b4aeac519	rpm	760ff223c2c4299b68ea901e24c4cabd	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
 _md5_=2ff7e3d49a82dc6db088a87b09dad509
