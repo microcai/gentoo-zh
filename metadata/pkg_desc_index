@@ -230,6 +230,7 @@ games-board/othello 0.2.0 0.2.1: Othello is a classic strategy game, also known 
 games-misc/fortune-mod-zh 1.2.2: Chinese fortune shell script
 games-misc/llk_linux 2.3_beta1-r1: llk for linux
 kde-misc/imageshack-upload 0.5: A service menu tor upload images on Imageshack.
+kde-misc/plasma-applet-netspeed-widget 1.8-r1 9999: Plasma 5 widget that displays the currently used network bandwidth.
 mail-client/deepin-wine-foxmail 7.2.3: Foxmail mail client for Linux by Deepin
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/ntufonts 20030521: Chinese Fonts from National Taiwan University, Includes kai, Lei, Funsong, and Thin.
