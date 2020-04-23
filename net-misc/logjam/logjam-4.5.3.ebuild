@@ -4,7 +4,7 @@
 
 IUSE="gtk gtkhtml spell sqlite svg xmms"
 
-inherit
+inherit eutils
 
 DESCRIPTION="GTK2-based LiveJournal client"
 HOMEPAGE="http://logjam.danga.com/"
