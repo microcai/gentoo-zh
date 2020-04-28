@@ -8,7 +8,9 @@ DESCRIPTION="Qt GUI fontend of v2ray"
 HOMEPAGE="https://qv2ray.github.io/"
 EGIT_REPO_URI="https://github.com/${PN}/${PN}.git"
 EGIT_SUBMODULES=( '*' '-3rdparty/zxing-cpp' '-libs/libqvb' )
-EGIT_BRANCH=dev
+EGIT_COMMIT=v2.5.0
+
+KEYWORDS="amd64 x86"
 
 LICENSE="GPL-3"
 SLOT="0"

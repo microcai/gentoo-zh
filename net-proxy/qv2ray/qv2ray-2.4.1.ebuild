@@ -10,7 +10,7 @@ EGIT_REPO_URI="https://github.com/${PN}/${PN}.git"
 EGIT_SUBMODULES=( '*' '-3rdparty/zxing-cpp' '-libs/libqvb' )
 EGIT_COMMIT=30a99e596c6bcaac9ac93b8c0c93fe305fc00ea6
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 LICENSE="GPL-3"
 SLOT="0"
