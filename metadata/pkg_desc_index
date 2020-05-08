@@ -376,3 +376,4 @@ x11-wm/dde-kwin 0.1.0 5.0.0: KWin configures on DDE
 x11-wm/deepin-metacity 3.22.24: Legacy window manager for Deepin
 x11-wm/deepin-mutter 3.20.38-r2: Deepin fork version of mutter
 x11-wm/deepin-wm 1.9.38: Deepin Window Manager
+x11-wm/i3-gaps 4.18.1: i3 fork with gaps and some more features
