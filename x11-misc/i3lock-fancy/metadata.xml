@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer restrict="&gt;=sys-boot/grub-2" type="person">
+        <email>floppym@gentoo.org</email>
+    </maintainer>
+    <maintainer type="project">
+        <email>7bit@arcor.de</email>
+        <name>prof7bit</name>
+    </maintainer>
+    <upstream>
+        <remote-id type="github">https://github.com/prof7bit/TorChat/</remote-id>
+    </upstream>
+</pkgmetadata>
