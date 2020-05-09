@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install unpack
+DEPEND=app-shells/bash:0 media-gfx/imagemagick virtual/awk x11-misc/wmctrl media-gfx/scrot x11-misc/i3lock-color >=dev-vcs/git-1.8.2.1[curl]
+DESCRIPTION=A fancy i3lock
+EAPI=6
+HOMEPAGE=https://github.com/meskarune/i3lock-fancy
+KEYWORDS=~amd64
+LICENSE=BSD
+PROPERTIES=live
+RDEPEND=app-shells/bash:0 media-gfx/imagemagick virtual/awk x11-misc/wmctrl media-gfx/scrot x11-misc/i3lock-color
+SLOT=0
+_eclasses_=git-r3	86a0188f2ad9eb3d65e4d031ab8a0422
+_md5_=a68f6a07b094d3b83ecf6499a4aeb65c
