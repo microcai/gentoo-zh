@@ -15,7 +15,7 @@ LICENSE="JetBrainsToolbox"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND="sys-fs/fuse:*"
+DEPEND="sys-fs/fuse:0"
 
 QA_PRESTRIPPED="/opt/jetbrains-toolbox/jetbrains-toolbox"
 
@@ -29,7 +29,7 @@ src_install() {
         doins jetbrains-toolbox
         fperms +x /opt/jetbrains-toolbox/jetbrains-toolbox
 
-        newicon squashfs-root/toolbox.svg "${PN}.svg"
+#        newicon squashfs-root/jetbrains-toolbox.svg "${PN}.svg"
 
         make_wrapper "${PN}" /opt/jetbrains-toolbox/jetbrains-toolbox
 
