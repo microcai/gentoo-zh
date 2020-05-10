@@ -7,5 +7,5 @@ LICENSE=Tencent
 RDEPEND=app-emulation/deepin-wine app-emulation/deepin-wine-helper
 SLOT=0
 SRC_URI=http://packages.deepin.com/deepin/pool/non-free/d/deepin.com.qq.im/deepin.com.qq.im_9.1.8deepin0_i386.deb
-_eclasses_=estack	686eaab303305a908fd57b2fd7617800	unpacker	3cd8bad0d31e525cd26be1bfa4e61631	versionator	2352c3fc97241f6a02042773c8287748
+_eclasses_=estack	686eaab303305a908fd57b2fd7617800	unpacker	b5891c9326ad2e7905c011d44c927c34	versionator	2352c3fc97241f6a02042773c8287748
 _md5_=3b96aa176a64b8018f2a141f1dc0f85b
