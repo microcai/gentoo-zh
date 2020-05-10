@@ -1,0 +1,14 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl] >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure prepare unpack
+DEPEND=>=dev-libs/glib-2.40:2 >=dev-libs/libpcre2-10.21 >=x11-libs/gtk+-3.16:3[introspection?] >=x11-libs/pango-1.22.0 sys-libs/ncurses:0= sys-libs/zlib crypt? ( >=net-libs/gnutls-3.2.7:0= ) glade? ( >=dev-util/glade-3.9:3.10 ) introspection? ( >=dev-libs/gobject-introspection-0.9.0:= ) dev-util/gperf dev-libs/libxml2 >=dev-util/gtk-doc-am-1.13 >=dev-util/intltool-0.35 sys-devel/gettext dev-util/gtk-doc !x11-libs/vte vala? ( || ( dev-lang/vala:0.48 dev-lang/vala:0.46 dev-lang/vala:0.44 dev-lang/vala:0.40 dev-lang/vala:0.36 ) )
+DESCRIPTION=An enhanced terminal emulator widget
+EAPI=7
+HOMEPAGE=https://github.com/thestinger/vte-ng
+IUSE=+introspection +crypt glade vala
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2.1
+PROPERTIES=live
+RDEPEND=>=dev-libs/glib-2.40:2 >=dev-libs/libpcre2-10.21 >=x11-libs/gtk+-3.16:3[introspection?] >=x11-libs/pango-1.22.0 sys-libs/ncurses:0= sys-libs/zlib crypt? ( >=net-libs/gnutls-3.2.7:0= ) glade? ( >=dev-util/glade-3.9:3.10 ) introspection? ( >=dev-libs/gobject-introspection-0.9.0:= )
+SLOT=0
+_eclasses_=autotools	7d999b62b8749fad43fff00620cedf47	eutils	fcb2aa98e1948b835b5ae66ca52868c5	git-r3	86a0188f2ad9eb3d65e4d031ab8a0422	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	318e8ae683e57fd3ccd0d31a769d8ee8	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	vala	5b72a65a36d681d65aef5f7b4b8b2cb6
+_md5_=0b8f181c3cdf5bf3ab15aea5f8c08e00
