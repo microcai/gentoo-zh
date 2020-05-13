@@ -5,7 +5,7 @@ EAPI="6"
 
 inherit cmake-utils git-r3
 EGIT_REPO_URI="https://github.com/fcitx/kcm-fcitx5.git"
-EGIT_COMMIT="3a1192df4a6cba04cd935539000e51cc73e72052"
+EGIT_COMMIT="44f6113f73f4532bd67cd0c17a172249fe363444"
 
 DESCRIPTION="KDE configuration module for Fcitx"
 HOMEPAGE="https://fcitx-im.org/ https://gitlab.com/fcitx/kcm-fcitx5"

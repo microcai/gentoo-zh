@@ -8,7 +8,7 @@ EGIT_REPO_URI="https://github.com/fcitx/fcitx5.git"
 
 KEYWORDS="~amd64"
 if [[ "${PV}" != 999999999 ]]; then
-	EGIT_COMMIT="f00d5f699b65a6586fe8f04f8e4d006b385010d2"
+	EGIT_COMMIT="d9d4f747455baeb62a912a16c4b5d77c15fc6d08"
 else
 	KEYWORDS=""
 fi

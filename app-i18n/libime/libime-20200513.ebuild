@@ -5,7 +5,7 @@ EAPI="6"
 
 inherit cmake-utils gnome2-utils xdg-utils git-r3
 EGIT_REPO_URI="https://github.com/fcitx/libime.git"
-EGIT_COMMIT="ec8ec64484984b814fbab700eb84adfe2ad5e480"
+EGIT_COMMIT="6297e5ee85755d6ffc36da4bf6191afc25de299c"
 
 SRC_URI="https://download.fcitx-im.org/data/lm_sc.3gm.arpa-20140820.tar.bz2 -> fcitx5-lm_sc.3gm.arpa-20140820.tar.bz2
 https://download.fcitx-im.org/data/dict.utf8-20200310.tar.xz -> fcitx5-dict.utf8-20200310.tar.xz
