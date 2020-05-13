@@ -12,7 +12,7 @@ SRC_URI="https://vscode.cdn.azure.cn/stable/d69a79b73808559a91206d73d7717ff5f798
 
 RESTRICT="mirror strip bindist"
 
-LICENSE="MIT"
+LICENSE="MicrosoftSoftwareLicense"
 SLOT="0"
 KEYWORDS="amd64"
 IUSE="libsecret"
@@ -50,6 +50,9 @@ src_install(){
 	fperms +x "/opt/${PN}/code"
 	fperms +x "/opt/${PN}/bin/code"
 	fperms +x "/opt/${PN}/resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg"
+	fperms +x "/opt/${PN}/resources/app/out/vs/base/node/cpuUsage.sh"
+	fperms +x "/opt/${PN}/resources/app/out/vs/base/node/ps.sh"
+	fperms +x "/opt/${PN}/resources/app/out/vs/base/node/terminateProcess.sh"
 	insinto "/usr/share/licenses/${PN}"
 	newins "resources/app/LICENSE.rtf" "LICENSE"
 }
