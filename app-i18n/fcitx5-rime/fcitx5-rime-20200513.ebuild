@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/fcitx/fcitx5-rime"
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5-rime.git"
 
 if [[ ! "${PV}" =~ (^|\.)9999$ ]]; then
-	EGIT_COMMIT="72a9df7910c2b41201e57d70e72f8843bf881505"
+	EGIT_COMMIT="83a0a2dad1195f3eb2af94cf51e5dbc84a637e42"
 fi
 
 LICENSE="GPL-2"

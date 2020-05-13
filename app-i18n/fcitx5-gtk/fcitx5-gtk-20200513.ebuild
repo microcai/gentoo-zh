@@ -6,7 +6,7 @@ EAPI="6"
 inherit cmake-utils git-r3 gnome2-utils xdg-utils
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5-gtk.git"
 if [[ ! "${PV}" =~ (^|\.)9999$ ]]; then
-	EGIT_COMMIT="6f9ef6417ab04f4a7f3f9af8d16c3a165df7ea82"
+	EGIT_COMMIT="045263ef793ad37a0f4cc831a6de36d705bbac00"
 fi
 
 

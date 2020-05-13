@@ -3,12 +3,10 @@
 
 EAPI="6"
 
-inherit cmake-utils gnome2-utils xdg-utils git-r3
+inherit cmake-utils gnome2-utils xdg git-r3
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5-chinese-addons.git"
+EGIT_COMMIT="d83bca143fd284cd5595f46d1f5692c98a2fd8e1"
 
-if [[ ! "${PV}" =~ (^|\.)9999$ ]]; then
-	EGIT_COMMIT="3dae7a253a7ddcd9fcb3b320c66208e4566a8bc0"
-fi
 SRC_URI="https://download.fcitx-im.org/data/py_stroke-20121124.tar.gz -> fcitx-data-py_stroke-20121124.tar.gz
 https://download.fcitx-im.org/data/py_table-20121124.tar.gz -> fcitx-data-py_table-20121124.tar.gz
 "
@@ -19,15 +17,22 @@ HOMEPAGE="https://github.com/fcitx/fcitx5-chinese-addons"
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
 KEYWORDS="~amd64"
-IUSE="+opencc +gui test"
+IUSE="+opencc +gui browser webkit test"
 REQUIRED_USE=""
 
 RDEPEND="app-i18n/fcitx5
 	app-i18n/libime
-	app-i18n/fcitx5-qt[qt5]
-	dev-qt/qtwebengine[widgets]
 	opencc? ( app-i18n/opencc:= )
-	gui? ( dev-qt/qtwebengine:5 )"
+	gui? (
+		dev-qt/qtcore:5
+		dev-qt/qtdbus:5
+		dev-qt/qtconcurrent:5
+		app-i18n/fcitx5-qt[qt5]
+		browser? (
+			webkit? ( dev-qt/qtwebkit:5 )
+			!webkit? ( dev-qt/qtwebengine:5 )
+		)
+	)"
 DEPEND="${RDEPEND}
 	kde-frameworks/extra-cmake-modules:5
 	virtual/pkgconfig"
@@ -45,6 +50,8 @@ src_configure() {
 		-DSYSCONFDIR="${EPREFIX}/etc"
 		-DENABLE_GUI=$(usex gui)
 		-DENABLE_OPENCC=$(usex opencc)
+		-DENABLE_BROWSER=$(usex browser)
+		-DUSE_WEBKIT=$(usex webkit)
 	)
 	cmake-utils_src_configure
 }
