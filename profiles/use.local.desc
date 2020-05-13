@@ -8,6 +8,11 @@ app-i18n/fcitx5:coverage - Build the project with gcov support (Need ENABLE_TEST
 app-i18n/fcitx5:enchant - Enable enchant for word predication
 app-i18n/fcitx5:presage - Enable presage for word predication(not stable)
 app-i18n/fcitx5:test - Build Test
+app-i18n/fcitx5-chinese-addons:browser - Enable built-in browser using dev-qt/qtwebengine
+app-i18n/fcitx5-chinese-addons:gui - Enable configure gui
+app-i18n/fcitx5-chinese-addons:opencc - Enable support for conversion between Traditional and Simplified Chinese
+app-i18n/fcitx5-chinese-addons:webkit - Using dev-qt/qtwebkit as browser backend
+app-i18n/kcm-fcitx5:kde - Enable KDE KCM support
 dde-base/dde-control-center:redshift - Install x11-misc/redshift to support screen color temperature adjusting
 dde-base/dde-daemon:bluetooth - Enable Bluetooth Support
 dde-base/dde-daemon:fprint - Enables experimental fingerprint authentication using sys-auth/fprintd
