@@ -15,7 +15,6 @@ HOMEPAGE="https://github.com/fcitx/fcitx5-chinese-addons"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-KEYWORDS="~amd64"
 IUSE="+opencc +gui browser webkit test"
 REQUIRED_USE=""
 
