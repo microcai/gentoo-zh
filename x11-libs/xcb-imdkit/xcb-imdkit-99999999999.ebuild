@@ -6,11 +6,6 @@ EAPI="6"
 inherit cmake-utils xdg-utils git-r3
 EGIT_REPO_URI="https://github.com/fcitx/xcb-imdkit.git"
 
-if [[ ! "${PV}" =~ (^|\.)9999$ ]]; then
-	EGIT_COMMIT="a607b1927b4e9487f01468786b2a2248aa42525f"
-fi
-SRC_URI=""
-
 DESCRIPTION="An implementation of xim protocol in xcb"
 HOMEPAGE="https://gitlab.com/fcitx/xcb-imdkit"
 
