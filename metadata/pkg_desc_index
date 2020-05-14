@@ -300,6 +300,7 @@ net-misc/xmuruijie 1.4.3: Red Gaint (RuiJie) EAP-MD5 authentication client in Li
 net-misc/you-get 9999: A video downloader for YouTube, Youku, niconico and a few other sites
 net-p2p/amule-dlp 9999: aMule with DLP patch, the all-platform eMule p2p client
 net-p2p/amule-dlp-antileech 9999: amule-dlp-antileech, dynamic DLP library for amule-dlp
+net-p2p/n2n 2.6: A Layer Two Peer-to-Peer VPN
 net-print/cndrvcups-common-lb 3.40-r1: Common files for Canon drivers
 net-print/cndrvcups-lb 3.40-r1: Canon UFR II / LIPSLX Printer Driver for Linux
 net-print/cups-tsc 0.1.26: The driver of TSC printers for Linux and CUPS
