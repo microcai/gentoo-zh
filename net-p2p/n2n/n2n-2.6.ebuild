@@ -35,17 +35,16 @@ src_install() {
 	keepdir /var/log/n2n
 	fowners n2n:n2n /var/log/n2n
 
-	cp ${S}/packages/etc/systemd/system/edge@.service.in ${S}/packages/etc/systemd/system/edge@.service
-	cp ${S}/packages/etc/systemd/system/supernode.service.in ${S}/packages/etc/systemd/system/supernode.service
+	cp ${S}/packages/etc/systemd/system/edge@.service.in ${S}/packages/etc/systemd/system/n2n-edge@.service
+	cp ${S}/packages/etc/systemd/system/supernode.service.in ${S}/packages/etc/systemd/system/n2n-supernode.service
 
-	systemd_dounit ${S}/packages/etc/systemd/system/edge@.service
-	systemd_dounit ${S}/packages/etc/systemd/system/supernode.service
-
-	insinto /etc/n2n
+	systemd_dounit ${S}/packages/etc/systemd/system/n2n-edge@.service
+	systemd_dounit ${S}/packages/etc/systemd/system/n2n-supernode.service
 
 	cp ${S}/packages/etc/n2n/edge.conf.sample ${S}/packages/etc/n2n/edge-example.conf
 
-	doins ${S}/packages/etc/n2n/edge-example.conf
+	insinto /etc/n2n
 
+	doins ${S}/packages/etc/n2n/edge-example.conf
 	doins ${S}/packages/etc/n2n/supernode.conf.sample
 }
