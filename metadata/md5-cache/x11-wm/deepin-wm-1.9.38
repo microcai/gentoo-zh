@@ -9,5 +9,5 @@ LICENSE=GPL-3+
 RDEPEND=>=dev-libs/glib-2.32:2 dev-libs/libgee:0.8 media-libs/clutter-gtk dev-libs/granite >=x11-libs/bamf-0.2.20 >=x11-libs/gtk+-3.4:3 >=x11-wm/deepin-mutter-3.20.30 gnome-base/gnome-desktop:3 dde-base/deepin-menu >=dde-base/deepin-desktop-schemas-2.90.0
 SLOT=0
 SRC_URI=https://github.com/linuxdeepin/deepin-wm/archive/1.9.38.tar.gz -> deepin-wm-1.9.38.tar.gz
-_eclasses_=autotools	7d999b62b8749fad43fff00620cedf47	eutils	fcb2aa98e1948b835b5ae66ca52868c5	gnome2-utils	893e828f0f25f070f0b38d20c83c7670	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	797cda3549becfe50afdfa35192ca137	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	vala	5b72a65a36d681d65aef5f7b4b8b2cb6	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_eclasses_=autotools	7d999b62b8749fad43fff00620cedf47	eutils	fcb2aa98e1948b835b5ae66ca52868c5	gnome2-utils	893e828f0f25f070f0b38d20c83c7670	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	ac7989ababbeabdef6fdc6e465b21644	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	vala	5b72a65a36d681d65aef5f7b4b8b2cb6	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
 _md5_=1fd7f1b3ef84cc577b1190e3b99f1297

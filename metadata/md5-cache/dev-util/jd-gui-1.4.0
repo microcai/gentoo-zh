@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=>=virtual/jdk-1.6
 SLOT=0
 SRC_URI=https://github.com/java-decompiler/jd-gui/releases/download/v1.4.0/jd-gui-1.4.0-0.noarch.rpm
-_eclasses_=estack	686eaab303305a908fd57b2fd7617800	eutils	fcb2aa98e1948b835b5ae66ca52868c5	multilib	797cda3549becfe50afdfa35192ca137	rpm	760ff223c2c4299b68ea901e24c4cabd	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
+_eclasses_=estack	686eaab303305a908fd57b2fd7617800	eutils	fcb2aa98e1948b835b5ae66ca52868c5	multilib	ac7989ababbeabdef6fdc6e465b21644	rpm	760ff223c2c4299b68ea901e24c4cabd	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
 _md5_=cdd028366d9cb81b7e28f3b09ffbe0ef
