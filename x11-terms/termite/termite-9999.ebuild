@@ -23,7 +23,7 @@ RDEPEND="
 src_prepare() {
 	default
 	sed -i /-s /d Makefile
-
+	sed -i '/#include\ <string>/a#include\ <errno.h>' termite.cc
 	if use nocsd; then
 		epatch "${FILESDIR}/${PN}-nocsd.patch"
 	fi
