@@ -12,5 +12,5 @@ RDEPEND=dev-libs/glib:2 sys-apps/dbus dev-libs/json-c dev-libs/libfmt sys-apps/u
 REQUIRED_USE=coverage? ( test )
 SLOT=5
 SRC_URI=https://download.fcitx-im.org/data/en_dict-20121020.tar.gz -> fcitx-data-en_dict-20121020.tar.gz
-_eclasses_=cmake-utils	7555f0a45c22f33391d9c0c80f57cf23	eutils	fcb2aa98e1948b835b5ae66ca52868c5	flag-o-matic	f1194291b9a1baca337c1c89b5f7f365	git-r3	86a0188f2ad9eb3d65e4d031ab8a0422	gnome2-utils	893e828f0f25f070f0b38d20c83c7670	multilib	ba693a7065ee4edc78b3ea02a015bcad	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	d3e75048a89c0445838d2f44e5c65d97	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_eclasses_=cmake-utils	7555f0a45c22f33391d9c0c80f57cf23	eutils	fcb2aa98e1948b835b5ae66ca52868c5	flag-o-matic	f1194291b9a1baca337c1c89b5f7f365	git-r3	86a0188f2ad9eb3d65e4d031ab8a0422	gnome2-utils	893e828f0f25f070f0b38d20c83c7670	multilib	2477ebe553d3e4d2c606191fe6c33602	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
 _md5_=c1d59b06f7b6f023bd97e6906ad26ba3
