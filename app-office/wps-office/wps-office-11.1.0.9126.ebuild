@@ -59,6 +59,7 @@ RDEPEND="
 	media-libs/libvorbis
 	dev-libs/libgpg-error
 	sys-apps/attr
+	media-fonts/ttf-wps-fonts
 "
 DEPEND=""
 BDEPEND=""
