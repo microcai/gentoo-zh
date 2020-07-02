@@ -43,9 +43,11 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/pango
 	media-libs/fontconfig
 	enchant? ( app-text/enchant:0= )
+	systemd? ( sys-apps/systemd )
 	app-text/iso-codes
 	app-i18n/cldr-emoji-annotation
-	dev-libs/libxml2"
+	dev-libs/libxml2
+	dev-libs/libevent"
 DEPEND="${RDEPEND}
 	kde-frameworks/extra-cmake-modules:5
 	virtual/pkgconfig"
