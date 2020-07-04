@@ -9,5 +9,5 @@ LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=dev-libs/libusb:1
 SLOT=0
-_eclasses_=eutils	fcb2aa98e1948b835b5ae66ca52868c5	git-r3	86a0188f2ad9eb3d65e4d031ab8a0422
+_eclasses_=eutils	fcb2aa98e1948b835b5ae66ca52868c5	git-r3	8ec5b53812bce105ae7943930e4660f8
 _md5_=7f3f57d80fc6f3d8810fa78997ed718d
