@@ -8,20 +8,19 @@ inherit eutils pax-utils
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
 BASE_URI="https://update.code.visualstudio.com/${PV}"
-SRC_URI="https://vscode.cdn.azure.cn/stable/d69a79b73808559a91206d73d7717ff5f798f23c/code-stable-1588868611.tar.gz -> ${P}-amd64.tar.gz"
+SRC_URI="https://az764295.vo.msecnd.net/stable/cd9ea6488829f560dc949a8b2fb789f3cdc05f5d/code-stable-1592429223.tar.gz -> ${P}-amd64.tar.gz"
 
 RESTRICT="mirror strip bindist"
 
-LICENSE="MicrosoftSoftwareLicense"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64"
 IUSE="libsecret"
 
 DEPEND="
 	>=media-libs/libpng-1.2.46
-	>=x11-libs/gtk+-2.24.8-r1:2
+	x11-libs/gtk+:3
 	x11-libs/cairo
-	gnome-base/gconf
 	x11-libs/libXtst
 "
 
