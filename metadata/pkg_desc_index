@@ -363,7 +363,7 @@ x11-misc/9menu 1.8: Create X menus from the shell
 x11-misc/fqterm 0.9.8.3.4 9999: a modern terminal emulator for Linux
 x11-misc/i3lock-color 9999: An improved i3lock
 x11-misc/i3lock-fancy 9999: A fancy i3lock
-x11-misc/lightdm-slick-greeter 1.3.1 9999: LightDM greeter forked from Unity by Linux Mint team
+x11-misc/lightdm-slick-greeter 1.4.1 9999: LightDM greeter forked from Unity by Linux Mint team
 x11-misc/synergy 1.10.3: Lets you easily share a single mouse and keyboard between multiple computers
 x11-plugins/vicious 2.1.3 9999: Modular widget library for x11-wm/awesome
 x11-terms/termite 9999: A keyboard-centric VTE-based terminal
