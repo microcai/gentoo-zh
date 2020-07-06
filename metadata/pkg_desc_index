@@ -201,7 +201,8 @@ dev-libs/libtsm 3: TSM is a state machine for DEC VT100-VT520 compatible termina
 dev-libs/lunar-date 2.4.2: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-php/pecl-solr 2.4.0: Solr client
-dev-python/fuo-local 0.2: local music support for feeluown
+dev-python/fuo-kuwo 0.1.1: kuwo music support for feeluown
+dev-python/fuo-local 0.2.1: local music support for feeluown
 dev-python/fuo-netease 0.4.2: netease cloud music support for feeluown
 dev-python/fuo-qqmusic 0.2: xiami music support for feeluown
 dev-python/fuo-xiami 0.2.3: xiami music support for feeluown
@@ -261,8 +262,7 @@ media-sound/audio-convert-mod 3.45.2: A simple audio file converter supporting m
 media-sound/cue2tracks 0.2.16: Bash script for split audio CD image files with cue sheet to tracks and write tags.
 media-sound/deepin-music 3.1.18 5.0.1: Deepin Music Player
 media-sound/deepin-voice-recorder 1.4.2 5.0.0: Deepin Voice Recorder
-media-sound/feeluown 3.4.1: A user-friendly and hackable music player
-media-sound/hinedo 0.4: A desktop utility for Hinet Radio
+media-sound/feeluown 3.5.1: A user-friendly and hackable music player
 media-sound/linnya 2.2.0: A free music player
 media-sound/netease-cloud-music 1.2.1: Netease cloud music player
 media-video/QtAV 1.11.0-r1: A cross-platform multimedia framework based on Qt and FFmpeg.
