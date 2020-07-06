@@ -37,6 +37,7 @@ PDEPEND="
 	netease? ( dev-python/fuo-netease[${PYTHON_USEDEP}] )
 	local? ( dev-python/fuo-local[${PYTHON_USEDEP}] )
 	qqmusic? ( dev-python/fuo-qqmusic[${PYTHON_USEDEP}] )
+	kuwo? ( dev-python/fuo-kuwo[$PYTHON_USEDEP] )
 "
 
 DEPEND="

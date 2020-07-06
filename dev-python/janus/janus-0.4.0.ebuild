@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python3_{6,7,8} pypy3 )
 inherit distutils-r1
 
 DESCRIPTION="Implementation of the asyncio (PEP 3156) event-loop with Qt"
-HOMEPAGE="https://github.com/harvimt/quamash"
+HOMEPAGE="https://github.com/aio-libs/janus"
 MY_P="${P/_alpha/a}"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${MY_P}.tar.gz"
 IUSE="test"
