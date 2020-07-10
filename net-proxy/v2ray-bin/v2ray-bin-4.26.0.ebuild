@@ -11,11 +11,13 @@ HOMEPAGE="https://www.v2ray.com/"
 SRC_URI="
 	amd64?	( https://github.com/v2ray/v2ray-core/releases/download/$MY_PV/v2ray-linux-64.zip -> v2ray-$PV-linux-64.zip )
 	x86?	( https://github.com/v2ray/v2ray-core/releases/download/$MY_PV/v2ray-linux-32.zip -> v2ray-$PV-linux-32.zip )
+	arm?	( https://github.com/v2ray/v2ray-core/releases/download/$MY_PV/v2ray-linux-arm.zip -> v2ray-$PV-linux-arm.zip )
+	arm?	( https://github.com/v2ray/v2ray-core/releases/download/$MY_PV/v2ray-linux-arm64.zip -> v2ray-$PV-linux-arm64.zip )
 "
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 IUSE=""
 
 DEPEND=""
