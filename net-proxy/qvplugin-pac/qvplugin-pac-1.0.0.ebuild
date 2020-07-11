@@ -16,7 +16,7 @@ LICENSE="GPL-3"
 SLOT="0"
 
 DEPEND="
-	net-proxy/qv2ray
+	=net-proxy/qv2ray-2.5.0
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
