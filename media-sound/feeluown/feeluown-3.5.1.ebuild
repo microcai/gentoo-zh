@@ -16,7 +16,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+netease +local +xiami +qqmusic"
+IUSE="+netease +local +xiami +qqmusic +kuwo"
 
 RDEPEND="
 	dev-python/beautifulsoup[${PYTHON_USEDEP}]
