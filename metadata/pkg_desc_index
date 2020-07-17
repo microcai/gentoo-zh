@@ -310,10 +310,10 @@ net-proxy/goagent 3.2.2 9999: A GAE proxy forked from gappproxy/wallproxy
 net-proxy/lantern-bin 3.0.4: A free desktop application that delivers fast, reliable and secure access to the open Internet for users in censored regions.
 net-proxy/libQtShadowsocks 2.1.0: A lightweight and ultra-fast shadowsocks library written in C++/Qt
 net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
-net-proxy/qv2ray 2.4.1 2.5.0 2.6.0 99999: Qt GUI fontend of v2ray
+net-proxy/qv2ray 2.4.1 2.5.0 2.6.1 99999: Qt GUI fontend of v2ray
 net-proxy/qvplugin-command 1.0.0 2.0.0 99999: Plugin for Qv2ray to run any commands when something happens in Qv2ray
 net-proxy/qvplugin-pac 1.0.0: PAC plugin for Qv2ray to support connecting proxy with PAC
-net-proxy/qvplugin-ssr 1.0.0 2.0.0 9999: shadowsocksR plugin for Qv2ray to support SSR connection in Qv2ray
+net-proxy/qvplugin-ssr 1.0.0 2.0.1 9999: shadowsocksR plugin for Qv2ray to support SSR connection in Qv2ray
 net-proxy/qvplugin-trojan 1.0.0 2.0.0 99999: Plugin for Qv2ray to support Trojan proxy in Qv2ray
 net-proxy/shadowsocks 9999: A fast tunnel proxy that helps you bypass firewalls
 net-proxy/shadowsocks-qt5 3.0.1: Shadowsocks-Qt5 is a native and cross-platform shadowsocks GUI client with advanced features.
