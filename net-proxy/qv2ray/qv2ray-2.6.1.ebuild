@@ -28,7 +28,7 @@ DEPEND="
 	media-libs/zxing-cpp
 "
 RDEPEND="
-	|| ( net-proxy/v2ray net-proxy/v2ray-bin )
+	|| ( net-proxy/v2ray-bin net-proxy/v2ray )
 	!libressl? ( dev-libs/openssl:0= )
 	libressl? ( dev-libs/libressl:0= )
 	${DEPEND}
