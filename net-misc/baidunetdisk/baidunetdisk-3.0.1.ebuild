@@ -1,4 +1,4 @@
-# Copyright 2019 Gentoo Authors
+# Copyright 2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -14,7 +14,7 @@ SRC_URI="https://issuecdn.baidupcs.com/issue/netdisk/LinuxGuanjia/${PV}/${PN}_li
 LICENSE=""
 SLOT="0"
 RESTRICT="strip"
-KEYWORDS="~amd64"
+KEYWORDS="-* ~amd64"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+
