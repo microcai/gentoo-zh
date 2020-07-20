@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake-utils gnome2-utils xdg-utils git-r3
+inherit cmake gnome2-utils xdg-utils git-r3
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5.git"
 
 KEYWORDS="~amd64"
@@ -56,7 +56,7 @@ src_prepare() {
 	pwd
 	ln -s "${DISTDIR}/fcitx-data-en_dict-20121020.tar.gz" src/modules/spell/dict/en_dict-20121020.tar.gz || die
 
-	cmake-utils_src_prepare
+	cmake_src_prepare
 	xdg_environment_reset
 }
 
@@ -71,15 +71,15 @@ src_configure() {
 		-DENABLE_DOC=$(usex doc)
 		-DUSE_SYSTEMD=$(usex systemd)
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 src_install(){
-	cmake-utils_src_install
+	cmake_src_install
 }
 
 pkg_postinst() {
-	gnome2_icon_cache_update
+	xdg_icon_cache_update
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
 
@@ -90,7 +90,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
+	xdg_icon_cache_update
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
 }
