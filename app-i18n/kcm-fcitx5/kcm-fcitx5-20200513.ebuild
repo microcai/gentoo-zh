@@ -3,7 +3,7 @@
 
 EAPI="6"
 
-inherit cmake-utils git-r3
+inherit cmake git-r3
 EGIT_REPO_URI="https://github.com/fcitx/kcm-fcitx5.git"
 EGIT_COMMIT="44f6113f73f4532bd67cd0c17a172249fe363444"
 
@@ -40,11 +40,13 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig"
 
+PATCHES=("${FILESDIR}/${P}-fix-missing-qpainterpath-header.patch")
+
 src_configure() {
 	local mycmakeargs=(
 		-DKDE_INSTALL_USE_QT_SYS_PATHS=yes
 		-DENABLE_KCM=$(usex kde)
 	)
 
-	cmake-utils_src_configure
+	cmake_src_configure
 }
