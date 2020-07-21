@@ -1,0 +1,12 @@
+diff --git a/layout/keyboardlayoutwidget.cpp b/layout/keyboardlayoutwidget.cpp
+index 4214ea0..d440230 100644
+--- a/layout/keyboardlayoutwidget.cpp
++++ b/layout/keyboardlayoutwidget.cpp
+@@ -9,6 +9,7 @@
+ #include <QDir>
+ #include <QPaintEvent>
+ #include <QPainter>
++#include <QPainterPath>
+ #include <QVector2D>
+ #include <QX11Info>
+ #include <qmath.h>
