@@ -1,0 +1,22 @@
+From 77c051b5aac3f6edaf462c115733807aa2c4ccab Mon Sep 17 00:00:00 2001
+From: DuckVador <Lx3JQkmzRS@protonmail.com>
+Date: Tue, 21 Jul 2020 09:34:24 +0800
+Subject: [PATCH] explicit static uvw library
+
+---
+ cmake/libuv.cmake | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cmake/libuv.cmake b/cmake/libuv.cmake
+index d9ce6505..4443db06 100644
+--- a/cmake/libuv.cmake
++++ b/cmake/libuv.cmake
+@@ -45,7 +45,7 @@ else()
+         set(${LibUV_LIBRARIES} unofficial::libuv::libuv)
+     endif()
+ endif()
+-add_library(UVW_LIB ${UVW_SOURCES})
++add_library(UVW_LIB STATIC ${UVW_SOURCES})
+ target_compile_definitions(UVW_LIB PUBLIC UVW_AS_LIB)
+ target_include_directories(UVW_LIB PUBLIC ${LibUV_INCLUDE_DIR})
+ target_link_libraries(UVW_LIB ${LibUV_LIBRARIES})
