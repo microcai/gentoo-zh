@@ -37,6 +37,10 @@ BDEPEND="
 	dev-qt/linguist-tools:5
 "
 
+PATCHES=(
+	"${FILESDIR}/${P}-explicit_static_uvw_library.patch"
+)
+
 src_prepare() {
 	cmake-utils_src_prepare
 	xdg_environment_reset
