@@ -60,7 +60,7 @@ app-dicts/stardict-xdict-en-zh-gb 2.4.2: Stardict Dictionary English to Simplifi
 app-dicts/stardict-xdict-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
 app-dicts/stardict-xdict-zh-en-gb 2.4.2: Stardict Dictionary Simplified Chinese (GB) to English
 app-editors/typora 20200705: markdown editor
-app-editors/visual-studio-code 1.47.0: Multiplatform Visual Studio Code from Microsoft
+app-editors/visual-studio-code 1.47.2: Multiplatform Visual Studio Code from Microsoft
 app-emulation/crossover-bin 17.1.0: Commercial version of app-emulation/wine with paid support.
 app-emulation/deepin-wine 2.18.18 2.18.22_rc0: Deepin Version of Wine
 app-emulation/deepin-wine-helper 1.2.0: Deepin Version of Wine
