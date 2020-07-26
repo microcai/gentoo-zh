@@ -356,7 +356,6 @@ www-servers/darkhttpd 1.8: A small, static webserver
 www-servers/tengine 2.0.3: Robust, small and high performance http and reverse proxy server
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
 x11-libs/bamf 0.5.4: BAMF Application Matching Framework
-x11-libs/gsettings-qt 0.1_p20170824 0.2: Qml bindings for GSettings.
 x11-libs/libvdpau-va-gl 9999: VDPAU driver with VA-API/OpenGL backend.
 x11-libs/xcb-imdkit 20200513 99999999999: An implementation of xim protocol in xcb
 x11-misc/9menu 1.8: Create X menus from the shell
