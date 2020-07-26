@@ -1,83 +1,56 @@
-# Copyright 1999-2010 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: $
-# This file contains descriptions of local USE flags, and the ebuilds which
-# contain them.
-# Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
-# Declaring the locale for the sort is critical to avoid flapping.
-###########
-## NOTICE!!
-###########
-# This file is deprecated as per GLEP 56 in favor of metadata.xml. Please add
-# your descriptions to your package's metadata.xml ONLY.
-# use.local.desc is now generated automatically, and manual editing of it is
-# disallowed.
-# Test for commit block
+# This file is deprecated as per GLEP 56 in favor of metadata.xml.
+# Please add your descriptions to your package's metadata.xml ONLY.
+# * generated automatically using pmaint *
 
-app-admin/eselect-xim:scim - add scim support
-app-admin/eselect-xim:gcin - add gcin support
-app-admin/eselect-xim:oxim - add oxim support
-
-
-app-antivirus/bitdefender-scanner:gtk - Enable the graphical user interface based on x11-libs/gtk+
-
-app-i18n/gcin:filter-nobopomofo - support nobopomofo plugin
-app-i18n/gcin:chinese-sound - support chinese sound
-
-app-i18n/ibus-table-cangjie:cangjie3 - Build CangJie3 Engine
-app-i18n/ibus-table-cangjie:cangjie5 - Build CangJie5 Engine
-app-i18n/ibus-table-cangjie:quick3 - Build Quick3 Engine
-app-i18n/ibus-table-cangjie:quick5 - Build Quick5 Engine
-app-i18n/ibus-table-erbi:extra-phrases - Add extra phrases into built Engine
-app-i18n/ibus-table-wubi:extra-phrases - Add extra phrases into built Engine
-app-i18n/ibus-table-wubi:wubi86 - Build Wubi86 Engine
-app-i18n/ibus-table-wubi:wubi98 - Build Wubi98 Engine
-app-i18n/ibus-table-zhengma:extra-phrases - Add extra phrases into built Engine
-app-i18n/sunpinyin:ibus - Enable support for app-i18n/ibus input method
-app-i18n/sunpinyin:xim - Enable support for XIM
-app-text/stardict:espeak - Enables text to speech engine app-accessibility/espeak
-app-text/stardict:festival - Enables text to speech engine app-accessibility/festival
-app-text/stardict:gnome - Enables gnome-base/gnome support
-app-text/stardict:gucharmap - Enables gnome-extra/gucharmap plugin
-app-text/stardict:spell - Enables spell checking capability using app-text/enchant
-app-text/texlive-core:xetex - Use TeXLive packed XeTeX
-gnome-base/nautilus:beagle - Enables support for searching using the Beagle (app-misc/beagle) desktop search tool
-gnome-base/nautilus:elementary - Use the branch modified by the elementary project
-gnome-base/nautilus:mod - Use the nautilus-mod
-gnome-base/nautilus:tracker - Enables support for searching using the Tracker (app-misc/tracker) search tool
-media-libs/fontconfig:ubuntu - Enable the lcd patch from Ubuntu
-media-libs/freetype:cleartype - Enable subpixel patch
-media-libs/freetype:fontforge - Install internal headers required for truetype debugger in media-gfx/fontforge (built with USE=fontforge-debugger)
-media-libs/freetype:ubuntu - Enable the lcd patch from Ubuntu
-media-libs/freetype:utils - Install utilities and examples from ft2demos
-media-plugins/osd-lyrics:mpd - Enable support for MPD
-media-plugins/osd-lyrics:xmms2 - Enable support for XMMS2
-media-tv/gmlive:extra - Enable support for PPLive and PPS IPTV
-media-tv/gmlive:sopcast - Enable support for media-tv/sopcast
-media-tv/gmlive:totem - Enable totem plugin support
-media-tv/gmlive-extra:pplive - Enable support for PPLive P2P IPTV
-media-tv/gmlive-extra:pps - Enable support for PPS P2P IPTV
-media-tv/gmlive-extra:sopcast - Enable support for SopCast P2P IPTV
-net-firewall/west-chamber:ipset - Kernel module for IP set management
-net-firewall/west-chamber:xtables_addons_cui - The CUI target sends obfuscating packets upon incoming SYN to make the connection invisible to third-party intrusion detection.
-net-firewall/west-chamber:xtables_addons_gfw - The gfw match allows to match on gfw packet fingerprints.
-net-firewall/west-chamber:xtables_addons_zhang - The CUI target sends obfuscating packets upon incoming SYN to make the connection invisible to third-party intrusion detection.
-net-misc/gemanx:imageview - enable external image viewer
-net-misc/gemanx:iplookup - enable IP location lookup for Simplified Chinese users. Need qqwry.dat
+app-emulation/crossover-bin:capi - Enable ISDN support via CAPI
+app-emulation/winetricks-zh:rar - Pull in app-arch/unrar for extraction of rar-compressed game files
+app-i18n/fcitx5:coverage - Build the project with gcov support (Need ENABLE_TEST=On)
+app-i18n/fcitx5:enchant - Enable enchant for word predication
+app-i18n/fcitx5:presage - Enable presage for word predication(not stable)
+app-i18n/fcitx5:test - Build Test
+app-i18n/fcitx5-chinese-addons:browser - Enable built-in browser using dev-qt/qtwebengine
+app-i18n/fcitx5-chinese-addons:gui - Enable configure gui
+app-i18n/fcitx5-chinese-addons:opencc - Enable support for conversion between Traditional and Simplified Chinese
+app-i18n/fcitx5-chinese-addons:webkit - Using dev-qt/qtwebkit as browser backend
+app-i18n/kcm-fcitx5:kde - Enable KDE KCM support
+dde-base/dde-control-center:redshift - Install x11-misc/redshift to support screen color temperature adjusting
+dde-base/dde-daemon:bluetooth - Enable Bluetooth Support
+dde-base/dde-daemon:fprint - Enables experimental fingerprint authentication using sys-auth/fprintd
+dde-base/dde-daemon:grub - Install Deepin themes for sys-boot/grub
+dde-base/dde-daemon:miracast - Enable Miracast Support
+dde-base/dde-file-manager:avfs - Enable support for sys-fs/avfs
+dde-base/dde-file-manager:screensaver - Enable support for setting screensaver
+dde-base/dde-meta:extra - Install extra applicaions developed by Deepin
+dde-base/dde-meta:grub - Install Deepin themes for sys-boot/grub
+dde-base/dde-meta:kwin - Use the WM based on kwin
+dde-base/dde-meta:manual - Install dde-extra/dde-help User Manual
+dde-base/dde-meta:multimedia - Install Deepin multimedia suite
+dde-base/dde-meta:mutter - Use the WM based on mutter
+dde-base/dde-meta:plymouth - Install Deepin themes for sys-boot/plymouth
+dde-base/dde-meta:screensaver - Install Deepin Screensaver module
+dde-base/dde-meta:terminal - Install dde-extra/deepin-terminal Terminal Emulator
+dde-base/dde-meta:turbo - Enable DTK Apps Turbo by dde-extra/deepin-turbo
+dde-extra/deepin-screensaver:bubbles - Add bubbles screensaver
+dde-extra/deepin-terminal:zssh - Enable access to remote server via GUI using net-misc/zssh
+dde-extra/deepin-topbar:albert - Install x11-misc/albert to Add an entrance for desktop searching
+dev-libs/granite:demo - Build the Granite demo application (to present all available UI features provided by the library)
+media-gfx/deepin-screenshot:sharing - Install dde-extra/deepin-social-sharing for social media sharing
+media-libs/cogl:gles2 - Enable OpenGL ES 2.0 support
+media-libs/cogl:kms - Enable KMS support.
+media-libs/cogl:pango - Build cogl-pango library for x11-libs/pango integration
+media-plugins/osdlyrics:gnome - add support for gnome
+media-plugins/osdlyrics:indicator - add support for appindicator
+media-sound/feeluown:local - add local music support for feeluown
+media-sound/feeluown:netease - add netease cloud music support for feeluown
+media-sound/feeluown:qqmusic - add qq music support for feeluown
+media-sound/feeluown:xiami - add xiami music support for feeluown
+media-video/simplescreenrecorder:vpx - Enables vp8 codec support using libvpx from ffmpeg/libav
 net-misc/xmuruijie:firewall - Add support for iptables firewall
-net-p2p/amule:daemon - Enable amule daemon
-net-p2p/amule:dlp - Enable Dynamic Leecher Protection
-net-p2p/amule:remote - Enable remote controlling of the client
-net-p2p/amule:stats - Enable statistic reporting
-net-p2p/amule:upnp - Enables support for Intel UPnP stack.
-x11-libs/cairo:cleartype - Enable subpixel patch
-x11-libs/cairo:glitz - Build with glitz support, which replaces some software render operations with Mesa OpenGL operations
-x11-libs/cairo:newspr - Enable Freetype subpixel font rendering
-x11-libs/cairo:ubuntu - Enable lcd rendering patches from Ubuntu
-x11-libs/libXft:cleartype - Enable Freetype subpixel font rendering
-x11-libs/libXft:ubuntu - Use Freetype subpixel rendering patch from Ubuntu
-x11-libs/qt:immqt - Enable binary incompatible version of immodule for Qt
-x11-libs/qt:immqt-bc - Enable binary compatible version of immodule for Qt
-x11-libs/qt:zh_TW - add GOT's chinese patch
-x11-misc/notification-daemon:notify-osd - Hack to support notify-osd
-x11-misc/qterm:phonon - Enable support for the Phonon multimedia package
+net-proxy/make-proxy:client - Add make proxy client support
+net-proxy/make-proxy:server - Add make proxy server support
+sys-devel/gdb:multitarget - Support all known targets in one gdb binary
+sys-kernel/hardened-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
+virtual/dde-wm:kwin - Use the WM based on kwin
+virtual/dde-wm:minimal - Prefer x11-wm/deepin-metacity over other two WM
+virtual/dde-wm:mutter - Use the WM based on mutter
+x11-wm/deepin-mutter:kms - Enable KMS support.

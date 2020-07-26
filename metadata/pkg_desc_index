@@ -1,0 +1,384 @@
+app-accessibility/onboard 1.4.1 1.4.1.7: An onscreen keyboard useful for tablet PC users and for mobility impaired users
+app-admin/eselect-xim 0.8 0.9 0.9.1: Manages Input Method of X
+app-arch/p7zip-nsis 0.4-r1: A binary version of p7zip to decompress nsis. Lastest version of p7zip doesn't decompress some nsis.
+app-arch/unzip 6.10_beta: unzipper for pkzip-compressed files
+app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
+app-crypt/yubico-piv-tool 1.4.2: The Yubico PIV Tool allows you to configure a PIV-enabled YubiKey through a command line interface.
+app-crypt/yubikey-piv-manager 1.4.0: The YubiKey PIV Manager enables you to configure a PIV-enabled YubiKey through a graphical user interface.
+app-dicts/stardict-21shijishuangxiangcidian-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
+app-dicts/stardict-21shijishuangyukejicidian-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
+app-dicts/stardict-cdict-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
+app-dicts/stardict-cdict-en-zh-gb 2.4.2: Stardict Dictionary English to Simplified Chinese (GB)
+app-dicts/stardict-cedict-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
+app-dicts/stardict-cedict-zh-en-gb 2.4.2: Stardict Dictionary Simplified Chinese (GB) to English
+app-dicts/stardict-dictd-devils 2.4.2: Stardict Dictionary for Dictd.org's Devil's Dictionary
+app-dicts/stardict-dictd-elements 2.4.2: Stardict Dictionary for Gcide.org's Elements's Dictionary
+app-dicts/stardict-dictd-gazetteer 2.4.2: Stardict Dictionary for Gcide.org's Gazetteer's Dictionary
+app-dicts/stardict-dictd-gcide 2.4.2: Stardict Dictionary for Gcide.org's Gcide's Dictionary
+app-dicts/stardict-dictd-hitchcock 2.4.2: Stardict Dictionary for Gcide.org's Hitchcock's Dictionary
+app-dicts/stardict-dictd-wn 2.4.2: Stardict Dictionary for Gcide.org's Wn's Dictionary
+app-dicts/stardict-dictd-world95 2.4.2: Stardict Dictionary for Gcide.org's Devil's Dictionary
+app-dicts/stardict-freedict-eng-deu 2.4.2: Stardict Dictionary English to German
+app-dicts/stardict-freedict-eng-fra 2.4.2: Stardict Dictionary English to French
+app-dicts/stardict-freedict-eng-ita 2.4.2: Stardict Dictionary English to Italian
+app-dicts/stardict-freedict-eng-lat 2.4.2: Stardict Dictionary English to Latin
+app-dicts/stardict-freedict-eng-rus 2.4.2: Stardict Dictionary English to Russian
+app-dicts/stardict-freedict-eng-spa 2.4.2: Stardict Dictionary English to Spanish
+app-dicts/stardict-freedict-eng-swe 2.4.2: Stardict Dictionary English to Swedish
+app-dicts/stardict-freedict-eng-tur 2.4.2: Stardict Dictionary English to Turkish
+app-dicts/stardict-freedict-tur-deu 2.4.2: Stardict Dictionary Turkish to German
+app-dicts/stardict-freedict-tur-eng 2.4.2: Stardict Dictionary Turkish to English
+app-dicts/stardict-hnd-de-vi 20050917: Stardict Dictionary German to Vietnamese
+app-dicts/stardict-hnd-en-vi 20050917: Stardict Dictionary English to Vietnamese
+app-dicts/stardict-hnd-fr-vi 20050917: Stardict Dictionary French to Vietnamese
+app-dicts/stardict-hnd-ru-vi 20050917: Stardict Dictionary Russian to Vietnamese
+app-dicts/stardict-hnd-vi-de 20050917: Stardict Dictionary Vietnamese to German
+app-dicts/stardict-hnd-vi-en 20050917: Stardict Dictionary Vietnamese to English
+app-dicts/stardict-hnd-vi-fr 20050917: Stardict Dictionary Vietnamese to French
+app-dicts/stardict-hnd-vi-vi 20050917: Stardict Dictionary Vietnamese to Vietnamese
+app-dicts/stardict-jmdict-en-ja 2.4.2-r1: Stardict Dictionary English to Japanese
+app-dicts/stardict-jmdict-ja-en 2.4.2-r1: Stardict Dictionary Japanese to English
+app-dicts/stardict-kdic-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
+app-dicts/stardict-langdao-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
+app-dicts/stardict-langdao-en-zh-gb 2.4.2: Stardict Dictionary English to Simplified Chinese (GB)
+app-dicts/stardict-langdao-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
+app-dicts/stardict-langdao-zh-en-gb 2.4.2: Stardict Dictionary Simplified Chinese (GB) to English
+app-dicts/stardict-lazyworm-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
+app-dicts/stardict-lazyworm-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
+app-dicts/stardict-mova-smiley 2.4.2: Stardict Dictionary for Mova.org's Smiley Dictionary
+app-dicts/stardict-oxford-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
+app-dicts/stardict-oxford-en-zh-gb 2.4.2: Stardict Dictionary English to Simplified Chinese (GB)
+app-dicts/stardict-quick-eng-eng 2.4.2: Stardict Dictionary English to French
+app-dicts/stardict-quick-eng-fra 2.4.2: Stardict Dictionary English to French
+app-dicts/stardict-quick-eng-jpn 2.4.2: Stardict Dictionary English to Japanese Romaji
+app-dicts/stardict-quick-jpn-eng 2.4.2: Stardict Dictionary Japanese Romaji to English
+app-dicts/stardict-quick-ru-en 2.4.2: Quick but still useful Russian to English dictionary
+app-dicts/stardict-soothill-buddhist-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
+app-dicts/stardict-wyabdcrealpeopletts 1.0: 
+app-dicts/stardict-xdict-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
+app-dicts/stardict-xdict-en-zh-gb 2.4.2: Stardict Dictionary English to Simplified Chinese (GB)
+app-dicts/stardict-xdict-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
+app-dicts/stardict-xdict-zh-en-gb 2.4.2: Stardict Dictionary Simplified Chinese (GB) to English
+app-editors/typora 20200705: markdown editor
+app-editors/visual-studio-code 1.47.2: Multiplatform Visual Studio Code from Microsoft
+app-emulation/crossover-bin 17.1.0: Commercial version of app-emulation/wine with paid support.
+app-emulation/deepin-wine 2.18.18 2.18.22_rc0: Deepin Version of Wine
+app-emulation/deepin-wine-helper 1.2.0: Deepin Version of Wine
+app-emulation/deepin-wine-plugin 1.0.2: Deepin Version of Wine
+app-emulation/genymotion-bin 2.9.0: Complete set of tools that provide a virtual environment for Android
+app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
+app-i18n/cldr-emoji-annotation 36.12.120191002-r0 9999: Emoji annotation files in CLDR
+app-i18n/dvp 1.2.1: The kbd keymap for Programmer Dvorak.
+app-i18n/fbterm-ucimf 0.2.3 0.2.5 0.2.6 0.2.7 0.2.8 0.2.9: UCIMF input method support for FbTerm
+app-i18n/fcitx-unikey 0.2.2: unikey support for fcitx.
+app-i18n/fcitx5 20200513 999999999: Fcitx5 Next generation of fcitx
+app-i18n/fcitx5-chinese-addons 20200513 999999999: Addons related to Chinese, including IME previous bundled inside fcitx4.
+app-i18n/fcitx5-gtk 20200513 999999999: Gtk im module for fcitx5 and glib based dbus client library
+app-i18n/fcitx5-qt 20200513 9999999999: Qt library and IM module for fcitx5
+app-i18n/fcitx5-rime 20200513 99999999: Rime Support for Fcitx5
+app-i18n/gcin 2.8.5: Another Traditional Chinese IM.
+app-i18n/hime 0.9.10: HIME Input Method Editor
+app-i18n/ibus-googlepinyin 0.1.2: wrapper libgooglepinyin for IBus
+app-i18n/ibus-handwrite 2.1.4: hand write recognition/input using ibus IM engine
+app-i18n/ibus-rime 9999: Rime Input Method Engine for IBus Framework
+app-i18n/ibus-t9 2.1.0.20100601: T9 input engine using ibus
+app-i18n/ibus-xkb 1.4.99.20120525: 
+app-i18n/jfbterm 0.4.7-r4: The J Framebuffer Terminal/Multilingual Enhancement with UTF-8 support
+app-i18n/kcm-fcitx5 20200513 99999999: KDE configuration module for Fcitx
+app-i18n/libgooglepinyin 0.1.2: A fork from google pinyin on android
+app-i18n/libime 20200513 99999999: Fcitx5 Next generation of fcitx
+app-i18n/libpinyin 1.0.0: Library to deal with Pinyin.
+app-i18n/librime 1.1-r1: Rime Input Method Engine library
+app-i18n/lunar 2.2-r4: Chinese Lunar Calendar conversion utility
+app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
+app-i18n/rime-data 0.32 9999: Brise, data resource for Rime Input Method Engine
+app-i18n/scim-array 1.0.0 1.0.1: Array Input Method for SCIM
+app-i18n/scim-chewing 0.5.1: Chewing Input Method for SCIM
+app-i18n/scim-chrasis 9999.0.0.1: Chrasis SCIM binding for chinese character recognition.
+app-i18n/sogoupinyin 2.2.0.0102: Sogou Pinyin input method.
+app-i18n/ucimf-chewing 0.3: The Chewing IMF module for UCIMF
+app-i18n/ucimf-sunpinyin 0.4 0.5: The SunPinyin IMF module for UCIMF
+app-i18n/zh-autoconvert 0.3.16-r3: Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
+app-misc/bcompare 4.2.2.22384: Beyond Compare -- Compare, sync, and merge files and folders
+app-misc/freefilesync 5.6: Visual folder comparison and synchronization
+app-misc/geeknote 9999: Console client for Evernote
+app-misc/gpick 0.2.5: Advanced color picker written in C++ using GTK+ toolkit
+app-misc/icdiff 1.9.0: Colourized diff that supports side-by-side diffing
+app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience within the shell
+app-misc/nixnote 2.1.5 2.1.5-r1: Nixnote - A clone of Evernote for Linux
+app-misc/screen 4.2.1-r2: Full-screen window manager that multiplexes physical terminals between several processes
+app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
+app-misc/wink 1.5: A Tutorial and Presentation creation software, primarily aimed at creating tutorials on how to use software
+app-misc/xmind-portable 3.2.1.201011212218: XMind is a brainstorming and mind mapping software tool.
+app-office/wps-office 11.1.0.9615: WPS Office is an office productivity suite
+app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
+app-portage/findcruft 1.0.4-r1: Yet another script to find obsolete files
+app-portage/portage-cdb 0.2.1: increase portage's speed after syncing, and for calculating dependencies. This method uses a database, rather than a bunch of flat files to store its metadata.
+app-text/asciiio 1: No nonsense asciicasting for serious hackers
+app-text/groff-utf8 0-r1: GNU groff wrapper allowing UTF-8 input
+app-text/openyoudao 9999: openyoudao is a youdao client for linux.
+app-text/reciteword 0.8.5: Reciteword is a education software to help people to study English, reciting english words. It have very beautiful interface, make reciting word being a interesting things.
+app-text/reciteword-books 0.8.3 0.8.4: Reciteword's books.
+app-text/reciteword-dicts 0.8.2: Reciteword's dictionary.
+app-text/reciteword-skins-rw 0.8.2: Reciteword's rw skin.
+app-text/reciteword-skins-rw_en 0.8.2: Reciteword's rw_en skin.
+app-text/srecite 0.6.2: Smart Reciting
+app-text/wiznote 2.1.14 2.4.0 9999: WizNote lets you capture anything you might to remember: create text notes, clip content from the web, snap photos and have all of these notes avaliable you on any device.
+app-text/xdvipdfmx 9999: Extended xdvi for use with XeTeX and other unicode TeXs.
+app-vim/clang_complete 1.8: vim plugin: use clang for completing C/C++ code.
+app-vim/easymotion 1.3: vim plugin: Vim motions on speed!
+app-vim/echofunc 1.18: vim plugin: Echo the function declaration in the command line for C/C++.
+app-vim/icomplete 0.4: vim plugin: an c/c++ auto-completion plugin that supports c#/java partually.
+app-vim/powerline 9999: vim plugin: The ultimate vim statusline utility.
+dde-base/dde-account-faces 1.0.11: Deepin Account face Images
+dde-base/dde-api 3.18.5 5.0.0: Go-lang bingdings for dde-daemon
+dde-base/dde-control-center 4.10.14 5.0.0: Control Center of Deepin Desktop Environment
+dde-base/dde-daemon 3.28.0 5.0.0: Daemon handling the DDE session settings
+dde-base/dde-dock 4.10.8 5.0.0: Deepin desktop environment - Dock module
+dde-base/dde-file-manager 4.8.8.1 5.0.0-r1: Deepin File Manager and Desktop module for DDE
+dde-base/dde-launcher 4.6.14 5.0.0: Deepin desktop environment - Launcher module
+dde-base/dde-meta 15.10.1: Deepin Desktop Enviroment (meta package)
+dde-base/dde-network-utils 0.1.4 5.0.1: DDE Network Utils
+dde-base/dde-polkit-agent 0.3.0 5.0.0: PolicyKit agent for DDE
+dde-base/dde-qt-dbus-factory 5.0.0 5.0.1: A repository stores auto-generated Qt5 D-Bus code used by DDE
+dde-base/dde-qt5integration 5.0.0-r2: DDE system integration plugin for Qt5
+dde-base/dde-session-ui 4.9.14 5.0.0: Deepin desktop environment - Session UI module
+dde-base/deepin-anything 0.1.0 5.0.1: Fast File Search Tool for DDE
+dde-base/deepin-artwork-themes 15.12.4: Deepin artwork themes
+dde-base/deepin-desktop-base 2019.06.19 2019.07.10: Base components for Deepin Desktop
+dde-base/deepin-desktop-schemas 3.13.8 3.13.9: GSettings deepin desktop-wide schemas
+dde-base/deepin-file-manager-backend 0.1.16-r1: Deepin file manager backend
+dde-base/deepin-gettext-tools 1.0.8: Deepin Internationalization utilities
+dde-base/deepin-gtk-theme 17.10.11: Deepin GTK Theme
+dde-base/deepin-icon-theme 15.12.71: Deepin Icons
+dde-base/deepin-menu 3.4.6 3.4.8: Deepin menu service for building beautiful menus
+dde-base/deepin-sound-theme 15.10.3: Deepin Sound themes
+dde-base/deepin-wallpapers 1.7.7-r1: Deepin Wallpapers
+dde-base/dtkcore 2.0.16.3 2.1.1: Base development tool of all C++/Qt Developer work on Deepin - Core modules
+dde-base/dtkwidget 2.0.16.1 2.1.1: Base development tool of all C++/Qt Developer work on Deepin - Widget modules
+dde-base/dtkwm 2.0.11-r1 2.0.12: Deepin graphical user interface library
+dde-base/startdde 3.14.7 5.0.1: starter of Deepin Desktop Environment
+dde-base/udisks2-qt5 0.0.2 5.0.0: UDisks2 DBus interfaces binding of Qt5
+dde-extra/dde-calendar 1.2.11 5.0.1: Calendar for Deepin Desktop Environment
+dde-extra/dde-file-manager-integration 9999: Extra plugins for dde-file-manager
+dde-extra/dde-introduction 1.1.10 5.0.0: Deepin Initialization Setup Tool
+dde-extra/dde-meta-apps 0: Deepin Extra Applications (meta package)
+dde-extra/dde-meta-multimedia 0.2-r1: Deepin Multimedia Softwares (meta package)
+dde-extra/deepin-boot-maker 2.0.4.12-r1 5.0.1: A Tool to create a bootable usb stick quick and easy
+dde-extra/deepin-calculator 1.0.12 5.0.1: An easy to use Calculator for Deepin
+dde-extra/deepin-clone 1.1.4 5.0.1: Deepin Disk and Partition Backup/Restore Tool
+dde-extra/deepin-desktop-monitor 9999: Deepin System Monitor
+dde-extra/deepin-editor 1.2.9 1.2.9.1: Simple editor for Deepin
+dde-extra/deepin-font-installer 1.1.5.1 5.0.0: Install and Uninstall Font File for Users
+dde-extra/deepin-grub2-themes 1.0.0: Deepin theme for GRUB2
+dde-extra/deepin-manual 2.1.0 5.0.0: Deepin User Manual
+dde-extra/deepin-picker 1.6.6 5.0.1: Color picker tool for Deepin
+dde-extra/deepin-screensaver 0.0.8: Deepin ScreenSaver
+dde-extra/deepin-shortcut-viewer 1.3.5 5.0.0: Deepin shortcut Viewer
+dde-extra/deepin-system-monitor 1.5.2 5.0.0-r1: Deepin System Monitor
+dde-extra/deepin-terminal 3.2.7.1 5.0.0: Deepin Terminal
+dde-extra/deepin-topbar 0.6.5 0.6.6: A Desktop Topbar with some tools
+dde-extra/deepin-turbo 0.0.3-r1: Booster Daemon to Speed up DTK Applications
+dde-extra/plymouth-theme-deepin 15.10.8 15.10.9: Deepin theme for Plymouth
+dde-extra/screensaver-pp 0.0.4: Bubbles ScreenSaver for Deepin Screensaver
+dev-cpp/ETL 0.04.22: ETL is a multi-platform class and template library
+dev-cpp/cppformat 1.1.0: Small, safe and fast formatting library for C++
+dev-db/dbdesigner 4.0.5.4: DBDesigner 4 is a visual database design system that integrates database design, modeling, creation and maintenance.
+dev-db/pgcli 1.6.0: CLI for Postgres Database. with auto-completion and syntax highlighting.
+dev-go/dbus-factory 3.1.17-r2: D-Bus library binding for golang
+dev-go/deepin-go-lib 1.10.2 5.0.0: Deepin GoLang Library
+dev-go/go-dbus-factory 0.8.0 0.9.0: Go bindings to generate D-Bus services
+dev-go/go-dbus-generator 0.6.6-r1: Convert D-Bus interfaces to go-lang or qml wrapper code
+dev-go/go-gir-generator 2.0.2: Generate static golang bindings for GObject
+dev-go/go-x11-client 0.4.1: Deepin GoLang X11 client Library
+dev-lang/scala-bin 2.12.8 2.13.0: The Scala Programming Language
+dev-lang/swig 4.0.0: Simplified Wrapper and Interface Generator
+dev-libs/disomaster 0.2.0 5.0.0: A libisoburn wrapper class for Qt.
+dev-libs/granite 5.2.1: Elementary OS library that extends Gtk+
+dev-libs/libchrasis 9999.0.1.1: Library for Chinese Character Recognition As-Is
+dev-libs/libdwarf 20140208: Library to deal with DWARF Debugging Information Format
+dev-libs/libtsm 3: TSM is a state machine for DEC VT100-VT520 compatible terminal emulators.
+dev-libs/lunar-date 2.4.2: Chinese Lunar Library
+dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
+dev-php/pecl-solr 2.4.0: Solr client
+dev-python/fuo-kuwo 0.1.1: kuwo music support for feeluown
+dev-python/fuo-local 0.2.1: local music support for feeluown
+dev-python/fuo-netease 0.4.2: netease cloud music support for feeluown
+dev-python/fuo-qqmusic 0.2: xiami music support for feeluown
+dev-python/fuo-xiami 0.2.3: xiami music support for feeluown
+dev-python/janus 0.4.0: Implementation of the asyncio (PEP 3156) event-loop with Qt
+dev-python/notify2 0.3-r1: Python interface to DBus notifications.
+dev-python/pgspecial 1.8.0: Meta-commands handler for Postgres Database.
+dev-python/qasync 0.9.4: Implementation of the asyncio (PEP 3156) event-loop with Qt
+dev-qt/qcef 1.1.7-r1: Qt5 binding of Chromium Embedded Framework
+dev-qt/qt5dxcb-plugin 1.2.6 5.0.1: XCB Qt5 platform plugin for DDE
+dev-qt/qtstyleplugins 20170311-r1: Additional style plugins for Qt
+dev-qt/qtxcb-private-headers 5.13.2 5.14.1: The Private Headers for the Qt5 Xcb
+dev-ruby/mruby 1.0.0 9999: mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
+dev-util/arch-install-scripts 20: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
+dev-util/be 9999: Bugs Everywere distributed bug tracker
+dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 files
+dev-util/ccls 0.20190314.1: C/C++/ObjC language server protocol implementation
+dev-util/elfembed 0.3: Resource Compiler for ELF binaries
+dev-util/fernflower 1: Fernflower is the first actually working analytical decompiler for Java and probably for a high-level programming language in general
+dev-util/global 6.3.4: GNU Global is a tag system to find the locations of a specified object in various sources
+dev-util/jd-gui 1.4.0: A standalone graphical utility that displays Java source codes of .class file
+dev-util/jetbrains-toolbox 1.16.6319 1.17.6856: Manage all your JetBrains Projects and Tools
+dev-util/rinse 1.7 9999: RPM based distributions bootstrap scripts
+dev-util/webstorm 10.0.2: WebStorm is a lightweight yet powerful IDE, perfectly equipped for complex client-side development and server-side development with Node.js.
+dev-util/yabasic 2.9.15: Yet Another BASIC
+games-board/othello 0.2.0 0.2.1: Othello is a classic strategy game, also known as Reversi
+games-misc/fortune-mod-zh 1.2.2: Chinese fortune shell script
+games-misc/llk_linux 2.3_beta1-r1: llk for linux
+kde-misc/imageshack-upload 0.5: A service menu tor upload images on Imageshack.
+kde-misc/plasma-applet-netspeed-widget 1.8-r1 9999: Plasma 5 widget that displays the currently used network bandwidth.
+mail-client/deepin-wine-foxmail 7.2.3: Foxmail mail client for Linux by Deepin
+media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
+media-fonts/ntufonts 20030521: Chinese Fonts from National Taiwan University, Includes kai, Lei, Funsong, and Thin.
+media-fonts/sinicafonts 20030521: Chinese and Siddam fonts provided by SINICA, Taiwan.
+media-fonts/ttf-wps-fonts 1.0: Symbol fonts required by wps-office
+media-fonts/wangfonts 1.3.0: Free Chinese TrueType fonts donated by Prof. Hann-Tzong Wang
+media-fonts/wps-office-fonts 1.0: The wps-office-fonts package contains Founder Chinese fonts
+media-gfx/blur-effect 1.1.3: Off-screen image blurring utility using OpenGL ES 3.0
+media-gfx/byzanz 0.3.0.9999: Screencasting program that saves casts as GIF files
+media-gfx/deepin-draw 1.0.0: Deepin Painting Tool
+media-gfx/deepin-image-viewer 1.3.18 5.0.0: Deepin Image Viewer
+media-gfx/deepin-screen-recorder 2.8.1 5.0.0-r1: Deepin Screencasting Application
+media-gfx/deepin-screenshot 4.2.2 5.0.0: Snapshot tools for linux deepin.
+media-gfx/fontforge 20150330: postscript font editor and converter
+media-gfx/sane-backends 9999: Scanner Access Now Easy - Backends
+media-gfx/scangearmp 1.60: Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
+media-gfx/xrectsel 0.3.1: print the geometry of a rectangular screen region
+media-libs/cogl 1.22.5-r1: A library for using 3D graphics hardware to draw pretty pictures
+media-libs/ksquirrel-libs 0.7.2 0.7.4 0.7.5 0.8.0: Libs required by ksqirrel
+media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simplifies the drawing of beautiful curves.
+media-libs/libuninameslist 20140731 20190701: Library of unicode annotation data
+media-plugins/audacious-mac 0.2.0 0.3.10: Monkey's Audio Codec plugin for audacious
+media-plugins/gimp-gap 2.6.0: Gimp Animation Package
+media-plugins/gst-plugins-meta 0.10-r8: Meta ebuild to pull in gst plugins for apps
+media-plugins/osdlyrics 9999 20200403: Standalone lyrics fetcher/displayer (windowed and OSD mode).
+media-plugins/python-mmkeys 1.6.2.1-r1: Multimedia key support as a PyGTK object
+media-sound/audio-convert-mod 3.45.2: A simple audio file converter supporting many formats
+media-sound/cue2tracks 0.2.16: Bash script for split audio CD image files with cue sheet to tracks and write tags.
+media-sound/deepin-music 3.1.18 5.0.1: Deepin Music Player
+media-sound/deepin-voice-recorder 1.4.2 5.0.0: Deepin Voice Recorder
+media-sound/feeluown 3.5.1: A user-friendly and hackable music player
+media-sound/linnya 2.2.0: A free music player
+media-sound/netease-cloud-music 1.2.1: Netease cloud music player
+media-video/QtAV 1.11.0-r1: A cross-platform multimedia framework based on Qt and FFmpeg.
+media-video/avplayer 9999: avplayer is a p2p video downloader and player
+media-video/deepin-movie-reborn 3.2.24.2 3.2.24.3: Deepin Movie Player
+media-video/lightworks 11.5 11.5.1: Lightworks is the fastest, most accessible and focused NLE in the industry
+media-video/simplescreenrecorder 0.3.3-r1 9999: A Simple Screen Recorder
+media-video/tenvideo 1.0.10: Tencent videos
+net-dialup/mentohust 9999: A Ruijie and Cernet supplicant on Linux and MacOS
+net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
+net-dns/dnscrypt-proxy 9999: A tool for securing communications between a client and a DNS resolver
+net-dns/phddns 2.0.6.32828: Phddns
+net-im/aliwangwang 1.00-r1: AliWangWang for Linux
+net-im/avim 0.1: avim is a secure IM build around RSA
+net-im/deepin-wine-QQ 8.9.19983.23 9.1.8.0: Tencent QQ for Linux by Deepin
+net-im/deepin-wine-QQ-Light 7.9.14308.8: Tencent QQ light for Linux by Deepin
+net-im/deepin-wine-TIM 2.0.0.4: Tencent TIM for Linux by Deepin
+net-im/deepin-wine-wechat 2.6.2.31.0 2.6.8.65.0: Tencent WeChat for Linux by Deepin
+net-im/deepin-wine-wechat-work 2.8.10.2010.0: Tencent WeChat Work for Linux by Deepin
+net-im/freetalk 4.1: Console based Jabber client
+net-im/telegram-purple 1.3.0 9999: Libpurple (Pidgin) plugin for using a Telegram account
+net-im/tencent-qq 2.0.0_beta2-r1: Official Linux version of Tencent QQ
+net-libs/jzmq 9999: jzmq
+net-misc/avsocks 9999: 科学操长城软件
+net-misc/baidunetdisk 3.0.1 3.3.2: Baidu Net Disk is a cloud storage client (Linux Version)
+net-misc/baidupcs-go 3.6.2 9999: The terminal utility for Baidu Network Disk (Golang Version).
+net-misc/deepin-wine-thunderspeed 7.10.35.366.18: ThunderSpeed for Linux by Deepin
+net-misc/libipmsg 0.1.6 0.1.7: libipmsg - IP Messenger library for UNIX
+net-misc/logjam 4.5.3: GTK2-based LiveJournal client
+net-misc/networkmanager-l2tp 9999: NetworkManager L2TP plugin
+net-misc/omnitty 0.3.0: ncurses-based ssh multiplexer for cluster administration
+net-misc/pcmanx-gtk2 1.3 9999: PCMan is an easy-to-use telnet client mainly targets BBS users formerly writen by gtk2
+net-misc/prips 1.0.0: print the IP addresses in a range
+net-misc/tiebasprit 0.3.1: 百度贴吧守护精灵 - 百度贴吧广告删贴机器人
+net-misc/xmuruijie 1.4.3: Red Gaint (RuiJie) EAP-MD5 authentication client in Linux
+net-misc/you-get 9999: A video downloader for YouTube, Youku, niconico and a few other sites
+net-p2p/amule-dlp 9999: aMule with DLP patch, the all-platform eMule p2p client
+net-p2p/amule-dlp-antileech 9999: amule-dlp-antileech, dynamic DLP library for amule-dlp
+net-p2p/n2n 2.6: A Layer Two Peer-to-Peer VPN
+net-print/cndrvcups-common-lb 3.40-r1: Common files for Canon drivers
+net-print/cndrvcups-lb 3.40-r1: Canon UFR II / LIPSLX Printer Driver for Linux
+net-print/cups-tsc 0.1.26: The driver of TSC printers for Linux and CUPS
+net-print/hplip-plugin 3.14.1: Binary plugin for HPs hplip printer driver library
+net-proxy/goagent 3.2.2 9999: A GAE proxy forked from gappproxy/wallproxy
+net-proxy/lantern-bin 3.0.4: A free desktop application that delivers fast, reliable and secure access to the open Internet for users in censored regions.
+net-proxy/libQtShadowsocks 2.1.0: A lightweight and ultra-fast shadowsocks library written in C++/Qt
+net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
+net-proxy/qv2ray 2.4.1 2.5.0 2.6.2 99999: Qt GUI fontend of v2ray
+net-proxy/qvplugin-command 1.0.0 2.0.0 99999: Plugin for Qv2ray to run any commands when something happens in Qv2ray
+net-proxy/qvplugin-pac 1.0.0: PAC plugin for Qv2ray to support connecting proxy with PAC
+net-proxy/qvplugin-ssr 1.0.0 2.0.1 9999: shadowsocksR plugin for Qv2ray to support SSR connection in Qv2ray
+net-proxy/qvplugin-trojan 1.0.0 2.0.0 99999: Plugin for Qv2ray to support Trojan proxy in Qv2ray
+net-proxy/shadowsocks 9999: A fast tunnel proxy that helps you bypass firewalls
+net-proxy/shadowsocks-qt5 3.0.1: Shadowsocks-Qt5 is a native and cross-platform shadowsocks GUI client with advanced features.
+net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
+net-proxy/simple-obfs 0.0.5: A simple obfuscating tool
+net-proxy/smartproxy 0.9.4: A fast, proxy smart selector
+net-proxy/v2-ui-bin 5.1.2 5.2.0: A Control Panel for v2ray
+net-proxy/v2ray-bin 4.26.0: A platform for building proxies to bypass network restrictions.
+net-proxy/wallproxy-plus 2.1.18-r1 2.1.19 9999: New version of wallproxy, a general purpose proxy framework in Python.
+sci-libs/libticables2 9999: Library to handle different link cables for TI calculators
+sci-libs/libticalcs2 9999: Library for communication with TI calculators
+sci-libs/libticonv 9999: Charset conversion library for TI calculators
+sci-libs/libtifiles2 9999: Library for TI calculator files
+sys-apps/inxi 2.2.19: A newer, better system information script for irc, administration, and system troubleshooters.
+sys-apps/mdp 9999: A command-line based markdown presentation tool
+sys-apps/uksmstat 9999: Small tool to show UKSM statistics.
+sys-apps/yaourt 1.2.2: A pacman wrapper with extended features and AUR support
+sys-boot/grub-efi 0.97-r84: GNU GRUB Legacy boot loader
+sys-devel/gdb 7.1: GNU debugger
+sys-devel/ucc 1.1-r0: UCC is an ANSI C Compiler
+sys-fs/coda 7.0.5: Coda is an advanced network file system, similar to NFS
+sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
+sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
+sys-fs/yaffs2utils 0.3.0: Utilities to create/extract a yaffs2 image on Linux
+sys-fs/zfs-auto-snapshot 9999 9999-r1: Automatic snapshots for ZFS on Linux
+sys-kernel/dkms 2.2.0.3: Dynamic Kernel Module Support
+sys-kernel/e-sources 3.18.14 4.0.9 4.1.12 4.2.5 4.5.2: Full sources for the Linux kernel including: gentoo, ck and other patches
+sys-kernel/hardened-sources 4.9.29 4.9.44 4.9.52 4.9.65 4.9.74: Hardened kernel sources (kernel series 4.9)
+sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
+sys-libs/libixp 9999: Standalone client/server 9P library
+virtual/dde-wm 0: Virtual for DDE Window Manager
+virtual/linux-sources 1: Virtual for Linux kernel sources
+virtual/openvg 1.1: OpenVG is an API designed for hardware-accelerated 2D vector graphics.
+www-client/maxthon 1.0.5.3: Maxthon for Linux
+www-plugins/115upload 1.5.7.0: 115.com big file upload control
+www-plugins/aliedit 1.0.3.20: 支付宝安全控件对密码输入进行保护
+www-plugins/upeditor 1.0.0.6: unionpay security control plugin
+www-servers/bashttpd 0.1-r1: Simple HTTP Daemon Written in BASH
+www-servers/darkhttpd 1.8: A small, static webserver
+www-servers/tengine 2.0.3: Robust, small and high performance http and reverse proxy server
+x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
+x11-libs/bamf 0.5.4: BAMF Application Matching Framework
+x11-libs/libvdpau-va-gl 9999: VDPAU driver with VA-API/OpenGL backend.
+x11-libs/xcb-imdkit 20200513 99999999999: An implementation of xim protocol in xcb
+x11-misc/9menu 1.8: Create X menus from the shell
+x11-misc/fqterm 0.9.8.3.4 9999: a modern terminal emulator for Linux
+x11-misc/i3lock-color 9999: An improved i3lock
+x11-misc/i3lock-fancy 9999: A fancy i3lock
+x11-misc/lightdm-slick-greeter 1.4.1 9999: LightDM greeter forked from Unity by Linux Mint team
+x11-misc/synergy 1.10.3: Lets you easily share a single mouse and keyboard between multiple computers
+x11-plugins/vicious 2.1.3 9999: Modular widget library for x11-wm/awesome
+x11-terms/termite 9999: A keyboard-centric VTE-based terminal
+x11-terms/vte-ng 9999: An enhanced terminal emulator widget
+x11-themes/dmz-cursor-theme 0.4.1: Style neutral, scalable cursor theme
+x11-themes/elementary-icon-theme 2.3 2.4: Simple and appealing Tango-styled icon theme
+x11-themes/gnome-themes-egtk 1.0: The official elementary GTK theme designed to be smooth, attractive, fast, and usable.
+x11-themes/gnome-themes-ubuntu 0.6.1: GNOME themes from Ubuntu
+x11-themes/humanity-icon-theme 0.6: Elementary Icons for Humans.
+x11-themes/lxice 0.1.0: LXDE theme for IceWM
+x11-themes/smplayer-themes-nonfree 0.1.0 0.1.1: Icon themes for smplayer
+x11-themes/ubuntu-mono 0.0.45: Dark and Light panel icons to make your desktop beautiful
+x11-wm/9wm 1.1: A window manager emulation of the Plan 9 window manager 8-1/2.
+x11-wm/chamferwm 9999: A tiling X11 window manager with Vulkan compositor.
+x11-wm/dde-kwin 0.1.0 5.0.0: KWin configures on DDE
+x11-wm/deepin-metacity 3.22.24: Legacy window manager for Deepin
+x11-wm/deepin-mutter 3.20.38-r2: Deepin fork version of mutter
+x11-wm/deepin-wm 1.9.38: Deepin Window Manager
+x11-wm/i3-gaps 4.18.1: i3 fork with gaps and some more features
