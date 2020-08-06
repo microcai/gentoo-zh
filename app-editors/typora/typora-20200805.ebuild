@@ -23,7 +23,7 @@ src_unpack() {
 	if [ "${A}" != "" ]; then
 		unpack ${A}
 	fi
-	S=${WORKDIR}/Typora-linux-x64/
+	S=${WORKDIR}/bin/Typora-linux-x64/
 }
 
 src_install() {
