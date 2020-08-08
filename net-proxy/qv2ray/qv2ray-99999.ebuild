@@ -35,6 +35,10 @@ BDEPEND="
 	dev-qt/linguist-tools:5
 "
 
+PATCHES=(
+    "${FILESDIR}/revert-zxing-update.patch"
+)
+
 src_prepare() {
 	cmake-utils_src_prepare
 	xdg_environment_reset

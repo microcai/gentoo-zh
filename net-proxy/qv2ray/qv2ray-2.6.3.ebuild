@@ -38,7 +38,7 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}/${P}-explicit_static_uvw_library.patch"
+    "${FILESDIR}/revert-zxing-update.patch"
 )
 
 src_prepare() {
