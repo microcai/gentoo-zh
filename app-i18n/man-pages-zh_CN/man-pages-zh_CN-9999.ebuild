@@ -28,6 +28,7 @@ DEPEND="
 inherit autotools git-r3
 
 src_prepare() {
+	eapply_user
 	eautoreconf
 }
 
