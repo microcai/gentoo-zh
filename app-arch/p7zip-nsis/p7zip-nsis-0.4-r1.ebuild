@@ -4,7 +4,7 @@
 
 EAPI=7
 
-DESCRIPTION="A binary version of p7zip to decompress nsis. Lastest version of p7zip doesn't decompress some nsis."
+DESCRIPTION="A binary version of p7zip to decompress nsis. Latest version of p7zip doesn't decompress some nsis."
 HOMEPAGE="http://p7zip.sourceforge.net/"
 SRC_URI="http://gentoo.org.cn/distfiles/p7zip-nsis-0.4.tar.xz"
 RESTRICT="mirror"
