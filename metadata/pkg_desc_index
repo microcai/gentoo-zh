@@ -1,6 +1,6 @@
 app-accessibility/onboard 1.4.1 1.4.1.7: An onscreen keyboard useful for tablet PC users and for mobility impaired users
 app-admin/eselect-xim 0.8 0.9 0.9.1: Manages Input Method of X
-app-arch/p7zip-nsis 0.4-r1: A binary version of p7zip to decompress nsis. Lastest version of p7zip doesn't decompress some nsis.
+app-arch/p7zip-nsis 0.4-r1: A binary version of p7zip to decompress nsis. Latest version of p7zip doesn't decompress some nsis.
 app-arch/unzip 6.10_beta: unzipper for pkzip-compressed files
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-crypt/yubico-piv-tool 1.4.2: The Yubico PIV Tool allows you to configure a PIV-enabled YubiKey through a command line interface.
