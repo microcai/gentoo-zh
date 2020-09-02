@@ -8,5 +8,5 @@ LICENSE=Unicode_License
 PROPERTIES=live
 RDEPEND=!app-i18n/unicode-cldr
 SLOT=0
-_eclasses_=git-r3	8ec5b53812bce105ae7943930e4660f8
+_eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441
 _md5_=a8d642da4db71fa9352cb25e61faa18c

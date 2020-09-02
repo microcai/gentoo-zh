@@ -9,5 +9,5 @@ LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=x11-misc/xclip dev-python/pywebkitgtk dev-python/python-xlib dev-python/lxml dev-python/beautifulsoup
 SLOT=0
-_eclasses_=git-r3	8ec5b53812bce105ae7943930e4660f8
+_eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441
 _md5_=1175d46b4bf7d83e73cde8c35951ee05
