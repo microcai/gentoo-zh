@@ -23,10 +23,11 @@ DEPEND="
 	dev-qt/qtwidgets:5
 	net-libs/grpc
 	dev-libs/protobuf
-	media-libs/zxing-cpp
+	>=media-libs/zxing-cpp-1.1.0
+	net-misc/curl
 "
 RDEPEND="
-	|| ( net-proxy/v2ray net-proxy/v2ray-bin )
+	|| ( net-proxy/v2ray-bin net-proxy/v2ray )
 	!libressl? ( dev-libs/openssl:0= )
 	libressl? ( dev-libs/libressl:0= )
 	${DEPEND}
@@ -35,10 +36,6 @@ BDEPEND="
 	dev-qt/linguist-tools:5
 "
 
-PATCHES=(
-    "${FILESDIR}/revert-zxing-update.patch"
-)
-
 src_prepare() {
 	cmake-utils_src_prepare
 	xdg_environment_reset
@@ -46,8 +43,8 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
-		-DQV2RAY_DEFAULT_VASSETS_PATH="/usr/bin/v2ray"
-		-DQV2RAY_DEFAULT_VCORE_PATH="/usr/bin/v2ray/v2ray"
+		-DQV2RAY_DEFAULT_VASSETS_PATH="/usr/share/v2ray"
+		-DQV2RAY_DEFAULT_VCORE_PATH="/usr/bin/v2ray"
 		-DQV2RAY_DISABLE_AUTO_UPDATE=on
 		-DQV2RAY_ZXING_PROVIDER="package"
 	)

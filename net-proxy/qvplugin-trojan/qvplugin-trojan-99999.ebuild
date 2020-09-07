@@ -15,7 +15,7 @@ SLOT="0"
 IUSE="tcpfastopen nat reuseport"
 
 DEPEND="
-	net-proxy/qv2ray
+	=net-proxy/qv2ray-99999
 	dev-libs/boost
 	>=dev-libs/openssl-1.1.1
 "
@@ -36,5 +36,5 @@ src_configure() {
 src_install(){
 	insinto "/usr/share/qv2ray/plugins"
 	insopts -m755
-	doins "${BUILD_DIR}/libQvTrojanPlugin.so"
+	doins "${BUILD_DIR}/libQvPlugin-Trojan.so"
 }

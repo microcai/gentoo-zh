@@ -15,7 +15,7 @@ LICENSE="GPL-3"
 SLOT="0"
 
 DEPEND="
-	net-proxy/qv2ray
+	=net-proxy/qv2ray-99999
 	dev-libs/libuv
 	dev-libs/libsodium
 "
@@ -36,5 +36,5 @@ src_configure() {
 src_install(){
 	insinto "/usr/share/qv2ray/plugins"
 	insopts -m755
-	doins "${BUILD_DIR}/libQvSSRPlugin.so"
+	doins "${BUILD_DIR}/libQvPlugin-SSR.so"
 }
