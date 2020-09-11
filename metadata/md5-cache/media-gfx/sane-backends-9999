@@ -9,5 +9,5 @@ LICENSE=GPL-2 public-domain
 PROPERTIES=live
 RDEPEND=sane_backends_dc210? ( virtual/jpeg ) sane_backends_dc240? ( virtual/jpeg ) sane_backends_dell1600n_net? ( virtual/jpeg ) avahi? ( >=net-dns/avahi-0.6.24 ) sane_backends_canon_pp? ( sys-libs/libieee1284 ) sane_backends_hpsj5s? ( sys-libs/libieee1284 ) sane_backends_mustek_pp? ( sys-libs/libieee1284 ) usb? ( virtual/libusb:0 ) gphoto2? ( media-libs/libgphoto2 virtual/jpeg ) v4l? ( media-libs/libv4l ) !<sys-fs/udev-114
 SLOT=0
-_eclasses_=eutils	fcb2aa98e1948b835b5ae66ca52868c5	flag-o-matic	09a8beb8e6a8e02dc1e1bd83ac353741	git-r3	3e7ec3d6619213460c85e2aa48398441	multilib	2477ebe553d3e4d2c606191fe6c33602	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb
+_eclasses_=eutils	fcb2aa98e1948b835b5ae66ca52868c5	flag-o-matic	09a8beb8e6a8e02dc1e1bd83ac353741	git-r3	3e7ec3d6619213460c85e2aa48398441	multilib	98584e405e2b0264d37e8f728327fed1	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb
 _md5_=20cf22840a6c83645f35b605b71b0e31
