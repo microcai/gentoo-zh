@@ -8,5 +8,5 @@ LICENSE=Canon-UFR-II
 RDEPEND=gnome-base/libglade net-print/cups ~net-print/cndrvcups-common-lb-3.40 x11-libs/gtk+:2 >=dev-libs/libxml2-2.9.1-r4[abi_x86_32(-)] virtual/jpeg:62[abi_x86_32(-)]
 SLOT=0
 SRC_URI=http://gdlp01.c-wss.com/gds/0/0100003440/14/linux-UFRII-drv-v340-02-usen.tar.gz
-_eclasses_=autotools	7d999b62b8749fad43fff00620cedf47	estack	686eaab303305a908fd57b2fd7617800	libtool	f143db5a74ccd9ca28c1234deffede96	ltprune	a14405e17e299ca22f79c9c86e459c19	multilib	98584e405e2b0264d37e8f728327fed1	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb	versionator	2352c3fc97241f6a02042773c8287748
+_eclasses_=autotools	7d999b62b8749fad43fff00620cedf47	estack	686eaab303305a908fd57b2fd7617800	libtool	f143db5a74ccd9ca28c1234deffede96	ltprune	db8b7ce9d0e663594bcb4a4e72131a79	multilib	98584e405e2b0264d37e8f728327fed1	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb	versionator	2352c3fc97241f6a02042773c8287748
 _md5_=9810c28819e694560809440058574c05
