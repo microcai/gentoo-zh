@@ -14,7 +14,7 @@ LICENSE="GPL-3"
 SLOT="0"
 
 DEPEND="
-	net-proxy/qv2ray
+	=net-proxy/qv2ray-99999
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
@@ -26,5 +26,5 @@ src_configure() {
 src_install(){
 	insinto "/usr/share/qv2ray/plugins"
 	insopts -m755
-	doins "${BUILD_DIR}/libQvCommandPlugin.so"
+	doins "${BUILD_DIR}/libQvPlugin-Command.so"
 }

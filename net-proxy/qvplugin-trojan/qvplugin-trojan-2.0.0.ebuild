@@ -18,7 +18,7 @@ SLOT="0"
 IUSE="tcpfastopen nat reuseport"
 
 DEPEND="
-	>=net-proxy/qv2ray-2.6.0
+	<net-proxy/qv2ray-2.7.0
 	dev-libs/boost
 	>=dev-libs/openssl-1.1.1
 "
