@@ -226,6 +226,7 @@ dev-util/global 6.3.4: GNU Global is a tag system to find the locations of a spe
 dev-util/jd-gui 1.4.0: A standalone graphical utility that displays Java source codes of .class file
 dev-util/jetbrains-toolbox 1.16.6319 1.17.6856: Manage all your JetBrains Projects and Tools
 dev-util/rinse 1.7 9999: RPM based distributions bootstrap scripts
+dev-util/rust-analyzer 20200928: An experimental Rust compiler front-end for IDEs
 dev-util/webstorm 10.0.2: WebStorm is a lightweight yet powerful IDE, perfectly equipped for complex client-side development and server-side development with Node.js.
 dev-util/yabasic 2.9.15: Yet Another BASIC
 games-board/othello 0.2.0 0.2.1: Othello is a classic strategy game, also known as Reversi
