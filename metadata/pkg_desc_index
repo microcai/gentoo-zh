@@ -126,6 +126,7 @@ app-text/reciteword-skins-rw_en 0.8.2: Reciteword's rw_en skin.
 app-text/srecite 0.6.2: Smart Reciting
 app-text/wiznote 2.1.14 2.4.0 9999: WizNote lets you capture anything you might to remember: create text notes, clip content from the web, snap photos and have all of these notes avaliable you on any device.
 app-text/xdvipdfmx 9999: Extended xdvi for use with XeTeX and other unicode TeXs.
+app-text/ydcv-rs 0.4.6: A rust version of YouDao Console Version
 app-vim/clang_complete 1.8: vim plugin: use clang for completing C/C++ code.
 app-vim/easymotion 1.3: vim plugin: Vim motions on speed!
 app-vim/echofunc 1.18: vim plugin: Echo the function declaration in the command line for C/C++.
