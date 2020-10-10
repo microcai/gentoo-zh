@@ -3,16 +3,17 @@
 
 EAPI="7"
 
-inherit cmake-utils git-r3
-EGIT_REPO_URI="https://github.com/fcitx/kcm-fcitx5.git"
+inherit cmake git-r3
+EGIT_REPO_URI="https://github.com/fcitx/fcitx5-configtool.git"
+EGIT_COMMIT="7031cf44426560b8ea2792984440969ef5423bf1"
 
-DESCRIPTION="KDE configuration module for Fcitx"
-HOMEPAGE="https://fcitx-im.org/ https://gitlab.com/fcitx/kcm-fcitx5"
+DESCRIPTION="Configuration module for Fcitx"
+HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-configtool"
 
 LICENSE="GPL-2+"
 SLOT="5-plasma5"
-KEYWORDS=""
-IUSE="kde"
+KEYWORDS="~amd64 ~x86"
+IUSE="+kcm +config-qt test"
 
 RDEPEND="app-i18n/fcitx5
 	app-i18n/fcitx5-qt[qt5]
@@ -26,14 +27,18 @@ RDEPEND="app-i18n/fcitx5
 	virtual/libintl
 	x11-libs/libX11
 	x11-libs/libxkbfile
-	kde? (
+	kcm? (
 		kde-frameworks/kconfigwidgets:5
 		kde-frameworks/kcoreaddons:5
 		kde-frameworks/ki18n:5
-		kde-frameworks/knewstuff:5
-		kde-frameworks/kio:5
+        kde-frameworks/kirigami:5
+        kde-frameworks/kdeclarative:5
 	)
+    config-qt? (
+        kde-frameworks/kitemviews:5
+    )
 	!${CATEGORY}/${PN}:4[-minimal(-)]"
+
 DEPEND="${RDEPEND}
 	kde-frameworks/extra-cmake-modules:5
 	sys-devel/gettext
@@ -42,8 +47,10 @@ DEPEND="${RDEPEND}
 src_configure() {
 	local mycmakeargs=(
 		-DKDE_INSTALL_USE_QT_SYS_PATHS=yes
-		-DENABLE_KCM=$(usex kde)
+		-DENABLE_KCM=$(usex kcm)
+		-DENABLE_CONFIG_QT=$(usex config-qt)
+        -DENABLE_TEST=$(usex test)
 	)
 
-	cmake-utils_src_configure
+	cmake_src_configure
 }

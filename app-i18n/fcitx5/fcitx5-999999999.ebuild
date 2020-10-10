@@ -8,7 +8,7 @@ EGIT_REPO_URI="https://github.com/fcitx/fcitx5.git"
 
 KEYWORDS="~amd64"
 if [[ "${PV}" != 999999999 ]]; then
-	EGIT_COMMIT="d9d4f747455baeb62a912a16c4b5d77c15fc6d08"
+	EGIT_COMMIT="58b23acb76228cf3743f485924778072aa331643"
 else
 	KEYWORDS=""
 fi
@@ -19,7 +19,7 @@ SRC_URI="https://download.fcitx-im.org/data/en_dict-20121020.tar.gz -> fcitx-dat
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-IUSE="+enchant test coverage doc presage systemd"
+IUSE="+enchant test coverage doc presage systemd wayland"
 REQUIRED_USE="coverage? ( test )"
 RDEPEND="dev-libs/glib:2
 	sys-apps/dbus
@@ -68,6 +68,7 @@ src_configure() {
 		-DENABLE_COVERAGE=$(usex coverage)
 		-DENABLE_ENCHANT=$(usex enchant)
 		-DENABLE_PRESAGE=$(usex presage)
+        -DENABLE_WAYLAND=$(usex wayland)
 		-DENABLE_DOC=$(usex doc)
 		-DUSE_SYSTEMD=$(usex systemd)
 	)

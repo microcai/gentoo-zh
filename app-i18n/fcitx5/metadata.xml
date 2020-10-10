@@ -9,5 +9,6 @@
 	<flag name='coverage'>Build the project with gcov support (Need ENABLE_TEST=On)</flag>
 	<flag name='test'>Build Test</flag>
 	<flag name='presage'>Enable presage for word predication(not stable)</flag>
+	<flag name='wayland'>Enable wayland support</flag>
 </use>
 </pkgmetadata>
