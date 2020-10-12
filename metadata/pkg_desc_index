@@ -290,7 +290,7 @@ net-im/telegram-purple 1.3.0 9999: Libpurple (Pidgin) plugin for using a Telegra
 net-im/tencent-qq 2.0.0_beta2-r1: Official Linux version of Tencent QQ
 net-libs/jzmq 9999: jzmq
 net-misc/avsocks 9999: 科学操长城软件
-net-misc/baidunetdisk 3.0.1 3.3.2: Baidu Net Disk is a cloud storage client (Linux Version)
+net-misc/baidunetdisk 3.0.1 3.4.1: Baidu Net Disk is a cloud storage client (Linux Version)
 net-misc/baidupcs-go 3.6.2 9999: The terminal utility for Baidu Network Disk (Golang Version).
 net-misc/deepin-wine-thunderspeed 7.10.35.366.18: ThunderSpeed for Linux by Deepin
 net-misc/libipmsg 0.1.6 0.1.7: libipmsg - IP Messenger library for UNIX
