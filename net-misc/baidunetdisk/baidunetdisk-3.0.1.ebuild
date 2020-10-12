@@ -17,7 +17,7 @@ RESTRICT="strip"
 KEYWORDS="-* ~amd64"
 IUSE=""
 
-RDEPEND="x11-libs/gtk+
+RDEPEND="x11-libs/gtk+:3
 	x11-libs/libXScrnSaver
 	dev-libs/nss
 "
