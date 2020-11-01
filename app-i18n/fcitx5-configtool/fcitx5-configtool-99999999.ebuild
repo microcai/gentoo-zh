@@ -11,7 +11,7 @@ HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-configtool"
 
 LICENSE="GPL-2+"
 SLOT="5-plasma5"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="+kcm +config-qt test"
 
 RDEPEND="app-i18n/fcitx5
