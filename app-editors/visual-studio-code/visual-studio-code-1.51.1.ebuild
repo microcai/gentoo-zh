@@ -8,7 +8,7 @@ inherit eutils pax-utils
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
 BASE_URI="https://update.code.visualstudio.com/${PV}"
-SRC_URI="https://vscode.cdn.azure.cn/stable/e790b931385d72cf5669fcefc51cdf65990efa5d/code-stable-1599744987.tar.gz -> ${P}-amd64.tar.gz"
+SRC_URI="https://vscode.cdn.azure.cn/stable/e5a624b788d92b8d34d1392e4c4d9789406efe8f/code-stable-x64-1605051992.tar.gz -> ${P}-amd64.tar.gz"
 
 RESTRICT="mirror strip bindist"
 

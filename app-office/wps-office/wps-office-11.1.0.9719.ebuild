@@ -45,6 +45,7 @@ RDEPEND="
 	dev-libs/libbsd
 	x11-libs/libXau
 	x11-libs/libXdmcp
+	x11-libs/gtk+:2
 	sys-apps/dbus
 	x11-libs/libXtst
 	sys-apps/tcp-wrappers
