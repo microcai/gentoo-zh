@@ -60,7 +60,7 @@ app-dicts/stardict-xdict-en-zh-gb 2.4.2: Stardict Dictionary English to Simplifi
 app-dicts/stardict-xdict-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
 app-dicts/stardict-xdict-zh-en-gb 2.4.2: Stardict Dictionary Simplified Chinese (GB) to English
 app-editors/typora 20200805: markdown editor
-app-editors/visual-studio-code 1.49: Multiplatform Visual Studio Code from Microsoft
+app-editors/visual-studio-code 1.51.1: Multiplatform Visual Studio Code from Microsoft
 app-emulation/crossover-bin 17.1.0: Commercial version of app-emulation/wine with paid support.
 app-emulation/deepin-wine 2.18.18 2.18.22_rc0: Deepin Version of Wine
 app-emulation/deepin-wine-helper 1.2.0: Deepin Version of Wine
@@ -111,7 +111,7 @@ app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/wink 1.5: A Tutorial and Presentation creation software, primarily aimed at creating tutorials on how to use software
 app-misc/xmind-portable 3.2.1.201011212218: XMind is a brainstorming and mind mapping software tool.
 app-mobilephone/scrcpy 1.14: Display and control your Android device
-app-office/wps-office 11.1.0.9662: WPS Office is an office productivity suite
+app-office/wps-office 11.1.0.9719: WPS Office is an office productivity suite
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-portage/findcruft 1.0.4-r1: Yet another script to find obsolete files
 app-portage/portage-cdb 0.2.1: increase portage's speed after syncing, and for calculating dependencies. This method uses a database, rather than a bunch of flat files to store its metadata.
