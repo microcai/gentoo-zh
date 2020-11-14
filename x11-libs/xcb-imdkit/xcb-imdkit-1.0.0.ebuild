@@ -5,7 +5,7 @@ EAPI="6"
 
 inherit cmake-utils xdg-utils git-r3
 EGIT_REPO_URI="https://github.com/fcitx/xcb-imdkit.git"
-EGIT_COMMIT="37308dbc4e83c50f38cdb6aae394f8334373bd65"
+EGIT_COMMIT="1.0.0"
 
 DESCRIPTION="An implementation of xim protocol in xcb"
 HOMEPAGE="https://gitlab.com/fcitx/xcb-imdkit"
