@@ -5,7 +5,7 @@ EAPI="6"
 
 inherit cmake-utils gnome2-utils xdg git-r3
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5-chinese-addons.git"
-EGIT_COMMIT="57be95e34e033d23e5d677ae062844e4682b379b"
+EGIT_COMMIT="5.0.0"
 
 SRC_URI="https://download.fcitx-im.org/data/py_stroke-20121124.tar.gz -> fcitx-data-py_stroke-20121124.tar.gz
 https://download.fcitx-im.org/data/py_table-20121124.tar.gz -> fcitx-data-py_table-20121124.tar.gz

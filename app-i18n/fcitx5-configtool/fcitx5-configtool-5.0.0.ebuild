@@ -5,7 +5,7 @@ EAPI="7"
 
 inherit cmake git-r3
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5-configtool.git"
-EGIT_COMMIT="7031cf44426560b8ea2792984440969ef5423bf1"
+EGIT_COMMIT="5.0.0"
 
 DESCRIPTION="Configuration module for Fcitx"
 HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-configtool"

@@ -6,7 +6,7 @@ EAPI="6"
 inherit cmake-utils git-r3
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5-qt.git"
 if [[ ! "${PV}" =~ (^|\.)9999$ ]]; then
-	EGIT_COMMIT="b3b0245ce3a5472a13424f51a8c55faca26d9f37"
+	EGIT_COMMIT="5.0.0"
 fi
 
 
