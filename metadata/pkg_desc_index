@@ -71,12 +71,12 @@ app-i18n/cldr-emoji-annotation 36.12.120191002-r0 9999: Emoji annotation files i
 app-i18n/dvp 1.2.1: The kbd keymap for Programmer Dvorak.
 app-i18n/fbterm-ucimf 0.2.3 0.2.5 0.2.6 0.2.7 0.2.8 0.2.9: UCIMF input method support for FbTerm
 app-i18n/fcitx-unikey 0.2.2: unikey support for fcitx.
-app-i18n/fcitx5 20201002 999999999: Fcitx5 Next generation of fcitx
-app-i18n/fcitx5-chinese-addons 20201007 999999999: Addons related to Chinese, including IME previous bundled inside fcitx4.
-app-i18n/fcitx5-configtool 20201001 99999999: Configuration module for Fcitx
-app-i18n/fcitx5-gtk 20200912 999999999: Gtk im module for fcitx5 and glib based dbus client library
-app-i18n/fcitx5-qt 20201007 9999999999: Qt library and IM module for fcitx5
-app-i18n/fcitx5-rime 20200913 99999999: Rime Support for Fcitx5
+app-i18n/fcitx5 5.0.1 999999999: Fcitx5 Next generation of fcitx
+app-i18n/fcitx5-chinese-addons 5.0.0 999999999: Addons related to Chinese, including IME previous bundled inside fcitx4.
+app-i18n/fcitx5-configtool 5.0.0 99999999: Configuration module for Fcitx
+app-i18n/fcitx5-gtk 5.0.0 999999999: Gtk im module for fcitx5 and glib based dbus client library
+app-i18n/fcitx5-qt 5.0.0 9999999999: Qt library and IM module for fcitx5
+app-i18n/fcitx5-rime 5.0.0 99999999: Rime Support for Fcitx5
 app-i18n/gcin 2.8.5: Another Traditional Chinese IM.
 app-i18n/hime 0.9.10: HIME Input Method Editor
 app-i18n/ibus-googlepinyin 0.1.2: wrapper libgooglepinyin for IBus
@@ -86,7 +86,7 @@ app-i18n/ibus-t9 2.1.0.20100601: T9 input engine using ibus
 app-i18n/ibus-xkb 1.4.99.20120525: 
 app-i18n/jfbterm 0.4.7-r4: The J Framebuffer Terminal/Multilingual Enhancement with UTF-8 support
 app-i18n/libgooglepinyin 0.1.2: A fork from google pinyin on android
-app-i18n/libime 20200928 99999999: Fcitx5 Next generation of fcitx
+app-i18n/libime 1.0.1 99999999: Fcitx5 Next generation of fcitx
 app-i18n/libpinyin 1.0.0: Library to deal with Pinyin.
 app-i18n/librime 1.1-r1: Rime Input Method Engine library
 app-i18n/lunar 2.2-r4: Chinese Lunar Calendar conversion utility
@@ -361,7 +361,7 @@ www-servers/tengine 2.0.3: Robust, small and high performance http and reverse p
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
 x11-libs/bamf 0.5.4: BAMF Application Matching Framework
 x11-libs/libvdpau-va-gl 9999: VDPAU driver with VA-API/OpenGL backend.
-x11-libs/xcb-imdkit 20200513 99999999999: An implementation of xim protocol in xcb
+x11-libs/xcb-imdkit 1.0.0 99999999999: An implementation of xim protocol in xcb
 x11-misc/9menu 1.8: Create X menus from the shell
 x11-misc/fqterm 0.9.8.3.4 9999: a modern terminal emulator for Linux
 x11-misc/i3lock-color 9999: An improved i3lock
