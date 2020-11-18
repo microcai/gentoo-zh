@@ -19,7 +19,7 @@ LICENSE="GPL-3"
 
 IUSE="static"
 
-DEPEND="~dev-libs/botan-2.9.0
+DEPEND=">=dev-libs/botan-2.11.0
 	dev-qt/qtconcurrent
 	dev-qt/qtcore:5
 	dev-qt/qtnetwork
@@ -29,10 +29,13 @@ DEPEND="~dev-libs/botan-2.9.0
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
+PATCHES=( "${FILESDIR}"/libqtss_botan2_11.patch )
+
 src_configure() {
-	local mycmakeargs="
+	local mycmakeargs=(
 	-DLIB_INSTALL_DIR=/usr/$(get_libdir)
-	-DUSE_BOTAN2=ON"
+	-DUSE_BOTAN2=ON
+	)
 	! use static && mycmakeargs+=" -DBUILD_SHARED_LIBS=ON "
 	cmake-utils_src_configure
 }
