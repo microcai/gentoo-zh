@@ -33,6 +33,9 @@ RDEPEND="app-i18n/fcitx5
         kde-frameworks/kirigami:5
         kde-frameworks/kdeclarative:5
 	)
+	!kcm? (
+		dev-qt/qtdeclarative
+	)
     config-qt? (
         kde-frameworks/kitemviews:5
     )
