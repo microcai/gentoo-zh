@@ -13,7 +13,7 @@ https://github.com/cockpit-project/cockpit/releases/download/${PV}/cockpit-cache
 
 LICENSE="GPL"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="virtual/krb5
