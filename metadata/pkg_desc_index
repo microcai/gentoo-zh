@@ -112,7 +112,6 @@ app-misc/nixnote 2.1.5 2.1.5-r1: Nixnote - A clone of Evernote for Linux
 app-misc/screen 4.2.1-r2: Full-screen window manager that multiplexes physical terminals between several processes
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/wink 1.5: A Tutorial and Presentation creation software, primarily aimed at creating tutorials on how to use software
-app-misc/xmind-portable 3.2.1.201011212218: XMind is a brainstorming and mind mapping software tool.
 app-mobilephone/scrcpy 1.14: Display and control your Android device
 app-office/wps-office 11.1.0.9719: WPS Office is an office productivity suite
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
@@ -374,14 +373,10 @@ x11-misc/synergy 1.10.3: Lets you easily share a single mouse and keyboard betwe
 x11-plugins/vicious 2.1.3 9999: Modular widget library for x11-wm/awesome
 x11-terms/termite 9999: A keyboard-centric VTE-based terminal
 x11-terms/vte-ng 9999: An enhanced terminal emulator widget
-x11-themes/dmz-cursor-theme 0.4.1: Style neutral, scalable cursor theme
-x11-themes/elementary-icon-theme 2.3 2.4: Simple and appealing Tango-styled icon theme
 x11-themes/gnome-themes-egtk 1.0: The official elementary GTK theme designed to be smooth, attractive, fast, and usable.
 x11-themes/gnome-themes-ubuntu 0.6.1: GNOME themes from Ubuntu
-x11-themes/humanity-icon-theme 0.6: Elementary Icons for Humans.
 x11-themes/lxice 0.1.0: LXDE theme for IceWM
 x11-themes/smplayer-themes-nonfree 0.1.0 0.1.1: Icon themes for smplayer
-x11-themes/ubuntu-mono 0.0.45: Dark and Light panel icons to make your desktop beautiful
 x11-wm/9wm 1.1: A window manager emulation of the Plan 9 window manager 8-1/2.
 x11-wm/chamferwm 9999: A tiling X11 window manager with Vulkan compositor.
 x11-wm/dde-kwin 0.1.0 5.0.0: KWin configures on DDE
