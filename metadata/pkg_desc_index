@@ -273,7 +273,7 @@ media-sound/netease-cloud-music 1.2.1: Netease cloud music player
 media-video/QtAV 1.11.0-r1: A cross-platform multimedia framework based on Qt and FFmpeg.
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/deepin-movie-reborn 3.2.24.2 3.2.24.3: Deepin Movie Player
-media-video/lightworks 11.5 11.5.1: Lightworks is the fastest, most accessible and focused NLE in the industry
+media-video/lightworks 11.5 11.5.1 2020.1-r3: Lightworks is the fastest, most accessible and focused NLE in the industry
 media-video/simplescreenrecorder 0.3.3-r1 9999: A Simple Screen Recorder
 media-video/tenvideo 1.0.10: Tencent videos
 net-dialup/mentohust 9999: A Ruijie and Cernet supplicant on Linux and MacOS
