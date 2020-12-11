@@ -33,13 +33,12 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
-		-DLIB_INSTALL_DIR="${EPREFIX}/usr/$(get_libdir)"
-		-DSYSCONFDIR="${EPREFIX}/etc"
+		-DCMAKE_INSTALL_SYSCONFDIR="${EPREFIX}/etc"
 		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
 		-DCMAKE_BUILD_TYPE=Release
 		-DENABLE_QT4=no
 		-DENABLE_QT5=$(usex qt5)
-		-DONLY_PLUGIN=$(usex only_plugin)
+		-DBUILD_ONLY_PLUGIN=$(usex only_plugin)
 	)
 	cmake-utils_src_configure
 }

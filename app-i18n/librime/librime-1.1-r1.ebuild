@@ -59,7 +59,7 @@ src_configure() {
 		-DBUILD_DATA=OFF
 		-DBUILD_SEPARATE_LIBS=OFF
 		$(cmake-utils_use_build test TEST)
-		-DLIB_INSTALL_DIR=/usr/$(get_libdir)
+		-DCMAKE_INSTALL_LIBDIR=/usr/$(get_libdir)
 	)
 
 	# Do _not_ use C++11 yet, make sure to force GNU C++ 98 standard.
