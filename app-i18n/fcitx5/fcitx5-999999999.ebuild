@@ -62,13 +62,13 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
-		-DLIB_INSTALL_DIR="${EPREFIX}/usr/$(get_libdir)"
-		-DSYSCONFDIR="${EPREFIX}/etc"
+		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
+		-DCMAKE_INSTALL_SYSCONFDIR="${EPREFIX}/etc"
 		-DENABLE_TEST=$(usex test)
 		-DENABLE_COVERAGE=$(usex coverage)
 		-DENABLE_ENCHANT=$(usex enchant)
 		-DENABLE_PRESAGE=$(usex presage)
-        -DENABLE_WAYLAND=$(usex wayland)
+		-DENABLE_WAYLAND=$(usex wayland)
 		-DENABLE_DOC=$(usex doc)
 		-DUSE_SYSTEMD=$(usex systemd)
 	)
