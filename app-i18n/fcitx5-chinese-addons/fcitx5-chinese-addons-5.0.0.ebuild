@@ -46,8 +46,8 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
-		-DLIB_INSTALL_DIR="${EPREFIX}/usr/$(get_libdir)"
-		-DSYSCONFDIR="${EPREFIX}/etc"
+		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
+		-DCMAKE_INSTALL_SYSCONFDIR="${EPREFIX}/etc"
 		-DENABLE_GUI=$(usex gui)
 		-DENABLE_OPENCC=$(usex opencc)
 		-DENABLE_BROWSER=$(usex browser)
