@@ -34,9 +34,8 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
-		-DLIB_INSTALL_DIR="${EPREFIX}/usr/$(get_libdir)"
-		-DSYSCONFDIR="${EPREFIX}/etc"
 		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
+		-DCMAKE_INSTALL_SYSCONFDIR="${EPREFIX}/etc"
 		-DCMAKE_BUILD_TYPE=Release
 		-DENABLE_GTK2_IM_MODULE=$(usex gtk2)
 		-DENABLE_GTK3_IM_MODULE=$(usex gtk3)
