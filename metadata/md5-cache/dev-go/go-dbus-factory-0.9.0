@@ -8,5 +8,5 @@ LICENSE=GPL-3+
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/linuxdeepin/go-dbus-factory/archive/0.9.0.tar.gz -> go-dbus-factory-0.9.0.tar.gz https://github.com/golang/net/archive/aaf60122140d3fcf75376d319f0554393160eb50.tar.gz -> github.com-golang-net-aaf60122140d3fcf75376d319f0554393160eb50.tar.gz
-_eclasses_=golang-base	c57d2c3f9e1a02d0feb8b87c7b689892	golang-vcs-snapshot	12177e83bede6f7fb87eae383864b40b
+_eclasses_=golang-base	c57d2c3f9e1a02d0feb8b87c7b689892	golang-vcs-snapshot	4a615ccf588f8bc48d956500949af39e
 _md5_=d50ffac04ebb3940d6ed6fa4d6002fd7
