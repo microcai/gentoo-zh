@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://gentoo/AnhViet109K.zip
-_eclasses_=stardict	8d4771fbbd2a9aee09ef8040f10f28b3
+_eclasses_=stardict	b7ef8c60fb31bb135553f5b2190165f0
 _md5_=b9ab10c3218fb117c2adcc94dbb0d359
