@@ -8,5 +8,5 @@ RDEPEND=dev-qt/qtgui:4 dev-qt/qtcore:4
 RESTRICT=mirror
 SLOT=0
 SRC_URI=x86? ( http://www.scootersoftware.com/bcompare-4.2.2.22384.i386.tar.gz ) amd64? ( http://www.scootersoftware.com/bcompare-4.2.2.22384.x86_64.tar.gz )
-_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	2d5b3f4b315094768576b6799e4f926e	l10n	8cdd85e169b835d518bc2fd59f780d8e	user	b0a0d4ca9e3f79c38f8f4143b8d5a2d8	user-info	a2abd4e2f4c3b9b06d64bf1329359a02	wrapper	4251d4c84c25f59094fd557e0063a974
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	69bd92aa099f708425db9f1f01d61213	l10n	8cdd85e169b835d518bc2fd59f780d8e	user	b0a0d4ca9e3f79c38f8f4143b8d5a2d8	user-info	a2abd4e2f4c3b9b06d64bf1329359a02	wrapper	4251d4c84c25f59094fd557e0063a974
 _md5_=e4175b5fdfc629b897789deb7195bccf
