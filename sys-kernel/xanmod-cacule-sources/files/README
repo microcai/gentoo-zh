@@ -1,0 +1,5 @@
+Pleause use default config in sys-kernel/xanmod-cacule-sources
+
+sysctl kernel.sched_interactivity_factor=50 is better tweak
+
+I love UKSM, so you know that...
