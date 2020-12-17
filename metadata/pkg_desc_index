@@ -152,7 +152,6 @@ dde-base/deepin-artwork-themes 15.12.4: Deepin artwork themes
 dde-base/deepin-desktop-base 2019.06.19 2019.07.10: Base components for Deepin Desktop
 dde-base/deepin-desktop-schemas 3.13.8 3.13.9: GSettings deepin desktop-wide schemas
 dde-base/deepin-file-manager-backend 0.1.16-r1: Deepin file manager backend
-dde-base/deepin-gettext-tools 1.0.8: Deepin Internationalization utilities
 dde-base/deepin-gtk-theme 17.10.11: Deepin GTK Theme
 dde-base/deepin-icon-theme 15.12.71: Deepin Icons
 dde-base/deepin-menu 3.4.6 3.4.8: Deepin menu service for building beautiful menus
@@ -230,11 +229,9 @@ dev-util/jd-gui 1.4.0: A standalone graphical utility that displays Java source 
 dev-util/jetbrains-toolbox 1.16.6319 1.17.6856: Manage all your JetBrains Projects and Tools
 dev-util/rinse 1.7 9999: RPM based distributions bootstrap scripts
 dev-util/rust-analyzer 20200928: An experimental Rust compiler front-end for IDEs
-dev-util/webstorm 10.0.2: WebStorm is a lightweight yet powerful IDE, perfectly equipped for complex client-side development and server-side development with Node.js.
 dev-util/yabasic 2.9.15: Yet Another BASIC
 games-board/othello 0.2.0 0.2.1: Othello is a classic strategy game, also known as Reversi
 games-misc/fortune-mod-zh 1.2.2: Chinese fortune shell script
-games-misc/llk_linux 2.3_beta1-r1: llk for linux
 kde-misc/imageshack-upload 0.5: A service menu tor upload images on Imageshack.
 kde-misc/plasma-applet-netspeed-widget 1.8-r1 9999: Plasma 5 widget that displays the currently used network bandwidth.
 mail-client/deepin-wine-foxmail 7.2.3: Foxmail mail client for Linux by Deepin
@@ -249,8 +246,6 @@ media-gfx/byzanz 0.3.0.9999: Screencasting program that saves casts as GIF files
 media-gfx/deepin-draw 1.0.0: Deepin Painting Tool
 media-gfx/deepin-image-viewer 1.3.18 5.0.0: Deepin Image Viewer
 media-gfx/deepin-screen-recorder 2.8.1 5.0.0-r1: Deepin Screencasting Application
-media-gfx/deepin-screenshot 4.2.2 5.0.0: Snapshot tools for linux deepin.
-media-gfx/fontforge 20150330: postscript font editor and converter
 media-gfx/sane-backends 9999: Scanner Access Now Easy - Backends
 media-gfx/scangearmp 1.60: Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
 media-gfx/xrectsel 0.3.1: print the geometry of a rectangular screen region
@@ -311,7 +306,6 @@ net-print/cndrvcups-common-lb 3.40-r1: Common files for Canon drivers
 net-print/cndrvcups-lb 3.40-r1: Canon UFR II / LIPSLX Printer Driver for Linux
 net-print/cups-tsc 0.1.26: The driver of TSC printers for Linux and CUPS
 net-print/hplip-plugin 3.14.1: Binary plugin for HPs hplip printer driver library
-net-proxy/goagent 3.2.2 9999: A GAE proxy forked from gappproxy/wallproxy
 net-proxy/lantern-bin 3.0.4: A free desktop application that delivers fast, reliable and secure access to the open Internet for users in censored regions.
 net-proxy/libQtShadowsocks 2.1.0: A lightweight and ultra-fast shadowsocks library written in C++/Qt
 net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
@@ -354,7 +348,6 @@ sys-libs/libixp 9999: Standalone client/server 9P library
 virtual/dde-wm 0: Virtual for DDE Window Manager
 virtual/linux-sources 1: Virtual for Linux kernel sources
 virtual/openvg 1.1: OpenVG is an API designed for hardware-accelerated 2D vector graphics.
-www-client/maxthon 1.0.5.3: Maxthon for Linux
 www-plugins/115upload 1.5.7.0: 115.com big file upload control
 www-plugins/aliedit 1.0.3.20: 支付宝安全控件对密码输入进行保护
 www-plugins/upeditor 1.0.0.6: unionpay security control plugin
