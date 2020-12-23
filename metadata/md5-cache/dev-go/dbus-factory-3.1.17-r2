@@ -9,5 +9,5 @@ RDEPEND=dev-go/deepin-go-lib
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/linuxdeepin/dbus-factory/archive/3.1.17.tar.gz -> dbus-factory-3.1.17.tar.gz
-_eclasses_=golang-base	c57d2c3f9e1a02d0feb8b87c7b689892
+_eclasses_=golang-base	027b7c82ab637d596b1a18ffcefa0ae4
 _md5_=7534067cf79c9cc3d10e23c00396090a
