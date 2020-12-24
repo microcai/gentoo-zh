@@ -1,7 +1,7 @@
 acct-group/cockpit-ws 0: Group for the cockpit server
 acct-user/cockpit-ws 0: User for the cockpit server
 app-accessibility/onboard 1.4.1 1.4.1.7: An onscreen keyboard useful for tablet PC users and for mobility impaired users
-app-admin/cockpit 233.1: A systemd web based user interface for Linux server
+app-admin/cockpit 234: A systemd web based user interface for Linux server
 app-admin/eselect-xim 0.8 0.9 0.9.1: Manages Input Method of X
 app-arch/p7zip-nsis 0.4-r1: A binary version of p7zip to decompress nsis. Latest version of p7zip doesn't decompress some nsis.
 app-arch/unzip 6.10_beta: unzipper for pkzip-compressed files
