@@ -139,14 +139,8 @@ dde-base/dde-api 3.18.5 5.0.0: Go-lang bingdings for dde-daemon
 dde-base/dde-control-center 4.10.14 5.0.0: Control Center of Deepin Desktop Environment
 dde-base/dde-daemon 3.28.0 5.0.0: Daemon handling the DDE session settings
 dde-base/dde-dock 4.10.8 5.0.0: Deepin desktop environment - Dock module
-dde-base/dde-file-manager 4.8.8.1 5.0.0-r1: Deepin File Manager and Desktop module for DDE
 dde-base/dde-launcher 4.6.14 5.0.0: Deepin desktop environment - Launcher module
 dde-base/dde-meta 15.10.1: Deepin Desktop Enviroment (meta package)
-dde-base/dde-network-utils 0.1.4 5.0.1: DDE Network Utils
-dde-base/dde-polkit-agent 0.3.0 5.0.0: PolicyKit agent for DDE
-dde-base/dde-qt-dbus-factory 5.0.0 5.0.1: A repository stores auto-generated Qt5 D-Bus code used by DDE
-dde-base/dde-qt5integration 5.0.0-r2: DDE system integration plugin for Qt5
-dde-base/dde-session-ui 4.9.14 5.0.0: Deepin desktop environment - Session UI module
 dde-base/deepin-anything 0.1.0 5.0.1: Fast File Search Tool for DDE
 dde-base/deepin-artwork-themes 15.12.4: Deepin artwork themes
 dde-base/deepin-desktop-base 2019.06.19 2019.07.10: Base components for Deepin Desktop
@@ -154,14 +148,9 @@ dde-base/deepin-desktop-schemas 3.13.8 3.13.9: GSettings deepin desktop-wide sch
 dde-base/deepin-file-manager-backend 0.1.16-r1: Deepin file manager backend
 dde-base/deepin-gtk-theme 17.10.11: Deepin GTK Theme
 dde-base/deepin-icon-theme 15.12.71: Deepin Icons
-dde-base/deepin-menu 3.4.6 3.4.8: Deepin menu service for building beautiful menus
 dde-base/deepin-sound-theme 15.10.3: Deepin Sound themes
 dde-base/deepin-wallpapers 1.7.7-r1: Deepin Wallpapers
-dde-base/dtkcore 2.0.16.3 2.1.1: Base development tool of all C++/Qt Developer work on Deepin - Core modules
-dde-base/dtkwidget 2.0.16.1 2.1.1: Base development tool of all C++/Qt Developer work on Deepin - Widget modules
-dde-base/dtkwm 2.0.11-r1 2.0.12: Deepin graphical user interface library
 dde-base/startdde 3.14.7 5.0.1: starter of Deepin Desktop Environment
-dde-base/udisks2-qt5 0.0.2 5.0.0: UDisks2 DBus interfaces binding of Qt5
 dde-extra/dde-calendar 1.2.11 5.0.1: Calendar for Deepin Desktop Environment
 dde-extra/dde-file-manager-integration 9999: Extra plugins for dde-file-manager
 dde-extra/dde-introduction 1.1.10 5.0.0: Deepin Initialization Setup Tool
@@ -172,7 +161,6 @@ dde-extra/deepin-calculator 1.0.12 5.0.1: An easy to use Calculator for Deepin
 dde-extra/deepin-clone 1.1.4 5.0.1: Deepin Disk and Partition Backup/Restore Tool
 dde-extra/deepin-desktop-monitor 9999: Deepin System Monitor
 dde-extra/deepin-editor 1.2.9 1.2.9.1: Simple editor for Deepin
-dde-extra/deepin-font-installer 1.1.5.1 5.0.0: Install and Uninstall Font File for Users
 dde-extra/deepin-grub2-themes 1.0.0: Deepin theme for GRUB2
 dde-extra/deepin-manual 2.1.0 5.0.0: Deepin User Manual
 dde-extra/deepin-picker 1.6.6 5.0.1: Color picker tool for Deepin
@@ -196,7 +184,6 @@ dev-go/go-gir-generator 2.0.2: Generate static golang bindings for GObject
 dev-go/go-x11-client 0.4.1: Deepin GoLang X11 client Library
 dev-lang/scala-bin 2.12.8 2.13.0: The Scala Programming Language
 dev-lang/swig 4.0.0: Simplified Wrapper and Interface Generator
-dev-libs/disomaster 0.2.0 5.0.0: A libisoburn wrapper class for Qt.
 dev-libs/granite 5.2.1: Elementary OS library that extends Gtk+
 dev-libs/libchrasis 9999.0.1.1: Library for Chinese Character Recognition As-Is
 dev-libs/libdwarf 20140208: Library to deal with DWARF Debugging Information Format
@@ -214,8 +201,6 @@ dev-python/notify2 0.3-r1: Python interface to DBus notifications.
 dev-python/pgspecial 1.8.0: Meta-commands handler for Postgres Database.
 dev-python/qasync 0.9.4: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-qt/qcef 1.1.7-r1: Qt5 binding of Chromium Embedded Framework
-dev-qt/qt5dxcb-plugin 1.2.6 5.0.1: XCB Qt5 platform plugin for DDE
-dev-qt/qtstyleplugins 20170311-r1: Additional style plugins for Qt
 dev-qt/qtxcb-private-headers 5.13.2 5.14.1: The Private Headers for the Qt5 Xcb
 dev-ruby/mruby 1.0.0 9999: mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
 dev-util/arch-install-scripts 20: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
