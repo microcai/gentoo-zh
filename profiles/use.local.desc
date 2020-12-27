@@ -18,31 +18,7 @@ app-i18n/fcitx5-configtool:kcm - Enable KDE KCM support
 app-i18n/fcitx5-configtool:test - Enable Test
 app-text/ydcv-rs:clipboard - Enable feature: use selected text as input
 app-text/ydcv-rs:notify - Enable feature: display explanations via desktop notification
-dde-base/dde-control-center:redshift - Install x11-misc/redshift to support screen color temperature adjusting
-dde-base/dde-daemon:bluetooth - Enable Bluetooth Support
-dde-base/dde-daemon:fprint - Enables experimental fingerprint authentication using sys-auth/fprintd
-dde-base/dde-daemon:grub - Install Deepin themes for sys-boot/grub
-dde-base/dde-daemon:miracast - Enable Miracast Support
-dde-base/dde-file-manager:avfs - Enable support for sys-fs/avfs
-dde-base/dde-file-manager:screensaver - Enable support for setting screensaver
-dde-base/dde-meta:extra - Install extra applicaions developed by Deepin
-dde-base/dde-meta:grub - Install Deepin themes for sys-boot/grub
-dde-base/dde-meta:kwin - Use the WM based on kwin
-dde-base/dde-meta:manual - Install dde-extra/dde-help User Manual
-dde-base/dde-meta:multimedia - Install Deepin multimedia suite
-dde-base/dde-meta:mutter - Use the WM based on mutter
-dde-base/dde-meta:plymouth - Install Deepin themes for sys-boot/plymouth
-dde-base/dde-meta:screensaver - Install Deepin Screensaver module
-dde-base/dde-meta:terminal - Install dde-extra/deepin-terminal Terminal Emulator
-dde-base/dde-meta:turbo - Enable DTK Apps Turbo by dde-extra/deepin-turbo
-dde-extra/deepin-screensaver:bubbles - Add bubbles screensaver
-dde-extra/deepin-terminal:zssh - Enable access to remote server via GUI using net-misc/zssh
-dde-extra/deepin-topbar:albert - Install x11-misc/albert to Add an entrance for desktop searching
 dev-libs/granite:demo - Build the Granite demo application (to present all available UI features provided by the library)
-media-gfx/deepin-screenshot:sharing - Install dde-extra/deepin-social-sharing for social media sharing
-media-libs/cogl:gles2 - Enable OpenGL ES 2.0 support
-media-libs/cogl:kms - Enable KMS support.
-media-libs/cogl:pango - Build cogl-pango library for x11-libs/pango integration
 media-plugins/osdlyrics:gnome - add support for gnome
 media-plugins/osdlyrics:indicator - add support for appindicator
 media-sound/feeluown:local - add local music support for feeluown
@@ -55,7 +31,3 @@ net-proxy/make-proxy:client - Add make proxy client support
 net-proxy/make-proxy:server - Add make proxy server support
 sys-devel/gdb:multitarget - Support all known targets in one gdb binary
 sys-kernel/hardened-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
-virtual/dde-wm:kwin - Use the WM based on kwin
-virtual/dde-wm:minimal - Prefer x11-wm/deepin-metacity over other two WM
-virtual/dde-wm:mutter - Use the WM based on mutter
-x11-wm/deepin-mutter:kms - Enable KMS support.
