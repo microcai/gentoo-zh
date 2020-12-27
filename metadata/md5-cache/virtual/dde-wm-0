@@ -1,9 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for DDE Window Manager
-EAPI=6
-IUSE=mutter kwin +minimal
-KEYWORDS=~amd64 ~x86
-RDEPEND=mutter? ( x11-wm/deepin-wm x11-wm/deepin-metacity ) kwin? ( x11-wm/dde-kwin ) minimal? ( || ( x11-wm/deepin-metacity x11-wm/deepin-wm x11-wm/dde-kwin ) )
-REQUIRED_USE=|| ( mutter kwin minimal ) ?? ( mutter kwin )
-SLOT=0
-_md5_=d852613e3a0a6cba9074fd3dcbaea6fa

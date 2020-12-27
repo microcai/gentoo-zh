@@ -152,7 +152,6 @@ dev-python/janus 0.4.0: Implementation of the asyncio (PEP 3156) event-loop with
 dev-python/notify2 0.3-r1: Python interface to DBus notifications.
 dev-python/pgspecial 1.8.0: Meta-commands handler for Postgres Database.
 dev-python/qasync 0.9.4: Implementation of the asyncio (PEP 3156) event-loop with Qt
-dev-qt/qtstyleplugins 20170311-r1: Additional style plugins for Qt
 dev-qt/qtxcb-private-headers 5.13.2 5.14.1: The Private Headers for the Qt5 Xcb
 dev-ruby/mruby 1.0.0 9999: mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
 dev-util/arch-install-scripts 20: Arch Linux install tools (pacstrap, genfstab, arch-chroot)

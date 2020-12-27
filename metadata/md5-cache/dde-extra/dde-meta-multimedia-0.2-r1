@@ -1,9 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Deepin Multimedia Softwares (meta package)
-EAPI=7
-HOMEPAGE=https://www.deepin.org
-KEYWORDS=~amd64 ~x86
-LICENSE=metapackage
-RDEPEND=media-sound/deepin-music media-video/deepin-movie-reborn media-gfx/deepin-screenshot media-gfx/deepin-screen-recorder media-sound/deepin-voice-recorder media-gfx/deepin-image-viewer
-SLOT=0
-_md5_=7b2f1beab6bf5d0681b4116d8ab0b0c8
