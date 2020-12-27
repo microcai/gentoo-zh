@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-python2 /opt/goagent/local/goagent-gtk.py
