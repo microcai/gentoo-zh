@@ -1,14 +1,14 @@
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=4
+EAPI=7
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard."
 HOMEPAGE="https://github.com/mruby/mruby"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/mruby/mruby.git"
+EGIT_REPO_URI="https://github.com/mruby/mruby.git"
 
 LICENSE="MIT"
 SLOT="0"

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>i@bitbili.net</email>
+		<name>Ryan Qian</name>
+	</maintainer>
+	<use>
+		<flag name="notify">Enable feature: display explanations via desktop notification</flag>
+		<flag name="clipboard">Enable feature: use selected text as input</flag>
+	</use>
+</pkgmetadata>

@@ -2,15 +2,15 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles2/libtifiles2-1.1.6-r1.ebuild,v 1.2 2014/07/15 14:37:09 jlec Exp $
 
-EAPI=5
+EAPI=7
 
-inherit autotools eutils git-2
+inherit autotools eutils git-r3
 
 DESCRIPTION="Library for TI calculator files"
 HOMEPAGE="http://lpg.ticalc.org/prj_tilp/"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/debrouxl/tilibs.git"
+EGIT_REPO_URI="https://github.com/debrouxl/tilibs.git"
 
 MY_PN="libtifiles"
 

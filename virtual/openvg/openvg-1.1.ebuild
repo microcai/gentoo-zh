@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=7
 
 DESCRIPTION="OpenVG is an API designed for hardware-accelerated 2D vector
 graphics."

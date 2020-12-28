@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<herd>antivirus</herd>
-	<use>
-		<flag name='gtk'>Enable the graphical user interface based on <pkg>x11-libs/gtk+</pkg></flag>
-	</use>
-</pkgmetadata>

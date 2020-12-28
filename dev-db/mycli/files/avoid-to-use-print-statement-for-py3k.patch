@@ -1,9 +1,0 @@
-diff -uprN mycli-1.2.0.orig/mycli/packages/counter.py mycli-1.2.0/mycli/packages/counter.py
---- mycli-1.2.0.orig/mycli/packages/counter.py	2015-08-03 12:31:07.000000000 +0800
-+++ mycli-1.2.0/mycli/packages/counter.py	2015-08-17 20:17:52.239933297 +0800
-@@ -186,4 +186,4 @@ class Counter(dict):
- 
- if __name__ == '__main__':
-     import doctest
--    print doctest.testmod()
-+    print(doctest.testmod())

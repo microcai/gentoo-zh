@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sound</herd>
+<maintainer>
+	<email>ak47m61@gmail.com</email>
+</maintainer>
 <use>
-<flag name='mpd'>Enable support for MPD</flag>
-<flag name='xmms2'>Enable support for XMMS2</flag>
+	<flag name='gnome'>add support for gnome</flag>
+	<flag name='indicator'>add support for appindicator</flag>
 </use>
 </pkgmetadata>

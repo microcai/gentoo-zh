@@ -2,18 +2,18 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI=7
 
 TAR_SUFFIX="tar.gz"
 
 inherit eutils autotools googlecode
 
 if [ "${PV##*.}" = "9999" ]; then
-	inherit git-2
+	inherit git-r3
 fi
 
 DESCRIPTION="T9 input engine using ibus"
-EGIT_REPO_URI="git://github.com/microcai/${PN}.git"
+EGIT_REPO_URI="https://github.com/microcai/${PN}.git"
 
 LICENSE="GPL"
 SLOT="0"

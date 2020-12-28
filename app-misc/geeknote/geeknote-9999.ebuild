@@ -2,16 +2,16 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=7
 
 PYTHON_COMPAT=( python2_7 )
 
-inherit bash-completion-r1 eutils distutils-r1 git-2
+inherit bash-completion-r1 eutils distutils-r1 git-r3
 
 DESCRIPTION="Console client for Evernote"
 HOMEPAGE="http://geeknote.me"
 
-EGIT_REPO_URI="git://github.com/VitaliyRodnenko/geeknote.git"
+EGIT_REPO_URI="https://github.com/VitaliyRodnenko/geeknote.git"
 EGIT_BRANCH="master"
 
 LICENSE=""

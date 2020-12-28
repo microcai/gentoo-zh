@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI=7
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="RPM based distributions bootstrap scripts"
 HOMEPAGE="http://collab-maint.alioth.debian.org/rinse/"

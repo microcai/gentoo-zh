@@ -2,15 +2,15 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/sci-libs/libticalcs2/libticalcs2-1.1.8.ebuild,v 1.1 2013/07/09 16:50:55 bicatali Exp $
 
-EAPI=5
+EAPI=7
 
-inherit autotools eutils git-2
+inherit autotools eutils git-r3
 
 DESCRIPTION="Library for communication with TI calculators"
 HOMEPAGE="http://lpg.ticalc.org/prj_tilp/"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/debrouxl/tilibs.git"
+EGIT_REPO_URI="https://github.com/debrouxl/tilibs.git"
 
 MY_PN="libticalcs"
 

@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/librime-1.1.ebuild,v 1.1 2014/01/03 21:44:31 hwoarang Exp $
 
-EAPI=5
+EAPI=7
 
-inherit cmake-utils multilib versionator toolchain-funcs
+inherit cmake-utils multilib toolchain-funcs
 
 DESCRIPTION="Rime Input Method Engine library"
 HOMEPAGE="http://code.google.com/p/rimeime/"
@@ -59,7 +59,7 @@ src_configure() {
 		-DBUILD_DATA=OFF
 		-DBUILD_SEPARATE_LIBS=OFF
 		$(cmake-utils_use_build test TEST)
-		-DLIB_INSTALL_DIR=/usr/$(get_libdir)
+		-DCMAKE_INSTALL_LIBDIR=/usr/$(get_libdir)
 	)
 
 	# Do _not_ use C++11 yet, make sure to force GNU C++ 98 standard.

@@ -2,14 +2,14 @@
 # Distributed under the terms of the GNU General Public License v3
 # $Header: $
 
-EAPI="5"
+EAPI=7
 
 if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="https://github.com/WizTeam/WizQTClient.git"
 	EGIT_BRANCH="${EGIT_MASTER}" 
 	KEYWORDS=""
 	WIZNOTE_SRC_URI=""
-	WIZNOTE_ECLASS="git-2"
+	WIZNOTE_ECLASS="git-r3"
 else
 	WIZNOTE_SRC_URI="https://github.com/WizTeam/WizQTClient/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	RESTRICT="mirror"

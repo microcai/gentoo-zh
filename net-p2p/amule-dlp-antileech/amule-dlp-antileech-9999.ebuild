@@ -2,12 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="5"
+EAPI=7
 
-inherit autotools git-2 wxwidgets
+inherit autotools git-r3 wxwidgets
 DESCRIPTION="$PN, dynamic DLP library for amule-dlp"
 HOMEPAGE="https://github.com/persmule/amule-dlp.antileech"
-EGIT_REPO_URI="git://github.com/persmule/amule-dlp.antiLeech.git"
+EGIT_REPO_URI="https://github.com/persmule/amule-dlp.antiLeech.git"
 
 LICENSE="GPL-2"
 SLOT="0"

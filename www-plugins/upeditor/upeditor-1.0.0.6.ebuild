@@ -2,10 +2,10 @@
 # Distributed under the terms of the GNU General Public License v3
 # $Header: $
 
-EAPI="5"
+EAPI=6
 
 
-inherit nsplugins versionator
+inherit nsplugins
 
 #MY_PV="$(get_version_component_range 1-2)"
 

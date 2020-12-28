@@ -1,32 +1,30 @@
-#rule no.1
+# rule no.1
 
 DO NOT BREAK PEOPLE'S SYSTEM
 
-#rule no.2
+# rule no.2
 
 DO NOT BREAK PEOPLE'S SYSTEM
 
-#rule no.3
+# rule no.3
 
 follow rule no.1 and no.2
 
-#commit message
+# commit message
 
 * for non-version bump commit, commit message should be like this:
 
-        [category/package]: one line short description message
+        $category/$package: one line short description message
         {empty line}
-        [
-            multiple lines of description about why you change this.
-            if you change to fix the bug, and if there is an google code
-            issue entry for that bug, then point the bug link here.
-        ]
+        multiple lines of description about why you change this.
+        if you change to fix the bug, and if there is an GitHub
+        issue entry for that bug, then point the bug link here.
 
 * for version bump commit, commit message should be like this:
 
-        [category/package]: version bump to [new version]
+        $category/$package: version bump to $new_version
 
-#package review
+# package review
 
 * I trust contributors that have commit rights, therefore commitors
   should think carfully before committing.
@@ -52,3 +50,5 @@ follow rule no.1 and no.2
   `KEYWORDS="alpha amd64 arm hppa ia64 ppc mips ~s390 ~sh sparc x86 ~x86-fbsd"`
 
   But please don't abuse this exception. It must be a pure font package.
+  
+  # See wiki for some package not working

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<herd>no-herd</herd>
-	<use>
-		<flag name='imageview'>enable external image viewer</flag>
-		<flag name='iplookup'>enable IP location lookup for Simplified Chinese users. Need qqwry.dat</flag>
-	</use>
-</pkgmetadata>

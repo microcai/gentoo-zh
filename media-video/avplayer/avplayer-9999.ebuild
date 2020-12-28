@@ -2,14 +2,14 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
-inherit cmake-utils git-2
+EAPI=5
+inherit cmake-utils git-r3
 
 DESCRIPTION="avplayer is a p2p video downloader and player"
 HOMEPAGE="http://avplayer.avplayer.org"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/avplayer/avplayer.git"
+EGIT_REPO_URI="https://github.com/avplayer/avplayer.git"
 
 LICENSE="GPL-3"
 SLOT="0"

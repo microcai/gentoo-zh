@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI=7
 inherit eutils toolchain-funcs flag-o-matic
 
 MY_P="${PN}${PV/.}"
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-src_prepare() {  
+src_prepare(){
     epatch "${FILESDIR}"/${PN}-6.0-no-exec-stack.patch  
     sed -i \  
     -e '/^CFLAGS/d' \  

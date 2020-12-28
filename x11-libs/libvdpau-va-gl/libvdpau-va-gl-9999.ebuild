@@ -2,13 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=7
 
-inherit cmake-utils multilib git-2
+inherit cmake-utils multilib git-r3
 
 DESCRIPTION="VDPAU driver with VA-API/OpenGL backend."
 HOMEPAGE="https://github.com/i-rinat/libvdpau-va-gl/"
-EGIT_REPO_URI="git://github.com/i-rinat/libvdpau-va-gl.git"
+EGIT_REPO_URI="https://github.com/i-rinat/libvdpau-va-gl.git"
 
 LICENSE="LGPL-3"
 SLOT="0"

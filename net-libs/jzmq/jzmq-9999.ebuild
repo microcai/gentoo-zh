@@ -6,8 +6,8 @@ DESCRIPTION="jzmq"
 HOMEPAGE="http://www.zeromq.org/bindings:java"
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://github.com/zeromq/jzmq.git"
-	vcs=git-2
+	EGIT_REPO_URI="https://github.com/zeromq/jzmq.git"
+	vcs=git-r3
 else
 	SRC_URI=""
 	KEYWORDS="~amd64 ~x86"

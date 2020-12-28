@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="5"
+EAPI=7
 
-inherit eutils flag-o-matic git-2
+inherit eutils flag-o-matic git-r3
 
 # gphoto and v4l are handled by their usual USE flags.
 # The pint backend was disabled because I could not get it to compile.

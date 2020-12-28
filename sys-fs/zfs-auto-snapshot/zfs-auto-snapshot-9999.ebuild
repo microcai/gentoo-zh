@@ -4,9 +4,9 @@
 
 # Maintainer: check IUSE-defaults at DefineOptions.cmake
 
-EAPI=4
+EAPI=7
 
-inherit eutils git-2
+inherit eutils git-r3
 
 DESCRIPTION="An alternative implementation of the zfs-auto-snapshot service for Linux"
 HOMEPAGE="https://github.com/zfsonlinux/zfs-auto-snapshot"

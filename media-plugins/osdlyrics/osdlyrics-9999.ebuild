@@ -1,59 +1,64 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI="5"
+EAPI=7
+PYTHON_COMPAT=( python3_{6,7,8} pypy3 )
 
-inherit eutils autotools versionator git-2
+inherit python-r1 autotools git-r3
 
-HOMEPAGE="http://code.google.com/p/osd-lyrics/"
+DESCRIPTION="Standalone lyrics fetcher/displayer (windowed and OSD mode)."
+HOMEPAGE="https://github.com/osdlyrics/osdlyrics"
 
-DESCRIPTION="An OSD lyric show supporting multiple media players and downloading."
-EGIT_REPO_URI="git://github.com/osdlyrics/${PN}.git"
-SRC_URI=""
-
-if [ "${PV##*.}" = "9999" ]; then
-	EGIT_BRANCH="master"
-else
-	EGIT_COMMIT="4e55d088c9306d2d6cd8"
-fi
+EGIT_REPO_URI="https://github.com/osdlyrics/osdlyrics.git"
 
 LICENSE="GPL-3"
 SLOT="0"
+KEYWORDS="~amd64"
 
-if [ "${PV##*.}" = "9999" ]; then
-	KEYWORDS=""
+if [[ "${PV}" != 9999 ]]; then
+	EGIT_COMMIT="818bac81ea3454bd9754602888203e0786cfd50b"
 else
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS=""
 fi
 
-IUSE="mpd xmms2"
+IUSE="gnome indicator"
 
 RDEPEND="
+	x11-libs/libnotify
 	dev-libs/dbus-glib
-	gnome-base/libglade
-	net-misc/curl
-	x11-libs/gtk+
-	mpd? ( media-libs/libmpd )
-	xmms2? ( media-sound/xmms2 )"
-DEPEND="${RDEPEND}"
+	dev-python/dbus-python[${PYTHON_USEDEP}]
+	dev-python/future[${PYTHON_USEDEP}]
+	dev-python/pygobject[${PYTHON_USEDEP}]
+	dev-python/pycurl[${PYTHON_USEDEP}]
+	dev-util/intltool
+	gnome? ( dev-libs/gobject-introspection )
+	indicator? ( dev-libs/libappindicator )
+"
+
+DEPEND="
+	${RDEPEND}
+"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-unknown-type-int64_t.patch"
+	default
 	eautoreconf
-}
-
-use_disable() {
-	use $1 || echo "--disable-$1"
+	python_copy_sources
 }
 
 src_configure() {
-	econf \
-		$(use_disable mpd) \
-		$(use_disable xmms2)
+	configuring() {
+		local myconf=(
+			--prefix="${EPREFIX}/usr" PYTHON="${PYTHON}"
+		)
+		econf "${myconf[@]}"
+	}
+	python_foreach_impl run_in_build_dir configuring
+}
+
+src_compile() {
+	python_foreach_impl run_in_build_dir default
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
-	dodoc AUTHORS ChangeLog NEWS* README*
+	python_foreach_impl run_in_build_dir default
 }

@@ -1,9 +1,0 @@
-#!/bin/sh
-
-# for some reason, netease-cloud-music doesn't play nice with HiDPI setup.
-
-# for Qt applications, reset pixel ratio to 1.
-export QT_DEVICE_PIXEL_RATIO=1
-
-# and force scale factor to 2.
-export NETEASE_ARGS='--force-device-scale-factor=2'

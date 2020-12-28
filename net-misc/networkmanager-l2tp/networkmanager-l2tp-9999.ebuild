@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="5"
+EAPI=7
 
-inherit eutils gnome.org git-2 autotools
+inherit eutils gnome.org git-r3 autotools
 
 # NetworkManager likes itself with capital letters
 MY_PN="${PN/networkmanager/NetworkManager}"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 #SRC_URI="${SRC_URI//${PN}/${MY_PN}}"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/microcai/NetworkManager-l2tp.git"
+EGIT_REPO_URI="https://github.com/microcai/NetworkManager-l2tp.git"
 
 LICENSE="GPL-2"
 SLOT="0"

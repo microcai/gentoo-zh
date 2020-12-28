@@ -2,12 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="5"
+EAPI=7
 
 inherit autotools flag-o-matic multilib-minimal
 
 if [[ ${PV} = 9999 ]]; then
-	inherit git-2
+	inherit git-r3
 fi
 
 DESCRIPTION="A Simple Screen Recorder"
@@ -16,7 +16,7 @@ LICENSE="GPL-3"
 PKGNAME="ssr"
 S=${WORKDIR}/${PKGNAME}-${PV}
 if [[ ${PV} = 9999 ]]; then
-	EGIT_REPO_URI="git://github.com/MaartenBaert/${PKGNAME}.git
+	EGIT_REPO_URI="https://github.com/MaartenBaert/${PKGNAME}.git
 		https://github.com/MaartenBaert/${PKGNAME}.git"
 	EGIT_BOOTSTRAP=""
 	KEYWORDS=""
