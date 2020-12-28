@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RESTRICT=mirror strip binchecks
 SLOT=0
 SRC_URI=https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/wangfonts/wangfonts-1.3.0.tar.gz
-_eclasses_=font	e052246186f22bd6a37797238374613b
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
 _md5_=c7f6ca17d39452a633fc9abbaee18e05

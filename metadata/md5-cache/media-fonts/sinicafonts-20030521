@@ -9,5 +9,5 @@ LICENSE=all-rights-reserved
 RESTRICT=mirror strip binchecks
 SLOT=0
 SRC_URI=http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/sinica/hzk1.ttf http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/sinica/hzk2.ttf http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/sinica/hzk3.ttf http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/sinica/hzk4.ttf http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/sinica/hzk5.ttf http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/sinica/hzk6.ttf http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/sinica/hzk7.ttf http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/sinica/hzk8.ttf http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/sinica/hzk9.ttf http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/sinica/hzka.ttf http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/sinica/hzkb.ttf http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/sinica/hzkc.ttf http://linux3.cc.ntu.edu.tw/pub/CLE/pub2/fonts/sinica/siddam.zip
-_eclasses_=font	e052246186f22bd6a37797238374613b
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
 _md5_=9bc28d69be81679fe57dae293cf714ad

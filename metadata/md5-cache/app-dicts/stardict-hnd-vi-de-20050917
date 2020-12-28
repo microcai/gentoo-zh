@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://gentoo/VietDuc12K.zip
-_eclasses_=stardict	b7ef8c60fb31bb135553f5b2190165f0
+_eclasses_=stardict	b8bf7742af3d0e3148e996b3e955cc3d
 _md5_=d7713190bae0a0b03390e95735e9f36a
