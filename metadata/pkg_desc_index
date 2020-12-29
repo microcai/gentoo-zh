@@ -87,7 +87,7 @@ app-i18n/jfbterm 0.4.7-r4: The J Framebuffer Terminal/Multilingual Enhancement w
 app-i18n/libgooglepinyin 0.1.2: A fork from google pinyin on android
 app-i18n/libime 1.0.1 99999999: Fcitx5 Next generation of fcitx
 app-i18n/libpinyin 1.0.0: Library to deal with Pinyin.
-app-i18n/librime 1.1-r1: Rime Input Method Engine library
+app-i18n/librime 1.6.1: RIME (Rime Input Method Engine) core library
 app-i18n/lunar 2.2-r4: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
 app-i18n/rime-data 0.32 9999: Brise, data resource for Rime Input Method Engine
