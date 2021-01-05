@@ -249,7 +249,6 @@ sci-libs/libticonv 9999: Charset conversion library for TI calculators
 sci-libs/libtifiles2 9999: Library for TI calculator files
 sys-apps/inxi 2.2.19: A newer, better system information script for irc, administration, and system troubleshooters.
 sys-apps/mdp 9999: A command-line based markdown presentation tool
-sys-apps/uksmstat 9999: Small tool to show UKSM statistics.
 sys-apps/yaourt 1.2.2: A pacman wrapper with extended features and AUR support
 sys-boot/grub-efi 0.97-r84: GNU GRUB Legacy boot loader
 sys-devel/gdb 7.1: GNU debugger
