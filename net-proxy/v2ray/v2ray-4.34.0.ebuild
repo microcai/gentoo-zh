@@ -350,8 +350,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 IUSE=""
 
-DEPEND="!net-proxy/v2ray-bin"
-RDEPEND="${DEPEND}"
+DEPEND="!net-proxy/v2ray-bin
+    >=dev-lang/go-1.15.5"
+
+RDEPEND=""
 
 S="${WORKDIR}/${PN}-core-${PV}"
 
