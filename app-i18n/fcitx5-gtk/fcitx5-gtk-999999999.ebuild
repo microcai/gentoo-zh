@@ -35,6 +35,7 @@ src_configure() {
 		-DCMAKE_BUILD_TYPE=Release
 		-DENABLE_GTK2_IM_MODULE=$(usex gtk2)
 		-DENABLE_GTK3_IM_MODULE=$(usex gtk3)
+		-DENABLE_GTK4_IM_MODULE=no
 		-DENABLE_SNOOPER=$(usex snooper)
 		-DENABLE_GIR=$(usex introspection)
 	)
