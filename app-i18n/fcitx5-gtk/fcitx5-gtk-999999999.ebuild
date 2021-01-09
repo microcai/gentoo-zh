@@ -14,7 +14,7 @@ HOMEPAGE="https://github.com/fcitx/fcitx5-gtk"
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
 KEYWORDS=""
-IUSE="+gtk2 +gtk3 +introspection +snooper"
+IUSE="+gtk2 +gtk3 +introspection +snooper gtk4"
 
 RDEPEND="app-i18n/fcitx5
 	gtk2? ( x11-libs/gtk+:2 )
@@ -35,6 +35,7 @@ src_configure() {
 		-DCMAKE_BUILD_TYPE=Release
 		-DENABLE_GTK2_IM_MODULE=$(usex gtk2)
 		-DENABLE_GTK3_IM_MODULE=$(usex gtk3)
+		-DENABLE_GTK4_IM_MODULE=$(usex gtk4)
 		-DENABLE_SNOOPER=$(usex snooper)
 		-DENABLE_GIR=$(usex introspection)
 	)
