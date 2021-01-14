@@ -71,6 +71,8 @@ src_install() {
 
 	insinto /usr/share/icons
 	doins -r "${S}"/opt/apps/com.qq.weixin/entries/icons/hicolor
+	insinto /usr/share/applications
+	doins "${S}"/wechat-uos.desktop
 
 	insinto /usr/lib/license
 	doins "${S}"/usr/lib/license/libuosdevicea.so
