@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare unpack
+DEPEND=dev-libs/openssl dev-libs/glib dev-libs/atk dev-libs/expat dev-libs/libffi sys-apps/dbus virtual/udev x11-libs/pango x11-libs/gdk-pixbuf x11-libs/cairo x11-libs/pixman x11-libs/gtk+ media-libs/libjpeg-turbo gnome-extra/libgsf media-libs/libpng virtual/jpeg media-libs/tiff >=media-libs/freetype-2 media-libs/fontconfig media-libs/glu media-libs/mesa media-libs/portaudio[jack] >=media-gfx/nvidia-cg-toolkit-3.1.0013-r2 x11-libs/libxcb x11-libs/libXinerama x11-libs/libXrandr x11-libs/libXcursor x11-libs/libXext x11-libs/libXi x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXrender x11-libs/libXfixes x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp x11-libs/libdrm app-accessibility/at-spi2-core !app-arch/deb2targz app-arch/unzip
+DESCRIPTION=Lightworks is the fastest, most accessible and focused NLE in the industry
+EAPI=6
+HOMEPAGE=http://www.lwks.com/
+KEYWORDS=~amd64
+LICENSE=EditShare
+RDEPEND=dev-libs/openssl dev-libs/glib dev-libs/atk dev-libs/expat dev-libs/libffi sys-apps/dbus virtual/udev x11-libs/pango x11-libs/gdk-pixbuf x11-libs/cairo x11-libs/pixman x11-libs/gtk+ media-libs/libjpeg-turbo gnome-extra/libgsf media-libs/libpng virtual/jpeg media-libs/tiff >=media-libs/freetype-2 media-libs/fontconfig media-libs/glu media-libs/mesa media-libs/portaudio[jack] >=media-gfx/nvidia-cg-toolkit-3.1.0013-r2 x11-libs/libxcb x11-libs/libXinerama x11-libs/libXrandr x11-libs/libXcursor x11-libs/libXext x11-libs/libXi x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXrender x11-libs/libXfixes x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp x11-libs/libdrm app-accessibility/at-spi2-core
+SLOT=0
+SRC_URI=https://github.com/HougeLangley/lwks-beta/releases/download/lwks-reversion/lightworks_2021.1_r126716.deb
+_eclasses_=desktop	7fd20552ce4cc97e8acb132a499a7dd8	edos2unix	33e347e171066657f91f8b0c72ec8773	epatch	e8f1ec13660dc2f44b32775765d85e42	estack	055c42df72f76a4f45ec92b35e83cd56	eutils	2d5b3f4b315094768576b6799e4f926e	l10n	8cdd85e169b835d518bc2fd59f780d8e	ltprune	4f3f2db5ce3ccbeeacdf3f94954043aa	multilib	d410501a125f99ffb560b0c523cd3d1e	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	1a94dc06d324bd0dab754e11abe6d27e	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf	wrapper	4251d4c84c25f59094fd557e0063a974
+_md5_=a21ed65180dab19da5a903a7b67f4349
