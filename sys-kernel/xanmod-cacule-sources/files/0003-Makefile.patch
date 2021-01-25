@@ -1,0 +1,16 @@
+--- a/Makefile	2021-01-25 17:53:57.892995787 +0800
++++ b/Makefile	2021-01-25 17:57:28.996990898 +0800
+@@ -415,11 +415,11 @@
+ endif
+ 
+ export KBUILD_USERCFLAGS := -Wall -Wmissing-prototypes -Wstrict-prototypes \
+-			      -O2 -fomit-frame-pointer -std=gnu89
++			      -Ofast -flto -fomit-frame-pointer -std=gnu89
+ export KBUILD_USERLDFLAGS :=
+ 
+ KBUILD_HOSTCFLAGS   := $(KBUILD_USERCFLAGS) $(HOST_LFS_CFLAGS) $(HOSTCFLAGS)
+-KBUILD_HOSTCXXFLAGS := -Wall -O2 $(HOST_LFS_CFLAGS) $(HOSTCXXFLAGS)
++KBUILD_HOSTCXXFLAGS := -Wall -Ofast -flto $(HOST_LFS_CFLAGS) $(HOSTCXXFLAGS)
+ KBUILD_HOSTLDFLAGS  := $(HOST_LFS_LDFLAGS) $(HOSTLDFLAGS)
+ KBUILD_HOSTLDLIBS   := $(HOST_LFS_LIBS) $(HOSTLDLIBS)
+ 
