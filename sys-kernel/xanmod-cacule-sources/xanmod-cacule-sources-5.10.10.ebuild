@@ -26,7 +26,6 @@ src_prepare() {
 
     eapply "${FILESDIR}/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-CLONE_NEWUSER.patch"
     eapply "${FILESDIR}/UKSM.patch"
-    eapply "${FILESDIR}/0003-Makefile.patch"
     
 	kernel-2-src-prepare-overlay_src_prepare
 
