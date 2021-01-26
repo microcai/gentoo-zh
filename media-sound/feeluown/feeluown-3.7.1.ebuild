@@ -16,19 +16,16 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+netease +local +xiami +qqmusic +kuwo"
+IUSE="+netease +local +xiami +qqmusic +kuwo +webengine"
 
 RDEPEND="
-	dev-python/beautifulsoup[${PYTHON_USEDEP}]
-	dev-python/fuzzywuzzy[${PYTHON_USEDEP}]
 	dev-python/janus[${PYTHON_USEDEP}]
-	dev-python/marshmallow[${PYTHON_USEDEP}]
-	dev-python/pycryptodome[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
-	media-libs/mutagen[${PYTHON_USEDEP}]
 	dev-python/pyopengl[${PYTHON_USEDEP}]
 	dev-python/PyQt5[${PYTHON_USEDEP}]
 	dev-python/qasync[${PYTHON_USEDEP}]
+	dev-python/tomlkit[${PYTHON_USEDEP}]
+	>=dev-python/pydantic-1.7.3[${PYTHON_USEDEP}]
 "
 
 PDEPEND="
@@ -38,6 +35,7 @@ PDEPEND="
 	local? ( dev-python/fuo-local[${PYTHON_USEDEP}] )
 	qqmusic? ( dev-python/fuo-qqmusic[${PYTHON_USEDEP}] )
 	kuwo? ( dev-python/fuo-kuwo[$PYTHON_USEDEP] )
+	webengine? ( dev-python/PyQtWebEngine[$PYTHON_USEDEP] )
 "
 
 DEPEND="
@@ -50,5 +48,5 @@ python_install_all() {
 	distutils-r1_python_install_all
 
 	domenu "${FILESDIR}/${PN}.desktop"
-	newicon "${S}/feeluown/feeluown.png" "${PN}.png"
+	newicon "${S}/feeluown/icons/feeluown.png" "${PN}.png"
 }
