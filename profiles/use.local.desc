@@ -24,6 +24,7 @@ media-plugins/osdlyrics:indicator - add support for appindicator
 media-sound/feeluown:local - add local music support for feeluown
 media-sound/feeluown:netease - add netease cloud music support for feeluown
 media-sound/feeluown:qqmusic - add qq music support for feeluown
+media-sound/feeluown:webengine - add support to login via web page
 media-sound/feeluown:xiami - add xiami music support for feeluown
 media-video/simplescreenrecorder:vpx - Enables vp8 codec support using libvpx from ffmpeg/libav
 net-misc/xmuruijie:firewall - Add support for iptables firewall

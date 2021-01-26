@@ -143,15 +143,17 @@ dev-libs/libtsm 3: TSM is a state machine for DEC VT100-VT520 compatible termina
 dev-libs/lunar-date 2.4.2: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-php/pecl-solr 2.4.0: Solr client
-dev-python/fuo-kuwo 0.1.1: kuwo music support for feeluown
+dev-python/fuo-kuwo 0.1.2: kuwo music support for feeluown
 dev-python/fuo-local 0.2.1: local music support for feeluown
-dev-python/fuo-netease 0.4.2: netease cloud music support for feeluown
-dev-python/fuo-qqmusic 0.2: xiami music support for feeluown
-dev-python/fuo-xiami 0.2.3: xiami music support for feeluown
+dev-python/fuo-netease 0.5: netease cloud music support for feeluown
+dev-python/fuo-qqmusic 0.3: xiami music support for feeluown
+dev-python/fuo-xiami 0.2.4: xiami music support for feeluown
 dev-python/janus 0.4.0: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/notify2 0.3-r1: Python interface to DBus notifications.
 dev-python/pgspecial 1.8.0: Meta-commands handler for Postgres Database.
+dev-python/pydantic 1.7.3: Data validation and settings management using Python type hinting.
 dev-python/qasync 0.9.4: Implementation of the asyncio (PEP 3156) event-loop with Qt
+dev-python/tomlkit 0.7.0: Style-preserving TOML library for Python
 dev-qt/qtxcb-private-headers 5.13.2 5.14.1: The Private Headers for the Qt5 Xcb
 dev-ruby/mruby 1.0.0 9999: mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
 dev-util/arch-install-scripts 20: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
@@ -193,7 +195,7 @@ media-plugins/osdlyrics 9999 20200403: Standalone lyrics fetcher/displayer (wind
 media-plugins/python-mmkeys 1.6.2.1-r1: Multimedia key support as a PyGTK object
 media-sound/audio-convert-mod 3.45.2: A simple audio file converter supporting many formats
 media-sound/cue2tracks 0.2.16: Bash script for split audio CD image files with cue sheet to tracks and write tags.
-media-sound/feeluown 3.5.1: A user-friendly and hackable music player
+media-sound/feeluown 3.7.1: A user-friendly and hackable music player
 media-sound/linnya 2.2.0: A free music player
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/lightworks 2020.1-r3 2021.1-r1: Lightworks is the fastest, most accessible and focused NLE in the industry
