@@ -1,11 +1,17 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI=7
 
-inherit cmake-utils gnome2-utils xdg-utils git-r3
+inherit cmake gnome2-utils xdg-utils git-r3
 EGIT_REPO_URI="https://github.com/fcitx/libime.git"
-EGIT_COMMIT="1.0.1"
+
+if [[ "${PV}" == 9999* ]]; then
+	KEYWORDS=""
+else
+	KEYWORDS="~amd64"
+	EGIT_COMMIT="${PV}"
+fi
 _kenlmcommit="01c49fe86714276f77be9278d00906fc994256c1"
 
 SRC_URI="https://download.fcitx-im.org/data/lm_sc.3gm.arpa-20140820.tar.bz2 -> fcitx5-lm_sc.3gm.arpa-20140820.tar.bz2
@@ -19,7 +25,6 @@ HOMEPAGE="https://fcitx-im.org/ https://gitlab.com/fcitx/libime"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-KEYWORDS="~amd64"
 IUSE=""
 REQUIRED_USE=""
 
@@ -34,7 +39,7 @@ src_prepare() {
 	ln -s "${DISTDIR}/fcitx5-dict.utf8-20200715.tar.xz" data/dict.utf8-20200715.tar.xz || die
 	ln -s "${DISTDIR}/fcitx5-table.tar.gz" data/table.tar.gz || die
 	tar -xvzf "${DISTDIR}/kenlm.tar.gz" -C src/libime/core/kenlm  || die
-	cmake-utils_src_prepare
+	cmake_src_prepare
 	xdg_environment_reset
 }
 
@@ -43,9 +48,9 @@ src_configure() {
 		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
 		-DCMAKE_INSTALL_SYSCONFDIR="${EPREFIX}/etc"
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 src_install(){
-	cmake-utils_src_install
+	cmake_src_install
 }
