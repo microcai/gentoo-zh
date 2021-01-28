@@ -1,14 +1,17 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="6"
+EAPI=7
 
-inherit cmake-utils git-r3
+inherit cmake git-r3
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5-qt.git"
-if [[ ! "${PV}" =~ (^|\.)9999$ ]]; then
-	EGIT_COMMIT="5.0.0"
-fi
 
+if [[ "${PV}" == 9999 ]]; then
+	KEYWORDS=""
+else
+	KEYWORDS="~amd64"
+	EGIT_COMMIT="${PV}"
+fi
 
 SRC_URI=""
 
@@ -17,7 +20,6 @@ HOMEPAGE="https://github.com/fcitx/fcitx5-qt"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-KEYWORDS="~amd64"
 IUSE="qt5 only_plugin"
 
 RDEPEND="app-i18n/fcitx5
@@ -32,7 +34,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	cmake-utils_src_prepare
+	cmake_src_prepare
 }
 
 src_configure() {
@@ -44,9 +46,9 @@ src_configure() {
 		-DENABLE_QT5=$(usex qt5)
 		-DBUILD_ONLY_PLUGIN=$(usex only_plugin)
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 src_install(){
-	cmake-utils_src_install
+	cmake_src_install
 }
