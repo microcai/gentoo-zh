@@ -1,14 +1,17 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="6"
+EAPI=7
 
-inherit cmake-utils git-r3 gnome2-utils xdg-utils
+inherit cmake git-r3 gnome2-utils xdg-utils
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5-gtk.git"
-if [[ ! "${PV}" =~ (^|\.)9999$ ]]; then
-	EGIT_COMMIT="5.0.0"
-fi
 
+if [[ "${PV}" == 9999 ]]; then
+	KEYWORDS=""
+else
+	KEYWORDS="~amd64"
+	EGIT_COMMIT="${PV}"
+fi
 
 SRC_URI=""
 
@@ -17,7 +20,6 @@ HOMEPAGE="https://github.com/fcitx/fcitx5-gtk"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-KEYWORDS="~amd64"
 IUSE="+gtk2 +gtk3 +introspection +snooper"
 
 RDEPEND="app-i18n/fcitx5
@@ -29,7 +31,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	cmake-utils_src_prepare
+	cmake_src_prepare
 }
 
 src_configure() {
@@ -39,17 +41,18 @@ src_configure() {
 		-DCMAKE_BUILD_TYPE=Release
 		-DENABLE_GTK2_IM_MODULE=$(usex gtk2)
 		-DENABLE_GTK3_IM_MODULE=$(usex gtk3)
+		-DENABLE_GTK4_IM_MODULE=OFF
 		-DENABLE_SNOOPER=$(usex snooper)
 		-DENABLE_GIR=$(usex introspection)
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 src_install(){
-	cmake-utils_src_install
+	cmake_src_install
 }
 pkg_postinst() {
-	gnome2_icon_cache_update
+	xdg_icon_cache_update
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
 	use gtk2 && gnome2_query_immodules_gtk2
@@ -57,7 +60,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
+	xdg_icon_cache_update
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
 	use gtk2 && gnome2_query_immodules_gtk2
