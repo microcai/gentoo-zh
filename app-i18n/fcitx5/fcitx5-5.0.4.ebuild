@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -7,10 +7,10 @@ inherit cmake gnome2-utils xdg-utils git-r3
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5.git"
 
 KEYWORDS="~amd64"
-if [[ "${PV}" != 999999999 ]]; then
-	EGIT_COMMIT="5.0.1"
-else
+if [[ "${PV}" == 9999 ]]; then
 	KEYWORDS=""
+else
+	EGIT_COMMIT="${PV}"
 fi
 
 DESCRIPTION="Fcitx5 Next generation of fcitx "
@@ -45,7 +45,7 @@ RDEPEND="dev-libs/glib:2
 	enchant? ( app-text/enchant:0= )
 	systemd? ( sys-apps/systemd )
 	app-text/iso-codes
-	app-i18n/cldr-emoji-annotation
+	app-i18n/unicode-cldr
 	dev-libs/libxml2
 	dev-libs/libevent"
 DEPEND="${RDEPEND}

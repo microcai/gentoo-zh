@@ -1,18 +1,24 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-inherit cmake-utils gnome2-utils git-r3
+inherit cmake gnome2-utils git-r3
 
 DESCRIPTION="Rime Support for Fcitx5"
 HOMEPAGE="https://github.com/fcitx/fcitx5-rime"
 
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5-rime.git"
 
+if [[ "${PV}" == 9999 ]]; then
+	KEYWORDS=""
+else
+	KEYWORDS="~amd64 ~x86"
+	EGIT_COMMIT="${PV}"
+fi
+
 LICENSE="GPL-2"
 SLOT="5"
-KEYWORDS=""
 IUSE=""
 
 RDEPEND="app-i18n/fcitx5
@@ -24,9 +30,9 @@ RDEPEND="app-i18n/fcitx5
 DEPEND="${RDEPEND}"
 
 pkg_postinst() {
-	gnome2_icon_cache_update
+	xdg_icon_cache_update
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
+	xdg_icon_cache_update
 }
