@@ -231,6 +231,7 @@ net-proxy/qvplugin-command 2.0.0 99999: Plugin for Qv2ray to run any commands wh
 net-proxy/qvplugin-ss 1.2: shadowsocks plugin for Qv2ray to support SIP003 in Qv2ray
 net-proxy/qvplugin-ssr 2.0.3 9999: shadowsocksR plugin for Qv2ray to support SSR connection in Qv2ray
 net-proxy/qvplugin-trojan 2.0.0 99999: Plugin for Qv2ray to support Trojan proxy in Qv2ray
+net-proxy/shadowsocks 9999: A fast tunnel proxy that helps you bypass firewalls
 net-proxy/shadowsocks-qt5 3.0.1: Shadowsocks-Qt5 is a native and cross-platform shadowsocks GUI client with advanced features.
 net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
 net-proxy/simple-obfs 0.0.5: A simple obfuscating tool
