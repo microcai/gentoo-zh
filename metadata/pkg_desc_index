@@ -186,7 +186,7 @@ media-plugins/gst-plugins-meta 0.10-r8: Meta ebuild to pull in gst plugins for a
 media-plugins/osdlyrics 9999 20200403: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-sound/audio-convert-mod 3.45.2: A simple audio file converter supporting many formats
 media-sound/cue2tracks 0.2.16: Bash script for split audio CD image files with cue sheet to tracks and write tags.
-media-sound/feeluown 3.7.1: A user-friendly and hackable music player
+media-sound/feeluown 3.7.3: A user-friendly and hackable music player
 media-sound/linnya 2.2.0: A free music player
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/lightworks 2020.1-r3 2021.1-r1: Lightworks is the fastest, most accessible and focused NLE in the industry
