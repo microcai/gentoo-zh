@@ -32,7 +32,7 @@ RDEPEND="app-i18n/fcitx5
 		dev-qt/qtcore:5
 		dev-qt/qtdbus:5
 		dev-qt/qtconcurrent:5
-		app-i18n/fcitx5-qt[qt5]
+		app-i18n/fcitx5-qt[qt5,-only_plugin]
 		browser? (
 			webkit? ( dev-qt/qtwebkit:5 )
 			!webkit? ( dev-qt/qtwebengine:5 )
