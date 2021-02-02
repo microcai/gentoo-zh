@@ -1,9 +1,0 @@
-[Unit]
-Description=wallproxy-plus
-After=network.target nss-lookup.target
-
-[Service]
-ExecStart=/usr/bin/wallproxy
-
-[Install]
-WantedBy=multi-user.target
