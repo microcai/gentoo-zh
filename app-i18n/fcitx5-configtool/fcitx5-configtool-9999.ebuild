@@ -20,7 +20,7 @@ SLOT="5-plasma5"
 IUSE="+kcm +config-qt test"
 
 RDEPEND="app-i18n/fcitx5
-	app-i18n/fcitx5-qt[qt5]
+	app-i18n/fcitx5-qt[qt5,-only_plugin]
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
