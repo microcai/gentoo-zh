@@ -10,4 +10,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://gentoo/VietAnh23K.zip
 _eclasses_=stardict	b8bf7742af3d0e3148e996b3e955cc3d
-_md5_=18819ec1e9af9e6606942be4372007b4
+_md5_=a8fe0b09a71d2f5a2d48188e7146e4bc

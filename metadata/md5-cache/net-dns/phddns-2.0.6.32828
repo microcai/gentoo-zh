@@ -8,4 +8,4 @@ LICENSE=GPL-3
 SLOT=0
 SRC_URI=http://developer.oray.com/download/Peanuthull%20dynamic%20DNS%20SDK.rar -> phddns-2.0.6.32828.rar
 _eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	2d5b3f4b315094768576b6799e4f926e	l10n	8cdd85e169b835d518bc2fd59f780d8e	wrapper	4251d4c84c25f59094fd557e0063a974
-_md5_=0f3bd2c4471daa9250947b60f6666900
+_md5_=277c8781cde0f492201fea778da2c974

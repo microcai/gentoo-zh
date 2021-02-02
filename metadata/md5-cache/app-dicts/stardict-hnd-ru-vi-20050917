@@ -10,4 +10,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://gentoo/NgaViet38K.zip
 _eclasses_=stardict	b8bf7742af3d0e3148e996b3e955cc3d
-_md5_=30b6b555fbf6ed3cb4b5aafbc5450f43
+_md5_=466ac6629bd3554d608f15955a234411

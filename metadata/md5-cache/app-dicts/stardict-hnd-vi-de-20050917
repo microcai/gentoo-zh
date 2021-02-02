@@ -10,4 +10,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://gentoo/VietDuc12K.zip
 _eclasses_=stardict	b8bf7742af3d0e3148e996b3e955cc3d
-_md5_=d7713190bae0a0b03390e95735e9f36a
+_md5_=6d1391499bc412f21303efa72db0ec7e
