@@ -156,7 +156,7 @@ dev-util/elfembed 0.3: Resource Compiler for ELF binaries
 dev-util/fernflower 1: Fernflower is the first actually working analytical decompiler for Java and probably for a high-level programming language in general
 dev-util/global 6.3.4: GNU Global is a tag system to find the locations of a specified object in various sources
 dev-util/jd-gui 1.4.0: A standalone graphical utility that displays Java source codes of .class file
-dev-util/jetbrains-toolbox 1.16.6319 1.17.6856: Manage all your JetBrains Projects and Tools
+dev-util/jetbrains-toolbox 1.20.7939: Manage all your JetBrains Projects and Tools
 dev-util/rinse 1.7 9999: RPM based distributions bootstrap scripts
 dev-util/rust-analyzer 20200928: An experimental Rust compiler front-end for IDEs
 dev-util/yabasic 2.9.15: Yet Another BASIC
