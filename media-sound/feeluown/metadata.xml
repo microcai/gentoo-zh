@@ -9,5 +9,6 @@
         <flag name='netease'>add netease cloud music support for feeluown</flag>
         <flag name='local'>add local music support for feeluown</flag>
         <flag name='qqmusic'>add qq music support for feeluown</flag>
+        <flag name='webengine'>add support to login via web page</flag>
     </use>
 </pkgmetadata>

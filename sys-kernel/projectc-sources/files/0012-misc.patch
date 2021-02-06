@@ -1,0 +1,78 @@
+diff --git a/drivers/hid/hid-quirks.c b/drivers/hid/hid-quirks.c
+index bf7ecab5d9e5..142e9dae2837 100644
+--- a/drivers/hid/hid-quirks.c
++++ b/drivers/hid/hid-quirks.c
+@@ -478,6 +478,8 @@ static const struct hid_device_id hid_have_special_driver[] = {
+ #if IS_ENABLED(CONFIG_HID_MAGICMOUSE)
+ 	{ HID_BLUETOOTH_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_MAGICMOUSE) },
+ 	{ HID_BLUETOOTH_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_MAGICTRACKPAD) },
++	{ HID_BLUETOOTH_DEVICE(BT_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_MAGICTRACKPAD2) },
++	{ HID_USB_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_MAGICTRACKPAD2) },
+ #endif
+ #if IS_ENABLED(CONFIG_HID_MAYFLASH)
+ 	{ HID_USB_DEVICE(USB_VENDOR_ID_DRAGONRISE, USB_DEVICE_ID_DRAGONRISE_PS3) },
+-- 
+
+diff --git a/drivers/net/wireless/intel/iwlwifi/mvm/tx.c b/drivers/net/wireless/intel/iwlwifi/mvm/tx.c
+index fe1c538cd718..c27743a58f81 100644
+--- a/drivers/net/wireless/intel/iwlwifi/mvm/tx.c
++++ b/drivers/net/wireless/intel/iwlwifi/mvm/tx.c
+@@ -833,6 +833,7 @@ iwl_mvm_tx_tso_segment(struct sk_buff *skb, unsigned int num_subframes,
+ 
+ 	next = skb_gso_segment(skb, netdev_flags);
+ 	skb_shinfo(skb)->gso_size = mss;
++       skb_shinfo(skb)->gso_type = ipv4 ? SKB_GSO_TCPV4 : SKB_GSO_TCPV6;
+ 	if (WARN_ON_ONCE(IS_ERR(next)))
+ 		return -EINVAL;
+ 	else if (next)
+@@ -855,6 +856,7 @@ iwl_mvm_tx_tso_segment(struct sk_buff *skb, unsigned int num_subframes,
+ 
+ 		if (tcp_payload_len > mss) {
+ 			skb_shinfo(tmp)->gso_size = mss;
++                       skb_shinfo(tmp)->gso_type = ipv4 ? SKB_GSO_TCPV4 : SKB_GSO_TCPV6;
+ 		} else {
+ 			if (qos) {
+ 				u8 *qc;
+-- 
+
+diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
+index 72efd579ec5e..a5a41e9272d6 100644
+--- a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
++++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
+@@ -192,8 +192,9 @@ module_param_named(gartsize, amdgpu_gart_size, uint, 0600);
+ 
+ /**
+  * DOC: gttsize (int)
+- * Restrict the size of GTT domain in MiB for testing. The default is -1 (It's VRAM size if 3GB < VRAM < 3/4 RAM,
+- * otherwise 3/4 RAM size).
++ * Restrict the size of GTT domain in MiB for testing. The default is -1 (On APUs this is 3/4th
++ * of the system memory; on dGPUs this is 3GiB or VRAM sized, whichever is bigger,
++ * with an upper bound of 3/4th of system memory.
+  */
+ MODULE_PARM_DESC(gttsize, "Size of the GTT domain in megabytes (-1 = auto)");
+ module_param_named(gttsize, amdgpu_gtt_size, int, 0600);
+diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_ttm.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_ttm.c
+index 4d8f19ab1014..294f26f4f310 100644
+--- a/drivers/gpu/drm/amd/amdgpu/amdgpu_ttm.c
++++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_ttm.c
+@@ -1865,9 +1865,15 @@ int amdgpu_ttm_init(struct amdgpu_device *adev)
+ 		struct sysinfo si;
+ 
+ 		si_meminfo(&si);
+-		gtt_size = min(max((AMDGPU_DEFAULT_GTT_SIZE_MB << 20),
+-			       adev->gmc.mc_vram_size),
+-			       ((uint64_t)si.totalram * si.mem_unit * 3/4));
++		gtt_size = (uint64_t)si.totalram * si.mem_unit * 3/4;
++		/* If we have dedicated memory, limit our GTT size to
++		 * 3GiB or VRAM size, whichever is bigger
++		 */
++		if (!(adev->flags & AMD_IS_APU)) {
++			gtt_size = min(max(AMDGPU_DEFAULT_GTT_SIZE_MB << 20,
++				adev->gmc.mc_vram_size),
++				gtt_size);
++		}
+ 	}
+ 	else
+ 		gtt_size = (uint64_t)amdgpu_gtt_size << 20;
+-- 
+2.30.0
