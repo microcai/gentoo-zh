@@ -257,7 +257,7 @@ sys-fs/zfs-auto-snapshot 9999 9999-r1: Automatic snapshots for ZFS on Linux
 sys-kernel/dkms 2.2.0.3: Dynamic Kernel Module Support
 sys-kernel/e-sources 3.18.14 4.0.9 4.1.12 4.2.5 4.5.2: Full sources for the Linux kernel including: gentoo, ck and other patches
 sys-kernel/hardened-sources 4.9.29 4.9.44 4.9.52 4.9.65 4.9.74: Hardened kernel sources (kernel series 4.9)
-sys-kernel/projectc-sources 5.10.3 5.10.4 5.10.4-r1 5.10.4-r2 5.10.5 5.10.5-r1 5.10.6 5.10.7 5.10.8 5.10.8-r1 5.10.9 5.10.10 5.10.11 5.10.12 5.10.13 5.10.14: Full Project-C CPU Scheduler sources including the Gentoo patchset for the 5.10 kernel tree
+sys-kernel/projectc-sources 5.10.3 5.10.4 5.10.4-r1 5.10.4-r2 5.10.5 5.10.5-r1 5.10.6 5.10.7 5.10.8 5.10.8-r1 5.10.9 5.10.10 5.10.11 5.10.12 5.10.13 5.10.14 5.10.15: Full Project-C CPU Scheduler sources including the Gentoo patchset for the 5.10 kernel tree
 sys-kernel/xanmod-cacule-sources 5.10.1 5.10.2 5.10.3 5.10.3-r3 5.10.4 5.10.5 5.10.5-r1 5.10.6 5.10.8 5.10.9 5.10.10 5.10.12 5.10.14: Xanmod and CacULE sources including the Gentoo patchset for the 5.10 kernel tree
 sys-kernel/xanmod-uksm-sources 5.10.14: Xanmod and UKSM sources including the Gentoo patchset for the 5.10 kernel tree
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
