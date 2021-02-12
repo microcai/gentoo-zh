@@ -1,6 +1,5 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles2/libtifiles2-1.1.6-r1.ebuild,v 1.2 2014/07/15 14:37:09 jlec Exp $
 
 EAPI=7
 

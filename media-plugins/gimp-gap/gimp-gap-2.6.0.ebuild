@@ -1,6 +1,5 @@
 # Copyright 1999-2021 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 inherit eutils flag-o-matic
 

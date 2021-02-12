@@ -1,6 +1,5 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 DESCRIPTION="Chinese fortune shell script"
 HOMEPAGE="http://code.google.com/p/chinese-fortune"

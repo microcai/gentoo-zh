@@ -1,6 +1,5 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 DESCRIPTION="GNU groff wrapper allowing UTF-8 input"
 HOMEPAGE="http://www.haible.de/bruno/packages-groff-utf8.html"

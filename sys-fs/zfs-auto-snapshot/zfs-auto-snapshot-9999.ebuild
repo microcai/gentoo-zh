@@ -1,6 +1,5 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-9999.ebuild,v 1.5 2011/05/03 11:32:59 scarabeus Exp $
 
 # Maintainer: check IUSE-defaults at DefineOptions.cmake
 

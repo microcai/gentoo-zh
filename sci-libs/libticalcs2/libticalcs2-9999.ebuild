@@ -1,6 +1,5 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticalcs2/libticalcs2-1.1.8.ebuild,v 1.1 2013/07/09 16:50:55 bicatali Exp $
 
 EAPI=7
 

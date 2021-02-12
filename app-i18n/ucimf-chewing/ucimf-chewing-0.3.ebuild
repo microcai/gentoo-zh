@@ -1,6 +1,5 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 DESCRIPTION="The Chewing IMF module for UCIMF"
 HOMEPAGE="http://ucimf.googlecode.com"

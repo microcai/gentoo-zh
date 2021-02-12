@@ -1,6 +1,5 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 DESCRIPTION="A service menu tor upload images on Imageshack."
 HOMEPAGE="http://kde-apps.org/content/show.php?content=51247"
