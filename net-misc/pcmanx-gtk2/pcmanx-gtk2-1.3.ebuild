@@ -36,6 +36,7 @@ DEPEND="
 src_prepare() {
 	# this flag crashes CTermData::memset16()
 	filter-flags -ftree-vectorize
+	eapply_user
 }
 
 src_configure() {
