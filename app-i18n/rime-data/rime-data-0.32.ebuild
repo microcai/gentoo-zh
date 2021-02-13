@@ -1,6 +1,5 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rime-data/rime-data-0.32.ebuild,v 1.1 2014/01/11 01:10:00 dlan Exp $
 
 EAPI=7
 
