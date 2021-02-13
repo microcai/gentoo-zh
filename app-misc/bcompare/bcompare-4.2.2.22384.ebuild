@@ -1,6 +1,5 @@
-# Copyright 2016 Chun-Yu Lee (Mat) <matlinuxer2@gmail.com>
+# Copyright 2016-2021 Chun-Yu Lee (Mat) <matlinuxer2@gmail.com>
 # Distributed under the terms of the MIT License
-# $Header: $
 
 EAPI=7
 

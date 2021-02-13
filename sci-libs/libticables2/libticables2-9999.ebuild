@@ -1,6 +1,5 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticables2/libticables2-1.3.4.ebuild,v 1.1 2013/07/09 16:42:43 bicatali Exp $
 
 EAPI=7
 

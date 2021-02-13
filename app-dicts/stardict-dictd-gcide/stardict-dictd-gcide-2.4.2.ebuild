@@ -1,6 +1,5 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 DESCRIPTION="Stardict Dictionary for Gcide.org's Gcide's Dictionary"
 DICT_PREFIX="dictd_www.dict.org_"

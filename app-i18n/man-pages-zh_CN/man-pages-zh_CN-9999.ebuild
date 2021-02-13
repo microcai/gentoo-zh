@@ -1,6 +1,5 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-zh_CN/man-pages-zh_CN-1.5.ebuild,v 1.4 2010/10/19 10:25:16 leio Exp $
 
 EAPI=7
 
