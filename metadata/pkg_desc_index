@@ -60,7 +60,7 @@ app-dicts/stardict-xdict-en-zh-big5 2.4.2: Stardict Dictionary English to Tradit
 app-dicts/stardict-xdict-en-zh-gb 2.4.2: Stardict Dictionary English to Simplified Chinese (GB)
 app-dicts/stardict-xdict-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
 app-dicts/stardict-xdict-zh-en-gb 2.4.2: Stardict Dictionary Simplified Chinese (GB) to English
-app-editors/typora 20200805: markdown editor
+app-editors/typora 0.9.98: Typora will give you a seamless experience as both a reader and a writer.
 app-editors/visual-studio-code 1.52.1: Multiplatform Visual Studio Code from Microsoft
 app-emulation/genymotion-bin 2.9.0: Complete set of tools that provide a virtual environment for Android
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
@@ -257,7 +257,7 @@ sys-fs/zfs-auto-snapshot 9999 9999-r1: Automatic snapshots for ZFS on Linux
 sys-kernel/dkms 2.2.0.3: Dynamic Kernel Module Support
 sys-kernel/e-sources 3.18.14 4.0.9 4.1.12 4.2.5 4.5.2: Full sources for the Linux kernel including: gentoo, ck and other patches
 sys-kernel/hardened-sources 4.9.29 4.9.44 4.9.52 4.9.65 4.9.74: Hardened kernel sources (kernel series 4.9)
-sys-kernel/projectc-sources 5.10.3 5.10.4 5.10.4-r1 5.10.4-r2 5.10.5 5.10.5-r1 5.10.6 5.10.7 5.10.8 5.10.8-r1 5.10.9 5.10.10 5.10.11 5.10.12 5.10.13 5.10.14 5.10.15: Full Project-C CPU Scheduler sources including the Gentoo patchset for the 5.10 kernel tree
+sys-kernel/projectc-sources 5.10.3 5.10.4 5.10.4-r1 5.10.4-r2 5.10.5 5.10.5-r1 5.10.6 5.10.7 5.10.8 5.10.8-r1 5.10.9 5.10.10 5.10.11 5.10.12 5.10.13 5.10.14 5.10.15 5.10.16: Full Project-C CPU Scheduler sources including the Gentoo patchset for the 5.10 kernel tree
 sys-kernel/xanmod-cacule-sources 5.10.1 5.10.2 5.10.3 5.10.3-r3 5.10.4 5.10.5 5.10.5-r1 5.10.6 5.10.8 5.10.9 5.10.10 5.10.12 5.10.14: Xanmod and CacULE sources including the Gentoo patchset for the 5.10 kernel tree
 sys-kernel/xanmod-uksm-sources 5.10.14 5.10.15: Xanmod and UKSM sources including the Gentoo patchset for the 5.10 kernel tree
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC

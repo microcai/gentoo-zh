@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst unpack
+DESCRIPTION=Typora will give you a seamless experience as both a reader and a writer.
+EAPI=7
+HOMEPAGE=https://typora.io
+KEYWORDS=~amd64
+LICENSE=EULA
+RDEPEND=x11-libs/libXScrnSaver
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://www.typora.io/linux/typora_0.9.98_amd64.deb
+_md5_=9cda4e62f7f60572b7bb0472ce4d6795
