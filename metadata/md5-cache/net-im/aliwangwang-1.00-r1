@@ -7,4 +7,4 @@ LICENSE=FreeWare
 RDEPEND=>=dev-qt/qtgui-4.7 >=dev-qt/qtwebkit-4.7 >=dev-qt/qtcore-4.7 >=dev-qt/qtsql-4.7 >=dev-libs/openssl-1.0 >=media-libs/fontconfig-2.8 >=media-libs/freetype-2.4 >=dev-libs/glib-2.32 >=media-libs/libpng-1.5
 SLOT=0
 SRC_URI=amd64? ( http://tookubuntu.googlecode.com/files/aliwangwang_1.00-00_amd64.deb ) x86? ( http://tookubuntu.googlecode.com/files/aliwangwang_1.00-00_i386.deb )
-_md5_=d041bc5be7f28b1bf72dfacde4c9b10a
+_md5_=03c29131d07d6654cf2955c2913bf7b7

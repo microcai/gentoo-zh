@@ -10,4 +10,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://gentoo/PhapViet47K.zip
 _eclasses_=stardict	b8bf7742af3d0e3148e996b3e955cc3d
-_md5_=3a6de6a38f0503ccfa286fe21bafb04f
+_md5_=960c71ede045a55546ab2ec52f118282

@@ -7,4 +7,4 @@ LICENSE=as-is
 RDEPEND==dev-lang/python-2*
 SLOT=0
 SRC_URI=https://raw.github.com/sickill/ascii.io-cli/master/bin/asciiio
-_md5_=29988821d5773d88c2cb44161e092874
+_md5_=e752a34c43978e935302d9ee0a3af88d

@@ -8,4 +8,4 @@ RDEPEND=x11-themes/dmz-cursor-theme x11-themes/elementary-icon-theme x11-themes/
 RESTRICT=binchecks mirror strip
 SLOT=0
 SRC_URI=https://launchpad.net/egtk/1.0/1.0/+download/eGTK.tar.gz -> eGTK-1.0.tar.gz
-_md5_=c37f955856478b2f08b9c035536cd1b5
+_md5_=7febc6cbbca48a5086382e34fc85f1e1

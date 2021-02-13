@@ -9,4 +9,4 @@ PROPERTIES=live
 RDEPEND=net-im/pidgin dev-libs/openssl sys-libs/glibc libwebp? ( media-libs/libwebp )
 SLOT=0
 _eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441
-_md5_=ffe47c507da419efba5be87d02d0c603
+_md5_=1cbc87b2d03ebaf516f2e6e75b27ed92

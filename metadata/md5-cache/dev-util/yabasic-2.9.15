@@ -7,4 +7,4 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
 SLOT=0
 SRC_URI=http://yabasic.basicprogramming.org/files/Yabasic-2.9.15.tar.gz
-_md5_=27eadb42fc826fcce8fbcab440514708
+_md5_=097531ea04fd078ae3b67d803c542516

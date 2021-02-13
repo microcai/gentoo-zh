@@ -9,4 +9,4 @@ PROPERTIES=live
 RDEPEND=x11-wm/awesome
 SLOT=0
 _eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441
-_md5_=416f767e99b52c479d6c2bb2bb3e5863
+_md5_=1a2c0b1f63e99c9d572fd2c86d058747

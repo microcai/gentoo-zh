@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=x11-misc/xclip dev-python/pywebkitgtk dev-python/python-xlib dev-python/lxml dev-python/beautifulsoup
 SLOT=0
 _eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441
-_md5_=1175d46b4bf7d83e73cde8c35951ee05
+_md5_=8de960e0117e0eb596a94edc25d9e1df

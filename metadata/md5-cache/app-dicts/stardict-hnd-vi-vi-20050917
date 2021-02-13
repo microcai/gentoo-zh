@@ -10,4 +10,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://gentoo/VietViet30K.zip
 _eclasses_=stardict	b8bf7742af3d0e3148e996b3e955cc3d
-_md5_=53c2d618a44cd68483bbc99be85c249c
+_md5_=67f37b568224f4ada5b895fdebff3a7c

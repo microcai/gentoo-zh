@@ -9,4 +9,4 @@ RDEPEND=gnome-base/libglade net-print/cups ~net-print/cndrvcups-common-lb-3.40 x
 SLOT=0
 SRC_URI=http://gdlp01.c-wss.com/gds/0/0100003440/14/linux-UFRII-drv-v340-02-usen.tar.gz
 _eclasses_=autotools	9988ecbe04129214297a7bbf3d253710	estack	055c42df72f76a4f45ec92b35e83cd56	libtool	f143db5a74ccd9ca28c1234deffede96	ltprune	4f3f2db5ce3ccbeeacdf3f94954043aa	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	versionator	d3fb3ba33acc3bbbdc4d7970227c100d
-_md5_=9810c28819e694560809440058574c05
+_md5_=657f5533a7a4b0cf42d1fd8e4574fc94

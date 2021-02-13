@@ -6,4 +6,4 @@ HOMEPAGE=http://www.zeromq.org/bindings:java
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=LGPL-3
 SLOT=0
-_md5_=2acd1090698faa13ecea795817fb42c0
+_md5_=7f915b92e4da3ddcdc93438c7e0c19bd

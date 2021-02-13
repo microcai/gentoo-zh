@@ -10,4 +10,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://gentoo/DucViet45K.zip
 _eclasses_=stardict	b8bf7742af3d0e3148e996b3e955cc3d
-_md5_=f5ddac3b80bbd5f02475d6b317ee53ff
+_md5_=8b7bec22950aa2dc7ba350af1bea7aa2

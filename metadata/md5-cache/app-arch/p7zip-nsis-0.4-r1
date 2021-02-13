@@ -7,4 +7,4 @@ LICENSE=LGPL-2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://gentoo.org.cn/distfiles/p7zip-nsis-0.4.tar.xz
-_md5_=2004ed04567e5bfa2062ef06d4a5d1fb
+_md5_=d2b17643ebc838ecd0e3ac14b573ff68

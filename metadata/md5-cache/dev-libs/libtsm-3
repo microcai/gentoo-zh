@@ -8,4 +8,4 @@ KEYWORDS=x86 arm amd64
 RDEPEND=x11-libs/libxkbcommon !<sys-apps/kmscon-8
 SLOT=0
 SRC_URI=http://freedesktop.org/software/kmscon/releases/libtsm-3.tar.xz
-_md5_=0d4cad9222eb759efc312564af4bb4a9
+_md5_=f2dcf80d085e23291d8236008a452cee

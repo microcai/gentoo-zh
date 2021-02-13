@@ -8,4 +8,4 @@ PROPERTIES=live
 RDEPEND=app-arch/rpm dev-perl/libwww-perl
 SLOT=0
 _eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441
-_md5_=e6acc6e02abd0c6e2f06eca7f7896906
+_md5_=b78ccceb3f4f67a091b67635ace4a585

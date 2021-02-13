@@ -10,4 +10,4 @@ RDEPEND=virtual/krb5 net-libs/libssh[server] sys-apps/accountsservice dev-perl/J
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/cockpit-project/cockpit/releases/download/234/cockpit-234.tar.xz https://github.com/cockpit-project/cockpit/releases/download/234/cockpit-cache-234.tar.xz
-_md5_=ff5ed45899ec5ff70a7df80ea5eefd41
+_md5_=476f40c99c9a531411710c4ca3324083
