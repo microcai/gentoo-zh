@@ -134,7 +134,6 @@ dev-lang/swig 4.0.0: Simplified Wrapper and Interface Generator
 dev-libs/granite 5.2.1: Elementary OS library that extends Gtk+
 dev-libs/libchrasis 9999.0.1.1: Library for Chinese Character Recognition As-Is
 dev-libs/libdwarf 20140208: Library to deal with DWARF Debugging Information Format
-dev-libs/libtsm 3: TSM is a state machine for DEC VT100-VT520 compatible terminal emulators.
 dev-libs/lunar-date 2.4.2: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-php/pecl-solr 2.4.0: Solr client
