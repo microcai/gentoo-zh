@@ -2,6 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<upstream>
-		<remote-id type="github">HougeLangley/Xanmod-UKSM</remote-id>
+		<remote-id type="github">xanmod/linux-cacule</remote-id>
 	</upstream>
 </pkgmetadata>
