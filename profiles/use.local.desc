@@ -25,7 +25,6 @@ media-sound/feeluown:netease - add netease cloud music support for feeluown
 media-sound/feeluown:qqmusic - add qq music support for feeluown
 media-sound/feeluown:webengine - add support to login via web page
 media-sound/feeluown:xiami - add xiami music support for feeluown
-media-video/simplescreenrecorder:vpx - Enables vp8 codec support using libvpx from ffmpeg/libav
 net-misc/xmuruijie:firewall - Add support for iptables firewall
 net-proxy/make-proxy:client - Add make proxy client support
 net-proxy/make-proxy:server - Add make proxy server support

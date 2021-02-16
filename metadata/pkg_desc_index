@@ -189,7 +189,6 @@ media-sound/feeluown 3.7.3: A user-friendly and hackable music player
 media-sound/linnya 2.2.0: A free music player
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/lightworks 2020.1-r3 2021.1-r1: Lightworks is the fastest, most accessible and focused NLE in the industry
-media-video/simplescreenrecorder 0.3.3-r1 9999: A Simple Screen Recorder
 media-video/tenvideo 1.0.10: Tencent videos
 net-dialup/mentohust 9999: A Ruijie and Cernet supplicant on Linux and MacOS
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
@@ -221,7 +220,6 @@ net-p2p/n2n 2.6: A Layer Two Peer-to-Peer VPN
 net-print/cndrvcups-common-lb 3.40-r1: Common files for Canon drivers
 net-print/cndrvcups-lb 3.40-r1: Canon UFR II / LIPSLX Printer Driver for Linux
 net-print/cups-tsc 0.1.26: The driver of TSC printers for Linux and CUPS
-net-print/hplip-plugin 3.14.1: Binary plugin for HPs hplip printer driver library
 net-proxy/lantern-bin 3.0.4: A free desktop application that delivers fast, reliable and secure access to the open Internet for users in censored regions.
 net-proxy/libQtShadowsocks 2.1.0: A lightweight and ultra-fast shadowsocks library written in C++/Qt
 net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
