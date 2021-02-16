@@ -24,7 +24,6 @@ KEYWORDS="~amd64"
 src_prepare() {
 
     eapply "${FILESDIR}/UKSM.patch"
-    eapply "${FILESDIR}/0011-00-Makefile.patch"
     
 	kernel-2-src-prepare-overlay_src_prepare
 
