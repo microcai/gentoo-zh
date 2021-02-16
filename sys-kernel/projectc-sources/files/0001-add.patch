@@ -1,3 +1,18 @@
+From 5ec2dd3a095442ec1a21d86042a4994f2ba24e63 Mon Sep 17 00:00:00 2001
+Message-Id: <5ec2dd3a095442ec1a21d86042a4994f2ba24e63.1512651251.git.jan.steffens@gmail.com>
+From: Serge Hallyn <serge.hallyn@canonical.com>
+Date: Fri, 31 May 2013 19:12:12 +0100
+Subject: [PATCH] add sysctl to disallow unprivileged CLONE_NEWUSER by default
+
+Signed-off-by: Serge Hallyn <serge.hallyn@ubuntu.com>
+[bwh: Remove unneeded binary sysctl bits]
+Signed-off-by: Daniel Micay <danielmicay@gmail.com>
+---
+ kernel/fork.c           | 15 +++++++++++++++
+ kernel/sysctl.c         | 12 ++++++++++++
+ kernel/user_namespace.c |  3 +++
+ 3 files changed, 30 insertions(+)
+
 diff --git a/kernel/fork.c b/kernel/fork.c
 index 07cc743698d3668e..4011d68a8ff9305c 100644
 --- a/kernel/fork.c

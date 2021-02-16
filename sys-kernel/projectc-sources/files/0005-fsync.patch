@@ -1,3 +1,77 @@
+From 7b5df0248ce255ef5b7204d65a7b3783ebb76a3d Mon Sep 17 00:00:00 2001
+From: Gabriel Krisman Bertazi <krisman@collabora.com>
+Date: Fri, 13 Dec 2019 11:08:02 -0300
+Subject: [PATCH 1/2] futex: Implement mechanism to wait on any of several
+ futexes
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+This is a new futex operation, called FUTEX_WAIT_MULTIPLE, which allows
+a thread to wait on several futexes at the same time, and be awoken by
+any of them.  In a sense, it implements one of the features that was
+supported by pooling on the old FUTEX_FD interface.
+
+The use case lies in the Wine implementation of the Windows NT interface
+WaitMultipleObjects. This Windows API function allows a thread to sleep
+waiting on the first of a set of event sources (mutexes, timers, signal,
+console input, etc) to signal.  Considering this is a primitive
+synchronization operation for Windows applications, being able to quickly
+signal events on the producer side, and quickly go to sleep on the
+consumer side is essential for good performance of those running over Wine.
+
+Wine developers have an implementation that uses eventfd, but it suffers
+from FD exhaustion (there is applications that go to the order of
+multi-milion FDs), and higher CPU utilization than this new operation.
+
+The futex list is passed as an array of `struct futex_wait_block`
+(pointer, value, bitset) to the kernel, which will enqueue all of them
+and sleep if none was already triggered. It returns a hint of which
+futex caused the wake up event to userspace, but the hint doesn't
+guarantee that is the only futex triggered.  Before calling the syscall
+again, userspace should traverse the list, trying to re-acquire any of
+the other futexes, to prevent an immediate -EWOULDBLOCK return code from
+the kernel.
+
+This was tested using three mechanisms:
+
+1) By reimplementing FUTEX_WAIT in terms of FUTEX_WAIT_MULTIPLE and
+running the unmodified tools/testing/selftests/futex and a full linux
+distro on top of this kernel.
+
+2) By an example code that exercises the FUTEX_WAIT_MULTIPLE path on a
+multi-threaded, event-handling setup.
+
+3) By running the Wine fsync implementation and executing multi-threaded
+applications, in particular modern games, on top of this implementation.
+
+Changes were tested for the following ABIs: x86_64, i386 and x32.
+Support for x32 applications is not implemented since it would
+take a major rework adding a new entry point and splitting the current
+futex 64 entry point in two and we can't change the current x32 syscall
+number without breaking user space compatibility.
+
+CC: Steven Rostedt <rostedt@goodmis.org>
+Cc: Richard Yao <ryao@gentoo.org>
+Cc: Thomas Gleixner <tglx@linutronix.de>
+Cc: Peter Zijlstra <peterz@infradead.org>
+Co-developed-by: Zebediah Figura <z.figura12@gmail.com>
+Signed-off-by: Zebediah Figura <z.figura12@gmail.com>
+Co-developed-by: Steven Noonan <steven@valvesoftware.com>
+Signed-off-by: Steven Noonan <steven@valvesoftware.com>
+Co-developed-by: Pierre-Loup A. Griffais <pgriffais@valvesoftware.com>
+Signed-off-by: Pierre-Loup A. Griffais <pgriffais@valvesoftware.com>
+Signed-off-by: Gabriel Krisman Bertazi <krisman@collabora.com>
+[Added compatibility code]
+Co-developed-by: André Almeida <andrealmeid@collabora.com>
+Signed-off-by: André Almeida <andrealmeid@collabora.com>
+
+Adjusted for v5.9: Removed `put_futex_key` calls.
+---
+ include/uapi/linux/futex.h |  20 +++
+ kernel/futex.c             | 352 ++++++++++++++++++++++++++++++++++++-
+ 2 files changed, 370 insertions(+), 2 deletions(-)
+
 diff --git a/include/uapi/linux/futex.h b/include/uapi/linux/futex.h
 index a89eb0accd5e2..580001e89c6ca 100644
 --- a/include/uapi/linux/futex.h
