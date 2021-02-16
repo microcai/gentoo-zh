@@ -8,27 +8,12 @@ app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Fl
 app-crypt/yubico-piv-tool 1.4.2: The Yubico PIV Tool allows you to configure a PIV-enabled YubiKey through a command line interface.
 app-dicts/stardict-21shijishuangxiangcidian-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
 app-dicts/stardict-21shijishuangyukejicidian-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
-app-dicts/stardict-cdict-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
-app-dicts/stardict-cdict-en-zh-gb 2.4.2: Stardict Dictionary English to Simplified Chinese (GB)
-app-dicts/stardict-cedict-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
-app-dicts/stardict-cedict-zh-en-gb 2.4.2: Stardict Dictionary Simplified Chinese (GB) to English
-app-dicts/stardict-dictd-devils 2.4.2: Stardict Dictionary for Dictd.org's Devil's Dictionary
 app-dicts/stardict-dictd-elements 2.4.2: Stardict Dictionary for Gcide.org's Elements's Dictionary
 app-dicts/stardict-dictd-gazetteer 2.4.2: Stardict Dictionary for Gcide.org's Gazetteer's Dictionary
 app-dicts/stardict-dictd-gcide 2.4.2: Stardict Dictionary for Gcide.org's Gcide's Dictionary
 app-dicts/stardict-dictd-hitchcock 2.4.2: Stardict Dictionary for Gcide.org's Hitchcock's Dictionary
 app-dicts/stardict-dictd-wn 2.4.2: Stardict Dictionary for Gcide.org's Wn's Dictionary
 app-dicts/stardict-dictd-world95 2.4.2: Stardict Dictionary for Gcide.org's Devil's Dictionary
-app-dicts/stardict-freedict-eng-deu 2.4.2: Stardict Dictionary English to German
-app-dicts/stardict-freedict-eng-fra 2.4.2: Stardict Dictionary English to French
-app-dicts/stardict-freedict-eng-ita 2.4.2: Stardict Dictionary English to Italian
-app-dicts/stardict-freedict-eng-lat 2.4.2: Stardict Dictionary English to Latin
-app-dicts/stardict-freedict-eng-rus 2.4.2: Stardict Dictionary English to Russian
-app-dicts/stardict-freedict-eng-spa 2.4.2: Stardict Dictionary English to Spanish
-app-dicts/stardict-freedict-eng-swe 2.4.2: Stardict Dictionary English to Swedish
-app-dicts/stardict-freedict-eng-tur 2.4.2: Stardict Dictionary English to Turkish
-app-dicts/stardict-freedict-tur-deu 2.4.2: Stardict Dictionary Turkish to German
-app-dicts/stardict-freedict-tur-eng 2.4.2: Stardict Dictionary Turkish to English
 app-dicts/stardict-hnd-de-vi 20050917: Stardict Dictionary German to Vietnamese
 app-dicts/stardict-hnd-en-vi 20050917: Stardict Dictionary English to Vietnamese
 app-dicts/stardict-hnd-fr-vi 20050917: Stardict Dictionary French to Vietnamese
@@ -37,29 +22,16 @@ app-dicts/stardict-hnd-vi-de 20050917: Stardict Dictionary Vietnamese to German
 app-dicts/stardict-hnd-vi-en 20050917: Stardict Dictionary Vietnamese to English
 app-dicts/stardict-hnd-vi-fr 20050917: Stardict Dictionary Vietnamese to French
 app-dicts/stardict-hnd-vi-vi 20050917: Stardict Dictionary Vietnamese to Vietnamese
-app-dicts/stardict-jmdict-en-ja 2.4.2-r1: Stardict Dictionary English to Japanese
-app-dicts/stardict-jmdict-ja-en 2.4.2-r1: Stardict Dictionary Japanese to English
 app-dicts/stardict-kdic-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
 app-dicts/stardict-langdao-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
-app-dicts/stardict-langdao-en-zh-gb 2.4.2: Stardict Dictionary English to Simplified Chinese (GB)
 app-dicts/stardict-langdao-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
-app-dicts/stardict-langdao-zh-en-gb 2.4.2: Stardict Dictionary Simplified Chinese (GB) to English
 app-dicts/stardict-lazyworm-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
 app-dicts/stardict-lazyworm-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
-app-dicts/stardict-mova-smiley 2.4.2: Stardict Dictionary for Mova.org's Smiley Dictionary
 app-dicts/stardict-oxford-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
-app-dicts/stardict-oxford-en-zh-gb 2.4.2: Stardict Dictionary English to Simplified Chinese (GB)
 app-dicts/stardict-quick-eng-eng 2.4.2: Stardict Dictionary English to French
 app-dicts/stardict-quick-eng-fra 2.4.2: Stardict Dictionary English to French
-app-dicts/stardict-quick-eng-jpn 2.4.2: Stardict Dictionary English to Japanese Romaji
-app-dicts/stardict-quick-jpn-eng 2.4.2: Stardict Dictionary Japanese Romaji to English
-app-dicts/stardict-quick-ru-en 2.4.2: Quick but still useful Russian to English dictionary
 app-dicts/stardict-soothill-buddhist-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
 app-dicts/stardict-wyabdcrealpeopletts 1.0: 
-app-dicts/stardict-xdict-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
-app-dicts/stardict-xdict-en-zh-gb 2.4.2: Stardict Dictionary English to Simplified Chinese (GB)
-app-dicts/stardict-xdict-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
-app-dicts/stardict-xdict-zh-en-gb 2.4.2: Stardict Dictionary Simplified Chinese (GB) to English
 app-editors/typora 0.9.98: Typora will give you a seamless experience as both a reader and a writer.
 app-editors/visual-studio-code 1.52.1: Multiplatform Visual Studio Code from Microsoft
 app-emulation/genymotion-bin 2.9.0: Complete set of tools that provide a virtual environment for Android
