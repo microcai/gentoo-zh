@@ -33,7 +33,7 @@ app-dicts/stardict-quick-eng-fra 2.4.2: Stardict Dictionary English to French
 app-dicts/stardict-soothill-buddhist-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
 app-dicts/stardict-wyabdcrealpeopletts 1.0: 
 app-editors/typora 0.9.98: Typora will give you a seamless experience as both a reader and a writer.
-app-editors/visual-studio-code 1.52.1: Multiplatform Visual Studio Code from Microsoft
+app-editors/visual-studio-code 1.53.2: Multiplatform Visual Studio Code from Microsoft
 app-emulation/genymotion-bin 2.9.0: Complete set of tools that provide a virtual environment for Android
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/cldr-emoji-annotation 36.12.120191002-r0 9999: Emoji annotation files in CLDR
