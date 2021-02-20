@@ -15,8 +15,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND="${DEPEND}
-	|| ( net-proxy/v2ray net-proxy/v2ray )"
+RDEPEND="${DEPEND}"
 BDEPEND=""
 
 S="${WORKDIR}/v2-ui"
