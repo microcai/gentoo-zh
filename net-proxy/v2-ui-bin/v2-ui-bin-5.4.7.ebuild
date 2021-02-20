@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}
-	net-proxy/v2ray-bin"
+	|| ( net-proxy/v2ray net-proxy/v2ray )"
 BDEPEND=""
 
 S="${WORKDIR}/v2-ui"
