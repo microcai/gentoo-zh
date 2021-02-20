@@ -204,7 +204,6 @@ net-proxy/qvplugin-trojan 2.0.0 99999: Plugin for Qv2ray to support Trojan proxy
 net-proxy/shadowsocks 9999: A fast tunnel proxy that helps you bypass firewalls
 net-proxy/shadowsocks-qt5 3.0.1: Shadowsocks-Qt5 is a native and cross-platform shadowsocks GUI client with advanced features.
 net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
-net-proxy/simple-obfs 0.0.5: A simple obfuscating tool
 net-proxy/smartproxy 0.9.4: A fast, proxy smart selector
 net-proxy/v2-ui-bin 5.4.7: A Control Panel for v2ray
 net-proxy/v2ray 4.33.0 4.34.0: A platform for building proxies to bypass network restrictions.
