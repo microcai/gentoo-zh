@@ -210,7 +210,6 @@ sci-libs/libticables2 9999: Library to handle different link cables for TI calcu
 sci-libs/libticalcs2 9999: Library for communication with TI calculators
 sci-libs/libticonv 9999: Charset conversion library for TI calculators
 sci-libs/libtifiles2 9999: Library for TI calculator files
-sys-apps/inxi 2.2.19: A newer, better system information script for irc, administration, and system troubleshooters.
 sys-apps/mdp 9999: A command-line based markdown presentation tool
 sys-apps/yaourt 1.2.2: A pacman wrapper with extended features and AUR support
 sys-boot/grub-efi 0.97-r84: GNU GRUB Legacy boot loader
@@ -245,7 +244,6 @@ x11-misc/fqterm 0.9.8.3.4 9999: a modern terminal emulator for Linux
 x11-misc/i3lock-color 9999: An improved i3lock
 x11-misc/i3lock-fancy 9999: A fancy i3lock
 x11-misc/lightdm-slick-greeter 1.4.1 9999: LightDM greeter forked from Unity by Linux Mint team
-x11-misc/synergy 1.10.3: Lets you easily share a single mouse and keyboard between multiple computers
 x11-plugins/vicious 2.1.3 9999: Modular widget library for x11-wm/awesome
 x11-terms/termite 9999: A keyboard-centric VTE-based terminal
 x11-terms/vte-ng 9999: An enhanced terminal emulator widget
