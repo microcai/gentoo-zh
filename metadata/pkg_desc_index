@@ -101,7 +101,6 @@ app-vim/powerline 9999: vim plugin: The ultimate vim statusline utility.
 dev-cpp/ETL 0.04.22: ETL is a multi-platform class and template library
 dev-cpp/cppformat 1.1.0: Small, safe and fast formatting library for C++
 dev-db/dbdesigner 4.0.5.4: DBDesigner 4 is a visual database design system that integrates database design, modeling, creation and maintenance.
-dev-lang/scala-bin 2.12.8 2.13.0: The Scala Programming Language
 dev-lang/swig 4.0.0: Simplified Wrapper and Interface Generator
 dev-libs/granite 5.2.1: Elementary OS library that extends Gtk+
 dev-libs/libchrasis 9999.0.1.1: Library for Chinese Character Recognition As-Is
