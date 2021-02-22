@@ -122,7 +122,6 @@ dev-qt/qtxcb-private-headers 5.13.2 5.14.1: The Private Headers for the Qt5 Xcb
 dev-ruby/mruby 1.0.0 9999: mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
 dev-util/arch-install-scripts 20: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
 dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 files
-dev-util/ccls 0.20190314.1: C/C++/ObjC language server protocol implementation
 dev-util/elfembed 0.3: Resource Compiler for ELF binaries
 dev-util/fernflower 1: Fernflower is the first actually working analytical decompiler for Java and probably for a high-level programming language in general
 dev-util/global 6.3.4: GNU Global is a tag system to find the locations of a specified object in various sources
