@@ -39,7 +39,6 @@ app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/cldr-emoji-annotation 36.12.120191002-r0 9999: Emoji annotation files in CLDR
 app-i18n/dvp 1.2.1: The kbd keymap for Programmer Dvorak.
 app-i18n/fbterm-ucimf 0.2.3 0.2.5 0.2.6 0.2.7 0.2.8 0.2.9: UCIMF input method support for FbTerm
-app-i18n/fcitx-unikey 0.2.2: unikey support for fcitx.
 app-i18n/fcitx5 5.0.5 9999: Fcitx5 Next generation of fcitx
 app-i18n/fcitx5-chinese-addons 5.0.4 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
 app-i18n/fcitx5-configtool 5.0.3 9999: Configuration module for Fcitx
@@ -56,11 +55,8 @@ app-i18n/ibus-xkb 1.4.99.20120525:
 app-i18n/jfbterm 0.4.7-r4: The J Framebuffer Terminal/Multilingual Enhancement with UTF-8 support
 app-i18n/libgooglepinyin 0.1.2: A fork from google pinyin on android
 app-i18n/libime 1.0.3-r1 9999: Fcitx5 Next generation of fcitx
-app-i18n/libpinyin 1.0.0: Library to deal with Pinyin.
-app-i18n/librime 1.6.1: RIME (Rime Input Method Engine) core library
 app-i18n/lunar 2.2-r4: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
-app-i18n/rime-data 0.32 9999: Brise, data resource for Rime Input Method Engine
 app-i18n/scim-array 1.0.0 1.0.1: Array Input Method for SCIM
 app-i18n/scim-chewing 0.5.1: Chewing Input Method for SCIM
 app-i18n/scim-chrasis 9999.0.0.1: Chrasis SCIM binding for chinese character recognition.
@@ -73,7 +69,6 @@ app-misc/freefilesync 5.6: Visual folder comparison and synchronization
 app-misc/gpick 0.2.5: Advanced color picker written in C++ using GTK+ toolkit
 app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience within the shell
 app-misc/nixnote 2.1.6: Nixnote - A clone of Evernote for Linux
-app-misc/screen 4.2.1-r2: Full-screen window manager that multiplexes physical terminals between several processes
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/wink 1.5: A Tutorial and Presentation creation software, primarily aimed at creating tutorials on how to use software
 app-mobilephone/scrcpy 1.14: Display and control your Android device
@@ -101,7 +96,6 @@ app-vim/powerline 9999: vim plugin: The ultimate vim statusline utility.
 dev-cpp/ETL 0.04.22: ETL is a multi-platform class and template library
 dev-cpp/cppformat 1.1.0: Small, safe and fast formatting library for C++
 dev-db/dbdesigner 4.0.5.4: DBDesigner 4 is a visual database design system that integrates database design, modeling, creation and maintenance.
-dev-lang/swig 4.0.0: Simplified Wrapper and Interface Generator
 dev-libs/granite 5.2.1: Elementary OS library that extends Gtk+
 dev-libs/libchrasis 9999.0.1.1: Library for Chinese Character Recognition As-Is
 dev-libs/libdwarf 20140208: Library to deal with DWARF Debugging Information Format
