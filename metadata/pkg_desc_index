@@ -205,17 +205,15 @@ sci-libs/libtifiles2 9999: Library for TI calculator files
 sys-apps/mdp 9999: A command-line based markdown presentation tool
 sys-apps/yaourt 1.2.2: A pacman wrapper with extended features and AUR support
 sys-boot/grub-efi 0.97-r84: GNU GRUB Legacy boot loader
-sys-devel/gdb 7.1: GNU debugger
 sys-devel/ucc 1.1-r0: UCC is an ANSI C Compiler
 sys-fs/coda 7.0.5: Coda is an advanced network file system, similar to NFS
 sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/yaffs2utils 0.3.0: Utilities to create/extract a yaffs2 image on Linux
-sys-fs/zfs-auto-snapshot 9999 9999-r1: Automatic snapshots for ZFS on Linux
 sys-kernel/dkms 2.2.0.3: Dynamic Kernel Module Support
 sys-kernel/e-sources 3.18.14 4.0.9 4.1.12 4.2.5 4.5.2: Full sources for the Linux kernel including: gentoo, ck and other patches
 sys-kernel/hardened-sources 4.9.29 4.9.44 4.9.52 4.9.65 4.9.74: Hardened kernel sources (kernel series 4.9)
-sys-kernel/projectc-sources 5.11.0: Full Project-C CPU Scheduler sources including the Gentoo patchset for the 5.11 kernel tree
+sys-kernel/projectc-sources 5.11.0 5.11.1: Full Project-C CPU Scheduler sources including the Gentoo patchset for the 5.11 kernel tree
 sys-kernel/xanmod-cacule-sources 5.10.1 5.10.2 5.10.3 5.10.3-r3 5.10.4 5.10.5 5.10.5-r1 5.10.6 5.10.8 5.10.9 5.10.10 5.10.12 5.10.14 5.10.16: Xanmod and CacULE sources including the Gentoo patchset for the 5.10 kernel tree
 sys-kernel/xanmod-uksm-sources 5.11.0 5.11.1: Xanmod and UKSM sources including the Gentoo patchset for the 5.11 kernel tree
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
@@ -236,7 +234,7 @@ x11-misc/fqterm 0.9.8.3.4 9999: a modern terminal emulator for Linux
 x11-misc/i3lock-color 9999: An improved i3lock
 x11-misc/i3lock-fancy 9999: A fancy i3lock
 x11-misc/lightdm-slick-greeter 1.4.1 9999: LightDM greeter forked from Unity by Linux Mint team
-x11-plugins/vicious 2.1.3 9999: Modular widget library for x11-wm/awesome
+x11-plugins/vicious 9999: Modular widget library for x11-wm/awesome
 x11-terms/termite 9999: A keyboard-centric VTE-based terminal
 x11-terms/vte-ng 9999: An enhanced terminal emulator widget
 x11-themes/gnome-themes-egtk 1.0: The official elementary GTK theme designed to be smooth, attractive, fast, and usable.
