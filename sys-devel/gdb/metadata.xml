@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>toolchain</herd>
-<use>
- <flag name='multitarget'>Support all known targets in one gdb binary</flag>
-</use>
-</pkgmetadata>
