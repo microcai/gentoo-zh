@@ -51,7 +51,6 @@ app-i18n/ibus-handwrite 2.1.4: hand write recognition/input using ibus IM engine
 app-i18n/ibus-rime 9999: Rime Input Method Engine for IBus Framework
 app-i18n/ibus-t9 2.1.0.20100601: T9 input engine using ibus
 app-i18n/ibus-xkb 1.4.99.20120525: 
-app-i18n/jfbterm 0.4.7-r4: The J Framebuffer Terminal/Multilingual Enhancement with UTF-8 support
 app-i18n/libgooglepinyin 0.1.2: A fork from google pinyin on android
 app-i18n/libime 1.0.3-r1 9999: Fcitx5 Next generation of fcitx
 app-i18n/lunar 2.2-r4: Chinese Lunar Calendar conversion utility
