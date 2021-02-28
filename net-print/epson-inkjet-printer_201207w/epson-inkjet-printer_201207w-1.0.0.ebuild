@@ -1,8 +1,7 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI=5
+EAPI=7
 
 inherit rpm autotools
 
@@ -26,6 +25,7 @@ S="${WORKDIR}/epson-inkjet-printer-filter-${PV}"
 src_prepare() {
 	eautoreconf
 	chmod +x configure
+	eapply_user
 }
 
 src_configure() {
@@ -47,7 +47,7 @@ src_install() {
 	done
 
 	insinto /usr/share/cups/model/${MY_PN}
-	doins ../${MY_PN}-${PV}/ppds/* 
+	doins ../${MY_PN}-${PV}/ppds/*
 
 	dodoc AUTHORS COPYING COPYING.LIB COPYING.EPSON
 	dodoc ../${MY_PN}-${PV}/{Manual.txt,README}
