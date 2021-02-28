@@ -2,8 +2,6 @@ acct-group/cockpit-ws 0: Group for the cockpit server
 acct-user/cockpit-ws 0: User for the cockpit server
 app-admin/cockpit 234: A systemd web based user interface for Linux server
 app-admin/eselect-xim 0.8 0.9 0.9.1: Manages Input Method of X
-app-arch/p7zip-nsis 0.4-r1: A binary version of p7zip to decompress nsis. Latest version of p7zip doesn't decompress some nsis.
-app-arch/unzip 6.10_beta: unzipper for pkzip-compressed files
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-crypt/yubico-piv-tool 1.4.2: The Yubico PIV Tool allows you to configure a PIV-enabled YubiKey through a command line interface.
 app-dicts/stardict-21shijishuangxiangcidian-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
@@ -143,7 +141,6 @@ media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simpl
 media-libs/libuninameslist 20140731 20190701: Library of unicode annotation data
 media-plugins/audacious-mac 0.2.0 0.3.10: Monkey's Audio Codec plugin for audacious
 media-plugins/gimp-gap 2.6.0: Gimp Animation Package
-media-plugins/gst-plugins-meta 0.10-r8: Meta ebuild to pull in gst plugins for apps
 media-plugins/osdlyrics 9999 20200403: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-sound/audio-convert-mod 3.45.2: A simple audio file converter supporting many formats
 media-sound/cue2tracks 0.2.16: Bash script for split audio CD image files with cue sheet to tracks and write tags.
