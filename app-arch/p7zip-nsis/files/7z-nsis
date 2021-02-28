@@ -1,2 +1,0 @@
-#!/bin/sh
-exec /opt/p7zip-nsis/7z-nsis "$@"
