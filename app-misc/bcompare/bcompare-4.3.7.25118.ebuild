@@ -16,11 +16,13 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="mirror"
-RDEPEND="
-	dev-qt/qtgui:4
-	dev-qt/qtcore:4
+RDEPEND=""
+QA_PRESTRIPPED="
+	/opt/${PN}/lib/beyondcompare/lib7z.so
+	/opt/${PN}/lib/beyondcompare/BCompare
+	/opt/${PN}/lib/beyondcompare/qt4/libQtGui.so.4
+	/opt/${PN}/lib/beyondcompare/qt4/libQtCore.so.4
 "
-
 
 src_unpack() {
 	unpack ${A}
