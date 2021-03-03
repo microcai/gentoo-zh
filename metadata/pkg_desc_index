@@ -1,7 +1,6 @@
 acct-group/cockpit-ws 0: Group for the cockpit server
 acct-user/cockpit-ws 0: User for the cockpit server
 app-admin/cockpit 234: A systemd web based user interface for Linux server
-app-admin/eselect-xim 0.8 0.9 0.9.1: Manages Input Method of X
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-dicts/stardict-21shijishuangxiangcidian-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
 app-dicts/stardict-21shijishuangyukejicidian-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
