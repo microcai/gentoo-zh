@@ -1,5 +1,0 @@
-export XMODIFIERS="@im=GCIN"
-#export GTK_IM_MODULE=xim
-export GTK_IM_MODULE=gcin
-export QT_IM_MODULE=gcin
-export QT4_IM_MODULE=gcin
