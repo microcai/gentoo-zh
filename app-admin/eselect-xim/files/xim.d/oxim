@@ -1,5 +1,0 @@
-#export XMODIFIERS="@im=oxim"
-#export GTK_IM_MODULE=oxim
-#export QT_IM_MODULE=oxim
-#export QT4_IM_MODULE=oxim
-source /etc/X11/xinit/xinput.d/oxim
