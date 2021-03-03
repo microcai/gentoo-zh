@@ -1,5 +1,0 @@
-export XMODIFIERS="@im=hime"
-#export GTK_IM_MODULE=xim
-export GTK_IM_MODULE=hime
-export QT_IM_MODULE=hime
-export QT4_IM_MODULE=hime
