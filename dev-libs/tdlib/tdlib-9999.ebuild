@@ -30,8 +30,18 @@ BUILD_DIR="${S}/build"
 
 src_configure(){
 	mkdir ${BUILD_DIR} && cd ${BUILD_DIR} || die
-	cmake -GNinja \
+	cmake \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DCMAKE_INSTALL_LIBDIR=$(get_libdir) ${S} || die "cmake failed"
+}
+
+src_compile(){
+	cd ${BUILD_DIR} || die
+	emake || dile
+}
+
+src_install(){
+	cd ${BUILD_DIR} || die
+	emake DESTDIR="${D}" install || die
 }
