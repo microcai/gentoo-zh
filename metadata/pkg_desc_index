@@ -102,6 +102,7 @@ dev-util/rust-analyzer 20200928: An experimental Rust compiler front-end for IDE
 dev-util/yabasic 2.9.15: Yet Another BASIC
 games-board/othello 0.2.0 0.2.1: Othello is a classic strategy game, also known as Reversi
 games-misc/fortune-mod-zh 1.2.2: Chinese fortune shell script
+gnome-extra/sushi 3.38.0: A quick previewer for Nautilus, the GNOME file manager
 kde-misc/imageshack-upload 0.5: A service menu tor upload images on Imageshack.
 kde-misc/plasma-applet-netspeed-widget 1.8-r1 9999: Plasma 5 widget that displays the currently used network bandwidth.
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
