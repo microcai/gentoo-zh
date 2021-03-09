@@ -2,14 +2,6 @@ acct-group/cockpit-ws 0: Group for the cockpit server
 acct-user/cockpit-ws 0: User for the cockpit server
 app-admin/cockpit 234: A systemd web based user interface for Linux server
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
-app-dicts/stardict-21shijishuangxiangcidian-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
-app-dicts/stardict-21shijishuangyukejicidian-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
-app-dicts/stardict-dictd-elements 2.4.2: Stardict Dictionary for Gcide.org's Elements's Dictionary
-app-dicts/stardict-dictd-gazetteer 2.4.2: Stardict Dictionary for Gcide.org's Gazetteer's Dictionary
-app-dicts/stardict-dictd-gcide 2.4.2: Stardict Dictionary for Gcide.org's Gcide's Dictionary
-app-dicts/stardict-dictd-hitchcock 2.4.2: Stardict Dictionary for Gcide.org's Hitchcock's Dictionary
-app-dicts/stardict-dictd-wn 2.4.2: Stardict Dictionary for Gcide.org's Wn's Dictionary
-app-dicts/stardict-dictd-world95 2.4.2: Stardict Dictionary for Gcide.org's Devil's Dictionary
 app-dicts/stardict-hnd-de-vi 20050917: Stardict Dictionary German to Vietnamese
 app-dicts/stardict-hnd-en-vi 20050917: Stardict Dictionary English to Vietnamese
 app-dicts/stardict-hnd-fr-vi 20050917: Stardict Dictionary French to Vietnamese
@@ -18,15 +10,7 @@ app-dicts/stardict-hnd-vi-de 20050917: Stardict Dictionary Vietnamese to German
 app-dicts/stardict-hnd-vi-en 20050917: Stardict Dictionary Vietnamese to English
 app-dicts/stardict-hnd-vi-fr 20050917: Stardict Dictionary Vietnamese to French
 app-dicts/stardict-hnd-vi-vi 20050917: Stardict Dictionary Vietnamese to Vietnamese
-app-dicts/stardict-kdic-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
-app-dicts/stardict-langdao-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
-app-dicts/stardict-langdao-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
-app-dicts/stardict-lazyworm-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
-app-dicts/stardict-lazyworm-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
-app-dicts/stardict-oxford-en-zh-big5 2.4.2: Stardict Dictionary English to Traditional Chinese (BIG5)
-app-dicts/stardict-quick-eng-eng 2.4.2: Stardict Dictionary English to French
 app-dicts/stardict-quick-eng-fra 2.4.2: Stardict Dictionary English to French
-app-dicts/stardict-soothill-buddhist-zh-en-big5 2.4.2: Stardict Dictionary Traditional Chinese (BIG5) to English
 app-dicts/stardict-wyabdcrealpeopletts 1.0: 
 app-editors/typora 0.9.98: Typora will give you a seamless experience as both a reader and a writer.
 app-editors/visual-studio-code 1.53.2: Multiplatform Visual Studio Code from Microsoft
@@ -211,7 +195,6 @@ sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions 
 sys-libs/libixp 9999: Standalone client/server 9P library
 virtual/linux-sources 1: Virtual for Linux kernel sources
 virtual/openvg 1.1: OpenVG is an API designed for hardware-accelerated 2D vector graphics.
-www-plugins/115upload 1.5.7.0: 115.com big file upload control
 www-plugins/aliedit 1.0.3.20: 支付宝安全控件对密码输入进行保护
 www-plugins/upeditor 1.0.0.6: unionpay security control plugin
 www-servers/bashttpd 0.1-r1: Simple HTTP Daemon Written in BASH
