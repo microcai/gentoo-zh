@@ -1,8 +1,0 @@
-[Service]
-
-User=www
-Group=root
-WorkingDirectory=/usr/portage
-StandardInput=socket
-StandardOutput=socket
-ExecStart=-/usr/bin/bashttpd
