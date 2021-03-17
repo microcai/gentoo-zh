@@ -51,7 +51,6 @@ app-misc/wink 1.5: A Tutorial and Presentation creation software, primarily aime
 app-mobilephone/scrcpy 1.14: Display and control your Android device
 app-office/wps-office 11.1.0.9719: WPS Office is an office productivity suite
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
-app-portage/findcruft 1.0.4-r1: Yet another script to find obsolete files
 app-portage/portage-cdb 0.2.1: increase portage's speed after syncing, and for calculating dependencies. This method uses a database, rather than a bunch of flat files to store its metadata.
 app-text/asciiio 1: No nonsense asciicasting for serious hackers
 app-text/groff-utf8 0-r1: GNU groff wrapper allowing UTF-8 input
