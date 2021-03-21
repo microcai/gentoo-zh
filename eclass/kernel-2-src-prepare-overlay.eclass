@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: kernel-2-src-prepare-overlay.eclass
@@ -1149,7 +1149,7 @@ unipatch() {
 		if echo ${i} | grep -qs -e "\.tar" -e "\.tbz" -e "\.tgz" ; then
 			if [ -n "${UNIPATCH_STRICTORDER}" ]; then
 				unset z
-				STRICT_COUNT=$((10#${STRICT_COUNT} + 1))
+				STRICT_COUNT=$((10#${STRICT_COUNT:=0} + 1))
 				for((y=0; y<$((6 - ${#STRICT_COUNT})); y++));
 					do z="${z}0";
 				done
@@ -1198,7 +1198,7 @@ unipatch() {
 
 				if [ -n "${UNIPATCH_STRICTORDER}" ]; then
 					unset z
-					STRICT_COUNT=$((10#${STRICT_COUNT} + 1))
+					STRICT_COUNT=$((10#${STRICT_COUNT:=0} + 1))
 					for((y=0; y<$((6 - ${#STRICT_COUNT})); y++));
 						do z="${z}0";
 					done
