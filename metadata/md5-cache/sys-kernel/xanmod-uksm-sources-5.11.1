@@ -3,6 +3,7 @@ DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 sys-devel/bison 
 DESCRIPTION=Xanmod and UKSM sources including the Gentoo patchset for the 5.11 kernel tree
 EAPI=6
 HOMEPAGE=https://xanmod.org/
+INHERIT=kernel-2-src-prepare-overlay
 IUSE=symlink build
 KEYWORDS=~amd64
 LICENSE=GPL-2 CDDL
@@ -10,5 +11,5 @@ RDEPEND=!build? ( dev-lang/perl sys-devel/bc sys-devel/make >=sys-libs/ncurses-5
 RESTRICT=binchecks strip
 SLOT=5.11.1
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.11.tar.xz https://github.com/HougeLangley/customkernel/releases/download/Kernel-v5.11.x/0001-patch-5.11.1-xanmod1.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.11-1.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.11-1.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.11-1.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.11-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.11-1.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.11-1.extras.tar.xz
-_eclasses_=eapi7-ver	f9ec87e93172b25ce65a85303dc06964	estack	055c42df72f76a4f45ec92b35e83cd56	kernel-2-src-prepare-overlay	6c802318c6bf5ac2b612f19b94bb3488	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	d410501a125f99ffb560b0c523cd3d1e	estack	055c42df72f76a4f45ec92b35e83cd56	eapi7-ver	f9ec87e93172b25ce65a85303dc06964	kernel-2-src-prepare-overlay	578c2e6dd65bd74989dee980b8f6803d
 _md5_=b601c1f5bda8709ca61efb2688039c0c
