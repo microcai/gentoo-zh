@@ -7,7 +7,7 @@ inherit eutils toolchain-funcs
 
 DESCRIPTION="Chinese Lunar Calendar conversion utility"
 HOMEPAGE="https://packages.debian.org/unstable/utils/lunar"
-SRC_URI="mirror://debian/pool/main/l/${PN}_${PV}.orig.tar.gz
+SRC_URI="mirror://debian/pool/main/l/${PN}/${PN}_${PV}.orig.tar.gz
 	mirror://debian/pool/main/l/${PN}/${PN}_${PVR/r5/9}.debian.tar.xz"
 
 LICENSE="GPL-2"
