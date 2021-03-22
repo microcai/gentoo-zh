@@ -15,7 +15,7 @@ fi
 _kenlmcommit="01c49fe86714276f77be9278d00906fc994256c1"
 
 SRC_URI="https://download.fcitx-im.org/data/lm_sc.3gm.arpa-20140820.tar.bz2 -> fcitx5-lm_sc.3gm.arpa-20140820.tar.bz2
-https://download.fcitx-im.org/data/dict.utf8-20210203.tar.xz -> fcitx5-dict.utf8-20210203.tar.xz
+https://download.fcitx-im.org/data/dict.utf8-20210302.tar.xz -> fcitx5-dict.utf8-20210302.tar.xz
 https://download.fcitx-im.org/data/table.tar.gz -> fcitx5-table.tar.gz
 https://github.com/kpu/kenlm/archive/${_kenlmcommit}.tar.gz -> kenlm.tar.gz
 "
@@ -36,7 +36,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	ln -s "${DISTDIR}/fcitx5-lm_sc.3gm.arpa-20140820.tar.bz2" data/lm_sc.3gm.arpa-20140820.tar.bz2 || die
-	ln -s "${DISTDIR}/fcitx5-dict.utf8-20210203.tar.xz" data/dict.utf8-20210203.tar.xz || die
+	ln -s "${DISTDIR}/fcitx5-dict.utf8-20210302.tar.xz" data/dict.utf8-20210302.tar.xz || die
 	ln -s "${DISTDIR}/fcitx5-table.tar.gz" data/table.tar.gz || die
 	tar -xvzf "${DISTDIR}/kenlm.tar.gz" -C src/libime/core/kenlm  || die
 	cmake_src_prepare
