@@ -16,16 +16,16 @@ app-editors/typora 0.9.98: Typora will give you a seamless experience as both a 
 app-editors/visual-studio-code 1.53.2: Multiplatform Visual Studio Code from Microsoft
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1: The kbd keymap for Programmer Dvorak.
-app-i18n/fcitx5 5.0.5 9999: Fcitx5 Next generation of fcitx
-app-i18n/fcitx5-chinese-addons 5.0.4 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
-app-i18n/fcitx5-configtool 5.0.3-r1 9999: Configuration module for Fcitx
-app-i18n/fcitx5-gtk 5.0.4 9999: Gtk im module for fcitx5 and glib based dbus client library
-app-i18n/fcitx5-qt 5.0.3 9999: Qt library and IM module for fcitx5
-app-i18n/fcitx5-rime 5.0.4 9999: Rime Support for Fcitx5
+app-i18n/fcitx5 5.0.6 9999: Fcitx5 Next generation of fcitx
+app-i18n/fcitx5-chinese-addons 5.0.5 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
+app-i18n/fcitx5-configtool 5.0.4 9999: Configuration module for Fcitx
+app-i18n/fcitx5-gtk 5.0.5 9999: Gtk im module for fcitx5 and glib based dbus client library
+app-i18n/fcitx5-qt 5.0.4 9999: Qt library and IM module for fcitx5
+app-i18n/fcitx5-rime 5.0.5 9999: Rime Support for Fcitx5
 app-i18n/gcin 2.8.5: Another Traditional Chinese IM.
 app-i18n/ibus-rime 9999: Rime Input Method Engine for IBus Framework
 app-i18n/libgooglepinyin 0.1.2: A fork from google pinyin on android
-app-i18n/libime 1.0.3-r1 9999: Fcitx5 Next generation of fcitx
+app-i18n/libime 1.0.5 9999: Fcitx5 Next generation of fcitx
 app-i18n/lunar 2.2-r5: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
 app-i18n/scim-chrasis 9999.0.0.1: Chrasis SCIM binding for chinese character recognition.
