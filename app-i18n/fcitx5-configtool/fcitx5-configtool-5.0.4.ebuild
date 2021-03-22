@@ -51,10 +51,6 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig"
 
-PATCHES=(
-    "${FILESDIR}/${P}-fix_FindIsocodes.patch"
-)
-
 src_configure() {
 	local mycmakeargs=(
 		-DKDE_INSTALL_USE_QT_SYS_PATHS=yes
