@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python3_{7,8} pypy3 )
 inherit distutils-r1
 
 DESCRIPTION="Data validation and settings management using Python type hinting."
-HOMEPAGE="Implementation of the asyncio (PEP 3156) event-loop with Qt"
+HOMEPAGE="https://pydantic-docs.helpmanual.io/"
 MY_P="${P/_alpha/a}"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${MY_P}.tar.gz"
 IUSE="+email +typing_extensions +dotenv test"
