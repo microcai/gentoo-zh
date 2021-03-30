@@ -7,7 +7,7 @@ inherit desktop eutils pax-utils xdg
 
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
-BASE_URI="https://vscode-update.azurewebsites.net/${PV}"
+BASE_URI="https://update.code.visualstudio.com/${PV}"
 SRC_URI="${BASE_URI}/linux-x64/stable -> ${P}-amd64.tar.gz"
 RESTRICT="mirror strip bindist"
 
