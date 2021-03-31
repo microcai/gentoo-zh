@@ -6,7 +6,7 @@ EAPI=7
 inherit unpacker desktop xdg
 
 DESCRIPTION="Baidu Net Disk is a cloud storage client (Linux Version)"
-HOMEPAGE="https:/pan.baidu.com"
+HOMEPAGE="https://pan.baidu.com/"
 SRC_URI="http://wppkg.baidupcs.com/issue/netdisk/Linuxguanjia/${PV}/${PN}_${PV}_amd64.deb"
 
 LICENSE=""
