@@ -5,8 +5,10 @@ EAPI=7
 
 if [[ "${PV}" =~ (^|\.)9999$ ]]; then
 	inherit git-r3
-
+	KEYWORDS=""
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-skk"
+else
+	KEYWORDS="~amd64"
 fi
 
 inherit xdg cmake
@@ -21,7 +23,6 @@ fi
 
 LICENSE="GPL-3+"
 SLOT="5"
-KEYWORDS="~amd64"
 
 BDEPEND="kde-frameworks/extra-cmake-modules:5
 		virtual/pkgconfig"
