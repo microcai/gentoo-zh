@@ -3,6 +3,7 @@ DEPEND=net-im/pidgin dev-libs/openssl sys-libs/glibc libwebp? ( media-libs/libwe
 DESCRIPTION=Libpurple (Pidgin) plugin for using a Telegram account
 EAPI=5
 HOMEPAGE=https://github.com/majn/telegram-purple
+INHERIT=versionator
 IUSE=+libwebp
 KEYWORDS=~x86 ~amd64
 LICENSE=LGPL-3
