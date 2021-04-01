@@ -7,6 +7,7 @@ K_GENPATCHES_VER="1"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 ETYPE="sources"
+IUSE="uksm cjktty"
 
 inherit kernel-2-src-prepare-overlay
 detect_version
@@ -16,13 +17,13 @@ HOMEPAGE="https://xanmod.org/"
 LICENSE+=" CDDL"
 SRC_URI="
          ${KERNEL_BASE_URI}/linux-5.11.tar.xz
-         https://github.com/HougeLangley/customkernel/releases/download/Kernel-v5.11.x/0001-patch-5.11.10-xanmod1.xz
+         https://github.com/HougeLangley/customkernel/releases/download/Kernel-v5.11.x/0001-patch-5.11.11-xanmod1.xz
          ${GENPATCHES_URI}
 "
 
 src_unpack() {
     UNIPATCH_LIST_DEFAULT=""
-    UNIPATCH_LIST="${DISTDIR}/0001-patch-5.11.10-xanmod1.xz"
+    UNIPATCH_LIST="${DISTDIR}/0001-patch-5.11.11-xanmod1.xz"
     kernel-2-src-prepare-overlay_src_unpack
 }
 
@@ -30,9 +31,16 @@ KEYWORDS="~amd64"
 
 src_prepare() {
 
+    default
     eapply "${FILESDIR}/sphinx-workaround.patch"
-    eapply "${FILESDIR}/UKSM-reversion01.patch"
-    eapply "${FILESDIR}/cjktty.patch"
+
+    if use uksm ; then
+    eapply "${FILESDIR}/UKSM-reversion01.patch" || die
+    fi
+
+    if use cjktty ; then
+    eapply "${FILESDIR}/cjktty.patch" || die
+    fi
 
 	kernel-2-src-prepare-overlay_src_prepare
 
