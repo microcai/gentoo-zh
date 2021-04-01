@@ -8,7 +8,7 @@ MY_PV=${PV}.2
 inherit unpacker xdg
 
 DESCRIPTION="Baidu Net Disk is a cloud storage client (Linux Version)"
-HOMEPAGE="https:/pan.baidu.com"
+HOMEPAGE="https://pan.baidu.com"
 SRC_URI="https://issuecdn.baidupcs.com/issue/netdisk/LinuxGuanjia/${PV}/${PN}_linux_${MY_PV}.deb"
 
 LICENSE=""
@@ -39,5 +39,5 @@ src_install() {
 	doins -r opt/${PN}
 	fperms +x /opt/${PN}/${PN}
 
-	newbin ${FILESDIR}/${PN}-wrapper.sh ${PN}
+	newbin "${FILESDIR}/${PN}-wrapper.sh" "${PN}"
 }
