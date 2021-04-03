@@ -152,7 +152,7 @@ www-plugins/aliedit 1.0.3.20: 支付宝安全控件对密码输入进行保护
 www-servers/darkhttpd 1.8: A small, static webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
 x11-libs/libvdpau-va-gl 9999: VDPAU driver with VA-API/OpenGL backend.
-x11-libs/xcb-imdkit 1.0.0 99999999999: An implementation of xim protocol in xcb
+x11-libs/xcb-imdkit 1.0.3: Input method development support for xcb
 x11-misc/9menu 1.8: Create X menus from the shell
 x11-misc/fqterm 0.9.8.3.4 9999: a modern terminal emulator for Linux
 x11-misc/i3lock-color 9999: An improved i3lock

@@ -29,3 +29,4 @@ media-sound/feeluown:xiami - add xiami music support for feeluown
 net-proxy/make-proxy:client - Add make proxy client support
 net-proxy/make-proxy:server - Add make proxy server support
 net-proxy/v2ray:tool - Build the additional tool, v2ctl.
+x11-libs/xcb-imdkit:system-uthash - Use the system-wide dev-libs/uthash instead of bundled.
