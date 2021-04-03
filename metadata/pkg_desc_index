@@ -113,7 +113,7 @@ net-misc/prips 1.0.0: print the IP addresses in a range
 net-misc/you-get 9999: A video downloader for YouTube, Youku, niconico and a few other sites
 net-p2p/amule-dlp 9999: aMule with DLP patch, the all-platform eMule p2p client
 net-p2p/amule-dlp-antileech 9999: amule-dlp-antileech, dynamic DLP library for amule-dlp
-net-p2p/n2n 2.6: A Layer Two Peer-to-Peer VPN
+net-p2p/n2n 2.6 2.8: A Layer Two Peer-to-Peer VPN
 net-print/epson-inkjet-printer_201207w 1.0.0: Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 net-proxy/lantern-bin 3.0.4: A free desktop application that delivers fast, reliable and secure access to the open Internet for users in censored regions.
 net-proxy/libQtShadowsocks 2.1.0: A lightweight and ultra-fast shadowsocks library written in C++/Qt
