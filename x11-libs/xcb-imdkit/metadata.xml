@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<!-- maintainer-needed -->
+	<maintainer type="person">
+		<email>jlin.gentoo@outlook.com</email>
+		<name>Jian Lin</name>
+	</maintainer>
+	<use>
+		<flag name="system-uthash">Use the system-wide <pkg>dev-libs/uthash</pkg> instead of bundled.</flag>
+	</use>
+	<upstream>
+		<maintainer status="active">
+			<name>Weng Xuetian</name>
+		</maintainer>
+		<bugs-to>https://github.com/fcitx/xcb-imdkit/issues</bugs-to>
+		<remote-id type="github">fcitx/xcb-imdkit</remote-id>
+	</upstream>
 </pkgmetadata>
