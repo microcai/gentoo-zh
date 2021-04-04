@@ -9,6 +9,8 @@ K_NOSETEXTRAVERSION="1"
 PROJECTC_VERSION="r3"
 ETYPE="sources"
 IUSE="uksm cjktty"
+DEPEND="dev-util/dwarves
+        dev-libs/libbpf"
 
 inherit kernel-2-src-prepare-overlay
 detect_version
@@ -42,6 +44,7 @@ src_prepare() {
     eapply "${FILESDIR}/0005-fsync.patch"
     eapply "${FILESDIR}/0007-graysky.patch"
     eapply "${FILESDIR}/0008-futex2_interface.patch"
+    eapply "${FILESDIR}/0010-bbr2.patch"
     eapply "${FILESDIR}/0011-03-misc.patch"
 
     if use uksm ; then
