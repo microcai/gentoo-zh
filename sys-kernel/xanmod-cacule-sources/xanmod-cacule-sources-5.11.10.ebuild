@@ -8,6 +8,8 @@ K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 CACULE_VERSION="5.11-rdb"
 ETYPE="sources"
+IUSE="uksm cjktty"
+DEPEND="app-arch/cpio"
 
 inherit kernel-2-src-prepare-overlay
 detect_version
@@ -30,8 +32,16 @@ KEYWORDS="~amd64"
 
 src_prepare() {
 
+    default
     eapply "${FILESDIR}/sphinx-workaround.patch"
-    eapply "${FILESDIR}/UKSM-reversion01.patch"
+
+    if use uksm ; then
+    eapply "${FILESDIR}/UKSM-reversion01.patch" || die
+    fi
+
+    if use cjktty ; then
+    eapply "${FILESDIR}/cjktty.patch" || die
+    fi
     
 	kernel-2-src-prepare-overlay_src_prepare
 
