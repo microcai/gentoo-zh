@@ -6,7 +6,7 @@ EAPI=7
 inherit systemd go-module
 
 DESCRIPTION="A platform for building proxies to bypass network restrictions."
-HOMEPAGE="https://github.com/v2fly/v2ray-core"
+HOMEPAGE="https://github.com/v2fly/v2ray-core https://www.maxmind.com"
 GEOIP_PV="202104120349"
 GEOSITE_PV="20210412113331"
 
@@ -358,7 +358,7 @@ SRC_URI="https://github.com/v2fly/v2ray-core/archive/refs/tags/v${PV}.tar.gz -> 
 	https://github.com/v2fly/domain-list-community/releases/download/${GEOSITE_PV}/dlc.dat -> ${P}-geosite-${GEOSITE_PV}.dat
 	${EGO_SUM_SRC_URI}"
 
-LICENSE="MIT"
+LICENSE="MIT CC-BY-SA-4.0"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 IUSE="+tool"
