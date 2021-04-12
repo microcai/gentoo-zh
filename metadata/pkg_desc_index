@@ -84,6 +84,7 @@ media-gfx/xrectsel 0.3.1: print the geometry of a rectangular screen region
 media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simplifies the drawing of beautiful curves.
 media-libs/libuninameslist 20140731 20190701: Library of unicode annotation data
 media-plugins/audacious-mac 0.2.0 0.3.10: Monkey's Audio Codec plugin for audacious
+media-plugins/gimp-gap 2.6.0: Gimp Animation Package
 media-plugins/osdlyrics 9999 20200403: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-sound/feeluown 3.7.3: A user-friendly and hackable music player
 media-sound/linnya 2.2.0: A free music player
