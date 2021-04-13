@@ -13,7 +13,7 @@ EGIT_REPO_URI="https://github.com/man-pages-zh/manpages-zh"
 
 LICENSE="FDL-1.2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="virtual/man
