@@ -10,6 +10,7 @@ CACULE_VERSION="5.11-rdb"
 ETYPE="sources"
 IUSE="uksm cjktty"
 DEPEND="app-arch/cpio"
+RDEPEND="!sys-kernel/xanmod-sources"
 
 inherit kernel-2-src-prepare-overlay
 detect_version
