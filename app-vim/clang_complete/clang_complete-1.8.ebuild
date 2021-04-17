@@ -4,11 +4,11 @@
 EAPI=7
 
 VIM_PLUGIN_VIM_VERSION="7.3"
-inherit vim-plugin vcs-snapshot
+inherit vim-plugin
 
 DESCRIPTION="vim plugin: use clang for completing C/C++ code."
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=3526"
-SRC_URI="https://github.com/Rip-Rip/${PN}/tarball/v${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/xavierd/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="as-is"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
@@ -21,6 +21,8 @@ sys-devel/clang"
 VIM_PLUGIN_HELPFILES="${PN}"
 
 src_prepare() {
+	default
+
 	rm Makefile
 }
 
