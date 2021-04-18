@@ -3,23 +3,18 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{7,8,9} )
-inherit meson python-any-r1 virtualx xdg
+inherit git-r3 meson xdg
 
-DESCRIPTION="jonaburg's picom fork with dual_kawase blur and rounded corners"
+DESCRIPTION="A lightweight compositor for X11 (previously a compton fork)"
 HOMEPAGE="https://github.com/jonaburg/picom"
-SRC_URI="https://github.com/jonaburg/picom/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+EGIT_REPO_URI="https://github.com/jonaburg/picom.git"
 
 LICENSE="MPL-2.0 MIT"
 SLOT="0"
-KEYWORDS="~amd64"
-IUSE="+config-file dbus +doc +drm opengl pcre test"
+KEYWORDS=""
+IUSE="+config-file dbus +doc +drm opengl pcre"
 
-REQUIRED_USE="test? ( dbus )" # avoid "DBus support not compiled in!"
-RESTRICT="test" # but tests require dbus_next
-
-RDEPEND="
-	dev-libs/libev
+RDEPEND="dev-libs/libev
 	dev-libs/uthash
 	x11-libs/libX11
 	x11-libs/libxcb
@@ -35,13 +30,12 @@ RDEPEND="
 	drm? ( x11-libs/libdrm )
 	opengl? ( virtual/opengl )
 	pcre? ( dev-libs/libpcre )
-	!x11-misc/compton"
+	!x11-misc/compton
+	!x11-misc/picom"
 DEPEND="${RDEPEND}
 	x11-base/xorg-proto"
 BDEPEND="virtual/pkgconfig
-	doc? ( app-text/asciidoc )
-	test? ( $(python_gen_any_dep 'dev-python/xcffib[${PYTHON_USEDEP}]') )
-"
+	doc? ( app-text/asciidoc )"
 
 DOCS=( README.md picom.sample.conf )
 
@@ -55,8 +49,4 @@ src_configure() {
 	)
 
 	meson_src_configure
-}
-
-src_test() {
-	virtx "${S}/tests/run_tests.sh" "${BUILD_DIR}/src/${PN}"
 }
