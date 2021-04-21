@@ -28,7 +28,7 @@ app-misc/gpick 0.2.5: Advanced color picker written in C++ using GTK+ toolkit
 app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience within the shell
 app-misc/nixnote 2.1.6: Nixnote - A clone of Evernote for Linux
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
-app-mobilephone/scrcpy 1.14: Display and control your Android device
+app-mobilephone/scrcpy 1.14 1.16: Display and control your Android device
 app-office/wps-office 11.1.0.9719: WPS Office is an office productivity suite
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-portage/portage-cdb 0.2.1: increase portage's speed after syncing, and for calculating dependencies. This method uses a database, rather than a bunch of flat files to store its metadata.
