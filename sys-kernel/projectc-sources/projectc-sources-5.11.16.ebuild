@@ -64,3 +64,4 @@ pkg_postinst() {
 	elog "MICROCODES"
 	elog "Read https://wiki.gentoo.org/wiki/Intel_microcode"
 }
+
