@@ -1,6 +1,6 @@
 BDEPEND=dev-util/ninja dev-util/cmake >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm prepare test unpack
-DEPEND=dev-libs/glib:2 sys-apps/dbus dev-libs/json-c dev-libs/libfmt sys-apps/util-linux virtual/libiconv virtual/libintl x11-libs/libxkbcommon[X] x11-libs/libX11 dev-libs/wayland dev-libs/wayland-protocols x11-libs/libXfixes x11-libs/libXinerama x11-libs/libXrender x11-libs/libxkbfile x11-libs/xcb-imdkit x11-misc/xkeyboard-config x11-libs/cairo[X] x11-libs/libXext x11-libs/pango media-libs/fontconfig enchant? ( app-text/enchant:0= ) systemd? ( sys-apps/systemd ) app-text/iso-codes app-i18n/unicode-cldr dev-libs/libxml2 dev-libs/libevent kde-frameworks/extra-cmake-modules:5 virtual/pkgconfig
+DEPEND=dev-libs/glib:2 sys-apps/dbus dev-libs/json-c dev-libs/libfmt sys-apps/util-linux virtual/libiconv virtual/libintl x11-libs/libxkbcommon[X] x11-libs/libX11 wayland? ( dev-libs/wayland dev-libs/wayland-protocols ) x11-libs/libXfixes x11-libs/libXinerama x11-libs/libXrender x11-libs/libxkbfile x11-libs/xcb-imdkit x11-misc/xkeyboard-config x11-libs/cairo[X] x11-libs/libXext x11-libs/pango media-libs/fontconfig enchant? ( app-text/enchant:0= ) systemd? ( sys-apps/systemd ) app-text/iso-codes app-i18n/unicode-cldr dev-libs/libxml2 dev-libs/libevent kde-frameworks/extra-cmake-modules:5 virtual/pkgconfig
 DESCRIPTION=Fcitx5 Next generation of fcitx
 EAPI=7
 HOMEPAGE=https://fcitx-im.org/ https://gitlab.com/fcitx/fcitx
@@ -9,9 +9,9 @@ IUSE=+enchant test coverage doc presage systemd wayland
 KEYWORDS=~amd64
 LICENSE=BSD-1 GPL-2+ LGPL-2+ MIT
 PROPERTIES=live
-RDEPEND=dev-libs/glib:2 sys-apps/dbus dev-libs/json-c dev-libs/libfmt sys-apps/util-linux virtual/libiconv virtual/libintl x11-libs/libxkbcommon[X] x11-libs/libX11 dev-libs/wayland dev-libs/wayland-protocols x11-libs/libXfixes x11-libs/libXinerama x11-libs/libXrender x11-libs/libxkbfile x11-libs/xcb-imdkit x11-misc/xkeyboard-config x11-libs/cairo[X] x11-libs/libXext x11-libs/pango media-libs/fontconfig enchant? ( app-text/enchant:0= ) systemd? ( sys-apps/systemd ) app-text/iso-codes app-i18n/unicode-cldr dev-libs/libxml2 dev-libs/libevent
+RDEPEND=dev-libs/glib:2 sys-apps/dbus dev-libs/json-c dev-libs/libfmt sys-apps/util-linux virtual/libiconv virtual/libintl x11-libs/libxkbcommon[X] x11-libs/libX11 wayland? ( dev-libs/wayland dev-libs/wayland-protocols ) x11-libs/libXfixes x11-libs/libXinerama x11-libs/libXrender x11-libs/libxkbfile x11-libs/xcb-imdkit x11-misc/xkeyboard-config x11-libs/cairo[X] x11-libs/libXext x11-libs/pango media-libs/fontconfig enchant? ( app-text/enchant:0= ) systemd? ( sys-apps/systemd ) app-text/iso-codes app-i18n/unicode-cldr dev-libs/libxml2 dev-libs/libevent
 REQUIRED_USE=coverage? ( test )
 SLOT=5
 SRC_URI=https://download.fcitx-im.org/data/en_dict-20121020.tar.gz -> fcitx-data-en_dict-20121020.tar.gz
 _eclasses_=toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	edos2unix	33e347e171066657f91f8b0c72ec8773	l10n	8cdd85e169b835d518bc2fd59f780d8e	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	2d5b3f4b315094768576b6799e4f926e	flag-o-matic	c0964e43ba712cb933da5f65b958fa88	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	cmake	518e4c9a6a38dfd7afc54b6a7c5de3da	gnome2-utils	c8e3fff820d850c0e003e22208d2eea3	git-r3	b8e8c92aa5fe8df7187e466138eb4e52
-_md5_=968704960a925ae16e7e7ead341a087f
+_md5_=7edef7cf98746309a475aca2bec43f47
