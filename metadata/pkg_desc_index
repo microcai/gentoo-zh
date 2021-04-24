@@ -4,7 +4,7 @@ app-admin/cockpit 234: A systemd web based user interface for Linux server
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-dicts/stardict-wyabdcrealpeopletts 1.0: 
 app-editors/typora 0.9.98: Typora will give you a seamless experience as both a reader and a writer.
-app-editors/visual-studio-code 1.54.2: Multiplatform Visual Studio Code from Microsoft
+app-editors/visual-studio-code 1.55.2: Multiplatform Visual Studio Code from Microsoft
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1: The kbd keymap for Programmer Dvorak.
 app-i18n/fcitx5 5.0.6 9999: Fcitx5 Next generation of fcitx
