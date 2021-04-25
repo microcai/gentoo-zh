@@ -30,8 +30,10 @@ RDEPEND="dev-libs/glib:2
 	virtual/libintl
 	x11-libs/libxkbcommon[X]
 	x11-libs/libX11
-	dev-libs/wayland
-	dev-libs/wayland-protocols
+	wayland? (
+		dev-libs/wayland
+		dev-libs/wayland-protocols
+	)
 	x11-libs/libXfixes
 	x11-libs/libXinerama
 	x11-libs/libXrender
