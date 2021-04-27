@@ -145,7 +145,7 @@ sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/ksmbd-tools 9999: Tools for in-kernel CIFS server
 sys-kernel/projectc-sources 5.11.11 5.11.12 5.11.13 5.11.14 5.11.15 5.11.16: Full Project-C CPU Scheduler sources including the Gentoo patchset for the 5.11 kernel tree
 sys-kernel/xanmod-cacule-sources 5.11.10 5.11.12 5.11.13 5.11.14 5.11.15 5.11.16: Xanmod and CacULE sources including the Gentoo patchset for the 5.11 kernel tree
-sys-kernel/xanmod-sources 5.11.11 5.11.12 5.11.13 5.11.14 5.11.15: Xanmod and UKSM sources including the Gentoo patchset for the 5.11 kernel tree
+sys-kernel/xanmod-sources 5.12: Xanmod and UKSM sources including the Gentoo patchset for the 5. kernel tree
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libixp 9999: Standalone client/server 9P library
 virtual/linux-sources 1: Virtual for Linux kernel sources
