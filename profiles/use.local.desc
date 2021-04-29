@@ -28,6 +28,7 @@ media-sound/feeluown:xiami - add xiami music support for feeluown
 net-proxy/make-proxy:client - Add make proxy client support
 net-proxy/make-proxy:server - Add make proxy server support
 net-proxy/v2ray:tool - Build the additional tool, v2ctl.
+virtual/linux-sources:firmware - Install linux kernel firmware
 x11-libs/xcb-imdkit:system-uthash - Use the system-wide dev-libs/uthash instead of bundled.
 x11-misc/picom-jonaburg:config-file - Enable config file support
 x11-misc/picom-jonaburg:doc - Build documentation and man pages (requires app-text/asciidoc)

@@ -148,7 +148,7 @@ sys-kernel/xanmod-cacule-sources 5.12: Xanmod and UKSM sources including the Gen
 sys-kernel/xanmod-sources 5.12: Xanmod and UKSM sources including the Gentoo patchset for the 5. kernel tree
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libixp 9999: Standalone client/server 9P library
-virtual/linux-sources 1: Virtual for Linux kernel sources
+virtual/linux-sources 3-r6: Virtual for Linux kernel sources
 www-plugins/aliedit 1.0.3.20: 支付宝安全控件对密码输入进行保护
 www-servers/darkhttpd 1.8: A small, static webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
