@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<!-- maintainer-needed -->
+	<maintainer type="person">
+		<email>blueness@gentoo.org</email>
+		<name>Anthony G. Basile</name>
+		<email>hougelangley1987@gmail.com</email>
+		<name>苏业钦</name>
+	</maintainer>
+	<maintainer type="project">
+		<email>kernel@gentoo.org</email>
+		<name>Gentoo Kernel Project</name>
+	</maintainer>
+	<use>
+		<flag name="firmware">Install linux kernel firmware</flag>
+	</use>
 </pkgmetadata>
