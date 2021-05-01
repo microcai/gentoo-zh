@@ -1,0 +1,13 @@
+BDEPEND=>=dev-lang/go-1.16 >=dev-lang/go-1.12 app-arch/unzip >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install postinst unpack
+DESCRIPTION=Community managed domain list for V2Ray.
+EAPI=7
+HOMEPAGE=https://github.com/v2fly/domain-list-community
+INHERIT=go-module git-r3
+LICENSE=MIT
+PROPERTIES=live
+RDEPEND=!dev-libs/v2ray-domain-list-community-bin !<net-proxy/v2ray-4.38.3 !<net-proxy/v2ray-core-4.38.3
+RESTRICT=strip
+SLOT=0
+_eclasses_=go-module	92660621959e7fab813173772987588b	git-r3	b8e8c92aa5fe8df7187e466138eb4e52
+_md5_=16f205315616ff3e1aab53f8331d5b36

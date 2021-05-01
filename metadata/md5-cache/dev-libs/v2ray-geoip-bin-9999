@@ -1,0 +1,9 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=GeoIP for V2Ray.
+EAPI=7
+HOMEPAGE=https://github.com/v2fly/geoip https://www.maxmind.com
+LICENSE=CC-BY-SA-4.0
+PROPERTIES=live
+RDEPEND=!<net-proxy/v2ray-4.38.3 !<net-proxy/v2ray-core-4.38.3
+SLOT=0
+_md5_=5dbe518cb9dd3221079691a2dedfe037
