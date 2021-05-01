@@ -9,7 +9,7 @@ if [[ ${PV} == *9999 ]]; then
 	PROPERTIES="live"
 	SRC_URI=
 else
-	SRC_URI="https://github.com/v2fly/geoip/releases/download/${PV}/geoip.dat -> ${P}.dat"
+	SRC_URI="https://github.com/v2fly/geoip/releases/download/${PV#*_p}/geoip.dat -> ${P}.dat"
 	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 fi
 S="${WORKDIR}"
