@@ -9,7 +9,7 @@ if [[ ${PV} == *9999 ]]; then
 	PROPERTIES="live"
 	SRC_URI=
 else
-	SRC_URI="https://github.com/v2fly/domain-list-community/releases/download/20210430100800/dlc.dat.xz -> ${P}.dat.xz"
+	SRC_URI="https://github.com/v2fly/domain-list-community/releases/download/${PV#*_p}/dlc.dat.xz -> ${P}.dat.xz"
 	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 fi
 S="${WORKDIR}"
@@ -32,7 +32,7 @@ src_unpack() {
 		sha256sum -c dlc.dat.sha256sum || die "check sha256sum for 'dlc.dat' failed"
 	else
 		default
-		mv "${S%/}/${P}.dat" dlc.dat || die
+		mv ${P}.dat dlc.dat || die
 	fi
 }
 
