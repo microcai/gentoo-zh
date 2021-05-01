@@ -10,4 +10,4 @@ RDEPEND=!dev-libs/v2ray-domain-list-community-bin !<net-proxy/v2ray-4.38.3 !<net
 RESTRICT=strip
 SLOT=0
 _eclasses_=go-module	92660621959e7fab813173772987588b	git-r3	b8e8c92aa5fe8df7187e466138eb4e52
-_md5_=16f205315616ff3e1aab53f8331d5b36
+_md5_=35eb3d00c0953bf8eab3cf82b3f2c837
