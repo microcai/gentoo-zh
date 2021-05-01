@@ -357,10 +357,10 @@ else
 		"sourcegraph.com/sqs/pbtypes v0.0.0-20180604144634-d3ebe8f20ae4/go.mod"
 		)
 	go-module_set_globals
-	SRC_URI="https://github.com/v2fly/domain-list-community/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz
+	SRC_URI="https://github.com/v2fly/domain-list-community/archive/refs/tags/${PV#*_p}.tar.gz -> ${P}.tar.gz
 		${EGO_SUM_SRC_URI}"
 	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
-	S="${WORKDIR%/}/${P#v2ray-}"
+	S="${WORKDIR%/}/${PN#v2ray-}-${PV#*_p}"
 fi
 
 LICENSE="MIT"
