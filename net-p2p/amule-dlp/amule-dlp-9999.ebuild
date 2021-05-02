@@ -3,6 +3,7 @@
 
 EAPI=7
 
+WX_GTK_VER="3.0"
 inherit autotools eutils flag-o-matic wxwidgets user git-r3
 
 
@@ -17,7 +18,7 @@ IUSE="daemon debug +dynamic geoip +gtk nls remote stats unicode upnp"
 REQUIRED_USE="|| ( gtk remote daemon )"
 
 DEPEND="
-	=x11-libs/wxGTK-3.0*
+	x11-libs/wxGTK:${WX_GTK_VER}
 	>=dev-libs/boost-1.57[nls,threads,context]
 	>=dev-libs/crypto++-5
 	>=sys-libs/zlib-1.2.1
@@ -30,7 +31,6 @@ DEPEND="
 "
 RDEPEND="${DEPEND} dynamic? ( net-p2p/amule-dlp-antileech )"
 
-S=${WORKDIR}/${PN}
 DOCS=( docs/{amulesig.txt,AUTHORS,ChangeLog,EC_Protocol.txt,ED2K-Links.HOWTO,INSTALL,README,TODO} )
 
 pkg_setup() {
@@ -49,6 +49,8 @@ pkg_preinst() {
 }
 
 src_prepare() {
+	default
+
 	# fix the missing amule.xpm
 	cp "${FILESDIR}/amule.xpm" ./
 
@@ -65,8 +67,6 @@ src_prepare() {
 
 src_configure() {
 	local myconf
-
-	WX_GTK_VER="3.0"
 
 	if use gtk; then
 		einfo "wxGTK with X / GTK support will be used"
