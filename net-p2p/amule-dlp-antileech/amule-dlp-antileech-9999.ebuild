@@ -3,6 +3,7 @@
 
 EAPI=7
 
+WX_GTK_VER="3.0"
 inherit autotools git-r3 wxwidgets
 DESCRIPTION="$PN, dynamic DLP library for amule-dlp"
 HOMEPAGE="https://github.com/persmule/amule-dlp.antileech"
@@ -13,17 +14,15 @@ SLOT="0"
 KEYWORDS=""
 IUSE="X"
 
-DEPEND="x11-libs/wxGTK:3.0"
+DEPEND="x11-libs/wxGTK:${WX_GTK_VER}"
 RDEPEND="net-p2p/amule-dlp[dynamic]"
-S=${WORKDIR}/amule-dlp.antileech
 
 src_prepare() {
+	default
 	eautoreconf || die
 }
 
 src_configure() {
-	WX_GTK_VER="3.0"
-
 	if use X; then
 		einfo "wxGTK with X / GTK support will be used"
 		need-wxwidgets unicode
