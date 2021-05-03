@@ -6,7 +6,7 @@ K_WANT_GENPATCHES="base extras"
 K_GENPATCHES_VER="1"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
-PROJECTC_VERSION="r0"
+PROJECTC_VERSION="r1"
 ETYPE="sources"
 IUSE="uksm cjktty pds bmq muqss"
 REQUIRED_USE="^^ ( pds bmq muqss )"
@@ -57,13 +57,13 @@ src_prepare() {
     fi
 
     if use bmq ; then
-    eapply "${FILESDIR}/0009-prjc_v5.12-r0.patch" || die
+    eapply "${FILESDIR}/0009-prjc_v5.12-r1.patch" || die
     eapply "${FILESDIR}/0009-ondemand-bmq.patch" || die
     eapply "${FILESDIR}/0008-bmq.patch" || die
     fi
 
     if use pds ; then
-    eapply "${FILESDIR}/0009-prjc_v5.12-r0.patch" || die
+    eapply "${FILESDIR}/0009-prjc_v5.12-r1.patch" || die
     eapply "${FILESDIR}/0008-pds.patch" || die
     fi
 
