@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake-utils git-r3
+inherit cmake git-r3
 
 DESCRIPTION="a modern terminal emulator for Linux"
 EGIT_REPO_URI="https://github.com/mytbk/fqterm.git"
@@ -16,10 +16,14 @@ IUSE=""
 RDEPEND="
 	dev-libs/openssl
 	media-libs/alsa-lib
-	dev-qt/qtcore[ssl,qt3support]
-	dev-qt/qtgui"
+	dev-qt/qtcore
+	dev-qt/qtgui
+	dev-qt/qtscript"
 DEPEND="${RDEPEND}"
 
-src_prepare() {
-	epatch "${FILESDIR}/${PN}-as-needed.patch"
+src_configure() {
+	local mycmakeargs=(
+		-DBUILD_SHARED_LIBS=OFF
+	)
+	cmake_src_configure
 }
