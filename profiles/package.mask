@@ -38,3 +38,6 @@ net-im/instantbird
 # Register <registerdedicated@gmail.com> (26 Aug 2016)
 # move net-proxy/libQtShadowsocks dev-qt/libQtShadowsocks
 <net-proxy/libQtShadowsocks-1.9.0
+
+# xiami stop their service
+=dev-python/fuo-xiami-0.2.4
