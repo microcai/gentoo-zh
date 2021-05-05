@@ -16,7 +16,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+netease +local +xiami +qqmusic +kuwo +webengine"
+IUSE="+netease +local +qqmusic +kuwo +webengine"
 
 RDEPEND="
 	dev-python/janus[${PYTHON_USEDEP}]
@@ -25,12 +25,11 @@ RDEPEND="
 	dev-python/PyQt5[${PYTHON_USEDEP}]
 	dev-python/qasync[${PYTHON_USEDEP}]
 	dev-python/tomlkit[${PYTHON_USEDEP}]
-	>=dev-python/pydantic-1.7.3[${PYTHON_USEDEP}]
+	>=dev-python/pydantic-1.8.1[${PYTHON_USEDEP}]
 "
 
 PDEPEND="
 	media-video/mpv[libmpv]
-	xiami? ( dev-python/fuo-xiami[${PYTHON_USEDEP}] )
 	netease? ( dev-python/fuo-netease[${PYTHON_USEDEP}] )
 	local? ( dev-python/fuo-local[${PYTHON_USEDEP}] )
 	qqmusic? ( dev-python/fuo-qqmusic[${PYTHON_USEDEP}] )
