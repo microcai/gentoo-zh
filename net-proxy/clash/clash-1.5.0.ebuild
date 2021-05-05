@@ -5,10 +5,7 @@ EAPI=7
 inherit go-module systemd
 
 DESCRIPTION="A rule-based tunnel in Go."
-HOMEPAGE="https://github.com/Dreamacro/clash
-	https://www.maxmind.com"
-
-GEOIP_PV="20210412"
+HOMEPAGE="https://github.com/Dreamacro/clash"
 
 EGO_SUM=(
 	"github.com/Dreamacro/go-shadowsocks2 v0.1.7"
@@ -73,35 +70,43 @@ EGO_SUM=(
 go-module_set_globals
 
 SRC_URI="https://github.com/Dreamacro/clash/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/Dreamacro/maxmind-geoip/releases/download/${GEOIP_PV}/Country.mmdb -> ${P}-Country-${GEOIP_PV}.mmdb
 	${EGO_SUM_SRC_URI}"
 RESTRICT="mirror"
 
-LICENSE="GPL-3 CC-BY-SA-4.0"
+LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
-IUSE=""
+KEYWORDS="amd64 ~arm ~arm64 ~x86"
+IUSE="geoip"
+
+BDEPEND=">=dev-lang/go-1.16.2:="
+RDEPEND="
+	geoip? ( net-misc/geoipupdate )
+	>=sys-apps/systemd-235:="
 
 src_compile() {
-	local Version=${PV} BuildTime=$(date -u)
-	go build -o bin/clash -trimpath -ldflags "\
+	local Version=${PV} BuildTime=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+	go build -v -work -x -o bin/clash -trimpath -ldflags "\
 	-X \"github.com/Dreamacro/clash/constant.Version=v${Version}\" \
 	-X \"github.com/Dreamacro/clash/constant.BuildTime=${BuildTime}\" \
-	-s -w -buildid="
+	-buildid="
 }
 
 src_install() {
 	dobin bin/clash
 
-	insinto /etc/clash
-	newins "${DISTDIR}/${P}-Country-${GEOIP_PV}.mmdb" Country.mmdb
-
 	systemd_dounit "${FILESDIR}/clash.service"
 	systemd_newunit "${FILESDIR}/clash_at.service" clash@.service
+
+	keepdir /etc/clash
 }
 
 pkg_postinst() {
 	elog
 	elog "Follow the instructions of https://github.com/Dreamacro/clash/wiki"
+	elog
+	elog "You may need to get Country.mmdb file from"
+	elog "https://github.com/Dreamacro/maxmind-geoip"
+	elog "or"
+	elog "https://dev.maxmind.com/geoip/geoip2/geolite2"
 	elog
 }
