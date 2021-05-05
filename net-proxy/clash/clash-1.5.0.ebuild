@@ -104,4 +104,9 @@ pkg_postinst() {
 	elog
 	elog "Follow the instructions of https://github.com/Dreamacro/clash/wiki"
 	elog
+	elog "You may need to get Country.mmdb file from"
+	elog "https://github.com/Dreamacro/maxmind-geoip"
+	elog "or"
+	elog "https://dev.maxmind.com/geoip/geoip2/geolite2"
+	elog
 }
