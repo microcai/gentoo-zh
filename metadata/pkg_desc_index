@@ -166,8 +166,6 @@ x11-misc/picom-jonaburg 8 9999: A lightweight compositor for X11 (previously a c
 x11-plugins/vicious 9999: Modular widget library for x11-wm/awesome
 x11-terms/termite 9999: A keyboard-centric VTE-based terminal
 x11-terms/vte-ng 9999: An enhanced terminal emulator widget
-x11-themes/gnome-themes-egtk 1.0: The official elementary GTK theme designed to be smooth, attractive, fast, and usable.
-x11-themes/gnome-themes-ubuntu 0.6.1: GNOME themes from Ubuntu
 x11-themes/lxice 0.1.0: LXDE theme for IceWM
 x11-themes/smplayer-themes-nonfree 0.1.0 0.1.1: Icon themes for smplayer
 x11-wm/9wm 1.1: A window manager emulation of the Plan 9 window manager 8-1/2.
