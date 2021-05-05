@@ -3,13 +3,11 @@
 
 EAPI=7
 
-inherit cmake-utils
+inherit cmake
 
-PV0="0.9.8.3.r4"
 DESCRIPTION="a modern terminal emulator for Linux"
-SRC_URI="https://github.com/mytbk/fqterm/archive/${PV0}.tar.gz -> ${PN}-${PV0}.tar.gz"
+SRC_URI="https://github.com/mytbk/fqterm/archive/${PV}.tar.gz -> ${P}.tar.gz"
 HOMEPAGE="https://github.com/mytbk/fqterm"
-S="${WORKDIR}/${PN}-${PV0}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,10 +17,20 @@ IUSE=""
 RDEPEND="
 	dev-libs/openssl
 	media-libs/alsa-lib
-	dev-qt/qtcore[ssl,qt3support]
-	dev-qt/qtgui"
+	dev-qt/qtcore
+	dev-qt/qtgui
+	dev-qt/qtscript"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-as-needed.patch"
+	default
+	eapply "${FILESDIR}"/${P}-drop-qt4.patch
+	cmake_src_prepare
+}
+
+src_configure() {
+	local mycmakeargs=(
+		-DBUILD_SHARED_LIBS=OFF
+	)
+	cmake_src_configure
 }

@@ -1,0 +1,381 @@
+From 55d08df3c15818e238a44dc93aa92b0befad36fa Mon Sep 17 00:00:00 2001
+From: Iru Cai <mytbk920423@gmail.com>
+Date: Tue, 11 Aug 2020 12:43:52 +0800
+Subject: [PATCH] drop Qt4 support
+
+---
+ CMakeLists.txt                    | 53 +++++++------------------------
+ CMakeLists.txt.linux              | 28 +++++-----------
+ README.md                         |  5 ++-
+ src/common/CMakeLists.txt         | 21 +++---------
+ src/fqterm/CMakeLists.txt         | 47 +++++++++++----------------
+ src/protocol/CMakeLists.txt       | 11 ++-----
+ src/terminal/CMakeLists.txt       | 11 +++----
+ src/ui/CMakeLists.txt             | 16 +---------
+ src/ui/imageviewer/CMakeLists.txt |  4 +--
+ src/utilities/CMakeLists.txt      | 11 +++----
+ 10 files changed, 57 insertions(+), 150 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5bc5f61..5dda9e7 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -22,30 +22,17 @@ ELSE(MCGGIT_WC_REVISION MATCHES "NOTFOUND")
+   message("Git revision: " ${MCGGIT_WC_REVISION})
+ ENDIF(MCGGIT_WC_REVISION MATCHES "NOTFOUND")
+ 
+-SET(USE_QT5 OFF CACHE PATH "Do the Qt5 build")
+-
+-IF(USE_QT5)
+-  set(CMAKE_INCLUDE_CURRENT_DIR ON)
+-  set(CMAKE_AUTOMOC ON)
+-  find_package(Qt5Core REQUIRED)
+-  find_package(Qt5Widgets REQUIRED)
+-  find_package(Qt5LinguistTools REQUIRED)
+-  qt5_add_translation(fqterm_qm_files
+-    ${CMAKE_SOURCE_DIR}/res/dict/fqterm_zh_CN.ts
+-    ${CMAKE_SOURCE_DIR}/res/dict/ui_zh_CN.ts
+-    ${CMAKE_SOURCE_DIR}/res/dict/protocol_zh_CN.ts
+-    ${CMAKE_SOURCE_DIR}/res/dict/common_zh_CN.ts
+-    )
+-ELSE(USE_QT5)
+-  find_package(Qt4 COMPONENTS QtCore QtGui QtNetwork QtScript QtXml REQUIRED)
+-  include(${QT_USE_FILE})
+-  qt4_add_translation(fqterm_qm_files
+-    ${CMAKE_SOURCE_DIR}/res/dict/fqterm_zh_CN.ts
+-    ${CMAKE_SOURCE_DIR}/res/dict/ui_zh_CN.ts
+-    ${CMAKE_SOURCE_DIR}/res/dict/protocol_zh_CN.ts
+-    ${CMAKE_SOURCE_DIR}/res/dict/common_zh_CN.ts
+-    )
+-ENDIF(USE_QT5)
++set(CMAKE_INCLUDE_CURRENT_DIR ON)
++set(CMAKE_AUTOMOC ON)
++find_package(Qt5Core REQUIRED)
++find_package(Qt5Widgets REQUIRED)
++find_package(Qt5LinguistTools REQUIRED)
++qt5_add_translation(fqterm_qm_files
++  ${CMAKE_SOURCE_DIR}/res/dict/fqterm_zh_CN.ts
++  ${CMAKE_SOURCE_DIR}/res/dict/ui_zh_CN.ts
++  ${CMAKE_SOURCE_DIR}/res/dict/protocol_zh_CN.ts
++  ${CMAKE_SOURCE_DIR}/res/dict/common_zh_CN.ts
++  )
+ 
+ add_custom_target(fqterm_qm_target
+   DEPENDS ${fqterm_qm_files}
+@@ -59,24 +46,6 @@ else (PYTHONLIBS_FOUND)
+   SET(PYTHON_LIB)
+ endif (PYTHONLIBS_FOUND)
+ 
+-if (NOT USE_QT5)
+-  IF(WIN32)
+-    FILE(READ ${QT_LIBRARY_DIR}/QtCore.prl FQ_CORE_QT_CONFIG)
+-  ELSE(WIN32)
+-    IF(APPLE)
+-      FILE(READ ${QT_LIBRARY_DIR}/QtCore.framework/QtCore.prl FQ_CORE_QT_CONFIG)
+-    ELSE(APPLE)
+-      FILE(READ ${QT_LIBRARY_DIR}/libQtCore.prl FQ_CORE_QT_CONFIG)
+-    ENDIF(APPLE)
+-  ENDIF(WIN32)
+-
+-  IF(NOT FQ_CORE_QT_CONFIG MATCHES "static")
+-    SET(FQTERM_USE_STATIC_QT false)
+-  ELSE(NOT FQ_CORE_QT_CONFIG MATCHES "static")
+-    SET(FQTERM_USE_STATIC_QT true)
+-  ENDIF(NOT FQ_CORE_QT_CONFIG MATCHES "static")
+-endif(NOT USE_QT5)
+-
+ SET(SUB_CMAKELIST "UNKNOWN")
+ 
+ ADD_DEFINITIONS(-D "FQTERM_VERSION_STRING=\\\"${FQTERM_VERSION}\\\"")
+diff --git a/CMakeLists.txt.linux b/CMakeLists.txt.linux
+index ea457f5..1c890d5 100644
+--- a/CMakeLists.txt.linux
++++ b/CMakeLists.txt.linux
+@@ -32,23 +32,13 @@ IF (WITH_ASAN)
+     SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fsanitize=address")
+ ENDIF(WITH_ASAN)
+ 
+-IF(USE_QT5)
+-  find_package(Qt5Core REQUIRED)
+-  find_package(Qt5Widgets REQUIRED)
+-  find_package(Qt5Network REQUIRED)
+-  find_package(Qt5Script REQUIRED)
+-  find_package(Qt5Multimedia REQUIRED)
+-  find_package(Qt5Xml REQUIRED)
+-ELSE(USE_QT5)
+-ENDIF(USE_QT5)
+-
+-IF(NOT USE_QT5)
+-  include_directories(
+-    ${QT_INCLUDE_DIR}
+-    ${QT_QTCORE_INCLUDE_DIR}
+-    ${QT_QTGUI_INCLUDE_DIR}
+-    )
+-ENDIF(NOT USE_QT5)
++find_package(Qt5Core REQUIRED)
++find_package(Qt5Widgets REQUIRED)
++find_package(Qt5Network REQUIRED)
++find_package(Qt5Script REQUIRED)
++find_package(Qt5Multimedia REQUIRED)
++find_package(Qt5Xml REQUIRED)
++
+ include_directories(
+   ${CMAKE_CURRENT_SOURCE_DIR}/src/common
+   ${CMAKE_CURRENT_SOURCE_DIR}/src/protocol
+@@ -89,9 +79,7 @@ target_link_libraries(fqterm.bin
+   X11
+ )
+ 
+-IF(USE_QT5)
+-  target_link_libraries(fqterm.bin Qt5::Core Qt5::Widgets)
+-ENDIF(USE_QT5)
++target_link_libraries(fqterm.bin Qt5::Core Qt5::Widgets)
+ 
+ add_dependencies(fqterm.bin
+   fqterm_main
+diff --git a/README.md b/README.md
+index f8cb574..5fd7455 100644
+--- a/README.md
++++ b/README.md
+@@ -33,21 +33,20 @@ git clone https://github.com/mytbk/fqterm.git
+ # 假设FQTerm源码目录为fqterm
+ mkdir build
+ cd build
+-# 用cmake生成Makefile,默认为Qt4版本，Qt5版本请添加-DUSE_QT5=1参数
+ cmake ../fqterm
+ make
+ # 以root身份安装，以下用sudo获取root权限
+ sudo make install
+ ```
+ 
+-在 macOS (Sierra) 中编译建议使用 Qt5 分支，利用 HomeBrew 安装依赖。目前支持并不完善。
++在 macOS (Sierra) 中编译，利用 HomeBrew 安装依赖。目前支持并不完善。
+ ```shell
+ brew install openssl qt5
+ mkdir build
+ cd build
+ CMAKE_PREFIX_PATH=/usr/local/opt/qt5/lib/cmake \
+ OPENSSL_ROOT_DIR=/usr/local/opt/openssl \
+-cmake ../fqterm -DUSE_QT5=1
++cmake ../fqterm
+ make
+ make install
+ ```
+diff --git a/src/common/CMakeLists.txt b/src/common/CMakeLists.txt
+index cc4a354..2f4f14e 100644
+--- a/src/common/CMakeLists.txt
++++ b/src/common/CMakeLists.txt
+@@ -24,24 +24,13 @@ set(fqterm_common_SRCS
+   fqterm_shortcuthelper.cpp
+ )
+ 
+-if(USE_QT5)
+-  set(CMAKE_INCLUDE_CURRENT_DIR ON)
+-  find_package(Qt5Core REQUIRED)
+-  find_package(Qt5Widgets REQUIRED)
+-  find_package(Qt5Multimedia REQUIRED)
+-else(USE_QT5)
+-  include_directories(
+-    ${QT_INCLUDE_DIR}
+-    ${QT_QTCORE_INCLUDE_DIR}
+-    ${QT_QTGUI_INCLUDE_DIR}
+-    ${CMAKE_CURRENT_BINARY_DIR}
+-    )
+-endif(USE_QT5)
++set(CMAKE_INCLUDE_CURRENT_DIR ON)
++find_package(Qt5Core REQUIRED)
++find_package(Qt5Widgets REQUIRED)
++find_package(Qt5Multimedia REQUIRED)
+ 
+ add_library(fqterm_common
+   ${fqterm_common_SRCS}
+ )
+ 
+-if(USE_QT5)
+-  target_link_libraries(fqterm_common Qt5::Core Qt5::Widgets Qt5::Multimedia)
+-endif(USE_QT5)
++target_link_libraries(fqterm_common Qt5::Core Qt5::Widgets Qt5::Multimedia)
+diff --git a/src/fqterm/CMakeLists.txt b/src/fqterm/CMakeLists.txt
+index 80bc734..72f9fa7 100644
+--- a/src/fqterm/CMakeLists.txt
++++ b/src/fqterm/CMakeLists.txt
+@@ -28,10 +28,8 @@ ELSE(WIN32)
+     set(global_shortcut_impl_SRCS 3rdparty/qxtglobalshortcut_mac.cpp)
+   ELSE(APPLE)
+     set(global_shortcut_impl_SRCS 3rdparty/qxtglobalshortcut_x11.cpp)
+-    IF(USE_QT5)
+-      find_package(Qt5X11Extras REQUIRED)
+-      set(QXTLIB Qt5::X11Extras)
+-    ENDIF(USE_QT5)
++    find_package(Qt5X11Extras REQUIRED)
++    set(QXTLIB Qt5::X11Extras)
+   ENDIF(APPLE)
+ ENDIF(WIN32)
+ set(GLOBAL_SHORTCUT_SRC
+@@ -53,22 +51,15 @@ set(3rdparty_SRCS
+   ${GLOBAL_SHORTCUT_SRC}
+ )
+ 
+-if(USE_QT5)
+-  find_package(Qt5Core REQUIRED)
+-  find_package(Qt5Widgets REQUIRED)
+-  find_package(Qt5Network REQUIRED)
+-  find_package(Qt5Script REQUIRED)
++find_package(Qt5Core REQUIRED)
++find_package(Qt5Widgets REQUIRED)
++find_package(Qt5Network REQUIRED)
++find_package(Qt5Script REQUIRED)
+ 
+-  qt5_create_translation(fqterm_qm_file
+-    ${fqterm_SRCS}
+-    ${CMAKE_SOURCE_DIR}/res/dict/fqterm_zh_CN.ts
+-    )
+-else(USE_QT5)
+-  qt4_create_translation(fqterm_qm_file
+-    ${fqterm_SRCS}
+-    ${CMAKE_SOURCE_DIR}/res/dict/fqterm_zh_CN.ts
+-    )
+-endif(USE_QT5)
++qt5_create_translation(fqterm_qm_file
++  ${fqterm_SRCS}
++  ${CMAKE_SOURCE_DIR}/res/dict/fqterm_zh_CN.ts
++  )
+ 
+ include_directories(
+   ${QT_INCLUDE_DIR}
+@@ -100,13 +91,11 @@ add_dependencies(fqterm_main
+   fqterm_utilities
+ )
+ 
+-if(USE_QT5)
+-  target_link_libraries(
+-    fqterm_main
+-    Qt5::Core
+-    Qt5::Widgets
+-    Qt5::Network
+-    Qt5::Script
+-    ${QXTLIB}
+-    )
+-endif(USE_QT5)
++target_link_libraries(
++  fqterm_main
++  Qt5::Core
++  Qt5::Widgets
++  Qt5::Network
++  Qt5::Script
++  ${QXTLIB}
++  )
+diff --git a/src/protocol/CMakeLists.txt b/src/protocol/CMakeLists.txt
+index 0b505af..ddd7707 100644
+--- a/src/protocol/CMakeLists.txt
++++ b/src/protocol/CMakeLists.txt
+@@ -52,11 +52,8 @@ set(internal_SRCS
+   internal/fqterm_ssh_channel.cpp
+ )
+ 
+-if(USE_QT5)
+-  find_package(Qt5Core REQUIRED)
+-  find_package(Qt5Network REQUIRED)
+-else(USE_QT5)
+-endif(USE_QT5)
++find_package(Qt5Core REQUIRED)
++find_package(Qt5Network REQUIRED)
+ 
+ include_directories(
+   ${QT_INCLUDE_DIR}
+@@ -77,6 +74,4 @@ add_dependencies(fqterm_protocol
+   fqterm_common
+ )
+ 
+-if(USE_QT5)
+-  target_link_libraries(fqterm_protocol Qt5::Core Qt5::Network)
+-endif(USE_QT5)
++target_link_libraries(fqterm_protocol Qt5::Core Qt5::Network)
+diff --git a/src/terminal/CMakeLists.txt b/src/terminal/CMakeLists.txt
+index 5abe2c6..26deb8b 100644
+--- a/src/terminal/CMakeLists.txt
++++ b/src/terminal/CMakeLists.txt
+@@ -42,10 +42,7 @@ add_dependencies(fqterm_terminal
+   fqterm_utilities
+ )
+ 
+-if(USE_QT5)
+-  find_package(Qt5Core REQUIRED)
+-  find_package(Qt5Network REQUIRED)
+-  find_package(Qt5Widgets REQUIRED)
+-  target_link_libraries(fqterm_terminal Qt5::Core Qt5::Widgets Qt5::Network)
+-else(USE_QT5)
+-endif(USE_QT5)
++find_package(Qt5Core REQUIRED)
++find_package(Qt5Network REQUIRED)
++find_package(Qt5Widgets REQUIRED)
++target_link_libraries(fqterm_terminal Qt5::Core Qt5::Widgets Qt5::Network)
+diff --git a/src/ui/CMakeLists.txt b/src/ui/CMakeLists.txt
+index c42c262..e5c9a07 100644
+--- a/src/ui/CMakeLists.txt
++++ b/src/ui/CMakeLists.txt
+@@ -85,7 +85,6 @@ set(fqterm_ui_UIS
+   defineescape.ui
+ )
+ 
+-if(USE_QT5)
+ qt5_wrap_ui(fqterm_ui_UIS_H
+   ${fqterm_ui_UIS}
+ )
+@@ -99,17 +98,6 @@ qt5_create_translation(fqterm_ui_qm_file
+   ${fqterm_ui_SRCS}
+   ${CMAKE_SOURCE_DIR}/res/dict/ui_zh_CN.ts
+ )
+-else(USE_QT5)
+-qt4_wrap_ui(fqterm_ui_UIS_H
+-  ${fqterm_ui_UIS}
+-)
+-
+-qt4_create_translation(fqterm_ui_qm_file
+-  ${fqterm_ui_UIS}
+-  ${fqterm_ui_SRCS}
+-  ${CMAKE_SOURCE_DIR}/res/dict/ui_zh_CN.ts
+-)
+-endif(USE_QT5)
+ 
+ include_directories(
+   ${QT_INCLUDE_DIR}
+@@ -134,6 +122,4 @@ IF(NOT MCGGIT_WC_REVISION MATCHES "NOTFOUND")
+   ADD_DEFINITIONS(-D "FQTERM_GIT_REVISION=\\\"${MCGGIT_WC_REVISION}\\\"")
+ ENDIF(NOT MCGGIT_WC_REVISION MATCHES "NOTFOUND")
+ 
+-if(USE_QT5)
+-  target_link_libraries(fqterm_ui Qt5::Core Qt5::Widgets)
+-endif(USE_QT5)
++target_link_libraries(fqterm_ui Qt5::Core Qt5::Widgets)
+diff --git a/src/ui/imageviewer/CMakeLists.txt b/src/ui/imageviewer/CMakeLists.txt
+index d8cf46a..54f087c 100644
+--- a/src/ui/imageviewer/CMakeLists.txt
++++ b/src/ui/imageviewer/CMakeLists.txt
+@@ -31,6 +31,4 @@ include_directories(
+ add_library(fqterm_imageviewer
+   ${fqterm_imageviewer_SRCS})
+ 
+-if(USE_QT5)
+-  target_link_libraries(fqterm_imageviewer Qt5::Core Qt5::Widgets)
+-endif(USE_QT5)
++target_link_libraries(fqterm_imageviewer Qt5::Core Qt5::Widgets)
+diff --git a/src/utilities/CMakeLists.txt b/src/utilities/CMakeLists.txt
+index 8470516..a657b18 100644
+--- a/src/utilities/CMakeLists.txt
++++ b/src/utilities/CMakeLists.txt
+@@ -28,10 +28,7 @@ add_dependencies(fqterm_utilities
+   fqterm_common
+ )
+ 
+-if(USE_QT5)
+-  find_package(Qt5Core REQUIRED)
+-  find_package(Qt5Widgets REQUIRED)
+-  find_package(Qt5Network REQUIRED)
+-  target_link_libraries(fqterm_utilities Qt5::Core Qt5::Widgets Qt5::Network)
+-else(USE_QT5)
+-endif(USE_QT5)
++find_package(Qt5Core REQUIRED)
++find_package(Qt5Widgets REQUIRED)
++find_package(Qt5Network REQUIRED)
++target_link_libraries(fqterm_utilities Qt5::Core Qt5::Widgets Qt5::Network)
