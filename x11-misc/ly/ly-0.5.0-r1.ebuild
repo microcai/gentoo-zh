@@ -29,7 +29,6 @@ BDEPEND=""
 src_prepare(){
         default
         for _i in argoat configator ctypes dragonfail termbox_next; do
-                # rm -rf ${S}/sub/${_i}
-                cp -r ${WORKDIR}/${_i}-master/* ${S}/sub/${_i}
+                cp -r ${WORKDIR}/${_i}-master/* ${S}/sub/${_i} || die "copy submodules ${_i} failed"
 	done
 }
