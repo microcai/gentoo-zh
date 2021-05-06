@@ -1,6 +1,6 @@
 DEFINED_PHASES=install postinst postrm preinst prepare unpack
 DEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
-DESCRIPTION=WPS Office is an office productivity suite
+DESCRIPTION=WPS Office is an office productivity suite, Here is the Chinese version
 EAPI=7
 HOMEPAGE=http://www.wps.cn/product/wpslinux/ http://wps-community.org/
 INHERIT=unpacker xdg
@@ -11,4 +11,4 @@ RESTRICT=strip mirror
 SLOT=0
 SRC_URI=https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/9719/wps-office_11.1.0.9719_amd64.deb
 _eclasses_=toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	d410501a125f99ffb560b0c523cd3d1e	unpacker	517f16af48ee3ab88180dd58b5143213	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	xdg	c7ba313ea1eaf266f95cc6235f7d6a07
-_md5_=370f02bbdc4b3a23ddec3284e866896e
+_md5_=09dfff1f94c3f6ad142e5b7052494c0d
