@@ -6,7 +6,7 @@ inherit unpacker xdg
 
 MY_PV="$(ver_cut 4)"
 
-DESCRIPTION="WPS Office is an office productivity suite"
+DESCRIPTION="WPS Office is an office productivity suite, Here is the Chinese version"
 HOMEPAGE="http://www.wps.cn/product/wpslinux/ http://wps-community.org/"
 
 KEYWORDS="amd64"
