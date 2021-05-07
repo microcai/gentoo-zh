@@ -1,0 +1,15 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=unpack
+DEPEND=sys-libs/pam x11-libs/libxcb x11-base/xorg-server x11-apps/xauth
+DESCRIPTION=Ly - a TUI display manager
+EAPI=7
+HOMEPAGE=https://github.com/nullgemm/ly
+INHERIT=git-r3
+KEYWORDS=~amd64
+LICENSE=WTFPL
+PROPERTIES=live
+RDEPEND=sys-libs/pam x11-libs/libxcb x11-base/xorg-server x11-apps/xauth
+SLOT=0
+SRC_URI=https://github.com/nullgemm/ly/archive/0.5.0.tar.gz -> ly-0.5.0.tar.gz
+_eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52
+_md5_=a1038df20085baa7c2fb74f18560af80
