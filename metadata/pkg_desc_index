@@ -72,7 +72,6 @@ dev-util/jd-gui 1.4.0: A standalone graphical utility that displays Java source 
 dev-util/jetbrains-toolbox 1.20.7939: Manage all your JetBrains Projects and Tools
 dev-util/rust-analyzer 20200928: An experimental Rust compiler front-end for IDEs
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
-games-board/othello 0.2.0 0.2.1: Othello is a classic strategy game, also known as Reversi
 kde-misc/plasma-applet-netspeed-widget 1.8-r1 9999: Plasma 5 widget that displays the currently used network bandwidth.
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/jf-openhuninn 1.1: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
