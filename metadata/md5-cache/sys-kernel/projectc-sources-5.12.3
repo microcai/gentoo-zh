@@ -4,7 +4,7 @@ DESCRIPTION=Full Project-C CPU Scheduler And MuQSS CPU Scheduler sources includi
 EAPI=6
 HOMEPAGE=https://github.com/Frogging-Family/linux-tkg
 INHERIT=kernel-2-src-prepare-overlay
-IUSE=uksm cjktty pds bmq muqss symlink build
+IUSE=uksm cjktty pds +bmq muqss symlink build
 KEYWORDS=~amd64
 LICENSE=GPL-2 CDDL
 RDEPEND=!build? ( dev-lang/perl sys-devel/bc sys-devel/make >=sys-libs/ncurses-5.2 virtual/libelf )
@@ -13,4 +13,4 @@ RESTRICT=binchecks strip
 SLOT=5.12.3
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.12.tar.xz https://cdn.kernel.org/pub/linux/kernel/v5.x/patch-5.12.3.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.12-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.12-1.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.12-1.extras.tar.xz
 _eclasses_=toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	d410501a125f99ffb560b0c523cd3d1e	estack	055c42df72f76a4f45ec92b35e83cd56	eapi7-ver	f9ec87e93172b25ce65a85303dc06964	kernel-2-src-prepare-overlay	578c2e6dd65bd74989dee980b8f6803d
-_md5_=f39745418dd67639ff2a8894810ad22d
+_md5_=02bdc29d7b64ccddee5f7ed33cac1fd1
