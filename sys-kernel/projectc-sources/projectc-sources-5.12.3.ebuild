@@ -8,7 +8,7 @@ K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 PROJECTC_VERSION="r1"
 ETYPE="sources"
-IUSE="uksm cjktty pds bmq muqss"
+IUSE="uksm cjktty pds +bmq muqss"
 REQUIRED_USE="^^ ( pds bmq muqss )"
 DEPEND="app-arch/cpio
         dev-util/dwarves
