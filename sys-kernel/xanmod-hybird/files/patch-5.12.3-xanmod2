@@ -1,9 +1,9 @@
 diff --git a/.config b/.config
 new file mode 100644
-index 000000000000..14cd5f0f6b53
+index 000000000000..64472ef66823
 --- /dev/null
 +++ b/.config
-@@ -0,0 +1,11068 @@
+@@ -0,0 +1,11069 @@
 +#
 +# Automatically generated file; DO NOT EDIT.
 +# Linux/x86 5.12.3 Kernel Configuration
@@ -1053,13 +1053,14 @@ index 000000000000..14cd5f0f6b53
 +#
 +CONFIG_SELECT_MEMORY_MODEL=y
 +CONFIG_SPARSEMEM_MANUAL=y
++CONFIG_UNEVICTABLE_FILE=y
++CONFIG_UNEVICTABLE_FILE_KBYTES_LOW=262144
++CONFIG_UNEVICTABLE_FILE_KBYTES_MIN=131072
 +CONFIG_SPARSEMEM=y
 +CONFIG_NEED_MULTIPLE_NODES=y
 +CONFIG_SPARSEMEM_EXTREME=y
 +CONFIG_SPARSEMEM_VMEMMAP_ENABLE=y
 +CONFIG_SPARSEMEM_VMEMMAP=y
-+CONFIG_CLEAN_LOW_KBYTES=262144
-+CONFIG_CLEAN_MIN_KBYTES=0
 +CONFIG_HAVE_FAST_GUP=y
 +CONFIG_NUMA_KEEP_MEMINFO=y
 +CONFIG_MEMORY_ISOLATION=y
@@ -1130,7 +1131,7 @@ index 000000000000..14cd5f0f6b53
 +CONFIG_LRU_GEN=y
 +CONFIG_NR_LRU_GENS=4
 +CONFIG_TIERS_PER_GEN=2
-+CONFIG_LRU_GEN_ENABLED=y
++# CONFIG_LRU_GEN_ENABLED is not set
 +# CONFIG_LRU_GEN_STATS is not set
 +# end of Memory Management options
 +
@@ -11113,59 +11114,49 @@ index 04545725f187..7ac8b17b60b9 100644
  				Safety option to keep boot IRQs enabled. This
  				should never be necessary.
 diff --git a/Documentation/admin-guide/sysctl/vm.rst b/Documentation/admin-guide/sysctl/vm.rst
-index 586cd4b86428..cf4a90d7a058 100644
+index 586cd4b86428..16826b31debb 100644
 --- a/Documentation/admin-guide/sysctl/vm.rst
 +++ b/Documentation/admin-guide/sysctl/vm.rst
-@@ -26,6 +26,8 @@ Currently, these files are in /proc/sys/vm:
+@@ -69,6 +69,8 @@ Currently, these files are in /proc/sys/vm:
+ - stat_refresh
+ - numa_stat
+ - swappiness
++- unevictable_file_kbytes_low
++- unevictable_file_kbytes_min
+ - unprivileged_userfaultfd
+ - user_reserve_kbytes
+ - vfs_cache_pressure
+@@ -886,6 +888,31 @@ calls without any restrictions.
+ The default value is 0.
  
- - admin_reserve_kbytes
- - block_dump
-+- clean_low_kbytes
-+- clean_min_kbytes
- - compact_memory
- - compaction_proactiveness
- - compact_unevictable_allowed
-@@ -113,6 +115,41 @@ block_dump enables block I/O debugging when set to a nonzero value. More
- information on block I/O debugging is in Documentation/admin-guide/laptops/laptop-mode.rst.
  
- 
-+clean_low_kbytes
-+=====================
++unevictable_file_kbytes_low
++===========================
 +
-+This knob provides *best-effort* protection of clean file pages. The clean file
-+pages on the current node won't be reclaimed under memory pressure when their
-+amount is below vm.clean_low_kbytes *unless* we threaten to OOM or have no
-+free swap space or vm.swappiness=0.
++Keep some file pages still mapped under memory pressure to avoid potential
++disk thrashing that may occur due to evicting running executables code.
++This implements soft eviction throttling, and some file pages can still
++be discarded.
 +
-+Protection of clean file pages may be used to prevent thrashing and
-+reducing I/O under low-memory conditions.
++Setting it to 0 effectively disables this feature.
 +
-+Setting it to a high value may result in a early eviction of anonymous pages
-+into the swap space by attempting to hold the protected amount of clean file
-+pages in memory.
-+
-+The default value is defined by CONFIG_CLEAN_LOW_KBYTES.
++The default value is 256 MiB.
 +
 +
-+clean_min_kbytes
-+=====================
++unevictable_file_kbytes_min
++===========================
 +
-+This knob provides *hard* protection of clean file pages. The clean file pages
-+on the current node won't be reclaimed under memory pressure when their amount
-+is below vm.clean_min_kbytes.
++Keep all file pages still mapped under memory pressure to avoid potential
++disk thrashing that may occur due to evicting running executables code.
++This is the hard limit.
 +
-+Hard protection of clean file pages may be used to avoid high latency and
-+prevent livelock in near-OOM conditions.
++Setting it to 0 effectively disables this feature.
 +
-+Setting it to a high value may result in a early out-of-memory condition due to
-+the inability to reclaim the protected amount of clean file pages when other
-+types of pages cannot be reclaimed.
-+
-+The default value is defined by CONFIG_CLEAN_MIN_KBYTES.
++The default value is 128 MiB.
 +
 +
- compact_memory
- ==============
+ user_reserve_kbytes
+ ===================
  
 diff --git a/Documentation/filesystems/ntfs3.rst b/Documentation/filesystems/ntfs3.rst
 new file mode 100644
@@ -60297,20 +60288,10 @@ index 74d4e193966a..9b54ca13eac3 100644
  /* Register offset of system registers */
  #define NIOS2_FW_VERSION		0x0
 diff --git a/include/linux/mm.h b/include/linux/mm.h
-index 8ba434287387..0df53310a763 100644
+index 8ba434287387..2c8a2db78ce9 100644
 --- a/include/linux/mm.h
 +++ b/include/linux/mm.h
-@@ -203,6 +203,9 @@ static inline void __mm_zero_struct_page(struct page *page)
- 
- extern int sysctl_max_map_count;
- 
-+extern unsigned long sysctl_clean_low_kbytes;
-+extern unsigned long sysctl_clean_min_kbytes;
-+
- extern unsigned long sysctl_user_reserve_kbytes;
- extern unsigned long sysctl_admin_reserve_kbytes;
- 
-@@ -1070,6 +1073,8 @@ vm_fault_t finish_mkwrite_fault(struct vm_fault *vmf);
+@@ -1070,6 +1070,8 @@ vm_fault_t finish_mkwrite_fault(struct vm_fault *vmf);
  #define ZONES_PGOFF		(NODES_PGOFF - ZONES_WIDTH)
  #define LAST_CPUPID_PGOFF	(ZONES_PGOFF - LAST_CPUPID_WIDTH)
  #define KASAN_TAG_PGOFF		(LAST_CPUPID_PGOFF - KASAN_TAG_WIDTH)
@@ -68706,10 +68687,33 @@ index 19aa806890d5..1750dfc416d8 100644
  
  /* kernel/itimer.c */
 diff --git a/kernel/sysctl.c b/kernel/sysctl.c
-index 62fbd09b5dc1..caad193c931f 100644
+index 62fbd09b5dc1..77233a146b0a 100644
 --- a/kernel/sysctl.c
 +++ b/kernel/sysctl.c
-@@ -120,9 +120,9 @@ static unsigned long long_max = LONG_MAX;
+@@ -111,6 +111,22 @@
+ static int sixty = 60;
+ #endif
+ 
++#if defined(CONFIG_UNEVICTABLE_FILE)
++#if CONFIG_UNEVICTABLE_FILE_KBYTES_LOW < 0
++#error "CONFIG_UNEVICTABLE_FILE_KBYTES_LOW should be >= 0"
++#endif
++#if CONFIG_UNEVICTABLE_FILE_KBYTES_MIN < 0
++#error "CONFIG_UNEVICTABLE_FILE_KBYTES_MIN should be >= 0"
++#endif
++#if CONFIG_UNEVICTABLE_FILE_KBYTES_LOW < CONFIG_UNEVICTABLE_FILE_KBYTES_MIN
++#error "CONFIG_UNEVICTABLE_FILE_KBYTES_LOW should be >= CONFIG_UNEVICTABLE_FILE_KBYTES_MIN"
++#endif
++unsigned long sysctl_unevictable_file_kbytes_low __read_mostly =
++	CONFIG_UNEVICTABLE_FILE_KBYTES_LOW;
++unsigned long sysctl_unevictable_file_kbytes_min __read_mostly =
++	CONFIG_UNEVICTABLE_FILE_KBYTES_MIN;
++#endif
++
+ static int __maybe_unused neg_one = -1;
+ static int __maybe_unused two = 2;
+ static int __maybe_unused four = 4;
+@@ -120,9 +136,9 @@ static unsigned long long_max = LONG_MAX;
  static int one_hundred = 100;
  static int two_hundred = 200;
  static int one_thousand = 1000;
@@ -68721,7 +68725,7 @@ index 62fbd09b5dc1..caad193c931f 100644
  #ifdef CONFIG_PERF_EVENTS
  static int six_hundred_forty_kb = 640 * 1024;
  #endif
-@@ -200,6 +200,10 @@ static int min_extfrag_threshold;
+@@ -200,6 +216,10 @@ static int min_extfrag_threshold;
  static int max_extfrag_threshold = 1000;
  #endif
  
@@ -68732,7 +68736,7 @@ index 62fbd09b5dc1..caad193c931f 100644
  #endif /* CONFIG_SYSCTL */
  
  #if defined(CONFIG_BPF_SYSCALL) && defined(CONFIG_SYSCTL)
-@@ -1652,6 +1656,24 @@ int proc_do_static_key(struct ctl_table *table, int write,
+@@ -1652,6 +1672,24 @@ int proc_do_static_key(struct ctl_table *table, int write,
  }
  
  static struct ctl_table kern_table[] = {
@@ -68757,7 +68761,7 @@ index 62fbd09b5dc1..caad193c931f 100644
  	{
  		.procname	= "sched_child_runs_first",
  		.data		= &sysctl_sched_child_runs_first,
-@@ -1902,6 +1924,15 @@ static struct ctl_table kern_table[] = {
+@@ -1902,6 +1940,15 @@ static struct ctl_table kern_table[] = {
  		.proc_handler	= proc_dointvec,
  	},
  #endif
@@ -68773,27 +68777,32 @@ index 62fbd09b5dc1..caad193c931f 100644
  #ifdef CONFIG_PROC_SYSCTL
  	{
  		.procname	= "tainted",
-@@ -3093,6 +3124,20 @@ static struct ctl_table vm_table[] = {
+@@ -3092,6 +3139,25 @@ static struct ctl_table vm_table[] = {
+ 		.extra1		= SYSCTL_ZERO,
  		.extra2		= SYSCTL_ONE,
  	},
++#endif
++#if defined(CONFIG_UNEVICTABLE_FILE)
++	{
++		.procname	= "unevictable_file_kbytes_low",
++		.data		= &sysctl_unevictable_file_kbytes_low,
++		.maxlen		= sizeof(sysctl_unevictable_file_kbytes_low),
++		.mode		= 0644,
++		.proc_handler	= proc_doulongvec_minmax,
++		.extra1		= &sysctl_unevictable_file_kbytes_min,
++	},
++	{
++		.procname	= "unevictable_file_kbytes_min",
++		.data		= &sysctl_unevictable_file_kbytes_min,
++		.maxlen		= sizeof(sysctl_unevictable_file_kbytes_min),
++		.mode		= 0644,
++		.proc_handler	= proc_doulongvec_minmax,
++		.extra1		= &zero_ul,
++		.extra2		= &sysctl_unevictable_file_kbytes_low,
++	},
  #endif
-+	{
-+		.procname	= "clean_low_kbytes",
-+		.data		= &sysctl_clean_low_kbytes,
-+		.maxlen		= sizeof(sysctl_clean_low_kbytes),
-+		.mode		= 0644,
-+		.proc_handler	= proc_doulongvec_minmax,
-+	},
-+	{
-+		.procname	= "clean_min_kbytes",
-+		.data		= &sysctl_clean_min_kbytes,
-+		.maxlen		= sizeof(sysctl_clean_min_kbytes),
-+		.mode		= 0644,
-+		.proc_handler	= proc_doulongvec_minmax,
-+	},
  	{
  		.procname	= "user_reserve_kbytes",
- 		.data		= &sysctl_user_reserve_kbytes,
 diff --git a/kernel/task_work.c b/kernel/task_work.c
 index 9cde961875c0..5c8dea45d4f8 100644
 --- a/kernel/task_work.c
@@ -106042,58 +106051,60 @@ index 55e1b4cba808..000000000000
 -#endif /* ZSTD_OPT_H_91842398743 */
 diff --git a/localversion b/localversion
 new file mode 100644
-index 000000000000..c21af2f75ee0
+index 000000000000..0a051ad136a6
 --- /dev/null
 +++ b/localversion
 @@ -0,0 +1 @@
-+-xanmod1
++-xanmod2
 diff --git a/mm/Kconfig b/mm/Kconfig
-index 24c045b24b95..5650c2d3c9c2 100644
+index 24c045b24b95..d9da4da0a2a5 100644
 --- a/mm/Kconfig
 +++ b/mm/Kconfig
-@@ -122,6 +122,41 @@ config SPARSEMEM_VMEMMAP
- 	  pfn_to_page and page_to_pfn operations.  This is the most
- 	  efficient option when sufficient kernel resources are available.
+@@ -63,6 +63,43 @@ config SPARSEMEM_MANUAL
  
-+config CLEAN_LOW_KBYTES
-+	int "Default value for vm.clean_low_kbytes"
-+	depends on SYSCTL
-+	default "150000"
-+	help
-+	  The vm.clean_low_kbytes sysctl knob provides *best-effort*
-+	  protection of clean file pages. The clean file pages on the current
-+	  node won't be reclaimed under memory pressure when their amount is
-+	  below vm.clean_low_kbytes *unless* we threaten to OOM or have
-+	  no free swap space or vm.swappiness=0.
-+
-+	  Protection of clean file pages may be used to prevent thrashing and
-+	  reducing I/O under low-memory conditions.
-+
-+	  Setting it to a high value may result in a early eviction of anonymous
-+	  pages into the swap space by attempting to hold the protected amount of
-+	  clean file pages in memory.
-+
-+config CLEAN_MIN_KBYTES
-+	int "Default value for vm.clean_min_kbytes"
-+	depends on SYSCTL
-+	default "0"
-+	help
-+	  The vm.clean_min_kbytes sysctl knob provides *hard* protection
-+	  of clean file pages. The clean file pages on the current node won't be
-+	  reclaimed under memory pressure when their amount is below
-+	  vm.clean_min_kbytes.
-+
-+	  Hard protection of clean file pages may be used to avoid high latency and
-+	  prevent livelock in near-OOM conditions.
-+
-+	  Setting it to a high value may result in a early out-of-memory condition
-+	  due to the inability to reclaim the protected amount of clean file pages
-+	  when other types of pages cannot be reclaimed.
-+
- config HAVE_MEMBLOCK_PHYS_MAP
- 	bool
+ endchoice
  
-@@ -872,4 +907,59 @@ config MAPPING_DIRTY_HELPERS
++config UNEVICTABLE_FILE
++	bool "Keep some file pages under memory pressure"
++	depends on SYSCTL
++	def_bool y
++	help
++	  Keep some file pages still mapped under memory pressure
++	  to avoid potential disk thrashing that may occur due to
++	  evicting running executables code.
++
++	  The UNEVICTABLE_FILE_KBYTES_LOW value defines a threshold
++	  to activate file pages eviction throttling.
++	  The vm.unevictable_file_kbytes_low sysctl knob is used to
++	  change the amount in the runtime (setting it to 0
++	  effectively disables this feature).
++
++	  Recommended value: 262144 for a typical desktop workload.
++
++	  The UNEVICTABLE_FILE_KBYTES_MIN value sets the amount of
++	  pages to keep as a hard limit.
++	  The vm.unevictable_file_kbytes_min sysctl knob is used to
++	  change the amount in the runtime (setting it to 0
++	  effectively disables this feature).
++
++	  Recommended value: 131072 for a typical desktop workload.
++
++	  See also: Documentation/admin-guide/sysctl/vm.rst
++
++config UNEVICTABLE_FILE_KBYTES_LOW
++	int "Default value for vm.unevictable_file_kbytes_low"
++	depends on UNEVICTABLE_FILE
++	default "262144"
++
++config UNEVICTABLE_FILE_KBYTES_MIN
++	int "Default value for vm.unevictable_file_kbytes_min"
++	depends on UNEVICTABLE_FILE
++	default "131072"
++
+ config DISCONTIGMEM
+ 	def_bool y
+ 	depends on (!SELECT_MEMORY_MODEL && ARCH_DISCONTIGMEM_ENABLE) || DISCONTIGMEM_MANUAL
+@@ -872,4 +909,59 @@ config MAPPING_DIRTY_HELPERS
  config KMAP_LOCAL
  	bool
  
@@ -106691,7 +106702,7 @@ index 4f5f8c907897..64ab133ee816 100644
  struct vm_struct *get_vm_area_caller(unsigned long size, unsigned long flags,
  				const void *caller)
 diff --git a/mm/vmscan.c b/mm/vmscan.c
-index 562e87cbd7a1..4a34cc622681 100644
+index 562e87cbd7a1..d8b5e0b35e8d 100644
 --- a/mm/vmscan.c
 +++ b/mm/vmscan.c
 @@ -49,6 +49,11 @@
@@ -106706,40 +106717,29 @@ index 562e87cbd7a1..4a34cc622681 100644
  
  #include <asm/tlbflush.h>
  #include <asm/div64.h>
-@@ -118,6 +123,19 @@ struct scan_control {
+@@ -115,6 +120,14 @@ struct scan_control {
+ 	/* There is easily reclaimable cold cache in the current node */
+ 	unsigned int cache_trim_mode:1;
+ 
++#if defined(CONFIG_UNEVICTABLE_FILE)
++	/* The file pages on the current node are low */
++	unsigned int file_is_low:1;
++
++	/* The file pages on the current node are minimal */
++	unsigned int file_is_min:1;
++#endif
++
  	/* The file pages on the current node are dangerously low */
  	unsigned int file_is_tiny:1;
  
-+	/*
-+	 * The clean file pages on the current node won't be reclaimed when
-+	 * their amount is below vm.clean_low_kbytes *unless* we threaten
-+	 * to OOM or have no free swap space or vm.swappiness=0.
-+	 */
-+	unsigned int clean_below_low:1;
-+
-+	/*
-+	 * The clean file pages on the current node won't be reclaimed when
-+	 * their amount is below vm.clean_min_kbytes.
-+	 */
-+	unsigned int clean_below_min:1;
-+
- 	/* Allocation order */
- 	s8 order;
- 
-@@ -164,10 +182,21 @@ struct scan_control {
+@@ -164,10 +177,15 @@ struct scan_control {
  #define prefetchw_prev_lru_page(_page, _base, _field) do { } while (0)
  #endif
  
-+#if CONFIG_CLEAN_LOW_KBYTES < 0
-+#error "CONFIG_CLEAN_LOW_KBYTES must be >= 0"
++#if defined(CONFIG_UNEVICTABLE_FILE)
++extern unsigned long sysctl_unevictable_file_kbytes_low;
++extern unsigned long sysctl_unevictable_file_kbytes_min;
 +#endif
-+
-+#if CONFIG_CLEAN_MIN_KBYTES < 0
-+#error "CONFIG_CLEAN_MIN_KBYTES must be >= 0"
-+#endif
-+
-+unsigned long sysctl_clean_low_kbytes __read_mostly = CONFIG_CLEAN_LOW_KBYTES;
-+unsigned long sysctl_clean_min_kbytes __read_mostly = CONFIG_CLEAN_MIN_KBYTES;
 +
  /*
   * From 0 .. 200.  Higher means more swappy.
@@ -106749,7 +106749,7 @@ index 562e87cbd7a1..4a34cc622681 100644
  
  static void set_task_reclaim_state(struct task_struct *task,
  				   struct reclaim_state *rs)
-@@ -897,9 +926,11 @@ static int __remove_mapping(struct address_space *mapping, struct page *page,
+@@ -897,9 +915,11 @@ static int __remove_mapping(struct address_space *mapping, struct page *page,
  
  	if (PageSwapCache(page)) {
  		swp_entry_t swap = { .val = page_private(page) };
@@ -106762,7 +106762,7 @@ index 562e87cbd7a1..4a34cc622681 100644
  		__delete_from_swap_cache(page, swap, shadow);
  		xa_unlock_irqrestore(&mapping->i_pages, flags);
  		put_swap_page(page, swap);
-@@ -1110,6 +1141,10 @@ static unsigned int shrink_page_list(struct list_head *page_list,
+@@ -1110,6 +1130,10 @@ static unsigned int shrink_page_list(struct list_head *page_list,
  		if (!sc->may_unmap && page_mapped(page))
  			goto keep_locked;
  
@@ -106773,10 +106773,14 @@ index 562e87cbd7a1..4a34cc622681 100644
  		may_enter_fs = (sc->gfp_mask & __GFP_FS) ||
  			(PageSwapCache(page) && (sc->gfp_mask & __GFP_IO));
  
-@@ -2224,6 +2259,135 @@ enum scan_balance {
+@@ -2224,6 +2248,138 @@ enum scan_balance {
  	SCAN_FILE,
  };
  
++#if defined(CONFIG_UNEVICTABLE_FILE)
++#define K(x) ((x) << (PAGE_SHIFT - 10))
++#endif
++
 +static void prepare_scan_count(pg_data_t *pgdat, struct scan_control *sc)
 +{
 +	unsigned long file;
@@ -106849,11 +106853,18 @@ index 562e87cbd7a1..4a34cc622681 100644
 +	if (!cgroup_reclaim(sc)) {
 +		unsigned long total_high_wmark = 0;
 +		unsigned long free, anon;
++#if defined(CONFIG_UNEVICTABLE_FILE)
++		unsigned long reclaimable_file, clean_file, dirty_file;
++#endif
 +		int z;
 +
 +		free = sum_zone_node_page_state(pgdat->node_id, NR_FREE_PAGES);
 +		file = node_page_state(pgdat, NR_ACTIVE_FILE) +
 +			   node_page_state(pgdat, NR_INACTIVE_FILE);
++#if defined(CONFIG_UNEVICTABLE_FILE)
++		reclaimable_file = file + node_page_state(pgdat, NR_ISOLATED_FILE);
++		dirty_file = node_page_state(pgdat, NR_FILE_DIRTY);
++#endif
 +
 +		for (z = 0; z < MAX_NR_ZONES; z++) {
 +			struct zone *zone = &pgdat->node_zones[z];
@@ -106876,66 +106887,43 @@ index 562e87cbd7a1..4a34cc622681 100644
 +			!(sc->may_deactivate & DEACTIVATE_ANON) &&
 +			anon >> sc->priority;
 +
++#if defined(CONFIG_UNEVICTABLE_FILE)
 +		/*
-+		* Check the number of clean file pages to protect them from
-+		* reclaiming if their amount is below the specified.
-+		*/
-+		if (sysctl_clean_low_kbytes || sysctl_clean_min_kbytes) {
-+			unsigned long reclaimable_file, dirty, clean;
-+
-+			reclaimable_file =
-+				node_page_state(pgdat, NR_ACTIVE_FILE) +
-+				node_page_state(pgdat, NR_INACTIVE_FILE) +
-+				node_page_state(pgdat, NR_ISOLATED_FILE);
-+			dirty = node_page_state(pgdat, NR_FILE_DIRTY);
++		 * node_page_state() sum can go out of sync since
++		 * all the values are not read at once
++		 */
++		if (unlikely(reclaimable_file < dirty_file))
 +			/*
-+			* node_page_state() sum can go out of sync since
-+			* all the values are not read at once.
-+			*/
-+			if (likely(reclaimable_file > dirty))
-+				clean = (reclaimable_file - dirty) << (PAGE_SHIFT - 10);
-+			else
-+				clean = 0;
++			 * in this case assume the system does not have
++			 * clean file pages anymore
++			 */
++			clean_file = 0;
++		else
++			clean_file = reclaimable_file - dirty_file;
 +
-+			sc->clean_below_low = clean < sysctl_clean_low_kbytes;
-+			sc->clean_below_min = clean < sysctl_clean_min_kbytes;
-+		} else {
-+			sc->clean_below_low = false;
-+			sc->clean_below_min = false;
-+		}
++		sc->file_is_low = K(clean_file) < sysctl_unevictable_file_kbytes_low &&
++			          K(clean_file) > sysctl_unevictable_file_kbytes_min;
++
++		sc->file_is_min = K(clean_file) <= sysctl_unevictable_file_kbytes_min;
++#endif
 +	}
 +}
 +
  /*
   * Determine how aggressively the anon and file LRU lists should be
   * scanned.  The relative value of each set of LRU lists is determined
-@@ -2281,6 +2445,16 @@ static void get_scan_count(struct lruvec *lruvec, struct scan_control *sc,
- 		goto out;
- 	}
- 
-+	/*
-+	 * Force-scan anon if clean file pages is under vm.clean_min_kbytes
-+	 * or vm.clean_low_kbytes (unless the swappiness setting
-+	 * disagrees with swapping).
-+	 */
-+	if ((sc->clean_below_low || sc->clean_below_min) && swappiness) {
-+		scan_balance = SCAN_ANON;
-+		goto out;
-+	}
-+
- 	/*
- 	 * If there is enough inactive page cache, we do not reclaim
- 	 * anything from the anonymous working right now.
-@@ -2417,10 +2591,30 @@ static void get_scan_count(struct lruvec *lruvec, struct scan_control *sc,
+@@ -2417,10 +2573,32 @@ static void get_scan_count(struct lruvec *lruvec, struct scan_control *sc,
  			BUG();
  		}
  
-+		/*
-+		 * Don't reclaim clean file pages when their amount is below
-+		 * vm.clean_min_kbytes.
-+		 */
-+		if (file && sc->clean_below_min)
-+			scan = 0;
++#if defined(CONFIG_UNEVICTABLE_FILE)
++		if (file && scan) {
++			if (sc->file_is_low)
++				scan = min(scan, SWAP_CLUSTER_MAX >> sc->priority);
++			else if (sc->file_is_min)
++				scan = 0;
++		}
++#endif
 +
  		nr[lru] = scan;
  	}
@@ -106957,7 +106945,7 @@ index 562e87cbd7a1..4a34cc622681 100644
  static void shrink_lruvec(struct lruvec *lruvec, struct scan_control *sc)
  {
  	unsigned long nr[NR_LRU_LISTS];
-@@ -2432,6 +2626,11 @@ static void shrink_lruvec(struct lruvec *lruvec, struct scan_control *sc)
+@@ -2432,6 +2610,11 @@ static void shrink_lruvec(struct lruvec *lruvec, struct scan_control *sc)
  	struct blk_plug plug;
  	bool scan_adjusted;
  
@@ -106969,7 +106957,7 @@ index 562e87cbd7a1..4a34cc622681 100644
  	get_scan_count(lruvec, sc, nr);
  
  	/* Record the original scan target for proportional adjustments later */
-@@ -2669,7 +2868,6 @@ static void shrink_node(pg_data_t *pgdat, struct scan_control *sc)
+@@ -2669,7 +2852,6 @@ static void shrink_node(pg_data_t *pgdat, struct scan_control *sc)
  	unsigned long nr_reclaimed, nr_scanned;
  	struct lruvec *target_lruvec;
  	bool reclaimable = false;
@@ -106977,7 +106965,7 @@ index 562e87cbd7a1..4a34cc622681 100644
  
  	target_lruvec = mem_cgroup_lruvec(sc->target_mem_cgroup, pgdat);
  
-@@ -2679,93 +2877,7 @@ static void shrink_node(pg_data_t *pgdat, struct scan_control *sc)
+@@ -2679,93 +2861,7 @@ static void shrink_node(pg_data_t *pgdat, struct scan_control *sc)
  	nr_reclaimed = sc->nr_reclaimed;
  	nr_scanned = sc->nr_scanned;
  
@@ -107072,7 +107060,7 @@ index 562e87cbd7a1..4a34cc622681 100644
  
  	shrink_node_memcgs(pgdat, sc);
  
-@@ -2985,6 +3097,10 @@ static void snapshot_refaults(struct mem_cgroup *target_memcg, pg_data_t *pgdat)
+@@ -2985,6 +3081,10 @@ static void snapshot_refaults(struct mem_cgroup *target_memcg, pg_data_t *pgdat)
  	struct lruvec *target_lruvec;
  	unsigned long refaults;
  
@@ -107083,7 +107071,7 @@ index 562e87cbd7a1..4a34cc622681 100644
  	target_lruvec = mem_cgroup_lruvec(target_memcg, pgdat);
  	refaults = lruvec_page_state(target_lruvec, WORKINGSET_ACTIVATE_ANON);
  	target_lruvec->refaults[0] = refaults;
-@@ -3359,6 +3475,11 @@ static void age_active_anon(struct pglist_data *pgdat,
+@@ -3359,6 +3459,11 @@ static void age_active_anon(struct pglist_data *pgdat,
  	struct mem_cgroup *memcg;
  	struct lruvec *lruvec;
  
@@ -107095,7 +107083,7 @@ index 562e87cbd7a1..4a34cc622681 100644
  	if (!total_swap_pages)
  		return;
  
-@@ -4304,3 +4425,2365 @@ void check_move_unevictable_pages(struct pagevec *pvec)
+@@ -4304,3 +4409,2365 @@ void check_move_unevictable_pages(struct pagevec *pvec)
  	}
  }
  EXPORT_SYMBOL_GPL(check_move_unevictable_pages);
