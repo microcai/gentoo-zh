@@ -2,7 +2,7 @@ DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
 DEPEND=app-arch/cpio dev-util/dwarves dev-libs/libbpf !build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 sys-devel/bison sys-devel/flex )
 DESCRIPTION=Xanmod and Xanmod-CaCule sources including the Gentoo patchset for the 5.12 kernel tree
 EAPI=6
-HOMEPAGE=https://github.com/Frogging-Family/linux-tkg
+HOMEPAGE=https://xanmod.org/
 INHERIT=kernel-2-src-prepare-overlay
 IUSE=uksm cjktty +xanmod cacule symlink build
 KEYWORDS=~amd64
@@ -13,4 +13,4 @@ RESTRICT=binchecks strip
 SLOT=5.12.3
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.12.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.12-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.12-1.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.12-1.extras.tar.xz
 _eclasses_=toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	d410501a125f99ffb560b0c523cd3d1e	estack	055c42df72f76a4f45ec92b35e83cd56	eapi7-ver	f9ec87e93172b25ce65a85303dc06964	kernel-2-src-prepare-overlay	578c2e6dd65bd74989dee980b8f6803d
-_md5_=0ba0cd73a51ce6d96fe758c44c480bca
+_md5_=c4501ddfd51193a12a8e19b84fa929db
