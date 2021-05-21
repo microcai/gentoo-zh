@@ -5,11 +5,9 @@ EAPI=7
 
 inherit git-r3
 
-LYPV=${PV%-r*}
-
 DESCRIPTION="Ly - a TUI display manager"
 HOMEPAGE="https://github.com/nullgemm/ly"
-SRC_URI="${HOMEPAGE}/archive/${LYPV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="${HOMEPAGE}/archive/master.tar.gz -> ${P}.tar.gz"
 EGIT_CHECKOUT_DIR="${S}/sub"
 
 LICENSE="WTFPL"
