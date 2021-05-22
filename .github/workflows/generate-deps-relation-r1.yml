@@ -1,0 +1,32 @@
+name: Generate the dependencies table
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v2
+        with:
+          ref: deps-table
+      - name: Fetch gentoo-zh repo
+        uses: actions/checkout@v2
+        with:
+          ref: master
+          path: gentoo-zh
+      - name: Update packages relation
+        id: update_relation
+        shell: bash
+        run: ./update-relation.sh
+      - name: Push changes
+        if: ${{ steps.update_relation.outputs.state == 'changed' }}
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: deps-table
