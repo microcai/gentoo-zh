@@ -10,6 +10,10 @@ DO NOT BREAK PEOPLE'S SYSTEM
 
 follow rule no.1 and no.2
 
+# the dependencies table
+
+https://github.com/microcai/gentoo-zh/blob/deps-table/relation.md
+
 # commit message
 
 * for non-version bump commit, commit message should be like this:
@@ -50,5 +54,5 @@ follow rule no.1 and no.2
   `KEYWORDS="alpha amd64 arm hppa ia64 ppc mips ~s390 ~sh sparc x86 ~x86-fbsd"`
 
   But please don't abuse this exception. It must be a pure font package.
-  
+
   # See wiki for some package not working
