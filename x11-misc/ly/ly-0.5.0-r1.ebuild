@@ -5,11 +5,9 @@ EAPI=7
 
 inherit git-r3
 
-LYPV=${PV%-r*}
-
 DESCRIPTION="Ly - a TUI display manager"
 HOMEPAGE="https://github.com/nullgemm/ly"
-SRC_URI="${HOMEPAGE}/archive/${LYPV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="${HOMEPAGE}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 EGIT_CHECKOUT_DIR="${S}/sub"
 
 LICENSE="WTFPL"
@@ -28,6 +26,7 @@ src_unpack() {
 		unpack ${A} || die
 	fi
         for _i in argoat configator ctypes dragonfail termbox_next; do
+                git-r3_fetch ${HOMEPAGE%ly}${_i} || die
                 git-r3_checkout ${HOMEPAGE%ly}${_i} ${EGIT_CHECKOUT_DIR}/${_i} || die
 	done
 }
