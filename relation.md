@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-05-23 02:39:25 CST)
+(The last generation time: 2021-05-23 11:04:06 CST)
 
 ### Packages
 
@@ -324,6 +324,7 @@
                                                 | 5.12.3                 |            |                                                                                         |
                                                 | 5.12.4                 |            |                                                                                         |
                                                 | 5.12.5                 |            |                                                                                         |
+                                                | 5.12.6                 |            |                                                                                         |
    sys-kernel/xanmod-hybird                     | 5.12.1                 | RD         | https://github.com/Frogging-Family/linux-tkg                                            | Xanmod and Xanmod-CaCule sources including the Gentoo patchset for the . kernel tree
                                                 | 5.12.2                 |            |                                                                                         |
                                                 | 5.12.3                 |            |                                                                                         |
