@@ -1,5 +1,6 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="6"
 
@@ -7,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="Lightworks is the fastest, most accessible and focused NLE in the industry"
 HOMEPAGE="http://www.lwks.com/"
-SRC_URI="https://github.com/HougeLangley/customkernel/releases/download/LWS/lightworks_2020.1.1_r124942.deb"
+SRC_URI="https://github.com/HougeLangley/lwks-beta/releases/download/lwks-reversion/lightworks_2021.2_r128258.deb"
 
 LICENSE="EditShare"
 SLOT="0"
@@ -56,12 +57,12 @@ RDEPEND="
 	x11-libs/libXdmcp
 	x11-libs/libdrm
 	app-accessibility/at-spi2-core
+	!media-video/lightworks-beta
 "
 
 DEPEND="${RDEPEND}
 	!app-arch/deb2targz
-	app-arch/unzip
-	x11-apps/mkfontdir"
+	app-arch/unzip"
 
 S="${WORKDIR}"
 
@@ -86,7 +87,6 @@ src_install() {
 	doins -r usr/lib/${PN}/* || die "doins lib failed"
 
 	exeinto /usr/lib64/${PN}
-	doexe usr/lib/${PN}/spawn || die "doins lib-exe failed"
 	doexe usr/lib/${PN}/ntcardvt || die "doins lib-exe failed"
 
 	fperms a+rw "usr/share/lightworks/Preferences"
@@ -101,5 +101,3 @@ src_install() {
 
 	dodoc usr/share/doc/${PN}/*
 }
-
-
