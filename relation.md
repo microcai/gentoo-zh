@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-05-25 12:19:05 CST)
+(The last generation time: 2021-05-27 15:17:58 CST)
 
 ### Packages
 
@@ -264,13 +264,13 @@
                                                 | 99999                  |            |                                                                                         |
    net-proxy/qv2ray                             | 2.6.3-r1               |  D, RD     | https://qv2ray.github.io/                                                               | Qt GUI fontend of v2ray
                                                 | 99999                  |            |                                                                                         |
-     net-proxy/v2ray                            | 4.37.3                 | RD         | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
-                                                | 4.38.3                 |            |                                                                                         |
-       dev-libs/v2ray-domain-list-community     | 4.38.2_p20210430100800 | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+     net-proxy/v2ray                            | 4.38.3                 | RD         | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
+                                                | 4.39.2                 |            |                                                                                         |
+       dev-libs/v2ray-domain-list-community     | 4.39.2_p20210526032424 | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
                                                 | 9999                   |            |                                                                                         |
-       dev-libs/v2ray-domain-list-community-bin | 4.38.2_p20210430100800 | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+       dev-libs/v2ray-domain-list-community-bin | 4.39.2_p20210526032424 | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
                                                 | 9999                   |            |                                                                                         |
-       dev-libs/v2ray-geoip-bin                 | 4.38.2_p202104300531   | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
+       dev-libs/v2ray-geoip-bin                 | 4.39.2_p202105270041   | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
                                                 | 9999                   |            |                                                                                         |
      net-proxy/v2ray-bin                        | 4.34.0                 | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
