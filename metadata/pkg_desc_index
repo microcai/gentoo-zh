@@ -54,14 +54,14 @@ dev-libs/v2ray-domain-list-community 4.39.2_p20210526032424 9999: Community mana
 dev-libs/v2ray-domain-list-community-bin 4.39.2_p20210526032424 9999: Community managed domain list for V2Ray.
 dev-libs/v2ray-geoip-bin 4.39.2_p202105270041 9999: GeoIP for V2Ray.
 dev-php/pecl-solr 2.4.0: Solr client
-dev-python/fuo-kuwo 0.1.3: kuwo music support for feeluown
-dev-python/fuo-local 0.2.1: local music support for feeluown
-dev-python/fuo-netease 0.6: netease cloud music support for feeluown
-dev-python/fuo-qqmusic 0.3.2: xiami music support for feeluown
+dev-python/fuo-kuwo 0.1.3-r1: kuwo music support for feeluown
+dev-python/fuo-local 0.2.1-r1: local music support for feeluown
+dev-python/fuo-netease 0.6-r1: netease cloud music support for feeluown
+dev-python/fuo-qqmusic 0.3.2-r1: xiami music support for feeluown
 dev-python/fuo-xiami 0.2.4: xiami music support for feeluown
-dev-python/janus 0.4.0: Implementation of the asyncio (PEP 3156) event-loop with Qt
-dev-python/qasync 0.9.4: Implementation of the asyncio (PEP 3156) event-loop with Qt
-dev-python/tomlkit 0.7.0: Style-preserving TOML library for Python
+dev-python/janus 0.4.0-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
+dev-python/qasync 0.9.4-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
+dev-python/tomlkit 0.7.0-r1: Style-preserving TOML library for Python
 dev-ruby/mruby 1.0.0 9999: mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
 dev-util/arch-install-scripts 20: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
 dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 files
@@ -88,7 +88,7 @@ media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simpl
 media-plugins/audacious-mac 0.2.0 0.3.10: Monkey's Audio Codec plugin for audacious
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 9999 20200403: Standalone lyrics fetcher/displayer (windowed and OSD mode).
-media-sound/feeluown 3.7.7: A user-friendly and hackable music player
+media-sound/feeluown 3.7.7-r1: A user-friendly and hackable music player
 media-sound/linnya 2.2.0: A free music player
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/lightworks 2021.2-r1: Lightworks is the fastest, most accessible and focused NLE in the industry
