@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-05-27 18:52:55 CST)
+(The last generation time: 2021-05-29 02:08:18 CST)
 
 ### Packages
 
@@ -179,14 +179,14 @@
  media-plugins/osdlyrics                        | 9999                   |            | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
                                                 | 20200403               |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/feeluown                           | 3.7.7                  |            | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
-   dev-python/fuo-kuwo                          | 0.1.3                  |  D         | https://github.com/feeluown/feeluown-kuwo                                               | kuwo music support for feeluown
-   dev-python/fuo-local                         | 0.2.1                  |  D         | https://github.com/feeluown/feeluown-local                                              | local music support for feeluown
-   dev-python/fuo-netease                       | 0.6                    |  D         | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
-   dev-python/fuo-qqmusic                       | 0.3.2                  |  D         | https://github.com/feeluown/feeluown-xiami                                              | xiami music support for feeluown
-   dev-python/janus                             | 0.4.0                  |  D, RD     | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
-   dev-python/qasync                            | 0.9.4                  |  D, RD     | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
-   dev-python/tomlkit                           | 0.7.0                  |  D, RD     | https://github.com/sdispater/tomlkit                                                    | Style-preserving TOML library for Python
+ media-sound/feeluown                           | 3.7.7-r1               |            | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
+   dev-python/fuo-kuwo                          | 0.1.3-r1               |  D         | https://github.com/feeluown/feeluown-kuwo                                               | kuwo music support for feeluown
+   dev-python/fuo-local                         | 0.2.1-r1               |  D         | https://github.com/feeluown/feeluown-local                                              | local music support for feeluown
+   dev-python/fuo-netease                       | 0.6-r1                 |  D         | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
+   dev-python/fuo-qqmusic                       | 0.3.2-r1               |  D         | https://github.com/feeluown/feeluown-xiami                                              | xiami music support for feeluown
+   dev-python/janus                             | 0.4.0-r1               |  D, RD     | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
+   dev-python/qasync                            | 0.9.4-r1               |  D, RD     | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
+   dev-python/tomlkit                           | 0.7.0-r1               |  D, RD     | https://github.com/sdispater/tomlkit                                                    | Style-preserving TOML library for Python
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/linnya                             | 2.2.0                  |            | http://www.linnya.org                                                                   | A free music player
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
