@@ -12,7 +12,7 @@ SRC_URI="http://hyperrate.com/gcin-source/gcin-${PV}.tar.xz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS=""
 IUSE="filter-nobopomofo chinese-sound anthy chewing gtk3 qt4"
 
 DEPEND=">=x11-libs/gtk+-2

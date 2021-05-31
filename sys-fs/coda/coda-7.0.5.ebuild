@@ -11,7 +11,7 @@ SRC_URI="http://coda.cs.cmu.edu/coda/source/coda-7.0.5.tar.xz"
 
 LICENSE="GPL"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS=""
 IUSE=""
 
 COM_DEP="sys-libs/ncurses

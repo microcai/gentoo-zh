@@ -13,7 +13,7 @@ EGIT_REPO_URI="https://github.com/avplayer/avim.git"
 
 LICENSE="GPLv3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="dev-libs/protobuf

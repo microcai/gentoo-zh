@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnu.org/software/freetalk/"
 SRC_URI="http://ftp.gnu.org/gnu/freetalk/freetalk-${PV}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 LICENSE="GPL-3"
 IUSE=""
 

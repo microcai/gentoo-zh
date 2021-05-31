@@ -13,7 +13,7 @@ else
 	WIZNOTE_SRC_URI="https://github.com/WizTeam/WizQTClient/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	RESTRICT="mirror"
 	WIZNOTE_ECLASS="vcs-snapshot"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS=""
 fi
 
 inherit ${WIZNOTE_ECLASS} cmake-utils

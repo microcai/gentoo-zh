@@ -9,7 +9,7 @@ EHG_REPO_URI="http://code.suckless.org/hg/libixp"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 DEPEND=""

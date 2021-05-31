@@ -12,7 +12,7 @@ EGIT_REPO_URI="https://github.com/clowwindy/shadowvpn.git"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 
 DEPEND="dev-libs/libsodium"
 RDEPEND="${DEPEND}"

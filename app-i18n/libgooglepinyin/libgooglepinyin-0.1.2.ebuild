@@ -13,7 +13,7 @@ DESCRIPTION="A fork from google pinyin on android "
 
 LICENSE="Apache"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 COMM_DEPEND="

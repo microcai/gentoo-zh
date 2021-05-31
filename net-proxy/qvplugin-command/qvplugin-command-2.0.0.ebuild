@@ -10,7 +10,7 @@ HOMEPAGE="https://github.com/Qv2ray/QvPlugin-Command"
 EGIT_REPO_URI="${HOMEPAGE}.git"
 EGIT_COMMIT="v${PV}"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 
 LICENSE="GPL-3"
 SLOT="0"

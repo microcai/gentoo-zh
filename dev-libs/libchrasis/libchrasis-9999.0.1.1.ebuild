@@ -14,7 +14,7 @@ HOMEPAGE="http://chrasis.berlios.de"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64"
+KEYWORDS=""
 DEPEND="dev-cpp/libxmlpp
 	>=dev-db/sqlite-3
 	!dev-libs/libchrasis

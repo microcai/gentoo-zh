@@ -9,7 +9,7 @@ DESCRIPTION="PCMan is an easy-to-use telnet client mainly targets BBS users form
 HOMEPAGE="https://github.com/pcman-bbs/pcmanx"
 EGIT_REPO_URI="${HOMEPAGE}.git"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS=""
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="+libnotify +proxy iplookup +wget"
