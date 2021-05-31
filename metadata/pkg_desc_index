@@ -140,7 +140,6 @@ sci-libs/libticonv 9999: Charset conversion library for TI calculators
 sci-libs/libtifiles2 9999: Library for TI calculator files
 sys-apps/mdp 9999: A command-line based markdown presentation tool
 sys-apps/yaourt 1.2.2: A pacman wrapper with extended features and AUR support
-sys-boot/grub-efi 0.97-r84: GNU GRUB Legacy boot loader
 sys-devel/ucc 1.1-r0: UCC is an ANSI C Compiler
 sys-fs/coda 7.0.5: Coda is an advanced network file system, similar to NFS
 sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
