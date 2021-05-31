@@ -29,6 +29,7 @@ RDEPEND="
 	>=net-print/cups-2.0.0
 	x11-libs/libnotify
 	x11-libs/libXScrnSaver
+	!app-editors/vscode
 "
 
 QA_PRESTRIPPED="*"
@@ -54,9 +55,9 @@ src_install(){
 	pax-mark m code
 	insinto "/opt/${PN}"
 	doins -r *
-	dosym "/opt/${PN}/bin/code" "/usr/bin/${PN}"
+	dosym "/opt/${PN}/bin/code" "/usr/bin/code"
 	domenu "${FILESDIR}/visual-studio-code.desktop"
-	doicon "${FILESDIR}/${PN}.png"
+	doicon "${FILESDIR}/${PN%-bin}.png"
 	fperms +x "/opt/${PN}/code"
 	fperms +x "/opt/${PN}/bin/code"
 	fperms +x "/opt/${PN}/resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg"
