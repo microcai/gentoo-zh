@@ -11,7 +11,7 @@ ESVN_REPO_URI="http://mentohust.googlecode.com/svn/trunk/"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS=""
 IUSE="debug libnotify +nls +arp +encryptpwd"
 
 RDEPEND="

@@ -12,7 +12,7 @@ EGIT_REPO_URI="https://github.com/avplayer/avplayer.git"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 
 DEPEND=">=dev-libs/boost-1.49[threads,static-libs]
 		dev-libs/openssl 

@@ -14,7 +14,7 @@ SRC_URI="http://developer.oray.com/download/Peanuthull%20dynamic%20DNS%20SDK.rar
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~x86 ~arm ~hppa ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS=""
 
 DOCS="AUTHORS"
 

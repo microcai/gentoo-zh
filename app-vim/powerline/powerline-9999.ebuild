@@ -12,7 +12,7 @@ SRC_URI=""
 EGIT_REPO_URI="https://github.com/Lokaltog/vim-powerline.git"
 EGIT_BRANCH=develop
 LICENSE="CCPL-Attribution-ShareAlike-3.0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 VIM_PLUGIN_HELPFILES="Powerline"

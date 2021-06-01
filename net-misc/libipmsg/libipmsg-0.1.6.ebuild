@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge.jp/libipmsg/28162/${P}.tar.gz"
 SLOT="0"         
 IUSE=""
 LICENSE="GPL-2" 
-KEYWORDS="x86 amd64" 
+KEYWORDS="" 
 RESTRICT="mirror" 
 
 src_compile()
