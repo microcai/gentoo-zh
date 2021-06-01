@@ -5,10 +5,9 @@ DESCRIPTION=vim plugin: The ultimate vim statusline utility.
 EAPI=7
 HOMEPAGE=http://www.vim.org/scripts/script.php?script_id=3881
 INHERIT=git-r3 vim-plugin
-KEYWORDS=~amd64 ~x86
 LICENSE=CCPL-Attribution-ShareAlike-3.0
 PROPERTIES=live
 RDEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 SLOT=0
 _eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52	vim-doc	dd0828b15877b2a09c07f4719e45891f	vim-plugin	93be71a1efbbf62981fcd40ee0db6e3f
-_md5_=971d44b4dd267b81dd338de728f3f887
+_md5_=5eacf4e6c207d6b97095c2598ecfbb54

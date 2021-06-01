@@ -6,10 +6,9 @@ EAPI=7
 HOMEPAGE=https://github.com/pcman-bbs/pcmanx
 INHERIT=autotools flag-o-matic git-r3
 IUSE=+libnotify +proxy iplookup +wget
-KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=libnotify? ( x11-libs/libnotify ) x11-libs/libXft >=x11-libs/gtk+-2.4 wget? ( net-misc/wget )
 SLOT=0
 _eclasses_=gnuconfig	9f91b4b0c84e734a87492d4293f03de5	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	d410501a125f99ffb560b0c523cd3d1e	libtool	f143db5a74ccd9ca28c1234deffede96	autotools	9e63f92c2a5d867fea55ecb160c7d354	edos2unix	33e347e171066657f91f8b0c72ec8773	l10n	8cdd85e169b835d518bc2fd59f780d8e	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	2d5b3f4b315094768576b6799e4f926e	flag-o-matic	bc2e7662a4a9a8643be851982a837ddc	git-r3	b8e8c92aa5fe8df7187e466138eb4e52
-_md5_=6f9c8f6d96e158528662966a3c4e2ef5
+_md5_=c0cbfdc33209fb1f631e3fd9a6961c67
