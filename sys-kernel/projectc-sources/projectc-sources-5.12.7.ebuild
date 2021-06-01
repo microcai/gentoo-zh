@@ -11,7 +11,7 @@ ETYPE="sources"
 IUSE="uksm cjktty pds +bmq muqss"
 REQUIRED_USE="^^ ( pds bmq muqss )"
 DEPEND="app-arch/cpio
-        dev-util/dwarves
+        dev-util/pahole
         dev-libs/libbpf"
 
 inherit kernel-2-src-prepare-overlay

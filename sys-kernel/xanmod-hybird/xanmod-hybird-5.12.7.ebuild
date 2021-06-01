@@ -10,7 +10,7 @@ ETYPE="sources"
 IUSE="uksm cjktty +xanmod cacule"
 REQUIRED_USE="^^ ( xanmod cacule )"
 DEPEND="app-arch/cpio
-        dev-util/dwarves
+        dev-util/pahole
         dev-libs/libbpf
 "
 RDEPEND="!sys-kernel/xanmod-sources"

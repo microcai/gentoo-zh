@@ -11,7 +11,7 @@ ETYPE="sources"
 IUSE="uksm cjktty pds +bmq muqss"
 REQUIRED_USE="^^ ( pds bmq muqss )"
 DEPEND="app-arch/cpio
-        dev-util/dwarves
+        dev-util/pahole
         dev-libs/libbpf"
 
 inherit kernel-2-src-prepare-overlay
@@ -21,13 +21,13 @@ DESCRIPTION="Full Project-C CPU Scheduler And MuQSS CPU Scheduler sources includ
 HOMEPAGE="https://github.com/Frogging-Family/linux-tkg"
 LICENSE+=" CDDL"
 SRC_URI="${KERNEL_BASE_URI}/linux-5.12.tar.xz
-        https://cdn.kernel.org/pub/linux/kernel/v5.x/patch-5.12.5.xz
+        https://cdn.kernel.org/pub/linux/kernel/v5.x/patch-5.12.8.xz
         ${GENPATCHES_URI}
 "
 
 src_unpack() {
     UNIPATCH_LIST_DEFAULT=""
-    UNIPATCH_LIST="${DISTDIR}/patch-5.12.5.xz"
+    UNIPATCH_LIST="${DISTDIR}/patch-5.12.8.xz"
     kernel-2-src-prepare-overlay_src_unpack
 }
 
