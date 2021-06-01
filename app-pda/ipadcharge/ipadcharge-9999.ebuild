@@ -11,7 +11,7 @@ EGIT_REPO_URI="https://github.com/mkorenkov/ipad_charge.git"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS=""
 IUSE=""
 
 DEPEND="dev-libs/libusb:1"

@@ -11,7 +11,7 @@ HOMEPAGE="http://chrasis.berlios.de/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS=""
 IUSE="nls"
 
 DEPEND=">=app-i18n/scim-1.2.0

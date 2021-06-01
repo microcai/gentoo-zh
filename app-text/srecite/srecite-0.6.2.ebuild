@@ -8,7 +8,7 @@ HOMEPAGE="http://srecite.sourceforge.net"
 SRC_URI="mirror://sourceforge/srecite/${P}.tar.gz"
 RESTRICT="mirror"
 LICENSE="GPL-2"
-KEYWORDS="~x86 amd64 ia64 alpha ppc sparc hppa"
+KEYWORDS=""
 SLOT="0"
 
 DEPEND=">=x11-libs/gtk+-2"

@@ -17,7 +17,7 @@ EGIT_REPO_URI="https://github.com/microcai/NetworkManager-l2tp.git"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="gnome"
 
 RDEPEND="

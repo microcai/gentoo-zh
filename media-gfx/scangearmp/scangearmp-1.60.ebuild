@@ -25,7 +25,7 @@ SRC_URI="http://gdlp01.c-wss.com/gds/3/0100003033/01/scangearmp-source-1.60-1.ta
 LICENSE="UNKNOWN" # GPL-2 source and proprietary binaries 
 
 SLOT="2" 
-KEYWORDS="~x86 ~amd64" 
+KEYWORDS="" 
 IUSE="amd64 
     usb 
     mp250 
