@@ -34,6 +34,7 @@ app-office/wps-office 11.1.0.10161: WPS Office is an office productivity suite, 
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-portage/portage-cdb 0.2.1: increase portage's speed after syncing, and for calculating dependencies. This method uses a database, rather than a bunch of flat files to store its metadata.
 app-shells/gitstatus 1.5.0: Git status for Bash and Zsh prompt
+app-shells/zsh-theme-powerlevel10k 1.14.6: Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
 app-text/groff-utf8 0-r1: GNU groff wrapper allowing UTF-8 input
 app-text/openyoudao 9999: openyoudao is a youdao client for linux.
 app-text/reciteword 0.8.5: Reciteword is a education software to help people to study English, reciting english words. It have very beautiful interface, make reciting word being a interesting things.
