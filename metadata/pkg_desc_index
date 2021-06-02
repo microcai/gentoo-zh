@@ -78,6 +78,7 @@ games-board/othello 0.2.2: Othello is a classic strategy game, also known as Rev
 kde-misc/plasma-applet-netspeed-widget 1.8-r1 9999: Plasma 5 widget that displays the currently used network bandwidth.
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/jf-openhuninn 1.1: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
+media-fonts/nerd-fonts 2.1.0: Nerd Fonts is a project that patches developer targeted fonts with a high number of glyphs (icons).
 media-fonts/taipei-sans-tc 1.0: JT Foundry - Taipei Sans TC Beta font
 media-fonts/ttf-wps-fonts 1.0: Symbol fonts required by wps-office
 media-fonts/wangfonts 1.3.0: Free Chinese TrueType fonts donated by Prof. Hann-Tzong Wang

@@ -18,6 +18,56 @@ app-i18n/fcitx5-configtool:test - Enable Test
 app-text/ydcv-rs:clipboard - Enable feature: use selected text as input
 app-text/ydcv-rs:notify - Enable feature: display explanations via desktop notification
 dev-libs/granite:demo - Build the Granite demo application (to present all available UI features provided by the library)
+media-fonts/nerd-fonts:3270 - Install Nerd-fonts-patched 3270 fonts
+media-fonts/nerd-fonts:agave - Install Nerd-fonts-patched Agave fonts
+media-fonts/nerd-fonts:anonymouspro - Install Nerd-fonts-patched Anonymous Pro fonts
+media-fonts/nerd-fonts:arimo - Install Nerd-fonts-patched Arimo fonts
+media-fonts/nerd-fonts:aurulentsansmono - Install Nerd-fonts-patched Aurulent Sans Mono fonts
+media-fonts/nerd-fonts:bigblueterminal - Install Nerd-fonts-patched Big Blue Terminal fonts
+media-fonts/nerd-fonts:bitstreamverasansmono - Install Nerd-fonts-patched Bitstream Vera Sans Mono fonts
+media-fonts/nerd-fonts:cascadiacode - Install Nerd-fonts-patched Cascadia Code fonts
+media-fonts/nerd-fonts:codenewroman - Install Nerd-fonts-patched Code New Roman fonts
+media-fonts/nerd-fonts:cousine - Install Nerd-fonts-patched Cousine fonts
+media-fonts/nerd-fonts:daddytimemono - Install Nerd-fonts-patched Daddy Time Mono fonts
+media-fonts/nerd-fonts:dejavusansmono - Install Nerd-fonts-patched DejaVu Sans Mono fonts
+media-fonts/nerd-fonts:droidsansmono - Install Nerd-fonts-patched Droid Sans Mono fonts
+media-fonts/nerd-fonts:fantasquesansmono - Install Nerd-fonts-patched Fantasque Sans mono fonts
+media-fonts/nerd-fonts:firacode - Install Nerd-fonts-patched Fira Code fonts
+media-fonts/nerd-fonts:firamono - Install Nerd-fonts-patched Fira Mono fonts
+media-fonts/nerd-fonts:go-mono - Install Nerd-fonts-patched Go-Mono fonts
+media-fonts/nerd-fonts:gohu - Install Nerd-fonts-patched Gohu fonts
+media-fonts/nerd-fonts:hack - Install Nerd-fonts-patched Hack fonts
+media-fonts/nerd-fonts:hasklig - Install Nerd-fonts-patched Hasklig fonts
+media-fonts/nerd-fonts:heavydata - Install Nerd-fonts-patched Heavy Data fonts
+media-fonts/nerd-fonts:hermit - Install Nerd-fonts-patched Hermit fonts
+media-fonts/nerd-fonts:ia-writer - Install Nerd-fonts-patched iA-Writer fonts
+media-fonts/nerd-fonts:ibmplexmono - Install Nerd-fonts-patched IBM Plex Mono fonts
+media-fonts/nerd-fonts:inconsolata - Install Nerd-fonts-patched Inconsolata fonts
+media-fonts/nerd-fonts:inconsolatago - Install Nerd-fonts-patched Inconsolata Go fonts
+media-fonts/nerd-fonts:inconsolatalgc - Install Nerd-fonts-patched Inconsolata LGC fonts
+media-fonts/nerd-fonts:iosevka - Install Nerd-fonts-patched Iosevka fonts
+media-fonts/nerd-fonts:jetbrainsmono - Install Nerd-fonts-patched JetBrains Mono fonts
+media-fonts/nerd-fonts:lekton - Install Nerd-fonts-patched Lekton fonts
+media-fonts/nerd-fonts:liberationmono - Install Nerd-fonts-patched Liberation Mono fonts
+media-fonts/nerd-fonts:meslo - Install Nerd-fonts-patched Meslo fonts
+media-fonts/nerd-fonts:monofur - Install Nerd-fonts-patched Monofur fonts
+media-fonts/nerd-fonts:monoid - Install Nerd-fonts-patched Monoid fonts
+media-fonts/nerd-fonts:mononoki - Install Nerd-fonts-patched Mononoki fonts
+media-fonts/nerd-fonts:mplus - Install Nerd-fonts-patched Mplus fonts
+media-fonts/nerd-fonts:noto - Install Nerd-fonts-patched Noto fonts
+media-fonts/nerd-fonts:opendyslexic - Install Nerd-fonts-patched Open Dyslexic fonts
+media-fonts/nerd-fonts:overpass - Install Nerd-fonts-patched Overpass fonts
+media-fonts/nerd-fonts:profont - Install Nerd-fonts-patched Pro Font fonts
+media-fonts/nerd-fonts:proggyclean - Install Nerd-fonts-patched Proggy Clean fonts
+media-fonts/nerd-fonts:robotomono - Install Nerd-fonts-patched Roboto Mono fonts
+media-fonts/nerd-fonts:sharetechmono - Install Nerd-fonts-patched Share Tech Mono fonts
+media-fonts/nerd-fonts:sourcecodepro - Install Nerd-fonts-patched Source Code Pro fonts
+media-fonts/nerd-fonts:spacemono - Install Nerd-fonts-patched Space Mono fonts
+media-fonts/nerd-fonts:terminus - Install Nerd-fonts-patched Terminus fonts
+media-fonts/nerd-fonts:tinos - Install Nerd-fonts-patched Tinos fonts
+media-fonts/nerd-fonts:ubuntu - Install Nerd-fonts-patched Ubuntu fonts
+media-fonts/nerd-fonts:ubuntumono - Install Nerd-fonts-patched Ubuntu Mono fonts
+media-fonts/nerd-fonts:victormono - Install Nerd-fonts-patched Victor Mono fonts
 media-plugins/osdlyrics:gnome - add support for gnome
 media-plugins/osdlyrics:indicator - add support for appindicator
 media-sound/feeluown:local - add local music support for feeluown
