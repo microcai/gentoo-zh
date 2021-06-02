@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-05-31 23:28:49 CST)
+(The last generation time: 2021-06-02 10:07:31 CST)
 
 ### Packages
 
@@ -84,6 +84,8 @@
  app-pda/ipadcharge                             | 9999                   |            | https://github.com/mkorenkov/ipad_charge                                                | Enables USB charging for Apple devices.
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-portage/portage-cdb                        | 0.2.1                  |            | http://gentoo-wiki.com/TIP_speed_up_portage_with_cdb                                    | increase portage's speed after syncing, and for calculating dependencies. This method uses a database, rather than a bunch of flat files to store its metadata.
+------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-shells/gitstatus                           | 1.5.0                  |            | https://github.com/romkatv/gitstatus                                                    | Git status for Bash and Zsh prompt
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/groff-utf8                            | 0-r1                   |            | http://www.haible.de/bruno/packages-groff-utf8.html                                     | GNU groff wrapper allowing UTF-8 input
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
