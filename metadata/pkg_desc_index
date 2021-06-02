@@ -33,6 +33,7 @@ app-mobilephone/scrcpy 1.14 1.16 1.17: Display and control your Android device
 app-office/wps-office 11.1.0.10161: WPS Office is an office productivity suite, Here is the Chinese version
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-portage/portage-cdb 0.2.1: increase portage's speed after syncing, and for calculating dependencies. This method uses a database, rather than a bunch of flat files to store its metadata.
+app-shells/gitstatus 1.5.0: Git status for Bash and Zsh prompt
 app-text/groff-utf8 0-r1: GNU groff wrapper allowing UTF-8 input
 app-text/openyoudao 9999: openyoudao is a youdao client for linux.
 app-text/reciteword 0.8.5: Reciteword is a education software to help people to study English, reciting english words. It have very beautiful interface, make reciting word being a interesting things.
@@ -145,8 +146,8 @@ sys-fs/coda 7.0.5: Coda is an advanced network file system, similar to NFS
 sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/ksmbd-tools 9999: Tools for in-kernel CIFS server
-sys-kernel/projectc-sources 5.12 5.12.1 5.12.2 5.12.3 5.12.4 5.12.5 5.12.6 5.12.7 5.12.8: Full Project-C CPU Scheduler And MuQSS CPU Scheduler sources including the Gentoo patchset for the 5.12 kernel tree
-sys-kernel/xanmod-hybird 5.12.1 5.12.2 5.12.3 5.12.4 5.12.5 5.12.6 5.12.7 5.12.8: Xanmod and Xanmod-CaCule sources including the Gentoo patchset for the 5.12 kernel tree
+sys-kernel/projectc-sources 5.12.7 5.12.8 5.12.8-r1: Full Project-C CPU Scheduler And MuQSS CPU Scheduler sources including the Gentoo patchset for the 5.12 kernel tree
+sys-kernel/xanmod-hybird 5.12.7 5.12.8 5.12.8-r1: Xanmod and Xanmod-CaCule sources including the Gentoo patchset for the 5.12 kernel tree
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libixp 9999: Standalone client/server 9P library
 virtual/linux-sources 3-r6: Virtual for Linux kernel sources
