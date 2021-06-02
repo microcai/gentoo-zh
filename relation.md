@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-02 10:07:31 CST)
+(The last generation time: 2021-06-02 10:08:15 CST)
 
 ### Packages
 
@@ -320,23 +320,12 @@
  sys-libs/libixp                                | 9999                   |            | http://libs.suckless.org/                                                               | Standalone client/server 9P library
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                          | 3-r6                   |            |                                                                                         | Virtual for Linux kernel sources
-   sys-kernel/projectc-sources                  | 5.12                   | RD         | https://github.com/Frogging-Family/linux-tkg                                            | Full Project-C CPU Scheduler And MuQSS CPU Scheduler sources including the Gentoo patchset for the . kernel tree
-                                                | 5.12.1                 |            |                                                                                         |
-                                                | 5.12.2                 |            |                                                                                         |
-                                                | 5.12.3                 |            |                                                                                         |
-                                                | 5.12.4                 |            |                                                                                         |
-                                                | 5.12.5                 |            |                                                                                         |
-                                                | 5.12.6                 |            |                                                                                         |
-                                                | 5.12.7                 |            |                                                                                         |
+   sys-kernel/projectc-sources                  | 5.12.7                 | RD         | https://github.com/Frogging-Family/linux-tkg                                            | Full Project-C CPU Scheduler And MuQSS CPU Scheduler sources including the Gentoo patchset for the . kernel tree
                                                 | 5.12.8                 |            |                                                                                         |
-   sys-kernel/xanmod-hybird                     | 5.12.1                 | RD         | https://github.com/Frogging-Family/linux-tkg                                            | Xanmod and Xanmod-CaCule sources including the Gentoo patchset for the . kernel tree
-                                                | 5.12.2                 |            |                                                                                         |
-                                                | 5.12.3                 |            |                                                                                         |
-                                                | 5.12.4                 |            |                                                                                         |
-                                                | 5.12.5                 |            |                                                                                         |
-                                                | 5.12.6                 |            |                                                                                         |
-                                                | 5.12.7                 |            |                                                                                         |
+                                                | 5.12.8-r1              |            |                                                                                         |
+   sys-kernel/xanmod-hybird                     | 5.12.7                 | RD         | https://xanmod.org/                                                                     | Xanmod and Xanmod-CaCule sources including the Gentoo patchset for the . kernel tree
                                                 | 5.12.8                 |            |                                                                                         |
+                                                | 5.12.8-r1              |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                          | 1.8                    |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
