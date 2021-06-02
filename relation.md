@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-02 15:28:42 CST)
+(The last generation time: 2021-06-02 17:55:06 CST)
 
 ### Packages
 
@@ -156,6 +156,8 @@
  media-fonts/cwtex-q-fonts                      | 0.2                    |            | https://code.google.com/p/cwtex-q-fonts/                                                | Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/jf-openhuninn                      | 1.1                    |            | https://justfont.com/huninn/                                                            | An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
+------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ media-fonts/nerd-fonts                         | 2.1.0                  |            | https://www.nerdfonts.com/                                                              | Nerd Fonts is a project that patches developer targeted fonts with a high number of glyphs (icons).
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/taipei-sans-tc                     | 1.0                    |            | https://sites.google.com/view/jtfoundry/                                                | JT Foundry - Taipei Sans TC Beta font
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
