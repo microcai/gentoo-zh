@@ -7,10 +7,10 @@ K_GENPATCHES_VER="1"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 ETYPE="sources"
-IUSE="uksm cjktty xanmod cacule"
+IUSE="uksm cjktty +xanmod cacule"
 REQUIRED_USE="^^ ( xanmod cacule )"
 DEPEND="app-arch/cpio
-        dev-util/dwarves
+        dev-util/pahole
         dev-libs/libbpf
 "
 RDEPEND="!sys-kernel/xanmod-sources"
@@ -19,10 +19,10 @@ inherit kernel-2-src-prepare-overlay
 detect_version
 
 DESCRIPTION="Xanmod and Xanmod-CaCule sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
-HOMEPAGE="https://github.com/Frogging-Family/linux-tkg"
+HOMEPAGE="https://xanmod.org/"
 LICENSE+=" CDDL"
 SRC_URI="${KERNEL_BASE_URI}/linux-5.12.tar.xz
-         ${GENPATCHES_URI}
+        ${GENPATCHES_URI}
 "
 
 src_unpack() {
@@ -34,20 +34,20 @@ KEYWORDS="~amd64"
 
 src_prepare() {
 
-    if use uksm ; then
-    eapply "${FILESDIR}/v1-uksm.patch" || die
+    if  use uksm    ;   then
+    eapply  "${FILESDIR}/v1-uksm.patch" ||  die
     fi
 
-    if use cjktty ; then
-    eapply "${FILESDIR}/v1-cjktty.patch" || die
+    if  use cjktty  ;   then
+    eapply  "${FILESDIR}/v1-cjktty.patch"   ||  die
     fi
 
-    if use xanmod ; then
-    eapply "${FILESDIR}/patch-5.12.1-xanmod2" || die
+    if  use xanmod  ;   then
+    eapply  "${FILESDIR}/patch-5.12.8-xanmod1"  ||  die
     fi
 
-    if use cacule ; then
-    eapply "${FILESDIR}/patch-5.12.1-xanmod2-cacule" || die
+    if  use cacule  ;   then
+    eapply  "${FILESDIR}/patch-5.12.8-xanmod1-cacule"   ||  die
     fi
 
     kernel-2-src-prepare-overlay_src_prepare
@@ -55,7 +55,7 @@ src_prepare() {
 }
 
 pkg_postinst() {
-	elog "MICROCODES"
+    elog "MICROCODES"
     elog "Use xanmod-sources with microcodes"
-	elog "Read https://wiki.gentoo.org/wiki/Intel_microcode"
+    elog "Read https://wiki.gentoo.org/wiki/Intel_microcode"
 }
