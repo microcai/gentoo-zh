@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-02 17:55:06 CST)
+(The last generation time: 2021-06-03 20:05:32 CST)
 
 ### Packages
 
@@ -326,6 +326,7 @@
    sys-kernel/projectc-sources                  | 5.12.7                 | RD         | https://github.com/Frogging-Family/linux-tkg                                            | Full Project-C CPU Scheduler And MuQSS CPU Scheduler sources including the Gentoo patchset for the . kernel tree
                                                 | 5.12.8                 |            |                                                                                         |
                                                 | 5.12.8-r1              |            |                                                                                         |
+                                                | 5.12.9                 |            |                                                                                         |
    sys-kernel/xanmod-hybird                     | 5.12.7                 | RD         | https://xanmod.org/                                                                     | Xanmod and Xanmod-CaCule sources including the Gentoo patchset for the . kernel tree
                                                 | 5.12.8                 |            |                                                                                         |
                                                 | 5.12.8-r1              |            |                                                                                         |
