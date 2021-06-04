@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>net-proxy</herd>
-
 	<maintainer>
 		<email>slogerdream@gmail.com</email>
 		<name>slogerdream</name>
 	</maintainer>
-
 	<use>
 		<flag name='client'>Add make proxy client support</flag>
 		<flag name='server'>Add make proxy server support</flag>
