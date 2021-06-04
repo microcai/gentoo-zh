@@ -1,4 +1,4 @@
-name: Use repoman to check changed pkgs
+name: repoman
 on:
   pull_request:
     branches:
@@ -6,10 +6,10 @@ on:
     paths-ignore:
       - '.github/**'
       - 'metadata/**'
-    types: [opened, edited, reopened, synchronize]
+    types: [assigned, opened, edited, reopened, synchronize]
 
 jobs:
-  check:
+  check-changed-ebuilds:
     runs-on: ubuntu-20.04
     steps:
       - name: Setup python3.9
@@ -50,12 +50,15 @@ jobs:
       - name: Checkout the base ref of ::gentoo-zh
         uses: actions/checkout@v2
         with:
-          ref: ${{ github.base_ref }}
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.base.sha }}
           path: gentoo-zh
-      - name: Checkout the head ref of ::gentoo-zh
+      - name: Checkout the head ref of the pull request
         uses: actions/checkout@v2
         with:
-          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.sha }}
           path: gentoo-zh
       - name: Fetch ::gentoo repo
         uses: actions/checkout@v2
@@ -64,13 +67,15 @@ jobs:
           path: gentoo
       - name: Check
         shell: bash
+        env:
+          THEBASEREF: ${{ github.event.pull_request.base.sha }}
         run: |
           set -e
           sudo mv ${{ github.workspace }}/gentoo{,-zh} /var/db/repos/
           cd /var/db/repos/gentoo-zh
-          echo "git diff --raw origin/master"
-          git diff --raw origin/master
-          diff_files=$(git diff --raw origin/master | awk -F'[[:space:]]' '{printf $NF "\n"}')
+          echo "git diff --raw ${THEBASEREF}"
+          git diff --raw ${THEBASEREF}
+          diff_files=$(git diff --raw ${THEBASEREF} | egrep -v '[[:space:]]D[[:space:]]' | awk -F'[[:space:]]' '{printf $NF "\n"}')
           cates=$(cat /var/db/repos/gentoo{,-zh}/profiles/categories | sort -du)
           declare -a check_pkgs
           for file in ${diff_files}; do
@@ -83,11 +88,13 @@ jobs:
               fi
             done
           done
+          check_pkgs=( $(echo "${check_pkgs[@]}" | tr ' ' '\n' | sort -du | tr '\n' ' ') )
           ret=0
           for pkg in ${check_pkgs[@]}; do
-            echo "=============================="
-            echo "=== Checking ${pkg} ..."
-            echo "=============================="
+            echo
+            echo "================================="
+            echo ">>> Checking ${pkg} ..."
+            echo "================================="
             pushd ${pkg}
             repoman full || ret=1
             popd
