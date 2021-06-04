@@ -4,4 +4,21 @@
 	<upstream>
 		<remote-id type="github">HougeLangley/customkernel</remote-id>
 	</upstream>
+	<use>
+		<flag name="uksm">Enable UKSM patch.
+		This is an improvement upon KSM</flag>
+		<flag name="cjktty">Enable cjktty patch.
+		You could see CJK fonts in TTY</flag>
+		<flag name="bmq">Enable BMQ "BitMap Queue" patch.
+		The BMQ "BitMap Queue" scheduler started off from his existing PDS
+		development experience and inspired by the scheduler found within Google's Zircon,
+		the kernel powering their Fuchsia OS initiative.</flag>
+		<flag name="pds">Enable PDS-MQ CPU Scheduler patch.
+		The PDS scheduler stands for the "Priority and Deadline based Skiplist multiple queue scheduler"
+		that is derived from Con Kolivas' former BFS scheduler with Variable Run Queue (VRQ) support.</flag>
+		<flag name="muqss">Enable MuQSS patch.
+		the MuQSS scheduler itself (born out of the "Brain Fuck Scheduler") 
+		is designed to improve system responsiveness for 
+		desktops and other workloads</flag>
+	</use>
 </pkgmetadata>
