@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>dennis.yxun@gmail.org</email>
-  <name>Lan Yixun</name>
-</maintainer>
-<longdescription lang="C">
-	UCC is an ANSI C compiler which supports Linux and Windows running on Intel
-	x86 platform.Its compilation speed is fast and it is suitable for personal
-	research and instructional use. 
-</longdescription>
+	<maintainer>
+		<email>dennis.yxun@gmail.org</email>
+		<name>Lan Yixun</name>
+	</maintainer>
+	<longdescription lang="C">
+		UCC is an ANSI C compiler which supports Linux and Windows running on Intel
+		x86 platform.Its compilation speed is fast and it is suitable for personal
+		research and instructional use.
+	</longdescription>
 </pkgmetadata>
