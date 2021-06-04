@@ -19,7 +19,7 @@ RDEPEND="
 		sys-kernel/rt-sources
 		sys-kernel/zen-sources
 		sys-kernel/raspberrypi-sources
-		sys-kernel/xanmod-hybird
+		sys-kernel/xanmod-hybrid
 		sys-kernel/projectc-sources
 		sys-kernel/gentoo-kernel
 		sys-kernel/gentoo-kernel-bin
