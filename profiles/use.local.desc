@@ -15,6 +15,9 @@ app-i18n/fcitx5-chinese-addons:webkit - Using dev-qt/qtwebkit as browser backend
 app-i18n/fcitx5-configtool:config-qt - Enable fcitx5-config-qt
 app-i18n/fcitx5-configtool:kcm - Enable KDE KCM support
 app-i18n/fcitx5-configtool:test - Enable Test
+app-i18n/fcitx5-gtk:gtk2 - Install input method module for GTK+ 2
+app-i18n/fcitx5-gtk:gtk3 - Enable support for GTK+3
+app-i18n/fcitx5-gtk:snooper - Enable key snooper for gtk app
 app-text/ydcv-rs:clipboard - Enable feature: use selected text as input
 app-text/ydcv-rs:notify - Enable feature: display explanations via desktop notification
 dev-libs/granite:demo - Build the Granite demo application (to present all available UI features provided by the library)
