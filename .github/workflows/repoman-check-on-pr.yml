@@ -6,10 +6,11 @@ on:
     paths-ignore:
       - '.github/**'
       - 'metadata/**'
-    types: [assigned, opened, edited, reopened, synchronize]
+    types: [opened, edited, reopened, synchronize]
 
 jobs:
   check-changed-ebuilds:
+    name: check changed ebuilds
     runs-on: ubuntu-20.04
     steps:
       - name: Setup python3.9
@@ -66,6 +67,7 @@ jobs:
           repository: gentoo-mirror/gentoo
           path: gentoo
       - name: Check
+        id: check
         shell: bash
         env:
           THEBASEREF: ${{ github.event.pull_request.base.sha }}
@@ -89,6 +91,7 @@ jobs:
             done
           done
           check_pkgs=( $(echo "${check_pkgs[@]}" | tr ' ' '\n' | sort -du | tr '\n' ' ') )
+          echo -n >/tmp/report.txt
           ret=0
           for pkg in ${check_pkgs[@]}; do
             echo
@@ -96,7 +99,45 @@ jobs:
             echo ">>> Checking ${pkg} ..."
             echo "================================="
             pushd ${pkg}
-            repoman full || ret=1
+            echo "=== Package: ${pkg} ===" >>/tmp/report.txt
+            repoman full -q > >(tee -ai /tmp/report.txt) || ret=1
+            echo >>/tmp/report.txt
             popd
           done
-          [[ ${ret} == 0 ]]
+          cd /var/db/repos/gentoo || true
+          v_repoman=$(repoman --version) || true
+          commit_gentoo=$(git rev-list -n1 HEAD) || true
+          report="$(cat /tmp/report.txt)"
+          report="${report//'%'/'%25'}"
+          report="${report//$'\n'/'%0A'}"
+          report="${report//$'\r'/'%0D'}"
+          echo "::set-output name=report::${report:-<None>}"
+          echo "::set-output name=vrepoman::${v_repoman:-<None>}"
+          echo "::set-output name=gentoocommit::${commit_gentoo:-<None>}"
+          if [[ ${ret} == 0 ]]; then
+            if ! egrep -v 'No QA issues found|^=== Package:.*|^[[:space:]]*$' /tmp/report.txt &>/dev/null; then
+              echo "::set-output name=state::passed"
+              echo "::set-output name=stateicon::heavy_check_mark"
+            else
+              echo "::set-output name=state::passed with non-fatal QA errors"
+              echo "::set-output name=stateicon::white_circle"
+            fi
+          else
+            echo "::set-output name=state::failed"
+            echo "::set-output name=stateicon::x"
+            exit 1
+          fi
+      - name: Post result
+        if: ${{ always() }}
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          issue-number: ${{ github.event.number }}
+          body: |
+            ## :${{steps.check.outputs.stateicon}}: repoman checks ${{steps.check.outputs.state}}
+
+            _${{ steps.check.outputs.vrepoman }}_
+            _::gentoo_ repo latest commit: https://github.com/gentoo-mirror/gentoo/commit/${{ steps.check.outputs.gentoocommit }}
+
+            ```
+            ${{ steps.check.outputs.report }}
+            ```
