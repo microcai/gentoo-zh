@@ -1,0 +1,95 @@
+name: Use repoman to check changed pkgs
+on:
+  pull_request:
+    branches:
+      - master
+    paths-ignore:
+      - '.github/**'
+      - 'metadata/**'
+    types: [opened, edited, reopened, synchronize]
+
+jobs:
+  check:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Setup python3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Prepare environment
+        shell: bash
+        run: |
+          set -xe
+          python -V
+          python -VV
+          sudo mkdir -m 777 -p /etc/portage
+          sudo mkdir -m 777 -p /var/db/repos/gentoo{,-zh}
+          sudo mkdir -m 777 -p /var/tmp/portage
+      - name: Install dependencies
+        run: sudo apt-get install -y --no-install-recommends libxslt-dev libxml2-dev libxml2-utils zstd python3-lxml
+      - name: Fetch portage
+        uses: actions/checkout@v2
+        with:
+          repository: gentoo/portage
+      - name: Install portage
+        shell: bash
+        run: |
+          set -xe
+          printf "[build_ext]\nportage-ext-modules=true" >>setup.cfg
+          sudo ./setup.py install
+          sudo useradd portage -d /var/tmp/portage -s /bin/false
+          sudo ln -s /var/db/repos/gentoo/profiles/default/linux/amd64/17.1 /etc/portage/make.profile
+          sudo printf "[gentoo-zh]\nlocation = /var/db/repos/gentoo-zh" >>/etc/portage/repos.conf
+      - name: Install repoman
+        shell: bash
+        run: |
+          set -xe
+          cd repoman
+          sudo ./setup.py install
+          sudo mv /usr/local/share/repoman /usr/share/ || true
+      - name: Checkout the base ref of ::gentoo-zh
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.base_ref }}
+          path: gentoo-zh
+      - name: Checkout the head ref of ::gentoo-zh
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+          path: gentoo-zh
+      - name: Fetch ::gentoo repo
+        uses: actions/checkout@v2
+        with:
+          repository: gentoo-mirror/gentoo
+          path: gentoo
+      - name: Check
+        shell: bash
+        run: |
+          set -e
+          sudo mv ${{ github.workspace }}/gentoo{,-zh} /var/db/repos/
+          cd /var/db/repos/gentoo-zh
+          echo "git diff --raw origin/master"
+          git diff --raw origin/master
+          diff_files=$(git diff --raw origin/master | awk -F'[[:space:]]' '{printf $NF "\n"}')
+          cates=$(cat /var/db/repos/gentoo{,-zh}/profiles/categories | sort -du)
+          declare -a check_pkgs
+          for file in ${diff_files}; do
+            c=${file%%/*}
+            for cate in ${cates}; do
+              if [[ ${c} == ${cate} ]]; then
+                n=${file#*/}
+                n=${n%%/*}
+                check_pkgs+=( ${c}/${n} )
+              fi
+            done
+          done
+          ret=0
+          for pkg in ${check_pkgs[@]}; do
+            echo "=============================="
+            echo "=== Checking ${pkg} ..."
+            echo "=============================="
+            pushd ${pkg}
+            repoman full || ret=1
+            popd
+          done
+          [[ ${ret} == 0 ]]
