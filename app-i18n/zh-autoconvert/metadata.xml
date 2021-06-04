@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>cjk</herd>
-<maintainer>
-<email>r0bertz@gentoo.org</email>
-<name>Zhang Le</name>
-</maintainer>
-<longdescription>Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter</longdescription>
+	<maintainer>
+		<email>r0bertz@gentoo.org</email>
+		<name>Zhang Le</name>
+	</maintainer>
+	<longdescription>Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter</longdescription>
 </pkgmetadata>
