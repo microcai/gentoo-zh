@@ -1,6 +1,6 @@
 name: repoman
 on:
-  pull_request:
+  pull_request_target:
     branches:
       - master
     paths-ignore:
@@ -12,6 +12,9 @@ jobs:
   check-changed-ebuilds:
     name: check changed ebuilds
     runs-on: ubuntu-20.04
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
       - name: Setup python3.9
         uses: actions/setup-python@v2
@@ -27,7 +30,7 @@ jobs:
           sudo mkdir -m 777 -p /var/db/repos/gentoo{,-zh}
           sudo mkdir -m 777 -p /var/tmp/portage
       - name: Install dependencies
-        run: sudo apt-get install -y --no-install-recommends libxslt-dev libxml2-dev libxml2-utils zstd python3-lxml
+        run: sudo apt-get install -y --no-install-recommends libxslt-dev libxml2-dev libxml2-utils zstd python3-lxml jq
       - name: Fetch portage
         uses: actions/checkout@v2
         with:
@@ -48,12 +51,6 @@ jobs:
           cd repoman
           sudo ./setup.py install
           sudo mv /usr/local/share/repoman /usr/share/ || true
-      - name: Checkout the base ref of ::gentoo-zh
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          ref: ${{ github.event.pull_request.base.sha }}
-          path: gentoo-zh
       - name: Checkout the head ref of the pull request
         uses: actions/checkout@v2
         with:
@@ -66,11 +63,40 @@ jobs:
         with:
           repository: gentoo-mirror/gentoo
           path: gentoo
+      - name: Get the base commit
+        id: basecommit
+        shell: bash
+        env:
+          COMMITS_URL: ${{ github.event.pull_request.commits_url }}
+          COMMITS_JSON: /tmp/commits.json
+        run: |
+          set -xe
+          curl -H "Accept: application/vnd.github.v3+json" \
+               -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+               -o ${COMMITS_JSON} ${COMMITS_URL}
+          [[ $(file --mime-type ${COMMITS_JSON}) =~ application/json$ ]]
+          <${COMMITS_JSON} jq '.message' && false || true
+          commits=( $(<${COMMITS_JSON} jq '.[].sha' | cut -d'"' -f2) )
+          pcommits=( $(<${COMMITS_JSON} jq '.[].parents[].sha' | cut -d'"' -f2) )
+          sha=${pcommits[0]}
+          for pcommit in ${pcommits[@]}; do
+            pcommit_not_matched=0
+            for commit in ${commits[@]}; do
+              if [[ ${pcommit} == ${commit} ]]; then
+                pcommit_not_matched=1
+              fi
+            done
+            if [[ ${pcommit_not_matched} == 0 ]]; then
+              sha=${pcommit}
+              break
+            fi
+          done
+          echo "::set-output name=sha::${sha}"
       - name: Check
         id: check
         shell: bash
         env:
-          THEBASEREF: ${{ github.event.pull_request.base.sha }}
+          THEBASEREF: ${{ steps.basecommit.outputs.sha }}
         run: |
           set -e
           sudo mv ${{ github.workspace }}/gentoo{,-zh} /var/db/repos/
@@ -114,10 +140,12 @@ jobs:
           echo "::set-output name=report::${report:-<None>}"
           echo "::set-output name=vrepoman::${v_repoman:-<None>}"
           echo "::set-output name=gentoocommit::${commit_gentoo:-<None>}"
+          echo "::set-output name=qakeywords::[:mag: QA Keywords Explanation](https://dev.gentoo.org/~zmedico/portage/doc/man/repoman.1.html#lbAG)"
           if [[ ${ret} == 0 ]]; then
             if ! egrep -v 'No QA issues found|^=== Package:.*|^[[:space:]]*$' /tmp/report.txt &>/dev/null; then
               echo "::set-output name=state::passed"
               echo "::set-output name=stateicon::heavy_check_mark"
+              echo "::set-output name=qakeywords:: "
             else
               echo "::set-output name=state::passed with non-fatal QA errors"
               echo "::set-output name=stateicon::white_circle"
@@ -138,6 +166,13 @@ jobs:
             _${{ steps.check.outputs.vrepoman }}_
             _::gentoo_ repo latest commit: https://github.com/gentoo-mirror/gentoo/commit/${{ steps.check.outputs.gentoocommit }}
 
+            <details open>
+            <summary>QA Result:</summary>
+
             ```
             ${{ steps.check.outputs.report }}
             ```
+
+            </details>
+
+            ${{ steps.check.outputs.qakeywords }}
