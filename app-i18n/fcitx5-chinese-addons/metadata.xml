@@ -8,6 +8,5 @@
 		<flag name="opencc">Enable support for conversion between Traditional and Simplified Chinese</flag>
 		<flag name="gui">Enable configure gui</flag>
 		<flag name="browser">Enable built-in browser using <pkg>dev-qt/qtwebengine</pkg></flag>
-		<flag name="webkit">Using <pkg>dev-qt/qtwebkit</pkg> as browser backend</flag>
 	</use>
 </pkgmetadata>
