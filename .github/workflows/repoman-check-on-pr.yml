@@ -103,7 +103,7 @@ jobs:
           cd /var/db/repos/gentoo-zh
           echo "git diff --raw ${THEBASEREF}"
           git diff --raw ${THEBASEREF}
-          diff_files=$(git diff --raw ${THEBASEREF} | egrep -v '[[:space:]]D[[:space:]]' | awk -F'[[:space:]]' '{printf $NF "\n"}')
+          diff_files=$(git diff --raw --name-only ${THEBASEREF})
           cates=$(cat /var/db/repos/gentoo{,-zh}/profiles/categories | sort -du)
           declare -a check_pkgs
           for file in ${diff_files}; do
@@ -119,7 +119,9 @@ jobs:
           check_pkgs=( $(echo "${check_pkgs[@]}" | tr ' ' '\n' | sort -du | tr '\n' ' ') )
           echo -n >/tmp/report.txt
           ret=0
+          echo "pkgs: ${check_pkgs[@]}"
           for pkg in ${check_pkgs[@]}; do
+            [[ -d ${pkg} ]] || continue
             echo
             echo "================================="
             echo ">>> Checking ${pkg} ..."
@@ -137,7 +139,7 @@ jobs:
           report="${report//'%'/'%25'}"
           report="${report//$'\n'/'%0A'}"
           report="${report//$'\r'/'%0D'}"
-          echo "::set-output name=report::${report:-<None>}"
+          echo "::set-output name=report::${report}"
           echo "::set-output name=vrepoman::${v_repoman:-<None>}"
           echo "::set-output name=gentoocommit::${commit_gentoo:-<None>}"
           echo "::set-output name=qaopen::open"
@@ -192,7 +194,7 @@ jobs:
               https://api.github.com/graphql
           done
       - name: Post result
-        if: ${{ always() }}
+        if: ${{ always() && steps.check.outputs.report }}
         uses: peter-evans/create-or-update-comment@v1
         with:
           issue-number: ${{ github.event.number }}
