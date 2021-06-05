@@ -9,7 +9,7 @@ EGIT_REPO_URI="https://github.com/fcitx/libime.git"
 if [[ "${PV}" == 9999* ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~x86"
 	EGIT_COMMIT="${PV}"
 fi
 _kenlmcommit="01c49fe86714276f77be9278d00906fc994256c1"

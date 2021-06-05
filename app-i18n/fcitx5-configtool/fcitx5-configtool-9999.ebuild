@@ -35,15 +35,15 @@ RDEPEND="app-i18n/fcitx5
 		kde-frameworks/kconfigwidgets:5
 		kde-frameworks/kcoreaddons:5
 		kde-frameworks/ki18n:5
-        kde-frameworks/kirigami:5
-        kde-frameworks/kdeclarative:5
+		kde-frameworks/kirigami:5
+		kde-frameworks/kdeclarative:5
 	)
 	!kcm? (
 		dev-qt/qtdeclarative
 	)
-    config-qt? (
-        kde-frameworks/kitemviews:5
-    )
+	config-qt? (
+		kde-frameworks/kitemviews:5
+	)
 	!${CATEGORY}/${PN}:4[-minimal(-)]"
 
 DEPEND="${RDEPEND}
@@ -56,7 +56,7 @@ src_configure() {
 		-DKDE_INSTALL_USE_QT_SYS_PATHS=yes
 		-DENABLE_KCM=$(usex kcm)
 		-DENABLE_CONFIG_QT=$(usex config-qt)
-        -DENABLE_TEST=$(usex test)
+		-DENABLE_TEST=$(usex test)
 	)
 
 	cmake_src_configure

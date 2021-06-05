@@ -9,7 +9,7 @@ EGIT_REPO_URI="https://github.com/fcitx/fcitx5-chinese-addons.git"
 if [[ "${PV}" == 9999 ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~x86"
 	EGIT_COMMIT="${PV}"
 fi
 
@@ -22,7 +22,7 @@ HOMEPAGE="https://github.com/fcitx/fcitx5-chinese-addons"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-IUSE="+opencc +gui browser webkit test"
+IUSE="+opencc +gui browser test"
 REQUIRED_USE=""
 
 RDEPEND="app-i18n/fcitx5
@@ -34,8 +34,7 @@ RDEPEND="app-i18n/fcitx5
 		dev-qt/qtconcurrent:5
 		app-i18n/fcitx5-qt[qt5,-only_plugin]
 		browser? (
-			webkit? ( dev-qt/qtwebkit:5 )
-			!webkit? ( dev-qt/qtwebengine:5 )
+			dev-qt/qtwebengine:5
 		)
 	)"
 DEPEND="${RDEPEND}
@@ -56,7 +55,7 @@ src_configure() {
 		-DENABLE_GUI=$(usex gui)
 		-DENABLE_OPENCC=$(usex opencc)
 		-DENABLE_BROWSER=$(usex browser)
-		-DUSE_WEBKIT=$(usex webkit)
+		-DUSE_WEBKIT=no
 	)
 	cmake_src_configure
 }

@@ -9,7 +9,7 @@ EGIT_REPO_URI="https://github.com/fcitx/fcitx5-qt.git"
 if [[ "${PV}" == 9999 ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~x86"
 	EGIT_COMMIT="${PV}"
 fi
 
