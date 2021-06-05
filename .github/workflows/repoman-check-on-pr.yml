@@ -157,6 +157,40 @@ jobs:
             echo "::set-output name=stateicon::x"
             exit 1
           fi
+      - name: Hide previous results
+        if: ${{ always() }}
+        shell: bash
+        env:
+          COMMENTS_URL: ${{ github.event.pull_request.comments_url }}
+          COMMENTS_JSON: /tmp/comments.json
+        run: |
+          curl -H "Accept: application/vnd.github.v3+json" \
+               -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+               -o ${COMMENTS_JSON} ${COMMENTS_URL}
+          node_ids=( $(<${COMMENTS_JSON} jq '.[] | select(.body|test("^##\\s*[a-zA-Z_:]+\\s*repoman\\s*checks")) | select(.user.id == 41898282) | .node_id' | cut -d'"' -f2) )
+          echo "${node_ids[@]}"
+          json="{ \"query\": \"mutation {
+              minimizeComment(input: {
+                subjectId: \\\"NODEID\\\",
+                classifier: OUTDATED
+              }) {
+                clientMutationId,
+                minimizedComment {
+                  isMinimized,
+                  minimizedReason,
+                  viewerCanMinimize
+                }
+              }
+            }\"
+          }"
+          json=$(tr -d '\n' <<<${json})
+          for node_id in ${node_ids[@]}; do
+            curl -X POST \
+              -H "Content-Type: application/json" \
+              -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              -d "${json/NODEID/${node_id}}" \
+              https://api.github.com/graphql
+          done
       - name: Post result
         if: ${{ always() }}
         uses: peter-evans/create-or-update-comment@v1
