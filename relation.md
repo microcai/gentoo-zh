@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-04 14:25:08 CST)
+(The last generation time: 2021-06-05 14:45:30 CST)
 
 ### Packages
 
@@ -59,7 +59,7 @@
  app-i18n/scim-chrasis                          | 9999.0.0.1             |            | http://chrasis.berlios.de/                                                              | Chrasis SCIM binding for chinese character recognition.
    dev-libs/libchrasis                          | 9999.0.1.1             |  D, RD     | http://chrasis.berlios.de                                                               | Library for Chinese Character Recognition As-Is
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/sogoupinyin                           | 2.2.0.0102             |            | http://pinyin.sogou.com/linux/                                                          | Sogou Pinyin input method.
+ app-i18n/sogoupinyin                           | 2.4.0.3469             |            | http://pinyin.sogou.com/linux/                                                          | Sogou Pinyin input method.
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/zh-autoconvert                        | 0.3.16-r3              |            | http://packages.debian.org/stable/text/zh-autoconvert.html                              | Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
