@@ -13,17 +13,17 @@ SRC_URI="http://hyperrate.com/gcin-source/gcin-${PV}.tar.xz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="filter-nobopomofo chinese-sound anthy chewing gtk3 qt4"
+IUSE="filter-nobopomofo chinese-sound anthy chewing gtk3 qt5"
 
-DEPEND=">=x11-libs/gtk+-2
+DEPEND=">=x11-libs/gtk+-2:*
 	anthy? ( >=app-i18n/anthy-9100 )
-	chewing? ( dev-libs/libchewing )
+	chewing? ( app-i18n/libchewing )
 	gtk3? ( x11-libs/gtk+:3 )
-	qt4? ( dev-qt/qtcore:4 dev-qt/qtgui )"
+	qt5? ( dev-qt/qtcore:5 dev-qt/qtgui )"
 RDEPEND="${DEPEND}
 	chinese-sound? ( media-sound/vorbis-tools[ogg123] )"
 DEPEND="${DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 RESTRICT="mirror"
@@ -37,10 +37,9 @@ src_prepare() {
 src_configure() {
 	econf --use_i18n=Y \
 		--use_tsin=Y \
-		--use_qt3=N \
 		$(! use anthy && echo --use_anthy=N ) \
 		$(! use chewing && echo --use_chewing=N ) \
-		$(! use qt4 && echo --use_qt4=N ) \
+		$(! use qt5 && echo --use_qt=N ) \
 		$(! use gtk3 && echo --use_gtk3=N )
 }
 
@@ -80,12 +79,12 @@ update_gtk_immodules() {
 }
 
 pkg_postinst() {
-	use gtk && update_gtk_immodules
-	gnome2_icon_cache_update
+	use gtk3 && update_gtk_immodules
+	xdg_icon_cache_update
 
 }
 
 pkg_postrm() {
-	use gtk && update_gtk_immodules
-	gnome2_icon_cache_update
+	use gtk3 && update_gtk_immodules
+	xdg_icon_cache_update
 }
