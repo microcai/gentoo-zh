@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-05 14:45:30 CST)
+(The last generation time: 2021-06-05 14:46:01 CST)
 
 ### Packages
 
@@ -24,7 +24,7 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/dvp                                   | 1.2.1                  |            | http://kaufmann.no/roland/dvorak/index.html                                             | The kbd keymap for Programmer Dvorak.
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/fcitx5-chinese-addons                 | 5.0.6                  |            | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
+ app-i18n/fcitx5-chinese-addons                 | 5.0.6-r1               |            | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
                                                 | 9999                   |            |                                                                                         |
    app-i18n/fcitx5-qt                           | 5.0.6                  |  D, RD     | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
                                                 | 9999                   |            |                                                                                         |
