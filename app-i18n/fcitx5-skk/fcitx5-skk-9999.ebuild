@@ -8,7 +8,7 @@ if [[ "${PV}" =~ (^|\.)9999$ ]]; then
 	KEYWORDS=""
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-skk"
 else
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 inherit xdg cmake
