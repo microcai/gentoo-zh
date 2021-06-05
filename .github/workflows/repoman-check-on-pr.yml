@@ -140,11 +140,13 @@ jobs:
           echo "::set-output name=report::${report:-<None>}"
           echo "::set-output name=vrepoman::${v_repoman:-<None>}"
           echo "::set-output name=gentoocommit::${commit_gentoo:-<None>}"
+          echo "::set-output name=qaopen::open"
           echo "::set-output name=qakeywords::[:mag: QA Keywords Explanation](https://dev.gentoo.org/~zmedico/portage/doc/man/repoman.1.html#lbAG)"
           if [[ ${ret} == 0 ]]; then
             if ! egrep -v 'No QA issues found|^=== Package:.*|^[[:space:]]*$' /tmp/report.txt &>/dev/null; then
               echo "::set-output name=state::passed"
               echo "::set-output name=stateicon::heavy_check_mark"
+              echo "::set-output name=qaopen:: "
               echo "::set-output name=qakeywords:: "
             else
               echo "::set-output name=state::passed with non-fatal QA errors"
@@ -166,7 +168,7 @@ jobs:
             _${{ steps.check.outputs.vrepoman }}_
             _::gentoo_ repo latest commit: https://github.com/gentoo-mirror/gentoo/commit/${{ steps.check.outputs.gentoocommit }}
 
-            <details open>
+            <details ${{ steps.check.outputs.qaopen }}>
             <summary>QA Result:</summary>
 
             ```
