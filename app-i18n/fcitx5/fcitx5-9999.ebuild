@@ -6,7 +6,7 @@ EAPI=7
 inherit cmake gnome2-utils xdg-utils git-r3
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5.git"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 if [[ "${PV}" == 9999 ]]; then
 	KEYWORDS=""
 else
