@@ -25,6 +25,7 @@ app-i18n/gcin:gtk3 - Enable support for GTK+3
 app-text/ydcv-rs:clipboard - Enable feature: use selected text as input
 app-text/ydcv-rs:notify - Enable feature: display explanations via desktop notification
 dev-libs/granite:demo - Build the Granite demo application (to present all available UI features provided by the library)
+dev-python/conda:user - use user's home directory as default pkgs and envs prefix
 media-fonts/nerd-fonts:3270 - Install Nerd-fonts-patched 3270 fonts
 media-fonts/nerd-fonts:agave - Install Nerd-fonts-patched Agave fonts
 media-fonts/nerd-fonts:anonymouspro - Install Nerd-fonts-patched Anonymous Pro fonts
