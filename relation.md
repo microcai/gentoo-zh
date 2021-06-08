@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-05 20:18:26 CST)
+(The last generation time: 2021-06-08 08:36:30 CST)
 
 ### Packages
 
@@ -126,6 +126,8 @@
  dev-php/pecl-solr                              | 2.4.0                  |            |                                                                                         | Solr client
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/fuo-xiami                           | 0.2.4                  |            | https://github.com/feeluown/feeluown-xiami                                              | xiami music support for feeluown
+------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/pycosat                             | 0.6.3                  |            | https://github.com/ContinuumIO/pycosat                                                  | Python bindings to picosat (a SAT solver)
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-ruby/mruby                                 | 1.0.0                  |            | https://github.com/mruby/mruby                                                          | mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
                                                 | 9999                   |            |                                                                                         |
