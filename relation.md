@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-08 10:58:04 CST)
+(The last generation time: 2021-06-08 16:44:10 CST)
 
 ### Packages
 
@@ -125,11 +125,11 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-php/pecl-solr                              | 2.4.0                  |            |                                                                                         | Solr client
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/conda-package-handling              | 1.7.3                  |            | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
+ dev-python/conda                               | 4.10.1                 |            | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
+   dev-python/conda-package-handling            | 1.7.3                  |  D, RD     | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
+   dev-python/pycosat                           | 0.6.3                  |  D, RD     | https://github.com/ContinuumIO/pycosat                                                  | Python bindings to picosat (a SAT solver)
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/fuo-xiami                           | 0.2.4                  |            | https://github.com/feeluown/feeluown-xiami                                              | xiami music support for feeluown
-------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/pycosat                             | 0.6.3                  |            | https://github.com/ContinuumIO/pycosat                                                  | Python bindings to picosat (a SAT solver)
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-ruby/mruby                                 | 1.0.0                  |            | https://github.com/mruby/mruby                                                          | mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
                                                 | 9999                   |            |                                                                                         |
