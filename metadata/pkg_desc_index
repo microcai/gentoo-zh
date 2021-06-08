@@ -62,6 +62,7 @@ dev-python/fuo-netease 0.6-r1: netease cloud music support for feeluown
 dev-python/fuo-qqmusic 0.3.2-r1: xiami music support for feeluown
 dev-python/fuo-xiami 0.2.4: xiami music support for feeluown
 dev-python/janus 0.4.0-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
+dev-python/pycosat 0.6.3: Python bindings to picosat (a SAT solver)
 dev-python/qasync 0.9.4-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/tomlkit 0.7.0-r1: Style-preserving TOML library for Python
 dev-ruby/mruby 1.0.0 9999: mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
