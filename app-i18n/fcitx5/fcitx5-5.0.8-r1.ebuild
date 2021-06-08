@@ -44,7 +44,7 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/libXext
 	x11-libs/pango
 	media-libs/fontconfig
-	enchant? ( app-text/enchant:0= )
+	enchant? ( app-text/enchant:= )
 	systemd? ( sys-apps/systemd )
 	app-text/iso-codes
 	app-i18n/unicode-cldr
