@@ -351,15 +351,16 @@ RESTRICT="mirror"
 
 LICENSE="MPL-2.0 CC-BY-SA-4.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+KEYWORDS="amd64 ~arm ~arm64 ~x86"
 IUSE=""
 
+BDEPEND=">=dev-lang/go-1.16.2:="
 RDEPEND="app-misc/ca-certificates"
 
 S="${WORKDIR}/${PN}-core-${PV}"
 
 src_compile() {
-	go build -o bin/xray -trimpath -ldflags "-s -w -buildid=" ./main
+	go build -v -work -x -o bin/xray -trimpath -ldflags "-buildid=" ./main
 }
 
 src_install() {
