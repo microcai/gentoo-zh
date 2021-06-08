@@ -11,5 +11,5 @@ LICENSE=LGPL-2.1
 PROPERTIES=live
 RDEPEND=>=dev-libs/glib-2.40:2 >=dev-libs/libpcre2-10.21 >=x11-libs/gtk+-3.16:3[introspection?] >=x11-libs/pango-1.22.0 sys-libs/ncurses:0= sys-libs/zlib crypt? ( >=net-libs/gnutls-3.2.7:0= ) glade? ( >=dev-util/glade-3.9:3.10 ) introspection? ( >=dev-libs/gobject-introspection-0.9.0:= )
 SLOT=0
-_eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52	gnuconfig	9f91b4b0c84e734a87492d4293f03de5	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	d410501a125f99ffb560b0c523cd3d1e	libtool	f143db5a74ccd9ca28c1234deffede96	autotools	9e63f92c2a5d867fea55ecb160c7d354	edos2unix	33e347e171066657f91f8b0c72ec8773	l10n	8cdd85e169b835d518bc2fd59f780d8e	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	2d5b3f4b315094768576b6799e4f926e	vala	167a20a57e4418cc17272186272b021a
+_eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52	gnuconfig	9f91b4b0c84e734a87492d4293f03de5	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	ebdbaed22e873a5abe6205f41349b479	libtool	f143db5a74ccd9ca28c1234deffede96	autotools	9e63f92c2a5d867fea55ecb160c7d354	edos2unix	33e347e171066657f91f8b0c72ec8773	l10n	8cdd85e169b835d518bc2fd59f780d8e	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	2d5b3f4b315094768576b6799e4f926e	vala	167a20a57e4418cc17272186272b021a
 _md5_=db73502dfae921cd2bcc2897556f11b4
