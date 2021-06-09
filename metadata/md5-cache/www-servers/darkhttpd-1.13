@@ -1,0 +1,9 @@
+DEFINED_PHASES=install
+DESCRIPTION=A small, static webserver
+EAPI=7
+HOMEPAGE=http://unix4lyfe.org/darkhttpd/
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+SLOT=0
+SRC_URI=https://github.com/emikulic/darkhttpd/archive/refs/tags/v1.13.tar.gz -> darkhttpd-1.13.tar.gz
+_md5_=e28ff353a0e26d610dc052de49375a3d

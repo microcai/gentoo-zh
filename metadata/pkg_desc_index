@@ -113,7 +113,7 @@ net-misc/baidunetdisk 3.0.1 3.4.1 3.5.0: Baidu Net Disk is a cloud storage clien
 net-misc/baidupcs-go 3.6.2 9999: The terminal utility for Baidu Network Disk (Golang Version).
 net-misc/libipmsg 0.1.6 0.1.7: libipmsg - IP Messenger library for UNIX
 net-misc/networkmanager-l2tp 9999: NetworkManager L2TP plugin
-net-misc/nomachine-enterprise-client 7.2.3.8: NoMachine Enterprise Client
+net-misc/nomachine-enterprise-client 7.6.2.1 7.6.2.4: NoMachine Enterprise Client
 net-misc/omnitty 0.3.0: ncurses-based ssh multiplexer for cluster administration
 net-misc/pcmanx-gtk2 1.3 9999: PCMan is an easy-to-use telnet client mainly targets BBS users formerly writen by gtk2
 net-misc/prips 1.0.0: print the IP addresses in a range
@@ -156,7 +156,7 @@ sys-kernel/xanmod-hybrid 5.12.8-r1 5.12.9: Xanmod and Xanmod-CaCule sources incl
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libixp 9999: Standalone client/server 9P library
 virtual/linux-sources 3-r6: Virtual for Linux kernel sources
-www-servers/darkhttpd 1.8: A small, static webserver
+www-servers/darkhttpd 1.13: A small, static webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
 x11-libs/libvdpau-va-gl 9999: VDPAU driver with VA-API/OpenGL backend.
 x11-libs/xcb-imdkit 1.0.3: Input method development support for xcb
