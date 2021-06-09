@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
+	<maintainer type="person">
 		<name>loong0</name>
 		<email>longlene@gmail.com</email>
 	</maintainer>
 	<longdescription>
- Features:
+		Features:
 
-    Simple to set up:
-        Single binary, no other files, no installation needed.
-        Standalone, doesn't need inetd or ucspi-tcp.
-        No messing around with config files - all you have to specify is the www root.
-    Written in C - efficient and portable.
-    Small memory footprint.
-    Event loop, single threaded - no fork() or pthreads.
-    Generates directory listings.
-    Supports HTTP GET and HEAD requests.
-    Supports Range / partial content. (try streaming music files or resuming a download)
-    Supports If-Modified-Since.
-    Supports Keep-Alive connections.
-    Uses sendfile() on FreeBSD, Solaris and Linux.
-    Can use acceptfilter on FreeBSD.
-    At some point worked on FreeBSD, Linux, OpenBSD, Solaris.
-    BSD license.
+		Simple to set up:
+		Single binary, no other files, no installation needed.
+		Standalone, doesn't need inetd or ucspi-tcp.
+		No messing around with config files - all you have to specify is the www root.
+		Written in C - efficient and portable.
+		Small memory footprint.
+		Event loop, single threaded - no fork() or pthreads.
+		Generates directory listings.
+		Supports HTTP GET and HEAD requests.
+		Supports Range / partial content. (try streaming music files or resuming a download)
+		Supports If-Modified-Since.
+		Supports Keep-Alive connections.
+		Uses sendfile() on FreeBSD, Solaris and Linux.
+		Can use acceptfilter on FreeBSD.
+		At some point worked on FreeBSD, Linux, OpenBSD, Solaris.
+		BSD license.
 
-Security:
+		Security:
 
-    Can log accesses, including Referer and User-Agent.
-    Can chroot.
-    Can drop privileges.
-    Impervious to /../ sniffing.
-    Times out idle connections.
-    Drops overly long requests.
+		Can log accesses, including Referer and User-Agent.
+		Can chroot.
+		Can drop privileges.
+		Impervious to /../ sniffing.
+		Times out idle connections.
+		Drops overly long requests.
 
-Limitations:
+		Limitations:
 
-    Only serves static content - no CGI.
+		Only serves static content - no CGI.
 	</longdescription>
 </pkgmetadata>
