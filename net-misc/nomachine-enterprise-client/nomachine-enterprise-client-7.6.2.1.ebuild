@@ -10,13 +10,12 @@ MY_PV=$(ver_rs 3 '_')
 
 DESCRIPTION="NoMachine Enterprise Client"
 HOMEPAGE="https://www.nomachine.com"
-SRC_URI="https://download.nomachine.com/download/${MY_V}/Linux/${PN}_${MY_PV}_x86_64.tar.gz
-	x86? ( https://download.nomachine.com/download/${MY_V}/Linux/${PN}_${MY_PV}_i686.tar.gz )"
+SRC_URI="https://download.nomachine.com/download/${MY_V}/Linux/${PN}_${MY_PV}_i686.tar.gz"
 S="${WORKDIR}/NX/etc/NX/player/packages"
 
 LICENSE="nomachine"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~x86"
 IUSE=""
 RESTRICT="strip"
 
