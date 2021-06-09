@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-09 10:38:57 CST)
+(The last generation time: 2021-06-10 01:24:42 CST)
 
 ### Packages
 
@@ -333,7 +333,7 @@
    sys-kernel/xanmod-hybrid                     | 5.12.8-r1              | RD         | https://xanmod.org/                                                                     | Xanmod and Xanmod-CaCule sources including the Gentoo patchset for the . kernel tree
                                                 | 5.12.9                 |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-servers/darkhttpd                          | 1.8                    |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
+ www-servers/darkhttpd                          | 1.13                   |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-apps/xcur2png                              | 0.7.1                  |            | https://github.com/eworm-de/xcur2png                                                    | Convert X cursors to PNG images
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
