@@ -105,7 +105,7 @@ net-dns/phddns 2.0.6.32828: Phddns
 net-im/avim 0.1: avim is a secure IM build around RSA
 net-im/freetalk 4.1: Console based Jabber client
 net-im/telegram-purple 1.3.0 9999: Libpurple (Pidgin) plugin for using a Telegram account
-net-im/tencent-qq 2.0.0_beta2-r1: Official Linux version of Tencent QQ
+net-im/tencent-qq 2.0.0_beta2-r1 2.0.0.1089_beta2: Official Linux version of Tencent QQ
 net-im/wechat-uos 2.0.0: UOS wechat
 net-libs/jzmq 9999: jzmq
 net-misc/avsocks 9999: 科学操长城软件
