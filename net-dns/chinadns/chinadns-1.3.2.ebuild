@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/clowwindy/ChinaDNS"
 SRC_URI="https://github.com/clowwindy/ChinaDNS/releases/download/${PV}/${P}.tar.gz"
 RESTRICT="mirror"
 
-LICENSE=""
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
