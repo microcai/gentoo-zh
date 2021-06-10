@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=media-libs/vulkan-loader dev-libs/boost[python]
 SLOT=0
 _eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	ebdbaed22e873a5abe6205f41349b479	python-utils-r1	6e84b7d3d8d0bb1ee12774f4a66909e2	meson	5ec14fdbc5446b8767e87e186e3b1a52
-_md5_=79c7d6afd5bbc9cc5b11e0565e33b533
+_md5_=b1a6b82060b8b2f9039919288f917d20
