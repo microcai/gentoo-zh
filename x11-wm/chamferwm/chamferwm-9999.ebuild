@@ -36,19 +36,18 @@ src_prepare(){
 
 src_install(){
 	into /usr
-	dobin ${BUILD_DIR}/chamfer
+	dobin "${BUILD_DIR}/chamfer"
 
 	insinto /usr/share/chamfer/shaders
 
-	doins ${BUILD_DIR}/default_fragment.spv
-	doins ${BUILD_DIR}/default_geometry.spv
-	doins ${BUILD_DIR}/default_vertex.spv
-	doins ${BUILD_DIR}/frame_fragment.spv
-	doins ${BUILD_DIR}/frame_geometry.spv
-	doins ${BUILD_DIR}/frame_vertex.spv
+	doins "${BUILD_DIR}/default_fragment.spv"
+	doins "${BUILD_DIR}/default_geometry.spv"
+	doins "${BUILD_DIR}/default_vertex.spv"
+	doins "${BUILD_DIR}/frame_fragment.spv"
+	doins "${BUILD_DIR}/frame_geometry.spv"
+	doins "${BUILD_DIR}/frame_vertex.spv"
 
 	insinto /usr/share/applications/
 
-	doins ${S}/share/chamfer.desktop
+	doins "${S}/share/chamfer.desktop"
 }
-
