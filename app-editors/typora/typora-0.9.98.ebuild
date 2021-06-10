@@ -1,3 +1,4 @@
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -7,7 +8,7 @@ HOMEPAGE="https://typora.io"
 SRC_URI="https://www.typora.io/linux/typora_${PV}_amd64.deb"
 
 #TODO : update license
-LICENSE="EULA"
+LICENSE="typora"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
@@ -33,7 +34,7 @@ QA_PRESTRIPPED="
 
 src_unpack() {
 	default
-	unpack ${WORKDIR}/data.tar.xz
+	unpack "${WORKDIR}"/data.tar.xz
 	S="${WORKDIR}/usr"
 }
 
@@ -47,7 +48,7 @@ src_install() {
 
 	fperms 0755 "${dir}/bin/typora"
 	fperms 4755 "${dir}/share/typora/chrome-sandbox"
-	dosym /opt/typora/bin/typora /usr/bin/typora
+	dosym "../../opt/typora/bin/typora" "usr/bin/typora"
 
 	insinto /usr/share/applications/
 	doins share/applications/typora.desktop
