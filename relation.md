@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-10 19:28:18 CST)
+(The last generation time: 2021-06-11 01:46:15 CST)
 
 ### Packages
 
@@ -84,7 +84,7 @@
  app-portage/portage-cdb                        | 0.2.1                  |            | http://gentoo-wiki.com/TIP_speed_up_portage_with_cdb                                    | increase portage's speed after syncing, and for calculating dependencies. This method uses a database, rather than a bunch of flat files to store its metadata.
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-shells/zsh-theme-powerlevel10k             | 1.14.6                 |            | https://github.com/romkatv/powerlevel10k                                                | Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
-   app-shells/gitstatus                         | 1.5.0                  |  D, RD     | https://github.com/romkatv/gitstatus                                                    | Git status for Bash and Zsh prompt
+   app-shells/gitstatus                         | 1.5.1                  |  D, RD     | https://github.com/romkatv/gitstatus                                                    | Git status for Bash and Zsh prompt
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/groff-utf8                            | 0-r1                   |            | http://www.haible.de/bruno/packages-groff-utf8.html                                     | GNU groff wrapper allowing UTF-8 input
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
