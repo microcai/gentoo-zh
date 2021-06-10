@@ -17,7 +17,7 @@ dev-libs/libbpf"
 inherit kernel-2-src-prepare-overlay
 detect_version
 
-DESCRIPTION="Full Project-C CPU Scheduler And MuQSS CPU Scheduler sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
+DESCRIPTION="Project-C CPU Scheduler patchset for the main kernel tree"
 HOMEPAGE="https://github.com/Frogging-Family/linux-tkg"
 LICENSE+=" CDDL"
 SRC_URI="${KERNEL_BASE_URI}/linux-5.12.tar.xz
