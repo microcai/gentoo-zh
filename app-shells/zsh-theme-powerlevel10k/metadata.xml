@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<upstream>
+		<remote-id type="github">romkatv/powerlevel10k</remote-id>
+	</upstream>
 	<maintainer type="person">
 		<email>OriPoin@outlook.com</email>
 		<name>Yachen Wang</name>
