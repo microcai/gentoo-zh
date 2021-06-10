@@ -7,5 +7,5 @@ KEYWORDS=amd64 ~x86
 LICENSE=MIT
 RDEPEND=app-shells/zsh app-shells/gitstatus
 SLOT=0
-SRC_URI=https://github.com/romkatv/powerlevel10k/archive/v1.14.6.tar.gz -> zsh-theme-powerlevel10k-1.14.6.tar.gz
-_md5_=a3ad154ea353b65903c5e7f31c16f415
+SRC_URI=https://github.com/romkatv/powerlevel10k/archive/v1.15.0.tar.gz -> zsh-theme-powerlevel10k-1.15.0.tar.gz
+_md5_=54cf69c5614ce9bbede501339adf1768
