@@ -7,17 +7,16 @@ MY_PN="${PN##zsh-theme-}"
 
 DESCRIPTION="Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience"
 HOMEPAGE="https://github.com/romkatv/powerlevel10k"
-SRC_URI="${HOMEPAGE}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/romkatv/powerlevel10k/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
 
 DEPEND="app-shells/zsh
-        app-shells/gitstatus"
+		app-shells/gitstatus"
 RDEPEND="${DEPEND}"
 BDEPEND=""
-
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
