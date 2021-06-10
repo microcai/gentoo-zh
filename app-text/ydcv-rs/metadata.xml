@@ -9,4 +9,8 @@
 		<flag name="notify">Enable feature: display explanations via desktop notification</flag>
 		<flag name="clipboard">Enable feature: use selected text as input</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">farseerfc/ydcv-rs</remote-id>
+		<bugs-to>https://github.com/farseerfc/ydcv-rs/issues</bugs-to>
+	</upstream>
 </pkgmetadata>
