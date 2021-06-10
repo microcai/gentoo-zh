@@ -8,7 +8,8 @@ inherit desktop eutils pax-utils xdg
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
 BASE_URI="https://update.code.visualstudio.com/${PV}"
-SRC_URI="${BASE_URI}/linux-x64/stable -> ${P}-amd64.tar.gz"
+SRC_URI="${BASE_URI}/linux-x64/stable -> ${P}-amd64.tar.gz
+	https://github.com/microsoft/vscode/raw/d412f89b/resources/linux/code.png -> ${PN}.png"
 RESTRICT="mirror strip bindist"
 
 LICENSE="MIT"
@@ -43,21 +44,15 @@ QA_PREBUILT="
 	opt/${PN}/swiftshader/libEGL.so
 	opt/${PN}/swiftshader/libGLESv2.so"
 
-pkg_setup(){
-	if use amd64; then
-		S="${WORKDIR}/VSCode-linux-x64"
-	else
-		die "Visual Studio Code only supports amd64"
-	fi
-}
+S="${WORKDIR}/VSCode-linux-x64"
 
 src_install(){
 	pax-mark m code
 	insinto "/opt/${PN}"
 	doins -r *
-	dosym "/opt/${PN}/bin/code" "/usr/bin/code"
+	dosym "../../opt/${PN}/bin/code" "usr/bin/code"
 	domenu "${FILESDIR}/visual-studio-code.desktop"
-	doicon "${FILESDIR}/${PN%-bin}.png"
+	newicon "${DISTDIR}/${PN}.png" "${PN%-bin}.png"
 	fperms +x "/opt/${PN}/code"
 	fperms +x "/opt/${PN}/bin/code"
 	fperms +x "/opt/${PN}/resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg"
