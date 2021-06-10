@@ -117,47 +117,85 @@ jobs:
             done
           done
           check_pkgs=( $(echo "${check_pkgs[@]}" | tr ' ' '\n' | sort -du | tr '\n' ' ') )
-          echo -n >/tmp/report.txt
+          echo -n >/var/tmp/report.txt
           ret=0
           echo "pkgs: ${check_pkgs[@]}"
+          sum=${#check_pkgs[@]}
+          declare -i i=0
           for pkg in ${check_pkgs[@]}; do
-            [[ -d ${pkg} ]] || continue
+            i+=1
             echo
-            echo "================================="
-            echo ">>> Checking ${pkg} ..."
-            echo "================================="
+            echo "======================================"
+            echo ">>> [${i}/${sum}] Checking ${pkg} ..."
+            echo "======================================"
+            if [[ ! -d ${pkg} ]]; then
+              echo "not exists, skip it"
+              continue
+            fi
             pushd ${pkg}
-            echo "=== Package: ${pkg} ===" >>/tmp/report.txt
-            repoman full -q > >(tee -ai /tmp/report.txt) || ret=1
-            echo >>/tmp/report.txt
+            [[ ${i} == 1 ]] || echo >>/var/tmp/report.txt
+            echo "=== Package: ${pkg} ===" >>/var/tmp/report.txt
+            repoman full -q > >(tee -ai /var/tmp/report.txt) || ret=1
             popd
           done
-          cd /var/db/repos/gentoo || true
-          v_repoman=$(repoman --version) || true
-          commit_gentoo=$(git rev-list -n1 HEAD) || true
-          report="$(cat /tmp/report.txt)"
-          report="${report//'%'/'%25'}"
-          report="${report//$'\n'/'%0A'}"
-          report="${report//$'\r'/'%0D'}"
-          echo "::set-output name=report::${report}"
-          echo "::set-output name=vrepoman::${v_repoman:-<None>}"
-          echo "::set-output name=gentoocommit::${commit_gentoo:-<None>}"
-          echo "::set-output name=qaopen::open"
-          echo "::set-output name=qakeywords::[:mag: QA Keywords Explanation](https://dev.gentoo.org/~zmedico/portage/doc/man/repoman.1.html#lbAG)"
-          if [[ ${ret} == 0 ]]; then
-            if ! egrep -v 'No QA issues found|^=== Package:.*|^[[:space:]]*$' /tmp/report.txt &>/dev/null; then
-              echo "::set-output name=state::passed"
-              echo "::set-output name=stateicon::heavy_check_mark"
-              echo "::set-output name=qaopen:: "
-              echo "::set-output name=qakeywords:: "
+          echo "::set-output name=ret::${ret}"
+          [[ ${ret} == 0 ]]
+      - name: Format report
+        id: report
+        if: ${{ always() }}
+        shell: bash
+        env:
+          ret: ${{ steps.check.outputs.ret }}
+        run: |
+          set -e
+          if grep '=' /var/tmp/report.txt &>/dev/null; then
+            cd /var/db/repos/gentoo || true
+            v_repoman=$(repoman --version) || true
+            commit_gentoo=$(git rev-list -n1 HEAD) || true
+            r_restat="open"
+            r_explain="[:mag: QA Keywords Explanation](https://dev.gentoo.org/~zmedico/portage/doc/man/repoman.1.html#lbAG)"
+            if [[ ${ret} == 0 ]]; then
+              if ! egrep -v 'No QA issues found|^=== Package:.*|^[[:space:]]*$' /var/tmp/report.txt &>/dev/null; then
+                r_title=":heavy_check_mark: repoman checks passed"
+                r_restat=""
+                r_explain=""
+              else
+                r_title=":white_circle: repoman checks passed with non-fatal QA errors"
+              fi
             else
-              echo "::set-output name=state::passed with non-fatal QA errors"
-              echo "::set-output name=stateicon::white_circle"
+              r_title=":x: repoman checks failed"
             fi
-          else
-            echo "::set-output name=state::failed"
-            echo "::set-output name=stateicon::x"
-            exit 1
+            cat <<EOF >/var/tmp/report.md
+          ## ${r_title}
+
+          ${v_repoman}
+          _::gentoo_ repo latest commit: https://github.com/gentoo-mirror/gentoo/commit/${commit_gentoo}
+
+          <details ${r_restat}>
+          <summary>QA Result:</summary>
+
+          EOF
+            if [[ $(wc -c /var/tmp/report.txt | awk -F'[[:space:]]' '{printf $1}') -le 65000 ]]; then
+              echo '```' >>/var/tmp/report.md
+              cat /var/tmp/report.txt >>/var/tmp/report.md
+              echo '```' >>/var/tmp/report.md
+            else
+              cd /var/db/repos/gentoo-zh || true
+              commit_id=$(git rev-list -n1 HEAD | cut -b1-7)
+              cat <<EOF >>/var/tmp/report.md
+          - _the report is too long, can be downloaded from **Artifacts** list of the current run:
+            https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}
+            filename: **repoman-report-${commit_id}**_
+              echo "::set-output name=commit::${commit_id}"
+          EOF
+            fi
+            cat <<EOF >>/var/tmp/report.md
+
+          </details>
+
+          ${r_explain}
+          EOF
+            echo "::set-output name=has::true"
           fi
       - name: Hide previous results
         if: ${{ always() }}
@@ -194,23 +232,21 @@ jobs:
               https://api.github.com/graphql
           done
       - name: Post result
-        if: ${{ always() && steps.check.outputs.report }}
-        uses: peter-evans/create-or-update-comment@v1
+        if: ${{ always() && steps.report.outputs.has }}
+        uses: actions/github-script@v4
         with:
-          issue-number: ${{ github.event.number }}
-          body: |
-            ## :${{steps.check.outputs.stateicon}}: repoman checks ${{steps.check.outputs.state}}
-
-            _${{ steps.check.outputs.vrepoman }}_
-            _::gentoo_ repo latest commit: https://github.com/gentoo-mirror/gentoo/commit/${{ steps.check.outputs.gentoocommit }}
-
-            <details ${{ steps.check.outputs.qaopen }}>
-            <summary>QA Result:</summary>
-
-            ```
-            ${{ steps.check.outputs.report }}
-            ```
-
-            </details>
-
-            ${{ steps.check.outputs.qakeywords }}
+          script: |
+            const fs = require("fs").promises;
+            var cbody = await fs.readFile("/var/tmp/report.md", "utf8");
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: cbody
+            })
+      - name: Upload big result
+        if: ${{ always() && steps.report.outputs.commit }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: repoman-report-${{ steps.report.outputs.commit }}
+          path: /var/tmp/report.txt
