@@ -4,15 +4,4 @@
 	<upstream>
 		<remote-id type="github">HougeLangley/customkernel</remote-id>
 	</upstream>
-	<use>
-		<flag name="uksm">Enable UKSM patch.
-		This is an improvement upon KSM</flag>
-		<flag name="cjktty">Enable cjktty patch.
-		You could see CJK fonts in TTY</flag>
-		<flag name="xanmod">Enable Xanmod patch.
-		XanMod is a general-purpose Linux kernel distribution with custom settings and new features.</flag>
-		<flag name="cacule">Enable Xanmod-Cacule patch.
-		CacULE is a CFS patchset based on interactivity score mechanism feature,
-		inspired by FreeBSD's ULE scheduler.</flag>
-	</use>
 </pkgmetadata>
