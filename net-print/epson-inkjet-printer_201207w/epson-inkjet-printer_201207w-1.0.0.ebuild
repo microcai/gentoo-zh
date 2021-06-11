@@ -37,7 +37,7 @@ src_configure() {
 src_install() {
 	insinto /opt/${MY_PN}/cups/lib/filter
 	doins src/epson_inkjet_printer_filter
-	chmod 755 ${D}/opt/${MY_PN}/cups/lib/filter/epson_inkjet_printer_filter
+	chmod 755 "${D}/opt/${MY_PN}/cups/lib/filter/epson_inkjet_printer_filter"
 
 	use amd64 && X86LIB=64
 
@@ -49,6 +49,6 @@ src_install() {
 	insinto /usr/share/cups/model/${MY_PN}
 	doins ../${MY_PN}-${PV}/ppds/*
 
-	dodoc AUTHORS COPYING COPYING.LIB COPYING.EPSON
+	dodoc "AUTHORS" "COPYING" "COPYING.LIB" "COPYING.EPSON"
 	dodoc ../${MY_PN}-${PV}/{Manual.txt,README}
 }

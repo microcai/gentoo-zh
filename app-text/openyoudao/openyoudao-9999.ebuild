@@ -29,14 +29,14 @@ src_prepare(){
 
 src_install(){
 	insinto /usr/bin
-	dobin ${S}/scripts/openyoudao || die "Install failed"
+	dobin "${S}/scripts/openyoudao" || die "Install failed"
 
 	insinto /usr/lib/openyoudao
-	doins ${S}/*.py || die "lib install failed"
+	doins "${S}"/*.py || die "lib install failed"
 
 	insinto /usr/share/openyoudao
-	doins -r ${S}/cache/* || die "cache install failed"
+	doins -r "${S}"/cache/* || die "cache install failed"
 
 	insinto /usr/share/applications
-	doins ${S}/desktop/openyoudao.desktop || die "desktop link install failed"
+	doins "${S}"/desktop/openyoudao.desktop || die "desktop link install failed"
 }

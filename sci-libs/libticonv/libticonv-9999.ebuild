@@ -24,7 +24,7 @@ DOCS=( AUTHORS LOGO NEWS README ChangeLog docs/api.txt )
 
 src_prepare() {
 	S="${S}/${PN}/trunk/"
-	cd ${S}
+	cd "${S}"
 
 	eautoreconf
 }

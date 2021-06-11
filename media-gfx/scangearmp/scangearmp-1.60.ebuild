@@ -54,7 +54,7 @@ _max=$((${#_pruse[@]}-1)) # used for iterating through these arrays
 
 src_unpack() {
 	unpack ${A}
-	mv ${PN}-source-${PV}-1 ${P} || die # Correcting directory-structure
+	mv "${PN}-source-${PV}-1" "${P}" || die # Correcting directory-structure
 }
 
 pkg_setup() {
@@ -107,7 +107,6 @@ src_prepare(){
 
 	sed -i 's/Z_BEST_SPEED/\ 1\ /g' src/scanfile.c
 
-
 	( cd src && epatch "${FILESDIR}/fixcompile.patch" )
 
 	libtoolize -cfi
@@ -138,14 +137,14 @@ src_compile() {
 }
 
 src_install() {
-	mkdir -p ${D}${_bindir} || die
-	mkdir -p ${D}${_libdir}/bjlib || die
+	mkdir -p "${D}${_bindir}" || die
+	mkdir -p "${D}${_libdir}/bjlib" || die
 	if use usb; then
-		mkdir -p ${D}${_udevdir} || die
+		mkdir -p "${D}${_udevdir}" || die
 	fi
 
 	cd scangearmp || die
-	make DESTDIR=${D} install || die "Couldn't make install scangearmp"
+	make DESTDIR="${D}" install || die "Couldn't make install scangearmp"
 
 	cd ..
 
@@ -156,31 +155,31 @@ src_install() {
 	done
 
 	# rm .1a and .a
-	rm -f {$D}${_libdir}/*.1a {$D}${_libdir}/*.a || die
+	rm -f "{$D}${_libdir}"/*.1a "{$D}${_libdir}"/*.a || die
 
 	# make symbolic link for gimp-plug-in
 	if [ -d "${_gimpdir}" ]; then
-		mkdir -p ${D}${_gimpdir} || die
-		dosym ${_bindir}/scangearmp ${_gimpdir}/scangearmp || die
+		mkdir -p "${D}${_gimpdir}" || die
+		dosym "${_bindir}/scangearmp" "${_gimpdir}/scangearmp" || die
 	fi
 
 	if use x86; then
-		cp -a ${_prid}/libs_bin32/* ${D}${_libdir} || die
-		cp -a com/libs_bin32/* ${D}${_libdir} || die
+		cp -a "${_prid}"/libs_bin32/* "${D}${_libdir}" || die
+		cp -a com/libs_bin32/* "${D}${_libdir}" || die
 	else # amd54
-		cp -a ${_prid}/libs_bin64/* ${D}${_libdir} || die
-		cp -a com/libs_bin64/* ${D}${_libdir} || die
+		cp -a ${_prid}/libs_bin64/* "${D}${_libdir}" || die
+		cp -a com/libs_bin64/* "${D}${_libdir}" || die
 	fi
-	cp -a ${_prid}/*.DAT ${D}${_libdir}/bjlib || die
-	cp -a ${_prid}/*.tbl ${D}${_libdir}/bjlib || die
-	cp com/ini/canon_mfp_net.ini ${D}${_libdir}/bjlib || die
-	chmod 644 ${D}${_libdir}/bjlib/* || die
-	chmod 666 ${D}${_libdir}/bjlib/canon_mfp_net.ini || die
+	cp -a "${_prid}"/*.DAT "${D}${_libdir}"/bjlib || die
+	cp -a "${_prid}"/*.tbl "${D}${_libdir}"/bjlib || die
+	cp com/ini/canon_mfp_net.ini "${D}${_libdir}"/bjlib || die
+	chmod 644 "${D}${_libdir}"/bjlib/* || die
+	chmod 666 "${D}${_libdir}"/bjlib/canon_mfp_net.ini || die
 
 	# usb
 	if use usb; then
-		cp -a scangearmp/etc/80-canon_mfp.rules ${D}${_udevdir} || die
-		chmod 644 ${D}${_udevdir}/80-canon_mfp.rules || die
+		cp -a scangearmp/etc/80-canon_mfp.rules "${D}${_udevdir}" || die
+		chmod 644 "${D}${_udevdir}/80-canon_mfp.rules" || die
 	fi
 }
 

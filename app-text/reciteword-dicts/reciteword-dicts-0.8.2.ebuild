@@ -15,6 +15,6 @@ RDEPEND=">=app-text/reciteword-0.8.2"
 
 src_install() {
 	dodir /usr/share/reciteword
-	cd ${WORKDIR}
-	cp -R dicts ${D}/usr/share/reciteword
+	cd "${WORKDIR}"
+	cp -R dicts "${D}/usr/share/reciteword"
 }

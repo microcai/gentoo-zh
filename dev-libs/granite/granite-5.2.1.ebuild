@@ -27,7 +27,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
-
 src_prepare() {
 
 	# Disable building of the demo application (if needed)

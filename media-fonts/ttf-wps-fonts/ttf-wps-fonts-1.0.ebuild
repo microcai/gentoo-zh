@@ -26,7 +26,6 @@ pkg_postinst() {
 }
 
 src_install(){
-	install -d ${D}/usr/share/fonts/wps-fonts
-	install -m644 *.{ttf,TTF} ${D}/usr/share/fonts/wps-fonts/
+	install -d "${D}/usr/share/fonts/wps-fonts"
+	install -m644 *.{ttf,TTF} "${D}/usr/share/fonts/wps-fonts/"
 }
-

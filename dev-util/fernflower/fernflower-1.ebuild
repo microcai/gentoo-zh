@@ -17,7 +17,7 @@ KEYWORDS="~x86 ~amd64"
 S="${WORKDIR}"
 
 src_unpack() {
-	cp -L ${DISTDIR}/${A} ${S}/${PN}.jar || die
+	cp -L "${DISTDIR}/${A}" "${S}/${PN}.jar" || die
 }
 
 src_install() {

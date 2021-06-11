@@ -4,7 +4,6 @@
 EAPI=7
 inherit unpacker xdg
 
-
 DESCRIPTION="Tencent videos"
 HOMEPAGE="https://v.qq.com/download.html#linux"
 

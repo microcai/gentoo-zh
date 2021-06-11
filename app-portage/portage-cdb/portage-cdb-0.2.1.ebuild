@@ -27,13 +27,13 @@ src_compile()
 src_install()
 {
 	insinto /usr/lib/portage/pym
-	doins ${FILESDIR}/portage_db_cdb.py
+	doins "${FILESDIR}/portage_db_cdb.py"
 
 	insinto /usr/lib/portage/pym/cache
-	doins ${FILESDIR}/cdb.py
+	doins "${FILESDIR}/cdb.py"
 
 	insinto /etc/portage
-	newins ${FILESDIR}/modules-2.1 modules
+	newins "${FILESDIR}/modules-2.1" modules
 }
 
 pkg_postinst()

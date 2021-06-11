@@ -35,16 +35,16 @@ src_install() {
 	keepdir /var/log/n2n
 	fowners n2n:n2n /var/log/n2n
 
-	cp ${S}/packages/etc/systemd/system/edge@.service.in ${S}/packages/etc/systemd/system/n2n-edge@.service
-	cp ${S}/packages/etc/systemd/system/supernode.service.in ${S}/packages/etc/systemd/system/n2n-supernode.service
+	cp "${S}/packages/etc/systemd/system/edge@.service.in" "${S}/packages/etc/systemd/system/n2n-edge@.service"
+	cp "${S}/packages/etc/systemd/system/supernode.service.in" "${S}/packages/etc/systemd/system/n2n-supernode.service"
 
-	systemd_dounit ${S}/packages/etc/systemd/system/n2n-edge@.service
-	systemd_dounit ${S}/packages/etc/systemd/system/n2n-supernode.service
+	systemd_dounit "${S}/packages/etc/systemd/system/n2n-edge@.service"
+	systemd_dounit "${S}/packages/etc/systemd/system/n2n-supernode.service"
 
-	cp ${S}/packages/etc/n2n/edge.conf.sample ${S}/packages/etc/n2n/edge-example.conf
+	cp "${S}/packages/etc/n2n/edge.conf.sample" "${S}/packages/etc/n2n/edge-example.conf"
 
 	insinto /etc/n2n
 
-	doins ${S}/packages/etc/n2n/edge-example.conf
-	doins ${S}/packages/etc/n2n/supernode.conf.sample
+	doins "${S}/packages/etc/n2n/edge-example.conf"
+	doins "${S}/packages/etc/n2n/supernode.conf.sample"
 }

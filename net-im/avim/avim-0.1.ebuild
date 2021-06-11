@@ -26,6 +26,3 @@ RDEPEND="dev-libs/protobuf
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-3.1
 	>=sys-devel/gcc-4.8"
-
-
-

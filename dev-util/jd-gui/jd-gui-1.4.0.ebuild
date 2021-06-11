@@ -12,7 +12,6 @@ DESCRIPTION="A standalone graphical utility that displays Java source codes of .
 HOMEPAGE="http://jd.benow.ca/"
 SRC_URI="https://github.com/java-decompiler/jd-gui/releases/download/v${PV}/${MY_P}-0.noarch.rpm"
 
-
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
@@ -31,4 +30,3 @@ src_install() {
 	echo -e "#!/bin/sh\njava -jar /opt/${MY_PN}/${MY_P}.jar >/dev/null 2>&1 &\n" > "${MY_PN}"
 	dobin "${MY_PN}"
 }
-
