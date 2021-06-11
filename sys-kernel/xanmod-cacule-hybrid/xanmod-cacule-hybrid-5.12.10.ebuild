@@ -41,12 +41,6 @@ src_unpack() {
 
 KEYWORDS="~amd64"
 
-src_prepare() {
-
-	kernel-2-src-prepare-overlay_src_prepare
-
-}
-
 pkg_postinst() {
 	elog "MICROCODES"
 	elog "Use xanmod-sources with microcodes"
