@@ -23,7 +23,7 @@ DEPEND=">=x11-libs/gtk+-2.16:2
 virtual/libusb:1"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_P}/${MY_PN}"
+S="${PORTAGE_BUILDDIR}/work/${MY_P}/${MY_PN}"
 
 src_prepare()
 {
@@ -38,20 +38,20 @@ src_prepare()
 
 src_compile()
 {
-	SHIPPED_LIBS="${WORKDIR}/${MY_P}/com/libs_bin$(usex amd64 64 32)"
+	SHIPPED_LIBS="${PORTAGE_BUILDDIR}/work/${MY_P}/com/libs_bin$(usex amd64 64 32)"
 	emake LDFLAGS="-L${SHIPPED_LIBS}"
 }
 
 src_install()
 {
-	SHIPPED_LIBS="${WORKDIR}/${MY_P}/com/libs_bin$(usex amd64 64 32)"
+	SHIPPED_LIBS="${PORTAGE_BUILDDIR}/work/${MY_P}/com/libs_bin$(usex amd64 64 32)"
 
 	dodir /usr/lib/bjlib
 	dodir /lib/udev/rules.d
 
 	dolib.so "${SHIPPED_LIBS}/"*.so*
 	insinto /usr/lib/bjlib
-	doins "${WORKDIR}/${MY_P}/com/ini/canon_mfp2_net.ini"
+	doins "${PORTAGE_BUILDDIR}/work/${MY_P}/com/ini/canon_mfp2_net.ini"
 
 	insinto /lib/udev/rules.d
 	doins "${S}/etc/"*.rules
