@@ -87,7 +87,7 @@ media-fonts/wangfonts 1.3.0: Free Chinese TrueType fonts donated by Prof. Hann-T
 media-gfx/blur-effect 1.1.3: Off-screen image blurring utility using OpenGL ES 3.0
 media-gfx/byzanz 0.3.0.9999: Screencasting program that saves casts as GIF files
 media-gfx/sane-backends 9999: Scanner Access Now Easy - Backends
-media-gfx/scangearmp 1.60: Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
+media-gfx/scangearmp 1.60 2.4.10: Driver and utility package for Canon scanners
 media-gfx/xrectsel 0.3.1: print the geometry of a rectangular screen region
 media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simplifies the drawing of beautiful curves.
 media-plugins/audacious-mac 0.2.0 0.3.10: Monkey's Audio Codec plugin for audacious
