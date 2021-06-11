@@ -30,4 +30,4 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR=${D} || die "install failed"
-} 
+}

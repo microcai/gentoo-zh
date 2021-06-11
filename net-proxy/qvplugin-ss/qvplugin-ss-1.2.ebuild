@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 PATCHES=(
-    "${FILESDIR}/fix.patch"
+	"${FILESDIR}/fix.patch"
 )
 
 src_configure() {
