@@ -5,9 +5,8 @@ EAPI=7
 
 inherit font check-reqs
 
-DESCRIPTION="Nerd Fonts is a project that patches developer targeted fonts with a high number of glyphs (icons)."
-HOMEPAGE="https://www.nerdfonts.com/
-        https://github.com/ryanoasis/nerd-fonts"
+DESCRIPTION="Nerd Fonts is a project that patches developer targeted fonts with glyphs"
+HOMEPAGE="https://github.com/ryanoasis/nerd-fonts"
 COMMON_URI="https://github.com/ryanoasis/${PN}/releases/download/v${PV}"
 
 FONTS=(
@@ -63,7 +62,8 @@ FONTS=(
 	VictorMono
 )
 
-SRC_URI="3270?            	( "${COMMON_URI}/3270.zip" )
+SRC_URI="
+	3270?					( "${COMMON_URI}/3270.zip" )
 	agave?                  ( "${COMMON_URI}/Agave.zip" )
 	anonymouspro?           ( "${COMMON_URI}/AnonymousPro.zip" )
 	arimo?                  ( "${COMMON_URI}/Arimo.zip" )
@@ -115,16 +115,15 @@ SRC_URI="3270?            	( "${COMMON_URI}/3270.zip" )
 	victormono?             ( "${COMMON_URI}/VictorMono.zip" )
 "
 
-
 LICENSE="MIT
 		OFL-1.1
 		Apache-2.0
-		CC BY-SA 4.0
-		Bitstream Vera License
+		CC-BY-SA-4.0
+		BitstreamVera
 		BSD
-		WTFPL
-		Vic Fieger License
-		Ubuntu Font License"
+		WTFPL-2
+		Vic-Fieger-License
+		UbuntuFontLicense-1.0"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
 
