@@ -17,10 +17,10 @@ IUSE=""
 DEPEND="dev-libs/libusb:1"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/ipad_charge
+S="${WORKDIR}/ipad_charge"
 
 src_prepare(){
 	#sed -i 's|\/usr|\$\{DESTDIR\}\/usr|g' Makefile
 	#sed -i 's|\/etc|\$\{DESTDIR\}\/etc|g' Makefile
-	epatch ${FILESDIR}/${PN}-9999-makefile.patch
+	epatch "${FILESDIR}/${PN}-9999-makefile.patch"
 }

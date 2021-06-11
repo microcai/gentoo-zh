@@ -28,7 +28,6 @@ src_compile(){
 
 src_install(){
 	dodir /usr/bin
-	install rc ${D}/usr/bin/rc
-	install re ${D}/usr/bin/re
-
+	install rc "${D}/usr/bin/rc"
+	install re "${D}/usr/bin/re"
 }

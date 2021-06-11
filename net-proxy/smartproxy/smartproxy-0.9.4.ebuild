@@ -3,7 +3,6 @@
 
 EAPI=7
 
-
 DESCRIPTION="A fast, proxy smart selector"
 HOMEPAGE="https://github.com/microcai/smartproxy"
 

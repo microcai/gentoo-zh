@@ -17,4 +17,3 @@ DEPEND=""
 FONT_S="${S}/ttf"
 FONT_SUFFIX="ttf"
 RESTRICT="nostrip nomirror"
-

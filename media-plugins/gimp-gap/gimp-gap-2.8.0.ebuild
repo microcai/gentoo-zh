@@ -31,7 +31,7 @@ src_configure() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog* NEWS README
 	docinto howto
 	dodoc docs/howto/txt/*.txt

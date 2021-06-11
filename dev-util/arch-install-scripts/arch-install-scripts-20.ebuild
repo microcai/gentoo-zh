@@ -19,4 +19,3 @@ RDEPEND="${DEPEND}
 src_install() {
 	emake DESTDIR="${D}" PREFIX=/usr install
 }
-

@@ -18,5 +18,3 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/utf-bom-utils-master"
-
-

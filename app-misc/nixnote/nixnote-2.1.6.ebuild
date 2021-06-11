@@ -5,7 +5,6 @@ EAPI=7
 
 inherit qmake-utils
 
-
 if [[ "${PV}" == *9999* ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/robert7/${PN}2.git"
@@ -20,7 +19,7 @@ HOMEPAGE="http://sourceforge.net/projects/nevernote/"
 
 LICENSE="GPL-3"
 
-[[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~x86"
+[[ "${PV}" == *9999* ]] || KEYWORDS="~amd64 ~x86"
 
 DEPEND="dev-libs/boost
 	net-misc/curl
@@ -51,8 +50,8 @@ src_configure() {
 }
 
 src_install() {
-	emake INSTALL_ROOT=${D} install
-	dodoc -r changelog.txt LICENSE shortcuts.txt themes.ini
-	rm -r ${D}/usr/share/nixnote2/translations/*.ts
-	doman ${S}/docs/nixnote2.1
+	emake INSTALL_ROOT="${D}" install
+	dodoc -r "changelog.txt" "LICENSE" "shortcuts.txt" "themes.ini"
+	rm -r "${D}"/usr/share/nixnote2/translations/*.ts
+	doman "${S}/docs/nixnote2.1"
 }

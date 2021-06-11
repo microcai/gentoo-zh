@@ -20,8 +20,7 @@ DEPEND=">=app-i18n/scim-1.2.0
 
 RDEPEND="${DEPEND}"
 
-src_unpack()
-{
+src_unpack() {
 	ESVN_REPO_URI="svn://svn.berlios.de/chrasis/Linux/scim-chrasis/trunk"
 	ESVN_PROJECT="scim-chrasis"
 	#ESVN_PATCHES="*.diff"
@@ -29,15 +28,18 @@ src_unpack()
 	subversion_src_unpack
 }
 
-src_compile() {
+src_configure () {
 	glib-gettextize -f
 	./autogen.sh
-	econf $(use_enable nls) || die "Error: econf failed!"
+	econf "$(use_enable nls)" || die "Error: econf failed!"
+}
+
+src_compile() {
 	emake || die "Error: emake failed!"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "Error: install failed!"
+	make DESTDIR="${D}" install || die "Error: install failed!"
 	dodoc ChangeLog README
 }
 

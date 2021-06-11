@@ -28,9 +28,9 @@ S="${WORKDIR}/td-${PV}"
 BUILD_DIR="${S}/build"
 
 src_configure(){
-	mkdir ${BUILD_DIR} && cd ${BUILD_DIR} || die
+	mkdir "${BUILD_DIR}" && cd "${BUILD_DIR}" || die
 	cmake -GNinja \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_BUILD_TYPE=Release \
-		-DLIB=$(get_libdir) ${S} || die "cmake failed"
+		-DLIB=$(get_libdir) "${S}" || die "cmake failed"
 }

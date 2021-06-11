@@ -9,8 +9,6 @@ DESCRIPTION="Spiro is the creation of Raph Levien. It simplifies the drawing of 
 HOMEPAGE="https://github.com/fontforge/libspiro"
 SRC_URI="https://github.com/fontforge/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-
-
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS=""
