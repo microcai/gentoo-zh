@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-11 21:09:20 CST)
+(The last generation time: 2021-06-11 22:12:59 CST)
 
 ### Packages
 
@@ -335,7 +335,7 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-libs/libvdpau-va-gl                        | 9999                   |            | https://github.com/i-rinat/libvdpau-va-gl/                                              | VDPAU driver with VA-API/OpenGL backend.
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- x11-misc/9menu                                 | 1.8                    |            | http://packages.debian.org/source/sid/9menu                                             | Create X menus from the shell
+ x11-misc/9menu                                 | 1.8                    |            | https://packages.debian.org/source/sid/9menu                                            | Create X menus from the shell
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-misc/fqterm                                | 0.9.10.1               |            | https://github.com/mytbk/fqterm                                                         | a modern terminal emulator for Linux
                                                 | 9999                   |            |                                                                                         |
