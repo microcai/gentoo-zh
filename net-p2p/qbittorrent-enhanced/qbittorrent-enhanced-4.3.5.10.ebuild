@@ -5,7 +5,7 @@ EAPI=7
 
 inherit xdg-utils
 
-DESCRIPTION="A bittorrent client powered by C++, Qt5 and the good libtorrent library (Enhanced Edition)"
+DESCRIPTION="qBittorrent Enhanced, based on qBittorrent"
 HOMEPAGE="https://github.com/c0re100/qBittorrent-Enhanced-Edition"
 
 if [[ ${PV} == *9999 ]]; then
