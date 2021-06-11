@@ -30,22 +30,9 @@ SRC_URI="
 	${GENPATCHES_URI}
 "
 
-src_unpack() {
-	UNIPATCH_LIST_DEFAULT="
-	${DISTDIR}/patch-5.12.10-xanmod1.xz
-	${DISTDIR}/v1-cjktty.patch
-	${DISTDIR}/v1-uksm.patch
-"
-	kernel-2-src-prepare-overlay_src_unpack
-}
+UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-5.12.10-xanmod1.xz ${DISTDIR}/v1-cjktty.patch ${DISTDIR}/v1-uksm.patch"
 
 KEYWORDS="~amd64"
-
-src_prepare() {
-
-	kernel-2-src-prepare-overlay_src_prepare
-
-}
 
 pkg_postinst() {
 	elog "MICROCODES"
