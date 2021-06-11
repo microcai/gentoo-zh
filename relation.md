@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-11 22:12:59 CST)
+(The last generation time: 2021-06-12 01:14:16 CST)
 
 ### Packages
 
@@ -127,8 +127,6 @@
    dev-python/conda-package-handling            | 1.7.3                  |  D, RD     | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
    dev-python/pycosat                           | 0.6.3                  |  D, RD     | https://github.com/ContinuumIO/pycosat                                                  | Python bindings to picosat (a SAT solver)
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/fuo-xiami                           | 0.2.4                  |            | https://github.com/feeluown/feeluown-xiami                                              | xiami music support for feeluown
-------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-ruby/mruby                                 | 1.0.0                  |            | https://github.com/mruby/mruby                                                          | mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
                                                 | 9999                   |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -191,7 +189,7 @@
    dev-python/fuo-kuwo                          | 0.1.4                  |  D         | https://github.com/feeluown/feeluown-kuwo                                               | kuwo music support for feeluown
    dev-python/fuo-local                         | 0.2.1-r1               |  D         | https://github.com/feeluown/feeluown-local                                              | local music support for feeluown
    dev-python/fuo-netease                       | 0.6-r1                 |  D         | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
-   dev-python/fuo-qqmusic                       | 0.3.2-r1               |  D         | https://github.com/feeluown/feeluown-xiami                                              | xiami music support for feeluown
+   dev-python/fuo-qqmusic                       | 0.3.2-r1               |  D         | https://github.com/feeluown/feeluown-qqmusic                                            | qq music support for feeluown
    dev-python/janus                             | 0.4.0-r1               |  D, RD     | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
    dev-python/qasync                            | 0.9.4-r1               |  D, RD     | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
    dev-python/tomlkit                           | 0.7.0-r1               |  D, RD     | https://github.com/sdispater/tomlkit                                                    | Style-preserving TOML library for Python
@@ -291,9 +289,6 @@
                                                 | 99999                  |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/shadowsocks                          | 9999                   |            | http://shadowsocks.org/                                                                 | A fast tunnel proxy that helps you bypass firewalls
-------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/shadowsocks-qt5                      | 3.0.1                  |            | https://github.com/shadowsocks/libQtShadowsocks                                         | Shadowsocks-Qt5 is a native and cross-platform shadowsocks GUI client with advanced features.
-   net-proxy/libQtShadowsocks                   | 2.1.0                  |  D         | https://github.com/shadowsocks/libQtShadowsocks                                         | A lightweight and ultra-fast shadowsocks library written in C++/Qt
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/shadowvpn                            | 9999                   |            | http://shadowvpn.org/                                                                   | A fast, safe VPN based on libsodium
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
