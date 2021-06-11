@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>gentoo-china@googlegroups.com</email>
-		<name>Gentoo China</name>
-		<description>Feel free to touch it.</description>
-	</maintainer>
+	<!-- maintainer-needed -->
 	<longdescription>
 		FQTerm is a cross-platform terminal emulator program which supports
 		telnet/ssh1/ssh2 cols and can process ANSI control sequences. It

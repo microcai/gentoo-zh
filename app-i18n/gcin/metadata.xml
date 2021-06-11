@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer type="person">
-		<email>gentoo-zh@googlegroups.com</email>
-	</maintainer>
+	<!-- maintainer-needed -->
 	<use>
 		<flag name="filter-nobopomofo"></flag>
 		<flag name="chinese-sound">Enable chinese audio using <pkg>media-sound/vorbis-tools</pkg></flag>
