@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-11 02:00:41 CST)
+(The last generation time: 2021-06-11 12:19:27 CST)
 
 ### Packages
 
@@ -172,6 +172,7 @@
  media-gfx/byzanz                               | 0.3.0.9999             |            | https://gitlab.gnome.org/Archive/byzanz/                                                | Screencasting program that saves casts as GIF files
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/scangearmp                           | 1.60                   |            | http://support-au.canon.com.au/contents/AU/EN/0100303302.html                           | Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
+                                                | 2.4.10                 |            |                                                                                         |
    media-gfx/sane-backends                      | 9999                   |  D         | http://www.sane-project.org/                                                            | Scanner Access Now Easy - Backends
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/xrectsel                             | 0.3.1                  |            | https://github.com/lolilolicon/xrectsel                                                 | print the geometry of a rectangular screen region
