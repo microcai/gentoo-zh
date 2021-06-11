@@ -36,4 +36,3 @@ src_install() {
 	chmod +x "${D}/usr/bin/lock"
 	cp -r icons "${INST_DIR}"
 }
-

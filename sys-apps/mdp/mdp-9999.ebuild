@@ -24,7 +24,6 @@ src_prepare() {
 	sed -i -e '/CFLAGS[[:space:]]*=/d' -e '/LDFLAGS[[:space:]]*=/d' Makefile
 }
 
-
 src_install() {
 	dobin mdp
 }

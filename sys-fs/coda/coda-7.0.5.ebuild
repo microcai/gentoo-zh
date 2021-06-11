@@ -29,5 +29,3 @@ DEPEND="${COM_DEP}
 
 RDEPEND="${COM_DEP}"
 BDEPEND=""
-
-

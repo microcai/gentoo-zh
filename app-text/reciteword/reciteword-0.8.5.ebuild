@@ -20,5 +20,5 @@ RDEPEND=">=x11-libs/gtk+-2.6
 
 src_install() {
 	einstall || die "aborted."
-	dodoc README INSTALL COPYING AUTHORS NEWS TODO
+	dodoc "README" "INSTALL" "COPYING" "AUTHORS" "NEWS" "TODO"
 }

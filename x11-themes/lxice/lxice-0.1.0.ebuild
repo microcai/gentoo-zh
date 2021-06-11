@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/lxde/${PN}.tar.bz2"
 SLOT="0"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc amd64 sparc"
+KEYWORDS="amd64 ~ppc sparc ~x86"
 
 IUSE=""
 
@@ -18,7 +18,7 @@ S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	find . -name \.xvpics | xargs rm -rf
 	find . -name \*~ | xargs rm -rf
 	find . -name .svn | xargs rm -rf
@@ -26,10 +26,10 @@ src_unpack() {
 
 src_install() {
 	local ICEWM_THEMES=/usr/share/icewm/themes
-	dodir ${ICEWM_THEMES}
-	cp -pR * ${D}/${ICEWM_THEMES}
-	chown -R root:0 ${D}/${ICEWM_THEMES}
-	rm -f ${D}/${ICEWM_THEMES}/Crus-IceWM/cpframes.sh || die
-	find ${D}/${ICEWM_THEMES} -type d | xargs chmod 755 || die
-	find ${D}/${ICEWM_THEMES} -type f | xargs chmod 644 || die
+	dodir "${ICEWM_THEMES}"
+	cp -pR * "${D}/${ICEWM_THEMES}"
+	chown -R root:0 "${D}/${ICEWM_THEMES}"
+	rm -f "${D}/${ICEWM_THEMES}/Crus-IceWM/cpframes.sh" || die
+	find "${D}/${ICEWM_THEMES}" -type d | xargs chmod 755 || die
+	find "${D}/${ICEWM_THEMES}" -type f | xargs chmod 644 || die
 }

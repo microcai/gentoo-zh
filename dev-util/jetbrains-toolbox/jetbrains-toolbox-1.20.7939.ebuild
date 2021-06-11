@@ -44,4 +44,3 @@ pkg_postinst() {
 pkg_postrm() {
 	xdg_desktop_database_update
 }
-
