@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-12 01:58:45 CST)
+(The last generation time: 2021-06-12 02:15:32 CST)
 
 ### Packages
 
@@ -85,9 +85,6 @@
    app-shells/gitstatus                         | 1.5.1                  |  D, RD     | https://github.com/romkatv/gitstatus                                                    | Git status for Bash and Zsh prompt
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/groff-utf8                            | 0-r1                   |            | http://www.haible.de/bruno/packages-groff-utf8.html                                     | GNU groff wrapper allowing UTF-8 input
-------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-text/reciteword-dicts                      | 0.8.2                  |            | http://reciteword.cosoft.org.cn/                                                        | Reciteword's dictionary.
-   app-text/reciteword                          | 0.8.5                  | RD         | http://reciteword.sourceforge.net/                                                      | Reciteword is a education software to help people to study English, reciting english words. It have very beautiful interface, make reciting word being a interesting things.
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/srecite                               | 0.6.2                  |            | http://srecite.sourceforge.net                                                          | Smart Reciting
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
