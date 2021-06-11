@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=sys-apps/pacman
 SLOT=0
 SRC_URI=https://projects.archlinux.org/arch-install-scripts.git/snapshot/arch-install-scripts-20.tar.gz
-_md5_=d24d1a78e4f3a405eba2717bf84ccac8
+_md5_=1ee5dc6ee46fc6b6b5c93b07d5019741

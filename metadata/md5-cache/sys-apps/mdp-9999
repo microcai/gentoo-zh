@@ -9,4 +9,4 @@ PROPERTIES=live
 RDEPEND=sys-libs/ncurses
 SLOT=0
 _eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52
-_md5_=9cd0c17c0abe7ba56f3968688da25f6e
+_md5_=d511a3d6ff68aef03e3274737bfc36d3

@@ -10,4 +10,4 @@ RDEPEND=
 SLOT=0
 SRC_URI=https://dldir1.qq.com/qqtv/linux/Tenvideo_universal_1.0.10_amd64.deb
 _eclasses_=toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	ebdbaed22e873a5abe6205f41349b479	unpacker	517f16af48ee3ab88180dd58b5143213	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	xdg	c7ba313ea1eaf266f95cc6235f7d6a07
-_md5_=5f4c63fb923d866dc201b50837ac3696
+_md5_=00a9e9dc8fd4bb23a8e45a684cb51136
