@@ -5,7 +5,7 @@ EAPI=7
 
 if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="https://github.com/WizTeam/WizQTClient.git"
-	EGIT_BRANCH="${EGIT_MASTER}" 
+	EGIT_BRANCH="${EGIT_MASTER}"
 	KEYWORDS=""
 	WIZNOTE_SRC_URI=""
 	WIZNOTE_ECLASS="git-r3"

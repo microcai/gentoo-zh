@@ -22,9 +22,9 @@ src_prepare() {
 		-e 's|AM_CFLAGS = .*libsodium.*$|AM_CFLAGS = -lsodium|' \
 		-e 's|libshadowvpn_la_LIBADD = ../libsodium/src/libsodium/libsodium.la||' \
 		-i src/Makefile.am
-  
+
 	sed -e 's|AC_CONFIG_SUBDIRS([libsodium])||' \
-		-i configure.ac 
+		-i configure.ac
 }
 
 src_configure() {
