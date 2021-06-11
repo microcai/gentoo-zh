@@ -86,11 +86,6 @@ media-sound/feeluown:xiami - add xiami music support for feeluown
 net-proxy/make-proxy:client - Add make proxy client support
 net-proxy/make-proxy:server - Add make proxy server support
 net-proxy/v2ray:tool - Build the additional tool, v2ctl.
-sys-kernel/projectc-sources:bmq - Enable BMQ "BitMap Queue" patch. The BMQ "BitMap Queue" scheduler started off from his existing PDS development experience and inspired by the scheduler found within Google's Zircon, the kernel powering their Fuchsia OS initiative.
-sys-kernel/projectc-sources:cjktty - Enable cjktty patch. You could see CJK fonts in TTY
-sys-kernel/projectc-sources:muqss - Enable MuQSS patch. the MuQSS scheduler itself (born out of the "Brain Fuck Scheduler") is designed to improve system responsiveness for desktops and other workloads
-sys-kernel/projectc-sources:pds - Enable PDS-MQ CPU Scheduler patch. The PDS scheduler stands for the "Priority and Deadline based Skiplist multiple queue scheduler" that is derived from Con Kolivas' former BFS scheduler with Variable Run Queue (VRQ) support.
-sys-kernel/projectc-sources:uksm - Enable UKSM patch. This is an improvement upon KSM
 sys-kernel/xanmod-hybrid:cacule - Enable Xanmod-Cacule patch. CacULE is a CFS patchset based on interactivity score mechanism feature, inspired by FreeBSD's ULE scheduler.
 sys-kernel/xanmod-hybrid:cjktty - Enable cjktty patch. You could see CJK fonts in TTY
 sys-kernel/xanmod-hybrid:uksm - Enable UKSM patch. This is an improvement upon KSM
