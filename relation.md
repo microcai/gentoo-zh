@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-11 12:19:27 CST)
+(The last generation time: 2021-06-11 12:54:07 CST)
 
 ### Packages
 
@@ -328,8 +328,6 @@
  sys-libs/libixp                                | 9999                   |            | http://libs.suckless.org/                                                               | Standalone client/server 9P library
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                          | 3-r6                   |            |                                                                                         | Virtual for Linux kernel sources
-   sys-kernel/projectc-sources                  | 5.12.8-r1              | RD         | https://github.com/Frogging-Family/linux-tkg                                            | Full Project-C CPU Scheduler And MuQSS CPU Scheduler sources including the Gentoo patchset for the . kernel tree
-                                                | 5.12.9                 |            |                                                                                         |
    sys-kernel/xanmod-hybrid                     | 5.12.8-r1              | RD         | https://xanmod.org/                                                                     | Xanmod and Xanmod-CaCule sources including the Gentoo patchset for the . kernel tree
                                                 | 5.12.9                 |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
