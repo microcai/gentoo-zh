@@ -1,6 +1,9 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+EAPI=7
+
+inherit git-r3 autotools
 DESCRIPTION="jzmq"
 HOMEPAGE="http://www.zeromq.org/bindings:java"
 
@@ -17,21 +20,22 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-RDEPEND=""
-DEPEND="net-libs/zeromq"
+DEPEND="net-libs/zeromq
+	>=virtual/jre-1.7:*"
+RDEPEND="${DEPEND}"
+
+S="${WORKDIR}/${P}/${PN}-jni"
 
 src_prepare() {
-	eaclocal
-	eautoconf
+	default
+	eautoreconf
 }
 
 src_configure() {
-	echo "configure"
 	PATH=/etc/java-config-2/current-system-vm/bin:$PATH
 	PKG_CONFIG=/usr/lib64/pkgconfig/
 	eautomake
 	econf
-	make
 }
 
 src_install() {
