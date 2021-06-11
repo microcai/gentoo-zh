@@ -60,8 +60,7 @@ dev-python/conda-package-handling 1.7.3: Create and extract conda packages of va
 dev-python/fuo-kuwo 0.1.4: kuwo music support for feeluown
 dev-python/fuo-local 0.2.1-r1: local music support for feeluown
 dev-python/fuo-netease 0.6-r1: netease cloud music support for feeluown
-dev-python/fuo-qqmusic 0.3.2-r1: xiami music support for feeluown
-dev-python/fuo-xiami 0.2.4: xiami music support for feeluown
+dev-python/fuo-qqmusic 0.3.2-r1: qq music support for feeluown
 dev-python/janus 0.4.0-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/pycosat 0.6.3: Python bindings to picosat (a SAT solver)
 dev-python/qasync 0.9.4-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
@@ -124,7 +123,6 @@ net-print/epson-inkjet-printer_201207w 1.0.0: Epson printer driver (L110, L210, 
 net-proxy/Xray 1.4.2: Xray, Penetrates Everything.
 net-proxy/clash 1.5.0 1.6.0: A rule-based tunnel in Go.
 net-proxy/lantern-bin 3.0.4: A free desktop application that delivers fast, reliable and secure access to the open Internet for users in censored regions.
-net-proxy/libQtShadowsocks 2.1.0: A lightweight and ultra-fast shadowsocks library written in C++/Qt
 net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
 net-proxy/qv2ray 2.6.3-r1 99999: Qt GUI fontend of v2ray
 net-proxy/qvplugin-command 2.0.0 99999: Plugin for Qv2ray to run any commands when something happens in Qv2ray
@@ -132,7 +130,6 @@ net-proxy/qvplugin-ss 1.2: shadowsocks plugin for Qv2ray to support SIP003 in Qv
 net-proxy/qvplugin-ssr 2.0.3 9999: shadowsocksR plugin for Qv2ray to support SSR connection in Qv2ray
 net-proxy/qvplugin-trojan 2.0.0 99999: Plugin for Qv2ray to support Trojan proxy in Qv2ray
 net-proxy/shadowsocks 9999: A fast tunnel proxy that helps you bypass firewalls
-net-proxy/shadowsocks-qt5 3.0.1: Shadowsocks-Qt5 is a native and cross-platform shadowsocks GUI client with advanced features.
 net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
 net-proxy/smartproxy 0.9.4: A fast, proxy smart selector
 net-proxy/v2-ui-bin 5.4.7 5.5.0: A Control Panel for v2ray
