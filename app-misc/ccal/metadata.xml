@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<longdescription lang="en">The ccal utility is a simple-to-use command line program which writes a Gregorian calendar together with Chinese calendar to standard output.
-    </longdescription>
+	<longdescription lang="en">
+		The ccal utility is a simple-to-use command line program which writes
+		a Gregorian calendar together with Chinese calendar to standard output.
+	</longdescription>
 </pkgmetadata>

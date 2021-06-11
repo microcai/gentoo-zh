@@ -16,27 +16,27 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="x11-misc/xclip
-    dev-python/pywebkitgtk
-    dev-python/python-xlib
-    dev-python/lxml
-    dev-python/beautifulsoup"
+dev-python/pywebkitgtk
+dev-python/python-xlib
+dev-python/lxml
+dev-python/beautifulsoup"
 
 RDEPEND="${DEPEND}"
 
 src_prepare(){
-        sed -i '1,5s/BeautifulSoup/bs4/' fusionyoudao.py || die "patch error"
+	sed -i '1,5s/BeautifulSoup/bs4/' fusionyoudao.py || die "patch error"
 }
 
 src_install(){
-        insinto /usr/bin
-        dobin ${S}/scripts/openyoudao || die "Install failed"
+	insinto /usr/bin
+	dobin ${S}/scripts/openyoudao || die "Install failed"
 
-        insinto /usr/lib/openyoudao
-        doins ${S}/*.py || die "lib install failed"
+	insinto /usr/lib/openyoudao
+	doins ${S}/*.py || die "lib install failed"
 
-        insinto /usr/share/openyoudao
-        doins -r ${S}/cache/* || die "cache install failed"
+	insinto /usr/share/openyoudao
+	doins -r ${S}/cache/* || die "cache install failed"
 
-        insinto /usr/share/applications
-        doins ${S}/desktop/openyoudao.desktop || die "desktop link install failed"
+	insinto /usr/share/applications
+	doins ${S}/desktop/openyoudao.desktop || die "desktop link install failed"
 }

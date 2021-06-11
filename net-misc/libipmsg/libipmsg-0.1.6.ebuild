@@ -1,17 +1,17 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-inherit eutils 
+inherit eutils
 
 DESCRIPTION="libipmsg - IP Messenger library for UNIX"
 HOMEPAGE="http://libipmsg.sourceforge.jp"
 SRC_URI="mirror://sourceforge.jp/libipmsg/28162/${P}.tar.gz"
 
-SLOT="0"         
+SLOT="0"
 IUSE=""
-LICENSE="GPL-2" 
-KEYWORDS="" 
-RESTRICT="mirror" 
+LICENSE="GPL-2"
+KEYWORDS=""
+RESTRICT="mirror"
 
 src_compile()
 {

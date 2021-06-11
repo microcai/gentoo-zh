@@ -11,17 +11,19 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=sys-apps/portage-2.1
-		dev-python/python-cdb"
+	dev-python/python-cdb"
 RDEPEND=""
 
 src_unpack()
 {
 	einfo "no need unpack."
 }
+
 src_compile()
 {
 	einfo "no need compile."
 }
+
 src_install()
 {
 	insinto /usr/lib/portage/pym
@@ -37,12 +39,12 @@ src_install()
 pkg_postinst()
 {
 	ebegin "emerge metadata"
-		emerge --metadata
+	emerge --metadata
 	eend
 	einfo
 	einfo "# New updates to portage will be much faster, and if you use "
 	einfo "  emerge --searchdesc then you'll definately notice a speedup as well."
-	einfo "# If you want to turn this off, just comment out the two lines we" 
+	einfo "# If you want to turn this off, just comment out the two lines we"
 	einfo "  added in  /etc/portage/modules."
 	einfo "# According to DirtyEpic on the Gentoo Forums, upgrading to"
 	einfo "  python-2.4 will break portage. Comment out your /etc/modules file,"
