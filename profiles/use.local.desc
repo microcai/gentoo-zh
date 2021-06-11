@@ -82,7 +82,6 @@ media-sound/feeluown:local - add local music support for feeluown
 media-sound/feeluown:netease - add netease cloud music support for feeluown
 media-sound/feeluown:qqmusic - add qq music support for feeluown
 media-sound/feeluown:webengine - add support to login via web page
-media-sound/feeluown:xiami - add xiami music support for feeluown
 net-p2p/qbittorrent-enhanced:webui - Enable the Web UI
 net-proxy/make-proxy:client - Add make proxy client support
 net-proxy/make-proxy:server - Add make proxy server support

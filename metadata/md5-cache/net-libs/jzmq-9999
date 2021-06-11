@@ -1,8 +1,13 @@
-DEFINED_PHASES=install
-DEPEND=net-libs/zeromq
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl] sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.2-r1:1.16 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install prepare unpack
+DEPEND=net-libs/zeromq >=virtual/jre-1.7:*
 DESCRIPTION=jzmq
-EAPI=0
+EAPI=7
 HOMEPAGE=http://www.zeromq.org/bindings:java
+INHERIT=git-r3 autotools
 LICENSE=LGPL-3
+PROPERTIES=live
+RDEPEND=net-libs/zeromq >=virtual/jre-1.7:*
 SLOT=0
-_md5_=9af9834b7d6080aaff07b725cdefe9e3
+_eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52	gnuconfig	9f91b4b0c84e734a87492d4293f03de5	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	ebdbaed22e873a5abe6205f41349b479	libtool	f143db5a74ccd9ca28c1234deffede96	autotools	9e63f92c2a5d867fea55ecb160c7d354
+_md5_=67128d4505e3407d969d4ab02d89e854
