@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-12 01:14:16 CST)
+(The last generation time: 2021-06-12 01:44:57 CST)
 
 ### Packages
 
@@ -80,8 +80,6 @@
  app-office/wps-office                          | 11.1.0.10161           |            | http://www.wps.cn/product/wpslinux/                                                     | WPS Office is an office productivity suite, Here is the Chinese version
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-pda/ipadcharge                             | 9999                   |            | https://github.com/mkorenkov/ipad_charge                                                | Enables USB charging for Apple devices.
-------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-portage/portage-cdb                        | 0.2.1                  |            | http://gentoo-wiki.com/TIP_speed_up_portage_with_cdb                                    | increase portage's speed after syncing, and for calculating dependencies. This method uses a database, rather than a bunch of flat files to store its metadata.
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-shells/zsh-theme-powerlevel10k             | 1.15.0                 |            | https://github.com/romkatv/powerlevel10k                                                | Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
    app-shells/gitstatus                         | 1.5.1                  |  D, RD     | https://github.com/romkatv/gitstatus                                                    | Git status for Bash and Zsh prompt
