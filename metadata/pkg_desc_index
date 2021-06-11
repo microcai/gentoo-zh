@@ -34,8 +34,6 @@ app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-shells/gitstatus 1.5.1: Git status for Bash and Zsh prompt
 app-shells/zsh-theme-powerlevel10k 1.15.0: Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
 app-text/groff-utf8 0-r1: GNU groff wrapper allowing UTF-8 input
-app-text/reciteword 0.8.5: Reciteword is a education software to help people to study English, reciting english words. It have very beautiful interface, make reciting word being a interesting things.
-app-text/reciteword-dicts 0.8.2: Reciteword's dictionary.
 app-text/srecite 0.6.2: Smart Reciting
 app-text/wiznote 2.1.14 2.4.0 9999: WizNote lets you capture anything you might to remember: create text notes, clip content from the web, snap photos and have all of these notes avaliable you on any device.
 app-text/xdvipdfmx 9999: Extended xdvi for use with XeTeX and other unicode TeXs.
