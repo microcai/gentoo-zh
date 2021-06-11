@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-11 15:58:54 CST)
+(The last generation time: 2021-06-11 21:09:20 CST)
 
 ### Packages
 
@@ -159,7 +159,7 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/jf-openhuninn                      | 1.1                    |            | https://justfont.com/huninn/                                                            | An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/nerd-fonts                         | 2.1.0                  |            | https://www.nerdfonts.com/                                                              | Nerd Fonts is a project that patches developer targeted fonts with a high number of glyphs (icons).
+ media-fonts/nerd-fonts                         | 2.1.0                  |            | https://github.com/ryanoasis/nerd-fonts                                                 | Nerd Fonts is a project that patches developer targeted fonts with glyphs
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/taipei-sans-tc                     | 1.0                    |            | https://sites.google.com/view/jtfoundry/                                                | JT Foundry - Taipei Sans TC Beta font
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
