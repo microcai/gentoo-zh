@@ -1,14 +1,14 @@
-BDEPEND=dev-util/ninja >=dev-util/cmake-3.9.6 >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=dev-util/ninja dev-util/cmake >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst prepare test unpack
-DEPEND=dev-libs/glib:2 x11-libs/libva[X,opengl] x11-libs/libvdpau x11-libs/libX11 x11-libs/libXext media-libs/glu virtual/opengl virtual/ffmpeg
+DEPEND=dev-libs/glib:2 x11-libs/libva[X,opengl] x11-libs/libvdpau x11-libs/libX11 x11-libs/libXext media-libs/glu virtual/opengl media-video/ffmpeg
 DESCRIPTION=VDPAU driver with VA-API/OpenGL backend.
 EAPI=7
 HOMEPAGE=https://github.com/i-rinat/libvdpau-va-gl/
-INHERIT=cmake-utils multilib git-r3
+INHERIT=cmake multilib git-r3
 KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-3
 PROPERTIES=live
-RDEPEND=dev-libs/glib:2 x11-libs/libva[X,opengl] x11-libs/libvdpau x11-libs/libX11 x11-libs/libXext media-libs/glu virtual/opengl virtual/ffmpeg
+RDEPEND=dev-libs/glib:2 x11-libs/libva[X,opengl] x11-libs/libvdpau x11-libs/libX11 x11-libs/libXext media-libs/glu virtual/opengl media-video/ffmpeg
 SLOT=0
-_eclasses_=toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	ebdbaed22e873a5abe6205f41349b479	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	edos2unix	33e347e171066657f91f8b0c72ec8773	l10n	8cdd85e169b835d518bc2fd59f780d8e	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	2d5b3f4b315094768576b6799e4f926e	flag-o-matic	bc2e7662a4a9a8643be851982a837ddc	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	cmake-utils	12008d68ebfd61f49a377c49f83558a8	git-r3	b8e8c92aa5fe8df7187e466138eb4e52
-_md5_=fa0f5f2a6b34d3e7615ee4de890f6838
+_eclasses_=toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	ebdbaed22e873a5abe6205f41349b479	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	edos2unix	33e347e171066657f91f8b0c72ec8773	l10n	8cdd85e169b835d518bc2fd59f780d8e	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	2d5b3f4b315094768576b6799e4f926e	flag-o-matic	bc2e7662a4a9a8643be851982a837ddc	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	cmake	518e4c9a6a38dfd7afc54b6a7c5de3da	git-r3	b8e8c92aa5fe8df7187e466138eb4e52
+_md5_=aa8bb7deda52f529d2fffb7090122be3
