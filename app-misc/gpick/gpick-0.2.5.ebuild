@@ -11,7 +11,7 @@ SRC_URI="https://github.com/thezbyg/gpick/archive/gpick-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug unique dbus"
 
 RDEPEND=">=x11-libs/gtk+-2.12.0

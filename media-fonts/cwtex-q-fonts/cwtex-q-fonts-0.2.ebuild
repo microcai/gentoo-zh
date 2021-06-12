@@ -10,7 +10,7 @@ HOMEPAGE="https://code.google.com/p/cwtex-q-fonts/"
 SRC_URI="https://github.com/l10n-tw/cwtex-q-fonts/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 DEPEND=""

@@ -13,7 +13,7 @@ SLOT="0"
 RDEPEND=">=virtual/jdk-1.6"
 RESTRICT="strip"
 IUSE=""
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 S="${WORKDIR}"
 
 src_unpack() {

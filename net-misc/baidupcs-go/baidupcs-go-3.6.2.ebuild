@@ -12,7 +12,7 @@ else
 	inherit golang-build golang-vcs-snapshot
 
 	SRC_URI="https://${EGO_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86 ~arm ~arm64 ~mips"
+	KEYWORDS="~amd64 ~arm ~arm64 ~mips ~x86"
 fi
 
 DESCRIPTION="The terminal utility for Baidu Network Disk (Golang Version)."
