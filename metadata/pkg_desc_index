@@ -31,7 +31,7 @@ app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-mobilephone/scrcpy 1.14 1.16 1.17: Display and control your Android device
 app-office/wps-office 11.1.0.10161: WPS Office is an office productivity suite, Here is the Chinese version
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
-app-shells/gitstatus 1.5.1: Git status for Bash and Zsh prompt
+app-shells/gitstatus 1.5.2: Git status for Bash and Zsh prompt
 app-shells/zsh-theme-powerlevel10k 1.15.0: Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
 app-text/groff-utf8 0-r1: GNU groff wrapper allowing UTF-8 input
 app-text/srecite 0.6.2: Smart Reciting
