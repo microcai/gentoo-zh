@@ -18,7 +18,7 @@ if [[ ${PV} == 9999 ]];then
 	EGIT_REPO_URI="${HOMEPAGE}"
 else
 	SRC_URI="${HOMEPAGE}/archive/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~x86 ~amd64"
+	KEYWORDS="~amd64 ~x86"
 	S="${WORKDIR}/${PN//lightdm-}-${PV}"
 fi
 
