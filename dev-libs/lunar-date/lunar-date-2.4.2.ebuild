@@ -10,7 +10,7 @@ SRC_URI="http://github.com/yetist/lunar-date/archive/v${PV}.tar.gz -> ${P}.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc python"
 
 RDEPEND="${RDEPEND}

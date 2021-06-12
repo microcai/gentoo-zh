@@ -13,7 +13,7 @@ SRC_URI="https://github.com/majn/telegram-purple/releases/download/v1.3.0/telegr
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="+libwebp"
 
 DEPEND="net-im/pidgin
