@@ -66,7 +66,6 @@ dev-util/arch-install-scripts 20: Arch Linux install tools (pacstrap, genfstab, 
 dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 files
 dev-util/elfembed 0.3-r1: Resource Compiler for ELF binaries
 dev-util/fernflower 1: Fernflower is the first actually working analytical decompiler for Java and probably for a high-level programming language in general
-dev-util/global 6.3.4: GNU Global is a tag system to find the locations of a specified object in various sources
 dev-util/jd-gui 1.4.0: A standalone graphical utility that displays Java source codes of .class file
 dev-util/jetbrains-toolbox 1.20.7939: Manage all your JetBrains Projects and Tools
 dev-util/rust-analyzer 20200928: An experimental Rust compiler front-end for IDEs
