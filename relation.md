@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-12 19:15:27 CST)
+(The last generation time: 2021-06-12 20:53:42 CST)
 
 ### Packages
 
@@ -227,8 +227,6 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/nomachine-enterprise-client           | 7.6.2.1                |            | https://www.nomachine.com                                                               | NoMachine Enterprise Client
                                                 | 7.6.2.4                |            |                                                                                         |
-------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/omnitty                               | 0.3.0                  |            | http://omnitty.sourceforge.net/                                                         | ncurses-based ssh multiplexer for cluster administration
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/pcmanx-gtk2                           | 1.3                    |            | https://github.com/pcman-bbs/pcmanx                                                     | PCMan is an easy-to-use telnet client mainly targets BBS users formerly writen by gtk2
                                                 | 9999                   |            |                                                                                         |
