@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-12 20:53:42 CST)
+(The last generation time: 2021-06-12 21:40:31 CST)
 
 ### Packages
 
@@ -257,7 +257,7 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-command                     | 2.0.0                  |            | https://github.com/Qv2ray/QvPlugin-Command                                              | Plugin for Qv2ray to run any commands when something happens in Qv2ray
                                                 | 99999                  |            |                                                                                         |
-   net-proxy/qv2ray                             | 2.6.3-r1               |  D, RD     | https://qv2ray.github.io/                                                               | Qt GUI fontend of v2ray
+   net-proxy/qv2ray                             | 2.6.3-r2               |  D, RD     | https://qv2ray.github.io/                                                               | Qt GUI fontend of v2ray
                                                 | 99999                  |            |                                                                                         |
      net-proxy/v2ray                            | 4.38.3                 | RD         | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
                                                 | 4.39.2                 |            |                                                                                         |
