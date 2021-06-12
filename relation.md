@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-12 17:14:44 CST)
+(The last generation time: 2021-06-12 18:45:30 CST)
 
 ### Packages
 
@@ -130,8 +130,6 @@
  dev-util/elfembed                              | 0.3-r1                 |            | http://elfembed.sourceforge.net/index.php                                               | Resource Compiler for ELF binaries
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/fernflower                            | 1                      |            | https://github.com/fesh0r/fernflower                                                    | Fernflower is the first actually working analytical decompiler for Java and probably for a high-level programming language in general
-------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/global                                | 6.3.4                  |            | http://www.gnu.org/software/global/global.html                                          | GNU Global is a tag system to find the locations of a specified object in various sources
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jd-gui                                | 1.4.0                  |            | http://jd.benow.ca/                                                                     | A standalone graphical utility that displays Java source codes of .class file
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
