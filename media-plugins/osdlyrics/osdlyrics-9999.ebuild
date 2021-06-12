@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-PYTHON_COMPAT=( python3_{8,9} pypy3 )
+PYTHON_COMPAT=( python3_{8,9} )
 
 inherit python-r1 autotools git-r3
 
@@ -30,12 +30,12 @@ RDEPEND="
 	dev-python/future[${PYTHON_USEDEP}]
 	dev-python/pygobject[${PYTHON_USEDEP}]
 	dev-python/pycurl[${PYTHON_USEDEP}]
-	dev-util/intltool
 	gnome? ( dev-libs/gobject-introspection )
 	indicator? ( dev-libs/libappindicator )
 "
 
 DEPEND="
+	dev-util/intltool
 	${RDEPEND}
 "
 
