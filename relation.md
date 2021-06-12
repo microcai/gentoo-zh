@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-12 02:15:32 CST)
+(The last generation time: 2021-06-12 16:57:55 CST)
 
 ### Packages
 
@@ -82,7 +82,7 @@
  app-pda/ipadcharge                             | 9999                   |            | https://github.com/mkorenkov/ipad_charge                                                | Enables USB charging for Apple devices.
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-shells/zsh-theme-powerlevel10k             | 1.15.0                 |            | https://github.com/romkatv/powerlevel10k                                                | Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
-   app-shells/gitstatus                         | 1.5.1                  |  D, RD     | https://github.com/romkatv/gitstatus                                                    | Git status for Bash and Zsh prompt
+   app-shells/gitstatus                         | 1.5.2                  |  D, RD     | https://github.com/romkatv/gitstatus                                                    | Git status for Bash and Zsh prompt
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/groff-utf8                            | 0-r1                   |            | http://www.haible.de/bruno/packages-groff-utf8.html                                     | GNU groff wrapper allowing UTF-8 input
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
