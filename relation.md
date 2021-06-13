@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-13 13:34:58 CST)
+(The last generation time: 2021-06-13 21:19:26 CST)
 
 ### Packages
 
@@ -311,7 +311,9 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                          | 3-r6                   |            |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/xanmod-cacule-hybrid              | 5.12.10                | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod-Cacule, cjktty, uksm patchset for main kernel tree
+                                                | 5.12.10-r1             |            |                                                                                         |
    sys-kernel/xanmod-hybrid                     | 5.12.10                | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, cjktty, uksm patchset for main kernel tree
+                                                | 5.12.10-r1             |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                          | 1.13                   |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
