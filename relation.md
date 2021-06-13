@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-13 00:00:37 CST)
+(The last generation time: 2021-06-13 13:34:58 CST)
 
 ### Packages
 
@@ -310,8 +310,8 @@
  sys-libs/libixp                                | 9999                   |            | http://libs.suckless.org/                                                               | Standalone client/server 9P library
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                          | 3-r6                   |            |                                                                                         | Virtual for Linux kernel sources
-   sys-kernel/xanmod-cacule-hybrid              | 5.12.10                | RD         | https://xanmod.org/                                                                     | Xanmod-Cacule patchset for main kernel tree
-   sys-kernel/xanmod-hybrid                     | 5.12.10                | RD         | https://xanmod.org/                                                                     | Xanmod patchset for main kernel tree
+   sys-kernel/xanmod-cacule-hybrid              | 5.12.10                | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod-Cacule, cjktty, uksm patchset for main kernel tree
+   sys-kernel/xanmod-hybrid                     | 5.12.10                | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, cjktty, uksm patchset for main kernel tree
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                          | 1.13                   |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
