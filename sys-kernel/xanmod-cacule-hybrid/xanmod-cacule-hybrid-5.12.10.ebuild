@@ -12,14 +12,14 @@ K_EXP_GENPATCHES_NOUSE="1"
 # Just get basic genpatches, -xanmod patch set already includes main updates
 K_GENPATCHES_VER="1"
 
-# -pf already sets EXTRAVERSION to kernel Makefile
+# -xanmod-cacule-hybrid already sets EXTRAVERSION to kernel Makefile
 K_NOSETEXTRAVERSION="1"
 
 # Not supported by the Gentoo security team
 K_SECURITY_UNSUPPORTED="1"
 
 # We want the very basic patches from gentoo-sources, experimental patch is
-# already included in pf-sources
+# already included in xanmod-cacule-hybrid
 K_WANT_GENPATCHES="base extras"
 
 DEPEND="app-arch/cpio
