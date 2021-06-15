@@ -21,7 +21,7 @@ RDEPEND="
 	dev-python/janus[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/pyopengl[${PYTHON_USEDEP}]
-	dev-python/PyQt5[${PYTHON_USEDEP}]
+	dev-python/PyQt5[gui,widgets,opengl,svg,${PYTHON_USEDEP}]
 	dev-python/qasync[${PYTHON_USEDEP}]
 	dev-python/tomlkit[${PYTHON_USEDEP}]
 	>=dev-python/pydantic-1.8.1[${PYTHON_USEDEP}]
