@@ -87,7 +87,7 @@ media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simpl
 media-plugins/audacious-mac 0.2.0 0.3.10: Monkey's Audio Codec plugin for audacious
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 9999 20200403-r1: Standalone lyrics fetcher/displayer (windowed and OSD mode).
-media-sound/feeluown 3.7.7-r1: A user-friendly and hackable music player
+media-sound/feeluown 3.7.7-r2: A user-friendly and hackable music player
 media-sound/linnya 2.2.0: A free music player
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/tenvideo 1.0.10: Tencent videos
