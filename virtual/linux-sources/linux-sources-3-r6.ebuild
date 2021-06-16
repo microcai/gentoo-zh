@@ -21,6 +21,7 @@ RDEPEND="
 		sys-kernel/raspberrypi-sources
 		sys-kernel/xanmod-hybrid
 		sys-kernel/xanmod-cacule-hybrid
+		sys-kernel/linux-tkg-sources
 		sys-kernel/gentoo-kernel
 		sys-kernel/gentoo-kernel-bin
 		sys-kernel/vanilla-kernel
