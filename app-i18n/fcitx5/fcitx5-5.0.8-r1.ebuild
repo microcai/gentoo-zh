@@ -3,19 +3,20 @@
 
 EAPI=7
 
-inherit cmake gnome2-utils xdg-utils git-r3
-EGIT_REPO_URI="https://github.com/fcitx/fcitx5.git"
+inherit cmake gnome2-utils xdg-utils
 
-KEYWORDS="~amd64 ~x86"
 if [[ "${PV}" == 9999 ]]; then
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/fcitx/fcitx5.git"
 	KEYWORDS=""
 else
-	EGIT_COMMIT="${PV}"
+	SRC_URI="https://github.com/fcitx/fcitx5/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 DESCRIPTION="Fcitx5 Next generation of fcitx "
-HOMEPAGE="https://fcitx-im.org/ https://gitlab.com/fcitx/fcitx"
-SRC_URI="https://download.fcitx-im.org/data/en_dict-20121020.tar.gz -> fcitx-data-en_dict-20121020.tar.gz"
+HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5"
+SRC_URI+=" https://download.fcitx-im.org/data/en_dict-20121020.tar.gz -> fcitx-data-en_dict-20121020.tar.gz"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"

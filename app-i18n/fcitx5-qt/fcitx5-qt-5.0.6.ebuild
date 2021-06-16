@@ -3,17 +3,16 @@
 
 EAPI=7
 
-inherit cmake git-r3
-EGIT_REPO_URI="https://github.com/fcitx/fcitx5-qt.git"
+inherit cmake
 
 if [[ "${PV}" == 9999 ]]; then
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-qt.git"
 	KEYWORDS=""
 else
+	SRC_URI="https://github.com/fcitx/fcitx5-qt/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
-	EGIT_COMMIT="${PV}"
 fi
-
-SRC_URI=""
 
 DESCRIPTION="Qt library and IM module for fcitx5"
 HOMEPAGE="https://github.com/fcitx/fcitx5-qt"
