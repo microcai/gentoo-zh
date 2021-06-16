@@ -12,5 +12,5 @@ RDEPEND=!sys-kernel/xanmod-sources !sys-kernel/xanmod-cacule-hybrid !build? ( de
 RESTRICT=binchecks strip
 SLOT=5.12.10
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.12.tar.xz https://github.com/xanmod/linux/releases/download/5.12.10-xanmod1/patch-5.12.10-xanmod1.xz https://github.com/HougeLangley/customkernel/releases/download/v5.12-others/v1-cjktty.patch https://github.com/HougeLangley/customkernel/releases/download/v5.12-others/v1-uksm.patch https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.12-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.12-1.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.12-1.extras.tar.xz
-_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	ebdbaed22e873a5abe6205f41349b479	kernel-2	88747bdc32924cf1f95dbea28c60d63b
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	ebdbaed22e873a5abe6205f41349b479	kernel-2	66af59cfd68077668c584c41aea800ef
 _md5_=3cfa13b6a1f1698ad452e47d749ddbad
