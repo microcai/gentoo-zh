@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-15 11:40:19 CST)
+(The last generation time: 2021-06-17 00:19:35 CST)
 
 ### Packages
 
@@ -310,6 +310,7 @@
  sys-libs/libixp                                | 9999                   |            | http://libs.suckless.org/                                                               | Standalone client/server 9P library
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                          | 3-r6                   |            |                                                                                         | Virtual for Linux kernel sources
+   sys-kernel/linux-tkg-sources                 | 5.12.11                | RD         | https://github.com/Frogging-Family/linux-tkg                                            | Linux-TkG, cjktty, uksm patchset for main kernel tree
    sys-kernel/xanmod-cacule-hybrid              | 5.12.10                | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod-Cacule, cjktty, uksm patchset for main kernel tree
                                                 | 5.12.10-r1             |            |                                                                                         |
    sys-kernel/xanmod-hybrid                     | 5.12.10                | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, cjktty, uksm patchset for main kernel tree
