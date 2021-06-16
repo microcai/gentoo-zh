@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake-utils git-r3
+inherit cmake git-r3
 
 DESCRIPTION="shadowsocksR plugin for Qv2ray to support SSR connection in Qv2ray"
 HOMEPAGE="https://github.com/Qv2ray/QvPlugin-SSR"
@@ -15,7 +15,7 @@ LICENSE="GPL-3"
 SLOT="0"
 
 DEPEND="
-	=net-proxy/qv2ray-99999
+	~net-proxy/qv2ray-99999
 	dev-libs/libuv
 	dev-libs/libsodium
 "
@@ -30,7 +30,7 @@ src_configure() {
 		-DSTATIC_LINK_LIBUV=OFF
 		-DSTATIC_LINK_SODIUM=OFF
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 src_install(){
