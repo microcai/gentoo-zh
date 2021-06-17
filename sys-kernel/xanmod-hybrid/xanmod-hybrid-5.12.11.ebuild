@@ -22,35 +22,57 @@ K_SECURITY_UNSUPPORTED="1"
 # already included in xanmod-hybrid
 K_WANT_GENPATCHES="base extras"
 
-DEPEND="app-arch/cpio
-dev-util/pahole
-dev-libs/libbpf
-"
-RDEPEND="
-!sys-kernel/xanmod-sources
-!sys-kernel/xanmod-cacule-hybrid
-"
+# Default enable Xanmod, You have to choose one of them.
+# Both of them will make some errors
+IUSE="+xanmod cacule"
+REQUIRED_USE="^^ ( xanmod cacule )"
+
+# If you have been enable src_prepare-overlay
+# please unmerge sys-kernel/xanmod-sources
+RDEPEND="!sys-kernel/xanmod-sources"
 
 inherit kernel-2
 detect_version
 
-DESCRIPTION="Xanmod, cjktty, uksm patchset for main kernel tree"
+DESCRIPTION="Xanmod, Xanmod-CaCule, cjktty, uksm patchset for main kernel tree"
 HOMEPAGE="https://github.com/HougeLangley/customkernel"
 LICENSE+=" CDDL"
+
 SRC_URI="
 ${KERNEL_BASE_URI}/linux-5.12.tar.xz
-https://github.com/xanmod/linux/releases/download/5.12.10-xanmod1/patch-5.12.10-xanmod1.xz
+${GENPATCHES_URI}
+https://github.com/HougeLangley/customkernel/releases/download/v5.12-patch/patch-5.12.11-xanmod1
+https://github.com/HougeLangley/customkernel/releases/download/v5.12-patch/patch-5.12.11-xanmod1-cacule
 https://github.com/HougeLangley/customkernel/releases/download/v5.12-others/v1-cjktty.patch
 https://github.com/HougeLangley/customkernel/releases/download/v5.12-others/v1-uksm.patch
-${GENPATCHES_URI}
 "
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/linux-${PVR}-xanmod"
-
-UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-5.12.10-xanmod1.xz ${DISTDIR}/v1-cjktty.patch ${DISTDIR}/v1-uksm.patch"
+S="${WORKDIR}/linux-5.12.11-xanmod"
 
 K_EXTRAEINFO="For more info on xanmod-hybrid and details on how to report problems,	see: ${HOMEPAGE}."
+
+PATCHES=( "${DISTDIR}/patch-5.12.11-xanmod1"
+"${DISTDIR}/patch-5.12.11-xanmod1-cacule"
+"${DISTDIR}/v1-cjktty.patch"
+"${DISTDIR}/v1-uksm.patch" )
+
+src_prepare() {
+	# Default enable Xanmod
+	if	use	xanmod	;	then
+		eapply "${DISTDIR}/patch-5.12.11-xanmod1"	||	die
+		eapply "${DISTDIR}/v1-cjktty.patch"	||	die
+		eapply "${DISTDIR}/v1-uksm.patch"	||	die
+	fi
+	# Enable Xanmod-CaCule
+	if	use	cacule	;	then
+		eapply "${DISTDIR}/patch-5.12.11-xanmod1-cacule"	||	die
+		eapply "${DISTDIR}/v1-cjktty.patch"	||	die
+		eapply "${DISTDIR}/v1-uksm.patch"	||	die
+	fi
+
+	kernel-2_src_prepare
+}
 
 pkg_setup() {
 	ewarn ""
@@ -65,6 +87,6 @@ pkg_setup() {
 
 pkg_postinst() {
 	elog "MICROCODES"
-	elog "Use xanmod-sources with microcodes"
+	elog "Use xanmod-hybrid with microcodes"
 	elog "Read https://wiki.gentoo.org/wiki/Intel_microcode"
 }
