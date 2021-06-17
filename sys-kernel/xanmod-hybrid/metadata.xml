@@ -4,4 +4,8 @@
 	<upstream>
 		<remote-id type="github">HougeLangley/customkernel</remote-id>
 	</upstream>
+	<use>
+		<flag name="xanmod">Enable Default Xanmod Patches.</flag>
+		<flag name="cacule">Enable Default Xanmod-CaCule Patches.</flag>
+	</use>
 </pkgmetadata>
