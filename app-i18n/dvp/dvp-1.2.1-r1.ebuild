@@ -1,10 +1,9 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=7
 
-inherit versionator
-MY_PV=$(replace_all_version_separators "_")
+MY_PV=${PV//./_}
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="The kbd keymap for Programmer Dvorak."
@@ -22,6 +21,7 @@ RDEPEND="sys-apps/kbd"
 S="${WORKDIR}"
 
 src_prepare() {
+	eapply_user
 	mv ${MY_P}.map dvp.map
 	gzip -9 dvp.map
 }
