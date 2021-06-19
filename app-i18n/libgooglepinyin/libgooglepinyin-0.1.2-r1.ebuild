@@ -5,13 +5,13 @@ EAPI=7
 
 HOMEPAGE="http://libgooglepinyin.googlecode.com/"
 
-inherit googlecode cmake-utils
+inherit googlecode cmake
 
 SRC_URI="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/libgooglepinyin/${P}.tar.bz2"
 
 DESCRIPTION="A fork from google pinyin on android "
 
-LICENSE="Apache"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
@@ -31,5 +31,5 @@ src_configure() {
 	local mycmakeargs=(
 			-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
