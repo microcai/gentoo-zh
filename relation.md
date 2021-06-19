@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-19 18:08:24 CST)
+(The last generation time: 2021-06-19 18:34:38 CST)
 
 ### Packages
 
@@ -59,7 +59,7 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/sogoupinyin                           | 2.4.0.3469             |            | http://pinyin.sogou.com/linux/                                                          | Sogou Pinyin input method.
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/zh-autoconvert                        | 0.3.16-r3              |            | http://packages.debian.org/stable/text/zh-autoconvert.html                              | Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
+ app-i18n/zh-autoconvert                        | 0.3.16-r3              |            | https://packages.debian.org/stable/source/zh-autoconvert                                | Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/bcompare                              | 4.3.7.25118            |            | http://www.scootersoftware.com/                                                         | Beyond Compare -- Compare, sync, and merge files and folders
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
