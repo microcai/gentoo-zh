@@ -4,7 +4,7 @@
 inherit eutils
 
 DESCRIPTION="Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter"
-HOMEPAGE="http://packages.debian.org/stable/text/zh-autoconvert.html"
+HOMEPAGE="https://packages.debian.org/stable/source/zh-autoconvert"
 SRC_URI="mirror://debian/pool/main/z/${PN}/${PN}_${PV}.orig.tar.gz
 	mirror://debian/pool/main/z/${PN}/${PN}_${PV}-3.diff.gz"
 
