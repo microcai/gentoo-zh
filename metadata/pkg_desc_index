@@ -15,7 +15,7 @@ app-i18n/fcitx5-rime 5.0.6 9999: Rime Support for Fcitx5
 app-i18n/fcitx5-skk 5.0.6 9999: Japanese SKK input engine for Fcitx5
 app-i18n/gcin 2.9.0-r2: Another Traditional Chinese IM.
 app-i18n/ibus-rime 9999: Rime Input Method Engine for IBus Framework
-app-i18n/libgooglepinyin 0.1.2: A fork from google pinyin on android
+app-i18n/libgooglepinyin 0.1.2-r1: A fork from google pinyin on android
 app-i18n/libime 1.0.7 9999: Fcitx5 Next generation of fcitx
 app-i18n/lunar 2.2-r5: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
