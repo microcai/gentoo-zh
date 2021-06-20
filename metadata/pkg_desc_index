@@ -21,7 +21,6 @@ app-i18n/lunar 2.2-r5: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
 app-i18n/scim-chrasis 9999.0.0.1: Chrasis SCIM binding for chinese character recognition.
 app-i18n/sogoupinyin 2.4.0.3469: Sogou Pinyin input method.
-app-i18n/zh-autoconvert 0.3.16-r3: Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 app-misc/bcompare 4.3.7.25118: Beyond Compare -- Compare, sync, and merge files and folders
 app-misc/ccal 2.5.3: A simple command line calendar for Chinese lunar
 app-misc/gpick 0.2.5: Advanced color picker written in C++ using GTK+ toolkit
@@ -34,7 +33,6 @@ app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-shells/gitstatus 1.5.2: Git status for Bash and Zsh prompt
 app-shells/zsh-theme-powerlevel10k 1.15.0: Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
 app-text/groff-utf8 0-r1: GNU groff wrapper allowing UTF-8 input
-app-text/srecite 0.6.2: Smart Reciting
 app-text/wiznote 2.1.14 2.4.0 9999: WizNote lets you capture anything you might to remember: create text notes, clip content from the web, snap photos and have all of these notes avaliable you on any device.
 app-text/xdvipdfmx 9999: Extended xdvi for use with XeTeX and other unicode TeXs.
 app-text/ydcv-rs 0.4.7: A rust version of YouDao Console Version
@@ -103,7 +101,6 @@ net-libs/jzmq 9999: jzmq
 net-misc/avsocks 9999: 科学操长城软件
 net-misc/baidunetdisk 3.0.1 3.4.1 3.5.0: Baidu Net Disk is a cloud storage client (Linux Version)
 net-misc/baidupcs-go 3.6.2 9999: The terminal utility for Baidu Network Disk (Golang Version).
-net-misc/libipmsg 0.1.6 0.1.7: libipmsg - IP Messenger library for UNIX
 net-misc/networkmanager-l2tp 9999: NetworkManager L2TP plugin
 net-misc/nomachine-enterprise-client 7.6.2.1 7.6.2.4: NoMachine Enterprise Client
 net-misc/pcmanx-gtk2 1.3 9999: PCMan is an easy-to-use telnet client mainly targets BBS users formerly writen by gtk2
@@ -135,15 +132,12 @@ sci-libs/libticonv 9999: Charset conversion library for TI calculators
 sci-libs/libtifiles2 9999: Library for TI calculator files
 sys-apps/mdp 9999: A command-line based markdown presentation tool
 sys-apps/yaourt 1.2.2: A pacman wrapper with extended features and AUR support
-sys-devel/ucc 1.1-r0: UCC is an ANSI C Compiler
 sys-fs/coda 7.0.5: Coda is an advanced network file system, similar to NFS
 sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/ksmbd-tools 9999: Tools for in-kernel CIFS server
 sys-kernel/linux-tkg-sources 5.12.11 5.12.11-r1 5.12.12: Linux-TkG, cjktty, uksm patchset for main kernel tree
 sys-kernel/xanmod-hybrid 5.12.10-r2 5.12.11 5.12.12: Xanmod, Xanmod-CaCule, cjktty, uksm patchset for main kernel tree
-sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
-sys-libs/libixp 9999: Standalone client/server 9P library
 virtual/linux-sources 3-r6: Virtual for Linux kernel sources
 www-servers/darkhttpd 1.13: A small, static webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
@@ -161,5 +155,4 @@ x11-terms/termite 9999: A keyboard-centric VTE-based terminal
 x11-terms/vte-ng 9999: An enhanced terminal emulator widget
 x11-themes/lxice 0.1.0: LXDE theme for IceWM
 x11-themes/smplayer-themes-nonfree 0.1.0-r1 0.1.1-r1: Icon themes for smplayer
-x11-wm/9wm 1.1: A window manager emulation of the Plan 9 window manager 8-1/2.
 x11-wm/chamferwm 9999: A tiling X11 window manager with Vulkan compositor.
