@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-21 10:15:11 CST)
+(The last generation time: 2021-06-21 23:09:58 CST)
 
 ### Packages
 
@@ -85,8 +85,6 @@
    app-shells/gitstatus                         | 1.5.2                  |  D, RD     | https://github.com/romkatv/gitstatus                                                    | Git status for Bash and Zsh prompt
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/groff-utf8                            | 0-r1                   |            | http://www.haible.de/bruno/packages-groff-utf8.html                                     | GNU groff wrapper allowing UTF-8 input
-------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-text/srecite                               | 0.6.2                  |            | http://srecite.sourceforge.net                                                          | Smart Reciting
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/wiznote                               | 2.1.14                 |            | http://www.wiz.cn/index.html                                                            | WizNote lets you capture anything you might to remember: create text notes, clip content from the web, snap photos and have all of these notes avaliable you on any device.
                                                 | 2.4.0                  |            |                                                                                         |
