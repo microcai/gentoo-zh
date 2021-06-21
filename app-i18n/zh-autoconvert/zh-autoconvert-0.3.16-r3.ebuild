@@ -1,6 +1,8 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+EAPI=7
+
 inherit eutils
 
 DESCRIPTION="Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter"
@@ -20,10 +22,12 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P/zh-}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch ../${PN}_${PV}-3.diff
+PATCHES=(
+	"${WORKDIR}/${PN}_${PV}-3.diff"
+)
+
+src_prepare() {
+	default
 
 	# don't build xchat-plugins
 	# so don't depend on gtk+-1.2 anymore
