@@ -5,7 +5,7 @@
 		<email>dennis.yxun@gmail.org</email>
 		<name>Lan Yixun</name>
 	</maintainer>
-	<longdescription lang="C">
+	<longdescription lang="en">
 		UCC is an ANSI C compiler which supports Linux and Windows running on Intel
 		x86 platform.Its compilation speed is fast and it is suitable for personal
 		research and instructional use.
