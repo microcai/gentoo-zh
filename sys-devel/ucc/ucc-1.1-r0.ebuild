@@ -1,13 +1,14 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+EAPI=7
+
 inherit eutils
 
-SOURCE="${PN}160.zip"
 DESCRIPTION="UCC is an ANSI C Compiler"
-HOMEPAGE="http://sourceforge.net/projects/ucc"
+HOMEPAGE="https://sourceforge.net/projects/ucc"
 ECVS_CVS_OPTIONS="-dP -z3"
-SRC_URI="mirror://sourceforge/ucc/${SOURCE}"
+SRC_URI="mirror://sourceforge/ucc/${PN}160.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,10 +20,10 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${WORKDIR}"
-	mv ${PN} ${P}
+S="${WORKDIR}/${PN}"
+
+src_prepare() {
+	default
 	sed -i -e 's:/usr/local/lib/ucc/:/usr/lib/ucc/:' "${S}/driver/linux.c"
 	sed -i -e 's:UCCDIR \"ucl\":\"/usr/bin/ucl\":' "${S}/driver/linux.c"
 }
