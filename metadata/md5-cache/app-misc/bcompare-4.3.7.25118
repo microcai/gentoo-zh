@@ -8,5 +8,5 @@ LICENSE=Bcompare
 RESTRICT=mirror
 SLOT=0
 SRC_URI=x86? ( http://www.scootersoftware.com/bcompare-4.3.7.25118.i386.tar.gz ) amd64? ( http://www.scootersoftware.com/bcompare-4.3.7.25118.x86_64.tar.gz )
-_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	l10n	3c7381c56a184f0dd5ba3fb824808f30	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	45faf8ab7d5fe72e58a634092cd1f283	user-info	8eda7e0ed7acb4b9678bea151579e154	user	527b8f84a662e996f692f97ffd2c893a
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	l10n	3c7381c56a184f0dd5ba3fb824808f30	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	9a53f21c753d823ba20a22f857c25cb4	user-info	8eda7e0ed7acb4b9678bea151579e154	user	527b8f84a662e996f692f97ffd2c893a
 _md5_=3f2c7cc837aa443c286541ab659497b2
