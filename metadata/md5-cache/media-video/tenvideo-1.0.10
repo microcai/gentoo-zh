@@ -9,5 +9,5 @@ LICENSE=Tencent-EULA
 RDEPEND=
 SLOT=0
 SRC_URI=https://dldir1.qq.com/qqtv/linux/Tenvideo_universal_1.0.10_amd64.deb
-_eclasses_=toolchain-funcs	2545dc6f0aaecb2dea61424911e82674	multilib	ba7da83f763a749a2870c28785c6dc0b	unpacker	315fbc6afeddec885b965513572766c4	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	xdg	c7ba313ea1eaf266f95cc6235f7d6a07
+_eclasses_=toolchain-funcs	7a9551c9a6680454019664620505375a	multilib	6f710a580aea2e8c7f5be70f8912ad43	unpacker	2eeba54233fa41bdb15dcddcb63fba3a	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	xdg	c7ba313ea1eaf266f95cc6235f7d6a07
 _md5_=00a9e9dc8fd4bb23a8e45a684cb51136

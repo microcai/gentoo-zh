@@ -10,5 +10,5 @@ LICENSE=MPL-2.0 MIT
 PROPERTIES=live
 RDEPEND=dev-libs/libev dev-libs/uthash x11-libs/libX11 x11-libs/libxcb x11-libs/libXext x11-libs/pixman x11-libs/xcb-util-image x11-libs/xcb-util-renderutil config-file? ( dev-libs/libconfig:= dev-libs/libxdg-basedir ) dbus? ( sys-apps/dbus ) drm? ( x11-libs/libdrm ) opengl? ( virtual/opengl ) pcre? ( dev-libs/libpcre ) !x11-misc/compton !x11-misc/picom
 SLOT=0
-_eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52	multiprocessing	65f88f0e80751d45b06bbcfc4b149ccc	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	2545dc6f0aaecb2dea61424911e82674	multilib	ba7da83f763a749a2870c28785c6dc0b	python-utils-r1	6e84b7d3d8d0bb1ee12774f4a66909e2	meson	5ec14fdbc5446b8767e87e186e3b1a52	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	xdg	c7ba313ea1eaf266f95cc6235f7d6a07
+_eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	7a9551c9a6680454019664620505375a	multilib	6f710a580aea2e8c7f5be70f8912ad43	python-utils-r1	6e84b7d3d8d0bb1ee12774f4a66909e2	meson	5ec14fdbc5446b8767e87e186e3b1a52	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	xdg	c7ba313ea1eaf266f95cc6235f7d6a07
 _md5_=b400d8a7b6faf5132e87bd9203df3725
