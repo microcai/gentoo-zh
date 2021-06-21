@@ -1,6 +1,8 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+EAPI=7
+
 inherit toolchain-funcs mercurial
 
 DESCRIPTION="Standalone client/server 9P library"
@@ -17,8 +19,8 @@ RDEPEND=""
 
 S="${WORKDIR}/${PN}"
 
-src_unpack() {
-	mercurial_src_unpack
+src_prepare() {
+	default
 
 	sed -i \
 		-e "/^ *PREFIX/s|=.*|= /usr|" \
