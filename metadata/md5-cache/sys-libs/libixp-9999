@@ -1,0 +1,11 @@
+BDEPEND=dev-vcs/mercurial
+DEFINED_PHASES=compile install prepare unpack
+DESCRIPTION=Standalone client/server 9P library
+EAPI=7
+HOMEPAGE=http://libs.suckless.org/
+INHERIT=toolchain-funcs mercurial
+LICENSE=MIT
+PROPERTIES=live
+SLOT=0
+_eclasses_=toolchain-funcs	e867df3870e8ff04a5b94f925be8b06a	multilib	f8d35c2432bb32c4f1e779c4287b31ec	edos2unix	33e347e171066657f91f8b0c72ec8773	l10n	3c7381c56a184f0dd5ba3fb824808f30	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	9a53f21c753d823ba20a22f857c25cb4	mercurial	d9b8e6c09ecb32dd80eb36f50f27b157
+_md5_=cb3d6063e23ea11169fc3553a8ecbff1

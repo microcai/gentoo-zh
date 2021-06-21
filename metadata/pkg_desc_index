@@ -141,6 +141,7 @@ sys-fs/ksmbd-tools 9999: Tools for in-kernel CIFS server
 sys-kernel/linux-tkg-sources 5.12.11 5.12.11-r1 5.12.12: Linux-TkG, cjktty, uksm patchset for main kernel tree
 sys-kernel/xanmod-hybrid 5.12.10-r2 5.12.11 5.12.12: Xanmod, Xanmod-CaCule, cjktty, uksm patchset for main kernel tree
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
+sys-libs/libixp 9999: Standalone client/server 9P library
 virtual/linux-sources 3-r6: Virtual for Linux kernel sources
 www-servers/darkhttpd 1.13: A small, static webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
