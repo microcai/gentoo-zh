@@ -21,6 +21,7 @@ app-i18n/lunar 2.2-r5: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
 app-i18n/scim-chrasis 9999.0.0.1: Chrasis SCIM binding for chinese character recognition.
 app-i18n/sogoupinyin 2.4.0.3469: Sogou Pinyin input method.
+app-i18n/zh-autoconvert 0.3.16-r3: Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 app-misc/bcompare 4.3.7.25118: Beyond Compare -- Compare, sync, and merge files and folders
 app-misc/ccal 2.5.3: A simple command line calendar for Chinese lunar
 app-misc/gpick 0.2.5: Advanced color picker written in C++ using GTK+ toolkit
