@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-06-21 23:38:11 CST)
+(The last generation time: 2021-06-22 14:49:11 CST)
 
 ### Packages
 
@@ -302,7 +302,7 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-libs/elog-functions                        | 0.0.2                  |            | http://xochitl.matem.unam.mx/~canek/gentoo-systemd-only/index.html                      | Compatibility functions for the log eclass functions of OpenRC
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-libs/libixp                                | 9999                   |            | http://libs.suckless.org/                                                               | Standalone client/server 9P library
+ sys-libs/libixp                                | 0.5_p20110208-r3       |            | https://libs.suckless.org/deprecated/libixp                                             | A stand-alone client/server 9P library including ixpc client
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                          | 3-r6                   |            |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/linux-tkg-sources                 | 5.12.11                | RD         | https://github.com/Frogging-Family/linux-tkg                                            | Linux-TkG, cjktty, uksm patchset for main kernel tree
