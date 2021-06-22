@@ -86,7 +86,7 @@ media-sound/feeluown:webengine - add support to login via web page
 net-p2p/qbittorrent-enhanced:webui - Enable the Web UI
 net-proxy/make-proxy:client - Add make proxy client support
 net-proxy/make-proxy:server - Add make proxy server support
-net-proxy/v2ray:tool - Build the additional tool, v2ctl.
+net-proxy/v2ray:tool - Build the additional tool: v2ctl
 sys-kernel/linux-tkg-sources:bmq - Eable BMQ CPU Scheduler.
 sys-kernel/linux-tkg-sources:muqss - Eable MuQSS CPU Scheduler.
 sys-kernel/linux-tkg-sources:pds - Eable PDS CPU Scheduler.
