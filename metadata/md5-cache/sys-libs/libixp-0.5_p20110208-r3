@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile configure install
+DESCRIPTION=A stand-alone client/server 9P library including ixpc client
+EAPI=7
+HOMEPAGE=https://libs.suckless.org/deprecated/libixp
+INHERIT=toolchain-funcs
+KEYWORDS=~amd64 ~hppa ~ppc ~ppc64 ~x86
+LICENSE=MIT
+SLOT=0
+SRC_URI=mirror://gentoo/libixp-0.5_p20110208.tar.xz
+_eclasses_=toolchain-funcs	e867df3870e8ff04a5b94f925be8b06a	multilib	f8d35c2432bb32c4f1e779c4287b31ec
+_md5_=5cb1a8dd6891ded62389a6f57df3dfb8
