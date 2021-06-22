@@ -20,7 +20,6 @@ SLOT="0"
 DEPEND=""
 RDEPEND="${DEPEND}
 	!<net-proxy/v2ray-4.38.3
-	!<net-proxy/v2ray-core-4.38.3
 "
 BDEPEND=""
 
