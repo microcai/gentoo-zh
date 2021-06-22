@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer type="person">
-		<email>i@bitbili.net</email>
-		<name>Ryan Qian</name>
-	</maintainer>
+	<upstream>
+		<remote-id type="github">v2fly/domain-list-community</remote-id>
+		<bugs-to>https://github.com/v2fly/domain-list-community/issues</bugs-to>
+	</upstream>
 </pkgmetadata>
