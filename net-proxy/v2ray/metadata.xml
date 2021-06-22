@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer type="person">
-		<email>i@bitbili.net</email>
-		<name>Ryan Qian</name>
-	</maintainer>
 	<use>
-		<flag name="tool">Build the additional tool, v2ctl.</flag>
+		<flag name="tool">Build the additional tool: v2ctl</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">v2fly/v2ray-core</remote-id>
+		<bugs-to>https://github.com/v2fly/v2ray-core/issues</bugs-to>
+	</upstream>
 </pkgmetadata>
