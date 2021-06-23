@@ -9,5 +9,5 @@ RDEPEND=x11-libs/gtk+:3[cups] x11-libs/libXScrnSaver dev-libs/nss app-crypt/p11-
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://wppkg.baidupcs.com/issue/netdisk/Linuxguanjia/3.5.0/baidunetdisk_3.5.0_amd64.deb
-_eclasses_=toolchain-funcs	e867df3870e8ff04a5b94f925be8b06a	multilib	f8d35c2432bb32c4f1e779c4287b31ec	unpacker	2eeba54233fa41bdb15dcddcb63fba3a	desktop	c0d27bf73aa08ca05b663dbd31fbef28	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	xdg	c7ba313ea1eaf266f95cc6235f7d6a07
+_eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	unpacker	2eeba54233fa41bdb15dcddcb63fba3a	desktop	c0d27bf73aa08ca05b663dbd31fbef28	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	xdg	c7ba313ea1eaf266f95cc6235f7d6a07
 _md5_=1be69e6c00dc99a3eb767a9dc1d58877

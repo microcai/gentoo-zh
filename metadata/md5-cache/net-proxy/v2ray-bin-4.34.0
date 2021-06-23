@@ -10,5 +10,5 @@ LICENSE=MIT
 RDEPEND=!net-proxy/v2ray
 SLOT=0
 SRC_URI=amd64? ( https://github.com/v2fly/v2ray-core/releases/download/v4.34.0/v2ray-linux-64.zip -> v2ray-4.34.0-linux-64.zip ) x86? ( https://github.com/v2fly/v2ray-core/releases/download/v4.34.0/v2ray-linux-32.zip -> v2ray-4.34.0-linux-32.zip ) arm? ( https://github.com/v2fly/v2ray-core/releases/download/v4.34.0/v2ray-linux-arm32-v7a.zip -> v2ray-4.34.0-linux-arm.zip ) arm? ( https://github.com/v2fly/v2ray-core/releases/download/v4.34.0/v2ray-linux-arm64-v8a.zip -> v2ray-4.34.0-linux-arm64.zip )
-_eclasses_=toolchain-funcs	e867df3870e8ff04a5b94f925be8b06a	multilib	f8d35c2432bb32c4f1e779c4287b31ec	systemd	fdf0d765c3f11f91fe54f8def9a8c0e6
+_eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	systemd	fdf0d765c3f11f91fe54f8def9a8c0e6
 _md5_=e85d1ab5885f0514421463f57b4ae10c

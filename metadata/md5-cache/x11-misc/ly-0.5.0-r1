@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=sys-libs/pam x11-libs/libxcb x11-base/xorg-server x11-apps/xauth
 SLOT=0
 SRC_URI=https://github.com/nullgemm/ly/archive/refs/tags/v0.5.0.tar.gz -> ly-0.5.0.tar.gz
-_eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52
+_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
 _md5_=2535ef51d370c8a0f9dcae53880561cf

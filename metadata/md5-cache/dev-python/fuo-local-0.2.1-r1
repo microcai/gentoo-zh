@@ -12,5 +12,5 @@ RDEPEND=dev-python/marshmallow[python_targets_python3_8(-)?,python_targets_pytho
 REQUIRED_USE=|| ( python_targets_python3_8 python_targets_python3_9 )
 SLOT=0
 SRC_URI=mirror://pypi/f/fuo-local/fuo_local-0.2.1.tar.gz
-_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	e867df3870e8ff04a5b94f925be8b06a	multilib	f8d35c2432bb32c4f1e779c4287b31ec	multibuild	6b3d5ee849dafe6cdfd7b859c211fb01	python-utils-r1	6e84b7d3d8d0bb1ee12774f4a66909e2	python-r1	26e4ad0a4190b14f70973dc253e86535	distutils-r1	c21cf58c1e3c67e0ea53c96a7b37eddd
+_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	multibuild	6b3d5ee849dafe6cdfd7b859c211fb01	python-utils-r1	6e84b7d3d8d0bb1ee12774f4a66909e2	python-r1	26e4ad0a4190b14f70973dc253e86535	distutils-r1	c21cf58c1e3c67e0ea53c96a7b37eddd
 _md5_=9ace180d744d6d626b06b719b0f55920
