@@ -1,4 +1,4 @@
-BDEPEND=virtual/pkgconfig doc? ( app-text/asciidoc ) test? ( || ( ( dev-lang/python:3.9 dev-python/xcffib[python_targets_python3_9(-),-python_single_target_python3_9(-)] ) ( dev-lang/python:3.8 dev-python/xcffib[python_targets_python3_8(-),-python_single_target_python3_8(-)] ) ) ) >=dev-util/meson-0.56.0 >=dev-util/ninja-1.8.2 dev-util/meson-format-array test? ( x11-base/xorg-server[xvfb] x11-apps/xhost )
+BDEPEND=virtual/pkgconfig doc? ( app-text/asciidoc ) test? ( || ( ( dev-lang/python:3.9 dev-python/xcffib[python_targets_python3_9(-)] ) ( dev-lang/python:3.8 dev-python/xcffib[python_targets_python3_8(-)] ) ) ) >=dev-util/meson-0.56.0 >=dev-util/ninja-1.8.2 dev-util/meson-format-array test? ( x11-base/xorg-server[xvfb] x11-apps/xhost )
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test
 DEPEND=dev-libs/libev dev-libs/uthash x11-libs/libX11 x11-libs/libxcb x11-libs/libXext x11-libs/pixman x11-libs/xcb-util-image x11-libs/xcb-util-renderutil config-file? ( dev-libs/libconfig:= dev-libs/libxdg-basedir ) dbus? ( sys-apps/dbus ) drm? ( x11-libs/libdrm ) opengl? ( virtual/opengl ) pcre? ( dev-libs/libpcre ) !x11-misc/compton !x11-misc/picom x11-base/xorg-proto dev-util/desktop-file-utils x11-misc/shared-mime-info
 DESCRIPTION=jonaburg's picom fork with dual_kawase blur and rounded corners
@@ -13,5 +13,5 @@ REQUIRED_USE=test? ( dbus )
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/jonaburg/picom/archive/v8.tar.gz -> picom-jonaburg-8.tar.gz
-_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	python-utils-r1	6e84b7d3d8d0bb1ee12774f4a66909e2	meson	5ec14fdbc5446b8767e87e186e3b1a52	python-any-r1	17241a11501065ff3651350040875aa9	virtualx	0a780e1ab49c75da33a78ede35ab8f9c	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	xdg	c7ba313ea1eaf266f95cc6235f7d6a07
+_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	132cbb376048d079b5a012f5467c4e7f	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	python-utils-r1	0cb5f4040aac0cd98d17cec3079de0a0	meson	5ec14fdbc5446b8767e87e186e3b1a52	python-any-r1	901d9e22c7a848a1196502edf060f330	virtualx	0a780e1ab49c75da33a78ede35ab8f9c	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	xdg	c7ba313ea1eaf266f95cc6235f7d6a07
 _md5_=66fad7dd60ca8ea4829c1b94e44e26f3
