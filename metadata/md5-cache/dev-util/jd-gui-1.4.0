@@ -1,4 +1,4 @@
-BDEPEND=>=app-arch/rpm2targz-9.0.0.3g
+BDEPEND=app-arch/rpm2targz
 DEFINED_PHASES=install unpack
 DESCRIPTION=A standalone graphical utility that displays Java source codes of .class file
 EAPI=7
@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=virtual/jdk-1.6
 SLOT=0
 SRC_URI=https://github.com/java-decompiler/jd-gui/releases/download/v1.4.0/jd-gui-1.4.0-0.noarch.rpm
-_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	l10n	3c7381c56a184f0dd5ba3fb824808f30	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	9a53f21c753d823ba20a22f857c25cb4	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	estack	055c42df72f76a4f45ec92b35e83cd56	rpm	17ff2249b50738c17c3824b58c813a5b
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	dab5d8ec471d025b79c9e6906bcf3bff	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	estack	055c42df72f76a4f45ec92b35e83cd56	rpm	142025d51eac82f782a2dcb4f04a4b12
 _md5_=f72af29225eedf4e1393ab9f07f7995e

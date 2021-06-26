@@ -10,5 +10,5 @@ LICENSE=GPL-2 public-domain
 PROPERTIES=live
 RDEPEND=sane_backends_dc210? ( virtual/jpeg ) sane_backends_dc240? ( virtual/jpeg ) sane_backends_dell1600n_net? ( virtual/jpeg ) avahi? ( >=net-dns/avahi-0.6.24 ) sane_backends_canon_pp? ( sys-libs/libieee1284 ) sane_backends_hpsj5s? ( sys-libs/libieee1284 ) sane_backends_mustek_pp? ( sys-libs/libieee1284 ) usb? ( virtual/libusb:0 ) gphoto2? ( media-libs/libgphoto2 virtual/jpeg ) v4l? ( media-libs/libv4l ) !<sys-fs/udev-114
 SLOT=0
-_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	l10n	3c7381c56a184f0dd5ba3fb824808f30	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	9a53f21c753d823ba20a22f857c25cb4	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	flag-o-matic	4134b5c0fb719b9161d10bdaba9e09e5	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	dab5d8ec471d025b79c9e6906bcf3bff	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	flag-o-matic	4134b5c0fb719b9161d10bdaba9e09e5	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
 _md5_=16702f65ce3c8ab3a40c2c670ad50d5e
