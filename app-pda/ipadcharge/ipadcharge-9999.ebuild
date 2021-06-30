@@ -14,13 +14,13 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="dev-libs/libusb:1"
+DEPEND="virtual/libusb:1"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/ipad_charge"
+# TODO: fixed prestripped
+QA_PRESTRIPPED="/usr/bin/ipad_charge"
 
 src_prepare(){
-	#sed -i 's|\/usr|\$\{DESTDIR\}\/usr|g' Makefile
-	#sed -i 's|\/etc|\$\{DESTDIR\}\/etc|g' Makefile
-	epatch "${FILESDIR}/${PN}-9999-makefile.patch"
+	default
+	eapply -p0 "${FILESDIR}/${PN}-9999-makefile.patch"
 }
