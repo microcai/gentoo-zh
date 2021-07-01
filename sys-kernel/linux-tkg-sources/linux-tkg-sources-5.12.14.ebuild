@@ -41,7 +41,7 @@ LICENSE+=" CDDL"
 
 SRC_URI="
 ${KERNEL_BASE_URI}/linux-5.12.tar.xz
-${KERNEL_BASE_URI}/patch-5.12.12.xz
+${KERNEL_BASE_URI}/patch-5.12.14.xz
 ${GENPATCHES_URI}
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.12/0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.12/0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch
@@ -57,15 +57,20 @@ https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-pat
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.12/0007-v5.12-winesync.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.12/0012-misc-additions.patch
 https://github.com/HougeLangley/customkernel/releases/download/v5.12-others/v1-cjktty.patch
-https://github.com/HougeLangley/customkernel/releases/download/v5.12-others/v1-uksm.patch
+##https://github.com/HougeLangley/customkernel/releases/download/v5.12-others/v1-uksm.patch
 https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.12/bbr2-patches-v2/0001-bbr2-5.12-introduce-BBRv2.patch -> v2-bbr2.patch
-https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.12/cpu-patches-v5-sep/0001-cpu-5.12-merge-graysky-s-patchset.patch -> v5-graysky.patch
+https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.12/cpu-patches-v6-sep/0001-cpu-5.12-merge-graysky-s-patchset.patch -> v6-gcc-01.patch
+https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.12/cpu-patches-v6-sep/0003-init-Kconfig-add-O1-flag.patch -> v6-gcc-03.patch
+https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.12/cpu-patches-v6-sep/0004-Makefile-Turn-off-loop-vectorization-for-GCC-O3-opti.patch -> v6-gcc-04.patch
+https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.12/cpu-patches-v6-sep/0005-Revert-Makefile-Turn-off-loop-vectorization-for-GCC-.patch -> v6-gcc-05.patch
+https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.12/cpu-patches-v6-sep/0006-Makefile-Turn-off-loop-vectorization-for-GCC-O3-opti.patch -> v6-gcc-06.patch
+https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.12/ntfs3-patches-v2/0001-ntfs3-patches.patch -> v2-paragon-ntfs.patch
 "
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/linux-5.12.12-linux"
+S="${WORKDIR}/linux-${PVR}-linux"
 
-UNIPATCH_LIST_DEFAULT=( "${DISTDIR}/patch-5.12.12.xz" )
+UNIPATCH_LIST_DEFAULT=( "${DISTDIR}/patch-5.12.14.xz" )
 
 PATCHES=( "${DISTDIR}/0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch"
 "${DISTDIR}/0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch"
@@ -81,9 +86,14 @@ PATCHES=( "${DISTDIR}/0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.
 "${DISTDIR}/0007-v5.12-winesync.patch"
 "${DISTDIR}/0012-misc-additions.patch"
 "${DISTDIR}/v1-cjktty.patch"
-"${DISTDIR}/v1-uksm.patch"
+#"${DISTDIR}/v1-uksm.patch"
 "${DISTDIR}/v2-bbr2.patch"
-"${DISTDIR}/v5-graysky.patch" )
+"${DISTDIR}/v6-gcc-01.patch"
+"${DISTDIR}/v6-gcc-03.patch"
+"${DISTDIR}/v6-gcc-04.patch"
+"${DISTDIR}/v6-gcc-05.patch"
+"${DISTDIR}/v6-gcc-06.patch"
+"${DISTDIR}/v2-paragon-ntfs.patch" )
 
 K_EXTRAEINFO="For more info on linux-tkg-sources and details on how to report problems, see: ${HOMEPAGE}."
 
@@ -103,9 +113,14 @@ src_prepare() {
 		eapply "${DISTDIR}/0007-v5.12-winesync.patch"	||	die
 		eapply "${DISTDIR}/0012-misc-additions.patch"	||	die
 		eapply "${DISTDIR}/v1-cjktty.patch"	||	die
-		eapply "${DISTDIR}/v1-uksm.patch"	||	die
+		#eapply "${DISTDIR}/v1-uksm.patch"	||	die
 		eapply "${DISTDIR}/v2-bbr2.patch"	||	die
-		eapply "${DISTDIR}/v5-graysky.patch"	|| die
+		eapply "${DISTDIR}/v6-gcc-01.patch"	||	die
+		eapply "${DISTDIR}/v6-gcc-03.patch"	||	die
+		eapply "${DISTDIR}/v6-gcc-04.patch"	||	die
+		eapply "${DISTDIR}/v6-gcc-05.patch"	||	die
+		eapply "${DISTDIR}/v6-gcc-06.patch"	||	die
+		eapply "${DISTDIR}/v2-paragon-ntfs.patch"	||	die
 	fi
 	# Apply Linux-TkG PDS patches, Do not forget copy PDS.config to .config.
 	if	use	pds	;	then
@@ -122,9 +137,14 @@ src_prepare() {
 		eapply "${DISTDIR}/0007-v5.12-winesync.patch"	||	die
 		eapply "${DISTDIR}/0012-misc-additions.patch"	||	die
 		eapply "${DISTDIR}/v1-cjktty.patch"	||	die
-		eapply "${DISTDIR}/v1-uksm.patch"	||	die
+		#eapply "${DISTDIR}/v1-uksm.patch"	||	die
 		eapply "${DISTDIR}/v2-bbr2.patch"	||	die
-		eapply "${DISTDIR}/v5-graysky.patch"	|| die
+		eapply "${DISTDIR}/v6-gcc-01.patch"	||	die
+		eapply "${DISTDIR}/v6-gcc-03.patch"	||	die
+		eapply "${DISTDIR}/v6-gcc-04.patch"	||	die
+		eapply "${DISTDIR}/v6-gcc-05.patch"	||	die
+		eapply "${DISTDIR}/v6-gcc-06.patch"	||	die
+		eapply "${DISTDIR}/v2-paragon-ntfs.patch"	||	die
 	fi
 	# Apply Linux-TKG MuQSS patches
 	if	use	muqss	;	then
@@ -140,9 +160,14 @@ src_prepare() {
 		eapply "${DISTDIR}/0007-v5.12-winesync.patch"	||	die
 		eapply "${DISTDIR}/0012-misc-additions.patch"	||	die
 		eapply "${DISTDIR}/v1-cjktty.patch"	||	die
-		eapply "${DISTDIR}/v1-uksm.patch"	||	die
+		#eapply "${DISTDIR}/v1-uksm.patch"	||	die
 		eapply "${DISTDIR}/v2-bbr2.patch"	||	die
-		eapply "${DISTDIR}/v5-graysky.patch"	|| die
+		eapply "${DISTDIR}/v6-gcc-01.patch"	||	die
+		eapply "${DISTDIR}/v6-gcc-03.patch"	||	die
+		eapply "${DISTDIR}/v6-gcc-04.patch"	||	die
+		eapply "${DISTDIR}/v6-gcc-05.patch"	||	die
+		eapply "${DISTDIR}/v6-gcc-06.patch"	||	die
+		eapply "${DISTDIR}/v2-paragon-ntfs.patch"	||	die
 	fi
 
 	kernel-2_src_prepare
