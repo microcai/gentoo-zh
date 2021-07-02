@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake gnome2-utils xdg-utils
+inherit cmake xdg
 
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
@@ -60,7 +60,7 @@ src_prepare() {
 	ln -s "${DISTDIR}/fcitx-data-en_dict-20121020.tar.gz" src/modules/spell/dict/en_dict-20121020.tar.gz || die
 
 	cmake_src_prepare
-	xdg_environment_reset
+	xdg_src_prepare
 }
 
 src_configure() {
@@ -83,18 +83,10 @@ src_install(){
 }
 
 pkg_postinst() {
-	xdg_icon_cache_update
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
+	xdg_pkg_postinst
 
 	elog
 	elog "Follow the instrcutions of https://wiki.gentoo.org/wiki/Fcitx#Using_Fcitx"
 	elog "and change the fcitx to fcitx5"
 	elog
-}
-
-pkg_postrm() {
-	xdg_icon_cache_update
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
 }
