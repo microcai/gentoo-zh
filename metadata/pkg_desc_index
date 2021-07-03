@@ -54,8 +54,8 @@ dev-python/conda 4.10.3: OS-agnostic, system-level binary package manager and ec
 dev-python/conda-package-handling 1.7.3: Create and extract conda packages of various formats
 dev-python/fuo-kuwo 0.1.4: kuwo music support for feeluown
 dev-python/fuo-local 0.2.1-r1: local music support for feeluown
-dev-python/fuo-netease 0.6-r1: netease cloud music support for feeluown
-dev-python/fuo-qqmusic 0.3.2-r1: qq music support for feeluown
+dev-python/fuo-netease 0.7.1: netease cloud music support for feeluown
+dev-python/fuo-qqmusic 0.3.3: qq music support for feeluown
 dev-python/janus 0.4.0-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/pycosat 0.6.3: Python bindings to picosat (a SAT solver)
 dev-python/qasync 0.9.4-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
@@ -86,7 +86,7 @@ media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simpl
 media-plugins/audacious-mac 0.2.0 0.3.10: Monkey's Audio Codec plugin for audacious
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 9999 20200403-r1: Standalone lyrics fetcher/displayer (windowed and OSD mode).
-media-sound/feeluown 3.7.7-r2: A user-friendly and hackable music player
+media-sound/feeluown 3.7.9: A user-friendly and hackable music player
 media-sound/linnya 2.2.0: A free music player
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/tenvideo 1.0.10: Tencent videos
