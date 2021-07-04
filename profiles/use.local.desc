@@ -5,7 +5,7 @@
 app-emulation/winetricks-zh:rar - Pull in app-arch/unrar for extraction of rar-compressed game files
 app-i18n/fcitx5:coverage - Build the project with gcov support (Need ENABLE_TEST=On)
 app-i18n/fcitx5:enchant - Enable enchant for word predication
-app-i18n/fcitx5:presage - Enable presage for word predication(not stable)
+app-i18n/fcitx5:presage - Enable presage for word predication (not stable)
 app-i18n/fcitx5:test - Build Test
 app-i18n/fcitx5:wayland - Enable wayland support
 app-i18n/fcitx5-chinese-addons:browser - Enable built-in browser using dev-qt/qtwebengine
