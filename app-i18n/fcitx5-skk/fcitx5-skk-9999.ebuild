@@ -35,6 +35,11 @@ RDEPEND="app-i18n/fcitx5
 		!app-i18n/fcitx-skk"
 DEPEND="${RDEPEND}"
 
+src_prepare() {
+	cmake_src_prepare
+	xdg_src_prepare
+}
+
 src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
