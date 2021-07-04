@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake gnome2-utils xdg-utils
+inherit cmake gnome2-utils xdg
 
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
@@ -31,6 +31,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	cmake_src_prepare
+	xdg_src_prepare
 }
 
 src_configure() {
@@ -51,17 +52,13 @@ src_install(){
 	cmake_src_install
 }
 pkg_postinst() {
-	xdg_icon_cache_update
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
+	xdg_pkg_postinst
 	use gtk2 && gnome2_query_immodules_gtk2
 	use gtk3 && gnome2_query_immodules_gtk3
 }
 
 pkg_postrm() {
-	xdg_icon_cache_update
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
+	xdg_pkg_postrm
 	use gtk2 && gnome2_query_immodules_gtk2
 	use gtk3 && gnome2_query_immodules_gtk3
 }
