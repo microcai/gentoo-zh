@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake gnome2-utils xdg
+inherit cmake xdg
 
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
@@ -47,7 +47,7 @@ src_prepare() {
 	ln -s "${DISTDIR}/fcitx-data-py_stroke-20121124.tar.gz" modules/pinyinhelper/py_stroke-20121124.tar.gz || die
 	ln -s "${DISTDIR}/fcitx-data-py_table-20121124.tar.gz" modules/pinyinhelper/py_table-20121124.tar.gz || die
 	cmake_src_prepare
-	xdg_environment_reset
+	xdg_src_prepare
 }
 
 src_configure() {
