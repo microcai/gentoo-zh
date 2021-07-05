@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake gnome2-utils
+inherit cmake xdg
 
 DESCRIPTION="Rime Support for Fcitx5"
 HOMEPAGE="https://github.com/fcitx/fcitx5-rime"
@@ -28,11 +28,3 @@ RDEPEND="app-i18n/fcitx5
 	!app-i18n/fcitx-rime"
 
 DEPEND="${RDEPEND}"
-
-pkg_postinst() {
-	xdg_icon_cache_update
-}
-
-pkg_postrm() {
-	xdg_icon_cache_update
-}
