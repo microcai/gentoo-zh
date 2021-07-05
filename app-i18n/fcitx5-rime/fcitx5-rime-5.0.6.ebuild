@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake xdg
+inherit xdg cmake
 
 DESCRIPTION="Rime Support for Fcitx5"
 HOMEPAGE="https://github.com/fcitx/fcitx5-rime"
