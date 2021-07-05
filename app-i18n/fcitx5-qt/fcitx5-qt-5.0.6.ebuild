@@ -32,10 +32,6 @@ RDEPEND="app-i18n/fcitx5
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-src_prepare() {
-	cmake_src_prepare
-}
-
 src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_INSTALL_SYSCONFDIR="${EPREFIX}/etc"
@@ -46,8 +42,4 @@ src_configure() {
 		-DBUILD_ONLY_PLUGIN=$(usex only_plugin)
 	)
 	cmake_src_configure
-}
-
-src_install(){
-	cmake_src_install
 }
