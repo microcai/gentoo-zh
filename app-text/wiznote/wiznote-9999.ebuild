@@ -1,5 +1,5 @@
 # Copyright 1999-2021 Gentoo Authors
-# Distributed under the terms of the GNU General Public License v3
+# Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
@@ -10,15 +10,18 @@ if [[ ${PV} == "9999" ]]; then
 	WIZNOTE_SRC_URI=""
 	WIZNOTE_ECLASS="git-r3"
 else
-	WIZNOTE_SRC_URI="https://github.com/WizTeam/WizQTClient/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	WIZNOTE_SRC_URI="https://github.com/WizTeam/WizQTClient/archive/v${PV}.tar.gz -> ${P}.tar.gz
+		https://patch-diff.githubusercontent.com/raw/WizTeam/WizQTClient/pull/619.patch -> qt5.15.patch "
+	PATCHES=( "${DISTDIR}/qt5.15.patch" )
 	RESTRICT="mirror"
 	WIZNOTE_ECLASS="vcs-snapshot"
-	KEYWORDS=""
+	KEYWORDS="~amd64"
+	SRC_URI=""
 fi
 
-inherit ${WIZNOTE_ECLASS} cmake-utils
+inherit ${WIZNOTE_ECLASS} cmake
 
-DESCRIPTION="WizNote lets you capture anything you might to remember: create text notes, clip content from the web, snap photos and have all of these notes avaliable you on any device."
+DESCRIPTION="cross-platform cloud based note-taking client"
 HOMEPAGE="http://www.wiz.cn/index.html"
 SRC_URI="${WIZNOTE_SRC_URI}"
 
