@@ -1,5 +1,5 @@
-# Copyright 2016-2021 Chun-Yu Lee (Mat) <matlinuxer2@gmail.com>
-# Distributed under the terms of the MIT License
+# Copyright 1999-2021 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
