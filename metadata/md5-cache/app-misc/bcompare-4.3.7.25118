@@ -9,4 +9,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=x86? ( http://www.scootersoftware.com/bcompare-4.3.7.25118.i386.tar.gz ) amd64? ( http://www.scootersoftware.com/bcompare-4.3.7.25118.x86_64.tar.gz )
 _eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	dab5d8ec471d025b79c9e6906bcf3bff	user-info	2e75eaea3582b052ec16d9d5aa74ced3	user	1033b6bed7cf367c4507ea9a3ff503d0
-_md5_=3f2c7cc837aa443c286541ab659497b2
+_md5_=2beb23893165fe3bb30cbd58d58b52ac
