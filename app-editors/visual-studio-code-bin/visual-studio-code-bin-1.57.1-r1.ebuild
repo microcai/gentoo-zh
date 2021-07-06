@@ -59,6 +59,12 @@ src_install(){
 	fperms +x "/opt/${PN}/resources/app/out/vs/base/node/cpuUsage.sh"
 	fperms +x "/opt/${PN}/resources/app/out/vs/base/node/ps.sh"
 	fperms +x "/opt/${PN}/resources/app/out/vs/base/node/terminateProcess.sh"
+	fperms +x "/opt/${PN}/resources/app/extensions/ms-vscode.node-debug/dist/terminateProcess.sh"
+	fperms +x "/opt/${PN}/resources/app/extensions/git/dist/askpass.sh"
+	fperms +x "/opt/${PN}/resources/app/extensions/git/dist/askpass-empty.sh"
+	fperms +x "/opt/${PN}/resources/app/extensions/ms-vscode.node-debug2/src/terminateProcess.sh"
+	fperms +x "/opt/${PN}/resources/app/extensions/ms-vscode.node-debug2/node_modules/mkdirp/bin/cmd.js"
+	fperms +x "/opt/${PN}/resources/app/extensions/ms-vscode.node-debug2/out/src/terminateProcess.sh"
 	dodoc "resources/app/LICENSE.rtf"
 }
 
