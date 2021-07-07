@@ -7,6 +7,6 @@
 	<use>
 		<flag name="bmq">Eable BMQ CPU Scheduler.</flag>
 		<flag name="pds">Eable PDS CPU Scheduler.</flag>
-		<flag name="muqss">Eable MuQSS CPU Scheduler.</flag>
+		<flag name="cacule">Eable CacULE CPU Scheduler.</flag>
 	</use>
 </pkgmetadata>
