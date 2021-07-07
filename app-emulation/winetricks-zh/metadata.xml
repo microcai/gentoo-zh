@@ -6,8 +6,4 @@
 		<remote-id type="google-code">winetricks</remote-id>
 		<remote-id type="github">Winetricks/winetricks</remote-id>
 	</upstream>
-	<use>
-		<flag name="rar">Pull in <pkg>app-arch/unrar</pkg> for extraction of
-		rar-compressed game files</flag>
-	</use>
 </pkgmetadata>
