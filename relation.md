@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-07-07 10:10:16 CST)
+(The last generation time: 2021-07-07 13:55:08 CST)
 
 ### Packages
 
@@ -110,8 +110,6 @@
  dev-libs/tdlib                                 | 1.5.0                  |            | https://core.telegram.org/tdlib                                                         | Cross-platform library for building Telegram clients
                                                 | 1.6.0                  |            |                                                                                         |
                                                 | 9999                   |            |                                                                                         |
-------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-php/pecl-solr                              | 2.4.0                  |            |                                                                                         | Solr client
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/conda                               | 4.10.3                 |            | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
    dev-python/conda-package-handling            | 1.7.3                  |  D, RD     | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
