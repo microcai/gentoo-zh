@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-07-07 20:53:50 CST)
+(The last generation time: 2021-07-07 22:42:23 CST)
 
 ### Packages
 
@@ -227,8 +227,8 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/you-get                               | 9999                   |            | http://www.soimort.org/you-get                                                          | A video downloader for YouTube, Youku, niconico and a few other sites
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-p2p/amule-dlp                              | 9999                   | RD         | https://github.com/persmule/amule-dlp                                                   | aMule with DLP patch, the all-platform eMule p2p client
-   net-p2p/amule-dlp-antileech                  | 9999                   | RD         | https://github.com/persmule/amule-dlp.antileech                                         | , dynamic DLP library for amule-dlp
+ net-p2p/amule-dlp-antileech                    | 9999                   |            | https://github.com/persmule/amule-dlp.antileech                                         | , dynamic DLP library for amule-dlp
+   net-p2p/amule-dlp                            | 9999                   | RD         | https://github.com/persmule/amule-dlp                                                   | aMule with DLP patch, the all-platform eMule p2p client
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-p2p/n2n                                    | 2.6                    |            | http://www.ntop.org/n2n/                                                                | A Layer Two Peer-to-Peer VPN
                                                 | 2.8                    |            |                                                                                         |
