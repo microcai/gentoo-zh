@@ -1,14 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=install unpack
-DEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DESCRIPTION=winetricks fork for chinese to install QQ
-EAPI=6
+EAPI=7
 HOMEPAGE=http://winetricks.org http://wiki.winehq.org/winetricks
 INHERIT=gnome2-utils eutils git-r3
-KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-2.1+
 PROPERTIES=live
 RDEPEND=app-emulation/winetricks
 RESTRICT=test
 SLOT=0
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	edos2unix	33e347e171066657f91f8b0c72ec8773	estack	055c42df72f76a4f45ec92b35e83cd56	epatch	9f813bb3c47cf2e60619a663b87c5f4e	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	ltprune	4f3f2db5ce3ccbeeacdf3f94954043aa	preserve-libs	dbc9f8d2d49c66467bc327fddd8317bd	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	vcs-clean	b690a7e9b6c497cf59326a7545df4283	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	dab5d8ec471d025b79c9e6906bcf3bff	xdg-utils	27f9a2f19502b925ac117bd657aa2979	gnome2-utils	c8e3fff820d850c0e003e22208d2eea3	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=0f09695a064a4b685ef6f79df115c664
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	dab5d8ec471d025b79c9e6906bcf3bff	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	xdg-utils	27f9a2f19502b925ac117bd657aa2979	gnome2-utils	c8e3fff820d850c0e003e22208d2eea3	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=f10e8ede01453856ed6ab95d5c770c11
