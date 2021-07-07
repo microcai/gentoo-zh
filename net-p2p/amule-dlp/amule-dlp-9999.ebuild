@@ -2,118 +2,131 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
+WX_GTK_VER="3.0-gtk3"
 
-WX_GTK_VER="3.0"
-inherit autotools eutils flag-o-matic wxwidgets user git-r3
-
+inherit wxwidgets xdg-utils autotools git-r3
 DESCRIPTION="aMule with DLP patch, the all-platform eMule p2p client"
 HOMEPAGE="https://github.com/persmule/amule-dlp"
-EGIT_REPO_URI="https://github.com/persmule/amule-dlp.git"
+EGIT_REPO_URI="https://github.com/persmule/amule-dlp"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS=""
-IUSE="daemon debug +dynamic geoip +gtk nls remote stats unicode upnp"
-REQUIRED_USE="|| ( gtk remote daemon )"
+IUSE="daemon debug geoip nls remote stats upnp +X"
 
-DEPEND="
-	x11-libs/wxGTK:${WX_GTK_VER}
-	>=dev-libs/boost-1.57[nls,threads,context]
-	>=dev-libs/crypto++-5
-	>=sys-libs/zlib-1.2.1
-	stats? ( >=media-libs/gd-2.0.26[jpeg] )
+RDEPEND="
+	dev-libs/boost:=
+	dev-libs/crypto++:=
+	sys-libs/binutils-libs:0=
+	sys-libs/readline:0=
+	sys-libs/zlib
+	>=x11-libs/wxGTK-3.0.4:${WX_GTK_VER}[X?]
+	daemon? ( acct-user/amule )
 	geoip? ( dev-libs/geoip )
-	upnp? ( >=net-libs/libupnp-1.6.6 )
-	remote? ( >=media-libs/libpng-1.2.0
-	unicode? ( >=media-libs/gd-2.0.26 ) )
+	nls? ( virtual/libintl )
+	remote? (
+		acct-user/amule
+		media-libs/libpng:0=
+	)
+	stats? ( media-libs/gd:=[jpeg,png] )
+	upnp? ( net-libs/libupnp:0 )
 	!net-p2p/amule
 "
-RDEPEND="${DEPEND} dynamic? ( net-p2p/amule-dlp-antileech )"
-
-DOCS=( docs/{amulesig.txt,AUTHORS,ChangeLog,EC_Protocol.txt,ED2K-Links.HOWTO,INSTALL,README,TODO} )
+DEPEND="${RDEPEND}
+	X? ( dev-util/desktop-file-utils )
+"
+BDEPEND="
+	virtual/pkgconfig
+	nls? ( sys-devel/gettext )
+"
 
 pkg_setup() {
-	if use stats && ! use gtk; then
-		einfo "Note: You would need both the gtk and stats USE flags"
-		einfo "to compile aMule Statistics GUI."
-		einfo "I will now compile console versions only."
-	fi
-}
-
-pkg_preinst() {
-	if use daemon || use remote; then
-		enewgroup p2p
-		enewuser p2p -1 -1 /home/p2p p2p
-	fi
+	setup-wxwidgets
 }
 
 src_prepare() {
 	default
 
-	# fix the missing amule.xpm
-	cp "${FILESDIR}/amule.xpm" ./
-
-	# hack because of non-standard generation
-	cd src/pixmaps/flags_xpm
-	./makeflags.sh
-	cd "$OLDPWD"
-
-	WANT_AUTOCONF="2.5" eautoreconf
-	WANT_AUTOMAKE="1.7" eautomake
-
-	epatch "${FILESDIR}/amule-dlp-scanner-header.patch"
+	if [[ ${PV} == 9999 ]]; then
+		./autogen.sh || die
+	fi
 }
 
 src_configure() {
-	local myconf
+	local myconf=(
+		--with-denoise-level=0
+		--with-wx-config="${WX_CONFIG}"
+		--enable-amulecmd
+		--with-boost
+		$(use_enable debug)
+		$(use_enable daemon amule-daemon)
+		$(use_enable geoip)
+		$(use_enable nls)
+		$(use_enable remote webserver)
+		$(use_enable stats cas)
+		$(use_enable stats alcc)
+		$(use_enable upnp)
+	)
 
-	if use gtk; then
-		einfo "wxGTK with X / GTK support will be used"
-		need-wxwidgets unicode
+	if use X; then
+		myconf+=(
+			$(use_enable remote amule-gui)
+			$(use_enable stats alc)
+			$(use_enable stats wxcas)
+		)
 	else
-		einfo "wxGTK without X support will be used"
-		need-wxwidgets base-unicode
-	fi
-
-	if use gtk ; then
-		use stats && myconf="${myconf}
-			--enable-wxcas
-			--enable-alc"
-		use remote && myconf="${myconf}
-			--enable-amule-gui"
-	else
-		myconf="
+		myconf+=(
 			--disable-monolithic
 			--disable-amule-gui
+			--disable-alc
 			--disable-wxcas
-			--disable-alc"
+		)
 	fi
 
-	econf \
-		--with-wx-config=${WX_CONFIG} \
-		--with-boost \
-		--enable-amulecmd \
-		$(use_enable debug) \
-		$(use_enable !debug optimize) \
-		$(use_enable daemon amule-daemon) \
-		$(use_enable geoip) \
-		$(use_enable nls) \
-		$(use_enable remote webserver) \
-		$(use_enable stats cas) \
-		$(use_enable stats alcc) \
-		$(use_enable upnp) \
-		${myconf} || die
+	econf "${myconf[@]}"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 
 	if use daemon; then
-		newconfd "${FILESDIR}"/amuled.confd amuled
+		newconfd "${FILESDIR}"/amuled.confd-r1 amuled
 		newinitd "${FILESDIR}"/amuled.initd amuled
 	fi
 	if use remote; then
-		newconfd "${FILESDIR}"/amuleweb.confd amuleweb
+		newconfd "${FILESDIR}"/amuleweb.confd-r1 amuleweb
 		newinitd "${FILESDIR}"/amuleweb.initd amuleweb
 	fi
+
+	if use daemon || use remote; then
+		keepdir /var/lib/${PN}
+		fowners amule:amule /var/lib/${PN}
+		fperms 0750 /var/lib/${PN}
+	fi
+}
+
+pkg_postinst() {
+	local ver
+
+	if use daemon || use remote; then
+		for ver in ${REPLACING_VERSIONS}; do
+			if ver_test ${ver} -lt "2.3.2-r4"; then
+				elog "Default user under which amuled and amuleweb daemons are started"
+				elog "have been changed from p2p to amule. Default home directory have been"
+				elog "changed as well."
+				echo
+				elog "If you want to preserve old download/share location, you can create"
+				elog "symlink /var/lib/amule/.aMule pointing to the old location and adjust"
+				elog "files ownership *or* restore AMULEUSER and AMULEHOME variables in"
+				elog "/etc/conf.d/{amuled,amuleweb} to the old values."
+
+				break
+			fi
+		done
+	fi
+
+	use X && xdg_desktop_database_update
+}
+
+pkg_postrm() {
+	use X && xdg_desktop_database_update
 }
