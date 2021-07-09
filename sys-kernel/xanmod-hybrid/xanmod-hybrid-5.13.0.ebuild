@@ -29,7 +29,10 @@ REQUIRED_USE="^^ ( xanmod cacule )"
 
 # If you have been enable src_prepare-overlay
 # please unmerge sys-kernel/xanmod-sources
-RDEPEND="!sys-kernel/xanmod-sources"
+RDEPEND="
+	!sys-kernel/xanmod-sources
+	!sys-kernel/xanmod-rt
+"
 
 inherit kernel-2
 detect_version
