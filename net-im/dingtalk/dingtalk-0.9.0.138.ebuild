@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit unpacker desktop
+inherit unpacker desktop xdg-utils
 
 DESCRIPTION="dingtalk"
 HOMEPAGE="https://gov.dingtalk.com"
@@ -38,7 +38,8 @@ src_install() {
 	dodir /
 	cd "${ED}" || die
 	unpacker
-	rm opt/apps/com.alibabainc.dingtalk/files/0.9.0-Release.131/libm.so.6
+	version=$(cat opt/apps/com.alibabainc.dingtalk/files/version)
+	rm opt/apps/com.alibabainc.dingtalk/files/${version}/libm.so.6
 	mkdir -p usr/share/applications
 	cp opt/apps/com.alibabainc.dingtalk/entries/applications/com.alibabainc.dingtalk.desktop usr/share/applications/
 }
