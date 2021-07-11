@@ -60,7 +60,6 @@ src_prepare() {
 	ln -s "${DISTDIR}/fcitx-data-en_dict-20121020.tar.gz" src/modules/spell/dict/en_dict-20121020.tar.gz || die
 
 	cmake_src_prepare
-	xdg_src_prepare
 }
 
 src_configure() {
@@ -76,10 +75,6 @@ src_configure() {
 		-DUSE_SYSTEMD=$(usex systemd)
 	)
 	cmake_src_configure
-}
-
-src_install(){
-	cmake_src_install
 }
 
 pkg_postinst() {

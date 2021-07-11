@@ -1,0 +1,23 @@
+From 54995987451b01d3a47e50edcd4f3339c18eb49c Mon Sep 17 00:00:00 2001
+From: Shuai Wang <Etrnls@gmail.com>
+Date: Sun, 27 Jun 2021 10:30:39 -0700
+Subject: [PATCH] Fix compile: add missing #include (#7)
+
+GCC 11.1.0 complains about not being able to find the version of
+std::min that takes std::initializer_list otherwise.
+---
+ gtk3/fcitxtheme.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/gtk3/fcitxtheme.cpp b/gtk3/fcitxtheme.cpp
+index 058cab3..dd767a6 100644
+--- a/gtk3/fcitxtheme.cpp
++++ b/gtk3/fcitxtheme.cpp
+@@ -5,6 +5,7 @@
+  *
+  */
+ #include "fcitxtheme.h"
++#include <algorithm>
+ #include <cassert>
+ #include <fcntl.h>
+ #include <fmt/format.h>
