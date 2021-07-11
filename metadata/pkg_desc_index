@@ -1,6 +1,7 @@
 acct-group/cockpit-ws 0: Group for the cockpit server
 acct-user/cockpit-ws 0: User for the cockpit server
 app-admin/cockpit 234: A systemd web based user interface for Linux server
+app-crypt/archlinux-keyring 20210616: GnuPG keyring of Archlinux developer keys
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-editors/typora 0.9.98: Typora will give you a seamless experience as both a reader and a writer.
 app-editors/visual-studio-code-bin 1.58.0: Multiplatform Visual Studio Code from Microsoft
@@ -60,7 +61,7 @@ dev-python/pycosat 0.6.3: Python bindings to picosat (a SAT solver)
 dev-python/qasync 0.9.4-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/tomlkit 0.7.0-r1: Style-preserving TOML library for Python
 dev-ruby/mruby 1.0.0 9999: mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
-dev-util/arch-install-scripts 20: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
+dev-util/arch-install-scripts 24: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
 dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 files
 dev-util/elfembed 0.3-r1: Resource Compiler for ELF binaries
 dev-util/fernflower 1: Fernflower is the first actually working analytical decompiler for Java and probably for a high-level programming language in general
@@ -132,6 +133,8 @@ sci-libs/libticalcs2 9999: Library for communication with TI calculators
 sci-libs/libticonv 9999: Charset conversion library for TI calculators
 sci-libs/libtifiles2 9999: Library for TI calculator files
 sys-apps/mdp 9999: A command-line based markdown presentation tool
+sys-apps/pacman 6.0.0: Archlinux's binary package manager
+sys-apps/pacman-mirrorlist 20210509: Repository list for Archlinux's binary package manager
 sys-apps/yaourt 1.2.2: A pacman wrapper with extended features and AUR support
 sys-devel/ucc 1.1-r0: UCC is an ANSI C Compiler
 sys-fs/coda 7.0.5: Coda is an advanced network file system, similar to NFS
