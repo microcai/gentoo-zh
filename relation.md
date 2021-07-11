@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-07-11 10:41:40 CST)
+(The last generation time: 2021-07-11 16:15:49 CST)
 
 ### Packages
 
@@ -118,7 +118,10 @@
  dev-ruby/mruby                                 | 1.0.0                  |            | https://github.com/mruby/mruby                                                          | mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard.
                                                 | 9999                   |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/arch-install-scripts                  | 20                     |            | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
+ dev-util/arch-install-scripts                  | 24                     |            | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
+   sys-apps/pacman                              | 6.0.0                  |  D, RD     | https://archlinux.org/pacman/                                                           | Archlinux's binary package manager
+     app-crypt/archlinux-keyring                | 20210616               |  D, RD     | https://gitlab.archlinux.org/archlinux/archlinux-keyring                                | GnuPG keyring of Archlinux developer keys
+     sys-apps/pacman-mirrorlist                 | 20210509               | RD         | https://archlinux.org/mirrorlist/                                                       | Repository list for Archlinux's binary package manager
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/bom-utils                             | 1.0                    |            | https://code.google.com/p/utf-bom-utils                                                 | Small programs to add or remove the BOM mark in UTF8 files
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
