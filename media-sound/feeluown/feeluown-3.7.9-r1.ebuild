@@ -24,6 +24,7 @@ RDEPEND="
 	dev-python/PyQt5[gui,widgets,opengl,svg,${PYTHON_USEDEP}]
 	dev-python/qasync[${PYTHON_USEDEP}]
 	dev-python/tomlkit[${PYTHON_USEDEP}]
+	dev-python/packaging[${PYTHON_USEDEP}]
 	>=dev-python/pydantic-1.8.1[${PYTHON_USEDEP}]
 "
 
