@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=8
+EAPI=7
 
 DESCRIPTION="Arch Linux install tools (pacstrap, genfstab, arch-chroot)"
 HOMEPAGE="https://projects.archlinux.org/arch-install-scripts.git/"
