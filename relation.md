@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-07-10 09:39:22 CST)
+(The last generation time: 2021-07-11 10:41:40 CST)
 
 ### Packages
 
@@ -171,7 +171,7 @@
  media-plugins/osdlyrics                        | 9999                   |            | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
                                                 | 20200403-r1            |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/feeluown                           | 3.7.9                  |            | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
+ media-sound/feeluown                           | 3.7.9-r1               |            | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
    dev-python/fuo-kuwo                          | 0.1.4                  |  D         | https://github.com/feeluown/feeluown-kuwo                                               | kuwo music support for feeluown
    dev-python/fuo-local                         | 0.2.1-r1               |  D         | https://github.com/feeluown/feeluown-local                                              | local music support for feeluown
    dev-python/fuo-netease                       | 0.7.1                  |  D         | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
