@@ -5,11 +5,11 @@ EAPI=6
 
 DESCRIPTION="Arch Linux install tools (pacstrap, genfstab, arch-chroot)"
 HOMEPAGE="https://projects.archlinux.org/arch-install-scripts.git/"
-SRC_URI="https://projects.archlinux.org/${PN}.git/snapshot/${P}.tar.gz"
+SRC_URI="https://github.com/archlinux/arch-install-scripts/archive/refs/tags/v${PV}.tar.gz -> arch-install-scripts-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND=""

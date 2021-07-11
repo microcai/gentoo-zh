@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<mantainer type="person">
-		<email>hougelangley1987@gmail.com</email>
-		<name>苏业钦</name>
+	<maintainer type="person">
+		<email>holgersson@posteo.de</email>
+		<name>Nils Freydank</name>
+	</maintainer>
 </pkgmetadata>
