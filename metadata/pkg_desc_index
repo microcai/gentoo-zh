@@ -94,7 +94,7 @@ net-dialup/mentohust 9999: A Ruijie and Cernet supplicant on Linux and MacOS
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
 net-dns/phddns 2.0.6.32828: Phddns
 net-im/avim 0.1: avim is a secure IM build around RSA
-net-im/dingtalk 0.9.0.138: dingtalk
+net-im/dingtalk 0.9.0.145: dingtalk
 net-im/freetalk 4.1: Console based Jabber client
 net-im/telegram-purple 1.3.0 9999: Libpurple (Pidgin) plugin for using a Telegram account
 net-im/tencent-qq 2.0.0_beta2-r1 2.0.0.1089_beta2: Official Linux version of Tencent QQ
