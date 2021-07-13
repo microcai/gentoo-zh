@@ -3,7 +3,9 @@
 
 EAPI=7
 
-inherit cmake
+LUA_COMPAT=( lua5-4 )
+
+inherit cmake lua-single
 
 SRC_URI="https://github.com/openSUSE/libzypp/archive/refs/tags/${PV}.tar.gz -> libzypp-${PV}.tar.gz"
 KEYWORDS="~amd64"
@@ -33,6 +35,7 @@ BDEPEND="${DEPEND}
 	media-gfx/graphviz
 	dev-util/ninja
 	dev-util/rpmdevtools
+	app-arch/rpm[${LUA_SINGLE_USEDEP},lua]
 "
 
 S="${WORKDIR}/${PN}-${PV}"
