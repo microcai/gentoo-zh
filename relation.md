@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-07-13 18:04:48 CST)
+(The last generation time: 2021-07-13 23:43:41 CST)
 
 ### Packages
 
@@ -133,7 +133,7 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                     | 1.20.7939              |            | https://www.jetbrains.com/toolbox/app                                                   | Manage all your JetBrains Projects and Tools
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/rust-analyzer                         | 20200928               |            | https://github.com/rust-analyzer/rust-analyzer                                          | An experimental Rust compiler front-end for IDEs
+ dev-util/rust-analyzer                         | 20210712               |            | https://github.com/rust-analyzer/rust-analyzer                                          | An experimental Rust compiler front-end for IDEs
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/v2ray-geoip-generator                 | 9999                   |            | https://github.com/v2fly/geoip                                                          | GeoIP generator for V2Ray.
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
