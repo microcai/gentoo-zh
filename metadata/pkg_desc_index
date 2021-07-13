@@ -68,7 +68,7 @@ dev-util/elfembed 0.3-r1: Resource Compiler for ELF binaries
 dev-util/fernflower 1: Fernflower is the first actually working analytical decompiler for Java and probably for a high-level programming language in general
 dev-util/jd-gui 1.4.0: A standalone graphical utility that displays Java source codes of .class file
 dev-util/jetbrains-toolbox 1.20.7939: Manage all your JetBrains Projects and Tools
-dev-util/rust-analyzer 20200928: An experimental Rust compiler front-end for IDEs
+dev-util/rust-analyzer 20210712: An experimental Rust compiler front-end for IDEs
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 kde-misc/plasma-applet-netspeed-widget 1.8-r1 9999: Plasma 5 widget that displays the currently used network bandwidth.
