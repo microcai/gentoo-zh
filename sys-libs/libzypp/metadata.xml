@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<upstream>
+		<doc>https://github.com/openSUSE/libzypp</doc>
+	</upstream>
+	<maintainer type="person">
+		<email>hougelangley1987@gmail.com</email>
+		<name>苏业钦</name>
+	</maintainer>
+</pkgmetadata>
