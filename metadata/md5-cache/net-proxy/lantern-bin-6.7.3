@@ -1,0 +1,16 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=install postinst postrm unpack
+DEPEND=app-arch/bzip2 app-arch/lz4 dev-libs/glib:2[xattr] dev-libs/libappindicator:3 media-libs/fontconfig:1.0 media-libs/freetype:2 media-libs/harfbuzz[graphite] media-libs/libepoxy media-libs/mesa sys-apps/dbus systemd? ( sys-apps/systemd ) sys-libs/glibc:2.2 sys-libs/libcap sys-libs/zlib x11-base/xorg-server x11-libs/cairo x11-libs/gdk-pixbuf:2
+DESCRIPTION=A free peer-to-peer internet censorship circumvention tool
+EAPI=7
+HOMEPAGE=https://github.com/getlantern/lantern
+INHERIT=xdg-utils unpacker systemd
+IUSE=systemd
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RDEPEND=app-arch/bzip2 app-arch/lz4 dev-libs/glib:2[xattr] dev-libs/libappindicator:3 media-libs/fontconfig:1.0 media-libs/freetype:2 media-libs/harfbuzz[graphite] media-libs/libepoxy media-libs/mesa sys-apps/dbus systemd? ( sys-apps/systemd ) sys-libs/glibc:2.2 sys-libs/libcap sys-libs/zlib x11-base/xorg-server x11-libs/cairo x11-libs/gdk-pixbuf:2
+RESTRICT=mirror
+SLOT=0
+SRC_URI=x86? ( https://raw.githubusercontent.com/getlantern/lantern-binaries/b9a807d5e5c2100b077394a7f4b833ad661c05c7/lantern-installer-32-bit.deb -> lantern-bin-6.7.3.x86.deb ) amd64? ( https://raw.githubusercontent.com/getlantern/lantern-binaries/b9a807d5e5c2100b077394a7f4b833ad661c05c7/lantern-installer-64-bit.deb -> lantern-bin-6.7.3.amd64.deb )
+_eclasses_=xdg-utils	27f9a2f19502b925ac117bd657aa2979	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	unpacker	2eeba54233fa41bdb15dcddcb63fba3a	systemd	c846b9e02ac8293bfc9ca38a195c2a18
+_md5_=7cb32b50faf7ec13cc6498f1bf3892ca
