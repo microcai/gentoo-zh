@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake-utils git-r3
+inherit cmake git-r3
 
 DESCRIPTION="shadowsocks plugin for Qv2ray to support SIP003 in Qv2ray"
 HOMEPAGE="https://github.com/Qv2ray/QvPlugin-SS"
@@ -11,7 +11,7 @@ EGIT_REPO_URI="${HOMEPAGE}.git"
 EGIT_SUBMODULES=( '*' '-*/libsodium' '-*/libuv' )
 EGIT_COMMIT="v${PV}"
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -36,7 +36,7 @@ src_configure() {
 		-DSTATIC_LINK_LIBUV=OFF
 		-DSTATIC_LINK_SODIUM=OFF
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 src_install(){
