@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-07-13 23:43:41 CST)
+(The last generation time: 2021-07-14 21:02:39 CST)
 
 ### Packages
 
@@ -248,7 +248,7 @@
  net-proxy/clash                                | 1.6.0                  |            | https://github.com/Dreamacro/clash                                                      | A rule-based tunnel in Go.
                                                 | 1.6.5                  |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/lantern-bin                          | 3.0.4                  |            | https://github.com/getlantern/lantern                                                   | A free desktop application that delivers fast, reliable and secure access to the open Internet for users in censored regions.
+ net-proxy/lantern-bin                          | 6.7.3                  |            | https://github.com/getlantern/lantern                                                   | A free peer-to-peer internet censorship circumvention tool
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/make-proxy                           | 2.0.0                  |            | https://github.com/yueyoum/make-proxy                                                   | Socks5 proxy written in Erlang
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
