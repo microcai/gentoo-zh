@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-07-14 21:02:39 CST)
+(The last generation time: 2021-07-14 21:38:17 CST)
 
 ### Packages
 
@@ -265,7 +265,7 @@
                                                 | 9999                   |            |                                                                                         |
      net-proxy/v2ray-bin                        | 4.34.0                 | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/qvplugin-ss                          | 1.2                    |            | https://github.com/Qv2ray/QvPlugin-SS                                                   | shadowsocks plugin for Qv2ray to support SIP003 in Qv2ray
+ net-proxy/qvplugin-ss                          | 1.2-r1                 |            | https://github.com/Qv2ray/QvPlugin-SS                                                   | shadowsocks plugin for Qv2ray to support SIP003 in Qv2ray
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-ssr                         | 2.0.3                  |            | https://github.com/Qv2ray/QvPlugin-SSR                                                  | shadowsocksR plugin for Qv2ray to support SSR connection in Qv2ray
                                                 | 9999                   |            |                                                                                         |
