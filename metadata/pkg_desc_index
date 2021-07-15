@@ -143,8 +143,8 @@ sys-fs/coda 7.0.5: Coda is an advanced network file system, similar to NFS
 sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/ksmbd-tools 9999: Tools for in-kernel CIFS server
-sys-kernel/linux-tkg-sources 5.13.0 5.13.1: Linux-TkG, cjktty, uksm patchset for main kernel tree
-sys-kernel/xanmod-hybrid 5.13.0 5.13.0-r1 5.13.1: Xanmod, Xanmod-CaCule, cjktty, uksm patchset for main kernel tree
+sys-kernel/linux-tkg-sources 5.13.0 5.13.1 5.13.2: Linux-TkG, cjktty, uksm patchset for main kernel tree
+sys-kernel/xanmod-hybrid 5.13.0 5.13.0-r1 5.13.1 5.13.2: Xanmod, Xanmod-CaCule, cjktty, uksm patchset for main kernel tree
 sys-kernel/xanmod-rt 5.13.1: Xanmod-RT, cjktty, uksm patchset for main kernel tree
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libixp 0.5_p20110208-r3: A stand-alone client/server 9P library including ixpc client
