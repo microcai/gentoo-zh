@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-07-19 21:15:22 CST)
+(The last generation time: 2021-07-20 17:39:59 CST)
 
 ### Packages
 
@@ -311,10 +311,12 @@
    sys-kernel/linux-tkg-sources                 | 5.13.0                 | RD         | https://github.com/Frogging-Family/linux-tkg                                            | Linux-TkG, cjktty, uksm patchset for main kernel tree
                                                 | 5.13.1                 |            |                                                                                         |
                                                 | 5.13.2                 |            |                                                                                         |
+                                                | 5.13.3                 |            |                                                                                         |
    sys-kernel/xanmod-hybrid                     | 5.13.0                 | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, uksm patchset for main kernel tree
                                                 | 5.13.0-r1              |            |                                                                                         |
                                                 | 5.13.1                 |            |                                                                                         |
                                                 | 5.13.2                 |            |                                                                                         |
+                                                | 5.13.3                 |            |                                                                                         |
    sys-kernel/xanmod-rt                         | 5.13.1                 | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod-RT, cjktty, uksm patchset for main kernel tree
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                          | 1.13                   |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
