@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-07-20 17:39:59 CST)
+(The last generation time: 2021-07-21 00:16:17 CST)
 
 ### Packages
 
@@ -312,6 +312,7 @@
                                                 | 5.13.1                 |            |                                                                                         |
                                                 | 5.13.2                 |            |                                                                                         |
                                                 | 5.13.3                 |            |                                                                                         |
+                                                | 5.13.4                 |            |                                                                                         |
    sys-kernel/xanmod-hybrid                     | 5.13.0                 | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, uksm patchset for main kernel tree
                                                 | 5.13.0-r1              |            |                                                                                         |
                                                 | 5.13.1                 |            |                                                                                         |
