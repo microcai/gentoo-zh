@@ -9,5 +9,5 @@ LICENSE=CCPL-Attribution-ShareAlike-3.0
 PROPERTIES=live
 RDEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 SLOT=0
-_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	vim-doc	e063cddf18e5d2f2cfb21388252579ec	vim-plugin	0dc43a0d19e9cf28116eff88ffd07748
+_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	vim-doc	e063cddf18e5d2f2cfb21388252579ec	vim-plugin	93be71a1efbbf62981fcd40ee0db6e3f
 _md5_=5eacf4e6c207d6b97095c2598ecfbb54
