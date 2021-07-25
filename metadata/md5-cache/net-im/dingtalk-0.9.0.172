@@ -1,0 +1,13 @@
+DEFINED_PHASES=install nofetch postinst unpack
+DESCRIPTION=dingtalk
+EAPI=7
+HOMEPAGE=https://gov.dingtalk.com
+INHERIT=unpacker desktop xdg-utils
+KEYWORDS=-* ~amd64
+LICENSE=all-rights-reserved
+RDEPEND=>=sys-libs/glibc-2.29
+RESTRICT=bindist strip fetch
+SLOT=0
+SRC_URI=http://nowhere.to.download/com.alibabainc.dingtalk_0.9.0.172_amd64.deb
+_eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	unpacker	2eeba54233fa41bdb15dcddcb63fba3a	desktop	c0d27bf73aa08ca05b663dbd31fbef28	xdg-utils	27f9a2f19502b925ac117bd657aa2979
+_md5_=1dd10bbdc68b5eb21fa45b338af0ec37
