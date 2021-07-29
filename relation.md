@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-07-29 05:35:35 CST)
+(The last generation time: 2021-07-29 19:44:26 CST)
 
 ### Packages
 
@@ -324,6 +324,7 @@
                                                 | 5.13.4                 |            |                                                                                         |
                                                 | 5.13.5                 |            |                                                                                         |
                                                 | 5.13.6                 |            |                                                                                         |
+                                                | 5.13.6-r1              |            |                                                                                         |
    sys-kernel/xanmod-rt                         | 5.13.1                 | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod-RT, cjktty, uksm patchset for main kernel tree
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                          | 1.13                   |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
