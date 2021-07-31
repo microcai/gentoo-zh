@@ -8,7 +8,7 @@ app-editors/typora 0.9.98: Typora will give you a seamless experience as both a 
 app-editors/visual-studio-code-bin 1.58.2: Multiplatform Visual Studio Code from Microsoft
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
-app-i18n/fcitx5 5.0.8-r2 9999: Fcitx5 Next generation of fcitx
+app-i18n/fcitx5 5.0.8-r3 9999: Fcitx5 Next generation of fcitx
 app-i18n/fcitx5-chinese-addons 5.0.6-r1 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
 app-i18n/fcitx5-configtool 5.0.5 9999: Configuration module for Fcitx
 app-i18n/fcitx5-gtk 5.0.7 9999: Gtk im module for fcitx5 and glib based dbus client library
