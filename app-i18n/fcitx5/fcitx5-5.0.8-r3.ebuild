@@ -20,8 +20,12 @@ SRC_URI+=" https://download.fcitx-im.org/data/en_dict-20121020.tar.gz -> fcitx-d
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-IUSE="+enchant test coverage doc presage systemd wayland"
-REQUIRED_USE="coverage? ( test )"
+IUSE="+enchant test coverage doc presage systemd wayland +X"
+REQUIRED_USE="
+	|| ( wayland X )
+	coverage? ( test )
+"
+
 RDEPEND="dev-libs/glib:2
 	sys-apps/dbus
 	dev-libs/json-c
@@ -29,20 +33,22 @@ RDEPEND="dev-libs/glib:2
 	sys-apps/util-linux
 	virtual/libiconv
 	virtual/libintl
-	x11-libs/libxkbcommon[X]
-	x11-libs/libX11
+	x11-libs/libxkbcommon[X?]
 	wayland? (
 		dev-libs/wayland
 		dev-libs/wayland-protocols
 	)
-	x11-libs/libXfixes
+	X? (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXfixes
+		x11-libs/libXrender
+	)
 	x11-libs/libXinerama
-	x11-libs/libXrender
 	x11-libs/libxkbfile
 	x11-libs/xcb-imdkit
 	x11-misc/xkeyboard-config
 	x11-libs/cairo[X]
-	x11-libs/libXext
 	x11-libs/pango
 	media-libs/fontconfig
 	enchant? ( app-text/enchant:= )
@@ -71,6 +77,7 @@ src_configure() {
 		-DENABLE_ENCHANT=$(usex enchant)
 		-DENABLE_PRESAGE=$(usex presage)
 		-DENABLE_WAYLAND=$(usex wayland)
+		-DENABLE_X11=$(usex X)
 		-DENABLE_DOC=$(usex doc)
 		-DUSE_SYSTEMD=$(usex systemd)
 	)
