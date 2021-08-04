@@ -5,11 +5,11 @@ EAPI=7
 
 inherit autotools eutils flag-o-matic multilib
 
-DESCRIPTION="PCMan is an easy-to-use telnet client mainly targets BBS users formerly writen by gtk2"
+DESCRIPTION="PCMan is a gtk+ based free BBS client"
 HOMEPAGE="https://github.com/pcman-bbs/pcmanx"
 SRC_URI="https://github.com/pcman-bbs/pcmanx/releases/download/${PV}/${P}.tar.xz"
 
-KEYWORDS=""
+KEYWORDS="~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="+libnotify +proxy iplookup +wget"
@@ -18,7 +18,7 @@ RESTRICT="mirror"
 COMMON_DEPEND="
 	libnotify? ( x11-libs/libnotify )
 	x11-libs/libXft
-	>=x11-libs/gtk+-2.4
+	>=x11-libs/gtk+-2.4:*
 "
 
 RDEPEND="
