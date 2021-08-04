@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-08-04 22:45:00 CST)
+(The last generation time: 2021-08-04 23:29:45 CST)
 
 ### Packages
 
@@ -225,7 +225,7 @@
  net-misc/nomachine-enterprise-client           | 7.6.2.1                |            | https://www.nomachine.com                                                               | NoMachine Enterprise Client
                                                 | 7.6.2.4                |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/pcmanx-gtk2                           | 1.3                    |            | https://github.com/pcman-bbs/pcmanx                                                     | PCMan is an easy-to-use telnet client mainly targets BBS users formerly writen by gtk2
+ net-misc/pcmanx-gtk2                           | 1.3                    |            | https://github.com/pcman-bbs/pcmanx                                                     | PCMan is a gtk+ based free BBS client
                                                 | 9999                   |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/prips                                 | 1.0.0                  |            | http://devel.ringlet.net/sysutils/prips/                                                | print the IP addresses in a range
