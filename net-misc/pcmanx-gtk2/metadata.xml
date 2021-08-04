@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<!-- maintainer-needed -->
+	<use>
+		<flag name="proxy">proxy server support</flag>
+		<flag name="iplookup">IP location lookup, Useful to China locations</flag>
+		<flag name="wget">use wget to download files</flag>
+	</use>
 </pkgmetadata>

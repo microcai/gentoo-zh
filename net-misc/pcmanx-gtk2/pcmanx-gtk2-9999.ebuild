@@ -5,7 +5,7 @@ EAPI=7
 
 inherit autotools flag-o-matic git-r3
 
-DESCRIPTION="PCMan is an easy-to-use telnet client mainly targets BBS users formerly writen by gtk2"
+DESCRIPTION="PCMan is a gtk+ based free BBS client"
 HOMEPAGE="https://github.com/pcman-bbs/pcmanx"
 EGIT_REPO_URI="${HOMEPAGE}.git"
 
@@ -17,7 +17,7 @@ IUSE="+libnotify +proxy iplookup +wget"
 COMMON_DEPEND="
 	libnotify? ( x11-libs/libnotify )
 	x11-libs/libXft
-	>=x11-libs/gtk+-2.4
+	>=x11-libs/gtk+-2.4:*
 "
 
 RDEPEND="
