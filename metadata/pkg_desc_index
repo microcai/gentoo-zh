@@ -12,6 +12,7 @@ app-i18n/fcitx5 5.0.8-r3 9999: Fcitx5 Next generation of fcitx
 app-i18n/fcitx5-chinese-addons 5.0.6-r1 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
 app-i18n/fcitx5-configtool 5.0.5 9999: Configuration module for Fcitx
 app-i18n/fcitx5-gtk 5.0.7 9999: Gtk im module for fcitx5 and glib based dbus client library
+app-i18n/fcitx5-hangul 5.0.3: Korean Hangul input method for Fcitx
 app-i18n/fcitx5-qt 5.0.6 9999: Qt library and IM module for fcitx5
 app-i18n/fcitx5-rime 5.0.6 9999: Rime Support for Fcitx5
 app-i18n/fcitx5-skk 5.0.6 9999: Japanese SKK input engine for Fcitx5
