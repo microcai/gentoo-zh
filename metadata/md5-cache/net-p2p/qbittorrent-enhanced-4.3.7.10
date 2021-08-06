@@ -11,6 +11,6 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/boost-1.62.0-r1:= dev-qt/qtcore:5 dev-qt/qtnetwork:5[ssl] dev-qt/qtxml:5 dev-qt/qtsql:5 >=net-libs/libtorrent-rasterbar-1.2.12:0= sys-libs/zlib dbus? ( dev-qt/qtdbus:5 ) X? ( dev-libs/geoip dev-qt/qtgui:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 ) !net-p2p/qbittorrent
 REQUIRED_USE=dbus? ( X )
 SLOT=0
-SRC_URI=https://github.com/c0re100/qBittorrent-Enhanced-Edition/archive/release-4.3.6.10.tar.gz -> qbittorrent-enhanced-4.3.6.10.tar.gz
+SRC_URI=https://github.com/c0re100/qBittorrent-Enhanced-Edition/archive/release-4.3.7.10.tar.gz -> qbittorrent-enhanced-4.3.7.10.tar.gz
 _eclasses_=xdg-utils	27f9a2f19502b925ac117bd657aa2979
 _md5_=e80e72329507dc7515037c765926c8dd
