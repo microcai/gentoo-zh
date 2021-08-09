@@ -1,0 +1,13 @@
+diff --git a/labelme/widgets/label_list_widget.py b/labelme/widgets/label_list_widget.py
+index a3569c4..8debc74 100644
+--- a/labelme/widgets/label_list_widget.py
++++ b/labelme/widgets/label_list_widget.py
+@@ -43,7 +43,7 @@ class HTMLDelegate(QtWidgets.QStyledItemDelegate):
+                 option.palette.color(QPalette.Active, QPalette.Text),
+             )
+ 
+-        textRect = style.subElementRect(QStyle.SE_ItemViewItemText, options)
++        textRect = style.subElementRect(QStyle.SE_ItemViewItemText, options, None)
+ 
+         if index.column() != 0:
+             textRect.adjust(5, 0, 0, 0)
