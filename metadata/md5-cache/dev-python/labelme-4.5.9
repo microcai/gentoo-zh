@@ -1,0 +1,16 @@
+BDEPEND=python_targets_python3_9? ( dev-lang/python:3.9 ) >=dev-lang/python-exec-2:=[python_targets_python3_9(-)?] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)?]
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-python/imgviz dev-python/matplotlib dev-python/numpy dev-python/QtPy dev-python/termcolor dev-python/pyyaml dev-python/setuptools
+DESCRIPTION=Image Polygonal Annotation with Python
+EAPI=7
+HOMEPAGE=https://github.com/wkentaro/labelme
+INHERIT=distutils-r1
+IUSE=python_targets_python3_9
+KEYWORDS=amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-python/imgviz dev-python/matplotlib dev-python/numpy dev-python/QtPy dev-python/termcolor dev-python/pyyaml dev-python/setuptools python_targets_python3_9? ( dev-lang/python:3.9 ) >=dev-lang/python-exec-2:=[python_targets_python3_9(-)?]
+REQUIRED_USE=|| ( python_targets_python3_9 )
+SLOT=0
+SRC_URI=https://github.com/wkentaro/labelme/archive/v4.5.9.tar.gz -> labelme-4.5.9.tar.gz
+_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	multibuild	05a584848db4901c97fcd94ae7cc3a97	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	python-utils-r1	f5408c7f165c2c81b787182c52bc41dd	python-r1	e20b80360497e6215aed0dd4ca7d6bad	distutils-r1	943c17c3afd0f811ad36a0b5c8dedba9
+_md5_=9b50d92ecff100776b4b9e1cdd5e692a

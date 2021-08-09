@@ -60,6 +60,7 @@ dev-python/fuo-netease 0.7.1: netease cloud music support for feeluown
 dev-python/fuo-qqmusic 0.3.3: qq music support for feeluown
 dev-python/imgviz 1.2.6: mage Visualization Tools
 dev-python/janus 0.4.0-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
+dev-python/labelme 4.5.9: Image Polygonal Annotation with Python
 dev-python/pycosat 0.6.3: Python bindings to picosat (a SAT solver)
 dev-python/qasync 0.9.4-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/tomlkit 0.7.0-r1: Style-preserving TOML library for Python
