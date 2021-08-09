@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-08-06 15:22:00 CST)
+(The last generation time: 2021-08-09 10:44:32 CST)
 
 ### Packages
 
@@ -116,6 +116,8 @@
  dev-python/conda                               | 4.10.3                 |            | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
    dev-python/conda-package-handling            | 1.7.3                  |  D, RD     | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
    dev-python/pycosat                           | 0.6.3                  |  D, RD     | https://github.com/ContinuumIO/pycosat                                                  | Python bindings to picosat (a SAT solver)
+------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/imgviz                              | 1.2.6                  |            | https://github.com/wkentaro/imgviz                                                      | mage Visualization Tools
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/arch-install-scripts                  | 24                     |            | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
    sys-apps/pacman                              | 6.0.0                  |  D, RD     | https://archlinux.org/pacman/                                                           | Archlinux's binary package manager
