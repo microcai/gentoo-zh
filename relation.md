@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-08-09 10:44:32 CST)
+(The last generation time: 2021-08-09 11:13:47 CST)
 
 ### Packages
 
@@ -117,7 +117,8 @@
    dev-python/conda-package-handling            | 1.7.3                  |  D, RD     | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
    dev-python/pycosat                           | 0.6.3                  |  D, RD     | https://github.com/ContinuumIO/pycosat                                                  | Python bindings to picosat (a SAT solver)
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/imgviz                              | 1.2.6                  |            | https://github.com/wkentaro/imgviz                                                      | mage Visualization Tools
+ dev-python/labelme                             | 4.5.9                  |            | https://github.com/wkentaro/labelme                                                     | Image Polygonal Annotation with Python
+   dev-python/imgviz                            | 1.2.6                  |  D, RD     | https://github.com/wkentaro/imgviz                                                      | mage Visualization Tools
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/arch-install-scripts                  | 24                     |            | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
    sys-apps/pacman                              | 6.0.0                  |  D, RD     | https://archlinux.org/pacman/                                                           | Archlinux's binary package manager
