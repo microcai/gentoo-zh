@@ -58,6 +58,7 @@ dev-python/fuo-kuwo 0.1.4: kuwo music support for feeluown
 dev-python/fuo-local 0.2.1-r1: local music support for feeluown
 dev-python/fuo-netease 0.7.1: netease cloud music support for feeluown
 dev-python/fuo-qqmusic 0.3.3: qq music support for feeluown
+dev-python/imgviz 1.2.6: mage Visualization Tools
 dev-python/janus 0.4.0-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/pycosat 0.6.3: Python bindings to picosat (a SAT solver)
 dev-python/qasync 0.9.4-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
