@@ -47,7 +47,7 @@ https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-pat
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0002-clear-patches.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0002-mm-Support-soft-dirty-flag-read-with-reset.patch
-https://raw.githubusercontent.com/hamadmarri/cacule-cpu-scheduler/master/patches/CacULE/v5.13/cacule-5.13.patch -> 0002-v5-cacule-5.13.patch
+https://raw.githubusercontent.com/hamadmarri/cacule-cpu-scheduler/master/patches/CacULE/v5.13/cacule-5.13.patch -> 0002-v6-cacule-5.13.patch
 https://github.com/HougeLangley/customkernel/releases/download/v5.13-others/0003-glitched-base.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0003-glitched-cfs.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0006-add-acs-overrides_iommu.patch
@@ -74,7 +74,7 @@ PATCHES=( "${DISTDIR}/0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.
 "${DISTDIR}/0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch"
 "${DISTDIR}/0002-mm-Support-soft-dirty-flag-read-with-reset.patch"
 "${DISTDIR}/0002-clear-patches.patch"
-"${DISTDIR}/0002-v5-cacule-5.13.patch"
+"${DISTDIR}/0002-v6-cacule-5.13.patch"
 "${DISTDIR}/0003-glitched-base.patch"
 "${DISTDIR}/0003-glitched-cfs.patch"
 "${DISTDIR}/0006-add-acs-overrides_iommu.patch"
@@ -144,7 +144,7 @@ src_prepare() {
 		eapply "${DISTDIR}/0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch"	||	die
 		eapply "${DISTDIR}/0002-mm-Support-soft-dirty-flag-read-with-reset.patch"	||	die
 		eapply "${DISTDIR}/0002-clear-patches.patch"	||	die
-		eapply "${DISTDIR}/0002-v5-cacule-5.13.patch"	||	die
+		eapply "${DISTDIR}/0002-v6-cacule-5.13.patch"	||	die
 		eapply "${DISTDIR}/0003-glitched-base.patch"	||	die
 		eapply "${DISTDIR}/0003-glitched-cfs.patch"	||	die
 		eapply "${DISTDIR}/0006-add-acs-overrides_iommu.patch"	|| die
