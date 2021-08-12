@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-08-10 20:04:04 CST)
+(The last generation time: 2021-08-12 21:17:04 CST)
 
 ### Packages
 
@@ -199,9 +199,7 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/avim                                    | 0.1                    |            | http://avim.avplayer.org                                                                | avim is a secure IM build around RSA
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/dingtalk                                | 0.9.0.145              |            | https://gov.dingtalk.com                                                                | dingtalk
-                                                | 0.9.0.172              |            |                                                                                         |
-                                                | 1.0.0.203              |            |                                                                                         |
+ net-im/dingtalk                                | 1.0.0.203              |            | https://gov.dingtalk.com                                                                | dingtalk
    dev-libs/libthai                             | 0.1.28                 |  D, RD     | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
      dev-libs/libdatrie                         | 0.2.13                 |  D, RD     | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
