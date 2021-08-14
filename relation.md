@@ -1,12 +1,14 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-08-13 06:51:23 CST)
+(The last generation time: 2021-08-14 14:03:21 CST)
 
 ### Packages
 
 ```
  Package name                                   | Version                | Role       | Homepage                                                                                | Description
 ================================================|========================|============|=========================================================================================|====================
+ acct-group/aptly                               | 0                      |            |                                                                                         |
+------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  acct-group/cockpit-ws                          | 0                      |            |                                                                                         | Group for the cockpit server
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/cockpit                              | 234                    |            | https://cockpit-project.org/                                                            | A systemd web based user interface for Linux server
@@ -290,6 +292,10 @@
    sci-libs/libtifiles2                         | 9999                   |  D, RD     | http://lpg.ticalc.org/prj_tilp/                                                         | Library for TI calculator files
      sci-libs/libticables2                      | 9999                   |  D, RD     | http://lpg.ticalc.org/prj_tilp/                                                         | Library to handle different link cables for TI calculators
      sci-libs/libticonv                         | 9999                   |  D, RD     | http://lpg.ticalc.org/prj_tilp/                                                         | Charset conversion library for TI calculators
+------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ sys-apps/aptly                                 | 1.4.0                  |            | https://github.com/aptly-dev/aptly                                                      | A swiss army knife for Debian repository management
+                                                | 9999                   |            |                                                                                         |
+   acct-user/aptly                              | 0                      | RD         |                                                                                         | A swiss army knife for Debian repository management
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/mdp                                   | 9999                   |            | https://github.com/visit1985/mdp                                                        | A command-line based markdown presentation tool
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
