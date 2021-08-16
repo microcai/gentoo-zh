@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-08-16 17:38:16 CST)
+(The last generation time: 2021-08-16 20:49:33 CST)
 
 ### Packages
 
@@ -16,7 +16,7 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-crypt/etoken-sac                           | 10.3                   |            | http://aladdin-rd.ru                                                                    | SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/typora                             | 0.9.98                 |            | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
+ app-editors/typora                             | 0.11.2                 |            | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/visual-studio-code-bin             | 1.59.0                 |            | https://code.visualstudio.com                                                           | Multiplatform Visual Studio Code from Microsoft
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
