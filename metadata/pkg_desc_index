@@ -6,7 +6,7 @@ app-admin/cockpit 234: A systemd web based user interface for Linux server
 app-arch/zchunk 1.1.16: A format designed for highly efficient deltas while maintaining good compression
 app-crypt/archlinux-keyring 20210616: GnuPG keyring of Archlinux developer keys
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
-app-editors/typora 0.9.98: Typora will give you a seamless experience as both a reader and a writer.
+app-editors/typora 0.11.2: Typora will give you a seamless experience as both a reader and a writer.
 app-editors/visual-studio-code-bin 1.59.0: Multiplatform Visual Studio Code from Microsoft
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
