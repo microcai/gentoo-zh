@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils user
+inherit eutils
 
 DESCRIPTION="Beyond Compare -- Compare, sync, and merge files and folders"
 HOMEPAGE="http://www.scootersoftware.com/"
@@ -38,6 +38,5 @@ src_install() {
 	sed -i ./install.sh -e "s/^\texit 1.*//g"
 	./install.sh --prefix="${targetdir}"
 
-	dodir /opt/bin
-	dosym /opt/${LAUNCHER} /opt/bin/${LAUNCHER/*bin\/}
+	dosym "../../opt/${LAUNCHER}" "/usr/bin/bcompare"
 }
