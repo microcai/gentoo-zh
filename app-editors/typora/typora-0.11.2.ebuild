@@ -50,8 +50,7 @@ src_install() {
 	fperms 4755 "${dir}/share/typora/chrome-sandbox"
 	dosym "../../opt/typora/bin/typora" "usr/bin/typora"
 
-	insinto /usr/share/applications/
-	doins share/applications/typora.desktop
+	domenu share/applications/typora.desktop
 }
 
 pkg_postinst() {
