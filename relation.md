@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-08-18 19:13:19 CST)
+(The last generation time: 2021-08-19 06:57:39 CST)
 
 ### Packages
 
@@ -331,11 +331,11 @@
                                                 | 5.13.1                 |            |                                                                                         |
                                                 | 5.13.10                |            |                                                                                         |
                                                 | 5.13.11                |            |                                                                                         |
+                                                | 5.13.12                |            |                                                                                         |
                                                 | 5.13.2                 |            |                                                                                         |
                                                 | 5.13.3                 |            |                                                                                         |
                                                 | 5.13.4                 |            |                                                                                         |
                                                 | 5.13.5                 |            |                                                                                         |
-                                                | 5.13.6                 |            |                                                                                         |
    sys-kernel/xanmod-rt                         | 5.13.1                 | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod-RT, cjktty, uksm patchset for main kernel tree
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                          | 1.13                   |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
