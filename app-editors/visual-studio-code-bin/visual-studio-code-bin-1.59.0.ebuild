@@ -8,8 +8,7 @@ inherit desktop eutils pax-utils xdg
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
 BASE_URI="https://update.code.visualstudio.com/${PV}"
-SRC_URI="${BASE_URI}/linux-x64/stable -> ${P}-amd64.tar.gz
-	https://github.com/microsoft/vscode/raw/d412f89b/resources/linux/code.png -> ${PN}.png"
+SRC_URI="${BASE_URI}/linux-x64/stable -> ${P}-amd64.tar.gz"
 RESTRICT="mirror strip bindist"
 
 LICENSE="MIT"
@@ -52,7 +51,7 @@ src_install(){
 	doins -r *
 	dosym "../../opt/${PN}/bin/code" "usr/bin/code"
 	domenu "${FILESDIR}/visual-studio-code.desktop"
-	newicon "${DISTDIR}/${PN}.png" "${PN%-bin}.png"
+	newicon "resources/app/resources/linux/code.png" "${PN%-bin}.png"
 	fperms +x "/opt/${PN}/code"
 	fperms +x "/opt/${PN}/bin/code"
 	fperms +x "/opt/${PN}/resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg"
