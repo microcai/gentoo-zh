@@ -9,7 +9,7 @@ DESCRIPTION="An improved i3lock"
 HOMEPAGE="https://github.com/chrjguill/i3lock-color"
 EGIT_REPO_URI="https://github.com/chrjguill/i3lock-color.git"
 LICENSE="BSD"
-KEYWORDS="~amd64"
+KEYWORDS=""
 SRC_URI=""
 
 SLOT="0"
