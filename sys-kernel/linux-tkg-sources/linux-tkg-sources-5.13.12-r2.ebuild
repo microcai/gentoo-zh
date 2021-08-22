@@ -47,7 +47,7 @@ https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-pat
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0002-clear-patches.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0002-mm-Support-soft-dirty-flag-read-with-reset.patch
-https://raw.githubusercontent.com/hamadmarri/cacule-cpu-scheduler/master/patches/CacULE/v5.13/cacule-5.13.patch -> 0002-v8-cacule-5.13.patch
+https://github.com/HougeLangley/customkernel/releases/download/v5.13-others/v8-cacule-5.13.patch -> 0002-v8-cacule-5.13.patch
 https://github.com/HougeLangley/customkernel/releases/download/v5.13-others/0003-glitched-base.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0003-glitched-cfs.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0006-add-acs-overrides_iommu.patch
@@ -55,7 +55,7 @@ https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-pat
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0007-v5.13-fsync.patch -> 0007-v1-v5.13-fsync.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0007-v5.13-winesync.patch
 https://gitlab.com/alfredchen/projectc/-/raw/master/5.13/prjc_v5.13-r2.patch -> 0007-prjc_v5.13-r2.patch
-https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0008-5.13-bcachefs.patch -> 0008-5.13-bcachefs.patch
+https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0008-5.13-bcachefs.patch -> 0008-v1-5.13-bcachefs.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.13/0012-misc-additions.patch
 https://github.com/HougeLangley/customkernel/releases/download/v5.13-others/v1-cjktty.patch
 https://github.com/HougeLangley/customkernel/releases/download/v5.13-others/v1-uksm.patch
@@ -67,7 +67,7 @@ https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.13/ntfs3-patches/0001
 "
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/linux-${PV}-linux"
+S="${WORKDIR}/linux-${PV}-linux-r2"
 
 UNIPATCH_LIST_DEFAULT=( "${DISTDIR}/patch-5.13.12.xz" )
 
@@ -83,7 +83,7 @@ PATCHES=( "${DISTDIR}/0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.
 "${DISTDIR}/0007-v1-v5.13-fsync.patch"
 "${DISTDIR}/0007-v5.13-winesync.patch"
 "${DISTDIR}/0007-prjc_v5.13-r2.patch"
-"${DISTDIR}/0008-5.13-bcachefs.patch"
+"${DISTDIR}/0008-v1-5.13-bcachefs.patch"
 "${DISTDIR}/0012-misc-additions.patch"
 "${DISTDIR}/v1-cjktty.patch"
 "${DISTDIR}/v1-uksm.patch"
@@ -109,7 +109,7 @@ src_prepare() {
 		eapply "${DISTDIR}/0007-v5.13-futex2_interface.patch"	||	die
 		eapply "${DISTDIR}/0007-v5.13-winesync.patch"	||	die
 		eapply "${DISTDIR}/0007-v1-v5.13-fsync.patch"	||	die
-		eapply "${DISTDIR}/0008-5.13-bcachefs.patch"	||	die
+		eapply "${DISTDIR}/0008-v1-5.13-bcachefs.patch"	||	die
 		eapply "${DISTDIR}/0012-misc-additions.patch"	||	die
 		eapply "${DISTDIR}/v1-cjktty.patch"	||	die
 		eapply "${DISTDIR}/v1-uksm.patch"	||	die
@@ -132,7 +132,7 @@ src_prepare() {
 		eapply "${DISTDIR}/0007-v5.13-futex2_interface.patch"	||	die
 		eapply "${DISTDIR}/0007-v5.13-winesync.patch"	||	die
 		eapply "${DISTDIR}/0007-v1-v5.13-fsync.patch"	||	die
-		eapply "${DISTDIR}/0008-5.13-bcachefs.patch"	||	die
+		eapply "${DISTDIR}/0008-v1-5.13-bcachefs.patch"	||	die
 		eapply "${DISTDIR}/0012-misc-additions.patch"	||	die
 		eapply "${DISTDIR}/v1-cjktty.patch"	||	die
 		eapply "${DISTDIR}/v1-uksm.patch"	||	die
@@ -155,7 +155,7 @@ src_prepare() {
 		eapply "${DISTDIR}/0007-v5.13-futex2_interface.patch"	||	die
 		eapply "${DISTDIR}/0007-v5.13-winesync.patch"	||	die
 		eapply "${DISTDIR}/0007-v1-v5.13-fsync.patch"	||	die
-		eapply "${DISTDIR}/0008-5.13-bcachefs.patch"	||	die
+		eapply "${DISTDIR}/0008-v1-5.13-bcachefs.patch"	||	die
 		eapply "${DISTDIR}/0012-misc-additions.patch"	||	die
 		eapply "${DISTDIR}/v1-cjktty.patch"	||	die
 		eapply "${DISTDIR}/v1-uksm.patch"	||	die
