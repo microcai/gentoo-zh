@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<use>
+		<flag name="tool">pymumu</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">pymumu/smartdns</remote-id>
+		<bugs-to>https://github.com/pymumu/smartdns/issues</bugs-to>
+	</upstream>
+	<longdescription lang="en">
+		SmartDNS is a local DNS server. SmartDNS accepts DNS query requests
+		from local clients, obtains DNS query results from multiple upstream 
+		DNS servers, and returns the fastest access results to clients.
+		Avoiding DNS pollution and improving network access speed, supports
+		high-performance ad filtering.Unlike dnsmasq's all-servers, 
+		smartdns returns the fastest access resolution.
+	</longdescription>
+</pkgmetadata>
