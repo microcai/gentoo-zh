@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-08-22 20:00:25 CST)
+(The last generation time: 2021-08-24 18:33:10 CST)
 
 ### Packages
 
@@ -322,17 +322,12 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                          | 3-r6                   |            |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/linux-tkg-sources                 | 5.13.12-r2             | RD         | https://github.com/Frogging-Family/linux-tkg                                            | Linux-TkG, cjktty, uksm patchset for main kernel tree
-   sys-kernel/xanmod-hybrid                     | 5.13.0                 | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, uksm patchset for main kernel tree
-                                                | 5.13.0-r1              |            |                                                                                         |
-                                                | 5.13.1                 |            |                                                                                         |
-                                                | 5.13.10                |            |                                                                                         |
-                                                | 5.13.11                |            |                                                                                         |
+                                                | 5.13.12-r3             |            |                                                                                         |
+   sys-kernel/xanmod-hybrid                     | 5.13.11                | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, uksm patchset for main kernel tree
                                                 | 5.13.12                |            |                                                                                         |
-                                                | 5.13.2                 |            |                                                                                         |
-                                                | 5.13.3                 |            |                                                                                         |
-                                                | 5.13.4                 |            |                                                                                         |
-                                                | 5.13.5                 |            |                                                                                         |
+                                                | 5.13.12-r1             |            |                                                                                         |
    sys-kernel/xanmod-rt                         | 5.13.1                 | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod-RT, cjktty, uksm patchset for main kernel tree
+                                                | 5.13.1-r1              |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                          | 1.13                   |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
