@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-08-24 18:33:10 CST)
+(The last generation time: 2021-08-27 02:41:00 CST)
 
 ### Packages
 
@@ -321,8 +321,8 @@
  sys-libs/libixp                                | 0.5_p20110208-r3       |            | https://libs.suckless.org/deprecated/libixp                                             | A stand-alone client/server 9P library including ixpc client
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                          | 3-r6                   |            |                                                                                         | Virtual for Linux kernel sources
-   sys-kernel/linux-tkg-sources                 | 5.13.12-r2             | RD         | https://github.com/Frogging-Family/linux-tkg                                            | Linux-TkG, cjktty, uksm patchset for main kernel tree
-                                                | 5.13.12-r3             |            |                                                                                         |
+   sys-kernel/linux-tkg-sources                 | 5.13.12-r3             | RD         | https://github.com/Frogging-Family/linux-tkg                                            | Linux-TkG, cjktty, patchset for main kernel tree
+                                                | 5.13.13                |            |                                                                                         |
    sys-kernel/xanmod-hybrid                     | 5.13.11                | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, uksm patchset for main kernel tree
                                                 | 5.13.12                |            |                                                                                         |
                                                 | 5.13.12-r1             |            |                                                                                         |
