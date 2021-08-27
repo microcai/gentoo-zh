@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-08-27 11:36:15 CST)
+(The last generation time: 2021-08-27 16:49:03 CST)
 
 ### Packages
 
@@ -249,7 +249,7 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-print/epson-inkjet-printer_201207w         | 1.0.0                  |            | http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX                              | Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/Xray                                 | 1.4.2                  |            | https://github.com/XTLS/Xray-core                                                       | Xray, Penetrates Everything.
+ net-proxy/Xray                                 | 1.4.2-r1               |            | https://github.com/XTLS/Xray-core                                                       | Xray, Penetrates Everything.
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash                                | 1.6.0                  |            | https://github.com/Dreamacro/clash                                                      | A rule-based tunnel in Go.
                                                 | 1.6.5                  |            |                                                                                         |
