@@ -1,0 +1,17 @@
+BDEPEND=!build? ( sys-apps/sed )
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
+DEPEND=app-arch/cpio
+DESCRIPTION=Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
+EAPI=7
+HOMEPAGE=https://github.com/HougeLangley/customkernel
+INHERIT=kernel-2
+IUSE=+xanmod cacule symlink build
+KEYWORDS=~amd64
+LICENSE=GPL-2 CDDL
+RDEPEND=!sys-kernel/xanmod-sources !sys-kernel/xanmod-rt !build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-devel/flex sys-devel/make >=sys-libs/ncurses-5.2 virtual/libelf virtual/pkgconfig )
+REQUIRED_USE=^^ ( xanmod cacule )
+RESTRICT=binchecks strip
+SLOT=5.13.13
+SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.13.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.13-1.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.13-1.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.13-1.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.13-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.13-1.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.13-1.extras.tar.xz https://github.com/HougeLangley/customkernel/releases/download/v5.13-patch/patch-5.13.13-xanmod1 https://github.com/HougeLangley/customkernel/releases/download/v5.13-patch/patch-5.13.13-xanmod1-cacule https://github.com/HougeLangley/customkernel/releases/download/v5.13-others/v1-cjktty.patch
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	kernel-2	c86a82cb0f0b0b280706f7fed7ef56f2
+_md5_=ab4dda2ffee24a61c9b59cd8101fba95
