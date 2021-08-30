@@ -1,4 +1,4 @@
-BDEPEND=virtual/pkgconfig doc? ( app-text/asciidoc ) >=dev-vcs/git-1.8.2.1[curl] >=dev-util/meson-0.56.0 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
+BDEPEND=virtual/pkgconfig doc? ( app-text/asciidoc ) >=dev-vcs/git-1.8.2.1[curl] >=dev-util/meson-0.57.0 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
 DEPEND=dev-libs/libev dev-libs/uthash x11-libs/libX11 x11-libs/libxcb x11-libs/libXext x11-libs/pixman x11-libs/xcb-util-image x11-libs/xcb-util-renderutil config-file? ( dev-libs/libconfig:= dev-libs/libxdg-basedir ) dbus? ( sys-apps/dbus ) drm? ( x11-libs/libdrm ) opengl? ( virtual/opengl ) pcre? ( dev-libs/libpcre ) !x11-misc/compton !x11-misc/picom x11-base/xorg-proto dev-util/desktop-file-utils x11-misc/shared-mime-info
 DESCRIPTION=A lightweight compositor for X11 (previously a compton fork)
@@ -10,5 +10,5 @@ LICENSE=MPL-2.0 MIT
 PROPERTIES=live
 RDEPEND=dev-libs/libev dev-libs/uthash x11-libs/libX11 x11-libs/libxcb x11-libs/libXext x11-libs/pixman x11-libs/xcb-util-image x11-libs/xcb-util-renderutil config-file? ( dev-libs/libconfig:= dev-libs/libxdg-basedir ) dbus? ( sys-apps/dbus ) drm? ( x11-libs/libdrm ) opengl? ( virtual/opengl ) pcre? ( dev-libs/libpcre ) !x11-misc/compton !x11-misc/picom
 SLOT=0
-_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	python-utils-r1	08d890890f70fe0096093016e55438d5	meson	2871b3a63996e0056676445b355c3d60	xdg-utils	27f9a2f19502b925ac117bd657aa2979	xdg	e73b9df80596ab8f9c542c01196dec23
+_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	python-utils-r1	08d890890f70fe0096093016e55438d5	meson	493198f00f20d2ecf10552d2737f2f13	xdg-utils	27f9a2f19502b925ac117bd657aa2979	xdg	e73b9df80596ab8f9c542c01196dec23
 _md5_=b400d8a7b6faf5132e87bd9203df3725

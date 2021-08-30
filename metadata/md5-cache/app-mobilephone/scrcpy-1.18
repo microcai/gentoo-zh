@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install test unpack
-DEPEND=media-libs/libsdl2 media-video/ffmpeg >=dev-util/meson-0.56.0 >=dev-util/ninja-1.8.2 dev-util/meson-format-array >=dev-vcs/git-1.8.2.1[curl]
+DEPEND=media-libs/libsdl2 media-video/ffmpeg >=dev-util/meson-0.57.0 >=dev-util/ninja-1.8.2 dev-util/meson-format-array >=dev-vcs/git-1.8.2.1[curl]
 DESCRIPTION=Display and control your Android device
 EAPI=6
 HOMEPAGE=https://blog.rom1v.com/2018/03/introducing-scrcpy/
@@ -11,5 +11,5 @@ RDEPEND=media-libs/libsdl2 media-video/ffmpeg
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/Genymobile/scrcpy/releases/download/v1.18/scrcpy-server-v1.18
-_eclasses_=eapi7-ver	1a0a60ad07c8b32d2faba2d085dc0f24	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	python-utils-r1	08d890890f70fe0096093016e55438d5	meson	2871b3a63996e0056676445b355c3d60	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_eclasses_=eapi7-ver	1a0a60ad07c8b32d2faba2d085dc0f24	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	python-utils-r1	08d890890f70fe0096093016e55438d5	meson	493198f00f20d2ecf10552d2737f2f13	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
 _md5_=f4eb66d3cf20f88f079a7576ab7aa8aa
