@@ -120,7 +120,7 @@ net-p2p/amule-dlp-antileech 9999: amule-dlp-antileech, dynamic DLP library for a
 net-p2p/n2n 2.6 2.8: A Layer Two Peer-to-Peer VPN
 net-p2p/qbittorrent-enhanced 4.3.1.11 4.3.7.10: qBittorrent Enhanced, based on qBittorrent
 net-print/epson-inkjet-printer_201207w 1.0.0: Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
-net-proxy/Xray 1.4.2-r1: Xray, Penetrates Everything.
+net-proxy/Xray 1.4.2-r2: Xray, Penetrates Everything.
 net-proxy/clash 1.6.0 1.6.5: A rule-based tunnel in Go.
 net-proxy/lantern-bin 6.7.3: A free peer-to-peer internet censorship circumvention tool
 net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
