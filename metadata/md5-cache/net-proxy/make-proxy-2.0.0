@@ -11,5 +11,5 @@ LICENSE=make-proxy
 RDEPEND=dev-lang/erlang systemd? ( sys-apps/systemd )
 SLOT=0
 SRC_URI=https://github.com/yueyoum/make-proxy/archive/v2.0.0.tar.gz -> make-proxy-2.0.0.tar.gz
-_eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	systemd	c846b9e02ac8293bfc9ca38a195c2a18
+_eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	systemd	c846b9e02ac8293bfc9ca38a195c2a18
 _md5_=36b0f244478ead72da1f183209a39374
