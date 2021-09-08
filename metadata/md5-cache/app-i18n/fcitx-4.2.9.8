@@ -1,0 +1,17 @@
+BDEPEND=dev-util/glib-utils kde-frameworks/extra-cmake-modules:5 virtual/pkgconfig introspection? ( dev-libs/gobject-introspection ) nls? ( sys-devel/gettext ) dev-util/ninja >=dev-util/cmake-3.20.5
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=dev-libs/glib:2 sys-apps/dbus sys-apps/util-linux virtual/libiconv virtual/libintl x11-libs/libxkbcommon X? ( x11-libs/libX11 x11-libs/libXfixes x11-libs/libXinerama x11-libs/libXrender xkb? ( dev-libs/libxml2 x11-libs/libxkbfile x11-misc/xkeyboard-config ) ) cairo? ( x11-libs/cairo[X] x11-libs/libXext pango? ( x11-libs/pango ) !pango? ( media-libs/fontconfig ) ) enchant? ( app-text/enchant:= ) gtk2? ( x11-libs/gtk+:2 ) gtk3? ( x11-libs/gtk+:3 ) lua? ( lua_single_target_lua5-1? ( dev-lang/lua:5.1 ) lua_single_target_lua5-3? ( dev-lang/lua:5.3 ) lua_single_target_lua5-4? ( dev-lang/lua:5.4 ) ) nls? ( sys-devel/gettext ) opencc? ( app-i18n/opencc:0= ) xkb? ( app-text/iso-codes dev-libs/json-c:0= )
+DESCRIPTION=Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
+EAPI=7
+HOMEPAGE=https://fcitx-im.org/ https://github.com/fcitx/fcitx
+INHERIT=cmake gnome2-utils lua-single xdg-utils
+IUSE=+X +autostart +cairo debug +enchant gtk2 +gtk3 +introspection lua nls opencc +pango +table test +xkb qt4 lua_single_target_lua5-1 lua_single_target_lua5-3 lua_single_target_lua5-4
+KEYWORDS=amd64 ~arm64 ~hppa ppc ppc64 ~riscv x86
+LICENSE=BSD-1 GPL-2+ LGPL-2+ MIT
+RDEPEND=dev-libs/glib:2 sys-apps/dbus sys-apps/util-linux virtual/libiconv virtual/libintl x11-libs/libxkbcommon X? ( x11-libs/libX11 x11-libs/libXfixes x11-libs/libXinerama x11-libs/libXrender xkb? ( dev-libs/libxml2 x11-libs/libxkbfile x11-misc/xkeyboard-config ) ) cairo? ( x11-libs/cairo[X] x11-libs/libXext pango? ( x11-libs/pango ) !pango? ( media-libs/fontconfig ) ) enchant? ( app-text/enchant:= ) gtk2? ( x11-libs/gtk+:2 ) gtk3? ( x11-libs/gtk+:3 ) lua? ( lua_single_target_lua5-1? ( dev-lang/lua:5.1 ) lua_single_target_lua5-3? ( dev-lang/lua:5.3 ) lua_single_target_lua5-4? ( dev-lang/lua:5.4 ) ) nls? ( sys-devel/gettext ) opencc? ( app-i18n/opencc:0= ) xkb? ( app-text/iso-codes dev-libs/json-c:0= )
+REQUIRED_USE=cairo? ( X ) lua? ( ^^ ( lua_single_target_lua5-1 lua_single_target_lua5-3 lua_single_target_lua5-4 ) ) pango? ( cairo )
+RESTRICT=!test? ( test )
+SLOT=4
+SRC_URI=https://download.fcitx-im.org/fcitx/fcitx-4.2.9.8_dict.tar.xz
+_eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	dab5d8ec471d025b79c9e6906bcf3bff	flag-o-matic	4134b5c0fb719b9161d10bdaba9e09e5	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	xdg-utils	27f9a2f19502b925ac117bd657aa2979	cmake	11fee991ab428a3370e5c20fa8231fb6	gnome2-utils	355c758ccc0d6df60d43a066640e642c	lua-utils	7b7cd623ac8b9dd4a7a6ee27219cada6	lua-single	ba92a0c9d413e015c6625cdb0b9aaf99
+_md5_=418c18697256eb177a6a9924e0e59915

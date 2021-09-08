@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile install postinst
-DEPEND=>=app-i18n/fcitx-4.2.8[X] !app-i18n/fcitx-qimpanel net-dns/libidn app-i18n/opencc net-libs/libssh2 media-video/rtmpdump dev-qt/qtdeclarative:5 dev-qt/qtgui:5 x11-apps/xprop sys-apps/lsb-release !app-i18n/fcitx-sogoupinyin
+DEPEND=>=app-i18n/fcitx-4.2.8[X,qt4] !app-i18n/fcitx-qimpanel net-dns/libidn app-i18n/opencc net-libs/libssh2 media-video/rtmpdump dev-qt/qtdeclarative:5 dev-qt/qtgui:5 x11-apps/xprop sys-apps/lsb-release !app-i18n/fcitx-sogoupinyin
 DESCRIPTION=Sogou Pinyin input method.
 EAPI=7
 HOMEPAGE=http://pinyin.sogou.com/linux/
 KEYWORDS=~amd64 ~x86
 LICENSE=Fcitx-Sogou
-RDEPEND=>=app-i18n/fcitx-4.2.8[X] !app-i18n/fcitx-qimpanel net-dns/libidn app-i18n/opencc net-libs/libssh2 media-video/rtmpdump dev-qt/qtdeclarative:5 dev-qt/qtgui:5 x11-apps/xprop sys-apps/lsb-release !app-i18n/fcitx-sogoupinyin
+RDEPEND=>=app-i18n/fcitx-4.2.8[X,qt4] !app-i18n/fcitx-qimpanel net-dns/libidn app-i18n/opencc net-libs/libssh2 media-video/rtmpdump dev-qt/qtdeclarative:5 dev-qt/qtgui:5 x11-apps/xprop sys-apps/lsb-release !app-i18n/fcitx-sogoupinyin
 RESTRICT=mirror
 SLOT=0
 SRC_URI=amd64? ( http://pinyin.sogou.com/linux/download.php?f=linux&bit=64 -> sogoupinyin_2.4.0.3469_amd64.deb ) x86? ( http://pinyin.sogou.com/linux/download.php?f=linux&bit=32 -> sogoupinyin_2.4.0.3469_i386.deb )
-_md5_=a29e66b6fa5fea9ad04ba76870f07656
+_md5_=a85b5e0aa2970284e482a26d3c6a140f
