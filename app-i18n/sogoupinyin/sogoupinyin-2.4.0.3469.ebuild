@@ -49,8 +49,8 @@ src_compile(){
 }
 
 src_install(){
-	dodir /usr/lib/fcitx
-	insinto /usr/lib/fcitx
+	dodir /usr/$(get_libdir)/fcitx
+	insinto /usr/$(get_libdir)/fcitx
 	insopts -m0755
 	doins "${S}"/usr/lib/*-linux-gnu/fcitx/*
 	dodir /usr/share/mime-info
