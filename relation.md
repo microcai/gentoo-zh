@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-09-08 17:27:20 CST)
+(The last generation time: 2021-09-08 22:52:19 CST)
 
 ### Packages
 
@@ -62,6 +62,7 @@
    dev-libs/libchrasis                          | 9999.0.1.1             |  D, RD     | http://chrasis.berlios.de                                                               | Library for Chinese Character Recognition As-Is
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/sogoupinyin                           | 2.4.0.3469             |            | http://pinyin.sogou.com/linux/                                                          | Sogou Pinyin input method.
+   app-i18n/fcitx                               | 4.2.9.8                |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/zh-autoconvert                        | 0.3.16-r3              |            | https://packages.debian.org/stable/source/zh-autoconvert                                | Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
