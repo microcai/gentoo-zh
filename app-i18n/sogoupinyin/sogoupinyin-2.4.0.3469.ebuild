@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-RDEPEND=">=app-i18n/fcitx-4.2.8[X]
+RDEPEND=">=app-i18n/fcitx-4.2.8[X,qt4]
 	!app-i18n/fcitx-qimpanel
 	net-dns/libidn
 	app-i18n/opencc
