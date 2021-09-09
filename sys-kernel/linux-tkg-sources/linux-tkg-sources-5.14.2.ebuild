@@ -42,7 +42,7 @@ LICENSE+=" CDDL"
 
 SRC_URI="
 ${KERNEL_BASE_URI}/linux-5.14.tar.xz
-${KERNEL_BASE_URI}/patch-5.14.1.xz
+${KERNEL_BASE_URI}/patch-5.14.2.xz
 ${GENPATCHES_URI}
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.14/0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch -> v1-0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.14/0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch -> v1-0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch
@@ -56,21 +56,19 @@ https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-pat
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.14/0007-v5.14-futex2_interface.patch -> v1-0007-v5.14-futex2_interface.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.14/0007-v5.14-fsync.patch -> v1-0007-v5.14-fsync.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.14/0007-v5.14-winesync.patch -> v1-0007-v5.14-winesync.patch
-https://gitlab.com/alfredchen/projectc/-/raw/master/5.14/prjc_v5.14-r0.patch
-https://github.com/HougeLangley/customkernel/releases/download/v5.14-others/fix_x86_up_build_v_514_projc_r0.patch -> fix_r0.patch
-https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.14/0012-misc-additions.patch -> v1-0012-misc-additions.patch
+https://gitlab.com/alfredchen/projectc/-/raw/master/5.14/prjc_v5.14-r1.patch
+https://github.com/HougeLangley/customkernel/releases/download/v5.14-others/v2-0012-misc-additions.patch
 https://github.com/HougeLangley/customkernel/releases/download/v5.14-others/v1-cjktty-5.14.patch
 https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.14/bbr2-patches/0001-bbr2-5.14-introduce-BBRv2.patch -> v1-bbr2.patch
-https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.14/cpu-patches-sep/0001-cpu-5.14-merge-graysky-s-patchset.patch -> v1-gcc-01.patch
-https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.14/cpu-patches-sep/0003-init-Kconfig-add-O1-flag.patch -> v1-gcc-03.patch
-https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.14/cpu-patches-sep/0004-Makefile-Turn-off-loop-vectorization-for-GCC-O3-opti.patch -> v1-gcc-04.patch
-https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.14/ntfs3-patches/0001-ntfs3-patches.patch -> v1-paragon-ntfs.patch
+https://github.com/HougeLangley/customkernel/releases/download/v5.14-others/v2-0001-cpu-5.14-merge-graysky-s-patchset.patch -> v2-gcc-01.patch
+https://github.com/HougeLangley/customkernel/releases/download/v5.14-others/v2-0003-init-Kconfig-add-O1-flag.patch -> v2-gcc-03.patch
+https://github.com/HougeLangley/customkernel/releases/download/v5.14-others/v2-0004-Makefile-Turn-off-loop-vectorization-for-GCC-O3-opti.patch -> v2-gcc-04.patch
 "
 KEYWORDS="~amd64"
 
 S="${WORKDIR}/linux-${PV}-linux"
 
-UNIPATCH_LIST_DEFAULT=( "${DISTDIR}/patch-5.14.1.xz" )
+UNIPATCH_LIST_DEFAULT=( "${DISTDIR}/patch-5.14.2.xz" )
 
 PATCHES=( "${DISTDIR}/v1-0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch"
 "${DISTDIR}/v1-0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch"
@@ -84,15 +82,13 @@ PATCHES=( "${DISTDIR}/v1-0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-
 "${DISTDIR}/v1-0007-v5.14-futex2_interface.patch"
 "${DISTDIR}/v1-0007-v5.14-fsync.patch"
 "${DISTDIR}/v1-0007-v5.14-winesync.patch"
-"${DISTDIR}/prjc_v5.14-r0.patch"
-"${DISTDIR}/fix_r0.patch"
-"${DISTDIR}/v1-0012-misc-additions.patch"
+"${DISTDIR}/prjc_v5.14-r1.patch"
+"${DISTDIR}/v2-0012-misc-additions.patch"
 "${DISTDIR}/v1-cjktty-5.14.patch"
 "${DISTDIR}/v1-bbr2.patch"
-"${DISTDIR}/v1-gcc-01.patch"
-"${DISTDIR}/v1-gcc-03.patch"
-"${DISTDIR}/v1-gcc-04.patch"
-"${DISTDIR}/v1-paragon-ntfs.patch" )
+"${DISTDIR}/v2-gcc-01.patch"
+"${DISTDIR}/v2-gcc-03.patch"
+"${DISTDIR}/v2-gcc-04.patch" )
 
 K_EXTRAEINFO="For more info on linux-tkg-sources and details on how to report problems, see: ${HOMEPAGE}."
 
@@ -110,15 +106,13 @@ src_prepare() {
 		eapply "${DISTDIR}/v1-0007-v5.14-futex2_interface.patch"	|| die
 		eapply "${DISTDIR}/v1-0007-v5.14-fsync.patch"	||	die
 		eapply "${DISTDIR}/v1-0007-v5.14-winesync.patch"	||	die
-		eapply "${DISTDIR}/prjc_v5.14-r0.patch"	||	die
-		eapply "${DISTDIR}/fix_r0.patch"	||	die
-		eapply "${DISTDIR}/v1-0012-misc-additions.patch"	||	die
+		eapply "${DISTDIR}/prjc_v5.14-r1.patch"	||	die
+		eapply "${DISTDIR}/v2-0012-misc-additions.patch"	||	die
 		eapply "${DISTDIR}/v1-cjktty-5.14.patch"	||	die
 		eapply "${DISTDIR}/v1-bbr2.patch"	||	die
-		eapply "${DISTDIR}/v1-gcc-01.patch"	||	die
-		eapply "${DISTDIR}/v1-gcc-03.patch"	||	die
-		eapply "${DISTDIR}/v1-gcc-04.patch"	||	die
-		eapply "${DISTDIR}/v1-paragon-ntfs.patch"	||	die
+		eapply "${DISTDIR}/v2-gcc-01.patch"	||	die
+		eapply "${DISTDIR}/v2-gcc-03.patch"	||	die
+		eapply "${DISTDIR}/v2-gcc-04.patch"	||	die
 	fi
 	# Apply Linux-TkG PDS patches, Do not forget copy PDS.config to .config.
 	if	use	pds	;	then
@@ -133,15 +127,13 @@ src_prepare() {
 		eapply "${DISTDIR}/v1-0007-v5.14-futex2_interface.patch"	|| die
 		eapply "${DISTDIR}/v1-0007-v5.14-fsync.patch"	||	die
 		eapply "${DISTDIR}/v1-0007-v5.14-winesync.patch"	||	die
-		eapply "${DISTDIR}/prjc_v5.14-r0.patch"	||	die
-		eapply "${DISTDIR}/fix_r0.patch"	||	die
-		eapply "${DISTDIR}/v1-0012-misc-additions.patch"	||	die
+		eapply "${DISTDIR}/prjc_v5.14-r1.patch"	||	die
+		eapply "${DISTDIR}/v2-0012-misc-additions.patch"	||	die
 		eapply "${DISTDIR}/v1-cjktty-5.14.patch"	||	die
 		eapply "${DISTDIR}/v1-bbr2.patch"	||	die
-		eapply "${DISTDIR}/v1-gcc-01.patch"	||	die
-		eapply "${DISTDIR}/v1-gcc-03.patch"	||	die
-		eapply "${DISTDIR}/v1-gcc-04.patch"	||	die
-		eapply "${DISTDIR}/v1-paragon-ntfs.patch"	||	die
+		eapply "${DISTDIR}/v2-gcc-01.patch"	||	die
+		eapply "${DISTDIR}/v2-gcc-03.patch"	||	die
+		eapply "${DISTDIR}/v2-gcc-04.patch"	||	die
 	fi
 	# Apply Linux-TKG CacULE patches
 	if	use	cacule	;	then
@@ -156,13 +148,12 @@ src_prepare() {
 		eapply "${DISTDIR}/v1-0007-v5.14-futex2_interface.patch"	|| die
 		eapply "${DISTDIR}/v1-0007-v5.14-fsync.patch"	||	die
 		eapply "${DISTDIR}/v1-0007-v5.14-winesync.patch"	||	die
-		eapply "${DISTDIR}/v1-0012-misc-additions.patch"	||	die
+		eapply "${DISTDIR}/v2-0012-misc-additions.patch"	||	die
 		eapply "${DISTDIR}/v1-cjktty-5.14.patch"	||	die
 		eapply "${DISTDIR}/v1-bbr2.patch"	||	die
-		eapply "${DISTDIR}/v1-gcc-01.patch"	||	die
-		eapply "${DISTDIR}/v1-gcc-03.patch"	||	die
-		eapply "${DISTDIR}/v1-gcc-04.patch"	||	die
-		eapply "${DISTDIR}/v1-paragon-ntfs.patch"	||	die
+		eapply "${DISTDIR}/v2-gcc-01.patch"	||	die
+		eapply "${DISTDIR}/v2-gcc-03.patch"	||	die
+		eapply "${DISTDIR}/v2-gcc-04.patch"	||	die
 	fi
 
 	kernel-2_src_prepare
