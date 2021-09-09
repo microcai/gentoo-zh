@@ -8,9 +8,9 @@ IUSE=python_targets_python3_8 python_targets_python3_9
 KEYWORDS=~amd64
 LICENSE=GPL-3
 PDEPEND=media-sound/feeluown
-RDEPEND=dev-python/marshmallow[python_targets_python3_8(-)?,python_targets_python3_9(-)?] dev-python/requests[python_targets_python3_8(-)?,python_targets_python3_9(-)?] dev-python/beautifulsoup[python_targets_python3_8(-)?,python_targets_python3_9(-)?] dev-python/pycryptodome[python_targets_python3_8(-)?,python_targets_python3_9(-)?] python_targets_python3_8? ( dev-lang/python:3.8 ) python_targets_python3_9? ( dev-lang/python:3.9 ) >=dev-lang/python-exec-2:=[python_targets_python3_8(-)?,python_targets_python3_9(-)?]
+RDEPEND=dev-python/marshmallow[python_targets_python3_8(-)?,python_targets_python3_9(-)?] dev-python/requests[python_targets_python3_8(-)?,python_targets_python3_9(-)?] dev-python/beautifulsoup4[python_targets_python3_8(-)?,python_targets_python3_9(-)?] dev-python/pycryptodome[python_targets_python3_8(-)?,python_targets_python3_9(-)?] python_targets_python3_8? ( dev-lang/python:3.8 ) python_targets_python3_9? ( dev-lang/python:3.9 ) >=dev-lang/python-exec-2:=[python_targets_python3_8(-)?,python_targets_python3_9(-)?]
 REQUIRED_USE=|| ( python_targets_python3_8 python_targets_python3_9 )
 SLOT=0
 SRC_URI=mirror://pypi/f/fuo-netease/fuo_netease-0.7.1.tar.gz
 _eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	multibuild	05a584848db4901c97fcd94ae7cc3a97	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	python-utils-r1	08d890890f70fe0096093016e55438d5	python-r1	e574a3642f886323f18f867ecc4d91c4	distutils-r1	6088739b8548699015d46289639d660c
-_md5_=a1a1ec76c796a05a112928f5884cc74a
+_md5_=1626246addea54951aa7b048ac08ebe7
