@@ -17,7 +17,7 @@ RESTRICT="mirror"
 
 RDEPEND=">=app-i18n/fcitx-4.2.8[X,qt4]
 	!app-i18n/fcitx-qimpanel
-	net-dns/libidn
+	net-dns/libidn11
 	app-i18n/opencc
 	net-libs/libssh2
 	media-video/rtmpdump
