@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-09-09 23:47:11 CST)
+(The last generation time: 2021-09-10 11:07:15 CST)
 
 ### Packages
 
@@ -123,7 +123,7 @@
    dev-python/pycosat                           | 0.6.3                  |  D, RD     | https://github.com/ContinuumIO/pycosat                                                  | Python bindings to picosat (a SAT solver)
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/labelme                             | 4.5.9                  |            | https://github.com/wkentaro/labelme                                                     | Image Polygonal Annotation with Python
-   dev-python/imgviz                            | 1.2.6                  |  D, RD     | https://github.com/wkentaro/imgviz                                                      | mage Visualization Tools
+   dev-python/imgviz                            | 1.3.0                  |  D, RD     | https://github.com/wkentaro/imgviz                                                      | mage Visualization Tools
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/arch-install-scripts                  | 24                     |            | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
    sys-apps/pacman                              | 6.0.0                  |  D, RD     | https://archlinux.org/pacman/                                                           | Archlinux's binary package manager
