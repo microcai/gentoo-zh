@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-09-10 11:07:15 CST)
+(The last generation time: 2021-09-10 12:00:12 CST)
 
 ### Packages
 
@@ -122,7 +122,7 @@
    dev-python/conda-package-handling            | 1.7.3                  |  D, RD     | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
    dev-python/pycosat                           | 0.6.3                  |  D, RD     | https://github.com/ContinuumIO/pycosat                                                  | Python bindings to picosat (a SAT solver)
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/labelme                             | 4.5.9                  |            | https://github.com/wkentaro/labelme                                                     | Image Polygonal Annotation with Python
+ dev-python/labelme                             | 4.5.10                 |            | https://github.com/wkentaro/labelme                                                     | Image Polygonal Annotation with Python
    dev-python/imgviz                            | 1.3.0                  |  D, RD     | https://github.com/wkentaro/imgviz                                                      | mage Visualization Tools
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/arch-install-scripts                  | 24                     |            | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
