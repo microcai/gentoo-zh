@@ -10,6 +10,6 @@ PROPERTIES=live
 RDEPEND=media-libs/libsdl2 media-video/ffmpeg
 RESTRICT=test
 SLOT=0
-SRC_URI=https://github.com/Genymobile/scrcpy/releases/download/v1.18/scrcpy-server-v1.18
+SRC_URI=https://github.com/Genymobile/scrcpy/releases/download/v1.19/scrcpy-server-v1.19
 _eclasses_=eapi7-ver	1a0a60ad07c8b32d2faba2d085dc0f24	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	python-utils-r1	08d890890f70fe0096093016e55438d5	meson	493198f00f20d2ecf10552d2737f2f13	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
 _md5_=f4eb66d3cf20f88f079a7576ab7aa8aa
