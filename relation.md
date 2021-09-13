@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-09-10 12:00:12 CST)
+(The last generation time: 2021-09-13 11:59:07 CST)
 
 ### Packages
 
@@ -80,8 +80,7 @@
  app-misc/spark                                 | 1.0.1                  |            | http://zachholman.com/spark/                                                            | ▁▂▃▅▂▇ in your shell
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-mobilephone/scrcpy                         | 1.14                   |            | https://blog.rom1v.com/2018/03/introducing-scrcpy/                                      | Display and control your Android device
-                                                | 1.17                   |            |                                                                                         |
-                                                | 1.18                   |            |                                                                                         |
+                                                | 1.19                   |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/wps-office                          | 11.1.0.10161           |            | http://www.wps.cn/product/wpslinux/                                                     | WPS Office is an office productivity suite, Here is the Chinese version
                                                 | 11.1.0.10702           |            |                                                                                         |
