@@ -19,12 +19,14 @@ HOMEPAGE="https://github.com/majn/telegram-purple"
 
 LICENSE="LGPL-3"
 SLOT="0"
-IUSE="+webp"
+IUSE="+gcrypt +png +webp"
 
 DEPEND="
 	net-im/pidgin
-	dev-libs/openssl
 	sys-libs/glibc
+	gcrypt? ( dev-libs/libgcrypt )
+	!gcrypt? ( dev-libs/openssl )
+	png? ( media-libs/libpng )
 	webp? ( media-libs/libwebp )
 "
 RDEPEND="${DEPEND}"
@@ -33,7 +35,9 @@ S=${WORKDIR}/${PN}
 
 src_configure(){
 	local myconf=(
-		"$(use_enable webp libwebp)"
+		$(use_with !gcrypt openssl)
+		$(use_enable png libpng)
+		$(use_enable webp libwebp)
 	)
 	econf "${myconf[@]}" || die "econf failed"
 }

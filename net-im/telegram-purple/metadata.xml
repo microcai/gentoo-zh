@@ -4,5 +4,10 @@
 	<upstream>
 		<remote-id type="github">majn/telegram-purple</remote-id>
 	</upstream>
+	<use>
+		<flag name="gcrypt">libgcrypt support</flag>
+		<flag name="png">png stickers support</flag>
+		<flag name="webp">webp stickers support</flag>
+	</use>
 	<!-- maintainer-needed -->
 </pkgmetadata>
