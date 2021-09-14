@@ -90,6 +90,9 @@ media-sound/feeluown:local - add local music support for feeluown
 media-sound/feeluown:netease - add netease cloud music support for feeluown
 media-sound/feeluown:qqmusic - add qq music support for feeluown
 media-sound/feeluown:webengine - add support to login via web page
+net-im/telegram-purple:gcrypt - libgcrypt support
+net-im/telegram-purple:png - png stickers support
+net-im/telegram-purple:webp - webp stickers support
 net-misc/pcmanx-gtk2:iplookup - IP location lookup, Useful to China locations
 net-misc/pcmanx-gtk2:proxy - proxy server support
 net-misc/pcmanx-gtk2:wget - use wget to download files
