@@ -1,14 +1,14 @@
-BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=configure postinst unpack
+DEFINED_PHASES=configure postinst
 DEPEND=net-im/pidgin dev-libs/openssl sys-libs/glibc webp? ( media-libs/libwebp )
 DESCRIPTION=Libpurple (Pidgin) plugin for using a Telegram account
 EAPI=7
 HOMEPAGE=https://github.com/majn/telegram-purple
-INHERIT=eutils git-r3
+INHERIT=eutils
 IUSE=+webp
+KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-3
-PROPERTIES=live
 RDEPEND=net-im/pidgin dev-libs/openssl sys-libs/glibc webp? ( media-libs/libwebp )
 SLOT=0
-_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	dab5d8ec471d025b79c9e6906bcf3bff	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+SRC_URI=https://github.com/majn/telegram-purple/releases/download/v1.4.7/telegram-purple_1.4.7.orig.tar.gz
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	dab5d8ec471d025b79c9e6906bcf3bff
 _md5_=d849b34dae92f40aec2abc0dd6be1727
