@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-09-14 10:21:38 CST)
+(The last generation time: 2021-09-14 10:22:20 CST)
 
 ### Packages
 
@@ -82,8 +82,7 @@
  app-mobilephone/scrcpy                         | 1.14                   |            | https://blog.rom1v.com/2018/03/introducing-scrcpy/                                      | Display and control your Android device
                                                 | 1.19                   |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-office/wps-office                          | 11.1.0.10161           |            | http://www.wps.cn/product/wpslinux/                                                     | WPS Office is an office productivity suite, Here is the Chinese version
-                                                | 11.1.0.10702           |            |                                                                                         |
+ app-office/wps-office                          | 11.1.0.10702           |            | http://www.wps.cn/product/wpslinux/                                                     | WPS Office is an office productivity suite, Here is the Chinese version
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-pda/ipadcharge                             | 9999                   |            | https://github.com/mkorenkov/ipad_charge                                                | Enables USB charging for Apple devices.
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
