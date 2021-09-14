@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-09-13 18:59:20 CST)
+(The last generation time: 2021-09-14 10:21:38 CST)
 
 ### Packages
 
@@ -209,7 +209,7 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/freetalk                                | 4.1                    |            | http://www.gnu.org/software/freetalk/                                                   | Console based Jabber client
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/telegram-purple                         | 1.3.0                  |            | https://github.com/majn/                                                                | Libpurple (Pidgin) plugin for using a Telegram account
+ net-im/telegram-purple                         | 1.4.7                  |            | https://github.com/majn/telegram-purple                                                 | Libpurple (Pidgin) plugin for using a Telegram account
                                                 | 9999                   |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/tencent-qq                              | 2.0.0.1089_beta2       |            | https://im.qq.com/linuxqq/download.html                                                 | Official Linux version of Tencent QQ
