@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-09-14 23:02:14 CST)
+(The last generation time: 2021-09-15 10:53:36 CST)
 
 ### Packages
 
@@ -71,7 +71,7 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/ccal                                  | 2.5.3                  |            | http://ccal.chinesebay.com/ccal/ccal.htm                                                | A simple command line calendar for Chinese lunar
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/gpick                                 | 0.2.5                  |            | https://github.com/thezbyg/gpick                                                        | Advanced color picker written in C++ using GTK+ toolkit
+ app-misc/gpick                                 | 0.2.6                  |            | https://github.com/thezbyg/gpick                                                        | Advanced color picker written in C++ using GTK+ toolkit
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/jshon                                 | 9999                   |            | http://kmkeen.com/jshon/                                                                | Jshon is a JSON parser designed for maximum convenience within the shell
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
