@@ -29,6 +29,7 @@ app-i18n/gcin:anthy - Enable support for app-i18n/anthy-9100
 app-i18n/gcin:chinese-sound - Enable chinese audio using media-sound/vorbis-tools
 app-i18n/gcin:filter-nobopomofo - 
 app-i18n/gcin:gtk3 - Enable support for GTK+3
+app-misc/gpick:gtk3 - use GTK3 instead of GTK2
 app-text/ydcv-rs:clipboard - Enable feature: use selected text as input
 app-text/ydcv-rs:notify - Enable feature: display explanations via desktop notification
 dev-libs/granite:demo - Build the Granite demo application (to present all available UI features provided by the library)
