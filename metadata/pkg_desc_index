@@ -52,7 +52,7 @@ dev-libs/libchrasis 9999.0.1.1: Library for Chinese Character Recognition As-Is
 dev-libs/libdatrie 0.2.13: Double-Array Trie Library
 dev-libs/libdwarf 20140208: Library to deal with DWARF Debugging Information Format
 dev-libs/libthai 0.1.28: A a set of Thai language support routines
-dev-libs/lunar-date 2.4.2: Chinese Lunar Library
+dev-libs/lunar-date 3.0.0: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458 9999: Community managed domain list for V2Ray.
 dev-libs/v2ray-domain-list-community-bin 4.39.2_p20210621183458 9999: Community managed domain list for V2Ray.
