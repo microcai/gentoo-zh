@@ -2,4 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<!-- maintainer-needed -->
+	<use>
+		<flag name="gtk3">use GTK3 instead of GTK2</flag>
+	</use>
 </pkgmetadata>
