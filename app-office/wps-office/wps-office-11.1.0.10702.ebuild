@@ -75,7 +75,7 @@ src_install() {
 	doins -r "${S}"/usr/share/{applications,desktop-directories,icons,mime,templates}
 
 	insinto /opt/kingsoft/wps-office
-	! use systemd && rm "${S}"/opt/kingsoft/wps-office/office6/libdbus-1.so* || die
+	use systemd || { rm "${S}"/opt/kingsoft/wps-office/office6/libdbus-1.so* || die ; }
 	doins -r "${S}"/opt/kingsoft/wps-office/{office6,templates}
 
 	fperms 0755 /opt/kingsoft/wps-office/office6/{wps,wpp,et,wpspdf,wpsoffice,promecefpluginhost,transerr}
