@@ -1,16 +1,16 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-inherit xdg-utils unpacker systemd
+inherit unpacker systemd xdg
 
 DESCRIPTION="A free peer-to-peer internet censorship circumvention tool"
 HOMEPAGE="https://github.com/getlantern/lantern"
-COMMIT="b9a807d5e5c2100b077394a7f4b833ad661c05c7"
+COMMIT="eb01d51b091f4de15844dd904a2eec7b8b4d8d75"
 SRC_URI="
-	x86?   ( https://raw.githubusercontent.com/getlantern/lantern-binaries/${COMMIT}/lantern-installer-32-bit.deb -> lantern-bin-${PV}.x86.deb )
-	amd64? ( https://raw.githubusercontent.com/getlantern/lantern-binaries/${COMMIT}/lantern-installer-64-bit.deb -> lantern-bin-${PV}.amd64.deb )"
+	x86?	( https://github.com/getlantern/lantern-binaries/raw/${COMMIT}/lantern-installer-32-bit.deb -> lantern-bin-${PV}.x86.deb )
+	amd64?	( https://github.com/getlantern/lantern-binaries/raw/${COMMIT}/lantern-installer-64-bit.deb -> lantern-bin-${PV}.amd64.deb )"
 
 SLOT="0"
 RESTRICT="mirror"
@@ -23,6 +23,7 @@ DEPEND="
 	app-arch/lz4
 	dev-libs/glib:2[xattr]
 	dev-libs/libappindicator:3
+	net-libs/libpcap
 	media-libs/fontconfig:1.0
 	media-libs/freetype:2
 	media-libs/harfbuzz[graphite]
@@ -48,13 +49,7 @@ src_install() {
 
 	fperms 0755 /usr/lib/lantern/lantern.sh
 
+	dosym "libpcap.so.1" "/usr/lib64/libpcap.so.0.8"
+
 	use systemd && systemd_dounit "${FILESDIR}/lantern-bin.service"
-}
-
-pkg_postinst() {
-	xdg_icon_cache_update
-}
-
-pkg_postrm() {
-	xdg_icon_cache_update
 }
