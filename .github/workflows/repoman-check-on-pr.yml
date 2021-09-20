@@ -30,17 +30,26 @@ jobs:
           sudo mkdir -m 777 -p /var/db/repos/gentoo{,-zh}
           sudo mkdir -m 777 -p /var/tmp/portage
       - name: Install dependencies
-        run: sudo apt-get install -y --no-install-recommends libxslt-dev libxml2-dev libxml2-utils zstd python3-lxml jq
+        run: |
+          sudo apt-get install -y --no-install-recommends libxslt-dev libxml2-dev libxml2-utils zstd jq
+          sudo ${pythonLocation}/bin/pip install PyYAML lxml
+      - name: Find the latest tag of portage
+        id: portage-latest-tag
+        uses: oprypin/find-latest-tag@v1
+        with:
+          repository: gentoo/portage
+          prefix: 'portage'
       - name: Fetch portage
         uses: actions/checkout@v2
         with:
           repository: gentoo/portage
+          ref: ${{ steps.portage-latest-tag.outputs.tag }}
       - name: Install portage
         shell: bash
         run: |
           set -xe
           printf "[build_ext]\nportage-ext-modules=true" >>setup.cfg
-          sudo ./setup.py install
+          sudo ${pythonLocation}/bin/python ./setup.py install
           sudo useradd portage -d /var/tmp/portage -s /bin/false
           sudo ln -s /var/db/repos/gentoo/profiles/default/linux/amd64/17.1 /etc/portage/make.profile
           sudo printf "[gentoo-zh]\nlocation = /var/db/repos/gentoo-zh" >>/etc/portage/repos.conf
@@ -49,8 +58,8 @@ jobs:
         run: |
           set -xe
           cd repoman
-          sudo ./setup.py install
-          sudo mv /usr/local/share/repoman /usr/share/ || true
+          sudo ${pythonLocation}/bin/python ./setup.py install
+          sudo cp -R ${pythonLocation}/share/repoman /usr/share
       - name: Checkout the head ref of the pull request
         uses: actions/checkout@v2
         with:
@@ -135,7 +144,7 @@ jobs:
             pushd ${pkg}
             [[ ${i} == 1 ]] || echo >>/var/tmp/report.txt
             echo "=== Package: ${pkg} ===" >>/var/tmp/report.txt
-            repoman full -q > >(tee -ai /var/tmp/report.txt) || ret=1
+            sudo ${pythonLocation}/bin/python /usr/bin/repoman full -q > >(tee -ai /var/tmp/report.txt) || ret=1
             popd
           done
           echo "::set-output name=ret::${ret}"
