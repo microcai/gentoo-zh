@@ -1,0 +1,51 @@
+diff --git a/src/contour/CMakeLists.txt b/src/contour/CMakeLists.txt
+index d00e0cb..53cae49 100644
+--- a/src/contour/CMakeLists.txt
++++ b/src/contour/CMakeLists.txt
+@@ -140,26 +140,26 @@ if(CONTOUR_SANITIZE AND NOT MSVC)
+     target_link_libraries(contour ubsan)
+ endif()
+ 
+-if(NOT(WIN32))
+-    set(terminfo_file "contour.terminfo")
+-    set(terminfo_basedir "${CMAKE_CURRENT_BINARY_DIR}/terminfo")
+-    set_source_files_properties("${terminfo_file}" PROPERTIES GENERATED TRUE)
+-    find_program(TIC tic REQUIRED)
+-    if(${TIC-NOTFOUND})
+-        message(FATAL_ERROR "Executable tic not found.")
+-    else()
+-        message(STATUS "Executable tic found (${TIC}).")
+-    endif()
+-    add_custom_command(
+-        TARGET contour POST_BUILD
+-        WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
+-        COMMAND contour generate terminfo to ${terminfo_file} && ${TIC} -x -o "${terminfo_basedir}" "${terminfo_file}"
+-        DEPENDS "${terminfo_file}"
+-        COMMENT "Compiling ${terminfo_file}"
+-        BYPRODUCTS "${terminfo_file}"
+-        VERBATIM
+-    )
+-endif()
++# if(NOT(WIN32))
++    # set(terminfo_file "contour.terminfo")
++    # set(terminfo_basedir "${CMAKE_CURRENT_BINARY_DIR}/terminfo")
++    # set_source_files_properties("${terminfo_file}" PROPERTIES GENERATED TRUE)
++    # find_program(TIC tic REQUIRED)
++    # if(${TIC-NOTFOUND})
++        # message(FATAL_ERROR "Executable tic not found.")
++    # else()
++        # message(STATUS "Executable tic found (${TIC}).")
++    # endif()
++    # add_custom_command(
++        # TARGET contour POST_BUILD
++        # WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
++        # COMMAND contour generate terminfo to ${terminfo_file} && ${TIC} -x -o "${terminfo_basedir}" "${terminfo_file}"
++        # DEPENDS "${terminfo_file}"
++        # COMMENT "Compiling ${terminfo_file}"
++        # BYPRODUCTS "${terminfo_file}"
++        # VERBATIM
++    # )
++# endif()
+ 
+ # ====================================================================================
+ # INSTALLER
