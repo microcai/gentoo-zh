@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-09-21 15:03:02 CST)
+(The last generation time: 2021-09-21 20:55:16 CST)
 
 ### Packages
 
@@ -367,7 +367,7 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-plugins/vicious                            | 9999                   |            | http://awesome.naquadah.org/wiki/Vicious                                                | Modular widget library for x11-wm/awesome
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- x11-terms/contour                              | 0.2.0.173              |            | https://github.com/contour-terminal/contour                                             | Modern C++ Terminal Emulator
+ x11-terms/contour                              | 0.2.0.173-r1           |            | https://github.com/contour-terminal/contour                                             | Modern C++ Terminal Emulator
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-terms/termite                              | 9999                   |            | https://github.com/thestinger/termite                                                   | A keyboard-centric VTE-based terminal
    x11-terms/vte-ng                             | 9999                   | RD         | https://github.com/thestinger/vte-ng                                                    | An enhanced terminal emulator widget
