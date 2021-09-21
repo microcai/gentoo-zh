@@ -38,7 +38,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 PATCHES=(
-	"${FILESDIR}/fuck"
+	"${FILESDIR}/disable_generate_terminfo.patch"
 )
 
 src_unpack() {
@@ -58,18 +58,21 @@ src_unpack() {
 
 }
 
-src_prepare() {
-	cmake_src_prepare
-	append-cxxflags "-fPIC"
-}
-
 src_configure() {
+
+	append-cxxflags "-fPIC"
+
 	if ! use debug; then
 		CMAKE_BUILD_TYPE="Release"
 	fi
 
+	if use test; then
+		FETCHCONTENT_SOURCE_DIR_CATCH2="${WORKDIR}/catch2-src"
+	fi
+
 	local mycmakeargs=(
 		-GNinja \
+		-DCMAKE_SKIP_RPATH=ON \
 		-DYAML_BUILD_SHARED_LIBS=OFF \
 		-DYAML_CPP_BUILD_CONTRIB=OFF \
 		-DYAML_CPP_BUILD_TESTS=OFF \
@@ -80,7 +83,6 @@ src_configure() {
 		-DCONTOUR_TESTING="$(usex test)" \
 		-DCRISPY_TESTING="$(usex test)" \
 		-DLIBTERMINAL_TESTING="$(usex test)" \
-		-DFETCHCONTENT_SOURCE_DIR_CATCH2="${WORKDIR}/catch2-src"
 		-DFETCHCONTENT_SOURCE_DIR_FMT="${WORKDIR}/fmt-src"
 		-DFETCHCONTENT_SOURCE_DIR_RANGE_V3="${WORKDIR}/range_v3-src"
 		-DFETCHCONTENT_SOURCE_DIR_YAML_CPP="${WORKDIR}/yaml_cpp-src"
