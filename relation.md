@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-09-21 20:55:16 CST)
+(The last generation time: 2021-09-22 10:25:17 CST)
 
 ### Packages
 
@@ -290,9 +290,6 @@
  net-proxy/shadowvpn                            | 9999                   |            | http://shadowvpn.org/                                                                   | A fast, safe VPN based on libsodium
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/smartproxy                           | 0.9.4                  |            | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
-------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/v2-ui-bin                            | 5.4.7                  |            | https://github.com/sprov065/v2-ui                                                       | A Control Panel for v2ray
-                                                | 5.5.0                  |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sci-libs/libticalcs2                           | 9999                   |            | http://lpg.ticalc.org/prj_tilp/                                                         | Library for communication with TI calculators
    sci-libs/libtifiles2                         | 9999                   |  D, RD     | http://lpg.ticalc.org/prj_tilp/                                                         | Library for TI calculator files
