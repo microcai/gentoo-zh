@@ -1,0 +1,8 @@
+[Unit]
+Description=Self-deployed file management and sharing system.
+
+[Service]
+ExecStart=/usr/bin/cloudreve -c /etc/cloudreve/conf.ini
+
+[Install]
+WantedBy=multi-user.target
