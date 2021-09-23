@@ -388,7 +388,9 @@ src_compile(){
 }
 
 src_install(){
-    insinto /usr/bin
     dobin cloudreve
     systemd_dounit ${FILESDIR}/cloudreve.service
+    dodir /etc/cloudreve
+    insinto /etc/cloudreve
+    doins conf.ini
 }
