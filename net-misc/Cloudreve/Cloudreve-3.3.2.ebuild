@@ -6,7 +6,7 @@ EAPI=7
 DESCRIPTION="Self-deployed file management and sharing system."
 HOMEPAGE="https://cloudreve.org/"
 
-inherit go-module
+inherit systemd go-module
 
 MY_PN=Cloudreve
 
@@ -385,4 +385,10 @@ src_compile(){
 
     export CGO_ENABLED=1
     go build -o cloudreve -ldflags "-X 'github.com/cloudreve/Cloudreve/v3/pkg/conf.BackendVersion=3.3.2' -X 'github.com/cloudreve/Cloudreve/v3/pkg/conf.LastCommit=db7489fb612f8227beaef874ca4c7cb2a6bafcc1'"
+}
+
+src_install(){
+    insinto /usr/bin
+    dobin cloudreve
+    systemd_dounit ${FILESDIR}/cloudreve.service
 }
