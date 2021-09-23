@@ -111,6 +111,7 @@ net-im/tencent-qq 2.0.0_beta2-r1 2.0.0.1089_beta2: Official Linux version of Ten
 net-im/wechat-uos 2.0.0: UOS wechat
 net-im/wemeet 2.8.0.0: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq
+net-misc/Cloudreve 3.3.2: Self-deployed file management and sharing system.
 net-misc/avsocks 9999: 科学操长城软件
 net-misc/baidunetdisk 3.0.1 3.4.1 3.5.0: Baidu Net Disk is a cloud storage client (Linux Version)
 net-misc/baidupcs-go 3.6.2 9999: The terminal utility for Baidu Network Disk (Golang Version).
