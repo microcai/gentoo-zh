@@ -36,6 +36,12 @@ sys-apps/sed
 
 src_install(){
     default_src_install
-    insinto /usr/lib/initcpio/
-    doins /bin/busybox 
+    exeinto /usr/lib/initcpio/
+    doexe /bin/busybox
+    insinto /usr/lib/initcpio/install
+    newins ${FILESDIR}/initcpio-install-systemd systemd
+    newins ${FILESDIR}/initcpio-install-base base
+    newins ${FILESDIR}/initcpio-install-udev udev
+    insinto /usr/lib/initcpio/hooks
+    newins ${FILESDIR}/initcpio-hook-udev udev
 }

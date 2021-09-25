@@ -1,0 +1,31 @@
+#!/bin/bash
+
+build() {
+    local applet
+
+    add_binary /usr/lib/initcpio/busybox /bin/busybox
+
+    for applet in $(/usr/lib/initcpio/busybox --list); do
+        add_symlink "/bin/$applet" /bin/busybox
+    done
+
+    # add kmod with applet symlinks
+    add_binary kmod
+    for applet in {dep,ins,rm,ls}mod mod{probe,info}; do
+        add_symlink "/usr/bin/$applet" kmod
+    done
+
+    add_binary blkid
+    add_binary mount
+    add_binary switch_root
+
+    add_file "/usr/lib/initcpio/init_functions" "/init_functions"
+    add_file "/usr/lib/initcpio/init" "/init"
+}
+
+help() {
+    cat <<HELPEOF
+This hook provides crucial runtime necessities for booting. DO NOT
+remove this hook unless you know what you're doing.
+HELPEOF
+}
