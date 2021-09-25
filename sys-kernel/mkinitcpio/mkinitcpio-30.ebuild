@@ -44,4 +44,6 @@ src_install(){
     newins ${FILESDIR}/initcpio-install-udev udev
     insinto /usr/lib/initcpio/hooks
     newins ${FILESDIR}/initcpio-hook-udev udev
+    insinto /etc/mkinitcpio.d
+    doins ${FILESDIR}/linux.preset
 }
