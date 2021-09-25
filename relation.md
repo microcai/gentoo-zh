@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-09-24 12:45:59 CST)
+(The last generation time: 2021-09-25 23:38:47 CST)
 
 ### Packages
 
@@ -324,6 +324,8 @@
  sys-fs/jmtpfs                                  | 0.5                    |            | http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux | A FUSE and libmtp based filesystem for accessing MTP devices.
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/ksmbd-tools                             | 9999                   |            | https://github.com/cifsd-team/ksmbd-tools                                               | Tools for in-kernel CIFS server
+------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ sys-kernel/mkinitcpio                          | 30                     |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-libs/elog-functions                        | 0.0.2                  |            | http://xochitl.matem.unam.mx/~canek/gentoo-systemd-only/index.html                      | Compatibility functions for the log eclass functions of OpenRC
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
