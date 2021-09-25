@@ -9,6 +9,8 @@ build() {
         add_symlink "/bin/$applet" /bin/busybox
     done
 
+    add_binary /usr/lib/initcpio/busybox /bin/sh
+
     # add kmod with applet symlinks
     add_binary kmod
     for applet in {dep,ins,rm,ls}mod mod{probe,info}; do
