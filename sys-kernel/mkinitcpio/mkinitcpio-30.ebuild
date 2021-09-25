@@ -14,16 +14,16 @@ SLOT="0"
 
 KEYWORDS="amd64 x86 arm arm64 mips"
 
-DEPEND="sys-kernel/mkinitcpio-busybox
-sys-apps/kmod
+DEPEND="sys-apps/kmod
 sys-apps/util-linux
 app-arch/libarchive
-sys-apps/coreutils
-sys-apps/systemd
-sys-apps/sed
-sys-apps/findutils
-virtual/awk
 app-arch/zstd
+sys-apps/busybox
+sys-apps/coreutils
+sys-apps/findutils
+sys-apps/sed
+sys-apps/systemd
+virtual/awk
 "
 
 RDEPEND="${DEPEND}"
@@ -33,3 +33,9 @@ app-arch/libarchive
 app-text/asciidoc
 sys-apps/sed
 "
+
+src_install(){
+    default_src_install
+    insinto /usr/lib/initcpio/
+    doins /bin/busybox 
+}
