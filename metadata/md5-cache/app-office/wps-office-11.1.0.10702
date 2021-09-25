@@ -13,4 +13,4 @@ RESTRICT=strip mirror
 SLOT=0
 SRC_URI=amd64? ( https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/10702/wps-office_11.1.0.10702_amd64.deb ) arm64? ( https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/10702/wps-office_11.1.0.10702_arm64.deb ) mips? ( https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/10702/wps-office_11.1.0.10702_mips64el.deb )
 _eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	unpacker	928e1f35ef78ba9fc2b214e29c2b55a4	xdg-utils	27f9a2f19502b925ac117bd657aa2979	xdg	6024fbc93167fad782e2032933654857
-_md5_=a81e83d3269cf5be819ac6967d7936cb
+_md5_=d87fa86cfb455dcea054d93e4f9a7a42
