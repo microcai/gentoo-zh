@@ -1,0 +1,12 @@
+BDEPEND=app-arch/libarchive app-text/asciidoc sys-apps/sed
+DEFINED_PHASES=install
+DEPEND=sys-apps/kmod sys-apps/util-linux app-arch/libarchive app-arch/zstd sys-apps/busybox sys-apps/coreutils sys-apps/findutils sys-apps/sed sys-apps/systemd virtual/awk sys-apps/baselayout[-split-usr]
+DESCRIPTION=Modular initramfs image creation utility
+EAPI=8
+HOMEPAGE=https://github.com/archlinux/mkinitcpio
+KEYWORDS=amd64 x86 arm arm64 mips
+LICENSE=GPLv2
+RDEPEND=sys-apps/kmod sys-apps/util-linux app-arch/libarchive app-arch/zstd sys-apps/busybox sys-apps/coreutils sys-apps/findutils sys-apps/sed sys-apps/systemd virtual/awk sys-apps/baselayout[-split-usr]
+SLOT=0
+SRC_URI=https://github.com/archlinux/mkinitcpio/archive/refs/tags/v30.tar.gz -> mkinitcpio-30.tar.gz
+_md5_=edd03a833577fcb1f8ec052e67f65647
