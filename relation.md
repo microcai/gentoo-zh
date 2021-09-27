@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-09-27 14:11:07 CST)
+(The last generation time: 2021-09-27 18:21:23 CST)
 
 ### Packages
 
@@ -325,7 +325,7 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/ksmbd-tools                             | 9999                   |            | https://github.com/cifsd-team/ksmbd-tools                                               | Tools for in-kernel CIFS server
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-kernel/mkinitcpio                          | 30                     |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
+ sys-kernel/mkinitcpio                          | 30-r1                  |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-libs/elog-functions                        | 0.0.2                  |            | http://xochitl.matem.unam.mx/~canek/gentoo-systemd-only/index.html                      | Compatibility functions for the log eclass functions of OpenRC
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
