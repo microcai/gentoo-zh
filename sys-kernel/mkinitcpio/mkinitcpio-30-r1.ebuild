@@ -24,6 +24,7 @@ sys-apps/findutils
 sys-apps/sed
 sys-apps/systemd
 virtual/awk
+sys-apps/baselayout[-split-usr]
 "
 
 RDEPEND="${DEPEND}"
