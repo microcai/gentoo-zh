@@ -163,6 +163,7 @@ sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions 
 sys-libs/libixp 0.5_p20110208-r3: A stand-alone client/server 9P library including ixpc client
 sys-libs/libsolv 0.7.19: Library for solving packages and reading repositories
 sys-libs/libzypp 17.27.0: ZYpp Package Management library
+sys-process/btop 1.0.9: Resources monitor. The C++ version of bashtop
 virtual/linux-sources 3-r6: Virtual for Linux kernel sources
 www-servers/darkhttpd 1.13: A small, static webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
