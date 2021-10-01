@@ -34,10 +34,6 @@ DEPEND="${RDEPEND}
 	kde-frameworks/extra-cmake-modules:5
 	virtual/pkgconfig"
 
-PATCHES=(
-	"${FILESDIR}/${P}-fix-compile-error.patch"
-)
-
 src_prepare() {
 	ln -s "${DISTDIR}/fcitx5-lm_sc.3gm.arpa-20140820.tar.bz2" data/lm_sc.3gm.arpa-20140820.tar.bz2 || die
 	ln -s "${DISTDIR}/fcitx5-dict.utf8-20210402.tar.xz" data/dict.utf8-20210402.tar.xz || die
