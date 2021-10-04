@@ -155,6 +155,7 @@ sys-fs/coda 7.0.5: Coda is an advanced network file system, similar to NFS
 sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/ksmbd-tools 9999: Tools for in-kernel CIFS server
+sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/linux-tkg-sources 5.14.9: Linux-TkG, cjktty, patchset for main kernel tree
 sys-kernel/mkinitcpio 30-r1: Modular initramfs image creation utility
 sys-kernel/xanmod-hybrid 5.14.0 5.14.1 5.14.1-r1 5.14.2 5.14.3 5.14.4 5.14.5 5.14.6 5.14.7 5.14.8 5.14.9: Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
