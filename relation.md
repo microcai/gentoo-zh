@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-10-02 12:10:19 CST)
+(The last generation time: 2021-10-04 08:57:36 CST)
 
 ### Packages
 
@@ -324,6 +324,8 @@
  sys-fs/jmtpfs                                  | 0.5                    |            | http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux | A FUSE and libmtp based filesystem for accessing MTP devices.
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/ksmbd-tools                             | 9999                   |            | https://github.com/cifsd-team/ksmbd-tools                                               | Tools for in-kernel CIFS server
+------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ sys-fs/systemd-zpool-scrub                     | 1.1                    |            | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/mkinitcpio                          | 30-r1                  |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
