@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-10-08 19:37:14 CST)
+(The last generation time: 2021-10-08 23:48:58 CST)
 
 ### Packages
 
@@ -340,13 +340,13 @@
    sys-kernel/xanmod-hybrid                     | 5.14.0                 | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
                                                 | 5.14.1                 |            |                                                                                         |
                                                 | 5.14.1-r1              |            |                                                                                         |
+                                                | 5.14.10                |            |                                                                                         |
                                                 | 5.14.2                 |            |                                                                                         |
                                                 | 5.14.3                 |            |                                                                                         |
                                                 | 5.14.4                 |            |                                                                                         |
                                                 | 5.14.5                 |            |                                                                                         |
                                                 | 5.14.6                 |            |                                                                                         |
                                                 | 5.14.7                 |            |                                                                                         |
-                                                | 5.14.8                 |            |                                                                                         |
    sys-kernel/xanmod-rt                         | 5.13.1                 | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod-RT, cjktty, uksm patchset for main kernel tree
                                                 | 5.13.1-r1              |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
