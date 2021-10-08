@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-10-04 08:57:36 CST)
+(The last generation time: 2021-10-08 19:37:14 CST)
 
 ### Packages
 
@@ -18,7 +18,7 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                             | 0.11.8                 |            | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/visual-studio-code-bin             | 1.60.2                 |            | https://code.visualstudio.com                                                           | Multiplatform Visual Studio Code from Microsoft
+ app-editors/visual-studio-code-bin             | 1.61.0                 |            | https://code.visualstudio.com                                                           | Multiplatform Visual Studio Code from Microsoft
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/winetricks-zh                    | 9999                   |            | http://winetricks.org                                                                   | winetricks fork for chinese to install QQ
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
