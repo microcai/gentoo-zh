@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-10-08 23:48:58 CST)
+(The last generation time: 2021-10-09 00:21:37 CST)
 
 ### Packages
 
@@ -336,7 +336,8 @@
  sys-process/btop                               | 1.0.9                  |            | https://github.com/aristocratos/btop                                                    | Resources monitor. The C++ version of bashtop
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                          | 3-r6                   |            |                                                                                         | Virtual for Linux kernel sources
-   sys-kernel/linux-tkg-sources                 | 5.14.9                 | RD         | https://github.com/Frogging-Family/linux-tkg                                            | Linux-TkG, cjktty, patchset for main kernel tree
+   sys-kernel/linux-tkg-sources                 | 5.14.10                | RD         | https://github.com/Frogging-Family/linux-tkg                                            | Linux-TkG, cjktty, patchset for main kernel tree
+                                                | 5.14.9                 |            |                                                                                         |
    sys-kernel/xanmod-hybrid                     | 5.14.0                 | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
                                                 | 5.14.1                 |            |                                                                                         |
                                                 | 5.14.1-r1              |            |                                                                                         |
