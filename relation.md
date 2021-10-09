@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-10-09 00:21:37 CST)
+(The last generation time: 2021-10-09 15:52:19 CST)
 
 ### Packages
 
@@ -213,8 +213,7 @@
  net-im/telegram-purple                         | 1.4.7-r1               |            | https://github.com/majn/telegram-purple                                                 | Libpurple (Pidgin) plugin for using a Telegram account
                                                 | 9999                   |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/tencent-qq                              | 2.0.0.1089_beta2       |            | https://im.qq.com/linuxqq/download.html                                                 | Official Linux version of Tencent QQ
-                                                | 2.0.0_beta2-r1         |            |                                                                                         |
+ net-im/tencent-qq                              | 2.0.0_beta2_p1089      |            | https://im.qq.com/linuxqq/download.html                                                 | Official Linux version of Tencent QQ
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/wechat-uos                              | 2.0.0                  |            | https://www.chinauos.com/resource/download-professional                                 | UOS wechat
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
