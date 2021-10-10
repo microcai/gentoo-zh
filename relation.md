@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-10-09 15:52:19 CST)
+(The last generation time: 2021-10-10 16:05:22 CST)
 
 ### Packages
 
@@ -26,9 +26,9 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx5-chinese-addons                 | 5.0.7                  |            | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
                                                 | 9999                   |            |                                                                                         |
-   app-i18n/fcitx5-qt                           | 5.0.7                  |  D, RD     | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
+   app-i18n/fcitx5-qt                           | 5.0.7-r1               |  D, RD     | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
                                                 | 9999                   |            |                                                                                         |
-     app-i18n/fcitx5                            | 5.0.9                  |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
+     app-i18n/fcitx5                            | 5.0.9-r1               |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
                                                 | 9999                   |            |                                                                                         |
        x11-libs/xcb-imdkit                      | 1.0.3                  |  D, RD     | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
    app-i18n/libime                              | 1.0.8                  |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
