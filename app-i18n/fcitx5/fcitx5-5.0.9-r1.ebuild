@@ -43,12 +43,12 @@ RDEPEND="dev-libs/glib:2
 		x11-libs/libXext
 		x11-libs/libXfixes
 		x11-libs/libXrender
+		x11-libs/libXinerama
+		x11-libs/libxkbfile
+		x11-libs/xcb-imdkit
 	)
-	x11-libs/libXinerama
-	x11-libs/libxkbfile
-	x11-libs/xcb-imdkit
 	x11-misc/xkeyboard-config
-	x11-libs/cairo[X]
+	x11-libs/cairo[X?]
 	x11-libs/pango
 	media-libs/fontconfig
 	enchant? ( app-text/enchant:= )
