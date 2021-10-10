@@ -26,7 +26,7 @@ RDEPEND="app-i18n/fcitx5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
-	dev-qt/qtx11extras:5
+	x11-libs/libX11
 	dev-qt/qtconcurrent:5
 	kde-frameworks/extra-cmake-modules"
 DEPEND="${RDEPEND}
