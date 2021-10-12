@@ -159,6 +159,7 @@ build() {
     add_symlink "/usr/lib/systemd/system/ctrl-alt-del.target" "reboot.target"
 
     add_binary "$(readlink -f /usr/lib/libnss_files.so)"
+    add_binary "$(readlink -f /usr/lib/libnss_systemd.so.2)"
     printf '%s\n' >"$BUILDROOT/etc/nsswitch.conf" \
         'passwd: files systemd' \
         'group: files [SUCCESS=merge] systemd' \
@@ -178,6 +179,9 @@ build() {
       set -f
       printf '%s\n' ${MODULES[@]} >"$BUILDROOT/etc/modules-load.d/MODULES.conf"
     )
+
+    add_dir /etc/systemd
+    echo -e "[Manager]\\nDefaultStandardOutput=inherit" > $BUILDROOT/etc/systemd/system.conf
 }
 
 help() {
