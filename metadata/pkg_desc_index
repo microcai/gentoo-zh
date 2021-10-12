@@ -152,6 +152,7 @@ sys-apps/yaourt 1.2.2: A pacman wrapper with extended features and AUR support
 sys-apps/zypper 1.14.47: World's most powerful command line package manager
 sys-devel/ucc 1.1-r0: UCC is an ANSI C Compiler
 sys-fs/coda 7.0.5: Coda is an advanced network file system, similar to NFS
+sys-fs/erofs-utils 1.3: Userspace tools for EROFS images
 sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/ksmbd-tools 9999: Tools for in-kernel CIFS server
