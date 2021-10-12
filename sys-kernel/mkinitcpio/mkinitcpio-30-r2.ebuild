@@ -14,6 +14,8 @@ SLOT="0"
 
 KEYWORDS="amd64 x86 arm arm64 mips"
 
+IUSE="+systemd"
+
 DEPEND="sys-apps/kmod
 sys-apps/util-linux
 app-arch/libarchive
@@ -22,14 +24,16 @@ sys-apps/busybox
 sys-apps/coreutils
 sys-apps/findutils
 sys-apps/sed
-sys-apps/systemd
 virtual/awk
 sys-apps/baselayout[-split-usr]
 "
 
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+    systemd? (sys-apps/systemd[-split-usr])
+"
 
 BDEPEND="
+sys-apps/busybox
 app-arch/libarchive
 app-text/asciidoc
 sys-apps/sed
