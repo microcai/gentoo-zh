@@ -3,13 +3,14 @@
 build() {
     local applet
 
-    add_binary /usr/lib/initcpio/busybox /bin/busybox
+    add_binary /usr/lib/initcpio/busybox /usr/bin/busybox
+    add_symlink "/bin" /usr/bin
 
-    for applet in $(/usr/lib/initcpio/busybox --list); do
-        add_symlink "/bin/$applet" /bin/busybox
+    for applet in $(/usr/lib/initcpio/busybox --list | grep -v busybox); do
+        add_symlink "/usr/bin/$applet" /usr/bin/busybox
     done
 
-    add_binary /usr/lib/initcpio/busybox /bin/sh
+    add_binary /usr/lib/initcpio/busybox /usr/bin/sh
 
     # add kmod with applet symlinks
     add_binary kmod
