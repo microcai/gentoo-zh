@@ -29,7 +29,7 @@ sys-apps/baselayout[-split-usr]
 "
 
 RDEPEND="${DEPEND}
-    systemd? (sys-apps/systemd[-split-usr])
+    systemd? ( sys-apps/systemd[-split-usr] )
 "
 
 BDEPEND="

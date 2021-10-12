@@ -160,13 +160,17 @@ build() {
 
     add_binary "$(readlink -f /usr/lib/libnss_files.so)"
     printf '%s\n' >"$BUILDROOT/etc/nsswitch.conf" \
-        'passwd: files' \
-        'group: files' \
-        'shadow: files'
+        'passwd: files systemd' \
+        'group: files [SUCCESS=merge] systemd' \
+        'shadow: files [UNAVAIL=return] systemd'
 
     echo "root:x:0:0:root:/root:/bin/sh" >"$BUILDROOT/etc/passwd"
     echo 'root::18684::::::' >"$BUILDROOT/etc/shadow"
     getent group root audio disk input kmem kvm lp optical render sgx storage tty uucp video | awk -F: ' { print $1 ":x:" $3 ":" }' >"$BUILDROOT/etc/group"
+
+    for sysuserfile in $(ls /usr/lib/sysusers.d/) ; do
+        add_file /usr/lib/sysusers.d/${sysuserfile}
+    done
 
     add_dir "/etc/modules-load.d"
     (
