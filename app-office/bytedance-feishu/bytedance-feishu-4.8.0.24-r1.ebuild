@@ -24,6 +24,7 @@ REQUIRED_USE="mips? ( !big-endian )"
 DEPEND="
 	dev-libs/nss
 	dev-util/desktop-file-utils
+	x11-libs/gtk+:3
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libxcb
