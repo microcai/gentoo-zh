@@ -35,7 +35,7 @@ app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience wit
 app-misc/nixnote 2.1.6: Nixnote - A clone of Evernote for Linux
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-mobilephone/scrcpy 1.14 1.19: Display and control your Android device
-app-office/bytedance-feishu 4.8.0.24: feishu - ByteDance's enterprise collaboration platform
+app-office/bytedance-feishu 4.8.0.24-r1: feishu - ByteDance's enterprise collaboration platform
 app-office/wps-office 11.1.0.10702: WPS Office is an office productivity suite, Here is the Chinese version
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-shells/gitstatus 1.5.2: Git status for Bash and Zsh prompt
