@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-10-15 18:58:29 CST)
+(The last generation time: 2021-10-15 23:48:04 CST)
 
 ### Packages
 
@@ -82,7 +82,7 @@
  app-mobilephone/scrcpy                         | 1.14                   |            | https://blog.rom1v.com/2018/03/introducing-scrcpy/                                      | Display and control your Android device
                                                 | 1.19                   |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-office/bytedance-feishu                    | 4.8.0.24               |            | https://www.feishu.cn/                                                                  | feishu - ByteDance's enterprise collaboration platform
+ app-office/bytedance-feishu                    | 4.8.0.24-r1            |            | https://www.feishu.cn/                                                                  | feishu - ByteDance's enterprise collaboration platform
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/wps-office                          | 11.1.0.10702           |            | http://www.wps.cn/product/wpslinux/                                                     | WPS Office is an office productivity suite, Here is the Chinese version
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
