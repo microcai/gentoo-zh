@@ -63,11 +63,10 @@ https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.14/bbr2-patches/0001-
 https://github.com/HougeLangley/customkernel/releases/download/v5.14-others/v2-0001-cpu-5.14-merge-graysky-s-patchset.patch -> v2-gcc-01.patch
 https://github.com/HougeLangley/customkernel/releases/download/v5.14-others/v2-0003-init-Kconfig-add-O1-flag.patch -> v2-gcc-03.patch
 https://github.com/HougeLangley/customkernel/releases/download/v5.14-others/v2-0004-Makefile-Turn-off-loop-vectorization-for-GCC-O3-opti.patch -> v2-gcc-04.patch
-https://gitlab.com/sirlucjan/kernel-patches/-/raw/master/5.14/bcachefs-patches/0001-bcachefs-5.14-introduce-bcachefs-patchset.patch -> v1-bcachefs.patch
 "
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/linux-${PV}-linux"
+S="${WORKDIR}/linux-${PV}-linux-r1"
 
 UNIPATCH_LIST_DEFAULT=( "${DISTDIR}/patch-${PV}.xz" )
 
@@ -89,8 +88,7 @@ PATCHES=( "${DISTDIR}/v1-0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-
 "${DISTDIR}/v1-bbr2.patch"
 "${DISTDIR}/v2-gcc-01.patch"
 "${DISTDIR}/v2-gcc-03.patch"
-"${DISTDIR}/v2-gcc-04.patch"
-"${DISTDIR}/v1-bcachefs.patch" )
+"${DISTDIR}/v2-gcc-04.patch" )
 
 K_EXTRAEINFO="For more info on linux-tkg-sources and details on how to report problems, see: ${HOMEPAGE}."
 
@@ -115,7 +113,6 @@ src_prepare() {
 		eapply "${DISTDIR}/v2-gcc-01.patch"	||	die
 		eapply "${DISTDIR}/v2-gcc-03.patch"	||	die
 		eapply "${DISTDIR}/v2-gcc-04.patch"	||	die
-		eapply "${DISTDIR}/v1-bcachefs.patch"	||	die
 	fi
 	# Apply Linux-TkG PDS patches, Do not forget copy PDS.config to .config.
 	if	use	pds	;	then
@@ -137,7 +134,6 @@ src_prepare() {
 		eapply "${DISTDIR}/v2-gcc-01.patch"	||	die
 		eapply "${DISTDIR}/v2-gcc-03.patch"	||	die
 		eapply "${DISTDIR}/v2-gcc-04.patch"	||	die
-		eapply "${DISTDIR}/v1-bcachefs.patch"	||	die
 	fi
 	# Apply Linux-TKG CacULE patches
 	if	use	cacule	;	then
@@ -158,7 +154,6 @@ src_prepare() {
 		eapply "${DISTDIR}/v2-gcc-01.patch"	||	die
 		eapply "${DISTDIR}/v2-gcc-03.patch"	||	die
 		eapply "${DISTDIR}/v2-gcc-04.patch"	||	die
-		eapply "${DISTDIR}/v1-bcachefs.patch"	||	die
 	fi
 
 	kernel-2_src_prepare
