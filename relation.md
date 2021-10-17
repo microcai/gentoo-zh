@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-10-15 23:48:04 CST)
+(The last generation time: 2021-10-17 20:12:29 CST)
 
 ### Packages
 
@@ -340,6 +340,7 @@
    sys-kernel/linux-tkg-sources                 | 5.14.10                | RD         | https://github.com/Frogging-Family/linux-tkg                                            | Linux-TkG, cjktty, patchset for main kernel tree
                                                 | 5.14.11                |            |                                                                                         |
                                                 | 5.14.12                |            |                                                                                         |
+                                                | 5.14.13                |            |                                                                                         |
                                                 | 5.14.9                 |            |                                                                                         |
    sys-kernel/xanmod-hybrid                     | 5.14.0                 | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
                                                 | 5.14.1                 |            |                                                                                         |
