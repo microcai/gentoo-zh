@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-10-17 20:12:29 CST)
+(The last generation time: 2021-10-18 07:04:54 CST)
 
 ### Packages
 
@@ -337,21 +337,17 @@
  sys-process/btop                               | 1.0.9                  |            | https://github.com/aristocratos/btop                                                    | Resources monitor. The C++ version of bashtop
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                          | 3-r6                   |            |                                                                                         | Virtual for Linux kernel sources
-   sys-kernel/linux-tkg-sources                 | 5.14.10                | RD         | https://github.com/Frogging-Family/linux-tkg                                            | Linux-TkG, cjktty, patchset for main kernel tree
-                                                | 5.14.11                |            |                                                                                         |
-                                                | 5.14.12                |            |                                                                                         |
-                                                | 5.14.13                |            |                                                                                         |
-                                                | 5.14.9                 |            |                                                                                         |
+   sys-kernel/linux-tkg-sources                 | 5.14.13-r1             | RD         | https://github.com/Frogging-Family/linux-tkg                                            | Linux-TkG, cjktty, patchset for main kernel tree
    sys-kernel/xanmod-hybrid                     | 5.14.0                 | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
                                                 | 5.14.1                 |            |                                                                                         |
                                                 | 5.14.1-r1              |            |                                                                                         |
                                                 | 5.14.10                |            |                                                                                         |
                                                 | 5.14.11                |            |                                                                                         |
                                                 | 5.14.12                |            |                                                                                         |
+                                                | 5.14.13                |            |                                                                                         |
                                                 | 5.14.2                 |            |                                                                                         |
                                                 | 5.14.3                 |            |                                                                                         |
                                                 | 5.14.4                 |            |                                                                                         |
-                                                | 5.14.5                 |            |                                                                                         |
    sys-kernel/xanmod-rt                         | 5.13.1                 | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod-RT, cjktty, uksm patchset for main kernel tree
                                                 | 5.13.1-r1              |            |                                                                                         |
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
