@@ -26,7 +26,7 @@ IUSE=""
 
 BDEPEND="sys-devel/gettext
 	virtual/pkgconfig"
-DEPEND=">=app-i18n/fcitx5-5.0.2:5
+DEPEND=">=app-i18n/fcitx5-meta-5.0.2:5
 	>=app-i18n/libhangul-0.0.12
 	virtual/libiconv
 	virtual/libintl

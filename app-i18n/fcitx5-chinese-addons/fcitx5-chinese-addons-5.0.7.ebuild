@@ -27,7 +27,7 @@ SLOT="5"
 IUSE="+opencc +gui browser test"
 REQUIRED_USE=""
 
-RDEPEND="app-i18n/fcitx5
+RDEPEND="app-i18n/fcitx5-meta
 	app-i18n/libime
 	opencc? ( app-i18n/opencc:= )
 	gui? (
