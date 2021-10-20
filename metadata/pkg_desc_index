@@ -159,7 +159,7 @@ sys-fs/ksmbd-tools 9999: Tools for in-kernel CIFS server
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/linux-tkg-sources 5.14.13-r1: Linux-TkG, cjktty, patchset for main kernel tree
 sys-kernel/mkinitcpio 30-r2: Modular initramfs image creation utility
-sys-kernel/xanmod-hybrid 5.14.0 5.14.1 5.14.1-r1 5.14.2 5.14.3 5.14.4 5.14.5 5.14.6 5.14.7 5.14.8 5.14.9 5.14.10 5.14.11 5.14.12 5.14.13: Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
+sys-kernel/xanmod-hybrid 5.14.0 5.14.1 5.14.1-r1 5.14.2 5.14.3 5.14.4 5.14.5 5.14.6 5.14.7 5.14.8 5.14.9 5.14.10 5.14.11 5.14.12 5.14.13 5.14.14: Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
 sys-kernel/xanmod-rt 5.13.1 5.13.1-r1: Xanmod-RT, cjktty, patchset for main kernel tree
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libixp 0.5_p20110208-r3: A stand-alone client/server 9P library including ixpc client
