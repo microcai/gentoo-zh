@@ -5,5 +5,9 @@
 		<flag name="configtool">Enable GUI config tool</flag>
 		<flag name="gtk2">Enable GTK2 IM support</flag>
 		<flag name="gtk3">Enable GTK3 IM support</flag>
+		<flag name="chinese-addons">Install Chinese addons for fcitx5</flag>
+		<flag name="rime">Install Rime Chinese input method</flag>
+		<flag name="skk">Install SKK Japanese input method</flag>
+		<flag name="hangul">Install Hangul Korean input method</flag>
 	</use>
 </pkgmetadata>

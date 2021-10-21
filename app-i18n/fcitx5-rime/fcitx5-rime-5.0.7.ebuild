@@ -21,7 +21,7 @@ LICENSE="GPL-2"
 SLOT="5"
 IUSE=""
 
-RDEPEND="app-i18n/fcitx5-meta
+RDEPEND="app-i18n/fcitx5
 	>=app-i18n/librime-1.0
 	>=app-i18n/rime-data-0.3.0
 	x11-libs/libnotify
