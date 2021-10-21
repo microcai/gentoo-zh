@@ -21,7 +21,7 @@ fi
 
 LICENSE="GPL-2+"
 SLOT="5"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 BDEPEND="sys-devel/gettext
