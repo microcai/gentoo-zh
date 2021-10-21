@@ -27,7 +27,7 @@ SLOT="5"
 BDEPEND="kde-frameworks/extra-cmake-modules:5
 		virtual/pkgconfig"
 
-RDEPEND="app-i18n/fcitx5-meta
+RDEPEND="app-i18n/fcitx5
 		app-i18n/libskk
 		dev-qt/qtcore:5
 		app-i18n/fcitx5-qt[qt5,-only_plugin]

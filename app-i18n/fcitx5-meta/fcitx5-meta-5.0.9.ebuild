@@ -9,14 +9,18 @@ HOMEPAGE="https://fcitx-im.org"
 LICENSE="metapackage"
 SLOT="5"
 KEYWORDS="~amd64 ~x86"
-IUSE="+configtool gtk2 +gtk3 +qt5"
+IUSE="+configtool +chinese-addons gtk2 +gtk3 hangul +qt5 rime skk "
 
 DEPEND=""
 RDEPEND="
 	app-i18n/fcitx5
-	qt5? ( app-i18n/fcitx5-qt )
+	configtool? ( app-i18n/fcitx5-configtool )
+	chinese-addons? ( app-i18n/fcitx5-chinese-addons )
 	gtk2? ( app-i18n/fcitx5-gtk[gtk2] )
 	gtk3? ( app-i18n/fcitx5-gtk[gtk3] )
-	configtool? ( app-i18n/fcitx5-configtool )
+	hangul? ( app-i18n/fcitx5-hangul )
+	qt5? ( app-i18n/fcitx5-qt )
+	rime? ( app-i18n/fcitx5-rime )
+	skk? ( app-i18n/fcitx5-skk )
 "
 BDEPEND=""
