@@ -1,0 +1,10 @@
+DEFINED_PHASES=-
+DESCRIPTION=Merge this to pull in Fcitx packages
+EAPI=8
+HOMEPAGE=https://fcitx-im.org
+IUSE=+configtool +chinese-addons gtk2 +gtk3 hangul +qt5 rime skk
+KEYWORDS=~amd64 ~x86
+LICENSE=metapackage
+RDEPEND=app-i18n/fcitx5 configtool? ( app-i18n/fcitx5-configtool ) chinese-addons? ( app-i18n/fcitx5-chinese-addons ) gtk2? ( app-i18n/fcitx5-gtk[gtk2] ) gtk3? ( app-i18n/fcitx5-gtk[gtk3] ) hangul? ( app-i18n/fcitx5-hangul ) qt5? ( app-i18n/fcitx5-qt ) rime? ( app-i18n/fcitx5-rime ) skk? ( app-i18n/fcitx5-skk )
+SLOT=5
+_md5_=a9f4b2b1948d4e491064877c9cedfe39

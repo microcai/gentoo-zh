@@ -24,6 +24,13 @@ app-i18n/fcitx5-configtool:test - Enable Test
 app-i18n/fcitx5-gtk:gtk2 - Install input method module for GTK+ 2
 app-i18n/fcitx5-gtk:gtk3 - Enable support for GTK+3
 app-i18n/fcitx5-gtk:snooper - Enable key snooper for gtk app
+app-i18n/fcitx5-meta:chinese-addons - Install Chinese addons for fcitx5
+app-i18n/fcitx5-meta:configtool - Enable GUI config tool
+app-i18n/fcitx5-meta:gtk2 - Enable GTK2 IM support
+app-i18n/fcitx5-meta:gtk3 - Enable GTK3 IM support
+app-i18n/fcitx5-meta:hangul - Install Hangul Korean input method
+app-i18n/fcitx5-meta:rime - Install Rime Chinese input method
+app-i18n/fcitx5-meta:skk - Install SKK Japanese input method
 app-i18n/fcitx5-qt:only_plugin - Build only plugin
 app-i18n/gcin:anthy - Enable support for app-i18n/anthy-9100
 app-i18n/gcin:chinese-sound - Enable chinese audio using media-sound/vorbis-tools
