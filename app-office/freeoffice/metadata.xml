@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>c2778148787@gmail.com</email>
+        <name>Raymond</name>
+    </maintainer>
+    <longdescription lang="en">
+        A complete, free Microsoft Office-compatible alternative office suite
+    </longdescription>
+</pkgmetadata>
