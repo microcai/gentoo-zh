@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-10-23 15:19:57 CST)
+(The last generation time: 2021-10-23 19:31:17 CST)
 
 ### Packages
 
@@ -80,7 +80,7 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/bytedance-feishu                    | 4.8.0.24-r1            |            | https://www.feishu.cn/                                                                  | feishu - ByteDance's enterprise collaboration platform
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-office/freeoffice                          | 1036                   |            | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite
+ app-office/freeoffice                          | 1036-r1                |            | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/wps-office                          | 11.1.0.10702           |            | http://www.wps.cn/product/wpslinux/                                                     | WPS Office is an office productivity suite, Here is the Chinese version
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
