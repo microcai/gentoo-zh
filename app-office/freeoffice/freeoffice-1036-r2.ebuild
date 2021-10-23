@@ -13,7 +13,7 @@ SRC_URI="${BASE_URI}-amd64.tgz"
 LICENSE="SoftMaker"
 SLOT="0"
 KEYWORDS="~amd64"
-LANGUAGES="zh-CN ja ko"
+LANGUAGES="ar bg da de el en-GB en-US es et fi fr hu id it ja kk ko lt lv nl pl pt pt-BR ro ru sl sv tr uk zh"
 for lang in ${LANGUAGES}; do
 	IUSE+="l10n_${lang%:*} "
 done
@@ -36,17 +36,54 @@ S="${WORKDIR}"
 font_clean(){
 	for lang in ${LANGUAGES}; do
 		use l10n_${lang%:*} && continue
-		declare suffix
+		declare suf
 		case ${lang%:*} in
 			zh-CN)
-				suffix="sc";;
+				suf="sc";;
 			ko)
-				suffix="kr";;
+				suf="kr";;
+			ja)
+				suf="jp";;
+		esac
+		rm fonts/NotoSansCJK${suf}-Regular.otf
+	done
+}
+
+lang_clean(){
+for lang in ${LANGUAGES}; do
+		use l10n_${lang%:*} && continue
+		declare suffix
+		case ${lang%:*} in
+			da)
+				suffix="dk";;
+			el)
+				suffix="gr";;
+			en-US)
+				suffix="us";;
+			en-GB)
+				suffix="uk";;
+			et)
+				suffix="ee";;
 			ja)
 				suffix="jp";;
+			kk)
+				suffix="kz";;
+			ko)
+				suffix="kr";;
+			pt-BR)
+				suffix="pb";;
+			sl)
+				suffix="si";;
+			sv)
+				suffix="se";;
+			uk)
+				suffix="ua";;
+			*)
+				suffix="${lang%:*}";;
 		esac
-		rm fonts/NotoSansCJK${suffix}-Regular.otf
+		rm *_${suffix}.dwr
 	done
+
 }
 
 src_unpack() {
@@ -68,6 +105,7 @@ src_install(){
 	chrpath --delete "presentations"
 
 	font_clean
+	lang_clean
 
 	for m in "${FILESDIR}"/*.desktop; do
 		domenu "${m}"
