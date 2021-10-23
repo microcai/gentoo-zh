@@ -1,7 +1,7 @@
 # Copyright 2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit desktop pax-utils xdg
 
@@ -13,7 +13,10 @@ SRC_URI="${BASE_URI}-amd64.tgz"
 LICENSE="SoftMaker"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+LANGUAGES="zh-CN ja ko"
+for lang in ${LANGUAGES}; do
+	IUSE+="l10n_${lang%:*} "
+done
 
 RESTRICT="mirror strip"
 
@@ -29,6 +32,22 @@ RDEPEND="
 QA_PRESTRIPPED="*"
 
 S="${WORKDIR}"
+
+font_clean(){
+	for lang in ${LANGUAGES}; do
+		use l10n_${lang%:*} && continue
+		declare suffix
+		case ${lang%:*} in
+			zh-CN)
+				suffix="sc";;
+			ko)
+				suffix="kr";;
+			ja)
+				suffix="jp";;
+		esac
+		rm fonts/NotoSansCJK${suffix}-Regular.otf
+	done
+}
 
 src_unpack() {
 	:
@@ -47,6 +66,8 @@ src_install(){
 	chrpath --delete "textmaker"
 	chrpath --delete "planmaker"
 	chrpath --delete "presentations"
+
+	font_clean
 
 	for m in "${FILESDIR}"/*.desktop; do
 		domenu "${m}"
