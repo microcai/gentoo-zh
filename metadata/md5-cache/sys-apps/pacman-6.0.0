@@ -12,5 +12,5 @@ RDEPEND=app-crypt/archlinux-keyring app-arch/libarchive:=[lzma] gpg? ( >=app-cry
 RESTRICT=test
 SLOT=0/10
 SRC_URI=https://sources.archlinux.org/other/pacman/pacman-6.0.0.tar.xz
-_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	python-utils-r1	655fe65f186504e455c2f3116808fda8	meson	58dcef01376272b61b5c99ff57a11129
+_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	python-utils-r1	655fe65f186504e455c2f3116808fda8	meson	9f3e84959ae1d60e19bc91f212774dcc
 _md5_=a6665c3d30f073948bf49c9c4ec19bf1
