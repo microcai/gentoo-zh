@@ -1,4 +1,4 @@
-# Copyright 2020 Gentoo Authors
+# Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -49,6 +49,22 @@ font_clean(){
 	done
 }
 
+free_clean(){
+	for lang in ${LANGUAGES}; do
+		use l10n_${lang%:*} && continue
+		declare fix
+		case ${lang%:*} in
+			de)
+				fix="de";;
+			en-US)
+				fix="en";;
+			en-GB)
+				fix="en";;
+		esac
+		rm *free_${fix}.pdf
+	done
+}
+
 lang_clean(){
 for lang in ${LANGUAGES}; do
 		use l10n_${lang%:*} && continue
@@ -86,6 +102,43 @@ for lang in ${LANGUAGES}; do
 
 }
 
+doc_clean(){
+for lang in ${LANGUAGES}; do
+		use l10n_${lang%:*} && continue
+		declare doc
+		case ${lang%:*} in
+			da)
+				doc="dk";;
+			el)
+				doc="gr";;
+			en-US)
+				doc="us";;
+			en-GB)
+				doc="uk";;
+			et)
+				doc="ee";;
+			ja)
+				doc="jp";;
+			kk)
+				doc="kz";;
+			ko)
+				doc="kr";;
+			pt-BR)
+				doc="pb";;
+			sl)
+				doc="si";;
+			sv)
+				doc="se";;
+			uk)
+				doc="ua";;
+			*)
+				doc="${lang%:*}";;
+		esac
+		rm inst/*_${doc}.zip
+	done
+
+}
+
 src_unpack() {
 	:
 }
@@ -106,6 +159,8 @@ src_install(){
 
 	font_clean
 	lang_clean
+	free_clean
+	doc_clean
 
 	for m in "${FILESDIR}"/*.desktop; do
 		domenu "${m}"
