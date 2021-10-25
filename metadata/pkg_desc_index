@@ -20,6 +20,7 @@ app-i18n/fcitx5-meta 5.0.9: Merge this to pull in Fcitx packages
 app-i18n/fcitx5-qt 5.0.7-r1 9999: Qt library and IM module for fcitx5
 app-i18n/fcitx5-rime 5.0.7 9999: Rime Support for Fcitx5
 app-i18n/fcitx5-skk 5.0.7 9999: Japanese SKK input engine for Fcitx5
+app-i18n/fcitx5-table-extra 5.0.5: Provides extra table for Fcitx, including Boshiamy, Zhengma, Cangjie, and Quick
 app-i18n/gcin 2.9.0-r2: Another Traditional Chinese IM.
 app-i18n/ibus-rime 9999: Rime Input Method Engine for IBus Framework
 app-i18n/libgooglepinyin 0.1.2-r1: A fork from google pinyin on android
