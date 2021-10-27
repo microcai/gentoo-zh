@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-10-26 12:18:08 CST)
+(The last generation time: 2021-10-27 16:13:24 CST)
 
 ### Packages
 
@@ -206,7 +206,7 @@
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/avim                                    | 0.1                    |            | http://avim.avplayer.org                                                                | avim is a secure IM build around RSA
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/dingtalk                                | 1.0.0.294              |            | https://gov.dingtalk.com                                                                | dingtalk
+ net-im/dingtalk                                | 1.1.0.338              |            | https://gov.dingtalk.com                                                                | dingtalk
    dev-libs/libthai                             | 0.1.28                 |  D, RD     | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
      dev-libs/libdatrie                         | 0.2.13                 |  D, RD     | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
 ------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
