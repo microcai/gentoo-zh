@@ -10,6 +10,6 @@ LICENSE=all-rights-reserved
 RDEPEND=dev-libs/libthai net-nds/openldap sys-libs/glibc sys-libs/zlib sys-process/procps
 RESTRICT=strip mirror bindist
 SLOT=0
-SRC_URI=https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_1.0.0.294_amd64.deb
+SRC_URI=https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_1.1.0.338_amd64.deb
 _eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	multilib	4b66d835ec72e021e359bb81eacfe988	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	unpacker	928e1f35ef78ba9fc2b214e29c2b55a4	xdg-utils	27f9a2f19502b925ac117bd657aa2979	xdg	6024fbc93167fad782e2032933654857
 _md5_=acf88d45191c1cf4eb8328f169f12803
