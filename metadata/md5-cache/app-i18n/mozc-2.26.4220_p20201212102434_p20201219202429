@@ -1,0 +1,17 @@
+BDEPEND=|| ( ( dev-lang/python:3.9 dev-python/six[python_targets_python3_9(-)] ) ( dev-lang/python:3.8 dev-python/six[python_targets_python3_8(-)] ) ) >=dev-libs/protobuf-3.0.0 dev-util/gyp dev-util/ninja virtual/pkgconfig emacs? ( app-editors/emacs:* ) fcitx4? ( sys-devel/gettext ) fcitx5? ( sys-devel/gettext )
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test unpack
+DEPEND==dev-cpp/abseil-cpp-20200923*[cxx17(+)] >=dev-libs/protobuf-3.0.0:= fcitx4? ( app-i18n/fcitx:4 virtual/libintl ) fcitx5? ( app-i18n/fcitx5:5 app-i18n/libime sys-devel/gettext virtual/libintl ) gui? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 ) ibus? ( >=app-i18n/ibus-1.4.1 dev-libs/glib:2 x11-libs/libxcb ) renderer? ( dev-libs/glib:2 x11-libs/cairo x11-libs/gtk+:2 x11-libs/pango ) test? ( >=dev-cpp/gtest-1.8.0 dev-libs/jsoncpp ) dev-util/desktop-file-utils x11-misc/shared-mime-info
+DESCRIPTION=Mozc - Japanese input method editor
+EAPI=7
+HOMEPAGE=https://github.com/google/mozc
+INHERIT=elisp-common multiprocessing python-any-r1 toolchain-funcs desktop xdg
+IUSE=debug emacs fcitx4 fcitx5 +gui ibus renderer test
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD BSD-2 ipadic public-domain unicode
+RDEPEND==dev-cpp/abseil-cpp-20200923*[cxx17(+)] >=dev-libs/protobuf-3.0.0:= emacs? ( app-editors/emacs:* ) fcitx4? ( app-i18n/fcitx:4 virtual/libintl ) fcitx5? ( app-i18n/fcitx5:5 app-i18n/libime sys-devel/gettext virtual/libintl ) gui? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 ) ibus? ( >=app-i18n/ibus-1.4.1 dev-libs/glib:2 x11-libs/libxcb ) renderer? ( dev-libs/glib:2 x11-libs/cairo x11-libs/gtk+:2 x11-libs/pango )
+REQUIRED_USE=|| ( emacs fcitx4 fcitx5 ibus )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/google/mozc/archive/9ba59b64d53365c1fe93c1c245b4ec3e35bdadf0.tar.gz -> mozc-2.26.4220-20201212102434.tar.gz https://github.com/hiroyuki-komatsu/japanese-usage-dictionary/archive/a4a66772e33746b91e99caceecced9a28507e925.tar.gz -> japanese-usage-dictionary-20180701040110.tar.gz https://github.com/fcitx/mozc/archive/1ea089debc31ff216473369ad71c08318384ee06.tar.gz -> fcitx-mozc-2.26.4220-20201219202429.tar.gz
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	python-utils-r1	655fe65f186504e455c2f3116808fda8	python-any-r1	13f6d423c5c5bc519a9b552654cc745f	desktop	c0d27bf73aa08ca05b663dbd31fbef28	xdg-utils	27f9a2f19502b925ac117bd657aa2979	xdg	6024fbc93167fad782e2032933654857
+_md5_=b5b01361497b0fa74d4815cb18d87d16

@@ -28,6 +28,7 @@ app-i18n/libgooglepinyin 0.1.2-r1: A fork from google pinyin on android
 app-i18n/libime 1.0.8 9999: Fcitx5 Next generation of fcitx
 app-i18n/lunar 2.2-r5: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
+app-i18n/mozc 2.26.4220_p20201212102434_p20201219202429 9999: Mozc - Japanese input method editor
 app-i18n/scim-chrasis 9999.0.0.1: Chrasis SCIM binding for chinese character recognition.
 app-i18n/sogoupinyin 2.4.0.3469: Sogou Pinyin input method.
 app-i18n/zh-autoconvert 0.3.16-r3: Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
