@@ -11,5 +11,5 @@ RDEPEND=dev-libs/nss dev-util/desktop-file-utils x11-libs/gtk+:3 x11-libs/libX11
 REQUIRED_USE=mips? ( !big-endian )
 SLOT=0
 SRC_URI=amd64? ( https://sf3-cn.feishucdn.com/obj/suite-public-file-cn/b4f6bd/bytedance-feishu-beta_4.8.0-24_amd64.deb ) arm64? ( https://sf3-cn.feishucdn.com/obj/suite-public-file-cn/b4f6bd/bytedance-feishu-beta_4.8.0-24_arm64.deb ) mips? ( https://sf3-cn.feishucdn.com/obj/suite-public-file-cn/b4f6bd/bytedance-feishu-beta_4.8.0-24_mips64el.deb )
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	xdg-utils	27f9a2f19502b925ac117bd657aa2979	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	unpacker	928e1f35ef78ba9fc2b214e29c2b55a4
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	unpacker	928e1f35ef78ba9fc2b214e29c2b55a4
 _md5_=a2f1f648823363bfcbb4e8d0d4a22f4c

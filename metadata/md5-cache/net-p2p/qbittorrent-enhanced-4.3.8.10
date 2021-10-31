@@ -12,5 +12,5 @@ RDEPEND=>=dev-libs/boost-1.62.0-r1:= dev-qt/qtcore:5 dev-qt/qtnetwork:5[ssl] dev
 REQUIRED_USE=dbus? ( X )
 SLOT=0
 SRC_URI=https://github.com/c0re100/qBittorrent-Enhanced-Edition/archive/release-4.3.8.10.tar.gz -> qbittorrent-enhanced-4.3.8.10.tar.gz
-_eclasses_=xdg-utils	27f9a2f19502b925ac117bd657aa2979
+_eclasses_=xdg-utils	4f29a8b760a594a212abe9c2ba957c31
 _md5_=e80e72329507dc7515037c765926c8dd
