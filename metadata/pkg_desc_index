@@ -6,7 +6,7 @@ app-admin/cockpit 234: A systemd web based user interface for Linux server
 app-arch/zchunk 1.1.16: A format designed for highly efficient deltas while maintaining good compression
 app-crypt/archlinux-keyring 20210616: GnuPG keyring of Archlinux developer keys
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
-app-editors/typora 0.11.8: Typora will give you a seamless experience as both a reader and a writer.
+app-editors/typora 0.11.14: Typora will give you a seamless experience as both a reader and a writer.
 app-editors/visual-studio-code-bin 1.61.2: Multiplatform Visual Studio Code from Microsoft
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
@@ -128,7 +128,7 @@ net-misc/you-get 9999: A video downloader for YouTube, Youku, niconico and a few
 net-p2p/amule-dlp 9999: aMule with DLP patch, the all-platform eMule p2p client
 net-p2p/amule-dlp-antileech 9999: amule-dlp-antileech, dynamic DLP library for amule-dlp
 net-p2p/n2n 2.6 2.8: A Layer Two Peer-to-Peer VPN
-net-p2p/qbittorrent-enhanced 4.3.1.11 4.3.8.10: qBittorrent Enhanced, based on qBittorrent
+net-p2p/qbittorrent-enhanced 4.3.8.10 4.3.9.10: qBittorrent Enhanced, based on qBittorrent
 net-print/epson-inkjet-printer_201207w 1.0.0: Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 net-proxy/Xray 1.4.3 1.4.4 1.4.5: Xray, Penetrates Everything.
 net-proxy/clash 1.7.0 1.7.1: A rule-based tunnel in Go.
