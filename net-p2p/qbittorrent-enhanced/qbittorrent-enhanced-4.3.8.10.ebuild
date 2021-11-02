@@ -13,7 +13,7 @@ if [[ ${PV} == *9999 ]]; then
 	EGIT_REPO_URI="https://github.com/c0re100/qBittorrent-Enhanced-Edition.git"
 else
 	SRC_URI="https://github.com/c0re100/qBittorrent-Enhanced-Edition/archive/release-${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64"
+	KEYWORDS="amd64"
 	S="${WORKDIR}/qBittorrent-Enhanced-Edition-release-${PV}"
 fi
 
