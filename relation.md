@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-10-29 21:02:05 CST)
+(The last generation time: 2021-11-02 22:03:08 CST)
 
 ### Packages
 
@@ -255,8 +255,8 @@
  net-p2p/n2n                                    | 2.6                                       |            | http://www.ntop.org/n2n/                                                                | A Layer Two Peer-to-Peer VPN
                                                 | 2.8                                       |            |                                                                                         |
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-p2p/qbittorrent-enhanced                   | 4.3.1.11                                  |            | https://github.com/c0re100/qBittorrent-Enhanced-Edition                                 | qBittorrent Enhanced, based on qBittorrent
-                                                | 4.3.8.10                                  |            |                                                                                         |
+ net-p2p/qbittorrent-enhanced                   | 4.3.8.10                                  |            | https://github.com/c0re100/qBittorrent-Enhanced-Edition                                 | qBittorrent Enhanced, based on qBittorrent
+                                                | 4.3.9.10                                  |            |                                                                                         |
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-print/epson-inkjet-printer_201207w         | 1.0.0                                     |            | http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX                              | Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
