@@ -108,6 +108,7 @@ net-dialup/mentohust 9999: A Ruijie and Cernet supplicant on Linux and MacOS
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
 net-dns/libidn11 1.33: Internationalized Domain Names (IDN) implementation
 net-dns/phddns 2.0.6.32828: Phddns
+net-fs/ksmbd-tools 3.4.2 9999: cifsd/ksmbd kernel server userspace utilities
 net-im/avim 0.1: avim is a secure IM build around RSA
 net-im/dingtalk 1.1.0.338: dingtalk
 net-im/freetalk 4.1: Console based Jabber client
@@ -160,7 +161,6 @@ sys-fs/coda 7.0.5: Coda is an advanced network file system, similar to NFS
 sys-fs/erofs-utils 1.3: Userspace tools for EROFS images
 sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
-sys-fs/ksmbd-tools 9999: Tools for in-kernel CIFS server
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/linux-tkg-sources 5.14.13-r1 5.14.15: Linux-TkG, cjktty, patchset for main kernel tree
 sys-kernel/mkinitcpio 30-r2: Modular initramfs image creation utility
