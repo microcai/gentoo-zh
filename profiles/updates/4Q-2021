@@ -1,1 +1,1 @@
-mv sys-fs/ksmbd-tools net-fs/ksmbd-tools
+move sys-fs/ksmbd-tools net-fs/ksmbd-tools
