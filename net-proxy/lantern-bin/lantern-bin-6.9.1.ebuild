@@ -7,7 +7,7 @@ inherit unpacker systemd xdg
 
 DESCRIPTION="A free peer-to-peer internet censorship circumvention tool"
 HOMEPAGE="https://github.com/getlantern/lantern"
-COMMIT="eb01d51b091f4de15844dd904a2eec7b8b4d8d75"
+COMMIT="5f2ad011e653fa6b2b67e8bce7f82863eeaaa280"
 SRC_URI="
 	x86?	( https://github.com/getlantern/lantern-binaries/raw/${COMMIT}/lantern-installer-32-bit.deb -> lantern-bin-${PV}.x86.deb )
 	amd64?	( https://github.com/getlantern/lantern-binaries/raw/${COMMIT}/lantern-installer-64-bit.deb -> lantern-bin-${PV}.amd64.deb )"
