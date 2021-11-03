@@ -1,15 +1,15 @@
 BDEPEND=sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.2-r1:1.16 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=configure install prepare setup unpack
+DEFINED_PHASES=configure install prepare unpack
 DEPEND=>=dev-libs/glib-2.40 >=dev-libs/libnl-3.0 kerberos? ( virtual/krb5 )
 DESCRIPTION=cifsd/ksmbd kernel server userspace utilities
 EAPI=8
 HOMEPAGE=https://github.com/cifsd-team/ksmbd-tools
-INHERIT=autotools linux-info systemd git-r3
-IUSE=kerberos kernel_linux
+INHERIT=autotools systemd git-r3
+IUSE=kerberos systemd
 LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=>=dev-libs/glib-2.40 >=dev-libs/libnl-3.0 kerberos? ( virtual/krb5 )
 RESTRICT=mirror
 SLOT=0
-_eclasses_=gnuconfig	262062cef0ba4f22b397193da514a350	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	libtool	241a8f577b9781a42a7421e53448a44e	autotools	c9df06c186913b43eb211100ef5fe2cf	linux-info	6b67971d8a0a029d13181f2cfb9f5fa9	systemd	2736b403a83f194b59b767f3b344c2c1	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=61849ecc2bf2a32965e92104790544c3
+_eclasses_=gnuconfig	262062cef0ba4f22b397193da514a350	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	libtool	241a8f577b9781a42a7421e53448a44e	autotools	c9df06c186913b43eb211100ef5fe2cf	systemd	2736b403a83f194b59b767f3b344c2c1	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=f9b50951adcd55d886f54fba2c3a58f1
