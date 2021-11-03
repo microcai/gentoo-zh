@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit autotools linux-info systemd
+inherit autotools systemd
 
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
@@ -20,7 +20,7 @@ RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="kerberos"
+IUSE="kerberos systemd"
 
 DEPEND=">=dev-libs/glib-2.40
 	>=dev-libs/libnl-3.0
@@ -29,15 +29,6 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 DOCS=( AUTHORS README Documentation/configuration.txt )
-
-pkg_setup() {
-	if kernel_is -lt 5 15 0; then
-		eerror
-		eerror "${PN} currently only supports kernel >= 5.15.0"
-		eerror
-		die "Upgrade to kernel >= 5.15.0 before installing ksmbd-tools"
-	fi
-}
 
 src_prepare() {
 	default
@@ -55,5 +46,5 @@ src_install() {
 	insinto /etc/ksmbd
 	doins "${S}"/smb.conf.example
 
-	systemd_dounit "${S}"/ksmbd.service
+	use systemd && systemd_dounit "${S}"/ksmbd.service
 }
