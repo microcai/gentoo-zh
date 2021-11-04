@@ -10,7 +10,7 @@ if [[ "${PV}" == 9999 ]]; then
 	KEYWORDS=""
 	EGIT_REPO_URI="https://github.com/cifsd-team/ksmbd.git"
 else
-	KEYWORDS="amd64 ~arm ~arm64 ~mips ~ppc64 ~riscv ~s390 ~x86"
+	KEYWORDS="~amd64 ~arm ~arm64 ~mips ~ppc64 ~riscv ~s390 ~x86"
 	SRC_URI="https://github.com/cifsd-team/ksmbd/archive/${PV}.tar.gz -> ${P}.tar.gz"
 fi
 
@@ -20,7 +20,9 @@ RESTRICT="mirror test"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+IUSE="+tools"
+
+DEPEND="tools? ( net-fs/ksmbd-tools )"
 
 MODULE_NAMES="ksmbd(fs/ksmbd)"
 BUILD_TARGETS="all"
@@ -34,6 +36,7 @@ pkg_setup() {
 		die "Upgrade to kernel >= 5.4.0 before installing ksmbd"
 	fi
 
-	CONFIG_CHECK="!CONFIG_SMB_SERVER"
-	check_extra_config
+	CONFIG_CHECK="!SMB_SERVER"
+	SMB_SERVER_ERROR="Your kernel already have built with CONFIG_SMB_SERVER"
+	linux-info_pkg_setup
 }

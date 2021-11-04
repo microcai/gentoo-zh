@@ -20,7 +20,9 @@ RESTRICT="mirror test"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+IUSE="+tools"
+
+DEPEND="tools? ( net-fs/ksmbd-tools )"
 
 MODULE_NAMES="ksmbd(fs/ksmbd)"
 BUILD_TARGETS="all"
@@ -33,6 +35,8 @@ pkg_setup() {
 		eerror
 		die "Upgrade to kernel >= 5.4.0 before installing ksmbd"
 	fi
-	CONFIG_CHECK="!CONFIG_SMB_SERVER"
-	check_extra_config
+
+	CONFIG_CHECK="!SMB_SERVER"
+	SMB_SERVER_ERROR="Your kernel already have built with CONFIG_SMB_SERVER"
+	linux-info_pkg_setup
 }
