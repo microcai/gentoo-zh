@@ -4,4 +4,7 @@
 	<upstream>
 		<remote-id type="github">cifsd-team/ksmbd</remote-id>
 	</upstream>
+	<use>
+		<flag name="tools">Install additional tools <pkg>net-fs/ksmbd-tools</pkg></flag>
+	</use>
 </pkgmetadata>
