@@ -103,6 +103,7 @@ media-sound/feeluown:local - add local music support for feeluown
 media-sound/feeluown:netease - add netease cloud music support for feeluown
 media-sound/feeluown:qqmusic - add qq music support for feeluown
 media-sound/feeluown:webengine - add support to login via web page
+net-fs/ksmbd:tools - Install additional tools net-fs/ksmbd-tools
 net-im/telegram-purple:gcrypt - libgcrypt support
 net-im/telegram-purple:png - png stickers support
 net-im/telegram-purple:webp - webp stickers support
