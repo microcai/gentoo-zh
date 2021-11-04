@@ -9,9 +9,9 @@ User=root
 Group=root
 RemainAfterExit=yes
 ExecStartPre=-/sbin/modprobe ksmbd
-ExecStart=/sbin/ksmbd.mountd -s
-ExecReload=/sbin/ksmbd.control -s && /sbin/ksmbd.mountd
-ExecStop=/sbin/ksmbd.control -s
+ExecStart=/usr/sbin/ksmbd.mountd -s
+ExecReload=/usr/sbin/ksmbd.control -s && /usr/sbin/ksmbd.mountd
+ExecStop=/usr/sbin/ksmbd.control -s
 
 [Install]
 WantedBy=multi-user.target

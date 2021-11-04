@@ -33,6 +33,7 @@ DOCS=( AUTHORS README Documentation/configuration.txt )
 src_prepare() {
 	default
 	eautoreconf
+	sed -i -e 's,/sbin/ksmbd,/usr/sbin/ksmbd,g' ksmbd.service || die
 }
 
 src_configure(){
