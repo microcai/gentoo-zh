@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install postinst postrm preinst unpack
+DEPEND=media-video/vlc[taglib]
+DESCRIPTION=Netease Cloud Music, converted from .deb package
+EAPI=8
+HOMEPAGE=https://music.163.com
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=unpacker desktop toolchain-funcs xdg
+KEYWORDS=-* ~amd64
+LICENSE=NetEase BSD
+RDEPEND=media-video/vlc[taglib] sys-devel/binutils x11-libs/gtk+:3 net-dns/avahi sys-auth/nss-mdns net-libs/libgssglue
+RESTRICT=strip mirror
+SLOT=0
+SRC_URI=https://d1.music.126.net/dmusic/netease-cloud-music_1.2.1_amd64_ubuntu_20190428.deb
+_eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	unpacker	928e1f35ef78ba9fc2b214e29c2b55a4	desktop	c0d27bf73aa08ca05b663dbd31fbef28	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	xdg	6024fbc93167fad782e2032933654857
+_md5_=a68f66c63264e4404a8c4ea9a9bd0bab
