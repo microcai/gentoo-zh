@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-11-04 19:59:22 CST)
+(The last generation time: 2021-11-04 21:30:46 CST)
 
 ### Packages
 
@@ -339,6 +339,8 @@
  sys-fs/systemd-zpool-scrub                     | 1.1                                       |            | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/mkinitcpio                          | 30-r2                                     |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
+------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ sys-kernel/xanmod-lts                          | 5.10.75                                   |            | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-libs/elog-functions                        | 0.0.2                                     |            | http://xochitl.matem.unam.mx/~canek/gentoo-systemd-only/index.html                      | Compatibility functions for the log eclass functions of OpenRC
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
