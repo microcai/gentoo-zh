@@ -20,6 +20,7 @@ RDEPEND="
 		sys-kernel/zen-sources
 		sys-kernel/raspberrypi-sources
 		sys-kernel/xanmod-hybrid
+		sys-kernel/xanmod-lts
 		sys-kernel/xanmod-rt
 		sys-kernel/linux-tkg-sources
 		sys-kernel/gentoo-kernel
