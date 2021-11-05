@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-11-05 12:20:39 CST)
+(The last generation time: 2021-11-05 12:33:01 CST)
 
 ### Packages
 
@@ -340,8 +340,6 @@
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/mkinitcpio                          | 30-r2                                     |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-kernel/xanmod-lts                          | 5.10.75                                   |            | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
-------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-libs/elog-functions                        | 0.0.2                                     |            | http://xochitl.matem.unam.mx/~canek/gentoo-systemd-only/index.html                      | Compatibility functions for the log eclass functions of OpenRC
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-libs/libixp                                | 0.5_p20110208-r3                          |            | https://libs.suckless.org/deprecated/libixp                                             | A stand-alone client/server 9P library including ixpc client
@@ -361,6 +359,7 @@
                                                 | 5.14.14                                   |            |                                                                                         |
                                                 | 5.14.15                                   |            |                                                                                         |
                                                 | 5.14.2                                    |            |                                                                                         |
+   sys-kernel/xanmod-lts                        | 5.10.75                                   | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
    sys-kernel/xanmod-rt                         | 5.13.1                                    | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod-RT, cjktty, uksm patchset for main kernel tree
                                                 | 5.13.1-r1                                 |            |                                                                                         |
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
