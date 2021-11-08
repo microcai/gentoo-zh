@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 # Define what default functions to run
 ETYPE="sources"
@@ -10,7 +10,7 @@ ETYPE="sources"
 K_EXP_GENPATCHES_NOUSE="1"
 
 # Just get basic genpatches, -xanmod patch set already includes main updates
-K_GENPATCHES_VER="1"
+K_GENPATCHES_VER="2"
 
 # -xanmod-hybrid already sets EXTRAVERSION to kernel Makefile
 K_NOSETEXTRAVERSION="1"
@@ -20,7 +20,7 @@ K_SECURITY_UNSUPPORTED="1"
 
 # We want the very basic patches from gentoo-sources, experimental patch is
 # already included in xanmod-hybrid
-K_WANT_GENPATCHES="base extras"
+K_WANT_GENPATCHES="base	extras" 
 
 # Default enable Xanmod, You have to choose one of them.
 # Both of them will make some errors
@@ -43,12 +43,11 @@ HOMEPAGE="https://github.com/HougeLangley/customkernel"
 LICENSE+=" CDDL"
 
 SRC_URI="
-${KERNEL_BASE_URI}/linux-5.14.tar.xz
+${KERNEL_BASE_URI}/linux-5.15.tar.xz
 ${GENPATCHES_URI}
-https://github.com/HougeLangley/customkernel/releases/download/v5.14-patch/patch-5.14.2-xanmod1
-https://github.com/HougeLangley/customkernel/releases/download/v5.14-patch/patch-5.14.2-xanmod1-cacule
-https://github.com/HougeLangley/customkernel/releases/download/v5.14-others/750HZ.patch
-https://github.com/HougeLangley/customkernel/releases/download/v5.14-others/v1-cjktty-5.14.patch
+https://github.com/HougeLangley/customkernel/releases/download/v5.15-patch/patch-5.15.1-xanmod1
+https://github.com/HougeLangley/customkernel/releases/download/v5.15-patch/patch-5.15.1-xanmod1-tt
+https://github.com/HougeLangley/customkernel/releases/download/v5.15-others/v1-cjktty-5.15.patch
 "
 KEYWORDS="~amd64"
 
@@ -56,23 +55,20 @@ S="${WORKDIR}/linux-${PV}-xanmod"
 
 K_EXTRAEINFO="For more info on xanmod-hybrid and details on how to report problems,	see: ${HOMEPAGE}."
 
-PATCHES=( "${DISTDIR}/patch-5.14.2-xanmod1"
-"${DISTDIR}/patch-5.14.2-xanmod1-cacule"
-"${DISTDIR}/750HZ.patch"
-"${DISTDIR}/v1-cjktty-5.14.patch" )
+PATCHES=( "${DISTDIR}/patch-5.15.1-xanmod1"
+"${DISTDIR}/patch-5.15.1-xanmod1-tt"
+"${DISTDIR}/v1-cjktty-5.15.patch" )
 
 src_prepare() {
 	# Default enable Xanmod
 	if	use	xanmod	;	then
-		eapply "${DISTDIR}/patch-5.14.2-xanmod1"	||	die
-		eapply "${DISTDIR}/750HZ.patch"	||	die
-		eapply "${DISTDIR}/v1-cjktty-5.14.patch"	||	die
+		eapply "${DISTDIR}/patch-5.15.1-xanmod1"	||	die
+		eapply "${DISTDIR}/v1-cjktty-5.15.patch"	||	die
 	fi
 	# Enable Xanmod-CaCule
 	if	use	cacule	;	then
-		eapply "${DISTDIR}/patch-5.14.2-xanmod1-cacule"	||	die
-		eapply "${DISTDIR}/750HZ.patch"	||	die
-		eapply "${DISTDIR}/v1-cjktty-5.14.patch"	||	die
+		eapply "${DISTDIR}/patch-5.15.1-xanmod1-tt"	||	die
+		eapply "${DISTDIR}/v1-cjktty-5.15.patch"	||	die
 	fi
 
 	kernel-2_src_prepare
