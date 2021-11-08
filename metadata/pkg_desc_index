@@ -164,7 +164,6 @@ sys-fs/erofs-utils 1.3: Userspace tools for EROFS images
 sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
-sys-kernel/linux-tkg-sources 5.14.13-r1 5.14.15: Linux-TkG, cjktty, patchset for main kernel tree
 sys-kernel/mkinitcpio 30-r2: Modular initramfs image creation utility
 sys-kernel/xanmod-hybrid 5.15.1: Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
 sys-kernel/xanmod-lts 5.10.75: XanMod lts kernel built with Gentoo patches and cjktty

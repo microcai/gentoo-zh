@@ -120,9 +120,6 @@ net-proxy/smartproxy:system-boost - use system supplied boost
 net-proxy/v2ray:tool - Build the additional tool: v2ctl
 sys-apps/pacman:doc - Install extended documentation using app-doc/doxygen. (Man pages are included by default.)
 sys-apps/pacman:gpg - Enable GPG signature verification using app-crypt/gpgme
-sys-kernel/linux-tkg-sources:bmq - Eable BMQ CPU Scheduler.
-sys-kernel/linux-tkg-sources:cacule - Eable CacULE CPU Scheduler.
-sys-kernel/linux-tkg-sources:pds - Eable PDS CPU Scheduler.
 sys-kernel/xanmod-hybrid:cacule - Enable Default Xanmod-CaCule Patches.
 sys-kernel/xanmod-hybrid:xanmod - Enable Default Xanmod Patches.
 sys-kernel/xanmod-lts:hardened - Use selection of hardening options recommended by Kernel Self Protection Project
