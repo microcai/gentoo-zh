@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-11-08 20:15:20 CST)
+(The last generation time: 2021-11-08 21:03:12 CST)
 
 ### Packages
 
@@ -348,8 +348,6 @@
  sys-process/btop                               | 1.0.9                                     |            | https://github.com/aristocratos/btop                                                    | Resources monitor. The C++ version of bashtop
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                          | 3-r6                                      |            |                                                                                         | Virtual for Linux kernel sources
-   sys-kernel/linux-tkg-sources                 | 5.14.13-r1                                | RD         | https://github.com/Frogging-Family/linux-tkg                                            | Linux-TkG, cjktty, patchset for main kernel tree
-                                                | 5.14.15                                   |            |                                                                                         |
    sys-kernel/xanmod-hybrid                     | 5.15.1                                    | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
    sys-kernel/xanmod-lts                        | 5.10.75                                   | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
    sys-kernel/xanmod-rt                         | 5.13.1                                    | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod-RT, cjktty, uksm patchset for main kernel tree
