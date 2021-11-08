@@ -22,7 +22,6 @@ RDEPEND="
 		sys-kernel/xanmod-hybrid
 		sys-kernel/xanmod-lts
 		sys-kernel/xanmod-rt
-		sys-kernel/linux-tkg-sources
 		sys-kernel/gentoo-kernel
 		sys-kernel/gentoo-kernel-bin
 		sys-kernel/vanilla-kernel
