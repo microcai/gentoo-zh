@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-11-08 21:03:12 CST)
+(The last generation time: 2021-11-09 08:34:05 CST)
 
 ### Packages
 
@@ -271,8 +271,8 @@
                                                 | 1.4.4                                     |            |                                                                                         |
                                                 | 1.4.5                                     |            |                                                                                         |
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/clash                                | 1.7.0                                     |            | https://github.com/Dreamacro/clash                                                      | A rule-based tunnel in Go.
-                                                | 1.7.1                                     |            |                                                                                         |
+ net-proxy/clash                                | 1.7.1                                     |            | https://github.com/Dreamacro/clash                                                      | A rule-based tunnel in Go.
+                                                | 1.8.0                                     |            |                                                                                         |
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/lantern-bin                          | 6.8.7                                     |            | https://github.com/getlantern/lantern                                                   | A free peer-to-peer internet censorship circumvention tool
                                                 | 6.9.1                                     |            |                                                                                         |
