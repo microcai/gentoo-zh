@@ -64,11 +64,11 @@ src_install() {
 
 	cat >> opt/apps/com.alibabainc.dingtalk/files/Elevator.sh.head <<- EOF || die
 #!/bin/sh
-if [ -z "\$(pidof fcitx5)" ]
+if [ -n "\$(pidof fcitx5)" ]
 then
 export XMODIFIERS="@im=fcitx5"
 export QT_IM_MODULE=fcitx5
-elif [ -z "\$(pidof ibus-daemon)" ]
+elif [ -n "\$(pidof ibus-daemon)" ]
 then
 export XMODIFIERS="@im=ibus"
 export QT_IM_MODULE=ibus
