@@ -103,6 +103,7 @@ media-plugins/osdlyrics 9999 20200403-r1: Standalone lyrics fetcher/displayer (w
 media-sound/feeluown 3.7.9-r1: A user-friendly and hackable music player
 media-sound/linnya 2.2.0: A free music player
 media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb package
+media-sound/yesplaymusic-bin 0.4.2: A third party music player for Netease Music
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/tenvideo 1.0.10: Tencent videos
 net-dialup/mentohust 9999: A Ruijie and Cernet supplicant on Linux and MacOS
