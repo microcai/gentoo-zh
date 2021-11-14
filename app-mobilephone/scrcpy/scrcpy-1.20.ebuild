@@ -1,7 +1,7 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2021 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=8
 
 inherit meson ninja-utils git-r3
 
@@ -29,7 +29,7 @@ IUSE=""
 
 RESTRICT="test"
 
-COMMON_DEPEND="media-libs/libsdl2[X]
+COMMON_DEPEND="media-libs/libsdl2
 	media-video/ffmpeg"
 DEPEND="${COMMON_DEPEND}"
 RDEPEND="${COMMON_DEPEND}"
