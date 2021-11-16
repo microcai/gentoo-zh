@@ -8,6 +8,6 @@ LICENSE=typora
 RDEPEND=x11-libs/libXScrnSaver
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://www.typora.io/linux/typora_0.11.14_amd64.deb
+SRC_URI=https://www.typora.io/linux/typora_0.11.16_amd64.deb
 _eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28
 _md5_=3fe7c8889adb59da7b36f4d8cedfbbff
