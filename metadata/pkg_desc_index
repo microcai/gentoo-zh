@@ -8,6 +8,7 @@ app-crypt/archlinux-keyring 20210616: GnuPG keyring of Archlinux developer keys
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-editors/typora 0.11.16: Typora will give you a seamless experience as both a reader and a writer.
 app-editors/visual-studio-code-bin 1.62.2: Multiplatform Visual Studio Code from Microsoft
+app-emulation/deepin-udis86 1.72-r4: Deepin Version of Wine
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
 app-i18n/fcitx 4.2.9.8: Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
