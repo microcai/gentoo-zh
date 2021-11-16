@@ -23,5 +23,3 @@ BDEPEND="
 	kde-frameworks/extra-cmake-modules
 	virtual/pkgconfig
 "
-
-PATCHES=( "${FILESDIR}/${P}-fix-CMakeLists.txt.diff" )
