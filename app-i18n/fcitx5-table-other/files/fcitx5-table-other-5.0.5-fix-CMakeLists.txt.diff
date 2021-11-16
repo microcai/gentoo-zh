@@ -1,9 +1,0 @@
---- a/CMakeLists.txt	2021-05-04 23:21:13.000000000 +0800
-+++ b/CMakeLists.txt	2021-10-26 10:58:45.621205465 +0800
-@@ -1,5 +1,5 @@
- cmake_minimum_required(VERSION 3.8)
--project(fcitx-table-other VERSION 5.0.5 LANGUAGES NONE)
-+project(fcitx-table-other VERSION 5.0.5)
- 
- find_package(ECM 1.0 REQUIRED)
- set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
