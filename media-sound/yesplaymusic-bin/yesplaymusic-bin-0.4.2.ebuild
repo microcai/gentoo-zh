@@ -7,7 +7,7 @@ inherit desktop xdg
 
 DESCRIPTION="A third party music player for Netease Music"
 HOMEPAGE="https://github.com/qier222/YesPlayMusic"
-BASE_URI="https://github.com/qier222/YesPlayMusic/releases/download/v{PV}"
+BASE_URI="https://github.com/qier222/YesPlayMusic/releases/download/v${PV}"
 SRC_URI="${BASE_URI}/yesplaymusic-${PV}.pacman"
 
 LICENSE="MIT"
