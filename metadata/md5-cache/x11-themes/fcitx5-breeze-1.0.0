@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=Fcitx5 theme to match KDE's Breeze style.
+EAPI=8
+HOMEPAGE=https://github.com/scratch-er/fcitx5-breeze
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=app-i18n/fcitx5
+SLOT=0
+SRC_URI=https://github.com/scratch-er/fcitx5-breeze/archive/refs/tags/v1.0.0.tar.gz -> fcitx5-breeze-1.0.0.tar.gz
+_md5_=b1deea2e1c62cc4ebb0d22b21769277f

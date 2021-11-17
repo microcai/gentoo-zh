@@ -192,6 +192,7 @@ x11-misc/ly 0.5.0-r1: Ly - a TUI display manager
 x11-misc/picom-jonaburg 8 9999: A lightweight compositor for X11 (previously a compton fork)
 x11-plugins/vicious 9999: Modular widget library for x11-wm/awesome
 x11-terms/contour 0.2.1.174: Modern C++ Terminal Emulator
+x11-themes/fcitx5-breeze 1.0.0: Fcitx5 theme to match KDE's Breeze style.
 x11-themes/lxice 0.1.0: LXDE theme for IceWM
 x11-themes/smplayer-themes-nonfree 0.1.0-r1 0.1.1-r1: Icon themes for smplayer
 x11-wm/9wm 1.1: A window manager emulation of the Plan 9 window manager 8-1/2.
