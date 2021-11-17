@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-11-17 10:58:01 CST)
+(The last generation time: 2021-11-17 13:44:31 CST)
 
 ### Packages
 
@@ -219,7 +219,7 @@
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-fs/ksmbd                                   | 3.4.2-r1                                  |            | https://github.com/cifsd-team/ksmbd                                                     | ksmbd kernel server(SMB/CIFS server)
                                                 | 9999                                      |            |                                                                                         |
-   net-fs/ksmbd-tools                           | 3.4.2                                     |  D         | https://github.com/cifsd-team/ksmbd-tools                                               | cifsd/ksmbd kernel server userspace utilities
+   net-fs/ksmbd-tools                           | 3.4.2-r1                                  |  D         | https://github.com/cifsd-team/ksmbd-tools                                               | cifsd/ksmbd kernel server userspace utilities
                                                 | 9999                                      |            |                                                                                         |
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/avim                                    | 0.1                                       |            | http://avim.avplayer.org                                                                | avim is a secure IM build around RSA
