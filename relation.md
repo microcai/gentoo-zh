@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-11-17 16:43:09 CST)
+(The last generation time: 2021-11-17 18:04:10 CST)
 
 ### Packages
 
@@ -20,7 +20,8 @@
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/visual-studio-code-bin             | 1.62.2                                    |            | https://code.visualstudio.com                                                           | Multiplatform Visual Studio Code from Microsoft
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-emulation/deepin-udis86                    | 1.72-r4                                   |            | https://www.deepin.org                                                                  | Deepin Version of Wine
+ app-emulation/deepin-wine6-stable              | 6.0.0.18-r1                               |            | https://www.deepin.org                                                                  | Deepin wine6 stable
+   app-emulation/deepin-udis86                  | 1.72-r4                                   | RD         | https://www.deepin.org                                                                  | Deepin Version of Wine
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/deepin-wine-helper               | 5.1.27-r1                                 |            | https://www.deepin.org                                                                  | Deepin Wine Helper
    app-emulation/deepin-wine-plugin             | 5.1.13-r1                                 | RD         | https://www.deepin.org                                                                  | Deepin Wine plugin
