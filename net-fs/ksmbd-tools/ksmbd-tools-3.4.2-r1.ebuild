@@ -28,6 +28,10 @@ DEPEND=">=dev-libs/glib-2.40
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
+PATCHES=(
+	"${FILESDIR}/${PN}-Standardize-exit-codes.patch"
+)
+
 DOCS=( AUTHORS README Documentation/configuration.txt )
 
 src_prepare() {

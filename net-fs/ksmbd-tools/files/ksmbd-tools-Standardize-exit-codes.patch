@@ -1,0 +1,82 @@
+From 24df05ea26852fcf349647af2ef642112fceafba Mon Sep 17 00:00:00 2001
+From: Guillaume Castagnino <casta@xwing.info>
+Date: Thu, 4 Nov 2021 09:34:32 +0100
+Subject: [PATCH] ksmbd-tools: Standardize exit codes
+
+In case of success, EXIT_SUCCESS must be returned by the control binary
+This standard behaviour is expected for example for the unit file
+Standardize failure codes instead of returning directly function error
+code
+
+Signed-off-by: Guillaume Castagnino <casta@xwing.info>
+Signed-off-by: Namjae Jeon <linkinjeon@kernel.org>
+---
+ control/control.c | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/control/control.c b/control/control.c
+index 5b86355..780a48a 100644
+--- a/control/control.c
++++ b/control/control.c
+@@ -38,12 +38,12 @@ static int ksmbd_control_shutdown(void)
+ 	fd = open("/sys/class/ksmbd-control/kill_server", O_WRONLY);
+ 	if (fd < 0) {
+ 		pr_err("open failed: %d\n", errno);
+-		return fd;
++		return EXIT_FAILURE;
+ 	}
+ 
+ 	ret = write(fd, "hard", 4);
+ 	close(fd);
+-	return ret;
++	return ret != -1 ? EXIT_SUCCESS : EXIT_FAILURE;
+ }
+ 
+ static int ksmbd_control_show_version(void)
+@@ -54,14 +54,14 @@ static int ksmbd_control_show_version(void)
+ 	fd = open("/sys/module/ksmbd/version", O_RDONLY);
+ 	if (fd < 0) {
+ 		pr_err("open failed: %d\n", errno);
+-		return fd;
++		return EXIT_FAILURE;
+ 	}
+ 
+ 	ret = read(fd, ver, 255);
+ 	close(fd);
+ 	if (ret != -1)
+ 		pr_info("ksmbd version : %s\n", ver);
+-	return ret;
++	return ret != -1 ? EXIT_SUCCESS : EXIT_FAILURE;
+ }
+ 
+ static int ksmbd_control_debug(char *comp)
+@@ -72,7 +72,7 @@ static int ksmbd_control_debug(char *comp)
+ 	fd = open("/sys/class/ksmbd-control/debug", O_RDWR);
+ 	if (fd < 0) {
+ 		pr_err("open failed: %d\n", errno);
+-		return fd;
++		return EXIT_FAILURE;
+ 	}
+ 
+ 	ret = write(fd, comp, strlen(comp));
+@@ -85,7 +85,7 @@ static int ksmbd_control_debug(char *comp)
+ 	pr_info("%s\n", buf);
+ out:
+ 	close(fd);
+-	return ret;
++	return ret != -1 ? EXIT_SUCCESS : EXIT_FAILURE;
+ }
+ 
+ int main(int argc, char *argv[])
+@@ -104,7 +104,7 @@ int main(int argc, char *argv[])
+ 	while ((c = getopt(argc, argv, "sd:cVh")) != EOF)
+ 		switch (c) {
+ 		case 's':
+-			ksmbd_control_shutdown();
++			ret = ksmbd_control_shutdown();
+ 			break;
+ 		case 'd':
+ 			ret = ksmbd_control_debug(optarg);
+-- 
+2.32.0
+
