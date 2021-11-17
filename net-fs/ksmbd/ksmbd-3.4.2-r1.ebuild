@@ -36,7 +36,18 @@ pkg_setup() {
 		die "Upgrade to kernel >= 5.4.0 before installing ksmbd"
 	fi
 
-	CONFIG_CHECK="!SMB_SERVER"
+	CONFIG_CHECK="
+		~INET ~MULTIUSER ~FILE_LOCKING
+
+		~NLS ~NLS_UTF8
+
+		~CRYPTO ~CRYPTO_MD4 ~CRYPTO_MD5 ~CRYPTO_HMAC ~CRYPTO_ECB
+		~CRYPTO_LIB_DES ~CRYPTO_SHA256 ~CRYPTO_CMAC ~CRYPTO_SHA512
+		~CRYPTO_AEAD2 ~CRYPTO_CCM ~CRYPTO_GCM ~ASN1 ~OID_REGISTRY ~CRC32"
+
+	CONFIG_CHECK+="
+		!SMB_SERVER"
 	SMB_SERVER_ERROR="Your kernel already have built with CONFIG_SMB_SERVER"
+
 	linux-info_pkg_setup
 }
