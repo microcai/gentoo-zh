@@ -112,7 +112,7 @@ net-dialup/mentohust 9999: A Ruijie and Cernet supplicant on Linux and MacOS
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
 net-dns/libidn11 1.33: Internationalized Domain Names (IDN) implementation
 net-dns/phddns 2.0.6.32828: Phddns
-net-fs/ksmbd 3.4.2 9999: ksmbd kernel server(SMB/CIFS server)
+net-fs/ksmbd 3.4.2-r1 9999: ksmbd kernel server(SMB/CIFS server)
 net-fs/ksmbd-tools 3.4.2 9999: cifsd/ksmbd kernel server userspace utilities
 net-im/avim 0.1: avim is a secure IM build around RSA
 net-im/dingtalk 1.1.0.338: dingtalk
