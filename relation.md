@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-11-17 18:04:10 CST)
+(The last generation time: 2021-11-17 20:44:02 CST)
 
 ### Packages
 
@@ -19,12 +19,6 @@
  app-editors/typora                             | 0.11.16                                   |            | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/visual-studio-code-bin             | 1.62.2                                    |            | https://code.visualstudio.com                                                           | Multiplatform Visual Studio Code from Microsoft
-------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-emulation/deepin-wine6-stable              | 6.0.0.18-r1                               |            | https://www.deepin.org                                                                  | Deepin wine6 stable
-   app-emulation/deepin-udis86                  | 1.72-r4                                   | RD         | https://www.deepin.org                                                                  | Deepin Version of Wine
-------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-emulation/deepin-wine-helper               | 5.1.27-r1                                 |            | https://www.deepin.org                                                                  | Deepin Wine Helper
-   app-emulation/deepin-wine-plugin             | 5.1.13-r1                                 | RD         | https://www.deepin.org                                                                  | Deepin Wine plugin
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/winetricks-zh                    | 9999                                      |            | http://winetricks.org                                                                   | winetricks fork for chinese to install QQ
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -225,6 +219,12 @@
                                                 | 9999                                      |            |                                                                                         |
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/avim                                    | 0.1                                       |            | http://avim.avplayer.org                                                                | avim is a secure IM build around RSA
+------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ net-im/deepin-wine-wechat                      | 3.4.0.38                                  |            | https://aur.archlinux.org/packages/deepin-wine-wechat                                   | Tencent WeChat on Deepin Wine(com.qq.weixin.deepin) For Gentoo
+   app-emulation/deepin-wine6-stable            | 6.0.0.18-r1                               | RD         | https://www.deepin.org                                                                  | Deepin wine6 stable
+     app-emulation/deepin-udis86                | 1.72-r4                                   | RD         | https://www.deepin.org                                                                  | Deepin Version of Wine
+   app-emulation/deepin-wine-helper             | 5.1.27-r1                                 | RD         | https://www.deepin.org                                                                  | Deepin Wine Helper
+     app-emulation/deepin-wine-plugin           | 5.1.13-r1                                 | RD         | https://www.deepin.org                                                                  | Deepin Wine plugin
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/dingtalk                                | 1.1.0.338                                 |            | https://gov.dingtalk.com                                                                | dingtalk
    dev-libs/libthai                             | 0.1.28                                    |  D, RD     | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
