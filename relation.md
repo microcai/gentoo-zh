@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-11-17 13:44:31 CST)
+(The last generation time: 2021-11-17 15:16:29 CST)
 
 ### Packages
 
@@ -355,6 +355,8 @@
  sys-libs/libixp                                | 0.5_p20110208-r3                          |            | https://libs.suckless.org/deprecated/libixp                                             | A stand-alone client/server 9P library including ixpc client
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-process/btop                               | 1.0.9                                     |            | https://github.com/aristocratos/btop                                                    | Resources monitor. The C++ version of bashtop
+------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ virtual/dist-kernel                            | 5.10.79                                   |            |                                                                                         | Virtual to depend on any Distribution Kernel
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                          | 3-r6                                      |            |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/xanmod-hybrid                     | 5.15.1                                    | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
