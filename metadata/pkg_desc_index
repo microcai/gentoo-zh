@@ -11,6 +11,7 @@ app-editors/visual-studio-code-bin 1.62.2: Multiplatform Visual Studio Code from
 app-emulation/deepin-udis86 1.72-r4: Deepin Version of Wine
 app-emulation/deepin-wine-helper 5.1.27-r1: Deepin Wine Helper
 app-emulation/deepin-wine-plugin 5.1.13-r1: Deepin Wine plugin
+app-emulation/deepin-wine6-stable 6.0.0.18-r1: Deepin wine6 stable
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
 app-i18n/fcitx 4.2.9.8: Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
