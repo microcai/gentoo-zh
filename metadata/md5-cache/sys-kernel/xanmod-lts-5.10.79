@@ -7,10 +7,10 @@ INHERIT=kernel-build toolchain-funcs
 IUSE=systemd zstd debug hardened cjk savedconfig +initramfs test
 KEYWORDS=amd64
 LICENSE=GPL-2
-PDEPEND=>=virtual/dist-kernel-5.10.78
+PDEPEND=>=virtual/dist-kernel-5.10.79
 RDEPEND=|| ( sys-kernel/installkernel-gentoo sys-kernel/installkernel-systemd-boot ) initramfs? ( >=sys-kernel/dracut-049-r3 ) virtual/libelf
 RESTRICT=!test? ( test ) test? ( userpriv ) arm? ( test )
-SLOT=5.10.78
-SRC_URI=https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.10-84.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.10-84.extras.tar.xz https://github.com/xanmod/linux/releases/download/5.10.78-xanmod1/patch-5.10.78-xanmod1.xz https://github.com/OriPoin/linux-config/archive/refs/tags/5.10.75.tar.gz -> linux-config-5.10.75.tar.gz https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x/cjktty-5.10.patch
+SLOT=5.10.79
+SRC_URI=https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.10-86.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.10-86.extras.tar.xz https://github.com/xanmod/linux/releases/download/5.10.79-xanmod1/patch-5.10.79-xanmod1.xz https://github.com/OriPoin/linux-config/archive/refs/tags/5.10.75.tar.gz -> linux-config-5.10.75.tar.gz https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x/cjktty-5.10.patch
 _eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	python-utils-r1	a8b7938ade305f087865de7e52d079b5	python-any-r1	13f6d423c5c5bc519a9b552654cc745f	portability	d1186f1e621de7b27ddcae82e6253259	savedconfig	7cb1bf66b4acedc4f06802a012d3b08d	dist-kernel-utils	ba761317b3fcd25e34c3fb8e5bf1e45f	mount-boot	060ced4c5e0fd737db17cbb609bbf557	kernel-install	b039e9a58c3e7d14248a2d8bed02a7ed	kernel-build	5f5dcb152079b8fd5773b438c9397f0b
-_md5_=9f06310fedd912ad81186a75cebaef43
+_md5_=c4d31577ca70b56052e004959f14aba5

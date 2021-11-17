@@ -170,13 +170,14 @@ sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/mkinitcpio 30-r2: Modular initramfs image creation utility
 sys-kernel/xanmod-hybrid 5.15.1 5.15.2: Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
-sys-kernel/xanmod-lts 5.10.75 5.10.78: XanMod lts kernel built with Gentoo patches and cjktty
+sys-kernel/xanmod-lts 5.10.79: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 5.13.1 5.13.1-r1: Xanmod-RT, cjktty, patchset for main kernel tree
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libixp 0.5_p20110208-r3: A stand-alone client/server 9P library including ixpc client
 sys-libs/libsolv 0.7.19: Library for solving packages and reading repositories
 sys-libs/libzypp 17.27.0: ZYpp Package Management library
 sys-process/btop 1.0.9: Resources monitor. The C++ version of bashtop
+virtual/dist-kernel 5.10.79: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r6: Virtual for Linux kernel sources
 www-servers/darkhttpd 1.13: A small, static webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
