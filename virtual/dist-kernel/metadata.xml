@@ -5,8 +5,4 @@
 		<email>OriPoin@outlook.com</email>
 		<name>Yachen Wang</name>
 	</maintainer>
-	<use>
-		<flag name="hardened">Use selection of hardening options recommended by Kernel Self Protection Project</flag>
-		<flag name="initramfs">Build initramfs along with the kernel.</flag>
-	</use>
 </pkgmetadata>
