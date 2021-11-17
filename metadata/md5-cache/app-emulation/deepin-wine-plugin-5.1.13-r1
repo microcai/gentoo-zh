@@ -1,0 +1,13 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=Deepin Wine plugin
+EAPI=7
+HOMEPAGE=https://www.deepin.org
+INHERIT=unpacker python-r1
+IUSE=+virtual-pkg python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
+KEYWORDS=~amd64
+LICENSE=LGPL-2.1
+RDEPEND=virtual-pkg? ( app-arch/p7zip python_targets_python3_8? ( dev-python/pydbus[python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?] ) python_targets_python3_9? ( dev-python/pydbus[python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?] ) python_targets_python3_10? ( dev-python/pydbus[python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?] ) )
+SLOT=0
+SRC_URI=https://cdn-package-store6.deepin.com/appstore/pool/appstore/d/deepin-wine-helper/deepin-wine-plugin_5.1.13-1_amd64.deb virtual-pkg? ( https://cdn-package-store6.deepin.com/appstore/pool/appstore/d/deepin-wine-helper/deepin-wine-plugin-virtual_5.1.13-1_all.deb )
+_eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	unpacker	928e1f35ef78ba9fc2b214e29c2b55a4	multibuild	05a584848db4901c97fcd94ae7cc3a97	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	python-utils-r1	a8b7938ade305f087865de7e52d079b5	python-r1	e574a3642f886323f18f867ecc4d91c4
+_md5_=0dab2f599c09e59b5d67b1f7d7e2bc4d
