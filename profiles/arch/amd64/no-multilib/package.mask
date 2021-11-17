@@ -1,0 +1,3 @@
+# lyraile <iamoatiz@gmail.com> (2021-11-17)
+# Requires 32-bit multilib compatibility
+app-emulation/deepin-wine-helper
