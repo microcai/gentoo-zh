@@ -51,6 +51,7 @@ src_install(){
 	doins -r *
 	dosym "../../opt/${PN}/bin/code" "usr/bin/code"
 	domenu "${FILESDIR}/visual-studio-code.desktop"
+	domenu "${FILESDIR}/visual-studio-code-url-handler.desktop"
 	newicon "resources/app/resources/linux/code.png" "${PN%-bin}.png"
 	fperms +x "/opt/${PN}/code"
 	fperms +x "/opt/${PN}/bin/code"
@@ -62,6 +63,9 @@ src_install(){
 	fperms +x "/opt/${PN}/resources/app/out/vs/base/node/terminateProcess.sh"
 	fperms +x "/opt/${PN}/resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg"
 	dodoc "resources/app/LICENSE.rtf"
+
+	insinto "/usr/share/mime/packages"
+	doins "${FILESDIR}/visual-studio-code-workspace.xml"
 }
 
 pkg_postinst(){
