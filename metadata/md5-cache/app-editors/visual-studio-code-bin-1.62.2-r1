@@ -11,4 +11,4 @@ RESTRICT=mirror strip bindist
 SLOT=0
 SRC_URI=https://update.code.visualstudio.com/1.62.2/linux-x64/stable -> visual-studio-code-bin-1.62.2-amd64.tar.gz
 _eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	dab5d8ec471d025b79c9e6906bcf3bff	pax-utils	fce6ad998516159787b92e8043167889	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	xdg	6024fbc93167fad782e2032933654857
-_md5_=0bfb489e67b3994b963db9e95bc95695
+_md5_=1a744096c75da3bde21d62c7a7d51aa5
