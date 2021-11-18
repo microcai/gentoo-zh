@@ -5,4 +5,5 @@ Comment=Multiplatform Visual Studio Code from Microsoft
 Exec=/usr/bin/code %F
 TryExec=code
 Icon=visual-studio-code
-Categories=Development;IDE;
+Categories=Utility;TextEditor;Development;IDE;
+MimeType=text/plain;inode/directory;application/x-visual-studio-code-workspace;
