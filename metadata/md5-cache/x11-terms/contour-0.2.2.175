@@ -12,6 +12,6 @@ PROPERTIES=live
 RDEPEND=boost? ( dev-libs/boost ) dev-cpp/yaml-cpp dev-qt/qtcore dev-qt/qtgui dev-qt/qtopengl kde-frameworks/extra-cmake-modules kde? ( kde-frameworks/kwindowsystem ) media-libs/fontconfig media-libs/freetype media-libs/harfbuzz sys-libs/ncurses
 RESTRICT=strip
 SLOT=0
-SRC_URI=https://github.com/contour-terminal/contour/archive/v0.2.1.174.tar.gz -> contour-0.2.1.174.tar.gz https://github.com/microsoft/GSL/archive/v3.1.0.tar.gz -> microsoft-GSL-3.1.0.tar.gz
+SRC_URI=https://github.com/contour-terminal/contour/archive/v0.2.2.175.tar.gz -> contour-0.2.2.175.tar.gz https://github.com/microsoft/GSL/archive/v3.1.0.tar.gz -> microsoft-GSL-3.1.0.tar.gz
 _eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	flag-o-matic	4134b5c0fb719b9161d10bdaba9e09e5	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	cmake	11fee991ab428a3370e5c20fa8231fb6
 _md5_=5b48ddd9e507e94aec3750a89342196e
