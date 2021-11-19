@@ -20,7 +20,7 @@ K_SECURITY_UNSUPPORTED="1"
 
 # We want the very basic patches from gentoo-sources, experimental patch is
 # already included in xanmod-hybrid
-K_WANT_GENPATCHES="base	extras" 
+K_WANT_GENPATCHES="base	extras"
 
 # Default enable Xanmod, You have to choose one of them.
 # Both of them will make some errors
