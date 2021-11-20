@@ -1,17 +1,17 @@
-BDEPEND=test? ( dev-python/tqdm dev-python/six >=dev-python/pytest-4.5.0[python_targets_python3_9(-)?] ) python_targets_python3_9? ( dev-lang/python:3.9 ) >=dev-lang/python-exec-2:=[python_targets_python3_9(-)?] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)?]
+BDEPEND=test? ( dev-python/tqdm[python_targets_python3_9(-)?] dev-python/six[python_targets_python3_9(-)?] >=dev-python/pytest-4.5.0[python_targets_python3_9(-)?] ) python_targets_python3_9? ( dev-lang/python:3.9 ) >=dev-lang/python-exec-2:=[python_targets_python3_9(-)?] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)?]
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=dev-python/tqdm dev-python/six
+DEPEND=dev-python/tqdm[python_targets_python3_9(-)?] dev-python/six[python_targets_python3_9(-)?]
 DESCRIPTION=Create and extract conda packages of various formats
-EAPI=7
+EAPI=8
 HOMEPAGE=https://github.com/conda/conda-package-handling
 INHERIT=distutils-r1
 IUSE=test python_targets_python3_9
 KEYWORDS=amd64 ~x86
 LICENSE=BSD
-RDEPEND=dev-python/tqdm dev-python/six python_targets_python3_9? ( dev-lang/python:3.9 ) >=dev-lang/python-exec-2:=[python_targets_python3_9(-)?]
+RDEPEND=dev-python/tqdm[python_targets_python3_9(-)?] dev-python/six[python_targets_python3_9(-)?] python_targets_python3_9? ( dev-lang/python:3.9 ) >=dev-lang/python-exec-2:=[python_targets_python3_9(-)?]
 REQUIRED_USE=|| ( python_targets_python3_9 )
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/conda/conda-package-handling/archive/1.7.3.tar.gz -> conda-package-handling-1.7.3.tar.gz
-_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	multibuild	05a584848db4901c97fcd94ae7cc3a97	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	python-utils-r1	a8b7938ade305f087865de7e52d079b5	python-r1	e574a3642f886323f18f867ecc4d91c4	distutils-r1	8041037f74e1f9d149c038c2fe2c97cf
-_md5_=0b1ff641c31e4f37bc0ad02e3a58e242
+_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	multibuild	05a584848db4901c97fcd94ae7cc3a97	python-utils-r1	a8b7938ade305f087865de7e52d079b5	python-r1	e574a3642f886323f18f867ecc4d91c4	distutils-r1	8041037f74e1f9d149c038c2fe2c97cf
+_md5_=ccddc100c06ac815a37839265d252ccd
