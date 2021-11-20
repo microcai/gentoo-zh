@@ -1,7 +1,7 @@
 # Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 PYTHON_COMPAT=( python3_9 )
 inherit distutils-r1
@@ -14,12 +14,12 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
 
-DEPEND="dev-python/matplotlib
-		dev-python/numpy
-		dev-python/pillow
-		dev-python/QtPy
-		dev-python/termcolor
-		dev-python/pyyaml
-		dev-python/setuptools"
+DEPEND="dev-python/matplotlib[${PYTHON_USEDEP}]
+		dev-python/numpy[${PYTHON_USEDEP}]
+		dev-python/pillow[${PYTHON_USEDEP}]
+		dev-python/QtPy[${PYTHON_USEDEP}]
+		dev-python/termcolor[${PYTHON_USEDEP}]
+		dev-python/pyyaml[${PYTHON_USEDEP}]
+		dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
 BDEPEND=""
