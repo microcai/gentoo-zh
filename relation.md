@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-11-20 17:39:37 CST)
+(The last generation time: 2021-11-20 17:46:11 CST)
 
 ### Packages
 
@@ -358,7 +358,7 @@
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-process/btop                               | 1.0.9                                     |            | https://github.com/aristocratos/btop                                                    | Resources monitor. The C++ version of bashtop
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- virtual/dist-kernel                            | 5.10.79                                   |            |                                                                                         | Virtual to depend on any Distribution Kernel
+ virtual/dist-kernel                            | 5.10.80                                   |            |                                                                                         | Virtual to depend on any Distribution Kernel
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                          | 3-r6                                      |            |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/xanmod-hybrid                     | 5.15.1                                    | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
