@@ -15,11 +15,11 @@ SLOT="0"
 KEYWORDS="amd64 ~x86"
 
 DEPEND="dev-vcs/git
-		dev-python/pyopenssl
-		dev-python/requests
-		dev-python/ruamel-yaml
-		dev-python/conda-package-handling
-		dev-python/pycosat"
+		dev-python/pyopenssl[${PYTHON_USEDEP}]
+		dev-python/requests[${PYTHON_USEDEP}]
+		dev-python/ruamel-yaml[${PYTHON_USEDEP}]
+		dev-python/conda-package-handling[${PYTHON_USEDEP}]
+		dev-python/pycosat[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
@@ -27,18 +27,23 @@ IUSE="+user"
 
 distutils_enable_tests pytest
 
-src_prepare() {
-	echo ${PV} > ${S}/conda/.version
-	default
+python_prepare_all() {
+	echo ${PV} > conda/.version || die
+	distutils-r1_python_prepare_all
 }
 
-src_install() {
-	distutils-r1_src_install "$@"
-	rm "${D}/usr/bin/conda" || die
-	cp "${S}/conda/shell/bin/conda" "${D}/usr/bin/conda" || die
+python_install() {
+	distutils-r1_python_install
+	rm "${ED}/usr/bin/conda" || die
+	cp "${S}/conda/shell/bin/conda" "${ED}/usr/bin/conda" || die
+	# no need for Python Byte compiling and multi python slot, please do not use python_doscript
+	# this ebuild just use one stable python target
+}
+
+python_install_all() {
 	if use user ; then
-		mkdir -p "${D}/etc/conda/" || die
-		cp "${FILESDIR}/condarc" "${D}/etc/conda/condarc" || die
+		insinto /etc/conda
+		doins "${FILESDIR}/condarc"
 	fi
 }
 

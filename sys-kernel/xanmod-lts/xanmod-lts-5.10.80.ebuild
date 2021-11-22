@@ -22,7 +22,7 @@ SRC_URI+=" https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.x
 S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 IUSE="systemd zstd debug hardened cjk"
 
 PDEPEND="
