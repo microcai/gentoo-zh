@@ -35,7 +35,9 @@ python_prepare_all() {
 python_install() {
 	distutils-r1_python_install
 	rm "${ED}/usr/bin/conda" || die
-	python_doscript conda/shell/bin/conda
+	cp "${S}/conda/shell/bin/conda" "${ED}/usr/bin/conda" || die
+	# no need for Python Byte compiling and multi python slot, please do not use python_doscript
+	# this ebuild just use one stable python target
 }
 
 python_install_all() {
