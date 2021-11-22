@@ -172,7 +172,7 @@ sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/mkinitcpio 30-r2: Modular initramfs image creation utility
-sys-kernel/xanmod-hybrid 5.15.1 5.15.2 5.15.3: Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
+sys-kernel/xanmod-hybrid 5.15.1 5.15.2 5.15.3 5.15.4: Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
 sys-kernel/xanmod-lts 5.10.80 5.10.81: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 5.13.1 5.13.1-r1: Xanmod-RT, cjktty, patchset for main kernel tree
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
