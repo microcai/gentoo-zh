@@ -51,4 +51,5 @@ pkg_postinst() {
 	elog "Initialize conda for shell interaction, "
 	elog "run 'conda init shells' "
 	elog "Currently compatible shells are {bash, fish, powershell, tcsh, xonsh, zsh}"
+	elog "base environment is managed by portage, do not use conda in base env!"
 }
