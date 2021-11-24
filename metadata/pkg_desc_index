@@ -67,7 +67,7 @@ dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram cl
 dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458 9999: Community managed domain list for V2Ray.
 dev-libs/v2ray-domain-list-community-bin 4.39.2_p20210621183458 9999: Community managed domain list for V2Ray.
 dev-libs/v2ray-geoip-bin 4.39.2_p202106170022 9999: GeoIP for V2Ray.
-dev-python/conda 4.10.3-r1: OS-agnostic, system-level binary package manager and ecosystem
+dev-python/conda 4.11.0: OS-agnostic, system-level binary package manager and ecosystem
 dev-python/conda-package-handling 1.7.3: Create and extract conda packages of various formats
 dev-python/fuo-kuwo 0.1.4: kuwo music support for feeluown
 dev-python/fuo-local 0.2.1-r1: local music support for feeluown
