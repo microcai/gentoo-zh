@@ -42,7 +42,7 @@ app-misc/gpick 0.2.6: Advanced color picker written in C++ using GTK+ toolkit
 app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience within the shell
 app-misc/nixnote 2.1.6: Nixnote - A clone of Evernote for Linux
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
-app-mobilephone/scrcpy 1.19 1.20: Display and control your Android device
+app-mobilephone/scrcpy 1.19 1.20 1.21: Display and control your Android device
 app-office/bytedance-feishu 4.8.0.24-r1: feishu - ByteDance's enterprise collaboration platform
 app-office/freeoffice 1036-r3: A complete, free Microsoft Office-compatible alternative office suite
 app-office/wps-office 11.1.0.10702: WPS Office is an office productivity suite, Here is the Chinese version
