@@ -30,6 +30,7 @@ BDEPEND=""
 
 PATCHES=(
 	"${FILESDIR}/${PN}-Standardize-exit-codes.patch"
+	"${FILESDIR}/${PN}-fix-file-transfer-stuck-at-99.patch"
 )
 
 DOCS=( AUTHORS README Documentation/configuration.txt )
