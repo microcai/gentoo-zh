@@ -56,10 +56,6 @@ free_clean(){
 		case ${lang%:*} in
 			de)
 				fix="de";;
-			en-US)
-				fix="en";;
-			en-GB)
-				fix="en";;
 		esac
 		rm *free_${fix}.pdf
 	done
