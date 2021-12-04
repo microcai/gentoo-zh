@@ -13,4 +13,4 @@ RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://www.softmaker.net/down/softmaker-freeoffice-2021_1040-amd64.tgz
 _eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	pax-utils	fce6ad998516159787b92e8043167889	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	xdg	6024fbc93167fad782e2032933654857
-_md5_=b47afbc2827605efe19ec37f36d9d10d
+_md5_=8a9f8dbee94fa37211ac6123d9a07ffe
