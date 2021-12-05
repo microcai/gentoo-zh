@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-04 21:33:55 CST)
+(The last generation time: 2021-12-05 17:52:45 CST)
 
 ### Packages
 
@@ -359,7 +359,7 @@
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-libs/libixp                                | 0.5_p20110208-r3                          |            | https://libs.suckless.org/deprecated/libixp                                             | A stand-alone client/server 9P library including ixpc client
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-process/btop                               | 1.0.9                                     |            | https://github.com/aristocratos/btop                                                    | Resources monitor. The C++ version of bashtop
+ sys-process/btop                               | 1.1.2                                     |            | https://github.com/aristocratos/btop                                                    | Resources monitor. The C++ version of bashtop
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/dist-kernel                            | 5.10.80                                   |            |                                                                                         | Virtual to depend on any Distribution Kernel
                                                 | 5.10.81                                   |            |                                                                                         |
