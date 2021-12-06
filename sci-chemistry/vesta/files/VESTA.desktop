@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=VESTA
+Exec=/opt/bin/VESTA %F
+Type=Application
+Categories=Science
+Terminal=false
+StartupNotify=false
+Icon=/opt/VESTA/img/logo.png
+GenericName="Visualization for Electronic and STructural Analysis"
+Comment="Crystal structure visualization program"
+MimeType=application/x-vesta;
