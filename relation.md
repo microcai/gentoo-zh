@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-05 17:52:45 CST)
+(The last generation time: 2021-12-06 16:47:59 CST)
 
 ### Packages
 
@@ -322,6 +322,9 @@
  net-proxy/shadowvpn                            | 9999                                      |            | http://shadowvpn.org/                                                                   | A fast, safe VPN based on libsodium
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/smartproxy                           | 0.9.4                                     |            | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
+------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ sci-chemistry/vesta                            | 3.5.5                                     |            | https://jp-minerals.org/vesta                                                           | Visualization for Electronic and STructural Analysis
+                                                | 3.5.7                                     |            |                                                                                         |
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sci-libs/libticalcs2                           | 9999                                      |            | http://lpg.ticalc.org/prj_tilp/                                                         | Library for communication with TI calculators
    sci-libs/libtifiles2                         | 9999                                      |  D, RD     | http://lpg.ticalc.org/prj_tilp/                                                         | Library for TI calculator files
