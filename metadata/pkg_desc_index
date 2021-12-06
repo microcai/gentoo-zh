@@ -177,6 +177,7 @@ sys-kernel/xanmod-hybrid 5.15.1 5.15.2 5.15.3 5.15.4 5.15.5 5.15.6 5.15.6-r1: Xa
 sys-kernel/xanmod-lts 5.10.80 5.10.81: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 5.13.1 5.13.1-r1: Xanmod-RT, cjktty, patchset for main kernel tree
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
+sys-libs/glibc 9999: GNU libc C library
 sys-libs/libixp 0.5_p20110208-r3: A stand-alone client/server 9P library including ixpc client
 sys-libs/libsolv 0.7.19: Library for solving packages and reading repositories
 sys-libs/libzypp 17.27.0: ZYpp Package Management library

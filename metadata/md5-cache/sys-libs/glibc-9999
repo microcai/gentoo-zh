@@ -1,0 +1,17 @@
+BDEPEND=|| ( dev-lang/python:3.9 dev-lang/python:3.8 ) >=app-misc/pax-utils-1.3.3 sys-devel/bison doc? ( sys-apps/texinfo ) !compile-locales? ( app-arch/gzip sys-apps/grep virtual/awk ) >=sys-devel/binutils-2.27 sys-devel/clang[default-compiler-rt,default-libcxx,default-lld,llvm-libunwind] sys-libs/libcxxabi[static-libs] sys-libs/libcxx[static-libs] sys-libs/llvm-libunwind[static-libs] sys-devel/gnuconfig virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst preinst prepare pretend setup test unpack
+DEPEND=gd? ( media-libs/gd:2= ) nscd? ( selinux? ( audit? ( sys-process/audit ) caps? ( sys-libs/libcap ) ) ) suid? ( caps? ( sys-libs/libcap ) ) selinux? ( sys-libs/libselinux ) systemtap? ( dev-util/systemtap ) compile-locales? ( app-arch/gzip sys-apps/grep virtual/awk ) test? ( >=net-dns/libidn2-2.3.0 ) virtual/os-headers
+DESCRIPTION=GNU libc C library
+EAPI=7
+HOMEPAGE=https://www.gnu.org/software/libc/
+INHERIT=python-any-r1 prefix preserve-libs toolchain-funcs flag-o-matic gnuconfig multilib systemd multiprocessing tmpfiles git-r3
+IUSE=audit caps cet +clone3 compile-locales +crypt custom-cflags doc gd headers-only +multiarch multilib multilib-bootstrap nscd profile selinux +ssp +static-libs static-pie suid systemd systemtap test vanilla
+LICENSE=LGPL-2.1+ BSD HPND ISC inner-net rc PCRE
+PDEPEND=!vanilla? ( sys-libs/timezone-data )
+PROPERTIES=live
+RDEPEND=gd? ( media-libs/gd:2= ) nscd? ( selinux? ( audit? ( sys-process/audit ) caps? ( sys-libs/libcap ) ) ) suid? ( caps? ( sys-libs/libcap ) ) selinux? ( sys-libs/libselinux ) systemtap? ( dev-util/systemtap ) app-arch/gzip sys-apps/grep virtual/awk sys-apps/gentoo-functions !<app-misc/pax-utils-1.3.3 !<net-misc/openssh-8.1_p1-r2 >=net-dns/libidn2-2.3.0 vanilla? ( !sys-libs/timezone-data )
+RESTRICT=!test? ( test )
+SLOT=2.2
+SRC_URI=https://gitweb.gentoo.org/proj/locale-gen.git/snapshot/locale-gen-2.22.tar.gz multilib-bootstrap? ( https://dev.gentoo.org/~dilfridge/distfiles/gcc-multilib-bootstrap-20201208.tar.xz ) systemd? ( https://gitweb.gentoo.org/proj/toolchain/glibc-systemd.git/snapshot/glibc-systemd-20210729.tar.gz )
+_eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	python-utils-r1	a8b7938ade305f087865de7e52d079b5	python-any-r1	13f6d423c5c5bc519a9b552654cc745f	prefix	d04f14b297013ad1410550c0757f14f8	preserve-libs	dbc9f8d2d49c66467bc327fddd8317bd	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	dab5d8ec471d025b79c9e6906bcf3bff	flag-o-matic	4134b5c0fb719b9161d10bdaba9e09e5	gnuconfig	262062cef0ba4f22b397193da514a350	systemd	2736b403a83f194b59b767f3b344c2c1	tmpfiles	5cd6e8cf3288d5b19ff8b5c78c7e3e31	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=1f8f35ccc05faa27f789122ce1b7771d
