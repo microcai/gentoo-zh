@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-06 16:47:59 CST)
+(The last generation time: 2021-12-06 19:58:00 CST)
 
 ### Packages
 
@@ -232,6 +232,7 @@
                                                 | 1.2.0.120                                 |            |                                                                                         |
    dev-libs/libthai                             | 0.1.28                                    |  D, RD     | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
      dev-libs/libdatrie                         | 0.2.13                                    |  D, RD     | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
+   sys-libs/glibc                               | 9999                                      |  D, RD     | https://www.gnu.org/software/libc/                                                      | GNU libc C library
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/freetalk                                | 4.1                                       |            | http://www.gnu.org/software/freetalk/                                                   | Console based Jabber client
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
