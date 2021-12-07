@@ -27,6 +27,11 @@ REQUIRED_USE="
 	mips? ( !big-endian )
 "
 
+QA_PREBUILT="
+	opt/tencent-qq/crashpad_handler
+	opt/tencent-qq/qq
+"
+
 # the sonames are gathered with the following trick:
 #
 # readelf -a qq | rg '\(NEEDED\)' | rg -o '\[.*\]' | sed 's/^\[//; s/\]$//;'
