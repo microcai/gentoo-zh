@@ -24,6 +24,13 @@ IUSE="big-endian systemd"
 REQUIRED_USE="mips? ( !big-endian )"
 S="${WORKDIR}"
 
+QA_PREBUILT="
+	usr/bin/sslocal-rust
+	usr/bin/ssmanager-rust
+	usr/bin/ssserver-rust
+	usr/bin/ssurl-rust
+"
+
 src_install() {
 	newbin "${S}/sslocal" sslocal-rust
 	newbin "${S}/ssmanager" ssmanager-rust
