@@ -22,7 +22,7 @@ RDEPEND="
 	${DEPEND}"
 BDEPEND=""
 
-QA_PREBUILD="*"
+QA_PREBUILT="*"
 
 src_unpack() {
 	default
