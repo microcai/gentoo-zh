@@ -153,19 +153,18 @@ RDEPEND="!arm64? (
 
 src_compile() {
 	local Version=${PV} BuildTime=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
-	go build -v -work -x -o bin/clash -trimpath -ldflags "\
-	-X \"github.com/Dreamacro/clash/constant.Version=v${Version}\" \
-	-X \"github.com/Dreamacro/clash/constant.BuildTime=${BuildTime}\" \
-	-buildid="
+	local ldflags="\
+		-X \"github.com/Dreamacro/clash/constant.Version=v${Version}\" \
+		-X \"github.com/Dreamacro/clash/constant.BuildTime=${BuildTime}\" \
+		-w -buildid="
+	go build -o bin/clash -trimpath -ldflags "${ldflags}" || die
 }
 
 src_install() {
 	dobin bin/clash
 
-	if use systemd; then
-		systemd_dounit "${FILESDIR}/clash.service"
-		systemd_newunit "${FILESDIR}/clash_at.service" clash@.service
-	fi
+	systemd_dounit "${FILESDIR}/clash.service"
+	systemd_newunit "${FILESDIR}/clash_at.service" clash@.service
 
 	keepdir /etc/clash
 }
