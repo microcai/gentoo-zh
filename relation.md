@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-07 15:57:57 CST)
+(The last generation time: 2021-12-08 00:32:38 CST)
 
 ### Packages
 
@@ -305,8 +305,6 @@
        dev-libs/v2ray-geoip-bin                 | 4.39.2_p202106170022                      | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
                                                 | 9999                                      |            |                                                                                         |
      net-proxy/v2ray-bin                        | 4.42.2                                    | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
-------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/qvplugin-ss                          | 1.2-r1                                    |            | https://github.com/Qv2ray/QvPlugin-SS                                                   | shadowsocks plugin for Qv2ray to support SIP003 in Qv2ray
 ------------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-ssr                         | 2.0.3                                     |            | https://github.com/Qv2ray/QvPlugin-SSR                                                  | shadowsocksR plugin for Qv2ray to support SSR connection in Qv2ray
                                                 | 9999                                      |            |                                                                                         |
