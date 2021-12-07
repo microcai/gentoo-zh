@@ -29,6 +29,14 @@ BDEPEND=""
 
 S="${WORKDIR}"
 
+QA_PREBUILT="
+	opt/wechat-uos/libffmpeg.so
+	opt/wechat-uos/libnode.so
+	opt/wechat-uos/resources/wcs.node
+	opt/wechat-uos/wechat
+	usr/lib/license/libuosdevicea.so
+"
+
 src_install() {
 	cat <<- EOF >"${S}/uos-lsb" || die
 		DISTRIB_ID=uos
