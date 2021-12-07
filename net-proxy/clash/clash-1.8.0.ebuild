@@ -144,7 +144,7 @@ RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm ~arm64 ~mips ~ppc64 ~s390 ~x86"
-IUSE="geoip systemd"
+IUSE="geoip"
 
 BDEPEND=">=dev-lang/go-1.16.2:="
 RDEPEND="!arm64? (
