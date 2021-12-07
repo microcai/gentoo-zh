@@ -18,6 +18,8 @@ RESTRICT="mirror"
 RDEPEND="
 	pdf? ( app-text/ghostscript-gpl )"
 
+PATCHES=( "${FILESDIR}/${PN}-cflags.patch" )
+
 src_prepare() {
 	default
 	sed -i "s/^CXX=.*$/CXX=$(tc-getCXX)/" Makefile || die
