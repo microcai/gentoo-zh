@@ -23,16 +23,7 @@ RDEPEND="
 	${DEPEND}"
 BDEPEND=""
 
-QA_PRESTRIPPED="
-	/opt/${PN}/share/typora/Typora
-	/opt/${PN}/share/typora/chrome-sandbox
-	/opt/${PN}/share/typora/.*\.so
-	/opt/${PN}/share/typora/.*/.*\.so
-	/opt/${PN}/share/typora/resources/app/node_modules/vscode-ripgrep/bin/rg
-	/opt/${PN}/share/typora/resources/app/node_modules/pathwatcher/build/Release/pathwatcher.node
-	/opt/${PN}/share/typora/resources/app/node_modules/spellchecker/build/Release/spellchecker.node
-	/opt/${PN}/share/typora/resources/app/node_modules/spellchecker/node_modules/cld/build/Release/cld.node
-"
+QA_PREBUILT="*"
 
 src_unpack() {
 	default

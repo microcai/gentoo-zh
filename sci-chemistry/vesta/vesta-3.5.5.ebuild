@@ -28,7 +28,7 @@ BDEPEND=""
 
 S="${WORKDIR}/VESTA-gtk3"
 
-QA_PREBUILD="*"
+QA_PREBUILT="*"
 
 src_install() {
 	insinto /opt/VESTA
