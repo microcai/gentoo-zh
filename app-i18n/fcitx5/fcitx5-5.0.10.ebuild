@@ -56,10 +56,13 @@ RDEPEND="dev-libs/glib:2
 	app-text/iso-codes
 	app-i18n/unicode-cldr
 	dev-libs/libxml2
-	dev-libs/libevent"
+	dev-libs/libevent
+	x11-libs/gdk-pixbuf:2
+"
 DEPEND="${RDEPEND}
 	kde-frameworks/extra-cmake-modules:5
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 src_prepare() {
 	pwd
