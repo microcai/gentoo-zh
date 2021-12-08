@@ -16,6 +16,11 @@ IUSE=""
 
 RDEPEND="x11-libs/libX11"
 
+src_prepare() {
+	default
+	eapply "${FILESDIR}/fix-ignore-cflags-and-ldflags.patch"
+}
+
 src_compile() {
 	emake -f Makefile.noimake || die "emake error"
 }
