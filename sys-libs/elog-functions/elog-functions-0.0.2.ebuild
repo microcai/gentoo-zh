@@ -16,6 +16,6 @@ RDEPEND="app-shells/bash"
 S="${WORKDIR}"
 
 src_install() {
-	insinto /usr/$(get_libdir)/misc
+	insinto /usr/$(get_abi_LIBDIR)/misc
 	doins "${FILESDIR}/${PN}.sh"
 }
