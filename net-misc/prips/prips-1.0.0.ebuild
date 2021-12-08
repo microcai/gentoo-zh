@@ -15,3 +15,10 @@ RESTRICT="mirror"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
+
+src_install() {
+	emake install DESTDIR="${D}" \
+		PREFIX="${EPREFIX}"/usr \
+		MANDIR="${EPREFIX}"/usr/share/man/man \
+		DOCSDIR="${EPREFIX}"/usr/share/doc/${P}
+}
