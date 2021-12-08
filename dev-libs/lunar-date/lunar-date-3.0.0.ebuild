@@ -17,6 +17,7 @@ IUSE="+dbus doc introspection test"
 RDEPEND=">=dev-python/pygobject-2.11.5"
 
 DEPEND="${RDEPEND}
+	dev-util/gdbus-codegen
 	sys-devel/gettext
 	virtual/pkgconfig
 	>=dev-util/intltool-0.35
