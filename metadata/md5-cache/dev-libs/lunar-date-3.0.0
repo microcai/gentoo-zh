@@ -1,6 +1,6 @@
 BDEPEND=>=dev-util/meson-0.58.2-r1 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
 DEFINED_PHASES=compile configure install test
-DEPEND=>=dev-python/pygobject-2.11.5 sys-devel/gettext virtual/pkgconfig >=dev-util/intltool-0.35 doc? ( dev-util/gtk-doc ) introspection? ( dev-libs/gobject-introspection ) >=app-text/gnome-doc-utils-0.3.2
+DEPEND=>=dev-python/pygobject-2.11.5 dev-util/gdbus-codegen sys-devel/gettext virtual/pkgconfig >=dev-util/intltool-0.35 doc? ( dev-util/gtk-doc ) introspection? ( dev-libs/gobject-introspection ) >=app-text/gnome-doc-utils-0.3.2
 DESCRIPTION=Chinese Lunar Library
 EAPI=8
 HOMEPAGE=https://github.com/yetist/lunar-date
@@ -12,4 +12,4 @@ RDEPEND=>=dev-python/pygobject-2.11.5
 SLOT=0
 SRC_URI=https://github.com/yetist/lunar-date/archive/v3.0.0.tar.gz -> lunar-date-3.0.0.tar.gz
 _eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	python-utils-r1	a8b7938ade305f087865de7e52d079b5	meson	9f3e84959ae1d60e19bc91f212774dcc
-_md5_=2c861114f4eb4c134c744fc8e8a8984a
+_md5_=c2544da178a1a3a9a41e6636287a4875
