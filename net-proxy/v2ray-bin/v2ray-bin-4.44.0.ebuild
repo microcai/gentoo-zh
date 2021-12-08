@@ -24,7 +24,7 @@ RESRICT="mirror"
 
 DEPEND="!net-proxy/v2ray"
 RDEPEND="${DEPEND}"
-QA_PRESTRIPPED="
+QA_PREBUILT="
 	/usr/bin/v2ray
 	/usr/bin/v2ctl
 "
