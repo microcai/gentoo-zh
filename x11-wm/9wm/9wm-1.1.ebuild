@@ -19,6 +19,7 @@ RDEPEND="x11-libs/libX11
 	x11-terms/xterm"
 
 src_compile() {
+	export CC="${CC} ${CFLAGS} ${LDFLAGS}"
 	emake -f Makefile.no-imake || die "emake error"
 }
 
