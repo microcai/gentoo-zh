@@ -23,3 +23,5 @@ DEPEND="dev-python/matplotlib[${PYTHON_USEDEP}]
 		dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
 BDEPEND=""
+
+distutils_enable_tests pytest
