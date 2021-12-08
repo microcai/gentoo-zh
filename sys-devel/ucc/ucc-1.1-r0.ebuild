@@ -26,6 +26,7 @@ src_prepare() {
 	default
 	sed -i -e 's:/usr/local/lib/ucc/:/usr/lib/ucc/:' "${S}/driver/linux.c"
 	sed -i -e 's:UCCDIR \"ucl\":\"/usr/bin/ucl\":' "${S}/driver/linux.c"
+	eapply "${FILESDIR}/fix-ignore-cflags-and-ldflags.patch"
 }
 
 src_install() {
