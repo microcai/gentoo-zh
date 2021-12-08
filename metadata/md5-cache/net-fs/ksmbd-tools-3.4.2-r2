@@ -5,7 +5,7 @@ DESCRIPTION=cifsd/ksmbd kernel server userspace utilities
 EAPI=8
 HOMEPAGE=https://github.com/cifsd-team/ksmbd-tools
 INHERIT=autotools systemd
-IUSE=kerberos systemd
+IUSE=kerberos
 KEYWORDS=~amd64 ~arm ~arm64 ~mips ~ppc64 ~riscv ~s390 ~x86
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.40 >=dev-libs/libnl-3.0 kerberos? ( virtual/krb5 )
@@ -13,4 +13,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/cifsd-team/ksmbd-tools/archive/3.4.2.tar.gz -> ksmbd-tools-3.4.2.tar.gz
 _eclasses_=gnuconfig	262062cef0ba4f22b397193da514a350	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	libtool	241a8f577b9781a42a7421e53448a44e	autotools	c9df06c186913b43eb211100ef5fe2cf	systemd	2736b403a83f194b59b767f3b344c2c1
-_md5_=a6dc1c5a854f89f8e70369d755693099
+_md5_=bd3c83bd2ea057353761c3d3502634a9
