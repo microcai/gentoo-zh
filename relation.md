@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-08 00:46:50 CST)
+(The last generation time: 2021-12-08 10:05:28 CST)
 
 ### Packages
 
@@ -309,7 +309,7 @@
    dev-libs/v2ray-geoip-bin                 | 4.39.2_p202106170022                      | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
                                             | 9999                                      |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/v2ray-bin                        | 4.42.2                                    |            | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
+ net-proxy/v2ray-bin                        | 4.44.0                                    |            | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sci-chemistry/vesta                        | 3.5.5                                     |            | https://jp-minerals.org/vesta                                                           | Visualization for Electronic and STructural Analysis
                                             | 3.5.7                                     |            |                                                                                         |
