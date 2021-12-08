@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-08 12:35:41 CST)
+(The last generation time: 2021-12-08 16:48:46 CST)
 
 ### Packages
 
@@ -333,7 +333,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/erofs-utils                         | 1.3                                       |            | https://git.kernel.org/pub/scm/linux/kernel/git/xiang/erofs-utils.git                   | Userspace tools for EROFS images
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-fs/f2fs-tools                          | 9999                                      |            | http://sourceforge.net/projects/f2fs-tools/                                             | Tools for Flash-Friendly File System (F2FS)
+ sys-fs/f2fs-tools                          | 9999                                      |            | https://sourceforge.net/projects/f2fs-tools/                                            | Tools for Flash-Friendly File System (F2FS)
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/jmtpfs                              | 0.5                                       |            | http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux | A FUSE and libmtp based filesystem for accessing MTP devices.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
