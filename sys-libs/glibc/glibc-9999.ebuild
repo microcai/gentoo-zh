@@ -885,7 +885,9 @@ src_prepare() {
 		elog "Please re-enable this flag before filing bugs!"
 	fi
 
-	eapply "${FILESDIR}"/clangify
+	if tc-is-clang ; then
+		eapply "${FILESDIR}"/clangify
+	fi
 
 	default
 
