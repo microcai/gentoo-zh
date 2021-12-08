@@ -142,9 +142,7 @@ net-p2p/qbittorrent-enhanced 4.3.8.10 4.3.9.10: qBittorrent Enhanced, based on q
 net-print/epson-inkjet-printer_201207w 1.0.0: Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 net-proxy/Xray 1.4.3 1.4.4 1.4.5: Xray, Penetrates Everything.
 net-proxy/clash 1.8.0: A rule-based tunnel in Go.
-net-proxy/lantern-bin 6.8.7 6.9.1: A free peer-to-peer internet censorship circumvention tool
 net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
-net-proxy/shadowsocks 9999: A fast tunnel proxy that helps you bypass firewalls
 net-proxy/shadowsocks-rust-bin 1.12.4: A Rust port of shadowsocks
 net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
 net-proxy/smartproxy 0.9.4: A fast, proxy smart selector
