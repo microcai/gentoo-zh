@@ -28,6 +28,16 @@ MODULE_NAMES="ksmbd(fs/ksmbd)"
 BUILD_TARGETS="all"
 KV_OBJ="ko"
 
+CONFIG_CHECK="
+	~INET ~MULTIUSER ~FILE_LOCKING
+
+	~NLS ~NLS_UTF8
+
+	~CRYPTO ~CRYPTO_MD4 ~CRYPTO_MD5 ~CRYPTO_HMAC ~CRYPTO_ECB
+	~CRYPTO_LIB_DES ~CRYPTO_SHA256 ~CRYPTO_CMAC ~CRYPTO_SHA512
+	~CRYPTO_AEAD2 ~CRYPTO_CCM ~CRYPTO_GCM ~ASN1 ~OID_REGISTRY ~CRC32
+"
+
 pkg_setup() {
 	if kernel_is -lt 5 4 0; then
 		eerror
@@ -36,18 +46,14 @@ pkg_setup() {
 		die "Upgrade to kernel >= 5.4.0 before installing ksmbd"
 	fi
 
-	CONFIG_CHECK="
-		~INET ~MULTIUSER ~FILE_LOCKING
-
-		~NLS ~NLS_UTF8
-
-		~CRYPTO ~CRYPTO_MD4 ~CRYPTO_MD5 ~CRYPTO_HMAC ~CRYPTO_ECB
-		~CRYPTO_LIB_DES ~CRYPTO_SHA256 ~CRYPTO_CMAC ~CRYPTO_SHA512
-		~CRYPTO_AEAD2 ~CRYPTO_CCM ~CRYPTO_GCM ~ASN1 ~OID_REGISTRY ~CRC32"
-
 	CONFIG_CHECK+="
 		!SMB_SERVER"
 	SMB_SERVER_ERROR="Your kernel already have built with CONFIG_SMB_SERVER"
 
-	linux-info_pkg_setup
+	linux-mod_pkg_setup
+}
+
+src_prepare() {
+	default
+	sed -i "s/\$(shell uname -r)/${KV_FULL}/" Makefile
 }
