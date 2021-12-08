@@ -33,3 +33,5 @@ python_install_all() {
 	newicon ${PN}{/icons/icon,}.png
 	domenu ${PN}.desktop
 }
+
+distutils_enable_tests pytest
