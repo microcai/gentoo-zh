@@ -17,10 +17,18 @@ LICENSE="MIT"
 IUSE=""
 
 RDEPEND="
-	x11-libs/gtk+
-	x11-libs/libXScrnSaver
-	gnome-base/gconf
 	dev-libs/nss
+	gnome-base/gconf:2
+	media-libs/alsa-lib
+	media-libs/fontconfig:1.0
+	net-print/cups
+	x11-libs/cairo
+	x11-libs/gdk-pixbuf:2
+	x11-libs/gtk+:2
+	x11-libs/libX11
+	x11-libs/libXScrnSaver
+	x11-libs/libXtst
+	x11-libs/pango
 	sys-apps/lsb-release
 	sys-apps/bubblewrap
 "
@@ -70,7 +78,7 @@ src_install() {
 		Icon=wechat
 		Type=Application
 		StartupNotify=true
-		Categories=Network;Application;
+		Categories=Network;Chat;
 	EOF
 
 	exeinto /usr/bin
