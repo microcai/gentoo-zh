@@ -1,7 +1,9 @@
 acct-group/aptly 0: System group: aptly
 acct-group/cockpit-ws 0: Group for the cockpit server
+acct-group/n2n 0: System group: n2n
 acct-user/aptly 0: System user: aptly
 acct-user/cockpit-ws 0: User for the cockpit server
+acct-user/n2n 0: System user: n2n
 app-admin/cockpit 234: A systemd web based user interface for Linux server
 app-arch/zchunk 1.1.16: A format designed for highly efficient deltas while maintaining good compression
 app-crypt/archlinux-keyring 20210616: GnuPG keyring of Archlinux developer keys
@@ -137,7 +139,7 @@ net-misc/prips 1.0.0: print the IP addresses in a range
 net-misc/you-get 9999: A video downloader for YouTube, Youku, niconico and a few other sites
 net-p2p/amule-dlp 9999: aMule with DLP patch, the all-platform eMule p2p client
 net-p2p/amule-dlp-antileech 9999: amule-dlp-antileech, dynamic DLP library for amule-dlp
-net-p2p/n2n 2.6 2.8: A Layer Two Peer-to-Peer VPN
+net-p2p/n2n 3.0: A Layer Two Peer-to-Peer VPN
 net-p2p/qbittorrent-enhanced 4.3.8.10 4.3.9.10: qBittorrent Enhanced, based on qBittorrent
 net-print/epson-inkjet-printer_201207w 1.0.0: Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 net-proxy/Xray 1.4.3 1.4.4 1.4.5: Xray, Penetrates Everything.
