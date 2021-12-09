@@ -1,30 +1,30 @@
 # Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 DESCRIPTION="A Layer Two Peer-to-Peer VPN"
 
-inherit user systemd cmake
+inherit systemd cmake
 
 HOMEPAGE="http://www.ntop.org/n2n/"
-SRC_URI="https://github.com/ntop/n2n/archive/2.6.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/ntop/n2n/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE=""
+KEYWORDS="amd64"
+IUSE="+openssl"
 
-DEPEND="dev-libs/openssl"
+DEPEND="
+	acct-user/n2n
+	acct-group/n2n
+	openssl? ( dev-libs/openssl )
+"
 RDEPEND="${DEPEND}"
-
-pkg_setup() {
-	enewgroup n2n
-	enewuser n2n -1 -1 /var/empty n2n
-}
 
 src_configure(){
 	mycmakeargs=(
 		-DBUILD_SHARED_LIBS=OFF
+		-DN2N_OPTION_USE_OPENSSL=$(usex openssl ON OFF)
 	)
 
 	cmake_src_configure
@@ -32,8 +32,13 @@ src_configure(){
 
 src_install() {
 	cmake_src_install
+
+	rm -r "${D}/usr/share" || die
+	doman "${S}/edge.8"
+	doman "${S}/n2n.7"
+	doman "${S}/supernode.1"
+
 	keepdir /var/log/n2n
-	fowners n2n:n2n /var/log/n2n
 
 	cp "${S}/packages/etc/systemd/system/edge@.service.in" "${S}/packages/etc/systemd/system/n2n-edge@.service"
 	cp "${S}/packages/etc/systemd/system/supernode.service.in" "${S}/packages/etc/systemd/system/n2n-supernode.service"
