@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-09 06:31:56 CST)
+(The last generation time: 2021-12-09 14:01:28 CST)
 
 ### Packages
 
@@ -273,8 +273,9 @@
  net-p2p/amule-dlp-antileech                | 9999                                      |            | https://github.com/persmule/amule-dlp.antileech                                         | , dynamic DLP library for amule-dlp
    net-p2p/amule-dlp                        | 9999                                      | RD         | https://github.com/persmule/amule-dlp                                                   | aMule with DLP patch, the all-platform eMule p2p client
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-p2p/n2n                                | 2.6                                       |            | http://www.ntop.org/n2n/                                                                | A Layer Two Peer-to-Peer VPN
-                                            | 2.8                                       |            |                                                                                         |
+ net-p2p/n2n                                | 3.0                                       |            | http://www.ntop.org/n2n/                                                                | A Layer Two Peer-to-Peer VPN
+   acct-group/n2n                           | 0                                         |  D, RD     |                                                                                         | A Layer Two Peer-to-Peer VPN
+   acct-user/n2n                            | 0                                         |  D, RD     |                                                                                         | A Layer Two Peer-to-Peer VPN
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-p2p/qbittorrent-enhanced               | 4.3.8.10                                  |            | https://github.com/c0re100/qBittorrent-Enhanced-Edition                                 | qBittorrent Enhanced, based on qBittorrent
                                             | 4.3.9.10                                  |            |                                                                                         |
