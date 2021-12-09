@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-09 14:01:28 CST)
+(The last generation time: 2021-12-09 18:57:34 CST)
 
 ### Packages
 
@@ -308,7 +308,7 @@
  net-proxy/v2ray-bin                        | 4.44.0                                    |            | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sci-chemistry/vesta                        | 3.5.5                                     |            | https://jp-minerals.org/vesta                                                           | Visualization for Electronic and STructural Analysis
-                                            | 3.5.7                                     |            |                                                                                         |
+                                            | 3.5.7-r1                                  |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sci-libs/libticalcs2                       | 9999                                      |            | http://lpg.ticalc.org/prj_tilp/                                                         | Library for communication with TI calculators
    sci-libs/libtifiles2                     | 9999                                      |  D, RD     | http://lpg.ticalc.org/prj_tilp/                                                         | Library for TI calculator files
