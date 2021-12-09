@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<!-- maintainer-needed -->
-	<use>
-		<flag name='openssl'>Use openssl support</flag>
-	</use>
 </pkgmetadata>
