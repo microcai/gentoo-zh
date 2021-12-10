@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst
+DESCRIPTION=trash-put made compatible to GNUs rm and rmdir
+EAPI=7
+HOMEPAGE=https://github.com/PhrozenByte/rmtrash
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=app-misc/trash-cli
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/PhrozenByte/rmtrash/archive/v1.14.tar.gz -> rmtrash-1.14.tar.gz
+_md5_=66df55f703dea08054c1d116debb3d72
