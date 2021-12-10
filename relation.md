@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-10 11:17:18 CST)
+(The last generation time: 2021-12-10 17:44:26 CST)
 
 ### Packages
 
@@ -15,6 +15,8 @@
    acct-user/cockpit-ws                     | 0                                            |  D, BD, RD |                                                                                         | User for the cockpit server
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-crypt/etoken-sac                       | 10.3                                         |            | http://aladdin-rd.ru                                                                    | SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-dicts/copytranslator                   | 9.1.0                                        |            | https://copytranslator.github.io/                                                       | Foreign language reading and translation assistant based on copy and translate.
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                         | 0.11.18                                      |            | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
                                             | 1.0.3                                        |            |                                                                                         |
