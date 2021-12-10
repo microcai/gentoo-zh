@@ -8,6 +8,7 @@ app-admin/cockpit 234: A systemd web based user interface for Linux server
 app-arch/zchunk 1.1.16: A format designed for highly efficient deltas while maintaining good compression
 app-crypt/archlinux-keyring 20210616: GnuPG keyring of Archlinux developer keys
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
+app-dicts/copytranslator 9.1.0: Foreign language reading and translation assistant based on copy and translate.
 app-editors/typora 0.11.18 1.0.3: A truely minimal markdown editor.
 app-editors/visual-studio-code-bin 1.62.3: Multiplatform Visual Studio Code from Microsoft
 app-emulation/deepin-udis86 1.72-r4: Deepin Version of Wine
