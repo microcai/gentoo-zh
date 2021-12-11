@@ -25,7 +25,7 @@ src_unpack() {
 	if [[ -n ${A} ]]; then
 		unpack ${A} || die
 	fi
-		for _i in argoat configator ctypes dragonfail termbox_next; do
+		for _i in argoat configator dragonfail termbox_next; do
 			git-r3_fetch ${HOMEPAGE%ly}${_i} || die
 			git-r3_checkout ${HOMEPAGE%ly}${_i} ${EGIT_CHECKOUT_DIR}/${_i} || die
 	done
