@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-11 16:24:37 CST)
+(The last generation time: 2021-12-11 21:23:54 CST)
 
 ### Packages
 
@@ -390,7 +390,7 @@
  x11-misc/lightdm-slick-greeter             | 1.4.1                                        |            | https://github.com/linuxmint/slick-greeter                                              | LightDM greeter forked from Unity by Linux Mint team
                                             | 9999                                         |            |                                                                                         |
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- x11-misc/ly                                | 0.5.0-r1                                     |            | https://github.com/nullgemm/ly                                                          | Ly - a TUI display manager
+ x11-misc/ly                                | 0.5.3                                        |            | https://github.com/nullgemm/ly                                                          | Ly - a TUI display manager
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-misc/picom-jonaburg                    | 8                                            |            | https://github.com/jonaburg/picom                                                       | jonaburg's picom fork with dual_kawase blur and rounded corners
                                             | 9999                                         |            |                                                                                         |
