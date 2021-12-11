@@ -26,6 +26,7 @@ DEPEND="
 		dev-cpp/yaml-cpp
 		dev-qt/qtcore
 		dev-qt/qtgui
+		dev-qt/qtnetwork
 		dev-qt/qtopengl
 		kde-frameworks/extra-cmake-modules
 		kde? ( kde-frameworks/kwindowsystem )
