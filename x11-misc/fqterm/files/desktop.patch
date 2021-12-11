@@ -1,0 +1,13 @@
+diff --git a/res/fqterm.desktop b/res/fqterm.desktop
+index 64345c2..00504fd 100644
+--- a/res/fqterm.desktop
++++ b/res/fqterm.desktop
+@@ -1,7 +1,7 @@
+ [Desktop Entry]
+ Version=1.0
+ Type=Application
+-Categories=Application;Qt;Network;
++Categories=Qt;Network;
+ Icon=fqterm
+ Name=FQTerm
+ Exec=fqterm -caption "%c" %i %u

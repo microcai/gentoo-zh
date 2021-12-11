@@ -19,12 +19,17 @@ RDEPEND="
 	media-libs/alsa-lib
 	dev-qt/qtcore
 	dev-qt/qtgui
-	dev-qt/qtscript"
+	dev-qt/qtnetwork
+	dev-qt/qtmultimedia
+	dev-qt/qtscript
+	dev-qt/qtwidgets
+	dev-qt/qtxml"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
 	default
-	eapply "${FILESDIR}"/${P}-drop-qt4.patch
+	eapply "${FILESDIR}/${P}-drop-qt4.patch"
+	eapply "${FILESDIR}/desktop.patch"
 	cmake_src_prepare
 }
 
