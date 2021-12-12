@@ -46,6 +46,7 @@ app-misc/gpick:gtk3 - use GTK3 instead of GTK2
 app-text/ydcv-rs:clipboard - Enable feature: use selected text as input
 app-text/ydcv-rs:notify - Enable feature: display explanations via desktop notification
 dev-cpp/cppcoro:shared - Build shared library instead of static library.
+dev-cpp/tgbot-cpp:shared - Build shared library instead of static library.
 dev-libs/granite:demo - Build the Granite demo application (to present all available UI features provided by the library)
 dev-python/conda:user - use user's home directory as default pkgs and envs prefix
 media-fonts/nerd-fonts:3270 - Install Nerd-fonts-patched 3270 fonts
