@@ -12,7 +12,7 @@ HOMEPAGE="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX
 	http://www.openprinting.org/driver/epson-201207w"
 SRC_URI="http://download.ebz.epson.net/dsc/op/stable/SRPMS/${MY_PN}-${PV}-1lsb3.2.src.rpm"
 
-LICENSE="LGPL EPSON"
+LICENSE="LGPL-2.1 EPSON"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
@@ -21,6 +21,10 @@ RDEPEND="net-print/cups"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/epson-inkjet-printer-filter-${PV}"
+
+QA_PREBUILT="
+	/opt/epson-inkjet-printer-201207w/lib64/libEpson_201207w.MT.so.1.0.0
+	/opt/epson-inkjet-printer-201207w/lib64/libEpson_201207w.so.1.0.0"
 
 src_prepare() {
 	eautoreconf
