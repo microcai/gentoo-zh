@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-12 15:40:03 CST)
+(The last generation time: 2021-12-12 18:03:43 CST)
 
 ### Packages
 
@@ -265,9 +265,7 @@
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/avsocks                           | 9999                                         |            | https://github.com/avplayer/avsocks                                                     | Self-deployed file management and sharing system.
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/baidunetdisk                      | 3.0.1                                        |            | https://pan.baidu.com                                                                   | Baidu Net Disk is a cloud storage client (Linux Version)
-                                            | 3.4.1                                        |            |                                                                                         |
-                                            | 3.5.0                                        |            |                                                                                         |
+ net-misc/baidunetdisk                      | 4.3.0                                        |            | https://pan.baidu.com/                                                                  | Baidu Net Disk is a cloud storage client (Linux Version)
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/baidupcs-go                       | 3.6.2                                        |            | https://github.com/felixonmars/BaiduPCS-Go                                              | The terminal utility for Baidu Network Disk (Golang Version).
                                             | 9999                                         |            |                                                                                         |
