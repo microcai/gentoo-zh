@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-13 18:19:02 CST)
+(The last generation time: 2021-12-13 18:20:32 CST)
 
 ### Packages
 
@@ -34,11 +34,11 @@
                                             | 9999                                         |            |                                                                                         |
      app-i18n/fcitx5-qt                     | 5.0.7-r1                                     |  D, RD     | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
                                             | 9999                                         |            |                                                                                         |
+     app-i18n/libime                        | 1.0.9                                        |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
+                                            | 9999                                         |            |                                                                                         |
        app-i18n/fcitx5                      | 5.0.10                                       |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
                                             | 9999                                         |            |                                                                                         |
          x11-libs/xcb-imdkit                | 1.0.3                                        |  D, RD     | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
-     app-i18n/libime                        | 1.0.9                                        |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
-                                            | 9999                                         |            |                                                                                         |
    app-i18n/fcitx5-configtool               | 5.0.8                                        | RD         | https://fcitx-im.org/                                                                   | Configuration module for Fcitx
                                             | 9999                                         |            |                                                                                         |
    app-i18n/fcitx5-gtk                      | 5.0.9                                        | RD         | https://github.com/fcitx/fcitx5-gtk                                                     | Gtk im module for fcitx5 and glib based dbus client library
@@ -130,8 +130,6 @@
  dev-cpp/tgbot-cpp                          | 1.3                                          |            | https://github.com/reo7sp/tgbot-cpp                                                     | C++ library for Telegram bot API
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/granite                           | 5.2.1                                        |            | https://github.com/elementary/granite                                                   | Elementary OS library that extends Gtk+
---------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-libs/libbacktrace                      | 210530                                       |            | https://github.com/ianlancetaylor/libbacktrace                                          | A C library for producing symbolic backtraces
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/libdwarf                          | 20140208                                     |            | https://github.com/Distrotech/libdwarf                                                  | Library to deal with DWARF Debugging Information Format
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -339,6 +337,8 @@
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/zypper                            | 1.14.47                                      |            | https://en.opensuse.org/Portal:Zypper                                                   | World's most powerful command line package manager
    sys-libs/libzypp                         | 17.27.0                                      |  D, BD     | https://doc.opensuse.org/projects/libzypp/HEAD/                                         | ZYpp Package Management library
+     dev-libs/boost                         | 1.77.0-r4                                    |  D, BD, RD | https://www.boost.org/                                                                  | Boost Libraries for C++
+       dev-libs/libbacktrace                | 210530                                       |  D, RD     | https://github.com/ianlancetaylor/libbacktrace                                          | A C library for producing symbolic backtraces
      sys-libs/libsolv                       | 0.7.19                                       |  D, BD     | https://doc.opensuse.org/projects/libzypp/HEAD/                                         | Library for solving packages and reading repositories
        app-arch/zchunk                      | 1.1.16                                       |  D, BD     | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
