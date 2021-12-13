@@ -10,20 +10,21 @@ HOMEPAGE="https://github.com/romkatv/gitstatus"
 SRC_URI="https://github.com/romkatv/gitstatus/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 # LIBGIT2_TAG depends on pkgver. They must be updated together. See libgit2_version in:
 # https://raw.githubusercontent.com/romkatv/gitstatus/v${pkgver}/build.info
-LIBGIT2_TAG="tag-82cefe2b42300224ad3c148f8b1a569757cc617a"
+LIBGIT2_TAG="tag-5860a42d19bcd226cb6eff2dcbfcbf155d570c73"
 EGIT_REPO_URI="https://github.com/romkatv/libgit2"
 EGIT_COMMIT="${LIBGIT2_TAG}"
 EGIT_CHECKOUT_DIR="${WORKDIR}/${P}/deps"
 BUILD_DIR="${EGIT_CHECKOUT_DIR}_BUILD"
 CMAKE_USE_DIR="${EGIT_CHECKOUT_DIR}"
 
+IUSE="zsh-completion"
+
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 
-DEPEND=""
+DEPEND="zsh-completion? ( app-shells/zsh )"
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 src_unpack() {
 	if [[ -n ${A} ]]; then
@@ -70,9 +71,11 @@ src_compile() {
 	append-ldflags "${ldflags[@]}"
 	emake all
 	GITSTATUS_DAEMON= GITSTATUS_CACHE_DIR=${S}/usrbin ./install
-	for file in *.zsh install; do
-		zsh -fc "emulate zsh -o no_aliases && zcompile -R -- $file.zwc $file" || die "Couldn't zcompile"
-	done
+	if use zsh-completion; then
+		for file in *.zsh install; do
+			zsh -fc "emulate zsh -o no_aliases && zcompile -R -- $file.zwc $file" || die "Couldn't zcompile"
+		done
+	fi
 }
 
 src_install() {
