@@ -45,6 +45,9 @@ app-i18n/mozc:renderer - Enable native candidate window
 app-misc/gpick:gtk3 - use GTK3 instead of GTK2
 app-text/ydcv-rs:clipboard - Enable feature: use selected text as input
 app-text/ydcv-rs:notify - Enable feature: display explanations via desktop notification
+cutefish-base/cutefish-meta:base - Install Base CutefishOS
+cutefish-base/cutefish-meta:extra - Install CutefishOS extra applicaions developed by CutefishOS ( Not Stable )
+cutefish-base/cutefish-meta:terminal - Install CutefishOS Terminal Emulator
 dev-cpp/cppcoro:shared - Build shared library instead of static library.
 dev-cpp/tgbot-cpp:shared - Build shared library instead of static library.
 dev-libs/boost:context - Build and install the Boost.Context (and Boost.Fiber) library and all other Boost libraries that depend on it
