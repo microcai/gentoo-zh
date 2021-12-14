@@ -5,14 +5,10 @@ EAPI=8
 
 inherit flag-o-matic git-r3 cmake
 
-# Check this version in cmake/ThirdParties.cmake during maintenance
-MS_GSL_VERSION="3.1.0"
-
 DESCRIPTION="Modern C++ Terminal Emulator"
 HOMEPAGE="https://github.com/contour-terminal/contour"
 SRC_URI="
-		https://github.com/contour-terminal/contour/archive/v${PV}.tar.gz -> ${P}.tar.gz
-		https://github.com/microsoft/GSL/archive/v${MS_GSL_VERSION}.tar.gz -> microsoft-GSL-${MS_GSL_VERSION}.tar.gz"
+		https://github.com/contour-terminal/contour/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -45,13 +41,13 @@ PATCHES=(
 src_unpack() {
 	default
 	if use test ;then
-		THIRDPARTIES="catch2 fmt range_v3 yaml_cpp termbenchpro libunicode"
+		THIRDPARTIES="catch2 fmt range_v3 yaml_cpp termbenchpro libunicode GSL"
 	else
-		THIRDPARTIES="fmt range_v3 yaml_cpp termbenchpro libunicode"
+		THIRDPARTIES="fmt range_v3 yaml_cpp termbenchpro libunicode GSL"
 	fi
 
 	for MY_REPO_NAME in ${THIRDPARTIES} ; do
-		EGIT_REPO_URI=$(grep -A 2 "NAME ${MY_REPO_NAME}" ${S}/cmake/ThirdParties.cmake | grep URL | awk -F ' ' '{print $2F}' | awk -F archive '{print $1}')
+		EGIT_REPO_URI="https://github.com/$(grep -A 2 "NAME ${MY_REPO_NAME}" ${S}/cmake/ThirdParties.cmake | grep GITHUB | awk -F '"' '{print $2F}')"
 		EGIT_COMMIT=$(grep "${MY_REPO_NAME}: commit hash" ${S}/cmake/ThirdParties.cmake | awk -F '"' '{print $2F}')
 		git-r3_fetch ${EGIT_REPO_URI}
 		git-r3_checkout ${EGIT_REPO_URI} "${WORKDIR}/${MY_REPO_NAME}-src"
@@ -89,7 +85,7 @@ src_configure() {
 		-DFETCHCONTENT_SOURCE_DIR_YAML_CPP="${WORKDIR}/yaml_cpp-src"
 		-DFETCHCONTENT_SOURCE_DIR_TERMBENCHPRO="${WORKDIR}/termbenchpro-src"
 		-DFETCHCONTENT_SOURCE_DIR_LIBUNICODE="${WORKDIR}/libunicode-src"
-		-DFETCHCONTENT_SOURCE_DIR_GSL="${WORKDIR}/GSL-${MS_GSL_VERSION}/"
+		-DFETCHCONTENT_SOURCE_DIR_GSL="${WORKDIR}/GSL-src/"
 	)
 	cmake_src_configure
 }
