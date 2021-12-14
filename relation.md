@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-14 10:16:56 CST)
+(The last generation time: 2021-12-14 18:22:58 CST)
 
 ### Packages
 
@@ -118,6 +118,56 @@
  app-vim/easymotion                         | 1.3                                          |            | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: Vim motions on speed!
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/powerline                          | 9999                                         |            | http://www.vim.org/scripts/script.php?script_id=3881                                    | vim plugin: The ultimate vim statusline utility.
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ cutefish-base/cutefish-calculator          | 0.7                                          |            | https://github.com/cutefishos/calculator                                                | CutefishOS Calculator
+                                            | 9999                                         |            |                                                                                         |
+   sys-libs/libcutefish                     | 0.7                                          |  D, BD     | https://github.com/cutefishos/libcutefish                                               | System library for Cutefish applications
+                                            | 9999                                         |            |                                                                                         |
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ cutefish-base/cutefish-dock                | 0.7                                          |            | https://github.com/cutefishos/dock                                                      | CutefishOS application dock
+                                            | 9999                                         |            |                                                                                         |
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ cutefish-base/cutefish-filemanager         | 0.7                                          |            | https://github.com/cutefishos/filemanager                                               | Cutefish File Manager
+                                            | 9999                                         |            |                                                                                         |
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ cutefish-base/cutefish-icons               | 0.7                                          |            | https://github.com/cutefishos/icons                                                     | System default icon theme of CutefishOS
+                                            | 9999                                         |            |                                                                                         |
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ cutefish-base/cutefish-kwin-plugins        | 0.7                                          |            | https://github.com/cutefishos/kwin-plugins                                              | CutefishOS KWin Plugins
+                                            | 9999                                         |            |                                                                                         |
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ cutefish-base/cutefish-launcher            | 0.7                                          |            | https://github.com/cutefishos/launcher                                                  | CutefishOS's full-screen application launcher
+                                            | 9999                                         |            |                                                                                         |
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ cutefish-base/cutefish-meta                | 0.7                                          |            | https://cutefishos.com                                                                  | CutefishOS Desktop Enviroment (meta package)
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ cutefish-base/cutefish-qt-plugins          | 0.7                                          |            | https://github.com/cutefishos/qt-plugins                                                | Unify Qt application style of CutefishOS
+                                            | 9999                                         |            |                                                                                         |
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ cutefish-base/cutefish-screenlocker        | 0.7                                          |            | https://github.com/cutefishos/core                                                      | CutefishOS system screen locker
+                                            | 9999                                         |            |                                                                                         |
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ cutefish-base/cutefish-screenshot          | 0.7                                          |            | https://github.com/cutefishos/screenshot                                                | Screenshot tool for CutefishOS
+                                            | 9999                                         |            |                                                                                         |
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ cutefish-base/cutefish-settings            | 0.7                                          |            | https://github.com/cutefishos/settings                                                  | System Settings application for Cutefish Desktop
+                                            | 9999                                         |            |                                                                                         |
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ cutefish-base/cutefish-statusbar           | 0.7                                          |            | https://github.com/cutefishos/statusbar                                                 | Status of the system, such as time, system tray
+                                            | 9999                                         |            |                                                                                         |
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ cutefish-base/cutefish-terminal            | 0.7                                          |            | https://github.com/cutefishos/terminal                                                  | A terminal emulator for Cutefish
+                                            | 9999                                         |            |                                                                                         |
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ cutefish-base/cutefish-texteditor          | 0.7                                          |            | https://github.com/cutefishos/texteditor                                                | Elegant text editor for Cutefish
+                                            | 9999                                         |            |                                                                                         |
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ cutefish-base/cutefish-videoplayer         | 0.7                                          |            | https://github.com/cutefishos/videoplayer                                               | An open source video player built with Qt/QML and libmpv
+                                            | 9999                                         |            |                                                                                         |
+   net-misc/youtube-dl                      | 2021.06.06                                   |  D, BD     | https://youtube-dl.org/                                                                 | Download videos from YouTube.com (and more sites...)
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ cutefish-base/cutefish-wallpapers          | 0.7                                          |            | https://github.com/cutefishos/wallpapers                                                | CutefishOS's system wallpaper
+                                            | 9999                                         |            |                                                                                         |
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/ETL                                | 0.04.22                                      |            | http://synfig.org                                                                       | ETL is a multi-platform class and template library
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -355,6 +405,14 @@
  sys-fs/systemd-zpool-scrub                 | 1.1                                          |            | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/mkinitcpio                      | 30-r2                                        |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ sys-libs/cutefish-core                     | 0.7                                          |            | https://github.com/cutefishos/core                                                      | System components and backend of CutefishOS
+                                            | 9999                                         |            |                                                                                         |
+   sys-libs/fishui                          | 0.7                                          |  D, BD     | https://github.com/cutefishos/fishui                                                    | GUI library based on QQC2 for Cutefish applications
+                                            | 9999                                         |            |                                                                                         |
+     dev-qt/assistant                       | 5.15.2-r11                                   | BD         |                                                                                         | Tool for viewing on-line documentation in Qt help file format
+     dev-qt/qdbusviewer                     | 5.15.2-r10                                   | BD         |                                                                                         | Graphical tool that lets you introspect D-Bus objects and messages
+   x11-drivers/xf86-input-synaptics         | 1.9.1                                        |  D, BD     |                                                                                         | Driver for Synaptics touchpads
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-libs/elog-functions                    | 0.0.2                                        |            | http://xochitl.matem.unam.mx/~canek/gentoo-systemd-only/index.html                      | Compatibility functions for the log eclass functions of OpenRC
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
