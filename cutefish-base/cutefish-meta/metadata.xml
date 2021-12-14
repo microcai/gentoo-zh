@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="project">
+		<email>hougelangley1987@gmail.com</email>
+		<name>CutefishOS Desktop Enviroment</name>
+	</maintainer>
+	<use>
+		<flag name="base">Install Base CutefishOS</flag>
+		<flag name="terminal">Install CutefishOS Terminal Emulator</flag>
+		<flag name="extra">Install CutefishOS extra applicaions developed by CutefishOS ( Not Stable )</flag>
+	</use>
+</pkgmetadata>

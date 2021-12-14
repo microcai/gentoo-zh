@@ -13,6 +13,7 @@ app-portage
 app-shells
 app-text
 app-vim
+cutefish-base
 dde-base
 dde-extra
 dev-android
