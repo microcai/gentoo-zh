@@ -8,7 +8,7 @@ inherit cmake
 if [[ ${PV} = 9999* ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/cutefishos/qt-plugins.git"
-	EGIT_CHECKOUT_DIR=qt-plugins-${PV}
+	EGIT_CHECKOUT_DIR=cutefish-qt-plugins-${PV}
 	KEYWORDS=""
 else
 	EGIT_COMMIT="b60cdd4c0cf185f538c9746ef321582cbab9568c"

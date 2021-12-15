@@ -8,7 +8,7 @@ inherit cmake
 if [[ ${PV} == 9999* ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/cutefishos/wallpapers.git"
-	EGIT_CHECKOUT_DIR=wallpapers-${PV}
+	EGIT_CHECKOUT_DIR=cutefish-wallpapers-${PV}
 	KEYWORDS=""
 else
 	EGIT_COMMIT="9acd305776a88e2a6c497c8e9b719c0f39a65c97"
