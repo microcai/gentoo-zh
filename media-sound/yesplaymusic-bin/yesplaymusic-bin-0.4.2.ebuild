@@ -20,13 +20,28 @@ QA_PRESTRIPPED="*"
 
 DEPEND="
 	app-arch/gzip
+	dev-libs/nss
+	media-libs/alsa-lib
+	net-print/cups
 	x11-libs/gtk+:*
-	dev-libs/nss"
+	x11-libs/libxkbcommon"
 
 RDEPEND="
 	${DEPEND}"
 
 S="${WORKDIR}"
+
+QA_PREBUILT="
+	opt/YesPlayMusic/chrome-sandbox
+	opt/YesPlayMusic/libEGL.so
+	opt/YesPlayMusic/libGLESv2.so
+	opt/YesPlayMusic/libffmpeg.so
+	opt/YesPlayMusic/libvk_swiftshader.so
+	opt/YesPlayMusic/libvulkan.so.1
+	opt/YesPlayMusic/swiftshader/libEGL.so
+	opt/YesPlayMusic/swiftshader/libGLESv2.so
+	opt/YesPlayMusic/yesplaymusic
+"
 
 src_unpack(){
 	tar xvf "${DISTDIR}/yesplaymusic-${PV}.pacman" || die
