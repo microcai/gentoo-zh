@@ -17,7 +17,7 @@ KEYWORDS="~amd64"
 
 DEPEND="sys-fs/fuse:0"
 
-QA_PRESTRIPPED="/opt/jetbrains-toolbox/jetbrains-toolbox"
+QA_PREBUILT="opt/jetbrains-toolbox/jetbrains-toolbox"
 
 src_compile() {
 	./"${PN}" --appimage-extract
