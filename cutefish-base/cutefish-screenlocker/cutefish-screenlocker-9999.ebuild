@@ -9,7 +9,7 @@ inherit cmake
 if [[ ${PV} = 9999* ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/cutefishos/screenlocker.git"
-	EGIT_CHECKOUT_DIR=screenlocker-${PV}
+	EGIT_CHECKOUT_DIR=cutefish-screenlocker-${PV}
 	KEYWORDS=""
 else
 	EGIT_COMMIT="90c70de51b61837dc9f52da58b5cce703cddab94"

@@ -9,7 +9,7 @@ inherit cmake
 if [[ ${PV} == 9999* ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/cutefishos/filemanager.git"
-	EGIT_CHECKOUT_DIR=filemanager-${PV}
+	EGIT_CHECKOUT_DIR=cutefish-filemanager-${PV}
 	KEYWORDS=""
 else
 	EGIT_COMMIT="94ecc5661736bf50440c150e06cb3266ddb10f48"
