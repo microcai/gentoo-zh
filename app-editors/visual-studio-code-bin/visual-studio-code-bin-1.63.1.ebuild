@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit desktop eutils pax-utils xdg
+inherit desktop pax-utils xdg
 
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
