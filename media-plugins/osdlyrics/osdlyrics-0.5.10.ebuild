@@ -4,21 +4,21 @@
 EAPI=7
 PYTHON_COMPAT=( python3_{8,9} )
 
-inherit python-r1 autotools git-r3
+inherit python-r1 autotools xdg
 
 DESCRIPTION="Standalone lyrics fetcher/displayer (windowed and OSD mode)."
 HOMEPAGE="https://github.com/osdlyrics/osdlyrics"
 
-EGIT_REPO_URI="https://github.com/osdlyrics/osdlyrics.git"
-
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
 
-if [[ "${PV}" != 9999 ]]; then
-	EGIT_COMMIT="818bac81ea3454bd9754602888203e0786cfd50b"
-else
+if [[ "${PV}" == 9999 ]]; then
+	inherit git-r3
 	KEYWORDS=""
+	EGIT_REPO_URI="https://github.com/osdlyrics/osdlyrics.git"
+else
+	KEYWORDS="~amd64"
+	SRC_URI="https://github.com/osdlyrics/osdlyrics/archive/${PV}.tar.gz -> ${P}.tar.gz"
 fi
 
 IUSE="gnome indicator"
@@ -32,6 +32,7 @@ RDEPEND="
 	dev-python/pycurl[${PYTHON_USEDEP}]
 	gnome? ( dev-libs/gobject-introspection )
 	indicator? ( dev-libs/libappindicator )
+	x11-libs/gtk+:2
 "
 
 DEPEND="
@@ -49,6 +50,7 @@ src_configure() {
 	configuring() {
 		local myconf=(
 			--prefix="${EPREFIX}/usr" PYTHON="${PYTHON}"
+			$(use_enable indicator appindicator)
 		)
 		econf "${myconf[@]}"
 	}
