@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RESTRICT="mirror"
+RESTRICT="mirror test"
 IUSE=""
 
 DEPEND=""
@@ -24,8 +24,9 @@ S="${WORKDIR}/${PN}"
 
 src_prepare() {
 	default
-	sed -i -e 's:/usr/local/lib/ucc/:/usr/lib/ucc/:' "${S}/driver/linux.c"
-	sed -i -e 's:UCCDIR \"ucl\":\"/usr/bin/ucl\":' "${S}/driver/linux.c"
+	sed -i 's:/usr/local/lib/ucc/:/usr/lib/ucc/:' "${S}/driver/linux.c" || die
+	sed -i 's:UCCDIR \"ucl\":\"/usr/bin/ucl\":' "${S}/driver/linux.c" || die
+	sed -i 's:make -C:$(MAKE) -C:' "${S}/Makefile" || die
 	eapply "${FILESDIR}/fix-ignore-cflags-and-ldflags.patch"
 }
 
