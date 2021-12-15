@@ -9,7 +9,7 @@ inherit cmake
 if [[ ${PV} == 9999* ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/cutefishos/videoplayer.git"
-	EGIT_CHECKOUT_DIR=videoplayer-${PV}
+	EGIT_CHECKOUT_DIR=cutefish-videoplayer-${PV}
 	KEYWORDS=""
 else
 	EGIT_COMMIT="c1218016e4de425cae23c1ea715e57b68a5b24c2"

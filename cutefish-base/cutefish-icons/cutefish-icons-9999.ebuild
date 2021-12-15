@@ -8,7 +8,7 @@ inherit cmake
 if [[ ${PV} == 9999* ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/cutefishos/icons.git"
-	EGIT_CHECKOUT_DIR=icons-${PV}
+	EGIT_CHECKOUT_DIR=cutefish-icons-${PV}
 	KEYWORDS=""
 else
 	EGIT_COMMIT="119feb59404f329eb2f1ebe14d63f3d53f8bd96c"
