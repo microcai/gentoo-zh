@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-15 11:22:51 CST)
+(The last generation time: 2021-12-15 13:08:54 CST)
 
 ### Packages
 
@@ -251,8 +251,8 @@
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-plugins/gimp-gap                     | 2.8.0                                        |            | http://www.gimp.org/                                                                    | Gimp Animation Package
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-plugins/osdlyrics                    | 9999                                         |            | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
-                                            | 20200403-r1                                  |            |                                                                                         |
+ media-plugins/osdlyrics                    | 0.5.10                                       |            | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
+                                            | 9999                                         |            |                                                                                         |
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/feeluown                       | 3.7.9-r1                                     |            | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
    dev-python/fuo-kuwo                      | 0.1.4                                        |  D         | https://github.com/feeluown/feeluown-kuwo                                               | kuwo music support for feeluown
