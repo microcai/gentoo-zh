@@ -529,8 +529,13 @@ setup_env() {
 		export MAKEINFO=/dev/null
 	fi
 
-	# Reset CC to the value at start of emerge
-	export CC=${__ORIG_CC:-${CC}}
+	# Reset CC and CXX to the value at start of emerge
+	export CC=${__ORIG_CC:-${CC:-$(tc-getCC ${CTARGET})}}
+	export CXX=${__ORIG_CXX:-${CXX:-$(tc-getCXX ${CTARGET})}}
+
+	# and make sure __ORIC_CC and __ORIG_CXX is defined now.
+	export __ORIG_CC=${CC}
+	export __ORIG_CXX=${CXX}
 
 	if ! tc-is-clang && ! use custom-cflags && ! is_crosscompile ; then
 
@@ -546,8 +551,6 @@ setup_env() {
 		local current_binutils_path=$(binutils-config -B)
 		local current_gcc_path=$(gcc-config -B)
 		einfo "Overriding clang configuration, since it won't work here"
-
-		export __ORIG_CC=${CC}
 
 		export CC="${current_gcc_path}/gcc"
 		export CXX="${current_gcc_path}/g++"
@@ -571,9 +574,7 @@ setup_env() {
 
 		# this is the "normal" case
 
-		export __ORIG_CC=${CC}
-
-		export CC="$(tc-getCC ${CTARGET}) -Wno-unused-command-line-argument"
+		export CC="$(tc-getCC ${CTARGET})"
 		export CXX="$(tc-getCXX ${CTARGET})"
 
 		# Always use tuple-prefixed toolchain. For non-native ABI glibc's configure
@@ -601,10 +602,10 @@ setup_env() {
 	# Note: Passing CFLAGS via CPPFLAGS overrides glibc's arch-specific CFLAGS
 	# and breaks multiarch support. See 659030#c3 for an example.
 	# The glibc configure script doesn't properly use LDFLAGS all the time.
-	export CC="${__GLIBC_CC} ${__abi_CFLAGS} ${LDFLAGS}"
+	export CC="${__GLIBC_CC} ${__abi_CFLAGS} ${CFLAGS} -Wno-unused-command-line-argument ${LDFLAGS}"
 
 	# Some of the tests are written in C++, so we need to force our multlib abis in, bug 623548
-	export CXX="${__GLIBC_CXX} ${__abi_CFLAGS}"
+	export CXX="${__GLIBC_CXX} ${__abi_CFLAGS} ${CFLAGS}"
 
 	if is_crosscompile; then
 		# Assume worst-case bootstrap: glibc is buil first time
@@ -816,6 +817,20 @@ sanity_prechecks() {
 	fi
 }
 
+upgrade_warning() {
+	if [[ ${MERGE_TYPE} != buildonly && -n ${REPLACING_VERSIONS} && -z ${ROOT} ]]; then
+		local oldv newv=$(ver_cut 1-2 ${PV})
+		for oldv in ${REPLACING_VERSIONS}; do
+			if ver_test ${oldv} -lt ${newv}; then
+				ewarn "After upgrading glibc, please restart all running processes."
+				ewarn "Be sure to include init (telinit u) or systemd (systemctl daemon-reexec)."
+				ewarn "Alternatively, reboot your system."
+				break
+			fi
+		done
+	fi
+}
+
 #
 # the phases
 #
@@ -826,6 +841,7 @@ pkg_pretend() {
 	# All the checks...
 	einfo "Checking general environment sanity."
 	sanity_prechecks
+	upgrade_warning
 }
 
 pkg_setup() {
@@ -1597,11 +1613,7 @@ pkg_postinst() {
 		use compile-locales || run_locale_gen "${EROOT}/"
 	fi
 
-	if systemd_is_booted && [[ -z ${ROOT} ]] ; then
-		# We need to restart systemd when upgrading from < 2.34
-		# bug #823756
-		systemctl daemon-reexec
-	fi
+	upgrade_warning
 
 	# Check for sanity of /etc/nsswitch.conf, take 2
 	if [[ -e ${EROOT}/etc/nsswitch.conf ]] && ! has_version sys-auth/libnss-nis ; then
