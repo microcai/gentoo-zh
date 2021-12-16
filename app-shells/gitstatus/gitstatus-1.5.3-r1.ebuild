@@ -82,7 +82,12 @@ src_install() {
 	insinto "/usr/share/${PN}"
 	exeinto "${_}"
 
-	doins gitstatus.*.{sh,zsh{,.zwc}} *.info
+	doins gitstatus.*.sh *.info
+
+	if use zsh-completion; then
+		doins gitstatus.*.zsh{,.zwc}
+	fi
+
 	doexe install
 
 	exeinto "/usr/libexec/${PN}"
