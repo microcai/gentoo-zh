@@ -20,7 +20,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm ~arm64 ~mips"	#mips not tested
 RESRICT="mirror"
-IUSE="big-endian systemd"
+IUSE="big-endian"
 REQUIRED_USE="mips? ( !big-endian )"
 S="${WORKDIR}"
 
@@ -37,15 +37,8 @@ src_install() {
 	newbin "${S}/ssserver" ssserver-rust
 	newbin "${S}/ssurl" ssurl-rust
 
-	if use systemd; then
-		systemd_newunit "${FILESDIR}/shadowsocks-rust_at.service" shadowsocks-rust@.service
-		systemd_newunit "${FILESDIR}/shadowsocks-rust-server_at.service" shadowsocks-rust-server@.service
-	fi
+	systemd_newunit "${FILESDIR}/shadowsocks-rust_at.service" shadowsocks-rust@.service
+	systemd_newunit "${FILESDIR}/shadowsocks-rust-server_at.service" shadowsocks-rust-server@.service
 
 	keepdir /etc/shadowsocks
-
-	dostrip -x /usr/bin/sslocal-rust \
-		/usr/bin/ssmanager-rust \
-		/usr/bin/ssserver-rust \
-		/usr/bin/ssurl-rust
 }
