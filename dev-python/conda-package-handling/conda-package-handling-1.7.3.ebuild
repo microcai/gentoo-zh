@@ -14,8 +14,10 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
 
-DEPEND="dev-python/tqdm[${PYTHON_USEDEP}]
-		dev-python/six[${PYTHON_USEDEP}]"
+DEPEND="
+	dev-python/cython[${PYTHON_USEDEP}]
+	dev-python/tqdm[${PYTHON_USEDEP}]
+	dev-python/six[${PYTHON_USEDEP}]"
 
 RDEPEND="${DEPEND}"
 BDEPEND=""
