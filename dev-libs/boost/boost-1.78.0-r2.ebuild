@@ -13,7 +13,6 @@ MAJOR_V="$(ver_cut 1-2)"
 DESCRIPTION="Boost Libraries for C++"
 HOMEPAGE="https://www.boost.org/"
 SRC_URI="https://boostorg.jfrog.io/artifactory/main/release/${PV}/source/boost_${MY_PV}.tar.bz2"
-SRC_URI+=" https://dev.gentoo.org/~sam/distfiles/${CATEGORY}/${PN}/${P}-patches-1.tar.xz"
 S="${WORKDIR}/${PN}_${MY_PV}"
 
 LICENSE="Boost-1.0"
@@ -45,20 +44,16 @@ RDEPEND="
 	zstd? ( app-arch/zstd:=[${MULTILIB_USEDEP}] )
 	stacktrace? ( dev-libs/libbacktrace )"
 DEPEND="${RDEPEND}"
-BDEPEND=">=dev-util/boost-build-${MAJOR_V}-r2"
+#BDEPEND=">=dev-util/boost-build-${MAJOR_V}"
+BDEPEND=">=dev-util/boost-build-1.78.0-r1"
 
 PATCHES=(
-	"${WORKDIR}"/${PN}-1.71.0-disable_icu_rpath.patch
-	"${WORKDIR}"/${PN}-1.71.0-context-x32.patch
-	"${WORKDIR}"/${PN}-1.71.0-build-auto_index-tool.patch
+	"${FILESDIR}"/${PN}-1.71.0-disable_icu_rpath.patch
+	"${FILESDIR}"/${PN}-1.71.0-context-x32.patch
+	"${FILESDIR}"/${PN}-1.71.0-build-auto_index-tool.patch
 	# Boost.MPI's __init__.py doesn't work on Py3
-	"${WORKDIR}"/${PN}-1.73-boost-mpi-python-PEP-328.patch
-	"${WORKDIR}"/${PN}-1.74-CVE-2012-2677.patch
-	"${WORKDIR}"/${PN}-1.76-sparc-define.patch
-	"${WORKDIR}"/${PN}-1.77-math-deprecated-include.patch
-	"${WORKDIR}"/${PN}-1.77-geometry.patch
-	"${FILESDIR}"/${P}-python-3.10.patch
-	"${FILESDIR}"/${P}-fix-process-include.patch
+	"${FILESDIR}"/${PN}-1.73-boost-mpi-python-PEP-328.patch
+	"${FILESDIR}"/${PN}-1.74-CVE-2012-2677.patch
 )
 
 python_bindings_needed() {
@@ -195,6 +190,9 @@ src_configure() {
 
 	# Use C++14 globally as of 1.62
 	append-cxxflags -std=c++14
+
+	# fix QA issue: /usr/lib/gcc/x86_64-pc-linux-gnu/11.2.1/include/g++-v11/ext/new_allocator.h:145:26: warning: ‘void operator delete(void*, std::size_t)’ called on unallocated object ‘boost::wave::util::SimpleStringStorage<char, std::allocator<char> >::emptyString_’ [-Wfree-nonheap-object]
+	append-cxxflags -Wno-free-nonheap-object
 }
 
 multilib_src_compile() {
@@ -342,10 +340,12 @@ pkg_postinst() {
 	elog
 	elog
 	elog "This ebuild is from gentoo-zh and ***NOT*** supported by gentoo official. "
+	elog
 	elog "Comparing to the official one, this ebuild only adds support for `static-libs` and `stacktrace`,"
 	elog "which may be only useful for people who need them. If you don't need these features, it is also OK"
 	elog "to use this ebuild, but if you meet any problems, you could try to switch to the official one."
+	elog
 	elog "To install the official one, mask this package in config file, or simply specify overlay while emerge:"
+	elog
 	elog "  emerge -av boost::gentoo"
-
 }
