@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-16 20:21:11 CST)
+(The last generation time: 2021-12-17 09:07:02 CST)
 
 ### Packages
 
@@ -387,7 +387,7 @@
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/zypper                            | 1.14.47                                      |            | https://en.opensuse.org/Portal:Zypper                                                   | World's most powerful command line package manager
    sys-libs/libzypp                         | 17.27.0                                      |  D, BD     | https://doc.opensuse.org/projects/libzypp/HEAD/                                         | ZYpp Package Management library
-     dev-libs/boost                         | 1.77.0-r4                                    |  D, BD, RD | https://www.boost.org/                                                                  | Boost Libraries for C++
+     dev-libs/boost                         | 1.78.0-r2                                    |  D, BD, RD | https://www.boost.org/                                                                  | Boost Libraries for C++
        dev-libs/libbacktrace                | 210530                                       |  D, RD     | https://github.com/ianlancetaylor/libbacktrace                                          | A C library for producing symbolic backtraces
      sys-libs/libsolv                       | 0.7.19                                       |  D, BD     | https://doc.opensuse.org/projects/libzypp/HEAD/                                         | Library for solving packages and reading repositories
        app-arch/zchunk                      | 1.1.16                                       |  D, BD     | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
