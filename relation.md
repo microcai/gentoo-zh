@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-18 18:38:54 CST)
+(The last generation time: 2021-12-18 19:28:44 CST)
 
 ### Packages
 
@@ -420,8 +420,7 @@
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-process/btop                           | 1.1.2                                        |            | https://github.com/aristocratos/btop                                                    | Resources monitor. The C++ version of bashtop
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- virtual/dist-kernel                        | 5.10.80                                      |            |                                                                                         | Virtual to depend on any Distribution Kernel
-                                            | 5.10.81                                      |            |                                                                                         |
+ virtual/dist-kernel                        | 5.10.85                                      |            |                                                                                         | Virtual to depend on any Distribution Kernel
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                      | 3-r6                                         |            |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/xanmod-hybrid                 | 5.15.1                                       | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
