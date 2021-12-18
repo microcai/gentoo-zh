@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-18 21:03:08 CST)
+(The last generation time: 2021-12-19 02:25:56 CST)
 
 ### Packages
 
@@ -434,8 +434,7 @@
                                             | 5.15.7                                       |            |                                                                                         |
                                             | 5.15.8                                       |            |                                                                                         |
    sys-kernel/xanmod-lts                    | 5.10.85                                      | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
-   sys-kernel/xanmod-rt                     | 5.13.1                                       | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod-RT, cjktty, uksm patchset for main kernel tree
-                                            | 5.13.1-r1                                    |            |                                                                                         |
+   sys-kernel/xanmod-rt                     | 5.15.8                                       | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod-RT, cjktty, uksm patchset for main kernel tree
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                      | 1.13                                         |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
