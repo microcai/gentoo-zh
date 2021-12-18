@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 # Define what default functions to run
 ETYPE="sources"
@@ -10,7 +10,7 @@ ETYPE="sources"
 K_EXP_GENPATCHES_NOUSE="1"
 
 # Just get basic genpatches, -xanmod patch set already includes main updates
-K_GENPATCHES_VER="1"
+K_GENPATCHES_VER="2"
 
 # -xanmod-rt already sets EXTRAVERSION to kernel Makefile
 K_NOSETEXTRAVERSION="1"
@@ -37,11 +37,10 @@ HOMEPAGE="https://github.com/HougeLangley/customkernel"
 LICENSE+=" CDDL"
 
 SRC_URI="
-${KERNEL_BASE_URI}/linux-5.13.tar.xz
+${KERNEL_BASE_URI}/linux-5.15.tar.xz
 ${GENPATCHES_URI}
-https://github.com/xanmod/linux/releases/download/5.13.1-rt1-xanmod1/patch-5.13.1-rt1-xanmod1.xz
-https://github.com/HougeLangley/customkernel/releases/download/v5.13-others/v1-cjktty.patch.xz
-https://github.com/HougeLangley/customkernel/releases/download/v5.13-others/v1-uksm.patch.xz
+https://github.com/xanmod/linux/releases/download/5.15.8-rt23-xanmod1/patch-5.15.8-rt23-xanmod1.xz
+https://github.com/HougeLangley/customkernel/releases/download/v5.15-others/v1-cjktty.patch.xz
 "
 KEYWORDS="~amd64"
 
@@ -49,7 +48,7 @@ S="${WORKDIR}/linux-${PV}-xanmod"
 
 K_EXTRAEINFO="For more info on xanmod-rt and details on how to report problems,	see: ${HOMEPAGE}."
 
-UNIPATCH_LIST="${DISTDIR}/patch-5.13.1-rt1-xanmod1.xz ${DISTDIR}/v1-cjktty.patch.xz ${DISTDIR}/v1-uksm.patch.xz"
+UNIPATCH_LIST="${DISTDIR}/patch-5.15.8-rt23-xanmod1.xz ${DISTDIR}/v1-cjktty.patch.xz"
 
 pkg_setup() {
 	ewarn ""
