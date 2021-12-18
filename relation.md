@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-18 19:28:44 CST)
+(The last generation time: 2021-12-18 21:03:08 CST)
 
 ### Packages
 
@@ -424,6 +424,7 @@
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                      | 3-r6                                         |            |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/xanmod-hybrid                 | 5.15.1                                       | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
+                                            | 5.15.10                                      |            |                                                                                         |
                                             | 5.15.2                                       |            |                                                                                         |
                                             | 5.15.3                                       |            |                                                                                         |
                                             | 5.15.4                                       |            |                                                                                         |
