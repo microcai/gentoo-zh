@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-19 20:38:53 CST)
+(The last generation time: 2021-12-19 20:39:42 CST)
 
 ### Packages
 
@@ -198,6 +198,8 @@
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/labelme                         | 4.6.0                                        |            | https://github.com/wkentaro/labelme                                                     | Image Polygonal Annotation with Python
    dev-python/imgviz                        | 1.3.0                                        |  D, RD     | https://github.com/wkentaro/imgviz                                                      | mage Visualization Tools
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/python-telegram-bot             | 13.9                                         |            | https://github.com/python-telegram-bot/python-telegram-bot                              | Python wrapper of telegram bots API
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/arch-install-scripts              | 24                                           |            | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
    sys-apps/pacman                          | 6.0.0                                        |  D, RD     | https://archlinux.org/pacman/                                                           | Archlinux's binary package manager
