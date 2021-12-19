@@ -12,5 +12,5 @@ RDEPEND=nls? ( >=virtual/libintl-0-r1[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(
 RESTRICT=mirror
 SLOT=11
 SRC_URI=mirror://gnu/libidn/libidn-1.33.tar.gz verify-sig? ( mirror://gnu/libidn/libidn-1.33.tar.gz.sig )
-_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4b66d835ec72e021e359bb81eacfe988	libtool	241a8f577b9781a42a7421e53448a44e	multibuild	05a584848db4901c97fcd94ae7cc3a97	multilib-build	19ec165e9adcaa4c132b9e3fe3e7f556	multilib-minimal	be5919734a8448dddd49c2b26db45091	verify-sig	c777c0c815c60c9460f1ded02a8edb0a
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4b66d835ec72e021e359bb81eacfe988	libtool	241a8f577b9781a42a7421e53448a44e	multibuild	05a584848db4901c97fcd94ae7cc3a97	multilib-build	19ec165e9adcaa4c132b9e3fe3e7f556	multilib-minimal	be5919734a8448dddd49c2b26db45091	verify-sig	5cf1b4c749926e7fdeef16c8c3245267
 _md5_=6cbba79f89723aa06f92eaf3c8c474db
