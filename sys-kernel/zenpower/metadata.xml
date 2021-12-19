@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>silencly07@gmail.com</email>
+		<name>Petrus.Z</name>
+	</maintainer>
+	<maintainer type="person">
+		<email>chn@chn.moe</email>
+		<name>Haonan Chen</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">ocerman/zenpower</remote-id>
+	</upstream>
+</pkgmetadata>
