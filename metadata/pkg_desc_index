@@ -5,6 +5,7 @@ acct-user/aptly 0: System user: aptly
 acct-user/cockpit-ws 0: User for the cockpit server
 acct-user/n2n 0: System user: n2n
 app-admin/cockpit 234: A systemd web based user interface for Linux server
+app-admin/zenmonitor 1.4.2: Zen monitor is monitoring software for AMD Zen-based CPUs
 app-arch/zchunk 1.1.16: A format designed for highly efficient deltas while maintaining good compression
 app-backup/snapper-gui 201020: GUI for snapper, a tool for Linux filesystem snapshot management
 app-crypt/archlinux-keyring 20210616: GnuPG keyring of Archlinux developer keys
@@ -199,6 +200,7 @@ sys-kernel/mkinitcpio 30-r2: Modular initramfs image creation utility
 sys-kernel/xanmod-hybrid 5.15.1 5.15.2 5.15.3 5.15.4 5.15.5 5.15.6 5.15.6-r1 5.15.7 5.15.8 5.15.10: Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
 sys-kernel/xanmod-lts 5.10.85: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 5.15.8: Xanmod-RT, cjktty, uksm patchset for main kernel tree
+sys-kernel/zenpower 0.1.12: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/cutefish-core 0.7 9999: System components and backend of CutefishOS
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/fishui 0.7 9999: GUI library based on QQC2 for Cutefish applications
