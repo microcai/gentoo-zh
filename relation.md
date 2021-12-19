@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-19 02:25:56 CST)
+(The last generation time: 2021-12-19 18:25:18 CST)
 
 ### Packages
 
@@ -13,6 +13,9 @@
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/cockpit                          | 234                                          |            | https://cockpit-project.org/                                                            | A systemd web based user interface for Linux server
    acct-user/cockpit-ws                     | 0                                            |  D, BD, RD |                                                                                         | User for the cockpit server
+--------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-admin/zenmonitor                       | 1.4.2                                        |            | https://github.com/ocerman/zenmonitor                                                   | Zen monitor is monitoring software for AMD Zen-based CPUs
+   sys-kernel/zenpower                      | 0.1.12                                       |  D, RD     | https://github.com/ocerman/zenpower                                                     | Linux kernel driver for reading sensors of AMD Zen family CPUs
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-backup/snapper-gui                     | 201020                                       |            | https://github.com/ricardomv/snapper-gui                                                | GUI for snapper, a tool for Linux filesystem snapshot management
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
