@@ -18,7 +18,7 @@ DESCRIPTION="cifsd/ksmbd kernel server userspace utilities"
 HOMEPAGE="https://github.com/cifsd-team/ksmbd-tools"
 RESTRICT="mirror"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 IUSE="kerberos"
 
@@ -28,16 +28,12 @@ DEPEND=">=dev-libs/glib-2.40
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-PATCHES=(
-	"${FILESDIR}/${PN}-Standardize-exit-codes.patch"
-	"${FILESDIR}/${PN}-fix-file-transfer-stuck-at-99.patch"
-)
-
 DOCS=( AUTHORS README Documentation/configuration.txt )
 
 src_prepare() {
 	default
 	eautoreconf
+	sed -i -e 's,/sbin/ksmbd,/usr/sbin/ksmbd,g' ksmbd.service || die
 }
 
 src_configure(){
@@ -48,8 +44,8 @@ src_install() {
 	default
 
 	insinto /etc/ksmbd
-	doins "${S}"/smb.conf.example
+	doins "${S}/smb.conf.example"
 
 	newinitd "${FILESDIR}/ksmbd.initd" ksmbd
-	systemd_dounit "${FILESDIR}/ksmbd.service"
+	systemd_dounit "${S}/ksmbd.service"
 }
