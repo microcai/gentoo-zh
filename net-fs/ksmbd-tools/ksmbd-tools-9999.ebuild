@@ -18,7 +18,7 @@ DESCRIPTION="cifsd/ksmbd kernel server userspace utilities"
 HOMEPAGE="https://github.com/cifsd-team/ksmbd-tools"
 RESTRICT="mirror"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 IUSE="kerberos"
 
@@ -44,8 +44,8 @@ src_install() {
 	default
 
 	insinto /etc/ksmbd
-	doins "${S}"/smb.conf.example
+	doins "${S}/smb.conf.example"
 
 	newinitd "${FILESDIR}/ksmbd.initd" ksmbd
-	systemd_dounit "${S}"/ksmbd.service
+	systemd_dounit "${S}/ksmbd.service"
 }
