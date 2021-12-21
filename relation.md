@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-19 20:46:00 CST)
+(The last generation time: 2021-12-21 22:17:47 CST)
 
 ### Packages
 
@@ -284,7 +284,7 @@
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/phddns                             | 2.0.6.32828                                  |            | http://hsk.oray.com/                                                                    | Phddns
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-fs/ksmbd                               | 3.4.2-r1                                     |            | https://github.com/cifsd-team/ksmbd                                                     | ksmbd kernel server(SMB/CIFS server)
+ net-fs/ksmbd                               | 3.4.3                                        |            | https://github.com/cifsd-team/ksmbd                                                     | ksmbd kernel server(SMB/CIFS server)
                                             | 9999                                         |            |                                                                                         |
    net-fs/ksmbd-tools                       | 3.4.2-r2                                     |  D         | https://github.com/cifsd-team/ksmbd-tools                                               | cifsd/ksmbd kernel server userspace utilities
                                             | 9999                                         |            |                                                                                         |
