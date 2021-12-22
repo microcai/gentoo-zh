@@ -1,7 +1,7 @@
-# Copyright 2020-2021 Gentoo Authors
+# Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 # sed -E '/^name|^version/bn;d;:n;s/^name\s=\s"([0-9a-zA-Z_-]+)"/\1-/;/^version\s/bv;N;s/\n//;:v;s/([0-9a-zA-Z_-]+)version\s=\s"([a-zA-Z0-9\.\+-]+)"/\1\2/' Cargo.lock | xclip
 CRATES="
@@ -234,13 +234,18 @@ SRC_URI="$(cargo_crate_uris ${CRATES})"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+notify +clipboard"
+IUSE="+notify +clipboard test"
+RESTRICT="!test? ( test )"
+PROPERTIES="test? ( test_network )"
 
 BDEPEND=""
 DEPEND=""
 RDEPEND="dev-libs/openssl
 	notify? ( sys-apps/dbus )
 	clipboard? ( x11-libs/libxcb )"
+
+PATCHES="${FILESDIR}/${P}-update-test_explain_html_2-result.diff"
+QA_FLAGS_IGNORED="/usr/bin/ydcv-rs"
 
 src_configure() {
 	local myfeatures=(
