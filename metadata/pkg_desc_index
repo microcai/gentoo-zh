@@ -123,6 +123,7 @@ games-util/winegame-client-bin 0.5.7.2-r1: An open source gaming platform for GN
 kde-misc/plasma-applet-netspeed-widget 1.8-r1 9999: Plasma 5 widget that displays the currently used network bandwidth.
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/jf-openhuninn 1.1: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
+media-fonts/lxgwwenkai 1.111: An open-source Chinese font derived from Fontworks' Klee One.
 media-fonts/nerd-fonts 2.1.0: Nerd Fonts is a project that patches developer targeted fonts with glyphs
 media-fonts/taipei-sans-tc 1.0: JT Foundry - Taipei Sans TC Beta font
 media-fonts/ttf-wps-fonts 1.0: Symbol fonts required by wps-office
