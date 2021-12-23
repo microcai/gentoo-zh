@@ -2,6 +2,13 @@
 
 build() {
     local rules tool
+    local libdir
+
+    if [ -e /usr/lib64 ] ; then
+        libdir="lib64"
+    else
+        libdir="lib"
+    fi
 
     if [ -e /usr/lib/systemd/systemd-udevd ] ; then
         add_binary /usr/lib/systemd/systemd-udevd
