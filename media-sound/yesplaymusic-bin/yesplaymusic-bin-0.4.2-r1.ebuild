@@ -17,31 +17,29 @@ KEYWORDS="~amd64"
 RESTRICT="mirror strip"
 
 QA_PRESTRIPPED="*"
+QA_PREBUILT="*"
+QA_FLAGS_IGNORED="*"
 
 DEPEND="
-	app-arch/gzip
-	dev-libs/nss
-	media-libs/alsa-lib
-	net-print/cups
-	x11-libs/gtk+:*
-	x11-libs/libxkbcommon"
+	app-arch/gzip"
 
 RDEPEND="
-	${DEPEND}"
+	${DEPEND}
+	x11-libs/gtk+:*
+	dev-libs/nss
+	net-dns/c-ares
+	media-video/ffmpeg
+	net-libs/http-parser
+	dev-libs/libappindicator
+	dev-libs/libevent
+	x11-libs/libnotify
+	media-libs/libvpx
+	dev-libs/libxslt
+	sys-libs/zlib[minizip]
+	dev-libs/re2
+	app-arch/snappy"
 
 S="${WORKDIR}"
-
-QA_PREBUILT="
-	opt/YesPlayMusic/chrome-sandbox
-	opt/YesPlayMusic/libEGL.so
-	opt/YesPlayMusic/libGLESv2.so
-	opt/YesPlayMusic/libffmpeg.so
-	opt/YesPlayMusic/libvk_swiftshader.so
-	opt/YesPlayMusic/libvulkan.so.1
-	opt/YesPlayMusic/swiftshader/libEGL.so
-	opt/YesPlayMusic/swiftshader/libGLESv2.so
-	opt/YesPlayMusic/yesplaymusic
-"
 
 src_unpack(){
 	tar xvf "${DISTDIR}/yesplaymusic-${PV}.pacman" || die
