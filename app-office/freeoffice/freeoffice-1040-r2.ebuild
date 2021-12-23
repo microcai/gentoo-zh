@@ -27,9 +27,15 @@ RDEPEND="
 	${DEPEND}
 	media-libs/mesa
 	net-misc/curl
-	x11-libs/libXrandr"
+	x11-libs/libXrandr
+	dev-util/desktop-file-utils
+	dev-util/gtk-update-icon-cache
+	media-libs/libglvnd
+	x11-misc/xdg-utils"
 
 QA_PRESTRIPPED="*"
+QA_PREBUILT="*"
+QA_FLAGS_IGNORED="*"
 
 S="${WORKDIR}"
 
