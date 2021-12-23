@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-22 22:26:03 CST)
+(The last generation time: 2021-12-23 11:29:06 CST)
 
 ### Packages
 
@@ -412,7 +412,7 @@
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/systemd-zpool-scrub                 | 1.1                                          |            | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-kernel/mkinitcpio                      | 30-r2                                        |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
+ sys-kernel/mkinitcpio                      | 31                                           |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
 --------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-libs/cutefish-core                     | 0.7                                          |            | https://github.com/cutefishos/core                                                      | System components and backend of CutefishOS
                                             | 9999                                         |            |                                                                                         |
