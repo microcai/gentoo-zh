@@ -121,7 +121,7 @@ build() {
     add_file /etc/os-release
 
     map add_binary \
-        /usr/$libdir/systemd-tmpfiles \
+        /usr/bin/systemd-tmpfiles \
         /usr/$libdir/systemd/systemd-hibernate-resume \
         /usr/$libdir/systemd/systemd-shutdown \
         /usr/$libdir/systemd/systemd-sulogin-shell \
