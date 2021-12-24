@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-24 20:21:56 CST)
+(The last generation time: 2021-12-25 00:19:49 CST)
 
 ### Packages
 
@@ -98,7 +98,7 @@
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/bytedance-feishu                  | 4.11.6.2                                     |            | https://www.feishu.cn/                                                                  | feishu - ByteDance's enterprise collaboration platform
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-office/freeoffice                        | 1040-r2                                      |            | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite
+ app-office/freeoffice                        | 1042                                         |            | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/wps-office                        | 11.1.0.10702                                 |            | http://www.wps.cn/product/wpslinux/                                                     | WPS Office is an office productivity suite, Here is the Chinese version
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
