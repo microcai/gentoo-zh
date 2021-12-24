@@ -9,7 +9,7 @@
 		A Linux web GUI client of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 	</longdescription>
 	<use>
-		<flag name="v2ray">Use v2ray-core as default</flag>
-		<flag name="xray">To be able to use xray-core. Disable the v2ray useflag to use xray as default</flag>
+		<flag name="v2ray">Use net-proxy/v2ray as default</flag>
+		<flag name="xray">To be able to use net-proxy/Xray. Disable the v2ray useflag to use xray as default</flag>
 	</use>
 </pkgmetadata>
