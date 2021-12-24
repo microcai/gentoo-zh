@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>2073201758GD@gmail.com</email>
+		<name>liuyujielol</name>
+	</maintainer>
+	<longdescription lang="en">
+		A Linux web GUI client of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
+	</longdescription>
+	<use>
+		<flag name="v2ray">Use net-proxy/v2ray as default</flag>
+		<flag name="xray">To be able to use net-proxy/Xray. Disable the v2ray useflag to use xray as default</flag>
+	</use>
+</pkgmetadata>
