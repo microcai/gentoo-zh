@@ -54,6 +54,9 @@ PATCHES=(
 	# Boost.MPI's __init__.py doesn't work on Py3
 	"${FILESDIR}"/${PN}-1.73-boost-mpi-python-PEP-328.patch
 	"${FILESDIR}"/${PN}-1.74-CVE-2012-2677.patch
+
+	# fix build under musl
+	"${FILESDIR}"/${PN}-1.78.0-fix-musl-build.patch
 )
 
 python_bindings_needed() {
