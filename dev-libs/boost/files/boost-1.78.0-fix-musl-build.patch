@@ -1,0 +1,15 @@
+--- a/boost/interprocess/permissions.hpp     2021-12-18 01:20:08.740658182 +0800
++++ permissions.hpp     2021-12-24 21:14:37.331598189 +0800
+@@ -11,6 +11,12 @@
+ #ifndef BOOST_INTERPROCESS_PERMISSIONS_HPP
+ #define BOOST_INTERPROCESS_PERMISSIONS_HPP
+ 
++// include sys/stat.h on linux to make mode_t available
++// this fix build under musl somehow
++#ifndef BOOST_INTERPROCESS_WINDOWS
++#include <sys/stat.h>
++#endif
++
+ #if !defined(BOOST_INTERPROCESS_DOXYGEN_INVOKED)
+ 
+ #ifndef BOOST_CONFIG_HPP
