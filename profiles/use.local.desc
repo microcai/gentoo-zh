@@ -133,6 +133,8 @@ net-proxy/make-proxy:client - Add make proxy client support
 net-proxy/make-proxy:server - Add make proxy server support
 net-proxy/smartproxy:system-boost - use system supplied boost
 net-proxy/v2ray:tool - Build the additional tool: v2ctl
+net-proxy/v2rayA:v2ray - Use net-proxy/v2ray as default
+net-proxy/v2rayA:xray - To be able to use net-proxy/Xray. Disable the v2ray useflag to use xray as default
 sys-apps/pacman:doc - Install extended documentation using app-doc/doxygen. (Man pages are included by default.)
 sys-apps/pacman:gpg - Enable GPG signature verification using app-crypt/gpgme
 sys-kernel/xanmod-hybrid:cacule - Enable Default Xanmod-CaCule Patches.
