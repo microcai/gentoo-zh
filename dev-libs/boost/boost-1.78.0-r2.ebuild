@@ -341,7 +341,7 @@ pkg_postinst() {
 	elog
 	elog "This ebuild is from gentoo-zh and ***NOT*** supported by gentoo official. "
 	elog
-	elog "Comparing to the official one, this ebuild only adds support for `static-libs` and `stacktrace`,"
+	elog "Comparing to the official one, this ebuild only adds support for 'static-libs' and 'stacktrace',"
 	elog "which may be only useful for people who need them. If you don't need these features, it is also OK"
 	elog "to use this ebuild, but if you meet any problems, you could try to switch to the official one."
 	elog
