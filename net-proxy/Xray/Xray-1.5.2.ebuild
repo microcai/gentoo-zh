@@ -8,8 +8,8 @@ DESCRIPTION="Xray, Penetrates Everything."
 HOMEPAGE="https://github.com/XTLS/Xray-core
 	https://www.maxmind.com"
 
-GEOIP_PV="202112160030"
-GEOSITE_PV="20211218145115"
+GEOIP_PV="202112230031"
+GEOSITE_PV="20211224023657"
 
 EGO_SUM=(
 	"cloud.google.com/go v0.26.0/go.mod"
