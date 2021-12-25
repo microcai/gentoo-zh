@@ -32,6 +32,10 @@ src_prepare() {
 	# don't build xchat-plugins
 	# so don't depend on gtk+-1.2 anymore
 	sed -i -e 's/[ ]*xchat-plugins$//' Makefile
+
+	# Make it respect LDFLAGS ^_^
+	sed -i -e 's:$(CC) $(CFLAG):$(CC) $(CFLAG) $(LDFLAGS):' Makefile
+	sed -i -e 's:gcc -fPIC -shared -Wl,-soname,$(SHARED_LIB_MAJOR):gcc -fPIC -shared -Wl,-soname,$(SHARED_LIB_MAJOR) $(LDFLAGS):' hzconvert/Makefile
 }
 
 src_compile() {
