@@ -11,5 +11,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-gfx/gimp-2.8 mpeg? ( media-libs/xvid ) wavplay? ( >=media-sound/wavplay-1.4 ) mplayer? ( media-video/mplayer ) xanim? ( >=media-video/xanim-2.80.1 ) sox? ( >=media-sound/sox-12.17 ) mp3? ( >=media-sound/lame-3.9 )
 SLOT=0
 SRC_URI=https://github.com/GNOME/gimp-gap/archive/refs/heads/gap-2-8.zip
-_eclasses_=gnuconfig	262062cef0ba4f22b397193da514a350	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4b66d835ec72e021e359bb81eacfe988	libtool	241a8f577b9781a42a7421e53448a44e	autotools	c9df06c186913b43eb211100ef5fe2cf
+_eclasses_=gnuconfig	262062cef0ba4f22b397193da514a350	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	8a0248f83ae77f945d376ff4a7953257	libtool	241a8f577b9781a42a7421e53448a44e	autotools	c9df06c186913b43eb211100ef5fe2cf
 _md5_=e3d3b803aec60b63b4183f3d70822759
