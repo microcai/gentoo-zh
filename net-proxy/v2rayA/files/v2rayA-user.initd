@@ -1,0 +1,31 @@
+#!/sbin/openrc-run
+# Copyright 2021 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+USER="${RC_SVCNAME##*.}"
+HOME="$(eval echo ~${USER})"
+name="v2rayA for ${USER}"
+description="A Linux web GUI client of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel"
+command="/usr/bin/v2raya"
+command_user="${USER}"
+command_args="--lite ${V2RAYA_OPTS}"
+pidfile="/run/${RC_SVCNAME}.pid"
+command_background="yes"
+
+depend() {
+	need net
+}
+
+start_pre() {
+	if [ "$USER" = "v2raya-user" ]; then
+		eerror "You are not supposed to run this script directly."
+		eerror "Create a symlink for this script:"
+		eerror "  ln -s ${RC_SVCNAME} /etc/init.d/${RC_SVCNAME}.<user>"
+		return 1
+
+	elif [ "$USER" = "root" ]; then
+		eerror "Root user doesn't need to run v2rayA daemon by link."
+		eerror "Instead just run /etc/init.d/v2raya directly."
+		return 1
+	fi
+}
