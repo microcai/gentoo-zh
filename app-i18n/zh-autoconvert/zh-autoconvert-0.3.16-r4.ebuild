@@ -42,6 +42,7 @@ src_install() {
 	dobin autogb
 	dosym autogb /usr/bin/autob5
 
+	into /usr/lib
 	dolib.a lib/libhz.a
 	dolib.so lib/libhz.so.0.0
 	dosym libhz.so.0.0 /usr/lib/libhz.so.0
