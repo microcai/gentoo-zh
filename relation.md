@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-25 16:08:16 CST)
+(The last generation time: 2021-12-26 19:18:31 CST)
 
 ### Packages
 
@@ -76,7 +76,7 @@
    app-i18n/fcitx                             | 4.2.9.8                                      |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
    net-dns/libidn11                           | 1.33                                         |  D, RD     | https://www.gnu.org/software/libidn/                                                    | Internationalized Domain Names (IDN) implementation
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/zh-autoconvert                      | 0.3.16-r4                                    |            | https://packages.debian.org/stable/source/zh-autoconvert                                | Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
+ app-i18n/zh-autoconvert                      | 0.3.16-r5                                    |            | https://packages.debian.org/stable/source/zh-autoconvert                                | Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/bcompare                            | 4.4.0.25886                                  |            | http://www.scootersoftware.com/                                                         | Beyond Compare -- Compare, sync, and merge files and folders
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
