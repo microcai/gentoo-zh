@@ -97,17 +97,17 @@ dev-libs/v2ray-domain-list-community-bin 4.39.2_p20210621183458 9999: Community 
 dev-libs/v2ray-geoip-bin 4.39.2_p202106170022 9999: GeoIP for V2Ray.
 dev-python/conda 4.11.0: OS-agnostic, system-level binary package manager and ecosystem
 dev-python/conda-package-handling 1.7.3: Create and extract conda packages of various formats
-dev-python/fuo-kuwo 0.1.4: kuwo music support for feeluown
+dev-python/fuo-kuwo 0.1.5: kuwo music support for feeluown
 dev-python/fuo-local 0.2.1-r1: local music support for feeluown
-dev-python/fuo-netease 0.7.1-r1: netease cloud music support for feeluown
+dev-python/fuo-netease 0.8: netease cloud music support for feeluown
 dev-python/fuo-qqmusic 0.3.3: qq music support for feeluown
 dev-python/imgviz 1.3.0: mage Visualization Tools
-dev-python/janus 0.4.0-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
+dev-python/janus 1.0.0: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/labelme 4.6.0: Image Polygonal Annotation with Python
 dev-python/pycosat 0.6.3: Python bindings to picosat (a SAT solver)
 dev-python/python-telegram-bot 13.9: Python wrapper of telegram bots API
-dev-python/qasync 0.9.4-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
-dev-python/tomlkit 0.7.0-r1: Style-preserving TOML library for Python
+dev-python/qasync 0.22.0: Implementation of the asyncio (PEP 3156) event-loop with Qt
+dev-python/tomlkit 0.8.0: Style-preserving TOML library for Python
 dev-qt/assistant 5.15.2-r11: Tool for viewing on-line documentation in Qt help file format
 dev-qt/qdbusviewer 5.15.2-r10: Graphical tool that lets you introspect D-Bus objects and messages
 dev-util/arch-install-scripts 24: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
@@ -137,7 +137,7 @@ media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simpl
 media-plugins/audacious-mac 0.2.0 0.3.10: Monkey's Audio Codec plugin for audacious
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.10 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
-media-sound/feeluown 3.7.9-r1: A user-friendly and hackable music player
+media-sound/feeluown 3.7.14: A user-friendly and hackable music player
 media-sound/linnya 2.2.0: A free music player
 media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb package
 media-sound/yesplaymusic-bin 0.4.2: A third party music player for Netease Music
