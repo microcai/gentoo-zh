@@ -67,7 +67,7 @@ src_prepare() {
 	fi
 	# Enable Xanmod-CaCule
 	if	use	cacule	;	then
-		eapply "${DISTDIR}/patch-5.15.11·-xanmod1-tt"	||	die
+		eapply "${DISTDIR}/patch-5.15.11-xanmod1-tt"	||	die
 		eapply "${DISTDIR}/v1-cjktty-5.15.patch"	||	die
 	fi
 
