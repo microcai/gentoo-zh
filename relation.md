@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-26 20:29:33 CST)
+(The last generation time: 2021-12-26 20:36:14 CST)
 
 ### Packages
 
@@ -266,7 +266,7 @@
    dev-python/fuo-local                       | 0.2.1-r1                                     |  D         | https://github.com/feeluown/feeluown-local                                              | local music support for feeluown
    dev-python/fuo-netease                     | 0.8                                          |  D         | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
    dev-python/fuo-qqmusic                     | 0.3.3                                        |  D         | https://github.com/feeluown/feeluown-qqmusic                                            | qq music support for feeluown
-   dev-python/janus                           | 1.0.0                                        |  D, RD     | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
+   dev-python/janus                           | 1.0.0-r1                                     |  D, RD     | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
    dev-python/qasync                          | 0.22.0                                       |  D, RD     | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
    dev-python/tomlkit                         | 0.8.0                                        |  D, RD     | https://github.com/sdispater/tomlkit                                                    | Style-preserving TOML library for Python
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
