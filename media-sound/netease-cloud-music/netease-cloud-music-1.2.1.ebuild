@@ -16,13 +16,20 @@ KEYWORDS="-* ~amd64"
 
 DEPEND="media-video/vlc[taglib]"
 RDEPEND="${DEPEND}
-	sys-devel/binutils
-	x11-libs/gtk+:3
+	media-libs/alsa-lib
+	media-sound/pulseaudio
 	net-dns/avahi
-	sys-auth/nss-mdns
 	net-libs/libgssglue
+	sys-auth/nss-mdns
+	sys-devel/binutils
+	virtual/jpeg:0
+	virtual/krb5
+	x11-libs/gtk+:3
 "
 S="${WORKDIR}"
+
+QA_PREBUILT="opt/netease/${PN}/*"
+QA_FLAGS_IGNORED="opt/netease/${PN}/*"
 
 src_compile() {
 	$(tc-getCC) ${CFLAGS} -fPIC -shared -I /usr/include/vlc/plugins/ -o libnetease-patch.so "${FILESDIR}"/patch.c || die
@@ -37,7 +44,7 @@ src_install() {
 
 	insinto /${OPN}/libs
 	doins -r ${OPN}/libs/qcef
-	for dol in $(cat "${FILESDIR}"/doinslib); do
+	for dol in $(cat "${FILESDIR}"/doinslib.list); do
 		doins ${OPN}/libs/${dol}
 	done
 	fperms +x /${OPN}/{libnetease-patch.so,${PN},${PN}.bash,libs/qcef/chrome-sandbox}
