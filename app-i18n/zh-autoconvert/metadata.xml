@@ -5,4 +5,7 @@
 		<email>r0bertz@gentoo.org</email>
 		<name>Zhang Le</name>
 	</maintainer>
+	<use>
+		<flag name="static-libs">Build static versions of dynamic libraries as well</flag>
+	</use>
 </pkgmetadata>
