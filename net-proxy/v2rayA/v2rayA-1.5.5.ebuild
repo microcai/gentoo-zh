@@ -5,6 +5,8 @@ EAPI=8
 
 inherit systemd go-module desktop xdg
 
+PROPERTIES+=" live"
+
 DESCRIPTION="web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel"
 HOMEPAGE="https://v2raya.org/"
 
@@ -820,8 +822,8 @@ SRC_URI="https://github.com/v2rayA/v2rayA/archive/refs/tags/v${PV}.tar.gz -> ${P
 
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="-* ~amd64"
-IUSE="+v2ray xray +systemd"
+KEYWORDS="~amd64"
+IUSE="+v2ray xray systemd"
 REQUIRED_USE="|| ( v2ray xray )"
 
 DEPEND=""
@@ -838,16 +840,22 @@ BDEPEND="
 	dev-lang/go
 "
 
+src_unpack() {
+	#default
+	unpack ${P}.tar.gz
+
+	cd "${WORKDIR}/v2rayA-${PV}/gui"
+	yarn --check-files || die
+
+	go-module_setup_proxy
+}
+
 src_compile() {
 	cd "${WORKDIR}/v2rayA-${PV}/gui"
-	#yarn config set registry https://registry.npm.taobao.org
-	#yarn config set sass_binary_site https://cdn.npm.taobao.org/dist/node-sass -g
-	yarn --check-files
+	#yarn --check-files
 	OUTPUT_DIR="${WORKDIR}/v2rayA-${PV}/service/server/router/web" yarn build || die
 
 	cd "${WORKDIR}/v2rayA-${PV}/service"
-	#export GO111MODULE=on
-	#export GOPROXY=https://mirrors.aliyun.com/goproxy/
 	go build -ldflags '-X github.com/v2rayA/v2rayA/conf.Version='${PV}' -s -w' -o v2raya || die
 }
 
@@ -855,12 +863,16 @@ src_install() {
 	default
 	dobin "${WORKDIR}"/v2rayA-${PV}/service/v2raya
 
-	newconfd "${FILESDIR}"/${PN}.confd ${PN}
-	newconfd "${FILESDIR}"/${PN}-user.confd ${PN}-user
 	if use systemd; then
 		systemd_newunit "${WORKDIR}"/v2rayA-${PV}/install/universal/v2raya.service v2raya.service
 		systemd_newunit "${WORKDIR}"/v2rayA-${PV}/install/universal/v2raya@.service v2raya@.service
 	fi
+
+	#thanks to @Universebenzene
+	newinitd "${FILESDIR}"/${PN}.initd ${PN}
+	newinitd "${FILESDIR}"/${PN}-user.initd ${PN}-user
+	newconfd "${FILESDIR}"/${PN}.confd ${PN}
+	newconfd "${FILESDIR}"/${PN}-user.confd ${PN}-user
 
 	newicon -s 512 "${WORKDIR}"/v2rayA-${PV}/gui/public/img/icons/android-chrome-512x512.png v2raya.png
 	domenu "${WORKDIR}"/v2rayA-${PV}/install/universal/v2raya.desktop

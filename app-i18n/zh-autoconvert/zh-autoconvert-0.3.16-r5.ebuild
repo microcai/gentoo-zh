@@ -13,7 +13,7 @@ SRC_URI="mirror://debian/pool/main/z/${PN}/${PN}_${PV}.orig.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="static-libs"
 
 RESTRICT="mirror"
 
@@ -24,6 +24,7 @@ S=${WORKDIR}/${P/zh-}
 
 PATCHES=(
 	"${WORKDIR}/${PN}_${PV}-3.diff"
+	"${FILESDIR}/make-makefile-respect-compiler-references.patch"
 )
 
 src_prepare() {
@@ -42,11 +43,15 @@ src_install() {
 	dobin autogb
 	dosym autogb /usr/bin/autob5
 
-	into /usr/lib
-	dolib.a lib/libhz.a
+	if use static-libs; then
+		dolib.a lib/libhz.a
+	fi
+
 	dolib.so lib/libhz.so.0.0
-	dosym libhz.so.0.0 /usr/lib/libhz.so.0
-	dosym libhz.so.0 /usr/lib/libhz.so
+
+	LIBDIR_VAR="LIBDIR_${ABI}"
+	dosym libhz.so.0.0 /usr/${!LIBDIR_VAR}/libhz.so.0
+	dosym libhz.so.0 /usr/${!LIBDIR_VAR}/libhz.so
 
 	insinto /usr/include
 	doins include/*.h
