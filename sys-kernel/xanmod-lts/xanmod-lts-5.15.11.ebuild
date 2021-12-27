@@ -6,9 +6,9 @@ EAPI=7
 inherit kernel-build toolchain-funcs
 
 MY_P=linux-${PV%.*}
-GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 7))
+GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 2))
 XV="1"
-LINUX_CONFIG_VER=5.10.75
+LINUX_CONFIG_VER=5.15.11
 LINUX_CONFIG_DIR="${WORKDIR}/linux-config-${LINUX_CONFIG_VER}"
 
 DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
@@ -18,7 +18,7 @@ SRC_URI+=" https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.x
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.extras.tar.xz
 	https://github.com/xanmod/linux/releases/download/${PV}-xanmod${XV}/patch-${PV}-xanmod${XV}.xz
 	https://github.com/OriPoin/linux-config/archive/refs/tags/${LINUX_CONFIG_VER}.tar.gz -> linux-config-${LINUX_CONFIG_VER}.tar.gz
-	https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x/cjktty-5.10.patch"
+	https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x/cjktty-5.15.patch"
 S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
