@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-27 21:30:56 CST)
+(The last generation time: 2021-12-29 00:17:10 CST)
 
 ### Packages
 
@@ -426,7 +426,7 @@
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-process/btop                             | 1.1.2                                        |            | https://github.com/aristocratos/btop                                                    | Resources monitor. The C++ version of bashtop
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- virtual/dist-kernel                          | 5.10.85                                      |            |                                                                                         | Virtual to depend on any Distribution Kernel
+ virtual/dist-kernel                          | 5.15.11                                      |            |                                                                                         | Virtual to depend on any Distribution Kernel
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                        | 3-r6                                         |            |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/xanmod-hybrid                   | 5.15.1                                       | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
