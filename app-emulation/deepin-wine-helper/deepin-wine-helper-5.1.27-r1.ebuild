@@ -22,6 +22,9 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}
 
+QA_PREBUILT="opt/deepinwine/*"
+QA_FLAGS_IGNORED="opt/deepinwine/*"
+
 src_install() {
 	insinto /
 	doins -r opt
