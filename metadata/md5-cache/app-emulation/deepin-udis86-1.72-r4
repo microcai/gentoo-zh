@@ -9,4 +9,4 @@ RDEPEND=
 SLOT=0
 SRC_URI=https://community-packages.deepin.com/deepin/pool/non-free/u/udis86/udis86_1.72-4_i386.deb
 _eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	8a0248f83ae77f945d376ff4a7953257	unpacker	928e1f35ef78ba9fc2b214e29c2b55a4
-_md5_=40e1d8cdeb349159bb41b3a51631e68b
+_md5_=ed445c27d7eaf732293638f2012fe26a
