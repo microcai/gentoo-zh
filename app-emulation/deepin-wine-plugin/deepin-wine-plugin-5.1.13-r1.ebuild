@@ -30,6 +30,9 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}
 
+QA_PREBUILT="/usr/lib/i386-linux-gnu/deepin-wine* /usr/share/doc/*"
+QA_FLAGS_IGNORED="/usr/lib/i386-linux-gnu/deepin-wine* /usr/share/doc/*"
+
 src_install() {
 	insinto /
 	doins -r usr
