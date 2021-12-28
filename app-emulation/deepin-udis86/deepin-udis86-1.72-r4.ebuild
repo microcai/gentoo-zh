@@ -22,8 +22,8 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}
 
-QA_PREBUILT="usr/bin/udcli usr/include/udis86* usr/include/libudis86 usr/include/libudis86/* /usr/lib/libudis86*"
-QA_FLAGS_IGNORED="usr/bin/udcli usr/include/udis86* usr/include/libudis86 usr/include/libudis86/* /usr/lib/libudis86*"
+QA_PREBUILT="opt/deepinwine/*"
+QA_FLAGS_IGNORED="opt/deepinwine/*"
 
 src_install() {
 	insinto /usr
