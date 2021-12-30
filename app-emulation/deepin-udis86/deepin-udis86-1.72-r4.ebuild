@@ -22,6 +22,9 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}
 
+QA_PREBUILT="usr/bin/udcli usr/include/udis86* usr/include/libudis86 usr/include/libudis86/* /usr/lib/libudis86*"
+QA_FLAGS_IGNORED="usr/bin/udcli usr/include/udis86* usr/include/libudis86 usr/include/libudis86/* /usr/lib/libudis86*"
+
 src_install() {
 	insinto /usr
 	doins -r usr/bin usr/include usr/lib
