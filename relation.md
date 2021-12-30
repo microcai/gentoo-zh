@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2021-12-29 00:17:10 CST)
+(The last generation time: 2021-12-30 13:26:40 CST)
 
 ### Packages
 
@@ -286,9 +286,7 @@
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/phddns                               | 2.0.6.32828                                  |            | http://hsk.oray.com/                                                                    | Phddns
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-fs/ksmbd                                 | 3.4.3                                        |            | https://github.com/cifsd-team/ksmbd                                                     | ksmbd kernel server(SMB/CIFS server)
-                                              | 9999                                         |            |                                                                                         |
-   net-fs/ksmbd-tools                         | 3.4.3                                        |  D         | https://github.com/cifsd-team/ksmbd-tools                                               | cifsd/ksmbd kernel server userspace utilities
+ net-fs/ksmbd-tools                           | 3.4.3                                        |            | https://github.com/cifsd-team/ksmbd-tools                                               | cifsd/ksmbd kernel server userspace utilities
                                               | 9999                                         |            |                                                                                         |
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/avim                                  | 0.1                                          |            | http://avim.avplayer.org                                                                | avim is a secure IM build around RSA
