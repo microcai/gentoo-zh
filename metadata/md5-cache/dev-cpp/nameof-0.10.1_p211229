@@ -1,0 +1,14 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DESCRIPTION=Nameof operator for modern C++
+EAPI=8
+HOMEPAGE=https://github.com/Neargye/nameof
+INHERIT=git-r3
+IUSE=doc
+KEYWORDS=~amd64
+LICENSE=MIT
+PROPERTIES=live
+RESTRICT=mirror
+SLOT=0
+_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=af2983163d13d4796355790149d5d615
