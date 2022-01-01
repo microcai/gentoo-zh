@@ -82,7 +82,7 @@ dev-cpp/ETL 0.04.22: ETL is a multi-platform class and template library
 dev-cpp/cppcoro 210605: A library of C++ coroutine abstractions for the coroutines TS
 dev-cpp/date 3.0.1: A date and time library based on the C++11/14/17 <chrono> header
 dev-cpp/nameof 0.10.1 0.10.1_p211229: Nameof operator for modern C++
-dev-cpp/tgbot-cpp 1.3: C++ library for Telegram bot API
+dev-cpp/tgbot-cpp 1.3 1.3_p211229: C++ library for Telegram bot API
 dev-libs/boost 1.78.0-r2: Boost Libraries for C++
 dev-libs/granite 5.2.1: Elementary OS library that extends Gtk+
 dev-libs/libbacktrace 210530: A C library for producing symbolic backtraces
