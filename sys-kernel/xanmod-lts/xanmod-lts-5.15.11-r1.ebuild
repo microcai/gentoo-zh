@@ -41,7 +41,7 @@ src_prepare() {
 		"${WORKDIR}"/patch-${PV}-xanmod${XV}
 	)
 	if use cjk; then
-		PATCHES+=("${DISTDIR}/cjktty-5.10.patch")
+		PATCHES+=("${DISTDIR}/cjktty-5.15.patch")
 	fi
 	default
 
