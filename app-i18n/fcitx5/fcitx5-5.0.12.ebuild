@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -45,7 +45,7 @@ RDEPEND="dev-libs/glib:2
 		x11-libs/libXrender
 		x11-libs/libXinerama
 		x11-libs/libxkbfile
-		x11-libs/xcb-imdkit
+		~x11-libs/xcb-imdkit-1.0.3
 	)
 	x11-misc/xkeyboard-config
 	x11-libs/cairo[X?]
