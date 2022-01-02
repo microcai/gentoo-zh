@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils
+inherit multilib eutils
 
 DESCRIPTION="Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter"
 HOMEPAGE="https://packages.debian.org/stable/source/zh-autoconvert"
@@ -49,9 +49,8 @@ src_install() {
 
 	dolib.so lib/libhz.so.0.0
 
-	LIBDIR_VAR="LIBDIR_${ABI}"
-	dosym libhz.so.0.0 /usr/${!LIBDIR_VAR}/libhz.so.0
-	dosym libhz.so.0 /usr/${!LIBDIR_VAR}/libhz.so
+	dosym libhz.so.0.0 /usr/$(get_libdir)/libhz.so.0
+	dosym libhz.so.0 /usr/$(get_libdir)/libhz.so
 
 	insinto /usr/include
 	doins include/*.h
