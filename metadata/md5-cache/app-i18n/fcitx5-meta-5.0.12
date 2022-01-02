@@ -7,4 +7,4 @@ KEYWORDS=~amd64 ~x86
 LICENSE=metapackage
 RDEPEND=app-i18n/fcitx5 configtool? ( app-i18n/fcitx5-configtool ) chinese-addons? ( app-i18n/fcitx5-chinese-addons ) gtk2? ( app-i18n/fcitx5-gtk[gtk2] ) gtk3? ( app-i18n/fcitx5-gtk[gtk3] ) hangul? ( app-i18n/fcitx5-hangul ) qt5? ( app-i18n/fcitx5-qt ) rime? ( app-i18n/fcitx5-rime ) skk? ( app-i18n/fcitx5-skk )
 SLOT=5
-_md5_=a9f4b2b1948d4e491064877c9cedfe39
+_md5_=44c2b1b6e423221bb8274228b06c9550
