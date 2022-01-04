@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-02 19:04:51 CST)
+(The last generation time: 2022-01-04 20:57:13 CST)
 
 ### Packages
 
@@ -296,8 +296,7 @@
    app-emulation/deepin-wine-helper           | 5.1.27-r1                                    | RD         | https://www.deepin.org                                                                  | Deepin Wine Helper
      app-emulation/deepin-wine-plugin         | 5.1.13-r1                                    | RD         | https://www.deepin.org                                                                  | Deepin Wine plugin
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/dingtalk                              | 1.1.0.338                                    |            | https://gov.dingtalk.com                                                                | dingtalk
-                                              | 1.2.0.120                                    |            |                                                                                         |
+ net-im/dingtalk                              | 1.2.0.140                                    |            | https://gov.dingtalk.com                                                                | dingtalk
    dev-libs/libthai                           | 0.1.28                                       |  D, RD     | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
      dev-libs/libdatrie                       | 0.2.13                                       |  D, RD     | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
    sys-libs/glibc                             | 9999                                         |  D, RD     | https://www.gnu.org/software/libc/                                                      | GNU libc C library
