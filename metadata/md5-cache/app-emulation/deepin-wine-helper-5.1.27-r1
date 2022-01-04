@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=app-emulation/deepin-wine-plugin[virtual-pkg]
 SLOT=0
 SRC_URI=https://home-store-packages.uniontech.com/appstore/pool/appstore/d/deepin-wine-helper/deepin-wine-helper_5.1.27-1_i386.deb
-_eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	unpacker	928e1f35ef78ba9fc2b214e29c2b55a4
+_eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	unpacker	03b2fab39d555f46843c92f44a40a721
 _md5_=08fe9e0b28912aacf4244bf41f308eb1
