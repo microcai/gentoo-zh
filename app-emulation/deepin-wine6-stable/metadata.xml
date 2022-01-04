@@ -5,6 +5,10 @@
 		<name>lyraile</name>
 		<email>iamoatiz@gmail.com</email>
 	</maintainer>
+	<maintainer type="person">
+		<name>liuyishengalan</name>
+		<email>liuyishengalan@gmail.com</email>
+	</maintainer>
 	<longdescription>
 		Deepin wine6 stable.
 	</longdescription>
