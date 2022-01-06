@@ -7,7 +7,7 @@ inherit desktop xdg-utils unpacker
 
 DESCRIPTION="Wemeet - Tencent Video Conferencing"
 HOMEPAGE="https://wemeet.qq.com"
-SRC_URI="https://updatecdn.meeting.qq.com/ad878a99-76c4-4058-ae83-22ee948cce98/TencentMeeting_0300000000_${PV}_x86_64.publish.deb -> ${P}_x86_64.deb"
+SRC_URI="https://updatecdn.meeting.qq.com/cos/196cdf1a3336d5dca56142398818545f/TencentMeeting_0300000000_${PV}_x86_64.publish.deb -> ${P}_x86_64.deb"
 
 LICENSE="wemeet_license"
 SLOT="0"
@@ -38,7 +38,7 @@ src_install() {
 	done
 
 	# Force to use xcb
-	# If wayland is used, wemeet will do nothing and exit (checked in v2.8.0.0)
+	# If wayland is used, wemeet will do nothing and exit (checked in v2.8.0.1)
 	cat > opt/${PN}/wemeetapp.sh <<- EOF || die
 #! /bin/bash
 export XDG_SESSION_TYPE=x11
