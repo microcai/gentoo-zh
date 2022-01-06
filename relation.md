@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-05 22:44:05 CST)
+(The last generation time: 2022-01-06 20:09:49 CST)
 
 ### Packages
 
@@ -427,16 +427,7 @@
  virtual/dist-kernel                          | 5.15.11                                      |            |                                                                                         | Virtual to depend on any Distribution Kernel
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                        | 3-r6                                         |            |                                                                                         | Virtual for Linux kernel sources
-   sys-kernel/xanmod-hybrid                   | 5.15.1                                       | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
-                                              | 5.15.10                                      |            |                                                                                         |
-                                              | 5.15.11                                      |            |                                                                                         |
-                                              | 5.15.12                                      |            |                                                                                         |
-                                              | 5.15.2                                       |            |                                                                                         |
-                                              | 5.15.3                                       |            |                                                                                         |
-                                              | 5.15.4                                       |            |                                                                                         |
-                                              | 5.15.5                                       |            |                                                                                         |
-                                              | 5.15.6                                       |            |                                                                                         |
-                                              | 5.15.6-r1                                    |            |                                                                                         |
+   sys-kernel/xanmod-hybrid                   | 5.15.13                                      | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
    sys-kernel/xanmod-lts                      | 5.15.11-r1                                   | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
    sys-kernel/xanmod-rt                       | 5.15.8                                       | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod-RT, cjktty, uksm patchset for main kernel tree
                                               | 5.15.8-r1                                    |            |                                                                                         |
