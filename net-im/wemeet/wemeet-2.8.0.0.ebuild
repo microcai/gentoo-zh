@@ -18,25 +18,46 @@ DEPEND="
 		dev-util/desktop-file-utils
 		media-sound/pulseaudio
 		x11-libs/libX11
-		"
+"
 RDEPEND="${DEPEND}"
-BDEPEND=""
+BDEPEND="dev-util/patchelf"
 
 S="${WORKDIR}"
 QA_PREBUILT="opt/${PN}/*"
 
 src_install() {
+	# Fix RPATHs to ensure the libraries can be found
+	local f
+	for f in $(find opt/${PN}/bin opt/${PN}/plugins) ; do
+		[[ -f ${f} && $(od -t x1 -N 4 "${f}") == *"7f 45 4c 46"* ]] || continue
+		patchelf --set-rpath "/opt/${PN}/lib" ${f} || die "patchelf failed on ${f}"
+	done
+	for f in $(find opt/${PN}/lib) ; do
+		[[ -f ${f} && $(od -t x1 -N 4 "${f}") == *"7f 45 4c 46"* ]] || continue
+		patchelf --set-rpath '$ORIGIN' ${f} || die "patchelf failed on ${f}"
+	done
+
+	# Force to use xcb
+	# If wayland is used, wemeet will do nothing and exit (checked in v2.8.0.0)
+	cat > opt/${PN}/wemeetapp.sh <<- EOF || die
+#! /bin/bash
+export XDG_SESSION_TYPE=x11
+export QT_QPA_PLATFORM=xcb
+unset WAYLAND_DISPLAY
+exec /opt/wemeet/bin/wemeetapp $*
+	EOF
+
 	insinto "/opt/${PN}"
 	exeinto "/opt/${PN}"
 	doins -r "opt/${PN}/bin" "opt/${PN}/icons" "opt/${PN}/lib" "opt/${PN}/plugins"
 	doexe "opt/${PN}/wemeetapp.sh"
-	fperms +x "/opt/wemeet/bin/wemeetapp"
-	fperms +x "/opt/wemeet/bin/crashpad_handler"
+	fperms +x "/opt/${PN}/bin/wemeetapp"
+	fperms +x "/opt/${PN}/bin/crashpad_handler"
 
 	domenu "usr/share/applications/wemeetapp.desktop"
 	newicon "opt/${PN}/splash_logo3x.png" "${PN}app.png"
 	for i in 16 32 64 128 256; do
-		png_file="opt/wemeet/icons/hicolor/${i}x${i}/mimetypes/wemeetapp.png"
+		png_file="opt/${PN}/icons/hicolor/${i}x${i}/mimetypes/wemeetapp.png"
 		if [ -e "${png_file}" ]; then
 			newicon -s "${i}" "${png_file}" wemeetapp
 		fi
