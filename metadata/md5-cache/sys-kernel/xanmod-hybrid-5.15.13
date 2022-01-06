@@ -1,0 +1,17 @@
+BDEPEND=!build? ( sys-apps/sed )
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
+DEPEND=app-arch/cpio
+DESCRIPTION=Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
+EAPI=8
+HOMEPAGE=https://github.com/HougeLangley/customkernel
+INHERIT=kernel-2
+IUSE=+xanmod cacule symlink build
+KEYWORDS=~amd64
+LICENSE=GPL-2 CDDL
+RDEPEND=!sys-kernel/xanmod-sources !sys-kernel/xanmod-rt !build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-devel/flex sys-devel/make >=sys-libs/ncurses-5.2 virtual/libelf virtual/pkgconfig )
+REQUIRED_USE=^^ ( xanmod cacule )
+RESTRICT=binchecks strip
+SLOT=5.15.13
+SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.15.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.15-2.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-2.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.15-2.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.15-2.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-2.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.15-2.extras.tar.xz https://github.com/HougeLangley/customkernel/releases/download/v5.15-patch/patch-5.15.13-xanmod1 https://github.com/HougeLangley/customkernel/releases/download/v5.15-patch/patch-5.15.13-xanmod1-tt https://github.com/HougeLangley/customkernel/releases/download/v5.15-others/v1-cjktty-5.15.patch
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	kernel-2	1306b9488a2138c64bf626743871fa9a
+_md5_=b66fc37252f963c50187364b8dcb9d08
