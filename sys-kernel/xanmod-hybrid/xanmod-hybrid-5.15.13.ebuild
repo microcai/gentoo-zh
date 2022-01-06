@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -45,8 +45,8 @@ LICENSE+=" CDDL"
 SRC_URI="
 ${KERNEL_BASE_URI}/linux-5.15.tar.xz
 ${GENPATCHES_URI}
-https://github.com/HougeLangley/customkernel/releases/download/v5.15-patch/patch-5.15.10-xanmod1
-https://github.com/HougeLangley/customkernel/releases/download/v5.15-patch/patch-5.15.10-xanmod1-tt
+https://github.com/HougeLangley/customkernel/releases/download/v5.15-patch/patch-5.15.13-xanmod1
+https://github.com/HougeLangley/customkernel/releases/download/v5.15-patch/patch-5.15.13-xanmod1-tt
 https://github.com/HougeLangley/customkernel/releases/download/v5.15-others/v1-cjktty-5.15.patch
 "
 KEYWORDS="~amd64"
@@ -55,19 +55,19 @@ S="${WORKDIR}/linux-${PV}-xanmod"
 
 K_EXTRAEINFO="For more info on xanmod-hybrid and details on how to report problems,	see: ${HOMEPAGE}."
 
-PATCHES=( "${DISTDIR}/patch-5.15.10-xanmod1"
-"${DISTDIR}/patch-5.15.10-xanmod1-tt"
+PATCHES=( "${DISTDIR}/patch-5.15.13-xanmod1"
+"${DISTDIR}/patch-5.15.13-xanmod1-tt"
 "${DISTDIR}/v1-cjktty-5.15.patch" )
 
 src_prepare() {
 	# Default enable Xanmod
 	if	use	xanmod	;	then
-		eapply "${DISTDIR}/patch-5.15.10-xanmod1"	||	die
+		eapply "${DISTDIR}/patch-5.15.13-xanmod1"	||	die
 		eapply "${DISTDIR}/v1-cjktty-5.15.patch"	||	die
 	fi
 	# Enable Xanmod-CaCule
 	if	use	cacule	;	then
-		eapply "${DISTDIR}/patch-5.15.10-xanmod1-tt"	||	die
+		eapply "${DISTDIR}/patch-5.15.13-xanmod1-tt"	||	die
 		eapply "${DISTDIR}/v1-cjktty-5.15.patch"	||	die
 	fi
 
