@@ -39,7 +39,7 @@ LICENSE+=" CDDL"
 SRC_URI="
 ${KERNEL_BASE_URI}/linux-5.15.tar.xz
 ${GENPATCHES_URI}
-https://github.com/xanmod/linux/releases/download/5.15.8-rt23-xanmod1/patch-5.15.8-rt23-xanmod1.xz
+https://github.com/xanmod/linux/releases/download/5.15.12-rt25-xanmod1/patch-5.15.12-rt25-xanmod1.xz
 https://github.com/HougeLangley/customkernel/releases/download/v5.15-others/v1-cjktty.patch.xz
 "
 KEYWORDS="~amd64"
@@ -48,7 +48,7 @@ S="${WORKDIR}/linux-${PV}-xanmod"
 
 K_EXTRAEINFO="For more info on xanmod-rt and details on how to report problems,	see: ${HOMEPAGE}."
 
-UNIPATCH_LIST="${DISTDIR}/patch-5.15.8-rt23-xanmod1.xz ${DISTDIR}/v1-cjktty.patch.xz"
+UNIPATCH_LIST="${DISTDIR}/patch-5.15.12-rt25-xanmod1.xz ${DISTDIR}/v1-cjktty.patch.xz"
 
 pkg_setup() {
 	ewarn ""
