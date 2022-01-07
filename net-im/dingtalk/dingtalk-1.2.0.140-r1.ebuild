@@ -25,6 +25,8 @@ RDEPEND="
 	sys-process/procps
 	x11-libs/gtk+:2
 	x11-libs/gtk+:3
+	media-sound/pulseaudio
+	x11-libs/libXScrnSaver
 "
 
 BDEPEND="dev-util/patchelf"
