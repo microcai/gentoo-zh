@@ -19,13 +19,13 @@ RDEPEND="
 	dev-libs/libthai
 	dev-qt/qtgui
 	net-nds/openldap
+	media-sound/pulseaudio
 	media-video/rtmpdump
 	sys-libs/glibc
 	sys-libs/zlib
 	sys-process/procps
 	x11-libs/gtk+:2
 	x11-libs/gtk+:3
-	media-sound/pulseaudio
 	x11-libs/libXScrnSaver
 "
 
@@ -72,17 +72,20 @@ src_install() {
 
 	cat >> opt/apps/com.alibabainc.dingtalk/files/Elevator.sh.head <<- EOF || die
 #!/bin/sh
-if [ -n "\$(pidof fcitx5)" ]
+if [ -z "\${QT_IM_MODULE}" ]
 then
-export XMODIFIERS="@im=fcitx5"
-export QT_IM_MODULE=fcitx5
-elif [ -n "\$(pidof ibus-daemon)" ]
-then
-export XMODIFIERS="@im=ibus"
-export QT_IM_MODULE=ibus
-else
-export XMODIFIERS="@im=fcitx"
-export QT_IM_MODULE=fcitx
+	if [ -n "\$(pidof fcitx5)" ]
+	then
+		export XMODIFIERS="@im=fcitx5"
+		export QT_IM_MODULE=fcitx5
+	elif [ -n "\$(pidof ibus-daemon)" ]
+	then
+		export XMODIFIERS="@im=ibus"
+		export QT_IM_MODULE=ibus
+	else
+		export XMODIFIERS="@im=fcitx"
+		export QT_IM_MODULE=fcitx
+	fi
 fi
 	EOF
 
