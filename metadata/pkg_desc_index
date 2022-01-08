@@ -200,7 +200,7 @@ sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/mkinitcpio 31: Modular initramfs image creation utility
 sys-kernel/xanmod-hybrid 5.15.13: Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
-sys-kernel/xanmod-lts 5.15.11-r1: XanMod lts kernel built with Gentoo patches and cjktty
+sys-kernel/xanmod-lts 5.15.11-r2: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 5.15.12: Xanmod-RT, cjktty, uksm patchset for main kernel tree
 sys-kernel/zenpower 0.1.12: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/cutefish-core 0.7 9999: System components and backend of CutefishOS

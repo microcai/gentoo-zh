@@ -4,13 +4,13 @@ DESCRIPTION=XanMod lts kernel built with Gentoo patches and cjktty
 EAPI=7
 HOMEPAGE=https://www.kernel.org/
 INHERIT=kernel-build toolchain-funcs
-IUSE=systemd zstd debug hardened cjk savedconfig +initramfs test
+IUSE=cjk savedconfig +initramfs test
 KEYWORDS=amd64
 LICENSE=GPL-2
 PDEPEND=>=virtual/dist-kernel-5.15.11
 RDEPEND=|| ( sys-kernel/installkernel-gentoo sys-kernel/installkernel-systemd-boot ) initramfs? ( >=sys-kernel/dracut-049-r3 ) virtual/libelf
 RESTRICT=!test? ( test ) test? ( userpriv ) arm? ( test )
 SLOT=5.15.11
-SRC_URI=https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.15.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-13.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-13.extras.tar.xz https://github.com/xanmod/linux/releases/download/5.15.11-xanmod1/patch-5.15.11-xanmod1.xz https://github.com/OriPoin/linux-config/archive/refs/tags/5.15.11.tar.gz -> linux-config-5.15.11.tar.gz https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x/cjktty-5.15.patch
+SRC_URI=https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.15.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-13.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-13.extras.tar.xz https://github.com/xanmod/linux/releases/download/5.15.11-xanmod1/patch-5.15.11-xanmod1.xz https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x/cjktty-5.15.patch
 _eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	python-utils-r1	a8b7938ade305f087865de7e52d079b5	python-any-r1	13f6d423c5c5bc519a9b552654cc745f	portability	d1186f1e621de7b27ddcae82e6253259	savedconfig	7cb1bf66b4acedc4f06802a012d3b08d	dist-kernel-utils	74074c49ea85735400eeaf6a3a348969	mount-boot	02a45c5e022c08dbc05178522b2772f2	kernel-install	de572f44bffdb7e6199595c2280b90ee	kernel-build	5f5dcb152079b8fd5773b438c9397f0b
-_md5_=225e77e6f30f1cfda8c51c57d9bc5bd9
+_md5_=2fa42ddd7f87f3ed42b55d790aee56c8
