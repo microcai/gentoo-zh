@@ -1,0 +1,15 @@
+{
+    "confCustomHeadindex": 0,
+    "confCustomUrl": "",
+    "confDefault": true,
+    "confDefaultIndex": 0,
+    "defaultUrl": [
+        "https://license.chinauos.com",
+        "https://license1.chinauos.com"
+    ],
+    "options": [
+        {"protocol": "https://", "address": ""},
+        {"protocol": "http://", "address": ""},
+        {"protocol": "kms://","address": ""}
+    ]
+}
