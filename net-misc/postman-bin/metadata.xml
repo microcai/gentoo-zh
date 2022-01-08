@@ -2,10 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>OriPoin@outlook.com</email>
-		<name>Yachen Wang</name>
+		<email>lqu3qf@gmail.com</email>
+		<name>lx</name>
 	</maintainer>
 	<use>
-		<flag name="initramfs">Build initramfs along with the kernel.</flag>
 	</use>
 </pkgmetadata>
