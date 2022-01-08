@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-08 16:33:54 CST)
+(The last generation time: 2022-01-08 18:12:25 CST)
 
 ### Packages
 
@@ -429,7 +429,7 @@
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                        | 3-r6                                         |            |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/xanmod-hybrid                   | 5.15.13                                      | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
-   sys-kernel/xanmod-lts                      | 5.15.11-r1                                   | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
+   sys-kernel/xanmod-lts                      | 5.15.11-r2                                   | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
    sys-kernel/xanmod-rt                       | 5.15.12                                      | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod-RT, cjktty, uksm patchset for main kernel tree
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                        | 1.13                                         |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
