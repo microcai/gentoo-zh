@@ -17,13 +17,12 @@ SRC_URI+=" https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.x
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.base.tar.xz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.extras.tar.xz
 	https://github.com/xanmod/linux/releases/download/${PV}-xanmod${XV}/patch-${PV}-xanmod${XV}.xz
-	https://github.com/OriPoin/linux-config/archive/refs/tags/${LINUX_CONFIG_VER}.tar.gz -> linux-config-${LINUX_CONFIG_VER}.tar.gz
 	https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x/cjktty-5.15.patch"
 S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
 KEYWORDS="amd64"
-IUSE="systemd zstd debug hardened cjk"
+IUSE="cjk"
 
 PDEPEND="
 	>=virtual/dist-kernel-${PV}"
@@ -57,33 +56,29 @@ src_prepare() {
 
 	local myversion="-xanmod${XV}-lts"
 	echo "CONFIG_LOCALVERSION=\"${myversion}\"" >"${T}"/version.config || die
+	echo "CONFIG_DEFAULT_HOSTNAME=\"xanmod-lts\"" >"${T}"/hostname.config || die
+	echo "CONFIG_MODPROBE_PATH=\"/sbin/modprobe\"" >"${T}"/modprobe.config || die
 
 	local merge_configs=(
 		"${T}"/version.config
-		"${LINUX_CONFIG_DIR}"/base.config
+		"${T}"/hostname.config
+		"${T}"/modprobe.config
 	)
-	use debug || merge_configs+=(
-		"${LINUX_CONFIG_DIR}"/no-debug.config
-	)
-
-	if use zstd; then
-		merge_configs+=("${LINUX_CONFIG_DIR}"/zstd.config)
-	fi
-	if use systemd; then
-		merge_configs+=("${LINUX_CONFIG_DIR}"/systemd.config)
-	fi
-
-	if use hardened; then
-		merge_configs+=("${LINUX_CONFIG_DIR}"/hardened-base.config)
-
-		tc-is-gcc && merge_configs+=("${LINUX_CONFIG_DIR}"/hardened-gcc-plugins.config)
-
-		if [[ -f "${LINUX_CONFIG_DIR}/hardened-${ARCH}.config" ]]; then
-			merge_configs+=("${LINUX_CONFIG_DIR}/hardened-${ARCH}.config")
-		fi
-	fi
 
 	kernel-build_merge_configs "${merge_configs[@]}"
 	# delete localversion
 	rm "${S}/localversion" || die
+}
+
+pkg_setup ()
+{
+	ewarn ""
+	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
+	ewarn "You have to configure the kernel by yourself."
+	ewarn "Generally emerge this package using default config will fail to boot."
+	ewarn "If you need support, please contact the ${HOMEPAGE} or maintainer directly."
+	ewarn "Do *not* open bugs in Gentoo's bugzilla unless you have issues with"
+	ewarn "the ebuilds. Thank you."
+	ewarn ""
+	python-any-r1_pkg_setup "$@"
 }
