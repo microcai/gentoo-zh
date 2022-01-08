@@ -154,7 +154,7 @@ net-im/freetalk 4.1: Console based Jabber client
 net-im/telegram-desktop 3.4.3: Official desktop client for Telegram
 net-im/telegram-purple 1.4.7-r1 9999: Libpurple (Pidgin) plugin for using a Telegram account
 net-im/tencent-qq 2.0.0_beta2_p1089: Official Linux version of Tencent QQ
-net-im/wechat-uos 2.0.0: UOS wechat
+net-im/wechat-uos 2.0.0 2.1.1: wechat
 net-im/wemeet 2.8.0.1: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq
 net-misc/Cloudreve 3.3.2: Self-deployed file management and sharing system.
