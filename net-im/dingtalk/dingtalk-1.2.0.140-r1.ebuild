@@ -54,6 +54,9 @@ src_install() {
 	rm opt/apps/com.alibabainc.dingtalk/files/${version}/libm.so* || die
 	# Use system zlib
 	rm opt/apps/com.alibabainc.dingtalk/files/${version}/libz* || die
+	# Use system gtk+, or can't be switch input method on dingtalk popup window
+	rm opt/apps/com.alibabainc.dingtalk/files/${version}/libgtk-x11-2.0.so.0* || die
+
 
 	# Set RPATH for preserve-libs handling
 	pushd "opt/apps/com.alibabainc.dingtalk/files/${version}/" || die
