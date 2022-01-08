@@ -1,0 +1,8 @@
+PRETTY_NAME="UnionTech OS Desktop 20 Home"
+NAME="uos"
+VERSION_ID="20 Home"
+VERSION="20 Home"
+ID=uos
+HOME_URL="https://www.chinauos.com/"
+BUG_REPORT_URL="http://bbs.chinauos.com"
+VERSION_CODENAME=eagle
