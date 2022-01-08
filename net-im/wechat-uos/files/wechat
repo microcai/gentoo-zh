@@ -1,0 +1,6 @@
+#!/bin/bash
+bwrap --dev-bind / / \
+      --bind /usr/share/wechat/os-release /etc/os-release \
+      --bind /usr/share/wechat/lsb-release /etc/lsb-release \
+      --bind /usr/share/wechat/var/ /var \
+      /opt/apps/com.tencent.weixin/files/weixin/weixin "$@"
