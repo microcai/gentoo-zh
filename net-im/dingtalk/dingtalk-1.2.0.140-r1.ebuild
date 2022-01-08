@@ -19,13 +19,13 @@ RDEPEND="
 	dev-libs/libthai
 	dev-qt/qtgui
 	net-nds/openldap
+	media-sound/pulseaudio
 	media-video/rtmpdump
 	sys-libs/glibc
 	sys-libs/zlib
 	sys-process/procps
 	x11-libs/gtk+:2
 	x11-libs/gtk+:3
-	media-sound/pulseaudio
 	x11-libs/libXScrnSaver
 "
 
