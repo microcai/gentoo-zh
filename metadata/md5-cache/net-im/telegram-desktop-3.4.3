@@ -1,4 +1,4 @@
-BDEPEND=|| ( dev-lang/python:3.10 dev-lang/python:3.9 dev-lang/python:3.8 ) >=dev-util/cmake-3.16 virtual/pkgconfig dev-util/ninja >=dev-util/cmake-3.20.5
+BDEPEND=|| ( >=dev-lang/python-3.10.0_p1-r1:3.10 >=dev-lang/python-3.9.9-r1:3.9 >=dev-lang/python-3.8.12_p1-r1:3.8 ) >=dev-util/cmake-3.16 virtual/pkgconfig dev-util/ninja >=dev-util/cmake-3.20.5
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare pretend setup test
 DEPEND=!net-im/telegram-desktop-bin app-arch/lz4:= dev-cpp/abseil-cpp:= dev-libs/jemalloc:=[-lazy-lock] dev-libs/openssl:= dev-libs/xxhash >=dev-qt/qtcore-5.15:5 >=dev-qt/qtgui-5.15:5[dbus?,jpeg,png,wayland?,X?] >=dev-qt/qtimageformats-5.15:5 >=dev-qt/qtnetwork-5.15:5[ssl] >=dev-qt/qtsvg-5.15:5 >=dev-qt/qtwidgets-5.15:5[png,X?] media-fonts/open-sans media-libs/fontconfig:= ~media-libs/libtgvoip-2.4.4_p20211129 media-libs/openal media-libs/opus:= media-libs/rnnoise ~media-libs/tg_owt-0_pre20211207[screencast=,X=] media-video/ffmpeg:=[opus] sys-libs/zlib:=[minizip] dbus? ( dev-cpp/glibmm:2 dev-qt/qtdbus:5 dev-libs/libdbusmenu-qt[qt5(+)] ) enchant? ( app-text/enchant:= ) hunspell? ( >=app-text/hunspell-1.7:= ) wayland? ( kde-frameworks/kwayland:= ) X? ( x11-libs/libxcb:= ) dev-cpp/range-v3 =dev-cpp/ms-gsl-3*
 DESCRIPTION=Official desktop client for Telegram
@@ -14,5 +14,5 @@ REQUIRED_USE=spell? ( ^^ ( enchant hunspell ) )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/telegramdesktop/tdesktop/releases/download/v3.4.3/tdesktop-3.4.3-full.tar.gz
-_eclasses_=xdg-utils	4f29a8b760a594a212abe9c2ba957c31	xdg	6024fbc93167fad782e2032933654857	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	flag-o-matic	d5e1306543bc457213f68bb18f830d14	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	cmake	11fee991ab428a3370e5c20fa8231fb6	python-utils-r1	a8b7938ade305f087865de7e52d079b5	python-any-r1	13f6d423c5c5bc519a9b552654cc745f	optfeature	30ce9dec2b8943338c9b015bd32bac6a
+_eclasses_=xdg-utils	4f29a8b760a594a212abe9c2ba957c31	xdg	6024fbc93167fad782e2032933654857	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	flag-o-matic	d5e1306543bc457213f68bb18f830d14	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	cmake	11fee991ab428a3370e5c20fa8231fb6	python-utils-r1	b601c48fe339b4c9bc03ffe4f25283e0	python-any-r1	13f6d423c5c5bc519a9b552654cc745f	optfeature	30ce9dec2b8943338c9b015bd32bac6a
 _md5_=b7963736593a8fab3413299802f9d557
