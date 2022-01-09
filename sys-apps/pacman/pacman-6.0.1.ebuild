@@ -1,7 +1,7 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI="8"
 
 inherit meson
 
@@ -10,7 +10,7 @@ HOMEPAGE="https://archlinux.org/pacman/ https://wiki.archlinux.org/title/Pacman"
 
 if [[ "${PV}" == *9999 ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://git.archlinux.org/pacman.git"
+	EGIT_REPO_URI="https://gitlab.archlinux.org/pacman/pacman"
 else
 	SRC_URI="https://sources.archlinux.org/other/pacman/${P}.tar.xz"
 	# Do *not* re-add ~x86!
@@ -55,7 +55,7 @@ src_configure() {
 		# full doc with doxygen
 		$(meson_feature doc doxygen)
 		$(meson_feature gpg gpgme)
-		$(meson_use curl libcurl)
+		$(meson_feature curl curl)
 	)
 	if [[ "${PV}" == *9999 ]]; then
 		emesonargs+=( -Duse-git-version=true )
@@ -64,7 +64,6 @@ src_configure() {
 }
 
 pkg_postinst() {
-
 	/usr/bin/pacman-key --init || die
 	/usr/bin/pacman-key --populate archlinux || die
 
