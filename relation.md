@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-09 14:22:38 CST)
+(The last generation time: 2022-01-09 15:55:46 CST)
 
 ### Packages
 
@@ -39,7 +39,7 @@
                                               | 9999                                         |            |                                                                                         |
      app-i18n/libime                          | 1.0.11                                       |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
                                               | 9999                                         |            |                                                                                         |
-       app-i18n/fcitx5                        | 5.0.12                                       |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
+       app-i18n/fcitx5                        | 5.0.13                                       |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
                                               | 9999                                         |            |                                                                                         |
          x11-libs/xcb-imdkit                  | 1.0.3                                        |  D, RD     | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
    app-i18n/fcitx5-configtool                 | 5.0.10                                       | RD         | https://fcitx-im.org/                                                                   | Configuration module for Fcitx
