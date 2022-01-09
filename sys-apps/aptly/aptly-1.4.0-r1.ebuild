@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -199,7 +199,7 @@ RDEPEND="acct-user/aptly"
 PATCHES=( "${FILESDIR}/${P}-go.sum.patch" )
 
 src_compile() {
-	go build -o cmd/aptly -ldflags "-X main.Version=${PV}" || die "build failed"
+	go build -mod=readonly -o cmd/aptly -ldflags "-X main.Version=${PV}" || die "build failed"
 }
 
 src_test() {
