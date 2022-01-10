@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-09 15:55:46 CST)
+(The last generation time: 2022-01-10 08:16:02 CST)
 
 ### Packages
 
@@ -383,7 +383,7 @@
      sci-libs/libticables2                    | 9999                                         |  D, RD     | http://lpg.ticalc.org/prj_tilp/                                                         | Library to handle different link cables for TI calculators
      sci-libs/libticonv                       | 9999                                         |  D, RD     | http://lpg.ticalc.org/prj_tilp/                                                         | Charset conversion library for TI calculators
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-apps/aptly                               | 1.4.0                                        |            | https://github.com/aptly-dev/aptly                                                      | A swiss army knife for Debian repository management
+ sys-apps/aptly                               | 1.4.0-r1                                     |            | https://github.com/aptly-dev/aptly                                                      | A swiss army knife for Debian repository management
                                               | 9999                                         |            |                                                                                         |
    acct-user/aptly                            | 0                                            | RD         |                                                                                         | A swiss army knife for Debian repository management
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
