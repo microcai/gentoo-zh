@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-10 13:54:48 CST)
+(The last generation time: 2022-01-10 14:15:40 CST)
 
 ### Packages
 
@@ -206,7 +206,7 @@
  dev-python/python-telegram-bot               | 13.10                                        |            | https://github.com/python-telegram-bot/python-telegram-bot                              | Python wrapper of telegram bots API
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/arch-install-scripts                | 24                                           |            | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
-   sys-apps/pacman                            | 6.0.0                                        |  D, RD     | https://archlinux.org/pacman/                                                           | Archlinux's binary package manager
+   sys-apps/pacman                            | 6.0.1                                        |  D, RD     | https://archlinux.org/pacman/                                                           | Archlinux's binary package manager
      app-crypt/archlinux-keyring              | 20210616                                     |  D, RD     | https://gitlab.archlinux.org/archlinux/archlinux-keyring                                | GnuPG keyring of Archlinux developer keys
      sys-apps/pacman-mirrorlist               | 20210509                                     | RD         | https://archlinux.org/mirrorlist/                                                       | Repository list for Archlinux's binary package manager
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
