@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-10 14:25:35 CST)
+(The last generation time: 2022-01-10 16:59:00 CST)
 
 ### Packages
 
@@ -184,7 +184,7 @@
  dev-cpp/tgbot-cpp                            | 1.3                                          |            | https://github.com/reo7sp/tgbot-cpp                                                     | C++ library for Telegram bot API
                                               | 1.3_p211229                                  |            |                                                                                         |
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-db/dbeaver-bin                           | 21.3.1                                       |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
+ dev-db/dbeaver-bin                           | 21.3.2                                       |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/granite                             | 5.2.1                                        |            | https://github.com/elementary/granite                                                   | Elementary OS library that extends Gtk+
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
