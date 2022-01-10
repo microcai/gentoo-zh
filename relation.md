@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-10 16:59:00 CST)
+(The last generation time: 2022-01-11 02:44:51 CST)
 
 ### Packages
 
@@ -395,12 +395,16 @@
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/yaourt                              | 1.2.2                                        |            | http://www.archlinux.fr/yaourt-en/                                                      | A pacman wrapper with extended features and AUR support
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-apps/zypper                              | 1.14.47                                      |            | https://en.opensuse.org/Portal:Zypper                                                   | World's most powerful command line package manager
-   sys-libs/libzypp                           | 17.27.0                                      |  D, BD     | https://doc.opensuse.org/projects/libzypp/HEAD/                                         | ZYpp Package Management library
+ sys-apps/zypper                              | 1.14.51                                      |            | https://en.opensuse.org/Portal:Zypper                                                   | World's most powerful command line package manager
+                                              | 9999                                         |            |                                                                                         |
+   sys-libs/libzypp                           | 17.29.1                                      | RD         | https://doc.opensuse.org/projects/libzypp/HEAD/                                         | ZYpp Package Management library
+                                              | 9999                                         |            |                                                                                         |
      dev-libs/boost                           | 1.78.0-r2                                    |  D, BD, RD | https://www.boost.org/                                                                  | Boost Libraries for C++
        dev-libs/libbacktrace                  | 210530                                       |  D, RD     | https://github.com/ianlancetaylor/libbacktrace                                          | A C library for producing symbolic backtraces
-     sys-libs/libsolv                         | 0.7.19                                       |  D, BD     | https://doc.opensuse.org/projects/libzypp/HEAD/                                         | Library for solving packages and reading repositories
-       app-arch/zchunk                        | 1.1.16                                       |  D, BD     | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
+     sys-libs/libsolv                         | 0.7.20                                       | RD         | https://doc.opensuse.org/projects/libzypp/HEAD/                                         | Library for solving packages and reading repositories
+                                              | 9999                                         |            |                                                                                         |
+       app-arch/zchunk                        | 1.1.16                                       | RD         | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
+                                              | 9999                                         |            |                                                                                         |
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-devel/ucc                                | 1.1-r0                                       |            | https://sourceforge.net/projects/ucc                                                    | UCC is an ANSI C Compiler
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
