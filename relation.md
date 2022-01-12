@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-12 13:09:56 CST)
+(The last generation time: 2022-01-12 15:03:58 CST)
 
 ### Packages
 
@@ -31,6 +31,8 @@
  app-emulation/winetricks-zh                  | 9999                                         |            | http://winetricks.org                                                                   | winetricks fork for chinese to install QQ
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/dvp                                 | 1.2.1-r1                                     |            | http://kaufmann.no/roland/dvorak/index.html                                             | The kbd keymap for Programmer Dvorak.
+----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-i18n/fcitx5-kkc                          | 5.0.6                                        |            | https://github.com/fcitx/fcitx5-kkc                                                     | Japanese Kana Kanji conversion engine for Fcitx5
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx5-meta                         | 5.0.12                                       |            | https://fcitx-im.org                                                                    | Merge this to pull in Fcitx packages
    app-i18n/fcitx5-chinese-addons             | 5.0.10                                       | RD         | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
