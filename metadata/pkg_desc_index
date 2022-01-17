@@ -201,6 +201,7 @@ sys-fs/erofs-utils 1.3: Userspace tools for EROFS images
 sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
+sys-kernel/liquorix-sources 5.15_p18: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 31: Modular initramfs image creation utility
 sys-kernel/xanmod-hybrid 5.15.13: Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
 sys-kernel/xanmod-lts 5.15.11-r2: XanMod lts kernel built with Gentoo patches and cjktty
@@ -216,7 +217,7 @@ sys-libs/libsolv 0.7.20 9999: Library for solving packages and reading repositor
 sys-libs/libzypp 17.29.1 9999: ZYpp Package Management library
 sys-process/btop 1.1.2: Resources monitor. The C++ version of bashtop
 virtual/dist-kernel 5.15.11: Virtual to depend on any Distribution Kernel
-virtual/linux-sources 3-r6: Virtual for Linux kernel sources
+virtual/linux-sources 3-r7: Virtual for Linux kernel sources
 www-servers/darkhttpd 1.13: A small, static webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
 x11-drivers/xf86-input-synaptics 1.9.1: Driver for Synaptics touchpads
