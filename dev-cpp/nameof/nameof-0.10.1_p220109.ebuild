@@ -7,7 +7,7 @@ inherit git-r3
 DESCRIPTION="Nameof operator for modern C++"
 HOMEPAGE="https://github.com/Neargye/nameof"
 EGIT_REPO_URI="https://github.com/Neargye/nameof.git"
-EGIT_COMMIT=e955bf6
+EGIT_COMMIT=30b74ae
 
 LICENSE="MIT"
 SLOT="0"
