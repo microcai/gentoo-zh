@@ -14,6 +14,7 @@ RDEPEND="
 		sys-kernel/gentoo-sources
 		sys-kernel/vanilla-sources
 		sys-kernel/git-sources
+		sys-kernel/liquorix-sources
 		sys-kernel/mips-sources
 		sys-kernel/pf-sources
 		sys-kernel/rt-sources
