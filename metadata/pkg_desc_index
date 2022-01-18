@@ -127,6 +127,7 @@ media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cw
 media-fonts/jf-openhuninn 1.1: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 media-fonts/lxgwwenkai 1.111: An open-source Chinese font derived from Fontworks' Klee One.
 media-fonts/nerd-fonts 2.1.0: Nerd Fonts is a project that patches developer targeted fonts with glyphs
+media-fonts/sarasa-gothic 0.35.8: A CJK programming font based on Iosevka and Source Han Sans.
 media-fonts/taipei-sans-tc 1.0: JT Foundry - Taipei Sans TC Beta font
 media-fonts/ttf-wps-fonts 1.0: Symbol fonts required by wps-office
 media-fonts/wangfonts 1.3.0: Free Chinese TrueType fonts donated by Prof. Hann-Tzong Wang
