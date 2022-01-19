@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit font
+inherit font unpacker
 
 DESCRIPTION="A CJK programming font based on Iosevka and Source Han Sans."
 HOMEPAGE="https://github.com/be5invis/Sarasa-Gothic"
