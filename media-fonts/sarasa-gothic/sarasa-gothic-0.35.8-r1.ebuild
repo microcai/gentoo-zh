@@ -12,6 +12,7 @@ SRC_URI="https://github.com/be5invis/Sarasa-Gothic/releases/download/v${PV}/${PN
 LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE="classical l10n_zh l10n_ja l10n_ko"
 
 RESTRICT="mirror strip"
 
@@ -24,4 +25,32 @@ FONT_SUFFIX="ttf"
 
 src_unpack() {
 	7z x -o"${S}" "${DISTDIR}/${A}"
+}
+
+src_configure() {
+	if use classical; then
+		sleep 0
+	else
+		rm *-cl-*.ttf
+	fi
+
+	if use l10n_zh; then
+		sleep 0
+	else
+		rm *-c-*.ttf
+		rm *-hc-*.ttf
+		rm *-tc-*.ttf
+	fi
+
+	if use l10n_ja; then
+		sleep 0
+	else
+		rm *-j-*.ttf
+	fi
+
+	if use l10n_ko; then
+		sleep 0
+	else
+		rm *-k-*.ttf
+	fi
 }
