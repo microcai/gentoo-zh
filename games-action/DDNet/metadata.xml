@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Schroedinger</name>
+		<email>dylanturing@protonmail.com</email>
+	</maintainer>
+	<longdescription>
+		DDraceNetwork, or DDNet, is a 2D platform game
+	</longdescription>
+</pkgmetadata>
