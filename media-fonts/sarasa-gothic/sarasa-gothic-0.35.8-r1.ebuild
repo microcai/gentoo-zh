@@ -13,6 +13,8 @@ LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="classical +l10n_zh l10n_ja l10n_ko"
+BDEPEND="
+	app-arch/p7zip"
 
 RESTRICT="mirror"
 
