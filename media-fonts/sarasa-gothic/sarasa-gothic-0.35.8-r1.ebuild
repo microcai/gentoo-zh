@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit font
+inherit font unpacker
 
 DESCRIPTION="A CJK programming font based on Iosevka and Source Han Sans."
 HOMEPAGE="https://github.com/be5invis/Sarasa-Gothic"
@@ -12,45 +12,19 @@ SRC_URI="https://github.com/be5invis/Sarasa-Gothic/releases/download/v${PV}/${PN
 LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="classical l10n_zh l10n_ja l10n_ko"
-
-RESTRICT="mirror strip"
-
-DEPEND="
+IUSE="classical +l10n_zh l10n_ja l10n_ko"
+BDEPEND="
 	app-arch/p7zip"
+
+RESTRICT="mirror"
 
 S="${WORKDIR}"
 FONT_S="${S}"
 FONT_SUFFIX="ttf"
 
-src_unpack() {
-	7z x -o"${S}" "${DISTDIR}/${A}" || die
-}
-
 src_configure() {
-	if use classical; then
-		sleep 0 || die
-	else
-		rm *-cl-*.ttf || die
-	fi
-
-	if use l10n_zh; then
-		sleep 0 || die
-	else
-		rm *-c-*.ttf || die
-		rm *-hc-*.ttf || die
-		rm *-tc-*.ttf || die
-	fi
-
-	if use l10n_ja; then
-		sleep 0 || die
-	else
-		rm *-j-*.ttf || die
-	fi
-
-	if use l10n_ko; then
-		sleep 0 || die
-	else
-		rm *-k-*.ttf || die
-	fi
+	use classical || rm *-cl-*.ttf || die
+	use l10n_zh || rm *-sc-*.ttf *-hc-*.ttf *-tc-*.ttf || die
+	use l10n_ja || rm *-j-*.ttf || die
+	use l10n_ko || rm *-k-*.ttf || die
 }
