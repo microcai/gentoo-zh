@@ -8,4 +8,7 @@
     <longdescription lang="en">
         A CJK programming font based on Iosevka and Source Han Sans.
     </longdescription>
+    <use>
+        <flag name="classical">Keep classical orthography .ttf files.</flag>
+    </use>
 </pkgmetadata>
