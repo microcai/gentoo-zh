@@ -24,33 +24,33 @@ FONT_S="${S}"
 FONT_SUFFIX="ttf"
 
 src_unpack() {
-	7z x -o"${S}" "${DISTDIR}/${A}"
+	7z x -o"${S}" "${DISTDIR}/${A}" || die
 }
 
 src_configure() {
 	if use classical; then
-		sleep 0
+		sleep 0 || die
 	else
-		rm *-cl-*.ttf
+		rm *-cl-*.ttf || die
 	fi
 
 	if use l10n_zh; then
-		sleep 0
+		sleep 0 || die
 	else
-		rm *-c-*.ttf
-		rm *-hc-*.ttf
-		rm *-tc-*.ttf
+		rm *-c-*.ttf || die
+		rm *-hc-*.ttf || die
+		rm *-tc-*.ttf || die
 	fi
 
 	if use l10n_ja; then
-		sleep 0
+		sleep 0 || die
 	else
-		rm *-j-*.ttf
+		rm *-j-*.ttf || die
 	fi
 
 	if use l10n_ko; then
-		sleep 0
+		sleep 0 || die
 	else
-		rm *-k-*.ttf
+		rm *-k-*.ttf || die
 	fi
 }
