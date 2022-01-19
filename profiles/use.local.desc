@@ -112,6 +112,7 @@ media-fonts/nerd-fonts:tinos - Install Nerd-fonts-patched Tinos fonts
 media-fonts/nerd-fonts:ubuntu - Install Nerd-fonts-patched Ubuntu fonts
 media-fonts/nerd-fonts:ubuntumono - Install Nerd-fonts-patched Ubuntu Mono fonts
 media-fonts/nerd-fonts:victormono - Install Nerd-fonts-patched Victor Mono fonts
+media-fonts/sarasa-gothic:classical - Keep classical orthography .ttf files.
 media-plugins/osdlyrics:gnome - add support for gnome
 media-plugins/osdlyrics:indicator - add support for appindicator
 media-sound/feeluown:kuwo - add kuwo music support for feeluown
