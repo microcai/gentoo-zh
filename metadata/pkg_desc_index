@@ -11,6 +11,7 @@ app-backup/snapper-gui 201020: GUI for snapper, a tool for Linux filesystem snap
 app-crypt/archlinux-keyring 20210616: GnuPG keyring of Archlinux developer keys
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-dicts/copytranslator 9.1.0: Foreign language reading and translation assistant based on copy and translate.
+app-editors/marktext-bin 0.16.3: A simple and elegant markdown editor, available for Linux, macOS and Windows.
 app-editors/typora 0.11.18 1.0.3: A truely minimal markdown editor.
 app-editors/visual-studio-code-bin 1.63.2: Multiplatform Visual Studio Code from Microsoft
 app-emulation/deepin-udis86 1.72-r4: Deepin Version of Wine
