@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-20 18:20:26 CST)
+(The last generation time: 2022-01-20 23:04:25 CST)
 
 ### Packages
 
@@ -104,7 +104,7 @@
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/freeoffice                        | 1042                                         |            | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-office/wps-office                        | 11.1.0.10702                                 |            | http://www.wps.cn/product/wpslinux/                                                     | WPS Office is an office productivity suite, Here is the Chinese version
+ app-office/wps-office                        | 11.1.0.10920                                 |            | http://www.wps.cn/product/wpslinux/                                                     | WPS Office is an office productivity suite, Here is the Chinese version
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-pda/ipadcharge                           | 9999                                         |            | https://github.com/mkorenkov/ipad_charge                                                | Enables USB charging for Apple devices.
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
