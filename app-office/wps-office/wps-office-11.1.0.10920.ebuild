@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -10,7 +10,7 @@ MY_PV="$(ver_cut 4)"
 DESCRIPTION="WPS Office is an office productivity suite, Here is the Chinese version"
 HOMEPAGE="http://www.wps.cn/product/wpslinux/ http://wps-community.org/"
 
-KEYWORDS="-* amd64 ~arm64 ~mips"
+KEYWORDS="~amd64 ~arm64 ~mips"
 
 SRC_URI="
 	amd64?	( https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/${MY_PV}/${PN}_${PV}_amd64.deb )
