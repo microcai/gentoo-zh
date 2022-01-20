@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Schroedinger</name>
+		<email>dylanturing@protonmail.com</email>
+	</maintainer>
+	<longdescription>
+		A simple and elegant markdown editor, available for Linux, macOS and Windows.
+	</longdescription>
+</pkgmetadata>
