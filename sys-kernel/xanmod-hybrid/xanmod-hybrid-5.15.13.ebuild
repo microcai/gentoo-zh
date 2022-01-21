@@ -30,8 +30,8 @@ REQUIRED_USE="^^ ( xanmod cacule )"
 # If you have been enable src_prepare-overlay
 # please unmerge sys-kernel/xanmod-sources
 RDEPEND="
-	!sys-kernel/xanmod-sources
-	!sys-kernel/xanmod-rt
+	!sys-kernel/xanmod-sources:${PV}
+	!sys-kernel/xanmod-rt:${PV}
 "
 DEPEND="app-arch/cpio"
 
