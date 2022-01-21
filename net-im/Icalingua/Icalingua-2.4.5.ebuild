@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit desktop
+inherit desktop unpacker
 
 DESCRIPTION="A Linux client for QQ and more."
 HOMEPAGE="https://github.com/Icalingua/Icalingua"
@@ -18,11 +18,6 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 S="${WORKDIR}"
-
-src_unpack(){
-	unpack ${P}.deb
-	tar xfv data.tar.xz || die
-}
 
 src_install(){
 	insinto "/opt"
