@@ -1,0 +1,10 @@
+diff --color -ur zenpower-0.1.12/Makefile zenpower-0.1.12-patched/Makefile
+--- zenpower-0.1.12/Makefile	2020-06-15 03:57:52.000000000 +0800
++++ zenpower-0.1.12-patched/Makefile	2022-01-21 22:25:50.528013120 +0800
+@@ -1,5 +1,5 @@
+ VERSION         := 0.1.12
+-TARGET          := $(shell uname -r)
++TARGET          := $(KV_FULL)
+ DKMS_ROOT_PATH  := /usr/src/zenpower-$(VERSION)
+ 
+ KERNEL_MODULES	:= /lib/modules/$(TARGET)
