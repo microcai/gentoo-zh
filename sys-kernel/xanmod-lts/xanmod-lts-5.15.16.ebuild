@@ -1,4 +1,4 @@
-# Copyright 2020-2021 Gentoo Authors
+# Copyright 2020-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -8,8 +8,6 @@ inherit kernel-build toolchain-funcs
 MY_P=linux-${PV%.*}
 GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 2))
 XV="1"
-LINUX_CONFIG_VER=5.15.11
-LINUX_CONFIG_DIR="${WORKDIR}/linux-config-${LINUX_CONFIG_VER}"
 
 DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
 HOMEPAGE="https://www.kernel.org/"
@@ -22,12 +20,31 @@ S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
 KEYWORDS="amd64"
-IUSE="cjk"
+IUSE="cjk clang"
 
 PDEPEND="
 	>=virtual/dist-kernel-${PV}"
 
 QA_FLAGS_IGNORED="usr/src/linux-.*/scripts/gcc-plugins/.*.so"
+
+pkg_setup ()
+{
+	ewarn ""
+	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
+	ewarn "You have to configure the kernel by yourself."
+	ewarn "Generally emerge this package using default config will fail to boot."
+	ewarn "If you need support, please contact the ${HOMEPAGE} or maintainer directly."
+	ewarn "Do *not* open bugs in Gentoo's bugzilla unless you have issues with"
+	ewarn "the ebuilds. Thank you."
+	ewarn ""
+	python-any-r1_pkg_setup "$@"
+	if use clang && ! tc-is-clang ; then
+		export CC=${CHOST}-clang
+		export CXX=${CHOST}-clang++
+	else
+		tc-export CXX CC
+	fi
+}
 
 src_prepare() {
 	# delete linux version patches
@@ -47,7 +64,11 @@ src_prepare() {
 	# prepare the default config
 	case ${ARCH} in
 	amd64)
-		cp "${S}/CONFIGS/xanmod/gcc/config" .config || die
+		if use clang; then
+			cp "${S}/CONFIGS/xanmod/clang/config" .config || die
+		else
+			cp "${S}/CONFIGS/xanmod/gcc/config" .config || die
+		fi
 		;;
 	*)
 		die "Unsupported arch ${ARCH}"
@@ -68,17 +89,4 @@ src_prepare() {
 	kernel-build_merge_configs "${merge_configs[@]}"
 	# delete localversion
 	rm "${S}/localversion" || die
-}
-
-pkg_setup ()
-{
-	ewarn ""
-	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
-	ewarn "You have to configure the kernel by yourself."
-	ewarn "Generally emerge this package using default config will fail to boot."
-	ewarn "If you need support, please contact the ${HOMEPAGE} or maintainer directly."
-	ewarn "Do *not* open bugs in Gentoo's bugzilla unless you have issues with"
-	ewarn "the ebuilds. Thank you."
-	ewarn ""
-	python-any-r1_pkg_setup "$@"
 }
