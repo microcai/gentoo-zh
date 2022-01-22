@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-21 19:34:00 CST)
+(The last generation time: 2022-01-22 10:18:39 CST)
 
 ### Packages
 
@@ -15,7 +15,7 @@
    acct-user/cockpit-ws                       | 0                                            |  D, BD, RD |                                                                                         | User for the cockpit server
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/zenmonitor                         | 1.4.2                                        |            | https://github.com/ocerman/zenmonitor                                                   | Zen monitor is monitoring software for AMD Zen-based CPUs
-   sys-kernel/zenpower                        | 0.1.12                                       |  D, RD     | https://github.com/ocerman/zenpower                                                     | Linux kernel driver for reading sensors of AMD Zen family CPUs
+   sys-kernel/zenpower                        | 0.1.12-r1                                    |  D, RD     | https://github.com/ocerman/zenpower                                                     | Linux kernel driver for reading sensors of AMD Zen family CPUs
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-backup/snapper-gui                       | 201020                                       |            | https://github.com/ricardomv/snapper-gui                                                | GUI for snapper, a tool for Linux filesystem snapshot management
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
