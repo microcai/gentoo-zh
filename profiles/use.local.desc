@@ -145,6 +145,7 @@ sys-apps/pacman:gpg - Enable GPG signature verification using app-crypt/gpgme
 sys-kernel/liquorix-sources:cjk - Enable cjktty Patches.
 sys-kernel/xanmod-hybrid:cacule - Enable Default Xanmod-CaCule Patches.
 sys-kernel/xanmod-hybrid:xanmod - Enable Default Xanmod Patches.
+sys-kernel/xanmod-lts:clang - Use clang compiler instead of GCC
 sys-kernel/xanmod-lts:initramfs - Build initramfs along with the kernel.
 sys-libs/glibc:cet - Enable Intel Control-flow Enforcement Technology (needs binutils 2.29 and gcc 8)
 sys-libs/glibc:clone3 - Enable the new clone3 syscall within glibc. Can be disabled to allow compatibility with older Electron applications.
