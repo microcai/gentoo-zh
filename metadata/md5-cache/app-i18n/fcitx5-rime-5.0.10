@@ -10,5 +10,5 @@ LICENSE=GPL-2
 RDEPEND=app-i18n/fcitx5 >=app-i18n/librime-1.0 >=app-i18n/rime-data-0.3.0 x11-libs/libnotify !app-i18n/fcitx-rime
 SLOT=5
 SRC_URI=https://github.com/fcitx/fcitx5-rime/archive/refs/tags/5.0.10.tar.gz -> fcitx5-rime-5.0.10.tar.gz
-_eclasses_=xdg-utils	4f29a8b760a594a212abe9c2ba957c31	xdg	6024fbc93167fad782e2032933654857	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	dab5d8ec471d025b79c9e6906bcf3bff	flag-o-matic	d5e1306543bc457213f68bb18f830d14	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	cmake	11fee991ab428a3370e5c20fa8231fb6
+_eclasses_=xdg-utils	4f29a8b760a594a212abe9c2ba957c31	xdg	6024fbc93167fad782e2032933654857	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	dab5d8ec471d025b79c9e6906bcf3bff	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	cmake	11fee991ab428a3370e5c20fa8231fb6
 _md5_=9a71df7ff0c7c7c215ef2489636aac2a
