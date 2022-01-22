@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Schroedinger</name>
+		<email>dylanturing@protonmail.com</email>
+	</maintainer>
+	<use>
+		<flag name="gzip">gzip decompression of the archive from woof</flag>
+		<flag name="bzip2">bzip2 decompression of the archive from woof</flag>
+		<flag name="unzip">ZIP decompression of the archive from woof</flag>
+	</use>
+</pkgmetadata>
