@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-22 22:13:46 CST)
+(The last generation time: 2022-01-23 02:28:17 CST)
 
 ### Packages
 
@@ -8,11 +8,6 @@
  Package name                                 | Version                                      | Role       | Homepage                                                                                | Description
 ==============================================|==============================================|============|=========================================================================================|====================
  acct-group/aptly                             | 0                                            |            |                                                                                         |
-----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- acct-group/cockpit-ws                        | 0                                            |            |                                                                                         | Group for the cockpit server
-----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/cockpit                            | 234                                          |            | https://cockpit-project.org/                                                            | A systemd web based user interface for Linux server
-   acct-user/cockpit-ws                       | 0                                            |  D, BD, RD |                                                                                         | User for the cockpit server
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/zenmonitor                         | 1.4.2                                        |            | https://github.com/ocerman/zenmonitor                                                   | Zen monitor is monitoring software for AMD Zen-based CPUs
    sys-kernel/zenpower                        | 0.1.12-r1                                    |  D, RD     | https://github.com/ocerman/zenpower                                                     | Linux kernel driver for reading sensors of AMD Zen family CPUs
@@ -22,6 +17,8 @@
  app-crypt/etoken-sac                         | 10.3                                         |            | http://aladdin-rd.ru                                                                    | SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/copytranslator                     | 9.1.0                                        |            | https://copytranslator.github.io/                                                       | Foreign language reading and translation assistant based on copy and translate.
+----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-dicts/fcitx5-pinyin-zhwiki               | 20220101                                     |            | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/marktext-bin                     | 0.16.3                                       |            | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -72,6 +69,8 @@
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/mozc                                | 2.26.4220_p20201212102434_p20201219202429-r1 |            | https://github.com/google/mozc                                                          | Mozc - Japanese input method editor
                                               | 9999                                         |            |                                                                                         |
+----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-i18n/rime-prelude                        | 20220122                                     |            | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/scim-chrasis                        | 9999.0.0.1                                   |            | http://chrasis.berlios.de/                                                              | Chrasis SCIM binding for chinese character recognition.
    dev-libs/libchrasis                        | 9999.0.1.1                                   |  D, RD     | http://chrasis.berlios.de                                                               | Library for Chinese Character Recognition As-Is
