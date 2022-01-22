@@ -1,16 +1,14 @@
 acct-group/aptly 0: System group: aptly
-acct-group/cockpit-ws 0: Group for the cockpit server
 acct-group/n2n 0: System group: n2n
 acct-user/aptly 0: System user: aptly
-acct-user/cockpit-ws 0: User for the cockpit server
 acct-user/n2n 0: System user: n2n
-app-admin/cockpit 234: A systemd web based user interface for Linux server
 app-admin/zenmonitor 1.4.2: Zen monitor is monitoring software for AMD Zen-based CPUs
 app-arch/zchunk 1.1.16 9999: A format designed for highly efficient deltas while maintaining good compression
 app-backup/snapper-gui 201020: GUI for snapper, a tool for Linux filesystem snapshot management
 app-crypt/archlinux-keyring 20210616: GnuPG keyring of Archlinux developer keys
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-dicts/copytranslator 9.1.0: Foreign language reading and translation assistant based on copy and translate.
+app-dicts/fcitx5-pinyin-zhwiki 20220101: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 app-editors/marktext-bin 0.16.3: A simple and elegant markdown editor, available for Linux, macOS and Windows.
 app-editors/typora 0.11.18 1.0.3: A truely minimal markdown editor.
 app-editors/visual-studio-code-bin 1.63.2: Multiplatform Visual Studio Code from Microsoft
@@ -40,6 +38,7 @@ app-i18n/libime 1.0.11 9999: Fcitx5 Next generation of fcitx
 app-i18n/lunar 2.2-r5: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
 app-i18n/mozc 2.26.4220_p20201212102434_p20201219202429-r1 9999: Mozc - Japanese input method editor
+app-i18n/rime-prelude 20220122: Essential files for building up your Rime configuration
 app-i18n/scim-chrasis 9999.0.0.1: Chrasis SCIM binding for chinese character recognition.
 app-i18n/sogoupinyin 2.4.0.3469: Sogou Pinyin input method.
 app-i18n/zh-autoconvert 0.3.16-r5: Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
