@@ -159,6 +159,9 @@ sys-libs/glibc:static-pie - Enable static PIE support (runtime files for -static
 sys-libs/glibc:suid - Make internal pt_chown helper setuid -- not needed if using Linux and have /dev/pts mounted with gid=5
 sys-libs/glibc:systemtap - enable systemtap static probe points
 virtual/linux-sources:firmware - Install linux kernel firmware
+www-servers/woof:bzip2 - bzip2 decompression of the archive from woof
+www-servers/woof:gzip - gzip decompression of the archive from woof
+www-servers/woof:unzip - ZIP decompression of the archive from woof
 x11-libs/xcb-imdkit:system-uthash - Use the system-wide dev-libs/uthash instead of bundled.
 x11-misc/picom-jonaburg:config-file - Enable config file support
 x11-misc/picom-jonaburg:doc - Build documentation and man pages (requires app-text/asciidoc)
