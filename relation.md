@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-22 19:39:13 CST)
+(The last generation time: 2022-01-22 22:13:46 CST)
 
 ### Packages
 
@@ -263,6 +263,9 @@
                                               | 2.4.10                                       |            |                                                                                         |
    media-gfx/sane-backends                    | 9999                                         |  D         | http://www.sane-project.org/                                                            | Scanner Access Now Easy - Backends
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ media-gfx/tifig-bin                          | 0.2.2                                        |            | https://github.com/monostream/tifig                                                     | Converts iOS 11 HEIC images to practical formats - Static binary
+   sys-libs/glibc                             | 9999                                         |  D, RD     | https://www.gnu.org/software/libc/                                                      | GNU libc C library
+----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/xrectsel                           | 0.3.1                                        |            | https://github.com/lolilolicon/xrectsel                                                 | print the geometry of a rectangular screen region
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-libs/libspiro                          | 0.3.20150131                                 |            | https://github.com/fontforge/libspiro                                                   | Spiro is the creation of Raph Levien. It simplifies the drawing of beautiful curves.
@@ -314,7 +317,6 @@
                                               | 1.3.0.61                                     |            |                                                                                         |
    dev-libs/libthai                           | 0.1.28                                       |  D, RD     | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
      dev-libs/libdatrie                       | 0.2.13                                       |  D, RD     | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
-   sys-libs/glibc                             | 9999                                         |  D, RD     | https://www.gnu.org/software/libc/                                                      | GNU libc C library
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/freetalk                              | 4.1                                          |            | http://www.gnu.org/software/freetalk/                                                   | Console based Jabber client
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
