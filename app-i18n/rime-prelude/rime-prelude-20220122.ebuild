@@ -7,7 +7,7 @@ inherit unpacker
 
 EGIT_COMMIT="4001edf96791bbb5663573ba79ba4b1e9c0b8626"
 SRC_URI="https://github.com/rime/${PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="Essential files for building up your Rime configuration"
 HOMEPAGE="https://github.com/rime/rime-prelude"
