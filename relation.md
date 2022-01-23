@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-23 02:28:17 CST)
+(The last generation time: 2022-01-23 13:57:09 CST)
 
 ### Packages
 
@@ -50,6 +50,7 @@
    app-i18n/fcitx5-hangul                     | 5.0.6                                        | RD         | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
    app-i18n/fcitx5-rime                       | 5.0.10                                       | RD         | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
                                               | 9999                                         |            |                                                                                         |
+     app-i18n/rime-prelude                    | 20220122                                     |  D, RD     | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
    app-i18n/fcitx5-skk                        | 5.0.9                                        | RD         | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
                                               | 9999                                         |            |                                                                                         |
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -69,8 +70,6 @@
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/mozc                                | 2.26.4220_p20201212102434_p20201219202429-r1 |            | https://github.com/google/mozc                                                          | Mozc - Japanese input method editor
                                               | 9999                                         |            |                                                                                         |
-----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/rime-prelude                        | 20220122                                     |            | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/scim-chrasis                        | 9999.0.0.1                                   |            | http://chrasis.berlios.de/                                                              | Chrasis SCIM binding for chinese character recognition.
    dev-libs/libchrasis                        | 9999.0.1.1                                   |  D, RD     | http://chrasis.berlios.de                                                               | Library for Chinese Character Recognition As-Is
