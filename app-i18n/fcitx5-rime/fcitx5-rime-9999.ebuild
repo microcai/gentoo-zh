@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -24,6 +24,7 @@ IUSE=""
 RDEPEND="app-i18n/fcitx5
 	>=app-i18n/librime-1.0
 	>=app-i18n/rime-data-0.3.0
+	app-i18n/rime-prelude
 	x11-libs/libnotify
 	!app-i18n/fcitx-rime"
 
