@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-25 20:45:30 CST)
+(The last generation time: 2022-01-25 23:23:04 CST)
 
 ### Packages
 
@@ -232,7 +232,7 @@
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-board/othello                          | 0.2.2                                        |            | http://othello-game.sourceforge.net                                                     | Othello is a classic strategy game, also known as Reversi
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- games-util/winegame-client-bin               | 0.5.7.2-r1                                   |            | https://winegame.net/                                                                   | An open source gaming platform for GNU/Linux
+ games-util/winegame-client-bin               | 0.5.9.3                                      |            | https://winegame.net/                                                                   | An open source gaming platform for GNU/Linux
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  kde-misc/plasma-applet-netspeed-widget       | 1.8-r1                                       |            | https://www.kde-look.org/p/998895/                                                      | Plasma 5 widget that displays the currently used network bandwidth.
                                               | 9999                                         |            |                                                                                         |
