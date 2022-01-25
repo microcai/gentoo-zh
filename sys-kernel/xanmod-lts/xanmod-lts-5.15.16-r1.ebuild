@@ -22,13 +22,18 @@ LICENSE="GPL-2"
 KEYWORDS="amd64"
 IUSE="cjk clang"
 
+BDEPEND="
+	clang? (
+		sys-devel/clang
+		sys-devel/lld
+		sys-devel/llvm
+		)"
 PDEPEND="
 	>=virtual/dist-kernel-${PV}"
 
 QA_FLAGS_IGNORED="usr/src/linux-.*/scripts/gcc-plugins/.*.so"
 
-pkg_setup ()
-{
+pkg_setup() {
 	ewarn ""
 	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
 	ewarn "You have to configure the kernel by yourself."
@@ -38,9 +43,17 @@ pkg_setup ()
 	ewarn "the ebuilds. Thank you."
 	ewarn ""
 	python-any-r1_pkg_setup "$@"
-	if use clang && ! tc-is-clang ; then
-		export CC=${CHOST}-clang
-		export CXX=${CHOST}-clang++
+	if use clang && ! tc-is-clang; then
+		export LLVM_IAS=1
+		export LLVM=1
+		export CC=clang
+		export LD=ld.lld
+		export AR=llvm-ar
+		export NM=llvm-nm
+		export OBJCOPY=llvm-objcopy
+		export OBJDUMP=llvm-objdump
+		export READELF=llvm-readelf
+		export STRIP=llvm-strip
 	else
 		tc-export CXX CC
 	fi
