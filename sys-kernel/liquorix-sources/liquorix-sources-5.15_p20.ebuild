@@ -46,7 +46,7 @@ HOMEPAGE="https://liquorix.net/"
 SRC_URI="
 ${KERNEL_BASE_URI}/linux-5.15.tar.xz
 ${GENPATCHES_URI}
-https://raw.githubusercontent.com/damentz/liquorix-package/5.15/master/linux-liquorix/debian/patches/zen/v5.15.16-lqx1.patch
+https://github.com/HougeLangley/customkernel/releases/download/v5.15-patch/v5.15.16-lqx2.patch
 https://github.com/HougeLangley/customkernel/releases/download/v5.15-others/v1-cjktty-5.15.patch
 "
 KEYWORDS="~amd64"
@@ -55,7 +55,7 @@ S="${WORKDIR}/linux-${PVR}-liquorix"
 
 K_EXTRAEINFO="For more info on liquorix-kernel and details on how to report problems, see: ${HOMEPAGE}."
 
-UNIPATCH_LIST="${DISTDIR}/v5.15.16-lqx1.patch"
+UNIPATCH_LIST="${DISTDIR}/v5.15.16-lqx2.patch"
 
 PATCHES="${DISTDIR}/v1-cjktty-5.15.patch"
 
