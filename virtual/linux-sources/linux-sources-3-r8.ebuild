@@ -27,4 +27,5 @@ RDEPEND="
 		sys-kernel/gentoo-kernel-bin
 		sys-kernel/vanilla-kernel
 		sys-kernel/bliss-kernel-bin
+		sys-kernel/starfive-sources
 	)"
