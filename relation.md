@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-26 15:01:40 CST)
+(The last generation time: 2022-01-27 10:24:31 CST)
 
 ### Packages
 
@@ -89,6 +89,8 @@
  app-misc/jshon                               | 9999                                         |            | http://kmkeen.com/jshon/                                                                | Jshon is a JSON parser designed for maximum convenience within the shell
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/nixnote                             | 2.1.6                                        |            | http://sourceforge.net/projects/nevernote/                                              | Nixnote - A clone of Evernote for Linux
+   dev-qt/qtwebkit                            | 5.212.0_pre20200309-r1                       |  D, RD     | https://www.qt.io/                                                                      | WebKit rendering library for the Qt5 framework (deprecated)
+                                              | 5.212.0_pre20200309-r2                       |            |                                                                                         |
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/rmtrash                             | 1.14                                         |            | https://github.com/PhrozenByte/rmtrash                                                  | trash-put made compatible to GNUs rm and rmdir
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -276,9 +278,9 @@
  media-plugins/osdlyrics                      | 0.5.10                                       |            | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
                                               | 9999                                         |            |                                                                                         |
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/feeluown                         | 3.7.14                                       |            | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
+ media-sound/feeluown                         | 3.8.1                                        |            | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
    dev-python/fuo-kuwo                        | 0.1.5                                        |  D         | https://github.com/feeluown/feeluown-kuwo                                               | kuwo music support for feeluown
-   dev-python/fuo-local                       | 0.2.1-r1                                     |  D         | https://github.com/feeluown/feeluown-local                                              | local music support for feeluown
+   dev-python/fuo-local                       | 0.3                                          |  D         | https://github.com/feeluown/feeluown-local                                              | local music support for feeluown
    dev-python/fuo-netease                     | 0.8                                          |  D         | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
    dev-python/fuo-qqmusic                     | 0.3.3                                        |  D         | https://github.com/feeluown/feeluown-qqmusic                                            | qq music support for feeluown
    dev-python/janus                           | 1.0.0-r1                                     |  D, RD     | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
