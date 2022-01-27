@@ -118,6 +118,7 @@ dev-util/elfembed 0.3-r1: Resource Compiler for ELF binaries
 dev-util/fernflower 1: Fernflower is the first actually working analytical decompiler for Java and probably for a high-level programming language in general
 dev-util/jd-gui 1.4.0: A standalone graphical utility that displays Java source codes of .class file
 dev-util/jetbrains-toolbox 1.22.10774: Manage all your JetBrains Projects and Tools
+dev-util/pahole 1.23: pahole (Poke-a-Hole) and other DWARF2 utilities
 dev-util/rust-analyzer 20210712: An experimental Rust compiler front-end for IDEs
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-vcs/lazygit-bin 0.32: lazygit, a simple terminal UI for git commands
@@ -208,6 +209,7 @@ sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/liquorix-sources 5.15_p20: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 31: Modular initramfs image creation utility
+sys-kernel/starfive-sources 5.17.0_p1: Linux kernel for StarFive's JH7100 RISC-V SoC
 sys-kernel/xanmod-hybrid 5.15.15 5.15.16: Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
 sys-kernel/xanmod-lts 5.15.16-r1: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 5.15.12 5.15.14: Xanmod-RT, cjktty, uksm patchset for main kernel tree
@@ -222,7 +224,7 @@ sys-libs/libsolv 0.7.20 9999: Library for solving packages and reading repositor
 sys-libs/libzypp 17.29.1 9999: ZYpp Package Management library
 sys-process/btop 1.1.2: Resources monitor. The C++ version of bashtop
 virtual/dist-kernel 5.15.16: Virtual to depend on any Distribution Kernel
-virtual/linux-sources 3-r7: Virtual for Linux kernel sources
+virtual/linux-sources 3-r8: Virtual for Linux kernel sources
 www-servers/darkhttpd 1.13: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
