@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-27 13:14:26 CST)
+(The last generation time: 2022-01-27 22:02:31 CST)
 
 ### Packages
 
@@ -449,8 +449,10 @@
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/dist-kernel                          | 5.15.16                                      |            |                                                                                         | Virtual to depend on any Distribution Kernel
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- virtual/linux-sources                        | 3-r7                                         |            |                                                                                         | Virtual for Linux kernel sources
+ virtual/linux-sources                        | 3-r8                                         |            |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/liquorix-sources                | 5.15_p20                                     | RD         | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
+     dev-util/pahole                          | 1.23                                         |  D         | https://git.kernel.org/cgit/devel/pahole/pahole.git/                                    | pahole (Poke-a-Hole) and other DWARF2 utilities
+   sys-kernel/starfive-sources                | 5.17.0_p1                                    | RD         | https://starfivetech.com                                                                | Linux kernel for StarFive's JH7100 RISC-V SoC
    sys-kernel/xanmod-hybrid                   | 5.15.15                                      | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
                                               | 5.15.16                                      |            |                                                                                         |
    sys-kernel/xanmod-lts                      | 5.15.16-r1                                   | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
