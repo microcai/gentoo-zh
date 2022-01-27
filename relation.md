@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-27 11:06:06 CST)
+(The last generation time: 2022-01-27 13:00:31 CST)
 
 ### Packages
 
@@ -89,8 +89,6 @@
  app-misc/jshon                               | 9999                                         |            | http://kmkeen.com/jshon/                                                                | Jshon is a JSON parser designed for maximum convenience within the shell
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/nixnote                             | 2.1.6                                        |            | http://sourceforge.net/projects/nevernote/                                              | Nixnote - A clone of Evernote for Linux
-   dev-qt/qtwebkit                            | 5.212.0_pre20200309-r1                       |  D, RD     | https://www.qt.io/                                                                      | WebKit rendering library for the Qt5 framework (deprecated)
-                                              | 5.212.0_pre20200309-r2                       |            |                                                                                         |
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/rmtrash                             | 1.14                                         |            | https://github.com/PhrozenByte/rmtrash                                                  | trash-put made compatible to GNUs rm and rmdir
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
