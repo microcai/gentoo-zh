@@ -1,0 +1,16 @@
+BDEPEND=|| ( >=dev-lang/python-3.10.0_p1-r1:3.10 >=dev-lang/python-3.9.9-r1:3.9 >=dev-lang/python-3.8.12_p1-r1:3.8 ) || ( dev-lang/ruby:2.6 dev-lang/ruby:2.7 ) virtual/rubygems dev-lang/perl dev-util/gperf >=sys-devel/bison-2.4.3 sys-devel/flex virtual/pkgconfig dev-util/ninja >=dev-util/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare pretend setup test
+DEPEND=dev-db/sqlite:3 dev-libs/icu:= dev-libs/libxml2 dev-libs/libxslt >=dev-qt/qtcore-5.12.3:5 >=dev-qt/qtgui-5.12.3:5 >=dev-qt/qtnetwork-5.12.3:5 >=dev-qt/qtwidgets-5.12.3:5= media-libs/libpng:0= media-libs/woff2 virtual/jpeg:0 geolocation? ( >=dev-qt/qtpositioning-5.12.3:5 ) gstreamer? ( dev-libs/glib:2 media-libs/gstreamer:1.0 media-libs/gst-plugins-bad:1.0 media-libs/gst-plugins-base:1.0 ) hyphen? ( dev-libs/hyphen ) multimedia? ( >=dev-qt/qtmultimedia-5.12.3:5[widgets] ) opengl? ( >=dev-qt/qtgui-5.12.3:5[gles2-only=] >=dev-qt/qtopengl-5.12.3:5[gles2-only=] ) orientation? ( >=dev-qt/qtsensors-5.12.3:5 ) printsupport? ( >=dev-qt/qtprintsupport-5.12.3:5 ) qml? ( >=dev-qt/qtdeclarative-5.12.3:5 >=dev-qt/qtwebchannel-5.12.3:5[qml] ) webp? ( media-libs/libwebp:= ) X? ( x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXrender )
+DESCRIPTION=WebKit rendering library for the Qt5 framework (deprecated)
+EAPI=8
+HOMEPAGE=https://www.qt.io/
+INHERIT=check-reqs cmake flag-o-matic python-any-r1 qmake-utils ruby-single toolchain-funcs
+IUSE=geolocation gles2-only +gstreamer +hyphen +jit multimedia nsplugin opengl orientation +printsupport qml webp X
+KEYWORDS=~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86
+LICENSE=BSD LGPL-2+
+RDEPEND=dev-db/sqlite:3 dev-libs/icu:= dev-libs/libxml2 dev-libs/libxslt >=dev-qt/qtcore-5.12.3:5 >=dev-qt/qtgui-5.12.3:5 >=dev-qt/qtnetwork-5.12.3:5 >=dev-qt/qtwidgets-5.12.3:5= media-libs/libpng:0= media-libs/woff2 virtual/jpeg:0 geolocation? ( >=dev-qt/qtpositioning-5.12.3:5 ) gstreamer? ( dev-libs/glib:2 media-libs/gstreamer:1.0 media-libs/gst-plugins-bad:1.0 media-libs/gst-plugins-base:1.0 ) hyphen? ( dev-libs/hyphen ) multimedia? ( >=dev-qt/qtmultimedia-5.12.3:5[widgets] ) opengl? ( >=dev-qt/qtgui-5.12.3:5[gles2-only=] >=dev-qt/qtopengl-5.12.3:5[gles2-only=] ) orientation? ( >=dev-qt/qtsensors-5.12.3:5 ) printsupport? ( >=dev-qt/qtprintsupport-5.12.3:5 ) qml? ( >=dev-qt/qtdeclarative-5.12.3:5 >=dev-qt/qtwebchannel-5.12.3:5[qml] ) webp? ( media-libs/libwebp:= ) X? ( x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXrender )
+REQUIRED_USE=nsplugin? ( X ) qml? ( opengl ) ?? ( gstreamer multimedia )
+SLOT=5/5.212
+SRC_URI=https://github.com/annulen/webkit/releases/download/qtwebkit-5.212.0-alpha4/qtwebkit-5.212.0-alpha4.tar.xz
+_eclasses_=check-reqs	bfb51de63b0462097e40436214dd43c8	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	cmake	11fee991ab428a3370e5c20fa8231fb6	python-utils-r1	25287947a5a70b86268775aaf87e3467	python-any-r1	13f6d423c5c5bc519a9b552654cc745f	qmake-utils	f5eb2f69fffe94292aaaf802fb21c8d1	ruby-utils	08ae6f9c60b19aabce3f66a30cce9a2d	ruby-single	214d0508e74b80c85efcef39699cb9a2
+_md5_=f4c8e09fc25f604a1c91d8da757699ce
