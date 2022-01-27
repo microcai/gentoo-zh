@@ -11,7 +11,7 @@ SRC_URI="https://ddnet.tw/downloads/${PN}-${PV}-linux_x86_64.tar.xz -> ${PN}.tar
 
 LICENSE="CC-BY-SA-3.0"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
@@ -24,7 +24,7 @@ BASENAME="${P}-linux_x86_64"
 src_install(){
 	insinto "/opt"
 	doins -r "${S}/${BASENAME}"
-	make_desktop_entry "/opt/${BASENAME}/${PN}" ${PN} "/opt/${OPTPATH}/data/gui_logo.png" "Game"
+	make_desktop_entry "/opt/${BASENAME}/${PN}" ${PN} "/opt/${BASENAME}/data/gui_logo.png" "Game"
 	fperms 0755 /opt/${BASENAME}/{DDNet,DDNet-Server,config_retrieve,config_store,dilate,map_convert_07,map_diff,map_extract}
 }
 
