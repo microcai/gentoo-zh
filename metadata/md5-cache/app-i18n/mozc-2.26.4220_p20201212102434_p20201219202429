@@ -1,0 +1,18 @@
+BDEPEND=|| ( ( >=dev-lang/python-3.10.0_p1-r1:3.10 dev-python/six[python_targets_python3_10(-)] ) ( >=dev-lang/python-3.9.9-r1:3.9 dev-python/six[python_targets_python3_9(-)] ) ( >=dev-lang/python-3.8.12_p1-r1:3.8 dev-python/six[python_targets_python3_8(-)] ) ) >=dev-libs/protobuf-3.0.0 dev-util/gyp dev-util/ninja virtual/pkgconfig emacs? ( app-editors/emacs:* ) fcitx4? ( sys-devel/gettext ) fcitx5? ( sys-devel/gettext )
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test unpack
+DEPEND==dev-cpp/abseil-cpp-20200923*[cxx17(+)] >=dev-libs/protobuf-3.0.0:= fcitx4? ( app-i18n/fcitx:4 virtual/libintl ) fcitx5? ( app-i18n/fcitx5:5 app-i18n/libime sys-devel/gettext virtual/libintl ) gui? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 ) ibus? ( >=app-i18n/ibus-1.4.1 dev-libs/glib:2 x11-libs/libxcb ) renderer? ( dev-libs/glib:2 x11-libs/cairo x11-libs/gtk+:2 x11-libs/pango ) test? ( >=dev-cpp/gtest-1.8.0 dev-libs/jsoncpp )
+DESCRIPTION=Mozc - Japanese input method editor
+EAPI=8
+HOMEPAGE=https://github.com/google/mozc
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=elisp-common multiprocessing python-any-r1 toolchain-funcs desktop xdg
+IUSE=debug emacs fcitx4 fcitx5 +gui ibus renderer test
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD BSD-2 ipadic public-domain unicode
+RDEPEND==dev-cpp/abseil-cpp-20200923*[cxx17(+)] >=dev-libs/protobuf-3.0.0:= emacs? ( app-editors/emacs:* ) fcitx4? ( app-i18n/fcitx:4 virtual/libintl ) fcitx5? ( app-i18n/fcitx5:5 app-i18n/libime sys-devel/gettext virtual/libintl ) gui? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 ) ibus? ( >=app-i18n/ibus-1.4.1 dev-libs/glib:2 x11-libs/libxcb ) renderer? ( dev-libs/glib:2 x11-libs/cairo x11-libs/gtk+:2 x11-libs/pango )
+REQUIRED_USE=|| ( emacs fcitx4 fcitx5 ibus )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/google/mozc/archive/9ba59b64d53365c1fe93c1c245b4ec3e35bdadf0.tar.gz -> mozc-2.26.4220-20201212102434.tar.gz https://github.com/hiroyuki-komatsu/japanese-usage-dictionary/archive/a4a66772e33746b91e99caceecced9a28507e925.tar.gz -> japanese-usage-dictionary-20180701040110.tar.gz https://github.com/fcitx/mozc/archive/1ea089debc31ff216473369ad71c08318384ee06.tar.gz -> fcitx-mozc-2.26.4220-20201219202429.tar.gz
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	python-utils-r1	7ee47726753a2bd062a05f6643d849da	python-any-r1	1ff02d11ad6a5e4729b321ce843e0a33	desktop	c0d27bf73aa08ca05b663dbd31fbef28	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	xdg	6024fbc93167fad782e2032933654857
+_md5_=b46ab20f8f975bcbf0d7d55e36064aab
