@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-29 14:08:09 CST)
+(The last generation time: 2022-01-29 19:50:59 CST)
 
 ### Packages
 
@@ -23,7 +23,7 @@
  app-editors/marktext-bin                     | 0.16.3                                       |            | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                           | 0.11.18                                      |            | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
-                                              | 1.0.3                                        |            |                                                                                         |
+                                              | 1.0.4                                        |            |                                                                                         |
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/visual-studio-code-bin           | 1.63.2                                       |            | https://code.visualstudio.com                                                           | Multiplatform Visual Studio Code from Microsoft
 ----------------------------------------------|----------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
