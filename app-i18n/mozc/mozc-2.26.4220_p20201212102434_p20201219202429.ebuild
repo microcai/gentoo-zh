@@ -1,8 +1,8 @@
-# Copyright 2010-2021 Gentoo Authors
+# Copyright 2010-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
-PYTHON_COMPAT=(python{3_7,3_8,3_9})
+EAPI="8"
+PYTHON_COMPAT=( python3_{8..10} )
 
 inherit elisp-common multiprocessing python-any-r1 toolchain-funcs desktop xdg
 
@@ -48,7 +48,7 @@ REQUIRED_USE="|| ( emacs fcitx4 fcitx5 ibus )"
 RESTRICT="!test? ( test )"
 
 BDEPEND="$(python_gen_any_dep 'dev-python/six[${PYTHON_USEDEP}]')
-	<dev-libs/protobuf-3.19
+	>=dev-libs/protobuf-3.0.0
 	dev-util/gyp
 	dev-util/ninja
 	virtual/pkgconfig
@@ -56,7 +56,7 @@ BDEPEND="$(python_gen_any_dep 'dev-python/six[${PYTHON_USEDEP}]')
 	fcitx4? ( sys-devel/gettext )
 	fcitx5? ( sys-devel/gettext )"
 DEPEND="=dev-cpp/abseil-cpp-20200923*[cxx17(+)]
-	<dev-libs/protobuf-3.19:=
+	>=dev-libs/protobuf-3.0.0:=
 	fcitx4? (
 		app-i18n/fcitx:4
 		virtual/libintl
