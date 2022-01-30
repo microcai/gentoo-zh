@@ -128,7 +128,7 @@ games-util/winegame-client-bin 0.5.9.3: An open source gaming platform for GNU/L
 kde-misc/plasma-applet-netspeed-widget 1.8-r1 9999: Plasma 5 widget that displays the currently used network bandwidth.
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/jf-openhuninn 1.1: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
-media-fonts/lxgwwenkai 1.111: An open-source Chinese font derived from Fontworks' Klee One.
+media-fonts/lxgwwenkai 1.113: An open-source Chinese font derived from Fontworks' Klee One.
 media-fonts/nerd-fonts 2.1.0: Nerd Fonts is a project that patches developer targeted fonts with glyphs
 media-fonts/sarasa-gothic 0.35.8-r1: A CJK programming font based on Iosevka and Source Han Sans.
 media-fonts/taipei-sans-tc 1.0: JT Foundry - Taipei Sans TC Beta font
@@ -222,7 +222,7 @@ sys-libs/libcutefish 0.7 9999: System library for Cutefish applications
 sys-libs/libixp 0.5_p20110208-r3: A stand-alone client/server 9P library including ixpc client
 sys-libs/libsolv 0.7.20 9999: Library for solving packages and reading repositories
 sys-libs/libzypp 17.29.1 9999: ZYpp Package Management library
-sys-process/btop 1.1.2: Resources monitor. The C++ version of bashtop
+sys-process/btop 1.2.0: Resources monitor. The C++ version of bashtop
 virtual/dist-kernel 5.15.16: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r8: Virtual for Linux kernel sources
 www-servers/darkhttpd 1.13: A small, static webserver
