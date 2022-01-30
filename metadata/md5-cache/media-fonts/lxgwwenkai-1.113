@@ -10,4 +10,4 @@ LICENSE=OFL-1.1
 SLOT=0
 SRC_URI=https://github.com/lxgw/LxgwWenKai/archive/refs/tags/v1.113.tar.gz -> lxgwwenkai-1.113.tar.gz https://github.com/lxgw/LxgwWenKai/releases/download/v1.113/LXGWWenKai-Bold.ttf https://github.com/lxgw/LxgwWenKai/releases/download/v1.113/LXGWWenKai-Light.ttf https://github.com/lxgw/LxgwWenKai/releases/download/v1.113/LXGWWenKai-Regular.ttf https://github.com/lxgw/LxgwWenKai/releases/download/v1.113/LXGWWenKaiMono-Bold.ttf https://github.com/lxgw/LxgwWenKai/releases/download/v1.113/LXGWWenKaiMono-Light.ttf https://github.com/lxgw/LxgwWenKai/releases/download/v1.113/LXGWWenKaiMono-Regular.ttf
 _eclasses_=font	0667878c2b594871023dd1833d05996f
-_md5_=2b509fce412eaae3bdcaae9c2c446388
+_md5_=1ef8cec7b5043033a0116b34bcac399c
