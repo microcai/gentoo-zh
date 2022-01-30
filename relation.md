@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-30 19:33:24 CST)
+(The last generation time: 2022-01-30 23:29:49 CST)
 
 ### Packages
 
@@ -415,7 +415,7 @@
    sys-libs/libzypp                           | 17.29.1                                   | RD         | https://doc.opensuse.org/projects/libzypp/HEAD/                                         | ZYpp Package Management library
                                               | 9999                                      |            |                                                                                         |
      dev-libs/boost                           | 1.78.0-r2                                 |  D, BD, RD | https://www.boost.org/                                                                  | Boost Libraries for C++
-       dev-libs/libbacktrace                  | 210530                                    |  D, RD     | https://github.com/ianlancetaylor/libbacktrace                                          | A C library for producing symbolic backtraces
+       dev-libs/libbacktrace                  | 220119                                    |  D, RD     | https://github.com/ianlancetaylor/libbacktrace                                          | A C library for producing symbolic backtraces
      sys-libs/libsolv                         | 0.7.20                                    | RD         | https://doc.opensuse.org/projects/libzypp/HEAD/                                         | Library for solving packages and reading repositories
                                               | 9999                                      |            |                                                                                         |
        app-arch/zchunk                        | 1.1.16                                    | RD         | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
