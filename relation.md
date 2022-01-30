@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-30 17:49:15 CST)
+(The last generation time: 2022-01-30 19:18:57 CST)
 
 ### Packages
 
@@ -454,6 +454,7 @@
  virtual/linux-sources                        | 3-r8                                      |            |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/liquorix-sources                | 5.15_p20                                  | RD         | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
                                               | 5.15_p21                                  |            |                                                                                         |
+                                              | 5.15_p22                                  |            |                                                                                         |
      dev-util/pahole                          | 1.23                                      |  D         | https://git.kernel.org/cgit/devel/pahole/pahole.git/                                    | pahole (Poke-a-Hole) and other DWARF2 utilities
    sys-kernel/starfive-sources                | 5.17.0_p1                                 | RD         | https://starfivetech.com                                                                | Linux kernel for StarFive's JH7100 RISC-V SoC
    sys-kernel/xanmod-hybrid                   | 5.15.15                                   | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
