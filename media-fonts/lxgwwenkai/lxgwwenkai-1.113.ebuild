@@ -43,13 +43,11 @@ FONT_S=(
 )
 
 src_unpack() {
-	# extract LxgwWenkai-${PV}/MonoLatin/ only
-	unpack ${P}.tar.gz || die
+	default
+
+	# CJK fonts are not included in the tarball
+	# need to copy them to the ${S} dir for installation
 	for font in "${WENKAI_CJK[@]}"; do
 	  cp "${DISTDIR}/${font}" "${S}"/ || die
 	done
-}
-
-src_install() {
-	font_src_install
 }
