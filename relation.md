@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-01-30 19:18:57 CST)
+(The last generation time: 2022-01-30 19:33:24 CST)
 
 ### Packages
 
@@ -181,7 +181,7 @@
  dev-cpp/date                                 | 3.0.1                                     |            | https://github.com/HowardHinnant/date                                                   | A date and time library based on the C++11/14/17 <chrono> header
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/nameof                               | 0.10.1                                    |            | https://github.com/Neargye/nameof                                                       | Nameof operator for modern C++
-                                              | 0.10.1_p220109                            |            |                                                                                         |
+                                              | 0.10.1_p220125                            |            |                                                                                         |
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/tgbot-cpp                            | 1.3                                       |            | https://github.com/reo7sp/tgbot-cpp                                                     | C++ library for Telegram bot API
                                               | 1.3_p211229                               |            |                                                                                         |
