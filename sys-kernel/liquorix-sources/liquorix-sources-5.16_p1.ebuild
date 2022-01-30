@@ -10,7 +10,7 @@ ETYPE="sources"
 K_EXP_GENPATCHES_NOUSE="1"
 
 # Just get basic genpatches, -xanmod patch set already includes main updates
-K_GENPATCHES_VER="2"
+K_GENPATCHES_VER="1"
 
 # -xanmod-hybrid already sets EXTRAVERSION to kernel Makefile
 K_NOSETEXTRAVERSION="1"
@@ -44,10 +44,10 @@ DESCRIPTION="Liquorix kernel is best one for desktop, multimedia and gaming work
 HOMEPAGE="https://liquorix.net/"
 
 SRC_URI="
-${KERNEL_BASE_URI}/linux-5.15.tar.xz
+${KERNEL_BASE_URI}/linux-5.16.tar.xz
 ${GENPATCHES_URI}
-https://github.com/HougeLangley/customkernel/releases/download/v5.15-patch/v5.15.17-lqx1.patch
-https://github.com/HougeLangley/customkernel/releases/download/v5.15-others/v1-cjktty-5.15.patch
+https://github.com/HougeLangley/customkernel/releases/download/v5.16-patch/v5.16.4-lqx2.patch
+https://github.com/HougeLangley/customkernel/releases/download/v5.16-patch/v1-cjktty-5.16.patch
 "
 KEYWORDS="~amd64"
 
@@ -55,14 +55,14 @@ S="${WORKDIR}/linux-${PVR}-liquorix"
 
 K_EXTRAEINFO="For more info on liquorix-kernel and details on how to report problems, see: ${HOMEPAGE}."
 
-UNIPATCH_LIST="${DISTDIR}/v5.15.17-lqx1.patch"
+UNIPATCH_LIST="${DISTDIR}/v5.16.4-lqx2.patch"
 
-PATCHES="${DISTDIR}/v1-cjktty-5.15.patch"
+PATCHES="${DISTDIR}/v1-cjktty-5.16.patch"
 
 src_prepare() {
 	# Default enable CJKTTY
 	if	use	cjk	;	then
-		eapply "${DISTDIR}/v1-cjktty-5.15.patch"	||	die
+		eapply "${DISTDIR}/v1-cjktty-5.16.patch"	||	die
 	fi
 
 	kernel-2_src_prepare
