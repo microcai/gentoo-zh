@@ -1,12 +1,13 @@
-BDEPEND=sys-libs/fishui media-sound/pulseaudio x11-libs/libXtst sys-auth/polkit-qt x11-drivers/xf86-input-libinput x11-drivers/xf86-input-synaptics x11-misc/appmenu-gtk-module kde-frameworks/extra-cmake-modules dev-util/ninja dev-qt/linguist-tools[qml] dev-qt/assistant dev-qt/designer dev-qt/qdbusviewer sys-devel/make >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=dev-qt/qtcore dev-qt/qtgui dev-qt/qtquickcontrols2 dev-qt/qtdbus dev-qt/qtxml dev-qt/qtx11extras dev-qt/linguist-tools sys-auth/polkit-qt kde-frameworks/kwindowsystem kde-frameworks/kcoreaddons kde-frameworks/kidletime x11-drivers/xf86-input-libinput x11-drivers/xf86-input-synaptics x11-misc/appmenu-gtk-module x11-libs/libXinerama x11-libs/libXcursor dev-util/ninja sys-devel/make >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=sys-libs/fishui media-sound/pulseaudio x11-libs/libXtst sys-auth/polkit-qt x11-drivers/xf86-input-libinput x11-drivers/xf86-input-synaptics x11-misc/appmenu-gtk-module
+DEPEND=dev-qt/qtcore dev-qt/qtgui dev-qt/qtquickcontrols2 dev-qt/qtdbus dev-qt/qtxml dev-qt/qtx11extras dev-qt/linguist-tools sys-auth/polkit-qt kde-frameworks/kwindowsystem kde-frameworks/kcoreaddons kde-frameworks/kidletime x11-drivers/xf86-input-libinput x11-drivers/xf86-input-synaptics x11-misc/appmenu-gtk-module x11-libs/libXinerama x11-libs/libXcursor
 DESCRIPTION=System components and backend of CutefishOS
 EAPI=8
 HOMEPAGE=https://github.com/cutefishos/core
 INHERIT=cmake git-r3
 LICENSE=GPL-3
 PROPERTIES=live
+RDEPEND=sys-libs/fishui
 SLOT=0
 _eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	cmake	11fee991ab428a3370e5c20fa8231fb6	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=069153d99a309519ea20bee856dbd04a
+_md5_=9395950d33a7be7b5d35c00874e21525

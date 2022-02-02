@@ -1,11 +1,11 @@
-BDEPEND=dev-util/ninja dev-util/ninja >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=sys-devel/make >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install prepare test unpack
-DESCRIPTION=System default icon theme of CutefishOS
+DESCRIPTION=CutefishOS GTK Themes
 EAPI=8
-HOMEPAGE=https://github.com/cutefishos/icons
+HOMEPAGE=https://github.com/cutefishos/gtk-themes
 INHERIT=cmake git-r3
 LICENSE=GPL-3
 PROPERTIES=live
 SLOT=0
 _eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	cmake	11fee991ab428a3370e5c20fa8231fb6	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=75e85be06eeb5d23d5717cc3dc5a7a20
+_md5_=3dee0f55830c9ff31c4e88f9a1992dc2

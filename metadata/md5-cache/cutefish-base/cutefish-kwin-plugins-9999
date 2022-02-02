@@ -1,6 +1,6 @@
-BDEPEND=kde-frameworks/kconfig kde-plasma/kdecoration kde-frameworks/kguiaddons kde-frameworks/kcoreaddons kde-frameworks/kconfigwidgets kde-frameworks/kwindowsystem kde-frameworks/kwayland kde-plasma/kwin kde-frameworks/extra-cmake-modules dev-util/ninja dev-qt/linguist-tools[qml] dev-qt/assistant dev-qt/designer dev-qt/qdbusviewer dev-qt/qtopengl dev-util/ninja >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=dev-qt/qtcore dev-qt/qtgui kde-frameworks/kcoreaddons kde-frameworks/kwindowsystem kde-frameworks/kconfig kde-plasma/kdecoration kde-plasma/kwin dev-util/ninja >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=kde-frameworks/kconfig kde-plasma/kdecoration kde-frameworks/kguiaddons kde-frameworks/kcoreaddons kde-frameworks/kconfigwidgets kde-frameworks/kwindowsystem kde-frameworks/kwayland kde-plasma/kwin
+DEPEND=dev-qt/qtcore dev-qt/qtgui kde-frameworks/kcoreaddons kde-frameworks/kwindowsystem kde-frameworks/kconfig kde-plasma/kdecoration kde-plasma/kwin
 DESCRIPTION=CutefishOS KWin Plugins
 EAPI=8
 HOMEPAGE=https://github.com/cutefishos/kwin-plugins
@@ -9,4 +9,4 @@ LICENSE=GPL-3
 PROPERTIES=live
 SLOT=0
 _eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	cmake	11fee991ab428a3370e5c20fa8231fb6	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=5014365ceaca3211c6419bc43dd46106
+_md5_=373b4f9d9e1230d4833484bd49d49d92

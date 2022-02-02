@@ -1,14 +1,14 @@
-BDEPEND=dev-qt/qtcore dev-qt/qtwidgets dev-qt/qtdbus dev-qt/qtx11extras dev-qt/qtconcurrent dev-qt/linguist-tools dev-qt/qtquickcontrols2 kde-frameworks/kwindowsystem sys-devel/make >=dev-util/cmake-3.20.5
+BDEPEND=dev-qt/qtcore dev-qt/qtwidgets dev-qt/qtdbus dev-qt/qtx11extras dev-qt/qtconcurrent dev-qt/linguist-tools dev-qt/qtquickcontrols2 kde-frameworks/kwindowsystem dev-util/ninja sys-devel/make >=dev-util/cmake-3.20.5
 DEFINED_PHASES=compile configure install prepare test
 DEPEND=dev-qt/qtcore dev-qt/qtwidgets dev-qt/qtdbus dev-qt/qtx11extras dev-qt/qtconcurrent dev-qt/linguist-tools dev-qt/qtquickcontrols2 kde-frameworks/kwindowsystem
-DESCRIPTION=Status of the system, such as time, system tray
+DESCRIPTION=CutefishOS application dock
 EAPI=8
-HOMEPAGE=https://github.com/cutefishos/statusbar
+HOMEPAGE=https://github.com/cutefishos/dock
 INHERIT=cmake
 KEYWORDS=~amd64 ~arm64 ~riscv
 LICENSE=GPL-3
 RDEPEND=sys-libs/fishui sys-libs/libcutefish
 SLOT=0
-SRC_URI=https://github.com/cutefishos/statusbar/archive/078a55144ef56166529de6ee4c9091af0bb2818b.tar.gz -> cutefish-statusbar-0.7.tar.gz
+SRC_URI=https://github.com/cutefishos/dock/archive/refs/tags/0.8.tar.gz -> cutefish-dock-0.8.tar.gz
 _eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	cmake	11fee991ab428a3370e5c20fa8231fb6
-_md5_=a5c82f33ee7523294f44dfbf806efd69
+_md5_=14b37ec13a20412406b4b8d78d185042
