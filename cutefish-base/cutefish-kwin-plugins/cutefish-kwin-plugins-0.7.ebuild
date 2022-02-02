@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -24,24 +24,15 @@ SLOT="0"
 IUSE=""
 RDEPEND=""
 DEPEND="
+	dev-qt/qtcore
+	dev-qt/qtgui
+	kde-frameworks/kcoreaddons
+	kde-frameworks/kwindowsystem
 	kde-frameworks/kconfig
 	kde-plasma/kdecoration
-	kde-frameworks/kguiaddons
-	kde-frameworks/kcoreaddons
-	kde-frameworks/kconfigwidgets
-	kde-frameworks/kwindowsystem
-	kde-frameworks/kwayland
 	kde-plasma/kwin
 "
-BDEPEND="${DEPEND}
-	kde-frameworks/extra-cmake-modules
-	dev-util/ninja
-	dev-qt/linguist-tools[qml]
-	dev-qt/assistant
-	dev-qt/designer
-	dev-qt/qdbusviewer
-	dev-qt/qtopengl
-"
+BDEPEND="${DEPEND}"
 
 src_configure(){
 	mycmakeargs=(

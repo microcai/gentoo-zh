@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -12,7 +12,7 @@ if [[ ${PV} == 9999* ]] ; then
 	EGIT_CHECKOUT_DIR=cutefish-statusbar-${PV}
 	KEYWORDS=""
 else
-	EGIT_COMMIT="460f94c00402bc1fab0b13d51ee4b82d108259d2"
+	EGIT_COMMIT="078a55144ef56166529de6ee4c9091af0bb2818b"
 	SRC_URI="https://github.com/cutefishos/statusbar/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm64 ~riscv"
 	S="${WORKDIR}/statusbar-${EGIT_COMMIT}"
@@ -23,21 +23,21 @@ HOMEPAGE="https://github.com/cutefishos/statusbar"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
-RDEPEND=""
-DEPEND="
+RDEPEND="
 	sys-libs/fishui
 	sys-libs/libcutefish
-	dev-libs/libdbusmenu-qt
-	dev-qt/qtsvg
 "
-BDEPEND="${DEPEND}
-	kde-frameworks/extra-cmake-modules
-	dev-util/ninja
-	dev-qt/linguist-tools[qml]
-	dev-qt/assistant
-	dev-qt/designer
-	dev-qt/qdbusviewer
+DEPEND="
+	dev-qt/qtcore
+	dev-qt/qtwidgets
+	dev-qt/qtdbus
+	dev-qt/qtx11extras
+	dev-qt/qtconcurrent
+	dev-qt/linguist-tools
+	dev-qt/qtquickcontrols2
+	kde-frameworks/kwindowsystem
 "
+BDEPEND="${DEPEND}"
 
 src_configure(){
 	mycmakeargs=(

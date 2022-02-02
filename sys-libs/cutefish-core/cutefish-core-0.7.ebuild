@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -12,7 +12,7 @@ if [[ ${PV} == 9999* ]] ; then
 	EGIT_CHECKOUT_DIR=cutefish-core-${PV}
 	KEYWORDS=""
 else
-	EGIT_COMMIT="1f29e396414e90d455faa83407208aaa17760ab3"
+	EGIT_COMMIT="97fc1bdffe1acef83409cc8098bb5648fa659d77"
 	SRC_URI="https://github.com/cutefishos/core/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm64 ~riscv"
 	S="${WORKDIR}/core-${EGIT_COMMIT}"
@@ -23,23 +23,29 @@ HOMEPAGE="https://github.com/cutefishos/core"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
-RDEPEND=""
-DEPEND="
+RDEPEND="
 	sys-libs/fishui
-	media-sound/pulseaudio
-	x11-libs/libXtst
+"
+DEPEND="
+	dev-qt/qtcore
+	dev-qt/qtgui
+	dev-qt/qtquickcontrols2
+	dev-qt/qtdbus
+	dev-qt/qtxml
+	dev-qt/qtx11extras
+	dev-qt/linguist-tools
 	sys-auth/polkit-qt
+	kde-frameworks/kwindowsystem
+	kde-frameworks/kcoreaddons
+	kde-frameworks/kidletime
 	x11-drivers/xf86-input-libinput
 	x11-drivers/xf86-input-synaptics
 	x11-misc/appmenu-gtk-module
+	x11-libs/libXinerama
+	x11-libs/libXcursor
 "
 BDEPEND="${DEPEND}
-	kde-frameworks/extra-cmake-modules
 	dev-util/ninja
-	dev-qt/linguist-tools[qml]
-	dev-qt/assistant
-	dev-qt/designer
-	dev-qt/qdbusviewer
 "
 
 src_configure(){

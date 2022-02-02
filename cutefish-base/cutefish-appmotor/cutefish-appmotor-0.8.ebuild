@@ -5,36 +5,31 @@ EAPI=8
 
 CMAKE_MAKEFILE_GENERATOR="emake"
 inherit cmake
-
 if [[ ${PV} == 9999* ]] ; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/cutefishos/dock.git"
-	EGIT_CHECKOUT_DIR=cutefish-dock-${PV}
+	EGIT_REPO_URI="https://github.com/cutefishos/appmotor.git"
+	EGIT_CHECKOUT_DIR=cutefish-appmotor-${PV}
 	KEYWORDS=""
 else
-	SRC_URI="https://github.com/cutefishos/dock/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+	EGIT_COMMIT="c332dbac831ba3050513bd340ec25ab84f781750"
+	SRC_URI="https://github.com/cutefishos/appmotor/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm64 ~riscv"
-	S="${WORKDIR}/dock-${PV}"
+	S="${WORKDIR}/appmotor-${EGIT_COMMIT}"
 fi
 
-DESCRIPTION="CutefishOS application dock"
-HOMEPAGE="https://github.com/cutefishos/dock"
+DESCRIPTION="Optimize the speed of starting cutefish apps"
+HOMEPAGE="https://github.com/cutefishos/appmotor"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
-RDEPEND="
-	sys-libs/fishui
-	sys-libs/libcutefish
-"
+RDEPEND=""
 DEPEND="
+	kde-frameworks/extra-cmake-modules
+	dev-libs/glib
 	dev-qt/qtcore
 	dev-qt/qtwidgets
-	dev-qt/qtdbus
-	dev-qt/qtx11extras
-	dev-qt/qtconcurrent
-	dev-qt/linguist-tools
+	dev-qt/qtdeclarative
 	dev-qt/qtquickcontrols2
-	kde-frameworks/kwindowsystem
 "
 BDEPEND="${DEPEND}
 	dev-util/ninja

@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -10,24 +10,28 @@ SRC_URI=""
 LICENSE="metapackage"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
-IUSE="+base +terminal +extra"
+IUSE="+base +terminal +extra +themes +sddm +cjk"
 
 RDEPEND="
-		>=sys-libs/cutefish-core-${PV}:${SLOT}
-		>=cutefish-base/cutefish-kwin-plugins-${PV}:${SLOT}
-		>=cutefish-base/cutefish-icons-${PV}:${SLOT}
-		>=cutefish-base/cutefish-filemanager-${PV}:${SLOT}
-		>=cutefish-base/cutefish-calculator-${PV}:${SLOT}
-		>=cutefish-base/cutefish-launcher-${PV}:${SLOT}
-		>=cutefish-base/cutefish-qt-plugins-${PV}:${SLOT}
-		>=cutefish-base/cutefish-settings-${PV}:${SLOT}
-		>=cutefish-base/cutefish-statusbar-${PV}:${SLOT}
-		>=cutefish-base/cutefish-dock-${PV}:${SLOT}
-		>=cutefish-base/cutefish-wallpapers-${PV}:${SLOT}
-		>=cutefish-base/cutefish-screenlocker-${PV}:${SLOT}
-		>=cutefish-base/cutefish-screenshot-${PV}:${SLOT}
-		>=cutefish-base/cutefish-videoplayer-${PV}:${SLOT}
+		<=sys-libs/cutefish-core-0.8:${SLOT}
+		<=cutefish-base/cutefish-kwin-plugins-0.8:${SLOT}
+		<=cutefish-base/cutefish-icons-0.8:${SLOT}
+		<=cutefish-base/cutefish-filemanager-0.8:${SLOT}
+		<=cutefish-base/cutefish-calculator-0.8:${SLOT}
+		<=cutefish-base/cutefish-launcher-0.8:${SLOT}
+		<=cutefish-base/cutefish-qt-plugins-0.8:${SLOT}
+		<=cutefish-base/cutefish-settings-0.8:${SLOT}
+		<=cutefish-base/cutefish-statusbar-0.8:${SLOT}
+		<=cutefish-base/cutefish-dock-0.8:${SLOT}
+		<=cutefish-base/cutefish-wallpapers-0.8:${SLOT}
+		<=cutefish-base/cutefish-screenlocker-0.8:${SLOT}
+		<=cutefish-base/cutefish-screenshot-0.8:${SLOT}
+		<=cutefish-base/cutefish-videoplayer-0.8:${SLOT}
 		x11-misc/sddm
-		terminal?	(	>=cutefish-base/cutefish-terminal-${PV}:${SLOT}	)
-		extra?	(	>=cutefish-base/cutefish-texteditor-${PV}:${SLOT}	)
+		x11-misc/xdg-user-dirs
+		terminal?	(	<=cutefish-base/cutefish-terminal-0.8:${SLOT}	)
+		extra?	(	<=cutefish-base/cutefish-texteditor-0.8:${SLOT}	)
+		themes?	(	<=cutefish-base/cutefish-gtk-themes-0.8:${SLOT}	)
+		sddm?	(	<=cutefish-base/cutefish-sddm-theme-0.8:${SLOT}	)
+		cjk?	(	media-fonts/noto[cjk]	)
 "
