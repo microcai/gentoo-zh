@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -11,7 +11,7 @@ if [[ ${PV} == 9999* ]] ; then
 	EGIT_CHECKOUT_DIR=${PN}-${PV}
 	KEYWORDS=""
 else
-	EGIT_COMMIT="1d37a00d0aba69076f179c6dcdfd2f17e55b9516"
+	EGIT_COMMIT="11697565e149c37f67c4707f07a996528cb10e3f"
 	SRC_URI="https://github.com/cutefishos/fishui/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm64 ~riscv"
 	S="${WORKDIR}/${PN}-${EGIT_COMMIT}"
@@ -24,16 +24,13 @@ SLOT="0"
 IUSE=""
 RDEPEND=""
 DEPEND="
-	kde-frameworks/kwindowsystem
-	dev-qt/qtquickcontrols2[widgets]
+	dev-qt/qtcore
+	dev-qt/qtwidgets
+	dev-qt/qtquickcontrols2
+	dev-qt/qtdbus
 "
 BDEPEND="${DEPEND}
-	kde-frameworks/extra-cmake-modules
 	dev-util/ninja
-	dev-qt/linguist-tools[qml]
-	dev-qt/assistant
-	dev-qt/designer
-	dev-qt/qdbusviewer
 "
 
 src_configure(){

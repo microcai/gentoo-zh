@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -24,18 +24,17 @@ SLOT="0"
 IUSE=""
 RDEPEND=""
 DEPEND="
-	kde-frameworks/kwindowsystem
-	dev-libs/libdbusmenu-qt
+	dev-qt/qtcore
+	dev-qt/qtwidgets
+	dev-qt/qtquickcontrols2
+	dev-qt/qtdbus
+	dev-qt/qtx11extras
 	dev-libs/libqtxdg
-	dev-qt/qtquickcontrols2[widgets]
+	dev-libs/libdbusmenu-qt
+	kde-frameworks/kwindowsystem
 "
 BDEPEND="${DEPEND}
-	kde-frameworks/extra-cmake-modules
 	dev-util/ninja
-	dev-qt/linguist-tools[qml]
-	dev-qt/assistant
-	dev-qt/designer
-	dev-qt/qdbusviewer
 "
 
 src_configure(){

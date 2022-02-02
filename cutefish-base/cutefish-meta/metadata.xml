@@ -9,5 +9,8 @@
 		<flag name="base">Install Base CutefishOS</flag>
 		<flag name="terminal">Install CutefishOS Terminal Emulator</flag>
 		<flag name="extra">Install CutefishOS extra applicaions developed by CutefishOS ( Not Stable )</flag>
+		<flag name="themes">Install CutefishOS GTK Themes</flag>
+		<flag name="sddm">Install CutefishOS SDDM Themes</flag>
+		<flag name="cjk">Install Noto CJK By Default</flag>
 	</use>
 </pkgmetadata>
