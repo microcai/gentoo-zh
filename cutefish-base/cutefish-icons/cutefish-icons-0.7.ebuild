@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -11,7 +11,7 @@ if [[ ${PV} == 9999* ]] ; then
 	EGIT_CHECKOUT_DIR=cutefish-icons-${PV}
 	KEYWORDS=""
 else
-	EGIT_COMMIT="119feb59404f329eb2f1ebe14d63f3d53f8bd96c"
+	EGIT_COMMIT="aa0422ffbd201ee7da3670b27eccc11b6c799d62"
 	SRC_URI="https://github.com/cutefishos/icons/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm64 ~riscv"
 	S="${WORKDIR}/icons-${EGIT_COMMIT}"
@@ -25,7 +25,6 @@ IUSE=""
 RDEPEND=""
 DEPEND=""
 BDEPEND="${DEPEND}
-	kde-frameworks/extra-cmake-modules
 	dev-util/ninja
 "
 

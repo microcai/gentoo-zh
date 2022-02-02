@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -12,7 +12,7 @@ if [[ ${PV} == 9999* ]] ; then
 	EGIT_CHECKOUT_DIR=cutefish-settings-${PV}
 	KEYWORDS=""
 else
-	EGIT_COMMIT="abbaa8c7f0c5b267cd6d0478d6ebab97819e0078"
+	EGIT_COMMIT="a9584b3233d7a35c24e85bb25e41d6cc6026af0a"
 	SRC_URI="https://github.com/cutefishos/settings/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm64 ~riscv"
 	S="${WORKDIR}/settings-${EGIT_COMMIT}"
@@ -23,24 +23,27 @@ HOMEPAGE="https://github.com/cutefishos/settings"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
-RDEPEND=""
-DEPEND="
+RDEPEND="
 	sys-libs/fishui
 	sys-libs/libcutefish
-	media-libs/fontconfig
-	media-libs/freetype
+"
+DEPEND="
+	dev-qt/qtcore
+	dev-qt/qtgui
+	dev-qt/qtquickcontrols2
+	dev-qt/qtx11extras
+	dev-qt/qtdbus
+	dev-qt/qtxml
+	dev-qt/qtconcurrent
+	dev-qt/linguist-tools
 	dev-libs/icu
-	kde-frameworks/kcoreaddons
-	kde-frameworks/modemmanager-qt
+	x11-libs/libXi
+	x11-libs/libXcursor
 	kde-frameworks/networkmanager-qt
+	kde-frameworks/modemmanager-qt
 "
 BDEPEND="${DEPEND}
-	kde-frameworks/extra-cmake-modules
 	dev-util/ninja
-	dev-qt/linguist-tools[qml]
-	dev-qt/assistant
-	dev-qt/designer
-	dev-qt/qdbusviewer
 "
 
 src_configure(){

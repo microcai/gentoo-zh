@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -12,7 +12,7 @@ if [[ ${PV} == 9999* ]] ; then
 	EGIT_CHECKOUT_DIR=cutefish-dock-${PV}
 	KEYWORDS=""
 else
-	EGIT_COMMIT="ecd8ce48b635e14349fdf1bfa3afcd64510249eb"
+	EGIT_COMMIT="eec8dd984be3ddddae1a674580bafbf0998df7e4"
 	SRC_URI="https://github.com/cutefishos/dock/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm64 ~riscv"
 	S="${WORKDIR}/dock-${EGIT_COMMIT}"
@@ -23,19 +23,22 @@ HOMEPAGE="https://github.com/cutefishos/dock"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
-RDEPEND=""
-DEPEND="
+RDEPEND="
 	sys-libs/fishui
 	sys-libs/libcutefish
-	dev-qt/qtsvg
+"
+DEPEND="
+	dev-qt/qtcore
+	dev-qt/qtwidgets
+	dev-qt/qtdbus
+	dev-qt/qtx11extras
+	dev-qt/qtconcurrent
+	dev-qt/linguist-tools
+	dev-qt/qtquickcontrols2
+	kde-frameworks/kwindowsystem
 "
 BDEPEND="${DEPEND}
-	kde-frameworks/extra-cmake-modules
 	dev-util/ninja
-	dev-qt/linguist-tools[qml]
-	dev-qt/assistant
-	dev-qt/designer
-	dev-qt/qdbusviewer
 "
 
 src_configure(){
