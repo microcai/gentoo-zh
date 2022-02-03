@@ -22,8 +22,10 @@ else
 fi
 
 IUSE="gnome indicator"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
+	${PYTHON_DEPS}
 	x11-libs/libnotify
 	dev-libs/dbus-glib
 	dev-python/chardet[${PYTHON_USEDEP}]
