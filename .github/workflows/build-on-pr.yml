@@ -1,0 +1,37 @@
+name: build-on-pr
+
+on:
+  pull_request_target:
+    branches:
+      - master
+    paths-ignore:
+      - '.github/**'
+      - 'metadata/**'
+    types: [opened, reopened, synchronize]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: pull request
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        repository: ${{ github.event.pull_request.head.repo.full_name }}
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: packages
+      id: packages
+      run: |
+        packages=$(   git diff --diff-filter="ACMR" --name-only ${{ github.event.pull_request.base.sha }} \
+                    | grep -E '.*\/.*\/.*\.ebuild$' \
+                    | xargs -I{} dirname {} | sort | uniq | tr '\n' ' ' )
+        echo "::set-output name=packages::$packages"
+        echo "emerge $packages"
+
+    - name: docker
+      uses: liangyongxiang/emerge-action@v0.1
+      with:
+        packages: "${{ steps.packages.outputs.packages }}"
