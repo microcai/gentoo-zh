@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-02-03 21:58:10 CST)
+(The last generation time: 2022-02-04 14:31:59 CST)
 
 ### Packages
 
@@ -290,7 +290,7 @@
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-plugins/gimp-gap                       | 2.8.0                                     |            | http://www.gimp.org/                                                                    | Gimp Animation Package
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-plugins/osdlyrics                      | 0.5.10                                    |            | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
+ media-plugins/osdlyrics                      | 0.5.10-r1                                 |            | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
                                               | 9999                                      |            |                                                                                         |
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/feeluown                         | 3.8.1                                     |            | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
