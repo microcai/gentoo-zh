@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/Distrotech/${PN}/archive/${PV}.tar.gz"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="static-libs"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
@@ -27,11 +27,11 @@ src_configure() {
 }
 
 src_install() {
-	dolib.a libdwarf.a || die
-	dolib.so libdwarf.so || die
+	use static-libs && dolib.a libdwarf.a
+	dolib.so libdwarf.so
 
 	insinto /usr/include
-	doins libdwarf.h || die
+	doins libdwarf.h
 
-	dodoc NEWS README CHANGES || die
+	dodoc NEWS README CHANGES
 }
