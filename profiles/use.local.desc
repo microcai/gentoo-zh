@@ -48,6 +48,7 @@ app-i18n/zh-autoconvert:static-libs - Build static versions of dynamic libraries
 app-misc/gpick:gtk3 - use GTK3 instead of GTK2
 app-text/ydcv-rs:clipboard - Enable feature: use selected text as input
 app-text/ydcv-rs:notify - Enable feature: display explanations via desktop notification
+cutefish-base/cutefish-meta:appmotor - Depend libsystemd, If you using openRC, Please disable it
 cutefish-base/cutefish-meta:base - Install Base CutefishOS
 cutefish-base/cutefish-meta:cjk - Install Noto CJK By Default
 cutefish-base/cutefish-meta:extra - Install CutefishOS extra applicaions developed by CutefishOS ( Not Stable )
