@@ -10,11 +10,10 @@ SRC_URI=""
 LICENSE="metapackage"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
-IUSE="+base +terminal +extra +themes +sddm +cjk"
+IUSE="+base +appmotor +terminal +extra +themes +sddm +cjk"
 
 RDEPEND="
 		>=sys-libs/cutefish-core-0.8:${SLOT}
-		>=cutefish-base/cutefish-appmotor-0.8:${SLOT}
 		>=cutefish-base/cutefish-kwin-plugins-0.8:${SLOT}
 		>=cutefish-base/cutefish-icons-0.8:${SLOT}
 		>=cutefish-base/cutefish-filemanager-0.8:${SLOT}
@@ -30,6 +29,7 @@ RDEPEND="
 		>=cutefish-base/cutefish-videoplayer-0.7:${SLOT}
 		x11-misc/sddm
 		x11-misc/xdg-user-dirs
+		appmotor?	(	>=cutefish-base/cutefish-appmotor-0.8:${SLOT}	)
 		terminal?	(	>=cutefish-base/cutefish-terminal-0.8:${SLOT}	)
 		extra?	(	>=cutefish-base/cutefish-texteditor-0.8:${SLOT}	)
 		themes?	(	>=cutefish-base/cutefish-gtk-themes-0.7:${SLOT}	)
