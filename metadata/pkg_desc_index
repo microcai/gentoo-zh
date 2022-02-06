@@ -214,7 +214,7 @@ sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbin
 sys-kernel/liquorix-sources 5.16_p1 5.16_p2: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 31: Modular initramfs image creation utility
 sys-kernel/starfive-sources 5.17.0_p1: Linux kernel for StarFive's JH7100 RISC-V SoC
-sys-kernel/xanmod-hybrid 5.15.15 5.15.16 5.15.17 5.15.19: Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
+sys-kernel/xanmod-hybrid 5.15.15 5.15.16 5.15.17 5.15.19 5.15.21: Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
 sys-kernel/xanmod-lts 5.15.16-r1: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 5.15.12 5.15.14: Xanmod-RT, cjktty, uksm patchset for main kernel tree
 sys-kernel/zenpower 0.1.12-r1: Linux kernel driver for reading sensors of AMD Zen family CPUs
