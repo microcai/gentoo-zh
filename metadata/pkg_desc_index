@@ -173,7 +173,7 @@ net-misc/avsocks 9999: 科学操长城软件
 net-misc/baidunetdisk 4.3.0: Baidu Net Disk is a cloud storage client (Linux Version)
 net-misc/baidupcs-go 3.6.2 9999: The terminal utility for Baidu Network Disk (Golang Version).
 net-misc/networkmanager-l2tp 9999: NetworkManager L2TP plugin
-net-misc/nomachine-enterprise-client 7.7.4.1: NoMachine Enterprise Client
+net-misc/nomachine-enterprise-client 7.6.2.4 7.7.4.1 7.8.2.1: NoMachine Enterprise Client
 net-misc/pcmanx-gtk2 1.3 9999: PCMan is a gtk+ based free BBS client
 net-misc/postman-bin 9.6.1: Supercharge your API workflow
 net-misc/prips 1.0.0: print the IP addresses in a range
