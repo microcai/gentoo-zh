@@ -79,7 +79,7 @@ src_install(){
 	fperms +x "/opt/${PN}/resources/app/out/vs/base/node/cpuUsage.sh"
 	fperms +x "/opt/${PN}/resources/app/out/vs/base/node/ps.sh"
 	fperms +x "/opt/${PN}/resources/app/out/vs/base/node/terminateProcess.sh"
-	fperms +x "/opt/${PN}/resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg"
+	fperms +x "/opt/${PN}/resources/app/node_modules.asar.unpacked/@vscode/ripgrep/bin/rg"
 	dodoc "resources/app/LICENSE.rtf"
 
 	insinto "/usr/share/mime/packages"
