@@ -433,6 +433,13 @@ src_compile() {
 	cd "${WORKDIR}/v2rayA-${PV}/gui"
 	OUTPUT_DIR="${WORKDIR}/v2rayA-${PV}/service/server/router/web" yarn build || die
 
+	for file in $(find "${WORKDIR}/v2rayA-${PV}/service/server/router/web" |grep -v png |grep -v index.html|grep -v .gz)
+	do
+		if [ ! -d $file ]; then
+			gzip -9 $file
+		fi
+	done
+
 	cd "${WORKDIR}/v2rayA-${PV}/service"
 	CGO_ENABLED=0 go build -ldflags "-X github.com/v2rayA/v2rayA/conf.Version='${MY_PV}' -s -w" -o v2raya || die
 }
