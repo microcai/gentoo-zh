@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+<maintainer type="project">
+ <email>toolchain@gentoo.org</email>
+ <name>Gentoo Toolchain Project</name>
+</maintainer>
 <maintainer type="person">
  <email>lujianhua000@gmail.com</email>
  <name>lujianhua</name>
@@ -15,7 +19,6 @@
  <flag name="multilib-bootstrap">Provide prebuilt libgcc.a and crt files if missing. Only needed for ABI switch.</flag>
  <flag name="nscd">Build, and enable support for, the Name Service Cache Daemon</flag>
  <flag name="ssp">protect stack of glibc internals</flag>
- <flag name="static-pie">Enable static PIE support (runtime files for -static-pie gcc option).</flag>
  <flag name="suid">Make internal pt_chown helper setuid -- not needed if using Linux and have /dev/pts mounted with gid=5</flag>
  <flag name="systemtap">enable systemtap static probe points</flag>
 </use>
