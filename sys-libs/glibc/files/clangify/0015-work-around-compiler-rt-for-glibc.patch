@@ -17,7 +17,7 @@ index 3fa2f13003..ee9f5f8763 100644
  gnulib-arch =
 -gnulib = -lgcc $(gnulib-arch)
 +#gnulib = -lgcc $(gnulib-arch)
-+arch = $(shell arch)
++arch = $(shell $(CC) -dumpmachine | awk -F '-' '{print $$1}')
 +gnulib = `$(CC) -print-libgcc-file-name` $(gnulib-arch)
  gnulib-tests := -lgcc $(libgcc_eh)
  static-gnulib-arch =
