@@ -1,0 +1,16 @@
+BDEPEND=!build? ( sys-apps/sed )
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
+DEPEND=app-arch/cpio sys-devel/bc sys-apps/kmod dev-libs/elfutils dev-util/pahole
+DESCRIPTION=Liquorix kernel is best one for desktop, multimedia and gaming workloads
+EAPI=8
+HOMEPAGE=https://liquorix.net/
+INHERIT=kernel-2
+IUSE=+cjk symlink build
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-devel/flex sys-devel/make >=sys-libs/ncurses-5.2 virtual/libelf virtual/pkgconfig )
+RESTRICT=binchecks strip
+SLOT=5.16_p5
+SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.16.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.16-1.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.16-1.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.16-1.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.16-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.16-1.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.16-1.extras.tar.xz https://github.com/HougeLangley/customkernel/releases/download/v5.16-patch/v5.16.8-lqx1.patch https://github.com/HougeLangley/customkernel/releases/download/v5.16-patch/v1-cjktty-5.16.patch
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	kernel-2	0504e914bab621103eb74f52fad0fc6d
+_md5_=6a31d2b1064b0884d945ce54bcb6f2b4
