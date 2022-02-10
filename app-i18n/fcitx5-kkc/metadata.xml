@@ -5,9 +5,6 @@
 		<email>2073201758GD@gmail.com</email>
 		<name>liuyujielol</name>
 	</maintainer>
-	<longdescription lang="en">
-		Japanese Kana Kanji conversion engine for Fcitx5
-	</longdescription>
 	<use>
 		<flag name="qt">Enable Qt for GUI configuration</flag>
 	</use>
