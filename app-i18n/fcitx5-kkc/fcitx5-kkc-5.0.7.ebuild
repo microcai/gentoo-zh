@@ -7,7 +7,7 @@ inherit xdg cmake
 
 DESCRIPTION="Japanese Kana Kanji conversion engine for Fcitx5"
 HOMEPAGE="https://github.com/fcitx/fcitx5-kkc"
-SRC_URI="https://github.com/fcitx/fcitx5-kkc/archive/refs/tags/5.0.6.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/fcitx/fcitx5-kkc/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="5"
@@ -16,20 +16,20 @@ IUSE="+qt"
 
 DEPEND="
 	app-i18n/fcitx5
+	app-i18n/libkkc
+	kde-frameworks/extra-cmake-modules
 	qt? (
 		app-i18n/fcitx5-qt
-		kde-frameworks/extra-cmake-modules
 		dev-qt/qtcore
 		dev-qt/qtgui
 		dev-qt/qtwidgets
 	)
-	app-i18n/libkkc
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
-	virtual/pkgconfig
-	dev-libs/libgee:0.8
 	dev-libs/json-glib[introspection]
+	dev-libs/libgee:0.8
+	virtual/pkgconfig
 "
 
 src_configure() {
