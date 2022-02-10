@@ -20,9 +20,6 @@ DEPEND="
 	kde-frameworks/extra-cmake-modules
 	qt? (
 		app-i18n/fcitx5-qt
-		dev-qt/qtcore
-		dev-qt/qtgui
-		dev-qt/qtwidgets
 	)
 "
 RDEPEND="${DEPEND}"
