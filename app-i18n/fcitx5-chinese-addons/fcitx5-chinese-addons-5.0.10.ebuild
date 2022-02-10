@@ -32,8 +32,6 @@ RDEPEND="app-i18n/fcitx5
 	opencc? ( app-i18n/opencc:= )
 	gui? (
 		dev-qt/qtcore:5
-		dev-qt/qtdbus:5
-		dev-qt/qtconcurrent:5
 		app-i18n/fcitx5-qt[qt5,-only_plugin]
 		browser? (
 			dev-qt/qtwebengine:5
