@@ -1,6 +1,6 @@
 BDEPEND=dev-libs/json-glib[introspection] dev-libs/libgee:0.8 virtual/pkgconfig dev-util/ninja >=dev-util/cmake-3.20.5
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
-DEPEND=app-i18n/fcitx5 app-i18n/libkkc kde-frameworks/extra-cmake-modules qt? ( app-i18n/fcitx5-qt dev-qt/qtcore dev-qt/qtgui dev-qt/qtwidgets )
+DEPEND=app-i18n/fcitx5 app-i18n/libkkc kde-frameworks/extra-cmake-modules qt? ( app-i18n/fcitx5-qt )
 DESCRIPTION=Japanese Kana Kanji conversion engine for Fcitx5
 EAPI=8
 HOMEPAGE=https://github.com/fcitx/fcitx5-kkc
@@ -9,8 +9,8 @@ INHERIT=xdg cmake
 IUSE=+qt
 KEYWORDS=~amd64
 LICENSE=GPL-3+
-RDEPEND=app-i18n/fcitx5 app-i18n/libkkc kde-frameworks/extra-cmake-modules qt? ( app-i18n/fcitx5-qt dev-qt/qtcore dev-qt/qtgui dev-qt/qtwidgets )
+RDEPEND=app-i18n/fcitx5 app-i18n/libkkc kde-frameworks/extra-cmake-modules qt? ( app-i18n/fcitx5-qt )
 SLOT=5
 SRC_URI=https://github.com/fcitx/fcitx5-kkc/archive/refs/tags/5.0.7.tar.gz -> fcitx5-kkc-5.0.7.tar.gz
 _eclasses_=xdg-utils	4f29a8b760a594a212abe9c2ba957c31	xdg	6024fbc93167fad782e2032933654857	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	cmake	11fee991ab428a3370e5c20fa8231fb6
-_md5_=c9fee3fd1212a5fbb5d01695d33679af
+_md5_=51f4aa5759d6c2ea5e6e92eeaf12d242
