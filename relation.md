@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-02-11 07:27:50 CST)
+(The last generation time: 2022-02-12 13:53:31 CST)
 
 ### Packages
 
@@ -398,9 +398,7 @@
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/smartproxy                         | 0.9.4                                     |            | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/v2rayA                             | 1.5.5                                     |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
-                                              | 1.5.6.2                                   |            |                                                                                         |
-                                              | 9999                                      |            |                                                                                         |
+ net-proxy/v2rayA                             | 1.5.6.2                                   |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
    net-proxy/Xray                             | 1.4.3                                     | RD         | https://github.com/XTLS/Xray-core                                                       | Xray, Penetrates Everything.
                                               | 1.4.4                                     |            |                                                                                         |
                                               | 1.4.5                                     |            |                                                                                         |
