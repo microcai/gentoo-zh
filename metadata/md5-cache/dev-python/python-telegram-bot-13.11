@@ -12,6 +12,6 @@ RDEPEND=dev-python/certifi[python_targets_python3_8(-)?,python_targets_python3_9
 REQUIRED_USE=|| ( python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 )
 RESTRICT=test mirror !test? ( test )
 SLOT=0
-SRC_URI=https://github.com/python-telegram-bot/python-telegram-bot/archive/v13.10.tar.gz -> python-telegram-bot-13.10.tar.gz
+SRC_URI=https://github.com/python-telegram-bot/python-telegram-bot/archive/v13.11.tar.gz -> python-telegram-bot-13.11.tar.gz
 _eclasses_=multibuild	d79bd5b4bc4edcb1f5bc19591f8d4714	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	python-utils-r1	ce976d20176213d68719e1a760f6e9fe	python-r1	bcd408f1e4a9669198ef4dfcd5ab8696	distutils-r1	5560689d3cb005ec97659ff697b42684
 _md5_=819fc4e5ea93f1956d8b6bc3d873f07b
