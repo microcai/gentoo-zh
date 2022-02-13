@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-02-13 21:44:11 CST)
+(The last generation time: 2022-02-13 23:03:41 CST)
 
 ### Packages
 
@@ -190,6 +190,7 @@
  dev-cpp/cppcoro                              | 210605                                    |            | https://github.com/Garcia6l20/cppcoro                                                   | A library of C++ coroutine abstractions for the coroutines TS
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/date                                 | 3.0.1                                     |            | https://github.com/HowardHinnant/date                                                   | A date and time library based on the C++11/14/17 <chrono> header
+                                              | 3.0.1_p220127                             |            |                                                                                         |
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/nameof                               | 0.10.1                                    |            | https://github.com/Neargye/nameof                                                       | Nameof operator for modern C++
                                               | 0.10.1_p220125                            |            |                                                                                         |
