@@ -1,0 +1,28 @@
+From da2122c834728104b7fd6c4dac6417350694a0c5 Mon Sep 17 00:00:00 2001
+From: lujianhua <lujianhua000@gmail.com>
+Date: Thu, 10 Feb 2022 15:01:47 +0800
+Subject: [PATCH] i386/e_atanhf: asseble tfloat
+
+---
+ sysdeps/i386/fpu/e_atanhf.S | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/sysdeps/i386/fpu/e_atanhf.S b/sysdeps/i386/fpu/e_atanhf.S
+index 146196e..789f838 100644
+--- a/sysdeps/i386/fpu/e_atanhf.S
++++ b/sysdeps/i386/fpu/e_atanhf.S
+@@ -34,7 +34,11 @@ limit:	.double 0.29
+ 	ASM_SIZE_DIRECTIVE(limit)
+ 	.align ALIGNARG(4)
+ 	.type ln2_2,@object
++#ifdef __clang__
++ln2_2:	.byte 0xac, 0x79, 0xcf, 0xd1, 0xf7, 0x17, 0x72, 0xb1, 0xfd, 0x3f
++#else
+ ln2_2:	.tfloat 0.3465735902799726547086160
++#endif
+ 	ASM_SIZE_DIRECTIVE(ln2_2)
+ 
+ DEFINE_FLT_MIN
+-- 
+2.34.1
+

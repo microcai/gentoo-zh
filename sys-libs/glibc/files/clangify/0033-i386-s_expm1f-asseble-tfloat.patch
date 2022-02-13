@@ -1,0 +1,28 @@
+From d8f5ae6adde4ba610f0c6a6ee583b76d84d152fb Mon Sep 17 00:00:00 2001
+From: lujianhua <lujianhua000@gmail.com>
+Date: Thu, 10 Feb 2022 15:08:26 +0800
+Subject: [PATCH] i386/s_expm1f: asseble tfloat
+
+---
+ sysdeps/i386/fpu/s_expm1f.S | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/sysdeps/i386/fpu/s_expm1f.S b/sysdeps/i386/fpu/s_expm1f.S
+index 04c37bd..358ed1b 100644
+--- a/sysdeps/i386/fpu/s_expm1f.S
++++ b/sysdeps/i386/fpu/s_expm1f.S
+@@ -33,7 +33,11 @@ minus1:	.double -1.0
+ one:	.double 1.0
+ 	ASM_SIZE_DIRECTIVE(one)
+ 	.type l2e,@object
++#ifdef __clang__
++l2e:	.byte 0xbc, 0xf0, 0x17, 0x5c, 0x29, 0x3b, 0xaa, 0xb8, 0xff, 0x3f
++#else
+ l2e:	.tfloat 1.442695040888963407359924681002
++#endif
+ 	ASM_SIZE_DIRECTIVE(l2e)
+ 
+ DEFINE_FLT_MIN
+-- 
+2.34.1
+
