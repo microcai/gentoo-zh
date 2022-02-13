@@ -1,0 +1,46 @@
+From c91f6b0d1fb1c4284b34fc35bf27cd3686ce1ca2 Mon Sep 17 00:00:00 2001
+From: lujianhua <lujianhua000@gmail.com>
+Date: Thu, 10 Feb 2022 10:54:15 +0800
+Subject: [PATCH] i386/wsclen-sse2: replace cmp to cmpl
+
+---
+ sysdeps/i386/i686/multiarch/wcslen-sse2.S | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/sysdeps/i386/i686/multiarch/wcslen-sse2.S b/sysdeps/i386/i686/multiarch/wcslen-sse2.S
+index 5337286..d49a7ce 100644
+--- a/sysdeps/i386/i686/multiarch/wcslen-sse2.S
++++ b/sysdeps/i386/i686/multiarch/wcslen-sse2.S
+@@ -24,21 +24,21 @@
+ ENTRY (__wcslen_sse2)
+ 	mov	STR(%esp), %edx
+ 
+-	cmp	$0, (%edx)
++	cmpl	$0, (%edx)
+ 	jz	L(exit_tail0)
+-	cmp	$0, 4(%edx)
++	cmpl	$0, 4(%edx)
+ 	jz	L(exit_tail1)
+-	cmp	$0, 8(%edx)
++	cmpl	$0, 8(%edx)
+ 	jz	L(exit_tail2)
+-	cmp	$0, 12(%edx)
++	cmpl	$0, 12(%edx)
+ 	jz	L(exit_tail3)
+-	cmp	$0, 16(%edx)
++	cmpl	$0, 16(%edx)
+ 	jz	L(exit_tail4)
+-	cmp	$0, 20(%edx)
++	cmpl	$0, 20(%edx)
+ 	jz	L(exit_tail5)
+-	cmp	$0, 24(%edx)
++	cmpl	$0, 24(%edx)
+ 	jz	L(exit_tail6)
+-	cmp	$0, 28(%edx)
++	cmpl	$0, 28(%edx)
+ 	jz	L(exit_tail7)
+ 
+ 	pxor	%xmm0, %xmm0
+-- 
+2.34.1
+

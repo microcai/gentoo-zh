@@ -1,0 +1,28 @@
+From 7be23c0c20df0a83f06049f990bc19cd6bd7277e Mon Sep 17 00:00:00 2001
+From: lujianhua <lujianhua000@gmail.com>
+Date: Thu, 10 Feb 2022 11:16:33 +0800
+Subject: [PATCH] i386/e_atanhl: assemble tfloat
+
+---
+ sysdeps/i386/fpu/e_atanhl.S | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/sysdeps/i386/fpu/e_atanhl.S b/sysdeps/i386/fpu/e_atanhl.S
+index 1f6eb7c..8f93dcf 100644
+--- a/sysdeps/i386/fpu/e_atanhl.S
++++ b/sysdeps/i386/fpu/e_atanhl.S
+@@ -39,7 +39,11 @@ limit:	.double 0.29
+ 	ASM_SIZE_DIRECTIVE(limit)
+ 	.align ALIGNARG(4)
+ 	.type ln2_2,@object
++#ifdef __clang__
++ln2_2:	.byte 0xac, 0x79, 0xcf, 0xd1, 0xf7, 0x17, 0x72, 0xb1, 0xfd, 0x3f
++#else
+ ln2_2:	.tfloat 0.3465735902799726547086160
++#endif
+ 	ASM_SIZE_DIRECTIVE(ln2_2)
+ 
+ #ifdef PIC
+-- 
+2.34.1
+

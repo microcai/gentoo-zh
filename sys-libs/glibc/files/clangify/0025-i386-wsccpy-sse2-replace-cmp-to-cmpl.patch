@@ -1,0 +1,46 @@
+From 00ab90576d78a1b7ad1d5922e1e62595491bc675 Mon Sep 17 00:00:00 2001
+From: lujianhua <lujianhua000@gmail.com>
+Date: Thu, 10 Feb 2022 11:00:59 +0800
+Subject: [PATCH] i386/wsccpy-sse2: replace cmp to cmpl
+
+---
+ sysdeps/i386/i686/multiarch/wcscpy-ssse3.S | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/sysdeps/i386/i686/multiarch/wcscpy-ssse3.S b/sysdeps/i386/i686/multiarch/wcscpy-ssse3.S
+index 601e0f0..c2de882 100644
+--- a/sysdeps/i386/i686/multiarch/wcscpy-ssse3.S
++++ b/sysdeps/i386/i686/multiarch/wcscpy-ssse3.S
+@@ -41,13 +41,13 @@ ENTRY (__wcscpy_ssse3)
+ 	mov	STR1(%esp), %edx
+ 	mov	STR2(%esp), %ecx
+ 
+-	cmp	$0, (%ecx)
++	cmpl	$0, (%ecx)
+ 	jz	L(ExitTail4)
+-	cmp	$0, 4(%ecx)
++	cmpl	$0, 4(%ecx)
+ 	jz	L(ExitTail8)
+-	cmp	$0, 8(%ecx)
++	cmpl	$0, 8(%ecx)
+ 	jz	L(ExitTail12)
+-	cmp	$0, 12(%ecx)
++	cmpl	$0, 12(%ecx)
+ 	jz	L(ExitTail16)
+ 
+ 	PUSH	(%edi)
+@@ -79,9 +79,9 @@ ENTRY (__wcscpy_ssse3)
+ 	mov	$0, %esi
+ 
+ 	jz	L(Align16Both)
+-	cmp	$4, %eax
++	cmpl	$4, %eax
+ 	je	L(Shl4)
+-	cmp	$8, %eax
++	cmpl	$8, %eax
+ 	je	L(Shl8)
+ 	jmp	L(Shl12)
+ 
+-- 
+2.34.1
+
