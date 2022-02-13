@@ -1,0 +1,37 @@
+From 9a6813b95124a136a19cf6b6d95b05c000f6ce93 Mon Sep 17 00:00:00 2001
+From: lujianhua <lujianhua000@gmail.com>
+Date: Thu, 10 Feb 2022 01:16:06 +0800
+Subject: [PATCH] i386: remove -Wa,-mtune=i686
+
+---
+ sysdeps/i386/i686/Makefile | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/sysdeps/i386/i686/Makefile b/sysdeps/i386/i686/Makefile
+index 3110427..94bdf56 100644
+--- a/sysdeps/i386/i686/Makefile
++++ b/sysdeps/i386/i686/Makefile
+@@ -1,12 +1,12 @@
+ # So that we can test __m128's alignment
+ stack-align-test-flags += -msse
+ 
+-CFLAGS-.o += -Wa,-mtune=i686
+-CFLAGS-.os += -Wa,-mtune=i686
+-CFLAGS-.op += -Wa,-mtune=i686
+-CFLAGS-.oS += -Wa,-mtune=i686
++#CFLAGS-.o += -Wa,-mtune=i686
++#CFLAGS-.os += -Wa,-mtune=i686
++#CFLAGS-.op += -Wa,-mtune=i686
++#CFLAGS-.oS += -Wa,-mtune=i686
+ 
+-ASFLAGS-.o += -Wa,-mtune=i686
+-ASFLAGS-.os += -Wa,-mtune=i686
+-ASFLAGS-.op += -Wa,-mtune=i686
+-ASFLAGS-.oS += -Wa,-mtune=i686
++#ASFLAGS-.o += -Wa,-mtune=i686
++#ASFLAGS-.os += -Wa,-mtune=i686
++#ASFLAGS-.op += -Wa,-mtune=i686
++#ASFLAGS-.oS += -Wa,-mtune=i686
+-- 
+2.34.1
+

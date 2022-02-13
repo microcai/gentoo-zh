@@ -1,0 +1,120 @@
+From 3b318404023ea7042f3ba007312cbc7606d6c8ab Mon Sep 17 00:00:00 2001
+From: lujianhua <lujianhua000@gmail.com>
+Date: Thu, 10 Feb 2022 14:25:24 +0800
+Subject: [PATCH] i386/s_cbrtl: asseble tfloat
+
+---
+ sysdeps/i386/fpu/s_cbrtl.S | 52 ++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 52 insertions(+)
+
+diff --git a/sysdeps/i386/fpu/s_cbrtl.S b/sysdeps/i386/fpu/s_cbrtl.S
+index 8802164..e02f0a2 100644
+--- a/sysdeps/i386/fpu/s_cbrtl.S
++++ b/sysdeps/i386/fpu/s_cbrtl.S
+@@ -23,35 +23,67 @@
+ 
+         .align ALIGNARG(4)
+         .type f8,@object
++#ifdef __clang__
++f8:	.byte 0x39, 0x28, 0x54, 0x3a, 0xd8, 0xf3, 0x7e, 0xa5, 0xfc, 0x3f
++#else
+ f8:	.tfloat 0.161617097923756032
++#endif
+ 	ASM_SIZE_DIRECTIVE(f8)
+         .align ALIGNARG(4)
+         .type f7,@object
++#ifdef __clang__
++f7:	.byte 0x14, 0x90, 0x02, 0x20, 0x78, 0xda, 0x11, 0xfd, 0xfe, 0xbf, 0xad, 0xb4, 0xe3, 0xad
++#else
+ f7:	.tfloat -0.988553671195413709
++#endif
+ 	ASM_SIZE_DIRECTIVE(f7)
+         .align ALIGNARG(4)
+         .type f6,@object
++#ifdef __clang__
++f6:	.byte 0xad, 0xb4, 0xe3, 0xad, 0xfc, 0x93, 0xca, 0xa9, 0x00, 0x40, 0x34, 0x1c
++#else
+ f6:	.tfloat 2.65298938441952296
++#endif
+ 	ASM_SIZE_DIRECTIVE(f6)
+         .align ALIGNARG(4)
+         .type f5,@object
++#ifdef __clang__
++f5:	.byte 0x34, 0x1c, 0x93, 0x2c, 0x56, 0x86, 0x91, 0x83, 0x01, 0xc0, 0x94
++#else
+ f5:	.tfloat -4.11151425200350531
++#endif
+ 	ASM_SIZE_DIRECTIVE(f5)
+         .align ALIGNARG(4)
+         .type f4,@object
++#ifdef __clang__
++f4:	.byte 0x94, 0x45, 0x30, 0xee, 0xc9, 0x25, 0x0f, 0x83, 0x01, 0x40
++#else
+ f4:	.tfloat 4.09559907378707839
++#endif
+ 	ASM_SIZE_DIRECTIVE(f4)
+         .align ALIGNARG(4)
+         .type f3,@object
++#ifdef __clang__
++f3:	.byte 0xc6, 0xf0, 0xa2, 0x5f, 0x1d, 0xdd, 0xbe, 0xb4, 0x00, 0xc0, 0xe3
++#else
+ f3:	.tfloat -2.82414939754975962
++#endif
+ 	ASM_SIZE_DIRECTIVE(f3)
+         .align ALIGNARG(4)
+         .type f2,@object
++#ifdef __clang__
++f2:	.byte 0xe3, 0x86, 0x85, 0xb0, 0x63, 0xa1, 0x85, 0xd6, 0xff, 0x3f
++#else
+ f2:	.tfloat 1.67595307700780102
++#endif
+ 	ASM_SIZE_DIRECTIVE(f2)
+         .align ALIGNARG(4)
+         .type f1,@object
++#ifdef __clang__
++f1:	.byte 0x45, 0x3b, 0xec, 0xd4, 0x3e, 0x07, 0x16, 0xad, 0xfd, 0x3f
++#else
+ f1:	.tfloat 0.338058687610520237
++#endif
+ 	ASM_SIZE_DIRECTIVE(f1)
+ 
+ #define CBRT2		1.2599210498948731648
+@@ -63,15 +95,35 @@ f1:	.tfloat 0.338058687610520237
+ 	   wide to avoid having to implement a multiplication by 10.  */
+ 	.type factor,@object
+         .align ALIGNARG(4)
++#ifdef __clang__
++factor: .byte 0x11, 0x57, 0x94, 0x6b, 0xcc, 0x17, 0x45, 0xa1, 0xfe, 0x3f, 0x15, 0xe4
++#else
+ factor:	.tfloat ONE_SQR_CBRT2
++#endif
+ 	.byte 0, 0, 0, 0, 0, 0
++#ifdef __clang__
++	.byte 0x15, 0xe4, 0x71, 0xeb, 0x29, 0xf5, 0x2f, 0xcb, 0xfe, 0x3f
++#else
+ 	.tfloat ONE_CBRT2
++#endif
+ 	.byte 0, 0, 0, 0, 0, 0
++#ifdef __clang__
++	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0xff, 0x3f, 0x11, 0x57
++#else
+ 	.tfloat 1.0
++#endif
+ 	.byte 0, 0, 0, 0, 0, 0
++#ifdef __clang__
++	.byte 0x11, 0x57, 0x94, 0x6b, 0xcc, 0x17, 0x45, 0xa1, 0xff, 0x3f, 0x16, 0xe4
++#else
+ 	.tfloat CBRT2
++#endif
+ 	.byte 0, 0, 0, 0, 0, 0
++#ifdef __clang__
++	.byte 0x16, 0xe4, 0x71, 0xeb, 0x29, 0xf5, 0x2f, 0xcb, 0xff, 0x3f
++#else
+ 	.tfloat SQR_CBRT2
++#endif
+ 	ASM_SIZE_DIRECTIVE(factor)
+ 
+         .type two64,@object
+-- 
+2.34.1
+
