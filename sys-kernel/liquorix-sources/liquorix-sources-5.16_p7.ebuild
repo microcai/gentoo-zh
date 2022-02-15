@@ -40,7 +40,7 @@ HOMEPAGE="https://liquorix.net/"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-5.16.tar.xz
 	${GENPATCHES_URI}
-	https://github.com/zen-kernel/zen-kernel/releases/download/v5.16.8-lqx2/v5.16.8-lqx2.patch.xz
+	https://github.com/zen-kernel/zen-kernel/releases/download/v5.16.9-lqx1/v5.16.9-lqx1.patch.xz
 	https://github.com/zhmars/cjktty-patches/raw/master/v5.x/cjktty-5.16.patch"
 
 KEYWORDS="~amd64"
@@ -49,7 +49,7 @@ S="${WORKDIR}/linux-${PVR}-liquorix"
 
 K_EXTRAEINFO="For more info on liquorix-kernel and details on how to report problems, see: ${HOMEPAGE}."
 
-UNIPATCH_LIST="${DISTDIR}/v5.16.8-lqx2.patch.xz"
+UNIPATCH_LIST="${DISTDIR}/v5.16.9-lqx1.patch.xz"
 
 PATCHES="${DISTDIR}/cjktty-5.16.patch"
 
