@@ -7,5 +7,7 @@
 	<use>
 		<flag name="xanmod">Enable Default Xanmod Patches.</flag>
 		<flag name="cacule">Enable Default Xanmod-CaCule Patches.</flag>
+		<flag name="tt">Enable Default Xanmod Patches with TT CPU Scheduler.</flag>
+		<flag name="cjktty">Eanble cjktty patches.</flag>
 	</use>
 </pkgmetadata>
