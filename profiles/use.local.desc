@@ -31,3 +31,5 @@ net-proxy/make-proxy:client - Add make proxy client support
 net-proxy/make-proxy:server - Add make proxy server support
 sys-devel/gdb:multitarget - Support all known targets in one gdb binary
 sys-kernel/hardened-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
+sys-kernel/xanmod-hybrid:tt - Enable Default Xanmod Patches with TT CPU Scheduler.
+sys-kernel/xanmod-hybrid:cjktty - Eanble cjktty patches.
