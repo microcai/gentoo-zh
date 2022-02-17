@@ -27,8 +27,6 @@ IUSE="+cjk"
 
 DEPEND="
 	app-arch/cpio
-	sys-devel/bc
-	dev-libs/elfutils
 	dev-util/pahole"
 
 inherit kernel-2
@@ -49,17 +47,13 @@ S="${WORKDIR}/linux-${PVR}-liquorix"
 
 K_EXTRAEINFO="For more info on liquorix-kernel and details on how to report problems, see: ${HOMEPAGE}."
 
-UNIPATCH_LIST="${DISTDIR}/v5.16.9-lqx1.patch.xz"
-
-PATCHES="${DISTDIR}/cjktty-5.16.patch"
-
-src_prepare() {
-	# Default enable CJKTTY
+src_unpack() {
+	UNIPATCH_LIST="${DISTDIR}/v5.16.9-lqx1.patch.xz"
 	if use cjk; then
-		eapply "${DISTDIR}/cjktty-5.16.patch" || die
+		UNIPATCH_LIST+="${DISTDIR}/cjktty-5.16.patch"
 	fi
 
-	kernel-2_src_prepare
+	kernel-2_src_unpack
 }
 
 pkg_setup() {
@@ -71,10 +65,4 @@ pkg_setup() {
 	ewarn ""
 
 	kernel-2_pkg_setup
-}
-
-pkg_postinst() {
-	elog "MICROCODES"
-	elog "Use Liquorix-Kernel with microcodes"
-	elog "Read https://wiki.gentoo.org/wiki/Intel_microcode"
 }

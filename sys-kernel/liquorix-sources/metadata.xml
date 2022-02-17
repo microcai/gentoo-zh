@@ -4,6 +4,10 @@
 	<upstream>
 		<remote-id type="github">damentz/liquorix-package</remote-id>
 	</upstream>
+	<maintainer type="person">
+		<email>raymond@zozx.top</email>
+		<name>Raymond Kwok</name>
+	</maintainer>
 	<use>
 		<flag name="cjk">Enable cjktty Patches.</flag>
 	</use>
