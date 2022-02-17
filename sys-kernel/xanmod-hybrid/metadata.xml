@@ -4,6 +4,10 @@
 	<upstream>
 		<remote-id type="github">xanmod/linux</remote-id>
 	</upstream>
+	<maintainer type="person">
+		<email>account_not_exist@server_unavailable.com</email>
+		<name>Capricornus</name>
+	</maintainer>
 	<use>
 		<flag name="xanmod">Enable Default Xanmod Patches.</flag>
 		<flag name="tt">Enable Default Xanmod Patches with TT CPU Scheduler.</flag>
