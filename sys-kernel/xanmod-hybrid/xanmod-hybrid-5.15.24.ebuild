@@ -11,7 +11,7 @@ inherit kernel-2
 detect_version
 
 DESCRIPTION="Full XanMod sources with TT CPU Scheduler and CJKTTY options and including the Gentoo patchset."
-HOMEPAGE="https://xanmod.org 
+HOMEPAGE="https://xanmod.org
 		https://github.com/zhmars/cjktty-patches"
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
@@ -45,9 +45,8 @@ src_unpack() {
 		UNIPATCH_LIST+=" ${DISTDIR}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch"
 	fi
 
-	kernel-2_src_unpack	
+	kernel-2_src_unpack
 }
-
 
 src_prepare() {
 	kernel-2_src_prepare
