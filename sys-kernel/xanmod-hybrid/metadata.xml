@@ -2,11 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<upstream>
-		<remote-id type="github">HougeLangley/customkernel</remote-id>
+		<remote-id type="github">xanmod/linux</remote-id>
 	</upstream>
 	<use>
 		<flag name="xanmod">Enable Default Xanmod Patches.</flag>
-		<flag name="cacule">Enable Default Xanmod-CaCule Patches.</flag>
 		<flag name="tt">Enable Default Xanmod Patches with TT CPU Scheduler.</flag>
 		<flag name="cjktty">Eanble cjktty patches.</flag>
 	</use>
