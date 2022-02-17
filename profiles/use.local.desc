@@ -140,7 +140,36 @@ net-p2p/n2n:openssl - Use openssl support
 net-p2p/qbittorrent-enhanced:webui - Enable the Web UI
 net-proxy/make-proxy:client - Add make proxy client support
 net-proxy/make-proxy:server - Add make proxy server support
-sys-devel/gdb:multitarget - Support all known targets in one gdb binary
-sys-kernel/hardened-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
-sys-kernel/xanmod-hybrid:tt - Enable Default Xanmod Patches with TT CPU Scheduler.
+net-proxy/smartproxy:system-boost - use system supplied boost
+net-proxy/v2ray:tool - Build the additional tool: v2ctl
+net-proxy/v2rayA:v2ray - Use net-proxy/v2ray as default
+net-proxy/v2rayA:xray - To be able to use net-proxy/Xray. Disable the v2ray useflag to use xray as default
+sys-apps/pacman:doc - Install extended documentation using app-doc/doxygen. (Man pages are included by default.)
+sys-apps/pacman:gpg - Enable GPG signature verification using app-crypt/gpgme
+sys-kernel/liquorix-sources:cjk - Enable cjktty Patches.
+sys-kernel/xanmod-hybrid:cacule - Enable Default Xanmod-CaCule Patches.
 sys-kernel/xanmod-hybrid:cjktty - Eanble cjktty patches.
+sys-kernel/xanmod-hybrid:tt - Enable Default Xanmod Patches with TT CPU Scheduler.
+sys-kernel/xanmod-hybrid:xanmod - Enable Default Xanmod Patches.
+sys-kernel/xanmod-lts:clang - Use clang compiler instead of GCC
+sys-kernel/xanmod-lts:initramfs - Build initramfs along with the kernel.
+sys-libs/glibc:cet - Enable Intel Control-flow Enforcement Technology (needs binutils 2.29 and gcc 8)
+sys-libs/glibc:clone3 - Enable the new clone3 syscall within glibc. Can be disabled to allow compatibility with older Electron applications.
+sys-libs/glibc:compile-locales - build *all* locales in src_install; this is generally meant for stage building only as it ignores /etc/locale.gen file and can be pretty slow
+sys-libs/glibc:crypt - build and install libcrypt and crypt.h
+sys-libs/glibc:gd - build memusage and memusagestat tools
+sys-libs/glibc:multiarch - enable optimizations for multiple CPU architectures (detected at runtime)
+sys-libs/glibc:multilib-bootstrap - Provide prebuilt libgcc.a and crt files if missing. Only needed for ABI switch.
+sys-libs/glibc:nscd - Build, and enable support for, the Name Service Cache Daemon
+sys-libs/glibc:ssp - protect stack of glibc internals
+sys-libs/glibc:suid - Make internal pt_chown helper setuid -- not needed if using Linux and have /dev/pts mounted with gid=5
+sys-libs/glibc:systemtap - enable systemtap static probe points
+virtual/linux-sources:firmware - Install linux kernel firmware
+www-servers/woof:bzip2 - bzip2 decompression of the archive from woof
+www-servers/woof:gzip - gzip decompression of the archive from woof
+www-servers/woof:unzip - ZIP decompression of the archive from woof
+x11-libs/xcb-imdkit:system-uthash - Use the system-wide dev-libs/uthash instead of bundled.
+x11-misc/picom-jonaburg:config-file - Enable config file support
+x11-misc/picom-jonaburg:doc - Build documentation and man pages (requires app-text/asciidoc)
+x11-misc/picom-jonaburg:drm - Enable support for using drm for vsync
+x11-misc/picom-jonaburg:opengl - Enable features that require opengl (opengl backend, and opengl vsync methods)
