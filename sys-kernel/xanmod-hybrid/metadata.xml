@@ -4,6 +4,10 @@
 	<upstream>
 		<remote-id type="github">HougeLangley/customkernel</remote-id>
 	</upstream>
+	<maintainer type="person">
+		<email>account_not_exist@server_unavailable.com</email>
+		<name>Capricornus</name>
+	</maintainer>
 	<use>
 		<flag name="xanmod">Enable Default Xanmod Patches.</flag>
 		<flag name="cacule">Enable Default Xanmod-CaCule Patches.</flag>
