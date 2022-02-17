@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-02-17 16:07:01 CST)
+(The last generation time: 2022-02-17 18:42:59 CST)
 
 ### Packages
 
@@ -471,13 +471,7 @@
                                               | 5.16_p7                                   |            |                                                                                         |
      dev-util/pahole                          | 1.23                                      |  D         | https://git.kernel.org/cgit/devel/pahole/pahole.git/                                    | pahole (Poke-a-Hole) and other DWARF2 utilities
    sys-kernel/starfive-sources                | 5.17.0_p1                                 | RD         | https://starfivetech.com                                                                | Linux kernel for StarFive's JH7100 RISC-V SoC
-   sys-kernel/xanmod-hybrid                   | 5.15.15                                   | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod, Xanmod-CaCule, cjktty, patchset for main kernel tree
-                                              | 5.15.16                                   |            |                                                                                         |
-                                              | 5.15.17                                   |            |                                                                                         |
-                                              | 5.15.19                                   |            |                                                                                         |
-                                              | 5.15.21                                   |            |                                                                                         |
-                                              | 5.15.22                                   |            |                                                                                         |
-                                              | 5.15.24                                   |            |                                                                                         |
+   sys-kernel/xanmod-hybrid                   | 5.15.24                                   | RD         | https://xanmod.org                                                                      | Full XanMod sources with TT CPU Scheduler and CJKTTY options and including the Gentoo patchset.
    sys-kernel/xanmod-lts                      | 5.15.19                                   | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
    sys-kernel/xanmod-rt                       | 5.15.12                                   | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod-RT, cjktty, uksm patchset for main kernel tree
                                               | 5.15.14                                   |            |                                                                                         |
