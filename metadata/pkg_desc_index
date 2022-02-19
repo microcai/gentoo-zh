@@ -109,9 +109,11 @@ dev-python/fuo-qqmusic 0.3.3: qq music support for feeluown
 dev-python/imgviz 1.3.0: mage Visualization Tools
 dev-python/janus 1.0.0-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/labelme 4.6.0: Image Polygonal Annotation with Python
+dev-python/nvchecker 2.7: nvchecker is for checking if a new version of some software has been released
 dev-python/pycosat 0.6.3: Python bindings to picosat (a SAT solver)
 dev-python/python-telegram-bot 13.11: Python wrapper of telegram bots API
 dev-python/qasync 0.22.0: Implementation of the asyncio (PEP 3156) event-loop with Qt
+dev-python/structlog 21.5.0: Structured Logging for Python
 dev-python/tomlkit 0.8.0: Style-preserving TOML library for Python
 dev-qt/assistant 5.15.2-r11: Tool for viewing on-line documentation in Qt help file format
 dev-qt/qdbusviewer 5.15.2-r10: Graphical tool that lets you introspect D-Bus objects and messages

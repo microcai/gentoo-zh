@@ -1,0 +1,16 @@
+BDEPEND=test? ( dev-python/pretend[python_targets_python3_9(-)?,python_targets_python3_10(-)?] dev-python/freezegun[python_targets_python3_9(-)?,python_targets_python3_10(-)?] ) test? ( >=dev-python/pytest-6.2.5-r2[python_targets_python3_9(-)?,python_targets_python3_10(-)?] ) python_targets_python3_9? ( >=dev-lang/python-3.9.9-r1:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.0_p1-r1:3.10 ) >=dev-python/installer-0.4.0_p20220124[python_targets_python3_9(-)?,python_targets_python3_10(-)?] >=dev-python/tomli-1.2.3[python_targets_python3_9(-)?,python_targets_python3_10(-)?] dev-python/flit_core[python_targets_python3_9(-)?,python_targets_python3_10(-)?]
+DEFINED_PHASES=compile configure install prepare test
+DESCRIPTION=Structured Logging for Python
+EAPI=8
+HOMEPAGE=http://www.structlog.org/en/stable/
+INHERIT=distutils-r1
+IUSE=test python_targets_python3_9 python_targets_python3_10
+KEYWORDS=~amd64
+LICENSE=Apache-2.0 MIT
+RDEPEND=python_targets_python3_9? ( >=dev-lang/python-3.9.9-r1:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.0_p1-r1:3.10 )
+REQUIRED_USE=|| ( python_targets_python3_9 python_targets_python3_10 )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/hynek/structlog/archive/21.5.0.tar.gz -> structlog-21.5.0.tar.gz
+_eclasses_=multibuild	d79bd5b4bc4edcb1f5bc19591f8d4714	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	python-utils-r1	d3d7da5aff94a677154819e0cb95ee36	python-r1	bcd408f1e4a9669198ef4dfcd5ab8696	distutils-r1	aa61c3eb77ddf72c59f1346547510d74
+_md5_=ae905cc284f98941565d90db3c128c05
