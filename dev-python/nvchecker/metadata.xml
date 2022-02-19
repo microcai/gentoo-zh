@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>liang yongxiang</name>
+		<email>tanekliang@gmail.com</email>
+	</maintainer>
+	<upstream>
+		<remote-id type="pypi">nvchecker</remote-id>
+		<remote-id type="github">lilydjwg/nvchecker</remote-id>
+	</upstream>
+	<use>
+		<flag name='ini'>convert your old configuration files from ini to toml</flag>
+		<flag name='notify'>enable nvchecker-notify support</flag>
+	</use>
+</pkgmetadata>
