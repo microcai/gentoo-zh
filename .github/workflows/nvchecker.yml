@@ -1,0 +1,53 @@
+name: nvchecker
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    # UTC 09:00 -> CST (China) 17:00, see https://datetime360.com/cn/utc-cst-china-time/
+    - cron: '0 09 * * *'
+
+jobs:
+  nvchecker:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+
+    - name: get configuraction file
+      id: configfile
+      run: |
+        configfile="$(cat .github/workflows/overlay.toml)"
+        echo "::set-output name=context::$configfile"
+
+    - name: nvchecker in gentoo
+      id: gentoo
+      uses: liangyongxiang/gentoo-nvchecker@master
+      with:
+        configfile: "${{ steps.configfile.outputs.context }}"
+        github_token: "${{ secrets.GITHUB_TOKEN }}"
+
+    outputs:
+      matrix: ${{ steps.gentoo.outputs.bumps }}
+
+  issues:
+    needs: nvchecker
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        package: ${{fromJSON(needs.nvchecker.outputs.matrix)}}
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+    - name: echo
+      run: |
+        echo -e "---\ntitle: \"[nvchecker] ${{ matrix.package.name }} can be bump to ${{ matrix.package.newver }}, current is ${{ matrix.package.oldver }}\"\n---" > .github/ISSUE_TEMPLATE.md
+        cat .github/ISSUE_TEMPLATE.md
+    - uses: dblock/create-a-github-issue@v3
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        update_existing: true
+        search_existing: all
