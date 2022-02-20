@@ -1,0 +1,59 @@
+[__config__]
+oldver = "old_ver.json"
+newver = "new_ver.json"
+
+[fcitx5]
+source = "github"
+github = "fcitx/fcitx5"
+use_latest_tag = true
+
+[fcitx5-chinese-addons]
+source = "github"
+github = "fcitx/fcitx5-chinese-addons"
+use_latest_tag = true
+
+[fcitx5-configtool]
+source = "github"
+github = "fcitx/fcitx5-configtool"
+use_latest_tag = true
+
+[fcitx5-gtk]
+source = "github"
+github = "fcitx/fcitx5-gtk"
+use_latest_tag = true
+
+[fcitx5-hangul]
+source = "github"
+github = "fcitx/fcitx5-hangul"
+use_latest_tag = true
+
+[fcitx5-kkc]
+source = "github"
+github = "fcitx/fcitx5-kkc"
+use_latest_tag = true
+
+[fcitx5-qt]
+source = "github"
+github = "fcitx/fcitx5-qt"
+use_latest_tag = true
+
+[fcitx5-rime]
+source = "github"
+github = "fcitx/fcitx5-rime"
+use_latest_tag = true
+
+[fcitx5-skk]
+source = "github"
+github = "fcitx/fcitx5-skk"
+use_latest_tag = true
+
+[fcitx5-table-extra]
+source = "github"
+github = "fcitx/fcitx5-table-extra"
+use_latest_tag = true
+
+[fcitx5-table-other]
+source = "github"
+github = "fcitx/fcitx5-table-other"
+use_latest_tag = true
+
