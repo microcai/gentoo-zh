@@ -36,10 +36,10 @@ DESCRIPTION="Liquorix kernel is best one for desktop, multimedia and gaming work
 HOMEPAGE="https://liquorix.net/"
 
 SRC_URI="
-	${KERNEL_BASE_URI}/linux-5.16.tar.xz
+	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
 	${GENPATCHES_URI}
-	https://github.com/zen-kernel/zen-kernel/releases/download/v5.16.9-lqx1/v5.16.9-lqx1.patch.xz
-	https://github.com/zhmars/cjktty-patches/raw/master/v5.x/cjktty-5.16.patch"
+	https://github.com/zen-kernel/zen-kernel/releases/download/v${PV}-lqx1/v${PV}-lqx1.patch.xz
+	https://github.com/zhmars/cjktty-patches/raw/master/v${KV_MAJOR}.x/cjktty-${KV_MAJOR}.${KV_MINOR}.patch"
 
 KEYWORDS="~amd64"
 
@@ -48,21 +48,11 @@ S="${WORKDIR}/linux-${PVR}-liquorix"
 K_EXTRAEINFO="For more info on liquorix-kernel and details on how to report problems, see: ${HOMEPAGE}."
 
 src_unpack() {
-	UNIPATCH_LIST="${DISTDIR}/v5.16.9-lqx1.patch.xz"
+	UNIPATCH_LIST_DEFAULT="${DISTDIR}/v${PV}-lqx1.patch.xz"
+	UNIPATCH_LIST=""
 	if use cjk; then
-		UNIPATCH_LIST+="${DISTDIR}/cjktty-5.16.patch"
+		UNIPATCH_LIST+="${DISTDIR}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch"
 	fi
 
 	kernel-2_src_unpack
-}
-
-pkg_setup() {
-	ewarn ""
-	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
-	ewarn "If you need support, please contact the ${HOMEPAGE} directly."
-	ewarn "Do *not* open bugs in Gentoo's bugzilla unless you have issues with"
-	ewarn "the ebuilds. Thank you."
-	ewarn ""
-
-	kernel-2_pkg_setup
 }
