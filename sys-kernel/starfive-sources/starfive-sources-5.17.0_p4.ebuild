@@ -16,7 +16,7 @@ DEPEND="
 
 inherit kernel-2
 detect_version
-SRC_URI="https://github.com/HougeLangley/customkernel/releases/download/starfive-kernel/linux-5.17.0-rc1-starfive1.tar.xz -> linux-5.17.tar.xz"
+SRC_URI="https://github.com/HougeLangley/customkernel/releases/download/starfive-kernel/linux-5.17.0-rc4-starfive.tar.xz -> linux-5.17.tar.xz"
 KEYWORDS="~riscv"
 DESCRIPTION="Linux kernel for StarFive's JH7100 RISC-V SoC"
 HOMEPAGE="https://starfivetech.com"
