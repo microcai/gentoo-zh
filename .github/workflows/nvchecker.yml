@@ -34,6 +34,7 @@ jobs:
 
   issues:
     needs: nvchecker
+    if: needs.nvchecker.outputs.matrix != ''
     runs-on: ubuntu-latest
     strategy:
       matrix:
