@@ -213,7 +213,7 @@ sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/liquorix-sources 5.16.9 5.16.10: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 31: Modular initramfs image creation utility
-sys-kernel/starfive-sources 5.17.0_p1: Linux kernel for StarFive's JH7100 RISC-V SoC
+sys-kernel/starfive-sources 5.17.0_p4: Linux kernel for StarFive's JH7100 RISC-V SoC
 sys-kernel/xanmod-hybrid 5.15.24: Full XanMod sources with TT CPU Scheduler and CJKTTY options and including the Gentoo patchset.
 sys-kernel/xanmod-lts 5.15.19: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 5.15.12 5.15.14: Xanmod-RT, cjktty, uksm patchset for main kernel tree
