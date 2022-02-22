@@ -8,7 +8,6 @@ inherit cmake
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-qt.git"
-	KEYWORDS=""
 else
 	SRC_URI="https://github.com/fcitx/fcitx5-qt/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
@@ -19,7 +18,7 @@ HOMEPAGE="https://github.com/fcitx/fcitx5-qt"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-IUSE="qt5 only_plugin"
+IUSE="qt5 onlyplugin"
 
 RDEPEND="app-i18n/fcitx5
 	dev-qt/qtcore:5
@@ -39,7 +38,7 @@ src_configure() {
 		-DCMAKE_BUILD_TYPE=Release
 		-DENABLE_QT4=no
 		-DENABLE_QT5=$(usex qt5)
-		-DBUILD_ONLY_PLUGIN=$(usex only_plugin)
+		-DBUILD_ONLY_PLUGIN=$(usex onlyplugin)
 	)
 	cmake_src_configure
 }

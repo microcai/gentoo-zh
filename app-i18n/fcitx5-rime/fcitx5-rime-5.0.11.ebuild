@@ -11,7 +11,6 @@ HOMEPAGE="https://github.com/fcitx/fcitx5-rime"
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-rime.git"
-	KEYWORDS=""
 else
 	SRC_URI="https://github.com/fcitx/fcitx5-rime/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"

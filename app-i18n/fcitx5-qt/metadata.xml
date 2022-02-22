@@ -5,6 +5,6 @@
 		<email>tanekliang@gmail.com</email>
 	</maintainer>
 	<use>
-		<flag name="only_plugin">Build only plugin</flag>
+		<flag name="onlyplugin">Build only plugin</flag>
 	</use>
 </pkgmetadata>
