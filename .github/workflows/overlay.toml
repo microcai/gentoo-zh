@@ -229,12 +229,37 @@ use_latest_tag = true
 #[ttf-wps-fonts]
 #[typora]
 #[ucc]
-#[v2ray]
-#[v2rayA]
-#[v2ray-bin]
-#[v2ray-domain-list-community]
-#[v2ray-domain-list-community-bin]
-#[v2ray-geoip-bin]
+
+[v2ray]
+source = "github"
+github = "v2fly/v2ray-core"
+use_latest_tag = true
+
+[v2rayA]
+source = "github"
+github = "v2rayA/v2rayA"
+use_latest_tag = true
+
+[v2ray-bin]
+source = "github"
+github = "v2fly/v2ray-core"
+use_latest_release = true
+
+[v2ray-domain-list-community]
+source = "github"
+github = "v2fly/domain-list-community"
+use_latest_tag = true
+
+[v2ray-domain-list-community-bin]
+source = "github"
+github = "v2fly/domain-list-community"
+use_latest_release = true
+
+[v2ray-geoip-bin]
+source = "github"
+github = "v2fly/geoip"
+use_latest_release = true
+
 #[vesta]
 #[vicious]
 #[wangfonts]
