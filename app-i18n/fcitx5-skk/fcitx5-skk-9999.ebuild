@@ -5,7 +5,6 @@ EAPI=7
 
 if [[ "${PV}" =~ (^|\.)9999$ ]]; then
 	inherit git-r3
-	KEYWORDS=""
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-skk"
 else
 	KEYWORDS="~amd64 ~x86"
@@ -30,7 +29,7 @@ BDEPEND="kde-frameworks/extra-cmake-modules:5
 RDEPEND="app-i18n/fcitx5
 		app-i18n/libskk
 		dev-qt/qtcore:5
-		app-i18n/fcitx5-qt[qt5,-only_plugin]
+		app-i18n/fcitx5-qt[qt5,-onlyplugin]
 		app-i18n/skk-jisyo
 		!app-i18n/fcitx-skk"
 DEPEND="${RDEPEND}"
