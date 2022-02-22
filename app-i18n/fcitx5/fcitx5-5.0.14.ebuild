@@ -8,7 +8,6 @@ inherit cmake xdg
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5.git"
-	KEYWORDS=""
 else
 	SRC_URI="https://github.com/fcitx/fcitx5/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
@@ -25,6 +24,9 @@ REQUIRED_USE="
 	|| ( wayland X )
 	coverage? ( test )
 "
+
+RESTRICT="!test? ( test )"
+PATCHES=( "${FILESDIR}/build-when-disabled-wayland.patch" )
 
 RDEPEND="dev-libs/glib:2
 	sys-apps/dbus
