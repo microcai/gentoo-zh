@@ -234,31 +234,34 @@ use_latest_tag = true
 source = "github"
 github = "v2fly/v2ray-core"
 use_latest_tag = true
+prefix = "v"
 
 [v2rayA]
 source = "github"
 github = "v2rayA/v2rayA"
 use_latest_tag = true
+prefix = "v"
 
 [v2ray-bin]
 source = "github"
 github = "v2fly/v2ray-core"
 use_latest_release = true
+prefix = "v"
 
-[v2ray-domain-list-community]
-source = "github"
-github = "v2fly/domain-list-community"
-use_latest_tag = true
+#[v2ray-domain-list-community]
+#source = "github"
+#github = "v2fly/domain-list-community"
+#use_latest_tag = true
 
-[v2ray-domain-list-community-bin]
-source = "github"
-github = "v2fly/domain-list-community"
-use_latest_release = true
+#[v2ray-domain-list-community-bin]
+#source = "github"
+#github = "v2fly/domain-list-community"
+#use_latest_release = true
 
-[v2ray-geoip-bin]
-source = "github"
-github = "v2fly/geoip"
-use_latest_release = true
+#[v2ray-geoip-bin]
+#source = "github"
+#github = "v2fly/geoip"
+#use_latest_release = true
 
 #[vesta]
 #[vicious]
