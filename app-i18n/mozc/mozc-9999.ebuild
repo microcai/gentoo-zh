@@ -133,15 +133,10 @@ src_unpack() {
 	if [[ "${PV}" == "9999" ]]; then
 		git-r3_src_unpack
 
-		if use fcitx4; then
+		if use fcitx4 || use fcitx5; then
 			local EGIT_SUBMODULES=()
 			git-r3_fetch https://github.com/fcitx/mozc refs/heads/fcitx
 			git-r3_checkout https://github.com/fcitx/mozc "${WORKDIR}/fcitx-mozc"
-		fi
-		if use fcitx5; then
-			local EGIT_SUBMODULES=()
-			git-r3_fetch https://github.com/fcitx/mozc refs/heads/fcitx5
-			git-r3_checkout https://github.com/fcitx/mozc "${WORKDIR}/fcitx5-mozc"
 		fi
 	else
 		unpack ${PN}-${PV%%_p*}-${MOZC_DATE}.tar.gz
