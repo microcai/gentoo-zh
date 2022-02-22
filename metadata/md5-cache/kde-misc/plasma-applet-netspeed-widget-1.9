@@ -1,0 +1,16 @@
+BDEPEND=dev-util/ninja >=dev-util/cmake-3.20.5 >=kde-frameworks/extra-cmake-modules-5.82.0:5
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test
+DEPEND=kde-plasma/ksysguard:5 >=kde-frameworks/plasma-5.60.0:5 dev-qt/qtcore:5
+DESCRIPTION=Plasma 5 widget that displays the currently used network bandwidth.
+EAPI=8
+HOMEPAGE=https://www.kde-look.org/p/998895/ https://github.com/dfaust/plasma-applet-netspeed-widget
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=ecm
+IUSE=debug
+KEYWORDS=~amd64
+LICENSE=GPL-2+
+RDEPEND=kde-plasma/ksysguard:5 >=kde-frameworks/plasma-5.60.0:5 || ( kde-frameworks/breeze-icons:* kde-frameworks/oxygen-icons:* ) >=kde-frameworks/kf-env-4 dev-qt/qtcore:5
+SLOT=5
+SRC_URI=https://github.com/dfaust/plasma-applet-netspeed-widget/archive/v1.9.tar.gz -> plasma-applet-netspeed-widget-1.9.tar.gz
+_eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	cmake	9f12546ab831b81c615d90e6b9e34e68	virtualx	fa024aa649b6bd544144bf94893d402c	xdg	6024fbc93167fad782e2032933654857	ecm	36917df90b51554478635e34da581fac
+_md5_=34adf2e28f976ab546a4064779b6c7d9
