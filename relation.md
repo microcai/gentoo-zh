@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-02-21 19:57:30 CST)
+(The last generation time: 2022-02-22 13:17:10 CST)
 
 ### Packages
 
@@ -251,7 +251,7 @@
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-util/winegame-client-bin               | 0.5.9.3                                   |            | https://winegame.net/                                                                   | An open source gaming platform for GNU/Linux
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- kde-misc/plasma-applet-netspeed-widget       | 1.8-r1                                    |            | https://www.kde-look.org/p/998895/                                                      | Plasma 5 widget that displays the currently used network bandwidth.
+ kde-misc/plasma-applet-netspeed-widget       | 1.9                                       |            | https://www.kde-look.org/p/998895/                                                      | Plasma 5 widget that displays the currently used network bandwidth.
                                               | 9999                                      |            |                                                                                         |
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/cwtex-q-fonts                    | 0.2                                       |            | https://code.google.com/p/cwtex-q-fonts/                                                | Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
