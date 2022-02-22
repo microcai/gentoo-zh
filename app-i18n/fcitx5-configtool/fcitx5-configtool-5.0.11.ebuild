@@ -8,7 +8,6 @@ inherit cmake
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-configtool.git"
-	KEYWORDS=""
 else
 	SRC_URI="https://github.com/fcitx/fcitx5-configtool/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
@@ -20,9 +19,10 @@ HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-configtool"
 LICENSE="GPL-2+"
 SLOT="5-plasma5"
 IUSE="+kcm +config-qt test"
+RESTRICT="!test? ( test )"
 
 RDEPEND="app-i18n/fcitx5
-	app-i18n/fcitx5-qt[qt5,-only_plugin]
+	app-i18n/fcitx5-qt[qt5,-onlyplugin]
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
