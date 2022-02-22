@@ -8,7 +8,6 @@ inherit cmake xdg
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-chinese-addons.git"
-	KEYWORDS=""
 else
 	SRC_URI="https://github.com/fcitx/fcitx5-chinese-addons/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
@@ -26,13 +25,14 @@ LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
 IUSE="+opencc +gui browser test"
 REQUIRED_USE=""
+RESTRICT="!test? ( test )"
 
 RDEPEND="app-i18n/fcitx5
 	app-i18n/libime
 	opencc? ( app-i18n/opencc:= )
 	gui? (
 		dev-qt/qtcore:5
-		app-i18n/fcitx5-qt[qt5,-only_plugin]
+		app-i18n/fcitx5-qt[qt5,-onlyplugin]
 		browser? (
 			dev-qt/qtwebengine:5
 		)
