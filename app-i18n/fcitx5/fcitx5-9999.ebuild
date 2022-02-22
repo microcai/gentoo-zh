@@ -8,7 +8,6 @@ inherit cmake xdg
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5.git"
-	KEYWORDS=""
 else
 	SRC_URI="https://github.com/fcitx/fcitx5/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
@@ -22,6 +21,8 @@ LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
 IUSE="+enchant test coverage doc presage systemd wayland"
 REQUIRED_USE="coverage? ( test )"
+RESTRICT="!test? ( test )"
+
 RDEPEND="dev-libs/glib:2
 	sys-apps/dbus
 	dev-libs/json-c
