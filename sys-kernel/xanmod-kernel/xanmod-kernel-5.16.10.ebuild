@@ -6,7 +6,7 @@ EAPI=7
 inherit kernel-build toolchain-funcs
 
 MY_P=linux-${PV%.*}
-GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 2))
+GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 1))
 XV="1"
 
 DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
@@ -19,8 +19,9 @@ SRC_URI+=" https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.x
 S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 IUSE="cjk clang"
+SLOT="edge"
 
 BDEPEND="
 	clang? (
@@ -70,7 +71,7 @@ src_prepare() {
 		"${WORKDIR}"/patch-${PV}-xanmod${XV}
 	)
 	if use cjk; then
-		PATCHES+=("${DISTDIR}/cjktty-5.15.patch")
+		PATCHES+=("${DISTDIR}/cjktty-${MY_P}.patch")
 	fi
 	default
 
