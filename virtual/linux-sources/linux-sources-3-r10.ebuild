@@ -21,12 +21,11 @@ RDEPEND="
 		sys-kernel/zen-sources
 		sys-kernel/raspberrypi-sources
 		sys-kernel/xanmod-hybrid
-		sys-kernel/xanmod-lts
+		sys-kernel/xanmod-kernel
 		sys-kernel/xanmod-rt
 		sys-kernel/xanmod-sources
 		sys-kernel/gentoo-kernel
 		sys-kernel/gentoo-kernel-bin
 		sys-kernel/vanilla-kernel
-		sys-kernel/bliss-kernel-bin
 		sys-kernel/starfive-sources
 	)"
