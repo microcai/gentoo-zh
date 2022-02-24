@@ -19,7 +19,7 @@ SRC_URI+=" https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.x
 S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 IUSE="cjk"
 SLOT="lts"
 
@@ -65,14 +65,12 @@ src_prepare() {
 		;;
 	esac
 
-	local myversion="-xanmod${XV}-lts"
+	local myversion="-xanmod${XV}"
 	echo "CONFIG_LOCALVERSION=\"${myversion}\"" >"${T}"/version.config || die
-	echo "CONFIG_DEFAULT_HOSTNAME=\"xanmod-lts\"" >"${T}"/hostname.config || die
 	echo "CONFIG_MODPROBE_PATH=\"/sbin/modprobe\"" >"${T}"/modprobe.config || die
 
 	local merge_configs=(
 		"${T}"/version.config
-		"${T}"/hostname.config
 		"${T}"/modprobe.config
 	)
 

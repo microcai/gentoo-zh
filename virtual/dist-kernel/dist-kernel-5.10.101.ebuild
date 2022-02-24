@@ -9,7 +9,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0/${PV}"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 
 RDEPEND="
 	|| (
