@@ -228,6 +228,13 @@ prefix = "v"
 #[telegram-purple]
 #[tencent-qq]
 #[tenvideo]
+
+[termusic]
+source = "github"
+github = "tramhao/termusic"
+use_latest_release = true
+prefix = "v"
+
 #[tgbot-cpp]
 #[tifig-bin]
 #[tomlkit]
