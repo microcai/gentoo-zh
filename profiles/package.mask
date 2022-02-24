@@ -1,3 +1,7 @@
+# Yachen Wang <oripoin@outlook.com> 
+# mask for keywords mismatch of main tree
+virtual/dist-kernel
+
 # microcai
 # mask for testing
 =dev-libs/boost-1.54.0
