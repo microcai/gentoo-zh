@@ -152,6 +152,7 @@ media-plugins/osdlyrics 0.5.10-r1 9999: Standalone lyrics fetcher/displayer (win
 media-sound/feeluown 3.8.3: A user-friendly and hackable music player
 media-sound/linnya 2.2.0: A free music player
 media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb package
+media-sound/termusic 0.6.10: Music Player TUI written in Rust
 media-sound/yesplaymusic-bin 0.4.3: A third party music player for Netease Music
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/tenvideo 1.0.10: Tencent videos
