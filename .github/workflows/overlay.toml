@@ -233,13 +233,13 @@ use_latest_tag = true
 [v2ray]
 source = "github"
 github = "v2fly/v2ray-core"
-use_latest_tag = true
+use_latest_release = true
 prefix = "v"
 
 [v2rayA]
 source = "github"
 github = "v2rayA/v2rayA"
-use_latest_tag = true
+use_latest_release = true
 prefix = "v"
 
 [v2ray-bin]
