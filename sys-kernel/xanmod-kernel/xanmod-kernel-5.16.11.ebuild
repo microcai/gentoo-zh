@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit kernel-build toolchain-funcs
+inherit kernel-build python-any-r1 toolchain-funcs
 
 MY_P=linux-${PV%.*}
 GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 1))
