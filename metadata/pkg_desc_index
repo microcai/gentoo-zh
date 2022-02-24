@@ -10,7 +10,7 @@ app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Fl
 app-dicts/copytranslator 9.1.0: Foreign language reading and translation assistant based on copy and translate.
 app-dicts/fcitx5-pinyin-zhwiki 20220101: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 app-editors/marktext-bin 0.16.3: A simple and elegant markdown editor, available for Linux, macOS and Windows.
-app-editors/typora 0.11.18 1.0.4: A truely minimal markdown editor.
+app-editors/typora 0.11.18 1.1.5: A truely minimal markdown editor.
 app-emulation/deepin-udis86 1.72-r4: Deepin Version of Wine
 app-emulation/deepin-wine-helper 5.1.27-r1: Deepin Wine Helper
 app-emulation/deepin-wine-plugin 5.1.13-r1: Deepin Wine plugin
