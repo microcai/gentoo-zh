@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-02-25 22:27:02 CST)
+(The last generation time: 2022-02-26 02:00:41 CST)
 
 ### Packages
 
@@ -187,7 +187,7 @@
  dev-cpp/cppcoro                              | 210605                                    |            | https://github.com/Garcia6l20/cppcoro                                                   | A library of C++ coroutine abstractions for the coroutines TS
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/date                                 | 3.0.1                                     |            | https://github.com/HowardHinnant/date                                                   | A date and time library based on the C++11/14/17 <chrono> header
-                                              | 3.0.1_p220127                             |            |                                                                                         |
+                                              | 3.0.1_p220217                             |            |                                                                                         |
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/nameof                               | 0.10.1                                    |            | https://github.com/Neargye/nameof                                                       | Nameof operator for modern C++
                                               | 0.10.1_p220125                            |            |                                                                                         |
@@ -434,7 +434,7 @@
    sys-libs/libzypp                           | 17.29.1                                   | RD         | https://doc.opensuse.org/projects/libzypp/HEAD/                                         | ZYpp Package Management library
                                               | 9999                                      |            |                                                                                         |
      dev-libs/boost                           | 1.78.0-r2                                 |  D, BD, RD | https://www.boost.org/                                                                  | Boost Libraries for C++
-       dev-libs/libbacktrace                  | 220119                                    |  D, RD     | https://github.com/ianlancetaylor/libbacktrace                                          | A C library for producing symbolic backtraces
+       dev-libs/libbacktrace                  | 220218                                    |  D, RD     | https://github.com/ianlancetaylor/libbacktrace                                          | A C library for producing symbolic backtraces
      sys-libs/libsolv                         | 0.7.20                                    | RD         | https://doc.opensuse.org/projects/libzypp/HEAD/                                         | Library for solving packages and reading repositories
                                               | 9999                                      |            |                                                                                         |
        app-arch/zchunk                        | 1.1.16                                    | RD         | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
