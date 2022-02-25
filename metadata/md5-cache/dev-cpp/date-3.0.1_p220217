@@ -10,4 +10,4 @@ PROPERTIES=live
 RESTRICT=mirror
 SLOT=0
 _eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=1c355c4dd8d951974cb969d662f99c97
+_md5_=890f21babeabf751dda0054173376f2b
