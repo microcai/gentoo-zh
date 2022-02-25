@@ -4,26 +4,67 @@ newver = "new_ver.json"
 
 #[9menu]
 #[9wm]
-#[aptly]
+
+[aptly]
+source = "github"
+github = "aptly-dev/aptly"
+use_latest_release = true
+prefix = "v"
+
 #[arch-install-scripts]
 #[archlinux-keyring]
 #[assistant]
 #[baidunetdisk]
-#[baidupcs-go]
+
+[baidupcs-go]
+source = "github"
+github = "felixonmars/BaiduPCS-Go"
+use_latest_release = true
+prefix = "v"
+
 #[bcompare]
 #[blur-effect]
 #[bom-utils]
 #[boost]
-#[btop]
+
+[btop]
+source = "github"
+github = "aristocratos/btop"
+use_latest_release = true
+prefix = "v"
+
 #[bytedance-feishu]
 #[byzanz]
 #[ccal]
-#[chinadns]
+
+[chinadns]
+source = "github"
+github = "shadowsocks/ChinaDNS"
+use_latest_release = true
+
 #[clang_complete]
-#[clash]
-#[clash-for-windows-bin]
-#[conda]
-#[conda-package-handling]
+
+[clash]
+source = "github"
+github = "Dreamacro/clash"
+use_latest_release = true
+prefix = "v"
+
+[clash-for-windows-bin]
+source = "github"
+github = "Fndroid/clash_for_windows_pkg"
+use_latest_release = true
+
+[conda]
+source = "github"
+github = "conda/conda"
+use_latest_release = true
+
+[conda-package-handling]
+source = "github"
+github = "conda/conda-package-handling"
+use_latest_release = true
+
 #[copytranslator]
 #[cppcoro]
 #[cutefish-appmotor]
@@ -178,54 +219,173 @@ prefix = "v"
 #[lunar-date]
 #[lxgwwenkai]
 #[lxice]
-#[ly]
-#[make-proxy]
+
+[ly]
+source = "github"
+github = "nullgemm/ly"
+use_latest_tag = true
+prefix = "v"
+
+[make-proxy]
+source = "github"
+github = "yueyoum/make-proxy"
+use_latest_tag = true
+prefix = "v"
+
 #[man-pages-zh_CN]
-#[marktext-bin]
-#[mkinitcpio]
+
+[marktext-bin]
+source = "github"
+github = "marktext/marktext"
+use_latest_release = true
+prefix = "v"
+
+
+[mkinitcpio]
+source = "github"
+github = "archlinux/mkinitcpio"
+use_latest_release = true
+prefix = "v"
+
 #[mozc]
 #[n2n]
 #[nameof]
-#[nerd-fonts]
+
+[nerd-fonts]
+source = "github"
+github = "ryanoasis/nerd-fonts"
+use_latest_release = true
+prefix = "v"
+
 #[netease-cloud-music]
 #[nixnote]
 #[nomachine-enterprise-client]
-#[nvchecker]
-#[osdlyrics]
+
+[nvchecker]
+source = "github"
+github = "lilydjwg/nvchecker"
+use_latest_tag = true
+prefix = "v"
+
+[osdlyrics]
+source = "github"
+github = "osdlyrics/osdlyrics"
+use_latest_release = true
+
 #[othello]
 #[pacman]
 #[pacman-mirrorlist]
 #[pahole]
-#[pcmanx-gtk2]
+
+[pcmanx-gtk2]
+source = "github"
+github = "pcman-bbs/pcmanx"
+use_latest_release = true
+
 #[phddns]
-#[picom-jonaburg]
+
+[picom-jonaburg]
+source = "github"
+github = "jonaburg/picom"
+use_latest_tag = true
+prefix = "v"
+
 #[plasma-applet-netspeed-widget]
 #[postman-bin]
-#[prips]
-#[pycosat]
-#[python-telegram-bot]
-#[qasync]
-#[qbittorrent-enhanced]
+[prips]
+source = "regex"
+url = "https://devel.ringlet.net/sysutils/prips/"
+regex = "The current version of <strong>prips</strong> is <strong>([\\d.]+)</strong>"
+
+[pycosat]
+source = "github"
+github = "ContinuumIO/pycosat"
+use_latest_tag = true
+
+[python-telegram-bot]
+source = "github"
+github = "python-telegram-bot/python-telegram-bot"
+use_latest_release = true
+prefix = "v"
+
+[qasync]
+source = "github"
+github = "CabbageDevelopment/qasync"
+use_latest_tag = true
+prefix = "v"
+
+[qbittorrent-enhanced]
+source = "github"
+github = "c0re100/qBittorrent-Enhanced-Edition"
+use_latest_release = true
+prefix = "release-"
+
 #[qdbusviewer]
 #[rime-prelude]
-#[rmtrash]
+
+[rmtrash]
+source = "github"
+github = "PhrozenByte/rmtrash"
+use_latest_release = true
+prefix = "v"
+
 #[rust-analyzer]
 #[sane-backends]
-#[sarasa-gothic]
+
+[sarasa-gothic]
+source = "github"
+github = "be5invis/sarasa-gothic"
+use_latest_release = true
+prefix = "v"
+
 #[scangearmp]
-#[scrcpy]
-#[shadowsocks-rust-bin]
-#[smartproxy]
+
+[scrcpy]
+source = "github"
+github = "Genymobile/scrcpy"
+use_latest_release = true
+prefix = "v"
+
+[smartproxy]
+source = "github"
+github = "microcai/smartproxy"
+use_latest_tag = true
+prefix = "v"
+
 #[smplayer-themes-nonfree]
 #[snapper-gui]
-#[sogoupinyin]
-#[spark]
-#[structlog]
+
+[sogoupinyin]
+source = "regex"
+url = "https://pinyin.sogou.com/linux"
+regex = "sogoupinyin_([\\d.]+)_amd64.deb"
+
+[spark]
+source = "github"
+github = "holman/spark"
+use_latest_tag = true
+prefix = "v"
+
+[structlog]
+source = "github"
+github = "hynek/structlog"
+use_latest_release = true
+
 #[systemd-zpool-scrub]
 #[taipei-sans-tc]
+
 #[tdlib]
-#[telegram-desktop]
-#[telegram-purple]
+#source = "github"
+#github = "tdlib/td"
+#use_latest_tag = true
+#prefix = "v"
+
+[telegram-purple]
+source = "github"
+github = "majn/telegram-purple"
+use_latest_release = true
+prefix = "v"
+
 #[tencent-qq]
 #[tenvideo]
 
@@ -235,11 +395,35 @@ github = "tramhao/termusic"
 use_latest_release = true
 prefix = "v"
 
-#[tgbot-cpp]
-#[tifig-bin]
-#[tomlkit]
+[tgbot-cpp]
+source = "github"
+github = "reo7sp/tgbot-cpp"
+use_latest_release = true
+prefix = "v"
+
+[tifig-bin]
+source = "github"
+github = "monostream/tifig"
+use_latest_release = true
+prefix = "v"
+
+[tomlkit]
+source = "github"
+github = "sdispater/tomlkit"
+use_latest_tag = true
+
+[tenvideo]
+source = "regex"
+url = "https://v.qq.com/download.html#Linux"
+regex = "Tenvideo_universal_([\\d.]+)_amd64.deb"
+
 #[ttf-wps-fonts]
+
 #[typora]
+#source = "regex"
+#url = "https://typora.io/#linux"
+#regex = "typora_([\\d.]+)_amd64.deb"
+
 #[ucc]
 
 [v2ray]
@@ -275,30 +459,110 @@ prefix = "v"
 #github = "v2fly/geoip"
 #use_latest_release = true
 
-#[vesta]
+[vesta]
+source = "regex"
+url = "https://jp-minerals.org/vesta/en/download.html"
+regex = "ver. ([\\d.]+), built on"
+
 #[vicious]
 #[wangfonts]
 #[wechat-uos]
 #[wemeet]
-#[winegame-client-bin]
-#[wiznote]
+
+[winegame-client-bin]
+source = "regex"
+url = "https://winegame.net/downloads/"
+regex = "net.winegame.client_([\\d.]+)_amd64.deb"
+
+[wiznote]
+source = "github"
+github = "WizTeam/WizQTClient"
+use_latest_tag = true
+prefix = "v"
 #[woof]
-#[wps-office]
-#[xanmod-hybrid]
-#[xanmod-lts]
-#[xanmod-rt]
+
+[wps-office]
+source = "regex"
+url = "https://linux.wps.cn/wpslinuxlog"
+regex = "wps-office_([\\d.]+)_amd64.deb"
+
+[xanmod-hybrid]
+source = "github"
+github = "xanmod/linux"
+use_latest_release = true
+from_pattern = "(.*)-xanmod(.*)"
+to_pattern = "\\1"
+
+[xanmod-kernel]
+source = "github"
+github = "xanmod/linux"
+use_latest_release = true
+from_pattern = "(.*)-xanmod(.*)"
+to_pattern = "\\1"
+
 #[xcb-imdkit]
-#[xcur2png]
+
+[xcur2png]
+source = "github"
+github = "eworm-de/xcur2png"
+use_latest_release = true
+
 #[xf86-input-synaptics]
-#[Xray]
+
+[Xray]
+source = "github"
+github = "XTLS/Xray-core"
+use_latest_release = true
+prefix = "v"
+
 #[yaourt]
-#[ydcv-rs]
-#[yesplaymusic-bin]
+
+[ydcv-rs]
+source = "github"
+github = "farseerfc/ydcv-rs"
+use_latest_release = true
+prefix = "v"
+
+
+[yesplaymusic-bin]
+source = "github"
+github = "qier222/YesPlayMusic"
+use_latest_release = true
+prefix = "v"
+
 #[you-get]
+
 #[youtube-dl]
-#[zchunk]
-#[zenmonitor]
-#[zenpower]
+#source = "github"
+#github = "ytdl-org/youtube-dl"
+
+[zchunk]
+source = "github"
+github = "zchunk/zchunk"
+use_latest_tag = true
+
+[zenmonitor]
+source = "github"
+github = "ocerman/zenmonitor"
+use_latest_tag = true
+prefix = "v"
+
+[zenpower]
+source = "github"
+github = "ocerman/zenpower"
+use_latest_tag = true
+prefix = "v"
+
 #[zh-autoconvert]
-#[zsh-theme-powerlevel10k]
-#[zypper]
+
+[zsh-theme-powerlevel10k]
+source = "github"
+github = "romkatv/powerlevel10k"
+use_latest_release = true
+prefix = "v"
+
+[zypper]
+source = "github"
+github = "openSUSE/zypper"
+use_latest_tag = true
+
