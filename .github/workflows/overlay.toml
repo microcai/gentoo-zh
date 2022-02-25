@@ -4,26 +4,67 @@ newver = "new_ver.json"
 
 #[9menu]
 #[9wm]
-#[aptly]
+
+[aptly]
+source = "github"
+github = "aptly-dev/aptly"
+use_latest_release = true
+prefix = "v"
+
 #[arch-install-scripts]
 #[archlinux-keyring]
 #[assistant]
 #[baidunetdisk]
-#[baidupcs-go]
+
+[baidupcs-go]
+source = "github"
+github = "felixonmars/BaiduPCS-Go"
+use_latest_release = true
+prefix = "v"
+
 #[bcompare]
 #[blur-effect]
 #[bom-utils]
 #[boost]
-#[btop]
+
+[btop]
+source = "github"
+github = "aristocratos/btop"
+use_latest_release = true
+prefix = "v"
+
 #[bytedance-feishu]
 #[byzanz]
 #[ccal]
-#[chinadns]
+
+[chinadns]
+source = "github"
+github = "shadowsocks/ChinaDNS"
+use_latest_release = true
+
 #[clang_complete]
-#[clash]
-#[clash-for-windows-bin]
-#[conda]
-#[conda-package-handling]
+
+[clash]
+source = "github"
+github = "Dreamacro/clash"
+use_latest_release = true
+prefix = "v"
+
+[clash-for-windows-bin]
+source = "github"
+github = "Fndroid/clash_for_windows_pkg"
+use_latest_release = true
+
+[conda]
+source = "github"
+github = "conda/conda"
+use_latest_release = true
+
+[conda-package-handling]
+source = "github"
+github = "conda/conda-package-handling"
+use_latest_release = true
+
 #[copytranslator]
 #[cppcoro]
 #[cutefish-appmotor]
@@ -173,59 +214,145 @@ use_latest_tag = true
 #[lunar-date]
 #[lxgwwenkai]
 #[lxice]
-#[ly]
-#[make-proxy]
+
+[ly]
+source = "github"
+github = "nullgemm/ly"
+use_latest_release = true
+
+[make-proxy]
+source = "github"
+github = "yueyoum/make-proxy"
+use_latest_tag = true
+
 #[man-pages-zh_CN]
 #[marktext-bin]
-#[mkinitcpio]
+
+[mkinitcpio]
+source = "github"
+github = "archlinux/mkinitcpio"
+use_latest_release = true
+
 #[mozc]
 #[n2n]
 #[nameof]
-#[nerd-fonts]
+
+[nerd-fonts]
+source = "github"
+github = "ryanoasis/nerd-fonts"
+use_latest_release = true
+
 #[netease-cloud-music]
 #[nixnote]
 #[nomachine-enterprise-client]
-#[nvchecker]
-#[osdlyrics]
+
+[nvchecker]
+source = "github"
+github = "lilydjwg/nvchecker"
+use_latest_tag = true
+
+[osdlyrics]
+source = "github"
+github = "osdlyrics/osdlyrics"
+use_latest_release = true
+
 #[othello]
 #[pacman]
 #[pacman-mirrorlist]
 #[pahole]
-#[pcmanx-gtk2]
+
+[pcmanx-gtk2]
+source = "github"
+github = "pcman-bbs/pcmanx"
+use_latest_release = true
+
 #[phddns]
-#[picom-jonaburg]
+
+[picom-jonaburg]
+source = "github"
+github = "jonaburg/picom"
+use_latest_tag = true
+
 #[plasma-applet-netspeed-widget]
 #[postman-bin]
 #[prips]
-#[pycosat]
-#[python-telegram-bot]
-#[qasync]
-#[qbittorrent-enhanced]
+
+[pycosat]
+source = "github"
+github = "ContinuumIO/pycosat"
+use_latest_tag = true
+
+[python-telegram-bot]
+source = "github"
+github = "python-telegram-bot/python-telegram-bot"
+use_latest_release = true
+prefix = "v"
+
+[qasync]
+source = "github"
+github = "CabbageDevelopment/qasync"
+use_latest_release = true
+prefix = "v"
+
+[qbittorrent-enhanced]
+source = "github"
+github = "c0re100/qBittorrent-Enhanced-Edition"
+use_latest_release = true
+prefix = "release-"
+
 #[qdbusviewer]
 #[rime-prelude]
 #[rmtrash]
 #[rust-analyzer]
 #[sane-backends]
-#[sarasa-gothic]
+
+[sarasa-gothic]
+source = "github"
+github = "be5invis/sarasa-gothic"
+use_latest_release = true
+
 #[scangearmp]
 #[scrcpy]
-#[shadowsocks-rust-bin]
-#[smartproxy]
+
+[smartproxy]
+source = "github"
+github = "microcai/smartproxy"
+use_latest_tag = true
+
 #[smplayer-themes-nonfree]
 #[snapper-gui]
 #[sogoupinyin]
-#[spark]
-#[structlog]
+
+[spark]
+source = "github"
+github = "holman/spark"
+use_latest_tag = true
+
+[structlog]
+source = "github"
+github = "hynek/structlog"
+use_latest_release = true
+
 #[systemd-zpool-scrub]
 #[taipei-sans-tc]
 #[tdlib]
-#[telegram-desktop]
-#[telegram-purple]
+
+[telegram-purple]
+source = "github"
+github = "majn/telegram-purple"
+use_latest_release = true
+prefix = "v"
+
 #[tencent-qq]
 #[tenvideo]
 #[tgbot-cpp]
 #[tifig-bin]
-#[tomlkit]
+
+[tomlkit]
+source = "github"
+github = "sdispater/tomlkit"
+use_latest_tag = true
+
 #[ttf-wps-fonts]
 #[typora]
 #[ucc]
@@ -272,7 +399,14 @@ prefix = "v"
 #[wiznote]
 #[woof]
 #[wps-office]
-#[xanmod-hybrid]
+
+[xanmod-hybrid]
+source = "github"
+github = "xanmod/linux"
+use_latest_release = true
+from_pattern = "(.*)-xanmod1"
+to_pattern = "\\1"
+
 #[xanmod-lts]
 #[xanmod-rt]
 #[xcb-imdkit]
