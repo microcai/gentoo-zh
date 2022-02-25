@@ -9,7 +9,7 @@ DESCRIPTION="A C library for producing symbolic backtraces"
 HOMEPAGE="https://github.com/ianlancetaylor/libbacktrace"
 KEYWORDS="~amd64"
 EGIT_REPO_URI="https://github.com/ianlancetaylor/libbacktrace.git"
-EGIT_COMMIT=332522e
+EGIT_COMMIT=2446c66
 
 LICENSE="BSD"
 SLOT="0"
