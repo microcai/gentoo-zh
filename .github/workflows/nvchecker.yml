@@ -44,7 +44,14 @@ jobs:
       uses: actions/checkout@v2
     - name: echo
       run: |
-        echo -e "---\ntitle: \"[nvchecker] ${{ matrix.package.name }} can be bump to ${{ matrix.package.newver }}, current is ${{ matrix.package.oldver }}\"\n---" > .github/ISSUE_TEMPLATE.md
+        echo "---" >> .github/ISSUE_TEMPLATE.md
+        echo "title: \"[nvchecker] ${{ matrix.package.name }} can be bump to ${{ matrix.package.newver }}\"" >> .github/ISSUE_TEMPLATE.md
+        echo "---" >> .github/ISSUE_TEMPLATE.md
+        if [ ! -z "${{ matrix.package.oldver }}"]; then
+          echo "type: ${{ matrix.package.delta }}, oldver: ${{ matrix.package.oldver }}" >> .github/ISSUE_TEMPLATE.md
+        else
+          echo "type: ${{ matrix.package.delta }}" >> .github/ISSUE_TEMPLATE.md
+        fi
         cat .github/ISSUE_TEMPLATE.md
     - uses: dblock/create-a-github-issue@v3
       env:
