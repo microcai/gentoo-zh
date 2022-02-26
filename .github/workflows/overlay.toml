@@ -2,8 +2,11 @@
 oldver = "old_ver.json"
 newver = "new_ver.json"
 
-#[9menu]
-#[9wm]
+[9menu]
+source = "debianpkg"
+debianpkg = "9menu"
+from_pattern = "-(\\d+)"
+to_pattern = ""
 
 [aptly]
 source = "github"
@@ -11,9 +14,20 @@ github = "aptly-dev/aptly"
 use_latest_release = true
 prefix = "v"
 
-#[arch-install-scripts]
-#[archlinux-keyring]
+[arch-install-scripts]
+source = "github"
+github = "archlinux/arch-install-scripts"
+use_latest_tag = true
+prefix = "v"
+
+[archlinux-keyring]
+source = "git"
+git = "https://gitlab.archlinux.org/archlinux/archlinux-keyring.git"
+
+# add riscv keyword, drop after main tree keyworded
 #[assistant]
+
+# need run js
 #[baidunetdisk]
 
 [baidupcs-go]
@@ -22,10 +36,24 @@ github = "felixonmars/BaiduPCS-Go"
 use_latest_release = true
 prefix = "v"
 
-#[bcompare]
-#[blur-effect]
+[bcompare]
+source = "regex"
+url = "https://www.scootersoftware.com/download.php?zz=kb_linux_install"
+regex = "bcompare-([\\d.]+).x86_64.tar.gz"
+
+[blur-effect]
+source = "github"
+github = "sonald/blur-effect"
+use_latest_tag = true
+prefix = "v"
+
+# need run js
 #[bom-utils]
-#[boost]
+
+[boost]
+source = "regex"
+url = "https://www.boost.org/users/download/"
+regex = "Version ([\\d.]+)"
 
 [btop]
 source = "github"
@@ -33,16 +61,28 @@ github = "aristocratos/btop"
 use_latest_release = true
 prefix = "v"
 
+# TODO
 #[bytedance-feishu]
-#[byzanz]
-#[ccal]
+
+[byzanz]
+source = "git"
+git = "https://gitlab.gnome.org/Archive/byzanz.git"
+
+[ccal]
+source = "regex"
+url = "http://ccal.chinesebay.com/ccal/ccal.htm"
+regex = "<h1>CCAL-([\\d.]+)</h1>"
 
 [chinadns]
 source = "github"
 github = "shadowsocks/ChinaDNS"
 use_latest_release = true
 
-#[clang_complete]
+[clang_complete]
+source = "github"
+github = "xavierd/clang_complete"
+use_latest_tag = true
+prefix = "v"
 
 [clash]
 source = "github"
@@ -65,8 +105,16 @@ source = "github"
 github = "conda/conda-package-handling"
 use_latest_release = true
 
-#[copytranslator]
+[copytranslator]
+source = "github"
+github = "CopyTranslator/CopyTranslator"
+use_latest_release = true
+prefix = "v"
+
+# No releases
 #[cppcoro]
+
+# see in https://github.com/HougeLangley/cutefishos-overlay
 #[cutefish-appmotor]
 #[cutefish-calculator]
 #[cutefish-core]
@@ -87,28 +135,68 @@ use_latest_release = true
 #[cutefish-texteditor]
 #[cutefish-videoplayer]
 #[cutefish-wallpapers]
+#[libcutefish]
+
+# need run js
 #[cwtex-q-fonts]
-#[darkhttpd]
-#[date]
-#[dbeaver-bin]
-#[DDNet]
+
+[darkhttpd]
+source = "github"
+github = "emikulic/darkhttpd"
+use_latest_tag = true
+prefix = "v"
+
+[date]
+source = "github"
+github = "HowardHinnant/date"
+use_latest_release = true
+prefix = "v"
+
+[dbeaver-bin]
+source = "regex"
+url = "https://dbeaver.io/"
+regex = "DBeaver ([\\d.]+)"
+
+[DDNet]
+source = "github"
+github = "ddnet/ddnet"
+use_latest_tag = true
+
 #[deepin-udis86]
 #[deepin-wine6-stable]
 #[deepin-wine-helper]
 #[deepin-wine-plugin]
 #[deepin-wine-wechat]
+
+# TODO
 #[dingtalk]
+
+# virtual package
 #[dist-kernel]
+
+# need help
 #[dvp]
-#[easymotion]
+
+[easymotion]
+source = "github"
+github = "easymotion/vim-easymotion"
+use_latest_release = true
+prefix = "v"
+
+# TODO
 #[elfembed]
+
 #[elog-functions]
 #[epson-inkjet-printer_201207w]
 #[erofs-utils]
 #[ETL]
 #[etoken-sac]
 #[f2fs-tools]
-#[fcitx]
+
+[fcitx]
+source = "github"
+github = "fcitx/fcitx"
+use_latest_tag = true
 
 [fcitx5]
 source = "github"
@@ -173,51 +261,205 @@ prefix = "v"
 
 #[fernflower]
 #[fishui]
-#[fqterm]
-#[freeoffice]
-#[fuo-kuwo]
-#[fuo-local]
-#[fuo-netease]
-#[fuo-qqmusic]
-#[gcin]
+
+[fqterm]
+source = "github"
+github = "mytbk/fqterm"
+use_latest_release = true
+
+[freeoffice]
+source = "regex"
+url = "https://www.freeoffice.com/de/download/programme"
+regex = "softmaker-freeoffice-[\\d.]{4}-([\\d.]+)-amd64.tgz"
+
+[fuo-kuwo]
+source = "pypi"
+pypi = "fuo_kuwo"
+
+[fuo-local]
+source = "pypi"
+pypi = "fuo-local"
+
+[fuo-netease]
+source = "pypi"
+pypi = "fuo-netease"
+
+[fuo-qqmusic]
+source = "pypi"
+pypi = "fuo-qqmusic"
+
+[gcin]
+source = "regex"
+url = "http://hyperrate.com/gcin-source/"
+regex = "gcin-([\\d.]+).tar.xz"
+
+# TODO
 #[gimp-gap]
-#[gitstatus]
-#[glibc]
-#[gpick]
-#[granite]
+
+[gitstatus]
+source = "github"
+github = "romkatv/gitstatus"
+use_latest_release = true
+prefix = "v"
+
+[glibc]
+source = "regex"
+url = "https://www.gnu.org/software/libc/"
+regex = "The current stable version of glibc is ([\\d.]+)"
+
+[gpick]
+source = "github"
+github = "thezbyg/gpick"
+use_latest_tag = true
+prefix = "gpick-"
+
+[granite]
+source = "github"
+github = "elementary/granite"
+use_latest_release = true
+
+#TODO
 #[groff-utf8]
-#[iansui]
+
+[iansui]
+source = "github"
+github = "ButTaiwan/iansui"
+use_latest_release = true
+prefix = "v"
+
+# need run js
 #[ibus-rime]
-#[imgviz]
-#[janus]
-#[jd-gui]
+
+[imgviz]
+source = "github"
+github = "wkentaro/imgviz"
+use_latest_tag = true
+prefix = "v"
+
+[janus]
+source = "github"
+github = "aio-libs/janus"
+use_latest_release = true
+prefix = "v"
+
+[jd-gui]
+source = "github"
+github = "java-decompiler/jd-gui"
+use_latest_release = true
+prefix = "v"
+
+#TODO
 #[jetbrains-toolbox]
-#[jf-openhuninn]
-#[jmtpfs]
-#[jshon]
-#[labelme]
-#[lazygit-bin]
+
+[jf-openhuninn]
+source = "github"
+github = "justfont/open-huninn-font"
+use_latest_release = true
+prefix = "v"
+
+[jmtpfs]
+source = "github"
+github = "JasonFerrara/jmtpfs"
+use_latest_tag = true
+prefix = "v"
+
+[jshon]
+source = "github"
+github = "keenerd/jshon"
+use_latest_tag = true
+
+[labelme]
+source = "github"
+github = "wkentaro/labelme"
+use_latest_release = true
+prefix = "v"
+
+[lazygit-bin]
+source = "github"
+github = "jesseduffield/lazygit"
+use_latest_release = true
+prefix = "v"
+
+# No releases
 #[libbacktrace]
-#[libcutefish]
-#[libdatrie]
+
+[libdatrie]
+source = "github"
+github = "tlwg/libdatrie"
+use_latest_release = true
+prefix = "v"
+
+# TODO
 #[libdwarf]
-#[libidn11]
-#[libime]
+
+[libidn11]
+source = "git"
+git = "https://git.savannah.gnu.org/git/libidn.git"
+prefix = "v"
+
+[libime]
+source = "github"
+github = "fcitx/libime"
+use_latest_tag = true
+
+# TODO
 #[libixp]
-#[libsolv]
-#[libthai]
+
+[libsolv]
+source = "github"
+github = "openSUSE/libsolv"
+use_latest_tag = true
+
+[libthai]
+source = "github"
+github = "tlwg/libthai"
+use_latest_release= true
+prefix = "v"
+
+# TODO
 #[libticables2]
 #[libticalcs2]
 #[libticonv]
 #[libtifiles2]
-#[libzypp]
-#[lightdm-slick-greeter]
+
+[libzypp]
+source = "github"
+github = "openSUSE/libzypp"
+use_latest_tag= true
+
+[lightdm-slick-greeter]
+source = "github"
+github = "linuxmint/slick-greeter"
+use_latest_tag= true
+
+# TODO
 #[linnya]
+
+# virtual
 #[linux-sources]
+
+# TODO
 #[liquorix-sources]
-#[lunar]
-#[lunar-date]
-#[lxgwwenkai]
+
+[lunar]
+source = "debianpkg"
+debianpkg = "lunar"
+from_pattern = "-(\\d+)"
+to_pattern = ""
+
+[lunar-date]
+source = "github"
+github = "yetist/lunar-date"
+use_latest_release = true
+prefix = "v"
+
+[lxgwwenkai]
+source = "github"
+github = "lxgw/LxgwWenKai"
+use_latest_release = true
+prefix = "v"
+
+# TODO
 #[lxice]
 
 [ly]
@@ -232,6 +474,7 @@ github = "yueyoum/make-proxy"
 use_latest_tag = true
 prefix = "v"
 
+# only live package in gentoo-zh
 #[man-pages-zh_CN]
 
 [marktext-bin]
@@ -247,9 +490,19 @@ github = "archlinux/mkinitcpio"
 use_latest_release = true
 prefix = "v"
 
+# only old data tag
 #[mozc]
-#[n2n]
-#[nameof]
+
+[n2n]
+source = "github"
+github = "ntop/n2n"
+use_latest_release = true
+
+[nameof]
+source = "github"
+github = "Neargye/nameof"
+use_latest_release = true
+prefix = "v"
 
 [nerd-fonts]
 source = "github"
@@ -257,6 +510,7 @@ github = "ryanoasis/nerd-fonts"
 use_latest_release = true
 prefix = "v"
 
+# need run js
 #[netease-cloud-music]
 
 [netease-cloud-music-gtk]
@@ -265,6 +519,12 @@ github = "gmg137/netease-cloud-music-gtk"
 use_latest_release = true
 
 #[nixnote]
+#source = "github"
+#github = "robert7/nixnote2"
+#use_latest_release = true
+#prefix = "v"
+
+# need run js
 #[nomachine-enterprise-client]
 
 [nvchecker]
@@ -278,16 +538,30 @@ source = "github"
 github = "osdlyrics/osdlyrics"
 use_latest_release = true
 
-#[othello]
-#[pacman]
+[othello]
+source = "regex"
+url = "http://othello-game.sourceforge.net/en/Download.html"
+regex = "([\\d.]+) is the latest stable version."
+
+[pacman]
+source = "git"
+git = "https://gitlab.archlinux.org/pacman/pacman.git"
+prefix = "v"
+
+# need help
 #[pacman-mirrorlist]
-#[pahole]
+
+[pahole]
+source = "git"
+git = "https://git.kernel.org/pub/scm/devel/pahole/pahole.git"
+prefix = "v"
 
 [pcmanx-gtk2]
 source = "github"
 github = "pcman-bbs/pcmanx"
 use_latest_release = true
 
+# need help
 #[phddns]
 
 [picom-jonaburg]
@@ -296,8 +570,15 @@ github = "jonaburg/picom"
 use_latest_tag = true
 prefix = "v"
 
-#[plasma-applet-netspeed-widget]
+[plasma-applet-netspeed-widget]
+source = "github"
+github = "dfaust/plasma-applet-netspeed-widget"
+use_latest_tag = true
+prefix = "v"
+
+# need help
 #[postman-bin]
+
 [prips]
 source = "regex"
 url = "https://devel.ringlet.net/sysutils/prips/"
@@ -326,7 +607,10 @@ github = "c0re100/qBittorrent-Enhanced-Edition"
 use_latest_release = true
 prefix = "release-"
 
+# add riscv keyword, drop after main tree keyworded
 #[qdbusviewer]
+
+# No releases: https://github.com/rime/rime-prelude
 #[rime-prelude]
 
 [rmtrash]
@@ -335,7 +619,12 @@ github = "PhrozenByte/rmtrash"
 use_latest_release = true
 prefix = "v"
 
-#[rust-analyzer]
+[rust-analyzer]
+source = "github"
+github = "rust-analyzer/rust-analyzer"
+use_latest_release = true
+
+# TODO: very old package
 #[sane-backends]
 
 [sarasa-gothic]
@@ -344,6 +633,7 @@ github = "be5invis/sarasa-gothic"
 use_latest_release = true
 prefix = "v"
 
+# TODO: very old package
 #[scangearmp]
 
 [scrcpy]
@@ -358,7 +648,10 @@ github = "microcai/smartproxy"
 use_latest_tag = true
 prefix = "v"
 
+# may be here: https://github.com/smplayer-dev/smplayer-themes
 #[smplayer-themes-nonfree]
+
+# only live package in gentoo-zh
 #[snapper-gui]
 
 [sogoupinyin]
@@ -377,14 +670,17 @@ source = "github"
 github = "hynek/structlog"
 use_latest_release = true
 
+# No releases
 #[systemd-zpool-scrub]
+
+# version not found: https://sites.google.com/view/jtfoundry/zh-tw/downloads
 #[taipei-sans-tc]
 
-#[tdlib]
-#source = "github"
-#github = "tdlib/td"
-#use_latest_tag = true
-#prefix = "v"
+[tdlib]
+source = "github"
+github = "tdlib/td"
+use_latest_tag = true
+prefix = "v"
 
 [telegram-purple]
 source = "github"
@@ -392,8 +688,12 @@ github = "majn/telegram-purple"
 use_latest_release = true
 prefix = "v"
 
-#[tencent-qq]
-#[tenvideo]
+[tencent-qq]
+source = "regex"
+url = "https://aur.archlinux.org/packages/linuxqq"
+regex = "Package Details: linuxqq 1:([\\d.b_]+)-[\\d]+"
+from_pattern = "_b(\\d+)_"
+to_pattern = "_beta\\1_p"
 
 [termusic]
 source = "github"
@@ -423,13 +723,15 @@ source = "regex"
 url = "https://v.qq.com/download.html#Linux"
 regex = "Tenvideo_universal_([\\d.]+)_amd64.deb"
 
+# no release and no tag
 #[ttf-wps-fonts]
 
-#[typora]
-#source = "regex"
-#url = "https://typora.io/#linux"
-#regex = "typora_([\\d.]+)_amd64.deb"
+[typora]
+source = "regex"
+url = "https://typora.io/#linu://typora.io/releases/stable.html"
+regex = "typora_([\\d.]+)_amd64.deb"
 
+# upstream is no longer actively maintained, ignore it
 #[ucc]
 
 [v2ray]
@@ -470,10 +772,24 @@ source = "regex"
 url = "https://jp-minerals.org/vesta/en/download.html"
 regex = "ver. ([\\d.]+), built on"
 
+# only live package in gentoo-zh
 #[vicious]
+
+# error: The Google Code Archive requires JavaScript to be enabled in your browser.
 #[wangfonts]
-#[wechat-uos]
-#[wemeet]
+#source = "regex"
+#url = "https://code.google.com/archive/p/wangfonts/downloads"
+#regex = "wangfonts-([\\d.]+).zip"
+
+[wechat-uos]
+source = "aur"
+from_pattern = "([\\d.]+):([\\d.]+)-([\\d.]+)"
+to_pattern = "\\2"
+
+[wemeet]
+source = "regex"
+url = "https://aur.archlinux.org/packages/wemeet-bin"
+regex = "Package Details: wemeet-bin ([\\d.]+)-"
 
 [winegame-client-bin]
 source = "regex"
@@ -485,6 +801,8 @@ source = "github"
 github = "WizTeam/WizQTClient"
 use_latest_tag = true
 prefix = "v"
+
+# only live package in gentoo-zh
 #[woof]
 
 [wps-office]
@@ -506,14 +824,15 @@ use_latest_release = true
 from_pattern = "(.*)-xanmod(.*)"
 to_pattern = "\\1"
 
-#[xcb-imdkit]
+[xcb-imdkit]
+source = "github"
+github = "fcitx/xcb-imdkit"
+use_latest_tag = true
 
 [xcur2png]
 source = "github"
 github = "eworm-de/xcur2png"
 use_latest_release = true
-
-#[xf86-input-synaptics]
 
 [Xray]
 source = "github"
@@ -521,6 +840,7 @@ github = "XTLS/Xray-core"
 use_latest_release = true
 prefix = "v"
 
+# Yaourt is not maintained anymore
 #[yaourt]
 
 [ydcv-rs]
@@ -536,11 +856,8 @@ github = "qier222/YesPlayMusic"
 use_latest_release = true
 prefix = "v"
 
+# only live package in gentoo-zh
 #[you-get]
-
-#[youtube-dl]
-#source = "github"
-#github = "ytdl-org/youtube-dl"
 
 [zchunk]
 source = "github"
@@ -559,7 +876,10 @@ github = "ocerman/zenpower"
 use_latest_tag = true
 prefix = "v"
 
-#[zh-autoconvert]
+[zh-autoconvert]
+source = "regex"
+url = "https://packages.debian.org/stable/source/zh-autoconvert"
+regex = "Source Package: zh-autoconvert \\(([\\d.]+)-[\\d.]+\\)"
 
 [zsh-theme-powerlevel10k]
 source = "github"
