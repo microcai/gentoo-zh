@@ -7,7 +7,7 @@ inherit desktop xdg unpacker
 
 DESCRIPTION="A simple and elegant markdown editor, available for Linux, macOS and Windows."
 HOMEPAGE="https://marktext.app/ https://github.com/marktext/marktext"
-SRC_URI="https://github.com/marktext/marktext/releases/download/v${PV}/${PN%-bin}-amd64.deb -> ${PN}.deb"
+SRC_URI="https://github.com/marktext/marktext/releases/download/v${PV}/${PN%-bin}-amd64.deb -> ${P}.deb"
 
 LICENSE="MIT"
 SLOT="0"
@@ -27,8 +27,8 @@ S="${WORKDIR}"
 
 src_install(){
 	insinto "/opt"
-	doins -r "opt/Mark Text"
-	fperms 0755 "/opt/Mark Text/${PN%-bin}"
+	doins -r "opt/MarkText"
+	fperms 0755 "/opt/MarkText/${PN%-bin}"
 	for is in 16 32 48 64 128 256 512; do
 		doicon -s ${is} usr/share/icons/hicolor/${is}x${is}/apps/${PN%-bin}.png
 	done
