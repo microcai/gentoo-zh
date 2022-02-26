@@ -258,6 +258,12 @@ use_latest_release = true
 prefix = "v"
 
 #[netease-cloud-music]
+
+[netease-cloud-music-gtk]
+source = "github"
+github = "gmg137/netease-cloud-music-gtk"
+use_latest_release = true
+
 #[nixnote]
 #[nomachine-enterprise-client]
 
