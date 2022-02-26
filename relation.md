@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-02-26 17:57:33 CST)
+(The last generation time: 2022-02-26 19:05:16 CST)
 
 ### Packages
 
@@ -431,6 +431,7 @@
  sys-apps/yaourt                              | 1.2.2                                     |            | http://www.archlinux.fr/yaourt-en/                                                      | A pacman wrapper with extended features and AUR support
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/zypper                              | 1.14.51                                   |            | https://en.opensuse.org/Portal:Zypper                                                   | World's most powerful command line package manager
+                                              | 1.14.52                                   |            |                                                                                         |
                                               | 9999                                      |            |                                                                                         |
    sys-libs/libzypp                           | 17.29.1                                   | RD         | https://doc.opensuse.org/projects/libzypp/HEAD/                                         | ZYpp Package Management library
                                               | 9999                                      |            |                                                                                         |
@@ -439,6 +440,7 @@
      sys-libs/libsolv                         | 0.7.20                                    | RD         | https://doc.opensuse.org/projects/libzypp/HEAD/                                         | Library for solving packages and reading repositories
                                               | 9999                                      |            |                                                                                         |
        app-arch/zchunk                        | 1.1.16                                    | RD         | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
+                                              | 1.2.0                                     |            |                                                                                         |
                                               | 9999                                      |            |                                                                                         |
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-devel/ucc                                | 1.1-r0                                    |            | https://sourceforge.net/projects/ucc                                                    | UCC is an ANSI C Compiler
