@@ -3,7 +3,7 @@ acct-group/n2n 0: System group: n2n
 acct-user/aptly 0: System user: aptly
 acct-user/n2n 0: System user: n2n
 app-admin/zenmonitor 1.4.2: Zen monitor is monitoring software for AMD Zen-based CPUs
-app-arch/zchunk 1.1.16 9999: A format designed for highly efficient deltas while maintaining good compression
+app-arch/zchunk 1.1.16 1.2.0 9999: A format designed for highly efficient deltas while maintaining good compression
 app-backup/snapper-gui 201020: GUI for snapper, a tool for Linux filesystem snapshot management
 app-crypt/archlinux-keyring 20210616: GnuPG keyring of Archlinux developer keys
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
@@ -204,7 +204,7 @@ sys-apps/mdp 9999: A command-line based markdown presentation tool
 sys-apps/pacman 6.0.1: Archlinux's binary package manager
 sys-apps/pacman-mirrorlist 20210509: Repository list for Archlinux's binary package manager
 sys-apps/yaourt 1.2.2: A pacman wrapper with extended features and AUR support
-sys-apps/zypper 1.14.51 9999: World's most powerful command line package manager
+sys-apps/zypper 1.14.51 1.14.52 9999: World's most powerful command line package manager
 sys-devel/ucc 1.1-r0: UCC is an ANSI C Compiler
 sys-fs/coda 7.0.5: Coda is an advanced network file system, similar to NFS
 sys-fs/erofs-utils 1.3: Userspace tools for EROFS images
