@@ -12,50 +12,38 @@ on:
 jobs:
   nvchecker:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/liangyongxiang/gentoo-testing:master
+
     steps:
     - name: checkout
       uses: actions/checkout@v2
 
-    - name: get configuraction file
-      id: configfile
+    - name: gentoo
       run: |
-        configfile="$(cat .github/workflows/overlay.toml)"
-        echo "::set-output name=context::$configfile"
+        # eselect
+        echo "::group::eselect repository add and sync"
+        repo_name=$(cat profiles/repo_name)
+        eselect repository add "$repo_name" git "file://${PWD}"
+        emerge --sync "$repo_name"
+        egencache --jobs=$(nproc) --update --repo "$repo_name" &> /dev/null
+        eix-update
+        echo "::endgroup::"
+        # eix
+        echo "::group::eix search packages"
+        pkgs=$(ACCEPT_LICENSE="*" ACCEPT_KEYWORDS="~amd64" EIX_LIMIT=0 NAMEVERSION="<category>/<name>-<version>\n" eix --pure-packages --in-overlay "$repo_name" --format '<bestversion:NAMEVERSION>')
+        pkgs=$(qatom -F "\"%{CATEGORY}/%{PN}\": \"%{PV}\"," $pkgs) # remove revision
+        echo "$pkgs"
+        pkgs="{ ${pkgs::-1} }"
+        echo "$pkgs" > .github/workflows/old_ver.json
+        cat .github/workflows/old_ver.json
+        echo "::endgroup::"
 
-    - name: nvchecker in gentoo
-      id: gentoo
-      uses: liangyongxiang/gentoo-nvchecker@master
-      with:
-        configfile: "${{ steps.configfile.outputs.context }}"
-        github_token: "${{ secrets.GITHUB_TOKEN }}"
-
-    outputs:
-      matrix: ${{ steps.gentoo.outputs.bumps }}
-
-  issues:
-    needs: nvchecker
-    if: needs.nvchecker.outputs.matrix != ''
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        package: ${{fromJSON(needs.nvchecker.outputs.matrix)}}
-    steps:
-    - name: checkout
-      uses: actions/checkout@v2
-    - name: echo
+    - name: nvchecker
       run: |
-        echo "---" >> .github/ISSUE_TEMPLATE.md
-        echo "title: \"[nvchecker] ${{ matrix.package.name }} can be bump to ${{ matrix.package.newver }}\"" >> .github/ISSUE_TEMPLATE.md
-        echo "---" >> .github/ISSUE_TEMPLATE.md
-        if [ ! -z "${{ matrix.package.oldver }}" ]; then
-          echo "type: ${{ matrix.package.delta }}, oldver: ${{ matrix.package.oldver }}" >> .github/ISSUE_TEMPLATE.md
-        else
-          echo "type: ${{ matrix.package.delta }}" >> .github/ISSUE_TEMPLATE.md
-        fi
-        cat .github/ISSUE_TEMPLATE.md
-    - uses: dblock/create-a-github-issue@v3
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        update_existing: true
-        search_existing: all
+        echo "::group::nvchecker and nvcmp"
+        cd .github/workflows/
+        echo -e "[keys]\ngithub = \"${{ secrets.GITHUB_TOKEN }}\"" > keyfile.toml
+        nvchecker --file overlay.toml --keyfile keyfile.toml
+        nvcmp --file overlay.toml --json --newer
+        echo "::endgroup::"
