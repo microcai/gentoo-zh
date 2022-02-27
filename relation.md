@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-02-26 23:12:45 CST)
+(The last generation time: 2022-02-27 15:36:01 CST)
 
 ### Packages
 
@@ -214,7 +214,7 @@
  dev-python/labelme                           | 4.6.0                                     |            | https://github.com/wkentaro/labelme                                                     | Image Polygonal Annotation with Python
    dev-python/imgviz                          | 1.3.0                                     |  D, RD     | https://github.com/wkentaro/imgviz                                                      | mage Visualization Tools
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/nvchecker                         | 2.7                                       |            | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
+ dev-python/nvchecker                         | 2.7-r1                                    |            | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
    dev-python/structlog                       | 21.5.0                                    | RD         | http://www.structlog.org/en/stable/                                                     | Structured Logging for Python
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/python-telegram-bot               | 13.11                                     |            | https://github.com/python-telegram-bot/python-telegram-bot                              | Python wrapper of telegram bots API
