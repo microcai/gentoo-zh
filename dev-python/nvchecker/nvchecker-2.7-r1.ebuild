@@ -26,6 +26,7 @@ BDEPEND="
 	)
 "
 RDEPEND="
+	dev-python/appdirs[$PYTHON_USEDEP]
 	dev-python/structlog[$PYTHON_USEDEP]
 	dev-python/tomli[$PYTHON_USEDEP]
 	>=www-servers/tornado-6[${PYTHON_USEDEP}]
