@@ -40,10 +40,22 @@ jobs:
         echo "::endgroup::"
 
     - name: nvchecker
+      id: nvchecker
       run: |
         echo "::group::nvchecker and nvcmp"
         cd .github/workflows/
         echo -e "[keys]\ngithub = \"${{ secrets.GITHUB_TOKEN }}\"" > keyfile.toml
         nvchecker --file overlay.toml --keyfile keyfile.toml
-        nvcmp --file overlay.toml --json --newer
+        echo "::set-output name=nvcmp::$(nvcmp --file overlay.toml --json --newer)"
         echo "::endgroup::"
+
+    - name: update issues
+      uses: actions/github-script@v6
+      env:
+        pkgs: ${{steps.nvchecker.outputs.nvcmp}}
+      with:
+        script: |
+          const script = require('./.github/workflows/issues-bumper.js');
+          (async function () {
+            await script({github, context});
+          })();
