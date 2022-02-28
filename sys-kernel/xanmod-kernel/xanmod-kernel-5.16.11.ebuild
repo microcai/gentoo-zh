@@ -15,7 +15,7 @@ SRC_URI+=" https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.x
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.base.tar.xz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.extras.tar.xz
 	https://github.com/xanmod/linux/releases/download/${PV}-xanmod${XV}/patch-${PV}-xanmod${XV}.xz
-	https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x/cjktty-5.15.patch"
+	https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x/cjktty-${PV%.*}.patch"
 S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
@@ -71,7 +71,7 @@ src_prepare() {
 		"${WORKDIR}"/patch-${PV}-xanmod${XV}
 	)
 	if use cjk; then
-		PATCHES+=("${DISTDIR}/cjktty-${MY_P}.patch")
+		PATCHES+=("${DISTDIR}/cjktty-${PV%.*}.patch")
 	fi
 	default
 
