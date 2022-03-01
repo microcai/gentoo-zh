@@ -7,7 +7,7 @@ inherit desktop unpacker
 
 DESCRIPTION="A Windows/macOS/Linux GUI based on Clash and Electron."
 HOMEPAGE="https://github.com/Fndroid/clash_for_windows_pkg"
-SRC_URI="https://github.com/Fndroid/clash_for_windows_pkg/releases/download/${PV}/Clash.for.Windows-0.19.7-x64-linux.tar.gz"
+SRC_URI="https://github.com/Fndroid/clash_for_windows_pkg/releases/download/${PV}/Clash.for.Windows-${PV}-x64-linux.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -25,7 +25,7 @@ RDEPEND="
 S="${WORKDIR}"
 
 src_configure() {
-	mv "${S}/Clash for Windows-0.19.7-x64-linux" "${S}/${PN}"
+	mv "${S}/Clash for Windows-${PV}-x64-linux" "${S}/${PN}"
 }
 
 src_install() {
