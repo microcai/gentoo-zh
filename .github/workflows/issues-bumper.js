@@ -54,16 +54,22 @@ module.exports = async ({ github, context }) => {
               // if body and title all matched, goto next loop
               return;
             } else {
-              // if body or title not matched, edit it, then goto next loop
-              const issueUpdate = await github.rest.issues.update({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: issueData.number,
-                title: title,
-                body: body,
-              });
-              console.log("Edit issue on %s", issueUpdate.data.html_url);
-              return;
+              // if body or title not matched
+              if (issueData.state == "open") {
+                // if state is open, edit it, then goto next loop
+                const issueUpdate = await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issueData.number,
+                  title: title,
+                  body: body,
+                });
+                console.log("Edit issue on %s", issueUpdate.data.html_url);
+                return;
+              } else {
+                // if state is clsoe,create new
+                break;
+              }
             }
           }
         }
