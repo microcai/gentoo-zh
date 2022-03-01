@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-02-28 21:18:24 CST)
+(The last generation time: 2022-03-01 11:56:59 CST)
 
 ### Packages
 
@@ -280,7 +280,6 @@
    media-gfx/sane-backends                    | 9999                                      |  D         | http://www.sane-project.org/                                                            | Scanner Access Now Easy - Backends
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/tifig-bin                          | 0.2.2                                     |            | https://github.com/monostream/tifig                                                     | Converts iOS 11 HEIC images to practical formats - Static binary
-   sys-libs/glibc                             | 2.35                                      |  D, RD     | https://www.gnu.org/software/libc/                                                      | GNU libc C library
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/xrectsel                           | 0.3.1                                     |            | https://github.com/lolilolicon/xrectsel                                                 | print the geometry of a rectangular screen region
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
