@@ -46,16 +46,15 @@ module.exports = async ({ github, context }) => {
     (async function () {
       // search existed in issues
       for (let issueData of issuesData) {
-        // if title matched
-        issueDataTitle = issueData.title;
-        if (issueDataTitle.length >= titlePrefix.length) {
-          if (issueDataTitle.substring(0, titlePrefix.length) == titlePrefix) {
-            // title matched;
-            if (issueData.body == body) {
-              // if body matched, goto next loop
+        // if titlePrefix matched
+        if (issueData.title.length >= titlePrefix.length) {
+          if (issueData.title.substring(0, titlePrefix.length) == titlePrefix) {
+            // titlePrefix matched;
+            if (issueData.body == body && issueData.title == title) {
+              // if body and title all matched, goto next loop
               return;
             } else {
-              // if body not matched, edit body, then goto next loop
+              // if body or title not matched, edit it, then goto next loop
               const issueUpdate = await github.rest.issues.update({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
