@@ -52,7 +52,9 @@ module.exports = async ({ github, context }) => {
       body = "oldver: " + pkg.oldver;
     }
 
+    // append @github_account to body
     github_accounts = getGithubAccount(pkg.name);
+    // if (github_accounts) {
     if (typeof github_accounts == "object") {
       body += "\nCC: ";
       for (let github_account of github_accounts) {
@@ -61,6 +63,7 @@ module.exports = async ({ github, context }) => {
     } else if (typeof github_accounts == "string") {
       body += "\nCC: @" + github_accounts;
     }
+    // }
 
     (async function () {
       // search existed in issues
