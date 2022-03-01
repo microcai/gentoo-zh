@@ -49,6 +49,15 @@ jobs:
         echo "::set-output name=nvcmp::$(nvcmp --file overlay.toml --json --newer)"
         echo "::endgroup::"
 
+    - name: setup node
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16
+
+    - name: install github-script depends
+      run: |
+        npm install toml
+
     - name: update issues
       uses: actions/github-script@v6
       env:

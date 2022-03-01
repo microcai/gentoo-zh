@@ -9,6 +9,19 @@ async function getSearchIssuesResult(github, context, page_number = 1) {
   return searchIssues.data.items;
 }
 
+function getGithubAccount(package) {
+  var toml = require("toml");
+  var fs = require("fs");
+  var tomlFileContent = fs.readFileSync(
+    ".github/workflows/overlay.toml",
+    "utf8"
+  );
+
+  github_account = toml.parse(tomlFileContent)[package]["github_account"];
+
+  return github_account;
+}
+
 module.exports = async ({ github, context }) => {
   let issuesData = [];
   let index = 0;
@@ -25,23 +38,29 @@ module.exports = async ({ github, context }) => {
     }
   }
 
-  // console.log("Limit [nvchecker] fuo-qqmusic can be bump to 0.4");
-
   let pkgs = JSON.parse(process.env.pkgs);
   for (let pkg of pkgs) {
-    delta = pkg.delta;
-    name = pkg.name;
-    newver = pkg.newver;
+    // // limit "x11-misc/9menu" and "dev-libs/libthai"
+    // if (pkg.name != "x11-misc/9menu" && pkg.name != "dev-libs/libthai") {
+    //   continue;
+    // }
+
     titlePrefix = "[nvchecker] " + pkg.name + " can be bump to ";
     title = titlePrefix + pkg.newver;
     var body = "";
     if (pkg.oldver != null) {
       body = "oldver: " + pkg.oldver;
     }
-    // // limit "dev-python/fuo-qqmusic"
-    // if (pkg.name != "dev-python/fuo-qqmusic") {
-    //   continue;
-    // }
+
+    github_accounts = getGithubAccount(pkg.name);
+    if (typeof github_accounts == "object") {
+      body += "\nCC: ";
+      for (let github_account of github_accounts) {
+        body += " @" + github_account;
+      }
+    } else if (typeof github_accounts == "string") {
+      body += "\nCC: @" + github_accounts;
+    }
 
     (async function () {
       // search existed in issues
