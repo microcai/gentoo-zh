@@ -226,7 +226,7 @@ sys-libs/libcutefish 0.7 9999: System library for Cutefish applications
 sys-libs/libixp 0.5_p20110208-r3: A stand-alone client/server 9P library including ixpc client
 sys-libs/libsolv 0.7.21 9999: Library for solving packages and reading repositories
 sys-libs/libzypp 17.29.1 17.29.5 9999: ZYpp Package Management library
-sys-process/btop 1.2.0: Resources monitor. The C++ version of bashtop
+sys-process/btop 1.2.4: Resources monitor. The C++ version of bashtop
 virtual/dist-kernel 5.10.102 5.15.25 5.16.11: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r10: Virtual for Linux kernel sources
 www-servers/darkhttpd 1.13: A small, static webserver
