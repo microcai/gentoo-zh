@@ -222,7 +222,6 @@ sys-kernel/zenpower 0.1.12-r1: Linux kernel driver for reading sensors of AMD Ze
 sys-libs/cutefish-core 0.7 0.8 9999: System components and backend of CutefishOS
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/fishui 0.7 0.8 9999: GUI library based on QQC2 for Cutefish applications
-sys-libs/glibc 2.35: GNU libc C library
 sys-libs/libcutefish 0.7 9999: System library for Cutefish applications
 sys-libs/libixp 0.5_p20110208-r3: A stand-alone client/server 9P library including ixpc client
 sys-libs/libsolv 0.7.21 9999: Library for solving packages and reading repositories

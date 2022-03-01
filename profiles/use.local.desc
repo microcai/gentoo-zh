@@ -158,17 +158,6 @@ sys-kernel/xanmod-hybrid:tt - Enable Default Xanmod Patches with TT CPU Schedule
 sys-kernel/xanmod-hybrid:xanmod - Enable Default Xanmod Patches.
 sys-kernel/xanmod-kernel:clang - Use clang compiler instead of GCC
 sys-kernel/xanmod-kernel:initramfs - Build initramfs along with the kernel.
-sys-libs/glibc:cet - Enable Intel Control-flow Enforcement Technology (needs binutils 2.29 and gcc 8)
-sys-libs/glibc:clone3 - Enable the new clone3 syscall within glibc. Can be disabled to allow compatibility with older Electron applications.
-sys-libs/glibc:compile-locales - build *all* locales in src_install; this is generally meant for stage building only as it ignores /etc/locale.gen file and can be pretty slow
-sys-libs/glibc:crypt - build and install libcrypt and crypt.h
-sys-libs/glibc:gd - build memusage and memusagestat tools
-sys-libs/glibc:multiarch - enable optimizations for multiple CPU architectures (detected at runtime)
-sys-libs/glibc:multilib-bootstrap - Provide prebuilt libgcc.a and crt files if missing. Only needed for ABI switch.
-sys-libs/glibc:nscd - Build, and enable support for, the Name Service Cache Daemon
-sys-libs/glibc:ssp - protect stack of glibc internals
-sys-libs/glibc:suid - Make internal pt_chown helper setuid -- not needed if using Linux and have /dev/pts mounted with gid=5
-sys-libs/glibc:systemtap - enable systemtap static probe points
 virtual/linux-sources:firmware - Install linux kernel firmware
 www-servers/woof:bzip2 - bzip2 decompression of the archive from woof
 www-servers/woof:gzip - gzip decompression of the archive from woof
