@@ -560,6 +560,7 @@ source = "github"
 github = "be5invis/sarasa-gothic"
 use_latest_release = true
 prefix = "v"
+github_account = "zozx"
 
 # TODO: version not found: https://sites.google.com/view/jtfoundry/zh-tw/downloads
 #["media-fonts/taipei-sans-tc"]
@@ -912,11 +913,6 @@ prefix = "v"
 
 # TODO
 #["sys-libs/fishui"]
-
-["sys-libs/glibc"]
-source = "regex"
-url = "https://www.gnu.org/software/libc/"
-regex = "The current stable version of glibc is ([\\d.]+)"
 
 #["sys-libs/libcutefish"]
 
