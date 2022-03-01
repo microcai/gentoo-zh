@@ -47,29 +47,31 @@ module.exports = async ({ github, context }) => {
       // search existed in issues
       for (let issueData of issuesData) {
         // if titlePrefix matched
-        if (issueData.title.length >= titlePrefix.length) {
-          if (issueData.title.substring(0, titlePrefix.length) == titlePrefix) {
-            // titlePrefix matched;
-            if (issueData.body == body && issueData.title == title) {
-              // if body and title all matched, goto next loop
+        if (
+          issueData.title.length >= titlePrefix.length
+            ? issueData.title.substring(0, titlePrefix.length) == titlePrefix
+            : false
+        ) {
+          // titlePrefix matched;
+          if (issueData.body == body && issueData.title == title) {
+            // if body and title all matched, goto next loop
+            return;
+          } else {
+            // if body or title not matched
+            if (issueData.state == "open") {
+              // if state is open, edit it, then goto next loop
+              const issueUpdate = await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueData.number,
+                title: title,
+                body: body,
+              });
+              console.log("Edit issue on %s", issueUpdate.data.html_url);
               return;
             } else {
-              // if body or title not matched
-              if (issueData.state == "open") {
-                // if state is open, edit it, then goto next loop
-                const issueUpdate = await github.rest.issues.update({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  issue_number: issueData.number,
-                  title: title,
-                  body: body,
-                });
-                console.log("Edit issue on %s", issueUpdate.data.html_url);
-                return;
-              } else {
-                // if state is clsoe,create new
-                break;
-              }
+              // if state is clsoe,create new
+              break;
             }
           }
         }
