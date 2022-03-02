@@ -53,7 +53,7 @@ module.exports = async ({ github, context, core }) => {
     title = titlePrefix + pkg.newver;
     var body = "";
     if (pkg.oldver != null) {
-      body = "oldver: " + pkg.oldver;
+      body += "oldver: " + pkg.oldver;
     }
 
     // append @github_account to body
@@ -68,6 +68,12 @@ module.exports = async ({ github, context, core }) => {
       body += "\nCC: @" + github_accounts;
     }
     // }
+
+    // if body still empty, convert to null
+    // because github rest api response's issue body is null, they should be same
+    if (body == "") {
+      body = null;
+    }
 
     (async function () {
       // search existed in issues
