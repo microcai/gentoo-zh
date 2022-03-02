@@ -1,6 +1,6 @@
 async function getSearchIssuesResult(github, context, page_number = 1) {
   titleSearchKeyword = "[nvchecker] can be bump to";
-  searchQuery = `repo:${context.payload.repository.full_name} is:issue in:title ${titleSearchKeyword}`;
+  searchQuery = `repo:${process.env.GITHUB_REPOSITORY} is:issue in:title ${titleSearchKeyword}`;
   const searchIssues = await github.rest.search.issuesAndPullRequests({
     q: searchQuery,
     per_page: 100,
