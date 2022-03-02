@@ -22,19 +22,23 @@ function getGithubAccount(package) {
   return github_account;
 }
 
-module.exports = async ({ github, context }) => {
+module.exports = async ({ github, context, core }) => {
   let issuesData = [];
   let index = 0;
   while (true) {
     index++;
-    const response = await getSearchIssuesResult(
-      github,
-      context,
-      (page_number = index)
-    );
-    issuesData = issuesData.concat(response);
-    if (response.length < 100) {
-      break;
+    try {
+      const response = await getSearchIssuesResult(
+        github,
+        context,
+        (page_number = index)
+      );
+      issuesData = issuesData.concat(response);
+      if (response.length < 100) {
+        break;
+      }
+    } catch (error) {
+      core.warning(`Waring ${error}, action may still succeed though`);
     }
   }
 
@@ -49,7 +53,7 @@ module.exports = async ({ github, context }) => {
     title = titlePrefix + pkg.newver;
     var body = "";
     if (pkg.oldver != null) {
-      body = "oldver: " + pkg.oldver;
+      body += "oldver: " + pkg.oldver;
     }
 
     // append @github_account to body
@@ -64,6 +68,12 @@ module.exports = async ({ github, context }) => {
       body += "\nCC: @" + github_accounts;
     }
     // }
+
+    // if body still empty, convert to null
+    // because github rest api response's issue body is null, they should be same
+    if (body == "") {
+      body = null;
+    }
 
     (async function () {
       // search existed in issues
@@ -98,15 +108,19 @@ module.exports = async ({ github, context }) => {
           }
         }
       }
-      // create new issue
-      const issuesCreate = await github.rest.issues.create({
-        owner: context.repo.owner,
-        repo: context.repo.repo,
-        title: title,
-        body: body,
-        labels: ["nvchecker"],
-      });
-      console.log("Created issue on %s", issuesCreate.data.html_url);
+      try {
+        // create new issue
+        const issuesCreate = await github.rest.issues.create({
+          owner: context.repo.owner,
+          repo: context.repo.repo,
+          title: title,
+          body: body,
+          labels: ["nvchecker"],
+        });
+        console.log("Created issue on %s", issuesCreate.data.html_url);
+      } catch (error) {
+        core.warning(`Waring ${error}, action may still succeed though`);
+      }
     })();
   }
 };
