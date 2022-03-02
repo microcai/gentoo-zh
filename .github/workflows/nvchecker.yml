@@ -66,5 +66,5 @@ jobs:
         script: |
           const script = require('./.github/workflows/issues-bumper.js');
           (async function () {
-            await script({github, context});
+            await script({github, context, core});
           })();
