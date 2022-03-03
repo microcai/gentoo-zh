@@ -122,6 +122,7 @@ dev-util/elfembed 0.3-r1: Resource Compiler for ELF binaries
 dev-util/fernflower 1: Fernflower is the first actually working analytical decompiler for Java and probably for a high-level programming language in general
 dev-util/jd-gui 1.4.0: A standalone graphical utility that displays Java source codes of .class file
 dev-util/jetbrains-toolbox 1.22.10774: Manage all your JetBrains Projects and Tools
+dev-util/lldb-mi 9999: LLDB Machine Interface Driver
 dev-util/pahole 1.23: pahole (Poke-a-Hole) and other DWARF2 utilities
 dev-util/rust-analyzer 20210712: An experimental Rust compiler front-end for IDEs
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
