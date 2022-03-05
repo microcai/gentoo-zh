@@ -1,0 +1,8 @@
+DEFINED_PHASES=pretend
+DESCRIPTION=Meta package for proton-ge-custom-bin, make it easier to pull in dependencies
+EAPI=8
+IUSE=kde gnome
+KEYWORDS=~amd64
+RDEPEND=dev-lang/python-exec media-libs/vulkan-loader[abi_x86_32] dev-libs/libusb[abi_x86_32] media-libs/openal[abi_x86_32] x11-libs/libva[abi_x86_32] media-video/ffmpeg media-libs/speex[abi_x86_32] media-libs/libtheora[abi_x86_32] x11-libs/libvdpau[abi_x86_32] media-libs/gst-plugins-bad media-libs/gst-plugins-base[abi_x86_32] media-libs/libjpeg-turbo[abi_x86_32] dev-libs/libgudev[abi_x86_32] media-libs/flac[abi_x86_32] media-sound/mpg123[abi_x86_32] kde? ( kde-apps/kdialog ) gnome? ( gnome-extra/zenity ) app-emulation/winetricks virtual/wine[abi_x86_32] app-emulation/proton-ge-custom-bin media-libs/mesa[vulkan]
+SLOT=0
+_md5_=9650af6b977eb3a0311b728e3fd06ac8

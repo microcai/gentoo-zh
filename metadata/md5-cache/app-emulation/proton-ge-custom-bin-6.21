@@ -1,0 +1,10 @@
+DEFINED_PHASES=install pretend
+DESCRIPTION=A fancy custom distribution of Valves Proton with various patches
+EAPI=8
+HOMEPAGE=https://github.com/GloriousEggroll/proton-ge-custom
+KEYWORDS=~amd64
+LICENSE=BSD
+RESTRICT=mirror strip
+SLOT=6.21
+SRC_URI=https://github.com/GloriousEggroll/proton-ge-custom/releases/download/6.21-GE-2/Proton-6.21-GE-2.tar.gz -> proton-ge-custom-bin-6.21.tar.gz
+_md5_=df9b8a4ffe948d09f2a817685fc88d88
