@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-03-05 14:07:02 CST)
+(The last generation time: 2022-03-06 01:20:27 CST)
 
 ### Packages
 
@@ -481,6 +481,10 @@
                                               | 5.16.11                                   |            |                                                                                         |
    sys-kernel/xanmod-rt                       | 5.15.12                                   | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod-RT, cjktty, uksm patchset for main kernel tree
                                               | 5.15.14                                   |            |                                                                                         |
+----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ virtual/proton-ge-custom-meta                | 1                                         |            |                                                                                         | Meta package for proton-ge-custom-bin, make it easier to pull in dependencies
+   app-emulation/proton-ge-custom-bin         | 6.21                                      | RD         | https://github.com/GloriousEggroll/proton-ge-custom                                     | A fancy custom distribution of Valves Proton with various patches
+                                              | 7.8                                       |            |                                                                                         |
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                        | 1.13                                      |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
