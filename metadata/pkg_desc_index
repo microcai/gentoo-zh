@@ -125,7 +125,7 @@ dev-util/jd-gui 1.4.0: A standalone graphical utility that displays Java source 
 dev-util/jetbrains-toolbox 1.22.10774: Manage all your JetBrains Projects and Tools
 dev-util/lldb-mi 9999: LLDB Machine Interface Driver
 dev-util/pahole 1.23: pahole (Poke-a-Hole) and other DWARF2 utilities
-dev-util/rust-analyzer 20210712: An experimental Rust compiler front-end for IDEs
+dev-util/rust-analyzer 20220228 99999999: An experimental Rust compiler front-end for IDEs
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-vcs/lazygit-bin 0.32: lazygit, a simple terminal UI for git commands
 games-action/DDNet 15.8.1: DDraceNetwork, a cooperative racing mod of Teeworlds
@@ -228,7 +228,7 @@ sys-libs/libcutefish 0.7 9999: System library for Cutefish applications
 sys-libs/libixp 0.5_p20110208-r3: A stand-alone client/server 9P library including ixpc client
 sys-libs/libsolv 0.7.21 9999: Library for solving packages and reading repositories
 sys-libs/libzypp 17.29.1 17.29.5 9999: ZYpp Package Management library
-sys-process/btop 1.2.4: Resources monitor. The C++ version of bashtop
+sys-process/btop 1.2.5: Resources monitor. The C++ version of bashtop
 virtual/dist-kernel 5.10.102 5.15.25 5.16.11: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r10: Virtual for Linux kernel sources
 virtual/proton-ge-custom-meta 1: Meta package for proton-ge-custom-bin, make it easier to pull in dependencies
