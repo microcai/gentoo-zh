@@ -130,6 +130,7 @@ dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-vcs/lazygit-bin 0.32: lazygit, a simple terminal UI for git commands
 games-action/DDNet 15.8.1: DDraceNetwork, a cooperative racing mod of Teeworlds
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
+games-util/mangohud 0.6.6-r1: A Vulkan & OpenGL overlay for monitoring FPS,temperatures,CPU/GPU load and more.
 games-util/winegame-client-bin 0.5.9.3: An open source gaming platform for GNU/Linux
 kde-misc/plasma-applet-netspeed-widget 1.9 9999: Plasma 5 widget that displays the currently used network bandwidth.
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
