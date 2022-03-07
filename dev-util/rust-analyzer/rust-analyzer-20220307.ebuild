@@ -145,7 +145,7 @@ tracing-log-0.1.2
 tracing-subscriber-0.3.8
 tracing-tree-0.2.0
 typed-arena-2.0.1
-ungrammar-1.15.0
+ungrammar-1.16.1
 unicase-2.6.0
 unicode-bidi-0.3.7
 unicode-normalization-0.1.19
@@ -176,6 +176,7 @@ xflags-0.2.3
 xflags-macros-0.2.3
 xshell-0.1.17
 xshell-macros-0.1.17
+
 "
 
 inherit cargo
