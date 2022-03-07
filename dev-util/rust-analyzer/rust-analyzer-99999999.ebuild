@@ -8,7 +8,7 @@ CRATES="
 
 inherit cargo git-r3
 
-MY_PV="${PV:0:4}-${PV:4:2}-${PV:6:2}"
+#MY_PV="${PV:0:4}-${PV:4:2}-${PV:6:2}"
 
 KEYWORDS=""
 EGIT_REPO_URI="https://github.com/rust-analyzer/rust-analyzer"
@@ -26,7 +26,7 @@ DEPEND="|| ( >=dev-lang/rust-1.54.0[rls] >=dev-lang/rust-bin-1.54.0[rls] )"
 RDEPEND="${DEPEND}"
 SLOT="0"
 
-S="${WORKDIR}/${PN}-${MY_PV}"
+#S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_unpack() {
 	git-r3_src_unpack
