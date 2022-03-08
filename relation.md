@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-03-08 00:04:28 CST)
+(The last generation time: 2022-03-08 22:55:55 CST)
 
 ### Packages
 
@@ -312,7 +312,7 @@
    media-plugins/osdlyrics                    | 0.5.10-r1                                 | RD         | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
                                               | 9999                                      |            |                                                                                         |
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/termusic                         | 0.6.10                                    |            | https://github.com/tramhao/termusic                                                     | Music Player TUI written in Rust
+ media-sound/termusic                         | 0.6.11                                    |            | https://github.com/tramhao/termusic                                                     | Music Player TUI written in Rust
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/yesplaymusic-bin                 | 0.4.3                                     |            | https://github.com/qier222/YesPlayMusic                                                 | A third party music player for Netease Music
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
