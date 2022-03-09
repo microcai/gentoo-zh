@@ -26,7 +26,6 @@ REQUIRED_USE="
 "
 
 RESTRICT="!test? ( test )"
-PATCHES=( "${FILESDIR}/build-when-disabled-wayland.patch" )
 
 RDEPEND="dev-libs/glib:2
 	sys-apps/dbus
