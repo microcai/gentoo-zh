@@ -12,11 +12,11 @@ EGIT_BRANCH="main"
 
 inherit git-r3 cmake
 
-LICENSE="GPL-2"
+LICENSE="Apache-2.0-with-LLVM-exceptions"
 SLOT="0"
 KEYWORDS="amd64"
 
-DEPEND="sys-devel/llvm
+DEPEND="sys-devel/llvm:=
 dev-util/lldb
 "
 RDEPEND="${DEPEND}"
