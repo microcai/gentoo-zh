@@ -8,6 +8,6 @@ IUSE=X
 KEYWORDS=~amd64
 LICENSE=OFL-1.1
 SLOT=0
-SRC_URI=https://github.com/ButTaiwan/iansui/archive/refs/tags/v0.920.tar.gz -> iansui-0.920.tar.gz
+SRC_URI=https://github.com/ButTaiwan/iansui/archive/refs/tags/v0.940.tar.gz -> iansui-0.940.tar.gz
 _eclasses_=font	0667878c2b594871023dd1833d05996f
 _md5_=095ad65e1102e7c56533b765c9d17806
