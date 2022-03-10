@@ -5,7 +5,4 @@
 		<email>dylanturing@protonmail.com</email>
 		<name>Schroedinger</name>
 	</maintainer>
-	<longdescription lang="en">
-		A simple terminal UI for git commands, written in Go with the gocui library.
-	</longdescription>
 </pkgmetadata>
