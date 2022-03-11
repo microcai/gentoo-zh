@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-03-11 00:50:28 CST)
+(The last generation time: 2022-03-11 19:06:56 CST)
 
 ### Packages
 
@@ -45,16 +45,16 @@
                                               | 9999                                      |            |                                                                                         |
    app-i18n/fcitx5-gtk                        | 5.0.13                                    | RD         | https://github.com/fcitx/fcitx5-gtk                                                     | Gtk im module for fcitx5 and glib based dbus client library
                                               | 9999                                      |            |                                                                                         |
-   app-i18n/fcitx5-hangul                     | 5.0.7                                     | RD         | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
+   app-i18n/fcitx5-hangul                     | 5.0.8                                     | RD         | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
    app-i18n/fcitx5-rime                       | 5.0.12                                    | RD         | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
                                               | 9999                                      |            |                                                                                         |
      app-i18n/rime-prelude                    | 20220122                                  |  D, RD     | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
    app-i18n/fcitx5-skk                        | 5.0.11                                    | RD         | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
                                               | 9999                                      |            |                                                                                         |
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/fcitx5-table-extra                  | 5.0.8                                     |            | https://github.com/fcitx/fcitx5-table-extra                                             | Provides extra table for Fcitx, including Boshiamy, Zhengma, Cangjie, and Quick
+ app-i18n/fcitx5-table-extra                  | 5.0.9                                     |            | https://github.com/fcitx/fcitx5-table-extra                                             | Provides extra table for Fcitx, including Boshiamy, Zhengma, Cangjie, and Quick
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/fcitx5-table-other                  | 5.0.7                                     |            | https://github.com/fcitx/fcitx5-table-other                                             | Provides some other tables for Fcitx, fork from ibus-table-others, scim-tables
+ app-i18n/fcitx5-table-other                  | 5.0.8                                     |            | https://github.com/fcitx/fcitx5-table-other                                             | Provides some other tables for Fcitx, fork from ibus-table-others, scim-tables
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/gcin                                | 2.9.0-r2                                  |            | http://hyperrate.com/dir.php?eid=67                                                     | Another Traditional Chinese IM.
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
