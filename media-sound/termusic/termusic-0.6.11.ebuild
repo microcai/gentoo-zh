@@ -364,7 +364,12 @@ src_configure() {
 }
 
 src_install() {
-	default
+	# Calling *default* here portage will invoke *make install*
+	# which install binary into "${HOME}/.local/share/cargo/bin"
+	# Instead *cargo_src_install* should be called
+	# to properly install binary into "${ED}/usr/bin"
+	# pr 1906
+	cargo_src_install
 
 	local DOCS=(
 		CHANGELOG.md README.md
