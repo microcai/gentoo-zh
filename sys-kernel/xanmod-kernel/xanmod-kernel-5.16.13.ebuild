@@ -3,10 +3,10 @@
 
 EAPI=7
 
-inherit kernel-build toolchain-funcs
+inherit kernel-build python-any-r1 toolchain-funcs
 
 MY_P=linux-${PV%.*}
-GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 7))
+GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 1))
 XV="1"
 
 DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
@@ -20,9 +20,15 @@ S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64"
-IUSE="cjk"
-SLOT="lts"
+IUSE="cjk clang"
+SLOT="edge"
 
+BDEPEND="
+	clang? (
+		sys-devel/clang
+		sys-devel/lld
+		sys-devel/llvm
+		)"
 PDEPEND="
 	>=virtual/dist-kernel-${PV}"
 
@@ -38,11 +44,25 @@ pkg_setup() {
 	ewarn "the ebuilds. Thank you."
 	ewarn ""
 	python-any-r1_pkg_setup "$@"
+	if use clang && ! tc-is-clang; then
+		export LLVM_IAS=1
+		export LLVM=1
+		export CC=clang
+		export LD=ld.lld
+		export AR=llvm-ar
+		export NM=llvm-nm
+		export OBJCOPY=llvm-objcopy
+		export OBJDUMP=llvm-objdump
+		export READELF=llvm-readelf
+		export STRIP=llvm-strip
+	else
+		tc-export CXX CC
+	fi
 }
 
 src_prepare() {
 	# delete linux version patches
-	rm "${WORKDIR}"/10*.patch || die
+	rm "${WORKDIR}"/*${MY_P}*.patch || die
 
 	local PATCHES=(
 		# genpatches
@@ -58,7 +78,11 @@ src_prepare() {
 	# prepare the default config
 	case ${ARCH} in
 	amd64)
-		cp "${S}/CONFIGS/xanmod/gcc/config" .config || die
+		if use clang; then
+			cp "${S}/CONFIGS/xanmod/clang/config" .config || die
+		else
+			cp "${S}/CONFIGS/xanmod/gcc/config" .config || die
+		fi
 		;;
 	*)
 		die "Unsupported arch ${ARCH}"

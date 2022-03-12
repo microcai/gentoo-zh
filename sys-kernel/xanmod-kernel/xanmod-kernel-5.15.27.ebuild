@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit kernel-build toolchain-funcs
+inherit kernel-build python-any-r1 toolchain-funcs
 
 MY_P=linux-${PV%.*}
 GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 2))
@@ -62,7 +62,7 @@ pkg_setup() {
 
 src_prepare() {
 	# delete linux version patches
-	rm "${WORKDIR}"/10*.patch || die
+	rm "${WORKDIR}"/*${MY_P}*.patch || die
 
 	local PATCHES=(
 		# genpatches
