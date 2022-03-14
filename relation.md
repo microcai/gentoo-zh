@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-03-14 16:12:11 CST)
+(The last generation time: 2022-03-14 17:21:09 CST)
 
 ### Packages
 
@@ -242,7 +242,7 @@
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/lldb-mi                             | 9999                                      |            | https://github.com/lldb-tools/lldb-mi                                                   | LLDB Machine Interface Driver
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/rust-analyzer                       | 20220307                                  |            | https://github.com/rust-analyzer/rust-analyzer                                          | An experimental Rust compiler front-end for IDEs
+ dev-util/rust-analyzer                       | 20220314                                  |            | https://github.com/rust-analyzer/rust-analyzer                                          | An experimental Rust compiler front-end for IDEs
                                               | 99999999                                  |            |                                                                                         |
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/v2ray-geoip-generator               | 9999                                      |            | https://github.com/v2fly/geoip                                                          | GeoIP generator for V2Ray.
