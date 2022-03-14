@@ -552,6 +552,7 @@ source = "github"
 github = "ButTaiwan/iansui"
 use_latest_release = true
 prefix = "v"
+github_account = "Linerre"
 
 ["media-fonts/jf-openhuninn"]
 source = "github"
@@ -564,6 +565,7 @@ source = "github"
 github = "lxgw/LxgwWenKai"
 use_latest_release = true
 prefix = "v"
+github_account = "Linerre"
 
 ["media-fonts/nerd-fonts"]
 source = "github"
@@ -953,6 +955,8 @@ source = "github"
 github = "aristocratos/btop"
 use_latest_release = true
 prefix = "v"
+github_account = "Linerre"
+
 
 # virtual, do nothing
 #["virtual/dist-kernel"]
@@ -1030,4 +1034,3 @@ prefix = "v"
 
 # TODO
 #["x11-wm/chamferwm"]
-
