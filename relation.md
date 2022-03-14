@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-03-14 16:05:04 CST)
+(The last generation time: 2022-03-14 16:05:34 CST)
 
 ### Packages
 
@@ -19,6 +19,8 @@
  app-dicts/copytranslator                     | 9.1.0                                     |            | https://copytranslator.github.io/                                                       | Foreign language reading and translation assistant based on copy and translate.
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx5-pinyin-zhwiki               | 20220101                                  |            | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
+----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-editors/AppFlowy-bin                     | 0.0.3                                     |            | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/marktext-bin                     | 0.17.0                                    |            | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
