@@ -176,7 +176,6 @@ xflags-0.2.3
 xflags-macros-0.2.3
 xshell-0.1.17
 xshell-macros-0.1.17
-
 "
 
 inherit cargo
