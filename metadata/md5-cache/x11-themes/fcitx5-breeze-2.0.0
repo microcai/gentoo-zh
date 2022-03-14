@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DEPEND=media-gfx/inkscape
+DESCRIPTION=Fcitx5 theme to match KDE's Breeze style.
+EAPI=8
+HOMEPAGE=https://github.com/scratch-er/fcitx5-breeze
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=app-i18n/fcitx5
+SLOT=0
+SRC_URI=https://github.com/scratch-er/fcitx5-breeze/archive/refs/tags/v2.0.0.tar.gz -> fcitx5-breeze-2.0.0.tar.gz
+_md5_=860608552414141319a0b1d384d35025
