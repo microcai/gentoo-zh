@@ -12,43 +12,59 @@ on:
 jobs:
   nvchecker:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/liangyongxiang/gentoo-testing:master
+
     steps:
     - name: checkout
       uses: actions/checkout@v2
 
-    - name: get configuraction file
-      id: configfile
+    - name: gentoo
       run: |
-        configfile="$(cat .github/workflows/overlay.toml)"
-        echo "::set-output name=context::$configfile"
+        # eselect
+        echo "::group::eselect repository add and sync"
+        repo_name=$(cat profiles/repo_name)
+        eselect repository add "$repo_name" git "file://${PWD}"
+        emerge --sync "$repo_name"
+        egencache --jobs=$(nproc) --update --repo "$repo_name" &> /dev/null
+        eix-update
+        echo "::endgroup::"
+        # eix
+        echo "::group::eix search packages"
+        pkgs=$(ACCEPT_LICENSE="*" ACCEPT_KEYWORDS="~amd64" EIX_LIMIT=0 NAMEVERSION="<category>/<name>-<version>\n" eix --pure-packages --in-overlay "$repo_name" --format '<bestversion:NAMEVERSION>')
+        pkgs=$(qatom -F "\"%{CATEGORY}/%{PN}\": \"%{PV}\"," $pkgs) # remove revision
+        echo "$pkgs"
+        pkgs="{ ${pkgs::-1} }"
+        echo "$pkgs" > .github/workflows/old_ver.json
+        cat .github/workflows/old_ver.json
+        echo "::endgroup::"
 
-    - name: nvchecker in gentoo
-      id: gentoo
-      uses: liangyongxiang/gentoo-nvchecker@master
+    - name: nvchecker
+      id: nvchecker
+      run: |
+        echo "::group::nvchecker and nvcmp"
+        cd .github/workflows/
+        echo -e "[keys]\ngithub = \"${{ secrets.GITHUB_TOKEN }}\"" > keyfile.toml
+        nvchecker --file overlay.toml --keyfile keyfile.toml
+        echo "::set-output name=nvcmp::$(nvcmp --file overlay.toml --json --newer)"
+        echo "::endgroup::"
+
+    - name: setup node
+      uses: actions/setup-node@v2
       with:
-        configfile: "${{ steps.configfile.outputs.context }}"
-        github_token: "${{ secrets.GITHUB_TOKEN }}"
+        node-version: 16
 
-    outputs:
-      matrix: ${{ steps.gentoo.outputs.bumps }}
-
-  issues:
-    needs: nvchecker
-    if: needs.nvchecker.outputs.matrix != ''
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        package: ${{fromJSON(needs.nvchecker.outputs.matrix)}}
-    steps:
-    - name: checkout
-      uses: actions/checkout@v2
-    - name: echo
+    - name: install github-script depends
       run: |
-        echo -e "---\ntitle: \"[nvchecker] ${{ matrix.package.name }} can be bump to ${{ matrix.package.newver }}, current is ${{ matrix.package.oldver }}\"\n---" > .github/ISSUE_TEMPLATE.md
-        cat .github/ISSUE_TEMPLATE.md
-    - uses: dblock/create-a-github-issue@v3
+        npm install toml
+
+    - name: update issues
+      uses: actions/github-script@v6
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        pkgs: ${{steps.nvchecker.outputs.nvcmp}}
       with:
-        update_existing: true
-        search_existing: all
+        script: |
+          const script = require('./.github/workflows/issues-bumper.js');
+          (async function () {
+            await script({github, context, core});
+          })();

@@ -2,12 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
     <maintainer type="person">
-        <email>c2778148787@gmail.com</email>
+        <email>raymond@zozx.top</email>
         <name>Raymond</name>
     </maintainer>
-    <longdescription lang="en">
-        A CJK programming font based on Iosevka and Source Han Sans.
-    </longdescription>
     <use>
         <flag name="classical">Keep classical orthography .ttf files.</flag>
     </use>

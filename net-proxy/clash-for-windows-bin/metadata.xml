@@ -5,7 +5,4 @@
         <email>c2778148787@gmail.com</email>
         <name>Raymond</name>
     </maintainer>
-    <longdescription lang="en">
-        A Windows/macOS/Linux GUI based on Clash and Electron.
-    </longdescription>
 </pkgmetadata>

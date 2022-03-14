@@ -1,0 +1,208 @@
+name: pkgcheck
+on:
+  pull_request_target:
+    branches:
+      - master
+    paths-ignore:
+      - '.github/**'
+      - 'metadata/**'
+    types: [opened, reopened, synchronize]
+
+jobs:
+  check-changed-ebuilds:
+    name: check changed ebuilds
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    container:
+      image: ghcr.io/liangyongxiang/gentoo-testing:master
+
+    steps:
+      - name: Checkout the head ref of the pull request
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: gentoo-zh
+      - name: Get the base commit
+        id: basecommit
+        shell: bash
+        env:
+          COMMITS_URL: ${{ github.event.pull_request.commits_url }}
+          COMMITS_JSON: /tmp/commits.json
+        run: |
+          set -xe
+          curl -H "Accept: application/vnd.github.v3+json" \
+               -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+               -o ${COMMITS_JSON} ${COMMITS_URL}
+          [[ $(file --mime-type ${COMMITS_JSON}) =~ application/json$ ]]
+          <${COMMITS_JSON} jq '.message' && false || true
+          commits=( $(<${COMMITS_JSON} jq '.[].sha' | cut -d'"' -f2) )
+          pcommits=( $(<${COMMITS_JSON} jq '.[].parents[].sha' | cut -d'"' -f2) )
+          sha=${pcommits[0]}
+          for pcommit in ${pcommits[@]}; do
+            pcommit_not_matched=0
+            for commit in ${commits[@]}; do
+              if [[ ${pcommit} == ${commit} ]]; then
+                pcommit_not_matched=1
+              fi
+            done
+            if [[ ${pcommit_not_matched} == 0 ]]; then
+              sha=${pcommit}
+              break
+            fi
+          done
+          echo "::set-output name=sha::${sha}"
+      - name: Check
+        id: check
+        shell: bash
+        env:
+          THEBASEREF: ${{ steps.basecommit.outputs.sha }}
+        run: |
+          set -e
+          mv ${GITHUB_WORKSPACE}/gentoo-zh /var/db/repos/
+          mkdir -p /etc/portage/repos.conf
+          echo "[gentoo]
+          location = /var/db/repos/gentoo
+          " >/etc/portage/repos.conf/gentoo.conf
+          echo "[gentoo-zh]
+          location = /var/db/repos/gentoo-zh
+          " >/etc/portage/repos.conf/gentoo-zh.conf
+          cd /var/db/repos/gentoo-zh
+          echo "git diff --raw ${THEBASEREF}"
+          git diff --raw ${THEBASEREF}
+          diff_files=$(git diff --raw --name-only ${THEBASEREF})
+          cates=$(cat /var/db/repos/gentoo{,-zh}/profiles/categories | sort -du)
+          declare -a check_pkgs
+          for file in ${diff_files}; do
+            c=${file%%/*}
+            for cate in ${cates}; do
+              if [[ ${c} == ${cate} ]]; then
+                n=${file#*/}
+                n=${n%%/*}
+                check_pkgs+=( ${c}/${n} )
+              fi
+            done
+          done
+          check_pkgs=( $(echo "${check_pkgs[@]}" | tr ' ' '\n' | sort -du | tr '\n' ' ') )
+          ret=0
+          echo "pkgs: ${check_pkgs[@]}"
+          set -- pkgcheck scan --exit error "${check_pkgs[@]}"
+          echo ">>> " "${@}"
+          "${@}" >/var/tmp/report.txt || ret=$?
+          cat /var/tmp/report.txt || true
+          set --
+          echo "::set-output name=ret::${ret}"
+          [[ ${ret} == 0 ]]
+      - name: Format report
+        if: ${{ always() }}
+        id: report
+        shell: bash
+        env:
+          ret: ${{ steps.check.outputs.ret }}
+        run: |
+          set -e
+
+          v_pkgcheck=$(pkgcheck --version) || true
+          commit_gentoo=$(cd /var/db/repos/gentoo && git rev-list -n1 HEAD) || true
+
+          r_len=$(wc -c /var/tmp/report.txt | awk -F'[[:space:]]' '{printf $1}')
+          r_header='`pkgcheck` checks'
+          if [[ ${r_len} == 0 ]]; then
+            r_title=":heavy_check_mark: ${r_header} passed"
+          else
+            r_explain="[:mag: QA Keywords Explanation](https://pkgcore.github.io/pkgcheck/man/pkgcheck.html#keywords)"
+            if [[ ${ret} == 0 ]]; then
+              r_title=":white_circle: ${r_header} passed but with something can be improved!"
+            else
+              r_title=":x: ${r_header} failed"
+            fi
+          fi
+
+          cat <<EOF >/var/tmp/report.md
+          ## ${r_title}
+
+          * ${v_pkgcheck}
+          * the corresponding _**::gentoo**_ commit: https://github.com/gentoo-mirror/gentoo/commit/${commit_gentoo}
+
+          EOF
+
+          if [[ -n ${r_explain} ]]; then
+            echo "<details open><summary><b>QA Results:</b></summary>
+            " >>/var/tmp/report.md
+            if [[ ${r_len} -le 65000 ]]; then
+              echo '```' >>/var/tmp/report.md
+              cat /var/tmp/report.txt >>/var/tmp/report.md
+              echo '```' >>/var/tmp/report.md
+            else
+              cd /var/db/repos/gentoo-zh || true
+              commit_id=$(git rev-list -n1 HEAD | cut -b1-7)
+              cat <<EOF >>/var/tmp/report.md
+          * _the report is too long, can be downloaded from **Artifacts** list of the current run:
+            https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}
+            filename: **pkgcheck-report-${commit_id}**_
+          EOF
+              echo "::set-output name=commit::${commit_id}"
+            fi
+            cat <<EOF >>/var/tmp/report.md
+          </details>
+
+          ${r_explain}
+          EOF
+          fi
+          echo "::set-output name=has::true"
+      - name: Hide previous results
+        if: ${{ always() }}
+        shell: bash
+        env:
+          COMMENTS_URL: ${{ github.event.pull_request.comments_url }}
+          COMMENTS_JSON: /tmp/comments.json
+        run: |
+          curl -H "Accept: application/vnd.github.v3+json" \
+               -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+               -o ${COMMENTS_JSON} ${COMMENTS_URL}
+          node_ids=( $(<${COMMENTS_JSON} jq '.[] | select(.body|test("^##\\s*[a-zA-Z_:]+\\s*`pkgcheck`\\s*checks")) | select(.user.id == 41898282) | .node_id' | cut -d'"' -f2) )
+          echo "${node_ids[@]}"
+          json="{ \"query\": \"mutation {
+              minimizeComment(input: {
+                subjectId: \\\"NODEID\\\",
+                classifier: OUTDATED
+              }) {
+                clientMutationId,
+                minimizedComment {
+                  isMinimized,
+                  minimizedReason,
+                  viewerCanMinimize
+                }
+              }
+            }\"
+          }"
+          json=$(tr -d '\n' <<<${json})
+          for node_id in ${node_ids[@]}; do
+            curl -X POST \
+              -H "Content-Type: application/json" \
+              -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              -d "${json/NODEID/${node_id}}" \
+              https://api.github.com/graphql
+          done
+      - name: Post result
+        if: ${{ always() && steps.report.outputs.has }}
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const fs = require("fs").promises;
+            var cbody = await fs.readFile("/var/tmp/report.md", "utf8");
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: cbody
+            })
+      - name: Upload big result
+        if: ${{ always() && steps.report.outputs.commit }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: pkgcheck-report-${{ steps.report.outputs.commit }}
+          path: /var/tmp/report.txt
