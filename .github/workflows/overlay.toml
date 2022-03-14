@@ -33,6 +33,12 @@ prefix = "v"
 # TODO
 #["app-dicts/fcitx5-pinyin-zhwiki"]
 
+["app-editors/AppFlowy-bin"]
+source = "github"
+github = "AppFlowy-IO/AppFlowy"
+use_latest_release = true
+github_account = "liuyujielol"
+
 ["app-editors/marktext-bin"]
 source = "github"
 github = "marktext/marktext"
@@ -90,6 +96,7 @@ use_latest_tag = true
 source = "github"
 github = "fcitx/fcitx5-kkc"
 use_latest_tag = true
+github_account = "liuyujielol"
 
 # virtual package
 #["app-i18n/fcitx5-meta"]
@@ -522,6 +529,8 @@ source = "github"
 github = "flightlessmango/MangoHud"
 use_latest_release = true
 prefix = "v"
+github_account = "liuyujielol"
+
 
 ["games-util/winegame-client-bin"]
 source = "regex"
@@ -533,6 +542,7 @@ source = "github"
 github = "dfaust/plasma-applet-netspeed-widget"
 use_latest_tag = true
 prefix = "v"
+github_account = "liuyujielol"
 
 # TODO
 #["media-fonts/cwtex-q-fonts"]
@@ -542,6 +552,7 @@ source = "github"
 github = "ButTaiwan/iansui"
 use_latest_release = true
 prefix = "v"
+github_account = "Linerre"
 
 ["media-fonts/jf-openhuninn"]
 source = "github"
@@ -554,6 +565,7 @@ source = "github"
 github = "lxgw/LxgwWenKai"
 use_latest_release = true
 prefix = "v"
+github_account = "Linerre"
 
 ["media-fonts/nerd-fonts"]
 source = "github"
@@ -637,12 +649,14 @@ prefix = "v"
 source = "github"
 github = "gmg137/netease-cloud-music-gtk"
 use_latest_release = true
+github_account = "liuyujielol"
 
 ["media-sound/termusic"]
 source = "github"
 github = "tramhao/termusic"
 use_latest_release = true
 prefix = "v"
+github_account = "liuyujielol"
 
 
 ["media-sound/yesplaymusic-bin"]
@@ -819,6 +833,7 @@ source = "github"
 github = "v2rayA/v2rayA"
 use_latest_release = true
 prefix = "v"
+github_account = "liuyujielol"
 
 ["sci-chemistry/vesta"]
 source = "regex"
@@ -940,6 +955,8 @@ source = "github"
 github = "aristocratos/btop"
 use_latest_release = true
 prefix = "v"
+github_account = "Linerre"
+
 
 # virtual, do nothing
 #["virtual/dist-kernel"]
@@ -1017,4 +1034,3 @@ prefix = "v"
 
 # TODO
 #["x11-wm/chamferwm"]
-
