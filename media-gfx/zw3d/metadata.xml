@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<longdescription lang="en">
+	The first domestic 3D computer-aided drawing software based on Linux system
+	independently developed by ZWSOFT, can import and export files in formats
+	such as STL, IGES, STEP, etc., and provide complete sketches, parts,
+	assemblies, engineering drawings, processing plans, etc. functions, as well
+	as a variety of measurement and detection methods and view functions,
+	to meet the needs of Linux system users for autonomous, safe and efficient
+	3D CAD/CAM software.
+	</longdescription>
+	<longdescription lang="zh">
+	由中望软件自主研发的国内首款基于Linux系统的三维计算机辅助绘图软件，
+	可导入导出如STL、IGES、STEP等格式的文件，提供了完整的草图、零件、装配
+	工程图、加工方案等功能，以及多种测量检测方式与视图功能
+	满足Linux系统用户对自主、安全、高效的三维CAD/CAM软件的使用需求。
+	</longdescription>
+</pkgmetadata>
