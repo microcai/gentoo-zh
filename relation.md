@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-03-14 19:55:52 CST)
+(The last generation time: 2022-03-15 11:02:38 CST)
 
 ### Packages
 
@@ -289,6 +289,8 @@
  media-gfx/tifig-bin                          | 0.2.2                                     |            | https://github.com/monostream/tifig                                                     | Converts iOS 11 HEIC images to practical formats - Static binary
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/xrectsel                           | 0.3.1                                     |            | https://github.com/lolilolicon/xrectsel                                                 | print the geometry of a rectangular screen region
+----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ media-gfx/zw3d                               | 2022.26.00                                |            | https://www.zwsoft.cn/product/zw3d/linux                                                | CAD/CAM software for 3D design and processing
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-libs/libspiro                          | 0.3.20150131                              |            | https://github.com/fontforge/libspiro                                                   | Spiro is the creation of Raph Levien. It simplifies the drawing of beautiful curves.
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
