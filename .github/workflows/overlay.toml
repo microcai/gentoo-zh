@@ -664,6 +664,7 @@ source = "github"
 github = "qier222/YesPlayMusic"
 use_latest_release = true
 prefix = "v"
+github_account = "zozx"
 
 # TODO
 #["media-video/avplayer"]
@@ -892,8 +893,13 @@ prefix = "v"
 # No releases
 #["sys-fs/systemd-zpool-scrub"]
 
-#TODO
-#["sys-kernel/liquorix-sources"]
+["sys-kernel/liquorix-sources"]
+source = "github"
+github = "zen-kernel/zen-kernel"
+use_latest_release = true
+from_pattern = "(.*)-lqx(.*)"
+to_pattern = "\\1"
+github_account = "zozx"
 
 ["sys-kernel/mkinitcpio"]
 source = "github"
