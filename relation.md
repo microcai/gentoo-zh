@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-03-18 00:32:57 CST)
+(The last generation time: 2022-03-18 01:17:44 CST)
 
 ### Packages
 
@@ -415,7 +415,7 @@
                                               | 1.5.3                                     |            |                                                                                         |
    net-proxy/v2ray                            | 4.40.1                                    | RD         | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
                                               | 4.43.0                                    |            |                                                                                         |
-                                              | 4.44.0-r1                                 |            |                                                                                         |
+                                              | 4.44.0-r2                                 |            |                                                                                         |
      dev-libs/v2ray-domain-list-community     | 4.39.2_p20210621183458                    | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
                                               | 9999                                      |            |                                                                                         |
      dev-libs/v2ray-domain-list-community-bin | 4.39.2_p20210621183458                    | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
