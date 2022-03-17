@@ -156,7 +156,6 @@ sys-apps/pacman:gpg - Enable GPG signature verification using app-crypt/gpgme
 sys-kernel/liquorix-sources:cjk - Enable cjktty Patches.
 sys-kernel/xanmod-hybrid:cjktty - Eanble cjktty patches.
 sys-kernel/xanmod-hybrid:tt - Enable Default Xanmod Patches with TT CPU Scheduler.
-sys-kernel/xanmod-hybrid:xanmod - Enable Default Xanmod Patches.
 sys-kernel/xanmod-kernel:clang - Use clang compiler instead of GCC
 sys-kernel/xanmod-kernel:initramfs - Build initramfs along with the kernel.
 virtual/linux-sources:firmware - Install linux kernel firmware
