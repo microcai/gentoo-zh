@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-03-17 18:45:54 CST)
+(The last generation time: 2022-03-18 00:32:57 CST)
 
 ### Packages
 
@@ -266,7 +266,7 @@
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/jf-openhuninn                    | 1.1                                       |            | https://justfont.com/huninn/                                                            | An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/lxgwwenkai                       | 1.222                                     |            | https://lxgw.github.io/2021/01/28/Klee-Simpchin                                         | An open-source Chinese font derived from Fontworks' Klee One.
+ media-fonts/lxgwwenkai                       | 1.230                                     |            | https://lxgw.github.io/2021/01/28/Klee-Simpchin                                         | An open-source Chinese font derived from Fontworks' Klee One.
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/nerd-fonts                       | 2.1.0                                     |            | https://github.com/ryanoasis/nerd-fonts                                                 | Nerd Fonts is a project that patches developer targeted fonts with glyphs
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -415,7 +415,7 @@
                                               | 1.5.3                                     |            |                                                                                         |
    net-proxy/v2ray                            | 4.40.1                                    | RD         | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
                                               | 4.43.0                                    |            |                                                                                         |
-                                              | 4.44.0                                    |            |                                                                                         |
+                                              | 4.44.0-r1                                 |            |                                                                                         |
      dev-libs/v2ray-domain-list-community     | 4.39.2_p20210621183458                    | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
                                               | 9999                                      |            |                                                                                         |
      dev-libs/v2ray-domain-list-community-bin | 4.39.2_p20210621183458                    | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
