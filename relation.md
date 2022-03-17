@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-03-16 16:43:30 CST)
+(The last generation time: 2022-03-17 11:16:21 CST)
 
 ### Packages
 
@@ -482,8 +482,8 @@
                                               | 5.16.14                                   |            |                                                                                         |
      dev-util/pahole                          | 1.23                                      |  D         | https://git.kernel.org/cgit/devel/pahole/pahole.git/                                    | pahole (Poke-a-Hole) and other DWARF2 utilities
    sys-kernel/starfive-sources                | 5.17.0_p4                                 | RD         | https://starfivetech.com                                                                | Linux kernel for StarFive's JH7100 RISC-V SoC
-   sys-kernel/xanmod-hybrid                   | 5.15.27                                   | RD         | https://xanmod.org                                                                      | Full XanMod sources with TT CPU Scheduler and CJKTTY options and including the Gentoo patchset.
-                                              | 5.16.13                                   |            |                                                                                         |
+   sys-kernel/xanmod-hybrid                   | 5.15.29                                   | RD         | https://xanmod.org                                                                      | Full XanMod sources with TT CPU Scheduler and CJKTTY options and including the Gentoo patchset.
+                                              | 5.16.15                                   |            |                                                                                         |
    sys-kernel/xanmod-kernel                   | 5.10.104                                  | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
                                               | 5.15.27                                   |            |                                                                                         |
                                               | 5.16.13                                   |            |                                                                                         |
