@@ -9,24 +9,15 @@ MY_PN="lxgw-wenkai"
 DESCRIPTION="An open-source Chinese font derived from Fontworks' Klee One."
 HOMEPAGE="https://lxgw.github.io/2021/01/28/Klee-Simpchin"
 
-SRC_URI="https://github.com/lxgw/LxgwWenKai/releases/download/v${PV}/${MY_PN}-v${PV}.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI="https://github.com/lxgw/LxgwWenKai/releases/download/v${PV}/${MY_PN}-v${PV}.tar.gz -> ${P}.tar.gz"
 
-S="${WORKDIR}/${PN}-${PV}"
 LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
+S="${WORKDIR}/${MY_PN}-v${PV}"
 RDEPEND=""
 DEPEND=""
 BDEPEND=""
 FONT_SUFFIX="ttf"
-
-src_unpack() {
-	default
-
-	# rename the unpacked dir to ${P}
-	mv "${WORKDIR}/${MY_PN}-v${PV}" "${WORKDIR}/${P}" || die
-}
-
-
