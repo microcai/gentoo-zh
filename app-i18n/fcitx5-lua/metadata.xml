@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">fcitx/fcitx5-lua</remote-id>
+	</upstream>
+	<longdescription lang="en">
+	Lua support for fcitx.
+	It tries to support lua in fcitx in two ways.
+	1. An addon loader for lua, which supports Type=Lua addon.
+	2. The googlepinyin api, which is provided by imeapi addon.
+	You may put your lua file under
+	$HOME/.local/share/fcitx5/lua/imeapi/extensions
+	to make the addon find your scripts.
+	</longdescription>
+</pkgmetadata>

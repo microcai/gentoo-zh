@@ -1,7 +1,7 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit cmake xdg
 
@@ -23,20 +23,21 @@ HOMEPAGE="https://github.com/fcitx/fcitx5-chinese-addons"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-IUSE="+opencc +gui browser test"
+IUSE="browser +gui lua +opencc test"
 REQUIRED_USE=""
 RESTRICT="!test? ( test )"
 
-RDEPEND="app-i18n/fcitx5
+RDEPEND="
+	app-i18n/fcitx5
 	app-i18n/libime
 	opencc? ( app-i18n/opencc:= )
 	gui? (
 		dev-qt/qtcore:5
 		app-i18n/fcitx5-qt[qt5,-onlyplugin]
-		browser? (
-			dev-qt/qtwebengine:5
-		)
-	)"
+		browser? ( dev-qt/qtwebengine:5 )
+		lua? ( app-i18n/fcitx5-lua )
+	)
+"
 DEPEND="${RDEPEND}
 	kde-frameworks/extra-cmake-modules:5
 	virtual/pkgconfig"
