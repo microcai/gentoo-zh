@@ -1639,7 +1639,7 @@ RDEPEND="${DEPEND}
 	xray? ( >=net-proxy/Xray-1.4.3 )
 "
 BDEPEND="
-	dev-lang/go
+	<dev-lang/go-1.18:*
 	>=net-libs/nodejs-14.17.5-r1
 	sys-apps/yarn
 "
