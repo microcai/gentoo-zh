@@ -221,7 +221,7 @@ sys-kernel/liquorix-sources 5.16.13 5.16.14: Liquorix kernel is best one for des
 sys-kernel/mkinitcpio 31: Modular initramfs image creation utility
 sys-kernel/starfive-sources 5.17.0_p4: Linux kernel for StarFive's JH7100 RISC-V SoC
 sys-kernel/xanmod-hybrid 5.15.29 5.16.15: Full XanMod sources with TT CPU Scheduler and CJKTTY options and including the Gentoo patchset.
-sys-kernel/xanmod-kernel 5.10.104 5.15.27 5.16.13: XanMod lts kernel built with Gentoo patches and cjktty
+sys-kernel/xanmod-kernel 5.10.106 5.15.29 5.16.15: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 5.15.12 5.15.14: Xanmod-RT, cjktty, uksm patchset for main kernel tree
 sys-kernel/zenpower 0.1.12-r1: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/cutefish-core 0.7 0.8 9999: System components and backend of CutefishOS
@@ -232,7 +232,7 @@ sys-libs/libixp 0.5_p20110208-r3: A stand-alone client/server 9P library includi
 sys-libs/libsolv 0.7.21 9999: Library for solving packages and reading repositories
 sys-libs/libzypp 17.29.1 17.29.5 9999: ZYpp Package Management library
 sys-process/btop 1.2.5: Resources monitor. The C++ version of bashtop
-virtual/dist-kernel 5.10.104 5.15.27 5.16.13: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 5.10.106 5.15.29 5.16.15: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r10: Virtual for Linux kernel sources
 virtual/proton-ge-custom-meta 1: Meta package for proton-ge-custom-bin, make it easier to pull in dependencies
 www-servers/darkhttpd 1.13: A small, static webserver
