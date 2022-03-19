@@ -162,12 +162,45 @@ RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm ~arm64 ~mips ~ppc64 ~s390 ~x86"
-IUSE="geoip"
+
+GO_CPU_FLAGS_X86="
+	cpu_flags_x86_avx2
+	cpu_flags_x86_fma4
+	cpu_flags_x86_fma3
+	cpu_flags_x86_f16c
+	cpu_flags_x86_avx
+	cpu_flags_x86_sse4_2
+	cpu_flags_x86_sse4_1
+	cpu_flags_x86_ssse3
+	cpu_flags_x86_sse3
+"
+
+IUSE="goamd64 geoip ${GO_CPU_FLAGS_X86[@]}"
+REQUIRED_USE="!amd64? ( !goamd64 )"
 
 BDEPEND=">=dev-lang/go-1.18:="
 RDEPEND="!arm64? (
 		geoip? ( net-misc/geoipupdate )
 )"
+
+pkg_setup() {
+	if use goamd64; then
+		# default value of GOAMD64
+		GOAMD64_V="v1"
+		if use cpu_flags_x86_sse3 && use cpu_flags_x86_sse4_1 && use cpu_flags_x86_sse4_2 && use cpu_flags_x86_ssse3
+		then
+			GOAMD64_V="v2"
+			if use cpu_flags_x86_avx && use cpu_flags_x86_avx2 && use cpu_flags_x86_f16c && (use cpu_flags_x86_fma4 || use cpu_flags_x86_fma3)
+			then
+				GOAMD64_V="v3"
+			fi
+			# v4 generates AVX512 instructions thus
+			# GOAMD64=v4 is currently not used on go-1.18
+		fi
+		export GOAMD64="${GOAMD64_V}"
+		einfo "building with GOAMD64=${GOAMD64_V}"
+	fi
+}
 
 src_compile() {
 	local Version=${PV} BuildTime=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
