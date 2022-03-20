@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
 		<email>duzhe@gmail.com</email>
 		<name>Du Zhe</name>
 	</maintainer>
-	<use>
-	</use>
+	<longdescription lang="en">
+	Communication platform that supports video conferencing, task and calendar
+	management, attendance tracking and instant messaging.
+	One of the educational apps and platforms recommended by UNESCO.
+	https://en.unesco.org/covid19/educationresponse/solutions
+	</longdescription>
+	<longdescription lang="zh">
+	钉钉，是阿里巴巴集团打造的一个企业级协同办公和应用开发平台，帮助数千万企业
+	降低沟通、协同、管理成本，提升办公效率，实现组织数字化和业务数字化，帮助
+	未来组织释放数字生产力。
+	</longdescription>
 </pkgmetadata>
