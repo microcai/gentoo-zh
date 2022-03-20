@@ -5,7 +5,7 @@ EAPI=8
 
 LUA_COMPAT=( lua5-{3,4} )
 
-inherit cmake lua-single xdg
+inherit cmake lua xdg
 
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
