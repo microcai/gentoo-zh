@@ -798,6 +798,7 @@ prefix = "v"
 source = "github"
 github = "Fndroid/clash_for_windows_pkg"
 use_latest_release = true
+github_account = "zozx"
 
 ["net-proxy/make-proxy"]
 source = "github"
