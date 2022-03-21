@@ -12,5 +12,5 @@ RDEPEND==dev-qt/qtcore-5.15.2*:5= =dev-qt/qtgui-5.15.2*[png] =dev-qt/qthelp-5.15
 RESTRICT=test
 SLOT=5/5.15
 SRC_URI=https://invent.kde.org/qt/qt/qttools/-/archive/33693a928986006d79c1ee743733cde5966ac402/qttools-33693a928986006d79c1ee743733cde5966ac402.tar.gz -> qttools-5.15.2-33693a92.tar.gz
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	virtualx	fa024aa649b6bd544144bf94893d402c	kde.org	2c51d68845490f23d6f76d49cabdac5d	qt5-build	06b03342d17b2518822a24fe0399d1ae	xdg-utils	4f29a8b760a594a212abe9c2ba957c31
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	virtualx	fa024aa649b6bd544144bf94893d402c	kde.org	2c51d68845490f23d6f76d49cabdac5d	qt5-build	59df91504ac60e2c36fa9a41e3cb68be	xdg-utils	4f29a8b760a594a212abe9c2ba957c31
 _md5_=a5d5dd627837a0f998ad40af3ed54e30
