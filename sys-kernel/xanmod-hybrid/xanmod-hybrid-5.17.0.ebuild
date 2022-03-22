@@ -16,7 +16,13 @@ HOMEPAGE="https://xanmod.org
 		https://github.com/hamadmarri/TT-CPU-Scheduler"
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
-IUSE="cjktty tt"
+
+#
+# Freeze the 'tt' use flag until the corresponding patch is released 
+#
+#IUSE="cjktty tt"
+
+IUSE="cjktty"
 SLOT="edge"
 XANMOD_VERSION="1"
 XANMOD_URI="https://github.com/xanmod/linux/releases/download/"
@@ -27,18 +33,20 @@ SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
 	${GENPATCHES_URI}
 	${XANMOD_URI}/${OKV}${XANMOD_VERSION}/patch-${OKV}${XANMOD_VERSION}.xz
-	${TT_URI}/${KV_MAJOR}.${KV_MINOR}/tt-${KV_MAJOR}.${KV_MINOR}.patch
 	${CJKTTY_URI}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch
 "
+	#${TT_URI}/${KV_MAJOR}.${KV_MINOR}/tt-${KV_MAJOR}.${KV_MINOR}.patch
+	#${CJKTTY_URI}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch
+#"
 
 src_unpack() {
 	UNIPATCH_LIST_DEFAULT=""
 	UNIPATCH_LIST="${DISTDIR}/patch-${OKV}${XANMOD_VERSION}.xz"
 
-	if use tt	;	then
-		UNIPATCH_LIST+=" ${DISTDIR}/tt-${KV_MAJOR}.${KV_MINOR}.patch"
-		UNIPATCH_LIST+=" ${FILESDIR}/localversion-tt.patch"
-	fi
+	#if use tt	;	then
+	#	UNIPATCH_LIST+=" ${DISTDIR}/tt-${KV_MAJOR}.${KV_MINOR}.patch"
+	#	UNIPATCH_LIST+=" ${FILESDIR}/localversion-tt.patch"
+	#fi
 
 	if use cjktty	;	then
 		UNIPATCH_LIST+=" ${DISTDIR}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch"
