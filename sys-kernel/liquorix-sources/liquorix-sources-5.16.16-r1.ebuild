@@ -43,7 +43,7 @@ SRC_URI="
 
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/linux-${PV}-liquorix"
+S="${WORKDIR}/linux-${PV}-liquorix-${PR}"
 
 K_EXTRAEINFO="For more info on liquorix-kernel and details on how to report problems, see: ${HOMEPAGE}."
 
