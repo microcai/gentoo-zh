@@ -1,7 +1,0 @@
-diff --git a/localversion-tt b/localversion-tt
-new file mode 100644
-index 0000000..da5a98f
---- /dev/null
-+++ localversion-tt
-@@ -0,0 +1 @@
-+-tt
