@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils desktop
+inherit wrapper desktop
 
 MY_V=$(ver_cut 1-2)
 MY_PV=$(ver_rs 3 '_')
