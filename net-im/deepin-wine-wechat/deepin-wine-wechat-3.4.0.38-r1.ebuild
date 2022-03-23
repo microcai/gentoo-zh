@@ -21,6 +21,7 @@ LICENSE="Tencent"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
+QA_PREBUILT="*"
 
 DEPEND=""
 RDEPEND="${DEPEND}
@@ -30,6 +31,8 @@ RDEPEND="${DEPEND}
 	media-fonts/noto-cjk
 	app-emulation/deepin-wine6-stable
 	app-emulation/deepin-wine-helper
+	>=net-nds/openldap-2.4.0[abi_x86_32]
+	<net-nds/openldap-2.5.0[abi_x86_32]
 "
 
 S=${WORKDIR}
@@ -38,16 +41,17 @@ src_prepare() {
 	default
 
 	local app_file="${S}/opt/apps/${DEB_PN}/entries/applications/${DEB_PN}.desktop"
-	sed -i "s/\(Categories.*$\)/\1Network;/" ${app_file}
-	sed -i "13s/WeChat.exe/wechat.exe/" ${app_file}
-	sed -i "s/run.sh\".*/run.sh\"/" ${app_file}
+	sed -i "s/\(Categories.*$\)/\1Network;/" ${app_file} || die
+	sed -i "s/chat;/Chat;/" ${app_file} || die
+	sed -i "13s/WeChat.exe/wechat.exe/" ${app_file} || die
+	sed -i "s/run.sh\".*/run.sh\"/" ${app_file} || die
 
-	7z x -aoa "${S}/opt/apps/${DEB_PN}/files/files.7z" -o"${S}/deepinwechatdir"
-	rm -r "${S}/deepinwechatdir/drive_c/Program Files/Tencent/WeChat"
-	patch -p1 -d "${S}/deepinwechatdir/" < "${FILESDIR}/reg.patch"
-	ln -sf "/usr/share/fonts/wqy-microhei/wqy-microhei.ttc" "${S}/deepinwechatdir/drive_c/windows/Fonts/wqy-microhei.ttc"
-	install -m644 "${DISTDIR}/${P}-${WECHAT_INSTALLER}.exe" "${S}/deepinwechatdir/drive_c/Program Files/Tencent/${WECHAT_INSTALLER}-${PV}.exe"
-	7z a -t7z -r "${S}"/files.7z "${S}"/deepinwechatdir/*
+	7z x -aoa "${S}/opt/apps/${DEB_PN}/files/files.7z" -o"${S}/deepinwechatdir" || die
+	rm -r "${S}/deepinwechatdir/drive_c/Program Files/Tencent/WeChat" || die
+	patch -p1 -d "${S}/deepinwechatdir/" < "${FILESDIR}/reg.patch" || die
+	ln -sf "/usr/share/fonts/wqy-microhei/wqy-microhei.ttc" "${S}/deepinwechatdir/drive_c/windows/Fonts/wqy-microhei.ttc" || die
+	install -m644 "${DISTDIR}/${P}-${WECHAT_INSTALLER}.exe" "${S}/deepinwechatdir/drive_c/Program Files/Tencent/${WECHAT_INSTALLER}-${PV}.exe" || die
+	7z a -t7z -r "${S}"/files.7z "${S}"/deepinwechatdir/* || die
 }
 
 src_install() {
