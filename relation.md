@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-03-23 20:07:05 CST)
+(The last generation time: 2022-03-23 21:29:16 CST)
 
 ### Packages
 
@@ -365,9 +365,8 @@
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/networkmanager-l2tp                 | 9999                                      |            | http://www.gnome.org/projects/NetworkManager/                                           | NetworkManager L2TP plugin
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/nomachine-enterprise-client         | 7.6.2.4                                   |            | https://www.nomachine.com                                                               | NoMachine Enterprise Client
-                                              | 7.7.4.1                                   |            |                                                                                         |
-                                              | 7.8.2.1                                   |            |                                                                                         |
+ net-misc/nomachine-enterprise-client         | 7.8.2.1                                   |            | https://www.nomachine.com                                                               | NoMachine Enterprise Client
+                                              | 7.9.2.1                                   |            |                                                                                         |
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/pcmanx-gtk2                         | 1.3                                       |            | https://github.com/pcman-bbs/pcmanx                                                     | PCMan is a gtk+ based free BBS client
                                               | 9999                                      |            |                                                                                         |
