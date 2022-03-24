@@ -9,5 +9,5 @@ KEYWORDS=~amd64
 LICENSE=OFL-1.1
 SLOT=0
 SRC_URI=https://github.com/lxgw/LxgwWenKai/releases/download/v1.230/lxgw-wenkai-v1.230.tar.gz -> lxgwwenkai-1.230.tar.gz
-_eclasses_=font	0667878c2b594871023dd1833d05996f
+_eclasses_=font	b500e97c1ae30f830e84a95be6e9bd36
 _md5_=1c982c1f583692772b13dd6d243ac554

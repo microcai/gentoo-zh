@@ -9,5 +9,5 @@ PROPERTIES=live
 RDEPEND=!dev-libs/v2ray-domain-list-community-bin !<net-proxy/v2ray-4.38.3
 RESTRICT=strip
 SLOT=0
-_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	go-module	95694c3c8800655c04b1e681bd66fc72
+_eclasses_=go-module	3b47b6e0e18257d2abb17663c575fc36	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
 _md5_=4fbb207659328fa280c4546e3a37e76b

@@ -13,5 +13,5 @@ RDEPEND=lua_targets_lua5-3? ( dev-lang/lua:5.3 ) lua_targets_lua5-4? ( dev-lang/
 RESTRICT=!test? ( test )
 SLOT=5
 SRC_URI=https://github.com/fcitx/fcitx5-lua/archive/refs/tags/5.0.7.tar.gz -> fcitx5-lua-5.0.7.tar.gz
-_eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	cmake	9f12546ab831b81c615d90e6b9e34e68	multibuild	d79bd5b4bc4edcb1f5bc19591f8d4714	lua-utils	7b7cd623ac8b9dd4a7a6ee27219cada6	lua	f41923d10bccf946e7ce65f103ab577d	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	fef481272d4a8e136a7d8a0fb1329384	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	cmake	3c38df051095289667b6f09ebd0cc149	multibuild	d26d81f242cb193d899a72bca423d0bd	lua-utils	e69ff116248d78546ae1a234c086fe80	lua	d5c7dbcaf69f3065f5d7ce3b172c2214	xdg	6024fbc93167fad782e2032933654857
 _md5_=3e71ee9fcd35e5292fa0f7713805962c

@@ -12,5 +12,5 @@ RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-d
 RESTRICT=binchecks strip
 SLOT=5.16.16-r1
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.16.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.16-1.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.16-1.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.16-1.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.16-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.16-1.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.16-1.extras.tar.xz https://github.com/zen-kernel/zen-kernel/releases/download/v5.16.16-lqx2/v5.16.16-lqx2.patch.xz https://github.com/zhmars/cjktty-patches/raw/master/v5.x/cjktty-5.16.patch
-_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	kernel-2	7177fbdc34a8efdcb5b739d8a9673adb
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	kernel-2	f9d6a14b50d3be154a492a47c7d341a0
 _md5_=218b0c89c5d8bb622ca4f492edc2bb0d
