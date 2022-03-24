@@ -7,5 +7,5 @@ KEYWORDS=amd64
 LICENSE=MIT
 RDEPEND=dev-vcs/git
 SLOT=0
-SRC_URI=https://github.com/jesseduffield/lazygit/releases/download/v0.33/lazygit_0.33_Linux_x86_64.tar.gz -> lazygit-bin-0.33.tar.gz
+SRC_URI=https://github.com/jesseduffield/lazygit/releases/download/v0.34/lazygit_0.34_Linux_x86_64.tar.gz -> lazygit-bin-0.34.tar.gz
 _md5_=9caa7e9842f6cca4e2b514ed8c32f6e2
