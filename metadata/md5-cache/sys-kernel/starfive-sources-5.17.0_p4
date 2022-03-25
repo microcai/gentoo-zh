@@ -12,5 +12,5 @@ RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-d
 RESTRICT=binchecks strip
 SLOT=5.17.0_p4
 SRC_URI=https://github.com/HougeLangley/customkernel/releases/download/starfive-kernel/linux-5.17.0-rc4-starfive.tar.xz -> linux-5.17.tar.xz
-_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	kernel-2	f9d6a14b50d3be154a492a47c7d341a0
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	kernel-2	f9d6a14b50d3be154a492a47c7d341a0
 _md5_=b06783afe0179c70dfac8303a638dff9

@@ -9,5 +9,5 @@ LICENSE=tenvideo-privacy
 RDEPEND=app-accessibility/at-spi2-atk dev-libs/nss media-libs/alsa-lib x11-libs/gtk+:3 x11-libs/libXScrnSaver
 SLOT=0
 SRC_URI=https://dldir1.qq.com/qqtv/linux/Tenvideo_universal_1.0.10_amd64.deb
-_eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	unpacker	697382d119fd3d195f110b7979184285	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	unpacker	697382d119fd3d195f110b7979184285	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
 _md5_=4fba795d45cde2ba04b7aa1276cb867d

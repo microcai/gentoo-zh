@@ -11,5 +11,5 @@ RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-d
 RESTRICT=binchecks strip
 SLOT=stable
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.15.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.15-2.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-2.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.15-2.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.15-2.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-2.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.15-2.extras.tar.xz https://github.com/xanmod/linux/releases/download//5.15.30-xanmod1/patch-5.15.30-xanmod1.xz https://github.com/xanmod/linux/releases/download//5.15.30-xanmod1-tt/patch-5.15.30-xanmod1-tt.xz https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x//cjktty-5.15.patch
-_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	kernel-2	f9d6a14b50d3be154a492a47c7d341a0
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	kernel-2	f9d6a14b50d3be154a492a47c7d341a0
 _md5_=56c12d1f453ee7e11698171537964cf8
