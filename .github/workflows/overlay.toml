@@ -898,7 +898,7 @@ prefix = "v"
 source = "github"
 github = "zen-kernel/zen-kernel"
 use_latest_release = true
-from_pattern = "(.*)-lqx(.*)"
+from_pattern = "v(.*)-lqx(.*)"
 to_pattern = "\\1"
 github_account = "zozx"
 
