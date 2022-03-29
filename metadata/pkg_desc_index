@@ -16,7 +16,6 @@ app-emulation/deepin-udis86 1.72-r4: Deepin Version of Wine
 app-emulation/deepin-wine-helper 5.1.27-r1: Deepin Wine Helper
 app-emulation/deepin-wine-plugin 5.1.13-r1: Deepin Wine plugin
 app-emulation/deepin-wine6-stable 6.0.0.19-r1: Deepin wine6 stable
-app-emulation/proton-ge-custom-bin 6.21 7.8: A fancy custom distribution of Valves Proton with various patches
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
 app-i18n/fcitx 4.2.9.8: Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
@@ -232,7 +231,6 @@ sys-libs/libzypp 17.29.1 17.29.5 9999: ZYpp Package Management library
 sys-process/btop 1.2.5: Resources monitor. The C++ version of bashtop
 virtual/dist-kernel 5.10.107 5.15.30 5.16.16: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r10: Virtual for Linux kernel sources
-virtual/proton-ge-custom-meta 1: Meta package for proton-ge-custom-bin, make it easier to pull in dependencies
 www-servers/darkhttpd 1.13: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
