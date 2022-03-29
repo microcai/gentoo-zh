@@ -1,11 +1,11 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 inherit desktop pax-utils xdg
 
-DESCRIPTION="A complete, free Microsoft Office-compatible alternative office suite"
+DESCRIPTION="A complete, free Microsoft Office-compatible alternative office suite."
 HOMEPAGE="https://www.freeoffice.com"
 BASE_URI="https://www.softmaker.net/down/softmaker-freeoffice-2021-${PV}"
 SRC_URI="${BASE_URI}-amd64.tgz"
@@ -146,8 +146,8 @@ src_unpack() {
 }
 
 src_install(){
-	mkdir -p "${ED%/}/usr/$(get_libdir)/${PN}"
-	cd "${ED%/}/usr/$(get_libdir)/${PN}/"
+	mkdir -p "${ED}/usr/lib64/${PN}"
+	cd "${ED}/usr/lib64/${PN}"
 
 	unpack ${A}
 	xz -d "freeoffice2021.tar.lzma" || die
@@ -168,10 +168,6 @@ src_install(){
 		domenu "${m}"
 	done
 
-	for e in planmaker presentations textmaker; do
-		dobin "${FILESDIR}/freeoffice-${e}"
-	done
-
 	for size in 16 24 32 48 64 128 256 512; do
 		newicon -s ${size} icons/pml_${size}.png ${PN}-planmaker.png
 		newicon -s ${size} icons/prl_${size}.png ${PN}-presentations.png
@@ -181,9 +177,9 @@ src_install(){
 	insinto /usr/share/mime/packages
 	doins mime/softmaker-freeoffice21.xml
 
-	pax-mark -m "${ED%/}"/usr/$(get_libdir)/${PN}/planmaker
-	pax-mark -m "${ED%/}"/usr/$(get_libdir)/${PN}/presentations
-	pax-mark -m "${ED%/}"/usr/$(get_libdir)/${PN}/textmaker
+	pax-mark -m "${ED}"/usr/lib64/${PN}/planmaker
+	pax-mark -m "${ED}"/usr/lib64/${PN}/presentations
+	pax-mark -m "${ED}"/usr/lib64/${PN}/textmaker
 }
 
 pkg_postinst(){
