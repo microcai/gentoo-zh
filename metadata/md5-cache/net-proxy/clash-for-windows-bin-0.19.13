@@ -8,6 +8,6 @@ LICENSE=GPL-3
 RDEPEND=x11-libs/gtk+:3 x11-libs/libXScrnSaver
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.12/Clash.for.Windows-0.19.12-x64-linux.tar.gz
+SRC_URI=https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.13/Clash.for.Windows-0.19.13-x64-linux.tar.gz
 _eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	unpacker	697382d119fd3d195f110b7979184285
 _md5_=bf263aa42e181365f1919be320c21322
