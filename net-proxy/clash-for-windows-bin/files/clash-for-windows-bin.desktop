@@ -1,6 +1,5 @@
 [Desktop Entry]
 Type=Application
-Version=pkgver
 Name=Clash For Windows
 Comment=Clash GUI
 Exec=/opt/clash-for-windows-bin/cfw
