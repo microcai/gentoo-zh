@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-03-29 20:39:52 CST)
+(The last generation time: 2022-03-29 20:44:42 CST)
 
 ### Packages
 
@@ -102,7 +102,7 @@
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/bytedance-feishu                  | 4.11.6.2                                  |            | https://www.feishu.cn/                                                                  | feishu - ByteDance's enterprise collaboration platform
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-office/freeoffice                        | 1042                                      |            | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite
+ app-office/freeoffice                        | 1044                                      |            | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite.
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/wps-office                        | 11.1.0.10920                              |            | http://www.wps.cn/product/wpslinux/                                                     | WPS Office is an office productivity suite, Here is the Chinese version
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -270,7 +270,7 @@
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/nerd-fonts                       | 2.1.0                                     |            | https://github.com/ryanoasis/nerd-fonts                                                 | Nerd Fonts is a project that patches developer targeted fonts with glyphs
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/sarasa-gothic                    | 0.36.0                                    |            | https://github.com/be5invis/Sarasa-Gothic                                               | A CJK programming font based on Iosevka and Source Han Sans.
+ media-fonts/sarasa-gothic                    | 0.36.2                                    |            | https://github.com/be5invis/Sarasa-Gothic                                               | A CJK programming font based on Iosevka and Source Han Sans.
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/taipei-sans-tc                   | 1.0                                       |            | https://sites.google.com/view/jtfoundry/                                                | JT Foundry - Taipei Sans TC Beta font
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
