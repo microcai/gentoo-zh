@@ -1,0 +1,16 @@
+BDEPEND=dev-qt/linguist-tools:5 virtual/pkgconfig dev-util/ninja >=dev-util/cmake-3.20.5 virtual/pkgconfig
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
+DEPEND=>=dev-libs/boost-1.65.0-r1:= dev-libs/openssl:= dev-qt/qtcore:5 dev-qt/qtnetwork:5[ssl] dev-qt/qtsql:5 dev-qt/qtxml:5 >=net-libs/libtorrent-rasterbar-1.2.14:= sys-libs/zlib dbus? ( dev-qt/qtdbus:5 ) gui? ( dev-libs/geoip dev-qt/qtgui:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 )
+DESCRIPTION=qBittorrent Enhanced, based on qBittorrent
+EAPI=8
+HOMEPAGE=https://github.com/c0re100/qBittorrent-Enhanced-Edition
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=cmake systemd xdg
+IUSE=+dbus +gui webui
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=dev-libs/boost-1.65.0-r1:= dev-libs/openssl:= dev-qt/qtcore:5 dev-qt/qtnetwork:5[ssl] dev-qt/qtsql:5 dev-qt/qtxml:5 >=net-libs/libtorrent-rasterbar-1.2.14:= sys-libs/zlib dbus? ( dev-qt/qtdbus:5 ) gui? ( dev-libs/geoip dev-qt/qtgui:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 )
+SLOT=0
+SRC_URI=https://github.com/c0re100/qBittorrent-Enhanced-Edition/archive/release-4.4.2.10.tar.gz -> qbittorrent-enhanced-4.4.2.10.tar.gz
+_eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	fef481272d4a8e136a7d8a0fb1329384	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	cmake	3c38df051095289667b6f09ebd0cc149	systemd	2736b403a83f194b59b767f3b344c2c1	xdg	6024fbc93167fad782e2032933654857
+_md5_=18398eaec34d072e8d28ae7d8be4ea58
