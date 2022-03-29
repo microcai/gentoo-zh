@@ -28,4 +28,5 @@ RDEPEND="
 		sys-kernel/gentoo-kernel-bin
 		sys-kernel/vanilla-kernel
 		sys-kernel/starfive-sources
+		sys-kernel/xanmod-apparmor-sources
 	)"
