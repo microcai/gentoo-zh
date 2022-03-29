@@ -73,6 +73,5 @@ Categories=Office;Presentation
 MimeType=application/x-prd;application/x-prv;application/x-prs;application/ppt;application/mspowerpoint;application/vnd.ms-powerpoint;application/vnd.openxmlformats-officedocument.presentationml.presentation;application/vnd.ms-powerpoint.presentation.macroenabled.12;application/vnd.openxmlformats-officedocument.presentationml.template;application/vnd.ms-powerpoint.template.macroenabled.12;application/vnd.ms-powerpoint.slideshow.macroEnabled.12;application/vnd.openxmlformats-officedocument.presentationml.slideshow;
 Name=FreeOffice Presentations
 Icon=freeoffice-presentations
-TryExec=freeoffice-presentations
-Exec=freeoffice-presentations %F
+Exec=/usr/lib64/freeoffice/presentations %F
 
