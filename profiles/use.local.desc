@@ -69,6 +69,17 @@ dev-python/conda:user - use user's home directory as default pkgs and envs prefi
 dev-python/nvchecker:ini - convert your old configuration files from ini to toml
 dev-python/nvchecker:notify - enable nvchecker-notify support
 games-util/mangohud:xnvctrl - Use XNVctrl as fall back for older Nvidia GPU
+mail-client/thunderbird:clang - Use Clang compiler instead of GCC
+mail-client/thunderbird:eme-free - Disable EME (DRM plugin) cabability at build time
+mail-client/thunderbird:hwaccel - Force-enable hardware-accelerated rendering (Mozilla bug 594876)
+mail-client/thunderbird:lto - Enable Link Time Optimization (LTO). Requires Gold linker when using GCC or LDD linker when using Clang
+mail-client/thunderbird:openh264 - Use media-libs/openh264 for H.264 support instead of downloading binary blob from Mozilla at runtime
+mail-client/thunderbird:system-icu - Use the system-wide dev-libs/icu instead of bundled.
+mail-client/thunderbird:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled.
+mail-client/thunderbird:system-libevent - Use the system-wide dev-libs/libevent instead of bundled.
+mail-client/thunderbird:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled.
+mail-client/thunderbird:system-png - Use the system-wide media-libs/libpng instead of bundled (requires APNG patches)
+mail-client/thunderbird:system-webp - Use the system-wide media-libs/libwebp instead of bundled.
 media-fonts/nerd-fonts:3270 - Install Nerd-fonts-patched 3270 fonts
 media-fonts/nerd-fonts:agave - Install Nerd-fonts-patched Agave fonts
 media-fonts/nerd-fonts:anonymouspro - Install Nerd-fonts-patched Anonymous Pro fonts
