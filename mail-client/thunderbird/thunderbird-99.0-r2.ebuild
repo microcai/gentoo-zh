@@ -10,8 +10,6 @@ PYTHON_REQ_USE="ncurses,sqlite,ssl"
 
 WANT_AUTOCONF="2.1"
 
-VIRTUALX_REQUIRED="pgo"
-
 MOZ_BETA_V=2
 MOZ_PV="${PV}b${MOZ_BETA_V}"
 MOZ_PN=${PN}
