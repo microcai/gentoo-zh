@@ -62,7 +62,6 @@ BDEPEND="${PYTHON_DEPS}
 "
 
 COMMON_DEPEND="
-	${PYTHON_DEPS}
 	>=dev-libs/nss-3.75
 	>=dev-libs/nspr-4.32
 	dev-libs/atk
@@ -125,7 +124,8 @@ RDPEND="${COMMON_DEPEND}
 	selinux? ( sec-policy/selinux-mozilla )
 "
 
-DEPEND="${COMMON_DEPEND}
+DEPEND="${PYTHON_DEPS}
+	${COMMON_DEPEND}
 	x11-libs/libICE
 	x11-libs/libSM
 	virtual/opengl
