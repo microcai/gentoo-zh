@@ -30,7 +30,6 @@ IUSE+=" jack lto +openh264 pulseaudio selinux"
 IUSE+=" +system-icu +system-jpeg +system-libevent +system-libvpx system-png system-webp"
 IUSE+=" wayland wifi"
 
-
 REQUIRED_USE="
 	wifi? ( dbus )
 "
@@ -63,6 +62,7 @@ BDEPEND="${PYTHON_DEPS}
 "
 
 COMMON_DEPEND="
+	${PYTHON_DEPS}
 	>=dev-libs/nss-3.75
 	>=dev-libs/nspr-4.32
 	dev-libs/atk
@@ -116,7 +116,7 @@ RDPEND="${COMMON_DEPEND}
 	!mail-client/thunderbird-bin
 	jack? ( virtual/jack )
 	openh264? ( media-libs/openh264:*[plugin] )
-	pulseaudio? ( 
+	pulseaudio? (
 		|| (
 			media-sound/pulseaudio
 			>=media-sound/apulse-0.1.12-r4
@@ -148,9 +148,9 @@ MOZ_LANGS=(
 	sk sl sq sr sv-SE th tr uk uz vi zh-CN zh-TW
 )
 
-inherit autotools check-reqs desktop flag-o-matic gnome2-utils linux-info \
-	llvm multiprocessing pax-utils python-any-r1 toolchain-funcs \
-	virtualx xdg
+inherit autotools check-reqs desktop flag-o-matic linux-info llvm\
+	multiprocessing pax-utils python-any-r1 toolchain-funcs \
+	xdg
 
 llvm_check_deps() {
 	if ! has_version -b "sys-devel/clang:${LLVM_SLOT}" ; then
@@ -203,7 +203,6 @@ mozilla_set_globals() {
 	done
 }
 mozilla_set_globals
-
 
 moz_clear_vendor_checksums() {
 	debug-print-function ${FUNCNAME} "$@"
@@ -310,7 +309,6 @@ mozconfig_use_with() {
 	mozconfig_add_options_ac "$(use ${1} && echo +${1} || echo -${1})" "${flag}"
 }
 
-
 pkg_pretend() {
 	if [[ ${MERGE_TYPE} != binary ]] ; then
 		if use lto || use debug ; then
@@ -363,7 +361,7 @@ pkg_setup() {
 			
 		python-any-r1_pkg_setup
 
-				# Avoid PGO profiling problems due to enviroment leakage
+		# Avoid PGO profiling problems due to enviroment leakage
 		# These should *always* be cleaned up anyway
 		unset \
 			DBUS_SESSION_BUS_ADDRESS \
@@ -575,7 +573,6 @@ src_configure() {
 	if ! use x86 ; then
 		mozconfig_add_options_ac '' --enable-rust-simd
 	fi
-
 
 	if [[ -s "${S}/api-google.key" ]] ; then
 		local key_origin="Gentoo default"
@@ -900,7 +897,7 @@ pkg_preinst() {
 	einfo "Doing...Doing...Doing..."
 	
 	xdg_pkg_preinst
-
+	
 	# If the apulse libs are available in MOZILLA_FIVE_HOME then apulse
 	# does not need to be forced into the LD_LIBRARY_PATH
 	if use pulseaudio && has_version ">=media-sound/apulse-0.1.12-r4" ; then
