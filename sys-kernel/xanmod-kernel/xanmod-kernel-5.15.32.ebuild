@@ -6,7 +6,7 @@ EAPI=7
 inherit kernel-build python-any-r1 toolchain-funcs
 
 MY_P=linux-${PV%.*}
-GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 2))
+GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 3))
 XV="1"
 
 DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
@@ -63,7 +63,7 @@ pkg_setup() {
 src_prepare() {
 	# delete linux version patches
 	rm "${WORKDIR}"/*${MY_P}*.patch || die
-
+	rm "${WORKDIR}"/2410_revert-swiotlb-rework-fix-info-leak-with-dma_from_device.patch || die
 	local PATCHES=(
 		# genpatches
 		"${WORKDIR}"/*.patch
