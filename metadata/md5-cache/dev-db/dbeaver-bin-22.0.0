@@ -10,5 +10,5 @@ LICENSE=Apache-2.0 EPL-1.0 BSD
 RDEPEND=dev-java/openjdk-bin:11
 SLOT=0
 SRC_URI=amd64? ( https://dbeaver.io/files/22.0.0/dbeaver-ce-22.0.0-linux.gtk.x86_64-nojdk.tar.gz -> dbeaver-bin-22.0.0-amd64.tar.gz ) arm64? ( https://dbeaver.io/files/22.0.0/dbeaver-ce-22.0.0-linux.gtk.aarch64-nojdk.tar.gz -> dbeaver-bin-22.0.0-arm64.tar.gz )
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	wrapper	4251d4c84c25f59094fd557e0063a974	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	wrapper	4a1902f969e5718126434fc35f3a0d9c	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
 _md5_=82b8e3e343659dcb8860f83a683eedc3
