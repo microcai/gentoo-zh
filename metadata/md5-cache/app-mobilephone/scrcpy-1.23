@@ -12,5 +12,5 @@ RDEPEND=virtual/libusb:1 media-libs/libsdl2 media-video/ffmpeg
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/Genymobile/scrcpy/releases/download/v1.23/scrcpy-server-v1.23
-_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	fef481272d4a8e136a7d8a0fb1329384	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	python-utils-r1	dfa3a38467793e97fcf791b156510654	meson	2d8a51910bc57e004c37aa55c7d99ce4	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	fef481272d4a8e136a7d8a0fb1329384	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	python-utils-r1	59dddabd6a41ab69723654916142f63b	meson	2d8a51910bc57e004c37aa55c7d99ce4	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
 _md5_=3e866b0b2fa304cb9abba071ac3570a1
