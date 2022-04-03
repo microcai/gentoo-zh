@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-04-02 19:12:22 CST)
+(The last generation time: 2022-04-03 15:42:15 CST)
 
 ### Packages
 
@@ -484,7 +484,7 @@
    sys-kernel/liquorix-sources                | 5.16.17                                   | RD         | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
                                               | 5.16.18                                   |            |                                                                                         |
      dev-util/pahole                          | 1.23                                      |  D         | https://git.kernel.org/cgit/devel/pahole/pahole.git/                                    | pahole (Poke-a-Hole) and other DWARF2 utilities
-   sys-kernel/starfive-sources                | 5.17.0_p4                                 | RD         | https://starfivetech.com                                                                | Linux kernel for StarFive's JH7100 RISC-V SoC
+   sys-kernel/starfive-sources                | 5.17.1                                    | RD         | https://starfivetech.com                                                                | Linux kernel for StarFive's JH7100 RISC-V SoC
    sys-kernel/xanmod-hybrid                   | 5.15.32                                   | RD         | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
                                               | 5.17.1                                    |            |                                                                                         |
    sys-kernel/xanmod-kernel                   | 5.10.109                                  | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
