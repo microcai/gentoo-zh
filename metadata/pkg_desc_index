@@ -102,7 +102,7 @@ dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458 9999: Community mana
 dev-libs/v2ray-domain-list-community-bin 4.39.2_p20210621183458 9999: Community managed domain list for V2Ray.
 dev-libs/v2ray-geoip-bin 4.39.2_p202106170022 9999: GeoIP for V2Ray.
 dev-python/conda 4.12.0: OS-agnostic, system-level binary package manager and ecosystem
-dev-python/conda-package-handling 1.8.0: Create and extract conda packages of various formats
+dev-python/conda-package-handling 1.8.1: Create and extract conda packages of various formats
 dev-python/fuo-kuwo 0.1.5: kuwo music support for feeluown
 dev-python/fuo-local 0.3: local music support for feeluown
 dev-python/fuo-netease 0.8: netease cloud music support for feeluown
@@ -135,7 +135,7 @@ mail-client/thunderbird 99.0-r2: Thunderbird Mail Client
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/iansui 0.940: An open-source Chinese font derived from Klee One (Fontworks).
 media-fonts/jf-openhuninn 1.1: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
-media-fonts/lxgwwenkai 1.232: An open-source Chinese font derived from Fontworks' Klee One.
+media-fonts/lxgwwenkai 1.233: An open-source Chinese font derived from Fontworks' Klee One.
 media-fonts/nerd-fonts 2.1.0: Nerd Fonts is a project that patches developer targeted fonts with glyphs
 media-fonts/sarasa-gothic 0.36.2: A CJK programming font based on Iosevka and Source Han Sans.
 media-fonts/taipei-sans-tc 1.0: JT Foundry - Taipei Sans TC Beta font
