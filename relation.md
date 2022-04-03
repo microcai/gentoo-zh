@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-04-03 15:42:15 CST)
+(The last generation time: 2022-04-03 16:04:25 CST)
 
 ### Packages
 
@@ -213,7 +213,7 @@
                                               | 9999                                      |            |                                                                                         |
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/conda                             | 4.12.0                                    |            | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
-   dev-python/conda-package-handling          | 1.8.0                                     |  D, RD     | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
+   dev-python/conda-package-handling          | 1.8.1                                     |  D, RD     | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
    dev-python/pycosat                         | 0.6.3                                     |  D, RD     | https://github.com/ContinuumIO/pycosat                                                  | Python bindings to picosat (a SAT solver)
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/nvchecker                         | 2.7-r1                                    |            | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
@@ -268,7 +268,7 @@
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/jf-openhuninn                    | 1.1                                       |            | https://justfont.com/huninn/                                                            | An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/lxgwwenkai                       | 1.232                                     |            | https://lxgw.github.io/2021/01/28/Klee-Simpchin                                         | An open-source Chinese font derived from Fontworks' Klee One.
+ media-fonts/lxgwwenkai                       | 1.233                                     |            | https://lxgw.github.io/2021/01/28/Klee-Simpchin                                         | An open-source Chinese font derived from Fontworks' Klee One.
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/nerd-fonts                       | 2.1.0                                     |            | https://github.com/ryanoasis/nerd-fonts                                                 | Nerd Fonts is a project that patches developer targeted fonts with glyphs
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
