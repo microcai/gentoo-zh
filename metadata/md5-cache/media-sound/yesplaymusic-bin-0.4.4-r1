@@ -1,0 +1,15 @@
+DEFINED_PHASES=install postinst postrm preinst unpack
+DEPEND=app-arch/gzip dev-libs/nss media-libs/alsa-lib net-print/cups x11-libs/gtk+:* x11-libs/libxkbcommon
+DESCRIPTION=A third party music player for Netease Music
+EAPI=8
+HOMEPAGE=https://github.com/qier222/YesPlayMusic
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=desktop xdg
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=app-arch/gzip dev-libs/nss media-libs/alsa-lib net-print/cups x11-libs/gtk+:* x11-libs/libxkbcommon
+RESTRICT=mirror strip
+SLOT=0
+SRC_URI=https://github.com/qier222/YesPlayMusic/releases/download/v0.4.4-1/yesplaymusic-0.4.4-1.pacman
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
+_md5_=acc0f8dfb1cc34b522dfd287c66b1a5a

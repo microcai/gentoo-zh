@@ -157,7 +157,7 @@ media-sound/linnya 2.2.0: A free music player
 media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb package
 media-sound/netease-cloud-music-gtk 1.2.2: netease cloud music player based on Rust & GTK3 for Linux
 media-sound/termusic 0.6.11: Music Player TUI written in Rust
-media-sound/yesplaymusic-bin 0.4.3: A third party music player for Netease Music
+media-sound/yesplaymusic-bin 0.4.3 0.4.4-r1: A third party music player for Netease Music
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/tenvideo 1.0.10: Tencent videos
 net-dialup/mentohust 9999: A Ruijie and Cernet supplicant on Linux and MacOS
@@ -190,7 +190,7 @@ net-p2p/qbittorrent-enhanced 4.3.8.10 4.3.9.10 4.4.0.10 4.4.1.10 4.4.2.10: qBitt
 net-print/epson-inkjet-printer_201207w 1.0.0: Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 net-proxy/Xray 1.4.3 1.4.4 1.4.5 1.5.3: Xray, Penetrates Everything.
 net-proxy/clash 1.8.0 1.9.0 1.10.0: A rule-based tunnel in Go.
-net-proxy/clash-for-windows-bin 0.19.13: A Windows/macOS/Linux GUI based on Clash and Electron.
+net-proxy/clash-for-windows-bin 0.19.14: A Windows/macOS/Linux GUI based on Clash and Electron.
 net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
 net-proxy/shadowsocks-rust-bin 1.12.5: A Rust port of shadowsocks
 net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
@@ -215,7 +215,7 @@ sys-fs/erofs-utils 1.3: Userspace tools for EROFS images
 sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
-sys-kernel/liquorix-sources 5.16.17 5.16.18: Liquorix kernel is best one for desktop, multimedia and gaming workloads
+sys-kernel/liquorix-sources 5.16.18 5.17.1: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 31: Modular initramfs image creation utility
 sys-kernel/starfive-sources 5.17.1: Linux kernel for StarFive's JH7100 RISC-V SoC
 sys-kernel/xanmod-hybrid 5.15.32 5.17.1: Full XanMod source, including the Gentoo patchset and other patch options.
