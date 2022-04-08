@@ -12,5 +12,5 @@ REQUIRED_USE=|| ( python_targets_python3_9 python_targets_python3_10 )
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/hynek/structlog/archive/21.5.0.tar.gz -> structlog-21.5.0.tar.gz
-_eclasses_=multibuild	d26d81f242cb193d899a72bca423d0bd	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	python-utils-r1	59dddabd6a41ab69723654916142f63b	python-r1	8638751691200e941f26fe0ac3aef1d1	distutils-r1	f8fb9a72a02c35c58af19c832822cf35
+_eclasses_=multibuild	d26d81f242cb193d899a72bca423d0bd	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	python-utils-r1	59dddabd6a41ab69723654916142f63b	python-r1	8638751691200e941f26fe0ac3aef1d1	distutils-r1	e09c9461a1dcb570a0cb5c43f332b528
 _md5_=ae905cc284f98941565d90db3c128c05
