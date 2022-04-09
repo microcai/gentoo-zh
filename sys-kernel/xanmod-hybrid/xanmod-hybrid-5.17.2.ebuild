@@ -41,7 +41,6 @@ SRC_URI="
 
 src_unpack() {
 	UNIPATCH_LIST_DEFAULT=""
-	UNIPATCH_LIST="${DISTDIR}/patch-${OKV}${XANMOD_VERSION}.xz"
 
 	#if use tt	;	then
 	#	UNIPATCH_LIST+=" ${DISTDIR}/tt-${KV_MAJOR}.${KV_MINOR}.patch"
@@ -53,6 +52,8 @@ src_unpack() {
 	fi
 
 	kernel-2_src_unpack
+
+	sh ${FILESDIR}/force_patch.sh ${PV}
 }
 
 pkg_postinst() {
