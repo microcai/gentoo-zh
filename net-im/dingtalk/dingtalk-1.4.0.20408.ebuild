@@ -3,9 +3,9 @@
 
 EAPI=7
 
-inherit desktop multilib unpacker xdg
+inherit unpacker xdg
 
-DESCRIPTION="dingtalk"
+DESCRIPTION="DingTalk is an intelligent working platform created by Alibaba Group"
 HOMEPAGE="https://gov.dingtalk.com"
 SRC_URI="https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.${PN}_${PV}_amd64.deb"
 
@@ -55,7 +55,7 @@ src_install() {
 	# Use system zlib
 	rm opt/apps/com.alibabainc.dingtalk/files/${version}/libz* || die
 	# Use system gtk+, or it can't be switch input method on popup window
-	rm opt/apps/com.alibabainc.dingtalk/files/${version}/libgtk-x11* || die
+	#rm opt/apps/com.alibabainc.dingtalk/files/${version}/libgtk-x11* || die
 
 	# Set RPATH for preserve-libs handling
 	pushd "opt/apps/com.alibabainc.dingtalk/files/${version}/" || die
