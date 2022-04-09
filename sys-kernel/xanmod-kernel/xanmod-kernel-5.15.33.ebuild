@@ -63,7 +63,6 @@ pkg_setup() {
 src_prepare() {
 	# delete linux version patches
 	rm "${WORKDIR}"/*${MY_P}*.patch || die
-	rm "${WORKDIR}"/2410_revert-swiotlb-rework-fix-info-leak-with-dma_from_device.patch || die
 	local PATCHES=(
 		# genpatches
 		"${WORKDIR}"/*.patch
