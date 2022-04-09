@@ -20,7 +20,7 @@ CRATES="
 	bitflags-1.3.2
 	block-0.1.6
 	bumpalo-3.9.1
-	bytemuck-1.8.0
+	bytemuck-1.9.0
 	byteorder-1.4.3
 	bytes-1.1.0
 	cassowary-0.3.0
@@ -44,15 +44,15 @@ CRATES="
 	coreaudio-sys-0.2.9
 	cpal-0.13.5
 	crc32fast-1.3.2
-	crossbeam-channel-0.5.2
+	crossbeam-channel-0.5.4
 	crossbeam-deque-0.8.1
-	crossbeam-epoch-0.9.7
-	crossbeam-utils-0.8.7
+	crossbeam-epoch-0.9.8
+	crossbeam-utils-0.8.8
 	crossterm-0.20.0
 	crossterm-0.22.1
 	crossterm_winapi-0.8.0
 	crossterm_winapi-0.9.0
-	ctor-0.1.21
+	ctor-0.1.22
 	cty-0.2.2
 	darling-0.13.1
 	darling_core-0.13.1
@@ -63,7 +63,7 @@ CRATES="
 	diff-0.1.12
 	dirs-4.0.0
 	dirs-next-2.0.0
-	dirs-sys-0.3.6
+	dirs-sys-0.3.7
 	dirs-sys-next-0.1.2
 	dispatch-0.2.0
 	either-1.6.1
@@ -72,7 +72,7 @@ CRATES="
 	exr-1.4.1
 	fastrand-1.7.0
 	flate2-1.0.22
-	flume-0.10.11
+	flume-0.10.12
 	fnv-1.0.7
 	foreign-types-0.3.2
 	foreign-types-shared-0.1.1
@@ -83,14 +83,14 @@ CRATES="
 	futures-sink-0.3.21
 	futures-task-0.3.21
 	futures-util-0.3.21
-	getrandom-0.2.5
+	getrandom-0.2.6
 	gif-0.11.3
-	glib-0.15.6
-	glib-macros-0.15.6
-	glib-sys-0.15.6
+	glib-0.15.10
+	glib-macros-0.15.10
+	glib-sys-0.15.10
 	glob-0.3.0
-	gobject-sys-0.15.5
-	gstreamer-0.18.5
+	gobject-sys-0.15.10
+	gstreamer-0.18.6
 	gstreamer-audio-sys-0.18.3
 	gstreamer-base-0.18.0
 	gstreamer-base-sys-0.18.0
@@ -117,21 +117,21 @@ CRATES="
 	jni-sys-0.3.0
 	jobserver-0.1.24
 	jpeg-decoder-0.1.22
-	jpeg-decoder-0.2.2
+	jpeg-decoder-0.2.3
 	js-sys-0.3.56
 	lazy_static-1.4.0
 	lazycell-1.3.0
 	lebe-0.5.1
-	libaes-0.6.1
-	libc-0.2.119
+	libaes-0.6.2
+	libc-0.2.121
 	libdbus-sys-0.2.2
 	libloading-0.7.3
 	libmpv-2.0.1
 	libmpv-sys-3.1.0
 	linked-hash-map-0.5.4
-	lock_api-0.4.6
+	lock_api-0.4.7
 	lofty-0.5.3
-	log-0.4.14
+	log-0.4.16
 	mach-0.3.2
 	malloc_buf-0.0.6
 	matches-0.1.9
@@ -143,7 +143,7 @@ CRATES="
 	mio-0.7.14
 	miow-0.3.7
 	muldiv-1.0.0
-	nanorand-0.6.1
+	nanorand-0.7.0
 	ndk-0.6.0
 	ndk-context-0.1.0
 	ndk-glue-0.6.1
@@ -171,7 +171,7 @@ CRATES="
 	output_vt100-0.1.3
 	parking_lot-0.11.2
 	parking_lot_core-0.8.5
-	paste-1.0.6
+	paste-1.0.7
 	peeking_take_while-0.1.2
 	percent-encoding-2.1.0
 	pin-project-1.0.10
@@ -179,26 +179,26 @@ CRATES="
 	pin-project-lite-0.2.8
 	pin-utils-0.1.0
 	pinyin-0.9.0
-	pkg-config-0.3.24
+	pkg-config-0.3.25
 	png-0.17.5
 	ppv-lite86-0.2.16
 	pretty-hex-0.2.1
-	pretty_assertions-1.1.0
+	pretty_assertions-1.2.0
 	proc-macro-crate-1.1.3
 	proc-macro-error-1.0.4
 	proc-macro-error-attr-1.0.4
 	proc-macro2-1.0.36
-	quote-1.0.15
+	quote-1.0.17
 	rand-0.8.5
 	rand_chacha-0.3.1
 	rand_core-0.6.3
 	raw-window-handle-0.3.4
-	raw-window-handle-0.4.2
+	raw-window-handle-0.4.3
 	rayon-1.5.1
 	rayon-core-1.9.1
-	redox_syscall-0.2.11
-	redox_users-0.4.0
-	regex-1.5.4
+	redox_syscall-0.2.13
+	redox_users-0.4.3
+	regex-1.5.5
 	regex-syntax-0.6.25
 	remove_dir_all-0.5.3
 	rgb-0.8.32
@@ -216,7 +216,7 @@ CRATES="
 	shellexpand-2.1.0
 	shlex-0.1.1
 	signal-hook-0.3.13
-	signal-hook-mio-0.2.1
+	signal-hook-mio-0.2.3
 	signal-hook-registry-1.4.0
 	slab-0.4.5
 	smallvec-1.8.0
@@ -239,7 +239,7 @@ CRATES="
 	symphonia-format-wav-0.5.0
 	symphonia-metadata-0.5.0
 	symphonia-utils-xiph-0.5.0
-	syn-1.0.86
+	syn-1.0.90
 	system-deps-6.0.2
 	tempfile-3.3.0
 	termcolor-1.1.3
