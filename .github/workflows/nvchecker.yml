@@ -9,6 +9,10 @@ on:
     # UTC 09:00 -> CST (China) 17:00, see https://datetime360.com/cn/utc-cst-china-time/
     - cron: '0 09 * * *'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   nvchecker:
     runs-on: ubuntu-latest
