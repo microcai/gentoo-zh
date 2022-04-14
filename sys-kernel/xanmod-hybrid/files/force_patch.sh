@@ -6,9 +6,10 @@ DISTDIR="${TMPDIR}/distdir"
 OKV="$1-xanmod"
 XANMOD_VERSION="1"
 
+echo "Applying patch-${OKV}${XANMOD_VERSION}.patch"
 mkdir ${WORKDIR}/patches
-cp -vL ${DISTDIR}/patch-${OKV}${XANMOD_VERSION}.xz ${WORKDIR}/patches
+cp -L ${DISTDIR}/patch-${OKV}${XANMOD_VERSION}.xz ${WORKDIR}/patches
 cd ${WORKDIR}/patches
 xz -d patch-${OKV}${XANMOD_VERSION}.xz	
 cd ${WORKDIR}/linux-${OKV}
-patch -p1 -f < ../patches/patch-$1-xanmod${XANMOD_VERSION} || true
+patch -p1 -f < ../patches/patch-${OKV}${XANMOD_VERSION} >&/dev/null || true
