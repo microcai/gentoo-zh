@@ -41,7 +41,7 @@ SRC_URI="
 
 src_unpack() {
 	UNIPATCH_LIST_DEFAULT=""
-	
+		
 	#if use tt	;	then
 	#	UNIPATCH_LIST+=" ${DISTDIR}/tt-${KV_MAJOR}.${KV_MINOR}.patch"
 	#	UNIPATCH_LIST+=" ${FILESDIR}/localversion-tt.patch"
