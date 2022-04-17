@@ -20,7 +20,7 @@ K_SECURITY_UNSUPPORTED="1"
 
 # We want the very basic patches from gentoo-sources, experimental patch is
 # already included in liquorix-sources
-K_WANT_GENPATCHES="base	extras"
+K_WANT_GENPATCHES="extras"
 
 # To use CJKTTY, Please enable this USE
 IUSE="+cjk"
