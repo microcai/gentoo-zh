@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-04-16 21:29:41 CST)
+(The last generation time: 2022-04-17 08:00:08 CST)
 
 ### Packages
 
@@ -476,8 +476,8 @@
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-process/btop                             | 1.2.6                                     |            | https://github.com/aristocratos/btop                                                    | Resources monitor. The C++ version of bashtop
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- virtual/dist-kernel                          | 5.10.110                                  |            |                                                                                         | Virtual to depend on any Distribution Kernel
-                                              | 5.15.33                                   |            |                                                                                         |
+ virtual/dist-kernel                          | 5.10.111                                  |            |                                                                                         | Virtual to depend on any Distribution Kernel
+                                              | 5.15.34                                   |            |                                                                                         |
                                               | 5.16.16                                   |            |                                                                                         |
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                        | 3-r10                                     |            |                                                                                         | Virtual for Linux kernel sources
@@ -488,8 +488,8 @@
    sys-kernel/xanmod-hybrid                   | 5.15.33                                   | RD         | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
                                               | 5.17.2                                    |            |                                                                                         |
                                               | 5.17.3                                    |            |                                                                                         |
-   sys-kernel/xanmod-kernel                   | 5.10.110                                  | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
-                                              | 5.15.33                                   |            |                                                                                         |
+   sys-kernel/xanmod-kernel                   | 5.10.111                                  | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
+                                              | 5.15.34                                   |            |                                                                                         |
                                               | 5.16.16                                   |            |                                                                                         |
    sys-kernel/xanmod-rt                       | 5.15.12                                   | RD         | https://github.com/HougeLangley/customkernel                                            | Xanmod-RT, cjktty, uksm patchset for main kernel tree
                                               | 5.15.14                                   |            |                                                                                         |
