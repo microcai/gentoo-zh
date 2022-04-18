@@ -1,16 +1,14 @@
 BDEPEND=dev-lang/perl virtual/pkgconfig
-DEFINED_PHASES=compile configure install nofetch postinst postrm prepare test unpack
+DEFINED_PHASES=compile configure install postinst postrm prepare test
 DEPEND==dev-qt/qtcore-5.15.2*:5= =dev-qt/qtgui-5.15.2*[png] =dev-qt/qthelp-5.15.2* =dev-qt/qtnetwork-5.15.2* =dev-qt/qtprintsupport-5.15.2* =dev-qt/qtsql-5.15.2*[sqlite] =dev-qt/qtwidgets-5.15.2* test? ( =dev-qt/qttest-5.15.2* )
 DESCRIPTION=Tool for viewing on-line documentation in Qt help file format
 EAPI=8
-HOMEPAGE=https://community.kde.org/Qt5PatchCollection https://invent.kde.org/qt/qt/ https://www.qt.io/
 INHERIT=desktop qt5-build xdg-utils
 IUSE=debug test
 KEYWORDS=amd64 ~arm arm64 ~hppa ppc64 ~riscv ~sparc x86
 LICENSE=|| ( GPL-2 GPL-3 LGPL-3 ) FDL-1.3
 RDEPEND==dev-qt/qtcore-5.15.2*:5= =dev-qt/qtgui-5.15.2*[png] =dev-qt/qthelp-5.15.2* =dev-qt/qtnetwork-5.15.2* =dev-qt/qtprintsupport-5.15.2* =dev-qt/qtsql-5.15.2*[sqlite] =dev-qt/qtwidgets-5.15.2*
 RESTRICT=test
-SLOT=5/5.15
-SRC_URI=https://invent.kde.org/qt/qt/qttools/-/archive/33693a928986006d79c1ee743733cde5966ac402/qttools-33693a928986006d79c1ee743733cde5966ac402.tar.gz -> qttools-5.15.2-33693a92.tar.gz
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	virtualx	975d49ff3b3f451efe7a95f230532135	kde.org	4f2cef3496909640f9114c853d2077b4	qt5-build	8f05dc278c2f4587e3b92316ffc324cd	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
+SLOT=0
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	virtualx	975d49ff3b3f451efe7a95f230532135	qt5-build	a5a0ff059a4fa28ec744cd82cc8de1d7	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
 _md5_=a5d5dd627837a0f998ad40af3ed54e30
