@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-04-21 09:34:24 CST)
+(The last generation time: 2022-04-21 16:46:26 CST)
 
 ### Packages
 
@@ -485,8 +485,8 @@
                                               | 5.17.3                                    |            |                                                                                         |
      dev-util/pahole                          | 1.23                                      |  D         | https://git.kernel.org/cgit/devel/pahole/pahole.git/                                    | pahole (Poke-a-Hole) and other DWARF2 utilities
    sys-kernel/starfive-sources                | 5.17.1                                    | RD         | https://starfivetech.com                                                                | Linux kernel for StarFive's JH7100 RISC-V SoC
-   sys-kernel/xanmod-hybrid                   | 5.15.34                                   | RD         | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
-                                              | 5.17.3                                    |            |                                                                                         |
+   sys-kernel/xanmod-hybrid                   | 5.15.35                                   | RD         | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
+                                              | 5.17.4                                    |            |                                                                                         |
    sys-kernel/xanmod-kernel                   | 5.10.111                                  | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
                                               | 5.15.34                                   |            |                                                                                         |
                                               | 5.16.16                                   |            |                                                                                         |
