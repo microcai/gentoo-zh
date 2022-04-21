@@ -5,8 +5,8 @@
 		<remote-id type="github">xanmod/linux</remote-id>
 	</upstream>
 	<maintainer type="person">
-		<email>account_not_exist@server_unavailable.com</email>
-		<name>Capricornus</name>
+		<email>dev_zdx7ejsg@mail.com</email>
+		<name>Copri</name>
 	</maintainer>
 	<use>
 		<flag name="tt">Enable Default Xanmod Patches with TT CPU Scheduler.</flag>
