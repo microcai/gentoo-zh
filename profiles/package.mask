@@ -44,4 +44,4 @@ net-im/instantbird
 
 # Copri <dev_zdx7ejsg@mail.com>
 # mask it for more test, unmask it after careful consideration.
-dev-db/mongodb:rapid::gentoo-zh
+=dev-db/mongodb-5.3*
