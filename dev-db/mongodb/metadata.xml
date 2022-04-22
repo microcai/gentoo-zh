@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>dev_zdx7ejsg@mail.com</email>
+		<name>Copri</name>
+	</maintainer>
+	<longdescription lang="en">
+	MongoDB (from "humongous") is a scalable, high-performance, open source,
+	schema-free, document-oriented database. Written in C++, MongoDB features:
+
+	MongoDB bridges the gap between key-value stores (which are fast and highly
+	scalable) and traditional RDBMS systems (which provide structured schemas
+	and powerful queries).
+	</longdescription>
+	<use>
+		<flag name="lto">Adds support for link time optimization</flag>
+		<flag name="mongosh">Install the MongoDB shell from <pkg>app-admin/mongosh-bin</pkg></flag>
+		<flag name="tools">Install the MongoDB tools (mongoimport, mongodump...) from <pkg>app-admin/mongo-tools</pkg></flag>
+		<flag name="gold">Use gold linker instead of default bfd linker.</flag>
+		<flag name="free-mon">Enable support for Free Monitoring</flag>
+		<flag name="http-client">Enable support for HTTP client requests.</flag>
+		<flag name="ocsp-stapling">Enable OCSP Stapling on servers.</flag>
+		<flag name="server-js">Build mongod with JavaScript support. (use spidermonkey as javascript scripting engine)</flag>
+		<flag name="tcmalloc">Use tcmalloc as allocator.</flag>
+		<flag name="tcmalloc-experimental">Use tcmalloc-experimental as allocator.</flag>
+		<flag name="runtime-hardening">Enable runtime hardening features. (e.g. stack smash protection)</flag>
+		<flag name="experimental-runtime-hardening">Enable experimental runtime hardenings.</flag>
+		<flag name="experimental-optimization">Enable experimental optimizations, exclude sandybridge.</flag>
+	</use>	
+</pkgmetadata>
