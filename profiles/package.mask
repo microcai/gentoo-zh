@@ -41,3 +41,7 @@ net-im/instantbird
 
 # xiami stop their service
 =dev-python/fuo-xiami-0.2.4
+
+# Copri <dev_zdx7ejsg@mail.com>
+# mask it for more test, unmask it after careful consideration.
+dev-db/mongodb:rapid::gentoo-zh
