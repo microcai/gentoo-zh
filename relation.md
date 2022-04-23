@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-04-23 18:20:40 CST)
+(The last generation time: 2022-04-23 18:21:11 CST)
 
 ### Packages
 
@@ -283,6 +283,8 @@
  media-fonts/ttf-wps-fonts                    | 1.0                                       |            | https://github.com/iamdh4/ttf-wps-fonts                                                 | Symbol fonts required by wps-office
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/wangfonts                        | 1.3.0                                     |            | https://code.google.com/p/wangfonts/                                                    | Free Chinese TrueType fonts donated by Prof. Hann-Tzong Wang
+----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ media-fonts/zhudou                           | 1.000                                     |            | https://github.com/Buernia/Zhudou-Sans                                                  | A font family for CJK symbols and punctuation, derived from Noto Sans.
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/blur-effect                        | 1.1.3                                     |            | https://github.com/sonald/blur-effect                                                   | Off-screen image blurring utility using OpenGL ES 3.0
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
