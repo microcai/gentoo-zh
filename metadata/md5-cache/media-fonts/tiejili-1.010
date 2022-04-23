@@ -1,0 +1,13 @@
+BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup unpack
+DESCRIPTION=An open-source font that extends Reggae One to Chinese.
+EAPI=7
+HOMEPAGE=https://github.com/Buernia/Tiejili
+INHERIT=font
+IUSE=X
+KEYWORDS=~amd64
+LICENSE=OFL-1.1
+SLOT=0
+SRC_URI=https://github.com/Buernia/Tiejili/archive/refs/tags/v1.010.tar.gz -> tiejili-1.010.tar.gz
+_eclasses_=font	d31f12a0f6e13d56dc3062e76ae58a61
+_md5_=7c80c4b94dbd52be1c01674000c12656
