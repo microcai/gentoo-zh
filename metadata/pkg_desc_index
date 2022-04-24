@@ -222,7 +222,7 @@ sys-kernel/liquorix-sources 5.17.1 5.17.3: Liquorix kernel is best one for deskt
 sys-kernel/mkinitcpio 31: Modular initramfs image creation utility
 sys-kernel/starfive-sources 5.17.1: Linux kernel for StarFive's JH7100 RISC-V SoC
 sys-kernel/xanmod-hybrid 5.15.35 5.17.4: Full XanMod source, including the Gentoo patchset and other patch options.
-sys-kernel/xanmod-kernel 5.10.112 5.15.35 5.17.4: XanMod lts kernel built with Gentoo patches and cjktty
+sys-kernel/xanmod-kernel 5.10.112 5.15.35 5.17.4-r1: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 5.15.12 5.15.14: Xanmod-RT, cjktty, uksm patchset for main kernel tree
 sys-kernel/zenpower 0.1.12-r1: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/cutefish-core 0.7 0.8 9999: System components and backend of CutefishOS
