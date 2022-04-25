@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-04-24 18:52:58 CST)
+(The last generation time: 2022-04-25 16:29:11 CST)
 
 ### Packages
 
@@ -266,7 +266,7 @@
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/cwtex-q-fonts                    | 0.2                                       |            | https://code.google.com/p/cwtex-q-fonts/                                                | Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/iansui                           | 0.940                                     |            | https://github.com/ButTaiwan/iansui                                                     | An open-source Chinese font derived from Klee One (Fontworks).
+ media-fonts/iansui                           | 0.943                                     |            | https://github.com/ButTaiwan/iansui                                                     | An open-source Chinese font derived from Klee One (Fontworks).
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/jf-openhuninn                    | 1.1                                       |            | https://justfont.com/huninn/                                                            | An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
