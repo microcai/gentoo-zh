@@ -5,13 +5,10 @@ EAPI=7
 
 inherit font
 
-MY_PN="iansui"
-
 DESCRIPTION="An open-source Chinese font derived from Klee One (Fontworks)."
 HOMEPAGE="https://github.com/ButTaiwan/iansui"
 SRC_URI="https://github.com/ButTaiwan/iansui/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
-S="${WORKDIR}/${MY_PN}-${PV}"
 LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -21,7 +18,6 @@ RDEPEND=""
 DEPEND=""
 BDEPEND=""
 FONT_SUFFIX="ttf"
-FONT_S="${S}"
 
 src_unpack() {
 	default
