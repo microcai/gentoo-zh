@@ -580,6 +580,20 @@ use_latest_release = true
 prefix = "v"
 github_account = "zozx"
 
+["media-fonts/tiejili"]
+source = "github"
+github = "Buernia/Tiejili"
+use_latest_release = true
+prefix = "v"
+github_account = "Linerre"
+
+["media-fonts/zhudou"]
+source = "github"
+github = "Buernia/Zhudou-Sans"
+use_latest_release = true
+prefix = "v"
+github_account = "Linerre"
+
 # TODO: version not found: https://sites.google.com/view/jtfoundry/zh-tw/downloads
 #["media-fonts/taipei-sans-tc"]
 
