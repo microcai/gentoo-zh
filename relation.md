@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-04-25 16:29:11 CST)
+(The last generation time: 2022-04-26 13:21:13 CST)
 
 ### Packages
 
@@ -492,7 +492,7 @@
      dev-util/pahole                          | 1.23                                      |  D         | https://git.kernel.org/cgit/devel/pahole/pahole.git/                                    | pahole (Poke-a-Hole) and other DWARF2 utilities
    sys-kernel/starfive-sources                | 5.17.1                                    | RD         | https://starfivetech.com                                                                | Linux kernel for StarFive's JH7100 RISC-V SoC
    sys-kernel/xanmod-hybrid                   | 5.15.35                                   | RD         | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
-                                              | 5.17.4                                    |            |                                                                                         |
+                                              | 5.17.4-r1                                 |            |                                                                                         |
    sys-kernel/xanmod-kernel                   | 5.10.112                                  | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
                                               | 5.15.35                                   |            |                                                                                         |
                                               | 5.17.4-r1                                 |            |                                                                                         |
