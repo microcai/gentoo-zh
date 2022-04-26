@@ -3,7 +3,7 @@
 
 EAPI="8"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="1"
+K_GENPATCHES_VER="6"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 ETYPE="sources"
@@ -41,6 +41,7 @@ SRC_URI="
 
 src_unpack() {
 	UNIPATCH_LIST_DEFAULT=""
+	UNIPATCH_LIST="${DISTDIR}/patch-${OKV}${XANMOD_VERSION}.xz"
 	
 	#if use tt	;	then
 	#	UNIPATCH_LIST+=" ${DISTDIR}/tt-${KV_MAJOR}.${KV_MINOR}.patch"
@@ -52,8 +53,6 @@ src_unpack() {
 	fi
 
 	kernel-2_src_unpack
-
-	sh ${FILESDIR}/force_patch.sh ${PV}
 }
 
 pkg_postinst() {
