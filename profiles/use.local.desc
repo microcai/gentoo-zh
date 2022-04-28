@@ -138,6 +138,8 @@ media-fonts/nerd-fonts:robotomono - Install Nerd-fonts-patched Roboto Mono fonts
 media-fonts/nerd-fonts:sharetechmono - Install Nerd-fonts-patched Share Tech Mono fonts
 media-fonts/nerd-fonts:sourcecodepro - Install Nerd-fonts-patched Source Code Pro fonts
 media-fonts/nerd-fonts:spacemono - Install Nerd-fonts-patched Space Mono fonts
+media-fonts/nerd-fonts:symbols - Install extra glyphs from popular iconic fonts
+media-fonts/nerd-fonts:symbolsmono - Install extra glyphs from popular iconic fonts
 media-fonts/nerd-fonts:terminus - Install Nerd-fonts-patched Terminus fonts
 media-fonts/nerd-fonts:tinos - Install Nerd-fonts-patched Tinos fonts
 media-fonts/nerd-fonts:ubuntu - Install Nerd-fonts-patched Ubuntu fonts
