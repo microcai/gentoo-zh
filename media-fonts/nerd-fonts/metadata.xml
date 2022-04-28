@@ -56,5 +56,7 @@
 	<flag name="ubuntu">Install Nerd-fonts-patched Ubuntu fonts</flag>
 	<flag name="ubuntumono">Install Nerd-fonts-patched Ubuntu Mono fonts</flag>
 	<flag name="victormono">Install Nerd-fonts-patched Victor Mono fonts</flag>
+	<flag name="symbols">Install extra glyphs from popular iconic fonts</flag>
+	<flag name="symbolsmono">Install extra glyphs from popular iconic fonts</flag>
 	</use>
 </pkgmetadata>
