@@ -1,4 +1,4 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 2021-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -8,6 +8,7 @@ inherit font check-reqs
 DESCRIPTION="Nerd Fonts is a project that patches developer targeted fonts with glyphs"
 HOMEPAGE="https://github.com/ryanoasis/nerd-fonts"
 COMMON_URI="https://github.com/ryanoasis/${PN}/releases/download/v${PV}"
+TAG_URI="https://github.com/ryanoasis/nerd-fonts/raw/v${PV}"
 
 FONTS=(
 	3270
@@ -113,6 +114,12 @@ SRC_URI="
 	ubuntu?                 ( "${COMMON_URI}/Ubuntu.zip" )
 	ubuntumono?             ( "${COMMON_URI}/UbuntuMono.zip" )
 	victormono?             ( "${COMMON_URI}/VictorMono.zip" )
+	symbols?                ( "${TAG_URI}/src/glyphs/Symbols-2048-em%20Nerd%20Font%20Complete.ttf" -> "Symbols-2048-em_Nerd_Font_Complete.ttf"
+							  "${TAG_URI}/10-nerd-font-symbols.conf"
+							)
+	symbolsmono?            ( "${TAG_URI}/src/glyphs/Symbols-1000-em%20Nerd%20Font%20Complete.ttf" -> "Symbols-1000-em_Nerd_Font_Complete.ttf"
+							  "${TAG_URI}/10-nerd-font-symbols.conf"
+							)
 "
 
 LICENSE="MIT
@@ -134,17 +141,33 @@ CHECKREQS_DISK_BUILD="3G"
 CHECKREQS_DISK_USR="4G"
 
 IUSE_FLAGS=(${FONTS[*],,})
-IUSE="${IUSE_FLAGS[*]}"
-REQUIRED_USE="X || ( ${IUSE_FLAGS[*]} )"
+IUSE="${IUSE_FLAGS[*]} symbols symbolsmono"
+REQUIRED_USE="X || ( ${IUSE_FLAGS[*]} ) symbols? ( !symbolsmono )"
 
 S="${WORKDIR}"
 FONT_CONF=(
-	"${FILESDIR}"/10-nerd-font-symbols.conf
+	"${S}"/10-nerd-font-symbols.conf
 )
 FONT_S=${S}
 
 pkg_pretend() {
 	check-reqs_pkg_setup
+}
+
+src_prepare() {
+	if use symbols || use symbolsmono ; then
+		install -m644 "${DISTDIR}/10-nerd-font-symbols.conf" "${S}/10-nerd-font-symbols.conf" || die
+	fi
+
+	if use symbols ; then
+		install -m644 "${DISTDIR}/Symbols-2048-em_Nerd_Font_Complete.ttf" "${S}/Symbols-2048-em_Nerd_Font_Complete.ttf" || die
+	fi
+
+	if use symbolsmono ; then
+		install -m644 "${DISTDIR}/Symbols-1000-em_Nerd_Font_Complete.ttf" "${S}/Symbols-1000-em_Nerd_Font_Complete.ttf" || die
+	fi
+
+	default
 }
 
 src_install() {
