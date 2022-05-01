@@ -3,9 +3,6 @@
 =dev-libs/boost-1.54.0
 =dev-util/boost-build-1.54.0
 
-# microcai, ibus-1.5 it all about shit
->=app-i18n/ibus-1.4.3
-
 # scsi <scsichen@gmail.com> (16 Nov 2007)
 # can not be compile, need fix
 =gnome-extra/drwright-0.18
