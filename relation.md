@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-04-30 09:05:42 CST)
+(The last generation time: 2022-05-01 11:18:36 CST)
 
 ### Packages
 
@@ -417,18 +417,13 @@
  net-proxy/smartproxy                         | 0.9.4                                     |            | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/v2rayA                             | 1.5.6.2                                   |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
-   net-proxy/Xray                             | 1.4.3                                     | RD         | https://github.com/XTLS/Xray-core                                                       | Xray, Penetrates Everything.
-                                              | 1.4.4                                     |            |                                                                                         |
-                                              | 1.4.5                                     |            |                                                                                         |
-                                              | 1.5.3                                     |            |                                                                                         |
+   net-proxy/Xray                             | 1.5.5                                     | RD         | https://github.com/XTLS/Xray-core                                                       | Xray, Penetrates Everything.
+     dev-libs/v2ray-domain-list-community-bin | 20220429034939                            | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+     dev-libs/v2ray-geoip-bin                 | 202204280105                              | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    net-proxy/v2ray                            | 4.40.1                                    | RD         | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
                                               | 4.43.0                                    |            |                                                                                         |
                                               | 4.44.0-r2                                 |            |                                                                                         |
      dev-libs/v2ray-domain-list-community     | 4.39.2_p20210621183458                    | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
-                                              | 9999                                      |            |                                                                                         |
-     dev-libs/v2ray-domain-list-community-bin | 4.39.2_p20210621183458                    | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
-                                              | 9999                                      |            |                                                                                         |
-     dev-libs/v2ray-geoip-bin                 | 4.39.2_p202106170022                      | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
                                               | 9999                                      |            |                                                                                         |
    net-proxy/v2ray-bin                        | 4.44.0                                    | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
