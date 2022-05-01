@@ -100,7 +100,7 @@ dev-libs/libthai 0.1.28: A a set of Thai language support routines
 dev-libs/lunar-date 3.0.0: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458 9999: Community managed domain list for V2Ray.
-dev-libs/v2ray-domain-list-community-bin 20220429034939: Community managed domain list for V2Ray.
+dev-libs/v2ray-domain-list-community-bin 20220501162639: Community managed domain list for V2Ray.
 dev-libs/v2ray-geoip-bin 202204280105: GeoIP for V2Ray.
 dev-python/conda 4.12.0: OS-agnostic, system-level binary package manager and ecosystem
 dev-python/conda-package-handling 1.8.1: Create and extract conda packages of various formats
