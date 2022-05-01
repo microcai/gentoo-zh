@@ -15,5 +15,5 @@ RESTRICT="mirror"
 
 src_install() {
 	insinto /usr/share/v2ray
-	newins "${DISTDIR}/${PN}-${PV}.dat" geosite.dat
+	newins "${DISTDIR}/${PN}-${PV}.dat" geoip.dat
 }
