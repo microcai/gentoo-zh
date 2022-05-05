@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-02 06:08:03 CST)
+(The last generation time: 2022-05-05 13:28:35 CST)
 
 ### Packages
 
@@ -418,8 +418,8 @@
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/v2rayA                             | 1.5.6.2                                   |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
    net-proxy/Xray                             | 1.5.5                                     | RD         | https://github.com/XTLS/Xray-core                                                       | Xray, Penetrates Everything.
-     dev-libs/v2ray-domain-list-community-bin | 20220501162639                            | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
-     dev-libs/v2ray-geoip-bin                 | 202204280105                              | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
+     dev-libs/v2ray-domain-list-community-bin | 20220505022319                            | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+     dev-libs/v2ray-geoip-bin                 | 202205050051                              | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    net-proxy/v2ray                            | 4.40.1                                    | RD         | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
                                               | 4.43.0                                    |            |                                                                                         |
                                               | 4.44.0-r2                                 |            |                                                                                         |
