@@ -4,8 +4,8 @@
 	<use>
 		<flag name="tool">Build the additional tool: v2ctl</flag>
 	</use>
-	<upstream>
-		<remote-id type="github">v2fly/v2ray-core</remote-id>
-		<bugs-to>https://github.com/v2fly/v2ray-core/issues</bugs-to>
-	</upstream>
+	<maintainer type="person">
+		<email>chn@chn.moe</email>
+		<name>Haonan Chen</name>
+	</maintainer>
 </pkgmetadata>
