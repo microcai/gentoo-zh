@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-05 13:28:35 CST)
+(The last generation time: 2022-05-08 20:52:18 CST)
 
 ### Packages
 
@@ -214,6 +214,9 @@
                                               | 1.6.0                                     |            |                                                                                         |
                                               | 9999                                      |            |                                                                                         |
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-libs/v2ray-domain-list-community         | 4.39.2_p20210621183458                    |            | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+                                              | 9999                                      |            |                                                                                         |
+----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/conda                             | 4.12.0                                    |            | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
    dev-python/conda-package-handling          | 1.8.1                                     |  D, RD     | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
    dev-python/pycosat                         | 0.6.3                                     |  D, RD     | https://github.com/ContinuumIO/pycosat                                                  | Python bindings to picosat (a SAT solver)
@@ -420,11 +423,7 @@
    net-proxy/Xray                             | 1.5.5                                     | RD         | https://github.com/XTLS/Xray-core                                                       | Xray, Penetrates Everything.
      dev-libs/v2ray-domain-list-community-bin | 20220505022319                            | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
      dev-libs/v2ray-geoip-bin                 | 202205050051                              | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
-   net-proxy/v2ray                            | 4.40.1                                    | RD         | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
-                                              | 4.43.0                                    |            |                                                                                         |
-                                              | 4.44.0-r2                                 |            |                                                                                         |
-     dev-libs/v2ray-domain-list-community     | 4.39.2_p20210621183458                    | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
-                                              | 9999                                      |            |                                                                                         |
+   net-proxy/v2ray                            | 4.45.0                                    | RD         | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
    net-proxy/v2ray-bin                        | 4.44.0                                    | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sci-chemistry/vesta                          | 3.5.5                                     |            | https://jp-minerals.org/vesta                                                           | Visualization for Electronic and STructural Analysis
