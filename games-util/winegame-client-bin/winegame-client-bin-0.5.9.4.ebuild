@@ -14,12 +14,16 @@ SRC_URI="https://file.winegame.net/packages/debian/${PV}/net.winegame.client_${P
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
+
 IUSE=""
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 RESTRICT="mirror"
 
 DEPEND="app-arch/cabextract"
 
 RDEPEND="
+	${PYTHON_DEPS}
 	app-arch/unzip
 	app-arch/p7zip
 	net-misc/curl
