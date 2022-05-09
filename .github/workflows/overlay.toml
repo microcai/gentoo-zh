@@ -580,6 +580,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "zozx"
 
+["media-fonts/sarasa-mono-sc-nerd"]
+source = "github"
+github = "laishulu/Sarasa-Mono-SC-Nerd"
+use_latest_release = true
+prefix = "v"
+github_account = "oatiz"
+
 ["media-fonts/tiejili"]
 source = "github"
 github = "Buernia/Tiejili"
