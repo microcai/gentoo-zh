@@ -10,7 +10,7 @@ SRC_URI="https://github.com/EliverLara/Nordic/archive/v${PV}.tar.gz -> ${P}.tar.
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+gtk2 +gtk3 kde xfce mate gnome-shell cinnamon"
+IUSE="+gtk2 +gtk3 xfce mate gnome-shell cinnamon"
 
 S="${WORKDIR}/Nordic-${PV}"
 
@@ -20,8 +20,7 @@ src_compile() { :; }
 
 src_install() {
 	insinto /usr/share/themes/Nordic-v40
-	doins -r ./{index.theme,gtk-2.0,gtk-3.0}
-	use kde && doins ./kde
+	doins -r ./{index.theme,gtk-2.0,gtk-3.0,kde}
 	use xfce && doins ./xfwm4
 	use mate && doins ./metacity-1
 	use gnome-shell && doins ./gnome-shell
