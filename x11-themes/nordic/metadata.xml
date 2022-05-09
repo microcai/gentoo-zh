@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>                                                                                                                      
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">    
+<pkgmetadata>                                  
+        <maintainer type="person">            
+                <email>jaus_hwang@88.com</email>    
+                <name>Jaus Hwang</name>    
+        </maintainer>    
+        <upstream>    
+                <remote-id type="github">EliverLara/Nordic</remote-id>    
+        </upstream>    
+        <use>    
+                <flag name="gnome-shell">Install theme for <pkg>gnome-base/gnome-shell</pkg></flag>    
+                <flag name="mate">Install Metacity theme for <pkg>mate-base/mate</pkg></flag>    
+                <flag name="xfce">Install theme for <pkg>xfce-base/xfwm4</pkg></flag>    
+                <flag name="cinnamon">Install theme for <pkg>gnome-extra/cinnamon</pkg></flag>    
+                <flag name="gtk2">Install GTK+2 theme</flag>    
+                <flag name="gtk3">Install GTK+3 theme</flag>    
+        </use>    
+</pkgmetadata>
