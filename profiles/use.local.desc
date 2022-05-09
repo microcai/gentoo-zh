@@ -194,3 +194,9 @@ x11-misc/picom-jonaburg:config-file - Enable config file support
 x11-misc/picom-jonaburg:doc - Build documentation and man pages (requires app-text/asciidoc)
 x11-misc/picom-jonaburg:drm - Enable support for using drm for vsync
 x11-misc/picom-jonaburg:opengl - Enable features that require opengl (opengl backend, and opengl vsync methods)
+x11-themes/nordic:cinnamon - Install theme for gnome-extra/cinnamon
+x11-themes/nordic:gnome-shell - Install theme for gnome-base/gnome-shell
+x11-themes/nordic:gtk2 - Install GTK+2 theme
+x11-themes/nordic:gtk3 - Install GTK+3 theme
+x11-themes/nordic:mate - Install Metacity theme for mate-base/mate
+x11-themes/nordic:xfce - Install theme for xfce-base/xfwm4
