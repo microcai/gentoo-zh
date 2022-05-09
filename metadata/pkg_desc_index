@@ -249,6 +249,7 @@ x11-misc/lightdm-slick-greeter 1.4.1 9999: LightDM greeter forked from Unity by 
 x11-misc/ly 0.5.3: Ly - a TUI display manager
 x11-misc/picom-jonaburg 8 9999: A lightweight compositor for X11 (previously a compton fork)
 x11-plugins/vicious 9999: Modular widget library for x11-wm/awesome
+x11-terms/wezterm-bin 20220408: Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
 x11-themes/fcitx5-breeze 1.0.0 2.0.0: Fcitx5 theme to match KDE's Breeze style.
 x11-themes/lxice 0.1.0: LXDE theme for IceWM
 x11-themes/nordic 2.1.0: Dark Gtk3.20+ theme created using the awesome Nord color pallete

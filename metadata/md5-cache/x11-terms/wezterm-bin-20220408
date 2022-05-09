@@ -1,0 +1,15 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
+EAPI=8
+HOMEPAGE=https://wezfurlong.org/wezterm
+INHERIT=unpacker
+IUSE=wayland +X
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=sys-apps/dbus >=media-libs/fontconfig-2.12 >=dev-libs/openssl-1.1 wayland? ( dev-libs/wayland dev-libs/wayland-protocols ) X? ( >=x11-libs/libX11-1.7.5 >=x11-libs/libxcb-1.8 >=x11-libs/xcb-util-0.4 >=x11-libs/xcb-util-wm-0.4.1 >=x11-libs/xcb-util-image-0.2.1 >=x11-libs/xcb-util-keysyms-0.4 x11-libs/libxkbcommon[X] ) x11-themes/hicolor-icon-theme
+REQUIRED_USE=|| ( wayland X )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/wez/wezterm/releases/download/20220408-101518-b908e2dd/wezterm-20220408-101518-b908e2dd.Ubuntu18.04.deb
+_eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	unpacker	697382d119fd3d195f110b7979184285
+_md5_=388e396ea1138d0d8c1f6a05c09ad96e
