@@ -1048,6 +1048,14 @@ prefix = "v"
 # only live package in gentoo-zh
 #["x11-plugins/vicious"]
 
+
+["x11-themes/wezterm-bin"]
+source = "github"
+github = "wez/wezterm"
+use_latest_release = true
+from_pattern = "(.*)-(.*)-(.*)"
+to_pattern = "\\1"
+
 # TODO
 #["x11-themes/fcitx5-breeze"]
 
