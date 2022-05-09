@@ -1,0 +1,14 @@
+BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup
+DESCRIPTION=Sarasa Mono SC font patched with Nerd fonts
+EAPI=7
+HOMEPAGE=https://github.com/laishulu/Sarasa-Mono-SC-Nerd
+INHERIT=font
+IUSE=X
+KEYWORDS=~amd64
+LICENSE=OFL-1.1
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/laishulu/Sarasa-Mono-SC-Nerd/archive/refs/tags/v2.1.0.tar.gz -> sarasa-mono-sc-nerd-2.1.0.tar.gz
+_eclasses_=font	d31f12a0f6e13d56dc3062e76ae58a61
+_md5_=27d9aedf828a16add94bbf29da9d8f8d
