@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>                                                                                                                      
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">    
+<pkgmetadata>                                  
+        <maintainer type="person">            
+                <email>jaus_hwang@88.com</email>    
+                <name>Jaus Hwang</name>    
+        </maintainer>    
+        <upstream>    
+                <remote-id type="github">alvatip/Nordzy-cursors</remote-id>    
+        </upstream>    
+        <use>    
+                <flag name="nord-white">Install ${PN}-white cursors theme</flag>    
+        </use>    
+</pkgmetadata>
