@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-11 19:58:34 CST)
+(The last generation time: 2022-05-11 20:29:35 CST)
 
 ### Packages
 
@@ -221,7 +221,7 @@
    dev-python/conda-package-handling          | 1.8.1                                     |  D, RD     | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
    dev-python/pycosat                         | 0.6.3                                     |  D, RD     | https://github.com/ContinuumIO/pycosat                                                  | Python bindings to picosat (a SAT solver)
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/nvchecker                         | 2.7-r1                                    |            | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
+ dev-python/nvchecker                         | 2.8                                       |            | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
    dev-python/structlog                       | 21.5.0                                    | RD         | http://www.structlog.org/en/stable/                                                     | Structured Logging for Python
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/python-telegram-bot               | 13.11                                     |            | https://github.com/python-telegram-bot/python-telegram-bot                              | Python wrapper of telegram bots API
