@@ -200,3 +200,4 @@ x11-themes/nordic:gtk2 - Install GTK+2 theme
 x11-themes/nordic:gtk3 - Install GTK+3 theme
 x11-themes/nordic:mate - Install Metacity theme for mate-base/mate
 x11-themes/nordic:xfce - Install theme for xfce-base/xfwm4
+x11-themes/nordzy-cursors:nord-white - Install ${PN}-white cursors theme
