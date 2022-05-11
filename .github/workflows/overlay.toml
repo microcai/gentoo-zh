@@ -1049,7 +1049,7 @@ prefix = "v"
 #["x11-plugins/vicious"]
 
 
-["x11-themes/wezterm-bin"]
+["x11-terms/wezterm-bin"]
 source = "github"
 github = "wez/wezterm"
 use_latest_release = true
