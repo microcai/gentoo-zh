@@ -254,6 +254,7 @@ x11-themes/fcitx5-breeze 1.0.0 2.0.0: Fcitx5 theme to match KDE's Breeze style.
 x11-themes/lxice 0.1.0: LXDE theme for IceWM
 x11-themes/nordic 2.1.0: Dark Gtk3.20+ theme created using the awesome Nord color pallete
 x11-themes/nordzy-cursors 0.5.0: Cursor theme using the Nord color palette and based on Vimix and cz-Viator
+x11-themes/nordzy-icon 1.3: A free and open source icon theme for Linux desktops using the Nord color palette
 x11-themes/smplayer-themes-nonfree 0.1.0-r1 0.1.1-r1: Icon themes for smplayer
 x11-wm/9wm 1.1: A window manager emulation of the Plan 9 window manager 8-1/2.
 x11-wm/chamferwm 9999: A tiling X11 window manager with Vulkan compositor.
