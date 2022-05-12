@@ -1,0 +1,13 @@
+Remove unused ytdl option
+--- a/feeluown/player/mpvplayer.py	2022-05-06 00:10:23.000000000 +0800
++++ b/feeluown/player/mpvplayer.py	2022-05-13 00:05:18.184393227 +0800
+@@ -62,8 +62,7 @@
+         # mpvkwargs['log_handler'] = self.__log_handler
+         # mpvkwargs['msg_level'] = 'all=v'
+         # the default version of libmpv on Ubuntu 18.04 is (1, 25)
+-        self._mpv = MPV(ytdl=False,
+-                        input_default_bindings=True,
++        self._mpv = MPV(input_default_bindings=True,
+                         input_vo_keyboard=True,
+                         **mpvkwargs)
+         _mpv_set_property_string(self._mpv.handle, b'audio-device', audio_device)
