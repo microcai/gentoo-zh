@@ -43,6 +43,10 @@ DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
 "
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-3.8.5-fix-mpv.patch # Remove unused ytdl option
+)
+
 python_install_all() {
 	distutils-r1_python_install_all
 
