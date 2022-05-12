@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-11 20:29:35 CST)
+(The last generation time: 2022-05-12 13:52:10 CST)
 
 ### Packages
 
@@ -529,6 +529,8 @@
  x11-themes/nordic                            | 2.1.0                                     |            | https://github.com/EliverLara/Nordic                                                    | Dark Gtk3.20+ theme created using the awesome Nord color pallete
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/nordzy-cursors                    | 0.5.0                                     |            | https://github.com/alvatip/Nordzy-cursors                                               | Cursor theme using the Nord color palette and based on Vimix and cz-Viator
+----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ x11-themes/nordzy-icon                       | 1.3                                       |            | https://github.com/alvatip/Nordzy-icon                                                  | A free and open source icon theme for Linux desktops using the Nord color palette
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/smplayer-themes-nonfree           | 0.1.0-r1                                  |            | http://smplayer.sourceforge.net/                                                        | Icon themes for smplayer
                                               | 0.1.1-r1                                  |            |                                                                                         |
