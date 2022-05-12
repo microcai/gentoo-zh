@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-12 13:52:10 CST)
+(The last generation time: 2022-05-12 23:39:24 CST)
 
 ### Packages
 
@@ -312,7 +312,7 @@
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-plugins/gimp-gap                       | 2.8.0                                     |            | http://www.gimp.org/                                                                    | Gimp Animation Package
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/feeluown                         | 3.8.3                                     |            | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
+ media-sound/feeluown                         | 3.8.5                                     |            | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
    dev-python/fuo-kuwo                        | 0.1.5                                     |  D         | https://github.com/feeluown/feeluown-kuwo                                               | kuwo music support for feeluown
    dev-python/fuo-local                       | 0.3                                       |  D         | https://github.com/feeluown/feeluown-local                                              | local music support for feeluown
    dev-python/fuo-netease                     | 0.8                                       |  D         | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
