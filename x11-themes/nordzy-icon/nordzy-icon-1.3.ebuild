@@ -5,7 +5,7 @@ EAPI=8
 
 inherit xdg
 
-DESCRIPTION="Nordzy is a free and open source icon theme for Linux desktops using the Nord color palette from Arctic Ice Studio and based on WhiteSur and Numix Icon Theme"
+DESCRIPTION="A free and open source icon theme for Linux desktops using the Nord color palette"
 HOMEPAGE="https://github.com/alvatip/Nordzy-icon"
 SRC_URI="https://github.com/alvatip/Nordzy-icon/releases/download/${PV}/Nordzy.tar.gz -> ${P}.tar.gz"
 
