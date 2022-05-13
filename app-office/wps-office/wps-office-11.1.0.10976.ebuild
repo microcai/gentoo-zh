@@ -13,13 +13,13 @@ HOMEPAGE="http://www.wps.cn/product/wpslinux/ http://wps-community.org/"
 KEYWORDS="~amd64 ~arm64 ~mips"
 
 SRC_URI="
-	amd64?	( https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/${MY_PV}/${PN}_${PV}_amd64.deb )
-	arm64?	( https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/${MY_PV}/${PN}_${PV}_arm64.deb )
-	mips?	( https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/${MY_PV}/${PN}_${PV}_mips64el.deb )
+	amd64?	( https://wps-linux-personal.wpscdn.cn/wps/download/ep/Linux2019/${MY_PV}/${PN}_${PV}_amd64.deb )
+	arm64?	( https://wps-linux-personal.wpscdn.cn/wps/download/ep/Linux2019/${MY_PV}/${PN}_${PV}_arm64.deb )
+	mips?	( https://wps-linux-personal.wpscdn.cn/wps/download/ep/Linux2019/${MY_PV}/${PN}_${PV}_mips64el.deb )
 "
 
 SLOT="0"
-RESTRICT="strip mirror" # mirror as explained at bug #547372
+RESTRICT="strip mirror bindist" # mirror as explained at bug #547372
 LICENSE="WPS-EULA"
 IUSE="big-endian systemd"
 REQUIRED_USE="mips? ( !big-endian )"
