@@ -1,0 +1,15 @@
+BDEPEND=dev-util/patchelf
+DEFINED_PHASES=install postinst postrm unpack
+DEPEND=dev-libs/nss dev-util/desktop-file-utils media-sound/pulseaudio x11-libs/libX11
+DESCRIPTION=Wemeet - Tencent Video Conferencing
+EAPI=8
+HOMEPAGE=https://wemeet.qq.com
+INHERIT=desktop xdg-utils unpacker
+KEYWORDS=-* ~amd64
+LICENSE=wemeet_license
+RDEPEND=dev-libs/nss dev-util/desktop-file-utils media-sound/pulseaudio x11-libs/libX11
+RESTRICT=bindist test
+SLOT=0
+SRC_URI=amd64? ( mirror+https://updatecdn.meeting.qq.com/cos/3cdd365cd90f221fb345ab73c4746e1f/TencentMeeting_0300000000_2.8.0.3_x86_64_default.publish.deb -> wemeet-2.8.0.3_amd64.deb ) arm64? ( mirror+https://updatecdn.meeting.qq.com/cos/1584cf78c2285b450a4bc9d0b3bb8720/TencentMeeting_0300000000_2.8.0.3_arm64_default.publish.deb -> wemeet-2.8.0.3_arm64.deb )
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	unpacker	697382d119fd3d195f110b7979184285
+_md5_=88d2626325ca893ae2b2d0c509a2d8d5
