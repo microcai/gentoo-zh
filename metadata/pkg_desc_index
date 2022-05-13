@@ -53,7 +53,7 @@ app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-mobilephone/scrcpy 1.23 1.24: Display and control your Android device
 app-office/bytedance-feishu 4.11.6.2: feishu - ByteDance's enterprise collaboration platform
 app-office/freeoffice 1046: A complete, free Microsoft Office-compatible alternative office suite.
-app-office/wps-office 11.1.0.10920: WPS Office is an office productivity suite, Here is the Chinese version
+app-office/wps-office 11.1.0.10976: WPS Office is an office productivity suite, Here is the Chinese version
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-shells/gitstatus 1.5.4: Git status for Bash and Zsh prompt
 app-shells/zsh-theme-powerlevel10k 1.16.1: Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
