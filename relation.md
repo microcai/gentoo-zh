@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-12 23:39:24 CST)
+(The last generation time: 2022-05-13 09:34:15 CST)
 
 ### Packages
 
@@ -330,8 +330,8 @@
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/termusic                         | 0.6.12                                    |            | https://github.com/tramhao/termusic                                                     | Music Player TUI written in Rust
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/yesplaymusic-bin                 | 0.4.3                                     |            | https://github.com/qier222/YesPlayMusic                                                 | A third party music player for Netease Music
-                                              | 0.4.4-r1                                  |            |                                                                                         |
+ media-sound/yesplaymusic-bin                 | 0.4.4-r1                                  |            | https://github.com/qier222/YesPlayMusic                                                 | A third party music player for Netease Music
+                                              | 0.4.5                                     |            |                                                                                         |
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/avplayer                         | 9999                                      |            | http://avplayer.avplayer.org                                                            | avplayer is a p2p video downloader and player
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -483,8 +483,8 @@
                                               | 5.17.5                                    |            |                                                                                         |
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                        | 3-r10                                     |            |                                                                                         | Virtual for Linux kernel sources
-   sys-kernel/liquorix-sources                | 5.17.3                                    | RD         | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
-                                              | 5.17.5                                    |            |                                                                                         |
+   sys-kernel/liquorix-sources                | 5.17.5                                    | RD         | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
+                                              | 5.17.7                                    |            |                                                                                         |
      dev-util/pahole                          | 1.23                                      |  D         | https://git.kernel.org/cgit/devel/pahole/pahole.git/                                    | pahole (Poke-a-Hole) and other DWARF2 utilities
    sys-kernel/starfive-sources                | 5.17.1                                    | RD         | https://starfivetech.com                                                                | Linux kernel for StarFive's JH7100 RISC-V SoC
    sys-kernel/xanmod-hybrid                   | 5.15.36                                   | RD         | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
