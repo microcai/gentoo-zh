@@ -6,7 +6,7 @@ EAPI=7
 inherit kernel-build python-any-r1
 
 MY_P=linux-${PV%.*}
-GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 9))
+GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 4))
 XV="1"
 
 DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
@@ -21,7 +21,7 @@ S=${WORKDIR}/${MY_P}
 LICENSE="GPL-2"
 KEYWORDS="~amd64"
 IUSE="cjk"
-SLOT="lts"
+SLOT="edge"
 
 PDEPEND="
 	>=virtual/dist-kernel-${PV}"
@@ -58,7 +58,7 @@ src_prepare() {
 	# prepare the default config
 	case ${ARCH} in
 	amd64)
-		cp "${S}/CONFIGS/xanmod/gcc/config" .config || die
+		cp "${S}/CONFIGS/xanmod/gcc/config_x86-64" .config || die
 		;;
 	*)
 		die "Unsupported arch ${ARCH}"
