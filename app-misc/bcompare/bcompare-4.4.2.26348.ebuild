@@ -3,8 +3,6 @@
 
 EAPI=7
 
-inherit eutils
-
 DESCRIPTION="Beyond Compare -- Compare, sync, and merge files and folders"
 HOMEPAGE="http://www.scootersoftware.com/"
 SRC_URI="
