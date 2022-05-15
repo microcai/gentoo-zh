@@ -1,0 +1,10 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=Beyond Compare -- Compare, sync, and merge files and folders
+EAPI=7
+HOMEPAGE=http://www.scootersoftware.com/
+KEYWORDS=amd64 x86
+LICENSE=Bcompare
+RESTRICT=mirror
+SLOT=0
+SRC_URI=x86? ( http://www.scootersoftware.com/bcompare-4.4.2.26348.i386.tar.gz ) amd64? ( http://www.scootersoftware.com/bcompare-4.4.2.26348.x86_64.tar.gz )
+_md5_=5cc6d9c763570b584b46a02d9ddff6d2
