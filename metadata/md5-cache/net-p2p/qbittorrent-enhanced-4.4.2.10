@@ -12,5 +12,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/boost-1.65.0-r1:= dev-libs/openssl:= dev-qt/qtcore:5 dev-qt/qtnetwork:5[ssl] dev-qt/qtsql:5 dev-qt/qtxml:5 >=net-libs/libtorrent-rasterbar-1.2.14:= sys-libs/zlib dbus? ( dev-qt/qtdbus:5 ) gui? ( dev-libs/geoip dev-qt/qtgui:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 )
 SLOT=0
 SRC_URI=https://github.com/c0re100/qBittorrent-Enhanced-Edition/archive/release-4.4.2.10.tar.gz -> qbittorrent-enhanced-4.4.2.10.tar.gz
-_eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	cmake	90e2b29417d53718328f3a95227137a0	systemd	2736b403a83f194b59b767f3b344c2c1	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	cmake	90e2b29417d53718328f3a95227137a0	systemd	2736b403a83f194b59b767f3b344c2c1	xdg	6024fbc93167fad782e2032933654857
 _md5_=18398eaec34d072e8d28ae7d8be4ea58

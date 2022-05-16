@@ -12,5 +12,5 @@ RDEPEND=app-arch/bzip2 app-arch/xz-utils dev-libs/atk dev-libs/glib:2 dev-libs/l
 RESTRICT=strip mirror bindist
 SLOT=0
 SRC_URI=https://download.zwcad.com/zw3d/3d_linux/2022/ZW3D-2022-Professional-V1.0_amd64.deb
-_eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	unpacker	697382d119fd3d195f110b7979184285	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	unpacker	697382d119fd3d195f110b7979184285	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
 _md5_=17d65e615c816e818c53c1196fe3976f

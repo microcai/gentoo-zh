@@ -9,5 +9,5 @@ KEYWORDS=~amd64
 LICENSE=BSD
 SLOT=0
 SRC_URI=https://github.com/zchunk/zchunk/archive/refs/tags/1.2.0.tar.gz -> zchunk-1.2.0.tar.gz
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	python-utils-r1	5dc84801daa87406aafaf535cb947a64	meson	8f48ffde53174aba67239f0da61ac9d3
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	python-utils-r1	5dc84801daa87406aafaf535cb947a64	meson	8f48ffde53174aba67239f0da61ac9d3
 _md5_=fbb18f78893531d10f76cd8ede30d4c5
