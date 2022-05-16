@@ -12,7 +12,7 @@ prefix = "v"
 source = "github"
 github = "zchunk/zchunk"
 use_latest_tag = true
-github_account = "CHN-beta"
+github_account = "HougeLangley"
 
 # only live package in gentoo-zh
 #["app-backup/snapper-gui"]
