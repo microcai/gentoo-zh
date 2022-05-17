@@ -13,5 +13,5 @@ REQUIRED_USE=arm64? ( !big-endian ) mips? ( !big-endian ) || ( abi_x86_64 abi_mi
 RESTRICT=bindist mirror strip
 SLOT=0
 SRC_URI=amd64? ( http://down.qq.com/qqweb/LinuxQQ/linuxqq_2.0.0-b2-1089_x86_64.rpm ) arm64? ( http://down.qq.com/qqweb/LinuxQQ/linuxqq_2.0.0-b2-1089_aarch64.rpm ) mips? ( http://down.qq.com/qqweb/LinuxQQ/linuxqq_2.0.0-b2-1089_mips64el.rpm )
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	multibuild	d26d81f242cb193d899a72bca423d0bd	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib-build	05f207909a804c9174bc39a00547d598	estack	055c42df72f76a4f45ec92b35e83cd56	rpm	f73e907469f65e52192f110dec72dce0	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	multibuild	d26d81f242cb193d899a72bca423d0bd	multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib-build	05f207909a804c9174bc39a00547d598	estack	055c42df72f76a4f45ec92b35e83cd56	rpm	f73e907469f65e52192f110dec72dce0	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
 _md5_=cb495a383a5ee3dd71ff4493bb8a6fe2
