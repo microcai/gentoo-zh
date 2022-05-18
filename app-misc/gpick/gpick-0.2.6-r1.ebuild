@@ -1,7 +1,7 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit cmake xdg
 
@@ -18,6 +18,7 @@ RDEPEND="
 	>=dev-lang/lua-5.2:=
 	dev-libs/boost
 	dev-libs/expat
+	dev-util/ragel
 	nls? ( sys-devel/gettext )
 	gtk3? ( x11-libs/gtk+:3 )
 	!gtk3? ( x11-libs/gtk+:2 )
