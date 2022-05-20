@@ -32,12 +32,4 @@ BDEPEND="virtual/pkgconfig"
 
 PATCHES=(
 	"${FILESDIR}/01-install-path.patch"
-	"${FILESDIR}/02-set-unique-name.patch"
 )
-
-pkg_postinst() {
-	einfo "To force an app to use this library, set environment variable:"
-	einfo
-	einfo "  LIBVA_DRIVER_NAME=nvdec"
-	einfo
-}
