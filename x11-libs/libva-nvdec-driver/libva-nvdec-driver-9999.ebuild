@@ -29,3 +29,15 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 BDEPEND="virtual/pkgconfig"
+
+PATCHES=(
+	"${FILESDIR}/${PN}-01-install-path.patch"
+	"${FILESDIR}/${PN}-02-set-unique-name.patch"
+)
+
+pkg_postinst() {
+	einfo "To force an app to use this library, set environment variable:"
+	einfo
+	einfo "  LIBVA_DRIVER_NAME=nvdec"
+	einfo
+}
