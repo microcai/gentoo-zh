@@ -31,8 +31,8 @@ DEPEND="${RDEPEND}"
 BDEPEND="virtual/pkgconfig"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-01-install-path.patch"
-	"${FILESDIR}/${PN}-02-set-unique-name.patch"
+	"${FILESDIR}/01-install-path.patch"
+	"${FILESDIR}/02-set-unique-name.patch"
 )
 
 pkg_postinst() {
