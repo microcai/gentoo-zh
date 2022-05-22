@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-22 03:20:45 CST)
+(The last generation time: 2022-05-22 12:13:50 CST)
 
 ### Packages
 
@@ -422,7 +422,7 @@
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/v2rayA                             | 1.5.6.2                                   |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
    net-proxy/Xray                             | 1.5.5                                     | RD         | https://github.com/XTLS/Xray-core                                                       | Xray, Penetrates Everything.
-     dev-libs/v2ray-domain-list-community-bin | 20220512180118                            | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+     dev-libs/v2ray-domain-list-community-bin | 20220521114354                            | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
      dev-libs/v2ray-geoip-bin                 | 202205120051                              | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    net-proxy/v2ray                            | 4.45.0                                    | RD         | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
    net-proxy/v2ray-bin                        | 4.44.0                                    | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
