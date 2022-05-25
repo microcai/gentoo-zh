@@ -20,14 +20,14 @@ app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
 app-i18n/fcitx 4.2.9.8: Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
 app-i18n/fcitx5 5.0.16 9999: Fcitx5 Next generation of fcitx
-app-i18n/fcitx5-chinese-addons 5.0.12-r1 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
-app-i18n/fcitx5-configtool 5.0.12 9999: Configuration module for Fcitx
+app-i18n/fcitx5-chinese-addons 5.0.13 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
+app-i18n/fcitx5-configtool 5.0.13 9999: Configuration module for Fcitx
 app-i18n/fcitx5-gtk 5.0.13 9999: Gtk im module for fcitx5 and glib based dbus client library
 app-i18n/fcitx5-hangul 5.0.8: Korean Hangul input method for Fcitx
 app-i18n/fcitx5-kkc 5.0.8: Japanese Kana Kanji conversion engine for Fcitx5
 app-i18n/fcitx5-lua 5.0.7-r1 9999: Lua support for fcitx
 app-i18n/fcitx5-meta 5.0.12-r1: Merge this to pull in Fcitx packages
-app-i18n/fcitx5-qt 5.0.11-r1 9999: Qt library and IM module for fcitx5
+app-i18n/fcitx5-qt 5.0.12 9999: Qt library and IM module for fcitx5
 app-i18n/fcitx5-rime 5.0.12 9999: Rime Support for Fcitx5
 app-i18n/fcitx5-skk 5.0.11 9999: Japanese SKK input engine for Fcitx5
 app-i18n/fcitx5-table-extra 5.0.9: Provides extra table for Fcitx, including Boshiamy, Zhengma, Cangjie, and Quick
@@ -189,7 +189,7 @@ net-misc/youtube-dl 2021.06.06: Download videos from YouTube.com (and more sites
 net-p2p/amule-dlp 9999: aMule with DLP patch, the all-platform eMule p2p client
 net-p2p/amule-dlp-antileech 9999: amule-dlp-antileech, dynamic DLP library for amule-dlp
 net-p2p/n2n 3.0: A Layer Two Peer-to-Peer VPN
-net-p2p/qbittorrent-enhanced 4.3.8.10 4.3.9.10 4.4.0.10 4.4.1.10 4.4.2.10: qBittorrent Enhanced, based on qBittorrent
+net-p2p/qbittorrent-enhanced 4.3.8.10 4.3.9.10 4.4.0.10 4.4.1.10 4.4.2.10 4.4.3.11: qBittorrent Enhanced, based on qBittorrent
 net-print/epson-inkjet-printer_201207w 1.0.0: Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 net-proxy/Xray 1.5.5: Xray, Penetrates Everything.
 net-proxy/clash 1.8.0 1.9.0 1.10.0: A rule-based tunnel in Go.
