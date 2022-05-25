@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -10,15 +10,13 @@ SRC_URI="https://download.fcitx-im.org/data/lm_sc.3gm.arpa-20140820.tar.bz2 -> f
 https://download.fcitx-im.org/data/dict.utf8-20211021.tar.xz -> fcitx5-dict.utf8-20211021.tar.xz
 https://download.fcitx-im.org/data/table.tar.gz -> fcitx5-table.tar.gz
 "
+EGIT_SUBMODULES=(src/libime/kenlm)
+
 if [[ "${PV}" == 9999* ]]; then
-	EGIT_SUBMODULES=(src/libime/kenlm)
 	KEYWORDS=""
 else
-	_kenlmcommit="01c49fe86714276f77be9278d00906fc994256c1"
 	KEYWORDS="~amd64 ~x86"
 	EGIT_COMMIT="${PV}"
-	SRC_URI="${SRC_URI}
-	https://github.com/kpu/kenlm/archive/${_kenlmcommit}.tar.gz -> kenlm.tar.gz"
 fi
 
 DESCRIPTION="Fcitx5 Next generation of fcitx "
@@ -39,9 +37,6 @@ src_prepare() {
 	ln -s "${DISTDIR}/fcitx5-lm_sc.3gm.arpa-20140820.tar.bz2" data/lm_sc.3gm.arpa-20140820.tar.bz2 || die
 	ln -s "${DISTDIR}/fcitx5-dict.utf8-20211021.tar.xz" data/dict.utf8-20211021.tar.xz || die
 	ln -s "${DISTDIR}/fcitx5-table.tar.gz" data/table.tar.gz || die
-if [[ "${PV}" != 9999* ]]; then
-	tar -xvzf "${DISTDIR}/kenlm.tar.gz" -C src/libime/core/kenlm  || die
-fi
 	cmake_src_prepare
 	xdg_environment_reset
 }
