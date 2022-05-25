@@ -40,7 +40,7 @@ src_install() {
 
 	mv "${S}/usr/share/applications/weixin.desktop"  "${S}/usr/share/applications/wechat.desktop"
 	sed -i  's#Name=微信#Name=wechat#' "${S}/usr/share/applications/wechat.desktop" || die
-	sed -i  's#/opt/apps/com.tencent.weixin/files/weixin/weixin#/usr/bin/wechat#' "${S}/usr/share/applications/wechat.desktop" || die
+	sed -i  's#/opt/apps/com.tencent.weixin/files/weixin/weixin.sh#/usr/bin/wechat#' "${S}/usr/share/applications/wechat.desktop" || die
 
 	doins -r "${S}/opt"
 	doins -r "${S}/usr"
