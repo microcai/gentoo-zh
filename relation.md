@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-26 02:37:00 CST)
+(The last generation time: 2022-05-26 02:38:25 CST)
 
 ### Packages
 
@@ -35,7 +35,7 @@
  app-i18n/fcitx5-kkc                          | 5.0.8                                     |            | https://github.com/fcitx/fcitx5-kkc                                                     | Japanese Kana Kanji conversion engine for Fcitx5
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx5-meta                         | 5.0.12-r1                                 |            | https://fcitx-im.org                                                                    | Merge this to pull in Fcitx packages
-   app-i18n/fcitx5-chinese-addons             | 5.0.12-r1                                 | RD         | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
+   app-i18n/fcitx5-chinese-addons             | 5.0.13                                    | RD         | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
                                               | 9999                                      |            |                                                                                         |
      app-i18n/fcitx5-lua                      | 5.0.7-r1                                  |  D, RD     | https://github.com/fcitx/fcitx5-lua                                                     | Lua support for fcitx
                                               | 9999                                      |            |                                                                                         |
