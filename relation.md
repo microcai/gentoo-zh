@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-26 02:34:47 CST)
+(The last generation time: 2022-05-26 02:37:00 CST)
 
 ### Packages
 
@@ -46,7 +46,7 @@
        app-i18n/fcitx5                        | 5.0.16                                    |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
                                               | 9999                                      |            |                                                                                         |
          x11-libs/xcb-imdkit                  | 1.0.3                                     |  D, RD     | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
-   app-i18n/fcitx5-configtool                 | 5.0.12                                    | RD         | https://fcitx-im.org/                                                                   | Configuration module for Fcitx
+   app-i18n/fcitx5-configtool                 | 5.0.13                                    | RD         | https://fcitx-im.org/                                                                   | Configuration module for Fcitx
                                               | 9999                                      |            |                                                                                         |
    app-i18n/fcitx5-gtk                        | 5.0.13                                    | RD         | https://github.com/fcitx/fcitx5-gtk                                                     | Gtk im module for fcitx5 and glib based dbus client library
                                               | 9999                                      |            |                                                                                         |
