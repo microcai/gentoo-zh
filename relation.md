@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-22 15:22:15 CST)
+(The last generation time: 2022-05-26 02:15:19 CST)
 
 ### Packages
 
@@ -41,7 +41,7 @@
                                               | 9999                                      |            |                                                                                         |
      app-i18n/fcitx5-qt                       | 5.0.11-r1                                 |  D, RD     | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
                                               | 9999                                      |            |                                                                                         |
-     app-i18n/libime                          | 1.0.11                                    |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
+     app-i18n/libime                          | 1.0.12                                    |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
                                               | 9999                                      |            |                                                                                         |
        app-i18n/fcitx5                        | 5.0.15                                    |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
                                               | 9999                                      |            |                                                                                         |
