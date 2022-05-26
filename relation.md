@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-26 14:04:39 CST)
+(The last generation time: 2022-05-26 14:36:32 CST)
 
 ### Packages
 
@@ -420,7 +420,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/shadowvpn                          | 9999                                      |        | http://shadowvpn.org/                                                                   | A fast, safe VPN based on libsodium
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/smartproxy                         | 0.9.4                                     |        | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
+ net-proxy/smartproxy                         | 0.9.5                                     |        | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/v2rayA                             | 1.5.7                                     |        | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
    net-proxy/Xray                             | 1.5.5                                     | RD     | https://github.com/XTLS/Xray-core                                                       | Xray, Penetrates Everything.
