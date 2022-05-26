@@ -5,7 +5,4 @@
 		<name>Schroedinger</name>
 		<email>dylanturing@protonmail.com</email>
 	</maintainer>
-	<longdescription>
-		A simple and elegant markdown editor, available for Linux, macOS and Windows.
-	</longdescription>
 </pkgmetadata>
