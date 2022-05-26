@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-26 02:48:12 CST)
+(The last generation time: 2022-05-26 13:05:09 CST)
 
 ### Packages
 
@@ -48,10 +48,10 @@
          x11-libs/xcb-imdkit                  | 1.0.3                                     |  D, RD     | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
    app-i18n/fcitx5-configtool                 | 5.0.13                                    | RD         | https://fcitx-im.org/                                                                   | Configuration module for Fcitx
                                               | 9999                                      |            |                                                                                         |
-   app-i18n/fcitx5-gtk                        | 5.0.13                                    | RD         | https://github.com/fcitx/fcitx5-gtk                                                     | Gtk im module for fcitx5 and glib based dbus client library
+   app-i18n/fcitx5-gtk                        | 5.0.14                                    | RD         | https://github.com/fcitx/fcitx5-gtk                                                     | Gtk im module for fcitx5 and glib based dbus client library
                                               | 9999                                      |            |                                                                                         |
    app-i18n/fcitx5-hangul                     | 5.0.8                                     | RD         | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
-   app-i18n/fcitx5-rime                       | 5.0.12                                    | RD         | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
+   app-i18n/fcitx5-rime                       | 5.0.13                                    | RD         | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
                                               | 9999                                      |            |                                                                                         |
      app-i18n/rime-prelude                    | 20220122                                  |  D, RD     | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
    app-i18n/fcitx5-skk                        | 5.0.11                                    | RD         | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
