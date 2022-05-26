@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-26 13:23:44 CST)
+(The last generation time: 2022-05-26 13:24:58 CST)
 
 ### Packages
 
@@ -54,7 +54,7 @@
    app-i18n/fcitx5-rime                       | 5.0.13                                    | RD         | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
                                               | 9999                                      |            |                                                                                         |
      app-i18n/rime-prelude                    | 20220122                                  |  D, RD     | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
-   app-i18n/fcitx5-skk                        | 5.0.11                                    | RD         | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
+   app-i18n/fcitx5-skk                        | 5.0.12                                    | RD         | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
                                               | 9999                                      |            |                                                                                         |
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx5-table-extra                  | 5.0.9                                     |            | https://github.com/fcitx/fcitx5-table-extra                                             | Provides extra table for Fcitx, including Boshiamy, Zhengma, Cangjie, and Quick
