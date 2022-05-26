@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-26 13:28:56 CST)
+(The last generation time: 2022-05-26 13:33:29 CST)
 
 ### Packages
 
@@ -77,7 +77,7 @@
  app-i18n/scim-chrasis                        | 9999.0.0.1                                |            | http://chrasis.berlios.de/                                                              | Chrasis SCIM binding for chinese character recognition.
    dev-libs/libchrasis                        | 9999.0.1.1                                |  D, RD     | http://chrasis.berlios.de                                                               | Library for Chinese Character Recognition As-Is
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/sogoupinyin                         | 2.4.0.3469                                |            | http://pinyin.sogou.com/linux/                                                          | Sogou Pinyin input method.
+ app-i18n/sogoupinyin                         | 4.0.1.2123                                |            | http://pinyin.sogou.com/linux/                                                          | Sogou Pinyin input method.
    app-i18n/fcitx                             | 4.2.9.8                                   |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
    net-dns/libidn11                           | 1.33                                      |  D, RD     | https://www.gnu.org/software/libidn/                                                    | Internationalized Domain Names (IDN) implementation
 ----------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
