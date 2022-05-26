@@ -10,7 +10,7 @@ inherit eutils multilib rpm
 
 DESCRIPTION="A standalone graphical utility that displays Java source codes of .class file"
 HOMEPAGE="http://jd.benow.ca/"
-SRC_URI="https://github.com/java-decompiler/jd-gui/releases/download/v${PV}/${MY_P}-0.noarch.rpm"
+SRC_URI="https://github.com/java-decompiler/jd-gui/releases/download/v${PV}/${MY_P}.rpm"
 
 LICENSE="GPL-3"
 SLOT="0"
