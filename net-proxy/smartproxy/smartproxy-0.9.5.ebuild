@@ -16,17 +16,18 @@ LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-IUSE="system-boost"
-
 RESTRICT="mirror"
 
-RDEPEND="dev-libs/openssl"
+RDEPEND="dev-libs/openssl
+"
 
-DEPEND="dev-libs/openssl"
+DEPEND="dev-libs/openssl
+"
 
 src_configure(){
 	local mycmakeargs=(
 		-DUSE_SYSTEM_OPENSSL=ON
+		-DUSE_SYSTEM_BOOST=OFF
 	)
 	cmake_src_configure
 }
