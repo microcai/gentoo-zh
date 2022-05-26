@@ -76,7 +76,7 @@ src_install(){
 
 pkg_postinst(){
 	einfo
-	einfo "After install the fcitx-sogoupinyin, a restart of fcitx is"
+	einfo "After install the sogoupinyin, a restart of fcitx is"
 	einfo "expected."
 	einfo
 	einfo "if you see 请启用sogou-qimpanel面板程序，以便更好的享受搜狗输入法！"
