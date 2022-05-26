@@ -19,7 +19,7 @@ LICENSE="GPL-2 GPL-3 LGPL-3"
 
 SLOT="11"
 
-KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 x86"
 IUSE="nls"
 
 S="${WORKDIR}/libidn-1.33"
@@ -51,7 +51,6 @@ multilib_src_configure() {
 	local args=(
 		$(use_enable nls)
 		--disable-java
-		--disable-mono
 		--disable-csharp
 		--disable-static
 		--disable-valgrind-tests
