@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-26 17:11:31 CST)
+(The last generation time: 2022-05-26 17:17:24 CST)
 
 ### Packages
 
@@ -425,7 +425,7 @@
      dev-libs/v2ray-domain-list-community-bin | 20220521114354                            | RD     | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
      dev-libs/v2ray-geoip-bin                 | 202205190058                              | RD     | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    net-proxy/v2ray                            | 4.45.0                                    | RD     | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
-   net-proxy/v2ray-bin                        | 4.44.0                                    | RD     | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
+   net-proxy/v2ray-bin                        | 4.45.0                                    | RD     | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sci-chemistry/vesta                          | 3.5.5                                     |        | https://jp-minerals.org/vesta                                                           | Visualization for Electronic and STructural Analysis
                                               | 3.5.7-r1                                  |        |                                                                                         |
