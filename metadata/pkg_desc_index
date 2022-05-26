@@ -23,15 +23,15 @@ app-i18n/fcitx5 5.0.16 9999: Fcitx5 Next generation of fcitx
 app-i18n/fcitx5-chinese-addons 5.0.13 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
 app-i18n/fcitx5-configtool 5.0.13 9999: Configuration module for Fcitx
 app-i18n/fcitx5-gtk 5.0.14 9999: Gtk im module for fcitx5 and glib based dbus client library
-app-i18n/fcitx5-hangul 5.0.8: Korean Hangul input method for Fcitx
-app-i18n/fcitx5-kkc 5.0.8: Japanese Kana Kanji conversion engine for Fcitx5
+app-i18n/fcitx5-hangul 5.0.9: Korean Hangul input method for Fcitx
+app-i18n/fcitx5-kkc 5.0.9: Japanese Kana Kanji conversion engine for Fcitx5
 app-i18n/fcitx5-lua 5.0.7-r1 9999: Lua support for fcitx
 app-i18n/fcitx5-meta 5.0.12-r1: Merge this to pull in Fcitx packages
 app-i18n/fcitx5-qt 5.0.12 9999: Qt library and IM module for fcitx5
 app-i18n/fcitx5-rime 5.0.13 9999: Rime Support for Fcitx5
-app-i18n/fcitx5-skk 5.0.11 9999: Japanese SKK input engine for Fcitx5
-app-i18n/fcitx5-table-extra 5.0.9: Provides extra table for Fcitx, including Boshiamy, Zhengma, Cangjie, and Quick
-app-i18n/fcitx5-table-other 5.0.8: Provides some other tables for Fcitx, fork from ibus-table-others, scim-tables
+app-i18n/fcitx5-skk 5.0.12 9999: Japanese SKK input engine for Fcitx5
+app-i18n/fcitx5-table-extra 5.0.10: Provides extra table for Fcitx, including Boshiamy, Zhengma, Cangjie, and Quick
+app-i18n/fcitx5-table-other 5.0.9: Provides some other tables for Fcitx, fork from ibus-table-others, scim-tables
 app-i18n/gcin 2.9.0-r2: Another Traditional Chinese IM.
 app-i18n/ibus-rime 9999: Rime Input Method Engine for IBus Framework
 app-i18n/libgooglepinyin 0.1.2-r1: A fork from google pinyin on android
@@ -200,7 +200,7 @@ net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
 net-proxy/smartproxy 0.9.4: A fast, proxy smart selector
 net-proxy/v2ray 4.45.0: A platform for building proxies to bypass network restrictions.
 net-proxy/v2ray-bin 4.44.0: A platform for building proxies to bypass network restrictions.
-net-proxy/v2rayA 1.5.6.2: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
+net-proxy/v2rayA 1.5.7: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 sci-chemistry/vesta 3.5.5 3.5.7-r1: Visualization for Electronic and STructural Analysis
 sci-libs/libticables2 9999: Library to handle different link cables for TI calculators
 sci-libs/libticalcs2 9999: Library for communication with TI calculators
