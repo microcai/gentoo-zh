@@ -83,7 +83,6 @@ cutefish-base/cutefish-terminal 0.7 0.8 9999: A terminal emulator for Cutefish
 cutefish-base/cutefish-texteditor 0.7 0.8 9999: Elegant text editor for Cutefish
 cutefish-base/cutefish-videoplayer 0.7 9999: An open source video player built with Qt/QML and libmpv
 cutefish-base/cutefish-wallpapers 0.7 9999: CutefishOS's system wallpaper
-dev-cpp/ETL 0.04.22: ETL is a multi-platform class and template library
 dev-cpp/cppcoro 210605: A library of C++ coroutine abstractions for the coroutines TS
 dev-cpp/date 3.0.1 3.0.1_p220217: A date and time library based on the C++11/14/17 <chrono> header
 dev-cpp/nameof 0.10.1 0.10.1_p220125: Nameof operator for modern C++
@@ -96,7 +95,7 @@ dev-libs/libchrasis 9999.0.1.1: Library for Chinese Character Recognition As-Is
 dev-libs/libdatrie 0.2.13: Double-Array Trie Library
 dev-libs/libdwarf 20140208: Library to deal with DWARF Debugging Information Format
 dev-libs/libthai 0.1.28: A a set of Thai language support routines
-dev-libs/lunar-date 3.0.0: Chinese Lunar Library
+dev-libs/lunar-date 3.0.1: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458 9999: Community managed domain list for V2Ray.
 dev-libs/v2ray-domain-list-community-bin 20220521114354: Community managed domain list for V2Ray.
@@ -119,14 +118,14 @@ dev-util/arch-install-scripts 24: Arch Linux install tools (pacstrap, genfstab, 
 dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 files
 dev-util/elfembed 0.3-r1: Resource Compiler for ELF binaries
 dev-util/fernflower 1: Fernflower is the first actually working analytical decompiler for Java and probably for a high-level programming language in general
-dev-util/jd-gui 1.4.0: A standalone graphical utility that displays Java source codes of .class file
+dev-util/jd-gui 1.6.6: A standalone graphical utility that displays Java source codes of .class file
 dev-util/jetbrains-toolbox 1.22.10774: Manage all your JetBrains Projects and Tools
 dev-util/lldb-mi 9999: LLDB Machine Interface Driver
 dev-util/pahole 1.23: pahole (Poke-a-Hole) and other DWARF2 utilities
 dev-util/rust-analyzer 20220314 99999999: An experimental Rust compiler front-end for IDEs
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-vcs/lazygit-bin 0.34: lazygit, a simple terminal UI for git commands
-games-action/DDNet 16.0: DDraceNetwork, a cooperative racing mod of Teeworlds
+games-action/DDNet 16.1: DDraceNetwork, a cooperative racing mod of Teeworlds
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-util/mangohud 0.6.6-r1: A Vulkan & OpenGL overlay for monitoring FPS,temperatures,CPU/GPU load and more.
 games-util/winegame-client-bin 0.5.9.4: An open source gaming platform for GNU/Linux
