@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-26 17:10:45 CST)
+(The last generation time: 2022-05-26 17:11:31 CST)
 
 ### Packages
 
@@ -208,7 +208,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/libdwarf                            | 20140208                                  |        | https://github.com/Distrotech/libdwarf                                                  | Library to deal with DWARF Debugging Information Format
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-libs/lunar-date                          | 3.0.0                                     |        | https://github.com/yetist/lunar-date                                                    | Chinese Lunar Library
+ dev-libs/lunar-date                          | 3.0.1                                     |        | https://github.com/yetist/lunar-date                                                    | Chinese Lunar Library
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/tdlib                               | 1.5.0                                     |        | https://core.telegram.org/tdlib                                                         | Cross-platform library for building Telegram clients
                                               | 1.6.0                                     |        |                                                                                         |
