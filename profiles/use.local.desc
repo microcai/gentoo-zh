@@ -70,13 +70,6 @@ dev-db/mongodb:server-js - Build mongod with JavaScript support. (use spidermonk
 dev-db/mongodb:tcmalloc - Use tcmalloc as allocator.
 dev-db/mongodb:tcmalloc-experimental - Use tcmalloc-experimental as allocator.
 dev-db/mongodb:tools - Install the MongoDB tools (mongoimport, mongodump...) from app-admin/mongo-tools
-dev-libs/boost:context - Build and install the Boost.Context (and Boost.Fiber) library and all other Boost libraries that depend on it
-dev-libs/boost:debug - Build and install only the debug version of the Boost libraries. Only enable this flag if you're developing against boost.
-dev-libs/boost:doc - Install the full API documentation documentation. This takes over 200MB of extra disk space.
-dev-libs/boost:nls - Build libboost_locale. This library requires compatible C library interfaces, which might not be provided by uClibc or other embedded libraries.
-dev-libs/boost:numpy - Optionally build NumPy extensions when Boost.Python is enabled
-dev-libs/boost:stacktrace - Build and install the Boost.Stacktrace library
-dev-libs/boost:tools - Build and install the boost tools (bcp, quickbook, inspect, wave)
 dev-libs/granite:demo - Build the Granite demo application (to present all available UI features provided by the library)
 dev-python/conda:user - use user's home directory as default pkgs and envs prefix
 dev-python/nvchecker:ini - convert your old configuration files from ini to toml
