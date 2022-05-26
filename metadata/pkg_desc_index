@@ -155,6 +155,7 @@ media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.10-r1 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-sound/feeluown 3.8.5: A user-friendly and hackable music player
 media-sound/linnya 2.2.0: A free music player
+media-sound/lx-music-desktop-bin 1.21.0: 一个基于 electron 的音乐软件
 media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb package
 media-sound/netease-cloud-music-gtk 1.2.2: netease cloud music player based on Rust & GTK3 for Linux
 media-sound/termusic 0.6.12: Music Player TUI written in Rust
