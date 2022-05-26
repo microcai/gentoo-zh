@@ -29,10 +29,10 @@ DOCS="AUTHORS COPYING NEWS README.md"
 
 src_configure(){
 	local emesonargs=(
-		$(meson_use dbus enable_dbus_service)
-		$(meson_use doc enable_gtk_doc)
-		$(meson_use introspection with_introspection)
-		$(meson_use test enable_tests)
+		$(meson_use dbus service)
+		$(meson_use doc docs)
+		$(meson_use introspection introspection)
+		$(meson_use test tests)
 	)
 	meson_src_configure
 }
