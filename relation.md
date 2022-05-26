@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-26 17:17:24 CST)
+(The last generation time: 2022-05-26 18:01:36 CST)
 
 ### Packages
 
@@ -22,7 +22,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/AppFlowy-bin                     | 0.0.3                                     |        | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/marktext-bin                     | 0.17.0                                    |        | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
+ app-editors/marktext-bin                     | 0.17.1                                    |        | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                           | 0.11.18                                   |        | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
                                               | 1.2.4                                     |        |                                                                                         |
