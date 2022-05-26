@@ -5,19 +5,19 @@ EAPI=8
 
 DESCRIPTION="NVDEC Backend for Video Acceleration (VA) API"
 HOMEPAGE="https://github.com/elFarto/nvidia-vaapi-driver"
+EGIT_REPO_URI="https://github.com/elFarto/nvidia-vaapi-driver.git"
 
-if [[ ${PV} = *9999* ]] ; then
-	EGIT_REPO_URI="https://github.com/elFarto/nvidia-vaapi-driver.git"
-	inherit git-r3
+if [[ ${PV} != *9999* ]] ; then
+	EGIT_COMMIT=v${PV}
+	KEYWORDS="~amd64"
 else
-    SRC_URI=""
+	KEYWORDS=""
 fi
 
-inherit meson
+inherit meson git-r3
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
 
 RDEPEND="
 	>=x11-libs/libva-1.8.0
