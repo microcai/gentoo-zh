@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-26 17:06:04 CST)
+(The last generation time: 2022-05-26 17:10:45 CST)
 
 ### Packages
 
@@ -241,7 +241,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/fernflower                          | 1                                         |        | https://github.com/fesh0r/fernflower                                                    | Fernflower is the first actually working analytical decompiler for Java and probably for a high-level programming language in general
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/jd-gui                              | 1.4.0                                     |        | http://jd.benow.ca/                                                                     | A standalone graphical utility that displays Java source codes of .class file
+ dev-util/jd-gui                              | 1.6.6                                     |        | http://jd.benow.ca/                                                                     | A standalone graphical utility that displays Java source codes of .class file
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                   | 1.22.10774                                |        | https://www.jetbrains.com/toolbox/app                                                   | Manage all your JetBrains Projects and Tools
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
