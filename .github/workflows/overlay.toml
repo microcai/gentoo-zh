@@ -321,6 +321,7 @@ source = "github"
 github = "reo7sp/tgbot-cpp"
 use_latest_release = true
 prefix = "v"
+github_account = "CHN-beta"
 
 ["dev-db/dbeaver-bin"]
 source = "regex"
@@ -446,6 +447,7 @@ source = "github"
 github = "python-telegram-bot/python-telegram-bot"
 use_latest_release = true
 prefix = "v"
+github_account = "CHN-beta"
 
 ["dev-python/qasync"]
 source = "github"
@@ -1027,6 +1029,7 @@ use_latest_release = true
 source = "github"
 github = "linuxmint/slick-greeter"
 use_latest_tag= true
+github_account = "Rabenda"
 
 ["x11-misc/ly"]
 source = "github"
