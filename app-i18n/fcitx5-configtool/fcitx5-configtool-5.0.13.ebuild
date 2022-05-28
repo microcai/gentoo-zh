@@ -10,7 +10,7 @@ if [[ "${PV}" == 9999 ]]; then
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-configtool.git"
 else
 	SRC_URI="https://github.com/fcitx/fcitx5-configtool/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86 ~loong ~arm64"
+	KEYWORDS="~amd64 ~arm64 ~loong ~riscv ~x86"
 fi
 
 DESCRIPTION="Configuration module for Fcitx"
