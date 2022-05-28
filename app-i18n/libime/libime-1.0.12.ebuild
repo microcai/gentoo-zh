@@ -15,7 +15,7 @@ EGIT_SUBMODULES=(src/libime/kenlm)
 if [[ "${PV}" == 9999* ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~x86 ~loong ~arm64"
 	EGIT_COMMIT="${PV}"
 fi
 
