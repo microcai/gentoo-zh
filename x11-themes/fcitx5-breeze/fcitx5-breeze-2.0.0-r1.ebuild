@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="
 	media-gfx/imagemagick[png,svg]"
 RDEPEND="
-	app-i18n/fcitx5"
+	app-i18n/fcitx:5"
 BDEPEND=""
 
 src_prepare() {
