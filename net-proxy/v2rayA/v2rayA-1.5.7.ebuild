@@ -8,6 +8,8 @@ inherit systemd go-module yarn desktop xdg
 DESCRIPTION="web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel"
 HOMEPAGE="https://v2raya.org/"
 
+RESTRICT="primaryuri"
+
 # sed -re 's/^(\S*) (\S*) (\S*)/"\1 \2"/g' go.sum
 # echo "goproxy https://goproxy.cn/" >> /etc/portage/mirrors
 EGO_SUM=(
