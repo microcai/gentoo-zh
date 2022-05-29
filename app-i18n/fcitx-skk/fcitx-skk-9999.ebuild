@@ -1,4 +1,4 @@
-# Copyright 2021-2022 Gentoo Authors
+# Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -12,12 +12,15 @@ fi
 
 inherit xdg cmake
 
+MY_PN="fcitx5-skk"
+MY_P="${MY_PN}-${PV}"
+S="${WORKDIR}/${MY_PN}-${PV}"
 DESCRIPTION="Japanese SKK input engine for Fcitx5"
 HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-skk"
 if [[ "$PV" =~ (^|\.)9999$ ]]; then
 	SRC_URI=""
 else
-	SRC_URI="https://download.fcitx-im.org/fcitx5/${PN}/${P}.tar.xz"
+	SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_P}.tar.xz"
 fi
 
 LICENSE="GPL-3+"
@@ -26,12 +29,11 @@ SLOT="5"
 BDEPEND="kde-frameworks/extra-cmake-modules:5
 		virtual/pkgconfig"
 
-RDEPEND="app-i18n/fcitx5
+RDEPEND="app-i18n/fcitx:5
 		app-i18n/libskk
 		dev-qt/qtcore:5
-		app-i18n/fcitx5-qt[qt5,-onlyplugin]
-		app-i18n/skk-jisyo
-		!app-i18n/fcitx-skk"
+		app-i18n/fcitx-qt[qt5,-onlyplugin]
+		app-i18n/skk-jisyo"
 DEPEND="${RDEPEND}"
 
 src_configure() {
