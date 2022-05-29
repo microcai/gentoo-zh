@@ -7,11 +7,15 @@ LUA_COMPAT=( lua5-{3,4} )
 
 inherit cmake lua xdg
 
+MY_PN="fcitx5-lua"
+MY_P="${MY_PN}-${PV}"
+S="${WORKDIR}/${MY_PN}-${PV}"
+
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-lua.git"
 else
-	SRC_URI="https://github.com/fcitx/fcitx5-lua/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/fcitx/${MY_PN}/archive/refs/tags/${PV}.tar.gz -> ${MY_P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 
@@ -26,7 +30,7 @@ RESTRICT="!test? ( test )"
 
 RDEPEND="
 	${LUA_DEPS}
-	app-i18n/fcitx5
+	app-i18n/fcitx:5
 "
 
 DEPEND="
