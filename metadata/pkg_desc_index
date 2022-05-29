@@ -98,8 +98,8 @@ dev-libs/libthai 0.1.28: A a set of Thai language support routines
 dev-libs/lunar-date 3.0.1: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458 9999: Community managed domain list for V2Ray.
-dev-libs/v2ray-domain-list-community-bin 20220521114354: Community managed domain list for V2Ray.
-dev-libs/v2ray-geoip-bin 202205190058: GeoIP for V2Ray.
+dev-libs/v2ray-domain-list-community-bin 20220528180904: Community managed domain list for V2Ray.
+dev-libs/v2ray-geoip-bin 202205260055: GeoIP for V2Ray.
 dev-python/conda 4.13.0: OS-agnostic, system-level binary package manager and ecosystem
 dev-python/conda-package-handling 1.8.1: Create and extract conda packages of various formats
 dev-python/fuo-kuwo 0.1.5: kuwo music support for feeluown
@@ -109,7 +109,7 @@ dev-python/fuo-qqmusic 0.4: qq music support for feeluown
 dev-python/janus 1.0.0-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/nvchecker 2.8: nvchecker is for checking if a new version of some software has been released
 dev-python/pycosat 0.6.3: Python bindings to picosat (a SAT solver)
-dev-python/python-telegram-bot 13.11: Python wrapper of telegram bots API
+dev-python/python-telegram-bot 13.12: Python wrapper of telegram bots API
 dev-python/qasync 0.22.0: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/structlog 21.5.0: Structured Logging for Python
 dev-qt/assistant 5.15.2-r11: Tool for viewing on-line documentation in Qt help file format
