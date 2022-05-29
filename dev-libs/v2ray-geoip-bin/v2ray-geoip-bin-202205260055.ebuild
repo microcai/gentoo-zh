@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="GeoIP for V2Ray."
 HOMEPAGE="https://github.com/v2fly/geoip"
-SRC_URI="https://github.com/v2fly/geoip/releases/download/${PV}/geoip.dat -> ${PN}-${PV}.dat"
+SRC_URI="https://github.com/v2fly/geoip/releases/download/${PV}/geoip.dat -> ${P}.dat"
 KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 S="${WORKDIR}"
 
@@ -15,5 +15,5 @@ RESTRICT="mirror"
 
 src_install() {
 	insinto /usr/share/v2ray
-	newins "${DISTDIR}/${PN}-${PV}.dat" geoip.dat
+	newins "${DISTDIR}/${P}.dat" geoip.dat
 }
