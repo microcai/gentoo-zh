@@ -5,6 +5,8 @@ EAPI=7
 
 inherit xdg cmake
 
+MY_PN="fcitx5-rime"
+S="${WORKDIR}/${MY_PN}-${PV}"
 DESCRIPTION="Rime Support for Fcitx5"
 HOMEPAGE="https://github.com/fcitx/fcitx5-rime"
 
@@ -20,11 +22,10 @@ LICENSE="GPL-2"
 SLOT="5"
 IUSE=""
 
-RDEPEND="app-i18n/fcitx5
+RDEPEND="app-i18n/fcitx:5
 	>=app-i18n/librime-1.0
 	>=app-i18n/rime-data-0.3.0
 	app-i18n/rime-prelude
-	x11-libs/libnotify
-	!app-i18n/fcitx-rime"
+	x11-libs/libnotify"
 
 DEPEND="${RDEPEND}"
