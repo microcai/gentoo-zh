@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-29 09:47:00 CST)
+(The last generation time: 2022-05-29 09:49:02 CST)
 
 ### Packages
 
@@ -424,8 +424,8 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/v2rayA                             | 1.5.7                                     |        | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
    net-proxy/Xray                             | 1.5.5                                     | RD     | https://github.com/XTLS/Xray-core                                                       | Xray, Penetrates Everything.
-     dev-libs/v2ray-domain-list-community-bin | 20220521114354                            | RD     | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
-     dev-libs/v2ray-geoip-bin                 | 202205190058                              | RD     | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
+     dev-libs/v2ray-domain-list-community-bin | 20220528180904                            | RD     | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+     dev-libs/v2ray-geoip-bin                 | 202205260055                              | RD     | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    net-proxy/v2ray                            | 4.45.0                                    | RD     | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
    net-proxy/v2ray-bin                        | 4.45.0                                    | RD     | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
