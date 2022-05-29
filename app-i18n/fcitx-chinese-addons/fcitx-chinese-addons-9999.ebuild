@@ -5,6 +5,8 @@ EAPI=8
 
 inherit cmake xdg
 
+MY_PN="fcitx5-chinese-addons"
+S="${WORKDIR}/${MY_PN}-${PV}"
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-chinese-addons.git"
@@ -28,14 +30,14 @@ REQUIRED_USE=""
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	app-i18n/fcitx5
+	app-i18n/fcitx:5
 	app-i18n/libime
 	opencc? ( app-i18n/opencc:= )
 	gui? (
 		dev-qt/qtcore:5
-		app-i18n/fcitx5-qt[qt5,-onlyplugin]
+		app-i18n/fcitx-qt:5[qt5,-onlyplugin]
 		browser? ( dev-qt/qtwebengine:5 )
-		lua? ( app-i18n/fcitx5-lua )
+		lua? ( app-i18n/fcitx-lua:5 )
 	)
 "
 DEPEND="${RDEPEND}
