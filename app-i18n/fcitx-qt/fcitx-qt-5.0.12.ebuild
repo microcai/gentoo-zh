@@ -5,6 +5,8 @@ EAPI=7
 
 inherit cmake
 
+MY_PN="fcitx5-qt"
+S="${WORKDIR}/${MY_PN}-${PV}"
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-qt.git"
@@ -20,7 +22,7 @@ LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
 IUSE="+qt5 onlyplugin"
 
-RDEPEND="app-i18n/fcitx5
+RDEPEND="app-i18n/fcitx:5
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
