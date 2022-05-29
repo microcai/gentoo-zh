@@ -11,12 +11,15 @@ if [[ "${PV}" =~ (^|\.)9999$ ]]; then
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-hangul"
 fi
 
+MY_PN="fcitx5-hangul"
+MY_P="${MY_PN}-${PV}"
+S="${WORKDIR}/${MY_PN}-${PV}"
 DESCRIPTION="Korean Hangul input method for Fcitx"
 HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-hangul"
 if [[ "${PV}" =~ (^|\.)9999$ ]]; then
 	SRC_URI=""
 else
-	SRC_URI="https://download.fcitx-im.org/fcitx5/${PN}/${P}.tar.xz"
+	SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_P}.tar.xz"
 fi
 
 LICENSE="GPL-2+"
@@ -26,11 +29,10 @@ IUSE=""
 
 BDEPEND="sys-devel/gettext
 	virtual/pkgconfig"
-DEPEND=">=app-i18n/fcitx5-5.0.2:5
+DEPEND=">=app-i18n/fcitx-5.0.2:5
 	>=app-i18n/libhangul-0.0.12
 	virtual/libiconv
-	virtual/libintl
-	!app-i18n/fcitx-hangul"
+	virtual/libintl"
 RDEPEND="${DEPEND}"
 
 DOCS=(AUTHORS)
