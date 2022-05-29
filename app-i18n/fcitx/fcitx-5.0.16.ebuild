@@ -5,6 +5,8 @@ EAPI=7
 
 inherit cmake xdg
 
+MY_PN="fcitx5"
+S="${WORKDIR}/${MY_PN}-${PV}"
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5.git"
