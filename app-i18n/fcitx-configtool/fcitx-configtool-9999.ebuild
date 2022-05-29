@@ -5,6 +5,8 @@ EAPI=7
 
 inherit cmake
 
+MY_PN="fcitx5-configtool"
+S="${WORKDIR}/${MY_PN}-${PV}"
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-configtool.git"
@@ -17,12 +19,12 @@ DESCRIPTION="Configuration module for Fcitx"
 HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-configtool"
 
 LICENSE="GPL-2+"
-SLOT="5-plasma5"
+SLOT="5"
 IUSE="+kcm +config-qt test"
 RESTRICT="!test? ( test )"
 
-RDEPEND="app-i18n/fcitx5
-	app-i18n/fcitx5-qt[qt5,-onlyplugin]
+RDEPEND="app-i18n/fcitx:5
+	app-i18n/fcitx-qt:5[qt5,-onlyplugin]
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
