@@ -1,0 +1,15 @@
+BDEPEND=dev-util/ninja >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=app-i18n/fcitx:5 app-i18n/fcitx-qt:5[qt5,-onlyplugin] dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 dev-qt/qtx11extras:5 kde-frameworks/kitemviews:5 kde-frameworks/kwidgetsaddons:5 virtual/libintl x11-libs/libX11 x11-libs/libxkbfile kcm? ( kde-frameworks/kconfigwidgets:5 kde-frameworks/kcoreaddons:5 kde-frameworks/ki18n:5 kde-frameworks/kirigami:5 kde-frameworks/kdeclarative:5 ) config-qt? ( kde-frameworks/kitemviews:5 ) !app-i18n/fcitx-configtool:4[-minimal(-)] kde-frameworks/extra-cmake-modules:5 sys-devel/gettext virtual/pkgconfig
+DESCRIPTION=Configuration module for Fcitx
+EAPI=7
+HOMEPAGE=https://fcitx-im.org/ https://github.com/fcitx/fcitx5-configtool
+INHERIT=cmake git-r3
+IUSE=+kcm +config-qt test
+LICENSE=GPL-2+
+PROPERTIES=live
+RDEPEND=app-i18n/fcitx:5 app-i18n/fcitx-qt:5[qt5,-onlyplugin] dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 dev-qt/qtx11extras:5 kde-frameworks/kitemviews:5 kde-frameworks/kwidgetsaddons:5 virtual/libintl x11-libs/libX11 x11-libs/libxkbfile kcm? ( kde-frameworks/kconfigwidgets:5 kde-frameworks/kcoreaddons:5 kde-frameworks/ki18n:5 kde-frameworks/kirigami:5 kde-frameworks/kdeclarative:5 ) config-qt? ( kde-frameworks/kitemviews:5 ) !app-i18n/fcitx-configtool:4[-minimal(-)]
+RESTRICT=!test? ( test )
+SLOT=5
+_eclasses_=toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4fbbbc98f236f1b43acd99476bc3cd85	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	dab5d8ec471d025b79c9e6906bcf3bff	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	cmake	90e2b29417d53718328f3a95227137a0	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_md5_=503d20c31dc589637c0fd91d906af24e
