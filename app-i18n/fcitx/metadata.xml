@@ -18,6 +18,8 @@
 		<flag name="pango">Enable support for <pkg>x11-libs/pango</pkg></flag>
 		<flag name="table">Install table input methods for Simplified Chinese</flag>
 		<flag name="xkb">Enable support for XKB (required for fcitx-xkb, fcitx-xkbdbus, part of fcitx-keyboard)</flag>
+		<flag name='coverage'>Build the project with gcov support (Need ENABLE_TEST=On)</flag>
+		<flag name='presage'>Enable presage for word predication (not stable)</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">fcitx/fcitx</remote-id>

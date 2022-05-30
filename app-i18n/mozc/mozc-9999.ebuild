@@ -61,7 +61,7 @@ DEPEND=">=dev-cpp/abseil-cpp-20200923[cxx17(+)]
 		virtual/libintl
 	)
 	fcitx5? (
-		app-i18n/fcitx5:5
+		app-i18n/fcitx:5
 		app-i18n/libime
 		sys-devel/gettext
 		virtual/libintl
@@ -94,7 +94,7 @@ RDEPEND=">=dev-cpp/abseil-cpp-20200923[cxx17(+)]
 		virtual/libintl
 	)
 	fcitx5? (
-		app-i18n/fcitx5:5
+		app-i18n/fcitx:5
 		app-i18n/libime
 		sys-devel/gettext
 		virtual/libintl
