@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake gnome2-utils xdg-utils git-r3
+inherit cmake xdg-utils git-r3
 EGIT_REPO_URI="https://github.com/fcitx/libime.git"
 
 SRC_URI="https://download.fcitx-im.org/data/lm_sc.3gm.arpa-20140820.tar.bz2 -> fcitx5-lm_sc.3gm.arpa-20140820.tar.bz2
@@ -27,7 +27,7 @@ SLOT="5"
 IUSE=""
 REQUIRED_USE=""
 
-RDEPEND="app-i18n/fcitx5"
+RDEPEND="app-i18n/fcitx:5"
 DEPEND="${RDEPEND}
 	dev-libs/boost
 	kde-frameworks/extra-cmake-modules:5

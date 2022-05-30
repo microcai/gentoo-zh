@@ -62,71 +62,71 @@ regex = "typora_([\\d.]+)_amd64.deb"
 
 #["app-i18n/dvp"]
 
-["app-i18n/fcitx"]
-source = "github"
-github = "fcitx/fcitx"
-use_latest_tag = true
+#["app-i18n/fcitx"]
+#source = "github"
+#github = "fcitx/fcitx"
+#use_latest_tag = true
 
-["app-i18n/fcitx5"]
+["app-i18n/fcitx"]
 source = "github"
 github = "fcitx/fcitx5"
 use_latest_tag = true
 
-["app-i18n/fcitx5-chewing"]
+["app-i18n/fcitx-chewing"]
 source = "github"
 github = "fcitx/fcitx5-chewing"
 use_latest_tag = true
 
-["app-i18n/fcitx5-chinese-addons"]
+["app-i18n/fcitx-chinese-addons"]
 source = "github"
 github = "fcitx/fcitx5-chinese-addons"
 use_latest_tag = true
 
-["app-i18n/fcitx5-configtool"]
+["app-i18n/fcitx-configtool"]
 source = "github"
 github = "fcitx/fcitx5-configtool"
 use_latest_tag = true
 
-["app-i18n/fcitx5-gtk"]
+["app-i18n/fcitx-gtk"]
 source = "github"
 github = "fcitx/fcitx5-gtk"
 use_latest_tag = true
 
-["app-i18n/fcitx5-hangul"]
+["app-i18n/fcitx-hangul"]
 source = "github"
 github = "fcitx/fcitx5-hangul"
 use_latest_tag = true
 
-["app-i18n/fcitx5-kkc"]
+["app-i18n/fcitx-kkc"]
 source = "github"
 github = "fcitx/fcitx5-kkc"
 use_latest_tag = true
 github_account = "liuyujielol"
 
 # virtual package
-#["app-i18n/fcitx5-meta"]
+#["app-i18n/fcitx-meta"]
 
-["app-i18n/fcitx5-qt"]
+["app-i18n/fcitx-qt"]
 source = "github"
 github = "fcitx/fcitx5-qt"
 use_latest_tag = true
 
-["app-i18n/fcitx5-rime"]
+["app-i18n/fcitx-rime"]
 source = "github"
 github = "fcitx/fcitx5-rime"
 use_latest_tag = true
 
-["app-i18n/fcitx5-skk"]
+["app-i18n/fcitx-skk"]
 source = "github"
 github = "fcitx/fcitx5-skk"
 use_latest_tag = true
 
-["app-i18n/fcitx5-table-extra"]
+["app-i18n/fcitx-table-extra"]
 source = "github"
 github = "fcitx/fcitx5-table-extra"
 use_latest_tag = true
 
-["app-i18n/fcitx5-table-other"]
+["app-i18n/fcitx-table-other"]
 source = "github"
 github = "fcitx/fcitx5-table-other"
 use_latest_tag = true
