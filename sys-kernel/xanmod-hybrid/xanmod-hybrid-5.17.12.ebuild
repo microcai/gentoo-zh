@@ -3,7 +3,7 @@
 
 EAPI="8"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="9"
+K_GENPATCHES_VER="16"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 ETYPE="sources"
@@ -23,7 +23,7 @@ KEYWORDS="~amd64"
 #IUSE="cjktty tt"
 
 IUSE="cjktty"
-SLOT="edge"
+SLOT="stable"
 XANMOD_VERSION="1"
 XANMOD_URI="https://github.com/xanmod/linux/releases/download/"
 OKV="${OKV}-xanmod"
