@@ -229,7 +229,7 @@ sys-libs/fishui 0.7 0.8 9999: GUI library based on QQC2 for Cutefish application
 sys-libs/libcutefish 0.7 9999: System library for Cutefish applications
 sys-libs/libsolv 0.7.21 9999: Library for solving packages and reading repositories
 sys-libs/libzypp 17.29.1 17.29.5 9999: ZYpp Package Management library
-sys-process/btop 1.2.6: Resources monitor. The C++ version of bashtop
+sys-process/btop 1.2.7: Resources monitor. The C++ version of bashtop
 virtual/dist-kernel 5.15.43 5.17.11: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r10: Virtual for Linux kernel sources
 www-servers/darkhttpd 1.13: A small, static webserver
