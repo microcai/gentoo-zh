@@ -1,13 +1,14 @@
 BDEPEND=app-arch/rpm2targz
-DEFINED_PHASES=install unpack
+DEFINED_PHASES=install postinst postrm preinst unpack
 DESCRIPTION=A standalone graphical utility that displays Java source codes of .class file
-EAPI=7
+EAPI=8
 HOMEPAGE=http://jd.benow.ca/
-INHERIT=eutils multilib rpm
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=edos2unix desktop rpm xdg
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
 RDEPEND=>=virtual/jdk-1.6
 SLOT=0
 SRC_URI=https://github.com/java-decompiler/jd-gui/releases/download/v1.6.6/jd-gui-1.6.6.rpm
-_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	dab5d8ec471d025b79c9e6906bcf3bff	multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253	estack	055c42df72f76a4f45ec92b35e83cd56	rpm	f73e907469f65e52192f110dec72dce0
-_md5_=99d8a1273e17630f0f3d5b46485dda03
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	desktop	c0d27bf73aa08ca05b663dbd31fbef28	estack	055c42df72f76a4f45ec92b35e83cd56	rpm	f73e907469f65e52192f110dec72dce0	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
+_md5_=f101baa76aa62720e01253ad64e9da6d
