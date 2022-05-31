@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-05-31 13:48:20 CST)
+(The last generation time: 2022-05-31 17:17:09 CST)
 
 ### Packages
 
@@ -353,7 +353,7 @@
    app-emulation/deepin-wine-helper           | 5.1.27-r1                                 | RD     | https://www.deepin.org                                                                  | Deepin Wine Helper
      app-emulation/deepin-wine-plugin         | 5.1.13-r1                                 | RD     | https://www.deepin.org                                                                  | Deepin Wine plugin
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-im/dingtalk                              | 1.4.0.20422                               |        | https://gov.dingtalk.com                                                                | DingTalk is an intelligent working platform created by Alibaba Group
+ net-im/dingtalk                              | 1.4.0.20422                               |        | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
    dev-libs/libthai                           | 0.1.28                                    |  D, RD | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
      dev-libs/libdatrie                       | 0.2.13                                    |  D, RD | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
