@@ -3,23 +3,19 @@
 
 EAPI=7
 
+inherit xdg cmake
+
+DESCRIPTION="Japanese SKK input engine for Fcitx5"
+HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-skk"
 if [[ "${PV}" =~ (^|\.)9999$ ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-skk"
-else
-	KEYWORDS="~amd64 ~x86"
-fi
-
-inherit xdg cmake
-
-MY_PN="fcitx5-skk"
-MY_P="${MY_PN}-${PV}"
-S="${WORKDIR}/${MY_PN}-${PV}"
-DESCRIPTION="Japanese SKK input engine for Fcitx5"
-HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-skk"
-if [[ "$PV" =~ (^|\.)9999$ ]]; then
 	SRC_URI=""
 else
+	KEYWORDS="~amd64 ~x86"
+	MY_PN="fcitx5-skk"
+	MY_P="${MY_PN}-${PV}"
+	S="${WORKDIR}/${MY_PN}-${PV}"
 	SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_P}.tar.xz"
 fi
 
