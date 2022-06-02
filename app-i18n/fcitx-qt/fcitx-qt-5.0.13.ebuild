@@ -20,7 +20,7 @@ HOMEPAGE="https://github.com/fcitx/fcitx5-qt"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-IUSE="+qt5 onlyplugin"
+IUSE="+qt5 onlyplugin -qt6"
 
 RDEPEND="app-i18n/fcitx:5
 	dev-qt/qtcore:5
@@ -29,6 +29,9 @@ RDEPEND="app-i18n/fcitx:5
 	dev-qt/qtwidgets:5
 	x11-libs/libX11
 	dev-qt/qtconcurrent:5
+	qt6? (
+		dev-qt/qtbase
+	)
 	kde-frameworks/extra-cmake-modules"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -40,6 +43,7 @@ src_configure() {
 		-DCMAKE_BUILD_TYPE=Release
 		-DENABLE_QT4=no
 		-DENABLE_QT5=$(usex qt5)
+		-DENABLE_QT6=$(usex qt6)
 		-DBUILD_ONLY_PLUGIN=$(usex onlyplugin)
 	)
 	cmake_src_configure
