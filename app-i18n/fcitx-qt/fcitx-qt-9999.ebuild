@@ -5,12 +5,12 @@ EAPI=7
 
 inherit cmake
 
-MY_PN="fcitx5-qt"
-S="${WORKDIR}/${MY_PN}-${PV}"
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-qt.git"
 else
+	MY_PN="fcitx5-qt"
+	S="${WORKDIR}/${MY_PN}-${PV}"
 	SRC_URI="https://github.com/fcitx/fcitx5-qt/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
@@ -20,15 +20,18 @@ HOMEPAGE="https://github.com/fcitx/fcitx5-qt"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-IUSE="qt5 onlyplugin"
+IUSE="+qt5 onlyplugin -qt6"
 
 RDEPEND="app-i18n/fcitx:5
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
-	dev-qt/qtx11extras:5
+	x11-libs/libX11
 	dev-qt/qtconcurrent:5
+	qt6? (
+		dev-qt/qtbase
+	)
 	kde-frameworks/extra-cmake-modules"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -40,6 +43,7 @@ src_configure() {
 		-DCMAKE_BUILD_TYPE=Release
 		-DENABLE_QT4=no
 		-DENABLE_QT5=$(usex qt5)
+		-DENABLE_QT6=$(usex qt6)
 		-DBUILD_ONLY_PLUGIN=$(usex onlyplugin)
 	)
 	cmake_src_configure
