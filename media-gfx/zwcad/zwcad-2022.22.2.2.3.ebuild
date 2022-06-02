@@ -77,11 +77,30 @@ src_install() {
 	sed -E -i 's/^Categories=.*$/Categories=Graphics;VectorGraphics;Engineering;Construction;2DGraphics;/g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/com.zwsoft.zwcad.desktop" || die
 	domenu "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/com.zwsoft.zwcad.desktop"
 
+	sed -i "1i\\export MONO_PATH=/opt/apps/${MY_PGK_NAME}/files/lib/mono/lib/mono/4.5\n" "${S}/opt/apps/${MY_PGK_NAME}/files/ZWCADRUN.sh" || die
+	sed -E -i 's/export QT_IM_MODULE=fcitx//g' "${S}/opt/apps/${MY_PGK_NAME}/files/ZWCADRUN.sh" || die
+
 	# Add zw3d command
 	mkdir -p "${S}"/usr/bin/ || die
 
 	cat >> "${S}"/opt/apps/${MY_PGK_NAME}/zwcad <<- EOF || die
 #!/bin/sh
+if [ -z "\${QT_IM_MODULE}" ]
+then
+	if [ -n "\$(pidof fcitx5)" ]
+	then
+		export XMODIFIERS="@im=fcitx"
+		export QT_IM_MODULE=fcitx
+	elif [ -n "\$(pidof ibus-daemon)" ]
+	then
+		export XMODIFIERS="@im=ibus"
+		export QT_IM_MODULE=ibus
+	elif [ -n "\$(pidof fcitx)" ]
+	then
+		export XMODIFIERS="@im=fcitx"
+		export QT_IM_MODULE=fcitx
+	fi
+fi
 export MONO_PATH=/opt/apps/${MY_PGK_NAME}/files/lib/mono/lib/mono/4.5
 sh /opt/apps/${MY_PGK_NAME}/files/ZWCADRUN.sh \$*
 	EOF
