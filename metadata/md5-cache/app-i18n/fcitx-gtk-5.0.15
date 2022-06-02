@@ -12,4 +12,4 @@ RDEPEND=app-i18n/fcitx:5 gtk2? ( x11-libs/gtk+:2 ) gtk3? ( x11-libs/gtk+:3[wayla
 SLOT=5
 SRC_URI=https://github.com/fcitx/fcitx5-gtk/archive/refs/tags/5.0.15.tar.gz -> fcitx-gtk-5.0.15.tar.gz
 _eclasses_=toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4fbbbc98f236f1b43acd99476bc3cd85	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	dab5d8ec471d025b79c9e6906bcf3bff	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	cmake	90e2b29417d53718328f3a95227137a0	gnome2-utils	2116cec8f46f4d1b0a88c5b1f1575dd3	xdg	6024fbc93167fad782e2032933654857
-_md5_=3e5d81610526d42fa8f468b15a962b08
+_md5_=8ec2a59865ab9ea749a0a968a71d6b7d

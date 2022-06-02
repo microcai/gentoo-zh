@@ -1,13 +1,13 @@
-BDEPEND=kde-frameworks/extra-cmake-modules:5 virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl] dev-util/ninja >=dev-util/cmake-3.20.5
+BDEPEND=kde-frameworks/extra-cmake-modules:5 virtual/pkgconfig dev-util/ninja >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
 DEPEND=app-i18n/fcitx:5 app-i18n/libskk dev-qt/qtcore:5 app-i18n/fcitx-qt[qt5,-onlyplugin] app-i18n/skk-jisyo dev-util/desktop-file-utils x11-misc/shared-mime-info
 DESCRIPTION=Japanese SKK input engine for Fcitx5
 EAPI=7
 HOMEPAGE=https://fcitx-im.org/ https://github.com/fcitx/fcitx5-skk
-INHERIT=git-r3 xdg cmake
+INHERIT=xdg cmake git-r3
 LICENSE=GPL-3+
 PROPERTIES=live
 RDEPEND=app-i18n/fcitx:5 app-i18n/libskk dev-qt/qtcore:5 app-i18n/fcitx-qt[qt5,-onlyplugin] app-i18n/skk-jisyo
 SLOT=5
-_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857	toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4fbbbc98f236f1b43acd99476bc3cd85	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	dab5d8ec471d025b79c9e6906bcf3bff	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	cmake	90e2b29417d53718328f3a95227137a0
-_md5_=67482576a45cbb9f92bad093f0f44175
+_eclasses_=xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857	toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4fbbbc98f236f1b43acd99476bc3cd85	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	dab5d8ec471d025b79c9e6906bcf3bff	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	cmake	90e2b29417d53718328f3a95227137a0	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_md5_=c9b2178f8bf164772d447cc856debd84
