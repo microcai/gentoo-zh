@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<longdescription lang="en">
+	The visual computer-aided drawing software based on Linux system developed
+	by Zhongwang Software is compatible with various versions of
+	DWG/DXF/DWF/DWFX files, providing powerful drawing browsing, drawing,
+	editing, marking and printing, as well as intelligent voice,
+	mouse gestures, two-dimensional code functions.
+	</longdescription>
+	<longdescription lang="zh">
+	中望CAD是由中望软件研发的基于Linux系统的可视化计算机辅助绘图软件，可兼容查看各种版本
+	的DWG/DXF/DWF/DWFX文件，提供了强大的图纸浏览、绘制、编辑、标注和打印，以及
+	智能语音、鼠标手势、二维码功能，是目前国内首款基于Linux系统的国产CAD产品，
+	填补了目前国内无基于Linux系统的纯国产CAD产品的空白。
+	</longdescription>
+</pkgmetadata>
