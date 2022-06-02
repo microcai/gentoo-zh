@@ -5,8 +5,6 @@ EAPI=7
 
 inherit xdg cmake
 
-MY_PN="fcitx5-rime"
-S="${WORKDIR}/${MY_PN}-${PV}"
 DESCRIPTION="Rime Support for Fcitx5"
 HOMEPAGE="https://github.com/fcitx/fcitx5-rime"
 
@@ -14,6 +12,8 @@ if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-rime.git"
 else
+	MY_PN="fcitx5-rime"
+	S="${WORKDIR}/${MY_PN}-${PV}"
 	SRC_URI="https://github.com/fcitx/fcitx5-rime/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi

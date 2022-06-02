@@ -1,16 +1,16 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
 inherit cmake xdg
 
-MY_PN="fcitx5"
-S="${WORKDIR}/${MY_PN}-${PV}"
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5.git"
 else
+	MY_PN="fcitx5"
+	S="${WORKDIR}/${MY_PN}-${PV}"
 	SRC_URI="https://github.com/fcitx/fcitx5/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
@@ -21,8 +21,12 @@ SRC_URI+=" https://download.fcitx-im.org/data/en_dict-20121020.tar.gz -> fcitx-d
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-IUSE="+enchant test coverage doc presage systemd wayland"
-REQUIRED_USE="coverage? ( test )"
+IUSE="+enchant test coverage doc presage systemd wayland +X"
+REQUIRED_USE="
+	|| ( wayland X )
+	coverage? ( test )
+"
+
 RESTRICT="!test? ( test )"
 
 RDEPEND="dev-libs/glib:2
@@ -32,20 +36,22 @@ RDEPEND="dev-libs/glib:2
 	sys-apps/util-linux
 	virtual/libiconv
 	virtual/libintl
-	x11-libs/libxkbcommon[X]
-	x11-libs/libX11
+	x11-libs/libxkbcommon[X?]
 	wayland? (
 		dev-libs/wayland
 		dev-libs/wayland-protocols
 	)
-	x11-libs/libXfixes
-	x11-libs/libXinerama
-	x11-libs/libXrender
-	x11-libs/libxkbfile
-	x11-libs/xcb-imdkit
+	X? (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXfixes
+		x11-libs/libXrender
+		x11-libs/libXinerama
+		x11-libs/libxkbfile
+		~x11-libs/xcb-imdkit-1.0.3
+	)
 	x11-misc/xkeyboard-config
-	x11-libs/cairo[X]
-	x11-libs/libXext
+	x11-libs/cairo[X?]
 	x11-libs/pango
 	media-libs/fontconfig
 	enchant? ( app-text/enchant:= )
@@ -53,10 +59,13 @@ RDEPEND="dev-libs/glib:2
 	app-text/iso-codes
 	app-i18n/unicode-cldr
 	dev-libs/libxml2
-	dev-libs/libevent"
+	dev-libs/libevent
+	x11-libs/gdk-pixbuf:2
+"
 DEPEND="${RDEPEND}
 	kde-frameworks/extra-cmake-modules:5
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 src_prepare() {
 	pwd
@@ -74,6 +83,7 @@ src_configure() {
 		-DENABLE_ENCHANT=$(usex enchant)
 		-DENABLE_PRESAGE=$(usex presage)
 		-DENABLE_WAYLAND=$(usex wayland)
+		-DENABLE_X11=$(usex X)
 		-DENABLE_DOC=$(usex doc)
 		-DUSE_SYSTEMD=$(usex systemd)
 	)

@@ -5,12 +5,12 @@ EAPI=7
 
 inherit cmake gnome2-utils xdg
 
-MY_PN="fcitx5-gtk"
-S="${WORKDIR}/${MY_PN}-${PV}"
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-gtk.git"
 else
+	MY_PN="fcitx5-gtk"
+	S="${WORKDIR}/${MY_PN}-${PV}"
 	SRC_URI="https://github.com/fcitx/fcitx5-gtk/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
@@ -20,12 +20,12 @@ HOMEPAGE="https://github.com/fcitx/fcitx5-gtk"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-IUSE="+gtk2 +gtk3 gtk4 +introspection +snooper"
+IUSE="+gtk2 +gtk3 gtk4 +introspection +snooper +wayland"
 
 RDEPEND="app-i18n/fcitx:5
 	gtk2? ( x11-libs/gtk+:2 )
-	gtk3? ( x11-libs/gtk+:3 )
-	gtk4? ( gui-libs/gtk:4 )
+	gtk3? ( x11-libs/gtk+:3[wayland?] )
+	gtk4? ( gui-libs/gtk:4[wayland?] )
 	introspection? ( dev-libs/gobject-introspection )
 	kde-frameworks/extra-cmake-modules"
 DEPEND="${RDEPEND}

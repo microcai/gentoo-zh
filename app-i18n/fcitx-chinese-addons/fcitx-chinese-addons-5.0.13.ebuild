@@ -5,12 +5,12 @@ EAPI=8
 
 inherit cmake xdg
 
-MY_PN="fcitx5-chinese-addons"
-S="${WORKDIR}/${MY_PN}-${PV}"
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-chinese-addons.git"
 else
+	MY_PN="fcitx5-chinese-addons"
+	S="${WORKDIR}/${MY_PN}-${PV}"
 	SRC_URI="https://github.com/fcitx/fcitx5-chinese-addons/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
