@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-06-02 15:50:03 CST)
+(The last generation time: 2022-06-02 15:53:07 CST)
 
 ### Packages
 
@@ -47,7 +47,7 @@
                                               | 9999                                      |        |                                                                                         |
    app-i18n/fcitx-configtool                  | 5.0.13                                    | RD     | https://fcitx-im.org/                                                                   | Configuration module for Fcitx
                                               | 9999                                      |        |                                                                                         |
-   app-i18n/fcitx-gtk                         | 5.0.14                                    | RD     | https://github.com/fcitx/fcitx5-gtk                                                     | Gtk im module for fcitx5 and glib based dbus client library
+   app-i18n/fcitx-gtk                         | 5.0.15                                    | RD     | https://github.com/fcitx/fcitx5-gtk                                                     | Gtk im module for fcitx5 and glib based dbus client library
                                               | 9999                                      |        |                                                                                         |
    app-i18n/fcitx-hangul                      | 5.0.9                                     | RD     | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
    app-i18n/fcitx-rime                        | 5.0.13                                    | RD     | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
