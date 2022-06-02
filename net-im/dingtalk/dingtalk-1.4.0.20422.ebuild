@@ -76,13 +76,14 @@ if [ -z "\${QT_IM_MODULE}" ]
 then
 	if [ -n "\$(pidof fcitx5)" ]
 	then
-		export XMODIFIERS="@im=fcitx5"
-		export QT_IM_MODULE=fcitx5
+		export XMODIFIERS="@im=fcitx"
+		export QT_IM_MODULE=fcitx
 	elif [ -n "\$(pidof ibus-daemon)" ]
 	then
 		export XMODIFIERS="@im=ibus"
 		export QT_IM_MODULE=ibus
-	else
+	elif [ -n "\$(pidof fcitx)" ]
+	then
 		export XMODIFIERS="@im=fcitx"
 		export QT_IM_MODULE=fcitx
 	fi
