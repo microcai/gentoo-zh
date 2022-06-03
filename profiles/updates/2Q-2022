@@ -13,3 +13,4 @@ move app-i18n/fcitx5-qt app-i18n/fcitx-qt
 move app-i18n/fcitx5-gtk app-i18n/fcitx-gtk
 move app-i18n/fcitx5 app-i18n/fcitx
 move app-i18n/fcitx5-meta app-i18n/fcitx-meta
+move net-proxy/shadowsocks-rust-bin net-proxy/shadowsocks-rust
