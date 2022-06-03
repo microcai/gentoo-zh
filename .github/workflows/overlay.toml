@@ -314,12 +314,14 @@ source = "github"
 github = "HowardHinnant/date"
 use_latest_release = true
 prefix = "v"
+github_account = "CHN-beta"
 
 ["dev-cpp/nameof"]
 source = "github"
 github = "Neargye/nameof"
 use_latest_release = true
 prefix = "v"
+github_account = "CHN-beta"
 
 ["dev-cpp/tgbot-cpp"]
 source = "github"
@@ -332,11 +334,6 @@ github_account = "CHN-beta"
 source = "regex"
 url = "https://dbeaver.io/"
 regex = "DBeaver ([\\d.]+)"
-
-["dev-libs/boost"]
-source = "regex"
-url = "https://www.boost.org/users/download/"
-regex = "Version ([\\d.]+)"
 
 ["dev-libs/granite"]
 source = "github"
@@ -363,12 +360,14 @@ source = "github"
 github = "tlwg/libthai"
 use_latest_release= true
 prefix = "v"
+github_account = "vowstar"
 
 ["dev-libs/lunar-date"]
 source = "github"
 github = "yetist/lunar-date"
 use_latest_release = true
 prefix = "v"
+github_account = "microcai"
 
 # live package
 #["dev-libs/tdlib"]
@@ -396,56 +395,53 @@ prefix = "v"
 source = "github"
 github = "conda/conda"
 use_latest_release = true
+github_account = "OriPoin"
 
 ["dev-python/conda-package-handling"]
 source = "github"
 github = "conda/conda-package-handling"
 use_latest_release = true
+github_account = "OriPoin"
 
 ["dev-python/fuo-kuwo"]
 source = "pypi"
 pypi = "fuo_kuwo"
+github_account = "wgjak47"
 
 ["dev-python/fuo-local"]
 source = "pypi"
 pypi = "fuo-local"
+github_account = "wgjak47"
 
 ["dev-python/fuo-netease"]
 source = "pypi"
 pypi = "fuo-netease"
+github_account = "wgjak47"
 
 ["dev-python/fuo-qqmusic"]
 source = "pypi"
 pypi = "fuo-qqmusic"
-
-["dev-python/imgviz"]
-source = "github"
-github = "wkentaro/imgviz"
-use_latest_tag = true
-prefix = "v"
+github_account = "wgjak47"
 
 ["dev-python/janus"]
 source = "github"
 github = "aio-libs/janus"
 use_latest_release = true
 prefix = "v"
-
-["dev-python/labelme"]
-source = "github"
-github = "wkentaro/labelme"
-use_latest_release = true
-prefix = "v"
+github_account = "wgjak47"
 
 ["dev-python/nvchecker"]
 source = "github"
 github = "lilydjwg/nvchecker"
 use_latest_tag = true
 prefix = "v"
+github_account = "liangyongxiang"
 
 ["dev-python/pycosat"]
 source = "github"
 github = "ContinuumIO/pycosat"
 use_latest_tag = true
+github_account = "OriPoin"
 
 ["dev-python/python-telegram-bot"]
 source = "github"
@@ -459,16 +455,13 @@ source = "github"
 github = "CabbageDevelopment/qasync"
 use_latest_tag = true
 prefix = "v"
+github_account = "wgjak47"
 
 ["dev-python/structlog"]
 source = "github"
 github = "hynek/structlog"
 use_latest_release = true
-
-["dev-python/tomlkit"]
-source = "github"
-github = "sdispater/tomlkit"
-use_latest_tag = true
+github_account = "liangyongxiang"
 
 # add riscv keyword, drop after main tree keyworded
 #["dev-qt/assistant"]
@@ -504,6 +497,7 @@ prefix = "v"
 source = "git"
 git = "https://git.kernel.org/pub/scm/devel/pahole/pahole.git"
 prefix = "v"
+github_account = "HougeLangley"
 
 ["dev-util/rust-analyzer"]
 source = "github"
@@ -515,16 +509,11 @@ to_pattern = "\\1\\2\\3"
 # TODO
 #["dev-util/v2ray-geoip-generator"]
 
-["dev-vcs/lazygit-bin"]
-source = "github"
-github = "jesseduffield/lazygit"
-use_latest_release = true
-prefix = "v"
-
 ["games-action/DDNet"]
 source = "github"
 github = "ddnet/ddnet"
 use_latest_tag = true
+github_account = "Schroedingersdoraemon"
 
 ["games-board/othello"]
 source = "regex"
