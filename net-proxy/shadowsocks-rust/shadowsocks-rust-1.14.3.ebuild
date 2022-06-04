@@ -309,7 +309,7 @@ RESTRICT="strip"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~mips ~x86"
+KEYWORDS="amd64 arm64 mips x86"
 
 src_prepare() {
 	sed -i '/strip = true/d' Cargo.toml || die
@@ -325,7 +325,11 @@ src_configure() {
 }
 
 src_install() {
-	dobin target/release/ss{local,manager,server,service,url}
+	if use debug; then
+		dobin target/debug/ss{local,manager,server,service,url}
+	else
+		dobin target/release/ss{local,manager,server,service,url}
+	fi
 
 	systemd_newunit "${FILESDIR}/shadowsocks-rust_at.service" shadowsocks-rust@.service
 	systemd_newunit "${FILESDIR}/shadowsocks-rust-server_at.service" shadowsocks-rust-server@.service
