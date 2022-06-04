@@ -305,31 +305,37 @@ DESCRIPTION="A Rust port of shadowsocks."
 HOMEPAGE="https://github.com/shadowsocks/shadowsocks-rust"
 SRC_URI="https://github.com/shadowsocks/shadowsocks-rust/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	$(cargo_crate_uris)"
-RESTRICT="strip"
+RESTRICT="mirror strip"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 arm64 mips x86"
+IUSE="redir tun"
 
-src_prepare() {
-	sed -i '/strip = true/d' Cargo.toml || die
-	default
-}
+QA_FLAGS_IGNORED="
+	usr/bin/sslocal
+	usr/bin/ssmanager
+	usr/bin/ssurl
+	usr/bin/ssservice
+	usr/bin/ssserver
+"
 
 src_configure() {
+	# Should we provide stream cipher protocol option?
 	local myfeatures=(
-		local-tun
-		local-redir
+		$(usex redir local-redir "")
+		$(usex tun local-tun "")
 	)
 	cargo_src_configure
 }
 
 src_install() {
-	if use debug; then
-		dobin target/debug/ss{local,manager,server,service,url}
-	else
-		dobin target/release/ss{local,manager,server,service,url}
-	fi
+#	if use debug; then
+#		dobin target/debug/ss{local,manager,server,service,url}
+#	else
+#		dobin target/release/ss{local,manager,server,service,url}
+#	fi
+	cargo_src_install
 
 	systemd_newunit "${FILESDIR}/shadowsocks-rust_at.service" shadowsocks-rust@.service
 	systemd_newunit "${FILESDIR}/shadowsocks-rust-server_at.service" shadowsocks-rust-server@.service

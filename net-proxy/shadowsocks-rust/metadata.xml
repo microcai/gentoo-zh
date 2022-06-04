@@ -4,4 +4,8 @@
 	<upstream>
 		<remote-id type="github">shadowsocks/shadowsocks-rust</remote-id>
 	</upstream>
+	<use>
+		<flag name="redir">Enable redir protocol for sslocal (transparent proxy)</flag>
+		<flag name="tun">Enable Tun interface protocol for sslocal</flag>
+	</use>
 </pkgmetadata>
