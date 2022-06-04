@@ -44,6 +44,7 @@ source = "github"
 github = "marktext/marktext"
 use_latest_release = true
 prefix = "v"
+github_account = "Schroedingersdoraemon"
 
 ["app-editors/typora"]
 source = "regex"
