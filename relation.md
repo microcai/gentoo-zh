@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-06-04 14:46:43 CST)
+(The last generation time: 2022-06-04 15:43:54 CST)
 
 ### Packages
 
@@ -315,8 +315,8 @@
  media-sound/feeluown                         | 3.8.5                                     |        | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
    dev-python/fuo-kuwo                        | 0.1.5                                     |  D     | https://github.com/feeluown/feeluown-kuwo                                               | kuwo music support for feeluown
    dev-python/fuo-local                       | 0.3                                       |  D     | https://github.com/feeluown/feeluown-local                                              | local music support for feeluown
-   dev-python/fuo-netease                     | 0.8                                       |  D     | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
-   dev-python/fuo-qqmusic                     | 0.4                                       |  D     | https://github.com/feeluown/feeluown-qqmusic                                            | qq music support for feeluown
+   dev-python/fuo-netease                     | 0.9.1                                     |  D     | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
+   dev-python/fuo-qqmusic                     | 0.4.1                                     |  D     | https://github.com/feeluown/feeluown-qqmusic                                            | qq music support for feeluown
    dev-python/janus                           | 1.0.0-r1                                  |  D, RD | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
    dev-python/qasync                          | 0.22.0                                    |  D, RD | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
