@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-06-04 15:43:54 CST)
+(The last generation time: 2022-06-04 17:55:57 CST)
 
 ### Packages
 
@@ -355,6 +355,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/dingtalk                              | 1.4.0.20422                               |        | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
    dev-libs/libthai                           | 0.1.28                                    |  D, RD | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
+                                              | 0.1.29                                    |        |                                                                                         |
      dev-libs/libdatrie                       | 0.2.13                                    |  D, RD | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/freetalk                              | 4.1                                       |        | http://www.gnu.org/software/freetalk/                                                   | Console based Jabber client
