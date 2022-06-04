@@ -8,7 +8,7 @@ DESCRIPTION="Xray, Penetrates Everything."
 HOMEPAGE="https://github.com/XTLS/Xray-core"
 
 SRC_URI="https://github.com/XTLS/Xray-core/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/CHN-beta/gentoo-xray-dep/releases/download/v${PV}/Xray-${PV}-deps.tar.xz -> ${P}-deps.tar.xz"
+	https://github.com/CHN-beta/gentoo-xray-dep/releases/download/v${PV}/Xray-${PV}-deps.tar.xz"
 RESTRICT="mirror"
 
 LICENSE="MPL-2.0"
@@ -20,6 +20,7 @@ BDEPEND=">=dev-lang/go-1.16.2 app-arch/unzip"
 RDEPEND="app-misc/ca-certificates dev-libs/v2ray-domain-list-community-bin dev-libs/v2ray-geoip-bin"
 
 S="${WORKDIR}/${PN}-core-${PV}"
+PATCHES=("${FILESDIR}/Xray-1.5.5-add-v2ray-asset.patch")
 
 src_compile() {
 	ego build -v -work -x -o bin/xray -trimpath -ldflags "-buildid=" ./main

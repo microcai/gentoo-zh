@@ -29,7 +29,6 @@ start() {
 	ebegin "Starting Xray"
 	ebegin "Log File : ${XR_LOG}"
 	start-stop-daemon --start	\
-	-e XRAY_LOCATION_ASSET="/usr/share/v2ray" \
 	-b -1 ${XR_LOG} -2 ${XR_LOG}	\
 	-m -p ${XR_PIDFILE}		\
 	--exec /usr/bin/xray  -- -config ${XR_CONFIG}
