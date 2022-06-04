@@ -160,6 +160,8 @@ net-p2p/qbittorrent-enhanced:webui - Enable the Web UI
 net-proxy/clash:goamd64 - detect golang arch level on amd64 cpus by CPU_FLAGS_X86
 net-proxy/make-proxy:client - Add make proxy client support
 net-proxy/make-proxy:server - Add make proxy server support
+net-proxy/shadowsocks-rust:redir - Enable redir protocol for sslocal (transparent proxy)
+net-proxy/shadowsocks-rust:tun - Enable Tun interface protocol for sslocal
 net-proxy/smartproxy:system-boost - use system supplied boost
 net-proxy/v2ray:tool - Build the additional tool: v2ctl
 net-proxy/v2rayA:v2ray - Use net-proxy/v2ray as default
