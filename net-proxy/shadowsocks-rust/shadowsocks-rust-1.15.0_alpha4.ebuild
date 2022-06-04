@@ -6,12 +6,14 @@ EAPI=8
 CRATES="
 	aead-0.4.3
 	aes-0.7.5
+	aes-0.8.1
 	aes-gcm-0.9.4
 	aes-gcm-siv-0.10.3
 	aho-corasick-0.7.18
-	anyhow-1.0.56
-	arc-swap-0.4.8
+	anyhow-1.0.57
 	arc-swap-1.5.0
+	arrayref-0.3.6
+	arrayvec-0.7.2
 	async-trait-0.1.53
 	atty-0.2.14
 	autocfg-1.1.0
@@ -19,6 +21,7 @@ CRATES="
 	base64-0.13.0
 	bit-vec-0.6.3
 	bitflags-1.3.2
+	blake3-1.3.1
 	block-buffer-0.7.3
 	block-buffer-0.10.2
 	block-padding-0.1.5
@@ -38,9 +41,12 @@ CRATES="
 	checked_int_cast-1.0.0
 	chrono-0.4.19
 	cipher-0.3.0
-	clap-3.1.8
+	cipher-0.4.3
+	clap-3.1.18
+	clap_lex-0.2.0
 	cmake-0.1.48
 	const-oid-0.7.1
+	constant_time_eq-0.1.5
 	core-foundation-0.9.3
 	core-foundation-sys-0.8.3
 	cpufeatures-0.2.2
@@ -60,7 +66,7 @@ CRATES="
 	dirs-4.0.0
 	dirs-sys-0.3.7
 	ecdsa-0.13.4
-	ed25519-1.4.1
+	ed25519-1.5.2
 	elliptic-curve-0.11.12
 	enum-as-inner-0.4.0
 	env_logger-0.9.0
@@ -68,7 +74,7 @@ CRATES="
 	exitcode-1.1.2
 	fake-simd-0.1.2
 	fastrand-1.7.0
-	filetime-0.2.15
+	filetime-0.2.16
 	fnv-1.0.7
 	foreign-types-0.3.2
 	foreign-types-shared-0.1.1
@@ -95,9 +101,9 @@ CRATES="
 	hkdf-0.12.3
 	hmac-0.12.1
 	hostname-0.3.1
-	http-0.2.6
-	http-body-0.4.4
-	httparse-1.6.0
+	http-0.2.7
+	http-body-0.4.5
+	httparse-1.7.1
 	httpdate-1.0.2
 	humantime-2.1.0
 	hyper-0.14.18
@@ -105,26 +111,27 @@ CRATES="
 	indexmap-1.8.1
 	inotify-0.9.6
 	inotify-sys-0.1.5
+	inout-0.1.3
 	instant-0.1.12
 	ioctl-sys-0.6.0
 	ipconfig-0.3.0
-	ipnet-2.4.0
+	ipnet-2.5.0
 	iprange-0.6.7
-	itoa-1.0.1
+	itoa-1.0.2
 	jemalloc-sys-0.3.2
 	jemallocator-0.3.2
-	js-sys-0.3.56
+	js-sys-0.3.57
 	json5-0.4.1
-	kqueue-1.0.4
+	kqueue-1.0.6
 	kqueue-sys-1.0.3
 	lazy_static-1.4.0
-	libc-0.2.121
-	libmimalloc-sys-0.1.24
+	libc-0.2.126
+	libmimalloc-sys-0.1.25
 	linked-hash-map-0.5.4
 	lock_api-0.4.7
-	log-0.4.16
+	log-0.4.17
 	log-mdc-0.1.0
-	log4rs-1.0.0
+	log4rs-1.1.1
 	lru-cache-0.1.2
 	lru_time_cache-0.11.11
 	managed-0.8.0
@@ -133,32 +140,29 @@ CRATES="
 	matches-0.1.9
 	md-5-0.10.1
 	md5-asm-0.5.0
-	memchr-2.4.1
+	memchr-2.5.0
 	memoffset-0.6.5
-	mimalloc-0.1.28
-	mio-0.8.2
-	miow-0.3.7
+	mimalloc-0.1.29
+	mio-0.8.3
 	native-tls-0.2.10
-	nix-0.23.1
-	notify-5.0.0-pre.14
-	ntapi-0.3.7
-	num-integer-0.1.44
-	num-traits-0.2.14
+	nix-0.24.1
+	notify-5.0.0-pre.15
+	num-integer-0.1.45
+	num-traits-0.2.15
 	num_cpus-1.13.1
-	once_cell-1.10.0
+	once_cell-1.11.0
 	opaque-debug-0.2.3
 	opaque-debug-0.3.0
-	openssl-0.10.38
+	openssl-0.10.40
+	openssl-macros-0.1.0
 	openssl-probe-0.1.5
-	openssl-sys-0.9.72
+	openssl-sys-0.9.73
 	ordered-float-2.10.0
-	os_str_bytes-6.0.0
+	os_str_bytes-6.0.1
 	p256-0.10.1
 	p384-0.9.0
-	parking_lot-0.11.2
 	parking_lot-0.12.0
-	parking_lot_core-0.8.5
-	parking_lot_core-0.9.2
+	parking_lot_core-0.9.3
 	percent-encoding-2.1.0
 	pest-2.1.3
 	pest_derive-2.1.0
@@ -166,93 +170,92 @@ CRATES="
 	pest_meta-2.1.3
 	pin-project-1.0.10
 	pin-project-internal-1.0.10
-	pin-project-lite-0.2.8
+	pin-project-lite-0.2.9
 	pin-utils-0.1.0
 	pkg-config-0.3.25
 	poly1305-0.7.2
 	polyval-0.5.3
 	ppv-lite86-0.2.16
-	proc-macro2-1.0.36
+	proc-macro2-1.0.39
 	qrcode-0.12.0
 	quick-error-1.2.3
-	quote-1.0.17
+	quote-1.0.18
 	rand-0.8.5
 	rand_chacha-0.3.1
 	rand_core-0.6.3
-	redox_syscall-0.1.57
 	redox_syscall-0.2.13
 	redox_users-0.4.3
-	regex-1.5.5
-	regex-syntax-0.6.25
+	regex-1.5.6
+	regex-syntax-0.6.26
 	remove_dir_all-0.5.3
 	resolv-conf-0.7.0
 	ring-0.16.20
 	ring-compat-0.4.1
-	rpassword-5.0.1
+	rpassword-6.0.1
 	rpmalloc-0.2.2
-	rpmalloc-sys-0.2.2+1.4.1
-	rustls-0.20.4
-	rustls-native-certs-0.6.1
-	rustls-pemfile-0.2.1
+	rpmalloc-sys-0.2.3+b097fd0
+	rustls-0.20.6
+	rustls-native-certs-0.6.2
 	rustls-pemfile-0.3.0
-	ryu-1.0.9
+	rustls-pemfile-1.0.0
+	ryu-1.0.10
 	same-file-1.0.6
-	schannel-0.1.19
+	schannel-0.1.20
 	scopeguard-1.1.0
 	sct-0.7.0
 	sec1-0.2.1
 	security-framework-2.6.1
 	security-framework-sys-2.6.1
 	sendfd-0.4.1
-	serde-1.0.136
+	serde-1.0.137
 	serde-value-0.7.0
-	serde_derive-1.0.136
-	serde_json-1.0.79
+	serde_derive-1.0.137
+	serde_json-1.0.81
 	serde_urlencoded-0.7.1
-	serde_yaml-0.8.23
+	serde_yaml-0.8.24
 	sha-1-0.8.2
 	sha1-0.10.1
 	sha1-asm-0.5.1
-	shadowsocks-crypto-0.3.6
+	shadowsocks-crypto-0.4.0
 	signal-hook-registry-1.4.0
 	signature-1.4.0
 	siphasher-0.3.10
 	slab-0.4.6
 	smallvec-1.8.0
-	smoltcp-0.8.0
+	smoltcp-0.8.1
 	snmalloc-rs-0.2.28
 	snmalloc-sys-0.2.28
 	socket2-0.4.4
 	spin-0.5.2
-	spin-0.9.2
+	spin-0.9.3
 	strsim-0.10.0
 	subtle-2.4.1
-	syn-1.0.90
+	syn-1.0.95
 	tcmalloc-0.3.0
 	tcmalloc-sys-0.3.0
 	tempfile-3.3.0
 	termcolor-1.1.3
 	terminal_size-0.1.17
 	textwrap-0.15.0
-	thiserror-1.0.30
-	thiserror-impl-1.0.30
-	thread-id-3.3.0
+	thiserror-1.0.31
+	thiserror-impl-1.0.31
+	thread-id-4.0.0
 	time-0.1.43
-	tinyvec-1.5.1
+	tinyvec-1.6.0
 	tinyvec_macros-0.1.0
-	tokio-1.17.0
+	tokio-1.18.2
 	tokio-macros-1.7.0
 	tokio-native-tls-0.3.0
-	tokio-rustls-0.23.3
-	tokio-tfo-0.1.9
-	tokio-util-0.6.9
-	tokio-util-0.7.1
+	tokio-rustls-0.23.4
+	tokio-tfo-0.2.0
+	tokio-util-0.6.10
+	tokio-util-0.7.2
 	tower-0.4.12
 	tower-layer-0.3.1
 	tower-service-0.3.1
-	tracing-0.1.32
-	tracing-attributes-0.1.20
-	tracing-core-0.1.24
+	tracing-0.1.34
+	tracing-attributes-0.1.21
+	tracing-core-0.1.26
 	traitobject-0.1.0
 	trust-dns-proto-0.21.2
 	trust-dns-resolver-0.21.2
@@ -261,9 +264,9 @@ CRATES="
 	typemap-0.3.3
 	typenum-1.15.0
 	ucd-trie-0.1.3
-	unicode-bidi-0.3.7
+	unicode-bidi-0.3.8
+	unicode-ident-1.0.0
 	unicode-normalization-0.1.19
-	unicode-xid-0.2.2
 	universal-hash-0.4.1
 	unsafe-any-0.4.2
 	untrusted-0.7.1
@@ -274,25 +277,25 @@ CRATES="
 	want-0.3.0
 	wasi-0.10.2+wasi-snapshot-preview1
 	wasi-0.11.0+wasi-snapshot-preview1
-	wasm-bindgen-0.2.79
-	wasm-bindgen-backend-0.2.79
-	wasm-bindgen-macro-0.2.79
-	wasm-bindgen-macro-support-0.2.79
-	wasm-bindgen-shared-0.2.79
-	web-sys-0.3.56
+	wasm-bindgen-0.2.80
+	wasm-bindgen-backend-0.2.80
+	wasm-bindgen-macro-0.2.80
+	wasm-bindgen-macro-support-0.2.80
+	wasm-bindgen-shared-0.2.80
+	web-sys-0.3.57
 	webpki-0.22.0
-	webpki-roots-0.22.2
+	webpki-roots-0.22.3
 	widestring-0.5.1
 	winapi-0.3.9
 	winapi-i686-pc-windows-gnu-0.4.0
 	winapi-util-0.1.5
 	winapi-x86_64-pc-windows-gnu-0.4.0
-	windows-sys-0.34.0
-	windows_aarch64_msvc-0.34.0
-	windows_i686_gnu-0.34.0
-	windows_i686_msvc-0.34.0
-	windows_x86_64_gnu-0.34.0
-	windows_x86_64_msvc-0.34.0
+	windows-sys-0.36.1
+	windows_aarch64_msvc-0.36.1
+	windows_i686_gnu-0.36.1
+	windows_i686_msvc-0.36.1
+	windows_x86_64_gnu-0.36.1
+	windows_x86_64_msvc-0.36.1
 	winreg-0.7.0
 	xdg-2.4.1
 	yaml-rust-0.4.5
@@ -301,15 +304,19 @@ CRATES="
 
 inherit cargo systemd
 
+MY_PV=${PV/_alpha./-alpha}
+
 DESCRIPTION="A Rust port of shadowsocks."
 HOMEPAGE="https://github.com/shadowsocks/shadowsocks-rust"
-SRC_URI="https://github.com/shadowsocks/shadowsocks-rust/archive/v${PV}.tar.gz -> ${P}.tar.gz
+SRC_URI="https://github.com/shadowsocks/shadowsocks-rust/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz
 	$(cargo_crate_uris)"
 RESTRICT="strip"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 arm64 mips x86"
+KEYWORDS="~amd64 ~arm64 ~mips ~x86"
+
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_prepare() {
 	sed -i '/strip = true/d' Cargo.toml || die
