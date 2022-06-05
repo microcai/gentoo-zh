@@ -4,7 +4,7 @@
  		filepath.Join("/usr/local/share/xray/", file),
  		filepath.Join("/usr/share/xray/", file),
  		filepath.Join("/opt/share/xray/", file),
-+		filepath.Join("/usr/share/v2ray"),
++		filepath.Join("/usr/share/v2ray", file),
  	} {
  		if _, err := os.Stat(p); os.IsNotExist(err) {
  			continue
