@@ -7,6 +7,7 @@ source = "github"
 github = "ocerman/zenmonitor"
 use_latest_tag = true
 prefix = "v"
+github_account = "CHN-beta"
 
 ["app-arch/zchunk"]
 source = "github"
@@ -20,6 +21,7 @@ github_account = "HougeLangley"
 ["app-crypt/archlinux-keyring"]
 source = "git"
 git = "https://gitlab.archlinux.org/archlinux/archlinux-keyring.git"
+github_account = "HougeLangley"
 
 # TODO
 #["app-crypt/etoken-sac"]
@@ -29,6 +31,7 @@ source = "github"
 github = "CopyTranslator/CopyTranslator"
 use_latest_release = true
 prefix = "v"
+github_account = "CHN-beta"
 
 # TODO
 #["app-dicts/fcitx5-pinyin-zhwiki"]
@@ -50,6 +53,7 @@ github_account = "Schroedingersdoraemon"
 source = "regex"
 url = "https://typora.io/#linu://typora.io/releases/stable.html"
 regex = "typora_([\\d.]+)_amd64.deb"
+github_account = "CHN-beta"
 
 #["app-emulation/deepin-udis86"]
 
@@ -72,26 +76,31 @@ regex = "typora_([\\d.]+)_amd64.deb"
 source = "github"
 github = "fcitx/fcitx5"
 use_latest_tag = true
+github_account = "liangyongxiang"
 
 ["app-i18n/fcitx-chewing"]
 source = "github"
 github = "fcitx/fcitx5-chewing"
 use_latest_tag = true
+github_account = "liangyongxiang"
 
 ["app-i18n/fcitx-chinese-addons"]
 source = "github"
 github = "fcitx/fcitx5-chinese-addons"
 use_latest_tag = true
+github_account = "liangyongxiang"
 
 ["app-i18n/fcitx-configtool"]
 source = "github"
 github = "fcitx/fcitx5-configtool"
 use_latest_tag = true
+github_account = "liangyongxiang"
 
 ["app-i18n/fcitx-gtk"]
 source = "github"
 github = "fcitx/fcitx5-gtk"
 use_latest_tag = true
+github_account = "liangyongxiang"
 
 ["app-i18n/fcitx-hangul"]
 source = "github"
@@ -111,26 +120,31 @@ github_account = "liuyujielol"
 source = "github"
 github = "fcitx/fcitx5-qt"
 use_latest_tag = true
+github_account = "liangyongxiang"
 
 ["app-i18n/fcitx-rime"]
 source = "github"
 github = "fcitx/fcitx5-rime"
 use_latest_tag = true
+github_account = "liangyongxiang"
 
 ["app-i18n/fcitx-skk"]
 source = "github"
 github = "fcitx/fcitx5-skk"
 use_latest_tag = true
+github_account = "liuyujielol"
 
 ["app-i18n/fcitx-table-extra"]
 source = "github"
 github = "fcitx/fcitx5-table-extra"
 use_latest_tag = true
+github_account = "liangyongxiang"
 
 ["app-i18n/fcitx-table-other"]
 source = "github"
 github = "fcitx/fcitx5-table-other"
 use_latest_tag = true
+github_account = "liangyongxiang"
 
 # TODO: need run js
 #["app-i18n/ibus-rime"]
@@ -142,12 +156,14 @@ use_latest_tag = true
 source = "github"
 github = "fcitx/libime"
 use_latest_tag = true
+github_account = "liangyongxiang"
 
 ["app-i18n/lunar"]
 source = "debianpkg"
 debianpkg = "lunar"
 from_pattern = "-(\\d+)"
 to_pattern = ""
+github_account = "liangyongxiang"
 
 # only live package in gentoo-zh
 #["app-i18n/man-pages-zh_CN"]
@@ -180,12 +196,14 @@ regex = "bcompare-([\\d.]+).x86_64.tar.gz"
 source = "regex"
 url = "http://ccal.chinesebay.com/ccal/ccal.htm"
 regex = "<h1>CCAL-([\\d.]+)</h1>"
+github_account = "aieu"
 
 ["app-misc/gpick"]
 source = "github"
 github = "thezbyg/gpick"
 use_latest_tag = true
 prefix = "gpick-"
+github_account = "ArchFeh"
 
 # live package only
 #["app-misc/jshon"]
@@ -204,6 +222,7 @@ source = "github"
 github = "PhrozenByte/rmtrash"
 use_latest_release = true
 prefix = "v"
+github_account = "CHN-beta"
 
 ["app-misc/spark"]
 source = "github"
@@ -216,6 +235,7 @@ source = "github"
 github = "Genymobile/scrcpy"
 use_latest_release = true
 prefix = "v"
+github_account = "tlze"
 
 # TODO
 #["app-office/bytedance-feishu"]
@@ -224,11 +244,13 @@ prefix = "v"
 source = "regex"
 url = "https://www.freeoffice.com/de/download/programme"
 regex = "softmaker-freeoffice-[\\d.]{4}-([\\d.]+)-amd64.tgz"
+github_account = "zozx"
 
 ["app-office/wps-office"]
 source = "regex"
 url = "https://linux.wps.cn/wpslinuxlog"
 regex = "wps-office_([\\d.]+)_amd64.deb"
+github_account = "Universebenzene"
 
 # TODO
 #["app-pda/ipadcharge"]
@@ -238,12 +260,14 @@ source = "github"
 github = "romkatv/gitstatus"
 use_latest_release = true
 prefix = "v"
+github_account = "OriPoin"
 
 ["app-shells/zsh-theme-powerlevel10k"]
 source = "github"
 github = "romkatv/powerlevel10k"
 use_latest_release = true
 prefix = "v"
+github_account = "OriPoin"
 
 # TODO
 #["app-text/groff-utf8"]
@@ -262,6 +286,7 @@ source = "github"
 github = "farseerfc/ydcv-rs"
 use_latest_release = true
 prefix = "v"
+github_account = "bekcpear"
 
 ["app-vim/clang_complete"]
 source = "github"
