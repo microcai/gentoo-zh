@@ -304,7 +304,7 @@ CRATES="
 
 inherit cargo systemd
 
-MY_PV=${PV/_alpha./-alpha}
+MY_PV=${PV/_alpha/-alpha.}
 
 DESCRIPTION="A Rust port of shadowsocks."
 HOMEPAGE="https://github.com/shadowsocks/shadowsocks-rust"
