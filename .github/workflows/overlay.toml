@@ -237,6 +237,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "tlze"
 
+["app-misc/yq-bin"]
+source = "github"
+github = "mikefarah/yq"
+use_latest_release = true
+prefix = "v"
+github_account = "oatiz"
+
 # TODO
 #["app-office/bytedance-feishu"]
 
@@ -1068,6 +1075,7 @@ github = "wez/wezterm"
 use_latest_release = true
 from_pattern = "(.*)-(.*)-(.*)"
 to_pattern = "\\1"
+github_account = "oatiz"
 
 # TODO
 #["x11-themes/fcitx5-breeze"]
