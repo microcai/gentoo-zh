@@ -742,7 +742,7 @@ prefix = "v"
 # TODO
 #["net-im/tencent-qq"]
 
-["net-im/wechat-uos"]
+["net-im/weixin-uos"]
 source = "aur"
 aur = "wechat-uos"
 from_pattern = "([\\d.]+):([\\d.]+)-([\\d.]+)"
