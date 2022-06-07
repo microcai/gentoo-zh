@@ -14,7 +14,7 @@ CRATES="
 	arc-swap-1.5.0
 	arrayref-0.3.6
 	arrayvec-0.7.2
-	async-trait-0.1.53
+	async-trait-0.1.56
 	atty-0.2.14
 	autocfg-1.1.0
 	base16ct-0.1.1
@@ -28,7 +28,7 @@ CRATES="
 	bloomfilter-1.0.9
 	boxfnonce-0.1.1
 	build-time-0.1.1
-	bumpalo-3.9.1
+	bumpalo-3.10.0
 	byte-tools-0.3.1
 	byte_string-1.0.0
 	byteorder-1.4.3
@@ -106,9 +106,9 @@ CRATES="
 	httparse-1.7.1
 	httpdate-1.0.2
 	humantime-2.1.0
-	hyper-0.14.18
+	hyper-0.14.19
 	idna-0.2.3
-	indexmap-1.8.1
+	indexmap-1.8.2
 	inotify-0.9.6
 	inotify-sys-0.1.5
 	inout-0.1.3
@@ -118,8 +118,8 @@ CRATES="
 	ipnet-2.5.0
 	iprange-0.6.7
 	itoa-1.0.2
-	jemalloc-sys-0.3.2
-	jemallocator-0.3.2
+	jemalloc-sys-0.5.0+5.3.0
+	jemallocator-0.5.0
 	js-sys-0.3.57
 	json5-0.4.1
 	kqueue-1.0.6
@@ -150,18 +150,18 @@ CRATES="
 	num-integer-0.1.45
 	num-traits-0.2.15
 	num_cpus-1.13.1
-	once_cell-1.11.0
+	once_cell-1.12.0
 	opaque-debug-0.2.3
 	opaque-debug-0.3.0
 	openssl-0.10.40
 	openssl-macros-0.1.0
 	openssl-probe-0.1.5
-	openssl-sys-0.9.73
+	openssl-sys-0.9.74
 	ordered-float-2.10.0
-	os_str_bytes-6.0.1
+	os_str_bytes-6.1.0
 	p256-0.10.1
 	p384-0.9.0
-	parking_lot-0.12.0
+	parking_lot-0.12.1
 	parking_lot_core-0.9.3
 	percent-encoding-2.1.0
 	pest-2.1.3
@@ -223,14 +223,14 @@ CRATES="
 	slab-0.4.6
 	smallvec-1.8.0
 	smoltcp-0.8.1
-	snmalloc-rs-0.2.28
-	snmalloc-sys-0.2.28
+	snmalloc-rs-0.3.0
+	snmalloc-sys-0.3.0
 	socket2-0.4.4
 	spin-0.5.2
 	spin-0.9.3
 	strsim-0.10.0
 	subtle-2.4.1
-	syn-1.0.95
+	syn-1.0.96
 	tcmalloc-0.3.0
 	tcmalloc-sys-0.3.0
 	tempfile-3.3.0
