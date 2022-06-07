@@ -13,5 +13,5 @@ REQUIRED_USE=|| ( python_targets_python3_9 )
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/conda/conda/archive/4.13.0.tar.gz -> conda-4.13.0.tar.gz
-_eclasses_=multibuild	d26d81f242cb193d899a72bca423d0bd	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4fbbbc98f236f1b43acd99476bc3cd85	python-utils-r1	5dc84801daa87406aafaf535cb947a64	python-r1	8638751691200e941f26fe0ac3aef1d1	distutils-r1	3b871cf4724e3abc9b4ff059289f0d45
+_eclasses_=multibuild	d26d81f242cb193d899a72bca423d0bd	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4fbbbc98f236f1b43acd99476bc3cd85	python-utils-r1	648fe6a039e87233d7f48da72cadb76f	python-r1	8638751691200e941f26fe0ac3aef1d1	distutils-r1	fdadc3f4d9536be810d8cb5ce1f7deeb
 _md5_=fff32b57a18725836846c7232db373f7
