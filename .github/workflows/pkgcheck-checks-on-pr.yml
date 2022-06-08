@@ -1,5 +1,6 @@
 name: pkgcheck
 on:
+  workflow_dispatch:
   pull_request_target:
     branches:
       - master
@@ -7,6 +8,10 @@ on:
       - '.github/**'
       - 'metadata/**'
     types: [opened, reopened, synchronize]
+
+permissions:
+  contents: read
+  pull-requests: write
 
 jobs:
   check-changed-ebuilds:
@@ -63,6 +68,10 @@ jobs:
         run: |
           set -e
           mv ${GITHUB_WORKSPACE}/gentoo-zh /var/db/repos/
+          cat /var/db/repos/gentoo-zh/profiles/arch/amd64/no-multilib/package.mask >> /var/db/repos/gentoo/profiles/arch/amd64/no-multilib/package.mask
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          pushd /var/db/repos/gentoo && git commit -am"profiles/*: append mask form ::gentoo-zh" && popd
           mkdir -p /etc/portage/repos.conf
           echo "[gentoo]
           location = /var/db/repos/gentoo

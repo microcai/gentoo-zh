@@ -6,6 +6,9 @@
 		<email>iamoatiz@gmail.com</email>
 	</maintainer>
 	<longdescription>
-		Deepin wine6 stable.
+	Deepin-wine is a Wine-based compatibility layer developed by Wuhan Deepin
+	Technology Co., Ltd., which is attached to deepin Linux.
+	Deepin-wine's applications work almost out of the box,
+	with fewer bugs(compared to wine).
 	</longdescription>
 </pkgmetadata>
