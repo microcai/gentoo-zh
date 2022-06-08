@@ -8,16 +8,24 @@ inherit unpacker
 DESCRIPTION="Deepin wine6 stable"
 HOMEPAGE="https://www.deepin.org"
 
-COMMON_URI="https://community-store-packages.deepin.com/appstore/pool/appstore/d/${PN}"
-SRC_URI="${COMMON_URI}/${PN}_${PV}-${PR/r/}_amd64.deb
-		 ${COMMON_URI}/${PN}-i386_${PV}-${PR/r/}_i386.deb
-		 ${COMMON_URI}/${PN}-amd64_${PV}-${PR/r/}_amd64.deb
+APPSTORE_URI="https://com-store-packages.uniontech.com/appstore/pool/appstore"
+COMMUNITY_URI="https://community-packages.deepin.com/deepin/pool/main"
+SRC_URI="${APPSTORE_URI}/d/${PN}/${PN}_${PV}-${PR/r/}_amd64.deb
+		 ${APPSTORE_URI}/d/${PN}/${PN}-i386_${PV}-${PR/r/}_i386.deb
+		 ${APPSTORE_URI}/d/${PN}/${PN}-amd64_${PV}-${PR/r/}_amd64.deb
+		 ${COMMUNITY_URI}/o/openldap/libldap-2.4-2_2.4.47+dfsg.4-1+eagle_i386.deb
+		 ${COMMUNITY_URI}/o/openldap/libldap-2.4-2_2.4.47+dfsg.4-1+eagle_amd64.deb
+		 ${COMMUNITY_URI}/c/cyrus-sasl2/libsasl2-2_2.1.27.1-1+dde_i386.deb
+		 ${COMMUNITY_URI}/c/cyrus-sasl2/libsasl2-2_2.1.27.1-1+dde_amd64.deb
+		 ${COMMUNITY_URI}/libp/libpcap/libpcap0.8_1.8.1.1-6+dde_i386.deb
+		 ${COMMUNITY_URI}/libp/libpcap/libpcap0.8_1.8.1.1-6+dde_amd64.deb
 "
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
+RESTRICT="strip"
 
 DEPEND=""
 RDEPEND="${DEPEND}
@@ -52,12 +60,23 @@ RDEPEND="${DEPEND}
 "
 
 S=${WORKDIR}
+QA_FLAGS_IGNORED=".*"
 QA_PREBUILT="*"
+QA_SONAME="*"
+QA_TEXTRELS="*"
 
 src_install() {
+	# Fix files installing to one or more unexpected paths
+	rm -rf "${S}"/usr/share || die
+	# Install missing lib/lib64
+	mv "${S}"/usr/lib/i386-linux-gnu/* "${S}"/opt/"${PN}"/lib/ || die
+	mv "${S}"/usr/lib/x86_64-linux-gnu/* "${S}"/opt/"${PN}"/lib64/ || die
+
 	insinto /
 	doins -r usr opt
 
-	fperms 755 -R /opt/${PN}/
+	fperms 755 -R /opt/"${PN}"/
 	fperms 755 -R /usr/bin/
+	fperms 644 -R /opt/"${PN}"/lib/*.a
+	fperms 644 -R /opt/"${PN}"/lib64/*.a
 }
