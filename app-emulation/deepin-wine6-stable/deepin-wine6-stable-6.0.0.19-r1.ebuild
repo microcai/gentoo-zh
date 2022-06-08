@@ -52,6 +52,7 @@ RDEPEND="${DEPEND}
 "
 
 S=${WORKDIR}
+QA_PREBUILT="*"
 
 src_install() {
 	insinto /
