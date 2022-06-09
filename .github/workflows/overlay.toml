@@ -533,6 +533,7 @@ github = "rust-analyzer/rust-analyzer"
 use_latest_release = true
 from_pattern = "(\\d+)-(\\d+)-(\\d+)"
 to_pattern = "\\1\\2\\3"
+github_account = "liuyujielol"
 
 # TODO
 #["dev-util/v2ray-geoip-generator"]
@@ -818,6 +819,7 @@ source = "github"
 github = "c0re100/qBittorrent-Enhanced-Edition"
 use_latest_release = true
 prefix = "release-"
+github_action = "OriPoin"
 
 # TODO
 #["net-print/epson-inkjet-printer_201207w"]
@@ -912,6 +914,7 @@ prefix = "v"
 source = "github"
 github = "openSUSE/zypper"
 use_latest_tag = true
+github_account = "HougeLangley"
 
 # upstream is no longer actively maintained, ignore it
 #["sys-devel/ucc"]
@@ -991,11 +994,13 @@ prefix = "v"
 source = "github"
 github = "openSUSE/libsolv"
 use_latest_tag = true
+github_account = "HougeLangley"
 
 ["sys-libs/libzypp"]
 source = "github"
 github = "openSUSE/libzypp"
 use_latest_tag= true
+github_account = "HougeLangley"
 
 ["sys-process/btop"]
 source = "github"
