@@ -59,6 +59,8 @@ RDEPEND="${DEPEND}
 	x11-libs/libXi[abi_x86_32(-)]
 "
 
+BDEPEND="dev-util/patchelf"
+
 S=${WORKDIR}
 QA_FLAGS_IGNORED=".*"
 QA_PREBUILT="*"
@@ -71,6 +73,31 @@ src_install() {
 	# Install missing lib/lib64
 	mv "${S}"/usr/lib/i386-linux-gnu/* "${S}"/opt/"${PN}"/lib/ || die
 	mv "${S}"/usr/lib/x86_64-linux-gnu/* "${S}"/opt/"${PN}"/lib64/ || die
+
+	# Set RPATH for libs handling
+	pushd "${S}"/opt/"${PN}"/lib || die
+	local x
+	for x in $(find) ; do
+		# Use \x7fELF header to separate ELF executables and libraries
+		[[ -f ${x} && $(od -t x1 -N 4 "${x}") == *"7f 45 4c 46"* ]] || continue
+		local RPATH_ROOT="${EPREFIX}"/opt/"${PN}"/lib
+		local RPATH_S="${RPATH_ROOT}/"
+		patchelf --set-rpath "${RPATH_S}" "${x}" || \
+			die "patchelf failed on ${x}"
+	done
+	popd || die
+
+	pushd "${S}"/opt/"${PN}"/lib64 || die
+	local x
+	for x in $(find) ; do
+		# Use \x7fELF header to separate ELF executables and libraries
+		[[ -f ${x} && $(od -t x1 -N 4 "${x}") == *"7f 45 4c 46"* ]] || continue
+		local RPATH_ROOT="${EPREFIX}"/opt/"${PN}"/lib64
+		local RPATH_S="${RPATH_ROOT}/"
+		patchelf --set-rpath "${RPATH_S}" "${x}" || \
+			die "patchelf failed on ${x}"
+	done
+	popd || die
 
 	insinto /
 	doins -r usr opt
