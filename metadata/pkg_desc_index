@@ -102,7 +102,7 @@ dev-libs/v2ray-domain-list-community-bin 20220528180904: Community managed domai
 dev-libs/v2ray-geoip-bin 202205260055: GeoIP for V2Ray.
 dev-python/conda 4.13.0: OS-agnostic, system-level binary package manager and ecosystem
 dev-python/conda-package-handling 1.8.1: Create and extract conda packages of various formats
-dev-python/fuo-kuwo 0.1.5: kuwo music support for feeluown
+dev-python/fuo-kuwo 0.1.5 0.1.6: kuwo music support for feeluown
 dev-python/fuo-local 0.3: local music support for feeluown
 dev-python/fuo-netease 0.9.1: netease cloud music support for feeluown
 dev-python/fuo-qqmusic 0.4.1: qq music support for feeluown
@@ -154,7 +154,7 @@ media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simpl
 media-plugins/audacious-mac 0.2.0 0.3.10: Monkey's Audio Codec plugin for audacious
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.10-r1 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
-media-sound/feeluown 3.8.5: A user-friendly and hackable music player
+media-sound/feeluown 3.8.5 3.8.6: A user-friendly and hackable music player
 media-sound/linnya 2.2.0: A free music player
 media-sound/lx-music-desktop-bin 1.21.0: 一个基于 electron 的音乐软件
 media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb package
