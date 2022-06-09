@@ -362,6 +362,7 @@ github_account = "CHN-beta"
 source = "regex"
 url = "https://dbeaver.io/"
 regex = "DBeaver ([\\d.]+)"
+github_account = "xen0n"
 
 ["dev-libs/granite"]
 source = "github"
@@ -796,6 +797,7 @@ strip_release = 'yes'
 source = "regex"
 url = "https://devel.ringlet.net/sysutils/prips/"
 regex = "The current version of <strong>prips</strong> is <strong>([\\d.]+)</strong>"
+github_account = "lujianhua"
 
 # only live package in gentoo-zh
 #["net-misc/you-get"]
