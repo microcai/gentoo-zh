@@ -533,6 +533,7 @@ github = "rust-analyzer/rust-analyzer"
 use_latest_release = true
 from_pattern = "(\\d+)-(\\d+)-(\\d+)"
 to_pattern = "\\1\\2\\3"
+github_account = "liuyujielol"
 
 # TODO
 #["dev-util/v2ray-geoip-generator"]
