@@ -914,6 +914,7 @@ prefix = "v"
 source = "github"
 github = "openSUSE/zypper"
 use_latest_tag = true
+github_account = "HougeLangley"
 
 # upstream is no longer actively maintained, ignore it
 #["sys-devel/ucc"]
@@ -993,11 +994,13 @@ prefix = "v"
 source = "github"
 github = "openSUSE/libsolv"
 use_latest_tag = true
+github_account = "HougeLangley"
 
 ["sys-libs/libzypp"]
 source = "github"
 github = "openSUSE/libzypp"
 use_latest_tag= true
+github_account = "HougeLangley"
 
 ["sys-process/btop"]
 source = "github"
