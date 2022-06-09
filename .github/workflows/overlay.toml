@@ -818,6 +818,7 @@ source = "github"
 github = "c0re100/qBittorrent-Enhanced-Edition"
 use_latest_release = true
 prefix = "release-"
+github_action = "OriPoin"
 
 # TODO
 #["net-print/epson-inkjet-printer_201207w"]
