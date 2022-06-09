@@ -362,6 +362,7 @@ github_account = "CHN-beta"
 source = "regex"
 url = "https://dbeaver.io/"
 regex = "DBeaver ([\\d.]+)"
+github_account = "xen0n"
 
 ["dev-libs/granite"]
 source = "github"
