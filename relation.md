@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-06-14 19:21:31 CST)
+(The last generation time: 2022-06-14 19:43:02 CST)
 
 ### Packages
 
@@ -207,8 +207,6 @@
  dev-db/mongodb                               | 5.3.1                                     |        | https://www.mongodb.com                                                                 | A high-performance, open source, schema-free document-oriented database
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/granite                             | 5.2.1                                     |        | https://github.com/elementary/granite                                                   | Elementary OS library that extends Gtk+
-----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-libs/libbacktrace                        | 220218                                    |        | https://github.com/ianlancetaylor/libbacktrace                                          | A C library for producing symbolic backtraces
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/libdwarf                            | 20140208                                  |        | https://github.com/Distrotech/libdwarf                                                  | Library to deal with DWARF Debugging Information Format
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
