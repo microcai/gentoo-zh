@@ -8,7 +8,7 @@ app-backup/snapper-gui 201020: GUI for snapper, a tool for Linux filesystem snap
 app-crypt/archlinux-keyring 20211028: GnuPG keyring of Archlinux developer keys
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-dicts/copytranslator 9.1.0: Foreign language reading and translation assistant based on copy and translate.
-app-dicts/fcitx5-pinyin-zhwiki 20220416: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
+app-dicts/fcitx5-pinyin-zhwiki 20220529: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 app-editors/AppFlowy-bin 0.0.3: AppFlowy is an open-source alternative to Notion
 app-editors/marktext-bin 0.17.1: A simple and elegant markdown editor, available for Linux, macOS and Windows.
 app-editors/typora 0.11.18 1.2.4 1.2.4-r1: A truely minimal markdown editor.

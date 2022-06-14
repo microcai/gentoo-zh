@@ -5,5 +5,5 @@ HOMEPAGE=https://github.com/felixonmars/fcitx5-pinyin-zhwiki
 KEYWORDS=amd64 x86
 LICENSE=Unlicense
 SLOT=0
-SRC_URI=https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.4/zhwiki-20220416.dict
+SRC_URI=https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.4/zhwiki-20220529.dict
 _md5_=ebfded1772313842bfbe8ed8817e061b
