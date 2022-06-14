@@ -370,9 +370,6 @@ github = "elementary/granite"
 use_latest_release = true
 
 # TODO
-#["dev-libs/libbacktrace"]
-
-# TODO
 #["dev-libs/libchrasis"]
 
 ["dev-libs/libdatrie"]
