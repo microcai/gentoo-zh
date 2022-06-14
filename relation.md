@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-06-12 16:05:04 CST)
+(The last generation time: 2022-06-14 10:33:55 CST)
 
 ### Packages
 
@@ -18,7 +18,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/copytranslator                     | 9.1.0                                     |        | https://copytranslator.github.io/                                                       | Foreign language reading and translation assistant based on copy and translate.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx5-pinyin-zhwiki               | 20220416                                  |        | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
+ app-dicts/fcitx5-pinyin-zhwiki               | 20220529                                  |        | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/AppFlowy-bin                     | 0.0.3                                     |        | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
