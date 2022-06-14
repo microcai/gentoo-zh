@@ -98,8 +98,8 @@ dev-libs/libthai 0.1.28 0.1.29: A a set of Thai language support routines
 dev-libs/lunar-date 3.0.1: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458 9999: Community managed domain list for V2Ray.
-dev-libs/v2ray-domain-list-community-bin 20220528180904: Community managed domain list for V2Ray.
-dev-libs/v2ray-geoip-bin 202205260055: GeoIP for V2Ray.
+dev-libs/v2ray-domain-list-community-bin 20220612032845: Community managed domain list for V2Ray.
+dev-libs/v2ray-geoip-bin 202206090051: GeoIP for V2Ray.
 dev-python/conda 4.13.0: OS-agnostic, system-level binary package manager and ecosystem
 dev-python/conda-package-handling 1.8.1: Create and extract conda packages of various formats
 dev-python/fuo-kuwo 0.1.5 0.1.6: kuwo music support for feeluown
@@ -199,7 +199,7 @@ net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
 net-proxy/shadowsocks-rust 1.14.3 1.15.0_alpha5: A Rust port of shadowsocks.
 net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
 net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
-net-proxy/v2ray 4.45.0: A platform for building proxies to bypass network restrictions.
+net-proxy/v2ray 4.45.0 4.45.2: A platform for building proxies to bypass network restrictions.
 net-proxy/v2ray-bin 4.45.0: A platform for building proxies to bypass network restrictions.
 net-proxy/v2rayA 1.5.7: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 sci-chemistry/vesta 3.5.5 3.5.7-r1: Visualization for Electronic and STructural Analysis
