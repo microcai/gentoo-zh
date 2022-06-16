@@ -140,7 +140,7 @@ src_unpack() {
 			git-r3_checkout https://github.com/fcitx/mozc "${WORKDIR}/fcitx-mozc"
 		fi
 		if use fcitx5; then
-			cp -pr "${WORKDIR}"/fcitx{,5}-mozc
+			cp -pr "${WORKDIR}"/fcitx{,5}-mozc || die
 		fi
 	else
 		unpack ${PN}-${PV%%_p*}-${MOZC_DATE}.tar.gz
@@ -373,6 +373,10 @@ src_install() {
 			insinto /usr/share/locale/${locale}/LC_MESSAGES
 			newins "${mo_file/.po/.mo}" fcitx5-mozc.mo
 		done
+		msgfmt --xml -d unix/fcitx5/po/ --template unix/fcitx5/org.fcitx.Fcitx5.Addon.Mozc.metainfo.xml.in -o \
+			unix/fcitx5/org.fcitx.Fcitx5.Addon.Mozc.metainfo.xml || die
+		insinto /usr/share/metainfo
+		doins unix/fcitx5/org.fcitx.Fcitx5.Addon.Mozc.metainfo.xml
 	fi
 
 	if use ibus; then
