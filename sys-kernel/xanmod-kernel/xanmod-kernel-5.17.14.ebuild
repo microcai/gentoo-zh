@@ -20,7 +20,7 @@ S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64"
-IUSE="cjk"
+IUSE="cjk debug"
 SLOT="edge"
 
 PDEPEND="

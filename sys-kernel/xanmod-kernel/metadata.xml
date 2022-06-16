@@ -8,5 +8,6 @@
 	<use>
 		<flag name="initramfs">Build initramfs along with the kernel.</flag>
 		<flag name="clang">Use clang compiler instead of GCC</flag>
+		<flag name="debug">Pseudo flag</flag>
 	</use>
 </pkgmetadata>
