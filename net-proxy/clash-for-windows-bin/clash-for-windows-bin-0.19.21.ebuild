@@ -41,6 +41,7 @@ src_install() {
 	doins -r "${S}/${PN}"
 	doicon -s 512 "${FILESDIR}/${PN}.png"
 	domenu "${FILESDIR}/${PN}.desktop"
+	dosym "/opt/${PN}/cfw" "/usr/bin/cfw"
 	fperms 0755 "/opt/${PN}" -R
 }
 
