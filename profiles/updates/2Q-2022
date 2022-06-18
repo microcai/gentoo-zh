@@ -16,3 +16,4 @@ move app-i18n/fcitx5-meta app-i18n/fcitx-meta
 move net-proxy/shadowsocks-rust-bin net-proxy/shadowsocks-rust
 move net-im/wechat-uos net-im/weixin-uos
 move dev-libs/libbacktrace sys-libs/libbacktrace
+move sys-kernel/xanmod-hybrid sys-kernel/xanmod-sources

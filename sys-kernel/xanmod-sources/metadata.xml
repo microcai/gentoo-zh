@@ -4,6 +4,10 @@
 	<upstream>
 		<remote-id type="github">xanmod/linux</remote-id>
 	</upstream>
+	<maintainer type="person">
+		<email>OriPoin@outlook.com</email>
+		<name>Yachen Wang</name>
+	</maintainer>
 	<use>
 		<flag name="tt">Enable Default Xanmod Patches with TT CPU Scheduler.</flag>
 		<flag name="cjktty">Eanble cjktty patches.</flag>

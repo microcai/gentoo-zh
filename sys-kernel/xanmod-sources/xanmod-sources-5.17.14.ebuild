@@ -3,7 +3,7 @@
 
 EAPI="8"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="3"
+K_GENPATCHES_VER="18"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 ETYPE="sources"
@@ -46,10 +46,10 @@ src_unpack() {
 		tar xf "${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}-${K_GENPATCHES_VER}.${i}.tar.xz" -C "${WORKDIR}/genpatches"
 	done
 
-	rm ${WORKDIR}/genpatches/*linux-${KV_MAJOR}.${KV_MINOR}*.patch || die
+	rm "${WORKDIR}"/genpatches/*linux-"${KV_MAJOR}"."${KV_MINOR}"*.patch || die
 
 	UNIPATCH_LIST=""
-	for i in $(dir ${WORKDIR}/genpatches/*.patch); do
+	for i in $(dir "${WORKDIR}"/genpatches/*.patch); do
 		UNIPATCH_LIST+=" ${i}"
 	done
 
