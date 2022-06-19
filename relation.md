@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-06-18 23:31:01 CST)
+(The last generation time: 2022-06-19 12:35:28 CST)
 
 ### Packages
 
@@ -539,6 +539,7 @@
  x11-themes/nordzy-cursors                    | 0.5.0                                     |        | https://github.com/alvatip/Nordzy-cursors                                               | Cursor theme using the Nord color palette and based on Vimix and cz-Viator
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/nordzy-icon                       | 1.3                                       |        | https://github.com/alvatip/Nordzy-icon                                                  | A free and open source icon theme for Linux desktops using the Nord color palette
+                                              | 1.5                                       |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/smplayer-themes-nonfree           | 0.1.0-r1                                  |        | http://smplayer.sourceforge.net/                                                        | Icon themes for smplayer
                                               | 0.1.1-r1                                  |        |                                                                                         |
