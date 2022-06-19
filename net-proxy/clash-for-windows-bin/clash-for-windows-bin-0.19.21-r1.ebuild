@@ -20,7 +20,8 @@ QA_PREBUILT="*"
 
 RDEPEND="
 	x11-libs/gtk+:3
-	x11-libs/libXScrnSaver"
+	x11-libs/libXScrnSaver
+	dev-libs/nss"
 
 S="${WORKDIR}"
 
@@ -41,7 +42,7 @@ src_install() {
 	doins -r "${S}/${PN}"
 	doicon -s 512 "${FILESDIR}/${PN}.png"
 	domenu "${FILESDIR}/${PN}.desktop"
-	dosym "/opt/${PN}/cfw" "/usr/bin/cfw"
+	dosym -r "/opt/${PN}/cfw" "/usr/bin/cfw"
 	fperms 0755 "/opt/${PN}" -R
 }
 
