@@ -192,7 +192,7 @@ net-p2p/n2n 3.0: A Layer Two Peer-to-Peer VPN
 net-p2p/qbittorrent-enhanced 4.3.8.10 4.3.9.10 4.4.0.10 4.4.1.10 4.4.2.10 4.4.3.12: qBittorrent Enhanced, based on qBittorrent
 net-print/epson-inkjet-printer_201207w 1.0.0: Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 net-proxy/Xray 1.5.5-r2: Xray, Penetrates Everything.
-net-proxy/clash 1.10.6: A rule-based tunnel in Go.
+net-proxy/clash 1.10.6 1.11.0: A rule-based tunnel in Go.
 net-proxy/clash-for-windows-bin 0.19.21-r1: A Windows/macOS/Linux GUI based on Clash and Electron.
 net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
 net-proxy/shadowsocks-rust 1.14.3 1.15.0_alpha5: A Rust port of shadowsocks.
