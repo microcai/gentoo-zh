@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-06-19 19:13:05 CST)
+(The last generation time: 2022-06-20 14:41:05 CST)
 
 ### Packages
 
@@ -69,6 +69,7 @@
  app-i18n/man-pages-zh_CN                     | 9999                                      |        | https://github.com/man-pages-zh/manpages-zh                                             | A somewhat comprehensive collection of Chinese Linux man pages
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/mozc                                | 2.26.4220_p20201212102434_p20201219202429 |        | https://github.com/google/mozc                                                          | Mozc - Japanese input method editor
+                                              | 2.26.4220_p20211115025624_p20220131202424 |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/scim-chrasis                        | 9999.0.0.1                                |        | http://chrasis.berlios.de/                                                              | Chrasis SCIM binding for chinese character recognition.
