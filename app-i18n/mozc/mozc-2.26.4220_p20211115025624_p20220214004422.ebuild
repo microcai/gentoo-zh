@@ -16,7 +16,7 @@ else
 	MOZC_DATE="${PV#*_p}"
 	MOZC_DATE="${MOZC_DATE%%_p*}"
 
-	FCITX_MOZC_GIT_REVISION="32eb47a9015f1c774acce43af58b660b5317ba2c"
+	FCITX_MOZC_GIT_REVISION="36fb17175ceb2ade323ad729e0d7cfb06f98e675"
 	FCITX_MOZC_DATE="${PV#*_p}"
 	FCITX_MOZC_DATE="${FCITX_MOZC_DATE#*_p}"
 	FCITX_MOZC_DATE="${FCITX_MOZC_DATE%%_p*}"
@@ -43,10 +43,8 @@ LICENSE="BSD BSD-2 ipadic public-domain unicode"
 SLOT="0"
 #KEYWORDS="~amd64 ~arm64 ~ppc64 x86"
 KEYWORDS="~amd64 ~x86"
-#IUSE="debug emacs fcitx4 fcitx5 +gui ibus renderer test"
-IUSE="debug emacs fcitx5 +gui ibus renderer test"
-#REQUIRED_USE="|| ( emacs fcitx4 fcitx5 ibus )"
-REQUIRED_USE="|| ( emacs fcitx5 ibus )"
+IUSE="debug emacs fcitx4 fcitx5 +gui ibus renderer test"
+REQUIRED_USE="|| ( emacs fcitx4 fcitx5 ibus )"
 RESTRICT="!test? ( test )"
 
 BDEPEND="$(python_gen_any_dep 'dev-python/six[${PYTHON_USEDEP}]')
@@ -55,10 +53,14 @@ BDEPEND="$(python_gen_any_dep 'dev-python/six[${PYTHON_USEDEP}]')
 	dev-util/ninja
 	virtual/pkgconfig
 	emacs? ( app-editors/emacs:* )
+	fcitx4? ( sys-devel/gettext )
 	fcitx5? ( sys-devel/gettext )"
-#	fcitx4? ( sys-devel/gettext )
 DEPEND=">=dev-cpp/abseil-cpp-20211102[cxx17(+)]
 	>=dev-libs/protobuf-3.0.0:=
+	fcitx4? (
+		app-i18n/fcitx:4
+		virtual/libintl
+	)
 	fcitx5? (
 		app-i18n/fcitx:5
 		app-i18n/libime
@@ -85,13 +87,13 @@ DEPEND=">=dev-cpp/abseil-cpp-20211102[cxx17(+)]
 		>=dev-cpp/gtest-1.8.0
 		dev-libs/jsoncpp
 	)"
-#	fcitx4? (
-#		app-i18n/fcitx:4
-#		virtual/libintl
-#	)
 RDEPEND=">=dev-cpp/abseil-cpp-20211102[cxx17(+)]
 	>=dev-libs/protobuf-3.0.0:=
 	emacs? ( app-editors/emacs:* )
+	fcitx4? (
+		app-i18n/fcitx:4
+		virtual/libintl
+	)
 	fcitx5? (
 		app-i18n/fcitx:5
 		app-i18n/libime
@@ -114,10 +116,6 @@ RDEPEND=">=dev-cpp/abseil-cpp-20211102[cxx17(+)]
 		x11-libs/gtk+:2
 		x11-libs/pango
 	)"
-#	fcitx4? (
-#		app-i18n/fcitx:4
-#		virtual/libintl
-#	)
 
 S="${WORKDIR}/${P}/src"
 
@@ -136,16 +134,14 @@ src_unpack() {
 	if [[ "${PV}" == "9999" ]]; then
 		git-r3_src_unpack
 
-#		if use fcitx4 || use fcitx5; then
-		if use fcitx5; then
+		if use fcitx4 || use fcitx5; then
 			local EGIT_SUBMODULES=()
 			git-r3_fetch https://github.com/fcitx/mozc refs/heads/fcitx
 			git-r3_checkout https://github.com/fcitx/mozc "${WORKDIR}/fcitx-mozc"
+		fi
+		if use fcitx5; then
 			cp -pr "${WORKDIR}"/fcitx{,5}-mozc || die
 		fi
-#		if use fcitx5; then
-#			cp -pr "${WORKDIR}"/fcitx{,5}-mozc || die
-#		fi
 	else
 		unpack ${PN}-${PV%%_p*}-${MOZC_DATE}.tar.gz
 		mv mozc-${MOZC_GIT_REVISION} ${P} || die
@@ -154,9 +150,9 @@ src_unpack() {
 		cp -p japanese-usage-dictionary-${JAPANESE_USAGE_DICTIONARY_GIT_REVISION}/usage_dict.txt ${P}/src/third_party/japanese_usage_dictionary || die
 
 		unpack fcitx-${PN}-${PV%%_p*}-${FCITX_MOZC_DATE}.tar.gz
-#		if use fcitx4; then
-#			cp -pr mozc-${FCITX_MOZC_GIT_REVISION} fcitx-${PN} || die
-#		fi
+		if use fcitx4; then
+			cp -pr mozc-${FCITX_MOZC_GIT_REVISION} fcitx-${PN} || die
+		fi
 		if use fcitx5; then
 			cp -pr mozc-${FCITX_MOZC_GIT_REVISION} fcitx5-${PN} || die
 		fi
@@ -166,9 +162,9 @@ src_unpack() {
 }
 
 src_prepare() {
-#	if use fcitx4; then
-#		cp -pr "${WORKDIR}/fcitx-mozc/src/unix/fcitx" unix || die
-#	fi
+	if use fcitx4; then
+		cp -pr "${WORKDIR}/fcitx-mozc/src/unix/fcitx" unix || die
+	fi
 	if use fcitx5; then
 		cp -pr "${WORKDIR}/fcitx5-mozc/src/unix/fcitx5" unix || die
 	fi
@@ -243,7 +239,7 @@ src_configure() {
 	gyp_arguments+=(-D debug_extra_cflags=)
 	gyp_arguments+=(-D release_extra_cflags=)
 
-#	gyp_arguments+=(-D use_fcitx=$(usex fcitx4 YES NO))
+	gyp_arguments+=(-D use_fcitx=$(usex fcitx4 YES NO))
 	gyp_arguments+=(-D use_fcitx5=$(usex fcitx5 YES NO))
 	gyp_arguments+=(-D use_libibus=$(usex ibus 1 0))
 	gyp_arguments+=(-D use_libprotobuf=1)
@@ -275,9 +271,9 @@ src_compile() {
 	if use emacs; then
 		targets+=(unix/emacs/emacs.gyp:mozc_emacs_helper)
 	fi
-#	if use fcitx4; then
-#		targets+=(unix/fcitx/fcitx.gyp:fcitx-mozc)
-#	fi
+	if use fcitx4; then
+		targets+=(unix/fcitx/fcitx.gyp:fcitx-mozc)
+	fi
 	if use fcitx5; then
 		targets+=(unix/fcitx5/fcitx5.gyp:fcitx5-mozc)
 	fi
@@ -326,31 +322,31 @@ src_install() {
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}" ${PN}
 	fi
 
-#	if use fcitx4; then
-#		exeinto /usr/$(get_libdir)/fcitx
-#		doexe out_linux/${BUILD_TYPE}/fcitx-mozc.so
-#
-#		insinto /usr/share/fcitx/addon
-#		doins unix/fcitx/fcitx-mozc.conf
-#
-#		insinto /usr/share/fcitx/inputmethod
-#		doins unix/fcitx/mozc.conf
-#
-#		insinto /usr/share/fcitx/mozc/icon
-#		newins data/images/product_icon_32bpp-128.png mozc.png
-#		local image
-#		for image in ../../fcitx-${PN}/src/data/images/unix/ui-*.png; do
-#			newins "${image}" "mozc-${image#../../fcitx-${PN}/src/data/images/unix/ui-}"
-#		done
-#
-#		local locale mo_file
-#		for mo_file in out_linux/${BUILD_TYPE}/gen/unix/fcitx/po/*.mo; do
-#			locale="${mo_file##*/}"
-#			locale="${locale%.mo}"
-#			insinto /usr/share/locale/${locale}/LC_MESSAGES
-#			newins "${mo_file}" fcitx-mozc.mo
-#		done
-#	fi
+	if use fcitx4; then
+		exeinto /usr/$(get_libdir)/fcitx
+		doexe out_linux/${BUILD_TYPE}/fcitx-mozc.so
+
+		insinto /usr/share/fcitx/addon
+		doins unix/fcitx/fcitx-mozc.conf
+
+		insinto /usr/share/fcitx/inputmethod
+		doins unix/fcitx/mozc.conf
+
+		insinto /usr/share/fcitx/mozc/icon
+		newins data/images/product_icon_32bpp-128.png mozc.png
+		local image
+		for image in ../../fcitx-${PN}/src/data/images/unix/ui-*.png; do
+			newins "${image}" "mozc-${image#../../fcitx-${PN}/src/data/images/unix/ui-}"
+		done
+
+		local locale mo_file
+		for mo_file in out_linux/${BUILD_TYPE}/gen/unix/fcitx/po/*.mo; do
+			locale="${mo_file##*/}"
+			locale="${locale%.mo}"
+			insinto /usr/share/locale/${locale}/LC_MESSAGES
+			newins "${mo_file}" fcitx-mozc.mo
+		done
+	fi
 	if use fcitx5; then
 		exeinto /usr/$(get_libdir)/fcitx5
 		doexe out_linux/${BUILD_TYPE}/fcitx5-mozc.so
@@ -439,10 +435,6 @@ pkg_postinst() {
 
 		elisp-site-regen
 	fi
-	ewarn
-	ewarn "From version 2.26.4220_p20211115025624_p20220131202424, the mozc does not support fcitx4."
-	ewarn "Users need fcitx4 support should install earlier version."
-	ewarn
 	xdg_pkg_postinst
 }
 
