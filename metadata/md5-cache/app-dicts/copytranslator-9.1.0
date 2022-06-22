@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/CopyTranslator/CopyTranslator/releases/download/v9.1.0/copytranslator-9.1.0.AppImage
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28
+_eclasses_=desktop	22952d8f27cac191d75529d4c38e6bfa
 _md5_=6d77457de67e7381825f4c1241f6c735

@@ -9,5 +9,5 @@ RDEPEND=x11-libs/libXScrnSaver
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://www.typora.io/linux/typora_0.11.18_amd64.deb
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28
+_eclasses_=desktop	22952d8f27cac191d75529d4c38e6bfa
 _md5_=f2680c28a3efd22d7201687cc7b89c0c
