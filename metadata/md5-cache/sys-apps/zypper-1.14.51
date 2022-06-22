@@ -1,4 +1,4 @@
-BDEPEND=app-admin/augeas dev-util/ninja >=dev-util/cmake-3.20.5
+BDEPEND=app-admin/augeas >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
 DEFINED_PHASES=compile configure install prepare test
 DEPEND=app-admin/augeas
 DESCRIPTION=World's most powerful command line package manager
@@ -10,5 +10,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/libzypp
 SLOT=0
 SRC_URI=https://github.com/openSUSE/zypper/archive/refs/tags/1.14.51.tar.gz -> zypper-1.14.51.tar.gz
-_eclasses_=toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4fbbbc98f236f1b43acd99476bc3cd85	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	cmake	90e2b29417d53718328f3a95227137a0
+_eclasses_=toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4fbbbc98f236f1b43acd99476bc3cd85	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	cmake	44afbf15c35884f7c840470f1cf05d0d
 _md5_=3a0c556d96719066bdcbf15e8b2bda82

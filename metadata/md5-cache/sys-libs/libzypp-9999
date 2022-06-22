@@ -1,4 +1,4 @@
-BDEPEND=app-arch/rpm dev-libs/boost dev-libs/protobuf dev-ruby/asciidoctor <dev-cpp/yaml-cpp-0.7.0 net-libs/libproxy app-doc/doxygen <dev-libs/libsigc++-3.0.7 dev-python/graphviz dev-util/ninja >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=app-arch/rpm dev-libs/boost dev-libs/protobuf dev-ruby/asciidoctor <dev-cpp/yaml-cpp-0.7.0 net-libs/libproxy app-doc/doxygen <dev-libs/libsigc++-3.0.7 dev-python/graphviz >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install prepare test unpack
 DEPEND=app-arch/rpm dev-libs/boost dev-libs/protobuf dev-ruby/asciidoctor <dev-cpp/yaml-cpp-0.7.0 net-libs/libproxy app-doc/doxygen <dev-libs/libsigc++-3.0.7 dev-python/graphviz
 DESCRIPTION=ZYpp Package Management library
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=sys-libs/libsolv
 SLOT=0
-_eclasses_=toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4fbbbc98f236f1b43acd99476bc3cd85	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	cmake	90e2b29417d53718328f3a95227137a0	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_eclasses_=toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4fbbbc98f236f1b43acd99476bc3cd85	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	cmake	44afbf15c35884f7c840470f1cf05d0d	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
 _md5_=f164e01c85c0afb48fc9773a1dd1c2a4
