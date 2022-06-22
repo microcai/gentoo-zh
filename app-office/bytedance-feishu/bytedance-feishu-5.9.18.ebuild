@@ -7,15 +7,15 @@ MULTILIB_COMPAT=( abi_mips_n64 )
 
 inherit desktop unpacker xdg
 
+CDN_URL="https://sf3-cn.feishucdn.com/obj/ee-appcenter/5db94058d7ad/"
+
 DESCRIPTION="feishu - ByteDance's enterprise collaboration platform"
 HOMEPAGE="https://www.feishu.cn/"
 SRC_URI="
-	amd64?	( Feishu-linux_x64-${PV}.deb )
-	arm64?	( Feishu-linux_arm64-${PV}.deb )
-	mips?	( Feishu-linux_mips64el-${PV}.deb )
+	amd64?	( ${CDN_URL}Feishu-linux_x64-${PV}.deb )
+	arm64?	( ${CDN_URL}Feishu-linux_arm64-${PV}.deb )
+	mips?	( ${CDN_URL}Feishu-linux_mips64el-${PV}.deb )
 "
-
-RESTRICT="fetch"
 
 LICENSE="bytedance-feishu"
 SLOT="0"
@@ -34,6 +34,7 @@ RDEPEND="
 	x11-libs/libxcb
 	x11-libs/libxkbcommon
 	x11-misc/xdg-utils
+	dev-libs/wayland
 "
 
 S="${WORKDIR}"
