@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-06-20 19:27:39 CST)
+(The last generation time: 2022-06-24 16:03:01 CST)
 
 ### Packages
 
@@ -307,6 +307,7 @@
  media-gfx/zw3d                               | 2022.26.00-r1                             |        | https://www.zwsoft.cn/product/zw3d/linux                                                | CAD/CAM software for 3D design and processing
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/zwcad                              | 2022.22.2.2.3                             |        | https://www.zwsoft.cn/product/zwcad/linux                                               | CAD software for 2D drawing, reviewing and printing work
+                                              | 2023.23.0.3.4                             |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-libs/libspiro                          | 0.3.20150131                              |        | https://github.com/fontforge/libspiro                                                   | Spiro is the creation of Raph Levien. It simplifies the drawing of beautiful curves.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
