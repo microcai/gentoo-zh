@@ -70,15 +70,15 @@ src_install() {
 	popd || die
 
 	# Fix desktop files
-	sed -E -i 's/^Exec=.*$/Exec=zwcad %F/g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/com.zwsoft.zwcad.desktop" || die
-	sed -E -i 's/^Icon=.*$/Icon=ZWCAD/g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/com.zwsoft.zwcad.desktop" || die
-	sed -E -i 's/Application;//g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/com.zwsoft.zwcad.desktop" || die
+	sed -E -i 's/^Exec=.*$/Exec=zwcad %F/g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
+	sed -E -i 's/^Icon=.*$/Icon=ZWCAD/g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
+	sed -E -i 's/Application;//g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
 	# The Version entry in a .desktop file doesn't refer to the version of the
 	# target program. It's the version of the desktop file specification that
 	# this desktop file conforms to.
-	sed -E -i 's/^Version=.*$/Version=1.0/g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/com.zwsoft.zwcad.desktop" || die
-	sed -E -i 's/^Categories=.*$/Categories=Graphics;VectorGraphics;Engineering;Construction;2DGraphics;/g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/com.zwsoft.zwcad.desktop" || die
-	domenu "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/com.zwsoft.zwcad.desktop"
+	sed -E -i 's/^Version=.*$/Version=1.0/g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
+	sed -E -i 's/^Categories=.*$/Categories=Graphics;VectorGraphics;Engineering;Construction;2DGraphics;/g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
+	domenu "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop"
 
 	sed -i "1i\\export MONO_PATH=/opt/apps/${MY_PGK_NAME}/files/lib/mono/lib/mono/4.5\n" "${S}/opt/apps/${MY_PGK_NAME}/files/ZWCADRUN.sh" || die
 	sed -E -i 's/export QT_IM_MODULE=fcitx//g' "${S}/opt/apps/${MY_PGK_NAME}/files/ZWCADRUN.sh" || die
