@@ -3,13 +3,16 @@
 
 EAPI=8
 
-MY_PGK_NAME="com.zwsoft.zwcad2022"
+MY_PV_YEAR="$(ver_cut 1)"
+MY_PV="$(ver_cut 2).$(ver_cut 3).$(ver_cut 4).$(ver_cut 5)"
+MY_PGK_NAME="com.zwsoft.${PN}${MY_PV_YEAR}"
 inherit desktop unpacker xdg
 
 DESCRIPTION="CAD software for 2D drawing, reviewing and printing work"
 HOMEPAGE="https://www.zwsoft.cn/product/zwcad/linux"
+
 SRC_URI="
-	https://download.zwcad.com/zwcad/cad_linux/2022/SP2/signed_com.zwsoft.zwcad2022_22.2.2.3_amd64.deb -> ${P}.deb
+	https://home-store-packages.uniontech.com/appstore/pool/appstore/c/${MY_PGK_NAME}/${MY_PGK_NAME}_${MY_PV}_amd64.deb -> ${P}.deb
 	https://anaconda.org/anaconda/python/3.7.13/download/linux-64/python-3.7.13-h12debd9_0.tar.bz2 -> ${PN}-python-3.7.13.tar.bz2
 "
 
