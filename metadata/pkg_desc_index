@@ -148,7 +148,7 @@ media-gfx/scangearmp 1.60 2.4.10: Driver and utility package for Canon scanners
 media-gfx/tifig-bin 0.2.2: Converts iOS 11 HEIC images to practical formats - Static binary
 media-gfx/xrectsel 0.3.1: print the geometry of a rectangular screen region
 media-gfx/zw3d 2022.26.00-r1: CAD/CAM software for 3D design and processing
-media-gfx/zwcad 2022.22.2.2.3: CAD software for 2D drawing, reviewing and printing work
+media-gfx/zwcad 2022.22.2.2.3 2023.23.0.3.4: CAD software for 2D drawing, reviewing and printing work
 media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simplifies the drawing of beautiful curves.
 media-plugins/audacious-mac 0.2.0 0.3.10: Monkey's Audio Codec plugin for audacious
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
