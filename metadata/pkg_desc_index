@@ -49,7 +49,7 @@ app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience wit
 app-misc/nixnote 2.1.6: Nixnote - A clone of Evernote for Linux
 app-misc/rmtrash 1.14: trash-put made compatible to GNUs rm and rmdir
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
-app-misc/yq-bin 4.25.2: yq is a portable command-line YAML, JSON and XML processor
+app-misc/yq-bin 4.25.3: yq is a portable command-line YAML, JSON and XML processor
 app-mobilephone/scrcpy 1.23 1.24: Display and control your Android device
 app-office/bytedance-feishu 4.11.6.2 5.9.18: feishu - ByteDance's enterprise collaboration platform
 app-office/freeoffice 1046: A complete, free Microsoft Office-compatible alternative office suite.
@@ -247,7 +247,7 @@ x11-misc/lightdm-slick-greeter 1.4.1 9999: LightDM greeter forked from Unity by 
 x11-misc/ly 0.5.3: Ly - a TUI display manager
 x11-misc/picom-jonaburg 8 9999: A lightweight compositor for X11 (previously a compton fork)
 x11-plugins/vicious 9999: Modular widget library for x11-wm/awesome
-x11-terms/wezterm-bin 20220408: Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
+x11-terms/wezterm-bin 20220624: Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
 x11-themes/fcitx5-breeze 1.0.0 2.0.0-r1: Fcitx5 theme to match KDE's Breeze style.
 x11-themes/lxice 0.1.0: LXDE theme for IceWM
 x11-themes/nordic 2.1.0: Dark Gtk3.20+ theme created using the awesome Nord color pallete

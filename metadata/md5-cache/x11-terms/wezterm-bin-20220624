@@ -1,8 +1,10 @@
-DEFINED_PHASES=install unpack
+BDEPEND=app-arch/rpm2targz
+DEFINED_PHASES=install postinst postrm preinst unpack
 DESCRIPTION=Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
 EAPI=8
 HOMEPAGE=https://wezfurlong.org/wezterm
-INHERIT=unpacker
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=rpm xdg
 IUSE=wayland +X
 KEYWORDS=~amd64
 LICENSE=MIT
@@ -10,6 +12,6 @@ RDEPEND=sys-apps/dbus >=media-libs/fontconfig-2.12 >=dev-libs/openssl-1.1 waylan
 REQUIRED_USE=|| ( wayland X )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/wez/wezterm/releases/download/20220408-101518-b908e2dd/wezterm-20220408-101518-b908e2dd.Ubuntu18.04.deb
-_eclasses_=toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4fbbbc98f236f1b43acd99476bc3cd85	unpacker	697382d119fd3d195f110b7979184285
-_md5_=388e396ea1138d0d8c1f6a05c09ad96e
+SRC_URI=https://github.com/wez/wezterm/releases/download/20220624-141144-bd1b7c5d/wezterm-20220624_141144_bd1b7c5d-1.x86_64.rpm
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	rpm	f73e907469f65e52192f110dec72dce0	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
+_md5_=908e4198a018a7e7ad592ae6c2348aba
