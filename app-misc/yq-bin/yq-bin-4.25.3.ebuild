@@ -10,7 +10,7 @@ MY_PN="${PN/-bin/}_linux_amd64"
 DESCRIPTION="yq is a portable command-line YAML, JSON and XML processor"
 HOMEPAGE="https://github.com/mikefarah/yq"
 
-SRC_URI="https://github.com/mikefarah/yq/releases/download/v${PV}/${MY_PN}.tar.gz"
+SRC_URI="https://github.com/mikefarah/yq/releases/download/v${PV}/${MY_PN}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

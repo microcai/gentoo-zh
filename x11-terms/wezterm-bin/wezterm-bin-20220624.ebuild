@@ -3,9 +3,9 @@
 
 EAPI=8
 
-inherit unpacker
+inherit rpm xdg
 
-MY_R="101518-b908e2dd"
+MY_R="141144-bd1b7c5d"
 MY_PV="${PV}-${MY_R}"
 MY_PN="${PN/-bin/}"
 MY_P="${MY_PN}-${MY_PV}"
@@ -13,7 +13,7 @@ MY_P="${MY_PN}-${MY_PV}"
 DESCRIPTION="Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust"
 HOMEPAGE="https://wezfurlong.org/wezterm"
 
-SRC_URI="https://github.com/wez/wezterm/releases/download/${MY_PV}/${MY_P}.Ubuntu18.04.deb"
+SRC_URI="https://github.com/wez/wezterm/releases/download/${MY_PV}/${MY_PN}-${PV}_${MY_R/-/_}-1.x86_64.rpm"
 
 LICENSE="MIT"
 SLOT="0"
@@ -51,7 +51,8 @@ QA_PREBUILT="*"
 
 src_install() {
 	insinto /
-	doins -r etc
+	doins -r etc usr
 
-	dobin usr/bin/*
+	fperms 0755 -R /usr/bin/
+	fperms 0755 -R /etc/profile.d/
 }
