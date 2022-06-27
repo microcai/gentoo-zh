@@ -12,7 +12,7 @@ if [[ "${PV}" == "9999" ]]; then
 	EGIT_REPO_URI="https://github.com/google/mozc"
 	EGIT_SUBMODULES=(src/third_party/japanese_usage_dictionary)
 else
-	MOZC_GIT_REVISION="c9c46b8fb015c13465053eeecb380c8e736d79e9"
+	MOZC_GIT_REVISION="7f02ce1923516502854aa48a95e2c1e84a3e5a9f"
 	MOZC_DATE="${PV#*_p}"
 	MOZC_DATE="${MOZC_DATE%%_p*}"
 
@@ -157,8 +157,8 @@ src_unpack() {
 			cp -pr mozc-${FCITX_MOZC_GIT_REVISION} fcitx5-${PN} || die
 		fi
 	fi
-	xz -cd "${FILESDIR}"/${PN}-2.26.4220-system_abseil-cpp-20211102.patch.xz > \
-		"${S}"/${PN}-2.26.4220-system_abseil-cpp-20211102.patch || die
+	xz -cd "${FILESDIR}"/${PN}-2.26.4632-system_abseil-cpp.patch.xz > \
+		"${S}"/${PN}-2.26.4632-system_abseil-cpp.patch || die
 }
 
 src_prepare() {
@@ -171,11 +171,11 @@ src_prepare() {
 
 	pushd "${WORKDIR}/${P}" > /dev/null || die
 
-	eapply "${S}/${PN}-2.26.4220-system_abseil-cpp-20211102.patch"
+	eapply "${S}/${PN}-2.26.4632-system_abseil-cpp.patch"
 	eapply "${FILESDIR}/${PN}-2.26.4220-system_gtest.patch"
 	eapply "${FILESDIR}/${PN}-2.26.4220-system_jsoncpp.patch"
-	eapply "${FILESDIR}/${PN}-2.26.4220-environmental_variables.patch"
-#	eapply "${FILESDIR}/${PN}-2.26.4220-server_path_check-20211102.patch"
+	eapply "${FILESDIR}/${PN}-2.26.4632-environmental_variables.patch"
+#	eapply "${FILESDIR}/${PN}-2.26.4632-server_path_check.patch"
 
 	eapply_user
 
@@ -213,9 +213,8 @@ src_prepare() {
 
 	# https://github.com/google/mozc/issues/489
 	sed \
-		-e "/'-lc++'/d" \
+		-e "/'-lc++'/s/-lc++/-Wl,--copy-dt-needed-entries/" \
 		-e "/'-stdlib=libc++'/d" \
-		-e "/'linux_ldflags'/a\      '-Wl,--copy-dt-needed-entries'," \
 		-i gyp/common.gypi || die
 }
 
@@ -402,13 +401,13 @@ pkg_postinst() {
 	elog
 	elog "ENVIRONMENTAL VARIABLES"
 	elog
-	elog "MOZC_SERVER_DIRECTORY"
+	elog "MOZC_SERVER_DIR"
 	elog "  Mozc server directory"
 	elog "  Value used by default: \"${EPREFIX}/usr/libexec/mozc\""
-	elog "MOZC_DOCUMENTS_DIRECTORY"
+	elog "MOZC_DOCUMENTS_DIR"
 	elog "  Mozc documents directory"
 	elog "  Value used by default: \"${EPREFIX}/usr/libexec/mozc/documents\""
-	elog "MOZC_CONFIGURATION_DIRECTORY"
+	elog "MOZC_CONFIGURATION_DIR"
 	elog "  Mozc configuration directory"
 	elog "  Value used by default: \"~/.mozc\""
 	elog
