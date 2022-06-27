@@ -217,7 +217,7 @@ sys-fs/erofs-utils 1.3: Userspace tools for EROFS images
 sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
-sys-kernel/liquorix-sources 5.18.5 5.18.6: Liquorix kernel is best one for desktop, multimedia and gaming workloads
+sys-kernel/liquorix-sources 5.18.6 5.18.7: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 31: Modular initramfs image creation utility
 sys-kernel/starfive-sources 5.17.1: Linux kernel for StarFive's JH7100 RISC-V SoC
 sys-kernel/xanmod-kernel 5.15.49 5.18.6: XanMod lts kernel built with Gentoo patches and cjktty
