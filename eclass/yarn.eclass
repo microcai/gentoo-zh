@@ -114,37 +114,6 @@ yarn_set_globals() {
 	_YARN_SET_GLOBALS_CALLED=1
 }
 
-# @FUNCTION: yarn_mirror_add_pkgs
-# @DESCRIPTION:
-# Function to add 3rd party packages that are not in official
-# yarn repository to offline mirror
-# NOTE: the filename must be the exract filename yarn wants.
-#
-# @EXAMPLE
-#
-# @CODE
-#
-# SRC_URI+="https://registry.example-domain.com/css-loader/download/css-loader-5.2.7.tgz"
-#
-# src_unpack() {
-# 	local other_deps=(
-#		"css-loader-5.2.7.tgz"
-#	)
-#	yarn_mirror_add_pkgs "${other_deps[@]}"
-# }
-#
-# @CODE
-yarn_mirror_add_pkgs() {
-	debug-print-function "${FUNCNAME}" "$@"
-
-	local arg
-	for arg in "${@}"; do
-		if [[ -e "${DISTDIR}/${arg}" ]]; then
-			_YARN_RESOLVED_MAP_3RDPARTY["${arg}"]=1
-		fi
-	done
-}
-
 # @FUNCTION: yarn_src_unpack
 # @DESCRIPTION:
 # Soft link the local yarn pkg from ${DISTDIR} to ${_YARN_OFFLINE_MIRROR}
