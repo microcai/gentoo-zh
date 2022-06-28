@@ -42,3 +42,9 @@ net-im/instantbird
 # Copri <dev_zdx7ejsg@mail.com>
 # mask it for more test, unmask it after careful consideration.
 =dev-db/mongodb-5.3*
+
+# Huang Rui <vowstar@gmail.com> (2022-06-27)
+# the version strategy has changed and follows deepin's strategy
+=media-gfx/zw3d-2022.26.00
+=media-gfx/zw3d-2022.26.00-r1
+
