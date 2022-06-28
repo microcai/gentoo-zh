@@ -158,7 +158,7 @@ media-sound/linnya 2.2.0: A free music player
 media-sound/lx-music-desktop-bin 1.21.0: 一个基于 electron 的音乐软件
 media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb package
 media-sound/netease-cloud-music-gtk 1.2.2: netease cloud music player based on Rust & GTK3 for Linux
-media-sound/termusic 0.6.12: Music Player TUI written in Rust
+media-sound/termusic 0.6.12 0.6.16: Music Player TUI written in Rust
 media-sound/yesplaymusic-bin 0.4.4-r1 0.4.5: A third party music player for Netease Music
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/tenvideo 1.0.10: Tencent videos

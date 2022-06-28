@@ -141,6 +141,7 @@ media-sound/feeluown:qqmusic - add qq music support for feeluown
 media-sound/feeluown:webengine - add support to login via web page
 media-sound/netease-cloud-music-gtk:lyrics - Use media-plugins/osdlyrics to display lyrics
 media-sound/termusic:cover - Use media-gfx/ueberzug to display album covers
+media-sound/termusic:discord - support for discord rpc
 media-sound/termusic:gst - Use media-libs/gstreamer as decoding backend
 media-sound/termusic:mpris - Enable dbus mpris support
 media-sound/termusic:mpv - Use media-video/mpv as decoding backend
