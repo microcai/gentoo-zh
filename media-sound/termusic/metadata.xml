@@ -15,6 +15,7 @@
 		<flag name="mpris">Enable dbus mpris support</flag>
 		<flag name="mpv">Use <pkg>media-video/mpv</pkg> as decoding backend</flag>
 		<flag name="yt-dlp">Use <pkg>net-misc/yt-dlp</pkg> to provide the youtebe-dl feature</flag>
+		<flag name="discord">support for discord rpc</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">tramhao/termusic</remote-id>
