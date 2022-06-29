@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-06-28 20:58:58 CST)
+(The last generation time: 2022-06-29 21:44:46 CST)
 
 ### Packages
 
@@ -130,67 +130,6 @@
  app-vim/easymotion                           | 1.3                                       |        | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: Vim motions on speed!
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/powerline                            | 9999                                      |        | http://www.vim.org/scripts/script.php?script_id=3881                                    | vim plugin: The ultimate vim statusline utility.
-----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- cutefish-base/cutefish-meta                  | 0.7                                       |        | https://cutefishos.com                                                                  | CutefishOS Desktop Enviroment (meta package)
-                                              | 0.8                                       |        |                                                                                         |
-   cutefish-base/cutefish-appmotor            | 0.8                                       | RD     | https://github.com/cutefishos/appmotor                                                  | Optimize the speed of starting cutefish apps
-                                              | 9999                                      |        |                                                                                         |
-   cutefish-base/cutefish-calculator          | 0.7                                       | RD     | https://github.com/cutefishos/calculator                                                | CutefishOS Calculator
-                                              | 9999                                      |        |                                                                                         |
-     sys-libs/libcutefish                     | 0.7                                       | RD     | https://github.com/cutefishos/libcutefish                                               | System library for Cutefish applications
-                                              | 9999                                      |        |                                                                                         |
-   cutefish-base/cutefish-dock                | 0.7                                       | RD     | https://github.com/cutefishos/dock                                                      | CutefishOS application dock
-                                              | 0.8                                       |        |                                                                                         |
-                                              | 9999                                      |        |                                                                                         |
-   cutefish-base/cutefish-filemanager         | 0.7                                       | RD     | https://github.com/cutefishos/filemanager                                               | Cutefish File Manager
-                                              | 0.8                                       |        |                                                                                         |
-                                              | 9999                                      |        |                                                                                         |
-   cutefish-base/cutefish-gtk-themes          | 0.7                                       | RD     | https://github.com/cutefishos/gtk-themes                                                | CutefishOS GTK Themes
-                                              | 9999                                      |        |                                                                                         |
-   cutefish-base/cutefish-icons               | 0.7                                       | RD     | https://github.com/cutefishos/icons                                                     | System default icon theme of CutefishOS
-                                              | 0.8                                       |        |                                                                                         |
-                                              | 9999                                      |        |                                                                                         |
-   cutefish-base/cutefish-kwin-plugins        | 0.7                                       | RD     | https://github.com/cutefishos/kwin-plugins                                              | CutefishOS KWin Plugins
-                                              | 0.8                                       |        |                                                                                         |
-                                              | 9999                                      |        |                                                                                         |
-   cutefish-base/cutefish-launcher            | 0.7                                       | RD     | https://github.com/cutefishos/launcher                                                  | CutefishOS's full-screen application launcher
-                                              | 0.8                                       |        |                                                                                         |
-                                              | 9999                                      |        |                                                                                         |
-   cutefish-base/cutefish-qt-plugins          | 0.7                                       | RD     | https://github.com/cutefishos/qt-plugins                                                | Unify Qt application style of CutefishOS
-                                              | 0.8                                       |        |                                                                                         |
-                                              | 9999                                      |        |                                                                                         |
-   cutefish-base/cutefish-screenlocker        | 0.7                                       | RD     | https://github.com/cutefishos/core                                                      | CutefishOS system screen locker
-                                              | 0.8                                       |        |                                                                                         |
-                                              | 9999                                      |        |                                                                                         |
-   cutefish-base/cutefish-screenshot          | 0.7                                       | RD     | https://github.com/cutefishos/screenshot                                                | Screenshot tool for CutefishOS
-                                              | 0.8                                       |        |                                                                                         |
-                                              | 9999                                      |        |                                                                                         |
-   cutefish-base/cutefish-sddm-theme          | 0.7                                       | RD     | https://github.com/cutefishos/sddm-theme                                                | CutefishOS SDDM Theme
-                                              | 0.8                                       |        |                                                                                         |
-                                              | 9999                                      |        |                                                                                         |
-   cutefish-base/cutefish-settings            | 0.7                                       | RD     | https://github.com/cutefishos/settings                                                  | System Settings application for Cutefish Desktop
-                                              | 0.8                                       |        |                                                                                         |
-                                              | 9999                                      |        |                                                                                         |
-   cutefish-base/cutefish-statusbar           | 0.7                                       | RD     | https://github.com/cutefishos/statusbar                                                 | Status of the system, such as time, system tray
-                                              | 0.8                                       |        |                                                                                         |
-                                              | 9999                                      |        |                                                                                         |
-   cutefish-base/cutefish-terminal            | 0.7                                       | RD     | https://github.com/cutefishos/terminal                                                  | A terminal emulator for Cutefish
-                                              | 0.8                                       |        |                                                                                         |
-                                              | 9999                                      |        |                                                                                         |
-   cutefish-base/cutefish-texteditor          | 0.7                                       | RD     | https://github.com/cutefishos/texteditor                                                | Elegant text editor for Cutefish
-                                              | 0.8                                       |        |                                                                                         |
-                                              | 9999                                      |        |                                                                                         |
-   cutefish-base/cutefish-videoplayer         | 0.7                                       | RD     | https://github.com/cutefishos/videoplayer                                               | An open source video player built with Qt/QML and libmpv
-                                              | 9999                                      |        |                                                                                         |
-   cutefish-base/cutefish-wallpapers          | 0.7                                       | RD     | https://github.com/cutefishos/wallpapers                                                | CutefishOS's system wallpaper
-                                              | 9999                                      |        |                                                                                         |
-   sys-libs/cutefish-core                     | 0.7                                       | RD     | https://github.com/cutefishos/core                                                      | System components and backend of CutefishOS
-                                              | 0.8                                       |        |                                                                                         |
-                                              | 9999                                      |        |                                                                                         |
-     sys-libs/fishui                          | 0.7                                       | RD     | https://github.com/cutefishos/fishui                                                    | GUI library based on QQC2 for Cutefish applications
-                                              | 0.8                                       |        |                                                                                         |
-                                              | 9999                                      |        |                                                                                         |
-     x11-drivers/xf86-input-synaptics         | 1.9.1                                     |  D, BD |                                                                                         | Driver for Synaptics touchpads
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/cppcoro                              | 210605                                    |        | https://github.com/Garcia6l20/cppcoro                                                   | A library of C++ coroutine abstractions for the coroutines TS
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
