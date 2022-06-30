@@ -1,9 +1,9 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit desktop xdg-utils unpacker
+inherit desktop unpacker xdg
 
 DESCRIPTION="Wemeet - Tencent Video Conferencing"
 HOMEPAGE="https://wemeet.qq.com"
@@ -14,7 +14,7 @@ SRC_URI="
 
 LICENSE="wemeet_license"
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~amd64 ~arm64"
 
 RESTRICT="bindist test"
 
@@ -71,22 +71,13 @@ exec /opt/wemeet/bin/wemeetapp $*
 	# put launcher into PATH
 	dosym "../../opt/${PN}/wemeetapp.sh" /usr/bin/wemeetapp
 
+	sed -i "s/Icon=.*/Icon=wemeetapp/g" "usr/share/applications/wemeetapp.desktop"
 	domenu "usr/share/applications/wemeetapp.desktop"
-	newicon "opt/${PN}/wemeet.svg" "wemeetapp.svg"
+	newicon -s scalable "opt/${PN}/wemeet.svg" "wemeetapp.svg"
 	for i in 16 32 64 128 256; do
 		png_file="opt/${PN}/icons/hicolor/${i}x${i}/mimetypes/wemeetapp.png"
 		if [ -e "${png_file}" ]; then
 			newicon -s "${i}" "${png_file}" wemeetapp
 		fi
 	done
-}
-
-pkg_postinst() {
-	xdg_desktop_database_update
-	xdg_icon_cache_update
-}
-
-pkg_postrm() {
-	xdg_desktop_database_update
-	xdg_icon_cache_update
 }
