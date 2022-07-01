@@ -104,5 +104,4 @@ src_install() {
 
 	fperms 755 -R /opt/"${PN}"/
 	fperms 755 -R /usr/bin/
-	find "${ED}"/opt/${PN}/lib* -name '*.a' -exec chmod 644 '{}' + || die
 }
