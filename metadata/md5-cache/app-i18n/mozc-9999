@@ -1,4 +1,4 @@
-BDEPEND=|| ( ( >=dev-lang/python-3.9.12:3.9 dev-python/six[python_targets_python3_9(-)] ) ( >=dev-lang/python-3.8.13:3.8 dev-python/six[python_targets_python3_8(-)] ) ) >=dev-libs/protobuf-3.0.0 dev-util/gyp dev-util/ninja virtual/pkgconfig emacs? ( app-editors/emacs:* ) fcitx4? ( sys-devel/gettext ) fcitx5? ( sys-devel/gettext ) >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=|| ( ( >=dev-lang/python-3.10.4:3.10 dev-python/six[python_targets_python3_10(-)] ) ( >=dev-lang/python-3.9.12:3.9 dev-python/six[python_targets_python3_9(-)] ) ( >=dev-lang/python-3.8.13:3.8 dev-python/six[python_targets_python3_8(-)] ) ) >=dev-libs/protobuf-3.0.0 dev-util/gyp dev-util/ninja virtual/pkgconfig emacs? ( app-editors/emacs:* ) fcitx4? ( sys-devel/gettext ) fcitx5? ( sys-devel/gettext ) >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test unpack
 DEPEND=>=dev-cpp/abseil-cpp-20200923[cxx17(+)] >=dev-libs/protobuf-3.0.0:= fcitx4? ( app-i18n/fcitx:4 virtual/libintl ) fcitx5? ( app-i18n/fcitx:5 app-i18n/libime sys-devel/gettext virtual/libintl ) gui? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 ) ibus? ( >=app-i18n/ibus-1.4.1 dev-libs/glib:2 x11-libs/libxcb ) renderer? ( dev-libs/glib:2 x11-libs/cairo x11-libs/gtk+:2 x11-libs/pango ) test? ( >=dev-cpp/gtest-1.8.0 dev-libs/jsoncpp ) dev-util/desktop-file-utils x11-misc/shared-mime-info
 DESCRIPTION=Mozc - Japanese input method editor
@@ -13,4 +13,4 @@ REQUIRED_USE=|| ( emacs fcitx4 fcitx5 ibus )
 RESTRICT=!test? ( test )
 SLOT=0
 _eclasses_=elisp-common	e7aaa047873789f549ea3df2f04b2145	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	e9da88162e7a3c60376e80c2c2adcdfb	multilib	4fbbbc98f236f1b43acd99476bc3cd85	python-utils-r1	32313e7e2fbfba8f62a99ef923fc923c	python-any-r1	a3e9c0524a795d7f2767a2cf12a2e8c0	desktop	22952d8f27cac191d75529d4c38e6bfa	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
-_md5_=152eb199dddda120563a77a933d66ad0
+_md5_=b13c40b4b8464645569427c70123aea7
