@@ -11,6 +11,7 @@ HOMEPAGE="https://github.com/aio-libs/janus"
 MY_P="${P/_alpha/a}"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${MY_P}.tar.gz"
 IUSE="test"
+RESTRICT="!test? ( test )"
 
 LICENSE="BSD"
 SLOT="0"
