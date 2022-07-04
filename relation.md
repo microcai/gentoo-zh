@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-07-02 23:23:28 CST)
+(The last generation time: 2022-07-04 12:33:07 CST)
 
 ### Packages
 
@@ -162,6 +162,8 @@
  dev-python/conda                             | 4.13.0                                    |        | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
    dev-python/conda-package-handling          | 1.8.1                                     |  D, RD | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
    dev-python/pycosat                         | 0.6.3                                     |  D, RD | https://github.com/ContinuumIO/pycosat                                                  | Python bindings to picosat (a SAT solver)
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/daff                              | 1.3.46                                    |        | https://github.com/paulfitz/daff                                                        | The daff can produce and apply tabular diffs
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/nvchecker                         | 2.8                                       |        | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
    dev-python/structlog                       | 21.5.0                                    | RD     | http://www.structlog.org/en/stable/                                                     | Structured Logging for Python
