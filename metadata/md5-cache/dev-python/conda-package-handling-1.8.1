@@ -1,17 +1,17 @@
-BDEPEND=test? ( dev-python/cython[python_targets_python3_9(-)?] dev-python/tqdm[python_targets_python3_9(-)?] dev-python/six[python_targets_python3_9(-)?] >=dev-python/pytest-7.1.2[python_targets_python3_9(-)?] ) python_targets_python3_9? ( >=dev-lang/python-3.9.12:3.9 ) >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)?]
+BDEPEND=test? ( dev-python/cython[python_targets_pypy3(-)?,python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/tqdm[python_targets_pypy3(-)?,python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/six[python_targets_pypy3(-)?,python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] >=dev-python/pytest-7.1.2[python_targets_pypy3(-)?,python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) python_targets_pypy3? ( >=dev-python/pypy3-7.3.9_p1:0= ) python_targets_python3_8? ( >=dev-lang/python-3.8.13:3.8 ) python_targets_python3_9? ( >=dev-lang/python-3.9.12:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.4:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.0_beta3:3.11 ) >=dev-python/setuptools-42.0.2[python_targets_pypy3(-)?,python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?]
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=dev-python/cython[python_targets_python3_9(-)?] dev-python/tqdm[python_targets_python3_9(-)?] dev-python/six[python_targets_python3_9(-)?]
+DEPEND=dev-python/cython[python_targets_pypy3(-)?,python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/tqdm[python_targets_pypy3(-)?,python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/six[python_targets_pypy3(-)?,python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?]
 DESCRIPTION=Create and extract conda packages of various formats
 EAPI=8
 HOMEPAGE=https://github.com/conda/conda-package-handling
 INHERIT=distutils-r1
-IUSE=test python_targets_python3_9
+IUSE=test python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11
 KEYWORDS=amd64 ~x86
 LICENSE=BSD
-RDEPEND=dev-python/cython[python_targets_python3_9(-)?] dev-python/tqdm[python_targets_python3_9(-)?] dev-python/six[python_targets_python3_9(-)?] python_targets_python3_9? ( >=dev-lang/python-3.9.12:3.9 )
-REQUIRED_USE=|| ( python_targets_python3_9 )
+RDEPEND=dev-python/cython[python_targets_pypy3(-)?,python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/tqdm[python_targets_pypy3(-)?,python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/six[python_targets_pypy3(-)?,python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] python_targets_pypy3? ( >=dev-python/pypy3-7.3.9_p1:0= ) python_targets_python3_8? ( >=dev-lang/python-3.8.13:3.8 ) python_targets_python3_9? ( >=dev-lang/python-3.9.12:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.4:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.0_beta3:3.11 )
+REQUIRED_USE=|| ( python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11 )
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/conda/conda-package-handling/archive/1.8.1.tar.gz -> conda-package-handling-1.8.1.tar.gz
 _eclasses_=multibuild	d26d81f242cb193d899a72bca423d0bd	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	e9da88162e7a3c60376e80c2c2adcdfb	multilib	4fbbbc98f236f1b43acd99476bc3cd85	python-utils-r1	32313e7e2fbfba8f62a99ef923fc923c	python-r1	e2883e4f04f0503cdf7f2954e2bf5e15	distutils-r1	64c5b9cc381383c9c1ef74fb199293ea
-_md5_=acd004a2714451016c49df848f5209c9
+_md5_=4fed5a3f2a668956c492f0de0a813601
