@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_9 )
+PYTHON_COMPAT=( python3_{8..11} pypy3 )
 inherit distutils-r1
 
 DESCRIPTION="Create and extract conda packages of various formats"
