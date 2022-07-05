@@ -7,10 +7,10 @@ INHERIT=kernel-build python-any-r1
 IUSE=cjk debug savedconfig +initramfs test
 KEYWORDS=~amd64
 LICENSE=GPL-2
-PDEPEND=>=virtual/dist-kernel-5.18.6
+PDEPEND=>=virtual/dist-kernel-5.18.8
 RDEPEND=|| ( sys-kernel/installkernel-gentoo sys-kernel/installkernel-systemd-boot ) initramfs? ( >=sys-kernel/dracut-049-r3 ) virtual/libelf
 RESTRICT=!test? ( test ) test? ( userpriv ) arm? ( test )
 SLOT=edge
-SRC_URI=https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.18.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.18-9.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.18-9.extras.tar.xz https://github.com/xanmod/linux/releases/download/5.18.6-xanmod1/patch-5.18.6-xanmod1.xz https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x/cjktty-5.18.patch
+SRC_URI=https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.18.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.18-11.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.18-11.extras.tar.xz https://github.com/xanmod/linux/releases/download/5.18.8-xanmod1/patch-5.18.8-xanmod1.xz https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x/cjktty-5.18.patch
 _eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	e9da88162e7a3c60376e80c2c2adcdfb	multilib	4fbbbc98f236f1b43acd99476bc3cd85	python-utils-r1	32313e7e2fbfba8f62a99ef923fc923c	python-any-r1	a3e9c0524a795d7f2767a2cf12a2e8c0	portability	d33a77692bb47e8227f27e17fb9c3c05	savedconfig	7cb1bf66b4acedc4f06802a012d3b08d	dist-kernel-utils	31e337cd76e9e16709e65d794fb58be2	mount-boot	02a45c5e022c08dbc05178522b2772f2	kernel-install	149f830e772fdf45b278492c8c00d505	kernel-build	9f89ee029a72742cecbcbf94122cb9cb
 _md5_=b3b9afd84210995abed2287c90c32b07
