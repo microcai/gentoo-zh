@@ -6,8 +6,8 @@ EAPI=7
 inherit cmake xdg-utils git-r3
 EGIT_REPO_URI="https://github.com/fcitx/libime.git"
 
-SRC_URI="https://download.fcitx-im.org/data/lm_sc.3gm.arpa-20140820.tar.bz2 -> fcitx5-lm_sc.3gm.arpa-20140820.tar.bz2
-https://download.fcitx-im.org/data/dict.utf8-20211021.tar.xz -> fcitx5-dict.utf8-20211021.tar.xz
+SRC_URI="https://download.fcitx-im.org/data/lm_sc.arpa-20220630.tar.xz -> fcitx5-lm_sc.arpa-20220630.tar.xz
+https://download.fcitx-im.org/data/dict_sc.txt-20220628.tar.xz -> fcitx5-dict_sc.txt-20220628.tar.xz
 https://download.fcitx-im.org/data/table.tar.gz -> fcitx5-table.tar.gz
 "
 EGIT_SUBMODULES=(src/libime/kenlm)
@@ -33,11 +33,9 @@ DEPEND="${RDEPEND}
 	kde-frameworks/extra-cmake-modules:5
 	virtual/pkgconfig"
 
-PATCHES=("${FILESDIR}/${PN}-1.0.12-fix-loongarch64.patch")
-
 src_prepare() {
-	ln -s "${DISTDIR}/fcitx5-lm_sc.3gm.arpa-20140820.tar.bz2" data/lm_sc.3gm.arpa-20140820.tar.bz2 || die
-	ln -s "${DISTDIR}/fcitx5-dict.utf8-20211021.tar.xz" data/dict.utf8-20211021.tar.xz || die
+	ln -s "${DISTDIR}/fcitx5-lm_sc.arpa-20220630.tar.xz" data/lm_sc.arpa-20220630.tar.xz || die
+	ln -s "${DISTDIR}/fcitx5-dict_sc.txt-20220628.tar.xz" data/dict_sc.txt-20220628.tar.xz || die
 	ln -s "${DISTDIR}/fcitx5-table.tar.gz" data/table.tar.gz || die
 	cmake_src_prepare
 	xdg_environment_reset
