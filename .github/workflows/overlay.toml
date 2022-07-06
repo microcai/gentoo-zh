@@ -359,7 +359,7 @@ prefix = "v"
 github_account = "CHN-beta"
 
 ["dev-db/dbeaver-bin"]
-source = "regex"
+source = "github"
 github = "dbeaver/dbeaver"
 use_latest_release = true
 github_account = "xen0n"
