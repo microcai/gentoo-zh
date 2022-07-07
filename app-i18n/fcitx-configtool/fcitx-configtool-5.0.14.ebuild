@@ -20,7 +20,7 @@ HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-configtool"
 
 LICENSE="GPL-2+"
 SLOT="5"
-IUSE="+kcm +config-qt test"
+IUSE="kcm +config-qt test"
 RESTRICT="!test? ( test )"
 
 RDEPEND="app-i18n/fcitx:5
@@ -44,7 +44,7 @@ RDEPEND="app-i18n/fcitx:5
 	config-qt? (
 		kde-frameworks/kitemviews:5
 	)
-	!${CATEGORY}/${PN}:4[-minimal(-)]"
+"
 
 DEPEND="${RDEPEND}
 	kde-frameworks/extra-cmake-modules:5
