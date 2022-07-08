@@ -116,7 +116,7 @@ media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cw
 media-fonts/iansui 0.943: An open-source Chinese font derived from Klee One (Fontworks).
 media-fonts/jf-openhuninn 1.1: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 media-fonts/nerd-fonts 2.1.0: Nerd Fonts is a project that patches developer targeted fonts with glyphs
-media-fonts/sarasa-gothic 0.36.5: A CJK programming font based on Iosevka and Source Han Sans.
+media-fonts/sarasa-gothic 0.36.6: A CJK programming font based on Iosevka and Source Han Sans.
 media-fonts/sarasa-mono-sc-nerd 2.1.0: Sarasa Mono SC font patched with Nerd fonts
 media-fonts/taipei-sans-tc 1.0: JT Foundry - Taipei Sans TC Beta font
 media-fonts/tiejili 1.010: An open-source font that extends Reggae One to Chinese.
@@ -199,7 +199,7 @@ sys-fs/erofs-utils 1.3: Userspace tools for EROFS images
 sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
-sys-kernel/liquorix-sources 5.18.7 5.18.8: Liquorix kernel is best one for desktop, multimedia and gaming workloads
+sys-kernel/liquorix-sources 5.18.8 5.18.10: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 31: Modular initramfs image creation utility
 sys-kernel/starfive-sources 5.17.1: Linux kernel for StarFive's JH7100 RISC-V SoC
 sys-kernel/xanmod-kernel 5.15.51 5.18.8: XanMod lts kernel built with Gentoo patches and cjktty
