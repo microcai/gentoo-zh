@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <!-- maintainer-needed -->
+	<maintainer type="person">
+		<email>leon.errelin@outlook.com</email>
+		<name>Linerre</name>
+	</maintainer>
 </pkgmetadata>
