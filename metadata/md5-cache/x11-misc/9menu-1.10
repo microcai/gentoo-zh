@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=Create X menus from the shell
+EAPI=7
+HOMEPAGE=https://packages.debian.org/source/sid/9menu
+KEYWORDS=~amd64 ~x86
+LICENSE=public-domain
+RDEPEND=x11-libs/libX11
+SLOT=0
+SRC_URI=mirror://debian/pool/main/9/9menu/9menu_1.10.orig.tar.xz
+_md5_=86e4ec302c95c92c243853be620cf429

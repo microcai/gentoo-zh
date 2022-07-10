@@ -217,7 +217,7 @@ www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
 x11-libs/libva-nvdec-driver 0.0.6 9999: NVDEC Backend for Video Acceleration (VA) API
 x11-libs/xcb-imdkit 1.0.3: Input method development support for xcb
-x11-misc/9menu 1.8: Create X menus from the shell
+x11-misc/9menu 1.10: Create X menus from the shell
 x11-misc/fqterm 0.9.10.1 9999: a modern terminal emulator for Linux
 x11-misc/i3lock-color 9999: An improved i3lock
 x11-misc/i3lock-fancy 9999: A fancy i3lock
