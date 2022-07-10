@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-07-09 22:56:53 CST)
+(The last generation time: 2022-07-10 16:03:19 CST)
 
 ### Packages
 
@@ -452,7 +452,7 @@
  x11-libs/libva-nvdec-driver                  | 0.0.6                                     |        | https://github.com/elFarto/nvidia-vaapi-driver                                          | NVDEC Backend for Video Acceleration (VA) API
                                               | 9999                                      |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- x11-misc/9menu                               | 1.8                                       |        | https://packages.debian.org/source/sid/9menu                                            | Create X menus from the shell
+ x11-misc/9menu                               | 1.10                                      |        | https://packages.debian.org/source/sid/9menu                                            | Create X menus from the shell
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  x11-misc/fqterm                              | 0.9.10.1                                  |        | https://github.com/mytbk/fqterm                                                         | a modern terminal emulator for Linux
                                               | 9999                                      |        |                                                                                         |
