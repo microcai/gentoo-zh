@@ -43,7 +43,6 @@ pkg_setup() {
 src_prepare() {
 	# delete linux version patches
 	rm "${WORKDIR}"/*${MY_P}*.patch || die
-	rm "${WORKDIR}"/1950_cifs-fix-minor-compile-warning.patch || die
 
 	local PATCHES=(
 		# genpatches
