@@ -1,4 +1,4 @@
-BDEPEND=test? ( dev-python/pretend[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/freezegun[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) test? ( >=dev-python/pytest-7.1.2[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) python_targets_pypy3? ( >=dev-python/pypy3-7.3.9_p1:0= ) python_targets_python3_9? ( >=dev-lang/python-3.9.12:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.4:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.0_beta3:3.11 ) >=dev-python/gpep517-6[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] >=dev-python/flit_core-3.7.1[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?]
+BDEPEND=test? ( dev-python/pretend[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/freezegun[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) test? ( >=dev-python/pytest-7.1.2[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) python_targets_pypy3? ( >=dev-python/pypy3-7.3.9_p1:0= ) python_targets_python3_9? ( >=dev-lang/python-3.9.12:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.4:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.0_beta4:3.11 ) >=dev-python/gpep517-6[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] >=dev-python/flit_core-3.7.1[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?]
 DEFINED_PHASES=compile configure install prepare test
 DESCRIPTION=Structured Logging for Python
 EAPI=8
@@ -7,10 +7,10 @@ INHERIT=distutils-r1
 IUSE=test python_targets_pypy3 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11
 KEYWORDS=~amd64
 LICENSE=Apache-2.0 MIT
-RDEPEND=python_targets_pypy3? ( >=dev-python/pypy3-7.3.9_p1:0= ) python_targets_python3_9? ( >=dev-lang/python-3.9.12:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.4:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.0_beta3:3.11 )
+RDEPEND=python_targets_pypy3? ( >=dev-python/pypy3-7.3.9_p1:0= ) python_targets_python3_9? ( >=dev-lang/python-3.9.12:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.4:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.0_beta4:3.11 )
 REQUIRED_USE=|| ( python_targets_pypy3 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11 )
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/hynek/structlog/archive/21.5.0.tar.gz -> structlog-21.5.0.tar.gz
-_eclasses_=multibuild	d26d81f242cb193d899a72bca423d0bd	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	e9da88162e7a3c60376e80c2c2adcdfb	multilib	4fbbbc98f236f1b43acd99476bc3cd85	python-utils-r1	32313e7e2fbfba8f62a99ef923fc923c	python-r1	e2883e4f04f0503cdf7f2954e2bf5e15	distutils-r1	64c5b9cc381383c9c1ef74fb199293ea
+_eclasses_=multibuild	d26d81f242cb193d899a72bca423d0bd	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	e9da88162e7a3c60376e80c2c2adcdfb	multilib	4fbbbc98f236f1b43acd99476bc3cd85	python-utils-r1	667174e2df1036a5520d3b3b3fb33e98	python-r1	e2883e4f04f0503cdf7f2954e2bf5e15	distutils-r1	a012c7f8c0a9dddadb3a4f56364c8f62
 _md5_=7ae51058562fe138a198b8217118e529
