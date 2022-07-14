@@ -4,7 +4,7 @@
 EAPI=8
 
 PYTHON_COMPAT=( python3_{8..11} )
-inherit python-r1 unpacker
+inherit python-single-r1 unpacker
 
 DESCRIPTION="Deepin Wine Helper"
 HOMEPAGE="https://www.deepin.org"
