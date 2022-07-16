@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit desktop
+inherit desktop unpacker
 
 DESCRIPTION="A truely minimal markdown editor."
 HOMEPAGE="https://typora.io"
@@ -14,19 +14,19 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RESTRICT="mirror"
+RESTRICT="mirror splitdebug"
 
 DEPEND=""
 RDEPEND="
 	x11-libs/libXScrnSaver
+	net-print/cups
 	${DEPEND}"
 BDEPEND=""
 
 QA_PREBUILT="*"
 
 src_unpack() {
-	default
-	unpack "${WORKDIR}"/data.tar.xz
+	unpack_deb typora_${PV}_amd64.deb
 	S="${WORKDIR}"
 }
 
