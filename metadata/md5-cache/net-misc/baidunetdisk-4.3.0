@@ -1,8 +1,8 @@
-DEFINED_PHASES=install postinst postrm preinst prepare unpack
-DEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+DEFINED_PHASES=install postinst postrm preinst unpack
 DESCRIPTION=Baidu Net Disk is a cloud storage client (Linux Version)
-EAPI=7
+EAPI=8
 HOMEPAGE=https://pan.baidu.com/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=unpacker desktop xdg
 KEYWORDS=-* ~amd64
 LICENSE=BaiduNetDisk
@@ -11,4 +11,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=http://wppkg.baidupcs.com/issue/netdisk/Linuxguanjia/4.3.0/baidunetdisk_4.3.0_amd64.deb
 _eclasses_=toolchain-funcs	e9da88162e7a3c60376e80c2c2adcdfb	multilib	4fbbbc98f236f1b43acd99476bc3cd85	unpacker	697382d119fd3d195f110b7979184285	desktop	22952d8f27cac191d75529d4c38e6bfa	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
-_md5_=9f61f7c5d456991f52905d17b3f4554e
+_md5_=bac99a5b052a1e7c36b9ac692eb2d185
