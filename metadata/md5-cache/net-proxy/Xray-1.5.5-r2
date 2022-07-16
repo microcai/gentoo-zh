@@ -10,5 +10,5 @@ RDEPEND=app-misc/ca-certificates dev-libs/v2ray-domain-list-community-bin dev-li
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/XTLS/Xray-core/archive/v1.5.5.tar.gz -> Xray-1.5.5.tar.gz https://github.com/CHN-beta/gentoo-xray-dep/releases/download/v1.5.5/Xray-1.5.5-deps.tar.xz
-_eclasses_=go-module	a13d34fe4e2996720e1ca6c53b9ea95a	toolchain-funcs	e9da88162e7a3c60376e80c2c2adcdfb	multilib	4fbbbc98f236f1b43acd99476bc3cd85	systemd	2736b403a83f194b59b767f3b344c2c1
+_eclasses_=go-module	a13d34fe4e2996720e1ca6c53b9ea95a	toolchain-funcs	3484f775017f532a8d1ae02c65defe13	multilib	4fbbbc98f236f1b43acd99476bc3cd85	systemd	2736b403a83f194b59b767f3b344c2c1
 _md5_=4982f15745f0ad67574055bc6815dac7

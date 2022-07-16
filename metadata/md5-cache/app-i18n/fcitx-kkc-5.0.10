@@ -12,5 +12,5 @@ LICENSE=GPL-3+
 RDEPEND=app-i18n/fcitx:5 app-i18n/libkkc kde-frameworks/extra-cmake-modules qt? ( app-i18n/fcitx-qt )
 SLOT=5
 SRC_URI=https://github.com/fcitx/fcitx5-kkc/archive/refs/tags/5.0.10.tar.gz -> fcitx-kkc-5.0.10.tar.gz
-_eclasses_=xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857	toolchain-funcs	e9da88162e7a3c60376e80c2c2adcdfb	multilib	4fbbbc98f236f1b43acd99476bc3cd85	flag-o-matic	a3abd6002fafb3022597be6b8d01f88b	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	cmake	44afbf15c35884f7c840470f1cf05d0d
+_eclasses_=xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857	toolchain-funcs	3484f775017f532a8d1ae02c65defe13	multilib	4fbbbc98f236f1b43acd99476bc3cd85	flag-o-matic	a3abd6002fafb3022597be6b8d01f88b	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	cmake	44afbf15c35884f7c840470f1cf05d0d
 _md5_=370364bc94ee40ee0de9fb65a713ae1d
