@@ -12,5 +12,5 @@ RDEPEND=dev-libs/nss dev-util/desktop-file-utils media-sound/pulseaudio x11-libs
 RESTRICT=bindist test
 SLOT=0
 SRC_URI=amd64? ( mirror+https://updatecdn.meeting.qq.com/cos/3cdd365cd90f221fb345ab73c4746e1f/TencentMeeting_0300000000_2.8.0.3_x86_64_default.publish.deb -> wemeet-2.8.0.3_amd64.deb ) arm64? ( mirror+https://updatecdn.meeting.qq.com/cos/1584cf78c2285b450a4bc9d0b3bb8720/TencentMeeting_0300000000_2.8.0.3_arm64_default.publish.deb -> wemeet-2.8.0.3_arm64.deb )
-_eclasses_=desktop	22952d8f27cac191d75529d4c38e6bfa	toolchain-funcs	3484f775017f532a8d1ae02c65defe13	multilib	4fbbbc98f236f1b43acd99476bc3cd85	unpacker	697382d119fd3d195f110b7979184285	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=desktop	22952d8f27cac191d75529d4c38e6bfa	toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	697382d119fd3d195f110b7979184285	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
 _md5_=6bf50a3fcae5201d51b88049c9d2ed7d
