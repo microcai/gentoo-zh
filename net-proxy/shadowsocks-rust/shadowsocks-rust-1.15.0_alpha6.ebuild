@@ -10,7 +10,7 @@ CRATES="
 	aes-gcm-0.9.4
 	aes-gcm-siv-0.10.3
 	aho-corasick-0.7.18
-	anyhow-1.0.57
+	anyhow-1.0.58
 	arc-swap-1.5.0
 	arrayref-0.3.6
 	arrayvec-0.7.2
@@ -36,24 +36,24 @@ CRATES="
 	cc-1.0.73
 	ccm-0.4.4
 	cfg-if-1.0.0
-	chacha20-0.8.1
-	chacha20poly1305-0.9.0
+	chacha20-0.8.2
+	chacha20poly1305-0.9.1
 	checked_int_cast-1.0.0
 	chrono-0.4.19
 	cipher-0.3.0
 	cipher-0.4.3
-	clap-3.1.18
-	clap_lex-0.2.0
+	clap-3.2.12
+	clap_lex-0.2.4
 	cmake-0.1.48
 	const-oid-0.7.1
 	constant_time_eq-0.1.5
 	core-foundation-0.9.3
 	core-foundation-sys-0.8.3
 	cpufeatures-0.2.2
-	crossbeam-channel-0.5.4
-	crossbeam-utils-0.8.8
+	crossbeam-channel-0.5.5
+	crossbeam-utils-0.8.10
 	crypto-bigint-0.3.2
-	crypto-common-0.1.3
+	crypto-common-0.1.6
 	ctr-0.8.0
 	daemonize-0.4.1
 	data-encoding-2.3.2
@@ -71,10 +71,9 @@ CRATES="
 	enum-as-inner-0.4.0
 	env_logger-0.9.0
 	etherparse-0.10.1
-	exitcode-1.1.2
 	fake-simd-0.1.2
 	fastrand-1.7.0
-	filetime-0.2.16
+	filetime-0.2.17
 	fnv-1.0.7
 	foreign-types-0.3.2
 	foreign-types-shared-0.1.1
@@ -92,23 +91,23 @@ CRATES="
 	futures-util-0.3.21
 	generic-array-0.12.4
 	generic-array-0.14.5
-	getrandom-0.2.6
+	getrandom-0.2.7
 	ghash-0.4.4
 	h2-0.3.13
-	hashbrown-0.11.2
+	hashbrown-0.12.3
 	heck-0.4.0
 	hermit-abi-0.1.19
 	hkdf-0.12.3
 	hmac-0.12.1
 	hostname-0.3.1
-	http-0.2.7
+	http-0.2.8
 	http-body-0.4.5
 	httparse-1.7.1
 	httpdate-1.0.2
 	humantime-2.1.0
-	hyper-0.14.19
+	hyper-0.14.20
 	idna-0.2.3
-	indexmap-1.8.2
+	indexmap-1.9.1
 	inotify-0.9.6
 	inotify-sys-0.1.5
 	inout-0.1.3
@@ -118,16 +117,16 @@ CRATES="
 	ipnet-2.5.0
 	iprange-0.6.7
 	itoa-1.0.2
-	jemalloc-sys-0.5.0+5.3.0
+	jemalloc-sys-0.5.1+5.3.0-patched
 	jemallocator-0.5.0
-	js-sys-0.3.57
+	js-sys-0.3.58
 	json5-0.4.1
 	kqueue-1.0.6
 	kqueue-sys-1.0.3
 	lazy_static-1.4.0
 	libc-0.2.126
 	libmimalloc-sys-0.1.25
-	linked-hash-map-0.5.4
+	linked-hash-map-0.5.6
 	lock_api-0.4.7
 	log-0.4.17
 	log-mdc-0.1.0
@@ -143,22 +142,22 @@ CRATES="
 	memchr-2.5.0
 	memoffset-0.6.5
 	mimalloc-0.1.29
-	mio-0.8.3
+	mio-0.8.4
 	native-tls-0.2.10
 	nix-0.24.1
 	notify-5.0.0-pre.15
 	num-integer-0.1.45
 	num-traits-0.2.15
 	num_cpus-1.13.1
-	once_cell-1.12.0
+	once_cell-1.13.0
 	opaque-debug-0.2.3
 	opaque-debug-0.3.0
-	openssl-0.10.40
+	openssl-0.10.41
 	openssl-macros-0.1.0
 	openssl-probe-0.1.5
-	openssl-sys-0.9.74
+	openssl-sys-0.9.75
 	ordered-float-2.10.0
-	os_str_bytes-6.1.0
+	os_str_bytes-6.2.0
 	p256-0.10.1
 	p384-0.9.0
 	parking_lot-0.12.1
@@ -168,25 +167,25 @@ CRATES="
 	pest_derive-2.1.0
 	pest_generator-2.1.3
 	pest_meta-2.1.3
-	pin-project-1.0.10
-	pin-project-internal-1.0.10
+	pin-project-1.0.11
+	pin-project-internal-1.0.11
 	pin-project-lite-0.2.9
 	pin-utils-0.1.0
 	pkg-config-0.3.25
 	poly1305-0.7.2
 	polyval-0.5.3
 	ppv-lite86-0.2.16
-	proc-macro2-1.0.39
+	proc-macro2-1.0.40
 	qrcode-0.12.0
 	quick-error-1.2.3
-	quote-1.0.18
+	quote-1.0.20
 	rand-0.8.5
 	rand_chacha-0.3.1
 	rand_core-0.6.3
 	redox_syscall-0.2.13
 	redox_users-0.4.3
-	regex-1.5.6
-	regex-syntax-0.6.26
+	regex-1.6.0
+	regex-syntax-0.6.27
 	remove_dir_all-0.5.3
 	resolv-conf-0.7.0
 	ring-0.16.20
@@ -206,13 +205,13 @@ CRATES="
 	sec1-0.2.1
 	security-framework-2.6.1
 	security-framework-sys-2.6.1
-	sendfd-0.4.1
-	serde-1.0.137
+	sendfd-0.4.3
+	serde-1.0.139
 	serde-value-0.7.0
-	serde_derive-1.0.137
-	serde_json-1.0.81
+	serde_derive-1.0.139
+	serde_json-1.0.82
 	serde_urlencoded-0.7.1
-	serde_yaml-0.8.24
+	serde_yaml-0.8.26
 	sha-1-0.8.2
 	sha1-0.10.1
 	sha1-asm-0.5.1
@@ -221,16 +220,17 @@ CRATES="
 	signature-1.4.0
 	siphasher-0.3.10
 	slab-0.4.6
-	smallvec-1.8.0
+	smallvec-1.9.0
 	smoltcp-0.8.1
-	snmalloc-rs-0.3.0
-	snmalloc-sys-0.3.0
+	snmalloc-rs-0.3.3
+	snmalloc-sys-0.3.3
 	socket2-0.4.4
 	spin-0.5.2
-	spin-0.9.3
+	spin-0.9.4
 	strsim-0.10.0
 	subtle-2.4.1
-	syn-1.0.96
+	syn-1.0.98
+	sysexits-0.3.0
 	tcmalloc-0.3.0
 	tcmalloc-sys-0.3.0
 	tempfile-3.3.0
@@ -240,22 +240,21 @@ CRATES="
 	thiserror-1.0.31
 	thiserror-impl-1.0.31
 	thread-id-4.0.0
-	time-0.1.43
+	time-0.1.44
 	tinyvec-1.6.0
 	tinyvec_macros-0.1.0
-	tokio-1.18.2
-	tokio-macros-1.7.0
+	tokio-1.20.0
+	tokio-macros-1.8.0
 	tokio-native-tls-0.3.0
 	tokio-rustls-0.23.4
 	tokio-tfo-0.2.0
 	tokio-util-0.6.10
-	tokio-util-0.7.2
-	tower-0.4.12
+	tokio-util-0.7.3
+	tower-0.4.13
 	tower-layer-0.3.1
-	tower-service-0.3.1
-	tracing-0.1.34
-	tracing-attributes-0.1.21
-	tracing-core-0.1.26
+	tower-service-0.3.2
+	tracing-0.1.35
+	tracing-core-0.1.28
 	traitobject-0.1.0
 	trust-dns-proto-0.21.2
 	trust-dns-resolver-0.21.2
@@ -263,10 +262,10 @@ CRATES="
 	tun-0.5.3
 	typemap-0.3.3
 	typenum-1.15.0
-	ucd-trie-0.1.3
+	ucd-trie-0.1.4
 	unicode-bidi-0.3.8
-	unicode-ident-1.0.0
-	unicode-normalization-0.1.19
+	unicode-ident-1.0.2
+	unicode-normalization-0.1.21
 	universal-hash-0.4.1
 	unsafe-any-0.4.2
 	untrusted-0.7.1
@@ -275,16 +274,16 @@ CRATES="
 	version_check-0.9.4
 	walkdir-2.3.2
 	want-0.3.0
-	wasi-0.10.2+wasi-snapshot-preview1
+	wasi-0.10.0+wasi-snapshot-preview1
 	wasi-0.11.0+wasi-snapshot-preview1
-	wasm-bindgen-0.2.80
-	wasm-bindgen-backend-0.2.80
-	wasm-bindgen-macro-0.2.80
-	wasm-bindgen-macro-support-0.2.80
-	wasm-bindgen-shared-0.2.80
-	web-sys-0.3.57
+	wasm-bindgen-0.2.81
+	wasm-bindgen-backend-0.2.81
+	wasm-bindgen-macro-0.2.81
+	wasm-bindgen-macro-support-0.2.81
+	wasm-bindgen-shared-0.2.81
+	web-sys-0.3.58
 	webpki-0.22.0
-	webpki-roots-0.22.3
+	webpki-roots-0.22.4
 	widestring-0.5.1
 	winapi-0.3.9
 	winapi-i686-pc-windows-gnu-0.4.0
@@ -316,6 +315,8 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~mips ~x86"
 IUSE="redir tun"
+
+DEPEND=">=virtual/rust-1.61.0"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
