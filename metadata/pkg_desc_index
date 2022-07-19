@@ -204,6 +204,7 @@ sys-kernel/xanmod-kernel 5.15.54 5.18.11: XanMod lts kernel built with Gentoo pa
 sys-kernel/xanmod-rt 5.15.12 5.15.14: Xanmod-RT, cjktty, uksm patchset for main kernel tree
 sys-kernel/xanmod-sources 5.15.54 5.18.11: Full XanMod source, including the Gentoo patchset and other patch options.
 sys-kernel/zenpower 0.1.12-r1: Linux kernel driver for reading sensors of AMD Zen family CPUs
+sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libsolv 0.7.21 9999: Library for solving packages and reading repositories
 sys-libs/libzypp 17.29.1 17.29.5 9999: ZYpp Package Management library
 sys-process/btop 1.2.8: Resources monitor. The C++ version of bashtop
