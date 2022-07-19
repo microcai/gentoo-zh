@@ -70,7 +70,7 @@ CRATES="
 	elliptic-curve-0.11.12
 	enum-as-inner-0.4.0
 	env_logger-0.9.0
-	etherparse-0.10.1
+	etherparse-0.11.0
 	fake-simd-0.1.2
 	fastrand-1.7.0
 	filetime-0.2.17
@@ -138,13 +138,12 @@ CRATES="
 	match_cfg-0.1.0
 	matches-0.1.9
 	md-5-0.10.1
-	md5-asm-0.5.0
 	memchr-2.5.0
 	memoffset-0.6.5
 	mimalloc-0.1.29
 	mio-0.8.4
 	native-tls-0.2.10
-	nix-0.24.1
+	nix-0.24.2
 	notify-5.0.0-pre.15
 	num-integer-0.1.45
 	num-traits-0.2.15
@@ -190,7 +189,7 @@ CRATES="
 	resolv-conf-0.7.0
 	ring-0.16.20
 	ring-compat-0.4.1
-	rpassword-6.0.1
+	rpassword-7.0.0
 	rpmalloc-0.2.2
 	rpmalloc-sys-0.2.3+b097fd0
 	rustls-0.20.6
@@ -214,8 +213,7 @@ CRATES="
 	serde_yaml-0.8.26
 	sha-1-0.8.2
 	sha1-0.10.1
-	sha1-asm-0.5.1
-	shadowsocks-crypto-0.4.0
+	shadowsocks-crypto-0.4.1
 	signal-hook-registry-1.4.0
 	signature-1.4.0
 	siphasher-0.3.10
