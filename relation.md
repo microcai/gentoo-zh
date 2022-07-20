@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-07-19 14:15:56 CST)
+(The last generation time: 2022-07-20 10:08:23 CST)
 
 ### Packages
 
@@ -293,8 +293,6 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/phddns                               | 2.0.6.32828                               |        | http://hsk.oray.com/                                                                    | Phddns
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-im/avim                                  | 0.1                                       |        | http://avim.avplayer.org                                                                | avim is a secure IM build around RSA
-----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/deepin-wine-qq                        | 9.5.2.27897                               |        | https://aur.archlinux.org/packages/deepin-wine-qq                                       | Tencent QQ on Deepin Wine(com.qq.im.deepin) For Gentoo
    app-emulation/deepin-wine6-stable          | 6.0.0.19-r1                               |  D, RD | https://www.deepin.org                                                                  | Deepin wine6 stable
      app-emulation/deepin-udis86              | 1.72-r4                                   | RD     | https://www.deepin.org                                                                  | Deepin Version of Wine
@@ -307,8 +305,6 @@
    dev-libs/libthai                           | 0.1.28                                    |  D, RD | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
                                               | 0.1.29                                    |        |                                                                                         |
      dev-libs/libdatrie                       | 0.2.13                                    |  D, RD | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
-----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-im/freetalk                              | 4.1                                       |        | http://www.gnu.org/software/freetalk/                                                   | Console based Jabber client
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/telegram-purple                       | 1.4.7-r1                                  |        | https://github.com/majn/telegram-purple                                                 | Libpurple (Pidgin) plugin for using a Telegram account
                                               | 9999                                      |        |                                                                                         |
