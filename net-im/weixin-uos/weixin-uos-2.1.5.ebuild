@@ -42,6 +42,7 @@ RDEPEND="
 	sys-apps/lsb-release
 	sys-apps/bubblewrap
 "
+BDEPEND="dev-util/patchelf"
 
 S="${WORKDIR}"
 
@@ -59,8 +60,8 @@ src_prepare() {
 	sed -i 's,/opt/apps/com.tencent.weixin/files/weixin/weixin,/opt/weixin-uos/weixin,g' \
 		"${S}/opt/apps/com.tencent.weixin/files/weixin/weixin.sh" || die
 
-	sed -i 's|__dirname,"bin","scrot"|"/usr/bin/"|g' "${S}/opt/apps/com.tencent.weixin/files/weixin/resources/app/packages/main/dist/index.js" || die
-	rm -rf "${S}/opt/apps/com.tencent.weixin/files/weixin/resources/app/packages/main/dist/bin"
+	# fix rpath
+	patchelf --set-rpath /opt/weixin-uos/resources/app/packages/main/dist/bin/scrot "${S}/opt/apps/com.tencent.weixin/files/weixin/resources/app/packages/main/dist/bin/scrot/scrot" || die
 }
 
 src_install() {
@@ -74,6 +75,7 @@ src_install() {
 	insinto /opt/weixin-uos
 	doins -r "${S}"/opt/apps/com.tencent.weixin/files/weixin/*
 	fperms +x /opt/weixin-uos/weixin{,.sh}
+	fperms +x /opt/weixin-uos/resources/app/packages/main/dist/bin/scrot/scrot
 
 	insinto /opt/weixin-uos/crap
 	doins "${FILESDIR}"/uos-{lsb,release}
@@ -87,11 +89,4 @@ src_install() {
 
 	insinto /opt/weixin-uos/crap/var/lib/uos-license
 	newins "${FILESDIR}/license.json" .license.json
-}
-
-pkg_postinst(){
-	einfo
-	einfo "In order to make screen snapshot work correct,please emerge media-gfx/scrot "
-	einfo "要使用屏幕截图功能，请安装 media-gfx/scrot "
-	einfo
 }
