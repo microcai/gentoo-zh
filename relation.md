@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-07-20 10:08:23 CST)
+(The last generation time: 2022-07-20 15:50:30 CST)
 
 ### Packages
 
@@ -311,7 +311,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/tencent-qq                            | 2.0.0_beta2_p1089                         |        | https://im.qq.com/linuxqq/download.html                                                 | Official Linux version of Tencent QQ
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-im/weixin-uos                            | 2.1.4                                     |        | https://www.chinauos.com/resource/download-professional                                 | UOS weixin
+ net-im/weixin-uos                            | 2.1.5                                     |        | https://www.chinauos.com/resource/download-professional                                 | UOS weixin
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/wemeet                                | 2.8.0.3-r1                                |        | https://wemeet.qq.com                                                                   | Wemeet - Tencent Video Conferencing
                                               | 3.8.0.2-r1                                |        |                                                                                         |
