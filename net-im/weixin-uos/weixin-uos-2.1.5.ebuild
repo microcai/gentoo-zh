@@ -52,10 +52,15 @@ src_prepare() {
 
 	sed -i 's,Name=微信,Name=Wexin uos,' \
 		"${S}/usr/share/applications/weixin.desktop" || die
+	sed -i 's,Categories=Utility,Categories=Network,' \
+		"${S}/usr/share/applications/weixin.desktop" || die
 	sed -i 's,/opt/apps/com.tencent.weixin/files/weixin/weixin.sh,/usr/bin/weixin-uos,' \
 		"${S}/usr/share/applications/weixin.desktop" || die
 	sed -i 's,/opt/apps/com.tencent.weixin/files/weixin/weixin,/opt/weixin-uos/weixin,g' \
 		"${S}/opt/apps/com.tencent.weixin/files/weixin/weixin.sh" || die
+
+	sed -i 's|__dirname,"bin","scrot"|"/usr/bin/"|g' "${S}/opt/apps/com.tencent.weixin/files/weixin/resources/app/packages/main/dist/index.js" || die
+	rm -rf "${S}/opt/apps/com.tencent.weixin/files/weixin/resources/app/packages/main/dist/bin"
 }
 
 src_install() {
@@ -82,4 +87,11 @@ src_install() {
 
 	insinto /opt/weixin-uos/crap/var/lib/uos-license
 	newins "${FILESDIR}/license.json" .license.json
+}
+
+pkg_postinst(){
+	einfo
+	einfo "In order to make screen snapshot work correct,please emerge media-gfx/scrot "
+	einfo "要使用屏幕截图功能，请安装 media-gfx/scrot "
+	einfo
 }
