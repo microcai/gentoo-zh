@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-07-22 15:36:04 CST)
+(The last generation time: 2022-07-22 23:07:35 CST)
 
 ### Packages
 
@@ -149,7 +149,8 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/libdwarf                            | 20140208                                  |        | https://github.com/Distrotech/libdwarf                                                  | Library to deal with DWARF Debugging Information Format
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-libs/lunar-date                          | 3.0.1                                     |        | https://github.com/yetist/lunar-date                                                    | Chinese Lunar Library
+ dev-libs/lunar-calendar                      | 3.0.1                                     |        | https://github.com/yetist/lunar-calendar                                                | a gtk+ calendar widget for chinese lunar library
+   dev-libs/lunar-date                        | 3.0.1                                     |  D     | https://github.com/yetist/lunar-date                                                    | Chinese Lunar Library
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/tdlib                               | 1.5.0                                     |        | https://core.telegram.org/tdlib                                                         | Cross-platform library for building Telegram clients
                                               | 1.6.0                                     |        |                                                                                         |
