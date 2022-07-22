@@ -194,7 +194,7 @@ Boost-1.0 CC0-1.0 ISC MIT Unlicense ZLIB
 
 RESTRICT="mirror"
 
-DEPEND="|| ( >=dev-lang/rust-1.59.0[rls] >=dev-lang/rust-bin-1.59.0[rls] )"
+DEPEND="|| ( >=dev-lang/rust-1.59.0[rust-src] >=dev-lang/rust-bin-1.59.0[rust-src] )"
 RDEPEND="${DEPEND}"
 SLOT="0"
 
