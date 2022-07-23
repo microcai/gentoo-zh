@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-07-22 23:07:35 CST)
+(The last generation time: 2022-07-23 23:00:52 CST)
 
 ### Packages
 
@@ -166,7 +166,7 @@
  dev-python/daff                              | 1.3.46                                    |        | https://github.com/paulfitz/daff                                                        | The daff can produce and apply tabular diffs
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/nvchecker                         | 2.9                                       |        | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
-   dev-python/structlog                       | 21.5.0                                    | RD     | http://www.structlog.org/en/stable/                                                     | Structured Logging for Python
+   dev-python/structlog                       | 22.1.0                                    | RD     | http://www.structlog.org/en/stable/                                                     | Structured Logging for Python
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/python-telegram-bot               | 13.12                                     |        | https://github.com/python-telegram-bot/python-telegram-bot                              | Python wrapper of telegram bots API
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
