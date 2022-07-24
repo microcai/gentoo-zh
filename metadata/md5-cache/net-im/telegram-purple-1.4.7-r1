@@ -10,5 +10,5 @@ LICENSE=LGPL-3
 RDEPEND=net-im/pidgin sys-libs/glibc gcrypt? ( dev-libs/libgcrypt ) !gcrypt? ( dev-libs/openssl ) png? ( media-libs/libpng ) webp? ( media-libs/libwebp )
 SLOT=0
 SRC_URI=https://github.com/majn/telegram-purple/releases/download/v1.4.7/telegram-purple_1.4.7.orig.tar.gz
-_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	6f9a4727973fc1e368f52777d871e769
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	8f942ebdcf04334697649d4a0bf65a32
 _md5_=bdf34f4476de33e717e2632c170c95c8
