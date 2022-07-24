@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-07-24 18:03:28 CST)
+(The last generation time: 2022-07-24 21:41:54 CST)
 
 ### Packages
 
@@ -383,6 +383,8 @@
    net-proxy/v2ray                            | 4.45.0                                    | RD     | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
                                               | 4.45.2                                    |        |                                                                                         |
    net-proxy/v2ray-bin                        | 4.45.0                                    | RD     | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ net-wireless/linux-wifi-hotspot              | 9999                                      |        | https://github.com/lakinduakash/linux-wifi-hotspot                                      | Linux Wifi Hotspot
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sci-chemistry/vesta                          | 3.5.5                                     |        | https://jp-minerals.org/vesta                                                           | Visualization for Electronic and STructural Analysis
                                               | 3.5.7-r1                                  |        |                                                                                         |
