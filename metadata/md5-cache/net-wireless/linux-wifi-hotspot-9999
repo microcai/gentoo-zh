@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DEPEND=media-gfx/qrencode net-wireless/iw net-wireless/hostapd
+DESCRIPTION=Linux Wifi Hotspot
+EAPI=8
+HOMEPAGE=https://github.com/lakinduakash/linux-wifi-hotspot
+INHERIT=git-r3
+LICENSE=BSD
+PROPERTIES=live
+RDEPEND=media-gfx/qrencode net-wireless/iw net-wireless/hostapd
+SLOT=0
+_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_md5_=d644e05e99d575da47d174ce812ee63f
