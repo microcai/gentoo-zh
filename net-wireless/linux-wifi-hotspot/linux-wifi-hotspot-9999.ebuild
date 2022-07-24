@@ -7,7 +7,6 @@ DESCRIPTION="Linux Wifi Hotspot"
 HOMEPAGE="https://github.com/lakinduakash/linux-wifi-hotspot"
 SLOT="0"
 # inherit toolchain-funcs eutils
-[ "$PV" == "9999" ] && inherit git-r3
 
 DEPEND="media-gfx/qrencode
         net-wireless/iw
@@ -15,6 +14,7 @@ DEPEND="media-gfx/qrencode
        "
 RDEPEND="${DEPEND}"
 if [ "$PV" == "9999" ]; then
+    [ "$PV" == "9999" ] && inherit git-r3
 	EGIT_REPO_URI="https://github.com/lakinduakash/linux-wifi-hotspot.git"
 	KEYWORDS=""
 else
