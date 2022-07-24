@@ -14,7 +14,7 @@ DEPEND="media-gfx/qrencode
        "
 RDEPEND="${DEPEND}"
 if [ "$PV" == "9999" ]; then
-    [ "$PV" == "9999" ] && inherit git-r3
+    inherit git-r3
 	EGIT_REPO_URI="https://github.com/lakinduakash/linux-wifi-hotspot.git"
 	KEYWORDS=""
 else
