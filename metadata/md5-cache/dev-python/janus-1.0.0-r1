@@ -13,5 +13,5 @@ REQUIRED_USE=|| ( python_targets_pypy3 python_targets_python3_8 python_targets_p
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=mirror://pypi/j/janus/janus-1.0.0.tar.gz
-_eclasses_=multibuild	d26d81f242cb193d899a72bca423d0bd	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	python-utils-r1	6f8f68a64a4304f487bb725227f2fdac	python-r1	7b65c41111cd80a4d4a0921e8d4a310c	distutils-r1	a012c7f8c0a9dddadb3a4f56364c8f62
+_eclasses_=multibuild	d26d81f242cb193d899a72bca423d0bd	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	python-utils-r1	6f8f68a64a4304f487bb725227f2fdac	python-r1	7b65c41111cd80a4d4a0921e8d4a310c	distutils-r1	17847def14400dd2ebac1ede4e941c5a
 _md5_=36398ef2bcaf1b10ee2608343ce134e9
