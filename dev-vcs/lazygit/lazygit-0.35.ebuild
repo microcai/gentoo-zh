@@ -13,7 +13,11 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND="dev-vcs/git"
+CONFLICTS="!dev-vcs/lazygit-bin"
+RDEPEND="
+	${CONFLICTS}
+	dev-vcs/git
+"
 
 DOCS=( {CODE-OF-CONDUCT,CONTRIBUTING,README}.md docs )
 
