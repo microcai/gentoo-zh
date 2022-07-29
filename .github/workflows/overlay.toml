@@ -629,12 +629,6 @@ github_account = "Linerre"
 #url = "https://code.google.com/archive/p/wangfonts/downloads"
 #regex = "wangfonts-([\\d.]+).zip"
 
-["media-gfx/blur-effect"]
-source = "github"
-github = "sonald/blur-effect"
-use_latest_tag = true
-prefix = "v"
-
 # live package
 #["media-gfx/byzanz"]
 #source = "git"
