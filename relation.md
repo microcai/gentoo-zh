@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-07-29 12:23:11 CST)
+(The last generation time: 2022-07-29 16:08:50 CST)
 
 ### Packages
 
@@ -227,8 +227,6 @@
  media-fonts/wangfonts                        | 1.3.0                                     |        | https://code.google.com/p/wangfonts/                                                    | Free Chinese TrueType fonts donated by Prof. Hann-Tzong Wang
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/zhudou                           | 1.000                                     |        | https://github.com/Buernia/Zhudou-Sans                                                  | A font family for CJK symbols and punctuation, derived from Noto Sans.
-----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-gfx/blur-effect                        | 1.1.3                                     |        | https://github.com/sonald/blur-effect                                                   | Off-screen image blurring utility using OpenGL ES 3.0
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/byzanz                             | 0.3.0.9999                                |        | https://gitlab.gnome.org/Archive/byzanz/                                                | Screencasting program that saves casts as GIF files
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
