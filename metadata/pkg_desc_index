@@ -39,7 +39,6 @@ app-i18n/lunar 2.2-r5: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
 app-i18n/mozc 2.26.4220_p20201212102434_p20201219202429 2.26.4632_p20220213064411_p20220214004422 9999: Mozc - Japanese input method editor
 app-i18n/rime-prelude 20220122: Essential files for building up your Rime configuration
-app-i18n/scim-chrasis 9999.0.0.1: Chrasis SCIM binding for chinese character recognition.
 app-i18n/sogoupinyin 4.0.1.2123: Sogou Pinyin input method.
 app-i18n/zh-autoconvert 0.3.16-r5: Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 app-misc/bcompare 4.4.2.26348: Beyond Compare -- Compare, sync, and merge files and folders
@@ -70,7 +69,6 @@ dev-cpp/tgbot-cpp 1.3 1.3_p220612: C++ library for Telegram bot API
 dev-db/dbeaver-bin 22.1.0: Free universal database tool (community edition).
 dev-db/mongodb 5.3.1: A high-performance, open source, schema-free document-oriented database
 dev-libs/granite 5.2.1: Elementary OS library that extends Gtk+
-dev-libs/libchrasis 9999.0.1.1: Library for Chinese Character Recognition As-Is
 dev-libs/libdatrie 0.2.13: Double-Array Trie Library
 dev-libs/libdwarf 20140208: Library to deal with DWARF Debugging Information Format
 dev-libs/libthai 0.1.28 0.1.29: A a set of Thai language support routines
