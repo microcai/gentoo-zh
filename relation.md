@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-07-28 19:36:53 CST)
+(The last generation time: 2022-07-29 12:23:11 CST)
 
 ### Packages
 
@@ -70,9 +70,6 @@
  app-i18n/mozc                                | 2.26.4220_p20201212102434_p20201219202429 |        | https://github.com/google/mozc                                                          | Mozc - Japanese input method editor
                                               | 2.26.4632_p20220213064411_p20220214004422 |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
-----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/scim-chrasis                        | 9999.0.0.1                                |        | http://chrasis.berlios.de/                                                              | Chrasis SCIM binding for chinese character recognition.
-   dev-libs/libchrasis                        | 9999.0.1.1                                |  D, RD | http://chrasis.berlios.de                                                               | Library for Chinese Character Recognition As-Is
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/sogoupinyin                         | 4.0.1.2123                                |        | http://pinyin.sogou.com/linux/                                                          | Sogou Pinyin input method.
    app-i18n/fcitx                             | 4.2.9.8                                   |  D, RD | https://fcitx-im.org/                                                                   | Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
