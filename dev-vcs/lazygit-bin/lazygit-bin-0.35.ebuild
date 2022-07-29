@@ -17,7 +17,11 @@ KEYWORDS="~amd64 ~arm ~arm64 ~x86 "
 
 RESTRICT="strip"
 
-RDEPEND="dev-vcs/git"
+CONFLICTS="!dev-vcs/lazygit"
+RDEPEND="
+	${CONFLICTS}
+	dev-vcs/git
+"
 
 DOCS=( README.md )
 
