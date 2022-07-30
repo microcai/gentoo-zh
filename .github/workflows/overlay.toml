@@ -182,6 +182,12 @@ source = "regex"
 url = "https://pinyin.sogou.com/linux"
 regex = "sogoupinyin_([\\d.]+)_amd64.deb"
 
+["app-i18n/wlpinyin"]
+source = "github"
+github = "xhebox/wlpinyin"
+use_latest_tag = true
+github_account = "lujianhua"
+
 ["app-i18n/zh-autoconvert"]
 source = "regex"
 url = "https://packages.debian.org/stable/source/zh-autoconvert"
