@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-07-29 16:08:50 CST)
+(The last generation time: 2022-07-30 22:27:00 CST)
 
 ### Packages
 
@@ -77,6 +77,8 @@
                                               | 9999                                      |        |                                                                                         |
      x11-libs/xcb-imdkit                      | 1.0.3                                     |  D, RD | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
    net-dns/libidn11                           | 1.33                                      |  D, RD | https://www.gnu.org/software/libidn/                                                    | Internationalized Domain Names (IDN) implementation
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ app-i18n/wlpinyin                            | 9999                                      |        | https://github.com/xhebox/wlpinyin                                                      | Experimental chinese wayland input method(IME)
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/zh-autoconvert                      | 0.3.16-r5                                 |        | https://packages.debian.org/stable/source/zh-autoconvert                                | Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
