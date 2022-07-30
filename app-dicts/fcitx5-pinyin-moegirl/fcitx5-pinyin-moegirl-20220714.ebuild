@@ -1,3 +1,6 @@
+# Copyright 2022 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
 EAPI=8
 
 MY_PN="moegirl.dict"
@@ -9,7 +12,7 @@ SRC_URI="${HOMEPAGE}/releases/download/${MY_PV}/${MY_PN}"
 
 LICENSE="Unlicense"
 SLOT="5"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="app-i18n/fcitx:5"
 RDEPEND="${DEPEND}"
