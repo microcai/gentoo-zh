@@ -5,13 +5,13 @@ MY_PV="20220714"
 
 DESCRIPTION="Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn"
 HOMEPAGE="https://github.com/outloudvi/mw2fcitx"
-SRC_URI="${HOMEPAGE}/releases/download/${MY_PV}/${MY_PN}"
+SRC_URI="https://github.com/outloudvi/mw2fcitx/releases/download/${MY_PV}/${MY_PN}"
 
 LICENSE="Unlicense"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-DEPEND="app-i18n/fcitx"
+DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
@@ -23,4 +23,3 @@ src_install(){
 	doins ${MY_PN}
 	fperms 0644 "${DICT_PATH}/${MY_PN}"
 }
-
