@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-07-31 21:15:30 CST)
+(The last generation time: 2022-08-01 03:56:47 CST)
 
 ### Packages
 
@@ -179,8 +179,6 @@
  dev-util/bom-utils                           | 1.0                                       |        | https://code.google.com/p/utf-bom-utils                                                 | Small programs to add or remove the BOM mark in UTF8 files
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/elfembed                            | 0.3-r1                                    |        | http://elfembed.sourceforge.net/index.php                                               | Resource Compiler for ELF binaries
-----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/fernflower                          | 1                                         |        | https://github.com/fesh0r/fernflower                                                    | Fernflower is the first actually working analytical decompiler for Java and probably for a high-level programming language in general
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jd-gui                              | 1.6.6                                     |        | http://jd.benow.ca/                                                                     | A standalone graphical utility that displays Java source codes of .class file
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
