@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DEPEND=app-i18n/fcitx:5
+DESCRIPTION=Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
+EAPI=8
+HOMEPAGE=https://github.com/outloudvi/mw2fcitx
+KEYWORDS=~amd64 ~x86
+LICENSE=Unlicense
+RDEPEND=app-i18n/fcitx:5
+SLOT=5
+SRC_URI=https://github.com/outloudvi/mw2fcitx/releases/download/20220714/moegirl.dict
+_md5_=fe3bb8a936b47cb5ece9b77fe62576e9
