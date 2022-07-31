@@ -1,0 +1,15 @@
+BDEPEND=!build? ( sys-apps/sed )
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
+DESCRIPTION=Full XanMod source, including the Gentoo patchset and other patch options.
+EAPI=8
+HOMEPAGE=https://xanmod.org https://github.com/zhmars/cjktty-patches
+INHERIT=kernel-2
+IUSE=cjktty symlink build
+KEYWORDS=~amd64
+LICENSE=GPL-2 CDDL
+RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-devel/flex sys-devel/make >=sys-libs/ncurses-5.2 virtual/libelf virtual/pkgconfig )
+RESTRICT=binchecks strip
+SLOT=stable
+SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.15.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.15-62.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-62.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.15-62.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.15-62.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-62.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.15-62.extras.tar.xz https://github.com/xanmod/linux/releases/download//5.15.58-xanmod1/patch-5.15.58-xanmod1.xz https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x//cjktty-5.15.patch
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	kernel-2	7243c5ee4d1a26f42930f137a20ed659
+_md5_=bb1633ab9af87c67635cfdddd65fa731
