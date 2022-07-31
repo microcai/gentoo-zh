@@ -1,13 +1,14 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=install unpack
-DESCRIPTION=A date and time library based on the C++11/14/17 <chrono> header
+DESCRIPTION=Nameof operator for modern C++
 EAPI=8
-HOMEPAGE=https://github.com/HowardHinnant/date
+HOMEPAGE=https://github.com/Neargye/nameof
 INHERIT=git-r3
+IUSE=doc
 KEYWORDS=~amd64
 LICENSE=MIT
 PROPERTIES=live
 RESTRICT=mirror
 SLOT=0
 _eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53
-_md5_=890f21babeabf751dda0054173376f2b
+_md5_=9cbf20f38d2ba247496fb1a4811fa774
