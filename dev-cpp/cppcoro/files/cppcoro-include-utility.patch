@@ -1,0 +1,12 @@
+diff --git a/lib/static_thread_pool.cpp b/lib/static_thread_pool.cpp
+index 989a6a9..0b91b9c 100644
+--- a/lib/static_thread_pool.cpp
++++ b/lib/static_thread_pool.cpp
+@@ -12,6 +12,7 @@
+ #include <cassert>
+ #include <mutex>
+ #include <chrono>
++#include <utility>
+ 
+ namespace
+ {
