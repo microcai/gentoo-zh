@@ -71,13 +71,11 @@ dev-cpp/nameof 0.10.1 0.10.1_p220626: Nameof operator for modern C++
 dev-cpp/tgbot-cpp 1.3 1.3_p220616: C++ library for Telegram bot API
 dev-db/dbeaver-bin 22.1.0: Free universal database tool (community edition).
 dev-db/mongodb 5.3.1: A high-performance, open source, schema-free document-oriented database
-dev-libs/granite 5.2.1: Elementary OS library that extends Gtk+
 dev-libs/libdatrie 0.2.13: Double-Array Trie Library
 dev-libs/libdwarf 20140208: Library to deal with DWARF Debugging Information Format
 dev-libs/libthai 0.1.28 0.1.29: A a set of Thai language support routines
 dev-libs/lunar-calendar 3.0.1: a gtk+ calendar widget for chinese lunar library
 dev-libs/lunar-date 3.0.1: Chinese Lunar Library
-dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458 9999: Community managed domain list for V2Ray.
 dev-libs/v2ray-domain-list-community-bin 20220728161132: Community managed domain list for V2Ray.
 dev-libs/v2ray-geoip-bin 202207280056: GeoIP for V2Ray.
@@ -96,7 +94,6 @@ dev-python/qasync 0.23.0: Implementation of the asyncio (PEP 3156) event-loop wi
 dev-python/structlog 22.1.0: Structured Logging for Python
 dev-qt/assistant 5.15.2-r11: Tool for viewing on-line documentation in Qt help file format
 dev-util/arch-install-scripts 24: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
-dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 files
 dev-util/elfembed 0.3-r1: Resource Compiler for ELF binaries
 dev-util/jd-gui 1.6.6: A standalone graphical utility that displays Java source codes of .class file
 dev-util/jetbrains-toolbox 1.22.10774: Manage all your JetBrains Projects and Tools
@@ -157,7 +154,6 @@ net-im/tencent-qq 2.0.0_beta2_p1089: Official Linux version of Tencent QQ
 net-im/weixin-uos 2.1.5: UOS weixin
 net-im/wemeet 2.8.0.3-r1 3.8.0.2-r1: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq
-net-misc/avsocks 9999: 科学操长城软件
 net-misc/baidunetdisk 4.3.0: Baidu Net Disk is a cloud storage client (Linux Version)
 net-misc/baidupcs-go 3.6.2 9999: The terminal utility for Baidu Network Disk (Golang Version).
 net-misc/networkmanager-l2tp 9999: NetworkManager L2TP plugin
