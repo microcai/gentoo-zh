@@ -8,3 +8,4 @@ net-im/deepin-wine-wechat
 # qsdrqs <qsdrqs@gmail.com> (2022-07-31)
 # Requires 32-bit multilib compatibility
 app-emulation/deepin-wine5
+net-im/deepin-wine-qq
