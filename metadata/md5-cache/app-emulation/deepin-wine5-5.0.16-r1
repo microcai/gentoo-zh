@@ -1,0 +1,14 @@
+BDEPEND=dev-util/patchelf
+DEFINED_PHASES=install unpack
+DESCRIPTION=Deepin wine5
+EAPI=8
+HOMEPAGE=https://www.deepin.org
+INHERIT=unpacker
+KEYWORDS=~amd64
+LICENSE=LGPL-2.1
+RDEPEND=>=media-libs/alsa-lib-1.0.16[abi_x86_32(-)] >=media-libs/libgphoto2-2.5.10[abi_x86_32(-)] media-libs/gst-plugins-base[abi_x86_32(-)] media-libs/lcms:2[abi_x86_32(-)] >=net-nds/openldap-2.4.7[abi_x86_32(-)] >=media-sound/mpg123-1.13.7[abi_x86_32(-)] >=media-libs/openal-1.14[abi_x86_32(-)] >=net-libs/libpcap-0.9.8[abi_x86_32(-)] media-libs/libcanberra[pulseaudio,abi_x86_32(-)] virtual/libudev[abi_x86_32(-)] virtual/libusb:1[abi_x86_32(-)] >=app-emulation/vkd3d-1.0[abi_x86_32(-)] x11-libs/libX11[abi_x86_32(-)] x11-libs/libXext[abi_x86_32(-)] >=dev-libs/libxml2-2.9.0[abi_x86_32(-)] || ( dev-libs/ocl-icd[abi_x86_32(-)] dev-libs/opencl-icd-loader[abi_x86_32(-)] ) app-emulation/deepin-udis86 >=sys-libs/zlib-1.1.4[abi_x86_32(-)] || ( sys-libs/ncurses[abi_x86_32(-)] sys-libs/ncurses-compat:5[abi_x86_32(-)] ) media-libs/fontconfig[abi_x86_32(-)] media-libs/freetype:2[abi_x86_32(-)] sys-devel/gettext[abi_x86_32(-)] x11-libs/libXcursor[abi_x86_32(-)] media-libs/mesa[osmesa,abi_x86_32(-)] media-libs/glu[abi_x86_32(-)] media-libs/libjpeg-turbo[abi_x86_32(-)] x11-libs/libXrandr[abi_x86_32(-)] x11-libs/libXi[abi_x86_32(-)]
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://community-store-packages.deepin.com/appstore/pool/appstore/d/deepin-wine5/deepin-wine5_5.0.16-1_i386.deb https://community-store-packages.deepin.com/appstore/pool/appstore/d/deepin-wine5/deepin-wine5-i386_5.0.16-1_i386.deb https://community-packages.deepin.com/deepin/pool/main/o/openldap/libldap-2.4-2_2.4.47+dfsg.4-1+eagle_i386.deb https://community-packages.deepin.com/deepin/pool/main/o/openldap/libldap-2.4-2_2.4.47+dfsg.4-1+eagle_amd64.deb https://community-packages.deepin.com/deepin/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.27.1-1+dde_i386.deb https://community-packages.deepin.com/deepin/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.27.1-1+dde_amd64.deb https://community-packages.deepin.com/deepin/pool/main/libp/libpcap/libpcap0.8_1.8.1.1-6+dde_i386.deb https://community-packages.deepin.com/deepin/pool/main/libp/libpcap/libpcap0.8_1.8.1.1-6+dde_amd64.deb
+_eclasses_=toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	697382d119fd3d195f110b7979184285
+_md5_=317dba641e7f35d013f4ae8ffe1f4dbf
