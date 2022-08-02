@@ -76,6 +76,7 @@ dev-libs/libdwarf 20140208: Library to deal with DWARF Debugging Information For
 dev-libs/libthai 0.1.28 0.1.29: A a set of Thai language support routines
 dev-libs/lunar-calendar 3.0.1: a gtk+ calendar widget for chinese lunar library
 dev-libs/lunar-date 3.0.1: Chinese Lunar Library
+dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458 9999: Community managed domain list for V2Ray.
 dev-libs/v2ray-domain-list-community-bin 20220728161132: Community managed domain list for V2Ray.
 dev-libs/v2ray-geoip-bin 202207280056: GeoIP for V2Ray.
@@ -155,6 +156,7 @@ net-im/tencent-qq 2.0.0_beta2_p1089: Official Linux version of Tencent QQ
 net-im/weixin-uos 2.1.5: UOS weixin
 net-im/wemeet 2.8.0.3-r1 3.8.0.2-r1: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq
+net-misc/avsocks 9999: 科学操长城软件
 net-misc/baidunetdisk 4.3.0: Baidu Net Disk is a cloud storage client (Linux Version)
 net-misc/baidupcs-go 3.6.2 9999: The terminal utility for Baidu Network Disk (Golang Version).
 net-misc/networkmanager-l2tp 9999: NetworkManager L2TP plugin
