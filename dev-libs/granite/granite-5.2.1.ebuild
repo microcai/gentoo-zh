@@ -5,7 +5,7 @@ EAPI=6
 
 VALA_MIN_API_VERSION=0.40
 
-inherit cmake-utils gnome2-utils vala
+inherit cmake gnome2-utils vala
 
 DESCRIPTION="Elementary OS library that extends Gtk+"
 HOMEPAGE="https://github.com/elementary/granite"
@@ -35,7 +35,7 @@ src_prepare() {
 	# Disable generation of the translations (if needed)
 	use nls || cmake_comment_add_subdirectory po
 
-	cmake-utils_src_prepare
+	cmake_src_prepare
 	vala_src_prepare
 }
 
@@ -44,7 +44,7 @@ src_configure() {
 		-DVALA_EXECUTABLE=${VALAC}
 	)
 
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 pkg_preinst() {
