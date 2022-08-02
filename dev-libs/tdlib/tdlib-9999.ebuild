@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake-utils git-r3
+inherit cmake git-r3
 
 DESCRIPTION="Cross-platform library for building Telegram clients"
 HOMEPAGE="https://core.telegram.org/tdlib"
@@ -27,21 +27,3 @@ BDEPEND=""
 
 S="${EGIT_CHECKOUT_DIR}"
 BUILD_DIR="${S}/build"
-
-src_configure(){
-	mkdir "${BUILD_DIR}" && cd "${BUILD_DIR}" || die
-	cmake \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_INSTALL_LIBDIR=$(get_libdir) "${S}" || die "cmake failed"
-}
-
-src_compile(){
-	cd "${BUILD_DIR}" || die
-	emake || dile
-}
-
-src_install(){
-	cd "${BUILD_DIR}" || die
-	emake DESTDIR="${D}" install || die
-}
