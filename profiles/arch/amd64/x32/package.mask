@@ -1,0 +1,6 @@
+# Copyright 1999-2022 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+# Huang Rui <vowstar@gmail.com> (2022-08-02)
+# Requires qtwebengine (which requires net-libs/nodejs won't support x32)
+net-im/wemeet
