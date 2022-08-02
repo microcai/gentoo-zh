@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-08-01 11:55:09 CST)
+(The last generation time: 2022-08-02 10:59:28 CST)
 
 ### Packages
 
@@ -178,7 +178,7 @@
      app-crypt/archlinux-keyring              | 20211028                                  |  D, RD | https://gitlab.archlinux.org/archlinux/archlinux-keyring                                | GnuPG keyring of Archlinux developer keys
      sys-apps/pacman-mirrorlist               | 20210509                                  | RD     | https://archlinux.org/mirrorlist/                                                       | Repository list for Archlinux's binary package manager
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/bom-utils                           | 1.0                                       |        | https://code.google.com/p/utf-bom-utils                                                 | Small programs to add or remove the BOM mark in UTF8 files
+ dev-util/bom-utils                           | 1.0                                       |        | https://github.com/jlblancoc/utf-bom-utils                                              | Small programs to add or remove the BOM mark in UTF8 files
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/elfembed                            | 0.3-r1                                    |        | http://elfembed.sourceforge.net/index.php                                               | Resource Compiler for ELF binaries
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
