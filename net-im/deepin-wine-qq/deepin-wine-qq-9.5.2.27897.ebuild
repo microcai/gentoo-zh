@@ -29,7 +29,7 @@ QA_PREBUILT="*"
 
 RDEPEND="
 	app-emulation/deepin-wine-helper
-	app-emulation/deepin-wine6-stable
+	app-emulation/deepin-wine5
 	media-fonts/noto-cjk
 	media-fonts/wqy-microhei
 	media-libs/alsa-lib[abi_x86_32]
@@ -101,4 +101,5 @@ src_install() {
 pkg_postinst() {
 	ewarn "Because deepin changed DeployApp, QQ will be reinstalled after"
 	ewarn "upgrading from the old version."
+	xdg_icon_cache_update
 }
