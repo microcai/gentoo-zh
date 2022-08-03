@@ -65,14 +65,14 @@ unset WAYLAND_DISPLAY
 
 # if pipewire-pulse installed
 if [ -f /usr/bin/pipewire-pulse ]; then
-    export PULSE_LATENCY_MSEC=20 # 解决Pipewire播放声音卡顿的问题
+	export PULSE_LATENCY_MSEC=20 # 解决Pipewire播放声音卡顿的问题
 fi;
 
 if [ -f "/usr/bin/bwrap" ];then
-    mkdir -p \$FONTCONFIG_DIR
-    bwrap --dev-bind / / --tmpfs \$HOME/.config --ro-bind \$FONTCONFIG_DIR \$FONTCONFIG_DIR /opt/wemeet/bin/wemeetapp \$*;
+	mkdir -p \$FONTCONFIG_DIR
+	bwrap --dev-bind / / --tmpfs \$HOME/.config --ro-bind \$FONTCONFIG_DIR \$FONTCONFIG_DIR /opt/wemeet/bin/wemeetapp \$*;
 else
-    exec /opt/wemeet/bin/wemeetapp \$*;
+	exec /opt/wemeet/bin/wemeetapp \$*;
 fi;
 	EOF
 
