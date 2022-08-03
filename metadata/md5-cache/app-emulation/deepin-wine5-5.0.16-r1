@@ -11,4 +11,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=https://community-store-packages.deepin.com/appstore/pool/appstore/d/deepin-wine5/deepin-wine5_5.0.16-1_i386.deb https://community-store-packages.deepin.com/appstore/pool/appstore/d/deepin-wine5/deepin-wine5-i386_5.0.16-1_i386.deb https://community-packages.deepin.com/deepin/pool/main/o/openldap/libldap-2.4-2_2.4.47+dfsg.4-1+eagle_i386.deb https://community-packages.deepin.com/deepin/pool/main/o/openldap/libldap-2.4-2_2.4.47+dfsg.4-1+eagle_amd64.deb https://community-packages.deepin.com/deepin/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.27.1-1+dde_i386.deb https://community-packages.deepin.com/deepin/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.27.1-1+dde_amd64.deb https://community-packages.deepin.com/deepin/pool/main/libp/libpcap/libpcap0.8_1.8.1.1-6+dde_i386.deb https://community-packages.deepin.com/deepin/pool/main/libp/libpcap/libpcap0.8_1.8.1.1-6+dde_amd64.deb
 _eclasses_=toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	697382d119fd3d195f110b7979184285
-_md5_=317dba641e7f35d013f4ae8ffe1f4dbf
+_md5_=36a9a4c021d26261944a028f46e3c291
