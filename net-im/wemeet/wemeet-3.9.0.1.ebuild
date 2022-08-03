@@ -7,22 +7,23 @@ inherit desktop unpacker xdg
 
 DESCRIPTION="Wemeet - Tencent Video Conferencing"
 HOMEPAGE="https://wemeet.qq.com"
+# no arm64 for 3.9.0.1 release yet
 SRC_URI="
-	amd64? ( mirror+https://updatecdn.meeting.qq.com/cos/3cdd365cd90f221fb345ab73c4746e1f/TencentMeeting_0300000000_${PV}_x86_64_default.publish.deb -> ${P}_amd64.deb )
-	arm64? ( mirror+https://updatecdn.meeting.qq.com/cos/1584cf78c2285b450a4bc9d0b3bb8720/TencentMeeting_0300000000_${PV}_arm64_default.publish.deb -> ${P}_arm64.deb )
+	amd64? ( mirror+https://updatecdn.meeting.qq.com/OTRhY2YwZTUtMzE5Ni00NDQyLTg0MTMtOTBjYzQzNzcxYTQz/TencentMeeting_0300000000_${PV}_x86_64_default.publish.deb -> ${P}_amd64.deb )
 "
 
 LICENSE="wemeet_license"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~arm64"
+KEYWORDS="-* ~amd64"
 
 RESTRICT="bindist test"
 
 DEPEND="
-		dev-libs/nss
-		dev-util/desktop-file-utils
-		media-sound/pulseaudio
-		x11-libs/libX11
+	dev-qt/qtwebengine:5
+	dev-qt/qtx11extras:5
+	media-sound/pulseaudio
+	x11-libs/libXinerama
+	x11-libs/libXrandr
 "
 RDEPEND="${DEPEND}"
 BDEPEND="dev-util/patchelf"
@@ -31,14 +32,11 @@ S="${WORKDIR}"
 QA_PREBUILT="opt/${PN}/*"
 
 src_install() {
-	# Fix duplicate files causing failures if FEATURES=splitdebug
-	local f
-	for f in libFcitxQt5DBusAddons.so libFcitxQt5WidgetsAddons.so; do
-		rm "opt/${PN}/lib/${f}" "opt/${PN}/lib/${f}.1" || die
-		ln -s "${f}.1.0" "opt/${PN}/lib/${f}.1" || die
-		ln -s "${f}.1" "opt/${PN}/lib/${f}" || die
-	done
-
+	# To fix bug, remove unused lib, use system lib instead
+	mv opt/${PN}/lib opt/${PN}/lib.orig || die
+	mkdir opt/${PN}/lib || die
+	cp -rf opt/${PN}/lib.orig/{libwemeet*,libxcast.so,libxnn*,libui*,libdesktop_common.so,libImSDK.so,libxcast_codec.so,libnxui*} opt/${PN}/lib/ || die
+	rm -r opt/${PN}/lib.orig || die
 	# Fix RPATHs to ensure the libraries can be found
 	for f in $(find "opt/${PN}/bin" "opt/${PN}/plugins") ; do
 		[[ -f ${f} && $(od -t x1 -N 4 "${f}") == *"7f 45 4c 46"* ]] || continue
@@ -78,16 +76,17 @@ fi;
 
 	insinto "/opt/${PN}"
 	exeinto "/opt/${PN}"
-	doins -r "opt/${PN}/bin" "opt/${PN}/icons" "opt/${PN}/lib" "opt/${PN}/plugins"
+	doins -r "opt/${PN}/bin" "opt/${PN}/icons" "opt/${PN}/lib" "opt/${PN}/plugins" "opt/${PN}/resources"  "opt/${PN}/translations"
 	doexe "opt/${PN}/wemeetapp.sh"
 	fperms +x "/opt/${PN}/bin/wemeetapp"
-	fperms +x "/opt/${PN}/bin/crashpad_handler"
+	fperms +x "/opt/${PN}/bin/QtWebEngineProcess"
 
 	# put launcher into PATH
 	dosym "../../opt/${PN}/wemeetapp.sh" /usr/bin/wemeetapp
 
 	sed -i "s/^Icon=.*/Icon=wemeetapp/g" "usr/share/applications/wemeetapp.desktop" || die
 	sed -i "s/^Exec=.*/Exec=wemeetapp %u/g" "usr/share/applications/wemeetapp.desktop" || die
+	sed -i '$i Comment=Tencent Meeting Linux Client\nComment[zh_CN]=腾讯会议Linux客户端\nKeywords=wemeet;tencent;meeting;' "usr/share/applications/wemeetapp.desktop" || die
 	domenu "usr/share/applications/wemeetapp.desktop"
 	newicon -s scalable "opt/${PN}/wemeet.svg" "wemeetapp.svg"
 	for i in 16 32 64 128 256; do
