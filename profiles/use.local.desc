@@ -56,7 +56,6 @@ dev-db/mongodb:server-js - Build mongod with JavaScript support. (use spidermonk
 dev-db/mongodb:tcmalloc - Use tcmalloc as allocator.
 dev-db/mongodb:tcmalloc-experimental - Use tcmalloc-experimental as allocator.
 dev-db/mongodb:tools - Install the MongoDB tools (mongoimport, mongodump...) from app-admin/mongo-tools
-dev-libs/granite:demo - Build the Granite demo application (to present all available UI features provided by the library)
 dev-python/conda:user - use user's home directory as default pkgs and envs prefix
 dev-python/nvchecker:ini - convert your old configuration files from ini to toml
 dev-python/nvchecker:notify - enable nvchecker-notify support
