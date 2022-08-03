@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-08-03 09:45:10 CST)
+(The last generation time: 2022-08-03 19:26:16 CST)
 
 ### Packages
 
@@ -28,8 +28,6 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                           | 0.11.18                                   |        | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
                                               | 1.3.6                                     |        |                                                                                         |
-----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-emulation/deepin-wine5                   | 5.0.16-r1                                 |        | https://www.deepin.org                                                                  | Deepin wine5
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/winetricks-zh                  | 9999                                      |        | http://winetricks.org                                                                   | winetricks fork for chinese to install QQ
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -296,12 +294,13 @@
  net-dns/phddns                               | 2.0.6.32828                               |        | http://hsk.oray.com/                                                                    | Phddns
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/deepin-wine-qq                        | 9.5.2.27897                               |        | https://aur.archlinux.org/packages/deepin-wine-qq                                       | Tencent QQ on Deepin Wine(com.qq.im.deepin) For Gentoo
-   app-emulation/deepin-wine6-stable          | 6.0.0.19-r1                               |  D, RD | https://www.deepin.org                                                                  | Deepin wine6 stable
-     app-emulation/deepin-udis86              | 1.72-r4                                   | RD     | https://www.deepin.org                                                                  | Deepin Version of Wine
+   app-emulation/deepin-wine5                 | 5.0.16-r1                                 |  D, RD | https://www.deepin.org                                                                  | Deepin wine5
    app-emulation/deepin-wine-helper           | 5.1.27-r1                                 |  D, RD | https://www.deepin.org                                                                  | Deepin Wine Helper
      app-emulation/deepin-wine-plugin         | 5.1.13-r1                                 |  D, RD | https://www.deepin.org                                                                  | Deepin Wine plugin
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/deepin-wine-wechat                    | 3.4.5.45                                  |        | https://aur.archlinux.org/packages/deepin-wine-wechat                                   | Tencent WeChat on Deepin Wine(com.qq.weixin.deepin) For Gentoo
+   app-emulation/deepin-wine6-stable          | 6.0.0.19-r1                               |  D, RD | https://www.deepin.org                                                                  | Deepin wine6 stable
+     app-emulation/deepin-udis86              | 1.72-r4                                   | RD     | https://www.deepin.org                                                                  | Deepin Version of Wine
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/dingtalk                              | 1.4.0.20422                               |        | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
    dev-libs/libthai                           | 0.1.28                                    |  D, RD | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
