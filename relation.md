@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-08-04 03:53:50 CST)
+(The last generation time: 2022-08-04 04:26:29 CST)
 
 ### Packages
 
@@ -252,8 +252,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-plugins/gimp-gap                       | 2.8.0                                     |        | http://www.gimp.org/                                                                    | Gimp Animation Package
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/feeluown                         | 3.8.5                                     |        | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
-                                              | 3.8.6                                     |        |                                                                                         |
+ media-sound/feeluown                         | 3.8.7                                     |        | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
    dev-python/fuo-kuwo                        | 0.1.5                                     |  D     | https://github.com/feeluown/feeluown-kuwo                                               | kuwo music support for feeluown
                                               | 0.1.6                                     |        |                                                                                         |
    dev-python/fuo-local                       | 0.3                                       |  D     | https://github.com/feeluown/feeluown-local                                              | local music support for feeluown
