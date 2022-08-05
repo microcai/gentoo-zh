@@ -60,7 +60,6 @@ app-shells/gitstatus 1.5.4: Git status for Bash and Zsh prompt
 app-shells/zsh-theme-powerlevel10k 1.16.1: Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
 app-text/groff-utf8 0-r1: GNU groff wrapper allowing UTF-8 input
 app-text/wiznote 2.8.5 9999: cross-platform cloud based note-taking client
-app-text/xdvipdfmx 9999: Extended xdvi for use with XeTeX and other unicode TeXs.
 app-text/ydcv-rs 0.4.7: A rust version of YouDao Console Version
 app-vim/clang_complete 1.8: vim plugin: use clang for completing C/C++ code.
 app-vim/easymotion 1.3: vim plugin: Vim motions on speed!
