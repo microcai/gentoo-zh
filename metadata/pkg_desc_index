@@ -93,7 +93,6 @@ dev-python/pycosat 0.6.3: Python bindings to picosat (a SAT solver)
 dev-python/python-telegram-bot 13.12: Python wrapper of telegram bots API
 dev-python/qasync 0.23.0: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/structlog 22.1.0: Structured Logging for Python
-dev-qt/assistant 5.15.2-r11: Tool for viewing on-line documentation in Qt help file format
 dev-util/arch-install-scripts 24: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
 dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 files
 dev-util/elfembed 0.3-r1: Resource Compiler for ELF binaries
