@@ -28,9 +28,11 @@ chalk-solve-0.83.0
 countme-3.0.1
 cov-mark-2.0.0-pre.1
 crc32fast-1.3.2
+crossbeam-0.8.1
 crossbeam-channel-0.5.5
 crossbeam-deque-0.8.1
 crossbeam-epoch-0.9.9
+crossbeam-queue-0.3.5
 crossbeam-utils-0.8.10
 dashmap-5.3.4
 derive_arbitrary-1.1.3
@@ -39,7 +41,7 @@ dot-0.1.4
 drop_bomb-0.1.5
 either-1.7.0
 ena-0.14.0
-expect-test-1.3.0
+expect-test-1.4.0
 filetime-0.2.17
 fixedbitset-0.2.0
 flate2-1.0.24
@@ -82,7 +84,7 @@ notify-5.0.0-pre.15
 num_cpus-1.13.1
 object-0.28.4
 object-0.29.0
-once_cell-1.12.0
+once_cell-1.13.0
 oorandom-11.1.3
 parking_lot-0.11.2
 parking_lot-0.12.1
@@ -104,7 +106,7 @@ redox_syscall-0.2.13
 regex-1.5.6
 regex-automata-0.1.10
 regex-syntax-0.6.26
-rowan-0.15.5
+rowan-0.15.8
 rustc-ap-rustc_lexer-725.0.0
 rustc-demangle-0.1.21
 rustc-hash-1.1.0
