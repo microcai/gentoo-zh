@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-08-06 04:02:48 CST)
+(The last generation time: 2022-08-06 21:33:46 CST)
 
 ### Packages
 
@@ -154,7 +154,7 @@
  dev-libs/v2ray-domain-list-community         | 4.39.2_p20210621183458                    |        | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
                                               | 9999                                      |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/conda                             | 4.13.0                                    |        | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
+ dev-python/conda                             | 4.14.0                                    |        | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
    dev-python/conda-package-handling          | 1.8.1                                     |  D, RD | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
    dev-python/pycosat                         | 0.6.3                                     |  D, RD | https://github.com/ContinuumIO/pycosat                                                  | Python bindings to picosat (a SAT solver)
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
