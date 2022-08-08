@@ -14,7 +14,7 @@ CRATES="
 	alsa-sys-0.3.1
 	ansi_colours-1.1.1
 	ansi_term-0.12.1
-	anyhow-1.0.58
+	anyhow-1.0.59
 	arrayvec-0.7.2
 	autocfg-1.1.0
 	base64-0.13.0
@@ -25,7 +25,8 @@ CRATES="
 	bumpalo-3.10.0
 	bytemuck-1.11.0
 	byteorder-1.4.3
-	bytes-1.2.0
+	bytes-1.2.1
+	cache-padded-1.2.0
 	cassowary-0.3.0
 	cc-1.0.73
 	cesu8-1.1.0
@@ -34,6 +35,8 @@ CRATES="
 	cfg-if-1.0.0
 	chunked_transfer-1.4.0
 	clang-sys-1.3.3
+	clap-3.2.16
+	clap_lex-0.2.4
 	cocoa-0.24.0
 	cocoa-foundation-0.1.0
 	color_quant-1.1.0
@@ -45,7 +48,6 @@ CRATES="
 	core-graphics-types-0.1.1
 	coreaudio-rs-0.10.0
 	coreaudio-sys-0.2.10
-	cpal-0.13.5
 	crc32fast-1.3.2
 	crossbeam-channel-0.5.6
 	crossbeam-deque-0.8.2
@@ -53,7 +55,7 @@ CRATES="
 	crossbeam-utils-0.8.11
 	crossterm-0.23.2
 	crossterm_winapi-0.9.0
-	ctor-0.1.22
+	ctor-0.1.23
 	cty-0.2.2
 	darling-0.13.4
 	darling_core-0.13.4
@@ -63,9 +65,7 @@ CRATES="
 	deflate-1.0.0
 	diff-0.1.13
 	dirs-4.0.0
-	dirs-next-2.0.0
 	dirs-sys-0.3.7
-	dirs-sys-next-0.1.2
 	discord-rich-presence-0.2.1
 	dispatch-0.2.0
 	either-1.7.0
@@ -75,7 +75,6 @@ CRATES="
 	fallible-iterator-0.2.0
 	fallible-streaming-iterator-0.1.9
 	fastrand-1.8.0
-	filedescriptor-0.8.2
 	flate2-1.0.24
 	flume-0.10.14
 	fnv-1.0.7
@@ -88,7 +87,6 @@ CRATES="
 	futures-sink-0.3.21
 	futures-task-0.3.21
 	futures-util-0.3.21
-	gag-1.0.0
 	getrandom-0.2.7
 	gif-0.11.4
 	glib-0.15.12
@@ -104,15 +102,17 @@ CRATES="
 	heck-0.4.0
 	hermit-abi-0.1.19
 	hex-0.4.3
-	id3-1.2.0
+	hound-3.4.0
+	id3-1.3.0
 	ident_case-1.0.1
 	idna-0.2.3
 	image-0.24.3
 	include_dir-0.7.2
 	include_dir_macros-0.7.2
+	indexmap-1.9.1
 	inflate-0.4.5
 	instant-0.1.12
-	itoa-1.0.2
+	itoa-1.0.3
 	jni-0.19.0
 	jni-sys-0.3.0
 	jobserver-0.1.24
@@ -125,7 +125,7 @@ CRATES="
 	lebe-0.5.1
 	lexopt-0.2.1
 	libaes-0.6.2
-	libc-0.2.126
+	libc-0.2.127
 	libdbus-sys-0.2.2
 	libloading-0.7.3
 	libmpv-sys-3.1.0
@@ -167,12 +167,11 @@ CRATES="
 	once_cell-1.13.0
 	option-operations-0.4.1
 	orange-trees-0.1.0
+	os_str_bytes-6.2.0
 	output_vt100-0.1.3
-	parking_lot-0.11.2
 	parking_lot-0.12.1
-	parking_lot_core-0.8.5
 	parking_lot_core-0.9.3
-	paste-1.0.7
+	paste-1.0.8
 	peeking_take_while-0.1.2
 	percent-encoding-2.1.0
 	pin-project-1.0.11
@@ -185,12 +184,12 @@ CRATES="
 	ppv-lite86-0.2.16
 	pretty-hex-0.3.0
 	pretty_assertions-1.2.1
-	proc-macro-crate-1.1.3
+	proc-macro-crate-1.2.0
 	proc-macro-error-1.0.4
 	proc-macro-error-attr-1.0.4
-	proc-macro2-1.0.42
+	proc-macro2-1.0.43
 	quick-xml-0.23.0
-	quote-1.0.20
+	quote-1.0.21
 	rand-0.8.5
 	rand_chacha-0.3.1
 	rand_core-0.6.3
@@ -205,18 +204,19 @@ CRATES="
 	remove_dir_all-0.5.3
 	rgb-0.8.33
 	ring-0.16.20
+	ringbuf-0.2.8
 	rusqlite-0.28.0
 	rustc-hash-1.1.0
 	rustls-0.20.6
-	ryu-1.0.10
+	ryu-1.0.11
 	same-file-1.0.6
 	scoped_threadpool-0.1.9
 	scopeguard-1.1.0
 	sct-0.7.0
-	serde-1.0.140
-	serde_derive-1.0.140
-	serde_json-1.0.82
-	shellexpand-2.1.0
+	serde-1.0.142
+	serde_derive-1.0.142
+	serde_json-1.0.83
+	shellexpand-2.1.2
 	shlex-1.1.0
 	signal-hook-0.3.14
 	signal-hook-mio-0.2.3
@@ -243,27 +243,26 @@ CRATES="
 	symphonia-format-wav-0.5.1
 	symphonia-metadata-0.5.1
 	symphonia-utils-xiph-0.5.1
-	syn-1.0.98
+	syn-1.0.99
 	system-deps-6.0.2
 	tempfile-3.3.0
 	termcolor-1.1.3
 	terminal_size-0.1.17
-	termusic-0.7.1
-	textwrap-0.14.2
-	thiserror-1.0.31
-	thiserror-impl-1.0.31
+	textwrap-0.15.0
+	thiserror-1.0.32
+	thiserror-impl-1.0.32
 	threadpool-1.8.1
 	tiff-0.7.3
 	tinyvec-1.6.0
 	tinyvec_macros-0.1.0
 	toml-0.5.9
 	tui-0.18.0
-	tui-realm-stdlib-1.1.6
+	tui-realm-stdlib-1.1.7
 	tui-realm-treeview-1.1.0
-	tuirealm-1.7.0
+	tuirealm-1.7.1
 	tuirealm_derive-1.0.0
 	unicode-bidi-0.3.8
-	unicode-ident-1.0.2
+	unicode-ident-1.0.3
 	unicode-linebreak-0.1.2
 	unicode-normalization-0.1.21
 	unicode-segmentation-1.9.0
@@ -294,17 +293,23 @@ CRATES="
 	winapi-util-0.1.5
 	winapi-x86_64-pc-windows-gnu-0.4.0
 	windows-0.29.0
+	windows-0.37.0
 	windows-sys-0.36.1
 	windows_aarch64_msvc-0.29.0
 	windows_aarch64_msvc-0.36.1
+	windows_aarch64_msvc-0.37.0
 	windows_i686_gnu-0.29.0
 	windows_i686_gnu-0.36.1
+	windows_i686_gnu-0.37.0
 	windows_i686_msvc-0.29.0
 	windows_i686_msvc-0.36.1
+	windows_i686_msvc-0.37.0
 	windows_x86_64_gnu-0.29.0
 	windows_x86_64_gnu-0.36.1
+	windows_x86_64_gnu-0.37.0
 	windows_x86_64_msvc-0.29.0
 	windows_x86_64_msvc-0.36.1
+	windows_x86_64_msvc-0.37.0
 	yaml-rust-0.4.5
 	ytd-rs-0.1.7
 "
