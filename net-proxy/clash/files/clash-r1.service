@@ -4,6 +4,7 @@ After=network.target
 
 [Service]
 DynamicUser=yes
+ReadWritePaths=/etc/clash
 CacheDirectory=clash
 LogsDirectory=clash
 RuntimeDirectory=clash
