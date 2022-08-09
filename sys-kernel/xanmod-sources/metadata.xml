@@ -10,6 +10,6 @@
 	</maintainer>
 	<use>
 		<flag name="tt">Enable Default Xanmod Patches with TT CPU Scheduler.</flag>
-		<flag name="cjktty">Eanble cjktty patches.</flag>
+		<flag name="cjktty">Enable cjktty patches.</flag>
 	</use>
 </pkgmetadata>
