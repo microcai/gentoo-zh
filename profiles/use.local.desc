@@ -165,7 +165,7 @@ sys-kernel/liquorix-sources:cjk - Enable cjktty Patches.
 sys-kernel/xanmod-kernel:clang - Use clang compiler instead of GCC
 sys-kernel/xanmod-kernel:debug - Pseudo flag
 sys-kernel/xanmod-kernel:initramfs - Build initramfs along with the kernel.
-sys-kernel/xanmod-sources:cjktty - Eanble cjktty patches.
+sys-kernel/xanmod-sources:cjktty - Enable cjktty patches.
 sys-kernel/xanmod-sources:tt - Enable Default Xanmod Patches with TT CPU Scheduler.
 virtual/linux-sources:firmware - Install linux kernel firmware
 www-servers/woof:bzip2 - bzip2 decompression of the archive from woof
