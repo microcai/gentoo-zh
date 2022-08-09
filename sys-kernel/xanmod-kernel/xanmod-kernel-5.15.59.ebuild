@@ -6,6 +6,7 @@ EAPI=7
 inherit kernel-build python-any-r1 toolchain-funcs
 
 MY_P=linux-${PV%.*}
+#Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
 GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 4))
 XV="1"
 
