@@ -6,7 +6,8 @@ EAPI=7
 inherit kernel-build python-any-r1
 
 MY_P=linux-${PV%.*}
-GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 3))
+#Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
+GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 4))
 XV="1"
 
 DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
