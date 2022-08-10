@@ -4,3 +4,8 @@ app-emulation/deepin-wine6-stable
 # Huang Rui <vowstar@gmail.com> (2022-06-08)
 # Requires 32-bit multilib compatibility
 net-im/deepin-wine-wechat
+
+# qsdrqs <qsdrqs@gmail.com> (2022-07-31)
+# Requires 32-bit multilib compatibility
+app-emulation/deepin-wine5
+net-im/deepin-wine-qq

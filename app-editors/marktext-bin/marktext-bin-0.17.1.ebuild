@@ -12,25 +12,69 @@ SRC_URI="https://github.com/marktext/marktext/releases/download/v${PV}/${PN%-bin
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64"
-
-DEPEND="
-	>=x11-libs/gtk+-3.0:3
-	app-crypt/libsecret
-	x11-libs/libxkbfile
-	dev-libs/nss
-	net-print/cups
-"
-RDEPEND="${DEPEND}"
-BDEPEND=""
-
 S="${WORKDIR}"
 
+RDEPEND="
+	app-accessibility/at-spi2-atk:2
+	app-accessibility/at-spi2-core:2
+	dev-libs/atk
+	dev-libs/expat
+	dev-libs/nspr
+	dev-libs/nss
+	media-libs/alsa-lib
+	media-libs/mesa
+	net-print/cups
+	sys-apps/dbus[X]
+	x11-libs/cairo
+	x11-libs/gdk-pixbuf:2
+	x11-libs/gtk+:3[X]
+	x11-libs/libX11
+	x11-libs/libXcomposite
+	x11-libs/libXdamage
+	x11-libs/libXext
+	x11-libs/libXfixes
+	x11-libs/libXrandr
+	x11-libs/libdrm
+	x11-libs/libxcb
+	x11-libs/libxkbcommon
+	x11-libs/libxshmfence
+	x11-libs/pango
+"
+
+QA_PREBUILT="
+	opt/MarkText/resources/app.asar.unpacked/node_modules/*
+	opt/MarkText/swiftshader/libEGL.so
+	opt/MarkText/swiftshader/libGLESv2.so
+	opt/MarkText/chrome-sandbox
+	opt/MarkText/chrome_crashpad_handler
+	opt/MarkText/libEGL.so
+	opt/MarkText/libffmpeg.so
+	opt/MarkText/libGLESv2.so
+	opt/MarkText/libvk_swiftshader.so
+	opt/MarkText/libvulkan.so.1
+	opt/MarkText/marktext
+"
+
+src_prepare(){
+	default
+	unpack usr/share/doc/${PN%-bin}/changelog.gz
+}
+
 src_install(){
-	insinto "/opt"
-	doins -r "opt/MarkText"
-	fperms 0755 "/opt/MarkText/${PN%-bin}"
-	for is in 16 32 48 64 128 256 512; do
-		doicon -s ${is} usr/share/icons/hicolor/${is}x${is}/apps/${PN%-bin}.png
+	insinto /opt
+	doins -r opt/MarkText
+
+	insinto /usr/share
+	doins -r usr/share/icons
+
+	dodoc changelog
+	domenu usr/share/applications/${PN%-bin}.desktop
+
+	local f
+	for f in ${QA_PREBUILT}; do
+		fperms +x "/${f}"
 	done
-	domenu usr/share/applications/marktext.desktop
+	fperms u+s /opt/MarkText/chrome-sandbox
+
+	dosym ../../opt/MarkText/${PN%-bin} /usr/bin/${PN%-bin}
 }

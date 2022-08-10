@@ -21,14 +21,14 @@ QQ_INSTALLER="PCQQ2021"
 QQ_INSTALLER_PATH="c:/Program Files/Tencent/$QQ_INSTALLER-$QQ_VER.exe"
 export MIME_TYPE=""
 export DEB_PACKAGE_NAME="com.qq.im.deepin"
-export APPRUN_CMD="deepin-wine6-stable"
+export APPRUN_CMD="deepin-wine5"
 DISABLE_ATTACH_FILE_DIALOG=""
 
 export SPECIFY_SHELL_DIR=`dirname $START_SHELL_PATH`
 
 ARCHIVE_FILE_DIR="/opt/apps/$DEB_PACKAGE_NAME/files"
 
-export WINEDLLPATH=/opt/$APPRUN_CMD/lib:/opt/$APPRUN_CMD/lib64
+export WINEDLLPATH=/opt/$APPRUN_CMD/lib
 
 OpenWinecfg()
 {
