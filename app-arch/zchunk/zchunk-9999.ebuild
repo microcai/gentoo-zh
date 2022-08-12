@@ -8,7 +8,6 @@ if [[ ${PV} == 9999* ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/zchunk/zchunk.git"
 	EGIT_CHECKOUT_DIR=${PN}-${PV}
-	KEYWORDS=""
 else
 	SRC_URI="https://github.com/zchunk/zchunk/archive/refs/tags/${PV}.tar.gz -> ${PN}-${PV}.tar.gz"
 	KEYWORDS="~amd64"
