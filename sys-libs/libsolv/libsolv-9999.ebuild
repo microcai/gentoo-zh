@@ -8,7 +8,6 @@ if [[ ${PV} == 9999* ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/openSUSE/libsolv.git"
 	EGIT_CHECKOUT_DIR=${PN}-${PV}
-	KEYWORDS=""
 else
 	SRC_URI="https://github.com/openSUSE/libsolv/archive/refs/tags/${PV}.tar.gz -> libsolv-${PV}.tar.gz"
 	KEYWORDS="~amd64"
@@ -60,7 +59,6 @@ src_configure(){
 		-DENABLE_BZIP2_COMPRESSION=ON
 		-DENABLE_ZSTD_COMPRESSION=ON
 		-DENABLE_ZCHUNK_COMPRESSION=ON
-		-DENABLE_COMPLEX_DEPS=ON
 		-DWITH_SYSTEM_ZCHUNK=ON
 		-DWITH_LIBXML2=ON
 		-DMULTI_SEMANTICS=ON
