@@ -553,14 +553,6 @@ source = "regex"
 url = "http://othello-game.sourceforge.net/en/Download.html"
 regex = "([\\d.]+) is the latest stable version."
 
-["games-util/mangohud"]
-source = "github"
-github = "flightlessmango/MangoHud"
-use_latest_release = true
-prefix = "v"
-github_account = "liuyujielol"
-
-
 ["games-util/winegame-client-bin"]
 source = "regex"
 url = "https://winegame.net/downloads/"
