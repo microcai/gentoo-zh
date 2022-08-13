@@ -104,7 +104,6 @@ dev-vcs/lazygit-bin 0.35: lazygit, a simple terminal UI for git commands
 games-action/DDNet 16.2.2: DDraceNetwork, a cooperative racing mod of Teeworlds
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-misc/oh-my-git-bin 0.6.5: An interactive Git learning game!
-games-util/mangohud 0.6.6-r1: A Vulkan & OpenGL overlay for monitoring FPS,temperatures,CPU/GPU load and more.
 games-util/winegame-client-bin 0.5.9.4: An open source gaming platform for GNU/Linux
 kde-misc/plasma-applet-netspeed-widget 1.9 9999: Plasma 5 widget that displays the currently used network bandwidth.
 mail-client/thunderbird 99.0-r2: Thunderbird Mail Client
