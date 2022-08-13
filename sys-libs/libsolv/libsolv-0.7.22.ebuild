@@ -8,7 +8,6 @@ if [[ ${PV} == 9999* ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/openSUSE/libsolv.git"
 	EGIT_CHECKOUT_DIR=${PN}-${PV}
-	KEYWORDS=""
 else
 	SRC_URI="https://github.com/openSUSE/libsolv/archive/refs/tags/${PV}.tar.gz -> libsolv-${PV}.tar.gz"
 	KEYWORDS="~amd64"
@@ -33,6 +32,7 @@ BDEPEND="${DEPEND}"
 
 src_configure(){
 	mycmakeargs=(
+		-DCMAKE_C_FLAGS_RELEASE='-DNDEBUG' \
 		-DENABLE_PERL=ON
 		-DENABLE_PYTHON=ON
 		-DENABLE_RUBY=ON
@@ -41,6 +41,7 @@ src_configure(){
 		-DENABLE_RPMDB=ON
 		-DENABLE_RPMPKG=ON
 		-DENABLE_PUBKEY=ON
+		-DENABLE_COMPLEX_DEPS=1
 		-DENABLE_RPMDB_BYRPMHEADER=ON
 		-DENABLE_RPMDB_LIBRPM=ON
 		-DENABLE_RPMDB_BDB=ON
@@ -48,6 +49,7 @@ src_configure(){
 		-DENABLE_RPMMD=ON
 		-DENABLE_SUSEREPO=ON
 		-DENABLE_COMPS=ON
+		-DENABLE_HAIKU=OFF
 		-DENABLE_HELIXREPO=ON
 		-DENABLE_DEBIAN=ON
 		-DENABLE_MDKREPO=ON
@@ -60,10 +62,8 @@ src_configure(){
 		-DENABLE_BZIP2_COMPRESSION=ON
 		-DENABLE_ZSTD_COMPRESSION=ON
 		-DENABLE_ZCHUNK_COMPRESSION=ON
-		-DENABLE_COMPLEX_DEPS=ON
 		-DWITH_SYSTEM_ZCHUNK=ON
 		-DWITH_LIBXML2=ON
-		-DMULTI_SEMANTICS=ON
 	)
 	cmake_src_configure
 }
