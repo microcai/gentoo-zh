@@ -3,7 +3,7 @@ acct-group/n2n 0: System group: n2n
 acct-user/aptly 0: System user: aptly
 acct-user/n2n 0: System user: n2n
 app-admin/zenmonitor 1.4.2: Zen monitor is monitoring software for AMD Zen-based CPUs
-app-arch/zchunk 1.1.16 1.2.0 9999: A format designed for highly efficient deltas while maintaining good compression
+app-arch/zchunk 1.2.2 9999: A format designed for highly efficient deltas while maintaining good compression
 app-backup/snapper-gui 220626: GUI for snapper, a tool for Linux filesystem snapshot management
 app-crypt/archlinux-keyring 20211028: GnuPG keyring of Archlinux developer keys
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
@@ -187,7 +187,7 @@ sys-apps/mdp 9999: A command-line based markdown presentation tool
 sys-apps/pacman 6.0.1: Archlinux's binary package manager
 sys-apps/pacman-mirrorlist 20210509: Repository list for Archlinux's binary package manager
 sys-apps/yaourt 1.2.2: A pacman wrapper with extended features and AUR support
-sys-apps/zypper 1.14.51 1.14.52 9999: World's most powerful command line package manager
+sys-apps/zypper 1.14.55 9999: World's most powerful command line package manager
 sys-fs/coda 7.0.5: Coda is an advanced network file system, similar to NFS
 sys-fs/erofs-utils 1.3: Userspace tools for EROFS images
 sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
@@ -200,8 +200,8 @@ sys-kernel/xanmod-rt 5.15.12 5.15.14: Xanmod-RT, cjktty, uksm patchset for main 
 sys-kernel/xanmod-sources 5.15.54 5.15.59 5.18.16: Full XanMod source, including the Gentoo patchset and other patch options.
 sys-kernel/zenpower 0.1.12-r1: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
-sys-libs/libsolv 0.7.21 9999: Library for solving packages and reading repositories
-sys-libs/libzypp 17.29.1 17.29.5 9999: ZYpp Package Management library
+sys-libs/libsolv 0.7.22 9999: Library for solving packages and reading repositories
+sys-libs/libzypp 17.31.0 9999: ZYpp Package Management library
 sys-process/btop 1.2.8: Resources monitor. The C++ version of bashtop
 virtual/dist-kernel 5.15.59 5.18.16: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
