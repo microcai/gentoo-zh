@@ -881,6 +881,7 @@ github_account = "liuyujielol"
 source = "regex"
 url = "https://jp-minerals.org/vesta/en/download.html"
 regex = "ver. ([\\d.]+), built on"
+github_account = "CHN-beta"
 
 # TODO
 #["sci-libs/libticables2"]
