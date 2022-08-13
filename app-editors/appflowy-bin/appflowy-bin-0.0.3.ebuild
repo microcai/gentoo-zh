@@ -5,7 +5,7 @@ EAPI=8
 
 inherit desktop xdg
 
-MY_PN=${PN%-bin}
+MY_PN=AppFlowy
 
 DESCRIPTION="AppFlowy is an open-source alternative to Notion"
 HOMEPAGE="https://www.appflowy.io/"
