@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=print the IP addresses in a range
+EAPI=8
+HOMEPAGE=http://devel.ringlet.net/sysutils/prips/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RESTRICT=mirror
+SLOT=0
+SRC_URI=http://devel.ringlet.net/files/sys/prips/prips-1.2.0.tar.xz
+_md5_=e20ab05e31dc480b1c4fe01d5afe1022
