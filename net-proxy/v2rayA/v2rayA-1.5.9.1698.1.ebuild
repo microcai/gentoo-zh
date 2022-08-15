@@ -8,7 +8,7 @@ inherit systemd go-module yarn desktop xdg
 DESCRIPTION="web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel"
 HOMEPAGE="https://v2raya.org/"
 
-RESTRICT="primaryuri"
+RESTRICT="mirror"
 
 # sed -re 's/^(\S*) (\S*) (\S*)/"\1 \2"/g' go.sum
 # echo "goproxy https://goproxy.cn/" >> /etc/portage/mirrors
@@ -50,6 +50,8 @@ EGO_SUM=(
 	"github.com/dgryski/go-metro v0.0.0-20200812162917-85c65e2d0165"
 	"github.com/dgryski/go-rc2 v0.0.0-20150621095337-8a9021637152"
 	"github.com/dgryski/go-rc2 v0.0.0-20150621095337-8a9021637152/go.mod"
+	"github.com/djherbis/times v1.5.0"
+	"github.com/djherbis/times v1.5.0/go.mod"
 	"github.com/dvyukov/go-fuzz v0.0.0-20210103155950-6a8e9d1f2415/go.mod"
 	"github.com/ebfe/bcrypt_pbkdf v0.0.0-20140212075826-3c8d2dcb253a"
 	"github.com/ebfe/rc2 v0.0.0-20131011165748-24b9757f5521"
@@ -71,8 +73,6 @@ EGO_SUM=(
 	"github.com/gin-gonic/gin v1.7.1/go.mod"
 	"github.com/go-chi/chi/v5 v5.0.4"
 	"github.com/go-chi/render v1.0.1"
-	"github.com/go-gitea/bolt v0.0.0-20170420010917-ccd680d8c1a0"
-	"github.com/go-gitea/bolt v0.0.0-20170420010917-ccd680d8c1a0/go.mod"
 	"github.com/go-ole/go-ole v1.2.6"
 	"github.com/go-ole/go-ole v1.2.6/go.mod"
 	"github.com/go-playground/assert/v2 v2.0.1"
@@ -158,7 +158,6 @@ EGO_SUM=(
 	"github.com/mattn/go-sqlite3 v2.0.3+incompatible/go.mod"
 	"github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421"
 	"github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421/go.mod"
-	"github.com/modern-go/reflect2 v0.0.0-20180701023420-4b7aa43c6742"
 	"github.com/modern-go/reflect2 v0.0.0-20180701023420-4b7aa43c6742/go.mod"
 	"github.com/modern-go/reflect2 v1.0.2"
 	"github.com/modern-go/reflect2 v1.0.2/go.mod"
@@ -232,8 +231,8 @@ EGO_SUM=(
 	"github.com/v2fly/v2ray-core/v4 v4.42.2-0.20210928173456-a9979057dcaa/go.mod"
 	"github.com/v2rayA/RoutingA v1.0.2"
 	"github.com/v2rayA/RoutingA v1.0.2/go.mod"
-	"github.com/v2rayA/beego/v2 v2.0.4"
-	"github.com/v2rayA/beego/v2 v2.0.4/go.mod"
+	"github.com/v2rayA/beego/v2 v2.0.7"
+	"github.com/v2rayA/beego/v2 v2.0.7/go.mod"
 	"github.com/v2rayA/shadowsocksR v1.0.4"
 	"github.com/v2rayA/shadowsocksR v1.0.4/go.mod"
 	"github.com/v2rayA/v2ray-lib v0.0.0-20211227083129-d4f59fbf62b8"
@@ -246,12 +245,14 @@ EGO_SUM=(
 	"github.com/yusufpapurcu/wmi v1.2.2/go.mod"
 	"gitlab.com/yawning/chacha20.git v0.0.0-20190903091407-6d1cb28dc72c"
 	"gitlab.com/yawning/chacha20.git v0.0.0-20190903091407-6d1cb28dc72c/go.mod"
+	"go.etcd.io/bbolt v1.3.6"
+	"go.etcd.io/bbolt v1.3.6/go.mod"
 	"go.opentelemetry.io/proto/otlp v0.7.0/go.mod"
 	"go.starlark.net v0.0.0-20210901212718-87f333178d59"
 	"go4.org/intern v0.0.0-20211027215823-ae77deb06f29"
 	"go4.org/intern v0.0.0-20211027215823-ae77deb06f29/go.mod"
-	"go4.org/unsafe/assume-no-moving-gc v0.0.0-20211027215541-db492cf91b37"
-	"go4.org/unsafe/assume-no-moving-gc v0.0.0-20211027215541-db492cf91b37/go.mod"
+	"go4.org/unsafe/assume-no-moving-gc v0.0.0-20220617031537-928513b29760"
+	"go4.org/unsafe/assume-no-moving-gc v0.0.0-20220617031537-928513b29760/go.mod"
 	"golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod"
 	"golang.org/x/crypto v0.0.0-20191011191535-87dc89f01550/go.mod"
 	"golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9/go.mod"
@@ -304,6 +305,7 @@ EGO_SUM=(
 	"golang.org/x/sys v0.0.0-20200116001909-b77594299b42/go.mod"
 	"golang.org/x/sys v0.0.0-20200323222414-85ca7c5b95cd/go.mod"
 	"golang.org/x/sys v0.0.0-20200413165638-669c56c373c4/go.mod"
+	"golang.org/x/sys v0.0.0-20200923182605-d9f96fdee20d/go.mod"
 	"golang.org/x/sys v0.0.0-20200930185726-fdedc70b468f/go.mod"
 	"golang.org/x/sys v0.0.0-20201119102817-f84b799fce68/go.mod"
 	"golang.org/x/sys v0.0.0-20201202213521-69691e467435/go.mod"
@@ -1531,6 +1533,7 @@ EYARN_LOCK=(
 	"unset-value/-/unset-value-1.0.0.tgz"
 	"upath/-/upath-1.2.0.tgz"
 	"upper-case/-/upper-case-1.1.3.tgz"
+	"urijs/-/urijs-1.19.11.tgz"
 	"uri-js/-/uri-js-4.4.1.tgz"
 	"urix/-/urix-0.1.0.tgz"
 	"url-loader/-/url-loader-2.3.0.tgz"
@@ -1656,32 +1659,19 @@ yarn_set_globals
 
 SRC_URI="
 	https://github.com/v2rayA/v2rayA/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://registry.nlark.com/css-loader/download/css-loader-5.2.7.tgz
-	https://registry.nlark.com/dayjs/download/dayjs-1.10.6.tgz
-	https://registry.nlark.com/nanoid/download/nanoid-3.1.23.tgz
-	https://registry.nlark.com/postcss/download/postcss-8.3.6.tgz
-	https://registry.nlark.com/postcss-selector-parser/download/postcss-selector-parser-6.0.6.tgz
-	https://registry.nlark.com/schema-utils/download/schema-utils-3.1.1.tgz
-	https://registry.nlark.com/@types/json-schema/download/@types/json-schema-7.0.9.tgz
-	https://registry.npm.taobao.org/icss-utils/download/icss-utils-5.1.0.tgz
-	https://registry.npm.taobao.org/lru-cache/download/lru-cache-6.0.0.tgz
-	https://registry.npm.taobao.org/postcss-modules-extract-imports/download/postcss-modules-extract-imports-3.0.0.tgz
-	https://registry.npm.taobao.org/postcss-modules-local-by-default/download/postcss-modules-local-by-default-4.0.0.tgz
-	https://registry.npm.taobao.org/postcss-modules-scope/download/postcss-modules-scope-3.0.0.tgz
-	https://registry.npm.taobao.org/postcss-modules-values/download/postcss-modules-values-4.0.0.tgz
-	https://registry.npm.taobao.org/semver/download/semver-7.3.5.tgz
-	https://registry.npm.taobao.org/source-map-js/download/source-map-js-0.6.2.tgz
 	${EGO_SUM_SRC_URI}
 	${EYARN_LOCK_SRC_URI}
 "
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+# release candidate (_rc1)
+KEYWORDS=""
 IUSE="+v2ray xray systemd"
 REQUIRED_USE="|| ( v2ray xray )"
 
 DEPEND=""
-RDEPEND="${DEPEND}
+RDEPEND="
+	${DEPEND}
 	v2ray? ( || (
 		net-proxy/v2ray
 		net-proxy/v2ray-bin
@@ -1689,7 +1679,7 @@ RDEPEND="${DEPEND}
 	xray? ( >=net-proxy/Xray-1.4.3 )
 "
 BDEPEND="
-	<dev-lang/go-1.18:*
+	>=dev-lang/go-1.18:*
 	>=net-libs/nodejs-14.17.5-r1
 	sys-apps/yarn
 "
@@ -1697,14 +1687,18 @@ BDEPEND="
 pkg_pretend() {
 	if [[ -z "${REPLACING_VERSIONS}" ]]; then
 		cngoproxyset=0
+		npmmirrorset=0
 		if [[ -e "${ROOT}"/etc/portage/mirrors ]]; then
 			grep '^\s*goproxy\s' "${ROOT}"/etc/portage/mirrors >/dev/null 2>&1
-			grep '^\s*yarn\s' "${ROOT}"/etc/portage/mirrors >/dev/null 2>&1
 			if [[ $? -eq 0 ]]; then
 				cngoproxyset=1
 			fi
+			grep '^\s*yarn\s' "${ROOT}"/etc/portage/mirrors >/dev/null 2>&1
+			if [[ $? -eq 0 ]]; then
+				npmmirrorset=1
+			fi
 		fi
-		if [[ ${cngoproxyset} -eq 0 ]]; then
+		if [[ ${cngoproxyset} -eq 0 || ${npmmirrorset} -eq 0 ]]; then
 			ewarn "You may need to set a goproxy for fetching go modules"
 			ewarn "or a yarn mirror for fetching yarn packages:"
 			ewarn "  echo -e '\\\\ngoproxy https://goproxy.cn/' >> /etc/portage/mirrors"
@@ -1719,15 +1713,6 @@ YARN_WORKDIR="${S}/gui"
 src_unpack() {
 	unpack "${P}.tar.gz"
 
-	local v2raya_deps=(
-		"dayjs-1.10.6.tgz"
-		"nanoid-3.1.23.tgz"
-		"postcss-8.3.6.tgz"
-		"postcss-selector-parser-6.0.6.tgz"
-		"json-schema-7.0.9.tgz"
-		"source-map-js-0.6.2.tgz"
-	)
-	yarn_mirror_add_pkgs "${v2raya_deps[@]}"
 	yarn_set_offline_mirror
 
 	go-module_setup_proxy
@@ -1750,7 +1735,7 @@ src_compile() {
 	done
 
 	cd "${S}/service"
-	CGO_ENABLED=0 go build -ldflags "-X github.com/v2rayA/v2rayA/conf.Version='${PV}' -s -w" -o v2raya || die
+	ego build -ldflags "-X github.com/v2rayA/v2rayA/conf.Version='${PV}' -s -w" -o v2raya || die
 }
 
 src_install() {
@@ -1761,12 +1746,6 @@ src_install() {
 		systemd_dounit "${S}"/install/universal/v2raya.service
 		systemd_dounit "${S}"/install/universal/v2raya-lite.service
 	fi
-
-	#thanks to @Universebenzene
-	newinitd "${FILESDIR}/${PN}.initd" v2raya
-	newinitd "${FILESDIR}/${PN}-user.initd" v2raya-user
-	newconfd "${FILESDIR}/${PN}.confd" v2raya
-	newconfd "${FILESDIR}/${PN}-user.confd" v2raya-user
 
 	newicon -s 512 "${S}"/gui/public/img/icons/android-chrome-512x512.png v2raya.png
 	domenu "${S}"/install/universal/v2raya.desktop

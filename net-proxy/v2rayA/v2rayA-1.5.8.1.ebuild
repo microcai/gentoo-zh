@@ -8,7 +8,7 @@ inherit systemd go-module yarn desktop xdg
 DESCRIPTION="web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel"
 HOMEPAGE="https://v2raya.org/"
 
-#RESTRICT="primaryuri"
+RESTRICT="mirror"
 
 # sed -re 's/^(\S*) (\S*) (\S*)/"\1 \2"/g' go.sum
 # echo "goproxy https://goproxy.cn/" >> /etc/portage/mirrors
@@ -1667,7 +1667,8 @@ IUSE="+v2ray xray systemd"
 REQUIRED_USE="|| ( v2ray xray )"
 
 DEPEND=""
-RDEPEND="${DEPEND}
+RDEPEND="
+	${DEPEND}
 	v2ray? ( || (
 		net-proxy/v2ray
 		net-proxy/v2ray-bin
@@ -1683,14 +1684,18 @@ BDEPEND="
 pkg_pretend() {
 	if [[ -z "${REPLACING_VERSIONS}" ]]; then
 		cngoproxyset=0
+		npmmirrorset=0
 		if [[ -e "${ROOT}"/etc/portage/mirrors ]]; then
 			grep '^\s*goproxy\s' "${ROOT}"/etc/portage/mirrors >/dev/null 2>&1
-			grep '^\s*yarn\s' "${ROOT}"/etc/portage/mirrors >/dev/null 2>&1
 			if [[ $? -eq 0 ]]; then
 				cngoproxyset=1
 			fi
+			grep '^\s*yarn\s' "${ROOT}"/etc/portage/mirrors >/dev/null 2>&1
+			if [[ $? -eq 0 ]]; then
+				npmmirrorset=1
+			fi
 		fi
-		if [[ ${cngoproxyset} -eq 0 ]]; then
+		if [[ ${cngoproxyset} -eq 0 || ${npmmirrorset} -eq 0 ]]; then
 			ewarn "You may need to set a goproxy for fetching go modules"
 			ewarn "or a yarn mirror for fetching yarn packages:"
 			ewarn "  echo -e '\\\\ngoproxy https://goproxy.cn/' >> /etc/portage/mirrors"
@@ -1727,7 +1732,7 @@ src_compile() {
 	done
 
 	cd "${S}/service"
-	CGO_ENABLED=0 go build -ldflags "-X github.com/v2rayA/v2rayA/conf.Version='${PV}' -s -w" -o v2raya || die
+	ego build -ldflags "-X github.com/v2rayA/v2rayA/conf.Version='${PV}' -s -w" -o v2raya || die
 }
 
 src_install() {
