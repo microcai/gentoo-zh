@@ -27,14 +27,6 @@ S="${WORKDIR}"
 
 src_configure() {
 	mv "${S}/Clash for Windows-${PV}-x64-linux" "${S}/${PN}"
-	#cd "${S}/${PN}/resources/static/files/linux/common/service-installer"
-	#for f in $(find ../../x64/service/clash-core-service -type f) ; do
-	#	cp ../../x64/service/clash-core-service scripts/
-	#done
-	#sed -i '26s/\/usr\/lib/\/lib/g' installer.sh
-	#sed -i '31s/\/usr\/lib/\/lib/g' installer.sh
-	#sed -i '53,54s/\/usr\/lib/\/lib/g' installer.sh
-	#sed -i '75,76s/\/usr\/lib/\/lib/g' installer.sh
 }
 
 src_install() {
