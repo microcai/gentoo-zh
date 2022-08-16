@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-08-16 13:36:13 CST)
+(The last generation time: 2022-08-16 16:26:52 CST)
 
 ### Packages
 
@@ -261,6 +261,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/netease-cloud-music-gtk          | 1.2.2                                     |        | https://github.com/gmg137/netease-cloud-music-gtk                                       | netease cloud music player based on Rust & GTK3 for Linux
    media-plugins/osdlyrics                    | 0.5.10-r1                                 | RD     | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
+                                              | 0.5.11                                    |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/termusic                         | 0.6.12                                    |        | https://github.com/tramhao/termusic                                                     | Music Player TUI written in Rust
