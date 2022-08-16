@@ -197,7 +197,7 @@ CRATES="
 
 inherit cargo desktop xdg
 
-DESCRIPTION="netease cloud music player based on Rust & GTK3 for Linux"
+DESCRIPTION="netease cloud music player based on Rust & GTK for Linux"
 HOMEPAGE="https://github.com/gmg137/netease-cloud-music-gtk"
 SRC_URI="
 	https://github.com/gmg137/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz

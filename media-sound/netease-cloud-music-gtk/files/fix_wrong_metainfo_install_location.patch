@@ -1,0 +1,23 @@
+From 762d3c7a8b5e599960d5877391a647a6876bf0fb Mon Sep 17 00:00:00 2001
+From: liuyujielol <2073201758GD@gmail.com>
+Date: Tue, 16 Aug 2022 16:57:13 +0800
+Subject: [PATCH] fix wrong install location for metainfo
+
+Signed-off-by: liuyujielol <2073201758GD@gmail.com>
+---
+ data/meson.build | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/data/meson.build b/data/meson.build
+index b9cb54a..cb5f3ff 100644
+--- a/data/meson.build
++++ b/data/meson.build
+@@ -29,7 +29,7 @@ appstream_file = i18n.merge_file(
+   output: 'com.gitee.gmg137.NeteaseCloudMusicGtk4.appdata.xml',
+   po_dir: '../po',
+   install: true,
+-  install_dir: join_paths(get_option('datadir'), 'appdata')
++  install_dir: join_paths(get_option('datadir'), 'metainfo')
+ )
+
+ appstream_util = find_program('appstream-util', required: false)

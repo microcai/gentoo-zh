@@ -1,0 +1,25 @@
+From f6edc5ecddf500dd5d2c987c90a684005e6e9a57 Mon Sep 17 00:00:00 2001
+From: liuyujielol <2073201758GD@gmail.com>
+Date: Tue, 16 Aug 2022 16:30:29 +0800
+Subject: [PATCH] remove cargo_home env in meson build
+
+Signed-off-by: liuyujielol <2073201758GD@gmail.com>
+---
+ build-aux/cargo.sh | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/build-aux/cargo.sh b/build-aux/cargo.sh
+index 06f740b..a578083 100644
+--- a/build-aux/cargo.sh
++++ b/build-aux/cargo.sh
+@@ -3,8 +3,8 @@
+ export MESON_BUILD_ROOT="$1"
+ export MESON_SOURCE_ROOT="$2"
+ export CARGO_TARGET_DIR="$MESON_BUILD_ROOT"/target
+-export CARGO_HOME="$MESON_BUILD_ROOT"/cargo-home
+-export CARGO_HOME="$HOME"/.cargo
++#export CARGO_HOME="$MESON_BUILD_ROOT"/cargo-home
++#export CARGO_HOME="$HOME"/.cargo
+ export OUTPUT="$3"
+ export BUILDTYPE="$4"
+ export APP_BIN="$5"
