@@ -21,6 +21,6 @@ src_configure() { :; }
 src_compile() { :; }
 
 src_install() {
-	insinto /usr/share/icons
-	doins -r ./Nordzy
+	insinto /usr/share/icons/Nordzy
+	doins -r ./
 }
