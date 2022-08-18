@@ -1664,8 +1664,7 @@ SRC_URI="
 "
 LICENSE="AGPL-3"
 SLOT="0"
-# release candidate (_rc1)
-KEYWORDS=""
+KEYWORDS="~amd64"
 IUSE="+v2ray xray systemd"
 REQUIRED_USE="|| ( v2ray xray )"
 
