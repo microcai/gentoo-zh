@@ -21,7 +21,7 @@ SRC_URI="${MOZ_SRC_BASE_URI}/source/${MOZ_P}.source.tar.xz"
 
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="https://www.thunderbird.net"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 SLOT="beta"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 
