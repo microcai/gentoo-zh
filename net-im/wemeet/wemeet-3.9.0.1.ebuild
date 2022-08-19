@@ -92,7 +92,7 @@ fi;
 	for i in 16 32 64 128 256; do
 		png_file="opt/${PN}/icons/hicolor/${i}x${i}/mimetypes/wemeetapp.png"
 		if [ -e "${png_file}" ]; then
-			newicon -s "${i}" "${png_file}" wemeetapp
+			newicon -s "${i}" "${png_file}" "wemeetapp.png"
 		fi
 	done
 }
