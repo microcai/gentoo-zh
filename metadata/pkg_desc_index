@@ -101,7 +101,7 @@ dev-util/rust-analyzer 20220815 99999999: An experimental Rust compiler front-en
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-vcs/lazygit 0.35: lazygit, a simple terminal UI for git commands
 dev-vcs/lazygit-bin 0.35: lazygit, a simple terminal UI for git commands
-games-action/DDNet 16.2.2: DDraceNetwork, a cooperative racing mod of Teeworlds
+games-action/DDNet 16.3: DDraceNetwork, a cooperative racing mod of Teeworlds
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-misc/oh-my-git-bin 0.6.5: An interactive Git learning game!
 games-util/winegame-client-bin 0.5.9.4: An open source gaming platform for GNU/Linux
