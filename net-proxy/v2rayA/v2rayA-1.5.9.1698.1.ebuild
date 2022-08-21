@@ -1746,6 +1746,12 @@ src_install() {
 		systemd_dounit "${S}"/install/universal/v2raya-lite.service
 	fi
 
+	#thanks to @Universebenzene
+	newinitd "${FILESDIR}/${PN}.initd" v2raya
+	newinitd "${FILESDIR}/${PN}-user.initd" v2raya-user
+	newconfd "${FILESDIR}/${PN}.confd" v2raya
+	newconfd "${FILESDIR}/${PN}-user.confd" v2raya-user
+
 	newicon -s 512 "${S}"/gui/public/img/icons/android-chrome-512x512.png v2raya.png
 	domenu "${S}"/install/universal/v2raya.desktop
 }
