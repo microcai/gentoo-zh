@@ -19,8 +19,17 @@ KEYWORDS="-* ~amd64"
 RESTRICT="bindist test"
 
 DEPEND="
+	dev-qt/qtconcurrent:5
+	dev-qt/qtcore:5
+	dev-qt/qtgui:5
+	dev-qt/qtnetwork:5
+	dev-qt/qtpositioning:5
+	dev-qt/qtprintsupport:5
+	dev-qt/qtwebchannel:5
 	dev-qt/qtwebengine:5
+	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
+	dev-qt/qtxml:5
 	media-sound/pulseaudio
 	x11-libs/libXinerama
 	x11-libs/libXrandr
