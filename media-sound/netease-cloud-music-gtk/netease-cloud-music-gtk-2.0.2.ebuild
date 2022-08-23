@@ -7,15 +7,16 @@ CRATES="
 	adler-1.0.2
 	adler32-1.2.0
 	aho-corasick-0.7.18
-	anyhow-1.0.61
+	anyhow-1.0.62
 	async-channel-1.7.1
+	atty-0.2.14
 	autocfg-1.1.0
 	base64-0.13.0
 	bit_field-0.10.1
 	bitflags-1.3.2
 	block-0.1.6
-	bumpalo-3.10.0
-	bytemuck-1.11.0
+	bumpalo-3.11.0
+	bytemuck-1.12.1
 	byteorder-1.4.3
 	bytes-1.2.1
 	cache-padded-1.2.0
@@ -36,10 +37,11 @@ CRATES="
 	curl-sys-0.4.56+curl-7.83.1
 	dbus-0.6.5
 	deflate-1.0.0
-	either-1.7.0
+	either-1.8.0
 	encoding_rs-0.8.31
+	env_logger-0.9.0
 	event-listener-2.5.3
-	exr-1.4.2
+	exr-1.5.0
 	fastrand-1.8.0
 	field-offset-0.3.4
 	flate2-1.0.24
@@ -49,14 +51,14 @@ CRATES="
 	foreign-types-shared-0.1.1
 	form_urlencoded-1.0.1
 	fragile-1.2.1
-	futures-channel-0.3.21
-	futures-core-0.3.21
-	futures-executor-0.3.21
-	futures-io-0.3.21
+	futures-channel-0.3.23
+	futures-core-0.3.23
+	futures-executor-0.3.23
+	futures-io-0.3.23
 	futures-lite-1.12.0
-	futures-sink-0.3.21
-	futures-task-0.3.21
-	futures-util-0.3.21
+	futures-sink-0.3.23
+	futures-task-0.3.23
+	futures-util-0.3.23
 	gdk-pixbuf-0.15.11
 	gdk-pixbuf-sys-0.15.10
 	gdk4-0.4.8
@@ -93,19 +95,19 @@ CRATES="
 	html-escape-0.2.11
 	http-0.2.8
 	httpdate-1.0.2
+	humantime-2.1.0
 	idna-0.2.3
 	image-0.24.3
-	inflate-0.4.5
 	instant-0.1.12
 	isahc-1.7.2
 	itoa-1.0.3
 	jpeg-decoder-0.2.6
 	js-sys-0.3.59
 	lazy_static-1.4.0
-	lebe-0.5.1
+	lebe-0.5.2
 	libadwaita-0.1.1
 	libadwaita-sys-0.1.0
-	libc-0.2.131
+	libc-0.2.132
 	libdbus-sys-0.2.2
 	libnghttp2-sys-0.1.7+1.45.0
 	libz-sys-1.1.8
@@ -128,7 +130,7 @@ CRATES="
 	objc-0.2.7
 	objc-foundation-0.1.1
 	objc_id-0.1.1
-	once_cell-1.13.0
+	once_cell-1.13.1
 	openssl-0.10.41
 	openssl-macros-0.1.0
 	openssl-probe-0.1.5
@@ -139,14 +141,14 @@ CRATES="
 	parking-2.0.0
 	paste-1.0.8
 	percent-encoding-2.1.0
-	pest-2.2.1
-	pin-project-1.0.11
-	pin-project-internal-1.0.11
+	pest-2.3.0
+	pin-project-1.0.12
+	pin-project-internal-1.0.12
 	pin-project-lite-0.2.9
 	pin-utils-0.1.0
 	pkg-config-0.3.25
 	png-0.17.5
-	polling-2.2.0
+	polling-2.3.0
 	ppv-lite86-0.2.16
 	pretty-hex-0.3.0
 	proc-macro-crate-1.2.1
@@ -171,9 +173,9 @@ CRATES="
 	scopeguard-1.1.0
 	semver-0.11.0
 	semver-parser-0.10.2
-	serde-1.0.143
-	serde_derive-1.0.143
-	serde_json-1.0.83
+	serde-1.0.144
+	serde_derive-1.0.144
+	serde_json-1.0.85
 	slab-0.4.7
 	sluice-0.5.5
 	smallvec-1.9.0
@@ -182,6 +184,7 @@ CRATES="
 	syn-1.0.99
 	system-deps-6.0.2
 	temp-dir-0.1.11
+	termcolor-1.1.3
 	thiserror-1.0.32
 	thiserror-impl-1.0.32
 	threadpool-1.8.1
@@ -214,6 +217,7 @@ CRATES="
 	wepoll-ffi-0.1.2
 	winapi-0.3.9
 	winapi-i686-pc-windows-gnu-0.4.0
+	winapi-util-0.1.5
 	winapi-x86_64-pc-windows-gnu-0.4.0
 	windows-sys-0.36.1
 	windows_aarch64_msvc-0.36.1
@@ -229,7 +233,7 @@ DESCRIPTION="netease cloud music player based on Rust & GTK for Linux"
 HOMEPAGE="https://github.com/gmg137/netease-cloud-music-gtk"
 SRC_URI="
 	https://github.com/gmg137/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/liuyujielol/vendors/releases/download/${P}/${P}-deps.tar.gz
+	https://github.com/liuyujielol/vendors/releases/download/${PN}/${P}-deps.tar.gz
 	$(cargo_crate_uris ${CRATES})
 "
 
@@ -279,7 +283,7 @@ src_prepare() {
 	local PATCHES=(
 		"${FILESDIR}/remove_cargo_home_in_build_env.patch"
 		"${FILESDIR}/fix_wrong_metainfo_install_location.patch"
-		"${FILESDIR}/fix_set_bit_rate.patch"
+		"${FILESDIR}/dot_desktop_category.patch"
 	)
 	default
 	# generate Cargo.lock needed by meson
