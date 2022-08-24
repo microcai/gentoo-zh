@@ -5,4 +5,7 @@
         <email>raymond@zozx.top</email>
         <name>Raymond</name>
     </maintainer>
+    <use>
+        <flag name="tun">Enable TUN support.</flag>
+    </use>
 </pkgmetadata>
