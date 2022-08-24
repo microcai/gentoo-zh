@@ -150,6 +150,7 @@ net-p2p/amule-dlp:stats - Enable statistic reporting
 net-p2p/n2n:openssl - Use openssl support
 net-p2p/qbittorrent-enhanced:webui - Enable the Web UI
 net-proxy/clash:goamd64 - detect golang arch level on amd64 cpus by CPU_FLAGS_X86
+net-proxy/clash-for-windows-bin:tun - Enable TUN support.
 net-proxy/make-proxy:client - Add make proxy client support
 net-proxy/make-proxy:server - Add make proxy server support
 net-proxy/shadowsocks-rust:redir - Enable redir protocol for sslocal (transparent proxy)
