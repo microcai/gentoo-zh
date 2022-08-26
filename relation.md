@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-08-26 21:36:21 CST)
+(The last generation time: 2022-08-27 02:21:39 CST)
 
 ### Packages
 
@@ -347,6 +347,7 @@
  net-print/epson-inkjet-printer_201207w       | 1.0.0                                     |        | http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX                              | Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash                              | 1.11.4                                    |        | https://github.com/Dreamacro/clash                                                      | A rule-based tunnel in Go.
+                                              | 1.11.8                                    |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-for-windows-bin              | 0.19.26                                   |        | https://github.com/Fndroid/clash_for_windows_pkg                                        | A Windows/macOS/Linux GUI based on Clash and Electron.
                                               | 0.19.27                                   |        |                                                                                         |
