@@ -193,15 +193,15 @@ sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/liquorix-sources 5.19.2 5.19.3: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 31: Modular initramfs image creation utility
-sys-kernel/xanmod-kernel 5.15.59 5.18.16: XanMod lts kernel built with Gentoo patches and cjktty
+sys-kernel/xanmod-kernel 5.15.61 5.18.19: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 5.15.12 5.15.14: Xanmod-RT, cjktty, uksm patchset for main kernel tree
-sys-kernel/xanmod-sources 5.15.54 5.15.59 5.18.16: Full XanMod source, including the Gentoo patchset and other patch options.
+sys-kernel/xanmod-sources 5.15.54 5.15.61 5.18.19: Full XanMod source, including the Gentoo patchset and other patch options.
 sys-kernel/zenpower 0.1.12-r1: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libsolv 0.7.22 9999: Library for solving packages and reading repositories
 sys-libs/libzypp 17.31.0 9999: ZYpp Package Management library
 sys-process/btop 1.2.8: Resources monitor. The C++ version of bashtop
-virtual/dist-kernel 5.15.59 5.18.16: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 5.15.61 5.18.19: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 www-servers/darkhttpd 1.13: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
