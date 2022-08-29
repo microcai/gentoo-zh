@@ -3,7 +3,7 @@
 # If you want to pass any options while running the v2raya daemon, you can do so here by setting the ${V2RAYA_OPT} variable.
 # e.g.: V2RAYA_OPTS="--address 0.0.0.0:2017 --v2ray-bin /usr/bin/v2ray"
 #
-V2RAYA_OPTS="--log-disable-timestamp"
+V2RAYA_OPTS="--log-disable-timestamp --log-file /var/log/v2raya/v2raya.log"
 
 # Note: Quotes is not encouraged inside the variables here.
 #
