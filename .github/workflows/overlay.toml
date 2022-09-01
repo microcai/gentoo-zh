@@ -1005,6 +1005,13 @@ github_account = "Linerre"
 #["virtual/dist-kernel"]
 #["virtual/linux-sources"]
 
+["www-apps/openvscode-server-bin"]
+source = "github"
+github = "gitpod-io/openvscode-server"
+use_latest_release = true
+prefix = "openvscode-server-v"
+github_account = "liuyujielol"
+
 ["www-servers/darkhttpd"]
 source = "github"
 github = "emikulic/darkhttpd"
