@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-09-01 08:57:13 CST)
+(The last generation time: 2022-09-01 13:24:37 CST)
 
 ### Packages
 
@@ -425,6 +425,8 @@
    sys-kernel/xanmod-sources                  | 5.15.54                                   | RD     | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
                                               | 5.15.61                                   |        |                                                                                         |
                                               | 5.18.19                                   |        |                                                                                         |
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ www-apps/openvscode-server-bin               | 1.70.1                                    |        | https://github.com/gitpod-io/openvscode-server                                          | VS Code that runs a server on remote and allows access through a web browser
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                        | 1.13                                      |        | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
