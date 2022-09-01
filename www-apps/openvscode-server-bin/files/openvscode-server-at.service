@@ -1,0 +1,14 @@
+[Unit]
+Description=VS Code that runs a server on remote and allows access through a web browser
+Documentation=https://github.com/gitpod-io/openvscode-server/tree/docs
+After=network.target nss-lookup.target iptables.service ip6tables.service
+Wants=network.target
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/openvscode-server --port 3000 --host localhost
+Restart=on-failure
+User=%i
+
+[Install]
+WantedBy=multi-user.target
