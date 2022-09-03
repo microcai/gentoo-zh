@@ -1,4 +1,4 @@
-BDEPEND=>=dev-lang/go-1.16 app-arch/unzip
+BDEPEND=>=dev-lang/go-1.18 app-arch/unzip
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=lazygit, a simple terminal UI for git commands
 EAPI=8
@@ -10,5 +10,5 @@ RDEPEND=!dev-vcs/lazygit-bin dev-vcs/git
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/jesseduffield/lazygit/archive/refs/tags/v0.35.tar.gz -> lazygit-0.35.tar.gz
-_eclasses_=go-module	a13d34fe4e2996720e1ca6c53b9ea95a
+_eclasses_=go-module	05668e36c51c78c9681fdf4aefa0abec
 _md5_=9ec84309b8d91e0f49874b6166118682
