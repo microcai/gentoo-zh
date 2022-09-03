@@ -4,7 +4,7 @@
 EAPI="8"
 K_WANT_GENPATCHES="base extras"
 #Note: to bump xanmod, check K_GENPATCHES_VER in sys-kernel/gentoo-sources
-K_GENPATCHES_VER="58"
+K_GENPATCHES_VER="68"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 ETYPE="sources"
@@ -17,7 +17,7 @@ HOMEPAGE="https://xanmod.org
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
 
-IUSE="cjktty tt"
+IUSE="cjktty"
 SLOT="stable"
 XANMOD_VERSION="1"
 XANMOD_URI="https://github.com/xanmod/linux/releases/download/"
@@ -27,7 +27,6 @@ SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
 	${GENPATCHES_URI}
 	${XANMOD_URI}/${OKV}${XANMOD_VERSION}/patch-${OKV}${XANMOD_VERSION}.xz
-	${XANMOD_URI}/${OKV}${XANMOD_VERSION}-tt/patch-${OKV}${XANMOD_VERSION}-tt.xz
 	${CJKTTY_URI}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch
 "
 
@@ -49,11 +48,7 @@ src_unpack() {
 		UNIPATCH_LIST+=" ${DISTDIR}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch"
 	fi
 
-	if use tt; then
-		UNIPATCH_LIST+=" ${DISTDIR}/patch-${OKV}${XANMOD_VERSION}-tt.xz"
-	else
-		UNIPATCH_LIST+=" ${DISTDIR}/patch-${OKV}${XANMOD_VERSION}.xz"
-	fi
+	UNIPATCH_LIST+=" ${DISTDIR}/patch-${OKV}${XANMOD_VERSION}.xz"
 
 	unipatch "${UNIPATCH_LIST}"
 	unpack_fix_install_path
