@@ -68,8 +68,11 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
-	pwd
 	ln -s "${DISTDIR}/fcitx-data-en_dict-20121020.tar.gz" src/modules/spell/en_dict-20121020.tar.gz || die
+
+	local PATCHES=(
+		"${FILESDIR}/fix-5.0.19-missing-includes-for-cstdint.patch"
+	)
 
 	cmake_src_prepare
 }
