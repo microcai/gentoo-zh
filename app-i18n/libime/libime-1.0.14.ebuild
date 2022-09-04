@@ -1,22 +1,17 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-inherit cmake xdg-utils git-r3
-EGIT_REPO_URI="https://github.com/fcitx/libime.git"
-
-SRC_URI="https://download.fcitx-im.org/data/lm_sc.arpa-20220630.tar.xz -> fcitx5-lm_sc.arpa-20220630.tar.xz
-https://download.fcitx-im.org/data/dict_sc.txt-20220628.tar.xz -> fcitx5-dict_sc.txt-20220628.tar.xz
-https://download.fcitx-im.org/data/table.tar.gz -> fcitx5-table.tar.gz
-"
-EGIT_SUBMODULES=(src/libime/kenlm)
+inherit cmake xdg-utils
 
 if [[ "${PV}" == 9999* ]]; then
-	KEYWORDS=""
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/fcitx/libime.git"
+	EGIT_SUBMODULES=(src/libime/core/kenlm)
 else
 	KEYWORDS="~amd64 ~x86"
-	EGIT_COMMIT="${PV}"
+	SRC_URI="https://download.fcitx-im.org/fcitx5/libime/libime-${PV}_dict.tar.xz"
 fi
 
 DESCRIPTION="Fcitx5 Next generation of fcitx "
@@ -34,9 +29,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	ln -s "${DISTDIR}/fcitx5-lm_sc.arpa-20220630.tar.xz" data/lm_sc.arpa-20220630.tar.xz || die
-	ln -s "${DISTDIR}/fcitx5-dict_sc.txt-20220628.tar.xz" data/dict_sc.txt-20220628.tar.xz || die
-	ln -s "${DISTDIR}/fcitx5-table.tar.gz" data/table.tar.gz || die
 	cmake_src_prepare
 	xdg_environment_reset
 }
