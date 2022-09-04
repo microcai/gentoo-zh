@@ -11,6 +11,7 @@ app-i18n/fcitx:gtk3 - Install input method module for GTK+ 3
 app-i18n/fcitx:opencc - Enable OpenCC engine (using app-i18n/opencc) for converter between Simplified Chinese and Traditional Chinese
 app-i18n/fcitx:pango - Enable support for x11-libs/pango
 app-i18n/fcitx:presage - Enable presage for word predication (not stable)
+app-i18n/fcitx:qt4 - Install input method module for QT4
 app-i18n/fcitx:table - Install table input methods for Simplified Chinese
 app-i18n/fcitx:xkb - Enable support for XKB (required for fcitx-xkb, fcitx-xkbdbus, part of fcitx-keyboard)
 app-i18n/fcitx-chinese-addons:browser - Enable built-in browser using dev-qt/qtwebengine
@@ -28,10 +29,13 @@ app-i18n/fcitx-meta:chinese-addons - Install Chinese addons for fcitx5
 app-i18n/fcitx-meta:configtool - Enable GUI config tool
 app-i18n/fcitx-meta:gtk2 - Enable GTK2 IM support
 app-i18n/fcitx-meta:gtk3 - Enable GTK3 IM support
+app-i18n/fcitx-meta:gtk4 - Enable GTK4 IM support
 app-i18n/fcitx-meta:hangul - Install Hangul Korean input method
+app-i18n/fcitx-meta:kkc - Install KKC Japanese input method
 app-i18n/fcitx-meta:rime - Install Rime Chinese input method
 app-i18n/fcitx-meta:skk - Install SKK Japanese input method
 app-i18n/fcitx-qt:onlyplugin - Build only plugin
+app-i18n/fcitx-qt:qt6 - Build support for QT6
 app-i18n/mozc:fcitx4 - Enable support for app-i18n/fcitx 4
 app-i18n/mozc:fcitx5 - Enable support for app-i18n/fcitx 5
 app-i18n/mozc:gui - Install graphical user interface tool (mozc_tool)
