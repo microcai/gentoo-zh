@@ -1,15 +1,15 @@
-BDEPEND=dev-lang/go virtual/pkgconfig >=dev-lang/go-1.18 app-arch/unzip
+BDEPEND=~dev-lang/go-1.19:= >=dev-lang/go-1.18 app-arch/unzip virtual/pkgconfig
 DEFINED_PHASES=compile install prepare unpack
 DESCRIPTION=A platform for building proxies to bypass network restrictions.
 EAPI=8
 HOMEPAGE=https://github.com/v2fly/v2ray-core
-INHERIT=systemd go-module
+INHERIT=go-module systemd
 IUSE=+tool
 KEYWORDS=~amd64 ~arm ~arm64 ~x86
 LICENSE=MIT
-RDEPEND=!net-proxy/v2ray-bin dev-libs/v2ray-geoip-bin dev-libs/v2ray-domain-list-community-bin
-RESTRICT=mirror strip
+RDEPEND=!net-proxy/v2ray-bin dev-libs/v2ray-geoip-bin || ( dev-libs/v2ray-domain-list-community-bin dev-libs/v2ray-domain-list-community )
+RESTRICT=strip
 SLOT=0
-SRC_URI=https://github.com/v2fly/v2ray-core/archive/refs/tags/v4.45.2.tar.gz -> v2ray-4.45.2.tar.gz https://github.com/CHN-beta/gentoo-go-dep/releases/download/v2ray-4.45.2/v2ray-4.45.2-deps.tar.xz
+SRC_URI=https://github.com/v2fly/v2ray-core/archive/refs/tags/v4.45.2.tar.gz -> v2ray-4.45.2.tar.gz https://github.com/rjnd1/v2ray-core-vendor/archive/refs/tags/v4.45.2.tar.gz -> v2ray-4.45.2-vendor.tar.gz
 _eclasses_=toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	systemd	2736b403a83f194b59b767f3b344c2c1	go-module	05668e36c51c78c9681fdf4aefa0abec
-_md5_=bfa24fa415bc8d5c9593508c0c7de7ad
+_md5_=4d92fd62eb61865f5f6c227a3c32435a
