@@ -28,7 +28,6 @@ start() {
 
 	ebegin "Starting V2ray"
 	ebegin "Log File : ${V2_LOG}"
-	export ASSUME_NO_MOVING_GC_UNSAFE_RISK_IT_WITH=go1.18
 	start-stop-daemon --start	\
 	-b -1 ${V2_LOG} -2 ${V2_LOG}	\
 	-m -p ${V2_PIDFILE}		\
