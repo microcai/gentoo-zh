@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-09-04 21:29:35 CST)
+(The last generation time: 2022-09-05 23:46:59 CST)
 
 ### Packages
 
@@ -153,9 +153,6 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/tdlib                               | 1.5.0                                     |        | https://core.telegram.org/tdlib                                                         | Cross-platform library for building Telegram clients
                                               | 1.6.0                                     |        |                                                                                         |
-                                              | 9999                                      |        |                                                                                         |
-----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-libs/v2ray-domain-list-community         | 4.39.2_p20210621183458                    |        | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
                                               | 9999                                      |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/conda                             | 4.14.0                                    |        | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
@@ -368,6 +365,8 @@
      dev-libs/v2ray-geoip-bin                 | 202207280056                              | RD     | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    net-proxy/v2ray                            | 4.45.0                                    | RD     | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
                                               | 4.45.2                                    |        |                                                                                         |
+     dev-libs/v2ray-domain-list-community     | 4.39.2_p20210621183458                    | RD     | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+                                              | 9999                                      |        |                                                                                         |
    net-proxy/v2ray-bin                        | 4.45.0                                    | RD     | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-wireless/linux-wifi-hotspot              | 9999                                      |        | https://github.com/lakinduakash/linux-wifi-hotspot                                      | Linux Wifi Hotspot
