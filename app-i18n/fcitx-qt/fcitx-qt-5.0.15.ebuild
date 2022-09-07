@@ -22,7 +22,10 @@ LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
 IUSE="+qt5 onlyplugin qt6"
 
-RDEPEND="app-i18n/fcitx:5
+RDEPEND="
+	!onlyplugin? (
+		>=app-i18n/fcitx-5.0.16:5
+	)
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
