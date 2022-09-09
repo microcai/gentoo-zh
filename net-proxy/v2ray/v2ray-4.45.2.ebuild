@@ -16,7 +16,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 IUSE="+tool"
 
-BDEPEND="~dev-lang/go-1.19:="
+BDEPEND="
+	>=dev-lang/go-1.19:=
+	<dev-lang/go-1.20:="
 DEPEND=""
 RDEPEND="
 	!net-proxy/v2ray-bin
