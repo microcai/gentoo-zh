@@ -105,6 +105,7 @@ media-fonts/nerd-fonts:iosevka - Install Nerd-fonts-patched Iosevka fonts
 media-fonts/nerd-fonts:jetbrainsmono - Install Nerd-fonts-patched JetBrains Mono fonts
 media-fonts/nerd-fonts:lekton - Install Nerd-fonts-patched Lekton fonts
 media-fonts/nerd-fonts:liberationmono - Install Nerd-fonts-patched Liberation Mono fonts
+media-fonts/nerd-fonts:lilex - Install Nerd-fonts-patched Lilex Mono fonts
 media-fonts/nerd-fonts:meslo - Install Nerd-fonts-patched Meslo fonts
 media-fonts/nerd-fonts:monofur - Install Nerd-fonts-patched Monofur fonts
 media-fonts/nerd-fonts:monoid - Install Nerd-fonts-patched Monoid fonts
