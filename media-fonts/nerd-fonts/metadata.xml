@@ -37,6 +37,7 @@
 	<flag name="jetbrainsmono">Install Nerd-fonts-patched JetBrains Mono fonts</flag>
 	<flag name="lekton">Install Nerd-fonts-patched Lekton fonts</flag>
 	<flag name="liberationmono">Install Nerd-fonts-patched Liberation Mono fonts</flag>
+	<flag name="lilex">Install Nerd-fonts-patched Lilex Mono fonts</flag>
 	<flag name="meslo">Install Nerd-fonts-patched Meslo fonts</flag>
 	<flag name="monofur">Install Nerd-fonts-patched Monofur fonts</flag>
 	<flag name="monoid">Install Nerd-fonts-patched Monoid fonts</flag>

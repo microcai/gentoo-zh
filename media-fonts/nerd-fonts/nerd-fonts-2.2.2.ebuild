@@ -42,6 +42,7 @@ FONTS=(
 	JetBrainsMono
 	Lekton
 	LiberationMono
+	Lilex
 	Meslo
 	Monofur
 	Monoid
@@ -95,6 +96,7 @@ SRC_URI="
 	jetbrainsmono?          ( "${COMMON_URI}/JetBrainsMono.zip" )
 	lekton?                 ( "${COMMON_URI}/Lekton.zip" )
 	liberationmono?         ( "${COMMON_URI}/LiberationMono.zip" )
+	lilex?                  ( "${COMMON_URI}/Lilex.zip" )
 	meslo?                  ( "${COMMON_URI}/Meslo.zip" )
 	monofur?                ( "${COMMON_URI}/Monofur.zip" )
 	monoid?                 ( "${COMMON_URI}/Monoid.zip" )
@@ -114,10 +116,10 @@ SRC_URI="
 	ubuntu?                 ( "${COMMON_URI}/Ubuntu.zip" )
 	ubuntumono?             ( "${COMMON_URI}/UbuntuMono.zip" )
 	victormono?             ( "${COMMON_URI}/VictorMono.zip" )
-	symbols?                ( "${TAG_URI}/src/glyphs/Symbols-2048-em%20Nerd%20Font%20Complete.ttf" -> "Symbols-2048-em_Nerd_Font_Complete.ttf"
+	symbols?                ( "${TAG_URI}/patched-fonts/NerdFontsSymbolsOnly/complete/Symbols-2048-em%20Nerd%20Font%20Complete.ttf" -> "Symbols-2048-em_Nerd_Font_Complete.ttf"
 							  "${TAG_URI}/10-nerd-font-symbols.conf"
 							)
-	symbolsmono?            ( "${TAG_URI}/src/glyphs/Symbols-1000-em%20Nerd%20Font%20Complete.ttf" -> "Symbols-1000-em_Nerd_Font_Complete.ttf"
+	symbolsmono?            ( "${TAG_URI}/patched-fonts/NerdFontsSymbolsOnly/complete/Symbols-1000-em%20Nerd%20Font%20Complete.ttf" -> "Symbols-1000-em_Nerd_Font_Complete.ttf"
 							  "${TAG_URI}/10-nerd-font-symbols.conf"
 							)
 "
@@ -132,7 +134,7 @@ LICENSE="MIT
 		Vic-Fieger-License
 		UbuntuFontLicense-1.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND="app-arch/unzip"
 RDEPEND="media-libs/fontconfig"
@@ -174,8 +176,8 @@ src_install() {
 	declare -A font_filetypes
 	local otf_file_number ttf_file_number
 
-	otf_file_number=$(ls ${S} | grep -i otf | wc -l)
-	ttf_file_number=$(ls ${S} | grep -i ttf | wc -l)
+	otf_file_number=$(ls "${S}" | grep -i otf | wc -l)
+	ttf_file_number=$(ls "${S}" | grep -i ttf | wc -l)
 
 	if [[ ${otf_file_number} != 0 ]]; then
 		font_filetypes[otf]=
