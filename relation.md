@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-09-09 23:31:42 CST)
+(The last generation time: 2022-09-10 10:19:15 CST)
 
 ### Packages
 
@@ -229,7 +229,6 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/scangearmp                         | 1.60                                      |        | http://support-au.canon.com.au/contents/AU/EN/0100303302.html                           | Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
                                               | 2.4.10                                    |        |                                                                                         |
-   media-gfx/sane-backends                    | 9999                                      |  D     | http://www.sane-project.org/                                                            | Scanner Access Now Easy - Backends
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/tifig-bin                          | 0.2.2                                     |        | https://github.com/monostream/tifig                                                     | Converts iOS 11 HEIC images to practical formats - Static binary
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -343,6 +342,10 @@
                                               | 4.4.5.10                                  |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-print/epson-inkjet-printer_201207w       | 1.0.0                                     |        | http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX                              | Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ net-print/pantum                             | 1.1.79                                    |        | https://www.pantum.cn/support/download/driver/                                          | 奔图打印机Linux驱动
+   media-gfx/sane-backends                    | 9999                                      |  D, RD | http://www.sane-project.org/                                                            | Scanner Access Now Easy - Backends
+   media-libs/libjpeg8                        | 2.1.4                                     |  D, RD | https://libjpeg-turbo.org/                                                              | MMX, SSE, and SSE2 SIMD accelerated JPEG library
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash                              | 1.11.4                                    |        | https://github.com/Dreamacro/clash                                                      | A rule-based tunnel in Go.
                                               | 1.11.8                                    |        |                                                                                         |
