@@ -72,6 +72,7 @@ src_prepare() {
 
 	local PATCHES=(
 		"${FILESDIR}/fix-5.0.19-missing-includes-for-cstdint.patch"
+		"${FILESDIR}/fix-5.0.19-add-potential-missing-cstdint.patch"
 	)
 
 	cmake_src_prepare
