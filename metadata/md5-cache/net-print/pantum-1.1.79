@@ -1,0 +1,13 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=install prepare
+DEPEND=media-libs/libjpeg8 net-print/cups sys-apps/dbus virtual/jpeg:0 net-print/cups-filters scanner? ( media-gfx/sane-backends )
+DESCRIPTION=奔图打印机Linux驱动
+EAPI=8
+HOMEPAGE=https://www.pantum.cn/support/download/driver/
+IUSE=+cm1100dn cm1100adw scanner
+KEYWORDS=~amd64
+LICENSE=AS-IS
+RDEPEND=media-libs/libjpeg8 net-print/cups sys-apps/dbus virtual/jpeg:0 net-print/cups-filters scanner? ( media-gfx/sane-backends ) app-text/ghostscript-gpl
+SLOT=0
+SRC_URI=cm1100dn? ( https://drivers.pantum.cn/userfiles/files/download/PantumUbuntuDriverV1.1.79-1_1644319790337.zip ) cm1100adw? ( https://drivers.pantum.cn/userfiles/files/download/PantumUbuntuDriverV1.1.79-1_1644319935381.zip )
+_md5_=0710bfcc87f01b524609afe017837345
