@@ -48,9 +48,8 @@ src_install(){
         mkdir "${D}/etc/ld.so.conf.d/"
         echo /opt/pantum/lib >> "${D}/etc/ld.so.conf.d/pantum.conf"
         if ! use scanner ; then
-                rm ${D}/usr/lib/x86_64-linux-gnu/ -rf
-                rm ${D}/usr/local/lib
-                rm ${D}/etc/sane.d
+                rm -rf "${D}/usr/lib/x86_64-linux-gnu"
+                rm -rf "${D}/usr/local"
         fi
 }
 
