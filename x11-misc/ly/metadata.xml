@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<upstream>
+		<remote-id type="github">fairyglade/ly</remote-id>
+	</upstream>
 	<maintainer type="person">
 		<email>OriPoin@outlook.com</email>
 		<name>Yachen Wang</name>
 	</maintainer>
+	<use>
+		<flag name="openrc">install provided OpenRC service</flag>
+		<flag name="runit">install provided runit service</flag>
+		<flag name="systemd">install provided systemd service</flag>
+	</use>
 </pkgmetadata>
 
