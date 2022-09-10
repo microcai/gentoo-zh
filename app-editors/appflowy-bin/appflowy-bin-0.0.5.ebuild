@@ -5,7 +5,7 @@ EAPI=8
 
 inherit desktop xdg
 
-MY_PN=AppFlowy
+MY_PN="AppFlowy"
 
 DESCRIPTION="AppFlowy is an open-source alternative to Notion"
 HOMEPAGE="https://www.appflowy.io/"
@@ -21,6 +21,7 @@ DEPEND="
 	dev-libs/atk
 	dev-libs/glib:2
 	dev-libs/openssl
+	dev-libs/keybinder:3
 	media-libs/harfbuzz
 	media-libs/libepoxy
 	x11-libs/cairo
