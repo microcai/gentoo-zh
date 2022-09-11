@@ -12,7 +12,7 @@ else
 	MY_PN="fcitx5-qt"
 	S="${WORKDIR}/${MY_PN}-${PV}"
 	SRC_URI="https://github.com/fcitx/fcitx5-qt/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~loong ~x86"
 fi
 
 DESCRIPTION="Qt library and IM module for fcitx5"
