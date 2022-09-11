@@ -12,7 +12,7 @@ else
 	MY_PN="fcitx5"
 	S="${WORKDIR}/${MY_PN}-${PV}"
 	SRC_URI="https://github.com/fcitx/fcitx5/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~loong ~x86"
 fi
 
 DESCRIPTION="Fcitx5 Next generation of fcitx "
