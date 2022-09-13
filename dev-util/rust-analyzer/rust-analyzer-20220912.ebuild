@@ -28,11 +28,9 @@ CRATES="
 	countme-3.0.1
 	cov-mark-2.0.0-pre.1
 	crc32fast-1.3.2
-	crossbeam-0.8.2
 	crossbeam-channel-0.5.6
 	crossbeam-deque-0.8.2
 	crossbeam-epoch-0.9.10
-	crossbeam-queue-0.3.6
 	crossbeam-utils-0.8.11
 	dashmap-5.3.4
 	derive_arbitrary-1.1.3
@@ -70,7 +68,7 @@ CRATES="
 	libmimalloc-sys-0.1.25
 	lock_api-0.4.7
 	log-0.4.17
-	lsp-types-0.93.0
+	lsp-types-0.93.1
 	matchers-0.1.0
 	matches-0.1.9
 	memchr-2.5.0
@@ -96,6 +94,8 @@ CRATES="
 	petgraph-0.5.1
 	pin-project-lite-0.2.9
 	proc-macro2-1.0.43
+	protobuf-3.1.0
+	protobuf-support-3.1.0
 	pulldown-cmark-0.9.2
 	pulldown-cmark-to-cmark-10.0.2
 	quote-1.0.21
@@ -113,6 +113,7 @@ CRATES="
 	salsa-0.17.0-pre.2
 	salsa-macros-0.17.0-pre.2
 	same-file-1.0.6
+	scip-0.1.1
 	scoped-tls-1.0.0
 	scopeguard-1.1.0
 	semver-1.0.13
@@ -127,6 +128,8 @@ CRATES="
 	syn-1.0.99
 	synstructure-0.12.6
 	text-size-1.1.0
+	thiserror-1.0.31
+	thiserror-impl-1.0.31
 	thread_local-1.1.4
 	threadpool-1.8.1
 	tikv-jemalloc-ctl-0.5.0
@@ -177,7 +180,7 @@ CRATES="
 	xtask-0.1.0
 "
 
-inherit cargo
+inherit flag-o-matic toolchain-funcs cargo
 
 MY_PV="${PV:0:4}-${PV:4:2}-${PV:6:2}"
 
@@ -188,7 +191,7 @@ SRC_URI="
 "
 
 DESCRIPTION="An experimental Rust compiler front-end for IDEs "
-HOMEPAGE="https://github.com/rust-analyzer/rust-analyzer"
+HOMEPAGE="https://rust-analyzer.github.io/ https://github.com/rust-analyzer/rust-analyzer/"
 
 LICENSE="BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD-2
 Boost-1.0 CC0-1.0 ISC MIT Unlicense ZLIB
@@ -196,11 +199,91 @@ Boost-1.0 CC0-1.0 ISC MIT Unlicense ZLIB
 
 RESTRICT="mirror"
 
-DEPEND="|| ( >=dev-lang/rust-1.59.0[rust-src] >=dev-lang/rust-bin-1.59.0[rust-src] )"
+DEPEND="
+	|| (
+		>=dev-lang/rust-1.63.0[rust-src]
+		>=dev-lang/rust-bin-1.63.0[rust-src]
+	)
+	clang? (
+		>=sys-devel/clang-13:=
+		>=sys-devel/lld-13
+	)
+"
 RDEPEND="${DEPEND}"
+
 SLOT="0"
+IUSE="+clang lto"
+REQUIRED_USE="lto? ( !debug )"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
+
+pkg_setup() {
+	# Show flags set at the beginning
+	einfo "Current BINDGEN_CFLAGS:\t${BINDGEN_CFLAGS:-no value set}"
+	einfo "Current CFLAGS:\t\t${CFLAGS:-no value set}"
+	einfo "Current CXXFLAGS:\t\t${CXXFLAGS:-no value set}"
+	einfo "Current LDFLAGS:\t\t${LDFLAGS:-no value set}"
+	einfo "Current RUSTFLAGS:\t\t${RUSTFLAGS:-no value set}"
+
+	local have_switched_compiler=
+	if use clang && ! tc-is-clang ; then
+		# Force clang
+		einfo "Enforcing the use of clang due to USE=clang ..."
+		have_switched_compiler=yes
+		AR=llvm-ar
+		AS=llvm-as
+		CC=${CHOST}-clang
+		CXX=${CHOST}-clang++
+		NM=llvm-nm
+		RANLIB=llvm-ranlib
+		LD=ld.lld
+	elif ! use clang && ! tc-is-gcc ; then
+		# Force gcc
+		have_switched_compiler=yes
+		einfo "Enforcing the use of gcc due to USE=-clang ..."
+		AR=gcc-ar
+		CC=${CHOST}-gcc
+		CXX=${CHOST}-g++
+		NM=gcc-nm
+		RANLIB=gcc-ranlib
+		LD=ld.bfd
+	fi
+
+	if [[ -n "${have_switched_compiler}" ]] ; then
+		# Because we switched active compiler we have to ensure
+		# that no unsupported flags are set
+		strip-unsupported-flags
+	fi
+
+	# Ensure we use correct toolchain
+	export HOST_CC="$(tc-getBUILD_CC)"
+	export HOST_CXX="$(tc-getBUILD_CXX)"
+	tc-export CC CXX LD AR NM OBJDUMP RANLIB
+}
+
+src_compile() {
+	export CFG_RELEASE="0.3.${PV}-standalone (Custom)"
+
+	if use clang; then
+		# include RUSTFLAGS from portage (e.g. make.conf)
+		export RUSTFLAGS="${RUSTFLAGS} -C link-arg=-fuse-ld=lld -C target-feature=-crt-static"
+	fi
+
+	if use lto; then
+		if use clang; then
+			export CARGO_PROFILE_RELEASE_LTO="thin"
+		else
+			export CARGO_PROFILE_RELEASE_LTO="true"
+		fi
+	fi
+
+	cargo_src_compile
+}
+
+src_test() {
+	# Requires out of source git repo.
+	cargo_src_test -- --skip "tidy::check_merge_commits"
+}
 
 src_install() {
 	cargo_src_install --path "./crates/rust-analyzer"
