@@ -5,4 +5,8 @@
 		<email>leon.errelin@outlook.com</email>
 		<name>Linerre</name>
 	</maintainer>
+	<use>
+		<flag name="clang">Use Clang compiler instead of GCC</flag>
+		<flag name="lto">Enable Link Time Optimization (LTO)</flag>
+	</use>
 </pkgmetadata>
