@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-09-10 22:44:58 CST)
+(The last generation time: 2022-09-14 16:32:29 CST)
 
 ### Packages
 
@@ -343,7 +343,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-print/epson-inkjet-printer_201207w       | 1.0.0                                     |        | http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX                              | Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-print/pantum                             | 1.1.79                                    |        | https://www.pantum.cn/support/download/driver/                                          | 奔图打印机Linux驱动
+ net-print/pantum                             | 1.1.84                                    |        | https://www.pantum.cn/support/download/driver/                                          | 奔图打印机Linux驱动
    media-gfx/sane-backends                    | 9999                                      |  D, RD | http://www.sane-project.org/                                                            | Scanner Access Now Easy - Backends
    media-libs/libjpeg8                        | 2.1.4                                     |  D, RD | https://libjpeg-turbo.org/                                                              | MMX, SSE, and SSE2 SIMD accelerated JPEG library
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
