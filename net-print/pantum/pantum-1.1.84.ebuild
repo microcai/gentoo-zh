@@ -6,11 +6,9 @@ EAPI=8
 DESCRIPTION="奔图打印机Linux驱动"
 HOMEPAGE="https://www.pantum.cn/support/download/driver/"
 
-IUSE="+cm1100dn cm1100adw scanner"
+IUSE="scanner"
 
-SRC_URI="cm1100dn? ( https://drivers.pantum.cn/userfiles/files/download/PantumUbuntuDriverV1.1.79-1_1644319790337.zip )
-cm1100adw? ( https://drivers.pantum.cn/userfiles/files/download/PantumUbuntuDriverV1.1.79-1_1644319935381.zip )
-"
+SRC_URI="https://drivers.pantum.com/userfiles/files/download/PantumUbuntuDriverV1.1.84-1_1644314880975.zip"
 
 LICENSE="AS-IS"
 SLOT="0"
@@ -36,21 +34,22 @@ RDEPEND="
         ${COMMON_DEPEND}
         app-text/ghostscript-gpl
 "
-S="${WORKDIR}/Pantum Ubuntu Driver V1.1.79-1"
+S="${WORKDIR}/Pantum Ubuntu Driver V1.1.84-1"
 
 src_prepare(){
         eapply_user
-        unpack "${S}/Resources/pantum_1.1.79-1_amd64.deb"
+        unpack "${S}/Resources/pantum_1.1.84-1_amd64.deb"
 }
 
 src_install(){
         tar -xvf "${S}/data.tar.xz" -C "$D"
-        mkdir "${D}/etc/ld.so.conf.d/"
-        echo /opt/pantum/lib >> "${D}/etc/ld.so.conf.d/pantum.conf"
         if ! use scanner ; then
                 rm -rf "${D}/usr/lib/x86_64-linux-gnu"
                 rm -rf "${D}/usr/local"
         fi
+        mv ${D}/usr/lib ${D}/usr/libexec
+        mkdir "${D}/etc/ld.so.conf.d/"
+        echo /opt/pantum/lib >> "${D}/etc/ld.so.conf.d/pantum.conf"
 }
 
 post_install(){
