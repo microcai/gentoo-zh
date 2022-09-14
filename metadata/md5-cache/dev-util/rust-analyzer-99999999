@@ -1,15 +1,16 @@
 BDEPEND=>=virtual/rust-1.53 >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile configure install test unpack
-DEPEND=|| ( >=dev-lang/rust-1.54.0[rls] >=dev-lang/rust-bin-1.54.0[rls] )
+DEFINED_PHASES=compile configure install setup test unpack
+DEPEND=|| ( >=dev-lang/rust-1.63.0[rust-src] >=dev-lang/rust-bin-1.63.0[rust-src] ) clang? ( >=sys-devel/clang-13:= >=sys-devel/lld-13 )
 DESCRIPTION=An experimental Rust compiler front-end for IDEs
 EAPI=8
-HOMEPAGE=https://github.com/rust-analyzer/rust-analyzer
-INHERIT=cargo git-r3
-IUSE=debug
+HOMEPAGE=https://rust-analyzer.github.io/ https://github.com/rust-analyzer/rust-analyzer/
+INHERIT=flag-o-matic toolchain-funcs cargo git-r3
+IUSE=+clang lto debug
 LICENSE=BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD-2 Boost-1.0 CC0-1.0 ISC MIT Unlicense ZLIB
 PROPERTIES=live
-RDEPEND=|| ( >=dev-lang/rust-1.54.0[rls] >=dev-lang/rust-bin-1.54.0[rls] )
+RDEPEND=|| ( >=dev-lang/rust-1.63.0[rust-src] >=dev-lang/rust-bin-1.63.0[rust-src] ) clang? ( >=sys-devel/clang-13:= >=sys-devel/lld-13 )
+REQUIRED_USE=lto? ( !debug )
 RESTRICT=mirror
 SLOT=0
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	cargo	52a92ed3815080c5f2caac1905687b1c	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
-_md5_=d2b8c7debabee652e1cdfd430434ce24
+_eclasses_=toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	29a755b1291d64133634d80b0328f153	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	cargo	52a92ed3815080c5f2caac1905687b1c	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_md5_=893d4f9e60b10abb757104a7f2bdb831
