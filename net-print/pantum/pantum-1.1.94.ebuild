@@ -8,7 +8,7 @@ HOMEPAGE="https://www.pantum.cn/support/download/driver/"
 
 IUSE="scanner"
 
-SRC_URI="https://drivers.pantum.com/userfiles/files/download/PantumUbuntuDriverV1.1.84-1_1644314880975.zip"
+SRC_URI="https://drivers.pantum.com/userfiles/files/download/%E9%A9%B1%E5%8A%A8%E6%96%87%E4%BB%B6/Pantum%20Linux%20Driver%20V1_1_94-1.zip"
 
 LICENSE="AS-IS"
 SLOT="0"
@@ -34,11 +34,11 @@ RDEPEND="
         ${COMMON_DEPEND}
         app-text/ghostscript-gpl
 "
-S="${WORKDIR}/Pantum Ubuntu Driver V1.1.84-1"
+S="${WORKDIR}/Pantum Linux Driver V1.1.94-1"
 
 src_prepare(){
         eapply_user
-        unpack "${S}/Resources/pantum_1.1.84-1_amd64.deb"
+        unpack "${S}/Resources/pantum_1.1.94-1_amd64.deb"
 }
 
 src_install(){
