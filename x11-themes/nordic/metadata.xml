@@ -15,5 +15,7 @@
                 <flag name="cinnamon">Install theme for <pkg>gnome-extra/cinnamon</pkg></flag>    
                 <flag name="gtk2">Install GTK+2 theme</flag>    
                 <flag name="gtk3">Install GTK+3 theme</flag>    
+                <flag name="gtk4">Install GTK4 theme</flag>
+                <flag name="kde">Install KDE theme</flag>
         </use>    
 </pkgmetadata>
