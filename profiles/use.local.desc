@@ -190,6 +190,8 @@ x11-themes/nordic:cinnamon - Install theme for gnome-extra/cinnamon
 x11-themes/nordic:gnome-shell - Install theme for gnome-base/gnome-shell
 x11-themes/nordic:gtk2 - Install GTK+2 theme
 x11-themes/nordic:gtk3 - Install GTK+3 theme
+x11-themes/nordic:gtk4 - Install GTK4 theme
+x11-themes/nordic:kde - Install KDE theme
 x11-themes/nordic:mate - Install Metacity theme for mate-base/mate
 x11-themes/nordic:xfce - Install theme for xfce-base/xfwm4
 x11-themes/nordzy-cursors:nord-white - Install ${PN}-white cursors theme

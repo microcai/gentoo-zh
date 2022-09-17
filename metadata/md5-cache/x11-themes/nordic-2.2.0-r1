@@ -1,10 +1,12 @@
-DEFINED_PHASES=compile configure install
+DEFINED_PHASES=compile configure install postinst prepare
 DESCRIPTION=Dark Gtk3.20+ theme created using the awesome Nord color pallete
 EAPI=8
 HOMEPAGE=https://github.com/EliverLara/Nordic
-IUSE=+gtk2 +gtk3 xfce mate gnome-shell cinnamon
+INHERIT=optfeature
+IUSE=+gtk2 +gtk3 +gtk4 kde xfce mate gnome-shell cinnamon
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
 SLOT=0
 SRC_URI=https://github.com/EliverLara/Nordic/archive/v2.2.0.tar.gz -> nordic-2.2.0.tar.gz
-_md5_=c561464099fe7cb791cf3c4d0aa300ad
+_eclasses_=optfeature	1a2157392a869265b2afcb63a26c12ac
+_md5_=c4b6b6f00d646e63be571fafb46cfce9
