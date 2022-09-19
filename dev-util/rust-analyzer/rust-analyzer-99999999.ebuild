@@ -12,7 +12,7 @@ inherit flag-o-matic toolchain-funcs cargo git-r3
 KEYWORDS=""
 EGIT_REPO_URI="https://github.com/rust-lang/rust-analyzer.git"
 
-DESCRIPTION="An experimental Rust compiler front-end for IDEs "
+DESCRIPTION="A Rust compiler front-end for IDEs"
 HOMEPAGE="https://rust-analyzer.github.io/ https://github.com/rust-analyzer/rust-analyzer/"
 
 LICENSE="BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD-2
