@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-09-19 08:06:45 CST)
+(The last generation time: 2022-09-19 22:37:19 CST)
 
 ### Packages
 
@@ -181,7 +181,8 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/lldb-mi                             | 9999                                      |        | https://github.com/lldb-tools/lldb-mi                                                   | LLDB Machine Interface Driver
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/rust-analyzer                       | 20220912                                  |        | https://rust-analyzer.github.io/                                                        | An experimental Rust compiler front-end for IDEs
+ dev-util/rust-analyzer                       | 20220912                                  |        | https://rust-analyzer.github.io/                                                        | A Rust compiler front-end for IDEs
+                                              | 20220919                                  |        |                                                                                         |
                                               | 99999999                                  |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/v2ray-geoip-generator               | 9999                                      |        | https://github.com/v2fly/geoip                                                          | GeoIP generator for V2Ray.
