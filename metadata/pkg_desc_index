@@ -97,7 +97,7 @@ dev-util/elfembed 0.3-r1: Resource Compiler for ELF binaries
 dev-util/jd-gui 1.6.6: A standalone graphical utility that displays Java source codes of .class file
 dev-util/jetbrains-toolbox 1.22.10774: Manage all your JetBrains Projects and Tools
 dev-util/lldb-mi 9999: LLDB Machine Interface Driver
-dev-util/rust-analyzer 20220912 99999999: An experimental Rust compiler front-end for IDEs
+dev-util/rust-analyzer 20220912 20220919 99999999: A Rust compiler front-end for IDEs
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-vcs/lazygit 0.35: lazygit, a simple terminal UI for git commands
 dev-vcs/lazygit-bin 0.35: lazygit, a simple terminal UI for git commands
@@ -194,15 +194,15 @@ sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/liquorix-sources 5.19.8 5.19.9: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 31: Modular initramfs image creation utility
-sys-kernel/xanmod-kernel 5.15.64 5.19.6: XanMod lts kernel built with Gentoo patches and cjktty
+sys-kernel/xanmod-kernel 5.15.68 5.19.9: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 5.15.12 5.15.14: Xanmod-RT, cjktty, uksm patchset for main kernel tree
-sys-kernel/xanmod-sources 5.15.64 5.19.6: Full XanMod source, including the Gentoo patchset and other patch options.
+sys-kernel/xanmod-sources 5.15.68 5.19.8: Full XanMod source, including the Gentoo patchset and other patch options.
 sys-kernel/zenpower 0.1.12-r1: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libsolv 0.7.22 9999: Library for solving packages and reading repositories
 sys-libs/libzypp 17.31.0 9999: ZYpp Package Management library
 sys-process/btop 1.2.9: Resources monitor. The C++ version of bashtop
-virtual/dist-kernel 5.15.64 5.19.6: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 5.15.68 5.19.9: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 www-apps/openvscode-server-bin 1.70.1 1.71.2: VS Code that runs a server on remote and allows access through a web browser
 www-servers/darkhttpd 1.13: A small, static webserver
