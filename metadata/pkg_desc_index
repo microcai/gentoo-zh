@@ -20,7 +20,7 @@ app-emulation/deepin-wine5 5.0.16-r1: Deepin wine5
 app-emulation/deepin-wine6-stable 6.0.0.19-r1: Deepin wine6 stable
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
-app-i18n/fcitx 4.2.9.8 5.0.18 5.0.19 9999: Fcitx5 Next generation of fcitx
+app-i18n/fcitx 4.2.9.8 5.0.18 5.0.19-r1 9999: Fcitx5 Next generation of fcitx
 app-i18n/fcitx-chewing 5.0.12: Chewing Wrapper for Fcitx.
 app-i18n/fcitx-chinese-addons 5.0.14 5.0.15 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
 app-i18n/fcitx-configtool 5.0.14 5.0.15 9999: Configuration module for Fcitx

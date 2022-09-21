@@ -5,6 +5,7 @@
 app-emulation/deepin-wine-plugin:virtual-pkg - With deepin-wine-plugin-virtual package
 app-i18n/fcitx:autostart - Enable XDG-compatible autostart of Fcitx
 app-i18n/fcitx:coverage - Build the project with gcov support (Need ENABLE_TEST=On)
+app-i18n/fcitx:emoji - Enable emoji loading for CLDR
 app-i18n/fcitx:enchant - Enable Enchant backend (using app-text/enchant) for spelling hinting
 app-i18n/fcitx:gtk2 - Install input method module for GTK+ 2
 app-i18n/fcitx:gtk3 - Install input method module for GTK+ 3
