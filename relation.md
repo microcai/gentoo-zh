@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-09-19 22:37:46 CST)
+(The last generation time: 2022-09-21 20:02:54 CST)
 
 ### Packages
 
@@ -80,7 +80,7 @@
  app-i18n/sogoupinyin                         | 4.0.1.2123                                |        | http://pinyin.sogou.com/linux/                                                          | Sogou Pinyin input method.
    app-i18n/fcitx                             | 4.2.9.8                                   |  D, RD | https://fcitx-im.org/                                                                   | Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
                                               | 5.0.18                                    |        |                                                                                         |
-                                              | 5.0.19                                    |        |                                                                                         |
+                                              | 5.0.19-r1                                 |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
      x11-libs/xcb-imdkit                      | 1.0.3                                     |  D, RD | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
    net-dns/libidn11                           | 1.33                                      |  D, RD | https://www.gnu.org/software/libidn/                                                    | Internationalized Domain Names (IDN) implementation
