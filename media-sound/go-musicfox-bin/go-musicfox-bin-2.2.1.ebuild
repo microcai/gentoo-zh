@@ -1,0 +1,50 @@
+# Copyright 1999-2021 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=8
+
+DESCRIPTION="Command-line Netease Cloud Music written in Go."
+HOMEPAGE="https://github.com/anhoder"
+SRC_URI="https://github.com/anhoder/go-musicfox/releases/download/v${PV}/go-musicfox_${PV}_linux_amd64.zip"
+
+LICENSE="MIT"
+SLOT="0"
+KEYWORDS="~amd64"
+IUSE=""
+
+DEPEND="media-libs/alsa-lib"
+RDEPEND="${DEPEND}"
+
+QA_PREBUILT="/usr/bin/musicfox"
+
+S=${WORKDIR}
+
+src_install() {
+	cd go-musicfox* || die
+	dobin musicfox
+root@localhost /var/db/repos/ston-overlay/media-sound/go-musicfox-bin # cat go-musicfox-bin-2.2.1.ebuild
+# Copyright 1999-2021 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=8
+
+DESCRIPTION="Command-line Netease Cloud Music written in Go."
+HOMEPAGE="https://github.com/anhoder"
+SRC_URI="https://github.com/anhoder/go-musicfox/releases/download/v${PV}/go-musicfox_${PV}_linux_amd64.zip"
+
+LICENSE="MIT"
+SLOT="0"
+KEYWORDS="~amd64"
+IUSE=""
+
+DEPEND="media-libs/alsa-lib"
+RDEPEND="${DEPEND}"
+
+QA_PREBUILT="/usr/bin/musicfox"
+
+S=${WORKDIR}
+
+src_install() {
+	cd go-musicfox* || die
+	dobin musicfox
+}
