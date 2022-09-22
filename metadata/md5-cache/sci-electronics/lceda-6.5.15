@@ -1,0 +1,9 @@
+DEFINED_PHASES=install
+DESCRIPTION=嘉立创EDA
+EAPI=8
+HOMEPAGE=https://lceda.cn/
+KEYWORDS=~amd64
+LICENSE=AS-IS
+SLOT=0
+SRC_URI=https://image.lceda.cn/files/lceda-linux-x64-6.5.15.zip
+_md5_=54fe05c7e55ca4dbf3aae37b79ab86d3
