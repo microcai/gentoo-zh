@@ -12,6 +12,6 @@ RDEPEND=dev-python/cython[python_targets_pypy3(-)?,python_targets_python3_8(-)?,
 REQUIRED_USE=|| ( python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11 )
 RESTRICT=!test? ( test )
 SLOT=0
-SRC_URI=https://github.com/conda/conda-package-handling/archive/1.8.1.tar.gz -> conda-package-handling-1.8.1.tar.gz
+SRC_URI=https://github.com/conda/conda-package-handling/archive/1.9.0.tar.gz -> conda-package-handling-1.9.0.tar.gz
 _eclasses_=multibuild	d26d81f242cb193d899a72bca423d0bd	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	b9fc5e97e886514e5132f50465185401	python-r1	2d51fd03931e743811ce30d198e4dcfd	distutils-r1	e3b0f72d558eb613ff83262d22cbf887
 _md5_=4fed5a3f2a668956c492f0de0a813601
