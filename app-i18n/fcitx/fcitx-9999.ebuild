@@ -8,6 +8,7 @@ inherit cmake xdg
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5.git"
+	SRC_URI=""
 else
 	MY_PN="fcitx5"
 	S="${WORKDIR}/${MY_PN}-${PV}"
@@ -95,7 +96,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	ln -s "${DISTDIR}/fcitx-data-en_dict-20121020.tar.gz" src/modules/spell/dict/en_dict-20121020.tar.gz || die
+	ln -s "${DISTDIR}/fcitx-data-en_dict-20121020.tar.gz" src/modules/spell/en_dict-20121020.tar.gz || die
 
 	cmake_src_prepare
 }
