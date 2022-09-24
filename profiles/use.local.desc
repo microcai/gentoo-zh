@@ -64,8 +64,6 @@ dev-db/mongodb:tools - Install the MongoDB tools (mongoimport, mongodump...) fro
 dev-python/conda:user - use user's home directory as default pkgs and envs prefix
 dev-python/nvchecker:ini - convert your old configuration files from ini to toml
 dev-python/nvchecker:notify - enable nvchecker-notify support
-dev-util/rust-analyzer:clang - Use Clang compiler instead of GCC
-dev-util/rust-analyzer:lto - Enable Link Time Optimization (LTO)
 mail-client/thunderbird:clang - Use Clang compiler instead of GCC
 mail-client/thunderbird:eme-free - Disable EME (DRM plugin) cabability at build time
 mail-client/thunderbird:hwaccel - Force-enable hardware-accelerated rendering (Mozilla bug 594876)
