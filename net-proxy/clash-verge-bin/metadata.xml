@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<upstream>
-		<bugs-to>https://github.com/zzzgydi/clash-verge/issues/bugs-to>
+		<bugs-to>https://github.com/zzzgydi/clash-verge/issues</bugs-to>
 	</upstream>
 	<maintainer type="person">
 		<email>hougelangley1987@gmail.com</email>
