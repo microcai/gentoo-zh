@@ -144,6 +144,7 @@ media-sound/termusic:mpris - Enable dbus mpris support
 media-sound/termusic:mpv - Use media-video/mpv as decoding backend
 media-sound/termusic:symphonia - Use symphonia as decoding backend (default)
 media-sound/termusic:yt-dlp - Use net-misc/yt-dlp to provide the youtebe-dl feature
+media-video/Revda:dmlive - Support for using the dmlive command
 net-im/telegram-purple:gcrypt - libgcrypt support
 net-im/telegram-purple:png - png stickers support
 net-im/telegram-purple:webp - webp stickers support
