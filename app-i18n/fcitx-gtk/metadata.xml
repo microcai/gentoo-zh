@@ -9,5 +9,6 @@
 		<flag name="gtk3">Enable support for GTK+3</flag>
 		<flag name="gtk4">Enable support for GTK 4</flag>
 		<flag name="snooper">Enable key snooper for gtk app</flag>
+		<flag name="onlyplugin">Build only plugin</flag>
 	</use>
 </pkgmetadata>
