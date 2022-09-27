@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<upstream>
+		<bugs-to>https://github.com/zzzgydi/clash-verge/issues</bugs-to>
+	</upstream>
+	<maintainer type="person">
+		<email>hougelangley1987@gmail.com</email>
+		<name>苏业钦</name>
+	</maintainer>
+	<use>
+		<flag name="system-clash">Use net-proxy/clash instead of clash-premium</flag>
+	</use>
+</pkgmetadata>
