@@ -21,7 +21,7 @@ IUSE="system-clash"
 DEPEND=""
 RDEPEND="
 	dev-libs/libappindicator:3
-	net-libs/webkit-gtk:4=
+	net-libs/webkit-gtk:4
 	dev-libs/gobject-introspection-common
 	system-clash? ( net-proxy/clash )
 	!system-clash? ( !net-proxy/clash )
