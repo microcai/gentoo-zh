@@ -20,8 +20,8 @@ IUSE="system-clash"
 
 DEPEND=""
 RDEPEND="
-	dev-libs/libappindicator
-	net-libs/webkit-gtk
+	dev-libs/libappindicator:3
+	net-libs/webkit-gtk:4=
 	dev-libs/gobject-introspection-common
 	system-clash? ( net-proxy/clash )
 	!system-clash? ( !net-proxy/clash )
@@ -31,7 +31,7 @@ BDEPEND=""
 S="${WORKDIR}"
 
 src_install() {
-	if	use	system-clash;	then
+	if use system-clash; then
 		dobin usr/bin/{clash-meta,clash-verge}
 	else
 		dobin usr/bin/{clash,clash-meta,clash-verge}
