@@ -15,7 +15,7 @@ SRC_URI="
 
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="-* ~amd64"
 
 DEPEND="
 	dev-libs/atk
@@ -31,7 +31,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-RESTRICT=" strip "
+RESTRICT="mirror strip test"
 
 QA_PRESTRIPPED="
 	/opt/${PN}/lib/libapp.so
