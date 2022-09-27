@@ -30,14 +30,6 @@ BDEPEND=""
 
 S="${WORKDIR}"
 
-src_unpack() {
-	unpack_deb ${P}.deb
-}
-
-src_prepare() {
-	default
-}
-
 src_install() {
 	if	use	system-clash;	then
 		dobin usr/bin/{clash-meta,clash-verge}
@@ -53,14 +45,4 @@ src_install() {
 	doicon -s 128 usr/share/icons/hicolor/128x128/apps/${MY_PN}.png
 	doicon -s 256 usr/share/icons/hicolor/256x256@2/apps/${MY_PN}.png
 	doicon -s 32 usr/share/icons/hicolor/32x32/apps/${MY_PN}.png
-}
-
-pkg_postinst() {
-	xdg_desktop_database_update
-	xdg_icon_cache_update
-}
-
-pkg_postrm() {
-	xdg_desktop_database_update
-	xdg_icon_cache_update
 }
