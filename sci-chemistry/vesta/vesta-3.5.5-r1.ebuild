@@ -18,7 +18,7 @@ RESTRICT="mirror strip"
 
 DEPEND=""
 RDEPEND="
-	x11-libs/gtk+[wayland]
+	x11-libs/gtk+:3
 	virtual/glu
 	dev-util/desktop-file-utils
 	x11-libs/libXtst
@@ -44,10 +44,6 @@ src_install() {
 
 pkg_postinst() {
 	xdg_desktop_database_update
-
-	elog "Since version 3.5.6, a behavior change has been made, which may cause deleted atoms appear again."
-	elog "See: https://groups.google.com/g/vesta-discuss/c/y7TCMRe1HlA"
-	elog "To restore the previous behavior, please install version 3.5.5 or earlier."
 
 	elog "If you meet any abnormal behavior while using VESTA after upgrade or downgrade,"
 	elog "try remove ~/.VESTA and restart VESTA. Note that this will make you lost"
