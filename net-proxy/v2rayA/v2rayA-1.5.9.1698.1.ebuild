@@ -28,8 +28,8 @@ DEPEND=""
 RDEPEND="
 	${DEPEND}
 	v2ray? ( || (
-		net-proxy/v2ray
-		net-proxy/v2ray-bin
+		<net-proxy/v2ray-5
+		<net-proxy/v2ray-bin-5
 	) )
 	xray? ( >=net-proxy/Xray-1.4.3 )
 "
