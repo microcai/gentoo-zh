@@ -87,7 +87,6 @@ dev-python/fuo-qqmusic 0.4.1: qq music support for feeluown
 dev-python/janus 1.0.0-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/nvchecker 2.9: nvchecker is for checking if a new version of some software has been released
 dev-python/pycosat 0.6.3: Python bindings to picosat (a SAT solver)
-dev-python/python-telegram-bot 13.12: Python wrapper of telegram bots API
 dev-python/qasync 0.23.0: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/structlog 22.1.0: Structured Logging for Python
 dev-util/arch-install-scripts 24: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
