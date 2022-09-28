@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-09-28 10:34:57 CST)
+(The last generation time: 2022-09-28 10:47:23 CST)
 
 ### Packages
 
@@ -164,8 +164,6 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/nvchecker                         | 2.9                                       |        | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
    dev-python/structlog                       | 22.1.0                                    | RD     | http://www.structlog.org/en/stable/                                                     | Structured Logging for Python
-----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/python-telegram-bot               | 13.12                                     |        | https://github.com/python-telegram-bot/python-telegram-bot                              | Python wrapper of telegram bots API
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/arch-install-scripts                | 24                                        |        | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
    sys-apps/pacman                            | 6.0.1                                     |  D, RD | https://archlinux.org/pacman/                                                           | Archlinux's binary package manager
