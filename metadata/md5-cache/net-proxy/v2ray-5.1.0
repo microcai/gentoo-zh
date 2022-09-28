@@ -11,4 +11,4 @@ RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/v2fly/v2ray-core/archive/refs/tags/v5.1.0.tar.gz -> v2ray-5.1.0.tar.gz https://github.com/CHN-beta/gentoo-go-dep/releases/download/v2ray-5.1.0/v2ray-5.1.0-deps.tar.xz
 _eclasses_=toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	systemd	2736b403a83f194b59b767f3b344c2c1	go-module	b088539f282ed242c23f38fa65472184
-_md5_=4f548fac06bf16c17ae7b5b28607b98d
+_md5_=4cbadd9afe1c2bf7fdddc5a88404b6f0

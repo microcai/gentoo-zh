@@ -8,10 +8,10 @@ INHERIT=systemd go-module desktop xdg
 IUSE=+v2ray xray systemd
 KEYWORDS=~amd64
 LICENSE=AGPL-3
-RDEPEND=v2ray? ( || ( net-proxy/v2ray net-proxy/v2ray-bin ) ) xray? ( >=net-proxy/Xray-1.4.3 )
+RDEPEND=v2ray? ( || ( <net-proxy/v2ray-5 <net-proxy/v2ray-bin-5 ) ) xray? ( >=net-proxy/Xray-1.4.3 )
 REQUIRED_USE=|| ( v2ray xray )
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/v2rayA/v2rayA/archive/refs/tags/v1.5.9.1698.1.tar.gz -> v2rayA-1.5.9.1698.1.tar.gz https://github.com/liuyujielol/vendors/releases/download/v2rayA/v2rayA-1.5.9.1698.1-yarn_mirror.tar.gz https://github.com/liuyujielol/vendors/releases/download/v2rayA/v2rayA-1.5.9.1698.1-go-deps.tar.gz
 _eclasses_=toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	systemd	2736b403a83f194b59b767f3b344c2c1	go-module	b088539f282ed242c23f38fa65472184	desktop	22952d8f27cac191d75529d4c38e6bfa	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
-_md5_=81dec7636a7648c565f736805e9162ec
+_md5_=0fbfe9259f623506c03929b01867590b
