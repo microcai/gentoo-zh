@@ -20,14 +20,20 @@ HOMEPAGE="https://github.com/fcitx/fcitx5-gtk"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-IUSE="+gtk2 +gtk3 gtk4 +introspection +snooper +wayland"
+IUSE="gtk2 +gtk3 +gtk4 +introspection +snooper onlyplugin wayland"
+REQUIRED_USE="|| ( gtk2 gtk3 gtk4 )"
 
 RDEPEND="app-i18n/fcitx:5
 	gtk2? ( x11-libs/gtk+:2 )
 	gtk3? ( x11-libs/gtk+:3[wayland?] )
 	gtk4? ( gui-libs/gtk:4[wayland?] )
 	introspection? ( dev-libs/gobject-introspection )
-	kde-frameworks/extra-cmake-modules"
+	kde-frameworks/extra-cmake-modules
+	dev-libs/glib:2
+	x11-libs/gdk-pixbuf:2
+	x11-libs/libX11
+	x11-libs/libxkbcommon
+"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -45,6 +51,7 @@ src_configure() {
 		-DENABLE_GTK4_IM_MODULE=$(usex gtk4)
 		-DENABLE_SNOOPER=$(usex snooper)
 		-DENABLE_GIR=$(usex introspection)
+		-DBUILD_ONLY_PLUGIN=$(usex onlyplugin)
 	)
 	cmake_src_configure
 }
