@@ -1,15 +1,16 @@
-BDEPEND=>=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile configure install prepare test unpack
+BDEPEND=>=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare test
 DEPEND=!onlyplugin? ( >=app-i18n/fcitx-5.0.16:5 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 dev-qt/qtconcurrent:5 ) x11-libs/libX11 x11-libs/libxcb x11-libs/libxkbcommon qt6? ( dev-qt/qtbase:6[dbus,gui] ) kde-frameworks/extra-cmake-modules:5 virtual/pkgconfig
 DESCRIPTION=Qt library and IM module for fcitx5
 EAPI=8
 HOMEPAGE=https://github.com/fcitx/fcitx5-qt
-INHERIT=cmake git-r3
+INHERIT=cmake
 IUSE=+qt5 onlyplugin qt6
+KEYWORDS=~amd64 ~loong ~x86
 LICENSE=BSD-1 GPL-2+ LGPL-2+ MIT
-PROPERTIES=live
 RDEPEND=!onlyplugin? ( >=app-i18n/fcitx-5.0.16:5 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 dev-qt/qtconcurrent:5 ) x11-libs/libX11 x11-libs/libxcb x11-libs/libxkbcommon qt6? ( dev-qt/qtbase:6[dbus,gui] ) kde-frameworks/extra-cmake-modules:5
 REQUIRED_USE=|| ( qt5 qt6 )
 SLOT=5
-_eclasses_=toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	29a755b1291d64133634d80b0328f153	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	cmake	44afbf15c35884f7c840470f1cf05d0d	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
-_md5_=35c316a274938de358a385058d623a89
+SRC_URI=https://github.com/fcitx/fcitx5-qt/archive/refs/tags/5.0.15.tar.gz -> fcitx-qt-5.0.15.tar.gz
+_eclasses_=toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	29a755b1291d64133634d80b0328f153	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	cmake	44afbf15c35884f7c840470f1cf05d0d
+_md5_=873dcf78e9c63e2e74b2adc7fd7fddb7
