@@ -14,6 +14,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="+shared doc test"
+RESTRICT="!test? ( test )"
 
 DEPEND="
 	sys-libs/zlib
