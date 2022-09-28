@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-09-28 10:03:53 CST)
+(The last generation time: 2022-09-28 10:04:30 CST)
 
 ### Packages
 
@@ -21,7 +21,7 @@
  app-dicts/fcitx5-pinyin-zhwiki               | 20220722                                  |        | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/appflowy-bin                     | 0.0.4                                     |        | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
-                                              | 0.0.5.2                                   |        |                                                                                         |
+                                              | 0.0.5.3                                   |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/marktext-bin                     | 0.17.1                                    |        | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
