@@ -1,7 +1,7 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit cmake
 
@@ -21,21 +21,28 @@ HOMEPAGE="https://github.com/fcitx/fcitx5-qt"
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
 IUSE="+qt5 onlyplugin qt6"
+REQUIRED_USE="|| ( qt5 qt6 )"
 
 RDEPEND="
 	!onlyplugin? (
 		>=app-i18n/fcitx-5.0.16:5
 	)
-	dev-qt/qtcore:5
-	dev-qt/qtdbus:5
-	dev-qt/qtgui:5
-	dev-qt/qtwidgets:5
-	x11-libs/libX11
-	dev-qt/qtconcurrent:5
-	qt6? (
-		dev-qt/qtbase
+	qt5? (
+		dev-qt/qtcore:5
+		dev-qt/qtdbus:5
+		dev-qt/qtgui:5
+		dev-qt/qtwidgets:5
+		dev-qt/qtconcurrent:5
 	)
-	kde-frameworks/extra-cmake-modules"
+	x11-libs/libX11
+	x11-libs/libxcb
+	x11-libs/libxkbcommon
+
+	qt6? (
+		dev-qt/qtbase:6[dbus,gui]
+	)
+	kde-frameworks/extra-cmake-modules:5
+"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
