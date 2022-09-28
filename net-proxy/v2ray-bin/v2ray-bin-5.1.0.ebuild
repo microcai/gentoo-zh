@@ -32,7 +32,6 @@ RDEPEND="${DEPEND}"
 BDEPEND="app-arch/unzip"
 QA_PREBUILT="
 	/usr/bin/v2ray
-	/usr/bin/v2ctl
 "
 
 src_unpack() {
@@ -44,7 +43,6 @@ src_unpack() {
 
 src_install() {
 	dobin v2ray
-	dobin v2ctl
 
 	insinto /usr/share/v2ray
 	doins *.dat
@@ -52,7 +50,10 @@ src_install() {
 	insinto /etc/v2ray
 	doins *.json
 
-	newinitd "${FILESDIR}/v2ray.initd" v2ray
-	systemd_dounit "${FILESDIR}/v2ray.service"
-	systemd_newunit "${FILESDIR}/v2ray_at.service" "v2ray@.service"
+	sed -i 's|/usr/local/bin|/usr/bin|;s|/usr/local/etc|/etc|' systemd/system/*.service || die
+	sed -i '/^User=/s/nobody/v2ray/;/^User=/aDynamicUser=true' systemd/system/*.service || die
+
+	newinitd "${FILESDIR}/v2ray.initd-r1" v2ray
+	systemd_dounit systemd/system/v2ray.service
+	systemd_dounit systemd/system/v2ray@.service
 }
