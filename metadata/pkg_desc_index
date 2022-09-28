@@ -7,12 +7,11 @@ app-arch/zchunk 1.2.2 9999: A format designed for highly efficient deltas while 
 app-backup/snapper-gui 220626: GUI for snapper, a tool for Linux filesystem snapshot management
 app-crypt/archlinux-keyring 20220727: GnuPG keyring of Archlinux developer keys
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
-app-dicts/copytranslator 9.1.0: Foreign language reading and translation assistant based on copy and translate.
 app-dicts/fcitx5-pinyin-moegirl 20220714: Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 app-dicts/fcitx5-pinyin-zhwiki 20220722: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
-app-editors/appflowy-bin 0.0.4 0.0.5.2: AppFlowy is an open-source alternative to Notion
+app-editors/appflowy-bin 0.0.4 0.0.5.3: AppFlowy is an open-source alternative to Notion
 app-editors/marktext-bin 0.17.1: A simple and elegant markdown editor, available for Linux, macOS and Windows.
-app-editors/typora 0.11.18 1.3.6: A truely minimal markdown editor.
+app-editors/typora 0.11.18 1.3.6 1.4.4: A truely minimal markdown editor.
 app-emulation/deepin-udis86 1.72-r4: Deepin Version of Wine
 app-emulation/deepin-wine-helper 5.1.27-r1: Deepin Wine Helper
 app-emulation/deepin-wine-plugin 5.1.13-r1: Deepin Wine plugin
