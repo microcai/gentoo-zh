@@ -16,6 +16,8 @@ app-i18n/fcitx:qt4 - Install input method module for QT4
 app-i18n/fcitx:table - Install table input methods for Simplified Chinese
 app-i18n/fcitx:xkb - Enable support for XKB (required for fcitx-xkb, fcitx-xkbdbus, part of fcitx-keyboard)
 app-i18n/fcitx-chinese-addons:browser - Enable built-in browser using dev-qt/qtwebengine
+app-i18n/fcitx-chinese-addons:cloudpinyin - Build cloud pinyin addon
+app-i18n/fcitx-chinese-addons:coverage - Build the project with gcov support (Need USE=test)
 app-i18n/fcitx-chinese-addons:gui - Enable configure gui
 app-i18n/fcitx-chinese-addons:opencc - Enable support for conversion between Traditional and Simplified Chinese
 app-i18n/fcitx-configtool:config-qt - Enable fcitx5-config-qt
