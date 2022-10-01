@@ -536,12 +536,6 @@ github_account = "liuyujielol"
 # TODO
 #["dev-util/v2ray-geoip-generator"]
 
-["games-action/DDNet"]
-source = "github"
-github = "ddnet/ddnet"
-use_latest_tag = true
-github_account = "Schroedingersdoraemon"
-
 ["games-board/othello"]
 source = "regex"
 url = "http://othello-game.sourceforge.net/en/Download.html"
@@ -672,6 +666,12 @@ prefix = "v"
 
 # TODO
 #["media-sound/linnya"]
+
+["media-sound/listen1_desktop-bin"]
+source = "github"
+github = "listen1/listen1_desktop"
+use_latest_tag = true
+prefix = "v"
 
 # TODO: need run js
 #["media-sound/netease-cloud-music"]
