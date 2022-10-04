@@ -10,5 +10,5 @@ RDEPEND=x11-libs/gtk+:3[wayland] virtual/glu dev-util/desktop-file-utils x11-lib
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://jp-minerals.org/vesta/archives/3.5.7/VESTA-gtk3.tar.bz2 -> vesta-3.5.7.tar.bz2
-_eclasses_=desktop	22952d8f27cac191d75529d4c38e6bfa	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=desktop	22952d8f27cac191d75529d4c38e6bfa	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
 _md5_=881728332fc6e556da840b9a1e1eb025
