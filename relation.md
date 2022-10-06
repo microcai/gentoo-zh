@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-10-04 00:45:34 CST)
+(The last generation time: 2022-10-06 21:09:24 CST)
 
 ### Packages
 
@@ -110,8 +110,8 @@
                                               | 5.14.14                                   |        |                                                                                         |
                                               | 5.9.18                                    |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-office/freeoffice                        | 1046                                      |        | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite.
-                                              | 1050                                      |        |                                                                                         |
+ app-office/freeoffice                        | 1050                                      |        | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite.
+                                              | 1054                                      |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-office/wps-office                        | 11.1.0.10976                              |        | http://www.wps.cn/product/wpslinux/                                                     | WPS Office is an office productivity suite, Here is the Chinese version
                                               | 11.1.0.11664                              |        |                                                                                         |
@@ -424,8 +424,8 @@
                                               | 5.19.9                                    |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                        | 3-r11                                     |        |                                                                                         | Virtual for Linux kernel sources
-   sys-kernel/liquorix-sources                | 5.19.10                                   | RD     | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
-                                              | 5.19.12                                   |        |                                                                                         |
+   sys-kernel/liquorix-sources                | 5.19.12                                   | RD     | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
+                                              | 5.19.14                                   |        |                                                                                         |
    sys-kernel/xanmod-kernel                   | 5.15.68                                   | RD     | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
                                               | 5.19.9                                    |        |                                                                                         |
    sys-kernel/xanmod-rt                       | 5.15.12                                   | RD     | https://github.com/HougeLangley/customkernel                                            | Xanmod-RT, cjktty, uksm patchset for main kernel tree
