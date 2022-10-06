@@ -52,7 +52,7 @@ app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/yq-bin 4.25.3: yq is a portable command-line YAML, JSON and XML processor
 app-mobilephone/scrcpy 1.23 1.24: Display and control your Android device
 app-office/bytedance-feishu 4.11.6.2 5.9.18 5.14.14: feishu - ByteDance's enterprise collaboration platform
-app-office/freeoffice 1046 1050: A complete, free Microsoft Office-compatible alternative office suite.
+app-office/freeoffice 1050 1054: A complete, free Microsoft Office-compatible alternative office suite.
 app-office/wps-office 11.1.0.10976 11.1.0.11664: WPS Office is an office productivity suite, Here is the Chinese version
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-shells/gitstatus 1.5.4: Git status for Bash and Zsh prompt
@@ -193,7 +193,7 @@ sys-fs/erofs-utils 1.3: Userspace tools for EROFS images
 sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
-sys-kernel/liquorix-sources 5.19.10 5.19.12: Liquorix kernel is best one for desktop, multimedia and gaming workloads
+sys-kernel/liquorix-sources 5.19.12 5.19.14: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 31: Modular initramfs image creation utility
 sys-kernel/xanmod-kernel 5.15.68 5.19.9: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 5.15.12 5.15.14: Xanmod-RT, cjktty, uksm patchset for main kernel tree
