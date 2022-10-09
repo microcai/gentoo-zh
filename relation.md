@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-10-06 21:09:24 CST)
+(The last generation time: 2022-10-10 00:20:46 CST)
 
 ### Packages
 
@@ -246,7 +246,7 @@
    dev-python/janus                           | 1.0.0-r1                                  |  D, RD | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
    dev-python/qasync                          | 0.23.0                                    |  D, RD | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/go-musicfox-bin                  | 3.0.2                                     |        | https://github.com/anhoder                                                              | Command-line Netease Cloud Music written in Go.
+ media-sound/go-musicfox-bin                  | 3.2.2                                     |        | https://github.com/anhoder                                                              | Command-line Netease Cloud Music written in Go.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/linnya                           | 2.2.0                                     |        | http://www.linnya.org                                                                   | A free music player
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -420,18 +420,18 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-process/btop                             | 1.2.9                                     |        | https://github.com/aristocratos/btop                                                    | Resources monitor. The C++ version of bashtop
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- virtual/dist-kernel                          | 5.15.68                                   |        |                                                                                         | Virtual to depend on any Distribution Kernel
-                                              | 5.19.9                                    |        |                                                                                         |
+ virtual/dist-kernel                          | 5.15.72                                   |        |                                                                                         | Virtual to depend on any Distribution Kernel
+                                              | 5.19.14                                   |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                        | 3-r11                                     |        |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/liquorix-sources                | 5.19.12                                   | RD     | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
                                               | 5.19.14                                   |        |                                                                                         |
-   sys-kernel/xanmod-kernel                   | 5.15.68                                   | RD     | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
-                                              | 5.19.9                                    |        |                                                                                         |
+   sys-kernel/xanmod-kernel                   | 5.15.72                                   | RD     | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
+                                              | 5.19.14                                   |        |                                                                                         |
    sys-kernel/xanmod-rt                       | 5.15.12                                   | RD     | https://github.com/HougeLangley/customkernel                                            | Xanmod-RT, cjktty, uksm patchset for main kernel tree
                                               | 5.15.14                                   |        |                                                                                         |
-   sys-kernel/xanmod-sources                  | 5.15.68                                   | RD     | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
-                                              | 5.19.8                                    |        |                                                                                         |
+   sys-kernel/xanmod-sources                  | 5.15.72                                   | RD     | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
+                                              | 5.19.14                                   |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/openvscode-server-bin               | 1.70.1                                    |        | https://github.com/gitpod-io/openvscode-server                                          | VS Code that runs a server on remote and allows access through a web browser
                                               | 1.71.2                                    |        |                                                                                         |
