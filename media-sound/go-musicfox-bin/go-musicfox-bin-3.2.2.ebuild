@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="media-libs/alsa-lib"
+DEPEND="media-libs/flac media-libs/alsa-lib"
 RDEPEND="${DEPEND}"
 BDEPEND="app-arch/unzip"
 
@@ -22,5 +22,8 @@ S=${WORKDIR}
 
 src_install() {
 	cd go-musicfox* || die
+	ln -s /usr/lib64/libFLAC.so libFLAC.so.8
+	insinto /usr/lib
+	doins libFLAC.so.8
 	dobin musicfox
 }
