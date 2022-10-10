@@ -12,5 +12,5 @@ RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-d
 RESTRICT=binchecks strip
 SLOT=5.19.14
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.19.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.19-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.19-1.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.19-1.extras.tar.xz https://github.com/zen-kernel/zen-kernel/releases/download/v5.19.14-lqx1/v5.19.14-lqx1.patch.xz https://github.com/zhmars/cjktty-patches/raw/master/v5.x/cjktty-5.19.patch
-_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	kernel-2	aa8997cf13a12b867c4c8c57383b8582
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	kernel-2	aa8997cf13a12b867c4c8c57383b8582
 _md5_=ee891e6e1a4329153717b30127520a3b
