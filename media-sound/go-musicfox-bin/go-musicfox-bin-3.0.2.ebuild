@@ -9,7 +9,7 @@ SRC_URI="https://github.com/anhoder/go-musicfox/releases/download/v${PV}/go-musi
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="media-libs/flac media-libs/alsa-lib"
@@ -22,8 +22,5 @@ S=${WORKDIR}
 
 src_install() {
 	cd go-musicfox* || die
-	ln -s /usr/lib64/libFLAC.so libFLAC.so.8
-	insinto /usr/lib
-	doins libFLAC.so.8
 	dobin musicfox
 }
