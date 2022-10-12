@@ -1,0 +1,14 @@
+diff --git a/build/moz.configure/warnings.configure b/build/moz.configure/warnings.configure
+index 302641057f..f7e5de1ca4 100755
+--- a/build/moz.configure/warnings.configure
++++ b/build/moz.configure/warnings.configure
+@@ -293,7 +293,8 @@ with only_when(target_is_windows):
+ check_and_add_warning("-Wno-gnu-zero-variadic-macro-arguments")
+ 
+ # Make it an error to be missing function declarations for C code.
+-check_and_add_warning("-Werror=implicit-function-declaration", c_compiler)
++check_and_add_warning("-Werror=implicit-function-declaration", 
++						when="--enable-warnings-as-errors")
+ 
+ # New in clang 11. We can't really do anything about this warning.
+ check_and_add_warning("-Wno-psabi")
