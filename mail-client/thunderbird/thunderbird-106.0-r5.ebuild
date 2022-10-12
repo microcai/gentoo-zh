@@ -1,16 +1,16 @@
 # Copyright 1999-2022 Gentoo Authors
-# Distributed under the terms of the GNU Pulibc License v2
+# Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI=8
 
-LLVM_MAX_SLOT=13
+LLVM_MAX_SLOT=14
 
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( python3_{9..10} )
 PYTHON_REQ_USE="ncurses,sqlite,ssl"
 
 WANT_AUTOCONF="2.1"
 
-MOZ_BETA_V=2
+MOZ_BETA_V=$(ver_cut 2 $PR)
 MOZ_PV="${PV}b${MOZ_BETA_V}"
 MOZ_PN=${PN}
 MOZ_P="${PN}-${MOZ_PV}"
@@ -25,100 +25,102 @@ KEYWORDS=""
 SLOT="beta"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 
-IUSE="+clang dbus debug eme-free hardened hwaccel"
-IUSE+=" jack lto +openh264 pulseaudio selinux"
+IUSE="+clang dbus debug eme-free hardened hwaccel selinux lto +openh264 pulseaudio"
 IUSE+=" +system-icu +system-jpeg +system-libevent +system-libvpx system-png system-webp"
-IUSE+=" wayland wifi"
+IUSE+=" +system-harfbuzz wayland wifi"
 
 REQUIRED_USE="
 	wifi? ( dbus )
+	wayland? ( dbus )
 "
 
+inherit autotools check-reqs desktop flag-o-matic linux-info llvm\
+	multiprocessing pax-utils python-any-r1 toolchain-funcs xdg optfeature
+
 BDEPEND="${PYTHON_DEPS}
-	app-arch/unzip
-	app-arch/zip
-	>=dev-util/cbindgen-0.19.0
-	>=net-libs/nodejs-10.23.1
+	>=app-arch/unzip-6.0
+	>=app-arch/zip-3.0
+	>=dev-util/cbindgen-0.24.3
+	>=net-libs/nodejs-18.9.1
 	virtual/pkgconfig
-	>=virtual/rust-1.57.0
-	>=dev-lang/nasm-2.14
+	>=virtual/rust-1.62.1
+	>=dev-lang/nasm-2.15.05
 	|| (
+		(
+			sys-devel/clang:14
+			sys-devel/llvm:14
+			clang? ( =sys-devel/lld-14* )
+		)
 		(
 			sys-devel/clang:13
 			sys-devel/llvm:13
 			clang? ( =sys-devel/lld-13* )
 		)
-		(
-			sys-devel/clang:12
-			sys-devel/llvm:12
-			clang? ( =sys-devel/lld-12* )
-		)
-		(
-			sys-devel/clang:11
-			sys-devel/llvm:11
-			clang? ( =sys-devel/lld-11* )
-		)
 	)
 "
 
 COMMON_DEPEND="
-	>=dev-libs/nss-3.75
-	>=dev-libs/nspr-4.32
-	dev-libs/atk
-	dev-libs/expat
-	media-libs/alsa-lib
-	>=media-libs/mesa-10.2:*
+	>=dev-libs/nss-3.83
+	>=dev-libs/nspr-4.35
+	>=dev-libs/expat-2.4.9
+	>=media-libs/alsa-lib-1.2.7.2
+	>=media-libs/mesa-22.1:*
 	media-libs/fontconfig
-	>=media-libs/freetype-2.9
+	>=media-libs/freetype-2.12
 	virtual/freedesktop-icon-theme
-	>=x11-libs/pixman-0.19.2
-	>=dev-libs/glib-2.42:2
-	>=sys-libs/zlib-1.2.3
-	>=dev-libs/libffi-3.0.10:=
-	media-video/ffmpeg
-	>=x11-libs/cairo-1.10[X]
-	>=x11-libs/gtk+-3.4.0:3[X]
-	x11-libs/gdk-pixbuf
-	x11-libs/libX11
-	x11-libs/libXcomposite
-	x11-libs/libXdamage
-	x11-libs/libXext
-	x11-libs/libXfixes
-	x11-libs/libXrandr
-	x11-libs/libXrender
-	x11-libs/libXtst
-	x11-libs/libxcb:=
-	>=x11-libs/pango-1.22.0
+	>=x11-libs/pixman-0.40.0
+	>=dev-libs/glib-2.72.0:2
+	>=sys-libs/zlib-1.2.12
+	>=dev-libs/libffi-3.4.0:=
+	>=media-video/ffmpeg-4.4.2
+	>=x11-libs/cairo-1.16[X]
+	>=x11-libs/gtk+-3.24.34:3[X]
+	>=x11-libs/gdk-pixbuf-2.42.8
+	>=x11-libs/libX11-1.8.1
+	>=x11-libs/libXcomposite-0.4.5
+	>=x11-libs/libXdamage-1.1.5
+	>=x11-libs/libXext-1.3.4
+	>=x11-libs/libXfixes-6.0.0
+	>=x11-libs/libXrandr-1.5.2
+	>=x11-libs/libXrender-0.9.10
+	>=x11-libs/libXtst-1.2.3
+	>=x11-libs/libxcb-1.15:=
+	>=x11-libs/pango-1.50.9
 	dbus? (
-		sys-apps/dbus
-		dev-libs/dbus-glib
+		>=sys-apps/dbus-1.14.0
+		>=dev-libs/dbus-glib-0.112
 	)
-	system-icu? ( >=dev-libs/icu-70.1:= )
-	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
-	system-libevent? ( >=dev-libs/libevent-2.0:0=[threads] )
-	system-libvpx? ( >=media-libs/libvpx-1.8.2:0=[postproc] )
-	system-png? ( >=media-libs/libpng-1.6.35:0=[apng] )
-	system-webp? ( >=media-libs/libwebp-1.1.0:0= )
+	system-icu? ( >=dev-libs/icu-71.1:= )
+	system-jpeg? ( >=media-libs/libjpeg-turbo-2.1.3 )
+	system-libevent? ( >=dev-libs/libevent-2.1.12:0/2.1-7[threads] )
+	system-libvpx? ( >=media-libs/libvpx-1.12.0:0=[postproc] )
+	system-png? ( >=media-libs/libpng-1.6.37:0=[apng] )
+	system-webp? ( >=media-libs/libwebp-1.2.4:0= )
+	system-harfbuzz? (
+		>=media-gfx/graphite2-1.3.14
+		>=media-libs/harfbuzz-5.1.0:0=
+	)
 	wifi? (
 		kernel_linux? (
-			sys-apps/dbus
-			dev-libs/dbus-glib
-			net-misc/networkmanager
+			>=sys-apps/dbus-1.14.0
+			>=dev-libs/dbus-glib-0.112
+			>=net-misc/networkmanager-1.38.4
 		)
 	)
-	jack? ( virtual/jack )
-	selinux? ( sec-policy/selinux-mozilla )
+	selinux? (
+		sec-policy/selinux-mozilla
+		sec-policy/selinux-thunderbird
+	)
 "
 
 RDPEND="${COMMON_DEPEND}
 	!mail-client/thunderbird:0
 	!mail-client/thunderbird-bin
-	jack? ( virtual/jack )
-	openh264? ( media-libs/openh264:*[plugin] )
+	openh264? ( >=media-libs/openh264-2.3.0:*[plugin] )
 	pulseaudio? (
 		|| (
-			media-sound/pulseaudio
-			>=media-sound/apulse-0.1.12-r4
+			>=media-sound/pulseaudio-16.0
+			>=media-sound/apulse-0.1.13-r2
 		)
 	)
 	selinux? ( sec-policy/selinux-mozilla )
@@ -126,16 +128,16 @@ RDPEND="${COMMON_DEPEND}
 
 DEPEND="${PYTHON_DEPS}
 	${COMMON_DEPEND}
-	x11-libs/libICE
-	x11-libs/libSM
+	>=x11-libs/libICE-1.0.10
+	>=x11-libs/libSM-1.2.3
 	virtual/opengl
 	pulseaudio? (
 		|| (
-			media-sound/pulseaudio
-			>=media-sound/apulse-0.1.12-r4[sdk]
+			>=media-sound/pulseaudio-16.0
+			>=media-sound/apulse-0.1.13-r2[sdk]
 		)
 	)
-	wayland? ( >=x11-libs/gtk+-3.11.3[wayland] )
+	wayland? ( >=x11-libs/gtk+-3.24.34[wayland] )
 "
 S="${WORKDIR}/${PN}-${PV%_*}"
 
@@ -148,32 +150,20 @@ MOZ_LANGS=(
 	sk sl sq sr sv-SE th tr uk uz vi zh-CN zh-TW
 )
 
-inherit autotools check-reqs desktop flag-o-matic linux-info llvm\
-	multiprocessing pax-utils python-any-r1 toolchain-funcs \
-	xdg
-
 llvm_check_deps() {
 	if ! has_version -b "sys-devel/clang:${LLVM_SLOT}" ; then
 		einfo "sys-devel/clang:${LLVM_SLOT} is missing! Cannot use LLVM slot ${LLVM_SLOT}..." >&2
 		return 1
 	fi
 
-		if use clang ; then
+	if use clang ; then
 		if ! has_version -b "=sys-devel/lld-${LLVM_SLOT}*" ; then
 			einfo "=sys-devel/lld-${LLVM_SLOT}* is missing! Cannot use LLVM slot ${LLVM_SLOT} ..." >&2
 			return 1
 		fi
-
-		if use pgo ; then
-			if ! has_version -b "=sys-libs/compiler-rt-sanitizers-${LLVM_SLOT}*" ; then
-				einfo "=sys-libs/compiler-rt-sanitizers-${LLVM_SLOT}* is missing! Cannot use LLVM slot ${LLVM_SLOT} ..." >&2
-				return 1
-			fi
-		fi
 	fi
 
 	einfo "Using LLVM slot ${LLVM_SLOT} to build" >&2
-
 }
 
 mozilla_set_globals() {
@@ -337,11 +327,11 @@ pkg_setup() {
 			local version_lld=$(ld.lld --version 2>/dev/null | awk '{ print $2 }')
 			[[ -n ${version_lld} ]] && version_lld=$(ver_cut 1 "${version_lld}")
 			[[ -z ${version_lld} ]] && die "Failed to read ld.lld version!"
-			
+
 			local version_llvm_rust=$(rustc -Vv 2>/dev/null | grep -F -- 'LLVM version:' | awk '{ print $3 }')
 			[[ -n ${version_llvm_rust} ]] && version_llvm_rust=$(ver_cut 1 "${version_llvm_rust}")
 			[[ -z ${version_llvm_rust} ]] && die "Failed to read used LLVM version from rustc!"
-			
+
 			if ver_test "${version_lld}" -ne "${version_llvm_rust}" ; then
 				eerror "Rust is using LLVM version ${version_llvm_rust} but ld.lld version belongs to LLVM version ${version_lld}."
 				eerror "You will be unable to link ${CATEGORY}/${PN}. To proceed you have the following options:"
@@ -351,14 +341,7 @@ pkg_setup() {
 				die "LLVM version used by Rust (${version_llvm_rust}) does not match with ld.lld version (${version_lld})!"
 			fi
 		fi
-			
-		if ! use clang && [[ $(gcc-major-version) -eq 11 ]] \
-			&& ! has_version -b ">sys-devel/gcc-11.1.0:11" ; then
-			# bug 792705
-			eerror "Using GCC 11 to compile firefox is currently known to be broken (see bug #792705)."
-			die "Set USE=clang or select <gcc-11 to build ${CATEGORY}/${P}."
-		fi
-			
+
 		python-any-r1_pkg_setup
 
 		# Avoid PGO profiling problems due to enviroment leakage
@@ -375,6 +358,14 @@ pkg_setup() {
 		if ! mountpoint -q /dev/shm ; then
 			# If /dev/shm is not available, configure is known to fail with
 			# a traceback report referencing /usr/lib/pythonN.N/multiprocessing/synchronize.py
+			ewarn "/dev/shm is not mounted -- expect build failures!"
+		fi
+
+		# Build system is using /proc/self/oom_score_adj, bug #604394
+		addpredict /proc/self/oom_score_adj
+
+		if ! mountpoint -q /dev/shm;
+		then
 			ewarn "/dev/shm is not mounted -- expect build failures!"
 		fi
 
@@ -399,10 +390,6 @@ pkg_setup() {
 		# Ensure we use C locale when building, bug #746215
 		export LC_ALL=C
 	fi
-
-	CONFIG_CHECK="~SECCOMP"
-	WARNING_SECCOMP="CONFIG_SECCOMP not set! This system will be unable to play DRM-protected content."
-	linux-info_pkg_setup
 }
 
 src_unpack() {
@@ -420,9 +407,15 @@ src_unpack() {
 			unpack ${_src_file}
 		fi
 	done
+
+	# copy patchset
+	cp -rf "${FILESDIR}/patches" "${WORKDIR}/"
 }
 
 src_prepare() {
+	rm -vf "${WORKDIR}"/patches/0005*.patch
+	use lto && rm -v "${WORKDIR}"/patches/*-only-enable-LTO-*.patch
+	eapply "${WORKDIR}/patches/"
 
 	# Allow user to apply any additional patches without modifing ebuild
 	eapply_user
@@ -456,9 +449,6 @@ src_prepare() {
 	einfo "Removing pre-built binaries ..."
 	find "${S}"/third_party -type f \( -name '*.so' -o -name '*.o' \) -print -delete || die
 
-	# Clearing checksums where we have applied patches
-	moz_clear_vendor_checksums target-lexicon-0.9.0
-
 	# Create build dir
 	BUILD_DIR="${WORKDIR}/${PN}_build"
 	mkdir -p "${BUILD_DIR}" || die
@@ -468,7 +458,7 @@ src_prepare() {
 	echo -n "${MOZ_API_KEY_LOCATION//gGaPi/}" > "${S}"/api-location.key || die
 	echo -n "${MOZ_API_KEY_MOZILLA//m0ap1/}" > "${S}"/api-mozilla.key || die
 
-	xdg_src_prepare
+	xdg_environment_reset
 }
 
 src_configure() {
@@ -566,8 +556,7 @@ src_configure() {
 		--x-libraries="${SYSROOT}${EPREFIX}/usr/$(get_libdir)"
 
 	# Set update channel
-	local update_channel=release
-	[[ -n ${MOZ_ESR} ]] && update_channel=esr
+	local update_channel=beta
 	mozconfig_add_options_ac '' --update-channel=${update_channel}
 
 	if ! use x86 ; then
@@ -610,6 +599,8 @@ src_configure() {
 		einfo "Building without Mozilla API key ..."
 	fi
 
+	mozconfig_use_with system-harfbuzz
+	mozconfig_use_with system-harfbuzz system-graphite2
 	mozconfig_use_with system-icu
 	mozconfig_use_with system-jpeg
 	mozconfig_use_with system-libevent
@@ -626,20 +617,18 @@ src_configure() {
 		append-ldflags "-Wl,-z,relro -Wl,-z,now"
 	fi
 
-	mozconfig_use_enable jack
+	local myaudiobackends=""
+	use pulseaudio && myaudiobackends+="pulseaudio,"
+	! use pulseaudio && myaudiobackends+="alsa,"
 
-	mozconfig_use_enable pulseaudio
-	# force the deprecated alsa sound code if pulseaudio is disabled
-	if use kernel_linux && ! use pulseaudio ; then
-		mozconfig_add_options_ac '-pulseaudio' --enable-alsa
-	fi
+	mozconfig_add_options_ac '--enable-audio-backends' --enable-audio-backends="${myaudiobackends::-1}"
 
 	mozconfig_use_enable wifi necko-wifi
 
 	if use wayland ; then
-		mozconfig_add_options_ac '+wayland' --enable-default-toolkit=cairo-gtk3-wayland
+		mozconfig_add_options_ac '+x11+wayland' --enable-default-toolkit=cairo-gtk3-x11-wayland
 	else
-		mozconfig_add_options_ac '' --enable-default-toolkit=cairo-gtk3
+		mozconfig_add_options_ac '+x11' --enable-default-toolkit=cairo-gtk3
 	fi
 
 	if use lto ; then
@@ -706,16 +695,17 @@ src_configure() {
 		# https://bugzilla.mozilla.org/show_bug.cgi?id=1482204
 		# https://bugzilla.mozilla.org/show_bug.cgi?id=1483822
 		# toolkit/moz.configure Elfhack section: target.cpu in ('arm', 'x86', 'x86_64')
-		local disable_elf_hack=yes
-
-		if [[ -n ${disable_elf_hack} ]] ; then
-			mozconfig_add_options_ac 'elf-hack is broken when using Clang' --disable-elf-hack
-		fi
+		mozconfig_add_options_ac 'elf-hack is broken when using Clang' --disable-elf-hack
 	elif tc-is-gcc ; then
 		if ver_test $(gcc-fullversion) -ge 10 ; then
 			einfo "Forcing -fno-tree-loop-vectorize to workaround GCC bug, see bug 758446 ..."
 			append-cxxflags -fno-tree-loop-vectorize
 		fi
+	fi
+
+	if ! use elibc_glibc;
+	then
+		mozconfig_add_options_ac '!elibc_glibc' --disable-jemalloc
 	fi
 
 	# Allow elfhack to work in combination with unstripped binaries
@@ -728,11 +718,8 @@ src_configure() {
 	# Pass $MAKEOPTS to build system
 	export MOZ_MAKE_FLAGS="${MAKEOPTS}"
 
-	# Use system's Python environment
-	export MACH_USE_SYSTEM_PYTHON=1
-	export MACH_SYSTEM_ASSERTED_COMPATIBLE_WITH_MACH_SITE=1
-	export MACH_SYSTEM_ASSERTED_COMPATIBLE_WITH_BUILD_SITE=1
-	export PIP_NO_CACHE_DIR=off
+	PIP_NETWORK_INSTALL_RESTRICTED_VIRTUALENVS=mach
+	export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE="none"
 
 	# Disable notification when build system has finished
 	export MOZ_NOSPAM=1
@@ -784,9 +771,6 @@ src_compile() {
 }
 
 src_install() {
-	einfo "Installing...Installing...Installing..."
-	einfo "DESTDIR: ${D}"
-	
 	# xpcshell is getting called during install
 	pax-mark m \
 		"${BUILD_DIR}"/dist/bin/xpcshell \
@@ -826,6 +810,23 @@ src_install() {
 		cat "${FILESDIR}"/gentoo-hwaccel-prefs.js \
 		>>"${GENTOO_PREFS}" \
 		|| die "failed to add prefs to force hardware-accelerated rendering to all-gentoo.js"
+
+		if use wayland; then
+			cat >>"${GENTOO_PREFS}" <<-EOF || die "failed to set hwaccel wayland prefs"
+			pref("gfx.x11-egl.force-enabled",          false);
+			EOF
+		else
+			cat >>"${GENTOO_PREFS}" <<-EOF || die "failed to set hwaccel x11 prefs"
+			pref("gfx.x11-egl.force-enabled",          true);
+			EOF
+		fi
+	fi
+
+	# Force the graphite pref if USE=system-harfbuzz is enabled, since the pref cannot disable it
+	if use system-harfbuzz ; then
+		cat >>"${GENTOO_PREFS}" <<-EOF || die "failed to set gfx.font_rendering.graphite.enabled pref"
+		sticky_pref("gfx.font_rendering.graphite.enabled", true);
+		EOF
 	fi
 
 	# Install language packs
@@ -893,14 +894,11 @@ src_install() {
 }
 
 pkg_preinst() {
-	einfo "Pre-install prepare...."
-	einfo "Doing...Doing...Doing..."
-	
 	xdg_pkg_preinst
-	
+
 	# If the apulse libs are available in MOZILLA_FIVE_HOME then apulse
 	# does not need to be forced into the LD_LIBRARY_PATH
-	if use pulseaudio && has_version ">=media-sound/apulse-0.1.12-r4" ; then
+	if use pulseaudio && has_version ">=media-sound/apulse-0.1.13-r2" ; then
 		einfo "APULSE found; Generating library symlinks for sound support ..."
 		local lib
 		pushd "${ED}${MOZILLA_FIVE_HOME}" &>/dev/null || die
@@ -918,7 +916,7 @@ pkg_preinst() {
 pkg_postinst() {
 	xdg_pkg_postinst
 
-	if use pulseaudio && has_version ">=media-sound/apulse-0.1.12-r4" ; then
+	if use pulseaudio && has_version ">=media-sound/apulse-0.1.13-r2" ; then
 		elog "Apulse was detected at merge time on this system and so it will always be"
 		elog "used for sound.  If you wish to use pulseaudio instead please unmerge"
 		elog "media-sound/apulse."
@@ -926,13 +924,11 @@ pkg_postinst() {
 	fi
 
 	local show_doh_information
-	local show_normandy_information
 	local show_shortcut_information
 
 	if [[ -z "${REPLACING_VERSIONS}" ]] ; then
 		# New install; Tell user that DoH is disabled by default
 		show_doh_information=yes
-		show_normandy_information=yes
 		show_shortcut_information=no
 	else
 		local replacing_version
@@ -955,23 +951,6 @@ pkg_postinst() {
 		elog "You can enable DNS-over-HTTPS in ${PN^}'s preferences."
 	fi
 
-	# bug 713782
-	if [[ -n "${show_normandy_information}" ]] ; then
-		elog
-		elog "Upstream operates a service named Normandy which allows Mozilla to"
-		elog "push changes for default settings or even install new add-ons remotely."
-		elog "While this can be useful to address problems like 'Armagadd-on 2.0' or"
-		elog "revert previous decisions to disable TLS 1.0/1.1, privacy and security"
-		elog "concerns prevail, which is why we have switched off the use of this"
-		elog "service by default."
-		elog
-		elog "To re-enable this service set"
-		elog
-		elog "    app.normandy.enabled=true"
-		elog
-		elog "in about:config."
-	fi
-
 	if [[ -n "${show_shortcut_information}" ]] ; then
 		elog
 		elog "Since ${PN}-91.0 we no longer install multiple shortcuts for"
@@ -989,4 +968,6 @@ pkg_postinst() {
 		ewarn "explained in https://bugs.gentoo.org/835078#c5 if Firefox crashes."
 	fi
 
+	optfeature_header "Optional runtime features:"
+	optfeature "encrypted chat support" net-libs/libotr
 }

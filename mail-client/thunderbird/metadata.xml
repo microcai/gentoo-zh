@@ -25,5 +25,8 @@
 		instead of bundled (requires APNG patches)</flag>
 	<flag name="system-webp">Use the system-wide <pkg>media-libs/libwebp</pkg>
 		instead of bundled.</flag>
+	<flag name="system-harfbuzz">Use the system-wide <pkg>media-libs/harfbuzz</pkg>
+		and <pkg>media-gfx/graphite2</pkg> instead of bundled</flag>
+
 </use>
 </pkgmetadata>

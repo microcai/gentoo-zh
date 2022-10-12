@@ -1,0 +1,176 @@
+diff --git a/config/system-headers.mozbuild b/config/system-headers.mozbuild
+index ba2ed7e12f..434173e3ca 100644
+--- a/config/system-headers.mozbuild
++++ b/config/system-headers.mozbuild
+@@ -1243,6 +1243,12 @@ if CONFIG['MOZ_SYSTEM_HARFBUZZ']:
+ 		'harfbuzz/hb.h',
+ 	]
+ 
++if CONFIG['MOZ_SYSTEM_GRAPHITE2']:
++	system_headers += [
++		'graphite2/Font.h',
++		'graphite2/Segment.h'
++	]
++
+ if CONFIG['MOZ_JACK']:
+     system_headers += [
+         'jack/jack.h',
+diff --git a/gfx/graphite2/geckoextra/moz.build b/gfx/graphite2/geckoextra/moz.build
+new file mode 100644
+index 0000000000..24e8d7a032
+--- /dev/null
++++ b/gfx/graphite2/geckoextra/moz.build
+@@ -0,0 +1,21 @@
++# -*- Mode: python; indent-tabs-mode: nil; tab-width: 40 -*-
++# vim: set filetype=python:
++# This Source Code Form is subject to the terms of the Mozilla Public
++# License, v. 2.0. If a copy of the MPL was not distributed with this
++# file, You can obtain one at http://mozilla.org/MPL/2.0/.
++
++EXPORTS.graphite2 += [
++    'include/GraphiteExtra.h',
++    'include/GraphiteStructsForRLBox.h',
++]
++
++UNIFIED_SOURCES += [
++    '../geckoextra/src/GraphiteExtra.cpp',
++]
++
++CXXFLAGS += CONFIG['MOZ_GRAPHITE2_CFLAGS']
++
++# Match bundled graphite2 configuration
++AllowCompilerWarnings()
++
++FINAL_LIBRARY = 'gkmedias'
+diff --git a/gfx/graphite2/moz-gr-update.sh b/gfx/graphite2/moz-gr-update.sh
+index b91d9c161c..9b333a8c36 100755
+--- a/gfx/graphite2/moz-gr-update.sh
++++ b/gfx/graphite2/moz-gr-update.sh
+@@ -37,12 +37,17 @@ echo "See" $0 "for update procedure." >> gfx/graphite2/README.mozilla
+ #find gfx/graphite2/ -name "*.cpp" -exec perl -p -i -e "s/<cstdio>/<stdio.h>/;s/Windows.h/windows.h/;" {} \;
+ #find gfx/graphite2/ -name "*.h" -exec perl -p -i -e "s/<cstdio>/<stdio.h>/;s/Windows.h/windows.h/;" {} \;
+ 
++# chase version for --with-system-graphite2
++perl -p -i -e "s/[0-9]+\,[0-9]+\,[0-9]+/$RELEASE/ and tr/./,/ \
++  if /GR2_VERSION_REQUIRE/" old-configure.in
++
+ # summarize what's been touched
+ echo Updated to $RELEASE.
+ echo Here is what changed in the gfx/graphite2 directory:
+ echo
+ 
+ hg stat gfx/graphite2
++hg stat old-configure.in gfx/graphite2
+ 
+ echo
+ echo If gfx/graphite2/src/files.mk has changed, please make corresponding
+diff --git a/gfx/moz.build b/gfx/moz.build
+index 7c6ca31e64..706b0e4dca 100644
+--- a/gfx/moz.build
++++ b/gfx/moz.build
+@@ -19,7 +19,6 @@ DIRS += [
+     "qcms",
+     "gl",
+     "layers",
+-    "graphite2/src",
+     "ots/src",
+     "thebes",
+     "ipc",
+@@ -30,6 +29,11 @@ DIRS += [
+     "skia",
+ ]
+ 
++if CONFIG["MOZ_SYSTEM_GRAPHITE2"]:
++    DIRS += ["graphite2/geckoextra"]
++else:
++    DIRS += ["graphite2/src"]
++
+ if not CONFIG["MOZ_SYSTEM_HARFBUZZ"]:
+ 	DIRS += ["harfbuzz/src"]
+ 
+diff --git a/gfx/thebes/moz.build b/gfx/thebes/moz.build
+index 5c7d4b9ace..6a6e719ced 100644
+--- a/gfx/thebes/moz.build
++++ b/gfx/thebes/moz.build
+@@ -289,7 +289,10 @@ if CONFIG["MOZ_WAYLAND"]:
+ 
+ LOCAL_INCLUDES += CONFIG["SKIA_INCLUDES"]
+ 
+-DEFINES["GRAPHITE2_STATIC"] = True
++if CONFIG["MOZ_SYSTEM_GRAPHITE2"]:
++    CXXFLAGS += CONFIG["MOZ_GRAPHITE2_CFLAGS"]
++else:
++    DEFINES["GRAPHITE2_STATIC"] = True
+ 
+ if CONFIG["MOZ_SYSTEM_HARFBUZZ"]:
+ 	CXXFLAGS += CONFIG["MOZ_HARFBUZZ_CFLAGS"]
+diff --git a/old-configure.in b/old-configure.in
+index 5ac38affc9..eb5f9d7070 100644
+--- a/old-configure.in
++++ b/old-configure.in
+@@ -1130,6 +1130,27 @@ if test "$COMPILE_ENVIRONMENT"; then
+ MOZ_EXPAND_LIBS
+ fi # COMPILE_ENVIRONMENT
+ 
++dnl ========================================================
++dnl Check for graphite2
++dnl ========================================================
++if test -n "$MOZ_SYSTEM_GRAPHITE2"; then
++    dnl graphite2.pc has bogus version, check manually
++    _SAVE_CFLAGS=$CFLAGS
++    CFLAGS="$CFLAGS $MOZ_GRAPHITE2_CFLAGS"
++    AC_TRY_COMPILE([ #include <graphite2/Font.h>
++                     #define GR2_VERSION_REQUIRE(major,minor,bugfix)  \
++                             ( GR2_VERSION_MAJOR * 10000 + GR2_VERSION_MINOR \
++                               * 100 + GR2_VERSION_BUGFIX >= \
++                               (major) * 10000 + (minor) * 100 + (bugfix) )
++                   ], [
++                     #if !GR2_VERSION_REQUIRE(1,3,8)
++                     #error "Insufficient graphite2 version."
++                     #endif
++                   ], [],
++                   [AC_MSG_ERROR([--with-system-graphite2 requested but no working libgraphite2 found])])
++    CFLAGS=$_SAVE_CFLAGS
++fi
++
+ dnl ========================================================
+ dnl Check if we need the 32-bit Linux SSE2 error dialog
+ dnl ========================================================
+diff --git a/toolkit/library/moz.build b/toolkit/library/moz.build
+index ed0f85770f..92e7c10cc2 100644
+--- a/toolkit/library/moz.build
++++ b/toolkit/library/moz.build
+@@ -291,6 +291,9 @@ if CONFIG["MOZ_ANDROID_GOOGLE_VR"]:
+         "-lgvr",
+     ]
+ 
++if CONFIG["MOZ_SYSTEM_GRAPHITE2"]:
++    OS_LIBS += CONFIG["MOZ_GRAPHITE2_LIBS"]
++
+ if CONFIG["MOZ_SYSTEM_HARFBUZZ"]:
+ 	OS_LIBS += CONFIG["MOZ_HARFBUZZ_LIBS"]
+ 
+diff --git a/toolkit/moz.configure b/toolkit/moz.configure
+index 336a398f7c..814fdef397 100644
+--- a/toolkit/moz.configure
++++ b/toolkit/moz.configure
+@@ -609,6 +609,19 @@ def freetype2_combined_info(fontconfig_info, freetype2_info):
+ 
+ set_define("MOZ_HAVE_FREETYPE2", depends_if(freetype2_info)(lambda _: True))
+ 
++# Graphite2
++# ==============================================================
++option('--with-system-graphite2', help="Use system graphite2 (located with pkgconfig)")
++
++@depends('--with-system-graphite2')
++def check_for_graphite2(value):
++    return bool(value)
++
++system_graphite2 = pkg_check_modules('MOZ_GRAPHITE2', 'graphite2',
++                                     when=check_for_graphite2)
++
++set_config('MOZ_SYSTEM_GRAPHITE2', depends_if(system_graphite2)(lambda _: True))
++
+ # HarfBuzz
+ # ==============================================================
+ option('--with-system-harfbuzz', help="Use system harfbuzz (located with pkgconfig)")
