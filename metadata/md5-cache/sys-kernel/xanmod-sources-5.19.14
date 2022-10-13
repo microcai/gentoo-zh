@@ -11,5 +11,5 @@ RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-d
 RESTRICT=binchecks strip
 SLOT=edge
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.19.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.19-16.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.19-16.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.19-16.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.19-16.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.19-16.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.19-16.extras.tar.xz https://github.com/xanmod/linux/releases/download//5.19.14-xanmod1/patch-5.19.14-xanmod1.xz https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x//cjktty-5.19.patch
-_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	kernel-2	aa8997cf13a12b867c4c8c57383b8582
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	kernel-2	6058f6e6a6269e48cd88f4956944c8d5
 _md5_=98401d035b60ab18d129052294890580
