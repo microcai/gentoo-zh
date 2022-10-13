@@ -1,0 +1,25 @@
+diff --git a/config/system-headers.mozbuild b/config/system-headers.mozbuild
+index 9c07dba2f4..04ca57ae8d 100644
+--- a/config/system-headers.mozbuild
++++ b/config/system-headers.mozbuild
+@@ -229,7 +229,6 @@ system_headers = [
+     'execinfo.h',
+     'extras.h',
+     'fcntl.h',
+-    'features.h',
+     'fenv.h',
+     'ffi.h',
+     'fibdef.h',
+diff --git a/third_party/sipcc/sdp_os_defs.h b/third_party/sipcc/sdp_os_defs.h
+index 16c9b33329..df38d9336c 100644
+--- a/third_party/sipcc/sdp_os_defs.h
++++ b/third_party/sipcc/sdp_os_defs.h
+@@ -20,8 +20,5 @@
+ typedef uint8_t    tinybool;
+ typedef unsigned short ushort;
+ typedef unsigned long  ulong;
+-#ifndef __GNUC_STDC_INLINE__
+-#define inline
+-#endif
+ 
+ #endif /* _SDP_OS_DEFS_H_ */
