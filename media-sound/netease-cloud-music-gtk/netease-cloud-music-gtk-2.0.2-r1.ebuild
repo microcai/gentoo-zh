@@ -227,7 +227,7 @@ CRATES="
 	windows_x86_64_msvc-0.36.1
 "
 
-inherit cargo meson xdg
+inherit cargo meson xdg gnome2-utils
 
 DESCRIPTION="netease cloud music player based on Rust & GTK for Linux"
 HOMEPAGE="https://github.com/gmg137/netease-cloud-music-gtk"
@@ -309,4 +309,17 @@ src_test() {
 
 src_install() {
 	meson_src_install
+}
+
+pkg_postinst() {
+	xdg_pkg_postinst
+	gnome2_schemas_update
+	gnome2_gdk_pixbuf_update
+	gnome2_giomodule_cache_update
+}
+
+pkg_postrm() {
+	xdg_pkg_postrm
+	gnome2_schemas_update
+	gnome2_giomodule_cache_update
 }
