@@ -72,6 +72,7 @@ mail-client/thunderbird:eme-free - Disable EME (DRM plugin) cabability at build 
 mail-client/thunderbird:hwaccel - Force-enable hardware-accelerated rendering (Mozilla bug 594876)
 mail-client/thunderbird:lto - Enable Link Time Optimization (LTO). Requires Gold linker when using GCC or LDD linker when using Clang
 mail-client/thunderbird:openh264 - Use media-libs/openh264 for H.264 support instead of downloading binary blob from Mozilla at runtime
+mail-client/thunderbird:system-harfbuzz - Use the system-wide media-libs/harfbuzz and media-gfx/graphite2 instead of bundled
 mail-client/thunderbird:system-icu - Use the system-wide dev-libs/icu instead of bundled.
 mail-client/thunderbird:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled.
 mail-client/thunderbird:system-libevent - Use the system-wide dev-libs/libevent instead of bundled.

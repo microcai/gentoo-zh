@@ -102,7 +102,7 @@ games-board/othello 0.2.2: Othello is a classic strategy game, also known as Rev
 games-misc/oh-my-git-bin 0.6.5: An interactive Git learning game!
 games-util/winegame-client-bin 0.5.9.4: An open source gaming platform for GNU/Linux
 kde-misc/plasma-applet-netspeed-widget 1.9 9999: Plasma 5 widget that displays the currently used network bandwidth.
-mail-client/thunderbird 99.0-r2: Thunderbird Mail Client
+mail-client/thunderbird 106.0-r5: Thunderbird Mail Client
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/iansui 0.943: An open-source Chinese font derived from Klee One (Fontworks).
 media-fonts/jf-openhuninn 1.1: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
