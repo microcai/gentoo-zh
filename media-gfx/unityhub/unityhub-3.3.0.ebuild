@@ -3,26 +3,24 @@
 
 EAPI=8
 
-inherit xdg xdg-utils desktop
+inherit xdg desktop
 
 DESCRIPTION="The Unity Hub is a standalone application that streamlines the way you find, download, and manage your Unity Projects and installation"
 HOMEPAGE="https://unity.com/"
 SRC_URI="https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/${PN}-amd64-${PV}.deb"
 
-LICENSE="EULA"
+LICENSE="unity-EULA"
 SLOT="0"
 KEYWORDS="~amd64"
 
 RESTRICT="mirror strip"
 
-IUSE="+appindicator +dbusmenu"
+IUSE="+appindicator"
 
 DEPEND="
 	appindicator? (
-		dev-libs/libappindicator
-	)
-	dbusmenu? (
 		dev-libs/libdbusmenu
+		dev-libs/libappindicator
 	)
 	app-arch/cpio
 	dev-libs/nss
@@ -46,9 +44,5 @@ src_install(){
         doicon -s ${si}  usr/share/icons/hicolor/${si}x${si}/apps/${PN}.png
     done
 	domenu "${WORKDIR}/usr/share/applications/unityhub.desktop"
-	fowners 1000:1000 "/opt/unityhub"
-#	fperms 0755 "/opt/unityhub/unityhub-bin"
-#	fperms 0755 "/opt/unityhub/unityhub"
-#	fperms 0777 -R "/opt/unityhub/resources"
 	fperms 0755 -R "/opt/unityhub"
 }
