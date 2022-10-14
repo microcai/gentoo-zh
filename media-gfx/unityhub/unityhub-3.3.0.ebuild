@@ -5,7 +5,7 @@ EAPI=8
 
 inherit xdg desktop
 
-DESCRIPTION="The Unity Hub is a standalone application that streamlines the way you find, download, and manage your Unity Projects and installation"
+DESCRIPTION="unity ooffical tool"
 HOMEPAGE="https://unity.com/"
 SRC_URI="https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/${PN}-amd64-${PV}.deb"
 
@@ -41,8 +41,8 @@ src_install(){
 	insinto "/bin"
 	doins -r "${S}/usr/bin/unityhub"
 	for si in 16 32 48 64 128 256 512; do
-        doicon -s ${si}  usr/share/icons/hicolor/${si}x${si}/apps/${PN}.png
-    done
+		doicon -s ${si} /usr/share/icons/hicolor/${si}x${si}/apps/${PN}.png
+	done
 	domenu "${WORKDIR}/usr/share/applications/unityhub.desktop"
 	fperms 0755 -R "/opt/unityhub"
 }
