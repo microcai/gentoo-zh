@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-10-15 17:19:19 CST)
+(The last generation time: 2022-10-15 23:34:24 CST)
 
 ### Packages
 
@@ -312,7 +312,8 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/avsocks                             | 9999                                      |        | https://github.com/avplayer/avsocks                                                     | jzmq
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/baidunetdisk                        | 4.3.0                                     |        | https://pan.baidu.com/                                                                  | Baidu Net Disk is a cloud storage client (Linux Version)
+ net-misc/baidunetdisk                        | 4.14.5                                    |        | https://pan.baidu.com/                                                                  | Baidu Net Disk is a cloud storage client (Linux Version)
+                                              | 4.3.0                                     |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/baidupcs-go                         | 3.6.2                                     |        | https://github.com/felixonmars/BaiduPCS-Go                                              | The terminal utility for Baidu Network Disk (Golang Version).
                                               | 9999                                      |        |                                                                                         |
