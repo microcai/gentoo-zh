@@ -1,0 +1,16 @@
+DEFINED_PHASES=install postinst postrm preinst unpack
+DEPEND=appindicator? ( dev-libs/libdbusmenu dev-libs/libappindicator ) app-arch/cpio dev-libs/nss x11-libs/gtk+
+DESCRIPTION=The official unity tool for manager Unity Engines and projects
+EAPI=8
+HOMEPAGE=https://unity.com/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=xdg desktop unpacker
+IUSE=+appindicator
+KEYWORDS=~amd64
+LICENSE=unity-EULA
+RDEPEND=appindicator? ( dev-libs/libdbusmenu dev-libs/libappindicator ) app-arch/cpio dev-libs/nss x11-libs/gtk+
+RESTRICT=mirror strip
+SLOT=0
+SRC_URI=https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.3.0.deb
+_eclasses_=xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857	desktop	22952d8f27cac191d75529d4c38e6bfa	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	bc57272a0491765c71d973c8cfd35063
+_md5_=f88827550c70b8de7e05e43ef1becb55

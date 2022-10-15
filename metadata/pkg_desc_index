@@ -118,6 +118,7 @@ media-gfx/byzanz 0.3.0.9999: Screencasting program that saves casts as GIF files
 media-gfx/sane-backends 9999: Scanner Access Now Easy - Backends
 media-gfx/scangearmp 1.60 2.4.10: Driver and utility package for Canon scanners
 media-gfx/tifig-bin 0.2.2: Converts iOS 11 HEIC images to practical formats - Static binary
+media-gfx/unityhub 3.3.0: The official unity tool for manager Unity Engines and projects
 media-gfx/xrectsel 0.3.1: print the geometry of a rectangular screen region
 media-gfx/zw3d 2022.0.3.1: CAD/CAM software for 3D design and processing
 media-gfx/zwcad 2022.22.2.2.3 2023.23.0.3.4: CAD software for 2D drawing, reviewing and printing work
