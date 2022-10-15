@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}"
 BDEPEND="${DEPEND} sys-devel/gcc[objc]"
 
 src_compile() {
-	ego build -o musicfox cmd/musicfox.go
+	ego build -o musicfox -ldflags "-s -w -X go-musicfox/pkg/constants.AppVersion=v${PV}" cmd/musicfox.go
 }
 
 src_install() {
