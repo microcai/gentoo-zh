@@ -20,7 +20,7 @@ LICENSE="MIT"
 SLOT="0"
 
 RDEPEND="
-	>=x11-libs/libva-1.8.0
+	media-libs/libva
     >=media-libs/nv-codec-headers-11.1.5.1
     >=media-libs/gstreamer-1.0
     media-libs/gst-plugins-bad
