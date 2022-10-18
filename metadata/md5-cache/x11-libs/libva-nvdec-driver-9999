@@ -1,13 +1,13 @@
 BDEPEND=virtual/pkgconfig >=dev-util/meson-0.62.2 >=dev-util/ninja-1.8.2 dev-util/meson-format-array >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install test unpack
-DEPEND=>=x11-libs/libva-1.8.0 >=media-libs/nv-codec-headers-11.1.5.1 >=media-libs/gstreamer-1.0 media-libs/gst-plugins-bad media-libs/libglvnd
+DEPEND=media-libs/libva >=media-libs/nv-codec-headers-11.1.5.1 >=media-libs/gstreamer-1.0 media-libs/gst-plugins-bad media-libs/libglvnd
 DESCRIPTION=NVDEC Backend for Video Acceleration (VA) API
 EAPI=8
 HOMEPAGE=https://github.com/elFarto/nvidia-vaapi-driver
 INHERIT=meson git-r3
 LICENSE=MIT
 PROPERTIES=live
-RDEPEND=>=x11-libs/libva-1.8.0 >=media-libs/nv-codec-headers-11.1.5.1 >=media-libs/gstreamer-1.0 media-libs/gst-plugins-bad media-libs/libglvnd
+RDEPEND=media-libs/libva >=media-libs/nv-codec-headers-11.1.5.1 >=media-libs/gstreamer-1.0 media-libs/gst-plugins-bad media-libs/libglvnd
 SLOT=0
 _eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	b9fc5e97e886514e5132f50465185401	meson	1994a5aef5d4f5798b92f64d6f9a6003	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
-_md5_=ba8fd3633c89257b06d1614d84cdd2d1
+_md5_=ac5bb11a48ffe81eb540030b2f11a2f3
