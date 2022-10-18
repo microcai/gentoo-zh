@@ -1,0 +1,16 @@
+BDEPEND=>=dev-lang/go-1.18:= >=dev-lang/go-1.18 app-arch/unzip virtual/pkgconfig
+DEFINED_PHASES=compile install postinst setup test unpack
+DESCRIPTION=A rule-based tunnel in Go.
+EAPI=8
+HOMEPAGE=https://github.com/Dreamacro/clash
+INHERIT=go-module systemd
+IUSE=goamd64 geoip cpu_flags_x86_avx2 cpu_flags_x86_fma4 cpu_flags_x86_fma3 cpu_flags_x86_f16c cpu_flags_x86_avx cpu_flags_x86_sse4_2 cpu_flags_x86_sse4_1 cpu_flags_x86_ssse3 cpu_flags_x86_sse3
+KEYWORDS=-* ~amd64 ~arm ~arm64 ~mips ~ppc64 ~s390 ~x86
+LICENSE=GPL-3
+RDEPEND=!arm64? ( geoip? ( net-misc/geoipupdate ) )
+REQUIRED_USE=!amd64? ( !goamd64 )
+RESTRICT=mirror strip
+SLOT=0
+SRC_URI=https://github.com/Dreamacro/clash/archive/v1.11.8.tar.gz -> clash-1.11.8.tar.gz https://github.com/Gentoo-zh/vendors/releases/download/clash/clash-1.11.8-deps.tar.xz
+_eclasses_=go-module	b088539f282ed242c23f38fa65472184	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	systemd	5f4bb0758df2e483babf68cd517078ca
+_md5_=5867ce2948c564de395126fd05c242f7
