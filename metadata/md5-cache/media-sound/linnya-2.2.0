@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=media-libs/gstreamer x11-libs/gtk+ dev-db/sqlite net-misc/curl
 SLOT=0
 SRC_URI=https://github.com/herenvarno/linnya/tarball/2.2.0 -> linnya-2.2.0.tar.gz
-_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	8f942ebdcf04334697649d4a0bf65a32	desktop	22952d8f27cac191d75529d4c38e6bfa	vcs-snapshot	eab6d8533446763c2e9777d8bbd1594e
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	8f942ebdcf04334697649d4a0bf65a32	desktop	7eb20ad915a0a318176d51bc2508ff5c	vcs-snapshot	eab6d8533446763c2e9777d8bbd1594e
 _md5_=a1a1f8ed73328d5354a46e08ca64e4f1

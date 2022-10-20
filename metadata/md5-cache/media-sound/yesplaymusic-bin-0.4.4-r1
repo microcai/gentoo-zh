@@ -11,5 +11,5 @@ RDEPEND=app-arch/gzip dev-libs/nss media-libs/alsa-lib net-print/cups x11-libs/g
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/qier222/YesPlayMusic/releases/download/v0.4.4-1/yesplaymusic-0.4.4-1.pacman
-_eclasses_=desktop	22952d8f27cac191d75529d4c38e6bfa	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
 _md5_=acc0f8dfb1cc34b522dfd287c66b1a5a
