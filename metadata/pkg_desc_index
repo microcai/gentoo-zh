@@ -207,7 +207,7 @@ sys-libs/libzypp 17.31.0 9999: ZYpp Package Management library
 sys-process/btop 1.2.9: Resources monitor. The C++ version of bashtop
 virtual/dist-kernel 5.15.72 5.19.14: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
-www-apps/openvscode-server-bin 1.70.1 1.71.2: VS Code that runs a server on remote and allows access through a web browser
+www-apps/openvscode-server-bin 1.71.2 1.72.2: VS Code that runs a server on remote and allows access through a web browser
 www-servers/darkhttpd 1.13: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
