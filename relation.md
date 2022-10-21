@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-10-19 04:28:08 CST)
+(The last generation time: 2022-10-21 11:37:19 CST)
 
 ### Packages
 
@@ -438,8 +438,8 @@
    sys-kernel/xanmod-sources                  | 5.15.72                                   | RD     | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
                                               | 5.19.14                                   |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/openvscode-server-bin               | 1.70.1                                    |        | https://github.com/gitpod-io/openvscode-server                                          | VS Code that runs a server on remote and allows access through a web browser
-                                              | 1.71.2                                    |        |                                                                                         |
+ www-apps/openvscode-server-bin               | 1.71.2                                    |        | https://github.com/gitpod-io/openvscode-server                                          | VS Code that runs a server on remote and allows access through a web browser
+                                              | 1.72.2                                    |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                        | 1.13                                      |        | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
