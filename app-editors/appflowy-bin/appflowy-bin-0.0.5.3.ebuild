@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64"
 
 DEPEND="
-	dev-libs/atk
+	app-accessibility/at-spi2-core:2
 	dev-libs/glib:2
 	dev-libs/openssl
 	dev-libs/keybinder:3
