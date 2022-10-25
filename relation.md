@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-10-25 10:14:22 CST)
+(The last generation time: 2022-10-25 10:38:48 CST)
 
 ### Packages
 
@@ -470,7 +470,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  x11-plugins/vicious                          | 9999                                      |        | http://awesome.naquadah.org/wiki/Vicious                                                | Modular widget library for x11-wm/awesome
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- x11-terms/wezterm-bin                        | 20220624                                  |        | https://wezfurlong.org/wezterm                                                          | Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
+ x11-terms/wezterm-bin                        | 20220905                                  |        | https://wezfurlong.org/wezterm                                                          | A terminal emulator and multiplexer implemented in Rust
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/fcitx5-breeze                     | 1.0.0                                     |        | https://github.com/scratch-er/fcitx5-breeze                                             | Fcitx5 theme to match KDE's Breeze style.
                                               | 2.0.0-r1                                  |        |                                                                                         |
