@@ -49,7 +49,7 @@ app-misc/gpick 0.2.6-r1: Advanced color picker written in C++ using GTK+ toolkit
 app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience within the shell
 app-misc/rmtrash 1.14: trash-put made compatible to GNUs rm and rmdir
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
-app-misc/yq-bin 4.25.3: yq is a portable command-line YAML, JSON and XML processor
+app-misc/yq-bin 4.28.2: yq is a portable command-line YAML, JSON and XML processor
 app-mobilephone/scrcpy 1.23 1.24: Display and control your Android device
 app-office/bytedance-feishu 4.11.6.2 5.9.18 5.14.14: feishu - ByteDance's enterprise collaboration platform
 app-office/freeoffice 1050 1054: A complete, free Microsoft Office-compatible alternative office suite.
