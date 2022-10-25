@@ -3,17 +3,17 @@
 
 EAPI=8
 
-inherit rpm xdg
+inherit xdg
 
-MY_R="141144-bd1b7c5d"
+MY_R="102802-7d4b8249"
 MY_PV="${PV}-${MY_R}"
 MY_PN="${PN/-bin/}"
 MY_P="${MY_PN}-${MY_PV}"
 
-DESCRIPTION="Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust"
+DESCRIPTION="A terminal emulator and multiplexer implemented in Rust"
 HOMEPAGE="https://wezfurlong.org/wezterm"
 
-SRC_URI="https://github.com/wez/wezterm/releases/download/${MY_PV}/${MY_PN}-${PV}_${MY_R/-/_}-1.x86_64.rpm"
+SRC_URI="https://github.com/wez/wezterm/releases/download/${MY_PV}/${MY_PN}-${MY_PV}.Ubuntu18.04.tar.xz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -45,9 +45,8 @@ RDEPEND="${DEPEND}
 	x11-themes/hicolor-icon-theme
 "
 
-S="${WORKDIR}"
-
 QA_PREBUILT="*"
+S="${WORKDIR}/${MY_PN}"
 
 src_install() {
 	insinto /
