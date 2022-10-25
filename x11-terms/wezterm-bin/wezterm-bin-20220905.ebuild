@@ -10,7 +10,7 @@ MY_PV="${PV}-${MY_R}"
 MY_PN="${PN/-bin/}"
 MY_P="${MY_PN}-${MY_PV}"
 
-DESCRIPTION="Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust"
+DESCRIPTION="A terminal emulator and multiplexer implemented in Rust"
 HOMEPAGE="https://wezfurlong.org/wezterm"
 
 SRC_URI="https://github.com/wez/wezterm/releases/download/${MY_PV}/${MY_PN}-${MY_PV}.Ubuntu18.04.tar.xz"
