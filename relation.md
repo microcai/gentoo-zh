@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-10-24 17:58:15 CST)
+(The last generation time: 2022-10-25 10:14:22 CST)
 
 ### Packages
 
@@ -101,7 +101,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/spark                               | 1.0.1                                     |        | http://zachholman.com/spark/                                                            | ▁▂▃▅▂▇ in your shell
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/yq-bin                              | 4.25.3                                    |        | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
+ app-misc/yq-bin                              | 4.28.2                                    |        | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-mobilephone/scrcpy                       | 1.23                                      |        | https://blog.rom1v.com/2018/03/introducing-scrcpy/                                      | Display and control your Android device
                                               | 1.24                                      |        |                                                                                         |
