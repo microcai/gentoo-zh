@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-10-25 10:38:48 CST)
+(The last generation time: 2022-10-26 22:49:48 CST)
 
 ### Packages
 
@@ -423,8 +423,6 @@
  sys-kernel/mkinitcpio                        | 31                                        |        | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-libs/elog-functions                      | 0.0.2                                     |        | http://xochitl.matem.unam.mx/~canek/gentoo-systemd-only/index.html                      | Compatibility functions for the log eclass functions of OpenRC
-----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- sys-process/btop                             | 1.2.9                                     |        | https://github.com/aristocratos/btop                                                    | Resources monitor. The C++ version of bashtop
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/dist-kernel                          | 5.15.72                                   |        |                                                                                         | Virtual to depend on any Distribution Kernel
                                               | 5.19.14                                   |        |                                                                                         |
