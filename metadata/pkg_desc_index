@@ -204,7 +204,6 @@ sys-kernel/zenpower 0.1.12-r1: Linux kernel driver for reading sensors of AMD Ze
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libsolv 0.7.22 9999: Library for solving packages and reading repositories
 sys-libs/libzypp 17.31.0 9999: ZYpp Package Management library
-sys-process/btop 1.2.9: Resources monitor. The C++ version of bashtop
 virtual/dist-kernel 5.15.72 5.19.14: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 www-apps/openvscode-server-bin 1.71.2 1.72.2: VS Code that runs a server on remote and allows access through a web browser
