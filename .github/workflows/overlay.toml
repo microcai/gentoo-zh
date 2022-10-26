@@ -985,14 +985,6 @@ github = "openSUSE/libzypp"
 use_latest_tag= true
 github_account = "HougeLangley"
 
-["sys-process/btop"]
-source = "github"
-github = "aristocratos/btop"
-use_latest_release = true
-prefix = "v"
-github_account = "Linerre"
-
-
 # virtual, do nothing
 #["virtual/dist-kernel"]
 #["virtual/linux-sources"]
