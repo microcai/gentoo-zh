@@ -43,8 +43,12 @@ YARN_WORKDIR="${S}/gui"
 
 # ${P}.tar.gz => ${S}
 # ${P}-yarn_mirror.tar.gz => ${WORKDIR}/yarn_offline_mirror
-# ${P}-go-deps.tar.xz => ${WORKDIR}/go-mod
-#src_unpack() { default }
+# ${P}-go-deps.tar.gz => ${WORKDIR}/go-mod
+src_unpack() {
+	unpack "${P}.tar.gz"
+	unpack "${P}-yarn_mirror.tar.gz"
+	unpack "${P}-go-deps.tar.gz"
+}
 
 src_prepare() {
 	default
