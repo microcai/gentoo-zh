@@ -134,7 +134,7 @@ media-sound/listen1_desktop-bin 2.26.2: one for all free music in China
 media-sound/lx-music-desktop-bin 1.21.0: 一个基于 electron 的音乐软件
 media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb package
 media-sound/netease-cloud-music-gtk 1.2.2 2.0.2-r1: netease cloud music player based on Rust & GTK for Linux
-media-sound/termusic 0.7.3 0.7.4: Terminal Music Player written in Rust.
+media-sound/termusic 0.7.4 0.7.5: Terminal Music Player written in Rust.
 media-sound/yesplaymusic-bin 0.4.4-r1 0.4.5: A third party music player for Netease Music
 media-video/Revda 5.1.1: Cute and useful Live Stream Player with danmaku support
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
