@@ -5,22 +5,21 @@ EAPI=8
 
 CRATES="
 	adler-1.0.2
-	adler32-1.2.0
 	ahash-0.7.6
-	aho-corasick-0.7.18
+	aho-corasick-0.7.19
 	alsa-0.6.0
 	alsa-sys-0.3.1
 	ansi_colours-1.1.1
-	ansi_term-0.12.1
-	anyhow-1.0.62
+	anyhow-1.0.66
 	arrayvec-0.7.2
 	autocfg-1.1.0
-	base64-0.13.0
+	base-x-0.2.11
+	base64-0.13.1
 	bindgen-0.59.2
 	bit_field-0.10.1
 	bitflags-1.3.2
 	block-0.1.6
-	bumpalo-3.11.0
+	bumpalo-3.11.1
 	bytemuck-1.12.1
 	byteorder-1.4.3
 	bytes-1.2.1
@@ -29,48 +28,49 @@ CRATES="
 	cc-1.0.73
 	cesu8-1.1.0
 	cexpr-0.6.0
-	cfg-expr-0.10.3
+	cfg-expr-0.11.0
 	cfg-if-1.0.0
 	chunked_transfer-1.4.0
-	clang-sys-1.3.3
-	clap-3.2.17
+	clang-sys-1.4.0
+	clap-3.2.23
 	clap_lex-0.2.4
 	cocoa-0.24.0
 	cocoa-foundation-0.1.0
 	color_quant-1.1.0
 	combine-4.6.6
-	console-0.15.1
+	console-0.15.2
 	core-foundation-0.9.3
 	core-foundation-sys-0.8.3
 	core-graphics-0.22.3
 	core-graphics-types-0.1.1
 	coreaudio-rs-0.10.0
 	coreaudio-sys-0.2.10
+	cpal-0.14.1
 	crc32fast-1.3.2
 	crossbeam-channel-0.5.6
 	crossbeam-deque-0.8.2
-	crossbeam-epoch-0.9.10
-	crossbeam-utils-0.8.11
-	crossterm-0.23.2
+	crossbeam-epoch-0.9.11
+	crossbeam-utils-0.8.12
 	crossterm-0.25.0
 	crossterm_winapi-0.9.0
-	ctor-0.1.23
+	crunchy-0.2.2
+	ctor-0.1.26
 	cty-0.2.2
 	darling-0.13.4
 	darling_core-0.13.4
 	darling_macro-0.13.4
 	dbus-0.9.6
 	dbus-crossroads-0.5.1
-	deflate-1.0.0
 	diff-0.1.13
 	dirs-4.0.0
 	dirs-sys-0.3.7
-	discord-rich-presence-0.2.2
+	discard-1.0.4
+	discord-rich-presence-0.2.3
 	dispatch-0.2.0
 	either-1.8.0
 	encode_unicode-0.3.6
 	encoding_rs-0.8.31
-	exr-1.4.2
+	exr-1.5.2
 	fallible-iterator-0.2.0
 	fallible-streaming-iterator-0.1.9
 	fastrand-1.8.0
@@ -79,78 +79,82 @@ CRATES="
 	fnv-1.0.7
 	foreign-types-0.3.2
 	foreign-types-shared-0.1.1
-	form_urlencoded-1.0.1
-	futures-channel-0.3.23
-	futures-core-0.3.23
-	futures-executor-0.3.23
-	futures-sink-0.3.23
-	futures-task-0.3.23
-	futures-util-0.3.23
-	getrandom-0.2.7
+	form_urlencoded-1.1.0
+	futures-channel-0.3.25
+	futures-core-0.3.25
+	futures-executor-0.3.25
+	futures-macro-0.3.25
+	futures-sink-0.3.25
+	futures-task-0.3.25
+	futures-util-0.3.25
+	getrandom-0.2.8
 	gif-0.11.4
-	glib-0.15.12
-	glib-macros-0.15.11
-	glib-sys-0.15.10
+	gio-sys-0.16.0
+	glib-0.16.2
+	glib-macros-0.16.0
+	glib-sys-0.16.0
 	glob-0.3.0
-	gobject-sys-0.15.10
-	gstreamer-0.18.8
-	gstreamer-sys-0.18.0
-	half-1.8.2
+	gobject-sys-0.16.0
+	gstreamer-0.19.1
+	gstreamer-sys-0.19.0
+	half-2.1.0
 	hashbrown-0.12.3
-	hashlink-0.8.0
+	hashlink-0.8.1
 	heck-0.4.0
 	hermit-abi-0.1.19
 	hex-0.4.3
-	hound-3.4.0
+	hound-3.5.0
 	id3-1.3.0
 	ident_case-1.0.1
-	idna-0.2.3
-	image-0.24.3
-	include_dir-0.7.2
-	include_dir_macros-0.7.2
+	idna-0.3.0
+	image-0.24.4
+	include_dir-0.7.3
+	include_dir_macros-0.7.3
 	indexmap-1.9.1
-	inflate-0.4.5
 	instant-0.1.12
-	itoa-1.0.3
+	itoa-1.0.4
 	jni-0.19.0
 	jni-sys-0.3.0
-	jobserver-0.1.24
+	jobserver-0.1.25
 	jpeg-decoder-0.2.6
-	js-sys-0.3.59
+	js-sys-0.3.60
 	lazy-regex-2.3.0
 	lazy-regex-proc_macros-2.3.0
 	lazy_static-1.4.0
 	lazycell-1.3.0
 	lebe-0.5.2
 	lexopt-0.2.1
-	libaes-0.6.3
-	libc-0.2.132
+	libaes-0.6.4
+	libc-0.2.137
 	libdbus-sys-0.2.2
 	libloading-0.7.3
 	libmpv-sys-3.1.0
 	libsqlite3-sys-0.25.1
 	linked-hash-map-0.5.6
-	lock_api-0.4.7
-	lofty-0.8.0
+	lock_api-0.4.9
+	lofty-0.8.1
 	lofty_attr-0.3.0
 	log-0.4.17
 	mach-0.3.2
 	malloc_buf-0.0.6
-	matches-0.1.9
 	md5-0.7.0
 	memchr-2.5.0
 	memoffset-0.6.5
 	minimal-lexical-0.2.1
-	miniz_oxide-0.5.3
-	mio-0.8.4
+	miniz_oxide-0.5.4
+	miniz_oxide-0.6.2
+	mio-0.8.5
 	muldiv-1.0.0
 	nanorand-0.7.0
 	ndk-0.6.0
+	ndk-0.7.0
 	ndk-context-0.1.1
 	ndk-glue-0.6.2
 	ndk-macro-0.3.0
 	ndk-sys-0.3.0
+	ndk-sys-0.4.0
 	nix-0.23.1
+	nix-0.25.0
 	nom-7.1.1
 	num-bigint-0.4.3
 	num-derive-0.3.3
@@ -164,37 +168,36 @@ CRATES="
 	oboe-0.4.6
 	oboe-sys-0.4.5
 	ogg_pager-0.3.2
-	once_cell-1.13.1
-	option-operations-0.4.1
+	once_cell-1.15.0
+	option-operations-0.5.0
 	orange-trees-0.1.0
 	os_str_bytes-6.3.0
 	output_vt100-0.1.3
 	parking_lot-0.12.1
-	parking_lot_core-0.9.3
-	paste-1.0.8
+	parking_lot_core-0.9.4
+	paste-1.0.9
 	peeking_take_while-0.1.2
-	percent-encoding-2.1.0
+	percent-encoding-2.2.0
 	pin-project-1.0.12
 	pin-project-internal-1.0.12
 	pin-project-lite-0.2.9
 	pin-utils-0.1.0
 	pinyin-0.9.0
 	pkg-config-0.3.25
-	png-0.17.5
+	png-0.17.6
 	ppv-lite86-0.2.16
 	pretty-hex-0.3.0
-	pretty_assertions-1.2.1
+	pretty_assertions-1.3.0
 	proc-macro-crate-1.2.1
 	proc-macro-error-1.0.4
 	proc-macro-error-attr-1.0.4
-	proc-macro2-1.0.43
-	quick-xml-0.23.0
+	proc-macro2-1.0.47
+	quick-xml-0.26.0
 	quote-1.0.21
 	rand-0.8.5
 	rand_chacha-0.3.1
-	rand_core-0.6.3
-	raw-window-handle-0.3.4
-	raw-window-handle-0.4.3
+	rand_core-0.6.4
+	raw-window-handle-0.5.0
 	rayon-1.5.3
 	rayon-core-1.9.3
 	redox_syscall-0.2.16
@@ -202,32 +205,41 @@ CRATES="
 	regex-1.6.0
 	regex-syntax-0.6.27
 	remove_dir_all-0.5.3
-	rgb-0.8.33
+	rgb-0.8.34
 	ring-0.16.20
 	ringbuf-0.2.8
 	rusqlite-0.28.0
 	rustc-hash-1.1.0
-	rustls-0.20.6
+	rustc_version-0.2.3
+	rustls-0.20.7
 	ryu-1.0.11
 	same-file-1.0.6
 	scoped_threadpool-0.1.9
 	scopeguard-1.1.0
 	sct-0.7.0
-	serde-1.0.143
-	serde_derive-1.0.143
-	serde_json-1.0.83
+	semver-0.9.0
+	semver-parser-0.7.0
+	serde-1.0.147
+	serde_derive-1.0.147
+	serde_json-1.0.87
+	sha1-0.6.1
+	sha1_smol-1.0.0
 	shellexpand-2.1.2
 	shlex-1.1.0
 	signal-hook-0.3.14
 	signal-hook-mio-0.2.3
 	signal-hook-registry-1.4.0
 	slab-0.4.7
-	smallvec-1.9.0
+	smallvec-1.10.0
 	smawk-0.3.1
-	souvlaki-0.5.1
+	souvlaki-0.5.2
 	spin-0.5.2
 	spin-0.9.4
 	stdweb-0.1.3
+	stdweb-0.4.20
+	stdweb-derive-0.5.3
+	stdweb-internal-macros-0.2.9
+	stdweb-internal-runtime-0.1.5
 	strsim-0.10.0
 	symphonia-0.5.1
 	symphonia-bundle-flac-0.5.1
@@ -243,74 +255,78 @@ CRATES="
 	symphonia-format-wav-0.5.1
 	symphonia-metadata-0.5.1
 	symphonia-utils-xiph-0.5.1
-	syn-1.0.99
-	system-deps-6.0.2
+	syn-1.0.103
+	system-deps-6.0.3
 	tempfile-3.3.0
 	termcolor-1.1.3
 	terminal_size-0.1.17
-	textwrap-0.15.0
-	thiserror-1.0.32
-	thiserror-impl-1.0.32
+	textwrap-0.15.2
+	textwrap-0.16.0
+	thiserror-1.0.37
+	thiserror-impl-1.0.37
 	threadpool-1.8.1
 	tiff-0.7.3
 	tinyvec-1.6.0
 	tinyvec_macros-0.1.0
 	toml-0.5.9
 	tui-0.19.0
-	tui-realm-stdlib-1.1.7
+	tui-realm-stdlib-1.2.0
 	tui-realm-treeview-1.1.0
 	tuirealm-1.8.0
 	tuirealm_derive-1.0.0
 	unicode-bidi-0.3.8
-	unicode-ident-1.0.3
-	unicode-linebreak-0.1.2
-	unicode-normalization-0.1.21
-	unicode-segmentation-1.9.0
-	unicode-width-0.1.9
+	unicode-ident-1.0.5
+	unicode-linebreak-0.1.4
+	unicode-normalization-0.1.22
+	unicode-segmentation-1.10.0
+	unicode-width-0.1.10
 	untrusted-0.7.1
 	ureq-2.5.0
-	url-2.2.2
-	urlencoding-2.1.0
+	url-2.3.1
+	urlencoding-2.1.2
 	uuid-0.8.2
 	vcpkg-0.2.15
 	version-compare-0.1.0
 	version_check-0.9.4
-	viuer-0.6.1
+	viuer-0.6.2
 	walkdir-2.3.2
 	wasi-0.11.0+wasi-snapshot-preview1
-	wasm-bindgen-0.2.82
-	wasm-bindgen-backend-0.2.82
-	wasm-bindgen-macro-0.2.82
-	wasm-bindgen-macro-support-0.2.82
-	wasm-bindgen-shared-0.2.82
-	web-sys-0.3.59
+	wasm-bindgen-0.2.83
+	wasm-bindgen-backend-0.2.83
+	wasm-bindgen-macro-0.2.83
+	wasm-bindgen-macro-support-0.2.83
+	wasm-bindgen-shared-0.2.83
+	web-sys-0.3.60
 	webpki-0.22.0
-	webpki-roots-0.22.4
+	webpki-roots-0.22.5
 	weezl-0.1.7
 	wildmatch-2.1.1
 	winapi-0.3.9
 	winapi-i686-pc-windows-gnu-0.4.0
 	winapi-util-0.1.5
 	winapi-x86_64-pc-windows-gnu-0.4.0
-	windows-0.29.0
 	windows-0.37.0
-	windows-sys-0.36.1
-	windows_aarch64_msvc-0.29.0
-	windows_aarch64_msvc-0.36.1
+	windows-0.39.0
+	windows-sys-0.42.0
+	windows_aarch64_gnullvm-0.42.0
 	windows_aarch64_msvc-0.37.0
-	windows_i686_gnu-0.29.0
-	windows_i686_gnu-0.36.1
+	windows_aarch64_msvc-0.39.0
+	windows_aarch64_msvc-0.42.0
 	windows_i686_gnu-0.37.0
-	windows_i686_msvc-0.29.0
-	windows_i686_msvc-0.36.1
+	windows_i686_gnu-0.39.0
+	windows_i686_gnu-0.42.0
 	windows_i686_msvc-0.37.0
-	windows_x86_64_gnu-0.29.0
-	windows_x86_64_gnu-0.36.1
+	windows_i686_msvc-0.39.0
+	windows_i686_msvc-0.42.0
 	windows_x86_64_gnu-0.37.0
-	windows_x86_64_msvc-0.29.0
-	windows_x86_64_msvc-0.36.1
+	windows_x86_64_gnu-0.39.0
+	windows_x86_64_gnu-0.42.0
+	windows_x86_64_gnullvm-0.42.0
 	windows_x86_64_msvc-0.37.0
+	windows_x86_64_msvc-0.39.0
+	windows_x86_64_msvc-0.42.0
 	yaml-rust-0.4.5
+	yansi-0.5.1
 	ytd-rs-0.1.7
 "
 
