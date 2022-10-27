@@ -1,0 +1,12 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=install
+DEPEND=dev-libs/v2ray-domain-list-community-bin
+DESCRIPTION=A DNS forwarder
+EAPI=8
+HOMEPAGE=https://github.com/IrineSistiana/mosdns-cn
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=dev-libs/v2ray-domain-list-community-bin
+SLOT=0
+SRC_URI=https://github.com/IrineSistiana/mosdns-cn/releases/download/v{PV}/mosdns-cn-linux-amd64.zip -> mosdns-cn-bin-1.4.0.zip
+_md5_=957fbf6609b154f5f332a37fcb5213f9

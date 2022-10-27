@@ -141,6 +141,7 @@ media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/tenvideo 1.0.10: Tencent videos
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
 net-dns/libidn11 1.33: Internationalized Domain Names (IDN) implementation
+net-dns/mosdns-cn-bin 1.4.0: A DNS forwarder
 net-dns/phddns 2.0.6.32828: Phddns
 net-im/deepin-wine-qq 9.5.2.27897: Tencent QQ on Deepin Wine(com.qq.im.deepin) For Gentoo
 net-im/deepin-wine-wechat 3.4.5.45: Tencent WeChat on Deepin Wine(com.qq.weixin.deepin) For Gentoo
