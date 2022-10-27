@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-10-27 13:38:21 CST)
+(The last generation time: 2022-10-27 19:04:29 CST)
 
 ### Packages
 
@@ -267,8 +267,8 @@
                                               | 0.5.11                                    |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/termusic                         | 0.7.3                                     |        | https://github.com/tramhao/termusic                                                     | Terminal Music Player written in Rust.
-                                              | 0.7.4                                     |        |                                                                                         |
+ media-sound/termusic                         | 0.7.4                                     |        | https://github.com/tramhao/termusic                                                     | Terminal Music Player written in Rust.
+                                              | 0.7.5                                     |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/yesplaymusic-bin                 | 0.4.4-r1                                  |        | https://github.com/qier222/YesPlayMusic                                                 | A third party music player for Netease Music
                                               | 0.4.5                                     |        |                                                                                         |
