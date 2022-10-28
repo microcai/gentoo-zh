@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-10-28 13:35:27 CST)
+(The last generation time: 2022-10-28 14:12:02 CST)
 
 ### Packages
 
@@ -374,7 +374,7 @@
    net-proxy/Xray                             | 1.5.5-r2                                  | RD     | https://github.com/XTLS/Xray-core                                                       | Xray, Penetrates Everything.
                                               | 1.6.0                                     |        |                                                                                         |
      dev-libs/v2ray-domain-list-community-bin | 20220927022658                            |  D, RD | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
-     dev-libs/v2ray-geoip-bin                 | 202209220104                              | RD     | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
+     dev-libs/v2ray-geoip-bin                 | 202209220104                              |  D, RD | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    net-proxy/v2ray                            | 4.45.0                                    | RD     | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
                                               | 4.45.2                                    |        |                                                                                         |
                                               | 5.1.0-r1                                  |        |                                                                                         |
