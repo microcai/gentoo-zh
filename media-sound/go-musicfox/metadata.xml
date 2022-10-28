@@ -5,4 +5,7 @@
 		<name>ston</name>
 		<email>2424284164@qq.com</email>
 	</maintainer>
+	<use>
+		<flag name="clang">Use sys-devel/clang</flag>
+	</use>
 </pkgmetadata>
