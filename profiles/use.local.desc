@@ -140,6 +140,7 @@ media-sound/feeluown:local - add local music support for feeluown
 media-sound/feeluown:netease - add netease cloud music support for feeluown
 media-sound/feeluown:qqmusic - add qq music support for feeluown
 media-sound/feeluown:webengine - add support to login via web page
+media-sound/go-musicfox:clang - Use sys-devel/clang
 media-sound/netease-cloud-music-gtk:lyrics - Use media-plugins/osdlyrics to display lyrics
 media-sound/termusic:cover - Use media-gfx/ueberzug to display album covers
 media-sound/termusic:discord - support for discord rpc
