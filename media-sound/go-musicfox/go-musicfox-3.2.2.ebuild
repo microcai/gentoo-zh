@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="media-libs/flac media-libs/alsa-lib"
 RDEPEND="${DEPEND}"
-BDEPEND="${DEPEND} sys-devel/gcc[objc]"
+BDEPEND="${DEPEND} sys-devel/gcc[objc] dev-lang/go"
 
 src_compile() {
 	ego build -o musicfox -ldflags "-s -w -X go-musicfox/pkg/constants.AppVersion=v${PV}" cmd/musicfox.go
