@@ -7,7 +7,7 @@ inherit desktop unpacker
 
 DESCRIPTION="A truely minimal markdown editor."
 HOMEPAGE="https://typora.io"
-SRC_URI="https://www.typora.io/linux/typora_${PV}_amd64.deb"
+SRC_URI="https://download.typora.io/linux/typora_${PV}_amd64.deb"
 
 LICENSE="typora"
 SLOT="0"
