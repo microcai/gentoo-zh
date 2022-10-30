@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-10-28 15:38:58 CST)
+(The last generation time: 2022-10-30 20:13:11 CST)
 
 ### Packages
 
@@ -162,7 +162,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/daff                              | 1.3.46                                    |        | https://github.com/paulfitz/daff                                                        | The daff can produce and apply tabular diffs
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/nvchecker                         | 2.9                                       |        | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
+ dev-python/nvchecker                         | 2.10                                      |        | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
    dev-python/structlog                       | 22.1.0                                    | RD     | http://www.structlog.org/en/stable/                                                     | Structured Logging for Python
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/arch-install-scripts                | 24                                        |        | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
