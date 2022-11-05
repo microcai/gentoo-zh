@@ -75,8 +75,8 @@ dev-libs/lunar-calendar 3.0.1: a gtk+ calendar widget for chinese lunar library
 dev-libs/lunar-date 3.0.1: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458 9999: Community managed domain list for V2Ray.
-dev-libs/v2ray-domain-list-community-bin 20220927022658: Community managed domain list for V2Ray.
-dev-libs/v2ray-geoip-bin 202209220104: GeoIP for V2Ray.
+dev-libs/v2ray-domain-list-community-bin 20221103024626: Community managed domain list for V2Ray.
+dev-libs/v2ray-geoip-bin 202211030059: GeoIP for V2Ray.
 dev-python/conda 22.9.0: OS-agnostic, system-level binary package manager and ecosystem
 dev-python/conda-package-handling 1.9.0: Create and extract conda packages of various formats
 dev-python/daff 1.3.46: The daff can produce and apply tabular diffs
@@ -150,7 +150,7 @@ net-im/dingtalk 1.4.0.20422: Communication platform that supports video and audi
 net-im/telegram-purple 1.4.7-r1 9999: Libpurple (Pidgin) plugin for using a Telegram account
 net-im/tencent-qq 2.0.0_beta2_p1089: Official Linux version of Tencent QQ
 net-im/weixin-uos 2.1.5: UOS weixin
-net-im/wemeet 2.8.0.3-r1 3.8.0.2-r1 3.9.0.1: Wemeet - Tencent Video Conferencing
+net-im/wemeet 2.8.0.3-r1 3.8.0.2-r1 3.9.0.1 3.11.0.402: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq
 net-misc/avsocks 9999: 科学操长城软件
 net-misc/baidunetdisk 4.3.0 4.14.5: Baidu Net Disk is a cloud storage client (Linux Version)
@@ -168,7 +168,7 @@ net-p2p/n2n 3.0: A Layer Two Peer-to-Peer VPN
 net-p2p/qbittorrent-enhanced 4.3.9.10 4.4.5.10: qBittorrent Enhanced, based on qBittorrent
 net-print/epson-inkjet-printer_201207w 1.0.0: Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 net-print/pantum 1.1.94: 奔图打印机Linux驱动
-net-proxy/Xray 1.5.5-r2 1.6.0: Xray, Penetrates Everything.
+net-proxy/Xray 1.6.0 1.6.1: Xray, Penetrates Everything.
 net-proxy/clash 1.11.8-r1: A rule-based tunnel in Go.
 net-proxy/clash-for-windows-bin 0.20.6 0.20.7: A Windows/macOS/Linux GUI based on Clash and Electron.
 net-proxy/clash-verge-bin 1.1.0 1.1.1: A Clash GUI based on tauri

@@ -7,5 +7,5 @@ LICENSE=MIT
 RDEPEND=!dev-libs/v2ray-domain-list-community
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/v2fly/domain-list-community/releases/download/20220927022658/dlc.dat -> v2ray-domain-list-community-bin-20220927022658.dat
+SRC_URI=https://github.com/v2fly/domain-list-community/releases/download/20221103024626/dlc.dat -> v2ray-domain-list-community-bin-20221103024626.dat
 _md5_=ed353b63e13552500aaea96a08fdfd14
