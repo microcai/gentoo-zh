@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=Chinese-specific configuration to improve your favorite DNS server.
+EAPI=8
+HOMEPAGE=https://github.com/felixonmars/dnsmasq-china-list
+INHERIT=git-r3
+IUSE=+dnsmasq smartdns
+LICENSE=WTFPL-2
+PROPERTIES=live
+RDEPEND=dnsmasq? ( net-dns/dnsmasq ) smartdns? ( net-dns/smartdns )
+SLOT=0
+_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_md5_=f562b593bb5cd24426990844e5ef989c

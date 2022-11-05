@@ -65,7 +65,7 @@ app-vim/powerline 9999: vim plugin: The ultimate vim statusline utility.
 dev-cpp/cppcoro 210105-r1: A library of C++ coroutine abstractions for the coroutines TS
 dev-cpp/date 3.0.1 3.0.1_p220425: A date and time library based on the C++11/14/17 <chrono> header
 dev-cpp/nameof 0.10.1 0.10.1_p220626: Nameof operator for modern C++
-dev-cpp/tgbot-cpp 1.3 1.3_p220616 1.3_p220911: C++ library for Telegram bot API
+dev-cpp/tgbot-cpp 1.3 1.3_p220616 1.3_p220911 1.4: C++ library for Telegram bot API
 dev-db/dbeaver-bin 22.1.0: Free universal database tool (community edition).
 dev-db/mongodb 5.3.1: A high-performance, open source, schema-free document-oriented database
 dev-libs/libdatrie 0.2.13: Double-Array Trie Library
@@ -140,6 +140,7 @@ media-video/Revda 5.1.1: Cute and useful Live Stream Player with danmaku support
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/tenvideo 1.0.10: Tencent videos
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
+net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
 net-dns/libidn11 1.33: Internationalized Domain Names (IDN) implementation
 net-dns/mosdns-cn-bin 1.4.0: A DNS forwarder
 net-dns/phddns 2.0.6.32828: Phddns
