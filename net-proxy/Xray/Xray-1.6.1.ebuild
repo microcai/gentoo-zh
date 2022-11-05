@@ -8,7 +8,7 @@ DESCRIPTION="Xray, Penetrates Everything."
 HOMEPAGE="https://github.com/XTLS/Xray-core"
 
 SRC_URI="https://github.com/XTLS/Xray-core/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/CHN-beta/gentoo-xray-dep/releases/download/v${PV}/Xray-${PV}-deps.tar.xz"
+	https://github.com/CHN-beta/gentoo-go-dep/releases/download/${P}/${P}-deps.tar.xz"
 RESTRICT="mirror"
 
 LICENSE="MPL-2.0"
