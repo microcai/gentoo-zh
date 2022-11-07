@@ -66,6 +66,14 @@ src_install() {
 	dobin "${S}"/service/v2raya
 	keepdir "/etc/v2raya"
 
+	# generate default config
+	cat <<-EOF > "${ED}"/etc/v2raya/v2raya.conf || die
+	# v2raya config example
+	# Everything has defaults so you only need to uncomment things you want to
+	# change
+	EOF
+	./service/v2raya --report config | sed '1,6d' | fold -s -w 78 | sed -E 's/^([^#].+)/# \1/'  >> "${ED}"/etc/v2raya/v2raya.conf || die
+
 	systemd_dounit "${S}"/install/universal/v2raya.service
 	systemd_dounit "${S}"/install/universal/v2raya-lite.service
 
