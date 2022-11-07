@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-11-05 18:36:00 CST)
+(The last generation time: 2022-11-07 19:04:18 CST)
 
 ### Packages
 
@@ -393,7 +393,7 @@
                                               | 3.5.7-r2                                  |        |                                                                                         |
                                               | 3.5.8                                     |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- sci-electronics/lceda                        | 6.5.15                                    |        | https://lceda.cn/                                                                       | 嘉立创EDA
+ sci-electronics/lceda                        | 6.5.22                                    |        | https://lceda.cn/                                                                       | 嘉立创EDA
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sci-libs/libticalcs2                         | 9999                                      |        | http://lpg.ticalc.org/prj_tilp/                                                         | Library for communication with TI calculators
    sci-libs/libtifiles2                       | 9999                                      |  D, RD | http://lpg.ticalc.org/prj_tilp/                                                         | Library for TI calculator files
