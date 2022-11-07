@@ -8,5 +8,5 @@ LICENSE=CC-BY-SA-4.0
 PROPERTIES=live
 RESTRICT=strip
 SLOT=0
-_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53	go-module	15312495dc4fd84f8c37bbe228ea2abd
+_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f	go-module	15312495dc4fd84f8c37bbe228ea2abd
 _md5_=8a3559feb85e33e46acf97173f8457f9
