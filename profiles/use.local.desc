@@ -152,6 +152,11 @@ media-sound/termusic:yt-dlp - Use net-misc/yt-dlp to provide the youtebe-dl feat
 media-video/Revda:dmlive - Support for using the dmlive command
 net-dns/dnsmasq-china-list:dnsmasq - Install rules for dnsmasq
 net-dns/dnsmasq-china-list:smartdns - Install rules for smartdns
+net-im/telegram-desktop:enchant - Enable the app-text/aspell spell-checking backend
+net-im/telegram-desktop:fonts - Use builtin patched copy of open-sans fonts (overrides fontconfig)
+net-im/telegram-desktop:hunspell - Enable the app-text/hunspell spell-checking backend
+net-im/telegram-desktop:qt6 - Build with Qt6 support
+net-im/telegram-desktop:qt6-imageformats - Add support for HEIF, AVIF and JpegXL by bundling kde-frameworks/kimageformats
 net-im/telegram-purple:gcrypt - libgcrypt support
 net-im/telegram-purple:png - png stickers support
 net-im/telegram-purple:webp - webp stickers support
