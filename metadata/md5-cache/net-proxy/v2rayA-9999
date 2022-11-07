@@ -11,4 +11,4 @@ RDEPEND=|| ( >=net-proxy/v2ray-5 >=net-proxy/v2ray-bin-5 )
 RESTRICT=mirror strip
 SLOT=0
 _eclasses_=toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	systemd	5f4bb0758df2e483babf68cd517078ca	go-module	15312495dc4fd84f8c37bbe228ea2abd	desktop	7eb20ad915a0a318176d51bc2508ff5c	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
-_md5_=8612c32809c27dab3b5d6706e545435d
+_md5_=013e789961ba869fe7862632c22c49b4
