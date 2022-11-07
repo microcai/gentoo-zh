@@ -7,6 +7,8 @@ DESCRIPTION="嘉立创EDA"
 HOMEPAGE="https://lceda.cn/"
 SRC_URI="https://image.lceda.cn/files/lceda-linux-x64-${PV}.zip"
 
+RESTRICT="mirror"
+
 LICENSE="AS-IS"
 SLOT="0"
 KEYWORDS="~amd64"
