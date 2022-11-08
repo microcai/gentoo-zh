@@ -7,7 +7,7 @@ inherit kernel-build python-any-r1
 
 MY_P=linux-${PV%.*}
 #Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
-GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 2))
+GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 0))
 XV="1"
 
 DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
@@ -16,7 +16,7 @@ SRC_URI+=" https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.x
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.base.tar.xz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.extras.tar.xz
 	https://github.com/xanmod/linux/releases/download/${PV}-xanmod${XV}/patch-${PV}-xanmod${XV}.xz
-	https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x/cjktty-${PV%.*}.patch"
+	https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v6.x/cjktty-${PV%.*}.patch"
 S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
@@ -59,7 +59,7 @@ src_prepare() {
 	# prepare the default config
 	case ${ARCH} in
 	amd64)
-		cp "${S}/CONFIGS/xanmod/gcc/config_x86-64" .config || die
+		cp "${S}/CONFIGS/xanmod/gcc/config_x86-64-v1" .config || die
 		;;
 	*)
 		die "Unsupported arch ${ARCH}"
