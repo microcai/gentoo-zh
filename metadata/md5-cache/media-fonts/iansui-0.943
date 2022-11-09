@@ -9,5 +9,5 @@ KEYWORDS=~amd64
 LICENSE=OFL-1.1
 SLOT=0
 SRC_URI=https://github.com/ButTaiwan/iansui/archive/refs/tags/v0.943.tar.gz -> iansui-0.943.tar.gz
-_eclasses_=font	bc7d91ca9054e47ad87b5763214665a4
+_eclasses_=font	9cdfddf092c05c7c4efd70cc30dea046
 _md5_=8c229f97486874605cc750257649651c
