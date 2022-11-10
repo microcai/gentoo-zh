@@ -26,7 +26,6 @@ RDEPEND="
 	media-sound/pulseaudio
 	media-video/rtmpdump
 	net-misc/curl
-	sys-libs/glibc
 	sys-libs/zlib
 	sys-process/procps
 	x11-libs/gtk+:2
