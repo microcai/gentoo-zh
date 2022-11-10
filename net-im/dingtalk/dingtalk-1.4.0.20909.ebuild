@@ -8,7 +8,10 @@ inherit unpacker xdg
 
 DESCRIPTION="Communication platform that supports video and audio conferencing"
 HOMEPAGE="https://gov.dingtalk.com"
-SRC_URI="https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.${PN}_${PV}_amd64.deb"
+SRC_URI="
+	https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.${PN}_${PV}_amd64.deb
+	https://archive.archlinux.org/packages/c/cairo/cairo-1.17.4-5-x86_64.pkg.tar.zst
+"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
@@ -23,7 +26,6 @@ RDEPEND="
 	media-sound/pulseaudio
 	media-video/rtmpdump
 	net-misc/curl
-	sys-libs/glibc
 	sys-libs/zlib
 	sys-process/procps
 	x11-libs/gtk+:2
@@ -54,7 +56,9 @@ src_install() {
 	rm -f "${S}"/opt/apps/"${MY_PGK_NAME}"/files/"${MY_VERSION}"/libz* || die
 	# Use system libcurl, fix preserved depend problem
 	rm -f "${S}"/opt/apps/"${MY_PGK_NAME}"/files/"${MY_VERSION}"/libcurl.so* || die
-
+	# Fix cairo version mismatch
+	mv "${WORKDIR}"/usr/lib/libcairo.* "${S}"/opt/apps/"${MY_PGK_NAME}"/files/"${MY_VERSION}"/ || die
+	rm -rf "${WORKDIR}"/usr || die
 	# Set RPATH for preserve-libs handling
 	pushd "${S}"/opt/apps/"${MY_PGK_NAME}"/files/"${MY_VERSION}" || die
 	local x
