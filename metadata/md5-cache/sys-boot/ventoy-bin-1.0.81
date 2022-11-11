@@ -1,0 +1,15 @@
+DEFINED_PHASES=install postinst postrm preinst prepare
+DEPEND=app-shells/bash sys-fs/dosfstools sys-apps/util-linux app-arch/xz-utils
+DESCRIPTION=A new multiboot USB solution
+EAPI=8
+HOMEPAGE=http://www.ventoy.net
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=desktop xdg
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=app-shells/bash sys-fs/dosfstools sys-apps/util-linux app-arch/xz-utils
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/ventoy/Ventoy/releases/download/v1.0.81/ventoy-1.0.81-linux.tar.gz
+_eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
+_md5_=4a9a44572577cfb5c525d2a43bc1abc3
