@@ -62,7 +62,7 @@ src_install() {
 	insinto /opt/ventoy/boot/
 	doins boot/*
 	insinto /opt/ventoy/ventoy/
-	doins boot/*
+	doins ventoy/*
 	insopts -m0755
 	insinto /opt/ventoy/tool/
 	doins tool/*.{cer,glade,json,sh,xz}
