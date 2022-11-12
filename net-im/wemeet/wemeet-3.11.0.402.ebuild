@@ -31,6 +31,7 @@ DEPEND="
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5
+	dev-qt/qtlocation:5
 	media-sound/pulseaudio
 	x11-libs/libXinerama
 	x11-libs/libXrandr
