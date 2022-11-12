@@ -67,6 +67,7 @@ RDEPEND="
 	media-libs/libvorbis
 	dev-libs/libgpg-error
 	sys-apps/attr
+	dev-qt/qtlocation
 "
 DEPEND=""
 BDEPEND=""
