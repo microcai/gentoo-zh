@@ -17,10 +17,9 @@ IUSE=""
 RESTRICT="strip"
 
 DEPEND="
-	app-shells/bash
 	sys-fs/dosfstools
-	sys-apps/util-linux
-	app-arch/xz-utils
+	sys-fs/exfatprogs
+	sys-block/parted
 "
 RDEPEND="${DEPEND}"
 
