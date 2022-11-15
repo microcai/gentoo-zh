@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-11-13 17:19:59 CST)
+(The last generation time: 2022-11-15 22:53:32 CST)
 
 ### Packages
 
@@ -410,13 +410,13 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/yaourt                              | 1.2.2                                     |        | http://www.archlinux.fr/yaourt-en/                                                      | A pacman wrapper with extended features and AUR support
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- sys-apps/zypper                              | 1.14.55                                   |        | https://en.opensuse.org/Portal:Zypper                                                   | World's most powerful command line package manager
+ sys-apps/zypper                              | 1.14.58                                   |        | https://en.opensuse.org/Portal:Zypper                                                   | World's most powerful command line package manager
                                               | 9999                                      |        |                                                                                         |
-   sys-libs/libzypp                           | 17.31.0                                   | RD     | https://doc.opensuse.org/projects/libzypp/HEAD/                                         | ZYpp Package Management library
+   sys-libs/libzypp                           | 17.31.5                                   | RD     | https://doc.opensuse.org/projects/libzypp/HEAD/                                         | ZYpp Package Management library
                                               | 9999                                      |        |                                                                                         |
      sys-libs/libsolv                         | 0.7.22                                    | RD     | https://doc.opensuse.org/projects/libzypp/HEAD/                                         | Library for solving packages and reading repositories
                                               | 9999                                      |        |                                                                                         |
-       app-arch/zchunk                        | 1.2.2                                     | RD     | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
+       app-arch/zchunk                        | 1.2.3                                     | RD     | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
                                               | 9999                                      |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-boot/ventoy-bin                          | 1.0.81                                    |        | http://www.ventoy.net                                                                   | A new multiboot USB solution
