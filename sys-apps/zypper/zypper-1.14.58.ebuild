@@ -10,7 +10,7 @@ if [[ ${PV} == 9999* ]] ; then
 	EGIT_CHECKOUT_DIR=${PN}-${PV}
 else
 	SRC_URI="https://github.com/openSUSE/zypper/archive/refs/tags/${PV}.tar.gz -> zypper-${PV}.tar.gz"
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~arm64 ~loong"
 	S="${WORKDIR}/${PN}-${PV}"
 fi
 
