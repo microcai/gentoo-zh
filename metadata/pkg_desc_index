@@ -128,13 +128,12 @@ media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simpl
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.10-r1 0.5.11 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-sound/feeluown 3.8.7: A user-friendly and hackable music player
-media-sound/go-musicfox 3.2.2: Command-line Netease Cloud Music written in Go
-media-sound/go-musicfox-bin 3.0.2 3.2.2: Command-line Netease Cloud Music written in Go(bin version)
+media-sound/go-musicfox 3.3.1: Command-line Netease Cloud Music written in Go
 media-sound/linnya 2.2.0: A free music player
 media-sound/listen1_desktop-bin 2.26.2: one for all free music in China
 media-sound/lx-music-desktop-bin 1.21.0: 一个基于 electron 的音乐软件
 media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb package
-media-sound/netease-cloud-music-gtk 1.2.2 2.0.3: netease cloud music player based on Rust & GTK for Linux
+media-sound/netease-cloud-music-gtk 1.2.2 2.0.3 2.1.0: netease cloud music player based on Rust & GTK for Linux
 media-sound/termusic 0.7.4 0.7.5: Terminal Music Player written in Rust.
 media-sound/yesplaymusic-bin 0.4.4-r1 0.4.5: A third party music player for Netease Music
 media-video/Revda 5.1.1: Cute and useful Live Stream Player with danmaku support
