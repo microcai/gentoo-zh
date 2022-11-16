@@ -587,6 +587,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "oatiz"
 
+["media-fonts/smiley-sans"]
+source = "github"
+github = "atelier-anchor/smiley-sans"
+use_latest_release = true
+prefix = "v"
+github_account = "Linerre"
+
 ["media-fonts/tiejili"]
 source = "github"
 github = "Buernia/Tiejili"
