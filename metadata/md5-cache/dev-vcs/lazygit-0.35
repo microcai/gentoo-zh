@@ -10,5 +10,5 @@ RDEPEND=!dev-vcs/lazygit-bin dev-vcs/git
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/jesseduffield/lazygit/archive/refs/tags/v0.35.tar.gz -> lazygit-0.35.tar.gz
-_eclasses_=go-module	15312495dc4fd84f8c37bbe228ea2abd
+_eclasses_=go-module	4c4b34f361efda91762ffeda8f632c02
 _md5_=9ec84309b8d91e0f49874b6166118682
