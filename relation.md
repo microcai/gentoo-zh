@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-11-16 14:14:36 CST)
+(The last generation time: 2022-11-18 13:01:27 CST)
 
 ### Packages
 
@@ -456,6 +456,8 @@
  www-servers/woof                             | 9999                                      |        | http://www.home.unix-ag.org/simon/woof.html                                             | an ad-hoc single file webserver
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  x11-apps/xcur2png                            | 0.7.1                                     |        | https://github.com/eworm-de/xcur2png                                                    | Convert X cursors to PNG images
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ x11-libs/glbinding                           | 3.1.0                                     |        | https://glbinding.org/                                                                  | A C++ binding for the OpenGL API
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  x11-libs/libva-nvdec-driver                  | 0.0.7                                     |        | https://github.com/elFarto/nvidia-vaapi-driver                                          | NVDEC Backend for Video Acceleration (VA) API
                                               | 9999                                      |        |                                                                                         |
