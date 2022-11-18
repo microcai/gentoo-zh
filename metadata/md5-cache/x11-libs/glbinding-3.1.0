@@ -1,0 +1,13 @@
+BDEPEND=>=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare test
+DESCRIPTION=A C++ binding for the OpenGL API
+EAPI=8
+HOMEPAGE=https://glbinding.org/
+INHERIT=cmake
+KEYWORDS=x86 amd64 arm arm64
+LICENSE=LGPL-2
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/cginternals/glbinding/archive/refs/tags/v3.1.0.tar.gz
+_eclasses_=toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	29a755b1291d64133634d80b0328f153	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	44afbf15c35884f7c840470f1cf05d0d
+_md5_=d99ba2221ff0e18196227a586a4c88df

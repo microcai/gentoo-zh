@@ -214,6 +214,7 @@ www-apps/openvscode-server-bin 1.71.2 1.72.2: VS Code that runs a server on remo
 www-servers/darkhttpd 1.13: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
+x11-libs/glbinding 3.1.0: A C++ binding for the OpenGL API
 x11-libs/libva-nvdec-driver 0.0.7 9999: NVDEC Backend for Video Acceleration (VA) API
 x11-libs/xcb-imdkit 1.0.3: Input method development support for xcb
 x11-misc/9menu 1.10: Create X menus from the shell
