@@ -7,7 +7,9 @@ DESCRIPTION="A C++ binding for the OpenGL API"
 HOMEPAGE="https://glbinding.org/"
 SRC_URI="https://github.com/cginternals/glbinding/archive/refs/tags/v${PV}.tar.gz"
 
-inherit cmake
+IUSE="lto"
+
+inherit cmake-multilib
 
 RESTRICT="mirror"
 
@@ -24,18 +26,19 @@ PATCHES=(
 )
 
 src_configure(){
-    mycmakeargs=(
+     mycmakeargs=(
         -DOPTION_BUILD_TOOLS=OFF
         -DOPTION_BUILD_EXAMPLES=OFF
         -DINSTALL_LIB=$(get_libdir)
         -DINSTALL_SHARED=$(get_libdir)
-    )
+        -DOPTION_BUILD_WITH_LTO=$(usex lto ON OFF)
+     )
 
-    cmake_src_configure
+     cmake-multilib_src_configure
 }
 
 src_install(){
-     cmake_src_install
+     cmake-multilib_src_install
      # remove conflict files with libglvnd
      rm ${D}/usr/include/KHR/khrplatform.h
 }
