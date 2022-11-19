@@ -3,6 +3,7 @@
 
 EAPI=8
 
+NONFATAL_VERIFY=1
 inherit go-module systemd
 
 DESCRIPTION="A platform for building proxies to bypass network restrictions."
