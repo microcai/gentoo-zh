@@ -9,5 +9,5 @@ KEYWORDS=~amd64
 LICENSE=OFL-1.1
 SLOT=0
 SRC_URI=https://github.com/atelier-anchor/smiley-sans/releases/download/v1.0.0/smiley-sans-v1.0.0.zip -> smiley-sans-1.0.0.zip
-_eclasses_=font	9cdfddf092c05c7c4efd70cc30dea046
+_eclasses_=font	5e03cb70902daa9ff8967c61130f0f60
 _md5_=77b0cd7879f9b3c1eff1c0de1583b651

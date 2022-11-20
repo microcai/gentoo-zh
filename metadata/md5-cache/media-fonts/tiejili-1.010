@@ -9,5 +9,5 @@ KEYWORDS=~amd64
 LICENSE=OFL-1.1
 SLOT=0
 SRC_URI=https://github.com/Buernia/Tiejili/archive/refs/tags/v1.010.tar.gz -> tiejili-1.010.tar.gz
-_eclasses_=font	9cdfddf092c05c7c4efd70cc30dea046
+_eclasses_=font	5e03cb70902daa9ff8967c61130f0f60
 _md5_=7c80c4b94dbd52be1c01674000c12656
