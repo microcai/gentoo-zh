@@ -35,7 +35,6 @@ app-i18n/fcitx-meta:gtk2 - Enable GTK2 IM support
 app-i18n/fcitx-meta:gtk3 - Enable GTK3 IM support
 app-i18n/fcitx-meta:gtk4 - Enable GTK4 IM support
 app-i18n/fcitx-meta:hangul - Install Hangul Korean input method
-app-i18n/fcitx-meta:kkc - Install KKC Japanese input method
 app-i18n/fcitx-meta:rime - Install Rime Chinese input method
 app-i18n/fcitx-meta:skk - Install SKK Japanese input method
 app-i18n/fcitx-qt:onlyplugin - Build only plugin

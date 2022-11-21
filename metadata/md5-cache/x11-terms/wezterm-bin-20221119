@@ -11,6 +11,6 @@ RDEPEND=sys-apps/dbus >=media-libs/fontconfig-2.12 >=dev-libs/openssl-1.1 waylan
 REQUIRED_USE=|| ( wayland X )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/wez/wezterm/releases/download/20220905-102802-7d4b8249/wezterm-20220905-102802-7d4b8249.Ubuntu18.04.tar.xz
+SRC_URI=https://github.com/wez/wezterm/releases/download/20221119-145034-49b9839f/wezterm-20221119-145034-49b9839f.Ubuntu18.04.tar.xz
 _eclasses_=xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
-_md5_=dc7551c7ec758ce988342537be719cc6
+_md5_=a28586b1fa90bee6939e9d7d1dcf918b
