@@ -5,7 +5,7 @@ EAPI=8
 
 inherit xdg
 
-MY_R="102802-7d4b8249"
+MY_R="145034-49b9839f"
 MY_PV="${PV}-${MY_R}"
 MY_PN="${PN/-bin/}"
 MY_P="${MY_PN}-${MY_PV}"
