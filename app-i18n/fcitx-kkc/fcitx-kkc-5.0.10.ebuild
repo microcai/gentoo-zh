@@ -13,7 +13,7 @@ SRC_URI="https://github.com/fcitx/fcitx5-kkc/archive/refs/tags/${PV}.tar.gz -> $
 
 LICENSE="GPL-3+"
 SLOT="5"
-KEYWORDS="~amd64"
+#KEYWORDS="~amd64"
 IUSE="+qt"
 
 DEPEND="
