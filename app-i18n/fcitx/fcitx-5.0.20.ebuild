@@ -64,7 +64,7 @@ RDEPEND="
 		x11-libs/xcb-util
 		x11-libs/xcb-util-keysyms
 		x11-libs/xcb-util-wm
-		~x11-libs/xcb-imdkit-1.0.3
+		>=x11-libs/xcb-imdkit-1.0.3
 	)
 	x11-misc/xkeyboard-config
 	x11-libs/cairo[X?]
