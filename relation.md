@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-11-22 18:32:07 CST)
+(The last generation time: 2022-11-23 19:23:09 CST)
 
 ### Packages
 
@@ -56,7 +56,7 @@
                                               | 5.0.20                                    |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
    app-i18n/fcitx-hangul                      | 5.0.10                                    | RD     | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
-   app-i18n/fcitx-rime                        | 5.0.14                                    | RD     | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
+   app-i18n/fcitx-rime                        | 5.0.15                                    | RD     | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
                                               | 9999                                      |        |                                                                                         |
      app-i18n/rime-prelude                    | 20220122                                  |  D, RD | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
    app-i18n/fcitx-skk                         | 5.0.13                                    | RD     | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
