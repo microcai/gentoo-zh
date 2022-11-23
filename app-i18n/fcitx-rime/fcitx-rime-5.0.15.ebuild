@@ -1,7 +1,7 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit xdg cmake
 
@@ -22,7 +22,8 @@ LICENSE="GPL-2"
 SLOT="5"
 IUSE=""
 
-RDEPEND="app-i18n/fcitx:5
+RDEPEND="
+	>=app-i18n/fcitx-5.0.6:5
 	>=app-i18n/librime-1.0
 	>=app-i18n/rime-data-0.3.0
 	app-i18n/rime-prelude
