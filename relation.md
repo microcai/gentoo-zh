@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-11-24 21:56:39 CST)
+(The last generation time: 2022-11-25 10:31:08 CST)
 
 ### Packages
 
@@ -51,9 +51,8 @@
    app-i18n/fcitx-configtool                  | 5.0.15                                    | RD     | https://fcitx-im.org/                                                                   | Configuration module for Fcitx
                                               | 5.0.16                                    |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
-   app-i18n/fcitx-gtk                         | 5.0.17-r1                                 | RD     | https://github.com/fcitx/fcitx5-gtk                                                     | Gtk im module for fcitx5 and glib based dbus client library
-                                              | 5.0.19                                    |        |                                                                                         |
-                                              | 5.0.20                                    |        |                                                                                         |
+   app-i18n/fcitx-gtk                         | 5.0.20                                    | RD     | https://github.com/fcitx/fcitx5-gtk                                                     | Gtk im module for fcitx5 and glib based dbus client library
+                                              | 5.0.21                                    |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
    app-i18n/fcitx-hangul                      | 5.0.10                                    | RD     | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
    app-i18n/fcitx-rime                        | 5.0.15                                    | RD     | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
@@ -81,8 +80,8 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/sogoupinyin                         | 4.0.1.2123                                |        | http://pinyin.sogou.com/linux/                                                          | Sogou Pinyin input method.
    app-i18n/fcitx                             | 4.2.9.8                                   |  D, RD | https://fcitx-im.org/                                                                   | Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
-                                              | 5.0.19-r1                                 |        |                                                                                         |
                                               | 5.0.20                                    |        |                                                                                         |
+                                              | 5.0.21                                    |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
      x11-libs/xcb-imdkit                      | 1.0.3                                     |  D, RD | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
                                               | 1.0.4                                     |        |                                                                                         |
