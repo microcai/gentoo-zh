@@ -1,7 +1,7 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit cmake xdg
 
@@ -19,7 +19,7 @@ DESCRIPTION="Fcitx5 Next generation of fcitx "
 HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5"
 SRC_URI+=" https://download.fcitx-im.org/data/en_dict-20121020.tar.gz -> fcitx-data-en_dict-20121020.tar.gz"
 
-LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
+LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT Unicode-DFS-2016"
 SLOT="5"
 IUSE="+enchant +emoji test coverage doc presage systemd wayland +X"
 REQUIRED_USE="
@@ -30,8 +30,6 @@ REQUIRED_USE="
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	emoji? ( app-i18n/unicode-cldr )
-
 	test? (
 		coverage? (
 			dev-util/lcov
@@ -66,7 +64,7 @@ RDEPEND="
 		x11-libs/xcb-util
 		x11-libs/xcb-util-keysyms
 		x11-libs/xcb-util-wm
-		~x11-libs/xcb-imdkit-1.0.3
+		>=x11-libs/xcb-imdkit-1.0.3
 	)
 	x11-misc/xkeyboard-config
 	x11-libs/cairo[X?]
@@ -96,11 +94,6 @@ src_unpack() {
 
 src_prepare() {
 	ln -s "${DISTDIR}/fcitx-data-en_dict-20121020.tar.gz" src/modules/spell/en_dict-20121020.tar.gz || die
-
-	local PATCHES=(
-		"${FILESDIR}/fix-5.0.19-missing-includes-for-cstdint.patch"
-		"${FILESDIR}/fix-5.0.19-add-potential-missing-cstdint.patch"
-	)
 
 	cmake_src_prepare
 }
