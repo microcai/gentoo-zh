@@ -12,5 +12,5 @@ LICENSE=BSD
 RDEPEND=>=dev-lang/lua-5.2:= dev-libs/boost dev-libs/expat dev-util/ragel nls? ( sys-devel/gettext ) gtk3? ( x11-libs/gtk+:3 ) !gtk3? ( x11-libs/gtk+:2 )
 SLOT=0
 SRC_URI=https://github.com/thezbyg/gpick/archive/gpick-0.2.6.tar.gz
-_eclasses_=toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	29a755b1291d64133634d80b0328f153	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	44afbf15c35884f7c840470f1cf05d0d	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	29a755b1291d64133634d80b0328f153	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	8ed38f92fe095be374d6c4c8d4c0dda7	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	44afbf15c35884f7c840470f1cf05d0d	xdg	6024fbc93167fad782e2032933654857
 _md5_=05fa0acf6824c8d0998937fbcc00b1d2

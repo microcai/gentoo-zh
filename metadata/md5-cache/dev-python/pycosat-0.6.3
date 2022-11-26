@@ -1,4 +1,4 @@
-BDEPEND=test? ( >=dev-python/pytest-7.1.3[python_targets_pypy3(-)?,python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) python_targets_pypy3? ( >=dev-python/pypy3-7.3.9_p1:0= ) python_targets_python3_8? ( >=dev-lang/python-3.8.13:3.8 ) python_targets_python3_9? ( >=dev-lang/python-3.9.12:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.4:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.0_beta4:3.11 )
+BDEPEND=test? ( >=dev-python/pytest-7.1.3[python_targets_pypy3(-)?,python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) python_targets_pypy3? ( >=dev-python/pypy3-7.3.9_p9:0= ) python_targets_python3_8? ( >=dev-lang/python-3.8.15_p3:3.8 ) python_targets_python3_9? ( >=dev-lang/python-3.9.15_p3:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.8_p3:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.0_p2:3.11 )
 DEFINED_PHASES=compile configure install prepare test
 DESCRIPTION=Python bindings to picosat (a SAT solver)
 EAPI=8
@@ -7,10 +7,10 @@ INHERIT=distutils-r1
 IUSE=test python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11
 KEYWORDS=amd64 ~arm64 ~riscv ~x86
 LICENSE=MIT
-RDEPEND=python_targets_pypy3? ( >=dev-python/pypy3-7.3.9_p1:0= ) python_targets_python3_8? ( >=dev-lang/python-3.8.13:3.8 ) python_targets_python3_9? ( >=dev-lang/python-3.9.12:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.4:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.0_beta4:3.11 )
+RDEPEND=python_targets_pypy3? ( >=dev-python/pypy3-7.3.9_p9:0= ) python_targets_python3_8? ( >=dev-lang/python-3.8.15_p3:3.8 ) python_targets_python3_9? ( >=dev-lang/python-3.9.15_p3:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.8_p3:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.0_p2:3.11 )
 REQUIRED_USE=|| ( python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11 )
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/ContinuumIO/pycosat/archive/0.6.3.tar.gz -> pycosat-0.6.3.tar.gz
-_eclasses_=multibuild	d26d81f242cb193d899a72bca423d0bd	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	b9fc5e97e886514e5132f50465185401	python-r1	2d51fd03931e743811ce30d198e4dcfd	distutils-r1	8c1ceb6b71a65547b0ea7bc901d906cb
+_eclasses_=multibuild	d26d81f242cb193d899a72bca423d0bd	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	8ed38f92fe095be374d6c4c8d4c0dda7	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	25c880c1db58e21b80b684bacc964958	python-r1	2d51fd03931e743811ce30d198e4dcfd	distutils-r1	da32ffc285e9f13313f2387570e35b87
 _md5_=b156205f11927e8cdc3c59f1b6bbacd7
