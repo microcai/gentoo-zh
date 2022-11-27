@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-11-27 15:06:50 CST)
+(The last generation time: 2022-11-27 21:27:55 CST)
 
 ### Packages
 
@@ -306,7 +306,7 @@
                                               | 0.1.29                                    |        |                                                                                         |
      dev-libs/libdatrie                       | 0.2.13                                    |  D, RD | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-im/telegram-desktop                      | 4.3.1                                     |        | https://desktop.telegram.org                                                            | Official desktop client for Telegram
+ net-im/telegram-desktop                      | 4.3.4                                     |        | https://desktop.telegram.org                                                            | Official desktop client for Telegram
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/telegram-purple                       | 1.4.7-r1                                  |        | https://github.com/majn/telegram-purple                                                 | Libpurple (Pidgin) plugin for using a Telegram account
                                               | 9999                                      |        |                                                                                         |
