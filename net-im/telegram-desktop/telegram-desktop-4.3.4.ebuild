@@ -25,7 +25,7 @@ REQUIRED_USE="
 		^^ ( enchant hunspell )
 	)
 	qt6-imageformats? ( qt6 )
-	wayland? (qt6)
+	wayland? ( qt6 )
 "
 
 KIMAGEFORMATS_RDEPEND="
