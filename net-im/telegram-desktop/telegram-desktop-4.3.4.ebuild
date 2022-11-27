@@ -25,6 +25,7 @@ REQUIRED_USE="
 		^^ ( enchant hunspell )
 	)
 	qt6-imageformats? ( qt6 )
+	wayland? (qt6)
 "
 
 KIMAGEFORMATS_RDEPEND="
@@ -42,12 +43,14 @@ RDEPEND="
 	dev-libs/openssl:=
 	dev-libs/xxhash
 	media-libs/fontconfig:=
+	media-libs/libavif
+	media-libs/libheif
 	media-libs/libjpeg-turbo:=
 	~media-libs/libtgvoip-2.4.4_p20220503
 	media-libs/openal
 	media-libs/opus:=
 	media-libs/rnnoise
-	~media-libs/tg_owt-0_pre20220507:=[screencast=,X=]
+	media-libs/tg_owt[screencast=,X=]
 	media-video/ffmpeg:=[opus]
 	sys-libs/zlib:=[minizip]
 	x11-libs/xcb-util-keysyms
