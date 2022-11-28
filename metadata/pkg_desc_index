@@ -129,7 +129,7 @@ media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simpl
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.10-r1 0.5.11 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-sound/feeluown 3.8.7: A user-friendly and hackable music player
-media-sound/go-musicfox 3.3.2: Command-line Netease Cloud Music written in Go
+media-sound/go-musicfox 3.4.0: Command-line Netease Cloud Music written in Go
 media-sound/linnya 2.2.0: A free music player
 media-sound/listen1_desktop-bin 2.27.0: one for all free music in China
 media-sound/lx-music-desktop-bin 1.21.0: 一个基于 electron 的音乐软件
