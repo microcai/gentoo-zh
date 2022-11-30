@@ -139,6 +139,7 @@ media-sound/termusic 0.7.4 0.7.5: Terminal Music Player written in Rust.
 media-sound/yesplaymusic-bin 0.4.4-r1 0.4.5: A third party music player for Netease Music
 media-video/Revda 5.1.1: Cute and useful Live Stream Player with danmaku support
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
+media-video/mpv-handler 0.3.0: A protocol handler for mpv, written by Rust.
 media-video/tenvideo 1.0.10: Tencent videos
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
