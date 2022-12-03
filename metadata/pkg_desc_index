@@ -217,7 +217,6 @@ www-servers/darkhttpd 1.13: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
 x11-libs/glbinding 3.1.0: A C++ binding for the OpenGL API
-x11-libs/libva-nvdec-driver 0.0.7 9999: NVDEC Backend for Video Acceleration (VA) API
 x11-libs/xcb-imdkit 1.0.3 1.0.4: Input method development support for xcb
 x11-misc/9menu 1.10: Create X menus from the shell
 x11-misc/fqterm 0.9.10.1 9999: a modern terminal emulator for Linux
