@@ -173,7 +173,7 @@ net-print/epson-inkjet-printer_201207w 1.0.0: Epson printer driver (L110, L210, 
 net-print/pantum 1.1.94: 奔图打印机Linux驱动
 net-proxy/Xray 1.6.0 1.6.1: Xray, Penetrates Everything.
 net-proxy/clash 1.11.8-r1: A rule-based tunnel in Go.
-net-proxy/clash-for-windows-bin 0.20.7 0.20.9: A Windows/macOS/Linux GUI based on Clash and Electron.
+net-proxy/clash-for-windows-bin 0.20.9 0.20.10: A Windows/macOS/Linux GUI based on Clash and Electron.
 net-proxy/clash-verge-bin 1.1.1 1.2.0: A Clash GUI based on tauri
 net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
 net-proxy/shadowsocks-rust 1.14.3 1.15.0_alpha9: A Rust port of shadowsocks.
@@ -201,7 +201,7 @@ sys-fs/erofs-utils 1.3: Userspace tools for EROFS images
 sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
-sys-kernel/liquorix-sources 6.0.7 6.0.9: Liquorix kernel is best one for desktop, multimedia and gaming workloads
+sys-kernel/liquorix-sources 6.0.9 6.0.11: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 31: Modular initramfs image creation utility
 sys-kernel/xanmod-kernel 5.15.75 6.0.7: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 5.15.12 5.15.14: Xanmod-RT, cjktty, uksm patchset for main kernel tree
