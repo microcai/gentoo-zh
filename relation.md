@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-12-03 12:05:55 CST)
+(The last generation time: 2022-12-04 18:32:06 CST)
 
 ### Packages
 
@@ -434,6 +434,8 @@
  sys-fs/f2fs-tools                            | 9999                                      |        | https://sourceforge.net/projects/f2fs-tools/                                            | Tools for Flash-Friendly File System (F2FS)
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/jmtpfs                                | 0.5                                       |        | http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux | A FUSE and libmtp based filesystem for accessing MTP devices.
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ sys-fs/ltfs                                  | 9999                                      |        | https://github.com/LinearTapeFileSystem/ltfs                                            | LTFS for LTO tapes
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/systemd-zpool-scrub                   | 1.1                                       |        | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
