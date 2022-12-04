@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl] sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71-r5 >=sys-devel/libtool-2.4.7
+DEFINED_PHASES=prepare unpack
+DEPEND=dev-libs/libxml2 dev-libs/icu sys-fs/fuse:0 net-analyzer/net-snmp
+DESCRIPTION=LTFS for LTO tapes
+EAPI=8
+HOMEPAGE=https://github.com/LinearTapeFileSystem/ltfs
+INHERIT=git-r3 autotools
+KEYWORDS=~amd64
+LICENSE=MIT
+PROPERTIES=live
+RDEPEND=dev-libs/libxml2 dev-libs/icu sys-fs/fuse:0 net-analyzer/net-snmp
+SLOT=0
+_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	libtool	241a8f577b9781a42a7421e53448a44e	autotools	6dcd6b6a486e79928e1243ff9ba41fcc
+_md5_=6adee0407d864d60b7ffbf1fff15de20
