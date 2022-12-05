@@ -204,7 +204,7 @@ sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/ltfs 9999: LTFS for LTO tapes
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/liquorix-sources 6.0.9 6.0.11: Liquorix kernel is best one for desktop, multimedia and gaming workloads
-sys-kernel/mkinitcpio 31: Modular initramfs image creation utility
+sys-kernel/mkinitcpio 33: Modular initramfs image creation utility
 sys-kernel/xanmod-kernel 5.15.75 6.0.7: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 5.15.12 5.15.14: Xanmod-RT, cjktty, uksm patchset for main kernel tree
 sys-kernel/xanmod-sources 5.15.75 6.0.7: Full XanMod source, including the Gentoo patchset and other patch options.
