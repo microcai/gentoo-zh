@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-12-04 18:32:06 CST)
+(The last generation time: 2022-12-05 15:03:52 CST)
 
 ### Packages
 
@@ -11,6 +11,8 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/zenmonitor                         | 1.4.2                                     |        | https://github.com/ocerman/zenmonitor                                                   | Zen monitor is monitoring software for AMD Zen-based CPUs
    sys-kernel/zenpower                        | 0.1.12-r1                                 |  D, RD | https://github.com/ocerman/zenpower                                                     | Linux kernel driver for reading sensors of AMD Zen family CPUs
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ app-backup/btrfs-assistant                   | 1.6.3                                     |        | https://gitlab.com/btrfs-assistant/btrfs-assistant                                      | A GUI management tool to make managing a Btrfs filesystem easier.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-backup/snapper-gui                       | 220626                                    |        | https://github.com/ricardomv/snapper-gui                                                | GUI for snapper, a tool for Linux filesystem snapshot management
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
