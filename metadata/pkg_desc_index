@@ -150,7 +150,7 @@ net-dns/phddns 2.0.6.32828: Phddns
 net-im/deepin-wine-qq 9.5.2.27897: Tencent QQ on Deepin Wine(com.qq.im.deepin) For Gentoo
 net-im/deepin-wine-wechat 3.4.5.45: Tencent WeChat on Deepin Wine(com.qq.weixin.deepin) For Gentoo
 net-im/dingtalk 1.4.0.20909: Communication platform that supports video and audio conferencing
-net-im/telegram-desktop 4.3.4: Official desktop client for Telegram
+net-im/telegram-desktop 4.3.4-r1: Official desktop client for Telegram
 net-im/telegram-purple 1.4.7-r1 9999: Libpurple (Pidgin) plugin for using a Telegram account
 net-im/tencent-qq 2.0.0_beta2_p1089: Official Linux version of Tencent QQ
 net-im/weixin-uos 2.1.5: UOS weixin
