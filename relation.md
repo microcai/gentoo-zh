@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-12-05 21:25:40 CST)
+(The last generation time: 2022-12-05 23:16:15 CST)
 
 ### Packages
 
@@ -442,7 +442,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/systemd-zpool-scrub                   | 1.1                                       |        | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- sys-kernel/mkinitcpio                        | 31                                        |        | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
+ sys-kernel/mkinitcpio                        | 33                                        |        | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-libs/elog-functions                      | 0.0.2                                     |        | http://xochitl.matem.unam.mx/~canek/gentoo-systemd-only/index.html                      | Compatibility functions for the log eclass functions of OpenRC
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
