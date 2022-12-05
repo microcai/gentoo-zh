@@ -51,7 +51,7 @@ RDEPEND="
 	media-libs/opus:=
 	media-libs/rnnoise
 	media-libs/tg_owt[screencast=,X=]
-	media-video/ffmpeg:=[opus]
+	media-video/ffmpeg:=[opus,vpx]
 	sys-libs/zlib:=[minizip]
 	x11-libs/xcb-util-keysyms
 	dbus? ( >=dev-cpp/glibmm-2.68 )
