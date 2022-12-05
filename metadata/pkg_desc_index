@@ -4,6 +4,7 @@ acct-user/aptly 0: System user: aptly
 acct-user/n2n 0: System user: n2n
 app-admin/zenmonitor 1.4.2: Zen monitor is monitoring software for AMD Zen-based CPUs
 app-arch/zchunk 1.2.3 9999: A format designed for highly efficient deltas while maintaining good compression
+app-backup/btrfs-assistant 1.6.3: A GUI management tool to make managing a Btrfs filesystem easier.
 app-backup/snapper-gui 220626: GUI for snapper, a tool for Linux filesystem snapshot management
 app-crypt/archlinux-keyring 20220727: GnuPG keyring of Archlinux developer keys
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
@@ -129,7 +130,7 @@ media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simpl
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.10-r1 0.5.11 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-sound/feeluown 3.8.7: A user-friendly and hackable music player
-media-sound/go-musicfox 3.4.0: Command-line Netease Cloud Music written in Go
+media-sound/go-musicfox 3.4.0 3.4.2: Command-line Netease Cloud Music written in Go
 media-sound/linnya 2.2.0: A free music player
 media-sound/listen1_desktop-bin 2.27.0: one for all free music in China
 media-sound/lx-music-desktop-bin 1.21.0: 一个基于 electron 的音乐软件
