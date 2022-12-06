@@ -12,5 +12,5 @@ RDEPEND=appindicator? ( dev-libs/libdbusmenu dev-libs/libappindicator ) app-arch
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.3.0.deb
-_eclasses_=xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857	desktop	7eb20ad915a0a318176d51bc2508ff5c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	bc57272a0491765c71d973c8cfd35063
+_eclasses_=xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857	desktop	7eb20ad915a0a318176d51bc2508ff5c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	959e1d99122907eb98a3a660297a967e	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	bc57272a0491765c71d973c8cfd35063
 _md5_=f88827550c70b8de7e05e43ef1becb55

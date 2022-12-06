@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=app-accessibility/at-spi2-atk:2 app-accessibility/at-spi2-core:2 dev-libs/atk dev-libs/expat dev-libs/nspr dev-libs/nss media-libs/alsa-lib media-libs/mesa net-print/cups sys-apps/dbus[X] x11-libs/cairo x11-libs/gdk-pixbuf:2 x11-libs/gtk+:3[X] x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXrandr x11-libs/libdrm x11-libs/libxcb x11-libs/libxkbcommon x11-libs/libxshmfence x11-libs/pango
 SLOT=0
 SRC_URI=https://github.com/listen1/listen1_desktop/releases/download/v2.27.0/listen1_2.27.0_linux_amd64.deb -> listen1_desktop-bin-2.27.0.deb
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	bc57272a0491765c71d973c8cfd35063	desktop	7eb20ad915a0a318176d51bc2508ff5c	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	959e1d99122907eb98a3a660297a967e	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	bc57272a0491765c71d973c8cfd35063	desktop	7eb20ad915a0a318176d51bc2508ff5c	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
 _md5_=2f5b418dd08478cb3a38267d200eea46
