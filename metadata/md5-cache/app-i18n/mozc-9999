@@ -12,5 +12,5 @@ RDEPEND=>=dev-cpp/abseil-cpp-20200923[cxx17(+)] >=dev-libs/protobuf-3.0.0:= emac
 REQUIRED_USE=|| ( emacs fcitx4 fcitx5 ibus )
 RESTRICT=!test? ( test )
 SLOT=0
-_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	959e1d99122907eb98a3a660297a967e	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	25c880c1db58e21b80b684bacc964958	python-any-r1	f2f00fb79b5e888b5011d4c51240ae97	desktop	7eb20ad915a0a318176d51bc2508ff5c	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857	git-r3	2347f8fe2d392b2a091191f94be37e6f
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	25c880c1db58e21b80b684bacc964958	python-any-r1	f2f00fb79b5e888b5011d4c51240ae97	desktop	7eb20ad915a0a318176d51bc2508ff5c	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857	git-r3	2347f8fe2d392b2a091191f94be37e6f
 _md5_=b13c40b4b8464645569427c70123aea7
