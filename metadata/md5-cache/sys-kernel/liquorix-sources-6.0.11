@@ -1,4 +1,3 @@
-BDEPEND=!build? ( sys-apps/sed )
 DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
 DEPEND=app-arch/cpio dev-util/pahole
 DESCRIPTION=Liquorix kernel is best one for desktop, multimedia and gaming workloads
@@ -12,5 +11,5 @@ RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-d
 RESTRICT=binchecks strip
 SLOT=6.0.11
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.0.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.0-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.0-1.extras.tar.xz https://github.com/zen-kernel/zen-kernel/releases/download/v6.0.11-lqx2/v6.0.11-lqx2.patch.xz https://github.com/zhmars/cjktty-patches/raw/master/v6.x/cjktty-6.0.patch
-_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	kernel-2	222472d400d477278b203edbf50c3b98
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	kernel-2	251644d091f08784e34abea7495fc883
 _md5_=6f050cc7430ad4ccbd9b63c76cc9c081

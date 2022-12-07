@@ -1,4 +1,3 @@
-BDEPEND=!build? ( sys-apps/sed )
 DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
 DESCRIPTION=Xanmod-RT, cjktty, uksm patchset for main kernel tree
 EAPI=8
@@ -11,5 +10,5 @@ RDEPEND=!sys-kernel/xanmod-sources !sys-kernel/xanmod-hybrid !build? ( app-arch/
 RESTRICT=binchecks strip
 SLOT=5.15.14
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.15.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.15-2.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-2.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.15-2.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-2.extras.tar.xz https://github.com/xanmod/linux/releases/download/5.15.14-rt27-xanmod1/patch-5.15.14-rt27-xanmod1.xz https://github.com/HougeLangley/customkernel/releases/download/v5.15-others/v1-cjktty.patch.xz
-_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	kernel-2	222472d400d477278b203edbf50c3b98
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	kernel-2	251644d091f08784e34abea7495fc883
 _md5_=0ec05b38d4464e4962ac09b25c48cb13
