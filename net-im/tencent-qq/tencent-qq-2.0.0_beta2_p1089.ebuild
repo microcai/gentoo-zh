@@ -19,7 +19,7 @@ SRC_URI="
 	mips? ( http://down.qq.com/qqweb/LinuxQQ/linuxqq_${MY_PV}_mips64el.rpm )
 "
 
-SLOT="0"
+SLOT="stable"
 KEYWORDS="-* ~amd64 ~mips"  # arm64 not tested
 IUSE="big-endian"
 REQUIRED_USE="
