@@ -152,7 +152,7 @@ net-im/deepin-wine-wechat 3.4.5.45: Tencent WeChat on Deepin Wine(com.qq.weixin.
 net-im/dingtalk 1.4.0.20909: Communication platform that supports video and audio conferencing
 net-im/telegram-desktop 4.3.4-r1: Official desktop client for Telegram
 net-im/telegram-purple 1.4.7-r1 9999: Libpurple (Pidgin) plugin for using a Telegram account
-net-im/tencent-qq 2.0.0_beta2_p1089: Official Linux version of Tencent QQ
+net-im/tencent-qq 2.0.0_beta2_p1089 2.0.1_beta1_p429: The new version of the official linux-qq
 net-im/weixin-uos 2.1.5: UOS weixin
 net-im/wemeet 2.8.0.3-r1 3.8.0.2-r1 3.9.0.1 3.11.0.402: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq

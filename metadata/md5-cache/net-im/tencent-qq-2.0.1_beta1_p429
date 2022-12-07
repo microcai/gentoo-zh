@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst postrm preinst unpack
+DESCRIPTION=The new version of the official linux-qq
+EAPI=8
+HOMEPAGE=https://im.qq.com/linuxqq/download.html
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=desktop unpacker xdg
+KEYWORDS=~amd64
+LICENSE=Tencent
+RDEPEND=x11-libs/gtk+:3 x11-libs/libnotify dev-libs/nss x11-libs/libXScrnSaver x11-libs/libXtst x11-misc/xdg-utils app-accessibility/at-spi2-core:2 app-crypt/libsecret
+RESTRICT=strip
+SLOT=nt
+SRC_URI=amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/4691a571/QQ-v2.0.1-429_x64.deb )
+_eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	bc57272a0491765c71d973c8cfd35063	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
+_md5_=7b76204acdc93b9d82604b4b4f68df18
