@@ -37,7 +37,7 @@ src_install() {
 	doins -r opt/*
 
 	fperms +x /opt/QQ/{qq,chrome_crashpad_handler,chrome-sandbox,libEGL.so,libffmpeg.so,libGLESv2.so,libvk_swiftshader.so,libvulkan.so.1}
-	printf "#!/bin/bash\ncd /opt/QQ\n./qq\n" > qq || die
+	printf "#!/bin/bash\ncd /opt/QQ\n./qq \$@\n" > qq || die
 	dobin qq
 
 	domenu usr/share/applications/qq.desktop
