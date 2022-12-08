@@ -5,4 +5,7 @@
 		<email>git@xen0n.name</email>
 		<name>WANG Xuerui</name>
 	</maintainer>
+	<use>
+		<flag name="bwrap">Use sys-apps/bubblewrap to prevent private information leakage</flag>
+	</use>
 </pkgmetadata>
