@@ -159,6 +159,7 @@ net-im/telegram-desktop:qt6-imageformats - Add support for HEIF, AVIF and JpegXL
 net-im/telegram-purple:gcrypt - libgcrypt support
 net-im/telegram-purple:png - png stickers support
 net-im/telegram-purple:webp - webp stickers support
+net-im/tencent-qq:bwrap - Use sys-apps/bubblewrap to prevent private information leakage
 net-misc/pcmanx-gtk2:iplookup - IP location lookup, Useful to China locations
 net-misc/pcmanx-gtk2:proxy - proxy server support
 net-misc/pcmanx-gtk2:wget - use wget to download files
