@@ -182,7 +182,7 @@ net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
 net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
 net-proxy/v2ray 4.45.0 4.45.2 5.1.0-r1: A platform for building proxies to bypass network restrictions.
 net-proxy/v2ray-bin 4.45.0 5.1.0-r1: A platform for building proxies to bypass network restrictions.
-net-proxy/v2rayA 1.5.9.1698.1 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
+net-proxy/v2rayA 1.5.9.1698.1 2.0.0 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 net-wireless/linux-wifi-hotspot 9999: Linux Wifi Hotspot
 sci-chemistry/vesta 3.5.5-r1 3.5.7-r2 3.5.8: Visualization for Electronic and STructural Analysis
 sci-electronics/lceda 6.5.22: 嘉立创EDA
