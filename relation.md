@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-12-07 12:56:40 CST)
+(The last generation time: 2022-12-10 19:29:29 CST)
 
 ### Packages
 
@@ -386,6 +386,7 @@
  net-proxy/smartproxy                         | 0.9.5                                     |        | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/v2rayA                             | 1.5.9.1698.1                              |        | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
+                                              | 2.0.0                                     |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
    net-proxy/Xray                             | 1.6.0                                     | RD     | https://github.com/XTLS/Xray-core                                                       | Xray, Penetrates Everything.
                                               | 1.6.1                                     |        |                                                                                         |
