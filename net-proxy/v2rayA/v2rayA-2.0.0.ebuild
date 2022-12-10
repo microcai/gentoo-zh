@@ -3,17 +3,24 @@
 
 EAPI=8
 
-inherit systemd go-module desktop xdg git-r3
+inherit systemd go-module desktop xdg
 
 DESCRIPTION="web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel"
 HOMEPAGE="https://v2raya.org/"
 
-EGIT_REPO_URI="https://github.com/v2rayA/v2rayA.git"
-EGIT_BRANCH="feat_v5" # HEAD
+SRC_URI="
+	https://github.com/v2rayA/v2rayA/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
+"
+# maintainer generated vendor
+# generated with https://github.com/liuyujielol/rei-overlay/blob/main/net-proxy/v2rayA/scripts/v2rayA_vendor_gen.sh
+SRC_URI+="
+	https://github.com/liuyujielol/vendors/releases/download/${PN}/${P}-yarn_mirror.tar.xz
+	https://github.com/liuyujielol/vendors/releases/download/${PN}/${P}-go-vendor.tar.xz
+"
 
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 IUSE=""
 RESTRICT="mirror"
 
@@ -31,20 +38,16 @@ BDEPEND="
 	sys-apps/yarn
 "
 
-YARN_WORKDIR=""
-
 src_unpack() {
-	git-r3_src_unpack
+	default
 
-	# requires network
+	# go vendor
+	mv -v "${WORKDIR}/vendor" "${S}/service" || die
+
 	cd "${S}/gui" || die
-	#yarn config set registry https://registry.npmmirror.com || die
-	yarn install --check-files || die "yarn install failed"
-
-	# requires network
-	cd "${S}/service" || die
-	#ego env -w GOPROXY=https://goproxy.cn,direct
-	ego mod vendor
+	# set yarn-offline-mirror to ${WORKDIR}/yarn_offline_mirror
+	echo "yarn-offline-mirror \"${WORKDIR}/yarn_offline_mirror\"" >> "${S}/gui/.yarnrc" || die
+	yarn install --offline --check-files || die "yarn offline install failed"
 }
 
 src_compile() {
@@ -86,4 +89,14 @@ src_install() {
 
 	newicon -s 512 "${S}"/gui/public/img/icons/android-chrome-512x512.png v2raya.png
 	domenu "${S}"/install/universal/v2raya.desktop
+}
+
+pkg_postinst() {
+	xdg_pkg_postinst
+
+	if has_version '<net-proxy/v2rayA-2.0.0' ; then
+		elog "Starting from net-proxy/v2rayA-2.0.0"
+		elog "Support for v2ray-4 & xray has been dropped"
+		elog "A config migration may be required"
+	fi
 }
