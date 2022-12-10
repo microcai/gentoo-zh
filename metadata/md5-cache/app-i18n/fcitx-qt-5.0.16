@@ -12,5 +12,5 @@ RDEPEND=!onlyplugin? ( >=app-i18n/fcitx-5.0.16:5 ) qt5? ( dev-qt/qtcore:5 dev-qt
 REQUIRED_USE=|| ( qt5 qt6 )
 SLOT=5
 SRC_URI=https://github.com/fcitx/fcitx5-qt/archive/refs/tags/5.0.16.tar.gz -> fcitx-qt-5.0.16.tar.gz
-_eclasses_=toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	8ed38f92fe095be374d6c4c8d4c0dda7	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	44afbf15c35884f7c840470f1cf05d0d
+_eclasses_=toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	8ed38f92fe095be374d6c4c8d4c0dda7	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	646b7a2a63596361551a6c1fabf28057
 _md5_=873dcf78e9c63e2e74b2adc7fd7fddb7

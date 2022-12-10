@@ -14,5 +14,5 @@ REQUIRED_USE=spell? ( ^^ ( enchant hunspell ) ) qt6-imageformats? ( qt6 ) waylan
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/telegramdesktop/tdesktop/releases/download/v4.3.4/tdesktop-4.3.4-full.tar.gz
-_eclasses_=xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	8ed38f92fe095be374d6c4c8d4c0dda7	cmake	44afbf15c35884f7c840470f1cf05d0d	python-utils-r1	25c880c1db58e21b80b684bacc964958	python-any-r1	f2f00fb79b5e888b5011d4c51240ae97	optfeature	1a2157392a869265b2afcb63a26c12ac
+_eclasses_=xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	8ed38f92fe095be374d6c4c8d4c0dda7	cmake	646b7a2a63596361551a6c1fabf28057	python-utils-r1	25c880c1db58e21b80b684bacc964958	python-any-r1	f2f00fb79b5e888b5011d4c51240ae97	optfeature	1a2157392a869265b2afcb63a26c12ac
 _md5_=54d910c9241d8e730525008c2e628406
