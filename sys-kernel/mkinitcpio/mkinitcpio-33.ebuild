@@ -24,7 +24,7 @@ sys-apps/busybox
 sys-apps/coreutils
 sys-apps/findutils
 sys-apps/sed
-virtual/awk
+app-alternatives/awk
 sys-apps/baselayout[-split-usr]
 "
 
