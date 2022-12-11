@@ -19,7 +19,7 @@ SRC_URI="
 SLOT="nt"
 KEYWORDS="~amd64"
 
-IUSE="bwrap"
+IUSE="+bwrap split-usr"
 RDEPEND="
 	x11-libs/gtk+:3
 	x11-libs/libnotify
@@ -41,6 +41,9 @@ src_install() {
 	fperms +x /opt/QQ/{qq,chrome_crashpad_handler,chrome-sandbox,libEGL.so,libffmpeg.so,libGLESv2.so,libvk_swiftshader.so,libvulkan.so.1}
 	printf "#!/bin/bash\ncd /opt/QQ\n./qq \$@\n" > qq || die
 	if use bwrap ;then
+		if use split-usr ;then
+			sed -i 's!usr/!/!' "${FILESDIR}"/start.sh || die
+		fi
 		sed -i 's!./qq!/opt/QQ/start.sh!' qq || die
 	fi
 	dobin qq

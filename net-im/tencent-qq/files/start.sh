@@ -1,4 +1,5 @@
 #!/bin/bash
+# From https://aur.archlinux.org/packages/linuxqq-nt-bwrap
 
 USER_RUN_DIR="/run/user/$(id -u)"
 CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}"
