@@ -42,6 +42,7 @@ src_install() {
 	printf "#!/bin/bash\ncd /opt/QQ\n./qq \$@\n" > qq || die
 	if use bwrap ;then
 		if use split-usr ;then
+			sed -i 's!symlink!ro-bind!' "${FILESDIR}"/start.sh || die
 			sed -i 's!usr/!/!' "${FILESDIR}"/start.sh || die
 		fi
 		sed -i 's!./qq!/opt/QQ/start.sh!' qq || die
