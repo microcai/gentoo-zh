@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst postrm preinst prepare unpack
+DESCRIPTION=YouTube Music Desktop App bundled with custom plugins
+EAPI=8
+HOMEPAGE=https://th-ch.github.io/youtube-music/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=unpacker desktop xdg
+KEYWORDS=-* ~amd64
+LICENSE=MIT
+RDEPEND=app-accessibility/at-spi2-core:2 app-crypt/libsecret dev-libs/nss x11-misc/xdg-utils x11-libs/gtk+:3 x11-libs/libnotify x11-libs/libXtst
+RESTRICT=mirror strip
+SLOT=0
+SRC_URI=https://github.com/th-ch/youtube-music/releases/download/v1.18.0/youtube-music_1.18.0_amd64.deb
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	bc57272a0491765c71d973c8cfd35063	desktop	7eb20ad915a0a318176d51bc2508ff5c	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
+_md5_=f3be852e4b10ca152e1ebbfe415df835
