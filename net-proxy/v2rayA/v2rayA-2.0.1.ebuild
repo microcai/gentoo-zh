@@ -24,13 +24,7 @@ KEYWORDS="~amd64"
 IUSE=""
 RESTRICT="mirror"
 
-# openssl-legacy-provider
-DEPEND="
-	|| (
-		dev-libs/openssl:0/1.1
-		dev-libs/openssl-compat:1.1.1
-	)
-"
+DEPEND=""
 RDEPEND="
 	${DEPEND}
 	|| (
@@ -59,6 +53,7 @@ src_unpack() {
 
 src_compile() {
 	cd "${S}/gui" || die
+	#Fix node build error: https://github.com/webpack/webpack/issues/14532#issuecomment-947012063
 	export NODE_OPTIONS=--openssl-legacy-provider
 	OUTPUT_DIR="${S}/service/server/router/web" yarn build || die "yarn build failed"
 
