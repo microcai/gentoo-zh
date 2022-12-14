@@ -24,7 +24,13 @@ KEYWORDS="~amd64"
 IUSE=""
 RESTRICT="mirror"
 
-DEPEND=""
+# openssl-legacy-provider
+DEPEND="
+	|| (
+		dev-libs/openssl:0/1.1
+		dev-libs/openssl-compat:1.1.1
+	)
+"
 RDEPEND="
 	${DEPEND}
 	|| (
@@ -53,6 +59,7 @@ src_unpack() {
 
 src_compile() {
 	cd "${S}/gui" || die
+	export NODE_OPTIONS=--openssl-legacy-provider
 	OUTPUT_DIR="${S}/service/server/router/web" yarn build || die "yarn build failed"
 
 	for file in $(find "${S}/service/server/router/web" |grep -v png |grep -v index.html|grep -v .gz)
@@ -63,7 +70,7 @@ src_compile() {
 	done
 
 	cd "${S}/service" || die
-	ego build -mod vendor -ldflags "-X github.com/v2rayA/v2rayA/conf.Version='${PV}' -s -w" -o v2raya
+	ego build -mod vendor -ldflags "-X github.com/v2rayA/v2rayA/conf.Version=${PV} -s -w" -o v2raya
 }
 
 src_install() {
