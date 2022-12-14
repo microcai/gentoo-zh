@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
 SLOT=0
 SRC_URI=https://github.com/rime/rime-prelude/archive/4001edf96791bbb5663573ba79ba4b1e9c0b8626.tar.gz -> rime-prelude-20220122.tar.gz
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	bc57272a0491765c71d973c8cfd35063
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	f03f9c0c03643e8057ad762b297ce01e
 _md5_=58b2238351dd89b81537665aee2ecb67

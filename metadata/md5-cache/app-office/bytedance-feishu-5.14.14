@@ -11,5 +11,5 @@ RDEPEND=dev-libs/nss dev-util/desktop-file-utils media-libs/alsa-lib net-print/c
 REQUIRED_USE=mips? ( !big-endian )
 SLOT=0
 SRC_URI=amd64? ( https://sf3-cn.feishucdn.com/obj/ee-appcenter/2844ab12b34f/Feishu-linux_x64-5.14.14.deb ) arm64? ( https://sf3-cn.feishucdn.com/obj/ee-appcenter/2844ab12b34f/Feishu-linux_arm64-5.14.14.deb ) mips? ( https://sf3-cn.feishucdn.com/obj/ee-appcenter/2844ab12b34f/Feishu-linux_mips64el-5.14.14.deb )
-_eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	bc57272a0491765c71d973c8cfd35063	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	f03f9c0c03643e8057ad762b297ce01e	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
 _md5_=6c724113567f60c7b971dca36b337630
