@@ -1,6 +1,5 @@
 BDEPEND=>=dev-lang/go-1.18:= >=net-libs/nodejs-14.17.5-r1 sys-apps/yarn virtual/pkgconfig >=dev-lang/go-1.18 app-arch/unzip
 DEFINED_PHASES=compile install postinst postrm preinst prepare unpack
-DEPEND=|| ( dev-libs/openssl:0/1.1 dev-libs/openssl-compat:1.1.1 )
 DESCRIPTION=web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 EAPI=8
 HOMEPAGE=https://v2raya.org/
@@ -9,10 +8,10 @@ INHERIT=systemd go-module desktop xdg
 IUSE=+v2ray xray systemd
 KEYWORDS=~amd64
 LICENSE=AGPL-3
-RDEPEND=|| ( dev-libs/openssl:0/1.1 dev-libs/openssl-compat:1.1.1 ) v2ray? ( || ( <net-proxy/v2ray-5 <net-proxy/v2ray-bin-5 ) ) xray? ( >=net-proxy/Xray-1.4.3 )
+RDEPEND=v2ray? ( || ( <net-proxy/v2ray-5 <net-proxy/v2ray-bin-5 ) ) xray? ( >=net-proxy/Xray-1.4.3 )
 REQUIRED_USE=|| ( v2ray xray )
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/v2rayA/v2rayA/archive/refs/tags/v1.5.9.1698.1.tar.gz -> v2rayA-1.5.9.1698.1.tar.gz https://github.com/liuyujielol/vendors/releases/download/v2rayA/v2rayA-1.5.9.1698.1-yarn_mirror.tar.gz https://github.com/liuyujielol/vendors/releases/download/v2rayA/v2rayA-1.5.9.1698.1-go-deps.tar.gz
 _eclasses_=toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	systemd	5f4bb0758df2e483babf68cd517078ca	go-module	4c4b34f361efda91762ffeda8f632c02	desktop	7eb20ad915a0a318176d51bc2508ff5c	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
-_md5_=db92d463b4e8d2b484be463bc6b96fec
+_md5_=7199b2d557d43a4cc497a2b9c1e2318f
