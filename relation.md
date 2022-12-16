@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-12-16 15:54:20 CST)
+(The last generation time: 2022-12-16 23:48:00 CST)
 
 ### Packages
 
@@ -117,8 +117,8 @@
  app-office/freeoffice                        | 1054                                      |        | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite.
                                               | 1058                                      |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-office/wps-office                        | 11.1.0.10976                              |        | http://www.wps.cn/product/wpslinux/                                                     | WPS Office is an office productivity suite, Here is the Chinese version
-                                              | 11.1.0.11664                              |        |                                                                                         |
+ app-office/wps-office                        | 11.1.0.10976-r1                           |        | http://www.wps.cn/product/wpslinux/                                                     | WPS Office is an office productivity suite, Here is the Chinese version
+                                              | 11.1.0.11664-r1                           |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-pda/ipadcharge                           | 9999                                      |        | https://github.com/mkorenkov/ipad_charge                                                | Enables USB charging for Apple devices.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
