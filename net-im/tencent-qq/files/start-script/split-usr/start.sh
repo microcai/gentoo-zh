@@ -8,12 +8,12 @@ QQ_APP_DIR="${CONFIG_DIR}/QQ"
 DOWNLOAD_DIR="$(xdg-user-dir DOWNLOAD)"
 if [ "$DOWNLOAD_DIR" == "$HOME" ]; then DOWNLOAD_DIR="$HOME/Downloads"; fi
 
-cd /opt/QQ || die
+cd /opt/QQ || exit 1
 
 bwrap --new-session --die-with-parent --cap-drop ALL --unshare-user-try --unshare-pid --unshare-cgroup-try \
-	--symlink usr/lib /lib \
-	--symlink usr/lib64 /lib64 \
-	--symlink usr/bin /bin \
+	--ro-bind /lib /lib \
+	--ro-bind /lib64 /lib64 \
+	--ro-bind /bin /bin \
 	--ro-bind /usr /usr \
 	--ro-bind /opt/QQ /opt/QQ \
 	--ro-bind /etc/ld.so.cache /etc/ld.so.cache \
