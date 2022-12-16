@@ -46,7 +46,7 @@ RDEPEND="
 	media-libs/libogg
 	media-libs/libsndfile
 	media-libs/libvorbis
-	<media-libs/tiff-4.5.0
+	media-libs/tiff-compat:4
 	media-sound/pulseaudio
 	net-libs/libasyncns
 	net-print/cups
