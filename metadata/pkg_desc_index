@@ -54,7 +54,7 @@ app-misc/yq-bin 4.28.2: yq is a portable command-line YAML, JSON and XML process
 app-mobilephone/scrcpy 1.23 1.24: Display and control your Android device
 app-office/bytedance-feishu 4.11.6.2 5.9.18 5.14.14: feishu - ByteDance's enterprise collaboration platform
 app-office/freeoffice 1054 1058: A complete, free Microsoft Office-compatible alternative office suite.
-app-office/wps-office 11.1.0.10976 11.1.0.11664: WPS Office is an office productivity suite, Here is the Chinese version
+app-office/wps-office 11.1.0.10976-r1 11.1.0.11664-r1: WPS Office is an office productivity suite, Here is the Chinese version
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-shells/gitstatus 1.5.4: Git status for Bash and Zsh prompt
 app-shells/zsh-theme-powerlevel10k 1.16.1: Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
@@ -123,7 +123,7 @@ media-gfx/scangearmp 1.60 2.4.10: Driver and utility package for Canon scanners
 media-gfx/tifig-bin 0.2.2: Converts iOS 11 HEIC images to practical formats - Static binary
 media-gfx/unityhub 3.3.0: The official unity tool for manager Unity Engines and projects
 media-gfx/xrectsel 0.3.1: print the geometry of a rectangular screen region
-media-gfx/zw3d 2022.0.3.1: CAD/CAM software for 3D design and processing
+media-gfx/zw3d 2022.0.3.1-r1: CAD/CAM software for 3D design and processing
 media-gfx/zwcad 2022.22.2.2.3 2023.23.0.3.4: CAD software for 2D drawing, reviewing and printing work
 media-libs/libjpeg8 2.1.4: MMX, SSE, and SSE2 SIMD accelerated JPEG library
 media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simplifies the drawing of beautiful curves.
@@ -155,7 +155,7 @@ net-im/telegram-desktop 4.3.4-r1: Official desktop client for Telegram
 net-im/telegram-purple 1.4.7-r1 9999: Libpurple (Pidgin) plugin for using a Telegram account
 net-im/tencent-qq 2.0.0_beta2_p1089 2.0.1_beta1_p429 2.0.1_beta1_p453: The new version of the official linux-qq
 net-im/weixin-uos 2.1.5: UOS weixin
-net-im/wemeet 2.8.0.3-r1 3.8.0.2-r1 3.9.0.1 3.11.0.402: Wemeet - Tencent Video Conferencing
+net-im/wemeet 3.12.0.400: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq
 net-misc/avsocks 9999: 科学操长城软件
 net-misc/baidunetdisk 4.3.0 4.14.5: Baidu Net Disk is a cloud storage client (Linux Version)
