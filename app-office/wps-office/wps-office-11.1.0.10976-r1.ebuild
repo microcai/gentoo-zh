@@ -30,43 +30,43 @@ REQUIRED_USE="mips? ( !big-endian )"
 # ldd /opt/kingsoft/wps-office/office6/wps
 # ldd /opt/kingsoft/wps-office/office6/wpp
 RDEPEND="
+	app-arch/bzip2:0
+	app-arch/lz4
+	app-arch/xz-utils
+	dev-libs/expat
+	dev-libs/glib:2
+	dev-libs/libbsd
+	dev-libs/libffi
+	dev-libs/libgcrypt:0
+	dev-libs/libgpg-error
+	dev-libs/libpcre:3
+	media-libs/flac
+	media-libs/fontconfig:1.0
+	media-libs/freetype:2
+	media-libs/libogg
+	media-libs/libsndfile
+	media-libs/libvorbis
+	<media-libs/tiff-4.5.0
+	media-sound/pulseaudio
+	net-libs/libasyncns
+	net-print/cups
+	sys-apps/attr
+	sys-apps/dbus
+	sys-apps/tcp-wrappers
+	sys-apps/util-linux
+	sys-libs/libcap
+	sys-libs/zlib:0
+	virtual/glu
+	x11-libs/gtk+:2
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11
+	x11-libs/libXau
+	x11-libs/libxcb
+	x11-libs/libXdmcp
 	x11-libs/libXext
 	x11-libs/libXrender
-	x11-libs/libxcb
-	media-libs/fontconfig:1.0
-	media-libs/freetype:2
-	dev-libs/glib:2
-	sys-libs/zlib:0
-	net-print/cups
-	virtual/glu
-
-	dev-libs/libpcre:3
-	dev-libs/libffi
-	media-sound/pulseaudio
-	app-arch/bzip2:0
-	dev-libs/expat
-	sys-apps/util-linux
-	dev-libs/libbsd
-	x11-libs/libXau
-	x11-libs/libXdmcp
-	x11-libs/gtk+:2
-	sys-apps/dbus
 	x11-libs/libXtst
-	sys-apps/tcp-wrappers
-	media-libs/libsndfile
-	net-libs/libasyncns
-	dev-libs/libgcrypt:0
-	app-arch/xz-utils
-	app-arch/lz4
-	sys-libs/libcap
-	media-libs/flac
-	media-libs/libogg
-	media-libs/libvorbis
-	dev-libs/libgpg-error
-	sys-apps/attr
 "
 DEPEND=""
 BDEPEND=""
