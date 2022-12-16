@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-12-16 23:48:00 CST)
+(The last generation time: 2022-12-16 23:52:42 CST)
 
 ### Packages
 
@@ -239,7 +239,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/xrectsel                           | 0.3.1                                     |        | https://github.com/lolilolicon/xrectsel                                                 | print the geometry of a rectangular screen region
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-gfx/zw3d                               | 2022.0.3.1                                |        | https://www.zwsoft.cn/product/zw3d/linux                                                | CAD/CAM software for 3D design and processing
+ media-gfx/zw3d                               | 2022.0.3.1-r1                             |        | https://www.zwsoft.cn/product/zw3d/linux                                                | CAD/CAM software for 3D design and processing
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/zwcad                              | 2022.22.2.2.3                             |        | https://www.zwsoft.cn/product/zwcad/linux                                               | CAD software for 2D drawing, reviewing and printing work
                                               | 2023.23.0.3.4                             |        |                                                                                         |
