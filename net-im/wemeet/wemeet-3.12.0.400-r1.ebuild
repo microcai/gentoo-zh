@@ -47,7 +47,7 @@ src_install() {
 	# To fix bug, remove unused lib, use system lib instead
 	mv opt/${PN}/lib opt/${PN}/lib.orig || die
 	mkdir opt/${PN}/lib || die
-	cp -rf opt/${PN}/lib.orig/lib{ImSDK,desktop_common,nxui*,qt_*,ui*,wemeet*,xcast,xcast_codec,xnn*}.so opt/${PN}/lib/ || die
+	cp -rf opt/${PN}/lib.orig/lib{bugly,crbase,desktop_common,ImSDK,nxui*,qt_*,service*,tms_*,ui*,wemeet*,xcast*,xnn*}.so opt/${PN}/lib/ || die
 	rm -r opt/${PN}/lib.orig || die
 	# Fix RPATHs to ensure the libraries can be found
 	for f in $(find "opt/${PN}/bin" "opt/${PN}/plugins") ; do
