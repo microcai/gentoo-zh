@@ -109,7 +109,7 @@ media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cw
 media-fonts/iansui 0.943: An open-source Chinese font derived from Klee One (Fontworks).
 media-fonts/jf-openhuninn 1.1: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 media-fonts/nerd-fonts 2.2.2: Nerd Fonts is a project that patches developer targeted fonts with glyphs
-media-fonts/sarasa-gothic 0.37.4: A CJK programming font based on Iosevka and Source Han Sans.
+media-fonts/sarasa-gothic 0.38.0: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 media-fonts/sarasa-mono-sc-nerd 2.1.0: Sarasa Mono SC font patched with Nerd fonts
 media-fonts/smiley-sans 1.0.0: An open-source font for Chinese.
 media-fonts/taipei-sans-tc 1.0: JT Foundry - Taipei Sans TC Beta font

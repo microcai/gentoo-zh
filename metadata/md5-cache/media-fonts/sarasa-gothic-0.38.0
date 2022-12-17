@@ -1,14 +1,14 @@
 BDEPEND=app-arch/p7zip X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
-DEFINED_PHASES=configure install postinst postrm setup unpack
-DESCRIPTION=A CJK programming font based on Iosevka and Source Han Sans.
-EAPI=7
+DEFINED_PHASES=install postinst postrm setup unpack
+DESCRIPTION=A CJK programming font based on Iosevka and Source Han Sans. (TTC)
+EAPI=8
 HOMEPAGE=https://github.com/be5invis/Sarasa-Gothic
 INHERIT=font unpacker
-IUSE=classical +l10n_zh l10n_ja l10n_ko X
+IUSE=X
 KEYWORDS=~amd64 ~x86
 LICENSE=OFL-1.1
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.37.4/sarasa-gothic-ttf-0.37.4.7z
+SRC_URI=https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.38.0/sarasa-gothic-ttc-0.38.0.7z
 _eclasses_=font	5e03cb70902daa9ff8967c61130f0f60	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	f03f9c0c03643e8057ad762b297ce01e
-_md5_=6e2dff66e70bafa9d253145e41bbfad6
+_md5_=b2e6a33223398167ecefd8d6dfb013a0
