@@ -53,8 +53,8 @@ src_unpack() {
 
 src_compile() {
 	cd "${S}/gui" || die
-	#Fix node build error: https://github.com/webpack/webpack/issues/14532#issuecomment-947012063
-	export NODE_OPTIONS=--openssl-legacy-provider
+	## Fix node build error: https://github.com/webpack/webpack/issues/14532#issuecomment-947012063
+	# export NODE_OPTIONS=--openssl-legacy-provider
 	OUTPUT_DIR="${S}/service/server/router/web" yarn build || die "yarn build failed"
 
 	for file in $(find "${S}/service/server/router/web" |grep -v png |grep -v index.html|grep -v .gz)
