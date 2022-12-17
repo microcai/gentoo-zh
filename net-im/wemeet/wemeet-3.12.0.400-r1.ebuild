@@ -32,6 +32,8 @@ DEPEND="
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5
+	dev-qt/qtwebsockets:5
+	dev-qt/qtwebview:5
 	media-libs/tiff-compat:4
 	media-sound/pulseaudio
 	x11-libs/libXinerama
