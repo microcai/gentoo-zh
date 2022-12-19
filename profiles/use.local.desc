@@ -78,6 +78,8 @@ mail-client/thunderbird:system-libevent - Use the system-wide dev-libs/libevent 
 mail-client/thunderbird:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled.
 mail-client/thunderbird:system-png - Use the system-wide media-libs/libpng instead of bundled (requires APNG patches)
 mail-client/thunderbird:system-webp - Use the system-wide media-libs/libwebp instead of bundled.
+media-fonts/Plangothic:allideo - use HanaMin to display unincluded fonts
+media-fonts/Plangothic:fallback - do not display unincluded fonts
 media-fonts/nerd-fonts:3270 - Install Nerd-fonts-patched 3270 fonts
 media-fonts/nerd-fonts:agave - Install Nerd-fonts-patched Agave fonts
 media-fonts/nerd-fonts:anonymouspro - Install Nerd-fonts-patched Anonymous Pro fonts
