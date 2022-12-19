@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>ston</name>
+		<email>ston.jia@qq.com</email>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">Fitzgerald-Porthmouth-Koenigsegg/Plangothic</remote-id>
+	</upstream>
+	<use>
+		<flag name="allideo">use HanaMin to display unincluded fonts</flag>
+		<flag name="fallback">do not display unincluded fonts</flag>
+	</use>
+</pkgmetadata>
