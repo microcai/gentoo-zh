@@ -8,4 +8,7 @@
 	<use>
 		<flag name="clang">Use sys-devel/clang</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">anhoder/go-musicfox</remote-id>
+	</upstream>
 </pkgmetadata>
