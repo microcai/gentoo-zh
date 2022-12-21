@@ -9,4 +9,7 @@
 		<flag name="v2ray">Use net-proxy/v2ray as default</flag>
 		<flag name="xray">To be able to use net-proxy/Xray. Disable the v2ray useflag to use xray as default</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">v2rayA/v2rayA</remote-id>
+	</upstream>
 </pkgmetadata>
