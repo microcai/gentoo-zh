@@ -107,12 +107,6 @@ source = "github"
 github = "fcitx/fcitx5-hangul"
 use_latest_tag = true
 
-["app-i18n/fcitx-kkc"]
-source = "github"
-github = "fcitx/fcitx5-kkc"
-use_latest_tag = true
-github_account = "liuyujielol"
-
 # virtual package
 #["app-i18n/fcitx-meta"]
 
