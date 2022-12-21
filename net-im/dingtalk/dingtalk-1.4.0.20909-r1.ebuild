@@ -22,7 +22,7 @@ RESTRICT="strip mirror bindist"
 RDEPEND="
 	dev-libs/libthai
 	dev-qt/qtgui
-	|| ( <media-libs/tiff-4.5.0 media-libs/tiff-compat:4 )
+	|| ( media-libs/tiff:0/0 media-libs/tiff-compat:4 )
 	media-sound/pulseaudio
 	media-video/rtmpdump
 	net-misc/curl
