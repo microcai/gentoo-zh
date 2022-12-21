@@ -1,0 +1,16 @@
+BDEPEND=dev-util/bbe dev-util/patchelf
+DEFINED_PHASES=install postinst postrm preinst unpack
+DEPEND=app-arch/bzip2 app-arch/xz-utils app-text/djvu dev-db/sqlite:3 dev-libs/glib:2 dev-libs/libpcre dev-libs/libxml2 dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtprintsupport:5 dev-qt/qtsvg:5 media-fonts/noto-cjk media-gfx/imagemagick media-libs/jbigkit media-libs/libglvnd media-libs/libpng media-libs/opencollada || ( <media-libs/tiff-4.5.0 media-libs/tiff-compat:4 ) net-libs/zeromq sys-libs/zlib x11-libs/cairo x11-libs/gdk-pixbuf:2 x11-libs/gtk+:3 x11-libs/libX11 x11-libs/libxcb x11-libs/libXcomposite x11-libs/libXext x11-libs/libxkbcommon x11-libs/libXmu x11-libs/libXrender x11-libs/libXt x11-libs/pango
+DESCRIPTION=CAD/CAM software for 3D design and processing
+EAPI=8
+HOMEPAGE=https://www.zwsoft.cn/product/zw3d/linux
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=unpacker xdg
+KEYWORDS=-* ~amd64
+LICENSE=all-rights-reserved
+RDEPEND=app-arch/bzip2 app-arch/xz-utils app-text/djvu dev-db/sqlite:3 dev-libs/glib:2 dev-libs/libpcre dev-libs/libxml2 dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtprintsupport:5 dev-qt/qtsvg:5 media-fonts/noto-cjk media-gfx/imagemagick media-libs/jbigkit media-libs/libglvnd media-libs/libpng media-libs/opencollada || ( <media-libs/tiff-4.5.0 media-libs/tiff-compat:4 ) net-libs/zeromq sys-libs/zlib x11-libs/cairo x11-libs/gdk-pixbuf:2 x11-libs/gtk+:3 x11-libs/libX11 x11-libs/libxcb x11-libs/libXcomposite x11-libs/libXext x11-libs/libxkbcommon x11-libs/libXmu x11-libs/libXrender x11-libs/libXt x11-libs/pango
+RESTRICT=strip mirror bindist
+SLOT=0
+SRC_URI=https://home-store-packages.uniontech.com/appstore/pool/appstore/c/com.zwsoft.zw3dprofessional/com.zwsoft.zw3dprofessional_2022.0.3.1_amd64.deb -> zw3d-2022.0.3.1.deb
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	f03f9c0c03643e8057ad762b297ce01e	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
+_md5_=da5e859042690d291e044d67172dbae0

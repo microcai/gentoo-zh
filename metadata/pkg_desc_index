@@ -123,8 +123,8 @@ media-gfx/scangearmp 1.60 2.4.10: Driver and utility package for Canon scanners
 media-gfx/tifig-bin 0.2.2: Converts iOS 11 HEIC images to practical formats - Static binary
 media-gfx/unityhub 3.3.0: The official unity tool for manager Unity Engines and projects
 media-gfx/xrectsel 0.3.1: print the geometry of a rectangular screen region
-media-gfx/zw3d 2022.0.3.1-r1: CAD/CAM software for 3D design and processing
-media-gfx/zwcad 2022.22.2.2.3 2023.23.0.3.4: CAD software for 2D drawing, reviewing and printing work
+media-gfx/zw3d 2022.0.3.1-r2: CAD/CAM software for 3D design and processing
+media-gfx/zwcad 2023.23.0.3.4-r1: CAD software for 2D drawing, reviewing and printing work
 media-libs/libjpeg8 2.1.4: MMX, SSE, and SSE2 SIMD accelerated JPEG library
 media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simplifies the drawing of beautiful curves.
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
@@ -150,7 +150,7 @@ net-dns/mosdns-cn-bin 1.4.0: A DNS forwarder
 net-dns/phddns 2.0.6.32828: Phddns
 net-im/deepin-wine-qq 9.5.2.27897: Tencent QQ on Deepin Wine(com.qq.im.deepin) For Gentoo
 net-im/deepin-wine-wechat 3.4.5.45: Tencent WeChat on Deepin Wine(com.qq.weixin.deepin) For Gentoo
-net-im/dingtalk 1.4.0.20909: Communication platform that supports video and audio conferencing
+net-im/dingtalk 1.4.0.20909 1.4.0.20909-r1: Communication platform that supports video and audio conferencing
 net-im/telegram-desktop 4.3.4-r1: Official desktop client for Telegram
 net-im/telegram-purple 1.4.7-r1 9999: Libpurple (Pidgin) plugin for using a Telegram account
 net-im/tencent-qq 2.0.0_beta2_p1089 2.0.1_beta1_p429 2.0.1_beta1_p453: The new version of the official linux-qq
