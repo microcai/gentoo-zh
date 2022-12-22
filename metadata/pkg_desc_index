@@ -139,7 +139,6 @@ media-sound/netease-cloud-music-gtk 1.2.2 2.1.0 2.2.0: netease cloud music playe
 media-sound/termusic 0.7.5 0.7.6: Terminal Music Player written in Rust.
 media-sound/yesplaymusic-bin 0.4.4-r1 0.4.5: A third party music player for Netease Music
 media-sound/youtube-music-bin 1.18.0: YouTube Music Desktop App bundled with custom plugins
-media-video/Revda 5.1.1: Cute and useful Live Stream Player with danmaku support
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/mpv-handler 0.3.0: A protocol handler for mpv, written by Rust.
 media-video/tenvideo 1.0.10: Tencent videos
