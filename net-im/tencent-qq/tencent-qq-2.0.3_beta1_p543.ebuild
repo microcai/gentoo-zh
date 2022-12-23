@@ -13,11 +13,12 @@ LICENSE="Tencent"
 RESTRICT="strip"
 
 SRC_URI="
-	arm64? ( https://dldir1.qq.com/qqfile/qq/QQNT/0186a650/QQ-v${MY_PV}_arm64.deb )
+	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/50eed662/QQ-v${MY_PV}_x64.deb )
+	arm64? (  https://dldir1.qq.com/qqfile/qq/QQNT/50eed662/QQ-v${MY_PV}_arm64.deb )
 "
 
 SLOT="nt"
-KEYWORDS="-* ~arm64"
+KEYWORDS="-* ~amd64 ~arm64"
 
 IUSE="+bwrap split-usr"
 RDEPEND="
@@ -39,15 +40,15 @@ src_install() {
 	doins -r opt/*
 
 	fperms +x /opt/QQ/{qq,chrome_crashpad_handler,chrome-sandbox,libEGL.so,libffmpeg.so,libGLESv2.so,libvk_swiftshader.so,libvulkan.so.1}
-	printf "#!/bin/bash\ncd /opt/QQ\n./qq \$@\n" > qq || die
-	if use bwrap ;then
+	printf "#!/bin/bash\ncd /opt/QQ\n./qq \$@\n" >qq || die
+	if use bwrap; then
 		sed -i 's!./qq!/opt/QQ/start.sh!' qq || die
 	fi
 	dobin qq
 
-	if use bwrap ;then
+	if use bwrap; then
 		exeinto /opt/QQ
-		if use split-usr ;then
+		if use split-usr; then
 			doexe "${FILESDIR}"/start-script/split-usr/start.sh
 		else
 			doexe "${FILESDIR}"/start-script/merge-usr/start.sh
