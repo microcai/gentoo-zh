@@ -1,0 +1,25 @@
+From 2964c74af8cb6ec392b58e763236a8966ae3aaaf Mon Sep 17 00:00:00 2001
+From: Andrew Udvare <audvare@gmail.com>
+Date: Thu, 27 Jan 2022 17:56:21 -0500
+Subject: [PATCH 2/2] Set unique name
+
+---
+ meson.build | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/meson.build b/meson.build
+index e31c36b..132b345 100644
+--- a/meson.build
++++ b/meson.build
+@@ -24,7 +24,7 @@ if get_option('av1')
+ endif
+ 
+ shared_library(
+-    'nvidia_drv_video',
++    'nvdec_drv_video',
+     name_prefix: '',
+     sources: [
+         'src/av1.c',
+-- 
+2.35.0
+

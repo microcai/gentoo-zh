@@ -1,0 +1,25 @@
+From e0831828a438003f8a86b5d2b4026c1cb8f48efe Mon Sep 17 00:00:00 2001
+From: Andrew Udvare <audvare@gmail.com>
+Date: Tue, 25 Jan 2022 23:19:21 -0500
+Subject: [PATCH] Set correct install path
+
+---
+ meson.build | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/meson.build b/meson.build
+index 9d9fc84..e31c36b 100644
+--- a/meson.build
++++ b/meson.build
+@@ -47,7 +47,7 @@ shared_library(
+         dl_dep,
+     ],
+     install: true,
+-    install_dir: get_option('libdir') / 'dri',
++    install_dir: get_option('libdir') / 'va' / 'drivers',
+     gnu_symbol_visibility: 'hidden',
+ )
+ 
+-- 
+2.35.0
+
