@@ -130,7 +130,7 @@ media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simpl
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.10-r1 0.5.11 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-sound/feeluown 3.8.7: A user-friendly and hackable music player
-media-sound/go-musicfox 3.5.3: Command-line Netease Cloud Music written in Go
+media-sound/go-musicfox 3.5.4: Command-line Netease Cloud Music written in Go
 media-sound/linnya 2.2.0: A free music player
 media-sound/listen1_desktop-bin 2.27.0: one for all free music in China
 media-sound/lx-music-desktop-bin 1.21.0: 一个基于 electron 的音乐软件
@@ -152,7 +152,7 @@ net-im/deepin-wine-wechat 3.4.5.45: Tencent WeChat on Deepin Wine(com.qq.weixin.
 net-im/dingtalk 1.4.0.20909 1.4.0.20909-r1: Communication platform that supports video and audio conferencing
 net-im/telegram-desktop 4.4.1-r1: Official desktop client for Telegram
 net-im/telegram-purple 1.4.7-r1 9999: Libpurple (Pidgin) plugin for using a Telegram account
-net-im/tencent-qq 2.0.0_beta2_p1089 2.0.1_beta1_p429 2.0.1_beta1_p453: The new version of the official linux-qq
+net-im/tencent-qq 2.0.0_beta2_p1089 2.0.3_beta1_p543: The new version of the official linux-qq
 net-im/weixin-uos 2.1.5: UOS weixin
 net-im/wemeet 3.12.0.400-r1: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq
