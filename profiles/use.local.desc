@@ -45,8 +45,6 @@ app-i18n/mozc:ibus - Enable support for app-i18n/ibus
 app-i18n/mozc:renderer - Enable native candidate window
 app-i18n/zh-autoconvert:static-libs - Build static versions of dynamic libraries as well
 app-misc/gpick:gtk3 - use GTK3 instead of GTK2
-app-text/ydcv-rs:clipboard - Enable feature: use selected text as input
-app-text/ydcv-rs:notify - Enable feature: display explanations via desktop notification
 dev-cpp/cppcoro:shared - Build shared library instead of static library.
 dev-cpp/tgbot-cpp:shared - Build shared library instead of static library.
 dev-db/mongodb:experimental-optimization - Enable experimental optimizations, exclude sandybridge.
