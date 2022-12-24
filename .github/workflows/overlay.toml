@@ -696,6 +696,13 @@ source = "regex"
 url = "https://v.qq.com/download.html#Linux"
 regex = "Tenvideo_universal_([\\d.]+)_amd64.deb"
 
+["media-video/go-musicfox"]
+source = "github"
+github = "anhoder/go-musicfox"
+use_latest_release = true
+prefix = "v"
+github_account = "st0nie"
+
 # TODO
 #["net-dialup/mentohust"]
 
