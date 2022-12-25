@@ -1,0 +1,16 @@
+BDEPEND=dev-python/hatch-fancy-pypi-readme[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/hatch-vcs[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] test? ( dev-python/pretend[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/freezegun[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) test? ( >=dev-python/pytest-7.1.3[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) python_targets_pypy3? ( >=dev-python/pypy3-7.3.10-r1:0= ) python_targets_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.9:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.1:3.11 ) >=dev-python/gpep517-9[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] >=dev-python/hatchling-1.11.1[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?]
+DEFINED_PHASES=compile configure install prepare test
+DESCRIPTION=Structured Logging for Python
+EAPI=8
+HOMEPAGE=http://www.structlog.org/en/stable/
+INHERIT=distutils-r1
+IUSE=test python_targets_pypy3 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11
+KEYWORDS=~amd64
+LICENSE=Apache-2.0 MIT
+RDEPEND=python_targets_pypy3? ( >=dev-python/pypy3-7.3.10-r1:0= ) python_targets_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.9:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.1:3.11 )
+REQUIRED_USE=|| ( python_targets_pypy3 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11 )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=mirror://pypi/s/structlog/structlog-22.3.0.tar.gz
+_eclasses_=multibuild	d26d81f242cb193d899a72bca423d0bd	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	8ed38f92fe095be374d6c4c8d4c0dda7	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	6a75203e8a499f0fb42971452ce15388	python-r1	2d51fd03931e743811ce30d198e4dcfd	distutils-r1	9c5f8e35fdc556c29573796aca3e87ea
+_md5_=7b0d2849ecc0443285638e6d14c8061e

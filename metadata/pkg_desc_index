@@ -21,7 +21,7 @@ app-emulation/deepin-wine6-stable 6.0.0.19-r1: Deepin wine6 stable
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
 app-i18n/fcitx 4.2.9.8 5.0.20 5.0.21 9999: Fcitx5 Next generation of fcitx
-app-i18n/fcitx-chewing 5.0.12: Chewing Wrapper for Fcitx.
+app-i18n/fcitx-chewing 5.0.13: Chewing Wrapper for Fcitx.
 app-i18n/fcitx-chinese-addons 5.0.15-r1 5.0.16 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
 app-i18n/fcitx-configtool 5.0.15 5.0.16 9999: Configuration module for Fcitx
 app-i18n/fcitx-gtk 5.0.20 5.0.21 9999: Gtk im module for fcitx5 and glib based dbus client library
@@ -30,7 +30,7 @@ app-i18n/fcitx-lua 5.0.7-r1 9999: Lua support for fcitx
 app-i18n/fcitx-meta 5.0.12-r2: Merge this to pull in Fcitx packages
 app-i18n/fcitx-qt 5.0.15-r1 5.0.16 9999: Qt library and IM module for fcitx5
 app-i18n/fcitx-rime 5.0.15 9999: Rime Support for Fcitx5
-app-i18n/fcitx-skk 5.0.13 9999: Japanese SKK input engine for Fcitx5
+app-i18n/fcitx-skk 5.0.14 9999: Japanese SKK input engine for Fcitx5
 app-i18n/fcitx-table-extra 5.0.11 5.0.12: Provides extra table for Fcitx, including Boshiamy, Zhengma, Cangjie, and Quick
 app-i18n/fcitx-table-other 5.0.10: Provides some other tables for Fcitx, fork from ibus-table-others, scim-tables
 app-i18n/ibus-rime 9999: Rime Input Method Engine for IBus Framework
@@ -87,7 +87,7 @@ dev-python/janus 1.0.0-r1: Implementation of the asyncio (PEP 3156) event-loop w
 dev-python/nvchecker 2.10: nvchecker is for checking if a new version of some software has been released
 dev-python/pycosat 0.6.3: Python bindings to picosat (a SAT solver)
 dev-python/qasync 0.23.0: Implementation of the asyncio (PEP 3156) event-loop with Qt
-dev-python/structlog 22.1.0: Structured Logging for Python
+dev-python/structlog 22.3.0: Structured Logging for Python
 dev-util/arch-install-scripts 24: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
 dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 files
 dev-util/elfembed 0.3-r1: Resource Compiler for ELF binaries
