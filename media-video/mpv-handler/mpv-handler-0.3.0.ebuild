@@ -40,6 +40,8 @@ KEYWORDS="~amd64"
 RESTRICT="strip"
 
 LICENSE="MIT"
+# Dependent crate licenses
+LICENSE+=" MIT Unicode-DFS-2016"
 SLOT="0"
 
 RDEPEND="

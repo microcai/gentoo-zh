@@ -3,6 +3,10 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<name>ston</name>
-		<email>2424284164@qq.com</email>
+		<email>ston.jia@qq.com</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">akiirui/mpv-handler</remote-id>
+	</upstream>
 </pkgmetadata>
+
