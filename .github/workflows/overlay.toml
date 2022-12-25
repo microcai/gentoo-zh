@@ -288,13 +288,6 @@ prefix = "v"
 # TODO
 #["app-text/xdvipdfmx"]
 
-["app-text/ydcv-rs"]
-source = "github"
-github = "farseerfc/ydcv-rs"
-use_latest_release = true
-prefix = "v"
-github_account = "bekcpear"
-
 ["app-vim/clang_complete"]
 source = "github"
 github = "xavierd/clang_complete"
@@ -699,6 +692,13 @@ regex = "Tenvideo_universal_([\\d.]+)_amd64.deb"
 ["media-video/go-musicfox"]
 source = "github"
 github = "anhoder/go-musicfox"
+use_latest_release = true
+prefix = "v"
+github_account = "st0nie"
+
+["media-video/mpv-handler"]
+source = "github"
+github = "akiirui/mpv-handler"
 use_latest_release = true
 prefix = "v"
 github_account = "st0nie"
