@@ -696,6 +696,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "st0nie"
 
+["media-video/mpv-handler"]
+source = "github"
+github = "akiirui/mpv-handler"
+use_latest_release = true
+prefix = "v"
+github_account = "st0nie"
+
 # TODO
 #["net-dialup/mentohust"]
 
