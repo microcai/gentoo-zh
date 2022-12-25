@@ -288,13 +288,6 @@ prefix = "v"
 # TODO
 #["app-text/xdvipdfmx"]
 
-["app-text/ydcv-rs"]
-source = "github"
-github = "farseerfc/ydcv-rs"
-use_latest_release = true
-prefix = "v"
-github_account = "bekcpear"
-
 ["app-vim/clang_complete"]
 source = "github"
 github = "xavierd/clang_complete"
