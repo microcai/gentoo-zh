@@ -146,6 +146,7 @@ media-sound/termusic:mpris - Enable dbus mpris support
 media-sound/termusic:mpv - Use media-video/mpv as decoding backend
 media-sound/termusic:symphonia - Use symphonia as decoding backend (default)
 media-sound/termusic:yt-dlp - Use net-misc/yt-dlp to provide the youtebe-dl feature
+net-dns/dnsmasq-china-list:dnscrypt-proxy - Install rules for dnscrypt-proxy
 net-dns/dnsmasq-china-list:dnsmasq - Install rules for dnsmasq
 net-dns/dnsmasq-china-list:smartdns - Install rules for smartdns
 net-im/telegram-desktop:enchant - Enable the app-text/aspell spell-checking backend
