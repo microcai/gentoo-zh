@@ -11,5 +11,5 @@ LICENSE=GPL-3
 RDEPEND=acct-user/n2n acct-group/n2n openssl? ( dev-libs/openssl )
 SLOT=0
 SRC_URI=https://github.com/ntop/n2n/archive/refs/tags/3.0.tar.gz -> n2n-3.0.tar.gz
-_eclasses_=toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	systemd	5f4bb0758df2e483babf68cd517078ca	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	8ed38f92fe095be374d6c4c8d4c0dda7	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	646b7a2a63596361551a6c1fabf28057
+_eclasses_=toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	systemd	5f4bb0758df2e483babf68cd517078ca	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	646b7a2a63596361551a6c1fabf28057
 _md5_=0b5b46fb15987b836ddf8a2e6657cd43
