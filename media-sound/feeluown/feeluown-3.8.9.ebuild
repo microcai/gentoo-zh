@@ -10,7 +10,7 @@ DESCRIPTION="A user-friendly and hackable music player"
 HOMEPAGE="https://github.com/feeluown/FeelUOwn"
 MY_P="${P/_alpha/a}"
 S="${WORKDIR}/FeelUOwn-${PV}"
-SRC_URI="https://github.com/feeluown/FeelUOwn/archive/refs/tags/v${PV}.tar.gz -> ${MY_P}.tar.gz"
+SRC_URI="https://github.com/${PN}/FeelUOwn/archive/refs/tags/v${PV}.tar.gz -> ${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
