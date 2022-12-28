@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2022-12-25 20:41:25 CST)
+(The last generation time: 2022-12-29 00:15:21 CST)
 
 ### Packages
 
@@ -246,10 +246,12 @@
  media-plugins/gimp-gap                       | 2.8.0                                     |        | http://www.gimp.org/                                                                    | Gimp Animation Package
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/feeluown                         | 3.8.7                                     |        | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
+                                              | 3.8.9                                     |        |                                                                                         |
    dev-python/fuo-kuwo                        | 0.1.5                                     |  D     | https://github.com/feeluown/feeluown-kuwo                                               | kuwo music support for feeluown
                                               | 0.1.6                                     |        |                                                                                         |
    dev-python/fuo-local                       | 0.3                                       |  D     | https://github.com/feeluown/feeluown-local                                              | local music support for feeluown
    dev-python/fuo-netease                     | 0.9.2                                     |  D     | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
+                                              | 0.9.3                                     |        |                                                                                         |
    dev-python/fuo-qqmusic                     | 0.4.1                                     |  D     | https://github.com/feeluown/feeluown-qqmusic                                            | qq music support for feeluown
    dev-python/janus                           | 1.0.0-r1                                  |  D, RD | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
    dev-python/qasync                          | 0.23.0                                    |  D, RD | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
