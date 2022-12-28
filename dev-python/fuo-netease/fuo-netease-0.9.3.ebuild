@@ -9,7 +9,7 @@ inherit distutils-r1
 DESCRIPTION="netease cloud music support for feeluown"
 HOMEPAGE="https://github.com/feeluown/feeluown-netease"
 MY_P="${P/-/_}"
-#S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/feeluown-netease-${PV}"
 SRC_URI="https://github.com/feeluown/feeluown-netease/archive/refs/tags/v${PV}.tar.gz -> ${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
