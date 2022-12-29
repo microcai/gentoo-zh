@@ -10,7 +10,7 @@ if [[ ${PV} == 9999* ]] ; then
 	EGIT_CHECKOUT_DIR=${PN}-${PV}
 else
 	SRC_URI="https://github.com/openSUSE/libsolv/archive/refs/tags/${PV}.tar.gz -> libsolv-${PV}.tar.gz"
-	KEYWORDS="~amd64 ~arm64 ~loong"
+	KEYWORDS="~amd64"
 	S="${WORKDIR}/${PN}-${PV}"
 fi
 
