@@ -206,7 +206,7 @@ sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbin
 sys-kernel/liquorix-sources 6.0.11 6.1.1: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 33: Modular initramfs image creation utility
 sys-kernel/xanmod-kernel 5.15.75 6.0.7: XanMod lts kernel built with Gentoo patches and cjktty
-sys-kernel/xanmod-rt 5.15.12 5.15.14: Xanmod-RT, cjktty, uksm patchset for main kernel tree
+sys-kernel/xanmod-rt 6.0.11: XanMod RT sources and CJKTTY options.
 sys-kernel/xanmod-sources 5.15.75 6.0.7: Full XanMod source, including the Gentoo patchset and other patch options.
 sys-kernel/zenpower 0.1.12-r1: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
