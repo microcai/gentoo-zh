@@ -10,5 +10,5 @@ RDEPEND=!sys-kernel/xanmod-sources !sys-kernel/xanmod-edge !build? ( app-arch/cp
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.0.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.0-1.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.0-1.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.0-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.0-1.extras.tar.xz https://github.com/xanmod/linux/releases/download//6.0.11-rt14-xanmod1/patch-6.0.11-rt14-xanmod1.xz https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v6.x//cjktty-6.0.patch
-_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	kernel-2	12182af015d36ae9e32427f5b34f3f69
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	kernel-2	12a98c718ba8260077000c13b965ba1b
 _md5_=69b629ff6b3349382b83649d37de8130
