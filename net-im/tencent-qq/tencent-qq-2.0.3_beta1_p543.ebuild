@@ -20,7 +20,7 @@ SRC_URI="
 SLOT="nt"
 KEYWORDS="-* ~amd64 ~arm64"
 
-IUSE="+bwrap split-usr"
+IUSE="bwrap split-usr"
 RDEPEND="
 	x11-libs/gtk+:3
 	x11-libs/libnotify
