@@ -2,6 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<upstream>
-		<remote-id type="github">HougeLangley/customkernel</remote-id>
+		<remote-id type="github">HougeLangley/hougeapps-overlay</remote-id>
 	</upstream>
+	<use>
+		<flag name="cjk">Eanble cjktty patches.</flag>
+	</use>
 </pkgmetadata>
