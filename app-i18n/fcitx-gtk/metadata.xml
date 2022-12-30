@@ -11,4 +11,7 @@
 		<flag name="snooper">Enable key snooper for gtk app</flag>
 		<flag name="onlyplugin">Build only plugin</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">fcitx/fcitx5-gtk</remote-id>
+	</upstream>
 </pkgmetadata>

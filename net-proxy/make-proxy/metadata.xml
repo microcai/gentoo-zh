@@ -9,4 +9,7 @@
 		<flag name='client'>Add make proxy client support</flag>
 		<flag name='server'>Add make proxy server support</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">yueyoum/make-proxy</remote-id>
+	</upstream>
 </pkgmetadata>

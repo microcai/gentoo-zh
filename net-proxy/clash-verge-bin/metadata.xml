@@ -11,4 +11,7 @@
 	<use>
 		<flag name="system-clash">Use net-proxy/clash instead of clash-premium</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">zzzgydi/clash-verge</remote-id>
+	</upstream>
 </pkgmetadata>

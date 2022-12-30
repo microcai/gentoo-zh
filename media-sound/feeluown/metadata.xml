@@ -11,4 +11,8 @@
 		<flag name='qqmusic'>add qq music support for feeluown</flag>
 		<flag name='webengine'>add support to login via web page</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">feeluown/FeelUOwn</remote-id>
+		<remote-id type="pypi">feeluown</remote-id>
+	</upstream>
 </pkgmetadata>

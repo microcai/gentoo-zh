@@ -8,4 +8,7 @@
 		<email>chn@chn.moe</email>
 		<name>Haonan Chen</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">v2fly/v2ray-core</remote-id>
+	</upstream>
 </pkgmetadata>

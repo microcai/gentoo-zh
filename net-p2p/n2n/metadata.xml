@@ -5,4 +5,7 @@
 	<use>
 		<flag name='openssl'>Use openssl support</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">ntop/n2n</remote-id>
+	</upstream>
 </pkgmetadata>

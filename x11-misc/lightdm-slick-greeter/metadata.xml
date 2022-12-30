@@ -6,5 +6,8 @@
 		<name>Jorge Pizarro Callejas</name>
 		<description>Jorgicio Gentoo Overlay</description>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">linuxmint/slick-greeter</remote-id>
+	</upstream>
 </pkgmetadata>
 

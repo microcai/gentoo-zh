@@ -8,4 +8,7 @@
 		<flag name='gnome'>add support for gnome</flag>
 		<flag name='indicator'>add support for appindicator</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">osdlyrics/osdlyrics</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -5,4 +5,7 @@
 		<name>ston</name>
 		<email>2424284164@qq.com</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">IrineSistiana/mosdns-cn</remote-id>
+	</upstream>
 </pkgmetadata>

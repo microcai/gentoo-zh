@@ -13,4 +13,7 @@
 		amount of network traffic) voice over the network. Text messages,
 		videos, pictures and text.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vufa/deepin-wine-wechat-arch</remote-id>
+	</upstream>
 </pkgmetadata>
