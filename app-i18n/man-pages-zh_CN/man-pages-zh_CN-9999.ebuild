@@ -24,36 +24,19 @@ DEPEND="
 	app-i18n/opencc
 "
 
-inherit autotools git-r3
-
-src_prepare() {
-	eapply_user
-	eautoreconf
-}
+inherit  git-r3 cmake
 
 src_configure() {
-	econf --disable-zhtw
-}
+	local mycmakeargs=(
+		-DENABLE_ZHCN=ON
+		-DENABLE_ZHTW=OFF
+	)
 
-src_compile() {
-	emake
+	cmake_src_configure
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-
-	rm "${D}"/usr/share/man/zh_CN/man8/userdel.8
-	rm "${D}"/usr/share/man/zh_CN/man8/groupadd.8
-	rm "${D}"/usr/share/man/zh_CN/man8/chpasswd.8
-	rm "${D}"/usr/share/man/zh_CN/man8/useradd.8
-	rm "${D}"/usr/share/man/zh_CN/man8/usermod.8
-	rm "${D}"/usr/share/man/zh_CN/man8/groupdel.8
-	rm "${D}"/usr/share/man/zh_CN/man8/groupmod.8
-	rm "${D}"/usr/share/man/zh_CN/man1/groups.1
-	rm "${D}"/usr/share/man/zh_CN/man1/newgrp.1
-	rm "${D}"/usr/share/man/zh_CN/man1/su.1
-	rm "${D}"/usr/share/man/zh_CN/man1/chsh.1
-	rm "${D}"/usr/share/man/zh_CN/man1/chfn.1
-
+	cmake_src_install
+	rm "${ED}"/usr/share/man/zh_CN/man1/groups.1 || die
 	dodoc README* DOCS/*
 }
