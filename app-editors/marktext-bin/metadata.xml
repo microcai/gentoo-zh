@@ -5,4 +5,7 @@
 		<name>Schroedinger</name>
 		<email>dylanturing@protonmail.com</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">marktext/marktext</remote-id>
+	</upstream>
 </pkgmetadata>

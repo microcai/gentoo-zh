@@ -4,4 +4,7 @@
 	<maintainer type="person">
 		<email>tanekliang@gmail.com</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">fcitx/fcitx5-rime</remote-id>
+	</upstream>
 </pkgmetadata>

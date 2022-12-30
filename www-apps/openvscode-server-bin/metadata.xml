@@ -8,4 +8,7 @@
 	<longdescription lang="en">
 		Run upstream VS Code on a remote machine with access through a modern web browser from any device, anywhere.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">gitpod-io/openvscode-server</remote-id>
+	</upstream>
 </pkgmetadata>

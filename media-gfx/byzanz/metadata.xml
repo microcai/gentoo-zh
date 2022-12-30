@@ -5,4 +5,8 @@
 		<email>atenzd@gmail.com</email>
 		<name>Aten Zhang</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">Archive/byzanz</remote-id>
+		<remote-id type="gnome-gitlab">Archive/byzanz</remote-id>
+	</upstream>
 </pkgmetadata>

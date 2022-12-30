@@ -7,4 +7,7 @@
 		<flag name="iplookup">IP location lookup, Useful to China locations</flag>
 		<flag name="wget">use wget to download files</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">pcman-bbs/pcmanx</remote-id>
+	</upstream>
 </pkgmetadata>

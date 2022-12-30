@@ -3,6 +3,6 @@
 <pkgmetadata>
 	<!-- maintainer-needed -->
 	<upstream>
-		<remote-id type="github">avplayer/avsocks</remote-id>
+		<remote-id type="github">elFarto/nvidia-vaapi-driver</remote-id>
 	</upstream>
 </pkgmetadata>

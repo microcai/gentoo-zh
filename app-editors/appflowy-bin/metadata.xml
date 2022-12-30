@@ -5,4 +5,7 @@
 		<email>2073201758GD@gmail.com</email>
 		<name>liuyujielol</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">AppFlowy-IO/AppFlowy</remote-id>
+	</upstream>
 </pkgmetadata>

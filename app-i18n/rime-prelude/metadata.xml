@@ -8,4 +8,7 @@
 	<longdescription>
 		Essential files for building up your Rime configuration
 	</longdescription>
+	<upstream>
+		<remote-id type="github">rime/rime-prelude</remote-id>
+	</upstream>
 </pkgmetadata>

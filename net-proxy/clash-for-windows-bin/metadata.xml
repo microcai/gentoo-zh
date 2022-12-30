@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-    <maintainer type="person">
-        <email>raymond@zozx.top</email>
-        <name>Raymond</name>
-    </maintainer>
-    <use>
-        <flag name="tun">Enable TUN support.</flag>
-    </use>
+	<maintainer type="person">
+		<email>raymond@zozx.top</email>
+		<name>Raymond</name>
+	</maintainer>
+	<use>
+		<flag name="tun">Enable TUN support.</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">Fndroid/clash_for_windows_pkg</remote-id>
+	</upstream>
 </pkgmetadata>

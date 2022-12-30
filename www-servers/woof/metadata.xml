@@ -10,4 +10,7 @@
 		<flag name="bzip2">bzip2 decompression of the archive from woof</flag>
 		<flag name="unzip">ZIP decompression of the archive from woof</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">simon-budig/woof</remote-id>
+	</upstream>
 </pkgmetadata>

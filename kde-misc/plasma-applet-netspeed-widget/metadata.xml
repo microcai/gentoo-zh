@@ -5,4 +5,7 @@
 		<name>liuyujielol</name>
 		<email>2073201758GD@gmail.com</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">dfaust/plasma-applet-netspeed-widget</remote-id>
+	</upstream>
 </pkgmetadata>

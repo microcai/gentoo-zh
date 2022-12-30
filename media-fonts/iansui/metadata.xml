@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <maintainer type="person">
-    <email>leon.errelin@outlook.com</email>
-    <name>Linerre</name>
-  </maintainer>
-  <longdescription>
-    An open source Chinese font derived from Klee One (Fontworks), focusing on the characters standardized by Taiwan Education Ministry.
-  </longdescription>
+	<maintainer type="person">
+		<email>leon.errelin@outlook.com</email>
+		<name>Linerre</name>
+	</maintainer>
+	<longdescription>
+		An open source Chinese font derived from Klee One (Fontworks), focusing on the characters standardized by Taiwan Education Ministry.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">ButTaiwan/iansui</remote-id>
+	</upstream>
 </pkgmetadata>
