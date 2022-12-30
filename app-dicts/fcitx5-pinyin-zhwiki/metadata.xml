@@ -5,4 +5,7 @@
 		<name>Schroedinger</name>
 		<email>dylanturing@protonmail.com</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">felixonmars/fcitx5-pinyin-zhwiki</remote-id>
+	</upstream>
 </pkgmetadata>

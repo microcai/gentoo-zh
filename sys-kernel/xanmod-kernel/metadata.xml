@@ -10,4 +10,7 @@
 		<flag name="clang">Use clang compiler instead of GCC</flag>
 		<flag name="debug">Pseudo flag</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">xanmod/linux</remote-id>
+	</upstream>
 </pkgmetadata>

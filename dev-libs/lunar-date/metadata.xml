@@ -6,5 +6,8 @@
 		<description>maintaining in gentoo china overlay</description>
 	</maintainer>
 	<longdescription>Chinese Lunar Library</longdescription>
+	<upstream>
+		<remote-id type="github">yetist/lunar-date</remote-id>
+	</upstream>
 </pkgmetadata>
 

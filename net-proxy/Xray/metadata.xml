@@ -5,4 +5,7 @@
 		<email>chn@chn.moe</email>
 		<name>Haonan Chen</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">XTLS/Xray-core</remote-id>
+	</upstream>
 </pkgmetadata>

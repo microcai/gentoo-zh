@@ -5,4 +5,7 @@
 		<name>qsdrqs</name>
 		<email>qsdrqs@gmail.com</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">vufa/deepin-wine-qq-arch</remote-id>
+	</upstream>
 </pkgmetadata>
