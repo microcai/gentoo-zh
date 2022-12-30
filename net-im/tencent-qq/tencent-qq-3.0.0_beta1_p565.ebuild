@@ -13,8 +13,8 @@ LICENSE="Tencent"
 RESTRICT="strip"
 
 SRC_URI="
-	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/50eed662/QQ-v${MY_PV}_x64.deb )
-	arm64? (  https://dldir1.qq.com/qqfile/qq/QQNT/50eed662/QQ-v${MY_PV}_arm64.deb )
+	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/64bd2578/linuxqq_${MY_PV}_amd64.deb )
+	arm64? (  https://dldir1.qq.com/qqfile/qq/QQNT/64bd2578/linuxqq_${MY_PV}_arm64.deb )
 "
 
 SLOT="nt"
@@ -30,6 +30,7 @@ RDEPEND="
 	x11-misc/xdg-utils
 	app-accessibility/at-spi2-core:2
 	app-crypt/libsecret
+	virtual/krb5
 	bwrap? ( sys-apps/bubblewrap )
 "
 
@@ -58,9 +59,11 @@ src_install() {
 		sed -i 's!/opt/QQ/qq!/usr/bin/qq!' usr/share/applications/qq.desktop || die
 	fi
 
-	sed -i 's!/opt/QQ/resources/app/512x512.png!qq!' usr/share/applications/qq.desktop || die
+	sed -i 's!/usr/share/icons/hicolor/512x512/apps/qq.png!qq!' usr/share/applications/qq.desktop || die
 	domenu usr/share/applications/qq.desktop
-	doicon -s 512 usr/share/icons/hicolor/0x0/apps/qq.png
+	doicon -s 512 usr/share/icons/hicolor/512x512/apps/qq.png
+	insinto /usr/share/icons/hicolor/2x2/apps
+	doins usr/share/icons/hicolor/2x2/apps/qq.png
 	gzip -d usr/share/doc/linuxqq/changelog.gz || die
 	dodoc usr/share/doc/linuxqq/changelog
 }
