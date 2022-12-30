@@ -203,7 +203,7 @@ sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/ltfs 9999: LTFS for LTO tapes
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
-sys-kernel/liquorix-sources 6.0.11 6.1.1: Liquorix kernel is best one for desktop, multimedia and gaming workloads
+sys-kernel/liquorix-sources 6.1.1 6.1.1-r1: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 33: Modular initramfs image creation utility
 sys-kernel/xanmod-kernel 5.15.75 6.0.7: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 6.0.11: XanMod RT sources and CJKTTY options.
