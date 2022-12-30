@@ -1,14 +1,14 @@
-BDEPEND=sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71-r5 >=sys-devel/libtool-2.4.7 >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile configure install prepare unpack
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl] >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare test unpack
 DEPEND=app-i18n/opencc
 DESCRIPTION=A somewhat comprehensive collection of Chinese Linux man pages
 EAPI=7
 HOMEPAGE=https://github.com/man-pages-zh/manpages-zh
-INHERIT=autotools git-r3
+INHERIT=git-r3 cmake
 LICENSE=FDL-1.2
 PROPERTIES=live
 RDEPEND=virtual/man >=sys-apps/man-pages-3.83
 RESTRICT=mirror
 SLOT=0
-_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	libtool	241a8f577b9781a42a7421e53448a44e	autotools	6dcd6b6a486e79928e1243ff9ba41fcc	git-r3	2347f8fe2d392b2a091191f94be37e6f
-_md5_=1b9e568b5b94462b1b6a66c491496b28
+_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	8f942ebdcf04334697649d4a0bf65a32	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	646b7a2a63596361551a6c1fabf28057
+_md5_=2e03b55f6cf22ad5bc04f2b32120d9c4
