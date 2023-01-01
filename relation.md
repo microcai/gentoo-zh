@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-01-01 16:51:18 CST)
+(The last generation time: 2023-01-01 21:45:51 CST)
 
 ### Packages
 
@@ -318,8 +318,7 @@
  net-im/telegram-purple                       | 1.4.7-r1                                  |        | https://github.com/majn/telegram-purple                                                 | Libpurple (Pidgin) plugin for using a Telegram account
                                               | 9999                                      |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-im/tencent-qq                            | 2.0.0_beta2_p1089                         |        | https://im.qq.com/linuxqq/download.html                                                 | Official Linux version of Tencent QQ
-                                              | 3.0.0_beta1_p565                          |        |                                                                                         |
+ net-im/tencent-qq                            | 3.0.0_beta1_p565                          |        | https://im.qq.com/linuxqq/download.html                                                 | The new version of the official linux-qq
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/weixin-uos                            | 2.1.5                                     |        | https://www.chinauos.com/resource/download-professional                                 | UOS weixin
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
