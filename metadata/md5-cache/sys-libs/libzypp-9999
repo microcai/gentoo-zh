@@ -1,6 +1,6 @@
-BDEPEND=app-arch/rpm dev-libs/boost dev-libs/protobuf dev-ruby/asciidoctor <dev-cpp/yaml-cpp-0.7.0 net-libs/libproxy app-doc/doxygen <dev-libs/libsigc++-3.0.7 dev-python/graphviz >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=app-arch/rpm dev-libs/boost dev-libs/protobuf dev-ruby/asciidoctor dev-cpp/yaml-cpp net-libs/libproxy app-doc/doxygen <dev-libs/libsigc++-3.0.7 dev-python/graphviz app-crypt/gpgme >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=app-arch/rpm dev-libs/boost dev-libs/protobuf dev-ruby/asciidoctor <dev-cpp/yaml-cpp-0.7.0 net-libs/libproxy app-doc/doxygen <dev-libs/libsigc++-3.0.7 dev-python/graphviz
+DEPEND=app-arch/rpm dev-libs/boost dev-libs/protobuf dev-ruby/asciidoctor dev-cpp/yaml-cpp net-libs/libproxy app-doc/doxygen <dev-libs/libsigc++-3.0.7 dev-python/graphviz app-crypt/gpgme
 DESCRIPTION=ZYpp Package Management library
 EAPI=8
 HOMEPAGE=https://doc.opensuse.org/projects/libzypp/HEAD/
@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=sys-libs/libsolv
 SLOT=0
 _eclasses_=toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	646b7a2a63596361551a6c1fabf28057	git-r3	2347f8fe2d392b2a091191f94be37e6f
-_md5_=72cb7c92142cae8693e7021b8097b4c8
+_md5_=08c1f467009422e4b889fe93fa02f74b

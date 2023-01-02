@@ -11,4 +11,4 @@ RDEPEND=sys-libs/libzypp
 SLOT=0
 SRC_URI=https://github.com/openSUSE/zypper/archive/refs/tags/1.14.59.tar.gz -> zypper-1.14.59.tar.gz
 _eclasses_=toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	646b7a2a63596361551a6c1fabf28057
-_md5_=7c0595ae0094f820813f6a008671a9a1
+_md5_=0a6831be576be943b1a42a1b6f34e14c

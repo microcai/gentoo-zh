@@ -8,4 +8,4 @@ LICENSE=Unlicense
 RDEPEND=app-i18n/fcitx:5
 SLOT=5
 SRC_URI=https://github.com/outloudvi/mw2fcitx/releases/download/20220714/moegirl.dict
-_md5_=fe3bb8a936b47cb5ece9b77fe62576e9
+_md5_=c6d7944ad2e07c4b8e2af309631b7103
