@@ -36,7 +36,7 @@ SRC_URI="
 src_unpack() {
 	UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${OKV}.xz"
 	UNIPATCH_LIST=""
-	
+
 	if use cjk; then
 		UNIPATCH_LIST+=" ${DISTDIR}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch"
 	fi

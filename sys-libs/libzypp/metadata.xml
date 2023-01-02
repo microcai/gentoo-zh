@@ -3,12 +3,10 @@
 <pkgmetadata>
 	<upstream>
 		<doc>https://github.com/openSUSE/libzypp</doc>
+		<remote-id type="github">openSUSE/libzypp</remote-id>
 	</upstream>
 	<maintainer type="person">
 		<email>hougelangley1987@gmail.com</email>
 		<name>苏业钦</name>
 	</maintainer>
-	<upstream>
-		<remote-id type="github">openSUSE/libzypp</remote-id>
-	</upstream>
 </pkgmetadata>
