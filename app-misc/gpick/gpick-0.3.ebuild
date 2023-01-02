@@ -7,7 +7,7 @@ inherit cmake xdg
 
 DESCRIPTION="Advanced color picker written in C++ using GTK+ toolkit"
 HOMEPAGE="https://github.com/thezbyg/gpick"
-SRC_URI="https://github.com/thezbyg/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz" 
+SRC_URI="https://github.com/thezbyg/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

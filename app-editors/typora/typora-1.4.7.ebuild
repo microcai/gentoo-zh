@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit desktop unpacker xdg
+inherit unpacker xdg
 
 DESCRIPTION="A truely minimal markdown editor."
 HOMEPAGE="https://typora.io"
