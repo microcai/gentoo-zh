@@ -1,4 +1,4 @@
-# Copyright 2017-2022 Gentoo Authors
+# Copyright 2017-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -27,11 +27,12 @@ DEPEND="
 	dev-libs/boost
 	dev-libs/protobuf
 	dev-ruby/asciidoctor
-	<dev-cpp/yaml-cpp-0.7.0
+	dev-cpp/yaml-cpp
 	net-libs/libproxy
 	app-doc/doxygen
 	<dev-libs/libsigc++-3.0.7
 	dev-python/graphviz
+	app-crypt/gpgme
 "
 BDEPEND="${DEPEND}"
 

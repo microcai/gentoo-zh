@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -9,7 +9,7 @@ K_NOSETEXTRAVERSION="1"
 ETYPE="sources"
 RDEPEND="
 	!sys-kernel/xanmod-sources
-	!sys-kernel/xanmod-edge
+	!sys-kernel/xanmod-kernel
 "
 inherit kernel-2
 detect_version
@@ -36,7 +36,7 @@ SRC_URI="
 src_unpack() {
 	UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${OKV}.xz"
 	UNIPATCH_LIST=""
-	
+
 	if use cjk; then
 		UNIPATCH_LIST+=" ${DISTDIR}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch"
 	fi
