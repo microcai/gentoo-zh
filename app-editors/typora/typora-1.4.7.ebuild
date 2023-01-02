@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit desktop unpacker
+inherit desktop unpacker xdg
 
 DESCRIPTION="A truely minimal markdown editor."
 HOMEPAGE="https://typora.io"
@@ -31,13 +31,9 @@ src_unpack() {
 }
 
 src_install() {
-	mv "${S}/usr" "${D}"
+	mv "${S}/usr" "${D}" || die
 
 	pushd "${D}/usr/share/doc" > /dev/null || die
-	mv ${PN} ${P}
+	mv ${PN} ${P} || die
 	popd > /dev/null || die
-}
-
-pkg_postinst() {
-	update-desktop-database
 }
