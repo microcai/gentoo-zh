@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit meson ninja-utils git-r3
+inherit meson git-r3
 
 EGIT_REPO_URI="https://github.com/Genymobile/scrcpy.git"
 
