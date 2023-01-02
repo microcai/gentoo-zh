@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-01-01 21:45:51 CST)
+(The last generation time: 2023-01-02 21:38:09 CST)
 
 ### Packages
 
@@ -18,19 +18,18 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-crypt/etoken-sac                         | 10.3                                      |        | http://aladdin-rd.ru                                                                    | SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx5-pinyin-moegirl              | 20220714                                  |        | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
+ app-dicts/fcitx5-pinyin-moegirl              | 20221214                                  |        | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx5-pinyin-zhwiki               | 20220722                                  |        | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
                                               | 20221230                                  |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/appflowy-bin                     | 0.0.5.3                                   |        | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
                                               | 0.0.6                                     |        |                                                                                         |
+                                              | 0.0.9                                     |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/marktext-bin                     | 0.17.1                                    |        | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/typora                           | 0.11.18                                   |        | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
-                                              | 1.3.6                                     |        |                                                                                         |
-                                              | 1.4.4                                     |        |                                                                                         |
+ app-editors/typora                           | 1.4.7                                     |        | https://typora.io                                                                       | A truely minimal markdown editor.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/winetricks-zh                  | 9999                                      |        | http://winetricks.org                                                                   | winetricks fork for chinese to install QQ
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -42,7 +41,8 @@
    app-i18n/fcitx-chinese-addons              | 5.0.15-r1                                 | RD     | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
                                               | 5.0.16                                    |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
-     app-i18n/fcitx-lua                       | 5.0.7-r1                                  |  D, RD | https://github.com/fcitx/fcitx5-lua                                                     | Lua support for fcitx
+     app-i18n/fcitx-lua                       | 5.0.10                                    |  D, RD | https://github.com/fcitx/fcitx5-lua                                                     | Lua support for fcitx
+                                              | 5.0.7-r1                                  |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
      app-i18n/fcitx-qt                        | 5.0.15-r1                                 |  D, RD | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
                                               | 5.0.16                                    |        |                                                                                         |
@@ -92,11 +92,12 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/zh-autoconvert                      | 0.3.16-r5                                 |        | https://packages.debian.org/stable/source/zh-autoconvert                                | Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/bcompare                            | 4.4.2.26348                               |        | http://www.scootersoftware.com/                                                         | Beyond Compare -- Compare, sync, and merge files and folders
+ app-misc/bcompare                            | 4.4.4.27058                               |        | http://www.scootersoftware.com/                                                         | Beyond Compare -- Compare, sync, and merge files and folders
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/ccal                                | 2.5.3                                     |        | http://ccal.chinesebay.com/ccal/ccal.htm                                                | A simple command line calendar for Chinese lunar
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/gpick                               | 0.2.6-r1                                  |        | https://github.com/thezbyg/gpick                                                        | Advanced color picker written in C++ using GTK+ toolkit
+                                              | 0.3                                       |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/jshon                               | 9999                                      |        | http://kmkeen.com/jshon/                                                                | Jshon is a JSON parser designed for maximum convenience within the shell
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -105,9 +106,10 @@
  app-misc/spark                               | 1.0.1                                     |        | http://zachholman.com/spark/                                                            | ▁▂▃▅▂▇ in your shell
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/yq-bin                              | 4.28.2                                    |        | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
+                                              | 4.30.6                                    |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-mobilephone/scrcpy                       | 1.23                                      |        | https://blog.rom1v.com/2018/03/introducing-scrcpy/                                      | Display and control your Android device
-                                              | 1.24                                      |        |                                                                                         |
+ app-mobilephone/scrcpy                       | 1.24                                      |        | https://blog.rom1v.com/2018/03/introducing-scrcpy/                                      | Display and control your Android device
+                                              | 1.25                                      |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-office/bytedance-feishu                  | 4.11.6.2                                  |        | https://www.feishu.cn/                                                                  | feishu - ByteDance's enterprise collaboration platform
                                               | 5.14.14                                   |        |                                                                                         |
@@ -170,6 +172,7 @@
  dev-util/arch-install-scripts                | 24                                        |        | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
    sys-apps/pacman                            | 6.0.1                                     |  D, RD | https://archlinux.org/pacman/                                                           | Archlinux's binary package manager
      app-crypt/archlinux-keyring              | 20220727                                  |  D, RD | https://gitlab.archlinux.org/archlinux/archlinux-keyring                                | GnuPG keyring of Archlinux developer keys
+                                              | 20221220                                  |        |                                                                                         |
      sys-apps/pacman-mirrorlist               | 20210509                                  | RD     | https://archlinux.org/mirrorlist/                                                       | Repository list for Archlinux's binary package manager
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/bom-utils                           | 1.0                                       |        | https://github.com/jlblancoc/utf-bom-utils                                              | Small programs to add or remove the BOM mark in UTF8 files
