@@ -31,10 +31,10 @@ src_install() {
 	local LAUNCHER="bcompare/bin/bcompare"
 
 	insinto "${targetdir}"
-	sed -i ./install.sh -e 's/^# Create desktop entry and place.*/exit 0/g'
-	sed -i ./install.sh -e "s%^# Copy the files.*%BC_BIN=\"$D/\$BC_BIN\"; BC_LIB=\"$D/\$BC_LIB\";%g"
-	sed -i ./install.sh -e "s/^\texit 1.*//g"
-	./install.sh --prefix="${targetdir}"
+	sed -i ./install.sh -e 's/^# Create desktop entry and place.*/exit 0/g' || die
+	sed -i ./install.sh -e "s%^# Copy the files.*%BC_BIN=\"$D/\$BC_BIN\"; BC_LIB=\"$D/\$BC_LIB\";%g" || die
+	sed -i ./install.sh -e "s/^\texit 1.*//g" || die
+	./install.sh --prefix="${targetdir}" || die
 
 	dosym "../../opt/${LAUNCHER}" "/usr/bin/bcompare"
 }
