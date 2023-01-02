@@ -9,7 +9,7 @@ K_NOSETEXTRAVERSION="1"
 ETYPE="sources"
 RDEPEND="
 	!sys-kernel/xanmod-sources
-	!sys-kernel/xanmod-edge
+	!sys-kernel/xanmod-kernel
 "
 inherit kernel-2
 detect_version
