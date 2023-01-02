@@ -3,12 +3,10 @@
 <pkgmetadata>
 	<upstream>
 		<bugs-to>https://github.com/openSUSE/libsolv</bugs-to>
+		<remote-id type="github">openSUSE/libsolv</remote-id>
 	</upstream>
 	<maintainer type="person">
 		<email>hougelangley1987@gmail.com</email>
 		<name>苏业钦</name>
 	</maintainer>
-	<upstream>
-		<remote-id type="github">openSUSE/libsolv</remote-id>
-	</upstream>
 </pkgmetadata>
