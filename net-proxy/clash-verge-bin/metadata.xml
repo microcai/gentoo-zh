@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<upstream>
 		<bugs-to>https://github.com/zzzgydi/clash-verge/issues</bugs-to>
+		<remote-id type="github">zzzgydi/clash-verge</remote-id>
 	</upstream>
 	<maintainer type="person">
 		<email>hougelangley1987@gmail.com</email>
@@ -11,7 +12,4 @@
 	<use>
 		<flag name="system-clash">Use net-proxy/clash instead of clash-premium</flag>
 	</use>
-	<upstream>
-		<remote-id type="github">zzzgydi/clash-verge</remote-id>
-	</upstream>
 </pkgmetadata>

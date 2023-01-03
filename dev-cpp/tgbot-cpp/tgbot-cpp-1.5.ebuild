@@ -8,7 +8,7 @@ inherit cmake git-r3
 DESCRIPTION="C++ library for Telegram bot API"
 HOMEPAGE="https://github.com/reo7sp/tgbot-cpp"
 EGIT_REPO_URI="https://github.com/reo7sp/${PN}.git"
-EGIT_COMMIT=f74c381
+EGIT_COMMIT=746f848
 
 LICENSE="MIT"
 SLOT="0"
