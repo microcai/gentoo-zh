@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit flag-o-matic
+#inherit
 
 DESCRIPTION="Library to deal with DWARF Debugging Information Format"
 HOMEPAGE="https://github.com/Distrotech/libdwarf"
