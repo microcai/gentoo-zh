@@ -13,11 +13,11 @@ LICENSE="Tencent"
 RESTRICT="strip"
 
 SRC_URI="
-	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/64bd2578/linuxqq_${MY_PV}_amd64.deb )
-	arm64? (  https://dldir1.qq.com/qqfile/qq/QQNT/64bd2578/linuxqq_${MY_PV}_arm64.deb )
+	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/c005c911/linuxqq_${MY_PV}_amd64.deb )
+	arm64? (  https://dldir1.qq.com/qqfile/qq/QQNT/c005c911/linuxqq_${MY_PV}_arm64.deb )
 "
 
-SLOT="nt"
+SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
 
 IUSE="bwrap split-usr"
