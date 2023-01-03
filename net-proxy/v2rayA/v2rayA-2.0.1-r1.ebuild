@@ -72,19 +72,24 @@ src_compile() {
 
 src_install() {
 	dobin "${S}"/service/v2raya
+	# directory for runtime use
 	keepdir "/etc/v2raya"
 
 	# generate default config
-	cat <<-EOF > "${ED}"/etc/v2raya/v2raya.conf || die
+	cat <<-EOF > "${S}"/v2raya || die
 	# v2raya config example
 	# Everything has defaults so you only need to uncomment things you want to
 	# change
 	EOF
 	./service/v2raya --report config | sed '1,6d' | fold -s -w 78 | sed -E 's/^([^#].+)/# \1/'\
-		>> "${ED}"/etc/v2raya/v2raya.conf || die
+		>> "${S}"/v2raya || die
+
+	# config /etc/default/v2raya
+	insinto "/etc/default"
+	doins "${S}"/v2raya
 
 	systemd_dounit "${S}"/install/universal/v2raya.service
-	systemd_dounit "${S}"/install/universal/v2raya-lite.service
+	systemd_douserunit "${S}"/install/universal/v2raya-lite.service
 
 	#thanks to @Universebenzene
 	newinitd "${FILESDIR}/${PN}.initd" v2raya
