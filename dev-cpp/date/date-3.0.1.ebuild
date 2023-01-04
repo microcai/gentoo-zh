@@ -13,6 +13,8 @@ KEYWORDS="~amd64"
 IUSE=""
 RESTRICT="mirror"
 
+BDEPEND="app-arch/unzip"
+
 src_install() {
 	doheader -r include/date
 	mkdir -p "${D}/usr/src" || die
