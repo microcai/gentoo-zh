@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-01-04 10:53:20 CST)
+(The last generation time: 2023-01-04 10:54:07 CST)
 
 ### Packages
 
@@ -455,7 +455,7 @@
    sys-kernel/liquorix-sources                | 6.1.1-r1                                  | RD     | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
                                               | 6.1.2                                     |        |                                                                                         |
    sys-kernel/xanmod-kernel                   | 5.15.75                                   | RD     | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
-                                              | 6.0.7                                     |        |                                                                                         |
+                                              | 6.1.2                                     |        |                                                                                         |
    sys-kernel/xanmod-rt                       | 6.0.11                                    | RD     | https://xanmod.org                                                                      | XanMod RT sources and CJKTTY options.
    sys-kernel/xanmod-sources                  | 5.15.75                                   | RD     | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
                                               | 6.0.7                                     |        |                                                                                         |
