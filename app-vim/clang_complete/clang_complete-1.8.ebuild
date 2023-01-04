@@ -9,7 +9,7 @@ inherit vim-plugin
 DESCRIPTION="vim plugin: use clang for completing C/C++ code."
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=3526"
 SRC_URI="https://github.com/xavierd/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
@@ -23,11 +23,11 @@ VIM_PLUGIN_HELPFILES="${PN}"
 src_prepare() {
 	default
 
-	rm Makefile
+	rm Makefile || die
 }
 
 src_install() {
 	dodoc README
-	rm .gitignore README
+	rm .gitignore README || die
 	vim-plugin_src_install
 }

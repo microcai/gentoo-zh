@@ -21,7 +21,7 @@ BDEPEND=""
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
-	sed -i Makefile -e '/gitstatus/d'
+	sed -i Makefile -e '/gitstatus/d' || die
 
 	default
 }

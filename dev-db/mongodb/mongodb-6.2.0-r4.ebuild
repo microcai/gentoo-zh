@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{9..10} )
+PYTHON_COMPAT=( python3_{9..11} )
 
 CHECKREQS_DISK_BUILD="27000M"
 CHECKREQS_DISK_USR="512M"
@@ -212,7 +212,7 @@ src_configure() {
 }
 
 src_compile() {
-	PREFIX="${EPREFIX}/usr" ./buildscripts/scons.py "${scons_opts[@]}" install-core
+	PREFIX="${EPREFIX}/usr" ./buildscripts/scons.py "${scons_opts[@]}" install-core || die
 
 	$(tc-getSTRIP) "--strip-unneeded" "${S}/build/install/bin/mongo"
 	$(tc-getSTRIP) "--strip-unneeded" "${S}/build/install/bin/mongod"

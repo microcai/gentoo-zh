@@ -212,7 +212,7 @@ src_configure() {
 }
 
 src_compile() {
-	PREFIX="${EPREFIX}/usr" ./buildscripts/scons.py "${scons_opts[@]}" install-core
+	PREFIX="${EPREFIX}/usr" ./buildscripts/scons.py "${scons_opts[@]}" install-core || die
 
 	$(tc-getSTRIP) "--strip-unneeded" "${S}/build/install/bin/mongo"
 	$(tc-getSTRIP) "--strip-unneeded" "${S}/build/install/bin/mongod"

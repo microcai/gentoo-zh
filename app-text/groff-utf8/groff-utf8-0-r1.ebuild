@@ -21,9 +21,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	sed	's/^NROFF.*\/usr\/bin\/nroff -mandoc/NROFF\t\t\/usr\/bin\/groff-utf8 -Tutf8 -c -mandoc/' -i /etc/man.conf
+	sed	's/^NROFF.*\/usr\/bin\/nroff -mandoc/NROFF\t\t\/usr\/bin\/groff-utf8 -Tutf8 -c -mandoc/' -i /etc/man.conf || die
 }
 
 pkg_postrm(){
-	sed	's/groff-utf8 -Tutf8 -c -mandoc/nroff -mandoc/g' -i /etc/man.conf
+	sed	's/groff-utf8 -Tutf8 -c -mandoc/nroff -mandoc/g' -i /etc/man.conf || die
 }

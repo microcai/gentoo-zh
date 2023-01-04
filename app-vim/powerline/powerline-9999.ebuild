@@ -18,6 +18,6 @@ IUSE=""
 VIM_PLUGIN_HELPFILES="Powerline"
 
 src_prepare() {
-	rm -r .git*
+	rm -r .git* || die
 	default
 }
