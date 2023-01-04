@@ -1,9 +1,11 @@
 # Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+EAPI=8
+
 DESCRIPTION="GNU groff wrapper allowing UTF-8 input"
 HOMEPAGE="http://www.haible.de/bruno/packages-groff-utf8.html"
-SRC_URI="http://www.haible.de/bruno/gnu/${PN}.tar.gz"
+SRC_URI="http://www.haible.de/bruno/gnu/${PN}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

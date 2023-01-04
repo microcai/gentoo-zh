@@ -8,7 +8,7 @@ inherit vim-plugin vcs-snapshot
 
 DESCRIPTION="vim plugin: Vim motions on speed!"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=3526"
-SRC_URI="https://github.com/Lokaltog/vim-${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/Lokaltog/vim-easymotion/tarball/${PV} -> ${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~amd64"
 IUSE=""
