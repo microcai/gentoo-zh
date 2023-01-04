@@ -13,6 +13,8 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64"
 IUSE=""
 
+BDEPEND="app-arch/unzip"
+
 VIM_PLUGIN_HELPFILES="${PN}"
 
 src_install() {
