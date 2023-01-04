@@ -41,6 +41,10 @@ RDEPEND="
 	x11-libs/pango
 	sys-apps/lsb-release
 	sys-apps/bubblewrap
+	|| (
+		=dev-libs/openssl-1.1*
+		dev-libs/openssl-compat
+	)
 "
 BDEPEND="dev-util/patchelf"
 
