@@ -7,7 +7,7 @@ EAPI=7
 
 DESCRIPTION="Library to deal with DWARF Debugging Information Format"
 HOMEPAGE="https://github.com/Distrotech/libdwarf"
-SRC_URI="https://github.com/Distrotech/${PN}/archive/${PV}.tar.gz"
+SRC_URI="https://github.com/Distrotech/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"

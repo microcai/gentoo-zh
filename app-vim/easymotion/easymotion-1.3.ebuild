@@ -16,7 +16,7 @@ IUSE=""
 VIM_PLUGIN_HELPFILES="${PN}"
 
 src_install() {
-	dodoc README.md
-	rm .gitignore README.md
+	dodoc README.md || die
+	rm .gitignore README.md || die
 	vim-plugin_src_install
 }
