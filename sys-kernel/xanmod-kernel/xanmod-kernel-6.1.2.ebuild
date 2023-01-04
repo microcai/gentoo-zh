@@ -1,4 +1,4 @@
-# Copyright 2020-2022 Gentoo Authors
+# Copyright 2020-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -7,7 +7,7 @@ inherit kernel-build python-any-r1
 
 MY_P=linux-${PV%.*}
 #Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
-GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 0))
+GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 1))
 XV="1"
 
 DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
