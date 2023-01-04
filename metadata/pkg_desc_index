@@ -151,7 +151,7 @@ net-im/deepin-wine-qq 9.5.2.27897: Tencent QQ on Deepin Wine(com.qq.im.deepin) F
 net-im/deepin-wine-wechat 3.4.5.45: Tencent WeChat on Deepin Wine(com.qq.weixin.deepin) For Gentoo
 net-im/dingtalk 1.4.0.20909 1.4.0.20909-r1: Communication platform that supports video and audio conferencing
 net-im/telegram-purple 1.4.7-r1 9999: Libpurple (Pidgin) plugin for using a Telegram account
-net-im/tencent-qq 3.0.0_beta1_p565: The new version of the official linux-qq
+net-im/tencent-qq 3.0.0_beta1_p571: The new version of the official linux-qq
 net-im/weixin-uos 2.1.5: UOS weixin
 net-im/wemeet 3.12.0.400-r1: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq
@@ -204,7 +204,7 @@ sys-fs/ltfs 9999: LTFS for LTO tapes
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/liquorix-sources 6.1.1-r1 6.1.2: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 33: Modular initramfs image creation utility
-sys-kernel/xanmod-kernel 5.15.75 6.0.7: XanMod lts kernel built with Gentoo patches and cjktty
+sys-kernel/xanmod-kernel 5.15.75 6.1.2: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 6.0.11: XanMod RT sources and CJKTTY options.
 sys-kernel/xanmod-sources 5.15.75 6.0.7: Full XanMod source, including the Gentoo patchset and other patch options.
 sys-kernel/zenpower 0.1.12-r1: Linux kernel driver for reading sensors of AMD Zen family CPUs
