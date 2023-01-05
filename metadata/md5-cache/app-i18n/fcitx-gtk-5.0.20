@@ -13,5 +13,5 @@ RDEPEND=app-i18n/fcitx:5 gtk2? ( x11-libs/gtk+:2 ) gtk3? ( x11-libs/gtk+:3[wayla
 REQUIRED_USE=|| ( gtk2 gtk3 gtk4 )
 SLOT=5
 SRC_URI=https://github.com/fcitx/fcitx5-gtk/archive/refs/tags/5.0.20.tar.gz -> fcitx-gtk-5.0.20.tar.gz
-_eclasses_=toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	646b7a2a63596361551a6c1fabf28057	gnome2-utils	2116cec8f46f4d1b0a88c5b1f1575dd3	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	449b4785acace35308fe747fc939bde1	gnome2-utils	2116cec8f46f4d1b0a88c5b1f1575dd3	xdg	6024fbc93167fad782e2032933654857
 _md5_=f6f88b1192ff3b1720b906bef536c80e

@@ -10,5 +10,5 @@ LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=>=app-i18n/fcitx-5.0.6:5 >=app-i18n/librime-1.0 >=app-i18n/rime-data-0.3.0 app-i18n/rime-prelude x11-libs/libnotify
 SLOT=5
-_eclasses_=xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	cmake	646b7a2a63596361551a6c1fabf28057	git-r3	2347f8fe2d392b2a091191f94be37e6f
+_eclasses_=xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	cmake	449b4785acace35308fe747fc939bde1	git-r3	2347f8fe2d392b2a091191f94be37e6f
 _md5_=4d256c4fc4e81afbc0301ec72322c1c1

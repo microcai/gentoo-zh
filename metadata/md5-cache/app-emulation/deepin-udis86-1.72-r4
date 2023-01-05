@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=
 SLOT=0
 SRC_URI=https://community-packages.deepin.com/deepin/pool/non-free/u/udis86/udis86_1.72-4_i386.deb
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	f03f9c0c03643e8057ad762b297ce01e
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	8bbea377a8dd2b5d5c8bc0d834ae6157
 _md5_=ed445c27d7eaf732293638f2012fe26a
