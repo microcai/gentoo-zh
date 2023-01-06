@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-01-06 16:47:51 CST)
+(The last generation time: 2023-01-06 20:24:57 CST)
 
 ### Packages
 
@@ -132,6 +132,7 @@
  app-vim/clang_complete                       | 1.8                                       |        | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: use clang for completing C/C++ code.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/easymotion                           | 1.3                                       |        | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: Vim motions on speed!
+                                              | 3.0.1                                     |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/powerline                            | 9999                                      |        | http://www.vim.org/scripts/script.php?script_id=3881                                    | vim plugin: The ultimate vim statusline utility.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -142,17 +143,22 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/nameof                               | 0.10.1                                    |        | https://github.com/Neargye/nameof                                                       | Nameof operator for modern C++
                                               | 0.10.1_p220626                            |        |                                                                                         |
+                                              | 0.10.2                                    |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/tgbot-cpp                            | 1.3                                       |        | https://github.com/reo7sp/tgbot-cpp                                                     | C++ library for Telegram bot API
                                               | 1.3_p220616                               |        |                                                                                         |
                                               | 1.3_p220911                               |        |                                                                                         |
                                               | 1.4                                       |        |                                                                                         |
+                                              | 1.5                                       |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-db/dbeaver-bin                           | 22.1.0                                    |        | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
+                                              | 22.3.1                                    |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-db/mongodb                               | 5.3.1                                     |        | https://www.mongodb.com                                                                 | A high-performance, open source, schema-free document-oriented database
+                                              | 6.2.0-r4                                  |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/libdwarf                            | 20140208                                  |        | https://github.com/Distrotech/libdwarf                                                  | Library to deal with DWARF Debugging Information Format
+                                              | 20150507                                  |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/lunar-calendar                      | 3.0.1                                     |        | https://github.com/yetist/lunar-calendar                                                | a gtk+ calendar widget for chinese lunar library
    dev-libs/lunar-date                        | 3.0.1                                     |  D     | https://github.com/yetist/lunar-date                                                    | Chinese Lunar Library
@@ -374,8 +380,8 @@
  net-proxy/clash-for-windows-bin              | 0.20.11                                   |        | https://github.com/Fndroid/clash_for_windows_pkg                                        | A Windows/macOS/Linux GUI based on Clash and Electron.
                                               | 0.20.12                                   |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/clash-verge-bin                    | 1.1.1                                     |        | https://github.com/zzzgydi/clash-verge                                                  | A Clash GUI based on tauri
-                                              | 1.2.0                                     |        |                                                                                         |
+ net-proxy/clash-verge-bin                    | 1.2.0                                     |        | https://github.com/zzzgydi/clash-verge                                                  | A Clash GUI based on tauri
+                                              | 1.2.1                                     |        |                                                                                         |
    net-proxy/clash                            | 1.11.8-r1                                 | RD     | https://github.com/Dreamacro/clash                                                      | A rule-based tunnel in Go.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/make-proxy                         | 2.0.0                                     |        | https://github.com/yueyoum/make-proxy                                                   | Socks5 proxy written in Erlang
