@@ -1,0 +1,13 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=install
+DESCRIPTION=嘉立创EDA(专业版) - 高效的国产PCB设计工具
+EAPI=8
+HOMEPAGE=https://lceda.cn/
+INHERIT=desktop
+KEYWORDS=~amd64 ~arm64 ~loong
+LICENSE=all-rights-reserved
+RESTRICT=mirror
+SLOT=0
+SRC_URI=amd64? ( https://image.lceda.cn/files/lceda-pro-linux-x64-1.9.23.zip ) arm64? ( https://image.lceda.cn/files/lceda-pro-linux-arm64-1.9.23.zip ) loong? ( https://image.lceda.cn/files/lceda-pro-linux-loong64-1.9.23.zip )
+_eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c
+_md5_=a600a5acafe38a0fb3ddd67af969cc1c
