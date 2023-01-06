@@ -46,7 +46,7 @@ DEPEND="${RDEPEND}"
 BDEPEND="
 	app-arch/p7zip
 	sys-apps/coreutils
-	virtual/awk
+	app-alternatives/awk
 "
 
 S=${WORKDIR}
