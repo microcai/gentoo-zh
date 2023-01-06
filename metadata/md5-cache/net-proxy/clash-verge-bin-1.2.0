@@ -11,4 +11,4 @@ RDEPEND=dev-libs/libappindicator:3 net-libs/webkit-gtk:4 dev-libs/gobject-intros
 SLOT=0
 SRC_URI=https://github.com/zzzgydi/clash-verge/releases/download/v1.2.0/clash-verge_1.2.0_amd64.deb
 _eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	8bbea377a8dd2b5d5c8bc0d834ae6157	desktop	7eb20ad915a0a318176d51bc2508ff5c	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
-_md5_=c9dde30d5eaf7138a780b2cb7f74aad3
+_md5_=7f1d6771c2f0930af3f56f9f3a5f8340
