@@ -1,4 +1,4 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -21,7 +21,7 @@ BDEPEND=""
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
-	sed -i Makefile -e '/gitstatus/d'
+	sed -i Makefile -e '/gitstatus/d' || die
 
 	default
 }

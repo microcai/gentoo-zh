@@ -1,4 +1,4 @@
-# Copyright 2021-2022 Gentoo Authors
+# Copyright 2021-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -8,7 +8,7 @@ inherit cmake git-r3
 DESCRIPTION="C++ library for Telegram bot API"
 HOMEPAGE="https://github.com/reo7sp/tgbot-cpp"
 EGIT_REPO_URI="https://github.com/reo7sp/${PN}.git"
-EGIT_COMMIT=f74c381
+EGIT_COMMIT=9cb2e9c
 
 LICENSE="MIT"
 SLOT="0"

@@ -1,9 +1,9 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-inherit git-r3 eutils
+inherit git-r3
 
 DESCRIPTION="Enables USB charging for Apple devices."
 HOMEPAGE="https://github.com/mkorenkov/ipad_charge"

@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{9..10} )
+PYTHON_COMPAT=( python3_{9..11} )
 
 CHECKREQS_DISK_BUILD="27000M"
 CHECKREQS_DISK_USR="512M"
@@ -20,7 +20,7 @@ CPU_FLAGS="cpu_flags_x86_avx"
 IUSE="debug kerberos lto mongosh ssl gold +tools ocsp-stapling server-js tcmalloc tcmalloc-experimental"
 IUSE+=" free-mon http-client runtime-hardening experimental-optimization experimental-runtime-hardening"
 IUSE+=" ${CPU_FLAGS}"
-SRC_URI="https://github.com/mongodb/mongo/archive/r${PV}.tar.gz"
+SRC_URI="https://github.com/mongodb/mongo/archive/r${PV}-rc4.tar.gz"
 
 REQUIRED_USE="
 	experimental-runtime-hardening? ( runtime-hardening )
@@ -70,7 +70,7 @@ PDEPEND="
 	tools? ( >=app-admin/mongo-tools-100 )
 "
 
-PATCHES=( ${FILESDIR}/mongodb-5.0.2-skip-reqs-check.patch )
+#PATCHES=( ${FILESDIR}/mongodb-5.0.2-skip-reqs-check.patch )
 
 python_check_deps() {
 	has_version ">=dev-util/scons-4.3.0[${PYTHON_USEDEP}]" &&
