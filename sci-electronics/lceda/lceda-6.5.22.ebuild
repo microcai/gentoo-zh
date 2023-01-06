@@ -3,26 +3,27 @@
 
 EAPI=8
 
-DESCRIPTION="嘉立创EDA"
+inherit desktop
+
+DESCRIPTION="嘉立创EDA - 高效的国产PCB设计工具"
 HOMEPAGE="https://lceda.cn/"
 SRC_URI="https://image.lceda.cn/files/lceda-linux-x64-${PV}.zip"
 
 RESTRICT="mirror"
 
-LICENSE="AS-IS"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
-BDEPEND=""
+BDEPEND="app-arch/unzip"
 
 S="${WORKDIR}/lceda-linux-x64"
 
 src_install(){
-    insinto /opt/lceda
-    doins -r .
-    fperms 0755 /opt/lceda/lceda
-    insinto /usr/share/applications
-    doins ${FILESDIR}/LCEDA.desktop
+	insinto /opt/lceda
+	doins -r .
+	fperms 0755 /opt/lceda/lceda
+	newmenu LCEDA.dkt LCEDA.desktop
 }
