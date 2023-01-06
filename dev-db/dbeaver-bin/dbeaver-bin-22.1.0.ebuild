@@ -22,9 +22,9 @@ S="${WORKDIR}/${MY_PN}"
 
 src_prepare() {
 	sed -e "s/^Icon=.*/Icon=${MY_PN}/" \
-		-e 's:/usr/share/dbeaver:/opt/dbeaver:g' \ || die
-		-e '/^WMCLASS.*/d' \ || die
-		-e "s:^Exec=.*:Exec=${EPREFIX}/usr/bin/${MY_PN}:" \ || die
+		-e 's:/usr/share/dbeaver:/opt/dbeaver:g' \
+		-e '/^WMCLASS.*/d' \
+		-e "s:^Exec=.*:Exec=${EPREFIX}/usr/bin/${MY_PN}:" \
 		-i "${MY_PN}-ce.desktop" || die
 	default
 }
