@@ -74,6 +74,9 @@ src_install() {
 	systemd_newunit "${FILESDIR}/clash-r1.service" clash.service
 	#systemd_newunit "${FILESDIR}/clash_at.service" clash@.service
 
+	newinitd "${FILESDIR}"/${PN}.initd ${PN}
+	newconfd "${FILESDIR}"/${PN}.confd ${PN}
+
 	keepdir /etc/clash
 }
 
