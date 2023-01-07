@@ -43,5 +43,5 @@ src_configure() {
 src_install() {
 	cmake_src_install
 
-	mv "${D}/usr/share/doc/${PN}" "${D}/usr/share/doc/${P}" || die
+	mv "${D}/usr/share/doc/${PN}" "${D}/usr/share/doc/${PF}" || die
 }
