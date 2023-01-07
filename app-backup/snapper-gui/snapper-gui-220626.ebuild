@@ -27,6 +27,6 @@ RDEPEND="
 "
 
 src_prepare() {
-	sed -i 's/Utilities;/Utility;/' "${S}/snapper-gui.desktop"
+	sed -i 's/Utilities;/Utility;/' "${S}/snapper-gui.desktop" || die
 	default
 }

@@ -13,10 +13,6 @@ KEYWORDS="~amd64"
 IUSE=""
 BDEPEND="app-crypt/sequoia-sq"
 
-src_prepare() {
-	default
-}
-
 src_compile(){
 	emake build
 }

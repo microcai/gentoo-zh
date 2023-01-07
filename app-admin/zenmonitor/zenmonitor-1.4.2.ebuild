@@ -32,10 +32,6 @@ src_prepare() {
 	popd > /dev/null || die
 }
 
-src_compile() {
-	make
-}
-
 src_install() {
 	dobin zenmonitor
 	domenu data/zenmonitor.desktop
