@@ -41,15 +41,6 @@ src_configure() {
 }
 
 src_install() {
-	pushd "${BUILD_DIR}"
-	exeinto "/usr/$(get_libdir)"
-	local so
-	for so in *.so
-	do
-		doexe "${so}"
-	done
-	popd || die
-
 	cmake_src_install
 
 	mv "${D}/usr/share/doc/${PN}" "${D}/usr/share/doc/${P}" || die
