@@ -10,4 +10,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://image.lceda.cn/files/lceda-linux-x64-6.5.22.zip
 _eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c
-_md5_=4616f3543472ad30a8074801f76c11ed
+_md5_=ae06b78786d76e2cc7d960cc869079c2
