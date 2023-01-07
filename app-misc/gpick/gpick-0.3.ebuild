@@ -25,10 +25,10 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 
-PATCHES=( ${FILESDIR}/gpick-libc.patch )
+PATCHES=( "${FILESDIR}/gpick-libc.patch" )
 
 src_prepare() {
-	cp ${FILESDIR}/.version . || die
+	cp "${FILESDIR}/.version" . || die
 	cmake_src_prepare
 }
 
