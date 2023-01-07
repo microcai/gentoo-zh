@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -8,7 +8,6 @@ inherit cmake xdg
 DESCRIPTION="Advanced color picker written in C++ using GTK+ toolkit"
 HOMEPAGE="https://github.com/thezbyg/gpick"
 SRC_URI="https://github.com/thezbyg/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -26,9 +25,10 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/gpick-gpick-${PV}"
+PATCHES=( "${FILESDIR}/gpick-libc.patch" )
 
 src_prepare() {
+	cp "${FILESDIR}/.version" . || die
 	cmake_src_prepare
 }
 
@@ -41,16 +41,7 @@ src_configure() {
 }
 
 src_install() {
-	pushd "${BUILD_DIR}"
-	exeinto "/usr/$(get_libdir)"
-	local so
-	for so in *.so
-	do
-		doexe "${so}"
-	done
-	popd || die
-
 	cmake_src_install
 
-	mv "${D}/usr/share/doc/${PN}" "${D}/usr/share/doc/${P}" || die
+	mv "${D}/usr/share/doc/${PN}" "${D}/usr/share/doc/${PF}" || die
 }
