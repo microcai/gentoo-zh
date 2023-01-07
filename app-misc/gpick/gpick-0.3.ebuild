@@ -8,7 +8,6 @@ inherit cmake xdg
 DESCRIPTION="Advanced color picker written in C++ using GTK+ toolkit"
 HOMEPAGE="https://github.com/thezbyg/gpick"
 SRC_URI="https://github.com/thezbyg/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-RESTRICT="mirror"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -29,10 +28,6 @@ DEPEND="${RDEPEND}"
 PATCHES=( ${FILESDIR}/gpick-libc.patch )
 
 src_prepare() {
-	#echo 0.3 > .version || die
-	#echo 0 >> .version || die
-	#echo dd27232a4dd08cf6271ecc2a7e96da25f8071ed5 >> .version || die
-	#echo 2022-05-08 >> .version || die
 	cp ${FILESDIR}/.version .
 	cmake_src_prepare
 }
