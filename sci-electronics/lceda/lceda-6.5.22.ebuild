@@ -7,7 +7,7 @@ inherit desktop
 
 DESCRIPTION="嘉立创EDA - 高效的国产PCB设计工具"
 HOMEPAGE="https://lceda.cn/"
-SRC_URI="https://image.lceda.cn/files/lceda-linux-x64-${PV}.zip"
+SRC_URI="https://image.lceda.cn/files/${PN}-linux-x64-${PV}.zip"
 
 RESTRICT="mirror"
 
@@ -20,6 +20,14 @@ RDEPEND="${DEPEND}"
 BDEPEND="app-arch/unzip"
 
 S="${WORKDIR}/lceda-linux-x64"
+QA_PREBUILT="
+	/opt/lceda/swiftshader/libEGL.so
+	/opt/lceda/swiftshader/libGLESv2.so
+	/opt/lceda/lceda
+	/opt/lceda/libEGL.so
+	/opt/lceda/libffmpeg.so
+	/opt/lceda/libGLESv2.so
+"
 
 src_install(){
 	insinto /opt/lceda
