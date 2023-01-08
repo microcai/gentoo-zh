@@ -8,8 +8,7 @@ DESCRIPTION="A rule-based tunnel in Go."
 HOMEPAGE="https://github.com/Dreamacro/clash"
 
 SRC_URI="https://github.com/Dreamacro/clash/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	https://dev.onfoo.top/~dlan/distfiles/${CATEGORY}/${PN}/${P}-deps.tar.xz
-	https://github.com/Gentoo-zh/vendors/releases/download/clash/${P}-deps.tar.xz"
+	https://dev.onfoo.top/~dlan/distfiles/${CATEGORY}/${PN}/${P}-deps.tar.xz"
 
 RESTRICT="mirror"
 
