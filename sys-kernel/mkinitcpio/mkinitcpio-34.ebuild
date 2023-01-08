@@ -29,7 +29,7 @@ sys-apps/baselayout[-split-usr]
 "
 
 RDEPEND="${DEPEND}
-    systemd? ( sys-apps/systemd[-split-usr] )
+	systemd? ( sys-apps/systemd[-split-usr] )
 "
 
 BDEPEND="
@@ -42,15 +42,15 @@ sys-apps/sed
 RESTRICT="mirror"
 
 src_install(){
-    default_src_install
-    exeinto /usr/lib/initcpio/
-    doexe /bin/busybox
-    insinto /usr/lib/initcpio/install
-    newins ${FILESDIR}/initcpio-install-systemd systemd
-    newins ${FILESDIR}/initcpio-install-base base
-    newins ${FILESDIR}/initcpio-install-udev udev
-    insinto /usr/lib/initcpio/hooks
-    newins ${FILESDIR}/initcpio-hook-udev udev
-    insinto /etc/mkinitcpio.d
-    doins ${FILESDIR}/linux.preset
+	default_src_install
+	exeinto /usr/lib/initcpio/
+	doexe /bin/busybox
+	insinto /usr/lib/initcpio/install
+	newins ${FILESDIR}/initcpio-install-systemd systemd
+	newins ${FILESDIR}/initcpio-install-base base
+	newins ${FILESDIR}/initcpio-install-udev udev
+	insinto /usr/lib/initcpio/hooks
+	newins ${FILESDIR}/initcpio-hook-udev udev
+	insinto /etc/mkinitcpio.d
+	doins ${FILESDIR}/linux.preset
 }
