@@ -554,6 +554,13 @@ github = "justfont/open-huninn-font"
 use_latest_release = true
 prefix = "v"
 
+["media-fonts/lxgw-neo-xihei"]
+source = "github"
+github = "lxgw/LxgwNeoXiHei"
+use_latest_release = true
+prefix = "v"
+github_account = "Linerre"
+
 ["media-fonts/nerd-fonts"]
 source = "github"
 github = "ryanoasis/nerd-fonts"
