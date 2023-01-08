@@ -907,6 +907,13 @@ github = "openSUSE/zypper"
 use_latest_tag = true
 github_account = "HougeLangley"
 
+["sys-boot/ventoy-bin"]
+source = "github"
+github = "ventoy/Ventoy"
+use_latest_release = true
+prefix = "v"
+github_account = "st0nie"
+
 # upstream is no longer actively maintained, ignore it
 #["sys-devel/ucc"]
 
