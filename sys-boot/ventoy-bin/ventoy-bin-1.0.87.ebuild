@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RESTRICT="strip"
+RESTRICT="strip mirror"
 
 DEPEND="
 	sys-fs/dosfstools
@@ -29,29 +29,29 @@ CARCH="x86_64"
 
 src_prepare() {
 	# Decompress tools
-	pushd tool/$CARCH
+	pushd tool/$CARCH || die
 	for file in *.xz; do
-		xzcat $file > ${file%.xz}
-		chmod +x ${file%.xz}
+		xzcat "$file" >"${file%.xz}" || die
+		fperms +x "${file%.xz}"
 	done
 
 	# Cleanup .xz crap
-	rm -fv ./*.xz
-	popd
+	rm -fv ./*.xz || die
+	popd || die
 
 	# Apply sanitize patch
-	patch --verbose -p0 < "${FILESDIR}/sanitize.patch"
+	eapply -p0 "${FILESDIR}/sanitize.patch"
 
 	# Log location
-	sed -i 's|log\.txt|/var/log/ventoy.log|g' WebUI/static/js/languages.js tool/languages.json
+	sed -i 's|log\.txt|/var/log/ventoy.log|g' WebUI/static/js/languages.js tool/languages.json || die
 
 	# Non-POSIX compliant scripts
-	sed -i 's|bin/sh|usr/bin/env bash|g' tool/{ventoy_lib.sh,VentoyWorker.sh}
+	sed -i 's|bin/sh|usr/bin/env bash|g' tool/{ventoy_lib.sh,VentoyWorker.sh} || die
 
 	# Clean up unused binaries
 	# Preserving mkexfatfs and mount.exfat-fuse because exfatprogs is incompatible
 	for binary in xzcat hexdump; do
-		rm -fv tool/$CARCH/$binary
+		rm -fv tool/$CARCH/$binary || die
 	done
 	default
 }
@@ -68,7 +68,7 @@ src_install() {
 	insinto /opt/ventoy/tool/$CARCH/
 	doins tool/$CARCH/*
 	insinto /opt/ventoy/
-	doins *.sh plugin WebUI "VentoyGUI.$CARCH"
+	doins ./*.sh plugin WebUI "VentoyGUI.$CARCH"
 
 	# Install .desktop
 	insopts -m0644
@@ -78,13 +78,11 @@ src_install() {
 
 	# Link system binaries
 	for binary in xzcat hexdump; do
-		ln -s /usr/bin/$binary ./
-		insopts -m0755
-		insinto /opt/ventoy/tool/$CARCH
-		doins $binary
+		dosym -r /usr/bin/$binary /opt/ventoy/tool/$CARCH/$binary
+		fperm 0755 /opt/ventoy/tool/$CARCH/$binary
 	done
 
 	dobin "${FILESDIR}"/ventoy{,gui,web,plugson,-{,extend-}persistent}
 
-	rm ../../image/opt/ventoy/tool/x86_64/Ventoy2Disk.gtk2
+	rm "${D}"/opt/ventoy/tool/x86_64/Ventoy2Disk.gtk2 || die
 }
