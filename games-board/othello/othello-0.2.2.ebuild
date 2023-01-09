@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="dev-libs/boost[threads]
+DEPEND="dev-libs/boost
 	x11-libs/wxGTK:${WX_GTK_VER}"
 RDEPEND="${DEPEND}"
 
