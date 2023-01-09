@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=A language server for Markdown
+EAPI=8
+HOMEPAGE=https://github.com/artempyanykh/marksman
+KEYWORDS=~amd64
+LICENSE=MIT
+RESTRICT=strip mirror
+SLOT=0
+SRC_URI=https://github.com/artempyanykh/marksman/releases/download/2022-12-28/marksman-linux -> marksman-bin-2022.12.28
+_md5_=0e98bec02c3302c80abf685bf3deecb4
