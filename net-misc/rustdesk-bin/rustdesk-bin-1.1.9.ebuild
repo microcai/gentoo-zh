@@ -11,7 +11,8 @@ SRC_URI="https://github.com/rustdesk/rustdesk/releases/download/${PV}/rustdesk-$
 
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+RESTRICT="mirror strip"
+KEYWORDS="amd64"
 
 RDEPEND="
 	media-libs/alsa-lib
