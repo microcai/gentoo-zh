@@ -164,7 +164,7 @@ net-misc/nomachine-enterprise-client 7.8.2.1 7.9.2.1: NoMachine Enterprise Clien
 net-misc/pcmanx-gtk2 1.3 9999: PCMan is a gtk+ based free BBS client
 net-misc/postman-bin 9.6.1: Supercharge your API workflow
 net-misc/prips 1.0.0 1.2.0: print the IP addresses in a range
-net-misc/rustdesk-bin 1.1.9 1.2.0: Open source virtual / remote desktop infrastructure for everyone
+net-misc/rustdesk-bin 1.1.9 9999: Open source virtual / remote desktop infrastructure for everyone
 net-misc/you-get 9999: A video downloader for YouTube, Youku, niconico and a few other sites
 net-misc/youtube-dl 2021.06.06: Download videos from YouTube.com (and more sites...)
 net-p2p/amule-dlp 9999: aMule with DLP patch, the all-platform eMule p2p client
@@ -205,7 +205,7 @@ sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/ltfs 9999: LTFS for LTO tapes
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
-sys-kernel/liquorix-sources 6.1.3 6.1.4 6.1.4-r1: Liquorix kernel is best one for desktop, multimedia and gaming workloads
+sys-kernel/liquorix-sources 6.1.4-r1 6.1.5: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 33 34: Modular initramfs image creation utility
 sys-kernel/xanmod-kernel 5.15.75 6.1.2: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 6.0.11: XanMod RT sources and CJKTTY options.
