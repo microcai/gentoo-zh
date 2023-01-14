@@ -1,15 +1,15 @@
-BDEPEND=python_single_target_python3_8? ( >=dev-lang/python-3.8.16:3.8 ) python_single_target_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_single_target_python3_10? ( >=dev-lang/python-3.10.9:3.10 ) python_single_target_python3_8? ( >=dev-python/setuptools-65.5.1[python_targets_python3_8(-)] ) python_single_target_python3_9? ( >=dev-python/setuptools-65.5.1[python_targets_python3_9(-)] ) python_single_target_python3_10? ( >=dev-python/setuptools-65.5.1[python_targets_python3_10(-)] ) >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=python_single_target_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_single_target_python3_10? ( >=dev-lang/python-3.10.9:3.10 ) python_single_target_python3_9? ( >=dev-python/setuptools-65.5.1[python_targets_python3_9(-)] ) python_single_target_python3_10? ( >=dev-python/setuptools-65.5.1[python_targets_python3_10(-)] ) >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install prepare setup test unpack
 DESCRIPTION=GUI for snapper, a tool for Linux filesystem snapshot management
 EAPI=8
 HOMEPAGE=https://github.com/ricardomv/snapper-gui
 INHERIT=distutils-r1 git-r3
-IUSE=python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
+IUSE=python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS=~amd64
 LICENSE=GPL-2+
 PROPERTIES=live
-RDEPEND=app-backup/snapper python_single_target_python3_8? ( dev-python/dbus-python[python_targets_python3_8(-)] dev-python/pygobject[python_targets_python3_8(-)] ) python_single_target_python3_9? ( dev-python/dbus-python[python_targets_python3_9(-)] dev-python/pygobject[python_targets_python3_9(-)] ) python_single_target_python3_10? ( dev-python/dbus-python[python_targets_python3_10(-)] dev-python/pygobject[python_targets_python3_10(-)] ) x11-libs/gtksourceview:3.0 python_single_target_python3_8? ( >=dev-lang/python-3.8.16:3.8 ) python_single_target_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_single_target_python3_10? ( >=dev-lang/python-3.10.9:3.10 )
-REQUIRED_USE=^^ ( python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10 ) ^^ ( python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10 )
+RDEPEND=app-backup/snapper python_single_target_python3_9? ( dev-python/dbus-python[python_targets_python3_9(-)] dev-python/pygobject[python_targets_python3_9(-)] ) python_single_target_python3_10? ( dev-python/dbus-python[python_targets_python3_10(-)] dev-python/pygobject[python_targets_python3_10(-)] ) x11-libs/gtksourceview:3.0 python_single_target_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_single_target_python3_10? ( >=dev-lang/python-3.10.9:3.10 )
+REQUIRED_USE=^^ ( python_single_target_python3_9 python_single_target_python3_10 ) ^^ ( python_single_target_python3_9 python_single_target_python3_10 )
 SLOT=0
-_eclasses_=out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	bddcb51b74f4a76724ff7cf8e7388869	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	7870d60e8b98856ef02d33397fd5ec0f	python-single-r1	75118e916668a74c660a13b0ecb22562	distutils-r1	dcd5f48510105eb95e550ab968147365	git-r3	2347f8fe2d392b2a091191f94be37e6f
+_eclasses_=out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	bddcb51b74f4a76724ff7cf8e7388869	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	a1a985ddd8795a8634b4b7f820b93143	python-single-r1	75118e916668a74c660a13b0ecb22562	distutils-r1	dcd5f48510105eb95e550ab968147365	git-r3	2347f8fe2d392b2a091191f94be37e6f
 _md5_=6d1a18d3a282b924b9770cc6b170a0cd

@@ -1,16 +1,16 @@
 DEFINED_PHASES=install setup unpack
-DEPEND=python_single_target_python3_8? ( >=dev-lang/python-3.8.16:3.8 ) python_single_target_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_single_target_python3_10? ( >=dev-lang/python-3.10.9:3.10 ) python_single_target_python3_11? ( >=dev-lang/python-3.11.1:3.11 ) app-emulation/deepin-wine-plugin[virtual-pkg]
+DEPEND=python_single_target_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_single_target_python3_10? ( >=dev-lang/python-3.10.9:3.10 ) python_single_target_python3_11? ( >=dev-lang/python-3.11.1:3.11 ) app-emulation/deepin-wine-plugin[virtual-pkg]
 DESCRIPTION=Deepin Wine Helper
 EAPI=8
 HOMEPAGE=https://www.deepin.org
 INHERIT=python-single-r1 unpacker
-IUSE=python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10 python_single_target_python3_11
+IUSE=python_single_target_python3_9 python_single_target_python3_10 python_single_target_python3_11
 KEYWORDS=~amd64
 LICENSE=LGPL-2.1
-RDEPEND=python_single_target_python3_8? ( >=dev-lang/python-3.8.16:3.8 ) python_single_target_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_single_target_python3_10? ( >=dev-lang/python-3.10.9:3.10 ) python_single_target_python3_11? ( >=dev-lang/python-3.11.1:3.11 ) app-emulation/deepin-wine-plugin[virtual-pkg]
-REQUIRED_USE=^^ ( python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10 python_single_target_python3_11 )
+RDEPEND=python_single_target_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_single_target_python3_10? ( >=dev-lang/python-3.10.9:3.10 ) python_single_target_python3_11? ( >=dev-lang/python-3.11.1:3.11 ) app-emulation/deepin-wine-plugin[virtual-pkg]
+REQUIRED_USE=^^ ( python_single_target_python3_9 python_single_target_python3_10 python_single_target_python3_11 )
 RESTRICT=test
 SLOT=0
 SRC_URI=https://home-store-packages.uniontech.com/appstore/pool/appstore/d/deepin-wine-helper/deepin-wine-helper_5.1.27-1_i386.deb
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	7870d60e8b98856ef02d33397fd5ec0f	python-single-r1	75118e916668a74c660a13b0ecb22562	unpacker	8bbea377a8dd2b5d5c8bc0d834ae6157
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	a1a985ddd8795a8634b4b7f820b93143	python-single-r1	75118e916668a74c660a13b0ecb22562	unpacker	8bbea377a8dd2b5d5c8bc0d834ae6157
 _md5_=a3d3fe573e83df5f064f40162a5bc934

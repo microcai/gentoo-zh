@@ -1,16 +1,16 @@
-BDEPEND=python_targets_python3_8? ( >=dev-lang/python-3.8.16:3.8 ) python_targets_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.9:3.10 ) >=dev-python/setuptools-65.5.1[python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?] >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=python_targets_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.9:3.10 ) >=dev-python/setuptools-65.5.1[python_targets_python3_9(-)?,python_targets_python3_10(-)?] >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install prepare test unpack
 DESCRIPTION=A video downloader for YouTube, Youku, niconico and a few other sites
 EAPI=7
 HOMEPAGE=http://www.soimort.org/you-get
 INHERIT=eutils distutils-r1 git-r3
-IUSE=python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
+IUSE=python_targets_python3_9 python_targets_python3_10
 KEYWORDS=~amd64 ~x86
 LICENSE=MIT
 PROPERTIES=live
-RDEPEND=python_targets_python3_8? ( >=dev-lang/python-3.8.16:3.8 ) python_targets_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.9:3.10 )
-REQUIRED_USE=|| ( python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 )
+RDEPEND=python_targets_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.9:3.10 )
+REQUIRED_USE=|| ( python_targets_python3_9 python_targets_python3_10 )
 RESTRICT=test
 SLOT=0
-_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	8f942ebdcf04334697649d4a0bf65a32	out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	bddcb51b74f4a76724ff7cf8e7388869	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	python-utils-r1	7870d60e8b98856ef02d33397fd5ec0f	python-r1	666be58f658d6b32affe30f80e39a49e	distutils-r1	dcd5f48510105eb95e550ab968147365	git-r3	2347f8fe2d392b2a091191f94be37e6f
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	8f942ebdcf04334697649d4a0bf65a32	out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	bddcb51b74f4a76724ff7cf8e7388869	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	python-utils-r1	a1a985ddd8795a8634b4b7f820b93143	python-r1	666be58f658d6b32affe30f80e39a49e	distutils-r1	dcd5f48510105eb95e550ab968147365	git-r3	2347f8fe2d392b2a091191f94be37e6f
 _md5_=ea551c4ac3c39f1c7158a1b00e5b95ec

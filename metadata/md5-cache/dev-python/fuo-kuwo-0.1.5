@@ -1,16 +1,16 @@
-BDEPEND=python_targets_python3_8? ( >=dev-lang/python-3.8.16:3.8 ) python_targets_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.9:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.1:3.11 ) >=dev-python/setuptools-65.5.1[python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?]
+BDEPEND=python_targets_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.9:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.1:3.11 ) >=dev-python/setuptools-65.5.1[python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?]
 DEFINED_PHASES=compile configure install prepare test
 DESCRIPTION=kuwo music support for feeluown
 EAPI=8
 HOMEPAGE=https://github.com/feeluown/feeluown-kuwo
 INHERIT=distutils-r1
-IUSE=python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11
+IUSE=python_targets_python3_9 python_targets_python3_10 python_targets_python3_11
 KEYWORDS=~amd64
 LICENSE=GPL-3
 PDEPEND=media-sound/feeluown
-RDEPEND=dev-python/marshmallow[python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/requests[python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] python_targets_python3_8? ( >=dev-lang/python-3.8.16:3.8 ) python_targets_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.9:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.1:3.11 )
-REQUIRED_USE=|| ( python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11 )
+RDEPEND=dev-python/marshmallow[python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/requests[python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] python_targets_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.9:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.1:3.11 )
+REQUIRED_USE=|| ( python_targets_python3_9 python_targets_python3_10 python_targets_python3_11 )
 SLOT=0
 SRC_URI=mirror://pypi/f/fuo-kuwo/fuo_kuwo-0.1.5.tar.gz
-_eclasses_=out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	bddcb51b74f4a76724ff7cf8e7388869	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	7870d60e8b98856ef02d33397fd5ec0f	python-r1	666be58f658d6b32affe30f80e39a49e	distutils-r1	dcd5f48510105eb95e550ab968147365
+_eclasses_=out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	bddcb51b74f4a76724ff7cf8e7388869	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	a1a985ddd8795a8634b4b7f820b93143	python-r1	666be58f658d6b32affe30f80e39a49e	distutils-r1	dcd5f48510105eb95e550ab968147365
 _md5_=3ea6c82e3c062818225b5cf9fc58d269
