@@ -4,6 +4,8 @@
 	<!-- maintainer-needed -->
 	<use>
 		<flag name='openssl'>Use openssl support</flag>
+		<flag name='cap'>Use libccap</flag>
+		<flag name='pcap'>Use libpcap</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">ntop/n2n</remote-id>
