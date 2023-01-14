@@ -5,10 +5,9 @@ EAPI=8
 
 DESCRIPTION="A Layer Two Peer-to-Peer VPN"
 
-inherit systemd cmake
+inherit systemd cmake git-r3
 
 HOMEPAGE="http://www.ntop.org/n2n/"
-SRC_URL="https://github.com/ntop/n2n/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
@@ -19,6 +18,8 @@ IUSE="
 	zstd
 	upnp
 "
+
+EGIT_REPO_URI="https://github.com/ntop/n2n.git"
 
 DEPEND="
 	acct-user/n2n
