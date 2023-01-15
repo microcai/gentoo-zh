@@ -1,0 +1,15 @@
+BDEPEND=virtual/pkgconfig >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=acct-user/n2n acct-group/n2n openssl? ( dev-libs/openssl ) cap? ( sys-libs/libcap ) pcap? ( net-libs/libpcap ) zstd? ( app-arch/zstd ) upnp? ( net-libs/miniupnpc net-libs/libnatpmp )
+DESCRIPTION=A Layer Two Peer-to-Peer VPN
+EAPI=8
+HOMEPAGE=http://www.ntop.org/n2n/
+INHERIT=systemd cmake git-r3
+IUSE=+openssl cap pcap zstd upnp
+LICENSE=GPL-3
+PROPERTIES=live
+RDEPEND=acct-user/n2n acct-group/n2n openssl? ( dev-libs/openssl ) cap? ( sys-libs/libcap ) pcap? ( net-libs/libpcap ) zstd? ( app-arch/zstd ) upnp? ( net-libs/miniupnpc net-libs/libnatpmp )
+RESTRICT=mirror
+SLOT=0
+_eclasses_=toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	systemd	5f4bb0758df2e483babf68cd517078ca	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	449b4785acace35308fe747fc939bde1	git-r3	2347f8fe2d392b2a091191f94be37e6f
+_md5_=d258beafe9cd14afc789f832b5cd75d2

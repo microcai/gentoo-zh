@@ -1,15 +1,16 @@
 BDEPEND=virtual/pkgconfig >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=acct-user/n2n acct-group/n2n openssl? ( dev-libs/openssl )
+DEPEND=acct-user/n2n acct-group/n2n openssl? ( dev-libs/openssl ) cap? ( sys-libs/libcap ) pcap? ( net-libs/libpcap ) zstd? ( app-arch/zstd ) upnp? ( net-libs/miniupnpc net-libs/libnatpmp )
 DESCRIPTION=A Layer Two Peer-to-Peer VPN
 EAPI=8
 HOMEPAGE=http://www.ntop.org/n2n/
 INHERIT=systemd cmake
-IUSE=+openssl
+IUSE=+openssl cap pcap zstd upnp
 KEYWORDS=amd64
 LICENSE=GPL-3
-RDEPEND=acct-user/n2n acct-group/n2n openssl? ( dev-libs/openssl )
+RDEPEND=acct-user/n2n acct-group/n2n openssl? ( dev-libs/openssl ) cap? ( sys-libs/libcap ) pcap? ( net-libs/libpcap ) zstd? ( app-arch/zstd ) upnp? ( net-libs/miniupnpc net-libs/libnatpmp )
+RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/ntop/n2n/archive/refs/tags/3.0.tar.gz -> n2n-3.0.tar.gz
 _eclasses_=toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	systemd	5f4bb0758df2e483babf68cd517078ca	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	449b4785acace35308fe747fc939bde1
-_md5_=0b5b46fb15987b836ddf8a2e6657cd43
+_md5_=2b83d79307f5272c8c8144a50d81ebcc

@@ -8,6 +8,6 @@ IUSE=X
 KEYWORDS=~amd64
 LICENSE=IPAfont
 SLOT=0
-SRC_URI=https://github.com/lxgw/LxgwNeoXiHei/releases/download/v1.002/LXGWFasmartGothic.ttf https://github.com/lxgw/LxgwNeoXiHei/releases/download/v1.002/LXGWNeoXiHei.ttf
+SRC_URI=https://github.com/lxgw/LxgwNeoXiHei/releases/download/v1.003/LXGWFasmartGothic.ttf https://github.com/lxgw/LxgwNeoXiHei/releases/download/v1.003/LXGWNeoXiHei.ttf
 _eclasses_=font	5e03cb70902daa9ff8967c61130f0f60
 _md5_=9b293b6317ff3dc23704c17ab22d848c
