@@ -10,5 +10,5 @@ LICENSE=GPL-2
 RDEPEND=kernel_linux? ( sys-apps/kmod[tools] dist-kernel? ( virtual/dist-kernel:= ) )
 SLOT=0
 SRC_URI=https://github.com/ocerman/zenpower/archive/v0.1.12.tar.gz -> zenpower-0.1.12.tar.gz
-_eclasses_=toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	linux-info	7e4d48a3c6c8ebdaa9f7f9e7d2991e22	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	linux-mod	a138af023f7507b676b0aec9fe4b1e83
+_eclasses_=toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	linux-info	4b552625ebd741dfd2ac08637fd2436e	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	linux-mod	a138af023f7507b676b0aec9fe4b1e83
 _md5_=8e1832ae8b0de177fe543b8cc43d222c
