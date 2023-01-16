@@ -12,5 +12,5 @@ RDEPEND=media-libs/fontconfig media-libs/libglvnd || ( media-libs/tiff:0/0 media
 RESTRICT=strip mirror bindist
 SLOT=0
 SRC_URI=https://home-store-packages.uniontech.com/appstore/pool/appstore/c/com.zwsoft.zwcad2023/com.zwsoft.zwcad2023_23.0.3.4_amd64.deb -> zwcad-2023.23.0.3.4.deb https://anaconda.org/anaconda/python/3.7.13/download/linux-64/python-3.7.13-h12debd9_0.tar.bz2 -> zwcad-python-3.7.13.tar.bz2
-_eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	8bbea377a8dd2b5d5c8bc0d834ae6157	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	fdd15d854bf5e84f82d35524ab8ca6ba	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
 _md5_=086d266807edf5b33cf8e64d583b2129
