@@ -38,7 +38,7 @@ app-i18n/libgooglepinyin 0.1.2-r1: A fork from google pinyin on android
 app-i18n/libime 1.0.16 9999: Fcitx5 Next generation of fcitx
 app-i18n/lunar 2.2-r5: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
-app-i18n/mozc 2.26.4220_p20201212102434_p20201219202429 2.26.4632_p20220213064411_p20220214004422 9999: Mozc - Japanese input method editor
+app-i18n/mozc 2.26.4220_p20201212102434_p20201219202429 2.26.4632_p20220213064411_p20220214004422: Mozc - Japanese input method editor
 app-i18n/rime-prelude 20220122: Essential files for building up your Rime configuration
 app-i18n/sogoupinyin 4.0.1.2123: Sogou Pinyin input method.
 app-i18n/wlpinyin 9999: Experimental chinese wayland input method(IME)
