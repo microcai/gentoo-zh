@@ -1,4 +1,4 @@
-#Copyright 1999-2022 Gentoo Authors
+# Copyright 2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -39,9 +39,7 @@ SRC_URI="
 KEYWORDS="~amd64"
 RESTRICT="strip"
 
-LICENSE="MIT"
-# Dependent crate licenses
-LICENSE+=" MIT Unicode-DFS-2016"
+LICENSE="Apache-2.0 Apache-2.0-with-LLVM-exceptions MIT Unicode-DFS-2016"
 SLOT="0"
 
 RDEPEND="
@@ -55,6 +53,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	xdg_pkg_postinst
 	elog "install net-misc/youtube-dl (recommended) or net-misc/yt-dlp"
 	elog "to enable mpv to play video and music from the websites."
 }
