@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
+DESCRIPTION=Full XanMod source, including the Gentoo patchset and other patch options.
+EAPI=8
+HOMEPAGE=https://xanmod.org https://github.com/zhmars/cjktty-patches https://github.com/hamadmarri/TT-CPU-Scheduler
+INHERIT=kernel-2
+IUSE=cjktty symlink build
+KEYWORDS=~amd64
+LICENSE=GPL-2 CDDL
+RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-devel/flex sys-devel/make >=sys-libs/ncurses-5.2 virtual/libelf virtual/pkgconfig )
+RESTRICT=binchecks strip
+SLOT=edge
+SRC_URI=https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.1.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.1-7.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.1-7.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.1-7.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.1-7.extras.tar.xz https://github.com/xanmod/linux/releases/download//6.1.5-xanmod1/patch-6.1.5-xanmod1.xz https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v6.x//cjktty-6.1.patch
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	kernel-2	12a98c718ba8260077000c13b965ba1b
+_md5_=6c9fc5e4f84ccf67c4e312cab78fcb4d
