@@ -40,7 +40,6 @@ app-i18n/lunar 2.2-r5: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
 app-i18n/mozc 2.26.4220_p20201212102434_p20201219202429 2.26.4632_p20220213064411_p20220214004422: Mozc - Japanese input method editor
 app-i18n/rime-prelude 20220122: Essential files for building up your Rime configuration
-app-i18n/sogoupinyin 4.0.1.2123: Sogou Pinyin input method.
 app-i18n/wlpinyin 9999: Experimental chinese wayland input method(IME)
 app-i18n/zh-autoconvert 0.3.16-r5: Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 app-misc/bcompare 4.4.4.27058: Beyond Compare -- Compare, sync, and merge files and folders
