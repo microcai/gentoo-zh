@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-01-17 14:48:52 CST)
+(The last generation time: 2023-01-18 07:42:59 CST)
 
 ### Packages
 
@@ -59,6 +59,12 @@
    app-i18n/fcitx-hangul                      | 5.0.10                                    | RD     | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
    app-i18n/fcitx-rime                        | 5.0.15                                    | RD     | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
                                               | 9999                                      |        |                                                                                         |
+     app-i18n/fcitx                           | 4.2.9.8                                   |  D, RD | https://fcitx-im.org/                                                                   | Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
+                                              | 5.0.20                                    |        |                                                                                         |
+                                              | 5.0.21                                    |        |                                                                                         |
+                                              | 9999                                      |        |                                                                                         |
+       x11-libs/xcb-imdkit                    | 1.0.3                                     |  D, RD | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
+                                              | 1.0.4                                     |        |                                                                                         |
      app-i18n/rime-prelude                    | 20220122                                  |  D, RD | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
    app-i18n/fcitx-skk                         | 5.0.14                                    | RD     | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
                                               | 9999                                      |        |                                                                                         |
@@ -78,15 +84,6 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/mozc                                | 2.26.4220_p20201212102434_p20201219202429 |        | https://github.com/google/mozc                                                          | Mozc - Japanese input method editor
                                               | 2.26.4632_p20220213064411_p20220214004422 |        |                                                                                         |
-----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/sogoupinyin                         | 4.0.1.2123                                |        | http://pinyin.sogou.com/linux/                                                          | Sogou Pinyin input method.
-   app-i18n/fcitx                             | 4.2.9.8                                   |  D, RD | https://fcitx-im.org/                                                                   | Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
-                                              | 5.0.20                                    |        |                                                                                         |
-                                              | 5.0.21                                    |        |                                                                                         |
-                                              | 9999                                      |        |                                                                                         |
-     x11-libs/xcb-imdkit                      | 1.0.3                                     |  D, RD | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
-                                              | 1.0.4                                     |        |                                                                                         |
-   net-dns/libidn11                           | 1.33                                      |  D, RD | https://www.gnu.org/software/libidn/                                                    | Internationalized Domain Names (IDN) implementation
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/wlpinyin                            | 9999                                      |        | https://github.com/xhebox/wlpinyin                                                      | Experimental chinese wayland input method(IME)
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -305,6 +302,8 @@
  net-dns/chinadns                             | 1.3.2                                     |        | https://github.com/clowwindy/ChinaDNS                                                   | Protect yourself against DNS poisoning in China
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/dnsmasq-china-list                   | 9999                                      |        | https://github.com/felixonmars/dnsmasq-china-list                                       | Chinese-specific configuration to improve your favorite DNS server.
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ net-dns/libidn11                             | 1.33                                      |        | https://www.gnu.org/software/libidn/                                                    | Internationalized Domain Names (IDN) implementation
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/mosdns-cn-bin                        | 1.4.0                                     |        | https://github.com/IrineSistiana/mosdns-cn                                              | A DNS forwarder
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
