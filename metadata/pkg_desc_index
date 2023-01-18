@@ -141,7 +141,7 @@ media-sound/termusic 0.7.6 0.7.7: Terminal Music Player written in Rust.
 media-sound/yesplaymusic-bin 0.4.4-r1 0.4.5: A third party music player for Netease Music
 media-sound/youtube-music-bin 1.18.0: YouTube Music Desktop App bundled with custom plugins
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
-media-video/mpv-handler 0.3.1: A protocol handler for mpv, written by Rust.
+media-video/mpv-handler 0.3.2: A protocol handler for mpv, written by Rust.
 media-video/tenvideo 1.0.10: Tencent videos
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
@@ -232,7 +232,7 @@ x11-misc/ly 0.5.3 9999: Ly - a TUI display manager
 x11-misc/picom-jonaburg 8 9999: A lightweight compositor for X11 (previously a compton fork)
 x11-plugins/vicious 9999: Modular widget library for x11-wm/awesome
 x11-terms/wezterm-bin 20221119: A terminal emulator and multiplexer implemented in Rust
-x11-themes/fcitx5-breeze 1.0.0 2.0.0-r1: Fcitx5 theme to match KDE's Breeze style.
+x11-themes/fcitx5-breeze 1.0.0 2.0.0-r2: Fcitx5 theme to match KDE's Breeze style.
 x11-themes/lxice 0.1.0: LXDE theme for IceWM
 x11-themes/nordic 2.1.0 2.2.0-r1: Dark Gtk3.20+ theme created using the awesome Nord color pallete
 x11-themes/nordzy-cursors 0.5.0 0.6.0: Cursor theme using the Nord color palette and based on Vimix and cz-Viator
