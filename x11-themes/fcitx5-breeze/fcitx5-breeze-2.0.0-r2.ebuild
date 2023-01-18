@@ -12,15 +12,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="
-	media-gfx/imagemagick[png,svg]"
+	media-gfx/inkscape"
 RDEPEND="
 	app-i18n/fcitx:5"
 BDEPEND=""
-
-src_prepare() {
-	sed "s,convert -o \"..\/build\/\$outfile\",convert,g" -i build.sh || die
-	eapply_user
-}
 
 src_compile() {
 	./build.sh
