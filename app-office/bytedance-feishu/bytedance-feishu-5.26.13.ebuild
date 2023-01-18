@@ -1,4 +1,4 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -69,7 +69,6 @@ src_install() {
 	fperms +x "/opt/bytedance/feishu/vulcan/vulcan"
 
 }
-
 pkg_postinst(){
 	xdg_pkg_postinst
 }
