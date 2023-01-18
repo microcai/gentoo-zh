@@ -50,7 +50,7 @@ app-misc/rmtrash 1.14: trash-put made compatible to GNUs rm and rmdir
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/yq-bin 4.28.2 4.30.6: yq is a portable command-line YAML, JSON and XML processor
 app-mobilephone/scrcpy 1.24 1.25: Display and control your Android device
-app-office/bytedance-feishu 4.11.6.2 5.9.18 5.14.14: feishu - ByteDance's enterprise collaboration platform
+app-office/bytedance-feishu 4.11.6.2 5.9.18 5.14.14 5.26.13: feishu - ByteDance's enterprise collaboration platform
 app-office/freeoffice 1058 1060: A complete, free Microsoft Office-compatible alternative office suite.
 app-office/wps-office 11.1.0.10976-r1 11.1.0.11664-r1: WPS Office is an office productivity suite, Here is the Chinese version
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
