@@ -823,6 +823,7 @@ regex = "The current version of <strong>prips</strong> is <strong>([\\d.]+)</str
 source = "github"
 github = "ntop/n2n"
 use_latest_release = true
+github_account = "st0nie"
 
 ["net-p2p/qbittorrent-enhanced"]
 source = "github"
