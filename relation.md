@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-01-19 17:52:28 CST)
+(The last generation time: 2023-01-19 19:42:17 CST)
 
 ### Packages
 
@@ -474,8 +474,8 @@
                                               | 6.1.2                                     |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                        | 3-r11                                     |        |                                                                                         | Virtual for Linux kernel sources
-   sys-kernel/liquorix-sources                | 6.1.5                                     | RD     | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
-                                              | 6.1.6                                     |        |                                                                                         |
+   sys-kernel/liquorix-sources                | 6.1.6                                     | RD     | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
+                                              | 6.1.7                                     |        |                                                                                         |
    sys-kernel/xanmod-kernel                   | 5.15.75                                   | RD     | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
                                               | 6.1.2                                     |        |                                                                                         |
    sys-kernel/xanmod-rt                       | 6.0.11                                    | RD     | https://xanmod.org                                                                      | XanMod RT sources and CJKTTY options.
