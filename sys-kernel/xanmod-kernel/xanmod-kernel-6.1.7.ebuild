@@ -1,13 +1,14 @@
-# Copyright 2020-2022 Gentoo Authors
+# Copyright 2020-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 inherit kernel-build python-any-r1 toolchain-funcs
 
+PYTHON_COMPAT=( python3_{9..11} )
 MY_P=linux-${PV%.*}
 #Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
-GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 4))
+GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 1))
 XV="1"
 
 DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
@@ -16,20 +17,15 @@ SRC_URI+=" https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.x
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.base.tar.xz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.extras.tar.xz
 	https://github.com/xanmod/linux/releases/download/${PV}-xanmod${XV}/patch-${PV}-xanmod${XV}.xz
-	https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x/cjktty-${PV%.*}.patch"
+	https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v6.x/cjktty-${PV%.*}.patch"
 S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64"
-IUSE="cjk clang debug"
-SLOT="stable"
+IUSE="cjk clang debug x86-64-v1 x86-64-v2 x86-64-v3 x86-64-v4"
+REQUIRED_USE="^^ ( x86-64-v1 x86-64-v2 x86-64-v3 x86-64-v4 )"
+SLOT="edge"
 
-BDEPEND="
-	clang? (
-		sys-devel/clang
-		sys-devel/lld
-		sys-devel/llvm
-		)"
 PDEPEND="
 	>=virtual/dist-kernel-${PV}"
 
@@ -59,11 +55,13 @@ pkg_setup() {
 	else
 		tc-export CXX CC
 	fi
+
 }
 
 src_prepare() {
 	# delete linux version patches
 	rm "${WORKDIR}"/*${MY_P}*.patch || die
+
 	local PATCHES=(
 		# genpatches
 		"${WORKDIR}"/*.patch
@@ -78,10 +76,18 @@ src_prepare() {
 	# prepare the default config
 	case ${ARCH} in
 	amd64)
-		if use clang; then
-			cp "${S}/CONFIGS/xanmod/clang/config" .config || die
-		else
-			cp "${S}/CONFIGS/xanmod/gcc/config" .config || die
+		if use x86-64-v1; then
+			cp "${S}/CONFIGS/xanmod/gcc/config_x86-64-v1" .config || die
+			XV="${XV}-x64v1"
+		elif use x86-64-v2; then
+			cp "${S}/CONFIGS/xanmod/gcc/config_x86-64-v2" .config || die
+			XV="${XV}-x64v2"
+		elif use x86-64-v3; then
+			cp "${S}/CONFIGS/xanmod/gcc/config_x86-64-v3" .config || die
+			XV="${XV}-x64v3"
+		elif use x86-64-v4; then
+			cp "${S}/CONFIGS/xanmod/gcc/config_x86-64-v4" .config || die
+			XV="${XV}-x64v4"
 		fi
 		;;
 	*)
