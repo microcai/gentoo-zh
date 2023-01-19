@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-01-19 10:07:08 CST)
+(The last generation time: 2023-01-19 17:52:28 CST)
 
 ### Packages
 
@@ -371,6 +371,7 @@
    net-p2p/amule-dlp                          | 9999                                      | RD     | https://github.com/persmule/amule-dlp                                                   | aMule with DLP patch, the all-platform eMule p2p client
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-p2p/n2n                                  | 3.0                                       |        | http://www.ntop.org/n2n/                                                                | A Layer Two Peer-to-Peer VPN
+                                              | 3.1.1                                     |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
    acct-group/n2n                             | 0                                         |  D, RD |                                                                                         | A Layer Two Peer-to-Peer VPN
    acct-user/n2n                              | 0                                         |  D, RD |                                                                                         | A Layer Two Peer-to-Peer VPN
