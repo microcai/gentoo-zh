@@ -31,6 +31,7 @@ RDEPEND="
 	app-accessibility/at-spi2-core:2
 	app-crypt/libsecret
 	virtual/krb5
+	sys-apps/keyutils
 	bwrap? ( sys-apps/bubblewrap )
 "
 
