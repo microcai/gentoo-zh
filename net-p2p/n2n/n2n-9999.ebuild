@@ -38,7 +38,7 @@ src_configure() {
 		-DBUILD_SHARED_LIBS=OFF
 		-DN2N_OPTION_USE_OPENSSL="$(usex openssl ON OFF)"
 		-DN2N_OPTION_USE_OPENSSL="$(usex openssl ON OFF)"
-		-DN2N_OPTION_USE_CAPLIB="$(usex cap ON OFF)"
+		-DN2N_OPTION_USE_CAPLIB="$(usex caps ON OFF)"
 		-DN2N_OPTION_USE_PCAPLIB="$(usex pcap ON OFF)"
 		-DN2N_OPTION_USE_ZSTD="$(usex zstd ON OFF)"
 		-DN2N_OPTION_USE_PORTMAPPING="$(usex upnp ON OFF)"
