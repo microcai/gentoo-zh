@@ -14,7 +14,7 @@ KEYWORDS=""
 RESTRICT="mirror"
 IUSE="
 	+openssl
-	cap
+	caps
 	pcap
 	zstd
 	upnp
@@ -26,7 +26,7 @@ DEPEND="
 	acct-user/n2n
 	acct-group/n2n
 	openssl? ( dev-libs/openssl )
-	cap? ( sys-libs/libcap )
+	caps? ( sys-libs/libcap )
 	pcap? ( net-libs/libpcap )
 	zstd? ( app-arch/zstd )
 	upnp? ( net-libs/miniupnpc net-libs/libnatpmp )
