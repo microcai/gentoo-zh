@@ -10,5 +10,5 @@ RDEPEND=!net-proxy/v2ray-bin dev-libs/v2ray-geoip-bin dev-libs/v2ray-domain-list
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/v2fly/v2ray-core/archive/refs/tags/v5.1.0.tar.gz -> v2ray-5.1.0.tar.gz https://github.com/CHN-beta/gentoo-go-dep/releases/download/v2ray-5.1.0/v2ray-5.1.0-deps.tar.xz
-_eclasses_=toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	systemd	5f4bb0758df2e483babf68cd517078ca	go-module	fdf8c78611f9efa20d26b955399a44c7
+_eclasses_=toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	systemd	5f4bb0758df2e483babf68cd517078ca	go-module	75029f071ebc843223233ab1b0a2d4a5
 _md5_=4cbadd9afe1c2bf7fdddc5a88404b6f0
