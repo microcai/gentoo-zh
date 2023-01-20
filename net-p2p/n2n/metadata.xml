@@ -3,11 +3,11 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<name>ston</name>
-		<email>2424284164@qq.com</email>
+		<email>ston.jia@qq.com</email>
 	</maintainer>
 	<use>
 		<flag name='openssl'>Use openssl support</flag>
-		<flag name='cap'>Use libccap support</flag>
+		<flag name='caps'>Use libcap support</flag>
 		<flag name='pcap'>Use libpcap support</flag>
 		<flag name='zstd'>Use zstd support</flag>
 		<flag name='upnp'>Use miniupnpc and libnatpmp support</flag>
