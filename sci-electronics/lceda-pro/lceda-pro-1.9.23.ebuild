@@ -9,7 +9,7 @@ DESCRIPTION="嘉立创EDA(专业版) - 高效的国产PCB设计工具"
 HOMEPAGE="https://lceda.cn/"
 
 RESTRICT="mirror"
-LICENSE="all-rights-reserved"
+LICENSE="LCEDA-EULA"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~loong"
 SRC_URI="

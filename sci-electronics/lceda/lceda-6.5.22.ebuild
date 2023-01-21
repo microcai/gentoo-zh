@@ -11,7 +11,7 @@ SRC_URI="https://image.lceda.cn/files/${PN}-linux-x64-${PV}.zip"
 
 RESTRICT="mirror"
 
-LICENSE="all-rights-reserved"
+LICENSE="LCEDA-EULA"
 SLOT="0"
 KEYWORDS="~amd64"
 
