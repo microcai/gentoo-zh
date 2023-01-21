@@ -79,7 +79,7 @@ src_install() {
 	# Link system binaries
 	for binary in xzcat hexdump; do
 		dosym -r /usr/bin/$binary /opt/ventoy/tool/$CARCH/$binary
-		fperm 0755 /opt/ventoy/tool/$CARCH/$binary
+		fperms 0755 /opt/ventoy/tool/$CARCH/$binary
 	done
 
 	dobin "${FILESDIR}"/ventoy{,gui,web,plugson,-{,extend-}persistent}
