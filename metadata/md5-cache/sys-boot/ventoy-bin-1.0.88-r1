@@ -12,4 +12,4 @@ RESTRICT=strip mirror
 SLOT=0
 SRC_URI=https://github.com/ventoy/Ventoy/releases/download/v1.0.88/ventoy-1.0.88-linux.tar.gz
 _eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
-_md5_=1b30b7683dda563c5ca29b14890df001
+_md5_=410ae77de52a19f6e6a32aa481e699c8
