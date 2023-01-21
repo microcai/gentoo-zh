@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-01-21 18:21:03 CST)
+(The last generation time: 2023-01-22 00:17:14 CST)
 
 ### Packages
 
@@ -288,6 +288,8 @@
    media-plugins/osdlyrics                    | 0.5.10-r1                                 | RD     | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
                                               | 0.5.11                                    |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ media-sound/qqmusic                          | 1.1.5                                     |        | https://y.qq.com/                                                                       | Tencent QQ Music, converted from .deb package
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/termusic                         | 0.7.6                                     |        | https://github.com/tramhao/termusic                                                     | Terminal Music Player written in Rust.
                                               | 0.7.7                                     |        |                                                                                         |
