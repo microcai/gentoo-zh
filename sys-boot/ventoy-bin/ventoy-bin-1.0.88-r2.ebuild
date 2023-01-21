@@ -18,7 +18,7 @@ RESTRICT="strip mirror"
 
 DEPEND="
 	sys-fs/dosfstools
-	sys-fs/exfatprogs
+	sys-fs/exfat-utils
 	sys-block/parted
 "
 RDEPEND="${DEPEND}"
@@ -32,7 +32,7 @@ src_prepare() {
 	pushd tool/$CARCH || die
 	for file in *.xz; do
 		xzcat "$file" >"${file%.xz}" || die
-		fperms +x "${file%.xz}"
+		chmod +x "${file%.xz}" || die
 	done
 
 	# Cleanup .xz crap
@@ -79,7 +79,6 @@ src_install() {
 	# Link system binaries
 	for binary in xzcat hexdump; do
 		dosym -r /usr/bin/$binary /opt/ventoy/tool/$CARCH/$binary
-		fperms 0755 /opt/ventoy/tool/$CARCH/$binary
 	done
 
 	dobin "${FILESDIR}"/ventoy{,gui,web,plugson,-{,extend-}persistent}
