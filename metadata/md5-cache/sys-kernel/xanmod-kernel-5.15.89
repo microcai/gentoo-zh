@@ -8,10 +8,10 @@ INHERIT=kernel-build python-any-r1 toolchain-funcs
 IUSE=cjk clang debug savedconfig +initramfs test
 KEYWORDS=~amd64
 LICENSE=GPL-2
-PDEPEND=>=virtual/dist-kernel-5.15.75
+PDEPEND=>=virtual/dist-kernel-5.15.89
 RDEPEND=virtual/libelf
 RESTRICT=!test? ( test ) test? ( userpriv ) arm? ( test )
 SLOT=stable
-SRC_URI=https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.15.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-79.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-79.extras.tar.xz https://github.com/xanmod/linux/releases/download/5.15.75-xanmod1/patch-5.15.75-xanmod1.xz https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x/cjktty-5.15.patch
+SRC_URI=https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.15.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-93.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-93.extras.tar.xz https://github.com/xanmod/linux/releases/download/5.15.89-xanmod1/patch-5.15.89-xanmod1.xz https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x/cjktty-5.15.patch
 _eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	a1a985ddd8795a8634b4b7f820b93143	python-any-r1	d2955aaac8daaaa69fcc6dc93ed19f29	portability	58227860123d3e8da23290064ce3373e	savedconfig	4011d8d7370446e970e2c92b20a31341	dist-kernel-utils	557a93bd51735200952a735894f6628e	mount-boot	02a45c5e022c08dbc05178522b2772f2	kernel-install	8b73c5cb30e5d76184a7f46acb1a7688	kernel-build	e8aabe0ea0c0ca1de81a0b7357fea0b5
-_md5_=450f32610f77565c865d490136c27102
+_md5_=1e85a3dbfcd857a874126c6c8c37c47b
