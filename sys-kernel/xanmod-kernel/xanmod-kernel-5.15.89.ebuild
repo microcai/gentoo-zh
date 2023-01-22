@@ -1,13 +1,14 @@
-# Copyright 2020-2023 Gentoo Authors
+# Copyright 2020-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit kernel-build python-any-r1
+inherit kernel-build python-any-r1 toolchain-funcs
 
+PYTHON_COMPAT=( python3_{9..11} )
 MY_P=linux-${PV%.*}
 #Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
-GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 1))
+GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 4))
 XV="1"
 
 DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
@@ -16,14 +17,20 @@ SRC_URI+=" https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.x
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.base.tar.xz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.extras.tar.xz
 	https://github.com/xanmod/linux/releases/download/${PV}-xanmod${XV}/patch-${PV}-xanmod${XV}.xz
-	https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v6.x/cjktty-${PV%.*}.patch"
+	https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v5.x/cjktty-${PV%.*}.patch"
 S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64"
-IUSE="cjk debug"
-SLOT="edge"
+IUSE="cjk clang debug"
+SLOT="stable"
 
+BDEPEND="
+	clang? (
+		sys-devel/clang
+		sys-devel/lld
+		sys-devel/llvm
+		)"
 PDEPEND="
 	>=virtual/dist-kernel-${PV}"
 
@@ -39,12 +46,25 @@ pkg_setup() {
 	ewarn "the ebuilds. Thank you."
 	ewarn ""
 	python-any-r1_pkg_setup "$@"
+	if use clang && ! tc-is-clang; then
+		export LLVM_IAS=1
+		export LLVM=1
+		export CC=clang
+		export LD=ld.lld
+		export AR=llvm-ar
+		export NM=llvm-nm
+		export OBJCOPY=llvm-objcopy
+		export OBJDUMP=llvm-objdump
+		export READELF=llvm-readelf
+		export STRIP=llvm-strip
+	else
+		tc-export CXX CC
+	fi
 }
 
 src_prepare() {
 	# delete linux version patches
 	rm "${WORKDIR}"/*${MY_P}*.patch || die
-
 	local PATCHES=(
 		# genpatches
 		"${WORKDIR}"/*.patch
@@ -59,7 +79,11 @@ src_prepare() {
 	# prepare the default config
 	case ${ARCH} in
 	amd64)
-		cp "${S}/CONFIGS/xanmod/gcc/config_x86-64-v1" .config || die
+		if use clang; then
+			cp "${S}/CONFIGS/xanmod/clang/config" .config || die
+		else
+			cp "${S}/CONFIGS/xanmod/gcc/config" .config || die
+		fi
 		;;
 	*)
 		die "Unsupported arch ${ARCH}"
