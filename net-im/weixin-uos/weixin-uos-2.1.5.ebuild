@@ -8,7 +8,7 @@ inherit unpacker desktop xdg
 DESCRIPTION="UOS weixin"
 HOMEPAGE="https://www.chinauos.com/resource/download-professional"
 
-KEYWORDS="-* ~amd64 ~arm64 ~loong"
+KEYWORDS="-* ~amd64 ~arm64"
 
 SRC_URI="
 	amd64? ( https://home-store-packages.uniontech.com/appstore/pool/appstore/c/com.qq.weixin/com.tencent.weixin_${PV}_amd64.deb )
