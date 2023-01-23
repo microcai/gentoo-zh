@@ -584,7 +584,7 @@ prefix = "v"
 source = "github"
 github = "Fitzgerald-Porthmouth-Koenigsegg/Plangothic"
 use_latest_release = true
-prefix = "v"
+prefix = "V"
 github_account = "st0nie"
 
 ["media-fonts/sarasa-gothic"]
