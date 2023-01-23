@@ -11,11 +11,11 @@ HOMEPAGE="https://lceda.cn/"
 RESTRICT="mirror"
 LICENSE="LCEDA-EULA"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~loong"
+
+KEYWORDS="~amd64 ~arm64"
 SRC_URI="
 	amd64?	( https://image.lceda.cn/files/${PN}-linux-x64-${PV}.zip )
 	arm64?	( https://image.lceda.cn/files/${PN}-linux-arm64-${PV}.zip )
-	loong?	( https://image.lceda.cn/files/${PN}-linux-loong64-${PV}.zip )
 "
 
 DEPEND=""
