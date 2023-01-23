@@ -580,6 +580,13 @@ github = "ryanoasis/nerd-fonts"
 use_latest_release = true
 prefix = "v"
 
+["media-fonts/Plangothic"]
+source = "github"
+github = "Fitzgerald-Porthmouth-Koenigsegg/Plangothic"
+use_latest_release = true
+prefix = "v"
+github_account = "st0nie"
+
 ["media-fonts/sarasa-gothic"]
 source = "github"
 github = "be5invis/sarasa-gothic"
