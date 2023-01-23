@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-01-23 18:08:07 CST)
+(The last generation time: 2023-01-23 20:48:47 CST)
 
 ### Packages
 
@@ -214,7 +214,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  mail-client/thunderbird                      | 106.0-r5                                  |        | https://www.thunderbird.net                                                             | Thunderbird Mail Client
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/Plangothic                       | 0.7.5708                                  |        | https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic                          | 遍黑体项目（Plangothic Project）
+ media-fonts/Plangothic                       | 0.7.5720                                  |        | https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic                          | 遍黑体项目（Plangothic Project）
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/cwtex-q-fonts                    | 0.2                                       |        | https://code.google.com/p/cwtex-q-fonts/                                                | Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
