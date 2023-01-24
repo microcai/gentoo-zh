@@ -10,18 +10,18 @@ CRATES="
 	dirs-4.0.0
 	dirs-sys-0.3.7
 	getrandom-0.2.8
-	libc-0.2.137
-	proc-macro2-1.0.47
-	quote-1.0.21
+	libc-0.2.139
+	proc-macro2-1.0.50
+	quote-1.0.23
 	redox_syscall-0.2.16
 	redox_users-0.4.3
-	serde-1.0.147
-	serde_derive-1.0.147
-	syn-1.0.103
-	thiserror-1.0.37
-	thiserror-impl-1.0.37
-	toml-0.5.9
-	unicode-ident-1.0.5
+	serde-1.0.152
+	serde_derive-1.0.152
+	syn-1.0.107
+	thiserror-1.0.38
+	thiserror-impl-1.0.38
+	toml-0.5.11
+	unicode-ident-1.0.6
 	wasi-0.11.0+wasi-snapshot-preview1
 	winapi-0.3.9
 	winapi-i686-pc-windows-gnu-0.4.0
