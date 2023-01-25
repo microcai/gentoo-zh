@@ -145,7 +145,7 @@ media-sound/termusic 0.7.6 0.7.7: Terminal Music Player written in Rust.
 media-sound/yesplaymusic-bin 0.4.4-r1 0.4.5: A third party music player for Netease Music
 media-sound/youtube-music-bin 1.18.0: YouTube Music Desktop App bundled with custom plugins
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
-media-video/mpv-handler 0.3.2: A protocol handler for mpv, written by Rust.
+media-video/mpv-handler 0.3.3: A protocol handler for mpv, written by Rust.
 media-video/tenvideo 1.0.10: Tencent videos
 net-analyzer/besttrace-bin 1.3.2: 附带链路可视化的 traceroute 工具
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
