@@ -1,9 +1,9 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( python3_{9..11} )
 PYTHON_REQ_USE="sqlite,threads(+)"
 
 inherit unpacker xdg python-r1
@@ -41,8 +41,8 @@ RDEPEND="
 	')
 	gnome-base/gnome-desktop:3[introspection]
 	gnome-extra/zenity
-	media-sound/fluid-soundfont
 	net-libs/webkit-gtk:4[introspection]
+	media-sound/fluid-soundfont
 	x11-apps/mesa-progs
 	x11-apps/xrandr
 	x11-apps/xgamma
