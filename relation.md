@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-01-25 22:26:01 CST)
+(The last generation time: 2023-01-27 17:05:53 CST)
 
 ### Packages
 
@@ -207,7 +207,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  games-misc/oh-my-git-bin                     | 0.6.5                                     |        | https://ohmygit.org/                                                                    | An interactive Git learning game!
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- games-util/winegame-client-bin               | 0.5.9.4                                   |        | https://winegame.net/                                                                   | An open source gaming platform for GNU/Linux
+ games-util/winegame-client-bin               | 0.5.10.5                                  |        | https://winegame.net/                                                                   | An open source gaming platform for GNU/Linux
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  kde-misc/plasma-applet-netspeed-widget       | 1.9                                       |        | https://www.kde-look.org/p/998895/                                                      | Plasma 5 widget that displays the currently used network bandwidth.
                                               | 9999                                      |        |                                                                                         |
