@@ -104,7 +104,7 @@ dev-vcs/lazygit 0.35: lazygit, a simple terminal UI for git commands
 dev-vcs/lazygit-bin 0.35: lazygit, a simple terminal UI for git commands
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-misc/oh-my-git-bin 0.6.5: An interactive Git learning game!
-games-util/winegame-client-bin 0.5.9.4: An open source gaming platform for GNU/Linux
+games-util/winegame-client-bin 0.5.10.5: An open source gaming platform for GNU/Linux
 kde-misc/plasma-applet-netspeed-widget 1.9 9999: Plasma 5 widget that displays the currently used network bandwidth.
 mail-client/thunderbird 106.0-r5: Thunderbird Mail Client
 media-fonts/Plangothic 0.7.5720: 遍黑体项目（Plangothic Project）
@@ -216,7 +216,7 @@ sys-kernel/liquorix-sources 6.1.6 6.1.7: Liquorix kernel is best one for desktop
 sys-kernel/mkinitcpio 33 34: Modular initramfs image creation utility
 sys-kernel/xanmod-kernel 5.15.89 6.1.7: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 6.0.11: XanMod RT sources and CJKTTY options.
-sys-kernel/xanmod-sources 5.15.89 6.1.7: Full XanMod source, including the Gentoo patchset and other patch options.
+sys-kernel/xanmod-sources 5.15.89 6.1.8: Full XanMod source, including the Gentoo patchset and other patch options.
 sys-kernel/zenpower 0.1.12-r1: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libsolv 0.7.23 9999: Library for solving packages and reading repositories
