@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<longdescription lang="en">
+	JLC Order Assistant: This app provides convenience for you to place an
+	order, and quickly obtain discounts and order information, without waiting
+	for review on the website! Place an order in the order assistant and enjoy
+	a discount immediately!
+	</longdescription>
+	<longdescription lang="zh">
+	嘉立创下单助手:该应用为您下单提供便利，快速获取优惠及下单信息，
+	无需在网站等待审核审单！在下单助手下单立享打折优惠！
+	</longdescription>
+</pkgmetadata>
