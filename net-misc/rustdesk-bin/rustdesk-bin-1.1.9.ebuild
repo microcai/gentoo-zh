@@ -20,7 +20,9 @@ RDEPEND="
 	x11-libs/libxcb
 	x11-libs/libXfixes
 	media-sound/pulseaudio
-	x11-misc/xdotool"
+	x11-misc/xdotool
+	media-libs/libva
+"
 BDEPEND="app-arch/libarchive[zstd]"
 S=${WORKDIR}
 
