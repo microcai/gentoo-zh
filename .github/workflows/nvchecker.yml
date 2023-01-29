@@ -64,6 +64,7 @@ jobs:
 
     - name: update issues
       uses: actions/github-script@v6
+      timeout-minutes: 1
       env:
         pkgs: ${{steps.nvchecker.outputs.nvcmp}}
       with:
