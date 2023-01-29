@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-01-29 20:25:15 CST)
+(The last generation time: 2023-01-29 21:19:16 CST)
 
 ### Packages
 
@@ -365,7 +365,8 @@
  net-misc/prips                               | 1.0.0                                     |        | http://devel.ringlet.net/sysutils/prips/                                                | print the IP addresses in a range
                                               | 1.2.0                                     |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/rustdesk-bin                        | 1.1.9                                     |        | https://rustdesk.com/                                                                   | Open source virtual / remote desktop infrastructure for everyone
+ net-misc/remmina-plugin-rustdesk             | 1.0.0.0                                   |        | http://www.muflone.com/remmina-plugin-rustdesk/                                         | A protocol plugin for Remmina to launch a Rustdesk connection.
+   net-misc/rustdesk-bin                      | 1.1.9                                     |  D, RD | https://rustdesk.com/                                                                   | Open source virtual / remote desktop infrastructure for everyone
                                               | 9999                                      |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/you-get                             | 9999                                      |        | http://www.soimort.org/you-get                                                          | A video downloader for YouTube, Youku, niconico and a few other sites
