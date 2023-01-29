@@ -142,7 +142,7 @@ media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb 
 media-sound/netease-cloud-music-gtk 1.2.2 2.1.0 2.2.0: netease cloud music player based on Rust & GTK for Linux
 media-sound/qqmusic 1.1.5: Tencent QQ Music, converted from .deb package
 media-sound/termusic 0.7.6 0.7.7: Terminal Music Player written in Rust.
-media-sound/yesplaymusic-bin 0.4.4-r1 0.4.5: A third party music player for Netease Music
+media-sound/yesplaymusic-bin 0.4.5 0.4.6: A third party music player for Netease Music
 media-sound/youtube-music-bin 1.18.0: YouTube Music Desktop App bundled with custom plugins
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/mpv-handler 0.3.3: A protocol handler for mpv, written by Rust.
@@ -212,7 +212,7 @@ sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/ltfs 9999: LTFS for LTO tapes
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
-sys-kernel/liquorix-sources 6.1.6 6.1.7: Liquorix kernel is best one for desktop, multimedia and gaming workloads
+sys-kernel/liquorix-sources 6.1.7 6.1.8: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 33 34: Modular initramfs image creation utility
 sys-kernel/xanmod-kernel 5.15.89 6.1.7: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 6.0.11: XanMod RT sources and CJKTTY options.
