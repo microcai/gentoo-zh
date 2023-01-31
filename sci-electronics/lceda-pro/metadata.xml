@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>1758961307@qq.com</email>
+		<name>123485k</name>
+	</maintainer>
+	<longdescription lang="en">
+		Simple and efficient PCB design tools from China, free forever
+		Brand-new interactive routing engine, smooth and not stuck
+		Completely independent intellectual property rights, allowing you to focus on design with confidence
+		The EDA Tool of Choice for Next Generation Engineers
+	</longdescription>
+	<longdescription lang="zh">
+		简单、高效的国产PCB设计工具，永久免费
+		完全的独立自主知识产权，让您放心专注于设计
+		下一代工程师的首选EDA工具
+	</longdescription>
+</pkgmetadata>
