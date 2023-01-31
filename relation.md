@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-01-31 14:41:20 CST)
+(The last generation time: 2023-01-31 14:41:38 CST)
 
 ### Packages
 
@@ -324,7 +324,7 @@
    app-emulation/deepin-wine-helper           | 5.1.27-r1                                 |  D, RD | https://www.deepin.org                                                                  | Deepin Wine Helper
      app-emulation/deepin-wine-plugin         | 5.1.13-r1                                 |  D, RD | https://www.deepin.org                                                                  | Deepin Wine plugin
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-im/deepin-wine-wechat                    | 3.4.5.45                                  |        | https://aur.archlinux.org/packages/deepin-wine-wechat                                   | Tencent WeChat on Deepin Wine(com.qq.weixin.deepin) For Gentoo
+ net-im/deepin-wine-wechat                    | 3.8.1.26                                  |        | https://aur.archlinux.org/packages/deepin-wine-wechat                                   | Tencent WeChat on Deepin Wine(com.qq.weixin.deepin) For Gentoo
    app-emulation/deepin-wine6-stable          | 6.0.0.19-r1                               |  D, RD | https://www.deepin.org                                                                  | Deepin wine6 stable
      app-emulation/deepin-udis86              | 1.72-r4                                   | RD     | https://www.deepin.org                                                                  | Deepin Version of Wine
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
