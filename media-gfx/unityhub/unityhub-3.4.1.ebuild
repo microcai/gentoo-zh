@@ -15,12 +15,12 @@ KEYWORDS="~amd64"
 
 RESTRICT="mirror strip"
 
-IUSE="+appindicator -gconf"
+IUSE="+appindicator -gtk2"
 
 DEPEND="
 	appindicator? (
 		dev-libs/libdbusmenu
-		gconf? (
+		gtk2? (
 			dev-libs/libappindicator
 			gnome-base/gconf
 			x11-themes/gtk-engines-murrine
