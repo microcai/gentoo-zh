@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -46,7 +46,7 @@ RDEPEND="
 	media-libs/libogg
 	media-libs/libsndfile
 	media-libs/libvorbis
-	|| ( media-libs/tiff:0/0 media-libs/tiff-compat:4 )
+	media-libs/tiff-compat:4
 	media-sound/pulseaudio
 	net-libs/libasyncns
 	net-print/cups
