@@ -1,4 +1,4 @@
-BDEPEND=python_targets_pypy3? ( >=dev-python/pypy3-7.3.10-r1:0= ) python_targets_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.9:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.1:3.11 ) >=dev-python/setuptools-65.5.1[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?]
+BDEPEND=python_targets_pypy3? ( >=dev-python/pypy3-7.3.11-r1:0= ) python_targets_python3_9? ( >=dev-lang/python-3.9.16-r1:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.9-r1:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.1-r1:3.11 ) >=dev-python/setuptools-65.7.0[python_targets_pypy3(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?]
 DEFINED_PHASES=compile configure install prepare test
 DESCRIPTION=The daff can produce and apply tabular diffs
 EAPI=8
@@ -7,9 +7,9 @@ INHERIT=distutils-r1
 IUSE=python_targets_pypy3 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11
 KEYWORDS=~amd64 ~arm64 ~ia64 ~riscv ~sparc ~x86
 LICENSE=MIT
-RDEPEND=python_targets_pypy3? ( >=dev-python/pypy3-7.3.10-r1:0= ) python_targets_python3_9? ( >=dev-lang/python-3.9.16:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.9:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.1:3.11 )
+RDEPEND=python_targets_pypy3? ( >=dev-python/pypy3-7.3.11-r1:0= ) python_targets_python3_9? ( >=dev-lang/python-3.9.16-r1:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.9-r1:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.1-r1:3.11 )
 REQUIRED_USE=|| ( python_targets_pypy3 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11 )
 SLOT=0
 SRC_URI=mirror://pypi/d/daff/daff-1.3.46.tar.gz
-_eclasses_=out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	bddcb51b74f4a76724ff7cf8e7388869	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	toolchain-funcs	9a610728b9bcca1919234cceb35a1027	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	8d5c1c4ecef47fa1b4576a718c620d1d	python-r1	666be58f658d6b32affe30f80e39a49e	distutils-r1	dcd5f48510105eb95e550ab968147365
+_eclasses_=out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	bddcb51b74f4a76724ff7cf8e7388869	multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	9a610728b9bcca1919234cceb35a1027	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	python-utils-r1	429bfd4e8d8e39db5385ba5744f30788	python-r1	666be58f658d6b32affe30f80e39a49e	distutils-r1	5805686d488d821ed8d8d9367942c0f3
 _md5_=598ab345c605cd55a07382af04cf0fe5
