@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="+tun"
 
-RESTRICT="mirror"
+RESTRICT="mirror strip"
 
 QA_PRESTRIPPED="*"
 QA_PREBUILT="*"
@@ -38,8 +38,15 @@ src_install() {
 	domenu "${FILESDIR}/${PN}.desktop"
 	dosym -r "/opt/${PN}/cfw" "/usr/bin/cfw"
 	fperms 0755 "/opt/${PN}" -R
+	newinitd "${FILESDIR}"/clash-core-service.initd clash-core-service
 }
 
 pkg_postinst() {
+	elog
+	elog "For OpenRC user, if you need Service Mode, "
+	elog "please start and add clash daemon to default runlevel"
+	elog "# rc-service clash-core-service start"
+	elog "# rc-update add clash-core-service default"
+	elog
 	xdg_icon_cache_update
 }
