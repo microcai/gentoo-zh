@@ -43,7 +43,8 @@ pkg_setup() {
 		if use cpu_flags_x86_sse3 && use cpu_flags_x86_sse4_1 && use cpu_flags_x86_sse4_2 && use cpu_flags_x86_ssse3
 		then
 			GOAMD64_V="v2"
-			if use cpu_flags_x86_avx && use cpu_flags_x86_avx2 && use cpu_flags_x86_f16c && (use cpu_flags_x86_fma4 || use cpu_flags_x86_fma3)
+			if use cpu_flags_x86_avx && use cpu_flags_x86_avx2 && use cpu_flags_x86_f16c && \
+					(use cpu_flags_x86_fma4 || use cpu_flags_x86_fma3)
 			then
 				GOAMD64_V="v3"
 			fi
