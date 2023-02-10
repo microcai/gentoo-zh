@@ -1,4 +1,4 @@
-# Copyright 2020-2022 Gentoo Authors
+# Copyright 2020-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -42,8 +42,8 @@ RDEPEND="
 	sys-apps/lsb-release
 	sys-apps/bubblewrap
 	|| (
-		=dev-libs/openssl-1.1*
-		dev-libs/openssl-compat
+		dev-libs/openssl-compat:1.1.1
+		=dev-libs/openssl-1.1.1*
 	)
 "
 BDEPEND="dev-util/patchelf"
@@ -65,7 +65,8 @@ src_prepare() {
 		"${S}/opt/apps/com.tencent.weixin/files/weixin/weixin.sh" || die
 
 	# fix rpath
-	patchelf --set-rpath /opt/weixin-uos/resources/app/packages/main/dist/bin/scrot "${S}/opt/apps/com.tencent.weixin/files/weixin/resources/app/packages/main/dist/bin/scrot/scrot" || die
+	patchelf --set-rpath /opt/weixin-uos/resources/app/packages/main/dist/bin/scrot\
+		"${S}/opt/apps/com.tencent.weixin/files/weixin/resources/app/packages/main/dist/bin/scrot/scrot" || die
 }
 
 src_install() {
