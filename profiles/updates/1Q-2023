@@ -1,1 +1,5 @@
 slotmove net-im/tencent-qq nt 0
+slotmove sys-kernel/xanmod-sources stable 5.15.89
+slotmove sys-kernel/xanmod-sources edge 6.1.9
+slotmove sys-kernel/xanmod-kernel stable 5.15.89
+slotmove sys-kernel/xanmod-kernel edge 6.1.9

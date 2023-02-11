@@ -1,4 +1,4 @@
-# Copyright 2020-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -23,7 +23,7 @@ S=${WORKDIR}/${MY_P}
 LICENSE="GPL-2"
 KEYWORDS="~amd64"
 IUSE="cjk clang debug"
-SLOT="stable"
+SLOT="stable/${PV}"
 
 BDEPEND="
 	clang? (
