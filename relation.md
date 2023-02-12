@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-02-12 01:24:10 CST)
+(The last generation time: 2023-02-12 07:59:52 CST)
 
 ### Packages
 
@@ -395,6 +395,8 @@
  net-print/pantum                             | 1.1.94                                    |        | https://www.pantum.cn/support/download/driver/                                          | 奔图打印机Linux驱动
    media-gfx/sane-backends                    | 9999                                      |  D, RD | http://www.sane-project.org/                                                            | Scanner Access Now Easy - Backends
    media-libs/libjpeg8                        | 2.1.4                                     |  D, RD | https://libjpeg-turbo.org/                                                              | MMX, SSE, and SSE2 SIMD accelerated JPEG library
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ net-proxy/cgproxy                            | 0.20                                      |        | https://github.com/springzfx/cgproxy                                                    | Transparent Proxy with cgroup v2
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-for-windows-bin              | 0.20.15                                   |        | https://github.com/Fndroid/clash_for_windows_pkg                                        | A Windows/macOS/Linux GUI based on Clash and Electron.
                                               | 0.20.16                                   |        |                                                                                         |
