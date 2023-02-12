@@ -24,7 +24,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64"
 IUSE="cjk clang debug +x86-64-v1 x86-64-v2 x86-64-v3 x86-64-v4"
 REQUIRED_USE="^^ ( x86-64-v1 x86-64-v2 x86-64-v3 x86-64-v4 )"
-SLOT="edge"
+SLOT="edge/${PV}"
 
 PDEPEND="
 	>=virtual/dist-kernel-${PV}"
