@@ -182,6 +182,7 @@ net-p2p/qbittorrent-enhanced 4.3.9.10 4.4.5.10: qBittorrent Enhanced, based on q
 net-print/epson-inkjet-printer_201207w 1.0.0: Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 net-print/pantum 1.1.94: 奔图打印机Linux驱动
 net-proxy/Xray 1.6.0 1.6.1: Xray, Penetrates Everything.
+net-proxy/cgproxy 0.20: Transparent Proxy with cgroup v2
 net-proxy/clash 1.12.0: A rule-based tunnel in Go.
 net-proxy/clash-for-windows-bin 0.20.15 0.20.16: A Windows/macOS/Linux GUI based on Clash and Electron.
 net-proxy/clash-meta 1.14.1: Another Clash Kernel.
