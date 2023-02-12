@@ -23,7 +23,6 @@ S=${WORKDIR}/${MY_P}
 LICENSE="GPL-2"
 KEYWORDS="~amd64"
 IUSE="cjk clang debug"
-SLOT="stable/${PV}"
 
 BDEPEND="
 	clang? (
