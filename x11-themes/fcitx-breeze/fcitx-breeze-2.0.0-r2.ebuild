@@ -5,10 +5,11 @@ EAPI=8
 
 DESCRIPTION="Fcitx5 theme to match KDE's Breeze style."
 HOMEPAGE="https://github.com/scratch-er/fcitx5-breeze"
-SRC_URI="https://github.com/scratch-er/fcitx5-breeze/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+
+SRC_URI="https://github.com/scratch-er/fcitx5-breeze/archive/refs/tags/v${PV}.tar.gz -> fcitx5-breeze-${PV}.tar.gz"
 
 LICENSE="GPL-3"
-SLOT="0"
+SLOT="5"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="
@@ -16,6 +17,8 @@ DEPEND="
 RDEPEND="
 	app-i18n/fcitx:5"
 BDEPEND=""
+
+S="${WORKDIR}/fcitx5-breeze-$PV"
 
 src_compile() {
 	./build.sh
