@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-02-13 13:25:38 CST)
+(The last generation time: 2023-02-13 13:42:04 CST)
 
 ### Packages
 
@@ -19,10 +19,9 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-crypt/etoken-sac                         | 10.3                                      |        | http://aladdin-rd.ru                                                                    | SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx5-pinyin-moegirl              | 20221214                                  |        | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
+ app-dicts/fcitx-pinyin-moegirl               | 20221214                                  |        | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx5-pinyin-zhwiki               | 20220722                                  |        | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
-                                              | 20221230                                  |        |                                                                                         |
+ app-dicts/fcitx-pinyin-zhwiki                | 20221230                                  |        | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/appflowy-bin                     | 0.0.5.3                                   |        | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
                                               | 0.0.6                                     |        |                                                                                         |
