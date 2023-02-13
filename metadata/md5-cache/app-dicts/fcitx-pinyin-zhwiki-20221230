@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DESCRIPTION=Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
+EAPI=8
+HOMEPAGE=https://github.com/felixonmars/fcitx5-pinyin-zhwiki
+KEYWORDS=amd64 arm mips x86
+LICENSE=Unlicense
+RDEPEND=app-i18n/fcitx:5
+RESTRICT=mirror
+SLOT=5
+SRC_URI=https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.4/zhwiki-20221230.dict -> fcitx-pinyin-zhwiki-20221230.dict
+_md5_=bb60ac4a9867a5b65763f67baaef03a9
