@@ -3,14 +3,11 @@
 
 EAPI=8
 
-MY_PN="moegirl.dict"
-MY_PV="20220714"
-
 RESTRICT="mirror"
 
 DESCRIPTION="Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn"
 HOMEPAGE="https://github.com/outloudvi/mw2fcitx"
-SRC_URI="https://github.com/outloudvi/mw2fcitx/releases/download/${MY_PV}/${MY_PN} -> ${P}.dict"
+SRC_URI="https://github.com/outloudvi/mw2fcitx/releases/download/${PV}/moegirl.dict -> ${P}.dict"
 
 LICENSE="Unlicense"
 SLOT="5"
