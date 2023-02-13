@@ -24,7 +24,6 @@ KEYWORDS="~amd64"
 #IUSE="cjktty tt"
 
 IUSE="cjktty"
-SLOT="edge/${PV}"
 XANMOD_VERSION="1"
 XANMOD_URI="https://github.com/xanmod/linux/releases/download/"
 OKV="${OKV}-xanmod"

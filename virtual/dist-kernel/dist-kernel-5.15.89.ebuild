@@ -1,4 +1,4 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -16,5 +16,5 @@ RDEPEND="
 		~sys-kernel/gentoo-kernel-${PV}
 		~sys-kernel/gentoo-kernel-bin-${PV}
 		~sys-kernel/vanilla-kernel-${PV}
-		~sys-kernel/xanmod-kernel-${PV}:stable
+		~sys-kernel/xanmod-kernel-${PV}
 	)"
