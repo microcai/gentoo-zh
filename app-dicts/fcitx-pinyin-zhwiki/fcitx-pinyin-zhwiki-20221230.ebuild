@@ -6,23 +6,25 @@ EAPI=8
 MY_PN="zhwiki-${PV}.dict"
 MY_PV="0.2.4"
 
+RESTRICT="mirror"
+
 DESCRIPTION="Fcitx 5 Pinyin Dictionary from zh.wikipedia.org"
 HOMEPAGE="https://github.com/felixonmars/fcitx5-pinyin-zhwiki"
-SRC_URI="https://github.com/felixonmars/${PN}/releases/download/${MY_PV}/${MY_PN}"
+SRC_URI="https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/${MY_PV}/${MY_PN} -> ${P}.dict"
 
 LICENSE="Unlicense"
-SLOT="0"
-KEYWORDS="amd64 x86"
+SLOT="5"
+KEYWORDS="amd64 arm mips x86"
 
 DEPEND=""
-RDEPEND="${DEPEND}"
 BDEPEND=""
+RDEPEND="app-i18n/fcitx:5"
 
 S="${DISTDIR}"
 
 src_install(){
 	DICT_PATH="/usr/share/fcitx5/pinyin/dictionaries"
 	insinto ${DICT_PATH}
-	doins ${MY_PN}
-	fperms 0644 "${DICT_PATH}/${MY_PN}"
+	doins ${P}.dict
+	fperms 0644 "${DICT_PATH}/${P}.dict"
 }
