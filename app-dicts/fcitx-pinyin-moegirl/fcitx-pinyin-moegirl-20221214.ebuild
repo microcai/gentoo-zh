@@ -6,23 +6,25 @@ EAPI=8
 MY_PN="moegirl.dict"
 MY_PV="20220714"
 
+RESTRICT="mirror"
+
 DESCRIPTION="Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn"
 HOMEPAGE="https://github.com/outloudvi/mw2fcitx"
-SRC_URI="https://github.com/outloudvi/mw2fcitx/releases/download/${MY_PV}/${MY_PN}"
+SRC_URI="https://github.com/outloudvi/mw2fcitx/releases/download/${MY_PV}/${MY_PN} -> ${P}.dict"
 
 LICENSE="Unlicense"
 SLOT="5"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 arm mips x86"
 
-DEPEND="app-i18n/fcitx:5"
-RDEPEND="${DEPEND}"
+DEPEND=""
 BDEPEND=""
+RDEPEND="app-i18n/fcitx:5"
 
 S="${DISTDIR}"
 
 src_install(){
 	DICT_PATH="/usr/share/fcitx5/pinyin/dictionaries"
 	insinto ${DICT_PATH}
-	doins ${MY_PN}
-	fperms 0644 "${DICT_PATH}/${MY_PN}"
+	doins ${P}.dict
+	fperms 0644 "${DICT_PATH}/${P}.dict"
 }
