@@ -14,7 +14,10 @@ SLOT="0"
 KEYWORDS="~amd64"
 RESTRICT="mirror"
 
-DEPEND="net-firewall/iptables"
+DEPEND="
+	net-firewall/iptables
+	dev-util/bcc
+"
 RDEPEND="${DEPEND}"
 BDEPEND="
 	dev-cpp/nlohmann_json
