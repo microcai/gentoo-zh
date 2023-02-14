@@ -51,6 +51,10 @@ BDEPEND="dev-qt/linguist-tools:5
 
 DOCS=( AUTHORS Changelog CONTRIBUTING.md README.md TODO )
 
+PATCHES=(
+	${FILESDIR}/4.5-fix-compile-error-when-disable-webui.patch
+)
+
 src_configure() {
 	set enable_gui="OFF"
 	if use qt5 || use qt6 ; then
