@@ -1,4 +1,4 @@
-BDEPEND=app-arch/unzip
+BDEPEND=app-arch/unzip sys-fs/fuse:0
 DEFINED_PHASES=install postinst postrm preinst
 DESCRIPTION=API 文档、API 调试、API Mock、API 自动化测试
 EAPI=8
@@ -9,6 +9,6 @@ KEYWORDS=~amd64
 LICENSE=all-rights-reserved
 RESTRICT=binchecks strip
 SLOT=0
-SRC_URI=amd64? ( https://cdn.apifox.cn/download/Apifox-linux-latest.zip -> 2.2.19-amd64.zip )
+SRC_URI=amd64? ( https://cdn.apifox.cn/download/Apifox-linux-latest.zip -> apifox-2.2.23-amd64.zip )
 _eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
-_md5_=dff29de8d877b050fd93f5313b30286c
+_md5_=f80dfb34d36b2b4e90c6993cebdfe55a
