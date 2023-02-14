@@ -3,6 +3,8 @@
 
 EAPI=8
 
+CMAKE_IN_SOURCE_BUILD=ON
+
 inherit cmake systemd xdg
 
 DESCRIPTION="qBittorrent Enhanced, based on qBittorrent"
@@ -49,7 +51,7 @@ DEPEND="${RDEPEND}"
 BDEPEND="dev-qt/linguist-tools:5
 		virtual/pkgconfig"
 
-DOCS=( AUTHORS Changelog CONTRIBUTING.md README.md TODO )
+DOCS=( AUTHORS Changelog CONTRIBUTING.md README.md)
 
 PATCHES=(
 	${FILESDIR}/4.5-fix-compile-error-when-disable-webui.patch
