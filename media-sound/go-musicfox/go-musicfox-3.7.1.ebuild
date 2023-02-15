@@ -24,7 +24,6 @@ BDEPEND="
 	${DEPEND}
 	clang? ( sys-devel/clang )
 	!clang? ( sys-devel/gcc[objc] )
-	>=dev-lang/go-1.18:=
 "
 
 src_compile() {
