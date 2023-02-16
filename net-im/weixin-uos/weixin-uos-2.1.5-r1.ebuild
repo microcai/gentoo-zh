@@ -61,7 +61,7 @@ src_prepare() {
 		"${S}/usr/share/applications/weixin.desktop" || die
 	sed -i 's,/opt/apps/com.tencent.weixin/files/weixin/weixin.sh,/usr/bin/weixin-uos,' \
 		"${S}/usr/share/applications/weixin.desktop" || die
-	sed -i 's,/opt/apps/com.tencent.weixin/files/weixin/weixin,/opt/weixin-uos/weixin,g' \
+	sed -i 's,/opt/apps/com.tencent.weixin/files/weixin/weixin,/opt/weixin-uos/weixin "$@",g' \
 		"${S}/opt/apps/com.tencent.weixin/files/weixin/weixin.sh" || die
 
 	# fix rpath
