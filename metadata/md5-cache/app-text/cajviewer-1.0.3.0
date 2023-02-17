@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst postrm unpack
+DEPEND=net-dns/avahi dev-libs/gmp net-libs/gnutls virtual/krb5 net-print/cups dev-libs/libgcrypt net-dns/libidn11 media-libs/libpng dev-libs/libtasn1 x11-libs/libX11 x11-libs/libXau x11-libs/libxcb x11-libs/libXdmcp x11-libs/libxkbcommon x11-libs/libXrender dev-qt/qtcore:5 dev-qt/qtdeclarative:5 dev-qt/qtvirtualkeyboard:5 x11-misc/shared-mime-info app-arch/xz-utils
+DESCRIPTION=Document Viewer for CAJ, KDH, NH, TEB and PDF format
+EAPI=8
+HOMEPAGE=http://cajviewer.cnki.net
+INHERIT=desktop unpacker xdg-utils
+KEYWORDS=~amd64
+LICENSE=CAJVIEWER-EULA
+RDEPEND=net-dns/avahi dev-libs/gmp net-libs/gnutls virtual/krb5 net-print/cups dev-libs/libgcrypt net-dns/libidn11 media-libs/libpng dev-libs/libtasn1 x11-libs/libX11 x11-libs/libXau x11-libs/libxcb x11-libs/libXdmcp x11-libs/libxkbcommon x11-libs/libXrender dev-qt/qtcore:5 dev-qt/qtdeclarative:5 dev-qt/qtvirtualkeyboard:5 x11-misc/shared-mime-info app-arch/xz-utils
+RESTRICT=mirror strip
+SLOT=0
+SRC_URI=https://download.cnki.net/net.cnki.cajviewer_1.0.3.0_amd64.deb
+_eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	9a610728b9bcca1919234cceb35a1027	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	fdd15d854bf5e84f82d35524ab8ca6ba	xdg-utils	ac0e315a3688929e34ac75b139e7349a
+_md5_=99cf3c4f2f666414450ee6b9cc548f00
