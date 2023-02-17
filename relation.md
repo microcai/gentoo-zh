@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-02-17 19:25:05 CST)
+(The last generation time: 2023-02-18 02:03:30 CST)
 
 ### Packages
 
@@ -159,6 +159,8 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/libdwarf                            | 20140208                                  |        | https://github.com/Distrotech/libdwarf                                                  | Library to deal with DWARF Debugging Information Format
                                               | 20150507                                  |        |                                                                                         |
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ dev-libs/libratbag                           | 0.17.9                                    |        | https://github.com/libratbag/libratbag                                                  | Library to configure gaming mice
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/lunar-calendar                      | 3.0.1                                     |        | https://github.com/yetist/lunar-calendar                                                | a gtk+ calendar widget for chinese lunar library
    dev-libs/lunar-date                        | 3.0.1                                     |  D     | https://github.com/yetist/lunar-date                                                    | Chinese Lunar Library
