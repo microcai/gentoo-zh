@@ -11,5 +11,5 @@ RDEPEND=|| ( >=net-proxy/v2ray-5 >=net-proxy/v2ray-bin-5 )
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/v2rayA/v2rayA/archive/refs/tags/v2.0.1.tar.gz -> v2rayA-2.0.1.tar.gz https://github.com/liuyujielol/vendors/releases/download/v2rayA/v2rayA-2.0.1-yarn_mirror.tar.xz https://github.com/liuyujielol/vendors/releases/download/v2rayA/v2rayA-2.0.1-go-vendor.tar.xz
-_eclasses_=toolchain-funcs	9a610728b9bcca1919234cceb35a1027	multilib	5ca4e49abed8e3a2f7b56920eadee157	systemd	5f4bb0758df2e483babf68cd517078ca	go-module	75029f071ebc843223233ab1b0a2d4a5	desktop	7eb20ad915a0a318176d51bc2508ff5c	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=toolchain-funcs	9a610728b9bcca1919234cceb35a1027	multilib	5ca4e49abed8e3a2f7b56920eadee157	systemd	5f4bb0758df2e483babf68cd517078ca	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	go-module	01650d8433daaaf046d2a287306c28cd	desktop	7eb20ad915a0a318176d51bc2508ff5c	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
 _md5_=7bb418c8231c947bdde22bdb3bb41f7a
