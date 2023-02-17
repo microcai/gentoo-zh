@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -7,8 +7,8 @@ inherit desktop unpacker xdg-utils
 
 MY_PN="net.cnki.${PN}"
 
-DESCRIPTION="Document Viewer for CAJ, KDH, NH, TEB and PDF format
-"
+DESCRIPTION="Document Viewer for CAJ, KDH, NH, TEB and PDF format"
+
 HOMEPAGE="http://cajviewer.cnki.net"
 SRC_URI="https://download.cnki.net/${MY_PN}_${PV}_amd64.deb"
 
