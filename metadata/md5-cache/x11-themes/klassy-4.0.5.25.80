@@ -1,0 +1,15 @@
+BDEPEND=kde-frameworks/kcmutils:5 >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=kde-plasma/breeze:5 kde-frameworks/frameworkintegration:5 x11-themes/hicolor-icon-theme kde-plasma/kdecoration:5 kde-frameworks/kirigami:5 kde-frameworks/kwayland:5 kde-frameworks/extra-cmake-modules:5
+DESCRIPTION=Highly customizable theme plugin for KDE Plasma desktop
+EAPI=8
+HOMEPAGE=https://github.com/paulmcauley/klassy
+INHERIT=cmake
+KEYWORDS=~amd64
+LICENSE=GPL-1
+RDEPEND=kde-plasma/breeze:5 kde-frameworks/frameworkintegration:5 x11-themes/hicolor-icon-theme kde-plasma/kdecoration:5 kde-frameworks/kirigami:5 kde-frameworks/kwayland:5 kde-frameworks/extra-cmake-modules:5
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/paulmcauley/klassy/archive/refs/tags/4.0.breeze5.25.80.tar.gz -> klassy-4.0.5.25.80.tar.gz
+_eclasses_=toolchain-funcs	9a610728b9bcca1919234cceb35a1027	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	449b4785acace35308fe747fc939bde1
+_md5_=9aa5241369258885b396a3dee6a85dbb
