@@ -51,7 +51,7 @@ CRATES="
 	ciborium-io-0.2.0
 	ciborium-ll-0.2.0
 	clap-3.2.23
-	clap-4.1.4
+	clap-4.1.6
 	clap_derive-4.1.0
 	clap_lex-0.2.4
 	clap_lex-0.3.1
@@ -64,7 +64,7 @@ CRATES="
 	core-foundation-0.9.3
 	core-foundation-sys-0.8.3
 	cpufeatures-0.2.5
-	crates-index-0.19.3
+	crates-index-0.19.5
 	crc-3.0.1
 	crc-catalog-2.2.0
 	crc32fast-1.3.2
@@ -92,6 +92,7 @@ CRATES="
 	dirs-sys-0.3.7
 	doc-comment-0.3.3
 	document-features-0.2.7
+	dunce-1.0.3
 	either-1.8.1
 	encode_unicode-0.3.6
 	encoding_rs-0.8.32
@@ -101,8 +102,8 @@ CRATES="
 	errno-dragonfly-0.1.2
 	event-listener-2.5.3
 	expectrl-0.6.0
-	fastrand-1.8.0
-	filetime-0.2.19
+	fastrand-1.9.0
+	filetime-0.2.20
 	flate2-1.0.25
 	fnv-1.0.7
 	foreign-types-0.3.2
@@ -122,27 +123,27 @@ CRATES="
 	generic-array-0.14.6
 	getopts-0.2.21
 	getrandom-0.2.8
-	git-actor-0.17.0
-	git-attributes-0.8.1
-	git-bitmap-0.2.0
+	git-actor-0.17.2
+	git-attributes-0.8.3
+	git-bitmap-0.2.2
 	git-conventional-0.12.1
-	git-date-0.4.1
+	git-date-0.4.3
 	git-discover-0.12.1
-	git-features-0.26.1
-	git-glob-0.5.2
-	git-hash-0.10.1
-	git-hashtable-0.1.0
-	git-index-0.12.2
-	git-lock-3.0.1
-	git-object-0.26.0
-	git-path-0.7.0
-	git-quote-0.4.0
+	git-features-0.26.5
+	git-glob-0.5.4
+	git-hash-0.10.3
+	git-hashtable-0.1.2
+	git-index-0.12.4
+	git-lock-3.0.3
+	git-object-0.26.2
+	git-path-0.7.2
+	git-quote-0.4.2
 	git-ref-0.23.1
-	git-sec-0.6.1
-	git-tempfile-3.0.1
-	git-traverse-0.22.0
-	git-validate-0.7.1
-	git-worktree-0.12.1
+	git-sec-0.6.3
+	git-tempfile-3.0.3
+	git-traverse-0.22.2
+	git-validate-0.7.3
+	git-worktree-0.12.3
 	git2-0.16.1
 	gloo-timers-0.2.6
 	h2-0.3.15
@@ -152,7 +153,7 @@ CRATES="
 	heck-0.4.1
 	hermit-abi-0.1.19
 	hermit-abi-0.2.6
-	hermit-abi-0.3.0
+	hermit-abi-0.3.1
 	hex-0.4.3
 	home-0.5.4
 	hostname-0.3.1
@@ -169,7 +170,7 @@ CRATES="
 	idna-0.3.0
 	imara-diff-0.1.5
 	indexmap-1.9.2
-	insta-1.26.0
+	insta-1.28.0
 	instant-0.1.12
 	io-close-0.3.7
 	io-lifetimes-1.0.5
@@ -207,7 +208,7 @@ CRATES="
 	mime_guess-2.0.4
 	minimal-lexical-0.2.1
 	miniz_oxide-0.6.2
-	mio-0.8.5
+	mio-0.8.6
 	native-tls-0.2.11
 	nix-0.21.0
 	nix-0.25.1
@@ -217,7 +218,7 @@ CRATES="
 	num-traits-0.2.15
 	num_cpus-1.15.0
 	num_threads-0.1.6
-	once_cell-1.17.0
+	once_cell-1.17.1
 	oorandom-11.1.3
 	openssl-0.10.45
 	openssl-macros-0.1.0
@@ -280,7 +281,7 @@ CRATES="
 	semver-1.0.16
 	serde-1.0.152
 	serde_derive-1.0.152
-	serde_json-1.0.92
+	serde_json-1.0.93
 	serde_spanned-0.6.1
 	serde_urlencoded-0.7.1
 	serial_test-1.0.0
@@ -288,9 +289,9 @@ CRATES="
 	sha1-0.10.5
 	sha1-asm-0.5.1
 	sha1_smol-1.0.0
-	signal-hook-0.3.14
+	signal-hook-0.3.15
 	signal-hook-mio-0.2.3
-	signal-hook-registry-1.4.0
+	signal-hook-registry-1.4.1
 	similar-2.2.1
 	slab-0.4.7
 	smallvec-1.10.0
@@ -308,22 +309,19 @@ CRATES="
 	textwrap-0.16.0
 	thiserror-1.0.38
 	thiserror-impl-1.0.38
-	time-0.3.17
+	time-0.3.19
 	time-core-0.1.0
-	time-macros-0.2.6
+	time-macros-0.2.7
 	tinytemplate-1.2.1
 	tinyvec-1.6.0
 	tinyvec_macros-0.1.1
 	tokio-1.25.0
-	tokio-native-tls-0.3.0
+	tokio-native-tls-0.3.1
 	tokio-rustls-0.23.4
-	tokio-util-0.7.4
-	toml-0.6.0
-	toml-0.7.1
-	toml_datetime-0.5.1
+	tokio-util-0.7.7
+	toml-0.7.2
 	toml_datetime-0.6.1
-	toml_edit-0.18.1
-	toml_edit-0.19.1
+	toml_edit-0.19.3
 	tower-service-0.3.2
 	tracing-0.1.37
 	tracing-attributes-0.1.23
@@ -394,11 +392,11 @@ inherit cargo
 DESCRIPTION="A command-line application for interacting with git repositories"
 HOMEPAGE="https://github.com/Byron/gitoxide"
 SRC_URI="
-	 https://github.com/Byron/gitoxide/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	 $(cargo_crate_uris)
+	https://github.com/Byron/gitoxide/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
+	$(cargo_crate_uris)
 "
 
-LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD BSD-2 Boost-1.0 ISC MIT MPL-2.0 Unicode-DFS-2016 Unlicense ZLIB"
+LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD BSD-2 Boost-1.0 CC0-1.0 ISC MIT MIT-0 MPL-2.0 Unicode-DFS-2016 Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
 
