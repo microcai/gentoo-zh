@@ -29,7 +29,7 @@ CRATES="
 	bytes-1.4.0
 	cc-1.0.79
 	cfg-if-1.0.0
-	clap-4.1.4
+	clap-4.1.6
 	clap_derive-4.1.0
 	clap_lex-0.3.1
 	colored-2.0.0
@@ -48,7 +48,7 @@ CRATES="
 	errno-0.2.8
 	errno-dragonfly-0.1.2
 	fancy-regex-0.11.0
-	fastrand-1.8.0
+	fastrand-1.9.0
 	flate2-1.0.25
 	fnv-1.0.7
 	foreign-types-0.3.2
@@ -69,7 +69,7 @@ CRATES="
 	hermit-abi-0.1.19
 	hermit-abi-0.2.6
 	hermit-abi-0.3.1
-	http-0.2.8
+	http-0.2.9
 	http-body-0.4.5
 	httparse-1.8.0
 	httpdate-1.0.2
@@ -96,13 +96,13 @@ CRATES="
 	mime-0.3.16
 	minimal-lexical-0.2.1
 	miniz_oxide-0.6.2
-	mio-0.8.5
+	mio-0.8.6
 	native-tls-0.2.11
 	nom-7.1.3
 	nom8-0.2.0
 	num_cpus-1.15.0
 	num_threads-0.1.6
-	once_cell-1.17.0
+	once_cell-1.17.1
 	openssl-0.10.45
 	openssl-macros-0.1.0
 	openssl-probe-0.1.5
@@ -148,11 +148,11 @@ CRATES="
 	security-framework-sys-2.8.0
 	serde-1.0.152
 	serde_derive-1.0.152
-	serde_json-1.0.92
+	serde_json-1.0.93
 	serde_spanned-0.6.1
 	serde_urlencoded-0.7.1
 	sha2-0.10.6
-	signal-hook-registry-1.4.0
+	signal-hook-registry-1.4.1
 	simple_logger-4.0.0
 	slab-0.4.7
 	smallvec-1.10.0
@@ -167,18 +167,18 @@ CRATES="
 	termcolor-1.2.0
 	thiserror-1.0.38
 	thiserror-impl-1.0.38
-	thread_local-1.1.4
+	thread_local-1.1.7
 	tiktoken-rs-0.1.2
-	time-0.3.17
+	time-0.3.19
 	time-core-0.1.0
-	time-macros-0.2.6
+	time-macros-0.2.7
 	tinyvec-1.6.0
 	tinyvec_macros-0.1.1
 	tokio-1.25.0
 	tokio-macros-1.8.2
 	tokio-native-tls-0.3.1
 	tokio-rustls-0.23.4
-	tokio-util-0.7.4
+	tokio-util-0.7.7
 	toml-0.5.11
 	toml-0.7.2
 	toml_datetime-0.6.1
