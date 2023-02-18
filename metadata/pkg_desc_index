@@ -231,11 +231,11 @@ sys-libs/libzypp 17.31.7 9999: ZYpp Package Management library
 sys-power/tlpui 1.5.0_p6: A GTK user interface for TLP written in Python
 virtual/dist-kernel 5.15.89 6.1.9 6.1.10: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
-www-apps/openvscode-server-bin 1.71.2 1.72.2: VS Code that runs a server on remote and allows access through a web browser
+www-apps/openvscode-server-bin 1.75.1: VS Code that runs a server on remote and allows access through a web browser
 www-servers/darkhttpd 1.13: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
-x11-libs/glbinding 3.1.0: A C++ binding for the OpenGL API
+x11-libs/glbinding 3.3.0: A C++ binding for the OpenGL API
 x11-libs/libva-nvdec-driver 0.0.8 9999: NVDEC Backend for Video Acceleration (VA) API
 x11-libs/xcb-imdkit 1.0.3 1.0.4: Input method development support for xcb
 x11-misc/9menu 1.10: Create X menus from the shell
