@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-02-18 13:57:31 CST)
+(The last generation time: 2023-02-18 23:30:39 CST)
 
 ### Packages
 
@@ -482,8 +482,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/systemd-zpool-scrub                   | 1.1                                       |        | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- sys-kernel/mkinitcpio                        | 33                                        |        | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
-                                              | 34                                        |        |                                                                                         |
+ sys-kernel/mkinitcpio                        | 34-r1                                     |        | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-libs/elog-functions                      | 0.0.2                                     |        | http://xochitl.matem.unam.mx/~canek/gentoo-systemd-only/index.html                      | Compatibility functions for the log eclass functions of OpenRC
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
