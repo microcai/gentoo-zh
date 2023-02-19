@@ -276,6 +276,12 @@ use_latest_release = true
 prefix = "v"
 github_account = "OriPoin"
 
+["app-text/cajviewer"]
+source = "regex"
+url = "https://cajviewer.cnki.net/"
+regex = "net.cnki.cajviewer_([\\d.]+)_amd64.deb"
+github_account = "123485k"
+
 # TODO
 #["app-text/groff-utf8"]
 
@@ -916,6 +922,24 @@ source = "regex"
 url = "https://jp-minerals.org/vesta/en/download.html"
 regex = "ver. ([\\d.]+), built on"
 github_account = "CHN-beta"
+
+["sci-electronics/jlc-assistant-bin"]
+source = "regex"
+url = "https://www.jlc.com/portal/appDownloadsWithConfig.html"
+regex = "FJLCPcAssit-linux-x64-([\\d.]+).zip"
+github_account = "123485k"
+
+["sci-electronics/lceda"]
+source = "regex"
+url = "https://lceda.cn/page/download?src=index"
+regex = "lceda-linux-x64-([\\d.]+).zip"
+github_account = "123485k"
+
+["sci-electronics/lceda-pro"]
+source = "regex"
+url = "https://lceda.cn/page/download?src=index"
+regex = "lceda-pro-linux-x64-([\\d.]+).zip"
+github_account = "123485k"
 
 # TODO
 #["sci-libs/libticables2"]
