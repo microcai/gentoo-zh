@@ -12,5 +12,5 @@ RDEPEND=>=app-accessibility/at-spi2-core-2.46.0:2 app-crypt/libsecret dev-libs/e
 RESTRICT=splitdebug
 SLOT=0
 SRC_URI=https://download.jlc.com/pcAssit/5.0.69/JLCPcAssit-linux-x64-5.0.69.zip -> jlc-assistant-bin-5.0.69.zip
-_eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	cf009a3ed4e5bef503e7a9f215791a78	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	fdd15d854bf5e84f82d35524ab8ca6ba	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	fdd15d854bf5e84f82d35524ab8ca6ba	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
 _md5_=bfd5e80354eb8f44327f5b440906ede6
