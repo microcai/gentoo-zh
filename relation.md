@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-02-19 14:30:27 CST)
+(The last generation time: 2023-02-19 15:18:56 CST)
 
 ### Packages
 
@@ -431,7 +431,7 @@
      dev-libs/v2ray-geoip-bin                 | 202211030059                              |  D, RD | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    net-proxy/v2ray                            | 4.45.0                                    | RD     | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
                                               | 4.45.2                                    |        |                                                                                         |
-                                              | 5.1.0-r1                                  |        |                                                                                         |
+                                              | 5.3.0                                     |        |                                                                                         |
      dev-libs/v2ray-domain-list-community     | 4.39.2_p20210621183458                    | RD     | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
                                               | 9999                                      |        |                                                                                         |
    net-proxy/v2ray-bin                        | 4.45.0                                    | RD     | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
