@@ -171,11 +171,6 @@ github_account = "liangyongxiang"
 # TODO
 #["app-i18n/scim-chrasis"]
 
-["app-i18n/sogoupinyin"]
-source = "regex"
-url = "https://pinyin.sogou.com/linux"
-regex = "sogoupinyin_([\\d.]+)_amd64.deb"
-
 ["app-i18n/wlpinyin"]
 source = "github"
 github = "xhebox/wlpinyin"
