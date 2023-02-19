@@ -9,7 +9,7 @@ DESCRIPTION="A platform for building proxies to bypass network restrictions."
 HOMEPAGE="https://github.com/v2fly/v2ray-core"
 
 SRC_URI="https://github.com/v2fly/v2ray-core/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/CHN-beta/gentoo-go-dep/releases/download/${P}/${P}-deps.tar.xz"
+	https://github.com/liangyongxiang/gentoo-go-dep/releases/download/${P}/${P}-deps.tar.xz"
 RESTRICT="mirror"
 
 LICENSE="MIT"
