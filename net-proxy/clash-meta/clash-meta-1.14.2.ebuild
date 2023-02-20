@@ -1,4 +1,4 @@
-# Copyright 199f9-2023 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -9,7 +9,7 @@ HOMEPAGE="https://github.com/MetaCubeX/Clash.Meta"
 
 SRC_URI="
 	https://github.com/MetaCubeX/Clash.Meta/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/st0nie/gentoo-go-dep/releases/download/${PN}/${P}-deps.tar.xz
+	https://github.com/st0nie/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
 "
 
 RESTRICT="mirror"
@@ -17,13 +17,14 @@ DEPEND="
 	acct-user/clash-meta
 	acct-group/clash-meta
 "
+RDEPEND="${DEPEND}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 S="${WORKDIR}/Clash.Meta-${PV}"
 
 src_compile() {
-	local BUILDTIME=$(date -u)
+	local BUILDTIME=$(LC_ALL=C date -u || die)
 	ego build \
 	-ldflags "-linkmode external -extldflags \"${LDFLAGS}\" \
 	-X \"github.com/Dreamacro/clash/constant.Version=${PV}\" \
