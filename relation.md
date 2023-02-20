@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-02-19 19:03:56 CST)
+(The last generation time: 2023-02-21 00:37:24 CST)
 
 ### Packages
 
@@ -405,9 +405,9 @@
  net-proxy/clash-for-windows-bin              | 0.20.15                                   |        | https://github.com/Fndroid/clash_for_windows_pkg                                        | A Windows/macOS/Linux GUI based on Clash and Electron.
                                               | 0.20.16                                   |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/clash-meta                         | 1.14.1                                    |        | https://github.com/MetaCubeX/Clash.Meta                                                 | Another Clash Kernel.
-   acct-group/clash-meta                      | 0                                         |  D     |                                                                                         | Another Clash Kernel.
-   acct-user/clash-meta                       | 0                                         |  D     |                                                                                         | Another Clash Kernel.
+ net-proxy/clash-meta                         | 1.14.2                                    |        | https://github.com/MetaCubeX/Clash.Meta                                                 | Another Clash Kernel.
+   acct-group/clash-meta                      | 0                                         |  D, RD |                                                                                         | Another Clash Kernel.
+   acct-user/clash-meta                       | 0                                         |  D, RD |                                                                                         | Another Clash Kernel.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-premium-bin                  | 2022.11.25                                |        | https://github.com/Dreamacro/clash                                                      | Close-sourced pre-built Clash binary with TUN support
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
