@@ -1,4 +1,4 @@
-BDEPEND=dev-cpp/nlohmann_json dev-libs/libbpf dev-util/bpftool >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+BDEPEND=dev-cpp/nlohmann_json dev-libs/libbpf dev-util/bpftool sys-devel/clang >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
 DEFINED_PHASES=compile configure install prepare test
 DEPEND=net-firewall/iptables dev-util/bcc
 DESCRIPTION=Transparent Proxy with cgroup v2
@@ -12,4 +12,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/springzfx/cgproxy/archive/refs/tags/v0.20.tar.gz -> cgproxy-0.20.tar.gz
 _eclasses_=toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	449b4785acace35308fe747fc939bde1
-_md5_=a020ee5718827921a8d5c717f186fd0a
+_md5_=ca0162925784a4f7390862c418d0e2ab
