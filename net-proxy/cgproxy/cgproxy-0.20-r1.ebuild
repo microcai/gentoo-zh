@@ -23,4 +23,17 @@ BDEPEND="
 	dev-cpp/nlohmann_json
 	dev-libs/libbpf
 	dev-util/bpftool
+	sys-devel/clang
 "
+
+src_prepare() {
+	# fix build error (clang-15)
+	sed -i 's!clang -O2!clang -O2 -fno-stack-protector!' execsnoop-libbpf/CMakeLists.txt || die
+	cmake_src_prepare
+}
+
+src_install() {
+	cmake_src_install
+	rm -r "${D}"/usr/share/man/man1 || die
+	doman man/*.1
+}
