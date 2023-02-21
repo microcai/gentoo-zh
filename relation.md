@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-02-21 00:57:42 CST)
+(The last generation time: 2023-02-21 22:30:29 CST)
 
 ### Packages
 
@@ -409,7 +409,7 @@
    acct-group/clash-meta                      | 0                                         |  D, RD |                                                                                         | Another Clash Kernel.
    acct-user/clash-meta                       | 0                                         |  D, RD |                                                                                         | Another Clash Kernel.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/clash-premium-bin                  | 2022.11.25                                |        | https://github.com/Dreamacro/clash                                                      | Close-sourced pre-built Clash binary with TUN support
+ net-proxy/clash-premium-bin                  | 2023.02.16                                |        | https://github.com/Dreamacro/clash                                                      | Close-sourced pre-built Clash binary with TUN support
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-verge-bin                    | 1.2.0                                     |        | https://github.com/zzzgydi/clash-verge                                                  | A Clash GUI based on tauri
                                               | 1.2.1                                     |        |                                                                                         |
