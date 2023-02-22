@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-02-21 22:30:57 CST)
+(The last generation time: 2023-02-23 01:41:30 CST)
 
 ### Packages
 
@@ -8,6 +8,8 @@
  Package name                                 | Version                                   | Role   | Homepage                                                                                | Description
 ==============================================|===========================================|========|=========================================================================================|====================
  acct-group/aptly                             | 0                                         |        |                                                                                         |
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ app-admin/supersm                            | 0.5.1                                     |        | https://github.com/peeweep/supersm                                                      | Super Symlink Manager
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/zenmonitor                         | 1.4.2                                     |        | https://github.com/ocerman/zenmonitor                                                   | Zen monitor is monitoring software for AMD Zen-based CPUs
    sys-kernel/zenpower                        | 0.1.12-r1                                 |  D, RD | https://github.com/ocerman/zenpower                                                     | Linux kernel driver for reading sensors of AMD Zen family CPUs
