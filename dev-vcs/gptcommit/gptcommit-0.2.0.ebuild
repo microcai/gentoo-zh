@@ -12,8 +12,16 @@ CRATES="
 	alloc-no-stdlib-2.0.4
 	alloc-stdlib-0.2.2
 	anyhow-1.0.69
+	async-channel-1.8.0
 	async-compression-0.3.15
+	async-executor-1.5.0
+	async-global-executor-2.3.1
+	async-io-1.12.0
+	async-lock-2.6.0
+	async-std-1.12.0
+	async-task-4.3.0
 	async-trait-0.1.64
+	atomic-waker-1.1.0
 	atty-0.2.14
 	autocfg-1.1.0
 	base64-0.13.1
@@ -22,9 +30,10 @@ CRATES="
 	bit-vec-0.6.3
 	bitflags-1.3.2
 	block-buffer-0.10.3
+	blocking-1.3.0
 	brotli-3.3.4
 	brotli-decompressor-2.3.4
-	bstr-1.2.0
+	bstr-1.3.0
 	bumpalo-3.12.0
 	bytes-1.4.0
 	cc-1.0.79
@@ -33,12 +42,15 @@ CRATES="
 	clap_derive-4.1.0
 	clap_lex-0.3.1
 	colored-2.0.0
+	concurrent-queue-2.1.0
 	config-0.13.3
 	core-foundation-0.9.3
 	core-foundation-sys-0.8.3
 	cpufeatures-0.2.5
 	crc32fast-1.3.2
+	crossbeam-utils-0.8.14
 	crypto-common-0.1.6
+	ctor-0.1.26
 	digest-0.10.6
 	dirs-4.0.0
 	dirs-sys-0.3.7
@@ -47,6 +59,7 @@ CRATES="
 	encoding_rs-0.8.32
 	errno-0.2.8
 	errno-dragonfly-0.1.2
+	event-listener-2.5.3
 	fancy-regex-0.11.0
 	fastrand-1.9.0
 	flate2-1.0.25
@@ -56,6 +69,8 @@ CRATES="
 	form_urlencoded-1.1.0
 	futures-channel-0.3.26
 	futures-core-0.3.26
+	futures-io-0.3.26
+	futures-lite-1.12.0
 	futures-sink-0.3.26
 	futures-task-0.3.26
 	futures-util-0.3.26
@@ -63,6 +78,7 @@ CRATES="
 	getrandom-0.2.8
 	globset-0.4.10
 	globwalk-0.8.1
+	gloo-timers-0.2.6
 	h2-0.3.15
 	hashbrown-0.12.3
 	heck-0.4.1
@@ -86,6 +102,7 @@ CRATES="
 	itoa-1.0.5
 	js-sys-0.3.61
 	json5-0.4.1
+	kv-log-macro-1.0.7
 	lazy_static-1.4.0
 	libc-0.2.139
 	linked-hash-map-0.5.6
@@ -99,7 +116,6 @@ CRATES="
 	mio-0.8.6
 	native-tls-0.2.11
 	nom-7.1.3
-	nom8-0.2.0
 	num_cpus-1.15.0
 	num_threads-0.1.6
 	once_cell-1.17.1
@@ -109,6 +125,7 @@ CRATES="
 	openssl-sys-0.9.80
 	ordered-multimap-0.4.3
 	os_str_bytes-6.4.1
+	parking-2.0.0
 	parking_lot-0.12.1
 	parking_lot_core-0.9.7
 	pathdiff-0.2.1
@@ -120,6 +137,7 @@ CRATES="
 	pin-project-lite-0.2.9
 	pin-utils-0.1.0
 	pkg-config-0.3.26
+	polling-2.5.2
 	proc-macro-error-1.0.4
 	proc-macro-error-attr-1.0.4
 	proc-macro2-1.0.51
@@ -154,7 +172,7 @@ CRATES="
 	sha2-0.10.6
 	signal-hook-registry-1.4.1
 	simple_logger-4.0.0
-	slab-0.4.7
+	slab-0.4.8
 	smallvec-1.10.0
 	socket2-0.4.7
 	spin-0.5.2
@@ -182,7 +200,7 @@ CRATES="
 	toml-0.5.11
 	toml-0.7.2
 	toml_datetime-0.6.1
-	toml_edit-0.19.3
+	toml_edit-0.19.4
 	tower-service-0.3.2
 	tracing-0.1.37
 	tracing-core-0.1.30
@@ -200,8 +218,10 @@ CRATES="
 	unicode-normalization-0.1.22
 	untrusted-0.7.1
 	url-2.3.1
+	value-bag-1.0.0-alpha.9
 	vcpkg-0.2.15
 	version_check-0.9.4
+	waker-fn-1.1.0
 	walkdir-2.3.2
 	want-0.3.0
 	wasi-0.11.0+wasi-snapshot-preview1
@@ -214,6 +234,7 @@ CRATES="
 	web-sys-0.3.61
 	webpki-0.22.0
 	webpki-roots-0.22.6
+	wepoll-ffi-0.1.2
 	which-4.4.0
 	winapi-0.3.9
 	winapi-i686-pc-windows-gnu-0.4.0
@@ -229,6 +250,7 @@ CRATES="
 	windows_x86_64_gnu-0.42.1
 	windows_x86_64_gnullvm-0.42.1
 	windows_x86_64_msvc-0.42.1
+	winnow-0.3.0
 	winreg-0.10.1
 	yaml-rust-0.4.5
 "
@@ -243,7 +265,7 @@ SRC_URI="
 "
 S="${WORKDIR}/gptcommit-tags-v${PV}"
 
-LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD Boost-1.0 ISC MIT MPL-2.0 Unicode-DFS-2016 Unlicense ZLIB"
+LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD BSD-2 Boost-1.0 ISC MIT MPL-2.0 Unicode-DFS-2016 Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
 
