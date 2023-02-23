@@ -16,7 +16,7 @@ KEYWORDS="amd64 ~x86"
 
 DEPEND="
 	dev-python/requests[${PYTHON_USEDEP}]
-	dev-python/python-zstandard[${PYTHON_USEDEP}]"
+	dev-python/zstandard[${PYTHON_USEDEP}]"
 
 RDEPEND="${DEPEND}"
 BDEPEND=""
