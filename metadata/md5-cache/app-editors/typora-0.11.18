@@ -9,5 +9,5 @@ RDEPEND=x11-libs/libXScrnSaver
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://hougearch.litterhougelangley.club/src/typora_0.11.18_amd64.deb
-_eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c
+_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d
 _md5_=34cfad19fa8786a71a72c4a55d40e7d6
