@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-02-24 21:08:35 CST)
+(The last generation time: 2023-02-24 21:40:17 CST)
 
 ### Packages
 
@@ -498,8 +498,8 @@
                                               | 6.1.12                                    |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                        | 3-r11                                     |        |                                                                                         | Virtual for Linux kernel sources
-   sys-kernel/liquorix-sources                | 6.1.11                                    | RD     | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
-                                              | 6.1.12                                    |        |                                                                                         |
+   sys-kernel/liquorix-sources                | 6.1.12                                    | RD     | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
+                                              | 6.1.13                                    |        |                                                                                         |
    sys-kernel/xanmod-kernel                   | 5.15.89                                   | RD     | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
                                               | 6.1.10                                    |        |                                                                                         |
                                               | 6.1.12                                    |        |                                                                                         |
