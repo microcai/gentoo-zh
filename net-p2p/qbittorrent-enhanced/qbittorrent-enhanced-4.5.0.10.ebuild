@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="+dbus webui qt6 +qt5"
 
-REQUIRED_USE="|| ( qt5 qt6 )"
+REQUIRED_USE="?? ( qt5 qt6 )"
 
 RDEPEND="
 		>=dev-libs/boost-1.65.0-r1:=
