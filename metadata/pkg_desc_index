@@ -43,7 +43,6 @@ app-i18n/lunar 2.2-r5: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
 app-i18n/mozc 2.26.4220_p20201212102434_p20201219202429 2.26.4632_p20220213064411_p20220214004422: Mozc - Japanese input method editor
 app-i18n/rime-prelude 20220122: Essential files for building up your Rime configuration
-app-i18n/wlpinyin 9999: Experimental chinese wayland input method(IME)
 app-i18n/zh-autoconvert 0.3.16_p7: Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 app-misc/bcompare 4.4.4.27058: Beyond Compare -- Compare, sync, and merge files and folders
 app-misc/ccal 2.5.3: A simple command line calendar for Chinese lunar
@@ -178,7 +177,6 @@ net-misc/prips 1.0.0 1.2.0: print the IP addresses in a range
 net-misc/remmina-plugin-rustdesk 1.0.0.0: A protocol plugin for Remmina to launch a Rustdesk connection.
 net-misc/rustdesk-bin 1.1.9 9999: Open source virtual / remote desktop infrastructure for everyone
 net-misc/you-get 9999: A video downloader for YouTube, Youku, niconico and a few other sites
-net-misc/youtube-dl 2021.06.06: Download videos from YouTube.com (and more sites...)
 net-p2p/amule-dlp 9999: aMule with DLP patch, the all-platform eMule p2p client
 net-p2p/amule-dlp-antileech 9999: amule-dlp-antileech, dynamic DLP library for amule-dlp
 net-p2p/n2n 3.0 3.1.1 9999: A Layer Two Peer-to-Peer VPN
