@@ -7,6 +7,7 @@ EAPI=8
 
 CRATES="
 	adler-1.0.2
+	ahash-0.7.6
 	ahash-0.8.3
 	aho-corasick-0.7.20
 	anes-0.1.6
@@ -32,7 +33,7 @@ CRATES="
 	bitflags-1.3.2
 	block-buffer-0.10.3
 	blocking-1.3.0
-	bstr-1.2.0
+	bstr-1.3.0
 	btoi-0.4.2
 	bumpalo-3.12.0
 	bytecount-0.6.3
@@ -102,6 +103,8 @@ CRATES="
 	errno-dragonfly-0.1.2
 	event-listener-2.5.3
 	expectrl-0.6.0
+	fallible-iterator-0.2.0
+	fallible-streaming-iterator-0.1.9
 	fastrand-1.9.0
 	filetime-0.2.20
 	flate2-1.0.25
@@ -123,33 +126,34 @@ CRATES="
 	generic-array-0.14.6
 	getopts-0.2.21
 	getrandom-0.2.8
-	git-actor-0.17.2
-	git-attributes-0.8.3
-	git-bitmap-0.2.2
 	git-conventional-0.12.1
-	git-date-0.4.3
-	git-discover-0.12.1
-	git-features-0.26.5
-	git-glob-0.5.4
-	git-hash-0.10.3
-	git-hashtable-0.1.2
-	git-index-0.12.4
-	git-lock-3.0.3
-	git-object-0.26.2
-	git-path-0.7.2
-	git-quote-0.4.2
-	git-ref-0.23.1
-	git-sec-0.6.3
-	git-tempfile-3.0.3
-	git-traverse-0.22.2
-	git-validate-0.7.3
-	git-worktree-0.12.3
 	git2-0.16.1
+	gix-actor-0.17.2
+	gix-attributes-0.8.3
+	gix-bitmap-0.2.1
+	gix-date-0.4.3
+	gix-discover-0.13.1
+	gix-features-0.26.5
+	gix-glob-0.5.5
+	gix-hash-0.10.3
+	gix-hashtable-0.1.1
+	gix-index-0.12.4
+	gix-lock-3.0.2
+	gix-object-0.26.2
+	gix-path-0.7.2
+	gix-quote-0.4.2
+	gix-ref-0.24.1
+	gix-sec-0.6.2
+	gix-tempfile-3.0.2
+	gix-traverse-0.22.1
+	gix-validate-0.7.3
+	gix-worktree-0.12.3
 	gloo-timers-0.2.6
 	h2-0.3.15
 	half-1.8.2
 	hashbrown-0.12.3
 	hashbrown-0.13.2
+	hashlink-0.8.1
 	heck-0.4.1
 	hermit-abi-0.1.19
 	hermit-abi-0.2.6
@@ -187,6 +191,7 @@ CRATES="
 	lazy_static-1.4.0
 	libc-0.2.139
 	libgit2-sys-0.14.2+1.5.1
+	libsqlite3-sys-0.25.2
 	libz-ng-sys-1.1.8
 	libz-sys-1.1.8
 	linked-hash-map-0.5.6
@@ -266,6 +271,7 @@ CRATES="
 	reqwest-0.11.14
 	resolv-conf-0.7.0
 	ring-0.16.20
+	rusqlite-0.28.0
 	rustc-hash-1.1.0
 	rustix-0.36.8
 	rustls-0.20.8
