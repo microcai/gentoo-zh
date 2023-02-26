@@ -1,11 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer type="person">
-		<email>git@xen0n.name</email>
-		<name>WANG Xuerui</name>
-	</maintainer>
-	<use>
-		<flag name="bwrap">Use sys-apps/bubblewrap to prevent private information leakage</flag>
-	</use>
+  <maintainer type="person">
+    <email>git@xen0n.name</email>
+    <name>WANG Xuerui</name>
+  </maintainer>
+  <maintainer type="person">
+    <email>ston.jia@qq.com</email>
+    <name>ston</name>
+  </maintainer>
+  <use>
+    <flag name="bwrap">Use sys-apps/bubblewrap to prevent private
+    information leakage</flag>
+  </use>
 </pkgmetadata>
