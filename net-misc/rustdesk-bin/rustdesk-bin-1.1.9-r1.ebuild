@@ -14,6 +14,8 @@ SLOT="0"
 RESTRICT="mirror strip"
 KEYWORDS="amd64"
 
+IUSE="wayland"
+
 RDEPEND="
 	media-libs/alsa-lib
 	x11-libs/gtk+:3
@@ -22,6 +24,7 @@ RDEPEND="
 	media-sound/pulseaudio
 	x11-misc/xdotool
 	media-libs/libva
+	wayland? ( media-video/pipewire[gstreamer] )
 "
 BDEPEND="app-arch/libarchive[zstd]"
 S=${WORKDIR}
