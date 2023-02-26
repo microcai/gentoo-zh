@@ -1,20 +1,22 @@
-# Copyright 2019-2021 Gentoo Authors
+# Copyright 2019-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 inherit desktop unpacker xdg
 
-MY_PV=${PV/_beta1_p/-}
+MY_PV=${PV/_p/-}
 
 DESCRIPTION="The new version of the official linux-qq"
-HOMEPAGE="https://im.qq.com/linuxqq/download.html"
+HOMEPAGE="https://im.qq.com/linuxqq/index.shtml"
 LICENSE="Tencent"
 RESTRICT="strip"
 
+_I="4b2e3220"
+
 SRC_URI="
-	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/c005c911/linuxqq_${MY_PV}_amd64.deb )
-	arm64? (  https://dldir1.qq.com/qqfile/qq/QQNT/c005c911/linuxqq_${MY_PV}_arm64.deb )
+	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_amd64.deb )
+	arm64? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_arm64.deb )
 "
 
 SLOT="0"
@@ -63,8 +65,6 @@ src_install() {
 	sed -i 's!/usr/share/icons/hicolor/512x512/apps/qq.png!qq!' usr/share/applications/qq.desktop || die
 	domenu usr/share/applications/qq.desktop
 	doicon -s 512 usr/share/icons/hicolor/512x512/apps/qq.png
-	insinto /usr/share/icons/hicolor/2x2/apps
-	doins usr/share/icons/hicolor/2x2/apps/qq.png
 	gzip -d usr/share/doc/linuxqq/changelog.gz || die
 	dodoc usr/share/doc/linuxqq/changelog
 }
