@@ -1,11 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer type="person">
-		<name>ston</name>
-		<email>ston.jia@qq.com</email>
-	</maintainer>
-	<upstream>
-		<remote-id type="github">rustdesk/rustdesk</remote-id>
-	</upstream>
+  <maintainer type="person">
+    <name>ston</name>
+    <email>ston.jia@qq.com</email>
+  </maintainer>
+  <use>
+    <flag name="wayland">enable wayland support</flag>
+  </use>
+  <upstream>
+    <remote-id type="github">rustdesk/rustdesk</remote-id>
+  </upstream>
 </pkgmetadata>
