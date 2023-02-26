@@ -1,0 +1,12 @@
+BDEPEND=sys-devel/clang >=dev-vcs/git-1.8.2.1[curl] >=dev-lang/go-1.18 app-arch/unzip
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=A lightweight and high-performance transparent proxy solution based on eBPF
+EAPI=8
+HOMEPAGE=https://github.com/v2rayA/dae
+INHERIT=git-r3 go-module
+LICENSE=AGPL-3
+PROPERTIES=live
+RESTRICT=strip
+SLOT=0
+_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	go-module	f2c9bcab49079a176b3ae061c94bb344
+_md5_=1eb583ccd560d090596a334f09dfda9c
