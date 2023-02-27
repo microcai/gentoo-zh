@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-02-26 15:35:06 CST)
+(The last generation time: 2023-02-27 14:01:55 CST)
 
 ### Packages
 
@@ -493,18 +493,18 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/dist-kernel                          | 5.15.89                                   |        |                                                                                         | Virtual to depend on any Distribution Kernel
                                               | 6.1.10                                    |        |                                                                                         |
-                                              | 6.1.12                                    |        |                                                                                         |
+                                              | 6.1.14                                    |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                        | 3-r11                                     |        |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/liquorix-sources                | 6.1.12                                    | RD     | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
                                               | 6.1.13                                    |        |                                                                                         |
    sys-kernel/xanmod-kernel                   | 5.15.89                                   | RD     | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
                                               | 6.1.10                                    |        |                                                                                         |
-                                              | 6.1.12                                    |        |                                                                                         |
+                                              | 6.1.14                                    |        |                                                                                         |
    sys-kernel/xanmod-rt                       | 6.0.11                                    | RD     | https://xanmod.org                                                                      | XanMod RT sources and CJKTTY options.
    sys-kernel/xanmod-sources                  | 5.15.89                                   | RD     | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
                                               | 6.1.10                                    |        |                                                                                         |
-                                              | 6.1.12                                    |        |                                                                                         |
+                                              | 6.1.14                                    |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/openvscode-server-bin               | 1.75.1                                    |        | https://github.com/gitpod-io/openvscode-server                                          | VS Code that runs a server on remote and allows access through a web browser
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
