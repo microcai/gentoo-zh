@@ -8,7 +8,7 @@ KEYWORDS=~amd64
 LICENSE=GPL-2 CDDL
 RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-devel/flex sys-devel/make >=sys-libs/ncurses-5.2 virtual/libelf virtual/pkgconfig )
 RESTRICT=binchecks strip
-SLOT=6.1.12
-SRC_URI=https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.1.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.1-14.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.1-14.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.1-14.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.1-14.extras.tar.xz https://github.com/xanmod/linux/releases/download//6.1.12-xanmod1/patch-6.1.12-xanmod1.xz https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v6.x//cjktty-6.1.patch
+SLOT=6.1.14
+SRC_URI=https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.1.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.1-16.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.1-16.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.1-16.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.1-16.extras.tar.xz https://github.com/xanmod/linux/releases/download//6.1.14-xanmod1/patch-6.1.14-xanmod1.xz https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v6.x//cjktty-6.1.patch
 _eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	kernel-2	1e55bee3f3081b16ebc1ca0cf1264f6c
-_md5_=711e73a152b9f1eae49305940e90ee9e
+_md5_=8d970d6d83b613c2494da47ee7adcf8c
