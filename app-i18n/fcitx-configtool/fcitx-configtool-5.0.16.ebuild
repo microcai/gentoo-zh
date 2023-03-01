@@ -12,7 +12,7 @@ else
 	MY_PN="fcitx5-configtool"
 	S="${WORKDIR}/${MY_PN}-${PV}"
 	SRC_URI="https://github.com/fcitx/fcitx5-configtool/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~loong ~x86"
+	KEYWORDS="~amd64 ~arm64 ~loong ~x86"
 fi
 
 DESCRIPTION="Configuration module for Fcitx"
