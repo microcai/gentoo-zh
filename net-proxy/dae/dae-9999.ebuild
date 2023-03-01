@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit git-r3 go-module systemd
+inherit linux-info git-r3 go-module systemd
 
 DESCRIPTION="A lightweight and high-performance transparent proxy solution based on eBPF"
 HOMEPAGE="https://github.com/v2rayA/dae"
@@ -11,6 +11,7 @@ HOMEPAGE="https://github.com/v2rayA/dae"
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS=""
+MINKV="5.8"
 
 EGIT_REPO_URI="https://github.com/v2rayA/dae.git"
 
@@ -20,6 +21,16 @@ DEPEND="
 "
 RDEPEND="$DEPEND"
 BDEPEND="sys-devel/clang"
+
+pkg_pretend() {
+	local CONFIG_CHECK="~DEBUG_INFO_BTF ~NET_CLS_ACT ~NET_SCH_INGRESS ~NET_INGRESS ~NET_EGRESS"
+
+	if kernel_is -lt ${MINKV//./ }; then
+		ewarn "Kernel version at least ${MINKV} required"
+	fi
+
+	check_extra_config
+}
 
 src_unpack() {
 	git-r3_src_unpack
