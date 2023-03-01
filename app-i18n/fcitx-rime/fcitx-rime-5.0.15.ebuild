@@ -15,7 +15,7 @@ else
 	MY_PN="fcitx5-rime"
 	S="${WORKDIR}/${MY_PN}-${PV}"
 	SRC_URI="https://github.com/fcitx/fcitx5-rime/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm64 ~x86"
 fi
 
 LICENSE="GPL-2"
