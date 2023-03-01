@@ -44,7 +44,7 @@ RDEPEND="
 		dev-qt/qtdbus:5
 		dev-qt/qtconcurrent:5
 		app-i18n/fcitx-qt:5[qt5,-onlyplugin]
-		browser? ( !loong? ( dev-qt/qtwebengine:5 ) )
+		browser? ( !loong? ( !x86? ( dev-qt/qtwebengine:5 ) ) )
 	)
 	!arm64? ( !loong? ( lua? ( app-i18n/fcitx-lua:5 ) ) )
 	test? ( dev-util/lcov )
@@ -68,7 +68,7 @@ src_configure() {
 		-DENABLE_COVERAGE=$(usex coverage)
 		-DUSE_WEBKIT=no
 	)
-	if use loong; then
+	if use loong || use x86; then
 		mycmakeargs+=(
 			-DENABLE_BROWSER=no
 		)
