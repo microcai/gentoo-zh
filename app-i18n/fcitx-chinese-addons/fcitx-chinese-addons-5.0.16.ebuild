@@ -13,7 +13,7 @@ else
 	MY_PN="fcitx5-chinese-addons"
 	S="${WORKDIR}/${MY_PN}-${PV}"
 	SRC_URI="https://download.fcitx-im.org/fcitx5/fcitx5-chinese-addons/fcitx5-chinese-addons-${PV}_dict.tar.xz"
-	KEYWORDS="~amd64 ~loong ~x86"
+	KEYWORDS="~amd64 ~arm64 ~loong ~x86"
 fi
 
 DESCRIPTION="Addons related to Chinese, including IME previous bundled inside fcitx4."
