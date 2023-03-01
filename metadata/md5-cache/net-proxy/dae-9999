@@ -1,14 +1,14 @@
 BDEPEND=sys-devel/clang >=dev-vcs/git-1.8.2.1[curl] >=dev-lang/go-1.18 app-arch/unzip virtual/pkgconfig
-DEFINED_PHASES=compile install unpack
+DEFINED_PHASES=compile install pretend setup unpack
 DEPEND=dev-libs/v2ray-domain-list-community-bin dev-libs/v2ray-geoip-bin
 DESCRIPTION=A lightweight and high-performance transparent proxy solution based on eBPF
 EAPI=8
 HOMEPAGE=https://github.com/v2rayA/dae
-INHERIT=git-r3 go-module systemd
+INHERIT=linux-info git-r3 go-module systemd
 LICENSE=AGPL-3
 PROPERTIES=live
 RDEPEND=dev-libs/v2ray-domain-list-community-bin dev-libs/v2ray-geoip-bin
 RESTRICT=strip
 SLOT=0
-_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	go-module	f2c9bcab49079a176b3ae061c94bb344	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	systemd	5f4bb0758df2e483babf68cd517078ca
-_md5_=2af8eda8f586325fb9b107ab81f26eb4
+_eclasses_=toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	linux-info	4b552625ebd741dfd2ac08637fd2436e	git-r3	2347f8fe2d392b2a091191f94be37e6f	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	go-module	f2c9bcab49079a176b3ae061c94bb344	systemd	5f4bb0758df2e483babf68cd517078ca
+_md5_=c16b953fa0a6289026189f3fd2248f79
