@@ -25,9 +25,11 @@ RDEPEND="
 	qt5? ( app-i18n/fcitx-qt:${SLOT} )
 	!loong? (
 		rime? ( app-i18n/fcitx-rime:${SLOT} )
-		hangul? ( app-i18n/fcitx-hangul:${SLOT} )
-		lua? ( app-i18n/fcitx-lua:${SLOT} )
-		skk? ( app-i18n/fcitx-skk:${SLOT} )
+		!arm64? (
+			hangul? ( app-i18n/fcitx-hangul:${SLOT} )
+			lua? ( app-i18n/fcitx-lua:${SLOT} )
+			skk? ( app-i18n/fcitx-skk:${SLOT} )
+		)
 	)
 "
 BDEPEND=""

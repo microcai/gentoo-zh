@@ -1,2 +1,0 @@
-# Require keyword
-app-i18n/fcitx-meta hangul lua skk
