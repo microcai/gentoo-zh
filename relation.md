@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-03-02 10:27:26 CST)
+(The last generation time: 2023-03-02 20:44:58 CST)
 
 ### Packages
 
@@ -481,6 +481,8 @@
  sys-fs/jmtpfs                                | 0.5                                       |        | http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux | A FUSE and libmtp based filesystem for accessing MTP devices.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/ltfs                                  | 9999                                      |        | https://github.com/LinearTapeFileSystem/ltfs                                            | LTFS for LTO tapes
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ sys-fs/ssdfs-tools                           | 4.09                                      |        | https://github.com/dubeyko/ssdfs-tools                                                  | userspace tools for SSDFS
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/systemd-zpool-scrub                   | 1.1                                       |        | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
