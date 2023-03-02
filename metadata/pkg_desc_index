@@ -25,7 +25,7 @@ app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
 app-i18n/fcitx 4.2.9.8 5.0.20 5.0.21 9999: Fcitx5 Next generation of fcitx
 app-i18n/fcitx-chewing 5.0.13: Chewing Wrapper for Fcitx.
-app-i18n/fcitx-chinese-addons 5.0.15-r1 5.0.16 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
+app-i18n/fcitx-chinese-addons 5.0.16 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
 app-i18n/fcitx-configtool 5.0.15 5.0.16 9999: Configuration module for Fcitx
 app-i18n/fcitx-gtk 5.0.20 5.0.21 9999: Gtk im module for fcitx5 and glib based dbus client library
 app-i18n/fcitx-hangul 5.0.10: Korean Hangul input method for Fcitx
@@ -222,15 +222,15 @@ sys-fs/ltfs 9999: LTFS for LTO tapes
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/liquorix-sources 6.1.12 6.1.13: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 34-r1: Modular initramfs image creation utility
-sys-kernel/xanmod-kernel 5.15.89 6.1.10 6.1.14: XanMod lts kernel built with Gentoo patches and cjktty
+sys-kernel/xanmod-kernel 5.15.95 6.1.14 6.2.1: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 6.0.11: XanMod RT sources and CJKTTY options.
-sys-kernel/xanmod-sources 5.15.89 6.1.10 6.1.14: Full XanMod source, including the Gentoo patchset and other patch options.
+sys-kernel/xanmod-sources 5.15.95 6.1.14 6.2.1: Full XanMod source, including the Gentoo patchset and other patch options.
 sys-kernel/zenpower 0.1.12-r1: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libsolv 0.7.23 9999: Library for solving packages and reading repositories
 sys-libs/libzypp 17.31.7 9999: ZYpp Package Management library
 sys-power/tlpui 1.5.0_p6: A GTK user interface for TLP written in Python
-virtual/dist-kernel 5.15.89 6.1.10 6.1.14: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 5.15.95 6.1.14 6.2.1: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 www-apps/openvscode-server-bin 1.75.1: VS Code that runs a server on remote and allows access through a web browser
 www-servers/darkhttpd 1.13: A small, static webserver
