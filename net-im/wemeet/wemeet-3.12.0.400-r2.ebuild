@@ -51,6 +51,8 @@ src_install() {
 	mkdir opt/${PN}/lib || die
 	cp -rf opt/${PN}/lib.orig/lib{bugly,crbase,desktop_common,ImSDK,nxui*,qt_*,service*,tms_*,ui*,wemeet*,xcast*,xnn*}.so opt/${PN}/lib/ || die
 	rm -r opt/${PN}/lib.orig || die
+	# Fix SEGFAULT with libqxcb-glx-integration
+	rm -r opt/wemeet/plugins/xcbglintegrations || die
 	# Fix RPATHs to ensure the libraries can be found
 	for f in $(find "opt/${PN}/bin" "opt/${PN}/plugins") ; do
 		[[ -f ${f} && $(od -t x1 -N 4 "${f}") == *"7f 45 4c 46"* ]] || continue
