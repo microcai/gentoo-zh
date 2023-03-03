@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-03-03 18:34:32 CST)
+(The last generation time: 2023-03-03 18:36:30 CST)
 
 ### Packages
 
@@ -256,6 +256,7 @@
  media-gfx/tifig-bin                          | 0.2.2                                     |        | https://github.com/monostream/tifig                                                     | Converts iOS 11 HEIC images to practical formats - Static binary
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/unityhub                           | 3.3.0                                     |        | https://unity.com/                                                                      | The official unity tool for manager Unity Engines and projects
+                                              | 3.4.1                                     |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/xrectsel                           | 0.3.1                                     |        | https://github.com/lolilolicon/xrectsel                                                 | print the geometry of a rectangular screen region
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
