@@ -22,15 +22,23 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 S="${WORKDIR}/Clash.Meta-${PV}"
+IUSE="+gvisor lwip"
 
 src_compile() {
 	local BUILDTIME=$(LC_ALL=C date -u || die)
+	local MY_TAGS
+	if use gvisor; then
+		MY_TAGS="with_gvisor"
+	fi
+	if use lwip; then
+		MY_TAGS+=" with_lwip"
+	fi
 	ego build \
-	-ldflags "-linkmode external -extldflags \"${LDFLAGS}\" \
+		-ldflags "-linkmode external -extldflags \"${LDFLAGS}\" \
 	-X \"github.com/Dreamacro/clash/constant.Version=${PV}\" \
 	-X \"github.com/Dreamacro/clash/constant.BuildTime=${BUILDTIME}\" \
 	" \
-	-tags with_gvisor -o ${P}
+		-tags "$MY_TAGS" -o "${P}"
 }
 
 src_install() {
