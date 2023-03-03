@@ -7,7 +7,10 @@ inherit font
 
 DESCRIPTION="A Chinese sans-serif font derived from IPAex Gothic."
 HOMEPAGE="https://github.com/lxgw/LxgwNeoXiHei"
-SRC_URI="https://github.com/lxgw/LxgwNeoXiHei/releases/download/v${PV}/LXGWFasmartGothic.ttf"
+SRC_URI="
+	https://github.com/lxgw/LxgwNeoXiHei/releases/download/v${PV}/LXGWFasmartGothic.ttf
+	https://github.com/lxgw/LxgwNeoXiHei/releases/download/v${PV}/LXGWNeoXiHei.ttf
+"
 
 LICENSE="IPAfont"
 SLOT="0"
