@@ -31,7 +31,7 @@ DEPEND="
 	dev-libs/nss
 	x11-libs/gtk+
 	app-crypt/libsecret
-	dev-libs/openssl-compat
+	|| ( <dev-libs/openssl-3 dev-libs/openssl-compat )
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
