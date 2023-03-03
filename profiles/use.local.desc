@@ -130,6 +130,7 @@ media-fonts/nerd-fonts:tinos - Install Nerd-fonts-patched Tinos fonts
 media-fonts/nerd-fonts:ubuntu - Install Nerd-fonts-patched Ubuntu fonts
 media-fonts/nerd-fonts:ubuntumono - Install Nerd-fonts-patched Ubuntu Mono fonts
 media-fonts/nerd-fonts:victormono - Install Nerd-fonts-patched Victor Mono fonts
+media-gfx/unityhub:legacy - add support for Legacy unity versions
 media-plugins/osdlyrics:gnome - add support for gnome
 media-plugins/osdlyrics:indicator - add support for appindicator
 media-sound/feeluown:kuwo - add kuwo music support for feeluown
@@ -168,6 +169,8 @@ net-p2p/n2n:zstd - Use zstd support
 net-p2p/qbittorrent-enhanced:webui - Enable the Web UI
 net-proxy/clash:goamd64 - detect golang arch level on amd64 cpus by CPU_FLAGS_X86
 net-proxy/clash-for-windows-bin:tun - Enable TUN support.
+net-proxy/clash-meta:gvisor - enable TUN stack support for gvisor
+net-proxy/clash-meta:lwip - enable TUN stack support for lwip
 net-proxy/clash-verge-bin:system-clash - Use net-proxy/clash instead of clash-premium
 net-proxy/make-proxy:client - Add make proxy client support
 net-proxy/make-proxy:server - Add make proxy server support
