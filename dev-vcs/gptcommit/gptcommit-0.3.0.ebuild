@@ -17,13 +17,15 @@ CRATES="
 	async-executor-1.5.0
 	async-global-executor-2.3.1
 	async-io-1.12.0
-	async-lock-2.6.0
+	async-lock-2.7.0
+	async-openai-0.8.0
 	async-std-1.12.0
 	async-task-4.3.0
 	async-trait-0.1.64
 	atomic-waker-1.1.0
 	atty-0.2.14
 	autocfg-1.1.0
+	backoff-0.4.0
 	base64-0.13.1
 	base64-0.21.0
 	bit-set-0.5.3
@@ -38,9 +40,9 @@ CRATES="
 	bytes-1.4.0
 	cc-1.0.79
 	cfg-if-1.0.0
-	clap-4.1.6
-	clap_derive-4.1.0
-	clap_lex-0.3.1
+	clap-4.1.8
+	clap_derive-4.1.8
+	clap_lex-0.3.2
 	colored-2.0.0
 	concurrent-queue-2.1.0
 	config-0.13.3
@@ -48,9 +50,15 @@ CRATES="
 	core-foundation-sys-0.8.3
 	cpufeatures-0.2.5
 	crc32fast-1.3.2
-	crossbeam-utils-0.8.14
+	crossbeam-utils-0.8.15
 	crypto-common-0.1.6
 	ctor-0.1.26
+	darling-0.14.3
+	darling_core-0.14.3
+	darling_macro-0.14.3
+	derive_builder-0.12.0
+	derive_builder_core-0.12.0
+	derive_builder_macro-0.12.0
 	digest-0.10.6
 	dirs-4.0.0
 	dirs-sys-0.3.7
@@ -60,6 +68,7 @@ CRATES="
 	errno-0.2.8
 	errno-dragonfly-0.1.2
 	event-listener-2.5.3
+	eventsource-stream-0.2.3
 	fancy-regex-0.11.0
 	fastrand-1.9.0
 	flate2-1.0.25
@@ -67,19 +76,23 @@ CRATES="
 	foreign-types-0.3.2
 	foreign-types-shared-0.1.1
 	form_urlencoded-1.1.0
+	futures-0.3.26
 	futures-channel-0.3.26
 	futures-core-0.3.26
+	futures-executor-0.3.26
 	futures-io-0.3.26
 	futures-lite-1.12.0
+	futures-macro-0.3.26
 	futures-sink-0.3.26
 	futures-task-0.3.26
+	futures-timer-3.0.2
 	futures-util-0.3.26
 	generic-array-0.14.6
 	getrandom-0.2.8
 	globset-0.4.10
 	globwalk-0.8.1
 	gloo-timers-0.2.6
-	h2-0.3.15
+	h2-0.3.16
 	hashbrown-0.12.3
 	heck-0.4.1
 	hermit-abi-0.1.19
@@ -92,13 +105,14 @@ CRATES="
 	hyper-0.14.24
 	hyper-rustls-0.23.2
 	hyper-tls-0.5.0
+	ident_case-1.0.1
 	idna-0.3.0
 	ignore-0.4.20
 	indexmap-1.9.2
 	instant-0.1.12
 	io-lifetimes-1.0.5
 	ipnet-2.7.1
-	is-terminal-0.4.3
+	is-terminal-0.4.4
 	itoa-1.0.5
 	js-sys-0.3.61
 	json5-0.4.1
@@ -111,6 +125,7 @@ CRATES="
 	log-0.4.17
 	memchr-2.5.0
 	mime-0.3.16
+	mime_guess-2.0.4
 	minimal-lexical-0.2.1
 	miniz_oxide-0.6.2
 	mio-0.8.6
@@ -138,17 +153,21 @@ CRATES="
 	pin-utils-0.1.0
 	pkg-config-0.3.26
 	polling-2.5.2
+	ppv-lite86-0.2.17
 	proc-macro-error-1.0.4
 	proc-macro-error-attr-1.0.4
 	proc-macro2-1.0.51
 	quote-1.0.23
+	rand-0.8.5
+	rand_chacha-0.3.1
+	rand_core-0.6.4
 	redox_syscall-0.2.16
 	redox_users-0.4.3
 	regex-1.7.1
 	regex-automata-0.1.10
 	regex-syntax-0.6.28
-	remove_dir_all-0.5.3
 	reqwest-0.11.14
+	reqwest-eventsource-0.4.0
 	ring-0.16.20
 	ron-0.7.1
 	rust-ini-0.18.0
@@ -179,23 +198,24 @@ CRATES="
 	strsim-0.10.0
 	strum-0.24.1
 	strum_macros-0.24.3
-	syn-1.0.107
-	tempfile-3.3.0
+	syn-1.0.109
+	tempfile-3.4.0
 	tera-1.17.1
 	termcolor-1.2.0
 	thiserror-1.0.38
 	thiserror-impl-1.0.38
 	thread_local-1.1.7
 	tiktoken-rs-0.1.2
-	time-0.3.19
+	time-0.3.20
 	time-core-0.1.0
-	time-macros-0.2.7
+	time-macros-0.2.8
 	tinyvec-1.6.0
 	tinyvec_macros-0.1.1
-	tokio-1.25.0
+	tokio-1.26.0
 	tokio-macros-1.8.2
 	tokio-native-tls-0.3.1
 	tokio-rustls-0.23.4
+	tokio-stream-0.1.12
 	tokio-util-0.7.7
 	toml-0.5.11
 	toml-0.7.2
@@ -203,6 +223,7 @@ CRATES="
 	toml_edit-0.19.4
 	tower-service-0.3.2
 	tracing-0.1.37
+	tracing-attributes-0.1.23
 	tracing-core-0.1.30
 	try-lock-0.2.4
 	typenum-1.16.0
@@ -213,6 +234,7 @@ CRATES="
 	unic-segment-0.9.0
 	unic-ucd-segment-0.9.0
 	unic-ucd-version-0.9.0
+	unicase-2.6.0
 	unicode-bidi-0.3.10
 	unicode-ident-1.0.6
 	unicode-normalization-0.1.22
@@ -231,6 +253,7 @@ CRATES="
 	wasm-bindgen-macro-0.2.84
 	wasm-bindgen-macro-support-0.2.84
 	wasm-bindgen-shared-0.2.84
+	wasm-streams-0.2.3
 	web-sys-0.3.61
 	webpki-0.22.0
 	webpki-roots-0.22.6
@@ -250,7 +273,7 @@ CRATES="
 	windows_x86_64_gnu-0.42.1
 	windows_x86_64_gnullvm-0.42.1
 	windows_x86_64_msvc-0.42.1
-	winnow-0.3.0
+	winnow-0.3.3
 	winreg-0.10.1
 	yaml-rust-0.4.5
 "
