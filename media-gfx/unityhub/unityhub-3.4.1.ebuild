@@ -42,7 +42,7 @@ src_unpack(){
 src_install(){
 	insinto "/opt"
 	doins -r "${S}/opt/unityhub"
-	dosym /opt/unityhub/unityhub usr/bin/unityhub
+	dosym -r /opt/unityhub/unityhub /usr/bin/unityhub
 	for si in 16 32 48 64 128 256 512; do
 		doicon -s ${si} usr/share/icons/hicolor/${si}x${si}/apps/${PN}.png
 	done
