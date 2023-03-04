@@ -35,17 +35,22 @@ RDEPEND="
 				dev-qt/qtsql:5
 				dev-qt/qtxml:5
 				dev-qt/qtnetwork:5[ssl]
-				dev-libs/geoip
-				dev-qt/qtgui:5
-				dev-qt/qtsvg:5
-				dev-qt/qtwidgets:5
+				gui? (
+					dev-libs/geoip
+					dev-qt/qtgui:5
+					dev-qt/qtsvg:5
+					dev-qt/qtwidgets:5
+				)
 				dbus? ( dev-qt/qtdbus:5 )
 		)
 		qt6? (
 			dev-libs/geoip
-			dev-qt/qtbase:6
-			dev-qt/qtsvg:6
-			dbus? ( dev-qt/qtdbus:6 )
+			dev-qt/qtbase:6[network,ssl,sql,xml]
+			gui? (
+				dev-qt/qtbase:6[gui,widgets]
+				dev-qt/qtsvg:6
+			)
+			dbus? ( dev-qt/qtbase:6[dbus] )
 		)
 
 "
