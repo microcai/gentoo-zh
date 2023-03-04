@@ -24,17 +24,28 @@ REQUIRED_USE="?? ( qt5 qt6 )"
 RDEPEND="
 		>=dev-libs/boost-1.65.0-r1:=
 		dev-libs/openssl:=
-		dev-qt/qtcore:5
-		dev-qt/qtnetwork:5[ssl]
-		dev-qt/qtsql:5
-		dev-qt/qtxml:5
 		net-libs/libtorrent-rasterbar
 		sys-libs/zlib
 		dbus? (
 			qt5? ( dev-qt/qtdbus:5 )
 			qt6? ( dev-qt/qtbase:6 )
 		)
+		webui? (
+			qt5? (
+				dev-qt/qtcore:5
+				dev-qt/qtnetwork:5[ssl]
+				dev-qt/qtsql:5
+				dev-qt/qtxml:5
+			)
+			qt6? (
+				dev-qt/qtbase:6
+			)
+		)
 		qt5? (
+				dev-qt/qtcore:5
+				dev-qt/qtnetwork:5[ssl]
+				dev-qt/qtsql:5
+				dev-qt/qtxml:5
 				dev-libs/geoip
 				dev-qt/qtgui:5
 				dev-qt/qtsvg:5
