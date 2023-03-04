@@ -45,7 +45,6 @@ RDEPEND="
 		)
 		qt6? (
 			dev-qt/qtbase:6[network,ssl,sql,xml]
-			dev-qt/qttools:6
 			gui? (
 				dev-qt/qtbase:6[gui,widgets]
 				dev-qt/qtsvg:6
@@ -55,7 +54,8 @@ RDEPEND="
 
 "
 DEPEND="${RDEPEND}"
-BDEPEND="dev-qt/linguist-tools:5
+BDEPEND="qt5? ( dev-qt/linguist-tools:5 )
+		 qt6? ( dev-qt/qttools:6 )
 		virtual/pkgconfig"
 
 DOCS=( AUTHORS Changelog CONTRIBUTING.md README.md)
@@ -72,15 +72,15 @@ src_configure() {
 
 	local mycmakeargs=(
 		-DDBUS=$(usex dbus)
-		-DGUI=${enable_gui}
 		-DWEBUI=$(usex webui)
+		-DQT6=$(usex qt6)
+		-DGUI=$(usex gui )
 
 		-DSYSTEMD=ON
 		-DSYSTEMD_SERVICES_INSTALL_DIR=$(systemd_get_systemunitdir)
 
 		-DVERBOSE_CONFIGURE=ON
 
-		-DQT6=$(usex qt6)
 	)
 	cmake_src_configure
 }
