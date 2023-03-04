@@ -44,7 +44,10 @@ RDEPEND="
 		qt6? (
 			dev-libs/geoip
 			dev-qt/qtbase:6
-			dev-qt/qtsvg:6
+			gui? (
+				dev-qt/qtbase:6[gui,widgets]
+				dev-qt/qtsvg:6
+			)
 			dbus? ( dev-qt/qtdbus:6 )
 		)
 
