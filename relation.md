@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-03-03 18:36:53 CST)
+(The last generation time: 2023-03-04 13:22:05 CST)
 
 ### Packages
 
@@ -388,9 +388,8 @@
    acct-group/n2n                             | 0                                         |  D, RD |                                                                                         | A Layer Two Peer-to-Peer VPN
    acct-user/n2n                              | 0                                         |  D, RD |                                                                                         | A Layer Two Peer-to-Peer VPN
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-p2p/qbittorrent-enhanced                 | 4.3.9.10                                  |        | https://github.com/c0re100/qBittorrent-Enhanced-Edition                                 | qBittorrent Enhanced, based on qBittorrent
-                                              | 4.4.5.10                                  |        |                                                                                         |
-                                              | 4.5.0.10                                  |        |                                                                                         |
+ net-p2p/qbittorrent-enhanced                 | 4.4.5.10                                  |        | https://github.com/c0re100/qBittorrent-Enhanced-Edition                                 | qBittorrent Enhanced, based on qBittorrent
+                                              | 4.5.2.10                                  |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-print/epson-inkjet-printer_201207w       | 1.0.0                                     |        | http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX                              | Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
