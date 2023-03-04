@@ -29,6 +29,7 @@ RDEPEND="
 		dev-libs/openssl:=
 		net-libs/libtorrent-rasterbar
 		sys-libs/zlib
+		dev-libs/geoip
 
 		qt5? (
 				dev-qt/qtcore:5
@@ -36,7 +37,6 @@ RDEPEND="
 				dev-qt/qtxml:5
 				dev-qt/qtnetwork:5[ssl]
 				gui? (
-					dev-libs/geoip
 					dev-qt/qtgui:5
 					dev-qt/qtsvg:5
 					dev-qt/qtwidgets:5
@@ -44,8 +44,8 @@ RDEPEND="
 				dbus? ( dev-qt/qtdbus:5 )
 		)
 		qt6? (
-			dev-libs/geoip
 			dev-qt/qtbase:6[network,ssl,sql,xml]
+			dev-qt/qttools:6
 			gui? (
 				dev-qt/qtbase:6[gui,widgets]
 				dev-qt/qtsvg:6
