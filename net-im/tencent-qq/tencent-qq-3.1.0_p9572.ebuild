@@ -27,6 +27,7 @@ RDEPEND="
 	x11-libs/gtk+:3
 	x11-libs/libnotify
 	dev-libs/nss
+	dev-libs/libappindicator
 	x11-libs/libXScrnSaver
 	x11-libs/libXtst
 	x11-misc/xdg-utils
