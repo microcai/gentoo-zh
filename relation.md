@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-03-05 13:24:55 CST)
+(The last generation time: 2023-03-09 03:36:38 CST)
 
 ### Packages
 
@@ -100,6 +100,8 @@
  app-misc/rmtrash                             | 1.14                                      |        | https://github.com/PhrozenByte/rmtrash                                                  | trash-put made compatible to GNUs rm and rmdir
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/spark                               | 1.0.1                                     |        | http://zachholman.com/spark/                                                            | ▁▂▃▅▂▇ in your shell
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ app-misc/xmind                               | 22.11.3656                                |        | https://www.xmind.net                                                                   | Brainstorming and Mind Mapping Software
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/yq-bin                              | 4.28.2                                    |        | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
                                               | 4.30.6                                    |        |                                                                                         |
