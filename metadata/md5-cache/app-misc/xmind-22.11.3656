@@ -1,0 +1,15 @@
+DEFINED_PHASES=install postinst postrm preinst unpack
+DEPEND=x11-libs/gtk+:3 media-libs/alsa-lib x11-libs/libxkbfile dev-libs/nss
+DESCRIPTION=Brainstorming and Mind Mapping Software
+EAPI=8
+HOMEPAGE=https://www.xmind.net
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=desktop unpacker xdg
+KEYWORDS=-* ~amd64
+LICENSE=all-rights-reserved
+RDEPEND=x11-libs/gtk+:3 media-libs/alsa-lib x11-libs/libxkbfile dev-libs/nss
+RESTRICT=mirror strip
+SLOT=0
+SRC_URI=https://dl3.xmind.net/Xmind-for-Linux-amd64bit-22.11.3656.deb
+_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	fdd15d854bf5e84f82d35524ab8ca6ba	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
+_md5_=34c280a986be5092acd1a89befb02050
