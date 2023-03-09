@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>123485k</name>
+		<email>1758961307@qq.com</email>
+	</maintainer>
+	<longdescription lang="en">
+		aliyunpan command line client,
+		supports webdav file service,
+		supports JavaScript plugin,
+		and supports sync backup function.
+	</longdescription>
+	<longdescription lang="zh">
+		阿里云盘命令行客户端，
+		支持webdav文件服务，
+		支持JavaScript插件，
+		支持同步备份功能。
+	</longdescription>
+	<upstream>
+		<remote-id type="github">net-misc/aliyunpan</remote-id>
+	</upstream>
+</pkgmetadata>

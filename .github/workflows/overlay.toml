@@ -783,6 +783,12 @@ regex = "Package Details: wemeet-bin ([\\d.]+)-"
 # TODO
 #["net-libs/jzmq"]
 
+["net-misc/aliyunpan"]
+source = "github"
+github = "tickstep/aliyunpan"
+use_latest_release = true
+prefix = "v"
+
 # TODO
 #["net-misc/avsocks"]
 
