@@ -797,7 +797,7 @@ prefix = "v"
 
 ["net-misc/baidupcs-go"]
 source = "github"
-github = "felixonmars/BaiduPCS-Go"
+github = "qjfoidnh/BaiduPCS-Go"
 use_latest_release = true
 prefix = "v"
 
