@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-03-09 18:07:03 CST)
+(The last generation time: 2023-03-09 21:28:08 CST)
 
 ### Packages
 
@@ -364,8 +364,7 @@
  net-misc/baidunetdisk                        | 4.14.5                                    |        | https://pan.baidu.com/                                                                  | Baidu Net Disk is a cloud storage client (Linux Version)
                                               | 4.3.0                                     |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/baidupcs-go                         | 3.6.2                                     |        | https://github.com/felixonmars/BaiduPCS-Go                                              | The terminal utility for Baidu Network Disk (Golang Version).
-                                              | 9999                                      |        |                                                                                         |
+ net-misc/baidupcs-go                         | 3.9.0                                     |        | https://github.com/qjfoidnh/BaiduPCS-Go                                                 | The terminal utility for Baidu Network Disk (Golang Version).
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/networkmanager-l2tp                 | 9999                                      |        | http://www.gnome.org/projects/NetworkManager/                                           | NetworkManager L2TP plugin
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
