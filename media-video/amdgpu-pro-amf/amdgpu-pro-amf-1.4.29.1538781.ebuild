@@ -52,4 +52,5 @@ src_install() {
 	# AMF
 	doins "${S}/${PN}-amd64/opt/amdgpu-pro/lib/x86_64-linux-gnu/libamfrt64.so.${MY_PV}"
 	dosym "libamfrt64.so.${MY_PV}" "/usr/$(get_libdir)/libamfrt64.so.1"
+	dosym "libamfrt64.so.${MY_PV}" "/usr/$(get_libdir)/libamfrt64.so"
 }
