@@ -1,0 +1,13 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=AMD's closed source Advanced Media Framework (AMF) driver
+EAPI=8
+HOMEPAGE=https://www.amd.com/en/support
+INHERIT=unpacker
+KEYWORDS=-* ~amd64
+LICENSE=AMD-GPU-PRO-EULA
+RDEPEND=media-libs/amdgpu-pro-vulkan media-libs/libglvnd x11-libs/libdrm x11-libs/libX11
+RESTRICT=bindist mirror
+SLOT=0
+SRC_URI=https://repo.radeon.com/amdgpu/5.4.3/ubuntu/pool/proprietary/a/amf-amdgpu-pro/amf-amdgpu-pro_1.4.29-1538781.22.04_amd64.deb -> amdgpu-pro-amf-1.4.29.1538781.deb
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	fdd15d854bf5e84f82d35524ab8ca6ba
+_md5_=d0f7e7a683b3a386d8fb0e11334150c6
