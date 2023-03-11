@@ -23,22 +23,22 @@ app-emulation/deepin-wine5 5.0.16-r1: Deepin wine5
 app-emulation/deepin-wine6-stable 6.0.0.19-r1: Deepin wine6 stable
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
-app-i18n/fcitx 4.2.9.8 5.0.20 5.0.21 9999: Fcitx5 Next generation of fcitx
+app-i18n/fcitx 4.2.9.8 5.0.20 5.0.21 5.0.22 9999: Fcitx5 Next generation of fcitx
 app-i18n/fcitx-chewing 5.0.13: Chewing Wrapper for Fcitx.
-app-i18n/fcitx-chinese-addons 5.0.16 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
-app-i18n/fcitx-configtool 5.0.15 5.0.16 9999: Configuration module for Fcitx
-app-i18n/fcitx-gtk 5.0.20 5.0.21 9999: Gtk im module for fcitx5 and glib based dbus client library
-app-i18n/fcitx-hangul 5.0.10: Korean Hangul input method for Fcitx
+app-i18n/fcitx-chinese-addons 5.0.17 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
+app-i18n/fcitx-configtool 5.0.16 5.0.17 9999: Configuration module for Fcitx
+app-i18n/fcitx-gtk 5.0.21 5.0.22 9999: Gtk im module for fcitx5 and glib based dbus client library
+app-i18n/fcitx-hangul 5.0.11: Korean Hangul input method for Fcitx
 app-i18n/fcitx-lua 5.0.7-r1 5.0.10 9999: Lua support for fcitx
 app-i18n/fcitx-meta 5.0.12-r2: Merge this to pull in Fcitx packages
-app-i18n/fcitx-qt 5.0.15-r1 5.0.16 9999: Qt library and IM module for fcitx5
+app-i18n/fcitx-qt 5.0.16 5.0.17 9999: Qt library and IM module for fcitx5
 app-i18n/fcitx-rime 5.0.15 9999: Rime Support for Fcitx5
 app-i18n/fcitx-skk 5.0.14 9999: Japanese SKK input engine for Fcitx5
 app-i18n/fcitx-table-extra 5.0.11 5.0.12: Provides extra table for Fcitx, including Boshiamy, Zhengma, Cangjie, and Quick
 app-i18n/fcitx-table-other 5.0.10: Provides some other tables for Fcitx, fork from ibus-table-others, scim-tables
 app-i18n/ibus-rime 9999: Rime Input Method Engine for IBus Framework
 app-i18n/libgooglepinyin 0.1.2-r1: A fork from google pinyin on android
-app-i18n/libime 1.0.16 9999: Fcitx5 Next generation of fcitx
+app-i18n/libime 1.0.17 9999: Fcitx5 Next generation of fcitx
 app-i18n/lunar 2.2-r5: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
 app-i18n/mozc 2.26.4220_p20201212102434_p20201219202429 2.26.4632_p20220213064411_p20220214004422: Mozc - Japanese input method editor
@@ -242,7 +242,7 @@ www-servers/darkhttpd 1.13: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
 x11-libs/glbinding 3.3.0: A C++ binding for the OpenGL API
-x11-libs/xcb-imdkit 1.0.3 1.0.4: Input method development support for xcb
+x11-libs/xcb-imdkit 1.0.4 1.0.5: Input method development support for xcb
 x11-misc/9menu 1.10: Create X menus from the shell
 x11-misc/extramaus 3: workaround to always show mouse cursor under x11
 x11-misc/fqterm 0.9.10.1 9999: a modern terminal emulator for Linux
