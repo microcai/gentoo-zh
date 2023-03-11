@@ -14,5 +14,5 @@ REQUIRED_USE=^^ ( qt5 qt6 ) dbus? ( gui ) || ( gui webui )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/c0re100/qBittorrent-Enhanced-Edition/archive/release-4.5.2.10.tar.gz -> qbittorrent-enhanced-4.5.2.10.tar.gz
-_eclasses_=toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	449b4785acace35308fe747fc939bde1	systemd	5f4bb0758df2e483babf68cd517078ca	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	b2e109b7341cd993b8bdfcc60652a14d	systemd	5f4bb0758df2e483babf68cd517078ca	xdg	6024fbc93167fad782e2032933654857
 _md5_=7055b20ab7d4be84875b79771d7165f8
