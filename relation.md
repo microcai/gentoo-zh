@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-03-10 22:59:45 CST)
+(The last generation time: 2023-03-11 17:11:34 CST)
 
 ### Packages
 
@@ -41,31 +41,32 @@
  app-i18n/fcitx-chewing                       | 5.0.13                                    |        | https://github.com/fcitx/fcitx5-chewing                                                 | Chewing Wrapper for Fcitx.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-meta                          | 5.0.12-r2                                 |        | https://fcitx-im.org                                                                    | Merge this to pull in Fcitx packages
-   app-i18n/fcitx-chinese-addons              | 5.0.16                                    | RD     | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
+   app-i18n/fcitx-chinese-addons              | 5.0.17                                    | RD     | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
                                               | 9999                                      |        |                                                                                         |
      app-i18n/fcitx-lua                       | 5.0.10                                    |  D, RD | https://github.com/fcitx/fcitx5-lua                                                     | Lua support for fcitx
                                               | 5.0.7-r1                                  |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
-     app-i18n/fcitx-qt                        | 5.0.15-r1                                 |  D, RD | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
-                                              | 5.0.16                                    |        |                                                                                         |
+     app-i18n/fcitx-qt                        | 5.0.16                                    |  D, RD | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
+                                              | 5.0.17                                    |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
-     app-i18n/libime                          | 1.0.16                                    |  D, RD | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
+     app-i18n/libime                          | 1.0.17                                    |  D, RD | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
                                               | 9999                                      |        |                                                                                         |
-   app-i18n/fcitx-configtool                  | 5.0.15                                    | RD     | https://fcitx-im.org/                                                                   | Configuration module for Fcitx
-                                              | 5.0.16                                    |        |                                                                                         |
+   app-i18n/fcitx-configtool                  | 5.0.16                                    | RD     | https://fcitx-im.org/                                                                   | Configuration module for Fcitx
+                                              | 5.0.17                                    |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
-   app-i18n/fcitx-gtk                         | 5.0.20                                    | RD     | https://github.com/fcitx/fcitx5-gtk                                                     | Gtk im module for fcitx5 and glib based dbus client library
-                                              | 5.0.21                                    |        |                                                                                         |
+   app-i18n/fcitx-gtk                         | 5.0.21                                    | RD     | https://github.com/fcitx/fcitx5-gtk                                                     | Gtk im module for fcitx5 and glib based dbus client library
+                                              | 5.0.22                                    |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
-   app-i18n/fcitx-hangul                      | 5.0.10                                    | RD     | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
+   app-i18n/fcitx-hangul                      | 5.0.11                                    | RD     | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
    app-i18n/fcitx-rime                        | 5.0.15                                    | RD     | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
                                               | 9999                                      |        |                                                                                         |
      app-i18n/fcitx                           | 4.2.9.8                                   |  D, RD | https://fcitx-im.org/                                                                   | Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
                                               | 5.0.20                                    |        |                                                                                         |
                                               | 5.0.21                                    |        |                                                                                         |
+                                              | 5.0.22                                    |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
-       x11-libs/xcb-imdkit                    | 1.0.3                                     |  D, RD | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
-                                              | 1.0.4                                     |        |                                                                                         |
+       x11-libs/xcb-imdkit                    | 1.0.4                                     |  D, RD | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
+                                              | 1.0.5                                     |        |                                                                                         |
      app-i18n/rime-prelude                    | 20220122                                  |  D, RD | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
    app-i18n/fcitx-skk                         | 5.0.14                                    | RD     | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
                                               | 9999                                      |        |                                                                                         |
