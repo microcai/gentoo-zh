@@ -1,5 +1,6 @@
 acct-group/aptly 0: System group: aptly
 acct-group/clash-meta 0: System group: clash-meta
+acct-group/keyd 0: System group: keyd
 acct-group/n2n 0: System group: n2n
 acct-user/aptly 0: System user: aptly
 acct-user/clash-meta 0: System user: clash-meta
@@ -24,7 +25,7 @@ app-emulation/deepin-wine6-stable 6.0.0.19-r1: Deepin wine6 stable
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
 app-i18n/fcitx 4.2.9.8 5.0.20 5.0.21 5.0.22 9999: Fcitx5 Next generation of fcitx
-app-i18n/fcitx-chewing 5.0.13: Chewing Wrapper for Fcitx.
+app-i18n/fcitx-chewing 5.0.14: Chewing Wrapper for Fcitx.
 app-i18n/fcitx-chinese-addons 5.0.17 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
 app-i18n/fcitx-configtool 5.0.16 5.0.17 9999: Configuration module for Fcitx
 app-i18n/fcitx-gtk 5.0.21 5.0.22 9999: Gtk im module for fcitx5 and glib based dbus client library
@@ -32,10 +33,10 @@ app-i18n/fcitx-hangul 5.0.11: Korean Hangul input method for Fcitx
 app-i18n/fcitx-lua 5.0.7-r1 5.0.10 9999: Lua support for fcitx
 app-i18n/fcitx-meta 5.0.12-r2: Merge this to pull in Fcitx packages
 app-i18n/fcitx-qt 5.0.16 5.0.17 9999: Qt library and IM module for fcitx5
-app-i18n/fcitx-rime 5.0.15 9999: Rime Support for Fcitx5
-app-i18n/fcitx-skk 5.0.14 9999: Japanese SKK input engine for Fcitx5
-app-i18n/fcitx-table-extra 5.0.11 5.0.12: Provides extra table for Fcitx, including Boshiamy, Zhengma, Cangjie, and Quick
-app-i18n/fcitx-table-other 5.0.10: Provides some other tables for Fcitx, fork from ibus-table-others, scim-tables
+app-i18n/fcitx-rime 5.0.16 9999: Rime Support for Fcitx5
+app-i18n/fcitx-skk 5.0.15 9999: Japanese SKK input engine for Fcitx5
+app-i18n/fcitx-table-extra 5.0.12 5.0.13: Provides extra table for Fcitx, including Boshiamy, Zhengma, Cangjie, and Quick
+app-i18n/fcitx-table-other 5.0.11: Provides some other tables for Fcitx, fork from ibus-table-others, scim-tables
 app-i18n/ibus-rime 9999: Rime Input Method Engine for IBus Framework
 app-i18n/libgooglepinyin 0.1.2-r1: A fork from google pinyin on android
 app-i18n/libime 1.0.17 9999: Fcitx5 Next generation of fcitx
@@ -48,13 +49,14 @@ app-misc/bcompare 4.4.4.27058: Beyond Compare -- Compare, sync, and merge files 
 app-misc/ccal 2.5.3: A simple command line calendar for Chinese lunar
 app-misc/gpick 0.2.6-r1 0.3: Advanced color picker written in C++ using GTK+ toolkit
 app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience within the shell
+app-misc/keyd 2.4.2: A key remapping daemon for linux
 app-misc/rmtrash 1.14: trash-put made compatible to GNUs rm and rmdir
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/xmind 22.11.3656: Brainstorming and Mind Mapping Software
 app-misc/yq-bin 4.28.2 4.30.6: yq is a portable command-line YAML, JSON and XML processor
 app-mobilephone/scrcpy 1.24 1.25: Display and control your Android device
 app-office/bytedance-feishu 4.11.6.2 5.9.18 5.14.14 5.26.13: feishu - ByteDance's enterprise collaboration platform
-app-office/freeoffice 1058 1060: A complete, free Microsoft Office-compatible alternative office suite.
+app-office/freeoffice 1060 1062: A complete, free Microsoft Office-compatible alternative office suite.
 app-office/wps-office 11.1.0.10976-r1 11.1.0.11691: WPS Office is an office productivity suite, Here is the Chinese version
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-shells/gitstatus 1.5.4: Git status for Bash and Zsh prompt
@@ -117,7 +119,7 @@ media-fonts/iansui 0.943: An open-source Chinese font derived from Klee One (Fon
 media-fonts/jf-openhuninn 1.1: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 media-fonts/lxgw-neo-xihei 1.007: A Chinese sans-serif font derived from IPAex Gothic.
 media-fonts/nerd-fonts 2.2.2: Nerd Fonts is a project that patches developer targeted fonts with glyphs
-media-fonts/sarasa-gothic 0.40.0 0.40.1: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
+media-fonts/sarasa-gothic 0.40.1 0.40.2: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 media-fonts/sarasa-mono-sc-nerd 2.1.0: Sarasa Mono SC font patched with Nerd fonts
 media-fonts/smiley-sans 1.1.1: An open-source font for Chinese.
 media-fonts/taipei-sans-tc 1.0: JT Foundry - Taipei Sans TC Beta font
@@ -139,7 +141,7 @@ media-libs/libva-nvdec-driver 0.0.8 9999: NVDEC Backend for Video Acceleration (
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.10-r1 0.5.11 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-sound/feeluown 3.8.7 3.8.9: A user-friendly and hackable music player
-media-sound/go-musicfox 3.7.2: Command-line Netease Cloud Music written in Go
+media-sound/go-musicfox 3.7.3: Command-line Netease Cloud Music written in Go
 media-sound/linnya 2.2.0: A free music player
 media-sound/listen1_desktop-bin 2.27.0: one for all free music in China
 media-sound/lx-music-desktop-bin 2.1.2: 一个基于 electron 的音乐软件
@@ -190,7 +192,7 @@ net-print/pantum 1.1.94: 奔图打印机Linux驱动
 net-proxy/Xray 1.6.0 1.6.1: Xray, Penetrates Everything.
 net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
 net-proxy/clash 1.13.0: A rule-based tunnel in Go.
-net-proxy/clash-for-windows-bin 0.20.16 0.20.17: A Windows/macOS/Linux GUI based on Clash and Electron.
+net-proxy/clash-for-windows-bin 0.20.17 0.20.18: A Windows/macOS/Linux GUI based on Clash and Electron.
 net-proxy/clash-meta 1.14.2: Another Clash Kernel.
 net-proxy/clash-premium-bin 2023.02.16: Close-sourced pre-built Clash binary with TUN support
 net-proxy/clash-verge-bin 1.2.0 1.2.1: A Clash GUI based on tauri
@@ -225,7 +227,7 @@ sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/ltfs 9999: LTFS for LTO tapes
 sys-fs/ssdfs-tools 4.09: userspace tools for SSDFS
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
-sys-kernel/liquorix-sources 6.1.13 6.1.14: Liquorix kernel is best one for desktop, multimedia and gaming workloads
+sys-kernel/liquorix-sources 6.1.14 6.1.15: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 34-r1: Modular initramfs image creation utility
 sys-kernel/xanmod-kernel 5.15.95 6.1.14 6.2.1: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 6.0.11: XanMod RT sources and CJKTTY options.
