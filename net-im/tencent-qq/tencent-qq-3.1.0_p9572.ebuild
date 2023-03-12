@@ -35,6 +35,7 @@ RDEPEND="
 	app-crypt/libsecret
 	virtual/krb5
 	sys-apps/keyutils
+	<dev-libs/glib-2.76
 	bwrap? ( sys-apps/bubblewrap )
 "
 
