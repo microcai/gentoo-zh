@@ -17,10 +17,11 @@ _I="4b2e3220"
 SRC_URI="
 	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_amd64.deb )
 	arm64? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_arm64.deb )
+	loong? ( https://dldir1.qq.com/qqfile/qq/QQNT/e0cbc1a8/linuxqq_${MY_PV}_loong64.deb )
 "
 
 SLOT="0"
-KEYWORDS="-* ~amd64 ~arm64"
+KEYWORDS="-* ~amd64 ~arm64 ~loong"
 
 IUSE="bwrap split-usr"
 RDEPEND="
