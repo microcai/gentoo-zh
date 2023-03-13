@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/qjfoidnh/BaiduPCS-Go/archive/v3.9.0.tar.gz -> baidupcs-go-3.9.0.tar.gz https://github.com/123485k/gentoo-go-deps/releases/download/baidupcs-go-3.9.0/baidupcs-go-3.9.0-deps.tar.xz
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	go-module	f2c9bcab49079a176b3ae061c94bb344
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	go-module	472b9e09c35add3a3da376330c033dec
 _md5_=73b5513d7abb3e24cee25f878865c785
