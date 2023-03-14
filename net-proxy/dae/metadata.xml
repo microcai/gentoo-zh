@@ -7,6 +7,6 @@ pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
     <email>ston.jia@qq.com</email>
   </maintainer>
   <upstream>
-    <remote-id type="github">v2rayA/dae</remote-id>
+    <remote-id type="github">daeuniverse/dae</remote-id>
   </upstream>
 </pkgmetadata>

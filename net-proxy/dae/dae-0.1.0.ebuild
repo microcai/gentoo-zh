@@ -3,18 +3,21 @@
 
 EAPI=8
 
-inherit linux-info git-r3 go-module systemd
+inherit linux-info go-module systemd
 
 DESCRIPTION="A lightweight and high-performance transparent proxy solution based on eBPF"
 HOMEPAGE="https://github.com/daeuniverse/dae"
 
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 MINKV="5.8"
-
-EGIT_REPO_URI="https://github.com/daeuniverse/dae.git"
-
+_I="378c3c576e0f4c785a3d5e71400b552725527f30"
+SRC_URI="
+	https://github.com/daeuniverse/dae/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/st0nie/gentoo-go-deps/releases/download/dae_bpf_headers/dae_bpf_headers-$_I.zip
+	https://github.com/st0nie/gentoo-go-deps/releases/download/dae-${PV}/${P}-deps.tar.xz
+"
 DEPEND="
 	dev-libs/v2ray-domain-list-community-bin
 	dev-libs/v2ray-geoip-bin
@@ -33,13 +36,12 @@ pkg_pretend() {
 }
 
 src_unpack() {
-	git-r3_src_unpack
-	cd "${P}" || die
-	ego mod download -modcacherw
+	go-module_src_unpack
+	mv "${WORKDIR}"/dae_bpf_headers-$_I/* control/kern/headers || die
 }
 
 src_compile() {
-	emake GOFLAGS="-buildvcs=false" CC=clang CFLAGS="-fno-stack-protector"
+	emake VERSION="${PV}" GOFLAGS="-buildvcs=false" CC=clang CFLAGS="$CFLAGS -fno-stack-protector"
 }
 
 src_install() {
