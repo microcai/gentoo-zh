@@ -1,0 +1,15 @@
+BDEPEND=sys-devel/clang >=dev-lang/go-1.18 app-arch/unzip virtual/pkgconfig
+DEFINED_PHASES=compile install pretend setup unpack
+DEPEND=dev-libs/v2ray-domain-list-community-bin dev-libs/v2ray-geoip-bin
+DESCRIPTION=A lightweight and high-performance transparent proxy solution based on eBPF
+EAPI=8
+HOMEPAGE=https://github.com/daeuniverse/dae
+INHERIT=linux-info go-module systemd
+KEYWORDS=~amd64
+LICENSE=AGPL-3
+RDEPEND=dev-libs/v2ray-domain-list-community-bin dev-libs/v2ray-geoip-bin
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/daeuniverse/dae/archive/refs/tags/v0.1.0.tar.gz -> dae-0.1.0.tar.gz https://github.com/st0nie/gentoo-go-deps/releases/download/dae_bpf_headers/dae_bpf_headers-378c3c576e0f4c785a3d5e71400b552725527f30.zip https://github.com/st0nie/gentoo-go-deps/releases/download/dae-0.1.0/dae-0.1.0-deps.tar.xz
+_eclasses_=toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	linux-info	4b552625ebd741dfd2ac08637fd2436e	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	go-module	472b9e09c35add3a3da376330c033dec	systemd	5f4bb0758df2e483babf68cd517078ca
+_md5_=f40e97ea1fbf58f576016640123bf501
