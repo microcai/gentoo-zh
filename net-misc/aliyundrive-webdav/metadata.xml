@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>123485k</name>
+		<email>1758961307@qq.com</email>
+	</maintainer>
+	<longdescription lang="en">
+		Ali cloud disk WebDAV service, the main use scenario is to cooperate with client
+		apps that support the WebDAV protocol, such as Infuse, nPlayer, etc.
+		to directly watch cloud disk video content on TV, and support client
+		apps to directly obtain files from Alibaba cloud disk to play without
+		running The server transfer of this application supports uploading files,
+		but limited by the WebDAV protocol, it does not support instant file transfer.
+	</longdescription>
+	<longdescription lang="zh">
+		阿里云盘 WebDAV 服务，主要使用场景为配合支持 WebDAV 协议的客户端 App 如
+		Infuse、nPlayer 等实现在电视上直接观看云盘视频内容， 
+		支持客户端 App 直接从阿里云盘获取文件播放而不经过运行本应用的服务器中转, 
+		支持上传文件，但受限于 WebDAV 协议不支持文件秒传。
+	</longdescription>
+	<upstream>
+		<remote-id type="github">messense/aliyundrive-webdav</remote-id>
+	</upstream>
+</pkgmetadata>

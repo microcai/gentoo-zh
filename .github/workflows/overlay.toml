@@ -788,6 +788,14 @@ source = "github"
 github = "tickstep/aliyunpan"
 use_latest_release = true
 prefix = "v"
+github_account = "123485k"
+
+["net-misc/aliyundrive-webdav"]
+source = "github"
+github = "messense/aliyundrive-webdav"
+use_latest_release = true
+prefix = "v"
+github_account = "123485k"
 
 # TODO
 #["net-misc/avsocks"]
