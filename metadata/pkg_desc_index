@@ -102,10 +102,11 @@ dev-util/jd-gui 1.6.6: A standalone graphical utility that displays Java source 
 dev-util/jetbrains-toolbox 1.22.10774: Manage all your JetBrains Projects and Tools
 dev-util/lldb-mi 9999: LLDB Machine Interface Driver
 dev-util/marksman-bin 2022.12.28: A language server for Markdown
-dev-util/mongodb-compass-bin 1.34.2 1.35.0: The GUI for MongoDB
+dev-util/mongodb-compass-bin 1.34.2 1.35.0 1.36.0: The GUI for MongoDB
+dev-util/tauri-cli 1.2.3: Command line interface for building Tauri apps
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-vcs/gitoxide 0.23.0: A command-line application for interacting with git repositories
-dev-vcs/gptcommit 0.3.0: A git prepare-commit-msg hook for summarizing commits with GPT-3.
+dev-vcs/gptcommit 0.3.1: A git prepare-commit-msg hook for summarizing commits with GPT-3.
 dev-vcs/lazygit 0.35: lazygit, a simple terminal UI for git commands
 dev-vcs/lazygit-bin 0.35: lazygit, a simple terminal UI for git commands
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
@@ -138,6 +139,7 @@ media-gfx/zwcad 2023.23.0.3.4-r1: CAD software for 2D drawing, reviewing and pri
 media-libs/libjpeg8 2.1.4: MMX, SSE, and SSE2 SIMD accelerated JPEG library
 media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simplifies the drawing of beautiful curves.
 media-libs/libva-nvidia-driver 0.0.9 9999: NVDEC Backend for Video Acceleration (VA) API
+media-libs/vips 8.14.1: VIPS Image Processing Library
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.10-r1 0.5.11 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-sound/feeluown 3.8.7 3.8.9: A user-friendly and hackable music player
@@ -170,11 +172,15 @@ net-im/tencent-qq 3.1.0_p9572: The new version of the official linux-qq
 net-im/weixin-uos 2.1.5-r1: UOS weixin
 net-im/wemeet 3.12.0.400-r2: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq
+net-misc/aliyundrive-webdav 2.0.5: WebDAV server for AliyunDrive
 net-misc/aliyunpan 0.2.6: aliyunpan cli client, support Webdav service, JavaScript plugin
 net-misc/apifox 2.2.27: API 文档、API 调试、API Mock、API 自动化测试
 net-misc/avsocks 9999: 科学操长城软件
 net-misc/baidunetdisk 4.3.0 4.14.5: Baidu Net Disk is a cloud storage client (Linux Version)
 net-misc/baidupcs-go 3.9.0: The terminal utility for Baidu Network Disk (Golang Version).
+net-misc/biliup-app 0.4.1: A Tool for Upload video to bilibili
+net-misc/biliup-app-bin 0.4.1: A Tool for Upload video to bilibili
+net-misc/biliup-rs 0.1.15: A CLI Tool for Upload video to bilibili.
 net-misc/networkmanager-l2tp 9999: NetworkManager L2TP plugin
 net-misc/nomachine-enterprise-client 7.8.2.1 7.9.2.1: NoMachine Enterprise Client
 net-misc/pcmanx-gtk2 1.3 9999: PCMan is a gtk+ based free BBS client
