@@ -22,7 +22,7 @@ SRC_URI="
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
 
-IUSE="bwrap split-usr"
+IUSE="bwrap +system-vips split-usr"
 RDEPEND="
 	x11-libs/gtk+:3
 	x11-libs/libnotify
@@ -35,7 +35,11 @@ RDEPEND="
 	app-crypt/libsecret
 	virtual/krb5
 	sys-apps/keyutils
-	<dev-libs/glib-2.76
+	!system-vips? ( <dev-libs/glib-2.76 )
+	system-vips? (
+		dev-libs/glib
+		>=media-libs/vips-8.14.1
+	)
 	bwrap? ( sys-apps/bubblewrap )
 "
 
@@ -44,6 +48,10 @@ S=${WORKDIR}
 src_install() {
 	insinto /opt
 	doins -r opt/*
+
+	if use system-vips; then
+		rm -r "${D}"/opt/QQ/resources/app/sharp-lib || die
+	fi
 
 	fperms +x /opt/QQ/{qq,chrome_crashpad_handler,chrome-sandbox,libEGL.so,libffmpeg.so,libGLESv2.so,libvk_swiftshader.so,libvulkan.so.1}
 	printf "#!/bin/bash\ncd /opt/QQ\n./qq \$@\n" >qq || die
