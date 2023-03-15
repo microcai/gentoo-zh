@@ -18,10 +18,10 @@ CRATES="
 	async-global-executor-2.3.1
 	async-io-1.12.0
 	async-lock-2.7.0
-	async-openai-0.8.0
+	async-openai-0.9.4
 	async-std-1.12.0
 	async-task-4.3.0
-	async-trait-0.1.64
+	async-trait-0.1.66
 	atomic-waker-1.1.0
 	atty-0.2.14
 	autocfg-1.1.0
@@ -31,7 +31,7 @@ CRATES="
 	bit-set-0.5.3
 	bit-vec-0.6.3
 	bitflags-1.3.2
-	block-buffer-0.10.3
+	block-buffer-0.10.4
 	blocking-1.3.0
 	brotli-3.3.4
 	brotli-decompressor-2.3.4
@@ -53,9 +53,9 @@ CRATES="
 	crossbeam-utils-0.8.15
 	crypto-common-0.1.6
 	ctor-0.1.26
-	darling-0.14.3
-	darling_core-0.14.3
-	darling_macro-0.14.3
+	darling-0.14.4
+	darling_core-0.14.4
+	darling_macro-0.14.4
 	derive_builder-0.12.0
 	derive_builder_core-0.12.0
 	derive_builder_macro-0.12.0
@@ -76,17 +76,17 @@ CRATES="
 	foreign-types-0.3.2
 	foreign-types-shared-0.1.1
 	form_urlencoded-1.1.0
-	futures-0.3.26
-	futures-channel-0.3.26
-	futures-core-0.3.26
-	futures-executor-0.3.26
-	futures-io-0.3.26
+	futures-0.3.27
+	futures-channel-0.3.27
+	futures-core-0.3.27
+	futures-executor-0.3.27
+	futures-io-0.3.27
 	futures-lite-1.12.0
-	futures-macro-0.3.26
-	futures-sink-0.3.26
-	futures-task-0.3.26
+	futures-macro-0.3.27
+	futures-sink-0.3.27
+	futures-task-0.3.27
 	futures-timer-3.0.2
-	futures-util-0.3.26
+	futures-util-0.3.27
 	generic-array-0.14.6
 	getrandom-0.2.8
 	globset-0.4.10
@@ -102,28 +102,30 @@ CRATES="
 	http-body-0.4.5
 	httparse-1.8.0
 	httpdate-1.0.2
-	hyper-0.14.24
+	hyper-0.14.25
 	hyper-rustls-0.23.2
 	hyper-tls-0.5.0
 	ident_case-1.0.1
 	idna-0.3.0
 	ignore-0.4.20
 	indexmap-1.9.2
+	indoc-1.0.9
 	instant-0.1.12
-	io-lifetimes-1.0.5
+	io-lifetimes-1.0.6
 	ipnet-2.7.1
 	is-terminal-0.4.4
-	itoa-1.0.5
+	itoa-1.0.6
 	js-sys-0.3.61
 	json5-0.4.1
 	kv-log-macro-1.0.7
 	lazy_static-1.4.0
-	libc-0.2.139
+	libc-0.2.140
 	linked-hash-map-0.5.6
 	linux-raw-sys-0.1.4
 	lock_api-0.4.9
 	log-0.4.17
 	memchr-2.5.0
+	memoffset-0.8.0
 	mime-0.3.16
 	mime_guess-2.0.4
 	minimal-lexical-0.2.1
@@ -145,19 +147,24 @@ CRATES="
 	parking_lot_core-0.9.7
 	pathdiff-0.2.1
 	percent-encoding-2.2.0
-	pest-2.5.5
-	pest_derive-2.5.5
-	pest_generator-2.5.5
-	pest_meta-2.5.5
+	pest-2.5.6
+	pest_derive-2.5.6
+	pest_generator-2.5.6
+	pest_meta-2.5.6
 	pin-project-lite-0.2.9
 	pin-utils-0.1.0
 	pkg-config-0.3.26
-	polling-2.5.2
+	polling-2.6.0
 	ppv-lite86-0.2.17
 	proc-macro-error-1.0.4
 	proc-macro-error-attr-1.0.4
-	proc-macro2-1.0.51
-	quote-1.0.23
+	proc-macro2-1.0.52
+	pyo3-0.18.1
+	pyo3-build-config-0.18.1
+	pyo3-ffi-0.18.1
+	pyo3-macros-0.18.1
+	pyo3-macros-backend-0.18.1
+	quote-1.0.26
 	rand-0.8.5
 	rand_chacha-0.3.1
 	rand_core-0.6.4
@@ -172,20 +179,20 @@ CRATES="
 	ron-0.7.1
 	rust-ini-0.18.0
 	rustc-hash-1.1.0
-	rustix-0.36.8
+	rustix-0.36.9
 	rustls-0.20.8
 	rustls-pemfile-1.0.2
-	rustversion-1.0.11
-	ryu-1.0.12
+	rustversion-1.0.12
+	ryu-1.0.13
 	same-file-1.0.6
 	schannel-0.1.21
 	scopeguard-1.1.0
 	sct-0.7.0
 	security-framework-2.8.2
 	security-framework-sys-2.8.0
-	serde-1.0.152
-	serde_derive-1.0.152
-	serde_json-1.0.93
+	serde-1.0.156
+	serde_derive-1.0.156
+	serde_json-1.0.94
 	serde_spanned-0.6.1
 	serde_urlencoded-0.7.1
 	sha2-0.10.6
@@ -193,19 +200,20 @@ CRATES="
 	simple_logger-4.0.0
 	slab-0.4.8
 	smallvec-1.10.0
-	socket2-0.4.7
+	socket2-0.4.9
 	spin-0.5.2
 	strsim-0.10.0
 	strum-0.24.1
 	strum_macros-0.24.3
 	syn-1.0.109
+	target-lexicon-0.12.6
 	tempfile-3.4.0
-	tera-1.17.1
+	tera-1.18.0
 	termcolor-1.2.0
-	thiserror-1.0.38
-	thiserror-impl-1.0.38
-	thread_local-1.1.7
-	tiktoken-rs-0.1.2
+	thiserror-1.0.39
+	thiserror-impl-1.0.39
+	thread_local-1.1.4
+	tiktoken-rs-0.2.1
 	time-0.3.20
 	time-core-0.1.0
 	time-macros-0.2.8
@@ -218,9 +226,9 @@ CRATES="
 	tokio-stream-0.1.12
 	tokio-util-0.7.7
 	toml-0.5.11
-	toml-0.7.2
+	toml-0.7.3
 	toml_datetime-0.6.1
-	toml_edit-0.19.4
+	toml_edit-0.19.6
 	tower-service-0.3.2
 	tracing-0.1.37
 	tracing-attributes-0.1.23
@@ -235,9 +243,10 @@ CRATES="
 	unic-ucd-segment-0.9.0
 	unic-ucd-version-0.9.0
 	unicase-2.6.0
-	unicode-bidi-0.3.10
-	unicode-ident-1.0.6
+	unicode-bidi-0.3.11
+	unicode-ident-1.0.8
 	unicode-normalization-0.1.22
+	unindent-0.1.11
 	untrusted-0.7.1
 	url-2.3.1
 	value-bag-1.0.0-alpha.9
@@ -257,7 +266,6 @@ CRATES="
 	web-sys-0.3.61
 	webpki-0.22.0
 	webpki-roots-0.22.6
-	wepoll-ffi-0.1.2
 	which-4.4.0
 	winapi-0.3.9
 	winapi-i686-pc-windows-gnu-0.4.0
@@ -265,15 +273,15 @@ CRATES="
 	winapi-x86_64-pc-windows-gnu-0.4.0
 	windows-sys-0.42.0
 	windows-sys-0.45.0
-	windows-targets-0.42.1
-	windows_aarch64_gnullvm-0.42.1
-	windows_aarch64_msvc-0.42.1
-	windows_i686_gnu-0.42.1
-	windows_i686_msvc-0.42.1
-	windows_x86_64_gnu-0.42.1
-	windows_x86_64_gnullvm-0.42.1
-	windows_x86_64_msvc-0.42.1
-	winnow-0.3.3
+	windows-targets-0.42.2
+	windows_aarch64_gnullvm-0.42.2
+	windows_aarch64_msvc-0.42.2
+	windows_i686_gnu-0.42.2
+	windows_i686_msvc-0.42.2
+	windows_x86_64_gnu-0.42.2
+	windows_x86_64_gnullvm-0.42.2
+	windows_x86_64_msvc-0.42.2
+	winnow-0.3.5
 	winreg-0.10.1
 	yaml-rust-0.4.5
 "
