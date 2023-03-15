@@ -533,6 +533,13 @@ git = "https://git.kernel.org/pub/scm/devel/pahole/pahole.git"
 prefix = "v"
 github_account = "HougeLangley"
 
+["dev-util/tauri-cli"]
+source = "github"
+github = "tauri-apps/tauri"
+use_latest_tag = true
+prefix = "cli.rs-v"
+github_account = "123585k"
+
 # TODO
 #["dev-util/v2ray-geoip-generator"]
 
@@ -788,6 +795,14 @@ source = "github"
 github = "tickstep/aliyunpan"
 use_latest_release = true
 prefix = "v"
+github_account = "123485k"
+
+["net-misc/aliyundrive-webdav"]
+source = "github"
+github = "messense/aliyundrive-webdav"
+use_latest_release = true
+prefix = "v"
+github_account = "123485k"
 
 # TODO
 #["net-misc/avsocks"]
@@ -800,6 +815,20 @@ source = "github"
 github = "qjfoidnh/BaiduPCS-Go"
 use_latest_release = true
 prefix = "v"
+
+["net-misc/biliup-app"]
+source = "github"
+github = "ForgQi/biliup-app"
+use_latest_release = true
+prefix = "app-v"
+github_account = "123485k"
+
+["net-misc/biliup-rs"]
+source = "github"
+github = "ForgQi/biliup-rs"
+use_latest_release = true
+prefix = "v"
+github_account = "123485k"
 
 # TODO
 #["net-misc/networkmanager-l2tp"]
