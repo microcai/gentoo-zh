@@ -533,6 +533,13 @@ git = "https://git.kernel.org/pub/scm/devel/pahole/pahole.git"
 prefix = "v"
 github_account = "HougeLangley"
 
+["dev-util/tauri-cli"]
+source = "github"
+github = "tauri-apps/tauri"
+use_latest_tag = true
+prefix = "cli.rs-v"
+github_account = "123585k"
+
 # TODO
 #["dev-util/v2ray-geoip-generator"]
 
