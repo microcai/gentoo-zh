@@ -809,6 +809,13 @@ github = "qjfoidnh/BaiduPCS-Go"
 use_latest_release = true
 prefix = "v"
 
+["net-misc/biliup-rs"]
+source = "github"
+github = "ForgQi/biliup-rs"
+use_latest_release = true
+prefix = "v"
+github_account = "123485k"
+
 # TODO
 #["net-misc/networkmanager-l2tp"]
 
