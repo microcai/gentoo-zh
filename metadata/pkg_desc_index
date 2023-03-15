@@ -70,7 +70,7 @@ dev-cpp/cppcoro 210105-r1: A library of C++ coroutine abstractions for the corou
 dev-cpp/date 3.0.1 3.0.1_p220425: A date and time library based on the C++11/14/17 <chrono> header
 dev-cpp/nameof 0.10.1 0.10.1_p220626 0.10.2: Nameof operator for modern C++
 dev-cpp/tgbot-cpp 1.3 1.3_p220616 1.3_p220911 1.4 1.5: C++ library for Telegram bot API
-dev-db/dbeaver-bin 22.1.0 22.3.1: Free universal database tool (community edition).
+dev-db/dbeaver-bin 22.3.1 23.0.0: Free universal database tool (community edition).
 dev-db/mongodb 5.3.1 6.2.0-r4: A high-performance, open source, schema-free document-oriented database
 dev-libs/libdatrie 0.2.13: Double-Array Trie Library
 dev-libs/libdwarf 20140208 20150507: Library to deal with DWARF Debugging Information Format
@@ -210,11 +210,12 @@ net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
 net-proxy/v2ray 4.45.0 4.45.2 5.3.0: A platform for building proxies to bypass network restrictions.
 net-proxy/v2ray-bin 4.45.0 5.1.0-r1: A platform for building proxies to bypass network restrictions.
 net-proxy/v2rayA 1.5.9.1698.1 2.0.1-r1 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
+net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
 net-wireless/linux-wifi-hotspot 9999: Linux Wifi Hotspot
 sci-chemistry/vesta 3.5.8: Visualization for Electronic and STructural Analysis
 sci-electronics/jlc-assistant-bin 5.0.69: JLC Order Assistant (binary package)
 sci-electronics/lceda 6.5.22: LCEDA (binary package)
-sci-electronics/lceda-pro 1.9.29: LCEDA Pro (binary package)
+sci-electronics/lceda-pro 2.0.15: LCEDA Pro (binary package)
 sci-libs/libticables2 9999: Library to handle different link cables for TI calculators
 sci-libs/libticalcs2 9999: Library for communication with TI calculators
 sci-libs/libticonv 9999: Charset conversion library for TI calculators
