@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-03-15 15:58:12 CST)
+(The last generation time: 2023-03-16 01:34:31 CST)
 
 ### Packages
 
@@ -156,8 +156,8 @@
                                               | 1.4                                       |        |                                                                                         |
                                               | 1.5                                       |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-db/dbeaver-bin                           | 22.1.0                                    |        | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
-                                              | 22.3.1                                    |        |                                                                                         |
+ dev-db/dbeaver-bin                           | 22.3.1                                    |        | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
+                                              | 23.0.0                                    |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-db/mongodb                               | 5.3.1                                     |        | https://www.mongodb.com                                                                 | A high-performance, open source, schema-free document-oriented database
                                               | 6.2.0-r4                                  |        |                                                                                         |
