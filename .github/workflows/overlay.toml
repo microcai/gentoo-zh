@@ -816,6 +816,13 @@ github = "qjfoidnh/BaiduPCS-Go"
 use_latest_release = true
 prefix = "v"
 
+["net-misc/biliup-app"]
+source = "github"
+github = "ForgQi/biliup-app"
+use_latest_release = true
+prefix = "app-v"
+github_account = "123485k"
+
 ["net-misc/biliup-rs"]
 source = "github"
 github = "ForgQi/biliup-rs"
