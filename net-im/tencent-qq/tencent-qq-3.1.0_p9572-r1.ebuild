@@ -22,7 +22,7 @@ SRC_URI="
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
 
-IUSE="bwrap +system-vips split-usr"
+IUSE="bwrap +system-vips split-usr gnome"
 RDEPEND="
 	x11-libs/gtk+:3
 	x11-libs/libnotify
@@ -40,7 +40,12 @@ RDEPEND="
 		dev-libs/glib
 		>=media-libs/vips-8.14.1
 	)
-	bwrap? ( sys-apps/bubblewrap )
+	bwrap? (
+		sys-apps/bubblewrap
+		x11-misc/snapd-xdg-open
+		x11-misc/flatpak-xdg-utils
+	)
+	gnome? ( dev-libs/gjs )
 "
 
 S=${WORKDIR}
@@ -54,11 +59,6 @@ src_install() {
 	fi
 
 	fperms +x /opt/QQ/{qq,chrome_crashpad_handler,chrome-sandbox,libEGL.so,libffmpeg.so,libGLESv2.so,libvk_swiftshader.so,libvulkan.so.1}
-	printf "#!/bin/bash\ncd /opt/QQ\n./qq \$@\n" >qq || die
-	if use bwrap; then
-		sed -i 's!./qq!/opt/QQ/start.sh!' qq || die
-	fi
-	dobin qq
 
 	if use bwrap; then
 		exeinto /opt/QQ
@@ -68,8 +68,17 @@ src_install() {
 			doexe "${FILESDIR}"/start-script/merge-usr/start.sh
 		fi
 		sed -i 's!/opt/QQ/qq!/opt/QQ/start.sh!' usr/share/applications/qq.desktop || die
+		insinto /opt/QQ/workarounds
+		doins "${FILESDIR}"/{config.json,xdg-open.sh}
+		fperms +x /opt/QQ/workarounds/xdg-open.sh
 	else
 		sed -i 's!/opt/QQ/qq!/usr/bin/qq!' usr/share/applications/qq.desktop || die
+	fi
+
+	if use bwrap; then
+		dosym -r /opt/QQ/start.sh /usr/bin/qq
+	else
+		dosym -r /opt/QQ/qq /usr/bin/qq
 	fi
 
 	sed -i 's!/usr/share/icons/hicolor/512x512/apps/qq.png!qq!' usr/share/applications/qq.desktop || die
