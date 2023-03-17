@@ -135,7 +135,7 @@ jobs:
           ## ${r_title}
 
           * ${v_pkgcheck}
-          * the corresponding _**::gentoo**_ commit: https://github.com/gentoo-mirror/gentoo/commit/${commit_gentoo}
+          * the corresponding _**::gentoo-zh**_ commit: https://github.com/microcai/gentoo-zh/commit/${commit_gentoo}
 
           EOF
 
