@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-03-17 15:57:19 CST)
+(The last generation time: 2023-03-17 16:12:32 CST)
 
 ### Packages
 
@@ -56,6 +56,7 @@
                                               | 9999                                      |        |                                                                                         |
    app-i18n/fcitx-gtk                         | 5.0.21                                    | RD     | https://github.com/fcitx/fcitx5-gtk                                                     | Gtk im module for fcitx5 and glib based dbus client library
                                               | 5.0.22                                    |        |                                                                                         |
+                                              | 5.0.23                                    |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
    app-i18n/fcitx-hangul                      | 5.0.11                                    | RD     | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
    app-i18n/fcitx-rime                        | 5.0.16                                    | RD     | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
@@ -64,6 +65,7 @@
                                               | 5.0.20                                    |        |                                                                                         |
                                               | 5.0.21                                    |        |                                                                                         |
                                               | 5.0.22                                    |        |                                                                                         |
+                                              | 5.0.23                                    |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
        x11-libs/xcb-imdkit                    | 1.0.4                                     |  D, RD | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
                                               | 1.0.5                                     |        |                                                                                         |
@@ -560,6 +562,8 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  x11-misc/picom-jonaburg                      | 8                                         |        | https://github.com/jonaburg/picom                                                       | jonaburg's picom fork with dual_kawase blur and rounded corners
                                               | 9999                                      |        |                                                                                         |
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ x11-misc/sddm                                | 9999                                      |        | https://github.com/sddm/sddm                                                            | Simple Desktop Display Manager
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  x11-plugins/vicious                          | 9999                                      |        | http://awesome.naquadah.org/wiki/Vicious                                                | Modular widget library for x11-wm/awesome
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
