@@ -1,0 +1,16 @@
+BDEPEND=dev-python/docutils >=dev-qt/linguist-tools-5.15.2:5 kde-frameworks/extra-cmake-modules:5 virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl] >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5 virtual/pkgconfig
+DEFINED_PHASES=compile configure install postinst prepare setup test unpack
+DEPEND=acct-group/sddm acct-user/sddm >=dev-qt/qtcore-5.15.2:5 >=dev-qt/qtdbus-5.15.2:5 >=dev-qt/qtdeclarative-5.15.2:5 >=dev-qt/qtgui-5.15.2:5 >=dev-qt/qtnetwork-5.15.2:5 x11-libs/libXau x11-libs/libxcb:= elogind? ( sys-auth/elogind ) pam? ( sys-libs/pam ) !pam? ( virtual/libcrypt:= ) systemd? ( sys-apps/systemd:= ) !systemd? ( sys-power/upower ) test? ( >=dev-qt/qttest-5.15.2:5 )
+DESCRIPTION=Simple Desktop Display Manager
+EAPI=8
+HOMEPAGE=https://github.com/sddm/sddm
+INHERIT=git-r3 cmake linux-info systemd tmpfiles
+IUSE=+elogind +pam systemd test +X
+LICENSE=GPL-2+ MIT CC-BY-3.0 CC-BY-SA-3.0 public-domain
+PROPERTIES=live
+RDEPEND=acct-group/sddm acct-user/sddm >=dev-qt/qtcore-5.15.2:5 >=dev-qt/qtdbus-5.15.2:5 >=dev-qt/qtdeclarative-5.15.2:5 >=dev-qt/qtgui-5.15.2:5 >=dev-qt/qtnetwork-5.15.2:5 x11-libs/libXau x11-libs/libxcb:= elogind? ( sys-auth/elogind ) pam? ( sys-libs/pam ) !pam? ( virtual/libcrypt:= ) systemd? ( sys-apps/systemd:= ) !systemd? ( sys-power/upower ) X? ( x11-base/xorg-server ) !systemd? ( gui-libs/display-manager-init ) virtual/tmpfiles
+REQUIRED_USE=?? ( elogind systemd )
+RESTRICT=!test? ( test )
+SLOT=0
+_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	b2e109b7341cd993b8bdfcc60652a14d	linux-info	4b552625ebd741dfd2ac08637fd2436e	systemd	5f4bb0758df2e483babf68cd517078ca	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f
+_md5_=93da925cabb4db649555a43eb5f33b6d
