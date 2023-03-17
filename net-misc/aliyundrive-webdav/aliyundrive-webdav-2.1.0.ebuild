@@ -30,10 +30,10 @@ CRATES="
 	cc-1.0.79
 	cfg-if-1.0.0
 	checked_int_cast-1.0.0
-	chrono-0.4.23
-	clap-4.1.8
-	clap_derive-4.1.8
-	clap_lex-0.3.2
+	chrono-0.4.24
+	clap-4.1.9
+	clap_derive-4.1.9
+	clap_lex-0.3.3
 	codespan-reporting-0.11.1
 	concurrent-queue-2.1.0
 	console-0.15.5
@@ -54,7 +54,7 @@ CRATES="
 	cxxbridge-flags-1.0.92
 	cxxbridge-macro-1.0.92
 	dashmap-5.4.0
-	dav-server-0.5.3
+	dav-server-0.5.4
 	digest-0.10.6
 	dirs-4.0.0
 	dirs-sys-0.3.7
@@ -72,16 +72,16 @@ CRATES="
 	foreign-types-0.3.2
 	foreign-types-shared-0.1.1
 	form_urlencoded-1.1.0
-	futures-0.3.26
-	futures-channel-0.3.26
-	futures-core-0.3.26
-	futures-executor-0.3.26
-	futures-io-0.3.26
+	futures-0.3.27
+	futures-channel-0.3.27
+	futures-core-0.3.27
+	futures-executor-0.3.27
+	futures-io-0.3.27
 	futures-lite-1.12.0
-	futures-macro-0.3.26
-	futures-sink-0.3.26
-	futures-task-0.3.26
-	futures-util-0.3.26
+	futures-macro-0.3.27
+	futures-sink-0.3.27
+	futures-task-0.3.27
+	futures-util-0.3.27
 	generic-array-0.14.6
 	getrandom-0.2.8
 	glob-0.3.1
@@ -108,7 +108,7 @@ CRATES="
 	indexmap-1.9.2
 	indicatif-0.17.3
 	instant-0.1.12
-	io-lifetimes-1.0.6
+	io-lifetimes-1.0.7
 	ipnet-2.7.1
 	is-terminal-0.4.4
 	itoa-1.0.6
@@ -136,11 +136,11 @@ CRATES="
 	num_threads-0.1.6
 	number_prefix-0.4.0
 	once_cell-1.17.1
-	openssl-0.10.45
+	openssl-0.10.46
 	openssl-macros-0.1.0
 	openssl-probe-0.1.5
 	openssl-src-111.25.1+1.1.1t
-	openssl-sys-0.9.80
+	openssl-sys-0.9.81
 	os_str_bytes-6.4.1
 	overload-0.1.1
 	parking-2.0.0
@@ -160,14 +160,14 @@ CRATES="
 	ppv-lite86-0.2.17
 	proc-macro-error-1.0.4
 	proc-macro-error-attr-1.0.4
-	proc-macro2-1.0.51
+	proc-macro2-1.0.52
 	psl-types-2.0.11
 	publicsuffix-2.2.3
 	pulldown-cmark-0.9.2
 	qr2term-0.3.1
 	qrcode-0.12.0
 	quick-xml-0.23.1
-	quote-1.0.23
+	quote-1.0.26
 	rand-0.8.5
 	rand_chacha-0.3.1
 	rand_core-0.6.4
@@ -195,9 +195,9 @@ CRATES="
 	security-framework-2.8.2
 	security-framework-sys-2.8.0
 	self_update-0.36.0
-	semver-1.0.16
-	serde-1.0.154
-	serde_derive-1.0.154
+	semver-1.0.17
+	serde-1.0.156
+	serde_derive-1.0.156
 	serde_json-1.0.94
 	serde_urlencoded-0.7.1
 	sha1-0.10.5
@@ -256,7 +256,7 @@ CRATES="
 	vcpkg-0.2.15
 	version_check-0.9.4
 	waker-fn-1.1.0
-	walkdir-2.3.2
+	walkdir-2.3.3
 	want-0.3.0
 	wasi-0.11.0+wasi-snapshot-preview1
 	wasm-bindgen-0.2.84
@@ -275,14 +275,14 @@ CRATES="
 	winapi-x86_64-pc-windows-gnu-0.4.0
 	windows-sys-0.42.0
 	windows-sys-0.45.0
-	windows-targets-0.42.1
-	windows_aarch64_gnullvm-0.42.1
-	windows_aarch64_msvc-0.42.1
-	windows_i686_gnu-0.42.1
-	windows_i686_msvc-0.42.1
-	windows_x86_64_gnu-0.42.1
-	windows_x86_64_gnullvm-0.42.1
-	windows_x86_64_msvc-0.42.1
+	windows-targets-0.42.2
+	windows_aarch64_gnullvm-0.42.2
+	windows_aarch64_msvc-0.42.2
+	windows_i686_gnu-0.42.2
+	windows_i686_msvc-0.42.2
+	windows_x86_64_gnu-0.42.2
+	windows_x86_64_gnullvm-0.42.2
+	windows_x86_64_msvc-0.42.2
 	winreg-0.10.1
 	xattr-0.2.3
 	xml-rs-0.8.4
