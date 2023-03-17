@@ -6,7 +6,9 @@ pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
         <flag name="fits">Enable support for the FITS image format
         through 
         <pkg>sci-libs/cfitsio</pkg></flag>
-        <!-- <flag name="matio">Enable support for reading images from Matlab files through <pkg>sci-libs/matio</pkg></flag> -->
+        <flag name="matio">Enable support for reading images from
+        Matlab files through 
+        <pkg>sci-libs/matio</pkg></flag>
         <!--<flag name="openslide">Enable support for reading images from OpenSlide files through <pkg>media-libs/openslide</pkg>(currently conflicts with jpeg-turbo)</flag>-->
         <flag name="gsf">Enable support for creating image pyramids
         with dzsave</flag>

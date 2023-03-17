@@ -15,5 +15,7 @@ pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
         private information leakage</flag>
         <flag name="system-vips">Use media-libs/vips instead of
         shipped libs.</flag>
+        <flag name="gnome">Supporting screenshot when using
+        GNOME</flag>
     </use>
 </pkgmetadata>

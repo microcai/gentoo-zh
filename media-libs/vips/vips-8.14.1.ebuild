@@ -12,7 +12,7 @@ HOMEPAGE="https://libvips.github.io/libvips/"
 LICENSE="LGPL-2.1+"
 SLOT="1"
 KEYWORDS="~amd64 ~arm64"
-IUSE="doc exif fftw fits heif gsf graphicsmagick imagemagick imagequant jpeg lcms openexr orc pango pdf png svg static-libs tiff webp zlib"
+IUSE="doc exif fftw fits heif gsf graphicsmagick imagemagick imagequant jpeg lcms openexr orc pango pdf png svg static-libs tiff webp zlib matio"
 
 RDEPEND="
 	>=dev-libs/glib-2.6:2
@@ -38,6 +38,7 @@ RDEPEND="
 	tiff? ( media-libs/tiff:0= )
 	webp? ( media-libs/libwebp )
 	zlib? ( sys-libs/zlib )
+	matio? ( sci-libs/matio )
 "
 
 DEPEND="
@@ -69,6 +70,7 @@ src_configure() {
 		$(meson_feature tiff)
 		$(meson_feature webp)
 		$(meson_feature zlib)
+		$(meson_feature matio)
 	)
 	meson_src_configure
 }
