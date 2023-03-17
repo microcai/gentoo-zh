@@ -10,5 +10,5 @@ LICENSE=Plangothic
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic/archive/refs/tags/V0.7.5720.tar.gz -> Plangothic-0.7.5720.tar.gz
-_eclasses_=font	5e03cb70902daa9ff8967c61130f0f60	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	fdd15d854bf5e84f82d35524ab8ca6ba
+_eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	65735fed9c1c30cb461c90db600ac990
 _md5_=55e6b2c6863b870f5e29f6ebc47c34d8

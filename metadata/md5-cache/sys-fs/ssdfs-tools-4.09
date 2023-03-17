@@ -10,5 +10,5 @@ LICENSE=MIT
 RDEPEND=sys-apps/util-linux sys-libs/zlib
 SLOT=0
 SRC_URI=https://github.com/dubeyko/ssdfs-tools/archive/refs/tags/v4.09.zip -> ssdfs-tools-4.09.zip
-_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	libtool	241a8f577b9781a42a7421e53448a44e	autotools	6dcd6b6a486e79928e1243ff9ba41fcc
+_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	b5529dc611971a61a30153916014f616
 _md5_=0b367cf3365424d348e62c1a89a3e157
