@@ -492,7 +492,7 @@ CRATES="
 	zeroize_derive-1.3.2
 "
 
-inherit desktop cargo xdg-utils toolchain-funcs
+inherit desktop cargo xdg toolchain-funcs
 
 MY_P="${PN}-app-v${PV}"
 DESCRIPTION="A Tool for Upload video to bilibili"
@@ -551,14 +551,4 @@ src_install() {
 	newicon -s 128 "${S}/src-tauri/icons/128x128.png" "${PN}.png"
 	newicon -s 32 "${S}/src-tauri/icons/32x32.png" "${PN}.png"
 	domenu "${FILESDIR}/${PN}.desktop"
-}
-
-pkg_postinst(){
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
-}
-
-pkg_postrm(){
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
 }

@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit unpacker xdg-utils
+inherit unpacker xdg
 
 MY_PN="biliup-app"
 
@@ -35,14 +35,4 @@ src_install()
 	insinto /
 	doins -r .
 	fperms 0755 /usr/bin/biliup-app
-}
-
-pkg_postinst(){
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
-}
-
-pkg_postrm(){
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
 }
