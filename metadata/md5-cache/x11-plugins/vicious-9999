@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DESCRIPTION=Modular widget library for x11-wm/awesome
+EAPI=8
+HOMEPAGE=http://awesome.naquadah.org/wiki/Vicious
+INHERIT=git-r3
+IUSE=contrib
+LICENSE=GPL-2
+PROPERTIES=live
+RDEPEND=x11-wm/awesome
+SLOT=0
+_eclasses_=git-r3	c57c50c922e121043788de0b40ada60a
+_md5_=41d8c16d7475819be28f9f447971335b
