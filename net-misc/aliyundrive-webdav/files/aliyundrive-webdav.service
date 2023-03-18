@@ -1,0 +1,13 @@
+[Unit]
+Description=AliyunDrive WebDAV
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/aliyundrive-webdav/aliyundrive-webdav.env
+Type=simple
+ExecStart=/usr/bin/aliyundrive-webdav --auto-index -w /var/aliyundrive-webdav $ALIYUNDRIVE_WEBDAV_FLAGS
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
