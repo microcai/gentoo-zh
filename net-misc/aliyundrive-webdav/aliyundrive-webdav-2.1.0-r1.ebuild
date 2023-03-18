@@ -290,7 +290,13 @@ CRATES="
 	zip-0.6.4
 "
 
-inherit cargo systemd
+inherit cargo systemd readme.gentoo-r1
+
+DOC_CONTENTS="After install, please copy
+/etc/aliyundrive-webdav/aliyundrive-webdav.env.example
+to /etc/aliyundrive-webdav/aliyundrive-webdav.env
+to set REFRESH_TOKEN, WEBDAV_AUTH_USER, WEBDAV_AUTH_PASSWORD etc.
+You can change ALIYUNDRIVE_WEBDAV_FLAGS to add more flags for aliyundrive-webdav"
 
 DESCRIPTION="WebDAV server for AliyunDrive"
 # Double check the homepage as the cargo_metadata crate
@@ -316,5 +322,12 @@ QA_FLAGS_IGNORED="usr/bin/${PN}"
 src_install()
 {
 	cargo_src_install
-	systemd_newunit systemd.service aliyundrive-webdav.service
+	systemd_dounit "${FILESDIR}/${PN}.service"
+	insinto "/etc/${PN}"
+	doins "${FILESDIR}/${PN}.env.example"
+	readme.gentoo_create_doc
+}
+
+pkg_postinst() {
+	elog "${DOC_CONTENTS}"
 }
