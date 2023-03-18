@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-03-18 22:01:29 CST)
+(The last generation time: 2023-03-19 00:57:16 CST)
 
 ### Packages
 
@@ -455,6 +455,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/v2rayA                             | 1.5.9.1698.1                              |        | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                               | 2.0.1-r1                                  |        |                                                                                         |
+                                              | 2.0.2                                     |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
    net-proxy/Xray                             | 1.6.0                                     | RD     | https://github.com/XTLS/Xray-core                                                       | Xray, Penetrates Everything.
                                               | 1.6.1                                     |        |                                                                                         |
