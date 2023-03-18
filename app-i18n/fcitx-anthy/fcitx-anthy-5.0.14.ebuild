@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit cmake xdg-utils
+inherit cmake xdg
 
 if [[ "${PV}" =~ (^|\.)9999$ ]]; then
 	inherit git-r3
@@ -43,12 +43,4 @@ src_configure() {
 		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
 	)
 	cmake_src_configure
-}
-
-pkg_postinst() {
-	xdg_icon_cache_update
-}
-
-pkg_postrm() {
-	xdg_icon_cache_update
 }
