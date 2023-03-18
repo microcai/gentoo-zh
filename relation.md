@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-03-17 16:12:32 CST)
+(The last generation time: 2023-03-18 14:03:42 CST)
 
 ### Packages
 
@@ -527,8 +527,8 @@
                                               | 6.2.1                                     |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                        | 3-r11                                     |        |                                                                                         | Virtual for Linux kernel sources
-   sys-kernel/liquorix-sources                | 6.1.15                                    | RD     | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
-                                              | 6.2.5                                     |        |                                                                                         |
+   sys-kernel/liquorix-sources                | 6.2.5                                     | RD     | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
+                                              | 6.2.6                                     |        |                                                                                         |
    sys-kernel/xanmod-kernel                   | 5.15.95                                   | RD     | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
                                               | 6.1.14                                    |        |                                                                                         |
                                               | 6.2.1                                     |        |                                                                                         |
