@@ -18,6 +18,8 @@ SRC_URI="
 	https://github.com/st0nie/gentoo-go-deps/releases/download/dae_bpf_headers/dae_bpf_headers-$_I.zip
 	https://github.com/st0nie/gentoo-go-deps/releases/download/dae-${PV}/${P}-deps.tar.xz
 "
+RESTRICT="mirror"
+
 DEPEND="
 	dev-libs/v2ray-domain-list-community-bin
 	dev-libs/v2ray-geoip-bin
@@ -49,6 +51,7 @@ src_install() {
 	systemd_dounit install/dae.service
 	insinto /etc/dae
 	newins example.dae config.dae.example
+	newins install/empty.dae config.dae
 	dosym -r "/usr/share/v2ray/geosite.dat" /usr/share/dae/geosite.dat
 	dosym -r "/usr/share/v2ray/geoip.dat" /usr/share/dae/geoip.dat
 }
