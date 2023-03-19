@@ -47,6 +47,7 @@ src_install() {
 	systemd_dounit install/dae.service
 	insinto /etc/dae
 	newins example.dae config.dae.example
+	newins install/empty.dae config.dae
 	dosym -r "/usr/share/v2ray/geosite.dat" /usr/share/dae/geosite.dat
 	dosym -r "/usr/share/v2ray/geoip.dat" /usr/share/dae/geoip.dat
 }
