@@ -815,6 +815,7 @@ source = "github"
 github = "qjfoidnh/BaiduPCS-Go"
 use_latest_release = true
 prefix = "v"
+github_account = "123485k"
 
 ["net-misc/biliup-app"]
 source = "github"
