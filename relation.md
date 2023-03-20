@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-03-21 01:50:50 CST)
+(The last generation time: 2023-03-21 01:51:26 CST)
 
 ### Packages
 
@@ -380,7 +380,7 @@
  net-misc/baidunetdisk                        | 4.14.5                                    |        | https://pan.baidu.com/                                                                  | Baidu Net Disk is a cloud storage client (Linux Version)
                                               | 4.3.0                                     |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/baidupcs-go                         | 3.9.0                                     |        | https://github.com/qjfoidnh/BaiduPCS-Go                                                 | The terminal utility for Baidu Network Disk (Golang Version).
+ net-misc/baidupcs-go                         | 3.9.1                                     |        | https://github.com/qjfoidnh/BaiduPCS-Go                                                 | The terminal utility for Baidu Network Disk (Golang Version).
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/biliup-app                          | 0.4.1                                     |        | https://github.com/ForgQi/biliup-app                                                    | A Tool for Upload video to bilibili
    dev-util/tauri-cli                         | 1.2.3                                     | BD     | https://github.com/tauri-apps/tauri                                                     | Command line interface for building Tauri apps
