@@ -1,9 +1,14 @@
 [Desktop Entry]
-Categories=Development
-Type=Application
+Exec=/opt/jetbrains-toolbox/jetbrains-toolbox %u
+Icon=jetbrains-toolbox
+MimeType=x-scheme-handler/jetbrains;
 Name=JetBrains Toolbox
-Exec=/usr/bin/jetbrains-toolbox %u
-Icon=/usr/share/pixmaps/jetbrains-toolbox.svg
 StartupNotify=false
+StartupWMClass=jetbrains-toolbox
 Terminal=false
-MimeType=x-scheme-handler/jetbrains
+Type=Application
+Version=1.0
+X-GNOME-Autostart-Delay=10
+X-GNOME-Autostart-enabled=true
+X-KDE-autostart-after=panel
+X-MATE-Autostart-Delay=10

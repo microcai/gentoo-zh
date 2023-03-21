@@ -3,9 +3,9 @@
 
 # Copyright 2019 Rabenda
 
-EAPI=6
+EAPI=8
 
-inherit eutils xdg-utils
+inherit xdg desktop
 
 DESCRIPTION="Manage all your JetBrains Projects and Tools"
 HOMEPAGE="https://www.jetbrains.com/toolbox/app"
@@ -14,6 +14,8 @@ SRC_URI="https://download.jetbrains.com/toolbox/${P}.tar.gz"
 LICENSE="JetBrainsToolbox"
 SLOT="0"
 KEYWORDS="~amd64"
+
+RESTRICT="strip mirror"
 
 DEPEND="sys-fs/fuse:0"
 
@@ -27,20 +29,10 @@ src_install() {
 	keepdir /opt/jetbrains-toolbox
 	insinto /opt/jetbrains-toolbox
 	doins jetbrains-toolbox
+
+	newicon "${FILESDIR}/${PN}.svg" "${PN}.svg"
+
+	domenu "${FILESDIR}/${PN}.desktop"
+
 	fperms +x /opt/jetbrains-toolbox/jetbrains-toolbox
-
-	#newicon squashfs-root/jetbrains-toolbox.svg "${PN}.svg"
-
-	make_wrapper "${PN}" /opt/jetbrains-toolbox/jetbrains-toolbox
-
-	insinto /usr/share/applications
-	doins "${FILESDIR}/${PN}.desktop"
-}
-
-pkg_postinst() {
-	xdg_desktop_database_update
-}
-
-pkg_postrm() {
-	xdg_desktop_database_update
 }
