@@ -538,7 +538,7 @@ source = "github"
 github = "tauri-apps/tauri"
 use_latest_tag = true
 prefix = "cli.rs-v"
-github_account = "123585k"
+github_account = "123485k"
 
 # TODO
 #["dev-util/v2ray-geoip-generator"]
