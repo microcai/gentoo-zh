@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit cmake xdg-utils
+inherit cmake xdg-utils flag-o-matic toolchain-funcs
 
 if [[ "${PV}" == 9999* ]]; then
 	inherit git-r3
@@ -34,6 +34,10 @@ src_prepare() {
 }
 
 src_configure() {
+	if [[ $(tc-get-cxx-stdlib) == libc++ ]]; then
+		append-cxxflags -D_LIBCPP_ENABLE_CXX17_REMOVED_FEATURES
+	fi
+
 	local mycmakeargs=(
 		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
 		-DCMAKE_INSTALL_SYSCONFDIR="${EPREFIX}/etc"
