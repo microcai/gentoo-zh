@@ -6,8 +6,8 @@ EAPI=8
 inherit go-module
 
 DESCRIPTION="Command-line Netease Cloud Music written in Go"
-HOMEPAGE="https://github.com/anhoder"
-SRC_URI="https://github.com/anhoder/go-musicfox/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://github.com/go-musicfox/go-musicfox"
+SRC_URI="https://github.com/go-musicfox/go-musicfox/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -27,7 +27,7 @@ BDEPEND="
 "
 
 src_compile() {
-	if use clang ; then
+	if use clang; then
 		ego env -w "CC=clang"
 		ego env -w "CXX=clang++"
 	fi
