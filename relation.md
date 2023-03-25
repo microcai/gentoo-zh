@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-03-25 16:34:55 CST)
+(The last generation time: 2023-03-25 16:35:47 CST)
 
 ### Packages
 
@@ -529,15 +529,18 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/dist-kernel                          | 6.1.20                                    |        |                                                                                         | Virtual to depend on any Distribution Kernel
                                               | 6.2.7                                     |        |                                                                                         |
+                                              | 6.2.8                                     |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                        | 3-r11                                     |        |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/liquorix-sources                | 6.2.5                                     | RD     | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
                                               | 6.2.6                                     |        |                                                                                         |
    sys-kernel/xanmod-kernel                   | 6.1.20                                    | RD     | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
                                               | 6.2.7                                     |        |                                                                                         |
+                                              | 6.2.8                                     |        |                                                                                         |
    sys-kernel/xanmod-rt                       | 6.0.11                                    | RD     | https://xanmod.org                                                                      | XanMod RT sources and CJKTTY options.
    sys-kernel/xanmod-sources                  | 6.1.20                                    | RD     | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
                                               | 6.2.7                                     |        |                                                                                         |
+                                              | 6.2.8                                     |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/openvscode-server-bin               | 1.75.1                                    |        | https://github.com/gitpod-io/openvscode-server                                          | VS Code that runs a server on remote and allows access through a web browser
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
