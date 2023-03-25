@@ -144,7 +144,7 @@ media-libs/vips 8.14.1: VIPS Image Processing Library
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.10-r1 0.5.11 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-sound/feeluown 3.8.7 3.8.9: A user-friendly and hackable music player
-media-sound/go-musicfox 3.7.5: Command-line Netease Cloud Music written in Go
+media-sound/go-musicfox 3.7.6: Command-line Netease Cloud Music written in Go
 media-sound/linnya 2.2.0: A free music player
 media-sound/listen1_desktop-bin 2.27.0: one for all free music in China
 media-sound/lx-music-desktop-bin 2.1.2: 一个基于 electron 的音乐软件
@@ -200,7 +200,7 @@ net-print/pantum 1.1.94: 奔图打印机Linux驱动
 net-proxy/Xray 1.6.0 1.6.1: Xray, Penetrates Everything.
 net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
 net-proxy/clash 1.13.0: A rule-based tunnel in Go.
-net-proxy/clash-for-windows-bin 0.20.17 0.20.18: A Windows/macOS/Linux GUI based on Clash and Electron.
+net-proxy/clash-for-windows-bin 0.20.18 0.20.19: A Windows/macOS/Linux GUI based on Clash and Electron.
 net-proxy/clash-meta 1.14.2: Another Clash Kernel.
 net-proxy/clash-premium-bin 2023.02.16: Close-sourced pre-built Clash binary with TUN support
 net-proxy/clash-verge-bin 1.2.0 1.2.1: A Clash GUI based on tauri
@@ -238,15 +238,15 @@ sys-fs/ssdfs-tools 4.09: userspace tools for SSDFS
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/liquorix-sources 6.2.5 6.2.6: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 34-r1: Modular initramfs image creation utility
-sys-kernel/xanmod-kernel 6.1.20 6.2.7: XanMod lts kernel built with Gentoo patches and cjktty
+sys-kernel/xanmod-kernel 6.1.20 6.2.7 6.2.8: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 6.0.11: XanMod RT sources and CJKTTY options.
-sys-kernel/xanmod-sources 6.1.20 6.2.7: Full XanMod source, including the Gentoo patchset and other patch options.
+sys-kernel/xanmod-sources 6.1.20 6.2.7 6.2.8: Full XanMod source, including the Gentoo patchset and other patch options.
 sys-kernel/zenpower 0.1.12-r1: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libsolv 0.7.23 9999: Library for solving packages and reading repositories
 sys-libs/libzypp 17.31.7 9999: ZYpp Package Management library
 sys-power/tlpui 1.5.0_p6: A GTK user interface for TLP written in Python
-virtual/dist-kernel 6.1.20 6.2.7: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 6.1.20 6.2.7 6.2.8: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 www-apps/openvscode-server-bin 1.75.1: VS Code that runs a server on remote and allows access through a web browser
 www-servers/darkhttpd 1.13: A small, static webserver
