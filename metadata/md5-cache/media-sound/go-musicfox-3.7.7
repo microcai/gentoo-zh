@@ -1,5 +1,5 @@
 BDEPEND=media-libs/flac media-libs/alsa-lib clang? ( sys-devel/clang ) !clang? ( sys-devel/gcc[objc] ) >=dev-lang/go-1.18 app-arch/unzip
-DEFINED_PHASES=compile install unpack
+DEFINED_PHASES=compile install prepare unpack
 DEPEND=media-libs/flac media-libs/alsa-lib
 DESCRIPTION=Command-line Netease Cloud Music written in Go
 EAPI=8
@@ -11,6 +11,6 @@ LICENSE=MIT
 RDEPEND=media-libs/flac media-libs/alsa-lib
 RESTRICT=mirror strip
 SLOT=0
-SRC_URI=https://github.com/go-musicfox/go-musicfox/archive/refs/tags/v3.7.6.tar.gz -> go-musicfox-3.7.6.tar.gz
+SRC_URI=https://github.com/go-musicfox/go-musicfox/archive/refs/tags/v3.7.7.tar.gz -> go-musicfox-3.7.7.tar.gz
 _eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	go-module	f9700c7efec1fd4955363169e9930c1c
-_md5_=1d0cb3c4b44df347066621c7993fda8f
+_md5_=dddb4b59975d42fd3af886d3978ef67e
