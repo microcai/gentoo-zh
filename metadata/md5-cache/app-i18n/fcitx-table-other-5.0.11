@@ -11,5 +11,5 @@ LICENSE=GPL-3+
 RDEPEND=app-i18n/fcitx:5 app-i18n/libime sys-devel/gettext
 SLOT=5
 SRC_URI=https://github.com/fcitx/fcitx5-table-other/archive/refs/tags/5.0.11.tar.gz -> fcitx-table-other-5.0.11.tar.gz
-_eclasses_=toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	514815b1cc0dd4aeac177c2e812b3b1a	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	2e47edc2986d4e1c0363867058cd4489	xdg	4a14c5c24f121e7da66e5aab4a168c6e
+_eclasses_=toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	d1408425c7c4a7669b9b17735404b693	flag-o-matic	514815b1cc0dd4aeac177c2e812b3b1a	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	76050953ad5b70d7e09a6ca55558db92	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	a5db80fc70a5cb2ba598250d1c470593	xdg	4a14c5c24f121e7da66e5aab4a168c6e
 _md5_=1e302d880c7c92252eaeabde4152cc06

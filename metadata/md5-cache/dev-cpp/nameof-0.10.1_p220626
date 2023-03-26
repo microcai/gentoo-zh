@@ -10,5 +10,5 @@ LICENSE=MIT
 PROPERTIES=live
 RESTRICT=mirror
 SLOT=0
-_eclasses_=git-r3	c57c50c922e121043788de0b40ada60a
+_eclasses_=git-r3	27e13c09a4c7e4c78ac812f74727e676
 _md5_=fb8ebba645de980091abe0b27b6c4b1d
