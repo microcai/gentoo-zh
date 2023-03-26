@@ -26,12 +26,17 @@ BDEPEND="
 	!clang? ( sys-devel/gcc[objc] )
 "
 
+src_prepare() {
+	default
+	sed -i "/^\s*AppVersion/s/.*/AppVersion = \"v$PV\"/" pkg/constants/constants.go || die
+}
+
 src_compile() {
 	if use clang; then
 		ego env -w "CC=clang"
 		ego env -w "CXX=clang++"
 	fi
-	ego build -o musicfox -ldflags "-s -w -X go-musicfox/pkg/constants.AppVersion=v${PV}" cmd/musicfox.go
+	ego build -o musicfox cmd/musicfox.go
 }
 
 src_install() {
