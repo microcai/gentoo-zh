@@ -57,6 +57,10 @@ else
 	done
 fi
 
+if [ -d ~/.config/QQ/versions ]; then
+	find ~/.config/QQ/versions -name sharp-lib -type d -exec rm -r {} \; 2>/dev/null
+fi
+
 bwrap --new-session --cap-drop ALL --unshare-user-try --unshare-pid --unshare-cgroup-try \
 	--ro-bind /lib /lib \
 	--ro-bind /lib64 /lib64 \

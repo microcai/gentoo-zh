@@ -12,7 +12,7 @@ HOMEPAGE="https://im.qq.com/linuxqq/index.shtml"
 LICENSE="Tencent"
 RESTRICT="strip"
 
-_I="4b2e3220"
+_I="2355235c"
 
 SRC_URI="
 	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_amd64.deb )
@@ -78,7 +78,7 @@ src_install() {
 	if use bwrap; then
 		dosym -r /opt/QQ/start.sh /usr/bin/qq
 	else
-		dosym -r /opt/QQ/qq /usr/bin/qq
+		newbin "$FILESDIR/qq.sh" qq
 	fi
 
 	sed -i 's!/usr/share/icons/hicolor/512x512/apps/qq.png!qq!' usr/share/applications/qq.desktop || die
