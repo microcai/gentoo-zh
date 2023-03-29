@@ -1102,6 +1102,13 @@ use_latest_release = true
 prefix = "openvscode-server-v"
 github_account = "liuyujielol"
 
+["www-apps/chatgpt-desktop"]
+source = "github"
+github = "lencx/ChatGPT"
+use_latest_release = true
+github_account = "oatiz"
+prefix = "v"
+
 ["www-servers/darkhttpd"]
 source = "github"
 github = "emikulic/darkhttpd"
