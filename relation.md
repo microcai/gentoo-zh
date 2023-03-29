@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-03-29 16:39:47 CST)
+(The last generation time: 2023-03-29 18:10:30 CST)
 
 ### Packages
 
@@ -362,7 +362,7 @@
                                               | 9999                                      |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/tencent-qq                            | 3.1.1_p11223                              |        | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
-   media-libs/vips                            | 8.14.1                                    | RD     | https://libvips.github.io/libvips/                                                      | VIPS Image Processing Library
+   media-libs/vips                            | 8.14.1                                    |  D, RD | https://libvips.github.io/libvips/                                                      | VIPS Image Processing Library
    x11-misc/flatpak-xdg-utils                 | 1.0.5                                     | RD     | https://github.com/flatpak/flatpak-xdg-utils                                            | Utilities for containerized apps to launch programs outside the container
    x11-misc/snapd-xdg-open                    | 9999                                      | RD     | https://github.com/snapcore/snapd-xdg-open                                              | Software for opening links from snaps in desktop
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -541,6 +541,8 @@
    sys-kernel/xanmod-sources                  | 6.1.20                                    | RD     | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
                                               | 6.2.7                                     |        |                                                                                         |
                                               | 6.2.8                                     |        |                                                                                         |
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ www-apps/chatgpt-desktop                     | 0.12.0                                    |        | https://github.com/lencx/ChatGPT                                                        | ChatGPT Desktop Application
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/openvscode-server-bin               | 1.75.1                                    |        | https://github.com/gitpod-io/openvscode-server                                          | VS Code that runs a server on remote and allows access through a web browser
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
