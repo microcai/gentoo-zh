@@ -16,12 +16,12 @@ CRATES="
 	async-compression-0.3.15
 	async-executor-1.5.0
 	async-global-executor-2.3.1
-	async-io-1.12.0
+	async-io-1.13.0
 	async-lock-2.7.0
-	async-openai-0.9.5
+	async-openai-0.10.1
 	async-std-1.12.0
-	async-task-4.3.0
-	async-trait-0.1.67
+	async-task-4.4.0
+	async-trait-0.1.68
 	atomic-waker-1.1.0
 	atty-0.2.14
 	autocfg-1.1.0
@@ -35,20 +35,20 @@ CRATES="
 	blocking-1.3.0
 	brotli-3.3.4
 	brotli-decompressor-2.3.4
-	bstr-1.3.0
+	bstr-1.4.0
 	bumpalo-3.12.0
 	bytes-1.4.0
 	cc-1.0.79
 	cfg-if-1.0.0
-	clap-4.1.10
-	clap_derive-4.1.9
+	clap-4.1.13
+	clap_derive-4.1.12
 	clap_lex-0.3.3
 	colored-2.0.0
 	concurrent-queue-2.1.0
 	config-0.13.3
 	core-foundation-0.9.3
 	core-foundation-sys-0.8.3
-	cpufeatures-0.2.5
+	cpufeatures-0.2.6
 	crc32fast-1.3.2
 	crossbeam-utils-0.8.15
 	crypto-common-0.1.6
@@ -60,12 +60,13 @@ CRATES="
 	derive_builder_core-0.12.0
 	derive_builder_macro-0.12.0
 	digest-0.10.6
-	dirs-4.0.0
-	dirs-sys-0.3.7
+	dirs-5.0.0
+	dirs-sys-0.4.0
 	dlv-list-0.3.0
 	either-1.8.1
 	encoding_rs-0.8.32
 	errno-0.2.8
+	errno-0.3.0
 	errno-dragonfly-0.1.2
 	event-listener-2.5.3
 	eventsource-stream-0.2.3
@@ -73,8 +74,6 @@ CRATES="
 	fastrand-1.9.0
 	flate2-1.0.25
 	fnv-1.0.7
-	foreign-types-0.3.2
-	foreign-types-shared-0.1.1
 	form_urlencoded-1.1.0
 	futures-0.3.27
 	futures-channel-0.3.27
@@ -104,15 +103,14 @@ CRATES="
 	httpdate-1.0.2
 	hyper-0.14.25
 	hyper-rustls-0.23.2
-	hyper-tls-0.5.0
 	ident_case-1.0.1
 	idna-0.3.0
 	ignore-0.4.20
-	indexmap-1.9.2
+	indexmap-1.9.3
 	instant-0.1.12
-	io-lifetimes-1.0.7
+	io-lifetimes-1.0.9
 	ipnet-2.7.1
-	is-terminal-0.4.4
+	is-terminal-0.4.5
 	itoa-1.0.6
 	json5-0.4.1
 	js-sys-0.3.61
@@ -121,25 +119,22 @@ CRATES="
 	libc-0.2.140
 	linked-hash-map-0.5.6
 	linux-raw-sys-0.1.4
+	linux-raw-sys-0.3.0
 	lock_api-0.4.9
 	log-0.4.17
 	memchr-2.5.0
-	mime-0.3.16
+	mime-0.3.17
 	mime_guess-2.0.4
 	minimal-lexical-0.2.1
 	miniz_oxide-0.6.2
 	mio-0.8.6
-	native-tls-0.2.11
 	nom-7.1.3
 	num_cpus-1.15.0
 	num_threads-0.1.6
 	once_cell-1.17.1
-	openssl-0.10.46
-	openssl-macros-0.1.0
 	openssl-probe-0.1.5
-	openssl-sys-0.9.81
 	ordered-multimap-0.4.3
-	os_str_bytes-6.4.1
+	os_str_bytes-6.5.0
 	parking-2.0.0
 	parking_lot-0.12.1
 	parking_lot_core-0.9.7
@@ -151,29 +146,28 @@ CRATES="
 	pest_meta-2.5.6
 	pin-project-lite-0.2.9
 	pin-utils-0.1.0
-	pkg-config-0.3.26
 	polling-2.6.0
 	ppv-lite86-0.2.17
-	proc-macro2-1.0.52
-	proc-macro-error-1.0.4
-	proc-macro-error-attr-1.0.4
+	proc-macro2-1.0.54
 	quote-1.0.26
 	rand-0.8.5
 	rand_chacha-0.3.1
 	rand_core-0.6.4
 	redox_syscall-0.2.16
 	redox_users-0.4.3
-	regex-1.7.1
+	regex-1.7.3
 	regex-automata-0.1.10
-	regex-syntax-0.6.28
-	reqwest-0.11.14
+	regex-syntax-0.6.29
+	reqwest-0.11.16
 	reqwest-eventsource-0.4.0
 	ring-0.16.20
 	ron-0.7.1
 	rustc-hash-1.1.0
 	rust-ini-0.18.0
-	rustix-0.36.9
+	rustix-0.36.11
+	rustix-0.37.3
 	rustls-0.20.8
+	rustls-native-certs-0.6.2
 	rustls-pemfile-1.0.2
 	rustversion-1.0.12
 	ryu-1.0.13
@@ -183,14 +177,14 @@ CRATES="
 	sct-0.7.0
 	security-framework-2.8.2
 	security-framework-sys-2.8.0
-	serde-1.0.157
-	serde_derive-1.0.157
-	serde_json-1.0.94
+	serde-1.0.158
+	serde_derive-1.0.158
+	serde_json-1.0.95
 	serde_spanned-0.6.1
 	serde_urlencoded-0.7.1
 	sha2-0.10.6
 	signal-hook-registry-1.4.1
-	simple_logger-4.0.0
+	simple_logger-4.1.0
 	slab-0.4.8
 	smallvec-1.10.0
 	socket2-0.4.9
@@ -199,29 +193,28 @@ CRATES="
 	strum-0.24.1
 	strum_macros-0.24.3
 	syn-1.0.109
-	syn-2.0.0
-	tempfile-3.4.0
+	syn-2.0.10
 	tera-1.18.1
 	termcolor-1.2.0
 	thiserror-1.0.40
 	thiserror-impl-1.0.40
 	thread_local-1.1.4
-	tiktoken-rs-0.3.1
+	tiktoken-rs-0.3.3
 	time-0.3.20
 	time-core-0.1.0
 	time-macros-0.2.8
 	tinyvec-1.6.0
 	tinyvec_macros-0.1.1
-	tokio-1.26.0
-	tokio-macros-1.8.2
-	tokio-native-tls-0.3.1
+	tokio-1.27.0
+	tokio-macros-2.0.0
 	tokio-rustls-0.23.4
+	tokio-socks-0.5.1
 	tokio-stream-0.1.12
 	tokio-util-0.7.7
 	toml-0.5.11
 	toml-0.7.3
 	toml_datetime-0.6.1
-	toml_edit-0.19.7
+	toml_edit-0.19.8
 	tower-service-0.3.2
 	tracing-0.1.37
 	tracing-attributes-0.1.23
@@ -233,7 +226,7 @@ CRATES="
 	unic-char-property-0.9.0
 	unic-char-range-0.9.0
 	unic-common-0.9.0
-	unicode-bidi-0.3.12
+	unicode-bidi-0.3.13
 	unicode-ident-1.0.8
 	unicode-normalization-0.1.22
 	unic-segment-0.9.0
@@ -242,7 +235,6 @@ CRATES="
 	untrusted-0.7.1
 	url-2.3.1
 	value-bag-1.0.0-alpha.9
-	vcpkg-0.2.15
 	version_check-0.9.4
 	waker-fn-1.1.0
 	walkdir-2.3.3
@@ -273,7 +265,7 @@ CRATES="
 	windows_x86_64_gnu-0.42.2
 	windows_x86_64_gnullvm-0.42.2
 	windows_x86_64_msvc-0.42.2
-	winnow-0.3.6
+	winnow-0.4.1
 	winreg-0.10.1
 	yaml-rust-0.4.5
 "
