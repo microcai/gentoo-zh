@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-03-30 15:36:27 CST)
+(The last generation time: 2023-03-31 17:52:46 CST)
 
 ### Packages
 
@@ -215,7 +215,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gitoxide                             | 0.23.0                                    |        | https://github.com/Byron/gitoxide                                                       | A command-line application for interacting with git repositories
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/gptcommit                            | 0.4.0                                     |        | https://github.com/zurawiki/gptcommit                                                   | A git prepare-commit-msg hook for summarizing commits with GPT-3.
+ dev-vcs/gptcommit                            | 0.5.4                                     |        | https://github.com/zurawiki/gptcommit                                                   | A git prepare-commit-msg hook for summarizing commits with GPT-3.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/lazygit                              | 0.35                                      |        | https://github.com/jesseduffield/lazygit                                                | lazygit, a simple terminal UI for git commands
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
