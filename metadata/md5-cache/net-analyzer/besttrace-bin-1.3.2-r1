@@ -1,10 +1,14 @@
 BDEPEND=app-arch/unzip
-DEFINED_PHASES=install
+DEFINED_PHASES=install postinst
 DESCRIPTION=附带链路可视化的 traceroute 工具
 EAPI=8
 HOMEPAGE=https://www.ipip.net
+IDEPEND=filecaps? ( sys-libs/libcap )
+INHERIT=fcaps
+IUSE=+filecaps
 KEYWORDS=~amd64
 LICENSE=all-rights-reserved
 SLOT=0
 SRC_URI=https://cdn.ipip.net/17mon/besttrace4linux.zip -> besttrace-bin-1.3.2.zip
-_md5_=b25136729bc3905d2d779de78bbad960
+_eclasses_=fcaps	c0a086b957a1b183a8d136eabf02f191
+_md5_=e09b48b78bdef896a755deefdd8dc197

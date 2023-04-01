@@ -159,7 +159,7 @@ media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/bilibili 1.9.1: Based on the Bilibli offcial client to linux version, support roaming
 media-video/mpv-handler 0.3.3: A protocol handler for mpv, written by Rust.
 media-video/tenvideo 1.0.10: Tencent videos
-net-analyzer/besttrace-bin 1.3.2: 附带链路可视化的 traceroute 工具
+net-analyzer/besttrace-bin 1.3.2-r1: 附带链路可视化的 traceroute 工具
 net-analyzer/nali 0.7.1: An offline tool for querying IP geographic information and CDN provider.
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
