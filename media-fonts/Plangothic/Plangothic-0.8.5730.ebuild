@@ -23,6 +23,8 @@ RESTRICT="mirror"
 
 FONT_SUFFIX="ttf"
 
+S="${WORKDIR}/Plangothic-Project-${PV}"
+
 src_install() {
 	use allideo || rm "PlangothicP1-Regular (allideo).ttf" || die
 	use fallback || rm "PlangothicP1-Regular (fallback).ttf" || die
