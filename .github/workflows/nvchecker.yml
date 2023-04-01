@@ -68,6 +68,7 @@ jobs:
       env:
         pkgs: ${{steps.nvchecker.outputs.nvcmp}}
       with:
+        github-token: ${{ secrets.GENTOO_ZH_NVCHECKER_PAT }}
         script: |
           const script = require('./.github/workflows/issues-bumper.js');
           (async function () {
