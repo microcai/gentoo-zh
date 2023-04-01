@@ -3,6 +3,8 @@
 
 EAPI=8
 
+inherit fcaps
+
 DESCRIPTION="附带链路可视化的 traceroute 工具"
 HOMEPAGE="https://www.ipip.net"
 SRC_URI="https://cdn.ipip.net/17mon/besttrace4linux.zip -> ${P}.zip"
@@ -15,6 +17,8 @@ KEYWORDS="~amd64"
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND="app-arch/unzip"
+
+FILECAPS=( cap_net_raw=ep /usr/bin/besttrace )
 
 src_install() {
 	use amd64 && dobin besttrace
