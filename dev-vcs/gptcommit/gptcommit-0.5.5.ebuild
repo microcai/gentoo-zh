@@ -11,6 +11,10 @@ CRATES="
 	aho-corasick-0.7.20
 	alloc-no-stdlib-2.0.4
 	alloc-stdlib-0.2.2
+	anstream-0.2.6
+	anstyle-0.3.5
+	anstyle-parse-0.1.1
+	anstyle-wincon-0.2.0
 	anyhow-1.0.70
 	async-channel-1.8.0
 	async-compression-0.3.15
@@ -40,10 +44,13 @@ CRATES="
 	bytes-1.4.0
 	cc-1.0.79
 	cfg-if-1.0.0
-	clap-4.1.13
-	clap_derive-4.1.12
-	clap_lex-0.3.3
+	clap-4.2.1
+	clap_builder-4.2.1
+	clap_derive-4.2.0
+	clap_lex-0.4.1
 	colored-2.0.0
+	concolor-override-1.0.0
+	concolor-query-0.3.3
 	concurrent-queue-2.1.0
 	config-0.13.3
 	core-foundation-0.9.3
@@ -65,7 +72,6 @@ CRATES="
 	dlv-list-0.3.0
 	either-1.8.1
 	encoding_rs-0.8.32
-	errno-0.2.8
 	errno-0.3.0
 	errno-dragonfly-0.1.2
 	event-listener-2.5.3
@@ -75,18 +81,18 @@ CRATES="
 	flate2-1.0.25
 	fnv-1.0.7
 	form_urlencoded-1.1.0
-	futures-0.3.27
-	futures-channel-0.3.27
-	futures-core-0.3.27
-	futures-executor-0.3.27
-	futures-io-0.3.27
+	futures-0.3.28
+	futures-channel-0.3.28
+	futures-core-0.3.28
+	futures-executor-0.3.28
+	futures-io-0.3.28
 	futures-lite-1.12.0
-	futures-macro-0.3.27
-	futures-sink-0.3.27
-	futures-task-0.3.27
+	futures-macro-0.3.28
+	futures-sink-0.3.28
+	futures-task-0.3.28
 	futures-timer-3.0.2
-	futures-util-0.3.27
-	generic-array-0.14.6
+	futures-util-0.3.28
+	generic-array-0.14.7
 	getrandom-0.2.8
 	globset-0.4.10
 	globwalk-0.8.1
@@ -109,8 +115,8 @@ CRATES="
 	indexmap-1.9.3
 	instant-0.1.12
 	io-lifetimes-1.0.9
-	ipnet-2.7.1
-	is-terminal-0.4.5
+	ipnet-2.7.2
+	is-terminal-0.4.6
 	itoa-1.0.6
 	json5-0.4.1
 	js-sys-0.3.61
@@ -118,8 +124,7 @@ CRATES="
 	lazy_static-1.4.0
 	libc-0.2.140
 	linked-hash-map-0.5.6
-	linux-raw-sys-0.1.4
-	linux-raw-sys-0.3.0
+	linux-raw-sys-0.3.1
 	lock_api-0.4.9
 	log-0.4.17
 	memchr-2.5.0
@@ -134,16 +139,15 @@ CRATES="
 	once_cell-1.17.1
 	openssl-probe-0.1.5
 	ordered-multimap-0.4.3
-	os_str_bytes-6.5.0
 	parking-2.0.0
 	parking_lot-0.12.1
 	parking_lot_core-0.9.7
 	pathdiff-0.2.1
 	percent-encoding-2.2.0
-	pest-2.5.6
-	pest_derive-2.5.6
-	pest_generator-2.5.6
-	pest_meta-2.5.6
+	pest-2.5.7
+	pest_derive-2.5.7
+	pest_generator-2.5.7
+	pest_meta-2.5.7
 	pin-project-lite-0.2.9
 	pin-utils-0.1.0
 	polling-2.6.0
@@ -164,8 +168,7 @@ CRATES="
 	ron-0.7.1
 	rustc-hash-1.1.0
 	rust-ini-0.18.0
-	rustix-0.36.11
-	rustix-0.37.3
+	rustix-0.37.5
 	rustls-0.20.8
 	rustls-native-certs-0.6.2
 	rustls-pemfile-1.0.2
@@ -177,8 +180,8 @@ CRATES="
 	sct-0.7.0
 	security-framework-2.8.2
 	security-framework-sys-2.8.0
-	serde-1.0.158
-	serde_derive-1.0.158
+	serde-1.0.159
+	serde_derive-1.0.159
 	serde_json-1.0.95
 	serde_spanned-0.6.1
 	serde_urlencoded-0.7.1
@@ -193,9 +196,8 @@ CRATES="
 	strum-0.24.1
 	strum_macros-0.24.3
 	syn-1.0.109
-	syn-2.0.10
+	syn-2.0.12
 	tera-1.18.1
-	termcolor-1.2.0
 	thiserror-1.0.40
 	thiserror-impl-1.0.40
 	thread_local-1.1.4
@@ -234,6 +236,7 @@ CRATES="
 	unic-ucd-version-0.9.0
 	untrusted-0.7.1
 	url-2.3.1
+	utf8parse-0.2.1
 	value-bag-1.0.0-alpha.9
 	version_check-0.9.4
 	waker-fn-1.1.0

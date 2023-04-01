@@ -12,7 +12,7 @@ S=${WORKDIR}
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm ~x86"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
@@ -22,4 +22,6 @@ FILECAPS=( cap_net_raw=ep /usr/bin/besttrace )
 
 src_install() {
 	use amd64 && dobin besttrace
+	use x86 && newbin besttrace32 besttrace
+	use arm && newbin besttracearm besttrace
 }
