@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-04-01 16:55:55 CST)
+(The last generation time: 2023-04-03 17:08:47 CST)
 
 ### Packages
 
@@ -284,13 +284,13 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-plugins/gimp-gap                       | 2.8.0                                     |        | http://www.gimp.org/                                                                    | Gimp Animation Package
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/feeluown                         | 3.8.7                                     |        | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
+ media-sound/feeluown                         | 3.8.10                                    |        | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
                                               | 3.8.9                                     |        |                                                                                         |
    dev-python/fuo-kuwo                        | 0.1.5                                     |  D     | https://github.com/feeluown/feeluown-kuwo                                               | kuwo music support for feeluown
                                               | 0.1.6                                     |        |                                                                                         |
    dev-python/fuo-local                       | 0.3                                       |  D     | https://github.com/feeluown/feeluown-local                                              | local music support for feeluown
-   dev-python/fuo-netease                     | 0.9.2                                     |  D     | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
-                                              | 0.9.3                                     |        |                                                                                         |
+   dev-python/fuo-netease                     | 0.9.3                                     |  D     | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
+                                              | 0.9.4                                     |        |                                                                                         |
    dev-python/fuo-qqmusic                     | 0.4.1                                     |  D     | https://github.com/feeluown/feeluown-qqmusic                                            | qq music support for feeluown
    dev-python/janus                           | 1.0.0-r1                                  |  D, RD | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
    dev-python/qasync                          | 0.23.0                                    |  D, RD | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
@@ -529,19 +529,25 @@
  sys-power/tlpui                              | 1.5.0_p6                                  |        | https://github.com/d4nj1/TLPUI                                                          | A GTK user interface for TLP written in Python
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/dist-kernel                          | 6.1.20                                    |        |                                                                                         | Virtual to depend on any Distribution Kernel
+                                              | 6.1.22                                    |        |                                                                                         |
                                               | 6.2.7                                     |        |                                                                                         |
                                               | 6.2.8                                     |        |                                                                                         |
+                                              | 6.2.9                                     |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                        | 3-r11                                     |        |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/liquorix-sources                | 6.2.6                                     | RD     | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
                                               | 6.2.9                                     |        |                                                                                         |
    sys-kernel/xanmod-kernel                   | 6.1.20                                    | RD     | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
+                                              | 6.1.22                                    |        |                                                                                         |
                                               | 6.2.7                                     |        |                                                                                         |
                                               | 6.2.8                                     |        |                                                                                         |
+                                              | 6.2.9                                     |        |                                                                                         |
    sys-kernel/xanmod-rt                       | 6.0.11                                    | RD     | https://xanmod.org                                                                      | XanMod RT sources and CJKTTY options.
    sys-kernel/xanmod-sources                  | 6.1.20                                    | RD     | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
+                                              | 6.1.22                                    |        |                                                                                         |
                                               | 6.2.7                                     |        |                                                                                         |
                                               | 6.2.8                                     |        |                                                                                         |
+                                              | 6.2.9                                     |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/chatgpt-desktop                     | 0.12.0                                    |        | https://github.com/lencx/ChatGPT                                                        | ChatGPT Desktop Application
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
