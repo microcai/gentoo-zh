@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-04-03 17:08:47 CST)
+(The last generation time: 2023-04-03 17:51:13 CST)
 
 ### Packages
 
@@ -160,8 +160,7 @@
                                               | 1.4                                       |        |                                                                                         |
                                               | 1.5                                       |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-db/dbeaver-bin                           | 22.3.1                                    |        | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
-                                              | 23.0.0                                    |        |                                                                                         |
+ dev-db/dbeaver-bin                           | 23.0.1                                    |        | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-db/mongodb                               | 5.3.1                                     |        | https://www.mongodb.com                                                                 | A high-performance, open source, schema-free document-oriented database
                                               | 6.2.0-r4                                  |        |                                                                                         |
