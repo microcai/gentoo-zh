@@ -77,4 +77,6 @@ src_install(){
 		fperms +x "/${f}"
 	done
 	fperms u+s /opt/Listen1/chrome-sandbox
+
+	dosym ../../opt/Listen1/listen1 /usr/bin/listen1
 }
