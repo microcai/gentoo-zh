@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -35,7 +35,8 @@ RDEPEND="
 	media-libs/libglvnd
 	media-libs/libpng
 	media-libs/opencollada
-	|| ( media-libs/tiff:0/0 media-libs/tiff-compat:4 )
+	media-libs/tiff
+	media-libs/tiff-compat:4
 	net-libs/zeromq
 	sys-libs/zlib
 	x11-libs/cairo
@@ -66,7 +67,8 @@ QA_PREBUILT="*"
 src_install() {
 	# Install scalable icons
 	mkdir -p "${S}"/usr/share/icons/hicolor/scalable/apps || die
-	mv "${S}"/opt/apps/${MY_PGK_NAME}/entries/icons/hicolor/scalable/apps/*.svg "${S}"/usr/share/icons/hicolor/scalable/apps || die
+	mv "${S}"/opt/apps/${MY_PGK_NAME}/entries/icons/hicolor/scalable/apps/*.svg \
+		"${S}"/usr/share/icons/hicolor/scalable/apps || die
 
 	# Set RPATH for preserve-libs handling
 	pushd "${S}"/opt/apps/${MY_PGK_NAME}/files || die
@@ -109,8 +111,9 @@ sh /opt/apps/${MY_PGK_NAME}/files/zw3drun.sh \$*
 	# and should use /usr/share/fonts/noto-cjk/NotoSansCJK-Regular.ttc
 	local MY_FONT_PATH_OLD="/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc"
 	local MY_FONT_PATH_NEW="//////usr/share/fonts/noto-cjk/NotoSansCJK-Regular.ttc"
-	bbe -e "s|${MY_FONT_PATH_OLD}|${MY_FONT_PATH_NEW}|" "${S}/opt/apps/${MY_PGK_NAME}/files/lib/libdisp.so" > "${S}/opt/apps/${MY_PGK_NAME}/files/lib/libdisp.so.tmp" && \
-		mv "${S}/opt/apps/${MY_PGK_NAME}/files/lib/libdisp.so.tmp" "${S}/opt/apps/${MY_PGK_NAME}/files/lib/libdisp.so" || die
+	bbe -e "s|${MY_FONT_PATH_OLD}|${MY_FONT_PATH_NEW}|" "${S}/opt/apps/${MY_PGK_NAME}/files/lib/libdisp.so" \
+		> "${S}/opt/apps/${MY_PGK_NAME}/files/lib/libdisp.so.tmp" && \
+	mv "${S}/opt/apps/${MY_PGK_NAME}/files/lib/libdisp.so.tmp" "${S}/opt/apps/${MY_PGK_NAME}/files/lib/libdisp.so" || die
 
 	# Install package and fix permissions
 	insinto /opt/apps
