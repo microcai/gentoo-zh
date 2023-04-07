@@ -3,6 +3,6 @@
 <pkgmetadata>
 	<!-- maintainer-needed -->
 	<upstream>
-		<remote-id type="github">felixonmars/BaiduPCS-Go</remote-id>
+		<remote-id type="github">qjfoidnh/BaiduPCS-Go</remote-id>
 	</upstream>
 </pkgmetadata>

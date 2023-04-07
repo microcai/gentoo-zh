@@ -2,7 +2,6 @@ name: nvchecker
 
 on:
   push:
-    branches: [ master ]
   workflow_dispatch:
   schedule:
     # * is a special character in YAML so you have to quote this string
@@ -16,6 +15,7 @@ concurrency:
 jobs:
   nvchecker:
     runs-on: ubuntu-latest
+    if: github.repository == 'microcai/gentoo-zh' && github.ref == 'refs/heads/master'
     container:
       image: ghcr.io/liangyongxiang/gentoo-testing:master
 
@@ -68,6 +68,7 @@ jobs:
       env:
         pkgs: ${{steps.nvchecker.outputs.nvcmp}}
       with:
+        github-token: ${{ secrets.GENTOO_ZH_NVCHECKER_PAT }}
         script: |
           const script = require('./.github/workflows/issues-bumper.js');
           (async function () {

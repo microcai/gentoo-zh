@@ -1,0 +1,7 @@
+[Desktop Entry]
+Categories=Video;
+Exec=biliup-app
+Icon=biliup-app
+Name=biliup-app
+Terminal=false
+Type=Application

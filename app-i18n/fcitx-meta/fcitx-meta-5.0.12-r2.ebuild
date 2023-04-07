@@ -8,7 +8,7 @@ HOMEPAGE="https://fcitx-im.org"
 
 LICENSE="metapackage"
 SLOT="5"
-KEYWORDS="~amd64 ~loong ~x86"
+KEYWORDS="~amd64 ~arm64 ~loong ~x86"
 IUSE="+configtool +chinese-addons gtk2 +gtk3 gtk4 hangul lua +qt5 rime skk"
 
 DEPEND=""
@@ -22,10 +22,14 @@ RDEPEND="
 	gtk2? ( app-i18n/fcitx-gtk:${SLOT}[gtk2] )
 	gtk3? ( app-i18n/fcitx-gtk:${SLOT}[gtk3] )
 	gtk4? ( app-i18n/fcitx-gtk:${SLOT}[gtk4] )
-	hangul? ( app-i18n/fcitx-hangul:${SLOT} )
-	lua? ( app-i18n/fcitx-lua:${SLOT} )
 	qt5? ( app-i18n/fcitx-qt:${SLOT} )
-	rime? ( app-i18n/fcitx-rime:${SLOT} )
-	skk? ( app-i18n/fcitx-skk:${SLOT} )
+	!loong? (
+		rime? ( app-i18n/fcitx-rime:${SLOT} )
+		!arm64? (
+			hangul? ( app-i18n/fcitx-hangul:${SLOT} )
+			lua? ( app-i18n/fcitx-lua:${SLOT} )
+			skk? ( app-i18n/fcitx-skk:${SLOT} )
+		)
+	)
 "
 BDEPEND=""

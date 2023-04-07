@@ -15,7 +15,7 @@ LICENSE="
 	!system-uthash? ( BSD-1 )
 "
 SLOT="5"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm64 ~loong ~x86"
 IUSE="+system-uthash"
 
 RDEPEND="
