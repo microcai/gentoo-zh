@@ -22,6 +22,7 @@ app-emulation/deepin-wine-helper 5.1.27-r1: Deepin Wine Helper
 app-emulation/deepin-wine-plugin 5.1.13-r1: Deepin Wine plugin
 app-emulation/deepin-wine5 5.0.16-r1: Deepin wine5
 app-emulation/deepin-wine6-stable 6.0.0.19-r1: Deepin wine6 stable
+app-emulation/looking-glass 0_beta6: A low latency KVMFR application for guests with VGA PCI Passthrough
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
 app-i18n/fcitx 4.2.9.8 5.0.20 5.0.21 5.0.22 5.0.23 9999: Fcitx5 Next generation of fcitx
@@ -113,6 +114,7 @@ dev-vcs/lazygit-bin 0.35: lazygit, a simple terminal UI for git commands
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-misc/oh-my-git-bin 0.6.5: An interactive Git learning game!
 games-util/winegame-client-bin 0.5.10.5: An open source gaming platform for GNU/Linux
+gui-libs/libdecor 0.1.1: A client-side decorations library for Wayland clients
 kde-misc/plasma-applet-netspeed-widget 1.9 9999: Plasma 5 widget that displays the currently used network bandwidth.
 mail-client/thunderbird 106.0-r5: Thunderbird Mail Client
 media-fonts/Plangothic 0.8.5730: 遍黑体项目（Plangothic Project）

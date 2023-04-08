@@ -1,0 +1,16 @@
+BDEPEND=>=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=gui-libs/egl-wayland media-libs/fontconfig media-libs/libsamplerate dev-libs/nettle[gmp] app-emulation/spice-protocol X? ( x11-libs/libX11 x11-libs/libXfixes x11-libs/libXi x11-libs/libXScrnSaver x11-libs/libXpresent ) wayland? ( dev-libs/wayland x11-libs/libxkbcommon gnome? ( gui-libs/libdecor ) ) pipewire? ( media-video/pipewire ) pulseaudio? ( media-sound/pulseaudio ) obs? ( media-video/obs-studio )
+DESCRIPTION=A low latency KVMFR application for guests with VGA PCI Passthrough
+EAPI=8
+HOMEPAGE=https://looking-glass.io
+INHERIT=cmake tmpfiles linux-info
+IUSE=X wayland pipewire pulseaudio +backtrace gnome host obs
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=gui-libs/egl-wayland media-libs/fontconfig media-libs/libsamplerate dev-libs/nettle[gmp] app-emulation/spice-protocol X? ( x11-libs/libX11 x11-libs/libXfixes x11-libs/libXi x11-libs/libXScrnSaver x11-libs/libXpresent ) wayland? ( dev-libs/wayland x11-libs/libxkbcommon gnome? ( gui-libs/libdecor ) ) pipewire? ( media-video/pipewire ) pulseaudio? ( media-sound/pulseaudio ) obs? ( media-video/obs-studio ) virtual/tmpfiles
+REQUIRED_USE=|| ( X wayland ) || ( pipewire pulseaudio )
+SLOT=0
+SRC_URI=https://looking-glass.io/artifact/B6/source -> looking-glass-0_beta6.tar.gz
+_eclasses_=toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	d1408425c7c4a7669b9b17735404b693	flag-o-matic	514815b1cc0dd4aeac177c2e812b3b1a	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	76050953ad5b70d7e09a6ca55558db92	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	7fb5980de96325cbab639f5b2187357c	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f	linux-info	c4f1201b96a8a2c1f3b86cc8b2c71c91
+_md5_=5b5622a0bf73fb6b5a50902a980c18e7

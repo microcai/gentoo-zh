@@ -1,0 +1,15 @@
+BDEPEND=>=dev-util/meson-0.62.2 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
+DEFINED_PHASES=compile configure install test
+DEPEND=>=dev-libs/wayland-1.18 >=dev-libs/wayland-protocols-1.15 x11-libs/pango dbus? ( sys-apps/dbus ) examples? ( virtual/opengl media-libs/mesa[egl(+)] x11-libs/libxkbcommon )
+DESCRIPTION=A client-side decorations library for Wayland clients
+EAPI=8
+HOMEPAGE=https://gitlab.freedesktop.org/libdecor/libdecor
+INHERIT=meson
+IUSE=+dbus examples
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=>=dev-libs/wayland-1.18 >=dev-libs/wayland-protocols-1.15 x11-libs/pango dbus? ( sys-apps/dbus ) examples? ( virtual/opengl media-libs/mesa[egl(+)] x11-libs/libxkbcommon )
+SLOT=0
+SRC_URI=https://gitlab.freedesktop.org/libdecor/libdecor/-/archive/0.1.1/libdecor-0.1.1.tar.bz2
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	76050953ad5b70d7e09a6ca55558db92	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	d1408425c7c4a7669b9b17735404b693	python-utils-r1	429bfd4e8d8e39db5385ba5744f30788	meson	915ec7c25e08d7886558215e6809ca1e
+_md5_=96cf33d6309ce2c6733034a339762255
