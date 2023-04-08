@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-04-08 07:08:52 CST)
+(The last generation time: 2023-04-08 11:25:17 CST)
 
 ### Packages
 
@@ -33,6 +33,9 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                           | 0.11.18                                   |        | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
                                               | 1.5.8                                     |        |                                                                                         |
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ app-emulation/looking-glass                  | 0_beta6                                   |        | https://looking-glass.io                                                                | A low latency KVMFR application for guests with VGA PCI Passthrough
+   gui-libs/libdecor                          | 0.1.1                                     |  D, RD | https://gitlab.freedesktop.org/libdecor/libdecor                                        | A client-side decorations library for Wayland clients
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/winetricks-zh                  | 9999                                      |        | http://winetricks.org                                                                   | winetricks fork for chinese to install QQ
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
