@@ -59,7 +59,7 @@ jobs:
               break
             fi
           done
-          echo "{sha}={sha}" >> $GITHUB_OUTPUT
+          echo "sha=$sha" >> $GITHUB_OUTPUT
       - name: Check
         id: check
         shell: bash
@@ -104,7 +104,7 @@ jobs:
           "${@}" >/var/tmp/report.txt || ret=$?
           cat /var/tmp/report.txt || true
           set --
-          echo "{ret}={ret}" >> $GITHUB_OUTPUT
+          echo "ret=$ret" >> $GITHUB_OUTPUT
           [[ ${ret} == 0 ]]
       - name: Format report
         if: ${{ always() }}
@@ -154,7 +154,7 @@ jobs:
             https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}
             filename: **pkgcheck-report-${commit_id}**_
           EOF
-              echo "{commit}={commit_id}" >> $GITHUB_OUTPUT
+              echo "commit=$commit_id" >> $GITHUB_OUTPUT
             fi
             cat <<EOF >>/var/tmp/report.md
           </details>
@@ -162,7 +162,7 @@ jobs:
           ${r_explain}
           EOF
           fi
-          echo "{has}={true}" >> $GITHUB_OUTPUT
+          echo "has=true" >> $GITHUB_OUTPUT
       - name: Hide previous results
         if: ${{ always() }}
         shell: bash
