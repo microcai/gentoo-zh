@@ -14,18 +14,19 @@ KEYWORDS="~amd64"
 MINKV="5.8"
 _I="378c3c576e0f4c785a3d5e71400b552725527f30"
 SRC_URI="
-	https://github.com/daeuniverse/dae/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/st0nie/gentoo-go-deps/releases/download/dae_bpf_headers/dae_bpf_headers-$_I.zip
-	https://github.com/st0nie/gentoo-go-deps/releases/download/dae-${PV}/${P}-deps.tar.xz
+	https://github.com/daeuniverse/dae/releases/download/v${PV}/dae-full-src.zip -> ${P}.zip
 "
 RESTRICT="mirror"
 
 DEPEND="
 	dev-libs/v2ray-domain-list-community-bin
 	dev-libs/v2ray-geoip-bin
+	app-arch/p7zip
 "
 RDEPEND="$DEPEND"
 BDEPEND="sys-devel/clang"
+
+S=${WORKDIR}
 
 pkg_pretend() {
 	local CONFIG_CHECK="~DEBUG_INFO_BTF ~NET_CLS_ACT ~NET_SCH_INGRESS ~NET_INGRESS ~NET_EGRESS"
@@ -35,11 +36,6 @@ pkg_pretend() {
 	fi
 
 	check_extra_config
-}
-
-src_unpack() {
-	go-module_src_unpack
-	mv "${WORKDIR}"/dae_bpf_headers-$_I/* control/kern/headers || die
 }
 
 src_compile() {
