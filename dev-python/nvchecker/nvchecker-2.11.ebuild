@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="nvchecker is for checking if a new version of some software has been released"
 HOMEPAGE="https://pypi.org/project/nvchecker/"
-SRC_URI="https://github.com/lilydjwg/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/lilydjwg/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
