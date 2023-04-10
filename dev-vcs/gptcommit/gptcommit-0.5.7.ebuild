@@ -22,7 +22,7 @@ CRATES="
 	async-global-executor-2.3.1
 	async-io-1.13.0
 	async-lock-2.7.0
-	async-openai-0.10.1
+	async-openai-0.10.2
 	async-std-1.12.0
 	async-task-4.4.0
 	async-trait-0.1.68
@@ -54,7 +54,7 @@ CRATES="
 	concurrent-queue-2.1.0
 	config-0.13.3
 	core-foundation-0.9.3
-	core-foundation-sys-0.8.3
+	core-foundation-sys-0.8.4
 	cpufeatures-0.2.6
 	crc32fast-1.3.2
 	crossbeam-utils-0.8.15
@@ -114,7 +114,7 @@ CRATES="
 	ignore-0.4.20
 	indexmap-1.9.3
 	instant-0.1.12
-	io-lifetimes-1.0.9
+	io-lifetimes-1.0.10
 	ipnet-2.7.2
 	is-terminal-0.4.6
 	itoa-1.0.6
@@ -122,7 +122,7 @@ CRATES="
 	js-sys-0.3.61
 	kv-log-macro-1.0.7
 	lazy_static-1.4.0
-	libc-0.2.140
+	libc-0.2.141
 	linked-hash-map-0.5.6
 	linux-raw-sys-0.3.1
 	lock_api-0.4.9
@@ -152,7 +152,7 @@ CRATES="
 	pin-utils-0.1.0
 	polling-2.6.0
 	ppv-lite86-0.2.17
-	proc-macro2-1.0.54
+	proc-macro2-1.0.56
 	quote-1.0.26
 	rand-0.8.5
 	rand_chacha-0.3.1
@@ -168,7 +168,7 @@ CRATES="
 	ron-0.7.1
 	rustc-hash-1.1.0
 	rust-ini-0.18.0
-	rustix-0.37.5
+	rustix-0.37.7
 	rustls-0.20.8
 	rustls-native-certs-0.6.2
 	rustls-pemfile-1.0.2
@@ -196,12 +196,12 @@ CRATES="
 	strum-0.24.1
 	strum_macros-0.24.3
 	syn-1.0.109
-	syn-2.0.12
+	syn-2.0.13
 	tera-1.18.1
 	thiserror-1.0.40
 	thiserror-impl-1.0.40
 	thread_local-1.1.4
-	tiktoken-rs-0.3.3
+	tiktoken-rs-0.4.0
 	time-0.3.20
 	time-core-0.1.0
 	time-macros-0.2.8
@@ -259,15 +259,24 @@ CRATES="
 	winapi-util-0.1.5
 	winapi-x86_64-pc-windows-gnu-0.4.0
 	windows_aarch64_gnullvm-0.42.2
+	windows_aarch64_gnullvm-0.48.0
 	windows_aarch64_msvc-0.42.2
+	windows_aarch64_msvc-0.48.0
 	windows_i686_gnu-0.42.2
+	windows_i686_gnu-0.48.0
 	windows_i686_msvc-0.42.2
+	windows_i686_msvc-0.48.0
 	windows-sys-0.42.0
 	windows-sys-0.45.0
+	windows-sys-0.48.0
 	windows-targets-0.42.2
+	windows-targets-0.48.0
 	windows_x86_64_gnu-0.42.2
+	windows_x86_64_gnu-0.48.0
 	windows_x86_64_gnullvm-0.42.2
+	windows_x86_64_gnullvm-0.48.0
 	windows_x86_64_msvc-0.42.2
+	windows_x86_64_msvc-0.48.0
 	winnow-0.4.1
 	winreg-0.10.1
 	yaml-rust-0.4.5
