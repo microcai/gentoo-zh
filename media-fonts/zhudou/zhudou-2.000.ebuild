@@ -30,5 +30,5 @@ src_unpack() {
 
 	# mv font files from sub-dirs to ${S}
 	mv "${S}"/fonts/ttf/*.ttf "${S}"/ || die
-	mv "${S}"/fonts/"variable ttf"/*.ttf "${S}"/ || die
+	mv "${S}"/fonts/variable/*.ttf "${S}"/ || die
 }
