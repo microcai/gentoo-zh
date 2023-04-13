@@ -130,7 +130,7 @@ media-fonts/taipei-sans-tc 1.0: JT Foundry - Taipei Sans TC Beta font
 media-fonts/tiejili 1.100: An open-source font that extends Reggae One to Chinese.
 media-fonts/ttf-wps-fonts 1.0: Symbol fonts required by wps-office
 media-fonts/wangfonts 1.3.0: Free Chinese TrueType fonts donated by Prof. Hann-Tzong Wang
-media-fonts/zhudou 1.000: A font family for CJK symbols and punctuation, derived from Noto Sans.
+media-fonts/zhudou 2.000: A font family for CJK symbols and punctuation, derived from Noto Sans.
 media-gfx/byzanz 0.3.0.9999: Screencasting program that saves casts as GIF files
 media-gfx/sane-backends 9999: Scanner Access Now Easy - Backends
 media-gfx/scangearmp 1.60 2.4.10: Driver and utility package for Canon scanners
