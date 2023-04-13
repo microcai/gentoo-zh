@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-04-13 15:35:27 CST)
+(The last generation time: 2023-04-13 16:20:25 CST)
 
 ### Packages
 
@@ -262,7 +262,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/wangfonts                        | 1.3.0                                     |        | https://code.google.com/p/wangfonts/                                                    | Free Chinese TrueType fonts donated by Prof. Hann-Tzong Wang
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/zhudou                           | 1.000                                     |        | https://github.com/Buernia/Zhudou-Sans                                                  | A font family for CJK symbols and punctuation, derived from Noto Sans.
+ media-fonts/zhudou                           | 2.000                                     |        | https://github.com/Buernia/Zhudou-Sans                                                  | A font family for CJK symbols and punctuation, derived from Noto Sans.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/byzanz                             | 0.3.0.9999                                |        | https://gitlab.gnome.org/Archive/byzanz/                                                | Screencasting program that saves casts as GIF files
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
