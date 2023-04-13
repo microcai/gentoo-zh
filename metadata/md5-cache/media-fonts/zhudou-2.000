@@ -10,4 +10,4 @@ LICENSE=OFL-1.1
 SLOT=0
 SRC_URI=https://github.com/Buernia/Zhudou-Sans/archive/refs/tags/v2.000.tar.gz -> zhudou-2.000.tar.gz
 _eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb
-_md5_=db76f84cb6189c89405d003d160e8ed5
+_md5_=9eca4b61cd43bf0b5b8591467db03b04
