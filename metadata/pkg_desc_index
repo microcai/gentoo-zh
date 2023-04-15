@@ -121,9 +121,9 @@ media-fonts/Plangothic 0.8.5730: 遍黑体项目（Plangothic Project）
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/iansui 0.943: An open-source Chinese font derived from Klee One (Fontworks).
 media-fonts/jf-openhuninn 1.1: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
-media-fonts/lxgw-neo-xihei 1.009: A Chinese sans-serif font derived from IPAex Gothic.
+media-fonts/lxgw-neo-xihei 1.010: A Chinese sans-serif font derived from IPAex Gothic.
 media-fonts/nerd-fonts 2.2.2: Nerd Fonts is a project that patches developer targeted fonts with glyphs
-media-fonts/sarasa-gothic 0.40.3 0.40.4: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
+media-fonts/sarasa-gothic 0.40.4 0.40.5: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 media-fonts/sarasa-mono-sc-nerd 2.1.0: Sarasa Mono SC font patched with Nerd fonts
 media-fonts/smiley-sans 1.1.1: An open-source font for Chinese.
 media-fonts/taipei-sans-tc 1.0: JT Foundry - Taipei Sans TC Beta font
@@ -146,7 +146,7 @@ media-libs/vips 8.14.1: VIPS Image Processing Library
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.10-r1 0.5.11 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-sound/feeluown 3.8.9 3.8.10: A user-friendly and hackable music player
-media-sound/go-musicfox 4.0.2: Command-line Netease Cloud Music written in Go
+media-sound/go-musicfox 4.0.3: Command-line Netease Cloud Music written in Go
 media-sound/linnya 2.2.0: A free music player
 media-sound/listen1_desktop-bin 2.28.0: one for all free music in China
 media-sound/lx-music-desktop-bin 2.1.2: 一个基于 electron 的音乐软件
@@ -238,7 +238,7 @@ sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/ltfs 9999: LTFS for LTO tapes
 sys-fs/ssdfs-tools 4.09: userspace tools for SSDFS
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
-sys-kernel/liquorix-sources 6.2.6 6.2.9: Liquorix kernel is best one for desktop, multimedia and gaming workloads
+sys-kernel/liquorix-sources 6.2.9 6.2.11: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 34-r1: Modular initramfs image creation utility
 sys-kernel/xanmod-kernel 6.1.20 6.1.22 6.2.7 6.2.8 6.2.9: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 6.0.11: XanMod RT sources and CJKTTY options.
