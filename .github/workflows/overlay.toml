@@ -905,6 +905,12 @@ github = "Fndroid/clash_for_windows_pkg"
 use_latest_release = true
 github_account = "zozx"
 
+["net-proxy/dae"]
+source = "github"
+github = "daeuniverse/dae"
+use_latest_release = true
+github_account = "st0nie"
+
 ["net-proxy/make-proxy"]
 source = "github"
 github = "yueyoum/make-proxy"
