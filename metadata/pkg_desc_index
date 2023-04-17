@@ -206,7 +206,7 @@ net-proxy/clash-for-windows-bin 0.20.19 0.20.20: A Windows/macOS/Linux GUI based
 net-proxy/clash-meta 1.14.3: Another Clash Kernel.
 net-proxy/clash-premium-bin 2023.02.16: Close-sourced pre-built Clash binary with TUN support
 net-proxy/clash-verge-bin 1.2.0 1.2.1: A Clash GUI based on tauri
-net-proxy/dae 0.1.6 9999: A lightweight and high-performance transparent proxy solution based on eBPF
+net-proxy/dae 0.1.7 9999: A lightweight and high-performance transparent proxy solution based on eBPF
 net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
 net-proxy/shadowsocks-rust 1.14.3 1.15.0_alpha9: A Rust port of shadowsocks.
 net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
