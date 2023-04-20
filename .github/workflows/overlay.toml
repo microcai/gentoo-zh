@@ -903,7 +903,7 @@ github_account = "st0nie"
 source = "github"
 github = "Fndroid/clash_for_windows_pkg"
 use_latest_release = true
-github_account = "zozx"
+github_account = "irort"
 
 ["net-proxy/dae"]
 source = "github"
