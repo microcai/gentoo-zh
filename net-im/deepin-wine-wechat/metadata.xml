@@ -16,4 +16,9 @@
 	<upstream>
 		<remote-id type="github">vufa/deepin-wine-wechat-arch</remote-id>
 	</upstream>
+	<use>
+		<flag name="wqy-microhei">Use wqy-microhei font</flag>
+		<flag name="fake-simsun">Use fake_simsun font</flag>
+		<flag name="reg-patch">Disable wechat-{player,app,appex,browser} plugin</flag>
+	</use>
 </pkgmetadata>
