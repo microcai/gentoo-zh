@@ -131,6 +131,20 @@ sh /opt/apps/${MY_PGK_NAME}/files/zw3drun.sh \$*
 
 	ln -s /opt/apps/${MY_PGK_NAME}/zw3d "${S}"/usr/bin/zw3d || die
 
+	# Fix zw3d startup file
+cat >> insert.txt <<- EOF || die
+unset WAYLAND_DISPLAY
+export XDG_SESSION_TYPE=x11
+export QT_QPA_PLATFORM=xcb
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export QT_STYLE_OVERRIDE=fusion
+export IBUS_USE_PORTAL=1
+	EOF
+
+	sed -i \
+		-e '/export LD_LIBRARY_PATH/r insert.txt' \
+		"${S}"/opt/apps/${MY_PGK_NAME}/files/zw3drun.sh || die
+
 	# Use system libraries
 	# rm -rf "${S}"/opt/apps/${MY_PGK_NAME}/files/lib3rd/libMagickCore* || die
 	# rm -rf "${S}"/opt/apps/${MY_PGK_NAME}/files/lib3rd/libjpeg* || die
