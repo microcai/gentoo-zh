@@ -169,7 +169,7 @@ net-dns/libidn11 1.33: Internationalized Domain Names (IDN) implementation
 net-dns/mosdns-cn-bin 1.4.0: A DNS forwarder
 net-dns/phddns 2.0.6.32828: Phddns
 net-im/deepin-wine-qq 9.5.2.27897: Tencent QQ on Deepin Wine(com.qq.im.deepin) For Gentoo
-net-im/deepin-wine-wechat 3.8.1.26: Tencent WeChat on Deepin Wine(com.qq.weixin.deepin) For Gentoo
+net-im/deepin-wine-wechat 3.9.0.28-r3: Tencent WeChat on Deepin Wine For Gentoo
 net-im/dingtalk 1.4.0.20909 1.4.0.20909-r1: Communication platform that supports video and audio conferencing
 net-im/telegram-purple 1.4.7-r1 9999: Libpurple (Pidgin) plugin for using a Telegram account
 net-im/tencent-qq 3.1.1_p11223: The new version of the official linux-qq

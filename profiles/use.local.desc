@@ -162,6 +162,9 @@ media-sound/termusic:yt-dlp - Use net-misc/yt-dlp to provide the youtebe-dl feat
 net-dns/dnsmasq-china-list:dnscrypt-proxy - Install rules for dnscrypt-proxy
 net-dns/dnsmasq-china-list:dnsmasq - Install rules for dnsmasq
 net-dns/dnsmasq-china-list:smartdns - Install rules for smartdns
+net-im/deepin-wine-wechat:fake-simsun - Use fake_simsun font
+net-im/deepin-wine-wechat:reg-patch - Disable wechat-{player,app,appex,browser} plugin
+net-im/deepin-wine-wechat:wqy-microhei - Use wqy-microhei font
 net-im/telegram-purple:gcrypt - libgcrypt support
 net-im/telegram-purple:png - png stickers support
 net-im/telegram-purple:webp - webp stickers support
