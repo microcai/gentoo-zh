@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-04-17 20:53:36 CST)
+(The last generation time: 2023-04-20 08:03:49 CST)
 
 ### Packages
 
@@ -51,8 +51,8 @@
      app-i18n/fcitx-lua                       | 5.0.10                                    |  D, RD | https://github.com/fcitx/fcitx5-lua                                                     | Lua support for fcitx
                                               | 5.0.7-r1                                  |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
-     app-i18n/fcitx-qt                        | 5.0.16                                    |  D, RD | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
-                                              | 5.0.17                                    |        |                                                                                         |
+     app-i18n/fcitx-qt                        | 5.0.16-r1                                 |  D, RD | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
+                                              | 5.0.17-r1                                 |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
      app-i18n/libime                          | 1.0.17                                    |  D, RD | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
                                               | 9999                                      |        |                                                                                         |
