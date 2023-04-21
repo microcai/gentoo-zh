@@ -603,9 +603,9 @@ use_latest_release = true
 prefix = "v"
 github_account = "zozx"
 
-["media-fonts/sarasa-mono-sc-nerd"]
+["media-fonts/sarasa-term-sc-nerd"]
 source = "github"
-github = "laishulu/Sarasa-Mono-SC-Nerd"
+github = "laishulu/Sarasa-Term-SC-Nerd"
 use_latest_release = true
 prefix = "v"
 github_account = "oatiz"
