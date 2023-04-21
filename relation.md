@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-04-21 10:47:09 CST)
+(The last generation time: 2023-04-21 18:47:53 CST)
 
 ### Packages
 
@@ -250,7 +250,7 @@
  media-fonts/sarasa-gothic                    | 0.40.4                                    |        | https://github.com/be5invis/Sarasa-Gothic                                               | A CJK programming font based on Iosevka and Source Han Sans. (TTC)
                                               | 0.40.5                                    |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/sarasa-mono-sc-nerd              | 2.1.0                                     |        | https://github.com/laishulu/Sarasa-Mono-SC-Nerd                                         | Sarasa Mono SC font patched with Nerd fonts
+ media-fonts/sarasa-term-sc-nerd              | 1.1.0                                     |        | https://github.com/laishulu/Sarasa-Term-SC-Nerd                                         | Sarasa Mono SC font patched with Nerd fonts
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/smiley-sans                      | 1.1.1                                     |        | https://github.com/atelier-anchor/smiley-sans                                           | An open-source font for Chinese.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
