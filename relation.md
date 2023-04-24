@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-04-24 13:59:23 CST)
+(The last generation time: 2023-04-24 14:26:37 CST)
 
 ### Packages
 
@@ -510,7 +510,7 @@
                                               | 9999                                      |        |                                                                                         |
      sys-libs/libsolv                         | 0.7.23                                    | RD     | https://doc.opensuse.org/projects/libzypp/HEAD/                                         | Library for solving packages and reading repositories
                                               | 9999                                      |        |                                                                                         |
-       app-arch/zchunk                        | 1.2.3                                     | RD     | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
+       app-arch/zchunk                        | 1.3.1                                     | RD     | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
                                               | 9999                                      |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-boot/ventoy-bin                          | 1.0.91                                    |        | http://www.ventoy.net                                                                   | A new multiboot USB solution
