@@ -67,6 +67,7 @@ src_install() {
 	fperms +x "/opt/bytedance/feishu/bytedance-feishu"
 	fperms +x "/opt/bytedance/feishu/feishu"
 	fperms +x "/opt/bytedance/feishu/vulcan/vulcan"
+	fperms +x "/opt/bytedance/feishu/vulcan/vulcan_crashpad_handler"
 
 }
 pkg_postinst(){
