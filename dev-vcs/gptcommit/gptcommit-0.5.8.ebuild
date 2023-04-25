@@ -9,24 +9,26 @@ CRATES="
 	adler-1.0.2
 	ahash-0.7.6
 	aho-corasick-0.7.20
+	aho-corasick-1.0.1
 	alloc-no-stdlib-2.0.4
 	alloc-stdlib-0.2.2
-	anstream-0.2.6
-	anstyle-0.3.5
-	anstyle-parse-0.1.1
-	anstyle-wincon-0.2.0
+	anstream-0.3.1
+	anstyle-1.0.0
+	anstyle-parse-0.2.0
+	anstyle-query-1.0.0
+	anstyle-wincon-1.0.1
 	anyhow-1.0.70
 	async-channel-1.8.0
 	async-compression-0.3.15
-	async-executor-1.5.0
+	async-executor-1.5.1
 	async-global-executor-2.3.1
 	async-io-1.13.0
 	async-lock-2.7.0
-	async-openai-0.10.2
+	async-openai-0.10.3
 	async-std-1.12.0
 	async-task-4.4.0
 	async-trait-0.1.68
-	atomic-waker-1.1.0
+	atomic-waker-1.1.1
 	atty-0.2.14
 	autocfg-1.1.0
 	backoff-0.4.0
@@ -36,26 +38,25 @@ CRATES="
 	bit-set-0.5.3
 	bit-vec-0.6.3
 	block-buffer-0.10.4
-	blocking-1.3.0
+	blocking-1.3.1
 	brotli-3.3.4
 	brotli-decompressor-2.3.4
 	bstr-1.4.0
-	bumpalo-3.12.0
+	bumpalo-3.12.1
 	bytes-1.4.0
 	cc-1.0.79
 	cfg-if-1.0.0
-	clap-4.2.1
-	clap_builder-4.2.1
+	clap-4.2.4
+	clap_builder-4.2.4
 	clap_derive-4.2.0
 	clap_lex-0.4.1
+	colorchoice-1.0.0
 	colored-2.0.0
-	concolor-override-1.0.0
-	concolor-query-0.3.3
-	concurrent-queue-2.1.0
+	concurrent-queue-2.2.0
 	config-0.13.3
 	core-foundation-0.9.3
 	core-foundation-sys-0.8.4
-	cpufeatures-0.2.6
+	cpufeatures-0.2.7
 	crc32fast-1.3.2
 	crossbeam-utils-0.8.15
 	crypto-common-0.1.6
@@ -72,7 +73,7 @@ CRATES="
 	dlv-list-0.3.0
 	either-1.8.1
 	encoding_rs-0.8.32
-	errno-0.3.0
+	errno-0.3.1
 	errno-dragonfly-0.1.2
 	event-listener-2.5.3
 	eventsource-stream-0.2.3
@@ -86,18 +87,18 @@ CRATES="
 	futures-core-0.3.28
 	futures-executor-0.3.28
 	futures-io-0.3.28
-	futures-lite-1.12.0
+	futures-lite-1.13.0
 	futures-macro-0.3.28
 	futures-sink-0.3.28
 	futures-task-0.3.28
 	futures-timer-3.0.2
 	futures-util-0.3.28
 	generic-array-0.14.7
-	getrandom-0.2.8
+	getrandom-0.2.9
 	globset-0.4.10
 	globwalk-0.8.1
 	gloo-timers-0.2.6
-	h2-0.3.16
+	h2-0.3.18
 	hashbrown-0.12.3
 	heck-0.4.1
 	hermit-abi-0.1.19
@@ -107,7 +108,7 @@ CRATES="
 	httparse-1.8.0
 	http-body-0.4.5
 	httpdate-1.0.2
-	hyper-0.14.25
+	hyper-0.14.26
 	hyper-rustls-0.23.2
 	ident_case-1.0.1
 	idna-0.3.0
@@ -116,15 +117,15 @@ CRATES="
 	instant-0.1.12
 	io-lifetimes-1.0.10
 	ipnet-2.7.2
-	is-terminal-0.4.6
+	is-terminal-0.4.7
 	itoa-1.0.6
 	json5-0.4.1
 	js-sys-0.3.61
 	kv-log-macro-1.0.7
 	lazy_static-1.4.0
-	libc-0.2.141
+	libc-0.2.142
 	linked-hash-map-0.5.6
-	linux-raw-sys-0.3.1
+	linux-raw-sys-0.3.4
 	lock_api-0.4.9
 	log-0.4.17
 	memchr-2.5.0
@@ -139,7 +140,7 @@ CRATES="
 	once_cell-1.17.1
 	openssl-probe-0.1.5
 	ordered-multimap-0.4.3
-	parking-2.0.0
+	parking-2.1.0
 	parking_lot-0.12.1
 	parking_lot_core-0.9.7
 	pathdiff-0.2.1
@@ -150,7 +151,7 @@ CRATES="
 	pest_meta-2.5.7
 	pin-project-lite-0.2.9
 	pin-utils-0.1.0
-	polling-2.6.0
+	polling-2.8.0
 	ppv-lite86-0.2.17
 	proc-macro2-1.0.56
 	quote-1.0.26
@@ -159,16 +160,16 @@ CRATES="
 	rand_core-0.6.4
 	redox_syscall-0.2.16
 	redox_users-0.4.3
-	regex-1.7.3
+	regex-1.8.1
 	regex-automata-0.1.10
-	regex-syntax-0.6.29
+	regex-syntax-0.7.1
 	reqwest-0.11.16
 	reqwest-eventsource-0.4.0
 	ring-0.16.20
 	ron-0.7.1
 	rustc-hash-1.1.0
 	rust-ini-0.18.0
-	rustix-0.37.7
+	rustix-0.37.14
 	rustls-0.20.8
 	rustls-native-certs-0.6.2
 	rustls-pemfile-1.0.2
@@ -180,9 +181,9 @@ CRATES="
 	sct-0.7.0
 	security-framework-2.8.2
 	security-framework-sys-2.8.0
-	serde-1.0.159
-	serde_derive-1.0.159
-	serde_json-1.0.95
+	serde-1.0.160
+	serde_derive-1.0.160
+	serde_json-1.0.96
 	serde_spanned-0.6.1
 	serde_urlencoded-0.7.1
 	sha2-0.10.6
@@ -196,12 +197,12 @@ CRATES="
 	strum-0.24.1
 	strum_macros-0.24.3
 	syn-1.0.109
-	syn-2.0.13
+	syn-2.0.15
 	tera-1.18.1
 	thiserror-1.0.40
 	thiserror-impl-1.0.40
 	thread_local-1.1.4
-	tiktoken-rs-0.4.0
+	tiktoken-rs-0.4.2
 	time-0.3.20
 	time-core-0.1.0
 	time-macros-0.2.8
@@ -219,7 +220,7 @@ CRATES="
 	toml_edit-0.19.8
 	tower-service-0.3.2
 	tracing-0.1.37
-	tracing-attributes-0.1.23
+	tracing-attributes-0.1.24
 	tracing-core-0.1.30
 	try-lock-0.2.4
 	typenum-1.16.0
