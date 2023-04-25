@@ -44,4 +44,5 @@ src_compile() {
 src_install() {
 	newbin "${P}" "${PN}"
 	systemd_dounit "${FILESDIR}/Clash-Meta.service"
+	newinitd "${FILESDIR}"/clash-meta.initd clash-meta
 }
