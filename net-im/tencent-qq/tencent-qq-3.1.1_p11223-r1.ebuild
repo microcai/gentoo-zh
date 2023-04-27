@@ -22,12 +22,12 @@ SRC_URI="
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
 
-IUSE="bwrap +system-vips split-usr gnome"
+IUSE="bwrap +system-vips split-usr gnome appindicator"
 RDEPEND="
 	x11-libs/gtk+:3
 	x11-libs/libnotify
 	dev-libs/nss
-	dev-libs/libappindicator
+	appindicator? ( dev-libs/libayatana-appindicator )
 	x11-libs/libXScrnSaver
 	x11-libs/libXtst
 	x11-misc/xdg-utils
@@ -79,6 +79,11 @@ src_install() {
 		dosym -r /opt/QQ/start.sh /usr/bin/qq
 	else
 		newbin "$FILESDIR/qq.sh" qq
+	fi
+
+	# https://bugs.gentoo.org/898912
+	if use appindicator; then
+		dosym ../../usr/lib64/libayatana-appindicator3.so /opt/QQ/libappindicator3.so
 	fi
 
 	sed -i 's!/usr/share/icons/hicolor/512x512/apps/qq.png!qq!' usr/share/applications/qq.desktop || die

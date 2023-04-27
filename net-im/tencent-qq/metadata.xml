@@ -17,5 +17,8 @@ pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
         shipped libs.</flag>
         <flag name="gnome">Supporting screenshot when using
         GNOME</flag>
+        <flag name="appindicator">Build in support for
+        notifications using the libindicate or libappindicator
+        plugin</flag>
     </use>
 </pkgmetadata>
