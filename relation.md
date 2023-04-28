@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-04-28 11:07:12 CST)
+(The last generation time: 2023-04-28 11:07:36 CST)
 
 ### Packages
 
@@ -54,8 +54,6 @@
      app-i18n/fcitx-qt                        | 5.0.16-r1                                 |  D, RD | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
                                               | 5.0.17-r1                                 |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
-     app-i18n/libime                          | 1.0.17                                    |  D, RD | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
-                                              | 9999                                      |        |                                                                                         |
    app-i18n/fcitx-configtool                  | 5.0.16                                    | RD     | https://fcitx-im.org/                                                                   | Configuration module for Fcitx
                                               | 5.0.17                                    |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
@@ -66,14 +64,6 @@
    app-i18n/fcitx-hangul                      | 5.0.11                                    | RD     | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
    app-i18n/fcitx-rime                        | 5.0.16                                    | RD     | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
                                               | 9999                                      |        |                                                                                         |
-     app-i18n/fcitx                           | 4.2.9.8                                   |  D, RD | https://fcitx-im.org/                                                                   | Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
-                                              | 5.0.20                                    |        |                                                                                         |
-                                              | 5.0.21                                    |        |                                                                                         |
-                                              | 5.0.22                                    |        |                                                                                         |
-                                              | 5.0.23                                    |        |                                                                                         |
-                                              | 9999                                      |        |                                                                                         |
-       x11-libs/xcb-imdkit                    | 1.0.4                                     |  D, RD | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
-                                              | 1.0.5                                     |        |                                                                                         |
      app-i18n/rime-prelude                    | 20220122                                  |  D, RD | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
    app-i18n/fcitx-skk                         | 5.0.15                                    | RD     | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
                                               | 9999                                      |        |                                                                                         |
@@ -93,6 +83,18 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/mozc                                | 2.26.4220_p20201212102434_p20201219202429 |        | https://github.com/google/mozc                                                          | Mozc - Japanese input method editor
                                               | 2.26.4632_p20220213064411_p20220214004422 |        |                                                                                         |
+   app-i18n/fcitx                             | 4.2.9.8                                   |  D, RD | https://fcitx-im.org/                                                                   | Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
+                                              | 5.0.20                                    |        |                                                                                         |
+                                              | 5.0.21                                    |        |                                                                                         |
+                                              | 5.0.22                                    |        |                                                                                         |
+                                              | 5.0.23                                    |        |                                                                                         |
+                                              | 9999                                      |        |                                                                                         |
+     x11-libs/xcb-imdkit                      | 1.0.4                                     |  D, RD | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
+                                              | 1.0.5                                     |        |                                                                                         |
+   app-i18n/libime                            | 1.0.17                                    |  D, RD | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
+                                              | 9999                                      |        |                                                                                         |
+   dev-util/gyp                               | 20200512145953_p20220404165439            | BD     | https://gyp.gsrc.io/                                                                    | GYP (Generate Your Projects) meta-build system
+                                              | 99999999999999                            |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/zh-autoconvert                      | 0.3.16_p7                                 |        | https://packages.debian.org/stable/source/zh-autoconvert                                | Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
