@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-04-28 11:08:12 CST)
+(The last generation time: 2023-04-28 11:15:55 CST)
 
 ### Packages
 
@@ -218,7 +218,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/v2ray-geoip-generator               | 9999                                      |        | https://github.com/v2fly/geoip                                                          | GeoIP generator for V2Ray.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/gitoxide                             | 0.23.0                                    |        | https://github.com/Byron/gitoxide                                                       | A command-line application for interacting with git repositories
+ dev-vcs/gitoxide                             | 0.25.0                                    |        | https://github.com/Byron/gitoxide                                                       | A command-line application for interacting with git repositories
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gptcommit                            | 0.5.8                                     |        | https://github.com/zurawiki/gptcommit                                                   | A git prepare-commit-msg hook for summarizing commits with GPT-3.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
