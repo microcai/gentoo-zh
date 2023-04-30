@@ -124,7 +124,7 @@ media-fonts/iansui 0.943: An open-source Chinese font derived from Klee One (Fon
 media-fonts/jf-openhuninn 1.1: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 media-fonts/lxgw-neo-xihei 1.010: A Chinese sans-serif font derived from IPAex Gothic.
 media-fonts/nerd-fonts 2.2.2: Nerd Fonts is a project that patches developer targeted fonts with glyphs
-media-fonts/sarasa-gothic 0.40.4 0.40.5: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
+media-fonts/sarasa-gothic 0.40.4 0.40.5 0.40.6: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 media-fonts/sarasa-term-sc-nerd 1.1.0: Sarasa Mono SC font patched with Nerd fonts
 media-fonts/smiley-sans 1.1.1: An open-source font for Chinese.
 media-fonts/taipei-sans-tc 1.0: JT Foundry - Taipei Sans TC Beta font
