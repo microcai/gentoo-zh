@@ -121,7 +121,7 @@ mail-client/thunderbird 106.0-r5: Thunderbird Mail Client
 media-fonts/Plangothic 0.8.5730: 遍黑体项目（Plangothic Project）
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/iansui 0.943: An open-source Chinese font derived from Klee One (Fontworks).
-media-fonts/jf-openhuninn 1.1: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
+media-fonts/jf-openhuninn 2.0: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 media-fonts/lxgw-neo-xihei 1.010: A Chinese sans-serif font derived from IPAex Gothic.
 media-fonts/nerd-fonts 2.2.2: Nerd Fonts is a project that patches developer targeted fonts with glyphs
 media-fonts/sarasa-gothic 0.40.4 0.40.5 0.40.6: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
