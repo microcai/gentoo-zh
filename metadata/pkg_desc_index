@@ -205,7 +205,7 @@ net-proxy/Xray 1.6.0 1.6.1: Xray, Penetrates Everything.
 net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
 net-proxy/clash 1.13.0: A rule-based tunnel in Go.
 net-proxy/clash-for-windows-bin 0.20.21 0.20.22: A Windows/macOS/Linux GUI based on Clash and Electron.
-net-proxy/clash-meta 1.14.3: Another Clash Kernel.
+net-proxy/clash-meta 1.14.4: Another Clash Kernel.
 net-proxy/clash-premium-bin 2023.02.16: Close-sourced pre-built Clash binary with TUN support
 net-proxy/clash-verge-bin 1.2.0 1.2.1: A Clash GUI based on tauri
 net-proxy/dae 0.1.7 9999: A lightweight and high-performance transparent proxy solution based on eBPF
