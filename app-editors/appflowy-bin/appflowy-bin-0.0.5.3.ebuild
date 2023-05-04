@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -10,7 +10,7 @@ MY_PN="AppFlowy"
 DESCRIPTION="AppFlowy is an open-source alternative to Notion"
 HOMEPAGE="https://www.appflowy.io/"
 SRC_URI="
-	https://github.com/AppFlowy-IO/AppFlowy/releases/download/${PV}/${MY_PN}-linux-x86.tar.gz -> ${P}.tar.gz
+	https://github.com/AppFlowy-IO/AppFlowy/releases/download/${PV}/${MY_PN}_x86_64-unknown-linux-gnu_ubuntu-20.04.tar.gz -> ${P}.tar.gz
 "
 
 LICENSE="AGPL-3"
@@ -31,7 +31,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-RESTRICT="mirror strip test"
+RESTRICT="mirror test"
 
 QA_PRESTRIPPED="
 	/opt/${PN}/lib/libapp.so
@@ -39,14 +39,13 @@ QA_PRESTRIPPED="
 "
 QA_PREBUILT="*"
 
-S="${WORKDIR}/${MY_PN}"
+S="${WORKDIR}/${MY_PN}_x86_64-unknown-linux-gnu_ubuntu-20.04/${MY_PN}"
 
 src_install() {
 	insinto "/opt/${PN}"
-	doins -r data/ lib/ app_flowy
+	doins -r data/ lib/ AppFlowy
 
-	fperms +x /opt/${PN}/lib -R
-	fperms +x /opt/${PN}/app_flowy
+	fperms +x /opt/${PN}/AppFlowy
 
 	sed -i "s#\[CHANGE_THIS\]/AppFlowy#/opt/${PN}#g" appflowy.desktop.temp || die
 	sed -i "s#/opt/${PN}/flowy_logo.svg#flowy_logo#g" appflowy.desktop.temp || die
