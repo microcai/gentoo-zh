@@ -36,7 +36,7 @@ github_account = "CHN-beta"
 # TODO
 #["app-dicts/fcitx5-pinyin-zhwiki"]
 
-["app-editors/AppFlowy-bin"]
+["app-editors/appflowy-bin"]
 source = "github"
 github = "AppFlowy-IO/AppFlowy"
 use_latest_release = true
