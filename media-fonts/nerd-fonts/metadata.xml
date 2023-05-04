@@ -15,6 +15,7 @@
 		<flag name="bitstreamverasansmono"> Install Nerd-fonts-patched Bitstream Vera Sans Mono fonts </flag>
 		<flag name="cascadiacode">Install Nerd-fonts-patched Cascadia Code fonts</flag>
 		<flag name="codenewroman">Install Nerd-fonts-patched Code New Roman fonts</flag>
+		<flag name="comicshannsmono">Install Nerd-fonts-patched Comic Shanns Mono fonts</flag>
 		<flag name="cousine">Install Nerd-fonts-patched Cousine fonts</flag>
 		<flag name="daddytimemono">Install Nerd-fonts-patched Daddy Time Mono fonts</flag>
 		<flag name="dejavusansmono">Install Nerd-fonts-patched DejaVu Sans Mono fonts</flag>
@@ -34,6 +35,7 @@
 		<flag name="inconsolatago">Install Nerd-fonts-patched Inconsolata Go fonts</flag>
 		<flag name="inconsolatalgc">Install Nerd-fonts-patched Inconsolata LGC fonts</flag>
 		<flag name="iosevka">Install Nerd-fonts-patched Iosevka fonts</flag>
+		<flag name="iosevkaterm">Install Nerd-fonts-patched Iosevka terminal fonts</flag>
 		<flag name="jetbrainsmono">Install Nerd-fonts-patched JetBrains Mono fonts</flag>
 		<flag name="lekton">Install Nerd-fonts-patched Lekton fonts</flag>
 		<flag name="liberationmono">Install Nerd-fonts-patched Liberation Mono fonts</flag>
@@ -43,6 +45,7 @@
 		<flag name="monoid">Install Nerd-fonts-patched Monoid fonts</flag>
 		<flag name="mononoki">Install Nerd-fonts-patched Mononoki fonts</flag>
 		<flag name="mplus">Install Nerd-fonts-patched Mplus fonts</flag>
+		<flag name="nerdfontssymbolsonly">Install extra glyphs from popular iconic fonts</flag>
 		<flag name="noto">Install Nerd-fonts-patched Noto fonts</flag>
 		<flag name="opendyslexic">Install Nerd-fonts-patched Open Dyslexic fonts</flag>
 		<flag name="overpass">Install Nerd-fonts-patched Overpass fonts</flag>
@@ -57,8 +60,6 @@
 		<flag name="ubuntu">Install Nerd-fonts-patched Ubuntu fonts</flag>
 		<flag name="ubuntumono">Install Nerd-fonts-patched Ubuntu Mono fonts</flag>
 		<flag name="victormono">Install Nerd-fonts-patched Victor Mono fonts</flag>
-		<flag name="symbols">Install extra glyphs from popular iconic fonts</flag>
-		<flag name="symbolsmono">Install extra glyphs from popular iconic fonts</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">ryanoasis/nerd-fonts</remote-id>
