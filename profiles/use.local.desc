@@ -92,6 +92,7 @@ media-fonts/nerd-fonts:bigblueterminal - Install Nerd-fonts-patched Big Blue Ter
 media-fonts/nerd-fonts:bitstreamverasansmono - Install Nerd-fonts-patched Bitstream Vera Sans Mono fonts
 media-fonts/nerd-fonts:cascadiacode - Install Nerd-fonts-patched Cascadia Code fonts
 media-fonts/nerd-fonts:codenewroman - Install Nerd-fonts-patched Code New Roman fonts
+media-fonts/nerd-fonts:comicshannsmono - Install Nerd-fonts-patched Comic Shanns Mono fonts
 media-fonts/nerd-fonts:cousine - Install Nerd-fonts-patched Cousine fonts
 media-fonts/nerd-fonts:daddytimemono - Install Nerd-fonts-patched Daddy Time Mono fonts
 media-fonts/nerd-fonts:dejavusansmono - Install Nerd-fonts-patched DejaVu Sans Mono fonts
@@ -111,6 +112,7 @@ media-fonts/nerd-fonts:inconsolata - Install Nerd-fonts-patched Inconsolata font
 media-fonts/nerd-fonts:inconsolatago - Install Nerd-fonts-patched Inconsolata Go fonts
 media-fonts/nerd-fonts:inconsolatalgc - Install Nerd-fonts-patched Inconsolata LGC fonts
 media-fonts/nerd-fonts:iosevka - Install Nerd-fonts-patched Iosevka fonts
+media-fonts/nerd-fonts:iosevkaterm - Install Nerd-fonts-patched Iosevka terminal fonts
 media-fonts/nerd-fonts:jetbrainsmono - Install Nerd-fonts-patched JetBrains Mono fonts
 media-fonts/nerd-fonts:lekton - Install Nerd-fonts-patched Lekton fonts
 media-fonts/nerd-fonts:liberationmono - Install Nerd-fonts-patched Liberation Mono fonts
@@ -120,6 +122,7 @@ media-fonts/nerd-fonts:monofur - Install Nerd-fonts-patched Monofur fonts
 media-fonts/nerd-fonts:monoid - Install Nerd-fonts-patched Monoid fonts
 media-fonts/nerd-fonts:mononoki - Install Nerd-fonts-patched Mononoki fonts
 media-fonts/nerd-fonts:mplus - Install Nerd-fonts-patched Mplus fonts
+media-fonts/nerd-fonts:nerdfontssymbolsonly - Install extra glyphs from popular iconic fonts
 media-fonts/nerd-fonts:noto - Install Nerd-fonts-patched Noto fonts
 media-fonts/nerd-fonts:opendyslexic - Install Nerd-fonts-patched Open Dyslexic fonts
 media-fonts/nerd-fonts:overpass - Install Nerd-fonts-patched Overpass fonts
@@ -129,8 +132,6 @@ media-fonts/nerd-fonts:robotomono - Install Nerd-fonts-patched Roboto Mono fonts
 media-fonts/nerd-fonts:sharetechmono - Install Nerd-fonts-patched Share Tech Mono fonts
 media-fonts/nerd-fonts:sourcecodepro - Install Nerd-fonts-patched Source Code Pro fonts
 media-fonts/nerd-fonts:spacemono - Install Nerd-fonts-patched Space Mono fonts
-media-fonts/nerd-fonts:symbols - Install extra glyphs from popular iconic fonts
-media-fonts/nerd-fonts:symbolsmono - Install extra glyphs from popular iconic fonts
 media-fonts/nerd-fonts:terminus - Install Nerd-fonts-patched Terminus fonts
 media-fonts/nerd-fonts:tinos - Install Nerd-fonts-patched Tinos fonts
 media-fonts/nerd-fonts:ubuntu - Install Nerd-fonts-patched Ubuntu fonts
