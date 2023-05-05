@@ -20,6 +20,7 @@ FONTS=(
 	BitstreamVeraSansMono
 	CascadiaCode
 	CodeNewRoman
+	ComicShannsMono
 	Cousine
 	DaddyTimeMono
 	DejaVuSansMono
@@ -39,6 +40,7 @@ FONTS=(
 	InconsolataGo
 	InconsolataLGC
 	Iosevka
+	IosevkaTerm
 	JetBrainsMono
 	Lekton
 	LiberationMono
@@ -48,6 +50,7 @@ FONTS=(
 	Monoid
 	Mononoki
 	MPlus
+	NerdFontsSymbolsOnly
 	Noto
 	OpenDyslexic
 	Overpass
@@ -65,63 +68,60 @@ FONTS=(
 )
 
 SRC_URI="
-	3270?					( "${COMMON_URI}/3270.zip" )
-	agave?                  ( "${COMMON_URI}/Agave.zip" )
-	anonymouspro?           ( "${COMMON_URI}/AnonymousPro.zip" )
-	arimo?                  ( "${COMMON_URI}/Arimo.zip" )
-	aurulentsansmono?       ( "${COMMON_URI}/AurulentSansMono.zip" )
-	bigblueterminal?        ( "${COMMON_URI}/BigBlueTerminal.zip" )
-	bitstreamverasansmono?  ( "${COMMON_URI}/BitstreamVeraSansMono.zip" )
-	cascadiacode?           ( "${COMMON_URI}/CascadiaCode.zip" )
-	codenewroman?           ( "${COMMON_URI}/CodeNewRoman.zip" )
-	cousine?                ( "${COMMON_URI}/Cousine.zip" )
-	daddytimemono?          ( "${COMMON_URI}/DaddyTimeMono.zip" )
-	dejavusansmono?         ( "${COMMON_URI}/DejaVuSansMono.zip" )
-	droidsansmono?          ( "${COMMON_URI}/DroidSansMono.zip" )
-	fantasquesansmono?      ( "${COMMON_URI}/FantasqueSansMono.zip" )
-	firacode?               ( "${COMMON_URI}/FiraCode.zip" )
-	firamono?               ( "${COMMON_URI}/FiraMono.zip" )
-	go-mono?                ( "${COMMON_URI}/Go-Mono.zip" )
-	gohu?                   ( "${COMMON_URI}/Gohu.zip" )
-	hack?                   ( "${COMMON_URI}/Hack.zip" )
-	hasklig?                ( "${COMMON_URI}/Hasklig.zip" )
-	heavydata?              ( "${COMMON_URI}/HeavyData.zip" )
-	hermit?                 ( "${COMMON_URI}/Hermit.zip" )
-	ia-writer?              ( "${COMMON_URI}/iA-Writer.zip" )
-	ibmplexmono?            ( "${COMMON_URI}/IBMPlexMono.zip" )
-	inconsolata?            ( "${COMMON_URI}/Inconsolata.zip" )
-	inconsolatago?          ( "${COMMON_URI}/InconsolataGo.zip" )
-	inconsolatalgc?         ( "${COMMON_URI}/InconsolataLGC.zip" )
-	iosevka?                ( "${COMMON_URI}/Iosevka.zip" )
-	jetbrainsmono?          ( "${COMMON_URI}/JetBrainsMono.zip" )
-	lekton?                 ( "${COMMON_URI}/Lekton.zip" )
-	liberationmono?         ( "${COMMON_URI}/LiberationMono.zip" )
-	lilex?                  ( "${COMMON_URI}/Lilex.zip" )
-	meslo?                  ( "${COMMON_URI}/Meslo.zip" )
-	monofur?                ( "${COMMON_URI}/Monofur.zip" )
-	monoid?                 ( "${COMMON_URI}/Monoid.zip" )
-	mononoki?               ( "${COMMON_URI}/Mononoki.zip" )
-	mplus?                  ( "${COMMON_URI}/MPlus.zip" )
-	noto?                   ( "${COMMON_URI}/Noto.zip" )
-	opendyslexic?           ( "${COMMON_URI}/OpenDyslexic.zip" )
-	overpass?               ( "${COMMON_URI}/Overpass.zip" )
-	profont?                ( "${COMMON_URI}/ProFont.zip" )
-	proggyclean?            ( "${COMMON_URI}/ProggyClean.zip" )
-	robotomono?             ( "${COMMON_URI}/RobotoMono.zip" )
-	sharetechmono?          ( "${COMMON_URI}/ShareTechMono.zip" )
-	sourcecodepro?          ( "${COMMON_URI}/SourceCodePro.zip" )
-	spacemono?              ( "${COMMON_URI}/SpaceMono.zip" )
-	terminus?               ( "${COMMON_URI}/Terminus.zip" )
-	tinos?                  ( "${COMMON_URI}/Tinos.zip" )
-	ubuntu?                 ( "${COMMON_URI}/Ubuntu.zip" )
-	ubuntumono?             ( "${COMMON_URI}/UbuntuMono.zip" )
-	victormono?             ( "${COMMON_URI}/VictorMono.zip" )
-	symbols?                ( "${TAG_URI}/patched-fonts/NerdFontsSymbolsOnly/complete/Symbols-2048-em%20Nerd%20Font%20Complete.ttf" -> "Symbols-2048-em_Nerd_Font_Complete.ttf"
-							  "${TAG_URI}/10-nerd-font-symbols.conf"
-							)
-	symbolsmono?            ( "${TAG_URI}/patched-fonts/NerdFontsSymbolsOnly/complete/Symbols-1000-em%20Nerd%20Font%20Complete.ttf" -> "Symbols-1000-em_Nerd_Font_Complete.ttf"
-							  "${TAG_URI}/10-nerd-font-symbols.conf"
-							)
+	3270? ( ${COMMON_URI}/3270.zip -> 3270-nf-${PV}.zip )
+	agave? ( ${COMMON_URI}/Agave.zip -> Agave-nf-${PV}.zip )
+	anonymouspro? ( ${COMMON_URI}/AnonymousPro.zip -> AnonymousPro-nf-${PV}.zip )
+	arimo? ( ${COMMON_URI}/Arimo.zip -> Arimo-nf-${PV}.zip )
+	aurulentsansmono? ( ${COMMON_URI}/AurulentSansMono.zip -> AurulentSansMono-nf-${PV}.zip )
+	bigblueterminal? ( ${COMMON_URI}/BigBlueTerminal.zip -> BigBlueTerminal-nf-${PV}.zip )
+	bitstreamverasansmono? ( ${COMMON_URI}/BitstreamVeraSansMono.zip -> BitstreamVeraSansMono-nf-${PV}.zip )
+	cascadiacode? ( ${COMMON_URI}/CascadiaCode.zip -> CascadiaCode-nf-${PV}.zip )
+	codenewroman? ( ${COMMON_URI}/CodeNewRoman.zip -> CodeNewRoman-nf-${PV}.zip )
+	comicshannsmono? ( ${COMMON_URI}/ComicShannsMono.zip -> ComicShannsMono-nf-${PV}.zip )
+	cousine? ( ${COMMON_URI}/Cousine.zip -> Cousine-nf-${PV}.zip )
+	daddytimemono? ( ${COMMON_URI}/DaddyTimeMono.zip -> DaddyTimeMono-nf-${PV}.zip )
+	dejavusansmono? ( ${COMMON_URI}/DejaVuSansMono.zip -> DejaVuSansMono-nf-${PV}.zip )
+	droidsansmono? ( ${COMMON_URI}/DroidSansMono.zip -> DroidSansMono-nf-${PV}.zip )
+	fantasquesansmono? ( ${COMMON_URI}/FantasqueSansMono.zip -> FantasqueSansMono-nf-${PV}.zip )
+	firacode? ( ${COMMON_URI}/FiraCode.zip -> FiraCode-nf-${PV}.zip )
+	firamono? ( ${COMMON_URI}/FiraMono.zip -> FiraMono-nf-${PV}.zip )
+	go-mono? ( ${COMMON_URI}/Go-Mono.zip -> Go-Mono-nf-${PV}.zip )
+	gohu? ( ${COMMON_URI}/Gohu.zip -> Gohu-nf-${PV}.zip )
+	hack? ( ${COMMON_URI}/Hack.zip -> Hack-nf-${PV}.zip )
+	hasklig? ( ${COMMON_URI}/Hasklig.zip -> Hasklig-nf-${PV}.zip )
+	heavydata? ( ${COMMON_URI}/HeavyData.zip -> HeavyData-nf-${PV}.zip )
+	hermit? ( ${COMMON_URI}/Hermit.zip -> Hermit-nf-${PV}.zip )
+	ia-writer? ( ${COMMON_URI}/iA-Writer.zip -> iA-Writer-nf-${PV}.zip )
+	ibmplexmono? ( ${COMMON_URI}/IBMPlexMono.zip -> IBMPlexMono-nf-${PV}.zip )
+	inconsolata? ( ${COMMON_URI}/Inconsolata.zip -> Inconsolata-nf-${PV}.zip )
+	inconsolatago? ( ${COMMON_URI}/InconsolataGo.zip -> InconsolataGo-nf-${PV}.zip )
+	inconsolatalgc? ( ${COMMON_URI}/InconsolataLGC.zip -> InconsolataLGC-nf-${PV}.zip )
+	iosevka? ( ${COMMON_URI}/Iosevka.zip -> Iosevka-nf-${PV}.zip )
+	iosevkaterm? ( ${COMMON_URI}/IosevkaTerm.zip -> IosevkaTerm-nf-${PV}.zip )
+	jetbrainsmono? ( ${COMMON_URI}/JetBrainsMono.zip -> JetBrainsMono-nf-${PV}.zip )
+	lekton? ( ${COMMON_URI}/Lekton.zip -> Lekton-nf-${PV}.zip )
+	liberationmono? ( ${COMMON_URI}/LiberationMono.zip -> LiberationMono-nf-${PV}.zip )
+	lilex? ( ${COMMON_URI}/Lilex.zip -> Lilex-nf-${PV}.zip )
+	meslo? ( ${COMMON_URI}/Meslo.zip -> Meslo-nf-${PV}.zip )
+	monofur? ( ${COMMON_URI}/Monofur.zip -> Monofur-nf-${PV}.zip )
+	monoid? ( ${COMMON_URI}/Monoid.zip -> Monoid-nf-${PV}.zip )
+	mononoki? ( ${COMMON_URI}/Mononoki.zip -> Mononoki-nf-${PV}.zip )
+	mplus? ( ${COMMON_URI}/MPlus.zip -> MPlus-nf-${PV}.zip )
+	nerdfontssymbolsonly? ( ${COMMON_URI}/NerdFontsSymbolsOnly.zip -> NerdFontsSymbolsOnly-nf-${PV}.zip )
+	noto? ( ${COMMON_URI}/Noto.zip -> Noto-nf-${PV}.zip )
+	opendyslexic? ( ${COMMON_URI}/OpenDyslexic.zip -> OpenDyslexic-nf-${PV}.zip )
+	overpass? ( ${COMMON_URI}/Overpass.zip -> Overpass-nf-${PV}.zip )
+	profont? ( ${COMMON_URI}/ProFont.zip -> ProFont-nf-${PV}.zip )
+	proggyclean? ( ${COMMON_URI}/ProggyClean.zip -> ProggyClean-nf-${PV}.zip )
+	robotomono? ( ${COMMON_URI}/RobotoMono.zip -> RobotoMono-nf-${PV}.zip )
+	sharetechmono? ( ${COMMON_URI}/ShareTechMono.zip -> ShareTechMono-nf-${PV}.zip )
+	sourcecodepro? ( ${COMMON_URI}/SourceCodePro.zip -> SourceCodePro-nf-${PV}.zip )
+	spacemono? ( ${COMMON_URI}/SpaceMono.zip -> SpaceMono-nf-${PV}.zip )
+	terminus? ( ${COMMON_URI}/Terminus.zip -> Terminus-nf-${PV}.zip )
+	tinos? ( ${COMMON_URI}/Tinos.zip -> Tinos-nf-${PV}.zip )
+	ubuntu? ( ${COMMON_URI}/Ubuntu.zip -> Ubuntu-nf-${PV}.zip )
+	ubuntumono? ( ${COMMON_URI}/UbuntuMono.zip -> UbuntuMono-nf-${PV}.zip )
+	victormono? ( ${COMMON_URI}/VictorMono.zip -> VictorMono-nf-${PV}.zip )
 "
 
 LICENSE="MIT
@@ -143,33 +143,14 @@ CHECKREQS_DISK_BUILD="3G"
 CHECKREQS_DISK_USR="4G"
 
 IUSE_FLAGS=(${FONTS[*],,})
-IUSE="${IUSE_FLAGS[*]} symbols symbolsmono"
-REQUIRED_USE="X || ( ${IUSE_FLAGS[*]} ) symbols? ( !symbolsmono )"
+IUSE="${IUSE_FLAGS[*]}"
+REQUIRED_USE="X || ( ${IUSE_FLAGS[*]} )"
 
 S="${WORKDIR}"
-FONT_CONF=(
-	"${S}"/10-nerd-font-symbols.conf
-)
 FONT_S=${S}
 
 pkg_pretend() {
 	check-reqs_pkg_setup
-}
-
-src_prepare() {
-	if use symbols || use symbolsmono ; then
-		install -m644 "${DISTDIR}/10-nerd-font-symbols.conf" "${S}/10-nerd-font-symbols.conf" || die
-	fi
-
-	if use symbols ; then
-		install -m644 "${DISTDIR}/Symbols-2048-em_Nerd_Font_Complete.ttf" "${S}/Symbols-2048-em_Nerd_Font_Complete.ttf" || die
-	fi
-
-	if use symbolsmono ; then
-		install -m644 "${DISTDIR}/Symbols-1000-em_Nerd_Font_Complete.ttf" "${S}/Symbols-1000-em_Nerd_Font_Complete.ttf" || die
-	fi
-
-	default
 }
 
 src_install() {
@@ -198,6 +179,6 @@ pkg_postinst() {
 	einfo "running it from the cloned directory."
 	einfo "https://github.com/ryanoasis/nerd-fonts"
 
-	elog "You might have to enable 50-user.conf and 10-nerd-font-symbols.conf by using"
+	elog "You might have to enable 50-user.conf by using"
 	elog "eselect fontconfig"
 }
