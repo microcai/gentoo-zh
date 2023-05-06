@@ -206,7 +206,7 @@ net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
 net-proxy/clash 1.13.0: A rule-based tunnel in Go.
 net-proxy/clash-for-windows-bin 0.20.21 0.20.22: A Windows/macOS/Linux GUI based on Clash and Electron.
 net-proxy/clash-meta 1.14.4: Another Clash Kernel.
-net-proxy/clash-premium-bin 2023.02.16: Close-sourced pre-built Clash binary with TUN support
+net-proxy/clash-premium-bin 2023.04.16: Close-sourced pre-built Clash binary with TUN support
 net-proxy/clash-verge-bin 1.2.0 1.2.1: A Clash GUI based on tauri
 net-proxy/dae 0.1.7 9999: A lightweight and high-performance transparent proxy solution based on eBPF
 net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
@@ -240,7 +240,7 @@ sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/ltfs 9999: LTFS for LTO tapes
 sys-fs/ssdfs-tools 4.09: userspace tools for SSDFS
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
-sys-kernel/liquorix-sources 6.2.9 6.2.11: Liquorix kernel is best one for desktop, multimedia and gaming workloads
+sys-kernel/liquorix-sources 6.2.11 6.2.14: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 34-r1: Modular initramfs image creation utility
 sys-kernel/xanmod-kernel 6.1.20 6.1.22 6.2.7 6.2.8 6.2.9: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 6.0.11: XanMod RT sources and CJKTTY options.
