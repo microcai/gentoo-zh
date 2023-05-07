@@ -135,6 +135,7 @@ media-fonts/zhudou 2.000: A font family for CJK symbols and punctuation, derived
 media-gfx/byzanz 0.3.0.9999: Screencasting program that saves casts as GIF files
 media-gfx/sane-backends 9999: Scanner Access Now Easy - Backends
 media-gfx/scangearmp 1.60 2.4.10: Driver and utility package for Canon scanners
+media-gfx/tgs2png 9999: Convert Telegram's animated stickers in TGS format into series of PNG images.
 media-gfx/tifig-bin 0.2.2: Converts iOS 11 HEIC images to practical formats - Static binary
 media-gfx/unityhub 3.3.0 3.4.1: The official unity tool for manager Unity Engines and projects
 media-gfx/xrectsel 0.3.1: print the geometry of a rectangular screen region
