@@ -35,6 +35,7 @@ RDEPEND="
 	app-crypt/libsecret
 	virtual/krb5
 	sys-apps/keyutils
+	sys-devel/gcc:12
 	!system-vips? ( <dev-libs/glib-2.76 )
 	system-vips? (
 		dev-libs/glib
