@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-05-07 20:38:08 CST)
+(The last generation time: 2023-05-09 17:25:15 CST)
 
 ### Packages
 
@@ -238,7 +238,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  mail-client/thunderbird                      | 106.0-r5                                  |        | https://www.thunderbird.net                                                             | Thunderbird Mail Client
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/Plangothic                       | 0.8.5730                                  |        | https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic                          | 遍黑体项目（Plangothic Project）
+ media-fonts/Plangothic                       | 0.8.5735                                  |        | https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic                          | 遍黑体项目（Plangothic Project）
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/cwtex-q-fonts                    | 0.2                                       |        | https://code.google.com/p/cwtex-q-fonts/                                                | Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -305,7 +305,7 @@
    dev-python/janus                           | 1.0.0-r1                                  |  D, RD | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
    dev-python/qasync                          | 0.23.0                                    |  D, RD | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/go-musicfox                      | 4.0.4                                     |        | https://github.com/go-musicfox/go-musicfox                                              | Command-line Netease Cloud Music written in Go
+ media-sound/go-musicfox                      | 4.0.6                                     |        | https://github.com/go-musicfox/go-musicfox                                              | Command-line Netease Cloud Music written in Go
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/linnya                           | 2.2.0                                     |        | http://www.linnya.org                                                                   | A free music player
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
