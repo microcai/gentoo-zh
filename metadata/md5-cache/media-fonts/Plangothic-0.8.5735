@@ -9,6 +9,6 @@ KEYWORDS=~amd64 ~x86
 LICENSE=Plangothic
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic/archive/refs/tags/V0.8.5730.tar.gz -> Plangothic-0.8.5730.tar.gz
+SRC_URI=https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic/archive/refs/tags/V0.8.5735.tar.gz -> Plangothic-0.8.5735.tar.gz
 _eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	d1408425c7c4a7669b9b17735404b693	unpacker	aa6a4e924009232d8b78b31e932c30b5
 _md5_=40d149d2e0151414165136ddba5a2c1b

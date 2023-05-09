@@ -118,7 +118,7 @@ games-util/winegame-client-bin 0.5.10.5: An open source gaming platform for GNU/
 gui-libs/libdecor 0.1.1: A client-side decorations library for Wayland clients
 kde-misc/plasma-applet-netspeed-widget 1.9 9999: Plasma 5 widget that displays the currently used network bandwidth.
 mail-client/thunderbird 106.0-r5: Thunderbird Mail Client
-media-fonts/Plangothic 0.8.5730: 遍黑体项目（Plangothic Project）
+media-fonts/Plangothic 0.8.5735: 遍黑体项目（Plangothic Project）
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/iansui 0.943: An open-source Chinese font derived from Klee One (Fontworks).
 media-fonts/jf-openhuninn 2.0: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
@@ -148,7 +148,7 @@ media-libs/vips 8.14.1: VIPS Image Processing Library
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.10-r1 0.5.11 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-sound/feeluown 3.8.9 3.8.10: A user-friendly and hackable music player
-media-sound/go-musicfox 4.0.4: Command-line Netease Cloud Music written in Go
+media-sound/go-musicfox 4.0.6: Command-line Netease Cloud Music written in Go
 media-sound/linnya 2.2.0: A free music player
 media-sound/listen1_desktop-bin 2.28.0: one for all free music in China
 media-sound/lx-music-desktop-bin 2.1.2: 一个基于 electron 的音乐软件
