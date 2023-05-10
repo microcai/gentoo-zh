@@ -10,5 +10,5 @@ LICENSE=AGPL-3
 RDEPEND=media-libs/alsa-lib x11-libs/gtk+:3 x11-libs/libxcb x11-libs/libXfixes media-sound/pulseaudio x11-misc/xdotool media-libs/libva wayland? ( media-video/pipewire[gstreamer] )
 RESTRICT=mirror strip network-sandbox
 SLOT=0
-_eclasses_=toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	d1408425c7c4a7669b9b17735404b693	systemd	5f4bb0758df2e483babf68cd517078ca	desktop	021728fdc1b03b36357dbc89489e0f0d	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
+_eclasses_=toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	systemd	5f4bb0758df2e483babf68cd517078ca	desktop	021728fdc1b03b36357dbc89489e0f0d	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
 _md5_=69e6a5e5769bd16a5db71e665ade57ec
