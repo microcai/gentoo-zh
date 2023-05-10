@@ -1,18 +1,22 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 inherit unpacker
 
-EGIT_COMMIT="4001edf96791bbb5663573ba79ba4b1e9c0b8626"
+EGIT_COMMIT="79aeae200a7370720be98232844c0715f277e1c0"
 SRC_URI="https://github.com/rime/${PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 KEYWORDS="~amd64 ~arm64 ~x86"
 
-DESCRIPTION="Essential files for building up your Rime configuration"
-HOMEPAGE="https://github.com/rime/rime-prelude"
-LICENSE="GPL-3"
+DESCRIPTION="Luna pinyin for rime"
+HOMEPAGE="https://github.com/rime/rime-luna-pinyin"
+LICENSE="LGPL-3"
 SLOT="0"
+DEPEND="
+	app-i18n/rime-stroke
+"
+RDEPEND="$DEPEND"
 
 S="${WORKDIR}/${PN}-${EGIT_COMMIT}"
 
@@ -20,5 +24,5 @@ src_install() {
 	local dir="/usr/share/rime-data"
 	insinto "$dir"
 
-	doins key_bindings.yaml punctuation.yaml
+	doins *.yaml
 }
