@@ -23,5 +23,5 @@ src_install() {
 	local dir="/usr/share/rime-data"
 	insinto "$dir"
 
-	doins key_bindings.yaml punctuation.yaml
+	doins *.yaml
 }
