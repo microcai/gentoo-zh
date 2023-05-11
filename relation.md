@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-05-10 16:49:34 CST)
+(The last generation time: 2023-05-11 13:03:25 CST)
 
 ### Packages
 
@@ -64,7 +64,17 @@
    app-i18n/fcitx-hangul                      | 5.0.11                                    | RD     | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
    app-i18n/fcitx-rime                        | 5.0.16                                    | RD     | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
                                               | 9999                                      |        |                                                                                         |
-     app-i18n/rime-prelude                    | 20220122                                  |  D, RD | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
+     app-i18n/rime-data                       | 20220409                                  |  D, RD | https://rime.im/                                                                        | Data resources for Rime Input Method Engine
+       app-i18n/rime-bopomofo                 | 20210131                                  |  D, RD | https://github.com/rime/rime-bopomofo                                                   | Bopomofo input for rime
+         app-i18n/rime-cangjie                | 20210223                                  |  D, RD | https://github.com/rime/rime-cangjie                                                    | Cangjie input for rime
+         app-i18n/rime-terra-pinyin           | 20230207                                  |  D, RD | https://github.com/rime/rime-terra-pinyin                                               | Terra input for rime
+       app-i18n/rime-double-pinyin            | 20190120                                  |  D, RD | https://github.com/rime/rime-double-pinyin                                              | double-pinyin input for rime
+         app-i18n/rime-luna-pinyin            | 20230204                                  |  D, RD | https://github.com/rime/rime-luna-pinyin                                                | Luna pinyin for rime
+       app-i18n/rime-essay                    | 20230204                                  |  D, RD | https://github.com/rime/rime-bopomofo                                                   | Essential files for building up your Rime configuration
+       app-i18n/rime-prelude                  | 20220122                                  |  D, RD | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
+       app-i18n/rime-wubi                     | 20200908                                  |  D, RD | https://github.com/rime/rime-wubi                                                       | wubi input for rime
+         app-i18n/rime-pinyin-simp            | 20230104                                  |  D, RD | https://github.com/rime/rime-pinyin-simp                                                | Simple pinyin input for rime
+           app-i18n/rime-stroke               | 20230204                                  |  D, RD | https://github.com/rime/rime-stroke                                                     | Stroke input for rime
    app-i18n/fcitx-skk                         | 5.0.15                                    | RD     | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
                                               | 9999                                      |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
