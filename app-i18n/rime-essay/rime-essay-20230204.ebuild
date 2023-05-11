@@ -14,6 +14,9 @@ HOMEPAGE="https://github.com/rime/rime-bopomofo"
 LICENSE="LGPL-3"
 SLOT="0"
 
+DEPEND="!<app-i18n/rime-data-1"
+RDEPEND="$DEPEND"
+
 S="${WORKDIR}/${PN}-${EGIT_COMMIT}"
 
 src_install() {

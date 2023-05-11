@@ -13,8 +13,10 @@ DESCRIPTION="Simple pinyin input for rime"
 HOMEPAGE="https://github.com/rime/rime-pinyin-simp"
 LICENSE="LGPL-3"
 SLOT="0"
+
 DEPEND="
 	app-i18n/rime-stroke
+	!<app-i18n/rime-data-1
 "
 RDEPEND="$DEPEND"
 

@@ -13,8 +13,10 @@ DESCRIPTION="Luna pinyin for rime"
 HOMEPAGE="https://github.com/rime/rime-luna-pinyin"
 LICENSE="LGPL-3"
 SLOT="0"
+
 DEPEND="
 	app-i18n/rime-stroke
+	!<app-i18n/rime-data-1
 "
 RDEPEND="$DEPEND"
 
