@@ -18,6 +18,7 @@ IUSE="
 	+double-pinyin
 	+essay
 	+luna-pinyin
+	+octagram
 	pinyin-simp
 	+prelude
 	+stroke
@@ -32,6 +33,7 @@ DEPEND="
 	double-pinyin? ( app-i18n/rime-double-pinyin )
 	essay? ( app-i18n/rime-essay )
 	luna-pinyin? ( app-i18n/rime-luna-pinyin )
+	octagram? ( app-i18n/rime-octagram-data )
 	pinyin-simp? ( app-i18n/rime-pinyin-simp )
 	prelude? ( app-i18n/rime-prelude )
 	stroke? ( app-i18n/rime-stroke )
