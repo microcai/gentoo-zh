@@ -1,13 +1,13 @@
 DEFINED_PHASES=install unpack
-DEPEND=app-i18n/rime-luna-pinyin app-i18n/rime-stroke
+DEPEND=app-i18n/rime-luna-pinyin app-i18n/rime-stroke !<app-i18n/rime-data-1
 DESCRIPTION=double-pinyin input for rime
 EAPI=8
 HOMEPAGE=https://github.com/rime/rime-double-pinyin
 INHERIT=unpacker
 KEYWORDS=~amd64 ~arm64 ~x86
 LICENSE=LGPL-3
-RDEPEND=app-i18n/rime-luna-pinyin app-i18n/rime-stroke
+RDEPEND=app-i18n/rime-luna-pinyin app-i18n/rime-stroke !<app-i18n/rime-data-1
 SLOT=0
 SRC_URI=https://github.com/rime/rime-double-pinyin/archive/69bf85d4dfe8bac139c36abbd68d530b8b6622ea.tar.gz -> rime-double-pinyin-20190120.tar.gz
 _eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	unpacker	aa6a4e924009232d8b78b31e932c30b5
-_md5_=2f9ad01c0afc6fec2cad30afed8e6cb6
+_md5_=ddabfee64c846c4101fbe087df7de553

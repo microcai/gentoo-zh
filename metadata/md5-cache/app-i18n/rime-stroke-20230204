@@ -1,11 +1,13 @@
 DEFINED_PHASES=install unpack
+DEPEND=!<app-i18n/rime-data-1
 DESCRIPTION=Stroke input for rime
 EAPI=8
 HOMEPAGE=https://github.com/rime/rime-stroke
 INHERIT=unpacker
 KEYWORDS=~amd64 ~arm64 ~x86
 LICENSE=LGPL-3
+RDEPEND=!<app-i18n/rime-data-1
 SLOT=0
 SRC_URI=https://github.com/rime/rime-stroke/archive/c8bc4050d4d667be8f3f4892ab96e4d0881865a4.tar.gz -> rime-stroke-20230204.tar.gz
 _eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	unpacker	aa6a4e924009232d8b78b31e932c30b5
-_md5_=cd2a1162126224705972983bd252ddca
+_md5_=fd4ce6813a4edff80a58d8e657c5034a

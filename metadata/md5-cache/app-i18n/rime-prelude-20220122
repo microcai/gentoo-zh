@@ -1,11 +1,13 @@
 DEFINED_PHASES=install unpack
+DEPEND=!<app-i18n/rime-data-1
 DESCRIPTION=Essential files for building up your Rime configuration
 EAPI=8
 HOMEPAGE=https://github.com/rime/rime-prelude
 INHERIT=unpacker
 KEYWORDS=~amd64 ~arm64 ~x86
 LICENSE=GPL-3
+RDEPEND=!<app-i18n/rime-data-1
 SLOT=0
 SRC_URI=https://github.com/rime/rime-prelude/archive/4001edf96791bbb5663573ba79ba4b1e9c0b8626.tar.gz -> rime-prelude-20220122.tar.gz
 _eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	unpacker	aa6a4e924009232d8b78b31e932c30b5
-_md5_=2877ef0d608e77ce1ef020e74e799b88
+_md5_=31ff42c40cb9e5b18b8d9d681191bee8
