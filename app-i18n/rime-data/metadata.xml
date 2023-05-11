@@ -14,6 +14,7 @@
     <flag name="double-pinyin">install app-i18n/rime-double-pinyin</flag>
     <flag name="essay">install app-i18n/rime-essay</flag>
     <flag name="luna-pinyin">install app-i18n/rime-luna-pinyin</flag>
+    <flag name="octagram">install app-i18n/rime-octagram-data</flag>
     <flag name="pinyin-simp">install app-i18n/rime-pinyin-simp</flag>
     <flag name="prelude">install app-i18n/rime-prelude</flag>
     <flag name="stroke">install app-i18n/rime-stroke</flag>
