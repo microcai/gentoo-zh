@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-05-11 13:03:25 CST)
+(The last generation time: 2023-05-11 19:57:30 CST)
 
 ### Packages
 
@@ -71,7 +71,7 @@
        app-i18n/rime-double-pinyin            | 20190120                                  |  D, RD | https://github.com/rime/rime-double-pinyin                                              | double-pinyin input for rime
          app-i18n/rime-luna-pinyin            | 20230204                                  |  D, RD | https://github.com/rime/rime-luna-pinyin                                                | Luna pinyin for rime
        app-i18n/rime-essay                    | 20230204                                  |  D, RD | https://github.com/rime/rime-bopomofo                                                   | Essential files for building up your Rime configuration
-       app-i18n/rime-prelude                  | 20220122                                  |  D, RD | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
+       app-i18n/rime-prelude                  | 20220122-r1                               |  D, RD | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
        app-i18n/rime-wubi                     | 20200908                                  |  D, RD | https://github.com/rime/rime-wubi                                                       | wubi input for rime
          app-i18n/rime-pinyin-simp            | 20230104                                  |  D, RD | https://github.com/rime/rime-pinyin-simp                                                | Simple pinyin input for rime
            app-i18n/rime-stroke               | 20230204                                  |  D, RD | https://github.com/rime/rime-stroke                                                     | Stroke input for rime
