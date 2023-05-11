@@ -1,0 +1,11 @@
+DEFINED_PHASES=-
+DEPEND=app-i18n/librime bopomofo? ( app-i18n/rime-bopomofo ) cangjie? ( app-i18n/rime-cangjie ) double-pinyin? ( app-i18n/rime-double-pinyin ) essay? ( app-i18n/rime-essay ) luna-pinyin? ( app-i18n/rime-luna-pinyin ) pinyin-simp? ( app-i18n/rime-pinyin-simp ) prelude? ( app-i18n/rime-prelude ) stroke? ( app-i18n/rime-stroke ) terra-pinyin? ( app-i18n/rime-terra-pinyin ) wubi? ( app-i18n/rime-wubi )
+DESCRIPTION=Data resources for Rime Input Method Engine
+EAPI=6
+HOMEPAGE=https://rime.im/
+IUSE=bopomofo cangjie +double-pinyin +essay +luna-pinyin pinyin-simp +prelude +stroke +terra-pinyin +wubi
+KEYWORDS=~amd64 ~arm64
+LICENSE=LGPL-3
+RDEPEND=app-i18n/librime bopomofo? ( app-i18n/rime-bopomofo ) cangjie? ( app-i18n/rime-cangjie ) double-pinyin? ( app-i18n/rime-double-pinyin ) essay? ( app-i18n/rime-essay ) luna-pinyin? ( app-i18n/rime-luna-pinyin ) pinyin-simp? ( app-i18n/rime-pinyin-simp ) prelude? ( app-i18n/rime-prelude ) stroke? ( app-i18n/rime-stroke ) terra-pinyin? ( app-i18n/rime-terra-pinyin ) wubi? ( app-i18n/rime-wubi )
+SLOT=0
+_md5_=f8660baea60ec7283ec62b2e76720b73
