@@ -52,7 +52,7 @@ app-i18n/rime-double-pinyin 20190120: double-pinyin input for rime
 app-i18n/rime-essay 20230204: Essential files for building up your Rime configuration
 app-i18n/rime-luna-pinyin 20230204: Luna pinyin for rime
 app-i18n/rime-pinyin-simp 20230104: Simple pinyin input for rime
-app-i18n/rime-prelude 20220122: Essential files for building up your Rime configuration
+app-i18n/rime-prelude 20220122-r1: Essential files for building up your Rime configuration
 app-i18n/rime-stroke 20230204: Stroke input for rime
 app-i18n/rime-terra-pinyin 20230207: Terra input for rime
 app-i18n/rime-wubi 20200908: wubi input for rime
