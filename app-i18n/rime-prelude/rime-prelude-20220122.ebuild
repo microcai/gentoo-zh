@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -13,6 +13,9 @@ DESCRIPTION="Essential files for building up your Rime configuration"
 HOMEPAGE="https://github.com/rime/rime-prelude"
 LICENSE="GPL-3"
 SLOT="0"
+
+DEPEND="!<app-i18n/rime-data-1"
+RDEPEND="$DEPEND"
 
 S="${WORKDIR}/${PN}-${EGIT_COMMIT}"
 
