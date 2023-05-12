@@ -153,12 +153,6 @@ media-fonts/nerd-fonts:ubuntu - Install Nerd-fonts-patched Ubuntu fonts
 media-fonts/nerd-fonts:ubuntumono - Install Nerd-fonts-patched Ubuntu Mono fonts
 media-fonts/nerd-fonts:victormono - Install Nerd-fonts-patched Victor Mono fonts
 media-gfx/unityhub:legacy - add support for Legacy unity versions
-media-libs/vips:fits - Enable support for the FITS image format through sci-libs/cfitsio
-media-libs/vips:gsf - Enable support for creating image pyramids with dzsave
-media-libs/vips:heif - Enable support for HEIC images
-media-libs/vips:imagequant - Enable support for 8bpp PNG via media-gfx/libimagequant
-media-libs/vips:matio - Enable support for reading images from Matlab files through sci-libs/matio
-media-libs/vips:pango - Enable support for text rendering
 media-plugins/osdlyrics:gnome - add support for gnome
 media-plugins/osdlyrics:indicator - add support for appindicator
 media-sound/feeluown:kuwo - add kuwo music support for feeluown
