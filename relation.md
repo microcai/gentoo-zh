@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-05-12 03:41:28 CST)
+(The last generation time: 2023-05-12 11:48:45 CST)
 
 ### Packages
 
@@ -72,7 +72,8 @@
          app-i18n/rime-luna-pinyin            | 20230204                                  |  D, RD | https://github.com/rime/rime-luna-pinyin                                                | Luna pinyin for rime
        app-i18n/rime-essay                    | 20230204                                  |  D, RD | https://github.com/rime/rime-bopomofo                                                   | Essential files for building up your Rime configuration
        app-i18n/rime-octagram-data            | 20190619                                  |  D, RD | https://github.com/lotem/rime-octagram-data                                             | Language model of the 「八股文」語法
-         app-i18n/librime-octagram            | 20230125                                  |  D, RD | https://github.com/lotem/librime-octagram                                               | 「八股文」語法 plugin for RIME
+         app-i18n/librime-octagram            | 20230125-r1                               |  D, RD | https://github.com/lotem/librime-octagram                                               | 「八股文」語法 plugin for RIME
+           app-i18n/librime                   | 1.8.5                                     |  D, RD | https://rime.im/                                                                        | RIME (Rime Input Method Engine) core library
        app-i18n/rime-prelude                  | 20220122-r1                               |  D, RD | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
        app-i18n/rime-wubi                     | 20200908                                  |  D, RD | https://github.com/rime/rime-wubi                                                       | wubi input for rime
          app-i18n/rime-pinyin-simp            | 20230104                                  |  D, RD | https://github.com/rime/rime-pinyin-simp                                                | Simple pinyin input for rime
