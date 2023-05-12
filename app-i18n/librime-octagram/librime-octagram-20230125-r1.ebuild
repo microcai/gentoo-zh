@@ -16,12 +16,12 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~x86"
 
-DEPEND=">=app-i18n/librime-1.6:0="
-RDEPEND="$DEPEND"
-BDEPEND="
-	dev-libs/boost:0
+DEPEND="
+	>=app-i18n/librime-1.6:0=
 	dev-libs/utfcpp
 "
+RDEPEND="$DEPEND"
+BDEPEND="dev-libs/boost:0"
 
 S="${WORKDIR}/${PN}-${EGIT_COMMIT}"
 
