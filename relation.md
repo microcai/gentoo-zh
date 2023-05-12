@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-05-12 23:17:00 CST)
+(The last generation time: 2023-05-12 23:43:11 CST)
 
 ### Packages
 
@@ -458,8 +458,8 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/cgproxy                            | 0.20-r1                                   |        | https://github.com/springzfx/cgproxy                                                    | Transparent Proxy with cgroup v2
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/clash-for-windows-bin              | 0.20.21                                   |        | https://github.com/Fndroid/clash_for_windows_pkg                                        | A Windows/macOS/Linux GUI based on Clash and Electron.
-                                              | 0.20.22                                   |        |                                                                                         |
+ net-proxy/clash-for-windows-bin              | 0.20.22                                   |        | https://github.com/Fndroid/clash_for_windows_pkg                                        | A Windows/macOS/Linux GUI based on Clash and Electron.
+                                              | 0.20.23                                   |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-meta                         | 1.14.4                                    |        | https://github.com/MetaCubeX/Clash.Meta                                                 | Another Clash Kernel.
    acct-group/clash-meta                      | 0                                         |  D, RD |                                                                                         | Another Clash Kernel.
