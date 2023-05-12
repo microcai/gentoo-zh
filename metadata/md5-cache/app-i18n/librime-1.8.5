@@ -1,0 +1,16 @@
+BDEPEND=dev-libs/capnproto:0 >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=app-i18n/opencc:0= >=dev-cpp/glog-0.3.5:0= dev-cpp/yaml-cpp:0= dev-libs/boost:= dev-libs/capnproto:0= dev-libs/leveldb:0= dev-libs/marisa:0= dev-libs/darts dev-libs/utfcpp x11-base/xorg-proto test? ( dev-cpp/gtest )
+DESCRIPTION=RIME (Rime Input Method Engine) core library
+EAPI=7
+HOMEPAGE=https://rime.im/ https://github.com/rime/librime
+INHERIT=cmake
+IUSE=debug test
+KEYWORDS=~amd64 ~arm64 ~x86
+LICENSE=BSD
+RDEPEND=app-i18n/opencc:0= >=dev-cpp/glog-0.3.5:0= dev-cpp/yaml-cpp:0= dev-libs/boost:= dev-libs/capnproto:0= dev-libs/leveldb:0= dev-libs/marisa:0=
+RESTRICT=!test? ( test )
+SLOT=0/1-1.8.5
+SRC_URI=https://github.com/rime/librime/archive/1.8.5.tar.gz -> librime-1.8.5.tar.gz
+_eclasses_=toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	8f942ebdcf04334697649d4a0bf65a32	flag-o-matic	16483e58fadb0d47b4528f0aa7e171f6	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	76050953ad5b70d7e09a6ca55558db92	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	7fb5980de96325cbab639f5b2187357c
+_md5_=31e4113e4aa291c506ca257e045c24c4
