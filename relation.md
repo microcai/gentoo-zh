@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-05-12 11:48:45 CST)
+(The last generation time: 2023-05-12 17:38:46 CST)
 
 ### Packages
 
@@ -23,7 +23,7 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-moegirl               | 20230114                                  |        | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-zhwiki                | 20230329                                  |        | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
+ app-dicts/fcitx-pinyin-zhwiki                | 20230507                                  |        | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/appflowy-bin                     | 0.0.6                                     |        | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
                                               | 0.0.9                                     |        |                                                                                         |
@@ -388,7 +388,6 @@
                                               | 9999                                      |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/tencent-qq                            | 3.1.1_p11223-r2                           |        | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
-   media-libs/vips                            | 8.14.1                                    |  D, RD | https://libvips.github.io/libvips/                                                      | VIPS Image Processing Library
    x11-misc/flatpak-xdg-utils                 | 1.0.5                                     | RD     | https://github.com/flatpak/flatpak-xdg-utils                                            | Utilities for containerized apps to launch programs outside the container
    x11-misc/snapd-xdg-open                    | 9999                                      | RD     | https://github.com/snapcore/snapd-xdg-open                                              | Software for opening links from snaps in desktop
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
