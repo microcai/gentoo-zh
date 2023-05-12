@@ -39,7 +39,8 @@ RDEPEND="
 	!system-vips? ( <dev-libs/glib-2.76 )
 	system-vips? (
 		dev-libs/glib
-		>=media-libs/vips-8.14.1
+		>=media-libs/vips-8.14.2
+		!<media-libs/vips-8.14.2
 	)
 	bwrap? (
 		sys-apps/bubblewrap
