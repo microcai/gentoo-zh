@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2022-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/$
 
 LICENSE="Unlicense"
 SLOT="5"
-KEYWORDS="amd64 arm mips x86"
+KEYWORDS="~amd64 ~mips ~x86"
 
 DEPEND=""
 BDEPEND=""
