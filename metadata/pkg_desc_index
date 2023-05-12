@@ -173,7 +173,7 @@ media-sound/youtube-music-bin 1.18.0: YouTube Music Desktop App bundled with cus
 media-video/amdgpu-pro-amf 1.4.29.1538781: AMD's closed source Advanced Media Framework (AMF) driver
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/bilibili 1.9.2: Based on the Bilibli offcial client to linux version, support roaming
-media-video/mpv-handler 0.3.3: A protocol handler for mpv, written by Rust.
+media-video/mpv-handler 0.3.4: A protocol handler for mpv, written by Rust.
 media-video/tenvideo 1.0.10: Tencent videos
 net-analyzer/besttrace-bin 1.3.2-r1: 附带链路可视化的 traceroute 工具
 net-analyzer/nali 0.7.1: An offline tool for querying IP geographic information and CDN provider.
@@ -187,7 +187,7 @@ net-im/deepin-wine-qq 9.5.2.27897: Tencent QQ on Deepin Wine(com.qq.im.deepin) F
 net-im/deepin-wine-wechat 3.9.0.28-r3: Tencent WeChat on Deepin Wine For Gentoo
 net-im/dingtalk 1.4.0.20909 1.4.0.20909-r1: Communication platform that supports video and audio conferencing
 net-im/telegram-purple 1.4.7-r1 9999: Libpurple (Pidgin) plugin for using a Telegram account
-net-im/tencent-qq 3.1.1_p11223-r2: The new version of the official linux-qq
+net-im/tencent-qq 3.1.1_p11223-r3: The new version of the official linux-qq
 net-im/weixin-uos 2.1.5-r1: UOS weixin
 net-im/wemeet 3.12.0.400-r2 3.14.0.401 3.14.0.402: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq
