@@ -4,24 +4,24 @@
 EAPI=8
 
 CRATES="
-	base64-0.13.1
+	base64-0.21.0
 	bitflags-1.3.2
 	cfg-if-1.0.0
 	dirs-4.0.0
 	dirs-sys-0.3.7
-	getrandom-0.2.8
-	libc-0.2.139
-	proc-macro2-1.0.50
-	quote-1.0.23
+	getrandom-0.2.9
+	libc-0.2.144
+	proc-macro2-1.0.56
+	quote-1.0.27
 	redox_syscall-0.2.16
 	redox_users-0.4.3
-	serde-1.0.152
-	serde_derive-1.0.152
-	syn-1.0.107
-	thiserror-1.0.38
-	thiserror-impl-1.0.38
+	serde-1.0.162
+	serde_derive-1.0.162
+	syn-2.0.15
+	thiserror-1.0.40
+	thiserror-impl-1.0.40
 	toml-0.5.11
-	unicode-ident-1.0.6
+	unicode-ident-1.0.8
 	wasi-0.11.0+wasi-snapshot-preview1
 	winapi-0.3.9
 	winapi-i686-pc-windows-gnu-0.4.0
