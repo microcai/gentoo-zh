@@ -20,7 +20,7 @@ KEYWORDS="~amd64"
 RESTRICT="mirror"
 
 DEPEND="
-	net-misc/rustdesk-bin
+	net-misc/rustdesk
 	net-misc/remmina
 	x11-libs/gtk+:3
 "
