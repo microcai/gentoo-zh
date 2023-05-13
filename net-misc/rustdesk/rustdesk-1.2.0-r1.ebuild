@@ -739,7 +739,7 @@ KEYWORDS="~amd64"
 
 IUSE="wayland +hwaccel"
 
-RDEPEND="
+DEPEND="
 	media-libs/alsa-lib
 	x11-libs/gtk+:3
 	x11-libs/libxcb
@@ -748,7 +748,9 @@ RDEPEND="
 	x11-misc/xdotool
 	media-libs/libva
 	wayland? ( media-video/pipewire[gstreamer] )
+	!net-misc/rustdesk-bin
 "
+RDEPEND="${DEPEND}"
 BDEPEND="
 	dev-lang/nasm
 	dev-lang/yasm
