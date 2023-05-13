@@ -42,11 +42,13 @@ src_unpack() {
 
 src_install() {
 	cp -R usr "${D}" || die
+	rm "${D}"/usr/bin/rustdesk
+	dosym -r /usr/lib/rustdesk/rustdesk /usr/bin/rustdesk
 	sed -i "s/^\(Icon=\).*$/\1rustdesk/" usr/share/rustdesk/files/rustdesk.desktop || die
-	sed -i "s/Other/Network/g" usr/share/rustdesk/files/rustdesk.desktop || die
 	systemd_dounit usr/share/rustdesk/files/rustdesk.service
 	doicon -s 256 usr/share/rustdesk/files/rustdesk.png
 	domenu usr/share/rustdesk/files/rustdesk.desktop
-	rm -rf "${D}"/usr/share/rustdesk/files/rustdesk.{service,desktop,png} || die
+	domenu usr/share/rustdesk/files/rustdesk-link.desktop
+	rm -rf "${D}"/usr/share/rustdesk/files/ || die
 	rm "${P}".tar.zst || die
 }
