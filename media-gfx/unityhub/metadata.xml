@@ -5,6 +5,6 @@
 		<email>bz8511929@gmail.com</email>
 	</maintainer>
 	<use>
-		<flag name='legacy'>add support for Legacy unity versions</flag>
+		<flag name='legacy'>add support for Legacy versions</flag>
 	</use>
 </pkgmetadata>

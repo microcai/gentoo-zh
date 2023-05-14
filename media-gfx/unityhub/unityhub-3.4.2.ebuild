@@ -15,16 +15,21 @@ KEYWORDS="~amd64"
 
 RESTRICT="mirror strip"
 
-IUSE="+appindicator"
+IUSE="+appindicator legacy"
 
 DEPEND="
 	appindicator? (
 		dev-libs/libdbusmenu
-		dev-libs/libappindicator
+		legacy? (
+			dev-libs/libappindicator
+			x11-misc/appmenu-gtk-module[gtk2]
+		)
 	)
 	app-arch/cpio
 	dev-libs/nss
 	x11-libs/gtk+
+	app-crypt/libsecret
+	|| ( <dev-libs/openssl-3 dev-libs/openssl-compat )
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
@@ -35,7 +40,7 @@ src_unpack(){
 src_install(){
 	insinto "/opt"
 	doins -r "${S}/opt/unityhub"
-	dosym /opt/unityhub/unityhub usr/bin/unityhub
+	dosym -r /opt/unityhub/unityhub /usr/bin/unityhub
 	for si in 16 32 48 64 128 256 512; do
 		doicon -s ${si} usr/share/icons/hicolor/${si}x${si}/apps/${PN}.png
 	done

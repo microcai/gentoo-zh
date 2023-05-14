@@ -22,8 +22,6 @@ DEPEND="
 		dev-libs/libdbusmenu
 		legacy? (
 			dev-libs/libappindicator
-			gnome-base/gconf
-			x11-themes/gtk-engines-murrine
 			x11-misc/appmenu-gtk-module[gtk2]
 		)
 	)
