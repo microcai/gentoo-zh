@@ -45,6 +45,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "To use this theme source /usr/share/zsh/site-functions/powerlevel10k/powerlevel10k.zsh-theme in your ~/.zshrc"
-	elog "The full choice of style options is available only when using Nerd Fonts.For example: media-fonts/nerd-fonts"
+	elog "To use this theme, source /usr/share/zsh/site-functions/powerlevel10k/powerlevel10k.zsh-theme in your ~/.zshrc"
+	elog "The full choice of style options is available only when using Nerd Fonts. For example: media-fonts/nerd-fonts"
 }
