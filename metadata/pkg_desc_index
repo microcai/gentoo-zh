@@ -75,7 +75,7 @@ app-office/freeoffice 1060 1062: A complete, free Microsoft Office-compatible al
 app-office/wps-office 11.1.0.10976-r1 11.1.0.11698: WPS Office is an office productivity suite, Here is the Chinese version
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-shells/gitstatus 1.5.4: Git status for Bash and Zsh prompt
-app-shells/zsh-theme-powerlevel10k 1.17.0: Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
+app-shells/zsh-theme-powerlevel10k 1.18.0: Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
 app-text/cajviewer 1.0.3.0: Document Viewer for CAJ, KDH, NH, TEB and PDF format
 app-text/groff-utf8 0-r1: GNU groff wrapper allowing UTF-8 input
 app-vim/clang_complete 1.8: vim plugin: use clang for completing C/C++ code.
