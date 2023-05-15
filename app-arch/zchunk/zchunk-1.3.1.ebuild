@@ -10,7 +10,7 @@ if [[ ${PV} == 9999* ]] ; then
 	EGIT_CHECKOUT_DIR=${PN}-${PV}
 else
 	SRC_URI="https://github.com/zchunk/zchunk/archive/refs/tags/${PV}.tar.gz -> ${PN}-${PV}.tar.gz"
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~riscv"
 	S="${WORKDIR}/${PN}-${PV}"
 fi
 

@@ -11,7 +11,7 @@ SRC_URI="https://github.com/outloudvi/mw2fcitx/releases/download/${PV}/moegirl.d
 
 LICENSE="Unlicense"
 SLOT="5"
-KEYWORDS="amd64 arm mips x86"
+KEYWORDS="~amd64 ~mips ~x86"
 
 DEPEND=""
 BDEPEND=""
