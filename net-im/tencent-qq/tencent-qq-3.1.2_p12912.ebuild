@@ -12,7 +12,7 @@ HOMEPAGE="https://im.qq.com/linuxqq/index.shtml"
 LICENSE="Tencent"
 RESTRICT="strip"
 
-_I="2355235c"
+_I="80d33f88"
 
 SRC_URI="
 	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_amd64.deb )
@@ -36,11 +36,9 @@ RDEPEND="
 	virtual/krb5
 	sys-apps/keyutils
 	sys-devel/gcc:12
-	!system-vips? ( <dev-libs/glib-2.76 )
 	system-vips? (
 		dev-libs/glib
 		>=media-libs/vips-8.14.2
-		!<media-libs/vips-8.14.2
 	)
 	bwrap? (
 		sys-apps/bubblewrap
