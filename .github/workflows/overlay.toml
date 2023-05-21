@@ -739,6 +739,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "st0nie"
 
+["net-analyzer/nali"]
+source = "github"
+github = "zu1k/nali"
+use_latest_tag = true
+prefix = "v"
+github_account = "peeweep"
+
 # TODO
 #["net-dialup/mentohust"]
 
