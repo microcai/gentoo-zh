@@ -63,6 +63,7 @@ app-i18n/zh-autoconvert 0.3.16_p7: Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings au
 app-misc/bcompare 4.4.4.27058: Beyond Compare -- Compare, sync, and merge files and folders
 app-misc/ccal 2.5.3: A simple command line calendar for Chinese lunar
 app-misc/gpick 0.2.6-r1 0.3: Advanced color picker written in C++ using GTK+ toolkit
+app-misc/joshuto 0.9.4: Terminal file manager inspired by ranger
 app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience within the shell
 app-misc/keyd 2.4.2: A key remapping daemon for linux
 app-misc/rmtrash 1.14: trash-put made compatible to GNUs rm and rmdir
