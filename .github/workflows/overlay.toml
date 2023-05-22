@@ -200,6 +200,13 @@ github_account = "ArchFeh"
 #github = "keenerd/jshon"
 #use_latest_tag = true
 
+["app-misc/joshuto"]
+source = "github"
+github = "kamiyaa/joshuto"
+use_latest_tag = true
+prefix = "v"
+github_account = "oatiz"
+
 #["app-misc/nixnote"]
 #source = "github"
 #github = "robert7/nixnote2"
