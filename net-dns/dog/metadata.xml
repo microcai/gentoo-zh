@@ -2,6 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<upstream>
-		<remote-id type="github">net-dns/dog</remote-id>
+		<remote-id type="github">ogham/dog</remote-id>
 	</upstream>
 </pkgmetadata>
