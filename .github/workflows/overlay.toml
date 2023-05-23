@@ -766,7 +766,7 @@ source = "github"
 github = "ogham/dog"
 use_latest_tag = true
 prefix = "v"
-github = "peeweep"
+github_account = "peeweep"
 
 ["net-dns/libidn11"]
 source = "git"
