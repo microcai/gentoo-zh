@@ -16,6 +16,7 @@ RESTRICT="mirror"
 DEPEND="
 	acct-user/clash-meta
 	acct-group/clash-meta
+	>=dev-lang/go-1.20.4
 "
 RDEPEND="${DEPEND}"
 LICENSE="GPL-3"
