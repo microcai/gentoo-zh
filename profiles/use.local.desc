@@ -64,6 +64,7 @@ app-i18n/rime-octagram-data:hans - install zh-hans-*.gram
 app-i18n/rime-octagram-data:hant - install zh-hant-*.gram
 app-i18n/zh-autoconvert:static-libs - Build static versions of dynamic libraries as well
 app-misc/gpick:gtk3 - use GTK3 instead of GTK2
+app-misc/joshuto:fzf - Fuzzy search via fzf
 dev-cpp/cppcoro:shared - Build shared library instead of static library.
 dev-cpp/tgbot-cpp:shared - Build shared library instead of static library.
 dev-db/mongodb:experimental-optimization - Enable experimental optimizations, exclude sandybridge.
