@@ -164,8 +164,18 @@ LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="-* ~amd64"
 
+IUSE="X wayland +fzf"
+
 DEPEND=""
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}
+	fzf? ( app-shells/fzf )
+	wayland? ( gui-apps/wl-clipboard )
+	X? (
+		x11-misc/xclip
+		x11-misc/xsel
+	)
+"
 BDEPEND=""
 
 RESTRICT="mirror"
