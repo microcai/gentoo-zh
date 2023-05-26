@@ -23,6 +23,7 @@ RDEPEND="
 	dev-libs/libappindicator:3
 	net-libs/webkit-gtk:4
 	dev-libs/gobject-introspection-common
+	dev-libs/openssl:0/3
 	system-clash? ( net-proxy/clash )
 	!system-clash? ( !net-proxy/clash )
 "
