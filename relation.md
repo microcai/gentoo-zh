@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-05-26 17:21:53 CST)
+(The last generation time: 2023-05-26 17:22:29 CST)
 
 ### Packages
 
@@ -574,7 +574,7 @@
                                               | 6.3.2                                     |        |                                                                                         |
                                               | 6.3.3                                     |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/chatgpt-desktop                     | 0.12.0                                    |        | https://github.com/lencx/ChatGPT                                                        | ChatGPT Desktop Application
+ www-apps/chatgpt-desktop                     | 1.0.0                                     |        | https://github.com/lencx/ChatGPT                                                        | ChatGPT Desktop Application
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/openvscode-server-bin               | 1.75.1                                    |        | https://github.com/gitpod-io/openvscode-server                                          | VS Code that runs a server on remote and allows access through a web browser
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
