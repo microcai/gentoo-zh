@@ -5,7 +5,7 @@ EAPI=8
 
 inherit xdg
 
-MY_R="145034-49b9839f"
+MY_R="112425-69ae8472"
 MY_PV="${PV}-${MY_R}"
 MY_PN="${PN/-bin/}"
 MY_P="${MY_PN}-${MY_PV}"
@@ -13,11 +13,11 @@ MY_P="${MY_PN}-${MY_PV}"
 DESCRIPTION="A terminal emulator and multiplexer implemented in Rust"
 HOMEPAGE="https://wezfurlong.org/wezterm"
 
-SRC_URI="https://github.com/wez/wezterm/releases/download/${MY_PV}/${MY_PN}-${MY_PV}.Ubuntu18.04.tar.xz"
+SRC_URI="https://github.com/wez/wezterm/releases/download/${MY_PV}/${MY_PN}-${MY_PV}.Ubuntu20.04.tar.xz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="-* ~amd64"
 
 IUSE="wayland +X"
 REQUIRED_USE="|| ( wayland X )"
@@ -52,6 +52,6 @@ src_install() {
 	insinto /
 	doins -r etc usr
 
-	fperms 0755 -R /usr/bin/
-	fperms 0755 -R /etc/profile.d/
+	fperms 0755 /usr/bin/{open-wezterm-here,strip-ansi-escapes,wezterm,wezterm-gui,wezterm-mux-server}
+	fperms 0755 /etc/profile.d/${MY_PN}.sh
 }
