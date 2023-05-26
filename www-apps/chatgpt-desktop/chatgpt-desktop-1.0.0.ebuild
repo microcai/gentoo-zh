@@ -9,18 +9,24 @@ CRATES="
 	adler-1.0.2
 	ahash-0.7.6
 	aho-corasick-0.7.20
+	aho-corasick-1.0.1
 	alloc-no-stdlib-2.0.4
 	alloc-stdlib-0.2.2
-	anyhow-1.0.69
+	android_system_properties-0.1.5
+	anyhow-1.0.71
 	async-broadcast-0.5.1
-	async-executor-1.5.0
-	async-io-1.12.0
-	async-lock-2.6.0
-	async-recursion-1.0.2
-	async-task-4.3.0
-	async-trait-0.1.64
+	async-channel-1.8.0
+	async-executor-1.5.1
+	async-fs-1.6.0
+	async-io-1.13.0
+	async-lock-2.7.0
+	async-process-1.7.0
+	async-recursion-1.0.4
+	async-task-4.4.0
+	async-trait-0.1.68
 	atk-0.15.1
 	atk-sys-0.15.1
+	atomic-waker-1.1.1
 	attohttpc-0.22.0
 	atty-0.2.14
 	auto-launch-0.4.0
@@ -29,51 +35,54 @@ CRATES="
 	base64-0.21.0
 	bincode-1.3.3
 	bitflags-1.3.2
+	bitflags-2.2.1
 	block-0.1.6
-	block-buffer-0.10.3
+	block-buffer-0.10.4
+	blocking-1.3.1
 	brotli-3.3.4
 	brotli-decompressor-2.3.4
-	bstr-1.3.0
-	bumpalo-3.12.0
-	byte-unit-4.0.18
-	bytemuck-1.13.0
+	bstr-1.4.0
+	bumpalo-3.12.2
+	byte-unit-4.0.19
+	bytemuck-1.13.1
 	byteorder-1.4.3
 	bytes-1.4.0
 	cairo-rs-0.15.12
 	cairo-sys-rs-0.15.1
-	cargo_toml-0.13.3
+	cargo_toml-0.15.2
 	cc-1.0.79
 	cesu8-1.1.0
-	cfb-0.6.1
+	cfb-0.7.3
 	cfg-expr-0.9.1
-	cfg-expr-0.11.0
+	cfg-expr-0.15.1
 	cfg-if-1.0.0
+	chrono-0.4.24
 	cocoa-0.24.1
-	cocoa-foundation-0.1.0
+	cocoa-foundation-0.1.1
 	color_quant-1.1.0
 	colored-1.9.3
 	combine-4.6.6
-	concurrent-queue-2.1.0
+	concurrent-queue-2.2.0
 	convert_case-0.4.0
 	core-foundation-0.9.3
-	core-foundation-sys-0.8.3
+	core-foundation-sys-0.8.4
 	core-graphics-0.22.3
 	core-graphics-types-0.1.1
-	cpufeatures-0.2.5
+	cpufeatures-0.2.7
 	crc32fast-1.3.2
-	crossbeam-channel-0.5.6
-	crossbeam-utils-0.8.14
+	crossbeam-channel-0.5.8
+	crossbeam-utils-0.8.15
 	crypto-common-0.1.6
 	cssparser-0.27.2
 	cssparser-macros-0.6.0
-	csv-1.2.0
+	csv-1.2.1
 	csv-core-0.1.10
 	ctor-0.1.26
 	cty-0.2.2
 	dark-light-1.0.0
-	darling-0.13.4
-	darling_core-0.13.4
-	darling_macro-0.13.4
+	darling-0.20.1
+	darling_core-0.20.1
+	darling_macro-0.20.1
 	dconf_rs-0.3.0
 	derivative-2.2.0
 	derive_more-0.99.17
@@ -87,60 +96,64 @@ CRATES="
 	dlv-list-0.3.0
 	dtoa-0.4.8
 	dtoa-short-0.3.3
-	dunce-1.0.3
+	dunce-1.0.4
+	embed-resource-2.1.1
 	embed_plist-1.2.2
 	encoding_rs-0.8.32
-	enumflags2-0.7.5
-	enumflags2_derive-0.7.4
-	errno-0.2.8
+	enumflags2-0.7.7
+	enumflags2_derive-0.7.7
+	errno-0.3.1
 	errno-dragonfly-0.1.2
 	event-listener-2.5.3
 	fastrand-1.9.0
-	fern-0.6.1
-	field-offset-0.3.4
-	filetime-0.2.20
-	flate2-1.0.25
+	fdeflate-0.3.0
+	fern-0.6.2
+	field-offset-0.3.5
+	filetime-0.2.21
+	flate2-1.0.26
 	fnv-1.0.7
 	foreign-types-0.3.2
 	foreign-types-shared-0.1.1
 	form_urlencoded-1.1.0
 	futf-0.1.5
-	futures-channel-0.3.26
-	futures-core-0.3.26
-	futures-executor-0.3.26
-	futures-io-0.3.26
-	futures-lite-1.12.0
-	futures-macro-0.3.26
-	futures-sink-0.3.26
-	futures-task-0.3.26
-	futures-util-0.3.26
+	futures-channel-0.3.28
+	futures-core-0.3.28
+	futures-executor-0.3.28
+	futures-io-0.3.28
+	futures-lite-1.13.0
+	futures-macro-0.3.28
+	futures-sink-0.3.28
+	futures-task-0.3.28
+	futures-util-0.3.28
 	fxhash-0.2.1
 	gdk-0.15.4
 	gdk-pixbuf-0.15.11
 	gdk-pixbuf-sys-0.15.10
 	gdk-sys-0.15.1
+	gdkwayland-sys-0.15.3
 	gdkx11-sys-0.15.1
-	generator-0.7.3
-	generic-array-0.14.6
+	generator-0.7.4
+	generic-array-0.14.7
 	getrandom-0.1.16
-	getrandom-0.2.8
+	getrandom-0.2.9
 	gio-0.15.12
 	gio-sys-0.15.10
 	glib-0.15.12
-	glib-macros-0.15.11
+	glib-macros-0.15.13
 	glib-sys-0.15.10
 	glob-0.3.1
 	globset-0.4.10
 	gobject-sys-0.15.10
 	gtk-0.15.5
 	gtk-sys-0.15.3
-	gtk3-macros-0.15.4
-	h2-0.3.15
+	gtk3-macros-0.15.6
+	h2-0.3.19
 	hashbrown-0.12.3
 	heck-0.3.3
 	heck-0.4.1
 	hermit-abi-0.1.19
 	hermit-abi-0.2.6
+	hermit-abi-0.3.1
 	hex-0.4.3
 	html5ever-0.25.2
 	http-0.2.9
@@ -148,34 +161,36 @@ CRATES="
 	http-range-0.1.5
 	httparse-1.8.0
 	httpdate-1.0.2
-	hyper-0.14.24
+	hyper-0.14.26
 	hyper-tls-0.5.0
-	ico-0.2.0
+	iana-time-zone-0.1.56
+	iana-time-zone-haiku-0.1.2
+	ico-0.3.0
 	ident_case-1.0.1
 	idna-0.3.0
 	ignore-0.4.18
-	image-0.24.5
-	indexmap-1.9.2
-	infer-0.7.0
+	image-0.24.6
+	indexmap-1.9.3
+	infer-0.12.0
 	instant-0.1.12
-	io-lifetimes-1.0.5
-	ipnet-2.7.1
+	io-lifetimes-1.0.10
+	ipnet-2.7.2
 	itoa-0.4.8
-	itoa-1.0.5
+	itoa-1.0.6
 	javascriptcore-rs-0.16.0
 	javascriptcore-rs-sys-0.4.0
 	jni-0.20.0
 	jni-sys-0.3.0
-	js-sys-0.3.61
-	json-patch-0.2.7
+	js-sys-0.3.63
+	json-patch-1.0.0
 	kuchiki-0.8.1
 	lazy_static-1.4.0
 	libappindicator-0.7.1
 	libappindicator-sys-0.7.3
-	libc-0.2.139
+	libc-0.2.144
 	libloading-0.7.4
 	line-wrap-0.1.1
-	linux-raw-sys-0.1.4
+	linux-raw-sys-0.3.7
 	lock_api-0.4.9
 	log-0.4.17
 	loom-0.5.6
@@ -185,17 +200,18 @@ CRATES="
 	matchers-0.1.0
 	matches-0.1.10
 	memchr-2.5.0
-	memoffset-0.6.5
-	mime-0.3.16
+	memoffset-0.7.1
+	memoffset-0.8.0
+	mime-0.3.17
 	minisign-verify-0.2.1
-	miniz_oxide-0.6.2
+	miniz_oxide-0.7.1
 	mio-0.8.6
 	native-tls-0.2.11
 	ndk-0.6.0
 	ndk-context-0.1.1
 	ndk-sys-0.3.0
 	new_debug_unreachable-1.0.4
-	nix-0.25.1
+	nix-0.26.2
 	nodrop-0.1.14
 	nu-ansi-term-0.46.0
 	num-integer-0.1.45
@@ -204,29 +220,29 @@ CRATES="
 	num_cpus-1.15.0
 	num_enum-0.5.11
 	num_enum_derive-0.5.11
+	num_threads-0.1.6
 	objc-0.2.7
 	objc-foundation-0.1.1
 	objc_exception-0.1.2
 	objc_id-0.1.1
 	once_cell-1.17.1
 	open-3.2.0
-	openssl-0.10.45
-	openssl-macros-0.1.0
+	openssl-0.10.52
+	openssl-macros-0.1.1
 	openssl-probe-0.1.5
-	openssl-sys-0.9.80
+	openssl-sys-0.9.87
 	ordered-multimap-0.4.3
 	ordered-stream-0.2.0
-	os_info-3.6.0
+	os_info-3.7.0
+	os_pipe-1.1.4
 	overload-0.1.1
 	pango-0.15.10
 	pango-sys-0.15.10
-	parking-2.0.0
+	parking-2.1.0
 	parking_lot-0.12.1
 	parking_lot_core-0.9.7
-	paste-1.0.11
 	pathdiff-0.2.1
 	percent-encoding-2.2.0
-	pest-2.5.5
 	phf-0.8.0
 	phf-0.10.1
 	phf_codegen-0.8.0
@@ -238,19 +254,19 @@ CRATES="
 	phf_shared-0.10.0
 	pin-project-lite-0.2.9
 	pin-utils-0.1.0
-	pkg-config-0.3.26
-	plist-1.4.1
-	png-0.17.7
-	polling-2.5.2
+	pkg-config-0.3.27
+	plist-1.4.3
+	png-0.17.8
+	polling-2.8.0
 	ppv-lite86-0.2.17
 	precomputed-hash-0.1.1
 	proc-macro-crate-1.3.1
 	proc-macro-error-1.0.4
 	proc-macro-error-attr-1.0.4
 	proc-macro-hack-0.5.20+deprecated
-	proc-macro2-1.0.51
-	quick-xml-0.26.0
-	quote-1.0.23
+	proc-macro2-1.0.57
+	quick-xml-0.28.2
+	quote-1.0.27
 	rand-0.7.3
 	rand-0.8.5
 	rand_chacha-0.2.2
@@ -261,178 +277,192 @@ CRATES="
 	rand_pcg-0.2.1
 	raw-window-handle-0.5.0
 	redox_syscall-0.2.16
+	redox_syscall-0.3.5
 	redox_users-0.4.3
-	regex-1.7.1
+	regex-1.8.1
 	regex-automata-0.1.10
-	regex-syntax-0.6.28
-	reqwest-0.11.14
+	regex-syntax-0.6.29
+	regex-syntax-0.7.1
+	reqwest-0.11.17
 	rfd-0.10.0
 	rust-ini-0.18.0
-	rustc_version-0.3.3
 	rustc_version-0.4.0
-	rustix-0.36.8
-	rustversion-1.0.11
-	ryu-1.0.12
+	rustix-0.37.19
+	rustversion-1.0.12
+	ryu-1.0.13
 	safemem-0.3.3
 	same-file-1.0.6
 	schannel-0.1.21
 	scoped-tls-1.0.1
 	scopeguard-1.1.0
-	security-framework-2.8.2
-	security-framework-sys-2.8.0
+	security-framework-2.9.0
+	security-framework-sys-2.9.0
 	selectors-0.22.0
-	semver-0.11.0
-	semver-1.0.16
-	semver-parser-0.10.2
-	serde-1.0.152
-	serde_derive-1.0.152
-	serde_json-1.0.93
-	serde_repr-0.1.10
+	semver-1.0.17
+	serde-1.0.163
+	serde_derive-1.0.163
+	serde_json-1.0.96
+	serde_repr-0.1.12
+	serde_spanned-0.6.1
 	serde_urlencoded-0.7.1
-	serde_with-1.14.0
-	serde_with_macros-1.5.2
+	serde_with-2.3.3
+	serde_with_macros-2.3.3
 	serialize-to-javascript-0.1.1
 	serialize-to-javascript-impl-0.1.1
 	servo_arc-0.1.1
 	sha1-0.10.5
 	sha2-0.10.6
 	sharded-slab-0.1.4
+	shared_child-1.0.0
+	signal-hook-0.3.15
+	signal-hook-registry-1.4.1
+	simd-adler32-0.3.5
 	siphasher-0.3.10
 	slab-0.4.8
 	smallvec-1.10.0
-	socket2-0.4.7
+	socket2-0.4.9
 	soup2-0.2.1
 	soup2-sys-0.2.0
 	stable_deref_trait-1.2.0
 	state-0.5.3
 	static_assertions-1.1.0
-	string_cache-0.8.4
+	string_cache-0.8.7
 	string_cache_codegen-0.5.2
 	strsim-0.10.0
 	syn-1.0.109
+	syn-2.0.16
 	system-deps-5.0.0
-	system-deps-6.0.3
-	tao-0.15.8
-	tao-0.16.0
+	system-deps-6.1.0
+	tao-0.16.1
 	tao-macros-0.1.1
 	tar-0.4.38
-	tauri-1.2.4
-	tauri-build-1.2.1
-	tauri-codegen-1.2.1
-	tauri-macros-1.2.1
-	tauri-runtime-0.12.1
-	tauri-runtime-wry-0.12.2
-	tauri-utils-1.2.1
-	tempfile-3.4.0
+	target-lexicon-0.12.7
+	tauri-1.3.0
+	tauri-build-1.3.0
+	tauri-codegen-1.3.0
+	tauri-macros-1.3.0
+	tauri-runtime-0.13.0
+	tauri-runtime-wry-0.13.0
+	tauri-utils-1.3.0
+	tauri-winres-0.1.1
+	tempfile-3.5.0
 	tendril-0.4.3
 	thin-slice-0.1.1
-	thiserror-1.0.38
-	thiserror-impl-1.0.38
+	thiserror-1.0.40
+	thiserror-impl-1.0.40
 	thread_local-1.1.7
-	time-0.3.20
-	time-core-0.1.0
-	time-macros-0.2.8
+	time-0.3.15
 	tinyvec-1.6.0
 	tinyvec_macros-0.1.1
-	tokio-1.25.0
-	tokio-macros-1.8.2
+	tokio-1.28.1
+	tokio-macros-2.1.0
 	tokio-native-tls-0.3.1
-	tokio-util-0.7.7
+	tokio-util-0.7.8
 	toml-0.5.11
+	toml-0.7.3
 	toml_datetime-0.6.1
-	toml_edit-0.19.4
+	toml_edit-0.19.8
 	tower-service-0.3.2
 	tracing-0.1.37
-	tracing-attributes-0.1.23
-	tracing-core-0.1.30
+	tracing-attributes-0.1.24
+	tracing-core-0.1.31
 	tracing-log-0.1.3
-	tracing-subscriber-0.3.16
-	treediff-3.0.2
+	tracing-subscriber-0.3.17
+	treediff-4.0.2
 	try-lock-0.2.4
 	typenum-1.16.0
-	ucd-trie-0.1.5
 	uds_windows-1.0.2
-	unicode-bidi-0.3.10
-	unicode-ident-1.0.6
+	unicode-bidi-0.3.13
+	unicode-ident-1.0.8
 	unicode-normalization-0.1.22
 	unicode-segmentation-1.10.1
 	url-2.3.1
 	utf-8-0.7.6
 	utf8-width-0.1.6
-	uuid-0.8.2
-	uuid-1.3.0
+	uuid-1.3.3
 	valuable-0.1.0
 	value-bag-1.0.0-alpha.9
 	vcpkg-0.2.15
 	version-compare-0.0.11
 	version-compare-0.1.1
 	version_check-0.9.4
+	vswhom-0.1.0
+	vswhom-sys-0.1.2
 	waker-fn-1.1.0
-	walkdir-2.3.2
+	walkdir-2.3.3
 	want-0.3.0
 	wasi-0.9.0+wasi-snapshot-preview1
 	wasi-0.11.0+wasi-snapshot-preview1
-	wasm-bindgen-0.2.84
-	wasm-bindgen-backend-0.2.84
-	wasm-bindgen-futures-0.4.34
-	wasm-bindgen-macro-0.2.84
-	wasm-bindgen-macro-support-0.2.84
-	wasm-bindgen-shared-0.2.84
-	web-sys-0.3.61
+	wasm-bindgen-0.2.86
+	wasm-bindgen-backend-0.2.86
+	wasm-bindgen-futures-0.4.36
+	wasm-bindgen-macro-0.2.86
+	wasm-bindgen-macro-support-0.2.86
+	wasm-bindgen-shared-0.2.86
+	web-sys-0.3.63
 	webkit2gtk-0.18.2
 	webkit2gtk-sys-0.18.0
 	webview2-com-0.19.1
 	webview2-com-macros-0.6.0
 	webview2-com-sys-0.19.0
-	wepoll-ffi-0.1.2
 	winapi-0.3.9
 	winapi-i686-pc-windows-gnu-0.4.0
 	winapi-util-0.1.5
 	winapi-x86_64-pc-windows-gnu-0.4.0
 	windows-0.37.0
 	windows-0.39.0
-	windows-0.44.0
+	windows-0.48.0
 	windows-bindgen-0.39.0
 	windows-implement-0.39.0
 	windows-metadata-0.39.0
 	windows-sys-0.42.0
 	windows-sys-0.45.0
-	windows-targets-0.42.1
+	windows-sys-0.48.0
+	windows-targets-0.42.2
+	windows-targets-0.48.0
 	windows-tokens-0.39.0
-	windows_aarch64_gnullvm-0.42.1
+	windows_aarch64_gnullvm-0.42.2
+	windows_aarch64_gnullvm-0.48.0
 	windows_aarch64_msvc-0.37.0
 	windows_aarch64_msvc-0.39.0
-	windows_aarch64_msvc-0.42.1
+	windows_aarch64_msvc-0.42.2
+	windows_aarch64_msvc-0.48.0
 	windows_i686_gnu-0.37.0
 	windows_i686_gnu-0.39.0
-	windows_i686_gnu-0.42.1
+	windows_i686_gnu-0.42.2
+	windows_i686_gnu-0.48.0
 	windows_i686_msvc-0.37.0
 	windows_i686_msvc-0.39.0
-	windows_i686_msvc-0.42.1
+	windows_i686_msvc-0.42.2
+	windows_i686_msvc-0.48.0
 	windows_x86_64_gnu-0.37.0
 	windows_x86_64_gnu-0.39.0
-	windows_x86_64_gnu-0.42.1
-	windows_x86_64_gnullvm-0.42.1
+	windows_x86_64_gnu-0.42.2
+	windows_x86_64_gnu-0.48.0
+	windows_x86_64_gnullvm-0.42.2
+	windows_x86_64_gnullvm-0.48.0
 	windows_x86_64_msvc-0.37.0
 	windows_x86_64_msvc-0.39.0
-	windows_x86_64_msvc-0.42.1
-	winnow-0.3.3
+	windows_x86_64_msvc-0.42.2
+	windows_x86_64_msvc-0.48.0
+	winnow-0.4.1
 	winreg-0.10.1
-	winres-0.1.12
-	wry-0.23.4
-	wry-0.24.1
+	winreg-0.11.0
+	wry-0.24.3
 	x11-2.21.0
 	x11-dl-2.21.0
 	xattr-0.2.3
-	zbus-3.10.0
-	zbus_macros-3.10.0
-	zbus_names-2.5.0
-	zip-0.6.4
-	zvariant-3.11.0
-	zvariant_derive-3.11.0
+	xdg-home-1.0.0
+	zbus-3.13.1
+	zbus_macros-3.13.1
+	zbus_names-2.5.1
+	zip-0.6.6
+	zvariant-3.14.0
+	zvariant_derive-3.14.0
+	zvariant_utils-1.0.1
 "
 
-TAURI_PLUGIN_COMMIT="eaec06f66518c2af9209624d95903fc9b85e88f3"
+TAURI_PLUGIN_COMMIT="bec9f6091a5a5233bc464754ebb215d07363b747"
 declare -A GIT_CRATES=(
 	[tauri-plugin-positioner]="https://github.com/lencx/tauri-plugins-workspace;${TAURI_PLUGIN_COMMIT};tauri-plugins-workspace-%commit%/plugins/positioner"
 	[tauri-plugin-log]="https://github.com/lencx/tauri-plugins-workspace;${TAURI_PLUGIN_COMMIT};tauri-plugins-workspace-%commit%/plugins/log"
@@ -448,18 +478,17 @@ DESCRIPTION="ChatGPT Desktop Application"
 # Double check the homepage as the cargo_metadata crate
 # does not provide this value so instead repository is used
 HOMEPAGE="https://github.com/lencx/ChatGPT"
-SRC_URI="
+SRC_URI="$(cargo_crate_uris)
 	https://github.com/lencx/${MY_PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/oatiz/lyraile-overlay/releases/download/tauri-node-dep/${P}-node_modules.tar.xz
-	$(cargo_crate_uris)
+	https://github.com/oatiz/gentoo-go-deps/releases/download/${P}/${P}-node_modules.tar.xz
 "
 
 # License set may be more restrictive as OR is not respected
 # use cargo-license for a more accurate license picture
 LICENSE="AGPL-3"
 SLOT="0"
-IUSE="debug"
 KEYWORDS="-* ~amd64"
+IUSE="debug"
 
 RESTRICT="mirror strip"
 
@@ -472,9 +501,8 @@ DEPEND="
 	dev-libs/libayatana-appindicator
 	dev-libs/openssl
 "
-
 RDEPEND="${DEPEND}"
-BDEPEND="dev-util/tauri-cli"
+BDEPEND=">=dev-util/tauri-cli-1.3.1"
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
