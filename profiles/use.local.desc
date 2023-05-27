@@ -60,6 +60,8 @@ app-i18n/rime-data:prelude - install app-i18n/rime-prelude
 app-i18n/rime-data:stroke - install app-i18n/rime-stroke
 app-i18n/rime-data:terra-pinyin - install app-i18n/rime-terra-pinyin
 app-i18n/rime-data:wubi - install app-i18n/rime-wubi
+app-i18n/rime-essay:hans - install rime-essay-simp
+app-i18n/rime-essay:hant - install rime-essay
 app-i18n/rime-octagram-data:hans - install zh-hans-*.gram
 app-i18n/rime-octagram-data:hant - install zh-hant-*.gram
 app-i18n/zh-autoconvert:static-libs - Build static versions of dynamic libraries as well
