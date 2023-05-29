@@ -1,5 +1,5 @@
 DEFINED_PHASES=install setup unpack
-DEPEND=python_single_target_python3_10? ( >=dev-lang/python-3.10.9-r1:3.10 ) python_single_target_python3_11? ( >=dev-lang/python-3.11.1-r1:3.11 ) app-emulation/deepin-wine-plugin[virtual-pkg]
+DEPEND=python_single_target_python3_10? ( >=dev-lang/python-3.10.11:3.10 ) python_single_target_python3_11? ( >=dev-lang/python-3.11.3:3.11 ) app-emulation/deepin-wine-plugin[virtual-pkg]
 DESCRIPTION=Deepin Wine Helper
 EAPI=8
 HOMEPAGE=https://www.deepin.org
@@ -7,10 +7,10 @@ INHERIT=python-single-r1 unpacker
 IUSE=python_single_target_python3_10 python_single_target_python3_11
 KEYWORDS=~amd64
 LICENSE=LGPL-2.1
-RDEPEND=python_single_target_python3_10? ( >=dev-lang/python-3.10.9-r1:3.10 ) python_single_target_python3_11? ( >=dev-lang/python-3.11.1-r1:3.11 ) app-emulation/deepin-wine-plugin[virtual-pkg]
+RDEPEND=python_single_target_python3_10? ( >=dev-lang/python-3.10.11:3.10 ) python_single_target_python3_11? ( >=dev-lang/python-3.11.3:3.11 ) app-emulation/deepin-wine-plugin[virtual-pkg]
 REQUIRED_USE=^^ ( python_single_target_python3_10 python_single_target_python3_11 )
 RESTRICT=test
 SLOT=0
 SRC_URI=https://home-store-packages.uniontech.com/appstore/pool/appstore/d/deepin-wine-helper/deepin-wine-helper_5.1.27-1_i386.deb
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	python-utils-r1	d676fb844e9408f4290d20bc7312f8bb	python-single-r1	75118e916668a74c660a13b0ecb22562	unpacker	aa6a4e924009232d8b78b31e932c30b5
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	python-utils-r1	ba15b8b81f30ca448294d759a9f7902c	python-single-r1	75118e916668a74c660a13b0ecb22562	unpacker	aa6a4e924009232d8b78b31e932c30b5
 _md5_=9b35396f1fe6b556450ca5d317da10e6
