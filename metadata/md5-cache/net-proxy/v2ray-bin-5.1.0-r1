@@ -10,5 +10,5 @@ LICENSE=MIT
 RDEPEND=!net-proxy/v2ray !dev-libs/v2ray-geoip-bin !dev-libs/v2ray-domain-list-community-bin !dev-libs/v2ray-domain-list-community
 SLOT=0
 SRC_URI=amd64? ( https://github.com/v2fly/v2ray-core/releases/download/v5.1.0/v2ray-linux-64.zip -> v2ray-5.1.0-linux-64.zip ) x86? ( https://github.com/v2fly/v2ray-core/releases/download/v5.1.0/v2ray-linux-32.zip -> v2ray-5.1.0-linux-32.zip ) arm? ( https://github.com/v2fly/v2ray-core/releases/download/v5.1.0/v2ray-linux-arm32-v7a.zip -> v2ray-5.1.0-linux-arm.zip ) arm64? ( https://github.com/v2fly/v2ray-core/releases/download/v5.1.0/v2ray-linux-arm64-v8a.zip -> v2ray-5.1.0-linux-arm64.zip )
-_eclasses_=toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	systemd	5f4bb0758df2e483babf68cd517078ca
+_eclasses_=toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	5f4bb0758df2e483babf68cd517078ca
 _md5_=22550d426a59b7c9d6cdff9caef3baa3

@@ -9,5 +9,5 @@ LICENSE=LGPL-3
 RDEPEND=app-i18n/rime-luna-pinyin !<app-i18n/rime-data-1
 SLOT=0
 SRC_URI=https://github.com/rime/rime-cangjie/archive/8dfad9e537f18821b71ba28773315d9c670ae245.tar.gz -> rime-cangjie-20210223.tar.gz
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	unpacker	aa6a4e924009232d8b78b31e932c30b5
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	aa6a4e924009232d8b78b31e932c30b5
 _md5_=fc55050ed368992efa48a777eec40aa3
