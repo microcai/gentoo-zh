@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -10,9 +10,9 @@ HOMEPAGE="https://wemeet.qq.com"
 
 SRC_URI="
 	amd64? ( mirror+https://updatecdn.meeting.qq.com/cos/\
-5a910969828531efb24add85626e2372/TencentMeeting_0300000000_${PV}_x86_64_default.publish.deb -> ${P}_amd64.deb )
+72158c3abd95460ff9e7ae59fb4041cf/TencentMeeting_0300000000_${PV}_x86_64_default.publish.deb -> ${P}_amd64.deb )
 	arm64? ( mirror+https://updatecdn.meeting.qq.com/cos/\
-985de8a45fa77fd55eaaa0999ebffb74/TencentMeeting_0300000000_${PV}_arm64_default.publish.deb -> ${P}_arm64.deb )
+61b7b8d633563be3346377b3d86f00f5/TencentMeeting_0300000000_${PV}_arm64_default.publish.deb -> ${P}_arm64.deb )
 "
 
 LICENSE="wemeet_license"
@@ -36,7 +36,7 @@ DEPEND="
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5
-	|| ( media-libs/tiff:0 media-libs/tiff-compat:4 )
+	media-libs/tiff-compat:4
 	media-sound/pulseaudio
 	x11-libs/libXinerama
 	x11-libs/libXrandr
