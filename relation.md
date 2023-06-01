@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-06-01 20:39:24 CST)
+(The last generation time: 2023-06-02 01:17:21 CST)
 
 ### Packages
 
@@ -490,9 +490,9 @@
                                               | 1.6.1                                     |        |                                                                                         |
      dev-libs/v2ray-domain-list-community-bin | 20230601044045                            |  D, RD | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
      dev-libs/v2ray-geoip-bin                 | 202306010100                              |  D, RD | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
-   net-proxy/v2ray                            | 4.45.0                                    | RD     | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
-                                              | 4.45.2                                    |        |                                                                                         |
-                                              | 5.3.0                                     |        |                                                                                         |
+   net-proxy/v2ray                            | 4.45.2                                    | RD     | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
+                                              | 5.6.0                                     |        |                                                                                         |
+                                              | 5.7.0                                     |        |                                                                                         |
      dev-libs/v2ray-domain-list-community     | 4.39.2_p20210621183458                    | RD     | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
                                               | 9999                                      |        |                                                                                         |
    net-proxy/v2ray-bin                        | 4.45.0                                    | RD     | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
