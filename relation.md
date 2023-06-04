@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-06-02 20:52:55 CST)
+(The last generation time: 2023-06-04 09:34:58 CST)
 
 ### Packages
 
@@ -434,6 +434,8 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/remmina-plugin-rustdesk             | 1.0.0.0-r1                                |        | http://www.muflone.com/remmina-plugin-rustdesk/                                         | A protocol plugin for Remmina to launch a Rustdesk connection.
    net-misc/rustdesk                          | 1.2.0                                     |  D, RD | https://rustdesk.com/                                                                   | Open source virtual / remote desktop infrastructure for everyone
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ net-misc/tssh                                | 0.1.1                                     |        | https://github.com/zu1k/nali                                                            | An offline tool for querying IP geographic information and CDN provider.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/you-get                             | 9999                                      |        | http://www.soimort.org/you-get                                                          | A video downloader for YouTube, Youku, niconico and a few other sites
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
