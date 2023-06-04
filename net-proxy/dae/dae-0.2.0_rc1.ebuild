@@ -5,14 +5,14 @@ EAPI=8
 
 inherit linux-info go-module systemd
 
-_MY_PV=${PV/_p/patch}
+_MY_PV=${PV/_rc/rc}
 
 DESCRIPTION="A lightweight and high-performance transparent proxy solution based on eBPF"
 HOMEPAGE="https://github.com/daeuniverse/dae"
 
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~riscv"
 MINKV="5.8"
 _I="378c3c576e0f4c785a3d5e71400b552725527f30"
 SRC_URI="
