@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-06-04 09:35:40 CST)
+(The last generation time: 2023-06-04 14:09:50 CST)
 
 ### Packages
 
@@ -473,8 +473,8 @@
                                               | 1.3.2                                     |        |                                                                                         |
    net-proxy/clash                            | 1.13.0                                    | RD     | https://github.com/Dreamacro/clash                                                      | A rule-based tunnel in Go.
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/dae                                | 0.1.10_rc1                                |        | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
-                                              | 0.1.9_p1                                  |        |                                                                                         |
+ net-proxy/dae                                | 0.1.9                                     |        | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
+                                              | 0.2.0_rc1                                 |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/make-proxy                         | 2.0.0                                     |        | https://github.com/yueyoum/make-proxy                                                   | Socks5 proxy written in Erlang
