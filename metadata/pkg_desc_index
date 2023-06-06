@@ -191,7 +191,7 @@ net-im/dingtalk 1.4.0.20909 1.4.0.20909-r1 1.7.0.30424: Communication platform t
 net-im/telegram-purple 1.4.7-r1 9999: Libpurple (Pidgin) plugin for using a Telegram account
 net-im/tencent-qq 3.1.2_p12912: The new version of the official linux-qq
 net-im/weixin-uos 2.1.5-r1: UOS weixin
-net-im/wemeet 3.15.0.400: Wemeet - Tencent Video Conferencing
+net-im/wemeet 3.15.0.400 3.15.0.401: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq
 net-misc/aliyundrive-webdav 2.1.0-r1: WebDAV server for AliyunDrive
 net-misc/aliyunpan 0.2.7: aliyunpan cli client, support Webdav service, JavaScript plugin
