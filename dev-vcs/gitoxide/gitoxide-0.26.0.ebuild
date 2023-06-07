@@ -30,7 +30,6 @@ CRATES="
 	async-std-1.12.0
 	async-task-4.4.0
 	async-trait-0.1.68
-	atoi-2.0.0
 	atomic-waker-1.1.1
 	atty-0.2.14
 	autocfg-1.1.0
@@ -51,7 +50,6 @@ CRATES="
 	cargo_toml-0.15.2
 	cassowary-0.3.0
 	cast-0.3.0
-	castaway-0.2.2
 	cc-1.0.79
 	cfg-if-1.0.0
 	ciborium-0.2.0
@@ -66,7 +64,6 @@ CRATES="
 	clru-0.6.1
 	cmake-0.1.50
 	colorchoice-1.0.0
-	compact_str-0.6.1
 	concurrent-queue-2.2.0
 	conpty-0.5.1
 	console-0.15.5
@@ -85,8 +82,8 @@ CRATES="
 	crossbeam-epoch-0.9.14
 	crossbeam-queue-0.3.8
 	crossbeam-utils-0.8.15
-	crossterm-0.25.0
-	crosstermion-0.10.1
+	crossterm-0.26.1
+	crosstermion-0.11.0
 	crossterm_winapi-0.9.0
 	crypto-common-0.1.6
 	ctor-0.1.26
@@ -97,8 +94,6 @@ CRATES="
 	defer-0.1.0
 	diff-0.1.13
 	digest-0.10.6
-	dirs-4.0.0
-	dirs-sys-0.3.7
 	doc-comment-0.3.3
 	document-features-0.2.7
 	dunce-1.0.4
@@ -134,26 +129,29 @@ CRATES="
 	getrandom-0.2.9
 	git2-0.16.1
 	git-conventional-0.12.3
-	gix-actor-0.17.2
-	gix-attributes-0.8.3
-	gix-bitmap-0.2.2
-	gix-date-0.4.3
-	gix-discover-0.13.1
-	gix-features-0.26.5
-	gix-glob-0.5.5
-	gix-hash-0.10.4
-	gix-hashtable-0.1.3
-	gix-index-0.12.4
-	gix-lock-3.0.2
-	gix-object-0.26.4
-	gix-path-0.7.3
+	gix-actor-0.20.0
+	gix-attributes-0.12.0
+	gix-bitmap-0.2.3
+	gix-date-0.5.0
+	gix-discover-0.18.0
+	gix-features-0.29.0
+	gix-fs-0.1.1
+	gix-glob-0.7.0
+	gix-hash-0.11.1
+	gix-hashtable-0.2.0
+	gix-ignore-0.2.0
+	gix-index-0.16.1
+	gix-lock-5.0.1
+	gix-object-0.29.1
+	gix-path-0.8.0
 	gix-quote-0.4.3
-	gix-ref-0.24.1
-	gix-sec-0.6.2
-	gix-tempfile-3.0.2
-	gix-traverse-0.22.2
+	gix-ref-0.29.1
+	gix-sec-0.8.0
+	gix-tempfile-5.0.3
+	gix-traverse-0.25.0
+	gix-utils-0.1.1
 	gix-validate-0.7.4
-	gix-worktree-0.12.3
+	gix-worktree-0.17.0
 	gloo-timers-0.2.6
 	h2-0.3.18
 	half-1.8.2
@@ -232,6 +230,7 @@ CRATES="
 	openssl-0.10.51
 	openssl-macros-0.1.1
 	openssl-probe-0.1.5
+	openssl-src-111.25.3+1.1.1t
 	openssl-sys-0.9.86
 	os_str_bytes-6.5.0
 	output_vt100-0.1.3
@@ -252,19 +251,19 @@ CRATES="
 	pretty_assertions-1.3.0
 	proc-macro2-1.0.56
 	prodash-23.1.2
+	prodash-25.0.0
 	ptyprocess-0.4.1
 	pulldown-cmark-0.9.2
 	quick-error-1.2.3
-	quick-error-2.0.1
 	quote-1.0.26
 	rand-0.8.5
 	rand_chacha-0.3.1
 	rand_core-0.6.4
+	ratatui-0.20.1
 	rayon-1.7.0
 	rayon-core-1.11.0
 	redox_syscall-0.2.16
 	redox_syscall-0.3.5
-	redox_users-0.4.3
 	regex-1.8.0
 	regex-automata-0.1.10
 	regex-syntax-0.7.0
@@ -276,7 +275,6 @@ CRATES="
 	rustix-0.37.13
 	rustls-0.20.8
 	rustls-pemfile-1.0.2
-	rustversion-1.0.12
 	ryu-1.0.13
 	same-file-1.0.6
 	schannel-0.1.21
@@ -336,13 +334,11 @@ CRATES="
 	trust-dns-proto-0.22.0
 	trust-dns-resolver-0.22.0
 	try-lock-0.2.4
-	tui-0.19.0
-	tui-react-0.19.0
+	tui-react-0.20.0
 	typenum-1.16.0
 	uluru-3.0.0
 	unicase-2.6.0
 	unicode-bidi-0.3.13
-	unicode-bom-1.1.4
 	unicode-bom-2.0.2
 	unicode-ident-1.0.8
 	unicode-normalization-0.1.22
@@ -372,7 +368,6 @@ CRATES="
 	winapi-i686-pc-windows-gnu-0.4.0
 	winapi-util-0.1.5
 	winapi-x86_64-pc-windows-gnu-0.4.0
-	windows-0.43.0
 	windows-0.44.0
 	windows-0.48.0
 	windows_aarch64_gnullvm-0.42.2
