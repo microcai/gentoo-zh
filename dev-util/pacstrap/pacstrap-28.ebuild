@@ -13,11 +13,9 @@ S="${WORKDIR}/arch-install-scripts-${PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~x86"
+KEYWORDS="~amd64"
 IUSE="test"
 RESTRICT="!test? ( test )"
-
-
 
 BDEPEND="
 	app-alternatives/awk
