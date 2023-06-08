@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>1758961307@qq.com</email>
+		<name>123485k</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">archlinux/arch-install-scripts</remote-id>
+	</upstream>
+</pkgmetadata>
