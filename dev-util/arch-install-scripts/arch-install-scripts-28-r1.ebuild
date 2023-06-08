@@ -5,20 +5,14 @@ EAPI=8
 
 DESCRIPTION="Arch Linux install tools (pacstrap, genfstab, arch-chroot)"
 HOMEPAGE="https://projects.archlinux.org/arch-install-scripts.git/"
-SRC_URI="https://github.com/archlinux/arch-install-scripts/archive/refs/tags/v${PV}.tar.gz -> arch-install-scripts-v${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="+archroot +genfstab +pacstrap"
 
-DEPEND="
-	!sys-fs/genfstab
-	!sys-apps/arch-chroot"
-
-RDEPEND="${DEPEND}
-	sys-apps/pacman"
-
-src_install() {
-	emake DESTDIR="${D}" PREFIX=/usr install
-}
+RDEPEND="
+	archroot? ( sys-apps/arch-chroot )
+	genfstab? ( sys-fs/genfstab )
+	pacstrap? ( dev-util/pacstrap )
+"

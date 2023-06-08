@@ -8,4 +8,9 @@
 	<upstream>
 		<remote-id type="github">archlinux/arch-install-scripts</remote-id>
 	</upstream>
+	<use>
+		<flag name="archroot">Install arch-chroot</flag>
+		<flag name="genfstab">Install genfstab</flag>
+		<flag name="pacstrap">Install pacstrap</flag>
+	</use>
 </pkgmetadata>
