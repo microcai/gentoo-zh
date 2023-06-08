@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DEPEND=!sys-fs/genfstab !sys-apps/arch-chroot
+DESCRIPTION=Arch Linux install tools (pacstrap, genfstab, arch-chroot)
+EAPI=8
+HOMEPAGE=https://projects.archlinux.org/arch-install-scripts.git/
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=!sys-fs/genfstab !sys-apps/arch-chroot sys-apps/pacman
+SLOT=0
+SRC_URI=https://github.com/archlinux/arch-install-scripts/archive/refs/tags/v28.tar.gz -> arch-install-scripts-v28.tar.gz
+_md5_=4b3b5934c0c42e12fc53527bb7200efc

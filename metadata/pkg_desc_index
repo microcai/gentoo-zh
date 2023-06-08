@@ -111,7 +111,7 @@ dev-python/nvchecker 2.11: nvchecker is for checking if a new version of some so
 dev-python/pycosat 0.6.4: Python bindings to picosat (a SAT solver)
 dev-python/qasync 0.23.0: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/structlog 23.1.0: Structured Logging for Python
-dev-util/arch-install-scripts 24: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
+dev-util/arch-install-scripts 28: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
 dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 files
 dev-util/elfembed 0.3-r1: Resource Compiler for ELF binaries
 dev-util/gyp 20200512145953_p20220404165439 99999999999999: GYP (Generate Your Projects) meta-build system
