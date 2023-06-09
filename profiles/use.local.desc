@@ -85,6 +85,9 @@ dev-db/mongodb:tools - Install the MongoDB tools (mongoimport, mongodump...) fro
 dev-python/conda:user - use user's home directory as default pkgs and envs prefix
 dev-python/nvchecker:ini - convert your old configuration files from ini to toml
 dev-python/nvchecker:notify - enable nvchecker-notify support
+dev-util/arch-install-scripts:archroot - Install arch-chroot
+dev-util/arch-install-scripts:genfstab - Install genfstab
+dev-util/arch-install-scripts:pacstrap - Install pacstrap
 gui-libs/libdecor:dbus - Enable dbus to query current cursor theme
 gui-libs/libdecor:examples - Build and install examples
 mail-client/thunderbird:clang - Use Clang compiler instead of GCC

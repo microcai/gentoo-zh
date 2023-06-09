@@ -1,0 +1,10 @@
+DEFINED_PHASES=-
+DESCRIPTION=Arch Linux install tools (pacstrap, genfstab, arch-chroot)
+EAPI=8
+HOMEPAGE=https://projects.archlinux.org/arch-install-scripts.git/
+IUSE=+archroot +genfstab +pacstrap
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=archroot? ( sys-apps/arch-chroot ) genfstab? ( sys-fs/genfstab ) pacstrap? ( dev-util/pacstrap )
+SLOT=0
+_md5_=06f5bd1c9100acfe7765b6de801c2b93

@@ -111,7 +111,7 @@ dev-python/nvchecker 2.11: nvchecker is for checking if a new version of some so
 dev-python/pycosat 0.6.4: Python bindings to picosat (a SAT solver)
 dev-python/qasync 0.23.0: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/structlog 23.1.0: Structured Logging for Python
-dev-util/arch-install-scripts 28: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
+dev-util/arch-install-scripts 28-r1: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
 dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 files
 dev-util/elfembed 0.3-r1: Resource Compiler for ELF binaries
 dev-util/gyp 20200512145953_p20220404165439 99999999999999: GYP (Generate Your Projects) meta-build system
@@ -120,6 +120,7 @@ dev-util/jetbrains-toolbox 1.27.3.14493: Manage all your JetBrains Projects and 
 dev-util/lldb-mi 9999: LLDB Machine Interface Driver
 dev-util/marksman-bin 2022.12.28: A language server for Markdown
 dev-util/mongodb-compass-bin 1.34.2 1.35.0 1.36.4 1.37.0: The GUI for MongoDB
+dev-util/pacstrap 28: Pacstrap - install packages to the specified new root directorye
 dev-util/tauri-cli 1.3.1: Command line interface for building Tauri apps
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-vcs/gitoxide 0.26.0: A command-line application for interacting with git repositories
