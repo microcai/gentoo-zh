@@ -11,6 +11,6 @@ LICENSE=SoftMaker
 RDEPEND=app-admin/chrpath app-arch/xz-utils media-libs/mesa net-misc/curl x11-libs/libXrandr dev-util/desktop-file-utils dev-util/gtk-update-icon-cache media-libs/libglvnd x11-misc/xdg-utils
 RESTRICT=mirror strip
 SLOT=0
-SRC_URI=https://www.softmaker.net/down/softmaker-freeoffice-2021-1060-amd64.tgz
+SRC_URI=https://www.softmaker.net/down/softmaker-freeoffice-2021-1064-amd64.tgz
 _eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	pax-utils	91d47e5d20627c717aa878b9167c62a8	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
 _md5_=ccbd874137784ddc46ef09da28126a21
