@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-06-10 00:53:18 CST)
+(The last generation time: 2023-06-10 07:22:11 CST)
 
 ### Packages
 
@@ -510,9 +510,9 @@
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sci-electronics/jlc-assistant-bin            | 5.0.69                                    |        | https://www.jlc.com/portal/appDownloadsWithConfig.html                                  | JLC Order Assistant (binary package)
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- sci-electronics/lceda                        | 6.5.28                                    |        | https://lceda.cn/                                                                       | LCEDA (binary package)
+ sci-electronics/lceda                        | 6.5.29                                    |        | https://lceda.cn/                                                                       | LCEDA (binary package)
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- sci-electronics/lceda-pro                    | 2.0.17                                    |        | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
+ sci-electronics/lceda-pro                    | 2.0.30                                    |        | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sci-libs/libticalcs2                         | 9999                                      |        | http://lpg.ticalc.org/prj_tilp/                                                         | Library for communication with TI calculators
    sci-libs/libtifiles2                       | 9999                                      |  D, RD | http://lpg.ticalc.org/prj_tilp/                                                         | Library for TI calculator files
