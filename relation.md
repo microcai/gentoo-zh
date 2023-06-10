@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-06-11 05:47:12 CST)
+(The last generation time: 2023-06-11 07:52:37 CST)
 
 ### Packages
 
@@ -371,6 +371,8 @@
  net-dns/mosdns-cn-bin                        | 1.4.0                                     |        | https://github.com/IrineSistiana/mosdns-cn                                              | A DNS forwarder
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/phddns                               | 2.0.6.32828                               |        | http://hsk.oray.com/                                                                    | Phddns
+----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ net-dns/q                                    | 0.11.1                                    |        | https://github.com/natesales/q                                                          | A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/deepin-wine-qq                        | 9.5.2.27897                               |        | https://aur.archlinux.org/packages/deepin-wine-qq                                       | Tencent QQ on Deepin Wine(com.qq.im.deepin) For Gentoo
    app-emulation/deepin-wine5                 | 5.0.16-r1                                 |  D, RD | https://www.deepin.org                                                                  | Deepin wine5
