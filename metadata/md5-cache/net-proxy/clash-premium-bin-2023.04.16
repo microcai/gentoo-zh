@@ -9,5 +9,5 @@ LICENSE=all-rights-reserved
 RDEPEND=!net-proxy/clash
 SLOT=0
 SRC_URI=amd64? ( https://github.com/Dreamacro/clash/releases/download/premium/clash-linux-amd64-2023.04.16.gz ) arm64? ( https://github.com/Dreamacro/clash/releases/download/premium/clash-linux-arm64-2023.04.16.gz )
-_eclasses_=toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	5f4bb0758df2e483babf68cd517078ca
+_eclasses_=toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	5f4bb0758df2e483babf68cd517078ca
 _md5_=fc1036894e3f9472507315eee3ba3470

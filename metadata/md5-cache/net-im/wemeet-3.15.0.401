@@ -12,5 +12,5 @@ RDEPEND=dev-qt/qtconcurrent:5 dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtlocation:5
 RESTRICT=bindist test
 SLOT=0
 SRC_URI=amd64? ( mirror+https://updatecdn.meeting.qq.com/cos/f5610901e43a837d6dfab5701024dd13/TencentMeeting_0300000000_3.15.0.401_x86_64_default.publish.deb -> wemeet-3.15.0.401_amd64.deb ) arm64? ( mirror+https://updatecdn.meeting.qq.com/cos/369d6e28f19bfeaf11f13a138236f3f5/TencentMeeting_0300000000_3.15.0.401_arm64_default.publish.deb -> wemeet-3.15.0.401_arm64.deb )
-_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	aa6a4e924009232d8b78b31e932c30b5	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
+_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	aa6a4e924009232d8b78b31e932c30b5	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
 _md5_=be314338699edb35a5483ea2d59e30be
