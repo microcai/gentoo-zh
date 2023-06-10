@@ -49,7 +49,7 @@ src_unpack() {
 	# set yarn-offline-mirror to ${WORKDIR}/yarn_offline_mirror
 	echo "yarn-offline-mirror \"${WORKDIR}/yarn_offline_mirror\"" >> "${S}/gui/.yarnrc" || die
 	addpredict /usr/local
-	yarn install --offline --check-files || die "yarn offline install failed"
+	yarn install --offline --check-files --ignore-enbines || die "yarn offline install failed"
 }
 
 src_compile() {

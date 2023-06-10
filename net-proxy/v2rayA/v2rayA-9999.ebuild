@@ -38,7 +38,7 @@ src_unpack() {
 	# requires network
 	cd "${S}/gui" || die
 	#yarn config set registry https://registry.npmmirror.com || die
-	yarn install --check-files || die "yarn install failed"
+	yarn install --ignore-engines --check-files || die "yarn install failed"
 
 	# requires network
 	cd "${S}/service" || die
