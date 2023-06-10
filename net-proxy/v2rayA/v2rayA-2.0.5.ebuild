@@ -14,8 +14,8 @@ SRC_URI="
 # maintainer generated vendor
 # generated with https://github.com/liuyujielol/rei-overlay/blob/main/net-proxy/v2rayA/scripts/v2rayA_vendor_gen.sh
 SRC_URI+="
-	https://github.com/liuyujielol/vendors/releases/download/${PN}/${P}-yarn_mirror.tar.xz
-	https://github.com/liuyujielol/vendors/releases/download/${PN}/${P}-go-vendor.tar.gz
+	https://github.com/liangyongxiang/vendors/releases/download/${PN}/${P}-yarn_mirror.tar.gz
+	https://github.com/liangyongxiang/vendors/releases/download/${PN}/${P}-go-vendor.tar.gz
 "
 
 LICENSE="AGPL-3"
@@ -49,7 +49,7 @@ src_unpack() {
 	# set yarn-offline-mirror to ${WORKDIR}/yarn_offline_mirror
 	echo "yarn-offline-mirror \"${WORKDIR}/yarn_offline_mirror\"" >> "${S}/gui/.yarnrc" || die
 	addpredict /usr/local
-	yarn install --offline --check-files || die "yarn offline install failed"
+	yarn --ignore-engines install --offline --check-files || die "yarn offline install failed"
 }
 
 src_compile() {
