@@ -186,6 +186,7 @@ net-dns/dog 0.1.0: A command-line DNS client
 net-dns/libidn11 1.33: Internationalized Domain Names (IDN) implementation
 net-dns/mosdns-cn-bin 1.4.0: A DNS forwarder
 net-dns/phddns 2.0.6.32828: Phddns
+net-dns/q 0.11.1: A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
 net-im/deepin-wine-qq 9.5.2.27897: Tencent QQ on Deepin Wine(com.qq.im.deepin) For Gentoo
 net-im/deepin-wine-wechat 3.9.0.28-r3: Tencent WeChat on Deepin Wine For Gentoo
 net-im/dingtalk 1.4.0.20909 1.4.0.20909-r1 1.7.0.30424: Communication platform that supports video and audio conferencing
