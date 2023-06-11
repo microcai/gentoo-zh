@@ -135,9 +135,9 @@ kde-misc/plasma-applet-netspeed-widget 1.9 9999: Plasma 5 widget that displays t
 mail-client/thunderbird 106.0-r5: Thunderbird Mail Client
 media-fonts/Plangothic 0.8.5735: 遍黑体项目（Plangothic Project）
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
-media-fonts/iansui 0.943: An open-source Chinese font derived from Klee One (Fontworks).
+media-fonts/iansui 1.000: An open-source Chinese font derived from Klee One (Fontworks).
 media-fonts/jf-openhuninn 2.0: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
-media-fonts/lxgw-neo-xihei 1.010: A Chinese sans-serif font derived from IPAex Gothic.
+media-fonts/lxgw-neo-xihei 1.100: A Chinese sans-serif font derived from IPAex Gothic.
 media-fonts/nerd-fonts 3.0.0: Nerd Fonts is a project that patches developer targeted fonts with glyphs
 media-fonts/sarasa-gothic 0.40.5 0.40.7 0.41.0: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 media-fonts/sarasa-term-sc-nerd 1.1.0: Sarasa Mono SC font patched with Nerd fonts
@@ -222,7 +222,7 @@ net-print/pantum 1.1.94: 奔图打印机Linux驱动
 net-proxy/Xray 1.6.0 1.6.1: Xray, Penetrates Everything.
 net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
 net-proxy/clash 1.13.0: A rule-based tunnel in Go.
-net-proxy/clash-for-windows-bin 0.20.23 0.20.24: A Windows/macOS/Linux GUI based on Clash and Electron.
+net-proxy/clash-for-windows-bin 0.20.24 0.20.25: A Windows/macOS/Linux GUI based on Clash and Electron.
 net-proxy/clash-meta 1.14.4: Another Clash Kernel.
 net-proxy/clash-premium-bin 2023.04.16: Close-sourced pre-built Clash binary with TUN support
 net-proxy/clash-verge-bin 1.2.0 1.2.1 1.3.2: A Clash GUI based on tauri
