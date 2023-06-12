@@ -5,4 +5,7 @@
 		<name>gouwazi</name>
 		<email>gouwazi@protonmail.com</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">nilaoda/BBDown</remote-id>
+	</upstream>
 </pkgmetadata>
