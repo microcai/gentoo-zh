@@ -4,8 +4,8 @@
 EAPI=8
 inherit go-module
 
-DESCRIPTION="An offline tool for querying IP geographic information and CDN provider."
-HOMEPAGE="https://github.com/zu1k/nali"
+DESCRIPTION="内置支持 trzsz ( trz / tsz ) 的 ssh 客户端，支持选择（ 搜索 ）服务器进行登录"
+HOMEPAGE="https://github.com/trzsz/trzsz-ssh"
 
 SRC_URI="
 	https://github.com/trzsz/trzsz-ssh/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
