@@ -1,0 +1,14 @@
+[Unit]
+Description=A DNS forwarder
+ConditionFileIsExecutable=/etc/mosdns
+
+[Service]
+StartLimitInterval=5
+StartLimitBurst=10
+ExecStart=/usr/bin/mosdns "start" "--as-service" "-d" "/etc/mosdns" "-c" "/etc/mosdns/config.yaml"
+Restart=always
+RestartSec=120
+EnvironmentFile=-/etc/sysconfig/mosdns
+
+[Install]
+WantedBy=multi-user.target
