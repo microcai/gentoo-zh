@@ -1,0 +1,13 @@
+[Unit]
+Description=Aliyun ddns service
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+Restart=on-failure
+RestartSec=5s
+ExecStart=/usr/bin/aliddns -c /etc/aliddns/aliddns.yaml
+
+[Install]
+WantedBy=multi-user.target
