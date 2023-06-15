@@ -1,0 +1,12 @@
+BDEPEND=sys-apps/pnpm sys-devel/clang >=dev-vcs/git-1.8.2.1[curl] virtual/pkgconfig
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=A Modern Dashboard For dae
+EAPI=8
+HOMEPAGE=https://github.com/daeuniverse/daed
+INHERIT=git-r3 systemd
+LICENSE=MIT
+PROPERTIES=live
+RESTRICT=strip
+SLOT=0
+_eclasses_=git-r3	27e13c09a4c7e4c78ac812f74727e676	toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	5f4bb0758df2e483babf68cd517078ca
+_md5_=197e7a1b23106f45653849c3f6920a8e
