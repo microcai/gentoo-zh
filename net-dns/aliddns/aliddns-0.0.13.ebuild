@@ -7,12 +7,17 @@ inherit go-module systemd
 DESCRIPTION="aliyun ddns for golang"
 HOMEPAGE="https://github.com/OpenIoTHub/aliddns"
 
-SRC_URI="https://github.com/OpenIoTHub/aliddns/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="
+	https://github.com/OpenIoTHub/aliddns/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/OpenIoTHub/aliddns/commit/39f0375b669b6730c9bec5796e0fcfcf897670de.patch -> ${P}-custom-apiurl.patch
+"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~riscv"
 IUSE="systemd"
+
+PATCHES=("${DISTDIR}"/${P}-custom-apiurl.patch)
 
 src_compile() {
 	local ldflags="\
