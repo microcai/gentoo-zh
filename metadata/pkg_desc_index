@@ -140,7 +140,7 @@ media-fonts/iansui 1.000: An open-source Chinese font derived from Klee One (Fon
 media-fonts/jf-openhuninn 2.0: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 media-fonts/lxgw-neo-xihei 1.100: A Chinese sans-serif font derived from IPAex Gothic.
 media-fonts/nerd-fonts 3.0.0: Nerd Fonts is a project that patches developer targeted fonts with glyphs
-media-fonts/sarasa-gothic 0.40.5 0.40.7 0.41.0: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
+media-fonts/sarasa-gothic 0.40.5 0.40.7 0.41.2: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 media-fonts/sarasa-term-sc-nerd 1.1.0: Sarasa Mono SC font patched with Nerd fonts
 media-fonts/smiley-sans 1.1.1: An open-source font for Chinese.
 media-fonts/taipei-sans-tc 1.0: JT Foundry - Taipei Sans TC Beta font
@@ -253,6 +253,7 @@ sys-apps/aptly 1.4.0-r1 9999: A swiss army knife for Debian repository managemen
 sys-apps/mdp 9999: A command-line based markdown presentation tool
 sys-apps/pacman 6.0.1: Archlinux's binary package manager
 sys-apps/pacman-mirrorlist 20210509: Repository list for Archlinux's binary package manager
+sys-apps/pnpm 8.6.2: Fast, disk space efficient package manager
 sys-apps/yaourt 1.2.2: A pacman wrapper with extended features and AUR support
 sys-apps/zypper 1.14.60 9999: World's most powerful command line package manager
 sys-boot/ventoy-bin 1.0.91: A new multiboot USB solution
