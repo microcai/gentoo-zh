@@ -2,6 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <upstream>
-    <remote-id type="github">natesales/q</remote-id>
+    <remote-id type="github">IrineSistiana/mosdns</remote-id>
   </upstream>
 </pkgmetadata>
