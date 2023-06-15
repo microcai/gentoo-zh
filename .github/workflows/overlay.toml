@@ -761,6 +761,13 @@ source = "github"
 github = "shadowsocks/ChinaDNS"
 use_latest_release = true
 
+["net-dns/aliddns"]
+source = "github"
+github = "OpenIoTHub/aliddns"
+use_latest_tag = true
+prefix = "v"
+github_account = "peeweep"
+
 ["net-dns/dog"]
 source = "github"
 github = "ogham/dog"
