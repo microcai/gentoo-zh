@@ -12,5 +12,5 @@ RDEPEND=gui-libs/egl-wayland media-libs/fontconfig media-libs/libsamplerate dev-
 REQUIRED_USE=|| ( X wayland ) || ( pipewire pulseaudio )
 SLOT=0
 SRC_URI=https://looking-glass.io/artifact/B6/source -> looking-glass-0_beta6.tar.gz
-_eclasses_=toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	16483e58fadb0d47b4528f0aa7e171f6	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	76050953ad5b70d7e09a6ca55558db92	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	7fb5980de96325cbab639f5b2187357c	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f	linux-info	c4f1201b96a8a2c1f3b86cc8b2c71c91
+_eclasses_=toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	ad475baa777c9978fa035216c8264a10	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	76050953ad5b70d7e09a6ca55558db92	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	7fb5980de96325cbab639f5b2187357c	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f	linux-info	c4f1201b96a8a2c1f3b86cc8b2c71c91
 _md5_=5b5622a0bf73fb6b5a50902a980c18e7
