@@ -15,8 +15,11 @@ SLOT="0"
 KEYWORDS=""
 RESTRICT="strip"
 
-# DEPEND=""
-# RDEPEND="${DEPEND}"
+DEPEND="
+	dev-libs/v2ray-domain-list-community-bin
+	dev-libs/v2ray-geoip-bin
+"
+RDEPEND="${DEPEND}"
 BDEPEND="
 	sys-apps/pnpm
 	sys-devel/clang
@@ -40,4 +43,6 @@ src_install(){
 	dobin daed
 	systemd_dounit install/daed.service
 	keepdir /etc/dae/
+	dosym -r "/usr/share/v2ray/geosite.dat" /usr/share/daed/geosite.dat
+	dosym -r "/usr/share/v2ray/geoip.dat" /usr/share/daed/geoip.dat
 }
