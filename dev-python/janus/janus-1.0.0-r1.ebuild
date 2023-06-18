@@ -9,7 +9,6 @@ inherit distutils-r1 pypi
 
 DESCRIPTION="Implementation of the asyncio (PEP 3156) event-loop with Qt"
 HOMEPAGE="https://github.com/aio-libs/janus"
-MY_P="${P/_alpha/a}"
 IUSE="test"
 RESTRICT="!test? ( test )"
 
