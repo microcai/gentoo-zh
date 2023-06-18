@@ -9,8 +9,6 @@ inherit distutils-r1 pypi
 
 DESCRIPTION="netease cloud music support for feeluown"
 HOMEPAGE="https://github.com/feeluown/feeluown-netease"
-MY_P="${P/-/_}"
-S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-3"
 SLOT="0"
