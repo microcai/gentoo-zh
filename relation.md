@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-06-19 03:31:00 CST)
+(The last generation time: 2023-06-19 19:32:49 CST)
 
 ### Packages
 
@@ -491,7 +491,8 @@
                                               | 0.2.0_rc2                                 |        |                                                                                         |
                                               | 9999                                      |        |                                                                                         |
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/daed                               | 9999                                      |        | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
+ net-proxy/daed                               | 0.1.0_rc1                                 |        | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
+                                              | 9999                                      |        |                                                                                         |
    sys-apps/pnpm                              | 8.6.2                                     | BD     | https://pnpm.io                                                                         | Fast, disk space efficient package manager
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/make-proxy                         | 2.0.0                                     |        | https://github.com/yueyoum/make-proxy                                                   | Socks5 proxy written in Erlang
