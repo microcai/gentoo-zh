@@ -4,6 +4,6 @@
 	<!-- maintainer-needed -->
 	<upstream>
 		<remote-id type="github">feeluown/feeluown-local</remote-id>
-		<remote-id type="pypi">feeluown-local</remote-id>
+		<remote-id type="pypi">fuo-local</remote-id>
 	</upstream>
 </pkgmetadata>
