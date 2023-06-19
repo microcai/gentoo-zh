@@ -1,10 +1,10 @@
-BDEPEND=python_targets_pypy3? ( >=dev-python/pypy3-7.3.11_p1:0= ) python_targets_python3_10? ( >=dev-lang/python-3.10.11:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.3:3.11 ) >=dev-python/setuptools-65.7.0[python_targets_pypy3(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?]
+BDEPEND=python_targets_pypy3? ( >=dev-python/pypy3-7.3.11_p1:0= ) python_targets_python3_10? ( >=dev-lang/python-3.10.11:3.10 ) python_targets_python3_11? ( >=dev-lang/python-3.11.3:3.11 ) >=dev-python/gpep517-13[python_targets_pypy3(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] >=dev-python/setuptools-67.7.2[python_targets_pypy3(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] >=dev-python/wheel-0.40.0[python_targets_pypy3(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?]
 DEFINED_PHASES=compile configure install prepare test
 DEPEND=dev-python/setuptools[python_targets_pypy3(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] test? ( dev-python/pytest[python_targets_pypy3(-)?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] )
 DESCRIPTION=Implementation of the asyncio (PEP 3156) event-loop with Qt
 EAPI=7
 HOMEPAGE=https://github.com/aio-libs/janus
-INHERIT=distutils-r1
+INHERIT=distutils-r1 pypi
 IUSE=test python_targets_pypy3 python_targets_python3_10 python_targets_python3_11
 KEYWORDS=~amd64
 LICENSE=BSD
@@ -12,6 +12,6 @@ RDEPEND=python_targets_pypy3? ( >=dev-python/pypy3-7.3.11_p1:0= ) python_targets
 REQUIRED_USE=|| ( python_targets_pypy3 python_targets_python3_10 python_targets_python3_11 )
 RESTRICT=!test? ( test )
 SLOT=0
-SRC_URI=mirror://pypi/j/janus/janus-1.0.0.tar.gz
-_eclasses_=out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	bddcb51b74f4a76724ff7cf8e7388869	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	76050953ad5b70d7e09a6ca55558db92	eapi8-dosym	5ac4857ad078256d939c44f7c64197a9	python-utils-r1	a34d5f83235297b76d71eaf8deb53768	python-r1	3c6cd0f418ba702c186a9865b85e704d	distutils-r1	2d32e797ee29a8ffdd452f4a85860666
-_md5_=e3d385f6ff92141a37092ff5ae5321f1
+SRC_URI=https://files.pythonhosted.org/packages/source/j/janus/janus-1.0.0.tar.gz
+_eclasses_=out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	bddcb51b74f4a76724ff7cf8e7388869	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	76050953ad5b70d7e09a6ca55558db92	eapi8-dosym	5ac4857ad078256d939c44f7c64197a9	python-utils-r1	a34d5f83235297b76d71eaf8deb53768	python-r1	3c6cd0f418ba702c186a9865b85e704d	distutils-r1	2d32e797ee29a8ffdd452f4a85860666	pypi	6b97d2db40ff6be180030687e6003199
+_md5_=322676312643ec7a35e67622d19eaac3
