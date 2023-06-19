@@ -6,10 +6,11 @@
 	</maintainer>
 	<use>
 		<flag name='kuwo'>add kuwo music support for feeluown</flag>
-		<flag name='local'>add local music support for feeluown</flag>
 		<flag name='netease'>add netease cloud music support for feeluown</flag>
 		<flag name='qqmusic'>add qq music support for feeluown</flag>
 		<flag name='webengine'>add support to login via web page</flag>
+		<flag name='bilibili'>add support for bilibili</flag>
+		<flag name='ytmusic'>add support for youtube music</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">feeluown/FeelUOwn</remote-id>
