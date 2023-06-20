@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python3_{9..12} pypy3 )
 
 inherit distutils-r1 pypi
 
-DESCRIPTION=" A lightweight, dependency-free Python library (and command-line utility) for downloading YouTube Videos. "
+DESCRIPTION="Python tools for downloading YouTube Videos"
 HOMEPAGE="https://github.com/pytube/pytube"
 IUSE="test"
 RESTRICT="!test? ( test )"
