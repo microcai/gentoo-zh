@@ -23,6 +23,10 @@ PDEPEND="
 	media-sound/feeluown
 "
 
+PATCHES=(
+	"${FILESDIR}/${PN}-0.1.5-replace-pycryptodomex.patch"
+)
+
 python_install_all() {
 	distutils-r1_python_install_all
 }
