@@ -3,7 +3,7 @@
 
 EAPI=7
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{9..11} pypy3 )
+PYTHON_COMPAT=( python3_{9..12} pypy3 )
 
 inherit distutils-r1 pypi
 
@@ -12,7 +12,7 @@ HOMEPAGE="https://github.com/pytube/pytube"
 IUSE="test"
 RESTRICT="!test? ( test )"
 
-LICENSE="Unlicense license"
+LICENSE="Unlicense"
 SLOT="0"
 KEYWORDS="~amd64"
 
