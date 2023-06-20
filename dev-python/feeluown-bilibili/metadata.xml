@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<!-- maintainer-needed -->
 	<upstream>
-		<remote-id type="github">feeluown/feeluown-local</remote-id>
-		<remote-id type="pypi">fuo-local</remote-id>
+		<remote-id type="github">feeluown/feeluown-bilibili</remote-id>
+		<remote-id type="pypi">feeluown-bilibili</remote-id>
 	</upstream>
 </pkgmetadata>

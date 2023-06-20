@@ -3,7 +3,7 @@
 
 EAPI=8
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{9..11} )
+PYTHON_COMPAT=( python3_{10..11} )
 
 inherit distutils-r1 desktop
 
@@ -16,7 +16,7 @@ SRC_URI="https://github.com/${PN}/FeelUOwn/archive/refs/tags/v${PV}.tar.gz -> ${
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+netease +local +qqmusic +kuwo +webengine"
+IUSE="+netease +qqmusic +kuwo +webengine +ytmusic +bilibili"
 
 RDEPEND="
 	dev-python/janus[${PYTHON_USEDEP}]
@@ -32,9 +32,10 @@ RDEPEND="
 PDEPEND="
 	media-video/mpv[libmpv]
 	netease? ( dev-python/fuo-netease[${PYTHON_USEDEP}] )
-	local? ( dev-python/fuo-local[${PYTHON_USEDEP}] )
 	qqmusic? ( dev-python/fuo-qqmusic[${PYTHON_USEDEP}] )
 	kuwo? ( dev-python/fuo-kuwo[$PYTHON_USEDEP] )
+	bilibili? ( dev-python/feeluown-bilibili[$PYTHON_USEDEP] )
+	ytmusic? ( dev-python/fuo-ytmusic[$PYTHON_USEDEP] )
 	webengine? ( dev-python/PyQtWebEngine[$PYTHON_USEDEP] )
 "
 
