@@ -6,7 +6,7 @@ EAPI=8
 DESCRIPTION="一款命令行式哔哩哔哩下载器"
 HOMEPAGE="https://github.com/nilaoda/BBDown"
 SRC_URI="
-	amd64? ( https://github.com/nilaoda/BBDown/releases/download/${PV}/BBDown_${PV}_20230608_linux-x64.zip -> ${P}-amd64.zip )
+	amd64? ( https://github.com/nilaoda/BBDown/releases/download/${PV}/BBDown_${PV}_20230622_linux-x64.zip -> ${P}-amd64.zip )
 "
 
 LICENSE="MIT"
