@@ -19,8 +19,8 @@ RESTRICT="mirror"
 DEPEND=""
 RDEPEND="${DEPEND}
 	!net-proxy/v2ray-bin
-	dev-libs/v2ray-geoip-bin
-	dev-libs/v2ray-domain-list-community-bin"
+	app-alternatives/v2ray-geoip
+	app-alternatives/v2ray-geosite"
 BDEPEND="dev-lang/go"
 
 S="${WORKDIR}/${PN}-core-${PV}"

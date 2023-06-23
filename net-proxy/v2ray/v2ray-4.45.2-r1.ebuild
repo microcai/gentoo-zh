@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2022-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -23,11 +23,8 @@ BDEPEND="
 DEPEND=""
 RDEPEND="
 	!net-proxy/v2ray-bin
-	dev-libs/v2ray-geoip-bin
-	|| (
-		dev-libs/v2ray-domain-list-community-bin
-		dev-libs/v2ray-domain-list-community
-	)
+	app-alternatives/v2ray-geoip
+	app-alternatives/v2ray-geosite
 "
 
 S="${WORKDIR}/${PN}-core-${PV}"

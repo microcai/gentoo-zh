@@ -21,6 +21,6 @@ BDEPEND=""
 S="${WORKDIR}"
 
 src_install() {
-	insinto /usr/share/v2ray
-	newins "${P}.dat" geosite.dat
+	insinto /usr/share/geosite/
+	newins "${P}.dat" v2fly.dat
 }

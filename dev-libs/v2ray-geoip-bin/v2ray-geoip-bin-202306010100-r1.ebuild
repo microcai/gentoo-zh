@@ -20,6 +20,6 @@ BDEPEND=""
 S="${WORKDIR}"
 
 src_install() {
-	insinto /usr/share/v2ray
-	newins "${DISTDIR}/${P}.dat" geoip.dat
+	insinto /usr/share/geoip/
+	newins "${DISTDIR}/${P}.dat" v2fly.dat
 }
