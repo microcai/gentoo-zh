@@ -1,6 +1,8 @@
 #!/bin/bash
 # https://aur.archlinux.org/cgit/aur.git/tree/start.sh?h=linuxqq-nt-bwrap
 
+export LD_PRELOAD=/usr/lib/gcc/x86_64-pc-linux-gnu/12/libstdc++.so.6
+
 USER_RUN_DIR="/run/user/$(id -u)"
 XAUTHORITY="${XAUTHORITY:-$HOME/.Xauthority}"
 XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
