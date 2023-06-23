@@ -20,8 +20,8 @@ SRC_URI="
 RESTRICT="mirror"
 
 DEPEND="
-	dev-libs/v2ray-domain-list-community-bin
-	dev-libs/v2ray-geoip-bin
+	app-alternatives/v2ray-geoip
+	app-alternatives/v2ray-geosite
 	app-arch/p7zip
 "
 RDEPEND="$DEPEND"

@@ -24,9 +24,8 @@ RESRICT="mirror"
 
 DEPEND="
 	!net-proxy/v2ray
-	!dev-libs/v2ray-geoip-bin
-	!dev-libs/v2ray-domain-list-community-bin
-	!dev-libs/v2ray-domain-list-community
+	!app-alternatives/v2ray-geoip
+	!app-alternatives/v2ray-geosite
 "
 RDEPEND="${DEPEND}"
 BDEPEND="app-arch/unzip"

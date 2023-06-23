@@ -16,8 +16,8 @@ MINKV="5.8"
 EGIT_REPO_URI="https://github.com/daeuniverse/dae.git"
 
 DEPEND="
-	dev-libs/v2ray-domain-list-community-bin
-	dev-libs/v2ray-geoip-bin
+	app-alternatives/v2ray-geoip
+	app-alternatives/v2ray-geosite
 "
 RDEPEND="$DEPEND"
 BDEPEND="sys-devel/clang"
