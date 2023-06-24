@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-06-24 10:58:58 CST)
+(The last generation time: 2023-06-24 11:06:17 CST)
 
 ### Packages
 
@@ -239,10 +239,6 @@
  dev-vcs/gitoxide                             | 0.27.0                                    |        | https://github.com/Byron/gitoxide                                                       | A command-line application for interacting with git repositories
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gptcommit                            | 0.5.9                                     |        | https://github.com/zurawiki/gptcommit                                                   | A git prepare-commit-msg hook for summarizing commits with GPT-3.
-----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/lazygit                              | 0.35                                      |        | https://github.com/jesseduffield/lazygit                                                | lazygit, a simple terminal UI for git commands
-----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/lazygit-bin                          | 0.35                                      |        | https://github.com/jesseduffield/lazygit                                                | lazygit, a simple terminal UI for git commands
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  games-board/othello                          | 0.2.2                                     |        | http://othello-game.sourceforge.net                                                     | Othello is a classic strategy game, also known as Reversi
 ----------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
