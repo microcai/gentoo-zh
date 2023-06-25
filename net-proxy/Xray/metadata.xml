@@ -2,10 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>chn@chn.moe</email>
-		<name>Haonan Chen</name>
+		<email>me@puqns67.icu</email>
+		<name>Puqns67</name>
 	</maintainer>
 	<upstream>
+		<doc>https://xtls.github.io/config</doc>
+		<bugs-to>https://github.com/XTLS/Xray-core/issues</bugs-to>
 		<remote-id type="github">XTLS/Xray-core</remote-id>
 	</upstream>
 </pkgmetadata>
