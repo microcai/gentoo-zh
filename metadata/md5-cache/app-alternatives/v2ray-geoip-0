@@ -1,0 +1,13 @@
+DEFINED_PHASES=install
+DESCRIPTION=symlink for v2ray-geoip
+EAPI=8
+HOMEPAGE=https://wiki.gentoo.org/wiki/Project:Base/Alternatives
+INHERIT=app-alternatives
+IUSE=+v2fly
+KEYWORDS=~amd64 ~arm ~arm64 ~riscv ~x86
+LICENSE=CC0-1.0
+RDEPEND=v2fly? ( dev-libs/v2ray-geoip-bin )
+REQUIRED_USE=^^ ( v2fly )
+SLOT=0
+_eclasses_=app-alternatives	7e9cb9b9eda5c46d0e04f3c992226ff2
+_md5_=9d077c89cd1cf100c0df2d77b7925bf0

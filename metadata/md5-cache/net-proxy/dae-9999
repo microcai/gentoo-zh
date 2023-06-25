@@ -1,14 +1,14 @@
 BDEPEND=sys-devel/clang >=dev-vcs/git-1.8.2.1[curl] >=dev-lang/go-1.18 app-arch/unzip virtual/pkgconfig
 DEFINED_PHASES=compile install pretend setup unpack
-DEPEND=dev-libs/v2ray-domain-list-community-bin dev-libs/v2ray-geoip-bin
+DEPEND=app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite
 DESCRIPTION=A lightweight and high-performance transparent proxy solution based on eBPF
 EAPI=8
 HOMEPAGE=https://github.com/daeuniverse/dae
 INHERIT=linux-info git-r3 go-module systemd
 LICENSE=AGPL-3
 PROPERTIES=live
-RDEPEND=dev-libs/v2ray-domain-list-community-bin dev-libs/v2ray-geoip-bin
+RDEPEND=app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite
 RESTRICT=strip
 SLOT=0
 _eclasses_=toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	linux-info	c4f1201b96a8a2c1f3b86cc8b2c71c91	git-r3	27e13c09a4c7e4c78ac812f74727e676	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	go-module	8624eede24936fd7666e5298e5332f22	systemd	5f4bb0758df2e483babf68cd517078ca
-_md5_=8e20c5d55daecd91e8e2467beebf86ef
+_md5_=8dd55e321d10c3f16e96bf95c14ca9a1
