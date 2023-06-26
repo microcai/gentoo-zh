@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-06-25 12:08:20 CST)
+(The last generation time: 2023-06-26 15:00:11 CST)
 
 ### Packages
 
@@ -377,7 +377,7 @@
                                             | 5.1.3                                     |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/mosdns-cn-bin                      | 1.4.0                                     |        | https://github.com/IrineSistiana/mosdns-cn                                              | A DNS forwarder
-   dev-libs/v2ray-domain-list-community-bin | 20230601044045-r1                         |  D, RD | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+   dev-libs/v2ray-domain-list-community-bin | 20230625154712                            |  D, RD | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
    dev-libs/v2ray-geoip-bin                 | 202306010100-r1                           |  D, RD | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/phddns                             | 2.0.6.32828                               |        | http://hsk.oray.com/                                                                    | Phddns
