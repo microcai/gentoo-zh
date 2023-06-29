@@ -10,9 +10,9 @@ HOMEPAGE="https://wemeet.qq.com"
 
 SRC_URI="
 	amd64? ( mirror+https://updatecdn.meeting.qq.com/cos/\
-f5610901e43a837d6dfab5701024dd13/TencentMeeting_0300000000_${PV}_x86_64_default.publish.deb -> ${P}_amd64.deb )
+22516e32c067130e73b91ea0793495ae/TencentMeeting_0300000000_${PV}_x86_64_default.publish.deb -> ${P}_amd64.deb )
 	arm64? ( mirror+https://updatecdn.meeting.qq.com/cos/\
-369d6e28f19bfeaf11f13a138236f3f5/TencentMeeting_0300000000_${PV}_arm64_default.publish.deb -> ${P}_arm64.deb )
+9d3403df3db67092990ce8ad9438a53a/TencentMeeting_0300000000_${PV}_arm64_default.publish.deb -> ${P}_arm64.deb )
 "
 
 LICENSE="wemeet_license"
@@ -22,6 +22,7 @@ KEYWORDS="-* ~amd64 ~arm64"
 RESTRICT="bindist test"
 
 DEPEND="
+	dev-libs/wayland
 	dev-qt/qtconcurrent:5
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
