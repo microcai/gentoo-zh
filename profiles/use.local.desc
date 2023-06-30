@@ -2,7 +2,9 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+app-alternatives/v2ray-geoip:loyalsoldier - use dev-libs/v2ray-rules-dat
 app-alternatives/v2ray-geoip:v2fly - use dev-libs/v2ray-geoip-bin
+app-alternatives/v2ray-geosite:loyalsoldier - use dev-libs/v2ray-rules-dat
 app-alternatives/v2ray-geosite:v2fly - use dev-libs/v2ray-domain-list-community-bin
 app-emulation/deepin-wine-plugin:virtual-pkg - With deepin-wine-plugin-virtual package
 app-emulation/looking-glass:backtrace - Enable backtrace support
@@ -84,6 +86,8 @@ dev-db/mongodb:server-js - Build mongod with JavaScript support. (use spidermonk
 dev-db/mongodb:tcmalloc - Use tcmalloc as allocator.
 dev-db/mongodb:tcmalloc-experimental - Use tcmalloc-experimental as allocator.
 dev-db/mongodb:tools - Install the MongoDB tools (mongoimport, mongodump...) from app-admin/mongo-tools
+dev-libs/v2ray-rules-dat:geoip - Install geoip.dat
+dev-libs/v2ray-rules-dat:geosite - Install geosite.dat
 dev-python/conda:user - use user's home directory as default pkgs and envs prefix
 dev-python/nvchecker:ini - convert your old configuration files from ini to toml
 dev-python/nvchecker:notify - enable nvchecker-notify support
