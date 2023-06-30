@@ -9,7 +9,7 @@ HOMEPAGE="https://github.com/MetaCubeX/Clash.Meta"
 
 SRC_URI="
 	https://github.com/MetaCubeX/Clash.Meta/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
+	https://github.com/st0nie/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
 "
 
 RESTRICT="mirror"
