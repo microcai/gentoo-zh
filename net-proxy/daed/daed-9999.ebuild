@@ -21,14 +21,18 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
-	sys-apps/pnpm
+	webui? ( sys-apps/pnpm )
 	sys-devel/clang
 "
+
+IUSE="+webui"
 
 src_unpack(){
 	git-r3_src_unpack
 	cd ${P} || die
-	pnpm install || die
+	if use webui; then
+		pnpm install || die
+	fi
 	cd wing || die
 	ego mod download -modcacherw
 	cd dae-core || die
@@ -36,12 +40,22 @@ src_unpack(){
 }
 
 src_compile(){
-	GO_ROOT="${S}" emake CC=clang CFLAGS="$CFLAGS -fno-stack-protector"
+	if ! use webui; then
+		cd wing || die
+	fi
+	GO_ROOT="${S}" emake CC=clang CFLAGS="$CFLAGS -fno-stack-protector" APPNAME="${PN}" VERSION="${PV}"
 }
 
 src_install(){
-	dobin daed
-	systemd_dounit install/daed.service
+	local service=install/daed.service
+	if use webui; then
+		dobin daed
+		systemd_dounit $service
+	else
+		dobin wing/dae-wing
+		sed -i "s!/usr/bin/daed!/usr/bin/dae-wing!" $service || die
+		systemd_newunit $service dae-wing.service
+	fi
 	keepdir /etc/daed/
 	dosym -r "/usr/share/v2ray/geosite.dat" /usr/share/daed/geosite.dat
 	dosym -r "/usr/share/v2ray/geoip.dat" /usr/share/daed/geoip.dat
