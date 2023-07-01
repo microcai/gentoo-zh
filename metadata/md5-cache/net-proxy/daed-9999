@@ -1,14 +1,15 @@
-BDEPEND=sys-apps/pnpm sys-devel/clang >=dev-vcs/git-1.8.2.1[curl] >=dev-lang/go-1.18 app-arch/unzip virtual/pkgconfig
+BDEPEND=webui? ( sys-apps/pnpm ) sys-devel/clang >=dev-vcs/git-1.8.2.1[curl] >=dev-lang/go-1.18 app-arch/unzip virtual/pkgconfig
 DEFINED_PHASES=compile install unpack
 DEPEND=app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite
 DESCRIPTION=A Modern Dashboard For dae
 EAPI=8
 HOMEPAGE=https://github.com/daeuniverse/daed
 INHERIT=git-r3 go-module systemd
+IUSE=+webui
 LICENSE=MIT AGPL-3
 PROPERTIES=live
 RDEPEND=app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite
 RESTRICT=strip strip
 SLOT=0
 _eclasses_=git-r3	27e13c09a4c7e4c78ac812f74727e676	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-module	8624eede24936fd7666e5298e5332f22	systemd	5f4bb0758df2e483babf68cd517078ca
-_md5_=dcf9e79f73888ccb81ebc4f2f61c9bcb
+_md5_=adfae8b874796a0b9dfc341d44e9f4a2
