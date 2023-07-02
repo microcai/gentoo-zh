@@ -10,5 +10,5 @@ LICENSE=BSD-1 GPL-2+ LGPL-2+ MIT
 RDEPEND=app-i18n/fcitx:5
 SLOT=5
 SRC_URI=https://download.fcitx-im.org/fcitx5/libime/libime-1.0.17_dict.tar.xz
-_eclasses_=toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	ad475baa777c9978fa035216c8264a10	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	76050953ad5b70d7e09a6ca55558db92	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	1abaebfe913f48975739281ab7d7ab75
+_eclasses_=toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	ad475baa777c9978fa035216c8264a10	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	76050953ad5b70d7e09a6ca55558db92	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	6c921d868d090cc18e142a396f66f74a
 _md5_=d5c5d760f28a4b76ac16613bf80e6ac7
