@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-07-01 11:56:34 CST)
+(The last generation time: 2023-07-02 23:03:04 CST)
 
 ### Packages
 
@@ -451,7 +451,7 @@
  net-misc/remmina-plugin-rustdesk           | 1.0.0.0-r1                                |        | http://www.muflone.com/remmina-plugin-rustdesk/                                         | A protocol plugin for Remmina to launch a Rustdesk connection.
    net-misc/rustdesk                        | 1.2.0                                     |  D, RD | https://rustdesk.com/                                                                   | Open source virtual / remote desktop infrastructure for everyone
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/tssh                              | 0.1.4                                     |        | https://github.com/trzsz/trzsz-ssh                                                      | 内置支持 trzsz ( trz / tsz ) 的 ssh 客户端，支持选择（ 搜索 ）服务器进行登录
+ net-misc/tssh                              | 0.1.5                                     |        | https://github.com/trzsz/trzsz-ssh                                                      | 内置支持 trzsz ( trz / tsz ) 的 ssh 客户端，支持选择（ 搜索 ）服务器进行登录
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/you-get                           | 9999                                      |        | http://www.soimort.org/you-get                                                          | A video downloader for YouTube, Youku, niconico and a few other sites
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -489,8 +489,7 @@
                                             | 1.3.2                                     |        |                                                                                         |
    net-proxy/clash                          | 1.13.0                                    | RD     | https://github.com/Dreamacro/clash                                                      | A rule-based tunnel in Go.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/dae                              | 0.1.10_p1-r1                              |        | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
-                                            | 0.2.0_rc4                                 |        |                                                                                         |
+ net-proxy/dae                              | 0.2.0                                     |        | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/daed                             | 0.1.0-r1                                  |        | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
