@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-07-02 23:03:34 CST)
+(The last generation time: 2023-07-04 11:57:52 CST)
 
 ### Packages
 
@@ -580,8 +580,8 @@
                                             | 6.3.9                                     |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                      | 3-r11                                     |        |                                                                                         | Virtual for Linux kernel sources
-   sys-kernel/liquorix-sources              | 6.2.14                                    | RD     | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
-                                            | 6.3.6                                     |        |                                                                                         |
+   sys-kernel/liquorix-sources              | 6.3.6                                     | RD     | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
+                                            | 6.4.1                                     |        |                                                                                         |
    sys-kernel/xanmod-kernel                 | 6.1.33                                    | RD     | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
                                             | 6.1.34                                    |        |                                                                                         |
                                             | 6.1.35                                    |        |                                                                                         |
