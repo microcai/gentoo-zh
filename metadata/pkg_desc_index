@@ -130,7 +130,7 @@ dev-util/tauri-cli 1.3.1: Command line interface for building Tauri apps
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-util/zprint-bin 1.2.7: Clojure and Clojurescript source code formatter
 dev-vcs/gitoxide 0.27.0: A command-line application for interacting with git repositories
-dev-vcs/gptcommit 0.5.9: A git prepare-commit-msg hook for summarizing commits with GPT-3.
+dev-vcs/gptcommit 0.5.10: A git prepare-commit-msg hook for summarizing commits with GPT-3.
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-misc/oh-my-git-bin 0.6.5: An interactive Git learning game!
 games-util/winegame-client-bin 0.5.10.5: An open source gaming platform for GNU/Linux
@@ -184,7 +184,7 @@ media-video/tenvideo 1.0.10: Tencent videos
 net-analyzer/besttrace-bin 1.3.2-r1: 附带链路可视化的 traceroute 工具
 net-analyzer/nali 0.7.3: An offline tool for querying IP geographic information and CDN provider.
 net-analyzer/realitlscanner 0.1.0: A TLS server scanner for Reality
-net-dns/aliddns 0.0.16: aliyun ddns for golang
+net-dns/aliddns 0.0.20: aliyun ddns for golang
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
 net-dns/dog 0.1.0: A command-line DNS client
