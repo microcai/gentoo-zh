@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -8,7 +8,7 @@ DESCRIPTION="A rule-based tunnel in Go."
 HOMEPAGE="https://github.com/Dreamacro/clash"
 
 SRC_URI="https://github.com/Dreamacro/clash/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz"
+	https://github.com/Linerre/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz"
 
 RESTRICT="mirror"
 
@@ -31,7 +31,7 @@ GO_CPU_FLAGS_X86="
 IUSE="goamd64 geoip ${GO_CPU_FLAGS_X86[@]}"
 REQUIRED_USE="!amd64? ( !goamd64 )"
 
-BDEPEND=">=dev-lang/go-1.18:="
+BDEPEND=">=dev-lang/go-1.20:="
 RDEPEND="!arm64? (
 		geoip? ( net-misc/geoipupdate )
 )"
