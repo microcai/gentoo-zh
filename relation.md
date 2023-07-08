@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-07-08 12:47:59 CST)
+(The last generation time: 2023-07-08 14:19:38 CST)
 
 ### Packages
 
@@ -151,7 +151,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-pda/ipadcharge                         | 9999                                      |        | https://github.com/mkorenkov/ipad_charge                                                | Enables USB charging for Apple devices.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-shells/zsh-theme-powerlevel10k         | 1.18.0                                    |        | https://github.com/romkatv/powerlevel10k                                                | Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
+ app-shells/zsh-theme-powerlevel10k         | 1.19.0                                    |        | https://github.com/romkatv/powerlevel10k                                                | Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
    app-shells/gitstatus                     | 1.5.4                                     |  D, RD | https://github.com/romkatv/gitstatus                                                    | Git status for Bash and Zsh prompt
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-text/cajviewer                         | 1.0.3.0                                   |        | http://cajviewer.cnki.net                                                               | Document Viewer for CAJ, KDH, NH, TEB and PDF format
@@ -264,7 +264,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/jf-openhuninn                  | 2.0                                       |        | https://justfont.com/huninn/                                                            | An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/lxgw-neo-xihei                 | 1.102                                     |        | https://github.com/lxgw/LxgwNeoXiHei                                                    | A Chinese sans-serif font derived from IPAex Gothic.
+ media-fonts/lxgw-neo-xihei                 | 1.102.1                                   |        | https://github.com/lxgw/LxgwNeoXiHei                                                    | A Chinese sans-serif font derived from IPAex Gothic.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/nerd-fonts                     | 3.0.0                                     |        | https://github.com/ryanoasis/nerd-fonts                                                 | Nerd Fonts is a project that patches developer targeted fonts with glyphs
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
