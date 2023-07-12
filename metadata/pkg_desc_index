@@ -71,7 +71,7 @@ app-misc/keyd 2.4.3: A key remapping daemon for linux
 app-misc/rmtrash 1.14: trash-put made compatible to GNUs rm and rmdir
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/xmind 22.11.3656: Brainstorming and Mind Mapping Software
-app-misc/yq-bin 4.30.6 4.34.1: yq is a portable command-line YAML, JSON and XML processor
+app-misc/yq-bin 4.30.6 4.34.2: yq is a portable command-line YAML, JSON and XML processor
 app-mobilephone/scrcpy 1.25 2.1: Display and control your Android device
 app-office/bytedance-feishu 4.11.6.2 5.9.18 5.14.14 5.26.13-r1: feishu - ByteDance's enterprise collaboration platform
 app-office/freeoffice 1062 1064: A complete, free Microsoft Office-compatible alternative office suite.
@@ -175,7 +175,7 @@ media-sound/netease-cloud-music-gtk 1.2.2 2.1.0 2.2.0: netease cloud music playe
 media-sound/qqmusic 1.1.5: Tencent QQ Music, converted from .deb package
 media-sound/termusic 0.7.6 0.7.7: Terminal Music Player written in Rust.
 media-sound/yesplaymusic-bin 0.4.6 0.4.7: A third party music player for Netease Music
-media-sound/youtube-music-bin 1.18.0: YouTube Music Desktop App bundled with custom plugins
+media-sound/youtube-music-bin 1.20.0: YouTube Music Desktop App bundled with custom plugins
 media-video/amdgpu-pro-amf 1.4.29.1538781: AMD's closed source Advanced Media Framework (AMF) driver
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/bilibili 1.10.1: Based on the Bilibli offcial client to linux version, support roaming
@@ -269,15 +269,15 @@ sys-fs/ssdfs-tools 4.09: userspace tools for SSDFS
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/liquorix-sources 6.3.6 6.4.1: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 34-r1: Modular initramfs image creation utility
-sys-kernel/xanmod-kernel 6.1.33 6.1.34 6.1.35 6.3.8 6.3.9 6.3.10: XanMod lts kernel built with Gentoo patches and cjktty
+sys-kernel/xanmod-kernel 6.1.38 6.3.12: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 6.0.11: XanMod RT sources and CJKTTY options.
-sys-kernel/xanmod-sources 6.1.33 6.1.34 6.1.35 6.3.8 6.3.9 6.3.10: Full XanMod source, including the Gentoo patchset and other patch options.
+sys-kernel/xanmod-sources 6.1.38 6.3.12: Full XanMod source, including the Gentoo patchset and other patch options.
 sys-kernel/zenpower 0.1.12-r1: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libsolv 0.7.24 9999: Library for solving packages and reading repositories
 sys-libs/libzypp 17.31.11 9999: ZYpp Package Management library
 sys-power/tlpui 1.5.0_p6: A GTK user interface for TLP written in Python
-virtual/dist-kernel 6.1.33 6.1.34 6.1.35 6.3.8 6.3.9 6.3.10: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 6.1.38 6.3.12: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 www-apps/chatgpt-desktop 1.0.0: ChatGPT Desktop Application
 www-apps/openvscode-server-bin 1.75.1: VS Code that runs a server on remote and allows access through a web browser
