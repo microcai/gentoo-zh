@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-07-10 14:39:06 CST)
+(The last generation time: 2023-07-12 16:45:35 CST)
 
 ### Packages
 
@@ -133,7 +133,7 @@
  app-misc/xmind                             | 22.11.3656                                |        | https://www.xmind.net                                                                   | Brainstorming and Mind Mapping Software
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/yq-bin                            | 4.30.6                                    |        | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
-                                            | 4.34.1                                    |        |                                                                                         |
+                                            | 4.34.2                                    |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-mobilephone/scrcpy                     | 1.25                                      |        | https://blog.rom1v.com/2018/03/introducing-scrcpy/                                      | Display and control your Android device
                                             | 2.1                                       |        |                                                                                         |
@@ -347,7 +347,7 @@
  media-sound/yesplaymusic-bin               | 0.4.6                                     |        | https://github.com/qier222/YesPlayMusic                                                 | A third party music player for Netease Music
                                             | 0.4.7                                     |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/youtube-music-bin              | 1.18.0                                    |        | https://th-ch.github.io/youtube-music/                                                  | YouTube Music Desktop App bundled with custom plugins
+ media-sound/youtube-music-bin              | 1.20.0                                    |        | https://th-ch.github.io/youtube-music/                                                  | YouTube Music Desktop App bundled with custom plugins
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-video/amdgpu-pro-amf                 | 1.4.29.1538781                            |        | https://www.amd.com/en/support                                                          | AMD's closed source Advanced Media Framework (AMF) driver
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -572,29 +572,17 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-power/tlpui                            | 1.5.0_p6                                  |        | https://github.com/d4nj1/TLPUI                                                          | A GTK user interface for TLP written in Python
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- virtual/dist-kernel                        | 6.1.33                                    |        |                                                                                         | Virtual to depend on any Distribution Kernel
-                                            | 6.1.34                                    |        |                                                                                         |
-                                            | 6.1.35                                    |        |                                                                                         |
-                                            | 6.3.10                                    |        |                                                                                         |
-                                            | 6.3.8                                     |        |                                                                                         |
-                                            | 6.3.9                                     |        |                                                                                         |
+ virtual/dist-kernel                        | 6.1.38                                    |        |                                                                                         | Virtual to depend on any Distribution Kernel
+                                            | 6.3.12                                    |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                      | 3-r11                                     |        |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/liquorix-sources              | 6.3.6                                     | RD     | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
                                             | 6.4.1                                     |        |                                                                                         |
-   sys-kernel/xanmod-kernel                 | 6.1.33                                    | RD     | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
-                                            | 6.1.34                                    |        |                                                                                         |
-                                            | 6.1.35                                    |        |                                                                                         |
-                                            | 6.3.10                                    |        |                                                                                         |
-                                            | 6.3.8                                     |        |                                                                                         |
-                                            | 6.3.9                                     |        |                                                                                         |
+   sys-kernel/xanmod-kernel                 | 6.1.38                                    | RD     | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
+                                            | 6.3.12                                    |        |                                                                                         |
    sys-kernel/xanmod-rt                     | 6.0.11                                    | RD     | https://xanmod.org                                                                      | XanMod RT sources and CJKTTY options.
-   sys-kernel/xanmod-sources                | 6.1.33                                    | RD     | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
-                                            | 6.1.34                                    |        |                                                                                         |
-                                            | 6.1.35                                    |        |                                                                                         |
-                                            | 6.3.10                                    |        |                                                                                         |
-                                            | 6.3.8                                     |        |                                                                                         |
-                                            | 6.3.9                                     |        |                                                                                         |
+   sys-kernel/xanmod-sources                | 6.1.38                                    | RD     | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
+                                            | 6.3.12                                    |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/chatgpt-desktop                   | 1.0.0                                     |        | https://github.com/lencx/ChatGPT                                                        | ChatGPT Desktop Application
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
