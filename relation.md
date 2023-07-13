@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-07-13 23:39:41 CST)
+(The last generation time: 2023-07-13 23:53:49 CST)
 
 ### Packages
 
@@ -313,8 +313,8 @@
  media-sound/feeluown                       | 3.8.11                                    |        | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
                                             | 3.8.12                                    |        |                                                                                         |
    dev-python/feeluown-bilibili             | 0.1.5                                     |  D     | https://github.com/feeluown/feeluown-bilibili                                           | bilibili support for feeluown
-   dev-python/fuo-kuwo                      | 0.1.5                                     |  D     | https://github.com/feeluown/feeluown-kuwo                                               | kuwo music support for feeluown
-                                            | 0.1.6                                     |        |                                                                                         |
+   dev-python/fuo-kuwo                      | 0.1.6                                     |  D     | https://github.com/feeluown/feeluown-kuwo                                               | kuwo music support for feeluown
+                                            | 0.2.0                                     |        |                                                                                         |
    dev-python/fuo-netease                   | 0.9.6                                     |  D     | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
    dev-python/fuo-qqmusic                   | 0.4.1                                     |  D     | https://github.com/feeluown/feeluown-qqmusic                                            | qq music support for feeluown
    dev-python/fuo-ytmusic                   | 0.2.0-r1                                  |  D     | https://github.com/feeluown/feeluown-ytmusic                                            | youtube music support for feeluown
