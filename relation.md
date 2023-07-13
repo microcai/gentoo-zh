@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-07-13 17:25:59 CST)
+(The last generation time: 2023-07-13 20:05:34 CST)
 
 ### Packages
 
@@ -574,15 +574,18 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/dist-kernel                        | 6.1.38                                    |        |                                                                                         | Virtual to depend on any Distribution Kernel
                                             | 6.3.12                                    |        |                                                                                         |
+                                            | 6.4.3                                     |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                      | 3-r11                                     |        |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/liquorix-sources              | 6.4.1                                     | RD     | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
                                             | 6.4.3                                     |        |                                                                                         |
    sys-kernel/xanmod-kernel                 | 6.1.38                                    | RD     | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
                                             | 6.3.12                                    |        |                                                                                         |
+                                            | 6.4.3                                     |        |                                                                                         |
    sys-kernel/xanmod-rt                     | 6.0.11                                    | RD     | https://xanmod.org                                                                      | XanMod RT sources and CJKTTY options.
    sys-kernel/xanmod-sources                | 6.1.38                                    | RD     | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
                                             | 6.3.12                                    |        |                                                                                         |
+                                            | 6.4.3                                     |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/chatgpt-desktop                   | 1.0.0                                     |        | https://github.com/lencx/ChatGPT                                                        | ChatGPT Desktop Application
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
