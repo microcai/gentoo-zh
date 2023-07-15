@@ -768,6 +768,13 @@ use_latest_tag = true
 prefix = "v"
 github_account = "peeweep"
 
+["net-dns/dnslookup"]
+source = "github"
+github = "ameshkov/dnslookup"
+use_latest_tag = true
+prefix = "v"
+github_account = "peeweep"
+
 ["net-dns/dog"]
 source = "github"
 github = "ogham/dog"
