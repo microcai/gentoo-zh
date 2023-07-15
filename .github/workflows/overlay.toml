@@ -780,6 +780,13 @@ source = "git"
 git = "https://git.savannah.gnu.org/git/libidn.git"
 prefix = "v"
 
+["net-dns/q"]
+source = "github"
+github = "natesales/q"
+use_latest_tag = true
+prefix = "v"
+github_account = "peeweep"
+
 # TODO: need help
 #["net-dns/phddns"]
 
