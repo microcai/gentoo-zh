@@ -8,8 +8,8 @@ inherit systemd
 DESCRIPTION="Close-sourced pre-built Clash binary with TUN support"
 HOMEPAGE="https://github.com/Dreamacro/clash"
 SRC_URI="
-	amd64? ( https://github.com/Dreamacro/clash/releases/download/premium/clash-linux-amd64-${PV}.gz )
-	arm64? ( https://github.com/Dreamacro/clash/releases/download/premium/clash-linux-arm64-${PV}.gz )
+	amd64? ( https://release.dreamacro.workers.dev/${PV}/clash-linux-amd64-${PV}.gz )
+	arm64? ( https://release.dreamacro.workers.dev/${PV}/clash-linux-arm64-${PV}.gz )
 "
 LICENSE="all-rights-reserved"
 
