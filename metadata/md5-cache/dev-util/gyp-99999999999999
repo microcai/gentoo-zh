@@ -1,14 +1,14 @@
-BDEPEND=python_single_target_python3_10? ( dev-lang/python:3.10 ) python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_10? ( >=dev-python/setuptools-67.8.0-r1[python_targets_python3_10(-)] ) python_single_target_python3_11? ( >=dev-python/setuptools-67.8.0-r1[python_targets_python3_11(-)] ) >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=python_single_target_python3_10? ( dev-lang/python:3.10 ) python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 ) python_single_target_python3_10? ( >=dev-python/setuptools-67.8.0-r1[python_targets_python3_10(-)] ) python_single_target_python3_11? ( >=dev-python/setuptools-67.8.0-r1[python_targets_python3_11(-)] ) python_single_target_python3_12? ( >=dev-python/setuptools-67.8.0-r1[python_targets_python3_12(-)] ) >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install prepare setup test unpack
 DESCRIPTION=GYP (Generate Your Projects) meta-build system
 EAPI=8
 HOMEPAGE=https://gyp.gsrc.io/ https://chromium.googlesource.com/external/gyp
 INHERIT=distutils-r1 git-r3
-IUSE=python_single_target_python3_10 python_single_target_python3_11
+IUSE=python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12
 LICENSE=BSD
 PROPERTIES=live
-RDEPEND=python_single_target_python3_10? ( dev-python/six[python_targets_python3_10(-)] ) python_single_target_python3_11? ( dev-python/six[python_targets_python3_11(-)] ) python_single_target_python3_10? ( dev-lang/python:3.10 ) python_single_target_python3_11? ( dev-lang/python:3.11 )
-REQUIRED_USE=^^ ( python_single_target_python3_10 python_single_target_python3_11 )
+RDEPEND=python_single_target_python3_10? ( dev-python/six[python_targets_python3_10(-)] ) python_single_target_python3_11? ( dev-python/six[python_targets_python3_11(-)] ) python_single_target_python3_12? ( dev-python/six[python_targets_python3_12(-)] ) python_single_target_python3_10? ( dev-lang/python:3.10 ) python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 )
+REQUIRED_USE=^^ ( python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12 )
 SLOT=0
 _eclasses_=toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	ad475baa777c9978fa035216c8264a10	out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	30dbf3c5a31db09a19f31ad0a68f2405	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	76050953ad5b70d7e09a6ca55558db92	python-utils-r1	7661dc585f75dd1f81eccefe37bef093	python-single-r1	75118e916668a74c660a13b0ecb22562	distutils-r1	b7cd5736a595ec0df9b164d5aec6f228	git-r3	27e13c09a4c7e4c78ac812f74727e676
-_md5_=00de994718a38410d6bfd4d16ea90064
+_md5_=492fc27f4b4ccde9aaae74483c131102
