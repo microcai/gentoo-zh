@@ -2,17 +2,24 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 DISTUTILS_SINGLE_IMPL="1"
 
-inherit distutils-r1 git-r3
+inherit distutils-r1
+
+if [[ "${PV}" == "99999999999999" ]]; then
+	inherit git-r3
+
+	EGIT_REPO_URI="https://chromium.googlesource.com/external/gyp"
+fi
 
 DESCRIPTION="GYP (Generate Your Projects) meta-build system"
 HOMEPAGE="https://gyp.gsrc.io/ https://chromium.googlesource.com/external/gyp"
-EGIT_REPO_URI="https://chromium.googlesource.com/external/gyp"
-
+COMMIT="9ecf45e37677743503342ee4c6a76eaee80e4a7f"
 if [[ "${PV}" != "99999999999999" ]]; then
-	EGIT_COMMIT="9ecf45e3"
+	inherit vcs-snapshot
+
+	SRC_URI="https://github.com/chromium/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 fi
 
 LICENSE="BSD"
