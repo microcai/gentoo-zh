@@ -8,5 +8,5 @@ LICENSE=BSD
 PROPERTIES=live
 RDEPEND=x11-libs/libxcb[xkb] x11-libs/xcb-util x11-libs/cairo[X] x11-libs/libxkbcommon[X] !x11-misc/i3lock
 SLOT=0
-_eclasses_=git-r3	27e13c09a4c7e4c78ac812f74727e676	eqawarn	c9847c43b3253a276ae2eabddedab3d7	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	6ae9a4347149b19a112caa1182d03bde
+_eclasses_=git-r3	97f7f638070d17e4c2b6542589bb4575	eqawarn	c9847c43b3253a276ae2eabddedab3d7	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	6ae9a4347149b19a112caa1182d03bde
 _md5_=3ff2a63fb40c742887bf0df73809f298

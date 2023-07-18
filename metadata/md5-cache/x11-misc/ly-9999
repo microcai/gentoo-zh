@@ -10,5 +10,5 @@ LICENSE=WTFPL-2
 PROPERTIES=live
 RDEPEND=sys-libs/pam x11-libs/libxcb x11-base/xorg-server x11-apps/xauth openrc? ( sys-apps/openrc ) runit? ( sys-process/runit ) systemd? ( sys-apps/systemd )
 SLOT=0
-_eclasses_=git-r3	27e13c09a4c7e4c78ac812f74727e676
+_eclasses_=git-r3	97f7f638070d17e4c2b6542589bb4575
 _md5_=341bc3e647ee68577f79bd1017171412
