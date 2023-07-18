@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-07-17 15:03:44 CST)
+(The last generation time: 2023-07-18 22:34:51 CST)
 
 ### Packages
 
@@ -107,7 +107,7 @@
                                             | 1.0.5                                     |        |                                                                                         |
    app-i18n/libime                          | 1.0.17                                    |  D, RD | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
                                             | 9999                                      |        |                                                                                         |
-   dev-util/gyp                             | 20200512145953_p20220404165439            | BD     | https://gyp.gsrc.io/                                                                    | GYP (Generate Your Projects) meta-build system
+   dev-util/gyp                             | 20220404165439                            | BD     | https://gyp.gsrc.io/                                                                    | GYP (Generate Your Projects) meta-build system
                                             | 99999999999999                            |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/zh-autoconvert                    | 0.3.16_p7                                 |        | https://packages.debian.org/stable/source/zh-autoconvert                                | Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
