@@ -10,5 +10,5 @@ LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=>=net-misc/networkmanager-1.0[ppp] dev-libs/dbus-glib net-dialup/ppp net-dialup/xl2tpd >=dev-libs/glib-2.32 gnome? ( >=x11-libs/gtk+-3.4:4 gnome-base/libgnome-keyring )
 SLOT=0
-_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	8f942ebdcf04334697649d4a0bf65a32	gnome.org	6b39404f1491c60a2d32e3c693a683fe	git-r3	97f7f638070d17e4c2b6542589bb4575	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	67b3e3d8916d690003f645486ed86aac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	6ae9a4347149b19a112caa1182d03bde
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	8f942ebdcf04334697649d4a0bf65a32	gnome.org	6b39404f1491c60a2d32e3c693a683fe	git-r3	97f7f638070d17e4c2b6542589bb4575	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	fc2af1957597c539ae6e48f82bd43125	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	6ae9a4347149b19a112caa1182d03bde
 _md5_=ef6dc30f9e159ab5518e1736a7a3184f
