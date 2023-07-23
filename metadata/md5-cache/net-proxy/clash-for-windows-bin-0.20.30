@@ -9,6 +9,6 @@ LICENSE=no-source-code
 RDEPEND=x11-libs/gtk+:3 x11-libs/libXScrnSaver dev-libs/nss tun? ( net-firewall/nftables )
 RESTRICT=mirror strip
 SLOT=0
-SRC_URI=https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.27/Clash.for.Windows-0.20.27-x64-linux.tar.gz
+SRC_URI=https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.30/Clash.for.Windows-0.20.30-x64-linux.tar.gz
 _eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	8e3fb781f3258ae2757d1dfc2c7c170e	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	aa6a4e924009232d8b78b31e932c30b5	xdg-utils	baea6080dd821f5562d715887954c9d3
 _md5_=24874e54dc9bbf19587c0ae3298369a7
