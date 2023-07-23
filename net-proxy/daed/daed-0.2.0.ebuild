@@ -35,7 +35,7 @@ IUSE="+webui"
 
 src_compile(){
 	# sed -i '/git submodule update/d' wing/Makefile || die
-	sed -i 's/git rev-parse --short HEAD/echo/' vite.config.ts || die
+	# sed -i 's/git rev-parse --short HEAD/echo/' vite.config.ts || die
 	if ! use webui; then
 		cd wing || die
 	fi
