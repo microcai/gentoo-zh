@@ -11,6 +11,8 @@ CHECKREQS_MEMORY="4092M"
 
 inherit check-reqs multiprocessing pax-utils python-any-r1 systemd toolchain-funcs
 
+MY_P=${PVR/-r/-rc}
+
 DESCRIPTION="A high-performance, open source, schema-free document-oriented database"
 HOMEPAGE="https://www.mongodb.com"
 LICENSE="Apache-2.0 SSPL-1"
@@ -20,7 +22,7 @@ CPU_FLAGS="cpu_flags_x86_avx"
 IUSE="debug kerberos lto mongosh ssl gold +tools ocsp-stapling server-js tcmalloc tcmalloc-experimental"
 IUSE+=" free-mon http-client runtime-hardening experimental-optimization experimental-runtime-hardening"
 IUSE+=" ${CPU_FLAGS}"
-SRC_URI="https://github.com/mongodb/mongo/archive/r${PV}-rc4.tar.gz"
+SRC_URI="https://github.com/mongodb/mongo/archive/r${MY_P}.tar.gz"
 
 REQUIRED_USE="
 	experimental-runtime-hardening? ( runtime-hardening )
@@ -80,11 +82,11 @@ python_check_deps() {
 	has_version "dev-python/packaging[${PYTHON_USEDEP}]"
 }
 
-S=${WORKDIR}/mongo-r${PV}
+S=${WORKDIR}/mongo-r${MY_P}
 
 pkg_pretend() {
 	if ! use cpu_flags_x86_avx; then
-		eerror "MongoDB ${PV} requires use of the AVX instruction set"
+		eerror "MongoDB ${MY_P} requires use of the AVX instruction set"
 		eerror "https://docs.mongodb.com/v5.0/administration/production-notes/"
 		die "MongoDB requires AVX"
 	fi
@@ -98,17 +100,17 @@ src_prepare() {
 
 src_configure() {
 	scons_opts=(
-		AR="ar"
-		CC="gcc"
-		CXX="g++"
+		AR="$(command -v ar)" # use realpath because scons cannot find them
+		CC="$(command -v gcc)"
+		CXX="$(command -v g++)"
 		CCFLAGS="-march=native -pipe -DBOOST_LOG_DYN_LINK ${CCFLAGS}"
-		MONGO_VERSION=${PV}
+		MONGO_VERSION=${MY_P}
 
 		--jobs=$(makeopts_jobs)
 		--release
 		--disable-warnings-as-errors
 		--use-system-boost
-		--use-system-pcre
+		--use-system-pcre2
 		--use-system-snappy
 		--use-system-stemmer
 		--use-system-yaml
@@ -212,6 +214,10 @@ src_configure() {
 }
 
 src_compile() {
+	set -x
+	python3 -m pip install --target ./site_scons requirements_parser
+	python3 -m pip install --target ./site_scons -r etc/pip/compile-requirements.txt
+	export
 	PREFIX="${EPREFIX}/usr" ./buildscripts/scons.py "${scons_opts[@]}" install-core || die
 
 	$(tc-getSTRIP) "--strip-unneeded" "${S}/build/install/bin/mongo"
