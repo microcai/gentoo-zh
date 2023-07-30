@@ -14,5 +14,5 @@ REQUIRED_USE=wqy-microhei? ( !fake-simsun )
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/vufa/deepin-wine-wechat-arch/releases/download/v3.9.0.28-3/deepin-wine-wechat-3.9.0.28-3-x86_64.pkg.tar.zst fake-simsun? ( https://github.com/oatiz/lyraile-overlay/releases/download/tempfile/fake_simsun.ttc )
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	8e3fb781f3258ae2757d1dfc2c7c170e	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	aa6a4e924009232d8b78b31e932c30b5	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	e356bb9aa600fd4b0dc539d33513bba7	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	aa6a4e924009232d8b78b31e932c30b5	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
 _md5_=0b8c21e137de96d46a81f8ba32b0dfee
