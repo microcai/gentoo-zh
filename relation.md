@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-07-27 22:14:16 CST)
+(The last generation time: 2023-07-30 12:59:14 CST)
 
 ### Packages
 
@@ -321,7 +321,7 @@
    dev-python/fuo-ytmusic                   | 0.2.0-r1                                  |  D     | https://github.com/feeluown/feeluown-ytmusic                                            | youtube music support for feeluown
      dev-python/pytube                      | 15.0.0                                    | RD     | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
    dev-python/janus                         | 1.0.0-r1                                  |  D, RD | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
-   dev-python/qasync                        | 0.23.0                                    |  D, RD | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
+   dev-python/qasync                        | 0.24.0                                    |  D, RD | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/go-musicfox                    | 4.1.3                                     |        | https://github.com/go-musicfox/go-musicfox                                              | Command-line Netease Cloud Music written in Go
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
