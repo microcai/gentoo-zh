@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-07-30 12:59:14 CST)
+(The last generation time: 2023-07-30 12:59:35 CST)
 
 ### Packages
 
@@ -316,7 +316,7 @@
    dev-python/feeluown-bilibili             | 0.1.5                                     |  D     | https://github.com/feeluown/feeluown-bilibili                                           | bilibili support for feeluown
    dev-python/fuo-kuwo                      | 0.1.6                                     |  D     | https://github.com/feeluown/feeluown-kuwo                                               | kuwo music support for feeluown
                                             | 0.2.0                                     |        |                                                                                         |
-   dev-python/fuo-netease                   | 0.9.6                                     |  D     | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
+   dev-python/fuo-netease                   | 0.9.7                                     |  D     | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
    dev-python/fuo-qqmusic                   | 0.5.0                                     |  D     | https://github.com/feeluown/feeluown-qqmusic                                            | qq music support for feeluown
    dev-python/fuo-ytmusic                   | 0.2.0-r1                                  |  D     | https://github.com/feeluown/feeluown-ytmusic                                            | youtube music support for feeluown
      dev-python/pytube                      | 15.0.0                                    | RD     | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
