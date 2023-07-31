@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-07-30 22:46:41 CST)
+(The last generation time: 2023-08-01 04:13:35 CST)
 
 ### Packages
 
@@ -492,7 +492,7 @@
                                             | 1.3.2                                     |        |                                                                                         |
    net-proxy/clash                          | 1.17.0                                    | RD     | https://github.com/Dreamacro/clash                                                      | A rule-based tunnel in Go.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/dae                              | 0.2.1                                     |        | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
+ net-proxy/dae                              | 0.2.2                                     |        | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/daed                             | 0.2.0                                     |        | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
@@ -553,7 +553,7 @@
        app-arch/zchunk                      | 1.3.1                                     | RD     | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- sys-boot/ventoy-bin                        | 1.0.93                                    |        | http://www.ventoy.net                                                                   | A new multiboot USB solution
+ sys-boot/ventoy-bin                        | 1.0.94                                    |        | http://www.ventoy.net                                                                   | A new multiboot USB solution
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/coda                                | 7.0.5                                     |        | http://www.coda.cs.cmu.edu/                                                             | Coda is an advanced network file system, similar to NFS
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
