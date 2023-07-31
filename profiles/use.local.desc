@@ -215,6 +215,8 @@ net-proxy/clash-meta:gvisor - enable TUN stack support for gvisor
 net-proxy/clash-meta:lwip - enable TUN stack support for lwip
 net-proxy/clash-verge-bin:system-clash - Use net-proxy/clash instead of clash-premium
 net-proxy/daed:webui - Build and install daed instead of dae-wing
+net-proxy/juicity:client - install juicity-client
+net-proxy/juicity:server - install juicity-server
 net-proxy/make-proxy:client - Add make proxy client support
 net-proxy/make-proxy:server - Add make proxy server support
 net-proxy/shadowsocks-rust:redir - Enable redir protocol for sslocal (transparent proxy)
