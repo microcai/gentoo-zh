@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-08-01 04:16:59 CST)
+(The last generation time: 2023-08-01 04:17:49 CST)
 
 ### Packages
 
@@ -498,6 +498,8 @@
  net-proxy/daed                             | 0.2.0                                     |        | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
                                             | 9999                                      |        |                                                                                         |
    sys-apps/pnpm                            | 8.6.2                                     | BD     | https://pnpm.io                                                                         | Fast, disk space efficient package manager
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ net-proxy/juicity                          | 0.1.1                                     |        | https://github.com/juicity/juicity                                                      | juicity is a quic-based proxy protocol.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/make-proxy                       | 2.0.0                                     |        | https://github.com/yueyoum/make-proxy                                                   | Socks5 proxy written in Erlang
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
