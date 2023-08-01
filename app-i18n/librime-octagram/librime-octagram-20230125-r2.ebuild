@@ -25,7 +25,7 @@ BDEPEND="dev-libs/boost:0"
 
 S="${WORKDIR}/${PN}-${EGIT_COMMIT}"
 
-IUSE="tools"
+IUSE="debug tools"
 
 src_prepare() {
 	sed -i "s/utf8.h/utf8cpp\/utf8.h/g" src/gram_encoding.cc src/octagram.cc || die
@@ -46,6 +46,16 @@ src_prepare() {
 		-i CMakeLists.txt || die
 
 	cmake_src_prepare
+}
+
+src_configure(){
+	if use debug; then
+		CXXFLAGS+=" -DDCHECK_ALWAYS_ON"
+	else
+		CXXFLAGS+=" -DNDEBUG"
+	fi
+
+	cmake_src_configure
 }
 
 src_install() {
