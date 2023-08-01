@@ -6,6 +6,7 @@
     <email>ston.jia@qq.com</email>
   </maintainer>
   <use>
+    <flag name="debug">Enable debugging (including logging of input of RIME input methods)</flag>
     <flag name="tools">install grammar builder</flag>
   </use>
   <upstream>

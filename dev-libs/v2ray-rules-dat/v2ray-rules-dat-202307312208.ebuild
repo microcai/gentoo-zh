@@ -14,6 +14,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~riscv ~x86"
 IUSE="+geosite +geoip"
+RESTRICT="mirror"
 
 S="${WORKDIR}"
 
