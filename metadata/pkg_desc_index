@@ -121,7 +121,7 @@ dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 fil
 dev-util/elfembed 0.3-r1: Resource Compiler for ELF binaries
 dev-util/gyp 20220404165439 99999999999999: GYP (Generate Your Projects) meta-build system
 dev-util/jd-gui 1.6.6: A standalone graphical utility that displays Java source codes of .class file
-dev-util/jetbrains-toolbox 1.27.3.14493: Manage all your JetBrains Projects and Tools
+dev-util/jetbrains-toolbox 1.28.1.15219: Manage all your JetBrains Projects and Tools
 dev-util/lldb-mi 9999: LLDB Machine Interface Driver
 dev-util/marksman-bin 2022.12.28: A language server for Markdown
 dev-util/mongodb-compass-bin 1.34.2 1.35.0 1.36.4 1.37.0 1.38.2 1.39.0: The GUI for MongoDB
