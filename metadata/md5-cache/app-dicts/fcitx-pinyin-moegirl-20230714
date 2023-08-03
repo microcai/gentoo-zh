@@ -7,5 +7,5 @@ LICENSE=Unlicense
 RDEPEND=app-i18n/fcitx:5
 RESTRICT=mirror
 SLOT=5
-SRC_URI=https://github.com/outloudvi/mw2fcitx/releases/download/20230514/moegirl.dict -> fcitx-pinyin-moegirl-20230514.dict
+SRC_URI=https://github.com/outloudvi/mw2fcitx/releases/download/20230714/moegirl.dict -> fcitx-pinyin-moegirl-20230714.dict
 _md5_=934ad8cdc7328699700b47917fbe93ee
