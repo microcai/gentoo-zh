@@ -11,6 +11,9 @@ SRC_URI="https://github.com/flatpak/flatpak-xdg-utils/releases/download/${PV}/fl
 
 LICENSE="LGPL-2.1"
 SLOT="0"
+RDEPEND="dev-libs/glib:2"
+DEPEND="${RDEPEND}"
+BDEPEND="${RDEPEND}"
 KEYWORDS="~amd64"
 
 src_configure() {
