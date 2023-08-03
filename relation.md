@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-08-02 16:19:59 CST)
+(The last generation time: 2023-08-03 11:41:47 CST)
 
 ### Packages
 
@@ -242,7 +242,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/zprint-bin                        | 1.2.7                                     |        | https://github.com/kkinnear/zprint                                                      | Clojure and Clojurescript source code formatter
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/gitoxide                           | 0.27.0                                    |        | https://github.com/Byron/gitoxide                                                       | A command-line application for interacting with git repositories
+ dev-vcs/gitoxide                           | 0.28.0                                    |        | https://github.com/Byron/gitoxide                                                       | A command-line application for interacting with git repositories
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gptcommit                          | 0.5.10                                    |        | https://github.com/zurawiki/gptcommit                                                   | A git prepare-commit-msg hook for summarizing commits with GPT-3.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
