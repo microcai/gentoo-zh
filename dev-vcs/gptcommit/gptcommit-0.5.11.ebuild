@@ -18,17 +18,17 @@ CRATES="
 	anstyle-parse-0.2.1
 	anstyle-query-1.0.0
 	anstyle-wincon-1.0.1
-	anyhow-1.0.71
+	anyhow-1.0.72
 	async-channel-1.8.0
 	async-compression-0.4.0
 	async-executor-1.5.1
 	async-global-executor-2.3.1
 	async-io-1.13.0
 	async-lock-2.7.0
-	async-openai-0.12.1
+	async-openai-0.12.2
 	async-std-1.12.0
 	async-task-4.4.0
-	async-trait-0.1.70
+	async-trait-0.1.72
 	atomic-waker-1.1.1
 	autocfg-1.1.0
 	backoff-0.4.0
@@ -48,9 +48,9 @@ CRATES="
 	bytes-1.4.0
 	cc-1.0.79
 	cfg-if-1.0.0
-	clap-4.3.10
-	clap_builder-4.3.10
-	clap_derive-4.3.2
+	clap-4.3.19
+	clap_builder-4.3.19
+	clap_derive-4.3.12
 	clap_lex-0.5.0
 	colorchoice-1.0.0
 	colored-2.0.4
@@ -167,9 +167,9 @@ CRATES="
 	redox_syscall-0.2.16
 	redox_syscall-0.3.5
 	redox_users-0.4.3
-	regex-1.9.0
+	regex-1.9.1
 	regex-automata-0.1.10
-	regex-automata-0.3.0
+	regex-automata-0.3.2
 	regex-syntax-0.7.3
 	reqwest-0.11.18
 	reqwest-eventsource-0.4.0
@@ -192,9 +192,9 @@ CRATES="
 	sct-0.7.0
 	security-framework-2.9.1
 	security-framework-sys-2.9.0
-	serde-1.0.166
-	serde_derive-1.0.166
-	serde_json-1.0.100
+	serde-1.0.168
+	serde_derive-1.0.168
+	serde_json-1.0.104
 	serde_spanned-0.6.3
 	serde_urlencoded-0.7.1
 	sha2-0.10.7
@@ -226,9 +226,9 @@ CRATES="
 	tokio-stream-0.1.14
 	tokio-util-0.7.8
 	toml-0.5.11
-	toml-0.7.5
+	toml-0.7.6
 	toml_datetime-0.6.3
-	toml_edit-0.19.11
+	toml_edit-0.19.14
 	tower-service-0.3.2
 	tracing-0.1.37
 	tracing-attributes-0.1.26
@@ -287,7 +287,7 @@ CRATES="
 	windows_x86_64_gnullvm-0.48.0
 	windows_x86_64_msvc-0.42.2
 	windows_x86_64_msvc-0.48.0
-	winnow-0.4.7
+	winnow-0.5.0
 	winreg-0.10.1
 	yaml-rust-0.4.5
 "
