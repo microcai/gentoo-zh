@@ -129,8 +129,8 @@ dev-util/pacstrap 28: Pacstrap - install packages to the specified new root dire
 dev-util/tauri-cli 1.3.1: Command line interface for building Tauri apps
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-util/zprint-bin 1.2.7: Clojure and Clojurescript source code formatter
-dev-vcs/gitoxide 0.27.0: A command-line application for interacting with git repositories
-dev-vcs/gptcommit 0.5.10: A git prepare-commit-msg hook for summarizing commits with GPT-3.
+dev-vcs/gitoxide 0.28.0: A command-line application for interacting with git repositories
+dev-vcs/gptcommit 0.5.11: A git prepare-commit-msg hook for summarizing commits with GPT-3.
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-misc/oh-my-git-bin 0.6.5: An interactive Git learning game!
 games-util/winegame-client-bin 0.5.10.5: An open source gaming platform for GNU/Linux
@@ -219,7 +219,7 @@ net-misc/postman-bin 9.6.1: Supercharge your API workflow
 net-misc/prips 1.0.0 1.2.0: print the IP addresses in a range
 net-misc/remmina-plugin-rustdesk 1.0.0.0-r1: A protocol plugin for Remmina to launch a Rustdesk connection.
 net-misc/rustdesk 1.2.0: Open source virtual / remote desktop infrastructure for everyone
-net-misc/tssh 0.1.7: 内置支持 trzsz ( trz / tsz ) 的 ssh 客户端，支持选择（ 搜索 ）服务器进行登录
+net-misc/tssh 0.1.9: 内置支持 trzsz ( trz / tsz ) 的 ssh 客户端，支持选择（ 搜索 ）服务器进行登录
 net-misc/you-get 9999: A video downloader for YouTube, Youku, niconico and a few other sites
 net-p2p/amule-dlp 9999: aMule with DLP patch, the all-platform eMule p2p client
 net-p2p/amule-dlp-antileech 9999: amule-dlp-antileech, dynamic DLP library for amule-dlp
