@@ -1022,6 +1022,14 @@ url = "https://lceda.cn/page/download?src=index"
 regex = "lceda-pro-linux-x64-([\\d.]+).zip"
 github_account = "123485k"
 
+
+["sci-electronics/openfpgaloader"]
+source = "github"
+github = "trabucayre/openFPGALoader"
+use_latest_release = true
+prefix = "v"
+github_account = "liangyongxiang"
+
 # TODO
 #["sci-libs/libticables2"]
 #["sci-libs/libticalcs2"]
