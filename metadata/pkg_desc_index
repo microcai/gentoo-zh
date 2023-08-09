@@ -54,6 +54,7 @@ app-i18n/rime-cangjie 20210223: Cangjie input for rime
 app-i18n/rime-data 20220409: Data resources for Rime Input Method Engine
 app-i18n/rime-double-pinyin 20190120: double-pinyin input for rime
 app-i18n/rime-essay 20230204-r1: Essential files for building up your Rime configuration
+app-i18n/rime-flypy 10.9.4: flypy-full input for rime
 app-i18n/rime-luna-pinyin 20230204: Luna pinyin for rime
 app-i18n/rime-octagram-data 20190619: Language model of the 「八股文」語法
 app-i18n/rime-pinyin-simp 20230104: Simple pinyin input for rime
