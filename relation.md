@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-08-09 06:35:05 CST)
+(The last generation time: 2023-08-09 13:48:51 CST)
 
 ### Packages
 
@@ -46,7 +46,7 @@
  app-i18n/fcitx-chewing                     | 5.0.14                                    |        | https://github.com/fcitx/fcitx5-chewing                                                 | Chewing Wrapper for Fcitx.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-meta                        | 5.0.12-r2                                 |        | https://fcitx-im.org                                                                    | Merge this to pull in Fcitx packages
-   app-i18n/fcitx-chinese-addons            | 5.0.17                                    | RD     | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
+   app-i18n/fcitx-chinese-addons            | 5.0.17                                    |  D, RD | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
                                             | 9999                                      |        |                                                                                         |
      app-i18n/fcitx-lua                     | 5.0.10                                    |  D, RD | https://github.com/fcitx/fcitx5-lua                                                     | Lua support for fcitx
                                             | 5.0.7-r1                                  |        |                                                                                         |
@@ -109,6 +109,8 @@
                                             | 9999                                      |        |                                                                                         |
    dev-util/gyp                             | 20220404165439                            | BD     | https://gyp.gsrc.io/                                                                    | GYP (Generate Your Projects) meta-build system
                                             | 99999999999999                            |        |                                                                                         |
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ app-i18n/rime-flypy                        | 10.9.4                                    |        | https://github.com/cubercsl/rime-flypy                                                  | flypy-full input for rime
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/zh-autoconvert                    | 0.3.16_p7                                 |        | https://packages.debian.org/stable/source/zh-autoconvert                                | Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
