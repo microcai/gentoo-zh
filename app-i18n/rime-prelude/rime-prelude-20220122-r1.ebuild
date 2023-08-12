@@ -14,7 +14,7 @@ HOMEPAGE="https://github.com/rime/rime-prelude"
 LICENSE="GPL-3"
 SLOT="0"
 
-DEPEND="!<app-i18n/rime-data-1"
+DEPEND=">=app-i18n/rime-data-1"
 RDEPEND="$DEPEND"
 
 S="${WORKDIR}/${PN}-${EGIT_COMMIT}"

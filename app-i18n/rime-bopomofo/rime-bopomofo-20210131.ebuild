@@ -17,7 +17,7 @@ SLOT="0"
 DEPEND="
 	app-i18n/rime-cangjie
 	app-i18n/rime-terra-pinyin
-	!<app-i18n/rime-data-1
+	>=app-i18n/rime-data-1
 "
 RDEPEND="$DEPEND"
 
