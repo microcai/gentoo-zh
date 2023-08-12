@@ -16,7 +16,7 @@ SLOT="0"
 
 DEPEND="
 	app-i18n/rime-pinyin-simp
-	!<app-i18n/rime-data-1
+	>=app-i18n/rime-data-1
 "
 RDEPEND="$DEPEND"
 
