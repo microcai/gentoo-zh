@@ -35,7 +35,7 @@ RDEPEND="
 	app-crypt/libsecret
 	virtual/krb5
 	sys-apps/keyutils
-	sys-devel/gcc:12
+	sys-devel/gcc
 	system-vips? (
 		dev-libs/glib
 		>=media-libs/vips-8.14.2
