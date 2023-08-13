@@ -3,7 +3,7 @@
 
 EAPI=8
 
-DESCRIPTION="Virtual to depend on any Distribution Kernel"
+DESCRIPTION="Virtual to depend  on any Distribution Kernel"
 HOMEPAGE=""
 SRC_URI=""
 
