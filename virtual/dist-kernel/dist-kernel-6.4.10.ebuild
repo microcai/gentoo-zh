@@ -17,4 +17,4 @@ RDEPEND="
 		~sys-kernel/gentoo-kernel-bin-${PV}
 		~sys-kernel/vanilla-kernel-${PV}
 		~sys-kernel/xanmod-kernel-${PV}
-	)"ppp0
+	)"
