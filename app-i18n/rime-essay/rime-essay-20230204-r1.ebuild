@@ -14,7 +14,7 @@ SRC_URI="
 KEYWORDS="~amd64 ~arm64 ~x86"
 
 DESCRIPTION="Essential files for building up your Rime configuration"
-HOMEPAGE="https://github.com/rime/rime-bopomofo"
+HOMEPAGE="https://github.com/rime/rime-essay"
 LICENSE="LGPL-3"
 SLOT="0"
 
