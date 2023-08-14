@@ -35,8 +35,10 @@ src_install() {
 		rm flypy.conf flypy.dict || die
 	fi
 
-	local dir="/usr/share/rime-data"
-	insinto "$dir"
+	if use rime; then
+		local dir="/usr/share/rime-data"
+		insinto "$dir"
 
-	doins -r *
+		doins -r *
+	fi
 }

@@ -24,6 +24,7 @@ IUSE="
 	+stroke
 	+terra-pinyin
 	+wubi
+	flypy
 "
 
 DEPEND="
@@ -39,5 +40,6 @@ DEPEND="
 	stroke? ( app-i18n/rime-stroke )
 	terra-pinyin? ( app-i18n/rime-terra-pinyin )
 	wubi? ( app-i18n/rime-wubi )
+	flypy? ( app-i18n/rime-flypy[rime] )
 "
 RDEPEND="${DEPEND}"

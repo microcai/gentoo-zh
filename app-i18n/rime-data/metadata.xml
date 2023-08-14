@@ -20,5 +20,6 @@
     <flag name="stroke">install app-i18n/rime-stroke</flag>
     <flag name="terra-pinyin">install app-i18n/rime-terra-pinyin</flag>
     <flag name="wubi">install app-i18n/rime-wubi</flag>
+    <flag name="flypy">install app-i18n/rime-flypy</flag>
   </use>
 </pkgmetadata>
