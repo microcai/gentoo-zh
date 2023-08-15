@@ -187,7 +187,7 @@ net-analyzer/nali 0.7.3: An offline tool for querying IP geographic information 
 net-analyzer/realitlscanner 0.1.0: A TLS server scanner for Reality
 net-dns/aliddns 0.0.20: aliyun ddns for golang
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
-net-dns/dnslookup 1.9.1: Simple command line utility to make DNS lookups to the specified server
+net-dns/dnslookup 1.9.2: Simple command line utility to make DNS lookups to the specified server
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
 net-dns/dog 0.1.0: A command-line DNS client
 net-dns/libidn11 1.33: Internationalized Domain Names (IDN) implementation
@@ -220,7 +220,7 @@ net-misc/postman-bin 9.6.1: Supercharge your API workflow
 net-misc/prips 1.0.0 1.2.0: print the IP addresses in a range
 net-misc/remmina-plugin-rustdesk 1.0.0.0-r1: A protocol plugin for Remmina to launch a Rustdesk connection.
 net-misc/rustdesk 1.2.0: Open source virtual / remote desktop infrastructure for everyone
-net-misc/tssh 0.1.9: 内置支持 trzsz ( trz / tsz ) 的 ssh 客户端，支持选择（ 搜索 ）服务器进行登录
+net-misc/tssh 0.1.10: 内置支持 trzsz ( trz / tsz ) 的 ssh 客户端，支持选择（ 搜索 ）服务器进行登录
 net-misc/you-get 9999: A video downloader for YouTube, Youku, niconico and a few other sites
 net-p2p/amule-dlp 9999: aMule with DLP patch, the all-platform eMule p2p client
 net-p2p/amule-dlp-antileech 9999: amule-dlp-antileech, dynamic DLP library for amule-dlp
@@ -274,15 +274,15 @@ sys-fs/ssdfs-tools 4.09: userspace tools for SSDFS
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/liquorix-sources 6.4.3 6.4.6: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 34-r1: Modular initramfs image creation utility
-sys-kernel/xanmod-kernel 6.1.43 6.4.8: XanMod lts kernel built with Gentoo patches and cjktty
+sys-kernel/xanmod-kernel 6.1.43 6.1.45 6.4.8 6.4.10: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 6.0.11: XanMod RT sources and CJKTTY options.
-sys-kernel/xanmod-sources 6.1.43 6.4.8: Full XanMod source, including the Gentoo patchset and other patch options.
+sys-kernel/xanmod-sources 6.1.43 6.1.45 6.4.8 6.4.10: Full XanMod source, including the Gentoo patchset and other patch options.
 sys-kernel/zenpower 0.1.12-r1: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libsolv 0.7.24 9999: Library for solving packages and reading repositories
 sys-libs/libzypp 17.31.11 9999: ZYpp Package Management library
 sys-power/tlpui 1.5.0_p6: A GTK user interface for TLP written in Python
-virtual/dist-kernel 6.1.43 6.3.12 6.4.8: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 6.1.43 6.1.45 6.3.12 6.4.8 6.4.10: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 www-apps/chatgpt-desktop 1.0.0: ChatGPT Desktop Application
 www-apps/openvscode-server-bin 1.75.1: VS Code that runs a server on remote and allows access through a web browser
@@ -301,6 +301,7 @@ x11-misc/ly 0.6.0 9999: Ly - a TUI display manager
 x11-misc/picom-jonaburg 8 9999: A lightweight compositor for X11 (previously a compton fork)
 x11-misc/sddm 9999: Simple Desktop Display Manager
 x11-misc/snapd-xdg-open 9999: Software for opening links from snaps in desktop
+x11-misc/xwaylandvideobridge 20230814: Utility to allow streaming Wayland windows to X applications
 x11-plugins/vicious 9999: Modular widget library for x11-wm/awesome
 x11-terms/wezterm-bin 20230408: A terminal emulator and multiplexer implemented in Rust
 x11-themes/fcitx-breeze 2.0.0-r2: Fcitx5 theme to match KDE's Breeze style.
