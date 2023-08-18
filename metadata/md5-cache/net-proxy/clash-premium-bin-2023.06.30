@@ -9,5 +9,5 @@ LICENSE=all-rights-reserved
 RDEPEND=!net-proxy/clash
 SLOT=0
 SRC_URI=amd64? ( https://release.dreamacro.workers.dev/2023.06.30/clash-linux-amd64-2023.06.30.gz ) arm64? ( https://release.dreamacro.workers.dev/2023.06.30/clash-linux-arm64-2023.06.30.gz )
-_eclasses_=toolchain-funcs	0c8a0b0d318eb5d5180d114bd3f6592b	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	5f4bb0758df2e483babf68cd517078ca
+_eclasses_=toolchain-funcs	862d337d98edb576796827be2c6b11ca	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	5f4bb0758df2e483babf68cd517078ca
 _md5_=ecdeb15e6761111733ceb2638e497465
