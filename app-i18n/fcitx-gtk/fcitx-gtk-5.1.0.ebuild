@@ -12,7 +12,7 @@ else
 	MY_PN="fcitx5-gtk"
 	S="${WORKDIR}/${MY_PN}-${PV}"
 	SRC_URI="https://github.com/fcitx/fcitx5-gtk/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~loong ~x86"
+	KEYWORDS="~amd64 ~arm64 ~loong ~x86"
 fi
 
 DESCRIPTION="Gtk im module for fcitx5 and glib based dbus client library"
