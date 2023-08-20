@@ -52,6 +52,10 @@ DEPEND="${RDEPEND}
 	kde-frameworks/extra-cmake-modules:5
 	virtual/pkgconfig"
 
+PATCHES=(
+	"${FILESDIR}/fix-build-without-lua.patch"
+)
+
 src_prepare() {
 	cmake_src_prepare
 }

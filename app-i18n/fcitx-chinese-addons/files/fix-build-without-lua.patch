@@ -1,0 +1,30 @@
+From 37592053f8ba71f08dde2058c7763f28809e401e Mon Sep 17 00:00:00 2001
+From: Weng Xuetian <wengxt@gmail.com>
+Date: Sun, 20 Aug 2023 09:59:10 -0700
+Subject: [PATCH] fix build without lua
+
+---
+ im/pinyin/pinyin.cpp | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/im/pinyin/pinyin.cpp b/im/pinyin/pinyin.cpp
+index de428ed..360a691 100644
+--- a/im/pinyin/pinyin.cpp
++++ b/im/pinyin/pinyin.cpp
+@@ -826,6 +826,8 @@ std::string PinyinEngine::evaluateCustomPhrase(InputContext *inputContext,
+     if (!result.empty()) {
+         return result;
+     }
++
++#ifdef FCITX_HAS_LUA
+     if (stringutils::startsWith(key, "lua:")) {
+         RawConfig config;
+         auto ret = imeapi()->call<ILuaAddon::invokeLuaFunction>(
+@@ -834,6 +836,7 @@ std::string PinyinEngine::evaluateCustomPhrase(InputContext *inputContext,
+             return ret.value();
+         }
+     }
++#endif
+     return "";
+ }
+ 
