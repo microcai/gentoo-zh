@@ -236,7 +236,7 @@ net-proxy/clash-meta 1.15.0: Another Clash Kernel.
 net-proxy/clash-premium-bin 2023.06.30: Close-sourced pre-built Clash binary with TUN support
 net-proxy/clash-verge-bin 1.2.0 1.2.1 1.3.2: A Clash GUI based on tauri
 net-proxy/dae 0.2.4 9999: A lightweight and high-performance transparent proxy solution based on eBPF
-net-proxy/daed 0.3.2 9999: A Modern Dashboard For dae
+net-proxy/daed 0.3.3_p1 9999: A Modern Dashboard For dae
 net-proxy/juicity 0.2.0: juicity is a quic-based proxy protocol.
 net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
 net-proxy/shadowsocks-rust 1.15.4: A Rust port of shadowsocks.
