@@ -8,7 +8,7 @@ inherit systemd
 DESCRIPTION="A Modern Dashboard For dae"
 HOMEPAGE="https://github.com/daeuniverse/daed"
 SRC_URI="
-	https://github.com/daeuniverse/daed/releases/download/v${PV/_rc1/rc}/daed-full-src.zip -> ${P}.zip
+	https://github.com/daeuniverse/daed/releases/download/v${PV/_p1/.p1}/daed-full-src.zip -> ${P}.zip
 	webui? ( https://github.com/st0nie/gentoo-go-deps/releases/download/${P}/${P}-node_modules-pnpm.tar.xz )
 "
 # EGIT_REPO_URI="https://github.com/daeuniverse/daed.git"
