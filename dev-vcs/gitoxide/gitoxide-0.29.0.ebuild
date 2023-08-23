@@ -8,9 +8,8 @@ EAPI=8
 CRATES="
 	addr2line-0.20.0
 	adler-1.0.2
-	adler32-1.2.0
 	ahash-0.8.3
-	aho-corasick-1.0.2
+	aho-corasick-1.0.4
 	allocator-api2-0.2.16
 	anes-0.1.6
 	ansi_term-0.12.1
@@ -48,10 +47,6 @@ CRATES="
 	byteorder-1.4.3
 	bytes-1.4.0
 	bytesize-1.2.0
-	camino-1.1.6
-	cargo_metadata-0.15.4
-	cargo-platform-0.1.3
-	cargo_toml-0.15.3
 	cassowary-0.3.0
 	cast-0.3.0
 	cc-1.0.79
@@ -68,12 +63,9 @@ CRATES="
 	colorchoice-1.0.0
 	concurrent-queue-2.2.0
 	conpty-0.5.1
-	console-0.15.7
-	core2-0.4.0
 	core-foundation-0.9.3
 	core-foundation-sys-0.8.4
 	cpufeatures-0.2.9
-	crates-index-1.0.0
 	crc-3.0.1
 	crc32fast-1.3.2
 	crc-catalog-2.2.0
@@ -91,39 +83,38 @@ CRATES="
 	crypto-common-0.1.6
 	curl-0.4.44
 	curl-sys-0.4.63+curl-8.1.2
-	dary_heap-0.3.6
 	dashmap-5.5.0
 	data-encoding-2.4.0
 	defer-0.1.0
 	diff-0.1.13
 	digest-0.10.7
-	doc-comment-0.3.3
 	document-features-0.2.7
 	dunce-1.0.4
 	either-1.8.1
-	encode_unicode-0.3.6
 	encoding_rs-0.8.32
 	enum-as-inner-0.5.1
 	env_logger-0.10.0
-	equivalent-1.0.1
 	errno-0.3.1
 	errno-dragonfly-0.1.2
 	event-listener-2.5.3
 	expectrl-0.7.1
 	fallible-iterator-0.2.0
 	fallible-streaming-iterator-0.1.9
+	faster-hex-0.8.0
 	fastrand-1.9.0
 	fastrand-2.0.0
 	filetime-0.2.21
-	flate2-1.0.26
+	flate2-1.0.27
 	fnv-1.0.7
 	foreign-types-0.3.2
 	foreign-types-shared-0.1.1
 	form_urlencoded-1.2.0
 	fs-err-2.9.0
 	fs_extra-1.3.0
+	futures-0.3.28
 	futures-channel-0.3.28
 	futures-core-0.3.28
+	futures-executor-0.3.28
 	futures-io-0.3.28
 	futures-lite-1.13.0
 	futures-macro-0.3.28
@@ -131,11 +122,8 @@ CRATES="
 	futures-task-0.3.28
 	futures-util-0.3.28
 	generic-array-0.14.7
-	getopts-0.2.21
 	getrandom-0.2.10
 	gimli-0.27.3
-	git2-0.17.2
-	git-conventional-0.12.4
 	gix-actor-0.20.0
 	gix-attributes-0.12.0
 	gix-bitmap-0.2.5
@@ -164,7 +152,6 @@ CRATES="
 	h2-0.3.20
 	half-1.8.2
 	hashbrown-0.12.3
-	hashbrown-0.13.2
 	hashbrown-0.14.0
 	hashlink-0.8.3
 	heck-0.4.1
@@ -186,8 +173,6 @@ CRATES="
 	idna-0.4.0
 	imara-diff-0.1.5
 	indexmap-1.9.3
-	indexmap-2.0.0
-	insta-1.31.0
 	instant-0.1.12
 	io-close-0.3.7
 	io-lifetimes-1.0.11
@@ -200,7 +185,6 @@ CRATES="
 	itertools-0.10.5
 	itertools-0.11.0
 	itoa-1.0.9
-	jobserver-0.1.26
 	js-sys-0.3.64
 	jwalk-0.8.1
 	kstring-2.0.0
@@ -208,12 +192,10 @@ CRATES="
 	layout-rs-0.1.1
 	lazy_static-1.4.0
 	libc-0.2.147
-	libflate-2.0.0
-	libflate_lz77-2.0.0
-	libgit2-sys-0.15.2+1.6.4
 	libsqlite3-sys-0.26.0
-	libz-ng-sys-1.1.9
-	libz-sys-1.1.9
+	libtest-mimic-0.6.1
+	libz-ng-sys-1.1.12
+	libz-sys-1.1.12
 	linked-hash-map-0.5.6
 	linux-raw-sys-0.3.8
 	linux-raw-sys-0.4.3
@@ -250,7 +232,6 @@ CRATES="
 	openssl-0.10.55
 	openssl-macros-0.1.1
 	openssl-probe-0.1.5
-	openssl-src-111.26.0+1.1.1u
 	openssl-sys-0.9.90
 	overload-0.1.1
 	owo-colors-3.5.0
@@ -273,7 +254,6 @@ CRATES="
 	prodash-23.1.2
 	prodash-25.0.1
 	ptyprocess-0.4.1
-	pulldown-cmark-0.9.3
 	quick-error-1.2.3
 	quote-1.0.31
 	rand-0.8.5
@@ -290,10 +270,8 @@ CRATES="
 	reqwest-0.11.18
 	resolv-conf-0.7.0
 	ring-0.16.20
-	rle-decode-fast-1.0.3
 	rusqlite-0.29.0
 	rustc-demangle-0.1.23
-	rustc-hash-1.1.0
 	rustix-0.37.23
 	rustix-0.38.4
 	rustls-0.21.5
@@ -306,11 +284,9 @@ CRATES="
 	sct-0.7.0
 	security-framework-2.9.1
 	security-framework-sys-2.9.0
-	semver-1.0.18
-	serde-1.0.171
-	serde_derive-1.0.171
+	serde-1.0.185
+	serde_derive-1.0.185
 	serde_json-1.0.103
-	serde_spanned-0.6.3
 	serde_urlencoded-0.7.1
 	serial_test-2.0.0
 	serial_test_derive-2.0.0
@@ -321,10 +297,8 @@ CRATES="
 	signal-hook-0.3.17
 	signal-hook-mio-0.2.3
 	signal-hook-registry-1.4.1
-	similar-2.2.1
 	slab-0.4.8
 	smallvec-1.11.0
-	smol_str-0.2.0
 	socket2-0.4.9
 	socket2-0.5.3
 	spin-0.5.2
@@ -332,15 +306,16 @@ CRATES="
 	strsim-0.10.0
 	symlink-0.1.0
 	syn-1.0.109
-	syn-2.0.26
+	syn-2.0.29
 	sysinfo-0.29.5
 	tabled-0.10.0
 	tar-0.4.39
 	tempfile-3.6.0
 	termcolor-1.2.0
-	thiserror-1.0.43
-	thiserror-impl-1.0.43
+	thiserror-1.0.44
+	thiserror-impl-1.0.44
 	thread_local-1.1.7
+	threadpool-1.8.1
 	time-0.3.23
 	time-core-0.1.1
 	time-macros-0.2.10
@@ -351,9 +326,6 @@ CRATES="
 	tokio-native-tls-0.3.1
 	tokio-rustls-0.24.1
 	tokio-util-0.7.8
-	toml-0.7.6
-	toml_datetime-0.6.3
-	toml_edit-0.19.14
 	tower-service-0.3.2
 	tracing-0.1.37
 	tracing-attributes-0.1.26
@@ -367,7 +339,6 @@ CRATES="
 	tui-react-0.20.0
 	typenum-1.16.0
 	uluru-3.0.0
-	unicase-2.6.0
 	unicode-bidi-0.3.13
 	unicode-bom-2.0.2
 	unicode-ident-1.0.11
@@ -409,7 +380,6 @@ CRATES="
 	windows_i686_gnu-0.48.0
 	windows_i686_msvc-0.42.2
 	windows_i686_msvc-0.48.0
-	windows-sys-0.45.0
 	windows-sys-0.48.0
 	windows-targets-0.42.2
 	windows-targets-0.48.1
@@ -419,12 +389,11 @@ CRATES="
 	windows_x86_64_gnullvm-0.48.0
 	windows_x86_64_msvc-0.42.2
 	windows_x86_64_msvc-0.48.0
-	winnow-0.5.0
+	winnow-0.5.14
 	winreg-0.10.1
 	winreg-0.50.0
 	xattr-0.2.3
 	xz2-0.1.7
-	yaml-rust-0.4.5
 	yansi-0.5.1
 	zip-0.6.6
 "
