@@ -17,6 +17,7 @@ KEYWORDS="-* ~amd64"
 RESTRICT="strip mirror bindist"
 
 RDEPEND="
+	dev-libs/libthai
 	dev-qt/qtgui
 	media-libs/tiff-compat:4
 	media-libs/libpulse
