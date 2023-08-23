@@ -406,7 +406,7 @@ function _gt() {
       if [[ ${v0[${_i}]:--1} -gt ${v1[${_i}]:--1} ]]; then
         return 0
       elif [[ ${v0[${_i}]:--1} -eq ${v1[${_i}]:--1} ]]; then
-        if [[ ${_i} > 50 ]]; then
+        if [[ ${_i} -gt 50 ]]; then
           _fatal "Too much comparations!"
         fi
         _i+=1
