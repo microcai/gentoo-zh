@@ -274,15 +274,15 @@ sys-fs/ssdfs-tools 4.09: userspace tools for SSDFS
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/liquorix-sources 6.4.3 6.4.6: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 34-r1: Modular initramfs image creation utility
-sys-kernel/xanmod-kernel 6.1.43 6.1.45 6.4.8 6.4.10: XanMod lts kernel built with Gentoo patches and cjktty
+sys-kernel/xanmod-kernel 6.1.46 6.1.47 6.4.11 6.4.12: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 6.0.11: XanMod RT sources and CJKTTY options.
-sys-kernel/xanmod-sources 6.1.43 6.1.45 6.4.8 6.4.10: Full XanMod source, including the Gentoo patchset and other patch options.
+sys-kernel/xanmod-sources 6.1.46 6.1.47 6.4.11 6.4.12: Full XanMod source, including the Gentoo patchset and other patch options.
 sys-kernel/zenpower 0.1.12-r1: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libsolv 0.7.24 9999: Library for solving packages and reading repositories
 sys-libs/libzypp 17.31.11 9999: ZYpp Package Management library
 sys-power/tlpui 1.5.0_p6: A GTK user interface for TLP written in Python
-virtual/dist-kernel 6.1.43 6.1.45 6.3.12 6.4.8 6.4.10: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 6.1.46 6.1.47 6.4.11 6.4.12: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 www-apps/chatgpt-desktop 1.0.0: ChatGPT Desktop Application
 www-apps/openvscode-server-bin 1.75.1: VS Code that runs a server on remote and allows access through a web browser
