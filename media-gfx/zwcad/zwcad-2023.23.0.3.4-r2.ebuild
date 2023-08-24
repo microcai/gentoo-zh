@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -11,21 +11,23 @@ inherit desktop unpacker xdg
 DESCRIPTION="CAD software for 2D drawing, reviewing and printing work"
 HOMEPAGE="https://www.zwsoft.cn/product/zwcad/linux"
 
+URI_UNIONTECH="https://home-store-packages.uniontech.com/appstore/pool/appstore/c"
+URI_ANACONDA="https://anaconda.org/anaconda"
 SRC_URI="
-	https://home-store-packages.uniontech.com/appstore/pool/appstore/c/${MY_PGK_NAME}/${MY_PGK_NAME}_${MY_PV}_amd64.deb -> ${P}.deb
-	https://anaconda.org/anaconda/python/3.7.13/download/linux-64/python-3.7.13-h12debd9_0.tar.bz2 -> ${PN}-python-3.7.13.tar.bz2
+	${URI_UNIONTECH}/${MY_PGK_NAME}/${MY_PGK_NAME}_${MY_PV}_amd64.deb -> ${P}.deb
+	${URI_ANACONDA}/python/3.7.13/download/linux-64/python-3.7.13-h12debd9_0.tar.bz2 -> ${PN}-python-3.7.13.tar.bz2
 "
 
 LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* ~amd64"
 
-RESTRICT="strip mirror bindist"
+RESTRICT="bindist mirror preserve-libs strip"
 
 RDEPEND="
 	media-libs/fontconfig
 	media-libs/libglvnd
-	|| ( media-libs/tiff:0/0 media-libs/tiff-compat:4 )
+	media-libs/tiff-compat:4
 	sys-apps/util-linux
 	sys-libs/zlib
 	virtual/libcrypt:=
@@ -41,7 +43,8 @@ QA_PREBUILT="*"
 
 src_unpack() {
 	unpack_deb "${DISTDIR}/${P}.deb"
-	tar -xf "${DISTDIR}/${PN}-python-3.7.13.tar.bz2" -C "${S}/opt/apps/"${MY_PGK_NAME}"/files/ZwPyRuntime/python3.7/" || die
+	tar -xf "${DISTDIR}/${PN}-python-3.7.13.tar.bz2" \
+		-C "${S}/opt/apps/"${MY_PGK_NAME}"/files/ZwPyRuntime/python3.7/" || die
 }
 
 src_install() {
@@ -71,17 +74,21 @@ src_install() {
 	popd || die
 
 	# Fix desktop files
-	sed -E -i 's/^Exec=.*$/Exec=zwcad %F/g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
+	sed -E -i 's/^Exec=.*$/Exec=zwcad %F/g' \
+		"${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
 	sed -E -i 's/^Icon=.*$/Icon=ZWCAD/g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
 	sed -E -i 's/Application;//g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
 	# The Version entry in a .desktop file doesn't refer to the version of the
 	# target program. It's the version of the desktop file specification that
 	# this desktop file conforms to.
-	sed -E -i 's/^Version=.*$/Version=1.0/g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
-	sed -E -i 's/^Categories=.*$/Categories=Graphics;VectorGraphics;Engineering;Construction;2DGraphics;/g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
+	sed -E -i 's/^Version=.*$/Version=1.0/g' \
+		"${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
+	sed -E -i 's/^Categories=.*$/Categories=Graphics;VectorGraphics;Engineering;Construction;2DGraphics;/g' \
+		"${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
 	domenu "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop"
 
-	sed -i "1i\\export MONO_PATH=/opt/apps/${MY_PGK_NAME}/files/lib/mono/lib/mono/4.5\n" "${S}/opt/apps/${MY_PGK_NAME}/files/ZWCADRUN.sh" || die
+	sed -i "1i\\export MONO_PATH=/opt/apps/${MY_PGK_NAME}/files/lib/mono/lib/mono/4.5\n" \
+		"${S}/opt/apps/${MY_PGK_NAME}/files/ZWCADRUN.sh" || die
 	sed -E -i 's/export QT_IM_MODULE=fcitx//g' "${S}/opt/apps/${MY_PGK_NAME}/files/ZWCADRUN.sh" || die
 
 	# Add zw3d command
