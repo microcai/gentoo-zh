@@ -1,6 +1,6 @@
 BDEPEND=dev-util/patchelf
 DEFINED_PHASES=install postinst postrm preinst unpack
-DEPEND=media-libs/fontconfig media-libs/libglvnd || ( media-libs/tiff:0/0 media-libs/tiff-compat:4 ) sys-apps/util-linux sys-libs/zlib virtual/libcrypt:=
+DEPEND=media-libs/fontconfig media-libs/libglvnd media-libs/tiff-compat:4 sys-apps/util-linux sys-libs/zlib virtual/libcrypt:=
 DESCRIPTION=CAD software for 2D drawing, reviewing and printing work
 EAPI=8
 HOMEPAGE=https://www.zwsoft.cn/product/zwcad/linux
@@ -8,9 +8,9 @@ IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop unpacker xdg
 KEYWORDS=-* ~amd64
 LICENSE=all-rights-reserved
-RDEPEND=media-libs/fontconfig media-libs/libglvnd || ( media-libs/tiff:0/0 media-libs/tiff-compat:4 ) sys-apps/util-linux sys-libs/zlib virtual/libcrypt:=
-RESTRICT=strip mirror bindist
+RDEPEND=media-libs/fontconfig media-libs/libglvnd media-libs/tiff-compat:4 sys-apps/util-linux sys-libs/zlib virtual/libcrypt:=
+RESTRICT=bindist mirror preserve-libs strip
 SLOT=0
 SRC_URI=https://home-store-packages.uniontech.com/appstore/pool/appstore/c/com.zwsoft.zwcad2023/com.zwsoft.zwcad2023_23.0.3.4_amd64.deb -> zwcad-2023.23.0.3.4.deb https://anaconda.org/anaconda/python/3.7.13/download/linux-64/python-3.7.13-h12debd9_0.tar.bz2 -> zwcad-python-3.7.13.tar.bz2
 _eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	862d337d98edb576796827be2c6b11ca	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	aa6a4e924009232d8b78b31e932c30b5	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
-_md5_=086d266807edf5b33cf8e64d583b2129
+_md5_=9782aafa6139aece58ddf5fca9709a85
