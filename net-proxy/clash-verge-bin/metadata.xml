@@ -11,5 +11,8 @@
 	</maintainer>
 	<use>
 		<flag name="system-clash">Use net-proxy/clash instead of clash-premium</flag>
+		<flag name="clash">Install net-proxy/clash as clash backend</flag>
+		<flag name="clash-meta">Install net-proxy/clash-meta as clash backend</flag>
+		<flag name="clash-premium">Install net-proxy/clash-premium-bin as clash backend</flag>
 	</use>
 </pkgmetadata>
