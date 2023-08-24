@@ -8,7 +8,7 @@ inherit kernel-build python-any-r1 toolchain-funcs
 PYTHON_COMPAT=( python3_{9..11} )
 MY_P=linux-${PV%.*}
 #Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
-GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 6))
+GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 2))
 XV="1"
 
 DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
@@ -16,7 +16,7 @@ HOMEPAGE="https://www.kernel.org/"
 SRC_URI+=" https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.xz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.base.tar.xz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.extras.tar.xz
-	https://github.com/xanmod/linux/releases/download/${PV}-xanmod${XV}/patch-${PV}-xanmod${XV}.xz
+	mirror://sourceforge/xanmod/patch-${PV}-xanmod1.xz
 	https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v6.x/cjktty-${PV%.*}.patch"
 S=${WORKDIR}/${MY_P}
 
