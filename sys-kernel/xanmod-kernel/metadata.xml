@@ -15,6 +15,6 @@
 		<flag name="x86-64-v4">Set compiler optimization to x86-64-v4</flag>
 	</use>
 	<upstream>
-		<remote-id type="github">xanmod/linux</remote-id>
+		<remote-id type="sourceforge">xanmod</remote-id>
 	</upstream>
 </pkgmetadata>
