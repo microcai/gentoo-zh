@@ -390,7 +390,7 @@ CRATES="
 		osascript@0.3.0
 		overload@0.1.1
 		pam-macros@0.0.3
-		pam-sys-1.0.0@alpha4
+		pam-sys@1.0.0-alpha4
 		pango@0.16.5
 		pango-sys@0.16.3
 		parking@2.1.0
@@ -599,8 +599,8 @@ CRATES="
 		waker-fn@1.1.0
 		walkdir@2.3.3
 		want@0.3.0
-		wasi-0.10.0+wasi-snapshot@preview1
-		wasi-0.11.0+wasi-snapshot@preview1
+		wasi@0.10.0+wasi-snapshot-preview1
+		wasi@0.11.0+wasi-snapshot-preview1
 		wasm-bindgen@0.2.85
 		wasm-bindgen-backend@0.2.85
 		wasm-bindgen-futures@0.4.35
@@ -744,10 +744,11 @@ RDEPEND="
 	x11-libs/gtk+:3
 	x11-libs/libxcb
 	x11-libs/libXfixes
-	media-sound/pulseaudio
+	media-libs/libpulse
 	x11-misc/xdotool
 	media-libs/libva
 	wayland? ( media-video/pipewire[gstreamer] )
+	hwaccel? ( x11-libs/libvdpau )
 "
 BDEPEND="
 	dev-lang/nasm
