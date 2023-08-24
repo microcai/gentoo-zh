@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<upstream>
-		<remote-id type="github">xanmod/linux</remote-id>
+		<remote-id type="sourceforge">xanmod</remote-id>
 	</upstream>
 	<maintainer type="person">
 		<email>OriPoin@outlook.com</email>

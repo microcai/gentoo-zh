@@ -4,7 +4,7 @@
 EAPI="8"
 K_WANT_GENPATCHES="base extras"
 #Note: to bump xanmod, check K_GENPATCHES_VER in sys-kernel/gentoo-sources
-K_GENPATCHES_VER="49"
+K_GENPATCHES_VER="14"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 ETYPE="sources"
@@ -25,14 +25,14 @@ KEYWORDS="~amd64"
 
 IUSE="cjktty"
 XANMOD_VERSION="1"
-XANMOD_URI="https://github.com/xanmod/linux/releases/download/"
+XANMOD_URI="mirror://sourceforge/xanmod"
 OKV="${OKV}-xanmod"
 TT_URI="https://raw.githubusercontent.com/hamadmarri/TT-CPU-Scheduler/master/patches/"
 CJKTTY_URI="https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v${KV_MAJOR}.x/"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
 	${GENPATCHES_URI}
-	${XANMOD_URI}/${OKV}${XANMOD_VERSION}/patch-${OKV}${XANMOD_VERSION}.xz
+	${XANMOD_URI}/patch-${OKV}${XANMOD_VERSION}.xz
 	${CJKTTY_URI}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch
 "
 	#${TT_URI}/${KV_MAJOR}.${KV_MINOR}/tt-${KV_MAJOR}.${KV_MINOR}.patch
