@@ -6,4 +6,4 @@ fi
 
 export LD_PRELOAD=/usr/lib/gcc/x86_64-pc-linux-gnu/12/libstdc++.so.6
 
-/opt/QQ/qq "$@"
+exec /opt/QQ/qq "$@"
