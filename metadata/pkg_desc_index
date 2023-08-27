@@ -106,11 +106,11 @@ dev-python/conda 23.1.0: OS-agnostic, system-level binary package manager and ec
 dev-python/conda-package-handling 2.0.2: Create and extract conda packages of various formats
 dev-python/conda-package-streaming 0.7.0: An efficient library to read from new and old conda packages
 dev-python/daff 1.3.46: The daff can produce and apply tabular diffs
-dev-python/feeluown-bilibili 0.1.5: bilibili support for feeluown
+dev-python/feeluown-bilibili 0.3: bilibili support for feeluown
 dev-python/fuo-kuwo 0.1.6 0.2.0: kuwo music support for feeluown
 dev-python/fuo-netease 0.9.7: netease cloud music support for feeluown
-dev-python/fuo-qqmusic 0.5.0: qq music support for feeluown
-dev-python/fuo-ytmusic 0.2.0-r1: youtube music support for feeluown
+dev-python/fuo-qqmusic 0.5.1: qq music support for feeluown
+dev-python/fuo-ytmusic 0.3.1: youtube music support for feeluown
 dev-python/janus 1.0.0-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/nvchecker 2.12: nvchecker is for checking if a new version of some software has been released
 dev-python/pycosat 0.6.4: Python bindings to picosat (a SAT solver)
@@ -166,7 +166,7 @@ media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simpl
 media-libs/libva-nvidia-driver 0.0.9 9999: NVDEC Backend for Video Acceleration (VA) API
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.10-r1 0.5.11 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
-media-sound/feeluown 3.8.11 3.8.12: A user-friendly and hackable music player
+media-sound/feeluown 3.8.12 3.8.14: A user-friendly and hackable music player
 media-sound/go-musicfox 4.1.6: Command-line Netease Cloud Music written in Go
 media-sound/linnya 2.2.0: A free music player
 media-sound/listen1_desktop-bin 2.28.0: one for all free music in China
