@@ -4,7 +4,7 @@
 EAPI=8
 DISTUTILS_USE_PEP517=poetry
 PYTHON_COMPAT=( python3_{10..11} )
-
+PYPI_NO_NORMALIZE=true
 inherit distutils-r1 pypi
 
 DESCRIPTION="bilibili support for feeluown"
@@ -23,10 +23,6 @@ RDEPEND="
 PDEPEND="
 	media-sound/feeluown
 "
-
-PATCHES=(
-	"${FILESDIR}/${PN}-0.1.5-replace-pycryptodomex.patch"
-)
 
 python_install_all() {
 	distutils-r1_python_install_all
