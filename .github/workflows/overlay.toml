@@ -424,6 +424,11 @@ github = "conda/conda-package-handling"
 use_latest_release = true
 github_account = "OriPoin"
 
+["dev-python/fuo-bilibili"]
+source = "pypi"
+pypi = "fuo-bilibili"
+github_account = "wgjak47"
+
 ["dev-python/fuo-kuwo"]
 source = "pypi"
 pypi = "fuo_kuwo"
@@ -442,6 +447,11 @@ github_account = "wgjak47"
 ["dev-python/fuo-qqmusic"]
 source = "pypi"
 pypi = "fuo-qqmusic"
+github_account = "wgjak47"
+
+["dev-python/fuo-ytmusic"]
+source = "pypi"
+pypi = "fuo-ytmusic"
 github_account = "wgjak47"
 
 ["dev-python/janus"]
