@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-08-26 04:08:52 CST)
+(The last generation time: 2023-08-27 22:25:46 CST)
 
 ### Packages
 
@@ -206,6 +206,8 @@
  dev-python/nvchecker                       | 2.12                                      |        | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
    dev-python/structlog                     | 23.1.0                                    | RD     | http://www.structlog.org/en/stable/                                                     | Structured Logging for Python
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/pytube                          | 15.0.0                                    |        | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/arch-install-scripts              | 28-r1                                     |        | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
    dev-util/pacstrap                        | 28                                        | RD     | https://github.com/archlinux/arch-install-scripts                                       | Pacstrap - install packages to the specified new root directorye
      sys-apps/pacman                        | 6.0.1                                     |  D, RD | https://archlinux.org/pacman/                                                           | Archlinux's binary package manager
@@ -304,15 +306,14 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-plugins/gimp-gap                     | 2.8.0                                     |        | http://www.gimp.org/                                                                    | Gimp Animation Package
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/feeluown                       | 3.8.11                                    |        | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
-                                            | 3.8.12                                    |        |                                                                                         |
-   dev-python/feeluown-bilibili             | 0.1.5                                     |  D     | https://github.com/feeluown/feeluown-bilibili                                           | bilibili support for feeluown
+ media-sound/feeluown                       | 3.8.12                                    |        | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
+                                            | 3.8.14                                    |        |                                                                                         |
+   dev-python/feeluown-bilibili             | 0.3                                       |  D     | https://github.com/feeluown/feeluown-bilibili                                           | bilibili support for feeluown
    dev-python/fuo-kuwo                      | 0.1.6                                     |  D     | https://github.com/feeluown/feeluown-kuwo                                               | kuwo music support for feeluown
                                             | 0.2.0                                     |        |                                                                                         |
    dev-python/fuo-netease                   | 0.9.7                                     |  D     | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
-   dev-python/fuo-qqmusic                   | 0.5.0                                     |  D     | https://github.com/feeluown/feeluown-qqmusic                                            | qq music support for feeluown
-   dev-python/fuo-ytmusic                   | 0.2.0-r1                                  |  D     | https://github.com/feeluown/feeluown-ytmusic                                            | youtube music support for feeluown
-     dev-python/pytube                      | 15.0.0                                    | RD     | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
+   dev-python/fuo-qqmusic                   | 0.5.1                                     |  D     | https://github.com/feeluown/feeluown-qqmusic                                            | qq music support for feeluown
+   dev-python/fuo-ytmusic                   | 0.3.1                                     |  D     | https://github.com/feeluown/feeluown-ytmusic                                            | youtube music support for feeluown
    dev-python/janus                         | 1.0.0-r1                                  |  D, RD | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
    dev-python/qasync                        | 0.24.0                                    |  D, RD | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
