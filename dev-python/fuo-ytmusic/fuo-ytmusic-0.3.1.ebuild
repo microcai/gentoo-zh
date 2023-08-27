@@ -21,7 +21,6 @@ RDEPEND="
 	dev-python/beautifulsoup4[${PYTHON_USEDEP}]
 	dev-python/pycryptodome[${PYTHON_USEDEP}]
 	dev-python/cachetools[${PYTHON_USEDEP}]
-	dev-python/pytube[${PYTHON_USEDEP}]
 	dev-python/ytmusicapi[${PYTHON_USEDEP}]
 "
 
