@@ -10,5 +10,5 @@ RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-d
 RESTRICT=binchecks strip
 SLOT=6.1.46
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.1.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.1-52.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.1-52.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.1-52.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.1-52.extras.tar.xz mirror://sourceforge/xanmod/patch-6.1.46-xanmod1.xz https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v6.x//cjktty-6.1.patch
-_eclasses_=toolchain-funcs	862d337d98edb576796827be2c6b11ca	multilib	c19072c3cd7ac5cb21de013f7e9832e0	crossdev	f04338ff78f213a4a55c5c37b3c6563e	estack	c61c368a76fdf3a82fdf8dbaebea3804	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	kernel-2	8b78a61bbb6b7ca94cd9908ac1edd2e8
+_eclasses_=toolchain-funcs	862d337d98edb576796827be2c6b11ca	multilib	c19072c3cd7ac5cb21de013f7e9832e0	crossdev	f04338ff78f213a4a55c5c37b3c6563e	estack	c61c368a76fdf3a82fdf8dbaebea3804	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	kernel-2	7de441e9527219813d4420e059542ecf
 _md5_=a32eb0f484f7f19f813840fd4da5dc73
