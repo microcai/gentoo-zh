@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-08-30 12:23:17 CST)
+(The last generation time: 2023-08-30 17:19:29 CST)
 
 ### Packages
 
@@ -46,6 +46,12 @@
  app-i18n/fcitx-chewing                     | 5.0.14                                    |        | https://github.com/fcitx/fcitx5-chewing                                                 | Chewing Wrapper for Fcitx.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-meta                        | 5.0.12-r2                                 |        | https://fcitx-im.org                                                                    | Merge this to pull in Fcitx packages
+   app-i18n/fcitx-chinese-addons            | 5.1.0-r1                                  |  D, RD | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
+                                            | 9999                                      |        |                                                                                         |
+     app-i18n/fcitx-lua                     | 5.0.10                                    |  D, RD | https://github.com/fcitx/fcitx5-lua                                                     | Lua support for fcitx
+                                            | 9999                                      |        |                                                                                         |
+     app-i18n/fcitx-qt                      | 5.1.0                                     |  D, RD | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
+                                            | 9999                                      |        |                                                                                         |
    app-i18n/fcitx-configtool                | 5.1.0                                     | RD     | https://fcitx-im.org/                                                                   | Configuration module for Fcitx
                                             | 9999                                      |        |                                                                                         |
    app-i18n/fcitx-gtk                       | 5.1.0                                     | RD     | https://github.com/fcitx/fcitx5-gtk                                                     | Gtk im module for fcitx5 and glib based dbus client library
@@ -53,6 +59,7 @@
    app-i18n/fcitx-hangul                    | 5.1.0                                     | RD     | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
    app-i18n/fcitx-rime                      | 5.1.1                                     | RD     | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
                                             | 9999                                      |        |                                                                                         |
+     app-i18n/rime-prelude                  | 20220122-r1                               |  D, RD | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
    app-i18n/fcitx-skk                       | 5.1.0                                     | RD     | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -69,36 +76,35 @@
  app-i18n/mozc                              | 2.26.4220_p20201212102434_p20201219202429 |        | https://github.com/google/mozc                                                          | Mozc - Japanese input method editor
                                             | 2.26.4632_p20220213064411_p20220214004422 |        |                                                                                         |
                                             | 2.28.5029.102                             |        |                                                                                         |
-   dev-util/gyp                             | 20220404165439                            | BD     | https://gyp.gsrc.io/                                                                    | GYP (Generate Your Projects) meta-build system
-                                            | 99999999999999                            |        |                                                                                         |
-       app-i18n/rime-flypy                  | 10.9.4                                    |  D, RD | https://github.com/cubercsl/rime-flypy                                                  | flypy-full input for rime
-         app-i18n/fcitx-chinese-addons      | 5.1.0-r1                                  |  D, RD | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
-                                            | 9999                                      |        |                                                                                         |
-           app-i18n/fcitx                   | 4.2.9.8                                   |  D, RD | https://fcitx-im.org/                                                                   | Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
+   app-i18n/fcitx                           | 4.2.9.8                                   |  D, RD | https://fcitx-im.org/                                                                   | Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
                                             | 5.1.0                                     |        |                                                                                         |
                                             | 9999                                      |        |                                                                                         |
-             x11-libs/xcb-imdkit            | 1.0.4                                     |  D, RD | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
+     x11-libs/xcb-imdkit                    | 1.0.4                                     |  D, RD | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
                                             | 1.0.5                                     |        |                                                                                         |
-           app-i18n/fcitx-lua               | 5.0.10                                    |  D, RD | https://github.com/fcitx/fcitx5-lua                                                     | Lua support for fcitx
+   app-i18n/libime                          | 1.1.1                                     |  D, RD | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
                                             | 9999                                      |        |                                                                                         |
-           app-i18n/fcitx-qt                | 5.1.0                                     |  D, RD | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
-                                            | 9999                                      |        |                                                                                         |
-           app-i18n/libime                  | 1.1.1                                     |  D, RD | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
-                                            | 9999                                      |        |                                                                                         |
-         app-i18n/rime-cangjie              | 20210223                                  |  D, RD | https://github.com/rime/rime-cangjie                                                    | Cangjie input for rime
-           app-i18n/rime-data               | 20220409                                  |  D, RD | https://rime.im/                                                                        | Data resources for Rime Input Method Engine
-             app-i18n/rime-bopomofo         | 20210131                                  |  D, RD | https://github.com/rime/rime-bopomofo                                                   | Bopomofo input for rime
-               app-i18n/rime-terra-pinyin   | 20230207                                  |  D, RD | https://github.com/rime/rime-terra-pinyin                                               | Terra input for rime
-             app-i18n/rime-double-pinyin    | 20190120                                  |  D, RD | https://github.com/rime/rime-double-pinyin                                              | double-pinyin input for rime
-               app-i18n/rime-luna-pinyin    | 20230204                                  |  D, RD | https://github.com/rime/rime-luna-pinyin                                                | Luna pinyin for rime
-             app-i18n/rime-essay            | 20230204-r1                               |  D, RD | https://github.com/rime/rime-essay                                                      | Essential files for building up your Rime configuration
-             app-i18n/rime-octagram-data    | 20190619                                  |  D, RD | https://github.com/lotem/rime-octagram-data                                             | Language model of the 「八股文」語法
-               app-i18n/librime-octagram    | 20230125-r2                               |  D, RD | https://github.com/lotem/librime-octagram                                               | 「八股文」語法 plugin for RIME
-                 app-i18n/librime           | 1.8.5                                     |  D, RD | https://rime.im/                                                                        | RIME (Rime Input Method Engine) core library
-             app-i18n/rime-prelude          | 20220122-r1                               |  D, RD | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
-             app-i18n/rime-wubi             | 20200908                                  |  D, RD | https://github.com/rime/rime-wubi                                                       | wubi input for rime
-               app-i18n/rime-pinyin-simp    | 20230104                                  |  D, RD | https://github.com/rime/rime-pinyin-simp                                                | Simple pinyin input for rime
-                 app-i18n/rime-stroke       | 20230204                                  |  D, RD | https://github.com/rime/rime-stroke                                                     | Stroke input for rime
+   dev-util/gyp                             | 20220404165439                            | BD     | https://gyp.gsrc.io/                                                                    | GYP (Generate Your Projects) meta-build system
+                                            | 99999999999999                            |        |                                                                                         |
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ app-i18n/rime-bopomofo                     | 20210131                                  |        | https://github.com/rime/rime-bopomofo                                                   | Bopomofo input for rime
+   app-i18n/rime-cangjie                    | 20210223                                  |  D, RD | https://github.com/rime/rime-cangjie                                                    | Cangjie input for rime
+   app-i18n/rime-terra-pinyin               | 20230207                                  |  D, RD | https://github.com/rime/rime-terra-pinyin                                               | Terra input for rime
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ app-i18n/rime-double-pinyin                | 20190120                                  |        | https://github.com/rime/rime-double-pinyin                                              | double-pinyin input for rime
+   app-i18n/rime-luna-pinyin                | 20230204                                  |  D, RD | https://github.com/rime/rime-luna-pinyin                                                | Luna pinyin for rime
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ app-i18n/rime-essay                        | 20230204-r1                               |        | https://github.com/rime/rime-essay                                                      | Essential files for building up your Rime configuration
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ app-i18n/rime-flypy                        | 10.9.4                                    |        | https://github.com/cubercsl/rime-flypy                                                  | flypy-full input for rime
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ app-i18n/rime-octagram-data                | 20190619                                  |        | https://github.com/lotem/rime-octagram-data                                             | Language model of the 「八股文」語法
+   app-i18n/librime-octagram                | 20230125-r2                               |  D, RD | https://github.com/lotem/librime-octagram                                               | 「八股文」語法 plugin for RIME
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ app-i18n/rime-wubi                         | 20200908                                  |        | https://github.com/rime/rime-wubi                                                       | wubi input for rime
+   app-i18n/rime-data                       | 20220409                                  |  D, RD | https://rime.im/                                                                        | Data resources for Rime Input Method Engine
+     app-i18n/librime                       | 1.8.5                                     |  D, RD | https://rime.im/                                                                        | RIME (Rime Input Method Engine) core library
+   app-i18n/rime-pinyin-simp                | 20230104                                  |  D, RD | https://github.com/rime/rime-pinyin-simp                                                | Simple pinyin input for rime
+     app-i18n/rime-stroke                   | 20230204                                  |  D, RD | https://github.com/rime/rime-stroke                                                     | Stroke input for rime
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/zh-autoconvert                    | 0.3.16_p7                                 |        | https://packages.debian.org/stable/source/zh-autoconvert                                | Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
