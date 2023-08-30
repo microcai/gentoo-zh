@@ -27,9 +27,8 @@ IUSE="
 	flypy
 "
 
-DEPEND="
-	app-i18n/librime
-	bopomofo? ( app-i18n/rime-bopomofo )
+DEPEND="app-i18n/librime"
+PDEPEND="bopomofo? ( app-i18n/rime-bopomofo )
 	cangjie? ( app-i18n/rime-cangjie )
 	double-pinyin? ( app-i18n/rime-double-pinyin )
 	essay? ( app-i18n/rime-essay )
