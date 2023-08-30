@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=(python3_{9..11})
 
-inherit eutils distutils-r1 git-r3
+inherit distutils-r1 git-r3
 
 DESCRIPTION="A video downloader for YouTube, Youku, niconico and a few other sites"
 HOMEPAGE="http://www.soimort.org/you-get"
