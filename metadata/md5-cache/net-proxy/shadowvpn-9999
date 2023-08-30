@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=configure prepare unpack
+DEPEND=dev-libs/libsodium
+DESCRIPTION=A fast, safe VPN based on libsodium
+EAPI=7
+HOMEPAGE=http://shadowvpn.org/
+INHERIT=git-r3
+LICENSE=GPL-3+
+PROPERTIES=live
+RDEPEND=dev-libs/libsodium
+SLOT=0
+_eclasses_=git-r3	2358a7b20091609e24bd3a83b3ac5991
+_md5_=50e17a19a5f079db95a3c84e1bb97bb9

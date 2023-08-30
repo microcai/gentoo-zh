@@ -1,0 +1,14 @@
+BDEPEND=app-arch/xz-utils >=dev-vcs/git-1.8.2.1[curl] sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71-r5 >=sys-devel/libtool-2.4.7
+DEFINED_PHASES=configure install prepare unpack
+DEPEND=>=net-misc/networkmanager-1.0[ppp] dev-libs/dbus-glib net-dialup/ppp net-dialup/xl2tpd >=dev-libs/glib-2.32 gnome? ( >=x11-libs/gtk+-3.4:4 gnome-base/libgnome-keyring ) sys-devel/gettext dev-util/intltool virtual/pkgconfig
+DESCRIPTION=NetworkManager L2TP plugin
+EAPI=7
+HOMEPAGE=http://www.gnome.org/projects/NetworkManager/
+INHERIT=gnome.org git-r3 autotools
+IUSE=gnome
+LICENSE=GPL-2
+PROPERTIES=live
+RDEPEND=>=net-misc/networkmanager-1.0[ppp] dev-libs/dbus-glib net-dialup/ppp net-dialup/xl2tpd >=dev-libs/glib-2.32 gnome? ( >=x11-libs/gtk+-3.4:4 gnome-base/libgnome-keyring )
+SLOT=0
+_eclasses_=gnome.org	6b39404f1491c60a2d32e3c693a683fe	git-r3	2358a7b20091609e24bd3a83b3ac5991	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	862d337d98edb576796827be2c6b11ca	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	6ae9a4347149b19a112caa1182d03bde
+_md5_=3948be12faf09bb11260739d8ee5429e
