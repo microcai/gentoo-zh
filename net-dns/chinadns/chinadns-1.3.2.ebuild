@@ -3,8 +3,6 @@
 
 EAPI=7
 
-inherit eutils
-
 DESCRIPTION="Protect yourself against DNS poisoning in China"
 HOMEPAGE="https://github.com/clowwindy/ChinaDNS"
 

@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit bash-completion-r1 eutils
+inherit bash-completion-r1
 
 DESCRIPTION="A pacman wrapper with extended features and AUR support"
 HOMEPAGE="http://www.archlinux.fr/yaourt-en/"
