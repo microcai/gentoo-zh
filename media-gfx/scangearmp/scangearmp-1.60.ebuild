@@ -15,7 +15,7 @@
 #        dependency of app-text/ghostscript-gpl.
 EAPI=7
 
-inherit eutils flag-o-matic autotools multilib
+inherit flag-o-matic autotools multilib
 
 DESCRIPTION="Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series)."
 HOMEPAGE="http://support-au.canon.com.au/contents/AU/EN/0100303302.html"
