@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit autotools eutils git-r3
+inherit autotools git-r3
 
 DESCRIPTION="Library for communication with TI calculators"
 HOMEPAGE="http://lpg.ticalc.org/prj_tilp/"
