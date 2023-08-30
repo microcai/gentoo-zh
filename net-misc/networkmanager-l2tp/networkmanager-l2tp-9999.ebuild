@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils gnome.org git-r3 autotools
+inherit gnome.org git-r3 autotools
 
 # NetworkManager likes itself with capital letters
 MY_PN="${PN/networkmanager/NetworkManager}"
