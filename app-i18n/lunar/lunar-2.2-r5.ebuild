@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="Chinese Lunar Calendar conversion utility"
 HOMEPAGE="https://packages.debian.org/unstable/utils/lunar"
