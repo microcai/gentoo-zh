@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit gnome2-utils eutils git-r3
+inherit gnome2-utils git-r3
 
 EGIT_REPO_URI="https://github.com/hillwoodroc/winetricks-zh.git"
 
