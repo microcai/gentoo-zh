@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-08-29 13:26:21 CST)
+(The last generation time: 2023-08-30 12:23:17 CST)
 
 ### Packages
 
@@ -61,8 +61,6 @@
  app-i18n/fcitx-table-other                 | 5.1.0                                     |        | https://github.com/fcitx/fcitx5-table-other                                             | Provides some other tables for Fcitx, fork from ibus-table-others, scim-tables
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/ibus-rime                         | 9999                                      |        | http://code.google.com/p/rimeime/                                                       | Rime Input Method Engine for IBus Framework
---------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/libgooglepinyin                   | 0.1.2-r1                                  |        | http://libgooglepinyin.googlecode.com/                                                  | A fork from google pinyin on android
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/lunar                             | 2.2-r5                                    |        | https://packages.debian.org/unstable/utils/lunar                                        | Chinese Lunar Calendar conversion utility
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -467,7 +465,6 @@
  net-print/epson-inkjet-printer_201207w     | 1.0.0                                     |        | http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX                              | Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-print/pantum                           | 1.1.94                                    |        | https://www.pantum.cn/support/download/driver/                                          | 奔图打印机Linux驱动
-   media-gfx/sane-backends                  | 9999                                      |  D, RD | http://www.sane-project.org/                                                            | Scanner Access Now Easy - Backends
    media-libs/libjpeg8                      | 2.1.4                                     |  D, RD | https://libjpeg-turbo.org/                                                              | MMX, SSE, and SSE2 SIMD accelerated JPEG library
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/cgproxy                          | 0.20-r1                                   |        | https://github.com/springzfx/cgproxy                                                    | Transparent Proxy with cgroup v2
