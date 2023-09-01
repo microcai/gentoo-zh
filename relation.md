@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-08-30 17:19:29 CST)
+(The last generation time: 2023-09-01 19:18:07 CST)
 
 ### Packages
 
@@ -475,8 +475,8 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/cgproxy                          | 0.20-r1                                   |        | https://github.com/springzfx/cgproxy                                                    | Transparent Proxy with cgroup v2
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/clash-for-windows-bin            | 0.20.31                                   |        | https://github.com/Fndroid/clash_for_windows_pkg                                        | A Windows/macOS/Linux GUI based on Clash and Electron.
-                                            | 0.20.32                                   |        |                                                                                         |
+ net-proxy/clash-for-windows-bin            | 0.20.32                                   |        | https://github.com/Fndroid/clash_for_windows_pkg                                        | A Windows/macOS/Linux GUI based on Clash and Electron.
+                                            | 0.20.33                                   |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-verge-bin                  | 1.2.0                                     |        | https://github.com/zzzgydi/clash-verge                                                  | A Clash GUI based on tauri
                                             | 1.2.1                                     |        |                                                                                         |
