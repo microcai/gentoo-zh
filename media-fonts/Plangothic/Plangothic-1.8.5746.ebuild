@@ -6,9 +6,9 @@ EAPI=8
 inherit font unpacker
 
 DESCRIPTION="遍黑体项目（Plangothic Project）"
-HOMEPAGE="https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic"
+HOMEPAGE="https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic-Project"
 SRC_URI="
-	https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic/archive/refs/tags/V${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic-Project/archive/refs/tags/V${PV}.tar.gz -> ${P}.tar.gz
 "
 
 LICENSE="Plangothic"
