@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-09-03 07:17:36 CST)
+(The last generation time: 2023-09-03 17:22:45 CST)
 
 ### Packages
 
@@ -352,7 +352,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-video/avplayer                       | 9999                                      |        | http://avplayer.avplayer.org                                                            | avplayer is a p2p video downloader and player
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-video/bilibili                       | 1.10.1                                    |        | https://github.com/msojocs/bilibili-linux                                               | Based on the Bilibli offcial client to linux version, support roaming
+ media-video/bilibili                       | 1.11.4                                    |        | https://github.com/msojocs/bilibili-linux                                               | Based on the Bilibli offcial client to linux version, support roaming
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-video/mpv-handler                    | 0.3.4                                     |        | https://github.com/akiirui/mpv-handler                                                  | A protocol handler for mpv, written by Rust.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
