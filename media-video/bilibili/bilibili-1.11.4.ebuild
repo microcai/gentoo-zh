@@ -7,9 +7,9 @@ inherit desktop unpacker xdg
 
 DESCRIPTION="Based on the Bilibli offcial client to linux version, support roaming"
 HOMEPAGE="https://github.com/msojocs/bilibili-linux"
-BASE_URI="https://github.com/msojocs/bilibili-linux/releases/download/v${PV}-1"
+BASE_URI="https://github.com/msojocs/bilibili-linux/releases/download/v${PV}-2"
 FPN="io.github.msojocs.${PN}"
-SRC_URI="${BASE_URI}/${FPN}_${PV}-1_amd64.deb"
+SRC_URI="${BASE_URI}/${FPN}_${PV}-2_amd64.deb"
 
 LICENSE="MIT"
 SLOT="0"
