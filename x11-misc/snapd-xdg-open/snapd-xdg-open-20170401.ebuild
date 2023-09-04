@@ -3,15 +3,18 @@
 
 EAPI=8
 
-inherit git-r3 autotools
+inherit autotools
 
 DESCRIPTION="Software for opening links from snaps in desktop"
 HOMEPAGE="https://github.com/snapcore/snapd-xdg-open"
-EGIT_REPO_URI="https://github.com/snapcore/snapd-xdg-open.git"
+EGIT_COMMIT="6fed3570066ea93598e8091bf749352a02d482ad"
+SRC_URI="https://github.com/snapcore/snapd-xdg-open/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~arm64 ~amd64"
+
+S="${WORKDIR}/${PN}-${EGIT_COMMIT}"
 
 src_prepare() {
 	default

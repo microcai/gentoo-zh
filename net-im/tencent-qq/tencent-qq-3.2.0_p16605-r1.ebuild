@@ -21,7 +21,7 @@ SRC_URI="
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
 
-IUSE="bwrap +system-vips gnome appindicator crash-fix"
+IUSE="+bwrap system-vips gnome appindicator"
 RDEPEND="
 	x11-libs/gtk+:3
 	x11-libs/libnotify
@@ -34,10 +34,9 @@ RDEPEND="
 	app-crypt/libsecret
 	virtual/krb5
 	sys-apps/keyutils
-	crash-fix? ( sys-devel/gcc:12 )
 	system-vips? (
 		dev-libs/glib
-		>=media-libs/vips-8.14.2
+		>=media-libs/vips-8.14.2[-pdf]
 	)
 	bwrap? (
 		sys-apps/bubblewrap
@@ -76,8 +75,10 @@ src_install() {
 
 	if use bwrap; then
 		dosym -r /opt/QQ/start.sh /usr/bin/qq
-	else
+	elif use system-vips; then
 		newbin "$FILESDIR/qq.sh" qq
+	else
+		dosym -r /opt/QQ/qq /usr/bin/qq
 	fi
 
 	# https://bugs.gentoo.org/898912
@@ -89,8 +90,12 @@ src_install() {
 	gzip -d "${D}"/usr/share/doc/linuxqq/changelog.gz || die
 	dodoc "${D}"/usr/share/doc/linuxqq/changelog
 	rm -rf "${D}"/usr/share/doc/linuxqq/ || die
+}
 
-	if use crash-fix ;then
-		sed -i '1 a export LD_PRELOAD=/usr/lib/gcc/x86_64-pc-linux-gnu/12/libstdc++.so.6' -i "${D}"/usr/bin/qq || die
+pkg_postinst() {
+	xdg_pkg_postinst
+	if use bwrap ;then
+		elog "If you want to download files in QQ"
+		elog "Please set the QQ download path to ~/Download"
 	fi
 }
