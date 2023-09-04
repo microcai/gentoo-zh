@@ -20,6 +20,5 @@ pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
         <flag name="appindicator">Build in support for
         notifications using the libindicate or libappindicator
         plugin</flag>
-        <flag name="crash-fix">Use gcc-12 to prevent crash</flag>
     </use>
 </pkgmetadata>
