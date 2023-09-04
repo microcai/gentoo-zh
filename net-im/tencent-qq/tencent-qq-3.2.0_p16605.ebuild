@@ -3,16 +3,15 @@
 
 EAPI=8
 
-inherit desktop unpacker xdg
+inherit unpacker xdg
 
 MY_PV=${PV/_p/-}
-
 DESCRIPTION="The new version of the official linux-qq"
 HOMEPAGE="https://im.qq.com/linuxqq/index.shtml"
 LICENSE="Tencent"
 RESTRICT="strip"
 
-_I="464d27bd"
+_I="1776936e"
 
 SRC_URI="
 	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_amd64.deb )
@@ -22,7 +21,7 @@ SRC_URI="
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
 
-IUSE="bwrap +system-vips split-usr gnome appindicator"
+IUSE="bwrap +system-vips gnome appindicator crash-fix"
 RDEPEND="
 	x11-libs/gtk+:3
 	x11-libs/libnotify
@@ -35,7 +34,7 @@ RDEPEND="
 	app-crypt/libsecret
 	virtual/krb5
 	sys-apps/keyutils
-	sys-devel/gcc:12
+	crash-fix? ( sys-devel/gcc:12 )
 	system-vips? (
 		dev-libs/glib
 		>=media-libs/vips-8.14.2
@@ -46,33 +45,33 @@ RDEPEND="
 		x11-misc/flatpak-xdg-utils
 	)
 	gnome? ( dev-libs/gjs )
+	media-libs/openslide
 "
 
 S=${WORKDIR}
 
+src_unpack(){
+	:
+}
+
 src_install() {
-	insinto /opt
-	doins -r opt/*
+	dodir /
+	cd "${D}" || die
+	unpacker
 
 	if use system-vips; then
 		rm -r "${D}"/opt/QQ/resources/app/sharp-lib || die
 	fi
 
-	fperms +x /opt/QQ/{qq,chrome_crashpad_handler,chrome-sandbox,libEGL.so,libffmpeg.so,libGLESv2.so,libvk_swiftshader.so,libvulkan.so.1}
-
 	if use bwrap; then
 		exeinto /opt/QQ
-		if use split-usr; then
-			doexe "${FILESDIR}"/start-script/split-usr/start.sh
-		else
-			doexe "${FILESDIR}"/start-script/merge-usr/start.sh
-		fi
-		sed -i 's!/opt/QQ/qq!/opt/QQ/start.sh!' usr/share/applications/qq.desktop || die
+		doexe "${FILESDIR}"/start.sh
+		sed -i 's!/opt/QQ/qq!/opt/QQ/start.sh!' "${D}"/usr/share/applications/qq.desktop || die
 		insinto /opt/QQ/workarounds
 		doins "${FILESDIR}"/{config.json,xdg-open.sh}
 		fperms +x /opt/QQ/workarounds/xdg-open.sh
 	else
-		sed -i 's!/opt/QQ/qq!/usr/bin/qq!' usr/share/applications/qq.desktop || die
+		sed -i 's!/opt/QQ/qq!/usr/bin/qq!' "${D}"/usr/share/applications/qq.desktop || die
 	fi
 
 	if use bwrap; then
@@ -86,9 +85,12 @@ src_install() {
 		dosym ../../usr/lib64/libayatana-appindicator3.so /opt/QQ/libappindicator3.so
 	fi
 
-	sed -i 's!/usr/share/icons/hicolor/512x512/apps/qq.png!qq!' usr/share/applications/qq.desktop || die
-	domenu usr/share/applications/qq.desktop
-	doicon -s 512 usr/share/icons/hicolor/512x512/apps/qq.png
-	gzip -d usr/share/doc/linuxqq/changelog.gz || die
-	dodoc usr/share/doc/linuxqq/changelog
+	sed -i 's!/usr/share/icons/hicolor/512x512/apps/qq.png!qq!' "${D}"/usr/share/applications/qq.desktop || die
+	gzip -d "${D}"/usr/share/doc/linuxqq/changelog.gz || die
+	dodoc "${D}"/usr/share/doc/linuxqq/changelog
+	rm -rf "${D}"/usr/share/doc/linuxqq/ || die
+
+	if use crash-fix ;then
+		sed -i '1 a export LD_PRELOAD=/usr/lib/gcc/x86_64-pc-linux-gnu/12/libstdc++.so.6' -i "${D}"/usr/bin/qq || die
+	fi
 }
