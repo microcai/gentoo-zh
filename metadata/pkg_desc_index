@@ -162,6 +162,7 @@ media-gfx/zwcad 2023.23.0.3.4-r2: CAD software for 2D drawing, reviewing and pri
 media-libs/libjpeg8 2.1.4: MMX, SSE, and SSE2 SIMD accelerated JPEG library
 media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simplifies the drawing of beautiful curves.
 media-libs/libva-nvidia-driver 0.0.9 9999: NVDEC Backend for Video Acceleration (VA) API
+media-libs/openslide 20230904: C library with simple interface to read virtual slides
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.10-r1 0.5.11 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-sound/feeluown 3.8.12 3.8.14: A user-friendly and hackable music player
@@ -197,7 +198,7 @@ net-im/deepin-wine-qq 9.5.2.27897: Tencent QQ on Deepin Wine(com.qq.im.deepin) F
 net-im/deepin-wine-wechat 3.9.0.28-r3: Tencent WeChat on Deepin Wine For Gentoo
 net-im/dingtalk 1.4.0.20909 1.4.0.20909-r1 1.7.0.30424 7.0.40.30706: Communication platform that supports video and audio conferencing
 net-im/telegram-purple 1.4.7-r1 9999: Libpurple (Pidgin) plugin for using a Telegram account
-net-im/tencent-qq 3.2.0_p16449: The new version of the official linux-qq
+net-im/tencent-qq 3.2.0_p16605: The new version of the official linux-qq
 net-im/weixin-uos 2.1.5-r1: UOS weixin
 net-im/wemeet 3.15.0.402: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq

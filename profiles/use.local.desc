@@ -197,6 +197,7 @@ net-im/telegram-purple:png - png stickers support
 net-im/telegram-purple:webp - webp stickers support
 net-im/tencent-qq:appindicator - Build in support for notifications using the libindicate or libappindicator plugin
 net-im/tencent-qq:bwrap - Use sys-apps/bubblewrap to prevent private information leakage
+net-im/tencent-qq:crash-fix - Use gcc-12 to prevent crash
 net-im/tencent-qq:gnome - Supporting screenshot when using GNOME
 net-im/tencent-qq:system-vips - Use media-libs/vips instead of shipped libs.
 net-misc/pcmanx-gtk2:iplookup - IP location lookup, Useful to China locations
