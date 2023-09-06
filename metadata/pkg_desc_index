@@ -124,7 +124,7 @@ dev-util/jd-gui 1.6.6: A standalone graphical utility that displays Java source 
 dev-util/jetbrains-toolbox 1.28.1.15219: Manage all your JetBrains Projects and Tools
 dev-util/lldb-mi 9999: LLDB Machine Interface Driver
 dev-util/marksman-bin 2022.12.28: A language server for Markdown
-dev-util/mongodb-compass-bin 1.34.2 1.35.0 1.36.4 1.37.0 1.38.2 1.39.3: The GUI for MongoDB
+dev-util/mongodb-compass-bin 1.34.2 1.35.0 1.36.4 1.37.0 1.38.2 1.39.4: The GUI for MongoDB
 dev-util/pacstrap 28: Pacstrap - install packages to the specified new root directorye
 dev-util/tauri-cli 1.3.1: Command line interface for building Tauri apps
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
