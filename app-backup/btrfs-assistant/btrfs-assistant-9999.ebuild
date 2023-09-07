@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit xdg cmake git-r3
+inherit xdg cmake git-r3 optfeature
 EGIT_REPO_URI="${HOMEPAGE}"
 KEYWORDS=""
 
@@ -28,6 +28,6 @@ RDEPEND="
 
 pkg_postinst() {
 	xdg_pkg_postinst
-	elog "emerge app-backup/snapper for snapshot management"
-	elog "emerge sys-fs/btrfsmaintenance for scrub, balance, trim or defrag"
+	optfeature "auto snapshot" app-backup/snapper
+	optfeature "auto balance and defrag" sys-fs/btrfsmaintenance
 }
