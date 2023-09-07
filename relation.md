@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-09-07 14:41:42 CST)
+(The last generation time: 2023-09-07 15:08:55 CST)
 
 ### Packages
 
@@ -198,7 +198,7 @@
  dev-libs/v2ray-domain-list-community       | 4.39.2_p20210621183458-r1                 |        | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-libs/v2ray-rules-dat                   | 202307312208                              |        | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
+ dev-libs/v2ray-rules-dat                   | 202309062208                              |        | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/conda                           | 23.1.0                                    |        | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
    dev-python/conda-package-handling        | 2.0.2                                     |  D, RD | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
