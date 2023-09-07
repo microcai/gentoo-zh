@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-09-07 14:26:49 CST)
+(The last generation time: 2023-09-07 14:41:42 CST)
 
 ### Packages
 
@@ -509,7 +509,7 @@
  net-proxy/v2rayA                           | 2.0.5                                     |        | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                             | 9999                                      |        |                                                                                         |
    net-proxy/Xray                           | 1.7.5                                     | RD     | https://github.com/XTLS/Xray-core                                                       | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
-                                            | 1.8.3                                     |        |                                                                                         |
+                                            | 1.8.4                                     |        |                                                                                         |
      app-alternatives/v2ray-geoip           | 0                                         |  D, RD |                                                                                         | symlink for v2ray-geoip
      app-alternatives/v2ray-geosite         | 0                                         |  D, RD |                                                                                         | symlink for v2ray-geosite
    net-proxy/v2ray                          | 4.45.2-r1                                 | RD     | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
