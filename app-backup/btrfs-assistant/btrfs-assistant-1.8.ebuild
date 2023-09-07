@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit xdg cmake
+inherit xdg cmake optfeature
 
 SRC_URI="https://gitlab.com/btrfs-assistant/btrfs-assistant/-/archive/${PV}/${P}.tar.bz2"
 KEYWORDS="~amd64 ~x86"
@@ -29,6 +29,6 @@ RDEPEND="
 
 pkg_postinst() {
 	xdg_pkg_postinst
-	elog "emerge app-backup/snapper for snapshot management"
-	elog "emerge sys-fs/btrfsmaintenance for scrub, balance, trim or defrag"
+	optfeature "auto snapshot" app-backup/snapper
+	optfeature "auto balance and defrag" sys-fs/btrfsmaintenance
 }
