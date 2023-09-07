@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~arm ~arm64 ~riscv ~x86
 LICENSE=GPL-3
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202307312208/geosite.dat -> v2ray-rules-dat-202307312208-geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202307312208/geoip.dat -> v2ray-rules-dat-202307312208-geoip.dat
+SRC_URI=https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202309062208/geosite.dat -> v2ray-rules-dat-202309062208-geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202309062208/geoip.dat -> v2ray-rules-dat-202309062208-geoip.dat
 _md5_=dd4d50f13f0b7fe660886347ab8f296d
