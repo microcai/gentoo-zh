@@ -1,0 +1,42 @@
+#!/sbin/openrc-run
+# Copyright 2023 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+description="dae Service"
+pidfile="/run/${RC_SVCNAME}.pid"
+command="/usr/bin/dae"
+command_args="run -c ${DAE_CONF_DIR:-/etc/dae}/config.dae"
+command_background="yes"
+
+rc_ulimit="${DAE_ULIMIT:--u 512 -n 1048576}"
+output_log="/var/log/dae.log"
+error_log="/var/log/dae.log"
+
+depend() {
+    after docker net net-online sysctl local
+    use net
+}
+
+start_pre() {
+    if [ -d /sys/fs/bpf ]; then
+        if ! mountinfo -q /sys/fs/bpf ; then
+            mount -t bpf bpffs /sys/fs/bpf
+        fi
+    else
+        eerror "bpf filesystem not mounted, exiting..."
+        return 1
+    fi
+
+    if [ -d /sys/fs/cgroup ] && ! mountinfo -q /sys/fs/cgroup/; then
+        eerror "cgroup filesystem not mounted, exiting..."
+        return 1
+    fi
+
+    if ! /usr/bin/dae validate -c /etc/dae/config.dae; then
+        eerror "checking config file /etc/dae/config.dae failed, exiting..."
+        return 1
+    fi
+
+    checkpath -d -m 0755 /run/${RC_SVCNAME}
+    checkpath -f -m 0644 "$output_log"
+}
