@@ -98,8 +98,8 @@ dev-libs/lunar-calendar 3.0.1: a gtk+ calendar widget for chinese lunar library
 dev-libs/lunar-date 3.0.1: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458-r1 9999: Community managed domain list for V2Ray.
-dev-libs/v2ray-domain-list-community-bin 20230730120627: Community managed domain list for V2Ray.
-dev-libs/v2ray-geoip-bin 202307270042: GeoIP for V2Ray.
+dev-libs/v2ray-domain-list-community-bin 20230905081311: Community managed domain list for V2Ray.
+dev-libs/v2ray-geoip-bin 202309070036: GeoIP for V2Ray.
 dev-libs/v2ray-rules-dat 202307312208: Enhanced edition of V2Ray rules dat files.
 dev-python/conda 23.1.0: OS-agnostic, system-level binary package manager and ecosystem
 dev-python/conda-package-handling 2.0.2: Create and extract conda packages of various formats
