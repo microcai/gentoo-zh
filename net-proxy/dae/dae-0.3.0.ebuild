@@ -62,6 +62,7 @@ src_compile() {
 src_install() {
 	dobin dae
 	systemd_dounit install/dae.service
+	newinitd "${FILESDIR}"/dae.initd dae
 	insinto /etc/dae
 	newins example.dae config.dae.example
 	newins install/empty.dae config.dae
