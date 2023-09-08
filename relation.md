@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-09-07 15:08:55 CST)
+(The last generation time: 2023-09-08 18:29:47 CST)
 
 ### Packages
 
@@ -225,6 +225,7 @@
  dev-util/jd-gui                            | 1.6.6                                     |        | http://jd.benow.ca/                                                                     | A standalone graphical utility that displays Java source codes of .class file
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                 | 1.28.1.15219                              |        | https://www.jetbrains.com/toolbox/app                                                   | Manage all your JetBrains Projects and Tools
+                                            | 2.0.3.17006                               |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/lldb-mi                           | 9999                                      |        | https://github.com/lldb-tools/lldb-mi                                                   | LLDB Machine Interface Driver
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -476,8 +477,8 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/cgproxy                          | 0.20-r1                                   |        | https://github.com/springzfx/cgproxy                                                    | Transparent Proxy with cgroup v2
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/clash-for-windows-bin            | 0.20.32                                   |        | https://github.com/Fndroid/clash_for_windows_pkg                                        | A Windows/macOS/Linux GUI based on Clash and Electron.
-                                            | 0.20.33                                   |        |                                                                                         |
+ net-proxy/clash-for-windows-bin            | 0.20.33                                   |        | https://github.com/Fndroid/clash_for_windows_pkg                                        | A Windows/macOS/Linux GUI based on Clash and Electron.
+                                            | 0.20.34                                   |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-verge-bin                  | 1.2.0                                     |        | https://github.com/zzzgydi/clash-verge                                                  | A Clash GUI based on tauri
                                             | 1.2.1                                     |        |                                                                                         |
