@@ -10,12 +10,12 @@ HOMEPAGE="https://v2raya.org/"
 
 SRC_URI="
 	https://github.com/v2rayA/v2rayA/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/v2rayA/v2rayA/releases/download/v${PV}/web.tar.gz -> ${P}-web.tar.gz
 "
 # maintainer generated vendor
 # generated with https://github.com/liuyujielol/rei-overlay/blob/main/net-proxy/v2rayA/scripts/v2rayA_vendor_gen.sh
 SRC_URI+="
-	https://github.com/liangyongxiang/vendors/releases/download/${PN}/${P}-yarn_mirror.tar.gz
-	https://github.com/liangyongxiang/vendors/releases/download/${PN}/${P}-go-vendor.tar.gz
+	https://github.com/liuyujielol/vendors/releases/download/${PN}/${P}-go-vendor.tar.gz
 "
 
 LICENSE="AGPL-3"
@@ -34,9 +34,7 @@ RDEPEND="
 	xray? ( net-proxy/Xray )
 "
 BDEPEND="
-	>=dev-lang/go-1.19:*
-	>=net-libs/nodejs-16
-	sys-apps/yarn
+	>=dev-lang/go-1.21:*
 "
 
 src_unpack() {
@@ -44,21 +42,10 @@ src_unpack() {
 
 	# go vendor
 	mv -v "${WORKDIR}/vendor" "${S}/service" || die
-
-	cd "${S}/gui" || die
-	# set yarn-offline-mirror to ${WORKDIR}/yarn_offline_mirror
-	echo "yarn-offline-mirror \"${WORKDIR}/yarn_offline_mirror\"" >> "${S}/gui/.yarnrc" || die
-	addpredict /usr/local
-	yarn --ignore-engines install --offline --check-files || die "yarn offline install failed"
 }
 
 src_compile() {
-	cd "${S}/gui" || die
-	## Fix node build error: https://github.com/webpack/webpack/issues/14532#issuecomment-947012063
-	if has_version '>=dev-libs/openssl-3'; then
-		export NODE_OPTIONS=--openssl-legacy-provider
-	fi
-	OUTPUT_DIR="${S}/service/server/router/web" yarn build || die "yarn build failed"
+	mv -v "${WORKDIR}/web" "${S}/service/server/router/web" || die
 
 	for file in $(find "${S}/service/server/router/web" |grep -v png |grep -v index.html|grep -v .gz)
 	do
