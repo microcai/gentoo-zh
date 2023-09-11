@@ -16,7 +16,7 @@ SRC_URI="https://github.com/zzzgydi/${MY_PN}/releases/download/v${PV}/${MY_PN}_$
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="clash clash-meta clash-premium"
+IUSE="clash +clash-meta clash-premium"
 
 REQUIRED_USE="
 	|| ( clash clash-meta clash-premium )
