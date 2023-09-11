@@ -37,11 +37,12 @@ src_install() {
 	insinto /opt
 	doins -r opt/"${PN}"
 	fperms +x /opt/"${PN}"/"${PN}"
-	dosym -r /opt/{"${PN}"/"${PN}",bin/"${PN}"}
+	dobin "${FILESDIR}"/baidunetdisk
 
 	gzip -d usr/share/doc/"${PN}"/*.gz || die
 	dodoc usr/share/doc/"${PN}"/*
 
+	sed -i "s/Exec=.*/Exec=baidunetdisk %U/g" usr/share/applications/"${PN}".desktop
 	domenu usr/share/applications/"${PN}".desktop
 	doicon -s scalable usr/share/icons/hicolor/scalable/apps/"${PN}".svg
 }
