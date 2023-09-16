@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-09-16 16:46:24 CST)
+(The last generation time: 2023-09-16 17:11:50 CST)
 
 ### Packages
 
@@ -525,6 +525,8 @@
  net-wireless/linux-wifi-hotspot            | 9999                                      |        | https://github.com/lakinduakash/linux-wifi-hotspot                                      | Linux Wifi Hotspot
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sci-chemistry/vesta                        | 3.5.8                                     |        | https://jp-minerals.org/vesta                                                           | Visualization for Electronic and STructural Analysis
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ sci-electronics/circuitjs1-bin             | 9.3.2                                     |        | https://www.falstad.com/circuit                                                         | Electronic Circuit Simulator in the Browser
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sci-electronics/jlc-assistant-bin          | 5.0.69                                    |        | https://www.jlc.com/portal/appDownloadsWithConfig.html                                  | JLC Order Assistant (binary package)
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
