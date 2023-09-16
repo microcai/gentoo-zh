@@ -247,6 +247,7 @@ net-proxy/v2rayA 2.2.4 9999: web GUI of Project V which supports V2Ray, Xray, SS
 net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
 net-wireless/linux-wifi-hotspot 9999: Linux Wifi Hotspot
 sci-chemistry/vesta 3.5.8: Visualization for Electronic and STructural Analysis
+sci-electronics/circuitjs1-bin 9.3.2: Electronic Circuit Simulator in the Browser
 sci-electronics/jlc-assistant-bin 5.0.69: JLC Order Assistant (binary package)
 sci-electronics/lceda 6.5.34: LCEDA (binary package)
 sci-electronics/lceda-pro 2.1.32: LCEDA Pro (binary package)
