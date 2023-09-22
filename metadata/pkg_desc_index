@@ -187,7 +187,7 @@ net-analyzer/nali 0.7.3: An offline tool for querying IP geographic information 
 net-analyzer/realitlscanner 0.1.0: A TLS server scanner for Reality
 net-dns/aliddns 0.0.20: aliyun ddns for golang
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
-net-dns/dnslookup 1.9.2: Simple command line utility to make DNS lookups to the specified server
+net-dns/dnslookup 1.10.0: Simple command line utility to make DNS lookups to the specified server
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
 net-dns/dog 0.1.0: A command-line DNS client
 net-dns/libidn11 1.33: Internationalized Domain Names (IDN) implementation
