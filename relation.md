@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-09-26 13:25:50 CST)
+(The last generation time: 2023-09-26 19:25:35 CST)
 
 ### Packages
 
@@ -78,6 +78,7 @@
  app-i18n/mozc                              | 2.26.4220_p20201212102434_p20201219202429 |        | https://github.com/google/mozc                                                          | Mozc - Japanese input method editor
                                             | 2.26.4632_p20220213064411_p20220214004422 |        |                                                                                         |
                                             | 2.28.5029.102                             |        |                                                                                         |
+                                            | 2.28.5029.102-r1                          |        |                                                                                         |
    app-i18n/fcitx                           | 4.2.9.8                                   |  D, RD | https://fcitx-im.org/                                                                   | Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
                                             | 5.1.0                                     |        |                                                                                         |
                                             | 9999                                      |        |                                                                                         |
