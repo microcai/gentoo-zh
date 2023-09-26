@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-09-26 19:28:11 CST)
+(The last generation time: 2023-09-26 23:44:03 CST)
 
 ### Packages
 
@@ -491,7 +491,7 @@
                                             | 1.3.5                                     |        |                                                                                         |
                                             | 1.3.7                                     |        |                                                                                         |
    net-proxy/clash                          | 1.17.0                                    | RD     | https://github.com/Dreamacro/clash                                                      | A rule-based tunnel in Go.
-   net-proxy/clash-meta                     | 1.15.0                                    | RD     | https://github.com/MetaCubeX/Clash.Meta                                                 | Another Clash Kernel.
+   net-proxy/clash-meta                     | 1.16.0                                    | RD     | https://github.com/MetaCubeX/Clash.Meta                                                 | Another Clash Kernel.
      acct-group/clash-meta                  | 0                                         |  D, RD |                                                                                         | Another Clash Kernel.
      acct-user/clash-meta                   | 0                                         |  D, RD |                                                                                         | Another Clash Kernel.
    net-proxy/clash-premium-bin              | 2023.06.30                                | RD     | https://github.com/Dreamacro/clash                                                      | Close-sourced pre-built Clash binary with TUN support
