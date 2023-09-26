@@ -507,13 +507,6 @@ use_max_tag = true
 prefix = "v"
 github_account = "peeweep"
 
-["dev-vcs/gptcommit"]
-source = "github"
-github = "zurawiki/gptcommit"
-use_max_tag = true
-prefix = "v"
-github_account = "peeweep"
-
 ["dev-util/arch-install-scripts"]
 source = "github"
 github = "archlinux/arch-install-scripts"
