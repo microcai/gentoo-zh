@@ -173,9 +173,11 @@ src_unpack() {
 src_prepare() {
 	if use fcitx4; then
 		cp -pr "${WORKDIR}/fcitx-mozc/src/unix/fcitx" unix || die
+		eapply -p2 "${FILESDIR}"/mozc-2.28.5029.102-fcitx4-abseil-20230802.0.patch
 	fi
 	if use fcitx5; then
 		cp -pr "${WORKDIR}/fcitx5-mozc/src/unix/fcitx5" unix || die
+		eapply -p2 "${FILESDIR}"/mozc-2.28.5029.102-fcitx5-abseil-20230802.0.patch
 	fi
 
 	pushd "${WORKDIR}/${P}" > /dev/null || die
