@@ -1,0 +1,60 @@
+diff --git a/src/base/absl.gyp b/src/base/absl.gyp
+index 932f6ac..35e5a22 100644
+--- a/src/base/absl.gyp
++++ b/src/base/absl.gyp
+@@ -398,7 +398,7 @@
+           'all_dependent_settings': {
+             'link_settings': {
+               'libraries': [
+-                '-labsl_synchronization -labsl_flags -labsl_graphcycles_internal',
++                '-labsl_synchronization -labsl_flags -labsl_graphcycles_internal -labsl_string_view',
+               ],
+             },
+           },
+diff --git a/src/unix/fcitx/surrounding_text_util.cc b/src/unix/fcitx/surrounding_text_util.cc
+index b2d533c..76357cd 100644
+--- a/src/unix/fcitx/surrounding_text_util.cc
++++ b/src/unix/fcitx/surrounding_text_util.cc
+@@ -233,9 +233,9 @@
+ 
+     const size_t selection_start = std::min(cursor_pos, anchor_pos);
+     const size_t selection_length = std::abs(info->relative_selected_length);
+-    info->preceding_text = Util::Utf8SubString(surrounding_text, 0, selection_start);
+-    info->selection_text = Util::Utf8SubString(surrounding_text, selection_start, selection_length);
+-    info->following_text = Util::Utf8SubString(surrounding_text, selection_start + selection_length);
++    info->preceding_text = std::string(Util::Utf8SubString(surrounding_text, 0, selection_start));
++    info->selection_text = std::string(Util::Utf8SubString(surrounding_text, selection_start, selection_length));
++    info->following_text = std::string(Util::Utf8SubString(surrounding_text, selection_start + selection_length));
+     return true;
+ }
+ 
+diff -ura a/src/unix/fcitx5/surrounding_text_util.cc b/src/unix/fcitx5/surrounding_text_util.cc
+--- a/src/unix/fcitx5/surrounding_text_util.cc	2023-03-17 01:39:27.000000000 +0800
++++ b/src/unix/fcitx5/surrounding_text_util.cc	2023-09-26 10:30:36.424641839 +0800
+@@ -211,11 +211,11 @@
+   const size_t selection_start = std::min(cursor_pos, anchor_pos);
+   const size_t selection_length = std::abs(info->relative_selected_length);
+   info->preceding_text =
+-      Util::Utf8SubString(surrounding_text, 0, selection_start);
++      std::string(Util::Utf8SubString(surrounding_text, 0, selection_start));
+   info->selection_text =
+-      Util::Utf8SubString(surrounding_text, selection_start, selection_length);
++      std::string(Util::Utf8SubString(surrounding_text, selection_start, selection_length));
+   info->following_text =
+-      Util::Utf8SubString(surrounding_text, selection_start + selection_length);
++      std::string(Util::Utf8SubString(surrounding_text, selection_start + selection_length));
+   return true;
+ }
+ 
+diff --git a/src/unix/fcitx/eim.cc b/src/unix/fcitx/eim.cc
+index 4da2e80..fc7a9ff 100644
+--- a/src/unix/fcitx/eim.cc
++++ b/src/unix/fcitx/eim.cc
+@@ -33,6 +33,7 @@
+ #include <fcitx/module.h>
+ #include <fcitx/keys.h>
+ #include <fcitx-config/xdg.h>
++#undef InvokeFunction
+ #include "fcitx_mozc.h"
+ #include "mozc_connection.h"
+ #include "mozc_response_parser.h"
