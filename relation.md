@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-09-24 08:49:51 CST)
+(The last generation time: 2023-09-26 13:25:50 CST)
 
 ### Packages
 
@@ -520,7 +520,7 @@
      app-alternatives/v2ray-geosite         | 0                                         |  D, RD |                                                                                         | symlink for v2ray-geosite
    net-proxy/v2ray                          | 4.45.2-r1                                 | RD     | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
                                             | 5.6.0-r1                                  |        |                                                                                         |
-                                            | 5.7.0-r1                                  |        |                                                                                         |
+                                            | 5.7.0-r2                                  |        |                                                                                         |
    net-proxy/v2ray-bin                      | 4.45.0-r1                                 | RD     | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
                                             | 5.1.0-r1                                  |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
