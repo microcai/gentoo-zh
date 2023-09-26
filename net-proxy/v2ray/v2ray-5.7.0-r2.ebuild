@@ -21,7 +21,7 @@ RDEPEND="${DEPEND}
 	!net-proxy/v2ray-bin
 	app-alternatives/v2ray-geoip
 	app-alternatives/v2ray-geosite"
-BDEPEND="dev-lang/go"
+BDEPEND="<=dev-lang/go-1.20.8"
 
 S="${WORKDIR}/${PN}-core-${PV}"
 
