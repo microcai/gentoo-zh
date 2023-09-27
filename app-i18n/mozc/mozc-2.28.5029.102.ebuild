@@ -147,9 +147,9 @@ src_unpack() {
 			git-r3_fetch https://github.com/fcitx/mozc refs/heads/fcitx
 			git-r3_checkout https://github.com/fcitx/mozc "${WORKDIR}/fcitx-mozc"
 		fi
-	if use fcitx5; then
-		cp -pr "${WORKDIR}/fcitx5-mozc/src/unix/fcitx5" unix || die
-	fi
+		if use fcitx5; then
+			cp -pr "${WORKDIR}"/fcitx{,5}-mozc || die
+		fi
 	else
 		unpack ${PN}-${PV%%_p*}-${MOZC_DATE}.tar.gz
 		mv mozc-${MOZC_GIT_REVISION} ${P} || die

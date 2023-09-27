@@ -148,9 +148,9 @@ src_unpack() {
 			git-r3_fetch https://github.com/fcitx/mozc refs/heads/fcitx
 			git-r3_checkout https://github.com/fcitx/mozc "${WORKDIR}/fcitx-mozc"
 		fi
-	if use fcitx5; then
-		cp -pr "${WORKDIR}/fcitx5-mozc/src/unix/fcitx5" unix || die
-	fi
+		if use fcitx5; then
+			cp -pr "${WORKDIR}"/fcitx{,5}-mozc || die
+		fi
 	else
 		unpack ${PN}-${PV%%_p*}-${MOZC_DATE}.tar.gz
 		mv mozc-${MOZC_GIT_REVISION} ${P} || die
@@ -173,11 +173,11 @@ src_unpack() {
 src_prepare() {
 	if use fcitx4; then
 		cp -pr "${WORKDIR}/fcitx-mozc/src/unix/fcitx" unix || die
-		eapply -p2 "${FILESDIR}"/mozc-2.28.5029.102-fcitx4-abseil-20230802.0.patch
+		PATCHES+=( "${FILESDIR}"/mozc-2.28.5029.102-abseil-20230802.0-fcitx4.patch )
 	fi
 	if use fcitx5; then
 		cp -pr "${WORKDIR}/fcitx5-mozc/src/unix/fcitx5" unix || die
-		eapply -p2 "${FILESDIR}"/mozc-2.28.5029.102-fcitx5-abseil-20230802.0.patch
+		PATCHES+=( "${FILESDIR}"/mozc-2.28.5029.102-abseil-20230802.0-fcitx5.patch )
 	fi
 
 	pushd "${WORKDIR}/${P}" > /dev/null || die
