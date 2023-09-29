@@ -22,8 +22,11 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND="
 	${DEPEND}
+	|| (
+		sys-devel/clang
+		sys-devel/gcc[objc]
+	)
 	clang? ( sys-devel/clang )
-	!clang? ( sys-devel/gcc[objc] )
 "
 
 src_compile() {
