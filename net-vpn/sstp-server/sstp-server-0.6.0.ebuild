@@ -13,10 +13,18 @@ KEYWORDS="x86 amd64 mips arm"
 
 PYTHON_COMPAT=( python3_{9..12} )
 
-inherit distutils-r1
+inherit systemd distutils-r1
 
 DEPEND="net-dialup/ppp"
 
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
+src_install(){
+    distutils-r1_src_install
+
+    insinto /etc/
+    doins sstp-server.ini
+
+    systemd_dounit ${FILESDIR}/sstp-server@.service
+}
