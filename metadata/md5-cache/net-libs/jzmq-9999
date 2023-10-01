@@ -9,5 +9,5 @@ LICENSE=LGPL-3
 PROPERTIES=live
 RDEPEND=net-libs/zeromq >=virtual/jre-1.7:*
 SLOT=0
-_eclasses_=git-r3	2358a7b20091609e24bd3a83b3ac5991	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	862d337d98edb576796827be2c6b11ca	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	6ae9a4347149b19a112caa1182d03bde
+_eclasses_=git-r3	2358a7b20091609e24bd3a83b3ac5991	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	6ae9a4347149b19a112caa1182d03bde
 _md5_=67128d4505e3407d969d4ab02d89e854

@@ -9,5 +9,5 @@ PROPERTIES=live
 RDEPEND=!dev-libs/v2ray-domain-list-community-bin !<net-proxy/v2ray-4.38.3
 RESTRICT=strip
 SLOT=0
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	862d337d98edb576796827be2c6b11ca	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-module	8624eede24936fd7666e5298e5332f22	git-r3	2358a7b20091609e24bd3a83b3ac5991
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-module	8624eede24936fd7666e5298e5332f22	git-r3	2358a7b20091609e24bd3a83b3ac5991
 _md5_=4bb5118bdde5342bc2402a43d7f5ab8c

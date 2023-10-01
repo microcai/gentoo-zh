@@ -12,5 +12,5 @@ RDEPEND=app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/daeuniverse/daed/releases/download/v0.3.3.p1/daed-full-src.zip -> daed-0.3.3_p1.zip webui? ( https://github.com/st0nie/gentoo-go-deps/releases/download/daed-0.3.3_p1/daed-0.3.3_p1-node_modules-pnpm.tar.xz )
-_eclasses_=toolchain-funcs	862d337d98edb576796827be2c6b11ca	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	5f4bb0758df2e483babf68cd517078ca
+_eclasses_=toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	5f4bb0758df2e483babf68cd517078ca
 _md5_=b84e98dde67d914a07e37d9f18cbc69f
