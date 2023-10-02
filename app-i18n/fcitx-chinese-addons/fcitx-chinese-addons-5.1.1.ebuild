@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -30,7 +30,7 @@ RESTRICT="!test? ( test )"
 
 RDEPEND="
 	>=app-i18n/fcitx-5.0.24:5
-	>=app-i18n/libime-1.0.18:5
+	>=app-i18n/libime-1.1.2:5
 
 	>=dev-libs/boost-1.61:=
 	dev-libs/libfmt
@@ -51,10 +51,6 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	kde-frameworks/extra-cmake-modules:5
 	virtual/pkgconfig"
-
-PATCHES=(
-	"${FILESDIR}/fix-build-without-lua.patch"
-)
 
 src_prepare() {
 	cmake_src_prepare
