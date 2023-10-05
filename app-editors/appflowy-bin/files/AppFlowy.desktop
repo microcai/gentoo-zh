@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=AppFlowy
+Icon=flowy_logo
+Exec=env GDK_GL=gles /opt/appflowy-bin/AppFlowy %U
+Categories=Network;Utility;TextEditor;
+Keywords=Notes
+Terminal=false
+MimeType=x-scheme-handler/appflowy-flutter;
