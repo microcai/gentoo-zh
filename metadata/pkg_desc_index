@@ -17,7 +17,7 @@ app-crypt/archlinux-keyring 20230130: GnuPG keyring of Archlinux developer keys
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-dicts/fcitx-pinyin-moegirl 20230714: Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 app-dicts/fcitx-pinyin-zhwiki 20230728: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
-app-editors/appflowy-bin 0.0.6 0.0.9 0.1.4: AppFlowy is an open-source alternative to Notion
+app-editors/appflowy-bin 0.1.4 0.3.4: AppFlowy is an open-source alternative to Notion
 app-editors/marktext-bin 0.17.1: A simple and elegant markdown editor, available for Linux, macOS and Windows.
 app-editors/typora 0.11.18 1.5.8: A truely minimal markdown editor.
 app-emulation/deepin-udis86 1.72-r4: Deepin Version of Wine
@@ -63,13 +63,13 @@ app-i18n/rime-stroke 20230204: Stroke input for rime
 app-i18n/rime-terra-pinyin 20230207: Terra input for rime
 app-i18n/rime-wubi 20200908: wubi input for rime
 app-i18n/zh-autoconvert 0.3.16_p7: Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
-app-misc/bcompare 4.4.4.27058: Beyond Compare -- Compare, sync, and merge files and folders
+app-misc/bcompare 4.4.6.27483: Beyond Compare -- Compare, sync, and merge files and folders
 app-misc/ccal 2.5.3: A simple command line calendar for Chinese lunar
 app-misc/gpick 0.2.6-r1 0.3: Advanced color picker written in C++ using GTK+ toolkit
 app-misc/joshuto 0.9.5: Terminal file manager inspired by ranger
 app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience within the shell
 app-misc/keyd 2.4.3: A key remapping daemon for linux
-app-misc/rmtrash 1.14: trash-put made compatible to GNUs rm and rmdir
+app-misc/rmtrash 1.14 1.15: trash-put made compatible to GNUs rm and rmdir
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/xmind 22.11.3656 23.07.201366-r1: Brainstorming and Mind Mapping Software
 app-misc/yq-bin 4.30.6 4.35.2: yq is a portable command-line YAML, JSON and XML processor
@@ -135,7 +135,7 @@ games-board/othello 0.2.2: Othello is a classic strategy game, also known as Rev
 games-misc/oh-my-git-bin 0.6.5: An interactive Git learning game!
 games-util/winegame-client-bin 0.5.10.5: An open source gaming platform for GNU/Linux
 gui-libs/libdecor 0.1.1: A client-side decorations library for Wayland clients
-kde-misc/plasma-applet-netspeed-widget 1.9 9999: Plasma 5 widget that displays the currently used network bandwidth.
+kde-misc/plasma-applet-netspeed-widget 1.9 2.0 9999: Plasma 5 widget that displays the currently used network bandwidth.
 mail-client/thunderbird 106.0-r5: Thunderbird Mail Client
 media-fonts/Plangothic 1.8.5746: 遍黑体项目（Plangothic Project）
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
@@ -143,7 +143,7 @@ media-fonts/iansui 1.000: An open-source Chinese font derived from Klee One (Fon
 media-fonts/jf-openhuninn 2.0: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 media-fonts/lxgw-neo-xihei 1.105: A Chinese sans-serif font derived from IPAex Gothic.
 media-fonts/nerd-fonts 3.0.2: Nerd Fonts is a project that patches developer targeted fonts with glyphs
-media-fonts/sarasa-gothic 0.42.0: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
+media-fonts/sarasa-gothic 0.42.0 0.42.1: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 media-fonts/sarasa-term-sc-nerd 1.1.0: Sarasa Mono SC font patched with Nerd fonts
 media-fonts/smiley-sans 1.1.1: An open-source font for Chinese.
 media-fonts/taipei-sans-tc 1.0: JT Foundry - Taipei Sans TC Beta font
@@ -173,7 +173,7 @@ media-sound/lx-music-desktop-bin 2.2.2: 一个基于 electron 的音乐软件
 media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb package
 media-sound/netease-cloud-music-gtk 1.2.2 2.1.0 2.2.0: netease cloud music player based on Rust & GTK for Linux
 media-sound/qqmusic 1.1.5: Tencent QQ Music, converted from .deb package
-media-sound/termusic 0.7.6 0.7.7: Terminal Music Player written in Rust.
+media-sound/termusic 0.7.11: Terminal Music and Podcast Player written in Rust
 media-sound/yesplaymusic-bin 0.4.6 0.4.7: A third party music player for Netease Music
 media-sound/youtube-music-bin 1.20.0: YouTube Music Desktop App bundled with custom plugins
 media-video/amdgpu-pro-amf 1.4.29.1538781: AMD's closed source Advanced Media Framework (AMF) driver

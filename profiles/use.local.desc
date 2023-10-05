@@ -179,10 +179,7 @@ media-sound/feeluown:webengine - add support to login via web page
 media-sound/feeluown:ytmusic - add support for youtube music
 media-sound/go-musicfox:clang - Use sys-devel/clang
 media-sound/netease-cloud-music-gtk:lyrics - Use media-plugins/osdlyrics to display lyrics
-media-sound/termusic:cover - Use media-gfx/ueberzug to display album covers
-media-sound/termusic:discord - support for discord rpc
 media-sound/termusic:gst - Use media-libs/gstreamer as decoding backend
-media-sound/termusic:mpris - Enable dbus mpris support
 media-sound/termusic:mpv - Use media-video/mpv as decoding backend
 media-sound/termusic:symphonia - Use symphonia as decoding backend (default)
 media-sound/termusic:yt-dlp - Use net-misc/yt-dlp to provide the youtebe-dl feature
