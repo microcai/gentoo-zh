@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-10-04 04:35:44 CST)
+(The last generation time: 2023-10-05 19:15:31 CST)
 
 ### Packages
 
@@ -27,9 +27,8 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-zhwiki              | 20230728                                  |        | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/appflowy-bin                   | 0.0.6                                     |        | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
-                                            | 0.0.9                                     |        |                                                                                         |
-                                            | 0.1.4                                     |        |                                                                                         |
+ app-editors/appflowy-bin                   | 0.1.4                                     |        | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
+                                            | 0.3.4                                     |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/marktext-bin                   | 0.17.1                                    |        | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -256,6 +255,7 @@
  games-util/winegame-client-bin             | 0.5.10.5                                  |        | https://winegame.net/                                                                   | An open source gaming platform for GNU/Linux
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  kde-misc/plasma-applet-netspeed-widget     | 1.9                                       |        | https://www.kde-look.org/p/998895/                                                      | Plasma 5 widget that displays the currently used network bandwidth.
+                                            | 2.0                                       |        |                                                                                         |
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  mail-client/thunderbird                    | 106.0-r5                                  |        | https://www.thunderbird.net                                                             | Thunderbird Mail Client
@@ -344,8 +344,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/qqmusic                        | 1.1.5                                     |        | https://y.qq.com/                                                                       | Tencent QQ Music, converted from .deb package
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/termusic                       | 0.7.6                                     |        | https://github.com/tramhao/termusic                                                     | Terminal Music Player written in Rust.
-                                            | 0.7.7                                     |        |                                                                                         |
+ media-sound/termusic                       | 0.7.11                                    |        | https://github.com/tramhao/termusic                                                     | Terminal Music and Podcast Player written in Rust
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/yesplaymusic-bin               | 0.4.6                                     |        | https://github.com/qier222/YesPlayMusic                                                 | A third party music player for Netease Music
                                             | 0.4.7                                     |        |                                                                                         |
