@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-10-08 20:14:29 CST)
+(The last generation time: 2023-10-08 20:21:55 CST)
 
 ### Packages
 
@@ -517,9 +517,9 @@
                                             | 1.8.4                                     |        |                                                                                         |
      app-alternatives/v2ray-geoip           | 0                                         |  D, RD |                                                                                         | symlink for v2ray-geoip
      app-alternatives/v2ray-geosite         | 0                                         |  D, RD |                                                                                         | symlink for v2ray-geosite
-   net-proxy/v2ray                          | 4.45.2-r1                                 | RD     | https://github.com/v2fly/v2ray-core                                                     | A platform for building proxies to bypass network restrictions.
-                                            | 5.6.0-r1                                  |        |                                                                                         |
+   net-proxy/v2ray                          | 5.6.0-r1                                  | RD     | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
                                             | 5.7.0-r2                                  |        |                                                                                         |
+                                            | 5.8.0                                     |        |                                                                                         |
    net-proxy/v2ray-bin                      | 4.45.0-r1                                 | RD     | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
                                             | 5.7.0                                     |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
