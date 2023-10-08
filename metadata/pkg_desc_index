@@ -137,7 +137,6 @@ games-misc/oh-my-git-bin 0.6.5: An interactive Git learning game!
 games-util/winegame-client-bin 0.5.10.5: An open source gaming platform for GNU/Linux
 gui-libs/libdecor 0.1.1: A client-side decorations library for Wayland clients
 kde-misc/plasma-applet-netspeed-widget 1.9 2.0 9999: Plasma 5 widget that displays the currently used network bandwidth.
-mail-client/thunderbird 106.0-r5: Thunderbird Mail Client
 media-fonts/Plangothic 1.8.5746: 遍黑体项目（Plangothic Project）
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/iansui 1.000: An open-source Chinese font derived from Klee One (Fontworks).
@@ -286,7 +285,6 @@ sys-power/tlpui 1.5.0_p6 1.6.0: A GTK user interface for TLP written in Python
 virtual/dist-kernel 6.4.15: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 www-apps/chatgpt-desktop 1.0.0: ChatGPT Desktop Application
-www-apps/openvscode-server-bin 1.75.1: VS Code that runs a server on remote and allows access through a web browser
 www-servers/darkhttpd 1.13: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
