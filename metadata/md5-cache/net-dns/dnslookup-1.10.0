@@ -9,5 +9,5 @@ LICENSE=MIT
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/ameshkov/dnslookup/archive/refs/tags/v1.10.0.tar.gz -> dnslookup-1.10.0.tar.gz https://github.com/peeweep/gentoo-go-deps/releases/download/dnslookup-1.10.0/dnslookup-1.10.0-deps.tar.xz
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-module	8624eede24936fd7666e5298e5332f22
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-module	8624eede24936fd7666e5298e5332f22
 _md5_=595cf27c7b6fc043c8fc209bf2b38c7a
