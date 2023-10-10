@@ -10,7 +10,7 @@ MY_PN="AppFlowy"
 DESCRIPTION="AppFlowy is an open-source alternative to Notion"
 HOMEPAGE="https://www.appflowy.io/"
 SRC_URI="
-	https://github.com/AppFlowy-IO/AppFlowy/releases/download/${PV}/${MY_PN}-x86_64-unknown-linux-gnu-x86_64.tar.gz -> ${MY_PN}-${PV}-unknown-linux-gnu-x86_64.tar.gz
+	https://github.com/AppFlowy-IO/AppFlowy/releases/download/${PV}/AppFlowy-${PV}-linux_x86_64.tar.gz
 "
 
 LICENSE="AGPL-3"
