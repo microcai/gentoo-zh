@@ -18,6 +18,7 @@ RESTRICT="mirror"
 DEPEND="
 	media-libs/flac
 	media-libs/alsa-lib
+	>=dev-lang/go-1.21.0
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
