@@ -131,7 +131,7 @@ dev-util/tauri-cli 1.3.1: Command line interface for building Tauri apps
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-util/zprint-bin 1.2.7 1.2.8: Clojure and Clojurescript source code formatter
 dev-vcs/gitoxide 0.30.0: A command-line application for interacting with git repositories
-games-arcade/osu-lazer 2023.924.1: rhythm is just a *click* away!
+games-arcade/osu-lazer 2023.924.1 2023.1008.1: rhythm is just a *click* away!
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-misc/oh-my-git-bin 0.6.5: An interactive Git learning game!
 games-util/winegame-client-bin 0.5.10.5: An open source gaming platform for GNU/Linux
@@ -166,7 +166,7 @@ media-libs/openslide 20230904: C library with simple interface to read virtual s
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.10-r1 0.5.11 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-sound/feeluown 3.8.12 3.8.14: A user-friendly and hackable music player
-media-sound/go-musicfox 4.2.0: Command-line Netease Cloud Music written in Go
+media-sound/go-musicfox 4.2.1: Command-line Netease Cloud Music written in Go
 media-sound/linnya 2.2.0: A free music player
 media-sound/listen1_desktop-bin 2.28.0: one for all free music in China
 media-sound/lx-music-desktop-bin 2.2.2: 一个基于 electron 的音乐软件
@@ -203,7 +203,7 @@ net-im/wemeet 3.15.0.402 3.15.1.401: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq
 net-misc/aliyundrive-webdav 2.1.0-r1: WebDAV server for AliyunDrive
 net-misc/aliyunpan 0.2.7: aliyunpan cli client, support Webdav service, JavaScript plugin
-net-misc/apifox 2.3.19: API 文档、API 调试、API Mock、API 自动化测试
+net-misc/apifox 2.3.20: API 文档、API 调试、API Mock、API 自动化测试
 net-misc/avsocks 9999: 科学操长城软件
 net-misc/baidunetdisk 4.3.0 4.17.7: Baidu Net Disk is a cloud storage client (Linux Version)
 net-misc/baidupcs-go 3.9.1: The terminal utility for Baidu Network Disk (Golang Version).
