@@ -957,6 +957,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "st0nie"
 
+["net-proxy/hysteria"]
+source = "github"
+github = "apernet/hysteria"
+use_latest_release = true
+prefix = "app/v"
+github_account = "oatiz"
+
 ["net-proxy/make-proxy"]
 source = "github"
 github = "yueyoum/make-proxy"
