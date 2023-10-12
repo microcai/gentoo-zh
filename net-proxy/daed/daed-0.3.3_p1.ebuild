@@ -39,7 +39,7 @@ src_compile(){
 	if ! use webui; then
 		cd wing || die
 	fi
-	GO_ROOT="${S}" emake CC=clang CFLAGS="$CFLAGS -fno-stack-protector" APPNAME="${PN}" VERSION="${PV}"
+	GO_ROOT="${S}" emake CC=clang CFLAGS="-fno-stack-protector" APPNAME="${PN}" VERSION="${PV}"
 }
 
 src_install(){
