@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-10-10 23:00:21 CST)
+(The last generation time: 2023-10-12 19:52:52 CST)
 
 ### Packages
 
@@ -500,7 +500,7 @@
                                             | 9999                                      |        |                                                                                         |
    sys-apps/pnpm                            | 8.6.2                                     | BD     | https://pnpm.io                                                                         | Fast, disk space efficient package manager
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/juicity                          | 0.2.0                                     |        | https://github.com/juicity/juicity                                                      | juicity is a quic-based proxy protocol.
+ net-proxy/juicity                          | 0.3.0                                     |        | https://github.com/juicity/juicity                                                      | juicity is a quic-based proxy protocol.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/make-proxy                       | 2.0.0                                     |        | https://github.com/yueyoum/make-proxy                                                   | Socks5 proxy written in Erlang
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
