@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit git-r3 go-module systemd
+inherit flag-o-matic git-r3 go-module systemd
 
 DESCRIPTION="A Modern Dashboard For dae"
 HOMEPAGE="https://github.com/daeuniverse/daed"
@@ -39,11 +39,25 @@ src_unpack(){
 	ego mod download -modcacherw
 }
 
+src_prepare() {
+	# Prevent conflicting with the user's flags
+	# https://devmanual.gentoo.org/ebuild-writing/common-mistakes/#-werror-compiler-flag-not-removed
+	sed -i -e 's/-Werror//' wing/dae-core/Makefile || die 'Failed to remove -Werror via sed'
+
+	default
+}
+
 src_compile(){
 	if ! use webui; then
 		cd wing || die
 	fi
-	GO_ROOT="${S}" emake CC=clang CFLAGS="$CFLAGS -fno-stack-protector" APPNAME="${PN}" VERSION="${PV}"
+
+	# for dae's ebpf target
+	# gentoo-zh#3720
+	filter-flags "-march=*" "-mtune=*"
+	append-cflags "-fno-stack-protector"
+
+	GO_ROOT="${S}" emake APPNAME="${PN}" VERSION="${PV}"
 }
 
 src_install(){
