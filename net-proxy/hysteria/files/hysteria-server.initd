@@ -1,0 +1,23 @@
+#!/sbin/openrc-run
+# Copyright 2023 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+pidfile="/run/hysteria/hysteria-server.pid"
+command="/usr/bin/hysteria"
+command_args="server --config /etc/hysteria/server.yaml --disable-update-check"
+command_background="yes"
+command_user="hysteria:hysteria"
+
+capabilities="^cap_net_bind_service,^cap_net_admin,^cap_net_raw"
+output_log="/var/log/hysteria-server.log"
+error_log="/var/log/hysteria-server.log"
+
+depend() {
+    need net
+    after local
+}
+
+start_pre() {
+    checkpath -d -m 0755 -o "$command_user" /run/hysteria
+    checkpath -f -m 0644 -o "$command_user" "$output_log"
+}
