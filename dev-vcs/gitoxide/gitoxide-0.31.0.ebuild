@@ -21,6 +21,7 @@ CRATES="
 	anyhow@1.0.72
 	arc-swap@1.6.0
 	arrayvec@0.7.4
+	assert_matches@1.5.0
 	async-attributes@1.1.2
 	async-channel@1.9.0
 	async-executor@1.5.1
@@ -47,7 +48,6 @@ CRATES="
 	byteorder@1.4.3
 	bytes@1.4.0
 	bytesize@1.2.0
-	byteyarn@0.2.3
 	cassowary@0.3.0
 	cast@0.3.0
 	cc@1.0.79
@@ -57,6 +57,7 @@ CRATES="
 	ciborium@0.2.1
 	clap@4.3.16
 	clap_builder@4.3.16
+	clap_complete@4.4.3
 	clap_derive@4.3.12
 	clap_lex@0.5.0
 	clru@0.6.1
@@ -194,7 +195,6 @@ CRATES="
 	lazy_static@1.4.0
 	libc@0.2.147
 	libsqlite3-sys@0.26.0
-	libtest-mimic@0.6.1
 	libz-ng-sys@1.1.12
 	libz-sys@1.1.12
 	linked-hash-map@0.5.6
@@ -316,7 +316,6 @@ CRATES="
 	thiserror-impl@1.0.44
 	thiserror@1.0.44
 	thread_local@1.1.7
-	threadpool@1.8.1
 	time-core@0.1.1
 	time-macros@0.2.10
 	time@0.3.23
