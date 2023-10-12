@@ -207,6 +207,7 @@ net-proxy/clash-verge-bin:clash-meta - Install net-proxy/clash-meta as clash bac
 net-proxy/clash-verge-bin:clash-premium - Install net-proxy/clash-premium-bin as clash backend
 net-proxy/clash-verge-bin:system-clash - Use net-proxy/clash instead of clash-premium
 net-proxy/daed:webui - Build and install daed instead of dae-wing
+net-proxy/hysteria:goamd64 - detect golang arch level on amd64 cpus by CPU_FLAGS_X86
 net-proxy/juicity:client - install juicity-client
 net-proxy/juicity:server - install juicity-server
 net-proxy/make-proxy:client - Add make proxy client support
