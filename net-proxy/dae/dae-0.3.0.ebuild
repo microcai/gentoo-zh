@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit linux-info go-module systemd
+inherit flag-o-matic linux-info go-module systemd
 
 _MY_PV=${PV/_rc/rc}
 
@@ -26,7 +26,7 @@ DEPEND="
 RDEPEND="$DEPEND"
 BDEPEND="sys-devel/clang"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 pkg_pretend() {
 	local CONFIG_CHECK="
@@ -54,8 +54,21 @@ pkg_pretend() {
 	check_extra_config
 }
 
+src_prepare() {
+	# Prevent conflicting with the user's flags
+	# https://devmanual.gentoo.org/ebuild-writing/common-mistakes/#-werror-compiler-flag-not-removed
+	sed -i -e 's/-Werror//' "${S}/Makefile" || die 'Failed to remove -Werror via sed'
+
+	default
+}
+
 src_compile() {
-	emake VERSION="${PV}" GOFLAGS="-buildvcs=false" CC=clang CFLAGS="$CFLAGS -fno-stack-protector"
+	# for dae's ebpf target
+	# gentoo-zh#3720
+	filter-flags "-march=*" "-mtune=*"
+	append-cflags "-fno-stack-protector"
+
+	emake VERSION="${PV}" GOFLAGS="-buildvcs=false"
 }
 
 src_install() {
