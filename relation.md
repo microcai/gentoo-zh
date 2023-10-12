@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-10-12 20:22:53 CST)
+(The last generation time: 2023-10-13 05:54:42 CST)
 
 ### Packages
 
@@ -499,6 +499,10 @@
  net-proxy/daed                             | 0.3.3_p1                                  |        | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
                                             | 9999                                      |        |                                                                                         |
    sys-apps/pnpm                            | 8.6.2                                     | BD     | https://pnpm.io                                                                         | Fast, disk space efficient package manager
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ net-proxy/hysteria                         | 2.1.0                                     |        | https://github.com/apernet/hysteria                                                     | A powerful, lightning fast and censorship resistant proxy.
+   acct-group/hysteria                      | 0                                         |  D, RD |                                                                                         | A powerful, lightning fast and censorship resistant proxy.
+   acct-user/hysteria                       | 0                                         |  D, RD |                                                                                         | A powerful, lightning fast and censorship resistant proxy.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/juicity                          | 0.3.0                                     |        | https://github.com/juicity/juicity                                                      | juicity is a quic-based proxy protocol.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
