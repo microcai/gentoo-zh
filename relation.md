@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-10-12 19:52:52 CST)
+(The last generation time: 2023-10-12 20:22:53 CST)
 
 ### Packages
 
@@ -211,7 +211,7 @@
  dev-python/daff                            | 1.3.46                                    |        | https://github.com/paulfitz/daff                                                        | The daff can produce and apply tabular diffs
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/nvchecker                       | 2.12                                      |        | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
-   dev-python/structlog                     | 23.1.0                                    | RD     | http://www.structlog.org/en/stable/                                                     | Structured Logging for Python
+   dev-python/structlog                     | 23.2.0                                    | RD     | http://www.structlog.org/en/stable/                                                     | Structured Logging for Python
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pytube                          | 15.0.0                                    |        | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
