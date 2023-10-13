@@ -230,7 +230,7 @@ net-print/pantum 1.1.94: 奔图打印机Linux驱动
 net-proxy/Xray 1.7.5 1.8.4: Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
 net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
 net-proxy/clash 1.17.0: A rule-based tunnel in Go.
-net-proxy/clash-for-windows-bin 0.20.36 0.20.37: A Windows/macOS/Linux GUI based on Clash and Electron.
+net-proxy/clash-for-windows-bin 0.20.37 0.20.38: A Windows/macOS/Linux GUI based on Clash and Electron.
 net-proxy/clash-meta 1.16.0: Another Clash Kernel.
 net-proxy/clash-premium-bin 2023.06.30: Close-sourced pre-built Clash binary with TUN support
 net-proxy/clash-verge-bin 1.2.0 1.2.1 1.3.2 1.3.5 1.3.7: A Clash GUI based on tauri
