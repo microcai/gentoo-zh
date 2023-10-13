@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-10-13 12:11:20 CST)
+(The last generation time: 2023-10-13 18:20:52 CST)
 
 ### Packages
 
@@ -414,7 +414,7 @@
    x11-misc/flatpak-xdg-utils               | 1.0.5                                     | RD     | https://github.com/flatpak/flatpak-xdg-utils                                            | Utilities for containerized apps to launch programs outside the container
    x11-misc/snapd-xdg-open                  | 20170401                                  | RD     | https://github.com/snapcore/snapd-xdg-open                                              | Software for opening links from snaps in desktop
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-im/weixin-uos                          | 2.1.5-r1                                  |        | https://www.chinauos.com/resource/download-professional                                 | UOS weixin
+ net-im/weixin-uos                          | 2.1.8                                     |        | https://www.chinauos.com/resource/download-professional                                 | UOS weixin
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/wemeet                              | 3.15.0.402                                |        | https://wemeet.qq.com                                                                   | Wemeet - Tencent Video Conferencing
                                             | 3.15.1.401                                |        |                                                                                         |
