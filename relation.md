@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-10-13 05:54:42 CST)
+(The last generation time: 2023-10-13 08:24:12 CST)
 
 ### Packages
 
@@ -247,7 +247,7 @@
  dev-util/zprint-bin                        | 1.2.7                                     |        | https://github.com/kkinnear/zprint                                                      | Clojure and Clojurescript source code formatter
                                             | 1.2.8                                     |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/gitoxide                           | 0.30.0                                    |        | https://github.com/Byron/gitoxide                                                       | A command-line application for interacting with git repositories
+ dev-vcs/gitoxide                           | 0.31.0                                    |        | https://github.com/Byron/gitoxide                                                       | A command-line application for interacting with git repositories
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  games-arcade/osu-lazer                     | 2023.1008.1                               |        | https://osu.ppy.sh                                                                      | rhythm is just a *click* away!
                                             | 2023.924.1                                |        |                                                                                         |
