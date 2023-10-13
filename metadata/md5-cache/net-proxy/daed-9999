@@ -1,15 +1,15 @@
 BDEPEND=webui? ( sys-apps/pnpm ) sys-devel/clang >=dev-vcs/git-1.8.2.1[curl] >=dev-lang/go-1.18 app-arch/unzip virtual/pkgconfig
-DEFINED_PHASES=compile install unpack
+DEFINED_PHASES=compile install prepare unpack
 DEPEND=app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite
 DESCRIPTION=A Modern Dashboard For dae
 EAPI=8
 HOMEPAGE=https://github.com/daeuniverse/daed
-INHERIT=git-r3 go-module systemd
+INHERIT=flag-o-matic git-r3 go-module systemd
 IUSE=+webui
 LICENSE=MIT AGPL-3
 PROPERTIES=live
 RDEPEND=app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite
 RESTRICT=strip strip
 SLOT=0
-_eclasses_=git-r3	2358a7b20091609e24bd3a83b3ac5991	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-module	8624eede24936fd7666e5298e5332f22	systemd	c8b03e8df84486aa991d4396686e8942
-_md5_=adfae8b874796a0b9dfc341d44e9f4a2
+_eclasses_=toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e5cc383ea8420f92fe3737be790021dc	git-r3	2358a7b20091609e24bd3a83b3ac5991	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	go-module	8624eede24936fd7666e5298e5332f22	systemd	c8b03e8df84486aa991d4396686e8942
+_md5_=87294379e6c3d7821988cbb57825e760
