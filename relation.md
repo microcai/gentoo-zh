@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-10-13 18:20:52 CST)
+(The last generation time: 2023-10-14 09:22:52 CST)
 
 ### Packages
 
@@ -247,7 +247,7 @@
  dev-util/zprint-bin                        | 1.2.7                                     |        | https://github.com/kkinnear/zprint                                                      | Clojure and Clojurescript source code formatter
                                             | 1.2.8                                     |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/gitoxide                           | 0.31.0                                    |        | https://github.com/Byron/gitoxide                                                       | A command-line application for interacting with git repositories
+ dev-vcs/gitoxide                           | 0.31.1                                    |        | https://github.com/Byron/gitoxide                                                       | A command-line application for interacting with git repositories
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  games-arcade/osu-lazer                     | 2023.1008.1                               |        | https://osu.ppy.sh                                                                      | rhythm is just a *click* away!
                                             | 2023.924.1                                |        |                                                                                         |
@@ -392,11 +392,15 @@
  net-im/deepin-wine-qq                      | 9.5.2.27897                               |        | https://aur.archlinux.org/packages/deepin-wine-qq                                       | Tencent QQ on Deepin Wine(com.qq.im.deepin) For Gentoo
    app-emulation/deepin-wine5               | 5.0.16-r1                                 |  D, RD | https://www.deepin.org                                                                  | Deepin wine5
    app-emulation/deepin-wine-helper         | 5.1.27-r1                                 |  D, RD | https://www.deepin.org                                                                  | Deepin Wine Helper
+                                            | 5.1.45                                    |        |                                                                                         |
      app-emulation/deepin-wine-plugin       | 5.1.13-r1                                 |  D, RD | https://www.deepin.org                                                                  | Deepin Wine plugin
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/deepin-wine-wechat                  | 3.9.0.28-r3                               |        | https://aur.archlinux.org/packages/deepin-wine-wechat                                   | Tencent WeChat on Deepin Wine For Gentoo
    app-emulation/deepin-wine6-stable        | 6.0.0.19-r1                               |  D, RD | https://www.deepin.org                                                                  | Deepin wine6 stable
-     app-emulation/deepin-udis86            | 1.72-r4                                   | RD     | https://www.deepin.org                                                                  | Deepin Version of Wine
+                                            | 6.0.0.52                                  |        |                                                                                         |
+     app-emulation/deepin-udis86            | 1.72-r4                                   | RD     | https://www.deepin.org                                                                  | Disassembler library for x86 (32-bit shared library)
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ net-im/deepin-wine-wecom                   | 4.1.6.6017                                |        | https://aur.archlinux.org/packages/com.qq.weixin.work.deepin-x11                        | Tencent Weixin Work on Deepin Wine(com.qq.weixin.work.deepin) For Gentoo
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/dingtalk                            | 1.4.0.20909                               |        | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
                                             | 1.4.0.20909-r1                            |        |                                                                                         |
@@ -549,6 +553,8 @@
    sci-libs/libtifiles2                     | 9999                                      |  D, RD | http://lpg.ticalc.org/prj_tilp/                                                         | Library for TI calculator files
      sci-libs/libticables2                  | 9999                                      |  D, RD | http://lpg.ticalc.org/prj_tilp/                                                         | Library to handle different link cables for TI calculators
      sci-libs/libticonv                     | 9999                                      |  D, RD | http://lpg.ticalc.org/prj_tilp/                                                         | Charset conversion library for TI calculators
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ sec-policy/apparmor-profile-deepinwine     | 1.0.0                                     |        | https://gitlab.com/apparmor/apparmor/wikis/home                                         | A collection of AppArmor profiles for Deepinwine6
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/aptly                             | 1.4.0-r1                                  |        | https://github.com/aptly-dev/aptly                                                      | A swiss army knife for Debian repository management
                                             | 9999                                      |        |                                                                                         |
