@@ -1169,6 +1169,13 @@ use_latest_release = true
 github_account = "oatiz"
 prefix = "v"
 
+["www-client/brave"]
+source = "github"
+github = "brave/brave-browser"
+use_latest_release = true
+github_account = "irort"
+prefix = "v"
+
 ["www-servers/darkhttpd"]
 source = "github"
 github = "emikulic/darkhttpd"
