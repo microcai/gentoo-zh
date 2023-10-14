@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-10-14 09:23:40 CST)
+(The last generation time: 2023-10-15 00:13:30 CST)
 
 ### Packages
 
@@ -270,7 +270,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/jf-openhuninn                  | 2.0                                       |        | https://justfont.com/huninn/                                                            | An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/lxgw-neo-xihei                 | 1.105                                     |        | https://github.com/lxgw/LxgwNeoXiHei                                                    | A Chinese sans-serif font derived from IPAex Gothic.
+ media-fonts/lxgw-neo-xihei                 | 1.106                                     |        | https://github.com/lxgw/LxgwNeoXiHei                                                    | A Chinese sans-serif font derived from IPAex Gothic.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/nerd-fonts                     | 3.0.2                                     |        | https://github.com/ryanoasis/nerd-fonts                                                 | Nerd Fonts is a project that patches developer targeted fonts with glyphs
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
