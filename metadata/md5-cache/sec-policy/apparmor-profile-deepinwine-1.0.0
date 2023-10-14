@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DEPEND=sec-policy/apparmor-profiles
+DESCRIPTION=A collection of AppArmor profiles for Deepinwine6
+EAPI=8
+HOMEPAGE=https://gitlab.com/apparmor/apparmor/wikis/home
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=sec-policy/apparmor-profiles
+RESTRICT=test
+SLOT=0
+_md5_=a557c41d3d6ae8da785576dd35f6b57d

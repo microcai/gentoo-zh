@@ -22,11 +22,11 @@ app-dicts/fcitx-pinyin-zhwiki 20230728: Fcitx 5 Pinyin Dictionary from zh.wikipe
 app-editors/appflowy-bin 0.3.5: AppFlowy is an open-source alternative to Notion
 app-editors/marktext-bin 0.17.1: A simple and elegant markdown editor, available for Linux, macOS and Windows.
 app-editors/typora 0.11.18 1.5.8: A truely minimal markdown editor.
-app-emulation/deepin-udis86 1.72-r4: Deepin Version of Wine
-app-emulation/deepin-wine-helper 5.1.27-r1: Deepin Wine Helper
+app-emulation/deepin-udis86 1.72-r4: Disassembler library for x86 (32-bit shared library)
+app-emulation/deepin-wine-helper 5.1.27-r1 5.1.45: Deepin Wine Helper
 app-emulation/deepin-wine-plugin 5.1.13-r1: Deepin Wine plugin
 app-emulation/deepin-wine5 5.0.16-r1: Deepin wine5
-app-emulation/deepin-wine6-stable 6.0.0.19-r1: Deepin wine6 stable
+app-emulation/deepin-wine6-stable 6.0.0.19-r1 6.0.0.52: Deepin wine6 stable
 app-emulation/looking-glass 0_beta6: A low latency KVMFR application for guests with VGA PCI Passthrough
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
@@ -132,7 +132,7 @@ dev-util/pacstrap 28: Pacstrap - install packages to the specified new root dire
 dev-util/tauri-cli 1.3.1: Command line interface for building Tauri apps
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-util/zprint-bin 1.2.7 1.2.8: Clojure and Clojurescript source code formatter
-dev-vcs/gitoxide 0.31.0: A command-line application for interacting with git repositories
+dev-vcs/gitoxide 0.31.1: A command-line application for interacting with git repositories
 games-arcade/osu-lazer 2023.924.1 2023.1008.1: rhythm is just a *click* away!
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-misc/oh-my-git-bin 0.6.5: An interactive Git learning game!
@@ -197,6 +197,7 @@ net-dns/phddns 2.0.6.32828: Phddns
 net-dns/q 0.13.5: A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
 net-im/deepin-wine-qq 9.5.2.27897: Tencent QQ on Deepin Wine(com.qq.im.deepin) For Gentoo
 net-im/deepin-wine-wechat 3.9.0.28-r3: Tencent WeChat on Deepin Wine For Gentoo
+net-im/deepin-wine-wecom 4.1.6.6017: Tencent Weixin Work on Deepin Wine(com.qq.weixin.work.deepin) For Gentoo
 net-im/dingtalk 1.4.0.20909 1.4.0.20909-r1 1.7.0.30424 7.0.40.30706: Communication platform that supports video and audio conferencing
 net-im/telegram-purple 1.4.7-r1 9999: Libpurple (Pidgin) plugin for using a Telegram account
 net-im/tencent-qq 3.2.1_p17153: The new version of the official linux-qq
@@ -258,6 +259,7 @@ sci-libs/libticables2 9999: Library to handle different link cables for TI calcu
 sci-libs/libticalcs2 9999: Library for communication with TI calculators
 sci-libs/libticonv 9999: Charset conversion library for TI calculators
 sci-libs/libtifiles2 9999: Library for TI calculator files
+sec-policy/apparmor-profile-deepinwine 1.0.0: A collection of AppArmor profiles for Deepinwine6
 sys-apps/aptly 1.4.0-r1 9999: A swiss army knife for Debian repository management
 sys-apps/mdp 9999: A command-line based markdown presentation tool
 sys-apps/pacman 6.0.1: Archlinux's binary package manager
@@ -288,6 +290,7 @@ sys-power/tlpui 1.5.0_p6 1.6.0: A GTK user interface for TLP written in Python
 virtual/dist-kernel 6.4.15: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 www-apps/chatgpt-desktop 1.0.0: ChatGPT Desktop Application
+www-client/brave 1.59.117: Web browser that blocks ads and trackers by default
 www-servers/darkhttpd 1.13: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
