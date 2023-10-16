@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-10-16 05:12:15 CST)
+(The last generation time: 2023-10-16 16:52:35 CST)
 
 ### Packages
 
@@ -154,7 +154,7 @@
  app-shells/zsh-theme-powerlevel10k         | 1.19.0                                    |        | https://github.com/romkatv/powerlevel10k                                                | Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
    app-shells/gitstatus                     | 1.5.4                                     |  D, RD | https://github.com/romkatv/gitstatus                                                    | Git status for Bash and Zsh prompt
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-text/cajviewer                         | 1.0.3.0                                   |        | http://cajviewer.cnki.net                                                               | Document Viewer for CAJ, KDH, NH, TEB and PDF format
+ app-text/cajviewer                         | 1.3.22                                    |        | http://cajviewer.cnki.net                                                               | Document Viewer for CAJ, KDH, NH, TEB and PDF format
    net-dns/libidn11                         | 1.33                                      |  D, RD | https://www.gnu.org/software/libidn/                                                    | Internationalized Domain Names (IDN) implementation
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-text/groff-utf8                        | 0-r1                                      |        | http://www.haible.de/bruno/packages-groff-utf8.html                                     | GNU groff wrapper allowing UTF-8 input
