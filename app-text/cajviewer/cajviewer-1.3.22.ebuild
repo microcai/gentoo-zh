@@ -5,12 +5,12 @@ EAPI=8
 
 inherit desktop unpacker xdg-utils
 
-MY_PN="net.cnki.${PN}"
+MY_PN="${PN}"
 
 DESCRIPTION="Document Viewer for CAJ, KDH, NH, TEB and PDF format"
 
 HOMEPAGE="http://cajviewer.cnki.net"
-SRC_URI="https://download.cnki.net/${MY_PN}_${PV}_amd64.deb"
+SRC_URI="https://download.cnki.net/${PN}_${PV}-1_amd64.deb"
 
 RESTRICT="mirror strip"
 
@@ -53,11 +53,8 @@ MY_PREFIX="opt/apps/${MY_PN}"
 src_install(){
 	insinto /
 	doins -r .
-	newmenu ${MY_PREFIX}/entries/applications/${MY_PN}.desktop ${PN}.desktop
-	insinto /usr/share/mime/packages
-	doins ${MY_PREFIX}/files/cnki-caj.xml
-	fperms 0755 /${MY_PREFIX}/files/bin/cajviewer
-	fperms 0755 /${MY_PREFIX}/files/bin/start.sh
+	fperms 0755 /${MY_PREFIX}/CAJViewer
+	fperms 0755 /${MY_PREFIX}/start.sh
 }
 
 pkg_postinst(){
