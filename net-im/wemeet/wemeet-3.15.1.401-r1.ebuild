@@ -30,6 +30,7 @@ DEPEND="
 	dev-qt/qtnetwork:5
 	dev-qt/qtpositioning:5
 	dev-qt/qtprintsupport:5
+	dev-qt/qtwayland:5[compositor(+)]
 	dev-qt/qtwebchannel:5
 	dev-qt/qtwebengine:5
 	dev-qt/qtwebsockets:5
@@ -120,7 +121,7 @@ fi;
 	for i in 16 32 64 128 256; do
 		png_file="opt/${PN}/icons/hicolor/${i}x${i}/mimetypes/wemeetapp.png"
 		if [ -e "${png_file}" ]; then
-			newicon -s "${i}" "${png_file}" "wemeetapp.png"
+			newicon -s "${i}" -c mimetypes "${png_file}" "wemeetapp.png"
 		fi
 	done
 }
