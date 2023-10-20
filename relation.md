@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-10-20 01:08:17 CST)
+(The last generation time: 2023-10-20 12:57:40 CST)
 
 ### Packages
 
@@ -416,7 +416,7 @@
  net-im/telegram-purple                     | 1.4.7-r1                                  |        | https://github.com/majn/telegram-purple                                                 | Libpurple (Pidgin) plugin for using a Telegram account
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-im/tencent-qq                          | 3.2.1_p17153                              |        | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
+ net-im/tencent-qq                          | 3.2.1_p17654                              |        | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
    media-libs/openslide                     | 20230904                                  | RD     | http://openslide.org/                                                                   | C library with simple interface to read virtual slides
    x11-misc/flatpak-xdg-utils               | 1.0.5                                     | RD     | https://github.com/flatpak/flatpak-xdg-utils                                            | Utilities for containerized apps to launch programs outside the container
    x11-misc/snapd-xdg-open                  | 20170401                                  | RD     | https://github.com/snapcore/snapd-xdg-open                                              | Software for opening links from snaps in desktop
