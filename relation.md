@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-10-20 22:10:14 CST)
+(The last generation time: 2023-10-22 15:16:32 CST)
 
 ### Packages
 
@@ -390,7 +390,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/phddns                             | 2.0.6.32828                               |        | http://hsk.oray.com/                                                                    | Phddns
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-dns/q                                  | 0.13.5                                    |        | https://github.com/natesales/q                                                          | A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
+ net-dns/q                                  | 0.15.1                                    |        | https://github.com/natesales/q                                                          | A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/deepin-wine-qq                      | 9.5.2.27897                               |        | https://aur.archlinux.org/packages/deepin-wine-qq                                       | Tencent QQ on Deepin Wine(com.qq.im.deepin) For Gentoo
    app-emulation/deepin-wine5               | 5.0.16-r1                                 |  D, RD | https://www.deepin.org                                                                  | Deepin wine5
