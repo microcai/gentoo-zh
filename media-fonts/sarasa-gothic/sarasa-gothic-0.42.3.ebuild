@@ -12,7 +12,6 @@ SRC_URI="https://github.com/be5invis/Sarasa-Gothic/releases/download/v${PV}/${PN
 LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 BDEPEND="
 	app-arch/p7zip
 "
