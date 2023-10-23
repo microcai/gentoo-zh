@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-10-23 19:12:33 CST)
+(The last generation time: 2023-10-23 19:35:09 CST)
 
 ### Packages
 
@@ -278,7 +278,7 @@
  media-fonts/nerd-fonts                     | 3.0.2                                     |        | https://github.com/ryanoasis/nerd-fonts                                                 | Nerd Fonts is a project that patches developer targeted fonts with glyphs
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/sarasa-gothic                  | 0.42.0                                    |        | https://github.com/be5invis/Sarasa-Gothic                                               | A CJK programming font based on Iosevka and Source Han Sans. (TTC)
-                                            | 0.42.1                                    |        |                                                                                         |
+                                            | 0.42.3                                    |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/sarasa-term-sc-nerd            | 1.1.0                                     |        | https://github.com/laishulu/Sarasa-Term-SC-Nerd                                         | Sarasa Mono SC font patched with Nerd fonts
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
