@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-10-24 21:49:46 CST)
+(The last generation time: 2023-10-25 00:37:05 CST)
 
 ### Packages
 
@@ -142,6 +142,7 @@
                                             | 5.14.14                                   |        |                                                                                         |
                                             | 5.26.13-r1                                |        |                                                                                         |
                                             | 5.9.18                                    |        |                                                                                         |
+                                            | 6.9.20                                    |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-office/freeoffice                      | 1062                                      |        | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite.
                                             | 1064                                      |        |                                                                                         |
