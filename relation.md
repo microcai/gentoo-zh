@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-10-25 15:11:54 CST)
+(The last generation time: 2023-10-25 15:13:11 CST)
 
 ### Packages
 
@@ -220,7 +220,7 @@
  dev-util/arch-install-scripts              | 28-r1                                     |        | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
    dev-util/pacstrap                        | 28                                        | RD     | https://github.com/archlinux/arch-install-scripts                                       | Pacstrap - install packages to the specified new root directorye
      sys-apps/pacman                        | 6.0.2                                     |  D, RD | https://archlinux.org/pacman/                                                           | Archlinux's binary package manager
-       app-crypt/archlinux-keyring          | 20230130                                  |  D, RD | https://gitlab.archlinux.org/archlinux/archlinux-keyring                                | GnuPG keyring of Archlinux developer keys
+       app-crypt/archlinux-keyring          | 20231017                                  |  D, RD | https://gitlab.archlinux.org/archlinux/archlinux-keyring                                | GnuPG keyring of Archlinux developer keys
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/bom-utils                         | 1.0                                       |        | https://github.com/jlblancoc/utf-bom-utils                                              | Small programs to add or remove the BOM mark in UTF8 files
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
