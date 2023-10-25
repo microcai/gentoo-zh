@@ -33,7 +33,6 @@ DEPEND="
 "
 RDEPEND="
 	${DEPEND}
-	sys-apps/pacman-mirrorlist
 "
 BDEPEND="
 	app-text/asciidoc
@@ -50,6 +49,8 @@ RESTRICT="test"
 src_configure() {
 	local emesonargs=(
 		-Dbuildstatic=false
+		# fix #3299, see https://bugs.gentoo.org/878913; https://bugs.gentoo.org/878603
+		--localstatedir "${EPREFIX}/var"
 		# Help protect Gentoo users from shooting into their feet.
 		-Droot-dir="${EPREFIX}/var/chroot/archlinux"
 		# full doc with doxygen
@@ -61,6 +62,11 @@ src_configure() {
 		emesonargs+=( -Duse-git-version=true )
 	fi
 	meson_src_configure
+}
+
+src_install() {
+	meson_src_install
+	keepdir /var/lib/pacman
 }
 
 pkg_postinst() {
