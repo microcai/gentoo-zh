@@ -133,7 +133,7 @@ dev-util/tauri-cli 1.3.1: Command line interface for building Tauri apps
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-util/zprint-bin 1.2.7 1.2.8: Clojure and Clojurescript source code formatter
 dev-vcs/gitoxide 0.31.1: A command-line application for interacting with git repositories
-games-arcade/osu-lazer 2023.924.1 2023.1008.1: rhythm is just a *click* away!
+games-arcade/osu-lazer 2023.1008.1 2023.1026.0: rhythm is just a *click* away!
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-misc/oh-my-git-bin 0.6.5: An interactive Git learning game!
 games-util/winegame-client-bin 0.5.10.5: An open source gaming platform for GNU/Linux
