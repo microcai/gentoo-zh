@@ -10,5 +10,5 @@ LICENSE=GPL-3+
 RDEPEND=app-i18n/fcitx:5 app-i18n/libskk dev-qt/qtcore:5 app-i18n/fcitx-qt[qt5,-onlyplugin] app-i18n/skk-jisyo
 SLOT=5
 SRC_URI=https://download.fcitx-im.org/fcitx5/fcitx5-skk/fcitx5-skk-5.1.0.tar.xz
-_eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	5ae516d405b6ae5636e487ea4350a8a2	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	cmake	0f2e0c197fad0312f3c4765c9cf36271
+_eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	baa4d385108ac87993edac956a916a36	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	cmake	0f2e0c197fad0312f3c4765c9cf36271
 _md5_=c94bdbf5cc60bbbae5e16b6381ace8b1
