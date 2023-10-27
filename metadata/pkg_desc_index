@@ -101,9 +101,9 @@ dev-libs/lunar-calendar 3.0.1: a gtk+ calendar widget for chinese lunar library
 dev-libs/lunar-date 3.0.1: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458-r1 9999: Community managed domain list for V2Ray.
-dev-libs/v2ray-domain-list-community-bin 20230905081311: Community managed domain list for V2Ray.
-dev-libs/v2ray-geoip-bin 202309070036: GeoIP for V2Ray.
-dev-libs/v2ray-rules-dat 202309062208: Enhanced edition of V2Ray rules dat files.
+dev-libs/v2ray-domain-list-community-bin 20231025154305: Community managed domain list for V2Ray.
+dev-libs/v2ray-geoip-bin 202310260037: GeoIP for V2Ray.
+dev-libs/v2ray-rules-dat 202310262208: Enhanced edition of V2Ray rules dat files.
 dev-python/conda 23.1.0: OS-agnostic, system-level binary package manager and ecosystem
 dev-python/conda-package-handling 2.0.2: Create and extract conda packages of various formats
 dev-python/conda-package-streaming 0.7.0: An efficient library to read from new and old conda packages
@@ -244,7 +244,7 @@ net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
 net-proxy/shadowsocks-rust 1.16.2 1.17.0: A Rust port of shadowsocks.
 net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
 net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
-net-proxy/v2ray 5.6.0-r1 5.7.0-r2 5.8.0: A platform for building proxies to bypass network restrictions.
+net-proxy/v2ray 5.7.0-r2 5.8.0 5.10.0: A platform for building proxies to bypass network restrictions.
 net-proxy/v2ray-bin 4.45.0-r1 5.7.0: A platform for building proxies to bypass network restrictions
 net-proxy/v2rayA 2.2.4 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
