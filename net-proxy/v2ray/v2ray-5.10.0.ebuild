@@ -7,8 +7,10 @@ inherit systemd go-module
 
 DESCRIPTION="A platform for building proxies to bypass network restrictions."
 HOMEPAGE="https://www.v2fly.org/"
-SRC_URI="https://github.com/v2fly/v2ray-core/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/Puqns67/gentoo-deps/releases/download/${P}/${P}-deps.tar.xz"
+SRC_URI="
+	https://github.com/v2fly/v2ray-core/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/liuyujielol/vendors/releases/download/${PN}/${P}-deps.tar.xz
+"
 
 LICENSE="MIT"
 SLOT="0"
@@ -21,7 +23,7 @@ RDEPEND="${DEPEND}
 	!net-proxy/v2ray-bin
 	app-alternatives/v2ray-geoip
 	app-alternatives/v2ray-geosite"
-BDEPEND="dev-lang/go"
+BDEPEND=">=dev-lang/go-1.20.8"
 
 S="${WORKDIR}/${PN}-core-${PV}"
 
