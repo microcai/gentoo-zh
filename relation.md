@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-10-29 22:47:03 CST)
+(The last generation time: 2023-10-30 00:19:14 CST)
 
 ### Packages
 
@@ -323,6 +323,8 @@
  media-plugins/osdlyrics                    | 0.5.10-r1                                 |        | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
                                             | 0.5.11                                    |        |                                                                                         |
                                             | 9999                                      |        |                                                                                         |
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ media-sound/barva                          | 9999                                      |        | https://github.com/Kharacternyk/barva                                                   | a modular audio visualizer
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/feeluown                       | 3.8.12                                    |        | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
                                             | 3.8.14                                    |        |                                                                                         |
