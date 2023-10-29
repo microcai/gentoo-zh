@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=!onlyplugin? ( >=app-i18n/fcitx-5.0.16:5 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5= dev-qt/qtwidgets:5 dev-qt/qtconcurrent:5 ) x11-libs/libX11 x11-libs/libxcb x11-libs/libxkbcommon qt6? ( dev-qt/qtbase:6[dbus,gui] ) kde-frameworks/extra-cmake-modules:5
 REQUIRED_USE=|| ( qt5 qt6 )
 SLOT=5
-_eclasses_=toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	baa4d385108ac87993edac956a916a36	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271	git-r3	2358a7b20091609e24bd3a83b3ac5991
+_eclasses_=toolchain-funcs	70ec42843fec87d20fd94c67e77cdbff	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	baa4d385108ac87993edac956a916a36	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271	git-r3	2358a7b20091609e24bd3a83b3ac5991
 _md5_=6beebc83378fe1e737c354e6eca28bc1

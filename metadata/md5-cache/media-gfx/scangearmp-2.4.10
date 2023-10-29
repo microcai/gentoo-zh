@@ -10,5 +10,5 @@ LICENSE=Canon-IJ
 RDEPEND=>=x11-libs/gtk+-2.16:2 virtual/libusb:1
 SLOT=0
 SRC_URI=https://gdlp01.c-wss.com/gds/4/0100010924/01/scangearmp2-source-4.10-1.tar.gz
-_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	6ae9a4347149b19a112caa1182d03bde
+_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	70ec42843fec87d20fd94c67e77cdbff	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	6ae9a4347149b19a112caa1182d03bde
 _md5_=c698d49a6d1f06cb03639fff530c049f

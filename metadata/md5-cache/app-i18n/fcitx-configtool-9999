@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=app-i18n/fcitx:5 app-i18n/fcitx-qt:5[qt5,-onlyplugin] dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 dev-qt/qtx11extras:5 kde-frameworks/kwidgetsaddons:5 virtual/libintl x11-libs/libX11 x11-libs/libxkbfile kcm? ( kde-frameworks/kconfigwidgets:5 kde-frameworks/kcoreaddons:5 kde-frameworks/ki18n:5 kde-frameworks/kirigami:5 kde-frameworks/kdeclarative:5 ) config-qt? ( kde-frameworks/kitemviews:5 )
 RESTRICT=!test? ( test )
 SLOT=5
-_eclasses_=toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	baa4d385108ac87993edac956a916a36	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271	git-r3	2358a7b20091609e24bd3a83b3ac5991
+_eclasses_=toolchain-funcs	70ec42843fec87d20fd94c67e77cdbff	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	baa4d385108ac87993edac956a916a36	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271	git-r3	2358a7b20091609e24bd3a83b3ac5991
 _md5_=ab11880a6c9b146eb9d592b222537ad1
