@@ -1,0 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install postinst unpack
+DEPEND=media-libs/libpulse
+DESCRIPTION=a modular audio visualizer
+EAPI=8
+HOMEPAGE=https://github.com/Kharacternyk/barva
+INHERIT=git-r3 toolchain-funcs
+LICENSE=GPL-3
+PROPERTIES=live
+SLOT=0
+_eclasses_=git-r3	2358a7b20091609e24bd3a83b3ac5991	toolchain-funcs	70ec42843fec87d20fd94c67e77cdbff	multilib	c19072c3cd7ac5cb21de013f7e9832e0
+_md5_=46235fd29a409acd5d8293d03d466af0
