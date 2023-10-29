@@ -244,7 +244,7 @@ net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
 net-proxy/shadowsocks-rust 1.16.2 1.17.0: A Rust port of shadowsocks.
 net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
 net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
-net-proxy/v2ray 5.7.0-r2 5.8.0 5.10.0: A platform for building proxies to bypass network restrictions.
+net-proxy/v2ray 5.7.0-r2 5.8.0 5.10.0 5.10.1: A platform for building proxies to bypass network restrictions.
 net-proxy/v2ray-bin 4.45.0-r1 5.7.0: A platform for building proxies to bypass network restrictions
 net-proxy/v2rayA 2.2.4 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
