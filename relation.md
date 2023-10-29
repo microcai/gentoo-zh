@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-10-29 13:21:06 CST)
+(The last generation time: 2023-10-29 22:47:03 CST)
 
 ### Packages
 
@@ -320,6 +320,10 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-plugins/gimp-gap                     | 2.8.0                                     |        | http://www.gimp.org/                                                                    | Gimp Animation Package
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ media-plugins/osdlyrics                    | 0.5.10-r1                                 |        | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
+                                            | 0.5.11                                    |        |                                                                                         |
+                                            | 9999                                      |        |                                                                                         |
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/feeluown                       | 3.8.12                                    |        | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
                                             | 3.8.14                                    |        |                                                                                         |
    dev-python/feeluown-bilibili             | 0.3                                       |  D     | https://github.com/feeluown/feeluown-bilibili                                           | bilibili support for feeluown
@@ -341,12 +345,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/netease-cloud-music            | 1.2.1                                     |        | https://music.163.com                                                                   | Netease Cloud Music, converted from .deb package
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/netease-cloud-music-gtk        | 1.2.2                                     |        | https://github.com/gmg137/netease-cloud-music-gtk                                       | netease cloud music player based on Rust & GTK for Linux
-                                            | 2.1.0                                     |        |                                                                                         |
-                                            | 2.2.0                                     |        |                                                                                         |
-   media-plugins/osdlyrics                  | 0.5.10-r1                                 | RD     | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
-                                            | 0.5.11                                    |        |                                                                                         |
-                                            | 9999                                      |        |                                                                                         |
+ media-sound/netease-cloud-music-gtk        | 2.2.0_p20231016                           |        | https://github.com/gmg137/netease-cloud-music-gtk                                       | netease cloud music player based on Rust & GTK for Linux
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/qqmusic                        | 1.1.5                                     |        | https://y.qq.com/                                                                       | Tencent QQ Music, converted from .deb package
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
