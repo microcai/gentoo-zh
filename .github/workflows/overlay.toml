@@ -957,6 +957,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "st0nie"
 
+["net-proxy/hysteria"]
+source = "github"
+github = "apernet/hysteria"
+use_latest_release = true
+prefix = "app/v"
+github_account = "oatiz"
+
 ["net-proxy/make-proxy"]
 source = "github"
 github = "yueyoum/make-proxy"
@@ -1155,18 +1162,18 @@ github_account = "HougeLangley"
 #["virtual/dist-kernel"]
 #["virtual/linux-sources"]
 
-["www-apps/openvscode-server-bin"]
-source = "github"
-github = "gitpod-io/openvscode-server"
-use_latest_release = true
-prefix = "openvscode-server-v"
-github_account = "liuyujielol"
-
 ["www-apps/chatgpt-desktop"]
 source = "github"
 github = "lencx/ChatGPT"
 use_latest_release = true
 github_account = "oatiz"
+prefix = "v"
+
+["www-client/brave"]
+source = "github"
+github = "brave/brave-browser"
+use_latest_release = true
+github_account = "irort"
 prefix = "v"
 
 ["www-servers/darkhttpd"]

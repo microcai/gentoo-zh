@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit linux-info git-r3 go-module systemd
+inherit flag-o-matic linux-info git-r3 go-module systemd
 
 DESCRIPTION="A lightweight and high-performance transparent proxy solution based on eBPF"
 HOMEPAGE="https://github.com/daeuniverse/dae"
@@ -38,8 +38,21 @@ src_unpack() {
 	ego mod download -modcacherw
 }
 
+src_prepare() {
+	# Prevent conflicting with the user's flags
+	# https://devmanual.gentoo.org/ebuild-writing/common-mistakes/#-werror-compiler-flag-not-removed
+	sed -i -e 's/-Werror//' "${S}/Makefile" || die 'Failed to remove -Werror via sed'
+
+	default
+}
+
 src_compile() {
-	emake GOFLAGS="-buildvcs=false" CC=clang CFLAGS="-fno-stack-protector"
+	# for dae's ebpf target
+	# gentoo-zh#3720
+	filter-flags "-march=*" "-mtune=*"
+	append-cflags "-fno-stack-protector"
+
+	emake VERSION="${PV}" GOFLAGS="-buildvcs=false"
 }
 
 src_install() {
