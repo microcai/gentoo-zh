@@ -1,6 +1,6 @@
 BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
 DEFINED_PHASES=install postinst postrm setup
-DESCRIPTION=An open-source Chinese font derived from Fontworks' Klee One
+DESCRIPTION=An open-source Chinese font derived from IPAmj Mincho
 EAPI=8
 HOMEPAGE=https://github.com/lxgw/LxgwNeoZhiSong
 INHERIT=font
@@ -10,4 +10,4 @@ LICENSE=IPAfont
 SLOT=0
 SRC_URI=https://github.com/lxgw/LxgwNeoZhiSong/releases/download/v0.113/LXGWNeoZhiSongCHS.ttf https://github.com/lxgw/LxgwNeoZhiSong/releases/download/v0.113/LXGWHeartSerifCHS.ttf
 _eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb
-_md5_=8183122a6a159da4ac0bc82f4bc1e2a5
+_md5_=80e4c5a8e4f857b669fe8871c625dd10
