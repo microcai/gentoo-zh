@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-01 04:26:11 CST)
+(The last generation time: 2023-11-01 14:04:26 CST)
 
 ### Packages
 
@@ -85,7 +85,7 @@
                                             | 1.0.5                                     |        |                                                                                         |
    app-i18n/libime                          | 1.1.2                                     |  D, RD | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
                                             | 9999                                      |        |                                                                                         |
-   dev-util/gyp                             | 20220404165439                            | BD     | https://gyp.gsrc.io/                                                                    | GYP (Generate Your Projects) meta-build system
+   dev-util/gyp                             | 20230914150222                            | BD     | https://gyp.gsrc.io/                                                                    | GYP (Generate Your Projects) meta-build system
                                             | 99999999999999                            |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/rime-bopomofo                     | 20210131                                  |        | https://github.com/rime/rime-bopomofo                                                   | Bopomofo input for rime
