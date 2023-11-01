@@ -7,7 +7,7 @@ inherit font
 
 MY_P="${PN}-v${PV}"
 
-DESCRIPTION="An open-source Chinese font derived from Fontworks' Klee One"
+DESCRIPTION="An open-source Chinese font derived from IPAmj Mincho"
 HOMEPAGE="https://github.com/lxgw/LxgwNeoZhiSong"
 SRC_URI="
 	https://github.com/lxgw/LxgwNeoZhiSong/releases/download/v${PV}/LXGWNeoZhiSongCHS.ttf
