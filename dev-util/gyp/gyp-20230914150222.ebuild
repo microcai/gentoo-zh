@@ -15,7 +15,7 @@ fi
 
 DESCRIPTION="GYP (Generate Your Projects) meta-build system"
 HOMEPAGE="https://gyp.gsrc.io/ https://chromium.googlesource.com/external/gyp"
-COMMIT="9ecf45e37677743503342ee4c6a76eaee80e4a7f"
+COMMIT="a03d7413becefc8d55c8aa3df58b55b9bd0e9052"
 if [[ "${PV}" != "99999999999999" ]]; then
 	inherit vcs-snapshot
 
@@ -32,9 +32,9 @@ DEPEND=""
 RDEPEND="$(python_gen_cond_dep 'dev-python/six[${PYTHON_USEDEP}]')"
 
 PATCHES=(
-	"${FILESDIR}"/0001-${P}-python38.patch
-	"${FILESDIR}"/0002-${P}-fix-cmake.patch
-	"${FILESDIR}"/0003-${P}-fips.patch
+	"${FILESDIR}"/0001-${PN}-20220404165439-python38.patch
+	"${FILESDIR}"/0002-${PN}-20220404165439-fix-cmake.patch
+	"${FILESDIR}"/0003-${PN}-20220404165439-fips.patch
 )
 
 python_prepare_all() {
