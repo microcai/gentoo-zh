@@ -937,12 +937,6 @@ use_latest_release = true
 prefix = "v"
 github_account = "st0nie"
 
-["net-proxy/clash-for-windows-bin"]
-source = "github"
-github = "Fndroid/clash_for_windows_pkg"
-use_latest_release = true
-github_account = "irort"
-
 ["net-proxy/dae"]
 source = "github"
 github = "daeuniverse/dae"
