@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-02 17:38:39 CST)
+(The last generation time: 2023-11-03 01:19:06 CST)
 
 ### Packages
 
@@ -446,7 +446,6 @@
  net-misc/bbdown-bin                        | 1.5.9                                     |        | https://github.com/nilaoda/BBDown                                                       | The terminal utility for Baidu Network Disk (Golang Version).
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/biliup-app                        | 0.4.1-r1                                  |        | https://github.com/ForgQi/biliup-app                                                    | A Tool for Upload video to bilibili
-   dev-util/tauri-cli                       | 1.3.1                                     | BD     | https://tauri.app/v1/api/cli                                                            | Command line interface for building Tauri apps
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/biliup-app-bin                    | 0.4.1                                     |        | https://github.com/ForgQi/biliup-app                                                    | A Tool for Upload video to bilibili
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -491,13 +490,18 @@
  net-proxy/clash-for-windows-bin            | 0.20.38                                   |        | https://github.com/Fndroid/clash_for_windows_pkg                                        | A Windows/macOS/Linux GUI based on Clash and Electron.
                                             | 0.20.39                                   |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/clash-verge-bin                  | 1.3.8                                     |        | https://github.com/zzzgydi/clash-verge                                                  | A Clash GUI based on tauri
+ net-proxy/clash-verge                      | 1.3.8                                     |        | https://github.com/zzzgydi/clash-verge                                                  | A Clash GUI based on tauri
+   dev-lang/quickjs                         | 2021.03.27                                | BD     | https://bellard.org/quickjs/                                                            | Small embeddable Javascript engine
+   dev-util/tauri-cli                       | 1.3.1                                     | BD     | https://tauri.app/v1/api/cli                                                            | Command line interface for building Tauri apps
+                                            | 1.5.6                                     |        |                                                                                         |
    net-proxy/clash                          | 1.17.0                                    | RD     | https://github.com/Dreamacro/clash                                                      | A rule-based tunnel in Go.
                                             | 1.18.0                                    |        |                                                                                         |
    net-proxy/clash-meta                     | 1.16.0                                    | RD     | https://github.com/MetaCubeX/Clash.Meta                                                 | Another Clash Kernel.
      acct-group/clash-meta                  | 0                                         |  D, RD |                                                                                         | Another Clash Kernel.
      acct-user/clash-meta                   | 0                                         |  D, RD |                                                                                         | Another Clash Kernel.
    net-proxy/clash-premium-bin              | 2023.06.30                                | RD     | https://github.com/Dreamacro/clash                                                      | Close-sourced pre-built Clash binary with TUN support
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ net-proxy/clash-verge-bin                  | 1.3.8                                     |        | https://github.com/zzzgydi/clash-verge                                                  | A Clash GUI based on tauri
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/dae                              | 0.3.0                                     |        | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
                                             | 9999                                      |        |                                                                                         |
