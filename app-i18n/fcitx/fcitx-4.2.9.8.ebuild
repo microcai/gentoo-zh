@@ -4,7 +4,7 @@
 EAPI="7"
 LUA_COMPAT=(lua{5-1,5-2,5-3,5-4})
 
-inherit cmake gnome2-utils lua-single xdg-utils
+inherit cmake gnome2-utils lua-single xdg
 
 if [[ "${PV}" =~ (^|\.)9999$ ]]; then
 	inherit git-r3
@@ -28,7 +28,7 @@ fi
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="4"
 KEYWORDS="amd64 ~arm64 ~hppa ppc ppc64 ~riscv x86"
-IUSE="+X +autostart +cairo debug +enchant gtk2 +gtk3 +introspection lua nls opencc +pango +table test +xkb qt4"
+IUSE="+X +autostart +cairo debug +enchant gtk2 +gtk3 +introspection lua nls opencc +pango +table test +xkb"
 REQUIRED_USE="cairo? ( X )
 	lua? ( ${LUA_REQUIRED_USE} )
 	pango? ( cairo )"
@@ -113,7 +113,7 @@ src_configure() {
 		-DENABLE_LUA=$(usex lua ON OFF)
 		-DENABLE_OPENCC=$(usex opencc ON OFF)
 		-DENABLE_PANGO=$(usex pango ON OFF)
-		-DENABLE_QT=$(usex qt4 ON OFF)
+		-DENABLE_QT=OFF
 		-DENABLE_QT_GUI=OFF
 		-DENABLE_QT_IM_MODULE=OFF
 		-DENABLE_SNOOPER=$(if use gtk2 || use gtk3; then echo ON; else echo OFF; fi)
@@ -138,9 +138,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	xdg_desktop_database_update
-	xdg_icon_cache_update
-	xdg_mimeinfo_database_update
+	xdg_pkg_postinst
 	use gtk2 && gnome2_query_immodules_gtk2
 	use gtk3 && gnome2_query_immodules_gtk3
 
@@ -151,9 +149,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	xdg_desktop_database_update
-	xdg_icon_cache_update
-	xdg_mimeinfo_database_update
+	xdg_pkg_postrm
 	use gtk2 && gnome2_query_immodules_gtk2
 	use gtk3 && gnome2_query_immodules_gtk3
 }
