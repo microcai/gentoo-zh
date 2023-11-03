@@ -39,7 +39,7 @@ RDEPEND="
 	x11-libs/libxkbcommon
 
 	qt6? (
-		dev-qt/qtbase:6[dbus,gui]
+		dev-qt/qtbase:6[dbus,gui,widgets]
 	)
 	kde-frameworks/extra-cmake-modules:5
 "
