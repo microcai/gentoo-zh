@@ -1,4 +1,4 @@
-BDEPEND=<=dev-lang/go-1.20.8 virtual/pkgconfig >=dev-lang/go-1.18 app-arch/unzip
+BDEPEND=>=dev-lang/go-1.20.8 virtual/pkgconfig >=dev-lang/go-1.18 app-arch/unzip
 DEFINED_PHASES=compile install prepare unpack
 DESCRIPTION=A platform for building proxies to bypass network restrictions.
 EAPI=8
@@ -9,6 +9,6 @@ LICENSE=MIT
 RDEPEND=!net-proxy/v2ray-bin app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite
 RESTRICT=mirror strip
 SLOT=0
-SRC_URI=https://github.com/v2fly/v2ray-core/archive/refs/tags/v5.7.0.tar.gz -> v2ray-5.7.0.tar.gz https://github.com/Puqns67/gentoo-deps/releases/download/v2ray-5.7.0/v2ray-5.7.0-deps.tar.xz
+SRC_URI=https://github.com/v2fly/v2ray-core/archive/refs/tags/v5.11.0.tar.gz -> v2ray-5.11.0.tar.gz https://github.com/liuyujielol/gentoo-go-deps/releases/download/v2ray-5.11.0/v2ray-5.11.0-deps.tar.xz
 _eclasses_=toolchain-funcs	70ec42843fec87d20fd94c67e77cdbff	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	c8b03e8df84486aa991d4396686e8942	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	go-module	8624eede24936fd7666e5298e5332f22
-_md5_=cd529b5b0264a895879281cc9d570a7e
+_md5_=dfe8b1d0d0034e48b979232ba9cbafcd
