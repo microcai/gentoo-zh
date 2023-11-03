@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -29,7 +29,7 @@ REQUIRED_USE="
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	>=app-i18n/fcitx-5.0.24:5
+	>=app-i18n/fcitx-5.1.2:5
 	>=app-i18n/libime-1.1.2:5
 
 	>=dev-libs/boost-1.61:=
