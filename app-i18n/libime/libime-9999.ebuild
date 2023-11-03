@@ -20,13 +20,14 @@ HOMEPAGE="https://fcitx-im.org/ https://gitlab.com/fcitx/libime"
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
 IUSE=""
-REQUIRED_USE=""
 
 RDEPEND="app-i18n/fcitx:5"
 DEPEND="${RDEPEND}
-	dev-libs/boost
+	app-arch/zstd:=
+	dev-libs/boost:=
 	kde-frameworks/extra-cmake-modules:5
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 src_prepare() {
 	cmake_src_prepare
