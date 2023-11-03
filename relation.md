@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-03 20:45:23 CST)
+(The last generation time: 2023-11-03 21:24:58 CST)
 
 ### Packages
 
@@ -531,9 +531,8 @@
                                             | 1.8.4                                     |        |                                                                                         |
      app-alternatives/v2ray-geoip           | 0                                         |  D, RD |                                                                                         | symlink for v2ray-geoip
      app-alternatives/v2ray-geosite         | 0                                         |  D, RD |                                                                                         | symlink for v2ray-geosite
-   net-proxy/v2ray                          | 5.10.0                                    | RD     | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
-                                            | 5.10.1                                    |        |                                                                                         |
-                                            | 5.7.0-r2                                  |        |                                                                                         |
+   net-proxy/v2ray                          | 5.10.1                                    | RD     | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
+                                            | 5.11.0                                    |        |                                                                                         |
                                             | 5.8.0                                     |        |                                                                                         |
    net-proxy/v2ray-bin                      | 4.45.0-r1                                 | RD     | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
                                             | 5.7.0                                     |        |                                                                                         |
