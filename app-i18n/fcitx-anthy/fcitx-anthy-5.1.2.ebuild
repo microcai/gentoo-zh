@@ -1,20 +1,16 @@
-# Copyright 2013-2021 Gentoo Authors
+# Copyright 2013-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="8"
+EAPI=8
 
 inherit cmake xdg
 
-if [[ "${PV}" =~ (^|\.)9999$ ]]; then
-	inherit git-r3
-
-	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-anthy"
-fi
-
 DESCRIPTION="Japanese Anthy input methods for Fcitx5"
 HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-anthy"
+
 if [[ "${PV}" =~ (^|\.)9999$ ]]; then
-	SRC_URI=""
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-anthy"
 else
 	MY_PN="fcitx5-anthy"
 	MY_P="${MY_PN}-${PV}"
@@ -25,15 +21,20 @@ fi
 LICENSE="GPL-2+"
 SLOT="5"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="test coverage"
+REQUIRED_USE="coverage? ( test )"
+RESTRICT="!test? ( test )"
 
-BDEPEND="kde-frameworks/extra-cmake-modules:5
-		virtual/pkgconfig"
-RDEPEND="app-i18n/fcitx:5
-		app-i18n/anthy:=
-		dev-qt/qtcore:5
-		app-i18n/fcitx-qt[qt5,-onlyplugin]
-		virtual/libintl"
+BDEPEND="
+	kde-frameworks/extra-cmake-modules:5
+	virtual/pkgconfig
+"
+RDEPEND="
+	>=app-i18n/fcitx-5.1.2:5
+	app-i18n/anthy
+	sys-devel/gettext
+	virtual/libintl
+"
 DEPEND="${RDEPEND}"
 
 DOCS=(AUTHORS)
