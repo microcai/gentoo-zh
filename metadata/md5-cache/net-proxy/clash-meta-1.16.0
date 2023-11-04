@@ -12,5 +12,5 @@ RDEPEND=acct-user/clash-meta acct-group/clash-meta >=dev-lang/go-1.20.4
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/MetaCubeX/Clash.Meta/archive/refs/tags/v1.16.0.tar.gz -> clash-meta-1.16.0.tar.gz https://github.com/st0nie/gentoo-go-deps/releases/download/clash-meta-1.16.0/clash-meta-1.16.0-deps.tar.xz
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	70ec42843fec87d20fd94c67e77cdbff	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-module	8624eede24936fd7666e5298e5332f22	systemd	c8b03e8df84486aa991d4396686e8942
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-module	8624eede24936fd7666e5298e5332f22	systemd	c8b03e8df84486aa991d4396686e8942
 _md5_=91687ea6471944f27802fdd1fe1238a9

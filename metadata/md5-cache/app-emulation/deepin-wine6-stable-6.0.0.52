@@ -10,5 +10,5 @@ RDEPEND=>=media-libs/alsa-lib-1.0.16[abi_x86_32(-)] >=media-libs/libgphoto2-2.5.
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://com-store-packages.uniontech.com/appstore/pool/appstore/d/deepin-wine6-stable/deepin-wine6-stable_6.0.0.52-1_amd64.deb https://community-packages.deepin.com/deepin/pool/main/o/openldap/libldap-2.4-2_2.4.47+dfsg.4-1+eagle_i386.deb https://community-packages.deepin.com/deepin/pool/main/o/openldap/libldap-2.4-2_2.4.47+dfsg.4-1+eagle_amd64.deb https://community-packages.deepin.com/deepin/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.27.1-1+dde_i386.deb https://community-packages.deepin.com/deepin/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.27.1-1+dde_amd64.deb https://community-packages.deepin.com/deepin/pool/main/libp/libpcap/libpcap0.8_1.8.1.1-6+dde_i386.deb https://community-packages.deepin.com/deepin/pool/main/libp/libpcap/libpcap0.8_1.8.1.1-6+dde_amd64.deb
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	70ec42843fec87d20fd94c67e77cdbff	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	aa6a4e924009232d8b78b31e932c30b5
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	aa6a4e924009232d8b78b31e932c30b5
 _md5_=d10ecc40fc76c9193442cec0e43e6ac6
