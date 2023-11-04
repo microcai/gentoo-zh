@@ -1,4 +1,0 @@
-# /etc/conf.d/clash: config file for /etc/init.d/clash
-
-# Insert any other options needed
-CLASH_OPTS="-d /etc/clash"
