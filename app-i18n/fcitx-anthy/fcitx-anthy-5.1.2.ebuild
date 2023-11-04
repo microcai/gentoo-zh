@@ -26,6 +26,9 @@ REQUIRED_USE="coverage? ( test )"
 RESTRICT="!test? ( test )"
 
 BDEPEND="
+	test? (
+		coverage? ( dev-util/lcov )
+	)
 	kde-frameworks/extra-cmake-modules:5
 	virtual/pkgconfig
 "
