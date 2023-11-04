@@ -10,13 +10,15 @@ inherit distutils-r1 desktop
 DESCRIPTION="A user-friendly and hackable music player"
 HOMEPAGE="https://github.com/feeluown/FeelUOwn"
 MY_P="${P/_alpha/a}"
-S="${WORKDIR}/FeelUOwn-${PV}"
-SRC_URI="https://github.com/${PN}/FeelUOwn/archive/refs/tags/v${PV}.tar.gz -> ${MY_P}.gh.tar.gz"
+MY_PV="${PV/_alpha/a}"
+S="${WORKDIR}/FeelUOwn-${MY_PV}"
+SRC_URI="https://github.com/${PN}/FeelUOwn/archive/refs/tags/v${MY_PV}.tar.gz -> ${MY_P}.gh.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+netease +qqmusic +kuwo +webengine +ytmusic +bilibili"
+RESTRICT="test" # TODO
+IUSE="+netease +qqmusic +webengine +ytmusic +bilibili +cookies"
 
 RDEPEND="
 	dev-python/janus[${PYTHON_USEDEP}]
@@ -26,17 +28,17 @@ RDEPEND="
 	dev-python/qasync[${PYTHON_USEDEP}]
 	dev-python/tomlkit[${PYTHON_USEDEP}]
 	dev-python/packaging[${PYTHON_USEDEP}]
-	>=dev-python/pydantic-1.8.1[${PYTHON_USEDEP}]
+	>=dev-python/pydantic-1.10[${PYTHON_USEDEP}]
 "
 
 PDEPEND="
 	media-video/mpv[libmpv]
 	netease? ( dev-python/fuo-netease[${PYTHON_USEDEP}] )
 	qqmusic? ( dev-python/fuo-qqmusic[${PYTHON_USEDEP}] )
-	kuwo? ( dev-python/fuo-kuwo[$PYTHON_USEDEP] )
 	bilibili? ( dev-python/feeluown-bilibili[$PYTHON_USEDEP] )
 	ytmusic? ( dev-python/fuo-ytmusic[$PYTHON_USEDEP] )
 	webengine? ( dev-python/PyQtWebEngine[$PYTHON_USEDEP] )
+	cookies? ( dev-python/pycryptodome[$PYTHON_USEDEP] dev-python/secretstorage[$PYTHON_USEDEP] )
 "
 
 DEPEND="
