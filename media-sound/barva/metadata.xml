@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer type="person">
-    <email>nazar@vinnich.uk</email>
-    <description>Nazar Vinnichuk</description>
+    <email>diceea@foxmail.com</email>
+    <description>Goldsrc233</description>
   </maintainer>
   <upstream>
     <remote-id type="github">Kharacternyk/barva</remote-id>
