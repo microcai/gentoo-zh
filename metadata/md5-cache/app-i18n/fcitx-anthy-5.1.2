@@ -1,15 +1,18 @@
 BDEPEND=kde-frameworks/extra-cmake-modules:5 virtual/pkgconfig >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
-DEPEND=app-i18n/fcitx:5 app-i18n/anthy:= dev-qt/qtcore:5 app-i18n/fcitx-qt[qt5,-onlyplugin] virtual/libintl
+DEPEND=>=app-i18n/fcitx-5.1.2:5 app-i18n/anthy sys-devel/gettext virtual/libintl
 DESCRIPTION=Japanese Anthy input methods for Fcitx5
 EAPI=8
 HOMEPAGE=https://fcitx-im.org/ https://github.com/fcitx/fcitx5-anthy
 IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake xdg
+IUSE=test coverage
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2+
-RDEPEND=app-i18n/fcitx:5 app-i18n/anthy:= dev-qt/qtcore:5 app-i18n/fcitx-qt[qt5,-onlyplugin] virtual/libintl
+RDEPEND=>=app-i18n/fcitx-5.1.2:5 app-i18n/anthy sys-devel/gettext virtual/libintl
+REQUIRED_USE=coverage? ( test )
+RESTRICT=!test? ( test )
 SLOT=5
-SRC_URI=https://download.fcitx-im.org/fcitx5/fcitx5-anthy/fcitx5-anthy-5.0.14.tar.xz
+SRC_URI=https://download.fcitx-im.org/fcitx5/fcitx5-anthy/fcitx5-anthy-5.1.2.tar.xz
 _eclasses_=toolchain-funcs	70ec42843fec87d20fd94c67e77cdbff	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	baa4d385108ac87993edac956a916a36	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271	xdg	4a14c5c24f121e7da66e5aab4a168c6e
-_md5_=8f19b5adb2d21569563ee5034f7db21f
+_md5_=1d68a1162cc90665a6df9989202e580e
