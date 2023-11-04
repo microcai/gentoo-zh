@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-04 15:56:36 CST)
+(The last generation time: 2023-11-04 16:34:21 CST)
 
 ### Packages
 
@@ -51,7 +51,7 @@
                                             | 9999                                      |        |                                                                                         |
      app-i18n/fcitx-lua                     | 5.0.10                                    |  D, RD | https://github.com/fcitx/fcitx5-lua                                                     | Lua support for fcitx
                                             | 9999                                      |        |                                                                                         |
-     app-i18n/fcitx-qt                      | 5.1.2                                     |  D, RD | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
+     app-i18n/fcitx-qt                      | 5.1.3                                     |  D, RD | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
                                             | 9999                                      |        |                                                                                         |
    app-i18n/fcitx-configtool                | 5.1.2                                     | RD     | https://fcitx-im.org/                                                                   | Configuration module for Fcitx
                                             | 9999                                      |        |                                                                                         |
@@ -79,7 +79,7 @@
                                             | 2.28.5029.102                             |        |                                                                                         |
                                             | 2.28.5029.102-r1                          |        |                                                                                         |
    app-i18n/fcitx                           | 4.2.9.8                                   |  D, RD | https://fcitx-im.org/                                                                   | Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
-                                            | 5.1.2                                     |        |                                                                                         |
+                                            | 5.1.3                                     |        |                                                                                         |
                                             | 9999                                      |        |                                                                                         |
      x11-libs/xcb-imdkit                    | 1.0.4                                     |  D, RD | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
                                             | 1.0.5                                     |        |                                                                                         |
