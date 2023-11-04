@@ -943,6 +943,13 @@ github = "Fndroid/clash_for_windows_pkg"
 use_latest_release = true
 github_account = "irort"
 
+["net-proxy/clash-verge"]
+source = "github"
+github = "zzzgydi/clash-verge"
+use_latest_release = true
+prefix = "v"
+github_account = "liuyujielol"
+
 ["net-proxy/dae"]
 source = "github"
 github = "daeuniverse/dae"

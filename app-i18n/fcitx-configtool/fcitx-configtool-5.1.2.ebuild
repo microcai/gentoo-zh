@@ -1,7 +1,7 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit cmake
 
@@ -23,9 +23,11 @@ SLOT="5"
 IUSE="kcm +config-qt test"
 RESTRICT="!test? ( test )"
 
-RDEPEND="app-i18n/fcitx:5
+RDEPEND="
+	app-i18n/fcitx:5
 	app-i18n/fcitx-qt:5[qt5,-onlyplugin]
 	dev-qt/qtcore:5
+	dev-qt/qtconcurrent:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
@@ -33,13 +35,18 @@ RDEPEND="app-i18n/fcitx:5
 	kde-frameworks/kwidgetsaddons:5
 	virtual/libintl
 	x11-libs/libX11
+	x11-libs/libxkbcommon
 	x11-libs/libxkbfile
 	kcm? (
+		dev-qt/qtquickcontrols2:5
 		kde-frameworks/kconfigwidgets:5
 		kde-frameworks/kcoreaddons:5
-		kde-frameworks/ki18n:5
-		kde-frameworks/kirigami:5
 		kde-frameworks/kdeclarative:5
+		kde-frameworks/ki18n:5
+		kde-frameworks/kiconthemes:5
+		kde-frameworks/kirigami:5
+		kde-frameworks/kpackage:5
+		kde-frameworks/plasma:5
 	)
 	config-qt? (
 		kde-frameworks/kitemviews:5
