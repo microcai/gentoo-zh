@@ -359,11 +359,6 @@ github = "dbeaver/dbeaver"
 use_latest_release = true
 github_account = "xen0n"
 
-["dev-libs/granite"]
-source = "github"
-github = "elementary/granite"
-use_latest_release = true
-
 # TODO
 #["dev-libs/libchrasis"]
 
