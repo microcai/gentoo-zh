@@ -129,7 +129,9 @@ pkg_postinst() {
 	xdg_pkg_postinst
 
 	elog
-	elog "Follow the instrcutions of https://wiki.gentoo.org/wiki/Fcitx#Using_Fcitx"
-	elog "and change the fcitx to fcitx5"
+	elog "Follow the instrcutions on:"
+	elog "https://wiki.gentoo.org/wiki/Fcitx#Using_Fcitx"
+	elog "https://fcitx-im.org/wiki/Setup_Fcitx_5"
+	elog "https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland"
 	elog
 }
