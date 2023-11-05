@@ -1,4 +1,4 @@
-# Copyright 2020-2021 Gentoo Authors
+# Copyright 2020-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -15,7 +15,7 @@ if [[ ${PV} == *9999 ]]; then
 	}
 else
 	SRC_URI="https://github.com/qjfoidnh/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-		https://github.com/123485k/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz"
+		https://github.com/liangyongxiang/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz"
 	KEYWORDS="~amd64 ~x86"
 	S="${WORKDIR}/${MY_PN}-${PV}"
 fi
