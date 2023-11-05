@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-05 16:48:59 CST)
+(The last generation time: 2023-11-05 17:35:37 CST)
 
 ### Packages
 
@@ -673,6 +673,9 @@
  x11-wm/9wm                                 | 1.1                                       |        | http://unauthorised.org/dhog/9wm.html                                                   | A window manager emulation of the Plan 9 window manager 8-1/2.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  x11-wm/chamferwm                           | 9999                                      |        | https://github.com/jaelpark/chamferwm                                                   | A tiling X11 window manager with Vulkan compositor.
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ x11-wm/hypr                                | 1.1.3                                     |        | https://github.com/hyprwm/Hypr                                                          | A dynamic Linux tiling window manager for Xorg
+                                            | 9999                                      |        |                                                                                         |
 ============================================|===========================================|========|=========================================================================================|====================
 ```
 + ` D` means the classic dependencies (e.g.: libraries and headers)
