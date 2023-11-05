@@ -1,4 +1,4 @@
-BDEPEND=python_targets_python3_10? ( dev-lang/python:3.10 ) python_targets_python3_11? ( dev-lang/python:3.11 ) >=dev-python/gpep517-15[python_targets_python3_10(-)?,python_targets_python3_11(-)?] >=dev-python/setuptools-67.8.0-r1[python_targets_python3_10(-)?,python_targets_python3_11(-)?]
+BDEPEND=python_targets_python3_10? ( dev-lang/python:3.10 ) python_targets_python3_11? ( dev-lang/python:3.11 ) >=dev-python/gpep517-15[python_targets_python3_10(-)?,python_targets_python3_11(-)?] >=dev-python/poetry-core-1.6.1[python_targets_python3_10(-)?,python_targets_python3_11(-)?]
 DEFINED_PHASES=compile configure install prepare test
 DEPEND=dev-python/setuptools[python_targets_python3_10(-)?,python_targets_python3_11(-)?]
 DESCRIPTION=Implementation of the asyncio (PEP 3156) event-loop with Qt
@@ -11,6 +11,6 @@ LICENSE=BSD
 RDEPEND=dev-python/PyQt5[python_targets_python3_10(-)?,python_targets_python3_11(-)?] python_targets_python3_10? ( dev-lang/python:3.10 ) python_targets_python3_11? ( dev-lang/python:3.11 )
 REQUIRED_USE=|| ( python_targets_python3_10 python_targets_python3_11 )
 SLOT=0
-SRC_URI=https://files.pythonhosted.org/packages/source/q/qasync/qasync-0.24.0.tar.gz
+SRC_URI=https://files.pythonhosted.org/packages/source/q/qasync/qasync-0.26.0.tar.gz
 _eclasses_=toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	baa4d385108ac87993edac956a916a36	out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	30dbf3c5a31db09a19f31ad0a68f2405	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	python-utils-r1	f6221c2f55e5e832be9919fe1711f33b	python-r1	8a28fa6d3e3bc96ff8a7eff2badbe71f	distutils-r1	d05609532b134be7c4ae2514f4c7d06e	pypi	2eecb475512bc76e5ea9192a681b9e6b
-_md5_=35d6fdffad8a459188a2bf1ff6f0395f
+_md5_=cad50d9e7b2131ca759e9f238d5ad77d
