@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-05 23:12:01 CST)
+(The last generation time: 2023-11-06 02:31:20 CST)
 
 ### Packages
 
@@ -33,7 +33,7 @@
  app-editors/marktext-bin                   | 0.17.1                                    |        | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                         | 0.11.18                                   |        | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
-                                            | 1.5.8                                     |        |                                                                                         |
+                                            | 1.7.6                                     |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/looking-glass                | 0_beta6                                   |        | https://looking-glass.io                                                                | A low latency KVMFR application for guests with VGA PCI Passthrough
    gui-libs/libdecor                        | 0.1.1                                     |  D, RD | https://gitlab.freedesktop.org/libdecor/libdecor                                        | A client-side decorations library for Wayland clients
