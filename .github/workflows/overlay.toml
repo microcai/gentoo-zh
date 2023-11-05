@@ -537,12 +537,6 @@ github = "artempyanykh/marksman"
 use_latest_release = true
 github_account = "st0nie"
 
-["dev-util/pahole"]
-source = "git"
-git = "https://git.kernel.org/pub/scm/devel/pahole/pahole.git"
-prefix = "v"
-github_account = "HougeLangley"
-
 ["dev-util/tauri-cli"]
 source = "github"
 github = "tauri-apps/tauri"
