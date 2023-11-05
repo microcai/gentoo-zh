@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2022-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -6,7 +6,6 @@ EAPI=8
 inherit unpacker desktop xdg
 
 MY_PN="${PN/-bin/}"
-I_PN=""
 
 DESCRIPTION="YouTube Music Desktop App bundled with custom plugins"
 HOMEPAGE="https://th-ch.github.io/youtube-music/"
