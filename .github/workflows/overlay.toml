@@ -26,13 +26,6 @@ github_account = "HougeLangley"
 # TODO
 #["app-crypt/etoken-sac"]
 
-["app-dicts/copytranslator"]
-source = "github"
-github = "CopyTranslator/CopyTranslator"
-use_latest_release = true
-prefix = "v"
-github_account = "CHN-beta"
-
 # TODO
 #["app-dicts/fcitx5-pinyin-zhwiki"]
 
