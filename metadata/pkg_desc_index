@@ -180,7 +180,7 @@ media-sound/netease-cloud-music-gtk 2.2.0_p20231016: netease cloud music player 
 media-sound/qqmusic 1.1.5: Tencent QQ Music, converted from .deb package
 media-sound/termusic 0.7.11: Terminal Music and Podcast Player written in Rust
 media-sound/yesplaymusic-bin 0.4.6 0.4.7: A third party music player for Netease Music
-media-sound/youtube-music-bin 1.20.0: YouTube Music Desktop App bundled with custom plugins
+media-sound/youtube-music-bin 2.2.0: YouTube Music Desktop App bundled with custom plugins
 media-video/amdgpu-pro-amf 1.4.29.1538781: AMD's closed source Advanced Media Framework (AMF) driver
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/bilibili 1.11.4: Based on the Bilibli offcial client to linux version, support roaming
