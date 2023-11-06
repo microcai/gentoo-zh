@@ -1,0 +1,12 @@
+BDEPEND=|| ( dev-lang/python:3.12[threads(+)] dev-lang/python:3.11[threads(+)] ) media-libs/libsdl2 media-libs/freetype media-libs/fontconfig sys-libs/zlib media-libs/libjpeg-turbo media-libs/libpng net-misc/curl media-libs/openal >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst setup unpack
+DESCRIPTION=A 3D game engine developed by Valve
+EAPI=8
+HOMEPAGE=https://github.com/nillerusr/source-engine
+INHERIT=waf-utils git-r3 python-any-r1
+IUSE=debug
+LICENSE=Source-SDK
+PROPERTIES=live
+SLOT=0
+_eclasses_=multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	waf-utils	be1df8dc616c09387b18633b4155fcb5	git-r3	2358a7b20091609e24bd3a83b3ac5991	python-utils-r1	f6221c2f55e5e832be9919fe1711f33b	python-any-r1	f5169813d1619761b459800587005fd2
+_md5_=234c44a2d7e7dce06d5f5d2e6273ed96
