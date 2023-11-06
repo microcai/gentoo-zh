@@ -16,5 +16,6 @@
 	</use>
 	<upstream>
 		<remote-id type="sourceforge">xanmod</remote-id>
+		<remote-id type="github">zhmars/cjktty-patches</remote-id>
 	</upstream>
 </pkgmetadata>
