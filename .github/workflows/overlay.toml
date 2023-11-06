@@ -350,7 +350,7 @@ github_account = "CHN-beta"
 source = "github"
 github = "dbeaver/dbeaver"
 use_latest_release = true
-github_account = "xen0n"
+github_account = "gouwazi"
 
 # TODO
 #["dev-libs/libchrasis"]
