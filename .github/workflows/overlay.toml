@@ -2,12 +2,11 @@
 oldver = "old_ver.json"
 newver = "new_ver.json"
 
-["app-admin/zenmonitor"]
-source = "github"
-github = "ocerman/zenmonitor"
-use_latest_tag = true
+["app-admin/zenmonitor3"]
+source = "git"
+git = "https://git.exozy.me/a/zenmonitor3"
 prefix = "v"
-github_account = "CHN-beta"
+github_account = "liuyujielol"
 
 ["app-arch/zchunk"]
 source = "github"
@@ -1116,11 +1115,11 @@ to_pattern = "\\1"
 # TODO
 #["sys-kernel/xanmod-rt"]
 
-["sys-kernel/zenpower"]
-source = "github"
-github = "ocerman/zenpower"
-use_latest_tag = true
+["sys-kernel/zenpower3"]
+source = "git"
+git = "https://git.exozy.me/a/zenpower3"
 prefix = "v"
+github_account = "liuyujielol"
 
 #["sys-libs/cutefish-core"]
 
