@@ -137,6 +137,7 @@ dev-vcs/gitoxide 0.31.1: A command-line application for interacting with git rep
 games-arcade/osu-lazer 2023.1008.1 2023.1026.0: rhythm is just a *click* away!
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-misc/oh-my-git-bin 0.6.5: An interactive Git learning game!
+games-roguelike/nethack 3.6.7: The ultimate old-school single player dungeon exploration game
 games-util/winegame-client-bin 0.5.10.5: An open source gaming platform for GNU/Linux
 gui-libs/libdecor 0.1.1: A client-side decorations library for Wayland clients
 kde-misc/plasma-applet-netspeed-widget 1.9 2.0 9999: Plasma 5 widget that displays the currently used network bandwidth.
