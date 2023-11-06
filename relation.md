@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-06 23:01:41 CST)
+(The last generation time: 2023-11-07 00:06:33 CST)
 
 ### Packages
 
@@ -11,8 +11,8 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/supersm                          | 0.5.1                                     |        | https://github.com/peeweep/supersm                                                      | Super Symlink Manager
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/zenmonitor                       | 1.4.2                                     |        | https://github.com/ocerman/zenmonitor                                                   | Zen monitor is monitoring software for AMD Zen-based CPUs
-   sys-kernel/zenpower                      | 0.1.12-r1                                 |  D, RD | https://github.com/ocerman/zenpower                                                     | Linux kernel driver for reading sensors of AMD Zen family CPUs
+ app-admin/zenmonitor3                      | 2.0.0                                     |        | https://git.exozy.me/a/zenmonitor3                                                      | Zen monitor is monitoring software for AMD Zen-based CPUs
+   sys-kernel/zenpower3                     | 0.2.0                                     |  D, RD | https://git.exozy.me/a/zenpower3                                                        | Linux kernel driver for reading sensors of AMD Zen family CPUs
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-backup/btrfs-assistant                 | 1.8                                       |        | https://gitlab.com/btrfs-assistant/btrfs-assistant                                      | A GUI management tool to make managing a Btrfs filesystem easier.
                                             | 9999                                      |        |                                                                                         |
