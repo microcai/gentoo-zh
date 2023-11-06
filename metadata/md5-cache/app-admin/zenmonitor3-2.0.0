@@ -1,0 +1,15 @@
+DEFINED_PHASES=install postinst postrm preinst
+DEPEND=x11-libs/gtk+:3 sys-kernel/zenpower3 polkit? ( sys-auth/polkit )
+DESCRIPTION=Zen monitor is monitoring software for AMD Zen-based CPUs
+EAPI=8
+HOMEPAGE=https://git.exozy.me/a/zenmonitor3
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=xdg
+IUSE=+polkit
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=x11-libs/gtk+:3 sys-kernel/zenpower3 polkit? ( sys-auth/polkit )
+SLOT=0
+SRC_URI=https://git.exozy.me/a/zenmonitor3/archive/v2.0.0.tar.gz -> zenmonitor3-2.0.0.tar.gz
+_eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
+_md5_=8b2cfbdefea447cb86e4bfacb9206e92

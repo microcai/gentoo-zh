@@ -1,0 +1,16 @@
+BDEPEND=sys-apps/kmod[tools] modules-sign? ( dev-libs/openssl virtual/pkgconfig )
+DEFINED_PHASES=compile install postinst setup
+DEPEND=virtual/linux-sources
+DESCRIPTION=Linux kernel driver for reading sensors of AMD Zen family CPUs
+EAPI=8
+HOMEPAGE=https://git.exozy.me/a/zenpower3
+IDEPEND=sys-apps/kmod[tools]
+INHERIT=linux-mod-r1
+IUSE=dist-kernel modules-sign +strip
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=sys-apps/kmod[tools] dist-kernel? ( virtual/dist-kernel:= )
+SLOT=0
+SRC_URI=https://git.exozy.me/a/zenpower3/archive/v0.2.0.tar.gz -> zenpower3-0.2.0.tar.gz
+_eclasses_=edo	c0eb9cbe6b0bd01fcb4918f12598a4d3	toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	linux-info	c4f1201b96a8a2c1f3b86cc8b2c71c91	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	linux-mod-r1	c7c63f408ac92135a3111a69f26c4a17
+_md5_=3039defa11d43dbd760c62680f7fa310

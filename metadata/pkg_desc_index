@@ -8,7 +8,7 @@ acct-user/clash-meta 0: System user: clash-meta
 acct-user/hysteria 0: System user: hysteria
 acct-user/n2n 0: System user: n2n
 app-admin/supersm 0.5.1: Super Symlink Manager
-app-admin/zenmonitor 1.4.2: Zen monitor is monitoring software for AMD Zen-based CPUs
+app-admin/zenmonitor3 2.0.0: Zen monitor is monitoring software for AMD Zen-based CPUs
 app-alternatives/v2ray-geoip 0: symlink for v2ray-geoip
 app-alternatives/v2ray-geosite 0: symlink for v2ray-geosite
 app-arch/zchunk 1.3.1 9999: A format designed for highly efficient deltas while maintaining good compression
@@ -288,7 +288,7 @@ sys-kernel/mkinitcpio 34-r1: Modular initramfs image creation utility
 sys-kernel/xanmod-kernel 6.4.15: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 6.0.11: XanMod RT sources and CJKTTY options.
 sys-kernel/xanmod-sources 6.4.15: Full XanMod source, including the Gentoo patchset and other patch options.
-sys-kernel/zenpower 0.1.12-r1: Linux kernel driver for reading sensors of AMD Zen family CPUs
+sys-kernel/zenpower3 0.2.0: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libsolv 0.7.24 9999: Library for solving packages and reading repositories
 sys-libs/libzypp 17.31.11 9999: ZYpp Package Management library

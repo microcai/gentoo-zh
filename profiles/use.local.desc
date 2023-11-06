@@ -2,6 +2,7 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+app-admin/zenmonitor3:polkit - Install polkit policy for app-admin/zenmonitor3
 app-alternatives/v2ray-geoip:loyalsoldier - use dev-libs/v2ray-rules-dat
 app-alternatives/v2ray-geoip:v2fly - use dev-libs/v2ray-geoip-bin
 app-alternatives/v2ray-geosite:loyalsoldier - use dev-libs/v2ray-rules-dat
