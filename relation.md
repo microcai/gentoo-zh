@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-06 16:41:39 CST)
+(The last generation time: 2023-11-06 16:43:48 CST)
 
 ### Packages
 
@@ -322,8 +322,8 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-plugins/gimp-gap                     | 2.8.0                                     |        | http://www.gimp.org/                                                                    | Gimp Animation Package
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-plugins/osdlyrics                    | 0.5.10-r1                                 |        | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
-                                            | 0.5.11                                    |        |                                                                                         |
+ media-plugins/osdlyrics                    | 0.5.11                                    |        | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
+                                            | 0.5.14                                    |        |                                                                                         |
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/barva                          | 9999                                      |        | https://github.com/Kharacternyk/barva                                                   | a modular audio visualizer
