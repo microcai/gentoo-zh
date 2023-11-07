@@ -786,12 +786,6 @@ github_account = "peeweep"
 # TODO
 #["net-im/freetalk"]
 
-["net-im/telegram-purple"]
-source = "github"
-github = "majn/telegram-purple"
-use_latest_release = true
-prefix = "v"
-
 # TODO
 #["net-im/tencent-qq"]
 
