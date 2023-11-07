@@ -30,6 +30,7 @@ RDEPEND="
 	x11-libs/gtk+:2
 	x11-libs/gtk+:3
 	x11-libs/libXScrnSaver
+	virtual/libcrypt
 "
 
 DEPEND="${RDEPEND}"
