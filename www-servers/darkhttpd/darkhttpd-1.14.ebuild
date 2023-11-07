@@ -1,19 +1,16 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 DESCRIPTION="A small, static webserver"
 HOMEPAGE="http://unix4lyfe.org/darkhttpd/"
 SRC_URI="https://github.com/emikulic/darkhttpd/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
-LICENSE="BSD"
+LICENSE="ISC"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE=""
-
-DEPEND=""
-RDEPEND="${DEPEND}"
+KEYWORDS="~amd64"
 
 src_install() {
-	dobin ${PN}
+	dobin "${PN}"
+	dodoc README.md
 }
