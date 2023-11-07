@@ -12,5 +12,5 @@ REQUIRED_USE=^^ ( python_single_target_python3_10 python_single_target_python3_1
 RESTRICT=test
 SLOT=0
 SRC_URI=https://home-store-packages.uniontech.com/appstore/pool/appstore/d/deepin-wine-helper/deepin-wine-helper_5.1.45-1_i386.deb
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	f6221c2f55e5e832be9919fe1711f33b	python-single-r1	75118e916668a74c660a13b0ecb22562	unpacker	aa6a4e924009232d8b78b31e932c30b5
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	30999b80ec1fe0b4af340ae819375346	python-single-r1	75118e916668a74c660a13b0ecb22562	unpacker	aa6a4e924009232d8b78b31e932c30b5
 _md5_=fb559d31962326545907b028a27fff2a
