@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-07 22:29:28 CST)
+(The last generation time: 2023-11-08 00:40:01 CST)
 
 ### Packages
 
@@ -148,9 +148,9 @@
  app-office/freeoffice                      | 1062                                      |        | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite.
                                             | 1064                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-office/wps-office                      | 11.1.0.10976-r1                           |        | http://www.wps.cn/product/wpslinux/                                                     | WPS Office is an office productivity suite, Here is the Chinese version
-                                            | 11.1.0.11698                              |        |                                                                                         |
+ app-office/wps-office                      | 11.1.0.11698                              |        | http://www.wps.cn/product/wpslinux/                                                     | WPS Office is an office productivity suite, Here is the Chinese version
                                             | 11.1.0.11704                              |        |                                                                                         |
+                                            | 11.1.0.11708                              |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-pda/ipadcharge                         | 9999                                      |        | https://github.com/mkorenkov/ipad_charge                                                | Enables USB charging for Apple devices.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
