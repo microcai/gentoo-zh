@@ -1,12 +1,15 @@
-BDEPEND=net-misc/curl app-arch/zstd >=dev-util/meson-1.2.1 >=dev-util/ninja-1.8.2 dev-util/meson-format-array >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=>=dev-util/meson-1.2.1 >=dev-util/ninja-1.8.2 dev-util/meson-format-array >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install test unpack
-DEPEND=net-misc/curl app-arch/zstd
+DEPEND=curl? ( net-misc/curl ) openssl? ( dev-libs/openssl:0/3 ) zstd? ( app-arch/zstd )
 DESCRIPTION=A format designed for highly efficient deltas while maintaining good compression
 EAPI=8
 HOMEPAGE=https://github.com/zchunk/zchunk
 INHERIT=meson git-r3
-LICENSE=BSD
+IUSE=doc +curl +openssl test +zstd
+LICENSE=BSD-2
 PROPERTIES=live
+RDEPEND=curl? ( net-misc/curl ) openssl? ( dev-libs/openssl:0/3 ) zstd? ( app-arch/zstd )
+RESTRICT=!test? ( test )
 SLOT=0
 _eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	30999b80ec1fe0b4af340ae819375346	meson	1be925a1f585b2f19a8e45737f09016c	git-r3	2358a7b20091609e24bd3a83b3ac5991
-_md5_=6d92370dfd4276b35133bc00514b5980
+_md5_=85c4905c42e06edd4b6322c69205088e
