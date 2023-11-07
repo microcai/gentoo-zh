@@ -181,9 +181,6 @@ net-dns/dnsmasq-china-list:smartdns - Install rules for smartdns
 net-im/deepin-wine-wechat:fake-simsun - Use fake_simsun font
 net-im/deepin-wine-wechat:reg-patch - Disable wechat-{player,app,appex,browser} plugin
 net-im/deepin-wine-wechat:wqy-microhei - Use wqy-microhei font
-net-im/telegram-purple:gcrypt - libgcrypt support
-net-im/telegram-purple:png - png stickers support
-net-im/telegram-purple:webp - webp stickers support
 net-im/tencent-qq:appindicator - Build in support for notifications using the libindicate or libappindicator plugin
 net-im/tencent-qq:bwrap - Use sys-apps/bubblewrap to prevent private information leakage
 net-im/tencent-qq:gnome - Supporting screenshot when using GNOME
