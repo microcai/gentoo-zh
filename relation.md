@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-07 19:42:36 CST)
+(The last generation time: 2023-11-07 20:31:22 CST)
 
 ### Packages
 
@@ -512,8 +512,6 @@
    acct-user/hysteria                       | 0                                         |  D, RD |                                                                                         | A powerful, lightning fast and censorship resistant proxy.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/juicity                          | 0.3.0                                     |        | https://github.com/juicity/juicity                                                      | juicity is a quic-based proxy protocol.
---------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/make-proxy                       | 2.0.0                                     |        | https://github.com/yueyoum/make-proxy                                                   | Socks5 proxy written in Erlang
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/shadowsocks-rust                 | 1.16.2                                    |        | https://github.com/shadowsocks/shadowsocks-rust                                         | A Rust port of shadowsocks.
                                             | 1.17.0                                    |        |                                                                                         |
