@@ -5,6 +5,9 @@
 		<email>hougelangley1987@gmail.com</email>
 		<name>苏业钦</name>
 	</maintainer>
+	<use>
+		<flag name="openssl">Build with openssl support</flag>
+	</use>
 	<upstream>
 		<remote-id type="github">zchunk/zchunk</remote-id>
 	</upstream>

@@ -16,12 +16,26 @@ fi
 
 DESCRIPTION="A format designed for highly efficient deltas while maintaining good compression"
 HOMEPAGE="https://github.com/zchunk/zchunk"
-LICENSE="BSD"
+LICENSE="BSD-2"
 SLOT="0"
-IUSE=""
-RDEPEND=""
+IUSE="doc +curl +openssl test +zstd"
+RESTRICT="!test? ( test )"
+
 DEPEND="
-	net-misc/curl
-	app-arch/zstd
+	curl? ( net-misc/curl )
+	openssl? ( dev-libs/openssl:0/3 )
+	zstd? ( app-arch/zstd )
 "
-BDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}"
+
+src_configure() {
+	local emesonargs=(
+		-Dcoverity=false
+		$(meson_feature curl with-curl)
+		$(meson_use doc docs)
+		$(meson_feature openssl with-openssl)
+		$(meson_feature zstd with-zstd)
+		$(meson_use test tests)
+	)
+	meson_src_configure
+}
