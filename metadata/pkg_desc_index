@@ -244,7 +244,6 @@ net-proxy/dae 0.3.0 9999: A lightweight and high-performance transparent proxy s
 net-proxy/daed 0.3.3_p1 9999: A Modern Dashboard For dae
 net-proxy/hysteria 2.1.0: A powerful, lightning fast and censorship resistant proxy.
 net-proxy/juicity 0.3.0: juicity is a quic-based proxy protocol.
-net-proxy/make-proxy 2.0.0: Socks5 proxy written in Erlang
 net-proxy/shadowsocks-rust 1.16.2 1.17.0: A Rust port of shadowsocks.
 net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
 net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
