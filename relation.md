@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-07 16:55:49 CST)
+(The last generation time: 2023-11-07 19:42:36 CST)
 
 ### Packages
 
@@ -414,9 +414,6 @@
    dev-libs/libthai                         | 0.1.28                                    |  D, RD | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
                                             | 0.1.29                                    |        |                                                                                         |
      dev-libs/libdatrie                     | 0.2.13                                    |  D, RD | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
---------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-im/telegram-purple                     | 1.4.7-r1                                  |        | https://github.com/majn/telegram-purple                                                 | Libpurple (Pidgin) plugin for using a Telegram account
-                                            | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/tencent-qq                          | 3.2.1_p17749                              |        | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
    media-libs/openslide                     | 20230904                                  | RD     | http://openslide.org/                                                                   | C library with simple interface to read virtual slides
