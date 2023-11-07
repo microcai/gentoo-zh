@@ -952,12 +952,6 @@ use_latest_release = true
 prefix = "app/v"
 github_account = "oatiz"
 
-["net-proxy/make-proxy"]
-source = "github"
-github = "yueyoum/make-proxy"
-use_latest_tag = true
-prefix = "v"
-
 # TODO
 #["net-proxy/shadowsocks-rust-bin"]
 
