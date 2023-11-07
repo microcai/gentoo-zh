@@ -295,7 +295,7 @@ virtual/dist-kernel 6.4.15: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 www-apps/chatgpt-desktop 1.0.0: ChatGPT Desktop Application
 www-client/brave 1.60.110: Web browser that blocks ads and trackers by default
-www-servers/darkhttpd 1.13: A small, static webserver
+www-servers/darkhttpd 1.14: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
 x11-libs/glbinding 3.3.0: A C++ binding for the OpenGL API
