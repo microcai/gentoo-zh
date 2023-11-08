@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-08 00:40:01 CST)
+(The last generation time: 2023-11-08 20:32:05 CST)
 
 ### Packages
 
@@ -483,9 +483,6 @@
    media-libs/libjpeg8                      | 2.1.4                                     |  D, RD | https://libjpeg-turbo.org/                                                              | MMX, SSE, and SSE2 SIMD accelerated JPEG library
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/cgproxy                          | 0.20-r1                                   |        | https://github.com/springzfx/cgproxy                                                    | Transparent Proxy with cgroup v2
---------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/clash-for-windows-bin            | 0.20.38                                   |        | https://github.com/Fndroid/clash_for_windows_pkg                                        | A Windows/macOS/Linux GUI based on Clash and Electron.
-                                            | 0.20.39                                   |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-verge                      | 1.3.8                                     |        | https://github.com/zzzgydi/clash-verge                                                  | A Clash GUI based on tauri
    dev-lang/quickjs                         | 2021.03.27                                | BD     | https://bellard.org/quickjs/                                                            | Small embeddable Javascript engine
