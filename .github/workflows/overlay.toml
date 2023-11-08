@@ -759,11 +759,6 @@ use_latest_tag = true
 prefix = "v"
 github_account = "peeweep"
 
-["net-dns/libidn11"]
-source = "git"
-git = "https://git.savannah.gnu.org/git/libidn.git"
-prefix = "v"
-
 ["net-dns/q"]
 source = "github"
 github = "natesales/q"
