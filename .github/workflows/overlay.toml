@@ -911,26 +911,6 @@ github = "XTLS/Xray-core"
 use_latest_release = true
 prefix = "v"
 
-["net-proxy/clash"]
-source = "github"
-github = "Dreamacro/clash"
-use_latest_release = true
-prefix = "v"
-
-["net-proxy/clash-meta"]
-source = "github"
-github = "MetaCubeX/Clash.Meta"
-use_latest_release = true
-prefix = "v"
-github_account = "st0nie"
-
-["net-proxy/clash-verge"]
-source = "github"
-github = "zzzgydi/clash-verge"
-use_latest_release = true
-prefix = "v"
-github_account = "liuyujielol"
-
 ["net-proxy/dae"]
 source = "github"
 github = "daeuniverse/dae"
