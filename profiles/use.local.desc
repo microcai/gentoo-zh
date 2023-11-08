@@ -100,6 +100,7 @@ dev-libs/v2ray-rules-dat:geosite - Install geosite.dat
 dev-python/conda:user - use user's home directory as default pkgs and envs prefix
 dev-python/nvchecker:ini - convert your old configuration files from ini to toml
 dev-python/nvchecker:notify - enable nvchecker-notify support
+dev-python/qasync:qt6 - Use dev-python/PyQt6 or dev-python/pyside6 for qt6 support
 dev-util/arch-install-scripts:archroot - Install arch-chroot
 dev-util/arch-install-scripts:genfstab - Install genfstab
 dev-util/arch-install-scripts:pacstrap - Install pacstrap
