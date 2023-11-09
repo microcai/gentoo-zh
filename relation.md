@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-09 19:52:51 CST)
+(The last generation time: 2023-11-10 02:45:05 CST)
 
 ### Packages
 
@@ -486,8 +486,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-verge                      | 1.3.8                                     |        | https://github.com/zzzgydi/clash-verge                                                  | A Clash GUI based on tauri
    dev-lang/quickjs                         | 2021.03.27                                | BD     | https://bellard.org/quickjs/                                                            | Small embeddable Javascript engine
-   dev-util/tauri-cli                       | 1.3.1                                     | BD     | https://tauri.app/v1/api/cli                                                            | Command line interface for building Tauri apps
-                                            | 1.5.6                                     |        |                                                                                         |
+   dev-util/tauri-cli                       | 2.0.0_alpha17                             | BD     | https://tauri.app                                                                       | Command line interface for building Tauri apps
    net-proxy/clash                          | 1.17.0                                    | RD     | https://github.com/Dreamacro/clash                                                      | A rule-based tunnel in Go.
                                             | 1.18.0                                    |        |                                                                                         |
    net-proxy/clash-meta                     | 1.16.0                                    | RD     | https://github.com/MetaCubeX/Clash.Meta                                                 | Another Clash Kernel.
