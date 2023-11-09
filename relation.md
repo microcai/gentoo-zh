@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-08 20:33:22 CST)
+(The last generation time: 2023-11-09 19:52:51 CST)
 
 ### Packages
 
@@ -79,7 +79,7 @@
                                             | 2.28.5029.102                             |        |                                                                                         |
                                             | 2.28.5029.102-r1                          |        |                                                                                         |
    app-i18n/fcitx                           | 4.2.9.8                                   |  D, RD | https://fcitx-im.org/                                                                   | Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
-                                            | 5.1.4                                     |        |                                                                                         |
+                                            | 5.1.5                                     |        |                                                                                         |
                                             | 9999                                      |        |                                                                                         |
      x11-libs/xcb-imdkit                    | 1.0.4                                     |  D, RD | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
                                             | 1.0.5                                     |        |                                                                                         |
