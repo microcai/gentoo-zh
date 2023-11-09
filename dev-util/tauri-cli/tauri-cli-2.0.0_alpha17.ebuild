@@ -23,27 +23,31 @@ CRATES="
 	anstyle@1.0.4
 	anyhow@1.0.75
 	ar@0.9.0
+	async-lock@2.8.0
 	async-trait@0.1.74
 	autocfg@1.1.0
 	axum-core@0.3.4
 	axum@0.6.20
 	backtrace@0.3.69
+	base64@0.13.1
 	base64@0.21.4
-	base64ct@1.6.0
+	beef@0.5.2
 	bit-set@0.5.3
 	bit-vec@0.6.3
 	bit_field@0.10.2
 	bitflags@1.3.2
 	bitflags@2.4.1
+	bitness@0.4.0
 	block-buffer@0.10.4
+	block-buffer@0.9.0
+	block@0.1.6
 	bstr@1.7.0
 	bumpalo@3.14.0
 	bytecount@0.6.4
 	bytemuck@1.14.0
 	byteorder@1.5.0
 	bytes@1.5.0
-	bzip2-sys@0.1.11+1.0.8
-	bzip2@0.4.4
+	cargo-mobile2@0.7.0
 	cc@1.0.83
 	cfb@0.7.3
 	cfg-if@1.0.0
@@ -54,16 +58,21 @@ CRATES="
 	clap_complete@4.4.3
 	clap_derive@4.4.2
 	clap_lex@0.5.1
+	cocoa@0.20.2
 	color_quant@1.1.0
 	colorchoice@1.0.0
+	colored@1.9.4
 	colored@2.0.4
 	common-path@1.0.0
 	console@0.15.7
-	constant_time_eq@0.1.5
 	convert_case@0.4.0
 	convert_case@0.6.0
+	core-foundation-sys@0.7.0
 	core-foundation-sys@0.8.4
+	core-foundation@0.7.0
 	core-foundation@0.9.3
+	core-graphics@0.19.2
+	core2@0.4.0
 	cpufeatures@0.2.9
 	crc32fast@1.3.2
 	crossbeam-channel@0.5.8
@@ -72,6 +81,7 @@ CRATES="
 	crossbeam-utils@0.8.16
 	crunchy@0.2.2
 	crypto-common@0.1.6
+	css-color@0.2.5
 	cssparser-macros@0.6.1
 	cssparser@0.27.2
 	ctor@0.1.26
@@ -81,24 +91,38 @@ CRATES="
 	darling@0.20.3
 	darling_core@0.20.3
 	darling_macro@0.20.3
+	dary_heap@0.3.6
 	data-encoding@2.4.0
 	deranged@0.3.9
 	derive_more@0.99.17
+	deunicode@1.4.1
 	dialoguer@0.11.0
 	digest@0.10.7
+	digest@0.9.0
 	dirs-next@2.0.0
 	dirs-sys-next@0.1.2
 	dtoa-short@0.3.4
 	dtoa@1.0.9
+	duct@0.13.6
 	dunce@1.0.4
 	dyn-clone@1.0.14
 	either@1.9.0
+	embed-resource@1.8.0
 	encode_unicode@0.3.6
+	encoding-index-japanese@1.20141219.5
+	encoding-index-korean@1.20141219.5
+	encoding-index-simpchinese@1.20141219.5
+	encoding-index-singlebyte@1.20141219.5
+	encoding-index-tradchinese@1.20141219.5
+	encoding@0.2.33
+	encoding_index_tests@0.1.4
 	encoding_rs@0.8.33
+	english-numbers@0.3.3
 	env_logger@0.10.0
 	equivalent@1.0.1
 	erased-serde@0.3.31
 	errno@0.3.5
+	event-listener@2.5.3
 	exr@1.71.0
 	fancy-regex@0.11.0
 	fastrand@2.0.1
@@ -111,14 +135,18 @@ CRATES="
 	foreign-types@0.3.2
 	form_urlencoded@1.2.0
 	fraction@0.13.1
+	freedesktop_entry_parser@1.3.0
 	fsevent-sys@4.1.0
 	futf@0.1.5
 	futures-channel@0.3.28
 	futures-core@0.3.28
 	futures-io@0.3.28
+	futures-macro@0.3.28
 	futures-sink@0.3.28
 	futures-task@0.3.28
+	futures-timer@3.0.2
 	futures-util@0.3.28
+	futures@0.3.28
 	fxhash@0.2.1
 	generic-array@0.14.7
 	getrandom@0.1.16
@@ -132,11 +160,13 @@ CRATES="
 	half@2.2.1
 	handlebars@4.4.0
 	hashbrown@0.12.3
-	hashbrown@0.14.1
+	hashbrown@0.13.2
+	hashbrown@0.14.2
 	heck@0.4.1
 	hermit-abi@0.3.3
 	hex@0.4.3
 	hmac@0.12.1
+	home@0.5.5
 	html5ever@0.26.0
 	http-body@0.4.5
 	http@0.2.9
@@ -155,6 +185,7 @@ CRATES="
 	indexmap@1.9.3
 	indexmap@2.0.2
 	infer@0.12.0
+	infer@0.15.0
 	inotify-sys@0.1.5
 	inotify@0.9.6
 	inout@0.1.3
@@ -164,26 +195,40 @@ CRATES="
 	itertools@0.11.0
 	itoa@0.4.8
 	itoa@1.0.9
-	jobserver@0.1.27
+	java-properties@1.4.1
 	jpeg-decoder@0.3.0
 	js-sys@0.3.64
 	json-patch@1.2.0
 	json5@0.4.1
+	jsonrpsee-client-transport@0.20.2
+	jsonrpsee-core@0.20.2
+	jsonrpsee-server@0.20.2
+	jsonrpsee-types@0.20.2
+	jsonrpsee-ws-client@0.20.2
+	jsonrpsee@0.20.2
 	jsonschema@0.17.1
 	kqueue-sys@1.0.4
 	kqueue@1.0.8
 	kuchikiki@0.8.2
 	lazy_static@1.4.0
 	lebe@0.5.2
+	lexical-core@0.8.5
+	lexical-parse-float@0.8.5
+	lexical-parse-integer@0.8.6
+	lexical-util@0.8.5
+	lexical-write-float@0.8.5
+	lexical-write-integer@0.8.5
 	libc@0.2.149
-	libflate@1.4.0
-	libflate_lz77@1.2.0
+	libflate@2.0.0
+	libflate_lz77@2.0.0
 	libloading@0.7.4
 	line-wrap@0.1.1
 	linux-raw-sys@0.4.10
+	local-ip-address@0.5.6
 	lock_api@0.4.11
 	log@0.4.20
 	mac@0.1.1
+	malloc_buf@0.0.6
 	markup5ever@0.11.0
 	matches@0.1.10
 	matchit@0.7.3
@@ -192,7 +237,7 @@ CRATES="
 	memoffset@0.9.0
 	mime@0.3.17
 	minimal-lexical@0.2.1
-	minisign@0.7.3
+	minisign@0.7.5
 	miniz_oxide@0.7.1
 	mio@0.8.8
 	napi-build@2.0.1
@@ -201,6 +246,8 @@ CRATES="
 	napi-sys@2.2.3
 	napi@2.13.3
 	native-tls@0.2.11
+	neli-proc-macros@0.1.3
+	neli@0.6.4
 	new_debug_unreachable@1.0.4
 	nix@0.27.1
 	nodrop@0.1.14
@@ -216,7 +263,10 @@ CRATES="
 	num-traits@0.2.17
 	num@0.4.1
 	num_cpus@1.16.0
+	objc@0.2.7
+	objc_id@0.1.1
 	object@0.32.1
+	once-cell-regex@0.2.1
 	once_cell@1.18.0
 	opaque-debug@0.3.0
 	openssl-macros@0.1.1
@@ -229,8 +279,7 @@ CRATES="
 	os_pipe@1.1.4
 	parking_lot@0.12.1
 	parking_lot_core@0.9.9
-	password-hash@0.4.2
-	pbkdf2@0.11.0
+	path_abs@0.5.1
 	pbkdf2@0.12.2
 	percent-encoding@2.3.0
 	pest@2.7.4
@@ -238,14 +287,18 @@ CRATES="
 	pest_generator@2.7.4
 	pest_meta@2.7.4
 	phf@0.10.1
+	phf@0.11.2
 	phf@0.8.0
 	phf_codegen@0.10.0
 	phf_codegen@0.8.0
 	phf_generator@0.10.0
+	phf_generator@0.11.2
 	phf_generator@0.8.0
 	phf_macros@0.10.0
+	phf_macros@0.11.2
 	phf_macros@0.8.0
 	phf_shared@0.10.0
+	phf_shared@0.11.2
 	phf_shared@0.8.0
 	pin-project-internal@1.1.3
 	pin-project-lite@0.2.13
@@ -283,11 +336,13 @@ CRATES="
 	reqwest@0.11.22
 	ring@0.16.20
 	rle-decode-fast@1.0.3
+	route-recognizer@0.3.1
 	rpassword@7.2.0
 	rtoolbox@0.0.1
 	rustc-demangle@0.1.23
+	rustc-hash@1.1.0
 	rustc_version@0.4.0
-	rustix@0.38.19
+	rustix@0.38.20
 	rustls-webpki@0.101.6
 	rustls@0.21.7
 	rustversion@1.0.14
@@ -319,6 +374,7 @@ CRATES="
 	serialize-to-javascript-impl@0.1.1
 	serialize-to-javascript@0.1.1
 	servo_arc@0.1.1
+	sha-1@0.9.8
 	sha1@0.10.6
 	sha1_smol@1.0.0
 	sha2@0.10.8
@@ -330,33 +386,42 @@ CRATES="
 	smallvec@1.11.1
 	socket2@0.4.9
 	socket2@0.5.4
+	soketto@0.7.1
 	spin@0.5.2
 	spin@0.9.8
 	stable_deref_trait@1.2.0
+	static_assertions@1.1.0
+	std_prelude@0.2.12
+	stfu8@0.2.6
 	string_cache@0.8.7
 	string_cache_codegen@0.5.2
 	strsim@0.10.0
+	sublime_fuzzy@0.7.0
 	subtle@2.5.0
-	sval@2.10.1
-	sval_buffer@2.10.1
-	sval_dynamic@2.10.1
-	sval_fmt@2.10.1
-	sval_json@2.10.1
-	sval_ref@2.10.1
-	sval_serde@2.10.1
+	sval@2.10.2
+	sval_buffer@2.10.2
+	sval_dynamic@2.10.2
+	sval_fmt@2.10.2
+	sval_json@2.10.2
+	sval_ref@2.10.2
+	sval_serde@2.10.2
 	syn@1.0.109
 	syn@2.0.38
 	sync_wrapper@0.1.2
+	sysctl@0.4.6
 	system-configuration-sys@0.5.0
 	system-configuration@0.5.1
 	tar@0.4.40
 	tauri-icns@0.1.0
+	tauri-utils@1.5.0
 	tempfile@3.8.0
 	tendril@0.4.3
+	term_size@0.3.2
 	termcolor@1.3.0
+	textwrap@0.11.0
 	thin-slice@0.1.1
-	thiserror-impl@1.0.49
-	thiserror@1.0.49
+	thiserror-impl@1.0.50
+	thiserror@1.0.50
 	thread_local@1.1.7
 	tiff@0.9.0
 	time-core@0.1.2
@@ -365,6 +430,7 @@ CRATES="
 	tinyvec@1.6.0
 	tinyvec_macros@0.1.1
 	tokio-macros@2.1.0
+	tokio-stream@0.1.14
 	tokio-tungstenite@0.20.1
 	tokio-util@0.7.9
 	tokio@1.33.0
@@ -375,13 +441,15 @@ CRATES="
 	tower-layer@0.3.2
 	tower-service@0.3.2
 	tower@0.4.13
+	tracing-attributes@0.1.27
 	tracing-core@0.1.32
-	tracing@0.1.39
+	tracing@0.1.40
 	treediff@4.0.2
 	try-lock@0.2.4
 	tungstenite@0.20.1
 	typenum@1.17.0
 	ucd-trie@0.1.6
+	uname@0.1.1
 	unicode-bidi@0.3.13
 	unicode-ident@1.0.12
 	unicode-normalization@0.1.22
@@ -393,12 +461,14 @@ CRATES="
 	url@2.4.1
 	utf-8@0.7.6
 	utf8parse@0.2.1
-	uuid@1.4.1
-	value-bag-serde1@1.4.1
-	value-bag-sval2@1.4.1
-	value-bag@1.4.1
+	uuid@1.5.0
+	value-bag-serde1@1.4.2
+	value-bag-sval2@1.4.2
+	value-bag@1.4.2
 	vcpkg@0.2.15
 	version_check@0.9.4
+	vswhom-sys@0.1.2
+	vswhom@0.1.0
 	walkdir@2.4.0
 	want@0.3.1
 	wasi@0.11.0+wasi-snapshot-preview1
@@ -412,18 +482,22 @@ CRATES="
 	web-sys@0.3.64
 	webpki-roots@0.25.2
 	weezl@0.1.7
+	which@4.4.2
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-util@0.1.6
 	winapi-x86_64-pc-windows-gnu@0.4.0
 	winapi@0.3.9
 	windows-core@0.51.1
 	windows-implement@0.39.0
+	windows-implement@0.51.1
+	windows-interface@0.51.1
 	windows-sys@0.45.0
 	windows-sys@0.48.0
 	windows-targets@0.42.2
 	windows-targets@0.48.5
 	windows-tokens@0.39.0
 	windows@0.39.0
+	windows@0.51.1
 	windows_aarch64_gnullvm@0.42.2
 	windows_aarch64_gnullvm@0.48.5
 	windows_aarch64_msvc@0.39.0
@@ -444,23 +518,24 @@ CRATES="
 	windows_x86_64_msvc@0.42.2
 	windows_x86_64_msvc@0.48.5
 	winnow@0.5.17
+	winreg@0.10.1
 	winreg@0.50.0
 	winreg@0.51.0
 	xattr@1.0.1
 	zeroize@1.6.0
 	zip@0.6.6
-	zstd-safe@5.0.2+zstd.1.5.2
-	zstd-sys@2.0.9+zstd.1.5.5
-	zstd@0.11.2+zstd.1.5.2
 	zune-inflate@0.2.54
 "
 
 inherit cargo
 
+MY_PV=${PV/_alpha/-alpha.}
+MY_P=${PN}-v${MY_PV}
+
 DESCRIPTION="Command line interface for building Tauri apps"
 HOMEPAGE="https://tauri.app"
 SRC_URI="
-	https://github.com/tauri-apps/tauri/archive/refs/tags/tauri-cli-v${PV}.tar.gz
+	https://github.com/tauri-apps/tauri/archive/refs/tags/${MY_P}.tar.gz
 	${CARGO_CRATE_URIS}
 "
 
@@ -470,4 +545,4 @@ LICENSE+=" Apache-2.0 BSD CC0-1.0 ISC MIT MPL-2.0 Unicode-DFS-2016 ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/tauri-tauri-cli-v${PV}/tooling/cli"
+S="${WORKDIR}/tauri-${MY_P}/tooling/cli"
