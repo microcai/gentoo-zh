@@ -1073,7 +1073,7 @@ prefix = "v"
 # TODO
 #["sys-kernel/starfive-sources"]
 
-["sys-kernel/xanmod-hybrid"]
+["sys-kernel/xanmod-sources"]
 source = "github"
 github = "xanmod/linux"
 use_latest_release = true
