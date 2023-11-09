@@ -125,6 +125,15 @@ src_configure() {
 	cmake_src_configure
 }
 
+src_test() {
+	# break by sandbox
+	local CMAKE_SKIP_TESTS=(
+		testdbus
+		testservicewatcher
+	)
+	cmake_src_test
+}
+
 pkg_postinst() {
 	xdg_pkg_postinst
 
