@@ -6,7 +6,7 @@
 		<name>Haonan Chen</name>
 	</maintainer>
 	<use>
-		<flag name="shared">Build shared library instead of static library.</flag>
+		<flag name="shared-libs">Build shared library instead of static library.</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">reo7sp/tgbot-cpp</remote-id>
