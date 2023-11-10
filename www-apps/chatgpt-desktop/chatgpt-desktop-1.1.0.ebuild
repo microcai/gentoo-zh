@@ -508,6 +508,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND="
 	>=dev-util/tauri-cli-1.3.1
+	<dev-util/tauri-cli-2
 	net-libs/nodejs[npm]
 	dev-lang/typescript
 "
