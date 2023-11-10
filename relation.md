@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-10 09:06:53 CST)
+(The last generation time: 2023-11-10 16:29:14 CST)
 
 ### Packages
 
@@ -407,10 +407,8 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/deepin-wine-wecom                   | 4.1.6.6017                                |        | https://aur.archlinux.org/packages/com.qq.weixin.work.deepin-x11                        | Tencent Weixin Work on Deepin Wine(com.qq.weixin.work.deepin) For Gentoo
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-im/dingtalk                            | 1.4.0.20909                               |        | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
-                                            | 1.4.0.20909-r1                            |        |                                                                                         |
-                                            | 1.7.0.30424                               |        |                                                                                         |
-                                            | 7.0.40.30706                              |        |                                                                                         |
+ net-im/dingtalk                            | 7.0.40.30706                              |        | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
+                                            | 7.1.0.31017                               |        |                                                                                         |
    dev-libs/libthai                         | 0.1.28                                    |  D, RD | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
                                             | 0.1.29                                    |        |                                                                                         |
      dev-libs/libdatrie                     | 0.2.13                                    |  D, RD | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
@@ -428,7 +426,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-libs/jzmq                              | 9999                                      |        | http://www.zeromq.org/bindings:java                                                     | jzmq
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/aliyundrive-webdav                | 2.1.0-r1                                  |        | https://github.com/messense/aliyundrive-webdav.git                                      | WebDAV server for AliyunDrive
+ net-misc/aliyundrive-webdav                | 2.3.3                                     |        | https://github.com/messense/aliyundrive-webdav.git                                      | WebDAV server for AliyunDrive
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/aliyunpan                         | 0.2.8                                     |        | https://github.com/tickstep/aliyunpan                                                   | aliyunpan cli client, support Webdav service, JavaScript plugin
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
