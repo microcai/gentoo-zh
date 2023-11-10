@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-10 21:50:46 CST)
+(The last generation time: 2023-11-11 00:49:49 CST)
 
 ### Packages
 
@@ -226,7 +226,8 @@
  dev-util/jetbrains-toolbox                 | 1.28.1.15219                              |        | https://www.jetbrains.com/toolbox/app                                                   | Manage all your JetBrains Projects and Tools
                                             | 2.0.3.17006                               |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/lldb-mi                           | 9999                                      |        | https://github.com/lldb-tools/lldb-mi                                                   | LLDB Machine Interface Driver
+ dev-util/lldb-mi                           | 0.0.1                                     |        | https://github.com/lldb-tools/lldb-mi                                                   | LLDB Machine Interface Driver
+                                            | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/marksman-bin                      | 2022.12.28                                |        | https://github.com/artempyanykh/marksman                                                | A language server for Markdown
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
