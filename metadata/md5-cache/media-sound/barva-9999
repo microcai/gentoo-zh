@@ -8,5 +8,5 @@ INHERIT=git-r3 toolchain-funcs
 LICENSE=GPL-3
 PROPERTIES=live
 SLOT=0
-_eclasses_=git-r3	2358a7b20091609e24bd3a83b3ac5991	toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0
+_eclasses_=git-r3	5133e393e8717a3a093660f990801dc1	toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0
 _md5_=46235fd29a409acd5d8293d03d466af0
