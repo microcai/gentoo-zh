@@ -20,7 +20,7 @@ RDEPEND="
 	dev-libs/libthai
 	dev-qt/qtgui
 	media-libs/tiff-compat:4
-	media-sound/pulseaudio
+	media-libs/libpulse
 	media-video/rtmpdump
 	net-misc/curl
 	net-nds/openldap
@@ -30,6 +30,7 @@ RDEPEND="
 	x11-libs/gtk+:2
 	x11-libs/gtk+:3
 	x11-libs/libXScrnSaver
+	virtual/libcrypt
 "
 
 DEPEND="${RDEPEND}"
