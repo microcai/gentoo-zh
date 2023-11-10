@@ -80,7 +80,7 @@ app-i18n/zh-autoconvert:static-libs - Build static versions of dynamic libraries
 app-misc/gpick:gtk3 - use GTK3 instead of GTK2
 app-misc/joshuto:fzf - Fuzzy search via fzf
 dev-cpp/cppcoro:shared - Build shared library instead of static library.
-dev-cpp/tgbot-cpp:shared - Build shared library instead of static library.
+dev-cpp/tgbot-cpp:shared-libs - Build shared library instead of static library.
 dev-db/mongodb:experimental-optimization - Enable experimental optimizations, exclude sandybridge.
 dev-db/mongodb:experimental-runtime-hardening - Enable experimental runtime hardenings.
 dev-db/mongodb:free-mon - Enable support for Free Monitoring
