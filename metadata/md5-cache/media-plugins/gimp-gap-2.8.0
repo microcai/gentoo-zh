@@ -1,15 +1,15 @@
 BDEPEND=sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71-r5 >=sys-devel/libtool-2.4.7
-DEFINED_PHASES=configure install
+DEFINED_PHASES=compile configure install prepare
 DEPEND=>=media-gfx/gimp-2.8 mpeg? ( media-libs/xvid )
 DESCRIPTION=Gimp Animation Package
-EAPI=7
+EAPI=8
 HOMEPAGE=http://www.gimp.org/
 INHERIT=autotools
-IUSE=mpeg xanim wavplay sox mp3 mplayer
+IUSE=mpeg mp3
 KEYWORDS=~amd64
 LICENSE=GPL-2
-RDEPEND=>=media-gfx/gimp-2.8 mpeg? ( media-libs/xvid ) wavplay? ( >=media-sound/wavplay-1.4 ) mplayer? ( media-video/mplayer ) xanim? ( >=media-video/xanim-2.80.1 ) sox? ( >=media-sound/sox-12.17 ) mp3? ( >=media-sound/lame-3.9 )
+RDEPEND=>=media-gfx/gimp-2.8 mpeg? ( media-libs/xvid ) app-arch/lbzip2 media-libs/faac media-libs/faad2 media-libs/x264 mp3? ( >=media-sound/lame-3.9 )
 SLOT=0
-SRC_URI=https://github.com/GNOME/gimp-gap/archive/refs/heads/gap-2-8.zip
+SRC_URI=https://gitlab.gnome.org/Archive/gimp-gap/-/archive/gap-2-8/gimp-gap-gap-2-8.tar.bz2
 _eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	6ae9a4347149b19a112caa1182d03bde
-_md5_=e3d3b803aec60b63b4183f3d70822759
+_md5_=bb6595a5d981155e5dffe433ca121964
