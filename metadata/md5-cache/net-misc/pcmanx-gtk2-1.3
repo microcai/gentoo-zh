@@ -1,16 +1,16 @@
 BDEPEND=sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71-r5 >=sys-devel/libtool-2.4.7
 DEFINED_PHASES=configure prepare
-DEPEND=libnotify? ( x11-libs/libnotify ) x11-libs/libXft >=x11-libs/gtk+-2.4:* dev-util/intltool sys-devel/gettext
+DEPEND=libnotify? ( x11-libs/libnotify ) x11-libs/libXft >=x11-libs/gtk+-2.4:2 dev-util/intltool sys-devel/gettext
 DESCRIPTION=PCMan is a gtk+ based free BBS client
-EAPI=7
+EAPI=8
 HOMEPAGE=https://github.com/pcman-bbs/pcmanx
-INHERIT=autotools flag-o-matic multilib
+INHERIT=autotools flag-o-matic
 IUSE=+libnotify +proxy iplookup +wget
 KEYWORDS=~amd64
 LICENSE=GPL-2
-RDEPEND=libnotify? ( x11-libs/libnotify ) x11-libs/libXft >=x11-libs/gtk+-2.4:* wget? ( net-misc/wget )
+RDEPEND=libnotify? ( x11-libs/libnotify ) x11-libs/libXft >=x11-libs/gtk+-2.4:2 wget? ( net-misc/wget )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/pcman-bbs/pcmanx/releases/download/1.3/pcmanx-gtk2-1.3.tar.xz
 _eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	6ae9a4347149b19a112caa1182d03bde	flag-o-matic	baa4d385108ac87993edac956a916a36
-_md5_=29084121b988c4e9ae33f794cc2baa2c
+_md5_=6d50a75e06686a56de26c350da662f59
