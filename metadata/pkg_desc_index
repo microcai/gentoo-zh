@@ -78,7 +78,7 @@ app-misc/yq-bin 4.30.6 4.35.2: yq is a portable command-line YAML, JSON and XML 
 app-mobilephone/scrcpy 1.25 2.1.1 2.2: Display and control your Android device
 app-office/anytype-bin 0.35.0: A notebook based on p2p network
 app-office/bytedance-feishu 4.11.6.2 5.9.18 5.14.14 5.26.13-r1 6.9.20: feishu - ByteDance's enterprise collaboration platform
-app-office/freeoffice 1062 1064: A complete, free Microsoft Office-compatible alternative office suite.
+app-office/freeoffice 1062 1064 1068: A complete, free Microsoft Office-compatible alternative office suite.
 app-office/wps-office 11.1.0.11698 11.1.0.11704 11.1.0.11708: WPS Office is an office productivity suite, Here is the Chinese version
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-shells/gitstatus 1.5.4: Git status for Bash and Zsh prompt
@@ -140,7 +140,7 @@ games-board/othello 0.2.2: Othello is a classic strategy game, also known as Rev
 games-fps/source-engine 9999: A 3D game engine developed by Valve
 games-misc/oh-my-git-bin 0.6.5: An interactive Git learning game!
 games-roguelike/nethack 3.6.7: The ultimate old-school single player dungeon exploration game
-games-util/winegame-client-bin 0.5.10.5: An open source gaming platform for GNU/Linux
+games-util/winegame-client-bin 0.5.10.5 0.5.12.2: An open source gaming platform for GNU/Linux
 gui-libs/libdecor 0.1.1: A client-side decorations library for Wayland clients
 kde-misc/plasma-applet-netspeed-widget 1.9 2.0 9999: Plasma 5 widget that displays the currently used network bandwidth.
 media-fonts/Plangothic 1.8.5746: 遍黑体项目（Plangothic Project）
