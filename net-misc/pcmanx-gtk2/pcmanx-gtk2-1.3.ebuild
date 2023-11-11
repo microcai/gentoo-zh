@@ -1,9 +1,9 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-inherit autotools flag-o-matic multilib
+inherit autotools flag-o-matic
 
 DESCRIPTION="PCMan is a gtk+ based free BBS client"
 HOMEPAGE="https://github.com/pcman-bbs/pcmanx"
@@ -18,7 +18,7 @@ RESTRICT="mirror"
 COMMON_DEPEND="
 	libnotify? ( x11-libs/libnotify )
 	x11-libs/libXft
-	>=x11-libs/gtk+-2.4:*
+	>=x11-libs/gtk+-2.4:2
 "
 
 RDEPEND="
@@ -32,7 +32,11 @@ DEPEND="
 	sys-devel/gettext
 "
 
+DOCS=( TODO README NEWS ChangeLog AUTHORS )
+
 src_prepare() {
+	eautoreconf
+
 	# this flag crashes CTermData::memset16()
 	filter-flags -ftree-vectorize
 	eapply_user
