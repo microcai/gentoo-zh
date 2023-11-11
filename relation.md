@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-11 20:54:55 CST)
+(The last generation time: 2023-11-11 21:25:21 CST)
 
 ### Packages
 
@@ -149,6 +149,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-office/freeoffice                      | 1062                                      |        | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite.
                                             | 1064                                      |        |                                                                                         |
+                                            | 1068                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-office/wps-office                      | 11.1.0.11698                              |        | http://www.wps.cn/product/wpslinux/                                                     | WPS Office is an office productivity suite, Here is the Chinese version
                                             | 11.1.0.11704                              |        |                                                                                         |
@@ -260,6 +261,7 @@
  games-roguelike/nethack                    | 3.6.7                                     |        | https://www.nethack.org/                                                                | The ultimate old-school single player dungeon exploration game
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  games-util/winegame-client-bin             | 0.5.10.5                                  |        | https://winegame.net/                                                                   | An open source gaming platform for GNU/Linux
+                                            | 0.5.12.2                                  |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  kde-misc/plasma-applet-netspeed-widget     | 1.9                                       |        | https://www.kde-look.org/p/998895/                                                      | Plasma 5 widget that displays the currently used network bandwidth.
                                             | 2.0                                       |        |                                                                                         |
