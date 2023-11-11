@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-11 00:49:49 CST)
+(The last generation time: 2023-11-11 20:06:44 CST)
 
 ### Packages
 
@@ -138,6 +138,8 @@
  app-mobilephone/scrcpy                     | 1.25                                      |        | https://blog.rom1v.com/2018/03/introducing-scrcpy/                                      | Display and control your Android device
                                             | 2.1.1                                     |        |                                                                                         |
                                             | 2.2                                       |        |                                                                                         |
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ app-office/anytype-bin                     | 0.35.0                                    |        | https://anytype.io                                                                      | A notebook based on p2p network
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-office/bytedance-feishu                | 4.11.6.2                                  |        | https://www.feishu.cn/                                                                  | feishu - ByteDance's enterprise collaboration platform
                                             | 5.14.14                                   |        |                                                                                         |
