@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-12 23:21:52 CST)
+(The last generation time: 2023-11-12 23:52:52 CST)
 
 ### Packages
 
@@ -148,7 +148,7 @@
                                             | 2.1.1                                     |        |                                                                                         |
                                             | 2.2                                       |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-office/anytype-bin                     | 0.35.0                                    |        | https://anytype.io                                                                      | A notebook based on p2p network
+ app-office/anytype-bin                     | 0.35.4                                    |        | https://anytype.io                                                                      | A notebook based on p2p network
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-office/bytedance-feishu                | 4.11.6.2                                  |        | https://www.feishu.cn/                                                                  | feishu - ByteDance's enterprise collaboration platform
                                             | 5.14.14                                   |        |                                                                                         |
