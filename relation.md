@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-12 18:35:43 CST)
+(The last generation time: 2023-11-12 18:36:09 CST)
 
 ### Packages
 
@@ -206,7 +206,7 @@
  dev-python/conda                           | 23.1.0                                    |        | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
    dev-python/conda-package-handling        | 2.0.2                                     |  D, RD | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
    dev-python/conda-package-streaming       | 0.7.0                                     |  D, RD | https://github.com/conda/conda-package-streaming                                        | An efficient library to read from new and old conda packages
-   dev-python/pycosat                       | 0.6.4                                     |  D, RD | https://github.com/ContinuumIO/pycosat                                                  | Python bindings to picosat (a SAT solver)
+   dev-python/pycosat                       | 0.6.6                                     |  D, RD | https://github.com/ContinuumIO/pycosat                                                  | Python bindings to picosat (a SAT solver)
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/daff                            | 1.3.46                                    |        | https://github.com/paulfitz/daff                                                        | The daff can produce and apply tabular diffs
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -281,7 +281,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/nerd-fonts                     | 3.0.2                                     |        | https://github.com/ryanoasis/nerd-fonts                                                 | Nerd Fonts is a project that patches developer targeted fonts with glyphs
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/sarasa-gothic                  | 0.42.5                                    |        | https://github.com/be5invis/Sarasa-Gothic                                               | A CJK programming font based on Iosevka and Source Han Sans. (TTC)
+ media-fonts/sarasa-gothic                  | 0.42.6                                    |        | https://github.com/be5invis/Sarasa-Gothic                                               | A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/sarasa-term-sc-nerd            | 1.1.0                                     |        | https://github.com/laishulu/Sarasa-Term-SC-Nerd                                         | Sarasa Mono SC font patched with Nerd fonts
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
