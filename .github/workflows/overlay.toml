@@ -99,6 +99,12 @@ source = "github"
 github = "fcitx/fcitx5-hangul"
 use_latest_tag = true
 
+["app-i18n/fcitx-m17n"]
+source = "github"
+github = "fcitx/fcitx5-m17n"
+use_latest_tag = true
+github_account = "liuyujielol"
+
 # virtual package
 #["app-i18n/fcitx-meta"]
 
@@ -143,6 +149,12 @@ source = "github"
 github = "fcitx/libime"
 use_latest_tag = true
 github_account = "liangyongxiang"
+
+["app-i18n/libime-jyutping"]
+source = "github"
+github = "fcitx/libime-jyutping"
+use_latest_tag = true
+github_account = "liuyujielol"
 
 ["app-i18n/lunar"]
 source = "debianpkg"
