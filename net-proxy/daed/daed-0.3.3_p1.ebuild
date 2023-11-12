@@ -69,4 +69,20 @@ src_install(){
 	keepdir /etc/daed/
 	dosym -r "/usr/share/v2ray/geosite.dat" /usr/share/daed/geosite.dat
 	dosym -r "/usr/share/v2ray/geoip.dat" /usr/share/daed/geoip.dat
+
+	# thanks to @MarksonHon
+	newinitd "${FILESDIR}"/${PN}.initd daed
+}
+
+pkg_postinst() {
+	elog
+	elog "For OpenRC user, if you want to use"
+	elog "openrc to manager daed service,"
+	elog "please refer to dae document to modify"
+	elog "rc.conf and sysfs first, then reboot."
+	elog "https://github.com/daeuniverse/dae/blob/main/docs/en/tutorials/run-on-alpine.md"
+	elog "Now you can start and add it to default runlevel "
+	elog "# rc-service daed start"
+	elog "# rc-update add daed default"
+	elog
 }
