@@ -50,6 +50,7 @@ app-i18n/fcitx-meta:rime - Install Rime Chinese input method
 app-i18n/fcitx-meta:skk - Install SKK Japanese input method
 app-i18n/fcitx-qt:onlyplugin - Build only plugin
 app-i18n/fcitx-qt:qt6 - Build support for QT6
+app-i18n/libime-jyutping:engine - Enable input method for fcitx
 app-i18n/librime:debug - Enable debugging (including logging of input of RIME input methods)
 app-i18n/librime-octagram:debug - Enable debugging (including logging of input of RIME input methods)
 app-i18n/librime-octagram:tools - install grammar builder
