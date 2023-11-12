@@ -244,6 +244,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "oatiz"
 
+["app-office/anytype-bin"]
+source = "github"
+github = "anyproto/anytype-ts"
+use_latest_release = true
+prefix = "v"
+include_regex = "^v\\d+(\\.\\d+)*$"
+
 # TODO
 #["app-office/bytedance-feishu"]
 
