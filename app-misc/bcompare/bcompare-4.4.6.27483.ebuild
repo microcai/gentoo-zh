@@ -15,6 +15,40 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 RDEPEND=""
+
+
+# qt4
+#	libQtCore.so.4
+#	libQtGui.so.4
+# gtk2
+#	libgtk-x11-2.0.so.0
+# kde4
+#	libkdecore.so.5
+#	libkio.so.5
+# kde5 32bit
+#	libKF5CoreAddons.so.5
+#	libKF5I18n.so.5
+#	libKF5KIOCore.so.5
+#	libKF5KIOWidgets.so.5
+#	libKF5Service.so.5
+#	libQt5Core.so.5
+#	libQt5Gui.so.5
+#	libQt5Widgets.so.5
+REQUIRES_EXCLUDE="
+	libQtCore.so.4
+	libQtGui.so.4
+	libgtk-x11-2.0.so.0
+	libkdecore.so.5
+	libkio.so.5
+	libKF5CoreAddons.so.5
+	libKF5I18n.so.5
+	libKF5KIOCore.so.5
+	libKF5KIOWidgets.so.5
+	libKF5Service.so.5
+	libQt5Core.so.5
+	libQt5Gui.so.5
+	libQt5Widgets.so.5
+"
 QA_PRESTRIPPED="
 	/opt/${PN}/lib/beyondcompare/lib7z.so
 	/opt/${PN}/lib/beyondcompare/BCompare
@@ -56,6 +90,14 @@ QA_PRESTRIPPED="
 
 src_unpack() {
 	unpack ${A}
+}
+
+src_prepare() {
+	default
+
+	patchelf --remove-rpath ext/bcompare_ext_kde5.amd64.so || die
+	patchelf --remove-rpath ext/bcompare_ext_kde.amd64.so || die
+	patchelf --remove-rpath ext/bcompare_ext_kde.i386.so || die
 }
 
 src_install() {
