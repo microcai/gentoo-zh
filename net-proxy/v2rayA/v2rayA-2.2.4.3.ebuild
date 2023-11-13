@@ -3,16 +3,24 @@
 
 EAPI=8
 
-inherit systemd go-module desktop xdg git-r3
+inherit systemd go-module desktop xdg
 
 DESCRIPTION="web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel"
 HOMEPAGE="https://v2raya.org/"
 
-EGIT_REPO_URI="https://github.com/v2rayA/v2rayA.git"
-EGIT_BRANCH="main" # HEAD
+SRC_URI="
+	https://github.com/v2rayA/v2rayA/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/v2rayA/v2rayA/releases/download/v${PV}/web.tar.gz -> ${P}-web.tar.gz
+"
+# maintainer generated vendor
+# generated with liuyujielol/gentoo-go-deps/.github/workflows/generator.yml
+SRC_URI+="
+	https://github.com/liuyujielol/gentoo-go-deps/releases/download/${P}/${P}-vendor.tar.xz
+"
 
 LICENSE="AGPL-3"
 SLOT="0"
+KEYWORDS="~amd64"
 IUSE="xray"
 RESTRICT="mirror"
 
@@ -24,34 +32,21 @@ RDEPEND="
 	xray? ( net-proxy/Xray )
 "
 BDEPEND="
-	>=dev-lang/go-1.21.0:*
-	>=net-libs/nodejs-16
-	sys-apps/yarn
+	>=dev-lang/go-1.21:*
 "
 
 src_unpack() {
-	git-r3_src_unpack
+	default
 
-	# requires network
-	cd "${S}/gui" || die
-	#yarn config set registry https://registry.npmmirror.com || die
-	yarn install --ignore-engines --check-files || die "yarn install failed"
-
-	# requires network
-	cd "${S}/service" || die
-	#ego env -w GOPROXY=https://goproxy.cn,direct
-	ego mod vendor
+	# go vendor
+	mv -v "${WORKDIR}/vendor" "${S}/service" || die
 }
 
 src_compile() {
-	cd "${S}/gui" || die
-	## Fix node build error: https://github.com/webpack/webpack/issues/14532#issuecomment-947012063
-	if has_version '>=dev-libs/openssl-3'; then
-		export NODE_OPTIONS=--openssl-legacy-provider
-	fi
-	OUTPUT_DIR="${S}/service/server/router/web" yarn build || die "yarn build failed"
+	mv -v "${WORKDIR}/web" "${S}/service/server/router/web" || die
 
-	for file in $(find "${S}/service/server/router/web" |grep -v png |grep -v index.html|grep -v .gz); do
+	for file in $(find "${S}/service/server/router/web" |grep -v png |grep -v index.html|grep -v .gz)
+	do
 		if [ ! -d $file ];then
 			einfo "compress $file"
 			gzip -9 $file
