@@ -12,5 +12,5 @@ RDEPEND=acct-user/hysteria acct-group/hysteria >=dev-lang/go-1.21.1
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/apernet/hysteria/archive/refs/tags/app/v2.2.0.tar.gz -> hysteria-2.2.0.tar.gz https://github.com/oatiz/gentoo-go-deps/releases/download/hysteria-2.2.0/hysteria-2.2.0-deps.tar.xz
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-module	8624eede24936fd7666e5298e5332f22	systemd	c8b03e8df84486aa991d4396686e8942
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-module	8624eede24936fd7666e5298e5332f22	systemd	c8b03e8df84486aa991d4396686e8942
 _md5_=44ba19ade70e851833e61b0654751e4a

@@ -12,5 +12,5 @@ REQUIRED_USE=!amd64? ( !goamd64 )
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/Dreamacro/clash/archive/v1.17.0.tar.gz -> clash-1.17.0.tar.gz https://github.com/Linerre/gentoo-go-deps/releases/download/clash-1.17.0/clash-1.17.0-deps.tar.xz
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-module	8624eede24936fd7666e5298e5332f22	systemd	c8b03e8df84486aa991d4396686e8942
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-module	8624eede24936fd7666e5298e5332f22	systemd	c8b03e8df84486aa991d4396686e8942
 _md5_=b9ef613d01f06843ec9b218dac2c07cb
