@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit autotools
+inherit autotools udev
 
 MY_P1=$( ver_cut 1 )
 MY_P2=$( ver_cut 2- )
@@ -17,13 +17,24 @@ SRC_URI="https://gdlp01.c-wss.com/gds/4/0100010924/01/${MY_P}.tar.gz"
 LICENSE="Canon-IJ"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2.16:2
 virtual/libusb:1"
 RDEPEND="${DEPEND}"
 
-S="${PORTAGE_BUILDDIR}/work/${MY_P}/${MY_PN}"
+S="${WORKDIR}/${MY_P}/${MY_PN}"
+
+QA_PREBUILT="
+	/usr/lib64/libcncpnet30.so.1.0.0
+	/usr/lib64/libcncpnet20.so.1.0.0
+	/usr/lib64/libcncpnet2.so.1.2.4
+	/usr/lib64/libcncpmslld2.so.3.0.0
+	/usr/bin/scangearmp2
+	/usr/lib64/libcncpmslld2.so.3.0.0
+	/usr/lib64/libcncpnet2.so.1.2.4
+	/usr/lib64/libcncpnet20.so.1.0.0
+	/usr/lib64/libcncpnet30.so.1.0.0
+"
 
 src_prepare()
 {
@@ -38,23 +49,31 @@ src_prepare()
 
 src_compile()
 {
-	SHIPPED_LIBS="${PORTAGE_BUILDDIR}/work/${MY_P}/com/libs_bin$(usex amd64 64 32)"
+	SHIPPED_LIBS="${WORKDIR}/${MY_P}/com/libs_bin$(usex amd64 64 32)"
 	emake LDFLAGS="-L${SHIPPED_LIBS}"
 }
 
 src_install()
 {
-	SHIPPED_LIBS="${PORTAGE_BUILDDIR}/work/${MY_P}/com/libs_bin$(usex amd64 64 32)"
+	SHIPPED_LIBS="${WORKDIR}/${MY_P}/com/libs_bin$(usex amd64 64 32)"
 
 	dodir /usr/lib/bjlib
 	dodir /lib/udev/rules.d
 
 	dolib.so "${SHIPPED_LIBS}/"*.so*
 	insinto /usr/lib/bjlib
-	doins "${PORTAGE_BUILDDIR}/work/${MY_P}/com/ini/canon_mfp2_net.ini"
+	doins "${WORKDIR}/${MY_P}/com/ini/canon_mfp2_net.ini"
 
 	insinto /lib/udev/rules.d
 	doins "${S}/etc/"*.rules
 
 	emake DESTDIR="${D}" install
+}
+
+pkg_postinst() {
+	udev_reload
+}
+
+pkg_postrm() {
+	udev_reload
 }
