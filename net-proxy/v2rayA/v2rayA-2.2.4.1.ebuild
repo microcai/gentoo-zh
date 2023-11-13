@@ -24,9 +24,7 @@ KEYWORDS="~amd64"
 IUSE="xray"
 RESTRICT="mirror"
 
-DEPEND=""
 RDEPEND="
-	${DEPEND}
 	|| (
 		>=net-proxy/v2ray-5
 		>=net-proxy/v2ray-bin-5
