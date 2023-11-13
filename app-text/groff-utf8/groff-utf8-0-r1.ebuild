@@ -18,8 +18,16 @@ DEPEND=">=sys-apps/groff-1.18.1"
 
 S="${WORKDIR}/${PN}"
 
+src_prepare() {
+	default
+	sed -i -e '/^CFLAGS/d' Makefile || die
+	sed -i -e '/^LDFLAGS/d' Makefile || die
+	sed -i -e '/^CPPFLAGS/d' Makefile || die
+	sed -i -e '/^CC/d' Makefile || die
+}
+
 src_install() {
-	emake install DESTDIR="${D}" PREFIX=/usr || die "make install failed"
+	emake install DESTDIR="${D}" PREFIX=/usr CFLAGS="${CFLAGS}" || die "make install failed"
 }
 
 pkg_postinst() {
