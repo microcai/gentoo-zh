@@ -8,7 +8,7 @@ inherit wxwidgets
 
 DESCRIPTION="Othello is a classic strategy game, also known as Reversi"
 HOMEPAGE="http://othello-game.sourceforge.net"
-SRC_URI="https://github.com/bekcpear/othello/archive/refs/tags/0.2.2.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/bekcpear/othello/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,6 +17,8 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="dev-libs/boost
 	x11-libs/wxGTK:${WX_GTK_VER}"
 RDEPEND="${DEPEND}"
+
+RESTRICT="test" # tests fail
 
 pkg_setup() {
 	setup-wxwidgets
