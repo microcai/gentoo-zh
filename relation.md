@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-14 15:20:52 CST)
+(The last generation time: 2023-11-14 21:01:13 CST)
 
 ### Packages
 
@@ -56,7 +56,7 @@
  app-i18n/fcitx-meta                        | 5.0.12-r2                                 |        | https://fcitx-im.org                                                                    | Merge this to pull in Fcitx packages
    app-i18n/fcitx-chinese-addons            | 5.1.2                                     |  D, RD | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
                                             | 9999                                      |        |                                                                                         |
-     app-i18n/fcitx-lua                     | 5.0.10                                    |  D, RD | https://github.com/fcitx/fcitx5-lua                                                     | Lua support for fcitx
+     app-i18n/fcitx-lua                     | 5.0.11                                    |  D, RD | https://github.com/fcitx/fcitx5-lua                                                     | Lua support for fcitx
                                             | 9999                                      |        |                                                                                         |
      app-i18n/fcitx-qt                      | 5.1.3                                     |  D, RD | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
                                             | 9999                                      |        |                                                                                         |
