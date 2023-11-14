@@ -68,6 +68,12 @@ managed-midi@1.10.0
 markdig@0.23.0
 messagepack@2.5.129
 messagepack.annotations@2.5.129
+microsoft.aspnetcore.app.runtime.linux-arm@6.0.12
+microsoft.aspnetcore.app.runtime.linux-arm64@6.0.12
+microsoft.aspnetcore.app.runtime.linux-musl-arm@6.0.12
+microsoft.aspnetcore.app.runtime.linux-musl-arm64@6.0.12
+microsoft.aspnetcore.app.runtime.linux-musl-x64@6.0.12
+microsoft.aspnetcore.app.runtime.linux-x64@6.0.12
 microsoft.aspnetcore.connections.abstractions@7.0.12
 microsoft.aspnetcore.http.connections.client@7.0.12
 microsoft.aspnetcore.http.connections.common@7.0.12
@@ -103,6 +109,12 @@ microsoft.netcore.app.host.linux-arm64@6.0.12
 microsoft.netcore.app.host.linux-musl-arm@6.0.12
 microsoft.netcore.app.host.linux-musl-arm64@6.0.12
 microsoft.netcore.app.host.linux-musl-x64@6.0.12
+microsoft.netcore.app.runtime.linux-arm@6.0.12
+microsoft.netcore.app.runtime.linux-arm64@6.0.12
+microsoft.netcore.app.runtime.linux-musl-arm@6.0.12
+microsoft.netcore.app.runtime.linux-musl-arm64@6.0.12
+microsoft.netcore.app.runtime.linux-musl-x64@6.0.12
+microsoft.netcore.app.runtime.linux-x64@6.0.12
 microsoft.netcore.platforms@1.0.1
 microsoft.netcore.platforms@1.1.0
 microsoft.netcore.platforms@2.0.0
@@ -143,7 +155,7 @@ ppy.managedbass.mix@2022.1216.0
 ppy.osu.framework@2023.1111.0
 ppy.osu.framework.nativelibs@2023.1013.0-nativelibs
 ppy.osu.framework.sourcegeneration@2023.720.0
-ppy.osu.game.resources@2023.1110.0
+ppy.osu.game.resources@2023.1114.0
 ppy.osutk.ns20@1.0.211
 ppy.sdl2-cs@1.0.671-alpha
 ppy.veldrid@4.9.3-g91ce5a6cda
