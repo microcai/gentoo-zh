@@ -1,0 +1,6 @@
+# Copyright 2023 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+# liuyujielol <2073201758GD@gmail.com>
+# default to lua5-3 (upstream requires 5.3 or higher)
+>=app-i18n/fcitx-lua-5.0.11 lua_targets_lua5-3
