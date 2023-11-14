@@ -68,12 +68,6 @@ managed-midi@1.10.0
 markdig@0.23.0
 messagepack@2.5.129
 messagepack.annotations@2.5.129
-microsoft.aspnetcore.app.runtime.linux-arm@6.0.12
-microsoft.aspnetcore.app.runtime.linux-arm64@6.0.12
-microsoft.aspnetcore.app.runtime.linux-musl-arm@6.0.12
-microsoft.aspnetcore.app.runtime.linux-musl-arm64@6.0.12
-microsoft.aspnetcore.app.runtime.linux-musl-x64@6.0.12
-microsoft.aspnetcore.app.runtime.linux-x64@6.0.12
 microsoft.aspnetcore.connections.abstractions@7.0.12
 microsoft.aspnetcore.http.connections.client@7.0.12
 microsoft.aspnetcore.http.connections.common@7.0.12
@@ -109,12 +103,6 @@ microsoft.netcore.app.host.linux-arm64@6.0.12
 microsoft.netcore.app.host.linux-musl-arm@6.0.12
 microsoft.netcore.app.host.linux-musl-arm64@6.0.12
 microsoft.netcore.app.host.linux-musl-x64@6.0.12
-microsoft.netcore.app.runtime.linux-arm@6.0.12
-microsoft.netcore.app.runtime.linux-arm64@6.0.12
-microsoft.netcore.app.runtime.linux-musl-arm@6.0.12
-microsoft.netcore.app.runtime.linux-musl-arm64@6.0.12
-microsoft.netcore.app.runtime.linux-musl-x64@6.0.12
-microsoft.netcore.app.runtime.linux-x64@6.0.12
 microsoft.netcore.platforms@1.0.1
 microsoft.netcore.platforms@1.1.0
 microsoft.netcore.platforms@2.0.0
@@ -345,7 +333,7 @@ vortice.dxgi@2.4.2
 vortice.mathematics@1.4.25
 "
 
-inherit multiprocessing dotnet-pkg desktop xdg
+inherit dotnet-pkg desktop xdg
 
 DESCRIPTION="rhythm is just a *click* away! "
 HOMEPAGE="
@@ -358,12 +346,14 @@ if [[ ${PV} == *9999* ]] ; then
 	EGIT_REPO_URI="https://github.com/ppy/osu.git"
 else
 	SRC_URI="https://github.com/ppy/osu/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	SRC_URI+=" ${NUGET_URIS} "
 	# updtream supported runtime:
 	# linux-{,musl-}{arm,arm64,x64,x86}
 	# only tested on linux-x64
 	KEYWORDS="~amd64"
+	S="${WORKDIR}/osu-${PV}"
 fi
+
+SRC_URI+=" ${NUGET_URIS} "
 
 LICENSE="MIT CC-BY-NC-4.0"
 SLOT="0"
@@ -381,38 +371,29 @@ RDEPEND="
 "
 BDEPEND="${DEPEND}"
 
-S="${WORKDIR}/osu-${PV}"
 DOTNET_PKG_PROJECTS=( "${S}/osu.Desktop/osu.Desktop.csproj" )
 
 DOCS=( README.md )
 
+src_unpack() {
+	dotnet-pkg_src_unpack
+
+	[[ ${EGIT_REPO_URI} ]] && git-r3_src_unpack
+}
+
 src_configure() {
-	# skip dotnet restore here
+	dotnet-pkg-base_info
+	dotnet-pkg_foreach-project dotnet-pkg-base_restore
+	# skip **dotnet-pkg-base_foreach-solution** here
 	# avoid requiring android workloads
-	return
 }
 
 src_compile() {
-	# DOTNET_PKG_* variables are set by dotnet-pkg.eclass
-	local -a build_args=(
-		--configuration "${DOTNET_PKG_CONFIGURATION}"
-		--output "${DOTNET_PKG_OUTPUT}"
-		--runtime "${DOTNET_PKG_RUNTIME}"
-		-maxCpuCount:$(makeopts_jobs)
-		--source "${NUGET_PACKAGES}"
-		--no-self-contained
+	DOTNET_PKG_BUILD_EXTRA_ARGS+=(
 		-f net6.0
 		-p:Version="${PV}"
 	)
-
-	if ! use debug ; then
-		build_args+=(
-			-p:StripSymbols=true
-			-p:NativeDebugSymbols=false
-		)
-	fi
-
-	edotnet build "${DOTNET_PKG_PROJECTS}" "${build_args[@]}"
+	dotnet-pkg_src_compile
 }
 
 src_install() {
