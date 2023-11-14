@@ -911,7 +911,7 @@ source = "github"
 github = "MetaCubeX/Clash.Meta"
 use_latest_release = true
 prefix = "v"
-github_account = "st0nie"
+github_account = ["st0nie", "peeweep"]
 
 ["net-proxy/dae"]
 source = "github"
