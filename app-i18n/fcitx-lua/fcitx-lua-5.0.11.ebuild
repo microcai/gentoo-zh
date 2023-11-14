@@ -23,8 +23,8 @@ HOMEPAGE="https://github.com/fcitx/fcitx5-lua"
 
 LICENSE="LGPL-2+"
 SLOT="5"
-IUSE="test"
-REQUIRED_USE=""
+IUSE="+dlopen test"
+REQUIRED_USE="${LUA_REQUIRED_USE}"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
@@ -37,6 +37,7 @@ DEPEND="
 "
 
 BDEPEND="
+	kde-frameworks/extra-cmake-modules:5
 	virtual/pkgconfig
 "
 
@@ -44,6 +45,8 @@ src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
 		-DCMAKE_INSTALL_SYSCONFDIR="${EPREFIX}/etc"
+		-DUSE_DLOPEN=$(usex dlopen)
+		-DENABLE_TEST=$(usex test)
 	)
 	cmake_src_configure
 }
