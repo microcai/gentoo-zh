@@ -32,7 +32,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-RESTRICT="mirror test"
+RESTRICT="bindist mirror test"
 
 QA_PRESTRIPPED="
 	/opt/${PN}/lib/libapp.so
