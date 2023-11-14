@@ -6,13 +6,13 @@ EAPI=8
 DOTNET_PKG_COMPAT=6.0
 NUGETS="
 automapper@12.0.1
-clowd.squirrel@2.9.42
+clowd.squirrel@2.10.2
 diffplex@1.7.1
 discordrichpresence@1.2.1.24
 ffmpeg.autogen@4.3.0.1
 fody@6.8.0
 hidsharpcore@1.2.1.1
-htmlagilitypack@1.11.53
+htmlagilitypack@1.11.54
 humanizer@2.14.1
 humanizer.core@2.14.1
 humanizer.core.af@2.14.1
@@ -66,27 +66,21 @@ humanizer.core.zh-hant@2.14.1
 jetbrains.annotations@2022.3.1
 managed-midi@1.10.0
 markdig@0.23.0
-messagepack@2.5.124
-messagepack.annotations@2.5.124
-microsoft.aspnetcore.app.runtime.linux-arm@6.0.12
-microsoft.aspnetcore.app.runtime.linux-arm64@6.0.12
-microsoft.aspnetcore.app.runtime.linux-musl-arm@6.0.12
-microsoft.aspnetcore.app.runtime.linux-musl-arm64@6.0.12
-microsoft.aspnetcore.app.runtime.linux-musl-x64@6.0.12
-microsoft.aspnetcore.app.runtime.linux-x64@6.0.12
-microsoft.aspnetcore.connections.abstractions@7.0.11
-microsoft.aspnetcore.http.connections.client@7.0.11
-microsoft.aspnetcore.http.connections.common@7.0.11
-microsoft.aspnetcore.signalr.client@7.0.11
-microsoft.aspnetcore.signalr.client.core@7.0.11
-microsoft.aspnetcore.signalr.common@7.0.11
-microsoft.aspnetcore.signalr.protocols.json@7.0.11
-microsoft.aspnetcore.signalr.protocols.messagepack@7.0.11
-microsoft.aspnetcore.signalr.protocols.newtonsoftjson@7.0.11
+messagepack@2.5.129
+messagepack.annotations@2.5.129
+microsoft.aspnetcore.connections.abstractions@7.0.12
+microsoft.aspnetcore.http.connections.client@7.0.12
+microsoft.aspnetcore.http.connections.common@7.0.12
+microsoft.aspnetcore.signalr.client@7.0.12
+microsoft.aspnetcore.signalr.client.core@7.0.12
+microsoft.aspnetcore.signalr.common@7.0.12
+microsoft.aspnetcore.signalr.protocols.json@7.0.12
+microsoft.aspnetcore.signalr.protocols.messagepack@7.0.12
+microsoft.aspnetcore.signalr.protocols.newtonsoftjson@7.0.12
 microsoft.codeanalysis.bannedapianalyzers@3.3.4
 microsoft.csharp@4.5.0
 microsoft.csharp@4.7.0
-microsoft.data.sqlite.core@7.0.11
+microsoft.data.sqlite.core@7.0.12
 microsoft.diagnostics.netcore.client@0.2.61701
 microsoft.diagnostics.runtime@2.0.161401
 microsoft.dotnet.platformabstractions@2.0.3
@@ -96,7 +90,7 @@ microsoft.extensions.dependencyinjection@7.0.0
 microsoft.extensions.dependencyinjection.abstractions@6.0.0-rc.1.21451.13
 microsoft.extensions.dependencyinjection.abstractions@7.0.0
 microsoft.extensions.dependencymodel@2.0.3
-microsoft.extensions.features@7.0.11
+microsoft.extensions.features@7.0.12
 microsoft.extensions.logging@7.0.0
 microsoft.extensions.logging.abstractions@7.0.0
 microsoft.extensions.logging.abstractions@7.0.1
@@ -109,12 +103,6 @@ microsoft.netcore.app.host.linux-arm64@6.0.12
 microsoft.netcore.app.host.linux-musl-arm@6.0.12
 microsoft.netcore.app.host.linux-musl-arm64@6.0.12
 microsoft.netcore.app.host.linux-musl-x64@6.0.12
-microsoft.netcore.app.runtime.linux-arm@6.0.12
-microsoft.netcore.app.runtime.linux-arm64@6.0.12
-microsoft.netcore.app.runtime.linux-musl-arm@6.0.12
-microsoft.netcore.app.runtime.linux-musl-arm64@6.0.12
-microsoft.netcore.app.runtime.linux-musl-x64@6.0.12
-microsoft.netcore.app.runtime.linux-x64@6.0.12
 microsoft.netcore.platforms@1.0.1
 microsoft.netcore.platforms@1.1.0
 microsoft.netcore.platforms@2.0.0
@@ -152,10 +140,10 @@ ppy.localisationanalyser@2023.712.0
 ppy.managedbass@2022.1216.0
 ppy.managedbass.fx@2022.1216.0
 ppy.managedbass.mix@2022.1216.0
-ppy.osu.framework@2023.1006.0
-ppy.osu.framework.nativelibs@2023.1004.1-nativelibs
+ppy.osu.framework@2023.1111.0
+ppy.osu.framework.nativelibs@2023.1013.0-nativelibs
 ppy.osu.framework.sourcegeneration@2023.720.0
-ppy.osu.game.resources@2023.1003.0
+ppy.osu.game.resources@2023.1110.0
 ppy.osutk.ns20@1.0.211
 ppy.sdl2-cs@1.0.671-alpha
 ppy.veldrid@4.9.3-g91ce5a6cda
@@ -208,9 +196,9 @@ runtime.unix.system.net.primitives@4.3.0
 runtime.unix.system.net.sockets@4.3.0
 runtime.unix.system.private.uri@4.3.0
 runtime.unix.system.runtime.extensions@4.3.0
-sentry@3.39.1
-sharpcompress@0.31.0
+sentry@3.40.0
 sharpcompress@0.33.0
+sharpcompress@0.34.1
 sharpfnt@2.0.0
 sharpgen.runtime@2.0.0-beta.13
 sharpgen.runtime.com@2.0.0-beta.13
@@ -343,9 +331,10 @@ vortice.direct3d11@2.4.2
 vortice.directx@2.4.2
 vortice.dxgi@2.4.2
 vortice.mathematics@1.4.25
+zstdsharp.port@0.7.2
 "
 
-inherit multiprocessing dotnet-pkg desktop xdg
+inherit dotnet-pkg desktop xdg
 
 DESCRIPTION="rhythm is just a *click* away! "
 HOMEPAGE="
@@ -358,12 +347,14 @@ if [[ ${PV} == *9999* ]] ; then
 	EGIT_REPO_URI="https://github.com/ppy/osu.git"
 else
 	SRC_URI="https://github.com/ppy/osu/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	SRC_URI+=" ${NUGET_URIS} "
 	# updtream supported runtime:
 	# linux-{,musl-}{arm,arm64,x64,x86}
 	# only tested on linux-x64
 	KEYWORDS="~amd64"
+	S="${WORKDIR}/osu-${PV}"
 fi
+
+SRC_URI+=" ${NUGET_URIS} "
 
 LICENSE="MIT CC-BY-NC-4.0"
 SLOT="0"
@@ -381,38 +372,29 @@ RDEPEND="
 "
 BDEPEND="${DEPEND}"
 
-S="${WORKDIR}/osu-${PV}"
 DOTNET_PKG_PROJECTS=( "${S}/osu.Desktop/osu.Desktop.csproj" )
 
 DOCS=( README.md )
 
+src_unpack() {
+	dotnet-pkg_src_unpack
+
+	[[ ${EGIT_REPO_URI} ]] && git-r3_src_unpack
+}
+
 src_configure() {
-	# skip dotnet restore here
+	dotnet-pkg-base_info
+	dotnet-pkg_foreach-project dotnet-pkg-base_restore
+	# skip **dotnet-pkg-base_foreach-solution** here
 	# avoid requiring android workloads
-	return
 }
 
 src_compile() {
-	# DOTNET_PKG_* variables are set by dotnet-pkg.eclass
-	local -a build_args=(
-		--configuration "${DOTNET_PKG_CONFIGURATION}"
-		--output "${DOTNET_PKG_OUTPUT}"
-		--runtime "${DOTNET_PKG_RUNTIME}"
-		-maxCpuCount:$(makeopts_jobs)
-		--source "${NUGET_PACKAGES}"
-		--no-self-contained
+	DOTNET_PKG_BUILD_EXTRA_ARGS+=(
 		-f net6.0
-		/property:Version="${PV}"
+		-p:Version="${PV}"
 	)
-
-	if ! use debug ; then
-		build_args+=(
-			-p:StripSymbols=true
-			-p:NativeDebugSymbols=false
-		)
-	fi
-
-	edotnet build "${DOTNET_PKG_PROJECTS}" "${build_args[@]}"
+	dotnet-pkg_src_compile
 }
 
 src_install() {
