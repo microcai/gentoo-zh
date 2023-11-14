@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-14 21:01:13 CST)
+(The last generation time: 2023-11-14 21:19:53 CST)
 
 ### Packages
 
@@ -493,6 +493,10 @@
    media-libs/libjpeg8                      | 2.1.4                                     |  D, RD | https://libjpeg-turbo.org/                                                              | MMX, SSE, and SSE2 SIMD accelerated JPEG library
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/cgproxy                          | 0.20-r1                                   |        | https://github.com/springzfx/cgproxy                                                    | Transparent Proxy with cgroup v2
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ net-proxy/clash-meta                       | 1.16.0                                    |        | https://github.com/MetaCubeX/Clash.Meta                                                 | Another Clash Kernel.
+   acct-group/clash-meta                    | 0                                         |  D, RD |                                                                                         | Another Clash Kernel.
+   acct-user/clash-meta                     | 0                                         |  D, RD |                                                                                         | Another Clash Kernel.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/dae                              | 0.3.0                                     |        | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
                                             | 9999                                      |        |                                                                                         |
