@@ -10,7 +10,6 @@ HOMEPAGE="https://github.com/daeuniverse/dae"
 
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS=""
 MINKV="5.8"
 
 EGIT_REPO_URI="https://github.com/daeuniverse/dae.git"

@@ -26,7 +26,6 @@ DEPEND="dev-vcs/git
 		dev-python/conda-package-streaming[${PYTHON_USEDEP}]
 		dev-python/pycosat[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 IUSE="+user"
 

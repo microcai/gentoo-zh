@@ -16,11 +16,8 @@ S="${WORKDIR}/NX/etc/NX/player/packages"
 LICENSE="nomachine"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 RESTRICT="strip"
 
-DEPEND=""
-BDEPEND=""
 RDEPEND="dev-libs/glib:2
 		sys-libs/libudev-compat
 		virtual/libcrypt:0

@@ -13,7 +13,6 @@ SRC_URI="http://kaufmann.no/downloads/linux/${MY_P}.map.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 mips x86"
-IUSE=""
 
 DEPEND="app-arch/gzip"
 RDEPEND="sys-apps/kbd"

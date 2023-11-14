@@ -25,10 +25,7 @@ fi
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
-IUSE=""
 
-BDEPEND=""
-DEPEND=""
 RDEPEND="$(python_gen_cond_dep 'dev-python/six[${PYTHON_USEDEP}]')"
 
 PATCHES=(

@@ -13,9 +13,6 @@ SRC_URI="https://github.com/laishulu/Sarasa-Term-SC-Nerd/releases/download/v${PV
 LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
-DEPEND=""
-RDEPEND=""
 
 RESTRICT="mirror"
 

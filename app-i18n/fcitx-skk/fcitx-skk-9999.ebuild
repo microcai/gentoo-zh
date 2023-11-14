@@ -10,7 +10,6 @@ HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-skk"
 if [[ "${PV}" =~ (^|\.)9999$ ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-skk"
-	SRC_URI=""
 else
 	KEYWORDS="~amd64 ~x86"
 	MY_PN="fcitx5-skk"

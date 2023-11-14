@@ -19,7 +19,6 @@ HOMEPAGE="https://fcitx-im.org/ https://gitlab.com/fcitx/libime"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-IUSE=""
 
 RDEPEND="app-i18n/fcitx:5"
 DEPEND="${RDEPEND}

@@ -18,7 +18,6 @@ inherit systemd distutils-r1
 DEPEND="net-dialup/ppp"
 
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 src_install(){
     distutils-r1_src_install

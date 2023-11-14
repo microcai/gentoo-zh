@@ -16,8 +16,4 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ~arm64 ~riscv ~x86"
 
-DEPEND=""
-RDEPEND="${DEPEND}"
-BDEPEND=""
-
 distutils_enable_tests pytest

@@ -18,9 +18,7 @@ LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD Boost-1.0 CC0-1.0 I
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND=""
 RDEPEND="
-	${DEPEND}
 	net-libs/webkit-gtk:4
 	x11-libs/gtk+:3
 	!net-misc/biliup-app

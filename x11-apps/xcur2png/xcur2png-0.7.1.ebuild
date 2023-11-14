@@ -11,7 +11,6 @@ SRC_URI="https://github.com/eworm-de/xcur2png/releases/download/${PV}/${P}.tar.g
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
 DEPEND="media-libs/libpng
 	x11-libs/libXcursor"

@@ -332,10 +332,6 @@ IUSE="debug"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND=""
-RDEPEND="${DEPEND}"
-BDEPEND=""
-
 QA_FLAGS_IGNORED="usr/bin/${PN}"
 
 src_install()

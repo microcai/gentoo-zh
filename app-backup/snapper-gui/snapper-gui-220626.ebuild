@@ -15,12 +15,9 @@ EGIT_COMMIT=1915750
 
 LICENSE="GPL-2+"
 SLOT="0"
-IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-DEPEND=""
 RDEPEND="
-	${DEPEND}
 	app-backup/snapper
 	$(python_gen_cond_dep 'dev-python/dbus-python[${PYTHON_USEDEP}] dev-python/pygobject[${PYTHON_USEDEP}]')
 	x11-libs/gtksourceview:3.0

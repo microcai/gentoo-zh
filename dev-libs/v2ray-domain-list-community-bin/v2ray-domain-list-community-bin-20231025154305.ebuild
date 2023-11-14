@@ -13,10 +13,7 @@ KEYWORDS="~amd64 ~arm ~arm64 ~riscv ~x86"
 
 RESTRICT="mirror"
 
-DEPEND=""
-RDEPEND="${DEPEND}
-	!dev-libs/v2ray-domain-list-community"
-BDEPEND=""
+RDEPEND="!dev-libs/v2ray-domain-list-community"
 
 S="${WORKDIR}"
 

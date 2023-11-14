@@ -14,9 +14,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="static-libs"
 
-DEPEND=""
-RDEPEND="${DEPEND}"
-
 S="${WORKDIR}/${P}/${PN}"
 
 # dirty hack, since I can't properly patch buildsystem

@@ -18,9 +18,6 @@ IUSE="static-libs"
 
 RESTRICT="mirror"
 
-DEPEND=""
-RDEPEND="${DEPEND}"
-
 S="${WORKDIR}/${PN}-debian-${MY_PV}"
 
 PATCHES=(

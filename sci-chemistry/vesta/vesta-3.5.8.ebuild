@@ -12,11 +12,9 @@ SRC_URI="https://jp-minerals.org/vesta/archives/${PV}/VESTA-gtk3.tar.bz2 -> ${PN
 LICENSE="VESTA"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 RESTRICT="mirror strip"
 
-DEPEND=""
 RDEPEND="
 	x11-libs/gtk+:3[wayland]
 	virtual/glu
@@ -24,7 +22,6 @@ RDEPEND="
 	x11-libs/libXtst
 	virtual/jdk
 	${DEPEND}"
-BDEPEND=""
 
 S="${WORKDIR}/VESTA-gtk3"
 

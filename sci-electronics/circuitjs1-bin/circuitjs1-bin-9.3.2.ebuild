@@ -48,7 +48,6 @@ DEPEND="
 	x11-libs/pango
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 S="${WORKDIR}/${MY_PN}"
 

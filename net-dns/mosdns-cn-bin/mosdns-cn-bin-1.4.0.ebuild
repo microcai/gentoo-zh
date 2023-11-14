@@ -10,7 +10,6 @@ SRC_URI="https://github.com/IrineSistiana/mosdns-cn/releases/download/v${PV}/mos
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 DEPEND="
 	dev-libs/v2ray-domain-list-community-bin

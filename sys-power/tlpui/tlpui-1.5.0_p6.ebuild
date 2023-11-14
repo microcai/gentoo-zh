@@ -23,13 +23,10 @@ SRC_URI="https://github.com/d4nj1/TLPUI/archive/refs/tags/${MY_P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 RESTRICT="test"
 
-DEPEND=""
 RDEPEND="
-	${DEPEND}
 	sys-power/tlp
 	$(python_gen_cond_dep 'dev-python/pycairo[${PYTHON_USEDEP}] dev-python/pygobject[${PYTHON_USEDEP}]')
 	x11-libs/gtksourceview:3.0

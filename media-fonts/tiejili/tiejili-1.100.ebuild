@@ -13,7 +13,6 @@ SRC_URI="https://github.com/Buernia/Tiejili/archive/refs/tags/${PV}.tar.gz -> ${
 LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 FONT_SUFFIX="ttf otf"

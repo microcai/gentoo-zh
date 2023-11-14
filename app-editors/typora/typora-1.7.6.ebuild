@@ -12,16 +12,12 @@ SRC_URI="https://download.typora.io/linux/typora_${PV}_amd64.deb"
 LICENSE="typora"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 RESTRICT="mirror splitdebug"
 
-DEPEND=""
 RDEPEND="
 	x11-libs/libXScrnSaver
-	net-print/cups
-	${DEPEND}"
-BDEPEND=""
+	net-print/cups"
 
 QA_PREBUILT="*"
 

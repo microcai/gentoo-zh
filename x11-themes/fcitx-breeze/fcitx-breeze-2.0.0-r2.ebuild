@@ -16,7 +16,6 @@ DEPEND="
 	media-gfx/inkscape"
 RDEPEND="
 	app-i18n/fcitx:5"
-BDEPEND=""
 
 S="${WORKDIR}/fcitx5-breeze-$PV"
 

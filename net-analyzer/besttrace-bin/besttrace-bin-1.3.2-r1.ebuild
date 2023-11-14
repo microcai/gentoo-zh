@@ -14,8 +14,6 @@ LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 
-DEPEND=""
-RDEPEND="${DEPEND}"
 BDEPEND="app-arch/unzip"
 
 FILECAPS=( cap_net_raw=ep /usr/bin/besttrace )

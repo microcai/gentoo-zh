@@ -47,7 +47,6 @@ DEPEND="gui-libs/egl-wayland
 		media-video/obs-studio
 	)"
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 

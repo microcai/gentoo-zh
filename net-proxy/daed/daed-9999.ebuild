@@ -7,12 +7,10 @@ inherit flag-o-matic git-r3 go-module systemd
 
 DESCRIPTION="A Modern Dashboard For dae"
 HOMEPAGE="https://github.com/daeuniverse/daed"
-# SRC_URI=""
 EGIT_REPO_URI="https://github.com/daeuniverse/daed.git"
 
 LICENSE="MIT AGPL-3"
 SLOT="0"
-KEYWORDS=""
 RESTRICT="strip"
 
 DEPEND="
