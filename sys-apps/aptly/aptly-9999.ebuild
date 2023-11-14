@@ -9,12 +9,9 @@ inherit bash-completion-r1 git-r3 go-module systemd
 
 DESCRIPTION="A swiss army knife for Debian repository management"
 HOMEPAGE="https://github.com/aptly-dev/aptly"
-SRC_URI=""
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
-IUSE=""
 RESTRICT="test" # fails
 
 RDEPEND="acct-user/aptly"

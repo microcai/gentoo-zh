@@ -7,7 +7,6 @@ inherit autotools git-r3
 
 DESCRIPTION="Library for communication with TI calculators"
 HOMEPAGE="http://lpg.ticalc.org/prj_tilp/"
-SRC_URI=""
 
 EGIT_REPO_URI="https://github.com/debrouxl/tilibs.git"
 
@@ -15,7 +14,6 @@ MY_PN="libticalcs"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
 IUSE="doc nls static-libs"
 
 RDEPEND="

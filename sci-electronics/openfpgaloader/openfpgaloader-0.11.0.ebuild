@@ -25,7 +25,6 @@ DEPEND="
 	cmsisdap? ( dev-libs/hidapi )
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 src_configure() {
 

@@ -14,7 +14,6 @@ SRC_URI="https://dldir1.qq.com/qqtv/linux/Tenvideo_universal_${PV}_amd64.deb"
 SLOT="0"
 #RESTRICT="strip mirror" # mirror as explained at bug #547372
 LICENSE="tenvideo-privacy"
-IUSE=""
 
 RDEPEND="
 	app-accessibility/at-spi2-atk

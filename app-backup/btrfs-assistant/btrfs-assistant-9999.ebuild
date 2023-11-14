@@ -5,7 +5,6 @@ EAPI=8
 
 inherit xdg cmake git-r3 optfeature
 EGIT_REPO_URI="${HOMEPAGE}"
-KEYWORDS=""
 
 DESCRIPTION="A GUI management tool to make managing a Btrfs filesystem easier."
 HOMEPAGE="https://gitlab.com/btrfs-assistant/btrfs-assistant"

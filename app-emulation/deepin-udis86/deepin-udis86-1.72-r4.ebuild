@@ -14,11 +14,6 @@ SRC_URI="${COMMON_URI}/udis86/udis86_${PV}-${PR/r/}_i386.deb"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
-
-DEPEND=""
-RDEPEND="${DEPEND}
-	"
 
 S=${WORKDIR}
 

@@ -12,7 +12,6 @@ SRC_URI="https://github.com/alvatip/Nordzy-icon/releases/download/${PV}/Nordzy.t
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
 S="${WORKDIR}"
 

@@ -6,6 +6,9 @@ PYTHON_COMPAT=( python3_{9..11} )
 
 inherit elisp-common multiprocessing python-any-r1 toolchain-funcs desktop xdg
 
+DESCRIPTION="Mozc - Japanese input method editor"
+HOMEPAGE="https://github.com/google/mozc"
+
 if [[ "${PV}" == "9999" ]]; then
 	inherit git-r3
 
@@ -23,13 +26,7 @@ else
 
 	JAPANESE_USAGE_DICTIONARY_GIT_REVISION="a4a66772e33746b91e99caceecced9a28507e925"
 	JAPANESE_USAGE_DICTIONARY_DATE="20180701040110"
-fi
 
-DESCRIPTION="Mozc - Japanese input method editor"
-HOMEPAGE="https://github.com/google/mozc"
-if [[ "${PV}" == "9999" ]]; then
-	SRC_URI=""
-else
 	SRC_URI="https://github.com/google/${PN}/archive/${MOZC_GIT_REVISION}.tar.gz -> ${PN}-${PV%%_p*}-${MOZC_DATE}.tar.gz
 		https://github.com/hiroyuki-komatsu/japanese-usage-dictionary/archive/${JAPANESE_USAGE_DICTIONARY_GIT_REVISION}.tar.gz -> japanese-usage-dictionary-${JAPANESE_USAGE_DICTIONARY_DATE}.tar.gz
 		https://github.com/fcitx/${PN}/archive/${FCITX_MOZC_GIT_REVISION}.tar.gz -> fcitx-${PN}-${PV%%_p*}-${FCITX_MOZC_DATE}.tar.gz"

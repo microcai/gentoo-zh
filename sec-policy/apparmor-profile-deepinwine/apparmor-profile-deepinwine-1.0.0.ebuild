@@ -5,7 +5,6 @@ EAPI=8
 
 DESCRIPTION="A collection of AppArmor profiles for Deepinwine6"
 HOMEPAGE="https://gitlab.com/apparmor/apparmor/wikis/home"
-SRC_URI=""
 
 LICENSE="MIT"
 SLOT="0"

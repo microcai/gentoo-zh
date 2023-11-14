@@ -9,7 +9,6 @@ inherit git-r3 systemd python-r1
 
 DESCRIPTION="Wait until we're connected to the Internet"
 HOMEPAGE="https://github.com/lilydjwg/wait-online"
-# SRC_URI=""
 EGIT_REPO_URI="https://github.com/lilydjwg/wait-online"
 
 LICENSE="GPL-3"

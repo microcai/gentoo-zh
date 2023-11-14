@@ -20,7 +20,6 @@ fi
 
 LICENSE="GPL-2"
 SLOT="5"
-IUSE=""
 
 RDEPEND="
 	>=app-i18n/fcitx-5.1.0:5

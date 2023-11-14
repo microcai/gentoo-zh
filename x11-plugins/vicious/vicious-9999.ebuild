@@ -18,7 +18,6 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="contrib"
 
-DEPEND=""
 RDEPEND="x11-wm/awesome"
 
 src_install() {

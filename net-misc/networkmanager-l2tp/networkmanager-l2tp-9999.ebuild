@@ -11,13 +11,11 @@ MY_PN="${PN/networkmanager/NetworkManager}"
 DESCRIPTION="NetworkManager L2TP plugin"
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 #SRC_URI="${SRC_URI//${PN}/${MY_PN}}"
-SRC_URI=""
 
 EGIT_REPO_URI="https://github.com/microcai/NetworkManager-l2tp.git"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
 IUSE="gnome"
 
 RDEPEND="

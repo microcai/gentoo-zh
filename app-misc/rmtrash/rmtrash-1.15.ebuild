@@ -10,15 +10,10 @@ SRC_URI="https://github.com/PhrozenByte/rmtrash/archive/v${PV}.tar.gz -> ${PN}-$
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 RESTRICT="mirror"
 
-DEPEND=""
-RDEPEND="
-	app-misc/trash-cli
-	${DEPEND}"
-BDEPEND=""
+RDEPEND="app-misc/trash-cli"
 
 src_install() {
 	insinto /usr/bin

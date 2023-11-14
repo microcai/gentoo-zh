@@ -10,15 +10,10 @@ HOMEPAGE="http://www.zeromq.org/bindings:java"
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="https://github.com/zeromq/jzmq.git"
 	vcs=git-r3
-else
-	SRC_URI=""
-	KEYWORDS=""
 fi
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS=""
-IUSE=""
 
 DEPEND="net-libs/zeromq
 	>=virtual/jre-1.7:*"

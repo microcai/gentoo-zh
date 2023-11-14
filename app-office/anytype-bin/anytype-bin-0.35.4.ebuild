@@ -13,7 +13,6 @@ SRC_URI="https://anytype-release.fra1.cdn.digitaloceanspaces.com/Anytype-${PV}.A
 LICENSE="ASAL-1.0"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 RESTRICT="strip"
 

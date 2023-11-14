@@ -12,11 +12,7 @@ SRC_URI="https://github.com/ButTaiwan/iansui/archive/refs/tags/v${PV}.tar.gz -> 
 LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
-RDEPEND=""
-DEPEND=""
-BDEPEND=""
 FONT_SUFFIX="ttf"
 
 src_unpack() {

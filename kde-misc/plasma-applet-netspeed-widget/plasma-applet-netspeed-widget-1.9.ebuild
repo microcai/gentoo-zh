@@ -19,7 +19,6 @@ https://github.com/dfaust/plasma-applet-netspeed-widget"
 
 LICENSE="GPL-2+"
 SLOT="5"
-IUSE=""
 
 DEPEND="
 	kde-plasma/ksysguard:5

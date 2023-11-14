@@ -32,7 +32,6 @@ DEPEND="
 	|| ( <dev-libs/openssl-3 dev-libs/openssl-compat )
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
 S=${WORKDIR}
 src_unpack(){
 	unpack_deb ${PN}-amd64-${PV}.deb

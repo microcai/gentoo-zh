@@ -68,8 +68,6 @@ RDEPEND="
 	x11-libs/libXrender
 	x11-libs/libXtst
 "
-DEPEND=""
-BDEPEND=""
 
 S="${WORKDIR}"
 

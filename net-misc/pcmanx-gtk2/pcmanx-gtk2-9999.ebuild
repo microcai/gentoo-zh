@@ -10,7 +10,6 @@ HOMEPAGE="https://github.com/pcman-bbs/pcmanx"
 
 EGIT_REPO_URI="https://github.com/pcman-bbs/pcmanx.git"
 
-#KEYWORDS=""
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="+libnotify +proxy iplookup +wget"

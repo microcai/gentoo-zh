@@ -11,7 +11,6 @@ EGIT_REPO_URI="https://github.com/persmule/amule-dlp.antiLeech.git"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
 IUSE="X"
 
 DEPEND="x11-libs/wxGTK:${WX_GTK_VER}"
