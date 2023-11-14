@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-14 07:03:58 CST)
+(The last generation time: 2023-11-14 08:42:34 CST)
 
 ### Packages
 
@@ -312,8 +312,6 @@
  media-fonts/wangfonts                      | 1.3.0                                     |        | https://code.google.com/p/wangfonts/                                                    | Free Chinese TrueType fonts donated by Prof. Hann-Tzong Wang
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/zhudou                         | 2.000                                     |        | https://github.com/Buernia/Zhudou-Sans                                                  | A font family for CJK symbols and punctuation, derived from Noto Sans.
---------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-gfx/byzanz                           | 0.3.0.9999                                |        | https://gitlab.gnome.org/Archive/byzanz/                                                | Screencasting program that saves casts as GIF files
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/scangearmp                       | 1.60                                      |        | http://support-au.canon.com.au/contents/AU/EN/0100303302.html                           | Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
                                             | 2.4.10                                    |        |                                                                                         |
