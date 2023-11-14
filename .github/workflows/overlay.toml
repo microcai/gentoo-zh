@@ -860,11 +860,6 @@ source = "github"
 github = "pcman-bbs/pcmanx"
 use_latest_release = true
 
-["net-misc/postman-bin"]
-source = "aur"
-aur = "postman-bin"
-strip_release = 'yes'
-
 ["net-misc/prips"]
 source = "regex"
 url = "https://devel.ringlet.net/sysutils/prips/"
