@@ -202,6 +202,8 @@ net-p2p/n2n:pcap - Use libpcap support
 net-p2p/n2n:upnp - Use miniupnpc and libnatpmp support
 net-p2p/n2n:zstd - Use zstd support
 net-p2p/qbittorrent-enhanced:webui - Enable the Web UI
+net-proxy/clash-meta:gvisor - enable TUN stack support for gvisor
+net-proxy/clash-meta:lwip - enable TUN stack support for lwip
 net-proxy/daed:webui - Build and install daed instead of dae-wing
 net-proxy/hysteria:goamd64 - detect golang arch level on amd64 cpus by CPU_FLAGS_X86
 net-proxy/juicity:client - install juicity-client

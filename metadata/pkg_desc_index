@@ -1,8 +1,10 @@
 acct-group/aptly 0: System group: aptly
+acct-group/clash-meta 0: System group: clash-meta
 acct-group/hysteria 0: System group: hysteria
 acct-group/keyd 0: System group: keyd
 acct-group/n2n 0: System group: n2n
 acct-user/aptly 0: System user: aptly
+acct-user/clash-meta 0: System user: clash-meta
 acct-user/hysteria 0: System user: hysteria
 acct-user/n2n 0: System user: n2n
 app-admin/supersm 0.5.1: Super Symlink Manager
@@ -234,6 +236,7 @@ net-print/epson-inkjet-printer_201207w 1.0.0: Epson printer driver (L110, L210, 
 net-print/pantum 1.1.94: 奔图打印机Linux驱动
 net-proxy/Xray 1.7.5 1.8.4: Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
 net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
+net-proxy/clash-meta 1.16.0: Another Clash Kernel.
 net-proxy/dae 0.3.0 9999: A lightweight and high-performance transparent proxy solution based on eBPF
 net-proxy/daed 0.3.3_p1 9999: A Modern Dashboard For dae
 net-proxy/hysteria 2.2.0: A powerful, lightning fast and censorship resistant proxy.
