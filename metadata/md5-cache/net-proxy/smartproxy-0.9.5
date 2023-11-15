@@ -1,15 +1,15 @@
-BDEPEND=>=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile configure install prepare test unpack
+BDEPEND=>=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare test
 DEPEND=dev-libs/openssl
 DESCRIPTION=A fast, proxy smart selector
 EAPI=7
 HOMEPAGE=https://github.com/microcai/smartproxy
-INHERIT=cmake git-r3
+INHERIT=cmake
 KEYWORDS=amd64 x86
 LICENSE=GPL-3+
-PROPERTIES=live
 RDEPEND=dev-libs/openssl
 RESTRICT=mirror
 SLOT=0
-_eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	baa4d385108ac87993edac956a916a36	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271	git-r3	5133e393e8717a3a093660f990801dc1
-_md5_=1ea770a4a8bc86ee8a7e52966c8ce395
+SRC_URI=https://github.com/microcai/smartproxy/archive/refs/tags/v0.9.5.tar.gz -> smartproxy-0.9.5.tar.gz
+_eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	baa4d385108ac87993edac956a916a36	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271
+_md5_=0491270a5199f891ec60095e8c4f414d

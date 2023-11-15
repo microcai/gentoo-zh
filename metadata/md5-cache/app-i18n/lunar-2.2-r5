@@ -1,11 +1,9 @@
 DEFINED_PHASES=install
 DESCRIPTION=Chinese Lunar Calendar conversion utility
-EAPI=7
+EAPI=8
 HOMEPAGE=https://packages.debian.org/unstable/utils/lunar
-INHERIT=toolchain-funcs
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://debian/pool/main/l/lunar/lunar_2.2.orig.tar.gz mirror://debian/pool/main/l/lunar/lunar_2.2-9.debian.tar.xz
-_eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0
-_md5_=b64aa5be3a94d6cf409e7c18f6dd87f3
+_md5_=687b326fbdb25c215b40e31512389354

@@ -210,7 +210,6 @@ net-proxy/juicity:client - install juicity-client
 net-proxy/juicity:server - install juicity-server
 net-proxy/shadowsocks-rust:redir - Enable redir protocol for sslocal (transparent proxy)
 net-proxy/shadowsocks-rust:tun - Enable Tun interface protocol for sslocal
-net-proxy/smartproxy:system-boost - use system supplied boost
 net-proxy/v2rayA:xray - To be able to use net-proxy/Xray. Disable the v2ray useflag to use xray as default
 sci-electronics/openfpgaloader:cmsisdap - enable cmsis-dap support
 sci-electronics/openfpgaloader:gpio - enable libgpiod bitbang support
