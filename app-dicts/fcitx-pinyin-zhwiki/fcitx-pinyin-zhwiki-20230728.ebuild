@@ -16,8 +16,6 @@ LICENSE="Unlicense"
 SLOT="5"
 KEYWORDS="~amd64 ~mips ~x86"
 
-DEPEND=""
-BDEPEND=""
 RDEPEND="app-i18n/fcitx:5"
 
 S="${DISTDIR}"

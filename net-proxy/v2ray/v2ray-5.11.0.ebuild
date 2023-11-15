@@ -18,8 +18,7 @@ KEYWORDS="~amd64 ~arm ~arm64 ~riscv ~x86"
 
 RESTRICT="mirror"
 
-DEPEND=""
-RDEPEND="${DEPEND}
+RDEPEND="
 	!net-proxy/v2ray-bin
 	app-alternatives/v2ray-geoip
 	app-alternatives/v2ray-geosite"

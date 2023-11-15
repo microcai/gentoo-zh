@@ -9,7 +9,6 @@ SRC_URI="https://gist.githubusercontent.com/ibLeDy/aecab4b95b242ff07108c6d58e35d
 
 inherit toolchain-funcs
 
-LICENSE=""
 SLOT="0"
 KEYWORDS="~amd64"
 
@@ -17,7 +16,6 @@ DEPEND="x11-libs/libX11
 x11-libs/libXext"
 
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 S="${WORKDIR}"
 

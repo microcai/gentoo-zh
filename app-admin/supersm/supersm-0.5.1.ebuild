@@ -18,8 +18,6 @@ fi
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~riscv"
-IUSE=""
 
 DEPEND="dev-libs/boost"
 RDEPEND="${DEPEND}"
-BDEPEND=""

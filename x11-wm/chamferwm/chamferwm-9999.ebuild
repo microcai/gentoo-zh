@@ -5,7 +5,6 @@ EAPI=7
 
 DESCRIPTION="A tiling X11 window manager with Vulkan compositor."
 HOMEPAGE="https://github.com/jaelpark/chamferwm"
-SRC_URI=""
 
 EGIT_REPO_URI="https://github.com/jaelpark/chamferwm.git git://github.com/jaelpark/chamferwm.git"
 
@@ -13,8 +12,6 @@ inherit git-r3 meson
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
-IUSE=""
 
 DEPEND="
 	dev-libs/boost[python]
@@ -28,7 +25,6 @@ RDEPEND="
 	dev-libs/boost[python]
 "
 
-BDEPEND=""
 
 src_prepare(){
 	sed -i "s/python3')/python-3.7')/g" meson.build

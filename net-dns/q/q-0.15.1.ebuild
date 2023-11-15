@@ -13,12 +13,9 @@ SRC_URI="
 	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
 "
 
-DEPEND=""
-RDEPEND="${DEPEND}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
-IUSE=""
 
 src_compile() {
 	local ldflags="\

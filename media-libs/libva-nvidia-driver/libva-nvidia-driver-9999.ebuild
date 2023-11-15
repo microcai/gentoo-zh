@@ -14,7 +14,6 @@ if [[ ${PV} != *9999* ]] ; then
 	S="${WORKDIR}/nvidia-vaapi-driver-${PV}"
 else
 	EGIT_REPO_URI="https://github.com/elFarto/nvidia-vaapi-driver.git"
-	KEYWORDS=""
 	inherit git-r3
 fi
 

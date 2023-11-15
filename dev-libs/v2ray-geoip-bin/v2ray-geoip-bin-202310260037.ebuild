@@ -13,10 +13,6 @@ SLOT="0"
 
 RESTRICT="mirror"
 
-DEPEND=""
-RDEPEND="${DEPEND}"
-BDEPEND=""
-
 S="${WORKDIR}"
 
 src_install() {

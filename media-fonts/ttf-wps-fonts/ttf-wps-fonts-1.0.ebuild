@@ -11,7 +11,6 @@ HOMEPAGE="https://github.com/iamdh4/ttf-wps-fonts"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="amd64 arm ppc ppc64 x86"
-IUSE=""
 
 EGIT_REPO_URI="https://github.com/iamdh4/ttf-wps-fonts.git"
 

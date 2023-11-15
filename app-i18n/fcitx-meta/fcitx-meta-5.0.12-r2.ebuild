@@ -11,7 +11,6 @@ SLOT="5"
 KEYWORDS="~amd64 ~arm64 ~loong ~x86"
 IUSE="+configtool +chinese-addons gtk2 +gtk3 gtk4 hangul lua +qt5 rime skk"
 
-DEPEND=""
 RDEPEND="
 	app-i18n/fcitx:${SLOT}
 	configtool? ( app-i18n/fcitx-configtool:${SLOT} )
@@ -32,4 +31,3 @@ RDEPEND="
 		)
 	)
 "
-BDEPEND=""

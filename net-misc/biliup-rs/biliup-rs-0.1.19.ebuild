@@ -354,7 +354,7 @@ CRATES="
 inherit cargo
 
 DESCRIPTION="Upload video to bilibili."
-HOMEPAGE=""
+HOMEPAGE="https://github.com/biliup/biliup-rs"
 SRC_URI="
 	https://github.com/biliup/biliup-rs/archive/refs/tags/v${PV}.tar.gz
 	${CARGO_CRATE_URIS}

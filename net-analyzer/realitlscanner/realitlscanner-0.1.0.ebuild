@@ -11,12 +11,9 @@ SRC_URI="
 	https://github.com/XTLS/RealiTLScanner/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 "
 
-DEPEND=""
-RDEPEND="${DEPEND}"
 LICENSE="MPL-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
-IUSE=""
 S="${WORKDIR}/RealiTLScanner-${PV}"
 
 src_compile() {

@@ -11,8 +11,6 @@ EGIT_REPO_URI="https://github.com/lotem/${PN}.git"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
-IUSE=""
 
 COMMON_DEPEND="app-i18n/ibus
 	app-i18n/librime

@@ -20,4 +20,3 @@ DEPEND="sys-devel/llvm:=
 dev-util/lldb
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""

@@ -12,8 +12,6 @@ EGIT_REPO_URI="https://github.com/v2fly/geoip.git"
 LICENSE="CC-BY-SA-4.0"
 SLOT="0"
 
-DEPEND=""
-RDEPEND="${DEPEND}"
 BDEPEND=">=dev-lang/go-1.16:="
 
 src_unpack() {

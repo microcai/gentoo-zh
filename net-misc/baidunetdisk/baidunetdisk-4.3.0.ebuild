@@ -13,7 +13,6 @@ LICENSE="BaiduNetDisk"
 SLOT="0"
 RESTRICT="strip"
 KEYWORDS="-* ~amd64"
-IUSE=""
 
 QA_PREBUILT="*"
 

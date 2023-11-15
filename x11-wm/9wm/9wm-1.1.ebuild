@@ -12,7 +12,6 @@ SRC_URI="http://unauthorised.org/dhog/${PN}/${P}.tar.gz"
 LICENSE="9wm"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext

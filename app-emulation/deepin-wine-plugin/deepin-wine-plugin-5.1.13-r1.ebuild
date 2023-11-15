@@ -18,8 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="+virtual-pkg"
 
-DEPEND=""
-RDEPEND="${DEPEND}
+RDEPEND="
 	virtual-pkg? (
 		app-arch/p7zip
 		$(python_gen_cond_dep '

@@ -12,10 +12,7 @@ SRC_URI="
 LICENSE="Bcompare"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 RESTRICT="mirror"
-RDEPEND=""
-
 
 # qt4
 #	libQtCore.so.4
@@ -78,12 +75,6 @@ QA_FLAGS_IGNORED="
 	/opt/bcompare/lib64/beyondcompare/ext/bcompare-ext-nautilus.amd64.so
 	/opt/bcompare/lib64/beyondcompare/ext/bcompare-ext-caja.i386.so
 	/opt/bcompare/lib64/beyondcompare/ext/bcompare-ext-caja.amd64.so
-	/opt/bcompare/lib64/beyondcompare/qt4/libQtGui.so.4
-	/opt/bcompare/lib64/beyondcompare/qt4/libQtCore.so.4
-"
-QA_PRESTRIPPED="
-	/opt/bcompare/lib64/beyondcompare/lib7z.so
-	/opt/bcompare/lib64/beyondcompare/BCompare
 	/opt/bcompare/lib64/beyondcompare/qt4/libQtGui.so.4
 	/opt/bcompare/lib64/beyondcompare/qt4/libQtCore.so.4
 "

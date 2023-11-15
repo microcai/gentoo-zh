@@ -11,11 +11,6 @@ SRC_URI="https://github.com/mongodb-js/compass/releases/download/v${PV}/mongodb-
 LICENSE="SSPL-1"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
-
-DEPEND=""
-RDEPEND="${DEPEND}"
-BDEPEND=""
 
 S="${WORKDIR}"
 

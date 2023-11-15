@@ -11,12 +11,9 @@ SRC_URI="https://github.com/lolilolicon/${PN}/archive/${PV}.tar.gz -> ${P}.tar.g
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
-IUSE=""
 
 RESTRICT="mirror"
 
-DEPEND=""
 RDEPEND="${DEPEND}
 	x11-libs/libX11"
 

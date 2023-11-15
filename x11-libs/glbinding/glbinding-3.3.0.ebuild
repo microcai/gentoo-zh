@@ -17,10 +17,6 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 arm arm64"
 
-DEPEND=""
-RDEPEND="${DEPEND}"
-BDEPEND=""
-
 PATCHES=(
     ${FILESDIR}/glbinding-fix-install.patch
 )

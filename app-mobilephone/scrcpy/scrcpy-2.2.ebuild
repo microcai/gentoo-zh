@@ -25,7 +25,6 @@ HOMEPAGE="https://blog.rom1v.com/2018/03/introducing-scrcpy/"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE=""
 
 RESTRICT="test"
 
@@ -37,7 +36,6 @@ DEPEND="${COMMON_DEPEND}"
 RDEPEND="
 	${COMMON_DEPEND}
 	dev-util/android-tools"
-PDEPEND=""
 
 src_configure() {
 	local emesonargs=(

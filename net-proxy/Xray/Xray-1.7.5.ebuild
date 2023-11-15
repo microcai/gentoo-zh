@@ -16,8 +16,7 @@ KEYWORDS="~amd64 ~arm ~arm64 ~riscv ~x86"
 
 RESTRICT="mirror"
 
-DEPEND=""
-RDEPEND="${DEPEND}
+RDEPEND="
 	app-alternatives/v2ray-geoip
 	app-alternatives/v2ray-geosite"
 BDEPEND=">=dev-lang/go-1.19"

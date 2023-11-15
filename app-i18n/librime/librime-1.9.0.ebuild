@@ -5,17 +5,14 @@ EAPI="7"
 
 inherit cmake
 
+DESCRIPTION="RIME (Rime Input Method Engine) core library"
+HOMEPAGE="https://rime.im/ https://github.com/rime/librime"
+
 if [[ "${PV}" == "9999" ]]; then
 	inherit git-r3
 
 	EGIT_REPO_URI="https://github.com/rime/librime"
 	EGIT_SUBMODULES=()
-fi
-
-DESCRIPTION="RIME (Rime Input Method Engine) core library"
-HOMEPAGE="https://rime.im/ https://github.com/rime/librime"
-if [[ "${PV}" == "9999" ]]; then
-	SRC_URI=""
 else
 	SRC_URI="https://github.com/rime/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 fi

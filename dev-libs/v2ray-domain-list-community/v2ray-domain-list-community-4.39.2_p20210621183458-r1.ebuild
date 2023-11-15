@@ -575,8 +575,7 @@ fi
 LICENSE="MIT"
 SLOT="0"
 
-DEPEND=""
-RDEPEND="${DEPEND}
+RDEPEND="
 	!dev-libs/v2ray-domain-list-community-bin
 	!<net-proxy/v2ray-4.38.3
 "

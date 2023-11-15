@@ -24,8 +24,7 @@ REQUIRED_USE="|| ( wayland X )"
 
 RESTRICT="mirror"
 
-DEPEND=""
-RDEPEND="${DEPEND}
+RDEPEND="
 	sys-apps/dbus
 	>=media-libs/fontconfig-2.12
 	>=dev-libs/openssl-1.1

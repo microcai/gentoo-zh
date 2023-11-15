@@ -22,11 +22,9 @@ SRC_URI="${APPSTORE_URI}/d/${PN}/${PN}_${PV}-1_amd64.deb
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 RESTRICT="strip"
 
-DEPEND=""
-RDEPEND="${DEPEND}
+RDEPEND="
 	>=media-libs/alsa-lib-1.0.16[abi_x86_32(-)]
 	>=media-libs/libgphoto2-2.5.10[abi_x86_32(-)]
 	media-libs/gst-plugins-base[abi_x86_32(-)]
