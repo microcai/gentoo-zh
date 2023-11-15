@@ -25,7 +25,6 @@ RDEPEND="
 	dev-libs/boost[python]
 "
 
-
 src_prepare(){
 	sed -i "s/python3')/python-3.7')/g" meson.build
 }

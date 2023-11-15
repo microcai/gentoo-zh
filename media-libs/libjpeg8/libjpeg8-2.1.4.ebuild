@@ -102,4 +102,3 @@ src_install() {
 	doins ${WORKDIR}/libjpeg-turbo-${PV}_build/libjpeg.so.8.2.2
 	doins ${WORKDIR}/libjpeg-turbo-${PV}_build/libjpeg.so.8
 }
-

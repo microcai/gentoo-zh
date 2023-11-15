@@ -12,7 +12,6 @@ SRC_URI="https://github.com/fontforge/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-3+"
 SLOT="0"
 
-
 RDEPEND="${DEPEND}"
 
 src_prepare(){
