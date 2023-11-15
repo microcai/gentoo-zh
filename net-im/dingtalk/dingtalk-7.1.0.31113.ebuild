@@ -24,13 +24,14 @@ RDEPEND="
 	media-video/rtmpdump
 	net-misc/curl
 	net-nds/openldap
-	sys-libs/glibc
+	virtual/libc
 	sys-libs/zlib
 	sys-process/procps
 	x11-libs/gtk+:2
 	x11-libs/gtk+:3
 	x11-libs/libXScrnSaver
-	virtual/libcrypt
+	x11-libs/pango
+	x11-libs/cairo
 "
 
 DEPEND="${RDEPEND}"
@@ -57,6 +58,12 @@ src_install() {
 	rm -f "${S}"/opt/apps/"${MY_PGK_NAME}"/files/"${MY_VERSION}"/libcurl.so* || die
 	# use system freetype, fix undefined symbol: FT_Get_Color_Glyph_Layer
 	rm -rf "${S}"/opt/apps/"${MY_PGK_NAME}"/files/"${MY_VERSION}"/libfreetype.so* || die
+	# use system pango, while keep pango-compat file
+	rm -rf "${S}"/opt/apps/"${MY_PGK_NAME}"/files/"${MY_VERSION}"/libpango-.so* || die
+	rm -rf "${S}"/opt/apps/"${MY_PGK_NAME}"/files/"${MY_VERSION}"/libpangocairo-.so* || die
+	rm -rf "${S}"/opt/apps/"${MY_PGK_NAME}"/files/"${MY_VERSION}"/libpangoft2-.so* || die
+	# copy libwayland so to libs from version 7.1.0 31101
+	cp "${FILESDIR}"/libs/* "${S}"/opt/apps/"${MY_PGK_NAME}"/files/"${MY_VERSION}"/
 
 	# Set RPATH for preserve-libs handling
 	pushd "${S}"/opt/apps/"${MY_PGK_NAME}"/files/"${MY_VERSION}" || die
@@ -65,12 +72,15 @@ src_install() {
 		# Use \x7fELF header to separate ELF executables and libraries
 		[[ -f ${x} && $(od -t x1 -N 4 "${x}") == *"7f 45 4c 46"* ]] || continue
 		local RPATH_ROOT="/opt/apps/${MY_PGK_NAME}/files/${MY_VERSION}"
-		patchelf --set-rpath "${RPATH_ROOT}/:${RPATH_ROOT}/swiftshader/:${RPATH_ROOT}/platforminputcontexts/:${RPATH_ROOT}/imageformats/" "${x}" || \
-			die "patchelf failed on ${x}"
+		patchelf --set-rpath \
+			"${RPATH_ROOT}/:${RPATH_ROOT}/swiftshader/:${RPATH_ROOT}/platforminputcontexts/:${RPATH_ROOT}/imageformats/" \
+			"${x}" || die "patchelf failed on ${x}"
 	done
 	popd || die
 	# fix ldd pattern error
-	sed -i 's/libc_version=.*/libc_version=`ldd --version | grep ldd | rev | cut -d" " -f1 | rev`/g' "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh || die
+	sed -i \
+	 's/libc_version=.*/libc_version=`ldd --version | grep ldd | rev | cut -d" " -f1 | rev`/g' \
+	 "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh || die
 	# Fix fcitx5
 	sed -i "s/export XMODIFIERS/#export XMODIFIERS/g" "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh || die
 	sed -i "s/export QT_IM_MODULE/#export QT_IM_MODULE/g" "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh || die
@@ -95,9 +105,13 @@ then
 fi
 	EOF
 
-	cat "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh.head "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh > "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh.new || die
-	cat "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh.new > "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh || die
-	rm "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh.head "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh.new || die
+	cat "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh.head \
+		"${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh > \
+		"${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh.new || die
+	cat "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh.new \
+		> "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh || die
+	rm "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh.head \
+		"${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh.new || die
 
 	# Add dingtalk command
 	mkdir -p "${S}"/usr/bin/ || die
