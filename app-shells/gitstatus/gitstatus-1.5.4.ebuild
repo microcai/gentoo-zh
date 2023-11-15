@@ -1,21 +1,20 @@
 # Copyright 2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-inherit cmake flag-o-matic git-r3
+inherit cmake flag-o-matic
 
 DESCRIPTION="Git status for Bash and Zsh prompt"
 HOMEPAGE="https://github.com/romkatv/gitstatus"
 SRC_URI="https://github.com/romkatv/gitstatus/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+
 # LIBGIT2_TAG depends on pkgver. They must be updated together. See libgit2_version in:
 # https://raw.githubusercontent.com/romkatv/gitstatus/v${pkgver}/build.info
 LIBGIT2_TAG="tag-5860a42d19bcd226cb6eff2dcbfcbf155d570c73"
-EGIT_REPO_URI="https://github.com/romkatv/libgit2"
-EGIT_COMMIT="${LIBGIT2_TAG}"
-EGIT_CHECKOUT_DIR="${WORKDIR}/${P}/deps"
-BUILD_DIR="${EGIT_CHECKOUT_DIR}_BUILD"
-CMAKE_USE_DIR="${EGIT_CHECKOUT_DIR}"
+SRC_URI+=" https://github.com/romkatv/libgit2/archive/refs/tags/${LIBGIT2_TAG}.tar.gz -> libgit2-${LIBGIT2_TAG}.tar.gz"
+CMAKE_USE_DIR="${S}/deps/libgit2"
+BUILD_DIR="${CMAKE_USE_DIR}_BUILD"
 
 IUSE="zsh-completion"
 
@@ -27,11 +26,8 @@ DEPEND="zsh-completion? ( app-shells/zsh )"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
-	if [[ -n ${A} ]]; then
-		unpack ${A}
-	fi
-	git-r3_fetch
-	git-r3_checkout
+	default
+	mv -v "${WORKDIR}/libgit2-${LIBGIT2_TAG}" "${S}/deps/libgit2" || die
 }
 
 src_configure() {
@@ -58,7 +54,7 @@ src_compile() {
 	cmake_src_compile
 
 	local cxxflags=(
-		"-I${EGIT_CHECKOUT_DIR}/include"
+		"-I${CMAKE_USE_DIR}/include"
 		-DGITSTATUS_ZERO_NSEC
 		-D_GNU_SOURCE
 	)
