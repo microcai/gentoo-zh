@@ -30,7 +30,6 @@ DEPEND="sys-libs/pam
 		x11-base/xorg-server
 		x11-apps/xauth"
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 src_unpack() {
 	if [[ -n ${A} ]]; then

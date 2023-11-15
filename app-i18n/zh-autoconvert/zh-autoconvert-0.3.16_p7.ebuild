@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit multilib eutils
+inherit multilib
 
 MY_PV="${PV/_p/-}"
 
@@ -17,9 +17,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="static-libs"
 
 RESTRICT="mirror"
-
-DEPEND=""
-RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}-debian-${MY_PV}"
 

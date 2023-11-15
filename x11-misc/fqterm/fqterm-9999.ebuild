@@ -11,14 +11,13 @@ HOMEPAGE="https://github.com/mytbk/fqterm"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
 
 RDEPEND="
 	dev-libs/openssl
 	media-libs/alsa-lib
-	dev-qt/qtcore
-	dev-qt/qtgui
-	dev-qt/qtscript"
+	dev-qt/qtcore:5
+	dev-qt/qtgui:5
+	dev-qt/qtscript:5"
 DEPEND="${RDEPEND}"
 
 src_configure() {

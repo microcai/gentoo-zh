@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils git-r3
+inherit git-r3
 
 DESCRIPTION="A fast, safe VPN based on libsodium"
 HOMEPAGE="http://shadowvpn.org/"
@@ -12,7 +12,6 @@ EGIT_REPO_URI="https://github.com/clowwindy/shadowvpn.git"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS=""
 
 DEPEND="dev-libs/libsodium"
 RDEPEND="${DEPEND}"

@@ -3,17 +3,15 @@
 
 EAPI=7
 
-inherit autotools eutils git-r3
+inherit autotools git-r3
 
 DESCRIPTION="Charset conversion library for TI calculators"
 HOMEPAGE="http://lpg.ticalc.org/prj_tilp/"
-SRC_URI=""
 
 EGIT_REPO_URI="https://github.com/debrouxl/tilibs.git"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
 IUSE="doc iconv static-libs"
 
 RDEPEND="dev-libs/glib:2"

@@ -202,9 +202,7 @@ KEYWORDS="-* ~amd64"
 
 IUSE="X wayland +fzf"
 
-DEPEND=""
 RDEPEND="
-	${DEPEND}
 	fzf? ( app-shells/fzf )
 	wayland? ( gui-apps/wl-clipboard )
 	X? (
@@ -212,7 +210,6 @@ RDEPEND="
 		x11-misc/xsel
 	)
 "
-BDEPEND=""
 
 RESTRICT="mirror"
 

@@ -16,7 +16,6 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="app-shells/zsh
 		app-shells/gitstatus[zsh-completion]"
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 

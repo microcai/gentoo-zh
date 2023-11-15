@@ -21,7 +21,6 @@ RDEPEND="${DEPEND}
 		openrc? ( sys-apps/openrc )
 		runit? ( sys-process/runit )
 		systemd? ( sys-apps/systemd )"
-BDEPEND=""
 
 src_install(){
 	default

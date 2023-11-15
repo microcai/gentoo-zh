@@ -12,8 +12,6 @@ LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-IUSE=""
-DEPEND=""
 FONT_S="${S}/ttf"
 FONT_SUFFIX="ttf"
 RESTRICT="nostrip nomirror"

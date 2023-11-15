@@ -13,15 +13,10 @@ SRC_URI="https://hougearch.litterhougelangley.club/src/typora_${PV}_amd64.deb"
 LICENSE="typora"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 RESTRICT="mirror"
 
-DEPEND=""
-RDEPEND="
-	x11-libs/libXScrnSaver
-	${DEPEND}"
-BDEPEND=""
+RDEPEND="x11-libs/libXScrnSaver"
 
 QA_PREBUILT="*"
 

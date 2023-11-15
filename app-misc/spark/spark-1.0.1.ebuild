@@ -12,9 +12,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-DEPEND=""
-RDEPEND="${DEPEND}"
-
 src_install() {
 	dobin spark
 	if use doc ; then

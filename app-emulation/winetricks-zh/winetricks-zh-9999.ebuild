@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit gnome2-utils eutils git-r3
+inherit gnome2-utils git-r3
 
 EGIT_REPO_URI="https://github.com/hillwoodroc/winetricks-zh.git"
 
@@ -15,7 +15,6 @@ HOMEPAGE="http://winetricks.org http://wiki.winehq.org/winetricks"
 LICENSE="LGPL-2.1+"
 SLOT="0"
 
-DEPEND=""
 RDEPEND="app-emulation/winetricks"
 
 # Tests require network access and run Wine, which is unreliable from a portage environment.

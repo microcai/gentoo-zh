@@ -1,4 +1,3 @@
-move media-video/ffcast media-gfx/ffcast
 move media-plugins/amule-dlp-antileech net-p2p/amule-dlp-antileech
 move media-plugins/osd-lyrics media-plugins/osdlyrics
 move app-i18n/brise app-i18n/rime-data

@@ -7,6 +7,9 @@ PYTHON_COMPAT=( python3_{10..11} )
 
 inherit desktop edo elisp-common multiprocessing python-any-r1 savedconfig toolchain-funcs xdg
 
+DESCRIPTION="Mozc - Japanese input method editor"
+HOMEPAGE="https://github.com/google/mozc"
+
 if [[ "${PV}" == "9999" ]]; then
 	inherit git-r3
 
@@ -24,13 +27,7 @@ else
 
 	JAPANESE_USAGE_DICTIONARY_GIT_REVISION="a4a66772e33746b91e99caceecced9a28507e925"
 	JAPANESE_USAGE_DICTIONARY_DATE="20180701040110"
-fi
 
-DESCRIPTION="Mozc - Japanese input method editor"
-HOMEPAGE="https://github.com/google/mozc"
-if [[ "${PV}" == "9999" ]]; then
-	SRC_URI=""
-else
 	SRC_URI="
 		https://github.com/google/${PN}/archive/${MOZC_GIT_REVISION}.tar.gz -> ${PN}-${PV%%_p*}-${MOZC_DATE}.tar.gz
 		https://github.com/hiroyuki-komatsu/japanese-usage-dictionary/archive/${JAPANESE_USAGE_DICTIONARY_GIT_REVISION}.tar.gz -> japanese-usage-dictionary-${JAPANESE_USAGE_DICTIONARY_DATE}.tar.gz
@@ -131,6 +128,7 @@ SITEFILE="50${PN}-gentoo.el"
 
 PATCHES=(
 	"${WORKDIR}"/mozc-2.28.5029.102-patches
+	"${FILESDIR}"/mozc-2.28.5029.102-abseil.patch
 )
 
 python_check_deps() {
@@ -146,9 +144,9 @@ src_unpack() {
 			git-r3_fetch https://github.com/fcitx/mozc refs/heads/fcitx
 			git-r3_checkout https://github.com/fcitx/mozc "${WORKDIR}/fcitx-mozc"
 		fi
-	if use fcitx5; then
-		cp -pr "${WORKDIR}/fcitx5-mozc/src/unix/fcitx5" unix || die
-	fi
+		if use fcitx5; then
+			cp -pr "${WORKDIR}"/fcitx{,5}-mozc || die
+		fi
 	else
 		unpack ${PN}-${PV%%_p*}-${MOZC_DATE}.tar.gz
 		mv mozc-${MOZC_GIT_REVISION} ${P} || die

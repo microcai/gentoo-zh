@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2022-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -9,17 +9,14 @@ DESCRIPTION="web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan an
 HOMEPAGE="https://v2raya.org/"
 
 EGIT_REPO_URI="https://github.com/v2rayA/v2rayA.git"
-EGIT_BRANCH="feat_v5" # HEAD
+EGIT_BRANCH="main" # HEAD
 
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS=""
 IUSE="xray"
 RESTRICT="mirror"
 
-DEPEND=""
 RDEPEND="
-	${DEPEND}
 	|| (
 		>=net-proxy/v2ray-5
 		>=net-proxy/v2ray-bin-5
@@ -27,7 +24,7 @@ RDEPEND="
 	xray? ( net-proxy/Xray )
 "
 BDEPEND="
-	>=dev-lang/go-1.19:*
+	>=dev-lang/go-1.21.0:*
 	>=net-libs/nodejs-16
 	sys-apps/yarn
 "
@@ -54,9 +51,9 @@ src_compile() {
 	fi
 	OUTPUT_DIR="${S}/service/server/router/web" yarn build || die "yarn build failed"
 
-	for file in $(find "${S}/service/server/router/web" |grep -v png |grep -v index.html|grep -v .gz)
-	do
-		if [ ! -d $file ]; then
+	for file in $(find "${S}/service/server/router/web" |grep -v png |grep -v index.html|grep -v .gz); do
+		if [ ! -d $file ];then
+			einfo "compress $file"
 			gzip -9 $file
 		fi
 	done
@@ -70,18 +67,12 @@ src_install() {
 	# directory for runtime use
 	keepdir "/etc/v2raya"
 
-	# generate default config
-	cat <<-EOF > "${S}"/v2raya || die
-	# v2raya config example
-	# Everything has defaults so you only need to uncomment things you want to
-	# change
-	EOF
 	./service/v2raya --report config | sed '1,6d' | fold -s -w 78 | sed -E 's/^([^#].+)/# \1/'\
-		>> "${S}"/v2raya || die
+		>> "${S}"/install/universal/v2raya.default || die
 
 	# config /etc/default/v2raya
 	insinto "/etc/default"
-	doins "${S}"/v2raya
+	newins "${S}"/install/universal/v2raya.default v2raya
 
 	systemd_dounit "${S}"/install/universal/v2raya.service
 	systemd_douserunit "${S}"/install/universal/v2raya-lite.service
@@ -92,7 +83,7 @@ src_install() {
 	newconfd "${FILESDIR}/${PN}.confd" v2raya
 	newconfd "${FILESDIR}/${PN}-user.confd" v2raya-user
 
-	newicon -s 512 "${S}"/gui/public/img/icons/android-chrome-512x512.png v2raya.png
+	doicon -s 512 "${S}"/install/universal/v2raya.png
 	domenu "${S}"/install/universal/v2raya.desktop
 }
 
@@ -101,7 +92,7 @@ pkg_postinst() {
 
 	if has_version '<net-proxy/v2rayA-2.0.0' ; then
 		elog "Starting from net-proxy/v2rayA-2.0.0"
-		elog "Support for v2ray-4 & xray has been dropped"
+		elog "Support for v2ray-4 has been dropped"
 		elog "A config migration may be required"
 	fi
 }

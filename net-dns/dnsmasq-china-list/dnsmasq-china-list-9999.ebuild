@@ -13,7 +13,6 @@ EGIT_CLONE_TYPE=shallow
 
 LICENSE="WTFPL-2"
 SLOT="0"
-KEYWORDS=""
 IUSE="+dnsmasq smartdns dnscrypt-proxy"
 
 RDEPEND="

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-inherit eutils desktop vcs-snapshot
+inherit desktop vcs-snapshot
 
 MY_USER="herenvarno"
 DESCRIPTION="A free music player"
@@ -12,9 +12,7 @@ SRC_URI="https://github.com/${MY_USER}/${PN}/tarball/${PV} -> ${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
-DEPEND=""
 RDEPEND="${DEPEND}
 		media-libs/gstreamer
 		x11-libs/gtk+

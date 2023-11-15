@@ -19,8 +19,6 @@ fi
 LICENSE="LGPL-2.1"
 SLOT="0"
 
-RDEPEND=""
-DEPEND="${RDEPEND}"
 BDEPEND="dev-vcs/git"
 
 src_prepare() {

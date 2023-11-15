@@ -16,15 +16,9 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE=""
-REQUIRED_USE=""
-
 RESTRICT="mirror"
 
-DEPEND=""
-RDEPEND="${DEPEND}
-	!app-misc/yq
-"
+RDEPEND="!app-misc/yq"
 
 S="${WORKDIR}"
 

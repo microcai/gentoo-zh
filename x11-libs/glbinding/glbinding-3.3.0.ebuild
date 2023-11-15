@@ -17,28 +17,24 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 arm arm64"
 
-DEPEND=""
-RDEPEND="${DEPEND}"
-BDEPEND=""
-
 PATCHES=(
-    ${FILESDIR}/glbinding-fix-install.patch
+	${FILESDIR}/glbinding-fix-install.patch
 )
 
 src_configure(){
-     mycmakeargs=(
-        -DOPTION_BUILD_TOOLS=OFF
-        -DOPTION_BUILD_EXAMPLES=OFF
-        -DINSTALL_LIB=$(get_libdir)
-        -DINSTALL_SHARED=$(get_libdir)
-        -DOPTION_BUILD_WITH_LTO=$(usex lto ON OFF)
-     )
+	mycmakeargs=(
+		-DOPTION_BUILD_TOOLS=OFF
+		-DOPTION_BUILD_EXAMPLES=OFF
+		-DINSTALL_LIB=$(get_libdir)
+		-DINSTALL_SHARED=$(get_libdir)
+		-DOPTION_BUILD_WITH_LTO=$(usex lto ON OFF)
+	)
 
-     cmake-multilib_src_configure
+	cmake-multilib_src_configure
 }
 
 src_install(){
-     cmake-multilib_src_install
-     # remove conflict files with libglvnd
-     rm ${D}/usr/include/KHR/khrplatform.h
+	cmake-multilib_src_install
+	# remove conflict files with libglvnd
+	rm ${D}/usr/include/KHR/khrplatform.h
 }

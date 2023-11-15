@@ -20,14 +20,14 @@ LICENSE="MIT"
 SLOT="0"
 
 RDEPEND="
-    sys-apps/util-linux
-    sys-libs/zlib
+	sys-apps/util-linux
+	sys-libs/zlib
 "
 
 DEPEND="${RDEPEND}"
 BDEPEND="virtual/pkgconfig"
 
 src_prepare(){
-    eapply_user
-    eautoreconf
+	eapply_user
+	eautoreconf
 }

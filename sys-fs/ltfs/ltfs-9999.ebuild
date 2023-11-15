@@ -20,16 +20,16 @@ LICENSE="MIT"
 SLOT="0"
 
 RDEPEND="
-    dev-libs/libxml2
-    dev-libs/icu
-    sys-fs/fuse:0
-    net-analyzer/net-snmp
+	dev-libs/libxml2
+	dev-libs/icu
+	sys-fs/fuse:0
+	net-analyzer/net-snmp
 "
 
 DEPEND="${RDEPEND}"
 BDEPEND="virtual/pkgconfig"
 
-src_prepare(){
-    eapply_user
-    eautoreconf
+src_prepare() {
+	eapply_user
+	eautoreconf
 }

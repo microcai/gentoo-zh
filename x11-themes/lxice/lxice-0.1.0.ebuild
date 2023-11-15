@@ -10,8 +10,6 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc sparc ~x86"
 
-IUSE=""
-
 RDEPEND="x11-wm/icewm"
 
 S="${WORKDIR}"

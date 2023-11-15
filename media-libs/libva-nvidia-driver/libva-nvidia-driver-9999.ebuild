@@ -14,7 +14,6 @@ if [[ ${PV} != *9999* ]] ; then
 	S="${WORKDIR}/nvidia-vaapi-driver-${PV}"
 else
 	EGIT_REPO_URI="https://github.com/elFarto/nvidia-vaapi-driver.git"
-	KEYWORDS=""
 	inherit git-r3
 fi
 
@@ -27,14 +26,14 @@ SLOT="0"
 
 RDEPEND="
 	>=media-libs/libva-2.16
-    >=media-libs/gstreamer-1.0
-    >=media-libs/gst-plugins-bad-1.0
+	>=media-libs/gstreamer-1.0
+	>=media-libs/gst-plugins-bad-1.0
 	>=media-libs/libglvnd-1.6.0
 "
 
 DEPEND="${RDEPEND}"
 BDEPEND="virtual/pkgconfig
-    >=media-libs/nv-codec-headers-11.1.5.1
+	>=media-libs/nv-codec-headers-11.1.5.1
 "
 
 PATCHES=(

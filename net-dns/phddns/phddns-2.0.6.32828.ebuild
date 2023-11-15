@@ -3,8 +3,6 @@
 
 EAPI=7
 
-inherit eutils
-
 MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
 

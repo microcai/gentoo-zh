@@ -17,4 +17,7 @@
 	$HOME/.local/share/fcitx5/lua/imeapi/extensions
 	to make the addon find your scripts.
 	</longdescription>
+	<use>
+		<flag name="dlopen">Use dlopen to load lua library</flag>
+	</use>
 </pkgmetadata>

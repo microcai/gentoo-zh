@@ -1,0 +1,53 @@
+From cdfa5ba2404a8afe387d5a1ee741bab22d8065b7 Mon Sep 17 00:00:00 2001
+From: rocka <i@rocka.me>
+Date: Sat, 4 Nov 2023 20:00:47 +0800
+Subject: [PATCH] Set install component for lib/header/tools/cmake config. (#9)
+
+---
+ src/libime/jyutping/CMakeLists.txt | 12 ++++++++----
+ tools/CMakeLists.txt               |  2 +-
+ 2 files changed, 9 insertions(+), 5 deletions(-)
+
+diff --git a/src/libime/jyutping/CMakeLists.txt b/src/libime/jyutping/CMakeLists.txt
+index 677d1ba..f94366d 100644
+--- a/src/libime/jyutping/CMakeLists.txt
++++ b/src/libime/jyutping/CMakeLists.txt
+@@ -37,8 +37,8 @@ target_include_directories(IMEJyutping PUBLIC
+
+ target_link_libraries(IMEJyutping PUBLIC Fcitx5::Utils Boost::boost LibIME::Core PRIVATE Boost::iostreams PkgConfig::ZSTD)
+
+-install(TARGETS IMEJyutping EXPORT LibIMEJyutpingTargets LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}")
+-install(FILES ${LIBIME_JYUTPING_HDRS} DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/LibIME/libime/jyutping")
++install(TARGETS IMEJyutping EXPORT LibIMEJyutpingTargets LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}" COMPONENT lib)
++install(FILES ${LIBIME_JYUTPING_HDRS} DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/LibIME/libime/jyutping" COMPONENT header)
+
+ add_library(LibIME::Jyutping ALIAS IMEJyutping)
+
+@@ -49,10 +49,14 @@ configure_package_config_file("${CMAKE_CURRENT_SOURCE_DIR}/LibIMEJyutpingConfig.
+
+ generate_export_header(IMEJyutping BASE_NAME LibIMEJyutping)
+
+-install(EXPORT LibIMEJyutpingTargets DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/LibIMEJyutping" FILE LibIMEJyutpingTargets.cmake NAMESPACE LibIME:: )
++install(EXPORT LibIMEJyutpingTargets
++        DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/LibIMEJyutping"
++        FILE LibIMEJyutpingTargets.cmake
++        NAMESPACE LibIME::
++        COMPONENT Devel)
+
+ install(FILES  "${CMAKE_CURRENT_BINARY_DIR}/LibIMEJyutpingConfig.cmake"
+                "${CMAKE_CURRENT_BINARY_DIR}/LibIMEJyutpingConfigVersion.cmake"
+         DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/LibIMEJyutping"
+-        COMPONENT Devel )
++        COMPONENT Devel)
+
+diff --git a/tools/CMakeLists.txt b/tools/CMakeLists.txt
+index dcceb63..26cc78f 100644
+--- a/tools/CMakeLists.txt
++++ b/tools/CMakeLists.txt
+@@ -1,5 +1,5 @@
+
+ add_executable(libime_jyutpingdict libime_jyutpingdict.cpp)
+ target_link_libraries(libime_jyutpingdict LibIME::Jyutping)
+-install(TARGETS libime_jyutpingdict DESTINATION ${CMAKE_INSTALL_BINDIR})
++install(TARGETS libime_jyutpingdict DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT tools)
+ add_executable(LibIME::jyutpingdict ALIAS libime_jyutpingdict)

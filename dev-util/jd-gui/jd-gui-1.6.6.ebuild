@@ -15,9 +15,7 @@ SRC_URI="https://github.com/java-decompiler/jd-gui/releases/download/v${PV}/${MY
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
-DEPEND=""
 RDEPEND=">=virtual/jdk-1.6"
 
 S="${WORKDIR}/opt/jd-gui"

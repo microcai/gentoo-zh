@@ -3,8 +3,6 @@
 
 EAPI=7
 
-inherit eutils
-
 DESCRIPTION="Protect yourself against DNS poisoning in China"
 HOMEPAGE="https://github.com/clowwindy/ChinaDNS"
 
@@ -14,10 +12,6 @@ RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
-
-DEPEND=""
-RDEPEND="${DEPEND}"
 
 src_install() {
 	default

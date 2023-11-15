@@ -2,12 +2,11 @@
 oldver = "old_ver.json"
 newver = "new_ver.json"
 
-["app-admin/zenmonitor"]
-source = "github"
-github = "ocerman/zenmonitor"
-use_latest_tag = true
+["app-admin/zenmonitor3"]
+source = "git"
+git = "https://git.exozy.me/a/zenmonitor3"
 prefix = "v"
-github_account = "CHN-beta"
+github_account = "liuyujielol"
 
 ["app-arch/zchunk"]
 source = "github"
@@ -25,13 +24,6 @@ github_account = "HougeLangley"
 
 # TODO
 #["app-crypt/etoken-sac"]
-
-["app-dicts/copytranslator"]
-source = "github"
-github = "CopyTranslator/CopyTranslator"
-use_latest_release = true
-prefix = "v"
-github_account = "CHN-beta"
 
 # TODO
 #["app-dicts/fcitx5-pinyin-zhwiki"]
@@ -107,6 +99,12 @@ source = "github"
 github = "fcitx/fcitx5-hangul"
 use_latest_tag = true
 
+["app-i18n/fcitx-m17n"]
+source = "github"
+github = "fcitx/fcitx5-m17n"
+use_latest_tag = true
+github_account = "liuyujielol"
+
 # virtual package
 #["app-i18n/fcitx-meta"]
 
@@ -151,6 +149,12 @@ source = "github"
 github = "fcitx/libime"
 use_latest_tag = true
 github_account = "liangyongxiang"
+
+["app-i18n/libime-jyutping"]
+source = "github"
+github = "fcitx/libime-jyutping"
+use_latest_tag = true
+github_account = "liuyujielol"
 
 ["app-i18n/lunar"]
 source = "debianpkg"
@@ -239,6 +243,13 @@ github = "mikefarah/yq"
 use_latest_release = true
 prefix = "v"
 github_account = "oatiz"
+
+["app-office/anytype-bin"]
+source = "github"
+github = "anyproto/anytype-ts"
+prefix = "v"
+include_regex = '^v\d+(\.\d+)*$'
+github_account = "xz-dev"
 
 # TODO
 #["app-office/bytedance-feishu"]
@@ -357,12 +368,7 @@ github_account = "CHN-beta"
 source = "github"
 github = "dbeaver/dbeaver"
 use_latest_release = true
-github_account = "xen0n"
-
-["dev-libs/granite"]
-source = "github"
-github = "elementary/granite"
-use_latest_release = true
+github_account = "gouwazi"
 
 # TODO
 #["dev-libs/libchrasis"]
@@ -424,6 +430,11 @@ github = "conda/conda-package-handling"
 use_latest_release = true
 github_account = "OriPoin"
 
+["dev-python/fuo-bilibili"]
+source = "pypi"
+pypi = "fuo-bilibili"
+github_account = "wgjak47"
+
 ["dev-python/fuo-kuwo"]
 source = "pypi"
 pypi = "fuo_kuwo"
@@ -442,6 +453,11 @@ github_account = "wgjak47"
 ["dev-python/fuo-qqmusic"]
 source = "pypi"
 pypi = "fuo-qqmusic"
+github_account = "wgjak47"
+
+["dev-python/fuo-ytmusic"]
+source = "pypi"
+pypi = "fuo-ytmusic"
 github_account = "wgjak47"
 
 ["dev-python/janus"]
@@ -472,10 +488,8 @@ prefix = "v"
 github_account = "CHN-beta"
 
 ["dev-python/qasync"]
-source = "github"
-github = "CabbageDevelopment/qasync"
-use_latest_tag = true
-prefix = "v"
+source = "pypi"
+pypi = "qasync"
 github_account = "wgjak47"
 
 ["dev-python/structlog"]
@@ -493,13 +507,6 @@ github_account = "liangyongxiang"
 ["dev-vcs/gitoxide"]
 source = "github"
 github = "Byron/gitoxide"
-use_max_tag = true
-prefix = "v"
-github_account = "peeweep"
-
-["dev-vcs/gptcommit"]
-source = "github"
-github = "zurawiki/gptcommit"
 use_max_tag = true
 prefix = "v"
 github_account = "peeweep"
@@ -533,12 +540,6 @@ source = "github"
 github = "artempyanykh/marksman"
 use_latest_release = true
 github_account = "st0nie"
-
-["dev-util/pahole"]
-source = "git"
-git = "https://git.kernel.org/pub/scm/devel/pahole/pahole.git"
-prefix = "v"
-github_account = "HougeLangley"
 
 ["dev-util/tauri-cli"]
 source = "github"
@@ -761,13 +762,6 @@ source = "github"
 github = "shadowsocks/ChinaDNS"
 use_latest_release = true
 
-["net-dns/aliddns"]
-source = "github"
-github = "OpenIoTHub/aliddns"
-use_latest_tag = true
-prefix = "v"
-github_account = "peeweep"
-
 ["net-dns/dnslookup"]
 source = "github"
 github = "ameshkov/dnslookup"
@@ -781,11 +775,6 @@ github = "ogham/dog"
 use_latest_tag = true
 prefix = "v"
 github_account = "peeweep"
-
-["net-dns/libidn11"]
-source = "git"
-git = "https://git.savannah.gnu.org/git/libidn.git"
-prefix = "v"
 
 ["net-dns/q"]
 source = "github"
@@ -808,12 +797,6 @@ github_account = "peeweep"
 
 # TODO
 #["net-im/freetalk"]
-
-["net-im/telegram-purple"]
-source = "github"
-github = "majn/telegram-purple"
-use_latest_release = true
-prefix = "v"
 
 # TODO
 #["net-im/tencent-qq"]
@@ -884,22 +867,10 @@ source = "github"
 github = "pcman-bbs/pcmanx"
 use_latest_release = true
 
-["net-misc/postman-bin"]
-source = "aur"
-aur = "postman-bin"
-strip_release = 'yes'
-
 ["net-misc/prips"]
 source = "regex"
 url = "https://devel.ringlet.net/sysutils/prips/"
 regex = "The current version of <strong>prips</strong> is <strong>([\\d.]+)</strong>"
-
-["net-misc/tssh"]
-source = "github"
-github = "trzsz/trzsz-ssh"
-use_latest_tag = true
-prefix = "v"
-github_account = "peeweep"
 
 # only live package in gentoo-zh
 #["net-misc/you-get"]
@@ -935,24 +906,12 @@ github = "XTLS/Xray-core"
 use_latest_release = true
 prefix = "v"
 
-["net-proxy/clash"]
-source = "github"
-github = "Dreamacro/clash"
-use_latest_release = true
-prefix = "v"
-
 ["net-proxy/clash-meta"]
 source = "github"
 github = "MetaCubeX/Clash.Meta"
 use_latest_release = true
 prefix = "v"
-github_account = "st0nie"
-
-["net-proxy/clash-for-windows-bin"]
-source = "github"
-github = "Fndroid/clash_for_windows_pkg"
-use_latest_release = true
-github_account = "irort"
+github_account = ["st0nie", "peeweep"]
 
 ["net-proxy/dae"]
 source = "github"
@@ -968,11 +927,12 @@ use_latest_release = true
 prefix = "v"
 github_account = "st0nie"
 
-["net-proxy/make-proxy"]
+["net-proxy/hysteria"]
 source = "github"
-github = "yueyoum/make-proxy"
-use_latest_tag = true
-prefix = "v"
+github = "apernet/hysteria"
+use_latest_release = true
+prefix = "app/v"
+github_account = "oatiz"
 
 # TODO
 #["net-proxy/shadowsocks-rust-bin"]
@@ -1063,12 +1023,6 @@ prefix = "v"
 # Yaourt is not maintained anymore
 #["sys-apps/yaourt"]
 
-["sys-apps/zypper"]
-source = "github"
-github = "openSUSE/zypper"
-use_latest_tag = true
-github_account = "HougeLangley"
-
 ["sys-boot/ventoy-bin"]
 source = "github"
 github = "ventoy/Ventoy"
@@ -1114,7 +1068,7 @@ prefix = "v"
 # TODO
 #["sys-kernel/starfive-sources"]
 
-["sys-kernel/xanmod-hybrid"]
+["sys-kernel/xanmod-sources"]
 source = "github"
 github = "xanmod/linux"
 use_latest_release = true
@@ -1131,11 +1085,11 @@ to_pattern = "\\1"
 # TODO
 #["sys-kernel/xanmod-rt"]
 
-["sys-kernel/zenpower"]
-source = "github"
-github = "ocerman/zenpower"
-use_latest_tag = true
+["sys-kernel/zenpower3"]
+source = "git"
+git = "https://git.exozy.me/a/zenpower3"
 prefix = "v"
+github_account = "liuyujielol"
 
 #["sys-libs/cutefish-core"]
 
@@ -1150,34 +1104,22 @@ prefix = "v"
 # TODO
 #["sys-libs/libixp"]
 
-["sys-libs/libsolv"]
-source = "github"
-github = "openSUSE/libsolv"
-use_latest_tag = true
-github_account = "HougeLangley"
-
-["sys-libs/libzypp"]
-source = "github"
-github = "openSUSE/libzypp"
-use_latest_tag= true
-github_account = "HougeLangley"
-
 # virtual, do nothing
 #["virtual/dist-kernel"]
 #["virtual/linux-sources"]
-
-["www-apps/openvscode-server-bin"]
-source = "github"
-github = "gitpod-io/openvscode-server"
-use_latest_release = true
-prefix = "openvscode-server-v"
-github_account = "liuyujielol"
 
 ["www-apps/chatgpt-desktop"]
 source = "github"
 github = "lencx/ChatGPT"
 use_latest_release = true
 github_account = "oatiz"
+prefix = "v"
+
+["www-client/brave"]
+source = "github"
+github = "brave/brave-browser"
+use_latest_release = true
+github_account = "irort"
 prefix = "v"
 
 ["www-servers/darkhttpd"]
@@ -1217,12 +1159,6 @@ use_latest_release = true
 
 # TODO
 #["x11-misc/i3lock-fancy"]
-
-["x11-misc/lightdm-slick-greeter"]
-source = "github"
-github = "linuxmint/slick-greeter"
-use_latest_tag= true
-github_account = "Rabenda"
 
 ["x11-misc/ly"]
 source = "github"

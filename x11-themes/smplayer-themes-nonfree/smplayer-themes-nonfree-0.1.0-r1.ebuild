@@ -8,8 +8,6 @@ SRC_URI="mirror://sourceforge/smplayer/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~hppa ~ppc ~ppc64 x86 ~amd64-linux"
-IUSE=""
-DEPEND=""
 RDEPEND="media-video/smplayer"
 
 # Override it as default will call make that will cath the install target...

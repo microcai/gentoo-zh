@@ -25,7 +25,6 @@ DEPEND="
 "
 
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 src_install(){
 	python_doscript ${PN}
