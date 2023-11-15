@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -8,7 +8,7 @@ HOMEPAGE="https://github.com/jaelpark/chamferwm"
 
 EGIT_REPO_URI="https://github.com/jaelpark/chamferwm.git git://github.com/jaelpark/chamferwm.git"
 
-inherit git-r3 meson
+inherit desktop git-r3 meson xdg
 
 LICENSE="BSD"
 SLOT="0"
@@ -42,7 +42,5 @@ src_install(){
 	doins "${BUILD_DIR}/frame_geometry.spv"
 	doins "${BUILD_DIR}/frame_vertex.spv"
 
-	insinto /usr/share/applications/
-
-	doins "${S}/share/chamfer.desktop"
+	domenu "${S}/share/chamfer.desktop"
 }
