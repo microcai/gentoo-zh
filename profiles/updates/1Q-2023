@@ -9,5 +9,3 @@ move app-dicts/fcitx5-pinyin-moegirl app-dicts/fcitx-pinyin-moegirl
 slotmove app-dicts/fcitx-pinyin-moegirl 0 5
 move app-dicts/fcitx5-pinyin-zhwiki app-dicts/fcitx-pinyin-zhwiki
 slotmove app-dicts/fcitx-pinyin-zhwiki 0 5
-move x11-libs/libva-nvdec-driver media-libs/libva-nvdec-driver
-move media-libs/libva-nvdec-driver media-libs/libva-nvidia-driver
