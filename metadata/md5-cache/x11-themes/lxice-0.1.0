@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=x11-wm/icewm
 SLOT=0
 SRC_URI=mirror://sourceforge/lxde/lxice.tar.bz2
-_md5_=89846abbef5b14e0cbcb1cdb2af8e070
+_md5_=9e8afe1047b780a76b8cb7fb8c4c9ee2

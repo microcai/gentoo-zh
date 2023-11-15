@@ -10,4 +10,4 @@ LICENSE=AS-IS
 RDEPEND=media-libs/libjpeg8 net-print/cups sys-apps/dbus virtual/jpeg:0 net-print/cups-filters scanner? ( media-gfx/sane-backends ) app-text/ghostscript-gpl
 SLOT=0
 SRC_URI=https://drivers.pantum.com/userfiles/files/download/%E9%A9%B1%E5%8A%A8%E6%96%87%E4%BB%B6/Pantum%20Linux%20Driver%20V1_1_94-1.zip
-_md5_=9ab94965ec8d0acea5dc3d82bf8522c5
+_md5_=4f99f6daff89fc1d4243a13da05bbce5
