@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-15 08:43:48 CST)
+(The last generation time: 2023-11-15 19:02:53 CST)
 
 ### Packages
 
@@ -588,7 +588,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/mkinitcpio                      | 34-r1                                     |        | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- sys-libs/elog-functions                    | 0.0.2                                     |        | http://xochitl.matem.unam.mx/~canek/gentoo-systemd-only/index.html                      | Compatibility functions for the log eclass functions of OpenRC
+ sys-libs/elog-functions                    | 0.0.2                                     |        | http://xochitl.matem.unam.mx/~canek/gentoo-systemd-only/index.html                      | Compatibility functions for the log e* functions of OpenRC
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-power/tlpui                            | 1.5.0_p6                                  |        | https://github.com/d4nj1/TLPUI                                                          | A GTK user interface for TLP written in Python
                                             | 1.6.0                                     |        |                                                                                         |
