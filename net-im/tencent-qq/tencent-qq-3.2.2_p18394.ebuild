@@ -11,7 +11,7 @@ HOMEPAGE="https://im.qq.com/linuxqq/index.shtml"
 LICENSE="Tencent"
 RESTRICT="strip"
 
-_I="2c552b5b"
+_I="fd2e886e"
 
 SRC_URI="
 	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_amd64.deb )
@@ -67,8 +67,18 @@ src_install() {
 		doexe "${FILESDIR}"/start.sh
 		sed -i 's!/opt/QQ/qq!/opt/QQ/start.sh!' "${D}"/usr/share/applications/qq.desktop || die
 		insinto /opt/QQ/workarounds
-		doins "${FILESDIR}"/{config.json,xdg-open.sh}
-		fperms +x /opt/QQ/workarounds/xdg-open.sh
+		doins "${FILESDIR}"/{config.json,xdg-open.sh,vercmp.sh}
+		fperms +x /opt/QQ/workarounds/{xdg-open.sh,vercmp.sh}
+
+		local _base_pkgver=${PV/_p/-} || die
+		local _update_pkgver=${_base_pkgver} || die
+		local cur_ver=${_update_pkgver:-${base_ver}} || die
+		local build_ver=${cur_ver#*-} || die
+
+		sed -i "s|__BASE_VER__|${base_ver}|g;s|__CURRENT_VER__|${cur_ver}|g;s|__BUILD_VER__|${build_ver}|g" \
+			"${D}"/opt/QQ/workarounds/config.json \
+			"${D}"/opt/QQ/start.sh || die
+
 	else
 		sed -i 's!/opt/QQ/qq!/usr/bin/qq!' "${D}"/usr/share/applications/qq.desktop || die
 	fi
