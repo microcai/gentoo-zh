@@ -4,6 +4,7 @@
 EAPI="8"
 PYTHON_COMPAT=( python3_{10..12} )
 DISTUTILS_SINGLE_IMPL="1"
+DISTUTILS_USE_PEP517=setuptools
 
 inherit distutils-r1
 
@@ -13,8 +14,6 @@ HOMEPAGE="https://gyp.gsrc.io/ https://chromium.googlesource.com/external/gyp"
 if [[ "${PV}" == "99999999999999" ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://chromium.googlesource.com/external/gyp"
-else
-	SRC_URI="https://home.apache.org/~arfrever/distfiles/${P}.tar.xz"
 fi
 
 LICENSE="BSD"
