@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=dev-libs/libsodium
 SLOT=0
 _eclasses_=git-r3	5133e393e8717a3a093660f990801dc1
-_md5_=50e17a19a5f079db95a3c84e1bb97bb9
+_md5_=929a1992361548a7f6db055432b49896

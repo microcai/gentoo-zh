@@ -8,4 +8,4 @@ RDEPEND=app-misc/trash-cli
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/PhrozenByte/rmtrash/archive/v1.14.tar.gz -> rmtrash-1.14.tar.gz
-_md5_=66df55f703dea08054c1d116debb3d72
+_md5_=c5305db4d9aaef086ce5b6f3b79f835c

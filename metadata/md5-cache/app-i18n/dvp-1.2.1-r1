@@ -8,4 +8,4 @@ LICENSE=BSD
 RDEPEND=sys-apps/kbd
 SLOT=0
 SRC_URI=http://kaufmann.no/downloads/linux/dvp-1_2_1.map.gz
-_md5_=fb69792cbd89ae0153fc73ccbb5362a0
+_md5_=e4412d7ed22fc3c3ea423258cc014878

@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=media-video/smplayer
 SLOT=0
 SRC_URI=mirror://sourceforge/smplayer/smplayer-themes-nonfree-0.1.0.tar.bz2
-_md5_=dcf6fadd6b0edad1041c9a2184a2f515
+_md5_=cdf8af55114e7e8121dcc01f75fde72e

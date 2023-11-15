@@ -11,4 +11,4 @@ LICENSE=all-rights-reserved
 SLOT=0
 SRC_URI=https://cdn.ipip.net/17mon/besttrace4linux.zip -> besttrace-bin-1.3.2.zip
 _eclasses_=fcaps	c0a086b957a1b183a8d136eabf02f191
-_md5_=6f42b2a416fb16f5f3a194d3dd61649c
+_md5_=4cdf2ba0db29cd0b7076c628d86737a4

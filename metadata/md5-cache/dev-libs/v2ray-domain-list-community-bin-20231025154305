@@ -8,4 +8,4 @@ RDEPEND=!dev-libs/v2ray-domain-list-community
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/v2fly/domain-list-community/releases/download/20231025154305/dlc.dat.xz -> v2ray-domain-list-community-bin-20231025154305.dat.xz
-_md5_=5a53d604757684bcbad5aee14aaa3973
+_md5_=9598f46e4f4a7b345d58a9a945855091

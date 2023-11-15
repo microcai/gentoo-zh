@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://devel.ringlet.net/files/sys/prips/prips-1.2.0.tar.xz
-_md5_=e20ab05e31dc480b1c4fe01d5afe1022
+_md5_=d87443bdbb6162b7a6b735169b9c4da4

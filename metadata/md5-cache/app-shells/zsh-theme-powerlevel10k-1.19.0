@@ -8,4 +8,4 @@ LICENSE=MIT
 RDEPEND=app-shells/zsh app-shells/gitstatus[zsh-completion]
 SLOT=0
 SRC_URI=https://github.com/romkatv/powerlevel10k/archive/v1.19.0.tar.gz -> zsh-theme-powerlevel10k-1.19.0.tar.gz
-_md5_=9638938a9dba281b9dd3e7b6c494d894
+_md5_=59ec7c2d9d9b6f746f09314318507cd9

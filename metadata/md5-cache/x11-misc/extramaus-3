@@ -9,4 +9,4 @@ RDEPEND=x11-libs/libX11 x11-libs/libXext
 SLOT=0
 SRC_URI=https://gist.githubusercontent.com/ibLeDy/aecab4b95b242ff07108c6d58e35d421/raw/44f2188279b4aec54f0d667bda72e542829c3240/extramaus.c
 _eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0
-_md5_=9ae056e14b2e1eadf3560993983804d7
+_md5_=1e7627c4241c3ed1e2847392b8a0a8ce

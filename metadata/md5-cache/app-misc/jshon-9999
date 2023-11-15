@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=dev-libs/jansson
 SLOT=0
 _eclasses_=git-r3	5133e393e8717a3a093660f990801dc1
-_md5_=c9989e5e8702780a3401ff857a953e74
+_md5_=693aa8f5acc9b4ab0101805f505cb5e9

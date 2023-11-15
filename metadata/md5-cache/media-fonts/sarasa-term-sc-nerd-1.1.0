@@ -11,4 +11,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/laishulu/Sarasa-Term-SC-Nerd/releases/download/v1.1.0/sarasa-term-sc-nerd.ttf.tar.gz -> sarasa-term-sc-nerd-1.1.0.tar.gz
 _eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb
-_md5_=a5dd1e5f1675ca82061ffd0e7a658ab8
+_md5_=eb610f18c83e4be5906df512ef7e8798

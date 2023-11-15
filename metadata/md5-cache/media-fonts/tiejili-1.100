@@ -10,4 +10,4 @@ LICENSE=OFL-1.1
 SLOT=0
 SRC_URI=https://github.com/Buernia/Tiejili/archive/refs/tags/1.100.tar.gz -> tiejili-1.100.tar.gz
 _eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb
-_md5_=a6af621af7d34217d7ce76f5096cab44
+_md5_=cb9b73219535a3eb117786e38be7efb3
