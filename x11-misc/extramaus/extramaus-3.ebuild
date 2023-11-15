@@ -11,7 +11,8 @@ inherit toolchain-funcs
 
 SLOT="0"
 KEYWORDS="~amd64"
-
+#https://gist.github.com/ibLeDy/aecab4b95b242ff07108c6d58e35d421#file-extramaus-c-L18-L36
+LICENSE="GPL-3+"
 DEPEND="x11-libs/libX11
 x11-libs/libXext"
 
@@ -20,7 +21,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}"
 
 src_unpack(){
-	cp ${DISTDIR}/extramaus.c $S/
+	cp "${DISTDIR}/extramaus.c" "${S}/"
 }
 
 src_compile(){
