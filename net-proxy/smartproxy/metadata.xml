@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<!-- maintainer-needed -->
-	<use>
-		<flag name="system-boost">use system supplied boost</flag>
-	</use>
 	<upstream>
 		<remote-id type="github">microcai/smartproxy</remote-id>
 	</upstream>
