@@ -1,0 +1,251 @@
+# This file is deprecated as per GLEP 56 in favor of metadata.xml.
+# Please add your descriptions to your package's metadata.xml ONLY.
+# * generated automatically using pmaint *
+
+app-admin/zenmonitor3:polkit - Install polkit policy for app-admin/zenmonitor3
+app-alternatives/v2ray-geoip:loyalsoldier - use dev-libs/v2ray-rules-dat
+app-alternatives/v2ray-geoip:v2fly - use dev-libs/v2ray-geoip-bin
+app-alternatives/v2ray-geosite:loyalsoldier - use dev-libs/v2ray-rules-dat
+app-alternatives/v2ray-geosite:v2fly - use dev-libs/v2ray-domain-list-community-bin
+app-arch/zchunk:openssl - Build with openssl support
+app-emulation/deepin-wine-plugin:virtual-pkg - With deepin-wine-plugin-virtual package
+app-emulation/looking-glass:backtrace - Enable backtrace support
+app-emulation/looking-glass:host - Build host application
+app-emulation/looking-glass:obs - Build OBS plugin
+app-emulation/looking-glass:pipewire - Build with PipeWire support
+app-i18n/fcitx:autostart - Enable XDG-compatible autostart of Fcitx
+app-i18n/fcitx:coverage - Build the project with gcov support (Need ENABLE_TEST=On)
+app-i18n/fcitx:emoji - Enable emoji loading for CLDR
+app-i18n/fcitx:enchant - Enable Enchant backend (using app-text/enchant) for spelling hinting
+app-i18n/fcitx:gtk2 - Install input method module for GTK+ 2
+app-i18n/fcitx:gtk3 - Install input method module for GTK+ 3
+app-i18n/fcitx:keyboard - Enable key event translation with XKB and build keyboard engine
+app-i18n/fcitx:opencc - Enable OpenCC engine (using app-i18n/opencc) for converter between Simplified Chinese and Traditional Chinese
+app-i18n/fcitx:pango - Enable support for x11-libs/pango
+app-i18n/fcitx:presage - Enable presage for word predication (not stable)
+app-i18n/fcitx:server - Build a fcitx as server, disable this option if you want to use fcitx as an embedded library
+app-i18n/fcitx:table - Install table input methods for Simplified Chinese
+app-i18n/fcitx:xkb - Enable support for XKB (required for fcitx-xkb, fcitx-xkbdbus, part of fcitx-keyboard)
+app-i18n/fcitx-anthy:coverage - Build the project with gcov support (Need USE="test")
+app-i18n/fcitx-chinese-addons:browser - Enable built-in browser using dev-qt/qtwebengine
+app-i18n/fcitx-chinese-addons:cloudpinyin - Build cloud pinyin addon
+app-i18n/fcitx-chinese-addons:coverage - Build the project with gcov support (Need USE=test)
+app-i18n/fcitx-chinese-addons:gui - Enable configure gui
+app-i18n/fcitx-chinese-addons:opencc - Enable support for conversion between Traditional and Simplified Chinese
+app-i18n/fcitx-configtool:config-qt - Enable fcitx5-config-qt
+app-i18n/fcitx-configtool:kcm - Enable KDE KCM support
+app-i18n/fcitx-configtool:test - Enable Test
+app-i18n/fcitx-gtk:gtk2 - Install input method module for GTK+ 2
+app-i18n/fcitx-gtk:gtk3 - Enable support for GTK+3
+app-i18n/fcitx-gtk:gtk4 - Enable support for GTK 4
+app-i18n/fcitx-gtk:onlyplugin - Build only plugin
+app-i18n/fcitx-gtk:snooper - Enable key snooper for gtk app
+app-i18n/fcitx-lua:dlopen - Use dlopen to load lua library
+app-i18n/fcitx-meta:chinese-addons - Install Chinese addons for fcitx5
+app-i18n/fcitx-meta:configtool - Enable GUI config tool
+app-i18n/fcitx-meta:gtk2 - Enable GTK2 IM support
+app-i18n/fcitx-meta:gtk3 - Enable GTK3 IM support
+app-i18n/fcitx-meta:gtk4 - Enable GTK4 IM support
+app-i18n/fcitx-meta:hangul - Install Hangul Korean input method
+app-i18n/fcitx-meta:rime - Install Rime Chinese input method
+app-i18n/fcitx-meta:skk - Install SKK Japanese input method
+app-i18n/fcitx-qt:onlyplugin - Build only plugin
+app-i18n/fcitx-qt:qt6 - Build support for QT6
+app-i18n/libime-jyutping:engine - Enable input method for fcitx
+app-i18n/librime:debug - Enable debugging (including logging of input of RIME input methods)
+app-i18n/librime-octagram:debug - Enable debugging (including logging of input of RIME input methods)
+app-i18n/librime-octagram:tools - install grammar builder
+app-i18n/mozc:fcitx4 - Enable support for app-i18n/fcitx 4
+app-i18n/mozc:fcitx5 - Enable support for app-i18n/fcitx 5
+app-i18n/mozc:gui - Install graphical user interface tool (mozc_tool)
+app-i18n/mozc:ibus - Enable support for app-i18n/ibus
+app-i18n/mozc:renderer - Enable native candidate window
+app-i18n/rime-data:bopomofo - install app-i18n/rime-bopomofo
+app-i18n/rime-data:cangjie - install app-i18n/rime-cangjie
+app-i18n/rime-data:double-pinyin - install app-i18n/rime-double-pinyin
+app-i18n/rime-data:essay - install app-i18n/rime-essay
+app-i18n/rime-data:flypy - install app-i18n/rime-flypy
+app-i18n/rime-data:luna-pinyin - install app-i18n/rime-luna-pinyin
+app-i18n/rime-data:octagram - install app-i18n/rime-octagram-data
+app-i18n/rime-data:pinyin-simp - install app-i18n/rime-pinyin-simp
+app-i18n/rime-data:prelude - install app-i18n/rime-prelude
+app-i18n/rime-data:stroke - install app-i18n/rime-stroke
+app-i18n/rime-data:terra-pinyin - install app-i18n/rime-terra-pinyin
+app-i18n/rime-data:wubi - install app-i18n/rime-wubi
+app-i18n/rime-essay:hans - install rime-essay-simp
+app-i18n/rime-essay:hant - install rime-essay
+app-i18n/rime-flypy:fcitx - install table for fcitx5
+app-i18n/rime-flypy:rime - install table for rime
+app-i18n/rime-octagram-data:hans - install zh-hans-*.gram
+app-i18n/rime-octagram-data:hant - install zh-hant-*.gram
+app-i18n/zh-autoconvert:static-libs - Build static versions of dynamic libraries as well
+app-misc/gpick:gtk3 - use GTK3 instead of GTK2
+app-misc/joshuto:fzf - Fuzzy search via fzf
+dev-cpp/cppcoro:shared - Build shared library instead of static library.
+dev-cpp/tgbot-cpp:shared-libs - Build shared library instead of static library.
+dev-db/mongodb:experimental-optimization - Enable experimental optimizations, exclude sandybridge.
+dev-db/mongodb:experimental-runtime-hardening - Enable experimental runtime hardenings.
+dev-db/mongodb:free-mon - Enable support for Free Monitoring
+dev-db/mongodb:gold - Use gold linker instead of default bfd linker.
+dev-db/mongodb:http-client - Enable support for HTTP client requests.
+dev-db/mongodb:lto - Adds support for link time optimization
+dev-db/mongodb:mongosh - Install the MongoDB shell from app-admin/mongosh-bin
+dev-db/mongodb:ocsp-stapling - Enable OCSP Stapling on servers.
+dev-db/mongodb:runtime-hardening - Enable runtime hardening features. (e.g. stack smash protection)
+dev-db/mongodb:server-js - Build mongod with JavaScript support. (use spidermonkey as javascript scripting engine)
+dev-db/mongodb:tcmalloc - Use tcmalloc as allocator.
+dev-db/mongodb:tcmalloc-experimental - Use tcmalloc-experimental as allocator.
+dev-db/mongodb:tools - Install the MongoDB tools (mongoimport, mongodump...) from app-admin/mongo-tools
+dev-lang/quickjs:lto - Enable Link Time Optimizations (improves performance and decreases size of executables)
+dev-libs/v2ray-rules-dat:geoip - Install geoip.dat
+dev-libs/v2ray-rules-dat:geosite - Install geosite.dat
+dev-python/conda:user - use user's home directory as default pkgs and envs prefix
+dev-python/nvchecker:ini - convert your old configuration files from ini to toml
+dev-python/nvchecker:notify - enable nvchecker-notify support
+dev-python/qasync:qt6 - Use dev-python/PyQt6 or dev-python/pyside6 for qt6 support
+dev-util/arch-install-scripts:archroot - Install arch-chroot
+dev-util/arch-install-scripts:genfstab - Install genfstab
+dev-util/arch-install-scripts:pacstrap - Install pacstrap
+gui-libs/libdecor:dbus - Enable dbus to query current cursor theme
+gui-libs/libdecor:examples - Build and install examples
+media-fonts/Plangothic:allideo - use HanaMin to display unincluded fonts
+media-fonts/Plangothic:fallback - do not display unincluded fonts
+media-fonts/nerd-fonts:3270 - Install Nerd-fonts-patched 3270 fonts
+media-fonts/nerd-fonts:agave - Install Nerd-fonts-patched Agave fonts
+media-fonts/nerd-fonts:anonymouspro - Install Nerd-fonts-patched Anonymous Pro fonts
+media-fonts/nerd-fonts:arimo - Install Nerd-fonts-patched Arimo fonts
+media-fonts/nerd-fonts:aurulentsansmono - Install Nerd-fonts-patched Aurulent Sans Mono fonts
+media-fonts/nerd-fonts:bigblueterminal - Install Nerd-fonts-patched Big Blue Terminal fonts
+media-fonts/nerd-fonts:bitstreamverasansmono - Install Nerd-fonts-patched Bitstream Vera Sans Mono fonts
+media-fonts/nerd-fonts:cascadiacode - Install Nerd-fonts-patched Cascadia Code fonts
+media-fonts/nerd-fonts:codenewroman - Install Nerd-fonts-patched Code New Roman fonts
+media-fonts/nerd-fonts:comicshannsmono - Install Nerd-fonts-patched Comic Shanns Mono fonts
+media-fonts/nerd-fonts:cousine - Install Nerd-fonts-patched Cousine fonts
+media-fonts/nerd-fonts:daddytimemono - Install Nerd-fonts-patched Daddy Time Mono fonts
+media-fonts/nerd-fonts:dejavusansmono - Install Nerd-fonts-patched DejaVu Sans Mono fonts
+media-fonts/nerd-fonts:droidsansmono - Install Nerd-fonts-patched Droid Sans Mono fonts
+media-fonts/nerd-fonts:fantasquesansmono - Install Nerd-fonts-patched Fantasque Sans mono fonts
+media-fonts/nerd-fonts:firacode - Install Nerd-fonts-patched Fira Code fonts
+media-fonts/nerd-fonts:firamono - Install Nerd-fonts-patched Fira Mono fonts
+media-fonts/nerd-fonts:go-mono - Install Nerd-fonts-patched Go-Mono fonts
+media-fonts/nerd-fonts:gohu - Install Nerd-fonts-patched Gohu fonts
+media-fonts/nerd-fonts:hack - Install Nerd-fonts-patched Hack fonts
+media-fonts/nerd-fonts:hasklig - Install Nerd-fonts-patched Hasklig fonts
+media-fonts/nerd-fonts:heavydata - Install Nerd-fonts-patched Heavy Data fonts
+media-fonts/nerd-fonts:hermit - Install Nerd-fonts-patched Hermit fonts
+media-fonts/nerd-fonts:ia-writer - Install Nerd-fonts-patched iA-Writer fonts
+media-fonts/nerd-fonts:ibmplexmono - Install Nerd-fonts-patched IBM Plex Mono fonts
+media-fonts/nerd-fonts:inconsolata - Install Nerd-fonts-patched Inconsolata fonts
+media-fonts/nerd-fonts:inconsolatago - Install Nerd-fonts-patched Inconsolata Go fonts
+media-fonts/nerd-fonts:inconsolatalgc - Install Nerd-fonts-patched Inconsolata LGC fonts
+media-fonts/nerd-fonts:iosevka - Install Nerd-fonts-patched Iosevka fonts
+media-fonts/nerd-fonts:iosevkaterm - Install Nerd-fonts-patched Iosevka terminal fonts
+media-fonts/nerd-fonts:jetbrainsmono - Install Nerd-fonts-patched JetBrains Mono fonts
+media-fonts/nerd-fonts:lekton - Install Nerd-fonts-patched Lekton fonts
+media-fonts/nerd-fonts:liberationmono - Install Nerd-fonts-patched Liberation Mono fonts
+media-fonts/nerd-fonts:lilex - Install Nerd-fonts-patched Lilex Mono fonts
+media-fonts/nerd-fonts:meslo - Install Nerd-fonts-patched Meslo fonts
+media-fonts/nerd-fonts:monofur - Install Nerd-fonts-patched Monofur fonts
+media-fonts/nerd-fonts:monoid - Install Nerd-fonts-patched Monoid fonts
+media-fonts/nerd-fonts:mononoki - Install Nerd-fonts-patched Mononoki fonts
+media-fonts/nerd-fonts:mplus - Install Nerd-fonts-patched Mplus fonts
+media-fonts/nerd-fonts:nerdfontssymbolsonly - Install extra glyphs from popular iconic fonts
+media-fonts/nerd-fonts:noto - Install Nerd-fonts-patched Noto fonts
+media-fonts/nerd-fonts:opendyslexic - Install Nerd-fonts-patched Open Dyslexic fonts
+media-fonts/nerd-fonts:overpass - Install Nerd-fonts-patched Overpass fonts
+media-fonts/nerd-fonts:profont - Install Nerd-fonts-patched Pro Font fonts
+media-fonts/nerd-fonts:proggyclean - Install Nerd-fonts-patched Proggy Clean fonts
+media-fonts/nerd-fonts:robotomono - Install Nerd-fonts-patched Roboto Mono fonts
+media-fonts/nerd-fonts:sharetechmono - Install Nerd-fonts-patched Share Tech Mono fonts
+media-fonts/nerd-fonts:sourcecodepro - Install Nerd-fonts-patched Source Code Pro fonts
+media-fonts/nerd-fonts:spacemono - Install Nerd-fonts-patched Space Mono fonts
+media-fonts/nerd-fonts:terminus - Install Nerd-fonts-patched Terminus fonts
+media-fonts/nerd-fonts:tinos - Install Nerd-fonts-patched Tinos fonts
+media-fonts/nerd-fonts:ubuntu - Install Nerd-fonts-patched Ubuntu fonts
+media-fonts/nerd-fonts:ubuntumono - Install Nerd-fonts-patched Ubuntu Mono fonts
+media-fonts/nerd-fonts:victormono - Install Nerd-fonts-patched Victor Mono fonts
+media-gfx/unityhub:legacy - add support for Legacy versions
+media-plugins/osdlyrics:gnome - add support for gnome
+media-plugins/osdlyrics:indicator - add support for appindicator
+media-sound/feeluown:bilibili - add support for bilibili
+media-sound/feeluown:kuwo - add kuwo music support for feeluown
+media-sound/feeluown:netease - add netease cloud music support for feeluown
+media-sound/feeluown:qqmusic - add qq music support for feeluown
+media-sound/feeluown:webengine - add support to login via web page
+media-sound/feeluown:ytmusic - add support for youtube music
+media-sound/go-musicfox:clang - Use sys-devel/clang
+media-sound/termusic:gst - Use media-libs/gstreamer as decoding backend
+media-sound/termusic:mpv - Use media-video/mpv as decoding backend
+media-sound/termusic:symphonia - Use symphonia as decoding backend (default)
+media-sound/termusic:yt-dlp - Use net-misc/yt-dlp to provide the youtebe-dl feature
+net-dns/dnsmasq-china-list:dnscrypt-proxy - Install rules for dnscrypt-proxy
+net-dns/dnsmasq-china-list:dnsmasq - Install rules for dnsmasq
+net-dns/dnsmasq-china-list:smartdns - Install rules for smartdns
+net-im/deepin-wine-wechat:fake-simsun - Use fake_simsun font
+net-im/deepin-wine-wechat:reg-patch - Disable wechat-{player,app,appex,browser} plugin
+net-im/deepin-wine-wechat:wqy-microhei - Use wqy-microhei font
+net-im/tencent-qq:appindicator - Build in support for notifications using the libindicate or libappindicator plugin
+net-im/tencent-qq:bwrap - Use sys-apps/bubblewrap to prevent private information leakage
+net-im/tencent-qq:gnome - Supporting screenshot when using GNOME
+net-im/tencent-qq:system-vips - Use media-libs/vips instead of shipped libs.
+net-misc/pcmanx-gtk2:iplookup - IP location lookup, Useful to China locations
+net-misc/pcmanx-gtk2:proxy - proxy server support
+net-misc/pcmanx-gtk2:wget - use wget to download files
+net-misc/rustdesk:hwaccel - enable hardware-accelerated rendering support
+net-misc/rustdesk:wayland - enable wayland support
+net-p2p/amule-dlp:daemon - Enable amule daemon
+net-p2p/amule-dlp:remote - Enable remote controlling of the client
+net-p2p/amule-dlp:stats - Enable statistic reporting
+net-p2p/n2n:caps - Use libcap support
+net-p2p/n2n:openssl - Use openssl support
+net-p2p/n2n:pcap - Use libpcap support
+net-p2p/n2n:upnp - Use miniupnpc and libnatpmp support
+net-p2p/n2n:zstd - Use zstd support
+net-p2p/qbittorrent-enhanced:webui - Enable the Web UI
+net-proxy/clash-meta:gvisor - enable TUN stack support for gvisor
+net-proxy/clash-meta:lwip - enable TUN stack support for lwip
+net-proxy/daed:webui - Build and install daed instead of dae-wing
+net-proxy/hysteria:goamd64 - detect golang arch level on amd64 cpus by CPU_FLAGS_X86
+net-proxy/juicity:client - install juicity-client
+net-proxy/juicity:server - install juicity-server
+net-proxy/shadowsocks-rust:redir - Enable redir protocol for sslocal (transparent proxy)
+net-proxy/shadowsocks-rust:tun - Enable Tun interface protocol for sslocal
+net-proxy/smartproxy:system-boost - use system supplied boost
+net-proxy/v2rayA:xray - To be able to use net-proxy/Xray. Disable the v2ray useflag to use xray as default
+sci-electronics/openfpgaloader:cmsisdap - enable cmsis-dap support
+sci-electronics/openfpgaloader:gpio - enable libgpiod bitbang support
+sci-electronics/openfpgaloader:remote - enable remote bitbang support
+sys-apps/pacman:doc - Install extended documentation using app-doc/doxygen. (Man pages are included by default.)
+sys-apps/pacman:gpg - Enable GPG signature verification using app-crypt/gpgme
+sys-kernel/liquorix-sources:cjk - Enable cjktty Patches.
+sys-kernel/xanmod-kernel:clang - Use clang compiler instead of GCC
+sys-kernel/xanmod-kernel:debug - Pseudo flag
+sys-kernel/xanmod-kernel:initramfs - Build initramfs along with the kernel.
+sys-kernel/xanmod-kernel:x86-64-v1 - Set compiler optimization to x86-64-v1
+sys-kernel/xanmod-kernel:x86-64-v2 - Set compiler optimization to x86-64-v2
+sys-kernel/xanmod-kernel:x86-64-v3 - Set compiler optimization to x86-64-v3
+sys-kernel/xanmod-kernel:x86-64-v4 - Set compiler optimization to x86-64-v4
+sys-kernel/xanmod-rt:cjk - Eanble cjktty patches.
+sys-kernel/xanmod-sources:cjktty - Enable cjktty patches.
+virtual/linux-sources:firmware - Install linux kernel firmware
+www-servers/woof:bzip2 - bzip2 decompression of the archive from woof
+www-servers/woof:gzip - gzip decompression of the archive from woof
+www-servers/woof:unzip - ZIP decompression of the archive from woof
+x11-libs/xcb-imdkit:system-uthash - Use the system-wide dev-libs/uthash instead of bundled.
+x11-misc/ly:openrc - install provided OpenRC service
+x11-misc/ly:runit - install provided runit service
+x11-misc/ly:systemd - install provided systemd service
+x11-misc/picom-jonaburg:config-file - Enable config file support
+x11-misc/picom-jonaburg:doc - Build documentation and man pages (requires app-text/asciidoc)
+x11-misc/picom-jonaburg:drm - Enable support for using drm for vsync
+x11-misc/picom-jonaburg:opengl - Enable features that require opengl (opengl backend, and opengl vsync methods)
+x11-plugins/vicious:contrib - Install extra widgets, some for less common hardware, some contributed by Vicious users.
+x11-themes/nordic:cinnamon - Install theme for gnome-extra/cinnamon
+x11-themes/nordic:gnome-shell - Install theme for gnome-base/gnome-shell
+x11-themes/nordic:gtk2 - Install GTK+2 theme
+x11-themes/nordic:gtk3 - Install GTK+3 theme
+x11-themes/nordic:gtk4 - Install GTK4 theme
+x11-themes/nordic:kde - Install KDE theme
+x11-themes/nordic:mate - Install Metacity theme for mate-base/mate
+x11-themes/nordic:xfce - Install theme for xfce-base/xfwm4
+x11-themes/nordzy-cursors:nord-white - Install ${PN}-white cursors theme
