@@ -1,3 +1,0 @@
-move app-editors/visual-studio-code app-editors/visual-studio-code-bin
-move sys-kernel/xanmod-hybird sys-kernel/xanmod-hybrid
-move sys-kernel/xanmod-cacule-hybrid sys-kernel/xanmod-hybrid

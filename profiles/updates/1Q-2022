@@ -1,2 +1,1 @@
-move app-editors/visual-studio-code-bin app-editors/vscode
 move sys-kernel/xanmod-lts sys-kernel/xanmod-kernel
