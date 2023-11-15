@@ -16,7 +16,7 @@ KEYWORDS="amd64 x86 arm64 arm mips"
 
 RDEPEND="sys-fs/zfs"
 
-src_install(){
-    systemd_dounit zpool-scrub@.service
-    systemd_dounit zpool-scrub@.timer
+src_install() {
+	systemd_dounit zpool-scrub@.service
+	systemd_dounit zpool-scrub@.timer
 }

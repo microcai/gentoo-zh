@@ -14,7 +14,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ~ia64 mips ppc ~s390 sparc x86"
 
-
 S="${WORKDIR}/${PN}"
 FONT_S="${S}"
 FONT_SUFFIX="ttf"
