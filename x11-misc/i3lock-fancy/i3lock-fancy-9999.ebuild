@@ -13,14 +13,12 @@ SLOT="0"
 
 RDEPEND="app-shells/bash:0
 		media-gfx/imagemagick
-		virtual/awk
+		app-alternatives/awk
 		x11-misc/wmctrl
 		media-gfx/scrot
 		x11-misc/i3lock-color"
 
 DEPEND="${RDEPEND}"
-
-INST_DIR="${D}/usr/share/i3lock-fancy"
 
 src_configure() {
 	# Fix script requiring icons to be in same dir
@@ -29,8 +27,8 @@ src_configure() {
 }
 
 src_install() {
-	mkdir -p "$INST_DIR" "${D%/*}/usr/bin/"
-	cp lock.sh "${D}/usr/bin/lock"
-	chmod +x "${D}/usr/bin/lock"
-	cp -r icons "${INST_DIR}"
+	newbin lock.sh lock
+
+	insinto "/usr/share/i3lock-fancy"
+	doins -r icons
 }

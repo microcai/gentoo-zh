@@ -50,7 +50,7 @@ COMMON_DEPEND="
 "
 DEPEND="${COMMON_DEPEND}
 	test? (
-		qt6? ( >=dev-qt/qtbase-${QT6MIN}:5[test] )
+		qt6? ( >=dev-qt/qtbase-${QT6MIN}:6[test] )
 		!qt6? ( >=dev-qt/qttest-${QT5MIN}:5 )
 
 	)
