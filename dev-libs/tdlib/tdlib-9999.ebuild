@@ -11,9 +11,9 @@ EGIT_REPO_URI="https://github.com/tdlib/td.git"
 EGIT_BRANCH="master"
 EGIT_CHECKOUT_DIR="${WORKDIR}/td"
 
-LICENSE="BSL-1.0"
+LICENSE="Boost-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+#KEYWORDS="~amd64 ~x86"
 
 DEPEND="sys-devel/gcc
 	dev-libs/openssl
