@@ -20,14 +20,14 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}"
 
 src_unpack(){
-    cp ${DISTDIR}/extramaus.c $S/
+	cp ${DISTDIR}/extramaus.c $S/
 }
 
 src_compile(){
-    CC=$(tc-getCC)
-    $CC ${CFLAGS} ${LDFLAGS} extramaus.c -o extramaus -lX11 -lXext
+	CC=$(tc-getCC)
+	$CC ${CFLAGS} ${LDFLAGS} extramaus.c -o extramaus -lX11 -lXext
 }
 
 src_install(){
-    dobin extramaus
+	dobin extramaus
 }

@@ -15,43 +15,43 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 COMMON_DEPEND="
-        media-libs/libjpeg8
-        net-print/cups
-        sys-apps/dbus
-        virtual/jpeg:0
-        net-print/cups-filters
-        scanner? (
-                media-gfx/sane-backends
-        )
+	media-libs/libjpeg8
+	net-print/cups
+	sys-apps/dbus
+	virtual/jpeg:0
+	net-print/cups-filters
+	scanner? (
+		media-gfx/sane-backends
+	)
 "
 BDEPEND="
-        virtual/pkgconfig
+	virtual/pkgconfig
 "
 DEPEND="
-        ${COMMON_DEPEND}
+	${COMMON_DEPEND}
 "
 RDEPEND="
-        ${COMMON_DEPEND}
-        app-text/ghostscript-gpl
+	${COMMON_DEPEND}
+	app-text/ghostscript-gpl
 "
 S="${WORKDIR}/Pantum Linux Driver V1.1.94-1"
 
 src_prepare(){
-        eapply_user
-        unpack "${S}/Resources/pantum_1.1.94-1_amd64.deb"
+	eapply_user
+	unpack "${S}/Resources/pantum_1.1.94-1_amd64.deb"
 }
 
 src_install(){
-        tar -xvf "${S}/data.tar.xz" -C "$D"
-        if ! use scanner ; then
-                rm -rf "${D}/usr/lib/x86_64-linux-gnu"
-                rm -rf "${D}/usr/local"
-        fi
-        mv ${D}/usr/lib ${D}/usr/libexec
-        mkdir "${D}/etc/ld.so.conf.d/"
-        echo /opt/pantum/lib >> "${D}/etc/ld.so.conf.d/pantum.conf"
+	tar -xvf "${S}/data.tar.xz" -C "$D"
+	if ! use scanner ; then
+		rm -rf "${D}/usr/lib/x86_64-linux-gnu"
+		rm -rf "${D}/usr/local"
+	fi
+	mv ${D}/usr/lib ${D}/usr/libexec
+	mkdir "${D}/etc/ld.so.conf.d/"
+	echo /opt/pantum/lib >> "${D}/etc/ld.so.conf.d/pantum.conf"
 }
 
-post_install(){
-        ldconfig
+post_install() {
+	ldconfig
 }

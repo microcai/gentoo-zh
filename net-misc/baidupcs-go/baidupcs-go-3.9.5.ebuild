@@ -26,7 +26,6 @@ HOMEPAGE="https://github.com/qjfoidnh/BaiduPCS-Go"
 LICENSE="Apache-2.0"
 SLOT="0"
 
-
 src_compile()
 {
 	ego build -o bin/${PN} -trimpath

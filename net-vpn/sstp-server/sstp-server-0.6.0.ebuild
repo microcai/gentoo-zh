@@ -20,10 +20,10 @@ DEPEND="net-dialup/ppp"
 RDEPEND="${DEPEND}"
 
 src_install(){
-    distutils-r1_src_install
+	distutils-r1_src_install
 
-    insinto /etc/
-    doins sstp-server.ini
+	insinto /etc/
+	doins sstp-server.ini
 
-    systemd_dounit ${FILESDIR}/sstp-server@.service
+	systemd_dounit ${FILESDIR}/sstp-server@.service
 }

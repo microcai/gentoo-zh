@@ -80,4 +80,3 @@ multilib_src_install_all() {
 	rm -rf ${ED}/usr/share
 	rm -rf ${ED}/usr/bin
 }
-
