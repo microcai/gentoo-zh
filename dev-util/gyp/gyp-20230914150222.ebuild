@@ -4,19 +4,19 @@
 EAPI="8"
 PYTHON_COMPAT=( python3_{10..12} )
 DISTUTILS_SINGLE_IMPL="1"
+DISTUTILS_USE_PEP517=setuptools
 
 inherit distutils-r1
+
+DESCRIPTION="GYP (Generate Your Projects) meta-build system"
+HOMEPAGE="https://gyp.gsrc.io/ https://chromium.googlesource.com/external/gyp"
+COMMIT="a03d7413becefc8d55c8aa3df58b55b9bd0e9052"
 
 if [[ "${PV}" == "99999999999999" ]]; then
 	inherit git-r3
 
 	EGIT_REPO_URI="https://chromium.googlesource.com/external/gyp"
-fi
-
-DESCRIPTION="GYP (Generate Your Projects) meta-build system"
-HOMEPAGE="https://gyp.gsrc.io/ https://chromium.googlesource.com/external/gyp"
-COMMIT="a03d7413becefc8d55c8aa3df58b55b9bd0e9052"
-if [[ "${PV}" != "99999999999999" ]]; then
+else
 	inherit vcs-snapshot
 
 	SRC_URI="https://github.com/chromium/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
