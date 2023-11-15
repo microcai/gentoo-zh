@@ -9,8 +9,10 @@ HOMEPAGE="https://github.com/microcai/smartproxy"
 EGIT_REPO_URI="https://github.com/microcai/smartproxy"
 EGIT_COMMIT="v${PV}"
 
-inherit cmake git-r3
-#SRC_URI="https://github.com/microcai/smartproxy/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+inherit cmake
+SRC_URI="
+	https://github.com/microcai/smartproxy/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
+"
 
 LICENSE="GPL-3+"
 SLOT="0"
