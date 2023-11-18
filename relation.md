@@ -1,14 +1,12 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-16 11:55:22 CST)
+(The last generation time: 2023-11-18 18:26:47 CST)
 
 ### Packages
 
 ```
  Package name                               | Version                                   | Role   | Homepage                                                                                | Description
 ============================================|===========================================|========|=========================================================================================|====================
- acct-group/aptly                           | 0                                         |        |                                                                                         |
---------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/supersm                          | 0.5.1                                     |        | https://github.com/peeweep/supersm                                                      | Super Symlink Manager
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/zenmonitor3                      | 2.0.0                                     |        | https://git.exozy.me/a/zenmonitor3                                                      | Zen monitor is monitoring software for AMD Zen-based CPUs
@@ -556,8 +554,9 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sec-policy/apparmor-profile-deepinwine     | 1.0.0                                     |        | https://gitlab.com/apparmor/apparmor/wikis/home                                         | A collection of AppArmor profiles for Deepinwine6
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- sys-apps/aptly                             | 1.4.0-r1                                  |        | https://github.com/aptly-dev/aptly                                                      | A swiss army knife for Debian repository management
+ sys-apps/aptly                             | 1.5.0                                     |        | https://github.com/aptly-dev/aptly                                                      | A swiss army knife for Debian repository management
                                             | 9999                                      |        |                                                                                         |
+   acct-group/aptly                         | 0                                         | RD     |                                                                                         | A swiss army knife for Debian repository management
    acct-user/aptly                          | 0                                         | RD     |                                                                                         | A swiss army knife for Debian repository management
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/mdp                               | 9999                                      |        | https://github.com/visit1985/mdp                                                        | A command-line based markdown presentation tool
