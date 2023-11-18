@@ -17,7 +17,7 @@ S="${WORKDIR}/qBittorrent-Enhanced-Edition-release-${PV}"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="+dbus webui qt6 +qt5 gui"
+IUSE="+dbus webui qt6 +qt5 +gui"
 
 REQUIRED_USE="^^ ( qt5 qt6 )
 	dbus? ( gui )
@@ -61,7 +61,7 @@ BDEPEND="qt5? ( dev-qt/linguist-tools:5 )
 DOCS=( AUTHORS Changelog CONTRIBUTING.md README.md)
 
 PATCHES=(
-	${FILESDIR}/4.5-fix-compile-error-when-disable-webui.patch
+	"${FILESDIR}/4.5-fix-compile-error-when-disable-webui.patch"
 )
 
 src_configure() {
