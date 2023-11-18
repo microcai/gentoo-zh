@@ -3,15 +3,16 @@
 
 EAPI=8
 
-EGIT_REPO_URI="https://github.com/aptly-dev/${PN}.git"
-
-inherit bash-completion-r1 git-r3 go-module systemd
+inherit bash-completion-r1 go-module systemd
 
 DESCRIPTION="A swiss army knife for Debian repository management"
 HOMEPAGE="https://github.com/aptly-dev/aptly"
+SRC_URI="https://github.com/aptly-dev/aptly/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI+=" https://github.com/liuyujielol/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz"
 
 LICENSE="MIT"
 SLOT="0"
+KEYWORDS="~amd64"
 RESTRICT="test" # fails
 
 RDEPEND="
@@ -19,13 +20,8 @@ RDEPEND="
 	acct-user/aptly
 "
 
-src_unpack() {
-	git-r3_src_unpack
-	go-module_live_vendor
-}
-
 src_compile() {
-	ego build -o cmd/aptly -ldflags "-X main.Version=${PV}"
+	ego build -mod=readonly -o cmd/aptly -ldflags "-X main.Version=${PV}"
 }
 
 src_test() {
