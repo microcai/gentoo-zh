@@ -2,18 +2,19 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-
-DESCRIPTION="A Secure Socket Tunneling Protocol (SSTP) server implemented in Python."
-HOMEPAGE="https://github.com/sorz/sstp-server/"
-SRC_URI="https://github.com/sorz/sstp-server/archive/v0.6.0.tar.gz -> ${P}.tar.gz"
-
-LICENSE="MIT"
-SLOT="0"
-KEYWORDS="x86 amd64 mips arm"
-
+DISTUTILS_EXT=1
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{9..12} )
 
 inherit systemd distutils-r1
+
+DESCRIPTION="A Secure Socket Tunneling Protocol (SSTP) server implemented in Python."
+HOMEPAGE="https://github.com/sorz/sstp-server/"
+SRC_URI="https://github.com/sorz/sstp-server/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+
+LICENSE="MIT"
+SLOT="0"
+KEYWORDS="amd64 arm mips x86"
 
 DEPEND="net-dialup/ppp"
 
@@ -25,5 +26,5 @@ src_install(){
 	insinto /etc/
 	doins sstp-server.ini
 
-	systemd_dounit ${FILESDIR}/sstp-server@.service
+	systemd_newunit "${FILESDIR}/sstp-server_at.service" sstp-server@.service
 }
