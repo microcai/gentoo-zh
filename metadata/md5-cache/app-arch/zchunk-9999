@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=curl? ( net-misc/curl ) openssl? ( dev-libs/openssl:0/3 ) zstd? ( app-arch/zstd )
 RESTRICT=!test? ( test )
 SLOT=0
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	30999b80ec1fe0b4af340ae819375346	meson	1be925a1f585b2f19a8e45737f09016c	git-r3	5133e393e8717a3a093660f990801dc1
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	e989dbdcbb647bd8655857c1f95be244	meson	1be925a1f585b2f19a8e45737f09016c	git-r3	5133e393e8717a3a093660f990801dc1
 _md5_=85c4905c42e06edd4b6322c69205088e
