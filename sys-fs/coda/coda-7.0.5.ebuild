@@ -3,20 +3,25 @@
 
 EAPI=7
 
-inherit autotools
+PYTHON_COMPAT=( python3_11 )
+inherit python-single-r1
 
 DESCRIPTION="Coda is an advanced network file system, similar to NFS"
-HOMEPAGE="http://www.coda.cs.cmu.edu/"
-SRC_URI="http://coda.cs.cmu.edu/coda/source/coda-7.0.5.tar.xz"
+HOMEPAGE="
+	http://www.coda.cs.cmu.edu
+	https://github.com/cmusatyalab/coda
+"
+SRC_URI="http://coda.cs.cmu.edu/coda/source/${P}.tar.xz"
 
-LICENSE="GPL"
+LICENSE="GPL-1"
 SLOT="0"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+RESTRICT="mirror"
 
 COM_DEP="sys-libs/ncurses
 	dev-lang/lua
 	sys-devel/flex
 	sys-devel/bison
-	dev-lang/python
 	sys-libs/readline
 	sys-libs/lwp
 "
@@ -25,4 +30,7 @@ DEPEND="${COM_DEP}
 	virtual/pkgconfig
 "
 
-RDEPEND="${COM_DEP}"
+RDEPEND="
+	${COM_DEP}
+	${PYTHON_DEPS}
+"
