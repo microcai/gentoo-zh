@@ -77,7 +77,7 @@ app-misc/keyd 2.4.3: A key remapping daemon for linux
 app-misc/rmtrash 1.14 1.15: trash-put made compatible to GNUs rm and rmdir
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/xmind 22.11.3656 23.07.201366-r1: Brainstorming and Mind Mapping Software
-app-misc/yq-bin 4.30.6 4.35.2: yq is a portable command-line YAML, JSON and XML processor
+app-misc/yq-bin 4.30.6 4.35.2 4.40.2: yq is a portable command-line YAML, JSON and XML processor
 app-mobilephone/scrcpy 1.25 2.1.1 2.2: Display and control your Android device
 app-office/anytype-bin 0.35.4: A notebook based on p2p network
 app-office/bytedance-feishu 4.11.6.2 5.9.18 5.14.14 5.26.13-r1 6.9.20: feishu - ByteDance's enterprise collaboration platform
@@ -97,6 +97,7 @@ dev-cpp/nameof 0.10.3: Nameof operator for modern C++
 dev-cpp/tgbot-cpp 1.7.2: C++ library for Telegram bot API
 dev-db/dbeaver-bin 23.2.5: Free universal database tool (community edition).
 dev-db/mongodb 5.3.1 6.2.0-r4: A high-performance, open source, schema-free document-oriented database
+dev-java/oraclejdk-bin 8.391: Oracle's Java SE Development Kit
 dev-lang/quickjs 2021.03.27: Small embeddable Javascript engine
 dev-libs/libdatrie 0.2.13: Double-Array Trie Library
 dev-libs/libdwarf 20140208 20150507: Library to deal with DWARF Debugging Information Format
