@@ -1,13 +1,15 @@
-BDEPEND=sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71-r5 >=sys-devel/libtool-2.4.7
-DEFINED_PHASES=-
-DEPEND=sys-libs/ncurses dev-lang/lua sys-devel/flex sys-devel/bison dev-lang/python sys-libs/readline sys-libs/lwp virtual/pkgconfig
+DEFINED_PHASES=setup
+DEPEND=sys-libs/ncurses dev-lang/lua sys-devel/flex sys-devel/bison sys-libs/readline sys-libs/lwp virtual/pkgconfig
 DESCRIPTION=Coda is an advanced network file system, similar to NFS
 EAPI=7
-HOMEPAGE=http://www.coda.cs.cmu.edu/
-INHERIT=autotools
-LICENSE=GPL
-RDEPEND=sys-libs/ncurses dev-lang/lua sys-devel/flex sys-devel/bison dev-lang/python sys-libs/readline sys-libs/lwp
+HOMEPAGE=http://www.coda.cs.cmu.edu https://github.com/cmusatyalab/coda
+INHERIT=python-single-r1
+IUSE=+python_single_target_python3_11
+LICENSE=GPL-1
+RDEPEND=sys-libs/ncurses dev-lang/lua sys-devel/flex sys-devel/bison sys-libs/readline sys-libs/lwp python_single_target_python3_11? ( dev-lang/python:3.11 )
+REQUIRED_USE=^^ ( python_single_target_python3_11 )
+RESTRICT=mirror
 SLOT=0
 SRC_URI=http://coda.cs.cmu.edu/coda/source/coda-7.0.5.tar.xz
-_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	6ae9a4347149b19a112caa1182d03bde
-_md5_=43c75e25d671086a50dde55e89de09b2
+_eclasses_=eapi8-dosym	5ac4857ad078256d939c44f7c64197a9	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	e989dbdcbb647bd8655857c1f95be244	python-single-r1	75118e916668a74c660a13b0ecb22562
+_md5_=31e6333dbead32e0466555186ce5ffa0
