@@ -7,5 +7,5 @@ KEYWORDS=~amd64 x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://sourceforge/elfembed/elfembed-0.3.tar.gz
-_eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	b1206d933fc5a96cc864180a3cdbf18c
+_eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	6b3c606c5de2531072ffd36eca06a5a9
 _md5_=d57b5ab5439471b2d42510cf9afb7a45
