@@ -12,5 +12,5 @@ RDEPEND=app-i18n/opencc:0= >=dev-cpp/glog-0.3.5:0= dev-cpp/yaml-cpp:0= dev-libs/
 RESTRICT=!test? ( test )
 SLOT=0/1-1.9.0
 SRC_URI=https://github.com/rime/librime/archive/1.9.0.tar.gz -> librime-1.9.0.tar.gz
-_eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	baa4d385108ac87993edac956a916a36	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271
+_eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	b1206d933fc5a96cc864180a3cdbf18c	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271
 _md5_=066991e266524542914feb1ec757c446
