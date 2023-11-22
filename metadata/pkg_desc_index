@@ -240,7 +240,7 @@ net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
 net-proxy/clash-meta 1.16.0: Another Clash Kernel.
 net-proxy/dae 0.3.0 9999: A lightweight and high-performance transparent proxy solution based on eBPF
 net-proxy/daed 0.3.3_p1 9999: A Modern Dashboard For dae
-net-proxy/hysteria 2.2.0: A powerful, lightning fast and censorship resistant proxy.
+net-proxy/hysteria 2.2.1: A powerful, lightning fast and censorship resistant proxy.
 net-proxy/juicity 0.3.0: juicity is a quic-based proxy protocol.
 net-proxy/shadowsocks-rust 1.16.2 1.17.0: A Rust port of shadowsocks.
 net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
@@ -255,7 +255,7 @@ sci-chemistry/vesta 3.5.8: Visualization for Electronic and STructural Analysis
 sci-electronics/circuitjs1-bin 9.3.2: Electronic Circuit Simulator in the Browser
 sci-electronics/jlc-assistant-bin 5.0.69: JLC Order Assistant (binary package)
 sci-electronics/lceda 6.5.37: LCEDA (binary package)
-sci-electronics/lceda-pro 2.1.35: LCEDA Pro (binary package)
+sci-electronics/lceda-pro 2.1.36: LCEDA Pro (binary package)
 sci-electronics/openfpgaloader 0.11.0: Universal utility for programming FPGAs
 sci-libs/libticables2 9999: Library to handle different link cables for TI calculators
 sci-libs/libticalcs2 9999: Library for communication with TI calculators
