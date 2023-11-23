@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-23 20:26:34 CST)
+(The last generation time: 2023-11-23 21:01:50 CST)
 
 ### Packages
 
@@ -124,7 +124,7 @@
  app-misc/gpick                             | 0.2.6-r1                                  |        | https://github.com/thezbyg/gpick                                                        | Advanced color picker written in C++ using GTK+ toolkit
                                             | 0.3                                       |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/joshuto                           | 0.9.5                                     |        | https://github.com/kamiyaa/joshuto                                                      | Terminal file manager inspired by ranger
+ app-misc/joshuto                           | 0.9.6                                     |        | https://github.com/kamiyaa/joshuto                                                      | Terminal file manager inspired by ranger
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/jshon                             | 9999                                      |        | http://kmkeen.com/jshon/                                                                | Jshon is a JSON parser designed for maximum convenience within the shell
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -293,6 +293,7 @@
  media-fonts/lxgw-neo-zhisong               | 0.113                                     |        | https://github.com/lxgw/LxgwNeoZhiSong                                                  | An open-source Chinese font derived from IPAmj Mincho
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/nerd-fonts                     | 3.0.2                                     |        | https://github.com/ryanoasis/nerd-fonts                                                 | Nerd Fonts is a project that patches developer targeted fonts with glyphs
+                                            | 3.1.0                                     |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/sarasa-gothic                  | 0.42.6                                    |        | https://github.com/be5invis/Sarasa-Gothic                                               | A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
