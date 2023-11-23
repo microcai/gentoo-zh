@@ -71,7 +71,7 @@ app-i18n/zh-autoconvert 0.3.16_p7: Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings au
 app-misc/bcompare 4.4.6.27483: Beyond Compare -- Compare, sync, and merge files and folders
 app-misc/ccal 2.5.3: A simple command line calendar for Chinese lunar
 app-misc/gpick 0.2.6-r1 0.3: Advanced color picker written in C++ using GTK+ toolkit
-app-misc/joshuto 0.9.5: Terminal file manager inspired by ranger
+app-misc/joshuto 0.9.6: Terminal file manager inspired by ranger
 app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience within the shell
 app-misc/keyd 2.4.3: A key remapping daemon for linux
 app-misc/rmtrash 1.14 1.15: trash-put made compatible to GNUs rm and rmdir
@@ -153,7 +153,7 @@ media-fonts/iansui 1.000: An open-source Chinese font derived from Klee One (Fon
 media-fonts/jf-openhuninn 2.0: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 media-fonts/lxgw-neo-xihei 1.108: A Chinese sans-serif font derived from IPAex Gothic.
 media-fonts/lxgw-neo-zhisong 0.113: An open-source Chinese font derived from IPAmj Mincho
-media-fonts/nerd-fonts 3.0.2: Nerd Fonts is a project that patches developer targeted fonts with glyphs
+media-fonts/nerd-fonts 3.0.2 3.1.0: Nerd Fonts is a project that patches developer targeted fonts with glyphs
 media-fonts/sarasa-gothic 0.42.6: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 media-fonts/sarasa-term-sc-nerd 1.1.0: Sarasa Mono SC font patched with Nerd fonts
 media-fonts/smiley-sans 1.1.1: An open-source font for Chinese.
@@ -246,7 +246,7 @@ net-proxy/shadowsocks-rust 1.16.2 1.17.0: A Rust port of shadowsocks.
 net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
 net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
 net-proxy/v2ray 5.10.1 5.11.0 5.12.0: A platform for building proxies to bypass network restrictions.
-net-proxy/v2ray-bin 4.45.0-r1 5.10.1: A platform for building proxies to bypass network restrictions
+net-proxy/v2ray-bin 4.45.0-r1 5.11.0: A platform for building proxies to bypass network restrictions
 net-proxy/v2rayA 2.2.4.1 2.2.4.3 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
 net-vpn/sstp-server 0.6.0: A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
