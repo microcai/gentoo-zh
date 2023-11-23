@@ -98,11 +98,6 @@ microsoft.extensions.objectpool@5.0.11
 microsoft.extensions.options@7.0.0
 microsoft.extensions.options@7.0.1
 microsoft.extensions.primitives@7.0.0
-microsoft.netcore.app.host.linux-arm@6.0.12
-microsoft.netcore.app.host.linux-arm64@6.0.12
-microsoft.netcore.app.host.linux-musl-arm@6.0.12
-microsoft.netcore.app.host.linux-musl-arm64@6.0.12
-microsoft.netcore.app.host.linux-musl-x64@6.0.12
 microsoft.netcore.platforms@1.0.1
 microsoft.netcore.platforms@1.1.0
 microsoft.netcore.platforms@2.0.0
