@@ -32,6 +32,7 @@ DEPEND="
 	>=app-i18n/libime-1.0.6:5
 	engine? (
 		app-i18n/fcitx:5
+		app-i18n/fcitx-chinese-addons:5
 		sys-devel/gettext
 	)
 	>=dev-libs/boost-1.61
