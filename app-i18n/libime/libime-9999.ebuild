@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -8,7 +8,11 @@ inherit cmake xdg-utils flag-o-matic toolchain-funcs
 if [[ "${PV}" == 9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/fcitx/libime.git"
-	EGIT_SUBMODULES=(src/libime/core/kenlm)
+	EGIT_SUBMODULES=( 'src/libime/kenlm' )
+	SRC_URI="
+		https://download.fcitx-im.org/data/lm_sc.arpa-20230712.tar.xz -> ${PN}-lm_sc.arpa-20230712.tar.xz
+		https://download.fcitx-im.org/data/dict-20230412.tar.xz -> ${PN}-dict-20230412.tar.xz
+		https://download.fcitx-im.org/data/table.tar.gz -> ${PN}-table.tar.gz"
 else
 	KEYWORDS="~amd64 ~x86"
 	SRC_URI="https://download.fcitx-im.org/fcitx5/libime/libime-${PV}_dict.tar.xz"
@@ -29,6 +33,11 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
+	if [[ "${PV}" == 9999* ]]; then
+		ln -sv "${DISTDIR}/${PN}-lm_sc.arpa-20230712.tar.xz" "${S}/data/lm_sc.arpa-20230712.tar.xz" || die
+		ln -sv "${DISTDIR}/${PN}-dict-20230412.tar.xz" "${S}/data/dict-20230412.tar.xz" || die
+		ln -sv "${DISTDIR}/${PN}-table.tar.gz" "${S}/data/table.tar.gz" || die
+	fi
 	cmake_src_prepare
 	xdg_environment_reset
 }
