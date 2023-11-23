@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-23 19:54:42 CST)
+(The last generation time: 2023-11-23 20:26:09 CST)
 
 ### Packages
 
@@ -421,6 +421,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/dingtalk                            | 7.0.40.30706                              |        | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
                                             | 7.1.0.31017                               |        |                                                                                         |
+                                            | 7.1.0.31120                               |        |                                                                                         |
    dev-libs/libthai                         | 0.1.28                                    |  D, RD | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
                                             | 0.1.29                                    |        |                                                                                         |
      dev-libs/libdatrie                     | 0.2.13                                    |  D, RD | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
