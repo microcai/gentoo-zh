@@ -182,7 +182,7 @@ regex = "Source Package: zh-autoconvert \\(([\\d.]+)-[\\d.]+\\)"
 
 ["app-misc/bcompare"]
 source = "regex"
-url = "https://www.scootersoftware.com/download.php?zz=kb_linux_install"
+url = "https://www.scootersoftware.com/kb/linux_install"
 regex = "bcompare-([\\d.]+).x86_64.tar.gz"
 
 ["app-misc/ccal"]
