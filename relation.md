@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-25 15:55:04 CST)
+(The last generation time: 2023-11-25 16:25:16 CST)
 
 ### Packages
 
@@ -163,6 +163,7 @@
  app-office/wps-office                      | 11.1.0.11698                              |        | http://www.wps.cn/product/wpslinux/                                                     | WPS Office is an office productivity suite, Here is the Chinese version
                                             | 11.1.0.11704                              |        |                                                                                         |
                                             | 11.1.0.11708                              |        |                                                                                         |
+                                            | 11.1.0.11711                              |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-pda/ipadcharge                         | 9999                                      |        | https://github.com/mkorenkov/ipad_charge                                                | Enables USB charging for Apple devices.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
