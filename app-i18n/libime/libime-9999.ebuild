@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit cmake xdg-utils git-r3
+inherit cmake xdg-utils git-r3 flag-o-matic toolchain-funcs
 EGIT_REPO_URI="https://github.com/fcitx/libime.git"
 EGIT_SUBMODULES=( 'src/libime/kenlm' )
 SRC_URI="
@@ -45,9 +45,20 @@ src_prepare() {
 }
 
 src_configure() {
+	if [[ $(tc-get-cxx-stdlib) == libc++ ]]; then
+		append-cxxflags -D_LIBCPP_ENABLE_CXX17_REMOVED_FEATURES
+	fi
+
 	local mycmakeargs=(
 		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
 		-DCMAKE_INSTALL_SYSCONFDIR="${EPREFIX}/etc"
+		-DENABLE_COVERAGE=$(usex coverage)
+		-DENABLE_DOC=$(usex doc)
+		-DENABLE_TEST=$(usex test)
 	)
 	cmake_src_configure
+}
+
+src_install(){
+	cmake_src_install
 }
