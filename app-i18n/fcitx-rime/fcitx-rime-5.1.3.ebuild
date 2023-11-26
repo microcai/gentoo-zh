@@ -10,7 +10,7 @@ HOMEPAGE="https://github.com/fcitx/fcitx5-rime"
 
 MY_PN="fcitx5-rime"
 S="${WORKDIR}/${MY_PN}-${PV}"
-SRC_URI="https://github.com/fcitx/fcitx5-rime/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_PN}-${PV}.tar.xz -> ${P}.tar.xz"
 KEYWORDS="~amd64 ~arm64 ~x86"
 
 LICENSE="GPL-2"
