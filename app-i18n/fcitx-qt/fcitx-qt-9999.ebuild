@@ -42,7 +42,7 @@ RDEPEND="
 	qt6? (
 		dev-qt/qtbase:6[dbus,gui,wayland?,widgets]
 	)
-	kde-frameworks/extra-cmake-modules:5
+	kde-frameworks/extra-cmake-modules:0
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

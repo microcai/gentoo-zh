@@ -85,7 +85,7 @@ RDEPEND="
 	x11-libs/pango[X?]
 "
 DEPEND="${RDEPEND}
-	kde-frameworks/extra-cmake-modules:5
+	kde-frameworks/extra-cmake-modules:0
 	virtual/pkgconfig
 "
 

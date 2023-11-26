@@ -63,7 +63,7 @@ BDEPEND="
 	dev-python/docutils
 	qt6? ( >=dev-qt/qtbase-${QT6MIN}:6[nls] )
 	!qt6? ( >=dev-qt/linguist-tools-${QT5MIN}:5 )
-	kde-frameworks/extra-cmake-modules:5
+	kde-frameworks/extra-cmake-modules:0
 	virtual/pkgconfig
 "
 
