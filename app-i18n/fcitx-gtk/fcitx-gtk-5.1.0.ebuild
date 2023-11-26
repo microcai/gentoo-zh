@@ -28,7 +28,7 @@ RDEPEND="app-i18n/fcitx:5
 	gtk3? ( x11-libs/gtk+:3[wayland?] )
 	gtk4? ( gui-libs/gtk:4[wayland?] )
 	introspection? ( dev-libs/gobject-introspection )
-	kde-frameworks/extra-cmake-modules
+	kde-frameworks/extra-cmake-modules:0
 	dev-libs/glib:2
 	x11-libs/gdk-pixbuf:2
 	x11-libs/libX11

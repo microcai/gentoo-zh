@@ -21,7 +21,7 @@ fi
 LICENSE="GPL-3+"
 SLOT="5"
 
-BDEPEND="kde-frameworks/extra-cmake-modules:5
+BDEPEND="kde-frameworks/extra-cmake-modules:0
 		virtual/pkgconfig"
 
 RDEPEND="app-i18n/fcitx:5

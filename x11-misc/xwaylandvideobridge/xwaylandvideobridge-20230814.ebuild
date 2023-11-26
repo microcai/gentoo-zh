@@ -21,7 +21,7 @@ DEPEND="
 	dev-qt/qtcore:5
 	dev-qt/qtdeclarative:5
 	dev-qt/qtx11extras:5
-	kde-frameworks/extra-cmake-modules:5
+	kde-frameworks/extra-cmake-modules:0
 	kde-frameworks/kcoreaddons:5
 	kde-frameworks/kwidgetsaddons:5
 	kde-frameworks/kwindowsystem:5
