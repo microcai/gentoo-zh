@@ -5,22 +5,26 @@ EAPI=8
 
 inherit cmake xdg-utils flag-o-matic toolchain-funcs
 
-if [[ "${PV}" == 9999* ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/fcitx/libime.git"
-	EGIT_SUBMODULES=(src/libime/core/kenlm)
-else
-	KEYWORDS="~amd64 ~arm64 ~loong ~x86"
-	SRC_URI="https://download.fcitx-im.org/fcitx5/libime/libime-${PV}_dict.tar.xz"
-fi
-
+KEYWORDS="~amd64 ~arm64 ~loong ~x86"
+SRC_URI="https://download.fcitx-im.org/fcitx5/libime/libime-${PV}_dict.tar.xz"
 DESCRIPTION="Fcitx5 Next generation of fcitx "
 HOMEPAGE="https://fcitx-im.org/ https://gitlab.com/fcitx/libime"
-
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-
-RDEPEND="app-i18n/fcitx:5"
+IUSE="coverage doc test"
+REQUIRED_USE="
+	coverage? ( test )
+"
+RESTRICT="!test? ( test )"
+RDEPEND="
+	>=app-i18n/fcitx-5.1.5:5
+	test? (
+		coverage? (
+			dev-util/lcov
+		)
+	)
+	doc? ( app-doc/doxygen )
+"
 DEPEND="${RDEPEND}
 	app-arch/zstd:=
 	dev-libs/boost:=
