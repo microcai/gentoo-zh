@@ -28,7 +28,7 @@ RDEPEND="app-i18n/fcitx:5"
 DEPEND="${RDEPEND}
 	app-arch/zstd:=
 	dev-libs/boost:=
-	kde-frameworks/extra-cmake-modules:5
+	kde-frameworks/extra-cmake-modules:0
 	virtual/pkgconfig
 "
 

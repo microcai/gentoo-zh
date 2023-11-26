@@ -22,7 +22,7 @@ DEPEND="
 	kde-plasma/kdecoration:5
 	kde-frameworks/kirigami:5
 	kde-frameworks/kwayland:5
-	kde-frameworks/extra-cmake-modules:5
+	kde-frameworks/extra-cmake-modules:0
 "
 RDEPEND="${DEPEND}"
 BDEPEND="kde-frameworks/kcmutils:5"

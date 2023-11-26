@@ -29,7 +29,7 @@ BDEPEND="
 	test? (
 		coverage? ( dev-util/lcov )
 	)
-	kde-frameworks/extra-cmake-modules:5
+	kde-frameworks/extra-cmake-modules:0
 	virtual/pkgconfig
 "
 RDEPEND="

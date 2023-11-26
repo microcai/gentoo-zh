@@ -46,7 +46,7 @@ RDEPEND="
 		kde-frameworks/kiconthemes:5
 		kde-frameworks/kirigami:5
 		kde-frameworks/kpackage:5
-		kde-frameworks/plasma:5
+		kde-plasma/libplasma:5
 	)
 	config-qt? (
 		kde-frameworks/kitemviews:5
@@ -54,7 +54,7 @@ RDEPEND="
 "
 
 DEPEND="${RDEPEND}
-	kde-frameworks/extra-cmake-modules:5
+	kde-frameworks/extra-cmake-modules:0
 	sys-devel/gettext
 	virtual/pkgconfig"
 
