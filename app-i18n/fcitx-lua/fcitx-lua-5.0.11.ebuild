@@ -10,7 +10,7 @@ inherit cmake lua xdg
 MY_PN="fcitx5-lua"
 S="${WORKDIR}/${MY_PN}-${PV}"
 SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_PN}-${PV}.tar.xz -> ${P}.tar.xz"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm64 ~x86"
 
 DESCRIPTION="Lua support for fcitx"
 HOMEPAGE="https://github.com/fcitx/fcitx5-lua"
