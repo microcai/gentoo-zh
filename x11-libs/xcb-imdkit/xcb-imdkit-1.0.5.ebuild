@@ -1,13 +1,13 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit cmake
 
 DESCRIPTION="Input method development support for xcb"
 HOMEPAGE="https://github.com/fcitx/xcb-imdkit"
-SRC_URI="https://github.com/fcitx/xcb-imdkit/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://download.fcitx-im.org/fcitx5/${PN}/${P}.tar.xz"
 
 LICENSE="
 	MIT
