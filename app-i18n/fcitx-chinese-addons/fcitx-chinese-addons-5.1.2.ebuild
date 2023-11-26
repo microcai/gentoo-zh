@@ -28,7 +28,7 @@ REQUIRED_USE="
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	>=app-i18n/fcitx-5.1.2:5
+	>=app-i18n/fcitx-5.1.5:5
 	>=app-i18n/libime-1.1.3:5
 
 	>=dev-libs/boost-1.61:=
