@@ -6,19 +6,8 @@ inherit cmake
 
 DESCRIPTION="A library make use of libime to implement jyutping (粵拼) input method"
 HOMEPAGE="https://github.com/fcitx/libime-jyutping"
-
-if [[ "${PV}" == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/fcitx/libime-jyutping.git"
-else
-	SRC_URI="https://github.com/fcitx/libime-jyutping/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64"
-fi
-
-SRC_URI+="
-	https://download.fcitx-im.org/data/jyutping-model-20180103.tar.xz
-	https://download.fcitx-im.org/data/jyutping-dict-20180104.tar.xz
-"
+SRC_URI="https://download.fcitx-im.org/fcitx5/${PN}/${P}_dict.tar.xz -> ${P}.tar.xz"
+KEYWORDS="~amd64"
 
 # libime-jyutping => LGPL-2.1+
 # data file derived from libpinyin and rime-jyutping => GPL-3+
@@ -47,21 +36,6 @@ PATCHES=(
 	"${FILESDIR}/${P}-Set-install-component-for-cmake-config.patch"
 	"${FILESDIR}/${P}-find-gettext-and-fcitx5Module-only-when-engine-enabled.patch"
 )
-
-src_unpack() {
-	if [[ "${PV}" == *9999* ]]; then
-		git-r3_src_unpack
-	else
-		# avoid unpacking jyutping-*.tar.xz
-		unpack "${P}.tar.gz"
-	fi
-}
-
-src_prepare() {
-	ln -sv "${DISTDIR}/jyutping-model-20180103.tar.xz" "${S}/data" || die
-	ln -sv "${DISTDIR}/jyutping-dict-20180104.tar.xz" "${S}/data" || die
-	cmake_src_prepare
-}
 
 src_configure() {
 	# no .codedocs, no doc
