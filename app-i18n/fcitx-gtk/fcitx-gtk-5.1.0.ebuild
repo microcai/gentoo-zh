@@ -5,15 +5,10 @@ EAPI=8
 
 inherit gnome2-utils xdg cmake
 
-if [[ "${PV}" == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-gtk.git"
-else
-	MY_PN="fcitx5-gtk"
-	S="${WORKDIR}/${MY_PN}-${PV}"
-	SRC_URI="https://github.com/fcitx/fcitx5-gtk/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm64 ~loong ~x86"
-fi
+MY_PN="fcitx5-gtk"
+S="${WORKDIR}/${MY_PN}-${PV}"
+SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_PN}-${PV}.tar.xz -> ${P}.tar.xz"
+KEYWORDS="~amd64 ~arm64 ~loong ~x86"
 
 DESCRIPTION="Gtk im module for fcitx5 and glib based dbus client library"
 HOMEPAGE="https://github.com/fcitx/fcitx5-gtk"
