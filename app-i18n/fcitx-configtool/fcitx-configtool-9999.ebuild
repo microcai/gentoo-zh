@@ -3,18 +3,8 @@
 
 EAPI=8
 
-inherit cmake
-
-if [[ "${PV}" == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-configtool.git"
-else
-	MY_PN="fcitx5-configtool"
-	S="${WORKDIR}/${MY_PN}-${PV}"
-	SRC_URI="https://github.com/fcitx/fcitx5-configtool/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm64 ~loong ~x86"
-fi
-
+inherit cmake git-r3
+EGIT_REPO_URI="https://github.com/fcitx/fcitx5-configtool.git"
 DESCRIPTION="Configuration module for Fcitx"
 HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-configtool"
 
