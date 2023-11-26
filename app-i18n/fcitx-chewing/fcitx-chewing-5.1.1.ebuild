@@ -8,7 +8,7 @@ inherit cmake xdg
 MY_PN="fcitx5-chewing"
 DESCRIPTION="Chewing Wrapper for Fcitx."
 HOMEPAGE="https://github.com/fcitx/fcitx5-chewing"
-SRC_URI="https://github.com/fcitx/fcitx5-chewing/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_PN}-${PV}.tar.xz -> ${P}.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="5"
