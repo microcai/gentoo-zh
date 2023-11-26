@@ -5,7 +5,7 @@ EAPI=8
 
 inherit cmake xdg-utils flag-o-matic toolchain-funcs
 
-KEYWORDS="~amd64 ~arm64 ~loong ~x86"
+KEYWORDS="~amd64 ~arm64 ~loong ~riscv ~x86"
 SRC_URI="https://download.fcitx-im.org/fcitx5/libime/libime-${PV}_dict.tar.xz"
 DESCRIPTION="Fcitx5 Next generation of fcitx "
 HOMEPAGE="https://fcitx-im.org/ https://gitlab.com/fcitx/libime"
