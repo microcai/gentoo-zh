@@ -5,28 +5,26 @@ EAPI=8
 
 inherit cmake
 
-if [[ "${PV}" == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-qt.git"
-else
-	MY_PN="fcitx5-qt"
-	S="${WORKDIR}/${MY_PN}-${PV}"
-	SRC_URI="https://github.com/fcitx/fcitx5-qt/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm64 ~loong ~x86"
-	PATCHES="${FILESDIR}/${P}-backport-conditional-wayland.patch"
-fi
+MY_PN="fcitx5-qt"
+S="${WORKDIR}/${MY_PN}-${PV}"
+SRC_URI="https://github.com/fcitx/fcitx5-qt/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+KEYWORDS="~amd64 ~arm64 ~loong ~x86"
+PATCHES="${FILESDIR}/${P}-backport-conditional-wayland.patch"
 
 DESCRIPTION="Qt library and IM module for fcitx5"
 HOMEPAGE="https://github.com/fcitx/fcitx5-qt"
 
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
-IUSE="+qt5 onlyplugin qt6 wayland"
-REQUIRED_USE="|| ( qt5 qt6 )"
+IUSE="+qt5 onlyplugin staticplugin qt6 wayland"
+REQUIRED_USE="
+	|| ( qt5 qt6 )
+	staticplugin? ( onlyplugin )
+"
 
 RDEPEND="
 	!onlyplugin? (
-		>=app-i18n/fcitx-5.0.16:5
+		>=app-i18n/fcitx-5.1.5:5
 	)
 	qt5? (
 		dev-qt/qtcore:5
@@ -35,14 +33,13 @@ RDEPEND="
 		dev-qt/qtwidgets:5
 		dev-qt/qtconcurrent:5
 	)
-	x11-libs/libX11
-	x11-libs/libxcb
-	x11-libs/libxkbcommon
-
 	qt6? (
 		dev-qt/qtbase:6[dbus,gui,wayland?,widgets]
 	)
 	kde-frameworks/extra-cmake-modules:0
+	x11-libs/libX11
+	x11-libs/libxcb
+	x11-libs/libxkbcommon
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -57,6 +54,7 @@ src_configure() {
 		-DENABLE_QT6=$(usex qt6)
 		-DENABLE_QT6_WAYLAND_WORKAROUND=$(usex wayland)
 		-DBUILD_ONLY_PLUGIN=$(usex onlyplugin)
+		-DBUILD_STATIC_PLUGIN=$(usex staticplugin)
 	)
 	cmake_src_configure
 }
