@@ -12,7 +12,7 @@ else
 	MY_PN="fcitx5-configtool"
 	S="${WORKDIR}/${MY_PN}-${PV}"
 	SRC_URI="https://github.com/fcitx/fcitx5-configtool/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm64 ~loong ~x86"
 fi
 
 DESCRIPTION="Configuration module for Fcitx"
@@ -24,8 +24,8 @@ IUSE="kcm +config-qt test"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	app-i18n/fcitx:5
-	app-i18n/fcitx-qt:5[qt5,-onlyplugin]
+	>=app-i18n/fcitx-5.0.4:5
+	>=app-i18n/fcitx-qt-5.0.2:5[qt5,-onlyplugin]
 	dev-qt/qtcore:5
 	dev-qt/qtconcurrent:5
 	dev-qt/qtdbus:5
@@ -64,6 +64,7 @@ src_configure() {
 		-DENABLE_KCM=$(usex kcm)
 		-DENABLE_CONFIG_QT=$(usex config-qt)
 		-DENABLE_TEST=$(usex test)
+		-DUSE_QT6=Off
 	)
 
 	cmake_src_configure
