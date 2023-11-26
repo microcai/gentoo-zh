@@ -8,13 +8,11 @@ inherit cmake xdg
 DESCRIPTION="Korean Hangul input method for Fcitx"
 HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-hangul"
 
-MY_PN="fcitx5-hangul"
-MY_P="${MY_PN}-${PV}"
-SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_P}.tar.xz"
-S="${WORKDIR}/${MY_PN}-${PV}"
+inherit git-r3
+EGIT_REPO_URI="https://github.com/fcitx/fcitx5-hangul"
+
 LICENSE="GPL-2+"
 SLOT="5"
-KEYWORDS="~amd64 ~x86"
 
 BDEPEND="sys-devel/gettext
 	virtual/pkgconfig"
