@@ -16,7 +16,7 @@ KEYWORDS="~amd64"
 
 BDEPEND="virtual/pkgconfig"
 RDEPEND="
-	app-i18n/fcitx:5
+	>=app-i18n/fcitx-5.0.2:5
 	>=app-i18n/libchewing-0.5.0
 "
 DEPEND="${RDEPEND}"
