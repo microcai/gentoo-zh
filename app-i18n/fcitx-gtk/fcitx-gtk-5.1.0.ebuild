@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit cmake gnome2-utils xdg
+inherit gnome2-utils xdg cmake
 
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
@@ -28,18 +28,14 @@ RDEPEND="app-i18n/fcitx:5
 	gtk3? ( x11-libs/gtk+:3[wayland?] )
 	gtk4? ( gui-libs/gtk:4[wayland?] )
 	introspection? ( dev-libs/gobject-introspection )
-	kde-frameworks/extra-cmake-modules:0
 	dev-libs/glib:2
+	kde-frameworks/extra-cmake-modules:0
 	x11-libs/gdk-pixbuf:2
 	x11-libs/libX11
 	x11-libs/libxkbcommon
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
-
-src_prepare() {
-	cmake_src_prepare
-}
 
 src_configure() {
 	local mycmakeargs=(

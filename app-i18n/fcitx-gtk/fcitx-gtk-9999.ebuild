@@ -12,7 +12,7 @@ else
 	MY_PN="fcitx5-gtk"
 	S="${WORKDIR}/${MY_PN}-${PV}"
 	SRC_URI="https://github.com/fcitx/fcitx5-gtk/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm64 ~loong ~x86"
 fi
 
 DESCRIPTION="Gtk im module for fcitx5 and glib based dbus client library"
@@ -28,18 +28,14 @@ RDEPEND="app-i18n/fcitx:5
 	gtk3? ( x11-libs/gtk+:3[wayland?] )
 	gtk4? ( gui-libs/gtk:4[wayland?] )
 	introspection? ( dev-libs/gobject-introspection )
-	kde-frameworks/extra-cmake-modules:0
 	dev-libs/glib:2
+	kde-frameworks/extra-cmake-modules:0
 	x11-libs/gdk-pixbuf:2
 	x11-libs/libX11
 	x11-libs/libxkbcommon
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
-
-src_prepare() {
-	cmake_src_prepare
-}
 
 src_configure() {
 	local mycmakeargs=(
