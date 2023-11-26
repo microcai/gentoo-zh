@@ -6,10 +6,9 @@ inherit cmake
 
 DESCRIPTION="m17n-provided input methods for Fcitx5"
 HOMEPAGE="https://github.com/fcitx/fcitx5-m17n"
-
 MY_PN="fcitx5-m17n"
-SRC_URI="https://github.com/fcitx/fcitx5-m17n/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/${MY_PN}-${PV}"
+SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_PN}-${PV}.tar.xz -> ${P}.tar.xz"
 KEYWORDS="~amd64"
 
 LICENSE="LGPL-2.1+"
