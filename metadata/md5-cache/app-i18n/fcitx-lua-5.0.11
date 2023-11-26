@@ -1,4 +1,4 @@
-BDEPEND=kde-frameworks/extra-cmake-modules:5 virtual/pkgconfig >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+BDEPEND=kde-frameworks/extra-cmake-modules:0 virtual/pkgconfig >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
 DEPEND=lua_targets_lua5-3? ( dev-lang/lua:5.3 ) lua_targets_lua5-4? ( dev-lang/lua:5.4 ) app-i18n/fcitx:5
 DESCRIPTION=Lua support for fcitx
@@ -15,4 +15,4 @@ RESTRICT=!test? ( test )
 SLOT=5
 SRC_URI=https://github.com/fcitx/fcitx5-lua/archive/refs/tags/5.0.11.tar.gz -> fcitx5-lua-5.0.11.tar.gz
 _eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	6b3c606c5de2531072ffd36eca06a5a9	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271	out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	d67e78a235f541871c7dfe4cf7931489	lua-utils	d37a16dbcc1f07f71bc48da75ed7a0cb	lua	8f9406bfff123a92ad04e4ace3e7f89b	xdg	4a14c5c24f121e7da66e5aab4a168c6e
-_md5_=4774f074d635c6176369823b0b392a69
+_md5_=8ba638b63542cde287cd4405785942b2
