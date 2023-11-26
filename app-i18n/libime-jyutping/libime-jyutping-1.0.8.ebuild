@@ -7,7 +7,7 @@ inherit cmake
 DESCRIPTION="A library make use of libime to implement jyutping (粵拼) input method"
 HOMEPAGE="https://github.com/fcitx/libime-jyutping"
 SRC_URI="https://download.fcitx-im.org/fcitx5/${PN}/${P}_dict.tar.xz -> ${P}.tar.xz"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64"
 
 # libime-jyutping => LGPL-2.1+
 # data file derived from libpinyin and rime-jyutping => GPL-3+
