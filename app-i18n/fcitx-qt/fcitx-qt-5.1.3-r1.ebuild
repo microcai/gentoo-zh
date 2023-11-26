@@ -7,7 +7,7 @@ inherit cmake
 
 MY_PN="fcitx5-qt"
 S="${WORKDIR}/${MY_PN}-${PV}"
-SRC_URI="https://github.com/fcitx/fcitx5-qt/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_PN}-${PV}.tar.xz -> ${P}.tar.xz"
 KEYWORDS="~amd64 ~arm64 ~loong ~x86"
 PATCHES="${FILESDIR}/${P}-backport-conditional-wayland.patch"
 
