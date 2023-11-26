@@ -22,8 +22,9 @@ RESTRICT="!test? ( test )"
 
 # m17n-gui>=1.6.3
 DEPEND="
-	dev-db/m17n-db
+	>=app-i18n/fcitx-5.1.5:5
 	>=dev-libs/m17n-lib-1.6.3[X]
+	dev-db/m17n-db
 "
 RDEPEND="
 	${DEPEND}
