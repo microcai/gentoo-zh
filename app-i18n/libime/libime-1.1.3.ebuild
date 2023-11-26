@@ -45,6 +45,13 @@ src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
 		-DCMAKE_INSTALL_SYSCONFDIR="${EPREFIX}/etc"
+		-DENABLE_COVERAGE=$(usex coverage)
+		-DENABLE_DOC=$(usex doc)
+		-DENABLE_TEST=$(usex test)
 	)
 	cmake_src_configure
+}
+
+src_install(){
+	cmake_src_install
 }
