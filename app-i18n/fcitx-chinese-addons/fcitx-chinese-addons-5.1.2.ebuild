@@ -64,6 +64,7 @@ src_configure() {
 		-DENABLE_CLOUDPINYIN=$(usex cloudpinyin)
 		-DENABLE_TEST=$(usex test)
 		-DENABLE_COVERAGE=$(usex coverage)
+		-DENABLE_QT6=Off
 		-DUSE_WEBKIT=no
 	)
 	if use loong || use x86; then
