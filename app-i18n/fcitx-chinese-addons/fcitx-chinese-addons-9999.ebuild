@@ -29,7 +29,7 @@ RESTRICT="!test? ( test )"
 
 RDEPEND="
 	>=app-i18n/fcitx-5.1.2:5
-	>=app-i18n/libime-1.1.2:5
+	>=app-i18n/libime-1.1.3:5
 
 	>=dev-libs/boost-1.61:=
 	dev-libs/libfmt
@@ -64,6 +64,7 @@ src_configure() {
 		-DENABLE_CLOUDPINYIN=$(usex cloudpinyin)
 		-DENABLE_TEST=$(usex test)
 		-DENABLE_COVERAGE=$(usex coverage)
+		-DENABLE_QT6=Off
 		-DUSE_WEBKIT=no
 	)
 	if use loong || use x86; then
