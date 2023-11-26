@@ -3,26 +3,18 @@
 
 EAPI=8
 
-inherit xdg cmake
+inherit xdg cmake git-r3
 
 DESCRIPTION="Rime Support for Fcitx5"
 HOMEPAGE="https://github.com/fcitx/fcitx5-rime"
 
-if [[ "${PV}" == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-rime.git"
-else
-	MY_PN="fcitx5-rime"
-	S="${WORKDIR}/${MY_PN}-${PV}"
-	SRC_URI="https://github.com/fcitx/fcitx5-rime/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
-fi
+EGIT_REPO_URI="https://github.com/fcitx/fcitx5-rime.git"
 
 LICENSE="GPL-2"
 SLOT="5"
 
 RDEPEND="
-	>=app-i18n/fcitx-5.0.6:5
+	>=app-i18n/fcitx-5.1.5:5
 	>=app-i18n/librime-1.0
 	>=app-i18n/rime-data-0.3.0
 	app-i18n/rime-prelude
