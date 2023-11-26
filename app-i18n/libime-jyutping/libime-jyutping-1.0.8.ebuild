@@ -29,7 +29,7 @@ RESTRICT="!test? ( test )"
 
 DEPEND="
 	app-arch/zstd
-	>=app-i18n/libime-1.0.6:5
+	>=app-i18n/libime-1.1.3:5
 	engine? (
 		app-i18n/fcitx:5
 		app-i18n/fcitx-chinese-addons:5
