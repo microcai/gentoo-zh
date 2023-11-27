@@ -11,7 +11,7 @@ DESCRIPTION="Provides some other tables for Fcitx, fork from ibus-table-others, 
 HOMEPAGE="https://github.com/fcitx/fcitx5-table-other"
 SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_PN}-${PV}.tar.xz -> ${P}.tar.xz"
 
-LICENSE="GPL-3+"
+LICENSE="GPL-3"
 SLOT="5"
 KEYWORDS="~amd64 ~arm64 ~riscv ~x86"
 
