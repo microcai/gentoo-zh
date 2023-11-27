@@ -194,7 +194,7 @@ media-video/mpv-handler 0.3.5: A protocol handler for mpv, written by Rust.
 media-video/tenvideo 1.0.10: Tencent videos
 net-analyzer/besttrace-bin 1.3.2-r1: 附带链路可视化的 traceroute 工具
 net-analyzer/nali 0.8.0: An offline tool for querying IP geographic information and CDN provider.
-net-analyzer/realitlscanner 0.1.0: A TLS server scanner for Reality
+net-analyzer/realitlscanner 0.1.2: A TLS server scanner for Reality
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
 net-dns/dnslookup 1.10.0: Simple command line utility to make DNS lookups to the specified server
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
@@ -208,7 +208,7 @@ net-im/deepin-wine-qq 9.5.2.27897: Tencent QQ on Deepin Wine(com.qq.im.deepin) F
 net-im/deepin-wine-wechat 3.9.0.28-r3: Tencent WeChat on Deepin Wine For Gentoo
 net-im/deepin-wine-wecom 4.1.6.6017: Tencent Weixin Work on Deepin Wine(com.qq.weixin.work.deepin) For Gentoo
 net-im/dingtalk 7.0.40.30706 7.1.0.31017 7.1.0.31120: Communication platform that supports video and audio conferencing
-net-im/tencent-qq 3.2.2_p18394: The new version of the official linux-qq
+net-im/tencent-qq 3.2.3_p18968: The new version of the official linux-qq
 net-im/weixin-uos 2.1.8: UOS weixin
 net-im/wemeet 3.15.0.402 3.15.1.401-r1 3.15.1.403: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq
