@@ -3,21 +3,11 @@
 
 EAPI=8
 
-inherit cmake xdg
+inherit cmake git-r3 xdg
 
-if [[ "${PV}" == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-chinese-addons.git"
-else
-	MY_PN="fcitx5-chinese-addons"
-	S="${WORKDIR}/${MY_PN}-${PV}"
-	SRC_URI="https://download.fcitx-im.org/fcitx5/fcitx5-chinese-addons/fcitx5-chinese-addons-${PV}_dict.tar.xz"
-	KEYWORDS="~amd64 ~arm64 ~loong ~x86"
-fi
-
+EGIT_REPO_URI="https://github.com/fcitx/fcitx5-chinese-addons.git"
 DESCRIPTION="Addons related to Chinese, including IME previous bundled inside fcitx4."
 HOMEPAGE="https://github.com/fcitx/fcitx5-chinese-addons"
-
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
 IUSE="browser +cloudpinyin coverage +gui lua +opencc test"
