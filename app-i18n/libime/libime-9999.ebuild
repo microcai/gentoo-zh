@@ -12,7 +12,7 @@ SRC_URI="
 	https://download.fcitx-im.org/data/table.tar.gz -> ${PN}-table.tar.gz
 "
 DESCRIPTION="Fcitx5 Next generation of fcitx "
-HOMEPAGE="https://fcitx-im.org/ https://gitlab.com/fcitx/libime"
+HOMEPAGE="https://fcitx-im.org/"
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
 IUSE="coverage doc test"

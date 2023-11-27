@@ -8,7 +8,7 @@ inherit cmake xdg-utils flag-o-matic toolchain-funcs
 KEYWORDS="~amd64 ~arm64 ~loong ~riscv ~x86"
 SRC_URI="https://download.fcitx-im.org/fcitx5/libime/libime-${PV}_dict.tar.xz"
 DESCRIPTION="Fcitx5 Next generation of fcitx "
-HOMEPAGE="https://fcitx-im.org/ https://gitlab.com/fcitx/libime"
+HOMEPAGE="https://fcitx-im.org/"
 LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
 SLOT="5"
 IUSE="coverage doc test"
