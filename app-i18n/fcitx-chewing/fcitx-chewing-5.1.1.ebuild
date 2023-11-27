@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~arm64 ~riscv"
 
 BDEPEND="virtual/pkgconfig"
 RDEPEND="
-	>=app-i18n/fcitx-5.0.2:5
+	>=app-i18n/fcitx-5.1.5:5
 	>=app-i18n/libchewing-0.5.0
 "
 DEPEND="${RDEPEND}"
