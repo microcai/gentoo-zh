@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit xdg cmake git-r3
+inherit cmake git-r3 xdg
 
 DESCRIPTION="Japanese SKK input engine for Fcitx5"
 HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-skk"
