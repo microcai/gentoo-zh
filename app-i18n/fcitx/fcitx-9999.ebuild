@@ -12,7 +12,7 @@ DESCRIPTION="Fcitx5 Next generation of fcitx "
 HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5"
 SRC_URI=" https://download.fcitx-im.org/data/en_dict-${EN_DICT_VER}.tar.gz -> fcitx-data-en_dict-${EN_DICT_VER}.tar.gz"
 
-LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT Unicode-DFS-2016"
+LICENSE="LGPL-2+ Unicode-DFS-2016"
 SLOT="5"
 IUSE="+autostart coverage doc +emoji +enchant +keyboard presage +server systemd test wayland +X"
 REQUIRED_USE="
