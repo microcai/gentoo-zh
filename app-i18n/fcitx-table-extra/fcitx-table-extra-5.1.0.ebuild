@@ -11,7 +11,7 @@ DESCRIPTION="Provides extra table for Fcitx, including Boshiamy, Zhengma, Cangji
 HOMEPAGE="https://github.com/fcitx/fcitx5-table-extra"
 SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_PN}-${PV}.tar.xz -> ${P}.tar.xz"
 
-LICENSE="GPL-2+"
+LICENSE="GPL-3+"
 SLOT="5"
 KEYWORDS="~amd64 ~arm64 ~riscv ~x86"
 
