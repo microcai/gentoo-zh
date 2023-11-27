@@ -10,7 +10,7 @@ DESCRIPTION="Chewing Wrapper for Fcitx."
 HOMEPAGE="https://github.com/fcitx/fcitx5-chewing"
 SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_PN}-${PV}.tar.xz -> ${P}.tar.xz"
 
-LICENSE="GPL-2+"
+LICENSE="LGPL-2.1+"
 SLOT="5"
 KEYWORDS="~amd64 ~arm64 ~riscv"
 
