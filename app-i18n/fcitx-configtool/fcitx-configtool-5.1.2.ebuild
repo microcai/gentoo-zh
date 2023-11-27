@@ -19,8 +19,8 @@ IUSE="kcm +config-qt test"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	>=app-i18n/fcitx-5.0.4:5
-	>=app-i18n/fcitx-qt-5.0.2:5[qt5,-onlyplugin]
+	>=app-i18n/fcitx-5.1.5:5
+	>=app-i18n/fcitx-qt-5.1.3:5[qt5,-onlyplugin]
 	dev-qt/qtcore:5
 	dev-qt/qtconcurrent:5
 	dev-qt/qtdbus:5
