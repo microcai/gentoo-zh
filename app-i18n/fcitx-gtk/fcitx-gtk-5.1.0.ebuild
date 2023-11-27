@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit gnome2-utils xdg cmake
+inherit cmake gnome2-utils xdg
 
 MY_PN="fcitx5-gtk"
 S="${WORKDIR}/${MY_PN}-${PV}"
