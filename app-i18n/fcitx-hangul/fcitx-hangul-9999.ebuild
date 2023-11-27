@@ -11,7 +11,7 @@ HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-hangul"
 inherit git-r3
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5-hangul"
 
-LICENSE="GPL-2+"
+LICENSE="LGPL-2.1+"
 SLOT="5"
 
 BDEPEND="sys-devel/gettext
