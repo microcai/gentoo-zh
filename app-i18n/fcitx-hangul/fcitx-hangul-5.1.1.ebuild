@@ -16,12 +16,16 @@ LICENSE="LGPL-2.1+"
 SLOT="5"
 KEYWORDS="~amd64 ~x86"
 
-BDEPEND="sys-devel/gettext
-	virtual/pkgconfig"
-DEPEND=">=app-i18n/fcitx-5.0.2:5
+BDEPEND="
+	sys-devel/gettext
+	virtual/pkgconfig
+"
+DEPEND="
+	>=app-i18n/fcitx-5.1.5:5
 	>=app-i18n/libhangul-0.0.12
 	virtual/libiconv
-	virtual/libintl"
+	virtual/libintl
+"
 RDEPEND="${DEPEND}"
 
 DOCS=(AUTHORS)
