@@ -5,6 +5,10 @@
 		<email>2073201758GD@gmail.com</email>
 		<name>liuyujielol</name>
 	</maintainer>
+	<maintainer type="person">
+		<email>tanekliang@gmail.com</email>
+		<name>Yongxiang Liang</name>
+	</maintainer>
 	<use>
 		<flag name="coverage">Build the project with gcov support (Need ENABLE_TEST=On)</flag>
 	</use>
