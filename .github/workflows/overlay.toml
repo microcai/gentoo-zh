@@ -480,13 +480,6 @@ github = "ContinuumIO/pycosat"
 use_latest_tag = true
 github_account = "OriPoin"
 
-["dev-python/python-telegram-bot"]
-source = "github"
-github = "python-telegram-bot/python-telegram-bot"
-use_latest_release = true
-prefix = "v"
-github_account = "CHN-beta"
-
 ["dev-python/qasync"]
 source = "pypi"
 pypi = "qasync"
