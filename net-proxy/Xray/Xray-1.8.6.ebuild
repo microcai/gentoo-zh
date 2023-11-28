@@ -20,7 +20,7 @@ DEPEND=""
 RDEPEND="${DEPEND}
 	app-alternatives/v2ray-geoip
 	app-alternatives/v2ray-geosite"
-BDEPEND=">=dev-lang/go-1.20"
+BDEPEND=">=dev-lang/go-1.21.4"
 
 S="${WORKDIR}/${PN}-core-${PV}"
 
