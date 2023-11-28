@@ -9,11 +9,7 @@ DESCRIPTION="Input method development support for xcb"
 HOMEPAGE="https://github.com/fcitx/xcb-imdkit"
 SRC_URI="https://download.fcitx-im.org/fcitx5/${PN}/${P}.tar.xz"
 
-LICENSE="
-	MIT
-	LGPL-2.1+
-	!system-uthash? ( BSD-1 )
-"
+LICENSE="LGPL-2.1+ !system-uthash? ( BSD-1 )"
 SLOT="5"
 KEYWORDS="~amd64 ~arm64 ~loong ~riscv ~x86"
 IUSE="+system-uthash"
