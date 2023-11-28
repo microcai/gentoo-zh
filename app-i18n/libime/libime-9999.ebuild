@@ -22,16 +22,19 @@ REQUIRED_USE="
 RESTRICT="!test? ( test )"
 RDEPEND="
 	>=app-i18n/fcitx-5.1.5:5
+	app-arch/zstd:=
+	dev-libs/boost:=
+	doc? ( app-doc/doxygen )
+"
+DEPEND="
+	${RDEPEND}
 	test? (
 		coverage? (
 			dev-util/lcov
 		)
 	)
-	doc? ( app-doc/doxygen )
 "
-DEPEND="${RDEPEND}
-	app-arch/zstd:=
-	dev-libs/boost:=
+BDEPEND="
 	kde-frameworks/extra-cmake-modules:0
 	virtual/pkgconfig
 "
