@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-28 16:53:04 CST)
+(The last generation time: 2023-11-28 19:15:56 CST)
 
 ### Packages
 
@@ -49,10 +49,11 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-chewing                     | 5.1.1                                     |        | https://github.com/fcitx/fcitx5-chewing                                                 | Chewing Wrapper for Fcitx.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/fcitx-m17n                        | 5.1.0                                     |        | https://fcitx-im.org                                                                    | m17n-provided input methods for Fcitx5
+ app-i18n/fcitx-m17n                        | 5.1.0                                     |        | https://github.com/fcitx/fcitx5-m17n                                                    | m17n-provided input methods for Fcitx5
+                                            | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-meta                        | 5.0.12-r2                                 |        | https://fcitx-im.org                                                                    | Merge this to pull in Fcitx packages
-   app-i18n/fcitx-chinese-addons            | 5.1.2                                     |  D, RD | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
+   app-i18n/fcitx-chinese-addons            | 5.1.2-r1                                  |  D, RD | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
                                             | 9999                                      |        |                                                                                         |
      app-i18n/fcitx-lua                     | 5.0.11                                    |  D, RD | https://github.com/fcitx/fcitx5-lua                                                     | Lua support for fcitx
                                             | 9999                                      |        |                                                                                         |
@@ -63,6 +64,7 @@
    app-i18n/fcitx-gtk                       | 5.1.0                                     | RD     | https://github.com/fcitx/fcitx5-gtk                                                     | Gtk im module for fcitx5 and glib based dbus client library
                                             | 9999                                      |        |                                                                                         |
    app-i18n/fcitx-hangul                    | 5.1.1                                     | RD     | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
+                                            | 9999                                      |        |                                                                                         |
    app-i18n/fcitx-rime                      | 5.1.3                                     | RD     | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
                                             | 9999                                      |        |                                                                                         |
      app-i18n/rime-prelude                  | 20220122-r1                               |  D, RD | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
@@ -88,8 +90,7 @@
    app-i18n/fcitx                           | 4.2.9.8                                   |  D, RD | https://fcitx-im.org/                                                                   | Fcitx (Flexible Context-aware Input Tool with eXtension) input method framework
                                             | 5.1.5                                     |        |                                                                                         |
                                             | 9999                                      |        |                                                                                         |
-     x11-libs/xcb-imdkit                    | 1.0.4                                     |  D, RD | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
-                                            | 1.0.5                                     |        |                                                                                         |
+     x11-libs/xcb-imdkit                    | 1.0.5                                     |  D, RD | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
    app-i18n/libime                          | 1.1.3                                     |  D, RD | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
                                             | 9999                                      |        |                                                                                         |
    dev-util/gyp                             | 20230914150222                            | BD     | https://gyp.gsrc.io/                                                                    | GYP (Generate Your Projects) meta-build system
