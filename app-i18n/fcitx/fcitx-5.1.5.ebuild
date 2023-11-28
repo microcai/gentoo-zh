@@ -26,12 +26,6 @@ REQUIRED_USE="
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	test? (
-		coverage? (
-			dev-util/lcov
-		)
-	)
-
 	doc? ( app-doc/doxygen )
 	enchant? ( app-text/enchant:2 )
 	emoji? ( sys-libs/zlib )
@@ -72,10 +66,17 @@ RDEPEND="
 	x11-libs/cairo[X?]
 	x11-libs/pango[X?]
 "
-DEPEND="${RDEPEND}"
+DEPEND="
+	${RDEPEND}
+	test? (
+		coverage? (
+			dev-util/lcov
+		)
+	)
+"
 BDEPEND="
-	kde-frameworks/extra-cmake-modules:0
 	virtual/pkgconfig
+	kde-frameworks/extra-cmake-modules:0
 "
 
 src_configure() {
