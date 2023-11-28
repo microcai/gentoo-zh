@@ -57,34 +57,28 @@ RDEPEND="
 		x11-libs/libXrender
 		x11-libs/libXinerama
 		x11-libs/libxkbfile
-		x11-libs/libxcb
 		x11-libs/xcb-util
 		x11-libs/xcb-util-keysyms
 		x11-libs/xcb-util-wm
 		>=x11-libs/xcb-imdkit-1.0.3:5
 	)
 
-	dev-libs/glib:2
-	dev-libs/libxml2
 	dev-libs/libevent
 	dev-libs/libfmt
-	media-libs/fontconfig
 	sys-apps/dbus
-	sys-apps/util-linux
-	virtual/libiconv
 	virtual/libintl
 	x11-libs/gdk-pixbuf:2
 	x11-libs/cairo[X?]
 	x11-libs/pango[X?]
 "
-DEPEND="${RDEPEND}
+DEPEND="${RDEPEND}"
+BDEPEND="
 	kde-frameworks/extra-cmake-modules:0
 	virtual/pkgconfig
 "
 
 src_prepare() {
 	ln -s "${DISTDIR}/fcitx-data-en_dict-${EN_DICT_VER}.tar.gz" src/modules/spell/en_dict-${EN_DICT_VER}.tar.gz || die
-
 	cmake_src_prepare
 }
 
