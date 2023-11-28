@@ -11,7 +11,7 @@ EGIT_REPO_URI="https://github.com/fcitx/fcitx5-lua.git"
 DESCRIPTION="Lua support for fcitx"
 HOMEPAGE="https://github.com/fcitx/fcitx5-lua"
 
-LICENSE="LGPL-2+"
+LICENSE="LGPL-2.1+"
 SLOT="5"
 IUSE="+dlopen test"
 REQUIRED_USE="${LUA_REQUIRED_USE}"
