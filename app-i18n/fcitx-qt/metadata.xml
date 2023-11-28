@@ -3,9 +3,11 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<email>tanekliang@gmail.com</email>
+		<name>Yongxiang Liang</name>
 	</maintainer>
 	<use>
 		<flag name="onlyplugin">Build only plugin</flag>
+		<flag name="staticplugin">Build plugin as static</flag>
 		<flag name="qt6">Build support for QT6</flag>
 	</use>
 	<upstream>

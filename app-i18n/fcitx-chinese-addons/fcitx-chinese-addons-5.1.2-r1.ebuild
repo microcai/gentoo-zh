@@ -5,31 +5,25 @@ EAPI=8
 
 inherit cmake xdg
 
-if [[ "${PV}" == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-chinese-addons.git"
-else
-	MY_PN="fcitx5-chinese-addons"
-	S="${WORKDIR}/${MY_PN}-${PV}"
-	SRC_URI="https://download.fcitx-im.org/fcitx5/fcitx5-chinese-addons/fcitx5-chinese-addons-${PV}_dict.tar.xz"
-	KEYWORDS="~amd64 ~arm64 ~loong ~x86"
-fi
-
+MY_PN="fcitx5-chinese-addons"
+S="${WORKDIR}/${MY_PN}-${PV}"
+SRC_URI="https://download.fcitx-im.org/fcitx5/fcitx5-chinese-addons/fcitx5-chinese-addons-${PV}_dict.tar.xz"
+KEYWORDS="~amd64 ~arm64 ~loong ~riscv ~x86"
 DESCRIPTION="Addons related to Chinese, including IME previous bundled inside fcitx4."
 HOMEPAGE="https://github.com/fcitx/fcitx5-chinese-addons"
 
-LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
+LICENSE="GPL-2+ LGPL-2+"
 SLOT="5"
-IUSE="browser +cloudpinyin coverage +gui lua +opencc test"
+IUSE="webengine +cloudpinyin coverage +gui lua +opencc test"
 REQUIRED_USE="
 	coverage? ( test )
-	browser? ( gui )
+	webengine? ( gui )
 "
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	>=app-i18n/fcitx-5.1.2:5
-	>=app-i18n/libime-1.1.2:5
+	>=app-i18n/fcitx-5.1.5:5
+	>=app-i18n/libime-1.1.3:5
 
 	>=dev-libs/boost-1.61:=
 	dev-libs/libfmt
@@ -42,9 +36,9 @@ RDEPEND="
 		dev-qt/qtwidgets:5
 		dev-qt/qtconcurrent:5
 		app-i18n/fcitx-qt:5[qt5,-onlyplugin]
-		browser? ( !loong? ( !x86? ( dev-qt/qtwebengine:5 ) ) )
+		webengine? ( dev-qt/qtwebengine:5 )
 	)
-	!arm64? ( !loong? ( lua? ( app-i18n/fcitx-lua:5 ) ) )
+	lua? ( app-i18n/fcitx-lua:5 )
 	test? ( dev-util/lcov )
 "
 DEPEND="${RDEPEND}
@@ -72,7 +66,7 @@ src_configure() {
 		)
 	else
 		mycmakeargs+=(
-			-DENABLE_BROWSER=$(usex browser)
+			-DENABLE_BROWSER=$(usex webengine)
 		)
 	fi
 	cmake_src_configure

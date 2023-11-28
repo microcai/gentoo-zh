@@ -3,22 +3,12 @@
 
 EAPI=8
 
-inherit cmake gnome2-utils xdg
-
-if [[ "${PV}" == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-gtk.git"
-else
-	MY_PN="fcitx5-gtk"
-	S="${WORKDIR}/${MY_PN}-${PV}"
-	SRC_URI="https://github.com/fcitx/fcitx5-gtk/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
-fi
-
+inherit cmake gnome2-utils xdg git-r3
+EGIT_REPO_URI="https://github.com/fcitx/fcitx5-gtk.git"
 DESCRIPTION="Gtk im module for fcitx5 and glib based dbus client library"
 HOMEPAGE="https://github.com/fcitx/fcitx5-gtk"
 
-LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
+LICENSE="LGPL-2+"
 SLOT="5"
 IUSE="gtk2 +gtk3 +gtk4 +introspection +snooper onlyplugin wayland"
 REQUIRED_USE="|| ( gtk2 gtk3 gtk4 )"
@@ -28,18 +18,14 @@ RDEPEND="app-i18n/fcitx:5
 	gtk3? ( x11-libs/gtk+:3[wayland?] )
 	gtk4? ( gui-libs/gtk:4[wayland?] )
 	introspection? ( dev-libs/gobject-introspection )
-	kde-frameworks/extra-cmake-modules:0
 	dev-libs/glib:2
+	kde-frameworks/extra-cmake-modules:0
 	x11-libs/gdk-pixbuf:2
 	x11-libs/libX11
 	x11-libs/libxkbcommon
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
-
-src_prepare() {
-	cmake_src_prepare
-}
 
 src_configure() {
 	local mycmakeargs=(

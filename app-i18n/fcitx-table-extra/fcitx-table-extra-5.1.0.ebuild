@@ -6,15 +6,14 @@ EAPI=8
 inherit cmake xdg
 
 MY_PN=fcitx5-table-extra
-MY_P="${MY_PN}-${PV}"
 S="${WORKDIR}/${MY_PN}-${PV}"
 DESCRIPTION="Provides extra table for Fcitx, including Boshiamy, Zhengma, Cangjie, and Quick"
 HOMEPAGE="https://github.com/fcitx/fcitx5-table-extra"
-SRC_URI="https://github.com/fcitx/fcitx5-table-extra/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_PN}-${PV}.tar.xz -> ${P}.tar.xz"
 
-LICENSE="GPL-2+"
+LICENSE="GPL-3+"
 SLOT="5"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm64 ~riscv ~x86"
 
 DEPEND="
 	app-i18n/fcitx:5

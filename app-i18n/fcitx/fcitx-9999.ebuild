@@ -3,23 +3,16 @@
 
 EAPI=8
 
-inherit cmake xdg
+inherit cmake xdg git-r3
 
-if [[ "${PV}" == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/fcitx/fcitx5.git"
-else
-	MY_PN="fcitx5"
-	S="${WORKDIR}/${MY_PN}-${PV}"
-	SRC_URI="https://github.com/fcitx/fcitx5/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~loong ~x86"
-fi
+EGIT_REPO_URI="https://github.com/fcitx/fcitx5.git"
+EN_DICT_VER="20121020"
 
 DESCRIPTION="Fcitx5 Next generation of fcitx "
 HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5"
-SRC_URI+=" https://download.fcitx-im.org/data/en_dict-20121020.tar.gz -> fcitx-data-en_dict-20121020.tar.gz"
+SRC_URI=" https://download.fcitx-im.org/data/en_dict-${EN_DICT_VER}.tar.gz -> fcitx-data-en_dict-${EN_DICT_VER}.tar.gz"
 
-LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT Unicode-DFS-2016"
+LICENSE="LGPL-2+ Unicode-DFS-2016"
 SLOT="5"
 IUSE="+autostart coverage doc +emoji +enchant +keyboard presage +server systemd test wayland +X"
 REQUIRED_USE="
@@ -89,17 +82,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
-src_unpack() {
-	if [[ "${PV}" == 9999 ]]; then
-		git-r3_src_unpack
-	else
-		# avoid unpacking fcitx-data-en_dict-20121020.tar.gz
-		unpack "${P}.tar.gz"
-	fi
-}
-
 src_prepare() {
-	ln -s "${DISTDIR}/fcitx-data-en_dict-20121020.tar.gz" src/modules/spell/en_dict-20121020.tar.gz || die
+	ln -s "${DISTDIR}/fcitx-data-en_dict-${EN_DICT_VER}.tar.gz" src/modules/spell/en_dict-${EN_DICT_VER}.tar.gz || die
 
 	cmake_src_prepare
 }
@@ -123,6 +107,15 @@ src_configure() {
 		-DUSE_SYSTEMD=$(usex systemd)
 	)
 	cmake_src_configure
+}
+
+src_test() {
+	# break by sandbox
+	local CMAKE_SKIP_TESTS=(
+		testdbus
+		testservicewatcher
+	)
+	cmake_src_test
 }
 
 pkg_postinst() {

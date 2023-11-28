@@ -8,19 +8,13 @@ inherit cmake xdg
 DESCRIPTION="Japanese Anthy input methods for Fcitx5"
 HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-anthy"
 
-if [[ "${PV}" =~ (^|\.)9999$ ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/fcitx/fcitx5-anthy"
-else
-	MY_PN="fcitx5-anthy"
-	MY_P="${MY_PN}-${PV}"
-	S="${WORKDIR}/${MY_PN}-${PV}"
-	SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_P}.tar.xz"
-fi
+MY_PN="fcitx5-anthy"
+S="${WORKDIR}/${MY_PN}-${PV}"
+SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_PN}-${PV}.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="5"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm64 ~riscv ~x86"
 IUSE="test coverage"
 REQUIRED_USE="coverage? ( test )"
 RESTRICT="!test? ( test )"

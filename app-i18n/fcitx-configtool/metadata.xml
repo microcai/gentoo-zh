@@ -7,6 +7,10 @@
 	<maintainer type="person">
 		<email>w12101111@gmail.com</email>
 	</maintainer>
+	<maintainer type="person">
+		<email>tanekliang@gmail.com</email>
+		<name>Yongxiang Liang</name>
+	</maintainer>
 	<use>
 		<flag name="kcm">Enable KDE KCM support</flag>
 		<flag name="config-qt">Enable fcitx5-config-qt</flag>
