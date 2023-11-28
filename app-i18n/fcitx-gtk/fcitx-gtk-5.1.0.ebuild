@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~arm64 ~loong ~riscv ~x86"
 DESCRIPTION="Gtk im module for fcitx5 and glib based dbus client library"
 HOMEPAGE="https://github.com/fcitx/fcitx5-gtk"
 
-LICENSE="LGPL-2+"
+LICENSE="LGPL-2.1+"
 SLOT="5"
 IUSE="gtk2 +gtk3 +gtk4 +introspection +snooper onlyplugin wayland"
 REQUIRED_USE="|| ( gtk2 gtk3 gtk4 )"
