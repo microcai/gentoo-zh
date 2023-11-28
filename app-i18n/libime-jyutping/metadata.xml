@@ -5,6 +5,10 @@
 		<email>2073201758GD@gmail.com</email>
 		<name>liuyujielol</name>
 	</maintainer>
+	<maintainer type="person">
+		<email>tanekliang@gmail.com</email>
+		<name>Yongxiang Liang</name>
+	</maintainer>
 	<use>
 		<flag name="engine">Enable input method for fcitx</flag>
 	</use>
