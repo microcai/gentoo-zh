@@ -38,7 +38,7 @@ RDEPEND="
 		app-i18n/fcitx-qt:5[qt5,-onlyplugin]
 		webengine? ( dev-qt/qtwebengine:5 )
 	)
-	!arm64? ( !loong? ( lua? ( app-i18n/fcitx-lua:5 ) ) )
+	lua? ( app-i18n/fcitx-lua:5 )
 	test? ( dev-util/lcov )
 "
 DEPEND="${RDEPEND}
