@@ -22,12 +22,8 @@ RDEPEND="
 	gtk3? ( app-i18n/fcitx-gtk:${SLOT}[gtk3] )
 	gtk4? ( app-i18n/fcitx-gtk:${SLOT}[gtk4] )
 	qt5? ( app-i18n/fcitx-qt:${SLOT} )
-	!loong? (
-		rime? ( app-i18n/fcitx-rime:${SLOT} )
-		!arm64? (
-			hangul? ( app-i18n/fcitx-hangul:${SLOT} )
-			lua? ( app-i18n/fcitx-lua:${SLOT} )
-			skk? ( app-i18n/fcitx-skk:${SLOT} )
-		)
-	)
+	rime? ( app-i18n/fcitx-rime:${SLOT} )
+	hangul? ( app-i18n/fcitx-hangul:${SLOT} )
+	lua? ( app-i18n/fcitx-lua:${SLOT} )
+	skk? ( app-i18n/fcitx-skk:${SLOT} )
 "
