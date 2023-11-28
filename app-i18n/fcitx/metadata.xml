@@ -9,6 +9,10 @@
 		<email>cjk@gentoo.org</email>
 		<name>Cjk</name>
 	</maintainer>
+	<maintainer type="person">
+		<email>tanekliang@gmail.com</email>
+		<name>Yongxiang Liang</name>
+	</maintainer>
 	<use>
 		<flag name="autostart">Enable XDG-compatible autostart of Fcitx</flag>
 		<flag name="enchant">Enable Enchant backend (using <pkg>app-text/enchant</pkg>) for spelling hinting</flag>
