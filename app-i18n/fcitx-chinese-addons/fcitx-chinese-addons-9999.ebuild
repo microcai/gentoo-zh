@@ -10,10 +10,10 @@ DESCRIPTION="Addons related to Chinese, including IME previous bundled inside fc
 HOMEPAGE="https://github.com/fcitx/fcitx5-chinese-addons"
 LICENSE="GPL-2+ LGPL-2+"
 SLOT="5"
-IUSE="browser +cloudpinyin coverage +gui lua +opencc test"
+IUSE="webengine +cloudpinyin coverage +gui lua +opencc test"
 REQUIRED_USE="
 	coverage? ( test )
-	browser? ( gui )
+	webengine? ( gui )
 "
 RESTRICT="!test? ( test )"
 
@@ -32,9 +32,9 @@ RDEPEND="
 		dev-qt/qtwidgets:5
 		dev-qt/qtconcurrent:5
 		app-i18n/fcitx-qt:5[qt5,-onlyplugin]
-		browser? ( !loong? ( !x86? ( dev-qt/qtwebengine:5 ) ) )
+		webengine? ( dev-qt/qtwebengine:5 )
 	)
-	!arm64? ( !loong? ( lua? ( app-i18n/fcitx-lua:5 ) ) )
+	!arm64? ( lua? ( app-i18n/fcitx-lua:5 ) )
 	test? ( dev-util/lcov )
 "
 DEPEND="${RDEPEND}
@@ -63,7 +63,7 @@ src_configure() {
 		)
 	else
 		mycmakeargs+=(
-			-DENABLE_BROWSER=$(usex browser)
+			-DENABLE_BROWSER=$(usex webengine)
 		)
 	fi
 	cmake_src_configure
