@@ -32,9 +32,11 @@ RDEPEND="
 		webengine? ( dev-qt/qtwebengine:5 )
 	)
 	lua? ( app-i18n/fcitx-lua:5 )
+"
+DEPEND="
+	${RDEPEND}
 	test? ( dev-util/lcov )
 "
-DEPEND="${RDEPEND}"
 BDEPEND="
 	kde-frameworks/extra-cmake-modules:0
 	virtual/pkgconfig
