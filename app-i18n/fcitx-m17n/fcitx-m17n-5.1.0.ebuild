@@ -26,13 +26,17 @@ RDEPEND="
 	dev-db/m17n-db
 	dev-libs/libfmt
 "
-DEPEND="${RDEPEND}"
-BDEPEND="
+DEPEND="
+	${RDEPEND}
 	test? (
 		coverage? (
 			dev-util/lcov
 		)
 	)
+"
+BDEPEND="
+	virtual/pkgconfig
+	kde-frameworks/extra-cmake-modules:0
 "
 
 src_configure() {
