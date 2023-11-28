@@ -5,6 +5,10 @@
 		<email>jlin.gentoo@outlook.com</email>
 		<name>Jian Lin</name>
 	</maintainer>
+	<maintainer type="person">
+		<email>tanekliang@gmail.com</email>
+		<name>Yongxiang Liang</name>
+	</maintainer>
 	<use>
 		<flag name="system-uthash">Use the system-wide <pkg>dev-libs/uthash</pkg> instead of bundled.</flag>
 	</use>
