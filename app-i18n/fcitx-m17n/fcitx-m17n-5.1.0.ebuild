@@ -20,13 +20,14 @@ REQUIRED_USE="
 RESTRICT="!test? ( test )"
 
 # m17n-gui>=1.6.3
-DEPEND="
+RDEPEND="
 	>=app-i18n/fcitx-5.1.5:5
 	>=dev-libs/m17n-lib-1.6.3[X]
 	dev-db/m17n-db
+	dev-libs/libfmt
 "
-RDEPEND="
-	${DEPEND}
+DEPEND="${RDEPEND}"
+BDEPEND="
 	test? (
 		coverage? (
 			dev-util/lcov
