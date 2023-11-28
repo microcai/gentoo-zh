@@ -1,0 +1,16 @@
+BDEPEND=>=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=>=app-i18n/fcitx-5.1.5:5 >=dev-libs/m17n-lib-1.6.3[X] dev-db/m17n-db
+DESCRIPTION=m17n-provided input methods for Fcitx5
+EAPI=8
+HOMEPAGE=https://github.com/fcitx/fcitx5-m17n
+INHERIT=cmake git-r3
+IUSE=coverage test
+LICENSE=LGPL-2.1+
+PROPERTIES=live
+RDEPEND=>=app-i18n/fcitx-5.1.5:5 >=dev-libs/m17n-lib-1.6.3[X] dev-db/m17n-db test? ( coverage? ( dev-util/lcov ) )
+REQUIRED_USE=coverage? ( test )
+RESTRICT=!test? ( test )
+SLOT=5
+_eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	6b3c606c5de2531072ffd36eca06a5a9	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271	git-r3	5133e393e8717a3a093660f990801dc1
+_md5_=9ce2b3306de61ba974d0ba97d08ea409

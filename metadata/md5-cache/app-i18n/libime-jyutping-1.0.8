@@ -1,16 +1,16 @@
 BDEPEND=>=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
-DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=app-arch/zstd >=app-i18n/libime-1.0.6:5 engine? ( app-i18n/fcitx:5 app-i18n/fcitx-chinese-addons:5 sys-devel/gettext ) >=dev-libs/boost-1.61 dev-libs/libfmt
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=app-arch/zstd >=app-i18n/libime-1.1.3:5 engine? ( app-i18n/fcitx:5 app-i18n/fcitx-chinese-addons:5 sys-devel/gettext ) >=dev-libs/boost-1.61 dev-libs/libfmt
 DESCRIPTION=A library make use of libime to implement jyutping (粵拼) input method
 EAPI=8
 HOMEPAGE=https://github.com/fcitx/libime-jyutping
 INHERIT=cmake
 IUSE=+engine test
-KEYWORDS=~amd64
+KEYWORDS=~amd64 ~arm64 ~riscv
 LICENSE=LGPL-2.1+ GPL-3+
-RDEPEND=app-arch/zstd >=app-i18n/libime-1.0.6:5 engine? ( app-i18n/fcitx:5 app-i18n/fcitx-chinese-addons:5 sys-devel/gettext ) >=dev-libs/boost-1.61 dev-libs/libfmt
+RDEPEND=app-arch/zstd >=app-i18n/libime-1.1.3:5 engine? ( app-i18n/fcitx:5 app-i18n/fcitx-chinese-addons:5 sys-devel/gettext ) >=dev-libs/boost-1.61 dev-libs/libfmt
 RESTRICT=!test? ( test )
 SLOT=0
-SRC_URI=https://github.com/fcitx/libime-jyutping/archive/refs/tags/1.0.8.tar.gz -> libime-jyutping-1.0.8.tar.gz https://download.fcitx-im.org/data/jyutping-model-20180103.tar.xz https://download.fcitx-im.org/data/jyutping-dict-20180104.tar.xz
+SRC_URI=https://download.fcitx-im.org/fcitx5/libime-jyutping/libime-jyutping-1.0.8_dict.tar.xz -> libime-jyutping-1.0.8.tar.xz
 _eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	6b3c606c5de2531072ffd36eca06a5a9	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271
-_md5_=1e7350162e66fdf0bed2242d644ccdee
+_md5_=e80912f79d3e99d97d21455fa93a2814

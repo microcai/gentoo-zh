@@ -1,14 +1,17 @@
 BDEPEND=>=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=app-i18n/fcitx:5 app-arch/zstd:= dev-libs/boost:= kde-frameworks/extra-cmake-modules:0 virtual/pkgconfig
+DEPEND=>=app-i18n/fcitx-5.1.5:5 test? ( coverage? ( dev-util/lcov ) ) doc? ( app-doc/doxygen ) app-arch/zstd:= dev-libs/boost:= kde-frameworks/extra-cmake-modules:0 virtual/pkgconfig
 DESCRIPTION=Fcitx5 Next generation of fcitx
 EAPI=8
-HOMEPAGE=https://fcitx-im.org/ https://gitlab.com/fcitx/libime
+HOMEPAGE=https://fcitx-im.org/
 INHERIT=cmake xdg-utils flag-o-matic toolchain-funcs
-KEYWORDS=~amd64 ~arm64 ~loong ~x86
-LICENSE=BSD-1 GPL-2+ LGPL-2+ MIT
-RDEPEND=app-i18n/fcitx:5
+IUSE=coverage doc test
+KEYWORDS=~amd64 ~arm64 ~loong ~riscv ~x86
+LICENSE=LGPL-2+
+RDEPEND=>=app-i18n/fcitx-5.1.5:5 test? ( coverage? ( dev-util/lcov ) ) doc? ( app-doc/doxygen )
+REQUIRED_USE=coverage? ( test )
+RESTRICT=!test? ( test )
 SLOT=5
 SRC_URI=https://download.fcitx-im.org/fcitx5/libime/libime-1.1.3_dict.tar.xz
 _eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	6b3c606c5de2531072ffd36eca06a5a9	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271
-_md5_=44c9b320548d84643067eca415c79f21
+_md5_=88acd1ae81fd787858292a50abc6ec3b
