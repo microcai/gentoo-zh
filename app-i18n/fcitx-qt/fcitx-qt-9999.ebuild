@@ -31,13 +31,15 @@ RDEPEND="
 	qt6? (
 		dev-qt/qtbase:6[dbus,gui,wayland?,widgets]
 	)
-	kde-frameworks/extra-cmake-modules:0
 	x11-libs/libX11
 	x11-libs/libxcb
 	x11-libs/libxkbcommon
 "
-DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+DEPEND="${RDEPEND}"
+BDEPEND="
+	kde-frameworks/extra-cmake-modules:0
+	virtual/pkgconfig
+"
 
 src_configure() {
 	local mycmakeargs=(
