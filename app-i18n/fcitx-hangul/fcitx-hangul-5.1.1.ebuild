@@ -17,14 +17,13 @@ SLOT="5"
 KEYWORDS="~amd64 ~x86"
 
 BDEPEND="
-	sys-devel/gettext
+	kde-frameworks/extra-cmake-modules:0
 	virtual/pkgconfig
 "
 DEPEND="
 	>=app-i18n/fcitx-5.1.5:5
 	>=app-i18n/libhangul-0.0.12
 	virtual/libiconv
-	virtual/libintl
 "
 RDEPEND="${DEPEND}"
 
