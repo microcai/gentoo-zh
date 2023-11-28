@@ -38,6 +38,8 @@ src_prepare() {
 }
 
 src_configure() {
+	# libcxx drop std::binary_function in accordance with the Standard for >= C++17.
+	# This macro is used to re-enable all the features removed in C++17.
 	if [[ $(tc-get-cxx-stdlib) == libc++ ]]; then
 		append-cxxflags -D_LIBCPP_ENABLE_CXX17_REMOVED_FEATURES
 	fi
