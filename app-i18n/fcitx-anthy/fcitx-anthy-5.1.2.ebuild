@@ -19,6 +19,11 @@ IUSE="test coverage"
 REQUIRED_USE="coverage? ( test )"
 RESTRICT="!test? ( test )"
 
+RDEPEND="
+	>=app-i18n/fcitx-5.1.5:5
+	app-i18n/anthy
+"
+DEPEND="${RDEPEND}"
 BDEPEND="
 	test? (
 		coverage? ( dev-util/lcov )
@@ -26,13 +31,6 @@ BDEPEND="
 	kde-frameworks/extra-cmake-modules:0
 	virtual/pkgconfig
 "
-RDEPEND="
-	>=app-i18n/fcitx-5.1.2:5
-	app-i18n/anthy
-	sys-devel/gettext
-	virtual/libintl
-"
-DEPEND="${RDEPEND}"
 
 DOCS=(AUTHORS)
 
