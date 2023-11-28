@@ -19,11 +19,11 @@ RDEPEND="
 	x11-libs/xcb-util
 	x11-libs/xcb-util-keysyms
 "
-DEPEND="
-	${RDEPEND}
+DEPEND="${RDEPEND}"
+BDEPEND="
 	kde-frameworks/extra-cmake-modules:0
-	system-uthash? ( dev-libs/uthash )
 	virtual/pkgconfig
+	system-uthash? ( dev-libs/uthash )
 "
 
 src_configure() {
