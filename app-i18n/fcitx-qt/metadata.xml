@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<email>tanekliang@gmail.com</email>
+		<name>Yongxiang Liang</name>
 	</maintainer>
 	<use>
 		<flag name="onlyplugin">Build only plugin</flag>
