@@ -9,7 +9,7 @@ EGIT_REPO_URI="https://github.com/fcitx/fcitx5-qt.git"
 DESCRIPTION="Qt library and IM module for fcitx5"
 HOMEPAGE="https://github.com/fcitx/fcitx5-qt"
 
-LICENSE="BSD GPL-2+ LGPL-2.1+ MIT"
+LICENSE="BSD LGPL-2.1+"
 SLOT="5"
 IUSE="+qt5 onlyplugin staticplugin qt6 wayland"
 REQUIRED_USE="
