@@ -8,7 +8,7 @@ inherit cmake git-r3 xdg
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5-chinese-addons.git"
 DESCRIPTION="Addons related to Chinese, including IME previous bundled inside fcitx4."
 HOMEPAGE="https://github.com/fcitx/fcitx5-chinese-addons"
-LICENSE="BSD-1 GPL-2+ LGPL-2+ MIT"
+LICENSE="GPL-2+ LGPL-2+"
 SLOT="5"
 IUSE="browser +cloudpinyin coverage +gui lua +opencc test"
 REQUIRED_USE="
