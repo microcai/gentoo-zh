@@ -14,9 +14,6 @@ KEYWORDS="~amd64 ~arm64 ~riscv"
 LICENSE="LGPL-2.1+"
 SLOT="5"
 IUSE="coverage test"
-REQUIRED_USE="
-	coverage? ( test )
-"
 RESTRICT="!test? ( test )"
 
 # m17n-gui>=1.6.3
