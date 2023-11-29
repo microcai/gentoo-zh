@@ -15,7 +15,6 @@ LICENSE="GPL-2+ LGPL-2+"
 SLOT="5"
 IUSE="webengine +cloudpinyin coverage +qt5 lua +opencc test"
 REQUIRED_USE="
-	coverage? ( test )
 	webengine? ( qt5 )
 "
 RESTRICT="!test? ( test )"
