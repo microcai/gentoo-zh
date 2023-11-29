@@ -16,9 +16,6 @@ HOMEPAGE="https://fcitx-im.org/"
 LICENSE="LGPL-2+"
 SLOT="5"
 IUSE="coverage doc test"
-REQUIRED_USE="
-	coverage? ( test )
-"
 RESTRICT="!test? ( test )"
 RDEPEND="
 	>=app-i18n/fcitx-5.1.5:5
