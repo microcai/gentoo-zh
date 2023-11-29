@@ -17,7 +17,6 @@ SLOT="5"
 IUSE="+autostart coverage doc +emoji +enchant +keyboard presage +server systemd test wayland +X"
 REQUIRED_USE="
 	|| ( wayland X )
-	coverage? ( test )
 	X? ( keyboard )
 	wayland? ( keyboard )
 "
