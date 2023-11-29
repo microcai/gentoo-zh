@@ -10,10 +10,10 @@ DESCRIPTION="Addons related to Chinese, including IME previous bundled inside fc
 HOMEPAGE="https://github.com/fcitx/fcitx5-chinese-addons"
 LICENSE="GPL-2+ LGPL-2+"
 SLOT="5"
-IUSE="webengine +cloudpinyin coverage +gui lua +opencc test"
+IUSE="webengine +cloudpinyin coverage +qt5 lua +opencc test"
 REQUIRED_USE="
 	coverage? ( test )
-	webengine? ( gui )
+	webengine? ( qt5 )
 "
 RESTRICT="!test? ( test )"
 
@@ -23,7 +23,7 @@ RDEPEND="
 	>=dev-libs/boost-1.61:=
 	cloudpinyin? ( net-misc/curl )
 	opencc? ( app-i18n/opencc:= )
-	gui? (
+	qt5? (
 		dev-qt/qtconcurrent:5
 		app-i18n/fcitx-qt:5[qt5,-onlyplugin]
 		webengine? ( dev-qt/qtwebengine:5 )
@@ -47,7 +47,7 @@ src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
 		-DCMAKE_INSTALL_SYSCONFDIR="${EPREFIX}/etc"
-		-DENABLE_GUI=$(usex gui)
+		-DENABLE_GUI=$(usex qt5)
 		-DENABLE_OPENCC=$(usex opencc)
 		-DENABLE_CLOUDPINYIN=$(usex cloudpinyin)
 		-DENABLE_TEST=$(usex test)
