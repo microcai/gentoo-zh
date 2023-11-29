@@ -16,10 +16,7 @@ RDEPEND="
 	anthy? ( app-i18n/fcitx-anthy:${SLOT} )
 	chewing? ( app-i18n/fcitx-chewing:${SLOT} )
 	configtool? ( app-i18n/fcitx-configtool:${SLOT} )
-	chinese-addons? (
-		lua? ( app-i18n/fcitx-chinese-addons:${SLOT}[lua] )
-		!lua? ( app-i18n/fcitx-chinese-addons:${SLOT} )
-	)
+	chinese-addons? ( app-i18n/fcitx-chinese-addons:${SLOT}[qt5?,lua?] )
 	gtk2? ( app-i18n/fcitx-gtk:${SLOT}[gtk2] )
 	gtk3? ( app-i18n/fcitx-gtk:${SLOT}[gtk3] )
 	gtk4? ( app-i18n/fcitx-gtk:${SLOT}[gtk4] )
