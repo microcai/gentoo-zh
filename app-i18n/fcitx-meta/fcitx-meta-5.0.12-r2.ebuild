@@ -8,7 +8,7 @@ HOMEPAGE="https://fcitx-im.org"
 
 LICENSE="metapackage"
 SLOT="5"
-KEYWORDS="~amd64 ~arm64 ~loong ~x86"
+KEYWORDS="~amd64 ~arm64 ~x86"
 IUSE="anthy chewing +configtool +chinese-addons gtk2 +gtk3 gtk4 hangul lua m17n +qt5 rime skk"
 
 RDEPEND="
