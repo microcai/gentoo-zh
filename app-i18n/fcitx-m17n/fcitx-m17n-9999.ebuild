@@ -11,9 +11,6 @@ EGIT_REPO_URI="https://github.com/fcitx/fcitx5-m17n.git"
 LICENSE="LGPL-2.1+"
 SLOT="5"
 IUSE="coverage test"
-REQUIRED_USE="
-	coverage? ( test )
-"
 RESTRICT="!test? ( test )"
 
 # m17n-gui>=1.6.3
