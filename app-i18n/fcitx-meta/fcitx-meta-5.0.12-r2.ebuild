@@ -8,12 +8,13 @@ HOMEPAGE="https://fcitx-im.org"
 
 LICENSE="metapackage"
 SLOT="5"
-KEYWORDS="~amd64 ~arm64"
-IUSE="anthy chewing +configtool +chinese-addons gtk2 +gtk3 gtk4 hangul lua m17n +qt5 rime skk"
+KEYWORDS="~amd64"
+IUSE="anthy bamboo chewing +configtool +chinese-addons gtk2 +gtk3 gtk4 hangul lua m17n +qt5 rime skk"
 
 RDEPEND="
 	app-i18n/fcitx:${SLOT}
 	anthy? ( app-i18n/fcitx-anthy:${SLOT} )
+	bamboo? ( app-i18n/fcitx-bamboo:${SLOT} )
 	chewing? ( app-i18n/fcitx-chewing:${SLOT} )
 	configtool? ( app-i18n/fcitx-configtool:${SLOT} )
 	chinese-addons? ( app-i18n/fcitx-chinese-addons:${SLOT}[qt5?,lua?] )
