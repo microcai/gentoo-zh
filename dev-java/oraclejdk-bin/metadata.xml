@@ -11,7 +11,8 @@
 	</maintainer>
 	<use>
 		<flag name="headless-awt">Don't install the X backend for AWT, needed by some GUIs (used to be X flag)</flag>
-		<flag name="source">Install JVM (and optionally JavaFX) sources</flag>
+		<flag name="source">Install JVM sources</flag>
 		<flag name="javafx">Install JavaFX libraries</flag>
+		<flag name="commercial">Install features requiring a commercial license for production use</flag>
 	</use>
 </pkgmetadata>
