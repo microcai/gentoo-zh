@@ -7,6 +7,7 @@
 	</maintainer>
 	<use>
 		<flag name="anthy">Install Anthy Japanese input method</flag>
+		<flag name="bamboo">Install Bamboo Vietnamese input method</flag>
 		<flag name="chewing">Install Chewing (Intelligent phonetic, Zhuyin/Bopomofo) input method</flag>
 		<flag name="m17n">Install m17n-provided input methods</flag>
 		<flag name="chinese-addons">Install Chinese addons for fcitx5</flag>
