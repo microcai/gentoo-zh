@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-30 17:58:06 CST)
+(The last generation time: 2023-11-30 20:11:57 CST)
 
 ### Packages
 
@@ -197,7 +197,8 @@
  dev-db/mongodb                             | 5.3.1                                     |        | https://www.mongodb.com                                                                 | A high-performance, open source, schema-free document-oriented database
                                             | 6.2.0-r4                                  |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-java/oraclejdk-bin                     | 8.391                                     |        | http://www.oracle.com/technetwork/java/javase/                                          | Oracle's Java SE Development Kit
+ dev-java/oraclejdk-bin                     | 8.391                                     |        | https://www.oracle.com/java                                                             | Oracle's Java SE Development Kit
+                                            | 21.0.1                                    |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-lang/quickjs                           | 2021.03.27                                |        | https://bellard.org/quickjs/                                                            | Small embeddable Javascript engine
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
