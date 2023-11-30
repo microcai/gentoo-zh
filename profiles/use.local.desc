@@ -99,9 +99,10 @@ dev-db/mongodb:server-js - Build mongod with JavaScript support. (use spidermonk
 dev-db/mongodb:tcmalloc - Use tcmalloc as allocator.
 dev-db/mongodb:tcmalloc-experimental - Use tcmalloc-experimental as allocator.
 dev-db/mongodb:tools - Install the MongoDB tools (mongoimport, mongodump...) from app-admin/mongo-tools
+dev-java/oraclejdk-bin:commercial - Install features requiring a commercial license for production use
 dev-java/oraclejdk-bin:headless-awt - Don't install the X backend for AWT, needed by some GUIs (used to be X flag)
 dev-java/oraclejdk-bin:javafx - Install JavaFX libraries
-dev-java/oraclejdk-bin:source - Install JVM (and optionally JavaFX) sources
+dev-java/oraclejdk-bin:source - Install JVM sources
 dev-lang/quickjs:lto - Enable Link Time Optimizations (improves performance and decreases size of executables)
 dev-libs/v2ray-rules-dat:geoip - Install geoip.dat
 dev-libs/v2ray-rules-dat:geosite - Install geosite.dat

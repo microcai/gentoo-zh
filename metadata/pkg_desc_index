@@ -97,7 +97,7 @@ dev-cpp/nameof 0.10.3: Nameof operator for modern C++
 dev-cpp/tgbot-cpp 1.7.2: C++ library for Telegram bot API
 dev-db/dbeaver-bin 23.2.5: Free universal database tool (community edition).
 dev-db/mongodb 5.3.1 6.2.0-r4: A high-performance, open source, schema-free document-oriented database
-dev-java/oraclejdk-bin 8.391: Oracle's Java SE Development Kit
+dev-java/oraclejdk-bin 8.391 21.0.1: Oracle's Java SE Development Kit
 dev-lang/quickjs 2021.03.27: Small embeddable Javascript engine
 dev-libs/libdatrie 0.2.13: Double-Array Trie Library
 dev-libs/libdwarf 20140208 20150507: Library to deal with DWARF Debugging Information Format
