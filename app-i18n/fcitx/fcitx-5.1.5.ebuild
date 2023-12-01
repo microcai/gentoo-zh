@@ -18,7 +18,6 @@ SLOT="5"
 IUSE="+autostart coverage doc +emoji +enchant +keyboard presage +server systemd test wayland +X"
 REQUIRED_USE="
 	|| ( wayland X )
-	coverage? ( test )
 	X? ( keyboard )
 	wayland? ( keyboard )
 "
@@ -26,12 +25,6 @@ REQUIRED_USE="
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	test? (
-		coverage? (
-			dev-util/lcov
-		)
-	)
-
 	doc? ( app-doc/doxygen )
 	enchant? ( app-text/enchant:2 )
 	emoji? ( sys-libs/zlib )
@@ -58,29 +51,31 @@ RDEPEND="
 		x11-libs/libXrender
 		x11-libs/libXinerama
 		x11-libs/libxkbfile
-		x11-libs/libxcb
 		x11-libs/xcb-util
 		x11-libs/xcb-util-keysyms
 		x11-libs/xcb-util-wm
 		>=x11-libs/xcb-imdkit-1.0.3:5
 	)
 
-	dev-libs/glib:2
-	dev-libs/libxml2
 	dev-libs/libevent
 	dev-libs/libfmt
-	media-libs/fontconfig
 	sys-apps/dbus
-	sys-apps/util-linux
-	virtual/libiconv
 	virtual/libintl
 	x11-libs/gdk-pixbuf:2
 	x11-libs/cairo[X?]
 	x11-libs/pango[X?]
 "
-DEPEND="${RDEPEND}
-	kde-frameworks/extra-cmake-modules:0
+DEPEND="
+	${RDEPEND}
+	test? (
+		coverage? (
+			dev-util/lcov
+		)
+	)
+"
+BDEPEND="
 	virtual/pkgconfig
+	kde-frameworks/extra-cmake-modules:0
 "
 
 src_configure() {

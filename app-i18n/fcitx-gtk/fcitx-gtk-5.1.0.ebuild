@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -18,19 +18,18 @@ SLOT="5"
 IUSE="gtk2 +gtk3 +gtk4 +introspection +snooper onlyplugin wayland"
 REQUIRED_USE="|| ( gtk2 gtk3 gtk4 )"
 
-RDEPEND="app-i18n/fcitx:5
+RDEPEND="
+	app-i18n/fcitx:5
+	kde-frameworks/extra-cmake-modules:0
 	gtk2? ( x11-libs/gtk+:2 )
 	gtk3? ( x11-libs/gtk+:3[wayland?] )
 	gtk4? ( gui-libs/gtk:4[wayland?] )
 	introspection? ( dev-libs/gobject-introspection )
-	dev-libs/glib:2
-	kde-frameworks/extra-cmake-modules:0
-	x11-libs/gdk-pixbuf:2
-	x11-libs/libX11
-	x11-libs/libxkbcommon
 "
-DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+DEPEND="${RDEPEND}"
+BDEPEND="
+	virtual/pkgconfig
+"
 
 src_configure() {
 	local mycmakeargs=(

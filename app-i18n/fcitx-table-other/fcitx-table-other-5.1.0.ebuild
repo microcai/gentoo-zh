@@ -18,7 +18,6 @@ KEYWORDS="~amd64 ~arm64 ~riscv ~x86"
 DEPEND="
 	app-i18n/fcitx:5
 	app-i18n/libime
-	sys-devel/gettext
 "
 RDEPEND="${DEPEND}"
 BDEPEND="

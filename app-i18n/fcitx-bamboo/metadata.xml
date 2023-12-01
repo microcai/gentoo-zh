@@ -2,17 +2,19 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>2073201758GD@gmail.com</email>
-		<name>liuyujielol</name>
+		<email>i@bitbili.net</email>
+		<name>Ryan Qian</name>
+	</maintainer>
+	<maintainer type="person">
+		<email>tuhavuong@gmail.com</email>
+		<name>Vương Tử Hà</name>
 	</maintainer>
 	<maintainer type="person">
 		<email>tanekliang@gmail.com</email>
 		<name>Yongxiang Liang</name>
 	</maintainer>
-	<use>
-		<flag name="coverage">Build the project with gcov support</flag>
-	</use>
 	<upstream>
-		<remote-id type="github">fcitx/fcitx5-m17n</remote-id>
+		<remote-id type="github">fcitx/fcitx5-bamboo</remote-id>
+		<bugs-to>https://github.com/fcitx/fcitx5-bamboo/issues</bugs-to>
 	</upstream>
 </pkgmetadata>

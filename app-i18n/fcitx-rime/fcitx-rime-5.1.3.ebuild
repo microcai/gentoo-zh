@@ -22,5 +22,8 @@ RDEPEND="
 	>=app-i18n/rime-data-0.3.0
 	app-i18n/rime-prelude
 	x11-libs/libnotify"
-
 DEPEND="${RDEPEND}"
+BDEPEND="
+	kde-frameworks/extra-cmake-modules:0
+	virtual/pkgconfig
+"
