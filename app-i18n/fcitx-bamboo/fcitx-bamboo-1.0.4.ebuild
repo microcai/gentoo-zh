@@ -21,5 +21,5 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND="
 	dev-lang/go
-	kde-frameworks/extra-cmake-modules
+	kde-frameworks/extra-cmake-modules:0
 "
