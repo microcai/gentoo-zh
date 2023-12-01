@@ -33,8 +33,9 @@ app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
 app-i18n/fcitx 4.2.9.8 5.1.5 9999: Fcitx5 Next generation of fcitx
 app-i18n/fcitx-anthy 5.1.2: Japanese Anthy input methods for Fcitx5
+app-i18n/fcitx-bamboo 1.0.4: Typing Vietnamese by Bamboo core engine for Fcitx5
 app-i18n/fcitx-chewing 5.1.1: Chewing Wrapper for Fcitx.
-app-i18n/fcitx-chinese-addons 5.1.2-r1 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
+app-i18n/fcitx-chinese-addons 5.1.2-r2 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
 app-i18n/fcitx-configtool 5.1.2 9999: Configuration module for Fcitx
 app-i18n/fcitx-gtk 5.1.0 9999: Gtk im module for fcitx5 and glib based dbus client library
 app-i18n/fcitx-hangul 5.1.1 9999: Korean Hangul input method for Fcitx
