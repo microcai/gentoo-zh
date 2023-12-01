@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-11-30 20:11:57 CST)
+(The last generation time: 2023-12-01 10:30:54 CST)
 
 ### Packages
 
@@ -45,15 +45,11 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/dvp                               | 1.2.1-r1                                  |        | http://kaufmann.no/roland/dvorak/index.html                                             | The kbd keymap for Programmer Dvorak.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/fcitx-anthy                       | 5.1.2                                     |        | https://fcitx-im.org/                                                                   | Japanese Anthy input methods for Fcitx5
---------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/fcitx-chewing                     | 5.1.1                                     |        | https://github.com/fcitx/fcitx5-chewing                                                 | Chewing Wrapper for Fcitx.
---------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/fcitx-m17n                        | 5.1.0                                     |        | https://github.com/fcitx/fcitx5-m17n                                                    | m17n-provided input methods for Fcitx5
-                                            | 9999                                      |        |                                                                                         |
---------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-meta                        | 5.0.12-r2                                 |        | https://fcitx-im.org                                                                    | Merge this to pull in Fcitx packages
-   app-i18n/fcitx-chinese-addons            | 5.1.2-r1                                  |  D, RD | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
+   app-i18n/fcitx-anthy                     | 5.1.2                                     | RD     | https://fcitx-im.org/                                                                   | Japanese Anthy input methods for Fcitx5
+   app-i18n/fcitx-bamboo                    | 1.0.4                                     | RD     | https://github.com/fcitx/fcitx5-bamboo                                                  | Typing Vietnamese by Bamboo core engine for Fcitx5
+   app-i18n/fcitx-chewing                   | 5.1.1                                     | RD     | https://github.com/fcitx/fcitx5-chewing                                                 | Chewing Wrapper for Fcitx.
+   app-i18n/fcitx-chinese-addons            | 5.1.2-r2                                  |  D, RD | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
                                             | 9999                                      |        |                                                                                         |
      app-i18n/fcitx-lua                     | 5.0.11                                    |  D, RD | https://github.com/fcitx/fcitx5-lua                                                     | Lua support for fcitx
                                             | 9999                                      |        |                                                                                         |
@@ -64,6 +60,8 @@
    app-i18n/fcitx-gtk                       | 5.1.0                                     | RD     | https://github.com/fcitx/fcitx5-gtk                                                     | Gtk im module for fcitx5 and glib based dbus client library
                                             | 9999                                      |        |                                                                                         |
    app-i18n/fcitx-hangul                    | 5.1.1                                     | RD     | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
+                                            | 9999                                      |        |                                                                                         |
+   app-i18n/fcitx-m17n                      | 5.1.0                                     | RD     | https://github.com/fcitx/fcitx5-m17n                                                    | m17n-provided input methods for Fcitx5
                                             | 9999                                      |        |                                                                                         |
    app-i18n/fcitx-rime                      | 5.1.3                                     | RD     | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
                                             | 9999                                      |        |                                                                                         |
