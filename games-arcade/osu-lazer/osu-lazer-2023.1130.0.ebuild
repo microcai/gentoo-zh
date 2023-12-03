@@ -6,7 +6,7 @@ EAPI=8
 DOTNET_PKG_COMPAT=6.0
 NUGETS="
 automapper@12.0.1
-clowd.squirrel@2.9.42
+clowd.squirrel@2.10.2
 diffplex@1.7.1
 discordrichpresence@1.2.1.24
 ffmpeg.autogen@4.3.0.1
@@ -131,14 +131,14 @@ opentabletdriver.configurations@0.6.3
 opentabletdriver.native@0.6.3
 opentabletdriver.plugin@0.6.3
 polysharp@1.10.0
-ppy.localisationanalyser@2023.712.0
+ppy.localisationanalyser@2023.1117.0
 ppy.managedbass@2022.1216.0
 ppy.managedbass.fx@2022.1216.0
 ppy.managedbass.mix@2022.1216.0
-ppy.osu.framework@2023.1012.0
-ppy.osu.framework.nativelibs@2023.1004.1-nativelibs
+ppy.osu.framework@2023.1127.0
+ppy.osu.framework.nativelibs@2023.1013.0-nativelibs
 ppy.osu.framework.sourcegeneration@2023.720.0
-ppy.osu.game.resources@2023.1023.0
+ppy.osu.game.resources@2023.1127.0
 ppy.osutk.ns20@1.0.211
 ppy.sdl2-cs@1.0.671-alpha
 ppy.veldrid@4.9.3-g91ce5a6cda
@@ -192,8 +192,8 @@ runtime.unix.system.net.sockets@4.3.0
 runtime.unix.system.private.uri@4.3.0
 runtime.unix.system.runtime.extensions@4.3.0
 sentry@3.40.0
-sharpcompress@0.31.0
 sharpcompress@0.33.0
+sharpcompress@0.34.1
 sharpfnt@2.0.0
 sharpgen.runtime@2.0.0-beta.13
 sharpgen.runtime.com@2.0.0-beta.13
@@ -326,6 +326,7 @@ vortice.direct3d11@2.4.2
 vortice.directx@2.4.2
 vortice.dxgi@2.4.2
 vortice.mathematics@1.4.25
+zstdsharp.port@0.7.2
 "
 
 inherit dotnet-pkg desktop xdg
@@ -380,7 +381,7 @@ src_configure() {
 	dotnet-pkg-base_info
 	dotnet-pkg_foreach-project dotnet-pkg-base_restore
 	# skip **dotnet-pkg-base_foreach-solution** here
-	# avoid requiring android workloads
+	# avoid requiring non-linux workloads
 }
 
 src_compile() {
