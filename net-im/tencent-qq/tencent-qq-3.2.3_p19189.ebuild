@@ -11,7 +11,7 @@ HOMEPAGE="https://im.qq.com/linuxqq/index.shtml"
 LICENSE="Tencent"
 RESTRICT="strip"
 
-_I="e50c983e"
+_I="06d558c3"
 
 SRC_URI="
 	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_amd64.deb )
