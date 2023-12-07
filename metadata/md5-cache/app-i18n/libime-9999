@@ -1,16 +1,16 @@
-BDEPEND=kde-frameworks/extra-cmake-modules:0 virtual/pkgconfig >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=kde-frameworks/extra-cmake-modules:0 virtual/pkgconfig doc? ( app-doc/doxygen media-gfx/graphviz[svg] ) >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=app-i18n/fcitx-5.1.5:5 app-arch/zstd:= dev-libs/boost:= doc? ( app-doc/doxygen ) test? ( coverage? ( dev-util/lcov ) )
+DEPEND=>=app-i18n/fcitx-5.1.5:5 app-arch/zstd:= dev-libs/boost:=
 DESCRIPTION=Fcitx5 Next generation of fcitx
 EAPI=8
 HOMEPAGE=https://fcitx-im.org/
-INHERIT=cmake xdg-utils git-r3 flag-o-matic toolchain-funcs
-IUSE=coverage doc test
+INHERIT=cmake git-r3
+IUSE=doc test
 LICENSE=LGPL-2+
 PROPERTIES=live
-RDEPEND=>=app-i18n/fcitx-5.1.5:5 app-arch/zstd:= dev-libs/boost:= doc? ( app-doc/doxygen )
+RDEPEND=>=app-i18n/fcitx-5.1.5:5 app-arch/zstd:= dev-libs/boost:=
 RESTRICT=!test? ( test )
 SLOT=5
 SRC_URI=https://download.fcitx-im.org/data/lm_sc.arpa-20230712.tar.xz -> libime-lm_sc.arpa-20230712.tar.xz https://download.fcitx-im.org/data/dict-20230412.tar.xz -> libime-dict-20230412.tar.xz https://download.fcitx-im.org/data/table.tar.gz -> libime-table.tar.gz
 _eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	6b3c606c5de2531072ffd36eca06a5a9	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271	git-r3	5133e393e8717a3a093660f990801dc1
-_md5_=57169d6250ec24475379a21a4da8035c
+_md5_=459b9607d79ed805508dbf28c3576c74
