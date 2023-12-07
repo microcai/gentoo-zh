@@ -13,15 +13,21 @@ RESTRICT="strip"
 
 _I="06d558c3"
 
+_LiteLoader_PV="0.5.10"
+
 SRC_URI="
 	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_amd64.deb )
 	arm64? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_arm64.deb )
+	liteloader? (
+		https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/${_LiteLoader_PV}/LiteLoaderQQNT.zip \
+		-> LiteLoaderQQNT-${_LiteLoader_PV}.zip
+	)
 "
 
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
 
-IUSE="+bwrap system-vips gnome appindicator"
+IUSE="+bwrap system-vips gnome appindicator liteloader"
 RDEPEND="
 	x11-libs/gtk+:3
 	x11-libs/libnotify
@@ -46,17 +52,21 @@ RDEPEND="
 	gnome? ( dev-libs/gjs )
 	media-libs/openslide
 "
+BDEPEND="liteloader? ( app-arch/unzip )"
 
 S=${WORKDIR}
 
 src_unpack(){
 	:
+	if use liteloader ;then
+		unpack LiteLoaderQQNT-${_LiteLoader_PV}.zip
+	fi
 }
 
 src_install() {
 	dodir /
 	cd "${D}" || die
-	unpacker
+	unpacker "${DISTDIR}/linuxqq_${MY_PV}_${ARCH}".deb
 
 	if use system-vips; then
 		rm -r "${D}"/opt/QQ/resources/app/sharp-lib || die
@@ -100,6 +110,14 @@ src_install() {
 	gzip -d "${D}"/usr/share/doc/linuxqq/changelog.gz || die
 	dodoc "${D}"/usr/share/doc/linuxqq/changelog
 	rm -rf "${D}"/usr/share/doc/linuxqq/ || die
+
+	if use liteloader ;then
+		insinto  /opt/QQ/resources/app/LiteLoader
+		doins -r "${WORKDIR}"/*
+		local TargetLine
+		TargetLine=$(awk "/main/{print NR}" /opt/QQ/resources/app/package.json || die)
+		sed -i "${TargetLine}s/.\/app_launcher\/index.js/LiteLoader/g" "${D}"/opt/QQ/resources/app/package.json || die
+	fi
 }
 
 pkg_postinst() {
