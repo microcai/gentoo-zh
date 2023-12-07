@@ -8,7 +8,4 @@
 	<upstream>
 		<remote-id type="github">fcitx/libime</remote-id>
 	</upstream>
-	<use>
-		<flag name="coverage">Build the project with gcov support</flag>
-	</use>
 </pkgmetadata>
