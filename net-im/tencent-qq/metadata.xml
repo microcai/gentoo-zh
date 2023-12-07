@@ -20,5 +20,6 @@ pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
         <flag name="appindicator">Build in support for
         notifications using the libindicate or libappindicator
         plugin</flag>
+        <flag name="liteloader">Add liteloader support</flag>
     </use>
 </pkgmetadata>
