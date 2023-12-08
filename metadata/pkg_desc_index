@@ -20,7 +20,7 @@ app-crypt/cfssl 1.6.4: Cloudflare's PKI and TLS toolkit
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-dicts/fcitx-pinyin-moegirl 20230714: Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 app-dicts/fcitx-pinyin-zhwiki 20230728: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
-app-editors/appflowy-bin 0.3.8 0.3.9: AppFlowy is an open-source alternative to Notion
+app-editors/appflowy-bin 0.3.9.1: AppFlowy is an open-source alternative to Notion
 app-editors/marktext-bin 0.17.1: A simple and elegant markdown editor, available for Linux, macOS and Windows.
 app-editors/typora 0.11.18 1.7.6: A truely minimal markdown editor.
 app-emulation/deepin-udis86 1.72-r4: Disassembler library for x86 (32-bit shared library)
@@ -244,7 +244,6 @@ net-proxy/daed 0.3.3_p1 9999: A Modern Dashboard For dae
 net-proxy/hysteria 2.2.2: A powerful, lightning fast and censorship resistant proxy.
 net-proxy/juicity 0.3.0: juicity is a quic-based proxy protocol.
 net-proxy/shadowsocks-rust 1.16.2 1.17.0: A Rust port of shadowsocks.
-net-proxy/shadowvpn 9999: A fast, safe VPN based on libsodium
 net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
 net-proxy/v2ray 5.10.1 5.11.0 5.12.1: A platform for building proxies to bypass network restrictions.
 net-proxy/v2ray-bin 4.45.0-r1 5.12.1: A platform for building proxies to bypass network restrictions
