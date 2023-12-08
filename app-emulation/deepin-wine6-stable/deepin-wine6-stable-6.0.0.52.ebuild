@@ -32,7 +32,7 @@ RDEPEND="${DEPEND}
 	media-libs/gst-plugins-base[abi_x86_32(-)]
 	media-libs/lcms:2[abi_x86_32(-)]
 	>=net-nds/openldap-2.4.7[abi_x86_32(-)]
-	>=media-sound/mpg123-1.13.7[abi_x86_32(-)]
+	>=media-libs/libmpg123-1.13.7[abi_x86_32(-)]
 	>=media-libs/openal-1.14[abi_x86_32(-)]
 	>=net-libs/libpcap-0.9.8[abi_x86_32(-)]
 	media-libs/libcanberra[pulseaudio,abi_x86_32(-)]

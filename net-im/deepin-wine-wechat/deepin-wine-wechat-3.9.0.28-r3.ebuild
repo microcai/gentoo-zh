@@ -31,7 +31,6 @@ RDEPEND="
 	media-libs/libpulse[abi_x86_32]
 	media-libs/openal[abi_x86_32]
 	media-plugins/alsa-plugins[abi_x86_32]
-	media-sound/mpg123[abi_x86_32]
 	>=net-nds/openldap-2.4.0[abi_x86_32]
 	x11-apps/xwininfo
 	wqy-microhei? ( media-fonts/wqy-microhei )
