@@ -900,12 +900,26 @@ use_latest_release = true
 prefix = "v"
 github_account = "Puqns67"
 
-["net-proxy/clash-meta"]
+["net-proxy/mihomo"]
 source = "github"
-github = "MetaCubeX/Clash.Meta"
+github = "MetaCubeX/mihomo"
 use_latest_release = true
 prefix = "v"
 github_account = ["st0nie", "peeweep"]
+
+["net-proxy/clash-rs"]
+source = "github"
+github = "Watfaq/clash-rs"
+use_latest_release = true
+prefix = "v"
+github_account = "liuyujielol"
+
+["net-proxy/clash-nyanpasu"]
+source = "github"
+github = "keiko233/clash-nyanpasu"
+use_latest_release = true
+prefix = "v"
+github_account = "liuyujielol"
 
 ["net-proxy/dae"]
 source = "github"
