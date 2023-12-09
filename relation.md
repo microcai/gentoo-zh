@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-12-08 21:48:07 CST)
+(The last generation time: 2023-12-09 17:22:11 CST)
 
 ### Packages
 
@@ -457,7 +457,7 @@
  net-misc/bbdown-bin                        | 1.5.9                                     |        | https://github.com/nilaoda/BBDown                                                       | The terminal utility for Baidu Network Disk (Golang Version).
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/biliup-app                        | 0.4.1-r2                                  |        | https://github.com/ForgQi/biliup-app                                                    | A Tool for Upload video to bilibili
-   dev-util/tauri-cli                       | 1.5.6                                     | BD     | https://tauri.app                                                                       | Command line interface for building Tauri apps
+   dev-util/tauri-cli                       | 1.5.7                                     | BD     | https://tauri.app                                                                       | Command line interface for building Tauri apps
                                             | 2.0.0_alpha17                             |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/biliup-app-bin                    | 0.4.1                                     |        | https://github.com/ForgQi/biliup-app                                                    | A Tool for Upload video to bilibili
