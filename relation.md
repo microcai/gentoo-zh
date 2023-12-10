@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-12-09 17:22:11 CST)
+(The last generation time: 2023-12-10 17:52:21 CST)
 
 ### Packages
 
@@ -196,8 +196,6 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-java/oraclejdk-bin                     | 8.391                                     |        | https://www.oracle.com/java                                                             | Oracle's Java SE Development Kit
                                             | 21.0.1                                    |        |                                                                                         |
---------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-lang/quickjs                           | 2021.03.27                                |        | https://bellard.org/quickjs/                                                            | Small embeddable Javascript engine
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/libdwarf                          | 20140208                                  |        | https://github.com/Distrotech/libdwarf                                                  | Library to deal with DWARF Debugging Information Format
                                             | 20150507                                  |        |                                                                                         |
@@ -457,8 +455,6 @@
  net-misc/bbdown-bin                        | 1.5.9                                     |        | https://github.com/nilaoda/BBDown                                                       | The terminal utility for Baidu Network Disk (Golang Version).
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/biliup-app                        | 0.4.1-r2                                  |        | https://github.com/ForgQi/biliup-app                                                    | A Tool for Upload video to bilibili
-   dev-util/tauri-cli                       | 1.5.7                                     | BD     | https://tauri.app                                                                       | Command line interface for building Tauri apps
-                                            | 2.0.0_alpha17                             |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/biliup-app-bin                    | 0.4.1                                     |        | https://github.com/ForgQi/biliup-app                                                    | A Tool for Upload video to bilibili
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -498,16 +494,21 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/cgproxy                          | 0.20-r1                                   |        | https://github.com/springzfx/cgproxy                                                    | Transparent Proxy with cgroup v2
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/clash-meta                       | 1.16.0                                    |        | https://github.com/MetaCubeX/Clash.Meta                                                 | Another Clash Kernel.
-   acct-group/clash-meta                    | 0                                         |  D, RD |                                                                                         | Another Clash Kernel.
-   acct-user/clash-meta                     | 0                                         |  D, RD |                                                                                         | Another Clash Kernel.
+ net-proxy/clash-nyanpasu                   | 1.4.1                                     |        | https://github.com/keiko233/clash-nyanpasu/                                             | Clash GUI based on tauri
+   dev-lang/quickjs                         | 2021.03.27                                | BD     | https://bellard.org/quickjs/                                                            | Small embeddable Javascript engine
+   dev-util/tauri-cli                       | 1.5.7                                     | BD     | https://tauri.app                                                                       | Command line interface for building Tauri apps
+                                            | 2.0.0_alpha17                             |        |                                                                                         |
+   net-proxy/clash-rs                       | 0.1.10                                    | RD     | https://watfaq.gitbook.io/clashrs-user-manual/                                          | Custom protocol, rule based network proxy
+   net-proxy/mihomo                         | 1.17.0                                    | RD     | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
+     acct-group/mihomo                      | 0-r1                                      |  D, RD |                                                                                         | Another Clash Kernel, formerly Clash.Meta
+     acct-user/mihomo                       | 0-r1                                      |  D, RD |                                                                                         | Another Clash Kernel, formerly Clash.Meta
+   sys-apps/pnpm                            | 8.6.2                                     | BD     | https://pnpm.io                                                                         | Fast, disk space efficient package manager
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/dae                              | 0.3.0                                     |        | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/daed                             | 0.3.3_p1                                  |        | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
                                             | 9999                                      |        |                                                                                         |
-   sys-apps/pnpm                            | 8.6.2                                     | BD     | https://pnpm.io                                                                         | Fast, disk space efficient package manager
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/hysteria                         | 2.2.2                                     |        | https://github.com/apernet/hysteria                                                     | A powerful, lightning fast and censorship resistant proxy.
    acct-group/hysteria                      | 0                                         |  D, RD |                                                                                         | A powerful, lightning fast and censorship resistant proxy.
