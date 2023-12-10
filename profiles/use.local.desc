@@ -213,12 +213,14 @@ net-p2p/n2n:pcap - Use libpcap support
 net-p2p/n2n:upnp - Use miniupnpc and libnatpmp support
 net-p2p/n2n:zstd - Use zstd support
 net-p2p/qbittorrent-enhanced:webui - Enable the Web UI
-net-proxy/clash-meta:gvisor - enable TUN stack support for gvisor
-net-proxy/clash-meta:lwip - enable TUN stack support for lwip
+net-proxy/clash-nyanpasu:clash-rs - Install net-proxy/clash-rs as clash backend
+net-proxy/clash-nyanpasu:mihomo - Install net-proxy/mihomo as clash backend
+net-proxy/clash-rs:lto - Enable Link Time Optimization
 net-proxy/daed:webui - Build and install daed instead of dae-wing
 net-proxy/hysteria:goamd64 - detect golang arch level on amd64 cpus by CPU_FLAGS_X86
 net-proxy/juicity:client - install juicity-client
 net-proxy/juicity:server - install juicity-server
+net-proxy/mihomo:gvisor - enable TUN stack support for gvisor
 net-proxy/shadowsocks-rust:redir - Enable redir protocol for sslocal (transparent proxy)
 net-proxy/shadowsocks-rust:tun - Enable Tun interface protocol for sslocal
 net-proxy/v2rayA:xray - To be able to use net-proxy/Xray. Disable the v2ray useflag to use xray as default
