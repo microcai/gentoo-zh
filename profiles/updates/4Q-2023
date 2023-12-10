@@ -1,2 +1,4 @@
 move media-fonts/lxgw-neozhisong media-fonts/lxgw-neo-zhisong
+move acct-group/clash-meta acct-group/mihomo
+
 move net-proxy/clash-meta net-proxy/mihomo
