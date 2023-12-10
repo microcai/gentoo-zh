@@ -4,7 +4,7 @@
 EAPI=8
 inherit go-module systemd
 
-DESCRIPTION="Another Mihomo Kernel"
+DESCRIPTION="Another Clash Kernel, formerly Clash.Meta"
 HOMEPAGE="
 	https://wiki.metacubex.one/
 	https://github.com/MetaCubeX/mihomo/
@@ -17,8 +17,8 @@ SRC_URI+="
 "
 
 DEPEND="
-	acct-user/clash-meta
-	acct-group/clash-meta
+	acct-group/mihomo
+	acct-user/mihomo
 "
 RDEPEND="${DEPEND}"
 BDEPEND=">=dev-lang/go-1.20.4"
@@ -45,7 +45,6 @@ src_compile() {
 src_install() {
 	dobin bin/mihomo
 	dosym -r "/usr/bin/mihomo" "/usr/bin/clash-meta"
-	keepdir "/etc/Clash-Meta"
-	systemd_dounit "${FILESDIR}/Clash-Meta.service"
-	newinitd "${FILESDIR}"/clash-meta.initd clash-meta
+	systemd_dounit "${FILESDIR}/mihomo.service"
+	newinitd "${FILESDIR}"/mihomo.initd mihomo
 }
