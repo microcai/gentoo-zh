@@ -1,0 +1,37 @@
+disable tauri bundle and updater
+
+--- a/backend/tauri/tauri.conf.json
++++ b/backend/tauri/tauri.conf.json
+@@ -15,7 +15,7 @@
+       "iconAsTemplate": true
+     },
+     "bundle": {
+-      "active": true,
++      "active": false,
+       "targets": "all",
+       "identifier": "moe.elaina.clash.nyanpasu",
+       "icon": [
+@@ -55,7 +55,7 @@
+       }
+     },
+     "updater": {
+-      "active": true,
++      "active": false,
+       "endpoints": [
+         "https://mirror.ghproxy.com/https://github.com/keiko233/clash-nyanpasu/releases/download/updater/update-proxy.json",
+         "https://ghproxy.com/https://github.com/keiko233/clash-nyanpasu/releases/download/updater/update-proxy.json",
+--- a/package.json
++++ b/package.json
+@@ -26,8 +26,7 @@
+     "updater": "tsx scripts/updater.ts",
+     "publish": "tsx scripts/publish.ts",
+     "portable": "tsx scripts/portable.ts",
+-    "upload:osx-aarch64": "tsx scripts/osx-aarch64-upload.ts",
+-    "prepare": "husky install"
++    "upload:osx-aarch64": "tsx scripts/osx-aarch64-upload.ts"
+   },
+   "prettier": {
+     "endOfLine": "lf",
+-- 
+2.43.0
+

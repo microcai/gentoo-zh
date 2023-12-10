@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>ston</name>
+		<email>ston.jia@qq.com</email>
+	</maintainer>
+	<use>
+		<flag name="gvisor">enable TUN stack support for gvisor</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">MetaCubeX/mihomo</remote-id>
+	</upstream>
+</pkgmetadata>

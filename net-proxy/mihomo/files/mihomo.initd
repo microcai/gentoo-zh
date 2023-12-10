@@ -1,0 +1,24 @@
+#!/sbin/openrc-run
+# Copyright 2023 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+pidfile="/run/mihomo/mihomo.pid"
+command="/usr/bin/mihomo"
+command_args="-d ${MIHOMO_CONF_DIR:-/etc/mihomo}"
+command_background="yes"
+command_user="${MIHOMO_USER:-mihomo}:${MIHOMO_GROUP:-mihomo}"
+
+capabilities="^cap_net_bind_service,^cap_net_admin,^cap_net_raw"
+rc_ulimit="${MIHOMO_ULIMIT:--u 500 -n 1048576}"
+output_log="/var/log/mihomo.log"
+error_log="/var/log/mihomo.log"
+
+depend() {
+    need net
+    after local
+}
+
+start_pre() {
+    checkpath -d -m 0755 -o "$command_user" /run/mihomo
+    checkpath -f -m 0644 -o "$command_user" "$output_log"
+}
