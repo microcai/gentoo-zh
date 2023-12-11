@@ -59,17 +59,6 @@ github_account = "CHN-beta"
 
 #["app-i18n/dvp"]
 
-#["app-i18n/fcitx"]
-#source = "github"
-#github = "fcitx/fcitx"
-#use_latest_tag = true
-
-["app-i18n/fcitx"]
-source = "github"
-github = "fcitx/fcitx5"
-use_latest_tag = true
-github_account = "liangyongxiang"
-
 ["app-i18n/fcitx-chewing"]
 source = "github"
 github = "fcitx/fcitx5-chewing"
@@ -79,18 +68,6 @@ github_account = "liangyongxiang"
 ["app-i18n/fcitx-chinese-addons"]
 source = "github"
 github = "fcitx/fcitx5-chinese-addons"
-use_latest_tag = true
-github_account = "liangyongxiang"
-
-["app-i18n/fcitx-configtool"]
-source = "github"
-github = "fcitx/fcitx5-configtool"
-use_latest_tag = true
-github_account = "liangyongxiang"
-
-["app-i18n/fcitx-gtk"]
-source = "github"
-github = "fcitx/fcitx5-gtk"
 use_latest_tag = true
 github_account = "liangyongxiang"
 
@@ -108,12 +85,6 @@ github_account = "liuyujielol"
 # virtual package
 #["app-i18n/fcitx-meta"]
 
-["app-i18n/fcitx-qt"]
-source = "github"
-github = "fcitx/fcitx5-qt"
-use_latest_tag = true
-github_account = "liangyongxiang"
-
 ["app-i18n/fcitx-rime"]
 source = "github"
 github = "fcitx/fcitx5-rime"
@@ -126,29 +97,11 @@ github = "fcitx/fcitx5-skk"
 use_latest_tag = true
 github_account = "liuyujielol"
 
-["app-i18n/fcitx-table-extra"]
-source = "github"
-github = "fcitx/fcitx5-table-extra"
-use_latest_tag = true
-github_account = "liangyongxiang"
-
-["app-i18n/fcitx-table-other"]
-source = "github"
-github = "fcitx/fcitx5-table-other"
-use_latest_tag = true
-github_account = "liangyongxiang"
-
 # TODO: need run js
 #["app-i18n/ibus-rime"]
 
 # TODO
 #["app-i18n/libgooglepinyin"]
-
-["app-i18n/libime"]
-source = "github"
-github = "fcitx/libime"
-use_latest_tag = true
-github_account = "liangyongxiang"
 
 ["app-i18n/libime-jyutping"]
 source = "github"
