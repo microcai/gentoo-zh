@@ -1132,11 +1132,6 @@ use_latest_release = true
 
 #["x11-drivers/xf86-input-synaptics"]
 
-["x11-libs/xcb-imdkit"]
-source = "github"
-github = "fcitx/xcb-imdkit"
-use_latest_tag = true
-
 ["x11-misc/9menu"]
 source = "debianpkg"
 debianpkg = "9menu"
