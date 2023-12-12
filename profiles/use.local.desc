@@ -17,15 +17,9 @@ app-i18n/fcitx:autostart - Enable XDG-compatible autostart of Fcitx
 app-i18n/fcitx:coverage - Build the project with gcov support
 app-i18n/fcitx:emoji - Enable emoji loading for CLDR
 app-i18n/fcitx:enchant - Enable Enchant backend (using app-text/enchant) for spelling hinting
-app-i18n/fcitx:gtk2 - Install input method module for GTK+ 2
-app-i18n/fcitx:gtk3 - Install input method module for GTK+ 3
 app-i18n/fcitx:keyboard - Enable key event translation with XKB and build keyboard engine
-app-i18n/fcitx:opencc - Enable OpenCC engine (using app-i18n/opencc) for converter between Simplified Chinese and Traditional Chinese
-app-i18n/fcitx:pango - Enable support for x11-libs/pango
 app-i18n/fcitx:presage - Enable presage for word predication (not stable)
 app-i18n/fcitx:server - Build a fcitx as server, disable this option if you want to use fcitx as an embedded library
-app-i18n/fcitx:table - Install table input methods for Simplified Chinese
-app-i18n/fcitx:xkb - Enable support for XKB (required for fcitx-xkb, fcitx-xkbdbus, part of fcitx-keyboard)
 app-i18n/fcitx-anthy:coverage - Build the project with gcov support (Need USE="test")
 app-i18n/fcitx-chinese-addons:cloudpinyin - Build cloud pinyin addon
 app-i18n/fcitx-chinese-addons:coverage - Build the project with gcov support (Need USE=test)
@@ -243,7 +237,6 @@ virtual/linux-sources:firmware - Install linux kernel firmware
 www-servers/woof:bzip2 - bzip2 decompression of the archive from woof
 www-servers/woof:gzip - gzip decompression of the archive from woof
 www-servers/woof:unzip - ZIP decompression of the archive from woof
-x11-libs/xcb-imdkit:system-uthash - Use the system-wide dev-libs/uthash instead of bundled.
 x11-misc/ly:openrc - install provided OpenRC service
 x11-misc/ly:runit - install provided runit service
 x11-misc/ly:systemd - install provided systemd service

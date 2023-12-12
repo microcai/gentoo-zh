@@ -31,18 +31,18 @@ app-emulation/deepin-wine6-stable 6.0.0.19-r1 6.0.0.52: Deepin wine6 stable
 app-emulation/looking-glass 0_beta6: A low latency KVMFR application for guests with VGA PCI Passthrough
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
-app-i18n/fcitx 4.2.9.8 5.1.5 9999: Fcitx5 Next generation of fcitx
+app-i18n/fcitx 9999: Fcitx5 Next generation of fcitx
 app-i18n/fcitx-anthy 5.1.2: Japanese Anthy input methods for Fcitx5
 app-i18n/fcitx-bamboo 1.0.4: Typing Vietnamese by Bamboo core engine for Fcitx5
 app-i18n/fcitx-chewing 5.1.1: Chewing Wrapper for Fcitx.
 app-i18n/fcitx-chinese-addons 5.1.2-r2 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
-app-i18n/fcitx-configtool 5.1.2 9999: Configuration module for Fcitx
-app-i18n/fcitx-gtk 5.1.0 9999: Gtk im module for fcitx5 and glib based dbus client library
+app-i18n/fcitx-configtool 9999: Configuration module for Fcitx
+app-i18n/fcitx-gtk 9999: Gtk im module for fcitx5 and glib based dbus client library
 app-i18n/fcitx-hangul 5.1.1 9999: Korean Hangul input method for Fcitx
 app-i18n/fcitx-lua 5.0.11 9999: Lua support for fcitx
 app-i18n/fcitx-m17n 5.1.0 9999: m17n-provided input methods for Fcitx5
 app-i18n/fcitx-meta 5.0.12-r2: Merge this to pull in Fcitx packages
-app-i18n/fcitx-qt 5.1.3-r1 9999: Qt library and IM module for fcitx5
+app-i18n/fcitx-qt 9999: Qt library and IM module for fcitx5
 app-i18n/fcitx-rime 5.1.3 9999: Rime Support for Fcitx5
 app-i18n/fcitx-skk 5.1.0 9999: Japanese SKK input engine for Fcitx5
 app-i18n/fcitx-table-extra 5.1.0: Provides extra table for Fcitx, including Boshiamy, Zhengma, Cangjie, and Quick
@@ -172,7 +172,6 @@ media-gfx/zw3d 2022.0.3.1-r3 2023.0.3.1: CAD/CAM software for 3D design and proc
 media-gfx/zwcad 2023.23.0.3.4-r2: CAD software for 2D drawing, reviewing and printing work
 media-libs/libjpeg8 2.1.4: MMX, SSE, and SSE2 SIMD accelerated JPEG library
 media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simplifies the drawing of beautiful curves.
-media-libs/libva-nvidia-driver 0.0.9 9999: NVDEC Backend for Video Acceleration (VA) API
 media-libs/openslide 20230904: C library with simple interface to read virtual slides
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.11 0.5.14 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
@@ -194,7 +193,7 @@ media-video/bilibili 1.11.4: Based on the Bilibli offcial client to linux versio
 media-video/mpv-handler 0.3.5: A protocol handler for mpv, written by Rust.
 media-video/tenvideo 1.0.10: Tencent videos
 net-analyzer/besttrace-bin 1.3.2-r1: 附带链路可视化的 traceroute 工具
-net-analyzer/nali 0.8.0: An offline tool for querying IP geographic information and CDN provider.
+net-analyzer/nali 0.8.1: An offline tool for querying IP geographic information and CDN provider.
 net-analyzer/realitlscanner 0.1.2: A TLS server scanner for Reality
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
 net-dns/dnslookup 1.10.0: Simple command line utility to make DNS lookups to the specified server
@@ -295,7 +294,6 @@ www-servers/darkhttpd 1.14: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
 x11-libs/glbinding 3.3.0: A C++ binding for the OpenGL API
-x11-libs/xcb-imdkit 1.0.5: Input method development support for xcb
 x11-misc/9menu 1.10: Create X menus from the shell
 x11-misc/extramaus 3: workaround to always show mouse cursor under x11
 x11-misc/flatpak-xdg-utils 1.0.5: Utilities for containerized apps to launch programs outside the container
