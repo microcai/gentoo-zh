@@ -11,5 +11,5 @@ LICENSE=Apache-2.0
 RDEPEND=dev-libs/libgpiod dev-libs/libusb sys-libs/libcap sys-libs/zlib dev-embedded/libftdi cmsisdap? ( dev-libs/hidapi )
 SLOT=0
 SRC_URI=https://github.com/trabucayre/openFPGALoader/archive/refs/tags/v0.11.0.tar.gz -> openfpgaloader-0.11.0.tar.gz
-_eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	b97a0a7215b2f463a485ff0599ab30bb	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271
+_eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	c816c598969cbaf38cc02d2496ad2e98	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271
 _md5_=1a33c90d09c7117188dbe11b257f38c7
