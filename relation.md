@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-12-13 00:38:52 CST)
+(The last generation time: 2023-12-14 08:32:53 CST)
 
 ### Packages
 
@@ -77,8 +77,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/man-pages-zh_CN                   | 9999                                      |        | https://github.com/man-pages-zh/manpages-zh                                             | A somewhat comprehensive collection of Chinese Linux man pages
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/mozc                              | 2.26.4220_p20201212102434_p20201219202429 |        | https://github.com/google/mozc                                                          | Mozc - Japanese input method editor
-                                            | 2.26.4632_p20220213064411_p20220214004422 |        |                                                                                         |
+ app-i18n/mozc                              | 2.26.4632_p20220213064411_p20220214004422 |        | https://github.com/google/mozc                                                          | Mozc - Japanese input method editor
                                             | 2.28.5029.102                             |        |                                                                                         |
                                             | 2.28.5029.102-r1                          |        |                                                                                         |
    app-i18n/fcitx                           | 9999                                      |  D, RD | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
