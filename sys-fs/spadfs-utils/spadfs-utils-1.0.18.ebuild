@@ -10,6 +10,7 @@ HOMEPAGE="http://www.jikos.cz/~mikulas/spadfs/"
 SRC_URI="http://www.jikos.cz/~mikulas/spadfs/download/spadfs-${PV}.tar.gz"
 
 LICENSE="all-rights-reserved"
+RESTRICT="bindist mirror"
 SLOT="0"
 KEYWORDS="~amd64"
 S="${WORKDIR}/spadfs-${PV}"
