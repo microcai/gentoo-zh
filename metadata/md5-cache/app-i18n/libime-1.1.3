@@ -1,4 +1,4 @@
-BDEPEND=kde-frameworks/extra-cmake-modules:0 virtual/pkgconfig doc? ( app-doc/doxygen media-gfx/graphviz[svg] ) >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+BDEPEND=kde-frameworks/extra-cmake-modules:0 virtual/pkgconfig doc? ( app-doc/doxygen media-gfx/graphviz[svg] ) app-alternatives/ninja >=dev-util/cmake-3.20.5
 DEFINED_PHASES=compile configure install prepare test
 DEPEND=>=app-i18n/fcitx-5.1.5:5 app-arch/zstd:= dev-libs/boost:=
 DESCRIPTION=Fcitx5 Next generation of fcitx
@@ -12,5 +12,5 @@ RDEPEND=>=app-i18n/fcitx-5.1.5:5 app-arch/zstd:= dev-libs/boost:=
 RESTRICT=!test? ( test )
 SLOT=5
 SRC_URI=https://download.fcitx-im.org/fcitx5/libime/libime-1.1.3_dict.tar.xz
-_eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	c816c598969cbaf38cc02d2496ad2e98	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271
+_eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	c816c598969cbaf38cc02d2496ad2e98	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	c8951c1dfcc1d43e3f967f61fd0ec59c	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271
 _md5_=8b5a272aae8f8c8d9aab6f121e7f8e87

@@ -1,4 +1,4 @@
-BDEPEND=amd64? ( || ( dev-lang/nasm dev-lang/yasm ) ) x86? ( || ( dev-lang/nasm dev-lang/yasm ) ) amd64-linux? ( || ( dev-lang/nasm dev-lang/yasm ) ) x86-linux? ( || ( dev-lang/nasm dev-lang/yasm ) ) x64-macos? ( || ( dev-lang/nasm dev-lang/yasm ) ) x64-cygwin? ( || ( dev-lang/nasm dev-lang/yasm ) ) >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+BDEPEND=amd64? ( || ( dev-lang/nasm dev-lang/yasm ) ) x86? ( || ( dev-lang/nasm dev-lang/yasm ) ) amd64-linux? ( || ( dev-lang/nasm dev-lang/yasm ) ) x86-linux? ( || ( dev-lang/nasm dev-lang/yasm ) ) x64-macos? ( || ( dev-lang/nasm dev-lang/yasm ) ) x64-cygwin? ( || ( dev-lang/nasm dev-lang/yasm ) ) app-alternatives/ninja >=dev-util/cmake-3.20.5
 DEFINED_PHASES=compile configure install prepare test
 DEPEND=!media-libs/jpeg:0 !media-libs/jpeg:62
 DESCRIPTION=MMX, SSE, and SSE2 SIMD accelerated JPEG library
@@ -11,5 +11,5 @@ LICENSE=BSD IJG ZLIB
 RDEPEND=!media-libs/jpeg:0 !media-libs/jpeg:62
 SLOT=0/0.2
 SRC_URI=mirror://sourceforge/libjpeg-turbo/libjpeg-turbo-2.1.4.tar.gz mirror://gentoo/libjpeg8_8d-2.debian.tar.gz
-_eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	c816c598969cbaf38cc02d2496ad2e98	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271
+_eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	c816c598969cbaf38cc02d2496ad2e98	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	c8951c1dfcc1d43e3f967f61fd0ec59c	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271
 _md5_=dc0267c3fbb05c7cbc86b6579f361ad5

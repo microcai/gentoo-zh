@@ -1,4 +1,4 @@
-BDEPEND=>=dev-util/meson-1.2.1 >=dev-util/ninja-1.8.2 dev-util/meson-format-array >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=>=dev-util/meson-1.2.1 app-alternatives/ninja dev-util/meson-format-array >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install test unpack
 DEPEND=curl? ( net-misc/curl ) openssl? ( dev-libs/openssl:0/3 ) zstd? ( app-arch/zstd )
 DESCRIPTION=A format designed for highly efficient deltas while maintaining good compression
@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=curl? ( net-misc/curl ) openssl? ( dev-libs/openssl:0/3 ) zstd? ( app-arch/zstd )
 RESTRICT=!test? ( test )
 SLOT=0
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	474cb53a7d1b62721a91809a1d702661	meson	576e6bbef90e9753368f8b4ad0bd5383	git-r3	5133e393e8717a3a093660f990801dc1
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	c8951c1dfcc1d43e3f967f61fd0ec59c	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	474cb53a7d1b62721a91809a1d702661	meson	576e6bbef90e9753368f8b4ad0bd5383	git-r3	5133e393e8717a3a093660f990801dc1
 _md5_=85c4905c42e06edd4b6322c69205088e

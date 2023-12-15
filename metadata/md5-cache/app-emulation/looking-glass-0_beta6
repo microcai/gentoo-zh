@@ -1,4 +1,4 @@
-BDEPEND=>=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+BDEPEND=app-alternatives/ninja >=dev-util/cmake-3.20.5
 DEFINED_PHASES=compile configure install prepare setup test
 DEPEND=gui-libs/egl-wayland media-libs/fontconfig media-libs/libsamplerate dev-libs/nettle[gmp] app-emulation/spice-protocol X? ( x11-libs/libX11 x11-libs/libXfixes x11-libs/libXi x11-libs/libXScrnSaver x11-libs/libXpresent ) wayland? ( dev-libs/wayland x11-libs/libxkbcommon gnome? ( gui-libs/libdecor ) ) pipewire? ( media-video/pipewire ) pulseaudio? ( media-sound/pulseaudio ) obs? ( media-video/obs-studio )
 DESCRIPTION=A low latency KVMFR application for guests with VGA PCI Passthrough
@@ -12,5 +12,5 @@ RDEPEND=gui-libs/egl-wayland media-libs/fontconfig media-libs/libsamplerate dev-
 REQUIRED_USE=|| ( X wayland ) || ( pipewire pulseaudio )
 SLOT=0
 SRC_URI=https://looking-glass.io/artifact/B6/source -> looking-glass-0_beta6.tar.gz
-_eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	c816c598969cbaf38cc02d2496ad2e98	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f	linux-info	c4f1201b96a8a2c1f3b86cc8b2c71c91
+_eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	c816c598969cbaf38cc02d2496ad2e98	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	c8951c1dfcc1d43e3f967f61fd0ec59c	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	0f2e0c197fad0312f3c4765c9cf36271	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f	linux-info	c4f1201b96a8a2c1f3b86cc8b2c71c91
 _md5_=3b2b3a309fdf9d695ed1a284db01a113
