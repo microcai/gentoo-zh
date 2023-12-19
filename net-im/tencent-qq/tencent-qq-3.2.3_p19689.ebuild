@@ -11,7 +11,7 @@ HOMEPAGE="https://im.qq.com/linuxqq/index.shtml"
 LICENSE="Tencent"
 RESTRICT="strip"
 
-_I="06d558c3"
+_I="5edc39d1"
 
 _LiteLoader_PV="0.5.10"
 
