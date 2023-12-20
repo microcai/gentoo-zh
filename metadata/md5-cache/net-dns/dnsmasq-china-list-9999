@@ -9,5 +9,5 @@ LICENSE=WTFPL-2
 PROPERTIES=live
 RDEPEND=dnsmasq? ( net-dns/dnsmasq ) smartdns? ( net-dns/smartdns ) dnscrypt-proxy? ( net-dns/dnscrypt-proxy )
 SLOT=0
-_eclasses_=git-r3	5133e393e8717a3a093660f990801dc1
+_eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
 _md5_=cfee3683f8899565884cfdb1dd49c074
