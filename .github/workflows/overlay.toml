@@ -183,13 +183,6 @@ github = "holman/spark"
 use_latest_tag = true
 prefix = "v"
 
-["app-mobilephone/scrcpy"]
-source = "github"
-github = "Genymobile/scrcpy"
-use_latest_release = true
-prefix = "v"
-github_account = "tlze"
-
 ["app-misc/yq-bin"]
 source = "github"
 github = "mikefarah/yq"
