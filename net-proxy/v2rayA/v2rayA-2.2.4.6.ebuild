@@ -45,7 +45,8 @@ src_unpack() {
 src_compile() {
 	mv -v "${WORKDIR}/web" "${S}/service/server/router/web" || die
 
-	for file in $(find "${S}/service/server/router/web" |grep -v png |grep -v index.html|grep -v .gz); do
+	for file in $(find "${S}/service/server/router/web" |grep -v png |grep -v index.html|grep -v .gz)
+	do
 		if [ ! -d $file ];then
 			einfo "compress $file"
 			gzip -9 $file
@@ -72,7 +73,7 @@ src_install() {
 	systemd_douserunit "${S}"/install/universal/v2raya-lite.service
 
 	#thanks to @Universebenzene
-	newinitd "${FILESDIR}/${PN}.initd" v2raya
+	newinitd "${FILESDIR}/${PN}.initd-r1" v2raya
 	newinitd "${FILESDIR}/${PN}-user.initd" v2raya-user
 	newconfd "${FILESDIR}/${PN}.confd" v2raya
 	newconfd "${FILESDIR}/${PN}-user.confd" v2raya-user
