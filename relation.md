@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-12-22 12:07:49 CST)
+(The last generation time: 2023-12-22 13:47:08 CST)
 
 ### Packages
 
@@ -13,6 +13,7 @@
    sys-kernel/zenpower3                     | 0.2.0                                     |  D, RD | https://git.exozy.me/a/zenpower3                                                        | Linux kernel driver for reading sensors of AMD Zen family CPUs
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-arch/zchunk                            | 1.3.2                                     |        | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
+                                            | 1.4.0                                     |        |                                                                                         |
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-backup/btrfs-assistant                 | 1.8                                       |        | https://gitlab.com/btrfs-assistant/btrfs-assistant                                      | A GUI management tool to make managing a Btrfs filesystem easier.
