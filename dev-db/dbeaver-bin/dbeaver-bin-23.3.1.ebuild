@@ -6,8 +6,8 @@ inherit desktop wrapper xdg
 
 DESCRIPTION="Free universal database tool (community edition)."
 HOMEPAGE="https://dbeaver.io/"
-MY_PN="${PN%-bin*}-ce"
-SRC_URI="https://dbeaver.io/files/${PV}/${MY_PN}-${PV}-linux.gtk.x86_64-nojdk.tar.gz -> ${P}-amd64.tar.gz"
+MY_PN="${PN%-bin*}"
+SRC_URI="https://dbeaver.io/files/${PV}/${MY_PN}-ce-${PV}-linux.gtk.x86_64-nojdk.tar.gz -> ${P}-amd64.tar.gz"
 
 LICENSE="Apache-2.0 EPL-1.0 BSD"
 SLOT="0"
@@ -16,7 +16,6 @@ KEYWORDS="~amd64"
 RDEPEND="dev-java/openjdk-bin:17"
 DEPEND="${RDEPEND}"
 
-MY_PN="${PN%-bin*}"
 S="${WORKDIR}/${MY_PN}"
 
 src_prepare() {
