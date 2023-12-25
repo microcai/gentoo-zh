@@ -65,12 +65,6 @@ github = "fcitx/fcitx5-chewing"
 use_latest_tag = true
 github_account = "liangyongxiang"
 
-["app-i18n/fcitx-chinese-addons"]
-source = "github"
-github = "fcitx/fcitx5-chinese-addons"
-use_latest_tag = true
-github_account = "liangyongxiang"
-
 ["app-i18n/fcitx-hangul"]
 source = "github"
 github = "fcitx/fcitx5-hangul"
