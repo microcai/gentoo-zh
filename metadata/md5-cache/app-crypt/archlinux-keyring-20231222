@@ -1,0 +1,10 @@
+BDEPEND=app-crypt/sequoia-sq
+DEFINED_PHASES=compile install postinst
+DESCRIPTION=GnuPG keyring of Archlinux developer keys
+EAPI=8
+HOMEPAGE=https://gitlab.archlinux.org/archlinux/archlinux-keyring
+KEYWORDS=~amd64
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=https://gitlab.archlinux.org/archlinux/archlinux-keyring/-/archive/20231222/archlinux-keyring-20231222.tar.bz2
+_md5_=28ebcd644953660bad47728cca926e27
