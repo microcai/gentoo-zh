@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2023-12-26 11:25:54 CST)
+(The last generation time: 2023-12-27 01:37:31 CST)
 
 ### Packages
 
@@ -481,7 +481,7 @@
    dev-lang/quickjs                         | 2021.03.27                                | BD     | https://bellard.org/quickjs/                                                            | Small embeddable Javascript engine
    dev-util/tauri-cli                       | 1.5.7                                     | BD     | https://tauri.app                                                                       | Command line interface for building Tauri apps
                                             | 2.0.0_alpha17                             |        |                                                                                         |
-   net-proxy/clash-rs                       | 0.1.10                                    | RD     | https://watfaq.gitbook.io/clashrs-user-manual/                                          | Custom protocol, rule based network proxy
+   net-proxy/clash-rs                       | 0.1.11                                    | RD     | https://watfaq.gitbook.io/clashrs-user-manual/                                          | Custom protocol, rule based network proxy
    net-proxy/mihomo                         | 1.17.0                                    | RD     | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
      acct-group/mihomo                      | 0-r1                                      |  D, RD |                                                                                         | Another Clash Kernel, formerly Clash.Meta
      acct-user/mihomo                       | 0-r1                                      |  D, RD |                                                                                         | Another Clash Kernel, formerly Clash.Meta
