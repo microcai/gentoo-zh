@@ -131,14 +131,14 @@ opentabletdriver.configurations@0.6.3
 opentabletdriver.native@0.6.3
 opentabletdriver.plugin@0.6.3
 polysharp@1.10.0
-ppy.localisationanalyser@2023.712.0
+ppy.localisationanalyser@2023.1117.0
 ppy.managedbass@2022.1216.0
 ppy.managedbass.fx@2022.1216.0
 ppy.managedbass.mix@2022.1216.0
-ppy.osu.framework@2023.1111.0
-ppy.osu.framework.nativelibs@2023.1013.0-nativelibs
+ppy.osu.framework@2023.1219.0
+ppy.osu.framework.nativelibs@2023.1205.0-nativelibs
 ppy.osu.framework.sourcegeneration@2023.720.0
-ppy.osu.game.resources@2023.1114.0
+ppy.osu.game.resources@2023.1215.0
 ppy.osutk.ns20@1.0.211
 ppy.sdl2-cs@1.0.671-alpha
 ppy.veldrid@4.9.3-g91ce5a6cda
@@ -251,6 +251,7 @@ system.net.sockets@4.3.0
 system.net.webheadercollection@4.3.0
 system.net.websockets@4.3.0
 system.net.websockets.client@4.3.2
+system.numerics.tensors@8.0.0
 system.objectmodel@4.0.12
 system.objectmodel@4.3.0
 system.private.uri@4.3.0
@@ -381,7 +382,7 @@ src_configure() {
 	dotnet-pkg-base_info
 	dotnet-pkg_foreach-project dotnet-pkg-base_restore
 	# skip **dotnet-pkg-base_foreach-solution** here
-	# avoid requiring android workloads
+	# avoid requiring non-linux workloads
 }
 
 src_compile() {
