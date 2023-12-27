@@ -56,19 +56,22 @@ pkg_pretend() {
 
 src_prepare() {
 	# Prevent conflicting with the user's flags
-	# https://devmanual.gentoo.org/ebuild-writing/common-mistakes/#-werror-compiler-flag-not-removed
+	sed -i -e 's/-O2//' "${S}/Makefile" || die 'Failed to remove -O2 via sed'
 	sed -i -e 's/-Werror//' "${S}/Makefile" || die 'Failed to remove -Werror via sed'
 
 	default
 }
 
 src_compile() {
+	#-flto makes llvm-strip complains
+	#llvm-strip: error: '*/control/bpf_bpfel.o': The file was not recognized as a valid object file
+	filter-lto
 	# for dae's ebpf target
 	# gentoo-zh#3720
 	filter-flags "-march=*" "-mtune=*"
 	append-cflags "-fno-stack-protector"
 
-	emake VERSION="${PV}" GOFLAGS="-buildvcs=false"
+	emake VERSION="${PV}" GOFLAGS="-buildvcs=false -w"
 }
 
 src_install() {
