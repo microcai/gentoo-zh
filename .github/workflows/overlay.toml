@@ -456,6 +456,12 @@ github = "archlinux/arch-install-scripts"
 use_latest_tag = true
 prefix = "v"
 
+["dev-util/tailspin"]
+source = "github"
+github = "bensadeh/tailspin"
+use_latest_release = true
+github_account = "liangyongxiang"
+
 # need run js
 #["dev-util/bom-utils"]
 
