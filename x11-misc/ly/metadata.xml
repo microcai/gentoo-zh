@@ -8,10 +8,5 @@
 		<email>OriPoin@outlook.com</email>
 		<name>Yachen Wang</name>
 	</maintainer>
-	<use>
-		<flag name="openrc">install provided OpenRC service</flag>
-		<flag name="runit">install provided runit service</flag>
-		<flag name="systemd">install provided systemd service</flag>
-	</use>
 </pkgmetadata>
 
