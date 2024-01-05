@@ -28,9 +28,7 @@ LICENSE="GPL-2"
 SLOT="0"
 RESTRICT="mirror test"
 
-DEPEND=""
-RDEPEND="${DEPEND}"
-BDEPEND=""
+BDEPEND="app-arch/unzip"
 
 CONFIG_CHECK="
 KALLSYMS
