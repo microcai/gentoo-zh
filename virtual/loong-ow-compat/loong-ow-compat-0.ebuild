@@ -5,13 +5,9 @@ EAPI=8
 
 DESCRIPTION="Virtual for LoongArch old-world compatibility"
 
-LICENSE=""
-
 SLOT="0"
 KEYWORDS="~loong"
-IUSE=""
 
-BDEPEND=""
 RDEPEND="|| (
 	app-emulation/liblol
 )"
