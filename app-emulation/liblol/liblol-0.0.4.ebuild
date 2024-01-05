@@ -47,7 +47,7 @@ src_install() {
 
 _render_cache_file() {
 	local lol_libdir="/opt/lol/lib/loongarch64-aosc-linux-gnuow"
-	sed -e "s#@libdir@#${EROOT%/}${lol_libdir}#g" \
+	sed -e "s#@libdir@#${EROOT}${lol_libdir}#g" \
 		"${D}"/usr/share/liblol/"$1" > "${D}${lol_libdir}/$2"
 }
 
@@ -78,7 +78,7 @@ pkg_preinst() {
 }
 
 pkg_prerm() {
-	local lol_libdir="${EROOT%/}/opt/lol/lib/loongarch64-aosc-linux-gnuow"
+	local lol_libdir="${EROOT}/opt/lol/lib/loongarch64-aosc-linux-gnuow"
 	rm "${lol_libdir}/gdk-pixbuf-2.0/2.10.0/loaders.cache"
 	rm "${lol_libdir}/gtk-2.0/2.10.0/immodules.cache"
 	rm "${lol_libdir}/gtk-3.0/3.0.0/immodules.cache"
