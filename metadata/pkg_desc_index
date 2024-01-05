@@ -28,6 +28,8 @@ app-emulation/deepin-wine-helper 5.1.27-r1 5.1.45: Deepin Wine Helper
 app-emulation/deepin-wine-plugin 5.1.13-r1: Deepin Wine plugin
 app-emulation/deepin-wine5 5.0.16-r1: Deepin wine5
 app-emulation/deepin-wine6-stable 6.0.0.19-r1 6.0.0.52: Deepin wine6 stable
+app-emulation/la-ow-syscall 0.1.0: Linux kernel module for compatibility with LoongArch's old-world ABI
+app-emulation/liblol 0.0.4: LoongArch old-world ABI compatibility layer from AOSC OS
 app-emulation/looking-glass 0_beta6: A low latency KVMFR application for guests with VGA PCI Passthrough
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
@@ -288,6 +290,7 @@ sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions 
 sys-power/tlpui 1.5.0_p6 1.6.0: A GTK user interface for TLP written in Python
 virtual/dist-kernel 6.6.1: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
+virtual/loong-ow-compat 0: Virtual for LoongArch old-world compatibility
 www-apps/chatgpt-desktop 1.1.0: ChatGPT Desktop Application
 www-client/brave 1.61.109: Web browser that blocks ads and trackers by default
 www-servers/darkhttpd 1.14: A small, static webserver

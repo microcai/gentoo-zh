@@ -1,0 +1,7 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for LoongArch old-world compatibility
+EAPI=8
+KEYWORDS=~loong
+RDEPEND=|| ( app-emulation/liblol )
+SLOT=0
+_md5_=2f5d253994428784276373bc0c042c38
