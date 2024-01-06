@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit unpacker
+inherit linux-info unpacker
 
 DESCRIPTION="LoongArch old-world ABI compatibility layer from AOSC OS"
 HOMEPAGE="https://github.com/shankerwangmiao/liblol"
@@ -26,6 +26,29 @@ IUSE="split-usr"
 PDEPEND="app-emulation/la-ow-syscall"
 
 S="${WORKDIR}"
+
+pkg_pretend() {
+	if ! use kernel_linux; then
+		return
+	fi
+
+	if ! linux_config_exists; then
+		ewarn "Unable to check your kernel for ISA extensions support"
+		ewarn "Most old-world programs require LSX and LASX to work, and"
+		ewarn "LBT is required for LATX. Please ensure this is the case"
+		ewarn "with your kernel before trying old-world programs."
+		return
+	fi
+
+	CONFIG_CHECK="~CPU_HAS_LASX ~CPU_HAS_LBT"
+	ERROR_CPU_HAS_LASX="You must enable LSX and LASX support"
+	ERROR_CPU_HAS_LASX+=" (CONFIG_CPU_HAS_{LSX,LASX}) in your kernel for most"
+	ERROR_CPU_HAS_LASX+=" old-world programs to work."
+	ERROR_CPU_HAS_LBT="You must enable LBT support (CONFIG_CPU_HAS_LBT) in"
+	ERROR_CPU_HAS_LBT+=" your kernel if you plan to use LATX."
+
+	check_extra_config
+}
 
 src_install() {
 	cp -r "${S}"/opt "${D}" || die
