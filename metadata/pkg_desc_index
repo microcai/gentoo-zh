@@ -29,7 +29,7 @@ app-emulation/deepin-wine-plugin 5.1.13-r1: Deepin Wine plugin
 app-emulation/deepin-wine5 5.0.16-r1: Deepin wine5
 app-emulation/deepin-wine6-stable 6.0.0.19-r1 6.0.0.52: Deepin wine6 stable
 app-emulation/la-ow-syscall 0.1.0: Linux kernel module for compatibility with LoongArch's old-world ABI
-app-emulation/liblol 0.0.4: LoongArch old-world ABI compatibility layer from AOSC OS
+app-emulation/liblol 0.0.4-r1: LoongArch old-world ABI compatibility layer from AOSC OS
 app-emulation/looking-glass 0_beta6: A low latency KVMFR application for guests with VGA PCI Passthrough
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
