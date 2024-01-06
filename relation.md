@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-01-06 11:47:15 CST)
+(The last generation time: 2024-01-06 16:46:45 CST)
 
 ### Packages
 
@@ -148,7 +148,7 @@
                                             | 11.1.0.11708                              |        |                                                                                         |
                                             | 11.1.0.11711-r1                           |        |                                                                                         |
    virtual/loong-ow-compat                  | 0                                         | RD     |                                                                                         | Virtual for LoongArch old-world compatibility
-     app-emulation/liblol                   | 0.0.4                                     | RD     | https://github.com/shankerwangmiao/liblol                                               | LoongArch old-world ABI compatibility layer from AOSC OS
+     app-emulation/liblol                   | 0.0.4-r1                                  | RD     | https://github.com/shankerwangmiao/liblol                                               | LoongArch old-world ABI compatibility layer from AOSC OS
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-pda/ipadcharge                         | 9999                                      |        | https://github.com/mkorenkov/ipad_charge                                                | Enables USB charging for Apple devices.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
