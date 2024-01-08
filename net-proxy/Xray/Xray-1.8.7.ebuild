@@ -16,15 +16,14 @@ KEYWORDS="~amd64 ~arm ~arm64 ~riscv ~x86"
 
 RESTRICT="mirror"
 
-RDEPEND="
-	app-alternatives/v2ray-geoip
+RDEPEND="app-alternatives/v2ray-geoip
 	app-alternatives/v2ray-geosite"
-BDEPEND=">=dev-lang/go-1.20"
+BDEPEND=">=dev-lang/go-1.21.4"
 
 S="${WORKDIR}/${PN}-core-${PV}"
 
 src_compile() {
-	ego build -v -work -x -o xray -trimpath -ldflags "-s -w -buildid=" ./main
+	ego build -o xray -trimpath -ldflags "-X 'github.com/XTLS/Xray-core/core.build=${PV}' -s -w -buildid=" ./main
 }
 
 src_install() {
