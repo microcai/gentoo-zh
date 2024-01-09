@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-01-09 12:41:24 CST)
+(The last generation time: 2024-01-09 14:13:10 CST)
 
 ### Packages
 
@@ -159,6 +159,8 @@
    net-dns/libidn11                         | 1.33                                      |  D, RD | https://www.gnu.org/software/libidn/                                                    | Internationalized Domain Names (IDN) implementation
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-text/groff-utf8                        | 0-r1                                      |        | http://www.haible.de/bruno/packages-groff-utf8.html                                     | GNU groff wrapper allowing UTF-8 input
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ app-text/master-pdf-editor                 | 5.9.81                                    |        | https://code-industry.net/free-pdf-editor/                                              | A complete solution for viewing and editing PDF files
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/clang_complete                     | 1.8                                       |        | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: use clang for completing C/C++ code.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
