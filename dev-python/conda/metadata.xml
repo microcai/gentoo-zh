@@ -10,5 +10,7 @@
 	</maintainer>
 	<use>
 		<flag name="user">use user's home directory as default pkgs and envs prefix</flag>
+		<flag name="pycosat">enable pycosat resolver</flag>
+		<flag name="mamba">enable libmamba resolver</flag>
 	</use>
 </pkgmetadata>
