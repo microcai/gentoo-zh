@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<upstream>
+		<remote-id type="github">openSUSE/libsolv</remote-id>
+	</upstream>
+	<maintainer type="person">
+		<email>OriPoin@outlook.com</email>
+	<name>Yachen Wang</name>
+	</maintainer>
+	<use>
+		<flag name="perl">Build the perl bindings</flag>
+		<flag name="python">Build the python bindings</flag>
+		<flag name="ruby">Build the ruby bindings</flag>
+		<flag name="tcl">Build the Tcl bindings</flag>
+		<flag name="rpm">Build with rpm database support</flag>
+		<flag name="pubkey">Build with pubkey support</flag>
+		<flag name="suse">Build with suse repository support</flag>
+		<flag name="comps">Build with fedora comps support</flag>
+		<flag name="helix">Build with helix repository support</flag>
+		<flag name="debian">Build with debian database/repository support</flag>
+		<flag name="mdk">Build with mandriva/mageia repository support</flag>
+		<flag name="arch">Build with archlinux repository support</flag>
+		<flag name="cudf">Build with cudf repository support</flag>
+		<flag name="conda">Build with conda dependency support</flag>
+		<flag name="appdata">Build with AppStream appdata support</flag>
+		<flag name="lzma">Build with lzma/xz compression support</flag>
+		<flag name="bzip2">Build with bzip2 compression support</flag>
+		<flag name="zstd">Build with zstd compression support</flag>
+		<flag name="zchunk">Build with zchunk compression support</flag>
+		<flag name="libxml2">Build with libxml2 instead of libexpat</flag>
+	</use>
+</pkgmetadata>
