@@ -20,6 +20,7 @@ BDEPEND="
 	test? (
 		dev-python/pretend[$PYTHON_USEDEP]
 		dev-python/freezegun[$PYTHON_USEDEP]
+		dev-python/pytest-asyncio[$PYTHON_USEDEP]
 	)
 "
 
