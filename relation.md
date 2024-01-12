@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-01-11 19:18:19 CST)
+(The last generation time: 2024-01-12 12:58:44 CST)
 
 ### Packages
 
@@ -212,7 +212,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/nvchecker                       | 2.13                                      |        | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
                                             | 2.13.1                                    |        |                                                                                         |
-   dev-python/structlog                     | 23.2.0                                    | RD     | http://www.structlog.org/en/stable/                                                     | Structured Logging for Python
+   dev-python/structlog                     | 24.1.0                                    | RD     | http://www.structlog.org/en/stable/                                                     | Structured Logging for Python
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pytube                          | 15.0.0                                    |        | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -245,7 +245,7 @@
                                             | 1.39.4                                    |        |                                                                                         |
                                             | 1.40.2                                    |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/tailspin                          | 2.2.0                                     |        | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
+ dev-util/tailspin                          | 2.4.0                                     |        | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/v2ray-geoip-generator             | 9999                                      |        | https://github.com/v2fly/geoip                                                          | GeoIP generator for V2Ray.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -286,8 +286,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/nerd-fonts                     | 3.1.1                                     |        | https://github.com/ryanoasis/nerd-fonts                                                 | Nerd Fonts is a project that patches developer targeted fonts with glyphs
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/sarasa-gothic                  | 0.42.6                                    |        | https://github.com/be5invis/Sarasa-Gothic                                               | A CJK programming font based on Iosevka and Source Han Sans. (TTC)
-                                            | 1.0.2                                     |        |                                                                                         |
+ media-fonts/sarasa-gothic                  | 1.0.3                                     |        | https://github.com/be5invis/Sarasa-Gothic                                               | A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/sarasa-term-sc-nerd            | 1.1.0                                     |        | https://github.com/laishulu/Sarasa-Term-SC-Nerd                                         | Sarasa Mono SC font patched with Nerd fonts
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -332,11 +331,10 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/feeluown                       | 3.8.15                                    |        | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
    dev-python/feeluown-bilibili             | 0.3                                       |  D     | https://github.com/feeluown/feeluown-bilibili                                           | bilibili support for feeluown
-   dev-python/fuo-kuwo                      | 0.1.6                                     |  D     | https://github.com/feeluown/feeluown-kuwo                                               | kuwo music support for feeluown
-                                            | 0.2.0                                     |        |                                                                                         |
+   dev-python/fuo-kuwo                      | 0.2.2                                     |  D     | https://github.com/feeluown/feeluown-kuwo                                               | kuwo music support for feeluown
    dev-python/fuo-netease                   | 0.9.8                                     |  D     | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
    dev-python/fuo-qqmusic                   | 0.5.1                                     |  D     | https://github.com/feeluown/feeluown-qqmusic                                            | qq music support for feeluown
-   dev-python/fuo-ytmusic                   | 0.3.1                                     |  D     | https://github.com/feeluown/feeluown-ytmusic                                            | youtube music support for feeluown
+   dev-python/fuo-ytmusic                   | 0.3.2                                     |  D     | https://github.com/feeluown/feeluown-ytmusic                                            | youtube music support for feeluown
    dev-python/janus                         | 1.0.0-r1                                  |  D, RD | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
    dev-python/qasync                        | 0.26.0                                    |  D, RD | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
                                             | 0.27.1                                    |        |                                                                                         |
@@ -479,7 +477,7 @@
    acct-group/n2n                           | 0                                         |  D, RD |                                                                                         | A Layer Two Peer-to-Peer VPN
    acct-user/n2n                            | 0                                         |  D, RD |                                                                                         | A Layer Two Peer-to-Peer VPN
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-p2p/qbittorrent-enhanced               | 4.6.0.10                                  |        | https://github.com/c0re100/qBittorrent-Enhanced-Edition                                 | qBittorrent Enhanced, based on qBittorrent
+ net-p2p/qbittorrent-enhanced               | 4.6.2.10                                  |        | https://github.com/c0re100/qBittorrent-Enhanced-Edition                                 | qBittorrent Enhanced, based on qBittorrent
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-print/epson-inkjet-printer_201207w     | 1.0.0                                     |        | http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX                              | Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -545,8 +543,7 @@
  sci-electronics/lceda                      | 6.5.37                                    |        | https://lceda.cn/                                                                       | LCEDA (binary package)
                                             | 6.5.39                                    |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- sci-electronics/lceda-pro                  | 2.1.40                                    |        | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
-                                            | 2.1.42                                    |        |                                                                                         |
+ sci-electronics/lceda-pro                  | 2.1.44.1                                  |        | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sci-electronics/openfpgaloader             | 0.11.0                                    |        | https://trabucayre.github.io/openFPGALoader                                             | Universal utility for programming FPGAs
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
