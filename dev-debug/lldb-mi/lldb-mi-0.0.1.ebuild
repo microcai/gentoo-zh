@@ -17,6 +17,6 @@ KEYWORDS="~amd64"
 
 DEPEND="
 	sys-devel/llvm:=
-	dev-util/lldb
+	dev-debug/lldb
 "
 RDEPEND="${DEPEND}"
