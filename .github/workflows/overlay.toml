@@ -79,23 +79,11 @@ github_account = "liuyujielol"
 # virtual package
 #["app-i18n/fcitx-meta"]
 
-["app-i18n/fcitx-rime"]
-source = "github"
-github = "fcitx/fcitx5-rime"
-use_latest_tag = true
-github_account = "liangyongxiang"
-
 ["app-i18n/fcitx-skk"]
 source = "github"
 github = "fcitx/fcitx5-skk"
 use_latest_tag = true
 github_account = "liuyujielol"
-
-# TODO: need run js
-#["app-i18n/ibus-rime"]
-
-# TODO
-#["app-i18n/libgooglepinyin"]
 
 ["app-i18n/libime-jyutping"]
 source = "github"
