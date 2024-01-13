@@ -7,9 +7,9 @@ INHERIT=kernel-2
 IUSE=+cjk symlink build
 KEYWORDS=~amd64
 LICENSE=GPL-2
-RDEPEND=!build? ( app-alternatives/cpio dev-lang/perl app-alternatives/bc app-alternatives/yacc app-alternatives/lex sys-devel/make >=sys-libs/ncurses-5.2 virtual/libelf virtual/pkgconfig )
+RDEPEND=!build? ( app-alternatives/cpio dev-lang/perl app-alternatives/bc app-alternatives/yacc app-alternatives/lex dev-build/make >=sys-libs/ncurses-5.2 virtual/libelf virtual/pkgconfig )
 RESTRICT=binchecks strip
 SLOT=6.6.8
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.6.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.6-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.6-1.extras.tar.xz https://github.com/zen-kernel/zen-kernel/releases/download/v6.6.8-lqx1/v6.6.8-lqx1.patch.xz https://github.com/zhmars/cjktty-patches/raw/master/v6.x/cjktty-6.6.patch
-_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	crossdev	f04338ff78f213a4a55c5c37b3c6563e	estack	c61c368a76fdf3a82fdf8dbaebea3804	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	kernel-2	e0121c8eaf287badf479a22ce41c88fd
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	crossdev	f04338ff78f213a4a55c5c37b3c6563e	estack	c61c368a76fdf3a82fdf8dbaebea3804	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	kernel-2	1c6b8977e581e4db92fc0f6ee99babd9
 _md5_=12064fb3e08df1419888ee869be1f4d6
