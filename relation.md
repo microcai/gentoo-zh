@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-01-14 02:52:34 CST)
+(The last generation time: 2024-01-14 03:38:29 CST)
 
 ### Packages
 
@@ -60,8 +60,7 @@
                                             | 9999                                      |        |                                                                                         |
    app-i18n/fcitx-m17n                      | 5.1.0                                     | RD     | https://github.com/fcitx/fcitx5-m17n                                                    | m17n-provided input methods for Fcitx5
                                             | 9999                                      |        |                                                                                         |
-   app-i18n/fcitx-rime                      | 5.1.3                                     | RD     | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
-                                            | 9999                                      |        |                                                                                         |
+   app-i18n/fcitx-rime                      | 9999                                      | RD     | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
      app-i18n/rime-prelude                  | 20220122-r1                               |  D, RD | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
    app-i18n/fcitx-skk                       | 5.1.0                                     | RD     | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
                                             | 9999                                      |        |                                                                                         |
