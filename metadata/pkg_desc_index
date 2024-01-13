@@ -98,6 +98,7 @@ dev-cpp/nameof 0.10.3: Nameof operator for modern C++
 dev-cpp/tgbot-cpp 1.7.2: C++ library for Telegram bot API
 dev-db/dbeaver-bin 23.3.2: Free universal database tool (community edition).
 dev-db/mongodb 5.3.1 6.2.0-r4: A high-performance, open source, schema-free document-oriented database
+dev-debug/lldb-mi 0.0.1 9999: LLDB Machine Interface Driver
 dev-java/oraclejdk-bin 8.391 21.0.1: Oracle's Java SE Development Kit
 dev-lang/quickjs 2021.03.27: Small embeddable Javascript engine
 dev-libs/libdatrie 0.2.13: Double-Array Trie Library
@@ -132,7 +133,6 @@ dev-util/elfembed 0.3-r1: Resource Compiler for ELF binaries
 dev-util/gyp 20230914150222 99999999999999: GYP (Generate Your Projects) meta-build system
 dev-util/jd-gui 1.6.6: A standalone graphical utility that displays Java source codes of .class file
 dev-util/jetbrains-toolbox 1.28.1.15219 2.0.3.17006: Manage all your JetBrains Projects and Tools
-dev-util/lldb-mi 0.0.1 9999: LLDB Machine Interface Driver
 dev-util/marksman-bin 2022.12.28: A language server for Markdown
 dev-util/mongodb-compass-bin 1.34.2 1.35.0 1.36.4 1.37.0 1.38.2 1.39.4 1.40.2: The GUI for MongoDB
 dev-util/pacstrap 28: Pacstrap - install packages to the specified new root directorye
