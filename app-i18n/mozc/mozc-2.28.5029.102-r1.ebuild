@@ -1,4 +1,4 @@
-# Copyright 2010-2023 Gentoo Authors
+# Copyright 2010-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -32,7 +32,8 @@ else
 		https://github.com/google/${PN}/archive/${MOZC_GIT_REVISION}.tar.gz -> ${PN}-${PV%%_p*}-${MOZC_DATE}.tar.gz
 		https://github.com/hiroyuki-komatsu/japanese-usage-dictionary/archive/${JAPANESE_USAGE_DICTIONARY_GIT_REVISION}.tar.gz -> japanese-usage-dictionary-${JAPANESE_USAGE_DICTIONARY_DATE}.tar.gz
 		https://dev.gentoo.org/~sam/distfiles/${CATEGORY}/${PN}/${PN}-2.28.5029.102-patches.tar.xz
-		https://github.com/fcitx/${PN}/archive/${FCITX_MOZC_GIT_REVISION}.tar.gz -> fcitx-${PN}-${PV%%_p*}-${FCITX_MOZC_DATE}.tar.gz
+		fcitx4? ( https://github.com/fcitx/${PN}/archive/${FCITX_MOZC_GIT_REVISION}.tar.gz -> fcitx-${PN}-${PV%%_p*}-${FCITX_MOZC_DATE}.tar.gz )
+		fcitx5? ( https://github.com/fcitx/${PN}/archive/${FCITX_MOZC_GIT_REVISION}.tar.gz -> fcitx-${PN}-${PV%%_p*}-${FCITX_MOZC_DATE}.tar.gz )
 	"
 fi
 
@@ -42,7 +43,7 @@ fi
 # japanese-usage-dictionary: BSD-2
 LICENSE="BSD BSD-2 ipadic public-domain unicode"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug emacs fcitx4 fcitx5 +gui ibus renderer test"
 REQUIRED_USE="|| ( emacs fcitx4 fcitx5 ibus )"
 RESTRICT="!test? ( test )"
@@ -51,7 +52,7 @@ BDEPEND="
 	$(python_gen_any_dep 'dev-python/six[${PYTHON_USEDEP}]')
 	>=dev-libs/protobuf-3.0.0
 	dev-util/gyp
-	dev-util/ninja
+	app-alternatives/ninja
 	virtual/pkgconfig
 	emacs? ( app-editors/emacs:* )
 	fcitx4? ( sys-devel/gettext )
@@ -140,7 +141,7 @@ src_unpack() {
 	if [[ "${PV}" == "9999" ]]; then
 		git-r3_src_unpack
 
-		if use fcitx4 || fcitx5; then
+		if use fcitx4 || use fcitx5; then
 			local EGIT_SUBMODULES=()
 			git-r3_fetch https://github.com/fcitx/mozc refs/heads/fcitx
 			git-r3_checkout https://github.com/fcitx/mozc "${WORKDIR}/fcitx-mozc"
@@ -157,12 +158,15 @@ src_unpack() {
 		unpack japanese-usage-dictionary-${JAPANESE_USAGE_DICTIONARY_DATE}.tar.gz
 		cp -p japanese-usage-dictionary-${JAPANESE_USAGE_DICTIONARY_GIT_REVISION}/usage_dict.txt ${P}/src/third_party/japanese_usage_dictionary || die
 
-		unpack fcitx-${PN}-${PV%%_p*}-${FCITX_MOZC_DATE}.tar.gz
-		if use fcitx4; then
-			cp -pr mozc-${FCITX_MOZC_GIT_REVISION} fcitx-${PN} || die
-		fi
-		if use fcitx5; then
-			cp -pr mozc-${FCITX_MOZC_GIT_REVISION} fcitx5-${PN} || die
+		if use fcitx4 || use fcitx5; then
+			unpack fcitx-${PN}-${PV%%_p*}-${FCITX_MOZC_DATE}.tar.gz
+			if use fcitx4; then
+				cp -pr mozc-${FCITX_MOZC_GIT_REVISION} fcitx-${PN} || die
+			fi
+			if use fcitx5; then
+				cp -pr mozc-${FCITX_MOZC_GIT_REVISION} fcitx5-${PN} || die
+			fi
+			rm -r mozc-${FCITX_MOZC_GIT_REVISION} || die
 		fi
 	fi
 }
