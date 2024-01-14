@@ -757,7 +757,7 @@ BDEPEND="
 	media-libs/libpulse
 	dev-util/cmake
 	sys-devel/clang
-	dev-util/ninja
+	dev-build/ninja
 	media-libs/gstreamer
 	media-libs/gst-plugins-base
 "
