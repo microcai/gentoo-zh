@@ -57,7 +57,7 @@ jobs:
           new_ver.json
 
         cat new_ver.json
-        echo "{nvcmp}={$(nvcmp --file overlay.toml --json --newer)}" >> $GITHUB_STATE
+        echo "nvcmp=$(nvcmp --file overlay.toml --json --newer)" >> $GITHUB_OUTPUT
 
         echo "::endgroup::"
 
