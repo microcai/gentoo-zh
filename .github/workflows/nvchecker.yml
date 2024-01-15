@@ -59,7 +59,7 @@ jobs:
           -e 's#(\.|-|_)?a([[:digit:]]+)",$#_alpah\2",#' \
           -e 's#(\.|-|_)?p([[:digit:]]+)",$#_p\2",#' \
           -e 's#(\.|-|_)?rc([[:digit:]]+)",$#_rc\2",#' \
-          new_ver.json
+          .github/workflows/new_ver.json
 
     - name: nvcmp
       id: nvcmp
