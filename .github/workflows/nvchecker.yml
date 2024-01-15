@@ -46,10 +46,25 @@ jobs:
     - name: nvchecker
       id: nvchecker
       run: |
-        echo "::group::nvchecker and nvcmp"
+        echo "::group::nvchecker"
         cd .github/workflows/
         echo -e "[keys]\ngithub = \"${{ secrets.GITHUB_TOKEN }}\"" > keyfile.toml
         nvchecker --file overlay.toml --keyfile keyfile.toml
+        echo "::endgroup::"
+
+    - name: new version normalization
+      id: new_ver
+      run: |
+        sed -r -i \
+          -e 's#(\.|-|_)?a([[:digit:]]+)",$#_alpah\2",#' \
+          -e 's#(\.|-|_)?p([[:digit:]]+)",$#_p\2",#' \
+          -e 's#(\.|-|_)?rc([[:digit:]]+)",$#_rc\2",#' \
+          .github/workflows/new_ver.json
+
+    - name: nvcmp
+      id: nvcmp
+      run: |
+        echo "::group::nvcmp"
         echo "::set-output name=nvcmp::$(nvcmp --file overlay.toml --json --newer)"
         echo "::endgroup::"
 
@@ -66,7 +81,7 @@ jobs:
       uses: actions/github-script@v6
       timeout-minutes: 1
       env:
-        pkgs: ${{steps.nvchecker.outputs.nvcmp}}
+        pkgs: ${{steps.nvcmp.outputs.nvcmp}}
       with:
         github-token: ${{ secrets.GENTOO_ZH_NVCHECKER_PAT }}
         script: |

@@ -122,8 +122,8 @@ regex = "bcompare-([\\d.]+).x86_64.tar.gz"
 
 ["app-misc/ccal"]
 source = "regex"
-url = "http://ccal.chinesebay.com/ccal/ccal.htm"
-regex = "<h1>CCAL-([\\d.]+)</h1>"
+url = "https://ccal.chinesebay.com/ccal/ccal.htm"
+regex = "<title>ccal-([\\d.]+)</title>"
 github_account = "aieu"
 
 ["app-misc/gpick"]
@@ -655,11 +655,6 @@ github_account = "zozx"
 
 # TODO
 #["media-video/avplayer"]
-
-["media-video/tenvideo"]
-source = "regex"
-url = "https://v.qq.com/download.html#Linux"
-regex = "Tenvideo_universal_([\\d.]+)_amd64.deb"
 
 ["media-sound/go-musicfox"]
 source = "github"
