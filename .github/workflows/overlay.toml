@@ -656,11 +656,6 @@ github_account = "zozx"
 # TODO
 #["media-video/avplayer"]
 
-["media-video/tenvideo"]
-source = "regex"
-url = "https://v.qq.com/download.html#Linux"
-regex = "Tenvideo_universal_([\\d.]+)_amd64.deb"
-
 ["media-sound/go-musicfox"]
 source = "github"
 github = "anhoder/go-musicfox"
