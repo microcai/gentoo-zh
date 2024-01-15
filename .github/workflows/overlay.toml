@@ -861,7 +861,7 @@ github_account = "st0nie"
 ["net-proxy/daed"]
 source = "github"
 github = "daeuniverse/daed"
-use_latest_release = true
+use_latest_tag = true
 prefix = "v"
 github_account = "st0nie"
 
