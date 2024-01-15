@@ -1,6 +1,6 @@
 BDEPEND=kde-frameworks/extra-cmake-modules:0 virtual/pkgconfig app-alternatives/ninja >=dev-build/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
-DEPEND=test? ( coverage? ( dev-util/lcov ) ) doc? ( app-doc/doxygen ) enchant? ( app-text/enchant:2 ) emoji? ( sys-libs/zlib ) keyboard? ( app-text/iso-codes dev-libs/expat dev-libs/json-c:= x11-misc/xkeyboard-config x11-libs/libxkbcommon[X?,wayland?] ) systemd? ( sys-apps/systemd ) wayland? ( dev-libs/wayland dev-libs/wayland-protocols dev-util/wayland-scanner ) X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXfixes x11-libs/libXrender x11-libs/libXinerama x11-libs/libxkbfile x11-libs/xcb-util x11-libs/xcb-util-keysyms x11-libs/xcb-util-wm >=x11-libs/xcb-imdkit-1.0.3:5 ) dev-libs/libevent dev-libs/libfmt sys-apps/dbus virtual/libintl x11-libs/gdk-pixbuf:2 x11-libs/cairo[X?] x11-libs/pango[X?]
+DEPEND=test? ( coverage? ( dev-util/lcov ) ) doc? ( app-text/doxygen ) enchant? ( app-text/enchant:2 ) emoji? ( sys-libs/zlib ) keyboard? ( app-text/iso-codes dev-libs/expat dev-libs/json-c:= x11-misc/xkeyboard-config x11-libs/libxkbcommon[X?,wayland?] ) systemd? ( sys-apps/systemd ) wayland? ( dev-libs/wayland dev-libs/wayland-protocols dev-util/wayland-scanner ) X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXfixes x11-libs/libXrender x11-libs/libXinerama x11-libs/libxkbfile x11-libs/xcb-util x11-libs/xcb-util-keysyms x11-libs/xcb-util-wm >=x11-libs/xcb-imdkit-1.0.3:5 ) dev-libs/libevent dev-libs/libfmt sys-apps/dbus virtual/libintl x11-libs/gdk-pixbuf:2 x11-libs/cairo[X?] x11-libs/pango[X?]
 DESCRIPTION=Fcitx5 Next generation of fcitx
 EAPI=8
 HOMEPAGE=https://fcitx-im.org/ https://github.com/fcitx/fcitx5
@@ -9,10 +9,10 @@ INHERIT=cmake xdg git-r3
 IUSE=+autostart coverage doc +emoji +enchant +keyboard presage +server systemd test wayland +X
 LICENSE=LGPL-2+ Unicode-DFS-2016
 PROPERTIES=live
-RDEPEND=test? ( coverage? ( dev-util/lcov ) ) doc? ( app-doc/doxygen ) enchant? ( app-text/enchant:2 ) emoji? ( sys-libs/zlib ) keyboard? ( app-text/iso-codes dev-libs/expat dev-libs/json-c:= x11-misc/xkeyboard-config x11-libs/libxkbcommon[X?,wayland?] ) systemd? ( sys-apps/systemd ) wayland? ( dev-libs/wayland dev-libs/wayland-protocols dev-util/wayland-scanner ) X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXfixes x11-libs/libXrender x11-libs/libXinerama x11-libs/libxkbfile x11-libs/xcb-util x11-libs/xcb-util-keysyms x11-libs/xcb-util-wm >=x11-libs/xcb-imdkit-1.0.3:5 ) dev-libs/libevent dev-libs/libfmt sys-apps/dbus virtual/libintl x11-libs/gdk-pixbuf:2 x11-libs/cairo[X?] x11-libs/pango[X?]
+RDEPEND=test? ( coverage? ( dev-util/lcov ) ) doc? ( app-text/doxygen ) enchant? ( app-text/enchant:2 ) emoji? ( sys-libs/zlib ) keyboard? ( app-text/iso-codes dev-libs/expat dev-libs/json-c:= x11-misc/xkeyboard-config x11-libs/libxkbcommon[X?,wayland?] ) systemd? ( sys-apps/systemd ) wayland? ( dev-libs/wayland dev-libs/wayland-protocols dev-util/wayland-scanner ) X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXfixes x11-libs/libXrender x11-libs/libXinerama x11-libs/libxkbfile x11-libs/xcb-util x11-libs/xcb-util-keysyms x11-libs/xcb-util-wm >=x11-libs/xcb-imdkit-1.0.3:5 ) dev-libs/libevent dev-libs/libfmt sys-apps/dbus virtual/libintl x11-libs/gdk-pixbuf:2 x11-libs/cairo[X?] x11-libs/pango[X?]
 REQUIRED_USE=|| ( wayland X ) X? ( keyboard ) wayland? ( keyboard )
 RESTRICT=!test? ( test )
 SLOT=5
 SRC_URI=https://download.fcitx-im.org/data/en_dict-20121020.tar.gz -> fcitx-data-en_dict-20121020.tar.gz
 _eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	78cf3cc2d5572fddf5e5e10c70f7c81a	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	c7c9a62d6232cac66d4ea32d575c3e7c	xdg	4a14c5c24f121e7da66e5aab4a168c6e	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
-_md5_=accfbfdf7381e6e09c0bbf6368f5b3c4
+_md5_=1cfa6e6200f1cbb893a667f450373c5d
