@@ -21,7 +21,7 @@ DEPEND="
 	>=dev-libs/boost-1.61
 	dev-libs/libfmt
 	doc? (
-		app-doc/doxygen
+		app-text/doxygen
 		dev-texlive/texlive-fontutils
 	)
 	engine? (
