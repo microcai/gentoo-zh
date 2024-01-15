@@ -755,7 +755,7 @@ BDEPEND="
 	dev-lang/yasm
 	media-libs/alsa-lib
 	media-libs/libpulse
-	dev-util/cmake
+	dev-build/cmake
 	sys-devel/clang
 	dev-build/ninja
 	media-libs/gstreamer

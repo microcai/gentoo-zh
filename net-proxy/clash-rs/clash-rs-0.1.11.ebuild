@@ -509,7 +509,7 @@ REQUIRED_UES="debug? ( !lto )"
 
 BDEPEND="
 	sys-devel/clang
-	dev-util/cmake
+	dev-build/cmake
 "
 
 src_prepare() {
