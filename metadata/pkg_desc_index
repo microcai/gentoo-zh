@@ -79,7 +79,7 @@ app-misc/rmtrash 1.14 1.15: trash-put made compatible to GNUs rm and rmdir
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/xmind 22.11.3656 23.07.201366-r1: Brainstorming and Mind Mapping Software
 app-misc/yq-bin 4.30.6 4.35.2 4.40.5: yq is a portable command-line YAML, JSON and XML processor
-app-office/anytype-bin 0.35.4: A notebook based on p2p network
+app-office/anytype-bin 0.35.4 0.37.3: A notebook based on p2p network
 app-office/bytedance-feishu 4.11.6.2 5.9.18 5.14.14 5.26.13-r1 6.9.20: feishu - ByteDance's enterprise collaboration platform
 app-office/freeoffice 1062 1064 1068: A complete, free Microsoft Office-compatible alternative office suite.
 app-office/wps-office 11.1.0.11698 11.1.0.11704 11.1.0.11708 11.1.0.11711-r1: WPS Office is an office productivity suite, Here is the Chinese version
