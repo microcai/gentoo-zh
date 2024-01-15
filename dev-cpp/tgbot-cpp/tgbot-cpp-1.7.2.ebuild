@@ -21,7 +21,7 @@ DEPEND="
 	>=net-misc/curl-7.56.0
 	>=dev-libs/boost-1.59.0"
 RDEPEND="${DEPEND}"
-BDEPEND="doc? ( app-doc/doxygen[dot] )"
+BDEPEND="doc? ( app-text/doxygen[dot] )"
 
 src_configure() {
 	mycmakeargs=(

@@ -36,7 +36,7 @@ RDEPEND="
 "
 BDEPEND="
 	app-text/asciidoc
-	doc? ( app-doc/doxygen )
+	doc? ( app-text/doxygen )
 	test? (
 		sys-apps/fakeroot
 		sys-apps/fakechroot
