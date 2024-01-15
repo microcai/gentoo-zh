@@ -15,7 +15,6 @@ concurrency:
 jobs:
   nvchecker:
     runs-on: ubuntu-latest
-    if: github.repository == 'microcai/gentoo-zh' && github.ref == 'refs/heads/master'
     container:
       image: ghcr.io/liangyongxiang/gentoo-testing:master
 
@@ -46,26 +45,20 @@ jobs:
     - name: nvchecker
       id: nvchecker
       run: |
-        echo "::group::nvchecker"
+        echo "::group::nvchecker and nvcmp"
         cd .github/workflows/
         echo -e "[keys]\ngithub = \"${{ secrets.GITHUB_TOKEN }}\"" > keyfile.toml
         nvchecker --file overlay.toml --keyfile keyfile.toml
-        echo "::endgroup::"
 
-    - name: new version normalization
-      id: new_ver
-      run: |
         sed -r -i \
-          -e 's#(\.|-|_)?a([[:digit:]]+)",$#_alpah\2",#' \
-          -e 's#(\.|-|_)?p([[:digit:]]+)",$#_p\2",#' \
-          -e 's#(\.|-|_)?rc([[:digit:]]+)",$#_rc\2",#' \
-          .github/workflows/new_ver.json
+          -e 's#(\.|-|_)?a([[:digit:]]+)(",?)$#_alpah\2\3#' \
+          -e 's#(\.|-|_)?p([[:digit:]]+)(",?)$#_p\2\3#' \
+          -e 's#(\.|-|_)?rc([[:digit:]]+)(",?)$#_rc\2\3#' \
+          new_ver.json
 
-    - name: nvcmp
-      id: nvcmp
-      run: |
-        echo "::group::nvcmp"
-        echo "::set-output name=nvcmp::$(nvcmp --file overlay.toml --json --newer)"
+        cat new_ver.json
+        echo "{nvcmp}={$(nvcmp --file overlay.toml --json --newer)}" >> $GITHUB_STATE
+
         echo "::endgroup::"
 
     - name: setup node
@@ -81,7 +74,7 @@ jobs:
       uses: actions/github-script@v6
       timeout-minutes: 1
       env:
-        pkgs: ${{steps.nvcmp.outputs.nvcmp}}
+        pkgs: ${{steps.nvchecker.outputs.nvcmp}}
       with:
         github-token: ${{ secrets.GENTOO_ZH_NVCHECKER_PAT }}
         script: |
