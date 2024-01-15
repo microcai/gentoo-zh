@@ -30,7 +30,7 @@ RDEPEND="
 		)
 	)
 
-	doc? ( app-doc/doxygen )
+	doc? ( app-text/doxygen )
 	enchant? ( app-text/enchant:2 )
 	emoji? ( sys-libs/zlib )
 

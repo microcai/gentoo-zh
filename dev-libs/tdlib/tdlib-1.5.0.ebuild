@@ -17,7 +17,7 @@ DEPEND="sys-devel/gcc
 	dev-libs/openssl
 	sys-libs/zlib
 	dev-util/gperf
-	dev-util/cmake
+	dev-build/cmake
 "
 RDEPEND="${DEPEND}"
 PATCHES=( "${FILESDIR}/${P}-multilib.patch" )

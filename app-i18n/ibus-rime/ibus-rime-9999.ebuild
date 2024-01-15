@@ -16,7 +16,7 @@ COMMON_DEPEND="app-i18n/ibus
 	app-i18n/librime
 	x11-libs/libnotify"
 DEPEND="${COMMON_DEPEND}
-	dev-util/cmake"
+	dev-build/cmake"
 RDEPEND="${COMMON_DEPEND}
 	app-i18n/rime-data"
 

@@ -29,7 +29,7 @@ BDEPEND="
 	kde-frameworks/extra-cmake-modules:0
 	virtual/pkgconfig
 	doc? (
-		app-doc/doxygen
+		app-text/doxygen
 		media-gfx/graphviz[svg]
 	)
 "
