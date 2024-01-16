@@ -3,17 +3,17 @@
 
 EAPI=8
 
-inherit cmake tmpfiles linux-info
+inherit cmake tmpfiles linux-info desktop xdg
 
 MY_PV="${PV//0_beta/B}"
 
 DESCRIPTION="A low latency KVMFR application for guests with VGA PCI Passthrough"
 HOMEPAGE="https://looking-glass.io"
-SRC_URI="https://looking-glass.io/artifact/${MY_PV}/source -> ${PN}-${PV}.tar.gz"
+SRC_URI="https://looking-glass.io/artifact/${MY_PV}/source -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE="X wayland pipewire pulseaudio +backtrace gnome host obs"
 REQUIRED_USE="|| ( X wayland )
 	|| ( pipewire pulseaudio )"
@@ -41,7 +41,7 @@ DEPEND="gui-libs/egl-wayland
 		media-video/pipewire
 	)
 	pulseaudio? (
-		media-sound/pulseaudio
+		media-libs/libpulse
 	)
 	obs? (
 		media-video/obs-studio
@@ -128,4 +128,8 @@ src_install() {
 	einstalldocs
 	# install tmpfiles config
 	newtmpfiles "${FILESDIR}"/${PN}-tmpfiles.conf ${PN}.conf
+	# install desktop
+	domenu "${FILESDIR}/${PN}.desktop"
+	newicon -s 128 "${S}/resources/icon-128x128.png" "${PN}.png"
 }
+
