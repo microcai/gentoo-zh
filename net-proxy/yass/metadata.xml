@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>keeyou-cn@outlook.com</email>
+		<name>Chilledheart</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">Chilledheart/yass</remote-id>
+	</upstream>
+</pkgmetadata>
