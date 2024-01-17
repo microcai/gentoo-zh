@@ -103,6 +103,8 @@ dev-java/oraclejdk-bin:source - Install JVM sources
 dev-lang/quickjs:lto - Enable Link Time Optimizations (improves performance and decreases size of executables)
 dev-libs/v2ray-rules-dat:geoip - Install geoip.dat
 dev-libs/v2ray-rules-dat:geosite - Install geosite.dat
+dev-python/conda:mamba - enable libmamba resolver
+dev-python/conda:pycosat - enable pycosat resolver
 dev-python/conda:user - use user's home directory as default pkgs and envs prefix
 dev-python/nvchecker:ini - convert your old configuration files from ini to toml
 dev-python/nvchecker:notify - enable nvchecker-notify support
@@ -110,6 +112,7 @@ dev-python/qasync:qt6 - Use dev-python/PyQt6 or dev-python/pyside6 for qt6 suppo
 dev-util/arch-install-scripts:archroot - Install arch-chroot
 dev-util/arch-install-scripts:genfstab - Install genfstab
 dev-util/arch-install-scripts:pacstrap - Install pacstrap
+dev-util/mamba:micromamba - build micromamba
 gui-libs/libdecor:dbus - Enable dbus to query current cursor theme
 gui-libs/libdecor:examples - Build and install examples
 media-fonts/Plangothic:allideo - use HanaMin to display unincluded fonts
@@ -233,6 +236,26 @@ sys-kernel/xanmod-kernel:x86-64-v3 - Set compiler optimization to x86-64-v3
 sys-kernel/xanmod-kernel:x86-64-v4 - Set compiler optimization to x86-64-v4
 sys-kernel/xanmod-rt:cjk - Eanble cjktty patches.
 sys-kernel/xanmod-sources:cjktty - Enable cjktty patches.
+sys-libs/libsolv:appdata - Build with AppStream appdata support
+sys-libs/libsolv:arch - Build with archlinux repository support
+sys-libs/libsolv:bzip2 - Build with bzip2 compression support
+sys-libs/libsolv:comps - Build with fedora comps support
+sys-libs/libsolv:conda - Build with conda dependency support
+sys-libs/libsolv:cudf - Build with cudf repository support
+sys-libs/libsolv:debian - Build with debian database/repository support
+sys-libs/libsolv:helix - Build with helix repository support
+sys-libs/libsolv:libxml2 - Build with libxml2 instead of libexpat
+sys-libs/libsolv:lzma - Build with lzma/xz compression support
+sys-libs/libsolv:mdk - Build with mandriva/mageia repository support
+sys-libs/libsolv:perl - Build the perl bindings
+sys-libs/libsolv:pubkey - Build with pubkey support
+sys-libs/libsolv:python - Build the python bindings
+sys-libs/libsolv:rpm - Build with rpm database support
+sys-libs/libsolv:ruby - Build the ruby bindings
+sys-libs/libsolv:suse - Build with suse repository support
+sys-libs/libsolv:tcl - Build the Tcl bindings
+sys-libs/libsolv:zchunk - Build with zchunk compression support
+sys-libs/libsolv:zstd - Build with zstd compression support
 virtual/linux-sources:firmware - Install linux kernel firmware
 www-servers/woof:bzip2 - bzip2 decompression of the archive from woof
 www-servers/woof:gzip - gzip decompression of the archive from woof
