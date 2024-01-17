@@ -4,13 +4,12 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{9..11} pypy3 )
-#DISTUTILS_USE_SETUPTOOLS=no
+PYTHON_COMPAT=( python3_{9..11} )
 inherit distutils-r1
 
 DESCRIPTION="Python bindings to picosat (a SAT solver)"
-HOMEPAGE="https://github.com/ContinuumIO/pycosat"
-SRC_URI="https://github.com/ContinuumIO/pycosat/archive/${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://github.com/conda/pycosat"
+SRC_URI="https://github.com/conda/pycosat/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
