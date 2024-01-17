@@ -1,1 +1,2 @@
 move dev-util/lldb-mi dev-debug/lldb-mi
+move dev-util/gyp dev-build/gyp
