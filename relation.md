@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-01-16 19:42:59 CST)
+(The last generation time: 2024-01-17 21:44:53 CST)
 
 ### Packages
 
@@ -11,10 +11,6 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/zenmonitor3                      | 2.0.0                                     |        | https://git.exozy.me/a/zenmonitor3                                                      | Zen monitor is monitoring software for AMD Zen-based CPUs
    sys-kernel/zenpower3                     | 0.2.0                                     |  D, RD | https://git.exozy.me/a/zenpower3                                                        | Linux kernel driver for reading sensors of AMD Zen family CPUs
---------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-arch/zchunk                            | 1.3.2                                     |        | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
-                                            | 1.4.0                                     |        |                                                                                         |
-                                            | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-backup/btrfs-assistant                 | 1.8                                       |        | https://gitlab.com/btrfs-assistant/btrfs-assistant                                      | A GUI management tool to make managing a Btrfs filesystem easier.
                                             | 9999                                      |        |                                                                                         |
@@ -206,16 +202,29 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/v2ray-rules-dat                   | 202310262208                              |        | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/conda                           | 23.1.0                                    |        | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
-   dev-python/conda-package-handling        | 2.0.2                                     |  D, RD | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
-   dev-python/conda-package-streaming       | 0.7.0                                     |  D, RD | https://github.com/conda/conda-package-streaming                                        | An efficient library to read from new and old conda packages
-   dev-python/pycosat                       | 0.6.6                                     |  D, RD | https://github.com/ContinuumIO/pycosat                                                  | Python bindings to picosat (a SAT solver)
+ dev-python/archspec                        | 0.2.2                                     |        | https://github.com/archspec/archspec                                                    | A library for detecting, labeling, and reasoning about microarchitectures
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/conda                           | 23.11.0                                   |        | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
+   dev-python/conda-libmamba-solver         | 23.12.0                                   |  D, RD | https://github.com/conda/conda-libmamba-solver                                          | The libmamba based solver for conda
+     dev-util/mamba                         | 1.5.6                                     | RD     | https://github.com/mamba-org/mamba                                                      | The Fast Cross-Platform Package Manager
+       dev-cpp/reproc                       | 14.2.4                                    |  D, RD | https://github.com/DaanDeMeyer/reproc                                                   | A cross-platform (C99/C++11) process library
+       dev-cpp/tl-expected                  | 1.1.0                                     |  D, RD | https://github.com/TartanLlama/expected                                                 | Guideline Support Library implementation by Microsoft
+       sys-libs/libsolv                     | 0.7.27                                    |  D, RD | https://github.com/openSUSE/libsolv                                                     | Library for solving packages and reading repositories
+         app-arch/zchunk                    | 1.3.2                                     | RD     | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
+                                            | 1.4.0                                     |        |                                                                                         |
+                                            | 9999                                      |        |                                                                                         |
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/conda-package-handling          | 2.2.0                                     |        | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/conda-package-streaming         | 0.7.0                                     |        | https://github.com/conda/conda-package-streaming                                        | An efficient library to read from new and old conda packages
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/daff                            | 1.3.46                                    |        | https://github.com/paulfitz/daff                                                        | The daff can produce and apply tabular diffs
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/nvchecker                       | 2.13                                      |        | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
                                             | 2.13.1                                    |        |                                                                                         |
    dev-python/structlog                     | 24.1.0                                    | RD     | http://www.structlog.org/en/stable/                                                     | Structured Logging for Python
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/pycosat                         | 0.6.6                                     |        | https://github.com/conda/pycosat                                                        | Python bindings to picosat (a SAT solver)
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pytube                          | 15.0.0                                    |        | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
