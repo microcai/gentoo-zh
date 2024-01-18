@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-01-18 05:03:23 CST)
+(The last generation time: 2024-01-18 14:54:43 CST)
 
 ### Packages
 
@@ -345,7 +345,7 @@
    dev-python/fuo-netease                   | 1.0                                       |  D     | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
    dev-python/fuo-qqmusic                   | 0.5.1                                     |  D     | https://github.com/feeluown/feeluown-qqmusic                                            | qq music support for feeluown
                                             | 1.0.1                                     |        |                                                                                         |
-   dev-python/fuo-ytmusic                   | 0.3.2                                     |  D     | https://github.com/feeluown/feeluown-ytmusic                                            | youtube music support for feeluown
+   dev-python/fuo-ytmusic                   | 0.3.3                                     |  D     | https://github.com/feeluown/feeluown-ytmusic                                            | youtube music support for feeluown
    dev-python/janus                         | 1.0.0-r1                                  |  D, RD | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
    dev-python/qasync                        | 0.26.0                                    |  D, RD | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
                                             | 0.27.1                                    |        |                                                                                         |
