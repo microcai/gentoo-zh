@@ -99,7 +99,7 @@ dev-cpp/nameof 0.10.3: Nameof operator for modern C++
 dev-cpp/reproc 14.2.4: A cross-platform (C99/C++11) process library
 dev-cpp/tgbot-cpp 1.7.2: C++ library for Telegram bot API
 dev-cpp/tl-expected 1.1.0: Guideline Support Library implementation by Microsoft
-dev-db/dbeaver-bin 23.3.2: Free universal database tool (community edition).
+dev-db/dbeaver-bin 23.3.3: Free universal database tool (community edition).
 dev-db/mongodb 5.3.1 6.2.0-r4: A high-performance, open source, schema-free document-oriented database
 dev-debug/lldb-mi 0.0.1 9999: LLDB Machine Interface Driver
 dev-java/oraclejdk-bin 8.391 21.0.1: Oracle's Java SE Development Kit
@@ -258,7 +258,7 @@ net-proxy/v2ray 5.11.0 5.12.1 5.13.0: A platform for building proxies to bypass 
 net-proxy/v2ray-bin 4.45.0-r1 5.12.1: A platform for building proxies to bypass network restrictions
 net-proxy/v2rayA 2.2.4.3 2.2.4.6 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
-net-proxy/yass 1.5.20: lightweight and efficient, socks5/http forward proxy
+net-proxy/yass 1.5.21: lightweight and efficient, socks5/http forward proxy
 net-vpn/sstp-server 0.6.0: A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
 net-wireless/linux-wifi-hotspot 9999: Linux Wifi Hotspot
 sci-chemistry/vesta 3.5.8: Visualization for Electronic and STructural Analysis
