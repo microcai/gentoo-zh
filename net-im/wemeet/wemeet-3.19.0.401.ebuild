@@ -10,9 +10,9 @@ HOMEPAGE="https://wemeet.qq.com"
 
 SRC_URI="
 	amd64? ( mirror+https://updatecdn.meeting.qq.com/cos/\
-a05d53f96ab7331d2b2d245981f055d0/TencentMeeting_0300000000_${PV}_x86_64_default.publish.deb -> ${P}_amd64.deb )
+bb4001c715553579a8b3e496233331d4/TencentMeeting_0300000000_${PV}_x86_64_default.publish.deb -> ${P}_amd64.deb )
 	arm64? ( mirror+https://updatecdn.meeting.qq.com/cos/\
-87439695193afbf8b1faa23202ce7306/TencentMeeting_0300000000_3.15.1.402_arm64_default.publish.deb -> ${P}_arm64.deb )
+0f96a97b0aaea9b9d5d2c2b912ede656/TencentMeeting_0300000000_${PV}_arm64_default.publish.deb -> ${P}_arm64.deb )
 "
 
 LICENSE="wemeet_license"
