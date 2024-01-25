@@ -141,7 +141,7 @@ dev-util/mamba 1.5.6: The Fast Cross-Platform Package Manager
 dev-util/marksman-bin 2022.12.28: A language server for Markdown
 dev-util/mongodb-compass-bin 1.34.2 1.35.0 1.36.4 1.37.0 1.38.2 1.39.4 1.40.2: The GUI for MongoDB
 dev-util/pacstrap 28: Pacstrap - install packages to the specified new root directorye
-dev-util/tailspin 2.4.0: A log file highlighter
+dev-util/tailspin 3.0.0: A log file highlighter
 dev-util/tauri-cli 1.5.9 2.0.0_alpha17: Command line interface for building Tauri apps
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-util/zprint-bin 1.2.7 1.2.8: Clojure and Clojurescript source code formatter
@@ -158,10 +158,10 @@ media-fonts/Plangothic 1.8.5752: 遍黑体项目（Plangothic Project）
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/iansui 1.000: An open-source Chinese font derived from Klee One (Fontworks).
 media-fonts/jf-openhuninn 2.0: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
-media-fonts/lxgw-neo-xihei 1.108: A Chinese sans-serif font derived from IPAex Gothic.
+media-fonts/lxgw-neo-xihei 1.109: A Chinese sans-serif font derived from IPAex Gothic.
 media-fonts/lxgw-neo-zhisong 0.113: An open-source Chinese font derived from IPAmj Mincho
 media-fonts/nerd-fonts 3.1.1: Nerd Fonts is a project that patches developer targeted fonts with glyphs
-media-fonts/sarasa-gothic 1.0.3: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
+media-fonts/sarasa-gothic 1.0.4: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 media-fonts/sarasa-term-sc-nerd 1.1.0: Sarasa Mono SC font patched with Nerd fonts
 media-fonts/smiley-sans 1.1.1: An open-source font for Chinese.
 media-fonts/taipei-sans-tc 1.0: JT Foundry - Taipei Sans TC Beta font
