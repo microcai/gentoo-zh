@@ -21,7 +21,7 @@ DEPEND="
 	x11-themes/hicolor-icon-theme
 	kde-plasma/kdecoration:5
 	kde-frameworks/kirigami:5
-	kde-frameworks/kwayland:5
+	kde-plasma/kwayland:5
 	kde-frameworks/extra-cmake-modules:0
 "
 RDEPEND="${DEPEND}"
