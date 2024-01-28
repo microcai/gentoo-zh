@@ -1,10 +1,10 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=LXDE theme for IceWM
-EAPI=0
+EAPI=8
 HOMEPAGE=http://lxde.sf.net/
 KEYWORDS=amd64 ~ppc sparc ~x86
 LICENSE=GPL-2
 RDEPEND=x11-wm/icewm
 SLOT=0
 SRC_URI=mirror://sourceforge/lxde/lxice.tar.bz2
-_md5_=9e8afe1047b780a76b8cb7fb8c4c9ee2
+_md5_=6c0fb67c03dadbb030f0f8a94d6a1269
