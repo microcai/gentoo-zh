@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
+DESCRIPTION=Full XanMod source, including the Gentoo patchset and other patch options.
+EAPI=8
+HOMEPAGE=https://xanmod.org https://github.com/zhmars/cjktty-patches https://github.com/hamadmarri/TT-CPU-Scheduler
+INHERIT=kernel-2
+IUSE=cjktty symlink build
+KEYWORDS=~amd64
+LICENSE=GPL-2 CDDL
+RDEPEND=!build? ( app-alternatives/cpio dev-lang/perl app-alternatives/bc app-alternatives/yacc app-alternatives/lex dev-build/make >=sys-libs/ncurses-5.2 virtual/libelf virtual/pkgconfig )
+RESTRICT=binchecks strip
+SLOT=6.7.2
+SRC_URI=https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.7.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.7-5.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.7-5.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.7-5.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.7-5.extras.tar.xz mirror://sourceforge/xanmod/patch-6.7.2-xanmod1.xz https://raw.githubusercontent.com/zhmars/cjktty-patches/master//v6.x/cjktty-6.7.patch https://raw.githubusercontent.com/zhmars/cjktty-patches/master//cjktty-add-cjk32x32-font-data.patch
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	crossdev	f04338ff78f213a4a55c5c37b3c6563e	estack	c61c368a76fdf3a82fdf8dbaebea3804	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	kernel-2	1c6b8977e581e4db92fc0f6ee99babd9
+_md5_=a0b548a9130a4fc83219d2d304f49a32
