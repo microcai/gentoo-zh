@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -8,7 +8,7 @@ inherit unpacker xdg
 MY_PV="$(ver_cut 4)"
 
 DESCRIPTION="WPS Office is an office productivity suite, Here is the Chinese version"
-HOMEPAGE="http://www.wps.cn/product/wpslinux/ http://wps-community.org/"
+HOMEPAGE="https://www.wps.cn/product/wpslinux/"
 
 KEYWORDS="~amd64 ~arm64 ~loong ~mips"
 
@@ -20,7 +20,7 @@ SRC_URI="
 "
 
 SLOT="0"
-RESTRICT="strip mirror bindist" # mirror as explained at bug #547372
+RESTRICT="strip mirror bindist fetch" # mirror as explained at bug #547372
 LICENSE="WPS-EULA"
 IUSE="big-endian systemd"
 REQUIRED_USE="mips? ( !big-endian )"
@@ -75,6 +75,12 @@ RDEPEND="
 "
 
 S="${WORKDIR}"
+
+pkg_nofetch() {
+	einfo "Please download WPS Office 2019 For Linux version ${PV} from"
+	einfo "    ${HOMEPAGE}"
+	einfo "The archive should then be placed into your distfiles directory."
+}
 
 src_install() {
 	exeinto /usr/bin
