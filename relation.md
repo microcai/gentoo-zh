@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-01-29 21:58:10 CST)
+(The last generation time: 2024-01-30 13:40:54 CST)
 
 ### Packages
 
@@ -139,10 +139,7 @@
                                             | 1064                                      |        |                                                                                         |
                                             | 1068                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-office/wps-office                      | 11.1.0.11698                              |        | http://www.wps.cn/product/wpslinux/                                                     | WPS Office is an office productivity suite, Here is the Chinese version
-                                            | 11.1.0.11704                              |        |                                                                                         |
-                                            | 11.1.0.11708                              |        |                                                                                         |
-                                            | 11.1.0.11711-r1                           |        |                                                                                         |
+ app-office/wps-office                      | 11.1.0.11711-r2                           |        | https://www.wps.cn/product/wpslinux/                                                    | WPS Office is an office productivity suite, Here is the Chinese version
    virtual/loong-ow-compat                  | 0                                         | RD     |                                                                                         | Virtual for LoongArch old-world compatibility
      app-emulation/liblol                   | 0.0.4-r1                                  | RD     | https://github.com/shankerwangmiao/liblol                                               | LoongArch old-world ABI compatibility layer from AOSC OS
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
