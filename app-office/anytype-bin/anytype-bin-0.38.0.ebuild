@@ -36,7 +36,9 @@ src_prepare() {
 
 src_install() {
 	dobin anytype-bin
-	doicon usr/share/icons/hicolor/0x0/apps/anytype.png || die "Icon installation failed"
+	for size in 16 32 64 128 256 512 1024; do
+		doicon -s "$size" usr/share/icons/hicolor/"$size"x"$size"/apps/anytype.png || die "Icon installation failed"
+	done
 	domenu usr/share/applications/anytype.desktop || die "Desktop file installation failed"
 }
 
