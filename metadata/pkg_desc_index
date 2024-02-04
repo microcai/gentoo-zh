@@ -252,7 +252,7 @@ net-proxy/hysteria 2.2.2: A powerful, lightning fast and censorship resistant pr
 net-proxy/juicity 0.3.0: juicity is a quic-based proxy protocol.
 net-proxy/mihomo 1.18.0: Another Clash Kernel, formerly Clash.Meta
 net-proxy/proxy-server 6.0.0: Implementation of all proxy protocols using modern c++
-net-proxy/shadowsocks-rust 1.16.2 1.17.0: A Rust port of shadowsocks.
+net-proxy/shadowsocks-rust 1.17.2: A Rust port of shadowsocks.
 net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
 net-proxy/v2ray 5.11.0 5.12.1 5.13.0: A platform for building proxies to bypass network restrictions.
 net-proxy/v2ray-bin 4.45.0-r1 5.12.1: A platform for building proxies to bypass network restrictions
