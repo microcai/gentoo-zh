@@ -210,7 +210,7 @@ net-dns/libidn11 1.33: Internationalized Domain Names (IDN) implementation
 net-dns/mosdns 4.5.3 5.1.3: A DNS forwarder
 net-dns/mosdns-cn-bin 1.4.0: A DNS forwarder
 net-dns/phddns 2.0.6.32828: Phddns
-net-dns/q 0.19.1: A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
+net-dns/q 0.19.2: A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
 net-im/deepin-wine-qq 9.5.2.27897: Tencent QQ on Deepin Wine(com.qq.im.deepin) For Gentoo
 net-im/deepin-wine-wechat 3.9.0.28-r3: Tencent WeChat on Deepin Wine For Gentoo
 net-im/deepin-wine-wecom 4.1.10.6007: Tencent Weixin Work on Deepin Wine(com.qq.weixin.work.deepin) For Gentoo
@@ -250,7 +250,7 @@ net-proxy/dae 0.4.0 9999: A lightweight and high-performance transparent proxy s
 net-proxy/daed 0.3.3_p1 0.4.0_rc1 9999: A Modern Dashboard For dae
 net-proxy/hysteria 2.2.2: A powerful, lightning fast and censorship resistant proxy.
 net-proxy/juicity 0.3.0: juicity is a quic-based proxy protocol.
-net-proxy/mihomo 1.18.0: Another Clash Kernel, formerly Clash.Meta
+net-proxy/mihomo 1.18.1: Another Clash Kernel, formerly Clash.Meta
 net-proxy/proxy-server 6.0.0: Implementation of all proxy protocols using modern c++
 net-proxy/shadowsocks-rust 1.17.2: A Rust port of shadowsocks.
 net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
