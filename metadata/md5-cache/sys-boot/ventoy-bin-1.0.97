@@ -10,6 +10,6 @@ LICENSE=GPL-3
 RDEPEND=sys-fs/dosfstools sys-fs/exfat-utils sys-block/parted
 RESTRICT=strip mirror
 SLOT=0
-SRC_URI=https://github.com/ventoy/Ventoy/releases/download/v1.0.96/ventoy-1.0.96-linux.tar.gz
+SRC_URI=https://github.com/ventoy/Ventoy/releases/download/v1.0.97/ventoy-1.0.97-linux.tar.gz
 _eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
 _md5_=89451f8cadfa5165e3bb23b47828ef2d
