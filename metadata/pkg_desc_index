@@ -33,6 +33,7 @@ app-emulation/la-ow-syscall 0.1.0: Linux kernel module for compatibility with Lo
 app-emulation/liblol 0.0.4-r1: LoongArch old-world ABI compatibility layer from AOSC OS
 app-emulation/looking-glass 0_beta6-r1: A low latency KVMFR application for guests with VGA PCI Passthrough
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
+app-i18n/cskk 3.1.0: C ABIから使う事を目的とした SKK(Simple Kana Kanji henkan)方式のかな漢字変換ライブラリ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
 app-i18n/fcitx 9999: Fcitx5 Next generation of fcitx
 app-i18n/fcitx-anthy 5.1.2: Japanese Anthy input methods for Fcitx5
@@ -40,6 +41,7 @@ app-i18n/fcitx-bamboo 1.0.4: Typing Vietnamese by Bamboo core engine for Fcitx5
 app-i18n/fcitx-chewing 5.1.1: Chewing Wrapper for Fcitx.
 app-i18n/fcitx-chinese-addons 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
 app-i18n/fcitx-configtool 9999: Configuration module for Fcitx
+app-i18n/fcitx-cskk 1.2.0: SKK input method plugin for fcitx5 that uses LibCSKK
 app-i18n/fcitx-gtk 9999: Gtk im module for fcitx5 and glib based dbus client library
 app-i18n/fcitx-hangul 5.1.1 9999: Korean Hangul input method for Fcitx
 app-i18n/fcitx-lua 9999: Lua support for fcitx
