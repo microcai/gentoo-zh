@@ -12,5 +12,5 @@ PROPERTIES=live
 RDEPEND=app-i18n/fcitx:5 kde-frameworks/extra-cmake-modules:0 gtk2? ( x11-libs/gtk+:2 ) gtk3? ( x11-libs/gtk+:3[wayland?] ) gtk4? ( gui-libs/gtk:4[wayland?] ) introspection? ( dev-libs/gobject-introspection )
 REQUIRED_USE=|| ( gtk2 gtk3 gtk4 )
 SLOT=5
-_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	b2b07efa51009704f88173b2c7feab47	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	c7c9a62d6232cac66d4ea32d575c3e7c	gnome2-utils	b0183db3b2e07b18f3b77bffec72e116	xdg	4a14c5c24f121e7da66e5aab4a168c6e	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	b2b07efa51009704f88173b2c7feab47	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	c7c9a62d6232cac66d4ea32d575c3e7c	gnome2-utils	30dbce54b89e77b86f366548f94419ad	xdg	4a14c5c24f121e7da66e5aab4a168c6e	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
 _md5_=e7e9bac39d386dfc9cb9d32436fb1d8e
