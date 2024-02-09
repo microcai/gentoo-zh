@@ -115,8 +115,8 @@ dev-libs/lunar-calendar 3.0.1: a gtk+ calendar widget for chinese lunar library
 dev-libs/lunar-date 3.0.1: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458-r1 9999: Community managed domain list for V2Ray.
-dev-libs/v2ray-domain-list-community-bin 20231025154305: Community managed domain list for V2Ray.
-dev-libs/v2ray-geoip-bin 202310260037: GeoIP for V2Ray.
+dev-libs/v2ray-domain-list-community-bin 20240208184303: Community managed domain list for V2Ray.
+dev-libs/v2ray-geoip-bin 202402080038: GeoIP for V2Ray.
 dev-libs/v2ray-rules-dat 202310262208: Enhanced edition of V2Ray rules dat files.
 dev-python/archspec 0.2.2: A library for detecting, labeling, and reasoning about microarchitectures
 dev-python/conda 23.11.0: OS-agnostic, system-level binary package manager and ecosystem
@@ -166,7 +166,7 @@ media-fonts/lxgw-neo-zhisong 0.113: An open-source Chinese font derived from IPA
 media-fonts/nerd-fonts 3.1.1: Nerd Fonts is a project that patches developer targeted fonts with glyphs
 media-fonts/sarasa-gothic 1.0.5: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 media-fonts/sarasa-term-sc-nerd 1.1.0: Sarasa Mono SC font patched with Nerd fonts
-media-fonts/smiley-sans 2.0.0: An open-source font for Chinese.
+media-fonts/smiley-sans 2.0.1: An open-source font for Chinese.
 media-fonts/taipei-sans-tc 1.0: JT Foundry - Taipei Sans TC Beta font
 media-fonts/tiejili 1.100: An open-source font that extends Reggae One to Chinese.
 media-fonts/ttf-wps-fonts 1.0: Symbol fonts required by wps-office
