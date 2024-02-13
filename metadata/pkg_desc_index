@@ -16,7 +16,7 @@ app-arch/zchunk 1.3.2 1.4.0 9999: A format designed for highly efficient deltas 
 app-backup/btrfs-assistant 1.8 9999: A GUI management tool to make managing a Btrfs filesystem easier.
 app-backup/snapper-gui 220626: GUI for snapper, a tool for Linux filesystem snapshot management
 app-containers/distrobox-boost 9999: A container runtimer wrapper for OCI (distrobox/toolbox, also podman/docker)
-app-crypt/archlinux-keyring 20231113 20231222 20240208: GnuPG keyring of Archlinux developer keys
+app-crypt/archlinux-keyring 20231113 20231222 20240208-r1: GnuPG keyring of Archlinux developer keys
 app-crypt/cfssl 1.6.4: Cloudflare's PKI and TLS toolkit
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-dicts/fcitx-pinyin-moegirl 20230714: Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
