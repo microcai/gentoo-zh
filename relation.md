@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-02-12 09:12:23 CST)
+(The last generation time: 2024-02-14 00:49:07 CST)
 
 ### Packages
 
@@ -235,7 +235,7 @@
      sys-apps/pacman                        | 6.0.2                                     |  D     | https://archlinux.org/pacman/                                                           | Archlinux's binary package manager
        app-crypt/archlinux-keyring          | 20231113                                  |  D, RD | https://gitlab.archlinux.org/archlinux/archlinux-keyring                                | GnuPG keyring of Archlinux developer keys
                                             | 20231222                                  |        |                                                                                         |
-                                            | 20240208                                  |        |                                                                                         |
+                                            | 20240208-r1                               |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/bom-utils                         | 1.0                                       |        | https://github.com/jlblancoc/utf-bom-utils                                              | Small programs to add or remove the BOM mark in UTF8 files
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
