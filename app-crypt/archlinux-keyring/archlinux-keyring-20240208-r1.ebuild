@@ -10,7 +10,7 @@ SRC_URI="https://gitlab.archlinux.org/archlinux/${PN}/-/archive/${PV}/${P}.tar.b
 LICENSE="GPL-2" # "GPL" for the Arch linux package
 SLOT="0"
 KEYWORDS="~amd64"
-BDEPEND="app-crypt/sequoia-sq"
+BDEPEND=">=app-crypt/sequoia-sq-0.33.0"
 
 src_compile(){
 	emake build
