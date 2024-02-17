@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-02-16 21:49:53 CST)
+(The last generation time: 2024-02-17 13:34:45 CST)
 
 ### Packages
 
@@ -158,7 +158,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-text/groff-utf8                        | 0-r1                                      |        | http://www.haible.de/bruno/packages-groff-utf8.html                                     | GNU groff wrapper allowing UTF-8 input
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-text/master-pdf-editor                 | 5.9.81                                    |        | https://code-industry.net/free-pdf-editor/                                              | A complete solution for viewing and editing PDF files
+ app-text/master-pdf-editor                 | 5.9.82                                    |        | https://code-industry.net/free-pdf-editor/                                              | A complete solution for viewing and editing PDF files
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/clang_complete                     | 1.8                                       |        | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: use clang for completing C/C++ code.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
