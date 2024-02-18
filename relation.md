@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-02-17 13:34:45 CST)
+(The last generation time: 2024-02-18 19:38:08 CST)
 
 ### Packages
 
@@ -202,7 +202,7 @@
  dev-libs/v2ray-domain-list-community       | 4.39.2_p20210621183458-r1                 |        | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-libs/v2ray-rules-dat                   | 202310262208                              |        | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
+ dev-libs/v2ray-rules-dat                   | 202402172209                              |        | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/archspec                        | 0.2.2                                     |        | https://github.com/archspec/archspec                                                    | A library for detecting, labeling, and reasoning about microarchitectures
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
