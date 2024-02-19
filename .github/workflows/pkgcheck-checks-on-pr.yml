@@ -24,6 +24,8 @@ jobs:
       image: ghcr.io/liangyongxiang/gentoo-testing:master
 
     steps:
+      - name: Sync main tree
+        run: emerge --sync gentoo
       - name: Checkout the head ref of the pull request
         uses: actions/checkout@v2
         with:
