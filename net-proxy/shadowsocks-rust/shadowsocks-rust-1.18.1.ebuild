@@ -413,7 +413,7 @@ LICENSE+="
 	WTFPL-2
 "
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~mips ~x86"
+KEYWORDS="amd64 arm64 ~mips x86"
 IUSE="redir tun"
 
 BDEPEND=">=virtual/rust-1.70.0"
