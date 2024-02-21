@@ -237,6 +237,7 @@ net-misc/pcmanx-gtk2 1.3 9999: PCMan is a gtk+ based free BBS client
 net-misc/prips 1.0.0 1.2.0: print the IP addresses in a range
 net-misc/remmina-plugin-rustdesk 1.0.0.0-r1: A protocol plugin for Remmina to launch a Rustdesk connection.
 net-misc/rustdesk 1.2.2: Open source virtual / remote desktop infrastructure for everyone
+net-misc/todesk 4.1.0: ToDesk作为一款安全免费不限速的远程控制软件，通过领先的网络技术搭建并运营自己的网络系统，拥有覆盖全球的多节点、多业务，毫秒级延时应用层路由系统，带给用户像使用本地电脑一样的体验感。
 net-misc/you-get 9999: A video downloader for YouTube, Youku, niconico and a few other sites
 net-p2p/amule-dlp 9999: aMule with DLP patch, the all-platform eMule p2p client
 net-p2p/amule-dlp-antileech 9999: amule-dlp-antileech, dynamic DLP library for amule-dlp
@@ -267,7 +268,7 @@ sci-chemistry/vesta 3.5.8: Visualization for Electronic and STructural Analysis
 sci-electronics/circuitjs1-bin 9.3.2: Electronic Circuit Simulator in the Browser
 sci-electronics/jlc-assistant-bin 5.0.69: JLC Order Assistant (binary package)
 sci-electronics/lceda 6.5.37 6.5.39: LCEDA (binary package)
-sci-electronics/lceda-pro 2.1.44.1: LCEDA Pro (binary package)
+sci-electronics/lceda-pro 2.1.49.1: LCEDA Pro (binary package)
 sci-electronics/openfpgaloader 0.11.0: Universal utility for programming FPGAs
 sci-libs/libticables2 9999: Library to handle different link cables for TI calculators
 sci-libs/libticalcs2 9999: Library for communication with TI calculators
