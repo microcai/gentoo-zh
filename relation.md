@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-02-21 11:39:12 CST)
+(The last generation time: 2024-02-21 15:57:44 CST)
 
 ### Packages
 
@@ -158,8 +158,6 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-text/groff-utf8                        | 0-r1                                      |        | http://www.haible.de/bruno/packages-groff-utf8.html                                     | GNU groff wrapper allowing UTF-8 input
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-text/master-pdf-editor                 | 5.9.82                                    |        | https://code-industry.net/free-pdf-editor/                                              | A complete solution for viewing and editing PDF files
---------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/clang_complete                     | 1.8                                       |        | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: use clang for completing C/C++ code.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/easymotion                         | 1.3                                       |        | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: Vim motions on speed!
@@ -211,7 +209,7 @@
      dev-util/mamba                         | 1.5.6                                     | RD     | https://github.com/mamba-org/mamba                                                      | The Fast Cross-Platform Package Manager
        dev-cpp/reproc                       | 14.2.4                                    |  D, RD | https://github.com/DaanDeMeyer/reproc                                                   | A cross-platform (C99/C++11) process library
        dev-cpp/tl-expected                  | 1.1.0                                     |  D, RD | https://github.com/TartanLlama/expected                                                 | Guideline Support Library implementation by Microsoft
-       sys-libs/libsolv                     | 0.7.27                                    |  D, RD | https://github.com/openSUSE/libsolv                                                     | Library for solving packages and reading repositories
+       sys-libs/libsolv                     | 0.7.28                                    |  D, RD | https://github.com/openSUSE/libsolv                                                     | Library for solving packages and reading repositories
          app-arch/zchunk                    | 1.3.2                                     | RD     | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
                                             | 1.4.0                                     |        |                                                                                         |
                                             | 9999                                      |        |                                                                                         |
