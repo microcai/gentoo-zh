@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-02-21 15:57:44 CST)
+(The last generation time: 2024-02-21 16:45:14 CST)
 
 ### Packages
 
@@ -205,7 +205,7 @@
  dev-python/archspec                        | 0.2.2                                     |        | https://github.com/archspec/archspec                                                    | A library for detecting, labeling, and reasoning about microarchitectures
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/conda                           | 23.11.0                                   |        | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
-   dev-python/conda-libmamba-solver         | 23.12.0                                   |  D, RD | https://github.com/conda/conda-libmamba-solver                                          | The libmamba based solver for conda
+   dev-python/conda-libmamba-solver         | 24.1.0                                    |  D, RD | https://github.com/conda/conda-libmamba-solver                                          | The libmamba based solver for conda
      dev-util/mamba                         | 1.5.6                                     | RD     | https://github.com/mamba-org/mamba                                                      | The Fast Cross-Platform Package Manager
        dev-cpp/reproc                       | 14.2.4                                    |  D, RD | https://github.com/DaanDeMeyer/reproc                                                   | A cross-platform (C99/C++11) process library
        dev-cpp/tl-expected                  | 1.1.0                                     |  D, RD | https://github.com/TartanLlama/expected                                                 | Guideline Support Library implementation by Microsoft
