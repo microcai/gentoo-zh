@@ -36,7 +36,7 @@ src_configure() {
 	local mycmakeargs=(
 		-DBUILD_SHARED_LIBS=off
 		-DUSE_BUILTIN_CA_BUNDLE_CRT=off
-		-DUSE_LIBCXX=off
+		-DUSE_LIBCXX=on
 		-DENABLE_LTO=off
 		-DGUI=ON
 		-DCLI=OFF
