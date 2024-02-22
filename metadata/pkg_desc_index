@@ -118,7 +118,7 @@ dev-libs/v2ray-domain-list-community-bin 20240208184303: Community managed domai
 dev-libs/v2ray-geoip-bin 202402080038: GeoIP for V2Ray.
 dev-libs/v2ray-rules-dat 202402172209: Enhanced edition of V2Ray rules dat files.
 dev-python/archspec 0.2.2: A library for detecting, labeling, and reasoning about microarchitectures
-dev-python/conda 23.11.0: OS-agnostic, system-level binary package manager and ecosystem
+dev-python/conda 24.1.2: OS-agnostic, system-level binary package manager and ecosystem
 dev-python/conda-libmamba-solver 24.1.0: The libmamba based solver for conda
 dev-python/conda-package-handling 2.2.0: Create and extract conda packages of various formats
 dev-python/conda-package-streaming 0.7.0: An efficient library to read from new and old conda packages
