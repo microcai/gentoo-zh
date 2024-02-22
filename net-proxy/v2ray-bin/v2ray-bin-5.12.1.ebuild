@@ -24,7 +24,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm ~arm64 ~x86"
 
-RESRICT="mirror"
+RESTRICT="mirror"
 
 DEPEND="
 	!net-proxy/v2ray
