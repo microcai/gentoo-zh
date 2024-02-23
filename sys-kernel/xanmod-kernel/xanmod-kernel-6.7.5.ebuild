@@ -8,7 +8,7 @@ inherit kernel-build python-any-r1 toolchain-funcs
 PYTHON_COMPAT=( python3_{9..11} )
 MY_P=linux-${PV%.*}
 #Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
-GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 3))
+GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 4))
 XV="1"
 
 DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
