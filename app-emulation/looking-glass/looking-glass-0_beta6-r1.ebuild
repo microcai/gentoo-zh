@@ -27,6 +27,8 @@ DEPEND="gui-libs/egl-wayland
 		x11-libs/libX11
 		x11-libs/libXfixes
 		x11-libs/libXi
+		x11-libs/libXinerama
+		x11-libs/libXcursor
 		x11-libs/libXScrnSaver
 		x11-libs/libXpresent
 	)
@@ -132,4 +134,3 @@ src_install() {
 	domenu "${FILESDIR}/${PN}.desktop"
 	newicon -s 128 "${S}/resources/icon-128x128.png" "${PN}.png"
 }
-
