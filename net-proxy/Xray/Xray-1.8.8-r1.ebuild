@@ -12,13 +12,13 @@ SRC_URI="https://github.com/XTLS/Xray-core/archive/refs/tags/v${PV}.tar.gz -> ${
 
 LICENSE="MPL-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~riscv ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 
 RESTRICT="mirror"
 
 RDEPEND="app-alternatives/v2ray-geoip
 	app-alternatives/v2ray-geosite"
-BDEPEND=">=dev-lang/go-1.21.4"
+BDEPEND=">=dev-lang/go-1.22"
 
 S="${WORKDIR}/${PN}-core-${PV}"
 
