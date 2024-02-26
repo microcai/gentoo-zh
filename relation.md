@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-02-26 23:09:10 CST)
+(The last generation time: 2024-02-26 23:09:42 CST)
 
 ### Packages
 
@@ -198,7 +198,7 @@
  dev-libs/v2ray-domain-list-community       | 4.39.2_p20210621183458-r1                 |        | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-libs/v2ray-rules-dat                   | 202402172209                              |        | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
+ dev-libs/v2ray-rules-dat                   | 202402252208                              |        | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/archspec                        | 0.2.2                                     |        | https://github.com/archspec/archspec                                                    | A library for detecting, labeling, and reasoning about microarchitectures
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -401,8 +401,8 @@
                                             | 5.1.3                                     |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/mosdns-cn-bin                      | 1.4.0                                     |        | https://github.com/IrineSistiana/mosdns-cn                                              | A DNS forwarder
-   dev-libs/v2ray-domain-list-community-bin | 20240208184303                            |  D, RD | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
-   dev-libs/v2ray-geoip-bin                 | 202402080038                              |  D, RD | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
+   dev-libs/v2ray-domain-list-community-bin | 20240221053250                            |  D, RD | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+   dev-libs/v2ray-geoip-bin                 | 202402220038                              |  D, RD | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/phddns                             | 2.0.6.32828                               |        | http://hsk.oray.com/                                                                    | Phddns
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -532,9 +532,9 @@
                                             | 2.2.4.6                                   |        |                                                                                         |
                                             | 9999                                      |        |                                                                                         |
    net-proxy/Xray                           | 1.8.7                                     | RD     | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
-                                            | 1.8.8                                     |        |                                                                                         |
-     app-alternatives/v2ray-geoip           | 0                                         |  D, RD |                                                                                         | symlink for v2ray-geoip
-     app-alternatives/v2ray-geosite         | 0                                         |  D, RD |                                                                                         | symlink for v2ray-geosite
+                                            | 1.8.8-r1                                  |        |                                                                                         |
+     app-alternatives/v2ray-geoip           | 0-r1                                      |  D, RD |                                                                                         | symlink for v2ray-geoip
+     app-alternatives/v2ray-geosite         | 0-r1                                      |  D, RD |                                                                                         | symlink for v2ray-geosite
    net-proxy/v2ray                          | 5.11.0                                    | RD     | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
                                             | 5.12.1                                    |        |                                                                                         |
                                             | 5.13.0                                    |        |                                                                                         |
