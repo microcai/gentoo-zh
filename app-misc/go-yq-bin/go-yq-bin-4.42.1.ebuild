@@ -5,10 +5,10 @@ EAPI=8
 
 inherit unpacker
 
-MY_PN="${PN/-bin/}_linux_amd64"
-
 DESCRIPTION="yq is a portable command-line YAML, JSON and XML processor"
 HOMEPAGE="https://github.com/mikefarah/yq"
+
+MY_PN="yq_linux_amd64"
 
 SRC_URI="https://github.com/mikefarah/yq/releases/download/v${PV}/${MY_PN}.tar.gz -> ${P}.tar.gz"
 
