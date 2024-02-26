@@ -5,8 +5,10 @@ EAPI=8
 
 DESCRIPTION="Enhanced edition of V2Ray rules dat files."
 HOMEPAGE="https://github.com/Loyalsoldier/v2ray-rules-dat"
-SRC_URI="geosite? ( https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${PV}/geosite.dat -> ${P}-geosite.dat )
-	geoip? ( https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${PV}/geoip.dat -> ${P}-geoip.dat )"
+SRC_URI="
+	geosite? ( https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${PV}/geosite.dat -> ${P}-geosite.dat )
+	geoip? ( https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${PV}/geoip.dat -> ${P}-geoip.dat )
+"
 
 LICENSE="GPL-3"
 SLOT="0"
