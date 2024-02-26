@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-02-25 22:22:52 CST)
+(The last generation time: 2024-02-26 12:47:08 CST)
 
 ### Packages
 
@@ -127,9 +127,7 @@
  app-misc/xmind                             | 22.11.3656                                |        | https://www.xmind.net                                                                   | Brainstorming and Mind Mapping Software
                                             | 23.07.201366-r1                           |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/yq-bin                            | 4.30.6                                    |        | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
-                                            | 4.35.2                                    |        |                                                                                         |
-                                            | 4.41.1                                    |        |                                                                                         |
+ app-misc/yq-bin                            | 4.42.1                                    |        | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-office/anytype-bin                     | 0.35.4                                    |        | https://anytype.io                                                                      | A notebook based on p2p network
                                             | 0.38.0                                    |        |                                                                                         |
