@@ -236,12 +236,12 @@ prefix = "v"
 
 #["app-misc/xmind"]
 
-["app-misc/yq-bin"]
+["app-misc/go-yq-bin"]
 source = "github"
 github = "mikefarah/yq"
 use_latest_release = true
 prefix = "v"
-github_account = "oatiz"
+github_account = "gouwazi"
 
 ["app-office/anytype-bin"]
 source = "github"
