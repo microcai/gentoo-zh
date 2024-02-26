@@ -10,8 +10,8 @@ acct-user/n2n 0: System user: n2n
 app-admin/rbw 1.9.0: Unofficial Bitwarden CLI
 app-admin/supersm 0.5.1: Super Symlink Manager
 app-admin/zenmonitor3 2.0.0: Zen monitor is monitoring software for AMD Zen-based CPUs
-app-alternatives/v2ray-geoip 0: symlink for v2ray-geoip
-app-alternatives/v2ray-geosite 0: symlink for v2ray-geosite
+app-alternatives/v2ray-geoip 0-r1: symlink for v2ray-geoip
+app-alternatives/v2ray-geosite 0-r1: symlink for v2ray-geosite
 app-arch/zchunk 1.3.2 1.4.0 9999: A format designed for highly efficient deltas while maintaining good compression
 app-backup/btrfs-assistant 1.8 9999: A GUI management tool to make managing a Btrfs filesystem easier.
 app-backup/snapper-gui 220626: GUI for snapper, a tool for Linux filesystem snapshot management
@@ -114,9 +114,9 @@ dev-libs/lunar-calendar 3.0.1: a gtk+ calendar widget for chinese lunar library
 dev-libs/lunar-date 3.0.1: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458-r1 9999: Community managed domain list for V2Ray.
-dev-libs/v2ray-domain-list-community-bin 20240208184303: Community managed domain list for V2Ray.
-dev-libs/v2ray-geoip-bin 202402080038: GeoIP for V2Ray.
-dev-libs/v2ray-rules-dat 202402172209: Enhanced edition of V2Ray rules dat files.
+dev-libs/v2ray-domain-list-community-bin 20240221053250: Community managed domain list for V2Ray.
+dev-libs/v2ray-geoip-bin 202402220038: GeoIP for V2Ray.
+dev-libs/v2ray-rules-dat 202402252208: Enhanced edition of V2Ray rules dat files.
 dev-python/archspec 0.2.2: A library for detecting, labeling, and reasoning about microarchitectures
 dev-python/conda 24.1.2: OS-agnostic, system-level binary package manager and ecosystem
 dev-python/conda-libmamba-solver 24.1.0: The libmamba based solver for conda
@@ -147,7 +147,7 @@ dev-util/tailspin 3.0.0: A log file highlighter
 dev-util/tauri-cli 1.5.9 2.0.0_alpha17: Command line interface for building Tauri apps
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-util/zprint-bin 1.2.7 1.2.8: Clojure and Clojurescript source code formatter
-dev-vcs/gitoxide 0.33.0: A command-line application for interacting with git repositories
+dev-vcs/gitoxide 0.34.0: A command-line application for interacting with git repositories
 games-arcade/osu-lazer 2023.1224.0 2023.1229.0: rhythm is just a *click* away!
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-fps/source-engine 9999: A 3D game engine developed by Valve
@@ -245,7 +245,7 @@ net-p2p/n2n 3.0 3.1.1 9999: A Layer Two Peer-to-Peer VPN
 net-p2p/qbittorrent-enhanced 4.6.3.10: qBittorrent Enhanced, based on qBittorrent
 net-print/epson-inkjet-printer_201207w 1.0.0: Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 net-print/pantum 1.1.94: 奔图打印机Linux驱动
-net-proxy/Xray 1.8.7 1.8.8: Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
+net-proxy/Xray 1.8.7 1.8.8-r1: Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
 net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
 net-proxy/clash-nyanpasu 1.4.2: Clash GUI based on tauri
 net-proxy/clash-rs 0.1.11: Custom protocol, rule based network proxy
