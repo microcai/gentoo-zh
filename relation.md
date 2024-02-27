@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-02-27 15:44:18 CST)
+(The last generation time: 2024-02-28 00:01:07 CST)
 
 ### Packages
 
@@ -98,7 +98,6 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/rime-wubi                         | 20200908                                  |        | https://github.com/rime/rime-wubi                                                       | wubi input for rime
    app-i18n/rime-data                       | 20220409                                  |  D, RD | https://rime.im/                                                                        | Data resources for Rime Input Method Engine
-     app-i18n/librime                       | 1.9.0                                     |  D, RD | https://rime.im/                                                                        | RIME (Rime Input Method Engine) core library
    app-i18n/rime-pinyin-simp                | 20230104                                  |  D, RD | https://github.com/rime/rime-pinyin-simp                                                | Simple pinyin input for rime
      app-i18n/rime-stroke                   | 20230204                                  |  D, RD | https://github.com/rime/rime-stroke                                                     | Stroke input for rime
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
