@@ -52,7 +52,6 @@ app-i18n/fcitx-qt:onlyplugin - Build only plugin
 app-i18n/fcitx-qt:qt6 - Build support for QT6
 app-i18n/fcitx-qt:staticplugin - Build plugin as static
 app-i18n/libime-jyutping:engine - Enable input method for fcitx
-app-i18n/librime:debug - Enable debugging (including logging of input of RIME input methods)
 app-i18n/librime-octagram:debug - Enable debugging (including logging of input of RIME input methods)
 app-i18n/librime-octagram:tools - install grammar builder
 app-i18n/mozc:fcitx4 - Enable support for app-i18n/fcitx 4
