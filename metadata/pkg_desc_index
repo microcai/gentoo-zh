@@ -84,7 +84,7 @@ app-misc/xmind 22.11.3656 23.07.201366-r1: Brainstorming and Mind Mapping Softwa
 app-office/anytype-bin 0.35.4 0.38.0: A notebook based on p2p network
 app-office/bytedance-feishu 4.11.6.2 5.9.18 5.14.14 5.26.13-r1 6.9.20: feishu - ByteDance's enterprise collaboration platform
 app-office/freeoffice 1062 1064 1068: A complete, free Microsoft Office-compatible alternative office suite.
-app-office/wps-office 11.1.0.11711-r2: WPS Office is an office productivity suite, Here is the Chinese version
+app-office/wps-office 11.1.0.11719: WPS Office is an office productivity suite, Here is the Chinese version
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-shells/gitstatus 1.5.4: Git status for Bash and Zsh prompt
 app-shells/zsh-theme-powerlevel10k 1.20.0: Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
