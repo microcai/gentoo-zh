@@ -6,6 +6,7 @@
 		<name>Yachen Wang</name>
 	</maintainer>
 	<use>
+		<flag name="0xproto">Install Nerd-fonts-patched 0xProto fonts</flag>
 		<flag name="3270">Install Nerd-fonts-patched 3270 fonts</flag>
 		<flag name="agave">Install Nerd-fonts-patched Agave fonts</flag>
 		<flag name="anonymouspro">Install Nerd-fonts-patched Anonymous Pro fonts</flag>
@@ -14,15 +15,20 @@
 		<flag name="bigblueterminal">Install Nerd-fonts-patched Big Blue Terminal fonts</flag>
 		<flag name="bitstreamverasansmono"> Install Nerd-fonts-patched Bitstream Vera Sans Mono fonts </flag>
 		<flag name="cascadiacode">Install Nerd-fonts-patched Cascadia Code fonts</flag>
+		<flag name="cascadiamono">Install Nerd-fonts-patched Cascadia Mono fonts</flag>
 		<flag name="codenewroman">Install Nerd-fonts-patched Code New Roman fonts</flag>
 		<flag name="comicshannsmono">Install Nerd-fonts-patched Comic Shanns Mono fonts</flag>
+		<flag name="commitmono">Install Nerd-fonts-patched Commit Mono fonts</flag>
 		<flag name="cousine">Install Nerd-fonts-patched Cousine fonts</flag>
+		<flag name="d2coding">Install Nerd-fonts-patched D2Coding fonts</flag>
 		<flag name="daddytimemono">Install Nerd-fonts-patched Daddy Time Mono fonts</flag>
 		<flag name="dejavusansmono">Install Nerd-fonts-patched DejaVu Sans Mono fonts</flag>
 		<flag name="droidsansmono">Install Nerd-fonts-patched Droid Sans Mono fonts</flag>
+		<flag name="envycoder"> Install Nerd-fonts-patched EnvyCodeR fonts</flag>
 		<flag name="fantasquesansmono"> Install Nerd-fonts-patched Fantasque Sans mono fonts </flag>
 		<flag name="firacode">Install Nerd-fonts-patched Fira Code fonts</flag>
 		<flag name="firamono">Install Nerd-fonts-patched Fira Mono fonts</flag>
+		<flag name="geistmono">Install Nerd-fonts-patched Geist Mono fonts</flag>
 		<flag name="go-mono">Install Nerd-fonts-patched Go-Mono fonts</flag>
 		<flag name="gohu">Install Nerd-fonts-patched Gohu fonts</flag>
 		<flag name="hack">Install Nerd-fonts-patched Hack fonts</flag>
@@ -31,16 +37,20 @@
 		<flag name="hermit">Install Nerd-fonts-patched Hermit fonts</flag>
 		<flag name="ia-writer">Install Nerd-fonts-patched iA-Writer fonts</flag>
 		<flag name="ibmplexmono">Install Nerd-fonts-patched IBM Plex Mono fonts</flag>
+		<flag name="intelonemono">Install Nerd-fonts-patched Intel One Mono fonts</flag>
 		<flag name="inconsolata">Install Nerd-fonts-patched Inconsolata fonts</flag>
 		<flag name="inconsolatago">Install Nerd-fonts-patched Inconsolata Go fonts</flag>
 		<flag name="inconsolatalgc">Install Nerd-fonts-patched Inconsolata LGC fonts</flag>
 		<flag name="iosevka">Install Nerd-fonts-patched Iosevka fonts</flag>
-		<flag name="iosevkaterm">Install Nerd-fonts-patched Iosevka terminal fonts</flag>
+		<flag name="iosevkaterm">Install Nerd-fonts-patched Iosevka Terminal fonts</flag>
+		<flag name="iosevkatermslab"> Install Nerd-fonts-patched Iosevka Terminal Slab fonts</flag>
 		<flag name="jetbrainsmono">Install Nerd-fonts-patched JetBrains Mono fonts</flag>
 		<flag name="lekton">Install Nerd-fonts-patched Lekton fonts</flag>
 		<flag name="liberationmono">Install Nerd-fonts-patched Liberation Mono fonts</flag>
 		<flag name="lilex">Install Nerd-fonts-patched Lilex Mono fonts</flag>
+		<flag name="martianmono">Install Nerd-fonts-patched Martian Mono fonts</flag>
 		<flag name="meslo">Install Nerd-fonts-patched Meslo fonts</flag>
+		<flag name="monaspace">Install Nerd-fonts-patched Monaspace fonts</flag>
 		<flag name="monofur">Install Nerd-fonts-patched Monofur fonts</flag>
 		<flag name="monoid">Install Nerd-fonts-patched Monoid fonts</flag>
 		<flag name="mononoki">Install Nerd-fonts-patched Mononoki fonts</flag>
