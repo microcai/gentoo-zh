@@ -10,5 +10,5 @@ LICENSE=LGPL-2.1
 RDEPEND=x11-libs/cairo x11-libs/gdk-pixbuf media-libs/openjpeg:2 sys-libs/zlib
 SLOT=0
 SRC_URI=https://github.com/openslide/openslide/archive/239d7bd9f603be159e6558464f311b5b243d12b1.tar.gz -> openslide-20230904.tar.gz
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	042f4cc53680245bf99a84669b94155a	meson	e322276188f86eacb29ae081ba5485c8
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	24c947ff5f858625cf0b33c15eed4425	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	042f4cc53680245bf99a84669b94155a	meson	d4888db7211d69d40b05ac892511c498
 _md5_=2753c60f5a5acc013f685b623872afff
