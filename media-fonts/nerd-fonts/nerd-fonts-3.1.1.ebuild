@@ -11,6 +11,7 @@ COMMON_URI="https://github.com/ryanoasis/${PN}/releases/download/v${PV}"
 TAG_URI="https://github.com/ryanoasis/nerd-fonts/raw/v${PV}"
 
 FONTS=(
+	0xproto
 	3270
 	Agave
 	AnonymousPro
@@ -19,15 +20,20 @@ FONTS=(
 	BigBlueTerminal
 	BitstreamVeraSansMono
 	CascadiaCode
+	CascadiaMono
 	CodeNewRoman
 	ComicShannsMono
+	CommitMono
 	Cousine
+	D2Coding
 	DaddyTimeMono
 	DejaVuSansMono
 	DroidSansMono
+	EnvyCodeR
 	FantasqueSansMono
 	FiraCode
 	FiraMono
+	GeistMono
 	Go-Mono
 	Gohu
 	Hack
@@ -39,16 +45,20 @@ FONTS=(
 	Inconsolata
 	InconsolataGo
 	InconsolataLGC
+	IntelOneMono
 	Iosevka
 	IosevkaTerm
+	IosevkaTermSlab
 	JetBrainsMono
 	Lekton
 	LiberationMono
 	Lilex
+	MartianMono
 	Meslo
 	Monofur
 	Monoid
 	Mononoki
+	Monaspace
 	MPlus
 	NerdFontsSymbolsOnly
 	Noto
@@ -68,6 +78,7 @@ FONTS=(
 )
 
 SRC_URI="
+	0xproto? ( ${COMMON_URI}/0xProto.zip -> 0xProto-${PV}.zip )
 	3270? ( ${COMMON_URI}/3270.zip -> 3270-nf-${PV}.zip )
 	agave? ( ${COMMON_URI}/Agave.zip -> Agave-nf-${PV}.zip )
 	anonymouspro? ( ${COMMON_URI}/AnonymousPro.zip -> AnonymousPro-nf-${PV}.zip )
@@ -76,15 +87,20 @@ SRC_URI="
 	bigblueterminal? ( ${COMMON_URI}/BigBlueTerminal.zip -> BigBlueTerminal-nf-${PV}.zip )
 	bitstreamverasansmono? ( ${COMMON_URI}/BitstreamVeraSansMono.zip -> BitstreamVeraSansMono-nf-${PV}.zip )
 	cascadiacode? ( ${COMMON_URI}/CascadiaCode.zip -> CascadiaCode-nf-${PV}.zip )
+	cascadiamono? ( ${COMMON_URI}/CascadiaMono.zip -> CascadiaMono-nf-${PV}.zip )
 	codenewroman? ( ${COMMON_URI}/CodeNewRoman.zip -> CodeNewRoman-nf-${PV}.zip )
 	comicshannsmono? ( ${COMMON_URI}/ComicShannsMono.zip -> ComicShannsMono-nf-${PV}.zip )
+	commitmono? ( ${COMMON_URI}/CommitMono.zip -> CommitMono-nf-${PV}.zip )
 	cousine? ( ${COMMON_URI}/Cousine.zip -> Cousine-nf-${PV}.zip )
+	d2coding? ( ${COMMON_URI}/D2Coding.zip -> D2Coding-nf-${PV}.zip )
 	daddytimemono? ( ${COMMON_URI}/DaddyTimeMono.zip -> DaddyTimeMono-nf-${PV}.zip )
+	envycoder? ( ${COMMON_URI}/EnvyCodeR.zip -> EnvyCodeR-nf-${PV}.zip )
 	dejavusansmono? ( ${COMMON_URI}/DejaVuSansMono.zip -> DejaVuSansMono-nf-${PV}.zip )
 	droidsansmono? ( ${COMMON_URI}/DroidSansMono.zip -> DroidSansMono-nf-${PV}.zip )
 	fantasquesansmono? ( ${COMMON_URI}/FantasqueSansMono.zip -> FantasqueSansMono-nf-${PV}.zip )
 	firacode? ( ${COMMON_URI}/FiraCode.zip -> FiraCode-nf-${PV}.zip )
 	firamono? ( ${COMMON_URI}/FiraMono.zip -> FiraMono-nf-${PV}.zip )
+	geistmono? ( ${COMMON_URI}/GeistMono.zip -> GeistMono-nf-${PV}.zip )
 	go-mono? ( ${COMMON_URI}/Go-Mono.zip -> Go-Mono-nf-${PV}.zip )
 	gohu? ( ${COMMON_URI}/Gohu.zip -> Gohu-nf-${PV}.zip )
 	hack? ( ${COMMON_URI}/Hack.zip -> Hack-nf-${PV}.zip )
@@ -93,19 +109,24 @@ SRC_URI="
 	hermit? ( ${COMMON_URI}/Hermit.zip -> Hermit-nf-${PV}.zip )
 	ia-writer? ( ${COMMON_URI}/iA-Writer.zip -> iA-Writer-nf-${PV}.zip )
 	ibmplexmono? ( ${COMMON_URI}/IBMPlexMono.zip -> IBMPlexMono-nf-${PV}.zip )
+	intelonemono? ( ${COMMON_URI}/IntelOneMono.zip -> IntelOneMono-nf-${PV}.zip )
+
 	inconsolata? ( ${COMMON_URI}/Inconsolata.zip -> Inconsolata-nf-${PV}.zip )
 	inconsolatago? ( ${COMMON_URI}/InconsolataGo.zip -> InconsolataGo-nf-${PV}.zip )
 	inconsolatalgc? ( ${COMMON_URI}/InconsolataLGC.zip -> InconsolataLGC-nf-${PV}.zip )
 	iosevka? ( ${COMMON_URI}/Iosevka.zip -> Iosevka-nf-${PV}.zip )
 	iosevkaterm? ( ${COMMON_URI}/IosevkaTerm.zip -> IosevkaTerm-nf-${PV}.zip )
+	iosevkatermslab? ( ${COMMON_URI}/IosevkaTermSlab.zip -> IosevkaTermSlab-nf-${PV}.zip )
 	jetbrainsmono? ( ${COMMON_URI}/JetBrainsMono.zip -> JetBrainsMono-nf-${PV}.zip )
 	lekton? ( ${COMMON_URI}/Lekton.zip -> Lekton-nf-${PV}.zip )
 	liberationmono? ( ${COMMON_URI}/LiberationMono.zip -> LiberationMono-nf-${PV}.zip )
 	lilex? ( ${COMMON_URI}/Lilex.zip -> Lilex-nf-${PV}.zip )
 	meslo? ( ${COMMON_URI}/Meslo.zip -> Meslo-nf-${PV}.zip )
+	martianmono? ( ${COMMON_URI}/MartianMono.zip -> MartianMono-nf-${PV}.zip )
 	monofur? ( ${COMMON_URI}/Monofur.zip -> Monofur-nf-${PV}.zip )
 	monoid? ( ${COMMON_URI}/Monoid.zip -> Monoid-nf-${PV}.zip )
 	mononoki? ( ${COMMON_URI}/Mononoki.zip -> Mononoki-nf-${PV}.zip )
+	monaspace? ( ${COMMON_URI}/Monaspace.zip -> Monaspace-nf-${PV}.zip )
 	mplus? ( ${COMMON_URI}/MPlus.zip -> MPlus-nf-${PV}.zip )
 	nerdfontssymbolsonly? ( ${COMMON_URI}/NerdFontsSymbolsOnly.zip -> NerdFontsSymbolsOnly-nf-${PV}.zip )
 	noto? ( ${COMMON_URI}/Noto.zip -> Noto-nf-${PV}.zip )
