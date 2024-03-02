@@ -1,11 +1,9 @@
 # Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit unpacker xdg
-
-MY_PV="$(ver_cut 4)"
 
 DESCRIPTION="WPS Office is an office productivity suite, Here is the Chinese version"
 HOMEPAGE="https://www.wps.cn/product/wpslinux/"
@@ -13,14 +11,14 @@ HOMEPAGE="https://www.wps.cn/product/wpslinux/"
 KEYWORDS="~amd64 ~arm64 ~loong ~mips"
 
 SRC_URI="
-	amd64?	( https://wps-linux-personal.wpscdn.cn/wps/download/ep/Linux2019/${MY_PV}/${PN}_${PV}_amd64.deb )
-	arm64?	( https://wps-linux-personal.wpscdn.cn/wps/download/ep/Linux2019/${MY_PV}/${PN}_${PV}_arm64.deb )
-	loong?	( https://wps-linux-personal.wpscdn.cn/wps/download/ep/Linux2019/${MY_PV}/${PN}_${PV}_loongarch64.deb )
-	mips?	( https://wps-linux-personal.wpscdn.cn/wps/download/ep/Linux2019/${MY_PV}/${PN}_${PV}_mips64el.deb )
+	amd64?	( https://wb9.s-ton.top/wps302/${PV}/amd64 -> ${PN}_${PV}_amd64.deb )
+	arm64?	( https://wb9.s-ton.top/wps302/${PV}/arm64 -> ${PN}_${PV}_arm64.deb )
+	loong?	( https://wb9.s-ton.top/wps302/${PV}/loongarch64 -> ${PN}_${PV}_loongarch64.deb )
+	mips?	( https://wb9.s-ton.top/wps302/${PV}/mips64el -> ${PN}_${PV}_mips64el.deb )
 "
 
 SLOT="0"
-RESTRICT="strip mirror bindist fetch" # mirror as explained at bug #547372
+RESTRICT="strip mirror bindist" # mirror as explained at bug #547372
 LICENSE="WPS-EULA"
 IUSE="big-endian systemd"
 REQUIRED_USE="mips? ( !big-endian )"
@@ -48,7 +46,7 @@ RDEPEND="
 		media-libs/libsndfile
 		media-libs/libvorbis
 		media-libs/tiff-compat:4
-		media-sound/pulseaudio
+		media-libs/libpulse
 		net-libs/libasyncns
 		net-print/cups
 		sys-apps/attr
