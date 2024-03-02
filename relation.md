@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-02-29 17:03:39 CST)
+(The last generation time: 2024-03-02 18:52:19 CST)
 
 ### Packages
 
@@ -141,7 +141,7 @@
                                             | 1064                                      |        |                                                                                         |
                                             | 1068                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-office/wps-office                      | 11.1.0.11711-r2                           |        | https://www.wps.cn/product/wpslinux/                                                    | WPS Office is an office productivity suite, Here is the Chinese version
+ app-office/wps-office                      | 11.1.0.11719                              |        | https://www.wps.cn/product/wpslinux/                                                    | WPS Office is an office productivity suite, Here is the Chinese version
    virtual/loong-ow-compat                  | 0                                         | RD     |                                                                                         | Virtual for LoongArch old-world compatibility
      app-emulation/liblol                   | 0.0.4-r1                                  | RD     | https://github.com/shankerwangmiao/liblol                                               | LoongArch old-world ABI compatibility layer from AOSC OS
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
