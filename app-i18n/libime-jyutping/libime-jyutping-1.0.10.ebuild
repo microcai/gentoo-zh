@@ -32,10 +32,6 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-PATCHES=(
-	"${FILESDIR}/${P}-add-missing-files-for-doc.patch"
-)
-
 src_configure() {
 	local mycmakeargs=(
 		-DENABLE_ENGINE=$(usex engine)
