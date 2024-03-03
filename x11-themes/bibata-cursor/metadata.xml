@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+<email>nurali258@foxmail.com</email>
+<name>Nurali</name>
+</maintainer>
+<use>
+<flag name="righthanded">Left-leaning mouse cursor</flag>
+<flag name="lefthanded">Right-leaning mouse cursor</flag>
+<flag name="modern-style">Rounded style</flag>
+<flag name="original-style">Sharp-edged style</flag>
+<flag name="color-amber">Cursor color: Yellow</flag>
+<flag name="color-black">Cursor color: Black</flag>
+<flag name="color-white">Cursor color: White</flag>
+</use>
+</pkgmetadata>
