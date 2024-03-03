@@ -1,15 +1,16 @@
 BDEPEND=kde-frameworks/extra-cmake-modules:0 virtual/pkgconfig app-alternatives/ninja >=dev-build/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
-DEPEND=>=app-i18n/fcitx-5.1.5:5 app-i18n/fcitx-qt[qt5,-onlyplugin] app-i18n/libskk app-i18n/skk-jisyo
+DEPEND=>=app-i18n/fcitx-5.1.6:5 app-i18n/fcitx-qt[qt5?,qt6?,-onlyplugin] app-i18n/libskk app-i18n/skk-jisyo qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5= dev-qt/qtwidgets:5 ) qt6? ( dev-qt/qtbase:6[gui,widgets] )
 DESCRIPTION=Japanese SKK input engine for Fcitx5
 EAPI=8
 HOMEPAGE=https://fcitx-im.org/ https://github.com/fcitx/fcitx5-skk
 IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake git-r3 xdg
-IUSE=+qt5
+IUSE=+qt5 qt6
 LICENSE=GPL-3+
 PROPERTIES=live
-RDEPEND=>=app-i18n/fcitx-5.1.5:5 app-i18n/fcitx-qt[qt5,-onlyplugin] app-i18n/libskk app-i18n/skk-jisyo
+RDEPEND=>=app-i18n/fcitx-5.1.6:5 app-i18n/fcitx-qt[qt5?,qt6?,-onlyplugin] app-i18n/libskk app-i18n/skk-jisyo qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5= dev-qt/qtwidgets:5 ) qt6? ( dev-qt/qtbase:6[gui,widgets] )
+REQUIRED_USE=^^ ( qt5 qt6 )
 SLOT=5
 _eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	24c947ff5f858625cf0b33c15eed4425	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	c7c9a62d6232cac66d4ea32d575c3e7c	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b	xdg	4a14c5c24f121e7da66e5aab4a168c6e
-_md5_=d2c1001b12fc478163a3ea5ae64085da
+_md5_=4a3f69eb4b45bcf6f429271f3793d508
