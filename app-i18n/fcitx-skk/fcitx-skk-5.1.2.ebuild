@@ -10,11 +10,13 @@ inherit xdg cmake
 DESCRIPTION="Japanese SKK input engine for Fcitx5"
 HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-skk"
 SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_PN}-${PV}.tar.xz"
+S="${WORKDIR}/${MY_PN}-${PV}"
 
 LICENSE="GPL-3+"
 SLOT="5"
 KEYWORDS="~amd64 ~x86"
 IUSE="+qt5 qt6"
+REQUIRED_USE="^^ ( qt5 qt6 )"
 
 RDEPEND="
 	>=app-i18n/fcitx-5.1.6:5
@@ -36,12 +38,13 @@ BDEPEND="
 	virtual/pkgconfig
 "
 
-S="${WORKDIR}/${MY_PN}-${PV}"
-
 src_configure() {
-	local mycmakeargs=(
-		-DENABLE_QT=$(usex qt5 ON $(usex qt6))
-		-DUSE_QT6=$(usex qt5 OFF $(usex qt6))
-	)
+	local mycmakeargs=( )
+	if use qt5 || use qt6; then
+		mycmakeargs+=(
+			-DENABLE_QT=ON
+			-DUSE_QT6=$(usex qt6)
+		)
+	fi
 	cmake_src_configure
 }
