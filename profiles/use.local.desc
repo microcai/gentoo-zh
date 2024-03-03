@@ -274,6 +274,13 @@ x11-misc/picom-jonaburg:doc - Build documentation and man pages (requires app-te
 x11-misc/picom-jonaburg:drm - Enable support for using drm for vsync
 x11-misc/picom-jonaburg:opengl - Enable features that require opengl (opengl backend, and opengl vsync methods)
 x11-plugins/vicious:contrib - Install extra widgets, some for less common hardware, some contributed by Vicious users.
+x11-themes/bibata-cursor:color-amber - Cursor color: Yellow
+x11-themes/bibata-cursor:color-black - Cursor color: Black
+x11-themes/bibata-cursor:color-white - Cursor color: White
+x11-themes/bibata-cursor:lefthanded - Right-leaning mouse cursor
+x11-themes/bibata-cursor:modern-style - Rounded style
+x11-themes/bibata-cursor:original-style - Sharp-edged style
+x11-themes/bibata-cursor:righthanded - Left-leaning mouse cursor
 x11-themes/nordic:cinnamon - Install theme for gnome-extra/cinnamon
 x11-themes/nordic:gnome-shell - Install theme for gnome-base/gnome-shell
 x11-themes/nordic:gtk2 - Install GTK+2 theme
