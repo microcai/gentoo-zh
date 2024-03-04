@@ -667,6 +667,12 @@ source = "github"
 github = "osdlyrics/osdlyrics"
 use_latest_release = true
 
+["media-plugins/waylyrics"]
+source = "github"
+github = "waylyrics/waylyrics"
+use_latest_release = true
+github_account = "liuyujielol"
+
 #["media-sound/barva"]
 
 ["media-sound/feeluown"]
