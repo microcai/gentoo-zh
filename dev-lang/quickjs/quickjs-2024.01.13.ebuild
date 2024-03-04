@@ -1,4 +1,4 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 2023-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -10,13 +10,12 @@ MY_P="${PN}-${PV//./-}"
 DESCRIPTION="Small embeddable Javascript engine"
 HOMEPAGE="https://bellard.org/quickjs/"
 SRC_URI="https://bellard.org/quickjs/${MY_P}.tar.xz"
+S="${WORKDIR}/${MY_P}"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="lto"
-
-S="${WORKDIR}/${MY_P}"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-2020.11.08_Remove-TTY-check-in-test.patch"
@@ -47,4 +46,8 @@ src_compile() {
 	else
 		emake
 	fi
+}
+
+src_install() {
+	emake DESTDIR="${ED}" PREFIX=/usr install
 }
