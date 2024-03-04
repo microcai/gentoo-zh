@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -12,6 +12,7 @@ HOMEPAGE="https://www.appflowy.io/"
 SRC_URI="
 	https://github.com/AppFlowy-IO/AppFlowy/releases/download/${PV}/AppFlowy-${PV}-linux-x86_64.tar.gz
 "
+S="${WORKDIR}/${MY_PN}"
 
 LICENSE="AGPL-3"
 SLOT="0"
@@ -20,7 +21,7 @@ KEYWORDS="-* ~amd64"
 DEPEND="
 	app-accessibility/at-spi2-core:2
 	dev-libs/glib:2
-	dev-libs/openssl
+	dev-libs/openssl:0/3
 	dev-libs/keybinder:3
 	media-libs/harfbuzz
 	media-libs/libepoxy
@@ -29,6 +30,7 @@ DEPEND="
 	x11-libs/gtk+:3
 	x11-libs/libnotify
 	x11-libs/pango
+	x11-misc/xdg-user-dirs[gtk]
 "
 RDEPEND="${DEPEND}"
 
@@ -39,8 +41,6 @@ QA_PRESTRIPPED="
 	/opt/${PN}/lib/libflutter_linux_gtk.so
 "
 QA_PREBUILT="*"
-
-S="${WORKDIR}/${MY_PN}"
 
 src_install() {
 	insinto "/opt/${PN}"
