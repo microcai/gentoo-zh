@@ -670,6 +670,7 @@ use_latest_release = true
 ["media-plugins/waylyrics"]
 source = "github"
 github = "waylyrics/waylyrics"
+prefix = "v"
 use_latest_release = true
 github_account = "liuyujielol"
 
