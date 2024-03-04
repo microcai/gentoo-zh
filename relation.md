@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-03-04 22:09:45 CST)
+(The last generation time: 2024-03-04 23:49:27 CST)
 
 ### Packages
 
@@ -497,8 +497,8 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/cgproxy                          | 0.20-r1                                   |        | https://github.com/springzfx/cgproxy                                                    | Transparent Proxy with cgroup v2
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/clash-nyanpasu                   | 1.4.2                                     |        | https://github.com/keiko233/clash-nyanpasu/                                             | Clash GUI based on tauri
-   dev-lang/quickjs                         | 2021.03.27                                | BD     | https://bellard.org/quickjs/                                                            | Small embeddable Javascript engine
+ net-proxy/clash-nyanpasu                   | 1.5.0                                     |        | https://github.com/LibNyanpasu/clash-nyanpasu                                           | Clash GUI based on tauri
+   dev-lang/quickjs                         | 2024.01.13                                | BD     | https://bellard.org/quickjs/                                                            | Small embeddable Javascript engine
    dev-util/tauri-cli                       | 1.5.9                                     | BD     | https://tauri.app                                                                       | Command line interface for building Tauri apps
                                             | 2.0.0_alpha17                             |        |                                                                                         |
    net-proxy/clash-rs                       | 0.1.14                                    | RD     | https://watfaq.gitbook.io/clashrs-user-manual/                                          | Custom protocol, rule based network proxy
