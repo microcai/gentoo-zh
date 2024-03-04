@@ -10,6 +10,6 @@
 		<flag name="mihomo">Install net-proxy/mihomo as clash backend</flag>
 	</use>
 	<upstream>
-		<remote-id type="github">keiko233/clash-nyanpasu</remote-id>
+		<remote-id type="github">LibNyanpasu/clash-nyanpasu</remote-id>
 	</upstream>
 </pkgmetadata>
