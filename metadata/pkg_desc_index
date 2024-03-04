@@ -104,7 +104,7 @@ dev-db/dbeaver-bin 24.0.0: Free universal database tool (community edition).
 dev-db/mongodb 5.3.1 6.2.0-r4: A high-performance, open source, schema-free document-oriented database
 dev-debug/lldb-mi 0.0.1 9999: LLDB Machine Interface Driver
 dev-java/oraclejdk-bin 8.391 21.0.1: Oracle's Java SE Development Kit
-dev-lang/quickjs 2021.03.27: Small embeddable Javascript engine
+dev-lang/quickjs 2024.01.13: Small embeddable Javascript engine
 dev-libs/libdatrie 0.2.13: Double-Array Trie Library
 dev-libs/libdwarf 20140208 20150507: Library to deal with DWARF Debugging Information Format
 dev-libs/libratbag 0.17.9: Library to configure gaming mice
@@ -247,7 +247,7 @@ net-print/epson-inkjet-printer_201207w 1.0.0: Epson printer driver (L110, L210, 
 net-print/pantum 1.1.94: 奔图打印机Linux驱动
 net-proxy/Xray 1.8.7 1.8.8-r1: Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
 net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
-net-proxy/clash-nyanpasu 1.4.2: Clash GUI based on tauri
+net-proxy/clash-nyanpasu 1.5.0: Clash GUI based on tauri
 net-proxy/clash-rs 0.1.14: Custom protocol, rule based network proxy
 net-proxy/clash-verge-bin 1.5.1 1.5.4: (Continuation) of Clash Meta GUI based on Tauri.
 net-proxy/dae 0.4.0 9999: A lightweight and high-performance transparent proxy solution based on eBPF

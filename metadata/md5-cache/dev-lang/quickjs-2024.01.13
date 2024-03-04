@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile prepare
+DEFINED_PHASES=compile install prepare
 DESCRIPTION=Small embeddable Javascript engine
 EAPI=8
 HOMEPAGE=https://bellard.org/quickjs/
@@ -7,6 +7,6 @@ IUSE=lto
 KEYWORDS=~amd64
 LICENSE=MIT
 SLOT=0
-SRC_URI=https://bellard.org/quickjs/quickjs-2021-03-27.tar.xz
+SRC_URI=https://bellard.org/quickjs/quickjs-2024-01-13.tar.xz
 _eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0
-_md5_=42f9d3e8716ced1fa0ca58f8c634ea6e
+_md5_=28dc94b87fffc95023cb9cefe3949f08
