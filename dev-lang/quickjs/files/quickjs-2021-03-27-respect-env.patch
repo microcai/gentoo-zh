@@ -29,7 +29,7 @@ index 8fc7e55..03cec93 100644
    CFLAGS += -Wno-array-bounds -Wno-format-truncation
    ifdef CONFIG_LTO
    else
-@@ -101,11 +101,11 @@ DEFINES+=-D__USE_MINGW_ANSI_STDIO # for standard snprintf behavior
+@@ -120,16 +120,16 @@ DEFINES+=-D__USE_MINGW_ANSI_STDIO # for standard snprintf behavior
  endif
  
  CFLAGS+=$(DEFINES)
@@ -40,8 +40,13 @@ index 8fc7e55..03cec93 100644
 +CFLAGS_SMALL=$(CFLAGS)
 +CFLAGS_OPT=$(CFLAGS)
  CFLAGS_NOLTO:=$(CFLAGS_OPT)
+ ifdef CONFIG_COSMO
+-LDFLAGS+=-s # better to strip by default
++#LDFLAGS+=
+ else
 -LDFLAGS+=-g
 +#LDFLAGS+=
+ endif
  ifdef CONFIG_LTO
  CFLAGS_SMALL+=-flto
  CFLAGS_OPT+=-flto
