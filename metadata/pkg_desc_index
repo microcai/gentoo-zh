@@ -21,9 +21,9 @@ app-crypt/cfssl 1.6.4: Cloudflare's PKI and TLS toolkit
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-dicts/fcitx-pinyin-moegirl 20230714: Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 app-dicts/fcitx-pinyin-zhwiki 20230728: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
-app-editors/appflowy-bin 0.3.9.1: AppFlowy is an open-source alternative to Notion
+app-editors/appflowy-bin 0.5.0: AppFlowy is an open-source alternative to Notion
 app-editors/marktext-bin 0.17.1: A simple and elegant markdown editor, available for Linux, macOS and Windows.
-app-editors/typora 0.11.18 1.7.6: A truely minimal markdown editor.
+app-editors/typora 0.11.18 1.8.10: A truely minimal markdown editor.
 app-emulation/deepin-udis86 1.72-r4: Disassembler library for x86 (32-bit shared library)
 app-emulation/deepin-wine-helper 5.1.27-r1 5.1.45: Deepin Wine Helper
 app-emulation/deepin-wine-plugin 5.1.13-r1: Deepin Wine plugin
