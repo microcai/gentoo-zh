@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -12,7 +12,7 @@ if [[ "${PV}" == *9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://gitlab.archlinux.org/pacman/pacman"
 else
-	SRC_URI="https://sources.archlinux.org/other/pacman/${P}.tar.xz"
+	SRC_URI="https://gitlab.archlinux.org/pacman/pacman/-/archive/v${PV}/${PN}-v${PV}.tar.bz2 -> ${P}.tar.bz2"
 	# Do *not* re-add ~x86!
 	# https://www.archlinux.org/news/phasing-out-i686-support/
 	KEYWORDS="-* ~amd64"
@@ -20,6 +20,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0/10"
+S="${WORKDIR}/${PN}-v${PV}"
 
 IUSE="curl doc +gpg test"
 DEPEND="
