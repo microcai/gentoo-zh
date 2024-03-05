@@ -1137,7 +1137,7 @@ use_latest_release = true
 github_account = "oatiz"
 prefix = "v"
 
-["www-client/brave"]
+["www-client/brave-bin"]
 source = "github"
 github = "brave/brave-browser"
 use_latest_release = true
