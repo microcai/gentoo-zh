@@ -16,9 +16,9 @@ LICENSE="MPL-2.0"
 SLOT="0"
 KEYWORDS="-* amd64"
 
-MY_PN=${PN}-browser
+MY_PN=${PN/-bin}-browser
 
-SRC_URI="https://github.com/${PN}/${MY_PN}/releases/download/v${PV}/${MY_PN}_${PV}_amd64.deb"
+SRC_URI="https://github.com/${PN/-bin}/${MY_PN}/releases/download/v${PV}/${MY_PN}_${PV}_amd64.deb"
 IUSE="qt5 qt6"
 RESTRICT="bindist mirror strip"
 
@@ -58,7 +58,7 @@ RDEPEND="
 
 QA_PREBUILT="*"
 S=${WORKDIR}
-BRAVE_HOME="opt/brave.com/brave${PN#brave}"
+BRAVE_HOME="opt/brave.com/brave"
 
 pkg_setup() {
 	chromium_suid_sandbox_check_kernel_config
@@ -107,7 +107,7 @@ src_install() {
 	for logo in "${ED}"/${BRAVE_HOME}/product_logo_*.png; do
 	    size=${logo##*_}
 		size=${size%.*}
-		newicon -s "${size}" "${logo}" ${PN}.png
+		newicon -s "${size}" "${logo}" ${PN/-bin}.png
 	done
 
 	pax-mark m "${BRAVE_HOME}/brave"
