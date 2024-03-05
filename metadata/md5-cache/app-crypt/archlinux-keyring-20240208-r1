@@ -7,4 +7,4 @@ KEYWORDS=~amd64
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://gitlab.archlinux.org/archlinux/archlinux-keyring/-/archive/20240208/archlinux-keyring-20240208.tar.bz2
-_md5_=00f9fa947a6c41b665405504f9ac5fb4
+_md5_=8211e6bd98816946f03a70712949a5e7

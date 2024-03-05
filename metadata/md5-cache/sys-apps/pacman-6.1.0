@@ -11,6 +11,6 @@ LICENSE=GPL-2
 RDEPEND=app-crypt/archlinux-keyring app-arch/libarchive:=[lzma] gpg? ( >=app-crypt/gpgme-1.13.0:= ) curl? ( net-misc/curl ) dev-libs/openssl:0= virtual/libiconv virtual/libintl
 RESTRICT=test
 SLOT=0/10
-SRC_URI=https://sources.archlinux.org/other/pacman/pacman-6.0.2.tar.xz
+SRC_URI=https://gitlab.archlinux.org/pacman/pacman/-/archive/v6.1.0/pacman-v6.1.0.tar.bz2 -> pacman-6.1.0.tar.bz2
 _eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	24c947ff5f858625cf0b33c15eed4425	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	042f4cc53680245bf99a84669b94155a	meson	3cbe71221342fc0089ce6e0b4725e476
-_md5_=84f87b13f02b51deec3343c3a0ff0576
+_md5_=24688147a698156a790d10a0429b6adf
