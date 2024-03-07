@@ -19,7 +19,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
-	webui? ( sys-apps/pnpm )
+	webui? ( net-libs/nodejs[corepack] )
 	sys-devel/clang
 "
 
