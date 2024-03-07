@@ -761,7 +761,7 @@ BDEPEND="
 	dev-lang/typescript
 	dev-lang/quickjs
 	sys-apps/moreutils
-	sys-apps/pnpm
+	net-libs/nodejs[corepack]
 "
 
 src_prepare() {
