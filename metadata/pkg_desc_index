@@ -281,7 +281,6 @@ sys-apps/aptly 1.5.0 9999: A swiss army knife for Debian repository management
 sys-apps/mdp 9999: A command-line based markdown presentation tool
 sys-apps/pacman 6.1.0: Archlinux's binary package manager
 sys-apps/pacman-mirrorlist 20210509: Repository list for Archlinux's binary package manager
-sys-apps/pnpm 8.6.2: Fast, disk space efficient package manager
 sys-apps/wait-online 9999: Wait until we're connected to the Internet
 sys-boot/ventoy-bin 1.0.97: A new multiboot USB solution
 sys-fs/coda 7.0.5: Coda is an advanced network file system, similar to NFS
@@ -305,7 +304,7 @@ virtual/dist-kernel 6.7.6 6.7.7: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 virtual/loong-ow-compat 0: Virtual for LoongArch old-world compatibility
 www-apps/chatgpt-desktop 1.1.0: ChatGPT Desktop Application
-www-client/brave-bin 1.63.165: Web browser that blocks ads and trackers by default
+www-client/brave-bin 1.63.169: Web browser that blocks ads and trackers by default
 www-servers/darkhttpd 1.16: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images

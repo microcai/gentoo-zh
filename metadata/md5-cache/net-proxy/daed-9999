@@ -1,4 +1,4 @@
-BDEPEND=webui? ( sys-apps/pnpm ) sys-devel/clang >=dev-vcs/git-1.8.2.1[curl] >=dev-lang/go-1.20:= app-arch/unzip virtual/pkgconfig
+BDEPEND=webui? ( net-libs/nodejs[corepack] ) sys-devel/clang >=dev-vcs/git-1.8.2.1[curl] >=dev-lang/go-1.20:= app-arch/unzip virtual/pkgconfig
 DEFINED_PHASES=compile install postinst prepare unpack
 DEPEND=app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite
 DESCRIPTION=A Modern Dashboard For dae
@@ -12,4 +12,4 @@ RDEPEND=app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite
 RESTRICT=strip strip
 SLOT=0
 _eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	24c947ff5f858625cf0b33c15eed4425	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	go-env	96e1747610bbb2f5c5d3fb16f0f3a83a	go-module	83fd3ed1657cfc316c93d6a37018290d	systemd	c8b03e8df84486aa991d4396686e8942
-_md5_=ade8887c80a8c6988822a454d5c99c6d
+_md5_=8f898d362b7b06b71fa2f3a0cbb7ebea

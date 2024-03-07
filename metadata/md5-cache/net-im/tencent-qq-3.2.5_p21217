@@ -11,6 +11,6 @@ LICENSE=Tencent
 RDEPEND=x11-libs/gtk+:3 x11-libs/libnotify dev-libs/nss appindicator? ( dev-libs/libayatana-appindicator ) x11-libs/libXScrnSaver x11-libs/libXtst x11-misc/xdg-utils app-accessibility/at-spi2-core:2 app-crypt/libsecret virtual/krb5 sys-apps/keyutils system-vips? ( dev-libs/glib >=media-libs/vips-8.14.2[-pdf] ) bwrap? ( sys-apps/bubblewrap x11-misc/snapd-xdg-open x11-misc/flatpak-xdg-utils ) gnome? ( dev-libs/gjs ) media-libs/openslide
 RESTRICT=strip
 SLOT=0
-SRC_URI=amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/8fddf4ad/linuxqq_3.2.5-21217_amd64.deb ) arm64? ( https://dldir1.qq.com/qqfile/qq/QQNT/8fddf4ad/linuxqq_3.2.5-21217_arm64.deb ) liteloader? ( https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/0.5.10/LiteLoaderQQNT.zip -> LiteLoaderQQNT-0.5.10.zip )
+SRC_URI=amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/8fddf4ad/linuxqq_3.2.5-21217_amd64.deb ) arm64? ( https://dldir1.qq.com/qqfile/qq/QQNT/8fddf4ad/linuxqq_3.2.5-21217_arm64.deb ) liteloader? ( https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/1.0.3/LiteLoaderQQNT.zip -> LiteLoaderQQNT-1.0.3.zip )
 _eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	7b40f3faa3e2e12f5cf6d36d0fbfcd09	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
-_md5_=ebe0f5cf63f48836c128412cf16eeea5
+_md5_=59cb69551b3170cac94248d04e819264
