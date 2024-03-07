@@ -1,4 +1,4 @@
-# Copyright 2021-2023 Gentoo Authors
+# Copyright 2021-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -9,12 +9,12 @@ DESCRIPTION="A platform for building proxies to bypass network restrictions."
 HOMEPAGE="https://www.v2fly.org/"
 SRC_URI="
 	https://github.com/v2fly/v2ray-core/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/liuyujielol/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
+	https://github.com/Puqns67/gentoo-deps/releases/download/${P}/${P}-deps.tar.xz
 "
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~riscv ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 
 RESTRICT="mirror"
 
@@ -22,7 +22,7 @@ RDEPEND="
 	!net-proxy/v2ray-bin
 	app-alternatives/v2ray-geoip
 	app-alternatives/v2ray-geosite"
-BDEPEND=">=dev-lang/go-1.20.8"
+BDEPEND=">=dev-lang/go-1.21.4"
 
 S="${WORKDIR}/${PN}-core-${PV}"
 
@@ -33,11 +33,11 @@ src_prepare() {
 }
 
 src_compile() {
-	ego build -v -work -o "bin/v2ray" -trimpath -ldflags "-s -w" ./main
+	ego build -o v2ray -trimpath -ldflags "-s -w -buildid=" ./main
 }
 
 src_install() {
-	dobin bin/v2ray
+	dobin v2ray
 
 	insinto /etc/v2ray
 	doins release/config/*.json
