@@ -13,7 +13,7 @@ RESTRICT="strip"
 
 _I="8fddf4ad"
 
-_LiteLoader_PV="0.5.10"
+_LiteLoader_PV="1.0.3"
 
 SRC_URI="
 	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_amd64.deb )
@@ -112,11 +112,10 @@ src_install() {
 	rm -rf "${D}"/usr/share/doc/linuxqq/ || die
 
 	if use liteloader ;then
-		insinto  /opt/QQ/resources/app/LiteLoader
+		insinto  /opt/LiteLoader
 		doins -r "${WORKDIR}"/*
-		local TargetLine
-		TargetLine=$(awk "/main/{print NR}" /opt/QQ/resources/app/package.json || die)
-		sed -i "${TargetLine}s/.\/app_launcher\/index.js/LiteLoader/g" "${D}"/opt/QQ/resources/app/package.json || die
+		dosym -r /opt/LiteLoader/src/preload.js /opt/QQ/resources/app/application/preload.js
+		sed -i "1 i require(\"/opt/LiteLoader\");" "${D}"/opt/QQ/resources/app/app_launcher/index.js || die
 	fi
 }
 
