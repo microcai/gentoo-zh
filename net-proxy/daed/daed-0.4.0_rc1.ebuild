@@ -24,7 +24,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
-	webui? ( sys-apps/pnpm )
+	webui? ( net-libs/nodejs[npm] )
 	sys-devel/clang
 	app-arch/unzip
 	dev-lang/go
@@ -37,7 +37,7 @@ src_prepare() {
 	# Prevent conflicting with the user's flags
 	# https://devmanual.gentoo.org/ebuild-writing/common-mistakes/#-werror-compiler-flag-not-removed
 	sed -i -e 's/-Werror//' wing/dae-core/Makefile || die 'Failed to remove -Werror via sed'
-
+	eapply "${FILESDIR}"/pnpm_fix.patch
 	default
 }
 
@@ -53,7 +53,7 @@ src_compile(){
 	filter-flags "-march=*" "-mtune=*"
 	append-cflags "-fno-stack-protector"
 
-	GO_ROOT="${S}" emake APPNAME="${PN}" VERSION="${PV}"
+	GO_ROOT="${S}" SKIP_SUBMODULES=1 emake APPNAME="${PN}" VERSION="${PV}"
 }
 
 src_install(){
