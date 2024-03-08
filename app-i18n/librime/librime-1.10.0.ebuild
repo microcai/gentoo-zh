@@ -34,7 +34,6 @@ IUSE="
 	octagram
 	+proto
 	predict
-	+lua_single_target_luajit
 "
 REQUIRED_USE="lua? ( ${LUA_REQUIRED_USE} )"
 
