@@ -33,7 +33,7 @@ app-emulation/la-ow-syscall 0.1.0: Linux kernel module for compatibility with Lo
 app-emulation/liblol 0.0.4-r1: LoongArch old-world ABI compatibility layer from AOSC OS
 app-emulation/looking-glass 0_beta6-r1: A low latency KVMFR application for guests with VGA PCI Passthrough
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
-app-i18n/cskk 3.1.0: C ABIから使う事を目的とした SKK(Simple Kana Kanji henkan)方式のかな漢字変換ライブラリ
+app-i18n/cskk 3.1.1: C ABIから使う事を目的とした SKK(Simple Kana Kanji henkan)方式のかな漢字変換ライブラリ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
 app-i18n/fcitx 9999: Fcitx5 Next generation of fcitx
 app-i18n/fcitx-anthy 5.1.2: Japanese Anthy input methods for Fcitx5
@@ -53,7 +53,7 @@ app-i18n/fcitx-skk 5.1.2 9999: Japanese SKK input engine for Fcitx5
 app-i18n/ibus-rime 9999: Rime Input Method Engine for IBus Framework
 app-i18n/libime 9999: Fcitx5 Next generation of fcitx
 app-i18n/libime-jyutping 1.0.10: A library make use of libime to implement jyutping input method
-app-i18n/librime-octagram 20230125-r2: 「八股文」語法 plugin for RIME
+app-i18n/librime 1.10.0: RIME (Rime Input Method Engine) core library
 app-i18n/lunar 2.2-r5: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
 app-i18n/mozc 2.26.4632_p20220213064411_p20220214004422 2.28.5029.102 2.28.5029.102-r1: Mozc - Japanese input method editor
@@ -263,7 +263,7 @@ net-proxy/v2ray 5.13.0 5.14.1: A platform for building proxies to bypass network
 net-proxy/v2ray-bin 4.45.0-r1 5.12.1: A platform for building proxies to bypass network restrictions
 net-proxy/v2rayA 2.2.5.1 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
-net-proxy/yass 1.6.5 1.7.1: lightweight and efficient, socks5/http forward proxy
+net-proxy/yass 1.6.5 1.7.3: lightweight and efficient, socks5/http forward proxy
 net-vpn/sstp-server 0.6.0: A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
 net-wireless/linux-wifi-hotspot 9999: Linux Wifi Hotspot
 sci-chemistry/vesta 3.5.8: Visualization for Electronic and STructural Analysis
