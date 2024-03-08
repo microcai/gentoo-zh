@@ -1,4 +1,4 @@
-BDEPEND=webui? ( net-libs/nodejs[corepack] ) sys-devel/clang app-arch/unzip dev-lang/go virtual/pkgconfig
+BDEPEND=webui? ( sys-apps/pnpm ) sys-devel/clang app-arch/unzip dev-lang/go virtual/pkgconfig
 DEFINED_PHASES=compile install postinst prepare
 DEPEND=app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite
 DESCRIPTION=A Modern Dashboard For dae
@@ -13,4 +13,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/daeuniverse/daed/releases/download/v0.4.0rc1/daed-full-src.zip -> daed-0.4.0_rc1.zip webui? ( https://github.com/st0nie/gentoo-go-deps/releases/download/daed-0.4.0_rc1/daed-0.4.0_rc1-node_modules-pnpm.tar.xz )
 _eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	24c947ff5f858625cf0b33c15eed4425	systemd	c8b03e8df84486aa991d4396686e8942
-_md5_=2e4beb097a5b19fbb6331386f710a630
+_md5_=139564bdbb22a1181e9a9bbc9143acea
