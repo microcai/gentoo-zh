@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-03-08 23:54:56 CST)
+(The last generation time: 2024-03-08 23:57:04 CST)
 
 ### Packages
 
@@ -94,10 +94,10 @@
  app-i18n/rime-flypy                        | 10.9.4                                    |        | https://github.com/cubercsl/rime-flypy                                                  | flypy-full input for rime
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/rime-octagram-data                | 20190619                                  |        | https://github.com/lotem/rime-octagram-data                                             | Language model of the 「八股文」語法
-   app-i18n/librime-octagram                | 20230125-r2                               |  D, RD | https://github.com/lotem/librime-octagram                                               | 「八股文」語法 plugin for RIME
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/rime-wubi                         | 20200908                                  |        | https://github.com/rime/rime-wubi                                                       | wubi input for rime
    app-i18n/rime-data                       | 20220409                                  |  D, RD | https://rime.im/                                                                        | Data resources for Rime Input Method Engine
+     app-i18n/librime                       | 1.10.0                                    |  D, RD | https://rime.im/                                                                        | RIME (Rime Input Method Engine) core library
    app-i18n/rime-pinyin-simp                | 20230104                                  |  D, RD | https://github.com/rime/rime-pinyin-simp                                                | Simple pinyin input for rime
      app-i18n/rime-stroke                   | 20230204                                  |  D, RD | https://github.com/rime/rime-stroke                                                     | Stroke input for rime
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
