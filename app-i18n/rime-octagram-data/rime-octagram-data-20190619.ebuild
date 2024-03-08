@@ -20,7 +20,7 @@ LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~x86"
 
-DEPEND="app-i18n/librime-octagram"
+DEPEND="app-i18n/librime[octagram]"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"
