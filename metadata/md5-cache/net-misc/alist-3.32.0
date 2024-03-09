@@ -1,0 +1,13 @@
+BDEPEND=>=dev-lang/go-1.20:= app-arch/unzip virtual/pkgconfig
+DEFINED_PHASES=compile install prepare unpack
+DESCRIPTION=A file list/WebDAV program that supports multiple storages
+EAPI=8
+HOMEPAGE=https://alist.nn.ci
+INHERIT=go-module systemd
+KEYWORDS=~amd64
+LICENSE=AGPL-3
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/alist-org/alist/archive/refs/tags/v3.32.0.tar.gz -> alist-3.32.0.tar.gz https://github.com/alist-org/alist-web/releases/download/3.32.0/dist.tar.gz -> alist-3.32.0-dist.tar.gz https://github.com/liangyongxiang/gentoo-go-deps/releases/download/alist-3.32.0/alist-3.32.0-deps.tar.xz
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-env	96e1747610bbb2f5c5d3fb16f0f3a83a	go-module	83fd3ed1657cfc316c93d6a37018290d	systemd	c8b03e8df84486aa991d4396686e8942
+_md5_=e0214f2b51f2b148313a7dd5f125ffa4

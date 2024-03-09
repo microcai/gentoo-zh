@@ -222,6 +222,7 @@ net-im/tencent-qq 3.2.5_p21217: The new version of the official linux-qq
 net-im/weixin-uos 2.1.8: UOS weixin
 net-im/wemeet 3.15.1.403 3.19.0.401: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq
+net-misc/alist 3.32.0: A file list/WebDAV program that supports multiple storages
 net-misc/aliyundrive-webdav 2.3.3: WebDAV server for AliyunDrive
 net-misc/aliyunpan 0.2.8: aliyunpan cli client, support Webdav service, JavaScript plugin
 net-misc/apifox 2.3.24: API 文档、API 调试、API Mock、API 自动化测试
