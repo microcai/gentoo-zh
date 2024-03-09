@@ -282,7 +282,7 @@ sys-apps/aptly 1.5.0 9999: A swiss army knife for Debian repository management
 sys-apps/mdp 9999: A command-line based markdown presentation tool
 sys-apps/pacman 6.1.0: Archlinux's binary package manager
 sys-apps/pacman-mirrorlist 20210509: Repository list for Archlinux's binary package manager
-sys-apps/pnpm 8.6.2: Fast, disk space efficient package manager
+sys-apps/pnpm 8.15.4: Fast, disk space efficient package manager
 sys-apps/wait-online 9999: Wait until we're connected to the Internet
 sys-boot/ventoy-bin 1.0.97: A new multiboot USB solution
 sys-fs/coda 7.0.5: Coda is an advanced network file system, similar to NFS
