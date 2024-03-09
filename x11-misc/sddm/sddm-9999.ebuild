@@ -30,8 +30,9 @@ COMMON_DEPEND="
 	acct-group/sddm
 	acct-user/sddm
 	qt6? (
-		>=dev-qt/qtbase-${QT6MIN}:6[dbus,network,gui,wayland,xml]
+		>=dev-qt/qtbase-${QT6MIN}:6[dbus,network,gui,wayland,xml,libinput]
 		>=dev-qt/qtdeclarative-${QT6MIN}:6
+		>=dev-qt/qtwayland-${QT6MIN}:6
 	)
 	!qt6? (
 		>=dev-qt/qtcore-${QT5MIN}:5
@@ -71,8 +72,6 @@ PATCHES=(
 	# Downstream patches
 	"${FILESDIR}/${PN}-0.20.0-respect-user-flags.patch"
 	"${FILESDIR}/${PN}-0.19.0-Xsession.patch" # bug 611210
-	"${FILESDIR}/${PN}-0.20.0-sddm.pam-use-substack.patch" # bug 728550
-	"${FILESDIR}/${PN}-0.20.0-no-default-pam_systemd-module.patch" # bug 669980
 )
 
 pkg_setup() {
