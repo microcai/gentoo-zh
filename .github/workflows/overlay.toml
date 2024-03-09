@@ -819,7 +819,7 @@ use_latest_release = true
 prefix = "v"
 github_account = "123485k"
 
-["net-misc/aliyunpan"]
+["net-misc/alist"]
 source = "github"
 github = "alist-org/alist"
 use_latest_release = true
