@@ -11,4 +11,4 @@ RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/XTLS/Xray-core/archive/refs/tags/v1.8.8.tar.gz -> Xray-1.8.8.tar.gz https://github.com/Puqns67/gentoo-deps/releases/download/Xray-1.8.8/Xray-1.8.8-deps.tar.xz
 _eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-env	96e1747610bbb2f5c5d3fb16f0f3a83a	go-module	83fd3ed1657cfc316c93d6a37018290d	systemd	c8b03e8df84486aa991d4396686e8942
-_md5_=6a1acae4a983b550234b734044b8afac
+_md5_=46e8b181cd1830ab360720493abacaa6
