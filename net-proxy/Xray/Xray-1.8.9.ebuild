@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -10,20 +10,20 @@ HOMEPAGE="https://xtls.github.io/ https://github.com/XTLS/Xray-core"
 SRC_URI="https://github.com/XTLS/Xray-core/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/Puqns67/gentoo-deps/releases/download/${P}/${P}-deps.tar.xz"
 
+S="${WORKDIR}/${PN}-core-${PV}"
+
 LICENSE="MPL-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~riscv ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 
 RESTRICT="mirror"
 
 RDEPEND="app-alternatives/v2ray-geoip
 	app-alternatives/v2ray-geosite"
-BDEPEND=">=dev-lang/go-1.21.4"
-
-S="${WORKDIR}/${PN}-core-${PV}"
+BDEPEND=">=dev-lang/go-1.22"
 
 src_compile() {
-	ego build -o xray -trimpath -ldflags "-X 'github.com/XTLS/Xray-core/core.build=${PV}' -s -w -buildid=" ./main
+	ego build -o xray -trimpath -ldflags "-w -s -X 'github.com/XTLS/Xray-core/core.build=${PV}' -buildid=" ./main
 }
 
 src_install() {

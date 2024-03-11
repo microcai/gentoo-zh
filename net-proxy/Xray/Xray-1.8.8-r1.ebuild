@@ -10,6 +10,8 @@ HOMEPAGE="https://xtls.github.io/ https://github.com/XTLS/Xray-core"
 SRC_URI="https://github.com/XTLS/Xray-core/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/Puqns67/gentoo-deps/releases/download/${P}/${P}-deps.tar.xz"
 
+S="${WORKDIR}/${PN}-core-${PV}"
+
 LICENSE="MPL-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
@@ -19,8 +21,6 @@ RESTRICT="mirror"
 RDEPEND="app-alternatives/v2ray-geoip
 	app-alternatives/v2ray-geosite"
 BDEPEND=">=dev-lang/go-1.22"
-
-S="${WORKDIR}/${PN}-core-${PV}"
 
 src_compile() {
 	ego build -o xray -trimpath -ldflags "-w -s -X 'github.com/XTLS/Xray-core/core.build=${PV}' -buildid=" ./main
