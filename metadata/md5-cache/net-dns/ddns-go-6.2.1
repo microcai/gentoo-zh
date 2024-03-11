@@ -1,0 +1,13 @@
+BDEPEND=>=dev-lang/go-1.20:= app-arch/unzip virtual/pkgconfig
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=Automatically obtain your public IP address and set to your domain name service.
+EAPI=8
+HOMEPAGE=https://github.com/jeessy2/ddns-go
+INHERIT=go-module systemd
+KEYWORDS=~amd64 ~riscv
+LICENSE=MIT BSD
+RESTRICT=mirror strip
+SLOT=0
+SRC_URI=https://github.com/jeessy2/ddns-go/archive/refs/tags/v6.2.1.tar.gz -> ddns-go-6.2.1.tar.gz https://github.com/Puqns67/gentoo-deps/releases/download/ddns-go-6.2.1/ddns-go-6.2.1-deps.tar.xz
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-env	96e1747610bbb2f5c5d3fb16f0f3a83a	go-module	83fd3ed1657cfc316c93d6a37018290d	systemd	c8b03e8df84486aa991d4396686e8942
+_md5_=625d01a6cf3d920787d0e2698d4c84a8
