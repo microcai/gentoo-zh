@@ -22,7 +22,7 @@ app-crypt/cfssl 1.6.4: Cloudflare's PKI and TLS toolkit
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-dicts/fcitx-pinyin-moegirl 20230714: Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 app-dicts/fcitx-pinyin-zhwiki 20230728: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
-app-editors/appflowy-bin 0.5.0: AppFlowy is an open-source alternative to Notion
+app-editors/appflowy-bin 0.5.1: AppFlowy is an open-source alternative to Notion
 app-editors/marktext-bin 0.17.1: A simple and elegant markdown editor, available for Linux, macOS and Windows.
 app-editors/typora 0.11.18 1.8.10: A truely minimal markdown editor.
 app-emulation/deepin-udis86 1.72-r4: Disassembler library for x86 (32-bit shared library)
@@ -139,7 +139,7 @@ dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 fil
 dev-util/elfembed 0.3-r1: Resource Compiler for ELF binaries
 dev-util/jd-gui 1.6.6: A standalone graphical utility that displays Java source codes of .class file
 dev-util/jetbrains-toolbox 1.28.1.15219 2.0.3.17006: Manage all your JetBrains Projects and Tools
-dev-util/mamba 1.5.6: The Fast Cross-Platform Package Manager
+dev-util/mamba 1.5.7: The Fast Cross-Platform Package Manager
 dev-util/marksman-bin 2022.12.28: A language server for Markdown
 dev-util/mongodb-compass-bin 1.34.2 1.35.0 1.36.4 1.37.0 1.38.2 1.39.4 1.40.2: The GUI for MongoDB
 dev-util/pacstrap 28: Pacstrap - install packages to the specified new root directorye
@@ -149,7 +149,7 @@ dev-util/tauri-cli 1.5.9 2.0.0_alpha17: Command line interface for building Taur
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-util/zprint-bin 1.2.7 1.2.8: Clojure and Clojurescript source code formatter
 dev-vcs/gitoxide 0.34.0: A command-line application for interacting with git repositories
-games-arcade/osu-lazer 2023.1229.0 2024.302.1: rhythm is just a *click* away!
+games-arcade/osu-lazer 2024.302.1 2024.312.1: rhythm is just a *click* away!
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-fps/source-engine 9999: A 3D game engine developed by Valve
 games-misc/oh-my-git-bin 0.6.5: An interactive Git learning game!
