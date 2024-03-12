@@ -200,6 +200,7 @@ media-sound/youtube-music-bin 2.2.0: YouTube Music Desktop App bundled with cust
 media-video/amdgpu-pro-amf 1.4.29.1538781: AMD's closed source Advanced Media Framework (AMF) driver
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/bilibili 1.11.4: Based on the Bilibli offcial client to linux version, support roaming
+media-video/implay 1.5.1: A Cross-Platform Desktop Media Player
 media-video/mpv-handler 0.3.5: A protocol handler for mpv, written by Rust.
 media-video/tenvideo 1.0.10: Tencent videos
 net-analyzer/besttrace-bin 1.3.2-r1: 附带链路可视化的 traceroute 工具
