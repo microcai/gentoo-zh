@@ -33,6 +33,13 @@ github_account = "HougeLangley"
 
 #["app-containers/distrobox-boost"]
 
+["app-backup/restic-rest-server"]
+source = "github"
+github = "restic/rest-server"
+use_latest_release = true
+prefix = "v"
+github_account = "liangyongxiang"
+
 ["app-crypt/archlinux-keyring"]
 source = "git"
 git = "https://gitlab.archlinux.org/archlinux/archlinux-keyring.git"
