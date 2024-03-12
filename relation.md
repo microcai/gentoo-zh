@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-03-12 17:08:48 CST)
+(The last generation time: 2024-03-13 05:18:49 CST)
 
 ### Packages
 
@@ -31,7 +31,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-zhwiki              | 20230728                                  |        | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/appflowy-bin                   | 0.5.0                                     |        | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
+ app-editors/appflowy-bin                   | 0.5.1                                     |        | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/marktext-bin                   | 0.17.1                                    |        | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -205,7 +205,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/conda                           | 24.1.2                                    |        | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
    dev-python/conda-libmamba-solver         | 24.1.0                                    |  D, RD | https://github.com/conda/conda-libmamba-solver                                          | The libmamba based solver for conda
-     dev-util/mamba                         | 1.5.6                                     | RD     | https://github.com/mamba-org/mamba                                                      | The Fast Cross-Platform Package Manager
+     dev-util/mamba                         | 1.5.7                                     | RD     | https://github.com/mamba-org/mamba                                                      | The Fast Cross-Platform Package Manager
        dev-cpp/reproc                       | 14.2.4                                    |  D, RD | https://github.com/DaanDeMeyer/reproc                                                   | A cross-platform (C99/C++11) process library
        dev-cpp/tl-expected                  | 1.1.0                                     |  D, RD | https://github.com/TartanLlama/expected                                                 | Guideline Support Library implementation by Microsoft
        sys-libs/libsolv                     | 0.7.28                                    |  D, RD | https://github.com/openSUSE/libsolv                                                     | Library for solving packages and reading repositories
