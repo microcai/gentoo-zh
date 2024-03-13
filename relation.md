@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-03-13 08:23:47 CST)
+(The last generation time: 2024-03-13 19:46:19 CST)
 
 ### Packages
 
@@ -14,7 +14,7 @@
  app-admin/zenmonitor3                      | 2.0.0                                     |        | https://git.exozy.me/a/zenmonitor3                                                      | Zen monitor is monitoring software for AMD Zen-based CPUs
    sys-kernel/zenpower3                     | 0.2.0                                     |  D, RD | https://git.exozy.me/a/zenpower3                                                        | Linux kernel driver for reading sensors of AMD Zen family CPUs
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-backup/btrfs-assistant                 | 1.8                                       |        | https://gitlab.com/btrfs-assistant/btrfs-assistant                                      | A GUI management tool to make managing a Btrfs filesystem easier.
+ app-backup/btrfs-assistant                 | 2.0                                       |        | https://gitlab.com/btrfs-assistant/btrfs-assistant                                      | A GUI management tool to make managing a Btrfs filesystem easier.
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-backup/restic-rest-server              | 0.12.1                                    |        | https://github.com/restic/rest-server                                                   | A high performance HTTP server that implements restic's REST backend API
