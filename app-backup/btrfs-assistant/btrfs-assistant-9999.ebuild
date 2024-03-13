@@ -14,8 +14,8 @@ SLOT="0"
 RESTRICT="mirror"
 
 DEPEND="
-	dev-qt/qtcore:5
-	dev-qt/qtsvg:5
+	dev-qt/qtbase:6
+	dev-qt/qtsvg:6
 "
 BDEPEND="${DEPEND}"
 RDEPEND="
