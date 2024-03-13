@@ -10,6 +10,7 @@ HOMEPAGE="https://anytype.io"
 SRC_URI="https://anytype-release.fra1.cdn.digitaloceanspaces.com/Anytype-${PV}.AppImage
 	https://anytype-release.fra1.cdn.digitaloceanspaces.com/anytype_${PV}_amd64.deb"
 
+S="${WORKDIR}"
 LICENSE="ASAL-1.0"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -18,8 +19,6 @@ RESTRICT="strip"
 
 RDEPEND="sys-fs/fuse:0"
 BDEPEND="app-arch/dpkg"
-
-S="${WORKDIR}"
 
 QA_PRESTRIPPED="*"
 
