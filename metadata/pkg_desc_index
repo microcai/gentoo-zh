@@ -119,7 +119,7 @@ dev-libs/v2ray-geoip-bin 202402220038: GeoIP for V2Ray.
 dev-libs/v2ray-rules-dat 202402252208: Enhanced edition of V2Ray rules dat files.
 dev-python/archspec 0.2.2: A library for detecting, labeling, and reasoning about microarchitectures
 dev-python/conda 24.1.2: OS-agnostic, system-level binary package manager and ecosystem
-dev-python/conda-libmamba-solver 24.1.0: The libmamba based solver for conda
+dev-python/conda-libmamba-solver 24.1.0-r1: The libmamba based solver for conda
 dev-python/conda-package-handling 2.2.0: Create and extract conda packages of various formats
 dev-python/conda-package-streaming 0.7.0: An efficient library to read from new and old conda packages
 dev-python/daff 1.3.46: The daff can produce and apply tabular diffs
