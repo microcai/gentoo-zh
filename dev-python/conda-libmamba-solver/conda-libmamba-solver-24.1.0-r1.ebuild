@@ -18,7 +18,10 @@ KEYWORDS="~amd64"
 
 S="${WORKDIR}/conda-libmamba-solver-${PV}"
 
-BDEPEND="$(python_gen_cond_dep 'dev-python/setuptools-scm[${PYTHON_USEDEP}]')"
+BDEPEND="
+	$(python_gen_cond_dep 'dev-python/setuptools-scm[${PYTHON_USEDEP}]')
+	$(python_gen_cond_dep 'dev-python/hatch-vcs[${PYTHON_USEDEP}]')
+"
 
 RDEPEND="
 	$(python_gen_cond_dep 'dev-python/boltons[${PYTHON_USEDEP}]')
