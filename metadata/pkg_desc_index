@@ -76,7 +76,7 @@ app-misc/bcompare 4.4.6.27483 4.4.7.28397: Beyond Compare -- Compare, sync, and 
 app-misc/ccal 2.5.3: A simple command line calendar for Chinese lunar
 app-misc/go-yq-bin 4.42.1: yq is a portable command-line YAML, JSON and XML processor
 app-misc/gpick 0.2.6-r1 0.3: Advanced color picker written in C++ using GTK+ toolkit
-app-misc/joshuto 0.9.6: Terminal file manager inspired by ranger
+app-misc/joshuto 0.9.8: Terminal file manager inspired by ranger
 app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience within the shell
 app-misc/keyd 2.4.3: A key remapping daemon for linux
 app-misc/rmtrash 1.14 1.15: trash-put made compatible to GNUs rm and rmdir
