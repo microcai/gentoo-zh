@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-03-16 16:17:03 CST)
+(The last generation time: 2024-03-16 18:21:47 CST)
 
 ### Packages
 
@@ -115,7 +115,7 @@
  app-misc/gpick                             | 0.2.6-r1                                  |        | https://github.com/thezbyg/gpick                                                        | Advanced color picker written in C++ using GTK+ toolkit
                                             | 0.3                                       |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/joshuto                           | 0.9.6                                     |        | https://github.com/kamiyaa/joshuto                                                      | Terminal file manager inspired by ranger
+ app-misc/joshuto                           | 0.9.8                                     |        | https://github.com/kamiyaa/joshuto                                                      | Terminal file manager inspired by ranger
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/jshon                             | 9999                                      |        | http://kmkeen.com/jshon/                                                                | Jshon is a JSON parser designed for maximum convenience within the shell
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
