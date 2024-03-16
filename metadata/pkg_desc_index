@@ -255,7 +255,7 @@ net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
 net-proxy/clash-nyanpasu 1.5.0: Clash GUI based on tauri
 net-proxy/clash-rs 0.1.15: Custom protocol, rule based network proxy
 net-proxy/clash-verge-bin 1.5.4 1.5.8: (Continuation) of Clash Meta GUI based on Tauri.
-net-proxy/dae 0.4.0 9999: A lightweight and high-performance transparent proxy solution based on eBPF
+net-proxy/dae 0.4.0 0.5.1 9999: A lightweight and high-performance transparent proxy solution based on eBPF
 net-proxy/daed 0.3.3_p1 0.4.0_rc1 9999: A Modern Dashboard For dae
 net-proxy/hysteria 2.2.2: A powerful, lightning fast and censorship resistant proxy.
 net-proxy/juicity 0.3.0: juicity is a quic-based proxy protocol.
