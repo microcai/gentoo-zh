@@ -267,7 +267,7 @@ net-proxy/v2ray 5.14.1-r1 5.15.0: A platform for building proxies to bypass netw
 net-proxy/v2ray-bin 4.45.0-r1 5.12.1: A platform for building proxies to bypass network restrictions
 net-proxy/v2rayA 2.2.5.1 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
-net-proxy/yass 1.6.5 1.7.3: lightweight and efficient, socks5/http forward proxy
+net-proxy/yass 1.6.5 1.7.4: lightweight and efficient, socks5/http forward proxy
 net-vpn/sstp-server 0.6.0: A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
 net-wireless/linux-wifi-hotspot 9999: Linux Wifi Hotspot
 sci-chemistry/vesta 3.5.8: Visualization for Electronic and STructural Analysis
