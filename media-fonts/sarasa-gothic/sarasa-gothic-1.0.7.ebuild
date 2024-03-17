@@ -8,7 +8,7 @@ inherit font unpacker
 MY_PN="Sarasa"
 DESCRIPTION="A CJK programming font based on Iosevka and Source Han Sans. (TTC)"
 HOMEPAGE="https://github.com/be5invis/Sarasa-Gothic"
-SRC_URI="https://github.com/be5invis/Sarasa-Gothic/releases/download/v${PV}b/${MY_PN}-TTC-${PV}.zip"
+SRC_URI="https://github.com/be5invis/Sarasa-Gothic/releases/download/v${PV}/${MY_PN}-TTC-${PV}.zip"
 S="${WORKDIR}"
 LICENSE="OFL-1.1"
 SLOT="0"
