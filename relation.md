@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-03-18 17:21:29 CST)
+(The last generation time: 2024-03-19 11:14:03 CST)
 
 ### Packages
 
@@ -657,7 +657,8 @@
  x11-misc/picom-jonaburg                    | 8                                         |        | https://github.com/jonaburg/picom                                                       | jonaburg's picom fork with dual_kawase blur and rounded corners
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- x11-misc/sddm                              | 9999                                      |        | https://github.com/sddm/sddm                                                            | Simple Desktop Display Manager
+ x11-misc/sddm                              | 0.21.0                                    |        | https://github.com/sddm/sddm                                                            | Simple Desktop Display Manager
+                                            | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  x11-plugins/vicious                        | 9999                                      |        | http://awesome.naquadah.org/wiki/Vicious                                                | Modular widget library for x11-wm/awesome
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
