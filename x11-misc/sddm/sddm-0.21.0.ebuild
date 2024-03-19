@@ -21,7 +21,7 @@ HOMEPAGE="https://github.com/sddm/sddm"
 
 LICENSE="GPL-2+ MIT CC-BY-3.0 CC-BY-SA-3.0 public-domain"
 SLOT="0"
-IUSE="elogind +systemd test +X qt6"
+IUSE="+elogind systemd test +X qt6"
 
 REQUIRED_USE="?? ( elogind systemd )"
 RESTRICT="!test? ( test )"
@@ -43,8 +43,8 @@ COMMON_DEPEND="
 	)
 	x11-libs/libXau
 	x11-libs/libxcb:=
-	sys-libs/pam
 	elogind? ( sys-auth/elogind )
+	sys-libs/pam
 	systemd? ( sys-apps/systemd:= )
 	!systemd? ( sys-power/upower )
 "
