@@ -8,7 +8,7 @@ inherit cmake xdg
 MY_PN="yass"
 S="${WORKDIR}/${MY_PN}-${PV}"
 SRC_URI="https://github.com/Chilledheart/yass/releases/download/${PV}/yass-${PV}.tar.gz"
-KEYWORDS="amd64 ~arm64 ~x86"
+KEYWORDS="~amd64 ~arm64 ~x86 ~arm ~mips"
 
 DESCRIPTION="lightweight and efficient, socks5/http forward proxy"
 HOMEPAGE="https://github.com/Chilledheart/yass"
@@ -36,7 +36,7 @@ src_configure() {
 	local mycmakeargs=(
 		-DBUILD_SHARED_LIBS=off
 		-DUSE_BUILTIN_CA_BUNDLE_CRT=off
-		-DUSE_LIBCXX=off
+		-DUSE_LIBCXX=on
 		-DENABLE_LTO=off
 		-DGUI=ON
 		-DCLI=OFF
