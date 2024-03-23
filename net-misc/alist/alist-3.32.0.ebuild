@@ -22,7 +22,7 @@ QA_PRESTRIPPED="/usr/bin/${PN}"
 
 src_prepare() {
 	rm -rf public/dist || die
-	mv "${WORKDIR}/dist public" || die
+	mv "${WORKDIR}/dist" public || die
 	default
 }
 
