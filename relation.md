@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-03-21 18:43:03 CST)
+(The last generation time: 2024-03-24 17:59:08 CST)
 
 ### Packages
 
@@ -572,7 +572,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sci-electronics/lceda-pro                  | 2.1.51                                    |        | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- sci-electronics/openfpgaloader             | 0.12.0                                    |        | https://trabucayre.github.io/openFPGALoader                                             | Universal utility for programming FPGAs
+ sci-electronics/openfpgaloader             | 0.12.1                                    |        | https://trabucayre.github.io/openFPGALoader                                             | Universal utility for programming FPGAs
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sci-libs/libticalcs2                       | 9999                                      |        | http://lpg.ticalc.org/prj_tilp/                                                         | Library for communication with TI calculators
    sci-libs/libtifiles2                     | 9999                                      |  D, RD | http://lpg.ticalc.org/prj_tilp/                                                         | Library for TI calculator files
