@@ -37,7 +37,7 @@ src_configure() {
 		-DBUILD_SHARED_LIBS=off
 		-DUSE_BUILTIN_CA_BUNDLE_CRT=off
 		-DUSE_LIBCXX=on
-		-DENABLE_LTO=off
+		-DENABLE_GOLD=off
 		-DGUI=ON
 		-DCLI=OFF
 		-DSERVER=OFF
