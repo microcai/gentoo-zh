@@ -1,0 +1,14 @@
+DEFINED_PHASES=install unpack
+DEPEND=dev-libs/libappindicator:3 sys-apps/systemd
+DESCRIPTION=ToDesk不一样的远控体验，轻松打破物理限制，随时随地高效使用所有计算终端
+EAPI=8
+HOMEPAGE=https://www.todesk.com/
+INHERIT=unpacker
+KEYWORDS=~amd64
+LICENSE=todesk
+RDEPEND=dev-libs/libappindicator:3 sys-apps/systemd
+RESTRICT=strip mirror
+SLOT=0
+SRC_URI=https://dl.todesk.com/linux/todesk-v4.7.2.0-amd64.deb
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	7b40f3faa3e2e12f5cf6d36d0fbfcd09
+_md5_=9b40ef6e881352b89fc568c2798a617f
