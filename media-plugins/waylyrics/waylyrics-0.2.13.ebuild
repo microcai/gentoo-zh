@@ -20,6 +20,7 @@ CRATES="
 	autocfg@1.1.0
 	backtrace@0.3.69
 	base64@0.21.7
+	base64@0.22.0
 	bitflags@1.3.2
 	bitflags@2.4.2
 	bitvec@1.0.1
@@ -52,7 +53,6 @@ CRATES="
 	dbus-tree@0.9.2
 	dbus@0.9.7
 	deranged@0.3.11
-	derivative@2.2.0
 	derive_is_enum_variant@0.1.1
 	documented-derive@0.3.0
 	documented@0.3.0
@@ -100,7 +100,7 @@ CRATES="
 	gtk4-macros@0.8.0
 	gtk4-sys@0.8.0
 	gtk4@0.8.0
-	h2@0.3.24
+	h2@0.4.3
 	hashbrown@0.12.3
 	hashbrown@0.14.3
 	heck@0.3.3
@@ -108,12 +108,13 @@ CRATES="
 	hermit-abi@0.1.19
 	hermit-abi@0.3.6
 	hex@0.4.3
-	http-body@0.4.6
-	http@0.2.11
+	http-body-util@0.1.1
+	http-body@1.0.0
+	http@1.1.0
 	httparse@1.8.0
-	httpdate@1.0.3
-	hyper-tls@0.5.0
-	hyper@0.14.28
+	hyper-tls@0.6.0
+	hyper-util@0.1.3
+	hyper@1.2.0
 	ident_case@1.0.1
 	idna@0.3.0
 	idna@0.5.0
@@ -141,7 +142,7 @@ CRATES="
 	mime@0.3.17
 	minimal-lexical@0.2.1
 	miniz_oxide@0.7.2
-	mio@0.8.10
+	mio@0.8.11
 	mpris@2.0.1
 	native-tls@0.2.11
 	nom@7.1.3
@@ -170,7 +171,9 @@ CRATES="
 	phf_generator@0.11.2
 	phf_macros@0.11.2
 	phf_shared@0.11.2
+	pin-project-internal@1.1.5
 	pin-project-lite@0.2.13
+	pin-project@1.1.5
 	pin-utils@0.1.0
 	pkg-config@0.3.30
 	powerfmt@0.2.0
@@ -196,7 +199,7 @@ CRATES="
 	regex-syntax@0.8.2
 	regex@1.10.3
 	rend@0.4.2
-	reqwest@0.11.24
+	reqwest@0.12.0
 	rkyv@0.7.44
 	rkyv_derive@0.7.44
 	rust_decimal@1.34.3
@@ -261,7 +264,9 @@ CRATES="
 	toml_datetime@0.6.5
 	toml_edit@0.21.1
 	toml_edit@0.22.6
+	tower-layer@0.3.2
 	tower-service@0.3.2
+	tower@0.4.13
 	tracing-attributes@0.1.27
 	tracing-core@0.1.32
 	tracing-journald@0.3.0
@@ -321,7 +326,7 @@ CRATES="
 "
 
 declare -A GIT_CRATES=(
-	[ncmapi]='https://github.com/waylyrics/ncmapi-rs;51b4d121235823e8040feb3a9c9052da0559fe75;ncmapi-rs-%commit%'
+	[ncmapi]='https://github.com/waylyrics/ncmapi-rs;590f280458e1826df0af0f0f624c2222448a7dee;ncmapi-rs-%commit%'
 	[qqmusic-rs]='https://github.com/waylyrics/qqmusic-rs;22e66ba62e63d97c6dffb45400655404e6f06b93;qqmusic-rs-%commit%'
 )
 
@@ -385,13 +390,14 @@ src_install() {
 	insinto "/usr/share/${PN}"
 	doins -r themes
 
-	cd "${S}/locales"
+	cd "${S}/locales" || die
 	install_locale() {
-		for file in ${1}/LC_MESSAGES/waylyrics.po; do
+		if [[ -f ${1}/LC_MESSAGES/waylyrics.po ]]; then
+			local file=${1}/LC_MESSAGES/waylyrics.po
 			msgfmt "${file}" -o "${file%.po}.mo" || die
 			insinto /usr/share/locale/${1}/LC_MESSAGES
 			doins "${file%.po}.mo"
-		done
+		fi
 	}
 	plocale_for_each_locale install_locale
 }
