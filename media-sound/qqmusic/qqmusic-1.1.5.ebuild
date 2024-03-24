@@ -7,7 +7,7 @@ inherit desktop unpacker xdg
 
 DESCRIPTION="Tencent QQ Music, converted from .deb package"
 HOMEPAGE="https://y.qq.com/"
-SRC_URI="https://dldir1.qq.com/music/clntupate/linux/deb/qqmusic_${PV}_amd64.deb"
+SRC_URI="https://dldir1.qq.com/music/clntupate/linux/deb/qqmusic_${PV}_amd64_.deb"
 
 LICENSE="CC0-1.0"
 SLOT="0"
