@@ -1,5 +1,5 @@
 DEFINED_PHASES=prepare unpack
-DEPEND=x11-libs/libxcb[xkb] x11-libs/xcb-util x11-libs/cairo[X] x11-libs/libxkbcommon[X] !x11-misc/i3lock >=dev-vcs/git-1.8.2.1[curl] sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=dev-build/automake-1.16.5:1.16 ) || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7
+DEPEND=x11-libs/libxcb[xkb] x11-libs/xcb-util x11-libs/cairo[X] x11-libs/libxkbcommon[X] !x11-misc/i3lock >=dev-vcs/git-1.8.2.1[curl] sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=dev-build/automake-1.16.5:1.16 ) || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3
 DESCRIPTION=An improved i3lock
 EAPI=6
 HOMEPAGE=https://github.com/chrjguill/i3lock-color
@@ -8,5 +8,5 @@ LICENSE=BSD
 PROPERTIES=live
 RDEPEND=x11-libs/libxcb[xkb] x11-libs/xcb-util x11-libs/cairo[X] x11-libs/libxkbcommon[X] !x11-misc/i3lock
 SLOT=0
-_eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b	eqawarn	c9847c43b3253a276ae2eabddedab3d7	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	e4cf390b19033d5ca443765bc8537b81
+_eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b	eqawarn	c9847c43b3253a276ae2eabddedab3d7	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	3af8f60c4bdb23e738db506a630898ee
 _md5_=fc87a62069089522c19da9aa6939d141
