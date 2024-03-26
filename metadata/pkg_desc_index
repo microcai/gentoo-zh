@@ -18,7 +18,7 @@ app-backup/restic-rest-server 0.12.1: A high performance HTTP server that implem
 app-backup/snapper-gui 220626: GUI for snapper, a tool for Linux filesystem snapshot management
 app-containers/distrobox-boost 9999: A container runtimer wrapper for OCI (distrobox/toolbox, also podman/docker)
 app-crypt/archlinux-keyring 20231113 20231222 20240208-r1: GnuPG keyring of Archlinux developer keys
-app-crypt/cfssl 1.6.4: Cloudflare's PKI and TLS toolkit
+app-crypt/cfssl 1.6.5: Cloudflare's PKI and TLS toolkit
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-dicts/fcitx-pinyin-moegirl 20230714: Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 app-dicts/fcitx-pinyin-zhwiki 20230728: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
@@ -209,7 +209,7 @@ net-analyzer/besttrace-bin 1.3.2-r1: 附带链路可视化的 traceroute 工具
 net-analyzer/nali 0.8.1: An offline tool for querying IP geographic information and CDN provider.
 net-analyzer/realitlscanner 0.1.2: A TLS server scanner for Reality
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
-net-dns/ddns-go 6.2.1: Automatically obtain your public IP address and set to your domain name service.
+net-dns/ddns-go 6.3.0: Automatically obtain your public IP address and set to your domain name service.
 net-dns/dnslookup 1.10.0: Simple command line utility to make DNS lookups to the specified server
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
 net-dns/dog 0.1.0: A command-line DNS client
