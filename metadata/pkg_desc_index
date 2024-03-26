@@ -139,7 +139,7 @@ dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 fil
 dev-util/elfembed 0.3-r1: Resource Compiler for ELF binaries
 dev-util/jd-gui 1.6.6: A standalone graphical utility that displays Java source codes of .class file
 dev-util/jetbrains-toolbox 1.28.1.15219 2.0.3.17006: Manage all your JetBrains Projects and Tools
-dev-util/mamba 1.5.7: The Fast Cross-Platform Package Manager
+dev-util/mamba 1.5.8: The Fast Cross-Platform Package Manager
 dev-util/marksman-bin 2022.12.28: A language server for Markdown
 dev-util/mongodb-compass-bin 1.34.2 1.35.0 1.36.4 1.37.0 1.38.2 1.39.4 1.40.2: The GUI for MongoDB
 dev-util/pacstrap 28: Pacstrap - install packages to the specified new root directorye
