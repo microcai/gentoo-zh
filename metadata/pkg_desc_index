@@ -156,6 +156,7 @@ games-misc/oh-my-git-bin 0.6.5: An interactive Git learning game!
 games-roguelike/nethack 3.6.7: The ultimate old-school single player dungeon exploration game
 games-util/winegame-client-bin 0.5.10.5 0.5.12.2: An open source gaming platform for GNU/Linux
 gui-libs/libdecor 0.1.1: A client-side decorations library for Wayland clients
+gui-wm/swayfx 0.3.2: SwayFX: Sway, but with eye candy!
 kde-misc/plasma-applet-netspeed-widget 1.9 2.0 9999: Plasma 5 widget that displays the currently used network bandwidth.
 media-fonts/Plangothic 1.8.5757: 遍黑体项目（Plangothic Project）
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
@@ -195,7 +196,7 @@ media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb 
 media-sound/netease-cloud-music-gtk 2.3.1: netease cloud music player based on Rust & GTK for Linux
 media-sound/qqmusic 1.1.5: Tencent QQ Music, converted from .deb package
 media-sound/spotube-bin 3.4.0 3.5.0: A lightweight Spotify client using YouTube as audio source
-media-sound/termusic 0.7.11: Terminal Music and Podcast Player written in Rust
+media-sound/termusic 0.9.0: Terminal Music and Podcast Player written in Rust
 media-sound/yesplaymusic-bin 0.4.6 0.4.7: A third party music player for Netease Music
 media-sound/youtube-music-bin 2.2.0: YouTube Music Desktop App bundled with custom plugins
 media-video/amdgpu-pro-amf 1.4.29.1538781: AMD's closed source Advanced Media Framework (AMF) driver

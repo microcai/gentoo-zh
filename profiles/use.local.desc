@@ -116,6 +116,12 @@ dev-util/arch-install-scripts:pacstrap - Install pacstrap
 dev-util/mamba:micromamba - build micromamba
 gui-libs/libdecor:dbus - Enable dbus to query current cursor theme
 gui-libs/libdecor:examples - Build and install examples
+gui-wm/swayfx:X - Enable support for X11 applications (XWayland)
+gui-wm/swayfx:grimshot - Install 'grimshot': script for taking screenshots
+gui-wm/swayfx:swaybar - Install 'swaybar': sway's status bar component
+gui-wm/swayfx:swaynag - Install 'swaynag': shows a message with buttons
+gui-wm/swayfx:tray - Enable support for StatusNotifierItem tray specification
+gui-wm/swayfx:wallpapers - Install sway's default wallpaper image
 media-fonts/Plangothic:allideo - use HanaMin to display unincluded fonts
 media-fonts/Plangothic:fallback - do not display unincluded fonts
 media-fonts/nerd-fonts:0xproto - Install Nerd-fonts-patched 0xProto fonts
