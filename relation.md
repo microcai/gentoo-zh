@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-03-25 13:22:12 CST)
+(The last generation time: 2024-03-26 11:59:47 CST)
 
 ### Packages
 
@@ -278,6 +278,8 @@
  games-util/winegame-client-bin             | 0.5.10.5                                  |        | https://winegame.net/                                                                   | An open source gaming platform for GNU/Linux
                                             | 0.5.12.2                                  |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ gui-wm/swayfx                              | 0.3.2                                     |        | https://github.com/WillPower3309/swayfx                                                 | SwayFX: Sway, but with eye candy!
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  kde-misc/plasma-applet-netspeed-widget     | 1.9                                       |        | https://www.kde-look.org/p/998895/                                                      | Plasma 5 widget that displays the currently used network bandwidth.
                                             | 2.0                                       |        |                                                                                         |
                                             | 9999                                      |        |                                                                                         |
@@ -372,7 +374,7 @@
  media-sound/spotube-bin                    | 3.4.0                                     |        | https://github.com/KRTirtho/spotube                                                     | A lightweight Spotify client using YouTube as audio source
                                             | 3.5.0                                     |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/termusic                       | 0.7.11                                    |        | https://github.com/tramhao/termusic                                                     | Terminal Music and Podcast Player written in Rust
+ media-sound/termusic                       | 0.9.0                                     |        | https://github.com/tramhao/termusic                                                     | Terminal Music and Podcast Player written in Rust
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/yesplaymusic-bin               | 0.4.6                                     |        | https://github.com/qier222/YesPlayMusic                                                 | A third party music player for Netease Music
                                             | 0.4.7                                     |        |                                                                                         |
