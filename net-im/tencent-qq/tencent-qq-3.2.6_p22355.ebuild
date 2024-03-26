@@ -11,7 +11,7 @@ HOMEPAGE="https://im.qq.com/linuxqq/index.shtml"
 LICENSE="Tencent"
 RESTRICT="strip"
 
-_I="8fddf4ad"
+_I="f9ad4a03"
 
 _LiteLoader_PV="1.0.3"
 
@@ -56,9 +56,9 @@ BDEPEND="liteloader? ( app-arch/unzip )"
 
 S=${WORKDIR}
 
-src_unpack(){
+src_unpack() {
 	:
-	if use liteloader ;then
+	if use liteloader; then
 		unpack LiteLoaderQQNT-${_LiteLoader_PV}.zip
 	fi
 }
@@ -111,8 +111,8 @@ src_install() {
 	dodoc "${D}"/usr/share/doc/linuxqq/changelog
 	rm -rf "${D}"/usr/share/doc/linuxqq/ || die
 
-	if use liteloader ;then
-		insinto  /opt/LiteLoader
+	if use liteloader; then
+		insinto /opt/LiteLoader
 		doins -r "${WORKDIR}"/*
 		dosym -r /opt/LiteLoader/src/preload.js /opt/QQ/resources/app/application/preload.js
 		sed -i "1 i require(\"/opt/LiteLoader\");" "${D}"/opt/QQ/resources/app/app_launcher/index.js || die
@@ -121,7 +121,7 @@ src_install() {
 
 pkg_postinst() {
 	xdg_pkg_postinst
-	if use bwrap ;then
+	if use bwrap; then
 		elog "If you want to download files in QQ"
 		elog "Please set the QQ download path to ~/Download"
 	fi
