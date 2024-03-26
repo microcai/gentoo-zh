@@ -45,7 +45,12 @@ source = "git"
 git = "https://gitlab.archlinux.org/archlinux/archlinux-keyring.git"
 github_account = "HougeLangley"
 
-#["app-crypt/cfssl"]
+["app-crypt/cfssl"]
+source = "github"
+github = "cloudflare/cfssl"
+use_latest_release = true
+prefix = "v"
+github_account = "peeweep"
 
 #["app-crypt/etoken-sac"]
 
