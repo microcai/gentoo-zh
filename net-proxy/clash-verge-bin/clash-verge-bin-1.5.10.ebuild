@@ -7,11 +7,14 @@ inherit desktop unpacker xdg
 
 DESCRIPTION="(Continuation) of Clash Meta GUI based on Tauri. "
 HOMEPAGE="https://github.com/clash-verge-rev/clash-verge-rev"
-SRC_URI="https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v${PV}/clash-verge_${PV}_amd64.deb"
+SRC_URI="
+	amd64? ( https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v${PV}/clash-verge_${PV}_amd64.deb )
+	arm64? ( https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v${PV}/clash-verge_${PV}_arm64.deb )
+"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64"
 
 DEPEND="
 	dev-libs/libayatana-appindicator
