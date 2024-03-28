@@ -10,6 +10,7 @@ HOMEPAGE="https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic-Project
 SRC_URI="
 	https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic-Project/archive/refs/tags/V${PV}.tar.gz -> ${P}.tar.gz
 "
+S="${WORKDIR}/Plangothic-Project-${PV}"
 
 LICENSE="Plangothic"
 SLOT="0"
@@ -20,10 +21,7 @@ IUSE="
 "
 
 RESTRICT="mirror"
-
 FONT_SUFFIX="ttf"
-
-S="${WORKDIR}/Plangothic-Project-${PV}"
 
 src_install() {
 	use allideo || rm "PlangothicP1-Regular (allideo).ttf" || die
