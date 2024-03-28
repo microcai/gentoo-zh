@@ -117,7 +117,7 @@ dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458-r1 9999: Community m
 dev-libs/v2ray-domain-list-community-bin 20240221053250: Community managed domain list for V2Ray.
 dev-libs/v2ray-geoip-bin 202402220038: GeoIP for V2Ray.
 dev-libs/v2ray-rules-dat 202402252208: Enhanced edition of V2Ray rules dat files.
-dev-python/archspec 0.2.2: A library for detecting, labeling, and reasoning about microarchitectures
+dev-python/archspec 0.2.3: A library for detecting, labeling, and reasoning about microarchitectures
 dev-python/conda 24.3.0: OS-agnostic, system-level binary package manager and ecosystem
 dev-python/conda-libmamba-solver 24.1.0-r1: The libmamba based solver for conda
 dev-python/conda-package-handling 2.2.0: Create and extract conda packages of various formats
@@ -255,7 +255,7 @@ net-proxy/Xray 1.8.8-r1 1.8.9: Xray, Penetrates Everything. Also the best v2ray-
 net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
 net-proxy/clash-nyanpasu 1.5.0: Clash GUI based on tauri
 net-proxy/clash-rs 0.1.15: Custom protocol, rule based network proxy
-net-proxy/clash-verge-bin 1.5.8 1.5.9: (Continuation) of Clash Meta GUI based on Tauri.
+net-proxy/clash-verge-bin 1.5.10: (Continuation) of Clash Meta GUI based on Tauri.
 net-proxy/dae 0.4.0 0.5.1 9999: A lightweight and high-performance transparent proxy solution based on eBPF
 net-proxy/daed 0.3.3_p1 0.4.0_rc1 9999: A Modern Dashboard For dae
 net-proxy/hysteria 2.2.2: A powerful, lightning fast and censorship resistant proxy.
