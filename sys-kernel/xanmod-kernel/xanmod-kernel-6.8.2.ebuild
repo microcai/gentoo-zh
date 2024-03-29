@@ -8,7 +8,7 @@ inherit kernel-build python-any-r1 toolchain-funcs
 PYTHON_COMPAT=( python3_{9..11} )
 MY_P=linux-${PV%.*}
 #Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
-GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 4))
+GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 1))
 XV="1"
 
 DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
@@ -17,8 +17,8 @@ SRC_URI+=" https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.x
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.base.tar.xz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.extras.tar.xz
 	mirror://sourceforge/xanmod/patch-${PV}-xanmod1.xz
-	https://raw.githubusercontent.com/zhmars/cjktty-patches/master/v6.x/cjktty-${PV%.*}.patch
-	https://raw.githubusercontent.com/zhmars/cjktty-patches/master/cjktty-add-cjk32x32-font-data.patch"
+	https://raw.githubusercontent.com/OriPoin/cjktty-patches/master/v6.x/cjktty-${PV%.*}.patch
+	https://raw.githubusercontent.com/OriPoin/cjktty-patches/master/cjktty-add-cjk32x32-font-data.patch"
 S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
