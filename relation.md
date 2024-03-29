@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-03-29 22:27:13 CST)
+(The last generation time: 2024-03-29 23:17:12 CST)
 
 ### Packages
 
@@ -401,7 +401,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/chinadns                           | 1.3.2                                     |        | https://github.com/clowwindy/ChinaDNS                                                   | Protect yourself against DNS poisoning in China
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-dns/ddns-go                            | 6.3.0                                     |        | https://github.com/jeessy2/ddns-go                                                      | Automatically obtain your public IP address and set to your domain name service.
+ net-dns/ddns-go                            | 6.3.1                                     |        | https://github.com/jeessy2/ddns-go                                                      | Automatically obtain your public IP address and set to your domain name service.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/dnslookup                          | 1.10.0                                    |        | https://github.com/ameshkov/dnslookup                                                   | Simple command line utility to make DNS lookups to the specified server
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
