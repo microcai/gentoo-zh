@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-03-28 19:45:56 CST)
+(The last generation time: 2024-03-29 22:27:13 CST)
 
 ### Packages
 
@@ -452,6 +452,9 @@
  net-libs/jzmq                              | 9999                                      |        | http://www.zeromq.org/bindings:java                                                     | jzmq
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/alist                             | 3.32.0                                    |        | https://alist.nn.ci                                                                     | A file list/WebDAV program that supports multiple storages
+                                            | 3.33.0                                    |        |                                                                                         |
+   acct-group/alist                         | 0                                         | RD     |                                                                                         | A file list/WebDAV program that supports multiple storages
+   acct-user/alist                          | 0                                         | RD     |                                                                                         | A file list/WebDAV program that supports multiple storages
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/aliyundrive-webdav                | 2.3.3                                     |        | https://github.com/messense/aliyundrive-webdav.git                                      | WebDAV server for AliyunDrive
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
