@@ -10,5 +10,5 @@ LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=libnotify? ( x11-libs/libnotify ) x11-libs/libXft >=x11-libs/gtk+-2.4:2 wget? ( net-misc/wget )
 SLOT=0
-_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	5f49a16f67f81bdf873e3d1f10b10001	autotools	3af8f60c4bdb23e738db506a630898ee	flag-o-matic	24c947ff5f858625cf0b33c15eed4425	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	5f49a16f67f81bdf873e3d1f10b10001	autotools	3af8f60c4bdb23e738db506a630898ee	flag-o-matic	288c54efeb5e2aa70775e39032695ad4	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
 _md5_=935a6723a55def8eafe5d0cd8780f4ef
