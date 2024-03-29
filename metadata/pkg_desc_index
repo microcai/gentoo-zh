@@ -211,7 +211,7 @@ net-analyzer/besttrace-bin 1.3.2-r1: 附带链路可视化的 traceroute 工具
 net-analyzer/nali 0.8.1: An offline tool for querying IP geographic information and CDN provider.
 net-analyzer/realitlscanner 0.1.2: A TLS server scanner for Reality
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
-net-dns/ddns-go 6.3.0: Automatically obtain your public IP address and set to your domain name service.
+net-dns/ddns-go 6.3.1: Automatically obtain your public IP address and set to your domain name service.
 net-dns/dnslookup 1.10.0: Simple command line utility to make DNS lookups to the specified server
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
 net-dns/dog 0.1.0: A command-line DNS client
