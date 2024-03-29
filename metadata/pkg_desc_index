@@ -262,7 +262,7 @@ net-proxy/dae 0.4.0 0.5.1 9999: A lightweight and high-performance transparent p
 net-proxy/daed 0.3.3_p1 0.4.0_rc1 9999: A Modern Dashboard For dae
 net-proxy/hysteria 2.2.2: A powerful, lightning fast and censorship resistant proxy.
 net-proxy/juicity 0.3.0: juicity is a quic-based proxy protocol.
-net-proxy/mihomo 1.18.2: Another Clash Kernel, formerly Clash.Meta
+net-proxy/mihomo 1.18.3: Another Clash Kernel, formerly Clash.Meta
 net-proxy/proxy-server 6.0.0: Implementation of all proxy protocols using modern c++
 net-proxy/shadowsocks-rust 1.18.2: A Rust port of shadowsocks.
 net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
