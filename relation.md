@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-03-30 19:33:39 CST)
+(The last generation time: 2024-03-30 20:29:56 CST)
 
 ### Packages
 
@@ -547,8 +547,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/v2rayA                           | 2.2.5.1                                   |        | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                             | 9999                                      |        |                                                                                         |
-   net-proxy/Xray                           | 1.8.8-r1                                  | RD     | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
-                                            | 1.8.9                                     |        |                                                                                         |
+   net-proxy/Xray                           | 1.8.10                                    | RD     | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
      app-alternatives/v2ray-geoip           | 0-r1                                      |  D, RD |                                                                                         | symlink for v2ray-geoip
      app-alternatives/v2ray-geosite         | 0-r1                                      |  D, RD |                                                                                         | symlink for v2ray-geosite
    net-proxy/v2ray                          | 5.14.1-r1                                 | RD     | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
