@@ -502,12 +502,6 @@ prefix = "v"
 
 #["dev-util/mamba"]
 
-["dev-util/marksman-bin"]
-source = "github"
-github = "artempyanykh/marksman"
-use_latest_release = true
-github_account = "st0nie"
-
 #["dev-util/mongodb-compass-bin"]
 
 #["dev-util/pacstrap"]
