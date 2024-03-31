@@ -1,9 +1,9 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit flag-o-matic linux-info go-module systemd
+inherit flag-o-matic linux-info go-module systemd shell-completion
 
 _MY_PV=${PV/_rc/rc}
 
@@ -76,11 +76,18 @@ src_compile() {
 
 src_install() {
 	dobin dae
+
 	systemd_dounit install/dae.service
 	newinitd "${FILESDIR}"/dae.initd dae
+
 	insinto /etc/dae
 	newins example.dae config.dae.example
 	newins install/empty.dae config.dae
+
+	newbashcomp install/shell-completion/dae.bash dae
+	newfishcomp install/shell-completion/dae.fish dae.fish
+	newzshcomp install/shell-completion/dae.zsh _dae
+
 	dosym -r "/usr/share/v2ray/geosite.dat" /usr/share/dae/geosite.dat
 	dosym -r "/usr/share/v2ray/geoip.dat" /usr/share/dae/geoip.dat
 }
