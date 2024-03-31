@@ -6,6 +6,6 @@
 		<name>WANG Xuerui</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">shankerwangmiao/liblol</remote-id>
+		<remote-id type="github">AOSC-Dev/liblol</remote-id>
 	</upstream>
 </pkgmetadata>
