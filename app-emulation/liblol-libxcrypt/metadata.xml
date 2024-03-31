@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>xen0n@gentoo.org</email>
+		<name>WANG Xuerui</name>
+	</maintainer>
+	<use>
+		<flag name="headers-only">Build and install only the headers.</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">AOSC-Dev/liblol</remote-id>
+	</upstream>
+</pkgmetadata>
