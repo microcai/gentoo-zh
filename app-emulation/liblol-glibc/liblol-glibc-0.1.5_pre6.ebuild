@@ -1116,7 +1116,7 @@ glibc_do_configure() {
 
 	# set some variables not accessible with configure arguments
 	cat > configparms <<EOF
-user-defined-trusted-dirs-pre = $(eprefix_lol)/local/preload-lib $(eprefix_lol)/support/$(get_libdir)
+user-defined-trusted-dirs-pre = $(eprefix_lol)/local/$(get_libdir)/preload $(eprefix_lol)/$(get_libdir)/preload
 user-defined-trusted-dirs = $(eprefix_lol)/local/$(get_libdir) $(eprefix_lol)/$(get_libdir)
 EOF
 
@@ -1426,7 +1426,7 @@ liblol_install() {
 		"${LOL_LIBS[@]}"
 		"${LOL_MERGED_LIBS[@]}"
 	)
-	local liblol_libdir="$(eprefix_lol)/support/$(get_libdir)"
+	local liblol_libdir="$(eprefix_lol)/$(get_libdir)/preload"
 	local host_libdir
 
 	if use split-usr; then
@@ -1443,6 +1443,8 @@ liblol_install() {
 	done
 
 	dosym -r "${liblol_libdir}/ld.so.1" "${host_libdir}/ld.so.1"
+
+	keepdir "$(eprefix_lol)/local/$(get_libdir)/preload"
 }
 
 glibc_do_src_install() {
@@ -1526,7 +1528,7 @@ src_install() {
 }
 
 refresh_lib_symlinks() {
-	local liblol_libdir="${EROOT}${LOLPREFIX}/support/$(get_libdir)"
+	local liblol_libdir="${EROOT}${LOLPREFIX}/$(get_libdir)/preload"
 	local gcc_libs=(
 		libatomic.so.1
 		libgcc_s.so.1

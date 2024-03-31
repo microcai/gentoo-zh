@@ -231,7 +231,7 @@ multilib_src_install() {
 		return
 	fi
 
-	local liblol_libdir="$EPREFIX$LOLPREFIX/support/$(get_libdir)"
+	local liblol_libdir="$EPREFIX$LOLPREFIX/$(get_libdir)/preload"
 	into "$liblol_libdir"
 
 	# pwd is builddir
