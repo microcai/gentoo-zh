@@ -1426,13 +1426,6 @@ liblol_install() {
 		"${LOL_LIBS[@]}"
 		"${LOL_MERGED_LIBS[@]}"
 	)
-	local gcc_libs=(
-		libatomic.so.1
-		libgcc_s.so.1
-		libgfortran.so.5
-		libgomp.so.1
-		libstdc++.so.6
-	)
 	local liblol_libdir="$(eprefix_lol)/support/$(get_libdir)"
 	local host_libdir
 
@@ -1450,17 +1443,6 @@ liblol_install() {
 	done
 
 	dosym -r "${liblol_libdir}/ld.so.1" "${host_libdir}/ld.so.1"
-
-	if has_version -b sys-devel/gcc-config && has_version sys-devel/gcc; then
-		local gcc_path="$(gcc-config --get-lib-path 2>/dev/null)"
-		# only keep the first entry
-		gcc_path="${gcc_path%%:*}"
-
-		einfo "Symlinking GCC libs at $gcc_path to libLoL preload libdir"
-		for i in "${gcc_libs[@]}"; do
-			[[ -f "${gcc_path}/$i" ]] && dosym -r "${gcc_path}/$i" "${liblol_libdir}/$i"
-		done
-	fi
 }
 
 glibc_do_src_install() {
@@ -1541,4 +1523,49 @@ src_install() {
 		einfo "Not installing static glibc libraries"
 		find "${ED}" -name "*.a" -and -not -name "*_nonshared.a" -delete
 	fi
+}
+
+refresh_lib_symlinks() {
+	local liblol_libdir="${EROOT}${LOLPREFIX}/support/$(get_libdir)"
+	local gcc_libs=(
+		libatomic.so.1
+		libgcc_s.so.1
+		libgfortran.so.5
+		libgomp.so.1
+		libstdc++.so.6
+	)
+	local gcc_lib
+	local lol_lib
+
+	if has_version sys-devel/gcc-config && has_version sys-devel/gcc; then
+		local gcc_path="$(gcc-config --get-lib-path 2>/dev/null)"
+		# only keep the first entry
+		gcc_path="${gcc_path%%:*}"
+
+		einfo "Symlinking GCC libs at $gcc_path to libLoL preload libdir"
+		for i in "${gcc_libs[@]}"; do
+			gcc_lib="${gcc_path}/$i"
+			lol_lib="${liblol_libdir}/$i"
+
+			if ! [[ -f "$gcc_lib" ]]; then
+				continue
+			fi
+
+			rm -f "$lol_lib"
+			ln -s "$gcc_lib" "$lol_lib"
+		done
+	fi
+}
+
+pkg_postinst() {
+	refresh_lib_symlinks
+
+	elog "Because libLoL cannot hook into env-update, you need to manually"
+	elog "refresh symlinks after e.g. GCC version changes, by running:"
+	elog
+	elog "    emerge --config ${CATEGORY}/${PN}"
+}
+
+pkg_config() {
+	refresh_lib_symlinks
 }
