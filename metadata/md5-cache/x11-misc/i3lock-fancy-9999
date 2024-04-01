@@ -8,5 +8,5 @@ LICENSE=BSD
 PROPERTIES=live
 RDEPEND=app-shells/bash:0 media-gfx/imagemagick app-alternatives/awk x11-misc/wmctrl media-gfx/scrot x11-misc/i3lock-color
 SLOT=0
-_eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_eclasses_=git-r3	fbb2889c81f3a05910c1524db69425c1
 _md5_=1183031ccbf1e30d0027db581848501e

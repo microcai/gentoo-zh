@@ -9,5 +9,5 @@ LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=app-i18n/ibus app-i18n/librime x11-libs/libnotify app-i18n/rime-data
 SLOT=0
-_eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_eclasses_=git-r3	fbb2889c81f3a05910c1524db69425c1
 _md5_=70aa5df412bc3aa3b59bff53bb985d9e

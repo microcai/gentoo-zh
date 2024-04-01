@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=>=net-misc/networkmanager-1.0[ppp] dev-libs/dbus-glib net-dialup/ppp net-dialup/xl2tpd >=dev-libs/glib-2.32 gnome? ( >=x11-libs/gtk+-3.4:4 gnome-base/libgnome-keyring )
 SLOT=0
 SRC_URI=mirror://gnome/sources/networkmanager-l2tp/9999/networkmanager-l2tp-9999.tar.xz
-_eclasses_=gnome.org	6b39404f1491c60a2d32e3c693a683fe	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	5f49a16f67f81bdf873e3d1f10b10001	autotools	3af8f60c4bdb23e738db506a630898ee
+_eclasses_=gnome.org	6b39404f1491c60a2d32e3c693a683fe	git-r3	fbb2889c81f3a05910c1524db69425c1	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	5f49a16f67f81bdf873e3d1f10b10001	autotools	3af8f60c4bdb23e738db506a630898ee
 _md5_=adadb843f338e51dc0274297c41fceb3

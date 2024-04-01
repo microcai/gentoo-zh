@@ -9,5 +9,5 @@ LICENSE=CC-BY-SA-3.0
 PROPERTIES=live
 RDEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 SLOT=0
-_eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b	vim-doc	f088862726f2bc672c57b1063b81ec52	vim-plugin	92ea4186891b666b0970fa1d713d64fa
+_eclasses_=git-r3	fbb2889c81f3a05910c1524db69425c1	vim-doc	f088862726f2bc672c57b1063b81ec52	vim-plugin	92ea4186891b666b0970fa1d713d64fa
 _md5_=7a4e20e56666eb1cdc861fe6389e7842
