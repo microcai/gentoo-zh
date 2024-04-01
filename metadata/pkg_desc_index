@@ -33,7 +33,9 @@ app-emulation/deepin-wine-plugin 5.1.13-r1: Deepin Wine plugin
 app-emulation/deepin-wine5 5.0.16-r1: Deepin wine5
 app-emulation/deepin-wine6-stable 6.0.0.52: Deepin wine6 stable
 app-emulation/la-ow-syscall 0.1.0: Linux kernel module for compatibility with LoongArch's old-world ABI
-app-emulation/liblol 0.0.4-r1: LoongArch old-world ABI compatibility layer from AOSC OS
+app-emulation/liblol 0.1.5_pre6: LoongArch old-world ABI compatibility layer from AOSC OS
+app-emulation/liblol-glibc 0.1.5_pre6: GNU libc C library, for liblol
+app-emulation/liblol-libxcrypt 0.1.5_pre6: libxcrypt for liblol
 app-emulation/looking-glass 0_beta6-r1: A low latency KVMFR application for guests with VGA PCI Passthrough
 app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
 app-i18n/cskk 3.1.1: C ABIから使う事を目的とした SKK(Simple Kana Kanji henkan)方式のかな漢字変換ライブラリ
@@ -87,7 +89,7 @@ app-misc/xmind 22.11.3656 23.07.201366-r1: Brainstorming and Mind Mapping Softwa
 app-office/anytype-bin 0.35.4 0.39.0: A notebook based on p2p network
 app-office/bytedance-feishu 4.11.6.2 5.9.18 5.14.14 5.26.13-r1 6.9.20: feishu - ByteDance's enterprise collaboration platform
 app-office/freeoffice 1062 1064 1068: A complete, free Microsoft Office-compatible alternative office suite.
-app-office/wps-office 11.1.0.11719: WPS Office is an office productivity suite, Here is the Chinese version
+app-office/wps-office 11.1.0.11719-r1: WPS Office is an office productivity suite, Here is the Chinese version
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-shells/gitstatus 1.5.4: Git status for Bash and Zsh prompt
 app-shells/zsh-theme-powerlevel10k 1.20.0: Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
@@ -144,6 +146,7 @@ dev-util/jetbrains-toolbox 1.28.1.15219 2.0.3.17006: Manage all your JetBrains P
 dev-util/mamba 1.5.8: The Fast Cross-Platform Package Manager
 dev-util/mongodb-compass-bin 1.34.2 1.35.0 1.36.4 1.37.0 1.38.2 1.39.4 1.40.2: The GUI for MongoDB
 dev-util/pacstrap 28: Pacstrap - install packages to the specified new root directorye
+dev-util/patchelf-liblol 0.1.4: patchelf patched for building libLoL only
 dev-util/redpanda-cpp 2.26: A lightweight yet powerful C/C++/GNU Assembly IDE.
 dev-util/tailspin 3.0.0: A log file highlighter
 dev-util/tauri-cli 1.5.9 2.0.0_alpha17: Command line interface for building Tauri apps

@@ -1,0 +1,18 @@
+BDEPEND=|| ( dev-lang/python:3.12 dev-lang/python:3.11 dev-lang/python:3.10 ) >=app-misc/pax-utils-1.3.3 >=dev-util/patchelf-liblol-0.1.4 sys-devel/bison compile-locales? ( sys-apps/locale-gen ) doc? ( dev-lang/perl sys-apps/texinfo ) test? ( dev-lang/perl >=net-dns/libidn2-2.3.0 ) >=sys-devel/binutils-2.27 >=sys-devel/gcc-6.2 sys-devel/gnuconfig
+DEFINED_PHASES=compile config configure install postinst prepare pretend setup test unpack
+DEPEND=gd? ( media-libs/gd:2= ) nscd? ( selinux? ( audit? ( sys-process/audit ) caps? ( sys-libs/libcap ) ) ) suid? ( caps? ( sys-libs/libcap ) ) selinux? ( sys-libs/libselinux ) systemtap? ( dev-debug/systemtap ) virtual/os-headers
+DESCRIPTION=GNU libc C library, for liblol
+EAPI=8
+HOMEPAGE=https://www.gnu.org/software/libc/ https://github.com/AOSC-Dev/liblol
+IDEPEND=!compile-locales? ( sys-apps/locale-gen )
+INHERIT=python-any-r1 toolchain-funcs flag-o-matic gnuconfig multilib tmpfiles
+IUSE=audit caps cet compile-locales custom-cflags doc gd hash-sysv-compat headers-only +multiarch multilib multilib-bootstrap nscd perl profile selinux split-usr +ssp stack-realign +static-libs suid systemd systemtap test vanilla
+KEYWORDS=-* ~loong
+LICENSE=LGPL-2.1+ BSD HPND ISC inner-net rc PCRE
+PDEPEND=!vanilla? ( sys-libs/timezone-data )
+RDEPEND=gd? ( media-libs/gd:2= ) nscd? ( selinux? ( audit? ( sys-process/audit ) caps? ( sys-libs/libcap ) ) ) suid? ( caps? ( sys-libs/libcap ) ) selinux? ( sys-libs/libselinux ) systemtap? ( dev-debug/systemtap ) !<app-emulation/liblol-0.1.0 !<app-misc/pax-utils-1.3.3 !<sys-apps/systemd-254.9-r1 perl? ( dev-lang/perl ) >=net-dns/libidn2-2.3.0 vanilla? ( !sys-libs/timezone-data )
+RESTRICT=!test? ( test )
+SLOT=2.2
+SRC_URI=mirror://gnu/glibc/glibc-2.39.tar.xz https://dev.gentoo.org/~dilfridge/distfiles/glibc-2.39-patches-2.tar.xz https://github.com/AOSC-Dev/liblol/archive/refs/tags/v0.1.5_pre6.tar.gz -> liblol-0.1.5_pre6.tar.gz multilib-bootstrap? ( https://dev.gentoo.org/~dilfridge/distfiles/gcc-multilib-bootstrap-20201208.tar.xz ) systemd? ( https://gitweb.gentoo.org/proj/toolchain/glibc-systemd.git/snapshot/glibc-systemd-20210729.tar.gz )
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	8904b60325f22500b0c3ad4b68a42448	python-any-r1	f5169813d1619761b459800587005fd2	flag-o-matic	288c54efeb5e2aa70775e39032695ad4	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f
+_md5_=564c2b865c4d4973bec28951b0c73d70

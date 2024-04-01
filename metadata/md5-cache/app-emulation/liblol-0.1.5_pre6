@@ -1,0 +1,10 @@
+DEFINED_PHASES=-
+DESCRIPTION=LoongArch old-world ABI compatibility layer from AOSC OS
+EAPI=8
+HOMEPAGE=https://github.com/AOSC-Dev/liblol
+KEYWORDS=-* ~loong
+LICENSE=GPL-2
+PDEPEND=app-emulation/la-ow-syscall
+RDEPEND=~app-emulation/liblol-glibc-0.1.5_pre6 ~app-emulation/liblol-libxcrypt-0.1.5_pre6
+SLOT=0
+_md5_=38f698f32adadd2d7bd352e5470e6c9e

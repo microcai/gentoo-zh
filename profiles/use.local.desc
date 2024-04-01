@@ -9,6 +9,19 @@ app-alternatives/v2ray-geosite:loyalsoldier - use dev-libs/v2ray-rules-dat
 app-alternatives/v2ray-geosite:v2fly - use dev-libs/v2ray-domain-list-community-bin
 app-arch/zchunk:openssl - Build with openssl support
 app-emulation/deepin-wine-plugin:virtual-pkg - With deepin-wine-plugin-virtual package
+app-emulation/liblol-glibc:cet - Enable Intel Control-flow Enforcement Technology (needs binutils 2.29 and gcc 8)
+app-emulation/liblol-glibc:compile-locales - build *all* locales in src_install; this is generally meant for stage building only as it ignores /etc/locale.gen file and can be pretty slow
+app-emulation/liblol-glibc:gd - build memusage and memusagestat tools
+app-emulation/liblol-glibc:hash-sysv-compat - enable sysv linker hashes in glibc for compatibility with binary software (EAC via wine/proton)
+app-emulation/liblol-glibc:multiarch - enable optimizations for multiple CPU architectures (detected at runtime)
+app-emulation/liblol-glibc:multilib-bootstrap - Provide prebuilt libgcc.a and crt files if missing. Only needed for ABI switch.
+app-emulation/liblol-glibc:nscd - Build, and enable support for, the Name Service Cache Daemon
+app-emulation/liblol-glibc:perl - Install additional scripts written in Perl
+app-emulation/liblol-glibc:ssp - protect stack of glibc internals
+app-emulation/liblol-glibc:stack-realign - Realign the stack in the 32-bit build for compatibility with older binaries at some performance cost
+app-emulation/liblol-glibc:suid - Make internal pt_chown helper setuid -- not needed if using Linux and have /dev/pts mounted with gid=5
+app-emulation/liblol-glibc:systemtap - enable systemtap static probe points
+app-emulation/liblol-libxcrypt:headers-only - Build and install only the headers.
 app-emulation/looking-glass:backtrace - Enable backtrace support
 app-emulation/looking-glass:host - Build host application
 app-emulation/looking-glass:obs - Build OBS plugin
