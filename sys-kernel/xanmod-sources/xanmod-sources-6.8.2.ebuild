@@ -4,7 +4,7 @@
 EAPI="8"
 K_WANT_GENPATCHES="base extras"
 #Note: to bump xanmod, check K_GENPATCHES_VER in sys-kernel/gentoo-sources
-K_GENPATCHES_VER="14"
+K_GENPATCHES_VER="3"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 ETYPE="sources"
@@ -13,7 +13,7 @@ detect_version
 
 DESCRIPTION="Full XanMod source, including the Gentoo patchset and other patch options."
 HOMEPAGE="https://xanmod.org
-		https://github.com/zhmars/cjktty-patches
+		https://github.com/OriPoin/cjktty-patches
 		https://github.com/hamadmarri/TT-CPU-Scheduler"
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
