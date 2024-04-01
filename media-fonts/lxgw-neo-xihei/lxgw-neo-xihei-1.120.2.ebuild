@@ -8,9 +8,9 @@ inherit font
 DESCRIPTION="A Chinese sans-serif font derived from IPAex Gothic."
 HOMEPAGE="https://github.com/lxgw/LxgwNeoXiHei"
 SRC_URI="https://github.com/lxgw/LxgwNeoXiHei/releases/download/v${PV}/LXGWNeoXiHei.ttf"
+S="${DISTDIR}"
 
 LICENSE="IPAfont"
-S="${DISTDIR}"
 SLOT="0"
 KEYWORDS="~amd64"
 
