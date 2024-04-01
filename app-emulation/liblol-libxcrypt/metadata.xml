@@ -5,6 +5,9 @@
 		<email>xen0n@gentoo.org</email>
 		<name>WANG Xuerui</name>
 	</maintainer>
+	<use>
+		<flag name="headers-only">Build and install only the headers.</flag>
+	</use>
 	<upstream>
 		<remote-id type="github">AOSC-Dev/liblol</remote-id>
 	</upstream>
