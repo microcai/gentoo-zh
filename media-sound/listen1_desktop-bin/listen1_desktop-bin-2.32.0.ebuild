@@ -1,4 +1,4 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -9,12 +9,12 @@ DESCRIPTION="one for all free music in China"
 HOMEPAGE="http://listen1.github.io/listen1
 	https://github.com/listen1/listen1_desktop
 "
+S="${WORKDIR}"
 SRC_URI="https://github.com/listen1/listen1_desktop/releases/download/v${PV}/listen1_${PV}_linux_amd64.deb -> ${P}.deb"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-S="${WORKDIR}"
 
 RDEPEND="
 	app-accessibility/at-spi2-core:2
