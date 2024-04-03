@@ -3,7 +3,7 @@ DEFINED_PHASES=compile config configure install postinst prepare pretend setup t
 DEPEND=gd? ( media-libs/gd:2= ) nscd? ( selinux? ( audit? ( sys-process/audit ) caps? ( sys-libs/libcap ) ) ) suid? ( caps? ( sys-libs/libcap ) ) selinux? ( sys-libs/libselinux ) systemtap? ( dev-debug/systemtap ) virtual/os-headers
 DESCRIPTION=GNU libc C library, for liblol
 EAPI=8
-HOMEPAGE=https://www.gnu.org/software/libc/ https://github.com/AOSC-Dev/liblol
+HOMEPAGE=https://www.gnu.org/software/libc/ https://liblol.aosc.io
 IDEPEND=!compile-locales? ( sys-apps/locale-gen )
 INHERIT=python-any-r1 toolchain-funcs flag-o-matic gnuconfig multilib tmpfiles
 IUSE=audit caps cet compile-locales custom-cflags doc gd hash-sysv-compat headers-only +multiarch multilib multilib-bootstrap nscd perl profile selinux split-usr +ssp stack-realign +static-libs suid systemd systemtap test vanilla
@@ -15,4 +15,4 @@ RESTRICT=!test? ( test )
 SLOT=2.2
 SRC_URI=mirror://gnu/glibc/glibc-2.39.tar.xz https://dev.gentoo.org/~dilfridge/distfiles/glibc-2.39-patches-2.tar.xz https://github.com/AOSC-Dev/liblol/archive/refs/tags/v0.1.5_pre6.tar.gz -> liblol-0.1.5_pre6.tar.gz multilib-bootstrap? ( https://dev.gentoo.org/~dilfridge/distfiles/gcc-multilib-bootstrap-20201208.tar.xz ) systemd? ( https://gitweb.gentoo.org/proj/toolchain/glibc-systemd.git/snapshot/glibc-systemd-20210729.tar.gz )
 _eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	a1229a86bd0db058e474a2d7d9191cca	python-any-r1	f5169813d1619761b459800587005fd2	flag-o-matic	288c54efeb5e2aa70775e39032695ad4	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f
-_md5_=564c2b865c4d4973bec28951b0c73d70
+_md5_=d9aeabe99e59cc55e980a6289ad25b33
