@@ -148,7 +148,7 @@ dev-util/mongodb-compass-bin 1.34.2 1.35.0 1.36.4 1.37.0 1.38.2 1.39.4 1.40.2: T
 dev-util/pacstrap 28: Pacstrap - install packages to the specified new root directorye
 dev-util/patchelf-liblol 0.1.4: patchelf patched for building libLoL only
 dev-util/redpanda-cpp 2.26: A lightweight yet powerful C/C++/GNU Assembly IDE.
-dev-util/tailspin 3.0.0: A log file highlighter
+dev-util/tailspin 3.0.1: A log file highlighter
 dev-util/tauri-cli 1.5.9 2.0.0_alpha17: Command line interface for building Tauri apps
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-util/zprint-bin 1.2.7 1.2.8: Clojure and Clojurescript source code formatter
@@ -192,9 +192,9 @@ media-plugins/osdlyrics 0.5.11 0.5.14 9999: Standalone lyrics fetcher/displayer 
 media-plugins/waylyrics 0.2.13: Simple On Screen lyrics Display for linux/unix
 media-sound/barva 9999: a modular audio visualizer
 media-sound/feeluown 3.8.15 4.0_alpha0 4.0.1: A user-friendly and hackable music player
-media-sound/go-musicfox 4.3.1: Command-line Netease Cloud Music written in Go
+media-sound/go-musicfox 4.3.3: Command-line Netease Cloud Music written in Go
 media-sound/linnya 2.2.0: A free music player
-media-sound/listen1_desktop-bin 2.31.0: one for all free music in China
+media-sound/listen1_desktop-bin 2.32.0: one for all free music in China
 media-sound/lx-music-desktop-bin 2.2.2: 一个基于 electron 的音乐软件
 media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb package
 media-sound/netease-cloud-music-gtk 2.3.1: netease cloud music player based on Rust & GTK for Linux
@@ -272,7 +272,7 @@ net-proxy/v2ray 5.14.1-r1 5.15.1: A platform for building proxies to bypass netw
 net-proxy/v2ray-bin 4.45.0-r1 5.12.1: A platform for building proxies to bypass network restrictions
 net-proxy/v2rayA 2.2.5.1 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
-net-proxy/yass 1.7.6 1.8.1: lightweight and efficient, socks5/http forward proxy
+net-proxy/yass 1.7.6 1.8.1-r1: lightweight and efficient, socks5/http forward proxy
 net-vpn/sstp-server 0.6.0: A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
 net-wireless/linux-wifi-hotspot 9999: Linux Wifi Hotspot
 sci-chemistry/vesta 3.5.8: Visualization for Electronic and STructural Analysis
