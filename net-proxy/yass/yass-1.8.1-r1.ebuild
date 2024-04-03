@@ -7,7 +7,7 @@ inherit cmake xdg
 
 MY_PN="yass"
 S="${WORKDIR}/${MY_PN}-${PV}"
-SRC_URI="https://github.com/Chilledheart/yass/releases/download/${PV}/yass-${PV}.tar.gz"
+SRC_URI="https://github.com/Chilledheart/yass/releases/download/${PV}/yass-${PV}.tar.bz2"
 KEYWORDS="~amd64 ~arm64 ~x86 ~arm ~mips"
 
 DESCRIPTION="lightweight and efficient, socks5/http forward proxy"
