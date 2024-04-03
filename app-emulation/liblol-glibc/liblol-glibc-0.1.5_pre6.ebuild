@@ -12,7 +12,7 @@ TMPFILES_OPTIONAL=1
 inherit python-any-r1 toolchain-funcs flag-o-matic gnuconfig multilib tmpfiles
 
 DESCRIPTION="GNU libc C library, for liblol"
-HOMEPAGE="https://www.gnu.org/software/libc/ https://github.com/AOSC-Dev/liblol"
+HOMEPAGE="https://www.gnu.org/software/libc/ https://liblol.aosc.io"
 LICENSE="LGPL-2.1+ BSD HPND ISC inner-net rc PCRE"
 SLOT="2.2"
 
