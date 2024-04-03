@@ -17,7 +17,7 @@ XC_P="libxcrypt-${XC_PV}"
 LOLPREFIX=/opt/lol
 
 DESCRIPTION="libxcrypt for liblol"
-HOMEPAGE="https://github.com/besser82/libxcrypt https://github.com/AOSC-Dev/liblol"
+HOMEPAGE="https://github.com/besser82/libxcrypt https://liblol.aosc.io"
 if [[ ${NEED_BOOTSTRAP} == "yes" ]] ; then
 	inherit autotools
 	SRC_URI="https://github.com/besser82/libxcrypt/releases/download/v${XC_PV}/${XC_P}.tar.xz"
