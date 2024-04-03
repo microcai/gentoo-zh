@@ -10,7 +10,7 @@ PATCHELF_PV=0.18.0
 PATCHELF_P="${PATCHELF_PN}-${PATCHELF_PV}"
 
 DESCRIPTION="patchelf patched for building libLoL only"
-HOMEPAGE="https://github.com/NixOS/patchelf https://github.com/AOSC-Dev/liblol"
+HOMEPAGE="https://github.com/NixOS/patchelf https://liblol.aosc.io"
 SRC_URI="https://github.com/NixOS/${PATCHELF_PN}/archive/${PATCHELF_PV}.tar.gz -> ${PATCHELF_P}.tar.gz"
 S="${WORKDIR}/${PATCHELF_P}"
 
