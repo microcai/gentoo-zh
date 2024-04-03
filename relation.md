@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-04-03 14:21:57 CST)
+(The last generation time: 2024-04-03 14:22:16 CST)
 
 ### Packages
 
@@ -360,7 +360,7 @@
    dev-python/qasync                        | 0.26.0                                    |  D, RD | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
                                             | 0.27.1                                    |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/go-musicfox                    | 4.3.1                                     |        | https://github.com/go-musicfox/go-musicfox                                              | Command-line Netease Cloud Music written in Go
+ media-sound/go-musicfox                    | 4.3.3                                     |        | https://github.com/go-musicfox/go-musicfox                                              | Command-line Netease Cloud Music written in Go
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/linnya                         | 2.2.0                                     |        | http://www.linnya.org                                                                   | A free music player
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
