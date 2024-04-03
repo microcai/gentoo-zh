@@ -4,7 +4,7 @@
 EAPI=8
 
 DESCRIPTION="LoongArch old-world ABI compatibility layer from AOSC OS"
-HOMEPAGE="https://github.com/AOSC-Dev/liblol"
+HOMEPAGE="https://liblol.aosc.io"
 
 # liblol itself is licensed under GPL-2 according to the AOSC maintainers.
 LICENSE="GPL-2"
