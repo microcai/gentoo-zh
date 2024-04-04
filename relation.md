@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-04-04 08:46:31 CST)
+(The last generation time: 2024-04-04 09:18:45 CST)
 
 ### Packages
 
@@ -412,8 +412,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/dog                                | 0.1.0                                     |        | https://github.com/ogham/dog                                                            | A command-line DNS client
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-dns/mosdns                             | 4.5.3                                     |        | https://github.com/IrineSistiana/mosdns                                                 | A DNS forwarder
-                                            | 5.1.3                                     |        |                                                                                         |
+ net-dns/mosdns                             | 5.3.1                                     |        | https://github.com/IrineSistiana/mosdns                                                 | A DNS forwarder
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/mosdns-cn-bin                      | 1.4.0                                     |        | https://github.com/IrineSistiana/mosdns-cn                                              | A DNS forwarder
    dev-libs/v2ray-domain-list-community-bin | 20240221053250                            |  D, RD | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
