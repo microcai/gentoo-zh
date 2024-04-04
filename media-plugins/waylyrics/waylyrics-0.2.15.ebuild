@@ -8,43 +8,52 @@ EAPI=8
 CRATES="
 	addr2line@0.21.0
 	adler@1.0.2
+	aes@0.8.4
 	ahash@0.7.8
-	aho-corasick@1.1.2
+	aho-corasick@1.1.3
 	ansi_term@0.12.1
-	anyhow@1.0.80
+	anyhow@1.0.81
 	arrayvec@0.7.4
 	assert_float_eq@1.1.3
 	async-channel@2.2.0
-	async-trait@0.1.77
+	async-trait@0.1.79
 	atty@0.2.14
-	autocfg@1.1.0
-	backtrace@0.3.69
+	autocfg@1.2.0
+	backtrace@0.3.71
 	base64@0.21.7
 	base64@0.22.0
+	base64ct@1.6.0
 	bitflags@1.3.2
-	bitflags@2.4.2
+	bitflags@2.5.0
 	bitvec@1.0.1
+	block-padding@0.3.3
 	block@0.1.6
-	borsh-derive@1.3.1
-	borsh@1.3.1
-	bumpalo@3.15.2
+	borsh-derive@1.4.0
+	borsh@1.4.0
+	bumpalo@3.15.4
 	bytecheck@0.6.12
 	bytecheck_derive@0.6.12
-	bytes@1.5.0
+	byteorder@1.5.0
+	bytes@1.6.0
 	cairo-rs@0.19.2
 	cairo-sys-rs@0.19.2
-	cc@1.0.86
+	cbc@0.1.2
+	cc@1.0.90
 	cfg-expr@0.15.7
 	cfg-if@1.0.0
 	cfg_aliases@0.1.1
+	cipher@0.4.4
 	clap@2.34.0
 	concurrent-queue@2.4.0
+	const-oid@0.9.6
 	cookie@0.17.0
-	cookie@0.18.0
+	cookie@0.18.1
 	cookie_store@0.20.0
 	core-foundation-sys@0.8.6
 	core-foundation@0.9.4
+	cpufeatures@0.2.12
 	crossbeam-utils@0.8.19
+	crypto-common@0.1.6
 	darling@0.14.4
 	darling_core@0.14.4
 	darling_macro@0.14.4
@@ -52,17 +61,22 @@ CRATES="
 	dbus-dummy@0.1.0
 	dbus-tree@0.9.2
 	dbus@0.9.7
+	der@0.7.9
 	deranged@0.3.11
 	derive_is_enum_variant@0.1.1
-	documented-derive@0.3.0
-	documented@0.3.0
+	digest@0.10.7
+	directories@5.0.1
+	dirs-sys@0.4.1
+	documented-derive@0.4.0
+	documented@0.4.0
+	ecb@0.1.2
 	encoding_rs@0.8.33
 	enum-kinds@0.5.1
 	equivalent@1.0.1
 	errno@0.3.8
-	event-listener-strategy@0.5.0
-	event-listener@5.1.0
-	fastrand@2.0.1
+	event-listener-strategy@0.5.1
+	event-listener@5.2.0
+	fastrand@2.0.2
 	field-offset@0.3.6
 	fnv@1.0.7
 	foreign-types-shared@0.1.1
@@ -81,32 +95,36 @@ CRATES="
 	futures-util@0.3.30
 	gdk-pixbuf-sys@0.19.0
 	gdk-pixbuf@0.19.2
-	gdk4-sys@0.8.0
-	gdk4@0.8.0
+	gdk4-sys@0.8.1
+	gdk4-win32-sys@0.8.1
+	gdk4-win32@0.8.1
+	gdk4@0.8.1
+	generic-array@0.14.7
 	getrandom@0.2.12
 	gettext-rs@0.7.0
 	gettext-sys@0.21.3
 	gimli@0.28.1
 	gio-sys@0.19.0
-	gio@0.19.2
-	glib-macros@0.19.2
+	gio@0.19.3
+	glib-macros@0.19.3
 	glib-sys@0.19.0
-	glib@0.19.2
+	glib@0.19.3
 	gobject-sys@0.19.0
 	graphene-rs@0.19.2
 	graphene-sys@0.19.0
-	gsk4-sys@0.8.0
-	gsk4@0.8.0
-	gtk4-macros@0.8.0
-	gtk4-sys@0.8.0
-	gtk4@0.8.0
+	gsk4-sys@0.8.1
+	gsk4@0.8.1
+	gtk4-macros@0.8.1
+	gtk4-sys@0.8.1
+	gtk4@0.8.1
 	h2@0.4.3
 	hashbrown@0.12.3
 	hashbrown@0.14.3
 	heck@0.3.3
 	heck@0.4.1
+	heck@0.5.0
 	hermit-abi@0.1.19
-	hermit-abi@0.3.6
+	hermit-abi@0.3.9
 	hex@0.4.3
 	http-body-util@0.1.1
 	http-body@1.0.0
@@ -118,26 +136,29 @@ CRATES="
 	ident_case@1.0.1
 	idna@0.3.0
 	idna@0.5.0
-	indexmap@2.2.3
+	indexmap@2.2.6
+	inout@0.1.3
 	ipnet@2.9.0
-	itoa@1.0.10
-	js-sys@0.3.68
+	itoa@1.0.11
+	js-sys@0.3.69
 	ksni-dummy@0.1.0
 	ksni@0.2.1
 	lazy_static@1.4.0
 	libc@0.2.153
 	libdbus-sys@0.2.5
+	libm@0.2.8
 	libmimalloc-sys@0.1.35
+	libredox@0.1.3
 	linux-raw-sys@0.4.13
 	locale_config@0.3.0
 	lock_api@0.4.11
-	log@0.4.20
+	log@0.4.21
 	lrc-nom@0.2.0
 	malloc_buf@0.0.6
 	matchers@0.1.0
 	md5@0.7.0
-	memchr@2.7.1
-	memoffset@0.9.0
+	memchr@2.7.2
+	memoffset@0.9.1
 	mimalloc@0.1.39
 	mime@0.3.17
 	minimal-lexical@0.2.1
@@ -147,7 +168,10 @@ CRATES="
 	native-tls@0.2.11
 	nom@7.1.3
 	nu-ansi-term@0.46.0
+	num-bigint-dig@0.8.4
 	num-conv@0.1.0
+	num-integer@0.1.46
+	num-iter@0.1.44
 	num-traits@0.2.18
 	num_cpus@1.16.0
 	objc-foundation@0.1.1
@@ -157,31 +181,34 @@ CRATES="
 	once_cell@1.19.0
 	openssl-macros@0.1.1
 	openssl-probe@0.1.5
-	openssl-src@300.2.3+3.2.1
-	openssl-sys@0.9.101
+	openssl-sys@0.9.102
 	openssl@0.10.64
+	option-ext@0.2.0
 	overload@0.1.1
 	pango-sys@0.19.0
-	pango@0.19.2
+	pango@0.19.3
 	parking@2.2.0
 	parking_lot@0.12.1
 	parking_lot_core@0.9.9
+	pem-rfc7468@0.7.0
 	percent-encoding@2.3.1
 	phf@0.11.2
 	phf_generator@0.11.2
 	phf_macros@0.11.2
 	phf_shared@0.11.2
 	pin-project-internal@1.1.5
-	pin-project-lite@0.2.13
+	pin-project-lite@0.2.14
 	pin-project@1.1.5
 	pin-utils@0.1.0
+	pkcs1@0.7.5
+	pkcs8@0.10.2
 	pkg-config@0.3.30
 	powerfmt@0.2.0
 	ppv-lite86@0.2.17
 	proc-macro-crate@3.1.0
 	proc-macro-error-attr@1.0.4
 	proc-macro-error@1.0.4
-	proc-macro2@1.0.78
+	proc-macro2@1.0.79
 	psl-types@2.0.11
 	ptr_meta@0.1.4
 	ptr_meta_derive@0.1.4
@@ -193,63 +220,69 @@ CRATES="
 	rand_chacha@0.3.1
 	rand_core@0.6.4
 	redox_syscall@0.4.1
+	redox_users@0.4.5
 	regex-automata@0.1.10
-	regex-automata@0.4.5
+	regex-automata@0.4.6
 	regex-syntax@0.6.29
-	regex-syntax@0.8.2
-	regex@1.10.3
+	regex-syntax@0.8.3
+	regex@1.10.4
 	rend@0.4.2
-	reqwest@0.12.0
+	reqwest@0.12.2
 	rkyv@0.7.44
 	rkyv_derive@0.7.44
-	rust_decimal@1.34.3
+	rsa@0.9.6
+	rust_decimal@1.35.0
 	rust_decimal_macros@1.34.2
 	rustc-demangle@0.1.23
 	rustc_version@0.4.0
-	rustix@0.38.31
+	rustix@0.38.32
 	rustls-pemfile@1.0.4
 	rustversion@1.0.14
 	ryu@1.0.17
 	schannel@0.1.23
 	scopeguard@1.2.0
 	seahash@4.1.0
-	security-framework-sys@2.9.1
-	security-framework@2.9.2
+	security-framework-sys@2.10.0
+	security-framework@2.10.0
 	semver@1.0.22
 	serde@1.0.197
 	serde_derive@1.0.197
-	serde_json@1.0.114
+	serde_json@1.0.115
 	serde_repr@0.1.18
 	serde_spanned@0.6.5
 	serde_urlencoded@0.7.1
 	sharded-slab@0.1.7
 	signal-hook-registry@1.4.1
+	signature@2.2.0
 	simdutf8@0.1.4
 	siphasher@0.3.11
 	slab@0.4.9
-	smallvec@1.13.1
-	socket2@0.5.5
+	smallvec@1.13.2
+	socket2@0.5.6
 	sorensen@0.2.0
+	spin@0.5.2
+	spki@0.7.3
 	strsim@0.10.0
 	strsim@0.8.0
-	strum@0.26.1
-	strum_macros@0.26.1
+	strum@0.26.2
+	strum_macros@0.26.2
+	subtle@2.5.0
 	syn@0.11.11
 	syn@1.0.109
-	syn@2.0.50
+	syn@2.0.57
 	syn_derive@0.1.8
 	sync_wrapper@0.1.2
 	synom@0.11.3
 	system-configuration-sys@0.5.0
 	system-configuration@0.5.1
-	system-deps@6.2.0
+	system-deps@6.2.2
 	tap@1.0.1
 	target-lexicon@0.12.14
-	temp-dir@0.1.12
-	tempfile@3.10.0
+	temp-dir@0.1.13
+	tempfile@3.10.1
 	textwrap@0.11.0
-	thiserror-impl@1.0.57
-	thiserror@1.0.57
+	thiserror-impl@1.0.58
+	thiserror@1.0.58
 	thread_local@1.1.8
 	time-core@0.1.2
 	time-macros@0.2.17
@@ -259,11 +292,11 @@ CRATES="
 	tokio-macros@2.2.0
 	tokio-native-tls@0.3.1
 	tokio-util@0.7.10
-	tokio@1.36.0
-	toml@0.8.10
+	tokio@1.37.0
+	toml@0.8.12
 	toml_datetime@0.6.5
 	toml_edit@0.21.1
-	toml_edit@0.22.6
+	toml_edit@0.22.9
 	tower-layer@0.3.2
 	tower-service@0.3.2
 	tower@0.4.13
@@ -274,6 +307,7 @@ CRATES="
 	tracing-subscriber@0.3.18
 	tracing@0.1.40
 	try-lock@0.2.5
+	typenum@1.17.0
 	unicode-bidi@0.3.15
 	unicode-ident@1.0.12
 	unicode-normalization@0.1.23
@@ -281,52 +315,55 @@ CRATES="
 	unicode-width@0.1.11
 	unicode-xid@0.0.4
 	url@2.5.0
-	uuid@1.7.0
+	uuid@1.8.0
 	valuable@0.1.0
 	vcpkg@0.2.15
 	vec_map@0.8.2
-	version-compare@0.1.1
+	version-compare@0.2.0
 	version_check@0.9.4
 	want@0.3.1
 	wasi@0.11.0+wasi-snapshot-preview1
-	wasm-bindgen-backend@0.2.91
-	wasm-bindgen-futures@0.4.41
-	wasm-bindgen-macro-support@0.2.91
-	wasm-bindgen-macro@0.2.91
-	wasm-bindgen-shared@0.2.91
-	wasm-bindgen@0.2.91
-	web-sys@0.3.68
+	wasm-bindgen-backend@0.2.92
+	wasm-bindgen-futures@0.4.42
+	wasm-bindgen-macro-support@0.2.92
+	wasm-bindgen-macro@0.2.92
+	wasm-bindgen-shared@0.2.92
+	wasm-bindgen@0.2.92
+	web-sys@0.3.69
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-x86_64-pc-windows-gnu@0.4.0
 	winapi@0.3.9
+	windows-core@0.54.0
+	windows-result@0.1.0
 	windows-sys@0.48.0
 	windows-sys@0.52.0
 	windows-targets@0.48.5
-	windows-targets@0.52.0
+	windows-targets@0.52.4
+	windows@0.54.0
 	windows_aarch64_gnullvm@0.48.5
-	windows_aarch64_gnullvm@0.52.0
+	windows_aarch64_gnullvm@0.52.4
 	windows_aarch64_msvc@0.48.5
-	windows_aarch64_msvc@0.52.0
+	windows_aarch64_msvc@0.52.4
 	windows_i686_gnu@0.48.5
-	windows_i686_gnu@0.52.0
+	windows_i686_gnu@0.52.4
 	windows_i686_msvc@0.48.5
-	windows_i686_msvc@0.52.0
+	windows_i686_msvc@0.52.4
 	windows_x86_64_gnu@0.48.5
-	windows_x86_64_gnu@0.52.0
+	windows_x86_64_gnu@0.52.4
 	windows_x86_64_gnullvm@0.48.5
-	windows_x86_64_gnullvm@0.52.0
+	windows_x86_64_gnullvm@0.52.4
 	windows_x86_64_msvc@0.48.5
-	windows_x86_64_msvc@0.52.0
+	windows_x86_64_msvc@0.52.4
 	winnow@0.5.40
-	winnow@0.6.2
+	winnow@0.6.5
 	winreg@0.50.0
 	wyz@0.5.1
-	xdg@2.5.2
-	xml-rs@0.8.19
+	xml-rs@0.8.20
+	zeroize@1.7.0
 "
 
 declare -A GIT_CRATES=(
-	[ncmapi]='https://github.com/waylyrics/ncmapi-rs;590f280458e1826df0af0f0f624c2222448a7dee;ncmapi-rs-%commit%'
+	[ncmapi]='https://github.com/waylyrics/ncmapi-rs;6095abf7e54eedbb716676d311e0741b4ac2482e;ncmapi-rs-%commit%'
 	[qqmusic-rs]='https://github.com/waylyrics/qqmusic-rs;22e66ba62e63d97c6dffb45400655404e6f06b93;qqmusic-rs-%commit%'
 )
 
