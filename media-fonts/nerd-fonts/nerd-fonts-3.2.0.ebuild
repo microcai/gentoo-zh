@@ -1,4 +1,4 @@
-# Copyright 2021-2023 Gentoo Authors
+# Copyright 2021-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -144,7 +144,7 @@ SRC_URI="
 	ubuntumono? ( ${COMMON_URI}/UbuntuMono.zip -> UbuntuMono-nf-${PV}.zip )
 	victormono? ( ${COMMON_URI}/VictorMono.zip -> VictorMono-nf-${PV}.zip )
 "
-
+S="${WORKDIR}"
 LICENSE="MIT
 		OFL-1.1
 		Apache-2.0
@@ -167,7 +167,6 @@ IUSE_FLAGS=(${FONTS[*],,})
 IUSE="${IUSE_FLAGS[*]}"
 REQUIRED_USE="X || ( ${IUSE_FLAGS[*]} )"
 
-S="${WORKDIR}"
 FONT_S=${S}
 
 pkg_pretend() {
