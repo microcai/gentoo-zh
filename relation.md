@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-04-05 18:22:23 CST)
+(The last generation time: 2024-04-06 12:58:11 CST)
 
 ### Packages
 
@@ -238,6 +238,8 @@
        app-crypt/archlinux-keyring          | 20231113                                  |  D, RD | https://gitlab.archlinux.org/archlinux/archlinux-keyring                                | GnuPG keyring of Archlinux developer keys
                                             | 20231222                                  |        |                                                                                         |
                                             | 20240208-r1                               |        |                                                                                         |
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ dev-util/asdf-vm                           | 0.14.0                                    |        | https://github.com/asdf-vm/asdf                                                         | Manage all your runtime versions with one tool
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/bom-utils                         | 1.0                                       |        | https://github.com/jlblancoc/utf-bom-utils                                              | Small programs to add or remove the BOM mark in UTF8 files
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
