@@ -1,0 +1,12 @@
+DEFINED_PHASES=install
+DESCRIPTION=Manage all your runtime versions with one tool
+EAPI=8
+HOMEPAGE=https://github.com/asdf-vm/asdf
+INHERIT=bash-completion-r1
+KEYWORDS=amd64 arm64
+LICENSE=MIT
+RDEPEND=net-misc/curl dev-vcs/git
+SLOT=0
+SRC_URI=https://github.com/asdf-vm/asdf/archive/v0.14.0.tar.gz -> asdf-vm-0.14.0.tar.gz
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff
+_md5_=732c7ffc741d4487cb57326e1d830ff8
