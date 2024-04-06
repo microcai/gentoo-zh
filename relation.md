@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-04-06 16:37:36 CST)
+(The last generation time: 2024-04-06 20:52:41 CST)
 
 ### Packages
 
@@ -449,6 +449,8 @@
    media-libs/openslide                     | 20230904                                  | RD     | http://openslide.org/                                                                   | C library with simple interface to read virtual slides
    x11-misc/flatpak-xdg-utils               | 1.0.5                                     | RD     | https://github.com/flatpak/flatpak-xdg-utils                                            | Utilities for containerized apps to launch programs outside the container
    x11-misc/snapd-xdg-open                  | 20170401                                  | RD     | https://github.com/snapcore/snapd-xdg-open                                              | Software for opening links from snaps in desktop
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ net-im/wechat-universal-bwrap              | 1.0.0.238                                 |        | https://weixin.qq.com                                                                   | WeChat (Universal) from UOS, inside bwrap sandbox
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/weixin-uos                          | 2.1.8                                     |        | https://www.chinauos.com/resource/download-professional                                 | UOS weixin
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
