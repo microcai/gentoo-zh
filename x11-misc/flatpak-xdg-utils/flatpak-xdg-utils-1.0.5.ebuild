@@ -14,7 +14,7 @@ SLOT="0"
 RDEPEND="dev-libs/glib:2"
 DEPEND="${RDEPEND}"
 BDEPEND="${RDEPEND}"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="~amd64 ~arm64 ~loong"
 
 src_configure() {
 	meson_src_configure --bindir=/usr/lib/"${PN}"
