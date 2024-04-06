@@ -1,17 +1,22 @@
 --- a/wechat-universal.sh	2024-04-05 18:50:38.878318940 +0800
-+++ b/wechat-universal.sh	2024-04-06 20:35:25.887651368 +0800
-@@ -81,9 +81,9 @@
++++ b/wechat-universal.sh	2024-04-06 20:44:53.128448547 +0800
+@@ -80,11 +80,11 @@
+ 
      # /usr
      --ro-bind /usr{,}
-     --symlink usr/lib /lib
+-    --symlink usr/lib /lib
 -    --symlink usr/lib /lib64
-+    --symlink usr/lib64 /lib64
-     --symlink usr/bin /bin
+-    --symlink usr/bin /bin
 -    --symlink usr/bin /sbin
-+    --symlink usr/sbin /sbin
-     --bind /usr/bin/{true,lsblk}
+-    --bind /usr/bin/{true,lsblk}
++    --ro-bind /lib{,}
++    --ro-bind /lib64{,}
++    --ro-bind /bin{,}
++    --ro-bind /sbin{,}
++    --ro-bind /usr/bin/{true,lsblk}
  
      # /sandbox
+     --ro-bind /{usr/lib/flatpak-xdg-utils,sandbox}/xdg-open
 @@ -105,6 +105,9 @@
      --ro-bind /etc/resolv.conf{,}
      --ro-bind /etc/localtime{,}
