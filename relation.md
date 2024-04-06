@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-04-06 12:58:11 CST)
+(The last generation time: 2024-04-06 16:37:36 CST)
 
 ### Packages
 
@@ -10,6 +10,8 @@
  app-admin/rbw                              | 1.9.0                                     |        | https://github.com/doy/rbw                                                              | Unofficial Bitwarden CLI
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/supersm                          | 0.5.1                                     |        | https://github.com/peeweep/supersm                                                      | Super Symlink Manager
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ app-admin/supersm-rs                       | 0.3.0                                     |        | https://github.com/peeweep/supersm-rs                                                   | Super Symlink Manager Rust version
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/zenmonitor3                      | 2.0.0                                     |        | https://git.exozy.me/a/zenmonitor3                                                      | Zen monitor is monitoring software for AMD Zen-based CPUs
    sys-kernel/zenpower3                     | 0.2.0                                     |  D, RD | https://git.exozy.me/a/zenpower3                                                        | Linux kernel driver for reading sensors of AMD Zen family CPUs
