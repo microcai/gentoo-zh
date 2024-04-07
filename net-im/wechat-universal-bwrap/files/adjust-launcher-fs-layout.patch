@@ -1,6 +1,8 @@
---- a/wechat-universal.sh	2024-04-05 18:50:38.878318940 +0800
-+++ b/wechat-universal.sh	2024-04-06 20:44:53.128448547 +0800
-@@ -80,11 +80,11 @@
+diff --git a/wechat-universal.sh b/wechat-universal.sh
+index 186c6b0..5e4f3f9 100644
+--- a/wechat-universal.sh
++++ b/wechat-universal.sh
+@@ -80,11 +80,11 @@ BWRAP_ARGS=(
  
      # /usr
      --ro-bind /usr{,}
@@ -17,7 +19,14 @@
  
      # /sandbox
      --ro-bind /{usr/lib/flatpak-xdg-utils,sandbox}/xdg-open
-@@ -105,6 +105,9 @@
+@@ -99,12 +99,15 @@ BWRAP_ARGS=(
+     --proc /proc
+ 
+     # /etc
+-    --ro-bind /etc/machine-id{,}
++    --ro-bind-try /etc/machine-id{,}
+     --ro-bind /etc/passwd{,}
+     --ro-bind /etc/nsswitch.conf{,}
      --ro-bind /etc/resolv.conf{,}
      --ro-bind /etc/localtime{,}
      --ro-bind-try /etc/fonts{,}
@@ -27,3 +36,19 @@
  
      # /sys
      --dir /sys/dev # hack for Intel / AMD graphics, mesa calling virtual nodes needs /sys/dev being 0755
+@@ -134,11 +137,11 @@ BWRAP_ARGS=(
+     --ro-bind-try "${HOME}/.local/share/.icons"{,}
+ 
+     # /run
+-    --dev-bind /run/dbus{,}
+-    --ro-bind /run/systemd/userdb{,}
++    --dev-bind-try /run/dbus{,}
++    --ro-bind-try /run/systemd/userdb{,}
+     --ro-bind-try "${XAUTHORITY}"{,}
+-    --ro-bind "${XDG_RUNTIME_DIR}/bus"{,}
+-    --ro-bind "${XDG_RUNTIME_DIR}/pulse"{,}
++    --ro-bind-try "${XDG_RUNTIME_DIR}/bus"{,}
++    --ro-bind-try "${XDG_RUNTIME_DIR}/pulse"{,}
+ )
+ 
+ exec bwrap "${BWRAP_ARGS[@]}" "${BWRAP_CUSTOM_BINDS[@]}" "${BWRAP_DEV_BINDS[@]}" "${BWRAP_ENV_APPEND[@]}" /opt/wechat-universal/wechat "$@"
