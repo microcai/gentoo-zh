@@ -5,6 +5,11 @@
 		<email>keeyou-cn@outlook.com</email>
 		<name>Chilledheart</name>
 	</maintainer>
+	<use>
+		<flag name="cli">Enable cli daemon</flag>
+		<flag name="server">Enable server daemon</flag>
+		<flag name="gui">Enable GUI Client</flag>
+	</use>
 	<upstream>
 		<remote-id type="github">Chilledheart/yass</remote-id>
 	</upstream>
