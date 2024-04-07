@@ -8,7 +8,7 @@ inherit cmake xdg
 MY_PN="yass"
 S="${WORKDIR}/${MY_PN}-${PV}"
 SRC_URI="https://github.com/Chilledheart/yass/releases/download/${PV}/yass-${PV}.tar.bz2"
-KEYWORDS="~amd64 ~arm64 ~x86 ~arm ~mips"
+KEYWORDS="~amd64 ~arm ~arm64 ~loong ~mips ~riscv ~x86"
 
 DESCRIPTION="lightweight and efficient, socks5/http forward proxy"
 HOMEPAGE="https://github.com/Chilledheart/yass"
@@ -31,6 +31,11 @@ BDEPEND="
 	sys-devel/gettext
 	virtual/pkgconfig
 "
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.8.2.core.patch
+	"${FILESDIR}"/${PN}-loongarch64-gtk4-1.8.2.patch
+)
 
 src_configure() {
 	local mycmakeargs=(
