@@ -15,7 +15,7 @@ HOMEPAGE="https://github.com/Chilledheart/yass"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="wayland"
+IUSE="+cli server +gui wayland"
 
 RDEPEND="
 	app-misc/ca-certificates
@@ -24,7 +24,10 @@ RDEPEND="
 	sys-libs/zlib
 	net-dns/c-ares
 	net-libs/nghttp2
-	gui-libs/gtk:4[wayland?]
+	gui? (
+		x11-libs/gtk+:3[wayland?]
+		gui-libs/gtk:4[wayland?]
+	)
 "
 DEPEND="${RDEPEND}"
 BDEPEND="
@@ -39,13 +42,14 @@ PATCHES=(
 
 src_configure() {
 	local mycmakeargs=(
+		-DCMAKE_INSTALL_SYSCONFDIR=/etc
 		-DBUILD_SHARED_LIBS=off
 		-DUSE_BUILTIN_CA_BUNDLE_CRT=off
 		-DUSE_LIBCXX=on
 		-DENABLE_GOLD=off
-		-DGUI=ON
-		-DCLI=OFF
-		-DSERVER=OFF
+		-DCLI=$(usex cli)
+		-DSERVER=$(usex server)
+		-DGUI=$(usex gui)
 		-DBUILD_TESTS=off
 		-DUSE_SYSTEM_MBEDTLS=on
 		-DUSE_SYSTEM_ZLIB=on
