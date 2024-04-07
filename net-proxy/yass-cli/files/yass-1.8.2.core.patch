@@ -1,0 +1,42 @@
+From c53ed0cf5a413e7b53899c462d9833c7e6155c4c Mon Sep 17 00:00:00 2001
+From: Keeyou <keeyou-cn@outlook.com>
+Date: Sun, 7 Apr 2024 13:12:33 +0800
+Subject: [PATCH] core: fix RelWithDebInfo build
+
+---
+ src/core/debug.cpp | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/src/core/debug.cpp b/src/core/debug.cpp
+index ae0a74f8..c5e0b6b2 100644
+--- a/src/core/debug.cpp
++++ b/src/core/debug.cpp
+@@ -4,6 +4,7 @@
+ #include "core/debug.hpp"
+ #include "core/check_op.hpp"
+ 
++#include <absl/time/clock.h>
+ #include <base/posix/eintr_wrapper.h>
+ #include <base/strings/string_util.h>
+ #include <build/buildflag.h>
+@@ -38,7 +39,7 @@ bool WaitForDebugger(int wait_seconds, bool silent) {
+         BreakDebugger();
+       return true;
+     }
+-    // FIXME PlatformThread::Sleep(Milliseconds(100));
++    absl::SleepFor(absl::Milliseconds(100));
+   }
+   return false;
+ }
+@@ -287,7 +288,7 @@ void DebugBreak() {
+ #else
+     volatile int go = 0;
+     while (!go)
+-      PlatformThread::Sleep(Milliseconds(100));
++      absl::SleepFor(absl::Milliseconds(100));
+ #endif
+   }
+ }
+-- 
+2.44.0
+
