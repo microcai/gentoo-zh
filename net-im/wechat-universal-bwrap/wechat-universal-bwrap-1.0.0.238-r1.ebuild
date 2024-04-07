@@ -62,8 +62,8 @@ BLOB_RDEPEND="
 
 RDEPEND="
 	${BLOB_RDEPEND}
-	sys-apps/lsb-release
 	sys-apps/bubblewrap
+	sys-apps/lsb-release
 	x11-misc/flatpak-xdg-utils
 	x11-misc/xdg-user-dirs
 	loong? ( virtual/loong-ow-compat )
@@ -103,12 +103,12 @@ src_compile() {
 	# originally $ORIGIN:$ORIGIN
 	call_patchelf --set-rpath '$ORIGIN' RadiumWMPF/runtime/WeChatAppEx
 	# originally $ORIGIN:/home/ubuntu/.wconan2/ilink/5ae3ed15_1692179323/libs/Release/clang-llvm-12.0.0/libs:
-	call_patchelf --set-rpath '$ORIGIN' RadiumWMPF/runtime/libilink2.so
+	call_patchelf --remove-rpath RadiumWMPF/runtime/libilink2.so
 	# originally /home/ubuntu/.wconan2/ilink_network/cfed668b_1692178974/ilink-network/libs/Release/clang-llvm-12.0.0/libs:
-	call_patchelf --set-rpath '$ORIGIN' RadiumWMPF/runtime/libilink_network.so
+	call_patchelf --remove-rpath RadiumWMPF/runtime/libilink_network.so
 	# originally ./ (!!!)
-	call_patchelf --set-rpath '$ORIGIN' libvoipChannel.so
-	call_patchelf --set-rpath '$ORIGIN' libvoipCodec.so
+	call_patchelf --remove-rpath libvoipChannel.so
+	call_patchelf --remove-rpath libvoipCodec.so
 	popd > /dev/null
 
 	einfo "Building stub libuosdevicea.so"
@@ -130,6 +130,9 @@ src_install() {
 	insinto /usr/share/wechat-universal/usr/lib/license
 	doins libuosdevicea.so
 	popd > /dev/null
+
+	# needed on the host side for bwrap to be able to do the bind-mount
+	keepdir /usr/lib/license
 
 	insinto /usr/share/wechat-universal/etc
 	newins "${FILESDIR}/stub-uos-release" lsb-release
