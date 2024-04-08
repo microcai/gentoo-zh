@@ -35,11 +35,6 @@ BDEPEND="
 	virtual/pkgconfig
 "
 
-PATCHES=(
-	"${FILESDIR}"/${PN}-1.8.2.core.patch
-	"${FILESDIR}"/${PN}-loongarch64-gtk4-1.8.2.patch
-)
-
 src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_INSTALL_SYSCONFDIR=/etc
