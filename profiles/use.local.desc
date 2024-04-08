@@ -251,6 +251,9 @@ net-proxy/mihomo:gvisor - enable TUN stack support for gvisor
 net-proxy/shadowsocks-rust:redir - Enable redir protocol for sslocal (transparent proxy)
 net-proxy/shadowsocks-rust:tun - Enable Tun interface protocol for sslocal
 net-proxy/v2rayA:xray - To be able to use net-proxy/Xray. Disable the v2ray useflag to use xray as default
+net-proxy/yass:cli - Enable cli daemon
+net-proxy/yass:gui - Enable GUI Client
+net-proxy/yass:server - Enable server daemon
 sci-electronics/openfpgaloader:cmsisdap - enable cmsis-dap support
 sci-electronics/openfpgaloader:gpio - enable libgpiod bitbang support
 sci-electronics/openfpgaloader:remote - enable remote bitbang support
