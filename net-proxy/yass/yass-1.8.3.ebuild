@@ -25,8 +25,12 @@ RDEPEND="
 	net-dns/c-ares
 	net-libs/nghttp2
 	gui? (
-		x11-libs/gtk+:3[wayland?]
-		gui-libs/gtk:4[wayland?]
+		loong? (
+			x11-libs/gtk+:3[wayland?]
+		)
+		!loong? (
+			|| ( x11-libs/gtk+:3[wayland?] gui-libs/gtk:4[wayland?] )
+		)
 	)
 "
 DEPEND="${RDEPEND}"
