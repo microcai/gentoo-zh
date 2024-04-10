@@ -5,7 +5,7 @@ EAPI=8
 
 inherit unpacker xdg
 
-MY_PV=${PV/_p/-}
+MY_PV=${PV/_p/_}
 DESCRIPTION="The new version of the official linux-qq"
 HOMEPAGE="https://im.qq.com/linuxqq/index.shtml"
 LICENSE="Tencent"
@@ -13,11 +13,11 @@ RESTRICT="strip"
 
 _I="f9ad4a03"
 
-_LiteLoader_PV="1.0.3"
+_LiteLoader_PV="1.1.1"
 
 SRC_URI="
-	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_amd64.deb )
-	arm64? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_arm64.deb )
+	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_${MY_PV}_amd64_01.deb )
+	arm64? ( https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_${MY_PV}_arm64_01.deb )
 	liteloader? (
 		https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/${_LiteLoader_PV}/LiteLoaderQQNT.zip \
 		-> LiteLoaderQQNT-${_LiteLoader_PV}.zip
@@ -66,7 +66,7 @@ src_unpack() {
 src_install() {
 	dodir /
 	cd "${D}" || die
-	unpacker "${DISTDIR}/linuxqq_${MY_PV}_${ARCH}".deb
+	unpacker "${DISTDIR}/QQ_${MY_PV}_${ARCH}_01.deb"
 
 	if use system-vips; then
 		rm -r "${D}"/opt/QQ/resources/app/sharp-lib || die
