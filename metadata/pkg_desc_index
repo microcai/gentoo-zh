@@ -25,7 +25,7 @@ app-crypt/cfssl 1.6.5: Cloudflare's PKI and TLS toolkit
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-dicts/fcitx-pinyin-moegirl 20230714: Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 app-dicts/fcitx-pinyin-zhwiki 20230728: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
-app-editors/appflowy-bin 0.5.3: AppFlowy is an open-source alternative to Notion
+app-editors/appflowy-bin 0.5.4: AppFlowy is an open-source alternative to Notion
 app-editors/marktext-bin 0.17.1: A simple and elegant markdown editor, available for Linux, macOS and Windows.
 app-editors/typora 0.11.18 1.8.10: A truely minimal markdown editor.
 app-emulation/deepin-udis86 1.72-r4: Disassembler library for x86 (32-bit shared library)
@@ -191,7 +191,7 @@ media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simpl
 media-libs/openslide 20230904: C library with simple interface to read virtual slides
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.11 0.5.14 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
-media-plugins/waylyrics 0.2.15: Simple On Screen lyrics Display for linux/unix
+media-plugins/waylyrics 0.2.17: Simple On Screen lyrics Display for linux/unix
 media-sound/barva 9999: a modular audio visualizer
 media-sound/feeluown 3.8.15 4.0_alpha0 4.0.1: A user-friendly and hackable music player
 media-sound/go-musicfox 4.3.3: Command-line Netease Cloud Music written in Go
@@ -260,7 +260,7 @@ net-print/epson-inkjet-printer_201207w 1.0.0: Epson printer driver (L110, L210, 
 net-print/pantum 1.1.94: 奔图打印机Linux驱动
 net-proxy/Xray 1.8.10: Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
 net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
-net-proxy/clash-nyanpasu 1.5.0: Clash GUI based on tauri
+net-proxy/clash-nyanpasu 1.5.1: Clash GUI based on tauri
 net-proxy/clash-rs 0.1.15: Custom protocol, rule based network proxy
 net-proxy/clash-verge-bin 1.5.10 1.5.11: (Continuation) of Clash Meta GUI based on Tauri.
 net-proxy/dae 0.5.1 0.6.0_rc1 9999: A lightweight and high-performance transparent proxy solution based on eBPF
