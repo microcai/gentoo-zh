@@ -120,6 +120,7 @@ bwrap --new-session --cap-drop ALL --unshare-user-try --unshare-pid --unshare-cg
     --ro-bind-try "${FONTCONFIG_HOME}" "${FONTCONFIG_HOME}" \
     --ro-bind-try "${HOME}/.icons" "${HOME}/.icons" \
     --ro-bind-try "${HOME}/.local/share/.icons" "${HOME}/.local/share/.icons" \
+    --ro-bind-try "${HOME}/.config/dconf" "${HOME}/.config/dconf" \
     --ro-bind-try "${XDG_CONFIG_HOME}/gtk-3.0" "${XDG_CONFIG_HOME}/gtk-3.0" \
     --ro-bind /etc/nsswitch.conf /etc/nsswitch.conf \
     --ro-bind-try /run/systemd/userdb/ /run/systemd/userdb/ \
