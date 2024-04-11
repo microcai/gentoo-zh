@@ -487,6 +487,13 @@ github = "archlinux/arch-install-scripts"
 use_latest_tag = true
 prefix = "v"
 
+["dev-util/android-studio"]
+source = "aur"
+aur = "android-studio"
+use_last_modified = true
+from_pattern="-\d+$"
+to_pattern=""
+
 # need run js
 #["dev-util/bom-utils"]
 
