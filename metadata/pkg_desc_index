@@ -139,6 +139,7 @@ dev-python/pycosat 0.6.6: Python bindings to picosat (a SAT solver)
 dev-python/pytube 15.0.0: Python tools for downloading YouTube Videos
 dev-python/qasync 0.26.0 0.27.1: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/structlog 24.1.0: Structured Logging for Python
+dev-util/android-studio 2023.2.1.25: Android development environment based on IntelliJ IDEA
 dev-util/arch-install-scripts 28-r1: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
 dev-util/asdf-vm 0.14.0: Manage all your runtime versions with one tool
 dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 files
