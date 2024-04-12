@@ -1,0 +1,16 @@
+BDEPEND=liteloader? ( app-arch/unzip )
+DEFINED_PHASES=install postinst postrm preinst unpack
+DESCRIPTION=The new version of the official linux-qq
+EAPI=8
+HOMEPAGE=https://im.qq.com/linuxqq/index.shtml
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=unpacker xdg
+IUSE=+bwrap system-vips gnome appindicator liteloader
+KEYWORDS=-* ~amd64 ~arm64 ~loong
+LICENSE=Tencent
+RDEPEND=x11-libs/gtk+:3 x11-libs/libnotify dev-libs/nss appindicator? ( dev-libs/libayatana-appindicator ) x11-libs/libXScrnSaver x11-libs/libXtst x11-misc/xdg-utils app-accessibility/at-spi2-core:2 app-crypt/libsecret virtual/krb5 sys-apps/keyutils system-vips? ( dev-libs/glib >=media-libs/vips-8.14.2[-pdf] ) bwrap? ( sys-apps/bubblewrap x11-misc/snapd-xdg-open x11-misc/flatpak-xdg-utils ) gnome? ( dev-libs/gjs ) media-libs/openslide loong? ( virtual/loong-ow-compat )
+RESTRICT=strip
+SLOT=0
+SRC_URI=amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.7_240410_amd64_01.deb ) arm64? ( https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.7_240410_arm64_01.deb ) loong? ( https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.7_240410_loongarch64_01.deb ) liteloader? ( https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/1.1.1/LiteLoaderQQNT.zip -> LiteLoaderQQNT-1.1.1.zip )
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	7b40f3faa3e2e12f5cf6d36d0fbfcd09	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
+_md5_=ef10cec0037c365efa2ace57947a6593

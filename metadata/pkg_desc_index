@@ -229,7 +229,7 @@ net-im/deepin-wine-qq 9.5.2.27897: Tencent QQ on Deepin Wine(com.qq.im.deepin) F
 net-im/deepin-wine-wechat 3.9.0.28-r3: Tencent WeChat on Deepin Wine For Gentoo
 net-im/deepin-wine-wecom 4.1.10.6007: Tencent Weixin Work on Deepin Wine(com.qq.weixin.work.deepin) For Gentoo
 net-im/dingtalk 7.0.40.30706 7.1.0.31017 7.1.0.31120: Communication platform that supports video and audio conferencing
-net-im/tencent-qq 3.2.7_p240403: The new version of the official linux-qq
+net-im/tencent-qq 3.2.7_p240410: The new version of the official linux-qq
 net-im/wechat-universal-bwrap 1.0.0.238-r2: WeChat (Universal) from UOS, inside bwrap sandbox
 net-im/weixin-uos 2.1.8: UOS weixin
 net-im/wemeet 3.15.1.403 3.19.0.401: Wemeet - Tencent Video Conferencing
@@ -307,18 +307,18 @@ sys-fs/ssdfs-tools 4.09: userspace tools for SSDFS
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/liquorix-sources 6.4.12 6.6.8: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 38: Modular initramfs image creation utility
-sys-kernel/xanmod-kernel 6.8.2: XanMod lts kernel built with Gentoo patches and cjktty
+sys-kernel/xanmod-kernel 6.8.5: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 6.0.11: XanMod RT sources and CJKTTY options.
-sys-kernel/xanmod-sources 6.8.2: Full XanMod source, including the Gentoo patchset and other patch options.
+sys-kernel/xanmod-sources 6.8.5: Full XanMod source, including the Gentoo patchset and other patch options.
 sys-kernel/zenpower3 0.2.0: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libsolv 0.7.28: Library for solving packages and reading repositories
 sys-power/tlpui 1.5.0_p6 1.6.0: A GTK user interface for TLP written in Python
-virtual/dist-kernel 6.8.2: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 6.8.5: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 virtual/loong-ow-compat 0: Virtual for LoongArch old-world compatibility
 www-apps/chatgpt-desktop 1.1.0: ChatGPT Desktop Application
-www-client/brave-bin 1.64.116: Web browser that blocks ads and trackers by default
+www-client/brave-bin 1.64.122: Web browser that blocks ads and trackers by default
 www-servers/darkhttpd 1.16: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
