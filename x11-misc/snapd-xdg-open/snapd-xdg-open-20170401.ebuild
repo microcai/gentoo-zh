@@ -12,7 +12,7 @@ SRC_URI="https://github.com/snapcore/snapd-xdg-open/archive/${EGIT_COMMIT}.tar.g
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="~amd64 ~arm64 ~loong"
 
 S="${WORKDIR}/${PN}-${EGIT_COMMIT}"
 

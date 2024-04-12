@@ -9,7 +9,7 @@ DESCRIPTION="C library with simple interface to read virtual slides"
 HOMEPAGE="http://openslide.org/"
 EGIT_COMMIT="239d7bd9f603be159e6558464f311b5b243d12b1"
 SRC_URI="https://github.com/openslide/openslide/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="~amd64 ~arm64 ~loong"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
