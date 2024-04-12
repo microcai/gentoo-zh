@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-04-12 23:24:52 CST)
+(The last generation time: 2024-04-12 23:27:47 CST)
 
 ### Packages
 
@@ -151,8 +151,6 @@
                                             | 1068                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-office/wps-office                      | 11.1.0.11719-r1                           |        | https://www.wps.cn/product/wpslinux/                                                    | WPS Office is an office productivity suite, Here is the Chinese version
-   virtual/loong-ow-compat                  | 0                                         | RD     |                                                                                         | Virtual for LoongArch old-world compatibility
-     app-emulation/liblol                   | 0.1.5_pre6                                | RD     | https://liblol.aosc.io                                                                  | LoongArch old-world ABI compatibility layer from AOSC OS
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-pda/ipadcharge                         | 9999                                      |        | https://github.com/mkorenkov/ipad_charge                                                | Enables USB charging for Apple devices.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -447,8 +445,10 @@
                                             | 0.1.29                                    |        |                                                                                         |
      dev-libs/libdatrie                     | 0.2.13                                    |  D, RD | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-im/tencent-qq                          | 3.2.7_p240403                             |        | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
+ net-im/tencent-qq                          | 3.2.7_p240410                             |        | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
    media-libs/openslide                     | 20230904                                  | RD     | http://openslide.org/                                                                   | C library with simple interface to read virtual slides
+   virtual/loong-ow-compat                  | 0                                         | RD     |                                                                                         | Virtual for LoongArch old-world compatibility
+     app-emulation/liblol                   | 0.1.5_pre6                                | RD     | https://liblol.aosc.io                                                                  | LoongArch old-world ABI compatibility layer from AOSC OS
    x11-misc/flatpak-xdg-utils               | 1.0.5                                     | RD     | https://github.com/flatpak/flatpak-xdg-utils                                            | Utilities for containerized apps to launch programs outside the container
    x11-misc/snapd-xdg-open                  | 20170401                                  | RD     | https://github.com/snapcore/snapd-xdg-open                                              | Software for opening links from snaps in desktop
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -643,7 +643,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/chatgpt-desktop                   | 1.1.0                                     |        | https://nofwl.com                                                                       | ChatGPT Desktop Application
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- www-client/brave-bin                       | 1.64.116                                  |        | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
+ www-client/brave-bin                       | 1.64.122                                  |        | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                      | 1.16                                      |        | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
