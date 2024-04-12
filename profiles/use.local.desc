@@ -205,7 +205,7 @@ media-gfx/unityhub:legacy - add support for Legacy versions
 media-plugins/osdlyrics:gnome - add support for gnome
 media-plugins/osdlyrics:indicator - add support for appindicator
 media-sound/feeluown:bilibili - add support for bilibili
-media-sound/feeluown:kuwo - add kuwo music support for feeluown
+media-sound/feeluown:cookies - add support for cookies login
 media-sound/feeluown:netease - add netease cloud music support for feeluown
 media-sound/feeluown:qqmusic - add qq music support for feeluown
 media-sound/feeluown:webengine - add support to login via web page

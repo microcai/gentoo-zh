@@ -128,16 +128,15 @@ dev-python/conda-libmamba-solver 24.1.0-r1: The libmamba based solver for conda
 dev-python/conda-package-handling 2.2.0: Create and extract conda packages of various formats
 dev-python/conda-package-streaming 0.7.0: An efficient library to read from new and old conda packages
 dev-python/daff 1.3.46: The daff can produce and apply tabular diffs
-dev-python/feeluown-bilibili 0.3: bilibili support for feeluown
-dev-python/fuo-kuwo 0.2.2: kuwo music support for feeluown
-dev-python/fuo-netease 1.0: netease cloud music support for feeluown
-dev-python/fuo-qqmusic 0.5.1 1.0.1: qq music support for feeluown
-dev-python/fuo-ytmusic 0.3.3 0.3.4: youtube music support for feeluown
+dev-python/feeluown-bilibili 0.3.3: bilibili support for feeluown
+dev-python/fuo-netease 1.0.1: netease cloud music support for feeluown
+dev-python/fuo-qqmusic 1.0.2: qq music support for feeluown
+dev-python/fuo-ytmusic 0.3.4: youtube music support for feeluown
 dev-python/janus 1.0.0-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/nvchecker 2.13 2.13.1: nvchecker is for checking if a new version of some software has been released
 dev-python/pycosat 0.6.6: Python bindings to picosat (a SAT solver)
 dev-python/pytube 15.0.0: Python tools for downloading YouTube Videos
-dev-python/qasync 0.26.0 0.27.1: Implementation of the asyncio (PEP 3156) event-loop with Qt
+dev-python/qasync 0.27.1: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/structlog 24.1.0: Structured Logging for Python
 dev-util/android-studio 2023.2.1.25: Android development environment based on IntelliJ IDEA
 dev-util/arch-install-scripts 28-r1: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
@@ -194,7 +193,7 @@ media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.11 0.5.14 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-plugins/waylyrics 0.2.17: Simple On Screen lyrics Display for linux/unix
 media-sound/barva 9999: a modular audio visualizer
-media-sound/feeluown 3.8.15 4.0_alpha0 4.0.1: A user-friendly and hackable music player
+media-sound/feeluown 4.1.2: A user-friendly and hackable music player
 media-sound/go-musicfox 4.3.3: Command-line Netease Cloud Music written in Go
 media-sound/linnya 2.2.0: A free music player
 media-sound/listen1_desktop-bin 2.32.0: one for all free music in China
