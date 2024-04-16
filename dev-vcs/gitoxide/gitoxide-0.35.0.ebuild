@@ -91,7 +91,6 @@ CRATES="
 	curl-sys@0.4.70+curl-8.5.0
 	curl@0.4.44
 	dashmap@5.5.3
-	data-encoding@2.5.0
 	defer@0.1.0
 	deranged@0.3.10
 	diff@0.1.13
@@ -100,7 +99,6 @@ CRATES="
 	dunce@1.0.4
 	either@1.9.0
 	encoding_rs@0.8.33
-	enum-as-inner@0.6.0
 	env_logger@0.10.1
 	equivalent@1.0.1
 	errno@0.3.8
@@ -169,7 +167,7 @@ CRATES="
 	gix-worktree@0.26.0
 	glob@0.3.1
 	gloo-timers@0.2.6
-	h2@0.3.24
+	h2@0.4.4
 	half@1.8.2
 	hashbrown@0.12.3
 	hashbrown@0.14.3
@@ -177,17 +175,16 @@ CRATES="
 	heck@0.4.1
 	hermit-abi@0.3.3
 	home@0.5.5
-	hostname@0.3.1
-	http-body@0.4.6
-	http@0.2.11
+	http-body-util@0.1.1
+	http-body@1.0.0
+	http@1.1.0
 	httparse@1.8.0
-	httpdate@1.0.3
 	human_format@1.0.3
 	humantime@2.1.0
-	hyper-rustls@0.24.2
-	hyper-tls@0.5.0
-	hyper@0.14.28
-	idna@0.4.0
+	hyper-rustls@0.26.0
+	hyper-tls@0.6.0
+	hyper-util@0.1.3
+	hyper@1.2.0
 	idna@0.5.0
 	imara-diff@0.1.5
 	indexmap@2.1.0
@@ -195,7 +192,6 @@ CRATES="
 	instant@0.1.12
 	io-close@0.3.7
 	io-lifetimes@1.0.11
-	ipconfig@0.3.2
 	ipnet@2.9.0
 	is-docker@0.2.0
 	is-terminal@0.4.10
@@ -214,17 +210,14 @@ CRATES="
 	libsqlite3-sys@0.27.0
 	libz-ng-sys@1.1.13
 	libz-sys@1.1.13
-	linked-hash-map@0.5.6
 	linux-raw-sys@0.3.8
 	linux-raw-sys@0.4.12
 	litrs@0.4.1
 	lock_api@0.4.11
 	log@0.4.20
-	lru-cache@0.1.2
 	lru@0.12.1
 	lzma-sys@0.1.20
 	maplit@1.0.2
-	match_cfg@0.1.0
 	maybe-async@0.2.7
 	memchr@2.7.1
 	memmap2@0.7.1
@@ -232,7 +225,7 @@ CRATES="
 	memoffset@0.7.1
 	mime@0.3.17
 	miniz_oxide@0.7.1
-	mio@0.8.10
+	mio@0.8.11
 	native-tls@0.2.11
 	nix@0.26.4
 	ntapi@0.4.1
@@ -257,7 +250,9 @@ CRATES="
 	paste@1.0.14
 	pathdiff@0.2.1
 	percent-encoding@2.3.1
+	pin-project-internal@1.1.5
 	pin-project-lite@0.2.13
+	pin-project@1.1.5
 	pin-utils@0.1.0
 	piper@0.2.1
 	pkg-config@0.3.28
@@ -267,18 +262,13 @@ CRATES="
 	polling@2.8.0
 	polling@3.3.1
 	powerfmt@0.2.0
-	ppv-lite86@0.2.17
 	pretty_assertions@1.4.0
 	proc-macro-crate@1.3.1
 	proc-macro2@1.0.75
 	prodash@26.2.2
 	prodash@28.0.0
 	ptyprocess@0.4.1
-	quick-error@1.2.3
 	quote@1.0.35
-	rand@0.8.5
-	rand_chacha@0.3.1
-	rand_core@0.6.4
 	ratatui@0.25.0
 	rayon-core@1.12.0
 	rayon@1.8.0
@@ -286,8 +276,7 @@ CRATES="
 	regex-automata@0.4.3
 	regex-syntax@0.8.2
 	regex@1.10.2
-	reqwest@0.11.23
-	resolv-conf@0.7.0
+	reqwest@0.12.0
 	ring@0.16.20
 	ring@0.17.7
 	rusqlite@0.30.0
@@ -297,9 +286,10 @@ CRATES="
 	rustls-ffi@0.8.2
 	rustls-pemfile@0.2.1
 	rustls-pemfile@1.0.4
-	rustls-webpki@0.101.7
+	rustls-pki-types@1.3.1
+	rustls-webpki@0.102.2
 	rustls@0.20.9
-	rustls@0.21.10
+	rustls@0.22.2
 	rustversion@1.0.14
 	ryu@1.0.16
 	same-file@1.0.6
@@ -323,7 +313,7 @@ CRATES="
 	signal-hook-registry@1.4.1
 	signal-hook@0.3.17
 	slab@0.4.9
-	smallvec@1.11.2
+	smallvec@1.13.2
 	socket2@0.4.10
 	socket2@0.5.5
 	spin@0.5.2
@@ -333,9 +323,11 @@ CRATES="
 	strsim@0.10.0
 	strum@0.25.0
 	strum_macros@0.25.3
+	subtle@2.5.0
 	symlink@0.1.0
 	syn@1.0.109
 	syn@2.0.47
+	sync_wrapper@0.1.2
 	sysinfo@0.30.2
 	system-configuration-sys@0.5.0
 	system-configuration@0.5.1
@@ -353,20 +345,20 @@ CRATES="
 	tinyvec@1.6.0
 	tinyvec_macros@0.1.1
 	tokio-native-tls@0.3.1
-	tokio-rustls@0.24.1
+	tokio-rustls@0.25.0
 	tokio-util@0.7.10
 	tokio@1.35.1
 	toml_datetime@0.6.5
 	toml_edit@0.19.15
+	tower-layer@0.3.2
 	tower-service@0.3.2
+	tower@0.4.13
 	tracing-attributes@0.1.27
 	tracing-core@0.1.32
 	tracing-forest@0.1.6
 	tracing-log@0.2.0
 	tracing-subscriber@0.3.18
 	tracing@0.1.40
-	trust-dns-proto@0.23.2
-	trust-dns-resolver@0.23.2
 	try-lock@0.2.5
 	trybuild@1.0.86
 	tui-react@0.22.0
@@ -397,9 +389,8 @@ CRATES="
 	wasm-bindgen-shared@0.2.89
 	wasm-bindgen@0.2.89
 	web-sys@0.3.66
-	webpki-roots@0.25.3
+	webpki-roots@0.26.1
 	webpki@0.22.4
-	widestring@1.0.2
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-util@0.1.6
 	winapi-x86_64-pc-windows-gnu@0.4.0
@@ -442,6 +433,7 @@ CRATES="
 	yansi@0.5.1
 	zerocopy-derive@0.7.32
 	zerocopy@0.7.32
+	zeroize@1.7.0
 	zip@0.6.6
 "
 
