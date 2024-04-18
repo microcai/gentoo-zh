@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-04-18 01:03:57 CST)
+(The last generation time: 2024-04-18 14:12:05 CST)
 
 ### Packages
 
@@ -224,8 +224,8 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/daff                            | 1.3.46                                    |        | https://github.com/paulfitz/daff                                                        | The daff can produce and apply tabular diffs
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/nvchecker                       | 2.13                                      |        | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
-                                            | 2.13.1                                    |        |                                                                                         |
+ dev-python/nvchecker                       | 2.13.1                                    |        | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
+                                            | 2.14                                      |        |                                                                                         |
    dev-python/structlog                     | 24.1.0                                    | RD     | http://www.structlog.org/en/stable/                                                     | Structured Logging for Python
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pycosat                         | 0.6.6                                     |        | https://github.com/conda/pycosat                                                        | Python bindings to picosat (a SAT solver)
