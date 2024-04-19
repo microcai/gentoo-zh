@@ -9,6 +9,8 @@ DESCRIPTION="A lightweight Spotify client using YouTube as audio source"
 HOMEPAGE="https://github.com/KRTirtho/spotube"
 SRC_URI="https://github.com/KRTirtho/spotube/releases/download/v${PV}/spotube-linux-${PV}-x86_64.tar.xz"
 
+S="${WORKDIR}"
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64"
@@ -17,8 +19,6 @@ RDEPEND="
 	dev-libs/libappindicator
 	media-video/mpv
 "
-
-S="${WORKDIR}"
 
 src_install() {
 	insinto /opt/spotube
