@@ -263,7 +263,7 @@ net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
 net-proxy/clash-nyanpasu 1.5.1: Clash GUI based on tauri
 net-proxy/clash-rs 0.1.15: Custom protocol, rule based network proxy
 net-proxy/clash-verge-bin 1.5.10 1.5.11: (Continuation) of Clash Meta GUI based on Tauri.
-net-proxy/dae 0.5.1 0.6.0_rc1 9999: A lightweight and high-performance transparent proxy solution based on eBPF
+net-proxy/dae 0.5.1 0.6.0_rc2 9999: A lightweight and high-performance transparent proxy solution based on eBPF
 net-proxy/daed 0.3.3_p1 0.4.0_rc1 9999: A Modern Dashboard For dae
 net-proxy/hysteria 2.2.2: A powerful, lightning fast and censorship resistant proxy.
 net-proxy/juicity 0.3.0: juicity is a quic-based proxy protocol.
@@ -317,7 +317,7 @@ virtual/dist-kernel 6.8.5: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 virtual/loong-ow-compat 0: Virtual for LoongArch old-world compatibility
 www-apps/chatgpt-desktop 1.1.0: ChatGPT Desktop Application
-www-client/brave-bin 1.64.122: Web browser that blocks ads and trackers by default
+www-client/brave-bin 1.65.114: Web browser that blocks ads and trackers by default
 www-servers/darkhttpd 1.16: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
