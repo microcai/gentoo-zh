@@ -6,15 +6,14 @@ EAPI=8
 inherit cmake xdg
 
 MY_PN="yass"
-S="${WORKDIR}/${MY_PN}-${PV}"
-SRC_URI="https://github.com/Chilledheart/yass/releases/download/${PV}/yass-${PV}.tar.bz2"
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~mips ~riscv ~x86"
-
 DESCRIPTION="lightweight and efficient, socks5/http forward proxy"
 HOMEPAGE="https://github.com/Chilledheart/yass"
-
+SRC_URI="https://github.com/Chilledheart/yass/releases/download/${PV}/yass-${PV}.tar.bz2"
+S="${WORKDIR}/${MY_PN}-${PV}"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="amd64 ~arm ~arm64 ~loong ~mips ~riscv ~x86"
+
 IUSE="+cli server +gui wayland"
 
 RDEPEND="
@@ -38,6 +37,10 @@ BDEPEND="
 	sys-devel/gettext
 	virtual/pkgconfig
 "
+
+PATCHES=(
+	"${FILESDIR}"/gtk4-fix-broken-alert-dialog-on-failure.patch
+)
 
 src_configure() {
 	local mycmakeargs=(
