@@ -106,7 +106,7 @@ dev-cpp/nameof 0.10.4: Nameof operator for modern C++
 dev-cpp/reproc 14.2.4: A cross-platform (C99/C++11) process library
 dev-cpp/tgbot-cpp 1.7.3: C++ library for Telegram bot API
 dev-cpp/tl-expected 1.1.0: Guideline Support Library implementation by Microsoft
-dev-db/dbeaver-bin 24.0.2: Free universal database tool (community edition).
+dev-db/dbeaver-bin 24.0.3: Free universal database tool (community edition).
 dev-db/mongodb 5.3.1 6.2.0-r4: A high-performance, open source, schema-free document-oriented database
 dev-debug/lldb-mi 0.0.1 9999: LLDB Machine Interface Driver
 dev-java/oraclejdk-bin 8.391 21.0.1: Oracle's Java SE Development Kit
