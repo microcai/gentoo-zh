@@ -5,11 +5,11 @@ EAPI=8
 
 MY_PN="fcitx5-skk"
 
-inherit xdg cmake
+inherit cmake unpacker xdg
 
 DESCRIPTION="Japanese SKK input engine for Fcitx5"
 HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-skk"
-SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_PN}-${PV}.tar.xz"
+SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_PN}-${PV}.tar.zst"
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 LICENSE="GPL-3+"
