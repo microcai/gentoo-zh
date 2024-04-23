@@ -11,7 +11,6 @@ EGIT_REPO_URI="https://github.com/daeuniverse/daed.git"
 
 LICENSE="MIT AGPL-3"
 SLOT="0"
-RESTRICT="strip"
 
 DEPEND="
 	app-alternatives/v2ray-geoip
@@ -24,6 +23,7 @@ BDEPEND="
 "
 
 IUSE="+webui"
+RESTRICT="strip"
 
 src_unpack(){
 	git-r3_src_unpack
