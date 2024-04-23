@@ -13,6 +13,7 @@ SRC_URI="
 "
 # EGIT_REPO_URI="https://github.com/daeuniverse/daed.git"
 
+S="${WORKDIR}"
 LICENSE="MIT AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -28,7 +29,6 @@ BDEPEND="
 	app-arch/unzip
 	dev-lang/go
 "
-
 IUSE="+webui"
 RESTRICT="strip"
 
