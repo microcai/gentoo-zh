@@ -155,7 +155,7 @@ LICENSE="MIT
 		Vic-Fieger-License
 		UbuntuFontLicense-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~loong"
 
 DEPEND="app-arch/unzip"
 RDEPEND="media-libs/fontconfig"
