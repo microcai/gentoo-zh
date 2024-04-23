@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-04-23 19:59:42 CST)
+(The last generation time: 2024-04-23 23:10:14 CST)
 
 ### Packages
 
@@ -535,8 +535,7 @@
                                             | 0.6.0_rc2                                 |        |                                                                                         |
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/daed                             | 0.3.3_p1                                  |        | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
-                                            | 0.4.0_rc1                                 |        |                                                                                         |
+ net-proxy/daed                             | 0.4.1                                     |        | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/hysteria                         | 2.2.2                                     |        | https://github.com/apernet/hysteria                                                     | A powerful, lightning fast and censorship resistant proxy.
