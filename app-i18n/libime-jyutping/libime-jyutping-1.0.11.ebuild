@@ -3,11 +3,11 @@
 
 EAPI=8
 
-inherit cmake
+inherit cmake unpacker
 
 DESCRIPTION="A library make use of libime to implement jyutping input method"
 HOMEPAGE="https://github.com/fcitx/libime-jyutping"
-SRC_URI="https://download.fcitx-im.org/fcitx5/${PN}/${P}_dict.tar.xz -> ${P}.tar.xz"
+SRC_URI="https://download.fcitx-im.org/fcitx5/${PN}/${P}_dict.tar.zst -> ${P}.tar.zst"
 
 LICENSE="LGPL-2.1+ GPL-3+"
 SLOT="0"
