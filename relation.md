@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-04-24 12:20:27 CST)
+(The last generation time: 2024-04-24 20:41:57 CST)
 
 ### Packages
 
@@ -72,12 +72,12 @@
                                             | 9999                                      |        |                                                                                         |
    app-i18n/fcitx-rime                      | 9999                                      | RD     | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
      app-i18n/rime-prelude                  | 20220122-r1                               |  D, RD | https://github.com/rime/rime-prelude                                                    | Essential files for building up your Rime configuration
-   app-i18n/fcitx-skk                       | 5.1.2                                     | RD     | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
+   app-i18n/fcitx-skk                       | 5.1.3                                     | RD     | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/ibus-rime                         | 9999                                      |        | http://code.google.com/p/rimeime/                                                       | Rime Input Method Engine for IBus Framework
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/libime-jyutping                   | 1.0.10                                    |        | https://github.com/fcitx/libime-jyutping                                                | A library make use of libime to implement jyutping input method
+ app-i18n/libime-jyutping                   | 1.0.11                                    |        | https://github.com/fcitx/libime-jyutping                                                | A library make use of libime to implement jyutping input method
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/lunar                             | 2.2-r5                                    |        | https://packages.debian.org/unstable/utils/lunar                                        | Chinese Lunar Calendar conversion utility
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
