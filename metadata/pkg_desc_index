@@ -55,10 +55,10 @@ app-i18n/fcitx-m17n 5.1.0 9999: m17n-provided input methods for Fcitx5
 app-i18n/fcitx-meta 5.0.12-r2: Merge this to pull in Fcitx packages
 app-i18n/fcitx-qt 9999: Qt library and IM module for fcitx5
 app-i18n/fcitx-rime 9999: Rime Support for Fcitx5
-app-i18n/fcitx-skk 5.1.2 9999: Japanese SKK input engine for Fcitx5
+app-i18n/fcitx-skk 5.1.3 9999: Japanese SKK input engine for Fcitx5
 app-i18n/ibus-rime 9999: Rime Input Method Engine for IBus Framework
 app-i18n/libime 9999: Fcitx5 Next generation of fcitx
-app-i18n/libime-jyutping 1.0.10: A library make use of libime to implement jyutping input method
+app-i18n/libime-jyutping 1.0.11: A library make use of libime to implement jyutping input method
 app-i18n/librime 1.10.0: RIME (Rime Input Method Engine) core library
 app-i18n/lunar 2.2-r5: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages

@@ -1,16 +1,16 @@
 BDEPEND=app-alternatives/ninja >=dev-build/cmake-3.20.5
-DEFINED_PHASES=compile configure install prepare test
+DEFINED_PHASES=compile configure install prepare test unpack
 DEPEND=>=app-i18n/libime-1.1.3:5 app-arch/zstd >=dev-libs/boost-1.61 dev-libs/libfmt doc? ( app-text/doxygen dev-texlive/texlive-fontutils ) engine? ( app-i18n/fcitx:5 app-i18n/fcitx-chinese-addons:5 sys-devel/gettext )
 DESCRIPTION=A library make use of libime to implement jyutping input method
 EAPI=8
 HOMEPAGE=https://github.com/fcitx/libime-jyutping
-INHERIT=cmake
+INHERIT=cmake unpacker
 IUSE=doc +engine test
 KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-2.1+ GPL-3+
 RDEPEND=>=app-i18n/libime-1.1.3:5 app-arch/zstd >=dev-libs/boost-1.61 dev-libs/libfmt doc? ( app-text/doxygen dev-texlive/texlive-fontutils ) engine? ( app-i18n/fcitx:5 app-i18n/fcitx-chinese-addons:5 sys-devel/gettext )
 RESTRICT=!test? ( test )
 SLOT=0
-SRC_URI=https://download.fcitx-im.org/fcitx5/libime-jyutping/libime-jyutping-1.0.10_dict.tar.xz -> libime-jyutping-1.0.10.tar.xz
-_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	288c54efeb5e2aa70775e39032695ad4	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	c7c9a62d6232cac66d4ea32d575c3e7c
-_md5_=75f92b92c5e89f1909546f3a423167ac
+SRC_URI=https://download.fcitx-im.org/fcitx5/libime-jyutping/libime-jyutping-1.0.11_dict.tar.zst -> libime-jyutping-1.0.11.tar.zst
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	288c54efeb5e2aa70775e39032695ad4	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	c7c9a62d6232cac66d4ea32d575c3e7c	unpacker	7b40f3faa3e2e12f5cf6d36d0fbfcd09
+_md5_=6170c05e85975f06accbb8208ced22b4
