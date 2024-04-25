@@ -10,13 +10,14 @@ CRATES="
 	adler@1.0.2
 	aes@0.8.4
 	ahash@0.7.8
+	ahash@0.8.11
 	aho-corasick@1.1.3
 	ansi_term@0.12.1
-	anyhow@1.0.81
+	anyhow@1.0.82
 	arrayvec@0.7.4
 	assert_float_eq@1.1.3
-	async-channel@2.2.0
-	async-trait@0.1.79
+	async-channel@2.2.1
+	async-trait@0.1.80
 	atk-sys@0.18.0
 	atk@0.18.0
 	atty@0.2.14
@@ -41,8 +42,8 @@ CRATES="
 	cairo-sys-rs@0.18.2
 	cairo-sys-rs@0.19.2
 	cbc@0.1.2
-	cc@1.0.92
-	cfg-expr@0.15.7
+	cc@1.0.94
+	cfg-expr@0.15.8
 	cfg-if@1.0.0
 	cfg_aliases@0.1.1
 	cipher@0.4.4
@@ -82,7 +83,7 @@ CRATES="
 	dpi@0.1.1
 	ecb@0.1.2
 	embed-resource@2.4.2
-	encoding_rs@0.8.33
+	encoding_rs@0.8.34
 	enum-kinds@0.5.1
 	equivalent@1.0.1
 	errno@0.3.8
@@ -172,7 +173,6 @@ CRATES="
 	itoa@1.0.11
 	js-sys@0.3.69
 	keyboard-types@0.7.0
-	ksni@0.2.1
 	lazy_static@1.4.0
 	libappindicator-sys@0.9.0
 	libappindicator@0.9.0
@@ -188,7 +188,7 @@ CRATES="
 	locale_config@0.3.0
 	lock_api@0.4.11
 	log@0.4.21
-	lrc-nom@0.2.0
+	lrc-nom@0.3.0
 	malloc_buf@0.0.6
 	matchers@0.1.0
 	md5@0.7.0
@@ -202,6 +202,7 @@ CRATES="
 	mpris@2.0.1
 	muda@0.13.1
 	native-tls@0.2.11
+	ncmapi2@0.1.13
 	nom@7.1.3
 	nu-ansi-term@0.46.0
 	num-bigint-dig@0.8.4
@@ -215,6 +216,7 @@ CRATES="
 	objc_id@0.1.1
 	object@0.32.2
 	once_cell@1.19.0
+	opencc-rust@1.1.18
 	openssl-macros@0.1.1
 	openssl-probe@0.1.5
 	openssl-sys@0.9.102
@@ -254,8 +256,9 @@ CRATES="
 	ptr_meta@0.1.4
 	ptr_meta_derive@0.1.4
 	publicsuffix@2.2.3
+	qqmusic-rs@0.1.0
 	quote@0.3.15
-	quote@1.0.35
+	quote@1.0.36
 	radium@0.7.0
 	rand@0.8.5
 	rand_chacha@0.3.1
@@ -290,7 +293,7 @@ CRATES="
 	serde@1.0.197
 	serde_derive@1.0.197
 	serde_json@1.0.115
-	serde_repr@0.1.18
+	serde_repr@0.1.19
 	serde_spanned@0.6.5
 	serde_urlencoded@0.7.1
 	sharded-slab@0.1.7
@@ -328,8 +331,8 @@ CRATES="
 	thiserror@1.0.58
 	thread_local@1.1.8
 	time-core@0.1.2
-	time-macros@0.2.17
-	time@0.3.34
+	time-macros@0.2.18
+	time@0.3.36
 	tinyvec@1.6.0
 	tinyvec_macros@0.1.1
 	tokio-macros@2.2.0
@@ -381,43 +384,47 @@ CRATES="
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-x86_64-pc-windows-gnu@0.4.0
 	winapi@0.3.9
-	windows-core@0.54.0
-	windows-result@0.1.0
+	windows-core@0.56.0
+	windows-implement@0.56.0
+	windows-interface@0.56.0
+	windows-result@0.1.1
 	windows-sys@0.48.0
 	windows-sys@0.52.0
 	windows-targets@0.48.5
-	windows-targets@0.52.4
-	windows@0.54.0
+	windows-targets@0.52.5
+	windows@0.56.0
 	windows_aarch64_gnullvm@0.48.5
-	windows_aarch64_gnullvm@0.52.4
+	windows_aarch64_gnullvm@0.52.5
 	windows_aarch64_msvc@0.48.5
-	windows_aarch64_msvc@0.52.4
+	windows_aarch64_msvc@0.52.5
 	windows_exe_info@0.4.2
 	windows_i686_gnu@0.48.5
-	windows_i686_gnu@0.52.4
+	windows_i686_gnu@0.52.5
+	windows_i686_gnullvm@0.52.5
 	windows_i686_msvc@0.48.5
-	windows_i686_msvc@0.52.4
+	windows_i686_msvc@0.52.5
 	windows_x86_64_gnu@0.48.5
-	windows_x86_64_gnu@0.52.4
+	windows_x86_64_gnu@0.52.5
 	windows_x86_64_gnullvm@0.48.5
-	windows_x86_64_gnullvm@0.52.4
+	windows_x86_64_gnullvm@0.52.5
 	windows_x86_64_msvc@0.48.5
-	windows_x86_64_msvc@0.52.4
+	windows_x86_64_msvc@0.52.5
 	winnow@0.5.40
-	winnow@0.6.5
+	winnow@0.6.6
 	winreg@0.52.0
 	wyz@0.5.1
 	x11@2.21.0
 	xml-rs@0.8.20
+	zerocopy-derive@0.7.32
+	zerocopy@0.7.32
 	zeroize@1.7.0
 "
 
 declare -A GIT_CRATES=(
-	[ncmapi]='https://github.com/waylyrics/ncmapi-rs;6095abf7e54eedbb716676d311e0741b4ac2482e;ncmapi-rs-%commit%'
-	[qqmusic-rs]='https://github.com/waylyrics/qqmusic-rs;22e66ba62e63d97c6dffb45400655404e6f06b93;qqmusic-rs-%commit%'
+	[ksni]='https://github.com/waylyrics/ksni;af6fa6e6e29b7cb3779f98c1ca3aaeb8744ef4c4;ksni-%commit%'
 )
 
-PLOCALES="zh_CN"
+PLOCALES="en_US zh_CN"
 inherit cargo desktop gnome2-utils plocale xdg
 
 DESCRIPTION="Simple On Screen lyrics Display for linux/unix"
@@ -434,14 +441,14 @@ else
 		https://github.com/waylyrics/waylyrics/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 		${CARGO_CRATE_URIS}
 	"
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~loong"
 fi
 
 LICENSE="MIT"
 # Dependent crate licenses
 LICENSE+="
-	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD GPL-3+ MIT
-	Unicode-DFS-2016 Unlicense
+	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD GPL-3+ ISC MIT
+	MPL-2.0 Unicode-DFS-2016 Unlicense
 "
 SLOT="0"
 
@@ -468,11 +475,11 @@ src_compile() {
 src_install() {
 	cargo_src_install
 
-	doicon -s scalable "${S}/res/icons/hicolor/scalable/apps/io.poly000.waylyrics.svg"
-	domenu "${S}/io.poly000.waylyrics.desktop"
+	doicon -s scalable "${S}/res/icons/hicolor/scalable/apps/io.github.waylyrics.Waylyrics.svg"
+	domenu "${S}/metainfo/io.github.waylyrics.Waylyrics.desktop"
 
 	insinto "/usr/share/glib-2.0/schemas"
-	doins "io.poly000.waylyrics.gschema.xml"
+	doins "metainfo/io.github.waylyrics.Waylyrics.gschema.xml"
 
 	insinto "/usr/share/${PN}"
 	doins -r themes
