@@ -4,7 +4,7 @@
 EAPI="8"
 K_WANT_GENPATCHES="base extras"
 #Note: to bump xanmod, check K_GENPATCHES_VER in sys-kernel/gentoo-sources
-K_GENPATCHES_VER="8"
+K_GENPATCHES_VER="10"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 ETYPE="sources"
@@ -18,17 +18,10 @@ HOMEPAGE="https://xanmod.org
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
 
-#
-# Freeze the 'tt' use flag until the corresponding patch is released upstream.
-#
-#IUSE="cjktty tt"
-
-IUSE="cjktty"
 XANMOD_VERSION="1"
 XANMOD_URI="mirror://sourceforge/xanmod"
 OKV="${OKV}-xanmod"
-TT_URI="https://raw.githubusercontent.com/hamadmarri/TT-CPU-Scheduler/master/patches/"
-CJKTTY_URI="https://raw.githubusercontent.com/zhmars/cjktty-patches/master/"
+CJKTTY_URI="https://raw.githubusercontent.com/OriPoin/cjktty-patches/master"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
 	${GENPATCHES_URI}
@@ -36,10 +29,8 @@ SRC_URI="
 	${CJKTTY_URI}/v${KV_MAJOR}.x/cjktty-${KV_MAJOR}.${KV_MINOR}.patch
 	${CJKTTY_URI}/cjktty-add-cjk32x32-font-data.patch
 "
-	#${TT_URI}/${KV_MAJOR}.${KV_MINOR}/tt-${KV_MAJOR}.${KV_MINOR}.patch
-	#${CJKTTY_URI}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch
-#"
 
+IUSE="cjktty"
 src_unpack() {
 	universal_unpack
 	mkdir "${WORKDIR}/genpatches" || die
