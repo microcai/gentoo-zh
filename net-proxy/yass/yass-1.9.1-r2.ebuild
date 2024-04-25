@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~mips ~riscv ~x86"
 
-IUSE="+cli server +gui wayland"
+IUSE="+cli server +gui wayland +tcmalloc"
 
 RDEPEND="
 	app-misc/ca-certificates
@@ -53,6 +53,7 @@ src_configure() {
 		-DSERVER=$(usex server)
 		-DGUI=$(usex gui)
 		-DBUILD_TESTS=off
+		-DUSE_TCMALLOC=$(usex tcmalloc)
 		-DUSE_SYSTEM_MBEDTLS=on
 		-DUSE_SYSTEM_ZLIB=on
 		-DUSE_SYSTEM_CARES=on
