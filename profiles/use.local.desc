@@ -254,6 +254,7 @@ net-proxy/v2rayA:xray - To be able to use net-proxy/Xray. Disable the v2ray usef
 net-proxy/yass:cli - Enable cli daemon
 net-proxy/yass:gui - Enable GUI Client
 net-proxy/yass:server - Enable server daemon
+net-proxy/yass:tcmalloc - Enable tcmalloc
 sci-electronics/openfpgaloader:cmsisdap - enable cmsis-dap support
 sci-electronics/openfpgaloader:gpio - enable libgpiod bitbang support
 sci-electronics/openfpgaloader:remote - enable remote bitbang support
