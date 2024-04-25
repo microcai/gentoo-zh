@@ -1,11 +1,10 @@
-# Copyright 2020-2023 Gentoo Authors
+# Copyright 2020-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit kernel-build python-any-r1 toolchain-funcs
+inherit kernel-build toolchain-funcs
 
-PYTHON_COMPAT=( python3_{9..11} )
 MY_P=linux-${PV%.*}
 #Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
 GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 3))
@@ -14,8 +13,8 @@ XV="1"
 DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
 HOMEPAGE="https://www.kernel.org/"
 SRC_URI+=" https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.xz
-	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.base.tar.xz
-	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.extras.tar.xz
+	https://dev.gentoo.org/~alicef/dist/genpatches/${GENPATCHES_P}.base.tar.xz
+	https://dev.gentoo.org/~alicef/dist/genpatches/${GENPATCHES_P}.extras.tar.xz
 	mirror://sourceforge/xanmod/patch-${PV}-xanmod1.xz
 	https://raw.githubusercontent.com/OriPoin/cjktty-patches/master/v6.x/cjktty-${PV%.*}.patch
 	https://raw.githubusercontent.com/OriPoin/cjktty-patches/master/cjktty-add-cjk32x32-font-data.patch"
@@ -40,7 +39,6 @@ pkg_setup() {
 	ewarn "Do *not* open bugs in Gentoo's bugzilla unless you have issues with"
 	ewarn "the ebuilds. Thank you."
 	ewarn ""
-	python-any-r1_pkg_setup "$@"
 	if use clang && ! tc-is-clang; then
 		export LLVM_IAS=1
 		export LLVM=1
