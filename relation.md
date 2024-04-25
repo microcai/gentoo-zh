@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-04-25 18:48:02 CST)
+(The last generation time: 2024-04-25 20:03:47 CST)
 
 ### Packages
 
@@ -347,7 +347,7 @@
                                             | 0.5.14                                    |        |                                                                                         |
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-plugins/waylyrics                    | 0.2.17                                    |        | https://waylyrics.github.io/waylyrics/waylyrics                                         | Simple On Screen lyrics Display for linux/unix
+ media-plugins/waylyrics                    | 0.3.4                                     |        | https://waylyrics.github.io/waylyrics/waylyrics                                         | Simple On Screen lyrics Display for linux/unix
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/barva                          | 9999                                      |        | https://github.com/Kharacternyk/barva                                                   | a modular audio visualizer
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
