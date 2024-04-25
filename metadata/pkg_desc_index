@@ -306,14 +306,14 @@ sys-fs/ssdfs-tools 4.09: userspace tools for SSDFS
 sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/liquorix-sources 6.4.12 6.6.8: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 38: Modular initramfs image creation utility
-sys-kernel/xanmod-kernel 6.8.5: XanMod lts kernel built with Gentoo patches and cjktty
+sys-kernel/xanmod-kernel 6.8.7: XanMod lts kernel built with Gentoo patches and cjktty
 sys-kernel/xanmod-rt 6.0.11: XanMod RT sources and CJKTTY options.
-sys-kernel/xanmod-sources 6.8.5: Full XanMod source, including the Gentoo patchset and other patch options.
+sys-kernel/xanmod-sources 6.8.7: Full XanMod source, including the Gentoo patchset and other patch options.
 sys-kernel/zenpower3 0.2.0: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libsolv 0.7.28: Library for solving packages and reading repositories
 sys-power/tlpui 1.5.0_p6 1.6.0: A GTK user interface for TLP written in Python
-virtual/dist-kernel 6.8.5: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 6.8.7: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 virtual/loong-ow-compat 0: Virtual for LoongArch old-world compatibility
 www-apps/chatgpt-desktop 1.1.0: ChatGPT Desktop Application
