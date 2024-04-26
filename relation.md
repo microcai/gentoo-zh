@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-04-26 10:40:19 CST)
+(The last generation time: 2024-04-26 17:57:34 CST)
 
 ### Packages
 
@@ -530,6 +530,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-verge-bin                  | 1.5.10                                    |        | https://github.com/clash-verge-rev/clash-verge-rev                                      | (Continuation) of Clash Meta GUI based on Tauri.
                                             | 1.5.11                                    |        |                                                                                         |
+                                            | 1.6.0                                     |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/dae                              | 0.5.1                                     |        | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
                                             | 0.6.0_rc2                                 |        |                                                                                         |
@@ -552,7 +553,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/v2rayA                           | 2.2.5.1                                   |        | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                             | 9999                                      |        |                                                                                         |
-   net-proxy/Xray                           | 1.8.10                                    | RD     | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
+   net-proxy/Xray                           | 1.8.11                                    | RD     | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
      app-alternatives/v2ray-geoip           | 0-r1                                      |  D, RD |                                                                                         | symlink for v2ray-geoip
      app-alternatives/v2ray-geosite         | 0-r1                                      |  D, RD |                                                                                         | symlink for v2ray-geosite
    net-proxy/v2ray                          | 5.15.1                                    | RD     | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
