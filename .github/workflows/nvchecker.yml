@@ -76,7 +76,7 @@ jobs:
       env:
         pkgs: ${{steps.nvchecker.outputs.nvcmp}}
       with:
-        github-token: ${{ secrets.GENTOO_ZH_NVCHECKER_PAT }}
+        github-token: ${{ secrets.GENTOO_ZH_NVCHECKER_PAT }} # https://github.com/microcai/gentoo-zh/pull/3130
         script: |
           const script = require('./.github/workflows/issues-bumper.js');
           (async function () {
