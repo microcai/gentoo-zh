@@ -5,28 +5,30 @@ EAPI=8
 
 inherit unpacker xdg
 
-MY_PV=${PV/_p/_}
+MY_PV=${PV/_p/-}
+_I="db6c41a0"
+_LiteLoader_PV="1.1.1"
 DESCRIPTION="The new version of the official linux-qq"
 HOMEPAGE="https://im.qq.com/linuxqq/index.shtml"
-LICENSE="Tencent"
-RESTRICT="strip"
-
-_LiteLoader_PV="1.1.1"
 
 SRC_URI="
-	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_${MY_PV}_amd64_01.deb )
-	arm64? ( https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_${MY_PV}_arm64_01.deb )
-	loong? ( https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_${MY_PV}_loongarch64_01.deb )
+	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_amd64.deb )
+	arm64? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_arm64.deb )
+	loong? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_loongarch64.deb )
 	liteloader? (
 		https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/${_LiteLoader_PV}/LiteLoaderQQNT.zip \
 		-> LiteLoaderQQNT-${_LiteLoader_PV}.zip
 	)
 "
-
+S=${WORKDIR}
+LICENSE="Tencent"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~arm64 ~loong"
+KEYWORDS="-* ~amd64 ~arm64"
 
 IUSE="+bwrap system-vips gnome appindicator liteloader"
+
+RESTRICT="strip"
+
 RDEPEND="
 	x11-libs/gtk+:3
 	x11-libs/libnotify
@@ -41,7 +43,7 @@ RDEPEND="
 	sys-apps/keyutils
 	system-vips? (
 		dev-libs/glib
-		>=media-libs/vips-8.14.2[-pdf]
+		>=media-libs/vips-8.15.2[-pdf]
 	)
 	bwrap? (
 		sys-apps/bubblewrap
@@ -56,8 +58,6 @@ RDEPEND="
 "
 BDEPEND="liteloader? ( app-arch/unzip )"
 
-S=${WORKDIR}
-
 src_unpack() {
 	:
 	if use liteloader; then
@@ -68,7 +68,7 @@ src_unpack() {
 src_install() {
 	dodir /
 	cd "${D}" || die
-	unpacker "${DISTDIR}/QQ_${MY_PV}_${ARCH}_01.deb"
+	unpacker "${DISTDIR}/linuxqq_${MY_PV}_${ARCH}".deb
 
 	if use system-vips; then
 		rm -r "${D}"/opt/QQ/resources/app/sharp-lib || die
