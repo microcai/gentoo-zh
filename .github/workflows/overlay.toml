@@ -1021,6 +1021,7 @@ github_account = "Chilledheart"
 source = "github"
 github = "tailscale/tailscale"
 use_latest_release = true
+prefix = "v"
 github_account = "peeweep"
 
 #["net-wireless/linux-wifi-hotspot"]
