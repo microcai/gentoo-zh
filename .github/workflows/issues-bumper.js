@@ -1,6 +1,5 @@
-async function getSearchIssuesResult(github, context, page_number = 1) {
-  titleSearchKeyword = "[nvchecker] can be bump to";
-  searchQuery = `repo:${process.env.GITHUB_REPOSITORY} is:issue in:title ${titleSearchKeyword}`;
+async function getSearchIssuesResult(github, titleSearchKeyword, page_number) {
+  searchQuery = `repo:${process.env.GITHUB_REPOSITORY} is:issue label:nvchecker in:title ${titleSearchKeyword}`;
   const searchIssues = await github.rest.search.issuesAndPullRequests({
     q: searchQuery,
     per_page: 100,
@@ -23,25 +22,6 @@ function getGithubAccount(package) {
 }
 
 module.exports = async ({ github, context, core }) => {
-  let issuesData = [];
-  let index = 0;
-  while (true) {
-    index++;
-    try {
-      const response = await getSearchIssuesResult(
-        github,
-        context,
-        (page_number = index)
-      );
-      issuesData = issuesData.concat(response);
-      if (response.length < 100) {
-        break;
-      }
-    } catch (error) {
-      core.warning(`Waring ${error}, action may still succeed though`);
-    }
-  }
-
   let pkgs = JSON.parse(process.env.pkgs);
   for (let pkg of pkgs) {
     // // limit "x11-misc/9menu" and "dev-libs/libthai"
@@ -73,6 +53,26 @@ module.exports = async ({ github, context, core }) => {
     // because github rest api response's issue body is null, they should be same
     if (body == "") {
       body = null;
+    }
+
+    // search issues by titlePrefix
+    let issuesData = [];
+    let page_number = 0;
+    while (true) {
+      page_number++;
+      try {
+        const response = await getSearchIssuesResult(
+          github,
+          titleSearchKeyword = titlePrefix,
+          page_number
+        );
+        issuesData = issuesData.concat(response);
+        if (response.length < 100) {
+          break;
+        }
+      } catch (error) {
+        core.warning(`Waring ${error}, action may still succeed though`);
+      }
     }
 
     (async function () {
