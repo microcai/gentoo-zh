@@ -44,7 +44,7 @@ app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
 app-i18n/fcitx 9999: Fcitx5 Next generation of fcitx
 app-i18n/fcitx-anthy 5.1.2: Japanese Anthy input methods for Fcitx5
 app-i18n/fcitx-bamboo 1.0.4: Typing Vietnamese by Bamboo core engine for Fcitx5
-app-i18n/fcitx-chewing 5.1.2: Chewing Wrapper for Fcitx.
+app-i18n/fcitx-chewing 5.1.2 5.1.3: Chewing Wrapper for Fcitx.
 app-i18n/fcitx-chinese-addons 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
 app-i18n/fcitx-configtool 9999: Configuration module for Fcitx
 app-i18n/fcitx-cskk 1.2.0: SKK input method plugin for fcitx5 that uses LibCSKK
