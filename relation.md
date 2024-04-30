@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-04-30 14:02:45 CST)
+(The last generation time: 2024-04-30 15:00:12 CST)
 
 ### Packages
 
@@ -61,6 +61,7 @@
    app-i18n/fcitx-anthy                     | 5.1.2                                     | RD     | https://fcitx-im.org/                                                                   | Japanese Anthy input methods for Fcitx5
    app-i18n/fcitx-bamboo                    | 1.0.4                                     | RD     | https://github.com/fcitx/fcitx5-bamboo                                                  | Typing Vietnamese by Bamboo core engine for Fcitx5
    app-i18n/fcitx-chewing                   | 5.1.2                                     | RD     | https://github.com/fcitx/fcitx5-chewing                                                 | Chewing Wrapper for Fcitx.
+                                            | 5.1.3                                     |        |                                                                                         |
    app-i18n/fcitx-chinese-addons            | 9999                                      |  D, RD | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
      app-i18n/fcitx-lua                     | 9999                                      |  D, RD | https://github.com/fcitx/fcitx5-lua                                                     | Lua support for fcitx
      app-i18n/fcitx-qt                      | 9999                                      |  D, RD | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
