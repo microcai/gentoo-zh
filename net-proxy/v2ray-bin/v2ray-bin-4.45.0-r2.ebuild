@@ -25,10 +25,13 @@ KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 
 RESTRICT="mirror"
 
+DEPEND="
+	app-alternatives/v2ray-geoip
+	app-alternatives/v2ray-geosite
+"
 RDEPEND="
 	!net-proxy/v2ray
-	!app-alternatives/v2ray-geoip
-	!app-alternatives/v2ray-geosite
+	${DEPEND}
 "
 BDEPEND="app-arch/unzip"
 QA_PREBUILT="
@@ -46,9 +49,6 @@ src_unpack() {
 src_install() {
 	dobin v2ray
 	dobin v2ctl
-
-	insinto /usr/share/v2ray
-	doins *.dat
 
 	insinto /etc/v2ray
 	doins *.json
