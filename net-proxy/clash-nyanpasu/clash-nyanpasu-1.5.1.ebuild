@@ -782,6 +782,8 @@ REQUIRED_USE="
 "
 
 DEPEND="
+	app-alternatives/v2ray-geoip
+	app-alternatives/v2ray-geosite
 	dev-libs/glib:2
 	dev-libs/openssl:=
 	dev-libs/libayatana-appindicator
@@ -793,8 +795,6 @@ DEPEND="
 "
 RDEPEND="
 	${DEPEND}
-	app-alternatives/v2ray-geoip
-	app-alternatives/v2ray-geosite
 	clash-rs? ( net-proxy/clash-rs )
 	mihomo? ( net-proxy/mihomo )
 "

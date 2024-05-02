@@ -20,8 +20,8 @@ RESTRICT="mirror"
 
 DEPEND="app-alternatives/v2ray-geoip
 	app-alternatives/v2ray-geosite"
-RDEPEND="${DEPEND}
-	!net-proxy/v2ray-bin"
+RDEPEND="!net-proxy/v2ray-bin
+	${DEPEND}"
 BDEPEND=">=dev-lang/go-1.21.4"
 
 src_prepare() {
