@@ -1,0 +1,185 @@
+From 0a2598c4076cbad3f08f3b2e37fec0ae7bc79723 Mon Sep 17 00:00:00 2001
+From: Keeyou <keeyou-cn@outlook.com>
+Date: Thu, 2 May 2024 10:24:16 +0800
+Subject: [PATCH] doc: update manpages (trivial)
+
+---
+ doc/yass_cli.1        | 12 +++++++++---
+ doc/yass_cli.md       | 10 ++++++++--
+ doc/yass_server.1     |  6 +++---
+ doc/yass_server.md    |  4 ++--
+ src/config/config.cpp | 21 ++++++++++++++++++---
+ 5 files changed, 40 insertions(+), 13 deletions(-)
+
+diff --git a/doc/yass_cli.1 b/doc/yass_cli.1
+index 1b1584a6..c943cdc0 100644
+--- a/doc/yass_cli.1
++++ b/doc/yass_cli.1
+@@ -1,6 +1,6 @@
+ .\" generated with Ronn-NG/v0.9.1
+ .\" http://github.com/apjanke/ronn-ng/tree/0.9.1
+-.TH "YASS_CLI" "1" "December 2023" ""
++.TH "YASS_CLI" "1" "May 2024" ""
+ .SH "NAME"
+ \fByass_cli\fR \- a lightweight and efficient, socks5/http forward proxy
+ .SH "SYNOPSIS"
+@@ -63,7 +63,7 @@ Maximum number of accepted connection is \fInumber\fR\.
+ Enable padding support\.
+ .TP
+ \fB\-\-use_ca_bundle_crt\fR
+-Use internal ca\-bundle\.crt instead of system CA store\.
++Use builtin ca\-bundle\.crt instead of system CA store\.
+ .TP
+ \fB\-\-cacert\fR \fIfile\fR
+ Tells where to use the specified certificate \fIfile\fR to verify the peer\.
+@@ -76,11 +76,17 @@ This option makes to skip the verification step and proceed without checking\.
+ .TP
+ \fB\-\-redir_mode\fR
+ Enable TCP Redir mode support (Linux only)\.
++.TP
++\fB\-\-tls13_early_data\fR
++Enable 0RTTI Early Data\.
++.TP
++\fB\-\-enable_post_quantum_kyber\fR
++Enable post\-quantum secure TLS key encapsulation mechanism X25519Kyber768, based on a NIST standard (ML\-KEM)\.
+ .SH "ENVIRONMENT VARIABLES"
+ .TP
+ \fBYASS_CA_BUNDLE\fR
+ Use as the path of ca\-bundle\.crt file\. Same effect with \fB\-\-cacert\fR \fIfile\fR\.
+ .SH "COPYRIGHT"
+-Copyright (C) 2019\-2023 Chilledheart\. All rights reserved\.
++Copyright (C) 2019\-2024 Chilledheart\. All rights reserved\.
+ .SH "SEE ALSO"
+ \fBiptables\fR(8)
+diff --git a/doc/yass_cli.md b/doc/yass_cli.md
+index f459ffbf..a9a3b78e 100644
+--- a/doc/yass_cli.md
++++ b/doc/yass_cli.md
+@@ -77,7 +77,7 @@ See <https://github.com/Chilledheart/yass/wiki/Usage>.
+   Enable padding support.
+ 
+ * `--use_ca_bundle_crt`:
+-  Use internal ca-bundle.crt instead of system CA store.
++  Use builtin ca-bundle.crt instead of system CA store.
+ 
+ * `--cacert` _file_:
+   Tells where to use the specified certificate _file_ to verify the peer.
+@@ -91,6 +91,12 @@ See <https://github.com/Chilledheart/yass/wiki/Usage>.
+ * `--redir_mode`:
+   Enable TCP Redir mode support (Linux only).
+ 
++* `--tls13_early_data`:
++  Enable 0RTTI Early Data.
++
++* `--enable_post_quantum_kyber`:
++  Enable post-quantum secure TLS key encapsulation mechanism X25519Kyber768, based on a NIST standard (ML-KEM).
++
+ ## ENVIRONMENT VARIABLES
+ 
+ * `YASS_CA_BUNDLE`:
+@@ -98,7 +104,7 @@ See <https://github.com/Chilledheart/yass/wiki/Usage>.
+ 
+ ## COPYRIGHT
+ 
+-Copyright (C) 2019-2023 Chilledheart. All rights reserved.
++Copyright (C) 2019-2024 Chilledheart. All rights reserved.
+ 
+ ## SEE ALSO
+ 
+diff --git a/doc/yass_server.1 b/doc/yass_server.1
+index 966bee14..315e8070 100644
+--- a/doc/yass_server.1
++++ b/doc/yass_server.1
+@@ -1,6 +1,6 @@
+ .\" generated with Ronn-NG/v0.9.1
+ .\" http://github.com/apjanke/ronn-ng/tree/0.9.1
+-.TH "YASS_SEREVR" "1" "December 2023" ""
++.TH "YASS_SEREVR" "1" "May 2024" ""
+ .SH "NAME"
+ \fByass_serevr\fR \- a lightweight and efficient, socks5/http forward proxy
+ .SH "SYNOPSIS"
+@@ -63,7 +63,7 @@ Maximum number of accepted connection is \fInumber\fR\.
+ Enable padding support\.
+ .TP
+ \fB\-\-use_ca_bundle_crt\fR
+-Use internal ca\-bundle\.crt instead of system CA store\.
++Use builtin ca\-bundle\.crt instead of system CA store\.
+ .TP
+ \fB\-\-cacert\fR \fIfile\fR
+ Tells where to use the specified certificate \fIfile\fR to verify the peer\.
+@@ -96,6 +96,6 @@ If true, the Via header will not be added\.
+ \fBYASS_CA_BUNDLE\fR
+ Use as the path of ca\-bundle\.crt file\. Same effect with \fB\-\-cacert\fR \fIfile\fR\.
+ .SH "COPYRIGHT"
+-Copyright (C) 2019\-2023 Chilledheart\. All rights reserved\.
++Copyright (C) 2019\-2024 Chilledheart\. All rights reserved\.
+ .SH "SEE ALSO"
+ \fBopenssl\fR(1)
+diff --git a/doc/yass_server.md b/doc/yass_server.md
+index de13e3ce..6f0dfffd 100644
+--- a/doc/yass_server.md
++++ b/doc/yass_server.md
+@@ -76,7 +76,7 @@ See <https://github.com/Chilledheart/yass/wiki/Usage>.
+   Enable padding support.
+ 
+ * `--use_ca_bundle_crt`:
+-  Use internal ca-bundle.crt instead of system CA store.
++  Use builtin ca-bundle.crt instead of system CA store.
+ 
+ * `--cacert` _file_:
+   Tells where to use the specified certificate _file_ to verify the peer.
+@@ -112,7 +112,7 @@ See <https://github.com/Chilledheart/yass/wiki/Usage>.
+ 
+ ## COPYRIGHT
+ 
+-Copyright (C) 2019-2023 Chilledheart. All rights reserved.
++Copyright (C) 2019-2024 Chilledheart. All rights reserved.
+ 
+ ## SEE ALSO
+ 
+diff --git a/src/config/config.cpp b/src/config/config.cpp
+index a1098298..e312c747 100644
+--- a/src/config/config.cpp
++++ b/src/config/config.cpp
+@@ -305,20 +305,35 @@ void SetClientUsageMessage(std::string_view exec_path) {
+   --username <username> Server user
+   --password <pasword> Server password
+   --method <method> Specify encrypt of method to use
++  --limit_rate Limits the rate of response transmission to a client. Uint can be (none), k, m.
++  --padding_support Enable padding support
++  --use_ca_bundle_crt Use builtin ca-bundle.crt instead of system CA store
++  --cacert <file> Tells where to use the specified certificate file to verify the peer
++  --capath <dir> Tells where to use the specified certificate dir to verify the peer
++  --certificate_chain_file <file> Specify Certificate Chain File Path
++  -k, --insecure_mode Skip the verification step and proceed without checking
++  --tls13_early_data Enable 0RTTI Early Data
++  --enable_post_quantum_kyber Enable post-quantum secure TLS key encapsulation mechanism X25519Kyber768, based on a NIST standard (ML-KEM)
+ )"));
+ }
+ 
+ void SetServerUsageMessage(std::string_view exec_path) {
+   absl::SetProgramUsageMessage(absl::StrCat("Usage: ", Basename(exec_path), " [options ...]\n", R"(
+   -K, --config <file> Read config from a file
+-  --certificate_chain_file <file> (TLS) Certificate Chain File Path
+-  --private_key_file <file> (TLS) Private Key File Path
+-  --private_key_password <password> (TLS) Private Key Password
+   --server_host <host> Server on given host
+   --server_port <port> Server on given port
+   --username <username> Server user
+   --password <pasword> Server password
+   --method <method> Specify encrypt of method to use
++  --limit_rate Limits the rate of response transmission to a client. Uint can be (none), k, m.
++  --padding_support Enable padding support
++  --use_ca_bundle_crt Use builtin ca-bundle.crt instead of system CA store
++  --cacert <file> Tells where to use the specified certificate file to verify the peer
++  --capath <dir> Tells where to use the specified certificate dir to verify the peer
++  --certificate_chain_file <file> Specify Certificate Chain File Path
++  --private_key_file <file> Specify Private Key File Path
++  --private_key_password <password> Specify Private Key Password
++  --tls13_early_data Enable 0RTTI Early Data
+ )"));
+ }
+ 
+-- 
+2.45.0
+
