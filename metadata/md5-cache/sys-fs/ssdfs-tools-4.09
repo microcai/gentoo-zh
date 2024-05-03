@@ -1,4 +1,4 @@
-BDEPEND=virtual/pkgconfig sys-devel/gnuconfig >=app-portage/elt-patches-20240116 || ( >=dev-build/automake-1.16.5:1.16 ) || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3
+BDEPEND=virtual/pkgconfig >=app-portage/elt-patches-20240116 sys-devel/gnuconfig || ( >=dev-build/automake-1.16.5:1.16 ) || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3
 DEFINED_PHASES=prepare
 DEPEND=sys-apps/util-linux sys-libs/zlib
 DESCRIPTION=userspace tools for SSDFS
@@ -10,5 +10,5 @@ LICENSE=BSD
 RDEPEND=sys-apps/util-linux sys-libs/zlib
 SLOT=0
 SRC_URI=https://github.com/dubeyko/ssdfs-tools/archive/refs/tags/v4.09.tar.gz -> ssdfs-tools-4.09.tar.gz
-_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	5f49a16f67f81bdf873e3d1f10b10001	autotools	3af8f60c4bdb23e738db506a630898ee
+_eclasses_=gnuconfig	a397adda6984a4c423e28ac274c1ba98	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	5f49a16f67f81bdf873e3d1f10b10001	autotools	dc70c1dc473b68317fc4a86f5fbfc57d
 _md5_=0eea856ce939b19647929d249ad3bf57

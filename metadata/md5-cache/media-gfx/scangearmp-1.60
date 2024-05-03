@@ -1,4 +1,4 @@
-BDEPEND=sys-devel/gnuconfig >=app-portage/elt-patches-20240116 || ( >=dev-build/automake-1.16.5:1.16 ) || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3
+BDEPEND=>=app-portage/elt-patches-20240116 sys-devel/gnuconfig || ( >=dev-build/automake-1.16.5:1.16 ) || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3
 DEFINED_PHASES=compile configure install postinst prepare setup unpack
 DEPEND=>=dev-libs/libusb-0.1.12-r5 >=media-libs/libpng-1.2.44 >=media-gfx/gimp-2.6.8 >=x11-libs/gtk+-2.20.1-r1 >=media-gfx/sane-backends-1.0.19-r2
 DESCRIPTION=Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
@@ -10,5 +10,5 @@ LICENSE=UNKNOWN
 RESTRICT=nomirror confcache
 SLOT=2
 SRC_URI=http://gdlp01.c-wss.com/gds/3/0100003033/01/scangearmp-source-1.60-1.tar.gz
-_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	288c54efeb5e2aa70775e39032695ad4	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	5f49a16f67f81bdf873e3d1f10b10001	autotools	3af8f60c4bdb23e738db506a630898ee
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	288c54efeb5e2aa70775e39032695ad4	gnuconfig	a397adda6984a4c423e28ac274c1ba98	libtool	5f49a16f67f81bdf873e3d1f10b10001	autotools	dc70c1dc473b68317fc4a86f5fbfc57d
 _md5_=7070be320643479a9e3bb08fb565c219
