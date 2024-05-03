@@ -9,16 +9,17 @@ CHROMIUM_LANGS="af am ar bg bn ca cs da de el en-GB en-US es es-419 et fa fi fil
 
 inherit chromium-2 desktop pax-utils unpacker xdg
 
+MY_PN=${PN/-bin}-browser
 DESCRIPTION="Web browser that blocks ads and trackers by default"
 HOMEPAGE="https://brave.com/"
+SRC_URI="https://github.com/${PN/-bin}/${MY_PN}/releases/download/v${PV}/${MY_PN}_${PV}_amd64.deb"
+
+S=${WORKDIR}
 
 LICENSE="MPL-2.0"
 SLOT="0"
 KEYWORDS="-* amd64"
 
-MY_PN=${PN/-bin}-browser
-
-SRC_URI="https://github.com/${PN/-bin}/${MY_PN}/releases/download/v${PV}/${MY_PN}_${PV}_amd64.deb"
 IUSE="qt5 qt6"
 RESTRICT="bindist mirror strip"
 
@@ -57,7 +58,6 @@ RDEPEND="
 "
 
 QA_PREBUILT="*"
-S=${WORKDIR}
 BRAVE_HOME="opt/brave.com/brave"
 
 pkg_setup() {
