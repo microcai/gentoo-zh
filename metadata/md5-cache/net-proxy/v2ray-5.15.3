@@ -1,14 +1,15 @@
 BDEPEND=>=dev-lang/go-1.21.4 virtual/pkgconfig >=dev-lang/go-1.20:= app-arch/unzip
 DEFINED_PHASES=compile install prepare unpack
+DEPEND=app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite
 DESCRIPTION=A platform for building proxies to bypass network restrictions.
 EAPI=8
 HOMEPAGE=https://www.v2fly.org/
 INHERIT=systemd go-module
 KEYWORDS=~amd64 ~arm ~arm64 ~loong ~riscv ~x86
 LICENSE=MIT
-RDEPEND=!net-proxy/v2ray-bin app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite
+RDEPEND=app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite !net-proxy/v2ray-bin
 RESTRICT=mirror strip
 SLOT=0
-SRC_URI=https://github.com/v2fly/v2ray-core/archive/refs/tags/v5.15.3.tar.gz -> v2ray-5.15.3.tar.gz https://github.com/liuyujielol/gentoo-go-deps/releases/download/v2ray-5.15.3/v2ray-5.15.3-deps.tar.xz
+SRC_URI=https://github.com/v2fly/v2ray-core/archive/refs/tags/v5.15.3.tar.gz -> v2ray-5.15.3.tar.gz https://github.com/Puqns67/gentoo-deps/releases/download/v2ray-5.15.3/v2ray-5.15.3-vendor.tar.xz
 _eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	c8b03e8df84486aa991d4396686e8942	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	flag-o-matic	288c54efeb5e2aa70775e39032695ad4	go-env	14f8f70fe58c14d7ab44fff15a05ac47	go-module	83fd3ed1657cfc316c93d6a37018290d
-_md5_=d2f8e649b825950adbd0ade7638de75a
+_md5_=1ffaf98b343c1256d20252bfabb7cb04

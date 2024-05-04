@@ -250,6 +250,18 @@ net-proxy/juicity:server - install juicity-server
 net-proxy/mihomo:gvisor - enable TUN stack support for gvisor
 net-proxy/shadowsocks-rust:redir - Enable redir protocol for sslocal (transparent proxy)
 net-proxy/shadowsocks-rust:tun - Enable Tun interface protocol for sslocal
+net-proxy/sing-box:acme - Build with ACME TLS certificate issuer support
+net-proxy/sing-box:clash-api - Build with Clash API support
+net-proxy/sing-box:dhcp - Build with DHCP support
+net-proxy/sing-box:ech - Build with TLS ECH extension support for TLS outbound
+net-proxy/sing-box:grpc - Build with standard gRPC support
+net-proxy/sing-box:gvisor - Build with gVisor support
+net-proxy/sing-box:quic - Build with QUIC support
+net-proxy/sing-box:reality - Build with reality TLS server support
+net-proxy/sing-box:tor - Build with embedded Tor support
+net-proxy/sing-box:utls - Build with uTLS support for TLS outbound
+net-proxy/sing-box:v2ray-api - Build with V2Ray API support
+net-proxy/sing-box:wireguard - Build with WireGuard support
 net-proxy/v2rayA:xray - To be able to use net-proxy/Xray. Disable the v2ray useflag to use xray as default
 net-proxy/yass:cli - Enable cli daemon
 net-proxy/yass:gui - Enable GUI Client
