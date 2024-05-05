@@ -491,7 +491,7 @@ prefix = "v"
 source = "aur"
 aur = "android-studio"
 use_last_modified = true
-from_pattern='-\d+$'
+from_pattern="-\\d+$"
 to_pattern=""
 
 # need run js
