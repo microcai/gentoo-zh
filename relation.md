@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-05-06 18:19:26 CST)
+(The last generation time: 2024-05-06 21:36:39 CST)
 
 ### Packages
 
@@ -179,7 +179,7 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/tgbot-cpp                        | 1.7.3                                     |        | https://github.com/reo7sp/tgbot-cpp                                                     | C++ library for Telegram bot API
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-db/dbeaver-bin                       | 24.0.3                                    |        | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
+ dev-db/dbeaver-bin                       | 24.0.4                                    |        | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-db/mongodb                           | 5.3.1                                     |        | https://www.mongodb.com                                                                 | A high-performance, open source, schema-free document-oriented database
                                           | 6.2.0-r4                                  |        |                                                                                         |
