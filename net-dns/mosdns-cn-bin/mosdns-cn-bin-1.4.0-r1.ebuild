@@ -7,27 +7,33 @@ DESCRIPTION="A DNS forwarder"
 HOMEPAGE="https://github.com/IrineSistiana/mosdns-cn"
 SRC_URI="https://github.com/IrineSistiana/mosdns-cn/releases/download/v${PV}/mosdns-cn-linux-amd64.zip -> ${P}.zip"
 
+S=${WORKDIR}
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
+RESTRICT="mirror"
+
 DEPEND="
-	dev-libs/v2ray-domain-list-community-bin
-	dev-libs/v2ray-geoip-bin
+	app-alternatives/v2ray-geoip
+	app-alternatives/v2ray-geosite
 "
 RDEPEND="${DEPEND}"
 BDEPEND="app-arch/unzip"
-
-S=${WORKDIR}
+QA_PREBUILT="
+	/usr/bin/mosdns-cn
+"
 
 src_install() {
 	dobin mosdns-cn
 
+	dosym -r /usr/share/v2ray/geoip.dat /etc/mosdns/geoip.dat
+	dosym -r /usr/share/v2ray/geosite.dat /etc/mosdns/geosite.dat
+
 	insinto /etc/mosdns
-	ln -s /usr/share/v2ray/geoip.dat geoip.dat
-	ln -s /usr/share/v2ray/geosite.dat geosite.dat
-	doins geoip.dat geosite.dat
 	newins config-template.yaml config.yaml
+
 	_PN=mosdns-cn
 	newinitd "${FILESDIR}/${_PN}.initd" ${_PN}
 	newconfd "${FILESDIR}/${_PN}.confd" ${_PN}

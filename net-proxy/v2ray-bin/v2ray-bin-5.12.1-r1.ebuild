@@ -20,29 +20,29 @@ SRC_URI="
 	)
 "
 
+S=${WORKDIR}
+
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm ~arm64 ~x86"
 
 RESTRICT="mirror"
 
+DEPEND="
+	app-alternatives/v2ray-geoip
+	app-alternatives/v2ray-geosite
+"
 RDEPEND="
 	!net-proxy/v2ray
-	!app-alternatives/v2ray-geoip
-	!app-alternatives/v2ray-geosite
+	${DEPEND}
 "
 BDEPEND="app-arch/unzip"
 QA_PREBUILT="
 	/usr/bin/v2ray
 "
 
-S=${WORKDIR}
-
 src_install() {
 	dobin v2ray
-
-	insinto /usr/share/v2ray
-	doins *.dat
 
 	insinto /etc/v2ray
 	doins *.json
