@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-05-05 19:32:50 CST)
+(The last generation time: 2024-05-06 17:11:59 CST)
 
 ### Packages
 
@@ -308,7 +308,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/nerd-fonts                     | 3.2.1                                     |        | https://github.com/ryanoasis/nerd-fonts                                                 | Nerd Fonts is a project that patches developer targeted fonts with glyphs
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/sarasa-gothic                  | 1.0.10                                    |        | https://github.com/be5invis/Sarasa-Gothic                                               | A CJK programming font based on Iosevka and Source Han Sans. (TTC)
+ media-fonts/sarasa-gothic                  | 1.0.11                                    |        | https://github.com/be5invis/Sarasa-Gothic                                               | A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/sarasa-term-sc-nerd            | 1.1.0                                     |        | https://github.com/laishulu/Sarasa-Term-SC-Nerd                                         | Sarasa Mono SC font patched with Nerd fonts
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -568,7 +568,7 @@
  net-proxy/yacd-meta                        | 0.3.6                                     |        | https://github.com/MetaCubeX/Yacd-meta                                                  | Yet Another Clash Dashboard
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/yass                             | 1.8.6-r1                                  |        | https://github.com/Chilledheart/yass                                                    | lightweight and efficient, socks5/http forward proxy
-                                            | 1.9.3-r1                                  |        |                                                                                         |
+                                            | 1.9.4                                     |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-vpn/sstp-server                        | 0.6.0                                     |        | https://github.com/sorz/sstp-server/                                                    | A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
