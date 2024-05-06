@@ -11,7 +11,7 @@ HOMEPAGE="https://alist.nn.ci"
 SRC_URI="
 	https://github.com/alist-org/alist/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/alist-org/alist-web/releases/download/${PV}/dist.tar.gz -> ${P}-dist.tar.gz
-	https://github.com/liangyongxiang/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
+	https://github.com/Linerre/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
 "
 
 LICENSE="AGPL-3"
