@@ -6,10 +6,10 @@ inherit go-module systemd tmpfiles
 
 # These settings are obtained by running ./build_dist.sh shellvars` in
 # the upstream repo.
-VERSION_MINOR="64"
-VERSION_SHORT="1.64.2"
-VERSION_LONG="1.64.2-tede81e266"
-VERSION_GIT_HASH="ede81e2669bc01d60f52c84eea1d404215b13e16"
+VERSION_MINOR="66"
+VERSION_SHORT="1.66.1"
+VERSION_LONG="1.66.1-t88e23b6cf"
+VERSION_GIT_HASH="88e23b6cfd4b9a9cad5ce858b73ece1f07970fee"
 
 DESCRIPTION="Tailscale vpn client"
 HOMEPAGE="https://tailscale.com"
