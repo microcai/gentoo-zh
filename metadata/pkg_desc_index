@@ -216,7 +216,7 @@ net-analyzer/nali 0.8.1: An offline tool for querying IP geographic information 
 net-analyzer/realitlscanner 0.1.2: A TLS server scanner for Reality
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
 net-dns/ddns-go 6.5.0: Automatically obtain your public IP address and set to your domain name service.
-net-dns/dnslookup 1.10.0: Simple command line utility to make DNS lookups to the specified server
+net-dns/dnslookup 1.10.1: Simple command line utility to make DNS lookups to the specified server
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
 net-dns/dog 0.1.0: A command-line DNS client
 net-dns/libidn11 1.33: Internationalized Domain Names (IDN) implementation
@@ -262,7 +262,7 @@ net-proxy/Xray 1.8.11: Xray, Penetrates Everything. Also the best v2ray-core, wi
 net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
 net-proxy/clash-nyanpasu 1.5.1: Clash GUI based on tauri
 net-proxy/clash-rs 0.1.15: Custom protocol, rule based network proxy
-net-proxy/clash-verge-bin 1.5.10 1.5.11 1.6.0: (Continuation) of Clash Meta GUI based on Tauri.
+net-proxy/clash-verge-bin 1.6.0 1.6.2: (Continuation) of Clash Meta GUI based on Tauri.
 net-proxy/dae 0.5.1 0.6.0_rc2 9999: A lightweight and high-performance transparent proxy solution based on eBPF
 net-proxy/daed 0.4.1 9999: A Modern Dashboard For dae
 net-proxy/hysteria 2.2.2: A powerful, lightning fast and censorship resistant proxy.
@@ -278,7 +278,7 @@ net-proxy/v2rayA 2.2.5.1 9999: web GUI of Project V which supports V2Ray, Xray, 
 net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
 net-proxy/yass 1.8.7 1.9.5: lightweight and efficient, socks5/http forward proxy
 net-vpn/sstp-server 0.6.0: A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
-net-vpn/tailscale 1.64.2: Tailscale vpn client
+net-vpn/tailscale 1.66.1: Tailscale vpn client
 net-wireless/linux-wifi-hotspot 9999: Linux Wifi Hotspot
 sci-chemistry/vesta 3.5.8: Visualization for Electronic and STructural Analysis
 sci-electronics/circuitjs1-bin 9.3.2: Electronic Circuit Simulator in the Browser
@@ -319,7 +319,7 @@ virtual/dist-kernel 6.8.7: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 virtual/loong-ow-compat 0: Virtual for LoongArch old-world compatibility
 www-apps/chatgpt-desktop 1.1.0: ChatGPT Desktop Application
-www-client/brave-bin 1.65.126: Web browser that blocks ads and trackers by default
+www-client/brave-bin 1.65.130: Web browser that blocks ads and trackers by default
 www-servers/darkhttpd 1.16: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
