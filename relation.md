@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-05-11 23:57:12 CST)
+(The last generation time: 2024-05-12 01:38:03 CST)
 
 ### Packages
 
@@ -205,9 +205,9 @@
  dev-libs/v2ray-domain-list-community     | 4.39.2_p20210621183458-r1                 |        | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
                                           | 9999                                      |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-libs/v2ray-domain-list-community-bin | 20240221053250                            |        | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+ dev-libs/v2ray-domain-list-community-bin | 20240508170917                            |        | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-libs/v2ray-geoip-bin                 | 202402220038                              |        | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
+ dev-libs/v2ray-geoip-bin                 | 202405090040                              |        | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/v2ray-rules-dat                 | 202402252208                              |        | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
