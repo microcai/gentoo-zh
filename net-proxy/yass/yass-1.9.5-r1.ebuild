@@ -38,6 +38,11 @@ BDEPEND="
 	virtual/pkgconfig
 "
 
+PATCHES=(
+	"${FILESDIR}"/boringssl-gcc-14.patch
+	"${FILESDIR}"/libcxx-gcc-14.patch
+)
+
 src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_INSTALL_SYSCONFDIR=/etc
