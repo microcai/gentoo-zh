@@ -12,15 +12,13 @@ MY_PN="yq_linux_amd64"
 
 SRC_URI="https://github.com/mikefarah/yq/releases/download/v${PV}/${MY_PN}.tar.gz -> ${P}.tar.gz"
 
+S="${WORKDIR}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
 RESTRICT="mirror"
-
 RDEPEND="!app-misc/yq"
-
-S="${WORKDIR}"
 
 QA_PREBUILT="*"
 
