@@ -79,7 +79,7 @@ app-i18n/rime-wubi 20200908: wubi input for rime
 app-i18n/zh-autoconvert 0.3.16_p7: Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 app-misc/bcompare 4.4.6.27483 4.4.7.28397: Beyond Compare -- Compare, sync, and merge files and folders
 app-misc/ccal 2.5.3: A simple command line calendar for Chinese lunar
-app-misc/go-yq-bin 4.43.1: yq is a portable command-line YAML, JSON and XML processor
+app-misc/go-yq-bin 4.44.1: yq is a portable command-line YAML, JSON and XML processor
 app-misc/gpick 0.2.6-r1 0.3: Advanced color picker written in C++ using GTK+ toolkit
 app-misc/joshuto 0.9.8: Terminal file manager inspired by ranger
 app-misc/jshon 9999: Jshon is a JSON parser designed for maximum convenience within the shell
