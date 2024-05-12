@@ -11,6 +11,6 @@ LICENSE=MIT
 RDEPEND=media-libs/flac media-libs/alsa-lib >=dev-lang/go-1.21.0
 RESTRICT=mirror strip
 SLOT=0
-SRC_URI=https://github.com/go-musicfox/go-musicfox/archive/refs/tags/v4.3.3.tar.gz -> go-musicfox-4.3.3.tar.gz
+SRC_URI=https://github.com/go-musicfox/go-musicfox/archive/refs/tags/v4.4.0.tar.gz -> go-musicfox-4.4.0.tar.gz
 _eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	d309b9713dfc18e754cba88d3ba69653	go-env	dbefaac6fd7019213514bccd65949d9a	go-module	83fd3ed1657cfc316c93d6a37018290d
 _md5_=20e7682af699a938d5c5c9293feb1079

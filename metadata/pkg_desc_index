@@ -194,7 +194,7 @@ media-plugins/osdlyrics 0.5.11 0.5.14 9999: Standalone lyrics fetcher/displayer 
 media-plugins/waylyrics 0.3.8: Simple On Screen lyrics Display for linux/unix
 media-sound/barva 9999: a modular audio visualizer
 media-sound/feeluown 4.1.2: A user-friendly and hackable music player
-media-sound/go-musicfox 4.3.3: Command-line Netease Cloud Music written in Go
+media-sound/go-musicfox 4.4.0: Command-line Netease Cloud Music written in Go
 media-sound/linnya 2.2.0: A free music player
 media-sound/listen1_desktop-bin 2.32.0: one for all free music in China
 media-sound/lx-music-desktop-bin 2.2.2: 一个基于 electron 的音乐软件
@@ -251,6 +251,7 @@ net-misc/prips 1.0.0 1.2.0: print the IP addresses in a range
 net-misc/remmina-plugin-rustdesk 1.0.0.0-r1: A protocol plugin for Remmina to launch a Rustdesk connection.
 net-misc/rustdesk 1.2.3: Open source virtual / remote desktop infrastructure for everyone
 net-misc/todesk 4.1.0 4.7.2.0: ToDesk不一样的远控体验，轻松打破物理限制，随时随地高效使用所有计算终端
+net-misc/uuplugin 4.14.4: UU Game Accelerator for Linux
 net-misc/you-get 9999: A video downloader for YouTube, Youku, niconico and a few other sites
 net-p2p/amule-dlp 9999: aMule with DLP patch, the all-platform eMule p2p client
 net-p2p/amule-dlp-antileech 9999: amule-dlp-antileech, dynamic DLP library for amule-dlp
