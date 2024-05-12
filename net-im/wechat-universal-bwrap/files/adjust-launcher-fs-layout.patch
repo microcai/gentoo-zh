@@ -1,8 +1,16 @@
 diff --git a/wechat-universal.sh b/wechat-universal.sh
-index 186c6b0..5e4f3f9 100644
+index 186c6b0..8b47ed0 100644
 --- a/wechat-universal.sh
 +++ b/wechat-universal.sh
-@@ -80,11 +80,11 @@ BWRAP_ARGS=(
+@@ -34,6 +34,7 @@ BWRAP_ENV_APPEND=()
+ env_add QT_QPA_PLATFORM xcb
+ env_add QT_AUTO_SCREEN_SCALE_FACTOR 1
+ env_add PATH "/sandbox:${PATH}"
++env_add LD_LIBRARY_PATH "$LD_LIBRARY_PATH:/opt/wechat-universal/RadiumWMPF/runtime"
+ 
+ case "${XMODIFIERS}" in 
+     *@im=fcitx*)
+@@ -80,11 +81,11 @@ BWRAP_ARGS=(
  
      # /usr
      --ro-bind /usr{,}
@@ -19,7 +27,7 @@ index 186c6b0..5e4f3f9 100644
  
      # /sandbox
      --ro-bind /{usr/lib/flatpak-xdg-utils,sandbox}/xdg-open
-@@ -99,12 +99,15 @@ BWRAP_ARGS=(
+@@ -99,12 +100,15 @@ BWRAP_ARGS=(
      --proc /proc
  
      # /etc
@@ -36,7 +44,7 @@ index 186c6b0..5e4f3f9 100644
  
      # /sys
      --dir /sys/dev # hack for Intel / AMD graphics, mesa calling virtual nodes needs /sys/dev being 0755
-@@ -134,11 +137,11 @@ BWRAP_ARGS=(
+@@ -134,13 +138,13 @@ BWRAP_ARGS=(
      --ro-bind-try "${HOME}/.local/share/.icons"{,}
  
      # /run
