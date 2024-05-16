@@ -1,0 +1,17 @@
+BDEPEND=kde-frameworks/extra-cmake-modules:0 sys-devel/gettext virtual/pkgconfig app-alternatives/ninja >=dev-build/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=>=app-i18n/fcitx-5.1.6:5 >=app-i18n/fcitx-qt-5.1.5:5[qt5?,qt6?,-onlyplugin] app-text/iso-codes qt5? ( dev-qt/qtconcurrent:5 dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 dev-qt/qtx11extras:5 kde-frameworks/kwidgetsaddons:5 ) qt6? ( kde-frameworks/kwidgetsaddons:6 kde-frameworks/kdbusaddons:6 kde-frameworks/kitemviews:6 >=dev-qt/qtbase-6.7[dbus] ) sys-devel/gettext virtual/libintl x11-libs/libX11 x11-libs/libxkbfile x11-misc/xkeyboard-config config-qt? ( qt5? ( kde-frameworks/kitemviews:5 ) qt6? ( kde-frameworks/kitemviews:6 ) ) kcm? ( x11-libs/libxkbcommon qt5? ( dev-qt/qtquickcontrols2:5 kde-frameworks/kcoreaddons:5 kde-frameworks/kdeclarative:5 kde-frameworks/ki18n:5 kde-frameworks/kiconthemes:5 kde-frameworks/kirigami:5 kde-frameworks/kpackage:5 kde-plasma/libplasma:5 ) qt6? ( kde-frameworks/kcoreaddons:6 kde-frameworks/kdeclarative:6 kde-frameworks/ki18n:6 kde-frameworks/kiconthemes:6 kde-frameworks/kirigami:6 kde-frameworks/kpackage:6 kde-plasma/libplasma:6 ) )
+DESCRIPTION=Configuration module for Fcitx
+EAPI=8
+HOMEPAGE=https://fcitx-im.org/ https://github.com/fcitx/fcitx5-configtool
+INHERIT=cmake unpacker
+IUSE=kcm +config-qt test qt6 qt5
+KEYWORDS=~amd64 ~arm64 ~loong ~riscv ~x86
+LICENSE=GPL-2+
+RDEPEND=>=app-i18n/fcitx-5.1.6:5 >=app-i18n/fcitx-qt-5.1.5:5[qt5?,qt6?,-onlyplugin] app-text/iso-codes qt5? ( dev-qt/qtconcurrent:5 dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 dev-qt/qtx11extras:5 kde-frameworks/kwidgetsaddons:5 ) qt6? ( kde-frameworks/kwidgetsaddons:6 kde-frameworks/kdbusaddons:6 kde-frameworks/kitemviews:6 >=dev-qt/qtbase-6.7[dbus] ) sys-devel/gettext virtual/libintl x11-libs/libX11 x11-libs/libxkbfile x11-misc/xkeyboard-config config-qt? ( qt5? ( kde-frameworks/kitemviews:5 ) qt6? ( kde-frameworks/kitemviews:6 ) ) kcm? ( x11-libs/libxkbcommon qt5? ( dev-qt/qtquickcontrols2:5 kde-frameworks/kcoreaddons:5 kde-frameworks/kdeclarative:5 kde-frameworks/ki18n:5 kde-frameworks/kiconthemes:5 kde-frameworks/kirigami:5 kde-frameworks/kpackage:5 kde-plasma/libplasma:5 ) qt6? ( kde-frameworks/kcoreaddons:6 kde-frameworks/kdeclarative:6 kde-frameworks/ki18n:6 kde-frameworks/kiconthemes:6 kde-frameworks/kirigami:6 kde-frameworks/kpackage:6 kde-plasma/libplasma:6 ) )
+REQUIRED_USE=^^ ( qt5 qt6 )
+RESTRICT=!test? ( test )
+SLOT=5
+SRC_URI=https://download.fcitx-im.org/fcitx5/fcitx5-configtool/fcitx5-configtool-5.1.5.tar.zst -> fcitx-configtool-5.1.5.tar.zst
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	d309b9713dfc18e754cba88d3ba69653	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	c7c9a62d6232cac66d4ea32d575c3e7c	unpacker	7b40f3faa3e2e12f5cf6d36d0fbfcd09
+_md5_=009b37b814c705ffad37d6dd3b770ddd
