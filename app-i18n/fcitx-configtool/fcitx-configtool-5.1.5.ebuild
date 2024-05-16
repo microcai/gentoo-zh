@@ -1,15 +1,20 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 2023-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit cmake git-r3
-EGIT_REPO_URI="https://github.com/fcitx/fcitx5-configtool.git"
+MY_PN="fcitx5-configtool"
+
+inherit cmake unpacker
+
 DESCRIPTION="Configuration module for Fcitx"
 HOMEPAGE="https://fcitx-im.org/ https://github.com/fcitx/fcitx5-configtool"
+SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_PN}-${PV}.tar.zst -> ${P}.tar.zst"
 
+S="${WORKDIR}/${MY_PN}-${PV}"
 LICENSE="GPL-2+"
 SLOT="5"
+KEYWORDS="~amd64 ~arm64 ~loong ~riscv ~x86"
 IUSE="kcm +config-qt test qt6 qt5"
 RESTRICT="!test? ( test )"
 
@@ -70,11 +75,12 @@ RDEPEND="
 		)
 	)
 "
-
-DEPEND="${RDEPEND}
+DEPEND="${RDEPEND}"
+BDEPEND="
 	kde-frameworks/extra-cmake-modules:0
 	sys-devel/gettext
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 src_configure() {
 	local mycmakeargs=(
@@ -82,7 +88,8 @@ src_configure() {
 		-DENABLE_KCM=$(usex kcm)
 		-DENABLE_CONFIG_QT=$(usex config-qt)
 		-DENABLE_TEST=$(usex test)
-		-DUSE_QT6=Off
+		# kde-frameworks/kitemviews:6 is ready.
+		-DUSE_QT6=$(usex qt6)
 	)
 
 	cmake_src_configure
