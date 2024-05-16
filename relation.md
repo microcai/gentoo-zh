@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-05-15 14:34:39 CST)
+(The last generation time: 2024-05-17 01:36:34 CST)
 
 ### Packages
 
@@ -65,7 +65,8 @@
    app-i18n/fcitx-chinese-addons          | 9999                                      |  D, RD | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
      app-i18n/fcitx-lua                   | 9999                                      |  D, RD | https://github.com/fcitx/fcitx5-lua                                                     | Lua support for fcitx
      app-i18n/fcitx-qt                    | 9999                                      |  D, RD | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
-   app-i18n/fcitx-configtool              | 9999                                      | RD     | https://fcitx-im.org/                                                                   | Configuration module for Fcitx
+   app-i18n/fcitx-configtool              | 5.1.5                                     | RD     | https://fcitx-im.org/                                                                   | Configuration module for Fcitx
+                                          | 9999                                      |        |                                                                                         |
    app-i18n/fcitx-gtk                     | 9999                                      | RD     | https://github.com/fcitx/fcitx5-gtk                                                     | Gtk im module for fcitx5 and glib based dbus client library
    app-i18n/fcitx-hangul                  | 5.1.1                                     | RD     | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
                                           | 9999                                      |        |                                                                                         |
