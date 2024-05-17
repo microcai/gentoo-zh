@@ -1,9 +1,9 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 2023-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit desktop unpacker xdg-utils
+inherit unpacker xdg
 
 MY_PN="${PN}"
 
@@ -11,12 +11,13 @@ DESCRIPTION="Document Viewer for CAJ, KDH, NH, TEB and PDF format"
 
 HOMEPAGE="http://cajviewer.cnki.net"
 SRC_URI="https://download.cnki.net/${PN}_${PV}-1_amd64.deb"
-
-RESTRICT="mirror strip"
+S="${WORKDIR}"
 
 LICENSE="CAJVIEWER-EULA"
 SLOT="0"
 KEYWORDS="~amd64"
+
+RESTRICT="mirror strip"
 
 RDEPEND="
 	net-dns/avahi
@@ -42,8 +43,6 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}"
-
 QA_PREBUILT="
 	/opt/apps/net.cnki.cajviewer/files/lib/*.so*
 	/opt/apps/net.cnki.cajviewer/files/plugins/*/*.so
@@ -55,14 +54,4 @@ src_install(){
 	doins -r .
 	fperms 0755 /${MY_PREFIX}/CAJViewer
 	fperms 0755 /${MY_PREFIX}/start.sh
-}
-
-pkg_postinst(){
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
-}
-
-pkg_postrm(){
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
 }
