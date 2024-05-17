@@ -12,5 +12,5 @@ LICENSE=GPL-2
 RDEPEND=sys-apps/kmod[tools] dist-kernel? ( virtual/dist-kernel:= )
 SLOT=0
 SRC_URI=https://git.exozy.me/a/zenpower3/archive/v0.2.0.tar.gz -> zenpower3-0.2.0.tar.gz
-_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	dist-kernel-utils	145861da258122cbba5240a850f1a5e8	edo	367e103a74bf77e6a8da7894d999fa3c	linux-info	7ca3057b277f1e5978947b4cc289ce62	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	linux-mod-r1	e3e79ad4fde134919206bf8c43b8cf69
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	dist-kernel-utils	145861da258122cbba5240a850f1a5e8	edo	367e103a74bf77e6a8da7894d999fa3c	linux-info	e967b81f54be6f49f4219a57ce7db437	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	linux-mod-r1	790664155dec82261a4883629f4c7bb3
 _md5_=3039defa11d43dbd760c62680f7fa310
