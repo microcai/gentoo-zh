@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-05-17 11:15:10 CST)
+(The last generation time: 2024-05-17 15:41:21 CST)
 
 ### Packages
 
@@ -160,6 +160,7 @@
    app-shells/gitstatus                   | 1.5.5                                     |  D, RD | https://github.com/romkatv/gitstatus                                                    | Git status for Bash and Zsh prompt
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-text/cajviewer                       | 1.3.22                                    |        | http://cajviewer.cnki.net                                                               | Document Viewer for CAJ, KDH, NH, TEB and PDF format
+                                          | 9.0                                       |        |                                                                                         |
    net-dns/libidn11                       | 1.33                                      |  D, RD | https://www.gnu.org/software/libidn/                                                    | Internationalized Domain Names (IDN) implementation
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-text/groff-utf8                      | 0-r1                                      |        | http://www.haible.de/bruno/packages-groff-utf8.html                                     | GNU groff wrapper allowing UTF-8 input
