@@ -17,8 +17,8 @@ KEYWORDS="~amd64 ~riscv"
 RESTRICT="mirror"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-6.5.0-remove-update-support.patch"
-	"${FILESDIR}/${PN}-6.5.0-remove-service-management-support.patch"
+	"${FILESDIR}/${PN}-6.6.0-remove-update-support.patch"
+	"${FILESDIR}/${PN}-6.6.0-remove-service-management-support.patch"
 )
 
 src_compile() {
