@@ -12,7 +12,7 @@ SRC_URI="https://github.com/Chilledheart/yass/releases/download/${PV}/yass-${PV}
 S="${WORKDIR}/${MY_PN}-${PV}"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~mips ~riscv ~x86"
+KEYWORDS="amd64 ~arm ~arm64 ~loong ~mips ~riscv ~x86"
 
 IUSE="+cli server +gui wayland +tcmalloc"
 
@@ -40,7 +40,6 @@ BDEPEND="
 
 PATCHES=(
 	"${FILESDIR}"/libcxx-gcc-14.patch
-	"${FILESDIR}"/telegram-http-proxy-fix.patch
 )
 
 src_configure() {
