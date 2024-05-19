@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-05-19 15:07:49 CST)
+(The last generation time: 2024-05-19 17:46:13 CST)
 
 ### Packages
 
@@ -280,8 +280,8 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gitoxide                         | 0.35.0                                    |        | https://github.com/Byron/gitoxide                                                       | A command-line application for interacting with git repositories
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- games-arcade/osu-lazer                   | 2024.312.1                                |        | https://osu.ppy.sh                                                                      | rhythm is just a *click* away!
-                                          | 2024.412.1                                |        |                                                                                         |
+ games-arcade/osu-lazer                   | 2024.412.1                                |        | https://osu.ppy.sh                                                                      | rhythm is just a *click* away!
+                                          | 2024.519.1                                |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  games-board/othello                      | 0.2.2                                     |        | http://othello-game.sourceforge.net                                                     | Othello is a classic strategy game, also known as Reversi
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -531,7 +531,7 @@
    dev-util/tauri-cli                     | 1.5.9                                     | BD     | https://tauri.app                                                                       | Command line interface for building Tauri apps
                                           | 2.0.0_alpha17                             |        |                                                                                         |
    net-proxy/clash-rs                     | 0.1.15                                    | RD     | https://watfaq.gitbook.io/clashrs-user-manual/                                          | Custom protocol, rule based network proxy
-   net-proxy/mihomo                       | 1.18.4                                    |  D, RD | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
+   net-proxy/mihomo                       | 1.18.5                                    |  D, RD | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
      acct-group/mihomo                    | 0-r1                                      |  D, RD |                                                                                         | Another Clash Kernel, formerly Clash.Meta
      acct-user/mihomo                     | 0-r1                                      |  D, RD |                                                                                         | Another Clash Kernel, formerly Clash.Meta
    sys-apps/pnpm                          | 8.15.4                                    | BD     | https://pnpm.io                                                                         | Fast, disk space efficient package manager
