@@ -10,7 +10,7 @@ acct-user/hysteria 0: System user: hysteria
 acct-user/mihomo 0-r1: System user: mihomo
 acct-user/n2n 0: System user: n2n
 app-admin/rbw 1.9.0: Unofficial Bitwarden CLI
-app-admin/supersm 0.5.1: Super Symlink Manager
+app-admin/supersm 0.5.1-r1: Super Symlink Manager
 app-admin/supersm-rs 0.3.0: Super Symlink Manager Rust version
 app-admin/zenmonitor3 2.0.0: Zen monitor is monitoring software for AMD Zen-based CPUs
 app-alternatives/v2ray-geoip 0-r1: symlink for v2ray-geoip
