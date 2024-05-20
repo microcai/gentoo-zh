@@ -19,5 +19,5 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~riscv"
 
-DEPEND="dev-libs/boost"
+DEPEND="dev-libs/boost:="
 RDEPEND="${DEPEND}"
