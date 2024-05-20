@@ -1,52 +1,56 @@
-From 92d932ff7adfec187dfa0bd1b20bb9b0b8e0e701 Mon Sep 17 00:00:00 2001
+From 573c30569c170ea9ae3cc05eafd489a61e0d9e3c Mon Sep 17 00:00:00 2001
 From: Puqns67 <me@puqns67.icu>
 Date: Sun, 24 Dec 2023 22:21:38 +0800
 Subject: [PATCH 2/2] build: remove service management support for this build
 
 ---
- go.mod  |   7 +-
+ go.mod  |   9 +--
  go.sum  |   5 --
- main.go | 223 --------------------------------------------------------
- 3 files changed, 1 insertion(+), 234 deletions(-)
+ main.go | 224 --------------------------------------------------------
+ 3 files changed, 2 insertions(+), 236 deletions(-)
 
 diff --git a/go.mod b/go.mod
-index 351dc4d..a17b36a 100644
+index 6a54c2a..882fa6c 100644
 --- a/go.mod
 +++ b/go.mod
-@@ -3,13 +3,8 @@ module github.com/jeessy2/ddns-go/v6
+@@ -3,14 +3,9 @@ module github.com/jeessy2/ddns-go/v6
  go 1.20
  
  require (
 -	github.com/kardianos/service v1.2.2
  	github.com/wagslane/go-password-validator v0.3.0
- 	golang.org/x/net v0.24.0
+-	golang.org/x/net v0.25.0
 -	gopkg.in/yaml.v3 v3.0.1
+ 	golang.org/x/crypto v0.23.0
 -)
 -
 -require (
--	golang.org/x/sys v0.19.0 // indirect
- 	golang.org/x/text v0.14.0
+-	golang.org/x/sys v0.20.0 // indirect
++	golang.org/x/net v0.25.0
+ 	golang.org/x/text v0.15.0
 +	gopkg.in/yaml.v3 v3.0.1
  )
 diff --git a/go.sum b/go.sum
-index b0e4ef5..8f35710 100644
+index 6d89599..cf33fbd 100644
 --- a/go.sum
 +++ b/go.sum
-@@ -1,12 +1,7 @@
+@@ -1,14 +1,9 @@
 -github.com/kardianos/service v1.2.2 h1:ZvePhAHfvo0A7Mftk/tEzqEZ7Q4lgnR8sGz4xu1YX60=
 -github.com/kardianos/service v1.2.2/go.mod h1:CIMRFEJVL+0DS1a3Nx06NaMn4Dz63Ng6O7dl0qH0zVM=
  github.com/wagslane/go-password-validator v0.3.0 h1:vfxOPzGHkz5S146HDpavl0cw1DSVP061Ry2PX0/ON6I=
  github.com/wagslane/go-password-validator v0.3.0/go.mod h1:TI1XJ6T5fRdRnHqHt14pvy1tNVnrwe7m3/f1f2fDphQ=
- golang.org/x/net v0.24.0 h1:1PcaxkF854Fu3+lvBIx5SYn9wRlBzzcnHZSiaFFAb0w=
- golang.org/x/net v0.24.0/go.mod h1:2Q7sJY5mzlzWjKtYUEXSlBWCdyaioyXzRB2RtU8KVE8=
+ golang.org/x/crypto v0.23.0 h1:dIJU/v2J8Mdglj/8rJ6UUOM3Zc9zLZxVZwwxMooUSAI=
+ golang.org/x/crypto v0.23.0/go.mod h1:CKFgDieR+mRhux2Lsu27y0fO304Db0wZe70UKqHu0v8=
+ golang.org/x/net v0.25.0 h1:d/OCCoBEUq33pjydKrGQhw7IlUPI2Oylr+8qLx49kac=
+ golang.org/x/net v0.25.0/go.mod h1:JkAGAh7GEvH74S6FOH42FLoXpXbE/aqXSrIQjXgsiwM=
 -golang.org/x/sys v0.0.0-20201015000850-e3ed0017c211/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
--golang.org/x/sys v0.19.0 h1:q5f1RH2jigJ1MoAWp2KTp3gm5zAGFUTarQZ5U386+4o=
--golang.org/x/sys v0.19.0/go.mod h1:/VUhepiaJMQUp4+oa/7Zr1D23ma6VTLIYjOOTFZPUcA=
- golang.org/x/text v0.14.0 h1:ScX5w1eTa3QqT8oi6+ziP7dTV1S2+ALU0bI+0zXKWiQ=
- golang.org/x/text v0.14.0/go.mod h1:18ZOQIKpY8NJVqYksKHtTdi31H5itFRjB5/qKTNYzSU=
+-golang.org/x/sys v0.20.0 h1:Od9JTbYCk261bKm4M/mw7AklTlFYIa0bIp9BgSm1S8Y=
+-golang.org/x/sys v0.20.0/go.mod h1:/VUhepiaJMQUp4+oa/7Zr1D23ma6VTLIYjOOTFZPUcA=
+ golang.org/x/text v0.15.0 h1:h1V/4gjBv8v9cjcR6+AR5+/cIYK5N/WAgiv4xlsEtAk=
+ golang.org/x/text v0.15.0/go.mod h1:18ZOQIKpY8NJVqYksKHtTdi31H5itFRjB5/qKTNYzSU=
  gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
 diff --git a/main.go b/main.go
-index 2e9e003..c994e95 100644
+index 30cebf2..2226a95 100644
 --- a/main.go
 +++ b/main.go
 @@ -9,7 +9,6 @@ import (
@@ -65,17 +69,17 @@ index 2e9e003..c994e95 100644
  )
  
  // ddns-go 版本
-@@ -34,9 +32,6 @@ var every = flag.Int("f", 300, "Sync frequency(seconds)")
+@@ -34,9 +32,6 @@ var every = flag.Int("f", 300, "Update frequency(seconds)")
  // 缓存次数
- var ipCacheTimes = flag.Int("cacheTimes", 5, "Interval N times compared with service providers")
+ var ipCacheTimes = flag.Int("cacheTimes", 5, "Cache times")
  
 -// 服务管理
 -var serviceType = flag.String("s", "", "Service management (install|uninstall|restart)")
 -
  // 配置文件路径
- var configFilePath = flag.String("c", util.GetConfigFilePathDefault(), "config file path")
+ var configFilePath = flag.String("c", util.GetConfigFilePathDefault(), "Custom configuration file path")
  
-@@ -79,37 +74,7 @@ func main() {
+@@ -93,37 +88,6 @@ func main() {
  		util.SetDNS(*customDNS)
  	}
  	os.Setenv(util.IPCacheTimesENV, strconv.Itoa(*ipCacheTimes))
@@ -108,12 +112,12 @@ index 2e9e003..c994e95 100644
 -		}
 -	}
 -}
- 
+-
 -func run() {
- 	// 兼容v5.0.0之前的配置文件
+ 	// 兼容之前的配置文件
  	conf, _ := config.GetConfigCached()
  	conf.CompatibleConfig()
-@@ -172,130 +137,6 @@ func runWebServer() error {
+@@ -186,130 +150,6 @@ func runWebServer() error {
  	return http.Serve(l, nil)
  }
  
@@ -244,7 +248,7 @@ index 2e9e003..c994e95 100644
  // 打开浏览器
  func autoOpenExplorer() {
  	_, err := config.GetConfigCached()
-@@ -318,67 +159,3 @@ func autoOpenExplorer() {
+@@ -332,67 +172,3 @@ func autoOpenExplorer() {
  		}
  	}
  }
@@ -313,5 +317,5 @@ index 2e9e003..c994e95 100644
 -}
 -`
 -- 
-2.44.0
+2.45.1
 
