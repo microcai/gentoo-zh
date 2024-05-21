@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~mips ~riscv ~x86"
 
-IUSE="+cli server +gui wayland +tcmalloc"
+IUSE="+cli server test +gui wayland +tcmalloc"
 
 RDEPEND="
 	app-misc/ca-certificates
@@ -52,7 +52,7 @@ src_configure() {
 		-DCLI=$(usex cli)
 		-DSERVER=$(usex server)
 		-DGUI=$(usex gui)
-		-DBUILD_TESTS=off
+		-DBUILD_TESTS=$(usex test)
 		-DUSE_TCMALLOC=$(usex tcmalloc)
 		-DUSE_SYSTEM_MBEDTLS=on
 		-DUSE_SYSTEM_ZLIB=on
@@ -60,4 +60,9 @@ src_configure() {
 		-DUSE_SYSTEM_NGHTTP2=on
 	)
 	cmake_src_configure
+}
+
+src_test() {
+	# cmake_src_test doesn't work
+	${BUILD_DIR}/yass_test -logtostderr -v 0 --no_cares_tests --no_doh_tests --no_dot_tests
 }
