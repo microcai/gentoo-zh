@@ -16,6 +16,11 @@ KEYWORDS="~amd64 ~arm ~arm64 ~loong ~mips ~riscv ~x86"
 
 IUSE="+cli server test +gui wayland +tcmalloc"
 
+# tested with FEATURES="-network-sandbox test"
+# tested with FEATURES="network-sandbox test"
+# tested with FEATURES="test"
+RESTRICT="!test? ( test )"
+
 RDEPEND="
 	app-misc/ca-certificates
 	dev-libs/glib:2
@@ -40,7 +45,16 @@ BDEPEND="
 
 PATCHES=(
 	"${FILESDIR}"/libcxx-gcc-14.patch
+	"${FILESDIR}"/ctest.patch
 )
+
+src_prepare() {
+	cmake_src_prepare
+	# some tests require network access, comment it out if not supported
+	if has network-sandbox ${FEATURES}; then
+		sed -i -e 's/BUILD_TESTS_NO_NETWORK/BUILD_TESTS/g' "${S}/CMakeLists.txt"
+	fi
+}
 
 src_configure() {
 	local mycmakeargs=(
@@ -60,9 +74,4 @@ src_configure() {
 		-DUSE_SYSTEM_NGHTTP2=on
 	)
 	cmake_src_configure
-}
-
-src_test() {
-	# cmake_src_test doesn't work
-	${BUILD_DIR}/yass_test -logtostderr -v 0 --no_cares_tests --no_doh_tests --no_dot_tests
 }
