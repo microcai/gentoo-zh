@@ -15,11 +15,9 @@ DESCRIPTION="Full XanMod source, including the Gentoo patchset and other patch o
 HOMEPAGE="https://xanmod.org
 		https://github.com/OriPoin/cjktty-patches
 		https://github.com/hamadmarri/TT-CPU-Scheduler"
-LICENSE+=" CDDL"
-KEYWORDS="~amd64"
 
 XANMOD_VERSION="1"
-XANMOD_URI="mirror://sourceforge/xanmod"
+XANMOD_URI="https://download.sourceforge.net/xanmod"
 OKV="${OKV}-xanmod"
 CJKTTY_URI="https://raw.githubusercontent.com/OriPoin/cjktty-patches/master"
 SRC_URI="
@@ -30,7 +28,10 @@ SRC_URI="
 	${CJKTTY_URI}/cjktty-add-cjk32x32-font-data.patch
 "
 
+LICENSE+=" CDDL"
+KEYWORDS="~amd64"
 IUSE="cjktty"
+
 src_unpack() {
 	universal_unpack
 	mkdir "${WORKDIR}/genpatches" || die
