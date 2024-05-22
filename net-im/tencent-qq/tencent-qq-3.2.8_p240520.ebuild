@@ -5,16 +5,15 @@ EAPI=8
 
 inherit unpacker xdg
 
-MY_PV=${PV/_p/-}
-_I="db6c41a0"
+MY_PV=${PV/_p/_}
 _LiteLoader_PV="1.1.1"
 DESCRIPTION="The new version of the official linux-qq"
 HOMEPAGE="https://im.qq.com/linuxqq/index.shtml"
 
 SRC_URI="
-	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_amd64.deb )
-	arm64? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_arm64.deb )
-	loong? ( https://dldir1.qq.com/qqfile/qq/QQNT/$_I/linuxqq_${MY_PV}_loongarch64.deb )
+	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_${MY_PV}_amd64_01.deb )
+	arm64? ( https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_${MY_PV}_arm64_01.deb )
+	loong? ( https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_${MY_PV}_loongarch64_01.deb )
 	liteloader? (
 		https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/${_LiteLoader_PV}/LiteLoaderQQNT.zip \
 		-> LiteLoaderQQNT-${_LiteLoader_PV}.zip
