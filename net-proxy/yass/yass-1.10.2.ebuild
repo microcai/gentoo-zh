@@ -45,7 +45,6 @@ BDEPEND="
 
 PATCHES=(
 	"${FILESDIR}"/libcxx-gcc-14.patch
-	"${FILESDIR}"/ctest.patch
 )
 
 src_prepare() {
