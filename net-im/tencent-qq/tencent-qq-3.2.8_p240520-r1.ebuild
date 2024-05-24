@@ -6,14 +6,17 @@ EAPI=8
 inherit unpacker xdg
 
 MY_PV=${PV/_p/_}
+_QQDownSite="https://dldir1.qq.com/qqfile/qq/QQNT/Linux"
+_QQFileName="QQ"
+_QQFileSuffix="_01.deb"
 _LiteLoader_PV="1.1.1"
 DESCRIPTION="The new version of the official linux-qq"
 HOMEPAGE="https://im.qq.com/linuxqq/index.shtml"
 
 SRC_URI="
-	amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_${MY_PV}_amd64_01.deb )
-	arm64? ( https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_${MY_PV}_arm64_01.deb )
-	loong? ( https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_${MY_PV}_loongarch64_01.deb )
+	amd64? ( ${_QQDownSite}/${_QQFileName}_${MY_PV}_amd64${_QQFileSuffix} )
+	arm64? ( ${_QQDownSite}/${_QQFileName}_${MY_PV}_arm64${_QQFileSuffix} )
+	loong? ( ${_QQDownSite}/${_QQFileName}_${MY_PV}_loongarch64${_QQFileSuffix} )
 	liteloader? (
 		https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/${_LiteLoader_PV}/LiteLoaderQQNT.zip \
 		-> LiteLoaderQQNT-${_LiteLoader_PV}.zip
@@ -67,7 +70,11 @@ src_unpack() {
 src_install() {
 	dodir /
 	cd "${D}" || die
-	unpacker "${DISTDIR}/linuxqq_${MY_PV}_${ARCH}".deb
+	if [ "${ARCH}" = "loong" ]; then
+		unpacker "${DISTDIR}/${_QQFileName}_${MY_PV}_loongarch64${_QQFileSuffix}"
+	else
+		unpacker "${DISTDIR}/${_QQFileName}_${MY_PV}_${ARCH}${_QQFileSuffix}"
+	fi
 
 	if use system-vips; then
 		rm -r "${D}"/opt/QQ/resources/app/sharp-lib || die
@@ -123,7 +130,22 @@ src_install() {
 pkg_postinst() {
 	xdg_pkg_postinst
 	if use bwrap; then
+		elog "-EN-----------------------------------------------------------------"
 		elog "If you want to download files in QQ"
 		elog "Please set the QQ download path to ~/Download"
+		elog "If you have enabled LiteLoaderQQNT support, relevant plugins can be "
+		elog "downloaded from https://liteloaderqqnt.github.io/, "
+		elog "For instance, after downloading the 「轻量工具箱」 and unzipping it, "
+		elog "download it to the directory ~/.config/QQ/LiteLoaderQQNT/plugins/lite_tools_v4/, "
+		elog "and the changes will take effect after a restart."
+		elog "--------------------------------------------------------------------"
+		elog "-ZH-----------------------------------------------------------------"
+		elog "如果要在 QQ 中下载文件，请先在「设置」->「存储管理」中把下载文件夹"
+		elog "更改为系统的“下载”/“Downloads”文件夹。"
+		elog "如果您启用了 LiteLoaderQQNT 支持，"
+		elog "可以从 https://liteloaderqqnt.github.io/ 下载相关插件，"
+		elog "例如：「轻量工具箱」下载后"
+		elog "解压到 ~/.config/QQ/LiteLoaderQQNT/plugins/“lite_tools_v4”/ 目录下，重启后生效。"
+		elog "--------------------------------------------------------------------"
 	fi
 }
