@@ -75,7 +75,7 @@ fi
 rm -rf "${QQ_HOTUPDATE_DIR}/"**".zip"
 is_hotupdated_version=0  # 正在运行的版本是否经过热更新？
 
-find "${QQ_HOTUPDATE_DIR}/"*-* -maxdepth 1 -type "d,l" | while read path; do
+find "${QQ_HOTUPDATE_DIR}/"*[-_]* -maxdepth 1 -type "d,l" | while read path; do
     this_version="$(basename "$path")"
     if [ "$(/opt/QQ/workarounds/vercmp.sh "${this_version}" lt "${QQ_HOTUPDATE_VERSION//_/-}")" == "true" ]; then
         # 这个版本小于当前版本，删除之
@@ -116,6 +116,7 @@ bwrap --new-session --cap-drop ALL --unshare-user-try --unshare-pid --unshare-cg
     --bind-try "${HOME}/.pki" "${HOME}/.pki" \
     --ro-bind-try "${XAUTHORITY}" "${XAUTHORITY}" \
     --bind-try "${QQ_DOWNLOAD_DIR}" "${QQ_DOWNLOAD_DIR}" \
+    --setenv QQ_APP_DIR "${QQ_APP_DIR}" \
     --bind "${QQ_APP_DIR}" "${QQ_APP_DIR}" \
     --ro-bind-try "${FONTCONFIG_HOME}" "${FONTCONFIG_HOME}" \
     --ro-bind-try "${HOME}/.icons" "${HOME}/.icons" \
