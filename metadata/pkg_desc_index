@@ -218,7 +218,7 @@ net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
 net-dns/ddns-go 6.6.0: Automatically obtain your public IP address and set to your domain name service.
 net-dns/dnslookup 1.10.1: Simple command line utility to make DNS lookups to the specified server
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
-net-dns/dog 0.1.0: A command-line DNS client
+net-dns/dog 0.1.0-r1 0.1.0_p20211007: A command-line DNS client
 net-dns/libidn11 1.33: Internationalized Domain Names (IDN) implementation
 net-dns/mosdns 5.3.1: A DNS forwarder
 net-dns/mosdns-cn-bin 1.4.0-r1: A DNS forwarder
