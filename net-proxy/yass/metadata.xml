@@ -9,6 +9,8 @@
 		<flag name="cli">Enable cli daemon</flag>
 		<flag name="server">Enable server daemon</flag>
 		<flag name="gui">Enable GUI Client</flag>
+		<flag name="mold">Use mold linker</flag>
+		<flag name="lld">Use lld linker</flag>
 		<flag name="tcmalloc">Enable tcmalloc</flag>
 	</use>
 	<upstream>

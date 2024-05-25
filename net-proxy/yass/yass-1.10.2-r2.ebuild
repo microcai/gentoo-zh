@@ -14,7 +14,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~mips ~riscv ~x86"
 
-IUSE="+cli server test +gui wayland +tcmalloc"
+IUSE="+cli server test +gui wayland mold lld +tcmalloc"
+REQUIRED_USE="mold? ( !lld )"
 
 # tested with FEATURES="-network-sandbox test"
 # tested with FEATURES="network-sandbox test"
@@ -35,6 +36,12 @@ RDEPEND="
 		!loong? (
 			|| ( x11-libs/gtk+:3[wayland?] gui-libs/gtk:4[wayland?] )
 		)
+	)
+	mold? (
+		sys-devel/mold
+	)
+	lld? (
+		sys-devel/lld
 	)
 "
 DEPEND="${RDEPEND}"
@@ -63,11 +70,14 @@ src_configure() {
 		-DUSE_BUILTIN_CA_BUNDLE_CRT=off
 		-DUSE_LIBCXX=on
 		-DENABLE_GOLD=off
+		-DENABLE_LTO=off
+		-DUSE_LLD=$(usex lld)
+		-DUSE_MOLD=$(usex mold)
+		-DUSE_TCMALLOC=$(usex tcmalloc)
 		-DCLI=$(usex cli)
 		-DSERVER=$(usex server)
 		-DGUI=$(usex gui)
 		-DBUILD_TESTS=$(usex test)
-		-DUSE_TCMALLOC=$(usex tcmalloc)
 		-DUSE_SYSTEM_MBEDTLS=on
 		-DUSE_SYSTEM_ZLIB=on
 		-DUSE_SYSTEM_CARES=on
