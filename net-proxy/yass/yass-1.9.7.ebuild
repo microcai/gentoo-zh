@@ -40,7 +40,6 @@ BDEPEND="
 
 PATCHES=(
 	"${FILESDIR}"/libcxx-gcc-14.patch
-	"${FILESDIR}"/manpages.patch
 )
 
 src_configure() {
