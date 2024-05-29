@@ -12,6 +12,7 @@ SRC_URI="
 	arm64? ( https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v${PV}/clash-verge_${PV}_arm64.deb )
 "
 
+S="${WORKDIR}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
@@ -24,8 +25,6 @@ DEPEND="
 "
 
 RDEPEND="${DEPEND}"
-
-S="${WORKDIR}"
 
 src_install(){
 	dobin "${S}"/usr/bin/clash-verge
