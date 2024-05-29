@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-05-27 11:37:23 CST)
+(The last generation time: 2024-05-30 00:38:53 CST)
 
 ### Packages
 
@@ -538,7 +538,7 @@
    sys-apps/pnpm                          | 8.15.4                                    | BD     | https://pnpm.io                                                                         | Fast, disk space efficient package manager
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-verge-bin                | 1.6.0                                     |        | https://github.com/clash-verge-rev/clash-verge-rev                                      | (Continuation) of Clash Meta GUI based on Tauri.
-                                          | 1.6.2                                     |        |                                                                                         |
+                                          | 1.6.4                                     |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/dae                            | 0.5.1                                     |        | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
                                           | 0.6.0_rc2                                 |        |                                                                                         |
