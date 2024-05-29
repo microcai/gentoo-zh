@@ -263,7 +263,7 @@ net-proxy/Xray 1.8.13: Xray, Penetrates Everything. Also the best v2ray-core, wi
 net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
 net-proxy/clash-nyanpasu 1.5.1: Clash GUI based on tauri
 net-proxy/clash-rs 0.1.15: Custom protocol, rule based network proxy
-net-proxy/clash-verge-bin 1.6.0 1.6.2: (Continuation) of Clash Meta GUI based on Tauri.
+net-proxy/clash-verge-bin 1.6.0 1.6.4: (Continuation) of Clash Meta GUI based on Tauri.
 net-proxy/dae 0.5.1 0.6.0_rc2 9999: A lightweight and high-performance transparent proxy solution based on eBPF
 net-proxy/daed 0.4.1 9999: A Modern Dashboard For dae
 net-proxy/hysteria 2.2.2: A powerful, lightning fast and censorship resistant proxy.
