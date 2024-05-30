@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-05-30 14:44:29 CST)
+(The last generation time: 2024-05-30 15:04:33 CST)
 
 ### Packages
 
@@ -142,11 +142,7 @@
  app-office/anytype-bin                   | 0.35.4                                    |        | https://anytype.io                                                                      | A notebook based on p2p network
                                           | 0.40.8                                    |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-office/bytedance-feishu              | 4.11.6.2                                  |        | https://www.feishu.cn/                                                                  | feishu - ByteDance's enterprise collaboration platform
-                                          | 5.14.14                                   |        |                                                                                         |
-                                          | 5.26.13-r1                                |        |                                                                                         |
-                                          | 5.9.18                                    |        |                                                                                         |
-                                          | 6.9.20                                    |        |                                                                                         |
+ app-office/bytedance-feishu              | 7.15.13                                   |        | https://www.feishu.cn/download                                                          | 飞书（Feishu） 飞书整合即时消息、日历、音视频会议、云文档、工作台等功能于一体，成就团队和个人，更高效、更愉悦。
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-office/freeoffice                    | 1062                                      |        | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite.
                                           | 1064                                      |        |                                                                                         |
