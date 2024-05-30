@@ -14,12 +14,11 @@ SRC_URI="
 
 "
 
-RESTRICT="strip mirror bindist fetch"
 S="${WORKDIR}"
-KEYWORDS="~amd64 ~arm64 ~mips"
-
 LICENSE="Feishu-EULA"
 SLOT="0"
+KEYWORDS="~amd64 ~arm64 ~mips"
+RESTRICT="strip mirror bindist fetch"
 
 DEPEND="
 app-misc/ca-certificates
@@ -44,7 +43,7 @@ src_prepare() {
 src_install() {
 	insinto "/"
 	doins -r "${S}/opt/"
-	dosym /opt/bytedance/feishu/bytedance-feishu /usr/bin/bytedance-feishu-stable
+	dosym -r /opt/bytedance/feishu/bytedance-feishu /usr/bin/bytedance-feishu-stable
 	domenu "${S}/usr/share/applications/bytedance-feishu.desktop"
 	doman "${S}/bytedance-feishu-stable.1"
 	dodoc "${S}/changelog"
