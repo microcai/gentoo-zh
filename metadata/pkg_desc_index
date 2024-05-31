@@ -25,7 +25,7 @@ app-crypt/cfssl 1.6.5: Cloudflare's PKI and TLS toolkit
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-dicts/fcitx-pinyin-moegirl 20230714: Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 app-dicts/fcitx-pinyin-zhwiki 20230728: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
-app-editors/appflowy-bin 0.5.7: AppFlowy is an open-source alternative to Notion
+app-editors/appflowy-bin 0.5.8: AppFlowy is an open-source alternative to Notion
 app-editors/marktext-bin 0.17.1: A simple and elegant markdown editor, available for Linux, macOS and Windows.
 app-editors/typora 0.11.18 1.8.10: A truely minimal markdown editor.
 app-emulation/deepin-udis86 1.72-r4: Disassembler library for x86 (32-bit shared library)
@@ -87,7 +87,7 @@ app-misc/keyd 2.4.3: A key remapping daemon for linux
 app-misc/rmtrash 1.14 1.15: trash-put made compatible to GNUs rm and rmdir
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/xmind 22.11.3656 23.07.201366-r1: Brainstorming and Mind Mapping Software
-app-office/anytype-bin 0.35.4 0.40.8: A notebook based on p2p network
+app-office/anytype-bin 0.35.4 0.40.9: A notebook based on p2p network
 app-office/bytedance-feishu 7.15.13 7.15.13-r1: 飞书（Feishu） 飞书整合即时消息、日历、音视频会议、云文档、工作台等功能于一体，成就团队和个人，更高效、更愉悦。
 app-office/freeoffice 1062 1064 1068: A complete, free Microsoft Office-compatible alternative office suite.
 app-office/wps-office 11.1.0.11719-r1: WPS Office is an office productivity suite, Here is the Chinese version
@@ -168,7 +168,7 @@ media-fonts/Plangothic 1.8.5760: 遍黑体项目（Plangothic Project）
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/iansui 1.000: An open-source Chinese font derived from Klee One (Fontworks).
 media-fonts/jf-openhuninn 2.0: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
-media-fonts/lxgw-neo-xihei 1.122: A Chinese sans-serif font derived from IPAex Gothic.
+media-fonts/lxgw-neo-xihei 1.123: A Chinese sans-serif font derived from IPAex Gothic.
 media-fonts/lxgw-neo-zhisong 0.113: An open-source Chinese font derived from IPAmj Mincho
 media-fonts/nerd-fonts 3.2.1: Nerd Fonts is a project that patches developer targeted fonts with glyphs
 media-fonts/sarasa-gothic 1.0.12: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
@@ -215,7 +215,7 @@ net-analyzer/besttrace-bin 1.3.2-r1: 附带链路可视化的 traceroute 工具
 net-analyzer/nali 0.8.1: An offline tool for querying IP geographic information and CDN provider.
 net-analyzer/realitlscanner 0.1.2: A TLS server scanner for Reality
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
-net-dns/ddns-go 6.6.0: Automatically obtain your public IP address and set to your domain name service.
+net-dns/ddns-go 6.6.1: Automatically obtain your public IP address and set to your domain name service.
 net-dns/dnslookup 1.10.1: Simple command line utility to make DNS lookups to the specified server
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
 net-dns/dog 0.1.0-r1 0.1.0_p20211007: A command-line DNS client
@@ -233,7 +233,7 @@ net-im/wechat-universal-bwrap 1.0.0.241-r1: WeChat (Universal) from UOS, inside 
 net-im/weixin-uos 2.1.8: UOS weixin
 net-im/wemeet 3.15.1.403 3.19.0.401: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq
-net-misc/alist 3.32.0 3.34.0: A file list/WebDAV program that supports multiple storages
+net-misc/alist 3.32.0 3.35.0: A file list/WebDAV program that supports multiple storages
 net-misc/aliyundrive-webdav 2.3.3: WebDAV server for AliyunDrive
 net-misc/aliyunpan 0.2.8: aliyunpan cli client, support Webdav service, JavaScript plugin
 net-misc/apifox 2.3.24: API 文档、API 调试、API Mock、API 自动化测试
