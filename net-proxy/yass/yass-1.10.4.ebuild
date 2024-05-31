@@ -14,12 +14,16 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~mips ~riscv ~x86"
 
-IUSE="+cli server test +gui wayland +tcmalloc"
+IUSE="+cli server test +gui wayland +tcmalloc mimalloc"
 
 # tested with FEATURES="-network-sandbox test"
 # tested with FEATURES="network-sandbox test"
 # tested with FEATURES="test"
 RESTRICT="!test? ( test )"
+
+REQUIRED_USE="
+	tcmalloc? ( !mimalloc )
+"
 
 RDEPEND="
 	app-misc/ca-certificates
@@ -67,6 +71,7 @@ src_configure() {
 		-DGUI=$(usex gui)
 		-DBUILD_TESTS=$(usex test)
 		-DUSE_TCMALLOC=$(usex tcmalloc)
+		-DUSE_MIMALLOC=$(usex mimalloc)
 		-DUSE_SYSTEM_MBEDTLS=on
 		-DUSE_SYSTEM_ZLIB=on
 		-DUSE_SYSTEM_CARES=on
