@@ -475,12 +475,6 @@ source = "pypi"
 pypi = "qasync"
 github_account = "wgjak47"
 
-["dev-python/structlog"]
-source = "github"
-github = "hynek/structlog"
-use_latest_release = true
-github_account = "liangyongxiang"
-
 ["dev-util/arch-install-scripts"]
 source = "github"
 github = "archlinux/arch-install-scripts"
