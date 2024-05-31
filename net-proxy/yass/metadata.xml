@@ -9,7 +9,8 @@
 		<flag name="cli">Enable cli daemon</flag>
 		<flag name="server">Enable server daemon</flag>
 		<flag name="gui">Enable GUI Client</flag>
-		<flag name="tcmalloc">Enable tcmalloc</flag>
+		<flag name="tcmalloc">Enable tcmalloc allocator</flag>
+		<flag name="mimalloc">Enable mimalloc allocator</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">Chilledheart/yass</remote-id>
