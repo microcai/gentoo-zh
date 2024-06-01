@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-05-31 22:44:46 CST)
+(The last generation time: 2024-06-01 15:19:05 CST)
 
 ### Packages
 
@@ -231,7 +231,7 @@
  dev-python/nvchecker                     | 2.13.1                                    |        | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
                                           | 2.14                                      |        |                                                                                         |
                                           | 2.14.1                                    |        |                                                                                         |
-   dev-python/structlog                   | 24.1.0                                    | RD     | http://www.structlog.org/en/stable/                                                     | Structured Logging for Python
+                                          | 2.15                                      |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pycosat                       | 0.6.6                                     |        | https://github.com/conda/pycosat                                                        | Python bindings to picosat (a SAT solver)
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -588,7 +588,7 @@
  sci-electronics/lceda                    | 6.5.37                                    |        | https://lceda.cn/                                                                       | LCEDA (binary package)
                                           | 6.5.40                                    |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- sci-electronics/lceda-pro                | 2.1.61                                    |        | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
+ sci-electronics/lceda-pro                | 2.1.63                                    |        | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sci-electronics/openfpgaloader           | 0.12.1                                    |        | https://trabucayre.github.io/openFPGALoader                                             | Universal utility for programming FPGAs
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
