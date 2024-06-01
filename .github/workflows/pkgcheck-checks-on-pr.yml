@@ -27,7 +27,7 @@ jobs:
       - name: Sync main tree
         run: emerge --sync gentoo
       - name: Checkout the head ref of the pull request
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           repository: ${{ github.event.pull_request.head.repo.full_name }}
