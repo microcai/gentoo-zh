@@ -62,7 +62,7 @@ jobs:
         echo "::endgroup::"
 
     - name: setup node
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
 
     - name: install github-script depends
       run: |
