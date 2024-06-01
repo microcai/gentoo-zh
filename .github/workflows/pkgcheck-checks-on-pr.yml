@@ -196,7 +196,7 @@ jobs:
           done
       - name: Post result
         if: ${{ always() && steps.report.outputs.has }}
-        uses: actions/github-script@v4
+        uses: actions/github-script@v7
         with:
           script: |
             const fs = require("fs").promises;
