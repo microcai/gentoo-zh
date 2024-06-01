@@ -201,7 +201,7 @@ jobs:
           script: |
             const fs = require("fs").promises;
             var cbody = await fs.readFile("/var/tmp/report.md", "utf8");
-            github.issues.createComment({
+            github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
