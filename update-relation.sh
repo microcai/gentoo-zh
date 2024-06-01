@@ -16,7 +16,7 @@ if [[ ${_gitdiff%% } != '@@ -1,6 +1,6 @@' ]]; then
   git config --local user.name "github-actions[bot]"
   git add .
   git commit -m "${ctime} (updated)"
-  echo "::set-output name=state::changed"
+  echo "state=changed" >> $GITHUB_OUTPUT
 else
-  echo "::set-output name=state::unchanged"
+  echo "state=unchanged" >> $GITHUB_OUTPUT
 fi
