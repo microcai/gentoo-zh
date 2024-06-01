@@ -8,16 +8,14 @@ inherit desktop
 DESCRIPTION="LCEDA Pro (binary package)"
 HOMEPAGE="https://lceda.cn/"
 
-RESTRICT="mirror"
-LICENSE="LCEDA-EULA"
-SLOT="0"
-
-KEYWORDS="~amd64 ~arm64"
 SRC_URI="
 	amd64?	( https://image.lceda.cn/files/${PN}-linux-x64-${PV}.zip )
 	arm64?	( https://image.lceda.cn/files/${PN}-linux-arm64-${PV}.zip )
 "
-
+S="${WORKDIR}/lceda-pro"
+LICENSE="LCEDA-EULA"
+SLOT="0"
+KEYWORDS="~amd64 ~arm64"
 DEPEND="
 	>=app-accessibility/at-spi2-core-2.46.0:2
 	app-crypt/libsecret
@@ -51,8 +49,7 @@ DEPEND="
 	x11-libs/pango"
 RDEPEND="${DEPEND}"
 BDEPEND="app-arch/unzip"
-
-S="${WORKDIR}/lceda-pro"
+RESTRICT="mirror"
 
 QA_PREBUILT="
 	/opt/lceda-pro/chrome-sandbox
