@@ -9,6 +9,7 @@ DESCRIPTION="A new multiboot USB solution"
 HOMEPAGE="http://www.ventoy.net"
 SRC_URI="https://github.com/ventoy/Ventoy/releases/download/v${PV}/ventoy-${PV}-linux.tar.gz"
 
+S=${WORKDIR}/ventoy-${PV}
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -21,8 +22,6 @@ DEPEND="
 	sys-block/parted
 "
 RDEPEND="${DEPEND}"
-
-S=${WORKDIR}/ventoy-${PV}
 
 CARCH="x86_64"
 
