@@ -3,18 +3,18 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{9..11} )
-DISTUTILS_SINGLE_IMPL=y
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{10..12} )
 inherit distutils-r1 git-r3
 
 DESCRIPTION="GUI for snapper, a tool for Linux filesystem snapshot management"
 HOMEPAGE="https://github.com/ricardomv/snapper-gui"
-KEYWORDS="~amd64"
 EGIT_REPO_URI="https://github.com/ricardomv/${PN}.git"
 EGIT_COMMIT=1915750
 
 LICENSE="GPL-2+"
 SLOT="0"
+KEYWORDS="~amd64"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
