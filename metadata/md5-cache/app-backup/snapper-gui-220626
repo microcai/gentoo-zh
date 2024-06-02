@@ -1,15 +1,15 @@
-BDEPEND=python_single_target_python3_10? ( dev-lang/python:3.10 ) python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_10? ( >=dev-python/setuptools-69.0.3[python_targets_python3_10(-)] ) python_single_target_python3_11? ( >=dev-python/setuptools-69.0.3[python_targets_python3_11(-)] ) >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile configure install prepare setup test unpack
+BDEPEND=python_targets_python3_10? ( dev-lang/python:3.10 ) python_targets_python3_11? ( dev-lang/python:3.11 ) python_targets_python3_12? ( dev-lang/python:3.12 ) >=dev-python/gpep517-15[python_targets_python3_10(-)?,python_targets_python3_11(-)?,python_targets_python3_12(-)?] >=dev-python/setuptools-69.0.3[python_targets_python3_10(-)?,python_targets_python3_11(-)?,python_targets_python3_12(-)?] >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install prepare test unpack
 DESCRIPTION=GUI for snapper, a tool for Linux filesystem snapshot management
 EAPI=8
 HOMEPAGE=https://github.com/ricardomv/snapper-gui
 INHERIT=distutils-r1 git-r3
-IUSE=python_single_target_python3_10 python_single_target_python3_11
+IUSE=python_targets_python3_10 python_targets_python3_11 python_targets_python3_12
 KEYWORDS=~amd64
 LICENSE=GPL-2+
 PROPERTIES=live
-RDEPEND=app-backup/snapper python_single_target_python3_10? ( dev-python/dbus-python[python_targets_python3_10(-)] dev-python/pygobject[python_targets_python3_10(-)] ) python_single_target_python3_11? ( dev-python/dbus-python[python_targets_python3_11(-)] dev-python/pygobject[python_targets_python3_11(-)] ) x11-libs/gtksourceview:3.0 python_single_target_python3_10? ( dev-lang/python:3.10 ) python_single_target_python3_11? ( dev-lang/python:3.11 )
-REQUIRED_USE=^^ ( python_single_target_python3_10 python_single_target_python3_11 ) ^^ ( python_single_target_python3_10 python_single_target_python3_11 )
+RDEPEND=app-backup/snapper python_targets_python3_10? ( dev-python/dbus-python[python_targets_python3_10(-)?,python_targets_python3_11(-)?,python_targets_python3_12(-)?] dev-python/pygobject[python_targets_python3_10(-)?,python_targets_python3_11(-)?,python_targets_python3_12(-)?] ) python_targets_python3_11? ( dev-python/dbus-python[python_targets_python3_10(-)?,python_targets_python3_11(-)?,python_targets_python3_12(-)?] dev-python/pygobject[python_targets_python3_10(-)?,python_targets_python3_11(-)?,python_targets_python3_12(-)?] ) python_targets_python3_12? ( dev-python/dbus-python[python_targets_python3_10(-)?,python_targets_python3_11(-)?,python_targets_python3_12(-)?] dev-python/pygobject[python_targets_python3_10(-)?,python_targets_python3_11(-)?,python_targets_python3_12(-)?] ) x11-libs/gtksourceview:3.0 python_targets_python3_10? ( dev-lang/python:3.10 ) python_targets_python3_11? ( dev-lang/python:3.11 ) python_targets_python3_12? ( dev-lang/python:3.12 )
+REQUIRED_USE=|| ( python_targets_python3_10 python_targets_python3_11 python_targets_python3_12 ) || ( python_targets_python3_10 python_targets_python3_11 python_targets_python3_12 )
 SLOT=0
-_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	d309b9713dfc18e754cba88d3ba69653	out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	d67e78a235f541871c7dfe4cf7931489	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	8b220bbce5c119fb1d4d5c2f5588f3ea	python-single-r1	75118e916668a74c660a13b0ecb22562	distutils-r1	5400d21736d8621562bf93be4fa98eec	git-r3	fbb2889c81f3a05910c1524db69425c1
-_md5_=79907f970e0d6cf04d15a62b6187f03f
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	d309b9713dfc18e754cba88d3ba69653	out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	d67e78a235f541871c7dfe4cf7931489	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	8b220bbce5c119fb1d4d5c2f5588f3ea	python-r1	8a28fa6d3e3bc96ff8a7eff2badbe71f	distutils-r1	5400d21736d8621562bf93be4fa98eec	git-r3	fbb2889c81f3a05910c1524db69425c1
+_md5_=2c40ace46bb52d225cb827fb8eee9912
