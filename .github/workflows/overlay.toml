@@ -296,12 +296,6 @@ github_account = "123485k"
 
 #["app-text/master-pdf-editor"]
 
-["app-vim/clang_complete"]
-source = "github"
-github = "xavierd/clang_complete"
-use_latest_tag = true
-prefix = "v"
-
 ["app-vim/easymotion"]
 source = "github"
 github = "easymotion/vim-easymotion"
