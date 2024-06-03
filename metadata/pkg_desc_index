@@ -275,7 +275,7 @@ net-proxy/v2ray 5.15.3 5.16.1: A platform for building proxies to bypass network
 net-proxy/v2ray-bin 4.45.0-r2 5.12.1-r1: A platform for building proxies to bypass network restrictions
 net-proxy/v2rayA 2.2.5.1 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
-net-proxy/yass 1.9.7 1.10.4: lightweight and efficient, socks5/http forward proxy
+net-proxy/yass 1.9.7 1.10.5: lightweight and efficient, socks5/http forward proxy
 net-vpn/sstp-server 0.6.0: A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
 net-vpn/tailscale 1.66.4: Tailscale vpn client
 net-wireless/linux-wifi-hotspot 9999: Linux Wifi Hotspot
@@ -318,7 +318,7 @@ virtual/dist-kernel 6.8.10: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 virtual/loong-ow-compat 0: Virtual for LoongArch old-world compatibility
 www-apps/chatgpt-desktop 1.1.0: ChatGPT Desktop Application
-www-client/brave-bin 1.66.115: Web browser that blocks ads and trackers by default
+www-client/brave-bin 1.66.118: Web browser that blocks ads and trackers by default
 www-servers/darkhttpd 1.16: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images

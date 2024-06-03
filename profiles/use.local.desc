@@ -264,8 +264,11 @@ net-proxy/sing-box:v2ray-api - Build with V2Ray API support
 net-proxy/sing-box:wireguard - Build with WireGuard support
 net-proxy/v2rayA:xray - To be able to use net-proxy/Xray. Disable the v2ray useflag to use xray as default
 net-proxy/yass:cli - Enable cli daemon
+net-proxy/yass:gtk3 - Enable GUI Client (GTK3)
+net-proxy/yass:gtk4 - Enable GUI Client (GTK4)
 net-proxy/yass:gui - Enable GUI Client
 net-proxy/yass:mimalloc - Enable mimalloc allocator
+net-proxy/yass:qt6 - Enable GUI Client (QT6)
 net-proxy/yass:server - Enable server daemon
 net-proxy/yass:tcmalloc - Enable tcmalloc allocator
 sci-electronics/openfpgaloader:cmsisdap - enable cmsis-dap support
