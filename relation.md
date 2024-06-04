@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-06-05 00:21:04 CST)
+(The last generation time: 2024-06-05 00:21:29 CST)
 
 ### Packages
 
@@ -377,7 +377,7 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/qqmusic                      | 1.1.5                                     |        | https://y.qq.com/                                                                       | Tencent QQ Music, converted from .deb package
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/spotube-bin                  | 3.6.0                                     |        | https://github.com/KRTirtho/spotube                                                     | A lightweight Spotify client using YouTube as audio source
+ media-sound/spotube-bin                  | 3.7.0                                     |        | https://github.com/KRTirtho/spotube                                                     | A lightweight Spotify client using YouTube as audio source
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/termusic                     | 0.9.0                                     |        | https://github.com/tramhao/termusic                                                     | Terminal Music and Podcast Player written in Rust
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
