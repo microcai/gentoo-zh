@@ -3,7 +3,7 @@
 
 EAPI=8
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{9..11} pypy)
+PYTHON_COMPAT=( python3_{9..12} pypy)
 
 inherit distutils-r1 pypi
 
@@ -11,7 +11,7 @@ DESCRIPTION="qq music support for feeluown"
 HOMEPAGE="https://github.com/feeluown/feeluown-qqmusic"
 
 LICENSE="GPL-3"
-SLOT="0"
+SLOT="1"
 KEYWORDS="~amd64"
 
 RDEPEND="
