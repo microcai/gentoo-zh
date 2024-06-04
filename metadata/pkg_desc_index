@@ -105,7 +105,7 @@ dev-cpp/nameof 0.10.4: Nameof operator for modern C++
 dev-cpp/reproc 14.2.4: A cross-platform (C99/C++11) process library
 dev-cpp/tgbot-cpp 1.7.3: C++ library for Telegram bot API
 dev-cpp/tl-expected 1.1.0: Guideline Support Library implementation by Microsoft
-dev-db/dbeaver-bin 24.0.5: Free universal database tool (community edition).
+dev-db/dbeaver-bin 24.1.0: Free universal database tool (community edition).
 dev-db/mongodb 5.3.1 6.2.0-r4: A high-performance, open source, schema-free document-oriented database
 dev-debug/lldb-mi 0.0.1 9999: LLDB Machine Interface Driver
 dev-java/oraclejdk-bin 8.391 21.0.1: Oracle's Java SE Development Kit
@@ -127,9 +127,9 @@ dev-python/conda-libmamba-solver 24.1.0-r1: The libmamba based solver for conda
 dev-python/conda-package-handling 2.2.0: Create and extract conda packages of various formats
 dev-python/conda-package-streaming 0.7.0: An efficient library to read from new and old conda packages
 dev-python/daff 1.3.46: The daff can produce and apply tabular diffs
-dev-python/feeluown-bilibili 0.3.3: bilibili support for feeluown
-dev-python/fuo-netease 1.0.1: netease cloud music support for feeluown
-dev-python/fuo-qqmusic 1.0.2: qq music support for feeluown
+dev-python/feeluown-bilibili 0.4.0: bilibili support for feeluown
+dev-python/fuo-netease 1.0.3: netease cloud music support for feeluown
+dev-python/fuo-qqmusic 1.0.5: qq music support for feeluown
 dev-python/fuo-ytmusic 0.3.4: youtube music support for feeluown
 dev-python/janus 1.0.0-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/nvchecker 2.13.1 2.14 2.14.1 2.15 2.15.1: nvchecker is for checking if a new version of some software has been released
@@ -191,13 +191,13 @@ media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.11 0.5.14 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-plugins/waylyrics 0.3.10: Simple On Screen lyrics Display for linux/unix
 media-sound/barva 9999: a modular audio visualizer
-media-sound/feeluown 4.1.2: A user-friendly and hackable music player
+media-sound/feeluown 4.1.5: A user-friendly and hackable music player
 media-sound/go-musicfox 4.4.1: Command-line Netease Cloud Music written in Go
 media-sound/linnya 2.2.0: A free music player
 media-sound/listen1_desktop-bin 2.32.0: one for all free music in China
 media-sound/lx-music-desktop-bin 2.2.2: 一个基于 electron 的音乐软件
 media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb package
-media-sound/netease-cloud-music-gtk 2.3.1: netease cloud music player based on Rust & GTK for Linux
+media-sound/netease-cloud-music-gtk 2.4.0: netease cloud music player based on Rust & GTK for Linux
 media-sound/qqmusic 1.1.5: Tencent QQ Music, converted from .deb package
 media-sound/spotube-bin 3.6.0: A lightweight Spotify client using YouTube as audio source
 media-sound/termusic 0.9.0: Terminal Music and Podcast Player written in Rust
