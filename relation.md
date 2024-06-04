@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-06-05 00:21:29 CST)
+(The last generation time: 2024-06-05 00:22:04 CST)
 
 ### Packages
 
@@ -208,9 +208,9 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/v2ray-rules-dat                 | 202402252208                              |        | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/archspec                      | 0.2.3                                     |        | https://github.com/archspec/archspec                                                    | A library for detecting, labeling, and reasoning about microarchitectures
+ dev-python/archspec                      | 0.2.4                                     |        | https://github.com/archspec/archspec                                                    | A library for detecting, labeling, and reasoning about microarchitectures
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/conda                         | 24.3.0                                    |        | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
+ dev-python/conda                         | 24.5.0                                    |        | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
    dev-python/conda-libmamba-solver       | 24.1.0-r1                                 |  D, RD | https://github.com/conda/conda-libmamba-solver                                          | The libmamba based solver for conda
      dev-util/mamba                       | 1.5.8                                     | RD     | https://github.com/mamba-org/mamba                                                      | The Fast Cross-Platform Package Manager
        dev-cpp/reproc                     | 14.2.4                                    |  D, RD | https://github.com/DaanDeMeyer/reproc                                                   | A cross-platform (C99/C++11) process library
