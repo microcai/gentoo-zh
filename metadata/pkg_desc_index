@@ -121,8 +121,8 @@ dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458-r1 9999: Community m
 dev-libs/v2ray-domain-list-community-bin 20240508170917: Community managed domain list for V2Ray.
 dev-libs/v2ray-geoip-bin 202405090040: GeoIP for V2Ray.
 dev-libs/v2ray-rules-dat 202402252208: Enhanced edition of V2Ray rules dat files.
-dev-python/archspec 0.2.3: A library for detecting, labeling, and reasoning about microarchitectures
-dev-python/conda 24.3.0: OS-agnostic, system-level binary package manager and ecosystem
+dev-python/archspec 0.2.4: A library for detecting, labeling, and reasoning about microarchitectures
+dev-python/conda 24.5.0: OS-agnostic, system-level binary package manager and ecosystem
 dev-python/conda-libmamba-solver 24.1.0-r1: The libmamba based solver for conda
 dev-python/conda-package-handling 2.2.0: Create and extract conda packages of various formats
 dev-python/conda-package-streaming 0.7.0: An efficient library to read from new and old conda packages
@@ -166,7 +166,7 @@ media-fonts/Plangothic 1.8.5760: 遍黑体项目（Plangothic Project）
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/iansui 1.000: An open-source Chinese font derived from Klee One (Fontworks).
 media-fonts/jf-openhuninn 2.0: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
-media-fonts/lxgw-neo-xihei 1.123: A Chinese sans-serif font derived from IPAex Gothic.
+media-fonts/lxgw-neo-xihei 1.123.1: A Chinese sans-serif font derived from IPAex Gothic.
 media-fonts/lxgw-neo-zhisong 0.113: An open-source Chinese font derived from IPAmj Mincho
 media-fonts/nerd-fonts 3.2.1: Nerd Fonts is a project that patches developer targeted fonts with glyphs
 media-fonts/sarasa-gothic 1.0.13: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
@@ -199,7 +199,7 @@ media-sound/lx-music-desktop-bin 2.2.2: 一个基于 electron 的音乐软件
 media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb package
 media-sound/netease-cloud-music-gtk 2.4.0: netease cloud music player based on Rust & GTK for Linux
 media-sound/qqmusic 1.1.5: Tencent QQ Music, converted from .deb package
-media-sound/spotube-bin 3.6.0: A lightweight Spotify client using YouTube as audio source
+media-sound/spotube-bin 3.7.0: A lightweight Spotify client using YouTube as audio source
 media-sound/termusic 0.9.0: Terminal Music and Podcast Player written in Rust
 media-sound/yesplaymusic-bin 0.4.6 0.4.7: A third party music player for Netease Music
 media-sound/youtube-music-bin 2.2.0: YouTube Music Desktop App bundled with custom plugins
