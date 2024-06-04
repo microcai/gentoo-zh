@@ -1,20 +1,19 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{9..11} pypy3 )
+PYTHON_COMPAT=( python3_{9..12} pypy3 )
 
 inherit distutils-r1 pypi
 
 DESCRIPTION="Python tools for downloading YouTube Videos"
 HOMEPAGE="https://github.com/pytube/pytube"
-IUSE="test"
-RESTRICT="!test? ( test )"
-
 LICENSE="Unlicense"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="test"
+RESTRICT="!test? ( test )"
 
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]

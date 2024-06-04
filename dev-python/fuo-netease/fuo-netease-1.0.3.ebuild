@@ -3,7 +3,7 @@
 
 EAPI=8
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{9..12} pypy)
 
 inherit distutils-r1 pypi
 
@@ -11,7 +11,7 @@ DESCRIPTION="netease cloud music support for feeluown"
 HOMEPAGE="https://github.com/feeluown/feeluown-netease"
 
 LICENSE="GPL-3"
-SLOT="0"
+SLOT="1"
 KEYWORDS="~amd64"
 
 RDEPEND="
@@ -25,3 +25,7 @@ RDEPEND="
 PDEPEND="
 	media-sound/feeluown
 "
+
+python_install_all() {
+	distutils-r1_python_install_all
+}
