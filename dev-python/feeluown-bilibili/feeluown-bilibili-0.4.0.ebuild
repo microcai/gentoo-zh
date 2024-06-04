@@ -2,16 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-PYTHON_COMPAT=( python3_{10..12})
 DISTUTILS_USE_PEP517=poetry
+PYTHON_COMPAT=( python3_{10..12} )
+PYPI_NO_NORMALIZE=true
+inherit distutils-r1 pypi
 
-inherit distutils-r1
-
-DESCRIPTION="youtube music support for feeluown"
-HOMEPAGE="https://github.com/feeluown/feeluown-ytmusic"
-
-S="${WORKDIR}/feeluown-ytmusic-${PV}"
-SRC_URI="https://github.com/feeluown/feeluown-ytmusic/archive/refs/tags/v${PV}.tar.gz -> ${P}.gh.tar.gz"
+DESCRIPTION="bilibili support for feeluown"
+HOMEPAGE="https://github.com/feeluown/feeluown-bilibili"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -21,7 +18,6 @@ RDEPEND="
 	dev-python/beautifulsoup4[${PYTHON_USEDEP}]
 	dev-python/pycryptodome[${PYTHON_USEDEP}]
 	dev-python/cachetools[${PYTHON_USEDEP}]
-	dev-python/ytmusicapi[${PYTHON_USEDEP}]
 "
 
 PDEPEND="

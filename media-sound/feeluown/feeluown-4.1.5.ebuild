@@ -3,16 +3,12 @@
 
 EAPI=8
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 
-inherit distutils-r1 desktop
+inherit distutils-r1 desktop pypi
 
 DESCRIPTION="A user-friendly and hackable music player"
 HOMEPAGE="https://github.com/feeluown/FeelUOwn"
-MY_P="${P/_alpha/a}"
-MY_PV="${PV/_alpha/a}"
-S="${WORKDIR}/FeelUOwn-${MY_PV}"
-SRC_URI="https://github.com/${PN}/FeelUOwn/archive/refs/tags/v${MY_PV}.tar.gz -> ${MY_P}.gh.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
