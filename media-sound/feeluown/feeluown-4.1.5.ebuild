@@ -13,8 +13,8 @@ HOMEPAGE="https://github.com/feeluown/FeelUOwn"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-RESTRICT="test" # TODO
 IUSE="+netease +qqmusic +webengine +ytmusic +bilibili +cookies"
+RESTRICT="test" # TODO
 
 RDEPEND="
 	dev-python/janus[${PYTHON_USEDEP}]

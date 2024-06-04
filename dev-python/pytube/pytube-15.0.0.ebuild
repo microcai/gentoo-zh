@@ -10,9 +10,9 @@ inherit distutils-r1 pypi
 DESCRIPTION="Python tools for downloading YouTube Videos"
 HOMEPAGE="https://github.com/pytube/pytube"
 IUSE="test"
+LICENSE="Unlicense"
 RESTRICT="!test? ( test )"
 
-LICENSE="Unlicense"
 SLOT="0"
 KEYWORDS="~amd64"
 

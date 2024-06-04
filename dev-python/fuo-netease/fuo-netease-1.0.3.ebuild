@@ -11,7 +11,7 @@ DESCRIPTION="netease cloud music support for feeluown"
 HOMEPAGE="https://github.com/feeluown/feeluown-netease"
 
 LICENSE="GPL-3"
-SLOT="0"
+SLOT="1"
 KEYWORDS="~amd64"
 
 RDEPEND="
