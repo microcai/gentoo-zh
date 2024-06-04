@@ -12,9 +12,8 @@ HOMEPAGE="https://github.com/pytube/pytube"
 LICENSE="Unlicense"
 SLOT="0"
 IUSE="test"
-RESTRICT="!test? ( test )"
-
 KEYWORDS="~amd64"
+RESTRICT="!test? ( test )"
 
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
