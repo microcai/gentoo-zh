@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-06-05 00:22:04 CST)
+(The last generation time: 2024-06-06 21:35:41 CST)
 
 ### Packages
 
@@ -50,7 +50,8 @@
  app-emulation/looking-glass              | 0_beta6-r1                                |        | https://looking-glass.io                                                                | A low latency KVMFR application for guests with VGA PCI Passthrough
    gui-libs/libdecor                      | 0.1.1                                     |  D, RD | https://gitlab.freedesktop.org/libdecor/libdecor                                        | A client-side decorations library for Wayland clients
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-emulation/winetricks-zh              | 9999                                      |        | http://winetricks.org                                                                   | winetricks fork for chinese to install QQ
+ app-emulation/winetricks-zh              | 9999                                      |        | https://github.com/hillwoodroc/winetricks-zh/                                           | windows applications setup wizard for Chinese wine users
+                                          | 20240105.1                                |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/dvp                             | 1.2.1-r1                                  |        | http://kaufmann.no/roland/dvorak/index.html                                             | The kbd keymap for Programmer Dvorak.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -453,8 +454,8 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/weixin-uos                        | 2.1.8                                     |        | https://www.chinauos.com/resource/download-professional                                 | UOS weixin
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-im/wemeet                            | 3.15.1.403                                |        | https://wemeet.qq.com                                                                   | Wemeet - Tencent Video Conferencing
-                                          | 3.19.0.401                                |        |                                                                                         |
+ net-im/wemeet                            | 3.19.1.400                                |        | https://wemeet.qq.com                                                                   | Wemeet - Tencent Video Conferencing
+                                          | 3.19.1.401                                |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-libs/jzmq                            | 9999                                      |        | http://www.zeromq.org/bindings:java                                                     | jzmq
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
