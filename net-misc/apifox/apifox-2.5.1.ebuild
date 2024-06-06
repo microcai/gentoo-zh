@@ -11,6 +11,7 @@ SRC_URI="
 	amd64? ( https://cdn.apifox.cn/download/Apifox-linux-latest.zip -> ${P}-amd64.zip )
 "
 
+S="${WORKDIR}"
 LICENSE="all-rights-reserved"
 
 SLOT="0"
@@ -22,8 +23,6 @@ BDEPEND="
 	app-arch/unzip
 	sys-fs/fuse:0
 "
-
-S="${WORKDIR}"
 
 src_install() {
 	into /opt/apifox
