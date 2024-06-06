@@ -38,7 +38,7 @@ app-emulation/liblol 0.1.5_pre6: LoongArch old-world ABI compatibility layer fro
 app-emulation/liblol-glibc 0.1.5_pre6: GNU libc C library, for liblol
 app-emulation/liblol-libxcrypt 0.1.5_pre6: libxcrypt for liblol
 app-emulation/looking-glass 0_beta6-r1: A low latency KVMFR application for guests with VGA PCI Passthrough
-app-emulation/winetricks-zh 9999: winetricks fork for chinese to install QQ
+app-emulation/winetricks-zh 9999 20240105.1: windows applications setup wizard for Chinese wine users
 app-i18n/cskk 3.1.1: C ABIから使う事を目的とした SKK(Simple Kana Kanji henkan)方式のかな漢字変換ライブラリ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
 app-i18n/fcitx 9999: Fcitx5 Next generation of fcitx
@@ -229,7 +229,7 @@ net-im/dingtalk 7.0.40.30706 7.1.0.31017 7.1.0.31120: Communication platform tha
 net-im/tencent-qq 3.2.8_p240520-r1: The new version of the official linux-qq
 net-im/wechat-universal-bwrap 1.0.0.241-r1: WeChat (Universal) from UOS, inside bwrap sandbox
 net-im/weixin-uos 2.1.8: UOS weixin
-net-im/wemeet 3.15.1.403 3.19.0.401: Wemeet - Tencent Video Conferencing
+net-im/wemeet 3.19.1.400 3.19.1.401: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq
 net-misc/alist 3.32.0 3.35.0: A file list/WebDAV program that supports multiple storages
 net-misc/aliyundrive-webdav 2.3.3: WebDAV server for AliyunDrive
@@ -337,6 +337,7 @@ x11-terms/wezterm-bin 20240203: A terminal emulator and multiplexer implemented 
 x11-themes/bibata-cursor 2.0.6: Open source, compact, and material designed cursor set
 x11-themes/fcitx-breeze 2.0.0-r2: Fcitx5 theme to match KDE's Breeze style.
 x11-themes/klassy 4.0.5.25.80-r1: Highly customizable theme plugin for KDE Plasma desktop
+x11-themes/kora-icon-theme 1.6.1: An SVG icon theme with lots of new icons for GNU/Linux operating systems
 x11-themes/lxice 0.1.0: LXDE theme for IceWM
 x11-themes/nordic 2.1.0 2.2.0-r1: Dark Gtk3.20+ theme created using the awesome Nord color pallete
 x11-themes/nordzy-cursors 0.5.0 0.6.0: Cursor theme using the Nord color palette and based on Vimix and cz-Viator
