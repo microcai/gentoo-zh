@@ -4,7 +4,7 @@
 EAPI="8"
 K_WANT_GENPATCHES="base extras"
 #Note: to bump xanmod, check K_GENPATCHES_VER in sys-kernel/gentoo-sources
-K_GENPATCHES_VER="13"
+K_GENPATCHES_VER="4"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 ETYPE="sources"
@@ -12,25 +12,20 @@ inherit kernel-2
 detect_version
 
 DESCRIPTION="Full XanMod source, including the Gentoo patchset and other patch options."
-HOMEPAGE="https://xanmod.org
-		https://github.com/OriPoin/cjktty-patches
-		https://github.com/hamadmarri/TT-CPU-Scheduler"
+HOMEPAGE="https://xanmod.org"
 
 XANMOD_VERSION="1"
 XANMOD_URI="https://download.sourceforge.net/xanmod"
 OKV="${OKV}-xanmod"
-CJKTTY_URI="https://raw.githubusercontent.com/OriPoin/cjktty-patches/master"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
 	${GENPATCHES_URI}
 	${XANMOD_URI}/patch-${OKV}${XANMOD_VERSION}.xz
-	${CJKTTY_URI}/v${KV_MAJOR}.x/cjktty-${KV_MAJOR}.${KV_MINOR}.patch
-	${CJKTTY_URI}/cjktty-add-cjk32x32-font-data.patch
 "
 
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
-IUSE="cjktty"
+IUSE=""
 
 src_unpack() {
 	universal_unpack
@@ -46,11 +41,6 @@ src_unpack() {
 	for i in $(dir "${WORKDIR}"/genpatches/*.patch); do
 		UNIPATCH_LIST+=" ${i}"
 	done
-
-	if use cjktty; then
-		UNIPATCH_LIST+=" ${DISTDIR}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch"
-		UNIPATCH_LIST+=" ${DISTDIR}/cjktty-add-cjk32x32-font-data.patch"
-	fi
 
 	UNIPATCH_LIST+=" ${DISTDIR}/patch-${OKV}${XANMOD_VERSION}.xz"
 	unipatch "${UNIPATCH_LIST}"
