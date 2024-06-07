@@ -7,7 +7,7 @@ inherit kernel-build toolchain-funcs
 
 MY_P=linux-${PV%.*}
 #Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
-GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 3))
+GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 1))
 XV="1"
 
 DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
@@ -15,14 +15,12 @@ HOMEPAGE="https://www.kernel.org/"
 SRC_URI+=" https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.xz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.base.tar.xz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.extras.tar.xz
-	https://download.sourceforge.net/xanmod/patch-${PV}-xanmod1.xz
-	https://raw.githubusercontent.com/OriPoin/cjktty-patches/master/v6.x/cjktty-${PV%.*}.patch
-	https://raw.githubusercontent.com/OriPoin/cjktty-patches/master/cjktty-add-cjk32x32-font-data.patch"
+	https://download.sourceforge.net/xanmod/patch-${PV}-xanmod1.xz"
 S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64"
-IUSE="cjk clang debug +x86-64-v1 x86-64-v2 x86-64-v3 x86-64-v4"
+IUSE="clang debug +x86-64-v1 x86-64-v2 x86-64-v3 x86-64-v4"
 REQUIRED_USE="^^ ( x86-64-v1 x86-64-v2 x86-64-v3 x86-64-v4 )"
 
 PDEPEND="
@@ -66,10 +64,6 @@ src_prepare() {
 		# xanmod patches
 		"${WORKDIR}"/patch-${PV}-xanmod${XV}
 	)
-	if use cjk; then
-		PATCHES+=("${DISTDIR}/cjktty-${PV%.*}.patch")
-		PATCHES+=("${DISTDIR}/cjktty-add-cjk32x32-font-data.patch")
-	fi
 	default
 
 	# prepare the default config
