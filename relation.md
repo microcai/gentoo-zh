@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-06-06 22:03:26 CST)
+(The last generation time: 2024-06-07 13:52:17 CST)
 
 ### Packages
 
@@ -33,7 +33,7 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-zhwiki            | 20230728                                  |        | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/appflowy-bin                 | 0.5.8                                     |        | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
+ app-editors/appflowy-bin                 | 0.5.9                                     |        | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/marktext-bin                 | 0.17.1                                    |        | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -305,7 +305,7 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/jf-openhuninn                | 2.0                                       |        | https://justfont.com/huninn/                                                            | An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/lxgw-neo-xihei               | 1.123.1                                   |        | https://github.com/lxgw/LxgwNeoXiHei                                                    | A Chinese sans-serif font derived from IPAex Gothic.
+ media-fonts/lxgw-neo-xihei               | 1.123.2                                   |        | https://github.com/lxgw/LxgwNeoXiHei                                                    | A Chinese sans-serif font derived from IPAex Gothic.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/lxgw-neo-zhisong             | 0.113                                     |        | https://github.com/lxgw/LxgwNeoZhiSong                                                  | An open-source Chinese font derived from IPAmj Mincho
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
