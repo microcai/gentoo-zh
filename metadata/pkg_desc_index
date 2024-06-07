@@ -25,9 +25,10 @@ app-crypt/cfssl 1.6.5: Cloudflare's PKI and TLS toolkit
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-dicts/fcitx-pinyin-moegirl 20230714: Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 app-dicts/fcitx-pinyin-zhwiki 20230728: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
-app-editors/appflowy-bin 0.5.8: AppFlowy is an open-source alternative to Notion
+app-editors/appflowy-bin 0.5.9: AppFlowy is an open-source alternative to Notion
 app-editors/marktext-bin 0.17.1: A simple and elegant markdown editor, available for Linux, macOS and Windows.
 app-editors/typora 0.11.18 1.8.10: A truely minimal markdown editor.
+app-editors/zed 0.138.4: high-performance, multiplayer code editor
 app-emulation/deepin-udis86 1.72-r4: Disassembler library for x86 (32-bit shared library)
 app-emulation/deepin-wine-helper 5.1.27-r1 5.1.45: Deepin Wine Helper
 app-emulation/deepin-wine-plugin 5.1.13-r1: Deepin Wine plugin
@@ -166,7 +167,7 @@ media-fonts/Plangothic 1.8.5760: 遍黑体项目（Plangothic Project）
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/iansui 1.000: An open-source Chinese font derived from Klee One (Fontworks).
 media-fonts/jf-openhuninn 2.0: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
-media-fonts/lxgw-neo-xihei 1.123.1: A Chinese sans-serif font derived from IPAex Gothic.
+media-fonts/lxgw-neo-xihei 1.123.2: A Chinese sans-serif font derived from IPAex Gothic.
 media-fonts/lxgw-neo-zhisong 0.113: An open-source Chinese font derived from IPAmj Mincho
 media-fonts/nerd-fonts 3.2.1: Nerd Fonts is a project that patches developer targeted fonts with glyphs
 media-fonts/sarasa-gothic 1.0.13: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
@@ -199,7 +200,7 @@ media-sound/lx-music-desktop-bin 2.2.2: 一个基于 electron 的音乐软件
 media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb package
 media-sound/netease-cloud-music-gtk 2.4.0: netease cloud music player based on Rust & GTK for Linux
 media-sound/qqmusic 1.1.5: Tencent QQ Music, converted from .deb package
-media-sound/spotube-bin 3.7.0: A lightweight Spotify client using YouTube as audio source
+media-sound/spotube-bin 3.7.1: A lightweight Spotify client using YouTube as audio source
 media-sound/termusic 0.9.0: Terminal Music and Podcast Player written in Rust
 media-sound/yesplaymusic-bin 0.4.6 0.4.7: A third party music player for Netease Music
 media-sound/youtube-music-bin 2.2.0: YouTube Music Desktop App bundled with custom plugins
@@ -234,7 +235,7 @@ net-libs/jzmq 9999: jzmq
 net-misc/alist 3.32.0 3.35.0: A file list/WebDAV program that supports multiple storages
 net-misc/aliyundrive-webdav 2.3.3: WebDAV server for AliyunDrive
 net-misc/aliyunpan 0.2.8: aliyunpan cli client, support Webdav service, JavaScript plugin
-net-misc/apifox 2.3.24: API 文档、API 调试、API Mock、API 自动化测试
+net-misc/apifox 2.5.1: API 文档、API 调试、API Mock、API 自动化测试
 net-misc/avsocks 9999: 科学操长城软件
 net-misc/baidunetdisk 4.3.0 4.17.7: Baidu Net Disk is a cloud storage client (Linux Version)
 net-misc/baidupcs-go 3.9.5: The terminal utility for Baidu Network Disk (Golang Version).
