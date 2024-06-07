@@ -1,21 +1,36 @@
 name: Sync with upstream
 
 on:
+  schedule:
+    - cron: '0 0 * * *'  # Daily at midnight UTC
   push:
-    branches: [ master ]
+    branches: [ master ]  # On every push to master
 
 jobs:
   sync:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Git configuration
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Add upstream repository
+        run: git remote add upstream https://github.com/microcai/gentoo-zh.git
 
       - name: Fetch upstream changes
-        run: git fetch git fetch https://github.com/microcai/gentoo-zh.git upstream
+        run: git fetch upstream
 
       - name: Merge upstream changes
         run: git merge upstream/master
 
       - name: Push changes to origin
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: git push origin master
