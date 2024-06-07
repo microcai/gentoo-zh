@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Fetch upstream changes
-        run: git fetch upstream
+        run: git fetch git fetch https://github.com/microcai/gentoo-zh.git upstream upstream
 
       - name: Merge upstream changes
         run: git merge upstream/master
