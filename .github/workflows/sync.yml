@@ -8,6 +8,7 @@ on:
 
 jobs:
   sync:
+    if: github.repository == 'AmberisMyShiba/gentoo-zh'
     runs-on: ubuntu-latest
 
     steps:
