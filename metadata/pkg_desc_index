@@ -28,7 +28,7 @@ app-dicts/fcitx-pinyin-zhwiki 20230728: Fcitx 5 Pinyin Dictionary from zh.wikipe
 app-editors/appflowy-bin 0.5.9: AppFlowy is an open-source alternative to Notion
 app-editors/marktext-bin 0.17.1: A simple and elegant markdown editor, available for Linux, macOS and Windows.
 app-editors/typora 0.11.18 1.8.10: A truely minimal markdown editor.
-app-editors/zed 0.138.4: high-performance, multiplayer code editor
+app-editors/zed 0.138.6: high-performance, multiplayer code editor
 app-emulation/deepin-udis86 1.72-r4: Disassembler library for x86 (32-bit shared library)
 app-emulation/deepin-wine-helper 5.1.27-r1 5.1.45: Deepin Wine Helper
 app-emulation/deepin-wine-plugin 5.1.13-r1: Deepin Wine plugin
@@ -45,7 +45,7 @@ app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
 app-i18n/fcitx 9999: Fcitx5 Next generation of fcitx
 app-i18n/fcitx-anthy 5.1.2: Japanese Anthy input methods for Fcitx5
 app-i18n/fcitx-bamboo 1.0.4: Typing Vietnamese by Bamboo core engine for Fcitx5
-app-i18n/fcitx-chewing 5.1.2 5.1.3: Chewing Wrapper for Fcitx.
+app-i18n/fcitx-chewing 5.1.3 5.1.4: Chewing Wrapper for Fcitx.
 app-i18n/fcitx-chinese-addons 9999: Addons related to Chinese, including IME previous bundled inside fcitx4.
 app-i18n/fcitx-configtool 5.1.5 9999: Configuration module for Fcitx
 app-i18n/fcitx-cskk 1.2.0: SKK input method plugin for fcitx5 that uses LibCSKK
@@ -56,10 +56,10 @@ app-i18n/fcitx-m17n 5.1.0 9999: m17n-provided input methods for Fcitx5
 app-i18n/fcitx-meta 5.0.12-r2: Merge this to pull in Fcitx packages
 app-i18n/fcitx-qt 9999: Qt library and IM module for fcitx5
 app-i18n/fcitx-rime 9999: Rime Support for Fcitx5
-app-i18n/fcitx-skk 5.1.3 9999: Japanese SKK input engine for Fcitx5
+app-i18n/fcitx-skk 5.1.4 9999: Japanese SKK input engine for Fcitx5
 app-i18n/ibus-rime 9999: Rime Input Method Engine for IBus Framework
 app-i18n/libime 9999: Fcitx5 Next generation of fcitx
-app-i18n/libime-jyutping 1.0.11: A library make use of libime to implement jyutping input method
+app-i18n/libime-jyutping 1.0.12: A library make use of libime to implement jyutping input method
 app-i18n/librime 1.10.0: RIME (Rime Input Method Engine) core library
 app-i18n/lunar 2.2-r5: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
@@ -242,7 +242,7 @@ net-misc/baidupcs-go 3.9.5: The terminal utility for Baidu Network Disk (Golang 
 net-misc/bbdown-bin 1.6.2: 一款命令行式哔哩哔哩下载器
 net-misc/biliup-app 0.4.1-r2: A Tool for Upload video to bilibili
 net-misc/biliup-app-bin 0.4.1: A Tool for Upload video to bilibili
-net-misc/biliup-rs 0.1.21: Upload video to bilibili.
+net-misc/biliup-rs 0.2.0: Upload video to bilibili.
 net-misc/networkmanager-l2tp 9999: NetworkManager L2TP plugin
 net-misc/nomachine-enterprise-client 7.8.2.1 7.9.2.1: NoMachine Enterprise Client
 net-misc/pcmanx-gtk2 1.3 9999: PCMan is a gtk+ based free BBS client
