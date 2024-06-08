@@ -6,38 +6,38 @@
 EAPI=8
 
 CRATES="
-	addr2line@0.21.0
+	addr2line@0.22.0
 	adler@1.0.2
 	ahash@0.8.11
 	aho-corasick@1.1.3
 	allocator-api2@0.2.18
 	android-tzdata@0.1.1
 	android_system_properties@0.1.5
-	anstream@0.6.13
-	anstyle-parse@0.2.3
-	anstyle-query@1.0.2
-	anstyle-wincon@3.0.2
-	anstyle@1.0.6
-	anyhow@1.0.82
-	async-compression@0.4.9
+	anstream@0.6.14
+	anstyle-parse@0.2.4
+	anstyle-query@1.1.0
+	anstyle-wincon@3.0.3
+	anstyle@1.0.7
+	anyhow@1.0.86
+	async-compression@0.4.11
 	async-trait@0.1.80
 	atoi@2.0.0
-	autocfg@1.2.0
+	autocfg@1.3.0
 	axum-core@0.4.3
 	axum@0.7.5
-	backtrace@0.3.71
+	backtrace@0.3.72
 	base64@0.21.7
-	base64@0.22.0
+	base64@0.22.1
 	base64ct@1.6.0
 	bit_field@0.10.2
 	bitflags@1.3.2
 	bitflags@2.5.0
 	block-buffer@0.10.4
 	bumpalo@3.16.0
-	bytemuck@1.15.0
+	bytemuck@1.16.0
 	byteorder@1.5.0
 	bytes@1.6.0
-	cc@1.0.95
+	cc@1.0.98
 	cfg-if@1.0.0
 	chrono@0.4.38
 	clap@4.5.4
@@ -45,7 +45,7 @@ CRATES="
 	clap_derive@4.5.4
 	clap_lex@0.7.0
 	color_quant@1.1.0
-	colorchoice@1.0.0
+	colorchoice@1.0.1
 	console@0.15.8
 	const-oid@0.9.6
 	cookie@0.17.0
@@ -54,13 +54,13 @@ CRATES="
 	core-foundation@0.9.4
 	cpufeatures@0.2.12
 	crc-catalog@2.4.0
-	crc32fast@1.4.0
+	crc32fast@1.4.2
 	crc@3.2.1
-	crossbeam-channel@0.5.12
+	crossbeam-channel@0.5.13
 	crossbeam-deque@0.8.5
 	crossbeam-epoch@0.9.18
 	crossbeam-queue@0.3.11
-	crossbeam-utils@0.8.19
+	crossbeam-utils@0.8.20
 	crunchy@0.2.2
 	crypto-common@0.1.6
 	der@0.7.9
@@ -68,17 +68,16 @@ CRATES="
 	dialoguer@0.11.0
 	digest@0.10.7
 	dotenvy@0.15.7
-	either@1.11.0
+	either@1.12.0
 	encode_unicode@0.3.6
 	equivalent@1.0.1
-	errno@0.3.8
+	errno@0.3.9
 	etcetera@0.8.0
 	event-listener@2.5.3
 	exr@1.72.0
-	fastrand@2.0.2
+	fastrand@2.1.0
 	fdeflate@0.3.4
-	finl_unicode@1.2.0
-	flate2@1.0.29
+	flate2@1.0.30
 	flume@0.11.0
 	fnv@1.0.7
 	foreign-types-shared@0.1.1
@@ -95,12 +94,12 @@ CRATES="
 	futures-util@0.3.30
 	futures@0.3.30
 	generic-array@0.14.7
-	getrandom@0.2.14
+	getrandom@0.2.15
 	gif@0.13.1
-	gimli@0.28.1
+	gimli@0.29.0
 	glob@0.3.1
 	half@2.4.1
-	hashbrown@0.14.3
+	hashbrown@0.14.5
 	hashlink@0.8.4
 	heck@0.4.1
 	heck@0.5.0
@@ -116,7 +115,7 @@ CRATES="
 	httpdate@1.0.3
 	humantime@2.1.0
 	hyper-rustls@0.26.0
-	hyper-util@0.1.3
+	hyper-util@0.1.5
 	hyper@1.3.1
 	iana-time-zone-haiku@0.1.2
 	iana-time-zone@0.1.60
@@ -126,20 +125,19 @@ CRATES="
 	indexmap@2.2.6
 	indicatif@0.17.8
 	indoc@2.0.5
-	instant@0.1.12
+	instant@0.1.13
 	ipnet@2.9.0
+	is_terminal_polyfill@1.70.0
 	itertools@0.12.1
 	itoa@1.0.11
-	jemalloc-sys@0.5.4+5.3.0-patched
-	jemallocator@0.5.4
 	jpeg-decoder@0.3.1
 	js-sys@0.3.69
 	lazy_static@1.4.0
 	lebe@0.5.2
-	libc@0.2.153
+	libc@0.2.155
 	libm@0.2.8
 	libsqlite3-sys@0.27.0
-	linux-raw-sys@0.4.13
+	linux-raw-sys@0.4.14
 	lock_api@0.4.12
 	log@0.4.21
 	m3u8-rs@5.0.5
@@ -150,32 +148,32 @@ CRATES="
 	memoffset@0.9.1
 	mime@0.3.17
 	minimal-lexical@0.2.1
-	miniz_oxide@0.7.2
+	miniz_oxide@0.7.3
 	mio@0.8.11
-	native-tls@0.2.11
+	native-tls@0.2.12
 	nom@7.1.3
 	nu-ansi-term@0.46.0
 	num-bigint-dig@0.8.4
 	num-conv@0.1.0
 	num-integer@0.1.46
-	num-iter@0.1.44
-	num-traits@0.2.18
+	num-iter@0.1.45
+	num-traits@0.2.19
 	num_cpus@1.16.0
 	num_threads@0.1.7
 	number_prefix@0.4.0
-	object@0.32.2
+	object@0.35.0
 	once_cell@1.19.0
 	openssl-macros@0.1.1
 	openssl-probe@0.1.5
-	openssl-src@300.2.3+3.2.1
+	openssl-src@300.3.1+3.3.1
 	openssl-sys@0.9.102
 	openssl@0.10.64
 	overload@0.1.1
 	parking_lot@0.11.2
-	parking_lot@0.12.2
+	parking_lot@0.12.3
 	parking_lot_core@0.8.6
 	parking_lot_core@0.9.10
-	paste@1.0.14
+	paste@1.0.15
 	pem-rfc7468@0.7.0
 	percent-encoding@2.3.1
 	pin-project-internal@1.1.5
@@ -189,7 +187,7 @@ CRATES="
 	portable-atomic@1.6.0
 	powerfmt@0.2.0
 	ppv-lite86@0.2.17
-	proc-macro2@1.0.81
+	proc-macro2@1.0.85
 	psl-types@2.0.11
 	publicsuffix@2.2.3
 	pyo3-build-config@0.21.2
@@ -213,32 +211,32 @@ CRATES="
 	regex-syntax@0.6.29
 	regex-syntax@0.8.3
 	regex@1.10.4
-	reqwest-middleware@0.3.0
+	reqwest-middleware@0.3.1
 	reqwest-retry@0.5.0
 	reqwest@0.12.4
 	reqwest_cookie_store@0.7.0
 	retry-policies@0.3.0
 	ring@0.17.8
 	rsa@0.9.6
-	rustc-demangle@0.1.23
+	rustc-demangle@0.1.24
 	rustix@0.38.34
 	rustls-pemfile@1.0.4
 	rustls-pemfile@2.1.2
-	rustls-pki-types@1.5.0
+	rustls-pki-types@1.7.0
 	rustls-webpki@0.101.7
-	rustls-webpki@0.102.3
+	rustls-webpki@0.102.4
 	rustls@0.21.12
 	rustls@0.22.4
-	rustversion@1.0.15
-	ryu@1.0.17
+	rustversion@1.0.17
+	ryu@1.0.18
 	schannel@0.1.23
 	scopeguard@1.2.0
 	sct@0.7.1
-	security-framework-sys@2.10.0
-	security-framework@2.10.0
-	serde@1.0.199
-	serde_derive@1.0.199
-	serde_json@1.0.116
+	security-framework-sys@2.11.0
+	security-framework@2.11.0
+	serde@1.0.203
+	serde_derive@1.0.203
+	serde_json@1.0.117
 	serde_path_to_error@0.1.16
 	serde_urlencoded@0.7.1
 	serde_yaml@0.9.34+deprecated
@@ -250,7 +248,7 @@ CRATES="
 	simd-adler32@0.3.7
 	slab@0.4.9
 	smallvec@1.13.2
-	socket2@0.5.6
+	socket2@0.5.7
 	spin@0.5.2
 	spin@0.9.8
 	spki@0.7.3
@@ -262,17 +260,17 @@ CRATES="
 	sqlx-postgres@0.7.4
 	sqlx-sqlite@0.7.4
 	sqlx@0.7.4
-	stringprep@0.1.4
+	stringprep@0.1.5
 	strsim@0.11.1
 	subtle@2.5.0
 	syn@1.0.109
-	syn@2.0.60
+	syn@2.0.66
 	sync_wrapper@0.1.2
 	sync_wrapper@1.0.1
 	target-lexicon@0.12.14
 	tempfile@3.10.1
-	thiserror-impl@1.0.59
-	thiserror@1.0.59
+	thiserror-impl@1.0.61
+	thiserror@1.0.61
 	thread_local@1.1.8
 	tiff@0.9.1
 	time-core@0.1.2
@@ -280,11 +278,11 @@ CRATES="
 	time@0.3.36
 	tinyvec@1.6.0
 	tinyvec_macros@0.1.1
-	tokio-macros@2.2.0
+	tokio-macros@2.3.0
 	tokio-rustls@0.25.0
 	tokio-stream@0.1.15
-	tokio-util@0.7.10
-	tokio@1.37.0
+	tokio-util@0.7.11
+	tokio@1.38.0
 	tower-http@0.5.2
 	tower-layer@0.3.2
 	tower-service@0.3.2
@@ -299,13 +297,14 @@ CRATES="
 	typed-builder-macro@0.18.2
 	typed-builder@0.18.2
 	typenum@1.17.0
-	typeshare-annotation@1.0.3
-	typeshare@1.0.2
+	typeshare-annotation@1.0.4
+	typeshare@1.0.3
 	unicode-bidi@0.3.15
 	unicode-ident@1.0.12
 	unicode-normalization@0.1.23
+	unicode-properties@0.1.1
 	unicode-segmentation@1.11.0
-	unicode-width@0.1.12
+	unicode-width@0.1.13
 	unicode_categories@0.1.1
 	unindent@0.2.3
 	unsafe-libyaml@0.2.11
@@ -329,7 +328,7 @@ CRATES="
 	wasm-timer@0.2.5
 	web-sys@0.3.69
 	webpki-roots@0.25.4
-	webpki-roots@0.26.1
+	webpki-roots@0.26.2
 	weezl@0.1.8
 	whoami@1.5.1
 	winapi-i686-pc-windows-gnu@0.4.0
@@ -356,9 +355,9 @@ CRATES="
 	windows_x86_64_msvc@0.48.5
 	windows_x86_64_msvc@0.52.5
 	winreg@0.52.0
-	zerocopy-derive@0.7.32
-	zerocopy@0.7.32
-	zeroize@1.7.0
+	zerocopy-derive@0.7.34
+	zerocopy@0.7.34
+	zeroize@1.8.1
 	zune-inflate@0.2.54
 "
 
