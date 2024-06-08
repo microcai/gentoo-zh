@@ -1023,7 +1023,7 @@ declare -A GIT_CRATES=(
 	[xim]='https://github.com/npmania/xim-rs;27132caffc5b9bc9c432ca4afad184ab6e7c16af;xim-rs-%commit%'
 )
 
-inherit cargo desktop optfeature xdg
+inherit cargo desktop flag-o-matic optfeature toolchain-funcs xdg
 
 DESCRIPTION="high-performance, multiplayer code editor"
 HOMEPAGE="
@@ -1043,6 +1043,8 @@ LICENSE+="
 "
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="+lto"
+REQUIRED_USE="lto? ( !debug )"
 
 DEPEND="
 	dev-db/sqlite:3
@@ -1070,13 +1072,27 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}/${P}-nostart-stop-gc.patch"
+	"${FILESDIR}/${PN}-0.138.4-nostart-stop-gc.patch"
 )
 
 pkg_setup() {
-	# NOTE: upstream sets to thinlto by default
-	export CFLAGS+=' -ffat-lto-objects'
-	export CXXFLAGS+=' -ffat-lto-objects'
+	if use !debug && use lto; then
+		# NOTE: upstream sets to thinlto by default
+		if tc-is-gcc; then
+			einfo "Enforcing lto for CC is Gcc"
+			export CARGO_PROFILE_RELEASE_LTO="true"
+			#append-flags "-ffat-lto-objects"
+		elif tc-is-clang; then
+			einfo "Enforcing thinlto for CC is Clang"
+			export CARGO_PROFILE_RELEASE_LTO="thin"
+			#append-flags "-flto=thin"
+		fi
+	else
+		export CARGO_PROFILE_RELEASE_LTO="false"
+		filter-lto
+	fi
+	# In case of compiler switch with unsupported flags
+	strip-unsupported-flags
 }
 
 src_prepare() {
