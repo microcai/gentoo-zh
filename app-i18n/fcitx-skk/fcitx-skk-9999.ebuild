@@ -25,7 +25,7 @@ RDEPEND="
 		dev-qt/qtwidgets:5
 	)
 	qt6? (
-		dev-qt/qtbase:6[gui,widgets]
+		dev-qt/qtbase:6[dbus,gui,widgets]
 	)
 "
 DEPEND="${RDEPEND}"
