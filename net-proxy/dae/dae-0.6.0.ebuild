@@ -9,14 +9,16 @@ _MY_PV=${PV/_rc/rc}
 
 DESCRIPTION="A lightweight and high-performance transparent proxy solution based on eBPF"
 HOMEPAGE="https://github.com/daeuniverse/dae"
+SRC_URI="
+	https://github.com/daeuniverse/dae/releases/download/v${_MY_PV}/dae-full-src.zip -> ${P}.zip
+"
+
+S="${WORKDIR}"
 
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~riscv"
 MINKV="5.8"
-SRC_URI="
-	https://github.com/daeuniverse/dae/releases/download/v${_MY_PV}/dae-full-src.zip -> ${P}.zip
-"
 RESTRICT="mirror"
 
 DEPEND="
@@ -25,8 +27,6 @@ DEPEND="
 "
 RDEPEND="$DEPEND"
 BDEPEND="sys-devel/clang"
-
-S="${WORKDIR}"
 
 pkg_pretend() {
 	local CONFIG_CHECK="
