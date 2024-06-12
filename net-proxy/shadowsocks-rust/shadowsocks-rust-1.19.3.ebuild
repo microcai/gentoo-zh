@@ -467,7 +467,7 @@ LICENSE+="
 	WTFPL-2
 "
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~mips ~x86"
+KEYWORDS="amd64 arm64 ~mips x86"
 IUSE="redir tun"
 
 RESTRICT="mirror strip"
