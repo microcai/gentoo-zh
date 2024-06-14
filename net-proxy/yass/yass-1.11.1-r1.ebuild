@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~mips ~riscv ~x86"
 
-IUSE="+cli server test +gui +gtk3 gtk4 qt6 wayland +tcmalloc mimalloc"
+IUSE="+cli server test +gui +gtk3 gtk4 qt5 qt6 wayland +tcmalloc mimalloc"
 
 # tested with FEATURES="-network-sandbox test"
 # tested with FEATURES="network-sandbox test"
@@ -22,7 +22,7 @@ IUSE="+cli server test +gui +gtk3 gtk4 qt6 wayland +tcmalloc mimalloc"
 RESTRICT="!test? ( test )"
 
 REQUIRED_USE="
-	gui? ( ^^ ( gtk3 gtk4 qt6 ) )
+	gui? ( ^^ ( gtk3 gtk4 qt5 qt6 ) )
 	loong? ( !gtk4 )
 	tcmalloc? ( !mimalloc )
 "
@@ -43,6 +43,11 @@ RDEPEND="
 		gtk4? (
 			gui-libs/gtk:4[wayland?]
 		)
+		qt5? (
+			dev-qt/qtgui:5
+			dev-qt/qtwidgets:5
+			wayland? ( dev-qt/qtwayland:5 )
+		)
 		qt6? (
 			dev-qt/qtbase:6=[dbus,gui,widgets,wayland?]
 			wayland? ( dev-qt/qtwayland:6 )
@@ -54,6 +59,10 @@ BDEPEND="
 	sys-devel/gettext
 	virtual/pkgconfig
 "
+
+PATCHES=(
+	"${FILESDIR}"/build-qt5.patch
+)
 
 src_prepare() {
 	cmake_src_prepare
@@ -74,6 +83,7 @@ src_configure() {
 		-DSERVER=$(usex server)
 		-DGUI=$(usex gui)
 		-DUSE_GTK4=$(usex gtk4)
+		-DUSE_QT5=$(usex qt5)
 		-DUSE_QT6=$(usex qt6)
 		-DBUILD_TESTS=$(usex test)
 		-DUSE_TCMALLOC=$(usex tcmalloc)
