@@ -1,0 +1,189 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 56e46299..e4af455c 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -504,9 +504,13 @@ cmake_dependent_option(USE_QT6
+   "Build with Qt6 (GUI)" OFF
+   "GUI AND NOT WIN32 AND NOT APPLE AND NOT OHOS AND NOT ANDROID" OFF)
+
++cmake_dependent_option(USE_QT5
++  "Build with qt5 (GUI)" OFF
++  "GUI AND NOT USE_QT6 AND NOT WIN32 AND NOT APPLE AND NOT OHOS AND NOT ANDROID" OFF)
++
+ cmake_dependent_option(USE_GTK4
+   "Build with gtk4 (GUI)" OFF
+-  "GUI AND NOT USE_QT6 AND NOT WIN32 AND NOT APPLE AND NOT OHOS AND NOT ANDROID" OFF)
++  "GUI AND NOT USE_QT6 AND NOT USE_QT5 AND NOT WIN32 AND NOT APPLE AND NOT OHOS AND NOT ANDROID" OFF)
+
+ # Dynamic users are supported from version 235
+ # see https://0pointer.net/blog/dynamic-users-with-systemd.html
+@@ -2149,8 +2153,21 @@ elseif (GUI)
+     set(GUI_DEFINITIONS "")
+     set(GUI_C_CXX_FLAGS "")
+     set(GUI_LIBRARY_DIRS "")
+-    set(GUI_LIBRARIES Qt::Widgets Qt::Gui)
++    set(GUI_LIBRARIES Qt6::Widgets Qt6::Gui)
+     set(GUI_FLAVOUR "qt6")
++  elseif(USE_QT5)
++    find_package(Qt5 REQUIRED Core Widgets Gui)
++    set(GUI_USE_FILE "")
++    set(GUI_INCLUDE_DIRS "")
++    set(GUI_DEFINITIONS "")
++    set(GUI_C_CXX_FLAGS "")
++    set(GUI_LIBRARY_DIRS "")
++    set(GUI_LIBRARIES Qt5::Core Qt5::Widgets Qt5::Gui)
++    set(GUI_FLAVOUR "qt5")
++    # suppress some warnings on old qt5 < 5.9
++    if (COMPILER_CLANG AND CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL 16.0)
++      set(GUI_C_CXX_FLAGS ${GUI_C_CXX_FLAGS} -Wno-error=enum-constexpr-conversion)
++    endif()
+   else()
+     pkg_check_modules(FONTCONFIG fontconfig)
+     if (NOT FONTCONFIG_FOUND)
+@@ -4635,6 +4652,23 @@ if (GUI)
+           src/freedesktop/utils.cpp
+           ${CMAKE_CURRENT_BINARY_DIR}/yass.qrc
+         )
++    elseif(GUI_FLAVOUR STREQUAL "qt5")
++        file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/src/qt6/yass.qrc
++          DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
++        file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/src/freedesktop/yass.png
++          DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/images)
++        list(APPEND SRC_FILES
++          src/qt6/yass_window.hpp
++          src/qt6/yass_window.cpp
++          src/qt6/yass.hpp
++          src/qt6/yass.cpp
++          src/qt6/option_dialog.hpp
++          src/qt6/option_dialog.cpp
++          src/qt6/tray_icon.hpp
++          src/qt6/tray_icon.cpp
++          src/freedesktop/utils.cpp
++          ${CMAKE_CURRENT_BINARY_DIR}/yass.qrc
++        )
+     elseif(GUI_FLAVOUR STREQUAL "gtk3")
+         list(APPEND SRC_FILES
+           src/gtk/yass.cpp
+@@ -4695,7 +4729,7 @@ if (GUI)
+       target_link_libraries(${APP_NAME} PRIVATE tun2proxy)
+       set_target_properties(${APP_NAME} PROPERTIES
+         LINK_FLAGS "-Wl,--version-script=${CMAKE_CURRENT_SOURCE_DIR}/src/harmony/export.lds -u RegisterEntryModule")
+-    elseif(GUI_FLAVOUR STREQUAL "qt6")
++    elseif(GUI_FLAVOUR STREQUAL "qt6" OR GUI_FLAVOUR STREQUAL "qt5")
+       add_executable(${APP_NAME}
+         ${SRC_FILES}
+         ${GUI_USE_FILE}
+@@ -4706,14 +4740,14 @@ if (GUI)
+         # Depends on Qt's LinguistTools
+         get_target_property(QT_LUPDATE_EXECUTABLE Qt::lupdate IMPORTED_LOCATION)
+         add_custom_target(update-ts
+-                            COMMAND ${QT_LUPDATE_EXECUTABLE} -extensions cc,cpp,hpp
+-                                                             -locations none
+-                                                             -I "${CMAKE_CURRENT_SOURCE_DIR}/src"
+-                                                             "${CMAKE_CURRENT_SOURCE_DIR}/src/qt6"
+-                                                             -ts ${TS_FILES}
+-                            WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/src/qt6"
+-                            VERBATIM
+-                            COMMAND_EXPAND_LISTS)
++                          COMMAND ${QT_LUPDATE_EXECUTABLE} -extensions cc,cpp,hpp
++                                                            -locations none
++                                                            -I "${CMAKE_CURRENT_SOURCE_DIR}/src"
++                                                            "${CMAKE_CURRENT_SOURCE_DIR}/src/qt6"
++                                                            -ts ${TS_FILES}
++                          WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/src/qt6"
++                          VERBATIM
++                          COMMAND_EXPAND_LISTS)
+         # Based on https://gist.github.com/giraldeau/546ba5512a74dfe9d8ea0862d66db412
+         set_source_files_properties(${TS_FILES} PROPERTIES OUTPUT_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/src/qt6/lang")
+         qt_add_translation(QM_FILES ${TS_FILES} OPTIONS -removeidentical -silent)
+@@ -4761,7 +4795,7 @@ if (GUI)
+     elseif(GUI_FLAVOUR STREQUAL "ios")
+       target_include_directories(${APP_NAME} PRIVATE
+           ${CMAKE_CURRENT_SOURCE_DIR}/src/ios)
+-    elseif(GUI_FLAVOUR STREQUAL "qt6")
++    elseif(GUI_FLAVOUR STREQUAL "qt6" OR GUI_FLAVOUR STREQUAL "qt5")
+       target_include_directories(${APP_NAME} PRIVATE
+           ${CMAKE_CURRENT_SOURCE_DIR}/src/qt6)
+       set_target_properties(
+@@ -5085,7 +5119,7 @@ if (GUI)
+         install(TARGETS ${APP_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+       endif()
+
+-      if (GUI_FLAVOUR STREQUAL "qt6" OR GUI_FLAVOUR STREQUAL "gtk3" OR GUI_FLAVOUR STREQUAL "gtk4")
++      if (GUI_FLAVOUR STREQUAL "qt6" OR GUI_FLAVOUR STREQUAL "qt5" OR GUI_FLAVOUR STREQUAL "gtk3" OR GUI_FLAVOUR STREQUAL "gtk4")
+         install(FILES
+           ${CMAKE_CURRENT_SOURCE_DIR}/src/freedesktop/it.gui.yass.desktop
+           DESTINATION share/applications)
+diff --git a/src/qt6/option_dialog.cpp b/src/qt6/option_dialog.cpp
+index 1a723bc3..5727b573 100644
+--- a/src/qt6/option_dialog.cpp
++++ b/src/qt6/option_dialog.cpp
+@@ -78,11 +78,13 @@ void OptionDialog::OnCancelButtonClicked() {
+ void OptionDialog::LoadChanges() {
+   tcp_keep_alive_->setChecked(absl::GetFlag(FLAGS_tcp_keep_alive));
+   auto tcp_keep_alive_cnt_str = std::to_string(absl::GetFlag(FLAGS_tcp_keep_alive_cnt));
+-  tcp_keep_alive_cnt_->setText(QString::fromUtf8(tcp_keep_alive_cnt_str));
++  tcp_keep_alive_cnt_->setText(QString::fromUtf8(tcp_keep_alive_cnt_str.c_str(), tcp_keep_alive_cnt_str.size()));
+   auto tcp_keep_alive_idle_timeout_str = std::to_string(absl::GetFlag(FLAGS_tcp_keep_alive_idle_timeout));
+-  tcp_keep_alive_idle_timeout_->setText(QString::fromUtf8(tcp_keep_alive_idle_timeout_str));
++  tcp_keep_alive_idle_timeout_->setText(
++      QString::fromUtf8(tcp_keep_alive_idle_timeout_str.c_str(), tcp_keep_alive_idle_timeout_str.size()));
+   auto tcp_keep_alive_interval_str = std::to_string(absl::GetFlag(FLAGS_tcp_keep_alive_interval));
+-  tcp_keep_alive_interval_->setText(QString::fromUtf8(tcp_keep_alive_interval_str));
++  tcp_keep_alive_interval_->setText(
++      QString::fromUtf8(tcp_keep_alive_interval_str.c_str(), tcp_keep_alive_interval_str.size()));
+
+   enable_post_quantum_kyber_->setChecked(absl::GetFlag(FLAGS_enable_post_quantum_kyber));
+ }
+diff --git a/src/qt6/yass.cpp b/src/qt6/yass.cpp
+index 613c5204..cfcdbe9d 100644
+--- a/src/qt6/yass.cpp
++++ b/src/qt6/yass.cpp
+@@ -101,7 +101,9 @@ YASSApp::YASSApp(int& argc, char** argv) : QApplication(argc, argv) {
+ bool YASSApp::Init() {
+   setApplicationVersion(YASS_APP_TAG);
+   setWindowIcon(QIcon::fromTheme("yass", QIcon(":/res/images/yass.png")));
++#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+   setDesktopFileName("it.gui.yass");
++#endif
+
+   QObject::connect(this, &QCoreApplication::aboutToQuit, this, &YASSApp::OnQuit);
+
+@@ -113,7 +115,11 @@ bool YASSApp::Init() {
+ #if defined(_WIN32)
+   (void)qt_translator_->load("qt_" + locale.name());
+ #else
++#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
+   (void)qt_translator_->load("qt_" + locale.name(), QLibraryInfo::path(QLibraryInfo::TranslationsPath));
++#else
++  (void)qt_translator_->load("qt_" + locale.name(), QLibraryInfo::location(QLibraryInfo::TranslationsPath));
++#endif
+ #endif
+
+   if (!my_translator_->load(QString(":/lang/yass_%1.qm").arg(locale.name()))) {
+diff --git a/src/qt6/yass_window.cpp b/src/qt6/yass_window.cpp
+index ab15bea8..1f07e60d 100644
+--- a/src/qt6/yass_window.cpp
++++ b/src/qt6/yass_window.cpp
+@@ -19,6 +19,7 @@
+ #include <QScreen>
+ #include <QStatusBar>
+ #include <QVBoxLayout>
++#include <QWindow>
+
+ #include "cli/cli_connection_stats.hpp"
+ #include "config/config.hpp"
+@@ -183,8 +184,13 @@ YASSWindow::YASSWindow(QWidget* parent) : QMainWindow(parent) {
+   LoadChanges();
+ }
+
++// see https://github.com/qt/qtbase/commit/b455a863a1df61337f36f2e8b43101ca21514697
+ void YASSWindow::moveToCenter() {
++#if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
+   move(screen()->geometry().center() - frameGeometry().center());
++#else
++  move(windowHandle()->screen()->geometry().center() - frameGeometry().center());
++#endif
+ }
+
+ void YASSWindow::showWindow() {
