@@ -1,7 +1,7 @@
-From c63af69eac86f6ef64154f1e0d22a6e4f1940e6f Mon Sep 17 00:00:00 2001
+From d3bd8b8fa7f0981e452d9205761fc5dc8a05bf8d Mon Sep 17 00:00:00 2001
 From: Puqns67 <me@puqns67.icu>
 Date: Sun, 3 Dec 2023 17:17:25 +0800
-Subject: [PATCH 1/2] build: remove update support for this build
+Subject: [PATCH 1/3] build: remove update support for this build
 
 ---
  main.go | 8 --------
@@ -41,5 +41,5 @@ index 22ccec3..30cebf2 100644
  	if _, err := net.ResolveTCPAddr("tcp", *listen); err != nil {
  		log.Fatalf("Parse listen address failed! Exception: %s", err)
 -- 
-2.45.1
+2.45.2
 
