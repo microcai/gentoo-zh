@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~mips ~riscv ~x86"
 
-IUSE="+cli server test +gui +gtk3 gtk4 qt5 qt6 wayland +tcmalloc mimalloc"
+IUSE="+cli server test +gui gtk3 gtk4 +qt5 qt6 wayland +tcmalloc mimalloc"
 
 # tested with FEATURES="-network-sandbox test"
 # tested with FEATURES="network-sandbox test"
