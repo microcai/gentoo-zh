@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-06-16 15:34:27 CST)
+(The last generation time: 2024-06-16 22:05:48 CST)
 
 ### Packages
 
@@ -122,7 +122,7 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/ccal                            | 2.5.3                                     |        | http://ccal.chinesebay.com/ccal/ccal.htm                                                | A simple command line calendar for Chinese lunar
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/go-yq-bin                       | 4.44.1                                    |        | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
+ app-misc/go-yq-bin                       | 4.44.2                                    |        | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/gpick                           | 0.2.6-r1                                  |        | https://github.com/thezbyg/gpick                                                        | Advanced color picker written in C++ using GTK+ toolkit
                                           | 0.3                                       |        |                                                                                         |
