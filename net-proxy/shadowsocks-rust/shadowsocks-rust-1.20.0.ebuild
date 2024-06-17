@@ -205,7 +205,7 @@ CRATES="
 	match_cfg@0.1.0
 	matchers@0.1.0
 	md-5@0.10.6
-	memchr@2.7.2
+	memchr@2.7.4
 	mimalloc@0.1.42
 	mime@0.3.17
 	miniz_oxide@0.7.3
@@ -266,7 +266,7 @@ CRATES="
 	rand_core@0.6.4
 	redox_syscall@0.2.16
 	redox_syscall@0.4.1
-	redox_syscall@0.5.1
+	redox_syscall@0.5.2
 	redox_users@0.4.5
 	regex@1.10.5
 	regex-automata@0.1.10
@@ -312,7 +312,7 @@ CRATES="
 	serde_yaml@0.9.34+deprecated
 	sha1@0.10.6
 	sha2@0.10.8
-	shadowsocks-crypto@0.5.4
+	shadowsocks-crypto@0.5.5
 	sharded-slab@0.1.7
 	signal-hook-registry@1.4.2
 	signature@2.2.0
@@ -322,8 +322,8 @@ CRATES="
 	sm4@0.5.1
 	smallvec@1.13.2
 	smoltcp@0.11.0
-	snmalloc-rs@0.3.5
-	snmalloc-sys@0.3.5
+	snmalloc-rs@0.3.6
+	snmalloc-sys@0.3.6
 	socket2@0.5.7
 	spin@0.5.2
 	spin@0.9.8
@@ -369,7 +369,7 @@ CRATES="
 	tracing-log@0.2.0
 	tracing-subscriber@0.3.18
 	try-lock@0.2.5
-	tun2@1.3.1
+	tun2@2.0.0
 	typemap-ors@1.0.0
 	typenum@1.17.0
 	ucd-trie@0.1.6
@@ -462,8 +462,7 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 LICENSE="MIT"
 LICENSE+="
-	0BSD Apache-2.0 BSD-2 BSD CC0-1.0 ISC MIT MPL-2.0 Unicode-DFS-2016
-	WTFPL-2
+	0BSD Apache-2.0 BSD BSD-2 Boost-1.0 CC0-1.0 ISC MIT MPL-2.0 Unlicense WTFPL-2 ZLIB
 "
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~mips ~x86"
