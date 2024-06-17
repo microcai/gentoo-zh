@@ -25,7 +25,6 @@ SRC_URI="
 
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
-IUSE=""
 
 src_unpack() {
 	universal_unpack
