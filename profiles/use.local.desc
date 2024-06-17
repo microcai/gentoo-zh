@@ -286,7 +286,6 @@ sys-kernel/xanmod-kernel:x86-64-v2 - Set compiler optimization to x86-64-v2
 sys-kernel/xanmod-kernel:x86-64-v3 - Set compiler optimization to x86-64-v3
 sys-kernel/xanmod-kernel:x86-64-v4 - Set compiler optimization to x86-64-v4
 sys-kernel/xanmod-rt:cjk - Eanble cjktty patches.
-sys-kernel/xanmod-sources:cjktty - Enable cjktty patches.
 sys-libs/libsolv:appdata - Build with AppStream appdata support
 sys-libs/libsolv:arch - Build with archlinux repository support
 sys-libs/libsolv:bzip2 - Build with bzip2 compression support
