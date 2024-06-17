@@ -1,0 +1,431 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index ce1c8781..447eeb0b 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -2215,7 +2215,7 @@ elseif (GUI)
+     elseif (GUI)
+       pkg_check_modules(GTK gtk+-3.0)
+       set(GUI_FLAVOUR "gtk3")
+-      set(GUI_OTHER_FLAGS -DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED)
++      set(GUI_OTHER_FLAGS -DGDK_DISABLE_DEPRECATED)
+       if (NOT GTK_FOUND)
+         message(WARNING "Gtk+ not found in pkg-config, disabling GUI build")
+         set(GUI off)
+diff --git a/src/gtk/yass.cpp b/src/gtk/yass.cpp
+index 342214a7..a86bed25 100644
+--- a/src/gtk/yass.cpp
++++ b/src/gtk/yass.cpp
+@@ -176,6 +176,8 @@ int YASSApp::ApplicationRun(int argc, char** argv) {
+     LOG(WARNING) << "app exited with code " << ret;
+   }
+ 
++  delete main_window_;
++
+   LOG(WARNING) << "Application exiting";
+ 
+   // Memory leak clean up path
+diff --git a/src/gtk/yass_en.po b/src/gtk/yass_en.po
+index 6c8f8b05..85207bde 100644
+--- a/src/gtk/yass_en.po
++++ b/src/gtk/yass_en.po
+@@ -8,7 +8,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: 1.0\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2024-05-14 11:18+0800\n"
++"POT-Creation-Date: 2024-06-17 11:59+0800\n"
+ "PO-Revision-Date: 2023-09-15 11:18+0800\n"
+ "Last-Translator: Chilledheart <keeyou-cn@outlook.com>\n"
+ "Language-Team: Chilledheart <keeyou-cn@outlook.com>\n"
+@@ -45,51 +45,51 @@ msgstr "Okay"
+ msgid "Cancel"
+ msgstr "Cancel"
+ 
+-#: yass.cpp:202
++#: yass.cpp:210
+ msgid "Connected with conns: "
+ msgstr "Connected with conns: "
+ 
+-#: yass.cpp:204
++#: yass.cpp:212
+ msgid "Connecting"
+ msgstr "Connecting"
+ 
+-#: yass.cpp:206
++#: yass.cpp:214
+ msgid "Failed to connect due to "
+ msgstr "Failed to connect due to "
+ 
+-#: yass.cpp:208
++#: yass.cpp:216
+ msgid "Disconnecting"
+ msgstr "Disconnecting"
+ 
+-#: yass.cpp:210
++#: yass.cpp:218
+ msgid "Disconnected with "
+ msgstr "Disconnected with "
+ 
+-#: yass_window.cpp:59
++#: yass_window.cpp:60
+ msgid "File"
+ msgstr "File"
+ 
+-#: yass_window.cpp:60
++#: yass_window.cpp:61 yass_window.cpp:260
+ msgid "Option..."
+ msgstr "Option..."
+ 
+-#: yass_window.cpp:61
++#: yass_window.cpp:62 yass_window.cpp:261
+ msgid "Exit"
+ msgstr "Exit"
+ 
+-#: yass_window.cpp:78
++#: yass_window.cpp:79
+ msgid "Help"
+ msgstr "Help"
+ 
+-#: yass_window.cpp:79
++#: yass_window.cpp:80
+ msgid "About..."
+ msgstr "About..."
+ 
+-#: yass_window.cpp:91
++#: yass_window.cpp:92
+ msgid "Start"
+ msgstr "Start"
+ 
+-#: yass_window.cpp:99
++#: yass_window.cpp:98
+ msgid "Stop"
+ msgstr "Stop"
+ 
+@@ -145,30 +145,34 @@ msgstr "Auto Start"
+ msgid "System Proxy"
+ msgstr "System Proxy"
+ 
+-#: yass_window.cpp:218
++#: yass_window.cpp:231
+ msgid "READY"
+ msgstr "READY"
+ 
+-#: yass_window.cpp:341
++#: yass_window.cpp:279
++msgid "Show"
++msgstr "Show"
++
++#: yass_window.cpp:411
+ msgid " tx rate: "
+ msgstr " tx rate: "
+ 
+-#: yass_window.cpp:344
++#: yass_window.cpp:414
+ msgid " rx rate: "
+ msgstr " rx rate: "
+ 
+-#: yass_window.cpp:451
++#: yass_window.cpp:521
+ msgid "YASS Option"
+ msgstr "YASS Option"
+ 
+-#: yass_window.cpp:462
++#: yass_window.cpp:532
+ msgid "Last Change: "
+ msgstr "Last Change: "
+ 
+-#: yass_window.cpp:465
++#: yass_window.cpp:535
+ msgid "Enabled Feature: "
+ msgstr "Enabled Feature: "
+ 
+-#: yass_window.cpp:474
++#: yass_window.cpp:544
+ msgid "official-site"
+ msgstr "official-site"
+diff --git a/src/gtk/yass_window.cpp b/src/gtk/yass_window.cpp
+index 35e3b91e..34352b45 100644
+--- a/src/gtk/yass_window.cpp
++++ b/src/gtk/yass_window.cpp
+@@ -72,7 +72,7 @@ YASSWindow::YASSWindow() : impl_(GTK_WINDOW(gtk_window_new(GTK_WINDOW_TOPLEVEL))
+   auto option_callback = []() { window->OnOption(); };
+   g_signal_connect(G_OBJECT(option_menu_item), "activate", G_CALLBACK(option_callback), nullptr);
+ 
+-  auto exit_callback = []() { gtk_window_close(window->impl_); };
++  auto exit_callback = []() { window->close(); };
+   g_signal_connect(G_OBJECT(exit_menu_item), "activate", G_CALLBACK(exit_callback), nullptr);
+ 
+   help_menu = gtk_menu_new();
+@@ -91,17 +91,13 @@ YASSWindow::YASSWindow() : impl_(GTK_WINDOW(gtk_window_new(GTK_WINDOW_TOPLEVEL))
+   start_button_ = GTK_BUTTON(gtk_button_new());
+   gtk_button_set_label(start_button_, _("Start"));
+ 
+-#if GTK_CHECK_VERSION(3, 12, 0)
+   gtk_widget_set_margin_top(GTK_WIDGET(start_button_), 30);
+   gtk_widget_set_margin_bottom(GTK_WIDGET(start_button_), 30);
+-#endif
+ 
+   stop_button_ = GTK_BUTTON(gtk_button_new());
+   gtk_button_set_label(stop_button_, _("Stop"));
+-#if GTK_CHECK_VERSION(3, 12, 0)
+   gtk_widget_set_margin_top(GTK_WIDGET(stop_button_), 30);
+   gtk_widget_set_margin_bottom(GTK_WIDGET(stop_button_), 30);
+-#endif
+ 
+   auto start_callback = []() { window->OnStartButtonClicked(); };
+ 
+@@ -118,7 +114,10 @@ YASSWindow::YASSWindow() : impl_(GTK_WINDOW(gtk_window_new(GTK_WINDOW_TOPLEVEL))
+ 
+ #if GTK_CHECK_VERSION(3, 12, 0)
+   gtk_widget_set_margin_start(GTK_WIDGET(left_box), 15);
+-  gtk_widget_set_margin_end(GTK_WIDGET(left_box), 15);
++  gtk_widget_set_margin_end(GTK_WIDGET(left_box), 5);
++#else
++  gtk_widget_set_margin_left(GTK_WIDGET(left_box), 15);
++  gtk_widget_set_margin_right(GTK_WIDGET(left_box), 5);
+ #endif
+ 
+   gtk_container_add(GTK_CONTAINER(hbox), GTK_WIDGET(left_box));
+@@ -206,8 +205,21 @@ YASSWindow::YASSWindow() : impl_(GTK_WINDOW(gtk_window_new(GTK_WINDOW_TOPLEVEL))
+   gtk_grid_attach(right_panel_grid, GTK_WIDGET(systemproxy_), 1, 12, 1, 1);
+ 
+ #if GTK_CHECK_VERSION(3, 12, 0)
+-  gtk_widget_set_margin_start(GTK_WIDGET(right_panel_grid), 10);
+-  gtk_widget_set_margin_end(GTK_WIDGET(right_panel_grid), 20);
++  gtk_widget_set_margin_start(GTK_WIDGET(right_panel_grid), 5);
++  gtk_widget_set_margin_end(GTK_WIDGET(right_panel_grid), 5);
++#else
++  gtk_widget_set_margin_left(GTK_WIDGET(right_panel_grid), 5);
++  gtk_widget_set_margin_right(GTK_WIDGET(right_panel_grid), 5);
++#endif
++
++  gtk_widget_set_margin_top(GTK_WIDGET(hbox), 15);
++  gtk_widget_set_margin_bottom(GTK_WIDGET(hbox), 10);
++#if GTK_CHECK_VERSION(3, 12, 0)
++  gtk_widget_set_margin_start(GTK_WIDGET(hbox), 20);
++  gtk_widget_set_margin_end(GTK_WIDGET(hbox), 20);
++#else
++  gtk_widget_set_margin_left(GTK_WIDGET(hbox), 20);
++  gtk_widget_set_margin_right(GTK_WIDGET(hbox), 20);
+ #endif
+ 
+   gtk_container_add(GTK_CONTAINER(hbox), GTK_WIDGET(right_panel_grid));
+@@ -225,9 +237,63 @@ YASSWindow::YASSWindow() : impl_(GTK_WINDOW(gtk_window_new(GTK_WINDOW_TOPLEVEL))
+   LoadChanges();
+ 
+   gtk_widget_show_all(GTK_WIDGET(impl_));
++
++  CreateStatusIcon();
+ }
+ 
+-YASSWindow::~YASSWindow() = default;
++YASSWindow::~YASSWindow() {
++  g_object_unref(G_OBJECT(tray_icon_));
++}
++
++void YASSWindow::CreateStatusIcon() {
++  // set try icon file
++  G_GNUC_BEGIN_IGNORE_DEPRECATIONS
++  tray_icon_ = gtk_status_icon_new_from_icon_name("yass");
++  G_GNUC_END_IGNORE_DEPRECATIONS
++
++  // set popup menu for tray icon
++  GtkWidget* sep;
++  GtkWidget* option_menu_item;
++  GtkWidget* exit_menu_item;
++
++  tray_menu_ = gtk_menu_new();
++  option_menu_item = gtk_menu_item_new_with_label(_("Option..."));
++  exit_menu_item = gtk_menu_item_new_with_label(_("Exit"));
++
++  sep = gtk_separator_menu_item_new();
++
++  gtk_menu_shell_append(GTK_MENU_SHELL(tray_menu_), option_menu_item);
++  gtk_menu_shell_append(GTK_MENU_SHELL(tray_menu_), sep);
++  gtk_menu_shell_append(GTK_MENU_SHELL(tray_menu_), exit_menu_item);
++
++  auto option_callback = []() { window->OnOption(); };
++  g_signal_connect(G_OBJECT(option_menu_item), "activate", G_CALLBACK(option_callback), nullptr);
++
++  auto exit_callback = []() { window->close(); };
++  g_signal_connect(G_OBJECT(exit_menu_item), "activate", G_CALLBACK(exit_callback), nullptr);
++
++  gtk_widget_show_all(tray_menu_);
++
++  // set tooltip
++  G_GNUC_BEGIN_IGNORE_DEPRECATIONS
++  gtk_status_icon_set_tooltip_text(tray_icon_, _("Show"));
++  G_GNUC_END_IGNORE_DEPRECATIONS
++
++  auto show_callback = []() {
++    window->show();
++    window->present();
++  };
++  g_signal_connect(G_OBJECT(tray_icon_), "activate", G_CALLBACK(show_callback), nullptr);
++
++  auto popup_callback = [](GtkStatusIcon* self, guint button, guint activate_time, gpointer popup_menu) {
++    G_GNUC_BEGIN_IGNORE_DEPRECATIONS
++    gtk_menu_popup(GTK_MENU(popup_menu), nullptr, nullptr, gtk_status_icon_position_menu, self, button, activate_time);
++    G_GNUC_END_IGNORE_DEPRECATIONS
++  };
++  g_signal_connect(G_OBJECT(tray_icon_), "popup-menu", G_CALLBACK(*popup_callback), tray_menu_);
++
++  gtk_menu_attach_to_widget(GTK_MENU(tray_menu_), GTK_WIDGET(impl_), nullptr);
++}
+ 
+ void YASSWindow::show() {
+   gtk_widget_show(GTK_WIDGET(impl_));
+@@ -238,6 +304,9 @@ void YASSWindow::present() {
+ }
+ 
+ void YASSWindow::close() {
++  G_GNUC_BEGIN_IGNORE_DEPRECATIONS
++  gtk_status_icon_set_visible(tray_icon_, FALSE);
++  G_GNUC_END_IGNORE_DEPRECATIONS
+   gtk_window_close(GTK_WINDOW(impl_));
+ }
+ 
+diff --git a/src/gtk/yass_window.hpp b/src/gtk/yass_window.hpp
+index cce404cf..9c59c157 100644
+--- a/src/gtk/yass_window.hpp
++++ b/src/gtk/yass_window.hpp
+@@ -14,6 +14,7 @@ class YASSWindow {
+   ~YASSWindow();
+ 
+  private:
++  void CreateStatusIcon();
+   static YASSWindow* window;
+ 
+  private:
+@@ -52,6 +53,12 @@ class YASSWindow {
+   GtkStatusbar* status_bar_;
+   std::string last_status_msg_;
+ 
++  // tray icon
++  G_GNUC_BEGIN_IGNORE_DEPRECATIONS
++  GtkStatusIcon* tray_icon_;
++  G_GNUC_END_IGNORE_DEPRECATIONS
++  GtkWidget* tray_menu_;
++
+  public:
+   std::string GetServerHost();
+   std::string GetServerSNI();
+diff --git a/src/gtk/yass_zh_CN.po b/src/gtk/yass_zh_CN.po
+index d2d91757..821d2d93 100644
+--- a/src/gtk/yass_zh_CN.po
++++ b/src/gtk/yass_zh_CN.po
+@@ -7,7 +7,7 @@ msgid ""
+ msgstr ""
+ "Project-Id-Version: 1.0\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2024-05-14 11:18+0800\n"
++"POT-Creation-Date: 2024-06-17 11:59+0800\n"
+ "PO-Revision-Date: 2023-09-15 11:26+0800\n"
+ "Last-Translator: Chilledheart <keeyou-cn@outlook.com>\n"
+ "Language-Team: Chilledheart <keeyou-cn@outlook.com>\n"
+@@ -46,51 +46,51 @@ msgstr "确认"
+ msgid "Cancel"
+ msgstr "取消"
+ 
+-#: yass.cpp:202
++#: yass.cpp:210
+ msgid "Connected with conns: "
+ msgstr "已产生连接: "
+ 
+-#: yass.cpp:204
++#: yass.cpp:212
+ msgid "Connecting"
+ msgstr "连接中"
+ 
+-#: yass.cpp:206
++#: yass.cpp:214
+ msgid "Failed to connect due to "
+ msgstr "无法连接因为 "
+ 
+-#: yass.cpp:208
++#: yass.cpp:216
+ msgid "Disconnecting"
+ msgstr "断开连接中"
+ 
+-#: yass.cpp:210
++#: yass.cpp:218
+ msgid "Disconnected with "
+ msgstr "断开连接于服务器 "
+ 
+-#: yass_window.cpp:59
++#: yass_window.cpp:60
+ msgid "File"
+ msgstr "文件"
+ 
+-#: yass_window.cpp:60
++#: yass_window.cpp:61 yass_window.cpp:260
+ msgid "Option..."
+ msgstr "选项..."
+ 
+-#: yass_window.cpp:61
++#: yass_window.cpp:62 yass_window.cpp:261
+ msgid "Exit"
+ msgstr "退出"
+ 
+-#: yass_window.cpp:78
++#: yass_window.cpp:79
+ msgid "Help"
+ msgstr "帮助"
+ 
+-#: yass_window.cpp:79
++#: yass_window.cpp:80
+ msgid "About..."
+ msgstr "关于..."
+ 
+-#: yass_window.cpp:91
++#: yass_window.cpp:92
+ msgid "Start"
+ msgstr "启动"
+ 
+-#: yass_window.cpp:99
++#: yass_window.cpp:98
+ msgid "Stop"
+ msgstr "停止"
+ 
+@@ -146,30 +146,34 @@ msgstr "随系统自启动"
+ msgid "System Proxy"
+ msgstr "系统代理"
+ 
+-#: yass_window.cpp:218
++#: yass_window.cpp:231
+ msgid "READY"
+ msgstr "就绪"
+ 
+-#: yass_window.cpp:341
++#: yass_window.cpp:279
++msgid "Show"
++msgstr "唤醒"
++
++#: yass_window.cpp:411
+ msgid " tx rate: "
+ msgstr " 上传速率: "
+ 
+-#: yass_window.cpp:344
++#: yass_window.cpp:414
+ msgid " rx rate: "
+ msgstr " 下载速率: "
+ 
+-#: yass_window.cpp:451
++#: yass_window.cpp:521
+ msgid "YASS Option"
+ msgstr "YASS 选项"
+ 
+-#: yass_window.cpp:462
++#: yass_window.cpp:532
+ msgid "Last Change: "
+ msgstr "最后改动: "
+ 
+-#: yass_window.cpp:465
++#: yass_window.cpp:535
+ msgid "Enabled Feature: "
+ msgstr "启用功能: "
+ 
+-#: yass_window.cpp:474
++#: yass_window.cpp:544
+ msgid "official-site"
+ msgstr "官方网站"
