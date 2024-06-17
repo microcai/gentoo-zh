@@ -3,13 +3,9 @@
 <pkgmetadata>
 	<upstream>
 		<remote-id type="sourceforge">xanmod</remote-id>
-		<remote-id type="github">zhmars/cjktty-patches</remote-id>
 	</upstream>
 	<maintainer type="person">
 		<email>OriPoin@outlook.com</email>
 		<name>Yachen Wang</name>
 	</maintainer>
-	<use>
-		<flag name="cjktty">Enable cjktty patches.</flag>
-	</use>
 </pkgmetadata>
