@@ -3,6 +3,9 @@
 
 EAPI=8
 
+# see examples at sci-chemistry/gromacs/gromacs's ebuild files
+CMAKE_MAKEFILE_GENERATOR="ninja"
+
 inherit cmake xdg
 
 MY_PN="yass"
@@ -27,9 +30,11 @@ REQUIRED_USE="
 	tcmalloc? ( !mimalloc )
 "
 
-RDEPEND="
+PDEPEND="
 	app-misc/ca-certificates
-	dev-libs/glib:2
+"
+
+RDEPEND="
 	net-libs/mbedtls
 	sys-libs/zlib
 	net-dns/c-ares
@@ -38,12 +43,15 @@ RDEPEND="
 	mimalloc? ( dev-libs/mimalloc )
 	gui? (
 		gtk3? (
+			dev-libs/glib:2
 			x11-libs/gtk+:3[wayland?]
 		)
 		gtk4? (
+			dev-libs/glib:2
 			gui-libs/gtk:4[wayland?]
 		)
 		qt5? (
+			dev-qt/qtcore:5
 			dev-qt/qtgui:5
 			dev-qt/qtwidgets:5
 			wayland? ( dev-qt/qtwayland:5 )
@@ -56,9 +64,25 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 BDEPEND="
-	sys-devel/gettext
+	dev-lang/perl
+	dev-lang/go
+	>=dev-build/cmake-3.13.4
+	app-alternatives/ninja
 	virtual/pkgconfig
+	gui? (
+		gtk3? (
+			sys-devel/gettext
+		)
+		gtk4? (
+			sys-devel/gettext
+		)
+	)
+	test? ( net-misc/curl )
 "
+
+PATCHES=(
+	"${FILESDIR}"/gtk3-tray-icon.patch
+)
 
 src_prepare() {
 	cmake_src_prepare

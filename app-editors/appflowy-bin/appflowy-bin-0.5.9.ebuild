@@ -23,6 +23,7 @@ DEPEND="
 	dev-libs/glib:2
 	dev-libs/openssl:0/3
 	dev-libs/keybinder:3
+	media-video/mpv:0[libmpv]
 	media-libs/harfbuzz
 	media-libs/libepoxy
 	x11-libs/cairo
@@ -43,6 +44,8 @@ QA_PRESTRIPPED="
 QA_PREBUILT="*"
 
 src_install() {
+	dosym -r /usr/lib64/libmpv.so.1 /usr/lib64/libmpv.so.2
+
 	insinto "/opt/${PN}"
 	doins -r data/ lib/ AppFlowy
 
