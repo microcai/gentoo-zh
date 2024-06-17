@@ -13,7 +13,6 @@ CRATES="
 	ahash@0.7.8
 	ahash@0.8.8
 	aho-corasick@1.1.1
-	alacritty_terminal@0.23.0
 	aliasable@0.1.3
 	allocator-api2@0.2.16
 	alsa-sys@0.3.1
@@ -342,7 +341,6 @@ CRATES="
 	gpu-alloc-ash@0.7.0
 	gpu-alloc-types@0.3.0
 	gpu-alloc@0.6.0
-	gray_matter@0.2.7
 	grid@0.13.0
 	group@0.12.1
 	h2@0.3.21
@@ -368,6 +366,7 @@ CRATES="
 	hmac@0.12.1
 	home@0.5.9
 	hound@3.5.0
+	html5ever@0.27.0
 	http-body@0.4.5
 	http-range-header@0.3.1
 	http@0.2.9
@@ -432,7 +431,6 @@ CRATES="
 	libsqlite3-sys@0.26.0
 	libz-sys@1.1.12
 	line-wrap@0.1.1
-	linked-hash-map@0.5.6
 	linkify@0.10.0
 	linkme-impl@0.3.17
 	linkme@0.3.17
@@ -447,6 +445,8 @@ CRATES="
 	mach2@0.4.1
 	mach@0.3.2
 	malloc_buf@0.0.6
+	markup5ever@0.12.1
+	markup5ever_rcdom@0.3.0
 	matchers@0.1.0
 	matchit@0.7.3
 	maybe-owned@0.3.4
@@ -542,8 +542,11 @@ CRATES="
 	percent-encoding@2.3.1
 	petgraph@0.6.4
 	phf@0.11.2
+	phf_codegen@0.11.2
+	phf_generator@0.10.0
 	phf_generator@0.11.2
 	phf_macros@0.11.2
+	phf_shared@0.10.0
 	phf_shared@0.11.2
 	pico-args@0.5.0
 	pin-project-internal@1.1.3
@@ -567,6 +570,7 @@ CRATES="
 	postage@0.5.0
 	powerfmt@0.2.0
 	ppv-lite86@0.2.17
+	precomputed-hash@0.1.1
 	pretty_assertions@1.4.0
 	prettyplease@0.2.15
 	proc-macro-crate@0.1.5
@@ -731,6 +735,8 @@ CRATES="
 	stable_deref_trait@1.2.0
 	static_assertions@1.1.0
 	strict-num@0.1.1
+	string_cache@0.8.7
+	string_cache_codegen@0.5.2
 	stringprep@0.1.4
 	strsim@0.10.0
 	strsim@0.11.1
@@ -812,7 +818,6 @@ CRATES="
 	tree-sitter-embedded-template@0.20.0
 	tree-sitter-gomod@1.0.1
 	tree-sitter-html@0.19.0
-	tree-sitter-json@0.19.0
 	tree-sitter-json@0.20.2
 	tree-sitter-python@0.20.4
 	tree-sitter-regex@0.20.0
@@ -979,9 +984,9 @@ CRATES="
 	xdg-home@1.1.0
 	xkbcommon@0.7.0
 	xkeysym@0.2.0
+	xml5ever@0.18.0
 	xmlparser@0.13.5
 	xmlwriter@0.1.0
-	yaml-rust@0.4.5
 	yansi@0.5.1
 	yazi@0.1.6
 	yeslogic-fontconfig-sys@3.2.0
@@ -1004,9 +1009,11 @@ CRATES="
 "
 
 declare -A GIT_CRATES=(
+	[alacritty_terminal]='https://github.com/alacritty/alacritty;cacdb5bb3b72bad2c729227537979d95af75978f;alacritty-%commit%/alacritty_terminal'
 	[async-pipe]='https://github.com/zed-industries/async-pipe-rs;82d00a04211cf4e1236029aa03e6b6ce2a74c553;async-pipe-rs-%commit%'
-	[blade-graphics]='https://github.com/kvark/blade;9c9cabf69e869fc7d9aef2fc76f7d5c354d5710a;blade-%commit%/blade-graphics'
-	[blade-macros]='https://github.com/kvark/blade;9c9cabf69e869fc7d9aef2fc76f7d5c354d5710a;blade-%commit%/blade-macros'
+	[blade-graphics]='https://github.com/kvark/blade;bdaf8c534fbbc9fbca71d1cf272f45640b3a068d;blade-%commit%/blade-graphics'
+	[blade-macros]='https://github.com/kvark/blade;bdaf8c534fbbc9fbca71d1cf272f45640b3a068d;blade-%commit%/blade-macros'
+	[blade-util]='https://github.com/kvark/blade;bdaf8c534fbbc9fbca71d1cf272f45640b3a068d;blade-%commit%/blade-util'
 	[font-kit]='https://github.com/zed-industries/font-kit;5a5c4d4ca395c74eb0abde38508e170ce0fd761a;font-kit-%commit%'
 	[lsp-types]='https://github.com/zed-industries/lsp-types;853c7881d200777e20799026651ca36727144646;lsp-types-%commit%'
 	[nvim-rs]='https://github.com/KillTheMule/nvim-rs;0d2b1c884f3c39a76b5b7aac0b429f4624843954;nvim-rs-%commit%'
@@ -1069,11 +1076,8 @@ RDEPEND="${DEPEND}"
 BDEPEND="
 	>=virtual/rust-1.78.0
 	dev-util/vulkan-headers
+	sys-devel/gettext
 "
-
-PATCHES=(
-	"${FILESDIR}/${PN}-0.138.4-nostart-stop-gc.patch"
-)
 
 pkg_setup() {
 	if use !debug && use lto; then
@@ -1093,6 +1097,10 @@ pkg_setup() {
 	fi
 	# In case of compiler switch with unsupported flags
 	strip-unsupported-flags
+	# flags from upstream
+	export RUSTFLAGS="${RUSTFLAGS} -C link-args=-Wl,--disable-new-dtags,-rpath,\$ORIGIN/../lib"
+	# linking error with llvm-18
+	export RUSTFLAGS="${RUSTFLAGS} -C link-args=-Wl,-z,nostart-stop-gc"
 }
 
 src_prepare() {
@@ -1107,19 +1115,38 @@ src_prepare() {
 	local TS_GIT="git = \"https://github.com/tree-sitter/tree-sitter\", rev = \"${TS_COMMIT}\""
 	local TS_PATH="path = \"${WORKDIR}/tree-sitter-${TS_COMMIT}/lib\""
 
-	sed -i -e "s#${PF_GIT}#${PF_PATH}#" \
+	sed -e "s#${PF_GIT}#${PF_PATH}#" \
 		-e "s#${TS_GIT}#${TS_PATH}#" \
-		"${S}/Cargo.toml" || die "Cargo fetch workaround failed"
+		-i "${S}/Cargo.toml" || die "Cargo fetch workaround failed"
+
+	export DO_STARTUP_NOTIFY="true"
+	export APP_ICON="zed"
+	export APP_NAME="Zed"
+	# sys-devel/gettext
+	envsubst < "crates/zed/resources/zed.desktop.in" > zed.desktop || die
 }
 
 src_configure() {
 	cargo_src_configure --all-features
 }
 
+src_compile() {
+	# Set RELEASE_VERSION so it's compiled into GPUI and it knows about the version
+	export RELEASE_VERSION="${PV}"
+	export ZED_UPDATE_EXPLANATION='Updates are handled by portage'
+	cargo_src_compile --package zed --package cli
+}
+
 src_install() {
-	cargo_src_install --path ./crates/zed
-	newicon crates/zed/resources/app-icon.png zed.png
-	make_desktop_entry Zed Zed zed 'Development'
+	newbin $(cargo_target_dir)/cli zed
+	# hard-coded in crates/cli/src/main.rs
+	# libexec/zed-editor
+	exeinto "/usr/libexec"
+	newexe $(cargo_target_dir)/zed zed-editor
+
+	newicon -s 512 crates/zed/resources/app-icon.png zed.png
+	newicon -s 1024 crates/zed/resources/app-icon@2x.png zed.png
+	domenu "${S}/zed.desktop"
 }
 
 pkg_postinst() {

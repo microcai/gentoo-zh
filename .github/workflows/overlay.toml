@@ -62,7 +62,6 @@ github_account = "peeweep"
 source = "github"
 github = "AppFlowy-IO/AppFlowy"
 use_latest_release = true
-github_account = "liuyujielol"
 
 ["app-editors/marktext-bin"]
 source = "github"
@@ -76,6 +75,13 @@ source = "regex"
 url = "https://typora.io/#linu://typora.io/releases/stable.html"
 regex = "typora_([\\d.]+)_amd64.deb"
 github_account = "CHN-beta"
+
+["app-editors/zed"]
+source = "github"
+github = "zed-industries/zed"
+use_latest_release = true
+prefix = "v"
+github_account = "liuyujielol"
 
 #["app-emulation/deepin-udis86"]
 
