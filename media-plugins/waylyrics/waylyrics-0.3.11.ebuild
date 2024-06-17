@@ -13,12 +13,12 @@ CRATES="
 	ahash@0.8.11
 	aho-corasick@1.1.3
 	ansi_term@0.12.1
-	anyhow@1.0.82
+	anyhow@1.0.86
 	arrayvec@0.7.4
 	ashpd@0.8.1
 	assert_float_eq@1.1.3
 	async-broadcast@0.7.0
-	async-channel@2.2.1
+	async-channel@2.3.1
 	async-executor@1.11.0
 	async-fs@2.1.2
 	async-io@2.3.2
@@ -203,7 +203,7 @@ CRATES="
 	libdbus-sys@0.2.5
 	libloading@0.7.4
 	libm@0.2.8
-	libmimalloc-sys@0.1.37
+	libmimalloc-sys@0.1.38
 	libredox@0.1.3
 	libxdo-sys@0.11.0
 	libxdo@0.6.0
@@ -217,7 +217,7 @@ CRATES="
 	md5@0.7.0
 	memchr@2.7.2
 	memoffset@0.9.1
-	mimalloc@0.1.41
+	mimalloc@0.1.42
 	mime@0.3.17
 	minimal-lexical@0.2.1
 	miniz_oxide@0.7.2
@@ -320,11 +320,11 @@ CRATES="
 	security-framework-sys@2.10.0
 	security-framework@2.10.0
 	semver@1.0.22
-	serde@1.0.199
-	serde_derive@1.0.199
-	serde_json@1.0.116
+	serde@1.0.203
+	serde_derive@1.0.203
+	serde_json@1.0.117
 	serde_repr@0.1.19
-	serde_spanned@0.6.5
+	serde_spanned@0.6.6
 	serde_urlencoded@0.7.1
 	sha1@0.10.6
 	sharded-slab@0.1.7
@@ -351,6 +351,7 @@ CRATES="
 	syn_derive@0.1.8
 	sync_wrapper@0.1.2
 	synom@0.11.3
+	sys-locale@0.3.1
 	system-configuration-sys@0.5.0
 	system-configuration@0.5.1
 	system-deps@6.2.2
@@ -372,11 +373,11 @@ CRATES="
 	tokio-util@0.7.10
 	tokio@1.37.0
 	toml@0.8.12
-	toml_datetime@0.6.5
+	toml_datetime@0.6.6
 	toml_edit@0.19.15
 	toml_edit@0.20.7
 	toml_edit@0.21.1
-	toml_edit@0.22.12
+	toml_edit@0.22.13
 	tower-layer@0.3.2
 	tower-service@0.3.2
 	tower@0.4.13
@@ -481,7 +482,7 @@ else
 	KEYWORDS="~amd64 ~loong"
 fi
 
-LICENSE="MIT"
+LICENSE="MIT CC-BY-4.0"
 # Dependent crate licenses
 LICENSE+="
 	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD GPL-3+ ISC MIT
@@ -516,7 +517,10 @@ src_install() {
 	domenu "${S}/metainfo/io.github.waylyrics.Waylyrics.desktop"
 
 	insinto "/usr/share/glib-2.0/schemas"
-	doins "metainfo/io.github.waylyrics.Waylyrics.gschema.xml"
+	doins "${S}/metainfo/io.github.waylyrics.Waylyrics.gschema.xml"
+
+	insinto "/usr/share/metainfo"
+	doins "${S}/metainfo/io.github.waylyrics.Waylyrics.metainfo.xml"
 
 	insinto "/usr/share/${PN}"
 	doins -r themes
