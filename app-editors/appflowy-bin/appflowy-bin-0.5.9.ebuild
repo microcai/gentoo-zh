@@ -44,7 +44,7 @@ QA_PRESTRIPPED="
 QA_PREBUILT="*"
 
 src_install() {
-	dosym libmpv.so.1 libmpv.so.2
+	dosym -r /usr/lib64/libmpv.so.1 /usr/lib64/libmpv.so.2
 
 	insinto "/opt/${PN}"
 	doins -r data/ lib/ AppFlowy
