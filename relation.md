@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-06-19 00:15:16 CST)
+(The last generation time: 2024-06-19 01:42:27 CST)
 
 ### Packages
 
@@ -409,7 +409,7 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/chinadns                         | 1.3.2                                     |        | https://github.com/clowwindy/ChinaDNS                                                   | Protect yourself against DNS poisoning in China
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-dns/ddns-go                          | 6.6.2                                     |        | https://github.com/jeessy2/ddns-go                                                      | Automatically obtain your public IP address and set to your domain name service.
+ net-dns/ddns-go                          | 6.6.3                                     |        | https://github.com/jeessy2/ddns-go                                                      | Automatically obtain your public IP address and set to your domain name service.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/dnslookup                        | 1.10.1                                    |        | https://github.com/ameshkov/dnslookup                                                   | Simple command line utility to make DNS lookups to the specified server
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -564,7 +564,7 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/v2rayA                         | 2.2.5.2                                   |        | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                           | 9999                                      |        |                                                                                         |
-   net-proxy/Xray                         | 1.8.13                                    | RD     | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
+   net-proxy/Xray                         | 1.8.15                                    | RD     | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
      app-alternatives/v2ray-geoip         | 0-r1                                      |  D, RD |                                                                                         | symlink for v2ray-geoip
      app-alternatives/v2ray-geosite       | 0-r1                                      |  D, RD |                                                                                         | symlink for v2ray-geosite
    net-proxy/v2ray                        | 5.15.3                                    | RD     | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
