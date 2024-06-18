@@ -45,16 +45,8 @@ src_unpack() {
 src_compile() {
 	mv -v "${WORKDIR}/web" "${S}/service/server/router/web" || die
 
-	for file in $(find "${S}/service/server/router/web" |grep -v png |grep -v index.html|grep -v .gz)
-	do
-		if [ ! -d $file ];then
-			einfo "compress $file"
-			gzip -9 $file
-		fi
-	done
-
 	cd "${S}/service" || die
-	ego build -mod vendor -ldflags "-X github.com/v2rayA/v2rayA/conf.Version=${PV} -s -w" -o v2raya
+	ego build -mod vendor -tags "with_gvisor" -ldflags "-X github.com/v2rayA/v2rayA/conf.Version=${PV} -s -w" -o v2raya
 }
 
 src_install() {
