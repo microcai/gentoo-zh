@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-06-18 22:25:36 CST)
+(The last generation time: 2024-06-19 00:15:16 CST)
 
 ### Packages
 
@@ -239,7 +239,7 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pytube                        | 15.0.0                                    |        | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/android-studio                  | 2023.3.1.19                               |        | https://developer.android.com/studio                                                    | Android development environment based on IntelliJ IDEA
+ dev-util/android-studio                  | 2024.1.1.11                               |        | https://developer.android.com/studio                                                    | Android development environment based on IntelliJ IDEA
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/arch-install-scripts            | 28-r1                                     |        | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
    dev-util/pacstrap                      | 28                                        | RD     | https://github.com/archlinux/arch-install-scripts                                       | Pacstrap - install packages to the specified new root directorye
