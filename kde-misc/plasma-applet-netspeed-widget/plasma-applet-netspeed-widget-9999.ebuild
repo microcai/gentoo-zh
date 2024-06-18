@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -18,11 +18,12 @@ HOMEPAGE="https://www.kde-look.org/p/998895/
 https://github.com/dfaust/plasma-applet-netspeed-widget"
 
 LICENSE="GPL-2+"
-SLOT="5"
+SLOT="6"
 
 DEPEND="
-	kde-plasma/ksysguard:5
-	>=kde-frameworks/plasma-5.60.0:5
+	app-alternatives/awk
+	>=kde-plasma/kdeplasma-addons-6.0:6
+	>=kde-plasma/libplasma-6.0:6
 "
 RDEPEND="${DEPEND}"
 
