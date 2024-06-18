@@ -1,4 +1,4 @@
-# Copyright 2022-2023 Gentoo Authors
+# Copyright 2022-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -51,15 +51,8 @@ src_compile() {
 	fi
 	OUTPUT_DIR="${S}/service/server/router/web" yarn build || die "yarn build failed"
 
-	for file in $(find "${S}/service/server/router/web" |grep -v png |grep -v index.html|grep -v .gz); do
-		if [ ! -d $file ];then
-			einfo "compress $file"
-			gzip -9 $file
-		fi
-	done
-
 	cd "${S}/service" || die
-	ego build -mod vendor -ldflags "-X github.com/v2rayA/v2rayA/conf.Version=${PV} -s -w" -o v2raya
+	ego build -mod vendor -tags "with_gvisor" -ldflags "-X github.com/v2rayA/v2rayA/conf.Version=${PV} -s -w" -o v2raya
 }
 
 src_install() {
