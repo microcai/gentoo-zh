@@ -488,6 +488,7 @@ CRATES="
 	num-complex@0.4.4
 	num-conv@0.1.0
 	num-derive@0.3.3
+	num-format@0.4.4
 	num-integer@0.1.45
 	num-iter@0.1.43
 	num-rational@0.3.2
@@ -1011,9 +1012,9 @@ CRATES="
 declare -A GIT_CRATES=(
 	[alacritty_terminal]='https://github.com/alacritty/alacritty;cacdb5bb3b72bad2c729227537979d95af75978f;alacritty-%commit%/alacritty_terminal'
 	[async-pipe]='https://github.com/zed-industries/async-pipe-rs;82d00a04211cf4e1236029aa03e6b6ce2a74c553;async-pipe-rs-%commit%'
-	[blade-graphics]='https://github.com/kvark/blade;bdaf8c534fbbc9fbca71d1cf272f45640b3a068d;blade-%commit%/blade-graphics'
-	[blade-macros]='https://github.com/kvark/blade;bdaf8c534fbbc9fbca71d1cf272f45640b3a068d;blade-%commit%/blade-macros'
-	[blade-util]='https://github.com/kvark/blade;bdaf8c534fbbc9fbca71d1cf272f45640b3a068d;blade-%commit%/blade-util'
+	[blade-graphics]='https://github.com/zed-industries/blade;33fd51359d113c03b785e28f4a6cf75bacb0b26d;blade-%commit%/blade-graphics'
+	[blade-macros]='https://github.com/zed-industries/blade;33fd51359d113c03b785e28f4a6cf75bacb0b26d;blade-%commit%/blade-macros'
+	[blade-util]='https://github.com/zed-industries/blade;33fd51359d113c03b785e28f4a6cf75bacb0b26d;blade-%commit%/blade-util'
 	[font-kit]='https://github.com/zed-industries/font-kit;5a5c4d4ca395c74eb0abde38508e170ce0fd761a;font-kit-%commit%'
 	[lsp-types]='https://github.com/zed-industries/lsp-types;853c7881d200777e20799026651ca36727144646;lsp-types-%commit%'
 	[nvim-rs]='https://github.com/KillTheMule/nvim-rs;0d2b1c884f3c39a76b5b7aac0b429f4624843954;nvim-rs-%commit%'
