@@ -492,16 +492,19 @@ SLOT="0"
 
 DEPEND="
 	dev-libs/glib:2
-	gui-libs/gtk:4
+	app-i18n/opencc
 	dev-libs/openssl:=
+	gnome-base/dconf
+	gui-libs/gtk:4
 	sys-apps/dbus
 	sys-devel/gettext
 	x11-libs/cairo
 "
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}
+	sys-apps/xdg-desktop-portal
+"
 BDEPEND="
-	app-misc/jq
-	dev-libs/mimalloc
 	>=virtual/rust-1.73:*
 "
 
