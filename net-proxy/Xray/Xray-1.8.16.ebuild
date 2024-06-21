@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=">=dev-lang/go-1.22"
 
 src_compile() {
-	ego build -o xray -trimpath -ldflags "-w -s -X 'github.com/XTLS/Xray-core/core.build=${PV}' -buildid=" ./main
+	ego build -o xray -trimpath -ldflags "-w -s -X 'github.com/XTLS/Xray-core/core.build=${PV}'" ./main
 }
 
 src_install() {
