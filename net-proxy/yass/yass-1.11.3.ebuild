@@ -80,10 +80,6 @@ BDEPEND="
 	test? ( net-misc/curl )
 "
 
-PATCHES=(
-	"${FILESDIR}"/gtk3-tray-icon.patch
-)
-
 src_prepare() {
 	cmake_src_prepare
 	# some tests require network access, comment it out if not supported
