@@ -1,0 +1,16 @@
+BDEPEND=dev-util/patchelf
+DEFINED_PHASES=install postinst postrm preinst unpack
+DEPEND=media-gfx/openvdb media-libs/glew:0= >=media-libs/glm-0.9.9.1 media-libs/gstreamer media-libs/mesa[X(+)] net-libs/libsoup:3.0= net-libs/webkit-gtk:4.1/0 >=sci-libs/opencascade-7.3.0:0= virtual/glu >=x11-libs/cairo-1.8.8:= x11-libs/libxkbcommon >=x11-libs/pixman-0.30 x11-libs/wxGTK:3.0-gtk3[X,opengl] sys-libs/zlib
+DESCRIPTION=Bambu Studio is a cutting-edge, feature-rich slicing software
+EAPI=8
+HOMEPAGE=https://bambulab.com
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=desktop unpacker xdg
+KEYWORDS=~amd64
+LICENSE=AGPL-3
+RDEPEND=media-gfx/openvdb media-libs/glew:0= >=media-libs/glm-0.9.9.1 media-libs/gstreamer media-libs/mesa[X(+)] net-libs/libsoup:3.0= net-libs/webkit-gtk:4.1/0 >=sci-libs/opencascade-7.3.0:0= virtual/glu >=x11-libs/cairo-1.8.8:= x11-libs/libxkbcommon >=x11-libs/pixman-0.30 x11-libs/wxGTK:3.0-gtk3[X,opengl] sys-libs/zlib
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/bambulab/BambuStudio/releases/download/v01.09.03.50/Bambu_Studio_linux_fedora-v01.09.03.50.AppImage -> bambustudio-bin-01.09.03.50.AppImage
+_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	7b40f3faa3e2e12f5cf6d36d0fbfcd09	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
+_md5_=29fcc2788d0b4f26cdf3b40bbd8e3448

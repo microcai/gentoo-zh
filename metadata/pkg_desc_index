@@ -178,6 +178,7 @@ media-fonts/tiejili 1.100: An open-source font that extends Reggae One to Chines
 media-fonts/ttf-wps-fonts 1.0: Symbol fonts required by wps-office
 media-fonts/wangfonts 1.3.0: Free Chinese TrueType fonts donated by Prof. Hann-Tzong Wang
 media-fonts/zhudou 2.000: A font family for CJK symbols and punctuation, derived from Noto Sans.
+media-gfx/bambustudio-bin 01.09.03.50: Bambu Studio is a cutting-edge, feature-rich slicing software
 media-gfx/scangearmp 1.60 2.4.10: Driver and utility package for Canon scanners
 media-gfx/tgs2png 9999: Convert Telegram's animated stickers in TGS format into series of PNG images.
 media-gfx/tifig-bin 0.2.2: Converts iOS 11 HEIC images to practical formats - Static binary
