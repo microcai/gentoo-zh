@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-06-25 17:04:14 CST)
+(The last generation time: 2024-06-25 20:09:10 CST)
 
 ### Packages
 
@@ -328,6 +328,8 @@
  media-fonts/wangfonts                    | 1.3.0                                     |        | https://code.google.com/p/wangfonts/                                                    | Free Chinese TrueType fonts donated by Prof. Hann-Tzong Wang
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/zhudou                       | 2.000                                     |        | https://github.com/Buernia/Zhudou-Sans                                                  | A font family for CJK symbols and punctuation, derived from Noto Sans.
+------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ media-gfx/bambustudio-bin                | 01.09.03.50                               |        | https://bambulab.com                                                                    | Bambu Studio is a cutting-edge, feature-rich slicing software
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/scangearmp                     | 1.60                                      |        | http://support-au.canon.com.au/contents/AU/EN/0100303302.html                           | Canon InkJet Scanner Driver and ScanGear MP for Linux (Pixus/Pixma-Series).
                                           | 2.4.10                                    |        |                                                                                         |
