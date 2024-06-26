@@ -13,6 +13,7 @@ CRATES="
 	ahash@0.7.8
 	ahash@0.8.8
 	aho-corasick@1.1.1
+	alacritty_terminal@0.23.0
 	aliasable@0.1.3
 	allocator-api2@0.2.16
 	alsa-sys@0.3.1
@@ -37,11 +38,13 @@ CRATES="
 	ash-window@0.13.0
 	ash@0.38.0+1.3.281
 	ashpd@0.8.1
+	async-attributes@1.1.2
 	async-broadcast@0.7.0
 	async-channel@1.9.0
 	async-channel@2.2.0
 	async-compat@0.2.1
 	async-compression@0.4.6
+	async-dispatcher@0.1.2
 	async-executor@1.5.1
 	async-fs@1.6.0
 	async-fs@2.1.1
@@ -67,6 +70,7 @@ CRATES="
 	async-trait@0.1.77
 	async-tungstenite@0.16.1
 	async_zip@0.0.17
+	asynchronous-codec@0.7.0
 	atoi@2.0.0
 	atomic-waker@1.1.1
 	atomic@0.5.3
@@ -129,8 +133,8 @@ CRATES="
 	bytes-utils@0.1.4
 	bytes@0.4.12
 	bytes@1.5.0
-	calloop-wayland-source@0.2.0
-	calloop@0.12.4
+	calloop-wayland-source@0.3.0
+	calloop@0.13.0
 	cap-fs-ext@3.0.0
 	cap-net-ext@3.0.0
 	cap-primitives@3.0.0
@@ -147,7 +151,7 @@ CRATES="
 	cexpr@0.6.0
 	cfg-if@1.0.0
 	cfg_aliases@0.1.1
-	chrono@0.4.31
+	chrono@0.4.38
 	chunked_transfer@1.4.1
 	ciborium-io@0.2.2
 	ciborium-ll@0.2.2
@@ -180,7 +184,6 @@ CRATES="
 	const-random@0.1.18
 	convert_case@0.4.0
 	convert_case@0.6.0
-	copypasta@0.10.1
 	core-foundation-sys@0.6.2
 	core-foundation-sys@0.8.6
 	core-foundation@0.9.4
@@ -190,7 +193,6 @@ CRATES="
 	core-text@20.1.0
 	coreaudio-rs@0.11.2
 	coreaudio-sys@0.2.12
-	cosmic-text@0.11.2
 	cpal@0.15.2
 	cpp_demangle@0.4.3
 	cpufeatures@0.2.9
@@ -243,8 +245,9 @@ CRATES="
 	dirs-next@2.0.0
 	dirs-sys-next@0.1.2
 	dirs-sys@0.3.7
-	dirs@3.0.2
+	dirs-sys@0.4.1
 	dirs@4.0.0
+	dirs@5.0.1
 	dlib@0.5.2
 	dotenvy@0.15.7
 	downcast-rs@1.2.0
@@ -294,9 +297,9 @@ CRATES="
 	float-ord@0.2.0
 	flume@0.11.0
 	fnv@1.0.7
-	font-types@0.4.2
+	font-types@0.5.5
 	fontconfig-parser@0.5.6
-	fontdb@0.16.2
+	fontdb@0.18.0
 	foreign-types-macros@0.2.3
 	foreign-types-shared@0.1.1
 	foreign-types-shared@0.3.1
@@ -333,7 +336,7 @@ CRATES="
 	getrandom@0.2.10
 	gif@0.11.4
 	gimli@0.28.0
-	git2@0.18.3
+	git2@0.19.0
 	glob@0.3.1
 	globset@0.4.14
 	gloo-timers@0.2.6
@@ -423,7 +426,7 @@ CRATES="
 	lazycell@1.3.0
 	leb128@0.2.5
 	libc@0.2.153
-	libgit2-sys@0.16.2+1.7.2
+	libgit2-sys@0.17.0+1.8.1
 	libloading@0.7.4
 	libloading@0.8.0
 	libm@0.2.8
@@ -498,10 +501,8 @@ CRATES="
 	num_cpus@1.16.0
 	num_enum@0.5.11
 	num_enum_derive@0.5.11
-	objc-foundation@0.1.1
 	objc@0.2.7
 	objc_exception@0.1.2
-	objc_id@0.1.1
 	object@0.32.1
 	oboe-sys@0.5.0
 	oboe@0.5.0
@@ -515,6 +516,7 @@ CRATES="
 	openssl-src@300.2.3+3.2.1
 	openssl-sys@0.9.93
 	openssl@0.10.57
+	option-ext@0.2.0
 	ordered-float@2.10.0
 	ordered-float@3.9.1
 	ordered-stream@0.2.0
@@ -609,7 +611,7 @@ CRATES="
 	raw-window-metal@0.4.0
 	rayon-core@1.12.0
 	rayon@1.8.0
-	read-fonts@0.15.3
+	read-fonts@0.19.3
 	redox_syscall@0.2.16
 	redox_syscall@0.3.5
 	redox_syscall@0.4.1
@@ -637,6 +639,7 @@ CRATES="
 	roxmltree@0.19.0
 	rsa@0.4.0
 	rsa@0.9.2
+	runtimelib@0.12.0
 	rust-embed-impl@8.4.0
 	rust-embed-utils@8.4.0
 	rust-embed@8.4.0
@@ -652,7 +655,7 @@ CRATES="
 	rustls-webpki@0.101.7
 	rustls@0.21.12
 	rustversion@1.0.14
-	rustybuzz@0.12.1
+	rustybuzz@0.14.1
 	ryu@1.0.18
 	safemem@0.3.3
 	salsa20@0.8.1
@@ -695,6 +698,7 @@ CRATES="
 	sharded-slab@0.1.4
 	shell-words@1.1.0
 	shellexpand@2.1.2
+	shellexpand@3.1.0
 	shlex@1.3.0
 	signal-hook-registry@1.4.1
 	signal-hook@0.3.17
@@ -708,16 +712,15 @@ CRATES="
 	simplelog@0.9.0
 	siphasher@0.3.11
 	siphasher@1.0.1
+	skrifa@0.19.3
 	slab@0.4.9
 	slice-group-by@0.3.1
 	slotmap@1.0.6
 	sluice@0.5.5
 	smallvec@1.11.1
-	smithay-client-toolkit@0.18.1
-	smithay-clipboard@0.7.1
 	smol@1.3.0
 	socket2@0.4.9
-	socket2@0.5.4
+	socket2@0.5.7
 	spdx@0.10.4
 	spin@0.5.2
 	spin@0.9.8
@@ -753,7 +756,7 @@ CRATES="
 	sval_serde@2.8.0
 	svg_fmt@0.4.1
 	svgtypes@0.15.0
-	swash@0.1.12
+	swash@0.1.17
 	syn@1.0.109
 	syn@2.0.59
 	sync_wrapper@0.1.2
@@ -785,13 +788,13 @@ CRATES="
 	tinyvec@1.6.0
 	tinyvec_macros@0.1.1
 	tokio-io@0.1.13
-	tokio-macros@2.1.0
+	tokio-macros@2.2.0
 	tokio-native-tls@0.3.1
 	tokio-rustls@0.24.1
 	tokio-stream@0.1.14
 	tokio-tungstenite@0.20.1
 	tokio-util@0.7.9
-	tokio@1.32.0
+	tokio@1.37.0
 	toml@0.5.11
 	toml@0.7.8
 	toml@0.8.10
@@ -827,16 +830,16 @@ CRATES="
 	tree-sitter-typescript@0.20.5
 	tree-sitter-yaml@0.0.1
 	try-lock@0.2.4
-	ttf-parser@0.20.0
+	ttf-parser@0.21.1
 	tungstenite@0.16.0
 	tungstenite@0.20.1
 	typeid@1.0.0
 	typenum@1.17.0
 	uds_windows@1.1.0
 	unicase@2.7.0
-	unicode-bidi-mirroring@0.1.0
+	unicode-bidi-mirroring@0.2.0
 	unicode-bidi@0.3.13
-	unicode-ccc@0.1.2
+	unicode-ccc@0.2.0
 	unicode-ident@1.0.12
 	unicode-linebreak@0.1.5
 	unicode-normalization@0.1.22
@@ -853,7 +856,7 @@ CRATES="
 	usvg@0.41.0
 	utf-8@0.7.6
 	utf8parse@0.2.1
-	uuid@1.4.1
+	uuid@1.8.0
 	valuable@0.1.0
 	value-bag-serde1@1.9.0
 	value-bag-sval2@1.9.0
@@ -903,10 +906,8 @@ CRATES="
 	wast@35.0.2
 	wayland-backend@0.3.3
 	wayland-client@0.31.2
-	wayland-csd-frame@0.3.0
 	wayland-cursor@0.31.1
 	wayland-protocols-plasma@0.2.0
-	wayland-protocols-wlr@0.2.0
 	wayland-protocols@0.31.2
 	wayland-scanner@0.31.1
 	wayland-sys@0.31.1
@@ -925,9 +926,9 @@ CRATES="
 	winapi@0.3.9
 	winch-codegen@0.17.0
 	windows-core@0.52.0
-	windows-core@0.56.0
-	windows-implement@0.56.0
-	windows-interface@0.56.0
+	windows-core@0.57.0
+	windows-implement@0.57.0
+	windows-interface@0.57.0
 	windows-result@0.1.1
 	windows-sys@0.45.0
 	windows-sys@0.48.0
@@ -938,7 +939,7 @@ CRATES="
 	windows@0.46.0
 	windows@0.48.0
 	windows@0.52.0
-	windows@0.56.0
+	windows@0.57.0
 	windows_aarch64_gnullvm@0.42.2
 	windows_aarch64_gnullvm@0.48.5
 	windows_aarch64_gnullvm@0.52.5
@@ -1001,6 +1002,7 @@ CRATES="
 	zerocopy@0.7.32
 	zeroize@1.6.0
 	zeroize_derive@1.4.2
+	zeromq@0.4.0
 	zstd-safe@5.0.2+zstd.1.5.2
 	zstd-sys@2.0.8+zstd.1.5.5
 	zstd@0.11.2+zstd.1.5.2
@@ -1015,8 +1017,9 @@ declare -A GIT_CRATES=(
 	[blade-graphics]='https://github.com/zed-industries/blade;33fd51359d113c03b785e28f4a6cf75bacb0b26d;blade-%commit%/blade-graphics'
 	[blade-macros]='https://github.com/zed-industries/blade;33fd51359d113c03b785e28f4a6cf75bacb0b26d;blade-%commit%/blade-macros'
 	[blade-util]='https://github.com/zed-industries/blade;33fd51359d113c03b785e28f4a6cf75bacb0b26d;blade-%commit%/blade-util'
+	[cosmic-text]='https://github.com/pop-os/cosmic-text;542b20ca4376a3b5de5fa629db1a4ace44e18e0c;cosmic-text-%commit%'
 	[font-kit]='https://github.com/zed-industries/font-kit;5a5c4d4ca395c74eb0abde38508e170ce0fd761a;font-kit-%commit%'
-	[lsp-types]='https://github.com/zed-industries/lsp-types;853c7881d200777e20799026651ca36727144646;lsp-types-%commit%'
+	[lsp-types]='https://github.com/zed-industries/lsp-types;72357d6f6d212bdffba3b5ef4b31d8ca856058e7;lsp-types-%commit%'
 	[nvim-rs]='https://github.com/KillTheMule/nvim-rs;0d2b1c884f3c39a76b5b7aac0b429f4624843954;nvim-rs-%commit%'
 	[pathfinder_simd]='https://github.com/servo/pathfinder;30419d07660dc11a21e42ef4a7fa329600cff152;pathfinder-%commit%/simd'
 	[tree-sitter-go]='https://github.com/tree-sitter/tree-sitter-go;b82ab803d887002a0af11f6ce63d72884580bf33;tree-sitter-go-%commit%'
@@ -1077,7 +1080,9 @@ RDEPEND="${DEPEND}"
 BDEPEND="
 	>=virtual/rust-1.78.0
 	dev-util/vulkan-headers
+	>=sys-devel/clang-17:*
 	sys-devel/gettext
+	sys-devel/mold
 "
 
 pkg_setup() {
@@ -1100,8 +1105,14 @@ pkg_setup() {
 	strip-unsupported-flags
 	# flags from upstream
 	export RUSTFLAGS="${RUSTFLAGS} -C link-args=-Wl,--disable-new-dtags,-rpath,\$ORIGIN/../lib"
-	# linking error with llvm-18
-	export RUSTFLAGS="${RUSTFLAGS} -C link-args=-Wl,-z,nostart-stop-gc"
+
+	# Upstream explicitly use sys-devel/mold as linker
+	# Any other linker might just fail
+	einfo "Enforcing mold linker"
+	export RUSTFLAGS="${RUSTFLAGS} -C link-arg=-fuse-ld=mold"
+
+	# A possible (no warranty!) workaround for other linkers
+	#export RUSTFLAGS="${RUSTFLAGS} -C link-args=-Wl,-z,nostart-stop-gc"
 }
 
 src_prepare() {
@@ -1123,6 +1134,7 @@ src_prepare() {
 	export DO_STARTUP_NOTIFY="true"
 	export APP_ICON="zed"
 	export APP_NAME="Zed"
+	export APP_CLI="zeditor"
 	# sys-devel/gettext
 	envsubst < "crates/zed/resources/zed.desktop.in" > zed.desktop || die
 }
@@ -1139,7 +1151,7 @@ src_compile() {
 }
 
 src_install() {
-	newbin $(cargo_target_dir)/cli zed
+	newbin $(cargo_target_dir)/cli zeditor
 	# hard-coded in crates/cli/src/main.rs
 	# libexec/zed-editor
 	exeinto "/usr/libexec"
@@ -1152,7 +1164,6 @@ src_install() {
 
 pkg_postinst() {
 	xdg_pkg_postinst
-	optfeature "improved C/C++ language support" sys-devel/clang
 	optfeature "improved Rust language support" "dev-lang/rust[rust-analyzer]"
 	optfeature "improved Rust language support" "dev-lang/rust-bin[rust-analyzer]"
 }
