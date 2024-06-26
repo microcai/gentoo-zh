@@ -1,0 +1,10 @@
+--- a/rust-sciter-fab913b7c2e779b05c249b0c5de5a08759b2c15d/src/value.rs	2024-06-27 02:53:11.183665659 +0800
++++ b/rust-sciter-fab913b7c2e779b05c249b0c5de5a08759b2c15d/src/value.rs	2024-06-27 02:56:52.961313568 +0800
+@@ -576,6 +576,7 @@
+ 	}
+ 
+   #[allow(clippy::mut_from_ref)]
++  #[allow(invalid_reference_casting)]
+ 	fn ensure_tmp_mut(&self) -> &mut Value {
+ 		let cp = self as *const Value;
+ 		let mp = cp as *mut Value;
