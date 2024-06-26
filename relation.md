@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-06-26 15:44:11 CST)
+(The last generation time: 2024-06-27 05:53:00 CST)
 
 ### Packages
 
@@ -501,7 +501,7 @@
                                           | 1.2.0                                     |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/remmina-plugin-rustdesk         | 1.0.0.0-r1                                |        | http://www.muflone.com/remmina-plugin-rustdesk/                                         | A protocol plugin for Remmina to launch a Rustdesk connection.
-   net-misc/rustdesk                      | 1.2.3                                     |  D, RD | https://rustdesk.com/                                                                   | Open source virtual / remote desktop infrastructure for everyone
+   net-misc/rustdesk                      | 1.2.6                                     |  D, RD | https://rustdesk.com/                                                                   | An open-source remote desktop, and alternative to TeamViewer.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/todesk                          | 4.1.0                                     |        | https://www.todesk.com/                                                                 | ToDesk作为一款安全免费不限速的远程控制软件，通过领先的网络技术搭建并运营自己的网络系统，拥有覆盖全球的多节点、多业务，毫秒级延时应用层路由系统，带给用户像使用本地电脑一样的体验感。
                                           | 4.7.2.0                                   |        |                                                                                         |
