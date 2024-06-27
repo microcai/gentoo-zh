@@ -27,7 +27,7 @@ CRATES="
 	base64@0.22.1
 	base64ct@1.6.0
 	bitflags@1.3.2
-	bitflags@2.5.0
+	bitflags@2.6.0
 	blake2@0.10.6
 	block-buffer@0.10.4
 	block-padding@0.3.3
@@ -38,7 +38,7 @@ CRATES="
 	calloop-wayland-source@0.2.0
 	calloop@0.12.4
 	cbc@0.1.2
-	cc@1.0.99
+	cc@1.0.101
 	cfg-if@1.0.0
 	cipher@0.4.4
 	clap@4.5.7
@@ -108,9 +108,9 @@ CRATES="
 	itoa@1.0.11
 	js-sys@0.3.69
 	lazy-bytes-cast@5.0.1
-	lazy_static@1.4.0
+	lazy_static@1.5.0
 	libc@0.2.155
-	libloading@0.8.3
+	libloading@0.8.4
 	libm@0.2.8
 	libredox@0.1.3
 	linux-raw-sys@0.4.14
@@ -153,7 +153,7 @@ CRATES="
 	pkg-config@0.3.30
 	polling@3.7.2
 	ppv-lite86@0.2.17
-	proc-macro2@1.0.85
+	proc-macro2@1.0.86
 	quick-xml@0.31.0
 	quinn-proto@0.11.3
 	quinn-udp@0.5.2
@@ -190,7 +190,7 @@ CRATES="
 	security-framework@2.11.0
 	serde@1.0.203
 	serde_derive@1.0.203
-	serde_json@1.0.117
+	serde_json@1.0.118
 	serde_path_to_error@0.1.16
 	serde_repr@0.1.19
 	serde_urlencoded@0.7.1
@@ -204,12 +204,11 @@ CRATES="
 	smithay-client-toolkit@0.18.1
 	smithay-clipboard@0.7.1
 	socket2@0.5.7
-	spin@0.5.2
 	spin@0.9.8
 	spki@0.7.3
 	strsim@0.11.1
-	subtle@2.6.0
-	syn@2.0.66
+	subtle@2.6.1
+	syn@2.0.68
 	sync_wrapper@0.1.2
 	sync_wrapper@1.0.1
 	tempfile@3.10.1
@@ -217,7 +216,7 @@ CRATES="
 	textwrap@0.16.1
 	thiserror-impl@1.0.61
 	thiserror@1.0.61
-	tinyvec@1.6.0
+	tinyvec@1.6.1
 	tinyvec_macros@0.1.1
 	tokio-macros@2.3.0
 	tokio-rustls@0.26.0
@@ -244,7 +243,7 @@ CRATES="
 	urlencoding@2.1.3
 	utf-8@0.7.6
 	utf8parse@0.2.2
-	uuid@1.8.0
+	uuid@1.9.1
 	version_check@0.9.4
 	want@0.3.1
 	wasi@0.11.0+wasi-snapshot-preview1
