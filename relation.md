@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-06-28 19:03:09 CST)
+(The last generation time: 2024-06-28 23:50:08 CST)
 
 ### Packages
 
@@ -40,7 +40,7 @@
  app-editors/typora                       | 0.11.18                                   |        | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
                                           | 1.8.10                                    |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/zed                          | 0.141.2                                   |        | https://zed.dev/                                                                        | high-performance, multiplayer code editor
+ app-editors/zed                          | 0.141.3                                   |        | https://zed.dev/                                                                        | high-performance, multiplayer code editor
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/la-ow-syscall              | 0.1.0                                     |        | https://github.com/AOSC-Dev/la_ow_syscall                                               | Linux kernel module for compatibility with LoongArch's old-world ABI
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
