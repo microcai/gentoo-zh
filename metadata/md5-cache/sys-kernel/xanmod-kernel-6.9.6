@@ -1,5 +1,5 @@
 BDEPEND=test? ( dev-tcltk/expect sys-apps/coreutils sys-kernel/dracut sys-fs/e2fsprogs amd64? ( app-emulation/qemu[qemu_softmmu_targets_x86_64] ) arm64? ( app-emulation/qemu[qemu_softmmu_targets_aarch64] ) ppc? ( app-emulation/qemu[qemu_softmmu_targets_ppc] ) ppc64? ( app-emulation/qemu[qemu_softmmu_targets_ppc64] ) sparc? ( app-emulation/qemu[qemu_softmmu_targets_sparc,qemu_softmmu_targets_sparc64] ) x86? ( app-emulation/qemu[qemu_softmmu_targets_i386] ) ) || ( dev-lang/python:3.12 dev-lang/python:3.11 dev-lang/python:3.10 ) app-alternatives/cpio app-alternatives/bc sys-devel/bison sys-devel/flex virtual/libelf arm? ( sys-apps/dtc ) arm64? ( sys-apps/dtc ) riscv? ( sys-apps/dtc )
-DEFINED_PHASES=compile config configure install postinst postrm preinst prepare prerm pretend setup test
+DEFINED_PHASES=compile config configure install postinst postrm preinst prepare pretend setup test
 DESCRIPTION=XanMod lts kernel built with Gentoo patches and cjktty
 EAPI=8
 HOMEPAGE=https://www.kernel.org/
@@ -14,5 +14,5 @@ REQUIRED_USE=^^ ( x86-64-v1 x86-64-v2 x86-64-v3 x86-64-v4 )
 RESTRICT=!test? ( test ) test? ( userpriv ) arm? ( test )
 SLOT=6.9.6
 SRC_URI=https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.9-7.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.9-7.extras.tar.xz https://download.sourceforge.net/xanmod/patch-6.9.6-xanmod1.xz
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	8b220bbce5c119fb1d4d5c2f5588f3ea	python-any-r1	f5169813d1619761b459800587005fd2	portability	225656ad6c6594fe3b0187bdd50707fb	savedconfig	8b5f9d995a970e49cd427c55d5840285	dist-kernel-utils	145861da258122cbba5240a850f1a5e8	mount-boot	3945d351ee3192381911f938f4ee527a	kernel-install	8b3f309ac423799839f1fb3253b473b8	kernel-build	b4e40bd9dd5df90ef67043c51f40a111
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	8b220bbce5c119fb1d4d5c2f5588f3ea	python-any-r1	f5169813d1619761b459800587005fd2	portability	225656ad6c6594fe3b0187bdd50707fb	savedconfig	8b5f9d995a970e49cd427c55d5840285	mount-boot-utils	221f3b57621b98ab8e76d42420601f6d	dist-kernel-utils	c5204a4147b612736aef239e7cc69885	kernel-install	13b96091d4ae76a3b0ef09d32d589134	kernel-build	b4e40bd9dd5df90ef67043c51f40a111
 _md5_=b3cd2ad3109726f009645d98f2ad0ad3
