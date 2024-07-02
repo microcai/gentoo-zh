@@ -20,13 +20,26 @@ DEPEND="
 	acct-group/mihomo
 	acct-user/mihomo
 "
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}
+	systemd? (
+		sys-apps/systemd
+	)
+	!systemd? (
+		caps? (
+			sys-apps/openrc[caps(+)]
+		)
+		!caps? (
+			sys-apps/openrc
+		)
+	)
+"
 BDEPEND=">=dev-lang/go-1.20.4"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
-IUSE="+gvisor"
+IUSE="+gvisor systemd caps"
 
 src_compile() {
 	local BUILDTIME=$(LC_ALL=C date -u || die)
