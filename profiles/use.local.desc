@@ -247,7 +247,9 @@ net-proxy/daed:webui - Build and install daed instead of dae-wing
 net-proxy/hysteria:goamd64 - detect golang arch level on amd64 cpus by CPU_FLAGS_X86
 net-proxy/juicity:client - install juicity-client
 net-proxy/juicity:server - install juicity-server
-net-proxy/mihomo:gvisor - enable TUN stack support for gvisor
+net-proxy/mihomo:caps - Enable caps support for sys-apps/openrc
+net-proxy/mihomo:gvisor - Enable TUN stack support for gvisor
+net-proxy/mihomo:systemd - Enable systemd support
 net-proxy/shadowsocks-rust:redir - Enable redir protocol for sslocal (transparent proxy)
 net-proxy/shadowsocks-rust:tun - Enable Tun interface protocol for sslocal
 net-proxy/sing-box:acme - Build with ACME TLS certificate issuer support
