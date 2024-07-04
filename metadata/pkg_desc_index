@@ -279,7 +279,7 @@ net-proxy/v2rayA 2.2.5.6 9999: web GUI of Project V which supports V2Ray, Xray, 
 net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
 net-proxy/yass 1.10.7 1.11.3: lightweight and efficient, socks5/http forward proxy
 net-vpn/sstp-server 0.6.0: A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
-net-vpn/tailscale 1.68.0: Tailscale vpn client
+net-vpn/tailscale 1.68.2: Tailscale vpn client
 net-wireless/linux-wifi-hotspot 9999: Linux Wifi Hotspot
 sci-chemistry/vesta 3.5.8: Visualization for Electronic and STructural Analysis
 sci-electronics/circuitjs1-bin 9.3.2: Electronic Circuit Simulator in the Browser
