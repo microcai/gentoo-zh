@@ -1,0 +1,12 @@
+DEFINED_PHASES=install
+DEPEND=virtual/jdk:17
+DESCRIPTION=Reformats Java source code to comply with Google Java Style.
+EAPI=8
+HOMEPAGE=https://github.com/google/google-java-format
+KEYWORDS=~amd64
+LICENSE=Apache-2.0
+RDEPEND=virtual/jdk:17
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/google/google-java-format/releases/download/v1.22.0/google-java-format-1.22.0-all-deps.jar
+_md5_=ff9c841c87682fe4a263a7f3c8173f47
