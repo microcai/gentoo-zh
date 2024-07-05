@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-07-06 00:09:24 CST)
+(The last generation time: 2024-07-06 00:51:06 CST)
 
 ### Packages
 
@@ -490,8 +490,6 @@
  net-misc/biliup-app-bin                  | 0.4.1                                     |        | https://github.com/ForgQi/biliup-app                                                    | A Tool for Upload video to bilibili
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/biliup-rs                       | 0.2.0                                     |        | https://github.com/biliup/biliup-rs                                                     | Upload video to bilibili.
-------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/networkmanager-l2tp             | 9999                                      |        | http://www.gnome.org/projects/NetworkManager/                                           | NetworkManager L2TP plugin
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/nomachine-enterprise-client     | 7.8.2.1                                   |        | https://www.nomachine.com                                                               | NoMachine Enterprise Client
                                           | 7.9.2.1                                   |        |                                                                                         |
