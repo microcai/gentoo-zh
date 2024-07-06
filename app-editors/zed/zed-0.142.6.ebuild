@@ -1059,7 +1059,7 @@ declare -A GIT_CRATES=(
 	[xim]='https://github.com/npmania/xim-rs;27132caffc5b9bc9c432ca4afad184ab6e7c16af;xim-rs-%commit%'
 )
 
-inherit cargo desktop flag-o-matic optfeature toolchain-funcs xdg
+inherit cargo desktop edo flag-o-matic optfeature toolchain-funcs xdg
 
 DESCRIPTION="high-performance, multiplayer code editor"
 HOMEPAGE="
@@ -1071,7 +1071,9 @@ SRC_URI="
 	${CARGO_CRATE_URIS}
 "
 
-LICENSE="GPL-3+ AGPL-3+ Apache-2.0"
+# OFL-1.1 for IBM Plex
+# TODO: more check
+LICENSE="GPL-3+ AGPL-3+ Apache-2.0 OFL-1.1"
 # Dependent crate licenses
 LICENSE+="
 	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD-2 BSD Boost-1.0
@@ -1103,11 +1105,12 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
-	>=virtual/rust-1.78.0
+	>=dev-util/cargo-about-0.6.1
 	dev-util/vulkan-headers
 	>=sys-devel/clang-17:*
 	sys-devel/gettext
 	sys-devel/mold
+	>=virtual/rust-1.78.0
 "
 
 pkg_setup() {
@@ -1141,6 +1144,10 @@ pkg_setup() {
 }
 
 src_prepare() {
+	local PATCHES=(
+		"${FILESDIR}/${P}-remove-cargo-install-in-generate-licenses.patch"
+	)
+
 	default
 
 	# Cargo offline fetch workaround
@@ -1163,6 +1170,11 @@ src_prepare() {
 	export APP_ID="dev.zed.Zed"
 	# sys-devel/gettext
 	envsubst < "crates/zed/resources/zed.desktop.in" > ${APP_ID}.desktop || die
+
+	# For "View Denpendency licenses" Button in menu
+	# This requires package *cargo-about*
+	# Without this the button leads to crash
+	edo ${BASH} ./script/generate-licenses
 }
 
 src_configure() {
@@ -1179,7 +1191,7 @@ src_compile() {
 src_install() {
 	newbin $(cargo_target_dir)/cli zeditor
 	# hard-coded in crates/cli/src/main.rs
-	# libexec/zed-editor
+	# ["../libexec/zed-editor", "../lib/zed/zed-editor", "./zed"]
 	exeinto "/usr/libexec"
 	newexe $(cargo_target_dir)/zed zed-editor
 
