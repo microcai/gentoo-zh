@@ -1,0 +1,14 @@
+diff --git a/deps/zigini/build.zig.zon b/deps/zigini/build.zig.zon
+index dac05b3..86a38f0 100644
+--- a/deps/zigini/build.zig.zon
++++ b/deps/zigini/build.zig.zon
+@@ -3,8 +3,7 @@
+     .version = "0.2.0",
+     .dependencies = .{
+         .ini = .{
+-            .url = "https://github.com/ziglibs/ini/archive/19e1210063882ab7db73a8aaa60e733d4aaafe9f.tar.gz",
+-            .hash = "1220f1b89fc24ced663baf8cb0d32d951497d88bbd5df8f6e26d7e5ea9579d684786",
++	    .path = "./ini",
+         },
+     },
+     .paths = .{
