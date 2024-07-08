@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-07-08 02:13:35 CST)
+(The last generation time: 2024-07-08 12:42:45 CST)
 
 ### Packages
 
@@ -675,6 +675,7 @@
    x11-misc/i3lock-color                  | 9999                                      |  D, RD | https://github.com/chrjguill/i3lock-color                                               | An improved i3lock
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  x11-misc/ly                              | 0.6.0-r1                                  |        | https://github.com/nullgemm/ly                                                          | Ly - a TUI display manager
+                                          | 1.0.0                                     |        |                                                                                         |
                                           | 9999                                      |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  x11-misc/picom-jonaburg                  | 8                                         |        | https://github.com/jonaburg/picom                                                       | jonaburg's picom fork with dual_kawase blur and rounded corners
