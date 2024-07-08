@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=compile install postinst unpack
+DEPEND=|| ( dev-lang/zig-bin:0.12 dev-lang/zig:0.12 ) sys-libs/pam x11-libs/libxcb
+DESCRIPTION=Ly - a TUI display manager
+EAPI=8
+HOMEPAGE=https://github.com/nullgemm/ly
+INHERIT=systemd
+KEYWORDS=~amd64
+LICENSE=WTFPL-2
+RDEPEND=x11-base/xorg-server x11-apps/xauth sys-libs/ncurses
+SLOT=0
+SRC_URI=https://github.com/nullgemm/ly/archive/refs/tags/v1.0.0.tar.gz -> ly-1.0.0.tar.gz https://github.com/Hejsil/zig-clap/archive/8c98e6404b22aafc0184e999d8f068b81cc22fa1.tar.gz -> zig-clap.tar.gz https://github.com/Kawaii-Ash/zigini/archive/ce1f322482099db058f5d9fdd05fbfa255d79723.tar.gz -> zigini.tar.gz https://github.com/ziglibs/ini/archive/da0af3a32e3403e3113e103767065cbe9584f505.tar.gz -> ziglibini.tar.gz
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	c8b03e8df84486aa991d4396686e8942
+_md5_=2d9bdeed027de49b37b26b006e54fb0a
