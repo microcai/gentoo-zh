@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-07-08 12:42:45 CST)
+(The last generation time: 2024-07-09 10:55:33 CST)
 
 ### Packages
 
@@ -491,6 +491,8 @@
  net-misc/biliup-app-bin                  | 0.4.1                                     |        | https://github.com/ForgQi/biliup-app                                                    | A Tool for Upload video to bilibili
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/biliup-rs                       | 0.2.0                                     |        | https://github.com/biliup/biliup-rs                                                     | Upload video to bilibili.
+------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ net-misc/localsend-bin                   | 1.14.0                                    |        | https://localsend.org                                                                   | An open-source cross-platform alternative to AirDrop
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/nomachine-enterprise-client     | 7.8.2.1                                   |        | https://www.nomachine.com                                                               | NoMachine Enterprise Client
                                           | 7.9.2.1                                   |        |                                                                                         |
