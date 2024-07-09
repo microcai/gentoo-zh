@@ -4,7 +4,7 @@
 EAPI="8"
 K_WANT_GENPATCHES="base extras"
 #Note: to bump xanmod, check K_GENPATCHES_VER in sys-kernel/gentoo-sources
-K_GENPATCHES_VER="7"
+K_GENPATCHES_VER="9"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 ETYPE="sources"
@@ -44,7 +44,7 @@ src_unpack() {
 	UNIPATCH_LIST+=" ${DISTDIR}/patch-${OKV}${XANMOD_VERSION}.xz"
 	unipatch "${UNIPATCH_LIST}"
 	unpack_fix_install_path
-	env_setup_xmakeopts
+	env_setup_kernel_makeopts
 	cd "${S}" || die
 }
 
