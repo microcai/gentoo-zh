@@ -246,6 +246,7 @@ net-misc/bbdown-bin 1.6.2: 一款命令行式哔哩哔哩下载器
 net-misc/biliup-app 0.4.1-r2: A Tool for Upload video to bilibili
 net-misc/biliup-app-bin 0.4.1: A Tool for Upload video to bilibili
 net-misc/biliup-rs 0.2.0: Upload video to bilibili.
+net-misc/localsend-bin 1.14.0: An open-source cross-platform alternative to AirDrop
 net-misc/nomachine-enterprise-client 7.8.2.1 7.9.2.1: NoMachine Enterprise Client
 net-misc/pcmanx-gtk2 1.3 9999: PCMan is a gtk+ based free BBS client
 net-misc/prips 1.0.0 1.2.0: print the IP addresses in a range

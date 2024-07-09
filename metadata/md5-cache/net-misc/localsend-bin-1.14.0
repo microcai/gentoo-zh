@@ -1,0 +1,13 @@
+DEFINED_PHASES=install
+DEPEND=dev-libs/libayatana-appindicator x11-misc/xdg-user-dirs
+DESCRIPTION=An open-source cross-platform alternative to AirDrop
+EAPI=8
+HOMEPAGE=https://localsend.org
+INHERIT=desktop
+KEYWORDS=~amd64
+LICENSE=MIT
+RESTRICT=bindist
+SLOT=0
+SRC_URI=https://github.com/localsend/localsend/releases/download/v1.14.0/localsend-1.14.0-linux-x86-64.tar.gz
+_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d
+_md5_=308f43a20fb581d5d3738f6dcd02d2b5
