@@ -38,7 +38,7 @@ app-emulation/la-ow-syscall 0.1.0: Linux kernel module for compatibility with Lo
 app-emulation/liblol 0.1.5_pre6: LoongArch old-world ABI compatibility layer from AOSC OS
 app-emulation/liblol-glibc 0.1.5_pre6: GNU libc C library, for liblol
 app-emulation/liblol-libxcrypt 0.1.5_pre6: libxcrypt for liblol
-app-emulation/looking-glass 0_beta6-r1: A low latency KVMFR application for guests with VGA PCI Passthrough
+app-emulation/looking-glass 0_beta7_rc1-r1: A low latency KVMFR application for guests with VGA PCI Passthrough
 app-emulation/winetricks-zh 9999 20240105.1: windows applications setup wizard for Chinese wine users
 app-i18n/cskk 3.1.1: C ABIから使う事を目的とした SKK(Simple Kana Kanji henkan)方式のかな漢字変換ライブラリ
 app-i18n/dvp 1.2.1-r1: The kbd keymap for Programmer Dvorak.
