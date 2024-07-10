@@ -1,4 +1,4 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -6,6 +6,7 @@ EAPI=8
 inherit cmake tmpfiles linux-info desktop xdg
 
 MY_PV="${PV//0_beta/B}"
+MY_PV="${MY_PV//_/-}"
 
 DESCRIPTION="A low latency KVMFR application for guests with VGA PCI Passthrough"
 HOMEPAGE="https://looking-glass.io"
@@ -102,7 +103,7 @@ src_configure() {
 	for prj in ${MY_CMAKE_PROJECT}
 	do
 		CMAKE_USE_DIR="${S}/${prj}"
-		BUILD_DIR="${CMAKE_USE_DIR}_build"
+		BUILD_DIR="${WORKDIR}/${prj}"
 		cmake_src_configure "$@"
 	done
 	set_arch_to_kernel
@@ -113,7 +114,7 @@ src_compile() {
 	for prj in ${MY_CMAKE_PROJECT}
 	do
 		CMAKE_USE_DIR="${S}/${prj}"
-		BUILD_DIR="${CMAKE_USE_DIR}_build"
+		BUILD_DIR="${WORKDIR}/${prj}"
 		cmake_src_compile "$@"
 	done
 }
@@ -123,7 +124,7 @@ src_install() {
 	for prj in ${MY_CMAKE_PROJECT}
 	do
 		CMAKE_USE_DIR="${S}/${prj}"
-		BUILD_DIR="${CMAKE_USE_DIR}_build"
+		BUILD_DIR="${WORKDIR}/${prj}"
 		cmake_src_install "$@"
 	done
 	# install docs
