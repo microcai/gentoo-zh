@@ -38,7 +38,6 @@ CRATES="
 	ascii@1.1.0
 	ash-window@0.13.0
 	ash@0.38.0+1.3.281
-	ashpd@0.8.1
 	async-attributes@1.1.2
 	async-broadcast@0.7.0
 	async-channel@1.9.0
@@ -370,7 +369,7 @@ CRATES="
 	heed-types@0.20.0
 	heed@0.20.1
 	hermit-abi@0.1.19
-	hermit-abi@0.3.3
+	hermit-abi@0.3.9
 	hex@0.4.3
 	hexf-parse@0.2.1
 	hidden-trait@0.1.2
@@ -380,6 +379,7 @@ CRATES="
 	home@0.5.9
 	hound@3.5.0
 	html5ever@0.27.0
+	html_to_markdown@0.1.0
 	http-body@0.4.5
 	http-range-header@0.3.1
 	http@0.2.9
@@ -415,8 +415,6 @@ CRATES="
 	iovec@0.1.4
 	ipc-channel@0.18.0
 	ipnet@2.8.0
-	is-docker@0.2.0
-	is-wsl@0.4.0
 	isahc@1.7.2
 	itertools@0.10.5
 	itertools@0.11.0
@@ -526,7 +524,6 @@ CRATES="
 	oo7@0.3.0
 	oorandom@11.1.3
 	opaque-debug@0.3.0
-	open@5.1.2
 	openssl-macros@0.1.1
 	openssl-probe@0.1.5
 	openssl-src@300.3.0+3.3.0
@@ -1038,6 +1035,7 @@ CRATES="
 
 declare -A GIT_CRATES=(
 	[alacritty_terminal]='https://github.com/alacritty/alacritty;cacdb5bb3b72bad2c729227537979d95af75978f;alacritty-%commit%/alacritty_terminal'
+	[ashpd]='https://github.com/bilelmoussaoui/ashpd;29f2e1a6f4b0911f504658f5f4630c02e01b13f2;ashpd-%commit%'
 	[async-pipe]='https://github.com/zed-industries/async-pipe-rs;82d00a04211cf4e1236029aa03e6b6ce2a74c553;async-pipe-rs-%commit%'
 	[blade-graphics]='https://github.com/kvark/blade;21a56f780e21e4cb42c70a1dcf4b59842d1ad7f7;blade-%commit%/blade-graphics'
 	[blade-macros]='https://github.com/kvark/blade;21a56f780e21e4cb42c70a1dcf4b59842d1ad7f7;blade-%commit%/blade-macros'
@@ -1145,7 +1143,7 @@ pkg_setup() {
 
 src_prepare() {
 	local PATCHES=(
-		"${FILESDIR}/${P}-remove-cargo-install-in-generate-licenses.patch"
+		"${FILESDIR}/${PN}-0.142.6-remove-cargo-install-in-generate-licenses.patch"
 	)
 
 	default
@@ -1167,18 +1165,16 @@ src_prepare() {
 	export APP_ICON="zed"
 	export APP_NAME="Zed"
 	export APP_CLI="zeditor"
-	export APP_ID="dev.zed.Zed"
+	export APP_ARGS="%U"
 	# sys-devel/gettext
-	envsubst < "crates/zed/resources/zed.desktop.in" > ${APP_ID}.desktop || die
+	envsubst < "crates/zed/resources/zed.desktop.in" > dev.zed.Zed.desktop || die
+
+	sed '/Keywords=zed;/a Actions=NewWorkspace;' -i dev.zed.Zed.desktop || die
 
 	# For "View Denpendency licenses" Button in menu
 	# This requires package *cargo-about*
 	# Without this the button leads to crash
 	edo ${BASH} ./script/generate-licenses
-}
-
-src_configure() {
-	cargo_src_configure --all-features
 }
 
 src_compile() {
@@ -1197,7 +1193,7 @@ src_install() {
 
 	newicon -s 512 crates/zed/resources/app-icon.png zed.png
 	newicon -s 1024 crates/zed/resources/app-icon@2x.png zed.png
-	domenu "${S}/${APP_ID}.desktop"
+	domenu "${S}/dev.zed.Zed.desktop"
 }
 
 pkg_postinst() {
