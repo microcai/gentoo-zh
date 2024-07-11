@@ -9,8 +9,7 @@ DESCRIPTION="LCEDA (binary package)"
 HOMEPAGE="https://lceda.cn/"
 SRC_URI="https://image.lceda.cn/files/${PN}-linux-x64-${PV}.zip"
 
-RESTRICT="mirror"
-
+S="${WORKDIR}/lceda-linux-x64"
 LICENSE="LCEDA-EULA"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -49,7 +48,8 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND="app-arch/unzip"
 
-S="${WORKDIR}/lceda-linux-x64"
+RESTRICT="mirror"
+
 QA_PREBUILT="
 	/opt/lceda/swiftshader/libEGL.so
 	/opt/lceda/swiftshader/libGLESv2.so
