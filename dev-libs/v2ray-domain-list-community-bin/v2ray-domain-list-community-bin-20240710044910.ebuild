@@ -7,6 +7,8 @@ DESCRIPTION="Community managed domain list for V2Ray."
 HOMEPAGE="https://github.com/v2fly/domain-list-community"
 SRC_URI="https://github.com/v2fly/domain-list-community/releases/download/${PV}/dlc.dat.xz -> ${P}.dat.xz"
 
+S="${WORKDIR}"
+
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
@@ -14,8 +16,6 @@ KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 RESTRICT="mirror"
 
 RDEPEND="!dev-libs/v2ray-domain-list-community"
-
-S="${WORKDIR}"
 
 src_install() {
 	insinto /usr/share/geosite/
