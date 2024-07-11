@@ -28,7 +28,7 @@ app-dicts/fcitx-pinyin-zhwiki 20230728: Fcitx 5 Pinyin Dictionary from zh.wikipe
 app-editors/appflowy-bin 0.6.3: AppFlowy is an open-source alternative to Notion
 app-editors/marktext-bin 0.17.1: A simple and elegant markdown editor, available for Linux, macOS and Windows.
 app-editors/typora 0.11.18 1.8.10: A truely minimal markdown editor.
-app-editors/zed 0.142.6: high-performance, multiplayer code editor
+app-editors/zed 0.143.6: high-performance, multiplayer code editor
 app-emulation/deepin-udis86 1.72-r4: Disassembler library for x86 (32-bit shared library)
 app-emulation/deepin-wine-helper 5.1.27-r1 5.1.45: Deepin Wine Helper
 app-emulation/deepin-wine-plugin 5.1.13-r1: Deepin Wine plugin
@@ -120,8 +120,8 @@ dev-libs/lunar-calendar 3.0.1: a gtk+ calendar widget for chinese lunar library
 dev-libs/lunar-date 3.0.1: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458-r1 9999: Community managed domain list for V2Ray.
-dev-libs/v2ray-domain-list-community-bin 20240508170917: Community managed domain list for V2Ray.
-dev-libs/v2ray-geoip-bin 202405090040: GeoIP for V2Ray.
+dev-libs/v2ray-domain-list-community-bin 20240710044910: Community managed domain list for V2Ray.
+dev-libs/v2ray-geoip-bin 202407110044: GeoIP for V2Ray.
 dev-libs/v2ray-rules-dat 202402252208: Enhanced edition of V2Ray rules dat files.
 dev-python/archspec 0.2.4: A library for detecting, labeling, and reasoning about microarchitectures
 dev-python/conda 24.5.0: OS-agnostic, system-level binary package manager and ecosystem
@@ -272,7 +272,7 @@ net-proxy/hysteria 2.2.2: A powerful, lightning fast and censorship resistant pr
 net-proxy/juicity 0.4.2: juicity is a quic-based proxy protocol.
 net-proxy/mihomo 1.18.6-r1: Another Clash Kernel, formerly Clash.Meta
 net-proxy/proxy-server 6.0.0 7.0.0: Implementation of all proxy protocols using modern c++
-net-proxy/shadowsocks-rust 1.19.3 1.20.1: A Rust port of shadowsocks.
+net-proxy/shadowsocks-rust 1.19.3 1.20.2: A Rust port of shadowsocks.
 net-proxy/sing-box 1.9.3: The universal proxy platform.
 net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
 net-proxy/v2ray 5.15.3 5.16.1: A platform for building proxies to bypass network restrictions.

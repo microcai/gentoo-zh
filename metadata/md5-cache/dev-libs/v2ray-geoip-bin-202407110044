@@ -6,5 +6,5 @@ KEYWORDS=~amd64 ~arm ~arm64 ~loong ~riscv ~x86
 LICENSE=CC-BY-SA-4.0
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/v2fly/geoip/releases/download/202405090040/geoip.dat -> v2ray-geoip-bin-202405090040.dat
-_md5_=c2192a9b88dd7144cfaf4e2ccf763136
+SRC_URI=https://github.com/v2fly/geoip/releases/download/202407110044/geoip.dat -> v2ray-geoip-bin-202407110044.dat
+_md5_=815272d7ed0ba92a92477381d6eb4b63
