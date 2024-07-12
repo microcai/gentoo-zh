@@ -1,4 +1,4 @@
-BDEPEND=>=app-portage/elt-patches-20240116 sys-devel/gnuconfig || ( >=dev-build/automake-1.17:1.17 >=dev-build/automake-1.16.5:1.16 ) || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 virtual/pkgconfig
+BDEPEND=>=app-portage/elt-patches-20240116 sys-devel/gnuconfig || ( >=dev-build/automake-1.17-r1:1.17 >=dev-build/automake-1.16.5:1.16 ) || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 virtual/pkgconfig
 DEFINED_PHASES=compile install postinst postrm prepare
 DEPEND=>=x11-libs/gtk+-2.16:2 virtual/libusb:1
 DESCRIPTION=Driver and utility package for Canon scanners
@@ -10,5 +10,5 @@ LICENSE=Canon-IJ
 RDEPEND=>=x11-libs/gtk+-2.16:2 virtual/libusb:1
 SLOT=0
 SRC_URI=https://gdlp01.c-wss.com/gds/4/0100010924/01/scangearmp2-source-4.10-1.tar.gz
-_eclasses_=gnuconfig	a397adda6984a4c423e28ac274c1ba98	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	5f49a16f67f81bdf873e3d1f10b10001	autotools	fb7c3cd829c27448f5a05212de2bf499	udev	eec0bbab06977f1cfc5597269c1fa152
+_eclasses_=gnuconfig	a397adda6984a4c423e28ac274c1ba98	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	5f49a16f67f81bdf873e3d1f10b10001	autotools	d12ccbad07b44642a75ac97a3334d8e0	udev	eec0bbab06977f1cfc5597269c1fa152
 _md5_=699aa8274b1b8a4ef197504313235daf
