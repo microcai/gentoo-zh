@@ -64,19 +64,6 @@ app-i18n/librime 1.10.0: RIME (Rime Input Method Engine) core library
 app-i18n/lunar 2.2-r5: Chinese Lunar Calendar conversion utility
 app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
 app-i18n/mozc 2.26.4632_p20220213064411_p20220214004422 2.28.5029.102 2.28.5029.102-r1: Mozc - Japanese input method editor
-app-i18n/rime-bopomofo 20210131: Bopomofo input for rime
-app-i18n/rime-cangjie 20210223: Cangjie input for rime
-app-i18n/rime-data 20220409: Data resources for Rime Input Method Engine
-app-i18n/rime-double-pinyin 20190120: double-pinyin input for rime
-app-i18n/rime-essay 20230204-r1: Essential files for building up your Rime configuration
-app-i18n/rime-flypy 10.9.4: flypy-full input for rime
-app-i18n/rime-luna-pinyin 20230204: Luna pinyin for rime
-app-i18n/rime-octagram-data 20190619: Language model of the 「八股文」語法
-app-i18n/rime-pinyin-simp 20230104: Simple pinyin input for rime
-app-i18n/rime-prelude 20220122-r1: Essential files for building up your Rime configuration
-app-i18n/rime-stroke 20230204: Stroke input for rime
-app-i18n/rime-terra-pinyin 20230207: Terra input for rime
-app-i18n/rime-wubi 20200908: wubi input for rime
 app-i18n/zh-autoconvert 0.3.16_p7: Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 app-misc/bcompare 4.4.6.27483 4.4.7.28397: Beyond Compare -- Compare, sync, and merge files and folders
 app-misc/ccal 2.5.3: A simple command line calendar for Chinese lunar

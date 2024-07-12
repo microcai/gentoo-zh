@@ -74,24 +74,6 @@ app-i18n/mozc:fcitx5 - Enable support for app-i18n/fcitx 5
 app-i18n/mozc:gui - Install graphical user interface tool (mozc_tool)
 app-i18n/mozc:ibus - Enable support for app-i18n/ibus
 app-i18n/mozc:renderer - Enable native candidate window
-app-i18n/rime-data:bopomofo - install app-i18n/rime-bopomofo
-app-i18n/rime-data:cangjie - install app-i18n/rime-cangjie
-app-i18n/rime-data:double-pinyin - install app-i18n/rime-double-pinyin
-app-i18n/rime-data:essay - install app-i18n/rime-essay
-app-i18n/rime-data:flypy - install app-i18n/rime-flypy
-app-i18n/rime-data:luna-pinyin - install app-i18n/rime-luna-pinyin
-app-i18n/rime-data:octagram - install app-i18n/rime-octagram-data
-app-i18n/rime-data:pinyin-simp - install app-i18n/rime-pinyin-simp
-app-i18n/rime-data:prelude - install app-i18n/rime-prelude
-app-i18n/rime-data:stroke - install app-i18n/rime-stroke
-app-i18n/rime-data:terra-pinyin - install app-i18n/rime-terra-pinyin
-app-i18n/rime-data:wubi - install app-i18n/rime-wubi
-app-i18n/rime-essay:hans - install rime-essay-simp
-app-i18n/rime-essay:hant - install rime-essay
-app-i18n/rime-flypy:fcitx - install table for fcitx5
-app-i18n/rime-flypy:rime - install table for rime
-app-i18n/rime-octagram-data:hans - install zh-hans-*.gram
-app-i18n/rime-octagram-data:hant - install zh-hant-*.gram
 app-i18n/zh-autoconvert:static-libs - Build static versions of dynamic libraries as well
 app-misc/gpick:gtk3 - use GTK3 instead of GTK2
 app-misc/joshuto:fzf - Fuzzy search via fzf
