@@ -167,33 +167,6 @@ github_account = "liangyongxiang"
 # TODO: only old data tag
 #["app-i18n/mozc"]
 
-# No releases: https://github.com/rime/rime-prelude
-#["app-i18n/rime-bopomofo"]
-
-#["app-i18n/rime-cangjie"]
-
-#["app-i18n/rime-data"]
-
-#["app-i18n/rime-double-pinyin"]
-
-#["app-i18n/rime-essay"]
-
-#["app-i18n/rime-flypy"]
-
-#["app-i18n/rime-luna-pinyin"]
-
-#["app-i18n/rime-octagram-data"]
-
-#["app-i18n/rime-pinyin-simp"]
-
-#["app-i18n/rime-prelude"]
-
-#["app-i18n/rime-stroke"]
-
-#["app-i18n/rime-terra-pinyin"]
-
-#["app-i18n/rime-wubi"]
-
 ["app-i18n/zh-autoconvert"]
 source = "regex"
 url = "https://packages.debian.org/stable/source/zh-autoconvert"
