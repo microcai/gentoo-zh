@@ -1,0 +1,43 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Reilly Brogan <reilly@reillybrogan.com>
+Date: Fri, 14 Jun 2024 00:09:19 -0500
+Subject: [PATCH] Use system libs
+
+This patch is likely to break on zed version updates. To update this patch do the following:
+1. `git am` the patch file or `git cherry-pick` if you already have it in your git repo
+2. Fix the conflicts to `Cargo.toml` files.
+3. Just revert `Cargo.lock` to the pre-patch/pre-cherry-pick version: `git checkout --ours Cargo.lock`
+4. Run `cargo fetch --offline` to update the lock file but without updating any dependencies
+5. Complete the `git am` or cherry-pick and the export the commit as the new patch
+
+Signed-off-by: Reilly Brogan <reilly@reillybrogan.com>
+---
+ Cargo.lock              | 1 +
+ crates/sqlez/Cargo.toml | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/Cargo.lock b/Cargo.lock
+index 659af7375..939997994 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -6139,6 +6139,7 @@ version = "0.26.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "afc22eff61b133b115c6e8c74e818c628d6d5e7a502afea6f64dee076dd94326"
+ dependencies = [
++ "bindgen 0.64.0",
+  "cc",
+  "pkg-config",
+  "vcpkg",
+diff --git a/crates/sqlez/Cargo.toml b/crates/sqlez/Cargo.toml
+index 98b05a06e..b97001dd8 100644
+--- a/crates/sqlez/Cargo.toml
++++ b/crates/sqlez/Cargo.toml
+@@ -14,7 +14,7 @@ collections.workspace = true
+ futures.workspace = true
+ indoc.workspace = true
+ lazy_static.workspace = true
+-libsqlite3-sys = { version = "0.26", features = ["bundled"] }
++libsqlite3-sys = { version = "0.26", features = ["buildtime_bindgen"] }
+ parking_lot.workspace = true
+ smol.workspace = true
+ thread_local = "1.1.4"

@@ -1057,7 +1057,7 @@ declare -A GIT_CRATES=(
 	[xim]='https://github.com/npmania/xim-rs;27132caffc5b9bc9c432ca4afad184ab6e7c16af;xim-rs-%commit%'
 )
 
-inherit cargo desktop edo flag-o-matic optfeature toolchain-funcs xdg
+inherit cargo desktop edo flag-o-matic toolchain-funcs xdg
 
 DESCRIPTION="high-performance, multiplayer code editor"
 HOMEPAGE="
@@ -1083,9 +1083,8 @@ IUSE="+lto"
 REQUIRED_USE="lto? ( !debug )"
 
 DEPEND="
-	dev-db/sqlite:3
+	>=dev-db/sqlite-3.38.0:3
 	dev-libs/libgit2
-	dev-libs/mimalloc
 	dev-libs/openssl:0/3
 	dev-libs/wayland
 	dev-libs/wayland-protocols
@@ -1144,6 +1143,8 @@ pkg_setup() {
 src_prepare() {
 	local PATCHES=(
 		"${FILESDIR}/${PN}-0.142.6-remove-cargo-install-in-generate-licenses.patch"
+		# From https://github.com/getsolus/packages/tree/main/packages/z/zed
+		"${FILESDIR}/${P}-use-system-libs.patch"
 	)
 
 	default
@@ -1194,10 +1195,4 @@ src_install() {
 	newicon -s 512 crates/zed/resources/app-icon.png zed.png
 	newicon -s 1024 crates/zed/resources/app-icon@2x.png zed.png
 	domenu "${S}/dev.zed.Zed.desktop"
-}
-
-pkg_postinst() {
-	xdg_pkg_postinst
-	optfeature "improved Rust language support" "dev-lang/rust[rust-analyzer]"
-	optfeature "improved Rust language support" "dev-lang/rust-bin[rust-analyzer]"
 }
