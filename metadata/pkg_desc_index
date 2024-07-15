@@ -198,13 +198,13 @@ media-video/amdgpu-pro-amf 1.4.29.1538781: AMD's closed source Advanced Media Fr
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
 media-video/bilibili 1.11.4: Based on the Bilibli offcial client to linux version, support roaming
 media-video/implay 1.5.1: A Cross-Platform Desktop Media Player
-media-video/mpv-handler 0.3.8: Play website videos and songs with mpv & yt-dlp
+media-video/mpv-handler 0.3.12: Play website videos and songs with mpv & yt-dlp
 media-video/tenvideo 1.0.10: Tencent videos
 net-analyzer/besttrace-bin 1.3.2-r1: 附带链路可视化的 traceroute 工具
 net-analyzer/nali 0.8.1: An offline tool for querying IP geographic information and CDN provider.
 net-analyzer/realitlscanner 0.1.2: A TLS server scanner for Reality
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
-net-dns/ddns-go 6.6.3: Automatically obtain your public IP address and set to your domain name service.
+net-dns/ddns-go 6.6.4: Automatically obtain your public IP address and set to your domain name service.
 net-dns/dnslookup 1.11.1: Simple command line utility to make DNS lookups to the specified server
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
 net-dns/dog 0.1.0-r1 0.1.0_p20211007: A command-line DNS client
