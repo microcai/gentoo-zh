@@ -17,7 +17,7 @@
 	</longdescription>
 	<longdescription lang="zh">
 		简单好用的 DDNS。自动获得你的公网 IPv4 或 IPv6 地址，并解析到对应的域名服务。
-		支持阿里云 腾讯云 Dnspod Cloudflare 华为云 Callback 百度云
-		Porkbun GoDaddy Google Domain Namecheap NameSilo...
+		支持阿里云，腾讯云，Dnspod，Cloudflare，Callback，华为云，百度云
+		Porkbun，GoDaddy，Namecheap，NameSilo……
 	</longdescription>
 </pkgmetadata>

@@ -19,14 +19,14 @@ RESTRICT="mirror"
 PATCHES=(
 	"${FILESDIR}/${PN}-6.6.2-remove-update-support.patch"
 	"${FILESDIR}/${PN}-6.6.2-remove-service-management-support.patch"
-	"${FILESDIR}/${PN}-6.6.2-deps-tidy.patch"
+	"${FILESDIR}/${PN}-6.6.4-deps-tidy.patch"
 )
 
 src_compile() {
 	ego build \
 		-trimpath \
 		-ldflags="-s -w -linkmode external \
-			-X 'main.version=${PV}' \
+			-X 'main.version=${PV} (Gentoo)' \
 			-X 'main.buildTime=$(date -u +"%Y-%m-%dT%H:%M:%SZ")'" \
 		-o "${PN}" \
 		.
