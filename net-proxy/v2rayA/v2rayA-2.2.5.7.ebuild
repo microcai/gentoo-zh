@@ -46,7 +46,9 @@ src_compile() {
 	mv -v "${WORKDIR}/web" "${S}/service/server/router/web" || die
 
 	cd "${S}/service" || die
-	ego build -mod vendor -tags "with_gvisor" -ldflags "-X github.com/v2rayA/v2rayA/conf.Version=${PV} -s -w" -o v2raya
+	ego build -mod vendor -tags "with_gvisor" \
+		-ldflags "-X github.com/v2rayA/v2rayA/conf.Version=${PV} -s -w" \
+		-o v2raya -trimpath
 }
 
 src_install() {
