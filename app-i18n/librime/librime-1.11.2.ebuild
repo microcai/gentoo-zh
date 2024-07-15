@@ -21,7 +21,7 @@ SRC_URI="
 	proto? ( https://github.com/lotem/librime-proto/archive/${_PROTO_COMMIT}.tar.gz -> ${P}-proto.tar.gz )
 	predict? ( https://github.com/lotem/librime-predict/archive/${_PREDICT_COMMIT}.tar.gz -> ${P}-predict.tar.gz )
 "
-S=${WORKDIR}/${PN}-${PV}
+S=${WORKDIR}/${PN}-${_COMMIT}
 
 LICENSE="BSD BSD-2 Boost-1.0 MIT"
 SLOT="0/1-${PV}"
