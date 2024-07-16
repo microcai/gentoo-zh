@@ -2,8 +2,6 @@
 oldver = "old_ver.json"
 newver = "new_ver.json"
 
-#["app-admin/supersm"]
-
 ["app-admin/rbw"]
 source = "github"
 github = "doy/rbw"
