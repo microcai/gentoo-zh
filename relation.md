@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-07-15 21:49:14 CST)
+(The last generation time: 2024-07-16 10:12:28 CST)
 
 ### Packages
 
@@ -79,7 +79,7 @@
    app-i18n/fcitx-m17n                    | 5.1.0                                     | RD     | https://github.com/fcitx/fcitx5-m17n                                                    | m17n-provided input methods for Fcitx5
                                           | 9999                                      |        |                                                                                         |
    app-i18n/fcitx-rime                    | 9999                                      | RD     | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
-     app-i18n/librime                     | 1.10.0                                    |  D, RD | https://rime.im/                                                                        | RIME (Rime Input Method Engine) core library
+     app-i18n/librime                     | 1.11.2                                    |  D, RD | https://rime.im/                                                                        | RIME (Rime Input Method Engine) core library
    app-i18n/fcitx-skk                     | 5.1.4                                     | RD     | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
                                           | 9999                                      |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
