@@ -36,6 +36,10 @@ KPROBES
 "
 
 src_compile() {
+	# otherwise the build script uses `uname -r` that will break if the
+	# target kernel version differs from the running one
+	export KVER="${KV_FULL}"
+
 	local modlist=(
 		la_ow_syscall
 	)
@@ -50,6 +54,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	linux-mod-r1_pkg_postinst
+
 	elog "Be sure to load the kernel module before running any old-world program:"
 	elog
 	elog "# modprobe la_ow_syscall"
