@@ -150,7 +150,7 @@ games-util/winegame-client-bin 0.5.10.5 0.5.12.2: An open source gaming platform
 gui-libs/libdecor 0.1.1: A client-side decorations library for Wayland clients
 gui-wm/swayfx 0.3.2: SwayFX: Sway, but with eye candy!
 kde-misc/plasma-applet-netspeed-widget 2.0 3.1 9999: Plasma 5 widget that displays the currently used network bandwidth.
-media-fonts/Plangothic 1.8.5760: 遍黑体项目（Plangothic Project）
+media-fonts/Plangothic 1.8.5764: 遍黑体项目（Plangothic Project）
 media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/iansui 1.000: An open-source Chinese font derived from Klee One (Fontworks).
 media-fonts/jf-openhuninn 2.0: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
