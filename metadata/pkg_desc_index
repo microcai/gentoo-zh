@@ -210,7 +210,7 @@ net-dns/libidn11 1.33: Internationalized Domain Names (IDN) implementation
 net-dns/mosdns 5.3.1: A DNS forwarder
 net-dns/mosdns-cn-bin 1.4.0-r1: A DNS forwarder
 net-dns/phddns 2.0.6.32828: Phddns
-net-dns/q 0.19.2: A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
+net-dns/q 0.19.2-r1: A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
 net-im/deepin-wine-qq 9.5.2.27897: Tencent QQ on Deepin Wine(com.qq.im.deepin) For Gentoo
 net-im/deepin-wine-wechat 3.9.0.28-r3: Tencent WeChat on Deepin Wine For Gentoo
 net-im/deepin-wine-wecom 4.1.10.6007: Tencent Weixin Work on Deepin Wine(com.qq.weixin.work.deepin) For Gentoo
