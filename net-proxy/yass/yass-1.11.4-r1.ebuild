@@ -26,7 +26,6 @@ RESTRICT="!test? ( test )"
 
 REQUIRED_USE="
 	gui? ( ^^ ( gtk3 gtk4 qt5 qt6 ) )
-	loong? ( !gtk4 )
 	tcmalloc? ( !mimalloc )
 "
 
@@ -79,6 +78,10 @@ BDEPEND="
 	)
 	test? ( net-misc/curl )
 "
+
+PATCHES=(
+	"${FILESDIR}"/no-blacklist-loongarch.patch
+)
 
 src_prepare() {
 	cmake_src_prepare
