@@ -19,8 +19,8 @@ else
 fi
 
 LICENSE="GPL-2"
-SLOT="0/10"
 S="${WORKDIR}/${PN}-v${PV}"
+SLOT="0/10"
 
 IUSE="curl doc +gpg test"
 DEPEND="
