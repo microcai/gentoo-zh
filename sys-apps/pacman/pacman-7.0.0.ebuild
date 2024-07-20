@@ -18,8 +18,8 @@ else
 	KEYWORDS="-* ~amd64"
 fi
 
-LICENSE="GPL-2"
 S="${WORKDIR}/${PN}-v${PV}"
+LICENSE="GPL-2"
 SLOT="0/10"
 
 IUSE="curl doc +gpg test"
