@@ -1112,7 +1112,7 @@ BDEPEND="
 	>=sys-devel/clang-17:*
 	sys-devel/gettext
 	sys-devel/mold
-	>=virtual/rust-1.78.0
+	>=virtual/rust-1.79.0
 "
 
 pkg_setup() {
