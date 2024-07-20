@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-07-20 20:38:41 CST)
+(The last generation time: 2024-07-20 22:23:43 CST)
 
 ### Packages
 
@@ -225,7 +225,7 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/arch-install-scripts            | 28-r1                                     |        | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
    dev-util/pacstrap                      | 28                                        | RD     | https://github.com/archlinux/arch-install-scripts                                       | Pacstrap - install packages to the specified new root directorye
-     sys-apps/pacman                      | 6.1.0                                     |  D     | https://archlinux.org/pacman/                                                           | Archlinux's binary package manager
+     sys-apps/pacman                      | 7.0.0                                     |  D     | https://archlinux.org/pacman/                                                           | Archlinux's binary package manager
        app-crypt/archlinux-keyring        | 20231113                                  |  D, RD | https://gitlab.archlinux.org/archlinux/archlinux-keyring                                | GnuPG keyring of Archlinux developer keys
                                           | 20231222                                  |        |                                                                                         |
                                           | 20240208-r1                               |        |                                                                                         |
