@@ -1,0 +1,14 @@
+BDEPEND=app-arch/unzip X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup
+DESCRIPTION=MiSans 是由小米主导,联合汉仪发布的可免费使用的字体
+EAPI=8
+HOMEPAGE=https://hyperos.mi.com/font
+INHERIT=font
+IUSE=X
+KEYWORDS=~amd64
+LICENSE=MiSans
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://hyperos.mi.com/font-download/MiSans.zip
+_eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb
+_md5_=8f05609ab52e3a543faa01068bafb6d8
