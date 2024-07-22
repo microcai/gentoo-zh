@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-07-22 15:28:27 CST)
+(The last generation time: 2024-07-22 16:23:50 CST)
 
 ### Packages
 
@@ -527,8 +527,8 @@
                                           | 1.6.4                                     |        |                                                                                         |
                                           | 1.6.6                                     |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/dae                            | 0.5.1                                     |        | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
-                                          | 0.6.0                                     |        |                                                                                         |
+ net-proxy/dae                            | 0.7.0                                     |        | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
+                                          | 0.8.0_rc1                                 |        |                                                                                         |
                                           | 9999                                      |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/daed                           | 0.6.0                                     |        | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
