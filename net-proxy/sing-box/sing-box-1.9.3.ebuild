@@ -12,8 +12,11 @@ _PV="${_PV/rc/rc.}"
 
 DESCRIPTION="The universal proxy platform."
 HOMEPAGE="https://sing-box.sagernet.org/ https://github.com/SagerNet/sing-box"
-SRC_URI="https://github.com/SagerNet/sing-box/archive/refs/tags/v${_PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/Puqns67/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz"
+SRC_URI="
+	https://github.com/SagerNet/sing-box/archive/refs/tags/v${_PV}.tar.gz -> ${P}.tar.gz
+	tor? ( https://github.com/Puqns67/gentoo-deps/releases/download/${P}/${P}-deps.tar.xz )
+	!tor? ( https://github.com/Puqns67/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz )
+"
 
 S="${WORKDIR}/${PN}-${_PV}"
 
@@ -25,8 +28,15 @@ IUSE="+quic grpc +dhcp +wireguard +ech +utls +reality +acme +clash-api v2ray-api
 
 RESTRICT="mirror"
 
+BDEPEND="
+	>=dev-lang/go-1.18
+	quic? ( >=dev-lang/go-1.20 )
+	utls? ( >=dev-lang/go-1.20 )
+	ech? ( >=dev-lang/go-1.21 )
+"
+
 src_compile() {
-	TAGS=""
+	_TAGS=""
 	if use quic; then TAGS+="with_quic,"; fi
 	if use grpc; then TAGS+="with_grpc,"; fi
 	if use dhcp; then TAGS+="with_dhcp,"; fi
@@ -39,10 +49,10 @@ src_compile() {
 	if use v2ray-api; then TAGS+="with_v2ray_api,"; fi
 	if use gvisor; then TAGS+="with_gvisor,"; fi
 	if use tor; then TAGS+="with_embedded_tor,"; fi
-	TAGS="${TAGS%,}"
+	_TAGS="${TAGS%,}"
 
-	ego build -o sing-box -trimpath -tags "${TAGS}" \
-		-ldflags "-s -w -X 'github.com/sagernet/sing-box/constant.Version=${PV}' -buildid=" \
+	ego build -o sing-box -trimpath -tags "${_TAGS}" \
+		-ldflags "-s -w -X 'github.com/sagernet/sing-box/constant.Version=${PV}'" \
 		./cmd/sing-box
 }
 
