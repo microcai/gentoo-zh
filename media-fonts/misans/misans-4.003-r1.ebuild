@@ -48,4 +48,8 @@ src_unpack() {
 src_install() {
 	find . \( -iname '*.otf' -o -iname '*.ttf' \) -exec cp "{}" . \; || die
 	font_src_install
+
+	insinto /etc/fonts/conf.avail
+	doins "${FILESDIR}/70-mi-sans-cjk.conf"
+	doins "${FILESDIR}/71-mi-sans-default.conf"
 }
