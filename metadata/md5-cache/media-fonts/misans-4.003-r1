@@ -11,4 +11,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://hyperos.mi.com/font-download/MiSans_Global_ALL.zip -> misans-4.003.zip
 _eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb
-_md5_=0780b1b38bb9b9647b120d3ad3d4f8ec
+_md5_=1356fc200bf45788a7bd268441ac53d6
