@@ -26,7 +26,6 @@ RESTRICT="!test? ( test )"
 
 REQUIRED_USE="
 	gui? ( ^^ ( gtk3 gtk4 qt5 qt6 ) )
-	loong? ( !gtk4 )
 	tcmalloc? ( !mimalloc )
 "
 
