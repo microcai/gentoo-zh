@@ -179,7 +179,6 @@ CRATES="
 	clickhouse-derive@0.1.1
 	clickhouse-rs-cityhash-sys@0.1.2
 	clickhouse@0.11.6
-	clipboard-win@3.1.1
 	cmake@0.1.50
 	cocoa-foundation@0.1.2
 	cocoa@0.25.0
@@ -437,7 +436,6 @@ CRATES="
 	kqueue@1.0.8
 	kurbo@0.11.0
 	kv-log-macro@1.0.7
-	lazy-bytes-cast@5.0.1
 	lazy_static@1.4.0
 	lazycell@1.3.0
 	leb128@0.2.5
@@ -1175,8 +1173,6 @@ src_prepare() {
 	export APP_ARGS="%U"
 	# sys-devel/gettext
 	envsubst < "crates/zed/resources/zed.desktop.in" > ${APP_ID}.desktop || die
-
-	sed '/Keywords=zed;/a Actions=NewWorkspace;' -i dev.zed.Zed.desktop || die
 
 	# For "View Denpendency licenses" Button in menu
 	# This requires package *cargo-about*
