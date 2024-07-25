@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-07-26 00:00:24 CST)
+(The last generation time: 2024-07-26 00:00:54 CST)
 
 ### Packages
 
@@ -29,7 +29,7 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-zhwiki            | 20230728                                  |        | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/appflowy-bin                 | 0.6.4                                     |        | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
+ app-editors/appflowy-bin                 | 0.6.5                                     |        | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/marktext-bin                 | 0.17.1                                    |        | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -449,7 +449,7 @@
  net-libs/jzmq                            | 9999                                      |        | http://www.zeromq.org/bindings:java                                                     | jzmq
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/alist                           | 3.32.0                                    |        | https://alist.nn.ci                                                                     | A file list/WebDAV program that supports multiple storages
-                                          | 3.35.0                                    |        |                                                                                         |
+                                          | 3.36.0                                    |        |                                                                                         |
    acct-group/alist                       | 0                                         | RD     |                                                                                         | A file list/WebDAV program that supports multiple storages
    acct-user/alist                        | 0                                         | RD     |                                                                                         | A file list/WebDAV program that supports multiple storages
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
