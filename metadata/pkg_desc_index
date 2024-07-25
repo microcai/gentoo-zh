@@ -308,7 +308,7 @@ virtual/dist-kernel 6.9.10: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 virtual/loong-ow-compat 0: Virtual for LoongArch old-world compatibility
 www-apps/chatgpt-desktop 1.1.0: ChatGPT Desktop Application
-www-client/brave-bin 1.67.134: Web browser that blocks ads and trackers by default
+www-client/brave-bin 1.68.128: Web browser that blocks ads and trackers by default
 www-servers/darkhttpd 1.16: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
