@@ -15,7 +15,7 @@ SRC_URI="https://github.com/Chilledheart/yass/releases/download/${PV}/yass-${PV}
 S="${WORKDIR}/${MY_PN}-${PV}"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~mips ~riscv ~x86"
+KEYWORDS="amd64 ~arm ~arm64 ~loong ~mips ~riscv ~x86"
 
 IUSE="+cli server test +gui gtk3 gtk4 +qt5 qt6 wayland +tcmalloc mimalloc"
 
@@ -78,10 +78,6 @@ BDEPEND="
 	)
 	test? ( net-misc/curl )
 "
-
-PATCHES=(
-	"${FILESDIR}"/no-blacklist-loongarch.patch
-)
 
 src_prepare() {
 	cmake_src_prepare
