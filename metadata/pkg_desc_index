@@ -158,7 +158,7 @@ media-fonts/lxgw-neo-xihei 1.124: A Chinese sans-serif font derived from IPAex G
 media-fonts/lxgw-neo-zhisong 0.113: An open-source Chinese font derived from IPAmj Mincho
 media-fonts/misans 4.003-r1: MiSans 是由小米主导,联合汉仪发布的可免费使用的字体
 media-fonts/nerd-fonts 3.2.1: Nerd Fonts is a project that patches developer targeted fonts with glyphs
-media-fonts/sarasa-gothic 1.0.15: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
+media-fonts/sarasa-gothic 1.0.16: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 media-fonts/sarasa-term-sc-nerd 1.1.0: Sarasa Mono SC font patched with Nerd fonts
 media-fonts/smiley-sans 2.0.1: An open-source font for Chinese.
 media-fonts/taipei-sans-tc 1.0: JT Foundry - Taipei Sans TC Beta font
@@ -319,7 +319,7 @@ x11-misc/flatpak-xdg-utils 1.0.5: Utilities for containerized apps to launch pro
 x11-misc/fqterm 0.9.10.1 9999: a modern terminal emulator for Linux
 x11-misc/i3lock-color 9999: An improved i3lock
 x11-misc/i3lock-fancy 9999: A fancy i3lock
-x11-misc/ly 0.6.0-r1 1.0.0 9999: Ly - a TUI display manager
+x11-misc/ly 0.6.0-r1 1.0.1 9999: Ly - a TUI display manager
 x11-misc/picom-jonaburg 8 9999: A lightweight compositor for X11 (previously a compton fork)
 x11-misc/snapd-xdg-open 20170401: Software for opening links from snaps in desktop
 x11-plugins/vicious 9999: Modular widget library for x11-wm/awesome
