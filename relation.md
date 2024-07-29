@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-07-29 21:18:05 CST)
+(The last generation time: 2024-07-30 02:30:14 CST)
 
 ### Packages
 
@@ -60,22 +60,17 @@
    app-i18n/cskk                          | 3.1.1                                     |  D, RD | https://github.com/naokiri/cskk                                                         | C ABIから使う事を目的とした SKK(Simple Kana Kanji henkan)方式のかな漢字変換ライブラリ
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-meta                      | 5.0.12-r2                                 |        | https://fcitx-im.org                                                                    | Merge this to pull in Fcitx packages
-   app-i18n/fcitx-anthy                   | 5.1.2                                     | RD     | https://fcitx-im.org/                                                                   | Japanese Anthy input methods for Fcitx5
    app-i18n/fcitx-bamboo                  | 1.0.4                                     | RD     | https://github.com/fcitx/fcitx5-bamboo                                                  | Typing Vietnamese by Bamboo core engine for Fcitx5
    app-i18n/fcitx-chewing                 | 5.1.3                                     | RD     | https://github.com/fcitx/fcitx5-chewing                                                 | Chewing Wrapper for Fcitx.
                                           | 5.1.4                                     |        |                                                                                         |
    app-i18n/fcitx-chinese-addons          | 9999                                      |  D, RD | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
      app-i18n/fcitx-lua                   | 9999                                      |  D, RD | https://github.com/fcitx/fcitx5-lua                                                     | Lua support for fcitx
      app-i18n/fcitx-qt                    | 9999                                      |  D, RD | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
-   app-i18n/fcitx-configtool              | 5.1.5                                     | RD     | https://fcitx-im.org/                                                                   | Configuration module for Fcitx
-                                          | 9999                                      |        |                                                                                         |
+   app-i18n/fcitx-configtool              | 9999                                      | RD     | https://fcitx-im.org/                                                                   | Configuration module for Fcitx
    app-i18n/fcitx-gtk                     | 9999                                      | RD     | https://github.com/fcitx/fcitx5-gtk                                                     | Gtk im module for fcitx5 and glib based dbus client library
-   app-i18n/fcitx-hangul                  | 5.1.1                                     | RD     | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
-                                          | 9999                                      |        |                                                                                         |
-   app-i18n/fcitx-m17n                    | 5.1.0                                     | RD     | https://github.com/fcitx/fcitx5-m17n                                                    | m17n-provided input methods for Fcitx5
-                                          | 9999                                      |        |                                                                                         |
+   app-i18n/fcitx-hangul                  | 9999                                      | RD     | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
+   app-i18n/fcitx-m17n                    | 9999                                      | RD     | https://github.com/fcitx/fcitx5-m17n                                                    | m17n-provided input methods for Fcitx5
    app-i18n/fcitx-rime                    | 9999                                      | RD     | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
-     app-i18n/librime                     | 1.11.2                                    |  D, RD | https://rime.im/                                                                        | RIME (Rime Input Method Engine) core library
    app-i18n/fcitx-skk                     | 5.1.4                                     | RD     | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
                                           | 9999                                      |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
