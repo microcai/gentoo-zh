@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-07-29 00:53:03 CST)
+(The last generation time: 2024-07-29 10:26:13 CST)
 
 ### Packages
 
@@ -519,7 +519,7 @@
    dev-util/tauri-cli                     | 1.5.9                                     | BD     | https://tauri.app                                                                       | Command line interface for building Tauri apps
                                           | 2.0.0_alpha17                             |        |                                                                                         |
    net-proxy/clash-rs                     | 0.1.15                                    | RD     | https://watfaq.gitbook.io/clashrs-user-manual/                                          | Custom protocol, rule based network proxy
-   net-proxy/mihomo                       | 1.18.6-r1                                 |  D, RD | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
+   net-proxy/mihomo                       | 1.18.7                                    |  D, RD | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
      acct-group/mihomo                    | 0-r1                                      |  D, RD |                                                                                         | Another Clash Kernel, formerly Clash.Meta
      acct-user/mihomo                     | 0-r1                                      |  D, RD |                                                                                         | Another Clash Kernel, formerly Clash.Meta
    sys-apps/pnpm                          | 8.15.4                                    | BD     | https://pnpm.io                                                                         | Fast, disk space efficient package manager
@@ -546,7 +546,7 @@
                                           | 7.0.0                                     |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/shadowsocks-rust               | 1.19.3                                    |        | https://github.com/shadowsocks/shadowsocks-rust                                         | A Rust port of shadowsocks.
-                                          | 1.20.2                                    |        |                                                                                         |
+                                          | 1.20.3                                    |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/sing-box                       | 1.9.3                                     |        | https://sing-box.sagernet.org/                                                          | The universal proxy platform.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
