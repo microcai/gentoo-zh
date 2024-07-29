@@ -33,7 +33,6 @@ app-i18n/fcitx:enchant - Enable Enchant backend (using app-text/enchant) for spe
 app-i18n/fcitx:keyboard - Enable key event translation with XKB and build keyboard engine
 app-i18n/fcitx:presage - Enable presage for word predication (not stable)
 app-i18n/fcitx:server - Build a fcitx as server, disable this option if you want to use fcitx as an embedded library
-app-i18n/fcitx-anthy:coverage - Build the project with gcov support (Need USE="test")
 app-i18n/fcitx-chinese-addons:cloudpinyin - Build cloud pinyin addon
 app-i18n/fcitx-chinese-addons:coverage - Build the project with gcov support (Need USE=test)
 app-i18n/fcitx-chinese-addons:opencc - Enable support for conversion between Traditional and Simplified Chinese
@@ -65,10 +64,6 @@ app-i18n/fcitx-qt:onlyplugin - Build only plugin
 app-i18n/fcitx-qt:qt6 - Build support for QT6
 app-i18n/fcitx-qt:staticplugin - Build plugin as static
 app-i18n/libime-jyutping:engine - Enable input method for fcitx
-app-i18n/librime:lua - Enable librime-lua
-app-i18n/librime:octagram - Enable librime-octagram
-app-i18n/librime:predict - Enable librime-predict
-app-i18n/librime:proto - Enable librime-proto
 app-i18n/mozc:fcitx4 - Enable support for app-i18n/fcitx 4
 app-i18n/mozc:fcitx5 - Enable support for app-i18n/fcitx 5
 app-i18n/mozc:gui - Install graphical user interface tool (mozc_tool)
