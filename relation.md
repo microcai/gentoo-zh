@@ -1,13 +1,13 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-07-30 02:30:14 CST)
+(The last generation time: 2024-07-30 19:31:09 CST)
 
 ### Packages
 
 ```
  Package name                             | Version                                   | Role   | Homepage                                                                                | Description
 ==========================================|===========================================|========|=========================================================================================|====================
- app-admin/rbw                            | 1.11.1                                    |        | https://github.com/doy/rbw                                                              | Unofficial Bitwarden CLI
+ app-admin/rbw                            | 1.12.1                                    |        | https://github.com/doy/rbw                                                              | Unofficial Bitwarden CLI
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/zenmonitor3                    | 2.0.0                                     |        | https://git.exozy.me/a/zenmonitor3                                                      | Zen monitor is monitoring software for AMD Zen-based CPUs
    sys-kernel/zenpower3                   | 0.2.0                                     |  D, RD | https://git.exozy.me/a/zenpower3                                                        | Linux kernel driver for reading sensors of AMD Zen family CPUs
