@@ -502,6 +502,13 @@ use_max_tag = true
 prefix = "v"
 github_account = "peeweep"
 
+["dev-vcs/sourcegit-bin"]
+source = "github"
+github = "sourcegit-scm/sourcegit"
+use_latest_release = true
+prefix = "v"
+github_account = "gouwazi"
+
 #["games-arcade/osu-lazer"]
 
 ["games-board/othello"]
