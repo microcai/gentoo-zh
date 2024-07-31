@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-07-30 20:31:07 CST)
+(The last generation time: 2024-07-31 14:20:01 CST)
 
 ### Packages
 
@@ -15,7 +15,7 @@
  app-backup/btrfs-assistant               | 2.1                                       |        | https://gitlab.com/btrfs-assistant/btrfs-assistant                                      | A GUI management tool to make managing a Btrfs filesystem easier.
                                           | 9999                                      |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-backup/restic-rest-server            | 0.12.1                                    |        | https://github.com/restic/rest-server                                                   | A high performance HTTP server that implements restic's REST backend API
+ app-backup/restic-rest-server            | 0.13.0                                    |        | https://github.com/restic/rest-server                                                   | A high performance HTTP server that implements restic's REST backend API
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-backup/snapper-gui                   | 220626                                    |        | https://github.com/ricardomv/snapper-gui                                                | GUI for snapper, a tool for Linux filesystem snapshot management
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -29,7 +29,7 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-zhwiki            | 20230728                                  |        | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/appflowy-bin                 | 0.6.5                                     |        | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
+ app-editors/appflowy-bin                 | 0.6.6                                     |        | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/marktext-bin                 | 0.17.1                                    |        | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
