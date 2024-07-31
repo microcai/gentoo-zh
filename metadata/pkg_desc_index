@@ -139,6 +139,7 @@ dev-util/tauri-cli 1.5.9 2.0.0_alpha17: Command line interface for building Taur
 dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-util/zprint-bin 1.2.7 1.2.8: Clojure and Clojurescript source code formatter
 dev-vcs/gitoxide 0.37.0: A command-line application for interacting with git repositories
+dev-vcs/sourcegit-bin 8.23: Opensource Git GUI client.
 games-arcade/osu-lazer 2024.412.1 2024.521.2: rhythm is just a *click* away!
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-fps/source-engine 9999: A 3D game engine developed by Valve
@@ -201,7 +202,7 @@ net-analyzer/besttrace-bin 1.3.2-r1: 附带链路可视化的 traceroute 工具
 net-analyzer/nali 0.8.1: An offline tool for querying IP geographic information and CDN provider.
 net-analyzer/realitlscanner 0.1.2: A TLS server scanner for Reality
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
-net-dns/ddns-go 6.6.5: Automatically obtain your public IP address and set to your domain name service.
+net-dns/ddns-go 6.6.6: Automatically obtain your public IP address and set to your domain name service.
 net-dns/dnslookup 1.11.1: Simple command line utility to make DNS lookups to the specified server
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
 net-dns/dog 0.1.0-r1 0.1.0_p20211007: A command-line DNS client
