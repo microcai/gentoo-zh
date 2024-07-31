@@ -242,6 +242,7 @@ net-proxy/sing-box:utls - Build with uTLS support for TLS outbound
 net-proxy/sing-box:v2ray-api - Build with V2Ray API support
 net-proxy/sing-box:wireguard - Build with WireGuard support
 net-proxy/v2rayA:xray - To be able to use net-proxy/Xray. Disable the v2ray useflag to use xray as default
+net-proxy/yass:cet - Enable Intel Control-flow Enforcement Technology
 net-proxy/yass:cli - Enable cli daemon
 net-proxy/yass:gtk3 - Enable GUI Client (GTK3)
 net-proxy/yass:gtk4 - Enable GUI Client (GTK4)
