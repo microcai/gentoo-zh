@@ -10,7 +10,7 @@ DESCRIPTION="A high performance HTTP server that implements restic's REST backen
 HOMEPAGE="https://github.com/restic/rest-server"
 SRC_URI="
 	https://github.com/restic/rest-server/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/liangyongxiang/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
+	https://github.com/Linerre/gentoo-deps/releases/download/${P}/${P}-deps.tar.xz
 "
 
 S="${WORKDIR}/${MY_PN}-${PV}"
