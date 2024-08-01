@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-01 06:30:51 CST)
+(The last generation time: 2024-08-01 18:19:04 CST)
 
 ### Packages
 
@@ -561,7 +561,7 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/yacd-meta                      | 0.3.6                                     |        | https://github.com/MetaCubeX/Yacd-meta                                                  | Yet Another Clash Dashboard
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/yass                           | 1.11.5                                    |        | https://github.com/Chilledheart/yass                                                    | lightweight and efficient, socks5/http forward proxy
+ net-proxy/yass                           | 1.11.5-r1                                 |        | https://github.com/Chilledheart/yass                                                    | lightweight and efficient, socks5/http forward proxy
                                           | 1.12.1-r1                                 |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-vpn/sstp-server                      | 0.6.0                                     |        | https://github.com/sorz/sstp-server/                                                    | A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
