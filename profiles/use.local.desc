@@ -261,7 +261,6 @@ sys-kernel/liquorix-sources:cjk - Enable cjktty Patches.
 sys-kernel/xanmod-kernel:clang - Use clang compiler instead of GCC
 sys-kernel/xanmod-kernel:debug - Pseudo flag
 sys-kernel/xanmod-kernel:initramfs - Build initramfs along with the kernel.
-sys-kernel/xanmod-kernel:x86-64-v1 - Set compiler optimization to x86-64-v1
 sys-kernel/xanmod-kernel:x86-64-v2 - Set compiler optimization to x86-64-v2
 sys-kernel/xanmod-kernel:x86-64-v3 - Set compiler optimization to x86-64-v3
 sys-kernel/xanmod-kernel:x86-64-v4 - Set compiler optimization to x86-64-v4

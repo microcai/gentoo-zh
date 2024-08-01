@@ -5,14 +5,14 @@ EAPI=8
 HOMEPAGE=https://www.kernel.org/
 IDEPEND=!initramfs? ( >=sys-kernel/installkernel-14 ) initramfs? ( || ( >=sys-kernel/installkernel-14[dracut(-)] >=sys-kernel/installkernel-14[ugrd(-)] ) )
 INHERIT=kernel-build toolchain-funcs
-IUSE=clang debug +x86-64-v1 x86-64-v2 x86-64-v3 x86-64-v4 savedconfig +initramfs test +strip
+IUSE=clang debug +x86-64-v2 x86-64-v3 x86-64-v4 savedconfig +initramfs test +strip
 KEYWORDS=~amd64
 LICENSE=GPL-2
 PDEPEND=>=virtual/dist-kernel-6.10.2
 RDEPEND=virtual/libelf
-REQUIRED_USE=^^ ( x86-64-v1 x86-64-v2 x86-64-v3 x86-64-v4 )
+REQUIRED_USE=^^ ( x86-64-v2 x86-64-v3 x86-64-v4 )
 RESTRICT=!test? ( test ) test? ( userpriv ) arm? ( test )
 SLOT=6.10.2
 SRC_URI=https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.10.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.10-4.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.10-4.extras.tar.xz https://download.sourceforge.net/xanmod/patch-6.10.2-xanmod1.xz
 _eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	8b220bbce5c119fb1d4d5c2f5588f3ea	python-any-r1	f5169813d1619761b459800587005fd2	portability	225656ad6c6594fe3b0187bdd50707fb	savedconfig	b9131abe556ad2ea96c01b06d658d363	mount-boot-utils	69218c024651aa10db01df7e8a5b63e0	dist-kernel-utils	c5204a4147b612736aef239e7cc69885	kernel-install	65ef7434c7dc8d14c724084b566bf522	kernel-build	84fd7d7202a768abd1d0869af67427c6
-_md5_=f5440a1998ead5d11f1ec860c6f7ffce
+_md5_=16bc738af76c4415b825f613126958ae
