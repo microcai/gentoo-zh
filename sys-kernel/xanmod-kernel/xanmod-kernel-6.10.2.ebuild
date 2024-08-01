@@ -20,8 +20,8 @@ S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64"
-IUSE="clang debug +x86-64-v1 x86-64-v2 x86-64-v3 x86-64-v4"
-REQUIRED_USE="^^ ( x86-64-v1 x86-64-v2 x86-64-v3 x86-64-v4 )"
+IUSE="clang debug +x86-64-v2 x86-64-v3 x86-64-v4"
+REQUIRED_USE="^^ ( x86-64-v2 x86-64-v3 x86-64-v4 )"
 
 PDEPEND="
 	>=virtual/dist-kernel-${PV}"
@@ -69,10 +69,7 @@ src_prepare() {
 	# prepare the default config
 	case ${ARCH} in
 	amd64)
-		if use x86-64-v1; then
-			cp "${S}/CONFIGS/xanmod/gcc/config_x86-64-v1" .config || die
-			XV="${XV}-x64v1"
-		elif use x86-64-v2; then
+		if use x86-64-v2; then
 			cp "${S}/CONFIGS/xanmod/gcc/config_x86-64-v2" .config || die
 			XV="${XV}-x64v2"
 		elif use x86-64-v3; then

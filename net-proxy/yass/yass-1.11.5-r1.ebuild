@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~arm ~arm64 ~loong ~mips ~riscv ~x86"
 
-IUSE="+cli server test +gui gtk3 gtk4 +qt5 qt6 wayland +tcmalloc mimalloc"
+IUSE="+cli server test cet +gui gtk3 gtk4 +qt5 qt6 wayland +tcmalloc mimalloc"
 
 # tested with FEATURES="-network-sandbox test"
 # tested with FEATURES="network-sandbox test"
@@ -25,6 +25,7 @@ IUSE="+cli server test +gui gtk3 gtk4 +qt5 qt6 wayland +tcmalloc mimalloc"
 RESTRICT="!test? ( test )"
 
 REQUIRED_USE="
+	cet? ( ^^ ( amd64 x86 ) )
 	gui? ( ^^ ( gtk3 gtk4 qt5 qt6 ) )
 	tcmalloc? ( !mimalloc )
 "
@@ -79,6 +80,10 @@ BDEPEND="
 	test? ( net-misc/curl )
 "
 
+PATCHES=(
+	"${FILESDIR}"/cet.patch
+)
+
 src_prepare() {
 	cmake_src_prepare
 	# some tests require network access, comment it out if not supported
@@ -97,6 +102,7 @@ src_configure() {
 		-DCLI=$(usex cli)
 		-DSERVER=$(usex server)
 		-DGUI=$(usex gui)
+		-DUSE_CET=$(usex cet)
 		-DUSE_GTK4=$(usex gtk4)
 		-DUSE_QT5=$(usex qt5)
 		-DUSE_QT6=$(usex qt6)
