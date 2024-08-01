@@ -25,6 +25,7 @@ IUSE="+cli server test cet +gui gtk3 gtk4 +qt5 qt6 wayland +tcmalloc mimalloc"
 RESTRICT="!test? ( test )"
 
 REQUIRED_USE="
+	cet? ( ^^ ( amd64 x86 ) )
 	gui? ( ^^ ( gtk3 gtk4 qt5 qt6 ) )
 	tcmalloc? ( !mimalloc )
 "
