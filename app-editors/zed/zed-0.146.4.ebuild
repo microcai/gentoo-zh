@@ -1142,7 +1142,6 @@ src_prepare() {
 		-i "${S}/Cargo.toml" || die "Cargo fetch workaround failed"
 
 	export DO_STARTUP_NOTIFY="true"
-	export APP="${EPREFIX}/usr/libexec/zed-editor"
 	export APP_ICON="zed"
 	export APP_NAME="Zed"
 	export APP_CLI="zeditor"
