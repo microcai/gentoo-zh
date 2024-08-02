@@ -8,13 +8,13 @@ inherit systemd
 DESCRIPTION="Ly - a TUI display manager"
 HOMEPAGE="https://github.com/nullgemm/ly"
 
-CLAP="8c98e6404b22aafc0184e999d8f068b81cc22fa1"
-ZIGINI="ce1f322482099db058f5d9fdd05fbfa255d79723"
-ZIGLIBINI="da0af3a32e3403e3113e103767065cbe9584f505"
+CLAP="0.9.1"
+ZIGINI="0bba97a12582928e097f4074cc746c43351ba4c8"
+ZIGLIBINI="e18d36665905c1e7ba0c1ce3e8780076b33e3002"
 
 SRC_URI="
 	https://github.com/nullgemm/ly/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/Hejsil/zig-clap/archive/${CLAP}.tar.gz -> zig-clap.tar.gz
+	https://github.com/Hejsil/zig-clap/archive/refs/tags/${CLAP}.tar.gz -> zig-clap.tar.gz
 	https://github.com/Kawaii-Ash/zigini/archive/${ZIGINI}.tar.gz -> zigini.tar.gz
 	https://github.com/ziglibs/ini/archive/${ZIGLIBINI}.tar.gz -> ziglibini.tar.gz
 "
