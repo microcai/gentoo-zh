@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-02 22:31:29 CST)
+(The last generation time: 2024-08-03 13:44:35 CST)
 
 ### Packages
 
@@ -198,7 +198,7 @@
        dev-cpp/tl-expected                | 1.1.0                                     |  D, RD | https://github.com/TartanLlama/expected                                                 | Guideline Support Library implementation by Microsoft
        sys-libs/libsolv                   | 0.7.28                                    |  D, RD | https://github.com/openSUSE/libsolv                                                     | Library for solving packages and reading repositories
          app-arch/zchunk                  | 1.3.2                                     | RD     | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
-                                          | 1.4.0                                     |        |                                                                                         |
+                                          | 1.5.1                                     |        |                                                                                         |
                                           | 9999                                      |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/conda-package-handling        | 2.3.0                                     |        | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
