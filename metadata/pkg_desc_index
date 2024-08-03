@@ -202,7 +202,7 @@ net-analyzer/besttrace-bin 1.3.2-r1: 附带链路可视化的 traceroute 工具
 net-analyzer/nali 0.8.1: An offline tool for querying IP geographic information and CDN provider.
 net-analyzer/realitlscanner 0.1.2: A TLS server scanner for Reality
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
-net-dns/ddns-go 6.6.6: Automatically obtain your public IP address and set to your domain name service.
+net-dns/ddns-go 6.6.7: Automatically obtain your public IP address and set to your domain name service.
 net-dns/dnslookup 1.11.1: Simple command line utility to make DNS lookups to the specified server
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
 net-dns/dog 0.1.0-r1 0.1.0_p20211007: A command-line DNS client
@@ -307,7 +307,7 @@ virtual/dist-kernel 6.10.2: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 virtual/loong-ow-compat 0: Virtual for LoongArch old-world compatibility
 www-apps/chatgpt-desktop 1.1.0: ChatGPT Desktop Application
-www-client/brave-bin 1.68.128: Web browser that blocks ads and trackers by default
+www-client/brave-bin 1.68.134: Web browser that blocks ads and trackers by default
 www-servers/darkhttpd 1.16: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
