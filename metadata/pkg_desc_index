@@ -26,7 +26,7 @@ app-dicts/fcitx-pinyin-zhwiki 20230728: Fcitx 5 Pinyin Dictionary from zh.wikipe
 app-editors/appflowy-bin 0.6.6: AppFlowy is an open-source alternative to Notion
 app-editors/marktext-bin 0.17.1: A simple and elegant markdown editor, available for Linux, macOS and Windows.
 app-editors/typora 0.11.18 1.8.10: A truely minimal markdown editor.
-app-editors/zed 0.146.4: high-performance, multiplayer code editor
+app-editors/zed 0.146.5: high-performance, multiplayer code editor
 app-emulation/deepin-udis86 1.72-r4: Disassembler library for x86 (32-bit shared library)
 app-emulation/deepin-wine-helper 5.1.27-r1 5.1.45: Deepin Wine Helper
 app-emulation/deepin-wine-plugin 5.1.13-r1: Deepin Wine plugin
@@ -157,7 +157,7 @@ media-fonts/lxgw-neo-xihei 1.124: A Chinese sans-serif font derived from IPAex G
 media-fonts/lxgw-neo-zhisong 0.113: An open-source Chinese font derived from IPAmj Mincho
 media-fonts/misans 4.003-r1: MiSans 是由小米主导,联合汉仪发布的可免费使用的字体
 media-fonts/nerd-fonts 3.2.1: Nerd Fonts is a project that patches developer targeted fonts with glyphs
-media-fonts/sarasa-gothic 1.0.16: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
+media-fonts/sarasa-gothic 1.0.17: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 media-fonts/sarasa-term-sc-nerd 1.1.0: Sarasa Mono SC font patched with Nerd fonts
 media-fonts/smiley-sans 2.0.1: An open-source font for Chinese.
 media-fonts/taipei-sans-tc 1.0: JT Foundry - Taipei Sans TC Beta font
