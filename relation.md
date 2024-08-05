@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-05 20:14:47 CST)
+(The last generation time: 2024-08-05 22:45:14 CST)
 
 ### Packages
 
@@ -97,7 +97,7 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/ccal                            | 2.5.3                                     |        | http://ccal.chinesebay.com/ccal/ccal.htm                                                | A simple command line calendar for Chinese lunar
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/go-yq-bin                       | 4.44.2                                    |        | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
+ app-misc/go-yq-bin                       | 4.44.3                                    |        | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/gpick                           | 0.2.6-r1                                  |        | https://github.com/thezbyg/gpick                                                        | Advanced color picker written in C++ using GTK+ toolkit
                                           | 0.3                                       |        |                                                                                         |
@@ -155,7 +155,7 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/tgbot-cpp                        | 1.8                                       |        | https://github.com/reo7sp/tgbot-cpp                                                     | C++ library for Telegram bot API
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-db/dbeaver-bin                       | 24.1.3                                    |        | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
+ dev-db/dbeaver-bin                       | 24.1.4                                    |        | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-db/mongodb                           | 5.3.1                                     |        | https://www.mongodb.com                                                                 | A high-performance, open source, schema-free document-oriented database
                                           | 6.2.0-r4                                  |        |                                                                                         |
@@ -257,7 +257,7 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gitoxide                         | 0.37.0                                    |        | https://github.com/Byron/gitoxide                                                       | A command-line application for interacting with git repositories
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/sourcegit-bin                    | 8.23                                      |        | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
+ dev-vcs/sourcegit-bin                    | 8.24                                      |        | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  games-arcade/osu-lazer                   | 2024.412.1                                |        | https://osu.ppy.sh                                                                      | rhythm is just a *click* away!
                                           | 2024.521.2                                |        |                                                                                         |
