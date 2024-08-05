@@ -10,6 +10,7 @@ HOMEPAGE="https://typora.io"
 SRC_URI="https://web.archive.org/web/20211127121316if_/https://typora.io/linux/typora_${PV}_amd64.deb"
 
 #TODO : update license
+S="${WORKDIR}/usr"
 LICENSE="typora"
 SLOT="0"
 KEYWORDS="-* ~amd64"
@@ -17,8 +18,6 @@ KEYWORDS="-* ~amd64"
 RESTRICT="mirror"
 
 RDEPEND="x11-libs/libXScrnSaver"
-
-S="${WORKDIR}/usr"
 
 QA_PREBUILT="*"
 
