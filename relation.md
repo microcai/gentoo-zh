@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-03 22:05:04 CST)
+(The last generation time: 2024-08-05 20:14:47 CST)
 
 ### Packages
 
@@ -36,7 +36,7 @@
  app-editors/typora                       | 0.11.18                                   |        | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
                                           | 1.8.10                                    |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/zed                          | 0.146.4                                   |        | https://zed.dev/                                                                        | high-performance, multiplayer code editor
+ app-editors/zed                          | 0.146.5                                   |        | https://zed.dev/                                                                        | high-performance, multiplayer code editor
    dev-util/cargo-about                   | 0.6.2                                     | BD     | https://github.com/EmbarkStudios/cargo-about                                            | Cargo plugin to generate list of all licenses for a crate
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/la-ow-syscall              | 0.1.0-r1                                  |        | https://github.com/AOSC-Dev/la_ow_syscall                                               | Linux kernel module for compatibility with LoongArch's old-world ABI
@@ -295,7 +295,7 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/nerd-fonts                   | 3.2.1                                     |        | https://github.com/ryanoasis/nerd-fonts                                                 | Nerd Fonts is a project that patches developer targeted fonts with glyphs
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/sarasa-gothic                | 1.0.16                                    |        | https://github.com/be5invis/Sarasa-Gothic                                               | A CJK programming font based on Iosevka and Source Han Sans. (TTC)
+ media-fonts/sarasa-gothic                | 1.0.17                                    |        | https://github.com/be5invis/Sarasa-Gothic                                               | A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/sarasa-term-sc-nerd          | 1.1.0                                     |        | https://github.com/laishulu/Sarasa-Term-SC-Nerd                                         | Sarasa Mono SC font patched with Nerd fonts
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
