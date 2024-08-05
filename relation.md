@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-05 23:26:48 CST)
+(The last generation time: 2024-08-06 00:52:01 CST)
 
 ### Packages
 
@@ -34,7 +34,7 @@
  app-editors/marktext-bin                 | 0.17.1                                    |        | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                       | 0.11.18                                   |        | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
-                                          | 1.8.10                                    |        |                                                                                         |
+                                          | 1.9.3                                     |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/zed                          | 0.146.5                                   |        | https://zed.dev/                                                                        | high-performance, multiplayer code editor
    dev-util/cargo-about                   | 0.6.2                                     | BD     | https://github.com/EmbarkStudios/cargo-about                                            | Cargo plugin to generate list of all licenses for a crate
