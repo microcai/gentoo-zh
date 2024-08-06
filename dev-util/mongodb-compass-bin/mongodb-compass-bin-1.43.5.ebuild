@@ -8,11 +8,10 @@ DESCRIPTION="The GUI for MongoDB"
 HOMEPAGE="https://mongodb.com/compass https://github.com/mongodb-js/compass"
 SRC_URI="https://downloads.mongodb.com/compass/mongodb-compass_${PV}_amd64.deb"
 
+S="${WORKDIR}"
 LICENSE="SSPL-1"
 SLOT="0"
 KEYWORDS="~amd64"
-
-S="${WORKDIR}"
 
 src_install() {
 	default
@@ -25,6 +24,7 @@ src_install() {
 
 	fperms +x "/usr/lib/mongodb-compass/MongoDB Compass"
 	fperms 4755 /usr/lib/mongodb-compass/chrome-sandbox
+	fperms 4755 /usr/lib/mongodb-compass/chrome_crashpad_handler
 
 	# Included binary doesn't work, make a symlink instead
 	rm usr/bin/mongodb-compass || die
