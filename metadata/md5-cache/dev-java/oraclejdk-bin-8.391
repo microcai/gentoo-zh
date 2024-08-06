@@ -14,5 +14,5 @@ REQUIRED_USE=javafx? ( alsa )
 RESTRICT=preserve-libs splitdebug fetch
 SLOT=8
 SRC_URI=jdk-8u391-linux-x64.tar.gz
-_eclasses_=multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	e7e7331166166e7a516d19e264b098c2	pax-utils	91d47e5d20627c717aa878b9167c62a8	prefix	eab3c99d77fe00506c109c8a736186f7	xdg-utils	baea6080dd821f5562d715887954c9d3	java-vm-2	a4e242a071bea6071a08ad3af362c4a4
+_eclasses_=multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	e7e7331166166e7a516d19e264b098c2	pax-utils	91d47e5d20627c717aa878b9167c62a8	prefix	eab3c99d77fe00506c109c8a736186f7	xdg-utils	baea6080dd821f5562d715887954c9d3	java-vm-2	6c7243f2269a7c9b5c177579e49f89ab
 _md5_=c004a89bea9b27b3736bf80b8725bc2b
