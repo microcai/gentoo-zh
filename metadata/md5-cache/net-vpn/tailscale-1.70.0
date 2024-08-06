@@ -10,5 +10,5 @@ RDEPEND=net-firewall/iptables virtual/tmpfiles
 RESTRICT=test strip
 SLOT=0
 SRC_URI=https://github.com/tailscale/tailscale/archive/v1.70.0.tar.gz -> tailscale-1.70.0.tar.gz https://github.com/peeweep/gentoo-go-deps/releases/download/tailscale-1.70.0/tailscale-1.70.0-deps.tar.xz
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	go-env	7eb56e61e641d6db098d57fb37477c44	go-module	83fd3ed1657cfc316c93d6a37018290d	systemd	c8b03e8df84486aa991d4396686e8942	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e7e7331166166e7a516d19e264b098c2	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	go-env	7eb56e61e641d6db098d57fb37477c44	go-module	83fd3ed1657cfc316c93d6a37018290d	systemd	c8b03e8df84486aa991d4396686e8942	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f
 _md5_=1bc35ca3bac143d4b65d18a7cf3e4a05

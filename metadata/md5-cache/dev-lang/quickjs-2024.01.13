@@ -8,5 +8,5 @@ KEYWORDS=~amd64
 LICENSE=MIT
 SLOT=0
 SRC_URI=https://bellard.org/quickjs/quickjs-2024-01-13.tar.xz
-_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0
+_eclasses_=multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	e7e7331166166e7a516d19e264b098c2
 _md5_=28dc94b87fffc95023cb9cefe3949f08

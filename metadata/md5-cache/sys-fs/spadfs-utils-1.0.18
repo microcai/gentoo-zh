@@ -8,5 +8,5 @@ LICENSE=all-rights-reserved
 RESTRICT=bindist mirror
 SLOT=0
 SRC_URI=http://www.jikos.cz/~mikulas/spadfs/download/spadfs-1.0.18.tar.gz
-_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0
+_eclasses_=toolchain-funcs	e7e7331166166e7a516d19e264b098c2	multilib	c19072c3cd7ac5cb21de013f7e9832e0
 _md5_=f36b7e4101783dc4259f3b1d4b438c6f

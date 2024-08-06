@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~arm64 ~loong
 LICENSE=GPL-3
 SLOT=0
 SRC_URI=https://github.com/snapcore/snapd-xdg-open/archive/6fed3570066ea93598e8091bf749352a02d482ad.tar.gz -> snapd-xdg-open-20170401.tar.gz
-_eclasses_=gnuconfig	a397adda6984a4c423e28ac274c1ba98	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	5f49a16f67f81bdf873e3d1f10b10001	autotools	d12ccbad07b44642a75ac97a3334d8e0
+_eclasses_=gnuconfig	a397adda6984a4c423e28ac274c1ba98	toolchain-funcs	e7e7331166166e7a516d19e264b098c2	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	5f49a16f67f81bdf873e3d1f10b10001	autotools	d12ccbad07b44642a75ac97a3334d8e0
 _md5_=4084bcd277b8215dc74dc9b1999cf33f
