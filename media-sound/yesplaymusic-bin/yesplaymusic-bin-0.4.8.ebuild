@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -7,8 +7,10 @@ inherit desktop xdg
 
 DESCRIPTION="A third party music player for Netease Music"
 HOMEPAGE="https://github.com/qier222/YesPlayMusic"
-BASE_URI="https://github.com/qier222/YesPlayMusic/releases/download/v${PV}"
+BASE_URI="https://github.com/qier222/YesPlayMusic/releases/download/v${PV}-2"
 SRC_URI="${BASE_URI}/${PN%-bin}-${PV}.pacman"
+
+S="${WORKDIR}"
 
 LICENSE="MIT"
 SLOT="0"
@@ -25,8 +27,6 @@ RDEPEND="
 	net-print/cups
 	x11-libs/gtk+:*
 	x11-libs/libxkbcommon"
-
-S="${WORKDIR}"
 
 QA_PREBUILT="
 	opt/YesPlayMusic/chrome-sandbox
