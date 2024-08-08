@@ -5,17 +5,14 @@ EAPI=8
 
 DESCRIPTION="LXDE theme for IceWM"
 HOMEPAGE="http://lxde.sf.net/"
-SRC_URI="mirror://sourceforge/lxde/${PN}.tar.bz2"
+SRC_URI="http://www.dok.lt/Baltix-Ubuntu-packages/baltix-2.6.x/lxde/${PN}.tar.bz2 -> ${P}.tar.bz2"
 
-SLOT="0"
-
+S="${WORKDIR}"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="amd64 ~ppc sparc ~x86"
 
 RDEPEND="x11-wm/icewm"
-
-S="${WORKDIR}"
-RESTRICT="mirror"
 
 src_unpack() {
 	unpack ${A}
