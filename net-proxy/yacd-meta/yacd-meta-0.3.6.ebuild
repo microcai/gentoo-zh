@@ -12,12 +12,12 @@ SRC_URI="
 	https://github.com/st0nie/gentoo-go-deps/releases/download/${P}/${P}-node_modules.tar.xz
 "
 
+S="${WORKDIR}/${_MY_PN}-${PV}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
 BDEPEND="net-libs/nodejs[npm]"
-S="${WORKDIR}/${_MY_PN}-${PV}"
 
 src_unpack() {
 	default
