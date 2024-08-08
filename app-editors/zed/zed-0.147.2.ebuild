@@ -6,12 +6,12 @@
 EAPI=8
 
 CRATES="
-	addr2line@0.21.0
+	addr2line@0.22.0
 	adler@1.0.2
 	aes@0.8.4
 	ahash@0.7.8
-	ahash@0.8.8
-	aho-corasick@1.1.1
+	ahash@0.8.11
+	aho-corasick@1.1.3
 	alacritty_terminal@0.23.0
 	aliasable@0.1.3
 	aligned-vec@0.5.0
@@ -23,12 +23,14 @@ CRATES="
 	android_system_properties@0.1.5
 	anes@0.1.6
 	anstream@0.5.0
+	anstream@0.6.15
 	anstyle-parse@0.2.1
 	anstyle-query@1.0.0
 	anstyle-wincon@2.1.0
+	anstyle-wincon@3.0.4
 	anstyle@1.0.7
-	any_vec@0.13.0
-	anyhow@1.0.83
+	any_vec@0.14.0
+	anyhow@1.0.86
 	approx@0.5.1
 	arbitrary@1.3.2
 	arg_enum_proc_macro@0.3.4
@@ -40,10 +42,10 @@ CRATES="
 	ash@0.38.0+1.3.281
 	ashpd@0.9.1
 	async-attributes@1.1.2
-	async-broadcast@0.7.0
+	async-broadcast@0.7.1
 	async-channel@1.9.0
 	async-channel@2.2.0
-	async-compat@0.2.1
+	async-compat@0.2.4
 	async-compression@0.4.6
 	async-dispatcher@0.1.2
 	async-executor@1.5.1
@@ -54,7 +56,6 @@ CRATES="
 	async-io@2.3.1
 	async-lock@2.8.0
 	async-lock@3.3.0
-	async-native-tls@0.3.3
 	async-native-tls@0.5.0
 	async-net@1.7.0
 	async-net@2.0.0
@@ -66,10 +67,11 @@ CRATES="
 	async-std@1.12.0
 	async-stream-impl@0.3.5
 	async-stream@0.3.5
+	async-stripe@0.37.3
 	async-tar@0.4.2
 	async-task@4.7.0
 	async-trait@0.1.77
-	async-tungstenite@0.16.1
+	async-tungstenite@0.23.0
 	async-watch@0.3.1
 	async_zip@0.0.17
 	asynchronous-codec@0.7.0
@@ -101,12 +103,12 @@ CRATES="
 	axum-core@0.3.4
 	axum-extra@0.4.2
 	axum@0.6.20
-	backtrace@0.3.69
+	backtrace@0.3.73
 	base16ct@0.1.1
 	base64-simd@0.8.0
 	base64@0.13.1
 	base64@0.21.7
-	base64@0.22.0
+	base64@0.22.1
 	base64ct@1.6.0
 	bigdecimal@0.3.1
 	bincode@1.3.3
@@ -122,7 +124,6 @@ CRATES="
 	bitstream-io@2.4.2
 	bitvec@1.0.1
 	block-buffer@0.10.4
-	block-buffer@0.9.0
 	block-padding@0.3.3
 	block@0.1.6
 	blocking@1.5.1
@@ -131,29 +132,33 @@ CRATES="
 	bstr@1.6.2
 	built@0.7.3
 	bumpalo@3.14.0
+	by_address@1.2.1
 	bytecheck@0.6.11
 	bytecheck_derive@0.6.11
 	bytemuck@1.14.0
 	bytemuck_derive@1.5.0
 	byteorder-lite@0.1.0
-	byteorder@1.4.3
+	byteorder@1.5.0
 	bytes-utils@0.1.4
 	bytes@0.4.12
 	bytes@1.5.0
 	calloop-wayland-source@0.3.0
 	calloop@0.13.0
+	camino@1.1.7
 	cap-fs-ext@3.0.0
 	cap-net-ext@3.0.0
 	cap-primitives@3.0.0
 	cap-rand@3.0.0
 	cap-std@3.0.0
 	cap-time-ext@3.0.0
-	cargo_toml@0.20.2
+	cargo-platform@0.1.8
+	cargo_metadata@0.18.1
+	cargo_toml@0.20.4
 	cast@0.3.0
 	castaway@0.1.2
 	cbc@0.1.2
 	cbindgen@0.26.0
-	cc@1.0.90
+	cc@1.0.106
 	cesu8@1.1.0
 	cexpr@0.6.0
 	cfg-expr@0.15.8
@@ -165,7 +170,6 @@ CRATES="
 	ciborium-io@0.2.2
 	ciborium-ll@0.2.2
 	ciborium@0.2.2
-	cipher@0.3.0
 	cipher@0.4.4
 	clang-sys@1.6.1
 	clap@4.4.4
@@ -175,6 +179,7 @@ CRATES="
 	clickhouse-derive@0.1.1
 	clickhouse-rs-cityhash-sys@0.1.2
 	clickhouse@0.11.6
+	cobs@0.2.3
 	cocoa-foundation@0.1.2
 	cocoa@0.25.0
 	codespan-reporting@0.11.1
@@ -200,16 +205,16 @@ CRATES="
 	cpal@0.15.2
 	cpp_demangle@0.4.3
 	cpufeatures@0.2.9
-	cranelift-bforest@0.106.2
-	cranelift-codegen-meta@0.106.2
-	cranelift-codegen-shared@0.106.2
-	cranelift-codegen@0.106.2
-	cranelift-control@0.106.2
-	cranelift-entity@0.106.2
-	cranelift-frontend@0.106.2
-	cranelift-isle@0.106.2
-	cranelift-native@0.106.2
-	cranelift-wasm@0.106.2
+	cranelift-bforest@0.108.1
+	cranelift-codegen-meta@0.108.1
+	cranelift-codegen-shared@0.108.1
+	cranelift-codegen@0.108.1
+	cranelift-control@0.108.1
+	cranelift-entity@0.108.1
+	cranelift-frontend@0.108.1
+	cranelift-isle@0.108.1
+	cranelift-native@0.108.1
+	cranelift-wasm@0.108.1
 	crc-catalog@2.2.0
 	crc32c@0.6.5
 	crc32fast@1.3.2
@@ -225,13 +230,13 @@ CRATES="
 	crypto-bigint@0.4.9
 	crypto-bigint@0.5.5
 	crypto-common@0.1.6
-	crypto-mac@0.11.0
-	ctor@0.2.6
+	ctor@0.2.8
 	ctrlc@3.4.4
 	curl-sys@0.4.67+curl-8.3.0
 	curl@0.4.44
 	cursor-icon@1.1.0
 	dashmap@5.5.3
+	dashmap@6.0.1
 	dasp_sample@0.11.0
 	data-encoding@2.5.0
 	data-url@0.3.1
@@ -240,11 +245,10 @@ CRATES="
 	der@0.7.8
 	deranged@0.3.11
 	derivative@2.2.0
-	derive_more@0.99.17
+	derive_more@0.99.18
 	dialoguer@0.11.0
 	diff@0.1.13
 	digest@0.10.7
-	digest@0.9.0
 	dirs-sys@0.3.7
 	dirs-sys@0.4.1
 	dirs@4.0.0
@@ -259,13 +263,15 @@ CRATES="
 	either@1.9.0
 	elliptic-curve@0.12.3
 	embed-resource@2.4.2
+	embedded-io@0.4.0
 	emojis@0.6.1
 	encode_unicode@0.3.6
 	encoding_rs@0.8.33
 	endi@1.1.0
 	enumflags2@0.7.9
 	enumflags2_derive@0.7.9
-	env_logger@0.10.2
+	env_filter@0.1.2
+	env_logger@0.11.5
 	envy@0.4.2
 	equivalent@1.0.1
 	erased-serde@0.4.5
@@ -337,6 +343,7 @@ CRATES="
 	getrandom@0.2.10
 	gif@0.13.1
 	gimli@0.28.0
+	gimli@0.29.0
 	git2@0.19.0
 	glob@0.3.1
 	globset@0.4.14
@@ -359,14 +366,13 @@ CRATES="
 	heck@0.4.1
 	heck@0.5.0
 	heed-traits@0.20.0
-	heed-types@0.20.0
-	heed@0.20.1
+	heed-types@0.20.1
+	heed@0.20.3
 	hermit-abi@0.3.9
 	hex@0.4.3
 	hexf-parse@0.2.1
 	hidden-trait@0.1.2
 	hkdf@0.12.3
-	hmac@0.11.0
 	hmac@0.12.1
 	home@0.5.9
 	hound@3.5.0
@@ -374,6 +380,7 @@ CRATES="
 	html_to_markdown@0.1.0
 	http-body@0.4.5
 	http-range-header@0.3.1
+	http-types@2.12.0
 	http@0.2.9
 	http@1.0.0
 	httparse@1.8.0
@@ -394,7 +401,8 @@ CRATES="
 	imgref@1.10.1
 	indexmap@1.9.3
 	indexmap@2.2.6
-	indoc@1.0.9
+	indoc@2.0.5
+	infer@0.2.3
 	inherent@1.0.10
 	inotify-sys@0.1.5
 	inotify@0.9.6
@@ -410,6 +418,7 @@ CRATES="
 	is-docker@0.2.0
 	is-terminal@0.4.12
 	is-wsl@0.4.0
+	is_terminal_polyfill@1.70.1
 	isahc@1.7.2
 	itertools@0.10.5
 	itertools@0.11.0
@@ -418,10 +427,10 @@ CRATES="
 	jni-sys@0.3.0
 	jni@0.19.0
 	jni@0.20.0
-	jobserver@0.1.28
+	jobserver@0.1.31
 	jpeg-decoder@0.3.1
 	js-sys@0.3.64
-	jwt@0.16.0
+	jsonwebtoken@9.3.0
 	khronos-egl@5.0.0
 	kqueue-sys@1.0.4
 	kqueue@1.0.8
@@ -431,7 +440,7 @@ CRATES="
 	lazycell@1.3.0
 	leb128@0.2.5
 	lebe@0.5.2
-	libc@0.2.153
+	libc@0.2.155
 	libfuzzer-sys@0.4.7
 	libgit2-sys@0.17.0+1.8.1
 	libloading@0.7.4
@@ -445,15 +454,14 @@ CRATES="
 	linkme@0.3.17
 	linux-raw-sys@0.3.8
 	linux-raw-sys@0.4.12
-	lmdb-master-sys@0.2.0
+	lmdb-master-sys@0.2.2
 	lock_api@0.4.10
-	log@0.4.21
+	log@0.4.22
 	loop9@0.1.5
 	lz4-sys@1.9.4
 	lz4@1.24.0
 	mac@0.1.1
-	mach2@0.4.1
-	mach@0.3.2
+	mach2@0.4.2
 	malloc_buf@0.0.6
 	markup5ever@0.12.1
 	markup5ever_rcdom@0.3.0
@@ -508,13 +516,13 @@ CRATES="
 	num_enum_derive@0.5.11
 	num_threads@0.1.7
 	objc@0.2.7
-	object@0.32.1
+	object@0.33.0
+	object@0.36.2
 	oboe-sys@0.5.0
 	oboe@0.5.0
 	once_cell@1.19.0
-	oo7@0.3.0
+	oo7@0.3.3
 	oorandom@11.1.3
-	opaque-debug@0.3.0
 	open@5.3.0
 	openssl-macros@0.1.1
 	openssl-probe@0.1.5
@@ -531,21 +539,21 @@ CRATES="
 	overload@0.1.1
 	p256@0.11.1
 	page_size@0.6.0
-	palette@0.7.5
-	palette_derive@0.7.5
+	palette@0.7.6
+	palette_derive@0.7.6
 	parity-tokio-ipc@0.9.0
 	parking@2.2.0
 	parking_lot@0.12.1
 	parking_lot_core@0.9.8
-	password-hash@0.2.1
+	password-hash@0.5.0
 	paste@1.0.14
 	pathdiff@0.2.1
 	pathfinder_geometry@0.5.1
 	pathfinder_simd@0.5.4
 	pbkdf2@0.12.2
-	pbkdf2@0.8.0
 	peeking_take_while@0.1.2
 	pem-rfc7468@0.7.0
+	pem@3.0.4
 	percent-encoding@2.3.1
 	petgraph@0.6.4
 	phf@0.11.2
@@ -574,6 +582,7 @@ CRATES="
 	polling@3.3.2
 	pollster@0.2.5
 	postage@0.5.0
+	postcard@1.0.8
 	powerfmt@0.2.0
 	ppv-lite86@0.2.17
 	precomputed-hash@0.1.1
@@ -592,6 +601,7 @@ CRATES="
 	prost-types@0.9.0
 	prost@0.9.0
 	protobuf@2.28.0
+	protols-tree-sitter-proto@0.2.0
 	psm@0.1.21
 	ptr_meta@0.1.4
 	ptr_meta_derive@0.1.4
@@ -629,9 +639,8 @@ CRATES="
 	regex-lite@0.1.5
 	regex-syntax@0.6.29
 	regex-syntax@0.8.2
-	regex@1.10.3
+	regex@1.10.5
 	rend@0.4.0
-	repair_json@0.1.0
 	reqwest@0.11.20
 	resvg@0.41.0
 	rfc6979@0.3.1
@@ -643,18 +652,17 @@ CRATES="
 	rmpv@1.0.1
 	rodio@0.17.1
 	roxmltree@0.19.0
-	roxmltree@0.20.0
 	rsa@0.9.6
 	runtimelib@0.14.0
 	rust-embed-impl@8.4.0
 	rust-embed-utils@8.4.0
 	rust-embed@8.4.0
 	rust_decimal@1.35.0
-	rustc-demangle@0.1.23
+	rustc-demangle@0.1.24
 	rustc-hash@1.1.0
 	rustc_version@0.4.0
 	rustix-openpty@0.1.1
-	rustix@0.37.23
+	rustix@0.37.27
 	rustix@0.38.32
 	rustls-native-certs@0.6.3
 	rustls-pemfile@1.0.3
@@ -663,42 +671,42 @@ CRATES="
 	rustversion@1.0.14
 	rustybuzz@0.14.1
 	ryu@1.0.18
-	salsa20@0.8.1
+	salsa20@0.10.2
 	same-file@1.0.6
 	schannel@0.1.22
 	schemars@0.8.15
 	schemars_derive@0.8.15
 	scoped-tls@1.0.1
 	scopeguard@1.2.0
-	scrypt@0.7.0
+	scrypt@0.11.0
 	sct@0.7.1
 	sea-bae@0.2.0
-	sea-orm-macros@0.12.3
-	sea-orm@0.12.3
+	sea-orm-macros@0.12.15
+	sea-orm@0.12.15
 	sea-query-binder@0.5.0
-	sea-query@0.30.2
+	sea-query@0.30.7
 	seahash@4.1.0
 	sealed@0.4.0
 	sec1@0.3.0
 	security-framework-sys@2.9.1
 	security-framework@2.9.2
 	self_cell@1.0.3
-	semver@1.0.18
-	serde@1.0.202
-	serde_derive@1.0.202
+	semver@1.0.23
+	serde@1.0.204
+	serde_derive@1.0.204
 	serde_derive_internals@0.26.0
 	serde_fmt@1.0.3
-	serde_json@1.0.117
+	serde_json@1.0.121
 	serde_json_lenient@0.1.7
 	serde_path_to_error@0.1.15
+	serde_qs@0.10.1
+	serde_qs@0.8.5
 	serde_repr@0.1.16
-	serde_spanned@0.6.5
+	serde_spanned@0.6.7
 	serde_urlencoded@0.7.1
-	sha-1@0.9.8
 	sha1@0.10.6
 	sha1_smol@1.0.0
-	sha2@0.10.7
-	sha2@0.9.9
+	sha2@0.10.8
 	sharded-slab@0.1.4
 	shell-words@1.1.0
 	shellexpand@2.1.2
@@ -712,6 +720,7 @@ CRATES="
 	simd_helpers@0.1.0
 	simdutf8@0.1.4
 	similar@1.3.0
+	simple_asn1@0.6.2
 	simplecss@0.2.1
 	simplelog@0.12.2
 	siphasher@0.3.11
@@ -721,8 +730,10 @@ CRATES="
 	slice-group-by@0.3.1
 	slotmap@1.0.6
 	sluice@0.5.5
-	smallvec@1.11.1
+	smallvec@1.13.2
+	smart-default@0.6.0
 	smol@1.3.0
+	smol_str@0.1.24
 	socket2@0.4.9
 	socket2@0.5.7
 	spdx@0.10.4
@@ -747,6 +758,7 @@ CRATES="
 	string_cache_codegen@0.5.2
 	stringprep@0.1.4
 	strsim@0.10.0
+	strsim@0.11.1
 	strum@0.25.0
 	strum_macros@0.25.2
 	subtle@2.5.0
@@ -789,7 +801,7 @@ CRATES="
 	tiny-skia@0.11.4
 	tiny_http@0.8.2
 	tinytemplate@1.2.1
-	tinyvec@1.6.0
+	tinyvec@1.8.0
 	tinyvec_macros@0.1.1
 	tokio-io@0.1.13
 	tokio-macros@2.2.0
@@ -801,11 +813,11 @@ CRATES="
 	tokio@1.37.0
 	toml@0.5.11
 	toml@0.7.8
-	toml@0.8.10
-	toml_datetime@0.6.5
+	toml@0.8.16
+	toml_datetime@0.6.7
 	toml_edit@0.19.15
 	toml_edit@0.21.1
-	toml_edit@0.22.6
+	toml_edit@0.22.17
 	tower-http@0.3.5
 	tower-http@0.4.4
 	tower-layer@0.3.2
@@ -818,35 +830,35 @@ CRATES="
 	tracing-serde@0.1.3
 	tracing-subscriber@0.3.18
 	tracing@0.1.40
-	tree-sitter-bash@0.20.5
-	tree-sitter-c@0.20.6
-	tree-sitter-cpp@0.20.5
-	tree-sitter-css@0.20.0
-	tree-sitter-elixir@0.1.1
+	tree-sitter-bash@0.21.0
+	tree-sitter-c@0.21.4
+	tree-sitter-cpp@0.22.3
+	tree-sitter-css@0.21.0
+	tree-sitter-elixir@0.2.0
 	tree-sitter-embedded-template@0.20.0
-	tree-sitter-gomod@1.0.1
-	tree-sitter-html@0.19.0
-	tree-sitter-json@0.20.2
-	tree-sitter-python@0.20.4
-	tree-sitter-regex@0.20.0
-	tree-sitter-ruby@0.20.0
-	tree-sitter-rust@0.20.4
-	tree-sitter-typescript@0.20.5
-	tree-sitter-yaml@0.0.1
+	tree-sitter-go@0.21.0
+	tree-sitter-html@0.20.3
+	tree-sitter-jsdoc@0.21.0
+	tree-sitter-json@0.21.0
+	tree-sitter-python@0.21.0
+	tree-sitter-regex@0.21.0
+	tree-sitter-ruby@0.21.0
+	tree-sitter-rust@0.21.2
+	tree-sitter-typescript@0.21.2
+	tree-sitter-yaml@0.6.1
 	try-lock@0.2.4
 	ttf-parser@0.21.1
-	tungstenite@0.16.0
 	tungstenite@0.20.1
 	typeid@1.0.0
 	typenum@1.17.0
 	uds_windows@1.1.0
 	unicase@2.7.0
 	unicode-bidi-mirroring@0.2.0
-	unicode-bidi@0.3.13
+	unicode-bidi@0.3.15
 	unicode-ccc@0.2.0
 	unicode-ident@1.0.12
 	unicode-linebreak@0.1.5
-	unicode-normalization@0.1.22
+	unicode-normalization@0.1.23
 	unicode-properties@0.1.1
 	unicode-script@0.5.5
 	unicode-segmentation@1.10.1
@@ -855,12 +867,12 @@ CRATES="
 	unicode_categories@0.1.1
 	unindent@0.1.11
 	untrusted@0.9.0
-	url@2.5.0
+	url@2.5.2
 	urlencoding@2.1.3
 	usvg@0.41.0
 	utf-8@0.7.6
 	utf8parse@0.2.1
-	uuid@1.8.0
+	uuid@1.10.0
 	v_frame@0.3.8
 	valuable@0.1.0
 	value-bag-serde1@1.9.0
@@ -875,7 +887,7 @@ CRATES="
 	vswhom@0.1.0
 	vte@0.13.0
 	vte_generate_state_changes@0.1.1
-	waker-fn@1.1.0
+	waker-fn@1.2.0
 	walkdir@2.5.0
 	want@0.3.1
 	wasi@0.11.0+wasi-snapshot-preview1
@@ -888,28 +900,27 @@ CRATES="
 	wasm-bindgen-shared@0.2.92
 	wasm-bindgen@0.2.92
 	wasm-encoder@0.201.0
+	wasm-encoder@0.207.0
 	wasm-metadata@0.201.0
 	wasmparser@0.201.0
-	wasmprinter@0.201.0
-	wasmtime-asm-macros@19.0.2
-	wasmtime-c-api-impl@19.0.0
-	wasmtime-c-api-macros@19.0.0
-	wasmtime-component-macro@19.0.2
-	wasmtime-component-util@19.0.2
-	wasmtime-cranelift-shared@19.0.2
-	wasmtime-cranelift@19.0.2
-	wasmtime-environ@19.0.2
-	wasmtime-fiber@19.0.2
-	wasmtime-jit-icache-coherence@19.0.2
-	wasmtime-runtime@19.0.2
-	wasmtime-slab@19.0.2
-	wasmtime-types@19.0.2
-	wasmtime-versioned-export-macros@19.0.2
-	wasmtime-wasi@19.0.2
-	wasmtime-winch@19.0.2
-	wasmtime-wit-bindgen@19.0.2
-	wasmtime-wmemcheck@19.0.2
-	wasmtime@19.0.2
+	wasmparser@0.207.0
+	wasmprinter@0.207.0
+	wasmtime-asm-macros@21.0.1
+	wasmtime-c-api-impl@21.0.1
+	wasmtime-c-api-macros@21.0.1
+	wasmtime-component-macro@21.0.1
+	wasmtime-component-util@21.0.1
+	wasmtime-cranelift@21.0.1
+	wasmtime-environ@21.0.1
+	wasmtime-fiber@21.0.1
+	wasmtime-jit-icache-coherence@21.0.1
+	wasmtime-slab@21.0.1
+	wasmtime-types@21.0.1
+	wasmtime-versioned-export-macros@21.0.1
+	wasmtime-wasi@21.0.1
+	wasmtime-winch@21.0.1
+	wasmtime-wit-bindgen@21.0.1
+	wasmtime@21.0.1
 	wast@35.0.2
 	wayland-backend@0.3.3
 	wayland-client@0.31.2
@@ -924,51 +935,52 @@ CRATES="
 	which@4.4.2
 	which@6.0.0
 	whoami@1.5.1
-	wiggle-generate@19.0.2
-	wiggle-macro@19.0.2
-	wiggle@19.0.2
+	wiggle-generate@21.0.1
+	wiggle-macro@21.0.1
+	wiggle@21.0.1
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-util@0.1.8
 	winapi-x86_64-pc-windows-gnu@0.4.0
 	winapi@0.3.9
-	winch-codegen@0.17.2
+	winch-codegen@0.19.1
 	windows-core@0.52.0
-	windows-core@0.57.0
-	windows-implement@0.57.0
-	windows-interface@0.57.0
-	windows-result@0.1.1
+	windows-core@0.58.0
+	windows-implement@0.58.0
+	windows-interface@0.58.0
+	windows-result@0.2.0
+	windows-strings@0.1.0
 	windows-sys@0.45.0
 	windows-sys@0.48.0
 	windows-sys@0.52.0
 	windows-targets@0.42.2
 	windows-targets@0.48.5
-	windows-targets@0.52.5
+	windows-targets@0.52.6
 	windows@0.46.0
 	windows@0.48.0
 	windows@0.52.0
-	windows@0.57.0
+	windows@0.58.0
 	windows_aarch64_gnullvm@0.42.2
 	windows_aarch64_gnullvm@0.48.5
-	windows_aarch64_gnullvm@0.52.5
+	windows_aarch64_gnullvm@0.52.6
 	windows_aarch64_msvc@0.42.2
 	windows_aarch64_msvc@0.48.5
-	windows_aarch64_msvc@0.52.5
+	windows_aarch64_msvc@0.52.6
 	windows_i686_gnu@0.42.2
 	windows_i686_gnu@0.48.5
-	windows_i686_gnu@0.52.5
-	windows_i686_gnullvm@0.52.5
+	windows_i686_gnu@0.52.6
+	windows_i686_gnullvm@0.52.6
 	windows_i686_msvc@0.42.2
 	windows_i686_msvc@0.48.5
-	windows_i686_msvc@0.52.5
+	windows_i686_msvc@0.52.6
 	windows_x86_64_gnu@0.42.2
 	windows_x86_64_gnu@0.48.5
-	windows_x86_64_gnu@0.52.5
+	windows_x86_64_gnu@0.52.6
 	windows_x86_64_gnullvm@0.42.2
 	windows_x86_64_gnullvm@0.48.5
-	windows_x86_64_gnullvm@0.52.5
+	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.42.2
 	windows_x86_64_msvc@0.48.5
-	windows_x86_64_msvc@0.52.5
+	windows_x86_64_msvc@0.52.6
 	winnow@0.5.15
 	winnow@0.6.1
 	winreg@0.50.0
@@ -983,6 +995,7 @@ CRATES="
 	wit-bindgen@0.22.0
 	wit-component@0.201.0
 	wit-parser@0.201.0
+	wit-parser@0.207.0
 	witx@0.9.1
 	wyz@0.5.1
 	x11-clipboard@0.9.2
@@ -1001,7 +1014,6 @@ CRATES="
 	zbus@4.0.1
 	zbus_macros@4.0.1
 	zbus_names@3.0.0
-	zed_extension_api@0.0.4
 	zed_extension_api@0.0.6
 	zeno@0.2.3
 	zerocopy-derive@0.7.32
@@ -1030,20 +1042,19 @@ declare -A GIT_CRATES=(
 	[font-kit]='https://github.com/zed-industries/font-kit;40391b7c0041d8a8572af2afa3de32ae088f0120;font-kit-%commit%'
 	[lsp-types]='https://github.com/zed-industries/lsp-types;72357d6f6d212bdffba3b5ef4b31d8ca856058e7;lsp-types-%commit%'
 	[nvim-rs]='https://github.com/KillTheMule/nvim-rs;0d2b1c884f3c39a76b5b7aac0b429f4624843954;nvim-rs-%commit%'
-	[tree-sitter-go]='https://github.com/tree-sitter/tree-sitter-go;b82ab803d887002a0af11f6ce63d72884580bf33;tree-sitter-go-%commit%'
-	[tree-sitter-gowork]='https://github.com/d1y/tree-sitter-go-work;a2a4b99b53b3740855ff33f0b54cab0bb4ce6f45;tree-sitter-go-work-%commit%'
-	[tree-sitter-heex]='https://github.com/phoenixframework/tree-sitter-heex;2e1348c3cf2c9323e87c2744796cf3f3868aa82a;tree-sitter-heex-%commit%'
-	[tree-sitter-jsdoc]='https://github.com/tree-sitter/tree-sitter-jsdoc;6a6cf9e7341af32d8e2b2e24a37fbfebefc3dc55;tree-sitter-jsdoc-%commit%'
-	[tree-sitter-markdown]='https://github.com/MDeiml/tree-sitter-markdown;330ecab87a3e3a7211ac69bbadc19eabecdb1cca;tree-sitter-markdown-%commit%'
-	[tree-sitter-proto]='https://github.com/rewinfrey/tree-sitter-proto;36d54f288aee112f13a67b550ad32634d0c2cb52;tree-sitter-proto-%commit%'
-	[tree-sitter]='https://github.com/tree-sitter/tree-sitter;7b4894ba2ae81b988846676f54c0988d4027ef4f;tree-sitter-%commit%/lib'
+	[tree-sitter-gomod]='https://github.com/camdencheek/tree-sitter-go-mod;1f55029bacd0a6a11f6eb894c4312d429dcf735c;tree-sitter-go-mod-%commit%'
+	[tree-sitter-gowork]='https://github.com/d1y/tree-sitter-go-work;dcbabff454703c3a4bc98a23cf8778d4be46fd22;tree-sitter-go-work-%commit%'
+	[tree-sitter-heex]='https://github.com/phoenixframework/tree-sitter-heex;6dd0303acf7138dd2b9b432a229e16539581c701;tree-sitter-heex-%commit%'
+	[tree-sitter-language]='https://github.com/tree-sitter/tree-sitter;7f4a57817d58a2f134fe863674acad6bbf007228;tree-sitter-%commit%/lib/language'
+	[tree-sitter-md]='https://github.com/zed-industries/tree-sitter-markdown;e3855e37f8f2c71aa7513c18a9c95fb7461b1b10;tree-sitter-markdown-%commit%'
+	[tree-sitter]='https://github.com/tree-sitter/tree-sitter;7f4a57817d58a2f134fe863674acad6bbf007228;tree-sitter-%commit%/lib'
 	[xim-ctext]='https://github.com/npmania/xim-rs;27132caffc5b9bc9c432ca4afad184ab6e7c16af;xim-rs-%commit%/xim-ctext'
 	[xim-parser]='https://github.com/npmania/xim-rs;27132caffc5b9bc9c432ca4afad184ab6e7c16af;xim-rs-%commit%/xim-parser'
 	[xim]='https://github.com/npmania/xim-rs;27132caffc5b9bc9c432ca4afad184ab6e7c16af;xim-rs-%commit%'
 	[xkbcommon]='https://github.com/ConradIrwin/xkbcommon-rs;fcbb4612185cc129ceeff51d22f7fb51810a03b2;xkbcommon-rs-%commit%'
 )
 
-inherit cargo desktop edo flag-o-matic toolchain-funcs xdg
+inherit cargo desktop edo toolchain-funcs xdg
 
 DESCRIPTION="high-performance, multiplayer code editor"
 HOMEPAGE="
@@ -1093,7 +1104,7 @@ BDEPEND="
 	>=sys-devel/clang-17:*
 	sys-devel/gettext
 	sys-devel/mold
-	>=virtual/rust-1.79.0
+	>=virtual/rust-1.80.1
 "
 
 pkg_setup() {
@@ -1108,17 +1119,14 @@ pkg_setup() {
 		fi
 	else
 		export CARGO_PROFILE_RELEASE_LTO="false"
-		filter-lto
 	fi
-	# In case of compiler switch with unsupported flags
-	strip-unsupported-flags
 	# flags from upstream
 	export RUSTFLAGS="${RUSTFLAGS} -C link-args=-Wl,--disable-new-dtags,-rpath,\$ORIGIN/../lib"
 
 	# Upstream explicitly use sys-devel/mold as linker
 	# Any other linker might just fail
 	einfo "Enforcing mold linker"
-	export RUSTFLAGS="${RUSTFLAGS} -C link-arg=-fuse-ld=mold"
+	export RUSTFLAGS="${RUSTFLAGS} -C linker=clang -C link-arg=-fuse-ld=mold"
 
 	# A possible (no warranty!) workaround for other linkers
 	#export RUSTFLAGS="${RUSTFLAGS} -C link-args=-Wl,-z,nostart-stop-gc"
@@ -1129,12 +1137,13 @@ src_prepare() {
 		"${FILESDIR}/${PN}-0.142.6-remove-cargo-install-in-generate-licenses.patch"
 		# From https://github.com/getsolus/packages/tree/main/packages/z/zed
 		"${FILESDIR}/${PN}-0.143.7-use-system-libs.patch"
+		"${FILESDIR}/${PN}-0.147.2-fix-cargo-eclass-rustflags-merge.patch"
 	)
 
 	default
 
 	# Cargo offline fetch workaround
-	local TS_COMMIT="7b4894ba2ae81b988846676f54c0988d4027ef4f"
+	local TS_COMMIT="7f4a57817d58a2f134fe863674acad6bbf007228"
 	local TS_GIT="git = \"https://github.com/tree-sitter/tree-sitter\", rev = \"${TS_COMMIT}\""
 	local TS_PATH="path = \"${WORKDIR}/tree-sitter-${TS_COMMIT}/lib\""
 
