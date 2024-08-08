@@ -15,6 +15,7 @@ KEYWORDS="amd64 ~ppc sparc ~x86"
 RDEPEND="x11-wm/icewm"
 
 S="${WORKDIR}"
+RESTRICT="mirror"
 
 src_unpack() {
 	unpack ${A}
