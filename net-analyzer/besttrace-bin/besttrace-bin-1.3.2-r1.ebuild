@@ -13,6 +13,7 @@ S=${WORKDIR}
 LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
+RESTRICT="mirror"
 
 BDEPEND="app-arch/unzip"
 
