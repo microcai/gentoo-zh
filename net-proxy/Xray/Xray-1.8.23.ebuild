@@ -16,8 +16,6 @@ LICENSE="MPL-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 
-RESTRICT="mirror"
-
 DEPEND="app-alternatives/v2ray-geoip
 	app-alternatives/v2ray-geosite"
 RDEPEND="${DEPEND}"

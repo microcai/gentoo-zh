@@ -19,7 +19,6 @@ LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~riscv"
 MINKV="5.8"
-RESTRICT="mirror"
 
 DEPEND="
 	app-alternatives/v2ray-geoip

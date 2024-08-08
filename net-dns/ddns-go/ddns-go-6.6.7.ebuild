@@ -14,8 +14,6 @@ LICENSE="MIT BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~riscv"
 
-RESTRICT="mirror"
-
 PATCHES=(
 	"${FILESDIR}/${PN}-6.6.2-remove-update-support.patch"
 	"${FILESDIR}/${PN}-6.6.2-remove-service-management-support.patch"
