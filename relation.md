@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-09 06:14:37 CST)
+(The last generation time: 2024-08-09 06:15:01 CST)
 
 ### Packages
 
@@ -183,11 +183,11 @@
  dev-libs/v2ray-domain-list-community     | 4.39.2_p20210621183458-r1                 |        | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
                                           | 9999                                      |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-libs/v2ray-domain-list-community-bin | 20240710044910                            |        | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+ dev-libs/v2ray-domain-list-community-bin | 20240808133326                            |        | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-libs/v2ray-geoip-bin                 | 202407110044                              |        | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
+ dev-libs/v2ray-geoip-bin                 | 202408080046                              |        | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-libs/v2ray-rules-dat                 | 202402252208                              |        | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
+ dev-libs/v2ray-rules-dat                 | 202408072210                              |        | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/archspec                      | 0.2.4                                     |        | https://github.com/archspec/archspec                                                    | A library for detecting, labeling, and reasoning about microarchitectures
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -546,8 +546,7 @@
    net-proxy/Xray                         | 1.8.23                                    | RD     | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
      app-alternatives/v2ray-geoip         | 0-r1                                      |  D, RD |                                                                                         | symlink for v2ray-geoip
      app-alternatives/v2ray-geosite       | 0-r1                                      |  D, RD |                                                                                         | symlink for v2ray-geosite
-   net-proxy/v2ray                        | 5.15.3                                    | RD     | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
-                                          | 5.16.1                                    |        |                                                                                         |
+   net-proxy/v2ray                        | 5.16.1                                    | RD     | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
    net-proxy/v2ray-bin                    | 4.45.0-r2                                 | RD     | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
                                           | 5.12.1-r1                                 |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
