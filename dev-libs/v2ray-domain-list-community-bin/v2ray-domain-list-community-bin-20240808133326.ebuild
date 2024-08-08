@@ -13,8 +13,6 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 
-RESTRICT="mirror"
-
 RDEPEND="!dev-libs/v2ray-domain-list-community"
 
 src_install() {
