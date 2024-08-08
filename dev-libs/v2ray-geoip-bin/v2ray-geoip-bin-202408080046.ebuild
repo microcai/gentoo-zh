@@ -13,8 +13,6 @@ LICENSE="CC-BY-SA-4.0"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 
-RESTRICT="mirror"
-
 src_install() {
 	insinto /usr/share/geoip/
 	newins "${DISTDIR}/${P}.dat" v2fly.dat
