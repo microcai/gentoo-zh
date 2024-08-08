@@ -26,8 +26,6 @@ KEYWORDS="~amd64 ~riscv"
 
 IUSE="+quic grpc +dhcp +wireguard +ech +utls +reality +acme +clash-api v2ray-api +gvisor tor"
 
-RESTRICT="mirror"
-
 BDEPEND="
 	>=dev-lang/go-1.18
 	quic? ( >=dev-lang/go-1.20 )
