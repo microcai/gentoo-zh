@@ -41,7 +41,6 @@ BDEPEND="
 "
 
 S=${WORKDIR}/${PN}-${PV}
-RESTRICT="mirror"
 
 MULTILIB_WRAPPED_HEADERS=( /usr/include/jconfig.h )
 
