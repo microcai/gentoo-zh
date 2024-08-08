@@ -10,14 +10,14 @@ SRC_URI="
 	geoip? ( https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${PV}/geoip.dat -> ${P}-geoip.dat )
 "
 
+S="${WORKDIR}"
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
+
 IUSE="+geosite +geoip"
 REQUIRED_USE="|| ( geosite geoip )"
-RESTRICT="mirror"
-
-S="${WORKDIR}"
 
 src_install() {
 	if use geosite; then
