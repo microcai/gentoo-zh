@@ -10,8 +10,8 @@ P=
 
 DESCRIPTION="MMX, SSE, and SSE2 SIMD accelerated JPEG library"
 HOMEPAGE="https://libjpeg-turbo.org/ https://sourceforge.net/projects/libjpeg-turbo/"
-SRC_URI="mirror://sourceforge/${PN}/${PN}-${PV}.tar.gz
-	mirror://gentoo/libjpeg8_8d-2.debian.tar.gz"
+SRC_URI="https://github.com/libjpeg-turbo/libjpeg-turbo/archive/refs/tags/${PV}.tar.gz -> ${PN}-${PV}.tar.gz
+	mirror://gentoo/51/libjpeg8_8d-2.debian.tar.gz"
 
 LICENSE="BSD IJG ZLIB"
 SLOT="0/0.2"
