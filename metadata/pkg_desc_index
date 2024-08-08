@@ -103,9 +103,9 @@ dev-libs/lunar-calendar 3.0.1: a gtk+ calendar widget for chinese lunar library
 dev-libs/lunar-date 3.0.1: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458-r1 9999: Community managed domain list for V2Ray.
-dev-libs/v2ray-domain-list-community-bin 20240710044910: Community managed domain list for V2Ray.
-dev-libs/v2ray-geoip-bin 202407110044: GeoIP for V2Ray.
-dev-libs/v2ray-rules-dat 202402252208: Enhanced edition of V2Ray rules dat files.
+dev-libs/v2ray-domain-list-community-bin 20240808133326: Community managed domain list for V2Ray.
+dev-libs/v2ray-geoip-bin 202408080046: GeoIP for V2Ray.
+dev-libs/v2ray-rules-dat 202408072210: Enhanced edition of V2Ray rules dat files.
 dev-python/archspec 0.2.4: A library for detecting, labeling, and reasoning about microarchitectures
 dev-python/conda 24.5.0: OS-agnostic, system-level binary package manager and ecosystem
 dev-python/conda-libmamba-solver 24.1.0-r1: The libmamba based solver for conda
@@ -198,7 +198,7 @@ media-video/bilibili 1.11.4: Based on the Bilibli offcial client to linux versio
 media-video/implay 1.5.1: A Cross-Platform Desktop Media Player
 media-video/mpv-handler 0.3.12: Play website videos and songs with mpv & yt-dlp
 media-video/tenvideo 1.0.10: Tencent videos
-net-analyzer/besttrace-bin 1.3.2-r1: 附带链路可视化的 traceroute 工具
+net-analyzer/besttrace-bin 1.3.4: 附带链路可视化的 traceroute 工具
 net-analyzer/nali 0.8.1: An offline tool for querying IP geographic information and CDN provider.
 net-analyzer/realitlscanner 0.1.2: A TLS server scanner for Reality
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
@@ -260,7 +260,7 @@ net-proxy/proxy-server 6.0.0 7.0.0: Implementation of all proxy protocols using 
 net-proxy/shadowsocks-rust 1.19.3 1.20.3: A Rust port of shadowsocks.
 net-proxy/sing-box 1.9.3: The universal proxy platform.
 net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
-net-proxy/v2ray 5.15.3 5.16.1: A platform for building proxies to bypass network restrictions.
+net-proxy/v2ray 5.16.1: A platform for building proxies to bypass network restrictions.
 net-proxy/v2ray-bin 4.45.0-r2 5.12.1-r1: A platform for building proxies to bypass network restrictions
 net-proxy/v2rayA 2.2.5.7 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
