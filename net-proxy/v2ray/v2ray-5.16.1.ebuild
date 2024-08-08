@@ -16,8 +16,6 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 
-RESTRICT="mirror"
-
 DEPEND="app-alternatives/v2ray-geoip
 	app-alternatives/v2ray-geosite"
 RDEPEND="!net-proxy/v2ray-bin
@@ -31,7 +29,7 @@ src_prepare() {
 }
 
 src_compile() {
-	ego build -o v2ray -trimpath -ldflags "-s -w -buildid=" ./main
+	ego build -o v2ray -trimpath -ldflags "-s -w" ./main
 }
 
 src_install() {
