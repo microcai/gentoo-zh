@@ -16,7 +16,7 @@ S="${WORKDIR}/NX/etc/NX/player/packages"
 LICENSE="nomachine"
 SLOT="0"
 KEYWORDS="~amd64"
-RESTRICT="strip"
+RESTRICT="strip mirror"
 
 RDEPEND="dev-libs/glib:2
 		sys-libs/libudev-compat
