@@ -13,6 +13,7 @@ SRC_URI="https://drivers.pantum.com/userfiles/files/download/%E9%A9%B1%E5%8A%A8%
 LICENSE="AS-IS"
 SLOT="0"
 KEYWORDS="~amd64"
+RESTRICT="mirror"
 
 COMMON_DEPEND="
 	media-libs/libjpeg8
