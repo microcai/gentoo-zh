@@ -8,9 +8,12 @@ DESCRIPTION="Electronic Circuit Simulator in the Browser"
 HOMEPAGE="https://www.falstad.com/circuit https://github.com/sharpie7/circuitjs1"
 SRC_URI="https://www.falstad.com/circuit/offline/${MY_PN}-linux64.tgz -> ${P}.tar.gz"
 
+S="${WORKDIR}/${MY_PN}"
+
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
+RESTRICT="mirror"
 
 # file * | grep ELF | cut -d: -f 1 | xargs -i ldd {} | grep '/usr' | cut -d' ' -f 3 | sort | uniq | xargs -i qfile {}
 DEPEND="
@@ -48,8 +51,6 @@ DEPEND="
 	x11-libs/pango
 "
 RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/${MY_PN}"
 
 QA_PREBUILT="
 	/opt/circuitjs1/libGLESv2.so
