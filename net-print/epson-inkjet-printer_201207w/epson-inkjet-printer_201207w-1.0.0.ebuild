@@ -15,6 +15,7 @@ SRC_URI="http://download.ebz.epson.net/dsc/op/stable/SRPMS/${MY_PN}-${PV}-1lsb3.
 LICENSE="LGPL-2.1 EPSON"
 SLOT="0"
 KEYWORDS="amd64 x86"
+RESTRICT="mirror"
 
 RDEPEND="net-print/cups"
 DEPEND="${RDEPEND}"

@@ -11,7 +11,7 @@ SRC_URI="http://wppkg.baidupcs.com/issue/netdisk/Linuxguanjia/${PV}/${PN}_${PV}_
 
 LICENSE="BaiduNetDisk"
 SLOT="0"
-RESTRICT="strip"
+RESTRICT="strip mirror"
 KEYWORDS="-* ~amd64"
 
 QA_PREBUILT="*"

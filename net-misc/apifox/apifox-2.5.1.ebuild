@@ -17,7 +17,7 @@ LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RESTRICT="binchecks strip"
+RESTRICT="binchecks strip mirror"
 
 BDEPEND="
 	app-arch/unzip
