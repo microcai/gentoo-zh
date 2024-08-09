@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <longdescription lang="en">A cross-platform, complete password management solution that securely manages passwords and all other life important credentials like bank accounts, Credit cards, IDs, passport, driving licenses etc. Everything is saved locally on user device and optionally he can sync through other devices using his accounts of Dropbox, Box, Google Drive, OneDrive and ownCloud.
+    </longdescription>
+</pkgmetadata>
