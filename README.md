@@ -55,4 +55,18 @@ https://github.com/microcai/gentoo-zh/blob/deps-table/relation.md
 
   But please don't abuse this exception. It must be a pure font package.
 
-  # See wiki for some package not working
+# Distfiles mirror
+
+We provide a distfiles mirror that caches the distfiles in gentoo-zh.
+
+Our server, hosted on Finland:
+```
+GENTOO_MIRRORS="${GENTOO_MIRRORS} https://distfiles.gentoocn.org"
+```
+
+Nanjing University mirror:
+```
+GENTOO_MIRRORS="${GENTOO_MIRRORS} https://mirror.nju.edu.cn/gentoo-zh"
+```
+
+# See wiki for some package not working
