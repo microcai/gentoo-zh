@@ -9,11 +9,11 @@ DESCRIPTION="Wemeet - Tencent Video Conferencing"
 HOMEPAGE="https://wemeet.qq.com"
 
 SRC_URI="
-	amd64? ( mirror+https://updatecdn.meeting.qq.com/cos/\
+	amd64? ( https://updatecdn.meeting.qq.com/cos/\
 fcdc2a010a25561a4d23e168b677b493/TencentMeeting_0300000000_${PV}_x86_64_default.publish.deb -> ${P}_amd64.deb )
-	arm64? ( mirror+https://updatecdn.meeting.qq.com/cos/\
+	arm64? ( https://updatecdn.meeting.qq.com/cos/\
 73805834f20680c804310bd0e80f269d/TencentMeeting_0300000000_${PV}_arm64_default.publish.deb -> ${P}_arm64.deb )
-	loong? ( mirror+https://updatecdn.meeting.qq.com/cos/\
+	loong? ( https://updatecdn.meeting.qq.com/cos/\
 bc71f68ac41d78667c10b10913949b88/TencentMeeting_0300000000_${PV}_loongarch64_default.publish.deb -> ${P}_loongarch64.deb )
 "
 
@@ -21,7 +21,7 @@ S="${WORKDIR}"
 LICENSE="wemeet_license"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
-RESTRICT="bindist test"
+RESTRICT="bindist test mirror"
 
 # ~loong TODO:
 #

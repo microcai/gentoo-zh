@@ -29,7 +29,7 @@ KEYWORDS="-* ~amd64 ~arm64"
 
 IUSE="+bwrap system-vips gnome appindicator liteloader"
 
-RESTRICT="strip"
+RESTRICT="strip mirror"
 
 RDEPEND="
 	x11-libs/gtk+:3
