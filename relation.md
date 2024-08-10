@@ -1,12 +1,14 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-09 06:15:01 CST)
+(The last generation time: 2024-08-10 13:38:15 CST)
 
 ### Packages
 
 ```
  Package name                             | Version                                   | Role   | Homepage                                                                                | Description
 ==========================================|===========================================|========|=========================================================================================|====================
+ app-admin/enpass                         | 6.10.1.1661                               |        | https://www.enpass.io                                                                   | A cross-platform, complete password management solution.
+------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/rbw                            | 1.12.1                                    |        | https://github.com/doy/rbw                                                              | Unofficial Bitwarden CLI
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/zenmonitor3                    | 2.0.0                                     |        | https://git.exozy.me/a/zenmonitor3                                                      | Zen monitor is monitoring software for AMD Zen-based CPUs
