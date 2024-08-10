@@ -9,8 +9,8 @@ INHERIT=desktop unpacker xdg
 KEYWORDS=~amd64
 LICENSE=JLC-EULA
 RDEPEND=>=app-accessibility/at-spi2-core-2.46.0:2 app-crypt/libsecret dev-libs/expat dev-libs/glib dev-libs/nspr dev-libs/nss media-libs/alsa-lib media-libs/mesa net-print/cups sys-apps/dbus sys-apps/util-linux x11-libs/cairo x11-libs/gdk-pixbuf:2 x11-libs/gtk+:3 x11-libs/libdrm x11-libs/libX11 x11-libs/libxcb x11-libs/libXcomposite x11-libs/libXcursor x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXi x11-libs/libxkbcommon x11-libs/libXrandr x11-libs/libXrender x11-libs/libXScrnSaver x11-libs/libxshmfence x11-libs/libXtst x11-libs/pango
-RESTRICT=splitdebug
+RESTRICT=splitdebug mirror
 SLOT=0
 SRC_URI=https://download.jlc.com/pcAssit/5.0.69/JLCPcAssit-linux-x64-5.0.69.zip -> jlc-assistant-bin-5.0.69.zip
 _eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e7e7331166166e7a516d19e264b098c2	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	fb4b84181244b3b9990fa0bf40232dd2	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
-_md5_=bfd5e80354eb8f44327f5b440906ede6
+_md5_=2f6203f3243b2f8375e44e106b0bb2e6
