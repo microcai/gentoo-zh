@@ -13,6 +13,7 @@ S="${WORKDIR}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
+RESTRICT="strip"
 
 DEPEND="
 	dev-vcs/git
@@ -20,8 +21,9 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 src_install(){
-	dobin "${S}"/opt/sourcegit/sourcegit
-	insinto /usr/lib/sourcegit
-	domenu usr/share/applications/sourcegit.desktop
-	doicon -s 256 usr/share/icons/${PN/-bin}.png
+	insinto /opt/sourcegit
+	doins -r "${S}"/opt/sourcegit/*
+	fperms 755 /opt/sourcegit/sourcegit
+	domenu "${FILESDIR}"/sourcegit.desktop
+	doicon -s 256 "${S}"/usr/share/icons/sourcegit.png
 }
