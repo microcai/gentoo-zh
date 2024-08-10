@@ -11,5 +11,5 @@ LICENSE=GPL-2
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/archlinux/arch-install-scripts/archive/refs/tags/v28.tar.gz -> arch-install-scripts-v28.tar.gz
-_eclasses_=toolchain-funcs	e7e7331166166e7a516d19e264b098c2	multilib	c19072c3cd7ac5cb21de013f7e9832e0	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff
+_eclasses_=toolchain-funcs	0c713337f7872f1a002cecaaea9bef73	multilib	c19072c3cd7ac5cb21de013f7e9832e0	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff
 _md5_=15d28edf2ce39d494be9d6026fe04bdf

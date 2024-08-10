@@ -13,5 +13,5 @@ RDEPEND=sys-apps/kmod[tools] dist-kernel? ( virtual/dist-kernel:= )
 RESTRICT=mirror test
 SLOT=0
 SRC_URI=https://codeload.github.com/AOSC-Dev/la_ow_syscall/zip/1b837fd8bc99ea0cfd74e7d85bb4357542f5e1f2 -> la_ow_syscall-1b837fd8bc99ea0cfd74e7d85bb4357542f5e1f2.zip
-_eclasses_=mount-boot-utils	69218c024651aa10db01df7e8a5b63e0	toolchain-funcs	e7e7331166166e7a516d19e264b098c2	multilib	c19072c3cd7ac5cb21de013f7e9832e0	dist-kernel-utils	55a979ee597f57f3b478d503f9af23e4	edo	367e103a74bf77e6a8da7894d999fa3c	linux-info	ea4122ba1d8791a12b78e53f9510a2e3	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	linux-mod-r1	0bdab9f1f3187180a16e0c6827bc13c2
+_eclasses_=mount-boot-utils	69218c024651aa10db01df7e8a5b63e0	toolchain-funcs	0c713337f7872f1a002cecaaea9bef73	multilib	c19072c3cd7ac5cb21de013f7e9832e0	dist-kernel-utils	55a979ee597f57f3b478d503f9af23e4	edo	367e103a74bf77e6a8da7894d999fa3c	linux-info	ea4122ba1d8791a12b78e53f9510a2e3	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	linux-mod-r1	0bdab9f1f3187180a16e0c6827bc13c2
 _md5_=7e9cc35b2486bf5a628ea092fb111182

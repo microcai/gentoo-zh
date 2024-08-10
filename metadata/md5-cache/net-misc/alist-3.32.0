@@ -9,5 +9,5 @@ LICENSE=AGPL-3
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/alist-org/alist/archive/refs/tags/v3.32.0.tar.gz -> alist-3.32.0.tar.gz https://github.com/alist-org/alist-web/releases/download/3.32.0/dist.tar.gz -> alist-3.32.0-dist.tar.gz https://github.com/liangyongxiang/gentoo-go-deps/releases/download/alist-3.32.0/alist-3.32.0-deps.tar.xz
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e7e7331166166e7a516d19e264b098c2	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	go-env	7eb56e61e641d6db098d57fb37477c44	go-module	83fd3ed1657cfc316c93d6a37018290d	systemd	c8b03e8df84486aa991d4396686e8942
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	0c713337f7872f1a002cecaaea9bef73	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	go-env	7eb56e61e641d6db098d57fb37477c44	go-module	83fd3ed1657cfc316c93d6a37018290d	systemd	c8b03e8df84486aa991d4396686e8942
 _md5_=d2e6b9d7bc56ab574503965ae69fc642

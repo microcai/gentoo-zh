@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://salsa.debian.org/chinese-team/zh-autoconvert/-/archive/debian/0.3.16-7/zh-autoconvert-debian-0.3.16-7.tar.gz
-_eclasses_=multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	e7e7331166166e7a516d19e264b098c2
+_eclasses_=multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	0c713337f7872f1a002cecaaea9bef73
 _md5_=a5cb67f8c61879142a3efa43ad70cb2b
