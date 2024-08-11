@@ -9,6 +9,6 @@ KEYWORDS=~amd64 ~x86
 LICENSE=OFL-1.1
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/be5invis/Sarasa-Gothic/releases/download/v1.0.17/Sarasa-TTC-1.0.17.zip
+SRC_URI=https://github.com/be5invis/Sarasa-Gothic/releases/download/v1.0.18/Sarasa-TTC-1.0.18.zip
 _eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	0c713337f7872f1a002cecaaea9bef73	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	fb4b84181244b3b9990fa0bf40232dd2
 _md5_=97db5074a92c4b6787762ed6ec38e8a1
