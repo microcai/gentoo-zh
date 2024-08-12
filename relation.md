@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-12 10:11:58 CST)
+(The last generation time: 2024-08-12 19:48:50 CST)
 
 ### Packages
 
@@ -252,7 +252,7 @@
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gitoxide                         | 0.37.0                                    |        | https://github.com/Byron/gitoxide                                                       | A command-line application for interacting with git repositories
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/sourcegit-bin                    | 8.24                                      |        | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
+ dev-vcs/sourcegit-bin                    | 8.25                                      |        | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  games-arcade/osu-lazer                   | 2024.412.1                                |        | https://osu.ppy.sh                                                                      | rhythm is just a *click* away!
                                           | 2024.521.2                                |        |                                                                                         |
