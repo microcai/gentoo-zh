@@ -7,12 +7,13 @@ export IBUS_USE_PORTAL=1 # fix ibus
 FONTCONFIG_DIR=$HOME/.config/fontconfig
 unset WAYLAND_DISPLAY
 
-# if "^zh" is not detected in $LANG $LC_ALL $LANGUAGE
+# 解决非zh或en的语言设置闪退的问题
+# if "^zh" is not detected in $LANG $LC_ALL $LANGUAGE, set language to en_GB, else zh_CN
 if test "${LANG:0:2}" != "zh" -a "${LC_ALL:0:2}" != "zh" -a "${LANGUAGE:0:2}" != "zh"; then
-	export LC_ALL="en_GB.UTF-8"; # 解决非zh或en的语言设置闪退的问题
+	export LC_ALL="en_GB.UTF-8"
 else
-	export LC_ALL="zh_CN.UTF-8"; # 解决非zh或en的语言设置闪退的问题
-fi;
+	export LC_ALL="zh_CN.UTF-8"
+fi
 
 # if pipewire-pulse installed
 if [ -f /usr/bin/pipewire-pulse ]; then
