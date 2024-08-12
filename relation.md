@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-12 19:48:50 CST)
+(The last generation time: 2024-08-12 22:04:25 CST)
 
 ### Packages
 
@@ -423,7 +423,7 @@
                                           | 0.1.29                                    |        |                                                                                         |
      dev-libs/libdatrie                   | 0.2.13                                    |  D, RD | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-im/tencent-qq                        | 3.2.9_p240617                             |        | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
+ net-im/tencent-qq                        | 3.2.12_p26740                             |        | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
    media-libs/openslide                   | 20230904                                  | RD     | http://openslide.org/                                                                   | C library with simple interface to read virtual slides
    virtual/loong-ow-compat                | 0                                         | RD     |                                                                                         | Virtual for LoongArch old-world compatibility
      app-emulation/liblol                 | 0.1.5                                     | RD     | https://liblol.aosc.io                                                                  | LoongArch old-world ABI compatibility layer from AOSC OS
