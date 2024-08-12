@@ -5,7 +5,7 @@ EAPI=8
 
 ALTERNATIVES=(
 	v2fly:dev-libs/v2ray-geoip-bin
-	"loyalsoldier:dev-libs/v2ray-rules-dat[geoip]"
+	"loyalsoldier:dev-libs/v2ray-rules-dat-bin[geoip]"
 )
 
 inherit app-alternatives
