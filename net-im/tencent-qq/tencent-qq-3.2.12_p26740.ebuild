@@ -5,18 +5,20 @@ EAPI=8
 
 inherit unpacker xdg
 
-MY_PV=${PV/_p/_}
-_QQDownSite="https://dldir1.qq.com/qqfile/qq/QQNT/Linux"
-_QQFileName="QQ"
-_QQFileSuffix="_01.deb"
-_LiteLoader_PV="1.1.1"
+MY_PV=${PV/_p/-}
+_I="769073aa"
+_QQDownSite="https://dldir1.qq.com/qqfile/qq/QQNT"
+_QQFileName="linuxqq"
+_QQFileSuffix=".deb"
+
+_LiteLoader_PV="1.2.1"
 DESCRIPTION="The new version of the official linux-qq"
 HOMEPAGE="https://im.qq.com/linuxqq/index.shtml"
 
 SRC_URI="
-	amd64? ( ${_QQDownSite}/${_QQFileName}_${MY_PV}_amd64${_QQFileSuffix} )
-	arm64? ( ${_QQDownSite}/${_QQFileName}_${MY_PV}_arm64${_QQFileSuffix} )
-	loong? ( ${_QQDownSite}/${_QQFileName}_${MY_PV}_loongarch64${_QQFileSuffix} )
+	amd64? ( ${_QQDownSite}/$_I/${_QQFileName}_${MY_PV}_amd64${_QQFileSuffix} )
+	arm64? ( ${_QQDownSite}/$_I/${_QQFileName}_${MY_PV}_arm64${_QQFileSuffix} )
+	loong? ( ${_QQDownSite}/$_I/${_QQFileName}_${MY_PV}_loongarch64${_QQFileSuffix} )
 	liteloader? (
 		https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/${_LiteLoader_PV}/LiteLoaderQQNT.zip \
 		-> LiteLoaderQQNT-${_LiteLoader_PV}.zip
