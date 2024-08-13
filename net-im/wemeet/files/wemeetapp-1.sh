@@ -10,7 +10,7 @@ unset WAYLAND_DISPLAY
 # 解决非zh或en的语言设置闪退的问题
 # if "^zh" is not detected in $LANG $LC_ALL $LANGUAGE, set language to en_GB, else zh_CN
 if test "${LANG:0:2}" != "zh" -a "${LC_ALL:0:2}" != "zh" -a "${LANGUAGE:0:2}" != "zh"; then
-	export LC_ALL="en_GB.UTF-8"
+	export LC_ALL="en_US.UTF-8"
 else
 	export LC_ALL="zh_CN.UTF-8"
 fi
