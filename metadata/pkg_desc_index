@@ -24,7 +24,7 @@ app-crypt/cfssl 1.6.5: Cloudflare's PKI and TLS toolkit
 app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-dicts/fcitx-pinyin-moegirl 20230714: Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 app-dicts/fcitx-pinyin-zhwiki 20230728: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
-app-editors/appflowy-bin 0.6.6: AppFlowy is an open-source alternative to Notion
+app-editors/appflowy-bin 0.6.7: AppFlowy is an open-source alternative to Notion
 app-editors/marktext-bin 0.17.1: A simple and elegant markdown editor, available for Linux, macOS and Windows.
 app-editors/typora 0.11.18 1.9.3: A truely minimal markdown editor.
 app-editors/zed 0.146.5: high-performance, multiplayer code editor
@@ -106,7 +106,7 @@ dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram cl
 dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458-r1 9999: Community managed domain list for V2Ray.
 dev-libs/v2ray-domain-list-community-bin 20240808133326: Community managed domain list for V2Ray.
 dev-libs/v2ray-geoip-bin 202408080046: GeoIP for V2Ray.
-dev-libs/v2ray-rules-dat 202408072210: Enhanced edition of V2Ray rules dat files.
+dev-libs/v2ray-rules-dat-bin 202408072210: Enhanced edition of V2Ray rules dat files.
 dev-python/archspec 0.2.4: A library for detecting, labeling, and reasoning about microarchitectures
 dev-python/conda 24.5.0: OS-agnostic, system-level binary package manager and ecosystem
 dev-python/conda-libmamba-solver 24.1.0-r1: The libmamba based solver for conda

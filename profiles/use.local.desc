@@ -3,9 +3,9 @@
 # * generated automatically using pmaint *
 
 app-admin/zenmonitor3:polkit - Install polkit policy for app-admin/zenmonitor3
-app-alternatives/v2ray-geoip:loyalsoldier - use dev-libs/v2ray-rules-dat
+app-alternatives/v2ray-geoip:loyalsoldier - use dev-libs/v2ray-rules-dat-bin
 app-alternatives/v2ray-geoip:v2fly - use dev-libs/v2ray-geoip-bin
-app-alternatives/v2ray-geosite:loyalsoldier - use dev-libs/v2ray-rules-dat
+app-alternatives/v2ray-geosite:loyalsoldier - use dev-libs/v2ray-rules-dat-bin
 app-alternatives/v2ray-geosite:v2fly - use dev-libs/v2ray-domain-list-community-bin
 app-arch/zchunk:openssl - Build with openssl support
 app-emulation/deepin-wine-plugin:virtual-pkg - With deepin-wine-plugin-virtual package
@@ -92,8 +92,8 @@ dev-java/oraclejdk-bin:headless-awt - Don't install the X backend for AWT, neede
 dev-java/oraclejdk-bin:javafx - Install JavaFX libraries
 dev-java/oraclejdk-bin:source - Install JVM sources
 dev-lang/quickjs:lto - Enable Link Time Optimizations (improves performance and decreases size of executables)
-dev-libs/v2ray-rules-dat:geoip - Install geoip.dat
-dev-libs/v2ray-rules-dat:geosite - Install geosite.dat
+dev-libs/v2ray-rules-dat-bin:geoip - Install geoip.dat
+dev-libs/v2ray-rules-dat-bin:geosite - Install geosite.dat
 dev-python/conda:mamba - enable libmamba resolver
 dev-python/conda:pycosat - enable pycosat resolver
 dev-python/conda:user - use user's home directory as default pkgs and envs prefix
