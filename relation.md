@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-12 22:04:25 CST)
+(The last generation time: 2024-08-13 10:39:50 CST)
 
 ### Packages
 
@@ -527,7 +527,7 @@
  net-proxy/daed                           | 0.6.0                                     |        | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
                                           | 9999                                      |        |                                                                                         |
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/hysteria                       | 2.2.2                                     |        | https://github.com/apernet/hysteria                                                     | A powerful, lightning fast and censorship resistant proxy.
+ net-proxy/hysteria                       | 2.5.0                                     |        | https://github.com/apernet/hysteria                                                     | A powerful, lightning fast and censorship resistant proxy.
    acct-group/hysteria                    | 0                                         |  D, RD |                                                                                         | A powerful, lightning fast and censorship resistant proxy.
    acct-user/hysteria                     | 0                                         |  D, RD |                                                                                         | A powerful, lightning fast and censorship resistant proxy.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
