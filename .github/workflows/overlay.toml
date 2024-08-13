@@ -372,7 +372,7 @@ github_account = "microcai"
 #github = "v2fly/geoip"
 #use_latest_release = true
 
-#["dev-libs/v2ray-rules-dat"]
+#["dev-libs/v2ray-rules-dat-bin"]
 
 #["dev-python/archspec"]
 
