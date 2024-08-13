@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -9,11 +9,10 @@ HOMEPAGE="https://github.com/apernet/hysteria"
 
 SRC_URI="
 	https://github.com/apernet/${PN}/archive/refs/tags/app/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/oatiz/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
+	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
 "
 
-RESTRICT="mirror"
-
+S="${WORKDIR}/${PN}-app-v${PV}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -38,8 +37,6 @@ DEPEND="
 	>=dev-lang/go-1.21.1
 "
 RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/${PN}-app-v${PV}"
 
 ego() {
 	set -- go "$@"
