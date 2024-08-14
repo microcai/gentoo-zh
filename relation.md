@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-13 23:42:16 CST)
+(The last generation time: 2024-08-14 18:09:55 CST)
 
 ### Packages
 
@@ -542,6 +542,8 @@
  net-proxy/sing-box                       | 1.9.3                                     |        | https://sing-box.sagernet.org/                                                          | The universal proxy platform.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/smartproxy                     | 0.9.5                                     |        | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
+------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ net-proxy/trojan-go-fork                 | 2024.08.11                                |        | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/v2rayA                         | 2.2.5.7                                   |        | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                           | 9999                                      |        |                                                                                         |
