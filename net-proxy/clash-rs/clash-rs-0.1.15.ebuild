@@ -701,6 +701,6 @@ src_install() {
 	doins "${FILESDIR}/config.example.yaml"
 	systemd_dounit "${FILESDIR}/clash-rs.service"
 
-	newbin target/$(usex debug "debug" "release")/clash clash-rs
+	newbin $(cargo_target_dir)/clash clash-rs
 	use doc && dodoc -r ./docs
 }
