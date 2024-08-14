@@ -6,7 +6,7 @@
     <email>ston.jia@qq.com</email>
   </maintainer>
   <use>
-    <flag name="v2fly">use dev-libs/v2ray-geoip-bin</flag>
+    <flag name="v2fly">use virtual/v2ray-geoip</flag>
     <flag name="loyalsoldier">use dev-libs/v2ray-rules-dat-bin</flag>
   </use>
 </pkgmetadata>
