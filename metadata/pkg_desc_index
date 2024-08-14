@@ -271,7 +271,7 @@ net-vpn/sstp-server 0.6.0: A Secure Socket Tunneling Protocol (SSTP) server impl
 net-vpn/tailscale 1.70.0: Tailscale vpn client
 net-wireless/linux-wifi-hotspot 9999: Linux Wifi Hotspot
 sci-chemistry/vesta 3.5.8: Visualization for Electronic and STructural Analysis
-sci-electronics/circuitjs1-bin 9.3.2: Electronic Circuit Simulator in the Browser
+sci-electronics/circuitjs1-bin 2.9.1: Electronic Circuit Simulator in the Browser
 sci-electronics/jlc-assistant-bin 5.0.69: JLC Order Assistant (binary package)
 sci-electronics/lceda 6.5.37 6.5.44: LCEDA (binary package)
 sci-electronics/lceda-pro 2.2.25.6: LCEDA Pro (binary package)
