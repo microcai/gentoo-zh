@@ -26,7 +26,7 @@ RDEPEND="${DEPEND}"
 BDEPEND="
 	sys-devel/clang
 	app-arch/unzip
-	dev-lang/go
+	>=dev-lang/go-1.22
 "
 IUSE="+webui"
 RESTRICT="strip"
