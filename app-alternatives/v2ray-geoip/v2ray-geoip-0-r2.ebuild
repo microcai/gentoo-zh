@@ -4,7 +4,7 @@
 EAPI=8
 
 ALTERNATIVES=(
-	v2fly:dev-libs/v2ray-geoip-bin
+	v2fly:virtual/v2ray-geoip
 	"loyalsoldier:dev-libs/v2ray-rules-dat-bin[geoip]"
 )
 

@@ -13,14 +13,13 @@ DESCRIPTION="Tencent Weixin Work on Deepin Wine(${DEB_PN}) For Gentoo"
 HOMEPAGE="https://aur.archlinux.org/packages/com.qq.weixin.work.deepin-x11"
 
 SRC_URI="
-	https://mirrors.sdu.edu.cn/spark-store-repository/store/chat/${DEB_PN}/${DEB_PN}_${PV}.spark1_all.deb
+	https://mirrors.sdu.edu.cn/spark-store-repository/store/chat/${DEB_PN}/${DEB_PN}_${DP_WECHAT_VER}~spark1_amd64.deb
 "
 
 S="${WORKDIR}"
 LICENSE="Tencent"
 SLOT="0"
 KEYWORDS="~amd64"
-RESTRICT="mirror"
 
 RDEPEND="
 	>=app-emulation/deepin-wine-helper-5.1.45
