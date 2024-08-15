@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-15 08:35:18 CST)
+(The last generation time: 2024-08-15 08:35:39 CST)
 
 ### Packages
 
@@ -407,7 +407,7 @@
    app-emulation/deepin-wine6-stable        | 6.0.0.52                                  |  D, RD | https://www.deepin.org                                                                  | Deepin wine6 stable
      app-emulation/deepin-udis86            | 1.72-r4                                   | RD     | https://www.deepin.org                                                                  | Disassembler library for x86 (32-bit shared library)
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-im/deepin-wine-wecom                   | 4.1.10.6007                               |        | https://aur.archlinux.org/packages/com.qq.weixin.work.deepin-x11                        | Tencent Weixin Work on Deepin Wine(com.qq.weixin.work.deepin) For Gentoo
+ net-im/deepin-wine-wecom                   | 4.1.22.6009                               |        | https://aur.archlinux.org/packages/com.qq.weixin.work.deepin-x11                        | Tencent Weixin Work on Deepin Wine(com.qq.weixin.work.deepin) For Gentoo
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-im/dingtalk                            | 7.0.40.30706                              |        | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
                                             | 7.1.0.31017                               |        |                                                                                         |
