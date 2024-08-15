@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=!onlyplugin? ( >=app-i18n/fcitx-5.1.5:5 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5= dev-qt/qtwidgets:5 dev-qt/qtconcurrent:5 ) qt6? ( dev-qt/qtbase:6[dbus,gui,wayland?,widgets] ) x11-libs/libX11 x11-libs/libxcb x11-libs/libxkbcommon
 REQUIRED_USE=|| ( qt5 qt6 ) staticplugin? ( onlyplugin )
 SLOT=5
-_eclasses_=toolchain-funcs	0c713337f7872f1a002cecaaea9bef73	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	258a4691fd43b8cd5814cb1acbb3c7df	git-r3	875eb471682d3e1f18da124be97dcc81
+_eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81	toolchain-funcs	0c713337f7872f1a002cecaaea9bef73	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	10a50dfaf728b802fcfd37f8d0da9056
 _md5_=92225796574e81fd39c7e83148bd2e03

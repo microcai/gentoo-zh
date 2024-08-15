@@ -12,5 +12,5 @@ RDEPEND=net-misc/rustdesk net-misc/remmina x11-libs/gtk+:3
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/muflone/remmina-plugin-builder/archive/1.4.27.0.tar.gz -> remmina-plugin-builder-1.4.27.0.tar.gz https://github.com/muflone/remmina-plugin-rustdesk/archive/1.0.0.0.tar.gz -> remmina-plugin-rustdesk-1.0.0.0.tar.gz
-_eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e	toolchain-funcs	0c713337f7872f1a002cecaaea9bef73	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	cmake	258a4691fd43b8cd5814cb1acbb3c7df
+_eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e	toolchain-funcs	0c713337f7872f1a002cecaaea9bef73	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	cmake	10a50dfaf728b802fcfd37f8d0da9056
 _md5_=6f31e8cc5b38b78784b7071b4cfdedbf
