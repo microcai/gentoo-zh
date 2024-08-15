@@ -12,8 +12,8 @@ acct-user/n2n 0: System user: n2n
 app-admin/enpass 6.10.1.1661: A cross-platform, complete password management solution.
 app-admin/rbw 1.12.1: Unofficial Bitwarden CLI
 app-admin/zenmonitor3 2.0.0: Zen monitor is monitoring software for AMD Zen-based CPUs
-app-alternatives/v2ray-geoip 0-r1: symlink for v2ray-geoip
-app-alternatives/v2ray-geosite 0-r1: symlink for v2ray-geosite
+app-alternatives/v2ray-geoip 0-r2: symlink for v2ray-geoip
+app-alternatives/v2ray-geosite 0-r2: symlink for v2ray-geosite
 app-arch/zchunk 1.3.2 1.5.1 9999: A format designed for highly efficient deltas while maintaining good compression
 app-backup/btrfs-assistant 2.1 9999: A GUI management tool to make managing a Btrfs filesystem easier.
 app-backup/restic-rest-server 0.13.0: A high performance HTTP server that implements restic's REST backend API
@@ -27,7 +27,7 @@ app-dicts/fcitx-pinyin-zhwiki 20230728: Fcitx 5 Pinyin Dictionary from zh.wikipe
 app-editors/appflowy-bin 0.6.7: AppFlowy is an open-source alternative to Notion
 app-editors/marktext-bin 0.17.1: A simple and elegant markdown editor, available for Linux, macOS and Windows.
 app-editors/typora 0.11.18 1.9.3: A truely minimal markdown editor.
-app-editors/zed 0.146.5: high-performance, multiplayer code editor
+app-editors/zed 0.147.2: high-performance, multiplayer code editor
 app-emulation/deepin-udis86 1.72-r4: Disassembler library for x86 (32-bit shared library)
 app-emulation/deepin-wine-helper 5.1.27-r1 5.1.45: Deepin Wine Helper
 app-emulation/deepin-wine-plugin 5.1.13-r1: Deepin Wine plugin
@@ -103,8 +103,9 @@ dev-libs/libthai 0.1.28 0.1.29: A a set of Thai language support routines
 dev-libs/lunar-calendar 3.0.1: a gtk+ calendar widget for chinese lunar library
 dev-libs/lunar-date 3.0.1: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
-dev-libs/v2ray-domain-list-community 4.39.2_p20210621183458-r1 9999: Community managed domain list for V2Ray.
+dev-libs/v2ray-domain-list-community 20240810010807: Community managed domain list for V2Ray.
 dev-libs/v2ray-domain-list-community-bin 20240808133326: Community managed domain list for V2Ray.
+dev-libs/v2ray-geoip 202408101831: GeoIP for V2Ray.
 dev-libs/v2ray-geoip-bin 202408080046: GeoIP for V2Ray.
 dev-libs/v2ray-rules-dat-bin 202408072210: Enhanced edition of V2Ray rules dat files.
 dev-python/archspec 0.2.4: A library for detecting, labeling, and reasoning about microarchitectures
@@ -122,7 +123,7 @@ dev-python/nvchecker 2.13.1 2.14 2.14.1 2.15 2.15.1: nvchecker is for checking i
 dev-python/pycosat 0.6.6: Python bindings to picosat (a SAT solver)
 dev-python/pytube 15.0.0: Python tools for downloading YouTube Videos
 dev-python/qasync 0.27.1: Implementation of the asyncio (PEP 3156) event-loop with Qt
-dev-util/android-studio 2024.1.1.12: Android development environment based on IntelliJ IDEA
+dev-util/android-studio 2024.1.1.13: Android development environment based on IntelliJ IDEA
 dev-util/arch-install-scripts 28-r1: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
 dev-util/asdf-vm 0.14.0: Manage all your runtime versions with one tool
 dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 files
@@ -214,9 +215,9 @@ net-dns/phddns 2.0.6.32828: Phddns
 net-dns/q 0.19.2-r1: A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
 net-im/deepin-wine-qq 9.5.2.27897: Tencent QQ on Deepin Wine(com.qq.im.deepin) For Gentoo
 net-im/deepin-wine-wechat 3.9.0.28-r3: Tencent WeChat on Deepin Wine For Gentoo
-net-im/deepin-wine-wecom 4.1.10.6007: Tencent Weixin Work on Deepin Wine(com.qq.weixin.work.deepin) For Gentoo
+net-im/deepin-wine-wecom 4.1.22.6009: Tencent Weixin Work on Deepin Wine(com.qq.weixin.work.deepin) For Gentoo
 net-im/dingtalk 7.0.40.30706 7.1.0.31017 7.1.0.31120: Communication platform that supports video and audio conferencing
-net-im/tencent-qq 3.2.12_p26740: The new version of the official linux-qq
+net-im/tencent-qq 3.2.12_p26909: The new version of the official linux-qq
 net-im/wechat-universal-bwrap 1.0.0.241-r1: WeChat (Universal) from UOS, inside bwrap sandbox
 net-im/weixin-uos 2.1.8: UOS weixin
 net-im/wemeet 3.19.1.400 3.19.1.401: Wemeet - Tencent Video Conferencing
@@ -253,10 +254,11 @@ net-proxy/clash-nyanpasu 1.5.1: Clash GUI based on tauri
 net-proxy/clash-rs 0.1.15: Custom protocol, rule based network proxy
 net-proxy/clash-verge-bin 1.6.0 1.6.4 1.6.6 1.7.5: (Continuation) of Clash Meta GUI based on Tauri.
 net-proxy/dae 0.7.0 0.8.0_rc1 9999: A lightweight and high-performance transparent proxy solution based on eBPF
-net-proxy/daed 0.6.0 9999: A Modern Dashboard For dae
+net-proxy/daed 0.7.0 9999: A Modern Dashboard For dae
 net-proxy/hysteria 2.5.0: A powerful, lightning fast and censorship resistant proxy.
 net-proxy/juicity 0.4.2: juicity is a quic-based proxy protocol.
 net-proxy/mihomo 1.18.7: Another Clash Kernel, formerly Clash.Meta
+net-proxy/naiveproxy-bin 127.0.6533.64_p2: A proxy using Chromium's network stack to camouflage traffic
 net-proxy/proxy-server 6.0.0 7.0.0: Implementation of all proxy protocols using modern c++
 net-proxy/shadowsocks-rust 1.19.3 1.20.3: A Rust port of shadowsocks.
 net-proxy/sing-box 1.9.3: The universal proxy platform.
@@ -308,6 +310,8 @@ sys-power/tlpui 1.5.0_p6 1.6.0: A GTK user interface for TLP written in Python
 virtual/dist-kernel 6.10.2: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 virtual/loong-ow-compat 0: Virtual for LoongArch old-world compatibility
+virtual/v2ray-domain-list-community 0: Virtual for v2ray-domain-list-community
+virtual/v2ray-geoip 0: Virtual for v2ray-geoip
 www-apps/chatgpt-desktop 1.1.0: ChatGPT Desktop Application
 www-client/brave-bin 1.68.137: Web browser that blocks ads and trackers by default
 www-servers/darkhttpd 1.16: A small, static webserver

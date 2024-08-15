@@ -4,9 +4,9 @@
 
 app-admin/zenmonitor3:polkit - Install polkit policy for app-admin/zenmonitor3
 app-alternatives/v2ray-geoip:loyalsoldier - use dev-libs/v2ray-rules-dat-bin
-app-alternatives/v2ray-geoip:v2fly - use dev-libs/v2ray-geoip-bin
+app-alternatives/v2ray-geoip:v2fly - use virtual/v2ray-geoip
 app-alternatives/v2ray-geosite:loyalsoldier - use dev-libs/v2ray-rules-dat-bin
-app-alternatives/v2ray-geosite:v2fly - use dev-libs/v2ray-domain-list-community-bin
+app-alternatives/v2ray-geosite:v2fly - use virtual/v2ray-domain-list-community
 app-arch/zchunk:openssl - Build with openssl support
 app-emulation/deepin-wine-plugin:virtual-pkg - With deepin-wine-plugin-virtual package
 app-emulation/liblol-glibc:cet - Enable Intel Control-flow Enforcement Technology (needs binutils 2.29 and gcc 8)

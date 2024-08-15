@@ -1,0 +1,7 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for v2ray-geoip
+EAPI=8
+KEYWORDS=~amd64 ~arm ~arm64 ~loong ~riscv ~x86
+RDEPEND=|| ( dev-libs/v2ray-geoip dev-libs/v2ray-geoip-bin )
+SLOT=0
+_md5_=0448eaa64d7598981fb3d53e6d4dbe82

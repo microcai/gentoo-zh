@@ -1,0 +1,7 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for v2ray-domain-list-community
+EAPI=8
+KEYWORDS=~amd64 ~arm ~arm64 ~loong ~riscv ~x86
+RDEPEND=|| ( dev-libs/v2ray-domain-list-community dev-libs/v2ray-domain-list-community-bin )
+SLOT=0
+_md5_=4f77190869fc99162772803711ce8b78
