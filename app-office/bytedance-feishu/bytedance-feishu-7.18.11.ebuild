@@ -18,6 +18,9 @@ S="${WORKDIR}"
 LICENSE="Feishu-EULA"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~mips"
+IUSE="big-endian abi_mips_n64"
+REQUIRED_USE="mips? ( !big-endian abi_mips_n64 )"
+
 RESTRICT="strip mirror bindist fetch"
 
 DEPEND="
@@ -32,7 +35,7 @@ RDEPEND="${DEPEND}"
 pkg_nofetch() {
 	einfo "Please download ${SRC_URI} at ${HOMEPAGE} "
 	einfo "and copy the .deb file into your distfiles directory"
-    einfo "default distfiles directory is: /var/cache/distfiles"
+	einfo "default distfiles directory is: /var/cache/distfiles"
 }
 
 src_prepare() {
