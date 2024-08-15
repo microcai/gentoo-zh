@@ -1,14 +1,15 @@
-# Copyright 2019-2023 Gentoo Authors
+# Copyright 2019-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 inherit unpacker xdg
 
-MY_PV=${PV/_p/-}
-_I="769073aa"
+MY_PV=${PV/_p/_}
+_I="Linux"
+_ArchExt="_01"
 _QQDownSite="https://dldir1.qq.com/qqfile/qq/QQNT"
-_QQFileName="linuxqq"
+_QQFileName="QQ"
 _QQFileSuffix=".deb"
 
 _LiteLoader_PV="1.2.1"
@@ -16,9 +17,9 @@ DESCRIPTION="The new version of the official linux-qq"
 HOMEPAGE="https://im.qq.com/linuxqq/index.shtml"
 
 SRC_URI="
-	amd64? ( ${_QQDownSite}/$_I/${_QQFileName}_${MY_PV}_amd64${_QQFileSuffix} )
-	arm64? ( ${_QQDownSite}/$_I/${_QQFileName}_${MY_PV}_arm64${_QQFileSuffix} )
-	loong? ( ${_QQDownSite}/$_I/${_QQFileName}_${MY_PV}_loongarch64${_QQFileSuffix} )
+	amd64? ( ${_QQDownSite}/$_I/${_QQFileName}_${MY_PV}_amd64${_ArchExt}${_QQFileSuffix} )
+	arm64? ( ${_QQDownSite}/$_I/${_QQFileName}_${MY_PV}_arm64${_ArchExt}${_QQFileSuffix} )
+	loong? ( ${_QQDownSite}/$_I/${_QQFileName}_${MY_PV}_loongarch64${_ArchExt}${_QQFileSuffix} )
 	liteloader? (
 		https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/${_LiteLoader_PV}/LiteLoaderQQNT.zip \
 		-> LiteLoaderQQNT-${_LiteLoader_PV}.zip
