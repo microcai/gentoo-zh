@@ -12,7 +12,6 @@ CRATES="
 	ahash@0.7.8
 	ahash@0.8.11
 	aho-corasick@1.1.3
-	alacritty_terminal@0.23.0
 	aliasable@0.1.3
 	aligned-vec@0.5.0
 	allocator-api2@0.2.16
@@ -46,7 +45,7 @@ CRATES="
 	async-channel@1.9.0
 	async-channel@2.2.0
 	async-compat@0.2.4
-	async-compression@0.4.6
+	async-compression@0.4.12
 	async-dispatcher@0.1.2
 	async-executor@1.5.1
 	async-fs@1.6.0
@@ -69,8 +68,8 @@ CRATES="
 	async-stream@0.3.5
 	async-stripe@0.37.3
 	async-tar@0.4.2
-	async-task@4.7.0
-	async-trait@0.1.77
+	async-task@4.7.1
+	async-trait@0.1.81
 	async-tungstenite@0.23.0
 	async-watch@0.3.1
 	async_zip@0.0.17
@@ -121,7 +120,7 @@ CRATES="
 	bit_field@0.10.2
 	bitflags@1.3.2
 	bitflags@2.6.0
-	bitstream-io@2.4.2
+	bitstream-io@2.3.0
 	bitvec@1.0.1
 	block-buffer@0.10.4
 	block-padding@0.3.3
@@ -197,7 +196,7 @@ CRATES="
 	core-foundation-sys@0.8.6
 	core-foundation@0.9.4
 	core-graphics-types@0.1.3
-	core-graphics@0.23.1
+	core-graphics@0.23.2
 	core-services@0.2.1
 	core-text@20.1.0
 	coreaudio-rs@0.11.2
@@ -262,9 +261,9 @@ CRATES="
 	ecdsa@0.14.8
 	either@1.9.0
 	elliptic-curve@0.12.3
-	embed-resource@2.4.2
+	embed-resource@2.4.3
 	embedded-io@0.4.0
-	emojis@0.6.1
+	emojis@0.6.3
 	encode_unicode@0.3.6
 	encoding_rs@0.8.33
 	endi@1.1.0
@@ -278,7 +277,7 @@ CRATES="
 	errno-dragonfly@0.1.2
 	errno@0.2.8
 	errno@0.3.8
-	etagere@0.2.8
+	etagere@0.2.13
 	etcetera@0.8.0
 	euclid@0.22.9
 	event-listener-strategy@0.4.0
@@ -324,7 +323,7 @@ CRATES="
 	futures-batch@0.6.1
 	futures-channel@0.3.30
 	futures-core@0.3.30
-	futures-executor@0.3.28
+	futures-executor@0.3.30
 	futures-intrusive@0.5.0
 	futures-io@0.3.30
 	futures-lite@1.13.0
@@ -335,7 +334,7 @@ CRATES="
 	futures-timer@3.0.3
 	futures-util@0.3.30
 	futures@0.1.31
-	futures@0.3.28
+	futures@0.3.30
 	fuzzy-matcher@0.3.7
 	generic-array@0.14.7
 	gethostname@0.4.3
@@ -356,6 +355,7 @@ CRATES="
 	group@0.12.1
 	h2@0.3.26
 	half@2.4.1
+	handlebars@4.5.0
 	hashbrown@0.12.3
 	hashbrown@0.13.2
 	hashbrown@0.14.5
@@ -396,7 +396,7 @@ CRATES="
 	idna@0.5.0
 	ignore@0.4.22
 	image-webp@0.1.2
-	image@0.25.1
+	image@0.25.2
 	imagesize@0.12.0
 	imgref@1.10.1
 	indexmap@1.9.3
@@ -413,7 +413,7 @@ CRATES="
 	io-lifetimes@1.0.11
 	io-lifetimes@2.0.3
 	iovec@0.1.4
-	ipc-channel@0.18.0
+	ipc-channel@0.18.2
 	ipnet@2.8.0
 	is-docker@0.2.0
 	is-terminal@0.4.12
@@ -446,12 +446,12 @@ CRATES="
 	libloading@0.7.4
 	libloading@0.8.0
 	libm@0.2.8
-	libmimalloc-sys@0.1.37
+	libmimalloc-sys@0.1.39
 	libsqlite3-sys@0.26.0
 	libz-sys@1.1.12
 	linkify@0.10.0
-	linkme-impl@0.3.17
-	linkme@0.3.17
+	linkme-impl@0.3.27
+	linkme@0.3.27
 	linux-raw-sys@0.3.8
 	linux-raw-sys@0.4.12
 	lmdb-master-sys@0.2.2
@@ -475,12 +475,13 @@ CRATES="
 	memmap2@0.9.4
 	memoffset@0.9.0
 	metal@0.29.0
-	mimalloc@0.1.41
+	mimalloc@0.1.43
 	mime@0.3.17
 	minimal-lexical@0.2.1
 	miniz_oxide@0.7.1
 	mint@0.5.9
 	mio@0.8.11
+	mio@1.0.1
 	miow@0.6.0
 	multimap@0.8.3
 	naga@22.0.0
@@ -555,6 +556,10 @@ CRATES="
 	pem-rfc7468@0.7.0
 	pem@3.0.4
 	percent-encoding@2.3.1
+	pest@2.7.11
+	pest_derive@2.7.11
+	pest_generator@2.7.11
+	pest_meta@2.7.11
 	petgraph@0.6.4
 	phf@0.11.2
 	phf_codegen@0.11.2
@@ -851,6 +856,7 @@ CRATES="
 	tungstenite@0.20.1
 	typeid@1.0.0
 	typenum@1.17.0
+	ucd-trie@0.1.6
 	uds_windows@1.1.0
 	unicase@2.7.0
 	unicode-bidi-mirroring@0.2.0
@@ -1035,9 +1041,9 @@ CRATES="
 declare -A GIT_CRATES=(
 	[alacritty_terminal]='https://github.com/alacritty/alacritty;cacdb5bb3b72bad2c729227537979d95af75978f;alacritty-%commit%/alacritty_terminal'
 	[async-pipe]='https://github.com/zed-industries/async-pipe-rs;82d00a04211cf4e1236029aa03e6b6ce2a74c553;async-pipe-rs-%commit%'
-	[blade-graphics]='https://github.com/zed-industries/blade;7e497c534d5d4a30c18d9eb182cf39eaf0aaa25e;blade-%commit%/blade-graphics'
-	[blade-macros]='https://github.com/zed-industries/blade;7e497c534d5d4a30c18d9eb182cf39eaf0aaa25e;blade-%commit%/blade-macros'
-	[blade-util]='https://github.com/zed-industries/blade;7e497c534d5d4a30c18d9eb182cf39eaf0aaa25e;blade-%commit%/blade-util'
+	[blade-graphics]='https://github.com/kvark/blade;ac25c77ed8d86c386a541c935ffe0a0f6024e701;blade-%commit%/blade-graphics'
+	[blade-macros]='https://github.com/kvark/blade;ac25c77ed8d86c386a541c935ffe0a0f6024e701;blade-%commit%/blade-macros'
+	[blade-util]='https://github.com/kvark/blade;ac25c77ed8d86c386a541c935ffe0a0f6024e701;blade-%commit%/blade-util'
 	[cosmic-text]='https://github.com/pop-os/cosmic-text;542b20ca4376a3b5de5fa629db1a4ace44e18e0c;cosmic-text-%commit%'
 	[font-kit]='https://github.com/zed-industries/font-kit;40391b7c0041d8a8572af2afa3de32ae088f0120;font-kit-%commit%'
 	[lsp-types]='https://github.com/zed-industries/lsp-types;72357d6f6d212bdffba3b5ef4b31d8ca856058e7;lsp-types-%commit%'
@@ -1147,8 +1153,7 @@ src_prepare() {
 	local TS_GIT="git = \"https://github.com/tree-sitter/tree-sitter\", rev = \"${TS_COMMIT}\""
 	local TS_PATH="path = \"${WORKDIR}/tree-sitter-${TS_COMMIT}/lib\""
 
-	sed -e "s#${TS_GIT}#${TS_PATH}#" \
-		-i "${S}/Cargo.toml" || die "Cargo fetch workaround failed"
+	sed -e "s#${TS_GIT}#${TS_PATH}#" -i "${S}/Cargo.toml" || die "Cargo fetch workaround failed"
 
 	export DO_STARTUP_NOTIFY="true"
 	export APP_ICON="zed"
