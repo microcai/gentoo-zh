@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-15 08:32:45 CST)
+(The last generation time: 2024-08-15 08:33:48 CST)
 
 ### Packages
 
@@ -532,6 +532,8 @@
    acct-user/hysteria                     | 0                                         |  D, RD |                                                                                         | A powerful, lightning fast and censorship resistant proxy.
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/juicity                        | 0.4.2                                     |        | https://github.com/juicity/juicity                                                      | juicity is a quic-based proxy protocol.
+------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ net-proxy/naiveproxy-bin                 | 127.0.6533.64_p2                          |        | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
 ------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/proxy-server                   | 6.0.0                                     |        | https://github.com/jackarain/proxy                                                      | Implementation of all proxy protocols using modern c++
                                           | 7.0.0                                     |        |                                                                                         |
