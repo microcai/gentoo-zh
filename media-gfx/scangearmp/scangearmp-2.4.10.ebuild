@@ -1,7 +1,7 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit autotools udev
 
@@ -14,6 +14,8 @@ DESCRIPTION="Driver and utility package for Canon scanners"
 HOMEPAGE="https://www.canon.com"
 SRC_URI="https://gdlp01.c-wss.com/gds/4/0100010924/01/${MY_P}.tar.gz"
 
+S="${WORKDIR}/${MY_P}/${MY_PN}"
+
 LICENSE="Canon-IJ"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -21,8 +23,6 @@ KEYWORDS="~amd64 ~x86"
 DEPEND=">=x11-libs/gtk+-2.16:2
 virtual/libusb:1"
 RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/${MY_P}/${MY_PN}"
 
 QA_PREBUILT="
 	/usr/lib64/libcncpnet30.so.1.0.0
