@@ -1,9 +1,7 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
-
-inherit multilib
+EAPI=8
 
 DESCRIPTION="SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)"
 
@@ -11,16 +9,21 @@ MY_PN="SafenetAuthenticationClient"
 MY_PV="${PV/_p/-}"
 
 MY_P_STD="${MY_PN}-${MY_PV}"
-SRC_URI="http://repositorio.serpro.gov.br/drivers/safenet/linux/SafenetAuthenticationClient-BR-10.3_Linux_Ubuntu-RedHat(32-64bits).zip"
 
 HOMEPAGE="http://aladdin-rd.ru"
-LICENSE="EULA"
+SRC_URI="http://repositorio.serpro.gov.br/drivers/safenet/linux/SafenetAuthenticationClient-BR-10.3_Linux_Ubuntu-RedHat(32-64bits).zip"
+
+S="${WORKDIR}"
+
+LICENSE="SafeNet"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="+ssl"
 
+RESTRICT="mirror"
+
 RDEPEND="
-	dev-libs/atk
+	app-accessibility/at-spi2-core
 	dev-libs/glib:2
 	dev-libs/openssl
 	media-libs/fontconfig
@@ -32,11 +35,9 @@ RDEPEND="
 	x11-libs/gdk-pixbuf
 	x11-libs/pango
 	ssl? ( dev-libs/libp11 )
-	!app-crypt/pkiclient
 "
 DEPEND="${RDEPEND}"
-
-S="${WORKDIR}"
+BDEPEND="app-arch/unzip"
 
 src_unpack() {
 	default
