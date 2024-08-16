@@ -18,6 +18,9 @@ S="${WORKDIR}"
 LICENSE="Feishu-EULA"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~mips"
+IUSE="big-endian abi_mips_n64"
+REQUIRED_USE="mips? ( !big-endian abi_mips_n64 )"
+
 RESTRICT="strip mirror bindist fetch"
 
 DEPEND="

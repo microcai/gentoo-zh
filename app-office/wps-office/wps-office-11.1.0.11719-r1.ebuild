@@ -8,8 +8,6 @@ inherit unpacker xdg
 DESCRIPTION="WPS Office is an office productivity suite, Here is the Chinese version"
 HOMEPAGE="https://www.wps.cn/product/wpslinux/"
 
-KEYWORDS="~amd64 ~arm64 ~loong ~mips"
-
 SRC_URI="
 	amd64?	( https://wb9.s-ton.top/wps302/${PV}/amd64 -> ${PN}_${PV}_amd64.deb )
 	arm64?	( https://wb9.s-ton.top/wps302/${PV}/arm64 -> ${PN}_${PV}_arm64.deb )
@@ -17,11 +15,15 @@ SRC_URI="
 	mips?	( https://wb9.s-ton.top/wps302/${PV}/mips64el -> ${PN}_${PV}_mips64el.deb )
 "
 
-SLOT="0"
-RESTRICT="strip mirror bindist" # mirror as explained at bug #547372
+S="${WORKDIR}"
+
 LICENSE="WPS-EULA"
-IUSE="big-endian systemd"
-REQUIRED_USE="mips? ( !big-endian )"
+SLOT="0"
+KEYWORDS="~amd64 ~arm64 ~loong ~mips"
+IUSE="big-endian systemd abi_mips_n64"
+REQUIRED_USE="mips? ( !big-endian abi_mips_n64 )"
+
+RESTRICT="strip mirror bindist" # mirror as explained at bug #547372
 
 # Deps got from this (listed in order):
 # rpm -qpR wps-office-10.1.0.5707-1.a21.x86_64.rpm
@@ -69,8 +71,6 @@ RDEPEND="
 		virtual/loong-ow-compat
 	)
 "
-
-S="${WORKDIR}"
 
 pkg_nofetch() {
 	einfo "Please download WPS Office 2019 For Linux version ${PV} from"
