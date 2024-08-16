@@ -13,7 +13,6 @@ S="${WORKDIR}/${MY_PN}"
 LICENSE="Apache-2.0 EPL-1.0 BSD"
 SLOT="0"
 KEYWORDS="~amd64"
-RESTRICT="mirror"
 
 RDEPEND="dev-java/openjdk-bin:17"
 DEPEND="${RDEPEND}"

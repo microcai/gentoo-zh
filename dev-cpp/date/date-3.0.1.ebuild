@@ -10,7 +10,6 @@ SRC_URI="https://github.com/HowardHinnant/${PN}/archive/refs/tags/v${PV}.zip -> 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-RESTRICT="mirror"
 
 BDEPEND="app-arch/unzip"
 

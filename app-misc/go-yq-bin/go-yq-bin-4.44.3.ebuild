@@ -17,7 +17,6 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RESTRICT="mirror"
 RDEPEND="!app-misc/yq"
 
 QA_PREBUILT="*"

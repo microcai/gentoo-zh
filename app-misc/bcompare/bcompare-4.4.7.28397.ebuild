@@ -12,7 +12,8 @@ SRC_URI="
 LICENSE="Bcompare"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-RESTRICT="mirror"
+
+RESTRICT="bindist"
 
 # qt4
 #	libQtCore.so.4

@@ -550,7 +550,6 @@ KEYWORDS="~amd64"
 
 IUSE="+symphonia gst mpv +yt-dlp"
 REQUIRED_USE="^^ ( symphonia gst mpv )"
-RESTRICT="mirror"
 
 DEPEND="
 	symphonia? (

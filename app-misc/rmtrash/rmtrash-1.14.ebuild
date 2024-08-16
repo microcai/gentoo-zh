@@ -11,8 +11,6 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RESTRICT="mirror"
-
 RDEPEND="app-misc/trash-cli"
 
 src_install() {
