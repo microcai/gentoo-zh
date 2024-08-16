@@ -13,8 +13,6 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RESTRICT="mirror"
-
 DEPEND="
 	app-alternatives/v2ray-geoip
 	app-alternatives/v2ray-geosite

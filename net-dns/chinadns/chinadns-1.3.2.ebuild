@@ -7,7 +7,6 @@ DESCRIPTION="Protect yourself against DNS poisoning in China"
 HOMEPAGE="https://github.com/clowwindy/ChinaDNS"
 
 SRC_URI="https://github.com/clowwindy/ChinaDNS/releases/download/${PV}/${P}.tar.gz"
-RESTRICT="mirror"
 
 LICENSE="GPL-3"
 SLOT="0"

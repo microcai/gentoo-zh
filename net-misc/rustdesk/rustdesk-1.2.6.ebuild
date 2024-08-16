@@ -781,18 +781,18 @@ _WEBM_PV="1.0.0.31"
 _HWCODEC_DEPS_COMMIT="3c871c657272b8c386089c7889ef45f2f7a8b6b7"
 _HWCODEC_EXTERNALS_COMMIT="fd2ab190c333204d51173794e39fb03d3f2dbb43"
 SRC_URI="
-	https://github.com/rustdesk/rustdesk/archive/refs/tags/${PV}.tar.gz
+	mirror+https://github.com/rustdesk/rustdesk/archive/refs/tags/${PV}.tar.gz
 		-> ${P}.tar.gz
-	https://github.com/st0nie/gentoo-deps/releases/download/vcpkg/vcpkg-20240222.tar.gz
-	https://github.com/webmproject/libwebm/archive/refs/tags/libwebm-${_WEBM_PV}.tar.gz
-	https://github.com/21pages/deps/archive/${_HWCODEC_DEPS_COMMIT}.tar.gz
+	mirror+https://github.com/st0nie/gentoo-deps/releases/download/vcpkg/vcpkg-20240222.tar.gz
+	mirror+https://github.com/webmproject/libwebm/archive/refs/tags/libwebm-${_WEBM_PV}.tar.gz
+	mirror+https://github.com/21pages/deps/archive/${_HWCODEC_DEPS_COMMIT}.tar.gz
 		-> hwcodec-deps-${_HWCODEC_DEPS_COMMIT}.tar.gz
-	https://github.com/21pages/externals/archive/${_HWCODEC_EXTERNALS_COMMIT}.tar.gz
+	mirror+https://github.com/21pages/externals/archive/${_HWCODEC_EXTERNALS_COMMIT}.tar.gz
 		-> hwcodec-externals-${_HWCODEC_EXTERNALS_COMMIT}.tar.gz
 	https://raw.githubusercontent.com/c-smile/sciter-sdk/master/bin.lnx/x64/libsciter-gtk.so
 		-> ${P}-libsciter-gtk.so
 
-	${CARGO_CRATE_URIS}
+	mirror+${CARGO_CRATE_URIS}
 "
 RESTRICT="mirror"
 

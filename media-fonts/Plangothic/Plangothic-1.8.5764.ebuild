@@ -20,7 +20,6 @@ IUSE="
 	fallback
 "
 
-RESTRICT="mirror"
 FONT_SUFFIX="ttf"
 
 src_install() {

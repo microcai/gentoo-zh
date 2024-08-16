@@ -13,7 +13,6 @@ S="${WORKDIR}/${MY_PN}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-RESTRICT="mirror"
 
 # file * | grep ELF | cut -d: -f 1 | xargs -i ldd {} | grep '/usr' | cut -d' ' -f 3 | sort | uniq | xargs -i qfile {}
 DEPEND="

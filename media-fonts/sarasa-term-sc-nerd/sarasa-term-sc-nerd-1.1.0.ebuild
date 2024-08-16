@@ -14,7 +14,5 @@ LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RESTRICT="mirror"
-
 S="${WORKDIR}"
 FONT_SUFFIX="ttf"

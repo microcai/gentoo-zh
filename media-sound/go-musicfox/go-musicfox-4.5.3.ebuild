@@ -13,7 +13,6 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~loong"
 IUSE="clang"
-RESTRICT="mirror"
 
 DEPEND="
 	media-libs/flac

@@ -10,7 +10,6 @@ inherit systemd cmake git-r3
 HOMEPAGE="http://www.ntop.org/n2n/"
 LICENSE="GPL-3"
 SLOT="0"
-RESTRICT="mirror"
 IUSE="
 	+openssl
 	caps

@@ -18,7 +18,5 @@ BDEPEND="
 	app-arch/unzip
 "
 
-RESTRICT="mirror"
-
 FONT_S="${S}"
 FONT_SUFFIX="ttc"

@@ -11,8 +11,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-RESTRICT="mirror"
-
 DEPEND=">=sys-apps/groff-1.18.1"
 
 S="${WORKDIR}/${PN}"

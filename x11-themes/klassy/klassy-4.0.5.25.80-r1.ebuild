@@ -13,7 +13,6 @@ SRC_URI="https://github.com/paulmcauley/klassy/archive/refs/tags/${MY_PV}.tar.gz
 LICENSE="GPL-1"
 SLOT="0"
 KEYWORDS="~amd64"
-RESTRICT="mirror"
 
 DEPEND="
 	kde-plasma/breeze:5

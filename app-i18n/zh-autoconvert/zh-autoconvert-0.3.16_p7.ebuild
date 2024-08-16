@@ -16,8 +16,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="static-libs"
 
-RESTRICT="mirror"
-
 S="${WORKDIR}/${PN}-debian-${MY_PV}"
 
 PATCHES=(

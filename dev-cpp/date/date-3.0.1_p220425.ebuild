@@ -12,7 +12,6 @@ inherit git-r3
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-RESTRICT="mirror"
 
 src_install() {
 	doheader -r include/date

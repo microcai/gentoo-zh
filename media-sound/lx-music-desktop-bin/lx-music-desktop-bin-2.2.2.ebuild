@@ -15,7 +15,6 @@ SRC_URI="
 "
 LICENSE="Apache-2.0"
 SLOT="0"
-RESTRICT="mirror"
 KEYWORDS="-* ~amd64 ~arm64"
 RDEPEND="x11-libs/gtk+:3[cups]
 	x11-libs/libXScrnSaver

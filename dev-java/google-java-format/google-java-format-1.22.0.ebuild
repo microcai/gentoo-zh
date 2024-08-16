@@ -11,7 +11,6 @@ S="${WORKDIR}"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
-RESTRICT="mirror"
 
 RDEPEND="virtual/jdk:17"
 DEPEND="${RDEPEND}"
