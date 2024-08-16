@@ -10,5 +10,5 @@ RDEPEND=!dev-libs/v2ray-domain-list-community-bin
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/v2fly/domain-list-community/archive/refs/tags/20240810010807.tar.gz -> v2ray-domain-list-community-20240810010807.tar.gz https://github.com/blackteahamburger/gentoo-deps/releases/download/v2ray-domain-list-community-20240810010807/v2ray-domain-list-community-20240810010807-vendor.tar.xz
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	0c713337f7872f1a002cecaaea9bef73	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	go-env	90efbc8636d2f02d9654183330e84cf7	go-module	83fd3ed1657cfc316c93d6a37018290d
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	5f8f1dc0c94e007fa08af4e98a19d0e5	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	go-env	90efbc8636d2f02d9654183330e84cf7	go-module	83fd3ed1657cfc316c93d6a37018290d
 _md5_=296af646a3f9eef5d27231c1754ce2d5

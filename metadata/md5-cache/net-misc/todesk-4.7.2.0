@@ -10,5 +10,5 @@ RDEPEND=dev-libs/libappindicator:3 sys-apps/systemd
 RESTRICT=strip mirror
 SLOT=0
 SRC_URI=https://dl.todesk.com/linux/todesk-v4.7.2.0-amd64.deb
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	0c713337f7872f1a002cecaaea9bef73	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	fb4b84181244b3b9990fa0bf40232dd2
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	5f8f1dc0c94e007fa08af4e98a19d0e5	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	fb4b84181244b3b9990fa0bf40232dd2
 _md5_=9b40ef6e881352b89fc568c2798a617f
