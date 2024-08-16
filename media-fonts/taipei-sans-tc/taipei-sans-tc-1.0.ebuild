@@ -1,7 +1,7 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 2021-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 inherit font
 
 MY_PN="TaipeiSansTCBeta"
@@ -15,11 +15,12 @@ SRC_URI="https://drive.google.com/uc?export=download&id=1eGAsTN1HBpJAkeVM57_C7cc
 SRC_URI+=" https://drive.google.com/uc?export=download&id=1QdaqR8Setf4HEulrIW79UEV_Lg_fuoWz -> ${P_LIGHT}.ttf"
 SRC_URI+=" https://drive.google.com/uc?export=download&id=1Om8izPz02Msc15onhS_ki1lrlAIf05Pd -> ${P_BOLD}.ttf"
 
-LICENSE="SIL-1.1"
+S="${WORKDIR}"
+
+LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 
-S="${WORKDIR}"
 FONT_S="${S}"
 FONT_SUFFIX="ttf"
 
