@@ -794,19 +794,20 @@ SRC_URI="
 
 	mirror+${CARGO_CRATE_URIS}
 "
-RESTRICT="mirror"
 
 LICENSE="AGPL-3"
 # Dependent crate licenses
 LICENSE+="
 	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD-2 BSD Boost-1.0 CC0-1.0 Fuchsia
-	GPL-2 GPL-3 GPL-3+ ISC MIT MPL-2.0 OpenSSL SSLeay Unicode-DFS-2016 Unlicense ZLIB
-	Sciter end user license agreement
+	GPL-2 GPL-3 GPL-3+ ISC MIT MPL-2.0 openssl SSLeay Unicode-DFS-2016 Unlicense ZLIB
+	Sciter
 "
 SLOT="0"
 KEYWORDS="~amd64"
 
 IUSE="wayland +hwaccel"
+
+RESTRICT="mirror"
 
 RDEPEND="
 	media-libs/alsa-lib
@@ -837,24 +838,23 @@ QA_PRESTRIPPED="
 	/usr/share/${PN}/libsciter-gtk.so
 "
 
-
 src_prepare() {
 	PATCHES+=(
-		${FILESDIR}/rust-sciter.patch
+		"${FILESDIR}"/rust-sciter.patch
 	)
-	cd ${S}/..
+	cd "${S}"/..
 
 	default
 
 	cd -
 	cd ../rust-webm-*/src/sys || die
 	rm -rf libwebm/ || die
-	ln -s ${WORKDIR}/libwebm-libwebm-*/ libwebm || die
+	ln -s "${WORKDIR}"/libwebm-libwebm-*/ libwebm || die
 
 	local _HWCODEC_COMMIT=`echo "${GIT_CRATES[hwcodec]}" | awk -F';' '{print $2}'`
-	rm -rf ${WORKDIR}/hwcodec-*/deps ${WORKDIR}/hwcodec-${_HWCODEC_COMMIT}/externals || die
-	ln -s ${WORKDIR}/deps-${_HWCODEC_DEPS_COMMIT}	${WORKDIR}/hwcodec-${_HWCODEC_COMMIT}/deps || die
-	ln -s ${WORKDIR}/externals-${_HWCODEC_EXTERNALS_COMMIT}		${WORKDIR}/hwcodec-${_HWCODEC_COMMIT}/externals || die
+	rm -rf "${WORKDIR}"/hwcodec-*/deps "${WORKDIR}"/hwcodec-${_HWCODEC_COMMIT}/externals || die
+	ln -s "${WORKDIR}"/deps-${_HWCODEC_DEPS_COMMIT}	"${WORKDIR}"/hwcodec-${_HWCODEC_COMMIT}/deps || die
+	ln -s "${WORKDIR}"/externals-${_HWCODEC_EXTERNALS_COMMIT}		"${WORKDIR}"/hwcodec-${_HWCODEC_COMMIT}/externals || die
 }
 
 src_configure() {
