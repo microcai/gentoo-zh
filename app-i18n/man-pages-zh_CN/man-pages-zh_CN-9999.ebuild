@@ -6,9 +6,6 @@ EAPI=7
 DESCRIPTION="A somewhat comprehensive collection of Chinese Linux man pages"
 HOMEPAGE="https://github.com/man-pages-zh/manpages-zh"
 
-RESTRICT="mirror"
-SRC_URL=""
-
 EGIT_REPO_URI="https://github.com/man-pages-zh/manpages-zh"
 
 LICENSE="FDL-1.2"

@@ -17,8 +17,6 @@ KEYWORDS="~amd64"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-RESTRICT="mirror"
-
 DEPEND="app-arch/cabextract"
 
 RDEPEND="

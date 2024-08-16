@@ -10,7 +10,6 @@ inherit cmake systemd xdg
 DESCRIPTION="qBittorrent Enhanced, based on qBittorrent"
 HOMEPAGE="https://github.com/c0re100/qBittorrent-Enhanced-Edition"
 
-RESTRICT="mirror"
 SRC_URI="https://github.com/c0re100/qBittorrent-Enhanced-Edition/archive/release-${PV}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/qBittorrent-Enhanced-Edition-release-${PV}"
 

@@ -16,7 +16,6 @@ SRC_URI="http://coda.cs.cmu.edu/coda/source/${P}.tar.xz"
 LICENSE="GPL-1"
 SLOT="0"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
-RESTRICT="mirror"
 
 COM_DEP="sys-libs/ncurses
 	dev-lang/lua

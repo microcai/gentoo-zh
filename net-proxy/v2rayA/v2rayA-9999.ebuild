@@ -14,7 +14,6 @@ EGIT_BRANCH="main" # HEAD
 LICENSE="AGPL-3"
 SLOT="0"
 IUSE="xray"
-RESTRICT="mirror"
 
 RDEPEND="
 	|| (

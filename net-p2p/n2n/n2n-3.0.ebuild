@@ -12,7 +12,6 @@ SRC_URI="https://github.com/ntop/n2n/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64"
-RESTRICT="mirror"
 IUSE="
 	+openssl
 	caps

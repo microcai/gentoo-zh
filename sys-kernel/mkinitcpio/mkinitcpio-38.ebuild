@@ -39,8 +39,6 @@ app-text/asciidoc
 sys-apps/sed
 "
 
-RESTRICT="mirror"
-
 src_install(){
 	default_src_install
 	exeinto /usr/lib/initcpio/

@@ -13,7 +13,6 @@ HOMEPAGE="https://winegame.net/"
 SRC_URI="https://file.winegame.net/packages/debian/${PV}/net.winegame.client_${PV}_amd64.deb"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 

@@ -12,7 +12,6 @@ SRC_URI="https://github.com/rvaiya/keyd/archive/refs/tags/v${PV}.tar.gz -> ${P}.
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-RESTRICT="mirror"
 DEPEND="acct-group/keyd"
 RDEPEND="$DEPEND"
 

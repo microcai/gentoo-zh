@@ -13,7 +13,6 @@ KEYWORDS="~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="+libnotify +proxy iplookup +wget"
-RESTRICT="mirror"
 
 COMMON_DEPEND="
 	libnotify? ( x11-libs/libnotify )

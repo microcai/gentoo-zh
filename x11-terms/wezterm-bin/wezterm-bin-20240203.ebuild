@@ -22,8 +22,6 @@ KEYWORDS="-* ~amd64"
 IUSE="wayland +X"
 REQUIRED_USE="|| ( wayland X )"
 
-RESTRICT="mirror"
-
 RDEPEND="
 	sys-apps/dbus
 	>=media-libs/fontconfig-2.12

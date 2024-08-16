@@ -11,7 +11,6 @@ HOMEPAGE="https://gitlab.com/btrfs-assistant/btrfs-assistant"
 
 LICENSE="GPL-3"
 SLOT="0"
-RESTRICT="mirror"
 
 DEPEND="
 	dev-qt/qtbase:6

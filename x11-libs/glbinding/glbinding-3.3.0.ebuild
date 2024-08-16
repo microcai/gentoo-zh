@@ -11,8 +11,6 @@ IUSE="lto"
 
 inherit cmake-multilib
 
-RESTRICT="mirror"
-
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 arm arm64"

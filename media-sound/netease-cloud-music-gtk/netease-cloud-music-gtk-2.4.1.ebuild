@@ -320,7 +320,6 @@ LICENSE+="
 "
 SLOT="0"
 KEYWORDS="~amd64"
-RESTRICT="mirror"
 
 DEPEND="
 	dev-libs/glib:2

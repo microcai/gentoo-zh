@@ -12,7 +12,6 @@ HOMEPAGE="https://github.com/zevlg/tgs2png"
 
 LICENSE="GPL-3"
 SLOT="0"
-RESTRICT="mirror"
 
 DEPEND="
 	media-libs/libpng

@@ -3,8 +3,6 @@
 
 EAPI=8
 
-RESTRICT="mirror"
-
 DESCRIPTION="Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn"
 HOMEPAGE="https://github.com/outloudvi/mw2fcitx"
 SRC_URI="https://github.com/outloudvi/mw2fcitx/releases/download/${PV}/moegirl.dict -> ${P}.dict"
