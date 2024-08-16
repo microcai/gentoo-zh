@@ -1,0 +1,85 @@
+SAFENET SOFTWARE LICENSE TERMS
+SafeNet Authentication Client
+Legal notice:
+SafeNet software is not sold; rather, copies of SafeNet software are licensed all the way through the distribution channel to the end user. UNLESS YOU HAVE ANOTHER AGREEMENT DIRECTLY WITH SAFENET THAT CONTROLS AND ALTERS YOUR USE OR DISTRIBUTION OF THE SAFENET SOFTWARE, THE TERMS AND CONDITIONS OF THE APPLICABLE LICENSE AGREEMENTS BELOW APPLY TO YOU. Please read the agreements applicable for the products you want to use.  Please be careful to read the agreement for the software you want to use. 
+LICENSE AGREEMENT
+IMPORTANT INFORMATION - PLEASE READ THIS AGREEMENT CAREFULLY BEFORE OPENING THE PACKAGE AND/OR USING THE CONTENTS THEREOF AND/OR BEFORE DOWNLOADING OR INSTALLING THE SOFTWARE PROGRAM. ALL ORDERS FOR AND USE OF SOFTWARE SUPPLIED BY SAFENET, INC. (or any of its affiliates - either of them referred to as "SAFENET") ARE AND SHALL BE, SUBJECT TO THE TERMS AND CONDITIONS SET FORTH IN THIS AGREEMENT. BY OPENING THE PACKAGE CONTAINING THE PRODUCTS AND/OR BY DOWNLOADING THE SOFTWARE (as defined hereunder) AND/OR BY INSTALLING THE SOFTWARE ON YOUR COMPUTER AND/OR BY USING THE PRODUCT, YOU ARE ACCEPTING THIS AGREEMENT AND AGREEING TO BE BOUND BY ITS TERMS AND CONDITIONS.
+
+1.  Ownership.  
+The object code version of the software component of SafeNet Authentication Client, including any revisions, corrections, modifications, enhancements, updates and/or upgrades thereto about to be installed by you (hereinafter in whole or any part thereof defined as: "Licensed Software"), and the related the materials and documents pertaining to the Licensed Software which may include, without limitation, user guides, manuals, and any other written material provided by SafeNet (the "Documentation''), ARE NOT FOR SALE and are and shall remain SafeNet's sole property.  All intellectual property rights (including, without limitation, copyrights, trade secrets, trademarks, etc.) evidenced by or embodied in and/or attached/connected/related to the Licensed Software, in the form of object code only, and the Documentation (collectively the ''Licensed Product''), are and shall be owned solely by SafeNet. This License Agreement does not convey to you an interest in or to the Licensed Product, but only a limited right of use revocable in accordance with the terms of this License Agreement. Nothing in this License Agreement constitutes a waiver of SafeNet's intellectual property rights under any law, and all rights not granted to you herein are expressly reserved by SafeNet.  The Licensed Product is protected by law, including but not limited to the copyright laws of the United States and other countries, and by international treaty provisions. 
+
+2.  Non Exclusive License.
+
+Subject to payment of applicable fees, SafeNet hereby grants to you, and you accept, a personal, nonexclusive and fully revocable limited license (the "License") to use the Licensed Software, in executable form only, as described in the Documentation and only according to the terms of this License Agreement to:  (i) install the Licensed Software and use it on computers as described in SafeNet's related Documentation; and (ii) merge and link the Licensed Software into your computer programs for the sole purpose described in the Documentation provided by SafeNet (the "Designated Uses").  Licensee shall use the Licensed Products only for the Designated Uses permitted by this License, as specified above, and only during the term of this License Agreement. Licensee shall not use the Licensed Products for any other purpose of any kind or nature whatsoever.
+
+3. Use Limitations.  
+The Licensed Product must be used and maintained in strict compliance with the instruction and safety precautions of SafeNet contained herein, in all supplements thereto, and in any other written documents of SafeNet. Except as specifically permitted in Section 2 above, you agree not to: (i) use, copy, modify, merge, sub-license, or transfer the Licensed Software or any other of SafeNet's products, in whole or in part, except as expressly authorized in this License Agreement and in the Documentation, (ii) sell, license (or sub-license), lease, assign, transfer, pledge, or share your rights under this License with/to anyone else, (iii) modify, disassemble, decompile, reverse engineer, revise or enhance the Licensed Software or attempt to discover the Licensed Software's source code, (iv) place the Licensed Product, or any portion thereof, onto a server so that it is accessible via a public network, and (v) use any back-up or archival copies of the Licensed Product (or allow someone else to use such copies) for any purpose other that to replace an original copy if it is destroyed or becomes defective. If you are a member of the European Union, this License Agreement does not affect your rights under any legislation implementing the EC Council Directive on the Legal Protection of Computer Programs. 
+You agree to reasonably communicate the terms and conditions of this License Agreement to those persons employed by you who come into contact with the Licensed Product, and to use reasonable best efforts to ensure their compliance with such terms and conditions, including, without limitation, not knowingly permitting such persons to use any portion of the Licensed Product for the purpose of deriving the source code of the Licensed Software. 
+
+4. Limited Warranty. 
+
+SafeNet warrants, for your benefit alone, that the Licensed Product, when and as delivered to you, and for a period of ninety (90) days after the date of delivery to you, will perform in substantial compliance with the Documentation, provided that it is used on the computer hardware and with the operating system for which it was designed.  Non-substantial variation of performance from the Documentation does not establish a warranty right.  
+
+5. Warranty Disclaimer. 
+
+SAFENET DOES NOT WARRANT THAT ANY OF ITS PRODUCT(S) WILL MEET YOUR REQUIREMENTS OR THAT ITS OPERATION WILL BE UNINTERRUPTED OR ERROR-FREE. TO THE EXTENT ALLOWED BY LAW, SAFENET EXPRESSLY DISCLAIMS ALL EXPRESS WARRANTIES NOT STATED HEREIN AND ALL IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. NO SAFENET DEALER, DISTRIBUTOR, CHANNEL PARTNER, RESELLER, AGENT OR EMPLOYEE IS AUTHORIZED TO MAKE ANY MODIFICATIONS, EXTENSIONS, OR ADDITIONS TO THIS WARRANTY. If any modifications are made to the Licensed Product by you during the warranty period; the Licensed Product has not been properly installed, operated, repaired or maintained in accordance with the instructions supplied by SafeNet; the Licensed Product has been subjected to abnormal physical or electrical stress, negligence or accident; or if you violate any of the terms of this License Agreement, then the warranty in Section 4 above, shall immediately be terminated. The warranty shall not apply if the Licensed Product is used on or in conjunction with hardware or  programs other than the unmodified version of hardware and programs with which the Licensed Product was designed to be used as described in the Documentation.
+
+6.  Limitation of Remedies. 
+
+In the event of a breach of this warranty, SafeNet's sole obligation shall be, at SafeNet's sole discretion: (i) to replace or repair the Licensed Product, or component thereof, that does not meet the foregoing limited warranty, free of charge, or (ii) to refund the price paid by you for the Licensed Product, or component thereof. Any replacement or repaired component will be warranted for the remainder of the original warranty period or 30 days, whichever is longer. Warranty claims must be made in writing during the warranty period and within seven (7) days of the observation of the defect accompanied by evidence satisfactory to SafeNet. All Licensed Products should be returned to the Reseller, Distributor or Channel Partner from which they were purchased (if not purchased directly from SafeNet) and shall be shipped by the returning party with freight and insurance paid. The Licensed Product or component thereof must be returned with a copy of your receipt.
+
+7.  Maintenance and Support. 
+
+SafeNet has no obligation to provide support, maintenance, upgrades, modifications, or new releases under this License Agreement.
+
+8. Limitation of Liability. 
+IN NO EVENT WILL SAFENET BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY INCIDENTAL OR CONSEQUENTIAL DAMAGES (INCLUDING, WITHOUT LIMITATION, INDIRECT, SPECIAL, PUNITIVE, OR EXEMPLARY DAMAGES FOR LOSS OF BUSINESS, LOSS OF PROFITS, BUSINESS INTERRUPTION, OR LOSS OF BUSINESS INFORMATION) ARISING OUT OF THE USE OF OR INABILITY TO USE THE PROGRAM, OR FOR ANY CLAIM BY ANY OTHER PARTY, EVEN IF SAFENET HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. SAFENET'S AGGREGATE LIABILITY WITH RESPECT TO ITS OBLIGATIONS UNDER THIS LICENSE AGREEMENT OR OTHERWISE WITH RESPECT TO THE LICENSED PRODUCT AND DOCUMENTATION OR OTHERWISE SHALL BE EQUAL TO THE PURCHASE PRICE, BUT SHALL IN NO EVENT EXCEED $1,000. THIS LIMITATION WILL APPLY EVEN IN THE EVENT OF A FUNDAMENTAL OR MATERIAL BREACH OF THIS LICENSE AGREEMENT.  BECAUSE SOME STATES/COUNTRIES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, THE ABOVE LIMITATION MAY NOT APPLY TO YOU.
+
+
+9. Export Restrictions. 
+You acknowledge that the Licensed Product is subject to regulation by United States, European Union, and/or other government agencies, which prohibit export or diversion of the Licensed Product to certain countries and certain persons. You agree to comply with all export laws, regulations and restrictions of the United States Department of State, Department of Commerce or other legal authority within the United States or any foreign entity which regulates their shipment. You will not export in any manner, either directly or indirectly, any Licensed Product or any product that incorporates any Licensed Product without first obtaining all necessary approval from appropriate government agencies. YOU AGREE TO INDEMNIFY SAFENET AGAINST ALL CLAIMS, LOSSES, DAMAGES, LIABILITIES, COSTS AND EXPENSES, INCLUDING REASONABLE ATTORNEYS' FEES, TO THE EXTENT SUCH CLAIMS ARISE OUT OF ANY BREACH OF THIS SECTION 9.
+
+10. Audit Rights. 
+SAFENET SHALL HAVE THE RIGHT, AT ITS OWN EXPENSE, UPON REASONABLE PRIOR NOTICE, TO PERIODICALLY INSPECT AND AUDIT YOUR RECORDS TO ENSURE YOUR COMPLIANCE WITH THE TERMS AND CONDITIONS OF THIS LICENSE AGREEMENT. 
+
+11. Termination. 
+This License Agreement is effective until it is terminated. You may terminate this License Agreement at any time by destroying or returning to SafeNet all copies of the Licensed Product in your possession or under your control. SafeNet may terminate this License Agreement if SafeNet finds that you have violated any of the terms of this License Agreement. Upon notification of termination, you agree to destroy or return to SafeNet all copies of the Licensed Product and to certify in writing that all known copies, including backup copies, have been destroyed. All provisions relating to confidentiality, proprietary rights, and non-disclosure shall survive the termination of this License Agreement. 
+
+12. Special Procedure for U.S. Government Sales. 
+The Licensed Product: (i) was developed exclusively at private expense, (ii) is a trade secret of SafeNet for all purposes of the Freedom of Information Act or its successor or any other disclosure statute, regulation or provision, (iii) is "commercial computer software" subject to limited utilization (Restricted Rights), and (iv) including all copies of the Licensed Product, in all respects is and shall remain proprietary to SafeNet or its licensors. Use, duplication or disclosure by the U.S. Government or any person or entity acting on its behalf is subject to Restricted Rights and all applicable restrictions for software developed exclusively at private expense as set forth in:  (i) for the DoD, the Rights in Technical Data and Computer Software clause at DFARS 252.227-7013 or any successor clause, and (ii) for all government agencies, the Commercial Computer Software - Restricted Rights clause at FAR 52.227-19 or any successor clause.  The U.S. Government must refrain from changing or removing any insignia or lettering from the Licensed Product or from producing copies of the Licensed Product and manuals (except one copy of the Licensed Product for backup purposes).  All other U.S. Government personnel using the Licensed Product are hereby on notice that use of the Licensed Products are subject to restrictions, which are the same as, or similar to, those specified above. The manufacturer/supplier is SafeNet, Inc. - Corporate Headquarters, 4690 Millennium Drive, Belcamp, Maryland 21017, U. S. A.
+
+13.  Open Source Software Components and Third Party Software.
+
+ The Licensed Product is distributed with open source software components ("Open Source Software Components") and other third party software, which are ONLY subject to the license agreements referenced herein (which also contain limited warranties and liabilities).  ONLY THOSE TERMS AND CONDITIONS SPECIFIED FOR EACH SPECIFIC OPEN SOURCE SOFTWARE COMPONENT OR THIRD PARTY SOFTWARE SHALL BE APPLICABLE TO SUCH COMPONENT.  Each Open Source Software Component or Third Party Software is the copyright of its respective copyright owner as indicated in the applicable license, installation, readme and/or help files for such Open Source Software Components or Third Party Software.  SafeNet makes no representations or warranties with regard to the Open Source Software Components or Third Party Software.
+
+14. General. 
+This License Agreement shall be construed, interpreted and governed by the laws of the State of Delaware without regard to conflicts of laws and provisions thereof. The exclusive forum for any disputes arising out of or relating to this License Agreement shall be an appropriate federal or state court sitting in the State of Maryland, USA. The application of the United Nations Convention of Contracts for the International Sale of Goods is expressly excluded.  This License Agreement shall constitute the entire Agreement between the parties hereto. This License Agreement, the rights granted hereunder, and the Licensed Product shall not be assigned by you without the prior written consent of SafeNet. Any waiver or modification of this License Agreement shall only be effective if it is in writing and signed by both parties hereto. If any part of this License Agreement is found invalid or unenforceable by a court of competent jurisdiction, the remainder of this License Agreement shall be interpreted so as to reasonably effect the intention of the parties. 
+
+© 2016 SafeNet, Inc. All rights reserved. 
+
+
+
+
+
+
+ADDENDUM FOR THIRD PARTY SOFTWARE APPLICATIONS: 
+
+The Software contains certain third party software, including Open Source Software Components, as listed below.  Any use of the Open Source Software Components is subject to the applicable license agreements, referenced below.  If you choose to distribute or otherwise use the Open Source Software Components independent of the Software, you may only do so in accordance with the applicable licenses below, and any and all proprietary notices of SafeNet, Inc., must be removed from any resulting product.  In no event shall you state or imply that a derivative product you created with the Open Source Software Components is produced by SafeNet or otherwise endorsed or supported by SafeNet.  The hyperlinks to the following third party software licenses are valid as of the version date of this License Agreement.
+
+
+
+ 
+
+Exhibit A
+ZLib License
+
+1. 	Notices
+I.	Copyright (C) 1995-2005 Jean-loup Gailly and Mark Adler
+II.	This software is provided 'as-is', without any express or implied warranty.  In no event will the authors be held liable for any damages arising from the use of this software.
+III.	Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+IV.	The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+V.	Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+VI.	This notice may not be removed or altered from any source distribution.
+a.	Jean-loup Gailly jloup@gzip.org <mailto:jloup@gzip.org> 
+b.	Mark Adler madler@alumni.caltech.edu <mailto:madler@alumni.caltech.edu>
+
