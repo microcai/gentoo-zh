@@ -1,13 +1,13 @@
 BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
 DEFINED_PHASES=install postinst postrm setup unpack
 DESCRIPTION=JT Foundry - Taipei Sans TC Beta font
-EAPI=7
+EAPI=8
 HOMEPAGE=https://sites.google.com/view/jtfoundry/
 INHERIT=font
 IUSE=X
 KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos
-LICENSE=SIL-1.1
+LICENSE=OFL-1.1
 SLOT=0
 SRC_URI=https://drive.google.com/uc?export=download&id=1eGAsTN1HBpJAkeVM57_C7ccp7hbgSz3_ -> TaipeiSansTCBeta-Regular.ttf https://drive.google.com/uc?export=download&id=1QdaqR8Setf4HEulrIW79UEV_Lg_fuoWz -> TaipeiSansTCBeta-Light.ttf https://drive.google.com/uc?export=download&id=1Om8izPz02Msc15onhS_ki1lrlAIf05Pd -> TaipeiSansTCBeta-Bold.ttf
 _eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb
-_md5_=5eebe0821b82bdcdedd4d5bc859ece0e
+_md5_=32ce318783c6c67899e606e6ee345680

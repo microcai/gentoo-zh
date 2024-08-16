@@ -2,7 +2,7 @@ BDEPEND=>=app-portage/elt-patches-20240116 sys-devel/gnuconfig || ( >=dev-build/
 DEFINED_PHASES=compile install postinst postrm prepare
 DEPEND=>=x11-libs/gtk+-2.16:2 virtual/libusb:1
 DESCRIPTION=Driver and utility package for Canon scanners
-EAPI=7
+EAPI=8
 HOMEPAGE=https://www.canon.com
 INHERIT=autotools udev
 KEYWORDS=~amd64 ~x86
@@ -11,4 +11,4 @@ RDEPEND=>=x11-libs/gtk+-2.16:2 virtual/libusb:1
 SLOT=0
 SRC_URI=https://gdlp01.c-wss.com/gds/4/0100010924/01/scangearmp2-source-4.10-1.tar.gz
 _eclasses_=gnuconfig	a397adda6984a4c423e28ac274c1ba98	toolchain-funcs	0c713337f7872f1a002cecaaea9bef73	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	5f49a16f67f81bdf873e3d1f10b10001	autotools	d12ccbad07b44642a75ac97a3334d8e0	udev	eec0bbab06977f1cfc5597269c1fa152
-_md5_=699aa8274b1b8a4ef197504313235daf
+_md5_=e2df251903faeb1b07837c47e05a7550

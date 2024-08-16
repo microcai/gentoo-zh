@@ -164,11 +164,11 @@ media-fonts/sarasa-term-sc-nerd 1.1.0: Sarasa Mono SC font patched with Nerd fon
 media-fonts/smiley-sans 2.0.1: An open-source font for Chinese.
 media-fonts/taipei-sans-tc 1.0: JT Foundry - Taipei Sans TC Beta font
 media-fonts/tiejili 1.100: An open-source font that extends Reggae One to Chinese.
-media-fonts/ttf-wps-fonts 1.0: Symbol fonts required by wps-office
+media-fonts/ttf-wps-fonts 9999: Symbol fonts required by wps-office
 media-fonts/wangfonts 1.3.0: Free Chinese TrueType fonts donated by Prof. Hann-Tzong Wang
 media-fonts/zhudou 2.000: A font family for CJK symbols and punctuation, derived from Noto Sans.
 media-gfx/bambustudio-bin 01.09.03.50: Bambu Studio is a cutting-edge, feature-rich slicing software
-media-gfx/scangearmp 1.60 2.4.10: Driver and utility package for Canon scanners
+media-gfx/scangearmp 2.4.10: Driver and utility package for Canon scanners
 media-gfx/tgs2png 9999: Convert Telegram's animated stickers in TGS format into series of PNG images.
 media-gfx/tifig-bin 0.2.2: Converts iOS 11 HEIC images to practical formats - Static binary
 media-gfx/unityhub 3.4.1 3.4.2: The official unity tool for manager Unity Engines and projects
@@ -226,7 +226,7 @@ net-misc/alist 3.32.0 3.36.0: A file list/WebDAV program that supports multiple 
 net-misc/aliyundrive-webdav 2.3.3: WebDAV server for AliyunDrive
 net-misc/aliyunpan 0.2.8: aliyunpan cli client, support Webdav service, JavaScript plugin
 net-misc/apifox 2.5.1: API 文档、API 调试、API Mock、API 自动化测试
-net-misc/avsocks 9999: 科学操长城软件
+net-misc/avsocks 9999: avsocks 科学操长城软件
 net-misc/baidunetdisk 4.3.0 4.17.7: Baidu Net Disk is a cloud storage client (Linux Version)
 net-misc/baidupcs-go 3.9.5: The terminal utility for Baidu Network Disk (Golang Version).
 net-misc/bbdown-bin 1.6.3: 一款命令行式哔哩哔哩下载器
@@ -313,7 +313,7 @@ virtual/loong-ow-compat 0: Virtual for LoongArch old-world compatibility
 virtual/v2ray-domain-list-community 0: Virtual for v2ray-domain-list-community
 virtual/v2ray-geoip 0: Virtual for v2ray-geoip
 www-apps/chatgpt-desktop 1.1.0: ChatGPT Desktop Application
-www-client/brave-bin 1.68.137: Web browser that blocks ads and trackers by default
+www-client/brave-bin 1.68.141: Web browser that blocks ads and trackers by default
 www-servers/darkhttpd 1.16: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images

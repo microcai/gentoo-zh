@@ -1,9 +1,10 @@
 DEFINED_PHASES=install unpack
-DESCRIPTION=ToDesk作为一款安全免费不限速的远程控制软件，通过领先的网络技术搭建并运营自己的网络系统，拥有覆盖全球的多节点、多业务，毫秒级延时应用层路由系统，带给用户像使用本地电脑一样的体验感。
+DESCRIPTION=ToDesk不一样的远控体验，轻松打破物理限制，随时随地高效使用所有计算终端
 EAPI=8
 HOMEPAGE=https://www.todesk.com/
 KEYWORDS=amd64
+LICENSE=todesk
 RESTRICT=strip mirror
 SLOT=0
 SRC_URI=https://newdl.todesk.com/linux/todesk_4.1.0_x86_64.pkg.tar.zst
-_md5_=97d19775237b3c4c09f431bc7a1f83b8
+_md5_=9b4afa4f691249c1c29b4f0c294c0eb9
