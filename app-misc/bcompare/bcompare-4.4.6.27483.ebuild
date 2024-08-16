@@ -13,6 +13,8 @@ LICENSE="Bcompare"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
+RESTRICT="bindist"
+
 # qt4
 #	libQtCore.so.4
 #	libQtGui.so.4
