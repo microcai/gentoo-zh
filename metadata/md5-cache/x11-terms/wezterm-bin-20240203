@@ -9,8 +9,7 @@ KEYWORDS=-* ~amd64
 LICENSE=MIT
 RDEPEND=sys-apps/dbus >=media-libs/fontconfig-2.12 >=dev-libs/openssl-1.1 wayland? ( dev-libs/wayland dev-libs/wayland-protocols ) X? ( >=x11-libs/libX11-1.7.5 >=x11-libs/libxcb-1.8 >=x11-libs/xcb-util-0.4 >=x11-libs/xcb-util-wm-0.4.1 >=x11-libs/xcb-util-image-0.2.1 >=x11-libs/xcb-util-keysyms-0.4 x11-libs/libxkbcommon[X] ) x11-themes/hicolor-icon-theme
 REQUIRED_USE=|| ( wayland X )
-RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/wez/wezterm/releases/download/20240203-110809-5046fc22/wezterm-20240203-110809-5046fc22.Ubuntu20.04.tar.xz
 _eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
-_md5_=a24714090f3987cac0c3667c1621db71
+_md5_=6e992c643f9fed9b2e350ec1e3ca10f9
