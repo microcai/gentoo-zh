@@ -1,22 +1,21 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2022-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 DESCRIPTION="A C++ binding for the OpenGL API"
 HOMEPAGE="https://glbinding.org/"
-SRC_URI="https://github.com/cginternals/glbinding/archive/refs/tags/v${PV}.tar.gz"
-
-IUSE="lto"
+SRC_URI="https://github.com/cginternals/glbinding/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 inherit cmake-multilib
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 arm arm64"
+KEYWORDS="amd64 arm arm64 x86"
+IUSE="lto"
 
 PATCHES=(
-	${FILESDIR}/glbinding-fix-install.patch
+	"${FILESDIR}"/glbinding-fix-install.patch
 )
 
 src_configure(){
@@ -34,5 +33,5 @@ src_configure(){
 src_install(){
 	cmake-multilib_src_install
 	# remove conflict files with libglvnd
-	rm ${D}/usr/include/KHR/khrplatform.h
+	rm "${D}"/usr/include/KHR/khrplatform.h
 }
