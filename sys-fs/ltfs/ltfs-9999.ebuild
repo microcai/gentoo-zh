@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2022-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -7,16 +7,9 @@ DESCRIPTION="LTFS for LTO tapes"
 HOMEPAGE="https://github.com/LinearTapeFileSystem/ltfs"
 EGIT_REPO_URI="https://github.com/LinearTapeFileSystem/ltfs.git"
 
-if [[ ${PV} != *9999* ]] ; then
-	EGIT_COMMIT=v${PV}
-	KEYWORDS="amd64"
-else
-	KEYWORDS="~amd64"
-fi
-
 inherit git-r3 autotools
 
-LICENSE="MIT"
+LICENSE="BSD"
 SLOT="0"
 
 RDEPEND="
