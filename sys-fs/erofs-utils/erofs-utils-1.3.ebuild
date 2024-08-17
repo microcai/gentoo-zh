@@ -1,7 +1,7 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit autotools
 
@@ -11,7 +11,7 @@ SRC_URI="https://git.kernel.org/pub/scm/linux/kernel/git/xiang/erofs-utils.git/s
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 arm arm64 mips ppc ppc64 riscv x86"
+KEYWORDS="amd64 arm arm64 mips ppc ppc64 ~riscv x86"
 IUSE="fuse lz4 selinux +uuid"
 
 RDEPEND="
