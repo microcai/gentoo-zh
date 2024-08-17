@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -9,10 +9,12 @@ DESCRIPTION="Chinese Lunar Library"
 HOMEPAGE="https://github.com/yetist/lunar-date"
 SRC_URI="https://github.com/yetist/lunar-date/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2.1+"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="+dbus doc introspection test"
+
+RESTRICT="!test? ( test )"
 
 RDEPEND=">=dev-python/pygobject-2.11.5"
 
@@ -22,8 +24,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=dev-util/intltool-0.35
 	doc? ( dev-util/gtk-doc )
-	introspection? ( dev-libs/gobject-introspection )
-	>=app-text/gnome-doc-utils-0.3.2"
+	introspection? ( dev-libs/gobject-introspection )"
 
 DOCS="AUTHORS COPYING NEWS README.md"
 
