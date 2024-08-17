@@ -1,4 +1,4 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 2023-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -9,8 +9,8 @@ DESCRIPTION="Oracle's Java SE Development Kit"
 HOMEPAGE="https://www.oracle.com/java"
 SRC_URI="https://download.oracle.com/java/21/archive/jdk-${PV}_linux-x64_bin.tar.gz"
 S="${WORKDIR}/jdk-${PV}"
-SLOT="21"
 LICENSE="NFTC"
+SLOT="21"
 KEYWORDS="~amd64"
 IUSE="alsa +commercial cups headless-awt +source"
 RESTRICT="bindist mirror preserve-libs strip"
