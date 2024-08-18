@@ -6,7 +6,7 @@ EAPI=8
 DESCRIPTION="奔图打印机Linux驱动"
 HOMEPAGE="https://www.pantum.cn/support/download/driver/"
 
-SRC_URI="https://drivers.pantum.com/userfiles/files/download/%E9%A9%B1%E5%8A%A8%E6%96%87%E4%BB%B6/Pantum%20Linux%20Driver%20V1_1_94-1.zip"
+SRC_URI="https://drivers.pantum.cn/userfiles/files/download/drive/1820/Pantum%20Ubuntu%20Driver%20V1_1_100-1.zip"
 
 S="${WORKDIR}/Pantum Linux Driver V1.1.94-1"
 
@@ -40,7 +40,7 @@ RDEPEND="
 
 src_prepare(){
 	eapply_user
-	unpack "${S}/Resources/pantum_1.1.94-1_amd64.deb"
+	unpack "${S}/Resources/pantum_1.1.100-1_amd64.deb"
 }
 
 src_install(){
