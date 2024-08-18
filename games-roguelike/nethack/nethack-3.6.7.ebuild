@@ -1,7 +1,7 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit desktop flag-o-matic toolchain-funcs
 
@@ -54,7 +54,8 @@ src_compile() {
 	append-cflags -std=gnu89 # old codebase, incompatible with c2x
 	append-cflags -I../include -DDLB -DSECURE -DTIMED_DELAY -DVISION_TABLES -DDUMPLOG -DSCORE_ON_BOTL
 	append-cflags '-DCOMPRESS=\"${EPREFIX}/bin/gzip\"' '-DCOMPRESS_EXTENSION=\".gz\"'
-	append-cflags "-DHACKDIR=\\\"${EPREFIX}/usr/$(get_libdir)/nethack\\\"" "-DVAR_PLAYGROUND=\\\"${EPREFIX}/var/games/nethack\\\""
+	append-cflags "-DHACKDIR=\\\"${EPREFIX}/usr/$(get_libdir)/nethack\\\""
+	append-cflags "-DVAR_PLAYGROUND=\\\"${EPREFIX}/var/games/nethack\\\""
 	append-cflags "-DDEF_PAGER=\\\"${PAGER}\\\""
 	append-cflags -DSYSCF "-DSYSCF_FILE=\\\"${EPREFIX}/etc/nethack.sysconf\\\""
 
