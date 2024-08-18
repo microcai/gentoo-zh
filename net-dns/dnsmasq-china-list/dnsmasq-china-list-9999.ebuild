@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2022-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -9,7 +9,7 @@ DESCRIPTION="Chinese-specific configuration to improve your favorite DNS server.
 HOMEPAGE="https://github.com/felixonmars/dnsmasq-china-list"
 
 EGIT_REPO_URI="https://github.com/felixonmars/dnsmasq-china-list.git"
-EGIT_CLONE_TYPE=shallow
+EGIT_MIN_CLONE_TYPE=shallow
 
 LICENSE="WTFPL-2"
 SLOT="0"

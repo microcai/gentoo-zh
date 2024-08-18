@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -6,17 +6,16 @@ EAPI=8
 inherit java-vm-2
 
 MY_PV=${PV/./u}
-SLOT=$(ver_cut 1)
-
-SRC_URI="jdk-${MY_PV}-linux-x64.tar.gz"
 
 DESCRIPTION="Oracle's Java SE Development Kit"
 HOMEPAGE="http://www.oracle.com/technetwork/java/javase/"
+SRC_URI="jdk-${MY_PV}-linux-x64.tar.gz"
+S="${WORKDIR}/jdk1.8.0_${PV/8./}"
 LICENSE="OTN"
+SLOT=$(ver_cut 1)
 KEYWORDS="~amd64"
-IUSE="alsa cups headless-awt selinux +source +javafx fontconfig"
+IUSE="+alsa cups headless-awt selinux +source +javafx fontconfig"
 REQUIRED_USE="javafx? ( alsa )"
-QA_PREBUILT="*"
 
 RDEPEND="
 	>=sys-apps/baselayout-java-0.1.0-r1
@@ -67,8 +66,6 @@ pkg_nofetch() {
 
 RESTRICT="preserve-libs splitdebug fetch"
 QA_PREBUILT="*"
-
-S="${WORKDIR}/jdk1.8.0_${PV/8./}"
 
 src_install() {
 	local dest="/opt/${P}"

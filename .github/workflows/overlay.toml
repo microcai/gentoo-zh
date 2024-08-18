@@ -639,8 +639,6 @@ prefix = "v"
 
 #["media-gfx/zwcad"]
 
-#["media-libs/libjpeg8"]
-
 #["media-libs/libspiro"]
 
 #["media-libs/openslide"]
