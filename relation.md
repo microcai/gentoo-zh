@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-17 19:20:34 CST)
+(The last generation time: 2024-08-18 14:18:28 CST)
 
 ### Packages
 
@@ -492,7 +492,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-print/epson-inkjet-printer_201207w     | 1.0.0                                     |        | http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX                              | Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-print/pantum                           | 1.1.94                                    |        | https://www.pantum.cn/support/download/driver/                                          | 奔图打印机Linux驱动
+ net-print/pantum                           | 1.1.100                                   |        | https://www.pantum.cn/support/download/driver/                                          | 奔图打印机Linux驱动
    media-libs/libjpeg8                      | 2.1.4                                     |  D, RD | https://libjpeg-turbo.org/                                                              | MMX, SSE, and SSE2 SIMD accelerated JPEG library
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/cgproxy                          | 0.20-r1                                   |        | https://github.com/springzfx/cgproxy                                                    | Transparent Proxy with cgroup v2
