@@ -21,9 +21,9 @@ src_compile() {
 	local ldflags="\
 		-X \"github.com/zu1k/nali/internal/constant.Version=${PV}\" \
 		-w -s"
-	ego build -o ${P} -trimpath -ldflags "${ldflags}"
+	ego build -trimpath -ldflags "${ldflags}"
 }
 
 src_install() {
-	newbin ${P} ${PN}
+	dobin ${PN}
 }
