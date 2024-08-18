@@ -40,7 +40,7 @@ RDEPEND="
 
 src_prepare(){
 	eapply_user
-	unpack "${S}/Resources/pantum_1.1.94-1_amd64.deb"
+	unpack "${S}/Resources/pantum_1.1.100-1_amd64.deb"
 }
 
 src_install(){
