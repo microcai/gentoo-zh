@@ -10,5 +10,5 @@ LICENSE=all-rights-reserved
 RDEPEND=media-libs/libjpeg8 net-print/cups sys-apps/dbus media-libs/libjpeg-turbo net-print/cups-filters scanner? ( media-gfx/sane-backends ) app-text/ghostscript-gpl
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://drivers.pantum.com/userfiles/files/download/%E9%A9%B1%E5%8A%A8%E6%96%87%E4%BB%B6/Pantum%20Linux%20Driver%20V1_1_94-1.zip
-_md5_=55c0be0752504e3d43f6b1f04d3d26c9
+SRC_URI=https://drivers.pantum.cn/userfiles/files/download/drive/1820/Pantum%20Ubuntu%20Driver%20V1_1_100-1.zip
+_md5_=e53d0168b7c72ad9748f9dcd6d126d0c
