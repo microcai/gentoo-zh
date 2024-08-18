@@ -175,7 +175,6 @@ media-gfx/unityhub 3.4.1 3.4.2: The official unity tool for manager Unity Engine
 media-gfx/xrectsel 0.3.1: print the geometry of a rectangular screen region
 media-gfx/zw3d 2022.0.3.1-r3 2023.0.3.1: CAD/CAM software for 3D design and processing
 media-gfx/zwcad 2023.23.0.3.4-r2: CAD software for 2D drawing, reviewing and printing work
-media-libs/libjpeg8 2.1.4: MMX, SSE, and SSE2 SIMD accelerated JPEG library
 media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simplifies the drawing of beautiful curves.
 media-libs/openslide 20230904: C library with simple interface to read virtual slides
 media-plugins/gimp-gap 2.8.0: Gimp Animation Package
@@ -201,7 +200,7 @@ media-video/implay 1.5.1: A Cross-Platform Desktop Media Player
 media-video/mpv-handler 0.3.12: Play website videos and songs with mpv & yt-dlp
 media-video/tenvideo 1.0.10: Tencent videos
 net-analyzer/besttrace-bin 1.3.4: 附带链路可视化的 traceroute 工具
-net-analyzer/nali 0.8.1: An offline tool for querying IP geographic information and CDN provider.
+net-analyzer/nali 0.8.1 0.8.1_p20240512: An offline tool for querying IP geographic information and CDN provider.
 net-analyzer/realitlscanner 0.1.2: A TLS server scanner for Reality
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
 net-dns/ddns-go 6.6.8: Automatically obtain your public IP address and set to your domain name service.

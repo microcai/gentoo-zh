@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=dnsmasq? ( net-dns/dnsmasq ) smartdns? ( net-dns/smartdns ) dnscrypt-proxy? ( net-dns/dnscrypt-proxy )
 SLOT=0
 _eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81
-_md5_=cfee3683f8899565884cfdb1dd49c074
+_md5_=00a52c771117c93fc2ff413cdff6ac0a

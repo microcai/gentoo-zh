@@ -6,7 +6,7 @@ EAPI=8
 HOMEPAGE=http://www.oracle.com/technetwork/java/javase/
 IDEPEND=app-eselect/eselect-java
 INHERIT=java-vm-2
-IUSE=alsa cups headless-awt selinux +source +javafx fontconfig
+IUSE=+alsa cups headless-awt selinux +source +javafx fontconfig
 KEYWORDS=~amd64
 LICENSE=OTN
 RDEPEND=>=sys-apps/baselayout-java-0.1.0-r1 fontconfig? ( media-libs/fontconfig:1.0 ) elibc_glibc? ( >=sys-libs/glibc-2.2.5:* ) elibc_musl? ( sys-libs/musl ) alsa? ( media-libs/alsa-lib ) cups? ( net-print/cups ) selinux? ( sec-policy/selinux-java ) !headless-awt? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXi x11-libs/libXrender x11-libs/libXtst ) javafx? ( media-libs/freetype:2 dev-libs/glib:2 dev-libs/libxml2:2 dev-libs/libxslt media-libs/freetype:2 x11-libs/cairo x11-libs/gtk+:2 x11-libs/gtk+:3 x11-libs/libX11 x11-libs/libXtst x11-libs/libXxf86vm x11-libs/pango virtual/opengl ) dev-java/java-config app-eselect/eselect-java
@@ -15,4 +15,4 @@ RESTRICT=preserve-libs splitdebug fetch
 SLOT=8
 SRC_URI=jdk-8u391-linux-x64.tar.gz
 _eclasses_=multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	5f8f1dc0c94e007fa08af4e98a19d0e5	pax-utils	91d47e5d20627c717aa878b9167c62a8	prefix	eab3c99d77fe00506c109c8a736186f7	xdg-utils	baea6080dd821f5562d715887954c9d3	java-vm-2	6c7243f2269a7c9b5c177579e49f89ab
-_md5_=c004a89bea9b27b3736bf80b8725bc2b
+_md5_=27b54b66bf5f7081fc44d15c00674d6e

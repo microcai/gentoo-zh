@@ -257,6 +257,8 @@ sci-electronics/openfpgaloader:gpio - enable libgpiod bitbang support
 sci-electronics/openfpgaloader:remote - enable remote bitbang support
 sys-apps/pacman:doc - Install extended documentation using app-text/doxygen. (Man pages are included by default.)
 sys-apps/pacman:gpg - Enable GPG signature verification using app-crypt/gpgme
+sys-fs/erofs-utils:fuse - Enable fuse support
+sys-fs/erofs-utils:uuid - Enable UUID support
 sys-kernel/liquorix-sources:cjk - Enable cjktty Patches.
 sys-kernel/xanmod-kernel:clang - Use clang compiler instead of GCC
 sys-kernel/xanmod-kernel:debug - Pseudo flag

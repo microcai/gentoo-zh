@@ -2,14 +2,14 @@ BDEPEND=virtual/pkgconfig >=app-portage/elt-patches-20240116 sys-devel/gnuconfig
 DEFINED_PHASES=configure install prepare
 DEPEND=fuse? ( sys-fs/fuse:0 ) lz4? ( >=app-arch/lz4-1.9 ) selinux? ( sys-libs/libselinux ) uuid? ( sys-apps/util-linux )
 DESCRIPTION=Userspace tools for EROFS images
-EAPI=7
+EAPI=8
 HOMEPAGE=https://git.kernel.org/pub/scm/linux/kernel/git/xiang/erofs-utils.git
 INHERIT=autotools
 IUSE=fuse lz4 selinux +uuid
-KEYWORDS=amd64 arm arm64 mips ppc ppc64 riscv x86
+KEYWORDS=amd64 arm arm64 mips ppc ppc64 ~riscv x86
 LICENSE=GPL-2+
 RDEPEND=fuse? ( sys-fs/fuse:0 ) lz4? ( >=app-arch/lz4-1.9 ) selinux? ( sys-libs/libselinux ) uuid? ( sys-apps/util-linux )
 SLOT=0
 SRC_URI=https://git.kernel.org/pub/scm/linux/kernel/git/xiang/erofs-utils.git/snapshot/erofs-utils-1.3.tar.gz
 _eclasses_=gnuconfig	a397adda6984a4c423e28ac274c1ba98	toolchain-funcs	5f8f1dc0c94e007fa08af4e98a19d0e5	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	5f49a16f67f81bdf873e3d1f10b10001	autotools	d12ccbad07b44642a75ac97a3334d8e0
-_md5_=499afab228722828c0767e9b0ae916ff
+_md5_=16ba6a6f792ba11eb30f08454b13ba7f
