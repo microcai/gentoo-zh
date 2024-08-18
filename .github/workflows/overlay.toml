@@ -725,8 +725,6 @@ github_account = "st0nie"
 
 #["media-video/tenvideo"]
 
-#["net-analyzer/besttrace-bin"]
-
 ["net-analyzer/nali"]
 source = "github"
 github = "zu1k/nali"
@@ -769,8 +767,6 @@ github_account = "peeweep"
 #["net-dns/mosdns"]
 
 #["net-dns/mosdns-cn-bin"]
-
-#["net-dns/phddns"]
 
 ["net-dns/q"]
 source = "github"
@@ -855,8 +851,6 @@ prefix = "v"
 github_account = "123485k"
 
 #["net-misc/networkmanager-l2tp"]
-
-#["net-misc/nomachine-enterprise-client"]
 
 ["net-misc/pcmanx-gtk2"]
 source = "github"
