@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-19 17:30:21 CST)
+(The last generation time: 2024-08-19 17:31:10 CST)
 
 ### Packages
 
@@ -597,7 +597,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/ssdfs-tools                         | 4.09                                      |        | https://github.com/dubeyko/ssdfs-tools                                                  | userspace tools for SSDFS
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- sys-fs/systemd-zpool-scrub                 | 1.1                                       |        | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
+ sys-fs/systemd-zpool-scrub                 | 9999                                      |        | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/mkinitcpio                      | 38                                        |        | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
