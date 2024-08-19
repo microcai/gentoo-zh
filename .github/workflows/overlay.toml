@@ -473,8 +473,6 @@ use_latest_tag = true
 prefix = "cli.rs-v"
 github_account = "123485k"
 
-#["dev-util/v2ray-geoip-generator"]
-
 #["dev-util/zprint-bin"]
 
 ["dev-vcs/gitoxide"]
