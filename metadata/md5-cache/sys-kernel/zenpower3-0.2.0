@@ -12,5 +12,5 @@ LICENSE=GPL-2
 RDEPEND=sys-apps/kmod[tools] dist-kernel? ( virtual/dist-kernel:= )
 SLOT=0
 SRC_URI=https://git.exozy.me/a/zenpower3/archive/v0.2.0.tar.gz -> zenpower3-0.2.0.tar.gz
-_eclasses_=mount-boot-utils	69218c024651aa10db01df7e8a5b63e0	toolchain-funcs	5f8f1dc0c94e007fa08af4e98a19d0e5	multilib	c19072c3cd7ac5cb21de013f7e9832e0	dist-kernel-utils	55a979ee597f57f3b478d503f9af23e4	edo	367e103a74bf77e6a8da7894d999fa3c	linux-info	ea4122ba1d8791a12b78e53f9510a2e3	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	linux-mod-r1	0bdab9f1f3187180a16e0c6827bc13c2
+_eclasses_=mount-boot-utils	69218c024651aa10db01df7e8a5b63e0	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	dist-kernel-utils	55a979ee597f57f3b478d503f9af23e4	edo	367e103a74bf77e6a8da7894d999fa3c	linux-info	ea4122ba1d8791a12b78e53f9510a2e3	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	linux-mod-r1	0bdab9f1f3187180a16e0c6827bc13c2
 _md5_=3039defa11d43dbd760c62680f7fa310
