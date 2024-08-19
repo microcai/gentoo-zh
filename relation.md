@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-19 17:31:10 CST)
+(The last generation time: 2024-08-19 17:38:32 CST)
 
 ### Packages
 
@@ -521,8 +521,7 @@
  net-proxy/proxy-server                     | 6.0.0                                     |        | https://github.com/jackarain/proxy                                                      | Implementation of all proxy protocols using modern c++
                                             | 7.0.0                                     |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/shadowsocks-rust                 | 1.19.3                                    |        | https://github.com/shadowsocks/shadowsocks-rust                                         | A Rust port of shadowsocks.
-                                            | 1.20.3                                    |        |                                                                                         |
+ net-proxy/shadowsocks-rust                 | 1.20.4                                    |        | https://github.com/shadowsocks/shadowsocks-rust                                         | A Rust port of shadowsocks.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/sing-box                         | 1.9.3                                     |        | https://sing-box.sagernet.org/                                                          | The universal proxy platform.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
