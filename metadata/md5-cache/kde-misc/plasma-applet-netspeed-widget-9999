@@ -11,5 +11,5 @@ LICENSE=GPL-2+
 PROPERTIES=live
 RDEPEND=app-alternatives/awk >=kde-plasma/kdeplasma-addons-6.0:6 >=kde-plasma/libplasma-6.0:6 || ( kde-frameworks/breeze-icons:* kde-frameworks/oxygen-icons:* ) >=kde-frameworks/kf-env-4 dev-qt/qtcore:5
 SLOT=6
-_eclasses_=toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	10a50dfaf728b802fcfd37f8d0da9056	virtualx	817571665ee28575da44ee08135089e5	xdg	4a14c5c24f121e7da66e5aab4a168c6e	ecm	7873e02cdc62f8084d143a93905a7fd4	git-r3	875eb471682d3e1f18da124be97dcc81
+_eclasses_=toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	10a50dfaf728b802fcfd37f8d0da9056	virtualx	0654dc258d045433af18ffe046363961	xdg	4a14c5c24f121e7da66e5aab4a168c6e	ecm	7873e02cdc62f8084d143a93905a7fd4	git-r3	875eb471682d3e1f18da124be97dcc81
 _md5_=d79fffc6a124364eb7633fab63217d56
