@@ -8,8 +8,8 @@ inherit wget
 DESCRIPTION="奔图打印机Linux驱动"
 HOMEPAGE="https://www.pantum.cn/support/download/driver/"
 
-WGET_SRC_URI="https://drivers.pantum.com/userfiles/files/download/%E9%A9%B1%E5%8A%A8%E6%96%87%E4%BB%B6/Pantum%20Linux%20Driver%20V1_1_94-1.zip"
-WGET_REFERER="https://www.pantum.cn"
+WGET_SRC_URI="https://drivers.pantum.cn/userfiles/files/download/%E9%A9%B1%E5%8A%A8%E6%96%87%E4%BB%B6/Pantum%20Linux%20Driver%20V1_1_94-1.zip"
+WGET_ARGS="--referer https://www.pantum.cn"
 
 S="${WORKDIR}/Pantum Linux Driver V1.1.94-1"
 

@@ -21,14 +21,10 @@ _WGET_ECLASS=1
 
 
 wget_src_fetch(){
-	local wget_args=""
-	if [ x${WGET_REFERER} != x"" ];then
-		wget_args+=" --referer ${WGET_REFERER} "
+	if [ x${WGET_ARGS} == x"" ];then
+		die "WGET_ARGS not set"
 	fi
-	if [ x${WGET_USER_AGENT} != x"" ]; then
-		wget_args+="--user-agent ${WGET_USER_AGENT} "
-	fi
-	/usr/bin/wget -t 5 ${wget_args} --passive-ftp -P ${DISTDIR} ${WGET_SRC_URI}
+	/usr/bin/wget -t 5 ${WGET_ARGS} --passive-ftp -P ${DISTDIR} ${WGET_SRC_URI}
 }
 
 fi
