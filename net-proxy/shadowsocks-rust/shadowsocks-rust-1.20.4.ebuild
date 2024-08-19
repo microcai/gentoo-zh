@@ -470,7 +470,7 @@ LICENSE+="
 	ISC MIT-0 MPL-2.0 Unicode-3.0 Unicode-DFS-2016 Unlicense WTFPL-2 ZLIB
 "
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~mips"
+KEYWORDS="amd64 arm64 ~mips"
 IUSE="redir tun"
 
 RESTRICT="mirror strip"
