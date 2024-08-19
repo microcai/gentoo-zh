@@ -51,7 +51,7 @@ CRATES="
 	bumpalo@3.16.0
 	byte_string@1.0.0
 	byteorder@1.5.0
-	bytes@1.6.1
+	bytes@1.7.1
 	c2rust-bitfields@0.18.0
 	c2rust-bitfields-derive@0.18.0
 	camellia@0.1.0
@@ -63,8 +63,8 @@ CRATES="
 	chacha20poly1305@0.10.1
 	chrono@0.4.38
 	cipher@0.4.4
-	clap@4.5.11
-	clap_builder@4.5.11
+	clap@4.5.15
+	clap_builder@4.5.15
 	clap_lex@0.7.2
 	cmake@0.1.50
 	colorchoice@1.0.2
@@ -107,7 +107,7 @@ CRATES="
 	fastrand@2.1.0
 	ff@0.13.0
 	filetime@0.2.23
-	flate2@1.0.30
+	flate2@1.0.31
 	fnv@1.0.7
 	foreign-types@0.3.2
 	foreign-types-shared@0.1.1
@@ -311,7 +311,7 @@ CRATES="
 	serde-value@0.7.0
 	serde_bytes@0.11.15
 	serde_derive@1.0.204
-	serde_json@1.0.120
+	serde_json@1.0.124
 	serde_urlencoded@0.7.1
 	serde_yaml@0.9.34+deprecated
 	sha1@0.10.6
@@ -414,6 +414,7 @@ CRATES="
 	windows-service@0.7.0
 	windows-sys@0.48.0
 	windows-sys@0.52.0
+	windows-sys@0.59.0
 	windows-targets@0.48.5
 	windows-targets@0.52.6
 	windows_aarch64_gnullvm@0.48.5
@@ -469,12 +470,12 @@ LICENSE+="
 	ISC MIT-0 MPL-2.0 Unicode-3.0 Unicode-DFS-2016 Unlicense WTFPL-2 ZLIB
 "
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~mips ~x86"
+KEYWORDS="~amd64 ~arm64 ~mips"
 IUSE="redir tun"
 
 RESTRICT="mirror strip"
 
-BDEPEND=">=virtual/rust-1.70.0"
+BDEPEND=">=virtual/rust-1.71.1"
 
 QA_FLAGS_IGNORED="
 	usr/bin/sslocal
