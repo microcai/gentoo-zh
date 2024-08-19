@@ -202,7 +202,7 @@ media-video/tenvideo 1.0.10: Tencent videos
 net-analyzer/nali 0.8.1 0.8.1_p20240512: An offline tool for querying IP geographic information and CDN provider.
 net-analyzer/realitlscanner 0.1.2: A TLS server scanner for Reality
 net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
-net-dns/ddns-go 6.6.8: Automatically obtain your public IP address and set to your domain name service.
+net-dns/ddns-go 6.6.9: Automatically obtain your public IP address and set to your domain name service.
 net-dns/dnslookup 1.11.1: Simple command line utility to make DNS lookups to the specified server
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
 net-dns/dog 0.1.0-r1 0.1.0_p20211007: A command-line DNS client
@@ -255,7 +255,7 @@ net-proxy/juicity 0.4.2: juicity is a quic-based proxy protocol.
 net-proxy/mihomo 1.18.7: Another Clash Kernel, formerly Clash.Meta
 net-proxy/naiveproxy-bin 127.0.6533.64_p2: A proxy using Chromium's network stack to camouflage traffic
 net-proxy/proxy-server 6.0.0 7.0.0: Implementation of all proxy protocols using modern c++
-net-proxy/shadowsocks-rust 1.19.3 1.20.3: A Rust port of shadowsocks.
+net-proxy/shadowsocks-rust 1.20.4: A Rust port of shadowsocks.
 net-proxy/sing-box 1.9.3: The universal proxy platform.
 net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
 net-proxy/trojan-go-fork 2024.08.11: A fork of trojan-go
@@ -292,7 +292,7 @@ sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/ltfs 9999: LTFS for LTO tapes
 sys-fs/spadfs-utils 1.0.18: Filesystem Tools for SpadFS
 sys-fs/ssdfs-tools 4.09: userspace tools for SSDFS
-sys-fs/systemd-zpool-scrub 1.1: Systemd service for automatic ZFS zpool scrubbing
+sys-fs/systemd-zpool-scrub 9999: Systemd service for automatic ZFS zpool scrubbing
 sys-kernel/liquorix-sources 6.4.12 6.6.8: Liquorix kernel is best one for desktop, multimedia and gaming workloads
 sys-kernel/mkinitcpio 38: Modular initramfs image creation utility
 sys-kernel/xanmod-kernel 6.10.2: XanMod lts kernel built with Gentoo patches and cjktty
