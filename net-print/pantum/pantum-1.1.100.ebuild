@@ -3,12 +3,15 @@
 
 EAPI=8
 
+inherit wget
+
 DESCRIPTION="奔图打印机Linux驱动"
 HOMEPAGE="https://www.pantum.cn/support/download/driver/"
 
-SRC_URI="https://drivers.pantum.cn/userfiles/files/download/drive/1820/Pantum%20Ubuntu%20Driver%20V1_1_100-1.zip"
+WGET_SRC_URI="https://drivers.pantum.cn/userfiles/files/download/drive/1820/Pantum%20Ubuntu%20Driver%20V1_1_100-1.zip"
+WGET_REFERER="https://www.pantum.cn"
 
-S="${WORKDIR}/Pantum Linux Driver V1.1.94-1"
+S="${WORKDIR}/Pantum Ubuntu Driver V1.1.100-1"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
@@ -17,7 +20,6 @@ IUSE="scanner"
 RESTRICT="mirror"
 
 COMMON_DEPEND="
-	media-libs/libjpeg8
 	net-print/cups
 	sys-apps/dbus
 	media-libs/libjpeg-turbo
@@ -38,8 +40,9 @@ RDEPEND="
 	app-text/ghostscript-gpl
 "
 
-src_prepare(){
-	eapply_user
+src_unpack(){
+	wget_src_fetch
+	unpack "Pantum Ubuntu Driver V1_1_100-1.zip"
 	unpack "${S}/Resources/pantum_1.1.100-1_amd64.deb"
 }
 
