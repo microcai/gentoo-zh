@@ -8,10 +8,10 @@ inherit wget
 DESCRIPTION="奔图打印机Linux驱动"
 HOMEPAGE="https://www.pantum.cn/support/download/driver/"
 
-WGET_SRC_URI="https://drivers.pantum.cn/userfiles/files/download/drive/1820/Pantum%20Ubuntu%20Driver%20V1_1_100-1.zip"
+WGET_SRC_URI="https://drivers.pantum.com/userfiles/files/download/%E9%A9%B1%E5%8A%A8%E6%96%87%E4%BB%B6/Pantum%20Linux%20Driver%20V1_1_94-1.zip"
 WGET_REFERER="https://www.pantum.cn"
 
-S="${WORKDIR}/Pantum Ubuntu Driver V1.1.100-1"
+S="${WORKDIR}/Pantum Linux Driver V1.1.94-1"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
@@ -42,12 +42,12 @@ RDEPEND="
 
 src_unpack(){
 	wget_src_fetch
-	unpack "Pantum Ubuntu Driver V1_1_100-1.zip"
-	unpack "${S}/Resources/pantum_1.1.100-1_amd64.deb"
+	unpack "Pantum Linux Driver V1_1_94-1.zip"
+	unpack "${S}/Resources/pantum_1.1.94-1_amd64.deb"
 }
 
 src_install(){
-	tar -xvf "${S}/data.tar.xz" -C "$D"
+	tar -xvf "${WORKDIR}/data.tar.xz" -C "$D"
 	if ! use scanner ; then
 		rm -rf "${D}/usr/lib/x86_64-linux-gnu"
 		rm -rf "${D}/usr/local"
