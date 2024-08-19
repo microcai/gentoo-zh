@@ -1,4 +1,4 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 2021-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -12,7 +12,6 @@ inherit git-r3 systemd
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 x86 arm64 arm mips"
 
 RDEPEND="sys-fs/zfs"
 
