@@ -1,0 +1,13 @@
+BDEPEND=>=dev-lang/go-1.20:= app-arch/unzip
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=The terminal utility for Baidu Network Disk (Golang Version).
+EAPI=8
+HOMEPAGE=https://github.com/qjfoidnh/BaiduPCS-Go
+INHERIT=go-module
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/qjfoidnh/BaiduPCS-Go/archive/v3.9.5.tar.gz -> baidupcs-go-3.9.5.tar.gz https://github.com/liangyongxiang/gentoo-go-deps/releases/download/baidupcs-go-3.9.5/baidupcs-go-3.9.5-deps.tar.xz
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	go-env	90efbc8636d2f02d9654183330e84cf7	go-module	83fd3ed1657cfc316c93d6a37018290d
+_md5_=81a82adebd4f31d1a3ed12a6e88aaa23
