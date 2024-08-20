@@ -216,7 +216,7 @@ net-misc/bbdown-bin 1.6.3: 一款命令行式哔哩哔哩下载器
 net-misc/biliup-app 0.4.1-r2: A Tool for Upload video to bilibili
 net-misc/biliup-app-bin 0.4.1: A Tool for Upload video to bilibili
 net-misc/biliup-rs 0.2.1: Upload video to bilibili.
-net-misc/localsend-bin 1.15.3: An open-source cross-platform alternative to AirDrop
+net-misc/localsend-bin 1.15.4: An open-source cross-platform alternative to AirDrop
 net-misc/pcmanx-gtk2 1.3 9999: PCMan is a gtk+ based free BBS client
 net-misc/prips 1.0.0 1.2.0: print the IP addresses in a range
 net-misc/remmina-plugin-rustdesk 1.0.0.0-r1: A protocol plugin for Remmina to launch a Rustdesk connection.
@@ -249,7 +249,7 @@ net-proxy/v2ray 5.16.1: A platform for building proxies to bypass network restri
 net-proxy/v2ray-bin 4.45.0-r2 5.12.1-r1: A platform for building proxies to bypass network restrictions
 net-proxy/v2rayA 2.2.5.7 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
-net-proxy/yass 1.11.5-r1 1.12.3: lightweight and efficient, socks5/http forward proxy
+net-proxy/yass 1.12.3 1.13.0: lightweight and efficient, socks5/http forward proxy
 net-vpn/sstp-server 0.6.0: A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
 net-vpn/tailscale 1.72.0: Tailscale vpn client
 net-wireless/linux-wifi-hotspot 9999: Linux Wifi Hotspot
