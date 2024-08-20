@@ -80,10 +80,6 @@ BDEPEND="
 	test? ( net-misc/curl )
 "
 
-PATCHES=(
-	"${FILESDIR}"/cet.patch
-)
-
 src_prepare() {
 	cmake_src_prepare
 	# some tests require network access, comment it out if not supported
