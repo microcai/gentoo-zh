@@ -50,8 +50,6 @@ use_latest_release = true
 prefix = "v"
 github_account = "peeweep"
 
-#["app-crypt/etoken-sac"]
-
 #["app-dicts/fcitx-pinyin-moegirl"]
 
 #["app-dicts/fcitx-pinyin-zhwiki"]
@@ -158,9 +156,6 @@ debianpkg = "lunar"
 from_pattern = "-(\\d+)"
 to_pattern = ""
 github_account = "liangyongxiang"
-
-# only live package in gentoo-zh
-#["app-i18n/man-pages-zh_CN"]
 
 # TODO: only old data tag
 #["app-i18n/mozc"]
@@ -330,8 +325,6 @@ github = "tlwg/libdatrie"
 use_latest_release = true
 prefix = "v"
 
-#["dev-libs/libdwarf"]
-
 #["dev-libs/libratbag"]
 
 ["dev-libs/libthai"]
@@ -459,17 +452,6 @@ use_last_modified = true
 from_pattern="-\\d+$"
 to_pattern=""
 
-# need run js
-#["dev-util/bom-utils"]
-
-#["dev-util/elfembed"]
-
-["dev-util/jd-gui"]
-source = "github"
-github = "java-decompiler/jd-gui"
-use_latest_release = true
-prefix = "v"
-
 #["dev-util/jetbrains-toolbox"]
 
 #["dev-util/mamba"]
@@ -490,8 +472,6 @@ github = "tauri-apps/tauri"
 use_latest_tag = true
 prefix = "cli.rs-v"
 github_account = "123485k"
-
-#["dev-util/v2ray-geoip-generator"]
 
 #["dev-util/zprint-bin"]
 
@@ -542,8 +522,6 @@ github = "Fitzgerald-Porthmouth-Koenigsegg/Plangothic"
 use_latest_release = true
 prefix = "V"
 github_account = "st0nie"
-
-#["media-fonts/cwtex-q-fonts"]
 
 ["media-fonts/iansui"]
 source = "github"
@@ -633,17 +611,11 @@ prefix = "v"
 
 #["media-gfx/unityhub"]
 
-#["media-gfx/xrectsel"]
-
 #["media-gfx/zw3d"]
 
 #["media-gfx/zwcad"]
 
-#["media-libs/libspiro"]
-
 #["media-libs/openslide"]
-
-#["media-plugins/gimp-gap"]
 
 ["media-plugins/osdlyrics"]
 source = "github"
@@ -671,8 +643,6 @@ github = "anhoder/go-musicfox"
 use_latest_release = true
 prefix = "v"
 github_account = "st0nie"
-
-#["media-sound/linnya"]
 
 ["media-sound/listen1_desktop-bin"]
 source = "github"
@@ -733,11 +703,6 @@ prefix = "v"
 github_account = "peeweep"
 
 #["net-analyzer/realitlscanner"]
-
-["net-dns/chinadns"]
-source = "github"
-github = "shadowsocks/ChinaDNS"
-use_latest_release = true
 
 ["net-dns/ddns-go"]
 source = "github"
@@ -821,8 +786,6 @@ github_account = "123485k"
 
 #["net-misc/apifox"]
 
-#["net-misc/avsocks"]
-
 #["net-misc/baidunetdisk"]
 
 ["net-misc/baidupcs-go"]
@@ -886,8 +849,6 @@ prefix = "release-"
 github_action = "OriPoin"
 
 #["net-print/epson-inkjet-printer_201207w"]
-
-#["net-print/pantum"]
 
 ["net-proxy/Xray"]
 source = "github"
@@ -1023,14 +984,6 @@ use_latest_release = true
 prefix = "v"
 github_account = "liangyongxiang"
 
-#["sci-libs/libticables2"]
-
-#["sci-libs/libticalcs2"]
-
-#["sci-libs/libticonv"]
-
-#["sci-libs/libtifiles2"]
-
 #["sec-policy/apparmor-profile-deepinwine"]
 
 ["sys-apps/aptly"]
@@ -1059,11 +1012,7 @@ use_latest_release = true
 prefix = "v"
 github_account = "st0nie"
 
-#["sys-fs/coda"]
-
 #["sys-fs/erofs-utils"]
-
-#["sys-fs/f2fs-tools"]
 
 ["sys-fs/jmtpfs"]
 source = "github"
@@ -1151,11 +1100,6 @@ prefix = "v"
 # only live package in gentoo-zh
 #["www-servers/woof"]
 
-["x11-apps/xcur2png"]
-source = "github"
-github = "eworm-de/xcur2png"
-use_latest_release = true
-
 #["x11-libs/glbinding"]
 
 ["x11-misc/9menu"]
@@ -1196,9 +1140,6 @@ prefix = "v"
 
 #["x11-misc/xwaylandvideobridge"]
 
-# only live package in gentoo-zh
-#["x11-plugins/vicious"]
-
 ["x11-terms/wezterm-bin"]
 source = "github"
 github = "wez/wezterm"
@@ -1211,8 +1152,6 @@ github_account = "oatiz"
 
 #["x11-themes/klassy"]
 
-#["x11-themes/lxice"]
-
 #["x11-themes/nordic"]
 
 #["x11-themes/nordzy-cursors"]
@@ -1221,8 +1160,6 @@ github_account = "oatiz"
 
 # TODO: may be here: https://github.com/smplayer-dev/smplayer-themes
 #["x11-themes/smplayer-themes-nonfree"]
-
-#["x11-wm/9wm"]
 
 #["x11-wm/chamferwm"]
 
