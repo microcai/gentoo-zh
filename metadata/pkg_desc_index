@@ -21,7 +21,6 @@ app-backup/snapper-gui 220626: GUI for snapper, a tool for Linux filesystem snap
 app-containers/distrobox-boost 9999: A container runtimer wrapper for OCI (distrobox/toolbox, also podman/docker)
 app-crypt/archlinux-keyring 20231113 20231222 20240208-r1: GnuPG keyring of Archlinux developer keys
 app-crypt/cfssl 1.6.5: Cloudflare's PKI and TLS toolkit
-app-crypt/etoken-sac 10.3: SafeNet (Aladdin) eTokens Middleware (PRO, NG OTP, Flash, Java)
 app-dicts/fcitx-pinyin-moegirl 20230714: Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 app-dicts/fcitx-pinyin-zhwiki 20230728: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 app-editors/appflowy-bin 0.6.7.1: AppFlowy is an open-source alternative to Notion
@@ -59,7 +58,6 @@ app-i18n/ibus-rime 9999: Rime Input Method Engine for IBus Framework
 app-i18n/libime 9999: Fcitx5 Next generation of fcitx
 app-i18n/libime-jyutping 1.0.12: A library make use of libime to implement jyutping input method
 app-i18n/lunar 2.2-r5: Chinese Lunar Calendar conversion utility
-app-i18n/man-pages-zh_CN 9999: A somewhat comprehensive collection of Chinese Linux man pages
 app-i18n/mozc 2.26.4632_p20220213064411_p20220214004422 2.28.5029.102 2.28.5029.102-r1: Mozc - Japanese input method editor
 app-i18n/zh-autoconvert 0.3.16_p7: Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 app-misc/bcompare 4.4.6.27483 4.4.7.28397: Beyond Compare -- Compare, sync, and merge files and folders
@@ -97,7 +95,6 @@ dev-java/google-java-format 1.22.0: Reformats Java source code to comply with Go
 dev-java/oraclejdk-bin 8.391 21.0.1: Oracle's Java SE Development Kit
 dev-lang/quickjs 2024.01.13: Small embeddable Javascript engine
 dev-libs/libdatrie 0.2.13: Double-Array Trie Library
-dev-libs/libdwarf 20140208 20150507: Library to deal with DWARF Debugging Information Format
 dev-libs/libratbag 0.17.9: Library to configure gaming mice
 dev-libs/libthai 0.1.28 0.1.29: A a set of Thai language support routines
 dev-libs/lunar-calendar 3.0.1: a gtk+ calendar widget for chinese lunar library
@@ -126,10 +123,7 @@ dev-python/qasync 0.27.1: Implementation of the asyncio (PEP 3156) event-loop wi
 dev-util/android-studio 2024.1.1.13: Android development environment based on IntelliJ IDEA
 dev-util/arch-install-scripts 28-r1: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
 dev-util/asdf-vm 0.14.0: Manage all your runtime versions with one tool
-dev-util/bom-utils 1.0: Small programs to add or remove the BOM mark in UTF8 files
 dev-util/cargo-about 0.6.2: Cargo plugin to generate list of all licenses for a crate
-dev-util/elfembed 0.3-r1: Resource Compiler for ELF binaries
-dev-util/jd-gui 1.6.6: A standalone graphical utility that displays Java source codes of .class file
 dev-util/jetbrains-toolbox 1.28.1.15219 2.0.3.17006: Manage all your JetBrains Projects and Tools
 dev-util/mamba 1.5.8: The Fast Cross-Platform Package Manager
 dev-util/mongodb-compass-bin 1.43.5: The GUI for MongoDB
@@ -138,7 +132,6 @@ dev-util/patchelf-liblol 0.1.4: patchelf patched for building libLoL only
 dev-util/redpanda-cpp 2.26: A lightweight yet powerful C/C++/GNU Assembly IDE.
 dev-util/tailspin 3.0.2: A log file highlighter
 dev-util/tauri-cli 1.5.9 2.0.0_alpha17: Command line interface for building Tauri apps
-dev-util/v2ray-geoip-generator 9999: GeoIP generator for V2Ray.
 dev-util/zprint-bin 1.2.7 1.2.8: Clojure and Clojurescript source code formatter
 dev-vcs/gitoxide 0.37.0: A command-line application for interacting with git repositories
 dev-vcs/sourcegit-bin 8.26: Opensource Git GUI client.
@@ -152,7 +145,6 @@ gui-libs/libdecor 0.1.1: A client-side decorations library for Wayland clients
 gui-wm/swayfx 0.3.2: SwayFX: Sway, but with eye candy!
 kde-misc/plasma-applet-netspeed-widget 2.0 3.1 9999: Plasma 5 widget that displays the currently used network bandwidth.
 media-fonts/Plangothic 1.8.5764: 遍黑体项目（Plangothic Project）
-media-fonts/cwtex-q-fonts 0.2: Those five TrueType fonts are transformed from cwTeX Traditional Chinese Type 1 fonts(Version 1.1).
 media-fonts/iansui 1.000: An open-source Chinese font derived from Klee One (Fontworks).
 media-fonts/jf-openhuninn 2.0: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 media-fonts/lxgw-neo-xihei 1.200: A Chinese sans-serif font derived from IPAex Gothic.
@@ -172,18 +164,14 @@ media-gfx/scangearmp 2.4.10: Driver and utility package for Canon scanners
 media-gfx/tgs2png 9999: Convert Telegram's animated stickers in TGS format into series of PNG images.
 media-gfx/tifig-bin 0.2.2: Converts iOS 11 HEIC images to practical formats - Static binary
 media-gfx/unityhub 3.4.1 3.4.2: The official unity tool for manager Unity Engines and projects
-media-gfx/xrectsel 0.3.1: print the geometry of a rectangular screen region
 media-gfx/zw3d 2022.0.3.1-r3 2023.0.3.1: CAD/CAM software for 3D design and processing
 media-gfx/zwcad 2023.23.0.3.4-r2: CAD software for 2D drawing, reviewing and printing work
-media-libs/libspiro 0.3.20150131: Spiro is the creation of Raph Levien. It simplifies the drawing of beautiful curves.
 media-libs/openslide 20230904: C library with simple interface to read virtual slides
-media-plugins/gimp-gap 2.8.0: Gimp Animation Package
 media-plugins/osdlyrics 0.5.11 0.5.14 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-plugins/waylyrics 0.3.13: Simple On Screen lyrics Display for linux/unix
 media-sound/barva 9999: a modular audio visualizer
 media-sound/feeluown 4.1.5: A user-friendly and hackable music player
 media-sound/go-musicfox 4.5.3: Command-line Netease Cloud Music written in Go
-media-sound/linnya 2.2.0: A free music player
 media-sound/listen1_desktop-bin 2.32.0: one for all free music in China
 media-sound/lx-music-desktop-bin 2.2.2: 一个基于 electron 的音乐软件
 media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb package
@@ -201,7 +189,6 @@ media-video/mpv-handler 0.3.12: Play website videos and songs with mpv & yt-dlp
 media-video/tenvideo 1.0.10: Tencent videos
 net-analyzer/nali 0.8.1 0.8.1_p20240512: An offline tool for querying IP geographic information and CDN provider.
 net-analyzer/realitlscanner 0.1.2: A TLS server scanner for Reality
-net-dns/chinadns 1.3.2: Protect yourself against DNS poisoning in China
 net-dns/ddns-go 6.6.9: Automatically obtain your public IP address and set to your domain name service.
 net-dns/dnslookup 1.11.1: Simple command line utility to make DNS lookups to the specified server
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
@@ -223,7 +210,6 @@ net-misc/alist 3.32.0 3.36.0: A file list/WebDAV program that supports multiple 
 net-misc/aliyundrive-webdav 2.3.3: WebDAV server for AliyunDrive
 net-misc/aliyunpan 0.2.8: aliyunpan cli client, support Webdav service, JavaScript plugin
 net-misc/apifox 2.5.1: API 文档、API 调试、API Mock、API 自动化测试
-net-misc/avsocks 9999: avsocks 科学操长城软件
 net-misc/baidunetdisk 4.3.0 4.17.7: Baidu Net Disk is a cloud storage client (Linux Version)
 net-misc/baidupcs-go 3.9.5 3.9.5-r1: The terminal utility for Baidu Network Disk (Golang Version).
 net-misc/bbdown-bin 1.6.3: 一款命令行式哔哩哔哩下载器
@@ -273,10 +259,6 @@ sci-electronics/jlc-assistant-bin 5.0.69: JLC Order Assistant (binary package)
 sci-electronics/lceda 6.5.37 6.5.44: LCEDA (binary package)
 sci-electronics/lceda-pro 2.2.25.6: LCEDA Pro (binary package)
 sci-electronics/openfpgaloader 0.12.1: Universal utility for programming FPGAs
-sci-libs/libticables2 9999: Library to handle different link cables for TI calculators
-sci-libs/libticalcs2 9999: Library for communication with TI calculators
-sci-libs/libticonv 9999: Charset conversion library for TI calculators
-sci-libs/libtifiles2 9999: Library for TI calculator files
 sec-policy/apparmor-profile-deepinwine 1.0.0: A collection of AppArmor profiles for Deepinwine6
 sys-apps/aptly 1.5.0 9999: A swiss army knife for Debian repository management
 sys-apps/mdp 9999: A command-line based markdown presentation tool
@@ -285,9 +267,7 @@ sys-apps/pacman-mirrorlist 20210509: Repository list for Archlinux's binary pack
 sys-apps/pnpm 8.15.4: Fast, disk space efficient package manager
 sys-apps/wait-online 9999: Wait until we're connected to the Internet
 sys-boot/ventoy-bin 1.0.99: A new multiboot USB solution
-sys-fs/coda 7.0.5: Coda is an advanced network file system, similar to NFS
 sys-fs/erofs-utils 1.3: Userspace tools for EROFS images
-sys-fs/f2fs-tools 9999: Tools for Flash-Friendly File System (F2FS)
 sys-fs/jmtpfs 0.5: A FUSE and libmtp based filesystem for accessing MTP devices.
 sys-fs/ltfs 9999: LTFS for LTO tapes
 sys-fs/spadfs-utils 1.0.18: Filesystem Tools for SpadFS
@@ -311,7 +291,6 @@ www-apps/chatgpt-desktop 1.1.0: ChatGPT Desktop Application
 www-client/brave-bin 1.68.141: Web browser that blocks ads and trackers by default
 www-servers/darkhttpd 1.16: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
-x11-apps/xcur2png 0.7.1: Convert X cursors to PNG images
 x11-libs/glbinding 3.3.0: A C++ binding for the OpenGL API
 x11-misc/9menu 1.10: Create X menus from the shell
 x11-misc/extramaus 3: workaround to always show mouse cursor under x11
@@ -322,16 +301,13 @@ x11-misc/i3lock-fancy 9999: A fancy i3lock
 x11-misc/ly 0.6.0-r1 1.0.2 9999: Ly - a TUI display manager
 x11-misc/picom-jonaburg 8 9999: A lightweight compositor for X11 (previously a compton fork)
 x11-misc/snapd-xdg-open 20170401: Software for opening links from snaps in desktop
-x11-plugins/vicious 9999: Modular widget library for x11-wm/awesome
 x11-terms/wezterm-bin 20240203: A terminal emulator and multiplexer implemented in Rust
 x11-themes/bibata-cursor 2.0.6: Open source, compact, and material designed cursor set
 x11-themes/fcitx-breeze 2.0.0-r2: Fcitx5 theme to match KDE's Breeze style.
 x11-themes/klassy 4.0.5.25.80-r1: Highly customizable theme plugin for KDE Plasma desktop
 x11-themes/kora-icon-theme 1.6.1: An SVG icon theme with lots of new icons for GNU/Linux operating systems
-x11-themes/lxice 0.1.0: LXDE theme for IceWM
 x11-themes/nordic 2.1.0 2.2.0-r1: Dark Gtk3.20+ theme created using the awesome Nord color pallete
 x11-themes/nordzy-cursors 0.5.0 0.6.0: Cursor theme using the Nord color palette and based on Vimix and cz-Viator
 x11-themes/nordzy-icon 1.5 1.6: A free and open source icon theme for Linux desktops using the Nord color palette
-x11-wm/9wm 1.1: A window manager emulation of the Plan 9 window manager 8-1/2.
 x11-wm/chamferwm 9999: A tiling X11 window manager with Vulkan compositor.
 x11-wm/hypr 1.1.3 9999: A dynamic Linux tiling window manager for Xorg
