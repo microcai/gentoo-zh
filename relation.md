@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-20 10:34:33 CST)
+(The last generation time: 2024-08-20 17:07:03 CST)
 
 ### Packages
 
@@ -427,7 +427,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/biliup-rs                         | 0.2.1                                     |        | https://github.com/biliup/biliup-rs                                                     | Upload video to bilibili.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/localsend-bin                     | 1.15.3                                    |        | https://localsend.org                                                                   | An open-source cross-platform alternative to AirDrop
+ net-misc/localsend-bin                     | 1.15.4                                    |        | https://localsend.org                                                                   | An open-source cross-platform alternative to AirDrop
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/pcmanx-gtk2                       | 1.3                                       |        | https://github.com/pcman-bbs/pcmanx                                                     | PCMan is a gtk+ based free BBS client
                                             | 9999                                      |        |                                                                                         |
