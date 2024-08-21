@@ -19,7 +19,10 @@ LICENSE="
 SLOT="5"
 KEYWORDS="~amd64 ~mips ~x86"
 
-RDEPEND="app-i18n/fcitx:5"
+RDEPEND="
+	app-i18n/fcitx:5
+	!app-dicts/fcitx-pinyin-zhwiki
+"
 
 src_install() {
 	DICT_PATH="/usr/share/fcitx5/pinyin/dictionaries"
