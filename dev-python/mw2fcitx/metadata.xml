@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>blackteahamburger</name>
+		<email>blackteahamburger@outlook.com</email>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">outloudvi/mw2fcitx</remote-id>
+		<remote-id type="pypi">mw2fcitx</remote-id>
+	</upstream>
+</pkgmetadata>
