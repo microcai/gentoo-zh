@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-21 10:24:10 CST)
+(The last generation time: 2024-08-21 17:18:48 CST)
 
 ### Packages
 
@@ -475,7 +475,7 @@
                                             | 1.6.6                                     |        |                                                                                         |
                                             | 1.7.5                                     |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/dae                              | 0.7.0                                     |        | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
+ net-proxy/dae                              | 0.7.1                                     |        | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
                                             | 0.8.0_rc1                                 |        |                                                                                         |
                                             | 9999                                      |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
@@ -488,7 +488,7 @@
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/juicity                          | 0.4.2                                     |        | https://github.com/juicity/juicity                                                      | juicity is a quic-based proxy protocol.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/naiveproxy-bin                   | 127.0.6533.64_p2                          |        | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
+ net-proxy/naiveproxy-bin                   | 128.0.6613.40_p1                          |        | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/proxy-server                     | 6.0.0                                     |        | https://github.com/jackarain/proxy                                                      | Implementation of all proxy protocols using modern c++
                                             | 7.0.0                                     |        |                                                                                         |
@@ -577,11 +577,11 @@
    sys-kernel/xanmod-sources                | 6.10.2                                    | RD     | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-domain-list-community        | 0                                         |        |                                                                                         | Virtual for v2ray-domain-list-community
-   dev-libs/v2ray-domain-list-community     | 20240810010807                            | RD     | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+   dev-libs/v2ray-domain-list-community     | 20240817092737                            | RD     | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
    dev-libs/v2ray-domain-list-community-bin | 20240808133326                            | RD     | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-geoip                        | 0                                         |        |                                                                                         | Virtual for v2ray-geoip
-   dev-libs/v2ray-geoip                     | 202408101831                              | RD     | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
+   dev-libs/v2ray-geoip                     | 202408150441                              | RD     | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                 | 202408080046                              | RD     | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/chatgpt-desktop                   | 1.1.0                                     |        | https://nofwl.com                                                                       | ChatGPT Desktop Application
