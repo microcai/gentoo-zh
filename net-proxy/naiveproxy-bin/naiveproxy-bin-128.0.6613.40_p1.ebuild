@@ -3,7 +3,7 @@
 
 EAPI=8
 
-MY_PV=${PV/_p/-}
+MY_PV="${PV/_p/-}"
 
 DESCRIPTION="A proxy using Chromium's network stack to camouflage traffic"
 HOMEPAGE="https://github.com/klzgrad/naiveproxy"
@@ -31,7 +31,7 @@ case ${ARCH} in
 	*)	MY_ARCH=${ARCH};;
 esac
 
-S=${WORKDIR}/naiveproxy-v${MY_PV}-linux-${MY_ARCH}
+S="${WORKDIR}/naiveproxy-v${MY_PV}-linux-${MY_ARCH}"
 
 LICENSE="BSD"
 SLOT="0"
