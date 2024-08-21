@@ -25,19 +25,16 @@ BDEPEND="
 "
 
 src_unpack() {
-	local distdir=${PORTAGE_ACTUAL_DISTDIR:-${DISTDIR}}
-	if ! [ -f ${distdir}/GeoLite2-Country-CSV.zip ]; then
+	local distdir="${PORTAGE_ACTUAL_DISTDIR:-${DISTDIR}}"
+	if ! [ -f "${distdir}/GeoLite2-Country-CSV.zip" ]; then
 		eerror "Please first download GeoLite2-Country-CSV.zip from MaxMind"
 		eerror "https://dev.maxmind.com/geoip/geoip2/geolite2/"
 		die "GeoLite2-Country-CSV.zip not found"
 	fi
-	unpack ${distdir}/GeoLite2-Country-CSV.zip
+	unpack "${distdir}/GeoLite2-Country-CSV.zip"
 	go-module_src_unpack
-}
 
-src_prepare() {
-	mv "${WORKDIR}"/GeoLite2* geolite2 || die
-	default
+	mv "${WORKDIR}"/GeoLite2* "${S}/geolite2" || die
 }
 
 src_compile() {
@@ -46,5 +43,5 @@ src_compile() {
 
 src_install() {
 	insinto /usr/share/geoip/
-	newins output/dat/geoip.dat v2fly.dat
+	newins output/geoip.dat v2fly.dat
 }
