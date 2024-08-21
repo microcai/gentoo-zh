@@ -1,5 +1,5 @@
 BDEPEND=>=dev-lang/go-1.21 app-arch/unzip >=dev-lang/go-1.20:= app-arch/unzip
-DEFINED_PHASES=compile install prepare unpack
+DEFINED_PHASES=compile install unpack
 DESCRIPTION=GeoIP for V2Ray.
 EAPI=8
 HOMEPAGE=https://github.com/v2fly/geoip
@@ -9,6 +9,6 @@ LICENSE=CC-BY-SA-4.0 GeoLite2
 RDEPEND=!dev-libs/v2ray-geoip-bin
 RESTRICT=strip
 SLOT=0
-SRC_URI=https://github.com/v2fly/geoip/archive/refs/tags/202408101831.tar.gz -> v2ray-geoip-202408101831.tar.gz https://github.com/blackteahamburger/gentoo-deps/releases/download/v2ray-geoip-202408101831/v2ray-geoip-202408101831-vendor.tar.xz
+SRC_URI=https://github.com/v2fly/geoip/archive/refs/tags/202408150441.tar.gz -> v2ray-geoip-202408150441.tar.gz https://github.com/blackteahamburger/gentoo-deps/releases/download/v2ray-geoip-202408150441/v2ray-geoip-202408150441-vendor.tar.xz
 _eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	go-env	90efbc8636d2f02d9654183330e84cf7	go-module	83fd3ed1657cfc316c93d6a37018290d
-_md5_=f422c234075539436d8de2badd69590e
+_md5_=aee2f5528108a5a3e432905d22a03c7d
