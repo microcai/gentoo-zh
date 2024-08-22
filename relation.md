@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-22 14:03:37 CST)
+(The last generation time: 2024-08-22 15:33:55 CST)
 
 ### Packages
 
@@ -36,7 +36,7 @@
  app-editors/typora                         | 0.11.18                                   |        | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
                                             | 1.9.3                                     |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/zed                            | 0.148.0                                   |        | https://zed.dev/                                                                        | high-performance, multiplayer code editor
+ app-editors/zed                            | 0.149.3                                   |        | https://zed.dev/                                                                        | high-performance, multiplayer code editor
    dev-util/cargo-about                     | 0.6.2                                     | BD     | https://github.com/EmbarkStudios/cargo-about                                            | Cargo plugin to generate list of all licenses for a crate
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/la-ow-syscall                | 0.1.0-r1                                  |        | https://github.com/AOSC-Dev/la_ow_syscall                                               | Linux kernel module for compatibility with LoongArch's old-world ABI
