@@ -3,30 +3,45 @@
 
 EAPI=8
 
+MY_PN="fcitx5-pinyin-zhwiki"
 CONVERTERV=$(ver_cut 1-3)
 WEBSLANGV=$(ver_cut 4)
 
 DESCRIPTION="Fcitx 5 Pinyin Dictionary from zh.wikipedia.org"
 HOMEPAGE="https://github.com/felixonmars/fcitx5-pinyin-zhwiki"
-SRC_URI="https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/${CONVERTERV}/zhwiki-${WEBSLANGV}.dict -> ${P}.dict"
+SRC_URI="
+	fcitx? ( https://github.com/felixonmars/${MY_PN}/releases/download/${CONVERTERV}/zhwiki-${WEBSLANGV}.dict
+		-> ${P}.dict )
+	rime? ( https://github.com/felixonmars/${MY_PN}/releases/download/${CONVERTERV}/zhwiki-${WEBSLANGV}.dict.yaml
+		-> ${P}.dict.yaml )
+"
 
 S="${DISTDIR}"
 
-LICENSE="
-	Unlicense
-	|| ( CC-BY-SA-4.0 FDL-1.3 )
-"
+LICENSE="Unlicense || ( CC-BY-SA-4.0 FDL-1.3 )"
 SLOT="5"
 KEYWORDS="~amd64 ~mips ~x86"
+IUSE="+fcitx rime"
+REQUIRED_USE="|| ( fcitx rime )"
 
 RDEPEND="
-	app-i18n/fcitx:5
+	fcitx? ( app-i18n/fcitx:5 )
+	rime? ( || ( app-i18n/ibus-rime app-i18n/fcitx-rime ) )
 	!app-dicts/fcitx-pinyin-zhwiki
 "
 
 src_install() {
-	DICT_PATH="/usr/share/fcitx5/pinyin/dictionaries"
-	insinto "${DICT_PATH}"
-	newins "${P}.dict" zhwiki.dict
-	fperms 0644 "${DICT_PATH}/zhwiki.dict"
+	if use fcitx; then
+		DICT_PATH="/usr/share/fcitx5/pinyin/dictionaries"
+		insinto "${DICT_PATH}"
+		newins "${P}.dict" zhwiki.dict
+		fperms 0644 "${DICT_PATH}/zhwiki.dict"
+	fi
+
+	if use rime; then
+		DICT_PATH="/usr/share/rime-data"
+		insinto "${DICT_PATH}"
+		newins "${P}.dict.yaml" zhwiki.dict.yaml
+		fperms 0644 "${DICT_PATH}/zhwiki.dict.yaml"
+	fi
 }

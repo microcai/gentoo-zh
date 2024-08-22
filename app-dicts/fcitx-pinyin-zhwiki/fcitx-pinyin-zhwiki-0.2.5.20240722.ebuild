@@ -22,23 +22,23 @@ SRC_URI="
 
 S="${WORKDIR}/${MY_PN}-${CONVERTERV}"
 
-LICENSE="
-	Unlicense
-	|| ( CC-BY-SA-4.0 FDL-1.3 )
-"
+LICENSE="Unlicense || ( CC-BY-SA-4.0 FDL-1.3 )"
 SLOT="5"
 KEYWORDS="~amd64"
+IUSE="+fcitx rime"
+REQUIRED_USE="|| ( fcitx rime )"
 
 RDEPEND="
-	app-i18n/fcitx:5
+	fcitx? ( app-i18n/fcitx:5 )
+	rime? ( || ( app-i18n/ibus-rime app-i18n/fcitx-rime ) )
 	!app-dicts/fcitx-pinyin-zhwiki-bin
 "
 BDEPEND="
 	${PYTHON_DEPS}
-	app-i18n/libime:5
+	fcitx? ( app-i18n/libime:5 )
 	$(python_gen_any_dep '
 		dev-python/pypinyin[${PYTHON_USEDEP}]
-		app-i18n/opencc[python,${PYTHON_SINGLE_USEDEP}]
+		app-i18n/opencc[python(-),${PYTHON_SINGLE_USEDEP}]
 	')
 "
 
@@ -51,7 +51,7 @@ _emake() {
 
 python_check_deps() {
 	python_has_version "dev-python/pypinyin[${PYTHON_USEDEP}]" &&
-	python_has_version "app-i18n/opencc[python,${PYTHON_SINGLE_USEDEP}]"
+	python_has_version "app-i18n/opencc[python(-),${PYTHON_SINGLE_USEDEP}]"
 }
 
 src_unpack() {
@@ -67,9 +67,11 @@ src_prepare() {
 }
 
 src_compile() {
-	_emake
+	use fcitx && _emake zhwiki.dict
+	use rime && _emake zhwiki.dict.yaml
 }
 
 src_install() {
-	_emake DESTDIR="${D}" install
+	use fcitx && _emake DESTDIR="${ED}" install
+	use rime && _emake DESTDIR="${ED}" install_rime_dict
 }
