@@ -15,13 +15,17 @@ S="${WORKDIR}/mw2fcitx-${PV}"
 LICENSE="Unlicense CC-BY-NC-SA-3.0"
 SLOT="5"
 KEYWORDS="~amd64"
+IUSE="+fcitx rime"
+REQUIRED_USE="|| ( fcitx rime )"
 
 RDEPEND="
-	app-i18n/fcitx:5
+	fcitx? ( app-i18n/fcitx:5 )
+	rime? ( || ( app-i18n/ibus-rime app-i18n/fcitx-rime ) )
 	!app-dicts/fcitx-pinyin-moegirl-bin
 "
 BDEPEND="
 	${PYTHON_DEPS}
+	fcitx? ( app-i18n/libime:5 )
 	$(python_gen_any_dep '
 		dev-python/mw2fcitx[${PYTHON_SINGLE_USEDEP}]
 	')
@@ -33,17 +37,28 @@ python_check_deps() {
 
 src_prepare() {
 	# remove unneeded outputs
-	sed -i -e '10d;20,24d' utils/moegirl_dict.py
+	sed -i -e '10d' utils/moegirl_dict.py || die
+	use !fcitx && (sed -i -e '23,27d' utils/moegirl_dict.py || die)
+	use !rime && (sed -i -e '19,23d' utils/moegirl_dict.py || die)
 	default
 }
 
 src_compile() {
-	mw2fcitx -c utils/moegirl_dict.py
+	mw2fcitx -c utils/moegirl_dict.py || die
 }
 
 src_install() {
-	DICT_PATH="/usr/share/fcitx5/pinyin/dictionaries"
-	insinto "${DICT_PATH}"
-	doins moegirl.dict
-	fperms 0644 "${DICT_PATH}/moegirl.dict"
+	if use fcitx; then
+		DICT_PATH="/usr/share/fcitx5/pinyin/dictionaries"
+		insinto "${DICT_PATH}"
+		doins moegirl.dict
+		fperms 0644 "${DICT_PATH}/moegirl.dict"
+	fi
+
+	if use rime; then
+		DICT_PATH="/usr/share/rime-data"
+		insinto "${DICT_PATH}"
+		doins moegirl.dict.yaml
+		fperms 0644 "${DICT_PATH}/moegirl.dict.yaml"
+	fi
 }

@@ -5,6 +5,10 @@
 		<name>blackteahamburger</name>
 		<email>blackteahamburger@outlook.com</email>
 	</maintainer>
+	<use>
+		<flag name="fcitx">Install Fcitx 5 dictionary</flag>
+		<flag name="rime">Install Rime dictionary</flag>
+	</use>
 	<upstream>
 		<remote-id type="github">outloudvi/mw2fcitx</remote-id>
 	</upstream>
