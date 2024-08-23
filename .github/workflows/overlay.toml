@@ -815,6 +815,13 @@ github_account = "123485k"
 
 #["net-misc/networkmanager-l2tp"]
 
+["net-misc/ntpd-rs"]
+source = "github"
+github = "pendulum-project/ntpd-rs"
+use_latest_tag = true
+prefix = "v"
+github_account = "peeweep"
+
 ["net-misc/pcmanx-gtk2"]
 source = "github"
 github = "pcman-bbs/pcmanx"
@@ -1164,4 +1171,3 @@ github_account = "oatiz"
 #["x11-wm/chamferwm"]
 
 #["x11-wm/hypr"]
-
