@@ -101,9 +101,9 @@ dev-libs/lunar-calendar 3.0.1: a gtk+ calendar widget for chinese lunar library
 dev-libs/lunar-date 3.0.1: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-libs/v2ray-domain-list-community 20240817092737: Community managed domain list for V2Ray.
-dev-libs/v2ray-domain-list-community-bin 20240808133326: Community managed domain list for V2Ray.
-dev-libs/v2ray-geoip 202408150441: GeoIP for V2Ray.
-dev-libs/v2ray-geoip-bin 202408080046: GeoIP for V2Ray.
+dev-libs/v2ray-domain-list-community-bin 20240823035651: Community managed domain list for V2Ray.
+dev-libs/v2ray-geoip 202408220047: GeoIP for V2Ray.
+dev-libs/v2ray-geoip-bin 202408220047: GeoIP for V2Ray.
 dev-libs/v2ray-rules-dat-bin 202408072210: Enhanced edition of V2Ray rules dat files.
 dev-python/archspec 0.2.4: A library for detecting, labeling, and reasoning about microarchitectures
 dev-python/conda 24.5.0: OS-agnostic, system-level binary package manager and ecosystem
@@ -288,7 +288,7 @@ virtual/loong-ow-compat 0: Virtual for LoongArch old-world compatibility
 virtual/v2ray-domain-list-community 0: Virtual for v2ray-domain-list-community
 virtual/v2ray-geoip 0: Virtual for v2ray-geoip
 www-apps/chatgpt-desktop 1.1.0: ChatGPT Desktop Application
-www-client/brave-bin 1.68.141: Web browser that blocks ads and trackers by default
+www-client/brave-bin 1.69.153: Web browser that blocks ads and trackers by default
 www-servers/darkhttpd 1.16: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-libs/glbinding 3.3.0: A C++ binding for the OpenGL API
