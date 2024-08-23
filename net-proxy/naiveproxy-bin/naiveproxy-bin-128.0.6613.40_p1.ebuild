@@ -47,7 +47,8 @@ QA_PREBUILT="
 
 src_install() {
 	insinto /opt/naiveproxy
-	doins config.json naive USAGE.txt
+	doins config.json naive
+	dodoc USAGE.txt
 	fperms +x /opt/naiveproxy/naive
 	dosym -r /opt/naiveproxy/naive /usr/bin/naive
 }
