@@ -37,6 +37,12 @@ src_unpack() {
 	mv "${WORKDIR}"/GeoLite2* "${S}/geolite2" || die
 }
 
+src_prepare() {
+	# remove unneeded outputs
+	sed -i -e '29,57d' config.json
+	default
+}
+
 src_compile() {
 	ego run ./
 }
