@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-23 16:57:22 CST)
+(The last generation time: 2024-08-23 16:57:47 CST)
 
 ### Packages
 
@@ -581,7 +581,7 @@
    dev-libs/v2ray-domain-list-community-bin | 20240823035651                            | RD     | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-geoip                        | 0                                         |        |                                                                                         | Virtual for v2ray-geoip
-   dev-libs/v2ray-geoip                     | 202408150441                              | RD     | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
+   dev-libs/v2ray-geoip                     | 202408220047                              | RD     | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                 | 202408220047                              | RD     | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/chatgpt-desktop                   | 1.1.0                                     |        | https://nofwl.com                                                                       | ChatGPT Desktop Application
