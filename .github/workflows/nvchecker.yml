@@ -39,6 +39,7 @@ jobs:
         echo "$pkgs"
         pkgs="{ ${pkgs::-1} }"
         echo "$pkgs" > .github/workflows/old_ver.json
+        sed -r -i 's/_p[0-9]+.*//g' .github/workflows/old_ver.json
         cat .github/workflows/old_ver.json
         echo "::endgroup::"
 
@@ -51,7 +52,7 @@ jobs:
         nvchecker --file overlay.toml --keyfile keyfile.toml
 
         sed -r -i \
-          -e 's#(\.|-|_)?a([[:digit:]]+)(",?)$#_alpah\2\3#' \
+          -e 's#(\.|-|_)?a([[:digit:]]+)(",?)$#_alpha\2\3#' \
           -e 's#(\.|-|_)?p([[:digit:]]+)(",?)$#_p\2\3#' \
           -e 's#(\.|-|_)?rc([[:digit:]]+)(",?)$#_rc\2\3#' \
           new_ver.json
