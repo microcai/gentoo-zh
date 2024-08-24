@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-24 18:09:06 CST)
+(The last generation time: 2024-08-24 18:42:01 CST)
 
 ### Packages
 
@@ -136,6 +136,9 @@
  app-text/cajviewer                         | 1.3.22                                    |        | http://cajviewer.cnki.net                                                               | Document Viewer for CAJ, KDH, NH, TEB and PDF format
                                             | 9.0                                       |        |                                                                                         |
    net-dns/libidn11                         | 1.33                                      |  D, RD | https://www.gnu.org/software/libidn/                                                    | Internationalized Domain Names (IDN) implementation
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ app-text/goldendict                        | 24.05.05                                  |        | https://xiaoyifang.github.io/goldendict-ng/                                             | Feature-rich dictionary lookup program (qtwebengine fork)
+   app-arch/libzim                          | 9.2.1                                     |  D, RD | https://wiki.openzim.org/wiki/OpenZIM                                                   | ZIM file format: an offline storage solution for content coming from the Web
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  app-text/groff-utf8                        | 0-r1                                      |        | http://www.haible.de/bruno/packages-groff-utf8.html                                     | GNU groff wrapper allowing UTF-8 input
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
