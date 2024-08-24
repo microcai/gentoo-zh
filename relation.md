@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-24 12:34:43 CST)
+(The last generation time: 2024-08-24 12:35:50 CST)
 
 ### Packages
 
@@ -431,6 +431,12 @@
                                             | 1.1_p20240718                             |        |                                                                                         |
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/localsend-bin                     | 1.15.4                                    |        | https://localsend.org                                                                   | An open-source cross-platform alternative to AirDrop
+--------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
+ net-misc/ntpd-rs                           | 1.2.3                                     |        | https://github.com/pendulum-project/ntpd-rs                                             | Full-featured implementation of NTP with NTS support
+   acct-group/ntpd-rs                       | 0                                         | RD     |                                                                                         | Full-featured implementation of NTP with NTS support
+   acct-group/ntpd-rs-observe               | 0                                         | RD     |                                                                                         | Full-featured implementation of NTP with NTS support
+   acct-user/ntpd-rs                        | 0                                         | RD     |                                                                                         | user for ntpd-rs daemon
+   acct-user/ntpd-rs-observe                | 0                                         | RD     |                                                                                         | user for ntpd-rs-observe daemon
 --------------------------------------------|-------------------------------------------|--------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/pcmanx-gtk2                       | 1.3                                       |        | https://github.com/pcman-bbs/pcmanx                                                     | PCMan is a gtk+ based free BBS client
                                             | 9999                                      |        |                                                                                         |
