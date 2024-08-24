@@ -1,0 +1,15 @@
+BDEPEND=dev-qt/qttools:6[assistant,linguist] virtual/pkgconfig
+DEFINED_PHASES=configure install postinst postrm prepare
+DEPEND=app-arch/bzip2 app-arch/xz-utils virtual/libiconv >=app-text/hunspell-1.2:= dev-libs/eb dev-libs/lzo dev-qt/qtbase:6[X,concurrent,gui,network,sql,widgets,xml] dev-qt/qtmultimedia:6 dev-qt/qtspeech:6 dev-qt/qtsvg:6 dev-qt/qtwebengine:6[widgets] dev-qt/qtdeclarative:6 dev-qt/qt5compat:6 media-libs/libvorbis sys-libs/zlib x11-libs/libX11 x11-libs/libXtst virtual/opengl ffmpeg? ( media-libs/libao media-video/ffmpeg:0= ) opencc? ( app-i18n/opencc ) multimedia? ( dev-qt/qtmultimedia[gstreamer] ) xapian? ( dev-libs/xapian ) zim? ( app-arch/libzim )
+DESCRIPTION=Feature-rich dictionary lookup program (qtwebengine fork)
+EAPI=8
+HOMEPAGE=https://xiaoyifang.github.io/goldendict-ng/
+INHERIT=desktop qmake-utils flag-o-matic xdg-utils plocale
+IUSE=debug ffmpeg opencc multimedia wayland xapian zim
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=app-arch/bzip2 app-arch/xz-utils virtual/libiconv >=app-text/hunspell-1.2:= dev-libs/eb dev-libs/lzo dev-qt/qtbase:6[X,concurrent,gui,network,sql,widgets,xml] dev-qt/qtmultimedia:6 dev-qt/qtspeech:6 dev-qt/qtsvg:6 dev-qt/qtwebengine:6[widgets] dev-qt/qtdeclarative:6 dev-qt/qt5compat:6 media-libs/libvorbis sys-libs/zlib x11-libs/libX11 x11-libs/libXtst virtual/opengl ffmpeg? ( media-libs/libao media-video/ffmpeg:0= ) opencc? ( app-i18n/opencc ) multimedia? ( dev-qt/qtmultimedia[gstreamer] ) xapian? ( dev-libs/xapian ) zim? ( app-arch/libzim )
+SLOT=0
+SRC_URI=https://github.com/xiaoyifang/goldendict-ng/archive/v24.05.05-LiXia.ecd1138c.tar.gz
+_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	qmake-utils	a8dd17b1d94586164f5e3fc12b1c6b81	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	xdg-utils	baea6080dd821f5562d715887954c9d3	plocale	950fbaec7deeba41b5bcc0572cca99b9
+_md5_=5f408eea3bbcb2ab0f33a3fc6f655c2b
