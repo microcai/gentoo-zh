@@ -4,11 +4,15 @@ acct-group/hysteria 0: System group: hysteria
 acct-group/keyd 0: System group: keyd
 acct-group/mihomo 0-r1: System group: mihomo
 acct-group/n2n 0: System group: n2n
+acct-group/ntpd-rs 0: System group: ntpd-rs
+acct-group/ntpd-rs-observe 0: System group: ntpd-rs-observe
 acct-user/alist 0: System user: alist
 acct-user/aptly 0: System user: aptly
 acct-user/hysteria 0: System user: hysteria
 acct-user/mihomo 0-r1: System user: mihomo
 acct-user/n2n 0: System user: n2n
+acct-user/ntpd-rs 0: user for ntpd-rs daemon
+acct-user/ntpd-rs-observe 0: user for ntpd-rs-observe daemon
 app-admin/enpass 6.10.1.1661: A cross-platform, complete password management solution.
 app-admin/rbw 1.12.1: Unofficial Bitwarden CLI
 app-admin/zenmonitor3 2.0.0: Zen monitor is monitoring software for AMD Zen-based CPUs
@@ -126,7 +130,7 @@ dev-util/asdf-vm 0.14.0: Manage all your runtime versions with one tool
 dev-util/cargo-about 0.6.2: Cargo plugin to generate list of all licenses for a crate
 dev-util/jetbrains-toolbox 1.28.1.15219 2.0.3.17006: Manage all your JetBrains Projects and Tools
 dev-util/mamba 1.5.8: The Fast Cross-Platform Package Manager
-dev-util/mongodb-compass-bin 1.43.5: The GUI for MongoDB
+dev-util/mongodb-compass-bin 1.43.6: The GUI for MongoDB
 dev-util/pacstrap 28: Pacstrap - install packages to the specified new root directorye
 dev-util/patchelf-liblol 0.1.4: patchelf patched for building libLoL only
 dev-util/redpanda-cpp 2.26: A lightweight yet powerful C/C++/GNU Assembly IDE.
@@ -216,7 +220,9 @@ net-misc/bbdown-bin 1.6.3: 一款命令行式哔哩哔哩下载器
 net-misc/biliup-app 0.4.1-r2: A Tool for Upload video to bilibili
 net-misc/biliup-app-bin 0.4.1: A Tool for Upload video to bilibili
 net-misc/biliup-rs 0.2.1: Upload video to bilibili.
+net-misc/geo 1.1 1.1_p20240718: An easy way to manage all your Geo resources
 net-misc/localsend-bin 1.15.4: An open-source cross-platform alternative to AirDrop
+net-misc/ntpd-rs 1.2.3: Full-featured implementation of NTP with NTS support
 net-misc/pcmanx-gtk2 1.3 9999: PCMan is a gtk+ based free BBS client
 net-misc/prips 1.0.0 1.2.0: print the IP addresses in a range
 net-misc/remmina-plugin-rustdesk 1.0.0.0-r1: A protocol plugin for Remmina to launch a Rustdesk connection.
@@ -245,7 +251,7 @@ net-proxy/shadowsocks-rust 1.20.4: A Rust port of shadowsocks.
 net-proxy/sing-box 1.9.4: The universal proxy platform.
 net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
 net-proxy/trojan-go-fork 2024.08.11: A fork of trojan-go
-net-proxy/v2ray 5.16.1: A platform for building proxies to bypass network restrictions.
+net-proxy/v2ray 5.16.1 5.17.0: A platform for building proxies to bypass network restrictions.
 net-proxy/v2ray-bin 4.45.0-r2 5.12.1-r1: A platform for building proxies to bypass network restrictions
 net-proxy/v2rayA 2.2.5.7 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
