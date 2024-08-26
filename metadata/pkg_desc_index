@@ -140,7 +140,7 @@ dev-util/tailspin 3.0.2: A log file highlighter
 dev-util/tauri-cli 1.5.9 2.0.0_alpha17: Command line interface for building Tauri apps
 dev-util/zprint-bin 1.2.7 1.2.8: Clojure and Clojurescript source code formatter
 dev-vcs/gitoxide 0.37.0: A command-line application for interacting with git repositories
-dev-vcs/sourcegit-bin 8.26: Opensource Git GUI client.
+dev-vcs/sourcegit-bin 8.27: Opensource Git GUI client.
 games-arcade/osu-lazer 2024.412.1 2024.521.2: rhythm is just a *click* away!
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-fps/source-engine 9999: A 3D game engine developed by Valve
