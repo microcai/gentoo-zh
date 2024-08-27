@@ -1,0 +1,35 @@
+--- a/tests/cli/conf_one.py
++++ b/tests/cli/conf_one.py
+@@ -2,7 +2,7 @@
+ 
+ exports = {
+     "source": {
+-        "api_path": "https://zh.wikipedia.org/w/api.php",
++        "file_path": ["titles.txt"],
+         "kwargs": {
+             "title_limit": 50,
+             "output": "titles.txt"
+--- a/tests/cli/conf_single_generator.py
++++ b/tests/cli/conf_single_generator.py
+@@ -2,7 +2,7 @@
+ 
+ exports = {
+     "source": {
+-        "api_path": "https://zh.wikipedia.org/w/api.php",
++        "file_path": ["titles.txt"],
+         "kwargs": {
+             "title_limit": 50,
+             "output": "titles.txt"
+--- a/tests/lib/test_zhwiki.py
++++ b/tests/lib/test_zhwiki.py
+@@ -3,8 +3,8 @@
+ 
+ 
+ def test_pipeline_basic():
+-    pipeline = MWFPipeline("https://zh.wikipedia.org/w/api.php")
+-    pipeline.fetch_titles(title_limit=50)
++    pipeline = MWFPipeline()
++    pipeline.load_titles_from_file("titles.txt")
+     pipeline.convert_to_words(moegirl_tweaks)
+     pipeline.export_words()
+     pipeline.generate_dict(generator="rime")
