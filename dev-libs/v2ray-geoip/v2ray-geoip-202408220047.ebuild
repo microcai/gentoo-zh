@@ -17,6 +17,7 @@ S="${WORKDIR}/geoip-${PV}"
 LICENSE="CC-BY-SA-4.0 GeoLite2"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="mmdb"
 
 RDEPEND="!dev-libs/v2ray-geoip-bin"
 BDEPEND="
@@ -25,21 +26,36 @@ BDEPEND="
 "
 
 src_unpack() {
-	local distdir="${PORTAGE_ACTUAL_DISTDIR:-${DISTDIR}}"
-	if ! [ -f "${distdir}/GeoLite2-Country-CSV.zip" ]; then
-		eerror "Please first download GeoLite2-Country-CSV.zip from MaxMind"
-		eerror "https://dev.maxmind.com/geoip/geoip2/geolite2/"
-		die "GeoLite2-Country-CSV.zip not found"
-	fi
-	unpack "${distdir}/GeoLite2-Country-CSV.zip"
 	go-module_src_unpack
 
-	mv "${WORKDIR}"/GeoLite2* "${S}/geolite2" || die
+	local distdir="${PORTAGE_ACTUAL_DISTDIR:-${DISTDIR}}"
+	if use !mmdb; then
+		if ! [ -f "${distdir}/GeoLite2-Country-CSV.zip" ]; then
+			eerror "Please first download GeoLite2-Country-CSV.zip from MaxMind"
+			eerror "https://dev.maxmind.com/geoip/geoip2/geolite2/"
+			die "GeoLite2-Country-CSV.zip not found"
+		fi
+		unpack "${distdir}/GeoLite2-Country-CSV.zip"
+		mv "${WORKDIR}"/GeoLite2* "${S}/geolite2" || die
+	else
+		if ! [ -f "${distdir}/GeoLite2-Country.mmdb" ]; then
+			eerror "Please first download GeoLite2-Country.mmdb from MaxMind"
+			eerror "https://dev.maxmind.com/geoip/geoip2/geolite2/"
+			eerror "or install net-misc/geoipupdate, configure /etc/GeoIP.conf (remember to set 'EditionIDs GeoLite2-Country'),"
+			eerror "run 'geoipupdate' and copy /usr/share/GeoIP/GeoLite2-Country.mmdb to ${distdir}"
+			die "GeoLite2-Country.mmdb not found"
+		fi
+		mkdir "${S}/geolite2" || die
+		cp "${distdir}/GeoLite2-Country.mmdb" "${S}/geolite2" || die
+	fi
 }
 
 src_prepare() {
 	# remove unneeded outputs
 	sed -i -e '29,57d' config.json
+
+	use mmdb && eapply "${FILESDIR}/${P}-mmdb.patch"
+
 	default
 }
 
