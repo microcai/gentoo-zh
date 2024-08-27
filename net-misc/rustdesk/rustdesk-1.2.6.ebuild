@@ -798,7 +798,7 @@ SRC_URI="
 LICENSE="AGPL-3"
 # Dependent crate licenses
 LICENSE+="
-	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD-2 BSD Boost-1.0 CC0-1.0 Fuchsia
+	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD-2 BSD Boost-1.0 CC0-1.0
 	GPL-2 GPL-3 GPL-3+ ISC MIT MPL-2.0 openssl SSLeay Unicode-DFS-2016 Unlicense ZLIB
 	Sciter
 "
