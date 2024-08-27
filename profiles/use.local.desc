@@ -98,6 +98,7 @@ dev-java/oraclejdk-bin:headless-awt - Don't install the X backend for AWT, neede
 dev-java/oraclejdk-bin:javafx - Install JavaFX libraries
 dev-java/oraclejdk-bin:source - Install JVM sources
 dev-lang/quickjs:lto - Enable Link Time Optimizations (improves performance and decreases size of executables)
+dev-libs/v2ray-geoip:mmdb - Use MaxMind mmdb database instead of MaxMind GeoLite2 country CSV data to generate V2Ray GeoIP dat
 dev-libs/v2ray-rules-dat-bin:geoip - Install geoip.dat
 dev-libs/v2ray-rules-dat-bin:geosite - Install geosite.dat
 dev-python/conda:mamba - enable libmamba resolver
