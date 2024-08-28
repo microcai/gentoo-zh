@@ -8,6 +8,14 @@ app-alternatives/v2ray-geoip:v2fly - use virtual/v2ray-geoip
 app-alternatives/v2ray-geosite:loyalsoldier - use dev-libs/v2ray-rules-dat-bin
 app-alternatives/v2ray-geosite:v2fly - use virtual/v2ray-domain-list-community
 app-arch/zchunk:openssl - Build with openssl support
+app-dicts/fcitx-pinyin-moegirl:fcitx - Install Fcitx 5 dictionary
+app-dicts/fcitx-pinyin-moegirl:rime - Install Rime dictionary
+app-dicts/fcitx-pinyin-moegirl-bin:fcitx - Install Fcitx 5 dictionary
+app-dicts/fcitx-pinyin-moegirl-bin:rime - Install Rime dictionary
+app-dicts/fcitx-pinyin-zhwiki:fcitx - Install Fcitx 5 dictionary
+app-dicts/fcitx-pinyin-zhwiki:rime - Install Rime dictionary
+app-dicts/fcitx-pinyin-zhwiki-bin:fcitx - Install Fcitx 5 dictionary
+app-dicts/fcitx-pinyin-zhwiki-bin:rime - Install Rime dictionary
 app-emulation/deepin-wine-plugin:virtual-pkg - With deepin-wine-plugin-virtual package
 app-emulation/liblol-glibc:cet - Enable Intel Control-flow Enforcement Technology (needs binutils 2.29 and gcc 8)
 app-emulation/liblol-glibc:compile-locales - build *all* locales in src_install; this is generally meant for stage building only as it ignores /etc/locale.gen file and can be pretty slow
