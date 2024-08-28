@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<name>blackteahamburger</name>
-		<email>blackteahamburger@outlook.com</email>
+		<name>Schroedinger</name>
+		<email>dylanturing@protonmail.com</email>
 	</maintainer>
 	<use>
 		<flag name="fcitx">Install Fcitx 5 dictionary</flag>

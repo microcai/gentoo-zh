@@ -2,14 +2,14 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<name>blackteahamburger</name>
-		<email>blackteahamburger@outlook.com</email>
+		<email>ruixirebirth@gmail.com</email>
+		<name>Ruixi-rebirth</name>
 	</maintainer>
 	<use>
 		<flag name="fcitx">Install Fcitx 5 dictionary</flag>
 		<flag name="rime">Install Rime dictionary</flag>
 	</use>
 	<upstream>
-		<remote-id type="github">felixonmars/fcitx5-pinyin-zhwiki</remote-id>
+		<remote-id type="github">outloudvi/mw2fcitx</remote-id>
 	</upstream>
 </pkgmetadata>
