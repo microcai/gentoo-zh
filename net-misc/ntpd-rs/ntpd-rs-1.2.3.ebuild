@@ -149,7 +149,7 @@ RDEPEND="
 
 src_install(){
 	for bin in ntp-ctl ntp-daemon ntp-metrics-exporter; do
-		dobin ../target/release/${bin}
+		dobin ../$(cargo_target_dir)/${bin}
 	done
 
 	for man in ntp-ctl.8  ntp-daemon.8  ntp-metrics-exporter.8  ntp.toml.5; do
