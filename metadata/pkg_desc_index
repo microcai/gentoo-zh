@@ -77,6 +77,7 @@ app-misc/keyd 2.4.3: A key remapping daemon for linux
 app-misc/rmtrash 1.14 1.15: trash-put made compatible to GNUs rm and rmdir
 app-misc/spark 1.0.1: ▁▂▃▅▂▇ in your shell
 app-misc/xmind 22.11.3656 23.07.201366-r1: Brainstorming and Mind Mapping Software
+app-misc/yazi 0.3.2: Blazing fast terminal file manager written in Rust, based on async I/O.
 app-office/anytype-bin 0.35.4 0.42.4: A notebook based on p2p network
 app-office/bytedance-feishu 7.15.13 7.15.13-r1 7.18.11: 飞书（Feishu） 飞书整合即时消息、日历、音视频会议、云文档、工作台等功能于一体，成就团队和个人，更高效、更愉悦。
 app-office/freeoffice 1062 1064 1068: A complete, free Microsoft Office-compatible alternative office suite.
