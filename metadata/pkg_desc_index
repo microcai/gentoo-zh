@@ -184,7 +184,7 @@ media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb 
 media-sound/netease-cloud-music-gtk 2.4.1: netease cloud music player based on Rust & GTK for Linux
 media-sound/qqmusic 1.1.5: Tencent QQ Music, converted from .deb package
 media-sound/spotube-bin 3.7.1: A lightweight Spotify client using YouTube as audio source
-media-sound/termusic 0.9.0: Terminal Music and Podcast Player written in Rust
+media-sound/termusic 0.9.1: Terminal Music and Podcast Player written in Rust
 media-sound/yesplaymusic-bin 0.4.8: A third party music player for Netease Music
 media-sound/youtube-music-bin 2.2.0: YouTube Music Desktop App bundled with custom plugins
 media-video/amdgpu-pro-amf 1.4.29.1538781: AMD's closed source Advanced Media Framework (AMF) driver
