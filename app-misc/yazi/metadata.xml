@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<upstream>
+<remote-id type="github">sxyazi/yazi</remote-id>
+<bugs-to>https://github.com/sxyazi/yazi/issues</bugs-to>
+</upstream>
+<use>
+<flag name="cli">Install CLI Data Distribution Service</flag>
+</use>
+<maintainer type="person">
+<email>nurali258@foxmail.com</email>
+<name>Nurali Abdukadir</name>
+</maintainer>
+</pkgmetadata>
