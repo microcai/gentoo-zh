@@ -16,45 +16,29 @@ S="${WORKDIR}/qBittorrent-Enhanced-Edition-release-${PV}"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="+dbus webui qt6 +qt5 +gui"
+IUSE="+dbus webui +gui"
 
-REQUIRED_USE="^^ ( qt5 qt6 )
-	dbus? ( gui )
+REQUIRED_USE="dbus? ( gui )
 	|| ( gui webui )
 "
 
 RDEPEND="
-		>=dev-libs/boost-1.65.0-r1:=
-		dev-libs/openssl:=
-		net-libs/libtorrent-rasterbar
-		sys-libs/zlib
-		dev-libs/geoip
+	>=dev-libs/boost-1.65.0-r1:=
+	dev-libs/openssl:=
+	net-libs/libtorrent-rasterbar
+	sys-libs/zlib
+	dev-libs/geoip
 
-		qt5? (
-				dev-qt/qtcore:5
-				dev-qt/qtsql:5
-				dev-qt/qtxml:5
-				dev-qt/qtnetwork:5[ssl]
-				gui? (
-					dev-qt/qtgui:5
-					dev-qt/qtsvg:5
-					dev-qt/qtwidgets:5
-				)
-				dbus? ( dev-qt/qtdbus:5 )
-		)
-		qt6? (
-			dev-qt/qtbase:6[network,ssl,sql,xml]
-			gui? (
-				dev-qt/qtbase:6[gui,widgets]
-				dev-qt/qtsvg:6
-			)
-			dbus? ( dev-qt/qtbase:6[dbus] )
-		)
+	dev-qt/qtbase:6[network,ssl,sql,xml]
+	gui? (
+		dev-qt/qtbase:6[gui,widgets]
+		dev-qt/qtsvg:6
+	)
+	dbus? ( dev-qt/qtbase:6[dbus] )
 
 "
 DEPEND="${RDEPEND}"
-BDEPEND="qt5? ( dev-qt/linguist-tools:5 )
-		 qt6? ( dev-qt/qttools:6 )
+BDEPEND="dev-qt/qttools:6
 		virtual/pkgconfig"
 
 DOCS=( AUTHORS Changelog CONTRIBUTING.md README.md)
@@ -65,14 +49,14 @@ PATCHES=(
 
 src_configure() {
 	set enable_gui="OFF"
-	if use qt5 || use qt6 ; then
+	if use gui ; then
 		enable_gui="ON"
 	fi
 
 	local mycmakeargs=(
+		-DQT6=ON
 		-DDBUS=$(usex dbus)
 		-DWEBUI=$(usex webui)
-		-DQT6=$(usex qt6)
 		-DGUI=$(usex gui )
 
 		-DSYSTEMD=ON
