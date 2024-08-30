@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-29 22:29:06 CST)
+(The last generation time: 2024-08-30 14:48:55 CST)
 
 ### Packages
 
@@ -134,6 +134,11 @@
  app-office/wps-office                      | 11.1.0.11719-r1                           |            | https://www.wps.cn/product/wpslinux/                                                    | WPS Office is an office productivity suite, Here is the Chinese version
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-pda/ipadcharge                         | 9999                                      |            | https://github.com/mkorenkov/ipad_charge                                                | Enables USB charging for Apple devices.
+--------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-shells/blesh                           | 0.4.0_pre3                                |            | https://github.com/akinomyoga/ble.sh                                                    | A line editor written in pure Bash with enhanced features
+                                            | 9999                                      |            |                                                                                         |
+--------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-shells/oh-my-bash                      | 9999                                      |            | https://ohmybash.github.io                                                              | An open source, community-driven framework for managing your bash configuration
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-shells/zsh-theme-powerlevel10k         | 1.20.0                                    |            | https://github.com/romkatv/powerlevel10k                                                | Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
    app-shells/gitstatus                     | 1.5.5                                     |  D, RD     | https://github.com/romkatv/gitstatus                                                    | Git status for Bash and Zsh prompt
@@ -363,7 +368,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-analyzer/realitlscanner                | 0.1.2                                     |            | https://github.com/XTLS/RealiTLScanner                                                  | A TLS server scanner for Reality
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-dns/ddns-go                            | 6.6.9                                     |            | https://github.com/jeessy2/ddns-go                                                      | Automatically obtain your public IP address and set to your domain name service.
+ net-dns/ddns-go                            | 6.7.0                                     |            | https://github.com/jeessy2/ddns-go                                                      | Automatically obtain your public IP address and set to your domain name service.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/dnslookup                          | 1.11.1                                    |            | https://github.com/ameshkov/dnslookup                                                   | Simple command line utility to make DNS lookups to the specified server
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
