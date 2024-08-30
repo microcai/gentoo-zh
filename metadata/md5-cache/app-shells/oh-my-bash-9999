@@ -1,0 +1,11 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install postinst prepare unpack
+DESCRIPTION=An open source, community-driven framework for managing your bash configuration
+EAPI=8
+HOMEPAGE=https://ohmybash.github.io
+INHERIT=git-r3
+LICENSE=MIT
+PROPERTIES=live
+SLOT=0
+_eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81
+_md5_=888d2aee8a3e2366f2cd3f23a7031408

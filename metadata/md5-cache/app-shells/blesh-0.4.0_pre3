@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install postinst unpack
+DESCRIPTION=A line editor written in pure Bash with enhanced features
+EAPI=8
+HOMEPAGE=https://github.com/akinomyoga/ble.sh
+IUSE=doc
+KEYWORDS=~amd64
+LICENSE=BSD MIT
+RDEPEND=>=app-shells/bash-3.0
+SLOT=0
+SRC_URI=https://github.com/akinomyoga/ble.sh/archive/refs/tags/v0.4.0-devel3.tar.gz -> blesh-0.4.0_pre3.tar.gz https://github.com/akinomyoga/blesh-contrib/archive/9700c79eb97b3b5f0f06f7019097dc9d3ee93404.tar.gz -> blesh-contrib-0_pre20230403.tar.gz
+_md5_=74c5b6f14526810fabf8e27fb3340473

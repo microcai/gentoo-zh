@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install postinst unpack
+DESCRIPTION=A line editor written in pure Bash with enhanced features
+EAPI=8
+HOMEPAGE=https://github.com/akinomyoga/ble.sh
+INHERIT=git-r3
+IUSE=doc
+LICENSE=BSD MIT
+PROPERTIES=live
+RDEPEND=>=app-shells/bash-3.0
+SLOT=0
+_eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81
+_md5_=74c5b6f14526810fabf8e27fb3340473
