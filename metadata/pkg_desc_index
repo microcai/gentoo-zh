@@ -215,7 +215,7 @@ net-im/deepin-wine-wechat 3.9.0.28-r3: Tencent WeChat on Deepin Wine For Gentoo
 net-im/deepin-wine-wecom 4.1.22.6009: Tencent Weixin Work on Deepin Wine(com.qq.weixin.work.deepin) For Gentoo
 net-im/dingtalk 7.0.40.30706 7.1.0.31017 7.1.0.31120: Communication platform that supports video and audio conferencing
 net-im/tencent-qq 3.2.12_p240808: The new version of the official linux-qq
-net-im/wechat-universal-bwrap 1.0.0.241-r1: WeChat (Universal) from UOS, inside bwrap sandbox
+net-im/wechat-universal-bwrap 1.0.0.241-r1 1.0.0.242: WeChat (Universal) from UOS, inside bwrap sandbox
 net-im/weixin-uos 2.1.8: UOS weixin
 net-im/wemeet 3.19.1.400 3.19.1.401 3.19.2.400: Wemeet - Tencent Video Conferencing
 net-libs/jzmq 9999: jzmq
