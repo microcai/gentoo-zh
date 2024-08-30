@@ -21,10 +21,11 @@ SLOT="0"
 KEYWORDS="-* amd64"
 
 IUSE="qt5 qt6"
-RESTRICT="bindist mirror strip"
+RESTRICT="bindist strip"
 
 RDEPEND="
 	>=app-accessibility/at-spi2-core-2.46.0:2
+	app-misc/ca-certificates
 	dev-libs/expat
 	dev-libs/glib:2
 	dev-libs/nspr
