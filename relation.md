@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-08-30 21:23:59 CST)
+(The last generation time: 2024-08-31 09:28:35 CST)
 
 ### Packages
 
@@ -531,7 +531,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/v2rayA                           | 2.2.5.7                                   |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                             | 9999                                      |            |                                                                                         |
-   net-proxy/Xray                           | 1.8.23                                    | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
+   net-proxy/Xray                           | 1.8.24                                    | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
      app-alternatives/v2ray-geoip           | 0-r2                                      |  D, RD     |                                                                                         | symlink for v2ray-geoip
      app-alternatives/v2ray-geosite         | 0-r2                                      |  D, RD     |                                                                                         | symlink for v2ray-geosite
    net-proxy/v2ray                          | 5.16.1                                    | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
