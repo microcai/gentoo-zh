@@ -110,6 +110,7 @@ src_configure() {
 		-DUSE_SYSTEM_MBEDTLS=on
 		-DUSE_ZLIB=on
 		-DUSE_SYSTEM_ZLIB=on
+		-DUSE_CARES=on
 		-DUSE_SYSTEM_CARES=on
 		-DUSE_SYSTEM_NGHTTP2=on
 	)
