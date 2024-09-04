@@ -30,7 +30,7 @@ app-dicts/fcitx-pinyin-moegirl 20240809: Fcitx 5 Pinyin Dictionary from zh.moegi
 app-dicts/fcitx-pinyin-moegirl-bin 20240809: Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 app-dicts/fcitx-pinyin-zhwiki 0.2.5.20240722: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 app-dicts/fcitx-pinyin-zhwiki-bin 0.2.5.20240722: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
-app-editors/appflowy-bin 0.6.7.2: AppFlowy is an open-source alternative to Notion
+app-editors/appflowy-bin 0.6.8: AppFlowy is an open-source alternative to Notion
 app-editors/marktext-bin 0.17.1: A simple and elegant markdown editor, available for Linux, macOS and Windows.
 app-editors/typora 0.11.18 1.9.3: A truely minimal markdown editor.
 app-editors/zed 0.150.4: high-performance, multiplayer code editor
@@ -189,7 +189,7 @@ media-sound/listen1_desktop-bin 2.32.0: one for all free music in China
 media-sound/lx-music-desktop-bin 2.2.2: 一个基于 electron 的音乐软件
 media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb package
 media-sound/netease-cloud-music-gtk 2.4.1: netease cloud music player based on Rust & GTK for Linux
-media-sound/qqmusic 1.1.5: Tencent QQ Music, converted from .deb package
+media-sound/qqmusic 1.1.7: Tencent QQ Music, converted from .deb package
 media-sound/spotube-bin 3.7.1: A lightweight Spotify client using YouTube as audio source
 media-sound/termusic 0.9.1: Terminal Music and Podcast Player written in Rust
 media-sound/yesplaymusic-bin 0.4.8: A third party music player for Netease Music
@@ -303,7 +303,7 @@ virtual/loong-ow-compat 0: Virtual for LoongArch old-world compatibility
 virtual/v2ray-domain-list-community 0: Virtual for v2ray-domain-list-community
 virtual/v2ray-geoip 0: Virtual for v2ray-geoip
 www-apps/chatgpt-desktop 1.1.0: ChatGPT Desktop Application
-www-client/brave-bin 1.69.160: Web browser that blocks ads and trackers by default
+www-client/brave-bin 1.69.162: Web browser that blocks ads and trackers by default
 www-servers/darkhttpd 1.16: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-libs/glbinding 3.3.0: A C++ binding for the OpenGL API
