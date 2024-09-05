@@ -73,7 +73,8 @@ DEPEND="
 		dev-qt/qtdeclarative:5
 		dev-qt/qtgui:5
 		dev-qt/qtwidgets:5
-		dev-qt/qtwml:5
+		dev-qt/qtxml:5
+		dev-qt/qtsql:5
 
 		kde-frameworks/karchive:5
 		kde-frameworks/kcodecs:5
@@ -99,9 +100,7 @@ DEPEND="
 		kde-frameworks/kwidgetsaddons:5
 		kde-frameworks/kwindowsystem:5
 
-		kde-frameworks/kcolorscheme:5
 		kde-frameworks/kirigami:5
-		kde-frameworks/kstatusnotifieritem:5
 
 		ipod? ( media-libs/libmygpo-qt )
 	)
