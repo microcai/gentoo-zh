@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-09-05 18:12:04 CST)
+(The last generation time: 2024-09-05 18:23:48 CST)
 
 ### Packages
 
@@ -315,6 +315,8 @@
                                             | 2023.0.3.1                                |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/zwcad                            | 2023.23.0.3.4-r2                          |            | https://www.zwsoft.cn/product/zwcad/linux                                               | CAD software for 2D drawing, reviewing and printing work
+--------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ media-libs/phonon-mpv                      | 0.1.0                                     |            | https://github.com/OpenProgger/phonon-mpv                                               | Phonon Backend using MPV Player(libmpv)
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-plugins/osdlyrics                    | 0.5.11                                    |            | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
                                             | 0.5.14                                    |            |                                                                                         |
