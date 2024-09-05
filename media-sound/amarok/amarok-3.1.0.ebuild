@@ -30,6 +30,7 @@ DEPEND="
 	virtual/mysql
 	media-libs/taglib-extras
 	media-libs/taglib
+	media-libs/phonon[qt5?,qt6?]
 
 	qt6? (
 		dev-qt/qttools:6
@@ -63,13 +64,9 @@ DEPEND="
 		kde-frameworks/kcolorscheme:6
 		kde-frameworks/kirigami:6
 		kde-frameworks/kstatusnotifieritem:6
-
-		media-libs/phonon[qt6]
-
 	)
 
 	qt5? (
-		media-libs/phonon[qt5]
 
 		dev-qt/linguist-tools
 		dev-qt/qtcore:5
