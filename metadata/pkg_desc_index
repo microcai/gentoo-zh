@@ -180,6 +180,7 @@ media-gfx/unityhub 3.4.1 3.4.2: The official unity tool for manager Unity Engine
 media-gfx/zw3d 2022.0.3.1-r3 2023.0.3.1: CAD/CAM software for 3D design and processing
 media-gfx/zwcad 2023.23.0.3.4-r2: CAD software for 2D drawing, reviewing and printing work
 media-libs/openslide 20230904: C library with simple interface to read virtual slides
+media-libs/phonon-mpv 0.1.0: Phonon Backend using MPV Player(libmpv)
 media-plugins/osdlyrics 0.5.11 0.5.14 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
 media-plugins/waylyrics 0.3.13: Simple On Screen lyrics Display for linux/unix
 media-sound/amarok 3.1.0: KDE calculator
