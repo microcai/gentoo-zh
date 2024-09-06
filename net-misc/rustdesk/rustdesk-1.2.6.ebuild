@@ -792,7 +792,7 @@ SRC_URI="
 	https://raw.githubusercontent.com/c-smile/sciter-sdk/master/bin.lnx/x64/libsciter-gtk.so
 		-> ${P}-libsciter-gtk.so
 
-	mirror+${CARGO_CRATE_URIS}
+	${CARGO_CRATE_URIS}
 "
 
 LICENSE="AGPL-3"
