@@ -21,7 +21,12 @@ DEPEND="
 	sys-fs/exfat-utils
 	sys-block/parted
 "
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}
+	dev-qt/qtcore:5
+	dev-qt/qtgui:5
+	dev-qt/qtwidgets:5
+"
 
 CARCH="x86_64"
 
