@@ -41,8 +41,7 @@ src_unpack() {
 		if ! [ -f "${distdir}/GeoLite2-Country.mmdb" ]; then
 			eerror "Please first download GeoLite2-Country.mmdb from MaxMind"
 			eerror "https://dev.maxmind.com/geoip/geoip2/geolite2/"
-			eerror "or install net-misc/geoipupdate, configure /etc/GeoIP.conf (remember to set 'EditionIDs GeoLite2-Country'),"
-			eerror "run 'geoipupdate' and copy /usr/share/GeoIP/GeoLite2-Country.mmdb to ${distdir}"
+			eerror "or with net-misc/geoipupdate"
 			die "GeoLite2-Country.mmdb not found"
 		fi
 		mkdir "${S}/geolite2" || die
