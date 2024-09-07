@@ -1,13 +1,13 @@
 BDEPEND=>=dev-lang/go-1.20:= app-arch/unzip
 DEFINED_PHASES=compile install unpack
-DESCRIPTION=A TLS server scanner for Reality
+DESCRIPTION=An offline tool for querying IP geographic information and CDN provider.
 EAPI=8
-HOMEPAGE=https://github.com/XTLS/RealiTLScanner
+HOMEPAGE=https://github.com/zu1k/nali
 INHERIT=go-module
 KEYWORDS=~amd64 ~arm64
-LICENSE=MPL-2.0
+LICENSE=MIT
 RESTRICT=strip
 SLOT=0
-SRC_URI=https://github.com/XTLS/RealiTLScanner/archive/refs/tags/v0.1.2.tar.gz -> realitlscanner-0.1.2.tar.gz
+SRC_URI=https://github.com/zu1k/nali/archive/2e758d311739bc402ba63bda7ba081d565c0cf0f.tar.gz -> nali-0.8.1_p20240827.gh.tar.gz https://github.com/peeweep/gentoo-go-deps/releases/download/nali-0.8.1_p20240827/nali-0.8.1_p20240827-deps.tar.xz
 _eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	go-env	90efbc8636d2f02d9654183330e84cf7	go-module	83fd3ed1657cfc316c93d6a37018290d
-_md5_=20e2ab8ff3f0d532a07967e873c906f6
+_md5_=b779eb63568ff8e662c681a0f7a234e9

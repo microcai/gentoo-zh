@@ -111,9 +111,9 @@ dev-libs/libthai 0.1.28 0.1.29: A a set of Thai language support routines
 dev-libs/lunar-calendar 3.0.1: a gtk+ calendar widget for chinese lunar library
 dev-libs/lunar-date 3.0.1: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
-dev-libs/v2ray-domain-list-community 20240817092737: Community managed domain list for V2Ray.
+dev-libs/v2ray-domain-list-community 20240907043125: Community managed domain list for V2Ray.
 dev-libs/v2ray-domain-list-community-bin 20240823035651: Community managed domain list for V2Ray.
-dev-libs/v2ray-geoip 202408220047: GeoIP for V2Ray.
+dev-libs/v2ray-geoip 202409050049: GeoIP for V2Ray.
 dev-libs/v2ray-geoip-bin 202408220047: GeoIP for V2Ray.
 dev-libs/v2ray-rules-dat-bin 202408072210: Enhanced edition of V2Ray rules dat files.
 dev-python/archspec 0.2.4: A library for detecting, labeling, and reasoning about microarchitectures
@@ -127,7 +127,7 @@ dev-python/fuo-netease 1.0.3: netease cloud music support for feeluown
 dev-python/fuo-qqmusic 1.0.5: qq music support for feeluown
 dev-python/fuo-ytmusic 0.4.1: youtube music support for feeluown
 dev-python/janus 1.0.0-r1: Implementation of the asyncio (PEP 3156) event-loop with Qt
-dev-python/mw2fcitx 0.15.1: Build fcitx5 libraries from MediaWiki sites
+dev-python/mw2fcitx 0.16.0: Build fcitx5 libraries from MediaWiki sites
 dev-python/nvchecker 2.13.1 2.14 2.14.1 2.15 2.15.1: nvchecker is for checking if a new version of some software has been released
 dev-python/pycosat 0.6.6: Python bindings to picosat (a SAT solver)
 dev-python/pypinyin 0.52.0: Tool for converting Chinese characters to pinyin
@@ -202,8 +202,8 @@ media-video/bilibili 1.11.4: Based on the Bilibli offcial client to linux versio
 media-video/implay 1.5.1: A Cross-Platform Desktop Media Player
 media-video/mpv-handler 0.3.12: Play website videos and songs with mpv & yt-dlp
 media-video/tenvideo 1.0.10: Tencent videos
-net-analyzer/nali 0.8.1 0.8.1_p20240512: An offline tool for querying IP geographic information and CDN provider.
-net-analyzer/realitlscanner 0.1.2: A TLS server scanner for Reality
+net-analyzer/nali 0.8.1 0.8.1_p20240827: An offline tool for querying IP geographic information and CDN provider.
+net-analyzer/realitlscanner 0.2.1: A TLS server scanner for Reality
 net-dns/ddns-go 6.7.0: Automatically obtain your public IP address and set to your domain name service.
 net-dns/dnslookup 1.11.1: Simple command line utility to make DNS lookups to the specified server
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
@@ -261,7 +261,7 @@ net-proxy/proxy-server 6.0.0 7.0.0: Implementation of all proxy protocols using 
 net-proxy/shadowsocks-rust 1.20.4: A Rust port of shadowsocks.
 net-proxy/sing-box 1.9.4: The universal proxy platform.
 net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
-net-proxy/trojan-go-fork 2024.08.11: A fork of trojan-go
+net-proxy/trojan-go-fork 2024.09.07: A fork of trojan-go
 net-proxy/v2ray 5.16.1 5.17.1: A platform for building proxies to bypass network restrictions.
 net-proxy/v2ray-bin 4.45.0-r2 5.12.1-r1: A platform for building proxies to bypass network restrictions
 net-proxy/v2rayA 2.2.5.7 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
