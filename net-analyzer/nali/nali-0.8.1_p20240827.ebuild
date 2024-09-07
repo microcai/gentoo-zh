@@ -6,7 +6,7 @@ inherit go-module
 
 DESCRIPTION="An offline tool for querying IP geographic information and CDN provider."
 HOMEPAGE="https://github.com/zu1k/nali"
-EGIT_COMMIT="559ba291a7fabd796f79e0476b8759be9754be63"
+EGIT_COMMIT="2e758d311739bc402ba63bda7ba081d565c0cf0f"
 SRC_URI="
 	https://github.com/zu1k/nali/archive/${EGIT_COMMIT}.tar.gz -> ${P}.gh.tar.gz
 	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
