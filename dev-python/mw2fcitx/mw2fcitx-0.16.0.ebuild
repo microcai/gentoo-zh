@@ -25,7 +25,10 @@ KEYWORDS="~amd64"
 
 RDEPEND="
 	>=app-i18n/opencc-1.1.7[python(-),${PYTHON_SINGLE_USEDEP}]
-	$(python_gen_cond_dep '>=dev-python/pypinyin-0.52.0[${PYTHON_USEDEP}]')
+	$(python_gen_cond_dep '
+		>=dev-python/pypinyin-0.52.0[${PYTHON_USEDEP}]
+		>=dev-python/urllib3-2.2.2[${PYTHON_USEDEP}]
+	')
 "
 
 PATCHES=( "${FILESDIR}/${P}-test-no-network.patch" )
