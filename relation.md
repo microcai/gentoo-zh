@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-09-07 20:33:25 CST)
+(The last generation time: 2024-09-07 20:33:45 CST)
 
 ### Packages
 
@@ -369,9 +369,9 @@
  media-video/tenvideo                       | 1.0.10                                    |            | https://v.qq.com/download.html#linux                                                    | Tencent videos
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-analyzer/nali                          | 0.8.1                                     |            | https://github.com/zu1k/nali                                                            | An offline tool for querying IP geographic information and CDN provider.
-                                            | 0.8.1_p20240512                           |            |                                                                                         |
+                                            | 0.8.1_p20240827                           |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-analyzer/realitlscanner                | 0.1.2                                     |            | https://github.com/XTLS/RealiTLScanner                                                  | A TLS server scanner for Reality
+ net-analyzer/realitlscanner                | 0.2.1                                     |            | https://github.com/XTLS/RealiTLScanner                                                  | A TLS server scanner for Reality
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/ddns-go                            | 6.7.0                                     |            | https://github.com/jeessy2/ddns-go                                                      | Automatically obtain your public IP address and set to your domain name service.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
