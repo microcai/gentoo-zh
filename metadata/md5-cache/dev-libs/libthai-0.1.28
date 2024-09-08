@@ -10,5 +10,5 @@ LICENSE=LGPL-2.1
 RDEPEND=dev-libs/libdatrie
 SLOT=0
 SRC_URI=https://github.com/tlwg/libthai/archive/v0.1.28.tar.gz -> libthai-0.1.28.tar.gz
-_eclasses_=gnuconfig	a397adda6984a4c423e28ac274c1ba98	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	5f49a16f67f81bdf873e3d1f10b10001	autotools	d12ccbad07b44642a75ac97a3334d8e0
+_eclasses_=gnuconfig	f8b9cc21e72de8cbedde6ca5108d208b	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	libtool	f9e6905c12590c1cac06d85371a0819a	autotools	61927ff6474f1d141b4ea4a5b9870424
 _md5_=1f4e4824cbcd0103e7379ac56301e3f6

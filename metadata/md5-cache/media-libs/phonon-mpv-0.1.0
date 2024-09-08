@@ -12,5 +12,5 @@ RDEPEND=>=media-libs/phonon-4.12.0[qt5=,qt6=] >=media-video/mpv-0.29.0:= qt5? ( 
 REQUIRED_USE=|| ( qt5 qt6 )
 SLOT=0
 SRC_URI=https://github.com/OpenProgger/phonon-mpv/archive/refs/tags/v0.1.0.tar.gz -> phonon-mpv-0.1.0.tar.gz
-_eclasses_=toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	10a50dfaf728b802fcfd37f8d0da9056	out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	d67e78a235f541871c7dfe4cf7931489
+_eclasses_=toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	flag-o-matic	fa33e3696fe4689dda7e9affe92e2c94	multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	cmake	10a50dfaf728b802fcfd37f8d0da9056	out-of-source-utils	a0eb740debe3d472355e8bc52f62e0ac	multibuild	45df57b1877333d70a9e894f6c8fdb3a
 _md5_=f00508728848d45d683138e6b9e43842

@@ -11,5 +11,5 @@ RDEPEND=app-accessibility/at-spi2-core:2 dev-libs/expat dev-libs/glib:2 dev-libs
 RESTRICT=bindist strip mirror
 SLOT=0
 SRC_URI=amd64? ( https://mirrors.opencloudos.tech/opencloudos/9.2/extras/x86_64/os/Packages/wechat-beta_1.0.0.242_amd64.rpm ) arm64? ( https://mirrors.opencloudos.tech/opencloudos/9.2/extras/aarch64/os/Packages/wechat-beta_1.0.0.242_arm64.rpm ) https://github.com/7Ji-PKGBUILDs/wechat-universal-bwrap/archive/5e8ad25218b82b9bbacb0bd43dce2feb85998889.tar.gz -> wechat-universal-bwrap-5e8ad25218b82b9bbacb0bd43dce2feb85998889.tar.gz
-_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	estack	c61c368a76fdf3a82fdf8dbaebea3804	rpm	7828cd38ff559545ca52f92064d0f8f4	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
+_eclasses_=desktop	56973babb9c5f19cab0eeb53ece644c6	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	estack	c61c368a76fdf3a82fdf8dbaebea3804	rpm	7828cd38ff559545ca52f92064d0f8f4	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	xdg	8d7d90c01b1b1c2602dab6fc6b177097
 _md5_=f62429077e9fea497c1f1ba414a7f4b0

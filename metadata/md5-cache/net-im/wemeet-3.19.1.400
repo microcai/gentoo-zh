@@ -11,5 +11,5 @@ RDEPEND=dev-libs/expat dev-libs/glib:2 dev-libs/nspr dev-libs/nss dev-libs/wayla
 RESTRICT=bindist test mirror
 SLOT=0
 SRC_URI=amd64? ( https://updatecdn.meeting.qq.com/cos/fcdc2a010a25561a4d23e168b677b493/TencentMeeting_0300000000_3.19.1.400_x86_64_default.publish.deb -> wemeet-3.19.1.400_amd64.deb ) arm64? ( https://updatecdn.meeting.qq.com/cos/73805834f20680c804310bd0e80f269d/TencentMeeting_0300000000_3.19.1.400_arm64_default.publish.deb -> wemeet-3.19.1.400_arm64.deb ) loong? ( https://updatecdn.meeting.qq.com/cos/bc71f68ac41d78667c10b10913949b88/TencentMeeting_0300000000_3.19.1.400_loongarch64_default.publish.deb -> wemeet-3.19.1.400_loongarch64.deb )
-_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	fb4b84181244b3b9990fa0bf40232dd2	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
+_eclasses_=desktop	56973babb9c5f19cab0eeb53ece644c6	multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	unpacker	fb4b84181244b3b9990fa0bf40232dd2	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	xdg	8d7d90c01b1b1c2602dab6fc6b177097
 _md5_=48dd997c4891a2f9d6cb539b6ef564dd

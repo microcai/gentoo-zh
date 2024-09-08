@@ -10,5 +10,5 @@ LICENSE=Apache-2.0 EPL-1.0 BSD
 RDEPEND=>=virtual/jdk-17
 SLOT=0
 SRC_URI=https://dbeaver.io/files/24.1.5/dbeaver-ce-24.1.5-linux.gtk.x86_64-nojdk.tar.gz -> dbeaver-bin-24.1.5-amd64.tar.gz
-_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	wrapper	4a1902f969e5718126434fc35f3a0d9c	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
+_eclasses_=desktop	56973babb9c5f19cab0eeb53ece644c6	wrapper	8814ba474de61a773949805b4d85007d	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	xdg	8d7d90c01b1b1c2602dab6fc6b177097
 _md5_=7c627888ce133acde8b9ae16245466e7

@@ -14,5 +14,5 @@ RDEPEND=gd? ( media-libs/gd:2= ) nscd? ( selinux? ( audit? ( sys-process/audit )
 RESTRICT=!test? ( test )
 SLOT=2.2
 SRC_URI=mirror://gnu/glibc/glibc-2.39.tar.xz https://dev.gentoo.org/~dilfridge/distfiles/glibc-2.39-patches-2.tar.xz https://github.com/AOSC-Dev/liblol/archive/refs/tags/v0.1.5_pre6.tar.gz -> liblol-0.1.5_pre6.tar.gz multilib-bootstrap? ( https://dev.gentoo.org/~dilfridge/distfiles/gcc-multilib-bootstrap-20201208.tar.xz ) systemd? ( https://gitweb.gentoo.org/proj/toolchain/glibc-systemd.git/snapshot/glibc-systemd-20210729.tar.gz )
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	6881b056477c23167d9a6b33e146374e	python-any-r1	5af215c3da6aef17a2d5e02968df1d5a	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	gnuconfig	a397adda6984a4c423e28ac274c1ba98	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f
+_eclasses_=multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	python-utils-r1	6881b056477c23167d9a6b33e146374e	python-any-r1	5af215c3da6aef17a2d5e02968df1d5a	flag-o-matic	fa33e3696fe4689dda7e9affe92e2c94	gnuconfig	f8b9cc21e72de8cbedde6ca5108d208b	tmpfiles	abdfd90f8841c1cb4b94575d5d109952
 _md5_=d9aeabe99e59cc55e980a6289ad25b33

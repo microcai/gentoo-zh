@@ -10,5 +10,5 @@ RDEPEND=acct-group/aptly acct-user/aptly
 RESTRICT=test strip
 SLOT=0
 SRC_URI=https://github.com/aptly-dev/aptly/archive/v1.5.0.tar.gz -> aptly-1.5.0.tar.gz https://github.com/liuyujielol/gentoo-go-deps/releases/download/aptly-1.5.0/aptly-1.5.0-deps.tar.xz
-_eclasses_=toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	go-env	90efbc8636d2f02d9654183330e84cf7	go-module	83fd3ed1657cfc316c93d6a37018290d	systemd	c8b03e8df84486aa991d4396686e8942
+_eclasses_=toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	bash-completion-r1	3047612be964ffd4a549447fc4289f12	multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	flag-o-matic	fa33e3696fe4689dda7e9affe92e2c94	go-env	90efbc8636d2f02d9654183330e84cf7	go-module	83fd3ed1657cfc316c93d6a37018290d	systemd	0f241b5c9f3758c3d3423df59a7f655a
 _md5_=2b459cfb4af416c1e56f96a5f13cc25b

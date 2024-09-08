@@ -10,5 +10,5 @@ RDEPEND=virtual-pkg? ( app-arch/p7zip python_targets_python3_10? ( dev-python/py
 REQUIRED_USE=virtual-pkg? ( || ( python_targets_python3_10 python_targets_python3_11 python_targets_python3_12 ) )
 SLOT=0
 SRC_URI=https://cdn-package-store6.deepin.com/appstore/pool/appstore/d/deepin-wine-helper/deepin-wine-plugin_5.1.13-1_amd64.deb virtual-pkg? ( https://cdn-package-store6.deepin.com/appstore/pool/appstore/d/deepin-wine-helper/deepin-wine-plugin-virtual_5.1.13-1_all.deb )
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	unpacker	fb4b84181244b3b9990fa0bf40232dd2	out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	d67e78a235f541871c7dfe4cf7931489	python-utils-r1	6881b056477c23167d9a6b33e146374e	python-r1	c1fc393cd1e72f093b4838e29d27918c
+_eclasses_=multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	unpacker	fb4b84181244b3b9990fa0bf40232dd2	out-of-source-utils	a0eb740debe3d472355e8bc52f62e0ac	multibuild	45df57b1877333d70a9e894f6c8fdb3a	python-utils-r1	6881b056477c23167d9a6b33e146374e	python-r1	c1fc393cd1e72f093b4838e29d27918c
 _md5_=704e909ce41100bebf20cb2063a9b612

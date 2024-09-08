@@ -12,5 +12,5 @@ RDEPEND=app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/daeuniverse/daed/releases/download/v0.7.0/daed-full-src.zip -> daed-0.7.0.zip webui? ( https://github.com/daeuniverse/daed/releases/download/v0.7.0/web.zip -> daed-0.7.0-web.zip )
-_eclasses_=toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	systemd	c8b03e8df84486aa991d4396686e8942
+_eclasses_=toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	flag-o-matic	fa33e3696fe4689dda7e9affe92e2c94	systemd	0f241b5c9f3758c3d3423df59a7f655a
 _md5_=d74200944881163941c36f1345f95219

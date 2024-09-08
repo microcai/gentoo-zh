@@ -11,5 +11,5 @@ RDEPEND=>=app-accessibility/at-spi2-core-2.46.0:2 app-crypt/libsecret dev-libs/e
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://image.lceda.cn/files/lceda-linux-x64-6.5.37.zip
-_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d
+_eclasses_=desktop	56973babb9c5f19cab0eeb53ece644c6
 _md5_=3f8eb20c0b0b4bb73312161ca7978361

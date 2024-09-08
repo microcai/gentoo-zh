@@ -11,5 +11,5 @@ RDEPEND=sys-apps/dbus >=media-libs/fontconfig-2.12 >=dev-libs/openssl-1.1 waylan
 REQUIRED_USE=|| ( wayland X )
 SLOT=0
 SRC_URI=https://github.com/wez/wezterm/releases/download/20240203-110809-5046fc22/wezterm-20240203-110809-5046fc22.Ubuntu20.04.tar.xz
-_eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
+_eclasses_=xdg-utils	5465aed08f1dfc2a75f14cbea4272961	xdg	8d7d90c01b1b1c2602dab6fc6b177097
 _md5_=6e992c643f9fed9b2e350ec1e3ca10f9
