@@ -60,10 +60,10 @@ src_prepare() {
 
 	# Exclude optional GUI binaries
 	if ! use qt5; then
-		rm -fv tool/$CARH/Ventoy2Disk.qt5
+		rm -fv tool/$CARCH/Ventoy2Disk.qt5 || die
 	fi
 	if ! use gtk; then
-		rm -fv tool/$CARH/Ventoy2Disk.gtk3
+		rm -fv tool/$CARCH/Ventoy2Disk.gtk3 || die
 	fi
 
 	default
