@@ -15,9 +15,11 @@ SRC_URI="https://github.com/Chilledheart/yass/releases/download/${PV}/yass-${PV}
 S="${WORKDIR}/${MY_PN}-${PV}"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~arm64 ~loong ~mips ~riscv ~x86"
+#KEYWORDS="amd64 ~arm ~arm64 ~loong ~mips ~riscv ~x86"
+#FIXME pkgcheck cries on NonsolvableDepsInDev on mips, no idea why
+KEYWORDS="amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 
-IUSE="+cli server test cet +gui gtk3 gtk4 +qt5 qt6 wayland +tcmalloc mimalloc"
+IUSE="+cli server test cet +gui gtk3 gtk4 qt5 qt6 wayland +tcmalloc mimalloc"
 
 # tested with FEATURES="-network-sandbox test"
 # tested with FEATURES="network-sandbox test"
@@ -26,7 +28,7 @@ RESTRICT="!test? ( test )"
 
 REQUIRED_USE="
 	cet? ( ^^ ( amd64 x86 ) )
-	gui? ( ^^ ( gtk3 gtk4 qt5 qt6 ) )
+	gui? ( || ( gtk3 gtk4 qt5 qt6 ) )
 	tcmalloc? ( !mimalloc )
 "
 
@@ -97,11 +99,7 @@ src_configure() {
 		-DENABLE_GOLD=off
 		-DCLI=$(usex cli)
 		-DSERVER=$(usex server)
-		-DGUI=$(usex gui)
 		-DUSE_CET=$(usex cet)
-		-DUSE_GTK4=$(usex gtk4)
-		-DUSE_QT5=$(usex qt5)
-		-DUSE_QT6=$(usex qt6)
 		-DBUILD_TESTS=$(usex test)
 		-DUSE_TCMALLOC=$(usex tcmalloc)
 		-DUSE_SYSTEM_TCMALLOC=$(usex tcmalloc)
@@ -114,5 +112,18 @@ src_configure() {
 		-DUSE_SYSTEM_CARES=on
 		-DUSE_SYSTEM_NGHTTP2=on
 	)
+
+	if use qt6; then
+		mycmakeargs+=( -DGUI=ON -DUSE_QT6=ON )
+	elif use qt5; then
+		mycmakeargs+=( -DGUI=ON -DUSE_QT5=ON )
+	elif use gtk4; then
+		mycmakeargs+=( -DGUI=ON -DUSE_GTK4=ON )
+	elif use gtk3; then
+		mycmakeargs+=( -DGUI=ON -DUSE_GTK4=OFF )
+	else
+		mycmakeargs+=( -DGUI=OFF )
+	fi
+
 	cmake_src_configure
 }
