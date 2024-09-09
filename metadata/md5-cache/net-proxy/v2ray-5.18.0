@@ -10,6 +10,6 @@ LICENSE=MIT
 RDEPEND=!net-proxy/v2ray-bin app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite
 RESTRICT=strip
 SLOT=0
-SRC_URI=https://github.com/v2fly/v2ray-core/archive/refs/tags/v5.16.1.tar.gz -> v2ray-5.16.1.tar.gz https://github.com/Puqns67/gentoo-deps/releases/download/v2ray-5.16.1/v2ray-5.16.1-vendor.tar.xz
+SRC_URI=https://github.com/v2fly/v2ray-core/archive/refs/tags/v5.18.0.tar.gz -> v2ray-5.18.0.tar.gz https://github.com/Puqns67/gentoo-deps/releases/download/v2ray-5.18.0/v2ray-5.18.0-vendor.tar.xz
 _eclasses_=toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	systemd	0f241b5c9f3758c3d3423df59a7f655a	multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	flag-o-matic	fa33e3696fe4689dda7e9affe92e2c94	go-env	90efbc8636d2f02d9654183330e84cf7	go-module	83fd3ed1657cfc316c93d6a37018290d
 _md5_=deabc277aec9bd3125bd3afee84a5ead
