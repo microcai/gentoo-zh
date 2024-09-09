@@ -12,7 +12,7 @@ QTMIN=6.7.2
 inherit ecm gear.kde.org
 
 DESCRIPTION="KDE calculator"
-HOMEPAGE="https://apps.kde.org/kcalc/"
+HOMEPAGE="https://apps.kde.org/amarok/"
 
 LICENSE="GPL-2" # TODO: CHECK
 SLOT="6"
@@ -131,7 +131,7 @@ src_configure() {
 		$(cmake_use_find_package wikipedia Qt6WebEngineWidgets)
 	)
 	use ipod && mycmakeargs+=( DWITH_GDKPixBuf=ON )
-	use qt5 &&  mycmakeargs+=( $(cmake_use_find_package podcast Mygpo-qt5) )
+	use qt5 && use podcast && mycmakeargs+=( $(cmake_use_find_package podcast Mygpo-qt5) )
 
 	ecm_src_configure
 }
