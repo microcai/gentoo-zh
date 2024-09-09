@@ -14,6 +14,8 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
+IUSE="+qt5 +gtk"
+
 RESTRICT="strip mirror"
 
 DEPEND="
@@ -23,9 +25,8 @@ DEPEND="
 "
 RDEPEND="
 	${DEPEND}
-	dev-qt/qtcore:5
-	dev-qt/qtgui:5
-	dev-qt/qtwidgets:5
+	qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 )
+	gtk? ( x11-libs/gtk+:3 )
 "
 
 CARCH="x86_64"
@@ -56,6 +57,15 @@ src_prepare() {
 	for binary in xzcat hexdump; do
 		rm -fv tool/$CARCH/$binary || die
 	done
+
+	# Exclude optional GUI binaries
+	if ! use qt5; then
+		rm -fv tool/$CARH/Ventoy2Disk.qt5
+	fi
+	if ! use gtk; then
+		rm -fv tool/$CARH/Ventoy2Disk.gtk3
+	fi
+
 	default
 }
 
