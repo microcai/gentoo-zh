@@ -10,7 +10,7 @@ inherit cmake unpacker xdg
 
 DESCRIPTION="lightweight and efficient, socks5/http forward proxy"
 HOMEPAGE="https://github.com/Chilledheart/yass"
-SRC_URI="https://github.com/Chilledheart/yass/releases/download/${PN}/${PN}-${PV}.tar.zst"
+SRC_URI="https://github.com/Chilledheart/yass/releases/download/${PV}/${PN}-${PV}.tar.zst"
 S="${WORKDIR}/${PN}-${PV}"
 LICENSE="GPL-2"
 SLOT="0"
