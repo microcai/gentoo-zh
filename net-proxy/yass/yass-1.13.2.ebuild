@@ -6,13 +6,12 @@ EAPI=8
 # see examples at sci-chemistry/gromacs/gromacs's ebuild files
 CMAKE_MAKEFILE_GENERATOR="ninja"
 
-inherit cmake xdg
+inherit cmake unpacker xdg
 
-MY_PN="yass"
 DESCRIPTION="lightweight and efficient, socks5/http forward proxy"
 HOMEPAGE="https://github.com/Chilledheart/yass"
-SRC_URI="https://github.com/Chilledheart/yass/releases/download/${PV}/yass-${PV}.tar.bz2"
-S="${WORKDIR}/${MY_PN}-${PV}"
+SRC_URI="https://github.com/Chilledheart/yass/releases/download/${PN}/${PN}-${PV}.tar.zst"
+S="${WORKDIR}/${PN}-${PV}"
 LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS="amd64 ~arm ~arm64 ~loong ~mips ~riscv ~x86"
