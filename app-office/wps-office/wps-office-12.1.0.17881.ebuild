@@ -9,7 +9,7 @@ DESCRIPTION="WPS Office is an office productivity suite, Here is the Chinese ver
 HOMEPAGE="https://www.wps.cn/product/wpslinux/"
 
 SRC_URI="
-	amd64?	( https://wb9.s-ton.top/wps302/${PV}/amd64 -> ${PN}_${PV}_amd64.deb )
+	amd64?	( https://dogfood.gnupg.uk/wps302/${PV}/amd64 -> ${PN}_${PV}_amd64.deb )
 "
 
 S="${WORKDIR}"
