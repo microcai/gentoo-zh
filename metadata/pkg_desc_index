@@ -81,7 +81,7 @@ app-misc/yazi 0.3.2: Blazing fast terminal file manager written in Rust, based o
 app-office/anytype-bin 0.35.4 0.42.5: A notebook based on p2p network
 app-office/bytedance-feishu 7.15.13 7.15.13-r1 7.18.11 7.22.9: 飞书（Feishu） 飞书整合即时消息、日历、音视频会议、云文档、工作台等功能于一体，成就团队和个人，更高效、更愉悦。
 app-office/freeoffice 1062 1064 1068: A complete, free Microsoft Office-compatible alternative office suite.
-app-office/wps-office 11.1.0.11719-r1: WPS Office is an office productivity suite, Here is the Chinese version
+app-office/wps-office 11.1.0.11719-r1 12.1.0.17881: WPS Office is an office productivity suite, Here is the Chinese version
 app-pda/ipadcharge 9999: Enables USB charging for Apple devices.
 app-shells/blesh 0.4.0_pre3 9999: A line editor written in pure Bash with enhanced features
 app-shells/gitstatus 1.5.5: Git status for Bash and Zsh prompt
