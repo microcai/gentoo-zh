@@ -10,6 +10,6 @@ LICENSE=MPL-2.0
 RDEPEND=>=app-accessibility/at-spi2-core-2.46.0:2 app-misc/ca-certificates dev-libs/expat dev-libs/glib:2 dev-libs/nspr dev-libs/nss media-libs/alsa-lib media-libs/mesa[gbm(+)] net-misc/curl net-print/cups sys-apps/dbus sys-libs/glibc x11-libs/cairo x11-libs/gdk-pixbuf x11-libs/gtk+:3 x11-libs/libdrm x11-libs/libxcb x11-libs/libxkbcommon x11-libs/libxshmfence x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXrandr x11-libs/pango qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5[X] dev-qt/qtwidgets:5 ) qt6? ( dev-qt/qtbase:6[gui,widgets] )
 RESTRICT=bindist strip
 SLOT=0
-SRC_URI=https://github.com/brave/brave-browser/releases/download/v1.69.162/brave-browser_1.69.162_amd64.deb
+SRC_URI=https://github.com/brave/brave-browser/releases/download/v1.69.168/brave-browser_1.69.168_amd64.deb
 _eclasses_=toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	linux-info	ea4122ba1d8791a12b78e53f9510a2e3	chromium-2	93690d770dc2e27deaa89794e2f9fe3f	desktop	56973babb9c5f19cab0eeb53ece644c6	pax-utils	6285e04fab2343992d2df0df4edf6003	multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	unpacker	fb4b84181244b3b9990fa0bf40232dd2	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	xdg	8d7d90c01b1b1c2602dab6fc6b177097
 _md5_=6d0329218618f86896472c0c1ca2201c
