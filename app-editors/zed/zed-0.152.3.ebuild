@@ -67,7 +67,7 @@ CRATES="
 	async-stream-impl@0.3.5
 	async-stream@0.3.5
 	async-stripe@0.38.1
-	async-tar@0.4.2
+	async-tar@0.5.0
 	async-task@4.7.1
 	async-trait@0.1.81
 	async-tungstenite@0.23.0
@@ -109,11 +109,10 @@ CRATES="
 	base64@0.21.7
 	base64@0.22.1
 	base64ct@1.6.0
-	bigdecimal@0.3.1
+	bigdecimal@0.4.5
 	bincode@1.3.3
-	bindgen@0.64.0
-	bindgen@0.65.1
 	bindgen@0.69.4
+	bindgen@0.70.1
 	bit-set@0.5.3
 	bit-set@0.6.0
 	bit-vec@0.6.3
@@ -157,7 +156,7 @@ CRATES="
 	cast@0.3.0
 	castaway@0.1.2
 	cbc@0.1.2
-	cbindgen@0.26.0
+	cbindgen@0.27.0
 	cc@1.1.15
 	cesu8@1.1.0
 	cexpr@0.6.0
@@ -182,7 +181,9 @@ CRATES="
 	clickhouse@0.11.6
 	cobs@0.2.3
 	cocoa-foundation@0.1.2
+	cocoa-foundation@0.2.0
 	cocoa@0.25.0
+	cocoa@0.26.0
 	codespan-reporting@0.11.1
 	color_quant@1.1.0
 	colorchoice@1.0.2
@@ -195,9 +196,12 @@ CRATES="
 	convert_case@0.4.0
 	convert_case@0.6.0
 	core-foundation-sys@0.8.7
+	core-foundation@0.10.0
 	core-foundation@0.9.4
 	core-graphics-types@0.1.3
+	core-graphics-types@0.2.0
 	core-graphics@0.23.2
+	core-graphics@0.24.0
 	core-services@0.2.1
 	core-text@20.1.0
 	coreaudio-rs@0.11.3
@@ -245,7 +249,6 @@ CRATES="
 	der@0.6.1
 	der@0.7.9
 	deranged@0.3.11
-	derivative@2.2.0
 	derive_more@0.99.18
 	dialoguer@0.11.0
 	diff@0.1.13
@@ -261,6 +264,7 @@ CRATES="
 	dwrote@0.11.1
 	dyn-clone@1.0.17
 	ecdsa@0.14.8
+	educe@0.5.11
 	either@1.13.0
 	elasticlunr-rs@3.0.2
 	elliptic-curve@0.12.3
@@ -271,6 +275,8 @@ CRATES="
 	encode_unicode@0.3.6
 	encoding_rs@0.8.34
 	endi@1.1.0
+	enum-ordinalize-derive@4.3.1
+	enum-ordinalize@4.3.0
 	enumflags2@0.7.10
 	enumflags2_derive@0.7.10
 	env_filter@0.1.2
@@ -314,7 +320,7 @@ CRATES="
 	foreign-types-shared@0.3.1
 	foreign-types@0.3.2
 	foreign-types@0.5.0
-	fork@0.1.23
+	fork@0.2.0
 	form_urlencoded@1.2.1
 	freetype-sys@0.20.1
 	fs-set-times@0.20.1
@@ -362,7 +368,7 @@ CRATES="
 	hashbrown@0.12.3
 	hashbrown@0.13.2
 	hashbrown@0.14.5
-	hashlink@0.8.4
+	hashlink@0.9.1
 	headers-core@0.2.0
 	headers@0.3.9
 	heck@0.3.3
@@ -427,8 +433,8 @@ CRATES="
 	is_terminal_polyfill@1.70.1
 	isahc@1.7.2
 	itertools@0.10.5
-	itertools@0.11.0
 	itertools@0.12.1
+	itertools@0.13.0
 	itoa@1.0.11
 	jni-sys@0.3.0
 	jni@0.21.1
@@ -453,7 +459,7 @@ CRATES="
 	libm@0.2.8
 	libmimalloc-sys@0.1.39
 	libredox@0.1.3
-	libsqlite3-sys@0.26.0
+	libsqlite3-sys@0.28.0
 	libz-sys@1.1.20
 	linkify@0.10.0
 	linkme-impl@0.3.28
@@ -564,7 +570,6 @@ CRATES="
 	pathfinder_geometry@0.5.1
 	pathfinder_simd@0.5.4
 	pbkdf2@0.12.2
-	peeking_take_while@0.1.2
 	pem-rfc7468@0.7.0
 	pem@3.0.4
 	percent-encoding@2.3.1
@@ -697,10 +702,10 @@ CRATES="
 	scrypt@0.11.0
 	sct@0.7.1
 	sea-bae@0.2.0
-	sea-orm-macros@0.12.15
-	sea-orm@0.12.15
-	sea-query-binder@0.5.0
-	sea-query@0.30.7
+	sea-orm-macros@1.1.0-rc.1
+	sea-orm@1.1.0-rc.1
+	sea-query-binder@0.7.0-rc.1
+	sea-query@0.32.0-rc.1
 	seahash@4.1.0
 	sealed@0.4.0
 	sec1@0.3.0
@@ -760,13 +765,13 @@ CRATES="
 	spki@0.7.3
 	sptr@0.3.2
 	sqlformat@0.2.4
-	sqlx-core@0.7.2
-	sqlx-macros-core@0.7.2
-	sqlx-macros@0.7.2
-	sqlx-mysql@0.7.2
-	sqlx-postgres@0.7.2
-	sqlx-sqlite@0.7.2
-	sqlx@0.7.2
+	sqlx-core@0.8.0
+	sqlx-macros-core@0.8.0
+	sqlx-macros@0.8.0
+	sqlx-mysql@0.8.0
+	sqlx-postgres@0.8.0
+	sqlx-sqlite@0.8.0
+	sqlx@0.8.0
 	stable_deref_trait@1.2.0
 	static_assertions@1.1.0
 	strict-num@0.1.1
@@ -775,6 +780,7 @@ CRATES="
 	stringprep@0.1.5
 	strsim@0.11.1
 	strum@0.25.0
+	strum@0.26.3
 	strum_macros@0.25.3
 	subtle@2.6.1
 	sval@2.13.0
@@ -954,7 +960,7 @@ CRATES="
 	wayland-scanner@0.31.4
 	wayland-sys@0.31.4
 	web-sys@0.3.70
-	webpki-roots@0.24.0
+	webpki-roots@0.25.4
 	weezl@0.1.8
 	which@4.4.2
 	which@6.0.3
@@ -1063,9 +1069,9 @@ CRATES="
 declare -A GIT_CRATES=(
 	[alacritty_terminal]='https://github.com/alacritty/alacritty;91d034ff8b53867143c005acfaa14609147c9a2c;alacritty-%commit%/alacritty_terminal'
 	[async-pipe]='https://github.com/zed-industries/async-pipe-rs;82d00a04211cf4e1236029aa03e6b6ce2a74c553;async-pipe-rs-%commit%'
-	[blade-graphics]='https://github.com/kvark/blade;bf40d4f91fb56031e8676376dba2fc021b3e8eaf;blade-%commit%/blade-graphics'
-	[blade-macros]='https://github.com/kvark/blade;bf40d4f91fb56031e8676376dba2fc021b3e8eaf;blade-%commit%/blade-macros'
-	[blade-util]='https://github.com/kvark/blade;bf40d4f91fb56031e8676376dba2fc021b3e8eaf;blade-%commit%/blade-util'
+	[blade-graphics]='https://github.com/kvark/blade;e142a3a5e678eb6a13e642ad8401b1f3aa38e969;blade-%commit%/blade-graphics'
+	[blade-macros]='https://github.com/kvark/blade;e142a3a5e678eb6a13e642ad8401b1f3aa38e969;blade-%commit%/blade-macros'
+	[blade-util]='https://github.com/kvark/blade;e142a3a5e678eb6a13e642ad8401b1f3aa38e969;blade-%commit%/blade-util'
 	[cosmic-text]='https://github.com/pop-os/cosmic-text;542b20ca4376a3b5de5fa629db1a4ace44e18e0c;cosmic-text-%commit%'
 	[font-kit]='https://github.com/zed-industries/font-kit;40391b7c0041d8a8572af2afa3de32ae088f0120;font-kit-%commit%'
 	[lsp-types]='https://github.com/zed-industries/lsp-types;72357d6f6d212bdffba3b5ef4b31d8ca856058e7;lsp-types-%commit%'
@@ -1163,9 +1169,7 @@ pkg_setup() {
 src_prepare() {
 	local PATCHES=(
 		"${FILESDIR}/${PN}-0.142.6-remove-cargo-install-in-generate-licenses.patch"
-		# From https://github.com/getsolus/packages/tree/main/packages/z/zed
-		"${FILESDIR}/${PN}-0.143.7-use-system-libs.patch"
-		"${FILESDIR}/${PN}-0.147.2-fix-cargo-eclass-rustflags-merge.patch"
+		"${FILESDIR}/${P}-unbundle-sqlite.patch"
 	)
 
 	default
