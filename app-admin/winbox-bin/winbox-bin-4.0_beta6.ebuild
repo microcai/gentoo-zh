@@ -13,7 +13,7 @@ LICENSE="MikroTik-EULA"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RESRICT="bindist mirror strip"
+RESTRICT="bindist mirror strip"
 
 RDEPEND="
 	media-libs/fontconfig
