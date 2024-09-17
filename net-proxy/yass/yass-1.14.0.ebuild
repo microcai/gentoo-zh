@@ -40,6 +40,7 @@ RDEPEND="
 	sys-libs/zlib
 	net-dns/c-ares
 	net-libs/nghttp2
+	dev-libs/jsoncpp
 	tcmalloc? ( dev-util/google-perftools )
 	mimalloc? ( dev-libs/mimalloc )
 	gui? (
@@ -110,6 +111,8 @@ src_configure() {
 		-DUSE_CARES=on
 		-DUSE_SYSTEM_CARES=on
 		-DUSE_SYSTEM_NGHTTP2=on
+		-DUSE_JSONCPP=on
+		-DUSE_SYSTEM_JSONCPP=on
 	)
 
 	if use qt6; then
