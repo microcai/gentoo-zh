@@ -16,7 +16,7 @@ S="${WORKDIR}"
 
 LICENSE="WPS-EULA"
 SLOT="0"
-KEYWORDS="~amd64 "
+KEYWORDS="~amd64"
 IUSE="systemd"
 REQUIRED_USE=""
 
