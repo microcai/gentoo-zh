@@ -248,7 +248,7 @@ net-p2p/amule-dlp-antileech 9999: amule-dlp-antileech, dynamic DLP library for a
 net-p2p/n2n 3.0 3.1.1 9999: A Layer Two Peer-to-Peer VPN
 net-p2p/qbittorrent-enhanced 4.6.6.10: qBittorrent Enhanced, based on qBittorrent
 net-print/epson-inkjet-printer_201207w 1.0.0: Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
-net-proxy/Xray 1.8.24 24.9.7: Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
+net-proxy/Xray 1.8.24 24.9.19: Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
 net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
 net-proxy/clash-nyanpasu 1.5.1: Clash GUI based on tauri
 net-proxy/clash-rs 0.1.15: Custom protocol, rule based network proxy
@@ -261,10 +261,10 @@ net-proxy/mihomo 1.18.8: Another Clash Kernel, formerly Clash.Meta
 net-proxy/naiveproxy-bin 128.0.6613.40_p1: A proxy using Chromium's network stack to camouflage traffic
 net-proxy/proxy-server 6.0.0 7.0.0: Implementation of all proxy protocols using modern c++
 net-proxy/shadowsocks-rust 1.20.4: A Rust port of shadowsocks.
-net-proxy/sing-box 1.9.4: The universal proxy platform.
+net-proxy/sing-box 1.9.5: The universal proxy platform.
 net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
 net-proxy/trojan-go-fork 2024.09.07: A fork of trojan-go
-net-proxy/v2ray 5.17.1 5.18.0: A platform for building proxies to bypass network restrictions.
+net-proxy/v2ray 5.18.0 5.19.0: A platform for building proxies to bypass network restrictions.
 net-proxy/v2ray-bin 4.45.0-r2 5.12.1-r1: A platform for building proxies to bypass network restrictions
 net-proxy/v2rayA 2.2.5.7 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
