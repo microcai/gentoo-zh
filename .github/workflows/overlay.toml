@@ -922,6 +922,12 @@ github_account = ["st0nie", "peeweep"]
 
 #["net-proxy/shadowsocks-rust"]
 
+["net-proxy/sing-box"]
+source = "github"
+github = "SagerNet/sing-box"
+use_latest_release = true
+github_account = ["Puqns67"]
+
 ["net-proxy/smartproxy"]
 source = "github"
 github = "microcai/smartproxy"
