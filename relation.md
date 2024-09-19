@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-09-19 17:10:50 CST)
+(The last generation time: 2024-09-19 23:55:38 CST)
 
 ### Packages
 
@@ -460,7 +460,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/localsend-bin                     | 1.15.4                                    |            | https://localsend.org                                                                   | An open-source cross-platform alternative to AirDrop
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/ntpd-rs                           | 1.2.3                                     |            | https://github.com/pendulum-project/ntpd-rs                                             | Full-featured implementation of NTP with NTS support
+ net-misc/ntpd-rs                           | 1.3.0                                     |            | https://github.com/pendulum-project/ntpd-rs                                             | Full-featured implementation of NTP with NTS support
    acct-group/ntpd-rs                       | 0                                         | RD         |                                                                                         | Full-featured implementation of NTP with NTS support
    acct-group/ntpd-rs-observe               | 0                                         | RD         |                                                                                         | Full-featured implementation of NTP with NTS support
    acct-user/ntpd-rs                        | 0                                         | RD         |                                                                                         | user for ntpd-rs daemon
