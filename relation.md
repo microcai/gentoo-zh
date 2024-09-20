@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-09-19 23:55:38 CST)
+(The last generation time: 2024-09-20 09:45:59 CST)
 
 ### Packages
 
@@ -527,8 +527,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/naiveproxy-bin                   | 128.0.6613.40_p1                          |            | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/proxy-server                     | 6.0.0                                     |            | https://github.com/jackarain/proxy                                                      | Implementation of all proxy protocols using modern c++
-                                            | 7.0.0                                     |            |                                                                                         |
+ net-proxy/proxy-server                     | 8.0.0                                     |            | https://github.com/jackarain/proxy                                                      | Implementation of all proxy protocols using modern c++
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/shadowsocks-rust                 | 1.20.4                                    |            | https://github.com/shadowsocks/shadowsocks-rust                                         | A Rust port of shadowsocks.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
