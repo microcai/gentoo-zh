@@ -5,8 +5,8 @@ EAPI=7
 
 DESCRIPTION="Create X menus from the shell"
 HOMEPAGE="https://packages.debian.org/source/sid/9menu"
-SRC_URI="mirror://debian/pool/main/9/${PN}/${PN}_${PV}.orig.tar.xz"
-
+SRC_URI="https://github.com/arnoldrobbins/9menu/archive/refs/tags/${PN}-release-${PV}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/${PN}-${PN}-release-${PV}"
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
