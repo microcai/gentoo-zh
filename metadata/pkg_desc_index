@@ -160,7 +160,7 @@ gui-wm/swayfx 0.3.2: SwayFX: Sway, but with eye candy!
 kde-misc/plasma-applet-netspeed-widget 2.0 3.1 9999: Plasma 5 widget that displays the currently used network bandwidth.
 media-fonts/Plangothic 1.8.5764: 遍黑体项目（Plangothic Project）
 media-fonts/iansui 1.000: An open-source Chinese font derived from Klee One (Fontworks).
-media-fonts/jf-openhuninn 2.0: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
+media-fonts/jf-openhuninn 2.1: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 media-fonts/lxgw-neo-xihei 1.206: A Chinese sans-serif font derived from IPAex Gothic.
 media-fonts/lxgw-neo-zhisong 0.113: An open-source Chinese font derived from IPAmj Mincho
 media-fonts/misans 4.003-r1: MiSans 是由小米主导,联合汉仪发布的可免费使用的字体
@@ -311,7 +311,7 @@ www-client/brave-bin 1.70.117: Web browser that blocks ads and trackers by defau
 www-servers/darkhttpd 1.16: A small, static webserver
 www-servers/woof 9999: an ad-hoc single file webserver
 x11-libs/glbinding 3.3.0: A C++ binding for the OpenGL API
-x11-misc/9menu 1.10: Create X menus from the shell
+x11-misc/9menu 1.11: Create X menus from the shell
 x11-misc/extramaus 3: workaround to always show mouse cursor under x11
 x11-misc/flatpak-xdg-utils 1.0.5: Utilities for containerized apps to launch programs outside the container
 x11-misc/fqterm 0.9.10.1 9999: a modern terminal emulator for Linux
