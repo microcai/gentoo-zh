@@ -14,8 +14,8 @@ SRC_URI="https://github.com/c0re100/qBittorrent-Enhanced-Edition/archive/release
 S="${WORKDIR}/qBittorrent-Enhanced-Edition-release-${PV}"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE="+dbus webui +gui"
 
 REQUIRED_USE="dbus? ( gui )
