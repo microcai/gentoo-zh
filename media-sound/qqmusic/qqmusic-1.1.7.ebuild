@@ -1,4 +1,4 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 2023-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -7,27 +7,20 @@ inherit desktop unpacker xdg
 
 DESCRIPTION="Tencent QQ Music, converted from .deb package"
 HOMEPAGE="https://y.qq.com/"
-SIGN="1725454664-ExMwGMJkwjr8MfNb-0-68c8b626a3eb27b87b031a8ba2fdb5a7"
-SRC_URI="${PN}_${PV}_amd64.deb"
+SRC_URI="https://dldir1.qq.com/music/clntupate/linux/qqmusic_${PV}_amd64.deb"
 
 S="${WORKDIR}"
 
 LICENSE="CC0-1.0"
 SLOT="0"
 KEYWORDS="-* ~amd64"
-RESTRICT="strip fetch"
+RESTRICT="strip mirror"
 
 RDEPEND="
 	x11-libs/gtk+:3
 	x11-libs/libXScrnSaver
 	dev-libs/nss
 "
-
-pkg_nofetch() {
-	einfo "Please download"
-	einfo "  ${PN}_${PV}_amd64.deb"
-	einfo "from ${HOMEPAGE}/download/download.html and place them in your DISTDIR directory."
-}
 
 src_install() {
 	insinto /opt
