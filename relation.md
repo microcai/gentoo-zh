@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-09-21 13:07:47 CST)
+(The last generation time: 2024-09-21 22:23:02 CST)
 
 ### Packages
 
@@ -331,11 +331,11 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/barva                          | 9999                                      |            | https://github.com/Kharacternyk/barva                                                   | a modular audio visualizer
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/feeluown                       | 4.1.5                                     |            | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
-   dev-python/feeluown-bilibili             | 0.4.0                                     |  D         | https://github.com/feeluown/feeluown-bilibili                                           | bilibili support for feeluown
+ media-sound/feeluown                       | 4.1.7                                     |            | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
+   dev-python/feeluown-bilibili             | 0.4.1                                     |  D         | https://github.com/feeluown/feeluown-bilibili                                           | bilibili support for feeluown
    dev-python/fuo-netease                   | 1.0.3                                     |  D         | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
    dev-python/fuo-qqmusic                   | 1.0.5                                     |  D         | https://github.com/feeluown/feeluown-qqmusic                                            | qq music support for feeluown
-   dev-python/fuo-ytmusic                   | 0.4.1                                     |  D         | https://github.com/feeluown/feeluown-ytmusic                                            | youtube music support for feeluown
+   dev-python/fuo-ytmusic                   | 0.4.2                                     |  D         | https://github.com/feeluown/feeluown-ytmusic                                            | youtube music support for feeluown
    dev-python/janus                         | 1.0.0-r1                                  |  D, RD     | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
    dev-python/qasync                        | 0.27.1                                    |  D, RD     | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
