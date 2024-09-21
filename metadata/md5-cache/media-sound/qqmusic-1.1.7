@@ -1,4 +1,4 @@
-DEFINED_PHASES=install nofetch postinst postrm preinst unpack
+DEFINED_PHASES=install postinst postrm preinst unpack
 DESCRIPTION=Tencent QQ Music, converted from .deb package
 EAPI=8
 HOMEPAGE=https://y.qq.com/
@@ -7,8 +7,8 @@ INHERIT=desktop unpacker xdg
 KEYWORDS=-* ~amd64
 LICENSE=CC0-1.0
 RDEPEND=x11-libs/gtk+:3 x11-libs/libXScrnSaver dev-libs/nss
-RESTRICT=strip fetch
+RESTRICT=strip mirror
 SLOT=0
-SRC_URI=qqmusic_1.1.7_amd64.deb
+SRC_URI=https://dldir1.qq.com/music/clntupate/linux/qqmusic_1.1.7_amd64.deb
 _eclasses_=desktop	56973babb9c5f19cab0eeb53ece644c6	multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	unpacker	fb4b84181244b3b9990fa0bf40232dd2	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	xdg	8d7d90c01b1b1c2602dab6fc6b177097
-_md5_=181f05d46a9e25e947fcb3f9711b58f5
+_md5_=fca4ba18b29b8fccc3cd08076ff3b516
