@@ -261,7 +261,7 @@ net-proxy/mihomo 1.18.8: Another Clash Kernel, formerly Clash.Meta
 net-proxy/naiveproxy-bin 128.0.6613.40_p1: A proxy using Chromium's network stack to camouflage traffic
 net-proxy/proxy-server 8.0.0: Implementation of all proxy protocols using modern c++
 net-proxy/shadowsocks-rust 1.20.4 1.21.0: A Rust port of shadowsocks.
-net-proxy/sing-box 1.9.5: The universal proxy platform.
+net-proxy/sing-box 1.9.6: The universal proxy platform.
 net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
 net-proxy/trojan-go-fork 2024.09.07: A fork of trojan-go
 net-proxy/v2ray 5.18.0 5.19.0: A platform for building proxies to bypass network restrictions.
@@ -300,7 +300,7 @@ sys-kernel/xanmod-sources 6.10.2: Full XanMod source, including the Gentoo patch
 sys-kernel/zenpower3 0.2.0: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libsolv 0.7.28: Library for solving packages and reading repositories
-sys-power/tlpui 1.5.0_p6 1.6.0: A GTK user interface for TLP written in Python
+sys-power/tlpui 1.5.0_p6 1.6.0 1.6.5: A GTK user interface for TLP written in Python
 virtual/dist-kernel 6.10.2: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 virtual/loong-ow-compat 0: Virtual for LoongArch old-world compatibility
