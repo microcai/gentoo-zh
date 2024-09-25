@@ -12,5 +12,5 @@ RDEPEND=app-admin/chrpath app-arch/xz-utils media-libs/mesa net-misc/curl x11-li
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://www.softmaker.net/down/softmaker-freeoffice-2021-1064-amd64.tgz
-_eclasses_=desktop	56973babb9c5f19cab0eeb53ece644c6	pax-utils	6285e04fab2343992d2df0df4edf6003	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	xdg	8d7d90c01b1b1c2602dab6fc6b177097
+_eclasses_=desktop	56973babb9c5f19cab0eeb53ece644c6	pax-utils	6285e04fab2343992d2df0df4edf6003	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	xdg	854eae304447322625df5991e20ed18f
 _md5_=ccbd874137784ddc46ef09da28126a21

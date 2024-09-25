@@ -12,5 +12,5 @@ RDEPEND=app-emulation/deepin-wine-helper app-emulation/deepin-wine5 media-fonts/
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://com-store-packages.uniontech.com/appstore/pool/appstore/c/com.qq.im.deepin/com.qq.im.deepin_9.3.2deepin20_i386.deb https://community-packages.deepin.com/deepin/pool/main/o/openldap/libldap-2.4-2_2.4.47+dfsg.4-1+eagle_i386.deb https://community-packages.deepin.com/deepin/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.27.1-1+dde_i386.deb https://github.com/vufa/deepin-wine-qq-arch/releases/download/v9.5.2.27897-1/deepin-wine-qq-9.5.2.27897-1-x86_64.pkg.tar.zst
-_eclasses_=desktop	56973babb9c5f19cab0eeb53ece644c6	multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	unpacker	fb4b84181244b3b9990fa0bf40232dd2	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	xdg	8d7d90c01b1b1c2602dab6fc6b177097
+_eclasses_=desktop	56973babb9c5f19cab0eeb53ece644c6	multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	unpacker	fb4b84181244b3b9990fa0bf40232dd2	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	xdg	854eae304447322625df5991e20ed18f
 _md5_=20b3c5c47416b0234b0297105425ab80

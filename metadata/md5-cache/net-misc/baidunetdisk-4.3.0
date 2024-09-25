@@ -10,5 +10,5 @@ RDEPEND=app-crypt/p11-kit dev-libs/nss media-libs/alsa-lib x11-libs/gtk+:3[cups]
 RESTRICT=strip mirror
 SLOT=0
 SRC_URI=http://wppkg.baidupcs.com/issue/netdisk/Linuxguanjia/4.3.0/baidunetdisk_4.3.0_amd64.deb
-_eclasses_=multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	unpacker	fb4b84181244b3b9990fa0bf40232dd2	desktop	56973babb9c5f19cab0eeb53ece644c6	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	xdg	8d7d90c01b1b1c2602dab6fc6b177097
+_eclasses_=multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	unpacker	fb4b84181244b3b9990fa0bf40232dd2	desktop	56973babb9c5f19cab0eeb53ece644c6	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	xdg	854eae304447322625df5991e20ed18f
 _md5_=88be30b39fbc5c23d171b9acbdd06abd
