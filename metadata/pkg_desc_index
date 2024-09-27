@@ -138,7 +138,7 @@ dev-util/android-studio 2024.1.1.13: Android development environment based on In
 dev-util/arch-install-scripts 28-r1: Arch Linux install tools (pacstrap, genfstab, arch-chroot)
 dev-util/asdf-vm 0.14.0: Manage all your runtime versions with one tool
 dev-util/cargo-about 0.6.4: Cargo plugin to generate list of all licenses for a crate
-dev-util/jetbrains-toolbox 1.28.1.15219 2.0.3.17006: Manage all your JetBrains Projects and Tools
+dev-util/jetbrains-toolbox 1.28.1.15219 2.4.2.32922: Manage all your JetBrains Projects and Tools
 dev-util/mamba 1.5.8: The Fast Cross-Platform Package Manager
 dev-util/mongodb-compass-bin 1.43.6: The GUI for MongoDB
 dev-util/pacstrap 28: Pacstrap - install packages to the specified new root directorye
