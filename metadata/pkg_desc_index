@@ -100,7 +100,7 @@ dev-cpp/nameof 0.10.4: Nameof operator for modern C++
 dev-cpp/reproc 14.2.4: A cross-platform (C99/C++11) process library
 dev-cpp/tgbot-cpp 1.8: C++ library for Telegram bot API
 dev-cpp/tl-expected 1.1.0: Guideline Support Library implementation by Microsoft
-dev-db/dbeaver-bin 24.1.5-r1: Free universal database tool (community edition).
+dev-db/dbeaver-bin 24.2.1: Free universal database tool (community edition).
 dev-db/mongodb 5.3.1 6.2.0-r4: A high-performance, open source, schema-free document-oriented database
 dev-debug/lldb-mi 0.0.1 9999: LLDB Machine Interface Driver
 dev-java/google-java-format 1.22.0: Reformats Java source code to comply with Google Java Style.
@@ -140,7 +140,7 @@ dev-util/asdf-vm 0.14.0: Manage all your runtime versions with one tool
 dev-util/cargo-about 0.6.4: Cargo plugin to generate list of all licenses for a crate
 dev-util/jetbrains-toolbox 1.28.1.15219 2.4.2.32922: Manage all your JetBrains Projects and Tools
 dev-util/mamba 1.5.8: The Fast Cross-Platform Package Manager
-dev-util/mongodb-compass-bin 1.43.6: The GUI for MongoDB
+dev-util/mongodb-compass-bin 1.44.4: The GUI for MongoDB
 dev-util/pacstrap 28: Pacstrap - install packages to the specified new root directorye
 dev-util/patchelf-liblol 0.1.4: patchelf patched for building libLoL only
 dev-util/redpanda-cpp 2.26: A lightweight yet powerful C/C++/GNU Assembly IDE.
@@ -148,7 +148,7 @@ dev-util/tailspin 3.0.2: A log file highlighter
 dev-util/tauri-cli 1.5.9 2.0.0_alpha17: Command line interface for building Tauri apps
 dev-util/zprint-bin 1.2.7 1.2.8: Clojure and Clojurescript source code formatter
 dev-vcs/gitoxide 0.37.0: A command-line application for interacting with git repositories
-dev-vcs/sourcegit-bin 8.27: Opensource Git GUI client.
+dev-vcs/sourcegit-bin 8.31: Opensource Git GUI client.
 games-arcade/osu-lazer 2024.412.1 2024.521.2: rhythm is just a *click* away!
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-fps/source-engine 9999: A 3D game engine developed by Valve
@@ -253,7 +253,7 @@ net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
 net-proxy/clash-nyanpasu 1.5.1: Clash GUI based on tauri
 net-proxy/clash-rs 0.1.15: Custom protocol, rule based network proxy
 net-proxy/clash-verge-bin 1.6.0 1.6.4 1.6.6 1.7.5: (Continuation) of Clash Meta GUI based on Tauri.
-net-proxy/dae 0.7.1 0.8.0_rc1 9999: A lightweight and high-performance transparent proxy solution based on eBPF
+net-proxy/dae 0.7.4 0.8.0_rc2 9999: A lightweight and high-performance transparent proxy solution based on eBPF
 net-proxy/daed 0.7.0 9999: A Modern Dashboard For dae
 net-proxy/hysteria 2.5.1: A powerful, lightning fast and censorship resistant proxy.
 net-proxy/juicity 0.4.2: juicity is a quic-based proxy protocol.
