@@ -143,7 +143,7 @@ dev-util/mamba 1.5.8: The Fast Cross-Platform Package Manager
 dev-util/mongodb-compass-bin 1.44.4: The GUI for MongoDB
 dev-util/pacstrap 28: Pacstrap - install packages to the specified new root directorye
 dev-util/patchelf-liblol 0.1.4: patchelf patched for building libLoL only
-dev-util/redpanda-cpp 2.26: A lightweight yet powerful C/C++/GNU Assembly IDE.
+dev-util/redpanda-cpp 2.26 3.1: A lightweight yet powerful C/C++/GNU Assembly IDE.
 dev-util/tailspin 3.0.2: A log file highlighter
 dev-util/tauri-cli 1.5.9 2.0.0_alpha17: Command line interface for building Tauri apps
 dev-util/zprint-bin 1.2.7 1.2.8: Clojure and Clojurescript source code formatter
