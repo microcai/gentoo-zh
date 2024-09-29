@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-09-29 20:02:45 CST)
+(The last generation time: 2024-09-29 21:06:35 CST)
 
 ### Packages
 
@@ -10,8 +10,6 @@
  app-admin/enpass                           | 6.10.1.1661                               |            | https://www.enpass.io                                                                   | A cross-platform, complete password management solution.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/rbw                              | 1.12.1                                    |            | https://github.com/doy/rbw                                                              | Unofficial Bitwarden CLI
---------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/winbox-bin                       | 4.0_beta6                                 |            | https://mikrotik.com/                                                                   | Standalone client for Mikrotik routers
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/zenmonitor3                      | 2.0.0                                     |            | https://git.exozy.me/a/zenmonitor3                                                      | Zen monitor is monitoring software for AMD Zen-based CPUs
    sys-kernel/zenpower3                     | 0.2.0                                     |  D, RD     | https://git.exozy.me/a/zenpower3                                                        | Linux kernel driver for reading sensors of AMD Zen family CPUs
