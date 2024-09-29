@@ -15,7 +15,6 @@ acct-user/ntpd-rs 0: user for ntpd-rs daemon
 acct-user/ntpd-rs-observe 0: user for ntpd-rs-observe daemon
 app-admin/enpass 6.10.1.1661: A cross-platform, complete password management solution.
 app-admin/rbw 1.12.1: Unofficial Bitwarden CLI
-app-admin/winbox-bin 4.0_beta6: Standalone client for Mikrotik routers
 app-admin/zenmonitor3 2.0.0: Zen monitor is monitoring software for AMD Zen-based CPUs
 app-alternatives/v2ray-geoip 0-r2: symlink for v2ray-geoip
 app-alternatives/v2ray-geosite 0-r2: symlink for v2ray-geosite
