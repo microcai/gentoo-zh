@@ -14,24 +14,24 @@ CRATES="
 	equivalent@1.0.1
 	getrandom@0.2.15
 	hashbrown@0.14.5
-	indexmap@2.2.6
-	libc@0.2.155
+	indexmap@2.5.0
+	libc@0.2.159
 	libredox@0.1.3
 	memchr@2.7.4
 	option-ext@0.2.0
 	proc-macro2@1.0.86
-	quote@1.0.36
-	redox_users@0.4.5
-	serde@1.0.204
-	serde_derive@1.0.204
-	serde_spanned@0.6.6
-	syn@2.0.71
-	thiserror-impl@1.0.62
-	thiserror@1.0.62
-	toml@0.8.14
-	toml_datetime@0.6.6
-	toml_edit@0.22.15
-	unicode-ident@1.0.12
+	quote@1.0.37
+	redox_users@0.4.6
+	serde@1.0.210
+	serde_derive@1.0.210
+	serde_spanned@0.6.8
+	syn@2.0.79
+	thiserror-impl@1.0.64
+	thiserror@1.0.64
+	toml@0.8.19
+	toml_datetime@0.6.8
+	toml_edit@0.22.22
+	unicode-ident@1.0.13
 	wasi@0.11.0+wasi-snapshot-preview1
 	windows-sys@0.48.0
 	windows-targets@0.48.5
@@ -42,7 +42,7 @@ CRATES="
 	windows_x86_64_gnu@0.48.5
 	windows_x86_64_gnullvm@0.48.5
 	windows_x86_64_msvc@0.48.5
-	winnow@0.6.13
+	winnow@0.6.20
 "
 
 inherit cargo desktop xdg
@@ -66,9 +66,10 @@ RDEPEND="
 "
 
 src_install() {
-	dobin "target/release/mpv-handler"
+	dobin "$(cargo_target_dir)/mpv-handler"
 	dodoc "share/linux/config.toml"
 	domenu "share/linux/mpv-handler.desktop"
+	domenu "share/linux/mpv-handler-debug.desktop"
 }
 
 pkg_postinst() {
