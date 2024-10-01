@@ -30,6 +30,7 @@ src_install(){
 	dobin "${S}"/usr/bin/clash-verge
 	insinto /usr/lib/clash-verge
 	doins -r "${S}"/usr/lib/clash-verge/resources
+	dosym -r "/usr/bin/mihomo" "/usr/bin/verge-mihomo"
 	domenu usr/share/applications/clash-verge.desktop
 	doicon -s 128 usr/share/icons/hicolor/128x128/apps/${PN/-bin}.png
 	doicon -s 256 usr/share/icons/hicolor/256x256@2/apps/${PN/-bin}.png
