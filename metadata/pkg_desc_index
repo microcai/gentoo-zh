@@ -209,7 +209,7 @@ net-dns/dnslookup 1.11.1: Simple command line utility to make DNS lookups to the
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
 net-dns/dog 0.1.0-r1 0.1.0_p20211007: A command-line DNS client
 net-dns/libidn11 1.33: Internationalized Domain Names (IDN) implementation
-net-dns/mosdns 5.3.1: A DNS forwarder
+net-dns/mosdns 5.3.3: A DNS forwarder
 net-dns/mosdns-cn-bin 1.4.0-r1: A DNS forwarder
 net-dns/q 0.19.2-r1: A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
 net-fs/mc 2024.09.16.17.43.14: Minio client provides alternatives for ls, cat on cloud storage and filesystems

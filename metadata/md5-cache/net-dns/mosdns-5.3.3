@@ -1,6 +1,5 @@
 BDEPEND=>=dev-lang/go-1.20:= app-arch/unzip virtual/pkgconfig
 DEFINED_PHASES=compile install unpack
-DEPEND=!net-dns/mosdns:4
 DESCRIPTION=A DNS forwarder
 EAPI=8
 HOMEPAGE=https://github.com/IrineSistiana/mosdns
@@ -8,9 +7,8 @@ INHERIT=go-module systemd
 IUSE=systemd
 KEYWORDS=~amd64 ~arm64 ~riscv
 LICENSE=GPL-3
-RDEPEND=!net-dns/mosdns:4
 RESTRICT=strip
 SLOT=5
-SRC_URI=https://github.com/IrineSistiana/mosdns/archive/refs/tags/v5.3.1.tar.gz -> mosdns-5.3.1.tar.gz https://github.com/peeweep/gentoo-go-deps/releases/download/mosdns-5.3.1/mosdns-5.3.1-deps.tar.xz
+SRC_URI=https://github.com/IrineSistiana/mosdns/archive/refs/tags/v5.3.3.tar.gz -> mosdns-5.3.3.tar.gz https://github.com/peeweep/gentoo-go-deps/releases/download/mosdns-5.3.3/mosdns-5.3.3-deps.tar.xz
 _eclasses_=multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	flag-o-matic	fa33e3696fe4689dda7e9affe92e2c94	go-env	90efbc8636d2f02d9654183330e84cf7	go-module	83fd3ed1657cfc316c93d6a37018290d	systemd	0f241b5c9f3758c3d3423df59a7f655a
-_md5_=90d1c265dc5a4aa83aef1392aad06bd5
+_md5_=684d9ce396305cffee69217468f2f58c
