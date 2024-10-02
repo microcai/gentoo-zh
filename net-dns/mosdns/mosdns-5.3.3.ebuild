@@ -11,8 +11,6 @@ SRC_URI="
 	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
 "
 
-RDEPEND="!net-dns/mosdns:4"
-DEPEND="${RDEPEND}"
 LICENSE="GPL-3"
 SLOT="5"
 KEYWORDS="~amd64 ~arm64 ~riscv"
