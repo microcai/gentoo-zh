@@ -964,13 +964,6 @@ github_account = "Chilledheart"
 
 #["net-vpn/sstp-server"]
 
-["net-vpn/tailscale"]
-source = "github"
-github = "tailscale/tailscale"
-use_latest_release = true
-prefix = "v"
-github_account = "peeweep"
-
 #["net-wireless/linux-wifi-hotspot"]
 
 ["sci-chemistry/vesta"]
