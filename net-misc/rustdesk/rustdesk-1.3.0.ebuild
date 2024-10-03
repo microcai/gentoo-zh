@@ -837,7 +837,7 @@ RDEPEND="
 	x11-libs/libXfixes
 	media-libs/libpulse
 	x11-misc/xdotool
-	media-libs/libva
+	media-libs/libva[X]
 	wayland? ( media-video/pipewire[gstreamer] )
 	hwaccel? ( x11-libs/libvdpau )
 "
@@ -863,11 +863,11 @@ src_prepare() {
 	PATCHES+=(
 		"${FILESDIR}"/rust-sciter.patch
 	)
-	cd "${S}"/..
+	cd "${S}"/.. || die
 
 	default
 
-	cd -
+	cd - || die
 	cd ../rust-webm-*/src/sys || die
 	rm -rf libwebm/ || die
 	ln -s "${WORKDIR}"/libwebm-libwebm-*/ libwebm || die
