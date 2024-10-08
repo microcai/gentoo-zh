@@ -12,5 +12,5 @@ RDEPEND=sys-fs/dosfstools sys-fs/exfat-utils sys-block/parted qt5? ( dev-qt/qtco
 RESTRICT=strip mirror
 SLOT=0
 SRC_URI=https://github.com/ventoy/Ventoy/releases/download/v1.0.99/ventoy-1.0.99-linux.tar.gz
-_eclasses_=desktop	56973babb9c5f19cab0eeb53ece644c6	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	xdg	854eae304447322625df5991e20ed18f
+_eclasses_=desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	xdg	3ef49a87c52c8b77c476351195dfe575
 _md5_=082331c96646203bc7b7f73695cc9c1a

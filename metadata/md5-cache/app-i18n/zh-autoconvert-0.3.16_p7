@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://salsa.debian.org/chinese-team/zh-autoconvert/-/archive/debian/0.3.16-7/zh-autoconvert-debian-0.3.16-7.tar.gz
-_eclasses_=multilib	7e1347c006a76bb812f3a9f663b79991	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9
+_eclasses_=multilib	b2a329026f2e404e9e371097dda47f96	toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87
 _md5_=0f84a837c05645f280bf576e13af0db9

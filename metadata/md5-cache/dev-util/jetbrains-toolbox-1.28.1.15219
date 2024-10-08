@@ -10,5 +10,5 @@ LICENSE=JetBrainsToolbox
 RESTRICT=strip mirror
 SLOT=0
 SRC_URI=https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.28.1.15219.tar.gz
-_eclasses_=xdg-utils	5465aed08f1dfc2a75f14cbea4272961	xdg	854eae304447322625df5991e20ed18f	desktop	56973babb9c5f19cab0eeb53ece644c6
+_eclasses_=xdg-utils	42869b3c8d86a70ef3cf75165a395e09	xdg	3ef49a87c52c8b77c476351195dfe575	desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed
 _md5_=4bbb0dd78ee26dc752273374bb8e3608

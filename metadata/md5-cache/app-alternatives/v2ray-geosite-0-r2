@@ -9,5 +9,5 @@ LICENSE=CC0-1.0
 RDEPEND=v2fly? ( virtual/v2ray-domain-list-community ) loyalsoldier? ( dev-libs/v2ray-rules-dat-bin[geosite] )
 REQUIRED_USE=^^ ( v2fly loyalsoldier )
 SLOT=0
-_eclasses_=app-alternatives	7e9cb9b9eda5c46d0e04f3c992226ff2
+_eclasses_=app-alternatives	a02ee0b741e1dde4e28b2b83d2fc28a7
 _md5_=cbcf541691d88ab71c200cd383e8dde2

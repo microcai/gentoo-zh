@@ -9,5 +9,5 @@ LICENSE=CC0-1.0
 RDEPEND=v2fly? ( virtual/v2ray-geoip ) loyalsoldier? ( dev-libs/v2ray-rules-dat-bin[geoip] )
 REQUIRED_USE=^^ ( v2fly loyalsoldier )
 SLOT=0
-_eclasses_=app-alternatives	7e9cb9b9eda5c46d0e04f3c992226ff2
+_eclasses_=app-alternatives	a02ee0b741e1dde4e28b2b83d2fc28a7
 _md5_=cf10b78286ab0843c2887084dc91758b

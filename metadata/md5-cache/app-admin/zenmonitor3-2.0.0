@@ -11,5 +11,5 @@ LICENSE=MIT
 RDEPEND=x11-libs/gtk+:3 sys-kernel/zenpower3 polkit? ( sys-auth/polkit )
 SLOT=0
 SRC_URI=https://git.exozy.me/a/zenmonitor3/archive/v2.0.0.tar.gz -> zenmonitor3-2.0.0.tar.gz
-_eclasses_=xdg-utils	5465aed08f1dfc2a75f14cbea4272961	xdg	854eae304447322625df5991e20ed18f
+_eclasses_=xdg-utils	42869b3c8d86a70ef3cf75165a395e09	xdg	3ef49a87c52c8b77c476351195dfe575
 _md5_=8b2cfbdefea447cb86e4bfacb9206e92
