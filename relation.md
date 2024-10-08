@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-10-08 20:16:20 CST)
+(The last generation time: 2024-10-08 20:45:13 CST)
 
 ### Packages
 
@@ -531,7 +531,7 @@
  net-proxy/shadowsocks-rust                 | 1.20.4                                    |            | https://github.com/shadowsocks/shadowsocks-rust                                         | A Rust port of shadowsocks.
                                             | 1.21.0                                    |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/sing-box                         | 1.9.6                                     |            | https://sing-box.sagernet.org/                                                          | The universal proxy platform.
+ net-proxy/sing-box                         | 1.9.7                                     |            | https://sing-box.sagernet.org/                                                          | The universal proxy platform.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/smartproxy                       | 0.9.5                                     |            | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -540,11 +540,11 @@
  net-proxy/v2rayA                           | 2.2.5.7                                   |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                             | 9999                                      |            |                                                                                         |
    net-proxy/Xray                           | 1.8.24                                    | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
-                                            | 24.9.19                                   |            |                                                                                         |
+                                            | 24.9.30                                   |            |                                                                                         |
      app-alternatives/v2ray-geoip           | 0-r2                                      |  D, RD     |                                                                                         | symlink for v2ray-geoip
      app-alternatives/v2ray-geosite         | 0-r2                                      |  D, RD     |                                                                                         | symlink for v2ray-geosite
-   net-proxy/v2ray                          | 5.18.0                                    | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
-                                            | 5.19.0                                    |            |                                                                                         |
+   net-proxy/v2ray                          | 5.19.0                                    | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
+                                            | 5.20.0                                    |            |                                                                                         |
    net-proxy/v2ray-bin                      | 4.45.0-r2                                 | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
                                             | 5.12.1-r1                                 |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
