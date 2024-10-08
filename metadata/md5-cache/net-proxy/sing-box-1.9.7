@@ -1,0 +1,14 @@
+BDEPEND=>=dev-lang/go-1.18 quic? ( >=dev-lang/go-1.20 ) utls? ( >=dev-lang/go-1.20 ) ech? ( >=dev-lang/go-1.21 ) >=dev-lang/go-1.20:= app-arch/unzip virtual/pkgconfig
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=The universal proxy platform.
+EAPI=8
+HOMEPAGE=https://sing-box.sagernet.org/ https://github.com/SagerNet/sing-box
+INHERIT=go-module systemd
+IUSE=+quic grpc +dhcp +wireguard +ech +utls +reality +acme +clash-api v2ray-api +gvisor tor
+KEYWORDS=~amd64 ~riscv
+LICENSE=GPL-3+
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/SagerNet/sing-box/archive/refs/tags/v1.9.7.tar.gz -> sing-box-1.9.7.tar.gz tor? ( https://github.com/Puqns67/gentoo-deps/releases/download/sing-box-1.9.7/sing-box-1.9.7-deps.tar.xz ) !tor? ( https://github.com/Puqns67/gentoo-deps/releases/download/sing-box-1.9.7/sing-box-1.9.7-vendor.tar.xz )
+_eclasses_=toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	systemd	0f241b5c9f3758c3d3423df59a7f655a	multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	flag-o-matic	fa33e3696fe4689dda7e9affe92e2c94	go-env	90efbc8636d2f02d9654183330e84cf7	go-module	83fd3ed1657cfc316c93d6a37018290d
+_md5_=e5e31220dce47b861f3fc59ec64e7cda
