@@ -274,7 +274,7 @@ sci-chemistry/vesta 3.5.8: Visualization for Electronic and STructural Analysis
 sci-electronics/circuitjs1-bin 2.9.1: Electronic Circuit Simulator in the Browser
 sci-electronics/jlc-assistant-bin 5.0.69: JLC Order Assistant (binary package)
 sci-electronics/lceda 6.5.37 6.5.46: LCEDA (binary package)
-sci-electronics/lceda-pro 2.2.27.1: LCEDA Pro (binary package)
+sci-electronics/lceda-pro 2.2.32.3: LCEDA Pro (binary package)
 sci-electronics/openfpgaloader 0.12.1: Universal utility for programming FPGAs
 sec-policy/apparmor-profile-deepinwine 1.0.0: A collection of AppArmor profiles for Deepinwine6
 sys-apps/aptly 1.5.0 9999: A swiss army knife for Debian repository management
