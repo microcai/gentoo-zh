@@ -12,7 +12,7 @@ SRC_URI="
 "
 
 S="${WORKDIR}"
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
