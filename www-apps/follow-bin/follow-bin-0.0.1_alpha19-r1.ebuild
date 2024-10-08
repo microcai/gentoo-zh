@@ -83,6 +83,12 @@ src_unpack() {
 	"${S}/${P}.AppImage" --appimage-extract || die
 }
 
+src_prepare() {
+	# fix permissions
+	find "${S}/squashfs-root" -type d -exec chmod 0755 "{}" + || die 'chmod 0755 failed.'
+	default
+}
+
 src_install() {
 	cd "${S}/squashfs-root" || die
 
