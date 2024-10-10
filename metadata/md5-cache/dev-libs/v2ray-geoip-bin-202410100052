@@ -5,5 +5,5 @@ HOMEPAGE=https://github.com/v2fly/geoip
 KEYWORDS=~amd64 ~arm ~arm64 ~loong ~riscv ~x86
 LICENSE=CC-BY-SA-4.0
 SLOT=0
-SRC_URI=https://github.com/v2fly/geoip/releases/download/202409050049/geoip.dat -> v2ray-geoip-bin-202409050049.dat
+SRC_URI=https://github.com/v2fly/geoip/releases/download/202410100052/geoip.dat -> v2ray-geoip-bin-202410100052.dat
 _md5_=344f826f771bdea81a452020f27c8adc

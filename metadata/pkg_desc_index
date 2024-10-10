@@ -112,9 +112,9 @@ dev-libs/lunar-calendar 3.0.1: a gtk+ calendar widget for chinese lunar library
 dev-libs/lunar-date 3.0.1: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-libs/v2ray-domain-list-community 20240907043125: Community managed domain list for V2Ray.
-dev-libs/v2ray-domain-list-community-bin 20240907043125: Community managed domain list for V2Ray.
+dev-libs/v2ray-domain-list-community-bin 20241007202930: Community managed domain list for V2Ray.
 dev-libs/v2ray-geoip 202409050049: GeoIP for V2Ray.
-dev-libs/v2ray-geoip-bin 202409050049: GeoIP for V2Ray.
+dev-libs/v2ray-geoip-bin 202410100052: GeoIP for V2Ray.
 dev-libs/v2ray-rules-dat-bin 202408072210: Enhanced edition of V2Ray rules dat files.
 dev-python/archspec 0.2.4: A library for detecting, labeling, and reasoning about microarchitectures
 dev-python/conda 24.5.0: OS-agnostic, system-level binary package manager and ecosystem
@@ -267,7 +267,7 @@ net-proxy/v2ray 5.19.0 5.20.0: A platform for building proxies to bypass network
 net-proxy/v2ray-bin 4.45.0-r2 5.12.1-r1: A platform for building proxies to bypass network restrictions
 net-proxy/v2rayA 2.2.5.7 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
-net-proxy/yass 1.14.3: lightweight and efficient, socks5/http forward proxy
+net-proxy/yass 1.14.4: lightweight and efficient, socks5/http forward proxy
 net-vpn/sstp-server 0.6.0: A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
 net-wireless/linux-wifi-hotspot 9999: Linux Wifi Hotspot
 sci-chemistry/vesta 3.5.8: Visualization for Electronic and STructural Analysis
