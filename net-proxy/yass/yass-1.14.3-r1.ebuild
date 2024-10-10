@@ -82,6 +82,10 @@ BDEPEND="
 	test? ( net-misc/curl )
 "
 
+PATCHES=(
+	"${FILESDIR}"/translation-qt5.patch
+)
+
 src_prepare() {
 	cmake_src_prepare
 	# some tests require network access, comment it out if not supported
