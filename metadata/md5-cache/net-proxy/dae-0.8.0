@@ -10,6 +10,6 @@ LICENSE=AGPL-3
 RDEPEND=app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite
 RESTRICT=strip
 SLOT=0
-SRC_URI=https://github.com/daeuniverse/dae/releases/download/v0.7.4/dae-full-src.zip -> dae-0.7.4.zip
+SRC_URI=https://github.com/daeuniverse/dae/releases/download/v0.8.0/dae-full-src.zip -> dae-0.8.0.zip
 _eclasses_=toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87	multilib	b2a329026f2e404e9e371097dda47f96	flag-o-matic	f14aba975c94ccaa9f357a27e3b17ffe	linux-info	ea4122ba1d8791a12b78e53f9510a2e3	multiprocessing	1e32df7deee68372153dca65f4a7c21f	go-env	90efbc8636d2f02d9654183330e84cf7	go-module	df32d29550d40a92da723d3b8e17b467	systemd	54bd206bb5c4efac6ae28b6b006713b0	bash-completion-r1	767861f3744f589ee5291c1698b1c082	shell-completion	0b655d0d825e157a5e99c463bddaac16
 _md5_=a841e750840b55562f6a62f518bb66b8
