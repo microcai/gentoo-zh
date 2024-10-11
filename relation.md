@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-10-10 22:05:59 CST)
+(The last generation time: 2024-10-12 01:42:22 CST)
 
 ### Packages
 
@@ -511,8 +511,7 @@
                                             | 1.6.6                                     |            |                                                                                         |
                                             | 1.7.7-r1                                  |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/dae                              | 0.7.4                                     |            | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
-                                            | 0.8.0_rc2                                 |            |                                                                                         |
+ net-proxy/dae                              | 0.8.0                                     |            | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
                                             | 9999                                      |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/daed                             | 0.7.0                                     |            | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
