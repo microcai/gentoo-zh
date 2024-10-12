@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-10-12 01:42:22 CST)
+(The last generation time: 2024-10-12 17:46:37 CST)
 
 ### Packages
 
@@ -272,7 +272,7 @@
                                             | 3.1                                       |            |                                                                                         |
                                             | 9999                                      |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/Plangothic                     | 1.8.5764                                  |            | https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic-Project                  | 遍黑体项目（Plangothic Project）
+ media-fonts/Plangothic                     | 1.9.5766                                  |            | https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic-Project                  | 遍黑体项目（Plangothic Project）
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/iansui                         | 1.000                                     |            | https://github.com/ButTaiwan/iansui                                                     | An open-source Chinese font derived from Klee One (Fontworks).
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
