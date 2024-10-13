@@ -64,9 +64,14 @@ Our server, hosted on Finland:
 GENTOO_MIRRORS="${GENTOO_MIRRORS} https://distfiles.gentoocn.org"
 ```
 
+Chongqing University mirror:
+```
+GENTOO_MIRRORS="${GENTOO_MIRRORS} https://mirrors.cqu.edu.cn/gentoo-zh"
+```
+
 Nanjing University mirror:
 ```
-GENTOO_MIRRORS="${GENTOO_MIRRORS} https://mirror.nju.edu.cn/gentoo-zh"
+GENTOO_MIRRORS="${GENTOO_MIRRORS} https://mirrors.nju.edu.cn/gentoo-zh"
 ```
 
 # See wiki for some package not working
