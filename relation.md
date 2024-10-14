@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-10-14 11:39:26 CST)
+(The last generation time: 2024-10-14 17:18:33 CST)
 
 ### Packages
 
@@ -243,7 +243,7 @@
  dev-util/redpanda-cpp                      | 2.26                                      |            | https://royqh.net/redpandacpp                                                           | A lightweight yet powerful C/C++/GNU Assembly IDE.
                                             | 3.1                                       |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/tailspin                          | 3.0.2                                     |            | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
+ dev-util/tailspin                          | 4.0.0                                     |            | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/zprint-bin                        | 1.2.7                                     |            | https://github.com/kkinnear/zprint                                                      | Clojure and Clojurescript source code formatter
                                             | 1.2.8                                     |            |                                                                                         |
