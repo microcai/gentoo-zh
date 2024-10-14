@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-10-14 17:18:33 CST)
+(The last generation time: 2024-10-14 23:27:13 CST)
 
 ### Packages
 
@@ -238,7 +238,7 @@
  dev-util/jetbrains-toolbox                 | 1.28.1.15219                              |            | https://www.jetbrains.com/toolbox/app                                                   | Manage all your JetBrains Projects and Tools
                                             | 2.4.2.32922                               |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/mongodb-compass-bin               | 1.44.4                                    |            | https://mongodb.com/compass                                                             | The GUI for MongoDB
+ dev-util/mongodb-compass-bin               | 1.44.5                                    |            | https://mongodb.com/compass                                                             | The GUI for MongoDB
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/redpanda-cpp                      | 2.26                                      |            | https://royqh.net/redpandacpp                                                           | A lightweight yet powerful C/C++/GNU Assembly IDE.
                                             | 3.1                                       |            |                                                                                         |
@@ -250,7 +250,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gitoxide                           | 0.37.0                                    |            | https://github.com/Byron/gitoxide                                                       | A command-line application for interacting with git repositories
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/sourcegit-bin                      | 8.33                                      |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
+ dev-vcs/sourcegit-bin                      | 8.34                                      |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-arcade/osu-lazer                     | 2024.412.1                                |            | https://osu.ppy.sh                                                                      | rhythm is just a *click* away!
                                             | 2024.521.2                                |            |                                                                                         |
