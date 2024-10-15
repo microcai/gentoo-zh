@@ -1,11 +1,11 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # Copyright 2019 Rabenda
 
 EAPI=8
 
-inherit xdg desktop
+inherit xdg desktop wrapper
 
 DESCRIPTION="Manage all your JetBrains Projects and Tools"
 HOMEPAGE="https://www.jetbrains.com/toolbox/app"
@@ -29,6 +29,8 @@ src_install() {
 	keepdir /opt/jetbrains-toolbox
 	insinto /opt/jetbrains-toolbox
 	doins jetbrains-toolbox
+
+	make_wrapper jetbrains-toolbox /opt/jetbrains-toolbox/jetbrains-toolbox
 
 	newicon "${FILESDIR}/${PN}.svg" "${PN}.svg"
 
