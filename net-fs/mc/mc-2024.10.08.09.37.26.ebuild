@@ -8,12 +8,14 @@ inherit go-module
 MY_PV="$(ver_cut 1-3)T$(ver_cut 4-7)Z"
 MY_PV=${MY_PV//./-}
 YEAR="$(ver_cut 1)"
-EGIT_COMMIT=04c5116c9bdf8b762acc54b5500a9a276a5ec05a
+EGIT_COMMIT=cf128de2cf42e763e7bd30c6df8b749fa94e0c10
 
 DESCRIPTION="Minio client provides alternatives for ls, cat on cloud storage and filesystems"
 HOMEPAGE="https://github.com/minio/mc"
-SRC_URI="https://github.com/minio/mc/archive/RELEASE.${MY_PV}.tar.gz -> ${P}.tar.gz"
-SRC_URI+=" https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz"
+SRC_URI="
+	https://github.com/minio/mc/archive/RELEASE.${MY_PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
+"
 
 S="${WORKDIR}/${PN}-RELEASE.${MY_PV}"
 LICENSE="Apache-2.0 BSD MIT MPL-2.0"
