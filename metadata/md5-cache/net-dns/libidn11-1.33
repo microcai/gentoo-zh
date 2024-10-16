@@ -11,5 +11,5 @@ LICENSE=GPL-2 GPL-3 LGPL-3
 RDEPEND=nls? ( >=virtual/libintl-0-r1[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] )
 SLOT=11
 SRC_URI=mirror://gnu/libidn/libidn-1.33.tar.gz verify-sig? ( mirror://gnu/libidn/libidn-1.33.tar.gz.sig )
-_eclasses_=elisp-common	abb2dda42f680fce87602c8273f832c7	toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87	multilib	b2a329026f2e404e9e371097dda47f96	libtool	6b28392a775f807c8be5fc7ec9a605b9	out-of-source-utils	dbf9e34ee8964084651e25907fa8f52c	multibuild	4650a65187015567b4e041bb9bfdb364	multilib-build	9ac26ea006828266d235e2f0135429b5	multilib-minimal	e9f54d75b074edc47d36994bbc1e2123	verify-sig	a79ba011daaf532d71a219182474d150
+_eclasses_=elisp-common	abb2dda42f680fce87602c8273f832c7	toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87	multilib	b2a329026f2e404e9e371097dda47f96	libtool	6b28392a775f807c8be5fc7ec9a605b9	out-of-source-utils	dbf9e34ee8964084651e25907fa8f52c	multibuild	4650a65187015567b4e041bb9bfdb364	multilib-build	9ac26ea006828266d235e2f0135429b5	multilib-minimal	e9f54d75b074edc47d36994bbc1e2123	verify-sig	745dccb7d4656514f1e966cce314d7db
 _md5_=959cd4839ad22851801690569046744c
