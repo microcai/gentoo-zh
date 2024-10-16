@@ -3,6 +3,8 @@
 
 EAPI=8
 
+inherit desktop
+
 MY_PV=$(ver_cut 1-3)-alpha.$(ver_cut 5)
 
 DESCRIPTION="Next generation information browser"
@@ -92,6 +94,8 @@ src_prepare() {
 src_install() {
 	cd "${S}/squashfs-root" || die
 
+	domenu Follow.desktop
+
 	local apphome="/opt/${PN}"
 	local toremove=(
 		.DirIcon
@@ -106,5 +110,5 @@ src_install() {
 	mkdir -p "${ED}/${apphome}" || die
 	cp -r . "${ED}/${apphome}" || die
 
-	dosym -r "${apphome}/Follow" "/usr/bin/follow"
+	dosym -r "${apphome}/Follow" "/usr/bin/Follow"
 }
