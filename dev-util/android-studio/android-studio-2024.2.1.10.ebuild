@@ -11,9 +11,7 @@ QA_PREBUILT="
 	opt/${PN}/jbr/lib/*
 	opt/${PN}/jbr/lib/jli/*
 	opt/${PN}/jbr/lib/server/*
-	opt/${PN}/lib/pty4j/linux/*/*
-	opt/${PN}/lib/native/*/*
-	opt/${PN}/lib/jna/*/*
+	opt/${PN}/lib/pty4j-native/linux/*/*
 	opt/${PN}/plugins/android/resources/installer/*/*
 	opt/${PN}/plugins/android/resources/native/*
 	opt/${PN}/plugins/android/resources/perfetto/*/*
@@ -24,24 +22,20 @@ QA_PREBUILT="
 	opt/${PN}/plugins/android/resources/transport/native/agent/*/*
 	opt/${PN}/plugins/android-ndk/resources/lldb/android/*/*
 	opt/${PN}/plugins/android-ndk/resources/lldb/bin/*
-	opt/${PN}/plugins/android-ndk/resources/lldb/lib/python*/lib-dynload/*
-	opt/${PN}/plugins/android-ndk/resources/lldb/lib/*
+	opt/${PN}/plugins/android-ndk/resources/lldb/lib/python3.9/lib-dynload/*
 	opt/${PN}/plugins/android-ndk/resources/lldb/lib64/*
 	opt/${PN}/plugins/design-tools/resources/layoutlib/data/linux/lib64/*
-	opt/${PN}/plugins/c-clangd-plugin/bin/clang/linux/*/*
+	opt/${PN}/plugins/c-clangd/bin/clang/linux/*/*
 	opt/${PN}/plugins/webp/lib/libwebp/linux/*
 "
 
 DESCRIPTION="Android development environment based on IntelliJ IDEA"
 HOMEPAGE="https://developer.android.com/studio"
-
 SRC_URI="https://redirector.gvt1.com/edgedl/android/studio/ide-zips/${PV}/${P}-linux.tar.gz"
 S=${WORKDIR}/${PN}
-
 LICENSE="Apache-2.0 android BSD BSD-2 CDDL-1.1 CPL-0.5
 	EPL-1.0 GPL-2 GPL-2+ JDOM IJG LGPL-2.1 MIT
-	MPL-1.1 MPL-2.0 NPL-1.1 OFL ZLIB"
-
+	MPL-1.1 MPL-2.0 NPL-1.1 OFL-1.1 ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="selinux"
@@ -80,21 +74,25 @@ src_compile() {
 src_install() {
 	local dir="/opt/${PN}"
 	insinto "${dir}"
-	doins -r ./*
+	doins -r *
 
-	fperms -R 755 "${dir}"/plugins/android-ndk/resources/lldb/bin
-	fperms 755 "${dir}"/plugins/android-ndk/resources/lldb/android/{arm64-v8a,armeabi,x86,x86_64}/lldb-server
-	fperms 755 "${dir}"/plugins/c-clangd-plugin/bin/clang/linux/x64/clangd
-	fperms -R 755 "${dir}"/plugins/android/resources/trace_processor_daemon
-	fperms -R 755 "${dir}"/plugins/android/resources/perfetto
-	fperms -R 755 "${dir}"/plugins/android/resources/simpleperf
+	fperms 755 "${dir}"/bin/{fsnotifier,format.sh,game-tools.sh,inspect.sh,ltedit.sh,profiler.sh,studio.sh,studio_safe.sh}
+	fperms -R 755 "${dir}"/bin/{helpers,lldb}
 	fperms -R 755 "${dir}"/jbr/bin
 	fperms 755 "${dir}"/jbr/lib/{jexec,jspawnhelper}
-	fperms -R 755 "${dir}"/bin
+	fperms -R 755 "${dir}"/plugins/Kotlin/kotlinc/bin
+	fperms -R 755 "${dir}"/plugins/android/resources/installer
+	fperms -R 755 "${dir}"/plugins/android/resources/perfetto
+	fperms -R 755 "${dir}"/plugins/android/resources/simpleperf
+	fperms -R 755 "${dir}"/plugins/android/resources/trace_processor_daemon
+	fperms -R 755 "${dir}"/plugins/android/resources/transport/{arm64-v8a,armeabi-v7a,x86,x86_64}
+	fperms -R 755 "${dir}"/plugins/android-ndk/resources/lldb/{android,bin,lib,shared}
+	fperms 755 "${dir}"/plugins/c-clangd-plugin/bin/clang/linux/x64/clangd
+	fperms -R 755 "${dir}"/plugins/terminal/shell-integrations/{,fish}
 
 	newicon "bin/studio.png" "${PN}.png"
-	make_wrapper "${PN}" "${dir}/bin/studio.sh"
-	make_desktop_entry "${PN}" "Android Studio" "${PN}" "Development;IDE" "StartupWMClass=jetbrains-studio"
+	make_wrapper ${PN} ${dir}/bin/studio.sh
+	make_desktop_entry ${PN} "Android Studio" ${PN} "Development;IDE" "StartupWMClass=jetbrains-studio"
 
 	# recommended by: https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit
 	mkdir -p "${D}/etc/sysctl.d/" || die

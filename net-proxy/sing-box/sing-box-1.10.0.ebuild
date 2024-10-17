@@ -27,10 +27,8 @@ KEYWORDS="~amd64 ~riscv"
 IUSE="+quic grpc +dhcp +wireguard +ech +utls +reality +acme +clash-api v2ray-api +gvisor tor"
 
 BDEPEND="
-	>=dev-lang/go-1.18
-	quic? ( >=dev-lang/go-1.20 )
-	utls? ( >=dev-lang/go-1.20 )
 	ech? ( >=dev-lang/go-1.21 )
+	!ech? ( >=dev-lang/go-1.20 )
 "
 
 src_compile() {
