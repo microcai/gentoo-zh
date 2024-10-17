@@ -204,7 +204,7 @@ media-video/mpv-handler 0.3.13: Play website videos and songs with mpv & yt-dlp
 media-video/tenvideo 1.0.10: Tencent videos
 net-analyzer/nali 0.8.1 0.8.1_p20240827: An offline tool for querying IP geographic information and CDN provider.
 net-analyzer/realitlscanner 0.2.1: A TLS server scanner for Reality
-net-dns/ddns-go 6.7.0: Automatically obtain your public IP address and set to your domain name service.
+net-dns/ddns-go 6.7.1: Automatically obtain your public IP address and set to your domain name service.
 net-dns/dnslookup 1.11.1: Simple command line utility to make DNS lookups to the specified server
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
 net-dns/dog 0.1.0-r1 0.1.0_p20211007: A command-line DNS client
