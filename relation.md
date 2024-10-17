@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-10-17 10:46:15 CST)
+(The last generation time: 2024-10-17 13:32:23 CST)
 
 ### Packages
 
@@ -224,7 +224,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pytube                          | 15.0.0                                    |            | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/android-studio                    | 2024.1.1.13                               |            | https://developer.android.com/studio                                                    | Android development environment based on IntelliJ IDEA
+ dev-util/android-studio                    | 2024.2.1.10                               |            | https://developer.android.com/studio                                                    | Android development environment based on IntelliJ IDEA
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/arch-install-scripts              | 28-r1                                     |            | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
    dev-util/pacstrap                        | 28                                        | RD         | https://github.com/archlinux/arch-install-scripts                                       | Pacstrap - install packages to the specified new root directorye
@@ -530,7 +530,8 @@
  net-proxy/shadowsocks-rust                 | 1.20.4                                    |            | https://github.com/shadowsocks/shadowsocks-rust                                         | A Rust port of shadowsocks.
                                             | 1.21.0                                    |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/sing-box                         | 1.9.7                                     |            | https://sing-box.sagernet.org/                                                          | The universal proxy platform.
+ net-proxy/sing-box                         | 1.10.0                                    |            | https://sing-box.sagernet.org/                                                          | The universal proxy platform.
+                                            | 1.9.7                                     |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/smartproxy                       | 0.9.5                                     |            | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -538,12 +539,12 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/v2rayA                           | 2.2.5.7                                   |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                             | 9999                                      |            |                                                                                         |
-   net-proxy/Xray                           | 1.8.24                                    | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
+   net-proxy/Xray                           | 24.10.16                                  | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
                                             | 24.9.30                                   |            |                                                                                         |
      app-alternatives/v2ray-geoip           | 0-r2                                      |  D, RD     |                                                                                         | symlink for v2ray-geoip
      app-alternatives/v2ray-geosite         | 0-r2                                      |  D, RD     |                                                                                         | symlink for v2ray-geosite
-   net-proxy/v2ray                          | 5.19.0                                    | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
-                                            | 5.20.0                                    |            |                                                                                         |
+   net-proxy/v2ray                          | 5.20.0                                    | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
+                                            | 5.21.0                                    |            |                                                                                         |
    net-proxy/v2ray-bin                      | 4.45.0-r2                                 | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
                                             | 5.12.1-r1                                 |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
