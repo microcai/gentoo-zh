@@ -10,6 +10,6 @@ LICENSE=MPL-2.0
 RDEPEND=app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite
 RESTRICT=strip
 SLOT=0
-SRC_URI=https://github.com/XTLS/Xray-core/archive/refs/tags/v1.8.24.tar.gz -> Xray-1.8.24.tar.gz https://github.com/Puqns67/gentoo-deps/releases/download/Xray-1.8.24/Xray-1.8.24-vendor.tar.xz
+SRC_URI=https://github.com/XTLS/Xray-core/archive/refs/tags/v24.10.16.tar.gz -> Xray-24.10.16.tar.gz https://github.com/Puqns67/gentoo-deps/releases/download/Xray-24.10.16/Xray-24.10.16-vendor.tar.xz
 _eclasses_=multiprocessing	1e32df7deee68372153dca65f4a7c21f	toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87	multilib	b2a329026f2e404e9e371097dda47f96	flag-o-matic	f14aba975c94ccaa9f357a27e3b17ffe	go-env	90efbc8636d2f02d9654183330e84cf7	go-module	df32d29550d40a92da723d3b8e17b467	systemd	54bd206bb5c4efac6ae28b6b006713b0
 _md5_=f17779d14fb42ba77d8618619fa85fa1
