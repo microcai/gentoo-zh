@@ -72,13 +72,6 @@ url = "https://typora.io/#linu://typora.io/releases/stable.html"
 regex = "typora_([\\d.]+)_amd64.deb"
 github_account = "CHN-beta"
 
-["app-editors/zed"]
-source = "github"
-github = "zed-industries/zed"
-use_latest_release = true
-prefix = "v"
-github_account = "liuyujielol"
-
 #["app-emulation/deepin-udis86"]
 
 #["app-emulation/deepin-wine-helper"]
