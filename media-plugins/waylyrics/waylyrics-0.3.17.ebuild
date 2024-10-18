@@ -8,7 +8,6 @@ EAPI=8
 CRATES="
 	addr2line@0.24.1
 	adler2@2.0.0
-	adler@1.0.2
 	aes@0.8.4
 	ahash@0.7.8
 	ahash@0.8.11
@@ -16,7 +15,7 @@ CRATES="
 	ansi_term@0.12.1
 	anyhow@1.0.89
 	arrayvec@0.7.6
-	ashpd@0.8.1
+	ashpd@0.9.1
 	assert_float_eq@1.1.3
 	async-broadcast@0.7.1
 	async-channel@2.3.1
@@ -29,12 +28,12 @@ CRATES="
 	async-recursion@1.1.1
 	async-signal@0.2.10
 	async-task@4.7.1
-	async-trait@0.1.82
+	async-trait@0.1.83
 	atk-sys@0.18.0
 	atk@0.18.0
 	atomic-waker@1.1.2
 	atty@0.2.14
-	autocfg@1.3.0
+	autocfg@1.4.0
 	backtrace@0.3.74
 	base64@0.22.1
 	base64ct@1.6.0
@@ -52,21 +51,19 @@ CRATES="
 	bytecheck@0.6.12
 	bytecheck_derive@0.6.12
 	byteorder@1.5.0
-	bytes@1.7.1
+	bytes@1.7.2
 	cairo-rs@0.18.5
 	cairo-rs@0.20.1
 	cairo-sys-rs@0.18.2
 	cairo-sys-rs@0.20.0
 	cbc@0.1.2
-	cc@1.1.20
+	cc@1.1.23
 	cfg-expr@0.15.8
-	cfg-expr@0.16.0
+	cfg-expr@0.17.0
 	cfg-if@1.0.0
 	cfg_aliases@0.2.1
 	cipher@0.4.4
 	clap@2.34.0
-	cocoa-foundation@0.2.0
-	cocoa@0.26.0
 	concurrent-queue@2.5.0
 	const-oid@0.9.6
 	convert_case@0.6.0
@@ -96,11 +93,13 @@ CRATES="
 	dirs-sys@0.4.1
 	dirs@5.0.1
 	dispatch@0.2.0
+	dlib@0.5.2
 	documented-macros@0.6.0
 	documented@0.6.0
+	downcast-rs@1.2.1
 	dpi@0.1.1
 	ecb@0.1.2
-	embed-resource@2.4.3
+	embed-resource@2.5.0
 	encoding_rs@0.8.34
 	endi@1.1.0
 	enum-kinds@0.5.1
@@ -111,9 +110,9 @@ CRATES="
 	event-listener-strategy@0.5.2
 	event-listener@5.3.1
 	fastrand@2.1.1
-	fdeflate@0.3.4
+	fdeflate@0.3.5
 	field-offset@0.3.6
-	flate2@1.0.33
+	flate2@1.0.34
 	fnv@1.0.7
 	foreign-types-macros@0.2.3
 	foreign-types-shared@0.1.1
@@ -134,14 +133,14 @@ CRATES="
 	futures-task@0.3.30
 	futures-util@0.3.30
 	gdk-pixbuf-sys@0.18.0
-	gdk-pixbuf-sys@0.20.1
+	gdk-pixbuf-sys@0.20.4
 	gdk-pixbuf@0.18.5
-	gdk-pixbuf@0.20.1
+	gdk-pixbuf@0.20.4
 	gdk-sys@0.18.0
-	gdk4-sys@0.9.0
-	gdk4-win32-sys@0.9.0
-	gdk4-win32@0.9.0
-	gdk4@0.9.0
+	gdk4-sys@0.9.2
+	gdk4-win32-sys@0.9.2
+	gdk4-win32@0.9.2
+	gdk4@0.9.2
 	gdk@0.18.0
 	generic-array@0.14.7
 	getrandom@0.2.15
@@ -149,26 +148,26 @@ CRATES="
 	gettext-sys@0.21.4
 	gimli@0.31.0
 	gio-sys@0.18.1
-	gio-sys@0.20.1
+	gio-sys@0.20.4
 	gio@0.18.4
-	gio@0.20.1
+	gio@0.20.4
 	glib-macros@0.18.5
-	glib-macros@0.20.3
+	glib-macros@0.20.4
 	glib-sys@0.18.1
-	glib-sys@0.20.2
+	glib-sys@0.20.4
 	glib@0.18.5
-	glib@0.20.3
+	glib@0.20.4
 	gobject-sys@0.18.0
-	gobject-sys@0.20.1
-	graphene-rs@0.20.1
-	graphene-sys@0.20.1
-	gsk4-sys@0.9.0
-	gsk4@0.9.0
+	gobject-sys@0.20.4
+	graphene-rs@0.20.4
+	graphene-sys@0.20.4
+	gsk4-sys@0.9.2
+	gsk4@0.9.2
 	gtk-sys@0.18.0
 	gtk3-macros@0.18.0
 	gtk4-macros@0.9.1
-	gtk4-sys@0.9.0
-	gtk4@0.9.1
+	gtk4-sys@0.9.2
+	gtk4@0.9.2
 	gtk@0.18.1
 	h2@0.4.6
 	hashbrown@0.12.3
@@ -186,7 +185,7 @@ CRATES="
 	httparse@1.9.4
 	hyper-rustls@0.27.3
 	hyper-tls@0.6.0
-	hyper-util@0.1.8
+	hyper-util@0.1.9
 	hyper@1.4.1
 	ident_case@1.0.1
 	idna@0.3.0
@@ -201,9 +200,10 @@ CRATES="
 	lazy_static@1.5.0
 	libappindicator-sys@0.9.0
 	libappindicator@0.9.0
-	libc@0.2.158
+	libc@0.2.159
 	libdbus-sys@0.2.5
 	libloading@0.7.4
+	libloading@0.8.5
 	libm@0.2.8
 	libmimalloc-sys@0.1.39
 	libredox@0.1.3
@@ -222,11 +222,10 @@ CRATES="
 	mimalloc@0.1.43
 	mime@0.3.17
 	minimal-lexical@0.2.1
-	miniz_oxide@0.7.4
 	miniz_oxide@0.8.0
 	mio@1.0.2
 	mpris@2.0.1
-	muda@0.14.1
+	muda@0.15.1
 	native-tls@0.2.12
 	ncmapi2@0.1.13
 	nix@0.29.0
@@ -250,7 +249,7 @@ CRATES="
 	objc@0.2.7
 	objc_id@0.1.1
 	object@0.36.4
-	once_cell@1.19.0
+	once_cell@1.20.2
 	opencc-rust@1.1.19
 	openssl-macros@0.1.1
 	openssl-probe@0.1.5
@@ -261,9 +260,9 @@ CRATES="
 	ordered-stream@0.2.0
 	overload@0.1.1
 	pango-sys@0.18.0
-	pango-sys@0.20.1
+	pango-sys@0.20.4
 	pango@0.18.3
-	pango@0.20.1
+	pango@0.20.4
 	parking@2.2.1
 	parking_lot@0.12.3
 	parking_lot_core@0.9.10
@@ -273,15 +272,13 @@ CRATES="
 	phf_generator@0.11.2
 	phf_macros@0.11.2
 	phf_shared@0.11.2
-	pin-project-internal@1.1.5
 	pin-project-lite@0.2.14
-	pin-project@1.1.5
 	pin-utils@0.1.0
 	piper@0.2.4
 	pkcs1@0.7.5
 	pkcs8@0.10.2
-	pkg-config@0.3.30
-	png@0.17.13
+	pkg-config@0.3.31
+	png@0.17.14
 	polling@3.7.3
 	pollster@0.3.0
 	powerfmt@0.2.0
@@ -297,6 +294,7 @@ CRATES="
 	ptr_meta_derive@0.1.4
 	publicsuffix@2.2.3
 	qqmusic-rs@0.1.1
+	quick-xml@0.36.2
 	quote@0.3.15
 	quote@1.0.37
 	radium@0.7.0
@@ -304,16 +302,16 @@ CRATES="
 	rand_chacha@0.3.1
 	rand_core@0.6.4
 	raw-window-handle@0.6.2
-	redox_syscall@0.5.4
+	redox_syscall@0.5.7
 	redox_users@0.4.6
 	regex-automata@0.1.10
-	regex-automata@0.4.7
+	regex-automata@0.4.8
 	regex-syntax@0.6.29
-	regex-syntax@0.8.4
-	regex@1.10.6
+	regex-syntax@0.8.5
+	regex@1.11.0
 	rend@0.4.2
-	reqwest@0.12.7
-	rfd@0.14.1
+	reqwest@0.12.8
+	rfd@0.15.0
 	ring@0.17.8
 	rkyv@0.7.45
 	rkyv_derive@0.7.45
@@ -323,23 +321,24 @@ CRATES="
 	rustc-demangle@0.1.24
 	rustc_version@0.4.1
 	rustix@0.38.37
-	rustls-pemfile@2.1.3
-	rustls-pki-types@1.8.0
+	rustls-pemfile@2.2.0
+	rustls-pki-types@1.9.0
 	rustls-webpki@0.102.8
 	rustls@0.23.13
 	rustversion@1.0.17
 	ryu@1.0.18
 	schannel@0.1.24
+	scoped-tls@1.0.1
 	scopeguard@1.2.0
 	seahash@4.1.0
-	security-framework-sys@2.11.1
+	security-framework-sys@2.12.0
 	security-framework@2.11.1
 	semver@1.0.23
 	serde@1.0.210
 	serde_derive@1.0.210
 	serde_json@1.0.128
 	serde_repr@0.1.19
-	serde_spanned@0.6.7
+	serde_spanned@0.6.8
 	serde_urlencoded@0.7.1
 	sha1@0.10.6
 	sharded-slab@0.1.7
@@ -347,7 +346,7 @@ CRATES="
 	signal-hook-registry@1.4.2
 	signature@2.2.0
 	simd-adler32@0.3.7
-	simdutf8@0.1.4
+	simdutf8@0.1.5
 	siphasher@0.3.11
 	slab@0.4.9
 	smallvec@1.13.2
@@ -363,7 +362,7 @@ CRATES="
 	subtle@2.6.1
 	syn@0.11.11
 	syn@1.0.109
-	syn@2.0.77
+	syn@2.0.79
 	syn_derive@0.1.8
 	sync_wrapper@1.0.1
 	synom@0.11.3
@@ -371,14 +370,14 @@ CRATES="
 	system-configuration-sys@0.6.0
 	system-configuration@0.6.1
 	system-deps@6.2.2
-	system-deps@7.0.2
+	system-deps@7.0.3
 	tap@1.0.1
 	target-lexicon@0.12.16
 	temp-dir@0.1.13
-	tempfile@3.12.0
+	tempfile@3.13.0
 	textwrap@0.11.0
-	thiserror-impl@1.0.63
-	thiserror@1.0.63
+	thiserror-impl@1.0.64
+	thiserror@1.0.64
 	thread_local@1.1.8
 	time-core@0.1.2
 	time-macros@0.2.18
@@ -394,17 +393,15 @@ CRATES="
 	toml_datetime@0.6.8
 	toml_edit@0.19.15
 	toml_edit@0.20.7
-	toml_edit@0.22.21
-	tower-layer@0.3.3
+	toml_edit@0.22.22
 	tower-service@0.3.3
-	tower@0.4.13
 	tracing-attributes@0.1.27
 	tracing-core@0.1.32
 	tracing-journald@0.3.0
 	tracing-log@0.2.0
 	tracing-subscriber@0.3.18
 	tracing@0.1.40
-	tray-icon@0.17.0
+	tray-icon@0.19.0
 	try-lock@0.2.5
 	typenum@1.17.0
 	uds_windows@1.1.0
@@ -412,7 +409,7 @@ CRATES="
 	unicode-ident@1.0.13
 	unicode-normalization@0.1.24
 	unicode-segmentation@1.12.0
-	unicode-width@0.1.13
+	unicode-width@0.1.14
 	unicode-xid@0.0.4
 	untrusted@0.9.0
 	url@2.5.2
@@ -433,6 +430,11 @@ CRATES="
 	wasm-bindgen-macro@0.2.93
 	wasm-bindgen-shared@0.2.93
 	wasm-bindgen@0.2.93
+	wayland-backend@0.3.7
+	wayland-client@0.31.6
+	wayland-protocols@0.32.4
+	wayland-scanner@0.31.5
+	wayland-sys@0.31.5
 	web-sys@0.3.70
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-x86_64-pc-windows-gnu@0.4.0
@@ -466,7 +468,7 @@ CRATES="
 	windows_x86_64_msvc@0.48.5
 	windows_x86_64_msvc@0.52.6
 	winnow@0.5.40
-	winnow@0.6.18
+	winnow@0.6.20
 	winreg@0.52.0
 	wyz@0.5.1
 	x11@2.21.0
@@ -483,7 +485,8 @@ CRATES="
 	zvariant_utils@2.1.0
 "
 
-PLOCALES="en_US zh_CN"
+PLOCALES="en_US it_IT zh_CN"
+PLOCALE_BACKUP="en_US"
 inherit cargo desktop gnome2-utils plocale xdg
 
 DESCRIPTION="Simple On Screen lyrics Display for linux/unix"
