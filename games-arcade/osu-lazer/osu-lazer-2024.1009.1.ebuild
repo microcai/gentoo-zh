@@ -6,7 +6,6 @@ EAPI=8
 DOTNET_PKG_COMPAT=8.0
 NUGETS="
 automapper@12.0.1
-clowd.squirrel@2.11.1
 diffplex@1.7.2
 discordrichpresence@1.2.1.24
 ffmpeg.autogen@4.3.0.1
@@ -63,9 +62,8 @@ humanizer.core.zh-hans@2.14.1
 humanizer.core.zh-hant@2.14.1
 humanizer.core@2.14.1
 humanizer@2.14.1
-jetbrains.annotations@2022.3.1
 jetbrains.annotations@2023.3.0
-managed-midi@1.10.0
+managed-midi@1.10.1
 markdig@0.23.0
 messagepack.annotations@2.5.140
 messagepack@2.5.140
@@ -88,12 +86,14 @@ microsoft.dotnet.platformabstractions@2.0.3
 microsoft.extensions.configuration.abstractions@7.0.0
 microsoft.extensions.dependencyinjection.abstractions@6.0.0-rc.1.21451.13
 microsoft.extensions.dependencyinjection.abstractions@7.0.0
+microsoft.extensions.dependencyinjection.abstractions@8.0.0
 microsoft.extensions.dependencyinjection@6.0.0-rc.1.21451.13
 microsoft.extensions.dependencyinjection@7.0.0
 microsoft.extensions.dependencymodel@2.0.3
 microsoft.extensions.features@7.0.15
 microsoft.extensions.logging.abstractions@7.0.0
 microsoft.extensions.logging.abstractions@7.0.1
+microsoft.extensions.logging.abstractions@8.0.0
 microsoft.extensions.logging@7.0.0
 microsoft.extensions.objectpool@5.0.11
 microsoft.extensions.options@7.0.0
@@ -111,7 +111,6 @@ microsoft.win32.primitives@4.3.0
 microsoft.win32.registry@4.5.0
 microsoft.win32.registry@5.0.0
 mongodb.bson@2.19.1
-mono.posix.netstandard@1.0.0
 nativelibraryloader@1.0.13
 netstandard.library@1.6.1
 netstandard.library@2.0.0
@@ -126,33 +125,29 @@ nuget.packaging@5.11.0
 nuget.projectmodel@5.11.0
 nuget.protocol@5.11.0
 nuget.versioning@5.11.0
+nuget.versioning@6.10.1
 nunit@3.14.0
 opentabletdriver.configurations@0.6.4
 opentabletdriver.native@0.6.4
 opentabletdriver.plugin@0.6.4
 opentabletdriver@0.6.4
 polysharp@1.10.0
-ppy.localisationanalyser@2024.517.0
+ppy.localisationanalyser@2024.802.0
 ppy.managedbass.fx@2022.1216.0
 ppy.managedbass.mix@2022.1216.0
 ppy.managedbass.wasapi@2022.1216.0
 ppy.managedbass@2022.1216.0
-ppy.osu.framework.nativelibs@2024.326.0-nativelibs
+ppy.osu.framework.nativelibs@2024.809.1-nativelibs
 ppy.osu.framework.sourcegeneration@2023.720.0
-ppy.osu.framework@2024.329.0
-ppy.osu.framework@2024.509.0
-ppy.osu.game.resources@2024.510.0
-ppy.osu.game.resources@2024.517.0
+ppy.osu.framework@2024.1009.0
+ppy.osu.game.resources@2024.1003.0
 ppy.osutk.ns20@1.0.211
 ppy.sdl2-cs@1.0.741-alpha
-ppy.sdl3-cs@2024.418.1
-ppy.veldrid.metalbindings@4.9.11-ged7d28974e
-ppy.veldrid.metalbindings@4.9.9-ga61b647961
-ppy.veldrid.openglbindings@4.9.11-ged7d28974e
-ppy.veldrid.openglbindings@4.9.9-ga61b647961
-ppy.veldrid.spirv@1.0.15-gca6cec7843
-ppy.veldrid@4.9.11-ged7d28974e
-ppy.veldrid@4.9.9-ga61b647961
+ppy.sdl3-cs@2024.916.0
+ppy.veldrid.metalbindings@4.9.62-gca0239da6b
+ppy.veldrid.openglbindings@4.9.62-gca0239da6b
+ppy.veldrid.spirv@1.0.15-gfbb03d21c2
+ppy.veldrid@4.9.62-gca0239da6b
 ppy.vk@1.0.26
 realm.platformhelpers@11.5.0
 realm@11.5.0
@@ -205,8 +200,7 @@ sharpcompress@0.36.0
 sharpfnt@2.0.0
 sharpgen.runtime.com@2.0.0-beta.13
 sharpgen.runtime@2.0.0-beta.13
-sixlabors.imagesharp@3.1.3
-sixlabors.imagesharp@3.1.4
+sixlabors.imagesharp@3.1.5
 sqlitepclraw.bundle_e_sqlite3@2.1.8
 sqlitepclraw.core@2.1.4
 sqlitepclraw.core@2.1.8
@@ -240,7 +234,7 @@ system.io.compression@4.3.0
 system.io.filesystem.primitives@4.3.0
 system.io.filesystem@4.0.1
 system.io.filesystem@4.3.0
-system.io.packaging@8.0.0
+system.io.packaging@8.0.1
 system.io.pipelines@7.0.0
 system.io@4.1.0
 system.io@4.3.0
@@ -326,7 +320,7 @@ system.threading@4.3.0
 system.xml.readerwriter@4.3.0
 system.xml.xdocument@4.3.0
 taglibsharp@2.3.0
-vk@1.0.25
+velopack@0.0.630-g9c52e40
 vortice.d3dcompiler@2.4.2
 vortice.direct3d11@2.4.2
 vortice.directx@2.4.2
@@ -343,22 +337,21 @@ HOMEPAGE="
 	https://github.com/ppy/osu
 "
 
-if [[ ${PV} == *9999* ]] ; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/ppy/osu.git"
-else
-	SRC_URI="https://github.com/ppy/osu/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	# updtream supported runtime:
-	# linux-{,musl-}{arm,arm64,x64,x86}
-	# only tested on linux-x64
-	KEYWORDS="~amd64"
-	S="${WORKDIR}/osu-${PV}"
-fi
-
-SRC_URI+=" ${NUGET_URIS} "
-
+SRC_URI="
+	https://github.com/ppy/osu/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz
+	${NUGET_URIS}
+"
+S="${WORKDIR}/osu-${PV}"
 LICENSE="MIT CC-BY-NC-4.0"
+# Dependent NuGet licenses
+LICENSE+="
+	Apache-2.0 BSD-2 LGPL-2.1 LGPL-3+ MIT
+"
 SLOT="0"
+# updtream supported runtime:
+# linux-{,musl-}{arm,arm64,x64,x86}
+# only tested on linux-x64
+KEYWORDS="~amd64"
 
 DEPEND="
 	virtual/dotnet-sdk:8.0
@@ -377,12 +370,6 @@ DOTNET_PKG_PROJECTS=( "${S}/osu.Desktop/osu.Desktop.csproj" )
 
 DOCS=( README.md )
 
-src_unpack() {
-	dotnet-pkg_src_unpack
-
-	[[ ${EGIT_REPO_URI} ]] && git-r3_src_unpack
-}
-
 src_configure() {
 	dotnet-pkg-base_info
 	dotnet-pkg_foreach-project dotnet-pkg-base_restore
@@ -400,9 +387,11 @@ src_compile() {
 
 src_install() {
 	dotnet-pkg-base_install
+	dotnet-pkg-base_append-launchervar "OSU_EXTERNAL_UPDATE_PROVIDER=\"1\""
 	dotnet-pkg-base_dolauncher "/usr/share/${P}/osu!" osu-lazer
 
-	newicon assets/lazer.png osu-lazer.png
+	newicon -s 128 assets/lazer-nuget.png osu-lazer.png
+	newicon -s 1024 assets/lazer.png osu-lazer.png
 	domenu "${FILESDIR}/osu-lazer.desktop"
 
 	insinto "/usr/share/mime/packages"
