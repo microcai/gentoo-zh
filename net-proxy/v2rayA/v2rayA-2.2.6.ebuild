@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-
+NONFATAL_VERIFY=1
 inherit systemd go-module desktop xdg
 
 DESCRIPTION="web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel"
@@ -12,10 +12,10 @@ SRC_URI="
 	https://github.com/v2rayA/v2rayA/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/v2rayA/v2rayA/releases/download/v${PV}/web.tar.gz -> ${P}-web.tar.gz
 "
-# maintainer generated vendor
+# maintainer generated deps pack
 # generated with liuyujielol/gentoo-go-deps/.github/workflows/generator.yml
 SRC_URI+="
-	https://github.com/liuyujielol/gentoo-go-deps/releases/download/${P}/${P}-vendor.tar.xz
+	https://github.com/liuyujielol/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
 "
 
 LICENSE="AGPL-3"
@@ -34,18 +34,11 @@ BDEPEND="
 	>=dev-lang/go-1.21:*
 "
 
-src_unpack() {
-	default
-
-	# go vendor
-	mv -v "${WORKDIR}/vendor" "${S}/service" || die
-}
-
 src_compile() {
 	mv -v "${WORKDIR}/web" "${S}/service/server/router/web" || die
 
 	cd "${S}/service" || die
-	ego build -mod vendor -tags "with_gvisor" \
+	ego build -tags "with_gvisor" \
 		-ldflags "-X github.com/v2rayA/v2rayA/conf.Version=${PV} -s -w" \
 		-o v2raya -trimpath
 }
