@@ -33,7 +33,6 @@ app-dicts/fcitx-pinyin-zhwiki-bin 0.2.5.20240722: Fcitx 5 Pinyin Dictionary from
 app-editors/appflowy-bin 0.7.1: AppFlowy is an open-source alternative to Notion
 app-editors/marktext-bin 0.17.1: A simple and elegant markdown editor, available for Linux, macOS and Windows.
 app-editors/typora 0.11.18 1.9.3: A truely minimal markdown editor.
-app-editors/zed 0.152.3: high-performance, multiplayer code editor
 app-emulation/deepin-udis86 1.72-r4: Disassembler library for x86 (32-bit shared library)
 app-emulation/deepin-wine-helper 5.1.27-r1 5.1.45: Deepin Wine Helper
 app-emulation/deepin-wine-plugin 5.1.13-r1: Deepin Wine plugin
@@ -148,7 +147,7 @@ dev-util/tauri-cli 1.5.9 2.0.0_alpha17: Command line interface for building Taur
 dev-util/zprint-bin 1.2.7 1.2.8: Clojure and Clojurescript source code formatter
 dev-vcs/gitoxide 0.37.0: A command-line application for interacting with git repositories
 dev-vcs/sourcegit-bin 8.34: Opensource Git GUI client.
-games-arcade/osu-lazer 2024.412.1 2024.521.2: rhythm is just a *click* away!
+games-arcade/osu-lazer 2024.1009.1: rhythm is just a *click* away!
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-fps/source-engine 9999: A 3D game engine developed by Valve
 games-misc/oh-my-git-bin 0.6.5: An interactive Git learning game!
@@ -182,7 +181,7 @@ media-gfx/zwcad 2023.23.0.3.4-r2: CAD software for 2D drawing, reviewing and pri
 media-libs/openslide 20230904: C library with simple interface to read virtual slides
 media-libs/phonon-mpv 0.1.0: Phonon Backend using MPV Player(libmpv)
 media-plugins/osdlyrics 0.5.11 0.5.14 9999: Standalone lyrics fetcher/displayer (windowed and OSD mode).
-media-plugins/waylyrics 0.3.15: Simple On Screen lyrics Display for linux/unix
+media-plugins/waylyrics 0.3.17: Simple On Screen lyrics Display for linux/unix
 media-sound/amarok 3.1.0: KDE calculator
 media-sound/barva 9999: a modular audio visualizer
 media-sound/feeluown 4.1.7: A user-friendly and hackable music player
@@ -198,7 +197,7 @@ media-sound/yesplaymusic-bin 0.4.8: A third party music player for Netease Music
 media-sound/youtube-music-bin 2.2.0: YouTube Music Desktop App bundled with custom plugins
 media-video/amdgpu-pro-amf 1.4.29.1538781: AMD's closed source Advanced Media Framework (AMF) driver
 media-video/avplayer 9999: avplayer is a p2p video downloader and player
-media-video/bilibili 1.11.4: Based on the Bilibli offcial client to linux version, support roaming
+media-video/bilibili 1.14.2_p1: Based on the Bilibli offcial client to linux version, support roaming
 media-video/implay 1.5.1: A Cross-Platform Desktop Media Player
 media-video/mpv-handler 0.3.13: Play website videos and songs with mpv & yt-dlp
 media-video/tenvideo 1.0.10: Tencent videos
@@ -265,7 +264,7 @@ net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
 net-proxy/trojan-go-fork 2024.09.07: A fork of trojan-go
 net-proxy/v2ray 5.20.0 5.21.0: A platform for building proxies to bypass network restrictions.
 net-proxy/v2ray-bin 4.45.0-r2 5.12.1-r1: A platform for building proxies to bypass network restrictions
-net-proxy/v2rayA 2.2.5.7 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
+net-proxy/v2rayA 2.2.6 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
 net-proxy/yass 1.15.0: lightweight and efficient, socks5/http forward proxy
 net-vpn/sstp-server 0.6.0: A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
