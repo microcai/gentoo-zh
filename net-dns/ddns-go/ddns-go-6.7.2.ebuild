@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~riscv"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-6.6.2-remove-update-support.patch"
+	"${FILESDIR}/${PN}-6.7.2-remove-update-support.patch"
 	"${FILESDIR}/${PN}-6.6.2-remove-service-management-support.patch"
 	"${FILESDIR}/${PN}-6.7.1-deps-tidy.patch"
 )
