@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-10-18 17:34:50 CST)
+(The last generation time: 2024-10-19 14:03:25 CST)
 
 ### Packages
 
@@ -528,7 +528,7 @@
  net-proxy/shadowsocks-rust                 | 1.20.4                                    |            | https://github.com/shadowsocks/shadowsocks-rust                                         | A Rust port of shadowsocks.
                                             | 1.21.0                                    |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/sing-box                         | 1.10.0                                    |            | https://sing-box.sagernet.org/                                                          | The universal proxy platform.
+ net-proxy/sing-box                         | 1.10.1                                    |            | https://sing-box.sagernet.org/                                                          | The universal proxy platform.
                                             | 1.9.7                                     |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/smartproxy                       | 0.9.5                                     |            | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
