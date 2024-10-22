@@ -98,7 +98,7 @@ dev-cpp/nameof 0.10.4: Nameof operator for modern C++
 dev-cpp/reproc 14.2.4: A cross-platform (C99/C++11) process library
 dev-cpp/tgbot-cpp 1.8: C++ library for Telegram bot API
 dev-cpp/tl-expected 1.1.0: Guideline Support Library implementation by Microsoft
-dev-db/dbeaver-bin 24.2.2: Free universal database tool (community edition).
+dev-db/dbeaver-bin 24.2.3: Free universal database tool (community edition).
 dev-db/mongodb 5.3.1 6.2.0-r4: A high-performance, open source, schema-free document-oriented database
 dev-debug/lldb-mi 0.0.1 9999: LLDB Machine Interface Driver
 dev-java/google-java-format 1.22.0: Reformats Java source code to comply with Google Java Style.
@@ -146,7 +146,7 @@ dev-util/tailspin 4.0.0: A log file highlighter
 dev-util/tauri-cli 1.5.9 2.0.0_alpha17: Command line interface for building Tauri apps
 dev-util/zprint-bin 1.2.7 1.2.8: Clojure and Clojurescript source code formatter
 dev-vcs/gitoxide 0.37.0: A command-line application for interacting with git repositories
-dev-vcs/sourcegit-bin 8.34: Opensource Git GUI client.
+dev-vcs/sourcegit-bin 8.35: Opensource Git GUI client.
 games-arcade/osu-lazer 2024.1009.1: rhythm is just a *click* away!
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-fps/source-engine 9999: A 3D game engine developed by Valve

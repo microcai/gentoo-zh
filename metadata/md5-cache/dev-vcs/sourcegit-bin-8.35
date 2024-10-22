@@ -10,6 +10,6 @@ LICENSE=MIT
 RDEPEND=dev-vcs/git
 RESTRICT=strip
 SLOT=0
-SRC_URI=https://github.com/sourcegit-scm/sourcegit/releases/download/v8.34/sourcegit_8.34-1_amd64.deb
+SRC_URI=https://github.com/sourcegit-scm/sourcegit/releases/download/v8.35/sourcegit_8.35-1_amd64.deb
 _eclasses_=desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed	multiprocessing	1e32df7deee68372153dca65f4a7c21f	toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87	multilib	b2a329026f2e404e9e371097dda47f96	unpacker	fb4b84181244b3b9990fa0bf40232dd2	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	xdg	3ef49a87c52c8b77c476351195dfe575
 _md5_=a33ba0693b60b2d7bec7e99a6ab461f8
