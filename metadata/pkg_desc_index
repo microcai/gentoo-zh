@@ -145,7 +145,7 @@ dev-util/redpanda-cpp 2.26 3.1: A lightweight yet powerful C/C++/GNU Assembly ID
 dev-util/tailspin 4.0.0: A log file highlighter
 dev-util/tauri-cli 1.5.9 2.0.0_alpha17: Command line interface for building Tauri apps
 dev-util/zprint-bin 1.2.7 1.2.8: Clojure and Clojurescript source code formatter
-dev-vcs/gitoxide 0.37.0: A command-line application for interacting with git repositories
+dev-vcs/gitoxide 0.38.0: A command-line application for interacting with git repositories
 dev-vcs/sourcegit-bin 8.35: Opensource Git GUI client.
 games-arcade/osu-lazer 2024.1009.1: rhythm is just a *click* away!
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
