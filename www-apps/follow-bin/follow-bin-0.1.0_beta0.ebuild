@@ -5,7 +5,7 @@ EAPI=8
 
 inherit desktop
 
-MY_PV=$(ver_cut 1-3)-alpha.$(ver_cut 5)
+MY_PV=$(ver_cut 1-3)-$(ver_cut 4).$(ver_cut 5)
 
 DESCRIPTION="Next generation information browser"
 HOMEPAGE="https://github.com/RSSNext/Follow"
