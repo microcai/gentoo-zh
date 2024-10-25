@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-10-24 17:00:54 CST)
+(The last generation time: 2024-10-25 10:09:55 CST)
 
 ### Packages
 
@@ -525,8 +525,8 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/proxy-server                     | 8.0.0                                     |            | https://github.com/jackarain/proxy                                                      | Implementation of all proxy protocols using modern c++
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/shadowsocks-rust                 | 1.20.4                                    |            | https://github.com/shadowsocks/shadowsocks-rust                                         | A Rust port of shadowsocks.
-                                            | 1.21.0                                    |            |                                                                                         |
+ net-proxy/shadowsocks-rust                 | 1.21.0                                    |            | https://github.com/shadowsocks/shadowsocks-rust                                         | A Rust port of shadowsocks.
+                                            | 1.21.2                                    |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/sing-box                         | 1.10.1                                    |            | https://sing-box.sagernet.org/                                                          | The universal proxy platform.
                                             | 1.9.7                                     |            |                                                                                         |
