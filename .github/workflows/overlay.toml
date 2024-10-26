@@ -1113,6 +1113,12 @@ from_pattern = '^v?(\d+\.\d+\.\d+)-(.+)\.(\d+)$'
 to_pattern = '\1_\2\3'
 github_account = "peeweep"
 
+["www-apps/miniserve"]
+source = "github"
+github = "svenstaro/miniserve"
+use_latest_release = true
+github_account = "peeweep"
+
 # only live package in gentoo-zh
 #["www-servers/woof"]
 
