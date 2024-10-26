@@ -470,7 +470,7 @@ github_account = "123485k"
 
 ["dev-vcs/gitoxide"]
 source = "github"
-github = "Byron/gitoxide"
+github = "GitoxideLabs/gitoxide"
 use_max_tag = true
 prefix = "v"
 github_account = "peeweep"

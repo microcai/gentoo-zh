@@ -468,9 +468,9 @@ CRATES="
 inherit cargo
 
 DESCRIPTION="A command-line application for interacting with git repositories"
-HOMEPAGE="https://github.com/Byron/gitoxide"
+HOMEPAGE="https://github.com/GitoxideLabs/gitoxide"
 SRC_URI="
-	https://github.com/Byron/gitoxide/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/GitoxideLabs/gitoxide/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 	${CARGO_CRATE_URIS}
 "
 
