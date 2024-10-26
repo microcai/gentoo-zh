@@ -51,12 +51,6 @@ jobs:
         echo -e "[keys]\ngithub = \"${{ secrets.GITHUB_TOKEN }}\"" > keyfile.toml
         nvchecker --file overlay.toml --keyfile keyfile.toml
 
-        sed -r -i \
-          -e 's#(\.|-|_)?a([[:digit:]]+)(",?)$#_alpha\2\3#' \
-          -e 's#(\.|-|_)?p([[:digit:]]+)(",?)$#_p\2\3#' \
-          -e 's#(\.|-|_)?rc([[:digit:]]+)(",?)$#_rc\2\3#' \
-          new_ver.json
-
         cat new_ver.json
         echo "nvcmp=$(nvcmp --file overlay.toml --json --newer)" >> $GITHUB_OUTPUT
 
