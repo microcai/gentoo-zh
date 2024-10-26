@@ -1117,6 +1117,7 @@ github_account = "peeweep"
 source = "github"
 github = "svenstaro/miniserve"
 use_latest_release = true
+prefix = "v"
 github_account = "peeweep"
 
 # only live package in gentoo-zh
