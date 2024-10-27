@@ -88,18 +88,11 @@ src_unpack() {
 	"${S}/${P}.AppImage" --appimage-extract || die
 }
 
-src_prepare() {
-	# fix permissions
-	find "${S}/squashfs-root" -type d -exec chmod 0755 "{}" + || die 'chmod 0755 failed.'
-	default
-}
-
 src_install() {
 	cd "${S}/squashfs-root" || die
 
 	domenu Follow.desktop
 
-	local apphome="/opt/${PN}"
 	local toremove=(
 		.DirIcon
 		Follow.desktop
@@ -110,9 +103,11 @@ src_install() {
 	)
 	rm -f -r "${toremove[@]}" || die
 
-	mkdir -p "${ED}/${apphome}" || die
-	cp -r . "${ED}/${apphome}" || die
+	local apphome="/opt/${PN}"
+	insinto "${apphome}"
+	doins -r .
 
+	fperms +x "${apphome}/Follow"
 	dosym -r "${apphome}/Follow" "/usr/bin/Follow"
 }
 
