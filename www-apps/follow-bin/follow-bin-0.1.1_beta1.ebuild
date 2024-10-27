@@ -8,7 +8,10 @@ inherit desktop xdg-utils
 MY_PV=$(ver_cut 1-3)-$(ver_cut 4).$(ver_cut 5)
 
 DESCRIPTION="Next generation information browser"
-HOMEPAGE="https://github.com/RSSNext/Follow"
+HOMEPAGE="
+	https://follow.is/
+	https://github.com/RSSNext/Follow
+"
 SRC_URI="
 	https://github.com/RSSNext/Follow/releases/download/v${MY_PV}/Follow-${MY_PV}-linux-x64.AppImage -> ${P}.AppImage
 "
@@ -85,18 +88,11 @@ src_unpack() {
 	"${S}/${P}.AppImage" --appimage-extract || die
 }
 
-src_prepare() {
-	# fix permissions
-	find "${S}/squashfs-root" -type d -exec chmod 0755 "{}" + || die 'chmod 0755 failed.'
-	default
-}
-
 src_install() {
 	cd "${S}/squashfs-root" || die
 
 	domenu Follow.desktop
 
-	local apphome="/opt/${PN}"
 	local toremove=(
 		.DirIcon
 		Follow.desktop
@@ -107,9 +103,11 @@ src_install() {
 	)
 	rm -f -r "${toremove[@]}" || die
 
-	mkdir -p "${ED}/${apphome}" || die
-	cp -r . "${ED}/${apphome}" || die
+	local apphome="/opt/${PN}"
+	insinto "${apphome}"
+	doins -r .
 
+	fperms +x "${apphome}/Follow"
 	dosym -r "${apphome}/Follow" "/usr/bin/Follow"
 }
 
