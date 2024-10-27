@@ -108,7 +108,7 @@ src_install() {
 	doins -r .
 
 	fperms +x "${apphome}/Follow"
-	dosym -r "${apphome}/Follow" "/usr/bin/Follow"
+	dosym -r "${apphome}/Follow" "/opt/bin/Follow"
 }
 
 pkg_postinst() {
