@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-10-28 11:51:02 CST)
+(The last generation time: 2024-10-28 21:04:24 CST)
 
 ### Packages
 
@@ -543,8 +543,8 @@
                                             | 24.9.30                                   |            |                                                                                         |
      app-alternatives/v2ray-geoip           | 0-r2                                      |  D, RD     |                                                                                         | symlink for v2ray-geoip
      app-alternatives/v2ray-geosite         | 0-r2                                      |  D, RD     |                                                                                         | symlink for v2ray-geosite
-   net-proxy/v2ray                          | 5.20.0                                    | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
-                                            | 5.21.0                                    |            |                                                                                         |
+   net-proxy/v2ray                          | 5.21.0                                    | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
+                                            | 5.22.0                                    |            |                                                                                         |
    net-proxy/v2ray-bin                      | 4.45.0-r2                                 | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
                                             | 5.12.1-r1                                 |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
