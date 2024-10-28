@@ -147,7 +147,7 @@ dev-util/tailspin 4.0.0: A log file highlighter
 dev-util/tauri-cli 1.5.9 2.0.0_alpha17: Command line interface for building Tauri apps
 dev-util/zprint-bin 1.2.7 1.2.8: Clojure and Clojurescript source code formatter
 dev-vcs/gitoxide 0.38.0: A command-line application for interacting with git repositories
-dev-vcs/sourcegit-bin 8.35: Opensource Git GUI client.
+dev-vcs/sourcegit-bin 8.36: Opensource Git GUI client.
 games-arcade/osu-lazer 2024.1009.1: rhythm is just a *click* away!
 games-board/othello 0.2.2: Othello is a classic strategy game, also known as Reversi
 games-fps/source-engine 9999: A 3D game engine developed by Valve
@@ -274,7 +274,7 @@ sci-chemistry/vesta 3.5.8: Visualization for Electronic and STructural Analysis
 sci-electronics/circuitjs1-bin 2.9.1: Electronic Circuit Simulator in the Browser
 sci-electronics/jlc-assistant-bin 5.0.69: JLC Order Assistant (binary package)
 sci-electronics/lceda 6.5.37 6.5.46: LCEDA (binary package)
-sci-electronics/lceda-pro 2.2.32.3: LCEDA Pro (binary package)
+sci-electronics/lceda-pro 2.2.32.3.1: LCEDA Pro (binary package)
 sci-electronics/openfpgaloader 0.12.1: Universal utility for programming FPGAs
 sec-policy/apparmor-profile-deepinwine 1.0.0: A collection of AppArmor profiles for Deepinwine6
 sys-apps/aptly 1.5.0 9999: A swiss army knife for Debian repository management
