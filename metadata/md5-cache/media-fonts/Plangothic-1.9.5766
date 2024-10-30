@@ -2,12 +2,12 @@ BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
 DEFINED_PHASES=install postinst postrm setup unpack
 DESCRIPTION=遍黑体项目（Plangothic Project）
 EAPI=8
-HOMEPAGE=https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic-Project
+HOMEPAGE=https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project
 INHERIT=font unpacker
 IUSE=+allideo fallback X
 KEYWORDS=~amd64 ~x86
 LICENSE=Plangothic
 SLOT=0
-SRC_URI=https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic-Project/archive/refs/tags/V1.9.5766.tar.gz -> Plangothic-1.9.5766.tar.gz
+SRC_URI=https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project/archive/refs/tags/V1.9.5766.tar.gz -> Plangothic-1.9.5766.tar.gz
 _eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb	multiprocessing	1e32df7deee68372153dca65f4a7c21f	toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87	multilib	b2a329026f2e404e9e371097dda47f96	unpacker	fb4b84181244b3b9990fa0bf40232dd2
-_md5_=75756a4e4741ca3e3e2c45830c61a78a
+_md5_=830da281ded0f1c74e49b29f734ea2fd
