@@ -6,7 +6,7 @@
 		<email>ston.jia@qq.com</email>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">Fitzgerald-Porthmouth-Koenigsegg/Plangothic</remote-id>
+		<remote-id type="github">Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project</remote-id>
 	</upstream>
 	<use>
 		<flag name="allideo">use HanaMin to display unincluded fonts</flag>
