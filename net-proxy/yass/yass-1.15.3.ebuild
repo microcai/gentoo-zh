@@ -96,7 +96,6 @@ src_configure() {
 		-DBUILD_SHARED_LIBS=off
 		-DUSE_BUILTIN_CA_BUNDLE_CRT=off
 		-DUSE_LIBCXX=off
-		-DENABLE_GOLD=off
 		-DCLI=$(usex cli)
 		-DSERVER=$(usex server)
 		-DUSE_CET=$(usex cet)
