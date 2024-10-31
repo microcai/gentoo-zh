@@ -51,7 +51,8 @@ src_compile() {
 	filter-flags "-march=*" "-mtune=*"
 	append-cflags "-fno-stack-protector"
 
-	emake VERSION="${PV}" GOFLAGS="-buildvcs=false"
+	local GIT_VER=$(git describe --tags --long | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-\([^-]*\)-\([^-]*\)$/.\1.\2/;s/-//')
+	emake VERSION="${GIT_VER}" GOFLAGS="-buildvcs=false"
 }
 
 src_install() {

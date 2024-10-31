@@ -8,7 +8,7 @@ inherit go-module
 MY_PV="$(ver_cut 1-3)T$(ver_cut 4-7)Z"
 MY_PV=${MY_PV//./-}
 YEAR="$(ver_cut 1)"
-EGIT_COMMIT=cf128de2cf42e763e7bd30c6df8b749fa94e0c10
+EGIT_COMMIT=9f4659884dd45dca726ba38ee6bfacb2bf776eb8
 
 DESCRIPTION="Minio client provides alternatives for ls, cat on cloud storage and filesystems"
 HOMEPAGE="https://github.com/minio/mc"
@@ -31,10 +31,10 @@ src_compile() {
 		-X github.com/minio/mc/cmd.CopyrightYear=${YEAR} \
 		-X github.com/minio/mc/cmd.ReleaseTag=RELEASE.${MY_PV} \
 		-X github.com/minio/mc/cmd.CommitID=${EGIT_COMMIT}"
-	go build -trimpath --ldflags "${ldflags}" -o ${PN} || die
+	ego build -trimpath --ldflags "${ldflags}"
 }
 
 src_install() {
 	dobin mc
-	dodoc -r README.md CONTRIBUTING.md
+	dodoc README.md CONTRIBUTING.md
 }
