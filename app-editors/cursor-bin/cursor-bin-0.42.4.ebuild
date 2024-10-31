@@ -9,7 +9,7 @@ inherit desktop xdg
 
 DESCRIPTION="Cursor App - AI-first coding environment"
 HOMEPAGE="https://www.cursor.com/"
-SRC_URI="https://download.todesktop.com/230313mzl4w4u92/cursor-0.42.3-build-241016kxu9umuir-x86_64.AppImage -> ${APPIMAGE}"
+SRC_URI="https://download.todesktop.com/230313mzl4w4u92/cursor-0.42.4-build-2410291z3bdg1dy-x86_64.AppImage -> ${APPIMAGE}"
 
 LICENSE="cursor"
 
