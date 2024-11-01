@@ -59,6 +59,12 @@ source = "github"
 github = "AppFlowy-IO/AppFlowy"
 use_latest_release = true
 
+["app-editors/cursor-bin"]
+source = "regex"
+url = "https://download.todesktop.com/230313mzl4w4u92/latest-linux.yml"
+regex = 'version:\s*(.*)'
+github_account = "douglarek"
+
 ["app-editors/marktext-bin"]
 source = "github"
 github = "marktext/marktext"
