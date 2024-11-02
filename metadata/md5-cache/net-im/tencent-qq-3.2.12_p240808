@@ -13,4 +13,4 @@ RESTRICT=strip mirror
 SLOT=0
 SRC_URI=amd64? ( https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.12_240808_amd64_01.deb ) arm64? ( https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.12_240808_arm64_01.deb ) loong? ( https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.12_240808_loongarch64_01.deb ) liteloader? ( https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/1.2.1/LiteLoaderQQNT.zip -> LiteLoaderQQNT-1.2.1.zip )
 _eclasses_=multiprocessing	1e32df7deee68372153dca65f4a7c21f	toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87	multilib	b2a329026f2e404e9e371097dda47f96	unpacker	fb4b84181244b3b9990fa0bf40232dd2	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	xdg	3ef49a87c52c8b77c476351195dfe575
-_md5_=8df9488cb3ed6f2ee8f982323ff1ba30
+_md5_=1a287b9ad86529deb9d2589e06ad0cfa

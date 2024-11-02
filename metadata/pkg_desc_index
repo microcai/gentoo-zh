@@ -186,7 +186,7 @@ media-plugins/waylyrics 0.3.17: Simple On Screen lyrics Display for linux/unix
 media-sound/amarok 3.1.0: KDE calculator
 media-sound/barva 9999: a modular audio visualizer
 media-sound/feeluown 4.1.7: A user-friendly and hackable music player
-media-sound/go-musicfox 4.5.6: Command-line Netease Cloud Music written in Go
+media-sound/go-musicfox 4.5.7: Command-line Netease Cloud Music written in Go
 media-sound/listen1_desktop-bin 2.32.0: one for all free music in China
 media-sound/lx-music-desktop-bin 2.2.2: 一个基于 electron 的音乐软件
 media-sound/netease-cloud-music 1.2.1: Netease Cloud Music, converted from .deb package
@@ -268,6 +268,7 @@ net-proxy/v2ray-bin 4.45.0-r2 5.12.1-r1: A platform for building proxies to bypa
 net-proxy/v2rayA 2.2.6 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
 net-proxy/yacd-meta 0.3.6: Yet Another Clash Dashboard
 net-proxy/yass 1.15.3: lightweight and efficient, socks5/http forward proxy
+net-vpn/cloudflared-bin 2024.10.1: Cloudflare Tunnel client (formerly Argo Tunnel)
 net-vpn/sstp-server 0.6.0: A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
 net-wireless/linux-wifi-hotspot 9999: Linux Wifi Hotspot
 sci-chemistry/vesta 3.5.8: Visualization for Electronic and STructural Analysis
