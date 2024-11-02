@@ -8,6 +8,7 @@ on:
       - '.github/**'
       - 'metadata/**'
       - 'README.md'
+      - '.gitignore'
     types: [opened, reopened, synchronize]
 
 permissions:
