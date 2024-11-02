@@ -76,9 +76,9 @@ src_install() {
 	dodir /
 	cd "${D}" || die
 	if [ "${ARCH}" = "loong" ]; then
-		unpacker "${DISTDIR}/${_QQFileName}_${MY_PV}_loongarch64${_QQFileSuffix}"
+		unpacker "${DISTDIR}/${_QQFileName}_${MY_PV}_loongarch64${_ArchExt}${_QQFileSuffix}"
 	else
-		unpacker "${DISTDIR}/${_QQFileName}_${MY_PV}_${ARCH}${_QQFileSuffix}"
+		unpacker "${DISTDIR}/${_QQFileName}_${MY_PV}_${ARCH}${_ArchExt}${_QQFileSuffix}"
 	fi
 
 	if use system-vips; then
