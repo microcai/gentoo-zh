@@ -14,9 +14,8 @@ WEBSLANGV=$(ver_cut 4)
 DESCRIPTION="Fcitx 5 Pinyin Dictionary from zh.wikipedia.org"
 HOMEPAGE="https://github.com/felixonmars/fcitx5-pinyin-zhwiki"
 SRC_URI="
-	https://github.com/felixonmars/${MY_PN}/archive/refs/tags/${CONVERTERV}.tar.gz -> ${P}.tar.gz
+	https://github.com/felixonmars/${MY_PN}/archive/refs/tags/${CONVERTERV}.tar.gz -> ${PN}-${CONVERTERV}.tar.gz
 	https://github.com/felixonmars/${MY_PN}/releases/download/${CONVERTERV}/web-slang-${WEBSLANGV}.source
-		-> web-slang-${P}.source
 	https://dumps.wikimedia.org/zhwiki/${ZHWIKIV}/zhwiki-${ZHWIKIV}-all-titles-in-ns0.gz
 "
 
@@ -56,7 +55,7 @@ python_check_deps() {
 
 src_unpack() {
 	default
-	cp "${DISTDIR}/web-slang-${P}.source" "${S}/web-slang-${WEBSLANGV}.source" || die
+	cp "${DISTDIR}/web-slang-${WEBSLANGV}.source" "${S}" || die
 	cp "${WORKDIR}/zhwiki-${ZHWIKIV}-all-titles-in-ns0" "${S}" || die
 }
 
