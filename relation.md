@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-03 08:02:17 CST)
+(The last generation time: 2024-11-03 10:11:43 CST)
 
 ### Packages
 
@@ -522,7 +522,7 @@
    acct-group/hysteria                      | 0                                         |  D, RD     |                                                                                         | A powerful, lightning fast and censorship resistant proxy.
    acct-user/hysteria                       | 0                                         |  D, RD     |                                                                                         | A powerful, lightning fast and censorship resistant proxy.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/juicity                          | 0.4.2                                     |            | https://github.com/juicity/juicity                                                      | juicity is a quic-based proxy protocol.
+ net-proxy/juicity                          | 0.4.3                                     |            | https://github.com/juicity/juicity                                                      | juicity is a quic-based proxy protocol.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/naiveproxy-bin                   | 130.0.6723.40_p5                          |            | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
