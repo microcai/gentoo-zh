@@ -163,7 +163,7 @@ media-fonts/Plangothic 1.9.5766: 遍黑体项目（Plangothic Project）
 media-fonts/iansui 1.000: An open-source Chinese font derived from Klee One (Fontworks).
 media-fonts/jf-openhuninn 2.1: An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 media-fonts/lxgw-neo-xihei 1.211: A Chinese sans-serif font derived from IPAex Gothic.
-media-fonts/lxgw-neo-zhisong 0.113: An open-source Chinese font derived from IPAmj Mincho
+media-fonts/lxgw-neo-zhisong 1.021: An open-source Chinese font derived from IPAmj Mincho
 media-fonts/misans 4.003-r1: MiSans 是由小米主导,联合汉仪发布的可免费使用的字体
 media-fonts/nerd-fonts 3.2.1: Nerd Fonts is a project that patches developer targeted fonts with glyphs
 media-fonts/sarasa-gothic 1.0.22: A CJK programming font based on Iosevka and Source Han Sans. (TTC)
@@ -206,7 +206,7 @@ media-video/mpv-handler 0.3.13: Play website videos and songs with mpv & yt-dlp
 media-video/tenvideo 1.0.10: Tencent videos
 net-analyzer/nali 0.8.1 0.8.1_p20240827: An offline tool for querying IP geographic information and CDN provider.
 net-analyzer/realitlscanner 0.2.1: A TLS server scanner for Reality
-net-dns/ddns-go 6.7.3: Automatically obtain your public IP address and set to your domain name service.
+net-dns/ddns-go 6.7.5: Automatically obtain your public IP address and set to your domain name service.
 net-dns/dnslookup 1.11.1: Simple command line utility to make DNS lookups to the specified server
 net-dns/dnsmasq-china-list 9999: Chinese-specific configuration to improve your favorite DNS server.
 net-dns/dog 0.1.0-r1 0.1.0_p20211007: A command-line DNS client
@@ -249,7 +249,7 @@ net-p2p/amule-dlp-antileech 9999: amule-dlp-antileech, dynamic DLP library for a
 net-p2p/n2n 3.0 3.1.1 9999: A Layer Two Peer-to-Peer VPN
 net-p2p/qbittorrent-enhanced 4.6.7.10 5.0.0.10: qBittorrent Enhanced, based on qBittorrent
 net-print/epson-inkjet-printer_201207w 1.0.0: Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
-net-proxy/Xray 24.9.30 24.10.16: Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
+net-proxy/Xray 24.10.16 24.10.31: Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
 net-proxy/cgproxy 0.20-r1: Transparent Proxy with cgroup v2
 net-proxy/clash-nyanpasu 1.5.1: Clash GUI based on tauri
 net-proxy/clash-rs 0.1.15: Custom protocol, rule based network proxy
@@ -301,7 +301,7 @@ sys-kernel/xanmod-sources 6.11.4: Full XanMod source, including the Gentoo patch
 sys-kernel/zenpower3 0.2.0: Linux kernel driver for reading sensors of AMD Zen family CPUs
 sys-libs/elog-functions 0.0.2: Compatibility functions for the log e* functions of OpenRC
 sys-libs/libsolv 0.7.28: Library for solving packages and reading repositories
-sys-power/tlpui 1.5.0_p6 1.6.0 1.6.5: A GTK user interface for TLP written in Python
+sys-power/tlpui 1.7.1: A GTK user interface for TLP written in Python
 virtual/dist-kernel 6.11.4: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r11: Virtual for Linux kernel sources
 virtual/loong-ow-compat 0: Virtual for LoongArch old-world compatibility
