@@ -26,9 +26,9 @@ app-backup/snapper-gui 220626: GUI for snapper, a tool for Linux filesystem snap
 app-containers/distrobox-boost 9999: A container runtimer wrapper for OCI (distrobox/toolbox, also podman/docker)
 app-crypt/archlinux-keyring 20231113 20231222 20240208-r1: GnuPG keyring of Archlinux developer keys
 app-crypt/cfssl 1.6.5: Cloudflare's PKI and TLS toolkit
-app-dicts/fcitx-pinyin-moegirl 20240809: Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
+app-dicts/fcitx-pinyin-moegirl 20241009: Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 app-dicts/fcitx-pinyin-moegirl-bin 20240809: Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
-app-dicts/fcitx-pinyin-zhwiki 0.2.5.20240722: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
+app-dicts/fcitx-pinyin-zhwiki 0.2.5.20240909: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 app-dicts/fcitx-pinyin-zhwiki-bin 0.2.5.20240722: Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 app-editors/appflowy-bin 0.7.2: AppFlowy is an open-source alternative to Notion
 app-editors/cursor-bin 0.42.4: Cursor App - AI-first coding environment
@@ -111,9 +111,9 @@ dev-libs/libthai 0.1.28 0.1.29: A a set of Thai language support routines
 dev-libs/lunar-calendar 3.0.1: a gtk+ calendar widget for chinese lunar library
 dev-libs/lunar-date 3.0.1: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
-dev-libs/v2ray-domain-list-community 20240907043125: Community managed domain list for V2Ray.
+dev-libs/v2ray-domain-list-community 20241013063848: Community managed domain list for V2Ray.
 dev-libs/v2ray-domain-list-community-bin 20241007202930: Community managed domain list for V2Ray.
-dev-libs/v2ray-geoip 202409050049: GeoIP for V2Ray.
+dev-libs/v2ray-geoip 202410310053: GeoIP for V2Ray.
 dev-libs/v2ray-geoip-bin 202410100052: GeoIP for V2Ray.
 dev-libs/v2ray-rules-dat-bin 202408072210: Enhanced edition of V2Ray rules dat files.
 dev-python/archspec 0.2.4: A library for detecting, labeling, and reasoning about microarchitectures
@@ -130,7 +130,7 @@ dev-python/janus 1.0.0-r1: Implementation of the asyncio (PEP 3156) event-loop w
 dev-python/mw2fcitx 0.16.0: Build fcitx5 libraries from MediaWiki sites
 dev-python/nvchecker 2.13.1 2.14 2.14.1 2.15 2.15.1: nvchecker is for checking if a new version of some software has been released
 dev-python/pycosat 0.6.6: Python bindings to picosat (a SAT solver)
-dev-python/pypinyin 0.52.0: Tool for converting Chinese characters to pinyin
+dev-python/pypinyin 0.53.0: Tool for converting Chinese characters to pinyin
 dev-python/pytube 15.0.0: Python tools for downloading YouTube Videos
 dev-python/qasync 0.27.1: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-util/android-studio 2024.2.1.10: Android development environment based on IntelliJ IDEA
@@ -257,12 +257,12 @@ net-proxy/daed 0.7.0 9999: A Modern Dashboard For dae
 net-proxy/hysteria 2.5.2: A powerful, lightning fast and censorship resistant proxy.
 net-proxy/juicity 0.4.2: juicity is a quic-based proxy protocol.
 net-proxy/mihomo 1.18.9: Another Clash Kernel, formerly Clash.Meta
-net-proxy/naiveproxy-bin 128.0.6613.40_p1: A proxy using Chromium's network stack to camouflage traffic
+net-proxy/naiveproxy-bin 130.0.6723.40_p5: A proxy using Chromium's network stack to camouflage traffic
 net-proxy/proxy-server 8.0.0: Implementation of all proxy protocols using modern c++
 net-proxy/shadowsocks-rust 1.21.0 1.21.2: shadowsocks is a fast tunnel proxy that helps you bypass firewalls.
 net-proxy/sing-box 1.9.7 1.10.1: The universal proxy platform.
 net-proxy/smartproxy 0.9.5: A fast, proxy smart selector
-net-proxy/trojan-go-fork 2024.09.07: A fork of trojan-go
+net-proxy/trojan-go-fork 2024.11.02: A fork of trojan-go
 net-proxy/v2ray 5.21.0 5.22.0: A platform for building proxies to bypass network restrictions.
 net-proxy/v2ray-bin 4.45.0-r2 5.12.1-r1: A platform for building proxies to bypass network restrictions
 net-proxy/v2rayA 2.2.6 9999: web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel

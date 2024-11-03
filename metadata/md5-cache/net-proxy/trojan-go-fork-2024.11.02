@@ -10,6 +10,6 @@ LICENSE=GPL-3
 RDEPEND=app-alternatives/v2ray-geoip app-alternatives/v2ray-geosite
 RESTRICT=strip
 SLOT=0
-SRC_URI=https://github.com/Potterli20/trojan-go-fork/archive/refs/tags/V2024.09.07.tar.gz -> trojan-go-fork-2024.09.07.tar.gz https://github.com/blackteahamburger/gentoo-deps/releases/download/trojan-go-fork-2024.09.07/trojan-go-fork-2024.09.07-vendor.tar.xz
+SRC_URI=https://github.com/Potterli20/trojan-go-fork/archive/refs/tags/V2024.11.02.tar.gz -> trojan-go-fork-2024.11.02.tar.gz https://github.com/blackteahamburger/gentoo-deps/releases/download/trojan-go-fork-2024.11.02/trojan-go-fork-2024.11.02-vendor.tar.xz
 _eclasses_=toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87	multilib	b2a329026f2e404e9e371097dda47f96	systemd	54bd206bb5c4efac6ae28b6b006713b0	multiprocessing	1e32df7deee68372153dca65f4a7c21f	flag-o-matic	f14aba975c94ccaa9f357a27e3b17ffe	go-env	90efbc8636d2f02d9654183330e84cf7	go-module	df32d29550d40a92da723d3b8e17b467
 _md5_=2b869194e583c3b8a9f813b99c5a5e0f

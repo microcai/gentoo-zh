@@ -10,6 +10,6 @@ LICENSE=Unlicense CC-BY-NC-SA-3.0
 RDEPEND=fcitx? ( app-i18n/fcitx:5 ) rime? ( || ( app-i18n/ibus-rime app-i18n/fcitx-rime ) ) !app-dicts/fcitx-pinyin-moegirl-bin
 REQUIRED_USE=|| ( fcitx rime )
 SLOT=5
-SRC_URI=https://github.com/outloudvi/mw2fcitx/archive/refs/tags/20240809.tar.gz -> fcitx-pinyin-moegirl-20240809.tar.gz
+SRC_URI=https://github.com/outloudvi/mw2fcitx/archive/refs/tags/20241009.tar.gz -> fcitx-pinyin-moegirl-20241009.tar.gz
 _eclasses_=multiprocessing	1e32df7deee68372153dca65f4a7c21f	toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87	multilib	b2a329026f2e404e9e371097dda47f96	python-utils-r1	2fee95c11e5f883024588d4837db6802	python-any-r1	f7b9a2fa38c69a9c2a7ad8fc9283ccf7
 _md5_=bd26438e5af8752f78de1bb3dd8cc171
