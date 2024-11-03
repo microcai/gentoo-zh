@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-03 12:21:26 CST)
+(The last generation time: 2024-11-03 12:25:36 CST)
 
 ### Packages
 
@@ -26,9 +26,13 @@
  app-crypt/cfssl                            | 1.6.5                                     |            | https://github.com/cloudflare/cfssl                                                     | Cloudflare's PKI and TLS toolkit
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-moegirl             | 20241009                                  |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
-   app-i18n/ibus-rime                       | 9999                                      | RD         | http://code.google.com/p/rimeime/                                                       | Rime Input Method Engine for IBus Framework
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-moegirl-bin         | 20240809                                  |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
+--------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-dicts/fcitx-pinyin-sougou-baidu        | 20241020                                  |            | https://github.com/blackteahamburger/fcitx5-pinyin-sougou-baidu                         | Sougou & Baidu Pinyin dictionary for Fcitx5 and RIME
+   app-i18n/ibus-rime                       | 9999                                      | RD         | http://code.google.com/p/rimeime/                                                       | Rime Input Method Engine for IBus Framework
+   app-text/imewlconverter                  | 3.1.1                                     | BD         | https://github.com/studyzy/imewlconverter                                               | An open source and free input method dictionary conversion program
+                                            | 9999                                      |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-zhwiki              | 0.2.5.20240909                            |            | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
