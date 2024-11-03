@@ -255,7 +255,7 @@ net-proxy/clash-verge-bin 1.6.0 1.6.4 1.6.6 1.7.7-r1: (Continuation) of Clash Me
 net-proxy/dae 0.8.0 9999: A lightweight and high-performance transparent proxy solution based on eBPF
 net-proxy/daed 0.7.0 9999: A Modern Dashboard For dae
 net-proxy/hysteria 2.5.2: A powerful, lightning fast and censorship resistant proxy.
-net-proxy/juicity 0.4.2: juicity is a quic-based proxy protocol.
+net-proxy/juicity 0.4.3: juicity is a quic-based proxy protocol.
 net-proxy/mihomo 1.18.9: Another Clash Kernel, formerly Clash.Meta
 net-proxy/naiveproxy-bin 130.0.6723.40_p5: A proxy using Chromium's network stack to camouflage traffic
 net-proxy/proxy-server 8.0.0: Implementation of all proxy protocols using modern c++
