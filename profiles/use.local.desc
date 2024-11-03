@@ -12,6 +12,10 @@ app-dicts/fcitx-pinyin-moegirl:fcitx - Install Fcitx 5 dictionary
 app-dicts/fcitx-pinyin-moegirl:rime - Install Rime dictionary
 app-dicts/fcitx-pinyin-moegirl-bin:fcitx - Install Fcitx 5 dictionary
 app-dicts/fcitx-pinyin-moegirl-bin:rime - Install Rime dictionary
+app-dicts/fcitx-pinyin-sougou-baidu:baidu - Install Baidu dictionary
+app-dicts/fcitx-pinyin-sougou-baidu:fcitx - Install Fcitx 5 dictionary
+app-dicts/fcitx-pinyin-sougou-baidu:rime - Install Rime dictionary
+app-dicts/fcitx-pinyin-sougou-baidu:sougou - Install Sougou dictionary
 app-dicts/fcitx-pinyin-zhwiki:fcitx - Install Fcitx 5 dictionary
 app-dicts/fcitx-pinyin-zhwiki:rime - Install Rime dictionary
 app-dicts/fcitx-pinyin-zhwiki-bin:fcitx - Install Fcitx 5 dictionary

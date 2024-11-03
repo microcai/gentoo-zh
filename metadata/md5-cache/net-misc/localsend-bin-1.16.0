@@ -8,6 +8,6 @@ KEYWORDS=~amd64
 LICENSE=MIT
 RESTRICT=bindist
 SLOT=0
-SRC_URI=https://github.com/localsend/localsend/releases/download/v1.15.4/localsend-1.15.4-linux-x86-64.tar.gz
+SRC_URI=https://github.com/localsend/localsend/releases/download/v1.16.0/localsend-1.16.0-linux-x86-64.tar.gz
 _eclasses_=desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed
 _md5_=308f43a20fb581d5d3738f6dcd02d2b5

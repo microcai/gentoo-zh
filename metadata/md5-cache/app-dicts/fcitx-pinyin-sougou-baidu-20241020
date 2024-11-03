@@ -1,0 +1,13 @@
+BDEPEND=fcitx? ( app-i18n/libime:5 ) >=app-text/imewlconverter-3.1.1
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=Sougou & Baidu Pinyin dictionary for Fcitx5 and RIME
+EAPI=8
+HOMEPAGE=https://github.com/blackteahamburger/fcitx5-pinyin-sougou-baidu
+IUSE=+fcitx rime +sougou +baidu
+KEYWORDS=~amd64
+LICENSE=Unlicense
+RDEPEND=fcitx? ( app-i18n/fcitx:5 ) rime? ( || ( app-i18n/ibus-rime app-i18n/fcitx-rime ) )
+REQUIRED_USE=|| ( fcitx rime ) || ( sougou baidu )
+SLOT=5
+SRC_URI=https://github.com/blackteahamburger/fcitx5-pinyin-sougou-baidu/archive/refs/tags/20241020.tar.gz -> fcitx-pinyin-sougou-baidu-20241020.tar.gz sougou? ( https://github.com/blackteahamburger/fcitx5-pinyin-sougou-baidu/releases/download/20241020/sougou_dict.tar.gz -> sougou_dict-20241020.tar.gz ) baidu? ( https://github.com/blackteahamburger/fcitx5-pinyin-sougou-baidu/releases/download/20241020/baidu_dict.tar.gz -> baidu_dict-20241020.tar.gz )
+_md5_=6f26e0844962970595d646158ae554a0
