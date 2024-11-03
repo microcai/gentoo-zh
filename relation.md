@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-03 14:44:52 CST)
+(The last generation time: 2024-11-03 15:03:09 CST)
 
 ### Packages
 
@@ -193,7 +193,7 @@
                                             | 1.6.0                                     |            |                                                                                         |
                                             | 9999                                      |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-libs/v2ray-rules-dat-bin               | 202408072210                              |            | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
+ dev-libs/v2ray-rules-dat-bin               | 202411022212                              |            | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/archspec                        | 0.2.4                                     |            | https://github.com/archspec/archspec                                                    | A library for detecting, labeling, and reasoning about microarchitectures
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -619,11 +619,11 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-domain-list-community        | 0                                         |            |                                                                                         | Virtual for v2ray-domain-list-community
    dev-libs/v2ray-domain-list-community     | 20241013063848                            | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
-   dev-libs/v2ray-domain-list-community-bin | 20241007202930                            | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+   dev-libs/v2ray-domain-list-community-bin | 20241013063848                            | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-geoip                        | 0                                         |            |                                                                                         | Virtual for v2ray-geoip
    dev-libs/v2ray-geoip                     | 202410310053                              | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
-   dev-libs/v2ray-geoip-bin                 | 202410100052                              | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
+   dev-libs/v2ray-geoip-bin                 | 202410310053                              | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/chatgpt-desktop                   | 1.1.0                                     |            | https://nofwl.com                                                                       | ChatGPT Desktop Application
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
