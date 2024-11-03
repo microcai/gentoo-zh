@@ -114,10 +114,10 @@ dev-libs/lunar-calendar 3.0.1: a gtk+ calendar widget for chinese lunar library
 dev-libs/lunar-date 3.0.1: Chinese Lunar Library
 dev-libs/tdlib 1.5.0 1.6.0 9999: Cross-platform library for building Telegram clients
 dev-libs/v2ray-domain-list-community 20241013063848: Community managed domain list for V2Ray.
-dev-libs/v2ray-domain-list-community-bin 20241007202930: Community managed domain list for V2Ray.
+dev-libs/v2ray-domain-list-community-bin 20241013063848: Community managed domain list for V2Ray.
 dev-libs/v2ray-geoip 202410310053: GeoIP for V2Ray.
-dev-libs/v2ray-geoip-bin 202410100052: GeoIP for V2Ray.
-dev-libs/v2ray-rules-dat-bin 202408072210: Enhanced edition of V2Ray rules dat files.
+dev-libs/v2ray-geoip-bin 202410310053: GeoIP for V2Ray.
+dev-libs/v2ray-rules-dat-bin 202411022212: Enhanced edition of V2Ray rules dat files.
 dev-python/archspec 0.2.4: A library for detecting, labeling, and reasoning about microarchitectures
 dev-python/conda 24.5.0: OS-agnostic, system-level binary package manager and ecosystem
 dev-python/conda-libmamba-solver 24.1.0-r1: The libmamba based solver for conda
@@ -141,7 +141,7 @@ dev-util/asdf-vm 0.14.0: Manage all your runtime versions with one tool
 dev-util/cargo-about 0.6.4: Cargo plugin to generate list of all licenses for a crate
 dev-util/jetbrains-toolbox 1.28.1.15219 2.4.2.32922: Manage all your JetBrains Projects and Tools
 dev-util/mamba 1.5.8: The Fast Cross-Platform Package Manager
-dev-util/mongodb-compass-bin 1.44.5: The GUI for MongoDB
+dev-util/mongodb-compass-bin 1.44.6: The GUI for MongoDB
 dev-util/pacstrap 28: Pacstrap - install packages to the specified new root directorye
 dev-util/patchelf-liblol 0.1.4: patchelf patched for building libLoL only
 dev-util/redpanda-cpp 2.26 3.1: A lightweight yet powerful C/C++/GNU Assembly IDE.

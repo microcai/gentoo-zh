@@ -6,5 +6,5 @@ KEYWORDS=~amd64 ~arm ~arm64 ~loong ~riscv ~x86
 LICENSE=MIT
 RDEPEND=!dev-libs/v2ray-domain-list-community
 SLOT=0
-SRC_URI=https://github.com/v2fly/domain-list-community/releases/download/20241007202930/dlc.dat.xz -> v2ray-domain-list-community-bin-20241007202930.dat.xz
+SRC_URI=https://github.com/v2fly/domain-list-community/releases/download/20241013063848/dlc.dat.xz -> v2ray-domain-list-community-bin-20241013063848.dat.xz
 _md5_=d84946ff294fd748b0ef6d49f1de5023
