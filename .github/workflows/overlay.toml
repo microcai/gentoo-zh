@@ -799,7 +799,7 @@ source = "github"
 github = "be5invis/sarasa-gothic"
 use_latest_release = true
 prefix = "v"
-github_account = "zozx"
+github_account = "Linerre"
 
 ["media-fonts/sarasa-term-sc-nerd"]
 source = "github"
