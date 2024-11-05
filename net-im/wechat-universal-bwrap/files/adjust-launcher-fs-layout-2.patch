@@ -1,0 +1,65 @@
+From f53bd3da0414ca27f90addf34bd1136f1c4e7d8f Mon Sep 17 00:00:00 2001
+From: Boiao Ch <doubiliao@gmail.com>
+Date: Tue, 5 Nov 2024 19:35:29 +0800
+Subject: [PATCH] feat: patch file system bind for gentoo
+
+---
+ wechat-universal.sh | 21 ++++++++++++---------
+ 1 file changed, 12 insertions(+), 9 deletions(-)
+
+diff --git a/wechat-universal.sh b/wechat-universal.sh
+index a16e538..1c75856 100644
+--- a/wechat-universal.sh
++++ b/wechat-universal.sh
+@@ -161,11 +161,11 @@ try_start() {
+ 
+         # /usr
+         --ro-bind /usr{,}
+-        --symlink usr/lib /lib
+-        --symlink usr/lib /lib64
+-        --symlink usr/bin /bin
+-        --symlink usr/bin /sbin
+-        --bind /usr/bin/{true,lsblk}
++        --ro-bind /lib{,}
++        --ro-bind /lib64{,}
++        --ro-bind /bin{,}
++        --ro-bind /sbin{,}
++        --ro-bind /usr/bin/{true,lsblk}
+ 
+         # /sandbox
+         --ro-bind /{usr/lib/flatpak-xdg-utils,sandbox}/xdg-open
+@@ -180,12 +180,15 @@ try_start() {
+         --proc /proc
+ 
+         # /etc
+-        --ro-bind /etc/machine-id{,}
++        --ro-bind-try /etc/machine-id{,}
+         --ro-bind /etc/passwd{,}
+         --ro-bind /etc/nsswitch.conf{,}
+         --ro-bind /etc/resolv.conf{,}
+         --ro-bind /etc/localtime{,}
+         --ro-bind-try /etc/fonts{,}
++        --ro-bind /etc/ld.so.cache{,}
++        --ro-bind /etc/ld.so.conf{,}
++        --ro-bind-try /etc/ld.so.conf.d{,}
+ 
+         # /sys
+         --dir /sys/dev # hack for Intel / AMD graphics, mesa calling virtual nodes needs /sys/dev being 0755
+@@ -211,11 +214,11 @@ try_start() {
+         --ro-bind-try "${HOME}/.local/share/icons"{,}
+ 
+         # /run
+-        --dev-bind /run/dbus{,}
++        --dev-bind-try /run/dbus{,}
+         --ro-bind-try /run/systemd/userdb{,}
+         --ro-bind-try "${XAUTHORITY}"{,}
+-        --ro-bind "${DBUS_SESSION_BUS_PATH}"{,}
+-        --ro-bind "${XDG_RUNTIME_DIR}/pulse"{,}
++        --ro-bind-try "${DBUS_SESSION_BUS_PATH}"{,}
++        --ro-bind-try "${XDG_RUNTIME_DIR}/pulse"{,}
+     )
+ 
+     exec bwrap "${BWRAP_ARGS[@]}" "${BWRAP_CUSTOM_BINDS[@]}" "${BWRAP_DEV_BINDS[@]}" /opt/wechat-universal/wechat "$@"
+-- 
+2.44.2
+
