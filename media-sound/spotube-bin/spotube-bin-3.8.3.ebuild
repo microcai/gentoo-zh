@@ -4,7 +4,6 @@
 EAPI=8
 
 inherit desktop xdg
-
 DESCRIPTION="A lightweight Spotify client using YouTube as audio source"
 HOMEPAGE="https://github.com/KRTirtho/spotube"
 SRC_URI="https://github.com/KRTirtho/spotube/releases/download/v${PV}/spotube-linux-${PV}-x86_64.tar.xz"
@@ -13,7 +12,7 @@ S="${WORKDIR}"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 
 RDEPEND="
 	dev-libs/libappindicator
@@ -21,10 +20,9 @@ RDEPEND="
 "
 
 src_install() {
-	insinto /opt/spotube
-	doins -r "${S}/data" "${S}/lib"
-	dobin "${S}/spotube"
-	insinto /opt/spotube
+	insinto /opt/spotube/
+	doins -r "${S}/data" "${S}/lib" "${S}/spotube"
+	fperms +x /opt/spotube/spotube
 	doins "${S}/spotube-logo.png"
 	sed -i -e 's|^Exec=.*|Exec=/opt/spotube/spotube|' \
 		-i -e 's|^Icon=.*|Icon=/opt/spotube/spotube-logo.png|' \
