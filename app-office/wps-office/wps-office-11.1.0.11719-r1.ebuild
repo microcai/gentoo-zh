@@ -9,10 +9,10 @@ DESCRIPTION="WPS Office is an office productivity suite, Here is the Chinese ver
 HOMEPAGE="https://www.wps.cn/product/wpslinux/"
 
 SRC_URI="
-	amd64?	( https://wb9.s-ton.top/wps302/${PV}/amd64 -> ${PN}_${PV}_amd64.deb )
-	arm64?	( https://wb9.s-ton.top/wps302/${PV}/arm64 -> ${PN}_${PV}_arm64.deb )
-	loong?	( https://wb9.s-ton.top/wps302/${PV}/loongarch64 -> ${PN}_${PV}_loongarch64.deb )
-	mips?	( https://wb9.s-ton.top/wps302/${PV}/mips64el -> ${PN}_${PV}_mips64el.deb )
+	arm64? ( https://github.com/peeweep/gentoo-go-deps/releases/download/${PN}_${PV}/${PN}_${PV}_arm64.deb )
+	amd64? ( https://github.com/peeweep/gentoo-go-deps/releases/download/${PN}_${PV}/${PN}_${PV}_amd64.deb )
+	loong? ( https://github.com/peeweep/gentoo-go-deps/releases/download/${PN}_${PV}/${PN}_${PV}_loongarch64.deb )
+	mips?	( ${PN}_${PV}_mips64el.deb )
 "
 
 S="${WORKDIR}"
