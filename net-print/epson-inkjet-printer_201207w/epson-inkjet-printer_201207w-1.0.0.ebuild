@@ -1,4 +1,4 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 2021-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -10,7 +10,7 @@ MY_PN=${PN%_*}-${PN##*_}
 DESCRIPTION="Epson printer driver (L110, L210, L300, L350, L355, L550, L555)"
 HOMEPAGE="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX
 	http://www.openprinting.org/driver/epson-201207w"
-SRC_URI="http://download.ebz.epson.net/dsc/op/stable/SRPMS/${MY_PN}-${PV}-1lsb3.2.src.rpm"
+SRC_URI="https://web.archive.org/web/20150803102803if_/http://download.ebz.epson.net/dsc/op/stable/SRPMS/epson-inkjet-printer-201207w-1.0.0-1lsb3.2.src.rpm"
 
 LICENSE="LGPL-2.1 EPSON"
 SLOT="0"
