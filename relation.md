@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-05 21:47:39 CST)
+(The last generation time: 2024-11-06 13:03:26 CST)
 
 ### Packages
 
@@ -421,7 +421,7 @@
    virtual/loong-ow-compat                  | 0                                         | RD         |                                                                                         | Virtual for LoongArch old-world compatibility
      app-emulation/liblol                   | 0.1.5                                     | RD         | https://liblol.aosc.io                                                                  | LoongArch old-world ABI compatibility layer from AOSC OS
                                             | 0.1.5_pre6                                |            |                                                                                         |
-   x11-misc/flatpak-xdg-utils               | 1.0.5                                     | RD         | https://github.com/flatpak/flatpak-xdg-utils                                            | Utilities for containerized apps to launch programs outside the container
+   x11-misc/flatpak-xdg-utils               | 1.0.6                                     | RD         | https://github.com/flatpak/flatpak-xdg-utils                                            | Utilities for containerized apps to launch programs outside the container
    x11-misc/snapd-xdg-open                  | 20170401                                  | RD         | https://github.com/snapcore/snapd-xdg-open                                              | Software for opening links from snaps in desktop
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/wechat-universal-bwrap              | 1.0.0.241-r1                              |            | https://weixin.qq.com                                                                   | WeChat (Universal) from UOS, inside bwrap sandbox
