@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-06 13:03:26 CST)
+(The last generation time: 2024-11-06 13:53:02 CST)
 
 ### Packages
 
@@ -351,7 +351,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/netease-cloud-music            | 1.2.1                                     |            | https://music.163.com                                                                   | Netease Cloud Music, converted from .deb package
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/netease-cloud-music-gtk        | 2.4.1                                     |            | https://github.com/gmg137/netease-cloud-music-gtk                                       | netease cloud music player based on Rust & GTK for Linux
+ media-sound/netease-cloud-music-gtk        | 2.5.0                                     |            | https://github.com/gmg137/netease-cloud-music-gtk                                       | netease cloud music player based on Rust & GTK for Linux
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/qqmusic                        | 1.1.7                                     |            | https://y.qq.com/                                                                       | Tencent QQ Music, converted from .deb package
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -546,7 +546,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/trojan-go-fork                   | 2024.11.02                                |            | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/v2rayA                           | 2.2.6                                     |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
+ net-proxy/v2rayA                           | 2.2.6.2                                   |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                             | 9999                                      |            |                                                                                         |
    net-proxy/Xray                           | 24.10.16                                  | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
                                             | 24.10.31                                  |            |                                                                                         |
