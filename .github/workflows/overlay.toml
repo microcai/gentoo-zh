@@ -1711,3 +1711,4 @@ github_account = "hertz-hwang"
 source = "github"
 github = "hyprwm/Hypr"
 use_latest_release = true
+github_account = "Goldsrc233"
