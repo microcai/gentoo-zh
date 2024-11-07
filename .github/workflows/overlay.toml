@@ -976,6 +976,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "oatiz"
 
+["media-sound/youtube-music-bin"]
+source = "github"
+github = "ytmdesktop/ytmdesktop"
+use_latest_release = true
+prefix = "v"
+github_account = "oatiz"
+
 # TODO:
 #["media-video/amdgpu-pro-amf"]
 
