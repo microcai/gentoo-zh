@@ -7,7 +7,8 @@ inherit unpacker
 
 DESCRIPTION="Cloudflare Tunnel client (formerly Argo Tunnel)"
 HOMEPAGE="https://github.com/cloudflare/cloudflared"
-SRC_URI="https://github.com/cloudflare/cloudflared/releases/download/${PV}/cloudflared-linux-amd64.deb"
+SRC_URI="https://github.com/cloudflare/cloudflared/releases/download/${PV}/cloudflared-linux-amd64.deb
+	-> cloudflared-${PV}-linux-amd64.deb"
 S=${WORKDIR}
 
 LICENSE="Apache-2.0"
@@ -16,10 +17,6 @@ KEYWORDS="-* amd64"
 
 RESTRICT="strip"
 QA_PREBUILT="usr/bin/cloudflared"
-
-src_unpack() {
-	unpacker ${A}
-}
 
 src_install() {
 	dobin "${S}/usr/bin/cloudflared"
