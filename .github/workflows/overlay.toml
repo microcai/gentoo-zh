@@ -969,14 +969,7 @@ use_latest_release = true
 prefix = "v"
 github_account = "zozx"
 
-["media-sound/youtube-music-bin"]
-source = "github"
-github = "th-ch/youtube-music"
-use_latest_release = true
-prefix = "v"
-github_account = "oatiz"
-
-["media-sound/youtube-music-bin"]
+["media-sound/ytmdesktop-bin"]
 source = "github"
 github = "ytmdesktop/ytmdesktop"
 use_latest_release = true
