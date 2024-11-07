@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-07 10:54:46 CST)
+(The last generation time: 2024-11-07 11:26:39 CST)
 
 ### Packages
 
@@ -360,8 +360,6 @@
  media-sound/termusic                       | 0.9.1                                     |            | https://github.com/tramhao/termusic                                                     | Terminal Music and Podcast Player written in Rust
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/yesplaymusic-bin               | 0.4.8                                     |            | https://github.com/qier222/YesPlayMusic                                                 | A third party music player for Netease Music
---------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/youtube-music-bin              | 2.2.0                                     |            | https://th-ch.github.io/youtube-music/                                                  | YouTube Music Desktop App bundled with custom plugins
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/ytmdesktop-bin                 | 2.0.6                                     |            | https://github.com/ytmdesktop/ytmdesktop                                                | A Desktop App for YouTube Music
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
