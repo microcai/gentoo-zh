@@ -14,6 +14,8 @@ LICENSE="all-rights-reserved"
 
 SLOT="0"
 KEYWORDS="-* ~amd64"
+IUSE="+fcitx ibus"
+REQUIRED_USE="^^ ( fcitx ibus )"
 
 RESTRICT="strip mirror bindist"
 BDEPEND="
@@ -57,9 +59,17 @@ src_prepare() {
 
 	find "${S}/opt/wechat/vlc_plugins" -type f | xargs -I {} patchelf --set-rpath '$ORIGIN:$ORIGIN/../..' {} || die
 
+	local env_vars="QT_AUTO_SCREEN_SCALE_FACTOR=1 \"QT_QPA_PLATFORM=wayland;xcb\""
+	if use fcitx; then
+	    env_vars="QT_IM_MODULE=fcitx ${env_vars}"
+	elif use ibus; then
+	    env_vars="QT_IM_MODULE=ibus ${env_vars}"
+	fi
+
 	sed -i \
 		-e "s|^Icon=.*|Icon=wechat|" \
 		-e "s|^Categories=.*|Categories=Network;InstantMessaging;Chat;|" \
+		-e "/^Exec=/s|Exec=|Exec=env ${env_vars} |" \
 		"${S}/usr/share/applications/wechat.desktop" || die
 }
 
