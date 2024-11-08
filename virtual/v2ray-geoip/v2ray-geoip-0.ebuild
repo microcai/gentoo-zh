@@ -8,4 +8,4 @@ DESCRIPTION="Virtual for v2ray-geoip"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 
-RDEPEND="|| ( dev-libs/v2ray-geoip dev-libs/v2ray-geoip-bin )"
+RDEPEND="|| ( dev-libs/v2ray-geoip-bin dev-libs/v2ray-geoip )"
