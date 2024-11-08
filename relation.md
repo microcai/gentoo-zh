@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-08 11:14:17 CST)
+(The last generation time: 2024-11-08 11:37:46 CST)
 
 ### Packages
 
@@ -14,7 +14,7 @@
  app-admin/zenmonitor3                      | 2.0.0                                     |            | https://git.exozy.me/a/zenmonitor3                                                      | Zen monitor is monitoring software for AMD Zen-based CPUs
    sys-kernel/zenpower3                     | 0.2.0                                     |  D, RD     | https://git.exozy.me/a/zenpower3                                                        | Linux kernel driver for reading sensors of AMD Zen family CPUs
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-backup/btrfs-assistant                 | 2.1                                       |            | https://gitlab.com/btrfs-assistant/btrfs-assistant                                      | A GUI management tool to make managing a Btrfs filesystem easier.
+ app-backup/btrfs-assistant                 | 2.1.1                                     |            | https://gitlab.com/btrfs-assistant/btrfs-assistant                                      | A GUI management tool to make managing a Btrfs filesystem easier.
                                             | 9999                                      |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-backup/restic-rest-server              | 0.13.0                                    |            | https://github.com/restic/rest-server                                                   | A high performance HTTP server that implements restic's REST backend API
