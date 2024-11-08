@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-08 09:01:19 CST)
+(The last generation time: 2024-11-08 09:07:49 CST)
 
 ### Packages
 
@@ -79,7 +79,7 @@
    app-i18n/fcitx-hangul                    | 9999                                      | RD         | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
    app-i18n/fcitx-m17n                      | 9999                                      | RD         | https://github.com/fcitx/fcitx5-m17n                                                    | m17n-provided input methods for Fcitx5
    app-i18n/fcitx-rime                      | 9999                                      | RD         | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
-   app-i18n/fcitx-skk                       | 5.1.4                                     | RD         | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
+   app-i18n/fcitx-skk                       | 5.1.5                                     | RD         | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
                                             | 9999                                      |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/libime-jyutping                   | 1.0.12                                    |            | https://github.com/fcitx/libime-jyutping                                                | A library make use of libime to implement jyutping input method
