@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-08 08:30:46 CST)
+(The last generation time: 2024-11-08 09:01:19 CST)
 
 ### Packages
 
@@ -557,7 +557,7 @@
    net-proxy/v2ray                          | 5.21.0                                    | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
                                             | 5.22.0                                    |            |                                                                                         |
    net-proxy/v2ray-bin                      | 4.45.0-r2                                 | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
-                                            | 5.12.1-r1                                 |            |                                                                                         |
+                                            | 5.21.0                                    |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/yacd-meta                        | 0.3.6                                     |            | https://github.com/MetaCubeX/Yacd-meta                                                  | Yet Another Clash Dashboard
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
