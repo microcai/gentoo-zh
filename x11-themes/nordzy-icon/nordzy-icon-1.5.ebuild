@@ -9,11 +9,11 @@ DESCRIPTION="A free and open source icon theme for Linux desktops using the Nord
 HOMEPAGE="https://github.com/alvatip/Nordzy-icon"
 SRC_URI="https://github.com/alvatip/Nordzy-icon/releases/download/${PV}/Nordzy.tar.gz -> ${P}.tar.gz"
 
+S="${WORKDIR}"
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-
-S="${WORKDIR}"
 
 src_configure() { :; }
 
