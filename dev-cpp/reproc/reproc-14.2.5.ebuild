@@ -1,4 +1,4 @@
-# Copyright 2021-2023 Gentoo Authors
+# Copyright 2021-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -14,8 +14,6 @@ SLOT="0/14"
 KEYWORDS="~amd64 ~arm64 ~x86"
 IUSE="test"
 RESTRICT="test"
-
-PATCHES=( "${FILESDIR}/${P}-fix-gcc13-build.patch" )
 
 multilib_src_configure() {
 	local mycmakeargs=(
