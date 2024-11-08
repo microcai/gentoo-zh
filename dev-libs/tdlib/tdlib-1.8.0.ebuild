@@ -1,4 +1,4 @@
-# Copyright 2019-2021 Gentoo Authors
+# Copyright 2019-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -20,6 +20,5 @@ DEPEND="sys-devel/gcc
 	dev-build/cmake
 "
 RDEPEND="${DEPEND}"
-PATCHES=( "${FILESDIR}/${P}-multilib.patch" )
 
 S="${WORKDIR}/td-${PV}"
