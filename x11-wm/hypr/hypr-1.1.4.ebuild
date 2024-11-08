@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -15,7 +15,7 @@ KEYWORDS="~amd64"
 S="${WORKDIR}/Hypr-${PV}"
 
 DEPEND="x11-libs/cairo
-		dev-util/ninja
+		dev-build/ninja
 		x11-libs/libxcb
 		x11-base/xcb-proto
 		x11-libs/xcb-util
@@ -24,10 +24,6 @@ DEPEND="x11-libs/cairo
 		x11-libs/xcb-util-wm
 		dev-cpp/gtkmm:3.0
 		gui-libs/gtk"
-
-PATCHES=(
-	"${FILESDIR}/fix-build.patch"
-)
 
 pkg_pretend() {
 	if ! tc-is-gcc; then
