@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-08 08:30:20 CST)
+(The last generation time: 2024-11-08 08:30:46 CST)
 
 ### Packages
 
@@ -204,7 +204,7 @@
      dev-util/mamba                         | 1.5.8                                     | RD         | https://github.com/mamba-org/mamba                                                      | The Fast Cross-Platform Package Manager
        dev-cpp/reproc                       | 14.2.4                                    |  D, RD     | https://github.com/DaanDeMeyer/reproc                                                   | A cross-platform (C99/C++11) process library
        dev-cpp/tl-expected                  | 1.1.0                                     |  D, RD     | https://github.com/TartanLlama/expected                                                 | Guideline Support Library implementation by Microsoft
-       sys-libs/libsolv                     | 0.7.28                                    |  D, RD     | https://github.com/openSUSE/libsolv                                                     | Library for solving packages and reading repositories
+       sys-libs/libsolv                     | 0.7.30                                    |  D, RD     | https://github.com/openSUSE/libsolv                                                     | Library for solving packages and reading repositories
          app-arch/zchunk                    | 1.3.2                                     | RD         | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
                                             | 1.5.1                                     |            |                                                                                         |
                                             | 9999                                      |            |                                                                                         |
@@ -684,7 +684,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-wm/chamferwm                           | 9999                                      |            | https://github.com/jaelpark/chamferwm                                                   | A tiling X11 window manager with Vulkan compositor.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- x11-wm/hypr                                | 1.1.3                                     |            | https://github.com/hyprwm/Hypr                                                          | A dynamic Linux tiling window manager for Xorg
+ x11-wm/hypr                                | 1.1.4                                     |            | https://github.com/hyprwm/Hypr                                                          | A dynamic Linux tiling window manager for Xorg
                                             | 9999                                      |            |                                                                                         |
 ============================================|===========================================|============|=========================================================================================|====================
 ```
