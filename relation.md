@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-08 12:29:31 CST)
+(The last generation time: 2024-11-08 13:10:12 CST)
 
 ### Packages
 
@@ -201,7 +201,7 @@
  dev-python/conda                           | 24.5.0                                    |            | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
    dev-python/conda-libmamba-solver         | 24.1.0-r1                                 |  D, RD     | https://github.com/conda/conda-libmamba-solver                                          | The libmamba based solver for conda
      dev-util/mamba                         | 1.5.8                                     | RD         | https://github.com/mamba-org/mamba                                                      | The Fast Cross-Platform Package Manager
-       dev-cpp/reproc                       | 14.2.4                                    |  D, RD     | https://github.com/DaanDeMeyer/reproc                                                   | A cross-platform (C99/C++11) process library
+       dev-cpp/reproc                       | 14.2.5                                    |  D, RD     | https://github.com/DaanDeMeyer/reproc                                                   | A cross-platform (C99/C++11) process library
        dev-cpp/tl-expected                  | 1.1.0                                     |  D, RD     | https://github.com/TartanLlama/expected                                                 | Guideline Support Library implementation by Microsoft
        sys-libs/libsolv                     | 0.7.30                                    |  D, RD     | https://github.com/openSUSE/libsolv                                                     | Library for solving packages and reading repositories
          app-arch/zchunk                    | 1.3.2                                     | RD         | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
