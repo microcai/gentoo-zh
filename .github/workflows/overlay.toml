@@ -1664,9 +1664,9 @@ prefix = "v"
 github_account = "Nuralii1i"
 
 ["x11-themes/fcitx-breeze"]
-source = "github"
-github = "scratch-er/fcitx5-breeze"
-use_latest_release = true
+source = "gitlab"
+gitlab = "scratch-er/fcitx5-breeze"
+use_max_tag = true
 prefix = "v"
 github_account = "OriPoin"
 
