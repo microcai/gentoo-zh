@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-08 15:15:42 CST)
+(The last generation time: 2024-11-08 15:48:31 CST)
 
 ### Packages
 
@@ -190,8 +190,7 @@
  dev-libs/lunar-calendar                    | 3.0.1                                     |            | https://github.com/yetist/lunar-calendar                                                | a gtk+ calendar widget for chinese lunar library
    dev-libs/lunar-date                      | 3.0.1                                     |  D         | https://github.com/yetist/lunar-date                                                    | Chinese Lunar Library
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-libs/tdlib                             | 1.5.0                                     |            | https://core.telegram.org/tdlib                                                         | Cross-platform library for building Telegram clients
-                                            | 1.6.0                                     |            |                                                                                         |
+ dev-libs/tdlib                             | 1.8.0                                     |            | https://core.telegram.org/tdlib                                                         | Cross-platform library for building Telegram clients
                                             | 9999                                      |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/v2ray-rules-dat-bin               | 202411022212                              |            | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
