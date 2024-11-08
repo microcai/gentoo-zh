@@ -1,4 +1,4 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 2023-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -9,7 +9,7 @@ DESCRIPTION="Yet Another Clash Dashboard"
 HOMEPAGE="https://github.com/MetaCubeX/Yacd-meta"
 SRC_URI="
 	https://github.com/MetaCubeX/Yacd-meta/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/st0nie/gentoo-go-deps/releases/download/${P}/${P}-node_modules.tar.xz
+	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-node_modules.tar.xz
 "
 
 S="${WORKDIR}/${_MY_PN}-${PV}"
