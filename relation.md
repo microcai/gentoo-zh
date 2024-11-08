@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-08 13:10:12 CST)
+(The last generation time: 2024-11-08 13:16:14 CST)
 
 ### Packages
 
@@ -185,7 +185,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-lang/luajit                            | 2.1.1727870382                            |            | https://luajit.org/                                                                     | Just-In-Time Compiler for the Lua programming language
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-libs/libratbag                         | 0.17.9                                    |            | https://github.com/libratbag/libratbag                                                  | Library to configure gaming mice
+ dev-libs/libratbag                         | 0.18                                      |            | https://github.com/libratbag/libratbag                                                  | Library to configure gaming mice
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/lunar-calendar                    | 3.0.1                                     |            | https://github.com/yetist/lunar-calendar                                                | a gtk+ calendar widget for chinese lunar library
    dev-libs/lunar-date                      | 3.0.1                                     |  D         | https://github.com/yetist/lunar-date                                                    | Chinese Lunar Library
