@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-08 14:07:51 CST)
+(The last generation time: 2024-11-08 14:13:10 CST)
 
 ### Packages
 
@@ -178,7 +178,7 @@
  dev-debug/lldb-mi                          | 0.0.1                                     |            | https://github.com/lldb-tools/lldb-mi                                                   | LLDB Machine Interface Driver
                                             | 9999                                      |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-java/google-java-format                | 1.22.0                                    |            | https://github.com/google/google-java-format                                            | Reformats Java source code to comply with Google Java Style.
+ dev-java/google-java-format                | 1.24.0                                    |            | https://github.com/google/google-java-format                                            | Reformats Java source code to comply with Google Java Style.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-java/oraclejdk-bin                     | 8.391                                     |            | https://www.oracle.com/java                                                             | Oracle's Java SE Development Kit
                                             | 21.0.1                                    |            |                                                                                         |
