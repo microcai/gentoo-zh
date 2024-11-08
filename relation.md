@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-08 13:16:14 CST)
+(The last generation time: 2024-11-08 13:35:31 CST)
 
 ### Packages
 
@@ -196,7 +196,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/v2ray-rules-dat-bin               | 202411022212                              |            | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/archspec                        | 0.2.4                                     |            | https://github.com/archspec/archspec                                                    | A library for detecting, labeling, and reasoning about microarchitectures
+ dev-python/archspec                        | 0.2.5                                     |            | https://github.com/archspec/archspec                                                    | A library for detecting, labeling, and reasoning about microarchitectures
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/conda                           | 24.5.0                                    |            | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
    dev-python/conda-libmamba-solver         | 24.1.0-r1                                 |  D, RD     | https://github.com/conda/conda-libmamba-solver                                          | The libmamba based solver for conda
