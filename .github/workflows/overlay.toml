@@ -95,7 +95,7 @@ github = "AppFlowy-IO/AppFlowy"
 use_latest_release = true
 github_account = "Linerre"
 
-["app-editors/cursor-bin"]
+["app-editors/cursor"]
 source = "regex"
 url = "https://download.todesktop.com/230313mzl4w4u92/latest-linux.yml"
 regex = 'version:\s*(.*)'
