@@ -69,30 +69,31 @@ github_account = "peeweep"
 source = "github"
 github = "outloudvi/mw2fcitx"
 use_latest_release = true
-github_account = "microcai"
+github_account = "blackteahamburger"
 
 ["app-dicts/fcitx-pinyin-moegirl-bin"]
 source = "github"
 github = "outloudvi/mw2fcitx"
 use_latest_release = true
-github_account = "microcai"
+github_account = "blackteahamburger"
 
 ["app-dicts/fcitx-pinyin-zhwiki"]
 source = "github"
 github = "felixonmars/fcitx5-pinyin-zhwiki"
 use_latest_release = true
-github_account = "microcai"
+github_account = "blackteahamburger"
 
 ["app-dicts/fcitx-pinyin-zhwiki-bin"]
 source = "github"
 github = "felixonmars/fcitx5-pinyin-zhwiki"
 use_latest_release = true
-github_account = "microcai"
+github_account = "blackteahamburger"
 
 ["app-editors/appflowy-bin"]
 source = "github"
 github = "AppFlowy-IO/AppFlowy"
 use_latest_release = true
+github_account = "Linerre"
 
 ["app-editors/cursor-bin"]
 source = "regex"
