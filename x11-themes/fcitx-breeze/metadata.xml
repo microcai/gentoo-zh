@@ -6,6 +6,6 @@
 		<name>Yachen Wang</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">scratch-er/fcitx5-breeze</remote-id>
+		<remote-id type="gitlab">scratch-er/fcitx5-breeze</remote-id>
 	</upstream>
 </pkgmetadata>
