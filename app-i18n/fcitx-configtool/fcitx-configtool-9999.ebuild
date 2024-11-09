@@ -81,7 +81,7 @@ src_configure() {
 		-DENABLE_KCM=$(usex kcm)
 		-DENABLE_CONFIG_QT=$(usex config-qt)
 		-DENABLE_TEST=$(usex test)
-		-DUSE_QT6=Off
+		-DUSE_QT6=$(usex qt6)
 	)
 
 	cmake_src_configure

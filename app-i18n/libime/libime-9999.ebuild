@@ -8,9 +8,9 @@ inherit cmake git-r3
 EGIT_REPO_URI="https://github.com/fcitx/libime.git"
 EGIT_SUBMODULES=( 'src/libime/kenlm' )
 SRC_URI="
-	https://download.fcitx-im.org/data/lm_sc.arpa-20230712.tar.xz -> ${PN}-lm_sc.arpa-20230712.tar.xz
-	https://download.fcitx-im.org/data/dict-20230412.tar.xz -> ${PN}-dict-20230412.tar.xz
-	https://download.fcitx-im.org/data/table.tar.gz -> ${PN}-table.tar.gz
+	https://download.fcitx-im.org/data/lm_sc.arpa-20241001.tar.zst -> ${PN}-lm_sc.arpa-20241001.tar.zst
+	https://download.fcitx-im.org/data/dict-20241001.tar.zst -> ${PN}-dict-20241001.tar.zst
+	https://download.fcitx-im.org/data/table-20240108.tar.zst -> ${PN}-table-20240108.tar.zst
 "
 DESCRIPTION="Fcitx5 Next generation of fcitx "
 HOMEPAGE="https://fcitx-im.org/"
@@ -35,10 +35,10 @@ BDEPEND="
 "
 
 src_prepare() {
-	ln -sv "${DISTDIR}/${PN}-lm_sc.arpa-20230712.tar.xz" "${S}/data/lm_sc.arpa-20230712.tar.xz" || die
-	ln -sv "${DISTDIR}/${PN}-dict-20230412.tar.xz" "${S}/data/dict-20230412.tar.xz" || die
-	ln -sv "${DISTDIR}/${PN}-table.tar.gz" "${S}/data/table.tar.gz" || die
-	default
+	ln -sv "${DISTDIR}/${PN}-lm_sc.arpa-20241001.tar.zst" "${S}/data/lm_sc.arpa-20241001.tar.zst" || die
+	ln -sv "${DISTDIR}/${PN}-dict-20241001.tar.zst" "${S}/data/dict-20241001.tar.zst" || die
+	ln -sv "${DISTDIR}/${PN}-table-20240108.tar.zst" "${S}/data/table-20240108.tar.zst" || die
+	cmake_src_prepare
 }
 
 src_configure() {

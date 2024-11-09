@@ -6,6 +6,8 @@ EAPI=8
 inherit cmake git-r3 xdg
 
 EGIT_REPO_URI="https://github.com/fcitx/fcitx5-chinese-addons.git"
+SRC_URI="https://download.fcitx-im.org/data/py_stroke-20121124.tar.gz -> fcitx-data-py_stroke-20121124.tar.gz
+https://download.fcitx-im.org/data/py_table-20121124.tar.gz -> fcitx-data-py_table-20121124.tar.gz"
 DESCRIPTION="Addons related to Chinese, including IME previous bundled inside fcitx4."
 HOMEPAGE="https://github.com/fcitx/fcitx5-chinese-addons"
 LICENSE="GPL-2+ LGPL-2+"
@@ -39,6 +41,8 @@ BDEPEND="
 "
 
 src_prepare() {
+	ln -s "${DISTDIR}/fcitx-data-py_table-20121124.tar.gz" modules/pinyinhelper/py_table-20121124.tar.gz || die
+	ln -s "${DISTDIR}/fcitx-data-py_stroke-20121124.tar.gz" modules/pinyinhelper/py_stroke-20121124.tar.gz || die
 	cmake_src_prepare
 }
 
