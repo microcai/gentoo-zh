@@ -330,7 +330,6 @@ declare -A GIT_CRATES=(
 	[netease-cloud-music-api]="https://github.com/gmg137/netease-cloud-music-api;${NCM_API_COMMIT};netease-cloud-music-api-%commit%"
 )
 
-CARGO_OPTIONAL=1
 inherit cargo gnome2-utils meson optfeature xdg
 
 DESCRIPTION="netease cloud music player based on Rust & GTK for Linux"
@@ -371,7 +370,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND="
 	sys-devel/gettext
-	virtual/rust"
+"
 
 src_unpack() {
 	cargo_src_unpack

@@ -796,6 +796,8 @@ declare -A GIT_CRATES=(
 	[x11]='https://github.com/bjornsnoen/x11-rs;c2e9bfaa7b196938f8700245564d8ac5d447786a;x11-rs-%commit%/x11'
 )
 
+RUST_MIN_VER="1.75.0"
+
 inherit cargo desktop systemd xdg
 
 DESCRIPTION="An open-source remote desktop, and alternative to TeamViewer."
@@ -851,7 +853,6 @@ BDEPEND="
 	dev-build/ninja
 	media-libs/gstreamer
 	media-libs/gst-plugins-base
-	>=virtual/rust-1.75.0
 "
 
 QA_PRESTRIPPED="

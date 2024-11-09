@@ -488,8 +488,6 @@ IUSE="redir tun"
 
 RESTRICT="mirror strip"
 
-BDEPEND=">=virtual/rust-1.71.1"
-
 QA_FLAGS_IGNORED="
 	usr/bin/sslocal
 	usr/bin/ssmanager
