@@ -16,7 +16,7 @@ KEYWORDS="~amd64"
 RESTRICT="strip mirror"
 
 DEPEND="
-	dev-libs/libappindicator:3
+	dev-libs/libayatana-appindicator
 	sys-apps/systemd"
 RDEPEND="${DEPEND}"
 
@@ -30,4 +30,6 @@ src_install(){
 
 	fperms 0755 /usr/bin/todesk
 	fperms 0755 /opt/todesk/bin/{ToDesk,ToDesk_Service,ToDesk_Session,CrashReport}
+
+	dosym -r /usr/$(get_libdir)/libayatana-appindicator3.so /opt/todesk/bin/libappindicator3.so.1
 }
