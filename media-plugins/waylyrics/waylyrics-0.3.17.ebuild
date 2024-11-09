@@ -487,6 +487,7 @@ CRATES="
 
 PLOCALES="en_US it_IT zh_CN"
 PLOCALE_BACKUP="en_US"
+RUST_MIN_VER="1.73"
 inherit cargo desktop gnome2-utils plocale xdg
 
 DESCRIPTION="Simple On Screen lyrics Display for linux/unix"
@@ -527,9 +528,6 @@ DEPEND="
 RDEPEND="
 	${DEPEND}
 	sys-apps/xdg-desktop-portal
-"
-BDEPEND="
-	>=virtual/rust-1.73:*
 "
 
 src_compile() {
