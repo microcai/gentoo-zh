@@ -13,6 +13,7 @@ S="${WORKDIR}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="+tun"
 
 DEPEND="
 	dev-libs/nss
@@ -23,6 +24,7 @@ DEPEND="
 	x11-libs/libdrm
 	x11-libs/libxkbcommon
 "
+
 RESTRICT="strip"
 
 QA_PREBUILT="*"
@@ -37,6 +39,10 @@ src_install() {
 	fperms +x /opt/mihomo-party/mihomo-party
 	fperms +x /opt/mihomo-party/resources/sidecar/mihomo
 	fperms +x /opt/mihomo-party/resources/sidecar/mihomo-alpha
+	if use tun; then
+		fperms +s /opt/mihomo-party/resources/sidecar/mihomo
+		fperms +s /opt/mihomo-party/resources/sidecar/mihomo-alpha
+	fi
 }
 
 pkg_postinst() {
