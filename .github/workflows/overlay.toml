@@ -1488,11 +1488,6 @@ use_latest_release = true
 prefix = "v"
 github_account = "st0nie"
 
-["sys-fs/erofs-utils"]
-source = "git"
-git = "https://git.kernel.org/pub/scm/linux/kernel/git/xiang/erofs-utils.git"
-prefix = "v"
-
 ["sys-fs/jmtpfs"]
 source = "github"
 github = "JasonFerrara/jmtpfs"
