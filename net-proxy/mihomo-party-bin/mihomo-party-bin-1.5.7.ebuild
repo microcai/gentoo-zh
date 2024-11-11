@@ -6,7 +6,10 @@ EAPI=8
 inherit desktop xdg-utils unpacker
 
 DESCRIPTION="Mihomo Party"
-HOMEPAGE="https://mihomo.party"
+HOMEPAGE="
+	https://mihomo.party
+	https://github.com/mihomo-party-org/mihomo-party
+"
 SRC_URI="https://github.com/mihomo-party-org/mihomo-party/releases/download/v${PV}/mihomo-party-linux-${PV}-amd64.deb"
 
 S="${WORKDIR}"
