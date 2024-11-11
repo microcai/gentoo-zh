@@ -7,13 +7,16 @@ inherit unpacker desktop xdg
 
 DESCRIPTION="Weixin for Linux"
 HOMEPAGE="https://linux.weixin.qq.com"
-SRC_URI="https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.deb -> WeChatLinux-${PV}_x86_64.deb"
+SRC_URI="
+	amd64? ( https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.deb -> WeChatLinux-${PV}_x86_64.deb )
+	loong? ( https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_LoongArch.deb -> wechat_${PV}_loongarch64.deb )
+"
 S=${WORKDIR}
 
 LICENSE="all-rights-reserved"
 
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~amd64 ~loong"
 IUSE="+fcitx ibus"
 REQUIRED_USE="^^ ( fcitx ibus )"
 
@@ -36,6 +39,7 @@ RDEPEND="
 	x11-libs/xcb-util-keysyms
 	x11-libs/xcb-util-renderutil
 	x11-libs/xcb-util-wm
+	loong? ( virtual/loong-ow-compat )
 "
 QA_PREBUILT="*"
 
