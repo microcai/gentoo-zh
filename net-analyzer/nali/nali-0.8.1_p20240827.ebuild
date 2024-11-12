@@ -9,7 +9,7 @@ HOMEPAGE="https://github.com/zu1k/nali"
 EGIT_COMMIT="2e758d311739bc402ba63bda7ba081d565c0cf0f"
 SRC_URI="
 	https://github.com/zu1k/nali/archive/${EGIT_COMMIT}.tar.gz -> ${P}.gh.tar.gz
-	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
+	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-vendor.tar.xz
 "
 
 S="${WORKDIR}/${PN}-${EGIT_COMMIT}"
