@@ -5,11 +5,13 @@ EAPI=8
 
 inherit go-module systemd
 
+GIT_COMMIT="0a46979c519885465e586da009b70422382c84ac"
+ALIST_WEBVER="3.39.0"
 DESCRIPTION="A file list/WebDAV program that supports multiple storages"
 HOMEPAGE="https://alist.nn.ci"
 SRC_URI="
 	https://github.com/alist-org/alist/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/alist-org/alist-web/releases/download/${PV}/dist.tar.gz -> ${P}-dist.tar.gz
+	https://github.com/alist-org/alist-web/releases/download/${ALIST_WEBVER}/dist.tar.gz -> ${P}-dist.tar.gz
 	https://github.com/Linerre/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz
 "
 
