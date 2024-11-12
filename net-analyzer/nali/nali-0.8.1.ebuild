@@ -9,7 +9,7 @@ HOMEPAGE="https://github.com/zu1k/nali"
 
 SRC_URI="
 	https://github.com/zu1k/nali/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
+	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-vendor.tar.xz
 "
 
 LICENSE="MIT"
