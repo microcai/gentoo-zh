@@ -8,7 +8,7 @@ DESCRIPTION="An easy way to manage all your Geo resources"
 HOMEPAGE="https://github.com/MetaCubeX/geo/"
 SRC_URI="
 	https://github.com/MetaCubeX/geo/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
+	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-vendor.tar.xz
 "
 
 LICENSE="GPL-3"
