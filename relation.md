@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-13 18:02:26 CST)
+(The last generation time: 2024-11-13 22:54:11 CST)
 
 ### Packages
 
@@ -676,7 +676,7 @@
                                             | 2.2.0-r1                                  |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/nordzy-cursors                  | 0.5.0                                     |            | https://github.com/alvatip/Nordzy-cursors                                               | Cursor theme using the Nord color palette and based on Vimix and cz-Viator
-                                            | 0.6.0                                     |            |                                                                                         |
+                                            | 2.3.0                                     |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/nordzy-icon                     | 1.5                                       |            | https://github.com/alvatip/Nordzy-icon                                                  | A free and open source icon theme for Linux desktops using the Nord color palette
                                             | 1.8.7                                     |            |                                                                                         |
