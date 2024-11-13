@@ -14,7 +14,7 @@ DESCRIPTION="Minio client provides alternatives for ls, cat on cloud storage and
 HOMEPAGE="https://github.com/minio/mc"
 SRC_URI="
 	https://github.com/minio/mc/archive/RELEASE.${MY_PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
+	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-vendor.tar.xz
 "
 
 S="${WORKDIR}/${PN}-RELEASE.${MY_PV}"
