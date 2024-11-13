@@ -8,7 +8,7 @@ DESCRIPTION="A DNS forwarder"
 HOMEPAGE="https://github.com/IrineSistiana/mosdns"
 SRC_URI="
 	https://github.com/IrineSistiana/mosdns/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
+	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-vendor.tar.xz
 "
 
 LICENSE="GPL-3"
