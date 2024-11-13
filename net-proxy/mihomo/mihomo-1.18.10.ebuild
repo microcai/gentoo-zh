@@ -13,7 +13,7 @@ SRC_URI="
 	https://github.com/MetaCubeX/mihomo/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 "
 SRC_URI+="
-	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
+	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-vendor.tar.xz
 "
 
 DEPEND="
