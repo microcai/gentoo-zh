@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-13 12:52:04 CST)
+(The last generation time: 2024-11-13 18:02:26 CST)
 
 ### Packages
 
@@ -202,7 +202,7 @@
      dev-util/mamba                         | 1.5.8                                     | RD         | https://github.com/mamba-org/mamba                                                      | The Fast Cross-Platform Package Manager
        dev-cpp/reproc                       | 14.2.5                                    |  D, RD     | https://github.com/DaanDeMeyer/reproc                                                   | A cross-platform (C99/C++11) process library
        dev-cpp/tl-expected                  | 1.1.0                                     |  D, RD     | https://github.com/TartanLlama/expected                                                 | Guideline Support Library implementation by Microsoft
-       sys-libs/libsolv                     | 0.7.30                                    |  D, RD     | https://github.com/openSUSE/libsolv                                                     | Library for solving packages and reading repositories
+       sys-libs/libsolv                     | 0.7.31                                    |  D, RD     | https://github.com/openSUSE/libsolv                                                     | Library for solving packages and reading repositories
          app-arch/zchunk                    | 1.3.2                                     | RD         | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
                                             | 1.5.1                                     |            |                                                                                         |
                                             | 9999                                      |            |                                                                                         |
@@ -291,7 +291,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/sarasa-gothic                  | 1.0.23                                    |            | https://github.com/be5invis/Sarasa-Gothic                                               | A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/sarasa-term-sc-nerd            | 2.1.0                                     |            | https://github.com/laishulu/Sarasa-Term-SC-Nerd                                         | Sarasa Mono SC font patched with Nerd fonts
+ media-fonts/sarasa-term-sc-nerd            | 2.1.1                                     |            | https://github.com/laishulu/Sarasa-Term-SC-Nerd                                         | Sarasa Mono SC font patched with Nerd fonts
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/smiley-sans                    | 2.0.1                                     |            | https://github.com/atelier-anchor/smiley-sans                                           | An open-source font for Chinese.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -547,7 +547,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/smartproxy                       | 0.9.5                                     |            | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/trojan-go-fork                   | 2024.11.10                                |            | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
+ net-proxy/trojan-go-fork                   | 2024.11.13                                |            | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/v2rayA                           | 2.2.6.2                                   |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                             | 9999                                      |            |                                                                                         |
