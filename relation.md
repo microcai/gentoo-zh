@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-13 22:54:11 CST)
+(The last generation time: 2024-11-14 13:20:12 CST)
 
 ### Packages
 
@@ -110,7 +110,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/jshon                             | 9999                                      |            | http://kmkeen.com/jshon/                                                                | Jshon is a JSON parser designed for maximum convenience within the shell
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/keyd                              | 2.4.3                                     |            | https://github.com/rvaiya/keyd                                                          | A key remapping daemon for linux
+ app-misc/keyd                              | 2.5.0                                     |            | https://github.com/rvaiya/keyd                                                          | A key remapping daemon for linux
    acct-group/keyd                          | 0                                         |  D, RD     |                                                                                         | A key remapping daemon for linux
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/rmtrash                           | 1.14                                      |            | https://github.com/PhrozenByte/rmtrash                                                  | trash-put made compatible to GNUs rm and rmdir
