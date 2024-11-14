@@ -796,9 +796,10 @@ declare -A GIT_CRATES=(
 	[x11]='https://github.com/bjornsnoen/x11-rs;c2e9bfaa7b196938f8700245564d8ac5d447786a;x11-rs-%commit%/x11'
 )
 
+LLVM_COMPAT=( 17 18 19 )
 RUST_MIN_VER="1.75.0"
-
-inherit cargo desktop systemd xdg
+RUST_NEEDS_LLVM=1
+inherit cargo desktop llvm-r1 systemd xdg
 
 DESCRIPTION="An open-source remote desktop, and alternative to TeamViewer."
 HOMEPAGE="https://rustdesk.com/"
@@ -849,16 +850,24 @@ BDEPEND="
 	media-libs/alsa-lib
 	media-libs/libpulse
 	dev-build/cmake
-	sys-devel/clang
 	dev-build/ninja
 	media-libs/gstreamer
 	media-libs/gst-plugins-base
+	$(llvm_gen_dep '
+		sys-devel/clang:${LLVM_SLOT}
+		sys-devel/llvm:${LLVM_SLOT}
+	')
 "
 
 QA_PRESTRIPPED="
 	/usr/share/${PN}/${PN}
 	/usr/share/${PN}/libsciter-gtk.so
 "
+
+pkg_setup() {
+	llvm-r1_pkg_setup
+	rust_pkg_setup
+}
 
 src_prepare() {
 	PATCHES+=(
@@ -878,7 +887,8 @@ src_prepare() {
 	ln -s "${WORKDIR}"/deps-${_HWCODEC_DEPS_COMMIT}	"${WORKDIR}"/hwcodec-${_HWCODEC_COMMIT}/deps || die
 	ln -s "${WORKDIR}"/externals-${_HWCODEC_EXTERNALS_COMMIT} "${WORKDIR}"/hwcodec-${_HWCODEC_COMMIT}/externals || die
 	# HACK: this vcpkg bootstrap may be outdated, it needs to copy these libraries manually
-	cp -a "${WORKDIR}"/deps-${_HWCODEC_DEPS_COMMIT}/ffmpeg/linux-x86_64/{include,lib} "${WORKDIR}"/vcpkg/installed/x64-linux/ || die
+	cp -a "${WORKDIR}"/deps-${_HWCODEC_DEPS_COMMIT}/ffmpeg/linux-x86_64/{include,lib}\
+		"${WORKDIR}"/vcpkg/installed/x64-linux/ || die
 }
 
 src_configure() {
