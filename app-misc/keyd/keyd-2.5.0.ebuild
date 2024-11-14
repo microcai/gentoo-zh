@@ -1,4 +1,4 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -22,7 +22,8 @@ src_prepare() {
 
 src_install() {
 	default
-	rm -r "${D}"/usr/share/{man,doc} || die
+	# prevent docs from being installed to /usr/local/share/doc
+	rm -r "${D}"/usr/local/share/{man,doc} || die
 	dodoc docs/{CHANGELOG.md,DESIGN.md}
 	systemd_dounit keyd.service
 	insinto /etc/keyd
