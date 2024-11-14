@@ -9,7 +9,7 @@ inherit desktop pax-utils xdg optfeature
 
 DESCRIPTION="Cursor App - AI-first coding environment"
 HOMEPAGE="https://www.cursor.com/"
-SRC_URI="https://download.todesktop.com/230313mzl4w4u92/${P}-build-2410291z3bdg1dy-x86_64.AppImage -> ${APPIMAGE}"
+SRC_URI="https://download.todesktop.com/230313mzl4w4u92/${P}-build-24111460bf2loz1-x86_64.AppImage -> ${APPIMAGE}"
 S="${WORKDIR}"
 
 LICENSE="cursor"
@@ -93,8 +93,8 @@ src_install() {
 
 	fperms 4711 "/opt/${PN}/chrome-sandbox"
 	fperms +x "/opt/${PN}/chrome_crashpad_handler"
-	pax-mark m "/opt/${PN}/cursor"
 	fperms +x "/opt/${PN}/cursor"
+	pax-mark m "/opt/${PN}/cursor"
 
 	dosym -r "/opt/${PN}/cursor" "/usr/bin/cursor"
 	domenu "${T}/cursor.desktop"
