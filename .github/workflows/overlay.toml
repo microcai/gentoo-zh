@@ -189,6 +189,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "yamader"
 
+["app-i18n/fcitx-skin-material"]
+source = "github"
+github = "hrko/fcitx-skin-material"
+use_latest_release = true
+prefix = "v"
+github_account = "Linerre"
+
 # live package only
 #["app-i18n/fcitx-gtk"]
 
