@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-15 16:08:55 CST)
+(The last generation time: 2024-11-15 16:17:53 CST)
 
 ### Packages
 
@@ -81,6 +81,8 @@
    app-i18n/fcitx-rime                      | 9999                                      | RD         | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
    app-i18n/fcitx-skk                       | 5.1.5                                     | RD         | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
                                             | 9999                                      |            |                                                                                         |
+--------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-i18n/fcitx-skin-material               | 0.5                                       |            | https://github.com/hrko99/fcitx-skin-material                                           | A Material Design-like skin for Fcitx
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/libime-jyutping                   | 1.0.12                                    |            | https://github.com/fcitx/libime-jyutping                                                | A library make use of libime to implement jyutping input method
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
