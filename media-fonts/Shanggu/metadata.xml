@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>leon.errelin@outlook.com</email>
+		<name>Linerre</name>
+	</maintainer>
+	<use>
+		<flag name="mono">Install ShangguMono font family</flag>
+		<flag name="round">Install ShangguRound font family</flag>
+		<flag name="sans">Install ShangguSans font family</flag>
+		<flag name="serif">Install ShangguSerif font family (default)</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">GuiWonder/Shanggu</remote-id>
+	</upstream>
+</pkgmetadata>
