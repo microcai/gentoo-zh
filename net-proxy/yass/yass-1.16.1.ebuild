@@ -94,7 +94,6 @@ src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_INSTALL_SYSCONFDIR=/etc
 		-DBUILD_SHARED_LIBS=off
-		-DUSE_BUILTIN_CA_BUNDLE_CRT=off
 		-DUSE_LIBCXX=off
 		-DCLI=$(usex cli)
 		-DSERVER=$(usex server)
