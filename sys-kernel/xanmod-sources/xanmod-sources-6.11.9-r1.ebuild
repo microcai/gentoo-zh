@@ -23,7 +23,7 @@ SRC_URI="
 	${GENPATCHES_URI}
 	${XANMOD_URI}/patch-${OKV}${XANMOD_VERSION}.xz
 "
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/linux-${OKV}${XANMOD_VERSION}"
 
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
@@ -35,6 +35,7 @@ pkg_pretend() {
 
 src_unpack() {
 	default
+	mv "${WORKDIR}/${MY_P}" "${WORKDIR}/linux-${OKV}${XANMOD_VERSION}"
 }
 
 src_prepare() {
