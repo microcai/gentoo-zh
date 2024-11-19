@@ -1185,6 +1185,14 @@ use_latest_release = true
 prefix = "v"
 github_account = "peeweep"
 
+["net-misc/hoppscotch-bin"]
+source = "github"
+github = "hoppscotch/releases"
+use_latest_release = true
+from_pattern = 'v(.*)-(.*)$'
+to_pattern = '\1.\2'
+github_account = "gouwazi"
+
 ["net-misc/localsend-bin"]
 source = "github"
 github = "localsend/localsend"
