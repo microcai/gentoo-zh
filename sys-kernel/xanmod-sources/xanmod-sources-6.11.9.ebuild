@@ -2,15 +2,16 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
+ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
 #Note: to bump xanmod, check K_GENPATCHES_VER in sys-kernel/gentoo-sources
-K_GENPATCHES_VER="5"
-K_SECURITY_UNSUPPORTED="1"
-K_NOSETEXTRAVERSION="1"
-ETYPE="sources"
-inherit kernel-2
-detect_version
+K_GENPATCHES_VER="11"
 
+inherit check-reqs kernel-2
+detect_version
+detect_arch
+
+MY_P=linux-${PV%.*}
 DESCRIPTION="Full XanMod source, including the Gentoo patchset and other patch options."
 HOMEPAGE="https://xanmod.org"
 
@@ -22,40 +23,42 @@ SRC_URI="
 	${GENPATCHES_URI}
 	${XANMOD_URI}/patch-${OKV}${XANMOD_VERSION}.xz
 "
+S=${WORKDIR}/${MY_P}
 
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
 
+pkg_pretend() {
+	CHECKREQS_DISK_BUILD="4G"
+	check-reqs_pkg_pretend
+}
+
 src_unpack() {
-	universal_unpack
-	mkdir "${WORKDIR}/genpatches" || die
-	for i in ${K_WANT_GENPATCHES}; do
-		tar xf "${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}-${K_GENPATCHES_VER}.${i}.tar.xz" \
-		-C "${WORKDIR}/genpatches" || die
-	done
+	default
+}
 
-	rm "${WORKDIR}"/genpatches/*linux-"${KV_MAJOR}"."${KV_MINOR}"*.patch
+src_prepare() {
+	kernel-2_src_prepare
+	rm "${S}/tools/testing/selftests/tc-testing/action-ebpf"
+	# delete linux version patches
+	rm "${WORKDIR}"/*${MY_P}*.patch
 
-	UNIPATCH_LIST=""
-	for i in $(dir "${WORKDIR}"/genpatches/*.patch); do
-		UNIPATCH_LIST+=" ${i}"
-	done
-
-	UNIPATCH_LIST+=" ${DISTDIR}/patch-${OKV}${XANMOD_VERSION}.xz"
-	unipatch "${UNIPATCH_LIST}"
-	unpack_fix_install_path
-	env_setup_kernel_makeopts
-	cd "${S}" || die
+	local PATCHES=(
+		# xanmod patches
+		"${WORKDIR}"/patch-${PV}-xanmod${XANMOD_VERSION}
+		# genpatches
+		"${WORKDIR}"/*.patch
+	)
+	default
 }
 
 pkg_postinst() {
 	elog "MICROCODES"
 	elog "Use xanmod-sources with microcodes"
 	elog "Read https://wiki.gentoo.org/wiki/Intel_microcode"
-
 	kernel-2_pkg_postinst
 }
 
-#pkg_postrm() {
-#	kernel-2_pkg_postrm
-#}
+pkg_postrm() {
+	kernel-2_pkg_postrm
+}

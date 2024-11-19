@@ -7,7 +7,7 @@ inherit kernel-build toolchain-funcs
 
 MY_P=linux-${PV%.*}
 #Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
-GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 1))
+GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 2))
 XV="1"
 
 DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
@@ -59,10 +59,10 @@ src_prepare() {
 	rm "${WORKDIR}"/*${MY_P}*.patch
 
 	local PATCHES=(
-		# genpatches
-		"${WORKDIR}"/*.patch
 		# xanmod patches
 		"${WORKDIR}"/patch-${PV}-xanmod${XV}
+		# genpatches
+		"${WORKDIR}"/*.patch
 	)
 	default
 
