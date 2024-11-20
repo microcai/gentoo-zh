@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-20 11:13:40 CST)
+(The last generation time: 2024-11-20 11:35:53 CST)
 
 ### Packages
 
@@ -570,7 +570,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/yass                             | 1.16.1                                    |            | https://github.com/Chilledheart/yass                                                    | lightweight and efficient, socks5/http forward proxy
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-vpn/cloudflared-bin                    | 2024.11.0                                 |            | https://github.com/cloudflare/cloudflared                                               | Cloudflare Tunnel client (formerly Argo Tunnel)
+ net-vpn/cloudflared-bin                    | 2024.11.1                                 |            | https://github.com/cloudflare/cloudflared                                               | Cloudflare Tunnel client (formerly Argo Tunnel)
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-vpn/sstp-server                        | 0.6.0                                     |            | https://github.com/sorz/sstp-server/                                                    | A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
