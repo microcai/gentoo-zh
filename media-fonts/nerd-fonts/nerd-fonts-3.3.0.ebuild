@@ -110,7 +110,6 @@ SRC_URI="
 	ia-writer? ( ${COMMON_URI}/iA-Writer.zip -> iA-Writer-nf-${PV}.zip )
 	ibmplexmono? ( ${COMMON_URI}/IBMPlexMono.zip -> IBMPlexMono-nf-${PV}.zip )
 	intelonemono? ( ${COMMON_URI}/IntelOneMono.zip -> IntelOneMono-nf-${PV}.zip )
-
 	inconsolata? ( ${COMMON_URI}/Inconsolata.zip -> Inconsolata-nf-${PV}.zip )
 	inconsolatago? ( ${COMMON_URI}/InconsolataGo.zip -> InconsolataGo-nf-${PV}.zip )
 	inconsolatalgc? ( ${COMMON_URI}/InconsolataLGC.zip -> InconsolataLGC-nf-${PV}.zip )
@@ -155,7 +154,7 @@ LICENSE="MIT
 		Vic-Fieger-License
 		UbuntuFontLicense-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~loong"
+KEYWORDS="~amd64 ~loong ~x86"
 
 DEPEND="app-arch/unzip"
 RDEPEND="media-libs/fontconfig"
@@ -164,8 +163,8 @@ CHECKREQS_DISK_BUILD="3G"
 CHECKREQS_DISK_USR="4G"
 
 IUSE_FLAGS=(${FONTS[*],,})
-IUSE="${IUSE_FLAGS[*]}"
-REQUIRED_USE="X || ( ${IUSE_FLAGS[*]} )"
+IUSE="+nerdfontssymbolsonly ${IUSE_FLAGS[*]}"
+REQUIRED_USE="|| ( nerdfontssymbolsonly ${IUSE_FLAGS[*]} )"
 
 FONT_S=${S}
 
