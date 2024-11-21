@@ -10,11 +10,15 @@
 		<remote-id type="github">xiaoyifang/goldendict-ng</remote-id>
 	</upstream>
 	<use>
+		<flag name="epwing">Enable EPWING Dictionary Format</flag>
 		<flag name="ffmpeg">Use ffmpeg to play audio</flag>
 		<flag name="multimedia">Use Qt5 Multimedia and GStreamer to play audio</flag>
 		<flag name="opencc">Add chinese conversion support</flag>
+		<flag name="systemfmt">Build with dev-lib/libfmt</flag>
+		<flag name="systemtoml">Build with dev-cpp/tomlplusplus</flag>
+		<flag name="tts">Enable QTexttoSpeech support</flag>
 		<flag name="wayland">Allow run under wayland.</flag>
-		<flag name="zim">Add Zim and Slob formats support</flag>
 		<flag name="xapian">Add Xapian full text search support</flag>
+		<flag name="zim">Add Zim and Slob formats support</flag>
 	</use>
 </pkgmetadata>
