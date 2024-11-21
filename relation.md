@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-20 11:35:53 CST)
+(The last generation time: 2024-11-21 11:44:31 CST)
 
 ### Packages
 
@@ -245,7 +245,7 @@
  dev-util/jetbrains-toolbox                 | 1.28.1.15219                              |            | https://www.jetbrains.com/toolbox/app                                                   | Manage all your JetBrains Projects and Tools
                                             | 2.5.1.34629                               |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/mongodb-compass-bin               | 1.44.6                                    |            | https://mongodb.com/compass                                                             | The GUI for MongoDB
+ dev-util/mongodb-compass-bin               | 1.44.7                                    |            | https://mongodb.com/compass                                                             | The GUI for MongoDB
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/redpanda-cpp                      | 2.26                                      |            | https://royqh.net/redpandacpp                                                           | A lightweight yet powerful C/C++/GNU Assembly IDE.
                                             | 3.1                                       |            |                                                                                         |
