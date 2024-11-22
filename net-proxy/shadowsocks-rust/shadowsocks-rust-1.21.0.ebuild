@@ -499,6 +499,7 @@ pkg_setup() {
 		CONFIG_CHECK="~TUN"
 		linux-info_pkg_setup
 	fi
+	rust_pkg_setup
 }
 
 src_configure() {
