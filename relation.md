@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-21 23:06:06 CST)
+(The last generation time: 2024-11-22 08:16:50 CST)
 
 ### Packages
 
@@ -558,8 +558,8 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/v2rayA                           | 2.2.6.2                                   |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                             | 9999                                      |            |                                                                                         |
-   net-proxy/Xray                           | 24.10.31                                  | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
-                                            | 24.11.11                                  |            |                                                                                         |
+   net-proxy/Xray                           | 24.11.11                                  | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
+                                            | 24.11.21                                  |            |                                                                                         |
      app-alternatives/v2ray-geoip           | 0-r2                                      |  D, RD     |                                                                                         | symlink for v2ray-geoip
      app-alternatives/v2ray-geosite         | 0-r2                                      |  D, RD     |                                                                                         | symlink for v2ray-geosite
    net-proxy/v2ray                          | 5.21.0                                    | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
