@@ -8,7 +8,7 @@ inherit go-module
 MY_PV="$(ver_cut 1-3)T$(ver_cut 4-7)Z"
 MY_PV=${MY_PV//./-}
 YEAR="$(ver_cut 1)"
-EGIT_COMMIT=9f4659884dd45dca726ba38ee6bfacb2bf776eb8
+COMMIT_ID=bb4ff4951a3e54bbee6ac75cfaf387c521e98709
 
 DESCRIPTION="Minio client provides alternatives for ls, cat on cloud storage and filesystems"
 HOMEPAGE="https://github.com/minio/mc"
@@ -30,7 +30,7 @@ src_compile() {
 		-X github.com/minio/mc/cmd.Version=${MY_PV} \
 		-X github.com/minio/mc/cmd.CopyrightYear=${YEAR} \
 		-X github.com/minio/mc/cmd.ReleaseTag=RELEASE.${MY_PV} \
-		-X github.com/minio/mc/cmd.CommitID=${EGIT_COMMIT}"
+		-X github.com/minio/mc/cmd.CommitID=${COMMIT_ID}"
 	ego build -trimpath --ldflags "${ldflags}"
 }
 
