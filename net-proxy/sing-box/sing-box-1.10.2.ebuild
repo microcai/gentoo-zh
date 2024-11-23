@@ -44,9 +44,8 @@ src_compile() {
 	if use v2ray-api; then _TAGS+="with_v2ray_api,"; fi
 	if use gvisor; then _TAGS+="with_gvisor,"; fi
 	if use tor; then _TAGS+="with_embedded_tor,"; fi
-	_TAGS="${_TAGS%,}"
 
-	ego build -o sing-box -trimpath -tags "${_TAGS}" \
+	ego build -o sing-box -trimpath -tags "${_TAGS%,}" \
 		-ldflags "-s -w -X 'github.com/sagernet/sing-box/constant.Version=${PV}'" \
 		./cmd/sing-box
 }
