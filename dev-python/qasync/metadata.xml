@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<!-- maintainer-needed -->
 	<use>
-		<flag name="qt6">Use dev-python/PyQt6 or dev-python/pyside6 for qt6 support</flag>
+		<flag name="qt6">Use dev-python/pyqt6 or dev-python/pyside6 for qt6 support</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">CabbageDevelopment/qasync</remote-id>

@@ -20,7 +20,7 @@ RDEPEND="
 	dev-python/janus[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/pyopengl[${PYTHON_USEDEP}]
-	dev-python/PyQt5[gui,widgets,opengl,svg,${PYTHON_USEDEP}]
+	dev-python/pyqt5[gui,widgets,opengl,svg,${PYTHON_USEDEP}]
 	dev-python/qasync[${PYTHON_USEDEP}]
 	dev-python/tomlkit[${PYTHON_USEDEP}]
 	dev-python/packaging[${PYTHON_USEDEP}]
@@ -33,7 +33,7 @@ PDEPEND="
 	qqmusic? ( dev-python/fuo-qqmusic[${PYTHON_USEDEP}] )
 	bilibili? ( dev-python/feeluown-bilibili[$PYTHON_USEDEP] )
 	ytmusic? ( dev-python/fuo-ytmusic[$PYTHON_USEDEP] )
-	webengine? ( dev-python/PyQtWebEngine[$PYTHON_USEDEP] )
+	webengine? ( dev-python/pyqtwebengine[$PYTHON_USEDEP] )
 	cookies? ( dev-python/pycryptodome[$PYTHON_USEDEP] dev-python/secretstorage[$PYTHON_USEDEP] )
 "
 
