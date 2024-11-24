@@ -142,7 +142,7 @@ HOMEPAGE="https://dns.lookup.dog/"
 EGIT_COMMIT="721440b12ef01a812abe5dc6ced69af6e221fad5"
 SRC_URI="
 	https://github.com/ogham/dog/archive/${EGIT_COMMIT}.tar.gz -> ${P}.gh.tar.gz
-	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/pr-83-add-scvb-and-https-support.patch
+	https://dev.dream-universe.org/distfiles/${P}-patches.tar.gz
 	${CARGO_CRATE_URIS}
 "
 
@@ -154,6 +154,6 @@ LICENSE+=" Apache-2.0 ISC MIT MPL-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 PATCHES=(
-	"${FILESDIR}/${PN}-0.1.0-fix-openssl.patch"
-	"${DISTDIR}/pr-83-add-scvb-and-https-support.patch"
+	"${WORKDIR}/patches/${PN}-0.1.0-fix-openssl.patch"
+	"${WORKDIR}/patches/${P}-svcb-https.patch"
 )
