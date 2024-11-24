@@ -14,9 +14,8 @@ CRATES="
 	autocfg@1.0.1
 	backtrace@0.3.54
 	bitflags@1.2.1
-	bitflags@2.5.0
 	byteorder@1.3.4
-	cc@1.0.98
+	cc@1.0.61
 	cfg-if@0.1.10
 	cfg-if@1.0.0
 	core-foundation-sys@0.7.0
@@ -42,18 +41,16 @@ CRATES="
 	miniz_oxide@0.4.3
 	native-tls@0.2.4
 	object@0.22.0
-	once_cell@1.19.0
-	openssl-macros@0.1.1
 	openssl-probe@0.1.2
-	openssl-src@300.3.0+3.3.0
-	openssl-sys@0.9.102
-	openssl@0.10.64
+	openssl-src@111.25.0+1.1.1t
+	openssl-sys@0.9.58
+	openssl@0.10.30
 	output_vt100@0.1.2
 	pkg-config@0.3.19
 	ppv-lite86@0.2.10
 	pretty_assertions@0.6.1
-	proc-macro2@1.0.83
-	quote@1.0.36
+	proc-macro2@1.0.24
+	quote@1.0.7
 	rand@0.7.3
 	rand_chacha@0.2.2
 	rand_core@0.5.1
@@ -72,10 +69,8 @@ CRATES="
 	serde_json@1.0.59
 	socket2@0.3.15
 	syn@1.0.48
-	syn@2.0.66
 	synstructure@0.12.4
 	tempfile@3.1.0
-	unicode-ident@1.0.12
 	unicode-width@0.1.8
 	unicode-xid@0.2.1
 	vcpkg@0.2.10
@@ -99,15 +94,16 @@ DESCRIPTION="A command-line DNS client"
 HOMEPAGE="https://dns.lookup.dog/"
 SRC_URI="
 	https://github.com/ogham/dog/archive/tags/v${PV}.tar.gz -> ${P}.tar.gz
+	https://dev.dream-universe.org/distfiles/${P}-patches.tar.gz
 	${CARGO_CRATE_URIS}
 "
 S="${WORKDIR}/${PN}-tags-v${PV}"
 
 LICENSE="EUPL-1.2"
 # Dependent crate licenses
-LICENSE+=" Apache-2.0 MIT Unicode-DFS-2016"
+LICENSE+=" Apache-2.0 MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 PATCHES=(
-	"${FILESDIR}/${P}-fix-openssl.patch"
+	"${WORKDIR}/patches/${P}-fix-openssl.patch"
 )
