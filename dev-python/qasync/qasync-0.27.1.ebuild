@@ -17,13 +17,13 @@ IUSE="qt6"
 
 RDEPEND="
 	|| (
-		dev-python/PyQt5[${PYTHON_USEDEP}]
+		dev-python/pyqt5[${PYTHON_USEDEP}]
 		dev-python/pyside2[${PYTHON_USEDEP}]
 	)
 
 	qt6? (
 		|| (
-			dev-python/PyQt6[${PYTHON_USEDEP}]
+			dev-python/pyqt6[${PYTHON_USEDEP}]
 			dev-python/pyside6[${PYTHON_USEDEP}]
 		)
 	)
