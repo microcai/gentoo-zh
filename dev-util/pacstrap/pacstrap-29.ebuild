@@ -1,15 +1,15 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit bash-completion-r1
+inherit shell-completion
 
 DESCRIPTION="Pacstrap - install packages to the specified new root directorye"
 HOMEPAGE="https://github.com/archlinux/arch-install-scripts https://man.archlinux.org/man/pacstrap.8"
-SRC_URI="https://github.com/archlinux/arch-install-scripts/archive/refs/tags/v${PV}.tar.gz -> arch-install-scripts-v${PV}.tar.gz"
+SRC_URI="https://gitlab.archlinux.org/archlinux/arch-install-scripts/-/archive/v${PV}/arch-install-scripts-v${PV}.tar.bz2"
 
-S="${WORKDIR}/arch-install-scripts-${PV}"
+S="${WORKDIR}/arch-install-scripts-v${PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -34,5 +34,6 @@ src_compile() {
 src_install() {
 	dobin pacstrap
 	doman doc/pacstrap.8
-	newbashcomp completion/pacstrap.bash pacstrap
+	newbashcomp completion/bash/pacstrap pacstrap
+	newzshcomp completion/zsh/_pacstrap _pacstrap
 }
