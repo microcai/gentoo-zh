@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-24 12:00:14 CST)
+(The last generation time: 2024-11-24 14:18:38 CST)
 
 ### Packages
 
@@ -318,8 +318,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/tifig-bin                        | 0.2.2                                     |            | https://github.com/monostream/tifig                                                     | Converts iOS 11 HEIC images to practical formats - Static binary
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-gfx/unityhub                         | 3.4.1                                     |            | https://unity.com/                                                                      | The official unity tool for manager Unity Engines and projects
-                                            | 3.4.2                                     |            |                                                                                         |
+ media-gfx/unityhub                         | 3.9.1                                     |            | https://unity.com/                                                                      | The official unity tool for manager Unity Engines and projects
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/zw3d                             | 2022.0.3.1-r3                             |            | https://www.zwsoft.cn/product/zw3d/linux                                                | CAD/CAM software for 3D design and processing
                                             | 2023.0.3.1                                |            |                                                                                         |
