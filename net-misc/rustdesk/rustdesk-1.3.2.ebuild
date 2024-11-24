@@ -87,6 +87,7 @@ CRATES="
 	cfg-if@0.1.10
 	cfg-if@1.0.0
 	cfg_aliases@0.1.1
+	cfg_aliases@0.2.1
 	chrono@0.4.38
 	cidr-utils@0.5.11
 	cipher@0.4.4
@@ -362,6 +363,7 @@ CRATES="
 	nix@0.23.2
 	nix@0.26.4
 	nix@0.28.0
+	nix@0.29.0
 	nom@7.1.3
 	ntapi@0.4.1
 	nu-ansi-term@0.49.0
@@ -762,7 +764,7 @@ CRATES="
 
 declare -A GIT_CRATES=(
 	[android-wakelock]='https://github.com/rustdesk-org/android-wakelock;d0292e5a367e627c4fa6f1ca6bdfad005dca7d90;android-wakelock-%commit%'
-	[arboard]='https://github.com/rustdesk-org/arboard;a04bdb1b368a99691822c33bf0f7ed497d6a7a35;arboard-%commit%'
+	[arboard]='https://github.com/rustdesk-org/arboard;747ab2d9b40a5c9c5102051cf3b0bb38b4845e60;arboard-%commit%'
 	[cacao]='https://github.com/clslaid/cacao;05e1536b0b43aaae308ec72c0eed703e875b7b95;cacao-%commit%'
 	[clipboard-master]='https://github.com/rustdesk-org/clipboard-master;4fb62e5b62fb6350d82b571ec7ba94b3cd466695;clipboard-master-%commit%'
 	[confy]='https://github.com/rustdesk-org/confy;83db9ec19a2f97e9718aef69e4fc5611bb382479;confy-%commit%'
@@ -771,7 +773,7 @@ declare -A GIT_CRATES=(
 	[core-graphics-types]='https://github.com/madsmtm/core-foundation-rs;7d593d016175755e492a92ef89edca68ac3bd5cd;core-foundation-rs-%commit%/core-graphics-types'
 	[core-graphics]='https://github.com/madsmtm/core-foundation-rs;7d593d016175755e492a92ef89edca68ac3bd5cd;core-foundation-rs-%commit%/core-graphics'
 	[evdev]='https://github.com/rustdesk-org/evdev;cec616e37790293d2cd2aa54a96601ed6b1b35a9;evdev-%commit%'
-	[hwcodec]='https://github.com/rustdesk-org/hwcodec;6abd1898f3a03481ed0c038507b5218d6ea94267;hwcodec-%commit%'
+	[hwcodec]='https://github.com/rustdesk-org/hwcodec;8bbd05bb300ad07cc345356ad85570f9ea99fbfa;hwcodec-%commit%'
 	[impersonate_system]='https://github.com/rustdesk-org/impersonate-system;2f429010a5a10b1fe5eceb553c6672fd53d20167;impersonate-system-%commit%'
 	[keepawake]='https://github.com/rustdesk-org/keepawake-rs;64d568586dd16551d02120e19668d2b0fec8e3c9;keepawake-rs-%commit%'
 	[machine-uid]='https://github.com/rustdesk-org/machine-uid;381ff579c1dc3a6c54db9dfec47c44bcb0246542;machine-uid-%commit%'
@@ -779,7 +781,7 @@ declare -A GIT_CRATES=(
 	[pam-sys]='https://github.com/rustdesk-org/pam-sys;3337c9bb9a9c68d7497ec8c93cad2368c26091b7;pam-sys-%commit%'
 	[pam]='https://github.com/rustdesk-org/pam;7bfd25510202cd269292cbdd7c71f3977a6fd762;pam-%commit%'
 	[parity-tokio-ipc]='https://github.com/rustdesk-org/parity-tokio-ipc;3623ec9ebef50c9b118e03b03df831008a4d1441;parity-tokio-ipc-%commit%'
-	[rdev]='https://github.com/rustdesk-org/rdev;b3434caee84c92412b45a2f655a15ac5dad33488;rdev-%commit%'
+	[rdev]='https://github.com/rustdesk-org/rdev;961d25cc00c6b3ef80f444e6a7bed9872e2c35ea;rdev-%commit%'
 	[reqwest]='https://github.com/rustdesk-org/reqwest;9cb758c9fb2f4edc62eb790acfd45a6a3da21ed3;reqwest-%commit%'
 	[rust-pulsectl]='https://github.com/open-trade/pulsectl;5e68f4c2b7c644fa321984688602d71e8ad0bba3;pulsectl-%commit%'
 	[sciter-rs]='https://github.com/open-trade/rust-sciter;5322f3a755a0e6bf999fbc60d1efc35246c0f821;rust-sciter-%commit%'
@@ -824,9 +826,8 @@ SRC_URI="
 LICENSE="AGPL-3"
 # Dependent crate licenses
 LICENSE+="
-	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD-2 BSD Boost-1.0 CC0-1.0
-	GPL-2 GPL-3 GPL-3+ ISC MIT MPL-2.0 openssl SSLeay Unicode-DFS-2016 Unlicense ZLIB
-	Sciter
+	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD-2 BSD Boost-1.0
+	CC0-1.0 GPL-3+ ISC MIT MIT-0 MPL-2.0 Unicode-DFS-2016 Unlicense ZLIB
 "
 SLOT="0"
 KEYWORDS="~amd64"
