@@ -17,7 +17,7 @@ KEYWORDS="~amd64"
 
 RDEPEND="net-libs/webkit-gtk:4"
 
-RESTRICT="strip mirror"
+RESTRICT="strip"
 
 src_install() {
 	insinto /opt/Bruno
