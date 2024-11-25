@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-25 17:27:26 CST)
+(The last generation time: 2024-11-25 18:37:23 CST)
 
 ### Packages
 
@@ -266,8 +266,6 @@
  games-fps/source-engine                    | 9999                                      |            | https://github.com/nillerusr/source-engine                                              | A 3D game engine developed by Valve
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-misc/oh-my-git-bin                   | 0.6.5                                     |            | https://ohmygit.org/                                                                    | An interactive Git learning game!
---------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- games-roguelike/nethack                    | 3.6.7                                     |            | https://www.nethack.org/                                                                | The ultimate old-school single player dungeon exploration game
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-util/winegame-client-bin             | 0.5.10.5                                  |            | https://winegame.net/                                                                   | An open source gaming platform for GNU/Linux
                                             | 0.5.12.2                                  |            |                                                                                         |
