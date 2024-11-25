@@ -9,7 +9,7 @@ inherit desktop pax-utils xdg optfeature
 
 DESCRIPTION="Cursor App - AI-first coding environment"
 HOMEPAGE="https://www.cursor.com/"
-SRC_URI="https://download.todesktop.com/230313mzl4w4u92/${P}-build-24111460bf2loz1-x86_64.AppImage -> ${APPIMAGE}"
+SRC_URI="https://download.todesktop.com/230313mzl4w4u92/${P}-build-2411246yqzx1jmm-x86_64.AppImage -> ${APPIMAGE}"
 S="${WORKDIR}"
 
 LICENSE="cursor"
