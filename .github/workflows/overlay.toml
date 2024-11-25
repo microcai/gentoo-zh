@@ -729,13 +729,6 @@ source = "github"
 github = "git-learning-game/oh-my-git"
 use_latest_tag = true
 
-["games-roguelike/nethack"]
-source = "github"
-github = "NetHack/NetHack"
-use_latest_release = true
-from_pattern = "NetHack-(.*)_Released"
-to_pattern = "\\1"
-
 ["games-util/winegame-client-bin"]
 source = "regex"
 url = "https://winegame.net/downloads/"
