@@ -1015,12 +1015,8 @@ github_account = "st0nie"
 # TODO: upstream removed linux support
 #["media-video/tenvideo"]
 
-["net-analyzer/nali"]
-source = "github"
-github = "zu1k/nali"
-use_latest_tag = true
-prefix = "v"
-github_account = "peeweep"
+# dead upstream
+# ["net-analyzer/nali"]
 
 ["net-analyzer/realitlscanner"]
 source = "github"
