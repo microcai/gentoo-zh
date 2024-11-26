@@ -249,7 +249,8 @@ github_account = "liangyongxiang"
 source = "debianpkg"
 debianpkg = "zh-autoconvert"
 github_account = "liangyongxiang"
-strip_release = true
+from_pattern = "(.*)-(.*)"
+to_pattern = '\1_p\2'
 
 ["app-misc/bcompare"]
 source = "regex"
