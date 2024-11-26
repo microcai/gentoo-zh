@@ -39,7 +39,7 @@ jobs:
         echo "$pkgs"
         pkgs="{ ${pkgs::-1} }"
         echo "$pkgs" > .github/workflows/old_ver.json
-        sed -r -i 's/_p[^"]*//' .github/workflows/old_ver.json
+        # sed -r -i 's/_p[^"]*//' .github/workflows/old_ver.json
         cat .github/workflows/old_ver.json
         echo "::endgroup::"
 
