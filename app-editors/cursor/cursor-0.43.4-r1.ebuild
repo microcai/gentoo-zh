@@ -4,8 +4,13 @@
 EAPI=8
 
 APPIMAGE="${P}_x86_64.AppImage"
+CHROMIUM_LANGS="
+	af am ar bg bn ca cs da de el en-GB en-US es-419 es et fa fil fi fr gu he hi
+	hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt-BR pt-PT ro ru sk sl sr sv sw
+	ta te th tr uk ur vi zh-CN zh-TW
+"
 
-inherit desktop pax-utils xdg optfeature
+inherit chromium-2 desktop pax-utils xdg optfeature
 
 DESCRIPTION="Cursor App - AI-first coding environment"
 HOMEPAGE="https://www.cursor.com/"
@@ -60,11 +65,36 @@ src_unpack() {
 	"${S}/${APPIMAGE}" --appimage-extract || die
 }
 
+src_configure() {
+	default
+	chromium_suid_sandbox_check_kernel_config
+}
+
+src_prepare() {
+	default
+	pushd "${S}/squashfs-root/locales" > /dev/null || die
+	chromium_remove_language_paks
+	popd > /dev/null || die
+}
+
 src_install() {
 	cd "${S}/squashfs-root" || die
 
-	insinto /usr/share
-	doins -r ./usr/share/icons
+	exeinto /opt/cursor
+	doexe cursor chrome-sandbox libEGL.so libffmpeg.so libGLESv2.so libvk_swiftshader.so libvulkan.so.1
+
+	insinto /opt/cursor
+	doins chrome_100_percent.pak chrome_200_percent.pak icudtl.dat resources.pak snapshot_blob.bin \
+		v8_context_snapshot.bin vk_swiftshader_icd.json
+
+	insopts -m0755
+	doins -r locales resources
+
+	fperms 4711 /opt/cursor/chrome-sandbox
+	[[ -x chrome_crashpad_handler ]] && doins chrome_crashpad_handler
+
+	pax-mark m ../cursor/cursor
+	dosym ../cursor/cursor /opt/bin/cursor
 
 	local EXEC_EXTRA_FLAGS=()
 	if use wayland; then
@@ -74,30 +104,12 @@ src_install() {
 		EXEC_EXTRA_FLAGS+=( "--use-gl=egl" )
 	fi
 
-	sed -e "s|^Exec=.*|Exec=cursor ${EXEC_EXTRA_FLAGS[*]} %U|" \
-		cursor.desktop \
-		> "${T}/cursor.desktop" || die
+	sed -i -e "s|^Exec=.*|Exec=cursor ${EXEC_EXTRA_FLAGS[*]} %U|" \
+		cursor.desktop || die
+	domenu cursor.desktop
 
-	rm -f -r \
-		AppRun \
-		cursor.desktop \
-		cursor.png \
-		.DirIcon \
-		LICENSE.electron.txt \
-		LICENSES.chromium.html \
-		resources/app/ThirdPartyNotices.txt \
-		usr || die
-
-	insinto "/opt/${PN}"
-	doins -r .
-
-	fperms 4711 "/opt/${PN}/chrome-sandbox"
-	fperms +x "/opt/${PN}/chrome_crashpad_handler"
-	fperms +x "/opt/${PN}/cursor"
-	pax-mark m "/opt/${PN}/cursor"
-
-	dosym -r "/opt/${PN}/cursor" "/usr/bin/cursor"
-	domenu "${T}/cursor.desktop"
+	insinto /usr/share
+	doins -r usr/share/icons
 }
 
 pkg_postinst() {
