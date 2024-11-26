@@ -990,14 +990,14 @@ github_account = "oatiz"
 # live package only
 #["media-video/avplayer"]
 
-# TODO: upstream tag mismatching PV
+# always patch tag: v1.1.0-1 => 1.1.0_p1
 ["media-video/bilibili"]
 source = "github"
 github = "msojocs/bilibili-linux"
 use_latest_release = true
 prefix = "v"
 from_pattern = "(.*)-(.*)"
-to_pattern = "\\1"
+to_pattern = '\1_p\2'
 
 ["media-video/implay"]
 source = "github"
