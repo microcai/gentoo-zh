@@ -1314,6 +1314,13 @@ github = "juicity/juicity"
 use_latest_release = true
 prefix = "v"
 
+["net-proxy/metacubexd"]
+source = "github"
+github = "MetaCubeX/metacubexd"
+use_latest_release = true
+prefix = "v"
+github_account = "peeweep"
+
 ["net-proxy/mihomo"]
 source = "github"
 github = "MetaCubeX/mihomo"
