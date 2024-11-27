@@ -8,11 +8,13 @@ inherit font unpacker
 DESCRIPTION="A Noto-based font for traditional Chinese characters"
 HOMEPAGE="https://github.com/GuiWonder/Shanggu"
 
+FONTNAME="Shanggu"
+
 SRC_URI="
-	mono? ( https://github.com/GuiWonder/${PN}/releases/download/${PV}/${PN}MonoTTFs.7z -> ${PN}Mono-${PV}.7z )
-	round? ( https://github.com/GuiWonder/${PN}/releases/download/${PV}/${PN}RoundTTFs.7z -> ${PN}Round-${PV}.7z )
-	sans? ( https://github.com/GuiWonder/${PN}/releases/download/${PV}/${PN}SansTTFs.7z -> ${PN}Sans-${PV}.7z )
-	serif? ( https://github.com/GuiWonder/${PN}/releases/download/${PV}/${PN}SerifTTFs.7z -> ${PN}Serif-${PV}.7z )
+	mono? ( https://github.com/GuiWonder/${FONTNAME}/releases/download/${PV}/${FONTNAME}MonoTTFs.7z -> ${FONTNAME}Mono-${PV}.7z )
+	round? ( https://github.com/GuiWonder/${FONTNAME}/releases/download/${PV}/${FONTNAME}RoundTTFs.7z -> ${FONTNAME}Round-${PV}.7z )
+	sans? ( https://github.com/GuiWonder/${FONTNAME}/releases/download/${PV}/${FONTNAME}SansTTFs.7z -> ${FONTNAME}Sans-${PV}.7z )
+	serif? ( https://github.com/GuiWonder/${FONTNAME}/releases/download/${PV}/${FONTNAME}SerifTTFs.7z -> ${FONTNAME}Serif-${PV}.7z )
 "
 
 S="${WORKDIR}"
@@ -28,52 +30,52 @@ BDEPEND="
 FONT_SUFFIX="ttf"
 
 src_unpack() {
-	use mono && unpack_7z "${PN}Mono-${PV}.7z"
-	use round && unpack_7z "${PN}Round-${PV}.7z"
-	use sans && unpack_7z "${PN}Sans-${PV}.7z"
-	use serif && unpack_7z "${PN}Serif-${PV}.7z"
+	use mono && unpack_7z "${FONTNAME}Mono-${PV}.7z"
+	use round && unpack_7z "${FONTNAME}Round-${PV}.7z"
+	use sans && unpack_7z "${FONTNAME}Sans-${PV}.7z"
+	use serif && unpack_7z "${FONTNAME}Serif-${PV}.7z"
 }
 
 src_install() {
 	if use serif; then
 		FONT_S=(
-			"${S}/${PN}Serif"
-			"${S}/${PN}SerifFANTI"
-			"${S}/${PN}SerifJP"
-			"${S}/${PN}SerifSC"
-			"${S}/${PN}SerifTC"
+			"${S}/${FONTNAME}Serif"
+			"${S}/${FONTNAME}SerifFANTI"
+			"${S}/${FONTNAME}SerifJP"
+			"${S}/${FONTNAME}SerifSC"
+			"${S}/${FONTNAME}SerifTC"
 		)
 		font_src_install
 	fi
 
 	if use sans; then
 		FONT_S=(
-			"${S}/${PN}Sans"
-			"${S}/${PN}SansFANTI"
-			"${S}/${PN}SansJP"
-			"${S}/${PN}SansSC"
-			"${S}/${PN}SansTC"
+			"${S}/${FONTNAME}Sans"
+			"${S}/${FONTNAME}SansFANTI"
+			"${S}/${FONTNAME}SansJP"
+			"${S}/${FONTNAME}SansSC"
+			"${S}/${FONTNAME}SansTC"
 		)
 		font_src_install
 	fi
 
 	if use mono; then
 		FONT_S=(
-			"${S}/${PN}Mono"
-			"${S}/${PN}MonoJP"
-			"${S}/${PN}MonoSC"
-			"${S}/${PN}MonoTC"
+			"${S}/${FONTNAME}Mono"
+			"${S}/${FONTNAME}MonoJP"
+			"${S}/${FONTNAME}MonoSC"
+			"${S}/${FONTNAME}MonoTC"
 		)
 		font_src_install
 	fi
 
 	if use round; then
 		FONT_S=(
-			"${S}/${PN}Round"
-			"${S}/${PN}RoundFANTI"
-			"${S}/${PN}RoundJP"
-			"${S}/${PN}RoundSC"
-			"${S}/${PN}RoundTC"
+			"${S}/${FONTNAME}Round"
+			"${S}/${FONTNAME}RoundFANTI"
+			"${S}/${FONTNAME}RoundJP"
+			"${S}/${FONTNAME}RoundSC"
+			"${S}/${FONTNAME}RoundTC"
 		)
 		font_src_install
 	fi
