@@ -817,12 +817,12 @@ use_latest_release = true
 prefix = "v"
 github_account = "Linerre"
 
-["media-fonts/Shanggu"]
+["media-fonts/shanggu"]
 source = "github"
 github = "GuiWonder/Shanggu"
 use_latest_release = true
 prefix = "v"
-github_account = "Linerre"
+github_account = "curlingchimpanzeeowl"
 
 # TODO: version not found: https://sites.google.com/view/jtfoundry/zh-tw/downloads
 #["media-fonts/taipei-sans-tc"]
