@@ -26,15 +26,11 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_install(){
-	dobin "${S}"/usr/bin/clash-verge
-	dobin "${S}"/usr/bin/clash-verge-service
-	dobin "${S}"/usr/bin/install-service
-	dobin "${S}"/usr/bin/uninstall-service
-	dobin "${S}"/usr/bin/verge-mihomo
-	dobin "${S}"/usr/bin/verge-mihomo-alpha
+	exeinto /opt/clash-verge/bin
+	doexe "${S}"/usr/bin/*
 	insinto /usr/lib/clash-verge
 	doins -r "${S}"/usr/lib/Clash\ Verge/resources
-	domenu usr/share/applications/Clash\ Verge.desktop
+	domenu "${FILESDIR}"/clash-verge.desktop
 	doicon -s 128 usr/share/icons/hicolor/128x128/apps/${PN/-bin}.png
 	doicon -s 256 usr/share/icons/hicolor/256x256@2/apps/${PN/-bin}.png
 	doicon -s 32 usr/share/icons/hicolor/32x32/apps/${PN/-bin}.png
