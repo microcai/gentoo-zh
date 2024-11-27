@@ -27,6 +27,9 @@ RDEPEND="${DEPEND}"
 
 src_install(){
 	dobin "${S}"/usr/bin/clash-verge
+	dobin "${S}"/usr/bin/clash-verge-service
+	dobin "${S}"/usr/bin/install-service
+	dobin "${S}"/usr/bin/uninstall-service
 	dobin "${S}"/usr/bin/verge-mihomo
 	dobin "${S}"/usr/bin/verge-mihomo-alpha
 	insinto /usr/lib/clash-verge
