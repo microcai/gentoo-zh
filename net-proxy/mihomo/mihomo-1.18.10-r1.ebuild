@@ -59,5 +59,6 @@ src_install() {
 	dobin bin/mihomo
 	dosym -r "/usr/bin/mihomo" "/usr/bin/clash-meta"
 	systemd_dounit "${FILESDIR}/mihomo.service"
+	systemd_newunit "${FILESDIR}/mihomo_at.service" mihomo@.service
 	newinitd "${FILESDIR}"/mihomo.initd mihomo
 }
