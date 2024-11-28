@@ -14,7 +14,7 @@ inherit chromium-2 desktop pax-utils xdg optfeature
 
 DESCRIPTION="Cursor App - AI-first coding environment"
 HOMEPAGE="https://www.cursor.com/"
-SRC_URI="https://download.todesktop.com/230313mzl4w4u92/${P}-build-241126w13goyvrs-x86_64.AppImage -> ${APPIMAGE}"
+SRC_URI="https://download.todesktop.com/230313mzl4w4u92/${P}-build-241127pdg4cnbu2-x86_64.AppImage -> ${APPIMAGE}"
 S="${WORKDIR}"
 
 LICENSE="cursor"
