@@ -7,9 +7,9 @@ pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 		<email>ston.jia@qq.com</email>
 	</maintainer>
 	<use>
-		<flag name="gvisor">Enable TUN stack support for gvisor</flag>
+		<flag name="gvisor">Enable gvisor stack support</flag>
 		<flag name="systemd">Enable systemd support</flag>
-		<flag name="caps">Enable caps support for sys-apps/openrc</flag>
+		<flag name="tun">Enable tun support</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">MetaCubeX/mihomo</remote-id>
