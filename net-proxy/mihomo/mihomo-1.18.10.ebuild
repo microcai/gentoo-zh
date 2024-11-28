@@ -39,7 +39,7 @@ BDEPEND=">=dev-lang/go-1.20.4"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~loong"
-IUSE="+gvisor systemd caps"
+IUSE="+gvisor systemd +caps"
 
 src_compile() {
 	local BUILDTIME=$(LC_ALL=C date -u || die)
