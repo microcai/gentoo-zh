@@ -639,6 +639,13 @@ use_latest_tag = true
 prefix = "v"
 github_account = "tsln1998"
 
+["dev-util/binsider"]
+source = "github"
+github = "orhun/binsider"
+use_latest_release = true
+prefix = "v"
+github_account = "gouwazi"
+
 ["dev-util/cargo-about"]
 source = "github"
 github = "EmbarkStudios/cargo-about"
