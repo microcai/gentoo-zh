@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-28 19:07:24 CST)
+(The last generation time: 2024-11-28 22:45:47 CST)
 
 ### Packages
 
@@ -371,6 +371,8 @@
  media-video/bilibili                       | 1.15.2_p2                                 |            | https://github.com/msojocs/bilibili-linux                                               | Based on the Bilibli offcial client to linux version, support roaming
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/implay                         | 1.5.1                                     |            | https://tsl0922.github.io/ImPlay                                                        | A Cross-Platform Desktop Media Player
+--------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ media-video/iptvnator-bin                  | 0.16.0                                    |            | https://iptvnator.vercel.app/                                                           | Cross-platform IPTV player application with multiple features
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/mpv-handler                    | 0.3.13                                    |            | https://github.com/akiirui/mpv-handler                                                  | Play website videos and songs with mpv & yt-dlp
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
