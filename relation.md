@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-28 15:21:48 CST)
+(The last generation time: 2024-11-28 17:04:40 CST)
 
 ### Packages
 
@@ -278,8 +278,6 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/Plangothic                     | 1.9.5766                                  |            | https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project                  | 遍黑体项目（Plangothic Project）
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/Shanggu                        | 1.021                                     |            | https://github.com/GuiWonder/Shanggu                                                    | A Noto-based font for traditional Chinese characters
---------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/iansui                         | 1.000                                     |            | https://github.com/ButTaiwan/iansui                                                     | An open-source Chinese font derived from Klee One (Fontworks).
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/jf-openhuninn                  | 2.1                                       |            | https://justfont.com/huninn/                                                            | An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
@@ -295,6 +293,8 @@
  media-fonts/sarasa-gothic                  | 1.0.24                                    |            | https://github.com/be5invis/Sarasa-Gothic                                               | A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/sarasa-term-sc-nerd            | 2.3.0                                     |            | https://github.com/laishulu/Sarasa-Term-SC-Nerd                                         | Sarasa Mono SC font patched with Nerd fonts
+--------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ media-fonts/shanggu                        | 1.021                                     |            | https://github.com/GuiWonder/Shanggu                                                    | A Noto-based font for traditional Chinese characters
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/smiley-sans                    | 2.0.1                                     |            | https://github.com/atelier-anchor/smiley-sans                                           | An open-source font for Chinese.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
