@@ -26,10 +26,10 @@ RDEPEND="
 		sys-apps/systemd
 	)
 	!systemd? (
-		caps? (
+		tun? (
 			sys-apps/openrc[caps(+)]
 		)
-		!caps? (
+		!tun? (
 			sys-apps/openrc
 		)
 	)
@@ -39,7 +39,7 @@ BDEPEND=">=dev-lang/go-1.20.4"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~loong"
-IUSE="+gvisor systemd +caps"
+IUSE="+gvisor systemd +tun"
 
 src_compile() {
 	local BUILDTIME=$(LC_ALL=C date -u || die)
@@ -60,5 +60,8 @@ src_install() {
 	dosym -r "/usr/bin/mihomo" "/usr/bin/clash-meta"
 	systemd_dounit "${FILESDIR}/mihomo.service"
 	systemd_newunit "${FILESDIR}/mihomo_at.service" mihomo@.service
+	if use tun; then
+		fperms +s /usr/bin/mihomo
+	fi
 	newinitd "${FILESDIR}"/mihomo.initd mihomo
 }
