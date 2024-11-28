@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-inherit go-module systemd
+inherit go-module systemd fcaps
 
 DESCRIPTION="Another Clash Kernel, formerly Clash.Meta"
 HOMEPAGE="
@@ -41,6 +41,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~loong"
 IUSE="+gvisor systemd +tun"
 
+FILECAPS=(
+	cap_net_admin,cap_net_bind_service=+ep /usr/bin/mihomo
+)
+
 src_compile() {
 	local BUILDTIME=$(LC_ALL=C date -u || die)
 	local MY_TAGS
@@ -60,8 +64,5 @@ src_install() {
 	dosym -r "/usr/bin/mihomo" "/usr/bin/clash-meta"
 	systemd_dounit "${FILESDIR}/mihomo.service"
 	systemd_newunit "${FILESDIR}/mihomo_at.service" mihomo@.service
-	if use tun; then
-		fperms +s /usr/bin/mihomo
-	fi
 	newinitd "${FILESDIR}"/mihomo.initd mihomo
 }
