@@ -1012,6 +1012,13 @@ source = "github"
 github = "tsl0922/ImPlay"
 use_latest_release = true
 
+["media-video/iptvnator-bin"]
+source = "github"
+github = "4gray/iptvnator"
+use_latest_release = true
+prefix = "v"
+github_account = "gouwazi"
+
 ["media-video/mpv-handler"]
 source = "github"
 github = "akiirui/mpv-handler"
