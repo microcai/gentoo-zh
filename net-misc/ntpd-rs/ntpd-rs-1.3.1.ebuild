@@ -6,27 +6,26 @@
 EAPI=8
 
 CRATES="
-	addr2line@0.24.1
+	addr2line@0.24.2
 	adler2@2.0.0
 	aead@0.5.2
 	aes-siv@0.7.0
 	aes@0.8.4
-	arbitrary@1.3.2
-	async-trait@0.1.82
+	arbitrary@1.4.1
+	async-trait@0.1.83
 	backtrace@0.3.74
-	base64@0.22.1
 	bitflags@2.6.0
 	block-buffer@0.10.4
 	byteorder@1.5.0
-	bytes@1.7.2
-	cc@1.1.21
+	bytes@1.8.0
+	cc@1.2.1
 	cfg-if@1.0.0
 	cipher@0.4.4
 	clock-steering@0.2.1
 	cmac@0.7.2
 	core-foundation-sys@0.8.7
 	core-foundation@0.9.4
-	cpufeatures@0.2.14
+	cpufeatures@0.2.16
 	crypto-common@0.1.6
 	ctr@0.9.2
 	dbl@0.3.2
@@ -34,27 +33,27 @@ CRATES="
 	equivalent@1.0.1
 	generic-array@0.14.7
 	getrandom@0.2.15
-	gimli@0.31.0
-	hashbrown@0.14.5
+	gimli@0.31.1
+	hashbrown@0.15.2
 	hermit-abi@0.3.9
-	indexmap@2.5.0
+	indexmap@2.6.0
 	inout@0.1.3
-	itoa@1.0.11
+	itoa@1.0.14
 	lazy_static@1.5.0
-	libc@0.2.158
+	libc@0.2.166
 	log@0.4.22
 	md-5@0.10.6
 	memchr@2.7.4
 	miniz_oxide@0.8.0
 	mio@1.0.2
 	nu-ansi-term@0.46.0
-	object@0.36.4
-	once_cell@1.19.0
+	object@0.36.5
+	once_cell@1.20.2
 	openssl-probe@0.1.5
 	overload@0.1.1
-	pin-project-lite@0.2.14
+	pin-project-lite@0.2.15
 	ppv-lite86@0.2.20
-	proc-macro2@1.0.86
+	proc-macro2@1.0.92
 	quote@1.0.37
 	rand@0.8.5
 	rand_chacha@0.3.1
@@ -62,39 +61,39 @@ CRATES="
 	ring@0.17.8
 	rustc-demangle@0.1.24
 	rustls-native-certs@0.7.3
-	rustls-pemfile@2.1.3
-	rustls-pki-types@1.8.0
+	rustls-pemfile@2.2.0
+	rustls-pki-types@1.10.0
 	rustls-webpki@0.102.8
-	rustls@0.23.13
+	rustls@0.23.19
 	ryu@1.0.18
-	schannel@0.1.24
-	security-framework-sys@2.11.1
+	schannel@0.1.27
+	security-framework-sys@2.12.1
 	security-framework@2.11.1
-	serde@1.0.210
-	serde_derive@1.0.210
-	serde_json@1.0.128
-	serde_spanned@0.6.7
+	serde@1.0.215
+	serde_derive@1.0.215
+	serde_json@1.0.133
+	serde_spanned@0.6.8
 	serde_test@1.0.177
 	sharded-slab@0.1.7
 	shlex@1.3.0
 	socket2@0.5.7
 	spin@0.9.8
 	subtle@2.6.1
-	syn@2.0.77
+	syn@2.0.89
 	thread_local@1.1.8
 	timestamped-socket@0.2.5
 	tokio-macros@2.4.0
 	tokio-rustls@0.26.0
-	tokio@1.40.0
+	tokio@1.41.1
 	toml@0.8.19
 	toml_datetime@0.6.8
-	toml_edit@0.22.21
-	tracing-attributes@0.1.27
-	tracing-core@0.1.32
+	toml_edit@0.22.22
+	tracing-attributes@0.1.28
+	tracing-core@0.1.33
 	tracing-subscriber@0.3.18
-	tracing@0.1.40
+	tracing@0.1.41
 	typenum@1.17.0
-	unicode-ident@1.0.13
+	unicode-ident@1.0.14
 	untrusted@0.9.0
 	version_check@0.9.5
 	wasi@0.11.0+wasi-snapshot-preview1
@@ -112,7 +111,7 @@ CRATES="
 	windows_x86_64_gnu@0.52.6
 	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.52.6
-	winnow@0.6.18
+	winnow@0.6.20
 	zerocopy-derive@0.7.35
 	zerocopy@0.7.35
 	zeroize@1.8.1
@@ -131,7 +130,7 @@ S="${WORKDIR}/${P}/ntpd"
 LICENSE="Apache-2.0 MIT"
 # Dependent crate licenses
 LICENSE+="
-	BSD ISC MIT Unicode-DFS-2016
+	BSD ISC MIT Unicode-3.0
 	|| ( Apache-2.0 Boost-1.0 )
 "
 SLOT="0"
