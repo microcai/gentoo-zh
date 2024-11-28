@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-28 11:53:32 CST)
+(The last generation time: 2024-11-28 13:20:01 CST)
 
 ### Packages
 
@@ -325,8 +325,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-libs/phonon-mpv                      | 0.1.0                                     |            | https://github.com/OpenProgger/phonon-mpv                                               | Phonon Backend using MPV Player(libmpv)
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-plugins/osdlyrics                    | 0.5.11                                    |            | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
-                                            | 0.5.14                                    |            |                                                                                         |
+ media-plugins/osdlyrics                    | 0.5.15                                    |            | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
                                             | 9999                                      |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-plugins/waylyrics                    | 0.3.18                                    |            | https://waylyrics.github.io/waylyrics/waylyrics                                         | Simple On Screen lyrics Display for linux/unix
