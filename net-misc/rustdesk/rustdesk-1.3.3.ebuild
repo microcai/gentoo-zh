@@ -119,7 +119,6 @@ CRATES="
 	core-graphics@0.23.2
 	coreaudio-rs@0.11.3
 	coreaudio-sys@0.2.15
-	cpal@0.15.3
 	cpufeatures@0.2.12
 	crc32fast@1.4.2
 	crossbeam-channel@0.5.13
@@ -766,14 +765,17 @@ declare -A GIT_CRATES=(
 	[android-wakelock]='https://github.com/rustdesk-org/android-wakelock;d0292e5a367e627c4fa6f1ca6bdfad005dca7d90;android-wakelock-%commit%'
 	[arboard]='https://github.com/rustdesk-org/arboard;747ab2d9b40a5c9c5102051cf3b0bb38b4845e60;arboard-%commit%'
 	[cacao]='https://github.com/clslaid/cacao;05e1536b0b43aaae308ec72c0eed703e875b7b95;cacao-%commit%'
+	[cidre-macros]='https://github.com/yury/cidre;f05c4288f9870c9fab53272ddafd6ec01c7b2dbf;cidre-%commit%/cidre-macros'
+	[cidre]='https://github.com/yury/cidre;f05c4288f9870c9fab53272ddafd6ec01c7b2dbf;cidre-%commit%/cidre'
 	[clipboard-master]='https://github.com/rustdesk-org/clipboard-master;4fb62e5b62fb6350d82b571ec7ba94b3cd466695;clipboard-master-%commit%'
 	[confy]='https://github.com/rustdesk-org/confy;83db9ec19a2f97e9718aef69e4fc5611bb382479;confy-%commit%'
 	[core-foundation-sys]='https://github.com/madsmtm/core-foundation-rs;7d593d016175755e492a92ef89edca68ac3bd5cd;core-foundation-rs-%commit%/core-foundation-sys'
 	[core-foundation]='https://github.com/madsmtm/core-foundation-rs;7d593d016175755e492a92ef89edca68ac3bd5cd;core-foundation-rs-%commit%/core-foundation'
 	[core-graphics-types]='https://github.com/madsmtm/core-foundation-rs;7d593d016175755e492a92ef89edca68ac3bd5cd;core-foundation-rs-%commit%/core-graphics-types'
 	[core-graphics]='https://github.com/madsmtm/core-foundation-rs;7d593d016175755e492a92ef89edca68ac3bd5cd;core-foundation-rs-%commit%/core-graphics'
+	[cpal]='https://github.com/rustdesk-org/cpal;4d318ff778063ce14669fd4bd67a1673653fc6e5;cpal-%commit%'
 	[evdev]='https://github.com/rustdesk-org/evdev;cec616e37790293d2cd2aa54a96601ed6b1b35a9;evdev-%commit%'
-	[hwcodec]='https://github.com/rustdesk-org/hwcodec;8bbd05bb300ad07cc345356ad85570f9ea99fbfa;hwcodec-%commit%'
+	[hwcodec]='https://github.com/rustdesk-org/hwcodec;da7dab48df19edb5a7138ff9e01bf9f148b523da;hwcodec-%commit%'
 	[impersonate_system]='https://github.com/rustdesk-org/impersonate-system;2f429010a5a10b1fe5eceb553c6672fd53d20167;impersonate-system-%commit%'
 	[keepawake]='https://github.com/rustdesk-org/keepawake-rs;64d568586dd16551d02120e19668d2b0fec8e3c9;keepawake-rs-%commit%'
 	[machine-uid]='https://github.com/rustdesk-org/machine-uid;381ff579c1dc3a6c54db9dfec47c44bcb0246542;machine-uid-%commit%'
@@ -788,7 +790,7 @@ declare -A GIT_CRATES=(
 	[sysinfo]='https://github.com/rustdesk-org/sysinfo;90b1705d909a4902dbbbdea37ee64db17841077d;sysinfo-%commit%'
 	[tao-macros]='https://github.com/rustdesk-org/tao;288c219cb0527e509590c2b2d8e7072aa9feb2d3;tao-%commit%/tao-macros'
 	[tao]='https://github.com/rustdesk-org/tao;288c219cb0527e509590c2b2d8e7072aa9feb2d3;tao-%commit%'
-	[tfc]='https://github.com/rustdesk-org/The-Fat-Controller;de9c8ba480f166a9fc90aaa47bb0e84b443ea9c6;The-Fat-Controller-%commit%'
+	[tfc]='https://github.com/rustdesk-org/The-Fat-Controller;78bb80a8e596e4c14ae57c8448f5fca75f91f2b0;The-Fat-Controller-%commit%'
 	[tokio-socks]='https://github.com/rustdesk-org/tokio-socks;94e97c6d7c93b0bcbfa54f2dc397c1da0a6e43d3;tokio-socks-%commit%'
 	[tray-icon]='https://github.com/tauri-apps/tray-icon;d4078696edba67b0ab42cef67e6a421a0332c96f;tray-icon-%commit%'
 	[wallpaper]='https://github.com/rustdesk-org/wallpaper.rs;ce4a0cd3f58327c7cc44d15a63706fb0c022bacf;wallpaper.rs-%commit%'
