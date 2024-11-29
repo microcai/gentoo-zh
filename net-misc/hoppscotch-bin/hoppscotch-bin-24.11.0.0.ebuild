@@ -7,7 +7,8 @@ inherit unpacker desktop xdg
 
 DESCRIPTION="Open source API development ecosystem"
 HOMEPAGE="https://hoppscotch.io"
-SRC_URI="https://github.com/hoppscotch/releases/releases/download/v$(ver_rs 3 '-')/Hoppscotch_linux_x64.deb -> ${P}.deb"
+MY_PV=$(ver_rs 3 '-')
+SRC_URI="https://github.com/hoppscotch/releases/releases/download/v${MY_PV}/Hoppscotch_linux_x64.deb -> ${P}.deb"
 
 S="${WORKDIR}"
 LICENSE="MIT"
