@@ -12,11 +12,10 @@ DESCRIPTION="The libmamba based solver for conda"
 HOMEPAGE="https://github.com/conda/conda-libmamba-solver"
 SRC_URI="https://github.com/conda/conda-libmamba-solver/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
+S="${WORKDIR}/conda-libmamba-solver-${PV}"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
-
-S="${WORKDIR}/conda-libmamba-solver-${PV}"
 
 BDEPEND="
 	$(python_gen_cond_dep 'dev-python/setuptools-scm[${PYTHON_USEDEP}]')
