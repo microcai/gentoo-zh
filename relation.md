@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-11-30 15:48:47 CST)
+(The last generation time: 2024-11-30 16:09:38 CST)
 
 ### Packages
 
@@ -296,7 +296,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/sarasa-term-sc-nerd            | 2.3.0                                     |            | https://github.com/laishulu/Sarasa-Term-SC-Nerd                                         | Sarasa Mono SC font patched with Nerd fonts
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/shanggu                        | 1.021                                     |            | https://github.com/GuiWonder/Shanggu                                                    | A Noto-based font for traditional Chinese characters
+ media-fonts/shanggu                        | 1.021-r1                                  |            | https://github.com/GuiWonder/Shanggu                                                    | A Noto-based font for traditional Chinese characters
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/smiley-sans                    | 2.0.1                                     |            | https://github.com/atelier-anchor/smiley-sans                                           | An open-source font for Chinese.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
