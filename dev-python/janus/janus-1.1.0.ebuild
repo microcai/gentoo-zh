@@ -3,18 +3,18 @@
 
 EAPI=7
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{9..12} pypy3 )
+PYTHON_COMPAT=( python3_{9..13} pypy3 )
 
 inherit distutils-r1 pypi
 
 DESCRIPTION="Implementation of the asyncio (PEP 3156) event-loop with Qt"
 HOMEPAGE="https://github.com/aio-libs/janus"
-IUSE="test"
-RESTRICT="!test? ( test )"
-
 LICENSE="BSD"
+
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="test"
+RESTRICT="!test? ( test )"
 
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
