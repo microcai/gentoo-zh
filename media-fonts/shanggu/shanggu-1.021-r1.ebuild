@@ -26,7 +26,7 @@ REQUIRED_USE="|| ( round sans serif mono )"
 BDEPEND="
 	app-arch/p7zip
 "
-
+FONT_CONF=( "${FILESDIR}/70-shanggu.conf" )
 FONT_SUFFIX="ttf"
 FONT_S=""
 
