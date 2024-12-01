@@ -17,7 +17,7 @@ IUSE="clang"
 DEPEND="
 	media-libs/flac
 	media-libs/alsa-lib
-	>=dev-lang/go-1.21.0
+	>=dev-lang/go-1.22.0
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
