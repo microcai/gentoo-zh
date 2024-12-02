@@ -375,11 +375,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "OriPoin"
 
-["app-text/cajviewer"]
-source = "regex"
-url = "https://cajviewer.cnki.net/"
-regex = "cajviewer_([\\d.]+)_amd64.deb"
-github_account = "123485k"
+# cajviewer.cnki.net only work on China mainland
+# Got 418 status code under GitHub's network
+# ["app-text/cajviewer"]
+# source = "regex"
+# url = "https://cajviewer.cnki.net/"
+# regex = "cajviewer_([\\d.]+)_amd64.deb"
+# github_account = "123485k"
 
 ["app-text/goldendict"]
 source = "github"
