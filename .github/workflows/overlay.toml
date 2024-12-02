@@ -929,6 +929,7 @@ source = "github"
 github = "feeluown/FeelUOwn"
 use_latest_tag = true
 prefix = "v"
+github_account = "wgjak47"
 
 ["media-sound/go-musicfox"]
 source = "github"
