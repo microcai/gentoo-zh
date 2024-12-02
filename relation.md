@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-12-02 17:54:40 CST)
+(The last generation time: 2024-12-02 19:57:53 CST)
 
 ### Packages
 
@@ -677,7 +677,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/klassy                          | 4.0.5.25.80-r1                            |            | https://github.com/paulmcauley/klassy                                                   | Highly customizable theme plugin for KDE Plasma desktop
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- x11-themes/kora-icon-theme                 | 1.6.1                                     |            | https://github.com/bikass/kora                                                          | An SVG icon theme with lots of new icons for GNU/Linux operating systems
+ x11-themes/kora-icon-theme                 | 1.6.2                                     |            | https://github.com/bikass/kora                                                          | An SVG icon theme with lots of new icons for GNU/Linux operating systems
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/nordic                          | 2.1.0                                     |            | https://github.com/EliverLara/Nordic                                                    | Dark Gtk3.20+ theme created using the awesome Nord color pallete
                                             | 2.2.0-r1                                  |            |                                                                                         |
