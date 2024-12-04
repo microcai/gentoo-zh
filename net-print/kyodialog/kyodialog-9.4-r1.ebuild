@@ -10,7 +10,7 @@ HOMEPAGE="https://www.kyoceradocumentsolutions.com.cn/support/mfp/download/"
 
 SRC_URI="
 	amd64?	( https://www.kyoceraconnect.com/servlet/kyocera.admin.DownloadServlet?actionType=download&id=1301
-				-> kyodialog_${PV}-0_amd64.deb )
+				-> KyoceraLinuxPackages-20240521.tar.gz )
 "
 
 S="${WORKDIR}"
@@ -30,12 +30,9 @@ RDEPEND="
 	dev-qt/qtnetwork:5
 "
 
-pkg_nofetch() {
-	einfo "Please download Kyodialog version ${PV} from"
-	einfo "    ${HOMEPAGE}"
-	einfo "Unpack it.Then you will get the file:"
-	einfo "Debian/Global/kyodialog_amd64/kyodialog_9.4-0_amd64.deb"
-	einfo "The archive should then be placed into your distfiles directory."
+src_unpack() {
+	unpack KyoceraLinuxPackages-20240521.tar.gz
+	unpack_deb Debian/Global/kyodialog_amd64/kyodialog_${PV}-0_amd64.deb
 }
 
 src_install() {
