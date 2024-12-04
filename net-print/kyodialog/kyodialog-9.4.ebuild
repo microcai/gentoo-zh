@@ -15,7 +15,7 @@ SRC_URI="
 
 S="${WORKDIR}"
 
-LICENSE="as-is"
+LICENSE="KYOCERA"
 SLOT="0"
 KEYWORDS="amd64"
 
