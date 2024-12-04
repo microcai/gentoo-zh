@@ -12,7 +12,7 @@ _QQDownSite="https://dldir1.qq.com/qqfile/qq/QQNT"
 _QQFileName="QQ"
 _QQFileSuffix=".deb"
 
-_LiteLoader_PV="1.2.1"
+_LiteLoader_PV="1.2.3"
 DESCRIPTION="The new version of the official linux-qq"
 HOMEPAGE="https://im.qq.com/linuxqq/index.shtml"
 
