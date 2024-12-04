@@ -11,7 +11,6 @@ EGIT_REPO_URI="https://github.com/jonaburg/picom.git"
 
 LICENSE="MPL-2.0 MIT"
 SLOT="0"
-KEYWORDS=""
 IUSE="+config-file dbus +doc +drm opengl pcre"
 
 RDEPEND="dev-libs/libev

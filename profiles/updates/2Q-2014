@@ -1,3 +1,2 @@
 move dev-android/android-studio dev-util/android-studio
-move app-misc/cv sys-app/cv
 move media-fonts/wangttf media-fonts/wangfonts

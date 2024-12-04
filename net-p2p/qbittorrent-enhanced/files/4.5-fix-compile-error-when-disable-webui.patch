@@ -1,0 +1,29 @@
+From 45a155639d2fc84c2505f261fd7805d03d9315bd Mon Sep 17 00:00:00 2001
+From: microcai <microcaicai@gmail.com>
+Date: Tue, 14 Feb 2023 21:58:02 +0800
+Subject: [PATCH] fix compile error when disable webui
+
+---
+ src/gui/optionsdialog.cpp | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/gui/optionsdialog.cpp b/src/gui/optionsdialog.cpp
+index 87fe7d3..2d13457 100644
+--- a/src/gui/optionsdialog.cpp
++++ b/src/gui/optionsdialog.cpp
+@@ -1988,6 +1988,7 @@ void OptionsDialog::on_IPSubnetWhitelistButton_clicked()
+     dialog->open();
+ }
+ 
++#ifndef DISABLE_WEBUI
+ void OptionsDialog::on_fetchButton_clicked()
+ {
+     Net::DownloadHandler *m_fetchHandler = Net::DownloadManager::instance()->download(Preferences::instance()->customizeTrackersListUrl());
+@@ -2007,3 +2008,4 @@ void OptionsDialog::handlePublicTrackersListChanged(const Net::DownloadResult &r
+             m_ui->textPublicTrackers->setPlainText(u"Refetch failed. Reason: "_qs + result.errorString);
+     }
+ }
++#endif
+-- 
+2.39.1
+

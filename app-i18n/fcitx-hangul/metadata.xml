@@ -5,6 +5,10 @@
 		<email>ultratensai@gmail.com</email>
 		<name>Jae Hak Kim</name>
 	</maintainer>
+	<maintainer type="person">
+		<email>tanekliang@gmail.com</email>
+		<name>Yongxiang Liang</name>
+	</maintainer>
 	<upstream>
 		<remote-id type="github">fcitx5/fcitx5-hangul</remote-id>
 	</upstream>

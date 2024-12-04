@@ -5,4 +5,7 @@
 		<name>lyraile</name>
 		<email>iamoatiz@gmail.com</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">wez/wezterm</remote-id>
+	</upstream>
 </pkgmetadata>

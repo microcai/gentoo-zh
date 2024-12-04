@@ -1,0 +1,48 @@
+#!/sbin/openrc-run
+# Copyright 2023 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+name="daed daemon"
+description="daed Service"
+command="/usr/bin/daed"
+command_args="run "
+pidfile="/run/${RC_SVCNAME}.pid"
+command_background="yes"
+output_log="/var/log/daed/access.log"
+error_log="/var/log/daed/error.log"
+supervisor="supervise-daemon"
+rc_ulimit="-n 30000"
+rc_cgroup_cleanup="yes"
+
+depend() {
+    after docker net net-online sysctl
+    use net
+}
+
+error() {
+    echo "ERROR: $@" >&2
+    logger "ERROR: $@"
+}
+
+start_pre() {
+    if [ -d /sys/fs/bpf ]; then
+        if ! mountinfo -q /sys/fs/bpf; then
+            # From: https://github.com/cilium/cilium/blob/main/contrib/systemd/sys-fs-bpf.mount
+            # TODO: looking for sys-fs-bpf.mount in init.d
+            mount -t bpf bpffs /sys/fs/bpf || {
+                error "failed to mount bpf filesystem, exiting..."
+                return 1
+            }
+        fi
+    fi
+    if [ -d /sys/fs/cgroup ] && ! mountinfo -q /sys/fs/cgroup/; then
+        error "cgroup filesystem not mounted, exiting..."
+        return 1
+    fi
+    if [ ! -d "/tmp/daed/" ]; then
+        mkdir "/tmp/daed"
+    fi
+    if [ ! -L "/var/log/daed" ]; then
+        ln -s "/tmp/daed/" "/var/log/"
+    fi
+}

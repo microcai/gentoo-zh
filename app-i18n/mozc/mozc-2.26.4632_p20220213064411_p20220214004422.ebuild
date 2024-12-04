@@ -1,10 +1,13 @@
-# Copyright 2010-2022 Gentoo Authors
+# Copyright 2010-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( python3_{9..11} )
 
 inherit elisp-common multiprocessing python-any-r1 toolchain-funcs desktop xdg
+
+DESCRIPTION="Mozc - Japanese input method editor"
+HOMEPAGE="https://github.com/google/mozc"
 
 if [[ "${PV}" == "9999" ]]; then
 	inherit git-r3
@@ -23,13 +26,7 @@ else
 
 	JAPANESE_USAGE_DICTIONARY_GIT_REVISION="a4a66772e33746b91e99caceecced9a28507e925"
 	JAPANESE_USAGE_DICTIONARY_DATE="20180701040110"
-fi
 
-DESCRIPTION="Mozc - Japanese input method editor"
-HOMEPAGE="https://github.com/google/mozc"
-if [[ "${PV}" == "9999" ]]; then
-	SRC_URI=""
-else
 	SRC_URI="https://github.com/google/${PN}/archive/${MOZC_GIT_REVISION}.tar.gz -> ${PN}-${PV%%_p*}-${MOZC_DATE}.tar.gz
 		https://github.com/hiroyuki-komatsu/japanese-usage-dictionary/archive/${JAPANESE_USAGE_DICTIONARY_GIT_REVISION}.tar.gz -> japanese-usage-dictionary-${JAPANESE_USAGE_DICTIONARY_DATE}.tar.gz
 		https://github.com/fcitx/${PN}/archive/${FCITX_MOZC_GIT_REVISION}.tar.gz -> fcitx-${PN}-${PV%%_p*}-${FCITX_MOZC_DATE}.tar.gz"
@@ -49,8 +46,8 @@ RESTRICT="!test? ( test )"
 
 BDEPEND="$(python_gen_any_dep 'dev-python/six[${PYTHON_USEDEP}]')
 	>=dev-libs/protobuf-3.0.0
-	dev-util/gyp
-	dev-util/ninja
+	dev-build/gyp
+	app-alternatives/ninja
 	virtual/pkgconfig
 	emacs? ( app-editors/emacs:* )
 	fcitx4? ( sys-devel/gettext )
@@ -149,12 +146,15 @@ src_unpack() {
 		unpack japanese-usage-dictionary-${JAPANESE_USAGE_DICTIONARY_DATE}.tar.gz
 		cp -p japanese-usage-dictionary-${JAPANESE_USAGE_DICTIONARY_GIT_REVISION}/usage_dict.txt ${P}/src/third_party/japanese_usage_dictionary || die
 
-		unpack fcitx-${PN}-${PV%%_p*}-${FCITX_MOZC_DATE}.tar.gz
-		if use fcitx4; then
-			cp -pr mozc-${FCITX_MOZC_GIT_REVISION} fcitx-${PN} || die
-		fi
-		if use fcitx5; then
-			cp -pr mozc-${FCITX_MOZC_GIT_REVISION} fcitx5-${PN} || die
+		if use fcitx4 || use fcitx5; then
+			unpack fcitx-${PN}-${PV%%_p*}-${FCITX_MOZC_DATE}.tar.gz
+			if use fcitx4; then
+				cp -pr mozc-${FCITX_MOZC_GIT_REVISION} fcitx-${PN} || die
+			fi
+			if use fcitx5; then
+				cp -pr mozc-${FCITX_MOZC_GIT_REVISION} fcitx5-${PN} || die
+			fi
+			rm -r mozc-${FCITX_MOZC_GIT_REVISION} || die
 		fi
 	fi
 	xz -cd "${FILESDIR}"/${PN}-2.26.4632-system_abseil-cpp.patch.xz > \

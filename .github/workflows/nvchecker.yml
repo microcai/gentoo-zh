@@ -2,7 +2,6 @@ name: nvchecker
 
 on:
   push:
-    branches: [ master ]
   workflow_dispatch:
   schedule:
     # * is a special character in YAML so you have to quote this string
@@ -21,7 +20,7 @@ jobs:
 
     steps:
     - name: checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: gentoo
       run: |
@@ -35,11 +34,12 @@ jobs:
         echo "::endgroup::"
         # eix
         echo "::group::eix search packages"
-        pkgs=$(ACCEPT_LICENSE="*" ACCEPT_KEYWORDS="~amd64" EIX_LIMIT=0 NAMEVERSION="<category>/<name>-<version>\n" eix --pure-packages --in-overlay "$repo_name" --format '<bestversion:NAMEVERSION>')
+        pkgs=$(ACCEPT_LICENSE="*" ACCEPT_KEYWORDS="~amd64 ~arm64 ~loong ~riscv" EIX_LIMIT=0 NAMEVERSION="<category>/<name>-<version>\n" eix --pure-packages --in-overlay "$repo_name" --format '<bestversion:NAMEVERSION>')
         pkgs=$(qatom -F "\"%{CATEGORY}/%{PN}\": \"%{PV}\"," $pkgs) # remove revision
         echo "$pkgs"
         pkgs="{ ${pkgs::-1} }"
         echo "$pkgs" > .github/workflows/old_ver.json
+        # sed -r -i 's/_p[^"]*//' .github/workflows/old_ver.json
         cat .github/workflows/old_ver.json
         echo "::endgroup::"
 
@@ -50,23 +50,28 @@ jobs:
         cd .github/workflows/
         echo -e "[keys]\ngithub = \"${{ secrets.GITHUB_TOKEN }}\"" > keyfile.toml
         nvchecker --file overlay.toml --keyfile keyfile.toml
-        echo "::set-output name=nvcmp::$(nvcmp --file overlay.toml --json --newer)"
+
+        cat new_ver.json
+        echo "nvcmp=$(nvcmp --file overlay.toml --json --newer)" >> $GITHUB_OUTPUT
+
         echo "::endgroup::"
 
     - name: setup node
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
-        node-version: 16
+        node-version: latest
 
     - name: install github-script depends
       run: |
         npm install toml
 
     - name: update issues
-      uses: actions/github-script@v6
+      uses: actions/github-script@v7
+      timeout-minutes: 1
       env:
         pkgs: ${{steps.nvchecker.outputs.nvcmp}}
       with:
+        github-token: ${{ secrets.GENTOO_ZH_NVCHECKER_PAT }} # https://github.com/microcai/gentoo-zh/pull/3130
         script: |
           const script = require('./.github/workflows/issues-bumper.js');
           (async function () {

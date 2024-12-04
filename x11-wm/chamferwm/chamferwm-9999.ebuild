@@ -1,20 +1,17 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
 DESCRIPTION="A tiling X11 window manager with Vulkan compositor."
 HOMEPAGE="https://github.com/jaelpark/chamferwm"
-SRC_URI=""
 
 EGIT_REPO_URI="https://github.com/jaelpark/chamferwm.git git://github.com/jaelpark/chamferwm.git"
 
-inherit git-r3 meson
+inherit desktop git-r3 meson xdg
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
-IUSE=""
 
 DEPEND="
 	dev-libs/boost[python]
@@ -27,8 +24,6 @@ RDEPEND="
 	media-libs/vulkan-loader
 	dev-libs/boost[python]
 "
-
-BDEPEND=""
 
 src_prepare(){
 	sed -i "s/python3')/python-3.7')/g" meson.build
@@ -47,7 +42,5 @@ src_install(){
 	doins "${BUILD_DIR}/frame_geometry.spv"
 	doins "${BUILD_DIR}/frame_vertex.spv"
 
-	insinto /usr/share/applications/
-
-	doins "${S}/share/chamfer.desktop"
+	domenu "${S}/share/chamfer.desktop"
 }

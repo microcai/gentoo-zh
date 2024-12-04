@@ -9,4 +9,7 @@
 		sparklines for your shell
 		See? Here's a graph of your productivity gains after using spark: ▁▂▃▅▇
 	</longdescription>
+	<upstream>
+		<remote-id type="github">holman/spark</remote-id>
+	</upstream>
 </pkgmetadata>

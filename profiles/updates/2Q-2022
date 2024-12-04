@@ -5,7 +5,6 @@ move app-i18n/fcitx5-table-extra app-i18n/fcitx-table-extra
 move app-i18n/fcitx5-table-other app-i18n/fcitx-table-other
 move app-i18n/fcitx5-lua app-i18n/fcitx-lua
 move app-i18n/fcitx5-rime app-i18n/fcitx-rime
-move app-i18n/fcitx5-kkc app-i18n/fcitx-kkc
 move app-i18n/fcitx5-hangul app-i18n/fcitx-hangul
 move app-i18n/fcitx5-chinese-addons app-i18n/fcitx-chinese-addons
 move app-i18n/fcitx5-configtool app-i18n/fcitx-configtool
@@ -15,5 +14,4 @@ move app-i18n/fcitx5 app-i18n/fcitx
 move app-i18n/fcitx5-meta app-i18n/fcitx-meta
 move net-proxy/shadowsocks-rust-bin net-proxy/shadowsocks-rust
 move net-im/wechat-uos net-im/weixin-uos
-move dev-libs/libbacktrace sys-libs/libbacktrace
 move sys-kernel/xanmod-hybrid sys-kernel/xanmod-sources

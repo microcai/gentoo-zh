@@ -5,4 +5,7 @@
 		<name>Schroedinger</name>
 		<email>dylanturing@protonmail.com</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">listen1/listen1_desktop</remote-id>
+	</upstream>
 </pkgmetadata>

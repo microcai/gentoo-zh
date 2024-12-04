@@ -1,0 +1,221 @@
+diff -Naur gpick-0.3-old/CMakeLists.txt gpick-0.3/CMakeLists.txt
+--- gpick-0.3-old/CMakeLists.txt	2022-05-08 05:20:36.000000000 -0500
++++ gpick-0.3/CMakeLists.txt	2023-01-06 22:13:38.778904075 -0600
+@@ -30,7 +30,7 @@
+ 		pkg_check_modules(GTK2 gtk+-2.0>=2.24)
+ 		pkg_check_modules(GioUnix gio-unix-2.0>=2.24)
+ 	endif()
+-	pkg_search_module(Lua lua5.4-c++>=5.4 lua5-c++>=5.4 lua5.3-c++>=5.3 lua5-c++>=5.3 lua-c++>=5.3 lua5.2-c++>=5.2 lua-c++>=5.2)
++	pkg_search_module(Lua lua5.4>=5.4 lua5>=5.4 lua5.3>=5.3 lua5>=5.3 lua>=5.3 lua5.2>=5.2 lua>=5.2)
+ 	pkg_check_modules(Expat expat>=1.0)
+ endif()
+ set(THREADS_PREFER_PTHREAD_FLAG ON)
+diff -Naur gpick-0.3-old/source/ColorSpaceType.cpp gpick-0.3/source/ColorSpaceType.cpp
+--- gpick-0.3-old/source/ColorSpaceType.cpp	2022-05-08 05:20:36.000000000 -0500
++++ gpick-0.3/source/ColorSpaceType.cpp	2023-01-06 22:13:38.768904076 -0600
+@@ -22,7 +22,9 @@
+ #include "lua/Color.h"
+ #include "lua/Script.h"
+ #include "lua/Callbacks.h"
++extern "C"{
+ #include <lua.h>
++}
+ #include <iostream>
+ using namespace std;
+ 
+diff -Naur gpick-0.3-old/source/Converter.cpp gpick-0.3/source/Converter.cpp
+--- gpick-0.3-old/source/Converter.cpp	2022-05-08 05:20:36.000000000 -0500
++++ gpick-0.3/source/Converter.cpp	2023-01-06 22:13:38.768904076 -0600
+@@ -33,8 +33,10 @@
+ #include <vector>
+ #include <iostream>
+ #include <functional>
++extern "C"{
+ #include <lualib.h>
+ #include <lauxlib.h>
++}
+ using namespace std;
+ Converter::Converter(const char *name, const char *label, lua::Ref &&serialize, lua::Ref &&deserialize):
+ 	m_name(name),
+diff -Naur gpick-0.3-old/source/GlobalState.cpp gpick-0.3/source/GlobalState.cpp
+--- gpick-0.3-old/source/GlobalState.cpp	2022-05-08 05:20:36.000000000 -0500
++++ gpick-0.3/source/GlobalState.cpp	2023-01-06 22:13:38.772904075 -0600
+@@ -37,8 +37,10 @@
+ #include <filesystem>
+ #include <stdlib.h>
+ #include <glib/gstdio.h>
++extern "C"{
+ #include <lualib.h>
+ #include <lauxlib.h>
++}
+ #include <fstream>
+ #include <iostream>
+ struct GlobalState::Impl {
+diff -Naur gpick-0.3-old/source/layout/Layout.cpp gpick-0.3/source/layout/Layout.cpp
+--- gpick-0.3-old/source/layout/Layout.cpp	2022-05-08 05:20:36.000000000 -0500
++++ gpick-0.3/source/layout/Layout.cpp	2023-01-06 22:13:38.771904076 -0600
+@@ -20,8 +20,10 @@
+ #include "System.h"
+ #include "../lua/Layout.h"
+ #include <iostream>
++extern "C"{
+ #include <lualib.h>
+ #include <lauxlib.h>
++}
+ using namespace std;
+ namespace layout
+ {
+diff -Naur gpick-0.3-old/source/lua/Color.cpp gpick-0.3/source/lua/Color.cpp
+--- gpick-0.3-old/source/lua/Color.cpp	2022-05-08 05:20:36.000000000 -0500
++++ gpick-0.3/source/lua/Color.cpp	2023-01-06 22:13:38.771904076 -0600
+@@ -18,8 +18,10 @@
+ 
+ #include "Color.h"
+ #include "../Color.h"
++extern "C"{
+ #include <lualib.h>
+ #include <lauxlib.h>
++}
+ namespace lua
+ {
+ static int newColor(lua_State *L)
+diff -Naur gpick-0.3-old/source/lua/ColorObject.cpp gpick-0.3/source/lua/ColorObject.cpp
+--- gpick-0.3-old/source/lua/ColorObject.cpp	2022-05-08 05:20:36.000000000 -0500
++++ gpick-0.3/source/lua/ColorObject.cpp	2023-01-06 22:13:38.771904076 -0600
+@@ -20,8 +20,10 @@
+ #include "Color.h"
+ #include "Script.h"
+ #include "../ColorObject.h"
++extern "C"{
+ #include <lualib.h>
+ #include <lauxlib.h>
++}
+ namespace lua
+ {
+ static int newColorObject(lua_State *L)
+diff -Naur gpick-0.3-old/source/lua/DynvSystem.cpp gpick-0.3/source/lua/DynvSystem.cpp
+--- gpick-0.3-old/source/lua/DynvSystem.cpp	2022-05-08 05:20:36.000000000 -0500
++++ gpick-0.3/source/lua/DynvSystem.cpp	2023-01-06 22:13:38.771904076 -0600
+@@ -17,8 +17,10 @@
+  */
+ 
+ #include "DynvSystem.h"
++extern "C"{
+ #include <lualib.h>
+ #include <lauxlib.h>
++}
+ namespace lua {
+ dynv::Ref checkDynvSystem(lua_State *L, int index) {
+ 	void *ud = luaL_checkudata(L, index, "dynvSystem");
+diff -Naur gpick-0.3-old/source/lua/Extensions.cpp gpick-0.3/source/lua/Extensions.cpp
+--- gpick-0.3-old/source/lua/Extensions.cpp	2022-05-08 05:20:36.000000000 -0500
++++ gpick-0.3/source/lua/Extensions.cpp	2023-01-06 22:13:38.771904076 -0600
+@@ -31,8 +31,10 @@
+ #include "../Converters.h"
+ #include "../Converter.h"
+ #include "version/Version.h"
++extern "C"{
+ #include <lualib.h>
+ #include <lauxlib.h>
++}
+ namespace lua
+ {
+ static void checkArgumentIsFunctionOrNil(lua_State *L, int index)
+diff -Naur gpick-0.3-old/source/lua/GlobalState.cpp gpick-0.3/source/lua/GlobalState.cpp
+--- gpick-0.3-old/source/lua/GlobalState.cpp	2022-05-08 05:20:36.000000000 -0500
++++ gpick-0.3/source/lua/GlobalState.cpp	2023-01-06 22:13:38.771904076 -0600
+@@ -18,8 +18,10 @@
+ 
+ #include "GlobalState.h"
+ #include "../GlobalState.h"
++extern "C"{
+ #include <lualib.h>
+ #include <lauxlib.h>
++}
+ namespace lua
+ {
+ void setGlobalState(lua_State *L, GlobalState &global_state)
+diff -Naur gpick-0.3-old/source/lua/I18N.cpp gpick-0.3/source/lua/I18N.cpp
+--- gpick-0.3-old/source/lua/I18N.cpp	2022-05-08 05:20:36.000000000 -0500
++++ gpick-0.3/source/lua/I18N.cpp	2023-01-06 22:13:38.771904076 -0600
+@@ -18,8 +18,10 @@
+ 
+ #include "I18N.h"
+ #include "../I18N.h"
++extern "C"{
+ #include <lualib.h>
+ #include <lauxlib.h>
++}
+ namespace lua
+ {
+ int getText(lua_State *L)
+diff -Naur gpick-0.3-old/source/lua/Layout.cpp gpick-0.3/source/lua/Layout.cpp
+--- gpick-0.3-old/source/lua/Layout.cpp	2022-05-08 05:20:36.000000000 -0500
++++ gpick-0.3/source/lua/Layout.cpp	2023-01-06 22:13:38.770904076 -0600
+@@ -23,8 +23,10 @@
+ #include "../layout/Box.h"
+ #include "../layout/System.h"
+ #include "../layout/Layout.h"
++extern "C"{
+ #include <lualib.h>
+ #include <lauxlib.h>
++}
+ #include <typeinfo>
+ #include <iostream>
+ using namespace std;
+diff -Naur gpick-0.3-old/source/lua/Ref.cpp gpick-0.3/source/lua/Ref.cpp
+--- gpick-0.3-old/source/lua/Ref.cpp	2022-05-08 05:20:36.000000000 -0500
++++ gpick-0.3/source/lua/Ref.cpp	2023-01-06 22:13:38.770904076 -0600
+@@ -17,8 +17,10 @@
+  */
+ 
+ #include "Ref.h"
++extern "C"{
+ #include <lualib.h>
+ #include <lauxlib.h>
++}
+ namespace lua
+ {
+ Ref::Ref():
+diff -Naur gpick-0.3-old/source/lua/Script.cpp gpick-0.3/source/lua/Script.cpp
+--- gpick-0.3-old/source/lua/Script.cpp	2022-05-08 05:20:36.000000000 -0500
++++ gpick-0.3/source/lua/Script.cpp	2023-01-06 22:13:38.771904076 -0600
+@@ -18,8 +18,10 @@
+ 
+ #include "Script.h"
+ #include <sstream>
++extern "C"{
+ #include <lualib.h>
+ #include <lauxlib.h>
++}
+ #include <iostream>
+ using namespace std;
+ namespace lua
+diff -Naur gpick-0.3-old/source/test/Script.cpp gpick-0.3/source/test/Script.cpp
+--- gpick-0.3-old/source/test/Script.cpp	2022-05-08 05:20:36.000000000 -0500
++++ gpick-0.3/source/test/Script.cpp	2023-01-06 22:13:38.769904076 -0600
+@@ -19,8 +19,10 @@
+ #include <boost/test/unit_test.hpp>
+ #include "lua/Script.h"
+ #include "common/Scoped.h"
++extern "C"{
+ #include <lualib.h>
+ #include <lauxlib.h>
++}
+ using namespace lua;
+ static int test(lua_State *L) {
+ 	lua_pushstring(L, "ok");
+diff -Naur gpick-0.3-old/source/uiDialogOptions.cpp gpick-0.3/source/uiDialogOptions.cpp
+--- gpick-0.3-old/source/uiDialogOptions.cpp	2022-05-08 05:20:36.000000000 -0500
++++ gpick-0.3/source/uiDialogOptions.cpp	2023-01-06 22:13:38.776904075 -0600
+@@ -28,8 +28,10 @@
+ #include "lua/Callbacks.h"
+ #include <string>
+ #include <iostream>
++extern "C"{
+ #include <lualib.h>
+ #include <lauxlib.h>
++}
+ using namespace std;
+ static const struct{
+ 	const char *label;

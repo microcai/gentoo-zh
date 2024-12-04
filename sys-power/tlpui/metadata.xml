@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>123485k</name>
+		<email>1758961307@qq.com</email>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">d4nj1/TLPUI</remote-id>
+	</upstream>
+	<longdescription>
+		The Python scripts in this project generate a GTK-UI 
+		to change TLP configuration files easily. 
+		It has the aim to protect users from setting bad 
+		configuration and to deliver a basic overview of all 
+		the valid configuration values.
+	</longdescription>
+</pkgmetadata>

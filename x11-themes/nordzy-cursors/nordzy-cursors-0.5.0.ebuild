@@ -7,12 +7,11 @@ DESCRIPTION="Cursor theme using the Nord color palette and based on Vimix and cz
 HOMEPAGE="https://github.com/alvatip/Nordzy-cursors"
 SRC_URI="https://github.com/alvatip/Nordzy-cursors/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
+S="${WORKDIR}/Nordzy-cursors-${PV}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nord-white"
-
-S="${WORKDIR}/Nordzy-cursors-${PV}"
 
 src_configure() { :; }
 

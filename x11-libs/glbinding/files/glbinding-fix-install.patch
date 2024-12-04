@@ -1,0 +1,43 @@
+From acd1a5a8052fce1ed57cceb1d63a758414a0573a Mon Sep 17 00:00:00 2001
+From: microcai <microcaicai@gmail.com>
+Date: Fri, 18 Nov 2022 12:57:17 +0800
+Subject: [PATCH] fix install
+
+---
+ CMakeLists.txt | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index ef93783f..573805ad 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -162,6 +162,8 @@ if("${CMAKE_INSTALL_PREFIX}" STREQUAL "/usr" OR "${CMAKE_INSTALL_PREFIX}" STREQU
+     set(SYSTEM_DIR_INSTALL TRUE)
+ endif()
+ 
++option(INSTALL_LIB              "install lib"                 "lib")
++option(INSTALL_SHARED              "install lib"                 "lib")
+ # Installation paths
+ if(UNIX AND SYSTEM_DIR_INSTALL)
+     # Install into the system (/usr/bin or /usr/local/bin)
+@@ -170,8 +172,6 @@ if(UNIX AND SYSTEM_DIR_INSTALL)
+     set(INSTALL_EXAMPLES  "share/${project}")       # /usr/[local]/share/<project>
+     set(INSTALL_DATA      "share/${project}")       # /usr/[local]/share/<project>
+     set(INSTALL_BIN       "bin")                    # /usr/[local]/bin
+-    set(INSTALL_SHARED    "lib")                    # /usr/[local]/lib
+-    set(INSTALL_LIB       "lib")                    # /usr/[local]/lib
+     set(INSTALL_INCLUDE   "include")                # /usr/[local]/include
+     set(INSTALL_DOC       "share/doc/${project}")   # /usr/[local]/share/doc/<project>
+     set(INSTALL_SHORTCUTS "share/applications")     # /usr/[local]/share/applications
+@@ -184,8 +184,6 @@ else()
+     set(INSTALL_EXAMPLES  ".")                      # ./
+     set(INSTALL_DATA      ".")                      # ./
+     set(INSTALL_BIN       ".")                      # ./
+-    set(INSTALL_SHARED    "lib")                    # ./lib
+-    set(INSTALL_LIB       "lib")                    # ./lib
+     set(INSTALL_INCLUDE   "include")                # ./include
+     set(INSTALL_DOC       "doc")                    # ./doc
+     set(INSTALL_SHORTCUTS "misc")                   # ./misc
+-- 
+2.38.1
+

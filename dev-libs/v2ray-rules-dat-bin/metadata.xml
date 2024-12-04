@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <name>ston</name>
+    <email>ston.jia@qq.com</email>
+  </maintainer>
+  <use>
+    <flag name="geosite">Install geosite.dat</flag>
+    <flag name="geoip">Install geoip.dat</flag>
+  </use>
+  <upstream>
+    <remote-id type="github">
+    Loyalsoldier/v2ray-rules-dat</remote-id>
+  </upstream>
+</pkgmetadata>

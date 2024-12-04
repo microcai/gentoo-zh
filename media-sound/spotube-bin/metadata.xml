@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>AmberIsMyShiba</name>
+		<email>tefiszx@gmail.com</email>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">KRTirtho/spotube</remote-id>
+	</upstream>
+</pkgmetadata>

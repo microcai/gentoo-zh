@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>xz@xzos.net</email>
+		<name>xz-dev</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">kkinnear/zprint</remote-id>
+	</upstream>
+	<longdescription>
+		Executables, uberjar, and library to beautifully format Clojure and Clojurescript source code and s-expressions.
+		zprint is a library and command line tool providing a variety of pretty printing capabilities for both Clojure code and Clojure/EDN structures. It can meet almost anyone's needs. As such, it supports a number of major source code formatting approaches.
+	</longdescription>
+</pkgmetadata>

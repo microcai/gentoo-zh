@@ -7,10 +7,9 @@ DESCRIPTION="A FUSE and libmtp based filesystem for accessing MTP devices."
 HOMEPAGE="http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux"
 SRC_URI="https://github.com/JasonFerrara/jmtpfs/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="GPL3"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
 DEPEND="sys-fs/fuse
 	media-libs/libmtp"

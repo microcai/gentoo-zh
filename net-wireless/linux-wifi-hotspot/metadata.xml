@@ -4,4 +4,7 @@
 	<maintainer type="person">
 		<email>ruixirebirth@gmail.com</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">lakinduakash/linux-wifi-hotspot</remote-id>
+	</upstream>
 </pkgmetadata>

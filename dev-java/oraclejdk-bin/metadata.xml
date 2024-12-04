@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<longdescription>The JDK is a development environment for building applications, applets, and components using the Java programming language.It includes tools useful for developing and testing programs written in the Java programming language and running on the Java platform.</longdescription>
+	<maintainer type="project">
+		<email>java@gentoo.org</email>
+	</maintainer>
+	<maintainer type="person">
+		<email>nurali258@foxmail.com</email>
+		<name>Nurali</name>
+	</maintainer>
+	<use>
+		<flag name="headless-awt">Don't install the X backend for AWT, needed by some GUIs (used to be X flag)</flag>
+		<flag name="source">Install JVM sources</flag>
+		<flag name="javafx">Install JavaFX libraries</flag>
+		<flag name="commercial">Install features requiring a commercial license for production use</flag>
+	</use>
+</pkgmetadata>

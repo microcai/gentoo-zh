@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>1758961307@qq.com</email>
+		<name>123485k</name>
+	</maintainer>
+	<longdescription lang="en">
+		Simple and efficient PCB design tools from China, free forever
+		Friendly, easy to use, powerful, multi-platform synchronization
+		More than one million free libraries, 
+		allowing you to focus more on design
+		The next generation of free domestic circuit design tools
+	</longdescription>
+	<longdescription lang="zh">
+		简单、高效的国产PCB设计工具，永久免费
+		友好，易用，强大，多平台同步
+		超过百万的免费库，让你更专注于设计
+		下一代免费国产电路设计工具
+	</longdescription>
+</pkgmetadata>

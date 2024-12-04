@@ -1,0 +1,18 @@
+[Unit]
+Description=mihomo Daemon, Another Clash Kernel.
+After=network.target NetworkManager.service systemd-networkd.service iwd.service
+
+[Service]
+Type=simple
+User=mihomo
+Group=mihomo
+LimitNPROC=500
+LimitNOFILE=1000000
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE
+Restart=always
+ExecStartPre=/usr/bin/sleep 1s
+ExecStart=/usr/bin/mihomo -d /etc/mihomo
+
+[Install]
+WantedBy=multi-user.target

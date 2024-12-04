@@ -8,4 +8,7 @@
 	<longdescription>
 		mdp - A command-line based markdown presentation tool
 	</longdescription>
+	<upstream>
+		<remote-id type="github">visit1985/mdp</remote-id>
+	</upstream>
 </pkgmetadata>

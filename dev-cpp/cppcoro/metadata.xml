@@ -8,4 +8,7 @@
 	<use>
 		<flag name="shared">Build shared library instead of static library.</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">Garcia6l20/cppcoro</remote-id>
+	</upstream>
 </pkgmetadata>

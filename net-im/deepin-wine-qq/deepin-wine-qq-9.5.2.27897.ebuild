@@ -24,7 +24,7 @@ SRC_URI="
 LICENSE="Tencent"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+RESTRICT="mirror"
 QA_PREBUILT="*"
 
 RDEPEND="

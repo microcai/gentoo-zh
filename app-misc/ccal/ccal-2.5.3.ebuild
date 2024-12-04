@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="A simple command line calendar for Chinese lunar"
 HOMEPAGE="http://ccal.chinesebay.com/ccal/ccal.htm"
@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="amd64 ~arm ~arm64 ~mips x86"
 IUSE="pdf"
 SRC_URI="http://ccal.chinesebay.com/${PN}/${P}.tar.gz"
-RESTRICT="mirror"
 
 RDEPEND="
 	pdf? ( app-text/ghostscript-gpl )"

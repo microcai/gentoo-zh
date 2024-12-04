@@ -1,9 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
-
-inherit eutils toolchain-funcs
+EAPI=8
 
 DESCRIPTION="Chinese Lunar Calendar conversion utility"
 HOMEPAGE="https://packages.debian.org/unstable/utils/lunar"
@@ -13,7 +11,6 @@ SRC_URI="mirror://debian/pool/main/l/${PN}/${PN}_${PV}.orig.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
 S="${WORKDIR}/${PN}"
 
@@ -31,8 +28,8 @@ PATCHES=(
 )
 
 src_install() {
-	dobin lunar || die "dobin failed"
-	doman lunar.1 || die "doman failed"
+	dobin lunar
+	doman lunar.1
 	insinto /usr/share/lunar
-	doins lunar.bitmap || die "doins failed"
+	doins lunar.bitmap
 }

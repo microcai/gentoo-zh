@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>douglarek@gmail.com</email>
+		<name>Leo Douglas</name>
+	</maintainer>
+	<use>
+		<flag name="fcitx">Enable support for <pkg>app-i18n/fcitx</pkg></flag>
+		<flag name="ibus">Enable support for <pkg>app-i18n/ibus</pkg></flag>
+	</use>
+</pkgmetadata>

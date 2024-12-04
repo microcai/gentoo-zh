@@ -1,0 +1,14 @@
+#!/sbin/openrc-run
+# Copyright 1999-2022 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+name="mosdns-cn"
+description="A DNS forwarder"
+command="/usr/bin/mosdns-cn"
+command_args="${MOSDNS_CN_OPTS}"
+pidfile="/run/${RC_SVCNAME}.pid"
+command_background="yes"
+
+depend() {
+	need net
+}

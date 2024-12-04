@@ -1,0 +1,46 @@
+From 2f1d1f27d3b38a78c747a2f1e056c54657e9c723 Mon Sep 17 00:00:00 2001
+From: Puqns67 <me@puqns67.icu>
+Date: Sun, 3 Dec 2023 17:17:25 +0800
+Subject: [PATCH 1/3] build: remove update support for this build
+
+---
+ main.go | 9 ---------
+ 1 file changed, 9 deletions(-)
+
+diff --git a/main.go b/main.go
+index b3fde96..153551e 100644
+--- a/main.go
++++ b/main.go
+@@ -18,7 +18,6 @@ import (
+ 	"github.com/jeessy2/ddns-go/v6/config"
+ 	"github.com/jeessy2/ddns-go/v6/dns"
+ 	"github.com/jeessy2/ddns-go/v6/util"
+-	"github.com/jeessy2/ddns-go/v6/util/update"
+ 	"github.com/jeessy2/ddns-go/v6/web"
+ 	"github.com/kardianos/service"
+ )
+@@ -27,9 +26,6 @@ import (
+ // ddns-go version
+ var versionFlag = flag.Bool("v", false, "ddns-go version")
+ 
+-// 更新 ddns-go
+-var updateFlag = flag.Bool("u", false, "Upgrade ddns-go to the latest version")
+-
+ // 监听地址
+ var listen = flag.String("l", ":9876", "Listen address")
+ 
+@@ -72,11 +68,6 @@ func main() {
+ 		fmt.Println(version)
+ 		return
+ 	}
+-	if *updateFlag {
+-		update.Self(version)
+-		return
+-	}
+-
+ 	// 安卓 go/src/time/zoneinfo_android.go 固定localLoc 为 UTC
+ 	if runtime.GOOS == "android" {
+ 		util.FixTimezone()
+-- 
+2.47.0
+

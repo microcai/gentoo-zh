@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>diceea@foxmail.com</email>
+		<name>Goldsrc233</name>
+	</maintainer>
+	<upstream>
+		<changelog>https://github.com/nillerusr/source-engine/releases</changelog>
+		<bugs-to>https://github.com/nillerusr/source-engine/issues</bugs-to>
+		<remote-id type="github">nillerusr/source-engine</remote-id>
+	</upstream>
+</pkgmetadata>

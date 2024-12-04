@@ -6,7 +6,7 @@
 		<name>liuyujielol</name>
 	</maintainer>
 	<use>
-		<flag name="lyrics">Use <pkg>media-plugins/osdlyrics</pkg> to display lyrics</flag>
+		<!--<flag name="lyrics">Use <pkg>media-plugins/osdlyrics</pkg> to display lyrics</flag>-->
 	</use>
 	<upstream>
 		<remote-id type="github">gmg137/netease-cloud-music-gtk</remote-id>

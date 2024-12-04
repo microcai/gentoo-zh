@@ -31,14 +31,14 @@ https://github.com/microcai/gentoo-zh/blob/deps-table/relation.md
 # package review
 
 * I trust contributors that have commit rights, therefore commitors
-  should think carfully before committing.
+  should think carefully before committing.
 
 * If you want to discuss your commit/patch, push to *another branch* or send a
   Pull Request and discuss in the GitHub Issue, mailing list, or talk to the maintainer
   directly.
 
 * If you are sending a new pull request, make sure it contains all necessary commits
-  for a single contribution, e.g. don't send two pull requsets for an ebuild and its
+  for a single contribution, e.g. don't send two pull requests for an ebuild and its
   `Manifest`.
 
 * Every ebuild change should not produce compile error before
@@ -55,4 +55,23 @@ https://github.com/microcai/gentoo-zh/blob/deps-table/relation.md
 
   But please don't abuse this exception. It must be a pure font package.
 
-  # See wiki for some package not working
+# Distfiles mirror
+
+We provide a distfiles mirror that caches the distfiles in gentoo-zh.
+
+Our server, hosted on Finland:
+```
+GENTOO_MIRRORS="${GENTOO_MIRRORS} https://distfiles.gentoocn.org"
+```
+
+Chongqing University mirror:
+```
+GENTOO_MIRRORS="${GENTOO_MIRRORS} https://mirrors.cqu.edu.cn/gentoo-zh"
+```
+
+Nanjing University mirror:
+```
+GENTOO_MIRRORS="${GENTOO_MIRRORS} https://mirrors.nju.edu.cn/gentoo-zh"
+```
+
+# See wiki for some package not working

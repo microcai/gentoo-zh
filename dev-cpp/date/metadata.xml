@@ -5,4 +5,7 @@
 		<email>chn@chn.moe</email>
 		<name>Haonan Chen</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">HowardHinnant/date</remote-id>
+	</upstream>
 </pkgmetadata>

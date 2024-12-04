@@ -8,4 +8,7 @@
 	<longdescription>
 		Converts HEIF images created on iOS 11 devices as fast as humanly possible.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">monostream/tifig</remote-id>
+	</upstream>
 </pkgmetadata>

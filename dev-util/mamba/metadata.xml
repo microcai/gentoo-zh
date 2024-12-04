@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+<email>OriPoin@outlook.com</email>
+<name>Yachen Wang</name>
+</maintainer>
+<upstream>
+<remote-id type="github">mamba-org/mamba</remote-id>
+</upstream>
+<use>
+<flag name="micromamba">build micromamba</flag>
+</use>
+</pkgmetadata>

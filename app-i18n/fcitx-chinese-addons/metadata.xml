@@ -4,9 +4,18 @@
 	<maintainer type="person">
 		<email>w12101111@gmail.com</email>
 	</maintainer>
+	<maintainer type="person">
+		<email>tanekliang@gmail.com</email>
+		<name>Yongxiang Liang</name>
+	</maintainer>
 	<use>
 		<flag name="opencc">Enable support for conversion between Traditional and Simplified Chinese</flag>
-		<flag name="gui">Enable configure gui</flag>
-		<flag name="browser">Enable built-in browser using <pkg>dev-qt/qtwebengine</pkg></flag>
+		<flag name="qt5">Enable configure qt5</flag>
+		<flag name="webengine">Enable built-in browser using <pkg>dev-qt/qtwebengine</pkg></flag>
+		<flag name="cloudpinyin">Build cloud pinyin addon</flag>
+		<flag name="coverage">Build the project with gcov support (Need USE=test)</flag>
 	</use>
+<upstream>
+<remote-id type="github">fcitx/fcitx5-chinese-addons</remote-id>
+</upstream>
 </pkgmetadata>

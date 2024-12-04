@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=8
 
 inherit git-r3
 
@@ -9,20 +9,16 @@ DESCRIPTION="A fancy i3lock"
 HOMEPAGE="https://github.com/meskarune/i3lock-fancy"
 EGIT_REPO_URI="https://github.com/meskarune/i3lock-fancy.git"
 LICENSE="BSD"
-SRC_URI=""
-KEYWORDS=""
 SLOT="0"
 
 RDEPEND="app-shells/bash:0
 		media-gfx/imagemagick
-		virtual/awk
+		app-alternatives/awk
 		x11-misc/wmctrl
 		media-gfx/scrot
 		x11-misc/i3lock-color"
 
 DEPEND="${RDEPEND}"
-
-INST_DIR="${D}/usr/share/i3lock-fancy"
 
 src_configure() {
 	# Fix script requiring icons to be in same dir
@@ -31,8 +27,8 @@ src_configure() {
 }
 
 src_install() {
-	mkdir -p "$INST_DIR" "${D%/*}/usr/bin/"
-	cp lock.sh "${D}/usr/bin/lock"
-	chmod +x "${D}/usr/bin/lock"
-	cp -r icons "${INST_DIR}"
+	newbin lock.sh lock
+
+	insinto "/usr/share/i3lock-fancy"
+	doins -r icons
 }

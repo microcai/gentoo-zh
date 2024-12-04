@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<!-- maintainer-needed -->
+	<longdescription lang="en">
+		WeCom is a communication platform for enterprises that includes
+		convenient communication and office automation tools. Similar to Weixin
+		and WeChat, it offers smooth communication experience, as well as
+		various OA applications. In addition, WeCom is integrated with Weixin,
+		providing unmatched connectivy that facilitates smart management, smart
+		ecosystem and smart services for enterprises.
+	</longdescription>
+	<longdescription lang="zh">
+		企业微信，是腾讯微信团队为企业打造的通信与办公工具，具有与微信一致的
+		沟通体验、丰富的OA应用及连接微信的能力，可帮助企业以连接为基础，实现
+		智慧管理、智慧生态、智慧服务。
+	</longdescription>
+</pkgmetadata>

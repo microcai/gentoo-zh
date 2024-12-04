@@ -5,7 +5,20 @@
 		<name>lyraile</name>
 		<email>iamoatiz@gmail.com</email>
 	</maintainer>
-	<longdescription>
+	<longdescription lang="en">
 		Deepin Wine udis86.
+		Disassembler library for x86 (32-bit shared library).
+		Udis86 is an easy-to-use minimalistic disassembler library for the x86
+		and x86-64 instruction set architectures. The primary intent of the
+		design and development of udis86 is to aid software development projects
+		that entail binary code analysis.
+	</longdescription>
+	<longdescription lang="zh">
+		Deepin Wine udis86.
+		x86 的反汇编程序库（32 位共享库）。
+		udis86 是一个易于使用的简约 x86 和 x86-64 指令集架构的反汇编程序库。
+		udis86 设计和开发的主要目的是帮助需要二进制代码分析的软件开发项目。
+		后续最好替换成 https://sourceforge.net/projects/udis86
+		此包作为兼容性的考虑留着。
 	</longdescription>
 </pkgmetadata>

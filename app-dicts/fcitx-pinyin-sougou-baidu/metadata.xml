@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>blackteahamburger</name>
+		<email>blackteahamburger@outlook.com</email>
+	</maintainer>
+	<use>
+		<flag name="fcitx">Install Fcitx 5 dictionary</flag>
+		<flag name="rime">Install Rime dictionary</flag>
+		<flag name="sougou">Install Sougou dictionary</flag>
+		<flag name="baidu">Install Baidu dictionary</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">blackteahamburger/fcitx5-pinyin-sougou-baidu</remote-id>
+	</upstream>
+</pkgmetadata>

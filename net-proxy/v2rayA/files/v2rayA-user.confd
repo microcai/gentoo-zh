@@ -1,4 +1,4 @@
-# /etc/conf.d/v2raya-user: config file for /etc/init.d/v2raya-user.<user> and /lib/systemd/system/v2raya@<user>.service
+# /etc/conf.d/v2raya-user: config file for /etc/init.d/v2raya-user.<user>
 #
 # If you want to pass any options while running the v2raya daemon, you can do so here by setting the ${V2RAYA_OPT} variable.
 # e.g.: V2RAYA_OPTS="--address 0.0.0.0:2017 --v2ray-bin /usr/bin/v2ray --config=/home/<user>/.config/v2raya"

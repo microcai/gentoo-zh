@@ -8,15 +8,15 @@ HOMEPAGE="https://github.com/lakinduakash/linux-wifi-hotspot"
 SLOT="0"
 # inherit toolchain-funcs eutils
 
-DEPEND="media-gfx/qrencode
-        net-wireless/iw
-	    net-wireless/hostapd
-       "
+DEPEND="
+	media-gfx/qrencode
+	net-wireless/iw
+	net-wireless/hostapd
+"
 RDEPEND="${DEPEND}"
 if [ "$PV" == "9999" ]; then
-    inherit git-r3
+	inherit git-r3
 	EGIT_REPO_URI="https://github.com/lakinduakash/linux-wifi-hotspot.git"
-	KEYWORDS=""
 else
 	SRC_URI="https://github.com/lakinduakash/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"

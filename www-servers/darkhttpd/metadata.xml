@@ -38,4 +38,7 @@
 
 		Only serves static content - no CGI.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">emikulic/darkhttpd</remote-id>
+	</upstream>
 </pkgmetadata>

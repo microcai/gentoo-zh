@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<stabilize-allarches/>
+	<upstream>
+		<remote-id type="github">lxgw/LxgwNeoZhiSong</remote-id>
+	</upstream>
+	<longdescription lang="en">
+		This is a Chinese open source font based on IPAmj Ming Dynasty. It is an
+		attempt to transform Japanese writing fonts into mainland Chinese
+		standard writing.
+		This font is the sister font of "Xiawu Xinxihei". It attempts to
+		transform it into the standard font of mainland China based on the
+		original font of "IPAmj Ming Dynasty". In addition, the Greek letters
+		and Cyrillic letters have been redone, and the style is basically
+		consistent with the Latin letters of the original font, which is more
+		suitable for the typesetting of modern Greek and Cyrillic; new display
+		support for Vietnamese Latin characters has been added. In terms of
+		symbols, it supports special symbols such as I Ching Bagua and
+		Sixty-four Hexagram symbols, Taixuan Jing Eighty-one Hexagram symbols,
+		Mahjong symbols, Chinese chess symbols, arithmetic numbers, and
+		"正" character counting.
+	</longdescription>
+	<longdescription lang="zh">
+		这是一款基于 IPAmj明朝 的中文开源字体，是将日本写法的字体改造成中国大陆
+		规范写法的尝试。
+		本字体是「霞鹜新晰黑」的姊妹字体，尝试在「IPAmj明朝」原有字形的基础上，
+		将其改造成中国大陆规范字形。除此之外，重做了希腊字母和西里尔字母，与
+		原字体拉丁字母部分风格基本一致，更适合现代希腊文及西里尔文的排版；
+		新增对越南语拉丁字的显示支持。符号方面，支持易经八卦和六十四卦符号、
+		太玄经八十一卦符号、麻将符号、中国象棋符号、算筹数字、「正」字计数等
+		特殊符号。
+	</longdescription>
+</pkgmetadata>

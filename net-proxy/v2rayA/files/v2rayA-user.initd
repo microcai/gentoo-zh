@@ -1,5 +1,5 @@
 #!/sbin/openrc-run
-# Copyright 2021 Gentoo Authors
+# Copyright 2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 USER="${RC_SVCNAME##*.}"
@@ -8,12 +8,14 @@ name="v2rayA for ${USER}"
 description="A Linux web GUI client of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel"
 command="/usr/bin/v2raya"
 command_user="${USER}"
-command_args="--lite ${V2RAYA_OPTS}"
+command_args="--lite --log-file ${HOME}/.config/v2raya/v2raya.log ${V2RAYA_OPTS}"
+error_log="${HOME}/.config/v2raya/error.log"
 pidfile="/run/${RC_SVCNAME}.pid"
 command_background="yes"
 
 depend() {
 	need net
+	after net
 }
 
 start_pre() {

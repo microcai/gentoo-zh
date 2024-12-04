@@ -8,8 +8,6 @@ inherit elisp-common libtool multilib-minimal verify-sig
 
 MY_P=libidn-${PV}
 
-RESTRICT="mirror"
-
 DESCRIPTION="Internationalized Domain Names (IDN) implementation"
 HOMEPAGE="https://www.gnu.org/software/libidn/"
 SRC_URI="mirror://gnu/libidn/${MY_P}.tar.gz
@@ -80,4 +78,3 @@ multilib_src_install_all() {
 	rm -rf ${ED}/usr/share
 	rm -rf ${ED}/usr/bin
 }
-

@@ -6,12 +6,12 @@
 		<name>Copri</name>
 	</maintainer>
 	<longdescription lang="en">
-	MongoDB (from "humongous") is a scalable, high-performance, open source,
-	schema-free, document-oriented database. Written in C++, MongoDB features:
+		MongoDB (from "humongous") is a scalable, high-performance, open source,
+		schema-free, document-oriented database. Written in C++, MongoDB features:
 
-	MongoDB bridges the gap between key-value stores (which are fast and highly
-	scalable) and traditional RDBMS systems (which provide structured schemas
-	and powerful queries).
+		MongoDB bridges the gap between key-value stores (which are fast and highly
+		scalable) and traditional RDBMS systems (which provide structured schemas
+		and powerful queries).
 	</longdescription>
 	<use>
 		<flag name="lto">Adds support for link time optimization</flag>
@@ -28,4 +28,7 @@
 		<flag name="experimental-runtime-hardening">Enable experimental runtime hardenings.</flag>
 		<flag name="experimental-optimization">Enable experimental optimizations, exclude sandybridge.</flag>
 	</use>	
+	<upstream>
+		<remote-id type="github">mongodb/mongo</remote-id>
+	</upstream>
 </pkgmetadata>

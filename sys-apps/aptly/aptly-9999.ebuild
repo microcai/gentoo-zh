@@ -1,7 +1,7 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 EGIT_REPO_URI="https://github.com/aptly-dev/${PN}.git"
 
@@ -9,15 +9,15 @@ inherit bash-completion-r1 git-r3 go-module systemd
 
 DESCRIPTION="A swiss army knife for Debian repository management"
 HOMEPAGE="https://github.com/aptly-dev/aptly"
-SRC_URI=""
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
-IUSE=""
 RESTRICT="test" # fails
 
-RDEPEND="acct-user/aptly"
+RDEPEND="
+	acct-group/aptly
+	acct-user/aptly
+"
 
 src_unpack() {
 	git-r3_src_unpack
@@ -25,11 +25,11 @@ src_unpack() {
 }
 
 src_compile() {
-	go build -o cmd/aptly -ldflags "-X main.Version=${PV}" || die "build failed"
+	ego build -o cmd/aptly -ldflags "-X main.Version=${PV}"
 }
 
 src_test() {
-	go test -work ./... || die "test failed"
+	ego test -work ./...
 }
 
 src_install() {

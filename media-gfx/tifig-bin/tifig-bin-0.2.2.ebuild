@@ -13,7 +13,6 @@ KEYWORDS="amd64"
 
 DEPEND=">=sys-libs/glibc-2.14"
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 S="${WORKDIR}"
 

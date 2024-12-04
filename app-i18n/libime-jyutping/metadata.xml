@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>2073201758GD@gmail.com</email>
+		<name>liuyujielol</name>
+	</maintainer>
+	<maintainer type="person">
+		<email>tanekliang@gmail.com</email>
+		<name>Yongxiang Liang</name>
+	</maintainer>
+	<use>
+		<flag name="engine">Enable input method for fcitx</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">fcitx/libime-jyutping</remote-id>
+	</upstream>
+</pkgmetadata>

@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..11} )
+PYTHON_COMPAT=( python3_{9..11} )
 inherit python-single-r1 unpacker
 
 DESCRIPTION="Deepin Wine Helper"
@@ -15,7 +15,6 @@ SRC_URI="${COMMON_URI}/${PN}/${PN}_${PV}-${PR/r/}_i386.deb"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 RESTRICT="test"
 

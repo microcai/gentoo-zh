@@ -1,0 +1,10 @@
+[Desktop Entry]
+Categories=Development;
+Comment=Clash Verge Rev
+Exec=/opt/clash-verge/bin/clash-verge %u
+StartupWMClass=clash-verge
+Icon=clash-verge
+Name=Clash Verge
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/clash;
