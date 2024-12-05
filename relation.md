@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-12-05 14:01:41 CST)
+(The last generation time: 2024-12-06 00:40:02 CST)
 
 ### Packages
 
@@ -325,7 +325,7 @@
  media-plugins/osdlyrics                    | 0.5.15                                    |            | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
                                             | 9999                                      |            |                                                                                         |
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-plugins/waylyrics                    | 0.3.18                                    |            | https://waylyrics.github.io/waylyrics/waylyrics                                         | Simple On Screen lyrics Display for linux/unix
+ media-plugins/waylyrics                    | 0.3.19                                    |            | https://waylyrics.github.io/waylyrics/waylyrics                                         | Simple On Screen lyrics Display for linux/unix
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/amarok                         | 3.1.0                                     |            | https://apps.kde.org/amarok/                                                            | KDE calculator
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
