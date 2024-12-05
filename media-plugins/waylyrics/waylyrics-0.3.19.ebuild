@@ -15,6 +15,7 @@ CRATES="
 	ansi_term@0.12.1
 	anyhow@1.0.93
 	arrayvec@0.7.6
+	ashpd@0.10.2
 	ashpd@0.9.2
 	assert_float_eq@1.1.3
 	async-broadcast@0.7.1
@@ -135,6 +136,7 @@ CRATES="
 	futures-sink@0.3.31
 	futures-task@0.3.31
 	futures-util@0.3.31
+	futures@0.3.31
 	gdk-pixbuf-sys@0.18.0
 	gdk-pixbuf-sys@0.20.4
 	gdk-pixbuf@0.18.5
@@ -169,8 +171,8 @@ CRATES="
 	gtk-sys@0.18.0
 	gtk3-macros@0.18.0
 	gtk4-macros@0.9.3
-	gtk4-sys@0.9.3
-	gtk4@0.9.3
+	gtk4-sys@0.9.4
+	gtk4@0.9.4
 	gtk@0.18.1
 	h2@0.4.6
 	hashbrown@0.12.3
@@ -181,6 +183,7 @@ CRATES="
 	hermit-abi@0.1.19
 	hermit-abi@0.3.9
 	hermit-abi@0.4.0
+	hex-simd@0.8.0
 	hex@0.4.3
 	http-body-util@0.1.2
 	http-body@1.0.1
@@ -276,6 +279,7 @@ CRATES="
 	optfield@0.3.0
 	option-ext@0.2.0
 	ordered-stream@0.2.0
+	outref@0.5.1
 	overload@0.1.1
 	pango-sys@0.18.0
 	pango-sys@0.20.4
@@ -311,7 +315,7 @@ CRATES="
 	ptr_meta@0.1.4
 	ptr_meta_derive@0.1.4
 	publicsuffix@2.2.3
-	qqmusic-rs@0.2.0
+	qqmusic-rs@0.2.1
 	quick-xml@0.36.2
 	quote@0.3.15
 	quote@1.0.37
@@ -329,7 +333,7 @@ CRATES="
 	regex@1.11.1
 	rend@0.4.2
 	reqwest@0.12.9
-	rfd@0.15.0
+	rfd@0.15.1
 	ring@0.17.8
 	rkyv@0.7.45
 	rkyv_derive@0.7.45
@@ -342,7 +346,7 @@ CRATES="
 	rustls-pemfile@2.2.0
 	rustls-pki-types@1.10.0
 	rustls-webpki@0.102.8
-	rustls@0.23.16
+	rustls@0.23.18
 	rustversion@1.0.18
 	ryu@1.0.18
 	schannel@0.1.26
@@ -352,9 +356,9 @@ CRATES="
 	security-framework-sys@2.12.1
 	security-framework@2.11.1
 	semver@1.0.23
-	serde@1.0.214
-	serde_derive@1.0.214
-	serde_json@1.0.132
+	serde@1.0.215
+	serde_derive@1.0.215
+	serde_json@1.0.133
 	serde_repr@0.1.19
 	serde_spanned@0.6.8
 	serde_urlencoded@0.7.1
@@ -396,9 +400,9 @@ CRATES="
 	tempfile@3.14.0
 	textwrap@0.11.0
 	thiserror-impl@1.0.69
-	thiserror-impl@2.0.2
+	thiserror-impl@2.0.4
 	thiserror@1.0.69
-	thiserror@2.0.2
+	thiserror@2.0.4
 	thread_local@1.1.8
 	time-core@0.1.2
 	time-macros@0.2.18
@@ -410,20 +414,20 @@ CRATES="
 	tokio-native-tls@0.3.1
 	tokio-rustls@0.26.0
 	tokio-util@0.7.12
-	tokio@1.41.1
+	tokio@1.42.0
 	toml@0.8.19
 	toml_datetime@0.6.8
 	toml_edit@0.19.15
 	toml_edit@0.20.7
 	toml_edit@0.22.22
 	tower-service@0.3.3
-	tracing-attributes@0.1.27
-	tracing-core@0.1.32
-	tracing-journald@0.3.0
+	tracing-attributes@0.1.28
+	tracing-core@0.1.33
+	tracing-journald@0.3.1
 	tracing-log@0.2.0
-	tracing-subscriber@0.3.18
-	tracing@0.1.40
-	tray-icon@0.19.1
+	tracing-subscriber@0.3.19
+	tracing@0.1.41
+	tray-icon@0.19.2
 	try-lock@0.2.5
 	typenum@1.17.0
 	uds_windows@1.1.0
@@ -434,7 +438,7 @@ CRATES="
 	unicode-width@0.1.14
 	unicode-xid@0.0.4
 	untrusted@0.9.0
-	url@2.5.3
+	url@2.5.4
 	urlencoding@2.1.3
 	utf16_iter@1.0.5
 	utf8_iter@1.0.4
@@ -444,6 +448,7 @@ CRATES="
 	vec_map@0.8.2
 	version-compare@0.2.0
 	version_check@0.9.5
+	vsimd@0.8.0
 	vswhom-sys@0.1.2
 	vswhom@0.1.0
 	want@0.3.1
@@ -503,8 +508,11 @@ CRATES="
 	yoke-derive@0.7.4
 	yoke@0.7.4
 	zbus@4.4.0
+	zbus@5.1.1
 	zbus_macros@4.4.0
+	zbus_macros@5.1.1
 	zbus_names@3.0.0
+	zbus_names@4.1.0
 	zerocopy-derive@0.7.35
 	zerocopy@0.7.35
 	zerofrom-derive@0.1.4
@@ -513,9 +521,16 @@ CRATES="
 	zerovec-derive@0.10.3
 	zerovec@0.10.4
 	zvariant@4.2.0
+	zvariant@5.1.0
 	zvariant_derive@4.2.0
+	zvariant_derive@5.1.0
 	zvariant_utils@2.1.0
+	zvariant_utils@3.0.2
 "
+
+declare -A GIT_CRATES=(
+	[dark-light]='https://github.com/frewsxcv/rust-dark-light;3eb3e93dd0fa30733c3e93082dd9517fb580ae95;rust-dark-light-%commit%'
+)
 
 PLOCALES="en_US it_IT zh_CN"
 PLOCALE_BACKUP="en_US"
@@ -543,7 +558,7 @@ LICENSE="MIT CC-BY-4.0"
 # Dependent crate licenses
 LICENSE+="
 	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD GPL-3+ ISC MIT
-	MPL-2.0 Unicode-DFS-2016 Unlicense
+	MPL-2.0 Unicode-3.0 Unicode-DFS-2016 Unlicense
 "
 SLOT="0"
 
