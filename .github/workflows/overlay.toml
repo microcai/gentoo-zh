@@ -350,13 +350,8 @@ github_account = "Universebenzene"
 #source = "github"
 #github = "mkorenkov/ipad_charge"
 
-# TODO: tag -devel3 should rename to _pre3
+# live package only
 #["app-shells/blesh"]
-#source = "github"
-#github = "akinomyoga/ble.sh"
-#use_latest_release = true
-#prefix = "v"
-#github_account = "blackteahamburger"
 
 ["app-shells/gitstatus"]
 source = "github"
