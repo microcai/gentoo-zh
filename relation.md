@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-12-07 19:03:58 CST)
+(The last generation time: 2024-12-07 20:14:19 CST)
 
 ### Packages
 
@@ -141,8 +141,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-pda/ipadcharge                         | 9999                                      |            | https://github.com/mkorenkov/ipad_charge                                                | Enables USB charging for Apple devices.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-shells/blesh                           | 0.4.0_pre3                                |            | https://github.com/akinomyoga/ble.sh                                                    | A line editor written in pure Bash with enhanced features
-                                            | 9999                                      |            |                                                                                         |
+ app-shells/blesh                           | 9999                                      |            | https://github.com/akinomyoga/ble.sh                                                    | A line editor written in pure Bash with enhanced features
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-shells/oh-my-bash                      | 9999                                      |            | https://ohmybash.github.io                                                              | An open source, community-driven framework for managing your bash configuration
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
