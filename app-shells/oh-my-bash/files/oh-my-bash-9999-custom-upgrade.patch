@@ -1,6 +1,6 @@
 --- a/tools/upgrade.sh
 +++ b/tools/upgrade.sh
-@@ -25,18 +25,22 @@
+@@ -25,18 +25,10 @@
  
    printf '%s\n' "${BLUE}Updating Oh My Bash${NORMAL}"
  
@@ -12,24 +12,12 @@
 -    # In case it enters the rebasing mode
 -    printf '%s\n' "oh-my-bash: running 'git rebase --abort'..."
 -    command git --git-dir="$OSH/.git" --work-tree="$OSH" rebase --abort
-+  # Switch for the use of "sudo"
-+  local _omb_tmp_sudo=
-+  if [[ ${OMB_UPGRADE_SUDO+set} ]]; then
-+    _omb_tmp_sudo=${OMB_UPGRADE_SUDO:+OMB_UPGRADE_SUDO }
-+  elif [[ ${OMB_USE_SUDO-true} == true ]]; then
-+    if ((EUID != 0)) && _omb_util_binary_exists sudo; then
-+      _omb_tmp_sudo='sudo '
-+    fi
-+  fi
-+
-+  if _omb_util_binary_exists smart-live-rebuild; then
-+    ${_omb_tmp_sudo} smart-live-rebuild -f app-shells/oh-my-bash || return 1
-+  else
++  if ! command smart-live-rebuild -f app-shells/oh-my-bash; then
      printf "${RED}%s${NORMAL}\n" \
             'There was an error updating.' \
 -           "If you have uncommited changes in '$BOLD$OSH$NORMAL$RED', please commit, stash or discard them and retry updating." \
 -           "If you have your own local commits in '$BOLD$OSH$NORMAL$RED' that conflict with the upstream changes, please resolve conflicts and merge the upstream manually."
-+           "Please install app-portage/smart-live-rebuild and retry updating."
++           "If app-portage/smart-live-rebuild is not installed, please install and retry updating."
      return 1
    fi
  
