@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-12-07 20:14:19 CST)
+(The last generation time: 2024-12-09 10:24:46 CST)
 
 ### Packages
 
@@ -286,7 +286,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/nerd-fonts                     | 3.3.0                                     |            | https://github.com/ryanoasis/nerd-fonts                                                 | Nerd Fonts is a project that patches developer targeted fonts with glyphs
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/sarasa-gothic                  | 1.0.24                                    |            | https://github.com/be5invis/Sarasa-Gothic                                               | A CJK programming font based on Iosevka and Source Han Sans. (TTC)
+ media-fonts/sarasa-gothic                  | 1.0.25                                    |            | https://github.com/be5invis/Sarasa-Gothic                                               | A CJK programming font based on Iosevka and Source Han Sans. (TTC)
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/sarasa-term-sc-nerd            | 2.3.0                                     |            | https://github.com/laishulu/Sarasa-Term-SC-Nerd                                         | Sarasa Mono SC font patched with Nerd fonts
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
