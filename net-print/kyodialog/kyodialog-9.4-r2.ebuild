@@ -40,9 +40,9 @@ src_install() {
 	exeopts -m0755
 	doexe "${S}"/usr/bin/*
 
-	exeinto /usr/lib
+	exeinto /usr/lib/cups/filter
 	exeopts -m0755
-	doexe "${S}"/usr/lib/*
+	doexe "${S}"/usr/lib/cups/filter/*
 
 	# fix the icon patch
 	sed -i "s/kyocera/kyocera9.4/g" "${$}"/usr/share/applications/kyodialog9.4.desktop
