@@ -58,13 +58,6 @@ gitlab = "archlinux/archlinux-keyring"
 use_max_tag = true
 github_account = "HougeLangley"
 
-["app-crypt/cfssl"]
-source = "github"
-github = "cloudflare/cfssl"
-use_latest_release = true
-prefix = "v"
-github_account = "peeweep"
-
 ["app-dicts/fcitx-pinyin-moegirl"]
 source = "github"
 github = "outloudvi/mw2fcitx"
