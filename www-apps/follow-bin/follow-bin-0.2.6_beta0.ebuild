@@ -54,7 +54,7 @@ RDEPEND="
 	sys-apps/systemd
 	sys-apps/util-linux
 	sys-devel/gcc
-	sys-devel/llvm:18
+	llvm-core/llvm:18
 	sys-libs/glibc
 	sys-libs/libcap
 	sys-libs/ncurses
