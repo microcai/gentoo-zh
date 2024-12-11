@@ -24,7 +24,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
-	sys-devel/clang
+	llvm-core/clang
 	app-arch/unzip
 	>=dev-lang/go-1.22
 "

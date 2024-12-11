@@ -25,7 +25,7 @@ DEPEND="
 	app-alternatives/v2ray-geosite
 "
 RDEPEND="$DEPEND"
-BDEPEND="sys-devel/clang"
+BDEPEND="llvm-core/clang"
 
 pkg_pretend() {
 	local CONFIG_CHECK="

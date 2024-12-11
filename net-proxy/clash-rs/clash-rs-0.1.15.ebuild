@@ -681,7 +681,7 @@ IUSE="doc +lto"
 REQUIRED_UES="debug? ( !lto )"
 
 BDEPEND="
-	sys-devel/llvm:*
+	llvm-core/llvm:*
 	dev-build/cmake
 "
 
