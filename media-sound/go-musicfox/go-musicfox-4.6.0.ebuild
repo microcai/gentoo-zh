@@ -23,10 +23,10 @@ RDEPEND="${DEPEND}"
 BDEPEND="
 	${DEPEND}
 	|| (
-		sys-devel/clang
+		llvm-core/clang
 		sys-devel/gcc[objc]
 	)
-	clang? ( sys-devel/clang )
+	clang? ( llvm-core/clang )
 "
 
 src_compile() {

@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -19,7 +19,7 @@ DEPEND="
 	app-alternatives/v2ray-geosite
 "
 RDEPEND="$DEPEND"
-BDEPEND="sys-devel/clang"
+BDEPEND="llvm-core/clang"
 
 pkg_pretend() {
 	local CONFIG_CHECK="~DEBUG_INFO_BTF ~NET_CLS_ACT ~NET_SCH_INGRESS ~NET_INGRESS ~NET_EGRESS"
