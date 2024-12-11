@@ -425,6 +425,7 @@ CRATES="
 	tracing-core@0.1.33
 	tracing-journald@0.3.1
 	tracing-log@0.2.0
+	tracing-panic@0.1.2
 	tracing-subscriber@0.3.19
 	tracing@0.1.41
 	tray-icon@0.19.2
