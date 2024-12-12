@@ -1,3 +1,10 @@
+# How to add this overlay to your Gentoo system
+
+```
+eselect repository enable gentoo-zh
+emerge --sync
+```
+
 # rule no.1
 
 DO NOT BREAK PEOPLE'S SYSTEM
