@@ -165,13 +165,17 @@ ppy.managedbass.wasapi@2022.1216.0
 ppy.managedbass@2022.1216.0
 ppy.osu.framework.nativelibs@2024.809.1-nativelibs
 ppy.osu.framework.sourcegeneration@2023.720.0
+ppy.osu.framework.sourcegeneration@2024.1128.0
 ppy.osu.framework@2024.1009.0
 ppy.osu.framework@2024.1115.0
+ppy.osu.framework@2024.1206.0
 ppy.osu.game.resources@2024.1003.0
 ppy.osu.game.resources@2024.1106.0
+ppy.osu.game.resources@2024.1202.0
 ppy.osutk.ns20@1.0.211
 ppy.sdl2-cs@1.0.741-alpha
 ppy.sdl3-cs@2024.1022.0
+ppy.sdl3-cs@2024.1128.0
 ppy.sdl3-cs@2024.916.0
 ppy.veldrid.metalbindings@4.9.62-gca0239da6b
 ppy.veldrid.openglbindings@4.9.62-gca0239da6b
