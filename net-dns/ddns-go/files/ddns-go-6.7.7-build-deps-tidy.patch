@@ -1,0 +1,55 @@
+From 0d7bdf7d13c8ccc82f88f2fbb2f1544331ff3924 Mon Sep 17 00:00:00 2001
+From: Puqns67 <me@puqns67.icu>
+Date: Thu, 17 Oct 2024 10:17:52 +0800
+Subject: [PATCH 3/3] build(deps): tidy
+
+---
+ go.mod | 9 ++-------
+ go.sum | 9 ++-------
+ 2 files changed, 4 insertions(+), 14 deletions(-)
+
+diff --git a/go.mod b/go.mod
+index f9bbb15..13e9f84 100644
+--- a/go.mod
++++ b/go.mod
+@@ -3,14 +3,9 @@ module github.com/jeessy2/ddns-go/v6
+ go 1.20
+ 
+ require (
+-	github.com/kardianos/service v1.2.2
+ 	github.com/wagslane/go-password-validator v0.3.0
+-	golang.org/x/crypto v0.30.0
++	golang.org/x/crypto v0.31.0
+ 	golang.org/x/net v0.32.0
+-	gopkg.in/yaml.v3 v3.0.1
+-)
+-
+-require (
+-	golang.org/x/sys v0.28.0 // indirect
+ 	golang.org/x/text v0.21.0
++	gopkg.in/yaml.v3 v3.0.1
+ )
+diff --git a/go.sum b/go.sum
+index 0ded7f1..5a9d0cc 100644
+--- a/go.sum
++++ b/go.sum
+@@ -1,14 +1,9 @@
+-github.com/kardianos/service v1.2.2 h1:ZvePhAHfvo0A7Mftk/tEzqEZ7Q4lgnR8sGz4xu1YX60=
+-github.com/kardianos/service v1.2.2/go.mod h1:CIMRFEJVL+0DS1a3Nx06NaMn4Dz63Ng6O7dl0qH0zVM=
+ github.com/wagslane/go-password-validator v0.3.0 h1:vfxOPzGHkz5S146HDpavl0cw1DSVP061Ry2PX0/ON6I=
+ github.com/wagslane/go-password-validator v0.3.0/go.mod h1:TI1XJ6T5fRdRnHqHt14pvy1tNVnrwe7m3/f1f2fDphQ=
+-golang.org/x/crypto v0.30.0 h1:RwoQn3GkWiMkzlX562cLB7OxWvjH1L8xutO2WoJcRoY=
+-golang.org/x/crypto v0.30.0/go.mod h1:kDsLvtWBEx7MV9tJOj9bnXsPbxwJQ6csT/x4KIN4Ssk=
++golang.org/x/crypto v0.31.0 h1:ihbySMvVjLAeSH1IbfcRTkD/iNscyz8rGzjF/E5hV6U=
++golang.org/x/crypto v0.31.0/go.mod h1:kDsLvtWBEx7MV9tJOj9bnXsPbxwJQ6csT/x4KIN4Ssk=
+ golang.org/x/net v0.32.0 h1:ZqPmj8Kzc+Y6e0+skZsuACbx+wzMgo5MQsJh9Qd6aYI=
+ golang.org/x/net v0.32.0/go.mod h1:CwU0IoeOlnQQWJ6ioyFrfRuomB8GKF6KbYXZVyeXNfs=
+-golang.org/x/sys v0.0.0-20201015000850-e3ed0017c211/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+-golang.org/x/sys v0.28.0 h1:Fksou7UEQUWlKvIdsqzJmUmCX3cZuD2+P3XyyzwMhlA=
+-golang.org/x/sys v0.28.0/go.mod h1:/VUhepiaJMQUp4+oa/7Zr1D23ma6VTLIYjOOTFZPUcA=
+ golang.org/x/text v0.21.0 h1:zyQAAkrwaneQ066sspRyJaG9VNi/YJ1NfzcGB3hZ/qo=
+ golang.org/x/text v0.21.0/go.mod h1:4IBbMaMmOPCJ8SecivzSH54+73PCFmPWxNTLm+vZkEQ=
+ gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
+-- 
+2.47.1
+
