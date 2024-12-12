@@ -1,0 +1,11 @@
+#!/usr/bin/xdg-open
+[Desktop Entry]
+Name=Vintage Story URI mod install
+Exec=Vintagestory -i %U
+Terminal=false
+NoDisplay=true
+Type=Application
+StartupNotify=false
+Categories=Game;
+Path=/opt/vintagestory
+MimeType=x-scheme-handler/vintagestorymodinstall;
