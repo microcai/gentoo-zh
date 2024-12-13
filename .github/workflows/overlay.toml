@@ -1413,11 +1413,12 @@ use_latest_release = true
 prefix = "v"
 github_account = "st0nie"
 
-["net-proxy/yass"]
-source = "github"
-github = "Chilledheart/yass"
-use_latest_tag = true
-github_account = "Chilledheart"
+# upstream disappearing, disable temporarily
+# ["net-proxy/yass"]
+# source = "github"
+# github = "Chilledheart/yass"
+# use_latest_tag = true
+# github_account = "Chilledheart"
 
 ["net-vpn/cloudflared-bin"]
 source = "github"
