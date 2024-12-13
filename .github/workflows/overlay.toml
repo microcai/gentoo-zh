@@ -1101,6 +1101,11 @@ regex = 'QQ_([\d\.\_]+)_.*.deb'
 from_pattern = '(.*)_(.*)'
 to_pattern = '\1_p\2'
 
+["net-im/wechat"]
+source = "aur"
+aur = "wechat-bin"
+strip_release = true
+
 #["net-im/wechat-universal-bwrap"]
 
 ["net-im/weixin-uos"]
