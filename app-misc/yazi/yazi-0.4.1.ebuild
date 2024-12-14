@@ -50,7 +50,7 @@ CRATES="
 	cc@1.2.3
 	cfg-expr@0.15.8
 	cfg-if@1.0.0
-	chrono@0.4.38
+	chrono@0.4.39
 	clap@4.5.23
 	clap_builder@4.5.23
 	clap_complete@4.5.38
@@ -156,7 +156,7 @@ CRATES="
 	kqueue@1.0.8
 	lazy_static@1.5.0
 	lebe@0.5.2
-	libc@0.2.167
+	libc@0.2.168
 	libfuzzer-sys@0.4.8
 	libredox@0.1.3
 	linux-raw-sys@0.4.14
@@ -241,7 +241,7 @@ CRATES="
 	rustc-demangle@0.1.24
 	rustc-hash@2.1.0
 	rustc_version@0.4.1
-	rustix@0.38.41
+	rustix@0.38.42
 	rustversion@1.0.18
 	ryu@1.0.18
 	same-file@1.0.6
@@ -377,7 +377,6 @@ CRATES="
 	zune-inflate@0.2.54
 	zune-jpeg@0.4.13
 "
-
 inherit cargo desktop shell-completion xdg
 
 DESCRIPTION="Blazing fast terminal file manager written in Rust, based on async I/O."
