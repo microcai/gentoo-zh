@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-12-14 10:42:16 CST)
+(The last generation time: 2024-12-14 12:33:36 CST)
 
 ### Packages
 
@@ -120,7 +120,7 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/xmind                             | 24.10.01101                               |            | https://www.xmind.net                                                                   | Brainstorming and Mind Mapping Software
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/yazi                              | 0.4.0                                     |            | https://yazi-rs.github.io                                                               | Blazing fast terminal file manager written in Rust, based on async I/O.
+ app-misc/yazi                              | 0.4.1                                     |            | https://yazi-rs.github.io                                                               | Blazing fast terminal file manager written in Rust, based on async I/O.
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/anytype-bin                     | 0.35.4                                    |            | https://anytype.io                                                                      | A notebook based on p2p network
                                             | 0.43.8                                    |            |                                                                                         |
