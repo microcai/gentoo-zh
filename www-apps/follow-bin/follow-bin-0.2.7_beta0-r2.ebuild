@@ -42,6 +42,7 @@ src_install() {
 	cd "${S}/squashfs-root" || die
 
 	domenu Follow.desktop
+	doicon -s 256 usr/share/icons/hicolor/256x256/apps/Follow.png
 
 	local toremove=(
 		.DirIcon
