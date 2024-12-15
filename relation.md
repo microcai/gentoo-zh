@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-12-15 13:01:10 CST)
+(The last generation time: 2024-12-15 13:08:10 CST)
 
 ### Packages
 
@@ -23,9 +23,9 @@
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-containers/distrobox-boost             | 9999                                      |            | https://github.com/xz-dev/distrobox-boost                                               | A container runtimer wrapper for OCI (distrobox/toolbox, also podman/docker)
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-moegirl             | 20241109                                  |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
+ app-dicts/fcitx-pinyin-moegirl             | 20241211                                  |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-moegirl-bin         | 20241109                                  |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
+ app-dicts/fcitx-pinyin-moegirl-bin         | 20241211                                  |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 --------------------------------------------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-sougou-baidu        | 20241020                                  |            | https://github.com/blackteahamburger/fcitx5-pinyin-sougou-baidu                         | Sougou & Baidu Pinyin dictionary for Fcitx5 and RIME
    app-i18n/ibus-rime                       | 9999                                      | RD         | http://code.google.com/p/rimeime/                                                       | Rime Input Method Engine for IBus Framework
