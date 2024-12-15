@@ -1603,6 +1603,12 @@ from_pattern = '^v?(\d+\.\d+\.\d+)-(.+)\.(\d+)$'
 to_pattern = '\1_\2\3'
 github_account = "peeweep"
 
+["www-apps/lzc-client-desktop"]
+source = "regex"
+url = "https://dl.lazycat.cloud/client/desktop/lzc-client-desktop.tar.zst.metadata.json"
+regex = 'v(.*)"'
+github_account = "peeweep"
+
 ["www-client/brave-bin"]
 source = "github"
 github = "brave/brave-browser"
