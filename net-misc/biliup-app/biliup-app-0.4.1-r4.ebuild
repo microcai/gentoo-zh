@@ -492,7 +492,7 @@ CRATES="
 	zeroize_derive@1.3.2
 "
 
-inherit desktop cargo xdg toolchain-funcs
+inherit desktop cargo xdg
 
 MY_P="${PN}-app-v${PV}"
 
@@ -516,7 +516,7 @@ DEPEND="
 	net-libs/webkit-gtk:4
 	x11-libs/gtk+:3
 	net-libs/nodejs[npm]
-	"
+"
 RDEPEND="
 	${DEPEND}
 	!net-misc/biliup-app-bin
@@ -531,22 +531,24 @@ src_prepare() {
 	ln -sf "${WORKDIR}/node_modules" "${S}/" || die
 }
 
+src_configure() {
+	local myfeatures=(
+	# use tauri build and run ps -ef | grep cargo | head to get features
+		custom-protocol
+	)
+	cargo_src_configure
+}
+
 src_compile() {
 	npm run build || die
-	debug-print-function ${FUNCNAME} "$@"
-
-	[[ ${_CARGO_GEN_CONFIG_HAS_RUN} ]] || \
-		die "FATAL: please call cargo_gen_config before using ${FUNCNAME}"
-
-	tc-export AR CC CXX PKG_CONFIG
 	cd "${WORKDIR}/${MY_P}"/src-tauri || die
-	set -- cargo build $(usex debug --debug --release) --features custom-protocol ${ECARGO_ARGS[@]} "$@" 
-	einfo "${@}"
-	"${@}" || die "cargo build failed"
+	cargo_src_compile
 }
 
 src_install() {
-	newbin "${S}/src-tauri/target/$(usex debug debug release)/app" "${PN}"
+	cd "${WORKDIR}/${MY_P}"/src-tauri || die
+	MY_CARGO_BUILD_DIR=$(cargo_target_dir)
+	newbin "${MY_CARGO_BUILD_DIR}"/app "${PN}"
 	newicon -s 256 "${S}/src-tauri/icons/128x128@2x.png" "${PN}.png"
 	newicon -s 128 "${S}/src-tauri/icons/128x128.png" "${PN}.png"
 	newicon -s 32 "${S}/src-tauri/icons/32x32.png" "${PN}.png"
