@@ -13,3 +13,7 @@ net-proxy/v2rayA
 # Huang Rui <vowstar@gmail.com> (2022-08-02)
 # Requires qtwebengine (which requires net-libs/nodejs won't support x32)
 net-im/wemeet
+
+# 123485k <1758961307@qq.com> (2024-12-16)
+# Requires nodejs (which requires net-libs/nodejs won't support x32)
+net-misc/biliup-app
