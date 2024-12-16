@@ -13,6 +13,7 @@ S="${WORKDIR}"
 LICENSE="all-rights-reserved"
 SLOT=0
 KEYWORDS="~amd64"
+RESTRICT="mirror strip bindist"
 
 RDEPEND="
 	dev-libs/nss
@@ -21,6 +22,8 @@ RDEPEND="
 	x11-libs/gtk+:3[X,cups]
 	x11-libs/libxkbcommon
 "
+
+QA_PREBUILT="*"
 
 src_install() {
 	newicon -s 512 icon.png lzc-client-desktop.png
