@@ -495,6 +495,7 @@ CRATES="
 inherit desktop cargo xdg toolchain-funcs
 
 MY_P="${PN}-app-v${PV}"
+
 DESCRIPTION="A Tool for Upload video to bilibili"
 # Double check the homepage as the cargo_metadata crate
 # does not provide this value so instead repository is used
@@ -504,7 +505,7 @@ SRC_URI="
 	https://github.com/ForgQi/${PN}/archive/refs/tags/app-v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/123485k/gentoo-tauri-node-dep/releases/download/${P}/${P}-node_modules.tar.xz
 	${CARGO_CRATE_URIS}"
-
+S="${WORKDIR}/${MY_P}"
 # License set may be more restrictive as OR is not respected
 # use cargo-license for a more accurate license picture
 LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD Boost-1.0 CC0-1.0 ISC MIT MIT-0 MPL-2.0 Unicode-DFS-2016 Unlicense ZLIB"
@@ -514,18 +515,16 @@ IUSE="debug"
 DEPEND="
 	net-libs/webkit-gtk:4
 	x11-libs/gtk+:3
+	net-libs/nodejs[npm]
 	"
 RDEPEND="
 	${DEPEND}
 	!net-misc/biliup-app-bin
 "
-BDEPEND="<dev-util/tauri-cli-2"
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
 QA_FLAGS_IGNORED="usr/bin/${PN}"
-
-S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	eapply_user
@@ -533,20 +532,21 @@ src_prepare() {
 }
 
 src_compile() {
+	npm run build || die
 	debug-print-function ${FUNCNAME} "$@"
 
 	[[ ${_CARGO_GEN_CONFIG_HAS_RUN} ]] || \
 		die "FATAL: please call cargo_gen_config before using ${FUNCNAME}"
 
 	tc-export AR CC CXX PKG_CONFIG
-
-	set -- cargo tauri build --bundles app $(usex debug --debug "") ${ECARGO_ARGS[@]} "$@"
+	cd "${WORKDIR}/${MY_P}"/src-tauri || die
+	set -- cargo build $(usex debug --debug --release) --features custom-protocol ${ECARGO_ARGS[@]} "$@" 
 	einfo "${@}"
 	"${@}" || die "cargo build failed"
 }
 
 src_install() {
-	dobin "${S}/src-tauri/target/$(usex debug debug release)/${PN}"
+	newbin "${S}/src-tauri/target/$(usex debug debug release)/app" "${PN}"
 	newicon -s 256 "${S}/src-tauri/icons/128x128@2x.png" "${PN}.png"
 	newicon -s 128 "${S}/src-tauri/icons/128x128.png" "${PN}.png"
 	newicon -s 32 "${S}/src-tauri/icons/32x32.png" "${PN}.png"
