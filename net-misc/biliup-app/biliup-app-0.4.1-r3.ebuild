@@ -514,12 +514,12 @@ IUSE="debug"
 DEPEND="
 	net-libs/webkit-gtk:4
 	x11-libs/gtk+:3
+	net-libs/nodejs[npm]
 	"
 RDEPEND="
 	${DEPEND}
 	!net-misc/biliup-app-bin
 "
-BDEPEND="<dev-util/tauri-cli-2"
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
@@ -533,20 +533,21 @@ src_prepare() {
 }
 
 src_compile() {
+	npm run build || die
 	debug-print-function ${FUNCNAME} "$@"
 
 	[[ ${_CARGO_GEN_CONFIG_HAS_RUN} ]] || \
 		die "FATAL: please call cargo_gen_config before using ${FUNCNAME}"
 
 	tc-export AR CC CXX PKG_CONFIG
-
-	set -- cargo tauri build --bundles app $(usex debug --debug "") ${ECARGO_ARGS[@]} "$@"
+	cd "${WORKDIR}/${MY_P}"/src-tauri || die
+	set -- cargo build $(usex debug --debug --release) --features custom-protocol ${ECARGO_ARGS[@]} "$@" 
 	einfo "${@}"
 	"${@}" || die "cargo build failed"
 }
 
 src_install() {
-	dobin "${S}/src-tauri/target/$(usex debug debug release)/${PN}"
+	newbin "${S}/src-tauri/target/$(usex debug debug release)/app" "${PN}"
 	newicon -s 256 "${S}/src-tauri/icons/128x128@2x.png" "${PN}.png"
 	newicon -s 128 "${S}/src-tauri/icons/128x128.png" "${PN}.png"
 	newicon -s 32 "${S}/src-tauri/icons/32x32.png" "${PN}.png"
