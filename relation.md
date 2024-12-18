@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-12-18 19:49:27 CST)
+(The last generation time: 2024-12-18 21:50:50 CST)
 
 ### Packages
 
@@ -585,7 +585,7 @@
  sci-electronics/lceda                      | 6.5.37              |            | https://lceda.cn/                                                                       | LCEDA (binary package)
                                             | 6.5.46              |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sci-electronics/lceda-pro                  | 2.2.32.3.1          |            | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
+ sci-electronics/lceda-pro                  | 2.2.34.5            |            | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sci-electronics/openfpgaloader             | 0.12.1              |            | https://trabucayre.github.io/openFPGALoader                                             | Universal utility for programming FPGAs
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
