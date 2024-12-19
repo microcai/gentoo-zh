@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit desktop xdg-utils
+inherit desktop xdg
 
 MY_PV=$(ver_cut 1-3)-$(ver_cut 4).$(ver_cut 5)
 
@@ -60,12 +60,4 @@ src_install() {
 
 	fperms +x "${apphome}/Follow"
 	dosym -r "${apphome}/Follow" "/opt/bin/Follow"
-}
-
-pkg_postinst() {
-	xdg_desktop_database_update
-}
-
-pkg_postrm() {
-	xdg_desktop_database_update
 }

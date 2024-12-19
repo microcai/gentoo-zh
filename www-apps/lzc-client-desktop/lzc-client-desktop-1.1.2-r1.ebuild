@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit unpacker desktop xdg-utils
+inherit unpacker desktop xdg
 
 DESCRIPTION="懒猫微服"
 HOMEPAGE="https://lazycat.cloud"
@@ -42,12 +42,4 @@ src_install() {
 	fperms +x /opt/lzc-client-desktop/core/lzc-core
 
 	dosym -r /opt/lzc-client-desktop/lzc-client-desktop /opt/bin/lzc-client-desktop
-}
-
-pkg_postinst() {
-	xdg_desktop_database_update
-}
-
-pkg_postrm() {
-	xdg_desktop_database_update
 }
