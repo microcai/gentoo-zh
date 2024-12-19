@@ -13,13 +13,16 @@ LICENSE="SSPL-1"
 SLOT="0"
 KEYWORDS="~amd64"
 
+RESTRICT="strip"
+
 src_install() {
 	default
 
 	insinto /usr/lib/mongodb-compass
 	doins -r usr/lib/mongodb-compass/.
 
-	domenu usr/share/applications/mongodb-compass.desktop
+	# domenu usr/share/applications/mongodb-compass.desktop
+	domenu "${FILESDIR}"/mongodb-compass-bin.desktop
 	doicon usr/share/pixmaps/mongodb-compass.png
 
 	fperms +x "/usr/lib/mongodb-compass/MongoDB Compass"
