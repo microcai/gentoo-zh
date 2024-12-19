@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit desktop xdg-utils unpacker
+inherit desktop xdg unpacker
 
 DESCRIPTION="Mihomo Party"
 HOMEPAGE="
@@ -46,14 +46,4 @@ src_install() {
 		fperms +s /opt/mihomo-party/resources/sidecar/mihomo
 		fperms +s /opt/mihomo-party/resources/sidecar/mihomo-alpha
 	fi
-}
-
-pkg_postinst() {
-	xdg_desktop_database_update
-	xdg_icon_cache_update
-}
-
-pkg_postrm() {
-	xdg_desktop_database_update
-	xdg_icon_cache_update
 }
