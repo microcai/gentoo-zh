@@ -20,7 +20,7 @@ S="${DISTDIR}"
 
 LICENSE="Unlicense || ( CC-BY-SA-4.0 FDL-1.3 )"
 SLOT="5"
-KEYWORDS="~amd64 ~mips ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+fcitx rime"
 REQUIRED_USE="|| ( fcitx rime )"
 
