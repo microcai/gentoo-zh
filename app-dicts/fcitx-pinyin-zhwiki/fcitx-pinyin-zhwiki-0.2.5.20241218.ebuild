@@ -8,7 +8,7 @@ inherit python-any-r1
 
 MY_PN="fcitx5-pinyin-zhwiki"
 CONVERTERV=$(ver_cut 1-3)
-ZHWIKIV="20240701"
+ZHWIKIV="20241201"
 WEBSLANGV=$(ver_cut 4)
 
 DESCRIPTION="Fcitx 5 Pinyin Dictionary from zh.wikipedia.org"
