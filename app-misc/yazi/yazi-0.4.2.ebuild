@@ -38,7 +38,7 @@ CRATES="
 	bitstream-io@2.6.0
 	block-buffer@0.10.4
 	block2@0.5.1
-	bstr@1.11.0
+	bstr@1.11.1
 	built@0.7.5
 	bumpalo@3.16.0
 	bytemuck@1.20.0
@@ -47,13 +47,13 @@ CRATES="
 	bytes@1.9.0
 	cassowary@0.3.0
 	castaway@0.2.3
-	cc@1.2.3
+	cc@1.2.4
 	cfg-expr@0.15.8
 	cfg-if@1.0.0
 	chrono@0.4.39
 	clap@4.5.23
 	clap_builder@4.5.23
-	clap_complete@4.5.38
+	clap_complete@4.5.39
 	clap_complete_fig@4.5.2
 	clap_complete_nushell@4.5.4
 	clap_derive@4.5.18
@@ -63,13 +63,13 @@ CRATES="
 	colorchoice@1.0.3
 	compact_str@0.8.0
 	concurrent-queue@2.5.0
-	console@0.15.8
+	console@0.15.10
 	core-foundation-sys@0.8.7
 	crc32fast@1.4.2
-	crossbeam-channel@0.5.13
-	crossbeam-deque@0.8.5
+	crossbeam-channel@0.5.14
+	crossbeam-deque@0.8.6
 	crossbeam-epoch@0.9.18
-	crossbeam-utils@0.8.20
+	crossbeam-utils@0.8.21
 	crossterm@0.28.1
 	crossterm_winapi@0.9.1
 	crunchy@0.2.2
@@ -87,7 +87,7 @@ CRATES="
 	dirs@5.0.1
 	displaydoc@0.2.5
 	either@1.13.0
-	encode_unicode@0.3.6
+	encode_unicode@1.0.0
 	equivalent@1.0.1
 	erased-serde@0.4.5
 	errno@0.3.10
@@ -120,7 +120,7 @@ CRATES="
 	half@2.4.1
 	hashbrown@0.15.2
 	heck@0.5.0
-	home@0.5.9
+	home@0.5.11
 	iana-time-zone-haiku@0.1.2
 	iana-time-zone@0.1.61
 	icu_collections@1.5.0
@@ -230,7 +230,7 @@ CRATES="
 	rav1e@0.7.1
 	ravif@0.11.11
 	rayon-core@1.12.1
-	redox_syscall@0.5.7
+	redox_syscall@0.5.8
 	redox_users@0.4.6
 	regex-automata@0.1.10
 	regex-automata@0.4.9
@@ -246,10 +246,10 @@ CRATES="
 	ryu@1.0.18
 	same-file@1.0.6
 	scopeguard@1.2.0
-	semver@1.0.23
+	semver@1.0.24
 	serde-value@0.7.0
-	serde@1.0.215
-	serde_derive@1.0.215
+	serde@1.0.216
+	serde_derive@1.0.216
 	serde_json@1.0.133
 	serde_spanned@0.6.8
 	sharded-slab@0.1.7
@@ -375,8 +375,9 @@ CRATES="
 	zerovec@0.10.4
 	zune-core@0.4.12
 	zune-inflate@0.2.54
-	zune-jpeg@0.4.13
+	zune-jpeg@0.4.14
 "
+
 inherit cargo desktop shell-completion xdg
 
 DESCRIPTION="Blazing fast terminal file manager written in Rust, based on async I/O."
