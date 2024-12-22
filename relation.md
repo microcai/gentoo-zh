@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-12-22 19:18:05 CST)
+(The last generation time: 2024-12-22 19:18:45 CST)
 
 ### Packages
 
@@ -559,8 +559,8 @@
    net-proxy/Xray                           | 24.12.18            | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
      app-alternatives/v2ray-geoip           | 0-r2                |  D, RD     |                                                                                         | symlink for v2ray-geoip
      app-alternatives/v2ray-geosite         | 0-r2                |  D, RD     |                                                                                         | symlink for v2ray-geosite
-   net-proxy/v2ray                          | 5.21.0              | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
-                                            | 5.22.0              |            |                                                                                         |
+   net-proxy/v2ray                          | 5.22.0              | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
+                                            | 5.23.0              |            |                                                                                         |
    net-proxy/v2ray-bin                      | 4.45.0-r2           | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
                                             | 5.22.0              |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
