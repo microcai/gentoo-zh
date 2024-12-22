@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit go-module systemd
+inherit go-module systemd shell-completion
 
 _PV="${PV/_/-}"
 _PV="${_PV/alpha/alpha.}"
@@ -48,6 +48,12 @@ src_compile() {
 	ego build -o sing-box -trimpath -tags "${_TAGS%,}" \
 		-ldflags "-s -w -X 'github.com/sagernet/sing-box/constant.Version=${PV}'" \
 		./cmd/sing-box
+
+	mkdir -v completions
+
+	./sing-box completion bash > completions/sing-box
+	./sing-box completion fish > completions/sing-box.fish
+	./sing-box completion zsh > completions/_sing-box
 }
 
 src_install() {
@@ -55,4 +61,7 @@ src_install() {
 	insinto /etc/sing-box
 	newins release/config/config.json config.json.example
 	systemd_dounit release/config/sing-box{,@}.service
+	dobashcomp completions/sing-box
+	dofishcomp completions/sing-box.fish
+	dozshcomp completions/_sing-box
 }
