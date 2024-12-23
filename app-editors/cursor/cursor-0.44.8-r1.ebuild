@@ -3,18 +3,17 @@
 
 EAPI=8
 
-APPIMAGE="${P}_x86_64.AppImage"
 CHROMIUM_LANGS="
 	af am ar bg bn ca cs da de el en-GB en-US es-419 es et fa fil fi fr gu he hi
 	hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt-BR pt-PT ro ru sk sl sr sv sw
 	ta te th tr uk ur vi zh-CN zh-TW
 "
 
-inherit chromium-2 desktop pax-utils xdg optfeature
+inherit chromium-2 desktop pax-utils unpacker xdg optfeature
 
 DESCRIPTION="Cursor App - AI-first coding environment"
 HOMEPAGE="https://www.cursor.com/"
-SRC_URI="https://download.todesktop.com/230313mzl4w4u92/${P}-build-241222ooktny8mh-x86_64.AppImage -> ${APPIMAGE}"
+SRC_URI="https://download.todesktop.com/230313mzl4w4u92/${P}-build-241222ooktny8mh-amd64.deb"
 S="${WORKDIR}"
 
 LICENSE="cursor"
@@ -58,12 +57,7 @@ RDEPEND="
 "
 
 QA_PREBUILT="*"
-
-src_unpack() {
-	cp "${DISTDIR}/${APPIMAGE}" "${S}" || die
-	chmod +x "${S}/${APPIMAGE}" || die
-	"${S}/${APPIMAGE}" --appimage-extract || die
-}
+CURSOR_HOME="opt/Cursor"
 
 src_configure() {
 	default
@@ -72,28 +66,17 @@ src_configure() {
 
 src_prepare() {
 	default
-	pushd "${S}/squashfs-root/locales" > /dev/null || die
+	pushd "${CURSOR_HOME}/locales" > /dev/null || die
 	chromium_remove_language_paks
 	popd > /dev/null || die
 }
 
 src_install() {
-	cd "${S}/squashfs-root" || die
-
-	exeinto /opt/cursor
-	doexe cursor chrome-sandbox libEGL.so libffmpeg.so libGLESv2.so libvk_swiftshader.so libvulkan.so.1
-
-	insinto /opt/cursor
-	doins chrome_100_percent.pak chrome_200_percent.pak icudtl.dat resources.pak snapshot_blob.bin \
-		v8_context_snapshot.bin vk_swiftshader_icd.json
-
-	insopts -m0755
-	doins -r locales resources
+	dodir /opt/cursor
+	cp -ar "${CURSOR_HOME}/." "${D}/opt/cursor/" || die
 
 	fperms 4711 /opt/cursor/chrome-sandbox
-	[[ -x chrome_crashpad_handler ]] && doins chrome_crashpad_handler
-
-	pax-mark m ../cursor/cursor
+	pax-mark m /opt/cursor/cursor
 	dosym ../cursor/cursor /opt/bin/cursor
 
 	local EXEC_EXTRA_FLAGS=()
@@ -105,8 +88,8 @@ src_install() {
 	fi
 
 	sed -i -e "s|^Exec=.*|Exec=cursor ${EXEC_EXTRA_FLAGS[*]} %U|" \
-		cursor.desktop || die
-	domenu cursor.desktop
+		usr/share/applications/cursor.desktop || die
+	domenu usr/share/applications/cursor.desktop
 
 	insinto /usr/share
 	doins -r usr/share/icons
