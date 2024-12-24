@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-12-24 17:58:12 CST)
+(The last generation time: 2024-12-24 18:09:59 CST)
 
 ### Packages
 
@@ -441,7 +441,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/aliyundrive-webdav                | 2.3.3               |            | https://github.com/messense/aliyundrive-webdav.git                                      | WebDAV server for AliyunDrive
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/aliyunpan                         | 0.2.8               |            | https://github.com/tickstep/aliyunpan                                                   | aliyunpan cli client, support Webdav service, JavaScript plugin
+ net-misc/aliyunpan                         | 0.3.4               |            | https://github.com/tickstep/aliyunpan                                                   | aliyunpan cli client, support Webdav service, JavaScript plugin
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/apifox                            | 2.5.19-r1           |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
