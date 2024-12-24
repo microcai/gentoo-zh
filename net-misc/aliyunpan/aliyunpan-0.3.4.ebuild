@@ -5,14 +5,14 @@ EAPI=8
 
 inherit go-module
 
-HOMEPAGE="https://github.com/tickstep/aliyunpan"
 DESCRIPTION="aliyunpan cli client, support Webdav service, JavaScript plugin"
+HOMEPAGE="https://github.com/tickstep/aliyunpan"
 
-LICENSE="Apache-2.0"
-SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~mips ~ppc64 ~s390 ~x86"
 SRC_URI="https://github.com/tickstep/aliyunpan/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/123485k/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz"
+LICENSE="Apache-2.0"
+SLOT="0"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~s390 ~x86"
 
 src_compile() {
 	ego build -o bin/${PN} -trimpath
