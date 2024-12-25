@@ -13,4 +13,7 @@
 		<email>universebenzene@sina.com</email>
 		<name>Astro Benzene</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">chromium/gyp</remote-id>
+	</upstream>
 </pkgmetadata>
