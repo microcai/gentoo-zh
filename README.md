@@ -58,7 +58,7 @@ https://github.com/microcai/gentoo-zh/blob/deps-table/relation.md
   to install the font, I could grant an exception for the must-tested-in-every-ARCH
   rule. You could use something like
 
-  `KEYWORDS="alpha amd64 arm hppa ia64 ppc mips ~s390 ~sh sparc x86 ~x86-fbsd"`
+  `KEYWORDS="alpha amd64 arm hppa ppc mips ~s390 ~sh sparc x86 ~x86-fbsd"`
 
   But please don't abuse this exception. It must be a pure font package.
 
