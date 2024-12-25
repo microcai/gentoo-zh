@@ -12,4 +12,4 @@ HOMEPAGE="https://github.com/paulfitz/daff"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~ia64 ~riscv ~sparc ~x86"
+KEYWORDS="~amd64 ~arm64 ~riscv ~sparc ~x86"
