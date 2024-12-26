@@ -47,6 +47,7 @@ QA_PREBUILT="*"
 src_prepare() {
 	default
 
+	# add any QA scanelf alert files here.
 	local so_files=(
 		"RadiumWMPF/runtime/libilink2.so"
 		"RadiumWMPF/runtime/libilink_network.so"
@@ -55,43 +56,34 @@ src_prepare() {
 		"libconfService.so"
 		"libvoipChannel.so"
 		"libvoipCodec.so"
-		"libwxtrans.so"
 	)
 
 	for file in "${so_files[@]}"; do
-		patchelf --set-rpath '$ORIGIN' "${S}/opt/wechat/${file}" || die
+		patchelf --set-rpath '$ORIGIN' "opt/wechat/${file}" || die
 	done
+}
 
-	find "${S}/opt/wechat/vlc_plugins" -type f | xargs -I {} patchelf --set-rpath '$ORIGIN:$ORIGIN/../..' {} || die
+src_install() {
+	dodir /opt/wechat
+	cp -r opt/wechat/. "${D}/opt/wechat/" || die
 
-	local env_vars="QT_AUTO_SCREEN_SCALE_FACTOR=1 \"QT_QPA_PLATFORM=wayland;xcb\""
+	dosym ../wechat/wechat /opt/bin/wechat
+
+	local exec_envs=( "QT_AUTO_SCREEN_SCALE_FACTOR=1" "\"QT_QPA_PLATFORM=wayland;xcb\"" )
 	if use fcitx; then
-	    env_vars="QT_IM_MODULE=fcitx ${env_vars}"
-	elif use ibus; then
-	    env_vars="QT_IM_MODULE=ibus ${env_vars}"
+		exec_envs+=( "QT_IM_MODULE=fcitx" )
+	fi
+	if use ibus; then
+		exec_envs+=( "QT_IM_MODULE=ibus" )
 	fi
 
 	sed -i \
 		-e "s|^Icon=.*|Icon=wechat|" \
 		-e "s|^Categories=.*|Categories=Network;InstantMessaging;Chat;|" \
-		-e "/^Exec=/s|Exec=|Exec=env ${env_vars} |" \
-		"${S}/usr/share/applications/wechat.desktop" || die
-}
+		-e "s|^Exec=.*|Exec=env ${exec_envs[*]} wechat %U|" \
+		usr/share/applications/wechat.desktop || die
+	domenu usr/share/applications/wechat.desktop
 
-src_install() {
 	insinto /usr/share
-	doins -r "${S}/usr/share/icons"
-
-	insinto /opt
-	doins -r "${S}/opt/wechat"
-
-	fperms 755 /opt/wechat/crashpad_handler
-	fperms 755 /opt/wechat/RadiumWMPF/runtime/WeChatAppEx
-	fperms 755 /opt/wechat/RadiumWMPF/runtime/WeChatAppEx_crashpad_handler
-	fperms 755 /opt/wechat/wechat
-	fperms 755 /opt/wechat/wxocr
-	fperms 755 /opt/wechat/wxplayer
-
-	dosym -r /opt/wechat/wechat /usr/bin/wechat
-	domenu "${S}/usr/share/applications/wechat.desktop"
+	doins -r usr/share/icons
 }
