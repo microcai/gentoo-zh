@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-12-27 07:56:44 CST)
+(The last generation time: 2024-12-27 07:57:11 CST)
 
 ### Packages
 
@@ -251,7 +251,7 @@
  dev-vcs/sourcegit-bin                      | 8.44                |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                  | 1.19.8              |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
-                                            | 1.20.0_rc5          |            |                                                                                         |
+                                            | 1.20.0_rc6          |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-board/othello                        | 0.2.2               |            | http://othello-game.sourceforge.net                                                     | Othello is a classic strategy game, also known as Reversi
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
