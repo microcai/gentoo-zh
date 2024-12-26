@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-12-25 23:18:48 CST)
+(The last generation time: 2024-12-26 13:43:32 CST)
 
 ### Packages
 
@@ -419,7 +419,7 @@
    x11-misc/flatpak-xdg-utils               | 1.0.6               | RD         | https://github.com/flatpak/flatpak-xdg-utils                                            | Utilities for containerized apps to launch programs outside the container
    x11-misc/snapd-xdg-open                  | 20170401            | RD         | https://github.com/snapcore/snapd-xdg-open                                              | Software for opening links from snaps in desktop
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/wechat                              | 4.0.1.11            |            | https://linux.weixin.qq.com                                                             | Weixin for Linux
+ net-im/wechat                              | 4.0.1.11-r1         |            | https://linux.weixin.qq.com                                                             | Weixin for Linux
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/wechat-universal-bwrap              | 1.0.0.241-r1        |            | https://weixin.qq.com                                                                   | WeChat (Universal) from UOS, inside bwrap sandbox
                                             | 1.0.0.242           |            |                                                                                         |
