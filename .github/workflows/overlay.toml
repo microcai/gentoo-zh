@@ -725,6 +725,13 @@ source = "regex"
 url = "https://winegame.net/downloads/"
 regex = "net.winegame.client_([\\d.]+)_amd64.deb"
 
+["gui-apps/crystal-dock"]
+source = "github"
+github = "dangvd/crystal-dock"
+prefix = "v"
+use_latest_release = true
+github_account = "liuyujielol"
+
 ["gui-libs/libdecor"]
 source = "gitlab"
 host = "gitlab.freedesktop.org"
