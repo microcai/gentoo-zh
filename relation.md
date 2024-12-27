@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-12-27 18:11:25 CST)
+(The last generation time: 2024-12-27 19:12:51 CST)
 
 ### Packages
 
@@ -258,6 +258,11 @@
  games-fps/source-engine                    | 9999                |            | https://github.com/nillerusr/source-engine                                              | A 3D game engine developed by Valve
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-misc/oh-my-git-bin                   | 0.6.5               |            | https://ohmygit.org/                                                                    | An interactive Git learning game!
+--------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ games-server/vintagestory-server           | 1.19.8              |            | https://www.vintagestory.at/                                                            | Dedicated game server for Vintage Story
+                                            | 1.20.0_rc6          |            |                                                                                         |
+   acct-group/vintagestory                  | 0                   | RD         |                                                                                         | User group for Vintage Story Server
+   acct-user/vintagestory                   | 0                   | RD         |                                                                                         | User for Vintage Story Server
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-util/winegame-client-bin             | 0.5.10.5            |            | https://winegame.net/                                                                   | An open source gaming platform for GNU/Linux
                                             | 0.5.12.2            |            |                                                                                         |
