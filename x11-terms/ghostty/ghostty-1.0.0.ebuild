@@ -59,6 +59,7 @@ KEYWORDS="~amd64"
 BDEPEND="virtual/pandoc"
 RDEPEND="
 	app-arch/bzip2
+	dev-libs/oniguruma
 	media-libs/fontconfig
 	media-libs/harfbuzz
 	gui-libs/gtk
