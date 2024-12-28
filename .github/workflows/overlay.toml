@@ -363,6 +363,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "OriPoin"
 
+["app-shells/zfe"]
+source = "github"
+github = "BrookJeynes/zfe"
+use_latest_release = true
+prefix = "v"
+github_account = "douglarek"
+
 # cajviewer.cnki.net only work on China mainland
 # Got 418 status code under GitHub's network
 # ["app-text/cajviewer"]
