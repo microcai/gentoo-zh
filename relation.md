@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-12-28 12:25:44 CST)
+(The last generation time: 2024-12-28 23:08:26 CST)
 
 ### Packages
 
@@ -136,6 +136,8 @@
  app-shells/blesh                           | 9999                |            | https://github.com/akinomyoga/ble.sh                                                    | A line editor written in pure Bash with enhanced features
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-shells/oh-my-bash                      | 9999                |            | https://ohmybash.github.io                                                              | An open source, community-driven framework for managing your bash configuration
+--------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-shells/zfe                             | 0.6.1               |            | https://github.com/BrookJeynes/zfe                                                      | Small unix terminal file explorer
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-shells/zsh-theme-powerlevel10k         | 1.20.0              |            | https://github.com/romkatv/powerlevel10k                                                | Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
    app-shells/gitstatus                     | 1.5.5               |  D, RD     | https://github.com/romkatv/gitstatus                                                    | Git status for Bash and Zsh prompt
