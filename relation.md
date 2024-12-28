@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2024-12-28 12:13:34 CST)
+(The last generation time: 2024-12-28 12:25:44 CST)
 
 ### Packages
 
@@ -9,7 +9,7 @@
 ============================================|=====================|============|=========================================================================================|====================
  app-admin/enpass                           | 6.10.1.1661         |            | https://www.enpass.io                                                                   | A cross-platform, complete password management solution.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/rbw                              | 1.13.0              |            | https://github.com/doy/rbw                                                              | Unofficial Bitwarden CLI
+ app-admin/rbw                              | 1.13.1              |            | https://github.com/doy/rbw                                                              | Unofficial Bitwarden CLI
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/zenmonitor3                      | 2.0.0               |            | https://git.exozy.me/a/zenmonitor3                                                      | Zen monitor is monitoring software for AMD Zen-based CPUs
    sys-kernel/zenpower3                     | 0.2.0               |  D, RD     | https://git.exozy.me/a/zenpower3                                                        | Linux kernel driver for reading sensors of AMD Zen family CPUs
@@ -38,7 +38,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/appflowy-bin                   | 0.7.8               |            | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/cursor                         | 0.44.8-r1           |            | https://www.cursor.com/                                                                 | Cursor App - AI-first coding environment
+ app-editors/cursor                         | 0.44.9              |            | https://www.cursor.com/                                                                 | Cursor App - AI-first coding environment
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/marktext-bin                   | 0.17.1              |            | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -365,7 +365,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/avplayer                       | 9999                |            | http://avplayer.avplayer.org                                                            | avplayer is a p2p video downloader and player
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-video/bilibili                       | 1.16.1_p1           |            | https://github.com/msojocs/bilibili-linux                                               | Based on the Bilibli offcial client to linux version, support roaming
+ media-video/bilibili                       | 1.16.1_p2           |            | https://github.com/msojocs/bilibili-linux                                               | Based on the Bilibli offcial client to linux version, support roaming
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/implay                         | 1.5.1               |            | https://tsl0922.github.io/ImPlay                                                        | A Cross-Platform Desktop Media Player
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
