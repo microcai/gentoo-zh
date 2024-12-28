@@ -13,7 +13,7 @@ inherit chromium-2 desktop pax-utils unpacker xdg optfeature
 
 DESCRIPTION="Cursor App - AI-first coding environment"
 HOMEPAGE="https://www.cursor.com/"
-SRC_URI="https://download.todesktop.com/230313mzl4w4u92/${P}-build-241222ooktny8mh-amd64.deb"
+SRC_URI="https://download.todesktop.com/230313mzl4w4u92/${P}-build-2412268nc6pfzgo-amd64.deb"
 S="${WORKDIR}"
 
 LICENSE="cursor"
