@@ -84,6 +84,9 @@ src_compile() {
 
 src_install() {
 	insinto "/etc/${PN}"
+	doins "${FILESDIR}/server.yaml.example"
+	doins "${FILESDIR}/client.yaml.example"
+
 	dobin "${PN}"
 
 	systemd_dounit "${FILESDIR}/${PN}-server.service"
