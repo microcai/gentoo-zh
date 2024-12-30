@@ -1109,9 +1109,9 @@ from_pattern = '(.*)_(.*)'
 to_pattern = '\1_p\2'
 
 ["net-im/wechat"]
-source = "aur"
-aur = "wechat-bin"
-strip_release = true
+source = "regex"
+url = "https://github.com/peeweep/wechat-linux-watcher/raw/refs/heads/master/wechat-linux-version.txt"
+regex = '(.*)'
 
 #["net-im/wechat-universal-bwrap"]
 
