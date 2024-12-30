@@ -90,4 +90,6 @@ src_install() {
 	systemd_dounit "${FILESDIR}/${PN}-client.service"
 	newinitd "${FILESDIR}/${PN}-server.initd" "${PN}-server"
 	newinitd "${FILESDIR}/${PN}-client.initd" "${PN}-client"
+
+	keepdir /etc/${PN}
 }
