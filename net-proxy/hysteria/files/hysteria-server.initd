@@ -18,6 +18,8 @@ depend() {
 }
 
 start_pre() {
-    checkpath -d -m 0755 -o "$command_user" /run/hysteria
+    checkpath -d -m 0755 -o "$command_user" \
+	/var/lib/hysteria \
+	/run/hysteria
     checkpath -f -m 0644 -o "$command_user" "$output_log"
 }
