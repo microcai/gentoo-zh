@@ -513,9 +513,26 @@ src_configure() {
 src_install() {
 	cargo_src_install
 
+	newconfd "${FILESDIR}/shadowsocks-rust.confd" shadowsocks-rust
+	dosym shadowsocks-rust /etc/conf.d/shadowsocks-rust.server
+	dosym shadowsocks-rust /etc/conf.d/shadowsocks-rust.local
+	newinitd "${FILESDIR}/shadowsocks-rust.initd" shadowsocks-rust
+	dosym shadowsocks-rust /etc/init.d/shadowsocks-rust.server
+	dosym shadowsocks-rust /etc/init.d/shadowsocks-rust.local
+
 	systemd_newunit "${FILESDIR}/shadowsocks-rust_at.service" shadowsocks-rust@.service
 	systemd_newunit "${FILESDIR}/shadowsocks-rust-server_at.service" shadowsocks-rust-server@.service
 
 	insinto "/etc/${PN}"
 	doins examples/*.json
+}
+
+pkg_postinst() {
+	if has_version "<sys-apps/openrc-0.56[-caps]"; then
+			einfo ""
+			einfo "For OpenRC users using old version(<0.56):"
+			einfo "Capabilities support for old version is needed."
+			einfo "Enable it by set useflag [caps] for <sys-apps/openrc-0.56."
+			einfo ""
+	fi
 }
