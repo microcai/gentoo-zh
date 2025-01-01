@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 DEPEND="app-alternatives/v2ray-geoip
 	app-alternatives/v2ray-geosite"
 RDEPEND="${DEPEND}"
-BDEPEND=">=dev-lang/go-1.21.4"
+BDEPEND=">=dev-lang/go-1.23"
 
 src_compile() {
 	ego build -o xray -trimpath -ldflags "-w -s -X 'github.com/XTLS/Xray-core/core.build=${PV}'" ./main
