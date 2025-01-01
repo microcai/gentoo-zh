@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-01-01 17:04:49 CST)
+(The last generation time: 2025-01-01 20:42:22 CST)
 
 ### Packages
 
@@ -593,7 +593,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sci-electronics/lceda-pro                  | 2.2.34.8            |            | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sci-electronics/openfpgaloader             | 0.12.1              |            | https://trabucayre.github.io/openFPGALoader                                             | Universal utility for programming FPGAs
+ sci-electronics/openfpgaloader             | 0.13.1              |            | https://trabucayre.github.io/openFPGALoader                                             | Universal utility for programming FPGAs
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sec-policy/apparmor-profile-deepinwine     | 1.0.0               |            | https://gitlab.com/apparmor/apparmor/wikis/home                                         | A collection of AppArmor profiles for Deepinwine6
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
