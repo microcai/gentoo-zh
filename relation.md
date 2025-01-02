@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-01-02 01:21:54 CST)
+(The last generation time: 2025-01-02 14:12:32 CST)
 
 ### Packages
 
@@ -418,7 +418,7 @@
                                             | 0.1.29              |            |                                                                                         |
      dev-libs/libdatrie                     | 0.2.13              |  D, RD     | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/tencent-qq                          | 3.2.15_p241224      |            | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
+ net-im/tencent-qq                          | 3.2.15_p241224-r1   |            | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
    media-libs/openslide                     | 20230904            | RD         | http://openslide.org/                                                                   | C library with simple interface to read virtual slides
    virtual/loong-ow-compat                  | 0                   | RD         |                                                                                         | Virtual for LoongArch old-world compatibility
      app-emulation/liblol                   | 0.1.5               | RD         | https://liblol.aosc.io                                                                  | LoongArch old-world ABI compatibility layer from AOSC OS
@@ -534,7 +534,7 @@
  net-proxy/dae                              | 0.9.0               |            | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
                                             | 9999                |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/daed                             | 0.8.0               |            | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
+ net-proxy/daed                             | 0.9.0               |            | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
                                             | 9999                |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/hysteria                         | 2.6.0-r1            |            | https://github.com/apernet/hysteria                                                     | A powerful, lightning fast and censorship resistant proxy.
