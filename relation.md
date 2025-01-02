@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-01-02 19:28:39 CST)
+(The last generation time: 2025-01-02 19:34:28 CST)
 
 ### Packages
 
@@ -550,6 +550,8 @@
  net-proxy/naiveproxy-bin                   | 131.0.6778.86_p1    |            | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/proxy-server                     | 8.0.0               |            | https://github.com/jackarain/proxy                                                      | Implementation of all proxy protocols using modern c++
+--------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ net-proxy/serenity                         | 1.1.0_beta3         |            | https://serenity.sagernet.org/                                                          | The configuration generator for sing-box
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/shadowsocks-rust                 | 1.21.0              |            | https://github.com/shadowsocks/shadowsocks-rust                                         | A Rust port of shadowsocks.
                                             | 1.21.2              |            |                                                                                         |
