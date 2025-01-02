@@ -1711,14 +1711,6 @@ use_max_tag = true
 prefix = "v"
 github_account = "OriPoin"
 
-["x11-themes/klassy"]
-source = "github"
-github = "paulmcauley/klassy"
-use_latest_release = true
-from_pattern = '(.*)breeze(.*)'
-to_pattern = '\1\2'
-github_account = "st0nie"
-
 ["x11-themes/kora-icon-theme"]
 source = "github"
 github = "bikass/kora"
