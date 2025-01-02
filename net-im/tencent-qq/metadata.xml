@@ -7,7 +7,7 @@ pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
         <name>WANG Xuerui</name>
     </maintainer>
     <maintainer type="person">
-        <email>ston.jia@qq.com</email>
+        <email>ston.jia@outlook.com</email>
         <name>ston</name>
     </maintainer>
     <use>
@@ -17,9 +17,6 @@ pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
         shipped libs.</flag>
         <flag name="gnome">Supporting screenshot when using
         GNOME</flag>
-        <flag name="appindicator">Build in support for
-        notifications using the libindicate or libappindicator
-        plugin</flag>
         <flag name="liteloader">Add liteloader support</flag>
     </use>
 </pkgmetadata>
