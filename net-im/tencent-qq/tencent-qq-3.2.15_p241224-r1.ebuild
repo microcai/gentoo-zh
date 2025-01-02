@@ -30,7 +30,7 @@ LICENSE="Tencent"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
 
-IUSE="+bwrap system-vips gnome appindicator liteloader"
+IUSE="+bwrap system-vips gnome liteloader"
 
 RESTRICT="strip mirror"
 
@@ -38,7 +38,6 @@ RDEPEND="
 	x11-libs/gtk+:3
 	x11-libs/libnotify
 	dev-libs/nss
-	appindicator? ( dev-libs/libayatana-appindicator )
 	x11-libs/libXScrnSaver
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
@@ -112,11 +111,6 @@ src_install() {
 		newbin "$FILESDIR/qq.sh" qq
 	else
 		dosym -r /opt/QQ/qq /usr/bin/qq
-	fi
-
-	# https://bugs.gentoo.org/898912
-	if use appindicator; then
-		dosym ../../usr/lib64/libayatana-appindicator3.so /opt/QQ/libappindicator3.so
 	fi
 
 	sed -i 's!/usr/share/icons/hicolor/512x512/apps/qq.png!qq!' "${D}"/usr/share/applications/qq.desktop || die
