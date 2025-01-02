@@ -3,7 +3,7 @@
 <pkgmetadata>
   <maintainer type="person">
     <name>ston</name>
-    <email>ston.jia@qq.com</email>
+    <email>ston.jia@outlook.com</email>
   </maintainer>
   <use>
     <flag name="webui">Build and install daed instead of dae-wing</flag>
