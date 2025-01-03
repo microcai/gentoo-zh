@@ -1374,7 +1374,7 @@ source = "github"
 github = "shadowsocks/shadowsocks-rust"
 use_latest_release = true
 prefix = "v"
-github_account = "aieu"
+github_account = ["aieu", "peeweep"]
 
 ["net-proxy/sing-box"]
 source = "github"
