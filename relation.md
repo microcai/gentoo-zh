@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-01-03 02:27:55 CST)
+(The last generation time: 2025-01-04 04:28:26 CST)
 
 ### Packages
 
@@ -553,8 +553,8 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/serenity                         | 1.1.0_beta3         |            | https://serenity.sagernet.org/                                                          | The configuration generator for sing-box
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/shadowsocks-rust                 | 1.21.0              |            | https://github.com/shadowsocks/shadowsocks-rust                                         | A Rust port of shadowsocks.
-                                            | 1.21.2              |            |                                                                                         |
+ net-proxy/shadowsocks-rust                 | 1.21.2              |            | https://github.com/shadowsocks/shadowsocks-rust                                         | shadowsocks is a fast tunnel proxy that helps you bypass firewalls.
+                                            | 1.22.0              |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/sing-box                         | 1.10.5              |            | https://sing-box.sagernet.org/                                                          | The universal proxy platform.
                                             | 1.9.7               |            |                                                                                         |
