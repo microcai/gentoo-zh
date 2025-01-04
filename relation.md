@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-01-04 15:02:28 CST)
+(The last generation time: 2025-01-05 01:39:47 CST)
 
 ### Packages
 
@@ -624,7 +624,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/mkinitcpio                      | 38                  |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-kernel/tkg-sources                     | 6.12.7              |            | https://github.com/Frogging-Family/linux-tkg                                            | Full linux-tkg sources including the Gentoo patchset for the . kernel tree
+ sys-kernel/tkg-sources                     | 6.12.8              |            | https://github.com/Frogging-Family/linux-tkg                                            | Full linux-tkg sources including the Gentoo patchset for the . kernel tree
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-libs/elog-functions                    | 0.0.2               |            | http://xochitl.matem.unam.mx/~canek/gentoo-systemd-only/index.html                      | Compatibility functions for the log e* functions of OpenRC
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
