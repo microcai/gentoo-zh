@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="10"
+K_GENPATCHES_VER="11"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 
@@ -14,14 +14,25 @@ detect_arch
 
 MY_P="linux-tkg-${PV}"
 MY_KV="${KV_MAJOR}.${KV_MINOR}"
+GIT_COMMIT_CACHYOS="cab04f4f528d9c5e8ec93207204f6f8ecd920ead"
 PRJC_REV="0"
 
 DESCRIPTION="Full linux-tkg sources including the Gentoo patchset for the ${MY_KV} kernel tree"
 HOMEPAGE="https://github.com/Frogging-Family/linux-tkg"
 TKG_URI="https://github.com/Frogging-Family/linux-tkg/archive/refs/tags/v${PV}.tar.gz -> ${MY_P}.tar.gz"
-SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${TKG_URI}"
+CACHYOS_URI="https://raw.githubusercontent.com/CachyOS/kernel-patches/${GIT_COMMIT_CACHYOS}/${MY_KV}"
+SRC_URI="
+	${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${TKG_URI}
+	graysky? ( https://raw.githubusercontent.com/graysky2/kernel_compiler_patch/${GIT_COMMIT_GRAYSKY}/more-ISA-levels-and-uarches-for-kernel-6.1.79%2B.patch
+		-> ${P}-more-ISA-levels-and-uarches-for-kernel-6.1.79+.patch )
+	bore? ( ${CACHYOS_URI}/sched/0001-bore.patch -> ${P}-0001-bore.patch )
+	rt? ( ${CACHYOS_URI}/misc/0001-rt.patch -> ${P}-0001-rt.patch )
+	bbr3? ( ${CACHYOS_URI}/0005-bbr3.patch -> ${P}-0005-bbr3.patch )
+	crypto? ( ${CACHYOS_URI}/0007-crypto.patch -> ${P}-0007-crypto.patch )
+	zstd? ( ${CACHYOS_URI}/0013-zstd.patch -> ${P}-0013-zstd.patch )
+"
 KEYWORDS="~amd64"
-IUSE="+eevdf bore pds bmq +aggressive-ondemand sched-yield-type-0 +sched-yield-type-1 sched-yield-type-2 +Arch +misc-adds acs-override ntsync +glitched-base O3 +graysky +clear openrgb"
+IUSE="+eevdf bore pds bmq +aggressive-ondemand sched-yield-type-0 +sched-yield-type-1 sched-yield-type-2 +Arch +misc-adds acs-override ntsync +glitched-base O3 +graysky +clear openrgb rt bbr3 crypto zstd"
 REQUIRED_USE="
 	^^ ( eevdf bore pds bmq )
 	pds? ( ^^ ( sched-yield-type-0 sched-yield-type-1 sched-yield-type-2 ) )
@@ -44,7 +55,7 @@ src_prepare() {
 	if use eevdf; then
 		eapply "${PATCHESDIR}/0003-glitched-eevdf-additions.patch"
 	elif use bore; then
-		eapply "${FILESDIR}/${PV}-0001-bore.patch"
+		eapply "${DISTDIR}/${P}-0001-bore.patch"
 	elif use pds || use bmq; then
 		eapply "${PATCHESDIR}/0009-prjc_v${MY_KV}-r${PRJC_REV}.patch"
 
@@ -80,9 +91,13 @@ src_prepare() {
 		eapply "${PATCHESDIR}/0013-optimize_harder_O3.patch"
 	fi
 
-	use graysky && eapply "${FILESDIR}/${PV}-more-ISA-levels-and-uarches-for-kernel-6.1.79+.patch"
+	use graysky && eapply "${DISTDIR}/${P}-more-ISA-levels-and-uarches-for-kernel-6.1.79+.patch"
 	use clear && eapply "${PATCHESDIR}/0002-clear-patches.patch"
 	use openrgb && eapply "${PATCHESDIR}/0014-OpenRGB.patch"
+	use rt && eapply "${DISTDIR}/${P}-0001-rt.patch"
+	use bbr3 && eapply "${DISTDIR}/${P}-0005-bbr3.patch"
+	use crypto && eapply "${DISTDIR}/${P}-0007-crypto.patch"
+	use zstd && eapply "${DISTDIR}/${P}-0013-zstd.patch"
 
 	kernel-2_src_prepare
 	rm "${S}/tools/testing/selftests/tc-testing/action-ebpf"
@@ -91,7 +106,7 @@ src_prepare() {
 pkg_setup() {
 	ewarn
 	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
-	ewarn "If you need support, please contact ${HOMEPAGE} directly."
+	ewarn "If you need support, please contact https://github.com/microcai/gentoo-zh and ${HOMEPAGE} directly."
 	ewarn "Do *not* open bugs in Gentoo's bugzilla unless you have issues with"
 	ewarn "the ebuilds. Thank you."
 	ewarn

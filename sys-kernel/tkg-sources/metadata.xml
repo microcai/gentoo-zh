@@ -26,6 +26,11 @@
 		<flag name="graysky">Use graysky's cpu opts patch</flag>
 		<flag name="clear">Use Clear Linux patches</flag>
 		<flag name="openrgb">Add OpenRGB compatibility for certain i2c controllers</flag>
+		<flag name="rt">Use RT patches (unsupported)</flag>
+		<flag name="bbr3">Use BBR v3 (unsupported)</flag>
+		<flag name="crypto">Use patches to improve performance of CRC32 and AES128 crypto
+			(unsupported)</flag>
+		<flag name="zstd">Use latest and improved ZSTD patch-set (unsupported)</flag>
 	</use>
 	<upstream>
 		<remote-id type="cpe">cpe:/o:linux:linux_kernel</remote-id>
