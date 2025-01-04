@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -13,7 +13,7 @@ inherit chromium-2 desktop pax-utils unpacker xdg optfeature
 
 DESCRIPTION="Cursor App - AI-first coding environment"
 HOMEPAGE="https://www.cursor.com/"
-SRC_URI="https://download.todesktop.com/230313mzl4w4u92/${P}-build-2412268nc6pfzgo-amd64.deb"
+SRC_URI="https://download.todesktop.com/230313mzl4w4u92/${P}-build-250103fqxdt5u9z-amd64.deb"
 S="${WORKDIR}"
 
 LICENSE="cursor"
