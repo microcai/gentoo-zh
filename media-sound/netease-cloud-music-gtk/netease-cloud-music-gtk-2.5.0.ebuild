@@ -330,7 +330,7 @@ declare -A GIT_CRATES=(
 	[netease-cloud-music-api]="https://github.com/gmg137/netease-cloud-music-api;${NCM_API_COMMIT};netease-cloud-music-api-%commit%"
 )
 
-inherit cargo gnome2-utils meson optfeature xdg
+inherit cargo gnome2-utils meson optfeature xdg flag-o-matic
 
 DESCRIPTION="netease cloud music player based on Rust & GTK for Linux"
 HOMEPAGE="https://github.com/gmg137/netease-cloud-music-gtk"
@@ -390,6 +390,7 @@ src_prepare() {
 }
 
 src_configure() {
+	filter-lto
 	local emesonargs=(
 		-Dlocaledir=share/locale
 		-Ddatadir=share
