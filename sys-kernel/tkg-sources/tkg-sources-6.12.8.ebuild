@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -15,6 +15,7 @@ detect_arch
 MY_P="linux-tkg-${PV}"
 MY_KV="${KV_MAJOR}.${KV_MINOR}"
 GIT_COMMIT_CACHYOS="cab04f4f528d9c5e8ec93207204f6f8ecd920ead"
+GIT_COMMIT_GRAYSKY="8b4675b3a96547b73fa92f87f6a6b3a2e387ac06"
 PRJC_REV="0"
 
 DESCRIPTION="Full linux-tkg sources including the Gentoo patchset for the ${MY_KV} kernel tree"
