@@ -35,8 +35,6 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-RESTRICT="bindist mirror test"
-
 QA_PRESTRIPPED="
 	/opt/${PN}/lib/libapp.so
 	/opt/${PN}/lib/libflutter_linux_gtk.so
