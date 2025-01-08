@@ -386,6 +386,10 @@ src_prepare() {
 
 	sed -i -E "s#${ncm_api_git}#${ncm_api_path}#g" "${S}/Cargo.toml" || die "ncm-api workaround failed"
 
+	pushd "${WORKDIR}/netease-cloud-music-api-${NCM_API_COMMIT}" > /dev/null || die
+	eapply "${FILESDIR}/isahc-disable-static-curl.patch"
+	popd > /dev/null || die
+
 	default
 }
 
