@@ -6,6 +6,6 @@
 		<name>Leo Douglas</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">BrookJeynes/zfe</remote-id>
+		<remote-id type="github">BrookJeynes/jido</remote-id>
 	</upstream>
 </pkgmetadata>
