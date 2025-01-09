@@ -30,7 +30,7 @@ LICENSE="Tencent"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
 
-IUSE="+bwrap system-vips gnome liteloader"
+IUSE="bwrap system-vips gnome liteloader"
 
 RESTRICT="strip mirror"
 
@@ -80,6 +80,9 @@ src_install() {
 		unpacker "${DISTDIR}/${_QQFileName}_${MY_PV}_${ARCH}${_ArchExt}${_QQFileSuffix}"
 	fi
 
+	# Fix KDK Wayland QQ icons
+	mv "${D}/usr/share/applications/qq.desktop" "${D}/usr/share/applications/QQ.desktop" || die
+
 	if use system-vips; then
 		rm -r "${D}"/opt/QQ/resources/app/sharp-lib || die
 	fi
@@ -87,7 +90,7 @@ src_install() {
 	if use bwrap; then
 		exeinto /opt/QQ
 		doexe "${FILESDIR}"/start.sh
-		sed -i 's!/opt/QQ/qq!/opt/QQ/start.sh!' "${D}"/usr/share/applications/qq.desktop || die
+		sed -i 's!/opt/QQ/qq!/opt/QQ/start.sh!' "${D}"/usr/share/applications/QQ.desktop || die
 		insinto /opt/QQ/workarounds
 		doins "${FILESDIR}"/{config.json,xdg-open.sh,vercmp.sh}
 		fperms +x /opt/QQ/workarounds/{xdg-open.sh,vercmp.sh}
@@ -102,18 +105,16 @@ src_install() {
 			"${D}"/opt/QQ/start.sh || die
 
 	else
-		sed -i 's!/opt/QQ/qq!/usr/bin/qq!' "${D}"/usr/share/applications/qq.desktop || die
+		sed -i 's!/opt/QQ/qq!/usr/bin/qq!' "${D}"/usr/share/applications/QQ.desktop || die
 	fi
 
 	if use bwrap; then
 		dosym -r /opt/QQ/start.sh /usr/bin/qq
-	elif use system-vips; then
-		newbin "$FILESDIR/qq.sh" qq
 	else
-		dosym -r /opt/QQ/qq /usr/bin/qq
+		newbin "$FILESDIR/qq.sh" qq
 	fi
 
-	sed -i 's!/usr/share/icons/hicolor/512x512/apps/qq.png!qq!' "${D}"/usr/share/applications/qq.desktop || die
+	sed -i 's!/usr/share/icons/hicolor/512x512/apps/qq.png!qq!' "${D}"/usr/share/applications/QQ.desktop || die
 	gzip -d "${D}"/usr/share/doc/linuxqq/changelog.gz || die
 	dodoc "${D}"/usr/share/doc/linuxqq/changelog
 	rm -rf "${D}"/usr/share/doc/linuxqq/ || die
