@@ -43,7 +43,7 @@ fi
 # 从 flags 文件中加载参数
 
 set -euo pipefail
-flags_file="${XDG_CONFIG_HOME}/qq-electron-flags.conf"
+flags_file="${XDG_CONFIG_HOME}/qq-flags.conf"
 declare -a flags
 
 if [[ -f "${flags_file}" ]]; then
