@@ -43,18 +43,32 @@ fi
 # 从 flags 文件中加载参数
 
 set -euo pipefail
-flags_file="${XDG_CONFIG_HOME}/qq-flags.conf"
-declare -a flags
+electron_flags_file="${XDG_CONFIG_HOME}/qq-electron-flags.conf"
+declare -a electron_flags
 
-if [[ -f "${flags_file}" ]]; then
-    mapfile -t <"${flags_file}"
+if [[ -f "${electron_flags_file}" ]]; then
+    mapfile -t ELECTRON_FLAGS_MAPFILE <"${electron_flags_file}"
 fi
 
-for line in "${MAPFILE[@]}"; do
+for line in "${ELECTRON_FLAGS_MAPFILE[@]}"; do
     if [[ ! "${line}" =~ ^[[:space:]]*#.* ]]; then
-        flags+=("${line}")
+        electron_flags+=("${line}")
     fi
 done
+
+bwrap_flags_file="${XDG_CONFIG_HOME}/qq-bwrap-flags.conf"
+declare -a bwrap_flags
+if [[ -f "${bwrap_flags_file}" ]]; then
+    while IFS= read -r line; do
+        if [[ ! "${line}" =~ ^[[:space:]]*# ]] && [[ -n "${line}" ]]; then
+            eval "expanded_line=\"$line\""
+            read -ra parts <<< "$expanded_line"
+            for part in "${parts[@]}"; do
+                bwrap_flags+=("$part")
+            done
+        fi
+    done < "${bwrap_flags_file}"
+fi
 
 QQ_HOTUPDATE_DIR="${QQ_APP_DIR}/versions"
 
@@ -73,11 +87,11 @@ fi
 
 # 处理旧版本
 rm -rf "${QQ_HOTUPDATE_DIR}/"**".zip"
-is_hotupdated_version=0  # 正在运行的版本是否经过热更新？
+is_hotupdated_version=0 # 正在运行的版本是否经过热更新？
 
 find "${QQ_HOTUPDATE_DIR}/"*[-_]* -maxdepth 1 -type "d,l" | while read path; do
     this_version="$(basename "$path")"
-    if [ "$(/opt/QQ/workarounds/vercmp.sh "${this_version}" lt "${QQ_HOTUPDATE_VERSION//_/-}")" == "true" ]; then
+    if [ "$(vercmp "${this_version}" "${QQ_HOTUPDATE_VERSION//_/-}")" -lt "0" ]; then
         # 这个版本小于当前版本，删除之
         echo "rm $this_version"
         rm -rf "$path"
@@ -91,16 +105,15 @@ if [ "$is_hotupdated_version" == "0" ]; then
 fi
 
 bwrap --new-session --cap-drop ALL --unshare-user-try --unshare-pid --unshare-cgroup-try \
-    --ro-bind /lib /lib \
-    --ro-bind /lib64 /lib64 \
-    --ro-bind /bin /bin \
+    --symlink usr/lib /lib \
+    --symlink usr/lib64 /lib64 \
+    --symlink usr/bin /bin \
     --ro-bind /usr /usr \
     --ro-bind /opt /opt \
     --ro-bind /opt/QQ/workarounds/xdg-open.sh /usr/bin/xdg-open \
     --ro-bind /usr/lib/snapd-xdg-open/xdg-open /snapd-xdg-open \
     --ro-bind /usr/lib/flatpak-xdg-utils/xdg-open /flatpak-xdg-open \
     --ro-bind /etc/machine-id /etc/machine-id \
-    --ro-bind /etc/ld.so.cache /etc/ld.so.cache \
     --dev-bind /dev /dev \
     --ro-bind /sys /sys \
     --ro-bind /etc/passwd /etc/passwd \
@@ -109,6 +122,7 @@ bwrap --new-session --cap-drop ALL --unshare-user-try --unshare-pid --unshare-cg
     --ro-bind /etc/resolv.conf /etc/resolv.conf \
     --ro-bind /etc/localtime /etc/localtime \
     --proc /proc \
+    --tmpfs "/sys/devices/virtual" \
     --dev-bind /run/dbus /run/dbus \
     --bind "${USER_RUN_DIR}" "${USER_RUN_DIR}" \
     --ro-bind-try /etc/fonts /etc/fonts \
@@ -116,18 +130,19 @@ bwrap --new-session --cap-drop ALL --unshare-user-try --unshare-pid --unshare-cg
     --bind-try "${HOME}/.pki" "${HOME}/.pki" \
     --ro-bind-try "${XAUTHORITY}" "${XAUTHORITY}" \
     --bind-try "${QQ_DOWNLOAD_DIR}" "${QQ_DOWNLOAD_DIR}" \
-    --setenv QQ_APP_DIR "${QQ_APP_DIR}" \
     --bind "${QQ_APP_DIR}" "${QQ_APP_DIR}" \
     --ro-bind-try "${FONTCONFIG_HOME}" "${FONTCONFIG_HOME}" \
     --ro-bind-try "${HOME}/.icons" "${HOME}/.icons" \
     --ro-bind-try "${HOME}/.local/share/.icons" "${HOME}/.local/share/.icons" \
     --ro-bind-try "${XDG_CONFIG_HOME}/gtk-3.0" "${XDG_CONFIG_HOME}/gtk-3.0" \
+    --ro-bind-try "${XDG_CONFIG_HOME}/dconf" "${XDG_CONFIG_HOME}/dconf" \
     --ro-bind /etc/nsswitch.conf /etc/nsswitch.conf \
-    --ro-bind-try /run/systemd/userdb/ /run/systemd/userdb/ \
+    --ro-bind /run/systemd/userdb/ /run/systemd/userdb/ \
     --setenv IBUS_USE_PORTAL 1 \
     --setenv QQNTIM_HOME "${QQ_APP_DIR}/QQNTim" \
     --setenv LITELOADERQQNT_PROFILE "${QQ_APP_DIR}/LiteLoaderQQNT" \
-    /opt/QQ/qq "${flags[@]}" "$@"
+    "${bwrap_flags[@]}" \
+    /opt/QQ/electron "${electron_flags[@]}" "$@" /opt/QQ/resources/app
 
 # 移除无用崩溃报告和日志
 # 如果需要向腾讯反馈 bug，请注释掉如下几行
