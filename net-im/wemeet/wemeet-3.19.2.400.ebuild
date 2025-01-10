@@ -11,12 +11,14 @@ HOMEPAGE="https://wemeet.qq.com"
 SRC_URI="
 	amd64? ( https://updatecdn.meeting.qq.com/cos/\
 fb7464ffb18b94a06868265bed984007/TencentMeeting_0300000000_3.19.2.400_x86_64_default.publish.officialwebsite.deb -> ${P}_amd64.deb )
+	arm64? ( https://updatecdn.meeting.qq.com/cos/\
+867a8a2e99a215dcd4f60fe049dbe6cf/TencentMeeting_0300000000_3.19.2.400_arm64_default.publish.officialwebsite.deb -> ${P}_arm64.deb )
 "
 
 S="${WORKDIR}"
 LICENSE="wemeet_license"
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~amd64 ~arm64"
 RESTRICT="bindist test mirror"
 
 # ~loong TODO:
