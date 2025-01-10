@@ -89,7 +89,8 @@ src_install() {
 
 	if use bwrap; then
 		exeinto /opt/QQ
-		doexe "${FILESDIR}"/start.sh
+		patch "${FILESDIR}"/start.sh -o "${WORKDIR}"/start_sh_patched < "${FILESDIR}"/start_sh.patch || die
+		newexe "${WORKDIR}"/start_sh_patched start.sh
 		sed -i 's!/opt/QQ/qq!/opt/QQ/start.sh!' "${D}"/usr/share/applications/QQ.desktop || die
 		insinto /opt/QQ/workarounds
 		doins "${FILESDIR}"/{config.json,xdg-open.sh,vercmp.sh}
