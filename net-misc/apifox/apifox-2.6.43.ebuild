@@ -8,7 +8,7 @@ inherit desktop xdg
 DESCRIPTION="API 文档、API 调试、API Mock、API 自动化测试"
 HOMEPAGE="https://www.apifox.cn/"
 SRC_URI="
-	amd64? ( https://cdn.apifox.cn/download/Apifox-linux-latest.zip -> ${P}-amd64.zip )
+	amd64? ( https://file-assets.apifox.com/download/Apifox-linux-latest.zip -> ${P}-amd64.zip )
 "
 
 S="${WORKDIR}"
