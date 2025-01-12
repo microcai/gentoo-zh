@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-01-12 11:50:05 CST)
+(The last generation time: 2025-01-12 11:57:02 CST)
 
 ### Packages
 
@@ -24,9 +24,9 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-containers/distrobox-boost             | 9999                |            | https://github.com/xz-dev/distrobox-boost                                               | A container runtimer wrapper for OCI (distrobox/toolbox, also podman/docker)
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-moegirl             | 20241211            |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
+ app-dicts/fcitx-pinyin-moegirl             | 20250111            |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-moegirl-bin         | 20241211            |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
+ app-dicts/fcitx-pinyin-moegirl-bin         | 20250111            |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-sougou-baidu        | 20241220            |            | https://github.com/blackteahamburger/fcitx5-pinyin-sougou-baidu                         | Sougou & Baidu Pinyin dictionary for Fcitx5 and RIME
    app-i18n/ibus-rime                       | 9999                | RD         | http://code.google.com/p/rimeime/                                                       | Rime Input Method Engine for IBus Framework
@@ -372,7 +372,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/avplayer                       | 9999                |            | http://avplayer.avplayer.org                                                            | avplayer is a p2p video downloader and player
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-video/bilibili                       | 1.16.1_p3           |            | https://github.com/msojocs/bilibili-linux                                               | Based on the Bilibli offcial client to linux version, support roaming
+ media-video/bilibili                       | 1.16.2_p1           |            | https://github.com/msojocs/bilibili-linux                                               | Based on the Bilibli offcial client to linux version, support roaming
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/implay                         | 1.5.1               |            | https://tsl0922.github.io/ImPlay                                                        | A Cross-Platform Desktop Media Player
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
