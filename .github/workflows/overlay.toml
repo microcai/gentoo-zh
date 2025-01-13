@@ -9,6 +9,13 @@ use_latest_tag = true
 prefix = "v"
 github_account = "tsln1998"
 
+["app-admin/chezmoi-bin"]
+source = "github"
+github = "twpayne/chezmoi"
+use_latest_release = true
+prefix = "v"
+github_account = "tsln1998"
+
 ["app-admin/enpass"]
 source = "regex"
 url = "https://apt.enpass.io/dists/stable/main/binary-amd64/Packages"
