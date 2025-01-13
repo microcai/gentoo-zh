@@ -249,9 +249,6 @@ from_pattern = "-(\\d+)"
 to_pattern = ""
 github_account = "liangyongxiang"
 
-# TODO: only old data tag
-#["app-i18n/mozc"]
-
 ["app-i18n/zh-autoconvert"]
 source = "debianpkg"
 debianpkg = "zh-autoconvert"
