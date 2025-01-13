@@ -1397,6 +1397,14 @@ github_account = "blackteahamburger"
 #prefix = "v"
 #github_account = "Jackarain"
 
+["net-proxy/serenity"]
+source = "github"
+github = "SagerNet/serenity"
+use_latest_tag = true
+from_pattern = '^v?(\d+\.\d+\.\d+)-(.+)\.(\d+)$'
+to_pattern = '\1_\2\3'
+github_account = "peeweep"
+
 ["net-proxy/shadowsocks-rust"]
 source = "github"
 github = "shadowsocks/shadowsocks-rust"
