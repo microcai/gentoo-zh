@@ -715,6 +715,13 @@ use_latest_tag = true
 prefix = "v"
 github_account = "tsln1998"
 
+["dev-util/vfox-bin"]
+source = "github"
+github = "version-fox/vfox"
+use_latest_release = true
+prefix = "v"
+github_account = "tsln1998"
+
 ["dev-util/zprint-bin"]
 source = "github"
 github = "kkinnear/zprint"
