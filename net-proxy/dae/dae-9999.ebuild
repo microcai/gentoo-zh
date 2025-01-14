@@ -61,9 +61,9 @@ src_install() {
 	systemd_dounit install/dae.service
 	newinitd "${FILESDIR}"/dae.initd dae
 
-	insinto /etc/dae
+	keepdir /etc/dae/
+	insinto /usr/share/dae
 	newins example.dae config.dae.example
-	newins install/empty.dae config.dae
 
 	newbashcomp install/shell-completion/dae.bash dae
 	newfishcomp install/shell-completion/dae.fish dae.fish
