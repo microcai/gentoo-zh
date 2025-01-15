@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-01-15 11:30:01 CST)
+(The last generation time: 2025-01-15 18:28:56 CST)
 
 ### Packages
 
@@ -41,7 +41,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-zhwiki-bin          | 0.2.5.20241218      |            | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/appflowy-bin                   | 0.8.0               |            | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
+ app-editors/appflowy-bin                   | 0.8.1               |            | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/cursor                         | 0.44.11             |            | https://www.cursor.com/                                                                 | Cursor App - AI-first coding environment
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
