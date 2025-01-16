@@ -675,6 +675,7 @@ source = "github"
 github = "mongodb-js/compass"
 use_latest_release = true
 prefix = "v"
+github_account = "gouwazi"
 
 ["dev-util/pacstrap"]
 source = "gitlab"
