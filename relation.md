@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-01-17 17:35:14 CST)
+(The last generation time: 2025-01-17 19:04:12 CST)
 
 ### Packages
 
@@ -132,6 +132,7 @@
  app-office/freeoffice                      | 1062                |            | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite.
                                             | 1064                |            |                                                                                         |
                                             | 1068                |            |                                                                                         |
+                                            | 1220                |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/wps-office                      | 11.1.0.11719-r1     |            | https://www.wps.cn/product/wpslinux/                                                    | WPS Office is an office productivity suite, Here is the Chinese version
                                             | 12.1.0.17900        |            |                                                                                         |
