@@ -10,6 +10,8 @@ HOMEPAGE="https://www.freeoffice.com"
 BASE_URI="https://www.softmaker.net/down/softmaker-freeoffice-2021-${PV}"
 SRC_URI="${BASE_URI}-amd64.tgz"
 
+S="${WORKDIR}"
+
 LICENSE="SoftMaker"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -36,8 +38,6 @@ RDEPEND="
 QA_PRESTRIPPED="*"
 QA_PREBUILT="*"
 QA_FLAGS_IGNORED="*"
-
-S="${WORKDIR}"
 
 font_clean(){
 	for lang in ${LANGUAGES}; do
