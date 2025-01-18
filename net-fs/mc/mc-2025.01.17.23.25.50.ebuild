@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -8,7 +8,7 @@ inherit go-module
 MY_PV="$(ver_cut 1-3)T$(ver_cut 4-7)Z"
 MY_PV=${MY_PV//./-}
 YEAR="$(ver_cut 1)"
-COMMIT_ID=1681e4497c09d7438a34e846f76dbde972ab7daf
+COMMIT_ID=cc8758c88da31b95dde7b0b6997980ebfb8b98c4
 
 DESCRIPTION="Minio client provides alternatives for ls, cat on cloud storage and filesystems"
 HOMEPAGE="https://github.com/minio/mc"
