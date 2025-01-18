@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-01-18 14:45:59 CST)
+(The last generation time: 2025-01-18 15:02:25 CST)
 
 ### Packages
 
@@ -407,7 +407,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/q                                  | 0.19.2-r1           |            | https://github.com/natesales/q                                                          | A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-fs/mc                                  | 2024.11.21.17.21.54 |            | https://github.com/minio/mc                                                             | Minio client provides alternatives for ls, cat on cloud storage and filesystems
+ net-fs/mc                                  | 2025.01.17.23.25.50 |            | https://github.com/minio/mc                                                             | Minio client provides alternatives for ls, cat on cloud storage and filesystems
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/deepin-wine-qq                      | 9.5.2.27897         |            | https://aur.archlinux.org/packages/deepin-wine-qq                                       | Tencent QQ on Deepin Wine(com.qq.im.deepin) For Gentoo
    app-emulation/deepin-wine5               | 5.0.16-r1           |  D, RD     | https://www.deepin.org                                                                  | Deepin wine5
