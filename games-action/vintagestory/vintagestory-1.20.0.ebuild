@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -9,7 +9,7 @@ DESCRIPTION="Uncompromising wilderness survival sandbox game (requires paid acco
 HOMEPAGE="https://www.vintagestory.at/"
 
 MY_PV="${PV/_rc/-rc.}"
-_CHANNEL="unstable"
+_CHANNEL="stable"
 SRC_URI="https://cdn.vintagestory.at/gamefiles/${_CHANNEL}/vs_client_linux-x64_${MY_PV}.tar.gz"
 S="${WORKDIR}/${PN}"
 
