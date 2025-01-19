@@ -1528,6 +1528,12 @@ prefix = "v"
 # live package only
 #["sys-apps/mdp"]
 
+["sys-apps/isd"]
+source = "github"
+github = "isd-project/isd"
+use_latest_release = true
+prefix = "v"
+
 ["sys-apps/pacman"]
 source = "gitlab"
 host = "gitlab.archlinux.org"
