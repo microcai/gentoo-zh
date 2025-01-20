@@ -7,6 +7,11 @@
 	</maintainer>
 	<use>
 		<flag name="lto">Enable Link Time Optimization</flag>
+		<flag name="shadowsocks">Enable Shadowsocks Protocol</flag>
+		<flag name="bench">Enable Bench Protocol</flag>
+		<flag name="tuic">Enable Tuic Protocol</flag>
+		<flag name="tracing">Enable Tracing Protocol</flag>
+		<flag name="onion">Enable Onion Protocol</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">Watfaq/clash-rs</remote-id>
