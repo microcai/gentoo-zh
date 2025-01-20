@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-01-20 17:28:56 CST)
+(The last generation time: 2025-01-20 21:41:47 CST)
 
 ### Packages
 
@@ -530,6 +530,7 @@
    dev-util/tauri-cli                       | 1.5.9               | BD         | https://tauri.app                                                                       | Command line interface for building Tauri apps
                                             | 2.0.0_alpha17       |            |                                                                                         |
    net-proxy/clash-rs                       | 0.1.15              | RD         | https://watfaq.gitbook.io/clashrs-user-manual/                                          | Custom protocol, rule based network proxy
+                                            | 0.7.4               |            |                                                                                         |
    net-proxy/mihomo                         | 1.19.1              |  D, RD     | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
      acct-group/mihomo                      | 0-r1                |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
      acct-user/mihomo                       | 0-r1                |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
