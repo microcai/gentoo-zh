@@ -73,9 +73,9 @@ CRATES="
 	brotli@3.5.0
 	build-target@0.4.0
 	bumpalo@3.16.0
-	bytemuck@1.16.1
+	bytemuck@1.21.0
 	byteorder@1.5.0
-	bytes@1.6.0
+	bytes@1.9.0
 	bzip2-sys@0.1.11+1.0.8
 	bzip2@0.4.4
 	cairo-rs@0.18.5
@@ -209,16 +209,16 @@ CRATES="
 	fuchsia-cprng@0.1.1
 	funty@2.0.0
 	fuser@0.13.0
-	futures-channel@0.3.30
-	futures-core@0.3.30
+	futures-channel@0.3.31
+	futures-core@0.3.31
 	futures-executor@0.3.30
-	futures-io@0.3.30
+	futures-io@0.3.31
 	futures-lite@1.13.0
 	futures-lite@2.3.0
-	futures-macro@0.3.30
-	futures-sink@0.3.30
-	futures-task@0.3.30
-	futures-util@0.3.30
+	futures-macro@0.3.31
+	futures-sink@0.3.31
+	futures-task@0.3.31
+	futures-util@0.3.31
 	futures@0.3.30
 	gdk-pixbuf-sys@0.18.0
 	gdk-pixbuf@0.18.5
@@ -403,8 +403,8 @@ CRATES="
 	once_cell@1.19.0
 	openssl-macros@0.1.1
 	openssl-probe@0.1.5
-	openssl-sys@0.9.102
-	openssl@0.10.64
+	openssl-sys@0.9.104
+	openssl@0.10.68
 	option-ext@0.2.0
 	ordered-multimap@0.4.3
 	ordered-stream@0.2.0
@@ -774,8 +774,9 @@ declare -A GIT_CRATES=(
 	[core-graphics-types]='https://github.com/madsmtm/core-foundation-rs;7d593d016175755e492a92ef89edca68ac3bd5cd;core-foundation-rs-%commit%/core-graphics-types'
 	[core-graphics]='https://github.com/madsmtm/core-foundation-rs;7d593d016175755e492a92ef89edca68ac3bd5cd;core-foundation-rs-%commit%/core-graphics'
 	[cpal]='https://github.com/rustdesk-org/cpal;6b374bcaed076750ca8fce6da518ab39b882e14a;cpal-%commit%'
+	[default_net]='https://github.com/rustdesk-org/default_net;a831d47bcacb4615b394968287697924a8f62be1;default_net-%commit%'
 	[evdev]='https://github.com/rustdesk-org/evdev;cec616e37790293d2cd2aa54a96601ed6b1b35a9;evdev-%commit%'
-	[hwcodec]='https://github.com/rustdesk-org/hwcodec;3e7c0dc755f8a77bbed3b2a9921553a511fd7bb5;hwcodec-%commit%'
+	[hwcodec]='https://github.com/rustdesk-org/hwcodec;c4d6b1c5c4ddc7548868306004cf5d4eb614a36f;hwcodec-%commit%'
 	[impersonate_system]='https://github.com/rustdesk-org/impersonate-system;2f429010a5a10b1fe5eceb553c6672fd53d20167;impersonate-system-%commit%'
 	[keepawake]='https://github.com/rustdesk-org/keepawake-rs;64d568586dd16551d02120e19668d2b0fec8e3c9;keepawake-rs-%commit%'
 	[machine-uid]='https://github.com/rustdesk-org/machine-uid;381ff579c1dc3a6c54db9dfec47c44bcb0246542;machine-uid-%commit%'
@@ -810,11 +811,14 @@ HOMEPAGE="https://rustdesk.com/"
 _WEBM_PV="1.0.0.31"
 _VCPKG_COMMIT="2024.11.16"
 _HWCODEC_EXTERNALS_COMMIT="a0ff168b672ab57c50f09dbe128608e45a1c4a52"
+_HBB_COMMON_COMMIT="49c6b24a7a8c39d4448e07b743007ef1a3febd43"
 SRC_URI="
 	https://github.com/rustdesk/rustdesk/archive/refs/tags/${PV}.tar.gz
 		-> ${P}.tar.gz
-	https://dev.dream-universe.org/distfiles/${P}-vcpkg-${_VCPKG_COMMIT}-lite.tar.gz
+	https://dev.dream-universe.org/distfiles/${PN}-1.3.6-vcpkg-${_VCPKG_COMMIT}-lite.tar.gz
 	https://github.com/webmproject/libwebm/archive/refs/tags/libwebm-${_WEBM_PV}.tar.gz
+	https://github.com/rustdesk/hbb_common/archive/${_HBB_COMMON_COMMIT}.tar.gz
+		-> hbb_common-${_HBB_COMMON_COMMIT}.tar.gz
 	https://github.com/rustdesk-org/externals/archive/${_HWCODEC_EXTERNALS_COMMIT}.tar.gz
 		-> hwcodec-externals-${_HWCODEC_EXTERNALS_COMMIT}.tar.gz
 	https://raw.githubusercontent.com/c-smile/sciter-sdk/master/bin.lnx/x64/libsciter-gtk.so
@@ -879,6 +883,10 @@ src_prepare() {
 	default
 
 	cd - || die
+
+	rm -rf libs/hbb_common || die
+	ln -s "${WORKDIR}"/hbb_common-${_HBB_COMMON_COMMIT} libs/hbb_common || die
+
 	cd ../rust-webm-*/src/sys || die
 	rm -rf libwebm/ || die
 	ln -s "${WORKDIR}"/libwebm-libwebm-*/ libwebm || die
