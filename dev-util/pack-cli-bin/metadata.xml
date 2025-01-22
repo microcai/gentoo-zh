@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>tsln1998@gmail.com</email>
+		<name>Tsln</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">buildpacks/pack</remote-id>
+	</upstream>
+</pkgmetadata>
