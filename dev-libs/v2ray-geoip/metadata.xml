@@ -5,9 +5,6 @@
 		<name>blackteahamburger</name>
 		<email>blackteahamburger@outlook.com</email>
 	</maintainer>
-	<use>
-		<flag name="mmdb">Use MaxMind mmdb database instead of MaxMind GeoLite2 country CSV data to generate V2Ray GeoIP dat</flag>
-	</use>
 	<upstream>
 		<remote-id type="github">v2fly/geoip</remote-id>
 	</upstream>
