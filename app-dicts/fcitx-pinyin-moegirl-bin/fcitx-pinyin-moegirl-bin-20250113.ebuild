@@ -14,7 +14,7 @@ S="${DISTDIR}"
 
 LICENSE="Unlicense CC-BY-NC-SA-3.0"
 SLOT="5"
-KEYWORDS="~amd64 ~mips ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+fcitx rime"
 REQUIRED_USE="|| ( fcitx rime )"
 
