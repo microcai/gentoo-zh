@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -40,8 +40,8 @@ src_unpack() {
 }
 
 src_prepare() {
-	sed -i -E "s|<Version>.+</Version>|<Version>${PV}</Version>|" src/ImeWlConverterCmd/ImeWlConverterCmd.csproj
-	sed -i -e 's/dotnet ImeWlConverterCmd.dll/ImeWlConverterCmd/g' src/ImeWlConverterCmd/Program.cs
+	sed -i -E "s|<Version>.+</Version>|<Version>${PV}</Version>|" src/ImeWlConverterCmd/ImeWlConverterCmd.csproj || die
+	sed -i -e 's/dotnet ImeWlConverterCmd.dll/ImeWlConverterCmd/g' src/ImeWlConverterCmd/Program.cs || die
 
 	dotnet-pkg_src_prepare
 }
