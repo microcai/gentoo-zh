@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-01-21 15:56:03 CST)
+(The last generation time: 2025-01-22 12:13:28 CST)
 
 ### Packages
 
@@ -522,6 +522,8 @@
  net-print/epson-inkjet-printer_201207w     | 1.0.0               |            | http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX                              | Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-print/kyodialog                        | 9.4-r2              |            | https://www.kyoceradocumentsolutions.com.cn/support/mfp/download/                       | Kyocera printer driver for linux
+--------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ net-proxy/bore                             | 0.5.2               |            | https://github.com/ekzhang/bore                                                         | bore is a simple CLI tool for making tunnels to localhost
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/cgproxy                          | 0.20-r1             |            | https://github.com/springzfx/cgproxy                                                    | Transparent Proxy with cgroup v2
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
