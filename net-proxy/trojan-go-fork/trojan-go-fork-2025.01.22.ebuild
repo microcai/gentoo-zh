@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -21,7 +21,7 @@ DEPEND="
 	app-alternatives/v2ray-geosite
 "
 RDEPEND="${DEPEND}"
-BDEPEND=">=dev-lang/go-1.22"
+BDEPEND=">=dev-lang/go-1.23"
 
 src_compile() {
 	ego build -tags "full"
