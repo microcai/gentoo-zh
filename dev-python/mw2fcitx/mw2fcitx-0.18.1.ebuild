@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -14,7 +14,7 @@ HOMEPAGE="
 	https://github.com/outloudvi/mw2fcitx
 	https://pypi.org/project/mw2fcitx
 "
-DICTV="20240809"
+DICTV="20250113"
 SRC_URI+="
 	test? ( https://github.com/outloudvi/mw2fcitx/releases/download/${DICTV}/titles.txt -> titles-${DICTV}.txt )
 "
