@@ -35,11 +35,6 @@
      pipeline.generate_dict(generator="rime")
 --- a/tests/cli/test_conf.py
 +++ b/tests/cli/test_conf.py
-@@ -1,4 +1,3 @@
--import time
- from mw2fcitx.main import inner_main
- import pytest
- 
 @@ -27,14 +26,6 @@
  """)
  
@@ -49,7 +44,7 @@
 -    start = time.perf_counter()
 -    inner_main(['-c', 'tests/cli/conf_continue'])
 -    end = time.perf_counter()
--    assert (end-start > 8)
+-    assert end-start > 8
 -
 -
  def test_err_no_path():
