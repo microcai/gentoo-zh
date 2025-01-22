@@ -1304,6 +1304,12 @@ github_action = "OriPoin"
 # TODO: upstream no tags
 #["net-print/epson-inkjet-printer_201207w"]
 
+["net-proxy/bore"]
+source = "github"
+github = "ekzhang/bore"
+use_latest_release = true
+prefix = "v"
+
 ["net-proxy/cgproxy"]
 source = "github"
 github = "springzfx/cgproxy"
