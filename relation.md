@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-01-22 14:49:46 CST)
+(The last generation time: 2025-01-22 23:06:43 CST)
 
 ### Packages
 
@@ -30,11 +30,11 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-moegirl             | 20241211            |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-moegirl-bin         | 20250111            |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
+ app-dicts/fcitx-pinyin-moegirl-bin         | 20250113            |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-sougou-baidu        | 20241220            |            | https://github.com/blackteahamburger/fcitx5-pinyin-sougou-baidu                         | Sougou & Baidu Pinyin dictionary for Fcitx5 and RIME
+ app-dicts/fcitx-pinyin-sougou-baidu        | 20250122            |            | https://github.com/blackteahamburger/fcitx5-pinyin-sougou-baidu                         | Sougou & Baidu Pinyin dictionary for Fcitx5 and RIME
    app-i18n/ibus-rime                       | 9999                | RD         | http://code.google.com/p/rimeime/                                                       | Rime Input Method Engine for IBus Framework
-   app-text/imewlconverter                  | 3.1.1               | BD         | https://github.com/studyzy/imewlconverter                                               | An open source and free input method dictionary conversion program
+   app-text/imewlconverter                  | 3.2.0               | BD         | https://github.com/studyzy/imewlconverter                                               | An open source and free input method dictionary conversion program
                                             | 9999                |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-zhwiki              | 0.2.5.20241218      |            | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
@@ -217,7 +217,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/daff                            | 1.3.46              |            | https://github.com/paulfitz/daff                                                        | The daff can produce and apply tabular diffs
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/mw2fcitx                        | 0.16.0              |            | https://github.com/outloudvi/mw2fcitx                                                   | Build fcitx5 libraries from MediaWiki sites
+ dev-python/mw2fcitx                        | 0.18.1              |            | https://github.com/outloudvi/mw2fcitx                                                   | Build fcitx5 libraries from MediaWiki sites
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/nvchecker                       | 2.16                |            | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -564,7 +564,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/mihomo-party-bin                 | 1.6.0               |            | https://mihomo.party                                                                    | Mihomo Party
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/naiveproxy-bin                   | 132.0.6834.79_p1    |            | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
+ net-proxy/naiveproxy-bin                   | 132.0.6834.79_p2    |            | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/proxy-server                     | 8.0.0               |            | https://github.com/jackarain/proxy                                                      | Implementation of all proxy protocols using modern c++
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -578,7 +578,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/smartproxy                       | 0.9.5               |            | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/trojan-go-fork                   | 2024.12.21          |            | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
+ net-proxy/trojan-go-fork                   | 2025.01.22          |            | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/v2rayA                           | 2.2.6.3             |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                             | 9999                |            |                                                                                         |
@@ -668,7 +668,7 @@
    dev-libs/v2ray-domain-list-community-bin | 20241210004721      | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-geoip                        | 0                   |            |                                                                                         | Virtual for v2ray-geoip
-   dev-libs/v2ray-geoip                     | 202412201411        | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
+   dev-libs/v2ray-geoip                     | 202501190004        | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                 | 202412120057        | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/chatgpt-desktop                   | 1.1.0               |            | https://nofwl.com                                                                       | ChatGPT Desktop Application
