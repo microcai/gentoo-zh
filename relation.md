@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-01-24 18:57:30 CST)
+(The last generation time: 2025-01-24 19:21:06 CST)
 
 ### Packages
 
@@ -297,9 +297,9 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/jf-openhuninn                  | 2.1                 |            | https://justfont.com/huninn/                                                            | An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/lxgw-neo-xihei                 | 1.211               |            | https://github.com/lxgw/LxgwNeoXiHei                                                    | A Chinese sans-serif font derived from IPAex Gothic.
+ media-fonts/lxgw-neo-xihei                 | 1.212               |            | https://github.com/lxgw/LxgwNeoXiHei                                                    | A Chinese sans-serif font derived from IPAex Gothic.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/lxgw-neo-zhisong               | 1.022               |            | https://github.com/lxgw/LxgwNeoZhiSong                                                  | An open-source Chinese font derived from IPAmj Mincho
+ media-fonts/lxgw-neo-zhisong               | 1.023               |            | https://github.com/lxgw/LxgwNeoZhiSong                                                  | An open-source Chinese font derived from IPAmj Mincho
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/misans                         | 4.003-r1            |            | https://hyperos.mi.com/font                                                             | MiSans 是由小米主导,联合汉仪发布的可免费使用的字体
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -396,7 +396,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-analyzer/realitlscanner                | 0.2.1               |            | https://github.com/XTLS/RealiTLScanner                                                  | A TLS server scanner for Reality
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-dns/ddns-go                            | 6.8.0               |            | https://github.com/jeessy2/ddns-go                                                      | Automatically obtain your public IP address and set to your domain name service.
+ net-dns/ddns-go                            | 6.8.1               |            | https://github.com/jeessy2/ddns-go                                                      | Automatically obtain your public IP address and set to your domain name service.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/dnslookup                          | 1.11.1              |            | https://github.com/ameshkov/dnslookup                                                   | Simple command line utility to make DNS lookups to the specified server
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
