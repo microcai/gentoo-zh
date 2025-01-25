@@ -37,7 +37,6 @@ RDEPEND="
 	x11-libs/libXrender
 	dev-qt/qtcore:5
 	dev-qt/qtdeclarative:5
-	dev-qt/qtvirtualkeyboard:5
 	x11-misc/shared-mime-info
 	app-arch/xz-utils
 "
