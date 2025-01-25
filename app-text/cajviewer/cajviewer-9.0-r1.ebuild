@@ -19,7 +19,6 @@ RDEPEND="
 	dev-db/freetds
 	dev-qt/qtcore:5
 	dev-qt/qtdeclarative:5
-	dev-qt/qtvirtualkeyboard:5
 	media-libs/tiff-compat:4
 "
 DEPEND="${RDEPEND}"
