@@ -35,7 +35,7 @@ SRC_URI="
 	t2? ( ${CACHYOS_URI}/0012-t2.patch -> ${P}-0012-t2.patch )
 	zstd? ( ${CACHYOS_URI}/0013-zstd.patch -> ${P}-0013-zstd.patch )
 	bore? ( ${CACHYOS_URI}/sched/0001-bore-cachy.patch -> ${P}-0001-bore-cachy.patch )
-	bmq? ( ${CACHYOS_URI}/sched/0001-prjc-cachy.patch -> ${P}-0001-prjc-cachy.patch )
+	prjc? ( ${CACHYOS_URI}/sched/0001-prjc-cachy.patch -> ${P}-0001-prjc-cachy.patch )
 	hardened? ( ${CACHYOS_URI}/misc/0001-hardened.patch -> ${P}-0001-hardened.patch )
 	rt? ( ${CACHYOS_URI}/misc/0001-rt.patch -> ${P}-0001-rt.patch )
 	dkms-clang? ( ${CACHYOS_URI}/misc/dkms-clang.patch -> ${P}-dkms-clang.patch )
@@ -49,8 +49,8 @@ SRC_URI="
 	)
 "
 KEYWORDS="~amd64"
-IUSE="amd-cache-optimizer amd-pstate amd-tlb-broadcast autofdo bbr3 +crypto +fixes ntsync perf-per-core pksm t2 +zstd +bore bmq hardened rt dkms-clang clang-polly preempt-lazy aufs deckify"
-REQUIRED_USE="?? ( bore bmq )"
+IUSE="amd-cache-optimizer amd-pstate amd-tlb-broadcast autofdo bbr3 +crypto +fixes ntsync perf-per-core pksm t2 +zstd +bore prjc hardened rt dkms-clang clang-polly preempt-lazy aufs deckify"
+REQUIRED_USE="?? ( bore prjc )"
 
 pkg_pretend() {
 	CHECKREQS_DISK_BUILD="4G"
@@ -72,7 +72,7 @@ src_prepare() {
 	use t2 && eapply "${DISTDIR}/${P}-0012-t2.patch"
 	use zstd && eapply "${DISTDIR}/${P}-0013-zstd.patch"
 	use bore && eapply "${DISTDIR}/${P}-0001-bore-cachy.patch"
-	use bmq && eapply "${DISTDIR}/${P}-0001-prjc-cachy.patch"
+	use prjc && eapply "${DISTDIR}/${P}-0001-prjc-cachy.patch"
 	use hardened && eapply "${DISTDIR}/${P}-0001-hardened.patch"
 	use rt && eapply "${DISTDIR}/${P}-0001-rt.patch"
 	use dkms-clang && eapply "${DISTDIR}/${P}-dkms-clang.patch"
