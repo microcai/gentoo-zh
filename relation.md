@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-01-27 20:08:56 CST)
+(The last generation time: 2025-01-27 20:40:04 CST)
 
 ### Packages
 
@@ -484,7 +484,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/geo                               | 1.1                 |            | https://github.com/MetaCubeX/geo/                                                       | An easy way to manage all your Geo resources
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/hoppscotch-bin                    | 24.12.1.0           |            | https://hoppscotch.io                                                                   | Open source API development ecosystem
+ net-misc/hoppscotch-bin                    | 24.12.2.0           |            | https://hoppscotch.io                                                                   | Open source API development ecosystem
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/localsend-bin                     | 1.16.1              |            | https://localsend.org                                                                   | An open-source cross-platform alternative to AirDrop
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -621,7 +621,7 @@
    acct-group/aptly                         | 0                   | RD         |                                                                                         | A swiss army knife for Debian repository management
    acct-user/aptly                          | 0                   | RD         |                                                                                         | A swiss army knife for Debian repository management
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-apps/isd                               | 0.2.0               |            | https://github.com/isd-project/isd                                                      | isd (interactive systemd) — a better way to work with systemd units
+ sys-apps/isd                               | 0.3.0               |            | https://github.com/isd-project/isd                                                      | isd (interactive systemd) — a better way to work with systemd units
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/mdp                               | 9999                |            | https://github.com/visit1985/mdp                                                        | A command-line based markdown presentation tool
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
