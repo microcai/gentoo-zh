@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-01-26 11:55:07 CST)
+(The last generation time: 2025-01-27 15:10:47 CST)
 
 ### Packages
 
@@ -267,7 +267,7 @@
  dev-vcs/sourcegit-bin                      | 2025.03             |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                  | 1.19.8              |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
-                                            | 1.20.1              |            |                                                                                         |
+                                            | 1.20.3              |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-board/othello                        | 0.2.2               |            | http://othello-game.sourceforge.net                                                     | Othello is a classic strategy game, also known as Reversi
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -276,7 +276,7 @@
  games-misc/oh-my-git-bin                   | 0.6.5               |            | https://ohmygit.org/                                                                    | An interactive Git learning game!
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-server/vintagestory-server           | 1.19.8              |            | https://www.vintagestory.at/                                                            | Dedicated game server for Vintage Story
-                                            | 1.20.1              |            |                                                                                         |
+                                            | 1.20.3              |            |                                                                                         |
    acct-group/vintagestory                  | 0                   | RD         |                                                                                         | User group for Vintage Story Server
    acct-user/vintagestory                   | 0                   | RD         |                                                                                         | User for Vintage Story Server
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
