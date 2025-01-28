@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-01-28 17:47:37 CST)
+(The last generation time: 2025-01-28 18:51:54 CST)
 
 ### Packages
 
@@ -454,7 +454,7 @@
  net-libs/jzmq                              | 9999                |            | http://www.zeromq.org/bindings:java                                                     | jzmq
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/alist                             | 3.32.0              |            | https://alist.nn.ci                                                                     | A file list/WebDAV program that supports multiple storages
-                                            | 3.41.0              |            |                                                                                         |
+                                            | 3.42.0              |            |                                                                                         |
    acct-group/alist                         | 0                   | RD         |                                                                                         | A file list/WebDAV program that supports multiple storages
    acct-user/alist                          | 0                   | RD         |                                                                                         | A file list/WebDAV program that supports multiple storages
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
