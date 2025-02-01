@@ -1023,6 +1023,7 @@ use_latest_release = true
 prefix = "v"
 from_pattern = "(.*)-(.*)"
 to_pattern = '\1_p\2'
+github_account = "peeweep"
 
 ["media-video/implay"]
 source = "github"
