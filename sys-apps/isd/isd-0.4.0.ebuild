@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="isd (interactive systemd) — a better way to work with systemd units"
 HOMEPAGE="https://github.com/isd-project/isd"
-SRC_URI="https://github.com/isd-project/isd/releases/download/v${PV}/isd.AppImage -> ${P}.AppImage"
+SRC_URI="https://github.com/isd-project/isd/releases/download/v${PV}/isd.x86_64-linux.AppImage -> ${P}.AppImage"
 
 S="${WORKDIR}"
 LICENSE="GPL-3"
