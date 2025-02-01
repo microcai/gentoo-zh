@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-01 10:27:26 CST)
+(The last generation time: 2025-02-01 11:22:33 CST)
 
 ### Packages
 
@@ -623,7 +623,7 @@
    acct-group/aptly                         | 0                   | RD         |                                                                                         | A swiss army knife for Debian repository management
    acct-user/aptly                          | 0                   | RD         |                                                                                         | A swiss army knife for Debian repository management
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-apps/isd                               | 0.3.0               |            | https://github.com/isd-project/isd                                                      | isd (interactive systemd) — a better way to work with systemd units
+ sys-apps/isd                               | 0.4.0               |            | https://github.com/isd-project/isd                                                      | isd (interactive systemd) — a better way to work with systemd units
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/mdp                               | 9999                |            | https://github.com/visit1985/mdp                                                        | A command-line based markdown presentation tool
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
