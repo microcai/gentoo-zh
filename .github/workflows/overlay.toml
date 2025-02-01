@@ -1532,6 +1532,7 @@ source = "github"
 github = "isd-project/isd"
 use_latest_release = true
 prefix = "v"
+github_account = "gouwazi"
 
 ["sys-apps/pacman"]
 source = "gitlab"
