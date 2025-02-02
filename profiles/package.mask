@@ -5,3 +5,6 @@
 # Dawn <dawn_xu_helloworld@163.com>
 # Seems it doesn't working fine on non-systemd OS after v1.7.0
 >=net-proxy/clash-verge-bin-1.7.0
+
+# mask sdl2-compat, unmask it if you wants it
+=media-libs/libsdl2-2.30.51
