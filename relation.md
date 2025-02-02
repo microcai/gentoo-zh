@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-02 00:00:49 CST)
+(The last generation time: 2025-02-02 18:02:25 CST)
 
 ### Packages
 
@@ -44,7 +44,7 @@
  app-editors/appflowy-bin                   | 0.8.2               |            | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/cursor                         | 0.44.11             |            | https://www.cursor.com/                                                                 | Cursor App - AI-first coding environment
-                                            | 0.45.7              |            |                                                                                         |
+                                            | 0.45.8              |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/marktext-bin                   | 0.17.1              |            | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
