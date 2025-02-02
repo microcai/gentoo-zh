@@ -36,7 +36,7 @@ REQUIRED_USE="
 "
 
 COMMON_DEPEND="
-	media-libs/libsdl3[vulkan?,wayland?,opengl?,jack?,ibus?,video?,sound?,dbus?,joystick?]
+	media-libs/libsdl3[vulkan?,wayland?,opengl?,jack?,ibus?,video?,sound?,dbus?,joystick?,abi_x86_32?]
 	!media-libs/libsdl2:0
 "
 RDEPEND="
