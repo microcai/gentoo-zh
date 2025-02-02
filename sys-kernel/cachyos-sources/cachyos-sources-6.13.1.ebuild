@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="1"
+K_GENPATCHES_VER="2"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 
@@ -13,8 +13,8 @@ detect_version
 detect_arch
 
 MY_KV="${KV_MAJOR}.${KV_MINOR}"
-AUFS_V="20250106"
-GIT_COMMIT_CACHYOS="d8cd6762c0b3329164d15bb1223df8a9abcfc40b"
+AUFS_V="20250127"
+GIT_COMMIT_CACHYOS="3216bcc085f66090b5a9c891e16b8516c6760856"
 
 DESCRIPTION="Full Cachyos sources including the Gentoo patchset for the ${MY_KV} kernel tree"
 HOMEPAGE="https://cachyos.org"
@@ -52,6 +52,11 @@ REQUIRED_USE="?? ( bore prjc )"
 pkg_pretend() {
 	CHECKREQS_DISK_BUILD="4G"
 	check-reqs_pkg_pretend
+}
+
+src_unpack() {
+	use fixes && UNIPATCH_EXCLUDE="2980_GCC15-gnu23-to-gnu11-fix.patch"
+	kernel-2_src_unpack
 }
 
 src_prepare() {
