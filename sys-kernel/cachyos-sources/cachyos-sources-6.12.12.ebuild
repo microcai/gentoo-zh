@@ -4,36 +4,31 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="14"
+K_GENPATCHES_VER="15"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 
-inherit check-reqs kernel-2 optfeature
+inherit check-reqs kernel-2
 detect_version
 detect_arch
 
 MY_KV="${KV_MAJOR}.${KV_MINOR}"
 AUFS_V="20250106"
-GIT_COMMIT_CACHYOS="f5bbf91fc68f0afb0e5a9d9ccfa15dc9d8015f75"
+GIT_COMMIT_CACHYOS="3216bcc085f66090b5a9c891e16b8516c6760856"
 
 DESCRIPTION="Full Cachyos sources including the Gentoo patchset for the ${MY_KV} kernel tree"
 HOMEPAGE="https://cachyos.org"
 CACHYOS_URI="https://raw.githubusercontent.com/CachyOS/kernel-patches/${GIT_COMMIT_CACHYOS}/${MY_KV}"
 SRC_URI="
 	${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
-	${CACHYOS_URI}/0006-cachy.patch -> ${P}-0006-cachy.patch
+	${CACHYOS_URI}/0003-cachy.patch -> ${P}-0003-cachy.patch
 	amd-cache-optimizer? ( ${CACHYOS_URI}/0001-amd-cache-optimizer.patch -> ${P}-0001-amd-cache-optimizer.patch )
-	amd-pstate? ( ${CACHYOS_URI}/0002-amd-pstate.patch -> ${P}-0002-amd-pstate.patch )
-	amd-tlb-broadcast? ( ${CACHYOS_URI}/0003-amd-tlb-broadcast.patch -> ${P}-0003-amd-tlb-broadcast.patch )
-	autofdo? ( ${CACHYOS_URI}/0004-autofdo.patch -> ${P}-0004-autofdo.patch )
-	bbr3? ( ${CACHYOS_URI}/0005-bbr3.patch -> ${P}-0005-bbr3.patch )
-	crypto? ( ${CACHYOS_URI}/0007-crypto.patch -> ${P}-0007-crypto.patch )
-	fixes? ( ${CACHYOS_URI}/0008-fixes.patch -> ${P}-0008-fixes.patch )
-	ntsync? ( ${CACHYOS_URI}/0009-ntsync.patch -> ${P}-0009-ntsync.patch )
-	perf-per-core? ( ${CACHYOS_URI}/0010-perf-per-core.patch -> ${P}-0010-perf-per-core.patch )
-	pksm? ( ${CACHYOS_URI}/0011-pksm.patch -> ${P}-0011-pksm.patch )
-	t2? ( ${CACHYOS_URI}/0012-t2.patch -> ${P}-0012-t2.patch )
-	zstd? ( ${CACHYOS_URI}/0013-zstd.patch -> ${P}-0013-zstd.patch )
+	bbr3? ( ${CACHYOS_URI}/0002-bbr3.patch -> ${P}-0002-bbr3.patch )
+	fixes? ( ${CACHYOS_URI}/0004-fixes.patch -> ${P}-0004-fixes.patch )
+	ntsync? ( ${CACHYOS_URI}/0005-ntsync.patch -> ${P}-0005-ntsync.patch )
+	perf-per-core? ( ${CACHYOS_URI}/0006-perf-per-core.patch -> ${P}-0006-perf-per-core.patch )
+	t2? ( ${CACHYOS_URI}/0007-t2.patch -> ${P}-0007-t2.patch )
+	zstd? ( ${CACHYOS_URI}/0008-zstd.patch -> ${P}-0008-zstd.patch )
 	bore? ( ${CACHYOS_URI}/sched/0001-bore-cachy.patch -> ${P}-0001-bore-cachy.patch )
 	prjc? ( ${CACHYOS_URI}/sched/0001-prjc-cachy.patch -> ${P}-0001-prjc-cachy.patch )
 	hardened? ( ${CACHYOS_URI}/misc/0001-hardened.patch -> ${P}-0001-hardened.patch )
@@ -49,7 +44,7 @@ SRC_URI="
 	)
 "
 KEYWORDS="~amd64"
-IUSE="amd-cache-optimizer amd-pstate amd-tlb-broadcast autofdo bbr3 +crypto +fixes ntsync perf-per-core pksm t2 +zstd +bore prjc hardened rt dkms-clang clang-polly preempt-lazy aufs deckify"
+IUSE="amd-cache-optimizer bbr3 +fixes ntsync perf-per-core t2 +zstd +bore prjc hardened rt dkms-clang clang-polly preempt-lazy aufs deckify"
 REQUIRED_USE="?? ( bore prjc )"
 
 pkg_pretend() {
@@ -57,20 +52,20 @@ pkg_pretend() {
 	check-reqs_pkg_pretend
 }
 
+src_unpack() {
+	use fixes && UNIPATCH_EXCLUDE="2980_GCC15-gnu23-to-gnu11-fix.patch"
+	kernel-2_src_unpack
+}
+
 src_prepare() {
 	use amd-cache-optimizer && eapply "${DISTDIR}/${P}-0001-amd-cache-optimizer.patch"
-	use amd-pstate && eapply "${DISTDIR}/${P}-0002-amd-pstate.patch"
-	use amd-tlb-broadcast && eapply "${DISTDIR}/${P}-0003-amd-tlb-broadcast.patch"
-	use autofdo && eapply "${DISTDIR}/${P}-0004-autofdo.patch"
-	use bbr3 && eapply "${DISTDIR}/${P}-0005-bbr3.patch"
-	eapply "${DISTDIR}/${P}-0006-cachy.patch"
-	use crypto && eapply "${DISTDIR}/${P}-0007-crypto.patch"
-	use fixes && eapply "${DISTDIR}/${P}-0008-fixes.patch"
-	use ntsync && eapply "${DISTDIR}/${P}-0009-ntsync.patch"
-	use perf-per-core && eapply "${DISTDIR}/${P}-0010-perf-per-core.patch"
-	use pksm && eapply "${DISTDIR}/${P}-0011-pksm.patch"
-	use t2 && eapply "${DISTDIR}/${P}-0012-t2.patch"
-	use zstd && eapply "${DISTDIR}/${P}-0013-zstd.patch"
+	use bbr3 && eapply "${DISTDIR}/${P}-0002-bbr3.patch"
+	eapply "${DISTDIR}/${P}-0003-cachy.patch"
+	use fixes && eapply "${DISTDIR}/${P}-0004-fixes.patch"
+	use ntsync && eapply "${DISTDIR}/${P}-0005-ntsync.patch"
+	use perf-per-core && eapply "${DISTDIR}/${P}-0006-perf-per-core.patch"
+	use t2 && eapply "${DISTDIR}/${P}-0007-t2.patch"
+	use zstd && eapply "${DISTDIR}/${P}-0008-zstd.patch"
 	use bore && eapply "${DISTDIR}/${P}-0001-bore-cachy.patch"
 	use prjc && eapply "${DISTDIR}/${P}-0001-prjc-cachy.patch"
 	use hardened && eapply "${DISTDIR}/${P}-0001-hardened.patch"
@@ -103,12 +98,6 @@ pkg_postinst() {
 	kernel-2_pkg_postinst
 	einfo "For more info on this patchset, and how to report problems, see:"
 	einfo "${HOMEPAGE}"
-
-	use pksm && optfeature "userspace KSM helper" sys-process/uksmd-cachyos sys-process/uksmd
-	if use autofdo; then
-		einfo "AutoFDO support build way: https://cachyos.org/blog/2411-kernel-autofdo"
-		einfo "Or see Documentation/dev-tools/{autofdo,propeller}.rst"
-	fi
 }
 
 pkg_postrm() {

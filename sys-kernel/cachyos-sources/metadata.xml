@@ -9,7 +9,6 @@
 		<flag name="amd-cache-optimizer">Support for AMD 3D V-Cache optimizer driver</flag>
 		<flag name="amd-pstate">AMD P-State enhancements and fixes from linux-next</flag>
 		<flag name="amd-tlb-broadcast">Support for AMD broadcast TLB invalidation</flag>
-		<flag name="autofdo">Support for generating and using AutoFDO profiles</flag>
 		<flag name="bbr3">BBR v3</flag>
 		<flag name="crypto">Patches to improve performance of CRC32 and AES128 crypto</flag>
 		<flag name="fixes">CachyOS fixes</flag>
