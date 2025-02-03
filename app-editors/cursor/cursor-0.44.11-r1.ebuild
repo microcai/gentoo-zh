@@ -87,9 +87,9 @@ src_install() {
 		EXEC_EXTRA_FLAGS+=( "--use-gl=egl" )
 	fi
 
-	sed -i -e "s|^Exec=.*|Exec=cursor ${EXEC_EXTRA_FLAGS[*]} %U|" \
-		usr/share/applications/cursor.desktop || die
-	domenu usr/share/applications/cursor.desktop
+	sed "s|^Exec=.*|Exec=cursor ${EXEC_EXTRA_FLAGS[*]} %U|" \
+		usr/share/applications/cursor.desktop > cursor-url-handler.desktop || die
+	domenu cursor-url-handler.desktop
 
 	insinto /usr/share
 	doins -r usr/share/icons
