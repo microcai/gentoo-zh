@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-02 18:02:25 CST)
+(The last generation time: 2025-02-03 15:53:22 CST)
 
 ### Packages
 
@@ -623,7 +623,7 @@
    acct-group/aptly                         | 0                   | RD         |                                                                                         | A swiss army knife for Debian repository management
    acct-user/aptly                          | 0                   | RD         |                                                                                         | A swiss army knife for Debian repository management
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-apps/isd                               | 0.4.0               |            | https://github.com/isd-project/isd                                                      | isd (interactive systemd) — a better way to work with systemd units
+ sys-apps/isd                               | 0.4.1               |            | https://github.com/isd-project/isd                                                      | isd (interactive systemd) — a better way to work with systemd units
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/mdp                               | 9999                |            | https://github.com/visit1985/mdp                                                        | A command-line based markdown presentation tool
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -666,7 +666,7 @@
    sys-kernel/xanmod-sources                | 6.11.9-r1           | RD         | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-domain-list-community        | 0                   |            |                                                                                         | Virtual for v2ray-domain-list-community
-   dev-libs/v2ray-domain-list-community     | 20241221105938      | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+   dev-libs/v2ray-domain-list-community     | 20250124154827      | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
    dev-libs/v2ray-domain-list-community-bin | 20241210004721      | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-geoip                        | 0                   |            |                                                                                         | Virtual for v2ray-geoip
