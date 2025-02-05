@@ -14,8 +14,7 @@ DESCRIPTION="The universal proxy platform."
 HOMEPAGE="https://sing-box.sagernet.org/ https://github.com/SagerNet/sing-box"
 SRC_URI="
 	https://github.com/SagerNet/sing-box/archive/refs/tags/v${_PV}.tar.gz -> ${P}.tar.gz
-	tor? ( https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz )
-	!tor? ( https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-vendor.tar.xz )
+	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-vendor.tar.xz
 "
 
 S="${WORKDIR}/${PN}-${_PV}"
