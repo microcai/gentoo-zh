@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # Puqns67 <me@puqns67.icu> (2024-07-22)
@@ -8,7 +8,7 @@
 # See also:
 # https://github.com/SagerNet/sing-box/issues/614
 # https://github.com/SagerNet/sing-box/issues/1117
-net-proxy/sing-box tor
+<net-proxy/sing-box-1.11.0 tor
 
 # Haowu Ge <gehaowu@bitmoe.com> (2024-05-26)
 # LiteLoaderQQNT is a hacking tool,
