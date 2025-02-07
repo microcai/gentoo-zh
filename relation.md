@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-08 00:16:24 CST)
+(The last generation time: 2025-02-08 00:16:53 CST)
 
 ### Packages
 
@@ -244,7 +244,7 @@
  dev-util/cargo-about                       | 0.6.6               |            | https://github.com/EmbarkStudios/cargo-about                                            | Cargo plugin to generate list of all licenses for a crate
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                 | 1.28.1.15219        |            | https://www.jetbrains.com/toolbox/app                                                   | Manage all your JetBrains Projects and Tools
-                                            | 2.5.2.35332         |            |                                                                                         |
+                                            | 2.5.3.37797         |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/pack-cli                          | 0.36.4              |            | https://buildpacks.io                                                                   | CLI for building apps using Cloud Native Buildpacks
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
