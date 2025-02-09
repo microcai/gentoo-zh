@@ -103,7 +103,7 @@ pkg_postinst() {
 	einfo "For more info on this patchset, and how to report problems, see:"
 	einfo "${HOMEPAGE}"
 
-	use pksm && optfeature "userspace KSM helper" sys-process/uksmd-cachyos sys-process/uksmd
+	use pksm && optfeature "userspace KSM helper" sys-process/cachyos-ksm-settings sys-process/uksmd
 }
 
 pkg_postrm() {
