@@ -8,7 +8,7 @@ inherit go-module systemd
 DESCRIPTION="Automatically obtain your public IP address and set to your domain name service."
 HOMEPAGE="https://github.com/jeessy2/ddns-go"
 SRC_URI="https://github.com/jeessy2/ddns-go/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://dev.dream-universe.org/distfiles/${P}-vendor.tar.xz"
+	https://distfiles.gentoocn.org/~jinqiang/distfiles/${P}-vendor.tar.xz"
 
 LICENSE="MIT BSD"
 SLOT="0"
