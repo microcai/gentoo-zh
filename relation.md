@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-09 17:48:37 CST)
+(The last generation time: 2025-02-10 00:50:57 CST)
 
 ### Packages
 
@@ -644,8 +644,8 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/systemd-zpool-scrub                 | 9999                |            | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-kernel/cachyos-sources                 | 6.12.12             |            | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
-                                            | 6.13.1              |            |                                                                                         |
+ sys-kernel/cachyos-sources                 | 6.12.13             |            | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
+                                            | 6.13.2              |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/mkinitcpio                      | 38                  |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
                                             | 39.2                |            |                                                                                         |
@@ -654,8 +654,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-power/tlpui                            | 1.7.1               |            | https://github.com/d4nj1/TLPUI                                                          | A GTK user interface for TLP written in Python
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-process/uksmd-cachyos                  | 1.2.12              |            | https://github.com/CachyOS/uksmd                                                        | Userspace KSM helper daemon (CachyOS version)
-                                            | 1.3.0               |            |                                                                                         |
+ sys-process/cachyos-ksm-settings           | 1                   |            | https://github.com/CachyOS/CachyOS-Settings                                             | Package for easy configuration of KSM via systemd
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/dist-kernel                        | 6.11.9              |            |                                                                                         | Virtual to depend on any Distribution Kernel
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
