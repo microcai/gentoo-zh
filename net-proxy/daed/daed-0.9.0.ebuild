@@ -45,6 +45,9 @@ src_prepare() {
 }
 
 src_compile(){
+	#-flto makes llvm-strip complains
+	#llvm-strip: error: '*/control/bpf_bpfel.o': The file was not recognized as a valid object file
+	filter-lto
 	# sed -i '/git submodule update/d' wing/Makefile || die
 	# sed -i 's/git rev-parse --short HEAD/echo/' vite.config.ts || die
 	if ! use webui; then
