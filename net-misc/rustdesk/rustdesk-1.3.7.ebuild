@@ -815,7 +815,7 @@ _HBB_COMMON_COMMIT="49c6b24a7a8c39d4448e07b743007ef1a3febd43"
 SRC_URI="
 	https://github.com/rustdesk/rustdesk/archive/refs/tags/${PV}.tar.gz
 		-> ${P}.tar.gz
-	https://dev.dream-universe.org/distfiles/${PN}-1.3.6-vcpkg-${_VCPKG_COMMIT}-lite.tar.gz
+	https://distfiles.gentoocn.org/~jinqiang/distfiles/${PN}-1.3.6-vcpkg-${_VCPKG_COMMIT}-lite.tar.gz
 	https://github.com/webmproject/libwebm/archive/refs/tags/libwebm-${_WEBM_PV}.tar.gz
 	https://github.com/rustdesk/hbb_common/archive/${_HBB_COMMON_COMMIT}.tar.gz
 		-> hbb_common-${_HBB_COMMON_COMMIT}.tar.gz
