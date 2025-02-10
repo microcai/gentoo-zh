@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-11 00:36:36 CST)
+(The last generation time: 2025-02-11 02:40:30 CST)
 
 ### Packages
 
@@ -534,8 +534,6 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-nyanpasu                   | 1.5.1               |            | https://github.com/LibNyanpasu/clash-nyanpasu                                           | Clash GUI based on tauri
    dev-lang/quickjs                         | 2024.01.13          | BD         | https://bellard.org/quickjs/                                                            | Small embeddable Javascript engine
-   dev-util/tauri-cli                       | 1.5.9               | BD         | https://tauri.app                                                                       | Command line interface for building Tauri apps
-                                            | 2.0.0_alpha17       |            |                                                                                         |
    net-proxy/clash-rs                       | 0.7.4               | RD         | https://watfaq.gitbook.io/clashrs-user-manual/                                          | Custom protocol, rule based network proxy
    net-proxy/mihomo                         | 1.19.2              |  D, RD     | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
      acct-group/mihomo                      | 0-r1                |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
@@ -674,6 +672,8 @@
    dev-libs/v2ray-geoip-bin                 | 202412120057        | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/chatgpt-desktop                   | 1.1.0               |            | https://nofwl.com                                                                       | ChatGPT Desktop Application
+   dev-util/tauri-cli                       | 1.5.9               | BD         | https://tauri.app                                                                       | Command line interface for building Tauri apps
+                                            | 2.0.0_alpha17       |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/follow-bin                        | 0.3.3_beta0         |            | https://follow.is/                                                                      | Next generation information browser
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
