@@ -574,8 +574,8 @@ CRATES="
 	thread_local@1.1.8
 	tiff@0.9.1
 	time-core@0.1.2
-	time-macros@0.2.17
-	time@0.3.34
+	time-macros@0.2.18
+	time@0.3.36
 	tinyvec@1.6.0
 	tinyvec_macros@0.1.1
 	to_method@1.1.0
@@ -767,6 +767,9 @@ SRC_URI="
 	${CARGO_CRATE_URIS}
 "
 SRC_URI+="https://github.com/liuyujielol/gentoo-go-deps/releases/download/${P}/${P}-node_modules-pnpm.tar.xz"
+PATCHES=(
+	"${FILESDIR}"/clash-nyanpasu-1.5.1-fix-rust-1.80-compile-failure.patch
+)
 
 LICENSE="GPL-3"
 # Dependent crate licenses
@@ -799,7 +802,6 @@ RDEPEND="
 	mihomo? ( net-proxy/mihomo )
 "
 BDEPEND="
-	<dev-util/tauri-cli-2.0.0_alpha1
 	app-misc/jq
 	dev-lang/typescript
 	dev-lang/quickjs
@@ -818,23 +820,24 @@ src_prepare() {
 	touch "${S}/backend/tauri/resources/Country.mmdb"
 
 	jq 'del(.scripts.prepare)' package.json|sponge package.json
-	cd ./backend/tauri
+	local tauri_conf_json="backend/tauri/tauri.conf.json"
 	# only build the excutable
-	jq '.tauri.bundle.active = false' tauri.conf.json|sponge tauri.conf.json
+	jq '.tauri.bundle.active = false' ${tauri_conf_json}|sponge ${tauri_conf_json}
 	# disable updater
-	jq '.tauri.updater.active = false' tauri.conf.json|sponge tauri.conf.json
+	jq '.tauri.updater.active = false' ${tauri_conf_json}|sponge ${tauri_conf_json}
 
 	default
 }
 
 src_compile() {
-	cargo-tauri build $(usex debug "-d" "") || die "cargo-tauri build failed"
-	#pnpm build || die
+	set -- pnpm tauri -v build $(usev debug "--debug") -c ./backend/tauri/tauri.conf.json
+	einfo "${@}"
+	"${@}" || die "tauri build failed"
 }
 
 src_install() {
 	dobin backend/target/$(usex debug "debug" "release")/clash-nyanpasu
-
+	
 	newicon -s 32 backend/tauri/icons/32x32.png clash-nyanpasu.png
 	newicon -s 128 backend/tauri/icons/128x128.png clash-nyanpasu.png
 	newicon -s 256 backend/tauri/icons/128x128@2x.png clash-nyanpasu.png
