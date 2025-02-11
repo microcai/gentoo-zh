@@ -1416,7 +1416,7 @@ source = "github"
 github = "SagerNet/sing-box"
 use_latest_release = true
 prefix = "v"
-github_account = ["Puqns67"]
+github_account = ["Puqns67", "peeweep"]
 
 ["net-proxy/smartproxy"]
 source = "github"
