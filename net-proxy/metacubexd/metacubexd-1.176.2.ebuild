@@ -12,7 +12,7 @@ SRC_URI="
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 
 BDEPEND="net-libs/nodejs[npm]"
 
