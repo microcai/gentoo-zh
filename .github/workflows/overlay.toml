@@ -692,14 +692,6 @@ github = "bensadeh/tailspin"
 use_latest_release = true
 github_account = "liangyongxiang"
 
-["dev-util/tauri-cli"]
-source = "github"
-github = "tauri-apps/tauri"
-use_latest_tag = true
-query = "tauri-cli-v"
-prefix = "tauri-cli-v"
-github_account = "123485k"
-
 ["dev-util/vfox"]
 source = "github"
 github = "version-fox/vfox"
