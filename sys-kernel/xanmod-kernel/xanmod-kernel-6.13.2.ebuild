@@ -1,4 +1,4 @@
-# Copyright 2020-2024 Gentoo Authors
+# Copyright 2020-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -7,7 +7,7 @@ inherit kernel-build toolchain-funcs
 
 MY_P=linux-${PV%.*}
 #Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
-GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 2))
+GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 1))
 XV="1"
 
 DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
@@ -20,8 +20,7 @@ S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64"
-IUSE="clang debug +x86-64-v2 x86-64-v3 x86-64-v4"
-REQUIRED_USE="^^ ( x86-64-v2 x86-64-v3 x86-64-v4 )"
+IUSE="clang debug"
 
 PDEPEND="
 	>=virtual/dist-kernel-${PV}"
@@ -69,28 +68,17 @@ src_prepare() {
 	# prepare the default config
 	case ${ARCH} in
 	amd64)
-		if use x86-64-v2; then
-			cp "${S}/CONFIGS/xanmod/gcc/config_x86-64-v2" .config || die
-			XV="${XV}-x64v2"
-		elif use x86-64-v3; then
-			cp "${S}/CONFIGS/xanmod/gcc/config_x86-64-v3" .config || die
-			XV="${XV}-x64v3"
-		elif use x86-64-v4; then
-			cp "${S}/CONFIGS/xanmod/gcc/config_x86-64-v4" .config || die
-			XV="${XV}-x64v4"
-		fi
+		cp "${S}/CONFIGS/x86_64/config" .config || die
+		XV="${XV}-x64v3"
 		;;
 	*)
 		die "Unsupported arch ${ARCH}"
 		;;
 	esac
 
-	local myversion="-xanmod${XV}"
-	echo "CONFIG_LOCALVERSION=\"${myversion}\"" >"${T}"/version.config || die
 	echo "CONFIG_MODPROBE_PATH=\"/sbin/modprobe\"" >"${T}"/modprobe.config || die
 
 	local merge_configs=(
-		"${T}"/version.config
 		"${T}"/modprobe.config
 	)
 
