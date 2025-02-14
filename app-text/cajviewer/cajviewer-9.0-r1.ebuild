@@ -32,6 +32,9 @@ QA_PREBUILT="
 "
 
 src_install(){
+	# fix preserved libs warning due to dev-qt/qtvirtualkeyboard
+	rm -f "${S}"/opt/cajviewer/plugins/platforminputcontexts/libqtvirtualkeyboardplugin.so || die
+
 	insinto "/opt"
 	doins -r "./${MY_PREFIX}"
 
