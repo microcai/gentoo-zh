@@ -39,7 +39,7 @@ CRATES="
 	block-buffer@0.10.4
 	block2@0.5.1
 	bstr@1.11.3
-	built@0.7.5
+	built@0.7.6
 	bumpalo@3.17.0
 	bytemuck@1.21.0
 	byteorder-lite@0.1.0
@@ -47,7 +47,7 @@ CRATES="
 	bytes@1.10.0
 	cassowary@0.3.0
 	castaway@0.2.3
-	cc@1.2.12
+	cc@1.2.13
 	cfg-expr@0.15.8
 	cfg-if@1.0.0
 	chrono@0.4.39
@@ -96,7 +96,7 @@ CRATES="
 	exr@1.73.0
 	fdeflate@0.3.7
 	fdlimit@0.3.0
-	filedescriptor@0.8.2
+	filedescriptor@0.8.3
 	filetime@0.2.25
 	flate2@1.0.35
 	fnv@1.0.7
@@ -293,7 +293,7 @@ CRATES="
 	tokio@1.43.0
 	toml@0.8.20
 	toml_datetime@0.6.8
-	toml_edit@0.22.23
+	toml_edit@0.22.24
 	tracing-appender@0.2.3
 	tracing-attributes@0.1.28
 	tracing-core@0.1.33
@@ -355,7 +355,7 @@ CRATES="
 	windows_x86_64_gnu@0.52.6
 	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.52.6
-	winnow@0.7.1
+	winnow@0.7.2
 	winsafe@0.0.19
 	write16@1.0.0
 	writeable@0.5.5
