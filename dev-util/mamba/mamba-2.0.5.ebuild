@@ -11,10 +11,12 @@ PYTHON_COMPAT=( python3_{10..12} )
 
 inherit distutils-r1 cmake multilib
 
+DATE_TAG="2024.12.12"
+
 DESCRIPTION="The Fast Cross-Platform Package Manager"
 HOMEPAGE="https://github.com/mamba-org/mamba"
-SRC_URI="https://github.com/mamba-org/mamba/archive/refs/tags/${P}.tar.gz"
 S="${WORKDIR}/${PN}-${P}"
+SRC_URI="https://github.com/mamba-org/mamba/archive/refs/tags/${DATE_TAG}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/2"
@@ -42,10 +44,12 @@ RDEPEND="${DEPEND}
 	!dev-util/micromamba-bin
 	!dev-util/micromamba
 "
-BDEPEND="python? (
+BDEPEND="
+	python? (
 		${PYTHON_DEPS}
 		${DISTUTILS_DEPS}
 		$(python_gen_cond_dep 'dev-python/pybind11[${PYTHON_USEDEP}]')
+		$(python_gen_cond_dep 'dev-python/scikit-build[${PYTHON_USEDEP}]')
 	)
 "
 #	test? (
@@ -57,6 +61,8 @@ BDEPEND="python? (
 #			dev-python/pytest-xprocess[${PYTHON_USEDEP}]
 #		')
 #	)
+
+S="${WORKDIR}/${PN}-${DATE_TAG}"
 
 # distutils_enable_tests pytest
 
@@ -98,10 +104,24 @@ src_configure() {
 
 src_compile() {
 	cmake_src_compile
-	use python && { pushd libmambapy || die ; distutils-r1_src_compile ; }
+	if use python; then
+		cmake --install ${BUILD_DIR} --prefix ${T}
+		cd libmambapy || die
+		export SKBUILD_CONFIGURE_OPTIONS="\
+		-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON \
+		-DBUILD_LIBMAMBA=ON \
+		-DBUILD_LIBMAMBAPY=ON \
+		-DBUILD_MICROMAMBA=OFF \
+		-DBUILD_MAMBA_PACKAGE=OFF \
+		-Dlibmamba_ROOT=${T}"
+		distutils-r1_src_compile
+	fi
 }
 
 src_install() {
 	cmake_src_install
-	use python && { pushd libmambapy || die ; distutils-r1_src_install ; }
+	if use python; then
+		cd libmambapy || die
+		distutils-r1_src_install
+	fi
 }
