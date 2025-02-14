@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-14 17:23:34 CST)
+(The last generation time: 2025-02-14 18:41:32 CST)
 
 ### Packages
 
@@ -429,9 +429,11 @@
  net-im/dingtalk                            | 7.0.40.30706        |            | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
                                             | 7.1.0.31017         |            |                                                                                         |
                                             | 7.1.0.31120         |            |                                                                                         |
+                                            | 7.6.25.4122001      |            |                                                                                         |
    dev-libs/libthai                         | 0.1.28              |  D, RD     | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
                                             | 0.1.29              |            |                                                                                         |
      dev-libs/libdatrie                     | 0.2.13              |  D, RD     | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
+   dev-util/execstack                       | 0_pre20130503       | BD         | https://people.redhat.com/jakub/prelink                                                 | set the executable stack flag of ELF binaries and libraries
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/tencent-qq                          | 3.2.15_p250110      |            | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
    media-libs/openslide                     | 20230904            | RD         | http://openslide.org/                                                                   | C library with simple interface to read virtual slides
