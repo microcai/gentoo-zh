@@ -8,7 +8,7 @@ inherit desktop unpacker xdg
 
 DESCRIPTION="Communication platform that supports video and audio conferencing"
 HOMEPAGE="https://gov.dingtalk.com"
-SRC_URI="https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.${PN}_${PV}_amd64.deb"
+SRC_URI="https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/0211/com.alibabainc.${PN}_${PV}_amd64.deb"
 
 S=${WORKDIR}
 
@@ -19,6 +19,7 @@ KEYWORDS="-* ~amd64"
 RESTRICT="strip mirror bindist"
 
 RDEPEND="
+	dev-libs/wayland
 	dev-libs/libthai
 	dev-qt/qtgui
 	media-libs/tiff-compat:4
@@ -61,7 +62,7 @@ src_install() {
 	# use system freetype, fix undefined symbol: FT_Get_Color_Glyph_Layer
 	rm -rf "${S}"/opt/apps/"${MY_PGK_NAME}"/files/"${MY_VERSION}"/libfreetype.so* || die
 
-	# Fix */dingtalk_dll.so: cannot enable executable stack as shared object requires: Invalid argument
+	# Fix  */dingtalk_dll.so: cannot enable executable stack as shared object requires: Invalid argument
 	execstack -c "${WORKDIR}"/opt/apps/"${MY_PGK_NAME}"/files/"${MY_VERSION}"/{dingtalk_dll,libconference_new}.so || die
 
 	# Set RPATH for preserve-libs handling

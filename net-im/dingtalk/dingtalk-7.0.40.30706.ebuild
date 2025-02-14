@@ -10,6 +10,8 @@ DESCRIPTION="Communication platform that supports video and audio conferencing"
 HOMEPAGE="https://gov.dingtalk.com"
 SRC_URI="https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.${PN}_${PV}_amd64.deb"
 
+S=${WORKDIR}
+
 LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* ~amd64"
@@ -24,7 +26,7 @@ RDEPEND="
 	media-video/rtmpdump
 	net-misc/curl
 	net-nds/openldap
-	sys-libs/glibc
+	virtual/libc
 	sys-libs/zlib
 	sys-process/procps
 	x11-libs/gtk+:2
@@ -35,9 +37,10 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 
-BDEPEND="dev-util/patchelf"
-
-S=${WORKDIR}
+BDEPEND="
+	dev-util/patchelf
+	dev-util/execstack
+"
 
 QA_PREBUILT="*"
 
@@ -57,6 +60,9 @@ src_install() {
 	rm -f "${S}"/opt/apps/"${MY_PGK_NAME}"/files/"${MY_VERSION}"/libcurl.so* || die
 	# use system freetype, fix undefined symbol: FT_Get_Color_Glyph_Layer
 	rm -rf "${S}"/opt/apps/"${MY_PGK_NAME}"/files/"${MY_VERSION}"/libfreetype.so* || die
+
+	# Fix  */dingtalk_dll.so: cannot enable executable stack as shared object requires: Invalid argument
+	execstack -c "${WORKDIR}"/opt/apps/"${MY_PGK_NAME}"/files/"${MY_VERSION}"/{dingtalk_dll,libconference_new}.so || die
 
 	# Set RPATH for preserve-libs handling
 	pushd "${S}"/opt/apps/"${MY_PGK_NAME}"/files/"${MY_VERSION}" || die
