@@ -44,14 +44,12 @@ PATCHES=(
 
 python_prepare_all() {
 	echo ${PV} > conda/.version || die
-	sed -i "s/deprecated.topic(\"24.3\", \"24.9\")//g" conda/shell/bin/conda || die
 	distutils-r1_python_prepare_all
 }
 
 python_install() {
 	distutils-r1_python_install
-	rm "${ED}/usr/bin/conda" || die
-	cp "${S}/conda/shell/bin/conda" "${ED}/usr/bin/conda" || die
+	sed -i 's/conda\.cli\.main_pip/conda.cli.main/' "${ED}/usr/bin/conda"
 	# no need for Python Byte compiling and multi python slot, please do not use python_doscript
 	# this ebuild just use one stable python target
 }
