@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-15 07:08:11 CST)
+(The last generation time: 2025-02-15 11:49:08 CST)
 
 ### Packages
 
@@ -202,9 +202,9 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/archspec                        | 0.2.5               |            | https://github.com/archspec/archspec                                                    | A library for detecting, labeling, and reasoning about microarchitectures
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/conda                           | 24.5.0              |            | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
-   dev-python/conda-libmamba-solver         | 24.11.1             |  D, RD     | https://github.com/conda/conda-libmamba-solver                                          | The libmamba based solver for conda
-     dev-util/mamba                         | 1.5.10              | RD         | https://github.com/mamba-org/mamba                                                      | The Fast Cross-Platform Package Manager
+ dev-python/conda                           | 25.1.1              |            | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
+   dev-python/conda-libmamba-solver         | 25.1.1              |  D, RD     | https://github.com/conda/conda-libmamba-solver                                          | The libmamba based solver for conda
+     dev-util/mamba                         | 2.0.5               | RD         | https://github.com/mamba-org/mamba                                                      | The Fast Cross-Platform Package Manager
        dev-cpp/reproc                       | 14.2.5              |  D, RD     | https://github.com/DaanDeMeyer/reproc                                                   | A cross-platform (C99/C++11) process library
        dev-cpp/tl-expected                  | 1.1.0               |  D, RD     | https://github.com/TartanLlama/expected                                                 | Guideline Support Library implementation by Microsoft
        sys-libs/libsolv                     | 0.7.31              |  D, RD     | https://github.com/openSUSE/libsolv                                                     | Library for solving packages and reading repositories
