@@ -5,15 +5,13 @@ EAPI=8
 
 inherit desktop xdg
 
-MY_PV=$(ver_cut 1-3)-$(ver_cut 4).$(ver_cut 5)
-
 DESCRIPTION="Next generation information browser"
 HOMEPAGE="
 	https://follow.is/
 	https://github.com/RSSNext/Follow
 "
 SRC_URI="
-	https://github.com/RSSNext/Follow/releases/download/v${MY_PV}/Follow-${MY_PV}-linux-x64.AppImage -> ${P}.AppImage
+	https://github.com/RSSNext/Follow/releases/download/v${PV}/Follow-${PV}-linux-x64.AppImage -> ${P}.AppImage
 "
 
 S="${WORKDIR}"
