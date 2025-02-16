@@ -1,13 +1,13 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-16 13:24:55 CST)
+(The last generation time: 2025-02-16 21:15:58 CST)
 
 ### Packages
 
 ```
  Package name                               | Version             | Role       | Homepage                                                                                | Description
 ============================================|=====================|============|=========================================================================================|====================
- app-admin/chezmoi                          | 2.58.0              |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
+ app-admin/chezmoi                          | 2.59.1              |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/chezmoi-bin                      | 2.59.1              |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
