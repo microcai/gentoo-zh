@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-15 22:04:49 CST)
+(The last generation time: 2025-02-16 13:24:55 CST)
 
 ### Packages
 
@@ -467,7 +467,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/aliyunpan                         | 0.3.4               |            | https://github.com/tickstep/aliyunpan                                                   | aliyunpan cli client, support Webdav service, JavaScript plugin
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/apifox                            | 2.6.48              |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
+ net-misc/apifox                            | 2.6.49              |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/baidunetdisk                      | 4.17.7              |            | https://pan.baidu.com/                                                                  | Baidu Net Disk is a cloud storage client (Linux Version)
                                             | 4.3.0               |            |                                                                                         |
