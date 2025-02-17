@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-17 16:53:23 CST)
+(The last generation time: 2025-02-17 18:01:58 CST)
 
 ### Packages
 
@@ -73,8 +73,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-meta                        | 5.0.12-r2           |            | https://fcitx-im.org                                                                    | Merge this to pull in Fcitx packages
    app-i18n/fcitx-bamboo                    | 1.0.7               | RD         | https://github.com/fcitx/fcitx5-bamboo                                                  | Typing Vietnamese by Bamboo core engine for Fcitx5
-   app-i18n/fcitx-chewing                   | 5.1.3               | RD         | https://github.com/fcitx/fcitx5-chewing                                                 | Chewing Wrapper for Fcitx.
-                                            | 5.1.4               |            |                                                                                         |
+   app-i18n/fcitx-chewing                   | 5.1.7               | RD         | https://github.com/fcitx/fcitx5-chewing                                                 | Chewing Wrapper for Fcitx.
    app-i18n/fcitx-chinese-addons            | 9999                |  D, RD     | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
      app-i18n/fcitx-lua                     | 9999                |  D, RD     | https://github.com/fcitx/fcitx5-lua                                                     | Lua support for fcitx
      app-i18n/fcitx-qt                      | 9999                |  D, RD     | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
@@ -267,7 +266,7 @@
  dev-vcs/sourcegit-bin                      | 2025.04             |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                  | 1.19.8              |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
-                                            | 1.20.3              |            |                                                                                         |
+                                            | 1.20.4              |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-board/othello                        | 0.2.2               |            | http://othello-game.sourceforge.net                                                     | Othello is a classic strategy game, also known as Reversi
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -278,7 +277,7 @@
  games-misc/oh-my-git-bin                   | 0.6.5               |            | https://ohmygit.org/                                                                    | An interactive Git learning game!
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-server/vintagestory-server           | 1.19.8              |            | https://www.vintagestory.at/                                                            | Dedicated game server for Vintage Story
-                                            | 1.20.3              |            |                                                                                         |
+                                            | 1.20.4              |            |                                                                                         |
    acct-group/vintagestory                  | 0                   | RD         |                                                                                         | User group for Vintage Story Server
    acct-user/vintagestory                   | 0                   | RD         |                                                                                         | User for Vintage Story Server
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
