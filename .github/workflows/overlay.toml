@@ -1163,6 +1163,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "123485k"
 
+["net-misc/another-redis-desktop-manager"]
+source = "github"
+github = "qishibo/AnotherRedisDesktopManager"
+use_latest_release = true
+prefix = "v"
+github_account = "gouwazi"
+
 # TODO: upstream no tags
 #["net-misc/apifox"]
 
