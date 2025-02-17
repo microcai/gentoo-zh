@@ -19,7 +19,11 @@ RDEPEND+=" !app-admin/chezmoi-bin"
 BDEPEND=">=dev-lang/go-1.23.4"
 
 src_compile() {
-	ego build
+	local ldflags="\
+		-X main.version=${PV} \
+		-X main.date=$(date -u +%Y-%m-%dT%H:%M:%SZ) \
+		-w -s"
+	ego build -trimpath -ldflags "${ldflags}"
 }
 
 src_install() {
