@@ -1,4 +1,4 @@
-# Copyright 2021-2024 Gentoo Authors
+# Copyright 2021-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -19,7 +19,7 @@ IUSE="+qt5 qt6"
 REQUIRED_USE="^^ ( qt5 qt6 )"
 
 RDEPEND="
-	>=app-i18n/fcitx-5.1.6:5
+	>=app-i18n/fcitx-5.1.12:5
 	app-i18n/fcitx-qt[qt5?,qt6?,-onlyplugin]
 	app-i18n/libskk
 	app-i18n/skk-jisyo
