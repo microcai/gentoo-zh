@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-17 14:49:36 CST)
+(The last generation time: 2025-02-17 14:57:48 CST)
 
 ### Packages
 
@@ -175,7 +175,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/tgbot-cpp                          | 1.8                 |            | https://github.com/reo7sp/tgbot-cpp                                                     | C++ library for Telegram bot API
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-db/dbeaver-bin                         | 24.3.4              |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
+ dev-db/dbeaver-bin                         | 24.3.5              |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-db/mongodb                             | 5.3.1               |            | https://www.mongodb.com                                                                 | A high-performance, open source, schema-free document-oriented database
                                             | 6.2.0-r4            |            |                                                                                         |
@@ -614,7 +614,7 @@
  sci-electronics/lceda                      | 6.5.37              |            | https://lceda.cn/                                                                       | LCEDA (binary package)
                                             | 6.5.46              |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sci-electronics/lceda-pro                  | 2.2.35.1            |            | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
+ sci-electronics/lceda-pro                  | 2.2.36.3            |            | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sci-electronics/openfpgaloader             | 0.13.1              |            | https://trabucayre.github.io/openFPGALoader                                             | Universal utility for programming FPGAs
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
