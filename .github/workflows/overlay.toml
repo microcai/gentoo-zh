@@ -1163,7 +1163,7 @@ use_latest_release = true
 prefix = "v"
 github_account = "123485k"
 
-["net-misc/another-redis-desktop-manager"]
+["net-misc/another-redis-desktop-manager-bin"]
 source = "github"
 github = "qishibo/AnotherRedisDesktopManager"
 use_latest_release = true
