@@ -1,4 +1,4 @@
-# Copyright 2023-2024 Gentoo Authors
+# Copyright 2023-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~arm64 ~riscv"
 
 BDEPEND="virtual/pkgconfig"
 RDEPEND="
-	>=app-i18n/fcitx-5.1.9:5
+	>=app-i18n/fcitx-5.1.12:5
 	>=app-i18n/libchewing-0.5.0
 "
 DEPEND="${RDEPEND}"
