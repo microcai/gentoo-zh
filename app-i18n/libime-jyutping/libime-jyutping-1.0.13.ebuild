@@ -25,7 +25,7 @@ DEPEND="
 		dev-texlive/texlive-fontutils
 	)
 	engine? (
-		app-i18n/fcitx:5
+		>=app-i18n/fcitx-5.1.12:5
 		app-i18n/fcitx-chinese-addons:5
 		sys-devel/gettext
 	)
