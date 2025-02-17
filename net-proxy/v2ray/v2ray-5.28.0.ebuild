@@ -1,26 +1,28 @@
-# Copyright 2021-2024 Gentoo Authors
+# Copyright 2021-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit systemd go-module
+inherit go-module systemd
 
 DESCRIPTION="A platform for building proxies to bypass network restrictions."
 HOMEPAGE="https://www.v2fly.org/"
-SRC_URI="https://github.com/v2fly/v2ray-core/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/Puqns67/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz"
-
+SRC_URI="
+	https://github.com/v2fly/v2ray-core/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/liuyujielol/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
+"
 S="${WORKDIR}/${PN}-core-${PV}"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 
-DEPEND="app-alternatives/v2ray-geoip
-	app-alternatives/v2ray-geosite"
-RDEPEND="!net-proxy/v2ray-bin
-	${DEPEND}"
-BDEPEND=">=dev-lang/go-1.21.4"
+DEPEND="!net-proxy/v2ray-bin
+	app-alternatives/v2ray-geoip
+	app-alternatives/v2ray-geosite
+"
+RDEPEND="${DEPEND}"
+BDEPEND=">=dev-lang/go-1.22"
 
 src_prepare() {
 	sed -i 's|/usr/local/bin|/usr/bin|;s|/usr/local/etc|/etc|' release/config/systemd/system/*.service || die
