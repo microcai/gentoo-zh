@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-17 14:45:17 CST)
+(The last generation time: 2025-02-17 14:49:36 CST)
 
 ### Packages
 
@@ -72,7 +72,7 @@
    app-i18n/cskk                            | 3.1.3               |  D, RD     | https://github.com/naokiri/cskk                                                         | C ABIから使う事を目的とした SKK(Simple Kana Kanji henkan)方式のかな漢字変換ライブラリ
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-meta                        | 5.0.12-r2           |            | https://fcitx-im.org                                                                    | Merge this to pull in Fcitx packages
-   app-i18n/fcitx-bamboo                    | 1.0.4               | RD         | https://github.com/fcitx/fcitx5-bamboo                                                  | Typing Vietnamese by Bamboo core engine for Fcitx5
+   app-i18n/fcitx-bamboo                    | 1.0.7               | RD         | https://github.com/fcitx/fcitx5-bamboo                                                  | Typing Vietnamese by Bamboo core engine for Fcitx5
    app-i18n/fcitx-chewing                   | 5.1.3               | RD         | https://github.com/fcitx/fcitx5-chewing                                                 | Chewing Wrapper for Fcitx.
                                             | 5.1.4               |            |                                                                                         |
    app-i18n/fcitx-chinese-addons            | 9999                |  D, RD     | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
@@ -85,12 +85,12 @@
    app-i18n/fcitx-m17n                      | 9999                | RD         | https://github.com/fcitx/fcitx5-m17n                                                    | m17n-provided input methods for Fcitx5
    app-i18n/fcitx-rime                      | 9999                | RD         | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
      app-i18n/fcitx                         | 9999                |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
-   app-i18n/fcitx-skk                       | 5.1.5               | RD         | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
+   app-i18n/fcitx-skk                       | 5.1.6               | RD         | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
                                             | 9999                |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-skin-material               | 0.5                 |            | https://github.com/hrko99/fcitx-skin-material                                           | A Material Design-like skin for Fcitx
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/libime-jyutping                   | 1.0.12              |            | https://github.com/fcitx/libime-jyutping                                                | A library make use of libime to implement jyutping input method
+ app-i18n/libime-jyutping                   | 1.0.13              |            | https://github.com/fcitx/libime-jyutping                                                | A library make use of libime to implement jyutping input method
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/lunar                             | 2.2-r5              |            | https://packages.debian.org/unstable/utils/lunar                                        | Chinese Lunar Calendar conversion utility
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
