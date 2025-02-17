@@ -1,22 +1,21 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
-
-inherit multilib
+EAPI=8
 
 MY_PV="${PV/_p/-}"
 
 DESCRIPTION="Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter"
 HOMEPAGE="https://packages.debian.org/stable/source/zh-autoconvert"
-SRC_URI="https://salsa.debian.org/chinese-team/zh-autoconvert/-/archive/debian/${MY_PV}/zh-autoconvert-debian-${MY_PV}.tar.gz"
+SRC_URI="
+	https://salsa.debian.org/chinese-team/zh-autoconvert/-/archive/debian/${MY_PV}/zh-autoconvert-debian-${MY_PV}.tar.gz
+"
+S="${WORKDIR}/${PN}-debian-${MY_PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="static-libs"
-
-S="${WORKDIR}/${PN}-debian-${MY_PV}"
 
 PATCHES=(
 "${S}/debian/patches/001-build-static-library.patch"
@@ -35,33 +34,28 @@ PATCHES=(
 "${S}/debian/patches/014-convert-comments-to-utf8.patch"
 "${S}/debian/patches/015-convert-docs-to-utf8.patch"
 "${S}/debian/patches/016-not-compile-xchat-plugin.patch"
+"${S}/debian/patches/0017-Make-function-definition-explicit.patch"
 )
 
 src_prepare() {
 	default
 
-	# don't build xchat-plugins
-	# so don't depend on gtk+-1.2 anymore
-	sed -i -e 's/[ ]*xchat-plugins$//' Makefile
-}
+	# respect user flags
+	find "${S}" -name 'Makefile' -exec sed -i \
+		-e 's|-O2||g' \
+		-e 's|-g||g' \
+		{} +
 
-src_compile() {
-	emake -j1 || die "emake failed"
-}
-
-src_install() {
-	dobin autogb
-	dosym autogb /usr/bin/autob5
-
-	if use static-libs; then
-		dolib.a lib/libhz.a
+	if use !static-libs; then
+		# static libs .a
+		sed -i \
+			-e 's|install -m 755 lib/libhz.a $(DESTDIR)/usr/lib|# \0|' \
+			"${S}/Makefile" || die "Failed to remove static-libs"
 	fi
 
-	dolib.so lib/libhz.so.0.0
+	# install to /usr/$(get_libdir)
+	sed -i \
+		-e "s|/usr/lib|/usr/$(get_libdir)|g" \
+		"${S}/Makefile" || die "Failed to patch Makefile"
 
-	dosym libhz.so.0.0 /usr/$(get_libdir)/libhz.so.0
-	dosym libhz.so.0 /usr/$(get_libdir)/libhz.so
-
-	insinto /usr/include
-	doins include/*.h
 }
