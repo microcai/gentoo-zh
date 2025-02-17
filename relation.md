@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-17 15:49:43 CST)
+(The last generation time: 2025-02-17 16:05:57 CST)
 
 ### Packages
 
@@ -94,7 +94,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/lunar                             | 2.2-r5              |            | https://packages.debian.org/unstable/utils/lunar                                        | Chinese Lunar Calendar conversion utility
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/zh-autoconvert                    | 0.3.16_p7           |            | https://packages.debian.org/stable/source/zh-autoconvert                                | Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
+ app-i18n/zh-autoconvert                    | 0.3.16_p10          |            | https://packages.debian.org/stable/source/zh-autoconvert                                | Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/bcompare                          | 4.4.6.27483         |            | https://www.scootersoftware.com/                                                        | Beyond Compare -- Compare, sync, and merge files and folders
                                             | 4.4.7.28397         |            |                                                                                         |
