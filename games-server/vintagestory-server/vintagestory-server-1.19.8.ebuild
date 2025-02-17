@@ -25,6 +25,7 @@ RDEPEND="
 	virtual/dotnet-sdk:${DOTNET_PKG_COMPAT}
 "
 BDEPEND="
+	sys-devel/gettext
 	virtual/dotnet-sdk:${DOTNET_PKG_COMPAT}
 "
 
