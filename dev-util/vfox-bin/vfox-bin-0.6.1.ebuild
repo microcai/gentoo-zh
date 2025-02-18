@@ -30,8 +30,8 @@ src_install() {
 	dobin usr/bin/vfox
 
 	insinto /usr/share/bash-completion/completions
-	doins usr/share/bash-completions/completions/vfox
+	doins usr/share/bash-completion/completions/vfox
 
-	insinto /usr/share/zsh/vendor-completions
-	doins usr/share/zsh/vendor-completions/_vfox
+	insinto /usr/share/zsh/site-functions
+	doins usr/share/zsh/site-functions/_vfox
 }
