@@ -11,6 +11,7 @@ SRC_URI="
 	amd64? ( https://github.com/lyswhut/lx-music-desktop/releases/download/v${PV}/lx-music-desktop_${PV}_amd64.deb )
 	arm64? ( https://github.com/lyswhut/lx-music-desktop/releases/download/v${PV}/lx-music-desktop_${PV}_arm64.deb )
 "
+S="${WORKDIR}"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
@@ -23,7 +24,6 @@ RDEPEND="x11-libs/gtk+:3[cups]
 	app-crypt/libsecret
 	x11-libs/libnotify
 "
-S="${WORKDIR}"
 src_install() {
 	insinto /opt
 	doins -r opt/*
