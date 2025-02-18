@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-17 18:01:58 CST)
+(The last generation time: 2025-02-18 17:44:45 CST)
 
 ### Packages
 
@@ -615,7 +615,7 @@
  sci-electronics/lceda                      | 6.5.37              |            | https://lceda.cn/                                                                       | LCEDA (binary package)
                                             | 6.5.46              |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sci-electronics/lceda-pro                  | 2.2.36.3            |            | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
+ sci-electronics/lceda-pro                  | 2.2.36.5            |            | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sci-electronics/openfpgaloader             | 0.13.1              |            | https://trabucayre.github.io/openFPGALoader                                             | Universal utility for programming FPGAs
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -626,7 +626,7 @@
    acct-group/aptly                         | 0                   | RD         |                                                                                         | A swiss army knife for Debian repository management
    acct-user/aptly                          | 0                   | RD         |                                                                                         | A swiss army knife for Debian repository management
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-apps/isd                               | 0.4.1               |            | https://github.com/isd-project/isd                                                      | isd (interactive systemd) — a better way to work with systemd units
+ sys-apps/isd                               | 0.5.0               |            | https://github.com/isd-project/isd                                                      | isd (interactive systemd) — a better way to work with systemd units
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/mdp                               | 9999                |            | https://github.com/visit1985/mdp                                                        | A command-line based markdown presentation tool
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
