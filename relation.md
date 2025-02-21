@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-20 21:58:44 CST)
+(The last generation time: 2025-02-21 11:06:54 CST)
 
 ### Packages
 
@@ -271,7 +271,7 @@
  games-board/othello                        | 0.2.2               |            | http://othello-game.sourceforge.net                                                     | Othello is a classic strategy game, also known as Reversi
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-fps/source-engine                    | 9999                |            | https://github.com/nillerusr/source-engine                                              | A 3D game engine developed by Valve
-   media-libs/libsdl2                       | 2.30.51             | BD         | https://libsdl.org/                                                                     | SDL2 compat layer over SDL3
+   media-libs/libsdl2                       | 2.32.50             | BD         | https://libsdl.org/                                                                     | SDL2 compat layer over SDL3
      media-libs/libsdl3                     | 3.2.0               |  D, RD     | https://libsdl.org/                                                                     | Simple Direct Media Layer
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-misc/oh-my-git-bin                   | 0.6.5               |            | https://ohmygit.org/                                                                    | An interactive Git learning game!
