@@ -9,7 +9,7 @@ inherit cmake-multilib
 
 DESCRIPTION="Simple Direct Media Layer"
 HOMEPAGE="https://libsdl.org/"
-SRC_URI="https://github.com/libsdl-org/SDL/releases/download/release-3.2.0/SDL3-${PV}.zip"
+SRC_URI="https://github.com/libsdl-org/SDL/releases/download/release-${PV}/SDL3-${PV}.zip"
 
 LICENSE="ZLIB"
 SLOT="3"
