@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-21 11:09:24 CST)
+(The last generation time: 2025-02-21 11:53:18 CST)
 
 ### Packages
 
@@ -491,7 +491,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/hoppscotch-bin                    | 25.1.1.0            |            | https://hoppscotch.io                                                                   | Open source API development ecosystem
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/localsend-bin                     | 1.16.1              |            | https://localsend.org                                                                   | An open-source cross-platform alternative to AirDrop
+ net-misc/localsend-bin                     | 1.17.0              |            | https://localsend.org                                                                   | An open-source cross-platform alternative to AirDrop
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/ntpd-rs                           | 1.4.0               |            | https://github.com/pendulum-project/ntpd-rs                                             | Full-featured implementation of NTP with NTS support
    acct-group/ntpd-rs                       | 0                   | RD         |                                                                                         | Full-featured implementation of NTP with NTS support
