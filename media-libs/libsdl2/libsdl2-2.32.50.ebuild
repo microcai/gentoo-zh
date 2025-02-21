@@ -7,7 +7,7 @@ inherit cmake-multilib flag-o-matic
 
 DESCRIPTION="SDL2 compat layer over SDL3"
 HOMEPAGE="https://libsdl.org/"
-SRC_URI="https://github.com/libsdl-org/sdl2-compat/releases/download/release-2.30.51/sdl2-compat-2.30.51.zip"
+SRC_URI="https://github.com/libsdl-org/sdl2-compat/releases/download/release-${PV}/sdl2-compat-${PV}.zip"
 
 S="${WORKDIR}/sdl2-compat-${PV}"
 
