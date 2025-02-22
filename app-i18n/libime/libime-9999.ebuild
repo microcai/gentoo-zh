@@ -5,6 +5,8 @@ EAPI=8
 
 inherit cmake git-r3
 
+DESCRIPTION="Fcitx5 Next generation of fcitx "
+HOMEPAGE="https://fcitx-im.org/"
 EGIT_REPO_URI="https://github.com/fcitx/libime.git"
 EGIT_SUBMODULES=( 'src/libime/kenlm' )
 SRC_URI="
@@ -12,8 +14,6 @@ SRC_URI="
 	https://download.fcitx-im.org/data/dict-20230412.tar.xz -> ${PN}-dict-20230412.tar.xz
 	https://download.fcitx-im.org/data/table.tar.gz -> ${PN}-table.tar.gz
 "
-DESCRIPTION="Fcitx5 Next generation of fcitx "
-HOMEPAGE="https://fcitx-im.org/"
 LICENSE="LGPL-2+"
 SLOT="5"
 IUSE="doc test"
