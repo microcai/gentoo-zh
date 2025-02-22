@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-22 14:11:14 CST)
+(The last generation time: 2025-02-22 14:49:40 CST)
 
 ### Packages
 
@@ -634,7 +634,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/wait-online                       | 9999                |            | https://github.com/lilydjwg/wait-online                                                 | Wait until we're connected to the Internet
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-boot/ventoy-bin                        | 1.1.02              |            | http://www.ventoy.net                                                                   | A new multiboot USB solution
+ sys-boot/ventoy-bin                        | 1.1.04              |            | http://www.ventoy.net                                                                   | A new multiboot USB solution
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/jmtpfs                              | 0.5                 |            | http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux | A FUSE and libmtp based filesystem for accessing MTP devices.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
