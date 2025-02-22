@@ -5,15 +5,13 @@ EAPI=8
 
 inherit cmake
 
-SRC_URI="https://github.com/TartanLlama/expected/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
-S="${WORKDIR}/${PN##tl-}-${PV}"
-
 DESCRIPTION="Guideline Support Library implementation by Microsoft"
 HOMEPAGE="https://github.com/TartanLlama/expected"
-
+SRC_URI="https://github.com/TartanLlama/expected/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/${PN##tl-}-${PV}"
 LICENSE="CC0-1.0"
 SLOT="0"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
 IUSE="test"
 RESTRICT="!test? ( test )"
 
