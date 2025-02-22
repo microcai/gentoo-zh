@@ -11,6 +11,7 @@ DESCRIPTION="SKK input method plugin for fcitx5 that uses LibCSKK"
 HOMEPAGE="https://github.com/fcitx/fcitx5-cskk"
 SRC_URI="https://github.com/fcitx/fcitx5-cskk/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
+S="${WORKDIR}/${MY_PN}-${PV}"
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -33,8 +34,6 @@ BDEPEND="
 	kde-frameworks/extra-cmake-modules
 	virtual/pkgconfig
 "
-
-S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_configure() {
 	local mycmakeargs=(
