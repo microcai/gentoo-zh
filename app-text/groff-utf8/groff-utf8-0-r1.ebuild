@@ -7,13 +7,13 @@ DESCRIPTION="GNU groff wrapper allowing UTF-8 input"
 HOMEPAGE="http://www.haible.de/bruno/packages-groff-utf8.html"
 SRC_URI="http://www.haible.de/bruno/gnu/${PN}.tar.gz -> ${P}.tar.gz"
 
+S="${WORKDIR}/${PN}"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
 DEPEND=">=sys-apps/groff-1.18.1"
-
-S="${WORKDIR}/${PN}"
 
 src_prepare() {
 	default
