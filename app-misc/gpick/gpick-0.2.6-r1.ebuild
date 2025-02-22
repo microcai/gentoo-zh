@@ -9,6 +9,8 @@ DESCRIPTION="Advanced color picker written in C++ using GTK+ toolkit"
 HOMEPAGE="https://github.com/thezbyg/gpick"
 SRC_URI="https://github.com/thezbyg/${PN}/archive/${P}.tar.gz"
 
+S="${WORKDIR}/gpick-gpick-${PV}"
+
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -25,8 +27,6 @@ RDEPEND="
 "
 
 DEPEND="${RDEPEND}"
-
-S="${WORKDIR}/gpick-gpick-${PV}"
 
 src_prepare() {
 	cmake_src_prepare
