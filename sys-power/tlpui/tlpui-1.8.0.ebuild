@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -18,11 +18,11 @@ MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="A GTK user interface for TLP written in Python"
 HOMEPAGE="https://github.com/d4nj1/TLPUI"
-KEYWORDS="~amd64"
 SRC_URI="https://github.com/d4nj1/TLPUI/archive/refs/tags/${MY_P}.tar.gz"
-
+S="${WORKDIR}/TLPUI-${MY_P}"
 LICENSE="GPL-2+"
 SLOT="0"
+KEYWORDS="~amd64"
 RESTRICT="test"
 
 RDEPEND="
@@ -31,8 +31,6 @@ RDEPEND="
 	$(python_gen_cond_dep 'dev-python/pycairo[${PYTHON_USEDEP}] dev-python/pygobject[${PYTHON_USEDEP}]')
 	x11-libs/gtksourceview:3.0
 "
-
-S="${WORKDIR}/TLPUI-${MY_P}"
 
 python_install_all() {
 	distutils-r1_python_install_all
