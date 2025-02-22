@@ -9,6 +9,8 @@ DESCRIPTION="Theme for Zsh that emphasizes speed, flexibility and out-of-the-box
 HOMEPAGE="https://github.com/romkatv/powerlevel10k"
 SRC_URI="https://github.com/romkatv/powerlevel10k/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
+S="${WORKDIR}/${MY_PN}-${PV}"
+
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -16,8 +18,6 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="app-shells/zsh
 		app-shells/gitstatus[zsh-completion]"
 RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
 	sed -i Makefile -e '/gitstatus/d' || die
