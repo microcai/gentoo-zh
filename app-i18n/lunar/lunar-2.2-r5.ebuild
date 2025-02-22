@@ -8,11 +8,10 @@ HOMEPAGE="https://packages.debian.org/unstable/utils/lunar"
 SRC_URI="mirror://debian/pool/main/l/${PN}/${PN}_${PV}.orig.tar.gz
 	mirror://debian/pool/main/l/${PN}/${PN}_${PVR/r5/9}.debian.tar.xz"
 
+S="${WORKDIR}/${PN}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-
-S="${WORKDIR}/${PN}"
 
 PATCHES=(
 	"${WORKDIR}/debian/patches/01_strip_trailing_whitespace.diff"
