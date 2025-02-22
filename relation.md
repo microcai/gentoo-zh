@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-21 20:33:53 CST)
+(The last generation time: 2025-02-22 14:11:14 CST)
 
 ### Packages
 
@@ -654,7 +654,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-libs/elog-functions                    | 0.0.2               |            | http://xochitl.matem.unam.mx/~canek/gentoo-systemd-only/index.html                      | Compatibility functions for the log e* functions of OpenRC
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-power/tlpui                            | 1.7.1               |            | https://github.com/d4nj1/TLPUI                                                          | A GTK user interface for TLP written in Python
+ sys-power/tlpui                            | 1.8.0               |            | https://github.com/d4nj1/TLPUI                                                          | A GTK user interface for TLP written in Python
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-process/cachyos-ksm-settings           | 1                   |            | https://github.com/CachyOS/CachyOS-Settings                                             | Package for easy configuration of KSM via systemd
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
