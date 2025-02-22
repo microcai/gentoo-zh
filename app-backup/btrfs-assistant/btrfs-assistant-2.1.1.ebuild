@@ -5,14 +5,12 @@ EAPI=8
 
 inherit xdg cmake optfeature
 
-SRC_URI="https://gitlab.com/btrfs-assistant/btrfs-assistant/-/archive/${PV}/${P}.tar.bz2"
-KEYWORDS="~amd64 ~x86"
-
 DESCRIPTION="A GUI management tool to make managing a Btrfs filesystem easier."
 HOMEPAGE="https://gitlab.com/btrfs-assistant/btrfs-assistant"
-
+SRC_URI="https://gitlab.com/btrfs-assistant/btrfs-assistant/-/archive/${PV}/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="
 	dev-qt/qtbase:6
