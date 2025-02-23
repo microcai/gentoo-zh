@@ -28,4 +28,5 @@ src_install(){
 	fperms +x "/usr/bin/pnpm" "/usr/bin/pnpx"
 	fperms +x "${install_dir}/bin/pnpm.cjs" "${install_dir}/bin/pnpx.cjs"
 	fperms +x "${install_dir}/dist/node-gyp-bin/node-gyp"
+	fperms +x "${install_dir}/dist/node_modules/node-gyp/bin/node-gyp.js"
 }
