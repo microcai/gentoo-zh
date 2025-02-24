@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-24 17:55:24 CST)
+(The last generation time: 2025-02-24 20:06:12 CST)
 
 ### Packages
 
@@ -402,9 +402,6 @@
  net-dns/dnslookup                          | 1.11.1              |            | https://github.com/ameshkov/dnslookup                                                   | Simple command line utility to make DNS lookups to the specified server
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/dnsmasq-china-list                 | 9999                |            | https://github.com/felixonmars/dnsmasq-china-list                                       | Chinese-specific configuration to improve your favorite DNS server.
---------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-dns/dog                                | 0.1.0-r1            |            | https://dns.lookup.dog/                                                                 | A command-line DNS client
-                                            | 0.1.0_p20211007-r1  |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/mosdns                             | 5.3.3               |            | https://github.com/IrineSistiana/mosdns                                                 | A DNS forwarder
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
