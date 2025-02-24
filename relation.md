@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-24 10:28:43 CST)
+(The last generation time: 2025-02-24 15:40:23 CST)
 
 ### Packages
 
@@ -679,7 +679,7 @@
  www-apps/cherry-studio-bin                 | 0.9.30              |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
                                             | 1.0.0               |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/follow-bin                        | 0.3.5               |            | https://follow.is/                                                                      | Next generation information browser
+ www-apps/follow-bin                        | 0.3.7               |            | https://follow.is/                                                                      | Next generation information browser
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-client/brave-bin                       | 1.75.180            |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
