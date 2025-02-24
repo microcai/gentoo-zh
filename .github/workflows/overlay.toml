@@ -1067,13 +1067,6 @@ github_account = "peeweep"
 # high update frequency
 #["net-dns/dnsmasq-china-list"]
 
-["net-dns/dog"]
-source = "github"
-github = "ogham/dog"
-use_latest_tag = true
-prefix = "v"
-github_account = "peeweep"
-
 # dead upstream
 #["net-dns/libidn11"]
 
