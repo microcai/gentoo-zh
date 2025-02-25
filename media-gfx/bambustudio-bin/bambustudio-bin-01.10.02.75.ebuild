@@ -24,7 +24,7 @@ RDEPEND="
 	media-libs/glew:0=
 	>=media-libs/glm-0.9.9.1
 	media-libs/gstreamer
-	media-libs/mesa[X(+)]
+	media-libs/mesa[X(+),osmesa]
 	net-libs/libsoup:3.0=
 	net-libs/webkit-gtk:4.1/0
 	>=sci-libs/opencascade-7.3.0:0=
