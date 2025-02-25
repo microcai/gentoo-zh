@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-25 19:21:37 CST)
+(The last generation time: 2025-02-25 20:36:29 CST)
 
 ### Packages
 
@@ -300,7 +300,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/lxgw-neo-xihei                 | 1.213               |            | https://github.com/lxgw/LxgwNeoXiHei                                                    | A Chinese sans-serif font derived from IPAex Gothic.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/lxgw-neo-zhisong               | 1.024               |            | https://github.com/lxgw/LxgwNeoZhiSong                                                  | An open-source Chinese font derived from IPAmj Mincho
+ media-fonts/lxgw-neo-zhisong               | 1.025               |            | https://github.com/lxgw/LxgwNeoZhiSong                                                  | An open-source Chinese font derived from IPAmj Mincho
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/misans                         | 4.003-r1            |            | https://hyperos.mi.com/font                                                             | MiSans 是由小米主导,联合汉仪发布的可免费使用的字体
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
