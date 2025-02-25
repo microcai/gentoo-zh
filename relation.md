@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-24 20:06:12 CST)
+(The last generation time: 2025-02-25 09:57:00 CST)
 
 ### Packages
 
@@ -263,7 +263,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gitoxide                           | 0.41.0              |            | https://github.com/GitoxideLabs/gitoxide                                                | A command-line application for interacting with git repositories
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/sourcegit-bin                      | 2025.05             |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
+ dev-vcs/sourcegit-bin                      | 2025.06             |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                  | 1.19.8              |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
                                             | 1.20.4              |            |                                                                                         |
@@ -613,7 +613,7 @@
  sci-electronics/lceda                      | 6.5.37              |            | https://lceda.cn/                                                                       | LCEDA (binary package)
                                             | 6.5.46              |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sci-electronics/lceda-pro                  | 2.2.36.5            |            | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
+ sci-electronics/lceda-pro                  | 2.2.36.7            |            | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sci-electronics/openfpgaloader             | 0.13.1              |            | https://trabucayre.github.io/openFPGALoader                                             | Universal utility for programming FPGAs
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -624,7 +624,7 @@
    acct-group/aptly                         | 0                   | RD         |                                                                                         | A swiss army knife for Debian repository management
    acct-user/aptly                          | 0                   | RD         |                                                                                         | A swiss army knife for Debian repository management
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-apps/isd                               | 0.5.0               |            | https://github.com/isd-project/isd                                                      | isd (interactive systemd) — a better way to work with systemd units
+ sys-apps/isd                               | 0.5.1               |            | https://github.com/isd-project/isd                                                      | isd (interactive systemd) — a better way to work with systemd units
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/mdp                               | 9999                |            | https://github.com/visit1985/mdp                                                        | A command-line based markdown presentation tool
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -632,7 +632,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/wait-online                       | 9999                |            | https://github.com/lilydjwg/wait-online                                                 | Wait until we're connected to the Internet
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-boot/ventoy-bin                        | 1.1.04              |            | http://www.ventoy.net                                                                   | A new multiboot USB solution
+ sys-boot/ventoy-bin                        | 1.1.05              |            | http://www.ventoy.net                                                                   | A new multiboot USB solution
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/jmtpfs                              | 0.5                 |            | http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux | A FUSE and libmtp based filesystem for accessing MTP devices.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
