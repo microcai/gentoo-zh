@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=conty-lutris
+Exec=conty-1.27.1 lutris
+Type=Application
+Terminal=false

@@ -2,7 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-inherit linux-info
+inherit linux-info desktop
+
 NAME="${PN}_lite_dwarfs.sh"
 DESCRIPTION="SquashFS image of Arch Linux with: Lutris, Steam, Bottles, Wine..."
 HOMEPAGE="https://github.com/Kron4ek/Conty"
@@ -20,6 +21,8 @@ CONFIG_CHECK="
 "
 src_install() {
 	dobin "${DISTDIR}/${P}"
+
+	domenu "${FILESDIR}/${PN}-lutris.desktop"
 }
 pkg_postinst() {
 	einfo "How to use: $ ${NAME} [command] [command_arguments]"
