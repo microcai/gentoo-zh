@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-25 20:53:15 CST)
+(The last generation time: 2025-02-26 18:55:35 CST)
 
 ### Packages
 
@@ -324,7 +324,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/zhudou                         | 2.000               |            | https://github.com/Buernia/Zhudou-Sans                                                  | A font family for CJK symbols and punctuation, derived from Noto Sans.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-gfx/bambustudio-bin                  | 01.10.02.75         |            | https://bambulab.com                                                                    | Bambu Studio is a cutting-edge, feature-rich slicing software
+ media-gfx/bambustudio-bin                  | 01.10.02.76         |            | https://bambulab.com                                                                    | Bambu Studio is a cutting-edge, feature-rich slicing software
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/scangearmp                       | 2.4.10              |            | https://www.canon.com                                                                   | Driver and utility package for Canon scanners
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
