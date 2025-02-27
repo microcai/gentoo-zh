@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -8,10 +8,9 @@ DESCRIPTION="
 飞书整合即时消息、日历、音视频会议、云文档、工作台等功能于一体，成就团队和个人，更高效、更愉悦。 "
 HOMEPAGE="https://www.feishu.cn/download"
 SRC_URI="
-	amd64? ( Feishu-linux_x64-${PV}.deb )
-	arm64? ( Feishu-linux_arm64-${PV}.deb )
-	mips? ( Feishu-linux_mips64el-${PV}.deb )
-
+	amd64? ( https://sf3-cn.feishucdn.com/obj/ee-appcenter/bfdb886c/Feishu-linux_x64-${PV}.deb )
+	arm64? ( https://sf3-cn.feishucdn.com/obj/ee-appcenter/c3f495d6/Feishu-linux_arm64-${PV}.deb )
+	mips? ( https://sf3-cn.feishucdn.com/obj/ee-appcenter/78243739/Feishu-linux_mips64el-${PV}.deb )
 "
 
 S="${WORKDIR}"
@@ -21,7 +20,7 @@ KEYWORDS="~amd64 ~arm64 ~mips"
 IUSE="big-endian abi_mips_n64"
 REQUIRED_USE="mips? ( !big-endian abi_mips_n64 )"
 
-RESTRICT="strip mirror bindist fetch"
+RESTRICT="strip mirror bindist"
 
 DEPEND="
 app-misc/ca-certificates
@@ -32,11 +31,6 @@ x11-libs/libXext
 x11-misc/xdg-utils
 "
 RDEPEND="${DEPEND}"
-pkg_nofetch() {
-	einfo "Please download ${SRC_URI} at ${HOMEPAGE} "
-	einfo "and copy the .deb file into your distfiles directory"
-	einfo "default distfiles directory is: /var/cache/distfiles"
-}
 
 src_prepare() {
 	default
