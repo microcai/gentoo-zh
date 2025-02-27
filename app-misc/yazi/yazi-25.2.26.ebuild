@@ -19,7 +19,7 @@ CRATES="
 	anstyle-query@1.1.2
 	anstyle-wincon@3.0.7
 	anstyle@1.0.10
-	anyhow@1.0.95
+	anyhow@1.0.96
 	arbitrary@1.4.1
 	arc-swap@1.7.1
 	arg_enum_proc_macro@0.3.4
@@ -27,7 +27,7 @@ CRATES="
 	async-priority-channel@0.2.0
 	autocfg@1.4.0
 	av1-grain@0.2.3
-	avif-serialize@0.8.2
+	avif-serialize@0.8.3
 	backtrace@0.3.74
 	base64@0.22.1
 	better-panic@0.3.0
@@ -39,7 +39,7 @@ CRATES="
 	block-buffer@0.10.4
 	block2@0.5.1
 	bstr@1.11.3
-	built@0.7.6
+	built@0.7.7
 	bumpalo@3.17.0
 	bytemuck@1.21.0
 	byteorder-lite@0.1.0
@@ -47,13 +47,13 @@ CRATES="
 	bytes@1.10.0
 	cassowary@0.3.0
 	castaway@0.2.3
-	cc@1.2.13
+	cc@1.2.15
 	cfg-expr@0.15.8
 	cfg-if@1.0.0
-	chrono@0.4.39
-	clap@4.5.28
-	clap_builder@4.5.27
-	clap_complete@4.5.44
+	chrono@0.4.40
+	clap@4.5.31
+	clap_builder@4.5.31
+	clap_complete@4.5.46
 	clap_complete_fig@4.5.2
 	clap_complete_nushell@4.5.5
 	clap_derive@4.5.28
@@ -85,10 +85,10 @@ CRATES="
 	dirs-sys@0.5.0
 	dirs@6.0.0
 	displaydoc@0.2.5
-	either@1.13.0
+	either@1.14.0
 	encode_unicode@1.0.0
 	env_home@0.1.0
-	equivalent@1.0.1
+	equivalent@1.0.2
 	erased-serde@0.4.5
 	errno@0.3.10
 	error-code@3.3.1
@@ -98,7 +98,7 @@ CRATES="
 	fdlimit@0.3.0
 	filedescriptor@0.8.3
 	filetime@0.2.25
-	flate2@1.0.35
+	flate2@1.1.0
 	fnv@1.0.7
 	foldhash@0.1.4
 	form_urlencoded@1.2.1
@@ -154,13 +154,13 @@ CRATES="
 	kqueue@1.0.8
 	lazy_static@1.5.0
 	lebe@0.5.2
-	libc@0.2.169
+	libc@0.2.170
 	libfuzzer-sys@0.4.9
 	libredox@0.1.3
 	linux-raw-sys@0.4.15
 	litemap@0.7.4
 	lock_api@0.4.12
-	log@0.4.25
+	log@0.4.26
 	loop9@0.1.5
 	lru@0.12.5
 	lru@0.13.0
@@ -172,7 +172,7 @@ CRATES="
 	md-5@0.10.6
 	memchr@2.7.4
 	minimal-lexical@0.2.1
-	miniz_oxide@0.8.3
+	miniz_oxide@0.8.5
 	mio@1.0.3
 	mlua-sys@0.6.7
 	mlua@0.10.3
@@ -230,7 +230,7 @@ CRATES="
 	rav1e@0.7.1
 	ravif@0.11.11
 	rayon-core@1.12.1
-	redox_syscall@0.5.8
+	redox_syscall@0.5.9
 	redox_users@0.5.0
 	regex-automata@0.1.10
 	regex-automata@0.4.9
@@ -248,9 +248,9 @@ CRATES="
 	scopeguard@1.2.0
 	semver@1.0.25
 	serde-value@0.7.0
-	serde@1.0.217
-	serde_derive@1.0.217
-	serde_json@1.0.138
+	serde@1.0.218
+	serde_derive@1.0.218
+	serde_json@1.0.139
 	serde_spanned@0.6.8
 	sharded-slab@0.1.7
 	shlex@1.3.0
@@ -262,7 +262,7 @@ CRATES="
 	simd_helpers@0.1.0
 	simdutf8@0.1.5
 	slab@0.4.9
-	smallvec@1.13.2
+	smallvec@1.14.0
 	smawk@0.3.2
 	socket2@0.5.8
 	stable_deref_trait@1.2.0
@@ -300,11 +300,11 @@ CRATES="
 	tracing-log@0.2.0
 	tracing-subscriber@0.3.19
 	tracing@0.1.41
-	trash@5.2.1
+	trash@5.2.2
 	twox-hash@2.1.0
 	typeid@1.0.2
-	typenum@1.17.0
-	unicode-ident@1.0.16
+	typenum@1.18.0
+	unicode-ident@1.0.17
 	unicode-linebreak@0.1.5
 	unicode-segmentation@1.12.0
 	unicode-truncate@1.1.0
@@ -342,6 +342,7 @@ CRATES="
 	windows-core@0.56.0
 	windows-implement@0.56.0
 	windows-interface@0.56.0
+	windows-link@0.1.0
 	windows-result@0.1.2
 	windows-sys@0.52.0
 	windows-sys@0.59.0
@@ -355,7 +356,7 @@ CRATES="
 	windows_x86_64_gnu@0.52.6
 	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.52.6
-	winnow@0.7.2
+	winnow@0.7.3
 	winsafe@0.0.19
 	write16@1.0.0
 	writeable@0.5.5
