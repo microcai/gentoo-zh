@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-26 22:06:34 CST)
+(The last generation time: 2025-02-27 11:51:43 CST)
 
 ### Packages
 
@@ -124,10 +124,8 @@
  app-office/anytype-bin                     | 0.35.4              |            | https://anytype.io                                                                      | A notebook based on p2p network
                                             | 0.45.3              |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-office/bytedance-feishu                | 7.15.13             |            | https://www.feishu.cn/download                                                          | 飞书（Feishu） 飞书整合即时消息、日历、音视频会议、云文档、工作台等功能于一体，成就团队和个人，更高效、更愉悦。
-                                            | 7.15.13-r1          |            |                                                                                         |
-                                            | 7.18.11             |            |                                                                                         |
-                                            | 7.22.9              |            |                                                                                         |
+ app-office/bytedance-feishu                | 7.22.9              |            | https://www.feishu.cn/download                                                          | 飞书（Feishu） 飞书整合即时消息、日历、音视频会议、云文档、工作台等功能于一体，成就团队和个人，更高效、更愉悦。
+                                            | 7.32.11             |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/freeoffice                      | 1062                |            | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite.
                                             | 1064                |            |                                                                                         |
