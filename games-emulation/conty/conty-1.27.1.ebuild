@@ -20,7 +20,7 @@ CONFIG_CHECK="
 	USER_NS
 "
 src_install() {
-	dobin "${DISTDIR}/${P}"
+	newbin "${DISTDIR}/${P}" $PN
 
 	domenu "${FILESDIR}/${PN}-lutris.desktop"
 }
