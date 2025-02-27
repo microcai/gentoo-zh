@@ -4,7 +4,7 @@
 EAPI=8
 inherit linux-info desktop
 
-NAME="${PN}_lite_dwarfs.sh"
+NAME="${PN}_dwarfs.sh"
 DESCRIPTION="SquashFS image of Arch Linux with: Lutris, Steam, Bottles, Wine..."
 HOMEPAGE="https://github.com/Kron4ek/Conty"
 SRC_URI="https://github.com/Kron4ek/Conty/releases/download/${PV}/${NAME} -> $P"
@@ -25,6 +25,7 @@ src_install() {
 	domenu "${FILESDIR}/${PN}-lutris.desktop"
 	domenu "${FILESDIR}/${PN}-steam.desktop"
 	domenu "${FILESDIR}/${PN}-bottles.desktop"
+	domenu "${FILESDIR}/${PN}-genymotion.desktop"
 	domenu "${FILESDIR}/${PN}-nautilus.desktop"
 }
 pkg_postinst() {
