@@ -1,6 +1,8 @@
 # egencache autostuff, shamelessly copied from the gentoo-haskell overlay ;)
 metadata/cache/
 metadata/md5-cache/
+metadata/pkg_desc_index
+metadata/timestamp.chk
 profiles/use.local.desc
 *.swp
 *.swo
