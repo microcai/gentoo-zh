@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-27 18:09:17 CST)
+(The last generation time: 2025-02-28 11:14:48 CST)
 
 ### Packages
 
@@ -238,8 +238,6 @@
                                             | 0.16.4              |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/binsider                          | 0.2.1               |            | https://binsider.dev                                                                    | Analyze ELF binaries like a boss
---------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/cargo-about                       | 0.6.6               |            | https://github.com/EmbarkStudios/cargo-about                                            | Cargo plugin to generate list of all licenses for a crate
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                 | 1.28.1.15219        |            | https://www.jetbrains.com/toolbox/app                                                   | Manage all your JetBrains Projects and Tools
                                             | 2.5.3.37797         |            |                                                                                         |
