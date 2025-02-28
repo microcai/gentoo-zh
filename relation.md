@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-28 11:48:29 CST)
+(The last generation time: 2025-02-28 15:52:12 CST)
 
 ### Packages
 
@@ -8,8 +8,9 @@
  Package name                               | Version             | Role       | Homepage                                                                                | Description
 ============================================|=====================|============|=========================================================================================|====================
  app-admin/chezmoi                          | 2.59.1-r1           |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
+                                            | 2.60.0              |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/chezmoi-bin                      | 2.59.1              |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
+ app-admin/chezmoi-bin                      | 2.60.0              |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/enpass                           | 6.10.1.1661         |            | https://www.enpass.io                                                                   | A cross-platform, complete password management solution.
                                             | 6.11.6.1833         |            |                                                                                         |
