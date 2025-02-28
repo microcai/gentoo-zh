@@ -654,12 +654,6 @@ use_latest_release = true
 prefix = "v"
 github_account = "gouwazi"
 
-["dev-util/cargo-about"]
-source = "github"
-github = "EmbarkStudios/cargo-about"
-use_latest_tag = true
-github_account = "liuyujielol"
-
 # TODO:
 # https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release
 ["dev-util/jetbrains-toolbox"]
