@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-02-28 15:52:12 CST)
+(The last generation time: 2025-03-01 14:09:27 CST)
 
 ### Packages
 
@@ -50,7 +50,7 @@
  app-editors/marktext-bin                   | 0.17.1              |            | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                         | 0.11.18             |            | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
-                                            | 1.10.7              |            |                                                                                         |
+                                            | 1.10.8              |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/la-ow-syscall                | 0.1.0-r1            |            | https://github.com/AOSC-Dev/la_ow_syscall                                               | Linux kernel module for compatibility with LoongArch's old-world ABI
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -226,7 +226,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pytube                          | 15.0.0              |            | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/android-studio                    | 2024.2.2.13         |            | https://developer.android.com/studio                                                    | Android development environment based on IntelliJ IDEA
+ dev-util/android-studio                    | 2024.2.2.15         |            | https://developer.android.com/studio                                                    | Android development environment based on IntelliJ IDEA
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/arch-install-scripts              | 29                  |            | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
    dev-util/pacstrap                        | 29                  | RD         | https://github.com/archlinux/arch-install-scripts                                       | Pacstrap - install packages to the specified new root directorye
@@ -241,7 +241,7 @@
  dev-util/binsider                          | 0.2.1               |            | https://binsider.dev                                                                    | Analyze ELF binaries like a boss
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                 | 1.28.1.15219        |            | https://www.jetbrains.com/toolbox/app                                                   | Manage all your JetBrains Projects and Tools
-                                            | 2.5.3.37797         |            |                                                                                         |
+                                            | 2.5.4.38621         |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/pack-cli                          | 0.36.4              |            | https://buildpacks.io                                                                   | CLI for building apps using Cloud Native Buildpacks
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
