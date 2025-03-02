@@ -134,3 +134,10 @@ multilib_src_install_all() {
 	rm -r "${ED}"/usr/share/licenses/ || die
 	dodoc {BUGS,COMPATIBILITY,HOW_TO_TEST_GAMES}.md README.md
 }
+
+pkg_postinst() {
+	einfo "If you are using steam,"
+	einfo "Before launching,"
+	einfo "please set the LD_PRELOAD environment variable to"
+	einfo "${EPREFIX}/usr/$(ABI=x86 get_libdir)/libSDL3.so"
+}
