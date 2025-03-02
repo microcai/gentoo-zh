@@ -10,8 +10,12 @@
 		<flag name="shadowsocks">Enable Shadowsocks Protocol</flag>
 		<flag name="bench">Enable Bench Protocol</flag>
 		<flag name="tuic">Enable Tuic Protocol</flag>
-		<flag name="tracing">Enable Tracing Protocol</flag>
 		<flag name="onion">Enable Onion Protocol</flag>
+		<flag name="ssh">Enable SSH Protocol</flag>
+		<flag name="jemallocator">Enable Jemallocator Perf</flag>
+		<flag name="standard">Enable Standard Features, shadowsocks + tuic + ssh</flag>
+		<flag name="plus">Enable Plus Features, standard + onion</flag>
+		<flag name="perf">Enable Perf Features, plus + jemallocator</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">Watfaq/clash-rs</remote-id>

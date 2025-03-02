@@ -1,0 +1,25 @@
+From 20202495654806df0baf876412fbdb474c66abf9 Mon Sep 17 00:00:00 2001
+From: jinqiang zhang <jinqiang@zhang.my>
+Date: Sun, 2 Mar 2025 10:00:07 +0000
+Subject: [PATCH] fix unstable feature unbounded_shifts compile
+
+https://github.com/microcai/gentoo-zh/issues/6264#issuecomment-2692637708
+---
+ clash_lib/src/lib.rs | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/clash_lib/src/lib.rs b/clash_lib/src/lib.rs
+index ef4898b..64e4cab 100644
+--- a/clash_lib/src/lib.rs
++++ b/clash_lib/src/lib.rs
+@@ -1,6 +1,7 @@
+ #![feature(ip)]
+ #![feature(sync_unsafe_cell)]
+ #![feature(let_chains)]
++#![feature(unbounded_shifts)]
+ 
+ #[macro_use]
+ extern crate anyhow;
+-- 
+2.48.1
+

@@ -27,7 +27,7 @@ CRATES="
 	anstyle-query@1.1.2
 	anstyle-wincon@3.0.7
 	anstyle@1.0.10
-	anyhow@1.0.95
+	anyhow@1.0.96
 	arc-swap@1.7.1
 	argon2@0.5.3
 	arrayref@0.3.9
@@ -37,10 +37,12 @@ CRATES="
 	asn1-rs-derive@0.5.1
 	asn1-rs-impl@0.2.0
 	asn1-rs@0.6.2
+	async-channel@2.3.1
 	async-compression@0.4.18
 	async-recursion@1.1.1
 	async-stream-impl@0.3.6
 	async-stream@0.3.6
+	async-task@4.7.1
 	async-trait@0.1.86
 	async_executors@0.7.0
 	asynchronous-codec@0.7.0
@@ -61,7 +63,6 @@ CRATES="
 	base64@0.22.1
 	base64ct@1.6.0
 	bcrypt-pbkdf@0.10.0
-	bindgen@0.69.5
 	bindgen@0.70.1
 	bitflags@1.3.2
 	bitflags@2.8.0
@@ -71,6 +72,7 @@ CRATES="
 	blanket@0.3.0
 	block-buffer@0.10.4
 	block-padding@0.3.3
+	blocking@1.6.1
 	blowfish@0.9.1
 	bollard-stubs@1.47.1-rc.27.3.1
 	bollard@0.18.1
@@ -84,8 +86,8 @@ CRATES="
 	bytemuck@1.21.0
 	byteorder@1.5.0
 	bytes@1.10.0
-	c2rust-bitfields-derive@0.18.0
-	c2rust-bitfields@0.18.0
+	c2rust-bitfields-derive@0.19.0
+	c2rust-bitfields@0.19.0
 	camellia@0.1.0
 	caret@0.5.1
 	cast@0.3.0
@@ -103,8 +105,8 @@ CRATES="
 	ciborium@0.2.2
 	cipher@0.4.4
 	clang-sys@1.8.1
-	clap@4.5.28
-	clap_builder@4.5.27
+	clap@4.5.30
+	clap_builder@4.5.30
 	clap_derive@4.5.28
 	clap_lex@0.7.4
 	coarsetime@0.1.35
@@ -177,18 +179,23 @@ CRATES="
 	ed25519-dalek@2.1.1
 	ed25519@2.2.3
 	educe@0.4.23
+	educe@0.6.0
 	either@1.13.0
 	elliptic-curve@0.13.8
 	endian-type@0.1.2
 	enum-as-inner@0.5.1
 	enum-as-inner@0.6.1
+	enum-ordinalize-derive@4.3.1
 	enum-ordinalize@3.1.15
+	enum-ordinalize@4.3.0
 	enum_dispatch@0.3.13
 	env_filter@0.1.3
 	env_logger@0.11.6
 	equivalent@1.0.1
 	erased-serde@0.4.5
 	errno@0.3.10
+	etherparse@0.16.0
+	event-listener-strategy@0.5.3
 	event-listener@5.4.0
 	eyre@0.6.12
 	fallible-iterator@0.3.0
@@ -213,6 +220,7 @@ CRATES="
 	futures-core@0.3.31
 	futures-executor@0.3.31
 	futures-io@0.3.31
+	futures-lite@2.6.0
 	futures-macro@0.3.31
 	futures-rustls@0.26.0
 	futures-sink@0.3.31
@@ -229,7 +237,7 @@ CRATES="
 	glob-match@0.2.1
 	glob@0.3.2
 	group@0.13.0
-	h2@0.4.7
+	h2@0.4.8
 	h3-quinn@0.0.7
 	h3@0.0.6
 	half@2.4.1
@@ -289,21 +297,20 @@ CRATES="
 	indexmap@2.7.1
 	inotify-sys@0.1.5
 	inotify@0.10.2
+	inotify@0.11.0
 	inout@0.1.3
 	instant@0.1.13
 	internal-russh-forked-ssh-key@0.6.9+upstream-0.6.7
 	inventory@0.3.17
-	ioctl-sys@0.8.0
 	ip_network@0.4.1
 	ip_network_table-deps-treebitmap@0.5.0
 	ip_network_table@0.2.0
 	ipconfig@0.3.2
 	ipnet@2.11.0
-	ipnetwork@0.20.0
+	ipnetwork@0.21.1
 	is-terminal@0.4.15
 	is_terminal_polyfill@1.70.1
 	itertools@0.10.5
-	itertools@0.12.1
 	itertools@0.13.0
 	itertools@0.14.0
 	itoa@1.0.14
@@ -312,8 +319,7 @@ CRATES="
 	kqueue-sys@1.0.4
 	kqueue@1.0.8
 	lazy_static@1.5.0
-	lazycell@1.3.0
-	libc@0.2.169
+	libc@0.2.170
 	libloading@0.8.6
 	libm@0.2.11
 	libredox@0.1.3
@@ -331,7 +337,7 @@ CRATES="
 	matches@0.1.10
 	matchit@0.7.3
 	matchit@0.8.4
-	maxminddb@0.24.0
+	maxminddb@0.25.0
 	md-5@0.10.6
 	md5@0.7.0
 	memchr@2.7.4
@@ -349,12 +355,14 @@ CRATES="
 	moka@0.12.10
 	multimap@0.10.0
 	murmur3@0.5.2
-	network-interface@2.0.0
 	nibble_vec@0.1.0
 	nix@0.25.1
+	nix@0.29.0
 	nom@7.1.3
 	notify-types@1.0.1
+	notify-types@2.0.0
 	notify@7.0.0
+	notify@8.0.0
 	nu-ansi-term@0.46.0
 	num-bigint-dig@0.8.4
 	num-bigint@0.4.6
@@ -364,17 +372,12 @@ CRATES="
 	num-traits@0.2.19
 	num_enum@0.7.3
 	num_enum_derive@0.7.3
+	num_threads@0.1.7
 	object@0.36.7
 	once_cell@1.20.3
 	oneshot-fused-workaround@0.2.1
 	oorandom@11.1.4
 	opaque-debug@0.3.1
-	opentelemetry-jaeger-propagator@0.27.0
-	opentelemetry-otlp@0.27.0
-	opentelemetry-proto@0.27.0
-	opentelemetry-semantic-conventions@0.27.0
-	opentelemetry@0.27.1
-	opentelemetry_sdk@0.27.1
 	option-ext@0.2.0
 	ordered-float@2.10.1
 	os_str_bytes@6.6.1
@@ -400,6 +403,7 @@ CRATES="
 	pin-project-lite@0.2.16
 	pin-project@1.1.8
 	pin-utils@0.1.0
+	piper@0.2.4
 	pkcs1@0.7.5
 	pkcs5@0.7.1
 	pkcs8@0.10.2
@@ -424,10 +428,10 @@ CRATES="
 	proc-macro-error-attr2@2.0.0
 	proc-macro-error2@2.0.1
 	proc-macro2@1.0.93
-	prost-build@0.13.4
-	prost-derive@0.13.4
-	prost-types@0.13.4
-	prost@0.13.4
+	prost-build@0.13.5
+	prost-derive@0.13.5
+	prost-types@0.13.5
+	prost@0.13.5
 	public-suffix@0.1.2
 	pwd-grp@1.0.0
 	quanta@0.9.3
@@ -466,7 +470,7 @@ CRATES="
 	rusqlite@0.32.1
 	russh-cryptovec@0.50.2
 	russh-util@0.50.0
-	russh@0.50.2
+	russh@0.50.4
 	rustc-demangle@0.1.24
 	rustc-hash@1.1.0
 	rustc-hash@2.1.0
@@ -476,6 +480,7 @@ CRATES="
 	rustls-pemfile@2.2.0
 	rustls-pki-types@1.10.1
 	rustls-webpki@0.102.8
+	rustls@0.23.23
 	rustversion@1.0.19
 	ryu@1.0.18
 	safelog@0.4.3
@@ -493,10 +498,10 @@ CRATES="
 	semver@1.0.25
 	sendfd@0.4.3
 	serde-value@0.7.0
-	serde@1.0.217
-	serde_derive@1.0.217
+	serde@1.0.218
+	serde_derive@1.0.218
 	serde_ignored@0.1.10
-	serde_json@1.0.138
+	serde_json@1.0.139
 	serde_path_to_error@0.1.16
 	serde_repr@0.1.19
 	serde_spanned@0.6.8
@@ -510,7 +515,6 @@ CRATES="
 	sha2@0.10.8
 	sha3@0.10.8
 	shadowsocks-crypto@0.5.8
-	shadowsocks@1.22.0
 	sharded-slab@0.1.7
 	shellexpand@3.1.0
 	shlex@1.3.0
@@ -521,6 +525,7 @@ CRATES="
 	slotmap-careful@0.2.3
 	slotmap@1.0.7
 	smallvec@1.13.2
+	smoltcp@0.11.0
 	smoltcp@0.12.0
 	socket2@0.4.10
 	socket2@0.5.8
@@ -543,7 +548,7 @@ CRATES="
 	synstructure@0.13.1
 	tagptr@0.2.0
 	tap@1.0.1
-	tempfile@3.16.0
+	tempfile@3.17.1
 	termtree@0.5.1
 	thiserror-impl@1.0.69
 	thiserror-impl@2.0.11
@@ -551,6 +556,8 @@ CRATES="
 	thiserror@2.0.11
 	thousands@0.2.0
 	thread_local@1.1.8
+	tikv-jemalloc-sys@0.6.0+5.3.0-1-ge13ca993e8ccb9ba9847cc330696e02839f328f7
+	tikv-jemallocator@0.6.0
 	time-core@0.1.2
 	time-macros@0.2.19
 	time@0.3.37
@@ -560,10 +567,11 @@ CRATES="
 	tinyvec@1.8.1
 	tinyvec_macros@0.1.1
 	tokio-macros@2.5.0
+	tokio-rustls@0.26.1
 	tokio-stream@0.1.17
 	tokio-test@0.4.4
 	tokio-tfo@0.3.1
-	tokio-tungstenite@0.26.1
+	tokio-tungstenite@0.26.2
 	tokio-util@0.7.13
 	tokio@1.43.0
 	toml@0.8.19
@@ -614,7 +622,6 @@ CRATES="
 	tracing-attributes@0.1.28
 	tracing-core@0.1.33
 	tracing-log@0.2.0
-	tracing-opentelemetry@0.28.0
 	tracing-subscriber@0.3.19
 	tracing-test-macro@0.2.5
 	tracing-test@0.2.5
@@ -623,7 +630,8 @@ CRATES="
 	trait-variant@0.1.2
 	trust-dns-proto@0.22.0
 	try-lock@0.2.5
-	tungstenite@0.26.1
+	tun@0.7.13
+	tungstenite@0.26.2
 	typed-index-collections@3.1.0
 	typeid@1.0.2
 	typenum@1.17.0
@@ -643,8 +651,8 @@ CRATES="
 	utf16_iter@1.0.5
 	utf8_iter@1.0.4
 	utf8parse@0.2.2
-	uuid-macro-internal@1.13.1
-	uuid@1.13.1
+	uuid-macro-internal@1.14.0
+	uuid@1.14.0
 	valuable@0.1.1
 	vcpkg@0.2.15
 	version_check@0.9.5
@@ -667,59 +675,52 @@ CRATES="
 	web-sys@0.3.77
 	web-time@1.1.0
 	webpki-roots@0.26.8
-	which@4.4.2
 	widestring@1.1.0
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-util@0.1.9
 	winapi-x86_64-pc-windows-gnu@0.4.0
 	winapi@0.3.9
-	windows-core@0.51.1
+	windows-collections@0.1.1
 	windows-core@0.52.0
 	windows-core@0.58.0
-	windows-core@0.59.0
+	windows-core@0.60.1
+	windows-future@0.1.1
 	windows-implement@0.58.0
 	windows-implement@0.59.0
 	windows-interface@0.58.0
 	windows-interface@0.59.0
+	windows-link@0.1.0
+	windows-numerics@0.1.1
 	windows-result@0.2.0
-	windows-result@0.3.0
+	windows-result@0.3.1
 	windows-strings@0.1.0
-	windows-strings@0.3.0
+	windows-strings@0.3.1
 	windows-sys@0.48.0
 	windows-sys@0.52.0
 	windows-sys@0.59.0
 	windows-targets@0.48.5
 	windows-targets@0.52.6
-	windows-targets@0.53.0
-	windows@0.51.1
 	windows@0.58.0
-	windows@0.59.0
+	windows@0.60.0
 	windows_aarch64_gnullvm@0.48.5
 	windows_aarch64_gnullvm@0.52.6
-	windows_aarch64_gnullvm@0.53.0
 	windows_aarch64_msvc@0.48.5
 	windows_aarch64_msvc@0.52.6
-	windows_aarch64_msvc@0.53.0
 	windows_i686_gnu@0.48.5
 	windows_i686_gnu@0.52.6
-	windows_i686_gnu@0.53.0
 	windows_i686_gnullvm@0.52.6
-	windows_i686_gnullvm@0.53.0
 	windows_i686_msvc@0.48.5
 	windows_i686_msvc@0.52.6
-	windows_i686_msvc@0.53.0
 	windows_x86_64_gnu@0.48.5
 	windows_x86_64_gnu@0.52.6
-	windows_x86_64_gnu@0.53.0
 	windows_x86_64_gnullvm@0.48.5
 	windows_x86_64_gnullvm@0.52.6
-	windows_x86_64_gnullvm@0.53.0
 	windows_x86_64_msvc@0.48.5
 	windows_x86_64_msvc@0.52.6
-	windows_x86_64_msvc@0.53.0
 	winnow@0.6.24
 	winreg@0.50.0
-	wintun@0.3.2
+	winreg@0.55.0
+	wintun-bindings@0.7.30
 	wit-bindgen-rt@0.33.0
 	write16@1.0.0
 	writeable@0.5.5
@@ -741,15 +742,16 @@ CRATES="
 "
 
 declare -A GIT_CRATES=(
-	[boringtun]='https://github.com/cloudflare/boringtun;f672bb6c1e1e371240a8d151f15854687eb740bb;boringtun-%commit%/boringtun'
-	[netstack-lwip]='https://github.com/Watfaq/netstack-lwip;2817bf82740e04bbee6b7bf1165f55657a6ed163;netstack-lwip-%commit%'
-	[rustls]='https://github.com/Watfaq/rustls;a7d217bf235aeb3ca8d123352d90a27c1ca0f41b;rustls-%commit%/rustls'
-	[tokio-rustls]='https://github.com/Watfaq/tokio-rustls;6b9af8ac7bb5abc159d9a67e9ddbf84127559a4a;tokio-rustls-%commit%'
+	[boring-noise]='https://github.com/Watfaq/boring-noise;e01409626a15a987b0174d8c78b8181031c37309;boring-noise-%commit%'
+	[netstack-smoltcp]='https://github.com/automesh-network/netstack-smoltcp;62260478079d96b42fa524caa855609312c2cf43;netstack-smoltcp-%commit%'
+	[network-interface]='https://github.com/Watfaq/network-interface;db9f1bcd2faa5122f694283bd300bf42d166d2f3;network-interface-%commit%'
+	[shadowsocks]='https://github.com/shadowsocks/shadowsocks-rust;fe1388da06775e3ebe3f216c96073fa6c6d1ba25;shadowsocks-rust-%commit%/crates/shadowsocks'
+	[tokio-watfaq-rustls]='https://github.com/Watfaq/tokio-rustls;638db32084d7ecf9c2660847b55d48d1186b4055;tokio-rustls-%commit%'
 	[tracing-oslog]='https://github.com/Absolucy/tracing-oslog;b44d62871464e332249ae79e000dad9ebeb06434;tracing-oslog-%commit%'
 	[tuic-quinn]='https://github.com/Itsusinn/tuic;17ee3f702e26aca048495d4c66ad5316bb8eaf98;tuic-%commit%/tuic-quinn'
 	[tuic]='https://github.com/Itsusinn/tuic;17ee3f702e26aca048495d4c66ad5316bb8eaf98;tuic-%commit%/tuic'
-	[tun]='https://github.com/Watfaq/rust-tun;8f7568190f1200d3e272ca534baf8d1578147e18;rust-tun-%commit%'
 	[unix-udp-sock]='https://github.com/Watfaq/unix-udp-sock;cd3e4eca43e6f3be82a2703c3d711b7e18fbfd18;unix-udp-sock-%commit%'
+	[watfaq-rustls]='https://github.com/Watfaq/rustls;4cae3aa2e84ea29d8a74b495793773bdb0a72206;rustls-%commit%/rustls'
 )
 
 inherit cargo systemd
@@ -772,31 +774,44 @@ LICENSE+="
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="doc +lto onion bench tracing tuic +shadowsocks"
-REQUIRED_UES="debug? ( !lto )"
+# https://github.com/Watfaq/clash-rs/blob/v0.7.6/clash/Cargo.toml
+IUSE="doc +lto standard plus perf +shadowsocks ssh tuic onion jemallocator bench"
+REQUIRED_USE="
+	debug? ( !lto )
+	standard? (
+		shadowsocks
+		ssh
+		tuic
+	)
+	plus? (
+		standard
+		onion
+	)
+	perf? (
+		plus
+		jemallocator
+	)
+"
+
+BDEPEND="dev-libs/protobuf"
+
+PATCHES=(
+	"${FILESDIR}/${P}-fix-unstable-features.patch"
+)
 
 src_configure() {
 	local myfeatures=(
 		$(usev bench)
 		$(usev onion)
+		$(usev standard)
+		$(usev plus)
+		$(usev perf)
 		$(usev shadowsocks)
-		$(usev tracing)
+		$(usev ssh)
 		$(usev tuic)
+		$(usev jemallocator)
 	)
 	cargo_src_configure
-
-	# fix [patch.crates-io] section in config.toml
-
-	echo "[patch.crates-io]" >> "${CARGO_HOME}"/config.toml
-	declare -a patch_creats=(
-		"tokio-rustls"
-		"rustls"
-	)
-	for crate in "${patch_creats[@]}"; do
-		crate_path=$(grep -e "^${crate}" "${CARGO_HOME}"/config.toml) || die
-		sed -i "/\/${crate}/,+2d" "${CARGO_HOME}"/config.toml || die
-		echo "${crate_path}" >> "${CARGO_HOME}"/config.toml
-	done
 }
 
 src_compile() {
