@@ -34,7 +34,7 @@ CRATES="
 	bincode@1.3.3
 	bit_field@0.10.2
 	bitflags@1.3.2
-	bitflags@2.8.0
+	bitflags@2.9.0
 	bitstream-io@2.6.0
 	block-buffer@0.10.4
 	block2@0.5.1
@@ -47,7 +47,7 @@ CRATES="
 	bytes@1.10.0
 	cassowary@0.3.0
 	castaway@0.2.3
-	cc@1.2.15
+	cc@1.2.16
 	cfg-expr@0.15.8
 	cfg-if@1.0.0
 	chrono@0.4.40
@@ -63,7 +63,7 @@ CRATES="
 	colorchoice@1.0.3
 	compact_str@0.8.1
 	concurrent-queue@2.5.0
-	console@0.15.10
+	console@0.15.11
 	core-foundation-sys@0.8.7
 	crc32fast@1.4.2
 	crossbeam-channel@0.5.14
@@ -116,7 +116,7 @@ CRATES="
 	getrandom@0.2.15
 	gif@0.13.1
 	gimli@0.31.1
-	globset@0.4.15
+	globset@0.4.16
 	half@2.4.1
 	hashbrown@0.15.2
 	heck@0.5.0
@@ -158,7 +158,7 @@ CRATES="
 	libfuzzer-sys@0.4.9
 	libredox@0.1.3
 	linux-raw-sys@0.4.15
-	litemap@0.7.4
+	litemap@0.7.5
 	lock_api@0.4.12
 	log@0.4.26
 	loop9@0.1.5
@@ -365,8 +365,8 @@ CRATES="
 	yoke@0.7.5
 	zerocopy-derive@0.7.35
 	zerocopy@0.7.35
-	zerofrom-derive@0.1.5
-	zerofrom@0.1.5
+	zerofrom-derive@0.1.6
+	zerofrom@0.1.6
 	zerovec-derive@0.10.3
 	zerovec@0.10.4
 	zune-core@0.4.12
