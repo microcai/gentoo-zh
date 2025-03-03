@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-03 10:02:15 CST)
+(The last generation time: 2025-03-03 10:10:32 CST)
 
 ### Packages
 
@@ -672,8 +672,7 @@
    dev-libs/v2ray-geoip                     | 202501190004        | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                 | 202412120057        | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                 | 0.9.30              |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
-                                            | 1.0.1               |            |                                                                                         |
+ www-apps/cherry-studio-bin                 | 1.0.4               |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/follow-bin                        | 0.3.7               |            | https://follow.is/                                                                      | Next generation information browser
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
