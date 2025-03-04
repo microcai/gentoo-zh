@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-03 20:16:02 CST)
+(The last generation time: 2025-03-04 15:57:22 CST)
 
 ### Packages
 
@@ -279,6 +279,8 @@
                                             | 1.20.4              |            |                                                                                         |
    acct-group/vintagestory                  | 0                   | RD         |                                                                                         | User group for Vintage Story Server
    acct-user/vintagestory                   | 0                   | RD         |                                                                                         | User for Vintage Story Server
+--------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ games-strategy/zedonline-bin               | 0.3.2               |            | https://sourceforge.net/projects/zedonline/                                             | A remake of the 1996 classic game Z, with network play
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-util/winegame-client-bin             | 0.5.10.5            |            | https://winegame.net/                                                                   | An open source gaming platform for GNU/Linux
                                             | 0.5.12.2            |            |                                                                                         |
