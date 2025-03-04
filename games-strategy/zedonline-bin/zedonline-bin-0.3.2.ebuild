@@ -34,4 +34,5 @@ src_install() {
 
 pgk_postinst() {
 	einfo "See the game guide at https://zzone.lewe.com/commander-zod-single-player-guide"
+	einfo "The community is here https://discord.gg/gw2kaWqD"
 }
