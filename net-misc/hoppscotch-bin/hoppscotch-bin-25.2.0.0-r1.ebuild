@@ -21,12 +21,12 @@ RDEPEND="net-libs/webkit-gtk:4"
 RESTRICT="strip"
 
 src_install() {
-	dobin "${S}"/usr/bin/hoppscotch
+	dobin "${S}"/usr/bin/hoppscotch-desktop
 
-	domenu "${S}"/usr/share/applications/hoppscotch.desktop
+	domenu "${S}"/usr/share/applications/Hoppscotch.desktop
 
 	for size in 32 128; do
-		doicon -s ${size} "${S}"/usr/share/icons/hicolor/${size}x${size}/apps/hoppscotch.png
+		doicon -s ${size} "${S}"/usr/share/icons/hicolor/${size}x${size}/apps/hoppscotch-desktop.png
 	done
-	doicon -s 256 "${S}"/usr/share/icons/hicolor/256x256@2/apps/hoppscotch.png
+	doicon -s 256 "${S}"/usr/share/icons/hicolor/256x256@2/apps/hoppscotch-desktop.png
 }
