@@ -1,16 +1,16 @@
-# Copyright 2004-2024 Gentoo Authors
+# Copyright 2004-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 # NEED_BOOTSTRAP is for developers to quickly generate a tarball
 # for publishing to the tree.
 NEED_BOOTSTRAP="no"
-inherit crossdev multilib python-any-r1 flag-o-matic toolchain-funcs multilib-minimal
+inherit crossdev multibuild multilib python-any-r1 flag-o-matic toolchain-funcs multilib-minimal
 
 # upstream metadata
-XC_PV="4.4.36"
+XC_PV="4.4.38"
 XC_P="libxcrypt-${XC_PV}"
 
 # liblol additions
@@ -28,9 +28,8 @@ fi
 S="${WORKDIR}/libxcrypt-${XC_PV}"
 LICENSE="LGPL-2.1+ public-domain BSD BSD-2"
 SLOT="0/1"
-#KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+#KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
 KEYWORDS="-* ~loong"
-
 IUSE="static-libs test headers-only"
 RESTRICT="!test? ( test )"
 
@@ -47,7 +46,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND="
 	dev-lang/perl
-	>=dev-util/patchelf-liblol-0.1.4
+	>=dev-util/patchelf-liblol-0.1.9
 	test? ( $(python_gen_any_dep 'dev-python/passlib[${PYTHON_USEDEP}]') )
 "
 
@@ -117,13 +116,21 @@ src_prepare() {
 
 src_configure() {
 	MULTIBUILD_VARIANTS=(
-		xcrypt_compat
+		xcrypt_liblol
 	)
 
 	MYPREFIX=${EPREFIX}
 	MYSYSROOT=${ESYSROOT}
 
 	if target_is_not_host; then
+		# Hack to work around missing TARGET_CC support.
+		# See bug 949976.
+		if tc-is-clang; then
+			export CC="${CTARGET}-clang"
+		else
+			export CC="${CTARGET}-gcc"
+		fi
+
 		local CHOST=${CTARGET}
 
 		MYPREFIX=
@@ -134,24 +141,16 @@ src_configure() {
 		multilib_env
 		ABI=${DEFAULT_ABI}
 
-		tc-getCC >/dev/null
-		if [[ ${CC} != ${CHOST}-* ]]; then
-			unset CC
-			tc-getCC >/dev/null
-		fi
-
 		strip-unsupported-flags
 	fi
 
 	if use headers-only; then
-		# Nothing is compiled here which would affect the headers for the target.
-		# So forcing CC is sane.
+		# Nothing is compiled which would affect the headers, so we set
+		# CC and PKG_CONFIG to ensure configure passes without defaulting
+		# to the unprefixed host variants e.g. "pkg-config"
 		local -x CC="$(tc-getBUILD_CC)"
+		local -x PKG_CONFIG="false"
 	fi
-
-	# Avoid possible "illegal instruction" errors with gold
-	# bug #821496
-	tc-ld-disable-gold
 
 	# Doesn't work with LTO: bug #852917.
 	# https://github.com/besser82/libxcrypt/issues/24
@@ -179,14 +178,15 @@ multilib_src_configure() {
 	tc-export PKG_CONFIG
 
 	case "${MULTIBUILD_ID}" in
-		xcrypt_compat-*)
+		xcrypt_liblol-*)
 			myconf+=(
 				--disable-static
 				--enable-shared
 				--disable-xcrypt-compat-files
-				--enable-obsolete-api=yes
+				--enable-obsolete-api=glibc
 			)
 			;;
+
 		*) die "Unexpected MULTIBUILD_ID: ${MULTIBUILD_ID}";;
 	esac
 
@@ -204,7 +204,12 @@ multilib_src_compile() {
 	emake libcrypt.la SYMVER_FLOOR=GLIBC_2.27
 
 	patchelf-liblol \
-		--page-size "$(( 16 * 1024))" \
+		--page-size "$(( 64 * 1024 ))" \
+		--remap-symvers "GLIBC_2.36=GLIBC_2.27,GLIBC_2.28" \
+		.libs/libcrypt.so.1 || die
+
+	patchelf-liblol \
+		--page-size "$(( 64 * 1024 ))" \
 		--replace-needed "ld-linux-loongarch-lp64d.so.1" "ld.so.1" \
 		.libs/libcrypt.so.1 || die
 }
@@ -224,17 +229,29 @@ src_install() {
 	fi
 
 	multibuild_foreach_variant multilib-minimal_src_install
+
+	find "${ED}" -name '*.la' -delete || die
+
+	if target_is_not_host; then
+		insinto /usr/${CTARGET}/usr/share
+		doins -r "${ED}/usr/share/doc"
+		rm -r "${ED}/usr/share/doc" || die
+		rmdir "${ED}/usr/share" || die
+	fi
 }
 
 multilib_src_install() {
 	if use headers-only; then
-		return
+		die "not supposed to happen for liblol builds"
 	fi
 
-	local liblol_libdir="$EPREFIX$LOLPREFIX/$(get_libdir)/preload"
+	local liblol_libdir
+	liblol_libdir="$EPREFIX$LOLPREFIX/$(get_libdir)/preload"
 	into "$liblol_libdir"
 
 	# pwd is builddir
 	# the targets are all symlinks, so doins cannot be used
 	cp .libs/libcrypt.so.1 "${D}${liblol_libdir}/libcrypt.so.1" || die
 }
+
+# pkg_preinst() dropped for liblol

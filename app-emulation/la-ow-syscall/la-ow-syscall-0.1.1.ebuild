@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -6,20 +6,20 @@ EAPI=8
 inherit linux-mod-r1
 
 MODULES_KERNEL_MIN=6.1
-MY_COMMIT="1b837fd8bc99ea0cfd74e7d85bb4357542f5e1f2"
 
 DESCRIPTION="Linux kernel module for compatibility with LoongArch's old-world ABI"
 HOMEPAGE="https://github.com/AOSC-Dev/la_ow_syscall"
 
-case ${PV} in
+MY_PN="${PN//-/_}"
+
+case "${PV}" in
 9999)
 	EGIT_REPO_URI="https://github.com/AOSC-Dev/la_ow_syscall"
 	inherit git-r3
 	;;
 *)
-	MY_P="la_ow_syscall-${MY_COMMIT}"
-	SRC_URI="https://codeload.github.com/AOSC-Dev/la_ow_syscall/zip/${MY_COMMIT} -> ${MY_P}.zip"
-	S="${WORKDIR}/${MY_P}"
+	SRC_URI="https://github.com/AOSC-Dev/la_ow_syscall/releases/download/debian/v${PV}/liblol-dkms_${PV}.tar.xz"
+	S="${WORKDIR}/${MY_PN}"
 	KEYWORDS="-* ~loong"
 	;;
 esac
