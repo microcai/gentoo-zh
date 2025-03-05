@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-05 17:05:30 CST)
+(The last generation time: 2025-03-05 17:44:39 CST)
 
 ### Packages
 
@@ -226,7 +226,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pytube                          | 15.0.0              |            | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/android-studio                    | 2024.2.2.15         |            | https://developer.android.com/studio                                                    | Android development environment based on IntelliJ IDEA
+ dev-util/android-studio                    | 2024.3.1.13         |            | https://developer.android.com/studio                                                    | Android development environment based on IntelliJ IDEA
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/arch-install-scripts              | 29                  |            | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
    dev-util/pacstrap                        | 29                  | RD         | https://github.com/archlinux/arch-install-scripts                                       | Pacstrap - install packages to the specified new root directorye
@@ -674,7 +674,7 @@
    dev-libs/v2ray-geoip                     | 202501190004        | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                 | 202412120057        | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                 | 1.0.4               |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                 | 1.0.5               |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/follow-bin                        | 0.3.8               |            | https://follow.is/                                                                      | Next generation information browser
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
