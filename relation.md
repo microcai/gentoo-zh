@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-06 09:10:33 CST)
+(The last generation time: 2025-03-06 11:44:58 CST)
 
 ### Packages
 
@@ -674,11 +674,11 @@
    dev-libs/v2ray-geoip                     | 202501190004        | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                 | 202412120057        | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                 | 1.0.5               |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                 | 1.0.6               |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/follow-bin                        | 0.3.8               |            | https://follow.is/                                                                      | Next generation information browser
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-client/brave-bin                       | 1.75.181            |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
+ www-client/brave-bin                       | 1.76.73             |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-client/thorium-browser-bin             | 130.0.6723.174      |            | https://thorium.rocks                                                                   | Chromium fork focused on high performance and security
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
