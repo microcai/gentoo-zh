@@ -20,6 +20,7 @@ S="${WORKDIR}"
 LICENSE="cursor"
 
 SLOT="0"
+KEYWORDS="-* ~amd64"
 IUSE="egl kerberos wayland"
 RESTRICT="bindist mirror strip"
 
@@ -72,6 +73,13 @@ src_prepare() {
 }
 
 src_install() {
+	# disable update server
+	sed -e "/updateUrl/d" -i "${CURSOR_HOME}/resources/app/product.json" || die
+
+	if ! use kerberos; then
+		rm -r "${CURSOR_HOME}/resources/app/node_modules/kerberos" || die
+	fi
+
 	dodir /opt/cursor
 	cp -ar "${CURSOR_HOME}/." "${D}/opt/cursor/" || die
 
