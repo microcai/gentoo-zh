@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-07 10:18:18 CST)
+(The last generation time: 2025-03-07 10:46:10 CST)
 
 ### Packages
 
@@ -486,7 +486,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/geo                               | 1.1                 |            | https://github.com/MetaCubeX/geo/                                                       | An easy way to manage all your Geo resources
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/hoppscotch-bin                    | 25.2.0.0-r1         |            | https://hoppscotch.io                                                                   | Open source API development ecosystem
+ net-misc/hoppscotch-bin                    | 25.2.1.0            |            | https://hoppscotch.io                                                                   | Open source API development ecosystem
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/localsend-bin                     | 1.17.0              |            | https://localsend.org                                                                   | An open-source cross-platform alternative to AirDrop
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -540,7 +540,7 @@
      acct-group/mihomo                      | 0-r1                |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
      acct-user/mihomo                       | 0-r1                |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
    sys-apps/pnpm                            | 9.15.5              | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
-                                            | 10.5.2              |            |                                                                                         |
+                                            | 10.6.0              |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-verge-bin                  | 1.6.0               |            | https://github.com/clash-verge-rev/clash-verge-rev                                      | (Continuation) of Clash Meta GUI based on Tauri.
                                             | 1.6.4               |            |                                                                                         |
