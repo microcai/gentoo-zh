@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 DEPEND="app-alternatives/v2ray-geoip
 	app-alternatives/v2ray-geosite"
 RDEPEND="${DEPEND}"
-BDEPEND=">=dev-lang/go-1.23"
+BDEPEND=">=dev-lang/go-1.24"
 
 src_compile() {
 	ego build -o xray -trimpath -ldflags "-w -s -X 'github.com/XTLS/Xray-core/core.build=${PV}'" ./main
