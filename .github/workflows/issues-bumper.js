@@ -87,6 +87,7 @@ module.exports = async ({ github, context, core }) => {
           q: searchQuery,
           per_page: 100,
           page: page_number,
+          advanced_search: "true",
         });
         response = searchIssues.data.items;
 
