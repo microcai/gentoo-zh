@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-08 09:32:31 CST)
+(The last generation time: 2025-03-08 14:53:05 CST)
 
 ### Packages
 
@@ -568,7 +568,7 @@
  net-proxy/mihomo-party-bin                 | 1.6.0               |            | https://mihomo.party                                                                    | Mihomo Party
                                             | 1.7.1               |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/naiveproxy-bin                   | 133.0.6943.49_p1    |            | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
+ net-proxy/naiveproxy-bin                   | 134.0.6998.39_p1    |            | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/proxy-server                     | 8.0.0               |            | https://github.com/jackarain/proxy                                                      | Implementation of all proxy protocols using modern c++
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
