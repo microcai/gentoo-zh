@@ -14,7 +14,10 @@ inherit chromium-2 desktop pax-utils unpacker xdg optfeature shell-completion
 BUILD_ID="ae378be9dc2f5f1a6a1a220c6e25f9f03c8d4e19"
 DESCRIPTION="Cursor App - AI-first coding environment"
 HOMEPAGE="https://www.cursor.com/"
-SRC_URI="https://anysphere-binaries.s3.us-east-1.amazonaws.com/production/client/linux/x64/appimage/Cursor-${PV}-${BUILD_ID}.deb.glibc2.25-x86_64.AppImage -> ${P}.AppImage"
+SRC_URI="
+	amd64? ( https://anysphere-binaries.s3.us-east-1.amazonaws.com/production/client/linux/x64/appimage/Cursor-${PV}-${BUILD_ID}.deb.glibc2.25-x86_64.AppImage -> ${P}-amd64.AppImage )
+	arm64? ( https://anysphere-binaries.s3.us-east-1.amazonaws.com/production/client/linux/arm64/appimage/Cursor-${PV}-${BUILD_ID}.deb.glibc2.28-aarch64.AppImage -> ${P}-arm64.AppImage )
+"
 S="${WORKDIR}"
 
 LICENSE="cursor"
@@ -61,9 +64,9 @@ QA_PREBUILT="*"
 CURSOR_HOME="usr/share/cursor"
 
 src_unpack() {
-	cp "${DISTDIR}/${P}.AppImage" "${S}/" || die
-	chmod +x "${S}/${P}.AppImage" || die
-	"${S}/${P}.AppImage" --appimage-extract || die
+	cp "${DISTDIR}/${P}-${ARCH}.AppImage" "${S}/" || die
+	chmod +x "${S}/${P}-${ARCH}.AppImage" || die
+	"${S}/${P}-${ARCH}.AppImage" --appimage-extract || die
 	mv "${S}/squashfs-root"/* "${S}/" || die
 }
 
