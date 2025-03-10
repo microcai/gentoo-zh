@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-10 09:30:28 CST)
+(The last generation time: 2025-03-10 18:12:34 CST)
 
 ### Packages
 
@@ -262,7 +262,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gitoxide                           | 0.41.0              |            | https://github.com/GitoxideLabs/gitoxide                                                | A command-line application for interacting with git repositories
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/sourcegit-bin                      | 2025.07             |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
+ dev-vcs/sourcegit-bin                      | 2025.08             |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                  | 1.19.8              |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
                                             | 1.20.4              |            |                                                                                         |
@@ -541,7 +541,7 @@
      acct-group/mihomo                      | 0-r1                |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
      acct-user/mihomo                       | 0-r1                |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
    sys-apps/pnpm                            | 9.15.5              | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
-                                            | 10.6.1              |            |                                                                                         |
+                                            | 10.6.2              |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-verge-bin                  | 1.6.0               |            | https://github.com/clash-verge-rev/clash-verge-rev                                      | (Continuation) of Clash Meta GUI based on Tauri.
                                             | 1.6.4               |            |                                                                                         |
