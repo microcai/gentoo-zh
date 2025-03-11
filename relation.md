@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-10 19:16:11 CST)
+(The last generation time: 2025-03-11 09:01:19 CST)
 
 ### Packages
 
@@ -373,7 +373,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/spotube-bin                    | 3.9.0               |            | https://github.com/KRTirtho/spotube                                                     | A lightweight Spotify client using YouTube as audio source
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/termusic                       | 0.9.1               |            | https://github.com/tramhao/termusic                                                     | Terminal Music and Podcast Player written in Rust
+ media-sound/termusic                       | 0.10.0              |            | https://github.com/tramhao/termusic                                                     | Terminal Music and Podcast Player written in Rust
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/yesplaymusic-bin               | 0.4.8               |            | https://github.com/qier222/YesPlayMusic                                                 | A third party music player for Netease Music
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
