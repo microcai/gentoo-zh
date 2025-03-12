@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-12 16:25:29 CST)
+(The last generation time: 2025-03-12 17:28:41 CST)
 
 ### Packages
 
@@ -562,7 +562,7 @@
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/juicity                          | 0.4.3               |            | https://github.com/juicity/juicity                                                      | juicity is a quic-based proxy protocol.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/metacubexd                       | 1.179.0             |            | https://github.com/MetaCubeX/metacubexd                                                 | The Official Mihomo Dashboard
+ net-proxy/metacubexd                       | 1.180.0             |            | https://github.com/MetaCubeX/metacubexd                                                 | The Official Mihomo Dashboard
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/mihomo-party-bin                 | 1.6.0               |            | https://mihomo.party                                                                    | Mihomo Party
                                             | 1.7.1               |            |                                                                                         |
