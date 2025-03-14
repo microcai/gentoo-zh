@@ -12,7 +12,7 @@ HOMEPAGE="https://libsdl.org/"
 SRC_URI="https://github.com/libsdl-org/SDL/releases/download/release-${PV}/SDL3-${PV}.zip"
 
 LICENSE="ZLIB"
-SLOT="3"
+SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86"
 
 IUSE="
