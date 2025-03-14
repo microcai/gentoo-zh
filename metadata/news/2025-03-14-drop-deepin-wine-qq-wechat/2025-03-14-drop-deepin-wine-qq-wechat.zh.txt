@@ -1,0 +1,13 @@
+Title: Drop deepin-wine-qq, net-im/deepin-wine-wechat and weixin-uos
+Author:  <jinqiang@zhang.my>
+Content-Type: text/plain
+Posted: 2025-03-14
+Revision: 1
+News-Item-Format: 1.0
+Display-If-Installed: net-im/deepin-wine-qq
+Display-If-Installed: net-im/deepin-wine-wechat
+Display-If-Installed: net-im/weixin-uos
+
+旧的 deepin wine qq, deepin wine 微信, uos 微信已被 drop。
+
+QQ 用户请使用 net-im/tencent-qq，微信用户请使用 net-im/wechat。
