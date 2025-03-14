@@ -342,10 +342,13 @@ exclude_regex = ".*-(alpha|beta)"
 github_account = "xz-dev"
 
 # curl https://www.feishu.cn/api/downloads | jq --raw-output '.versions.Linux_deb_x64.download_link'
+# curl https://www.feishu.cn/api/downloads | jq --raw-output '.versions.Linux_deb_x64.version_number'
 ["app-office/bytedance-feishu"]
-source = "regex"
+source = "jq"
 url = "https://www.feishu.cn/api/downloads"
-regex = 'Linux-x64-deb@V([0-9.]*)'
+filter = '.versions.Linux_deb_x64.version_number'
+prefix = "Linux-x64-deb@V"
+github_account = "peeweep"
 
 ["app-office/freeoffice"]
 source = "regex"
