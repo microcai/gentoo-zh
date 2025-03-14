@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-14 20:54:21 CST)
+(The last generation time: 2025-03-14 20:57:42 CST)
 
 ### Packages
 
@@ -279,6 +279,8 @@
      media-libs/libsdl3                     | 3.2.4                  |  D, RD     | https://libsdl.org/                                                                     | Simple Direct Media Layer
 --------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-misc/oh-my-git-bin                   | 0.6.5                  |            | https://ohmygit.org/                                                                    | An interactive Git learning game!
+--------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ games-roguelike/tsl                        | 0.40-r2                |            | http://www.happyponyland.net/roguelike.php                                              | The Slimy Lichmummy, an adventure game similar in style to the classic Rogue
 --------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-server/vintagestory-server           | 1.19.8                 |            | https://www.vintagestory.at/                                                            | Dedicated game server for Vintage Story
                                             | 1.20.4                 |            |                                                                                         |
