@@ -8,7 +8,7 @@ inherit go-module
 MY_PV="$(ver_cut 1-3)T$(ver_cut 4-7)Z"
 MY_PV=${MY_PV//./-}
 YEAR="$(ver_cut 1)"
-COMMIT_ID=cc8758c88da31b95dde7b0b6997980ebfb8b98c4
+COMMIT_ID=c1d5d4cbb4caf05afef3ea06a91a56bd778336de
 
 DESCRIPTION="Minio client provides alternatives for ls, cat on cloud storage and filesystems"
 HOMEPAGE="https://github.com/minio/mc"
