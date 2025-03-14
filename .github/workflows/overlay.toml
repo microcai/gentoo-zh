@@ -346,7 +346,6 @@ github_account = "xz-dev"
 source = "regex"
 url = "https://www.feishu.cn/api/downloads"
 regex = 'Linux-x64-deb@V([0-9.]*)'
-github_account = "peeweep"
 
 ["app-office/freeoffice"]
 source = "regex"
