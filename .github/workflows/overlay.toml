@@ -1128,12 +1128,6 @@ regex = '(.*)'
 
 #["net-im/wechat-universal-bwrap"]
 
-["net-im/weixin-uos"]
-source = "aur"
-aur = "wechat-uos"
-from_pattern = "([\\d.]+):([\\d.]+)-([\\d.]+)"
-to_pattern = "\\2"
-
 ["net-im/wemeet"]
 source = "aur"
 aur = "wemeet-bin"
