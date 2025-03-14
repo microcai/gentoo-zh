@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-14 20:34:02 CST)
+(The last generation time: 2025-03-14 20:54:21 CST)
 
 ### Packages
 
@@ -52,6 +52,8 @@
 --------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                         | 0.11.18                |            | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
                                             | 1.10.8                 |            |                                                                                         |
+--------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-emulation/deepin-wine5                 | 5.0.16-r1              |            | https://www.deepin.org                                                                  | Deepin wine5
 --------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/la-ow-syscall                | 0.1.1                  |            | https://github.com/AOSC-Dev/la_ow_syscall                                               | Linux kernel module for compatibility with LoongArch's old-world ABI
 --------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -413,17 +415,12 @@
 --------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-fs/mc                                  | 2025.03.12.17.29.24-r1 |            | https://github.com/minio/mc                                                             | Minio client provides alternatives for ls, cat on cloud storage and filesystems
 --------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/deepin-wine-qq                      | 9.5.2.27897            |            | https://aur.archlinux.org/packages/deepin-wine-qq                                       | Tencent QQ on Deepin Wine(com.qq.im.deepin) For Gentoo
-   app-emulation/deepin-wine5               | 5.0.16-r1              |  D, RD     | https://www.deepin.org                                                                  | Deepin wine5
+ net-im/deepin-wine-wecom                   | 4.1.22.6009            |            | https://aur.archlinux.org/packages/com.qq.weixin.work.deepin-x11                        | Tencent Weixin Work on Deepin Wine(com.qq.weixin.work.deepin) For Gentoo
+   app-emulation/deepin-wine6-stable        | 6.0.0.52               |  D, RD     | https://www.deepin.org                                                                  | Deepin wine6 stable
+     app-emulation/deepin-udis86            | 1.72-r4                | RD         | https://www.deepin.org                                                                  | Disassembler library for x86 (32-bit shared library)
    app-emulation/deepin-wine-helper         | 5.1.27-r1              |  D, RD     | https://www.deepin.org                                                                  | Deepin Wine Helper
                                             | 5.1.45                 |            |                                                                                         |
      app-emulation/deepin-wine-plugin       | 5.1.13-r1              |  D, RD     | https://www.deepin.org                                                                  | Deepin Wine plugin
---------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/deepin-wine-wechat                  | 3.9.0.28-r3            |            | https://aur.archlinux.org/packages/deepin-wine-wechat                                   | Tencent WeChat on Deepin Wine For Gentoo
-   app-emulation/deepin-wine6-stable        | 6.0.0.52               |  D, RD     | https://www.deepin.org                                                                  | Deepin wine6 stable
-     app-emulation/deepin-udis86            | 1.72-r4                | RD         | https://www.deepin.org                                                                  | Disassembler library for x86 (32-bit shared library)
---------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/deepin-wine-wecom                   | 4.1.22.6009            |            | https://aur.archlinux.org/packages/com.qq.weixin.work.deepin-x11                        | Tencent Weixin Work on Deepin Wine(com.qq.weixin.work.deepin) For Gentoo
 --------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/dingtalk                            | 7.0.40.30706           |            | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
                                             | 7.1.0.31017            |            |                                                                                         |
@@ -448,8 +445,6 @@
                                             | 1.0.0.242              |            |                                                                                         |
                                             | 4.0.0.21               |            |                                                                                         |
                                             | 4.0.0.23               |            |                                                                                         |
---------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/weixin-uos                          | 2.1.8                  |            | https://www.chinauos.com/resource/download-professional                                 | UOS weixin
 --------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/wemeet                              | 3.19.1.400             |            | https://wemeet.qq.com                                                                   | Wemeet - Tencent Video Conferencing
                                             | 3.19.1.401             |            |                                                                                         |
