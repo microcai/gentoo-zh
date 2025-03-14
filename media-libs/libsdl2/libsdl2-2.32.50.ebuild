@@ -12,7 +12,7 @@ SRC_URI="https://github.com/libsdl-org/sdl2-compat/releases/download/release-${P
 S="${WORKDIR}/sdl2-compat-${PV}"
 
 LICENSE="ZLIB"
-SLOT="2"
+SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86"
 
 IUSE="alsa aqua dbus fcitx gles1 gles2 +haptic ibus jack +joystick kms libsamplerate nas opengl oss pipewire pulseaudio sndio +sound static-libs test udev +video vulkan wayland X xscreensaver"
