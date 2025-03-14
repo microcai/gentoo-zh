@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-14 12:16:16 CST)
+(The last generation time: 2025-03-14 17:21:04 CST)
 
 ### Packages
 
@@ -46,6 +46,7 @@
  app-editors/cursor                         | 0.45.14             |            | https://www.cursor.com/                                                                 | Cursor App - AI-first coding environment
                                             | 0.47.1              |            |                                                                                         |
                                             | 0.47.3              |            |                                                                                         |
+                                            | 0.47.4              |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/marktext-bin                   | 0.17.1              |            | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
