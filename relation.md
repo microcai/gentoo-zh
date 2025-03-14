@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-13 20:36:32 CST)
+(The last generation time: 2025-03-14 11:16:50 CST)
 
 ### Packages
 
@@ -541,7 +541,7 @@
      acct-group/mihomo                      | 0-r1                |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
      acct-user/mihomo                       | 0-r1                |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
    sys-apps/pnpm                            | 9.15.5              | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
-                                            | 10.6.2              |            |                                                                                         |
+                                            | 10.6.3              |            |                                                                                         |
 --------------------------------------------|---------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-verge-bin                  | 1.6.0               |            | https://github.com/clash-verge-rev/clash-verge-rev                                      | (Continuation) of Clash Meta GUI based on Tauri.
                                             | 1.6.4               |            |                                                                                         |
