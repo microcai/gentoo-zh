@@ -6,7 +6,6 @@
 		<email>blackteahamburger@outlook.com</email>
 	</maintainer>
 	<use>
-		<flag name="amd-cache-optimizer">Support for AMD 3D V-Cache optimizer driver</flag>
 		<flag name="amd-pstate">AMD P-State enhancements and fixes from linux-next</flag>
 		<flag name="amd-tlb-broadcast">Support for AMD broadcast TLB invalidation</flag>
 		<flag name="bbr3">BBR v3</flag>
@@ -25,7 +24,6 @@
 		<flag name="dkms-clang">Remove some Werror CFLAGS to increase compatibility with some DKMS
 			modules in clang-built kernels</flag>
 		<flag name="clang-polly">Support for Clang's polyhedral loop optimizer</flag>
-		<flag name="preempt-lazy">Support for PREEMPT_LAZY</flag>
 		<flag name="aufs">Support for Aufs</flag>
 		<flag name="deckify">Support for handhelds</flag>
 	</use>
