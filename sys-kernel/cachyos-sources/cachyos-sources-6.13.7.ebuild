@@ -35,6 +35,7 @@ SRC_URI="
 	zstd? ( ${CACHYOS_URI}/0012-zstd.patch -> ${P}-0012-zstd.patch )
 	bore? ( ${CACHYOS_URI}/sched/0001-bore-cachy.patch -> ${P}-0001-bore-cachy.patch )
 	prjc? ( ${CACHYOS_URI}/sched/0001-prjc-cachy.patch -> ${P}-0001-prjc-cachy.patch )
+	polly? ( ${CACHYOS_URI}/misc/0001-clang-polly.patch -> ${P}-0001-clang-polly.patch )
 	hardened? ( ${CACHYOS_URI}/misc/0001-hardened.patch -> ${P}-0001-hardened.patch )
 	rt? ( ${CACHYOS_URI}/misc/0001-rt-i915.patch -> ${P}-0001-rt-i915.patch )
 	dkms-clang? ( ${CACHYOS_URI}/misc/dkms-clang.patch -> ${P}-dkms-clang.patch )
@@ -47,7 +48,7 @@ SRC_URI="
 	)
 "
 KEYWORDS="~amd64"
-IUSE="amd-pstate amd-tlb-broadcast bbr3 +crypto +fixes itmt-core-ranking ntsync perf-per-core pksm t2 +zstd +bore prjc hardened rt dkms-clang clang-polly aufs deckify"
+IUSE="amd-pstate amd-tlb-broadcast bbr3 +crypto +fixes itmt-core-ranking ntsync perf-per-core pksm t2 +zstd +bore prjc polly hardened rt dkms-clang clang-polly aufs deckify"
 REQUIRED_USE="?? ( bore prjc )"
 
 pkg_pretend() {
@@ -76,6 +77,7 @@ src_prepare() {
 	use zstd && eapply "${DISTDIR}/${P}-0012-zstd.patch"
 	use bore && eapply "${DISTDIR}/${P}-0001-bore-cachy.patch"
 	use prjc && eapply "${DISTDIR}/${P}-0001-prjc-cachy.patch"
+	use polly && eapply "${DISTDIR}/${P}-0001-clang-polly.patch"
 	use hardened && eapply "${DISTDIR}/${P}-0001-hardened.patch"
 	use rt && eapply "${DISTDIR}/${P}-0001-rt-i915.patch"
 	use dkms-clang && eapply "${DISTDIR}/${P}-dkms-clang.patch"
@@ -107,6 +109,9 @@ pkg_postinst() {
 	einfo "${HOMEPAGE}"
 
 	use pksm && optfeature "userspace KSM helper" sys-process/cachyos-ksm-settings sys-process/uksmd
+	if use polly && ! has_version llvm-core/clang-runtime[polly]; then
+		einfo "You need to enable polly use flag for llvm-core/clang-runtime to build the kernel with polly"
+	fi
 }
 
 pkg_postrm() {
