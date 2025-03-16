@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-16 12:40:39 CST)
+(The last generation time: 2025-03-16 13:37:59 CST)
 
 ### Packages
 
@@ -288,7 +288,7 @@
  games-util/winegame-client-bin             | 0.5.10.5               |            | https://winegame.net/                                                                   | An open source gaming platform for GNU/Linux
                                             | 0.5.12.2               |            |                                                                                         |
 --------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- gui-apps/crystal-dock                      | 2.9                    |            | https://github.com/dangvd/crystal-dock                                                  | Cool dock (desktop panel) for Linux desktop
+ gui-apps/crystal-dock                      | 2.10                   |            | https://github.com/dangvd/crystal-dock                                                  | Cool dock (desktop panel) for Linux desktop
 --------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  gui-wm/swayfx                              | 0.3.2                  |            | https://github.com/WillPower3309/swayfx                                                 | SwayFX: Sway, but with eye candy!
 --------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
