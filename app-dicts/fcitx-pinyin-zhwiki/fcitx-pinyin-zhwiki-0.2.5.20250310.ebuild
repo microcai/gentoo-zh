@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -8,7 +8,7 @@ inherit python-any-r1
 
 MY_PN="fcitx5-pinyin-zhwiki"
 CONVERTERV=$(ver_cut 1-3)
-ZHWIKIV="20241201"
+ZHWIKIV="20250301"
 WEBSLANGV=$(ver_cut 4)
 
 DESCRIPTION="Fcitx 5 Pinyin Dictionary from zh.wikipedia.org"
