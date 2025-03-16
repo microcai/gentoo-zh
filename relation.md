@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-16 12:30:04 CST)
+(The last generation time: 2025-03-16 12:38:06 CST)
 
 ### Packages
 
@@ -221,7 +221,7 @@
 --------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/mw2fcitx                        | 0.18.1                 |            | https://github.com/outloudvi/mw2fcitx                                                   | Build fcitx5 libraries from MediaWiki sites
 --------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/nvchecker                       | 2.16                   |            | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
+ dev-python/nvchecker                       | 2.17                   |            | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
 --------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pycosat                         | 0.6.6                  |            | https://github.com/conda/pycosat                                                        | Python bindings to picosat (a SAT solver)
 --------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
