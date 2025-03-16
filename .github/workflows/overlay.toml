@@ -1098,14 +1098,6 @@ use_latest_tag = true
 prefix = "v"
 github_account = "peeweep"
 
-["net-fs/mc"]
-source = "github"
-github = "minio/mc"
-use_latest_release = true
-from_pattern = 'RELEASE\.(\d{4})-(\d{2})-(\d{2})T(\d{2})-(\d{2})-(\d{2})Z'
-to_pattern = '\1.\2.\3.\4.\5.\6'
-github_account = "peeweep"
-
 #["net-im/deepin-wine-wecom"]
 
 #["net-im/dingtalk"]
