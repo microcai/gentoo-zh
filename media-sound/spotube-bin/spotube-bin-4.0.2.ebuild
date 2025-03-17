@@ -22,6 +22,8 @@ RDEPEND="
 		>=dev-libs/libayatana-appindicator-0.5.92
 "
 
+RESTRICT="strip"
+
 src_install() {
 	insinto /opt/spotube/
 	doins -r data lib
