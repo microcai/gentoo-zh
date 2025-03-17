@@ -677,6 +677,12 @@ strip_release = true
 # TODO: need filter mamba- prefix
 #["dev-util/mamba"]
 
+["dev-util/osc"]
+source = "github"
+github = "openSUSE/osc"
+use_latest_tag = true
+github_account = "douglarek"
+
 ["dev-util/pacstrap"]
 source = "gitlab"
 host = "gitlab.archlinux.org"

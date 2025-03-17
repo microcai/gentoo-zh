@@ -26,4 +26,3 @@ BDEPEND="
 	dev-python/cryptography
 	dev-python/urllib3
 "
-
