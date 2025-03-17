@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-17 14:08:18 CST)
+(The last generation time: 2025-03-17 14:54:02 CST)
 
 ### Packages
 
@@ -263,7 +263,7 @@
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gitoxide                           | 0.41.0           |            | https://github.com/GitoxideLabs/gitoxide                                                | A command-line application for interacting with git repositories
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/sourcegit-bin                      | 2025.08          |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
+ dev-vcs/sourcegit-bin                      | 2025.09          |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                  | 1.19.8           |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
                                             | 1.20.4           |            |                                                                                         |
@@ -274,7 +274,6 @@
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-fps/source-engine                    | 9999             |            | https://github.com/nillerusr/source-engine                                              | A 3D game engine developed by Valve
    media-libs/libsdl2                       | 2.32.50          | BD         | https://libsdl.org/                                                                     | SDL2 compat layer over SDL3
-     media-libs/libsdl3                     | 3.2.4            |  D, RD     | https://libsdl.org/                                                                     | Simple Direct Media Layer
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-misc/oh-my-git-bin                   | 0.6.5            |            | https://ohmygit.org/                                                                    | An interactive Git learning game!
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
