@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-17 22:11:25 CST)
+(The last generation time: 2025-03-17 22:35:52 CST)
 
 ### Packages
 
@@ -536,7 +536,7 @@
      acct-group/mihomo                      | 0-r1             |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
      acct-user/mihomo                       | 0-r1             |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
    sys-apps/pnpm                            | 9.15.5           | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
-                                            | 10.6.3           |            |                                                                                         |
+                                            | 10.6.4           |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-verge-bin                  | 1.6.0            |            | https://github.com/clash-verge-rev/clash-verge-rev                                      | (Continuation) of Clash Meta GUI based on Tauri.
                                             | 1.6.4            |            |                                                                                         |
@@ -667,7 +667,7 @@
    dev-libs/v2ray-geoip                     | 202501190004     | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                 | 202412120057     | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                 | 1.0.6            |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                 | 1.1.5            |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/follow-bin                        | 0.3.12           |            | https://follow.is/                                                                      | Next generation information browser
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
