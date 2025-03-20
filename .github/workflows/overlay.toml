@@ -105,7 +105,7 @@ github_account = "Linerre"
 ["app-editors/cursor"]
 source = "regex"
 url = "https://www.cursor.com/api/download?platform=linux-x64&releaseTrack=latest"
-regex = 'Cursor-(\d+\.\d+\.\d+)'
+regex = '"version":"([\d.]+)"'
 github_account = "douglarek"
 
 ["app-editors/marktext-bin"]
