@@ -16,13 +16,9 @@ DESCRIPTION="shadowsocks is a fast tunnel proxy that helps you bypass firewalls.
 HOMEPAGE="https://github.com/shadowsocks/shadowsocks-rust"
 SRC_URI="
 	https://github.com/shadowsocks/shadowsocks-rust/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz
+	https://distfiles.gentoocn.org/~jinqiang/distfiles/${P}-crates.tar.xz
 	${CARGO_CRATE_URIS}
 "
-if [[ ${PKGBUMPING} != ${PVR} ]]; then
-	SRC_URI+="
-		https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-crates.tar.xz
-	"
-fi
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
