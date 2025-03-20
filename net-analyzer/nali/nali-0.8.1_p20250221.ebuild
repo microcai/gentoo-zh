@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -6,7 +6,7 @@ inherit go-module
 
 DESCRIPTION="An offline tool for querying IP geographic information and CDN provider."
 HOMEPAGE="https://github.com/zu1k/nali"
-EGIT_COMMIT="2e758d311739bc402ba63bda7ba081d565c0cf0f"
+EGIT_COMMIT="a41f45b7d9f0ad69631a19a21bd60ae00a777126"
 SRC_URI="
 	https://github.com/zu1k/nali/archive/${EGIT_COMMIT}.tar.gz -> ${P}.gh.tar.gz
 	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-vendor.tar.xz
