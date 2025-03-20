@@ -1244,6 +1244,12 @@ source = "github"
 github = "muflone/remmina-plugin-rustdesk"
 use_latest_release = true
 
+["net-misc/reqable"]
+source = "github"
+github = "reqable/reqable-app"
+use_latest_release = true
+prefix = "v"
+
 ["net-misc/rustdesk"]
 source = "github"
 github = "rustdesk/rustdesk"
