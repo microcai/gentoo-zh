@@ -15,8 +15,8 @@ BUILD_ID="82ef0f61c01d079d1b7e5ab04d88499d5af500e3"
 DESCRIPTION="Cursor App - AI-first coding environment"
 HOMEPAGE="https://www.cursor.com/"
 SRC_URI="
-	amd64? ( https://anysphere-binaries.s3.us-east-1.amazonaws.com/production/client/linux/x64/appimage/Cursor-${PV}-${BUILD_ID}.deb.glibc2.25-x86_64.AppImage -> ${P}-amd64.AppImage )
-	arm64? ( https://anysphere-binaries.s3.us-east-1.amazonaws.com/production/client/linux/arm64/appimage/Cursor-${PV}-${BUILD_ID}.deb.glibc2.28-aarch64.AppImage -> ${P}-arm64.AppImage )
+	amd64? ( https://downloads.cursor.com/production/client/linux/x64/appimage/Cursor-${PV}-${BUILD_ID}.deb.glibc2.25-x86_64.AppImage -> ${P}-amd64.AppImage )
+	arm64? ( https://downloads.cursor.com/production/client/linux/arm64/appimage/Cursor-${PV}-${BUILD_ID}.deb.glibc2.28-aarch64.AppImage -> ${P}-arm64.AppImage )
 "
 S="${WORKDIR}"
 
