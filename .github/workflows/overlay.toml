@@ -1249,6 +1249,7 @@ source = "github"
 github = "reqable/reqable-app"
 use_latest_release = true
 prefix = "v"
+github_account = "gouwazi"
 
 ["net-misc/rustdesk"]
 source = "github"
