@@ -7,7 +7,7 @@ inherit unpacker desktop xdg
 
 DESCRIPTION="Reqable = Fiddler + Charles + Postman, 让API调试更快 🚀 更简单 👌"
 HOMEPAGE="https://reqable.com/"
-SRC_URI="https://github.com/reqable/reqable-app/releases/download/${PV}/reqable-app-linux-x86_64.deb"
+SRC_URI="https://github.com/reqable/reqable-app/releases/download/${PV}/reqable-app-linux-x86_64.deb -> ${P}.deb"
 
 S="${WORKDIR}"
 LICENSE="reqable_license"
