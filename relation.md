@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-19 15:13:58 CST)
+(The last generation time: 2025-03-20 12:03:26 CST)
 
 ### Packages
 
@@ -482,7 +482,7 @@
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/geo                               | 1.1              |            | https://github.com/MetaCubeX/geo/                                                       | An easy way to manage all your Geo resources
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/hoppscotch-bin                    | 25.2.2.0         |            | https://hoppscotch.io                                                                   | Open source API development ecosystem
+ net-misc/hoppscotch-bin                    | 25.2.3.0         |            | https://hoppscotch.io                                                                   | Open source API development ecosystem
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/localsend-bin                     | 1.17.0           |            | https://localsend.org                                                                   | An open-source cross-platform alternative to AirDrop
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -536,7 +536,7 @@
      acct-group/mihomo                      | 0-r1             |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
      acct-user/mihomo                       | 0-r1             |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
    sys-apps/pnpm                            | 9.15.5           | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
-                                            | 10.6.4           |            |                                                                                         |
+                                            | 10.6.5           |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-verge-bin                  | 1.6.0            |            | https://github.com/clash-verge-rev/clash-verge-rev                                      | (Continuation) of Clash Meta GUI based on Tauri.
                                             | 1.6.4            |            |                                                                                         |
@@ -608,7 +608,7 @@
  sci-electronics/lceda                      | 6.5.37           |            | https://lceda.cn/                                                                       | LCEDA (binary package)
                                             | 6.5.46           |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sci-electronics/lceda-pro                  | 2.2.36.7         |            | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
+ sci-electronics/lceda-pro                  | 2.2.37.7         |            | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sci-electronics/openfpgaloader             | 0.13.1           |            | https://trabucayre.github.io/openFPGALoader                                             | Universal utility for programming FPGAs
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
