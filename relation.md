@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-21 20:20:32 CST)
+(The last generation time: 2025-03-21 21:58:46 CST)
 
 ### Packages
 
@@ -142,8 +142,6 @@
  app-pda/ipadcharge                         | 9999             |            | https://github.com/mkorenkov/ipad_charge                                                | Enables USB charging for Apple devices.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-shells/blesh                           | 9999             |            | https://github.com/akinomyoga/ble.sh                                                    | A line editor written in pure Bash with enhanced features
---------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-shells/jido                            | 0.8.0            |            | https://github.com/BrookJeynes/jido                                                     | A lightweight Unix TUI file explorer
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-shells/oh-my-bash                      | 9999             |            | https://ohmybash.github.io                                                              | An open source, community-driven framework for managing your bash configuration
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
