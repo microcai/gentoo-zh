@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-20 18:59:45 CST)
+(The last generation time: 2025-03-21 09:22:30 CST)
 
 ### Packages
 
@@ -246,7 +246,7 @@
  dev-util/jetbrains-toolbox                 | 1.28.1.15219     |            | https://www.jetbrains.com/toolbox/app                                                   | Manage all your JetBrains Projects and Tools
                                             | 2.5.4.38621      |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/osc                               | 1.13.0           |            | https://github.com/openSUSE/osc                                                         | The Command Line Interface to work with an Open Build Service
+ dev-util/osc                               | 1.14.0           |            | https://github.com/openSUSE/osc                                                         | The Command Line Interface to work with an Open Build Service
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/pack-cli                          | 0.36.4           |            | https://buildpacks.io                                                                   | CLI for building apps using Cloud Native Buildpacks
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
