@@ -11,12 +11,12 @@ CHROMIUM_LANGS="
 
 inherit chromium-2 desktop pax-utils unpacker xdg optfeature shell-completion
 
-BUILD_ID="82ef0f61c01d079d1b7e5ab04d88499d5af500e3"
+BUILD_ID="b6fb41b5f36bda05cab7109606e7404a65d1ff32"
 DESCRIPTION="Cursor App - AI-first coding environment"
 HOMEPAGE="https://www.cursor.com/"
 SRC_URI="
-	amd64? ( https://downloads.cursor.com/production/client/linux/x64/appimage/Cursor-${PV}-${BUILD_ID}.deb.glibc2.25-x86_64.AppImage -> ${P}-amd64.AppImage )
-	arm64? ( https://downloads.cursor.com/production/client/linux/arm64/appimage/Cursor-${PV}-${BUILD_ID}.deb.glibc2.28-aarch64.AppImage -> ${P}-arm64.AppImage )
+	amd64? ( https://downloads.cursor.com/production/${BUILD_ID}/linux/x64/Cursor-${PV}-x86_64.AppImage -> ${P}-amd64.AppImage )
+	arm64? ( https://downloads.cursor.com/production/${BUILD_ID}/linux/arm64/Cursor-${PV}-aarch64.AppImage -> ${P}-arm64.AppImage )
 "
 S="${WORKDIR}"
 
