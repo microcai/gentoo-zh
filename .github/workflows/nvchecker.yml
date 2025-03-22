@@ -17,7 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/liangyongxiang/gentoo-testing:master
-
+    outputs:
+      nvcmp: ${{ steps.nvchecker.outputs.nvcmp }}
     steps:
     - name: checkout
       uses: actions/checkout@v4
@@ -45,33 +46,42 @@ jobs:
 
     - name: nvchecker
       id: nvchecker
+      env:
+        GITHUB_TOKEN: ${{ secrets.GENTOO_ZH_NVCHECKER_PAT }}
       run: |
-        echo "::group::nvchecker and nvcmp"
+        echo "::group::nvchecker"
         cd .github/workflows/
         echo -e "[keys]\ngithub = \"${{ secrets.GITHUB_TOKEN }}\"" > keyfile.toml
         nvchecker --file overlay.toml --keyfile keyfile.toml
-
-        cat new_ver.json
-        echo "nvcmp=$(nvcmp --file overlay.toml --json --newer)" >> $GITHUB_OUTPUT
-
         echo "::endgroup::"
 
-    - name: setup node
-      uses: actions/setup-node@v4
-      with:
-        node-version: latest
+        echo "::group::nvcmp"
+        echo "nvcmp=$(nvcmp --file overlay.toml --json --newer | jq 'map({name, newver, oldver})' | jq -c .)" >> $GITHUB_OUTPUT
+        echo "::endgroup::"
+
+  issues-bumper:
+    needs: nvchecker
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include: ${{ fromJson(needs.nvchecker.outputs.nvcmp) }}
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
 
     - name: install github-script depends
       run: |
-        npm install toml
+        npm install toml @octokit/graphql
 
     - name: update issues
       uses: actions/github-script@v7
       timeout-minutes: 1
       env:
-        pkgs: ${{steps.nvchecker.outputs.nvcmp}}
+        name: ${{ matrix.name }}
+        newver: ${{ matrix.newver }}
+        oldver: ${{ matrix.oldver }}
+        GITHUB_TOKEN: ${{ secrets.GENTOO_ZH_NVCHECKER_PAT }}
       with:
-        github-token: ${{ secrets.GENTOO_ZH_NVCHECKER_PAT }} # https://github.com/microcai/gentoo-zh/pull/3130
         script: |
           const script = require('./.github/workflows/issues-bumper.js');
           (async function () {
