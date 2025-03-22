@@ -7,6 +7,7 @@ on:
     paths-ignore:
       - '.github/**'
       - 'metadata/**'
+      - 'profiles/**'
       - 'README.md'
       - '.gitignore'
     types: [opened, reopened, synchronize]
