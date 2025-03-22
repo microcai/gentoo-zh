@@ -7,4 +7,4 @@
 >=net-proxy/clash-verge-bin-1.7.0
 
 # mask sdl2-compat, unmask it if you wants it
-=media-libs/libsdl2-2.30.51
+media-libs/libsdl2
