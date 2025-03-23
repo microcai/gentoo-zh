@@ -85,7 +85,7 @@ module.exports = async ({ github, context, core }) => {
   `;
 
   const variables = {
-    searchQuery: `repo:${repoName} is:issue label:nvchecker in:title ${titlePrefix}`,
+    searchQuery: `repo:${repoName} is:issue in:title ${titlePrefix}`,
     cursor: null,
   };
 
