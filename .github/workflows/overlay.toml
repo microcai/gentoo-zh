@@ -135,13 +135,6 @@ github_account = "CHN-beta"
 # TODO:
 #["app-emulation/deepin-wine6-stable"]
 
-["app-emulation/la-ow-syscall"]
-source = "github"
-github = "AOSC-Dev/la_ow_syscall"
-use_latest_release = true
-prefix = "debian/v"
-github_account = "xen0n"
-
 ["app-emulation/liblol"]
 source = "github"
 github = "AOSC-Dev/liblol"
