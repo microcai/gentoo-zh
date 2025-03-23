@@ -2,7 +2,7 @@
 
 ```
 eselect repository enable gentoo-zh
-emerge --sync
+emaint sync
 ```
 
 # rule no.1
