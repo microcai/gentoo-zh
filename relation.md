@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-24 22:13:32 CST)
+(The last generation time: 2025-03-25 00:09:32 CST)
 
 ### Packages
 
@@ -243,6 +243,7 @@
  dev-util/binsider                          | 0.2.1            |            | https://binsider.dev                                                                    | Analyze ELF binaries like a boss
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/goland                            | 2024.3.4         |            | https://www.jetbrains.com/go/                                                           | Golang IDE by JetBrains
+                                            | 2024.3.5         |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                 | 1.28.1.15219     |            | https://www.jetbrains.com/toolbox/app                                                   | Manage all your JetBrains Projects and Tools
                                             | 2.5.4.38621      |            |                                                                                         |
