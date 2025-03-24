@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-24 19:05:47 CST)
+(The last generation time: 2025-03-24 22:13:32 CST)
 
 ### Packages
 
@@ -135,6 +135,7 @@
                                             | 1064             |            |                                                                                         |
                                             | 1068             |            |                                                                                         |
                                             | 1220             |            |                                                                                         |
+                                            | 1224             |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/wps-office                      | 11.1.0.11719-r1  |            | https://www.wps.cn/product/wpslinux/                                                    | WPS Office is an office productivity suite, Here is the Chinese version
                                             | 12.1.0.17900     |            |                                                                                         |
@@ -548,7 +549,6 @@
                                             | 2.0.2            |            |                                                                                         |
                                             | 2.0.3            |            |                                                                                         |
                                             | 2.1.2            |            |                                                                                         |
-                                            | 2.2.1_alpha      |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/dae                              | 0.9.0            |            | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
                                             | 9999             |            |                                                                                         |
