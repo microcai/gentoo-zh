@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-23 18:30:43 CST)
+(The last generation time: 2025-03-24 09:51:07 CST)
 
 ### Packages
 
@@ -174,7 +174,7 @@
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/tgbot-cpp                          | 1.9              |            | https://github.com/reo7sp/tgbot-cpp                                                     | C++ library for Telegram bot API
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-db/dbeaver-bin                         | 25.0.0           |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
+ dev-db/dbeaver-bin                         | 25.0.1           |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-db/mongodb                             | 5.3.1            |            | https://www.mongodb.com                                                                 | A high-performance, open source, schema-free document-oriented database
                                             | 6.2.0-r4         |            |                                                                                         |
@@ -670,7 +670,7 @@
    dev-libs/v2ray-geoip                     | 202501190004     | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                 | 202412120057     | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                 | 1.1.8            |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                 | 1.1.10           |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/follow-bin                        | 0.3.12           |            | https://follow.is/                                                                      | Next generation information browser
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
