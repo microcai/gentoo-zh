@@ -1,15 +1,15 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-24 16:44:30 CST)
+(The last generation time: 2025-03-24 16:45:07 CST)
 
 ### Packages
 
 ```
  Package name                               | Version          | Role       | Homepage                                                                                | Description
 ============================================|==================|============|=========================================================================================|====================
- app-admin/chezmoi                          | 2.60.1           |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
+ app-admin/chezmoi                          | 2.61.0           |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/chezmoi-bin                      | 2.60.1           |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
+ app-admin/chezmoi-bin                      | 2.61.0           |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/enpass                           | 6.10.1.1661      |            | https://www.enpass.io                                                                   | A cross-platform, complete password management solution.
                                             | 6.11.6.1833      |            |                                                                                         |
