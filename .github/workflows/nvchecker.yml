@@ -2,6 +2,8 @@ name: nvchecker
 
 on:
   push:
+    branches:
+      - master
   workflow_dispatch:
   schedule:
     # * is a special character in YAML so you have to quote this string
@@ -14,6 +16,7 @@ concurrency:
 
 jobs:
   nvchecker:
+    if: github.repository == 'microcai/gentoo-zh'
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/liangyongxiang/gentoo-testing:master
@@ -66,24 +69,22 @@ jobs:
       matrix:
         include: ${{ fromJson(needs.nvchecker.outputs.nvcmp) }}
     steps:
-    - name: Checkout code
+    - name: Checkout bumpbot
       uses: actions/checkout@v4
+      with:
+        repository: 'gentoo-zh-drafts/bumpbot'
 
-    - name: install github-script depends
-      run: |
-        npm install toml @octokit/graphql
+    - name: Checkout gentoo-zh
+      uses: actions/checkout@v4
+      with:
+        path: 'gentoo-zh'
 
     - name: update issues
-      uses: actions/github-script@v7
       timeout-minutes: 1
       env:
         name: ${{ matrix.name }}
         newver: ${{ matrix.newver }}
         oldver: ${{ matrix.oldver }}
-        GITHUB_TOKEN: ${{ secrets.GENTOO_ZH_NVCHECKER_PAT }}
-      with:
-        script: |
-          const script = require('./.github/workflows/issues-bumper.js');
-          (async function () {
-            await script({github, context, core});
-          })();
+        GITHUB_TOKEN: ${{ secrets.GENTOO_ZH_NVCHECKER_PAT }} # https://github.com/microcai/gentoo-zh/pull/3130
+      run: |
+        go run . --file gentoo-zh/.github/workflows/overlay.toml --name "$name" --newver "$newver" --oldver "$oldver"
