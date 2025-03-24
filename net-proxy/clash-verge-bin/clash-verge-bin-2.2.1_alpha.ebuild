@@ -7,9 +7,10 @@ inherit desktop unpacker xdg
 
 DESCRIPTION="(Continuation) of Clash Meta GUI based on Tauri. "
 HOMEPAGE="https://github.com/clash-verge-rev/clash-verge-rev"
+MY_PV=${PV//_alpha/-alpha}
 SRC_URI="
-	amd64? ( https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v${PV}/Clash.Verge_${PV}_amd64.deb )
-	arm64? ( https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v${PV}/Clash.Verge_${PV}_arm64.deb )
+	amd64? ( https://github.com/clash-verge-rev/clash-verge-rev/releases/download/alpha/Clash.Verge_${MY_PV}_amd64.deb )
+	arm64? ( https://github.com/clash-verge-rev/clash-verge-rev/releases/download/alpha/Clash.Verge_${MY_PV}_arm64.deb )
 "
 
 S="${WORKDIR}"
