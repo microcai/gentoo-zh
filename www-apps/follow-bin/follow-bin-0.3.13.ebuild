@@ -5,13 +5,15 @@ EAPI=8
 
 inherit desktop xdg
 
+MY_PN="Folo"
+
 DESCRIPTION="Next generation information browser"
 HOMEPAGE="
 	https://follow.is/
 	https://github.com/RSSNext/Follow
 "
 SRC_URI="
-	https://github.com/RSSNext/Follow/releases/download/v${PV}/Follow-${PV}-linux-x64.AppImage -> ${P}.AppImage
+	https://github.com/RSSNext/Follow/releases/download/v${PV}/${MY_PN}-${PV}-linux-x64.AppImage -> ${P}.AppImage
 "
 
 S="${WORKDIR}"
@@ -39,13 +41,13 @@ src_unpack() {
 src_install() {
 	cd "${S}/squashfs-root" || die
 
-	domenu Follow.desktop
-	doicon -s 256 usr/share/icons/hicolor/256x256/apps/Follow.png
+	domenu "${MY_PN}".desktop
+	doicon -s 256 usr/share/icons/hicolor/256x256/apps/"${MY_PN}".png
 
 	local toremove=(
 		.DirIcon
-		Follow.desktop
-		Follow.png
+		"${MY_PN}".desktop
+		"${MY_PN}".png
 		AppRun
 		LICENSES.chromium.html
 		usr
@@ -56,6 +58,6 @@ src_install() {
 	insinto "${apphome}"
 	doins -r .
 
-	fperms +x "${apphome}/Follow"
-	dosym -r "${apphome}/Follow" "/opt/bin/Follow"
+	fperms +x "${apphome}/${MY_PN}"
+	dosym -r "${apphome}/${MY_PN}" "/opt/bin/${MY_PN}"
 }
