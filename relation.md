@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-25 16:28:50 CST)
+(The last generation time: 2025-03-26 09:40:02 CST)
 
 ### Packages
 
@@ -270,7 +270,7 @@
  dev-vcs/sourcegit-bin                      | 2025.10          |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                  | 1.19.8           |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
-                                            | 1.20.5           |            |                                                                                         |
+                                            | 1.20.6           |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-board/othello                        | 0.2.2            |            | http://othello-game.sourceforge.net                                                     | Othello is a classic strategy game, also known as Reversi
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -284,14 +284,14 @@
  games-roguelike/tsl                        | 0.40-r2          |            | http://www.happyponyland.net/roguelike.php                                              | The Slimy Lichmummy, an adventure game similar in style to the classic Rogue
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-server/vintagestory-server           | 1.19.8           |            | https://www.vintagestory.at/                                                            | Dedicated game server for Vintage Story
-                                            | 1.20.5           |            |                                                                                         |
+                                            | 1.20.6           |            |                                                                                         |
    acct-group/vintagestory                  | 0                | RD         |                                                                                         | User group for Vintage Story Server
    acct-user/vintagestory                   | 0                | RD         |                                                                                         | User for Vintage Story Server
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-util/winegame-client-bin             | 0.5.10.5         |            | https://winegame.net/                                                                   | An open source gaming platform for GNU/Linux
                                             | 0.5.12.2         |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- gui-apps/crystal-dock                      | 2.10             |            | https://github.com/dangvd/crystal-dock                                                  | Cool dock (desktop panel) for Linux desktop
+ gui-apps/crystal-dock                      | 2.11             |            | https://github.com/dangvd/crystal-dock                                                  | Cool dock (desktop panel) for Linux desktop
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  gui-wm/swayfx                              | 0.3.2            |            | https://github.com/WillPower3309/swayfx                                                 | SwayFX: Sway, but with eye candy!
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
