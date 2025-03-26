@@ -1523,7 +1523,7 @@ source = "github"
 github = "pnpm/pnpm"
 use_latest_release = true
 prefix = "v"
-github_account = "st0nie"
+github_account = ["st0nie", "gouwazi"]
 
 # live package only
 #["sys-apps/wait-online"]
@@ -1533,7 +1533,7 @@ source = "github"
 github = "ventoy/Ventoy"
 use_latest_release = true
 prefix = "v"
-github_account = "st0nie"
+github_account = ["st0nie", "gouwazi"]
 
 ["sys-fs/jmtpfs"]
 source = "github"
