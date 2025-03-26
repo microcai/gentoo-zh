@@ -1686,12 +1686,6 @@ use_latest_release = true
 # live package only
 #["x11-misc/i3lock-fancy"]
 
-["x11-misc/ly"]
-source = "github"
-github = "nullgemm/ly"
-use_latest_tag = true
-prefix = "v"
-
 ["x11-misc/picom-jonaburg"]
 source = "github"
 github = "jonaburg/picom"
