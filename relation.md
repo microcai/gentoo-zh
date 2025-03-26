@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-26 11:27:33 CST)
+(The last generation time: 2025-03-26 12:51:48 CST)
 
 ### Packages
 
@@ -460,7 +460,7 @@
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/aliyundrive-webdav                | 2.3.3            |            | https://github.com/messense/aliyundrive-webdav.git                                      | WebDAV server for AliyunDrive
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/aliyunpan                         | 0.3.6            |            | https://github.com/tickstep/aliyunpan                                                   | aliyunpan cli client, support Webdav service, JavaScript plugin
+ net-misc/aliyunpan                         | 0.3.7            |            | https://github.com/tickstep/aliyunpan                                                   | aliyunpan cli client, support Webdav service, JavaScript plugin
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/another-redis-desktop-manager-bin | 1.7.1            |            | https://github.com/qishibo/AnotherRedisDesktopManager                                   | A faster, better and more stable Redis desktop manager [GUI client]
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
