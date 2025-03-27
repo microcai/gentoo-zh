@@ -244,7 +244,7 @@ to_pattern = '\1_p\2'
 ["app-misc/aichat"]
 source = "github"
 github = "sigoden/aichat"
-use_latest_tag = true
+use_latest_release = true
 prefix = "v"
 github_account = "peeweep"
 
