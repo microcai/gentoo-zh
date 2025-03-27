@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-27 21:54:24 CST)
+(The last generation time: 2025-03-27 22:17:15 CST)
 
 ### Packages
 
@@ -270,7 +270,7 @@
  dev-vcs/sourcegit-bin                      | 2025.10          |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                  | 1.19.8           |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
-                                            | 1.20.6           |            |                                                                                         |
+                                            | 1.20.7           |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-board/othello                        | 0.2.2            |            | http://othello-game.sourceforge.net                                                     | Othello is a classic strategy game, also known as Reversi
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -284,7 +284,7 @@
  games-roguelike/tsl                        | 0.40-r2          |            | http://www.happyponyland.net/roguelike.php                                              | The Slimy Lichmummy, an adventure game similar in style to the classic Rogue
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-server/vintagestory-server           | 1.19.8           |            | https://www.vintagestory.at/                                                            | Dedicated game server for Vintage Story
-                                            | 1.20.6           |            |                                                                                         |
+                                            | 1.20.7           |            |                                                                                         |
    acct-group/vintagestory                  | 0                | RD         |                                                                                         | User group for Vintage Story Server
    acct-user/vintagestory                   | 0                | RD         |                                                                                         | User for Vintage Story Server
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -585,7 +585,7 @@
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/trojan-go-fork                   | 2025.03.09       |            | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/v2rayA                           | 2.2.6.5          |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
+ net-proxy/v2rayA                           | 2.2.6.7          |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                             | 9999             |            |                                                                                         |
    net-proxy/Xray                           | 25.3.6           | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
      app-alternatives/v2ray-geoip           | 0-r2             |  D, RD     |                                                                                         | symlink for v2ray-geoip
