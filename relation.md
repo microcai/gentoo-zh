@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-27 22:17:15 CST)
+(The last generation time: 2025-03-28 09:23:40 CST)
 
 ### Packages
 
@@ -697,10 +697,6 @@
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-misc/i3lock-fancy                      | 9999             |            | https://github.com/meskarune/i3lock-fancy                                               | A fancy i3lock
    x11-misc/i3lock-color                    | 9999             |  D, RD     | https://github.com/chrjguill/i3lock-color                                               | An improved i3lock
---------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- x11-misc/ly                                | 0.6.0-r1         |            | https://github.com/nullgemm/ly                                                          | Ly - a TUI display manager
-                                            | 1.0.2            |            |                                                                                         |
-                                            | 9999             |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-misc/picom-jonaburg                    | 8                |            | https://github.com/jonaburg/picom                                                       | jonaburg's picom fork with dual_kawase blur and rounded corners
                                             | 9999             |            |                                                                                         |
