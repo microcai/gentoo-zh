@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-28 09:23:40 CST)
+(The last generation time: 2025-03-28 10:11:46 CST)
 
 ### Packages
 
@@ -97,7 +97,7 @@
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/zh-autoconvert                    | 0.3.16_p10       |            | https://packages.debian.org/stable/source/zh-autoconvert                                | Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/aichat                            | 0.28.0           |            | https://github.com/sigoden/aichat                                                       | All-in-one LLM CLI Tool
+ app-misc/aichat                            | 0.29.0           |            | https://github.com/sigoden/aichat                                                       | All-in-one LLM CLI Tool
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/bcompare                          | 4.4.6.27483      |            | https://www.scootersoftware.com/                                                        | Beyond Compare -- Compare, sync, and merge files and folders
                                             | 4.4.7.28397      |            |                                                                                         |
