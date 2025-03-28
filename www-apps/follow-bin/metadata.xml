@@ -2,6 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<upstream>
-		<remote-id type="github">RSSNext/Follow</remote-id>
+		<remote-id type="github">RSSNext/Folo</remote-id>
 	</upstream>
 </pkgmetadata>
