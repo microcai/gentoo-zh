@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-29 18:03:01 CST)
+(The last generation time: 2025-03-29 23:08:44 CST)
 
 ### Packages
 
@@ -398,6 +398,8 @@
  media-video/mpv-handler                    | 0.3.13           |            | https://github.com/akiirui/mpv-handler                                                  | Play website videos and songs with mpv & yt-dlp
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/tenvideo                       | 1.0.10           |            | https://v.qq.com/download.html#linux                                                    | Tencent videos
+--------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ media-video/tsukimi                        | 0.20.0           |            | https://github.com/tsukinaha/tsukimi                                                    | A simple Emby Client written by GTK4-RS
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-analyzer/nali                          | 0.8.1            |            | https://github.com/zu1k/nali                                                            | An offline tool for querying IP geographic information and CDN provider.
                                             | 0.8.1_p20250221  |            |                                                                                         |
