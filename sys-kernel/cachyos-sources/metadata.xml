@@ -8,9 +8,11 @@
 	<use>
 		<flag name="amd-pstate">AMD P-State enhancements and fixes from linux-next</flag>
 		<flag name="amd-tlb-broadcast">Support for AMD broadcast TLB invalidation</flag>
+		<flag name="asus">ASUS patchset</flag>
 		<flag name="bbr3">BBR v3</flag>
 		<flag name="crypto">Patches to improve performance of CRC32 and AES128 crypto</flag>
 		<flag name="fixes">CachyOS fixes</flag>
+		<flag name="mm">Fixes for madvise</flag>
 		<flag name="itmt-core-ranking">Support for AMD dynamic preferred core rankings</flag>
 		<flag name="ntsync">NTSync module support</flag>
 		<flag name="perf-per-core">Allows reading per-core CPU energy usage for AMD users</flag>

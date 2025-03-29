@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="9"
+K_GENPATCHES_VER="10"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 
@@ -57,8 +57,7 @@ pkg_pretend() {
 }
 
 src_unpack() {
-	use fixes && UNIPATCH_EXCLUDE="2980_GCC15-gnu23-to-gnu11-fix.patch \
-			1740_x86-insn-decoder-test-allow-longer-symbol-names.patch"
+	use fixes && UNIPATCH_EXCLUDE="1740_x86-insn-decoder-test-allow-longer-symbol-names.patch"
 	kernel-2_src_unpack
 }
 
