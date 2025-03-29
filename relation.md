@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-29 13:36:13 CST)
+(The last generation time: 2025-03-29 13:46:55 CST)
 
 ### Packages
 
@@ -485,7 +485,7 @@
  net-misc/geo                               | 1.1              |            | https://github.com/MetaCubeX/geo/                                                       | An easy way to manage all your Geo resources
                                             | 1.1_p20240718    |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/hoppscotch-bin                    | 25.2.3.0         |            | https://hoppscotch.io                                                                   | Open source API development ecosystem
+ net-misc/hoppscotch-bin                    | 25.3.0.0         |            | https://hoppscotch.io                                                                   | Open source API development ecosystem
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/localsend-bin                     | 1.17.0           |            | https://localsend.org                                                                   | An open-source cross-platform alternative to AirDrop
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -672,7 +672,7 @@
    dev-libs/v2ray-geoip                     | 202501190004     | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                 | 202412120057     | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                 | 1.1.13           |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                 | 1.1.14           |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/follow-bin                        | 0.4.0            |            | https://follow.is/                                                                      | Next generation information browser
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
