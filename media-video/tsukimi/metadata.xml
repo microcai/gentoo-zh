@@ -9,4 +9,7 @@ pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 	<upstream>
 		<remote-id type="github">tsukinaha/tsukimi</remote-id>
 	</upstream>
+	<use>
+		<flag name="clang">Use clang compiler instead of GCC</flag>
+	</use>
 </pkgmetadata>

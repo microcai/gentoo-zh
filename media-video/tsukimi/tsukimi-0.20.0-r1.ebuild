@@ -433,6 +433,8 @@ LICENSE+="
 SLOT="0"
 KEYWORDS="~amd64"
 
+IUSE="clang"
+
 RDEPEND="
 	>=gui-libs/gtk-4.14
 	>=gui-libs/libadwaita-1.6
@@ -442,25 +444,40 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 BDEPEND="
-	$(llvm_gen_dep '
-		llvm-core/clang:${LLVM_SLOT}
-		llvm-core/llvm:${LLVM_SLOT}
-		llvm-core/lld:${LLVM_SLOT}
-	')
+	clang? (
+		$(llvm_gen_dep '
+			llvm-core/clang:${LLVM_SLOT}
+			llvm-core/llvm:${LLVM_SLOT}
+			llvm-core/lld:${LLVM_SLOT}
+		')
+	)
 "
 
 pkg_setup() {
-	if tc-is-clang; then
-		export RUSTFLAGS="${RUSTFLAGS} -C linker=clang -C link-arg=-fuse-ld=lld"
+	if use clang && ! tc-is-clang; then
+		llvm-r1_pkg_setup
+		export CC=clang
+		export CXX=clang++
+		export AR=llvm-ar
+		export NM=llvm-nm
+		export STRIP=llvm-strip
+		export RANLIB=llvm-ranlib
 	fi
-	llvm-r1_pkg_setup
 	rust_pkg_setup
+}
+
+src_prepare() {
+	default
+
+	sed -i -e \
+		's/^Icon=moe.tsuna.tsukimi/Icon=tsukimi/' \
+		"${S}/resources/moe.tsuna.tsukimi.desktop.in" || die
 }
 
 src_install() {
 	dobin $(cargo_target_dir)/tsukimi
 	newicon -s 256 "resources/icons/moe.tsuna.tsukimi.png" "${PN}.png"
-	domenu "${FILESDIR}/${PN}.desktop"
+	newmenu "resources/moe.tsuna.tsukimi.desktop.in" "${PN}.desktop"
 	insinto /usr/share/glib-2.0/schemas
 	doins resources/moe.tsuna.tsukimi.gschema.xml
 	insinto /usr/share
