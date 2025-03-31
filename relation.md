@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-31 15:13:33 CST)
+(The last generation time: 2025-03-31 20:48:57 CST)
 
 ### Packages
 
@@ -593,7 +593,8 @@
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/v2rayA                           | 2.2.6.7          |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                             | 9999             |            |                                                                                         |
-   net-proxy/Xray                           | 25.3.6           | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
+   net-proxy/Xray                           | 25.3.31          | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
+                                            | 25.3.6           |            |                                                                                         |
      app-alternatives/v2ray-geoip           | 0-r2             |  D, RD     |                                                                                         | symlink for v2ray-geoip
      app-alternatives/v2ray-geosite         | 0-r2             |  D, RD     |                                                                                         | symlink for v2ray-geosite
    net-proxy/v2ray                          | 5.28.0           | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
