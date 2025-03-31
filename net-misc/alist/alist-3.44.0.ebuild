@@ -5,8 +5,8 @@ EAPI=8
 
 inherit go-module systemd
 
-GIT_COMMIT="0590fad"
-ALIST_WEBVER="3.43.0"
+GIT_COMMIT="0cde4e7"
+ALIST_WEBVER="3.44.0"
 DESCRIPTION="A file list/WebDAV program that supports multiple storages"
 HOMEPAGE="https://alist.nn.ci"
 SRC_URI="
