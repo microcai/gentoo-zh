@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-30 21:18:19 CST)
+(The last generation time: 2025-03-31 11:38:23 CST)
 
 ### Packages
 
@@ -257,7 +257,7 @@
  dev-util/redpanda-cpp                      | 2.26             |            | https://royqh.net/redpandacpp                                                           | A lightweight yet powerful C/C++/GNU Assembly IDE.
                                             | 3.1              |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/tailspin                          | 4.0.0            |            | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
+ dev-util/tailspin                          | 5.0.0            |            | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/vfox                              | 0.6.4            |            | https://vfox.lhan.me                                                                    | A cross-platform version manager, extendable via plugins
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -456,7 +456,7 @@
  net-libs/jzmq                              | 9999             |            | http://www.zeromq.org/bindings:java                                                     | jzmq
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/alist                             | 3.32.0           |            | https://alist.nn.ci                                                                     | A file list/WebDAV program that supports multiple storages
-                                            | 3.43.0           |            |                                                                                         |
+                                            | 3.44.0           |            |                                                                                         |
    acct-group/alist                         | 0                | RD         |                                                                                         | A file list/WebDAV program that supports multiple storages
    acct-user/alist                          | 0                | RD         |                                                                                         | A file list/WebDAV program that supports multiple storages
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
