@@ -28,11 +28,12 @@ github = "doy/rbw"
 use_latest_release = true
 github_account = "liangyongxiang"
 
-["app-admin/zenmonitor3"]
-source = "git"
-git = "https://git.exozy.me/a/zenmonitor3"
-prefix = "v"
-github_account = "liuyujielol"
+# dead upstream
+# ["app-admin/zenmonitor3"]
+# source = "git"
+# git = "https://git.exozy.me/a/zenmonitor3"
+# prefix = "v"
+# github_account = "liuyujielol"
 
 ["app-arch/libzim"]
 source = "github"
