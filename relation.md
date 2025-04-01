@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-03-31 20:48:57 CST)
+(The last generation time: 2025-04-01 15:16:13 CST)
 
 ### Packages
 
@@ -597,9 +597,9 @@
                                             | 25.3.6           |            |                                                                                         |
      app-alternatives/v2ray-geoip           | 0-r2             |  D, RD     |                                                                                         | symlink for v2ray-geoip
      app-alternatives/v2ray-geosite         | 0-r2             |  D, RD     |                                                                                         | symlink for v2ray-geosite
-   net-proxy/v2ray                          | 5.28.0           | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
+   net-proxy/v2ray                          | 5.29.3           | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
    net-proxy/v2ray-bin                      | 4.45.0-r2        | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
-                                            | 5.28.0           |            |                                                                                         |
+                                            | 5.29.3           |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/yacd-meta                        | 0.3.7            |            | https://github.com/MetaCubeX/Yacd-meta                                                  | Yet Another Clash Dashboard
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
