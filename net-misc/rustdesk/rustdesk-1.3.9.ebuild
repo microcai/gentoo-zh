@@ -28,6 +28,11 @@ declare -A GIT_CRATES=(
 	[keepawake]='https://github.com/rustdesk-org/keepawake-rs;64d568586dd16551d02120e19668d2b0fec8e3c9;keepawake-rs-%commit%'
 	[machine-uid]='https://github.com/rustdesk-org/machine-uid;381ff579c1dc3a6c54db9dfec47c44bcb0246542;machine-uid-%commit%'
 	[magnum-opus]='https://github.com/rustdesk-org/magnum-opus;5cd2bf989c148662fa3a2d9d539a71d71fd1d256;magnum-opus-%commit%'
+	[nokhwa-bindings-linux]='https://github.com/rustdesk-org/nokhwa;3e2512074bc57d5df011363a26a8ee8959dc7969;nokhwa-%commit%/nokhwa-bindings-linux'
+	[nokhwa-bindings-macos]='https://github.com/rustdesk-org/nokhwa;3e2512074bc57d5df011363a26a8ee8959dc7969;nokhwa-%commit%/nokhwa-bindings-macos'
+	[nokhwa-bindings-windows]='https://github.com/rustdesk-org/nokhwa;3e2512074bc57d5df011363a26a8ee8959dc7969;nokhwa-%commit%/nokhwa-bindings-windows'
+	[nokhwa-core]='https://github.com/rustdesk-org/nokhwa;3e2512074bc57d5df011363a26a8ee8959dc7969;nokhwa-%commit%/nokhwa-core'
+	[nokhwa]='https://github.com/rustdesk-org/nokhwa;3e2512074bc57d5df011363a26a8ee8959dc7969;nokhwa-%commit%'
 	[pam-sys]='https://github.com/rustdesk-org/pam-sys;3337c9bb9a9c68d7497ec8c93cad2368c26091b7;pam-sys-%commit%'
 	[pam]='https://github.com/rustdesk-org/pam;7bfd25510202cd269292cbdd7c71f3977a6fd762;pam-%commit%'
 	[parity-tokio-ipc]='https://github.com/rustdesk-org/parity-tokio-ipc;3623ec9ebef50c9b118e03b03df831008a4d1441;parity-tokio-ipc-%commit%'
@@ -78,7 +83,8 @@ LICENSE="AGPL-3"
 # Dependent crate licenses
 LICENSE+="
 	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD-2 BSD Boost-1.0
-	CC0-1.0 GPL-3+ ISC MIT MIT-0 MPL-2.0 Unicode-DFS-2016 Unlicense ZLIB
+	CC0-1.0 GPL-3+ IJG ISC MIT MIT-0 MPL-2.0 Unicode-DFS-2016 Unlicense
+	ZLIB
 "
 SLOT="0"
 KEYWORDS="~amd64"
