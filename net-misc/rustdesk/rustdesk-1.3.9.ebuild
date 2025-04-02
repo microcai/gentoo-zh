@@ -63,7 +63,7 @@ HOMEPAGE="https://rustdesk.com/"
 _WEBM_PV="1.0.0.31"
 _VCPKG_COMMIT="2024.11.16"
 _HWCODEC_EXTERNALS_COMMIT="a0ff168b672ab57c50f09dbe128608e45a1c4a52"
-_HBB_COMMON_COMMIT="16900b9b064067e28f6e685b29a94c16350ffc36"
+_HBB_COMMON_COMMIT="81b932b7bfa2ff8bc60189625fd6538db2fa9ea1"
 SRC_URI="
 	https://github.com/rustdesk/rustdesk/archive/refs/tags/${PV}.tar.gz
 		-> ${P}.tar.gz
