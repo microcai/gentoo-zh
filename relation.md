@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-04 22:10:05 CST)
+(The last generation time: 2025-04-05 03:23:58 CST)
 
 ### Packages
 
@@ -155,8 +155,8 @@
                                             | 9.0-r1           |            |                                                                                         |
    net-dns/libidn11                         | 1.33             |  D, RD     | https://www.gnu.org/software/libidn/                                                    | Internationalized Domain Names (IDN) implementation
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-text/goldendict                        | 24.09.1          |            | https://xiaoyifang.github.io/goldendict-ng/                                             | Feature-rich dictionary lookup program (qtwebengine fork)
-                                            | 25.02.0          |            |                                                                                         |
+ app-text/goldendict                        | 25.02.0          |            | https://xiaoyifang.github.io/goldendict-ng/                                             | Feature-rich dictionary lookup program (qtwebengine fork)
+                                            | 25.05.0          |            |                                                                                         |
    app-arch/libzim                          | 9.2.3            |  D, RD     | https://wiki.openzim.org/wiki/OpenZIM                                                   | ZIM file format: an offline storage solution for content coming from the Web
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/groff-utf8                        | 0-r1             |            | http://www.haible.de/bruno/packages-groff-utf8.html                                     | GNU groff wrapper allowing UTF-8 input
