@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-04 13:03:56 CST)
+(The last generation time: 2025-04-04 13:04:17 CST)
 
 ### Packages
 
@@ -224,7 +224,7 @@
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pycosat                         | 0.6.6            |            | https://github.com/conda/pycosat                                                        | Python bindings to picosat (a SAT solver)
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/pypinyin                        | 0.53.0           |            | https://github.com/mozillazg/python-pinyin                                              | Tool for converting Chinese characters to pinyin
+ dev-python/pypinyin                        | 0.54.0           |            | https://github.com/mozillazg/python-pinyin                                              | Tool for converting Chinese characters to pinyin
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pytube                          | 15.0.0           |            | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -257,7 +257,7 @@
  dev-util/redpanda-cpp                      | 2.26             |            | https://royqh.net/redpandacpp                                                           | A lightweight yet powerful C/C++/GNU Assembly IDE.
                                             | 3.1              |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/tailspin                          | 5.0.0            |            | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
+ dev-util/tailspin                          | 5.1.0            |            | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/vfox                              | 0.6.4            |            | https://vfox.lhan.me                                                                    | A cross-platform version manager, extendable via plugins
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
