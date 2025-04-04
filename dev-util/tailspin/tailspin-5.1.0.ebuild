@@ -23,8 +23,8 @@ CRATES="
 	bytes@1.10.1
 	cfg-if@1.0.0
 	cfg_aliases@0.2.1
-	clap@4.5.34
-	clap_builder@4.5.34
+	clap@4.5.35
+	clap_builder@4.5.35
 	clap_complete@4.5.47
 	clap_derive@4.5.32
 	clap_lex@0.7.4
@@ -50,7 +50,6 @@ CRATES="
 	hashbrown@0.15.2
 	heck@0.5.0
 	indexmap@2.8.0
-	inlet_manifold@0.1.4
 	inotify-sys@0.1.5
 	inotify@0.9.6
 	is_ci@1.2.0
@@ -74,7 +73,7 @@ CRATES="
 	notify@5.2.0
 	nu-ansi-term@0.50.1
 	object@0.36.7
-	once_cell@1.21.2
+	once_cell@1.21.3
 	option-ext@0.2.0
 	owo-colors@4.2.0
 	parking_lot@0.12.3
@@ -96,7 +95,7 @@ CRATES="
 	regex-syntax@0.8.5
 	regex@1.11.1
 	rustc-demangle@0.1.24
-	rustix@1.0.3
+	rustix@1.0.5
 	ryu@1.0.20
 	same-file@1.0.6
 	scopeguard@1.2.0
@@ -109,7 +108,7 @@ CRATES="
 	signal-hook-registry@1.4.2
 	slab@0.4.9
 	smallvec@1.14.0
-	socket2@0.5.8
+	socket2@0.5.9
 	strsim@0.11.1
 	supports-color@3.0.2
 	supports-hyperlinks@3.1.0
