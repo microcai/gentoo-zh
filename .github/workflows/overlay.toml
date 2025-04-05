@@ -91,12 +91,6 @@ github = "felixonmars/fcitx5-pinyin-zhwiki"
 use_latest_release = true
 github_account = "blackteahamburger"
 
-["app-dicts/fcitx-pinyin-zhwiki-bin"]
-source = "github"
-github = "felixonmars/fcitx5-pinyin-zhwiki"
-use_latest_release = true
-github_account = "blackteahamburger"
-
 ["app-editors/appflowy-bin"]
 source = "github"
 github = "AppFlowy-IO/AppFlowy"
