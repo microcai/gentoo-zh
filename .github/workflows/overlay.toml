@@ -85,6 +85,12 @@ github = "blackteahamburger/fcitx5-pinyin-sougou-baidu"
 use_latest_release = true
 github_account = "blackteahamburger"
 
+["app-dicts/fcitx-pinyin-sougou-baidu"]
+source = "github"
+github = "blackteahamburger/fcitx5-pinyin-sougou-baidu"
+use_latest_release = true
+github_account = "blackteahamburger"
+
 ["app-dicts/fcitx-pinyin-zhwiki"]
 source = "github"
 github = "felixonmars/fcitx5-pinyin-zhwiki"

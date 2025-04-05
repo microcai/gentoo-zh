@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<longdescription lang="en">
+		Windsurf is an AI-assisted code editor from Codeium designed to keep
+		developers in flow state with instant, invaluable AI developer assistance.
+		It offers semantic code understanding, intelligent code completion,
+		and other AI-powered features to boost productivity.
+	</longdescription>
+	<longdescription lang="zh">
+		Windsurf 是 Codeium 开发的 AI 辅助代码编辑器，旨在通过即时、宝贵的 AI
+		开发者辅助让开发人员保持心流状态。它提供语义代码理解、智能代码补全和其他
+		AI 驱动功能，以提高生产力。
+	</longdescription>
+</pkgmetadata>
