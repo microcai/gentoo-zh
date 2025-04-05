@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-05 03:23:58 CST)
+(The last generation time: 2025-04-05 14:55:57 CST)
 
 ### Packages
 
@@ -200,7 +200,7 @@
  dev-libs/tdlib                             | 1.8.0            |            | https://core.telegram.org/tdlib                                                         | Cross-platform library for building Telegram clients
                                             | 9999             |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-libs/v2ray-rules-dat-bin               | 202411022212     |            | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
+ dev-libs/v2ray-rules-dat-bin               | 202504042212     |            | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/archspec                        | 0.2.5            |            | https://github.com/archspec/archspec                                                    | A library for detecting, labeling, and reasoning about microarchitectures
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
