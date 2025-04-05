@@ -85,6 +85,12 @@ github = "outloudvi/mw2fcitx"
 use_latest_release = true
 github_account = "blackteahamburger"
 
+["app-dicts/fcitx-pinyin-sougou-baidu"]
+source = "github"
+github = "blackteahamburger/fcitx5-pinyin-sougou-baidu"
+use_latest_release = true
+github_account = "blackteahamburger"
+
 ["app-dicts/fcitx-pinyin-zhwiki"]
 source = "github"
 github = "felixonmars/fcitx5-pinyin-zhwiki"
@@ -389,6 +395,13 @@ from_pattern = "v(.*)-.*"
 to_pattern = "\\1"
 github_account = "liangyongxiang"
 
+["app-text/imewlconverter"]
+source = "github"
+github = "studyzy/imewlconverter"
+use_latest_release = true
+prefix = "v"
+github_account = "blackteahamburger"
+
 # dead upstream
 #["app-text/groff-utf8"]
 
@@ -587,6 +600,11 @@ github = "aio-libs/janus"
 use_latest_release = true
 prefix = "v"
 github_account = "wgjak47"
+
+["dev-python/mw2fcitx"]
+source = "pypi"
+pypi = "mw2fcitx"
+github_account = "blackteahamburger"
 
 ["dev-python/nvchecker"]
 source = "github"
