@@ -79,9 +79,9 @@ github = "outloudvi/mw2fcitx"
 use_latest_release = true
 github_account = "blackteahamburger"
 
-["app-dicts/fcitx-pinyin-moegirl-bin"]
+["app-dicts/fcitx-pinyin-sougou-baidu"]
 source = "github"
-github = "outloudvi/mw2fcitx"
+github = "blackteahamburger/fcitx5-pinyin-sougou-baidu"
 use_latest_release = true
 github_account = "blackteahamburger"
 
@@ -92,12 +92,6 @@ use_latest_release = true
 github_account = "blackteahamburger"
 
 ["app-dicts/fcitx-pinyin-zhwiki"]
-source = "github"
-github = "felixonmars/fcitx5-pinyin-zhwiki"
-use_latest_release = true
-github_account = "blackteahamburger"
-
-["app-dicts/fcitx-pinyin-zhwiki-bin"]
 source = "github"
 github = "felixonmars/fcitx5-pinyin-zhwiki"
 use_latest_release = true
