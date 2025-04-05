@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-05 14:55:57 CST)
+(The last generation time: 2025-04-05 19:21:12 CST)
 
 ### Packages
 
@@ -571,7 +571,7 @@
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/mihomo-party-bin                 | 1.7.2            |            | https://mihomo.party                                                                    | Mihomo Party
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/naiveproxy-bin                   | 134.0.6998.39_p1 |            | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
+ net-proxy/naiveproxy-bin                   | 135.0.7049.38_p1 |            | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/nekoray                          | 4.2.12           |            | https://github.com/Mahdi-zarei/nekoray                                                  | Qt based Desktop cross-platform GUI proxy configuration manager
    dev-libs/cpr                             | 1.11.2           |  D, RD     | https://github.com/libcpr/cpr                                                           | C++ Requests: Curl for People, a spiritual port of Python Requests.
@@ -674,11 +674,11 @@
    sys-kernel/xanmod-sources                | 6.13.2           | RD         | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-domain-list-community        | 0                |            |                                                                                         | Virtual for v2ray-domain-list-community
-   dev-libs/v2ray-domain-list-community     | 20250312064659   | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+   dev-libs/v2ray-domain-list-community     | 20250401022534   | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
    dev-libs/v2ray-domain-list-community-bin | 20241210004721   | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-geoip                        | 0                |            |                                                                                         | Virtual for v2ray-geoip
-   dev-libs/v2ray-geoip                     | 202501190004     | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
+   dev-libs/v2ray-geoip                     | 202504050136     | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                 | 202412120057     | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/cherry-studio-bin                 | 1.1.17           |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
