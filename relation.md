@@ -1,13 +1,13 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-07 22:48:09 CST)
+(The last generation time: 2025-04-08 16:07:08 CST)
 
 ### Packages
 
 ```
  Package name                               | Version          | Role       | Homepage                                                                                | Description
 ============================================|==================|============|=========================================================================================|====================
- app-admin/chezmoi                          | 2.61.0           |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
+ app-admin/chezmoi                          | 2.62.0           |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/chezmoi-bin                      | 2.62.0           |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -581,7 +581,7 @@
                                             | 1.23.0           |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/sing-box                         | 1.10.7           |            | https://sing-box.sagernet.org/                                                          | The universal proxy platform.
-                                            | 1.11.6           |            |                                                                                         |
+                                            | 1.11.7           |            |                                                                                         |
                                             | 1.9.7            |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/smartproxy                       | 0.9.5            |            | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
