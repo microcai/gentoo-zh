@@ -17,6 +17,7 @@ DEPEND="dev-cpp/abseil-cpp
 		dev-libs/protobuf:=
 		dev-libs/cpr
 		dev-qt/qtbase:6[widgets,network]
+		dev-qt/qtcharts:6
 		dev-cpp/yaml-cpp
 		media-libs/zxing-cpp
 		net-proxy/nekobox-core"
