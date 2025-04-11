@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-10 04:57:22 CST)
+(The last generation time: 2025-04-11 20:56:31 CST)
 
 ### Packages
 
@@ -464,7 +464,7 @@
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/another-redis-desktop-manager-bin | 1.7.1            |            | https://github.com/qishibo/AnotherRedisDesktopManager                                   | A faster, better and more stable Redis desktop manager [GUI client]
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/apifox                            | 2.7.4            |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
+ net-misc/apifox                            | 2.7.5            |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/baidunetdisk                      | 4.17.7           |            | https://pan.baidu.com/                                                                  | Baidu Net Disk is a cloud storage client (Linux Version)
                                             | 4.3.0            |            |                                                                                         |
@@ -484,7 +484,7 @@
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/geo                               | 1.1              |            | https://github.com/MetaCubeX/geo/                                                       | An easy way to manage all your Geo resources
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/hoppscotch-bin                    | 25.3.0.0         |            | https://hoppscotch.io                                                                   | Open source API development ecosystem
+ net-misc/hoppscotch-bin                    | 25.3.1.0         |            | https://hoppscotch.io                                                                   | Open source API development ecosystem
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/localsend-bin                     | 1.17.0           |            | https://localsend.org                                                                   | An open-source cross-platform alternative to AirDrop
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -676,7 +676,7 @@
    dev-libs/v2ray-geoip                     | 202504050136     | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                 | 202412120057     | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                 | 1.2.1            |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                 | 1.2.2            |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/follow-bin                        | 0.4.1            |            | https://follow.is/                                                                      | Next generation information browser
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
