@@ -1143,8 +1143,11 @@ use_latest_release = true
 prefix = "v"
 github_account = "gouwazi"
 
-# TODO: upstream no tags
-#["net-misc/apifox"]
+["net-misc/apifox"]
+source = "regex"
+url = "https://api.apifox.com/api/v1/configs/client-updates/2/mac/latest-mac.yml"
+regex = 'version: .*'
+github_account = ["gouwazi", "TidalShark"]
 
 ["net-misc/baidunetdisk"]
 source = "regex"
