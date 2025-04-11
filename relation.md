@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-11 20:56:31 CST)
+(The last generation time: 2025-04-12 03:53:56 CST)
 
 ### Packages
 
@@ -566,7 +566,7 @@
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/mihomo-party-bin                 | 1.7.2            |            | https://mihomo.party                                                                    | Mihomo Party
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/naiveproxy-bin                   | 135.0.7049.38_p1 |            | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
+ net-proxy/naiveproxy-bin                   | 135.0.7049.38_p2 |            | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/nekoray                          | 4.3.2            |            | https://github.com/Mahdi-zarei/nekoray                                                  | Qt based Desktop cross-platform GUI proxy configuration manager
    dev-libs/cpr                             | 1.11.2           |  D, RD     | https://github.com/libcpr/cpr                                                           | C++ Requests: Curl for People, a spiritual port of Python Requests.
