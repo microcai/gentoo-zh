@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-12 04:02:22 CST)
+(The last generation time: 2025-04-12 16:57:18 CST)
 
 ### Packages
 
@@ -28,7 +28,7 @@
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-containers/distrobox-boost             | 9999             |            | https://github.com/xz-dev/distrobox-boost                                               | A container runtimer wrapper for OCI (distrobox/toolbox, also podman/docker)
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-moegirl             | 20250309         |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
+ app-dicts/fcitx-pinyin-moegirl             | 20250409         |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-sougou-baidu        | 20250320         |            | https://github.com/blackteahamburger/fcitx5-pinyin-sougou-baidu                         | Sougou & Baidu Pinyin dictionary for Fcitx5 and RIME
    app-i18n/ibus-rime                       | 9999             | RD         | http://code.google.com/p/rimeime/                                                       | Rime Input Method Engine for IBus Framework
