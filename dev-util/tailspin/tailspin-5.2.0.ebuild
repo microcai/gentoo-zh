@@ -23,22 +23,22 @@ CRATES="
 	bytes@1.10.1
 	cfg-if@1.0.0
 	cfg_aliases@0.2.1
-	clap@4.5.35
-	clap_builder@4.5.35
+	clap@4.5.36
+	clap_builder@4.5.36
 	clap_complete@4.5.47
 	clap_derive@4.5.32
 	clap_lex@0.7.4
 	colorchoice@1.0.3
-	crossbeam-channel@0.5.14
+	crossbeam-channel@0.5.15
 	crossbeam-deque@0.8.6
 	crossbeam-epoch@0.9.18
 	crossbeam-utils@0.8.21
-	ctrlc@3.4.5
+	ctrlc@3.4.6
 	dirs-sys@0.4.1
 	dirs@5.0.1
 	either@1.15.0
 	equivalent@1.0.2
-	errno@0.3.10
+	errno@0.3.11
 	fastrand@2.3.0
 	filetime@0.2.25
 	futures-core@0.3.31
@@ -49,7 +49,7 @@ CRATES="
 	gimli@0.31.1
 	hashbrown@0.15.2
 	heck@0.5.0
-	indexmap@2.8.0
+	indexmap@2.9.0
 	inotify-sys@0.1.5
 	inotify@0.9.6
 	is_ci@1.2.0
@@ -60,13 +60,13 @@ CRATES="
 	libc@0.2.171
 	libredox@0.1.3
 	linemux@0.3.0
-	linux-raw-sys@0.9.3
+	linux-raw-sys@0.9.4
 	lock_api@0.4.12
 	log@0.4.27
 	memchr@2.7.4
 	miette-derive@7.5.0
 	miette@7.5.0
-	miniz_oxide@0.8.5
+	miniz_oxide@0.8.8
 	mio@0.8.11
 	mio@1.0.3
 	nix@0.29.0
@@ -89,7 +89,7 @@ CRATES="
 	rand_core@0.9.3
 	rayon-core@1.12.1
 	rayon@1.10.0
-	redox_syscall@0.5.10
+	redox_syscall@0.5.11
 	redox_users@0.4.6
 	regex-automata@0.4.9
 	regex-syntax@0.8.5
@@ -107,7 +107,7 @@ CRATES="
 	shellexpand@3.1.0
 	signal-hook-registry@1.4.2
 	slab@0.4.9
-	smallvec@1.14.0
+	smallvec@1.15.0
 	socket2@0.5.9
 	strsim@0.11.1
 	supports-color@3.0.2
@@ -122,7 +122,7 @@ CRATES="
 	thiserror@1.0.69
 	thiserror@2.0.12
 	tokio-macros@2.5.0
-	tokio@1.44.1
+	tokio@1.44.2
 	toml@0.8.20
 	toml_datetime@0.6.8
 	toml_edit@0.22.24
@@ -164,7 +164,7 @@ CRATES="
 	windows_x86_64_msvc@0.42.2
 	windows_x86_64_msvc@0.48.5
 	windows_x86_64_msvc@0.52.6
-	winnow@0.7.4
+	winnow@0.7.6
 	wit-bindgen-rt@0.39.0
 	zerocopy-derive@0.8.24
 	zerocopy@0.8.24
@@ -181,9 +181,12 @@ SRC_URI="
 	${CARGO_CRATE_URIS}
 "
 
-# License set may be more restrictive as OR is not respected
-# use cargo-license for a more accurate license picture
-LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions Artistic-2 CC0-1.0 ISC MIT MPL-2.0 Unicode-DFS-2016 Unlicense ZLIB"
+LICENSE="MIT"
+# Dependent crate licenses
+LICENSE+="
+	Apache-2.0 ISC MIT MPL-2.0 Unicode-3.0
+	|| ( Artistic-2 CC0-1.0 )
+"
 SLOT="0"
 KEYWORDS="~amd64"
 
