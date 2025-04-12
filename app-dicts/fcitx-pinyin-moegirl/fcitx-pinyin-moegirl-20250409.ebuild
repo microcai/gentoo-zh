@@ -21,7 +21,6 @@ REQUIRED_USE="|| ( fcitx rime )"
 RDEPEND="
 	fcitx? ( app-i18n/fcitx:5 )
 	rime? ( || ( app-i18n/ibus-rime app-i18n/fcitx-rime ) )
-	!app-dicts/fcitx-pinyin-moegirl-bin
 "
 BDEPEND="
 	${PYTHON_DEPS}
