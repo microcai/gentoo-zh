@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-12 18:08:43 CST)
+(The last generation time: 2025-04-12 19:32:26 CST)
 
 ### Packages
 
@@ -647,8 +647,8 @@
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/systemd-zpool-scrub                 | 9999             |            | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-kernel/cachyos-sources                 | 6.13.8           |            | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
-                                            | 6.14.0           |            |                                                                                         |
+ sys-kernel/cachyos-sources                 | 6.13.10          |            | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
+                                            | 6.14.2           |            |                                                                                         |
 --------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/mkinitcpio                      | 38               |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
                                             | 39.2             |            |                                                                                         |
