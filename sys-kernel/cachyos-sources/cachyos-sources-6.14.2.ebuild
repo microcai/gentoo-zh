@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="1"
+K_GENPATCHES_VER="3"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 
@@ -14,7 +14,7 @@ detect_arch
 
 MY_KV="${KV_MAJOR}.${KV_MINOR}"
 AUFS_V="20250210"
-GIT_COMMIT_CACHYOS="306a13fa1740ddec35c68455e99eaf714ae81ad4"
+GIT_COMMIT_CACHYOS="ffd75dadf1a0fd1e930eeed19111d4a0d38e5552"
 
 DESCRIPTION="Full Cachyos sources including the Gentoo patchset for the ${MY_KV} kernel tree"
 HOMEPAGE="https://cachyos.org"
@@ -28,9 +28,8 @@ SRC_URI="
 	bbr3? ( ${CACHYOS_URI}/0004-bbr3.patch -> ${P}-0004-bbr3.patch )
 	crypto? ( ${CACHYOS_URI}/0006-crypto.patch -> ${P}-0006-crypto.patch )
 	fixes? ( ${CACHYOS_URI}/0007-fixes.patch -> ${P}-0007-fixes.patch )
-	mm? ( ${CACHYOS_URI}/0008-mm.patch -> ${P}-0008-mm.patch )
-	t2? ( ${CACHYOS_URI}/0009-t2.patch -> ${P}-0009-t2.patch )
-	zstd? ( ${CACHYOS_URI}/0010-zstd.patch -> ${P}-0010-zstd.patch )
+	t2? ( ${CACHYOS_URI}/0008-t2.patch -> ${P}-0008-t2.patch )
+	zstd? ( ${CACHYOS_URI}/0009-zstd.patch -> ${P}-0009-zstd.patch )
 	bore? ( ${CACHYOS_URI}/sched/0001-bore-cachy.patch -> ${P}-0001-bore-cachy.patch )
 	prjc? ( ${CACHYOS_URI}/sched/0001-prjc-cachy.patch -> ${P}-0001-prjc-cachy.patch )
 	polly? ( ${CACHYOS_URI}/misc/0001-clang-polly.patch -> ${P}-0001-clang-polly.patch )
@@ -45,7 +44,7 @@ SRC_URI="
 	)
 "
 KEYWORDS="~amd64"
-IUSE="amd-pstate amd-tlb-broadcast asus bbr3 +crypto +fixes +mm t2 +zstd +bore prjc polly rt dkms-clang clang-polly aufs deckify"
+IUSE="amd-pstate amd-tlb-broadcast asus bbr3 +crypto +fixes t2 +zstd +bore prjc polly rt dkms-clang clang-polly aufs deckify"
 REQUIRED_USE="?? ( bore prjc )"
 
 pkg_pretend() {
@@ -66,9 +65,8 @@ src_prepare() {
 	eapply "${DISTDIR}/${P}-0005-cachy.patch"
 	use crypto && eapply "${DISTDIR}/${P}-0006-crypto.patch"
 	use fixes && eapply "${DISTDIR}/${P}-0007-fixes.patch"
-	use mm && eapply "${DISTDIR}/${P}-0008-mm.patch"
-	use t2 && eapply "${DISTDIR}/${P}-0009-t2.patch"
-	use zstd && eapply "${DISTDIR}/${P}-0010-zstd.patch"
+	use t2 && eapply "${DISTDIR}/${P}-0008-t2.patch"
+	use zstd && eapply "${DISTDIR}/${P}-0009-zstd.patch"
 	use bore && eapply "${DISTDIR}/${P}-0001-bore-cachy.patch"
 	use prjc && eapply "${DISTDIR}/${P}-0001-prjc-cachy.patch"
 	use polly && eapply "${DISTDIR}/${P}-0001-clang-polly.patch"
