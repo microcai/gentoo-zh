@@ -241,7 +241,7 @@ source = "github"
 github = "sigoden/aichat"
 use_latest_release = true
 prefix = "v"
-github_account = "TidalShark"
+github_account = "peeweep"
 
 ["app-misc/bcompare"]
 source = "regex"
@@ -328,7 +328,7 @@ source = "jq"
 url = "https://www.feishu.cn/api/downloads"
 filter = '.versions.Linux_deb_x64.version_number'
 prefix = "Linux-x64-deb@V"
-github_account = "TidalShark"
+github_account = "peeweep"
 
 ["app-office/freeoffice"]
 source = "regex"
@@ -666,7 +666,7 @@ strip_release = true
 source = "github"
 github = "openSUSE/osc"
 use_latest_tag = true
-github_account = ["douglarek", "TidalShark"]
+github_account = ["douglarek", "peeweep"]
 
 ["dev-util/pacstrap"]
 source = "gitlab"
@@ -715,7 +715,7 @@ source = "github"
 github = "GitoxideLabs/gitoxide"
 use_max_tag = true
 prefix = "v"
-github_account = "TidalShark"
+github_account = "peeweep"
 
 ["dev-vcs/sourcegit-bin"]
 source = "github"
@@ -1014,7 +1014,7 @@ use_latest_release = true
 prefix = "v"
 from_pattern = "(.*)-(.*)"
 to_pattern = '\1_p\2'
-github_account = "TidalShark"
+github_account = "peeweep"
 
 ["media-video/implay"]
 source = "github"
@@ -1046,21 +1046,21 @@ source = "github"
 github = "XTLS/RealiTLScanner"
 use_latest_release = true
 prefix = "v"
-github_account = "TidalShark"
+github_account = "peeweep"
 
 ["net-dns/ddns-go"]
 source = "github"
 github = "jeessy2/ddns-go"
 use_latest_tag = true
 prefix = "v"
-github_account = ["Puqns67", "TidalShark"]
+github_account = ["Puqns67", "peeweep"]
 
 ["net-dns/dnslookup"]
 source = "github"
 github = "ameshkov/dnslookup"
 use_latest_tag = true
 prefix = "v"
-github_account = "TidalShark"
+github_account = "peeweep"
 
 # high update frequency
 #["net-dns/dnsmasq-china-list"]
@@ -1073,7 +1073,7 @@ source = "github"
 github = "IrineSistiana/mosdns"
 use_latest_release = true
 prefix = "v"
-github_account = "TidalShark"
+github_account = "peeweep"
 
 ["net-dns/mosdns-cn-bin"]
 source = "github"
@@ -1087,7 +1087,7 @@ source = "github"
 github = "natesales/q"
 use_latest_tag = true
 prefix = "v"
-github_account = "TidalShark"
+github_account = "peeweep"
 
 #["net-im/deepin-wine-wecom"]
 
@@ -1102,7 +1102,7 @@ to_pattern = '\1_p\2'
 
 ["net-im/wechat"]
 source = "regex"
-url = "https://github.com/TidalShark/wechat-linux-watcher/raw/refs/heads/master/wechat-linux-version.txt"
+url = "https://github.com/peeweep/wechat-linux-watcher/raw/refs/heads/master/wechat-linux-version.txt"
 regex = '(.*)'
 
 #["net-im/wechat-universal-bwrap"]
@@ -1147,7 +1147,7 @@ github_account = "gouwazi"
 source = "regex"
 url = "https://api.apifox.com/api/v1/configs/client-updates/2/mac/latest-mac.yml"
 regex = 'version: (.*)'
-github_account = ["gouwazi", "TidalShark"]
+github_account = ["gouwazi", "peeweep"]
 
 ["net-misc/baidunetdisk"]
 source = "regex"
@@ -1193,7 +1193,7 @@ source = "github"
 github = "MetaCubeX/geo"
 use_latest_release = true
 prefix = "v"
-github_account = "TidalShark"
+github_account = "peeweep"
 
 ["net-misc/hoppscotch-bin"]
 source = "github"
@@ -1215,7 +1215,7 @@ source = "github"
 github = "pendulum-project/ntpd-rs"
 use_latest_tag = true
 prefix = "v"
-github_account = "TidalShark"
+github_account = "peeweep"
 
 ["net-misc/pcmanx-gtk2"]
 source = "github"
@@ -1345,21 +1345,21 @@ source = "github"
 github = "MetaCubeX/metacubexd"
 use_latest_release = true
 prefix = "v"
-github_account = "TidalShark"
+github_account = "peeweep"
 
 ["net-proxy/mihomo"]
 source = "github"
 github = "MetaCubeX/mihomo"
 use_latest_release = true
 prefix = "v"
-github_account = ["st0nie", "TidalShark"]
+github_account = ["st0nie", "peeweep"]
 
 ["net-proxy/mihomo-party-bin"]
 source = "github"
 github = "mihomo-party-org/mihomo-party"
 use_latest_release = true
 prefix = "v"
-github_account = "TidalShark"
+github_account = "peeweep"
 
 ["net-proxy/naiveproxy-bin"]
 source = "github"
@@ -1384,21 +1384,21 @@ github = "SagerNet/serenity"
 use_latest_tag = true
 from_pattern = '^v?(\d+\.\d+\.\d+)-(.+)\.(\d+)$'
 to_pattern = '\1_\2\3'
-github_account = "TidalShark"
+github_account = "peeweep"
 
 ["net-proxy/shadowsocks-rust"]
 source = "github"
 github = "shadowsocks/shadowsocks-rust"
 use_latest_release = true
 prefix = "v"
-github_account = ["aieu", "TidalShark"]
+github_account = ["aieu", "peeweep"]
 
 ["net-proxy/sing-box"]
 source = "github"
 github = "SagerNet/sing-box"
 use_latest_release = true
 prefix = "v"
-github_account = ["Puqns67", "TidalShark"]
+github_account = ["Puqns67", "peeweep"]
 
 ["net-proxy/smartproxy"]
 source = "github"
@@ -1632,7 +1632,7 @@ source = "github"
 github = "RSSNext/Follow"
 use_latest_release = true
 prefix = 'v'
-github_account = "TidalShark"
+github_account = "peeweep"
 
 ["www-client/brave-bin"]
 source = "github"
@@ -1659,7 +1659,7 @@ source = "github"
 github = "svenstaro/miniserve"
 use_latest_release = true
 prefix = "v"
-github_account = "TidalShark"
+github_account = "peeweep"
 
 # live package only
 #["www-servers/woof"]
