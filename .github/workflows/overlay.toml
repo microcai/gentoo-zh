@@ -1136,6 +1136,11 @@ use_latest_release = true
 prefix = "v"
 github_account = "123485k"
 
+["net-misc/ananta"]
+source = "pypi"
+pypi = "ananta"
+github_account = "peeweep"
+
 ["net-misc/another-redis-desktop-manager-bin"]
 source = "github"
 github = "qishibo/AnotherRedisDesktopManager"
