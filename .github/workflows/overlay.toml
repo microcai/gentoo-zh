@@ -1454,6 +1454,13 @@ github_account = "st0nie"
 # use_latest_tag = true
 # github_account = "Chilledheart"
 
+["net-proxy/zdashboard"]
+source = "github"
+github = "Zephyruso/zashboard"
+use_latest_tag = true
+prefix = "v"
+github_account = "peeweep"
+
 ["net-vpn/cloudflared-bin"]
 source = "github"
 github = "cloudflare/cloudflared"
