@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-15 10:03:38 CST)
+(The last generation time: 2025-04-15 10:20:57 CST)
 
 ### Packages
 
@@ -246,7 +246,7 @@
                                                  | 2024.3.5         |            |                                                                                         |
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                      | 1.28.1.15219     |            | https://www.jetbrains.com/toolbox/app                                                   | Manage all your JetBrains Projects and Tools
-                                                 | 2.5.4.38621      |            |                                                                                         |
+                                                 | 2.6.0.40632      |            |                                                                                         |
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/osc                                    | 1.15.1           |            | https://github.com/openSUSE/osc                                                         | The Command Line Interface to work with an Open Build Service
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -682,7 +682,7 @@
    dev-libs/v2ray-geoip                          | 202504050136     | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                      | 202412120057     | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                      | 1.2.2            |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                      | 1.2.4            |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/follow-bin                             | 0.4.2            |            | https://follow.is/                                                                      | Next generation information browser
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
