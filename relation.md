@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-15 17:16:16 CST)
+(The last generation time: 2025-04-15 19:08:50 CST)
 
 ### Packages
 
@@ -533,7 +533,7 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-print/kyodialog                             | 9.4-r2           |            | https://www.kyoceradocumentsolutions.com.cn/support/mfp/download/                       | Kyocera printer driver for linux
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/bore                                  | 0.5.2            |            | https://github.com/ekzhang/bore                                                         | bore is a simple CLI tool for making tunnels to localhost
+ net-proxy/bore                                  | 0.5.3            |            | https://github.com/ekzhang/bore                                                         | bore is a simple CLI tool for making tunnels to localhost
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/cgproxy                               | 0.20-r1          |            | https://github.com/springzfx/cgproxy                                                    | Transparent Proxy with cgroup v2
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
