@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-18 10:23:51 CST)
+(The last generation time: 2025-04-18 10:24:51 CST)
 
 ### Packages
 
@@ -126,7 +126,7 @@
  app-misc/yazi                                   | 25.4.8           |            | https://yazi-rs.github.io                                                               | Blazing fast terminal file manager written in Rust, based on async I/O.
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/anytype-bin                          | 0.35.4           |            | https://anytype.io                                                                      | A notebook based on p2p network
-                                                 | 0.45.3           |            |                                                                                         |
+                                                 | 0.46.0           |            |                                                                                         |
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/bytedance-feishu                     | 7.22.9           |            | https://www.feishu.cn/download                                                          | 飞书（Feishu） 飞书整合即时消息、日历、音视频会议、云文档、工作台等功能于一体，成就团队和个人，更高效、更愉悦。
                                                  | 7.36.11          |            |                                                                                         |
@@ -257,7 +257,7 @@
  dev-util/redpanda-cpp                           | 2.26             |            | https://royqh.net/redpandacpp                                                           | A lightweight yet powerful C/C++/GNU Assembly IDE.
                                                  | 3.1              |            |                                                                                         |
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/tailspin                               | 5.2.1            |            | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
+ dev-util/tailspin                               | 5.3.0            |            | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/vfox                                   | 0.6.4            |            | https://vfox.lhan.me                                                                    | A cross-platform version manager, extendable via plugins
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
