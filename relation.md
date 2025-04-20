@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-20 12:40:21 CST)
+(The last generation time: 2025-04-20 12:52:44 CST)
 
 ### Packages
 
@@ -257,7 +257,7 @@
  dev-util/redpanda-cpp                           | 2.26             |            | https://royqh.net/redpandacpp                                                           | A lightweight yet powerful C/C++/GNU Assembly IDE.
                                                  | 3.1              |            |                                                                                         |
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/tailspin                               | 5.3.0            |            | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
+ dev-util/tailspin                               | 5.4.0            |            | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/vfox                                   | 0.6.4            |            | https://vfox.lhan.me                                                                    | A cross-platform version manager, extendable via plugins
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -682,7 +682,7 @@
    dev-libs/v2ray-geoip                          | 202504050136     | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                      | 202412120057     | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                      | 1.2.4            |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                      | 1.2.5            |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/follow-bin                             | 0.4.3            |            | https://follow.is/                                                                      | Next generation information browser
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
