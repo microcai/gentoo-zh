@@ -23,8 +23,8 @@ CRATES="
 	bytes@1.10.1
 	cfg-if@1.0.0
 	cfg_aliases@0.2.1
-	clap@4.5.36
-	clap_builder@4.5.36
+	clap@4.5.37
+	clap_builder@4.5.37
 	clap_complete@4.5.47
 	clap_derive@4.5.32
 	clap_lex@0.7.4
@@ -34,8 +34,8 @@ CRATES="
 	crossbeam-epoch@0.9.18
 	crossbeam-utils@0.8.21
 	ctrlc@3.4.6
-	dirs-sys@0.4.1
-	dirs@5.0.1
+	dirs-sys@0.5.0
+	dirs@6.0.0
 	either@1.15.0
 	equivalent@1.0.2
 	errno@0.3.11
@@ -57,7 +57,7 @@ CRATES="
 	itoa@1.0.15
 	kqueue-sys@1.0.4
 	kqueue@1.0.8
-	libc@0.2.171
+	libc@0.2.172
 	libredox@0.1.3
 	linemux@0.3.0
 	linux-raw-sys@0.9.4
@@ -80,17 +80,13 @@ CRATES="
 	parking_lot_core@0.9.10
 	pin-project-lite@0.2.16
 	pin-utils@0.1.0
-	ppv-lite86@0.2.21
-	proc-macro2@1.0.94
+	proc-macro2@1.0.95
 	quote@1.0.40
 	r-efi@5.2.0
-	rand@0.9.0
-	rand_chacha@0.9.0
-	rand_core@0.9.3
 	rayon-core@1.12.1
 	rayon@1.10.0
 	redox_syscall@0.5.11
-	redox_users@0.4.6
+	redox_users@0.5.0
 	regex-automata@0.4.9
 	regex-syntax@0.8.5
 	regex@1.11.1
@@ -104,8 +100,8 @@ CRATES="
 	serde_json@1.0.140
 	serde_spanned@0.6.8
 	shell-words@1.1.0
-	shellexpand@3.1.0
-	signal-hook-registry@1.4.2
+	shellexpand@3.1.1
+	signal-hook-registry@1.4.4
 	slab@0.4.9
 	smallvec@1.15.0
 	socket2@0.5.9
@@ -131,6 +127,7 @@ CRATES="
 	unicode-width@0.1.14
 	unicode-width@0.2.0
 	utf8parse@0.2.2
+	uuid@1.16.0
 	walkdir@2.5.0
 	wasi@0.11.0+wasi-snapshot-preview1
 	wasi@0.14.2+wasi-0.2.4
@@ -166,8 +163,6 @@ CRATES="
 	windows_x86_64_msvc@0.52.6
 	winnow@0.7.6
 	wit-bindgen-rt@0.39.0
-	zerocopy-derive@0.8.24
-	zerocopy@0.8.24
 "
 
 inherit cargo
