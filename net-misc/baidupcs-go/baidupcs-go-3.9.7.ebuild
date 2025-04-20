@@ -1,4 +1,4 @@
-# Copyright 2020-2023 Gentoo Authors
+# Copyright 2020-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -15,7 +15,7 @@ if [[ ${PV} == *9999 ]]; then
 	}
 else
 	SRC_URI="https://github.com/qjfoidnh/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-		https://github.com/liangyongxiang/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz"
+		https://github.com/gentoo-zh/gentoo-deps/releases/download/${P}/${P}-deps.tar.xz"
 	KEYWORDS="~amd64 ~x86"
 	S="${WORKDIR}/${MY_PN}-${PV}"
 fi
@@ -26,11 +26,11 @@ HOMEPAGE="https://github.com/qjfoidnh/BaiduPCS-Go"
 LICENSE="Apache-2.0"
 SLOT="0"
 
-src_compile()
-{
-	ego build -o bin/${PN} -trimpath
+src_compile(){
+	local ldflags="-w -s"
+	ego build -o ${PN} -trimpath -ldflags "${ldflags}"
 }
 
 src_install() {
-	dobin bin/${PN}
+	dobin ${PN}
 }
