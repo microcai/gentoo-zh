@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-20 12:52:44 CST)
+(The last generation time: 2025-04-20 16:53:52 CST)
 
 ### Packages
 
@@ -473,8 +473,7 @@
  net-misc/baidunetdisk                           | 4.17.7           |            | https://pan.baidu.com/                                                                  | Baidu Net Disk is a cloud storage client (Linux Version)
                                                  | 4.3.0            |            |                                                                                         |
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/baidupcs-go                            | 3.9.5            |            | https://github.com/qjfoidnh/BaiduPCS-Go                                                 | The terminal utility for Baidu Network Disk (Golang Version).
-                                                 | 3.9.5-r1         |            |                                                                                         |
+ net-misc/baidupcs-go                            | 3.9.7            |            | https://github.com/qjfoidnh/BaiduPCS-Go                                                 | The terminal utility for Baidu Network Disk (Golang Version).
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/bbdown-bin                             | 1.6.3            |            | https://github.com/nilaoda/BBDown                                                       | The terminal utility for Baidu Network Disk (Golang Version).
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
