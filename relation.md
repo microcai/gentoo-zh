@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-20 17:01:30 CST)
+(The last generation time: 2025-04-21 17:19:23 CST)
 
 ### Packages
 
@@ -175,7 +175,7 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/tgbot-cpp                               | 1.9              |            | https://github.com/reo7sp/tgbot-cpp                                                     | C++ library for Telegram bot API
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-db/dbeaver-bin                              | 25.0.2           |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
+ dev-db/dbeaver-bin                              | 25.0.3           |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-db/mongodb                                  | 5.3.1            |            | https://www.mongodb.com                                                                 | A high-performance, open source, schema-free document-oriented database
                                                  | 6.2.0-r4         |            |                                                                                         |
@@ -267,7 +267,7 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gitoxide                                | 0.42.0           |            | https://github.com/GitoxideLabs/gitoxide                                                | A command-line application for interacting with git repositories
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/sourcegit-bin                           | 2025.13          |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
+ dev-vcs/sourcegit-bin                           | 2025.14          |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                       | 1.19.8           |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
                                                  | 1.20.7           |            |                                                                                         |
@@ -506,7 +506,7 @@
  net-misc/remmina-plugin-rustdesk                | 1.0.0.0-r1       |            | http://www.muflone.com/remmina-plugin-rustdesk/                                         | A protocol plugin for Remmina to launch a Rustdesk connection.
    net-misc/rustdesk                             | 1.3.9            |  D, RD     | https://rustdesk.com/                                                                   | An open-source remote desktop, and alternative to TeamViewer.
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/reqable                                | 2.33.9           |            | https://reqable.com/                                                                    | Reqable = Fiddler + Charles + Postman, 让API调试更快 🚀 更简单 👌
+ net-misc/reqable                                | 2.33.10          |            | https://reqable.com/                                                                    | Reqable = Fiddler + Charles + Postman, 让API调试更快 🚀 更简单 👌
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/todesk                                 | 4.1.0            |            | https://www.todesk.com/                                                                 | ToDesk不一样的远控体验，轻松打破物理限制，随时随地高效使用所有计算终端
                                                  | 4.7.2.0-r1       |            |                                                                                         |
@@ -543,7 +543,7 @@
      acct-group/mihomo                           | 0-r1             |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
      acct-user/mihomo                            | 0-r1             |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
    sys-apps/pnpm                                 | 9.15.5           | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
-                                                 | 10.8.1           |            |                                                                                         |
+                                                 | 10.9.0           |            |                                                                                         |
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-verge-bin                       | 1.6.0            |            | https://github.com/clash-verge-rev/clash-verge-rev                                      | (Continuation) of Clash Meta GUI based on Tauri.
                                                  | 1.6.4            |            |                                                                                         |
