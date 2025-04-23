@@ -8,9 +8,3 @@
 
 # mask sdl2-compat, unmask it if you wants it
 media-libs/libsdl2
-
-# jinqiang zhang <jinqiang@zhang.my> (2025-04-01)
-# https://git.exozy.me dead
-# Removal on 2025-05-01.
-app-admin/zenmonitor3
-sys-kernel/zenpower3
