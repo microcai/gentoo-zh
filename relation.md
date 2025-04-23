@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-23 06:32:50 CST)
+(The last generation time: 2025-04-23 17:07:01 CST)
 
 ### Packages
 
@@ -15,9 +15,6 @@
                                                  | 6.11.6.1833      |            |                                                                                         |
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/rbw                                   | 1.13.2           |            | https://github.com/doy/rbw                                                              | Unofficial Bitwarden CLI
--------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/zenmonitor3                           | 2.0.0            |            | https://git.exozy.me/a/zenmonitor3                                                      | Zen monitor is monitoring software for AMD Zen-based CPUs
-   sys-kernel/zenpower3                          | 0.2.0            |  D, RD     | https://git.exozy.me/a/zenpower3                                                        | Linux kernel driver for reading sensors of AMD Zen family CPUs
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-backup/btrfs-assistant                      | 2.1.1            |            | https://gitlab.com/btrfs-assistant/btrfs-assistant                                      | A GUI management tool to make managing a Btrfs filesystem easier.
                                                  | 9999             |            |                                                                                         |
