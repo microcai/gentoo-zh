@@ -7,7 +7,9 @@ inherit desktop xdg
 
 DESCRIPTION="Void Editor - AI Code Editor"
 HOMEPAGE="https://voideditor.com"
+
 SRC_URI="https://github.com/voideditor/binaries/releases/download/${PV}/Void-linux-x64-${PV}.tar.gz"
+S="${WORKDIR}"
 
 LICENSE="Apache-2.0 MIT"
 SLOT="0"
@@ -24,8 +26,6 @@ RDEPEND="
 QA_PREBUILT="
 	opt/void/*
 "
-
-S="${WORKDIR}"
 
 src_install() {
 	insinto /opt/void
