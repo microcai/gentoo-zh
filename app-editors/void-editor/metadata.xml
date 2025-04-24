@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>begovic.amar@proton.me</email>
+    <name>Amar Begovic</name>
+  </maintainer>
+  <longdescription lang="en">
+  Void is an open source Cursor alternative. Write code with the best AI tools, use any model, and retain full control over your data.
+  </longdescription>
+  <upstream>
+    <remote-id type="github">voideditor/binaries</remote-id>
+  </upstream>
+</pkgmetadata>
+
