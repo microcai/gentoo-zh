@@ -1477,11 +1477,12 @@ github_account = "microcai"
 # live package only
 #["net-wireless/linux-wifi-hotspot"]
 
-["sci-chemistry/vesta"]
-source = "regex"
-url = "https://jp-minerals.org/vesta/en/download.html"
-regex = "ver. ([\\d.]+), built on"
-github_account = "CHN-beta"
+# this website blocked github network
+# ["sci-chemistry/vesta"]
+# source = "regex"
+# url = "https://jp-minerals.org/vesta/en/download.html"
+# regex = "ver. ([\\d.]+), built on"
+# github_account = "CHN-beta"
 
 # TODO: upstream no tags
 #["sci-electronics/circuitjs1-bin"]
