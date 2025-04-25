@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="3"
+K_GENPATCHES_VER="4"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 
@@ -13,8 +13,8 @@ detect_version
 detect_arch
 
 MY_KV="${KV_MAJOR}.${KV_MINOR}"
-AUFS_V="20250210"
-GIT_COMMIT_CACHYOS="ffd75dadf1a0fd1e930eeed19111d4a0d38e5552"
+AUFS_V="20250414"
+GIT_COMMIT_CACHYOS="c9337024cce72aec38511d67d005770e3114f408"
 
 DESCRIPTION="Full Cachyos sources including the Gentoo patchset for the ${MY_KV} kernel tree"
 HOMEPAGE="https://cachyos.org"
