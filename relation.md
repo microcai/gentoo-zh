@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-25 22:06:04 CST)
+(The last generation time: 2025-04-26 00:50:37 CST)
 
 ### Packages
 
@@ -568,13 +568,31 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/mihomo-party-bin                      | 1.7.2            |            | https://mihomo.party                                                                    | Mihomo Party
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/naiveproxy-bin                        | 135.0.7049.38_p2 |            | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
--------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/nekoray                               | 4.3.4            |            | https://github.com/Mahdi-zarei/nekoray                                                  | Qt based Desktop cross-platform GUI proxy configuration manager
    dev-libs/cpr                                  | 1.11.2           |  D, RD     | https://github.com/libcpr/cpr                                                           | C++ Requests: Curl for People, a spiritual port of Python Requests.
    net-proxy/nekobox-core                        | 4.3.4            |  D, RD     | https://github.com/Mahdi-zarei/nekoray                                                  | Qt based Desktop cross-platform GUI proxy configuration manager
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/proxy-server                          | 8.0.0            |            | https://github.com/jackarain/proxy                                                      | Implementation of all proxy protocols using modern c++
+-------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ net-proxy/qvplugin-command                      | 3.0.0            |            | https://github.com/Qv2ray/QvPlugin-Command                                              | Plugin for Qv2ray to run any commands when something happens in Qv2ray
+-------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ net-proxy/qvplugin-naiveproxy                   | 3.0.0            |            | https://github.com/Qv2ray/QvPlugin-NaiveProxy                                           | Plugin for Qv2ray to support NaiveProxy in Qv2ray
+   net-proxy/naiveproxy-bin                      | 135.0.7049.38_p2 | RD         | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
+-------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ net-proxy/qvplugin-ss                           | 3.0.0            |            | https://github.com/Qv2ray/QvPlugin-SS                                                   | Plugin for Qv2ray to support SIP003 in Qv2ray
+-------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ net-proxy/qvplugin-trojan                       | 3.0.0            |            | https://github.com/Qv2ray/QvPlugin-Trojan                                               | Plugin for Qv2ray to support Trojan proxy in Qv2ray
+-------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ net-proxy/qvplugin-trojan-go                    | 3.0.0            |            | https://github.com/Qv2ray/QvPlugin-Trojan-Go                                            | Plugin for Qv2ray to support Trojan-Go proxy in Qv2ray
+   net-proxy/qv2ray                              | 2.7.0_p20240625  | RD         | https://github.com/Qv2ray/Qv2ray                                                        | Qt GUI fontend of v2ray
+     net-proxy/Xray                              | 25.3.31          | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
+                                                 | 25.3.6           |            |                                                                                         |
+       app-alternatives/v2ray-geoip              | 0-r2             |  D, RD     |                                                                                         | symlink for v2ray-geoip
+       app-alternatives/v2ray-geosite            | 0-r2             |  D, RD     |                                                                                         | symlink for v2ray-geosite
+     net-proxy/v2ray                             | 5.30.0           | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
+     net-proxy/v2ray-bin                         | 4.45.0-r2        | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
+                                                 | 5.30.0           |            |                                                                                         |
+   net-proxy/trojan-go-fork                      | 2025.03.09       | RD         | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/serenity                              | 1.1.0_beta3      |            | https://serenity.sagernet.org/                                                          | The configuration generator for sing-box
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -587,17 +605,8 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/smartproxy                            | 0.9.5            |            | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/trojan-go-fork                        | 2025.03.09       |            | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
--------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/v2rayA                                | 2.2.6.7          |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                                  | 9999             |            |                                                                                         |
-   net-proxy/Xray                                | 25.3.31          | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
-                                                 | 25.3.6           |            |                                                                                         |
-     app-alternatives/v2ray-geoip                | 0-r2             |  D, RD     |                                                                                         | symlink for v2ray-geoip
-     app-alternatives/v2ray-geosite              | 0-r2             |  D, RD     |                                                                                         | symlink for v2ray-geosite
-   net-proxy/v2ray                               | 5.30.0           | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
-   net-proxy/v2ray-bin                           | 4.45.0-r2        | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
-                                                 | 5.30.0           |            |                                                                                         |
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/yacd-meta                             | 0.3.7            |            | https://github.com/MetaCubeX/Yacd-meta                                                  | Yet Another Clash Dashboard
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
