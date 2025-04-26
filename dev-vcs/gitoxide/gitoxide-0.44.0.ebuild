@@ -14,14 +14,12 @@ DESCRIPTION="A command-line application for interacting with git repositories"
 HOMEPAGE="https://github.com/GitoxideLabs/gitoxide"
 SRC_URI="
 	https://github.com/GitoxideLabs/gitoxide/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://distfiles.gentoocn.org/~jinqiang/distfiles/${P}-crates.tar.xz
+	https://github.com/Gentoo-zh/gentoo-deps/releases/download/${P}/${P}-crates.tar.xz
 	${CARGO_CRATE_URIS}
 "
 
 LICENSE="|| ( Apache-2.0 MIT )"
 # Dependent crate licenses
-LICENSE+="
-	Apache-2.0 BSD Boost-1.0 ISC MIT MPL-2.0 openssl Unicode-3.0 ZLIB
-"
+LICENSE+=" Apache-2.0 BSD ISC MIT MPL-2.0 openssl Unicode-3.0 ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
