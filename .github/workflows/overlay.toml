@@ -1364,7 +1364,6 @@ source = "github"
 github = "mihomo-party-org/mihomo-party"
 use_latest_release = true
 prefix = "v"
-github_account = "peeweep"
 
 ["net-proxy/naiveproxy-bin"]
 source = "github"
