@@ -32,7 +32,8 @@ SRC_URI="
 		-> PureSource-${GIT_COMMIT_PURESOURCE}.tar.gz
 	https://github.com/danielsanfr/qt-qrcode/archive/${GIT_COMMIT_QT_QRCODE}.tar.gz
 		-> qt-qrcode-${GIT_COMMIT_QT_QRCODE}.tar.gz
-	https://fukuchi.org/works/qrencode/qrencode-${QRENCODE_PV}.tar.bz2
+	https://github.com/fukuchi/libqrencode/archive/refs/tags/v${QRENCODE_PV}.tar.gz
+		-> qrencode-${QRENCODE_PV}.tar.gz
 	https://github.com/skypjack/uvw/archive/${GIT_COMMIT_UVW}.tar.gz -> uvw-${GIT_COMMIT_UVW}.tar.gz
 	https://github.com/Qv2ray/QvPlugin-Interface/archive/${GIT_COMMIT_QVPLUGIN_INTERFACE}.tar.gz
 		-> QvPlugin-Interface-${GIT_COMMIT_QVPLUGIN_INTERFACE}.tar.gz
@@ -82,7 +83,7 @@ src_unpack() {
 	mv "${WORKDIR}/PureSource-${GIT_COMMIT_PURESOURCE}" puresource || die
 	mv "${WORKDIR}/qt-qrcode-${GIT_COMMIT_QT_QRCODE}" qt-qrcode || die
 	rmdir qt-qrcode/lib/libqrencode || die
-	mv "${WORKDIR}/qrencode-${QRENCODE_PV}" qt-qrcode/lib/libqrencode || die
+	mv "${WORKDIR}/libqrencode-${QRENCODE_PV}" qt-qrcode/lib/libqrencode || die
 	mv "${WORKDIR}/uvw-${GIT_COMMIT_UVW}" uvw || die
 	rmdir "${S}/src/plugin-interface" || die
 	mv "${WORKDIR}/QvPlugin-Interface-${GIT_COMMIT_QVPLUGIN_INTERFACE}" "${S}/src/plugin-interface" || die
