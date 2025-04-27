@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-27 14:07:15 CST)
+(The last generation time: 2025-04-27 14:53:55 CST)
 
 ### Packages
 
@@ -612,7 +612,7 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/yass                                  | 1.16.2           |            | https://github.com/Chilledheart/yass                                                    | lightweight and efficient, socks5/http forward proxy
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/zashboard                             | 1.81.0           |            | https://github.com/Zephyruso/zashboard                                                  | The Official Mihomo Dashboard
+ net-proxy/zashboard                             | 1.82.0           |            | https://github.com/Zephyruso/zashboard                                                  | The Official Mihomo Dashboard
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-vpn/cloudflared-bin                         | 2025.2.1         |            | https://github.com/cloudflare/cloudflared                                               | Cloudflare Tunnel client (formerly Argo Tunnel)
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
