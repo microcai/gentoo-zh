@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-29 19:53:07 CST)
+(The last generation time: 2025-04-29 20:21:50 CST)
 
 ### Packages
 
@@ -425,10 +425,8 @@
                                                  | 5.1.45           |            |                                                                                         |
      app-emulation/deepin-wine-plugin            | 5.1.13-r1        |  D, RD     | https://www.deepin.org                                                                  | Deepin Wine plugin
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/dingtalk                                 | 7.0.40.30706     |            | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
-                                                 | 7.1.0.31017      |            |                                                                                         |
-                                                 | 7.1.0.31120      |            |                                                                                         |
-                                                 | 7.6.25.4122001   |            |                                                                                         |
+ net-im/dingtalk                                 | 7.6.25.4122001   |            | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
+                                                 | 7.6.45.5041701   |            |                                                                                         |
    dev-libs/libthai                              | 0.1.28           |  D, RD     | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
                                                  | 0.1.29           |            |                                                                                         |
      dev-libs/libdatrie                          | 0.2.13           |  D, RD     | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
