@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-30 10:19:44 CST)
+(The last generation time: 2025-04-30 13:02:49 CST)
 
 ### Packages
 
@@ -581,8 +581,8 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-trojan-go                    | 3.0.0            |            | https://github.com/Qv2ray/QvPlugin-Trojan-Go                                            | Plugin for Qv2ray to support Trojan-Go proxy in Qv2ray
    net-proxy/qv2ray                              | 2.7.0_p20240625  | RD         | https://github.com/Qv2ray/Qv2ray                                                        | Qt GUI fontend of v2ray
-     net-proxy/Xray                              | 25.3.31          | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
-                                                 | 25.3.6           |            |                                                                                         |
+     net-proxy/Xray                              | 25.3.6           | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
+                                                 | 25.4.30          |            |                                                                                         |
        app-alternatives/v2ray-geoip              | 0-r2             |  D, RD     |                                                                                         | symlink for v2ray-geoip
        app-alternatives/v2ray-geosite            | 0-r2             |  D, RD     |                                                                                         | symlink for v2ray-geosite
      net-proxy/v2ray                             | 5.30.0           | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
