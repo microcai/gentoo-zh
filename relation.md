@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-01 19:56:37 CST)
+(The last generation time: 2025-05-02 00:24:20 CST)
 
 ### Packages
 
@@ -482,7 +482,7 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/geo                                    | 1.1              |            | https://github.com/MetaCubeX/geo/                                                       | An easy way to manage all your Geo resources
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/hoppscotch-bin                         | 25.3.2.0         |            | https://hoppscotch.io                                                                   | Open source API development ecosystem
+ net-misc/hoppscotch-bin                         | 25.4.0.0         |            | https://hoppscotch.io                                                                   | Open source API development ecosystem
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/localsend-bin                          | 1.17.0           |            | https://localsend.org                                                                   | An open-source cross-platform alternative to AirDrop
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -581,8 +581,7 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-trojan-go                    | 3.0.0            |            | https://github.com/Qv2ray/QvPlugin-Trojan-Go                                            | Plugin for Qv2ray to support Trojan-Go proxy in Qv2ray
    net-proxy/qv2ray                              | 2.7.0_p20240625  | RD         | https://github.com/Qv2ray/Qv2ray                                                        | Qt GUI fontend of v2ray
-     net-proxy/Xray                              | 25.3.6           | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
-                                                 | 25.4.30          |            |                                                                                         |
+     net-proxy/Xray                              | 25.4.30          | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
        app-alternatives/v2ray-geoip              | 0-r2             |  D, RD     |                                                                                         | symlink for v2ray-geoip
        app-alternatives/v2ray-geosite            | 0-r2             |  D, RD     |                                                                                         | symlink for v2ray-geosite
      net-proxy/v2ray                             | 5.30.0           | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
