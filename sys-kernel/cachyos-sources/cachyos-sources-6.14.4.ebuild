@@ -14,7 +14,7 @@ detect_arch
 
 MY_KV="${KV_MAJOR}.${KV_MINOR}"
 AUFS_V="20250414"
-GIT_COMMIT_CACHYOS="c9337024cce72aec38511d67d005770e3114f408"
+GIT_COMMIT_CACHYOS="41c1c5db522013fa7608bbaba61ae2065a0ed0b4"
 
 DESCRIPTION="Full Cachyos sources including the Gentoo patchset for the ${MY_KV} kernel tree"
 HOMEPAGE="https://cachyos.org"
