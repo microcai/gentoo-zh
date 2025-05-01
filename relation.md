@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-04-30 13:02:49 CST)
+(The last generation time: 2025-05-01 19:56:37 CST)
 
 ### Packages
 
@@ -657,7 +657,7 @@
  sys-fs/systemd-zpool-scrub                      | 9999             |            | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/cachyos-sources                      | 6.13.12          |            | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
-                                                 | 6.14.3           |            |                                                                                         |
+                                                 | 6.14.4           |            |                                                                                         |
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/mkinitcpio                           | 38               |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
                                                  | 39.2             |            |                                                                                         |
