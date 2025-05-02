@@ -1464,7 +1464,7 @@ github_account = "peeweep"
 source = "github"
 github = "cloudflare/cloudflared"
 use_latest_release = true
-github_account = "douglarek"
+github_account = ["douglarek","peeweep"]
 
 ["net-vpn/sstp-server"]
 source = "github"
