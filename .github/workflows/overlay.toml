@@ -1262,9 +1262,6 @@ strip_release = true
 github_account = "st0nie"
 
 # live package only
-#["net-misc/you-get"]
-
-# live package only
 #["net-p2p/amule-dlp"]
 
 # live package only
