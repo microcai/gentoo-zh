@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-02 13:58:44 CST)
+(The last generation time: 2025-05-02 21:30:10 CST)
 
 ### Packages
 
@@ -609,7 +609,7 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/zashboard                             | 1.82.0           |            | https://github.com/Zephyruso/zashboard                                                  | The Official Mihomo Dashboard
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-vpn/cloudflared-bin                         | 2025.2.1         |            | https://github.com/cloudflare/cloudflared                                               | Cloudflare Tunnel client (formerly Argo Tunnel)
+ net-vpn/cloudflared-bin                         | 2025.4.2         |            | https://github.com/cloudflare/cloudflared                                               | Cloudflare Tunnel client (formerly Argo Tunnel)
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-vpn/sstp-server                             | 0.6.0            |            | https://github.com/sorz/sstp-server/                                                    | A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
