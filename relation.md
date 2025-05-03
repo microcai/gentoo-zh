@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-03 17:44:41 CST)
+(The last generation time: 2025-05-03 17:57:57 CST)
 
 ### Packages
 
@@ -508,8 +508,6 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/uuplugin                               | 4.14.4           |            | https://uu.163.com/                                                                     | UU Game Accelerator for Linux
                                                  | 7.12.12          |            |                                                                                         |
--------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/you-get                                | 9999             |            | http://www.soimort.org/you-get                                                          | A video downloader for YouTube, Youku, niconico and a few other sites
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-p2p/amule-dlp-antileech                     | 9999             |            | https://github.com/persmule/amule-dlp.antileech                                         | , dynamic DLP library for amule-dlp
    net-p2p/amule-dlp                             | 9999             | RD         | https://github.com/persmule/amule-dlp                                                   | aMule with DLP patch, the all-platform eMule p2p client
