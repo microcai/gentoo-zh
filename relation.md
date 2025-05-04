@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-03 20:00:27 CST)
+(The last generation time: 2025-05-04 13:12:37 CST)
 
 ### Packages
 
@@ -571,7 +571,7 @@
  net-proxy/qvplugin-command                      | 3.0.0            |            | https://github.com/Qv2ray/QvPlugin-Command                                              | Plugin for Qv2ray to run any commands when something happens in Qv2ray
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-naiveproxy                   | 3.0.0            |            | https://github.com/Qv2ray/QvPlugin-NaiveProxy                                           | Plugin for Qv2ray to support NaiveProxy in Qv2ray
-   net-proxy/naiveproxy-bin                      | 135.0.7049.38_p2 | RD         | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
+   net-proxy/naiveproxy-bin                      | 136.0.7103.44_p1 | RD         | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-ss                           | 3.0.0            |            | https://github.com/Qv2ray/QvPlugin-SS                                                   | Plugin for Qv2ray to support SIP003 in Qv2ray
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -585,7 +585,7 @@
      net-proxy/v2ray                             | 5.30.0           | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
      net-proxy/v2ray-bin                         | 4.45.0-r2        | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
                                                  | 5.30.0           |            |                                                                                         |
-   net-proxy/trojan-go-fork                      | 2025.03.09       | RD         | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
+   net-proxy/trojan-go-fork                      | 2025.05.04       | RD         | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/serenity                              | 1.1.0_beta3      |            | https://serenity.sagernet.org/                                                          | The configuration generator for sing-box
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -652,8 +652,7 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/systemd-zpool-scrub                      | 9999             |            | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-kernel/cachyos-sources                      | 6.13.12          |            | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
-                                                 | 6.14.4           |            |                                                                                         |
+ sys-kernel/cachyos-sources                      | 6.14.5           |            | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/mkinitcpio                           | 38               |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
                                                  | 39.2             |            |                                                                                         |
@@ -661,8 +660,6 @@
  sys-libs/elog-functions                         | 0.0.2            |            | http://xochitl.matem.unam.mx/~canek/gentoo-systemd-only/index.html                      | Compatibility functions for the log e* functions of OpenRC
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-power/tlpui                                 | 1.8.0            |            | https://github.com/d4nj1/TLPUI                                                          | A GTK user interface for TLP written in Python
--------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-process/cachyos-ksm-settings                | 1                |            | https://github.com/CachyOS/CachyOS-Settings                                             | Package for easy configuration of KSM via systemd
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/dist-kernel                             | 6.13.2           |            |                                                                                         | Virtual to depend on any Distribution Kernel
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -674,7 +671,7 @@
    sys-kernel/xanmod-sources                     | 6.13.2           | RD         | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-domain-list-community             | 0                |            |                                                                                         | Virtual for v2ray-domain-list-community
-   dev-libs/v2ray-domain-list-community          | 20250401022534   | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+   dev-libs/v2ray-domain-list-community          | 20250430053132   | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
    dev-libs/v2ray-domain-list-community-bin      | 20241210004721   | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-geoip                             | 0                |            |                                                                                         | Virtual for v2ray-geoip
