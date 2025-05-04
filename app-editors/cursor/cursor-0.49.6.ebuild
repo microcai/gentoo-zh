@@ -3,24 +3,29 @@
 
 EAPI=8
 
-CHROMIUM_LANGS="
-	af am ar bg bn ca cs da de el en-GB en-US es-419 es et fa fil fi fr gu he hi
-	hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt-BR pt-PT ro ru sk sl sr sv sw
-	ta te th tr uk ur vi zh-CN zh-TW
-"
+CHROMIUM_LANGS="af am ar bg bn ca cs da de el en-GB es es-419 et fa fi fil fr gu he
+	hi hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt-BR pt-PT ro ru sk sl sr
+	sv sw ta te th tr uk ur vi zh-CN zh-TW"
 
-inherit chromium-2 desktop pax-utils unpacker xdg optfeature
+inherit chromium-2 desktop pax-utils unpacker xdg optfeature shell-completion
 
-BUILD_ID="250219jnihavxsz"
+BUILD_ID="0781e811de386a0c5bcb07ceb259df8ff8246a52"
 DESCRIPTION="Cursor App - AI-first coding environment"
 HOMEPAGE="https://www.cursor.com/"
-SRC_URI="https://download.todesktop.com/230313mzl4w4u92/${P}-build-${BUILD_ID}-amd64.deb"
+SRC_URI="
+	amd64? (
+		https://downloads.cursor.com/production/${BUILD_ID}/linux/x64/Cursor-${PV}-x86_64.AppImage -> ${P}-amd64.AppImage
+	)
+	arm64? (
+		https://downloads.cursor.com/production/${BUILD_ID}/linux/arm64/Cursor-${PV}-aarch64.AppImage -> ${P}-arm64.AppImage
+	)
+"
 S="${WORKDIR}"
 
 LICENSE="cursor"
 
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~amd64 ~arm64"
 IUSE="egl kerberos wayland"
 RESTRICT="bindist mirror strip"
 
@@ -58,7 +63,14 @@ RDEPEND="
 "
 
 QA_PREBUILT="*"
-CURSOR_HOME="opt/Cursor"
+CURSOR_HOME="usr/share/cursor"
+
+src_unpack() {
+	cp "${DISTDIR}/${P}-${ARCH}.AppImage" "${S}/" || die
+	chmod +x "${S}/${P}-${ARCH}.AppImage" || die
+	"${S}/${P}-${ARCH}.AppImage" --appimage-extract || die
+	mv "${S}/squashfs-root"/* "${S}/" || die
+}
 
 src_configure() {
 	default
@@ -95,12 +107,26 @@ src_install() {
 		EXEC_EXTRA_FLAGS+=( "--use-gl=egl" )
 	fi
 
-	sed "s|^Exec=.*|Exec=cursor ${EXEC_EXTRA_FLAGS[*]} %U|" \
-		usr/share/applications/cursor.desktop > cursor-url-handler.desktop || die
+	sed -e "s|^Exec=/.*/cursor|Exec=cursor ${EXEC_EXTRA_FLAGS[*]}|" \
+		-e "s|^Icon=.*|Icon=cursor|" \
+		usr/share/applications/cursor.desktop > cursor.desktop || die
+	domenu cursor.desktop
+	sed -e "s|^Exec=/.*/cursor|Exec=cursor ${EXEC_EXTRA_FLAGS[*]}|" \
+		-e "s|^Icon=.*|Icon=cursor|" \
+		usr/share/applications/cursor-url-handler.desktop > cursor-url-handler.desktop || die
 	domenu cursor-url-handler.desktop
 
 	insinto /usr/share
 	doins -r usr/share/icons
+
+	insinto /usr/share/mime/packages
+	doins -r usr/share/mime/packages
+
+	insinto /usr/share/pixmaps
+	doins -r usr/share/pixmaps
+
+	newbashcomp usr/share/bash-completion/completions/cursor cursor
+	newzshcomp usr/share/zsh/vendor-completions/_cursor _cursor
 }
 
 pkg_postinst() {
