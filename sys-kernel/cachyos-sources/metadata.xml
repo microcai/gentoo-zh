@@ -12,10 +12,6 @@
 		<flag name="bbr3">BBR v3</flag>
 		<flag name="crypto">Patches to improve performance of CRC32 and AES128 crypto</flag>
 		<flag name="fixes">CachyOS fixes</flag>
-		<flag name="itmt-core-ranking">Support for AMD dynamic preferred core rankings</flag>
-		<flag name="ntsync">NTSync module support</flag>
-		<flag name="perf-per-core">Allows reading per-core CPU energy usage for AMD users</flag>
-		<flag name="pksm">KSM patch for proper working of uksmd daemon from pf</flag>
 		<flag name="t2">T2 Macbook support</flag>
 		<flag name="zstd">Latest and improved ZSTD patch-set</flag>
 		<flag name="bore">BORE CPU scheduler</flag>
