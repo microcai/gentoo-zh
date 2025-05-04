@@ -1152,7 +1152,7 @@ github_account = "gouwazi"
 source = "regex"
 url = "https://api.apifox.com/api/v1/configs/client-updates/2/mac/latest-mac.yml"
 regex = 'version: (.*)'
-github_account = ["gouwazi", "peeweep"]
+github_account = ["gouwazi"]
 
 ["net-misc/baidunetdisk"]
 source = "regex"
