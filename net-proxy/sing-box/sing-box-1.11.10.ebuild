@@ -23,26 +23,20 @@ LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~riscv"
 
-IUSE="+quic grpc +dhcp +wireguard +ech +utls +reality +acme +clash-api v2ray-api +gvisor tor"
-
-BDEPEND="
-	ech? ( >=dev-lang/go-1.21 )
-	!ech? ( >=dev-lang/go-1.20 )
-"
+IUSE="+quic grpc +dhcp +wireguard +utls +acme +clash-api v2ray-api +gvisor tor +tailscale"
 
 src_compile() {
 	if use quic; then _TAGS+="with_quic,"; fi
 	if use grpc; then _TAGS+="with_grpc,"; fi
 	if use dhcp; then _TAGS+="with_dhcp,"; fi
 	if use wireguard; then _TAGS+="with_wireguard,"; fi
-	if use ech; then _TAGS+="with_ech,"; fi
 	if use utls; then _TAGS+="with_utls,"; fi
-	if use reality; then _TAGS+="with_reality_server,"; fi
 	if use acme; then _TAGS+="with_acme,"; fi
 	if use clash-api; then _TAGS+="with_clash_api,"; fi
 	if use v2ray-api; then _TAGS+="with_v2ray_api,"; fi
 	if use gvisor; then _TAGS+="with_gvisor,"; fi
 	if use tor; then _TAGS+="with_embedded_tor,"; fi
+	if use tailscale; then _TAGS+="with_tailscale,"; fi
 
 	ego build -o sing-box -trimpath -tags "${_TAGS%,}" \
 		-ldflags "-s -w -X 'github.com/sagernet/sing-box/constant.Version=${PV}'" \
