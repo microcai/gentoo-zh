@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-04 21:38:20 CST)
+(The last generation time: 2025-05-05 15:01:30 CST)
 
 ### Packages
 
@@ -216,7 +216,7 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/conda-package-streaming              | 0.11.0           |            | https://github.com/conda/conda-package-streaming                                        | An efficient library to read from new and old conda packages
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/daff                                 | 1.3.46           |            | https://github.com/paulfitz/daff                                                        | The daff can produce and apply tabular diffs
+ dev-python/daff                                 | 1.4.2            |            | https://github.com/paulfitz/daff                                                        | The daff can produce and apply tabular diffs
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/mw2fcitx                             | 0.18.1           |            | https://github.com/outloudvi/mw2fcitx                                                   | Build fcitx5 libraries from MediaWiki sites
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
