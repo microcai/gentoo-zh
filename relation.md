@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-05 15:09:49 CST)
+(The last generation time: 2025-05-05 16:26:19 CST)
 
 ### Packages
 
@@ -104,7 +104,7 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/ccal                                   | 2.5.3            |            | http://ccal.chinesebay.com/ccal/ccal.htm                                                | A simple command line calendar for Chinese lunar
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/go-yq-bin                              | 4.45.1           |            | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
+ app-misc/go-yq-bin                              | 4.45.2           |            | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/gpick                                  | 0.2.6-r1         |            | https://github.com/thezbyg/gpick                                                        | Advanced color picker written in C++ using GTK+ toolkit
                                                  | 0.3              |            |                                                                                         |
@@ -175,7 +175,7 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/tgbot-cpp                               | 1.9              |            | https://github.com/reo7sp/tgbot-cpp                                                     | C++ library for Telegram bot API
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-db/dbeaver-bin                              | 25.0.3           |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
+ dev-db/dbeaver-bin                              | 25.0.4           |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-db/mongodb                                  | 5.3.1            |            | https://www.mongodb.com                                                                 | A high-performance, open source, schema-free document-oriented database
                                                  | 6.2.0-r4         |            |                                                                                         |
