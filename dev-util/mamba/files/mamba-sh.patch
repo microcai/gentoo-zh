@@ -1,0 +1,19 @@
+diff --git a/micromamba/CMakeLists.txt b/micromamba/CMakeLists.txt
+index 86e1f28..ef14bc7 100644
+--- a/micromamba/CMakeLists.txt
++++ b/micromamba/CMakeLists.txt
+@@ -116,10 +116,10 @@ if(BUILD_SHARED AND UNIX)
+         "${CMAKE_CURRENT_BINARY_DIR}/etc/profile.d/mamba.sh"
+     )
+ 
+-    install(
+-        FILES ${CMAKE_CURRENT_BINARY_DIR}/etc/profile.d/mamba.sh
+-        DESTINATION ${CMAKE_INSTALL_PREFIX}/etc/profile.d/
+-    )
++    #install(
++    #    FILES ${CMAKE_CURRENT_BINARY_DIR}/etc/profile.d/mamba.sh
++    #    DESTINATION ${CMAKE_INSTALL_PREFIX}/etc/profile.d/
++    #)
+ endif()
+ 
+ install(
