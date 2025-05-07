@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-06 17:23:03 CST)
+(The last generation time: 2025-05-07 15:52:17 CST)
 
 ### Packages
 
@@ -243,7 +243,7 @@
  dev-util/binsider                               | 0.2.1            |            | https://binsider.dev                                                                    | Analyze ELF binaries like a boss
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                      | 1.28.1.15219     |            | https://www.jetbrains.com/toolbox/app                                                   | Manage all your JetBrains Projects and Tools
-                                                 | 2.6.1.40902      |            |                                                                                         |
+                                                 | 2.6.2.41321      |            |                                                                                         |
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/osc                                    | 1.15.1           |            | https://github.com/openSUSE/osc                                                         | The Command Line Interface to work with an Open Build Service
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -264,7 +264,7 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gitoxide                                | 0.44.0           |            | https://github.com/GitoxideLabs/gitoxide                                                | A command-line application for interacting with git repositories
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/sourcegit-bin                           | 2025.15          |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
+ dev-vcs/sourcegit-bin                           | 2025.16          |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                       | 1.19.8           |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
                                                  | 1.20.9           |            |                                                                                         |
