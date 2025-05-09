@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-09 16:13:58 CST)
+(The last generation time: 2025-05-09 16:41:39 CST)
 
 ### Packages
 
@@ -104,7 +104,7 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/ccal                                   | 2.5.3            |            | http://ccal.chinesebay.com/ccal/ccal.htm                                                | A simple command line calendar for Chinese lunar
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/go-yq-bin                              | 4.45.2           |            | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
+ app-misc/go-yq-bin                              | 4.45.3           |            | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/gpick                                  | 0.2.6-r1         |            | https://github.com/thezbyg/gpick                                                        | Advanced color picker written in C++ using GTK+ toolkit
                                                  | 0.3              |            |                                                                                         |
@@ -463,7 +463,7 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/another-redis-desktop-manager-bin      | 1.7.1            |            | https://github.com/qishibo/AnotherRedisDesktopManager                                   | A faster, better and more stable Redis desktop manager [GUI client]
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/apifox                                 | 2.7.8            |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
+ net-misc/apifox                                 | 2.7.9            |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/baidunetdisk                           | 4.17.7           |            | https://pan.baidu.com/                                                                  | Baidu Net Disk is a cloud storage client (Linux Version)
                                                  | 4.3.0            |            |                                                                                         |
