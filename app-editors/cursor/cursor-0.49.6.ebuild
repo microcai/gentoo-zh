@@ -30,6 +30,10 @@ IUSE="egl kerberos wayland"
 RESTRICT="bindist mirror strip"
 
 RDEPEND="
+	|| (
+		sys-apps/systemd
+		sys-apps/systemd-utils
+	)
 	>=app-accessibility/at-spi2-core-2.46.0:2
 	app-crypt/libsecret[crypt]
 	app-misc/ca-certificates
