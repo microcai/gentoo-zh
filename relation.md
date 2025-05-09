@@ -1,15 +1,15 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-08 18:05:03 CST)
+(The last generation time: 2025-05-09 13:09:52 CST)
 
 ### Packages
 
 ```
  Package name                                    | Version          | Role       | Homepage                                                                                | Description
 =================================================|==================|============|=========================================================================================|====================
- app-admin/chezmoi                               | 2.62.0           |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
+ app-admin/chezmoi                               | 2.62.3           |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/chezmoi-bin                           | 2.62.0           |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
+ app-admin/chezmoi-bin                           | 2.62.3           |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/enpass                                | 6.10.1.1661      |            | https://www.enpass.io                                                                   | A cross-platform, complete password management solution.
                                                  | 6.11.6.1833      |            |                                                                                         |
@@ -256,9 +256,9 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/tailspin                               | 5.4.2            |            | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/vfox                                   | 0.6.4            |            | https://vfox.lhan.me                                                                    | A cross-platform version manager, extendable via plugins
+ dev-util/vfox                                   | 0.6.6            |            | https://vfox.lhan.me                                                                    | A cross-platform version manager, extendable via plugins
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/vfox-bin                               | 0.6.4            |            | https://vfox.lhan.me/                                                                   | A cross-platform version manager, extendable via plugins
+ dev-util/vfox-bin                               | 0.6.6            |            | https://vfox.lhan.me/                                                                   | A cross-platform version manager, extendable via plugins
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/zprint-bin                             | 1.2.9            |            | https://github.com/kkinnear/zprint                                                      | Clojure and Clojurescript source code formatter
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
