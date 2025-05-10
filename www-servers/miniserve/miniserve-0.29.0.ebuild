@@ -15,7 +15,7 @@ HOMEPAGE="https://github.com/svenstaro/miniserve"
 SRC_URI="
 	https://github.com/svenstaro/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 	${CARGO_CRATE_URIS}
-	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-crates.tar.xz
+	https://github.com/gentoo-zh-drafts/${PN}/releases/download/v${PV}/${P}-crates.tar.xz
 "
 
 LICENSE="MIT"
