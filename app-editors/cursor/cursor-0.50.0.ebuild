@@ -3,15 +3,13 @@
 
 EAPI=8
 
-CHROMIUM_LANGS="
-	af am ar bg bn ca cs da de el en-GB en-US es-419 es et fa fil fi fr gu he hi
-	hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt-BR pt-PT ro ru sk sl sr sv sw
-	ta te th tr uk ur vi zh-CN zh-TW
-"
+CHROMIUM_LANGS="af am ar bg bn ca cs da de el en-GB es es-419 et fa fi fil fr gu he
+	hi hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt-BR pt-PT ro ru sk sl sr
+	sv sw ta te th tr uk ur vi zh-CN zh-TW"
 
 inherit chromium-2 desktop pax-utils unpacker xdg optfeature shell-completion
 
-BUILD_ID="b6fb41b5f36bda05cab7109606e7404a65d1ff32"
+BUILD_ID="bbfa51c1211255cbbde8b558e014a593f44051f4"
 DESCRIPTION="Cursor App - AI-first coding environment"
 HOMEPAGE="https://www.cursor.com/"
 SRC_URI="
@@ -32,6 +30,10 @@ IUSE="egl kerberos wayland"
 RESTRICT="bindist mirror strip"
 
 RDEPEND="
+	|| (
+		sys-apps/systemd
+		sys-apps/systemd-utils
+	)
 	>=app-accessibility/at-spi2-core-2.46.0:2
 	app-crypt/libsecret[crypt]
 	app-misc/ca-certificates
