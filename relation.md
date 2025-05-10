@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-10 14:30:06 CST)
+(The last generation time: 2025-05-10 22:56:48 CST)
 
 ### Packages
 
@@ -403,7 +403,7 @@
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-analyzer/realitlscanner                     | 0.2.1            |            | https://github.com/XTLS/RealiTLScanner                                                  | A TLS server scanner for Reality
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-dns/ddns-go                                 | 6.9.1            |            | https://github.com/jeessy2/ddns-go                                                      | Automatically obtain your public IP address and set to your domain name service.
+ net-dns/ddns-go                                 | 6.9.2            |            | https://github.com/jeessy2/ddns-go                                                      | Automatically obtain your public IP address and set to your domain name service.
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/dnslookup                               | 1.11.1           |            | https://github.com/ameshkov/dnslookup                                                   | Simple command line utility to make DNS lookups to the specified server
 -------------------------------------------------|------------------|------------|-----------------------------------------------------------------------------------------|--------------------
