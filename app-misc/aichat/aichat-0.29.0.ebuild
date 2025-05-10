@@ -15,7 +15,7 @@ HOMEPAGE="https://github.com/sigoden/aichat"
 SRC_URI="
 	${CARGO_CRATE_URIS}
 	https://github.com/sigoden/aichat/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/gentoo-zh/gentoo-deps/releases/download/${P}/${P}-crates.tar.xz
+	https://github.com/gentoo-zh-drafts/${PN}/releases/download/v${PV}/${P}-crates.tar.xz
 "
 
 LICENSE="|| ( Apache-2.0 MIT )"
