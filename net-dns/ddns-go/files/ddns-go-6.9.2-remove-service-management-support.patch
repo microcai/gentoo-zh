@@ -1,4 +1,4 @@
-From f44343ec2ea7f7cfe9e26b082714837e6f88a247 Mon Sep 17 00:00:00 2001
+From b813f2180ed8bf7feaa2010f7aa97a2d50f9ccaf Mon Sep 17 00:00:00 2001
 From: Puqns67 <me@puqns67.icu>
 Date: Sun, 16 Jun 2024 01:15:02 +0800
 Subject: [PATCH 2/3] build: remove service management support for this build
@@ -8,7 +8,7 @@ Subject: [PATCH 2/3] build: remove service management support for this build
  1 file changed, 224 deletions(-)
 
 diff --git a/main.go b/main.go
-index 30cebf2..2226a95 100644
+index aa71180..f74e29c 100644
 --- a/main.go
 +++ b/main.go
 @@ -9,7 +9,6 @@ import (
@@ -17,9 +17,9 @@ index 30cebf2..2226a95 100644
  	"os"
 -	"os/exec"
  	"path/filepath"
+ 	"runtime"
  	"strconv"
- 	"time"
-@@ -18,7 +17,6 @@ import (
+@@ -19,7 +18,6 @@ import (
  	"github.com/jeessy2/ddns-go/v6/dns"
  	"github.com/jeessy2/ddns-go/v6/util"
  	"github.com/jeessy2/ddns-go/v6/web"
@@ -27,7 +27,7 @@ index 30cebf2..2226a95 100644
  )
  
  // ddns-go 版本
-@@ -34,9 +32,6 @@ var every = flag.Int("f", 300, "Update frequency(seconds)")
+@@ -35,9 +33,6 @@ var every = flag.Int("f", 300, "Update frequency(seconds)")
  // 缓存次数
  var ipCacheTimes = flag.Int("cacheTimes", 5, "Cache times")
  
@@ -37,7 +37,7 @@ index 30cebf2..2226a95 100644
  // 配置文件路径
  var configFilePath = flag.String("c", util.GetConfigFilePathDefault(), "Custom configuration file path")
  
-@@ -93,37 +88,6 @@ func main() {
+@@ -102,37 +97,6 @@ func main() {
  		util.SetDNS(*customDNS)
  	}
  	os.Setenv(util.IPCacheTimesENV, strconv.Itoa(*ipCacheTimes))
@@ -75,10 +75,11 @@ index 30cebf2..2226a95 100644
  	// 兼容之前的配置文件
  	conf, _ := config.GetConfigCached()
  	conf.CompatibleConfig()
-@@ -186,130 +150,6 @@ func runWebServer() error {
+@@ -192,191 +156,3 @@ func runWebServer() error {
+ 
  	return http.Serve(l, nil)
  }
- 
+-
 -type program struct{}
 -
 -func (p *program) Start(s service.Service) error {
@@ -203,14 +204,6 @@ index 30cebf2..2226a95 100644
 -	}
 -}
 -
- // 打开浏览器
- func autoOpenExplorer() {
- 	_, err := config.GetConfigCached()
-@@ -332,67 +172,3 @@ func autoOpenExplorer() {
- 		}
- 	}
- }
--
 -const sysvScript = `#!/bin/sh /etc/rc.common
 -DESCRIPTION="{{.Description}}"
 -cmd="{{.Path}}{{range .Arguments}} {{.|cmd}}{{end}}"
@@ -275,5 +268,5 @@ index 30cebf2..2226a95 100644
 -}
 -`
 -- 
-2.45.2
+2.49.0
 
