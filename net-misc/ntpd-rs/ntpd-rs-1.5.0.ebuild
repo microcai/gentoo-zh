@@ -15,7 +15,7 @@ HOMEPAGE="https://github.com/pendulum-project/ntpd-rs"
 SRC_URI="
 	${CARGO_CRATE_URIS}
 	https://github.com/pendulum-project/ntpd-rs/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/Gentoo-zh/gentoo-deps/releases/download/${P}/ntpd-${PV}-crates.tar.xz
+	https://github.com/gentoo-zh-drafts/${PN}/releases/download/v${PV}/${P}-crates.tar.xz
 "
 
 S="${WORKDIR}/${P}/ntpd"
