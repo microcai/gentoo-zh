@@ -29,7 +29,7 @@ if [[ "${PV}" == *9999* ]]; then
 else
 	SRC_URI="
 		https://github.com/waylyrics/waylyrics/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-		https://github.com/liuyujielol/gentoo-go-deps/releases/download/${P}/${P}-crates.tar.xz
+		https://github.com/gentoo-zh-drafts/${PN}/releases/download/v${PV}/${P}-crates.tar.xz
 		${CARGO_CRATE_URIS}
 	"
 	KEYWORDS="~amd64 ~loong"
