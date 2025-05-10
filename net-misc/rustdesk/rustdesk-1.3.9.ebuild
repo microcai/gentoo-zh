@@ -75,7 +75,7 @@ SRC_URI="
 		-> hwcodec-externals-${_HWCODEC_EXTERNALS_COMMIT}.tar.gz
 	https://raw.githubusercontent.com/c-smile/sciter-sdk/master/bin.lnx/x64/libsciter-gtk.so
 		-> ${P}-libsciter-gtk.so
-	https://distfiles.gentoocn.org/~jinqiang/distfiles/${P}-crates.tar.xz
+	https://github.com/gentoo-zh-drafts/${PN}/releases/download/${PV}/${P}-crates.tar.xz
 	${CARGO_CRATE_URIS}
 "
 
