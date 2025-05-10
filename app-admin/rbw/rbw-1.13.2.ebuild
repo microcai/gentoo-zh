@@ -14,7 +14,7 @@ DESCRIPTION="Unofficial Bitwarden CLI"
 HOMEPAGE="https://github.com/doy/rbw"
 SRC_URI="
 	https://github.com/doy/rbw/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-crates.tar.xz
+	https://github.com/gentoo-zh-drafts/${PN}/releases/download/${PV}/${P}-crates.tar.xz
 	${CARGO_CRATE_URIS}
 "
 
