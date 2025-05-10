@@ -16,7 +16,7 @@ SRC_URI="
 	https://github.com/tramhao/termusic/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 "
 SRC_URI+="
-	https://github.com/liuyujielol/gentoo-go-deps/releases/download/${P}/${P}-crates.tar.xz
+	https://github.com/gentoo-zh-drafts/${PN}/releases/download/v${PV}/${P}-crates.tar.xz
 "
 
 LICENSE="MIT"
