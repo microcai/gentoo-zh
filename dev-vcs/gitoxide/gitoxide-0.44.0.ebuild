@@ -14,7 +14,7 @@ DESCRIPTION="A command-line application for interacting with git repositories"
 HOMEPAGE="https://github.com/GitoxideLabs/gitoxide"
 SRC_URI="
 	https://github.com/GitoxideLabs/gitoxide/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/Gentoo-zh/gentoo-deps/releases/download/${P}/${P}-crates.tar.xz
+	https://github.com/gentoo-zh-drafts/${PN}/releases/download/v${PV}/${P}-crates.tar.xz
 	${CARGO_CRATE_URIS}
 "
 
