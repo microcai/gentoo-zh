@@ -626,6 +626,13 @@ source = "pypi"
 pypi = "qasync"
 github_account = "wgjak47"
 
+["dev-libs/singleapplication"]
+source = "github"
+github = "itay-grudev/SingleApplication"
+use_latest_tag = true
+prefix = "v"
+github_account = "blackteahamburger"
+
 ["dev-util/android-studio"]
 source = "aur"
 aur = "android-studio"
