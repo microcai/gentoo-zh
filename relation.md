@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-11 12:00:23 CST)
+(The last generation time: 2025-05-11 12:37:26 CST)
 
 ### Packages
 
@@ -227,6 +227,8 @@
  dev-python/pypinyin                             | 0.54.0             |            | https://github.com/mozillazg/python-pinyin                                              | Tool for converting Chinese characters to pinyin
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pytube                               | 15.0.0             |            | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
+-------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-ruby/filelock                               | 1.1.1              |            | https://github.com/sheerun/filelock                                                     | Heavily tested, but simple filelocking solution using flock command
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/android-studio                         | 2024.3.2.14        |            | https://developer.android.com/studio                                                    | Android development environment based on IntelliJ IDEA
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
