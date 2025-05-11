@@ -7,7 +7,6 @@
 	</maintainer>
 	<use>
 		<flag name="themes">Build with built-in themes</flag>
-		<flag name="xray">Use Xray core</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">Qv2ray/Qv2ray</remote-id>
