@@ -25,6 +25,8 @@ S="${WORKDIR}/QvPlugin-SS-${PV}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="test"
+RESTRICT="!test? ( test )"
 
 DEPEND="
 	dev-qt/qtbase:6[gui,network,widgets]
@@ -56,6 +58,7 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
+		-DBUILD_TESTING=$(usex test)
 		-DQVPLUGIN_USE_QT6=ON
 		-DSSR_UVW_WITH_QT=1
 		-DUSE_SYSTEM_LIBUV=ON
