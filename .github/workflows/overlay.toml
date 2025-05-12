@@ -626,6 +626,13 @@ source = "pypi"
 pypi = "qasync"
 github_account = "wgjak47"
 
+["dev-python/uv-bin"]
+source = "github"
+github = "astral-sh/uv"
+use_latest_release = true
+prefix = "v"
+github_account = "gouwazi"
+
 ["dev-libs/singleapplication"]
 source = "github"
 github = "itay-grudev/SingleApplication"
