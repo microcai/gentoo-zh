@@ -62,6 +62,10 @@ REQUIRED_USE="
 
 BDEPEND="dev-libs/protobuf"
 
+PATCHES=(
+	"${FILESDIR}/${P}-unstable-feature.patch"
+)
+
 src_configure() {
 	local myfeatures=(
 		$(usev bench)
