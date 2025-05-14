@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-14 18:34:30 CST)
+(The last generation time: 2025-05-14 18:37:49 CST)
 
 ### Packages
 
@@ -202,8 +202,8 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/archspec                             | 0.2.5              |            | https://github.com/archspec/archspec                                                    | A library for detecting, labeling, and reasoning about microarchitectures
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/conda                                | 25.1.1             |            | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
-   dev-python/conda-libmamba-solver              | 25.1.1             |  D, RD     | https://github.com/conda/conda-libmamba-solver                                          | The libmamba based solver for conda
+ dev-python/conda                                | 25.3.1             |            | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
+   dev-python/conda-libmamba-solver              | 25.4.0             |  D, RD     | https://github.com/conda/conda-libmamba-solver                                          | The libmamba based solver for conda
      dev-util/mamba                              | 2.1.1              | RD         | https://github.com/mamba-org/mamba                                                      | The Fast Cross-Platform Package Manager
        dev-cpp/reproc                            | 14.2.5             |  D, RD     | https://github.com/DaanDeMeyer/reproc                                                   | A cross-platform (C99/C++11) process library
        dev-cpp/tl-expected                       | 1.1.0              |  D, RD     | https://github.com/TartanLlama/expected                                                 | Guideline Support Library implementation by Microsoft
@@ -217,6 +217,10 @@
  dev-python/conda-package-streaming              | 0.11.0             |            | https://github.com/conda/conda-package-streaming                                        | An efficient library to read from new and old conda packages
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/daff                                 | 1.4.2              |            | https://github.com/paulfitz/daff                                                        | The daff can produce and apply tabular diffs
+-------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/frozendict                           | 2.4.6              |            | https://github.com/Marco-Sulla/python-frozendict                                        | A simple immutable dictionary for Python
+-------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/menuinst                             | 2.2.0              |            | https://github.com/conda/menuinst                                                       | Cross platform menu item installation
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/mw2fcitx                             | 0.18.1             |            | https://github.com/outloudvi/mw2fcitx                                                   | Build fcitx5 libraries from MediaWiki sites
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
