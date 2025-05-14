@@ -1,11 +1,11 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 DISTUTILS_USE_PEP517=hatchling
 DISTUTILS_SINGLE_IMPL=1
-PYTHON_COMPAT=( python3_{9..12} )
+PYTHON_COMPAT=( python3_{9..13} )
 inherit distutils-r1
 
 DESCRIPTION="OS-agnostic, system-level binary package manager and ecosystem"
@@ -19,16 +19,25 @@ KEYWORDS="~amd64"
 DEPEND="dev-vcs/git
 		$(python_gen_cond_dep '
 		dev-python/archspec[${PYTHON_USEDEP}]
-		dev-python/pyopenssl[${PYTHON_USEDEP}]
+		dev-python/boltons[${PYTHON_USEDEP}]
+		dev-python/charset-normalizer[${PYTHON_USEDEP}]
+		dev-python/conda-package-handling[${PYTHON_USEDEP}]
+		dev-python/conda-package-streaming[${PYTHON_USEDEP}]
+		dev-python/distro[${PYTHON_USEDEP}]
+		dev-python/frozendict[${PYTHON_USEDEP}]
+		dev-python/jsonpatch[${PYTHON_USEDEP}]
+		dev-python/menuinst[${PYTHON_USEDEP}]
+		dev-python/packaging[${PYTHON_USEDEP}]
+		dev-python/platformdirs[${PYTHON_USEDEP}]
 		dev-python/pluggy[${PYTHON_USEDEP}]
+		dev-python/pyopenssl[${PYTHON_USEDEP}]
 		dev-python/requests[${PYTHON_USEDEP}]
 		dev-python/ruamel-yaml[${PYTHON_USEDEP}]
+		dev-python/setuptools[${PYTHON_USEDEP}]
 		dev-python/toolz[${PYTHON_USEDEP}]
 		dev-python/tqdm[${PYTHON_USEDEP}]
 		dev-python/truststore[${PYTHON_USEDEP}]
-		dev-python/jsonpatch[${PYTHON_USEDEP}]
-		dev-python/conda-package-handling[${PYTHON_USEDEP}]
-		dev-python/conda-package-streaming[${PYTHON_USEDEP}]
+		dev-python/zstandard[${PYTHON_USEDEP}]
 		pycosat? ( dev-python/pycosat[${PYTHON_USEDEP}] )')
 		mamba? ( dev-python/conda-libmamba-solver[${PYTHON_SINGLE_USEDEP}] )"
 RDEPEND="${DEPEND}"
@@ -55,6 +64,7 @@ python_install() {
 }
 
 python_install_all() {
+	echo "$(cat "${FILESDIR}/condarc.default")" >> "${T}/condarc" || die
 	if use user ; then
 		echo "$(cat "${FILESDIR}/condarc.user")" >> "${T}/condarc" || die
 	fi
