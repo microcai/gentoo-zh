@@ -1052,6 +1052,13 @@ github_account = "st0nie"
 # TODO: upstream removed linux support
 #["media-video/tenvideo"]
 
+["media-video/tsukimi"]
+source = "github"
+github = "tsukinaha/tsukimi"
+use_max_tag = true
+prefix = "v"
+github_account = ["peeweep","irort"]
+
 # dead upstream
 # ["net-analyzer/nali"]
 
