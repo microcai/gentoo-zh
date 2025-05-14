@@ -7,16 +7,15 @@ DISTUTILS_USE_PEP517=setuptools
 DISTUTILS_EXT=1
 DISTUTILS_OPTIONAL=1
 DISTUTILS_SINGLE_IMPL=1
-PYTHON_COMPAT=(python3_{10..13})
+PYTHON_COMPAT=(python3_{11..13})
 
 inherit distutils-r1 cmake multilib
 
 DESCRIPTION="The Fast Cross-Platform Package Manager"
 HOMEPAGE="https://github.com/mamba-org/mamba"
 SRC_URI="https://github.com/mamba-org/mamba/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-S="${WORKDIR}/${PN}-${PV}"
 LICENSE="BSD"
-SLOT="0/2"
+SLOT="0/3"
 KEYWORDS="~amd64"
 IUSE="python mamba"
 # Test requires network access
