@@ -5,7 +5,7 @@ EAPI=8
 
 DISTUTILS_USE_PEP517=hatchling
 DISTUTILS_SINGLE_IMPL=1
-PYTHON_COMPAT=( python3_{9..12} )
+PYTHON_COMPAT=( python3_{9..13} )
 inherit distutils-r1
 
 DESCRIPTION="The libmamba based solver for conda"
