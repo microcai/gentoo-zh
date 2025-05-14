@@ -8,9 +8,11 @@
 	<use>
 		<flag name="0xproto">Install Nerd-fonts-patched 0xProto fonts</flag>
 		<flag name="3270">Install Nerd-fonts-patched 3270 fonts</flag>
+		<flag name="adwaitamono">Install Nerd-fonts-patched Adwaita Mono fonts</flag>
 		<flag name="agave">Install Nerd-fonts-patched Agave fonts</flag>
 		<flag name="anonymouspro">Install Nerd-fonts-patched Anonymous Pro fonts</flag>
 		<flag name="arimo">Install Nerd-fonts-patched Arimo fonts</flag>
+		<flag name="atkinsonhyperlegiblemono">Install Nerd-fonts-patched Atkinson Hyperlegible Mono fonts</flag>
 		<flag name="aurulentsansmono"> Install Nerd-fonts-patched Aurulent Sans Mono fonts </flag>
 		<flag name="bigblueterminal">Install Nerd-fonts-patched Big Blue Terminal fonts</flag>
 		<flag name="bitstreamverasansmono"> Install Nerd-fonts-patched Bitstream Vera Sans Mono fonts </flag>
@@ -23,6 +25,7 @@
 		<flag name="d2coding">Install Nerd-fonts-patched D2Coding fonts</flag>
 		<flag name="daddytimemono">Install Nerd-fonts-patched Daddy Time Mono fonts</flag>
 		<flag name="dejavusansmono">Install Nerd-fonts-patched DejaVu Sans Mono fonts</flag>
+		<flag name="departuremono">Install Nerd-fonts-patched Departure Mono fonts</flag>
 		<flag name="droidsansmono">Install Nerd-fonts-patched Droid Sans Mono fonts</flag>
 		<flag name="envycoder"> Install Nerd-fonts-patched EnvyCodeR fonts</flag>
 		<flag name="fantasquesansmono"> Install Nerd-fonts-patched Fantasque Sans mono fonts </flag>
@@ -61,6 +64,7 @@
 		<flag name="overpass">Install Nerd-fonts-patched Overpass fonts</flag>
 		<flag name="profont">Install Nerd-fonts-patched Pro Font fonts</flag>
 		<flag name="proggyclean">Install Nerd-fonts-patched Proggy Clean fonts</flag>
+		<flag name="recursive">Install Nerd-fonts-patched Recursive fonts</flag>
 		<flag name="robotomono">Install Nerd-fonts-patched Roboto Mono fonts</flag>
 		<flag name="sharetechmono">Install Nerd-fonts-patched Share Tech Mono fonts</flag>
 		<flag name="sourcecodepro">Install Nerd-fonts-patched Source Code Pro fonts</flag>
@@ -69,7 +73,9 @@
 		<flag name="tinos">Install Nerd-fonts-patched Tinos fonts</flag>
 		<flag name="ubuntu">Install Nerd-fonts-patched Ubuntu fonts</flag>
 		<flag name="ubuntumono">Install Nerd-fonts-patched Ubuntu Mono fonts</flag>
+		<flag name="ubuntusans">Install Nerd-fonts-patched Ubuntu Sans fonts</flag>
 		<flag name="victormono">Install Nerd-fonts-patched Victor Mono fonts</flag>
+		<flag name="zedmono">Install Nerd-fonts-patched Zed Mono fonts</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">ryanoasis/nerd-fonts</remote-id>
