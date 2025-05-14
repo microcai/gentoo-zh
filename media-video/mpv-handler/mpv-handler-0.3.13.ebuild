@@ -6,43 +6,6 @@
 EAPI=8
 
 CRATES="
-	base64@0.22.1
-	bitflags@2.6.0
-	cfg-if@1.0.0
-	dirs-sys@0.4.1
-	dirs@5.0.1
-	equivalent@1.0.1
-	getrandom@0.2.15
-	hashbrown@0.14.5
-	indexmap@2.5.0
-	libc@0.2.159
-	libredox@0.1.3
-	memchr@2.7.4
-	option-ext@0.2.0
-	proc-macro2@1.0.86
-	quote@1.0.37
-	redox_users@0.4.6
-	serde@1.0.210
-	serde_derive@1.0.210
-	serde_spanned@0.6.8
-	syn@2.0.79
-	thiserror-impl@1.0.64
-	thiserror@1.0.64
-	toml@0.8.19
-	toml_datetime@0.6.8
-	toml_edit@0.22.22
-	unicode-ident@1.0.13
-	wasi@0.11.0+wasi-snapshot-preview1
-	windows-sys@0.48.0
-	windows-targets@0.48.5
-	windows_aarch64_gnullvm@0.48.5
-	windows_aarch64_msvc@0.48.5
-	windows_i686_gnu@0.48.5
-	windows_i686_msvc@0.48.5
-	windows_x86_64_gnu@0.48.5
-	windows_x86_64_gnullvm@0.48.5
-	windows_x86_64_msvc@0.48.5
-	winnow@0.6.20
 "
 
 inherit cargo desktop xdg
@@ -51,6 +14,7 @@ DESCRIPTION="Play website videos and songs with mpv & yt-dlp"
 HOMEPAGE="https://github.com/akiirui/mpv-handler"
 SRC_URI="
 	${CARGO_CRATE_URIS}
+	https://github.com/gentoo-zh-drafts/mpv-handler/releases/download/v${PV}/${P}-crates.tar.xz
 	https://github.com/akiirui/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 "
 
