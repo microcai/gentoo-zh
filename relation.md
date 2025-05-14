@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-13 20:04:14 CST)
+(The last generation time: 2025-05-14 16:27:40 CST)
 
 ### Packages
 
@@ -121,7 +121,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/spark                                  | 1.0.1              |            | http://zachholman.com/spark/                                                            | ▁▂▃▅▂▇ in your shell
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/xmind                                  | 25.01.01061        |            | https://www.xmind.net                                                                   | Brainstorming and Mind Mapping Software
+ app-misc/xmind                                  | 25.04.03033        |            | https://www.xmind.net                                                                   | Brainstorming and Mind Mapping Software
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/yazi                                   | 25.4.8             |            | https://yazi-rs.github.io                                                               | Blazing fast terminal file manager written in Rust, based on async I/O.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -467,7 +467,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/another-redis-desktop-manager-bin      | 1.7.1              |            | https://github.com/qishibo/AnotherRedisDesktopManager                                   | A faster, better and more stable Redis desktop manager [GUI client]
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/apifox                                 | 2.7.9              |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
+ net-misc/apifox                                 | 2.7.10             |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/baidunetdisk                           | 4.17.7             |            | https://pan.baidu.com/                                                                  | Baidu Net Disk is a cloud storage client (Linux Version)
                                                  | 4.3.0              |            |                                                                                         |
@@ -540,7 +540,7 @@
      acct-group/mihomo                           | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
      acct-user/mihomo                            | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
    sys-apps/pnpm                                 | 9.15.5             | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
-                                                 | 10.10.0            |            |                                                                                         |
+                                                 | 10.11.0            |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-verge-bin                       | 1.6.0              |            | https://github.com/clash-verge-rev/clash-verge-rev                                      | (Continuation) of Clash Meta GUI based on Tauri.
                                                  | 1.6.4              |            |                                                                                         |
