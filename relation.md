@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-14 16:33:44 CST)
+(The last generation time: 2025-05-14 16:39:28 CST)
 
 ### Packages
 
@@ -459,7 +459,7 @@
    acct-group/alist                              | 0                  | RD         |                                                                                         | A file list/WebDAV program that supports multiple storages
    acct-user/alist                               | 0                  | RD         |                                                                                         | A file list/WebDAV program that supports multiple storages
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/aliyundrive-webdav                     | 2.3.3              |            | https://github.com/messense/aliyundrive-webdav.git                                      | WebDAV server for AliyunDrive
+ net-misc/aliyundrive-webdav                     | 2.3.3              |            | https://github.com/messense/aliyundrive-webdav                                          | WebDAV server for AliyunDrive
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/aliyunpan                              | 0.3.7              |            | https://github.com/tickstep/aliyunpan                                                   | aliyunpan cli client, support Webdav service, JavaScript plugin
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
