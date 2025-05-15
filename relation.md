@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-15 10:22:20 CST)
+(The last generation time: 2025-05-15 10:59:49 CST)
 
 ### Packages
 
@@ -476,7 +476,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/another-redis-desktop-manager-bin      | 1.7.1              |            | https://github.com/qishibo/AnotherRedisDesktopManager                                   | A faster, better and more stable Redis desktop manager [GUI client]
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/apifox                                 | 2.7.10             |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
+ net-misc/apifox                                 | 2.7.11             |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/baidunetdisk                           | 4.17.7             |            | https://pan.baidu.com/                                                                  | Baidu Net Disk is a cloud storage client (Linux Version)
                                                  | 4.3.0              |            |                                                                                         |
@@ -636,7 +636,7 @@
  sci-electronics/lceda                           | 6.5.37             |            | https://lceda.cn/                                                                       | LCEDA (binary package)
                                                  | 6.5.46             |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sci-electronics/lceda-pro                       | 2.2.38.9           |            | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
+ sci-electronics/lceda-pro                       | 2.2.39.2           |            | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sci-electronics/openfpgaloader                  | 0.13.1             |            | https://trabucayre.github.io/openFPGALoader                                             | Universal utility for programming FPGAs
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
