@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-15 11:22:57 CST)
+(The last generation time: 2025-05-15 18:07:23 CST)
 
 ### Packages
 
@@ -676,14 +676,14 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-power/tlpui                                 | 1.8.0              |            | https://github.com/d4nj1/TLPUI                                                          | A GTK user interface for TLP written in Python
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- virtual/dist-kernel                             | 6.13.2             |            |                                                                                         | Virtual to depend on any Distribution Kernel
+ virtual/dist-kernel                             | 6.14.6             |            |                                                                                         | Virtual to depend on any Distribution Kernel
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                           | 3-r11              |            |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/liquorix-sources                   | 6.4.12             | RD         | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
                                                  | 6.6.8              |            |                                                                                         |
-   sys-kernel/xanmod-kernel                      | 6.13.2             | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
+   sys-kernel/xanmod-kernel                      | 6.14.6             | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
    sys-kernel/xanmod-rt                          | 6.0.11             | RD         | https://xanmod.org                                                                      | XanMod RT sources and CJKTTY options.
-   sys-kernel/xanmod-sources                     | 6.13.2             | RD         | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
+   sys-kernel/xanmod-sources                     | 6.14.6             | RD         | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-domain-list-community             | 0                  |            |                                                                                         | Virtual for v2ray-domain-list-community
    dev-libs/v2ray-domain-list-community          | 20250508005311     | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
