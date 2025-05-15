@@ -90,7 +90,8 @@ SRC_URI="
 	agave? ( ${COMMON_URI}/Agave.tar.xz -> Agave-nf-${PV}.tar.xz )
 	anonymouspro? ( ${COMMON_URI}/AnonymousPro.tar.xz -> AnonymousPro-nf-${PV}.tar.xz )
 	arimo? ( ${COMMON_URI}/Arimo.tar.xz -> Arimo-nf-${PV}.tar.xz )
-	atkinsonhyperlegiblemono? ( ${COMMON_URI}/AtkinsonHyperlegibleMono.tar.xz -> AtkinsonHyperlegibleMono-nf-${PV}.tar.xz )
+	atkinsonhyperlegiblemono? (
+		${COMMON_URI}/AtkinsonHyperlegibleMono.tar.xz -> AtkinsonHyperlegibleMono-nf-${PV}.tar.xz )
 	aurulentsansmono? ( ${COMMON_URI}/AurulentSansMono.tar.xz -> AurulentSansMono-nf-${PV}.tar.xz )
 	bigblueterminal? ( ${COMMON_URI}/BigBlueTerminal.tar.xz -> BigBlueTerminal-nf-${PV}.tar.xz )
 	bitstreamverasansmono? ( ${COMMON_URI}/BitstreamVeraSansMono.tar.xz -> BitstreamVeraSansMono-nf-${PV}.tar.xz )
@@ -168,7 +169,6 @@ LICENSE="MIT
 SLOT="0"
 KEYWORDS="~amd64 ~loong ~x86"
 
-DEPEND=""
 RDEPEND="media-libs/fontconfig"
 
 CHECKREQS_DISK_BUILD="3G"
