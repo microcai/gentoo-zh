@@ -1611,18 +1611,18 @@ use_max_tag = true
 prefix = "v"
 
 ["sys-kernel/xanmod-kernel"]
-source = "github"
-github = "xanmod/linux"
-use_latest_release = true
+source = "gitlab"
+gitlab = "xanmod/linux"
+use_max_tag = true
 from_pattern = "(.*)-xanmod(.*)"
 to_pattern = "\\1"
 
 #["sys-kernel/xanmod-rt"]
 
 ["sys-kernel/xanmod-sources"]
-source = "github"
-github = "xanmod/linux"
-use_latest_release = true
+source = "gitlab"
+gitlab = "xanmod/linux"
+use_max_tag = true
 from_pattern = "(.*)-xanmod(.*)"
 to_pattern = "\\1"
 
