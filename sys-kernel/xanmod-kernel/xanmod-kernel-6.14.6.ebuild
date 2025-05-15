@@ -3,7 +3,9 @@
 
 EAPI=8
 
-inherit kernel-build toolchain-funcs
+LLVM_COMPAT=( 19 )
+
+inherit kernel-build toolchain-funcs llvm-r1
 
 MY_P=linux-${PV%.*}
 #Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
@@ -21,6 +23,16 @@ S=${WORKDIR}/${MY_P}
 LICENSE="GPL-2"
 KEYWORDS="~amd64"
 IUSE="clang debug"
+
+BDEPEND="
+	clang? (
+		$(llvm_gen_dep '
+			llvm-core/llvm:${LLVM_SLOT}
+			llvm-core/clang:${LLVM_SLOT}
+			llvm-core/lld:${LLVM_SLOT}
+		')
+	)
+"
 
 PDEPEND="
 	>=virtual/dist-kernel-${PV}"
