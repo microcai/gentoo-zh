@@ -72,6 +72,11 @@ jobs:
           THEBASEREF: ${{ steps.basecommit.outputs.sha }}
         run: |
           set -e
+          pushd ${GITHUB_WORKSPACE}/gentoo-zh/profiles/arch
+            for package_mask in `find . -type f`;do
+              cat $package_mask >> /var/db/repos/gentoo/profiles/arch/$package_mask;
+            done
+          popd
           mv ${GITHUB_WORKSPACE}/gentoo-zh /var/db/repos/
           mkdir -p /etc/portage/repos.conf
           echo "[gentoo]
