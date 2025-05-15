@@ -20,3 +20,4 @@ net-misc/biliup-app
 # jinqiang zhang <jinqiang@zhang.my> (2025-05-15)
 # Requires nodejs (which requires net-libs/nodejs won't support x32)
 net-proxy/zashboard
+net-proxy/metacubexd
