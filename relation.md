@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-16 11:35:55 CST)
+(The last generation time: 2025-05-16 11:47:26 CST)
 
 ### Packages
 
@@ -160,7 +160,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/goldendict                             | 25.02.0            |            | https://xiaoyifang.github.io/goldendict-ng/                                             | Feature-rich dictionary lookup program (qtwebengine fork)
                                                  | 25.05.0            |            |                                                                                         |
-   app-arch/libzim                               | 9.2.3              |  D, RD     | https://wiki.openzim.org/wiki/OpenZIM                                                   | ZIM file format: an offline storage solution for content coming from the Web
+   app-arch/libzim                               | 9.3.0              |  D, RD     | https://wiki.openzim.org/wiki/OpenZIM                                                   | ZIM file format: an offline storage solution for content coming from the Web
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/groff-utf8                             | 0-r1               |            | http://www.haible.de/bruno/packages-groff-utf8.html                                     | GNU groff wrapper allowing UTF-8 input
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
