@@ -5,10 +5,11 @@ EAPI=8
 inherit unpacker
 DESCRIPTION="An extremely fast Python package and project manager, written in Rust."
 HOMEPAGE="https://github.com/astral-sh/uv"
+URLPREFIX="https://github.com/astral-sh/uv/releases/download"
 SRC_URI="
 	amd64? (
-		elibc_glibc? ( https://github.com/astral-sh/uv/releases/download/${PV}/uv-x86_64-unknown-linux-gnu.tar.gz )
-		elibc_musl? ( https://github.com/astral-sh/uv/releases/download/${PV}/uv-x86_64-unknown-linux-musl.tar.gz )
+		elibc_glibc? ( ${URLPREFIX}/${PV}/uv-x86_64-unknown-linux-gnu.tar.gz -> ${P}-x86_64-unknown-linux-gnu.tar.gz )
+		elibc_musl? ( ${URLPREFIX}/${PV}/uv-x86_64-unknown-linux-musl.tar.gz  -> ${P}-x86_64-unknown-linux-musl.tar.gz )
 	)
 "
 
