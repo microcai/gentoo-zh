@@ -9,8 +9,3 @@
 # mask sdl2-compat, unmask it if you wants it
 media-libs/libsdl2
 
-# tauri package is too hard to bump, use net-misc/biliup-app-bin
-# as alternative. The treeclean pull request opened:
-# https://github.com/microcai/gentoo-zh/pull/7021
-# Removal on 2025-05-21
-net-misc/biliup-app

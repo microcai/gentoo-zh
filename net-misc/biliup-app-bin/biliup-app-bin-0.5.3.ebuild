@@ -12,19 +12,17 @@ DESCRIPTION="A Tool for Upload video to bilibili"
 HOMEPAGE="https://github.com/ForgQi/biliup-app"
 SRC_URI="https://github.com/ForgQi/${MY_PN}/releases/download/app-v${PV}/${MY_PN}_${PV}_amd64.deb"
 
-RESTRICT="mirror strip"
+S="${WORKDIR}"
 
 LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD Boost-1.0 CC0-1.0 ISC MIT MIT-0 MPL-2.0 Unicode-DFS-2016 Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
+RESTRICT="mirror strip"
 
 RDEPEND="
 	net-libs/webkit-gtk:4.1
 	x11-libs/gtk+:3
-	!net-misc/biliup-app
 "
-
-S="${WORKDIR}"
 
 MY_PREFIX="opt/apps/${MY_PN}"
 
