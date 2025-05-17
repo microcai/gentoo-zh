@@ -390,6 +390,12 @@ use_latest_release = true
 prefix = "v"
 github_account = "blackteahamburger"
 
+["app-text/lemminx-bin"]
+source = "github"
+github = "eclipse-lemminx/lemminx"
+use_latest_tag = true
+github_account = "blackteahamburger"
+
 # dead upstream
 #["app-text/groff-utf8"]
 
