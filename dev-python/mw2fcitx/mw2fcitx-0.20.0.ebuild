@@ -14,14 +14,12 @@ HOMEPAGE="
 	https://github.com/outloudvi/mw2fcitx
 	https://pypi.org/project/mw2fcitx
 "
-DICTV="20250113"
-SRC_URI+="
-	test? ( https://github.com/outloudvi/mw2fcitx/releases/download/${DICTV}/titles.txt -> titles-${DICTV}.txt )
-"
 
-LICENSE="Unlicense test? ( CC-BY-NC-SA-3.0 )"
+LICENSE="Unlicense"
 SLOT="0"
 KEYWORDS="~amd64"
+PROPERTIES="test_network"
+RESTRICT="test"
 
 RDEPEND="
 	>=app-i18n/opencc-1.1.7[python(-),${PYTHON_SINGLE_USEDEP}]
@@ -31,11 +29,4 @@ RDEPEND="
 	')
 "
 
-PATCHES=( "${FILESDIR}/${P}-test-no-network.patch" )
-
 distutils_enable_tests pytest
-
-src_unpack() {
-	default
-	use test && (cp "${DISTDIR}/titles-${DICTV}.txt" "${S}/titles.txt" || die)
-}
