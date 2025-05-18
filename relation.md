@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-18 03:26:58 CST)
+(The last generation time: 2025-05-18 20:06:30 CST)
 
 ### Packages
 
@@ -486,8 +486,6 @@
  net-misc/baidupcs-go                            | 3.9.7              |            | https://github.com/qjfoidnh/BaiduPCS-Go                                                 | The terminal utility for Baidu Network Disk (Golang Version).
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/bbdown-bin                             | 1.6.3              |            | https://github.com/nilaoda/BBDown                                                       | The terminal utility for Baidu Network Disk (Golang Version).
--------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/biliup-app                             | 0.4.1-r4           |            | https://github.com/ForgQi/biliup-app                                                    | A Tool for Upload video to bilibili
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/biliup-app-bin                         | 0.5.3              |            | https://github.com/ForgQi/biliup-app                                                    | A Tool for Upload video to bilibili
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
