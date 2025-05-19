@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-19 10:36:31 CST)
+(The last generation time: 2025-05-19 13:39:23 CST)
 
 ### Packages
 
@@ -182,7 +182,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/tgbot-cpp                               | 1.9                |            | https://github.com/reo7sp/tgbot-cpp                                                     | C++ library for Telegram bot API
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-db/dbeaver-bin                              | 25.0.4             |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
+ dev-db/dbeaver-bin                              | 25.0.5             |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-db/mongodb                                  | 5.3.1              |            | https://www.mongodb.com                                                                 | A high-performance, open source, schema-free document-oriented database
                                                  | 6.2.0-r4           |            |                                                                                         |
@@ -279,7 +279,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gitoxide                                | 0.44.0             |            | https://github.com/GitoxideLabs/gitoxide                                                | A command-line application for interacting with git repositories
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/sourcegit-bin                           | 2025.17            |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
+ dev-vcs/sourcegit-bin                           | 2025.18            |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                       | 1.19.8             |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
                                                  | 1.20.9             |            |                                                                                         |
