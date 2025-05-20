@@ -1668,6 +1668,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "gouwazi"
 
+["www-apps/dufs"]
+source = "github"
+github = "sigoden/dufs"
+use_latest_tag = true
+prefix = "v"
+github_account = "Puqns67"
+
 ["www-apps/follow-bin"]
 source = "github"
 github = "RSSNext/Follow"
