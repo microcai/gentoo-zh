@@ -1,0 +1,34 @@
+diff --git a/libmambapy/src/libmambapy/bindings/utils.cpp b/libmambapy/src/libmambapy/bindings/utils.cpp
+index 1f5c3cc..45157bf 100644
+--- a/libmambapy/src/libmambapy/bindings/utils.cpp
++++ b/libmambapy/src/libmambapy/bindings/utils.cpp
+@@ -109,11 +109,11 @@ namespace mambapy
+                         return std::nullopt;
+                     }
+                     const auto fg = style.get_foreground();
+-                    if (fg.is_rgb)
++                    if (!fg.is_terminal_color())
+                     {
+-                        return { { fmt::rgb(fg.value.rgb_color) } };
++                        return { { fmt::rgb(fg.value()) } };
+                     }
+-                    return { { static_cast<fmt::terminal_color>(fg.value.term_color) } };
++                    return { { static_cast<fmt::terminal_color>(fg.value()) } };
+                 }
+             )
+             .def_property_readonly(
+@@ -125,11 +125,11 @@ namespace mambapy
+                         return std::nullopt;
+                     }
+                     const auto bg = style.get_background();
+-                    if (bg.is_rgb)
++                    if (!bg.is_terminal_color())
+                     {
+-                        return { { fmt::rgb(bg.value.rgb_color) } };
++                        return { { fmt::rgb(bg.value()) } };
+                     }
+-                    return { { static_cast<fmt::terminal_color>(bg.value.term_color) } };
++                    return { { static_cast<fmt::terminal_color>(bg.value()) } };
+                 }
+             )
+             .def_property_readonly(
