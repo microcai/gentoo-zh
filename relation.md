@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-20 12:12:27 CST)
+(The last generation time: 2025-05-20 13:23:01 CST)
 
 ### Packages
 
@@ -691,11 +691,11 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-domain-list-community             | 0                  |            |                                                                                         | Virtual for v2ray-domain-list-community
    dev-libs/v2ray-domain-list-community          | 20250508005311     | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
-   dev-libs/v2ray-domain-list-community-bin      | 20241210004721     | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+   dev-libs/v2ray-domain-list-community-bin      | 20250520025700     | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-geoip                             | 0                  |            |                                                                                         | Virtual for v2ray-geoip
    dev-libs/v2ray-geoip                          | 202505050146       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
-   dev-libs/v2ray-geoip-bin                      | 202412120057       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
+   dev-libs/v2ray-geoip-bin                      | 202505050146       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/cherry-studio-bin                      | 1.3.6              |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
