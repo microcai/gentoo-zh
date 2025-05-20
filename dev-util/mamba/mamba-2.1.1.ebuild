@@ -49,7 +49,7 @@ DEPEND="app-arch/libarchive:=
 		sys-fs/e2fsprogs
 		sys-libs/zlib
 		)
-	dev-libs/libfmt:=
+	<=dev-libs/libfmt-11.1
 	dev-libs/spdlog
 	net-misc/curl
 	python? ( ${PYTHON_DEPS} )
