@@ -15,7 +15,6 @@ HOMEPAGE="https://github.com/kamiyaa/joshuto"
 SRC_URI="
 	https://github.com/kamiyaa/joshuto/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/gentoo-zh-drafts/joshuto/releases/download/v${PV}/${P}-crates.tar.xz
-	https://github.com/gentoo-zh-drafts/joshuto/commit/a3afdba7.patch -> ${P}-fix-cargo-1.80-build.patch
 	${CARGO_CRATE_URIS}
 "
 
@@ -42,10 +41,6 @@ RDEPEND="
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
 QA_FLAGS_IGNORED="usr/bin/${PN}"
-
-PATCHES=(
-	 "${DISTDIR}/${P}-fix-cargo-1.80-build.patch"
-)
 
 src_compile() {
 	# project set strip=true in [profile.release]
