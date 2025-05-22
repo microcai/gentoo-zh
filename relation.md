@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-22 11:08:07 CST)
+(The last generation time: 2025-05-22 11:13:14 CST)
 
 ### Packages
 
@@ -546,7 +546,7 @@
  net-proxy/clash-nyanpasu                        | 1.5.1              |            | https://github.com/LibNyanpasu/clash-nyanpasu                                           | Clash GUI based on tauri
    dev-lang/quickjs                              | 2024.01.13         | BD         | https://bellard.org/quickjs/                                                            | Small embeddable Javascript engine
    net-proxy/clash-rs                            | 0.7.7              | RD         | https://watfaq.gitbook.io/clashrs-user-manual/                                          | Custom protocol, rule based network proxy
-   net-proxy/mihomo                              | 1.19.8             |  D, RD     | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
+   net-proxy/mihomo                              | 1.19.9             |  D, RD     | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
      acct-group/mihomo                           | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
      acct-user/mihomo                            | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
    sys-apps/pnpm                                 | 9.15.5             | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
