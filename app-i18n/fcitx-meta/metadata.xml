@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>tanekliang@gmail.com</email>
+		<name>Yongxiang Liang</name>
+	</maintainer>
+	<use>
+		<flag name="anthy">Install Anthy Japanese input method</flag>
+		<flag name="bamboo">Install Bamboo Vietnamese input method</flag>
+		<flag name="chewing">Install Chewing (Intelligent phonetic, Zhuyin/Bopomofo) input method</flag>
+		<flag name="m17n">Install m17n-provided input methods</flag>
+		<flag name="chinese-addons">Install Chinese addons for fcitx5</flag>
+		<flag name="configtool">Enable GUI config tool</flag>
+		<flag name="gtk2">Enable GTK2 IM support</flag>
+		<flag name="gtk3">Enable GTK3 IM support</flag>
+		<flag name="gtk4">Enable GTK4 IM support</flag>
+		<flag name="hangul">Install Hangul Korean input method</flag>
+		<flag name="rime">Install Rime Chinese input method</flag>
+		<flag name="skk">Install SKK Japanese input method</flag>
+	</use>
+</pkgmetadata>
