@@ -22,7 +22,7 @@ DEPEND="!net-proxy/v2ray-bin
 	app-alternatives/v2ray-geosite
 "
 RDEPEND="${DEPEND}"
-BDEPEND=">=dev-lang/go-1.22"
+BDEPEND=">=dev-lang/go-1.24"
 
 src_prepare() {
 	sed -i 's|/usr/local/bin|/usr/bin|;s|/usr/local/etc|/etc|' release/config/systemd/system/*.service || die
