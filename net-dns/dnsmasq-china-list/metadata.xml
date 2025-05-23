@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>ston</name>
+		<email>ston.jia@qq.com</email>
+	</maintainer>
+	<use>
+		<flag name="dnsmasq">Install rules for dnsmasq</flag>
+		<flag name="smartdns">Install rules for smartdns</flag>
+		<flag name="dnscrypt-proxy">Install rules for dnscrypt-proxy</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">felixonmars/dnsmasq-china-list</remote-id>
+	</upstream>
+</pkgmetadata>
+

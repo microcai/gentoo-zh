@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>lyraile</name>
+		<email>iamoatiz@gmail.com</email>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">google/google-java-format</remote-id>
+	</upstream>
+</pkgmetadata>

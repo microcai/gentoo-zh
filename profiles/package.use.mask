@@ -1,0 +1,22 @@
+# Copyright 2024-2025 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+# Puqns67 <me@puqns67.icu> (2024-07-22)
+# Embedded Tor of sing-box is cannot build for a long time,
+# and upstream doesn't seem to care about this feature,
+# so mask it for default.
+# See also:
+# https://github.com/SagerNet/sing-box/issues/614
+# https://github.com/SagerNet/sing-box/issues/1117
+<net-proxy/sing-box-1.11.0 tor
+
+# Haowu Ge <gehaowu@bitmoe.com> (2024-05-26)
+# LiteLoaderQQNT is a hacking tool,
+# Employing it breaches the end-user license agreement,
+# could potentially destabilize the main program, or
+# lead to account suspension.
+# Please exercise caution when enabling it.
+net-im/tencent-qq liteloader
+
+# amarok currently broken on KF6
+media-sound/amarok qt6

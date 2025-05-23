@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Another Redis Desktop Manager
+Exec=/usr/bin/another-redis-desktop-manager --ignore-additional-command-line-flags --ozone-platform-hint=auto --enable-wayland-ime %U
+Comment=A faster, better and more stable Redis desktop manager [GUI client], compatible with Linux, Windows, Mac.
+Comment[zh_CN]=更快、更好、更稳定的Redis桌面(GUI)管理客户端，兼容Windows、Mac、Linux，性能出众，轻松加载海量键值
+Terminal=false
+Icon=another-redis-desktop-manager
+Type=Application
+StartupNotify=true
+StartupWMClass=another-redis-desktop-manager
+Categories=Network;Development;Utility;

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>1758961307@qq.com</email>
+		<name>123485k</name>
+	</maintainer>
+	<longdescription lang="en">
+		Trusted by millions of users, professional literature reader,
+		Using our software, you can read files in various formats such as CAJ and PDF,
+		Newly added functions such as document management, catalog extraction, and document translation double the reading efficiency.
+	</longdescription>
+	<longdescription lang="zh">
+		数百万用户信赖，专业文献阅读器，
+		使用我们的软件，可阅读CAJ、PDF等多种格式文件，
+		新增的文献管理、提取目录、文档翻译等功能，让阅读效率翻倍。
+	</longdescription>
+</pkgmetadata>

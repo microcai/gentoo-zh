@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>xen0n@gentoo.org</email>
+  </maintainer>
+  <upstream>
+    <remote-id type="github">AOSC-Dev/liblol</remote-id>
+  </upstream>
+</pkgmetadata>

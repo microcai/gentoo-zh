@@ -1,0 +1,9 @@
+# Config file for /etc/init.d/aptly-api
+
+# Various options.
+# run `aptly help serve` for valid cmdline options
+OPTS="-listen='127.0.0.1:8081' -no-lock -config=/etc/aptly/aptly.conf"
+
+# User and group daemon runs as
+APTLY_USER="aptly"
+APTLY_GROUP="aptly"

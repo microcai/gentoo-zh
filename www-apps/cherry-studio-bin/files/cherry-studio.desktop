@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Cherry Studio
+Exec=/usr/bin/cherry-studio --ignore-additional-command-line-flags --ozone-platform-hint=auto --enable-wayland-ime %U
+Comment=Cherry Studio is a desktop client that supports for multiple LLM providers. Support deepseek-r1
+Comment[zh_CN]=Cherry Studio 是一款支持多个大语言模型（LLM）服务商的桌面客户端
+Terminal=false
+Icon=cherry-studio
+Type=Application
+StartupNotify=true
+StartupWMClass=Apifox
+Categories=Network;Development;Utility;

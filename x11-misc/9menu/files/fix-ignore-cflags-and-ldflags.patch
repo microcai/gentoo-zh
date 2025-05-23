@@ -1,0 +1,17 @@
+diff --git a/Makefile.noimake b/Makefile.noimake
+index 3c74f8b..73e3efd 100644
+--- a/Makefile.noimake
++++ b/Makefile.noimake
+@@ -5,9 +5,9 @@
+ # Arnold Robbins
+ # arnold@skeeve.atl.ga.us
+ 
+-CC = gcc
+-CFLAGS = -g -O
++CC ?= gcc
++CFLAGS ?= -g -O
+ LIBS = -lX11
+ 
+ 9menu: 9menu.c
+-	$(CC) $(CFLAGS) 9menu.c $(LIBS) -o 9menu
++	$(CC) $(CFLAGS) $(LDFLAGS) 9menu.c $(LIBS) -o 9menu

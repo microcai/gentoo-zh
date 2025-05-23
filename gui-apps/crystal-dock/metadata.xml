@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>2073201758GD@gmail.com</email>
+		<name>liuyujielol</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">dangvd/crystal-dock</remote-id>
+	</upstream>
+</pkgmetadata>

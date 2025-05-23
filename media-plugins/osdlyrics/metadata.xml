@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>ak47m61@gmail.com</email>
+	</maintainer>
+	<use>
+		<flag name='gnome'>add support for gnome</flag>
+		<flag name='indicator'>add support for appindicator</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">osdlyrics/osdlyrics</remote-id>
+	</upstream>
+</pkgmetadata>

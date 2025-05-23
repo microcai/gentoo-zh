@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>2073201758GD@gmail.com</email>
+		<name>liuyujielol</name>
+	</maintainer>
+	<longdescription lang="en">
+		Terminal Music Player written in Rust. Can download music from youtube(netease/migu/kugou) and then embed lyrics and album photos into mp3/m4a/flac/wav/ogg vorbis files.
+	</longdescription>
+	<use>
+		<flag name="symphonia">Use symphonia as decoding backend (default)</flag>
+		<flag name="gst">Use <pkg>media-libs/gstreamer</pkg> as decoding backend</flag>
+		<flag name="mpv">Use <pkg>media-video/mpv</pkg> as decoding backend</flag>
+		<flag name="yt-dlp">Use <pkg>net-misc/yt-dlp</pkg> to provide the youtebe-dl feature</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">tramhao/termusic</remote-id>
+	</upstream>
+</pkgmetadata>

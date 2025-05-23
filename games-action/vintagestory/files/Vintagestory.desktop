@@ -1,0 +1,12 @@
+#!/usr/bin/xdg-open
+[Desktop Entry]
+Name=Vintage Story
+Comment=Uncompromising wilderness survival sandbox game
+Exec=Vintagestory %U
+Terminal=false
+Type=Application
+StartupNotify=false
+StartupWMClass=Vintage Story
+Categories=Game;
+Path=/opt/vintagestory
+Icon=Vintagestory

@@ -1,0 +1,44 @@
+#!/sbin/openrc-run
+# Copyright 1999-2020 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+depend() {
+	need net
+}
+
+checkconfig() {
+	if [ "${RC_SVCNAME}" != "xray" ] ; then
+		XR_CFGNAME="${RC_SVCNAME#*.}."
+	fi
+
+	XR_CONFIG="/etc/xray/config.${XR_CFGNAME}json"
+	XR_PIDFILE="/run/xray.${XR_CFGNAME}pid"
+	XR_LOG="/var/log/xray.${XR_CFGNAME}log"
+
+	if [ ! -f ${XR_CONFIG} ]; then
+		ewarn "${XR_CONFIG} does not exist."
+		return 1
+	fi
+
+	return 0
+}
+
+start() {
+	checkconfig || return 1
+
+	ebegin "Starting Xray"
+	ebegin "Log File : ${XR_LOG}"
+	start-stop-daemon --start	\
+	-b -1 ${XR_LOG} -2 ${XR_LOG}	\
+	-m -p ${XR_PIDFILE}		\
+	--exec /usr/bin/xray  -- -config ${XR_CONFIG}
+	eend $?
+
+}
+
+stop() {
+	checkconfig || return 1
+	ebegin "Stopping xray"
+	start-stop-daemon --stop -p ${XR_PIDFILE}
+	eend $?
+}

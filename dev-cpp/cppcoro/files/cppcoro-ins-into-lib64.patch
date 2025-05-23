@@ -1,0 +1,26 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 3ce73ea..a91ba47 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -25,7 +25,7 @@ configure_file(cmake/cppcoroConfig.cmake
+     "${PROJECT_BINARY_DIR}/cppcoro/cppcoroConfig.cmake"
+     COPYONLY)
+ 
+-set(config_package_location lib/cmake/cppcoro)
++set(config_package_location lib64/cmake/cppcoro)
+ install(DIRECTORY include/cppcoro
+ 	    DESTINATION include
+ 	    COMPONENT Devel)
+diff --git a/lib/CMakeLists.txt b/lib/CMakeLists.txt
+index 5af57d0..b24c160 100644
+--- a/lib/CMakeLists.txt
++++ b/lib/CMakeLists.txt
+@@ -221,6 +221,6 @@ find_package(Coroutines COMPONENTS Experimental Final REQUIRED)
+ target_link_libraries(cppcoro PUBLIC std::coroutines ${libraries})
+ 
+ install(TARGETS cppcoro EXPORT cppcoroTargets
+-	LIBRARY DESTINATION lib
+-	ARCHIVE DESTINATION lib
++	LIBRARY DESTINATION lib64
++	ARCHIVE DESTINATION lib64
+ 	RUNTIME DESTINATION bin)

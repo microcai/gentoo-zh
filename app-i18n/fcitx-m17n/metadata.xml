@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>2073201758GD@gmail.com</email>
+		<name>liuyujielol</name>
+	</maintainer>
+	<maintainer type="person">
+		<email>tanekliang@gmail.com</email>
+		<name>Yongxiang Liang</name>
+	</maintainer>
+	<use>
+		<flag name="coverage">Build the project with gcov support</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">fcitx/fcitx5-m17n</remote-id>
+	</upstream>
+</pkgmetadata>

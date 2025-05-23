@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>chn@chn.moe</email>
+		<name>Haonan Chen</name>
+	</maintainer>
+	<use>
+		<flag name="shared">Build shared library instead of static library.</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">Garcia6l20/cppcoro</remote-id>
+	</upstream>
+</pkgmetadata>

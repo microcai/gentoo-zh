@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>r0bertz@gentoo.org</email>
+		<name>Zhang Le</name>
+	</maintainer>
+	<use>
+		<flag name="static-libs">Build static versions of dynamic libraries as well</flag>
+	</use>
+</pkgmetadata>

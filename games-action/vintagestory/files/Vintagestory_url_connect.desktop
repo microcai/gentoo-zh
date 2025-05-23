@@ -1,0 +1,11 @@
+#!/usr/bin/xdg-open
+[Desktop Entry]
+Name=Vintage Story URI connect
+Exec=Vintagestory -c %U
+Terminal=false
+NoDisplay=true
+Type=Application
+StartupNotify=false
+Categories=Game;
+Path=/opt/vintagestory
+MimeType=x-scheme-handler/vintagestoryjoin;

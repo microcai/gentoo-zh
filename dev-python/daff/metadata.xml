@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="pypi">daff</remote-id>
+		<remote-id type="github">paulfitz/daff</remote-id>
+	</upstream>
+	<longdescription lang="en">
+	daff: data diff. daff can produce and apply tabular diffs.
+	This is a library for comparing tables, producing a summary of their
+	differences, and using such a summary as a patch file. It is optimized for
+	comparing tables that share a common origin, in other words multiple
+	versions of the "same" table.
+	</longdescription>
+</pkgmetadata>

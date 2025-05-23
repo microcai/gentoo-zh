@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>tanekliang@gmail.com</email>
+		<name>Yongxiang Liang</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">goldendict</remote-id>
+		<remote-id type="github">xiaoyifang/goldendict-ng</remote-id>
+	</upstream>
+	<use>
+		<flag name="epwing">Enable EPWING Dictionary Format</flag>
+		<flag name="ffmpeg">Use ffmpeg to play audio</flag>
+		<flag name="systemfmt">Build with dev-lib/libfmt</flag>
+		<flag name="systemtoml">Build with dev-cpp/tomlplusplus</flag>
+		<flag name="tts">Enable QTexttoSpeech support</flag>
+		<flag name="zim">Add Zim and Slob formats support</flag>
+	</use>
+</pkgmetadata>

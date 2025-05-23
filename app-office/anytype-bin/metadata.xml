@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>xiangzhedev@gmail.com</email>
+    <name>xz-dev</name>
+  </maintainer>
+  <upstream>
+    <bugs-to>https://community.anytype.io/c/bug-reports</bugs-to>
+    <changelog>
+    https://community.anytype.io/c/news-announcements/release-notes</changelog>
+    <remote-id type="github">anyproto/anytype-ts</remote-id>
+  </upstream>
+</pkgmetadata>

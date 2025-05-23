@@ -1,0 +1,10 @@
+--- a/GNUmakefile
++++ b/GNUmakefile
+@@ -184,7 +184,6 @@
+ 
+ .PHONY: update-contrib
+ update-contrib contrib/contrib.mk:
+-	git submodule update --init --recursive
+ 
+ include contrib/contrib.mk
+ 

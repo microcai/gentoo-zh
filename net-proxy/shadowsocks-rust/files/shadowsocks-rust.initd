@@ -1,0 +1,49 @@
+#!/sbin/openrc-run
+# Copyright 2024 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+SS_RS_SVCNAME="${RC_SVCNAME#*.}"
+
+capabilities="^cap_net_admin,^cap_net_bind_service"
+pidfile="/run/${RC_SVCNAME}.pid"
+
+command="/usr/bin/ss${SS_RS_SVCNAME}"
+command_args="${SS_RS_ARGS}"
+command_args_background="--daemonize --daemonize-pid ${pidfile}"
+
+depend() {
+	use net dns
+}
+
+checkconfig() {
+	if [ ! -f ${SS_RS_CONFIG} ]; then
+		ewarn "${SS_RS_CONFIG} does not exist."
+	fi
+
+	case ${SS_RS_SVCNAME} in
+	local)
+		return 0
+	;;
+	server)
+		return 0
+	;;
+	*)
+		eerror "please choose to run as server or client mode"
+		eerror "  server: rc-update add shadowsocks-rust.server default"
+		eerror "  client: rc-update add shadowsocks-rust.local default"
+		return 1
+		;;
+	esac
+}
+
+start_pre() {
+  if [ "${RC_CMD}" != "restart" ] ; then
+    checkconfig || return $?
+  fi
+}
+
+stop_pre() {
+  if [ "${RC_CMD}" = "restart" ] ; then
+      checkconfig || return $?
+  fi
+}

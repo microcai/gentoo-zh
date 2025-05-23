@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>blackteahamburger</name>
+		<email>blackteahamburger@outlook.com</email>
+	</maintainer>
+	<use>
+		<flag name="amd-pstate">AMD P-State enhancements and fixes from linux-next</flag>
+		<flag name="amd-tlb-broadcast">Support for AMD broadcast TLB invalidation</flag>
+		<flag name="asus">ASUS patchset</flag>
+		<flag name="bbr3">BBR v3</flag>
+		<flag name="crypto">Patches to improve performance of CRC32 and AES128 crypto</flag>
+		<flag name="fixes">CachyOS fixes</flag>
+		<flag name="t2">T2 Macbook support</flag>
+		<flag name="zstd">Latest and improved ZSTD patch-set</flag>
+		<flag name="bore">BORE CPU scheduler</flag>
+		<flag name="prjc">Project C CPU scheduler (BMQ/PDS)</flag>
+		<flag name="polly">Add support for Clang's polyhedral loop optimizer</flag>
+		<flag name="hardened">linux-hardened patchset</flag>
+		<flag name="rt">RT i915 patches</flag>
+		<flag name="dkms-clang">Remove some Werror CFLAGS to increase compatibility with some DKMS
+			modules in clang-built kernels</flag>
+		<flag name="clang-polly">Support for Clang's polyhedral loop optimizer</flag>
+		<flag name="aufs">Support for Aufs</flag>
+		<flag name="deckify">Support for handhelds</flag>
+	</use>
+	<upstream>
+		<remote-id type="cpe">cpe:/o:linux:linux_kernel</remote-id>
+		<remote-id type="github">CachyOS/kernel-patches</remote-id>
+	</upstream>
+</pkgmetadata>

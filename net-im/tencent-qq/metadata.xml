@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE 
+pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>git@xen0n.name</email>
+        <name>WANG Xuerui</name>
+    </maintainer>
+    <maintainer type="person">
+        <email>ston.jia@outlook.com</email>
+        <name>ston</name>
+    </maintainer>
+    <use>
+        <flag name="bwrap">Use sys-apps/bubblewrap to prevent
+        private information leakage</flag>
+        <flag name="system-vips">Use media-libs/vips instead of
+        shipped libs.</flag>
+        <flag name="gnome">Supporting screenshot when using
+        GNOME</flag>
+        <flag name="liteloader">Add liteloader support</flag>
+    </use>
+</pkgmetadata>

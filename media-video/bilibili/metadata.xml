@@ -1,0 +1,10 @@
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>doubiliao@gmail.com</email>
+		<name>Boiao Ch</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">mosjocs/bilibili-linux</remote-id>
+	</upstream>
+</pkgmetadata>

@@ -1,0 +1,4 @@
+move dev-util/lldb-mi dev-debug/lldb-mi
+move dev-util/gyp dev-build/gyp
+move app-misc/yq-bin app-misc/go-yq-bin
+move www-client/brave www-client/brave-bin

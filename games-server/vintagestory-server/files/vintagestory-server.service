@@ -1,0 +1,15 @@
+[Unit]
+Description=Vintage Story ${PV} Server (World: %I)
+After=network.target
+
+[Service]
+User=vintagestory
+Group=vintagestory
+WorkingDirectory=-/var/lib/vintagestory-server/${PV}/%I
+PIDFile=/run/vintagestory-server-${PV}.%I.pid
+ExecStartPre=!/bin/mkdir -p /var/lib/vintagestory-server/${PV}/%I
+ExecStartPre=!/bin/chown -R vintagestory:vintagestory /var/lib/vintagestory-server/${PV}/%I
+ExecStart=/bin/sh -c '/usr/bin/dtach -N $(mktemp -u) /usr/bin/vintagestory-server-${PV} --dataPath /var/lib/vintagestory-server/${PV}/%I'
+
+[Install]
+WantedBy=multi-user.target

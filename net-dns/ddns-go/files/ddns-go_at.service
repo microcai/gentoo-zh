@@ -1,0 +1,14 @@
+[Unit]
+Description=DDNS-GO with config '%i'
+Requires=network.target
+After=network-online.target
+Conflicts=ddns-go.service ddns-go-web.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/ddns-go -noweb -c "/etc/ddns-go/%i.yaml"
+Restart=on-failure
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target

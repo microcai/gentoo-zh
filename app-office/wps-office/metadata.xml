@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<!-- maintainer-needed -->
+	<longdescription lang="en">
+		Kingsoft Office is an office productivity suite by Kingsoft. This software is of alpha quality, and may be unstable at times. Use at own risk.
+	</longdescription>
+</pkgmetadata>
+

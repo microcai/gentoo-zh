@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>diceea@foxmail.com</email>
+		<name>Goldsrc233</name>
+	</maintainer>
+	<upstream>
+		<changelog>https://github.com/hyprwm/Hypr/releases</changelog>
+		<bugs-to>https://github.com/hyprwm/Hypr/issues</bugs-to>
+		<remote-id type="github">hyprwm/Hypr</remote-id>
+	</upstream>
+</pkgmetadata>

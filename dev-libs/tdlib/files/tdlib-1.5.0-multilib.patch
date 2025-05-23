@@ -1,0 +1,43 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index fde2bcb..8e5c089 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,5 +1,9 @@
+ cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
+ 
++if (NOT DEFINED LIB)
++  set(LIB "lib")
++endif(NOT DEFINED LIB)
++
+ project(TDLib VERSION 1.5.0 LANGUAGES CXX C)
+ 
+ if (POLICY CMP0054)
+@@ -893,8 +897,8 @@ add_library(Td::TdJson ALIAS TdJson)
+ add_library(Td::TdJsonStatic ALIAS TdJsonStatic)
+ 
+ install(TARGETS tdjson TdJson tdjson_static TdJsonStatic tdjson_private tdclient tdcore TdStatic EXPORT TdTargets
+-  LIBRARY DESTINATION lib
+-  ARCHIVE DESTINATION lib
++  LIBRARY DESTINATION ${LIB}
++  ARCHIVE DESTINATION ${LIB}
+   RUNTIME DESTINATION bin
+   INCLUDES DESTINATION include
+ )
+@@ -902,7 +906,7 @@ install(TARGETS tdjson TdJson tdjson_static TdJsonStatic tdjson_private tdclient
+ install(EXPORT TdTargets
+   FILE TdTargets.cmake
+   NAMESPACE Td::
+-  DESTINATION lib/cmake/Td
++  DESTINATION ${LIB}/cmake/Td
+ )
+ 
+ install(FILES ${TD_JSON_HEADERS} ${CMAKE_CURRENT_BINARY_DIR}/td/telegram/tdjson_export.h DESTINATION include/td/telegram)
+@@ -919,7 +923,7 @@ write_basic_package_version_file("TdConfigVersion.cmake"
+   COMPATIBILITY ExactVersion
+ )
+ install(FILES "TdConfig.cmake" "${CMAKE_CURRENT_BINARY_DIR}/TdConfigVersion.cmake"
+-  DESTINATION lib/cmake/Td
++  DESTINATION ${LIB}/cmake/Td
+ )
+ 
+ # Add SOVERSION to shared libraries

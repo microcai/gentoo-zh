@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Looking-glass
+Exec=looking-glass-client
+GenericName=looking glass client
+Icon=looking-glass
+StartupNotify=true
+Terminal=false
+Type=Application
+MimeType=application/system

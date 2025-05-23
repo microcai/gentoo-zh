@@ -1,0 +1,47 @@
+#!/sbin/openrc-run
+# Copyright 2024 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+if [ "${SVCNAME}" = "vintagestory-server-${PV}" ]; then
+	instance="main"
+else
+	instance="${SVCNAME#*.}"
+fi
+
+vs_command="/usr/bin/vintagestory-server-${PV}"
+vs_path="/opt/vintagestory-server-${PV}"
+vs_path_data="/var/lib/vintagestory-server/${PV}"
+vs_path_instance="${vs_path_data}/${instance}"
+directory="${vs_path_instance}/"
+dtach_tmpfile="$(mktemp -u)"
+name="Vintage Story ${PV} Server (${instance})"
+pidfile="/run/vintagestory-server-${PV}.${instance}.pid"
+
+description_attach="Attaches to the session (interactive console) of the Vintage Story ${PV} Server (${instance})"
+extra_started_commands="attach"
+
+command="/usr/bin/dtach"
+command_background="true"
+command_args="-N ${dtach_tmpfile} ${vs_command} --dataPath ${vs_path_instance}"
+command_group="vintagestory"
+command_user="vintagestory"
+
+depend() {
+	use net
+}
+
+start_pre() {
+	checkpath -d -o "${command_user}:${command_group}" -q "${vs_path_data}" "${vs_path_instance}"
+}
+
+attach() {
+	pidnumber="$(cat ${pidfile})"
+	dtach_tmpfile="$(cat /proc/${pidnumber}/cmdline | tr '\0' ' ' | awk '{print $3}')"
+
+	if [ -S "${dtach_tmpfile}" ]; then
+		eval "${command}" -a "${dtach_tmpfile}" "${DTACH_OPTS}"
+	else
+		eerror "The determined socket file for dtach could not be found!"
+		eerror "Did the process crash?"
+	fi
+}

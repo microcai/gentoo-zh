@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>haohedemeizhi@gmail.com</email>
+		<name>xiaobai</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">lyswhut/lx-music-desktop</remote-id>
+		<bugs-to>https://github.com/lyswhut/lx-music-desktop/issues</bugs-to>
+	</upstream>
+</pkgmetadata>

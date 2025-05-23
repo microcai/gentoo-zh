@@ -1,0 +1,23 @@
+From bc80d74204bc8396d2864379f15ff7993bce6f9b Mon Sep 17 00:00:00 2001
+From: jinqiang zhang <jinqiang@zhang.my>
+Date: Mon, 12 May 2025 12:47:46 +0000
+Subject: [PATCH] fixed(build): unstable feature unbounded_shifts build failure
+ on rust 1.86
+
+---
+ clash_lib/src/lib.rs | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/clash_lib/src/lib.rs b/clash_lib/src/lib.rs
+index 6ada034b..6bd64400 100644
+--- a/clash_lib/src/lib.rs
++++ b/clash_lib/src/lib.rs
+@@ -2,7 +2,7 @@
+ #![feature(ip)]
+ #![feature(sync_unsafe_cell)]
+ #![feature(let_chains)]
+-#![cfg_attr(not(version("1.86.0")), feature(unbounded_shifts))]
++#![cfg_attr(not(version("1.87.0")), feature(unbounded_shifts))]
+ 
+ #[macro_use]
+ extern crate anyhow;

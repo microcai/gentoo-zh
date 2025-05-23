@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <name>ston</name>
+    <email>ston.jia@qq.com</email>
+  </maintainer>
+  <use>
+    <flag name="v2fly">use virtual/v2ray-domain-list-community</flag>
+    <flag name="loyalsoldier">use dev-libs/v2ray-rules-dat-bin</flag>
+  </use>
+</pkgmetadata>

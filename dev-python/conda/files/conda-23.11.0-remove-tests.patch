@@ -1,0 +1,15 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index 1c599e6..0f32757 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -67,6 +67,10 @@ include = ["conda", "conda_env"]
+ [tool.hatch.build.hooks.vcs]
+ version-file = "conda/__version__.py"
+ 
++[tool.hatch.build.targets.wheel]
++packages = ["conda"]
++exclude = ["conda/tests"]
++
+ [tool.coverage.run]
+ # store relative paths in coverage information
+ relative_files = true

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>OriPoin@outlook.com</email>
+		<name>Yachen Wang</name>
+	</maintainer>
+	<use>
+		<flag name="initramfs">Build initramfs along with the kernel.</flag>
+		<flag name="clang">Use clang compiler instead of GCC</flag>
+		<flag name="debug">Pseudo flag</flag>
+	</use>
+	<upstream>
+		<remote-id type="sourceforge">xanmod</remote-id>
+	</upstream>
+</pkgmetadata>

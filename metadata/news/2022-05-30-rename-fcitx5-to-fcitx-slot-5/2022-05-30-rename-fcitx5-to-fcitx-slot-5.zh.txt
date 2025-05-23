@@ -1,0 +1,28 @@
+Title: rename app-i18n/fcitx5 to app-i18n/fcitx
+Author: liangyongxiang <tankeliang@gmail.org>
+Content-Type: text/plain
+Posted: 2022-05-30
+Revision: 1
+News-Item-Format: 1.0
+Display-If-Installed: app-i18n/fcitx
+Display-If-Installed: app-i18n/fcitx5
+Display-If-Installed: app-i18n/fcitx5-chewing
+Display-If-Installed: app-i18n/fcitx5-chinese-addons
+Display-If-Installed: app-i18n/fcitx5-configtool
+Display-If-Installed: app-i18n/fcitx5-gtk
+Display-If-Installed: app-i18n/fcitx5-hangul
+Display-If-Installed: app-i18n/fcitx5-kkc
+Display-If-Installed: app-i18n/fcitx5-lua
+Display-If-Installed: app-i18n/fcitx5-meta
+Display-If-Installed: app-i18n/fcitx5-qt
+Display-If-Installed: app-i18n/fcitx5-rime
+Display-If-Installed: app-i18n/fcitx5-skk
+Display-If-Installed: app-i18n/fcitx5-table-extra
+Display-If-Installed: app-i18n/fcitx5-table-other
+
+Gentoo-zh 里 app-i18n/fcitx5* 已经迁移到
+app-i18n/fcitx*:5，但是没有完全解决和app-fcitx*:4兼容的问题。
+
+如果是app-i18n/fcitx:4的用户，请将app-i18n/fcitx*:5加入package.mask
+
+
