@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-22 14:57:51 CST)
+(The last generation time: 2025-05-23 18:27:25 CST)
 
 ### Packages
 
@@ -240,7 +240,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pytube                               | 15.0.0             |            | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/uv-bin                               | 0.7.6              |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
+ dev-python/uv-bin                               | 0.7.7              |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-ruby/filelock                               | 1.1.1              |            | https://github.com/sheerun/filelock                                                     | Heavily tested, but simple filelocking solution using flock command
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -533,7 +533,7 @@
    acct-user/n2n                                 | 0                  |  D, RD     |                                                                                         | A Layer Two Peer-to-Peer VPN
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-p2p/qbittorrent-enhanced                    | 4.6.7.10           |            | https://github.com/c0re100/qBittorrent-Enhanced-Edition                                 | qBittorrent Enhanced, based on qBittorrent
-                                                 | 5.0.5.10           |            |                                                                                         |
+                                                 | 5.1.0.10           |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-print/epson-inkjet-printer_201207w          | 1.0.0              |            | http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX                              | Epson printer driver (L110, L210, L300, L350, L355, L550, L555)
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -696,7 +696,7 @@
    dev-libs/v2ray-geoip                          | 202505050146       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                      | 202505050146       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                      | 1.3.9              |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                      | 1.3.10             |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/dufs                                   | 0.43.0-r1          |            | https://github.com/sigoden/dufs                                                         | A distinctive utility file server
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
