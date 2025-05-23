@@ -41,22 +41,18 @@ DEPEND="${RDEPEND}"
 BDEPEND="dev-qt/qttools:6
 		virtual/pkgconfig"
 
-DOCS=( AUTHORS Changelog CONTRIBUTING.md README.md)
-
-PATCHES=(
-	"${FILESDIR}/4.5-fix-compile-error-when-disable-webui.patch"
-)
+DOCS=(AUTHORS Changelog CONTRIBUTING.md README.md)
 
 src_configure() {
 	set enable_gui="OFF"
-	if use gui ; then
+	if use gui; then
 		enable_gui="ON"
 	fi
 
 	local mycmakeargs=(
 		-DDBUS=$(usex dbus)
 		-DWEBUI=$(usex webui)
-		-DGUI=$(usex gui )
+		-DGUI=$(usex gui)
 
 		-DSYSTEMD=ON
 		-DSYSTEMD_SERVICES_INSTALL_DIR=$(systemd_get_systemunitdir)
