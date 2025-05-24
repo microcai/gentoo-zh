@@ -16,12 +16,11 @@
 		<flag name="zstd">Latest and improved ZSTD patch-set</flag>
 		<flag name="bore">BORE CPU scheduler</flag>
 		<flag name="prjc">Project C CPU scheduler (BMQ/PDS)</flag>
-		<flag name="polly">Add support for Clang's polyhedral loop optimizer</flag>
+		<flag name="polly">Support for Clang's polyhedral loop optimizer</flag>
 		<flag name="hardened">linux-hardened patchset</flag>
 		<flag name="rt">RT i915 patches</flag>
 		<flag name="dkms-clang">Remove some Werror CFLAGS to increase compatibility with some DKMS
 			modules in clang-built kernels</flag>
-		<flag name="clang-polly">Support for Clang's polyhedral loop optimizer</flag>
 		<flag name="aufs">Support for Aufs</flag>
 		<flag name="deckify">Support for handhelds</flag>
 	</use>

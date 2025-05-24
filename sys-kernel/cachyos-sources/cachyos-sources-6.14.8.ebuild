@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="7"
+K_GENPATCHES_VER="9"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 
@@ -14,7 +14,7 @@ detect_arch
 
 MY_KV="${KV_MAJOR}.${KV_MINOR}"
 AUFS_V="20250414"
-GIT_COMMIT_CACHYOS="d9bfde351d4d4319de6fef723915d6cc65fe5cdb"
+GIT_COMMIT_CACHYOS="ef2e907326018e719bd6af245e99b5b9ae281330"
 
 DESCRIPTION="Full Cachyos sources including the Gentoo patchset for the ${MY_KV} kernel tree"
 HOMEPAGE="https://cachyos.org"
@@ -33,9 +33,9 @@ SRC_URI="
 	bore? ( ${CACHYOS_URI}/sched/0001-bore-cachy.patch -> ${P}-0001-bore-cachy.patch )
 	prjc? ( ${CACHYOS_URI}/sched/0001-prjc-cachy.patch -> ${P}-0001-prjc-cachy.patch )
 	polly? ( ${CACHYOS_URI}/misc/0001-clang-polly.patch -> ${P}-0001-clang-polly.patch )
+	hardened? ( ${CACHYOS_URI}/misc/0001-hardened.patch -> ${P}-0001-hardened.patch )
 	rt? ( ${CACHYOS_URI}/misc/0001-rt-i915.patch -> ${P}-0001-rt-i915.patch )
 	dkms-clang? ( ${CACHYOS_URI}/misc/dkms-clang.patch -> ${P}-dkms-clang.patch )
-	clang-polly? ( ${CACHYOS_URI}/misc/0001-clang-polly.patch -> ${P}-0001-clang-polly.patch )
 	aufs? ( ${CACHYOS_URI}/misc/0001-aufs-${MY_KV}-merge-v${AUFS_V}.patch
 		-> ${P}-0001-aufs-${MY_KV}-merge-v${AUFS_V}.patch )
 	deckify? (
@@ -44,7 +44,7 @@ SRC_URI="
 	)
 "
 KEYWORDS="~amd64"
-IUSE="amd-pstate amd-tlb-broadcast asus bbr3 +crypto +fixes t2 +zstd +bore prjc polly rt dkms-clang clang-polly aufs deckify"
+IUSE="amd-pstate amd-tlb-broadcast asus bbr3 +crypto +fixes t2 +zstd +bore prjc polly hardened rt dkms-clang aufs deckify"
 REQUIRED_USE="?? ( bore prjc )"
 
 pkg_pretend() {
@@ -70,9 +70,14 @@ src_prepare() {
 	use bore && eapply "${DISTDIR}/${P}-0001-bore-cachy.patch"
 	use prjc && eapply "${DISTDIR}/${P}-0001-prjc-cachy.patch"
 	use polly && eapply "${DISTDIR}/${P}-0001-clang-polly.patch"
+	if use hardened; then
+		cp "${DISTDIR}/${P}-0001-hardened.patch" "${P}-0001-hardened.patch" || die
+		sed -i -e '698,716d;1537,1546d' "${P}-0001-hardened.patch" || die
+		eapply "${P}-0001-hardened.patch"
+		rm "${P}-0001-hardened.patch" || die
+	fi
 	use rt && eapply "${DISTDIR}/${P}-0001-rt-i915.patch"
 	use dkms-clang && eapply "${DISTDIR}/${P}-dkms-clang.patch"
-	use clang-polly && eapply "${DISTDIR}/${P}-0001-clang-polly.patch"
 	use aufs && eapply "${DISTDIR}/${P}-0001-aufs-${MY_KV}-merge-v${AUFS_V}.patch"
 
 	if use deckify; then
