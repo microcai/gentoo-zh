@@ -15,11 +15,9 @@ HOMEPAGE="
 	https://pypi.org/project/mw2fcitx
 "
 
-LICENSE="Unlicense"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-PROPERTIES="test_network"
-RESTRICT="test"
 
 RDEPEND="
 	>=app-i18n/opencc-1.1.7[python(-),${PYTHON_SINGLE_USEDEP}]
