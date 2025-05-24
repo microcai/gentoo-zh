@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-25 00:48:56 CST)
+(The last generation time: 2025-05-25 00:49:25 CST)
 
 ### Packages
 
@@ -580,9 +580,9 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/mihomo-party-bin                      | 1.7.3              |            | https://mihomo.party                                                                    | Mihomo Party
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/nekoray                               | 4.3.4              |            | https://github.com/Mahdi-zarei/nekoray                                                  | Qt based Desktop cross-platform GUI proxy configuration manager
+ net-proxy/nekoray                               | 4.3.5              |            | https://github.com/Mahdi-zarei/nekoray                                                  | Qt based Desktop cross-platform GUI proxy configuration manager
    dev-libs/cpr                                  | 1.11.2             |  D, RD     | https://github.com/libcpr/cpr                                                           | C++ Requests: Curl for People, a spiritual port of Python Requests.
-   net-proxy/nekobox-core                        | 4.3.4              |  D, RD     | https://github.com/Mahdi-zarei/nekoray                                                  | Qt based Desktop cross-platform GUI proxy configuration manager
+   net-proxy/nekobox-core                        | 4.3.5              |  D, RD     | https://github.com/Mahdi-zarei/nekoray                                                  | Qt based Desktop cross-platform GUI proxy configuration manager
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/proxy-server                          | 8.0.0              |            | https://github.com/jackarain/proxy                                                      | Implementation of all proxy protocols using modern c++
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
