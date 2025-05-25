@@ -20,6 +20,10 @@ DEPEND="dev-qt/qtbase:6[network]"
 RDEPEND="${DEPEND}"
 BDEPEND="doc? ( app-text/doxygen )"
 
+PATCHES=(
+	"${FILESDIR}/${P}-fix-single-instance-with-qt6.patch" # https://github.com/itay-grudev/SingleApplication/issues/190
+)
+
 src_configure() {
 	local mycmakeargs=(
 		-DQT_DEFAULT_MAJOR_VERSION=6
