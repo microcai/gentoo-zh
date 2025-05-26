@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-26 20:34:49 CST)
+(The last generation time: 2025-05-26 20:37:34 CST)
 
 ### Packages
 
@@ -284,7 +284,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gitoxide                                | 0.44.0             |            | https://github.com/GitoxideLabs/gitoxide                                                | A command-line application for interacting with git repositories
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/sourcegit-bin                           | 2025.18            |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
+ dev-vcs/sourcegit-bin                           | 2025.19            |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                       | 1.19.8             |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
                                                  | 1.20.9             |            |                                                                                         |
