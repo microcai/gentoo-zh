@@ -23,7 +23,7 @@ BDEPEND="app-arch/dpkg"
 QA_PRESTRIPPED="*"
 
 src_unpack() {
-	cp "${DISTDIR}/Anytype-$PV.AppImage" anytype-bin || die
+	cp "${DISTDIR}/anytype-$PV.AppImage" anytype-bin || die
 }
 
 src_prepare() {
