@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-27 08:44:58 CST)
+(The last generation time: 2025-05-27 14:28:10 CST)
 
 ### Packages
 
@@ -132,7 +132,7 @@
  app-misc/yazi                                   | 25.4.8             |            | https://yazi-rs.github.io                                                               | Blazing fast terminal file manager written in Rust, based on async I/O.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/anytype-bin                          | 0.35.4             |            | https://anytype.io                                                                      | A notebook based on p2p network
-                                                 | 0.46.6             |            |                                                                                         |
+                                                 | 0.46.7             |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/bytedance-feishu                     | 7.22.9             |            | https://www.feishu.cn/download                                                          | 飞书（Feishu） 飞书整合即时消息、日历、音视频会议、云文档、工作台等功能于一体，成就团队和个人，更高效、更愉悦。
                                                  | 7.36.11            |            |                                                                                         |
