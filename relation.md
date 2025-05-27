@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-26 20:44:41 CST)
+(The last generation time: 2025-05-27 08:44:58 CST)
 
 ### Packages
 
@@ -292,6 +292,7 @@
  games-board/othello                             | 0.2.2              |            | http://othello-game.sourceforge.net                                                     | Othello is a classic strategy game, also known as Reversi
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-emulation/conty                           | 1.27.1             |            | https://github.com/Kron4ek/Conty                                                        | SquashFS image of Arch Linux with: Lutris, Steam, Bottles, Wine...
+                                                 | 1.28               |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-fps/source-engine                         | 9999               |            | https://github.com/nillerusr/source-engine                                              | A 3D game engine developed by Valve
    media-libs/libsdl2                            | 2.32.50            | BD         | https://libsdl.org/                                                                     | SDL2 compat layer over SDL3
