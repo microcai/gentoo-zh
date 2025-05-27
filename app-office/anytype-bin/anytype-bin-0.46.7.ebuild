@@ -7,8 +7,8 @@ inherit desktop xdg-utils
 
 DESCRIPTION="A notebook based on p2p network"
 HOMEPAGE="https://anytype.io"
-SRC_URI="https://anytype-release.fra1.cdn.digitaloceanspaces.com/Anytype-${PV}.AppImage
-	https://anytype-release.fra1.cdn.digitaloceanspaces.com/anytype_${PV}_amd64.deb"
+SRC_URI="https://github.com/anyproto/anytype-ts/releases/download/v${PV}/anytype-${PV}.AppImage
+	https://github.com/anyproto/anytype-ts/releases/download/v${PV}/anytype_${PV}_amd64.deb"
 
 S="${WORKDIR}"
 LICENSE="ASAL-1.0"
