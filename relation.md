@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-27 14:28:10 CST)
+(The last generation time: 2025-05-28 17:20:45 CST)
 
 ### Packages
 
@@ -132,7 +132,7 @@
  app-misc/yazi                                   | 25.4.8             |            | https://yazi-rs.github.io                                                               | Blazing fast terminal file manager written in Rust, based on async I/O.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/anytype-bin                          | 0.35.4             |            | https://anytype.io                                                                      | A notebook based on p2p network
-                                                 | 0.46.7             |            |                                                                                         |
+                                                 | 0.46.8             |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/bytedance-feishu                     | 7.22.9             |            | https://www.feishu.cn/download                                                          | 飞书（Feishu） 飞书整合即时消息、日历、音视频会议、云文档、工作台等功能于一体，成就团队和个人，更高效、更愉悦。
                                                  | 7.36.11            |            |                                                                                         |
@@ -590,7 +590,7 @@
  net-proxy/qvplugin-command                      | 3.0.0              |            | https://github.com/Qv2ray/QvPlugin-Command                                              | Plugin for Qv2ray to run any commands when something happens in Qv2ray
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-naiveproxy                   | 3.0.0              |            | https://github.com/Qv2ray/QvPlugin-NaiveProxy                                           | Plugin for Qv2ray to support NaiveProxy in Qv2ray
-   net-proxy/naiveproxy-bin                      | 136.0.7103.44_p2   | RD         | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
+   net-proxy/naiveproxy-bin                      | 137.0.7151.44_p1   | RD         | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-ss                           | 3.0.0-r1           |            | https://github.com/Qv2ray/QvPlugin-SS                                                   | Plugin for Qv2ray to support SIP003 in Qv2ray
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
