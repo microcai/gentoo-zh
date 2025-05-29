@@ -9,7 +9,9 @@
 		<flag name="amd-pstate">AMD P-State enhancements and fixes from linux-next</flag>
 		<flag name="amd-tlb-broadcast">Support for AMD broadcast TLB invalidation</flag>
 		<flag name="asus">ASUS patchset</flag>
+		<flag name="async-shutdown">Support async shutdown</flag>
 		<flag name="bbr3">BBR v3</flag>
+		<flag name="block">mq-deadline and bfq patches</flag>
 		<flag name="crypto">Patches to improve performance of CRC32 and AES128 crypto</flag>
 		<flag name="fixes">CachyOS fixes</flag>
 		<flag name="t2">T2 Macbook support</flag>
