@@ -33,12 +33,16 @@ LICENSE="
 "
 SLOT="0"
 KEYWORDS="-* ~amd64"
+IUSE="egl kerberos wayland"
 RESTRICT="mirror strip bindist"
 
 RDEPEND="
+	|| (
+		sys-apps/systemd
+		sys-apps/systemd-utils
+	)
 	>=app-accessibility/at-spi2-core-2.46.0:2
 	app-crypt/libsecret[crypt]
-	app-crypt/mit-krb5
 	app-misc/ca-certificates
 	dev-libs/expat
 	dev-libs/glib:2
@@ -66,6 +70,7 @@ RDEPEND="
 	x11-libs/libXScrnSaver
 	x11-libs/pango
 	x11-misc/xdg-utils
+	kerberos? ( app-crypt/mit-krb5 )
 "
 
 QA_PREBUILT="*"
@@ -81,9 +86,16 @@ src_install() {
 	# Install launcher script
 	dosym ../../opt/windsurf/windsurf /usr/bin/windsurf
 
-	# Fix paths in desktop files
+	# Fix path and executable flags in desktop files
+	local EXEC_EXTRA_FLAGS=()
+	if use wayland; then
+		EXEC_EXTRA_FLAGS+=( "--ozone-platform-hint=auto" "--enable-wayland-ime" "--wayland-text-input-version=3" )
+	fi
+	if use egl; then
+		EXEC_EXTRA_FLAGS+=( "--use-gl=egl" )
+	fi
 	sed -i \
-		-e 's|/usr/share/windsurf/windsurf|/opt/windsurf/windsurf|g' \
+	    -e "s|/usr/share/windsurf/windsurf|/opt/windsurf/windsurf ${EXEC_EXTRA_FLAGS[*]} |g" \
 		"${S}/usr/share/applications/windsurf.desktop" \
 		"${S}/usr/share/applications/windsurf-url-handler.desktop" \
 		|| die "sed failed"
