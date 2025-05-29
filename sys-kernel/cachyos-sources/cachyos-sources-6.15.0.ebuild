@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="9"
+K_GENPATCHES_VER="1"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 
@@ -21,19 +21,17 @@ HOMEPAGE="https://cachyos.org"
 CACHYOS_URI="https://raw.githubusercontent.com/CachyOS/kernel-patches/${GIT_COMMIT_CACHYOS}/${MY_KV}"
 SRC_URI="
 	${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
-	${CACHYOS_URI}/0005-cachy.patch -> ${P}-0005-cachy.patch
+	${CACHYOS_URI}/0006-cachy.patch -> ${P}-0006-cachy.patch
 	amd-pstate? ( ${CACHYOS_URI}/0001-amd-pstate.patch -> ${P}-0001-amd-pstate.patch )
-	amd-tlb-broadcast? ( ${CACHYOS_URI}/0002-amd-tlb-broadcast.patch -> ${P}-0002-amd-tlb-broadcast.patch )
-	asus? ( ${CACHYOS_URI}/0003-asus.patch -> ${P}-0003-asus.patch )
+	asus? ( ${CACHYOS_URI}/0002-asus.patch -> ${P}-0002-asus.patch )
+	async-shutdown? ( ${CACHYOS_URI}/0003-async-shutdown.patch -> ${P}-0003-async-shutdown.patch )
 	bbr3? ( ${CACHYOS_URI}/0004-bbr3.patch -> ${P}-0004-bbr3.patch )
-	crypto? ( ${CACHYOS_URI}/0006-crypto.patch -> ${P}-0006-crypto.patch )
+	block? ( ${CACHYOS_URI}/0005-block.patch -> ${P}-0005-block.patch )
 	fixes? ( ${CACHYOS_URI}/0007-fixes.patch -> ${P}-0007-fixes.patch )
 	t2? ( ${CACHYOS_URI}/0008-t2.patch -> ${P}-0008-t2.patch )
-	zstd? ( ${CACHYOS_URI}/0009-zstd.patch -> ${P}-0009-zstd.patch )
 	bore? ( ${CACHYOS_URI}/sched/0001-bore-cachy.patch -> ${P}-0001-bore-cachy.patch )
 	prjc? ( ${CACHYOS_URI}/sched/0001-prjc-cachy.patch -> ${P}-0001-prjc-cachy.patch )
 	polly? ( ${CACHYOS_URI}/misc/0001-clang-polly.patch -> ${P}-0001-clang-polly.patch )
-	hardened? ( ${CACHYOS_URI}/misc/0001-hardened.patch -> ${P}-0001-hardened.patch )
 	rt? ( ${CACHYOS_URI}/misc/0001-rt-i915.patch -> ${P}-0001-rt-i915.patch )
 	dkms-clang? ( ${CACHYOS_URI}/misc/dkms-clang.patch -> ${P}-dkms-clang.patch )
 	aufs? ( ${CACHYOS_URI}/misc/0001-aufs-${MY_KV}-merge-v${AUFS_V}.patch
@@ -44,7 +42,7 @@ SRC_URI="
 	)
 "
 KEYWORDS="~amd64"
-IUSE="amd-pstate amd-tlb-broadcast asus bbr3 +crypto +fixes t2 +zstd +bore prjc polly hardened rt dkms-clang aufs deckify"
+IUSE="amd-pstate asus async-shutdown bbr3 block +fixes t2 +bore prjc polly rt dkms-clang aufs deckify"
 REQUIRED_USE="?? ( bore prjc )"
 
 pkg_pretend() {
@@ -52,30 +50,18 @@ pkg_pretend() {
 	check-reqs_pkg_pretend
 }
 
-src_unpack() {
-	use fixes && UNIPATCH_EXCLUDE="1740_x86-insn-decoder-test-allow-longer-symbol-names.patch"
-	kernel-2_src_unpack
-}
-
 src_prepare() {
 	use amd-pstate && eapply "${DISTDIR}/${P}-0001-amd-pstate.patch"
-	use amd-tlb-broadcast && eapply "${DISTDIR}/${P}-0002-amd-tlb-broadcast.patch"
-	use asus && eapply "${DISTDIR}/${P}-0003-asus.patch"
+	use asus && eapply "${DISTDIR}/${P}-0002-asus.patch"
+	use async-shutdown && eapply "${DISTDIR}/${P}-0003-async-shutdown.patch"
 	use bbr3 && eapply "${DISTDIR}/${P}-0004-bbr3.patch"
-	eapply "${DISTDIR}/${P}-0005-cachy.patch"
-	use crypto && eapply "${DISTDIR}/${P}-0006-crypto.patch"
+	use block && eapply "${DISTDIR}/${P}-0005-block.patch"
+	eapply "${DISTDIR}/${P}-0006-cachy.patch"
 	use fixes && eapply "${DISTDIR}/${P}-0007-fixes.patch"
 	use t2 && eapply "${DISTDIR}/${P}-0008-t2.patch"
-	use zstd && eapply "${DISTDIR}/${P}-0009-zstd.patch"
 	use bore && eapply "${DISTDIR}/${P}-0001-bore-cachy.patch"
 	use prjc && eapply "${DISTDIR}/${P}-0001-prjc-cachy.patch"
 	use polly && eapply "${DISTDIR}/${P}-0001-clang-polly.patch"
-	if use hardened; then
-		cp "${DISTDIR}/${P}-0001-hardened.patch" "${P}-0001-hardened.patch" || die
-		sed -i -e '698,716d;1537,1546d' "${P}-0001-hardened.patch" || die
-		eapply "${P}-0001-hardened.patch"
-		rm "${P}-0001-hardened.patch" || die
-	fi
 	use rt && eapply "${DISTDIR}/${P}-0001-rt-i915.patch"
 	use dkms-clang && eapply "${DISTDIR}/${P}-dkms-clang.patch"
 	use aufs && eapply "${DISTDIR}/${P}-0001-aufs-${MY_KV}-merge-v${AUFS_V}.patch"
