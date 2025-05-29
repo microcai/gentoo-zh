@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-29 17:42:35 CST)
+(The last generation time: 2025-05-29 17:43:56 CST)
 
 ### Packages
 
@@ -564,6 +564,7 @@
                                                  | 2.0.2              |            |                                                                                         |
                                                  | 2.0.3              |            |                                                                                         |
                                                  | 2.2.2              |            |                                                                                         |
+                                                 | 2.2.3              |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/dae                                   | 0.9.0              |            | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
                                                  | 9999               |            |                                                                                         |
