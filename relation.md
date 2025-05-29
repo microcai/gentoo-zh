@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-29 15:58:18 CST)
+(The last generation time: 2025-05-29 17:42:35 CST)
 
 ### Packages
 
@@ -55,7 +55,7 @@
  app-editors/void-editor                         | 1.2.1.25105        |            | https://voideditor.com                                                                  | Void Editor - AI Code Editor
                                                  | 1.99.30034         |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/windsurf                            | 1.6.2              |            | https://codeium.com                                                                     | AI-powered code editor maintaining flow state with instant assistance.
+ app-editors/windsurf                            | 1.9.2              |            | https://codeium.com                                                                     | AI-powered code editor maintaining flow state with instant assistance.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/deepin-wine5                      | 5.0.16-r1          |            | https://www.deepin.org                                                                  | Deepin wine5
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
