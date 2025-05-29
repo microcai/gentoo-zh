@@ -1,0 +1,113 @@
+#!/sbin/openrc-run
+
+name="clash-verge"
+description="Clash Verge Service"
+command="/opt/clash-verge/bin/clash-verge-service"
+command_user="root:root"
+pidfile="/run/${RC_SVCNAME}.pid"
+logfile="/var/log/${RC_SVCNAME}.log"
+
+depend() {
+    need net
+    after bootmisc
+}
+
+start_pre() {
+    # 确保日志目录存在
+    checkpath -d -m 0755 -o root:root "$(dirname ${logfile})"
+    # 确保命令存在
+    if [ ! -x "${command}" ]; then
+        eerror "Executable ${command} not found"
+        return 1
+    fi
+}
+
+start() {
+    ebegin "Starting ${name}"
+    
+    # 直接运行命令并将所有输出重定向到日志文件
+    ${command} >> "${logfile}" 2>&1 &
+    
+    local pid=$!
+    echo ${pid} > ${pidfile}
+    
+    # 等待进程稳定
+    sleep 3
+    
+    # 检查进程是否还在运行
+    if ! kill -0 ${pid} 2>/dev/null; then
+        eerror "Failed to start ${name}"
+        eerror "Please check log file: ${logfile}"
+        rm -f ${pidfile}
+        return 1
+    fi
+    
+    # 记录启动时间到日志
+    echo "$(date): ${name} started successfully with PID ${pid}" >> ${logfile}
+    
+    eend 0
+}
+
+stop() {
+    ebegin "Stopping ${name}"
+    if [ -f ${pidfile} ]; then
+        local pid=$(cat ${pidfile})
+        kill ${pid} 2>/dev/null
+        
+        # 等待进程终止，最多等待5秒
+        local timeout=5
+        while [ ${timeout} -gt 0 ] && kill -0 ${pid} 2>/dev/null; do
+            sleep 1
+            timeout=$((timeout - 1))
+        done
+        
+        # 如果进程仍在运行，强制终止
+        if kill -0 ${pid} 2>/dev/null; then
+            kill -9 ${pid} 2>/dev/null
+            echo "$(date): ${name} was forcefully terminated (SIGKILL)" >> ${logfile}
+        else
+            echo "$(date): ${name} stopped gracefully" >> ${logfile}
+        fi
+        
+        rm -f ${pidfile}
+    else
+        # 尝试查找并终止进程
+        local pid=$(pgrep -f "${command}")
+        if [ -n "${pid}" ]; then
+            kill ${pid} 2>/dev/null
+            sleep 1
+            if kill -0 ${pid} 2>/dev/null; then
+                kill -9 ${pid} 2>/dev/null
+                echo "$(date): ${name} was forcefully terminated (no pidfile)" >> ${logfile}
+            else
+                echo "$(date): ${name} stopped gracefully (no pidfile)" >> ${logfile}
+            fi
+        else
+            echo "$(date): No running ${name} process found to stop" >> ${logfile}
+        fi
+    fi
+    eend 0
+}
+
+status() {
+    if [ -f ${pidfile} ]; then
+        local pid=$(cat ${pidfile})
+        if kill -0 ${pid} 2>/dev/null; then
+            einfo "${name} is running with pid ${pid}"
+            return 0
+        else
+            eerror "${name} died (pid ${pid})"
+            eerror "Please check log file: ${logfile}"
+            return 1
+        fi
+    else
+        local pid=$(pgrep -f "${command}")
+        if [ -n "${pid}" ]; then
+            einfo "${name} is running with pid ${pid} (no pidfile)"
+            return 0
+        else
+            eerror "${name} is not running"
+            return 1
+        fi
+    fi
+}
