@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-29 17:43:56 CST)
+(The last generation time: 2025-05-30 05:58:23 CST)
 
 ### Packages
 
@@ -364,7 +364,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/zwcad                                 | 2023.23.0.3.4-r2   |            | https://www.zwsoft.cn/product/zwcad/linux                                               | CAD software for 2D drawing, reviewing and printing work
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-libs/phonon-mpv                           | 0.1.0              |            | https://github.com/OpenProgger/phonon-mpv                                               | Phonon Backend using MPV Player(libmpv)
+ media-libs/phonon-mpv                           | 0.1.0-r1           |            | https://github.com/OpenProgger/phonon-mpv                                               | Mpv backend for the Phonon multimedia library
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-plugins/osdlyrics                         | 0.5.15             |            | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
                                                  | 9999               |            |                                                                                         |
@@ -677,6 +677,7 @@
  sys-fs/systemd-zpool-scrub                      | 9999               |            | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/cachyos-sources                      | 6.14.8             |            | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
+                                                 | 6.15.0             |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/mkinitcpio                           | 38                 |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
                                                  | 39.2               |            |                                                                                         |
