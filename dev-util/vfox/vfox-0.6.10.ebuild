@@ -8,7 +8,7 @@ inherit go-module
 DESCRIPTION="A cross-platform version manager, extendable via plugins"
 HOMEPAGE="https://vfox.lhan.me https://github.com/version-fox/vfox"
 SRC_URI="https://github.com/version-fox/vfox/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-SRC_URI+=" https://github.com/tsln1998/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz"
+SRC_URI+=" https://github.com/gentoo-zh/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
