@@ -1069,7 +1069,7 @@ github_account = "st0nie"
 ["media-video/tsukimi"]
 source = "github"
 github = "tsukinaha/tsukimi"
-use_max_tag = true
+use_latest_release = true
 prefix = "v"
 github_account = ["peeweep","irort"]
 
