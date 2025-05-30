@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+        <maintainer type="person">
+                <name>gouwazi</name>
+                <email>gouwazi@protonmail.com</email>
+        </maintainer>
+        <longdescription lang="en">Readest is a modern, feature-rich ebook reader designed for avid readers offering seamless cross-platform access, powerful tools, and an intuitive interface to elevate your reading experience.
+        </longdescription>
+        <longdescription lang="zh">Readest 是一款现代化、功能丰富的电子书阅读器，旨在为热爱阅读的人士提供无缝的跨平台访问、强大的工具和直观的界面，以提升您的阅读体验。
+        </longdescription>
+</pkgmetadata>
