@@ -8,7 +8,7 @@ inherit go-module
 DESCRIPTION="Manage all your runtime versions with one tool"
 HOMEPAGE="https://github.com/asdf-vm/asdf"
 SRC_URI="https://github.com/asdf-vm/asdf/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-SRC_URI+=" https://github.com/tsln1998/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz"
+SRC_URI+=" https://github.com/gentoo-zh/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz"
 S="${WORKDIR}/asdf-${PV}"
 
 LICENSE="MIT"
