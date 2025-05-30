@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-30 15:44:57 CST)
+(The last generation time: 2025-05-30 15:58:48 CST)
 
 ### Packages
 
@@ -274,7 +274,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/pack-cli-bin                           | 0.37.0             |            | https://buildpacks.io                                                                   | CLI for building apps using Cloud Native Buildpacks
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/redpanda-cpp                           | 2.26               |            | https://royqh.net/redpandacpp                                                           | A lightweight yet powerful C/C++/GNU Assembly IDE.
+ dev-util/redpanda-cpp                           | 2.26               |            | http://royqh.net/redpandacpp                                                            | A lightweight yet powerful C/C++/GNU Assembly IDE.
                                                  | 3.1                |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/tailspin                               | 5.4.3              |            | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
