@@ -1,0 +1,92 @@
+From: PF4Public@users.noreply.github.com
+License: BSD
+Subject: Fix building with use_bluez=false
+
+This is a quick and dirty fix for building chromium with use_bluez=false
+It prevents initialization and usage of Bluetooth by the browser
+It is not supposed to be applied for use_bluez=true
+The browser will SEGFAULT upon accessing chrome://bluetooth-internals/
+It also breaks WebAuthn: https://github.com/PF4Public/gentoo-overlay/issues/254
+
+---
+--- a/headless/lib/browser/headless_browser_main_parts_posix.cc
++++ b/headless/lib/browser/headless_browser_main_parts_posix.cc
+@@ -25,9 +25,8 @@
+ #include "components/os_crypt/sync/os_crypt.h"
+ #include "headless/public/switches.h"
+
+-#if defined(USE_DBUS)
+-#include "device/bluetooth/dbus/bluez_dbus_manager.h"
+-#endif
++#include "device/bluetooth/bluetooth_adapter_factory.h"
++#include "device/bluetooth/dbus/dbus_bluez_manager_wrapper_linux.h"
+
+ #endif  // BUILDFLAG(IS_LINUX)
+
+@@ -134,7 +133,7 @@
+ #if BUILDFLAG(IS_LINUX)
+
+ #if defined(USE_DBUS)
+-  bluez::BluezDBusManager::Initialize(/*system_bus=*/nullptr);
++  bluez::DBusBluezManagerWrapperLinux::Initialize();
+ #endif
+
+   // Set up crypt config. This needs to be done before anything starts the
+--- a/chrome/browser/chrome_browser_main_linux.cc
++++ b/chrome/browser/chrome_browser_main_linux.cc
+@@ -35,6 +35,11 @@
+ #include "chrome/browser/dbus_memory_pressure_evaluator_linux.h"
+ #endif
+
++#if BUILDFLAG(IS_LINUX)
++#include "device/bluetooth/bluetooth_adapter_factory.h"
++#include "device/bluetooth/dbus/dbus_bluez_manager_wrapper_linux.h"
++#endif
++
+ #if !BUILDFLAG(IS_CHROMEOS_ASH)
+ #include "base/command_line.h"
+ #include "base/linux_util.h"
+@@ -59,7 +64,9 @@
+ #endif  // BUILDFLAG(IS_CHROMEOS)
+
+ #if !BUILDFLAG(IS_CHROMEOS)
+-  bluez::BluezDBusManager::Initialize(nullptr /* system_bus */);
++  #if BUILDFLAG(IS_LINUX)
++      bluez::DBusBluezManagerWrapperLinux::Initialize();
++  #endif
+
+   // Set up crypt config. This needs to be done before anything starts the
+   // network service, as the raw encryption key needs to be shared with the
+@@ -117,7 +124,7 @@
+ #endif  // defined(USE_DBUS) && !BUILDFLAG(IS_CHROMEOS)
+
+ void ChromeBrowserMainPartsLinux::PostDestroyThreads() {
+-#if BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX)
+   // No-op; per PostBrowserStart() comment, this is done elsewhere.
+ #else
+   bluez::BluezDBusManager::Shutdown();
+--- a/chrome/browser/metrics/bluetooth_metrics_provider.cc
++++ b/chrome/browser/metrics/bluetooth_metrics_provider.cc
+@@ -16,9 +16,7 @@
+
+ bool BluetoothMetricsProvider::ProvideHistograms() {
+   base::UmaHistogramEnumeration("Bluetooth.StackName",
+-                                floss::features::IsFlossEnabled()
+-                                    ? BluetoothStackName::kFloss
+-                                    : BluetoothStackName::kBlueZ);
++                                BluetoothStackName::kBlueZ);
+   return true;
+ }
+
+--- a/device/bluetooth/adapter.cc
++++ b/device/bluetooth/adapter.cc
+@@ -115,7 +115,7 @@
+   adapter_info->system_name = adapter_->GetSystemName();
+ #endif
+ #if BUILDFLAG(IS_CHROMEOS)
+-  adapter_info->floss = floss::features::IsFlossEnabled();
++  adapter_info->floss = false;
+   adapter_info->extended_advertisement_support =
+       adapter_->IsExtendedAdvertisementsAvailable();
+ #endif
