@@ -1,0 +1,68 @@
+--- a/components/qr_code_generator/BUILD.gn
++++ b/components/qr_code_generator/BUILD.gn
+@@ -38,24 +38,11 @@
+     "qr_code_generator.h",
+   ]
+   deps = [
+-    ":qr_code_generator_ffi_glue",
+     "//base",
+   ]
+   public_deps = [
+     ":error",
+     "//base",
+-  ]
+-}
+-
+-rust_static_library("qr_code_generator_ffi_glue") {
+-  allow_unsafe = true  # Needed for FFI that underpins the `cxx` crate.
+-  crate_root = "qr_code_generator_ffi_glue.rs"
+-  sources = [ "qr_code_generator_ffi_glue.rs" ]
+-  cxx_bindings = [ "qr_code_generator_ffi_glue.rs" ]
+-  visibility = [ ":qr_code_generator" ]
+-  deps = [
+-    ":error",
+-    "//third_party/rust/qr_code/v2:lib",
+   ]
+ }
+ 
+--- a/components/qr_code_generator/qr_code_generator.cc
++++ b/components/qr_code_generator/qr_code_generator.cc
+@@ -8,9 +8,7 @@
+ #include <vector>
+ 
+ #include "base/check_op.h"
+-#include "base/containers/span_rust.h"
+ #include "base/numerics/safe_conversions.h"
+-#include "components/qr_code_generator/qr_code_generator_ffi_glue.rs.h"
+ 
+ namespace qr_code_generator {
+ 
+@@ -22,27 +20,7 @@
+ base::expected<GeneratedCode, Error> GenerateCode(
+     base::span<const uint8_t> in,
+     std::optional<int> min_version) {
+-  rust::Slice<const uint8_t> rs_in = base::SpanToRustSlice(in);
+-
+-  // `min_version` might come from a fuzzer and therefore we use a lenient
+-  // `saturated_cast` instead of a `checked_cast`.
+-  int16_t rs_min_version =
+-      base::saturated_cast<int16_t>(min_version.value_or(0));
+-
+-  std::vector<uint8_t> result_pixels;
+-  size_t result_width = 0;
+-  Error result_error = Error::kUnknownError;
+-  bool result_is_success = generate_qr_code_using_rust(
+-      rs_in, rs_min_version, result_pixels, result_width, result_error);
+-
+-  if (!result_is_success) {
+-    return base::unexpected(result_error);
+-  }
+-  GeneratedCode code;
+-  code.data = std::move(result_pixels);
+-  code.qr_size = base::checked_cast<int>(result_width);
+-  CHECK_EQ(code.data.size(), static_cast<size_t>(code.qr_size * code.qr_size));
+-  return code;
++  return base::unexpected(Error::kUnknownError);
+ }
+ 
+ }  // namespace qr_code_generator

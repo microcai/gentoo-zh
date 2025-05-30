@@ -1,0 +1,89 @@
+From acc24608c84d2d2d8d684f40a110d0a6f4eddc51 Mon Sep 17 00:00:00 2001
+From: Daniele Di Proietto <ddiproietto@google.com>
+Date: Mon, 6 Jan 2025 15:30:23 +0000
+Subject: [PATCH] Small fixes for libstdc++
+
+Change-Id: I054305ff3de0007f98f9713347f72d63d69569e8
+---
+ include/perfetto/tracing/track.h                          | 1 +
+ src/profiling/common/producer_support.cc                  | 1 +
+ src/trace_processor/importers/common/tracks.h             | 4 ++--
+ src/trace_processor/importers/common/tracks_internal.h    | 8 ++++----
+ .../perfetto_sql/engine/created_function.cc               | 4 ++--
+ src/trace_processor/util/regex.h                          | 2 +-
+ src/traceconv/pprof_reader.cc                             | 2 +-
+ 7 files changed, 12 insertions(+), 10 deletions(-)
+
+diff --git a/include/perfetto/tracing/track.h b/include/perfetto/tracing/track.h
+index 43a8de13d4299387bc1c77582d33542371ffd74f..2a857298c7f4769a05d0db309aca59b72c22b115 100644
+--- a/include/perfetto/tracing/track.h
++++ b/include/perfetto/tracing/track.h
+@@ -39,6 +39,7 @@
+ #include <stdint.h>
+ #include <map>
+ #include <mutex>
++#include <optional>
+ 
+ namespace perfetto {
+ namespace internal {
+diff --git a/src/profiling/common/producer_support.cc b/src/profiling/common/producer_support.cc
+index 5303658d7b7bb0d4b08c00a1decc5c757b006ecb..e9e193db81f87b5c48eefc5aa5a3cfa307baafdb 100644
+--- a/src/profiling/common/producer_support.cc
++++ b/src/profiling/common/producer_support.cc
+@@ -16,6 +16,7 @@
+ 
+ #include "src/profiling/common/producer_support.h"
+ 
++#include <algorithm>
+ #include <optional>
+ 
+ #include "perfetto/ext/base/android_utils.h"
+diff --git a/src/trace_processor/perfetto_sql/engine/created_function.cc b/src/trace_processor/perfetto_sql/engine/created_function.cc
+index 1c01c1787ea9ab1972159ce4efd65e225040cee6..e6cef14909d7dab58d1c4abbbe3e536c696910fb 100644
+--- a/src/trace_processor/perfetto_sql/engine/created_function.cc
++++ b/src/trace_processor/perfetto_sql/engine/created_function.cc
+@@ -109,7 +109,7 @@ struct StoredSqlValue {
+   // the destructors run correctly for non-trivial members of the
+   // union.
+   using Data =
+-      std::variant<int64_t, double, OwnedString, OwnedBytes, nullptr_t>;
++      std::variant<int64_t, double, OwnedString, OwnedBytes, std::nullptr_t>;
+ 
+   StoredSqlValue(SqlValue value) {
+     switch (value.type) {
+@@ -134,7 +134,7 @@ struct StoredSqlValue {
+   }
+ 
+   SqlValue AsSqlValue() {
+-    if (std::holds_alternative<nullptr_t>(data)) {
++    if (std::holds_alternative<std::nullptr_t>(data)) {
+       return SqlValue();
+     } else if (std::holds_alternative<int64_t>(data)) {
+       return SqlValue::Long(std::get<int64_t>(data));
+diff --git a/src/trace_processor/util/regex.h b/src/trace_processor/util/regex.h
+index 120e4c968279d75d8b8f341a96a1f6402a9c4e41..167af55d9bebe4c3c7febf1be91d0bdd01910282 100644
+--- a/src/trace_processor/util/regex.h
++++ b/src/trace_processor/util/regex.h
+@@ -48,7 +48,7 @@ class Regex {
+       regfree(&regex_.value());
+     }
+   }
+-  Regex(Regex&) = delete;
++  Regex(const Regex&) = delete;
+   Regex(Regex&& other) {
+     regex_ = std::move(other.regex_);
+     other.regex_ = std::nullopt;
+diff --git a/src/traceconv/pprof_reader.cc b/src/traceconv/pprof_reader.cc
+index f14cca73778b14505cce7d4f99848fae67a111c0..612b7c7a40e7127109550a7d0bcfed3685afa2b6 100644
+--- a/src/traceconv/pprof_reader.cc
++++ b/src/traceconv/pprof_reader.cc
+@@ -16,8 +16,8 @@
+ 
+ #include "src/traceconv/pprof_reader.h"
+ 
++#include <algorithm>
+ #include <cinttypes>
+-#include <fstream>
+ 
+ #include "perfetto/ext/base/file_utils.h"
+ 
