@@ -396,6 +396,13 @@ github = "eclipse-lemminx/lemminx"
 use_latest_tag = true
 github_account = "blackteahamburger"
 
+["app-text/readest-bin"]
+source = "github"
+github = "readest/readest"
+use_latest_release = true
+prefix = "v"
+github_account = "gouwazi"
+
 # dead upstream
 #["app-text/groff-utf8"]
 
