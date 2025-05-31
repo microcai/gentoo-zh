@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-05-31 12:17:34 CST)
+(The last generation time: 2025-05-31 12:54:11 CST)
 
 ### Packages
 
@@ -130,7 +130,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/xmind                                  | 25.04.03033        |            | https://www.xmind.net                                                                   | Brainstorming and Mind Mapping Software
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/yazi                                   | 25.5.28            |            | https://yazi-rs.github.io                                                               | Blazing fast terminal file manager written in Rust, based on async I/O.
+ app-misc/yazi                                   | 25.5.31            |            | https://yazi-rs.github.io                                                               | Blazing fast terminal file manager written in Rust, based on async I/O.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/anytype-bin                          | 0.35.4             |            | https://anytype.io                                                                      | A notebook based on p2p network
                                                  | 0.46.8             |            |                                                                                         |
@@ -283,7 +283,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/vfox-bin                               | 0.6.10             |            | https://vfox.lhan.me/                                                                   | A cross-platform version manager, extendable via plugins
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/zprint-bin                             | 1.2.9              |            | https://github.com/kkinnear/zprint                                                      | Clojure and Clojurescript source code formatter
+ dev-util/zprint-bin                             | 1.3.0              |            | https://github.com/kkinnear/zprint                                                      | Clojure and Clojurescript source code formatter
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gitoxide                                | 0.44.0             |            | https://github.com/GitoxideLabs/gitoxide                                                | A command-line application for interacting with git repositories
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
