@@ -1088,7 +1088,7 @@ source = "github"
 github = "jeessy2/ddns-go"
 use_latest_tag = true
 prefix = "v"
-github_account = ["Puqns67", "peeweep"]
+github_account = "Puqns67"
 
 ["net-dns/dnslookup"]
 source = "github"
