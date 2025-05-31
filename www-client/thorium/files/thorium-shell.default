@@ -1,0 +1,7 @@
+# Default settings for thorium_shell. This file is sourced by /bin/bash
+# from the thorium_shell launcher.
+
+# Options to pass to thorium_shell.
+# See https://github.com/Alex313031/thorium/blob/main/docs/PATCHES.md for additional
+# command-line switches.
+#CHROMIUM_FLAGS=""

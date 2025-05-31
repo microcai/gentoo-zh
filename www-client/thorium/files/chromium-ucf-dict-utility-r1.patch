@@ -1,0 +1,112 @@
+Taken from
+https://github.com/qvint/ungoogled-chromium-fedora/commit/a68fdd679566da5134d916776f14e00c8e6a8042
+
+--- a/chrome/tools/convert_dict/convert_dict.cc
++++ b/chrome/tools/convert_dict/convert_dict.cc
+@@ -24,6 +24,7 @@
+ #include "build/build_config.h"
+ #include "chrome/tools/convert_dict/aff_reader.h"
+ #include "chrome/tools/convert_dict/dic_reader.h"
++#include "components/spellcheck/common/spellcheck_common.h"
+ #include "third_party/hunspell/google/bdict_reader.h"
+ #include "third_party/hunspell/google/bdict_writer.h"
+ 
+@@ -76,13 +77,32 @@ bool VerifyWords(const convert_dict::Dic
+ }
+ 
+ int PrintHelp() {
+-  printf("Usage: convert_dict <dicfile base name>\n\n");
+-  printf("Example:\n");
+-  printf("  convert_dict en-US\nwill read en-US.dic, en-US.dic_delta, and "
+-         "en-US.aff from the current directory and generate en-US.bdic\n\n");
++  printf(
++      "Usage:\n"
++      "  dict-utility list\n"
++      "  dict-utility convert <aff_path> <dic_path> <out_path>\n");
+   return 1;
+ }
+ 
++int PrintList() {
++  base::FilePath root("/");
++  std::vector<std::string> languages = spellcheck::SpellCheckLanguages();
++
++  for (auto &language : languages) {
++    std::string language_region =
++        spellcheck::GetSpellCheckLanguageRegion(language);
++    base::FilePath language_bdic_path =
++        spellcheck::GetVersionedFileName(language, root).BaseName();
++
++    printf("%s\t%s\t%s\n",
++        language.c_str(),
++        language_region.c_str(),
++        language_bdic_path.value().c_str());
++  }
++
++  return 0;
++}
++
+ }  // namespace
+ 
+ #if defined(OS_WIN)
+@@ -91,16 +111,15 @@ int wmain(int argc, wchar_t* argv[]) {
+ int main(int argc, char* argv[]) {
+ #endif
+   base::EnableTerminationOnHeapCorruption();
+-  if (argc != 2)
++  if (argc == 2 && strcmp(argv[1], "list") == 0)
++    return PrintList();
++  if (argc != 5 || strcmp(argv[1], "convert") != 0)
+     return PrintHelp();
+ 
+   base::AtExitManager exit_manager;
+   base::i18n::InitializeICU();
+ 
+-  base::FilePath file_base = base::FilePath(argv[1]);
+-
+-  base::FilePath aff_path =
+-      file_base.ReplaceExtension(FILE_PATH_LITERAL(".aff"));
++  base::FilePath aff_path = base::FilePath(argv[2]);
+   printf("Reading %" PRFilePath " ...\n", aff_path.value().c_str());
+   convert_dict::AffReader aff_reader(aff_path);
+   if (!aff_reader.Read()) {
+@@ -108,8 +127,7 @@ int main(int argc, char* argv[]) {
+     return 1;
+   }
+ 
+-  base::FilePath dic_path =
+-      file_base.ReplaceExtension(FILE_PATH_LITERAL(".dic"));
++  base::FilePath dic_path = base::FilePath(argv[3]);
+   printf("Reading %" PRFilePath " ...\n", dic_path.value().c_str());
+   // DicReader will also read the .dic_delta file.
+   convert_dict::DicReader dic_reader(dic_path);
+@@ -135,8 +153,7 @@ int main(int argc, char* argv[]) {
+     return 1;
+   }
+ 
+-  base::FilePath out_path =
+-      file_base.ReplaceExtension(FILE_PATH_LITERAL(".bdic"));
++  base::FilePath out_path = base::FilePath(argv[4]);
+   printf("Writing %" PRFilePath " ...\n", out_path.value().c_str());
+   FILE* out_file = base::OpenFile(out_path, "wb");
+   if (!out_file) {
+--- a/chrome/tools/convert_dict/BUILD.gn
++++ b/chrome/tools/convert_dict/BUILD.gn
+@@ -34,6 +34,7 @@ executable("convert_dict") {
+     "//base",
+     "//base:i18n",
+     "//build/win:default_exe_manifest",
++    "//components/spellcheck/common",
+     "//third_party/hunspell",
+   ]
+ }
+--- a/components/spellcheck/common/spellcheck_common.h
++++ b/components/spellcheck/common/spellcheck_common.h
+@@ -34,6 +34,8 @@
+ // chrome/browser/resources/settings/languages_page/edit_dictionary_page.js
+ static const size_t kMaxCustomDictionaryWordBytes = 99;
+ 
++std::string GetSpellCheckLanguageRegion(std::string_view input_language);
++
+ base::FilePath GetVersionedFileName(std::string_view input_language,
+                                     const base::FilePath& dict_dir);
+ 

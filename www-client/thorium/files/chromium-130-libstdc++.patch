@@ -1,0 +1,72 @@
+diff -r -u chromium-120.0.6099.129old/components/viz/service/display/surface_aggregator.cc chromium-120.0.6099.129/components/viz/service/display/surface_aggregator.cc
+--- chromium-120.0.6099.129old/components/viz/service/display/surface_aggregator.cc	2023-12-21 01:49:05.646315300 +0100
++++ chromium-120.0.6099.129/components/viz/service/display/surface_aggregator.cc	2023-12-21 15:28:15.668850824 +0100
+@@ -2228,7 +2228,7 @@
+   root_surface_id_ = surface_id;
+ 
+   // Start recording new stats for this aggregation.
+-  stats_.emplace();
++  stats_.emplace(AggregateStatistics{});
+ 
+   base::ElapsedTimer prewalk_timer;
+   ResolvedFrameData* resolved_frame = GetResolvedFrame(surface_id);
+diff -r -u chromium-120.0.6099.129old/gpu/command_buffer/service/shared_image/shared_image_backing.cc chromium-120.0.6099.129/gpu/command_buffer/service/shared_image/shared_image_backing.cc
+--- chromium-120.0.6099.129old/gpu/command_buffer/service/shared_image/shared_image_backing.cc	2023-12-21 01:49:08.186538700 +0100
++++ chromium-120.0.6099.129/gpu/command_buffer/service/shared_image/shared_image_backing.cc	2023-12-21 15:59:04.210747172 +0100
+@@ -343,7 +343,7 @@
+ 
+ void SharedImageBacking::OnWriteSucceeded() {
+   AutoLock auto_lock(this);
+-  scoped_write_uma_.emplace();
++  scoped_write_uma_.emplace(gpu::SharedImageBacking::ScopedWriteUMA{});
+ }
+ 
+ size_t SharedImageBacking::GetEstimatedSize() const {
+diff -r -u chromium-120.0.6099.129old/gpu/command_buffer/service/shared_image/shared_image_backing.h chromium-120.0.6099.129/gpu/command_buffer/service/shared_image/shared_image_backing.h
+--- chromium-120.0.6099.129old/gpu/command_buffer/service/shared_image/shared_image_backing.h	2023-12-21 01:49:08.186538700 +0100
++++ chromium-120.0.6099.129/gpu/command_buffer/service/shared_image/shared_image_backing.h	2023-12-21 15:57:27.336515319 +0100
+@@ -340,8 +340,8 @@
+    public:
+     ScopedWriteUMA() = default;
+ 
+-    ScopedWriteUMA(const ScopedWriteUMA&) = delete;
+-    ScopedWriteUMA& operator=(const ScopedWriteUMA&) = delete;
++    ScopedWriteUMA(const ScopedWriteUMA&) = default;
++    ScopedWriteUMA& operator=(const ScopedWriteUMA&) = default;
+ 
+     ~ScopedWriteUMA() {
+       UMA_HISTOGRAM_BOOLEAN("GPU.SharedImage.ContentConsumed",
+diff -r -u chromium-120.0.6099.129old/mojo/public/cpp/bindings/lib/multiplex_router.cc chromium-120.0.6099.129/mojo/public/cpp/bindings/lib/multiplex_router.cc
+--- chromium-120.0.6099.129old/mojo/public/cpp/bindings/lib/multiplex_router.cc	2023-12-21 01:49:10.754764600 +0100
++++ chromium-120.0.6099.129/mojo/public/cpp/bindings/lib/multiplex_router.cc	2023-12-21 13:19:27.412481231 +0100
+@@ -870,7 +870,7 @@
+   DCHECK(!exclusive_sync_wait_);
+ 
+   scoped_refptr<MultiplexRouter> keep_alive(this);
+-  exclusive_sync_wait_.emplace();
++  exclusive_sync_wait_.emplace(ExclusiveSyncWaitInfo{});
+   exclusive_sync_wait_->interface_id = interface_id;
+   exclusive_sync_wait_->request_id = request_id;
+   while (!exclusive_sync_wait_->finished) {
+--- a/third_party/blink/common/interest_group/auction_config_mojom_traits.cc
++++ b/third_party/blink/common/interest_group/auction_config_mojom_traits.cc
+@@ -207,8 +207,6 @@
+       !data.ReadAllBuyersPrioritySignals(&out->all_buyers_priority_signals) ||
+       !data.ReadAuctionReportBuyerKeys(&out->auction_report_buyer_keys) ||
+       !data.ReadAuctionReportBuyers(&out->auction_report_buyers) ||
+-      !data.ReadAuctionReportBuyerDebugModeConfig(
+-          &out->auction_report_buyer_debug_mode_config) ||
+       !data.ReadRequiredSellerCapabilities(
+           &out->required_seller_capabilities) ||
+       !data.ReadRequestedSize(&out->requested_size) ||
+--- a/third_party/blink/renderer/core/paint/paint_layer_scrollable_area.h
++++ b/third_party/blink/renderer/core/paint/paint_layer_scrollable_area.h
+@@ -594,7 +594,7 @@
+       mojom::blink::ScrollBehavior scroll_behavior) override {
+     if (!should_restore_scroll)
+       return;
+-    pending_view_state_.emplace();
++    pending_view_state_.emplace(PendingViewState{});
+     pending_view_state_->state = view_state;
+     pending_view_state_->scroll_behavior = scroll_behavior;
+   }

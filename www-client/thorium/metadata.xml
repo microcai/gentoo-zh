@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>blackteahamburger</name>
+		<email>blackteahamburger@outlook.com</email>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">Alex313031/thorium</remote-id>
+		<remote-id type="gitlab">Matt.Jolly/chromium-patches</remote-id>
+		<bugs-to>https://github.com/Alex313031/thorium</bugs-to>
+		<doc>https://thorium.rocks/docs</doc>
+	</upstream>
+	<use>
+		<flag name="bluetooth">Enable Bluetooth. Disabling bluetooth does break WebAuthn. Could also break something else. Improved patch is welcome.</flag>
+		<flag name="cfi">Build with CFI (Control Flow Integrity) enabled. It requires "-stdlib=libc++", see #40 for more details.</flag>
+		<flag name="convert-dict">Patch and build the convert_dict utility. The script will be installed into /usr/lib64/chromium-browser/update-dicts.sh. More info here: https://github.com/ungoogled-software/ungoogled-chromium/issues/188#issuecomment-444752907</flag>
+		<flag name="debug">Enable DCHECK feature with severity configurable at runtime. Mostly intended for debugging and development, NOT RECOMMENDED for general use.</flag>
+		<flag name="enable-driver">Build chromedriver</flag>
+		<flag name="gtk4">Build with GTK4 headers</flag>
+		<flag name="hangouts">Enable support for Google Hangouts features such as screen sharing</flag>
+		<flag name="headless">Build Ozone only with headless backend, NOT RECOMMENDED for general uses</flag>
+		<flag name="hevc">Enable HEVC decoding support. Should work with system-ffmpeg, but might require additional patching for the built-in one.</flag>
+		<flag name="libcxx">Use bundled C++ Standard Library (libc++)</flag>
+		<flag name="nvidia">Use libXNVCtrl library from <pkg>x11-drivers/nvidia-drivers</pkg> instead of the bundled one</flag>
+		<flag name="official">Enable Official build instead of Developer build</flag>
+		<flag name="optimize-webui">Optimize parts of Chromium's UI written with web technologies (HTML/CSS/JS) for runtime performance purposes. This does more work at compile time for speed benefits at runtime.</flag>
+		<flag name="pax-kernel">Allow building on a PaX-enabled kernel</flag>
+		<flag name="pgo">Enable PGO. Requires bundled binary profile data in sources tree. Often requires masked/testing llvm.</flag>
+		<flag name="proprietary-codecs">Enable proprietary codecs like H.264, MP3</flag>
+		<flag name="screencast">Enable support for remote desktop and screen cast using <pkg>media-video/pipewire</pkg></flag>
+		<flag name="system-brotli">Use the system <pkg>app-arch/brotli</pkg> instead of the bundled one</flag>
+		<flag name="system-crc32c">Use the system <pkg>dev-libs/crc32c</pkg> instead of the bundled one</flag>
+		<flag name="system-double-conversion">Use the system <pkg>dev-libs/double-conversion</pkg> instead of the bundled one</flag>
+		<flag name="system-ffmpeg">Use the system <pkg>media-video/ffmpeg</pkg> instead of the bundled one</flag>
+		<flag name="system-harfbuzz">Use the system <pkg>media-libs/harfbuzz</pkg> instead of the bundled one</flag>
+		<flag name="system-icu">Use the system <pkg>dev-libs/icu</pkg> instead of the bundled one</flag>
+		<flag name="system-jsoncpp">Use the system <pkg>dev-libs/jsoncpp</pkg> instead of the bundled one</flag>
+		<flag name="system-libevent">Use the system <pkg>dev-libs/libevent</pkg> instead of the bundled one</flag>
+		<flag name="system-libusb">Use the system <pkg>dev-libs/libusb</pkg> instead of the bundled one</flag>
+		<flag name="system-openh264">Use the system <pkg>media-libs/openh264</pkg> instead of the bundled one. If disabled, it will restrict USE=bindist.</flag>
+		<flag name="system-openjpeg">Use the system-wide <pkg>media-libs/openjpeg</pkg> instead of the bundled one. OpenJPEG use are exclusively for Chromium's PDF viewer.</flag>
+		<flag name="system-png">Use system libpng instead of the bundled one</flag>
+		<flag name="system-re2">Use the system-wide <pkg>dev-libs/re2</pkg> instead of the bundled one</flag>
+		<flag name="system-snappy">Use the system-wide <pkg>app-arch/snappy</pkg> instead of the bundled one</flag>
+		<flag name="system-woff2">Use the system <pkg>media-libs/woff2</pkg> instead of the bundled one</flag>
+		<flag name="system-zstd">Use the system <pkg>app-arch/zstd</pkg> instead of the bundled one</flag>
+		<flag name="ungoogled">Apply ungoogled-chromium modifications to chromium sources</flag>
+		<flag name="widevine">Unsupported closed-source DRM capability (required by Netflix VOD)</flag>
+		<flag name="thorium-libjxl">Build with libjxl for Thorium</flag>
+		<flag name="thorium-shell">Build Thorium Content Shell</flag>
+	</use>
+</pkgmetadata>

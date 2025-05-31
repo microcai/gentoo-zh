@@ -1,0 +1,175 @@
+--- a/build/config/compiler/BUILD.gn
++++ b/build/config/compiler/BUILD.gn
+@@ -206,7 +206,7 @@
+   # Set to true to use icf, Identical Code Folding.
+   use_icf = (is_posix || is_fuchsia) && !is_debug && !using_sanitizer &&
+             !use_clang_coverage && current_os != "zos" &&
+-            !(is_android && use_order_profiling) && use_lld
++            !(is_android && use_order_profiling) && (use_lld || use_mold)
+ }
+ 
+ if (is_android) {
+@@ -377,7 +377,9 @@
+       }
+     }
+ 
+-    if (use_lld) {
++    if (use_mold) {
++      ldflags += [ "-fuse-ld=mold" ]
++    } else if (use_lld) {
+       ldflags += [ "-fuse-ld=lld" ]
+       if (lld_path != "") {
+         ldflags += [ "-B$lld_path" ]
+@@ -430,7 +432,7 @@
+       # links.
+       ldflags += [ "-Wl,--build-id=sha1" ]
+     } else if (current_os != "aix" && current_os != "zos") {
+-      if (use_lld && !is_nacl) {
++      if ((use_lld || use_mold) && !is_nacl) {
+         ldflags += [ "-Wl,--build-id=fast" ]
+       } else {
+         ldflags += [ "-Wl,--build-id" ]
+@@ -511,7 +513,7 @@
+ 
+   # Linux-specific compiler flags setup.
+   # ------------------------------------
+-  if (use_icf && (!is_apple || use_lld)) {
++  if (use_icf && (!is_apple || use_lld || use_mold)) {
+     ldflags += [ "-Wl,--icf=all" ]
+   }
+ 
+@@ -549,7 +551,7 @@
+     }
+   }
+ 
+-  if (use_lld) {
++  if (use_lld || use_mold) {
+     # TODO(thakis): Make the driver pass --color-diagnostics to the linker
+     # if -fcolor-diagnostics is passed to it, and pass -fcolor-diagnostics
+     # in ldflags instead.
+@@ -564,7 +566,7 @@
+ 
+   # Enable text section splitting only on linux when using lld for now. Other
+   # platforms can be added later if needed.
+-  if ((is_linux || is_chromeos) && use_lld && use_text_section_splitting) {
++  if ((is_linux || is_chromeos) && (use_lld || use_mold) && use_text_section_splitting) {
+     ldflags += [ "-Wl,-z,keep-text-section-prefix" ]
+   }
+ 
+@@ -732,7 +734,7 @@
+   # [0]: https://pinpoint-dot-chromeperf.appspot.com/job/15efb0313e0000
+   # [1]: https://pinpoint-dot-chromeperf.appspot.com/job/157f0b42be0000
+   if (!is_debug && use_thin_lto && is_a_target_toolchain) {
+-    assert(use_lld, "LTO is only supported with lld")
++    assert(use_lld || use_mold, "LTO is only supported with lld or mold")
+ 
+     cflags += [
+       "-flto=thin",
+@@ -774,7 +776,9 @@
+     # [0]: https://pinpoint-dot-chromeperf.appspot.com/job/16984a18be0000
+     # [1]: https://pinpoint-dot-chromeperf.appspot.com/job/11984a18be0000
+     # [2]: https://ci.chromium.org/ui/p/chromium/builders/try/android-binary-size/1848442
++    if (!use_mold) {
+     import_instr_limit = 100
++    }
+ 
+     if (is_win) {
+       ldflags += [
+@@ -807,7 +811,9 @@
+         import_instr_limit = 5
+       }
+ 
++      if (!use_mold) {
+       ldflags += [ "-Wl,-mllvm,-import-instr-limit=$import_instr_limit" ]
++      }
+ 
+       if (is_apple) {
+         ldflags += [ "-Wcrl,object_path_lto" ]
+@@ -815,7 +821,9 @@
+ 
+       # We only use one version of LLVM within a build so there's no need to
+       # upgrade debug info, which can be expensive since it runs the verifier.
++      if (!use_mold) {
+       ldflags += [ "-Wl,-mllvm,-disable-auto-upgrade-debug-info" ]
++      }
+     }
+ 
+     if (!optimize_for_size) {
+@@ -827,7 +835,7 @@
+       ]
+       if (is_win) {
+         ldflags += [ "-mllvm:-inlinehint-threshold=360" ]
+-      } else {
++      } else if (!use_mold) {
+         ldflags += [ "-Wl,-mllvm,-inlinehint-threshold=360" ]
+       }
+     }
+@@ -888,7 +896,7 @@
+ 
+   # TODO(crbug.com/40242425): Cleanup undefined symbol errors caught by
+   # --no-undefined-version.
+-  if (use_lld && !is_win && !is_mac && !is_ios) {
++  if ((use_lld || use_mold) && !is_win && !is_mac && !is_ios) {
+     ldflags += [ "-Wl,--undefined-version" ]
+   }
+ 
+@@ -948,7 +956,7 @@
+     assert(
+         is_android && host_os == "linux",
+         "MLGO is currently only supported for targeting Android on a linux host")
+-    if (use_thin_lto) {
++    if (use_thin_lto && !use_mold ) {
+       ldflags += [ "-Wl,-mllvm,-enable-ml-inliner=release" ]
+       if (is_high_end_android) {
+         # Besides using the arm64 - trained model, instruct the inline advisor
+@@ -1545,7 +1553,9 @@
+     # This can be removed once https://bugs.llvm.org/show_bug.cgi?id=40348
+     # has been resolved, and -mno-outline is obeyed by the linker during
+     # ThinLTO.
++    if (!use_mold) {
+     ldflags += [ "-Wl,-mllvm,-enable-machine-outliner=never" ]
++    }
+   }
+ 
+   asmflags = cflags
+@@ -2928,7 +2938,7 @@
+     # sections" there.  Maybe just a bug in nacl_switch_32.S.
+     _enable_gdb_index =
+         symbol_level == 2 && !is_apple && !is_nacl && current_cpu != "x86" &&
+-        current_os != "zos" && use_lld &&
++        current_os != "zos" && (use_lld || use_mold) &&
+         # Disable on non-fission 32-bit Android because it pushes
+         # libcomponents_unittests over the 4gb size limit.
+         !(is_android && !use_debug_fission && current_cpu != "x64" &&
+--- a/build/config/compiler/pgo/BUILD.gn
++++ b/build/config/compiler/pgo/BUILD.gn
+@@ -150,7 +150,7 @@
+     if (use_thin_lto) {
+       if (is_win) {
+         ldflags = [ "-mllvm:-enable-ext-tsp-block-placement=1" ]
+-      } else {
++      } else if (!use_mold) {
+         ldflags = [ "-Wl,-mllvm,-enable-ext-tsp-block-placement=1" ]
+       }
+     } else {
+--- a/build/config/compiler/compiler.gni.orig
++++ b/build/config/compiler/compiler.gni
+@@ -36,6 +36,9 @@
+   # The default linker everywhere else.
+   use_lld = is_clang && current_os != "zos"
+ 
++  # Set to true to use mold, the modern linker.
++  use_mold = false
++
+   # If true, optimize for size.
+   # Default to favoring speed over size for platforms not listed below.
+   optimize_for_size =
+@@ -74,7 +77,7 @@
+   # gcc >= 4.8 or clang.
+   # http://gcc.gnu.org/wiki/DebugFission
+   use_debug_fission = !is_android && !is_fuchsia && !is_apple && !is_win &&
+-                      use_lld && cc_wrapper == ""
++                      (use_lld || use_mold) && cc_wrapper == ""
+ 
+   # Enables support for ThinLTO, which links 3x-10x faster than full LTO. See
+   # also http://blog.llvm.org/2016/06/thinlto-scalable-and-incremental-lto.html

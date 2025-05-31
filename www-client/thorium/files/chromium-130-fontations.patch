@@ -1,0 +1,93 @@
+--- a/skia/BUILD.gn
++++ b/skia/BUILD.gn
+@@ -8,7 +8,6 @@
+ import("//build/config/freetype/freetype.gni")
+ import("//build/config/rust.gni")
+ import("//build/config/sanitizers/sanitizers.gni")
+-import("//build/rust/rust_static_library.gni")
+ import("//gpu/vulkan/features.gni")
+ import("//testing/test.gni")
+ import("//third_party/skia/gn/shared_sources.gni")
+@@ -47,27 +46,6 @@
+   ]
+ }
+ 
+-source_set("path_bridge") {
+-  sources = skia_fontations_path_bridge_sources
+-}
+-
+-rust_static_library("bridge_rust_side") {
+-  allow_unsafe = true
+-  crate_root = skia_fontations_bridge_root
+-  sources = skia_fontations_bridge_sources
+-  cxx_bindings = skia_fontations_bridge_sources
+-  deps = [
+-    ":path_bridge",
+-    "//third_party/rust/font_types/v0_7:lib",
+-    "//third_party/rust/read_fonts/v0_22:lib",
+-    "//third_party/rust/skrifa/v0_22:lib",
+-  ]
+-  configs -= [ "//build/config/compiler:chromium_code" ]
+-  configs += [
+-    ":skia_config",
+-    "//build/config/compiler:no_chromium_code",
+-  ]
+-}
+ 
+ # External-facing config for dependent code.
+ config("skia_config") {
+@@ -394,15 +373,9 @@
+     # See SK_TYPEFACE_FACTORY_FREETYPE
+     sources += skia_ports_freetype_sources
+     sources += skia_ports_fontmgr_custom_sources
+-    sources += skia_ports_typeface_fontations_sources
+     sources += skia_ports_fontmgr_empty_sources
+     public += skia_ports_fontmgr_empty_public
+ 
+-    # Fontations Rust/C++ bridge interfaces.
+-    deps += [
+-      ":bridge_rust_side",
+-      ":path_bridge",
+-    ]
+   }
+ 
+   if (is_win) {
+--- a/third_party/blink/renderer/platform/fonts/web_font_typeface_factory.cc
++++ b/third_party/blink/renderer/platform/fonts/web_font_typeface_factory.cc
+@@ -12,7 +12,6 @@
+ #include "third_party/blink/renderer/platform/fonts/opentype/font_format_check.h"
+ #include "third_party/skia/include/core/SkStream.h"
+ #include "third_party/skia/include/core/SkTypeface.h"
+-#include "third_party/skia/include/ports/SkTypeface_fontations.h"
+ 
+ #if BUILDFLAG(IS_WIN)
+ #include "third_party/blink/renderer/platform/fonts/win/dwrite_font_format_support.h"
+@@ -54,7 +53,7 @@
+ }
+ 
+ sk_sp<SkTypeface> MakeTypefaceDefaultFontMgr(sk_sp<SkData> data) {
+-#if !(BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE))
++#if (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE))
+   if (RuntimeEnabledFeatures::FontationsFontBackendEnabled()) {
+     std::unique_ptr<SkStreamAsset> stream(new SkMemoryStream(data));
+     return SkTypeface_Make_Fontations(std::move(stream), SkFontArguments());
+@@ -82,10 +81,6 @@
+ }
+ #endif
+ 
+-sk_sp<SkTypeface> MakeTypefaceFontations(sk_sp<SkData> data) {
+-  std::unique_ptr<SkStreamAsset> stream(new SkMemoryStream(data));
+-  return SkTypeface_Make_Fontations(std::move(stream), SkFontArguments());
+-}
+ 
+ sk_sp<SkTypeface> MakeVariationsTypeface(
+     sk_sp<SkData> data,
+@@ -187,7 +182,6 @@
+   const FontFormatCheck format_check(data);
+   const FontInstantiator instantiator = {
+       MakeTypefaceDefaultFontMgr,
+-      MakeTypefaceFontations,
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE)
+       MakeTypefaceFallback,
+ #endif
+

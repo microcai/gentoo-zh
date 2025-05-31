@@ -1697,7 +1697,7 @@ use_latest_release = true
 github_account = "irort"
 prefix = "v"
 
-["www-client/thorium-browser-bin"]
+["www-client/thorium"]
 source = "github"
 github = "Alex313031/thorium"
 use_latest_release = true

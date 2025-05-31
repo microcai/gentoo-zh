@@ -1,0 +1,12 @@
+--- a/media/filters/ffmpeg_glue.cc
++++ b/media/filters/ffmpeg_glue.cc
+@@ -123,7 +123,8 @@
+   // We don't allow H.264 parsing during demuxing since we have our own parser
+   // and the ffmpeg one increases memory usage unnecessarily.
+   if (base::FeatureList::IsEnabled(kForbidH264ParsingDuringDemuxing)) {
+-    format_context_->flags |= AVFMT_FLAG_NOH264PARSE;
++    // TODO(crbug.com/355485812): Re-enable this flag.
++    // format_context_->flags |= AVFMT_FLAG_NOH264PARSE;
+   }
+ 
+   // Ensures format parsing errors will bail out. From an audit on 11/2017, all
