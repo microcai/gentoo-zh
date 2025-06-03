@@ -1,0 +1,203 @@
+From 0df94c6d284827b6dd1d75eb364735e960d4820f Mon Sep 17 00:00:00 2001
+From: Er2 <er2@dismail.de>
+Date: Mon, 21 Oct 2024 17:03:58 +0300
+Subject: [PATCH] clang: Fix build with LLVM 19
+
+---
+ datamodel/datamodel.cpp           |  6 +++---
+ public/datamodel/dmattributevar.h | 11 +++++++----
+ public/tier1/utlblockmemory.h     |  8 ++++----
+ public/tier3/tier3dm.h            |  4 ++--
+ tier0/threadtools.cpp             | 19 ++++++++-----------
+ tier0/wscript                     |  1 +
+ wscript                           |  5 +----
+ 7 files changed, 26 insertions(+), 28 deletions(-)
+
+diff --git a/datamodel/datamodel.cpp b/datamodel/datamodel.cpp
+index 7e7589dc9..4b52aadb4 100644
+--- a/datamodel/datamodel.cpp
++++ b/datamodel/datamodel.cpp
+@@ -151,7 +151,7 @@ InitReturnVal_t CDataModel::Init( )
+ //#define _ELEMENT_HISTOGRAM_
+ #ifdef _ELEMENT_HISTOGRAM_
+ CUtlMap< UtlSymId_t, int > g_typeHistogram( 0, 100, DefLessFunc( UtlSymId_t ) );
+-#endif _ELEMENT_HISTOGRAM_
++#endif
+
+
+ //-----------------------------------------------------------------------------
+@@ -166,7 +166,7 @@ void CDataModel::Shutdown()
+ 		Msg( "%d\t%s\n", g_typeHistogram.Element( i ), GetString( g_typeHistogram.Key( i ) ) );
+ 	}
+ 	Msg( "\n" );
+-#endif _ELEMENT_HISTOGRAM_
++#endif
+
+ 	int c = GetAllocatedElementCount();
+ 	if ( c > 0 )
+@@ -1934,7 +1934,7 @@ CDmElement* CDataModel::CreateElement( const DmElementReference_t &ref, const ch
+ 		{
+ 			g_typeHistogram.Insert( typeSym, 1 );
+ 		}
+-#endif _ELEMENT_HISTOGRAM_
++#endif
+ 	}
+
+ 	return pElement;
+diff --git a/public/datamodel/dmattributevar.h b/public/datamodel/dmattributevar.h
+index e0ce32f5f..e27aaaeef 100644
+--- a/public/datamodel/dmattributevar.h
++++ b/public/datamodel/dmattributevar.h
+@@ -368,8 +368,9 @@ class CDmaDataInternal
+
+ 	const T& Value() const { return m_Storage; }
+ 	T& Value( ) { return m_Storage; }
+-	const D& Data() const { return m_Storage; }
+ 	D& Data( ) { return m_Storage; }
++public:
++	const D& Data() const { return m_Storage; }
+
+ private:
+ 	D m_Storage;
+@@ -385,8 +386,9 @@ class CDmaDataExternal
+ 	void Attach( void *pData ) { m_pStorage = (D*)pData; }
+ 	const T& Value() const { return *m_pStorage; }
+ 	T& Value( ) { return *m_pStorage; }
+-	const D& Data() const { return *m_pStorage; }
+ 	D& Data( ) { return *m_pStorage; }
++public:
++	const D& Data() const { return *m_pStorage; }
+
+ private:
+ 	D* m_pStorage;
+@@ -1152,7 +1154,7 @@ inline void CDmaElement<T>::Init( CDmElement *pOwner, const char *pAttributeName
+ template <class T>
+ inline UtlSymId_t CDmaElement<T>::GetElementType() const
+ {
+-	return this->Data().m_ElementType;
++	return static_cast<CDmaDataInternal<const T>*>(this)->Data().m_ElementType;
+ }
+
+ template <class T>
+@@ -1350,7 +1352,8 @@ inline int CDmaStringArrayBase<B>::InsertBefore( int elem, const char *pValue )
+ template< class E, class B >
+ inline UtlSymId_t CDmaElementArrayConstBase<E,B>::GetElementType() const
+ {
+-	return this->Data().m_ElementType;
++	// Fuck MSVC, anyway I'm unsure about if this code was called
++	return static_cast<const B*>(this)->Data().m_ElementType;
+ }
+
+ template< class E, class B >
+diff --git a/public/tier1/utlblockmemory.h b/public/tier1/utlblockmemory.h
+index 35ef2da2e..a4ade5684 100644
+--- a/public/tier1/utlblockmemory.h
++++ b/public/tier1/utlblockmemory.h
+@@ -137,10 +137,10 @@ CUtlBlockMemory<T,I>::~CUtlBlockMemory()
+ template< class T, class I >
+ void CUtlBlockMemory<T,I>::Swap( CUtlBlockMemory< T, I > &mem )
+ {
+-	this->swap( m_pMemory, mem.m_pMemory );
+-	this->swap( m_nBlocks, mem.m_nBlocks );
+-	this->swap( m_nIndexMask, mem.m_nIndexMask );
+-	this->swap( m_nIndexShift, mem.m_nIndexShift );
++	Swap( m_pMemory, mem.m_pMemory );
++	Swap( m_nBlocks, mem.m_nBlocks );
++	Swap( m_nIndexMask, mem.m_nIndexMask );
++	Swap( m_nIndexShift, mem.m_nIndexShift );
+ }
+
+
+diff --git a/public/tier3/tier3dm.h b/public/tier3/tier3dm.h
+index 5ac602811..abec7c332 100644
+--- a/public/tier3/tier3dm.h
++++ b/public/tier3/tier3dm.h
+@@ -33,7 +33,7 @@ class CTier3DmAppSystem : public CTier2DmAppSystem< IInterface, ConVarFlag >
+ 		if ( !BaseClass::Connect( factory ) )
+ 			return false;
+
+-		if ( IsPrimaryAppSystem() )
++		if ( this->IsPrimaryAppSystem() )
+ 		{
+ 			ConnectTier3Libraries( &factory, 1 );
+ 		}
+@@ -42,7 +42,7 @@ class CTier3DmAppSystem : public CTier2DmAppSystem< IInterface, ConVarFlag >
+
+ 	virtual void Disconnect()
+ 	{
+-		if ( IsPrimaryAppSystem() )
++		if ( this->IsPrimaryAppSystem() )
+ 		{
+ 			DisconnectTier3Libraries();
+ 		}
+diff --git a/tier0/threadtools.cpp b/tier0/threadtools.cpp
+index d51949272..eab03f608 100644
+--- a/tier0/threadtools.cpp
++++ b/tier0/threadtools.cpp
+@@ -26,23 +26,20 @@
+ 	#include <sys/time.h>
+ 	#define GetLastError() errno
+ 	typedef void *LPVOID;
+-#if !defined(OSX)
+-        #include <fcntl.h>
+-        #include <unistd.h>
+-	#define sem_unlink( arg )
+-	#define OS_TO_PTHREAD(x) (x)
+-#else
++#if defined(OSX)
+ 	#define pthread_yield pthread_yield_np
+ 	#include <mach/thread_act.h>
+ 	#include <mach/mach.h>
+ 	#define OS_TO_PTHREAD(x) pthread_from_mach_thread_np( x )
++#elif defined(PLATFORM_BSD)
++	#define OS_TO_PTHREAD(x) (pthread_t)(x)
++#else
++        #include <fcntl.h>
++        #include <unistd.h>
++	#define sem_unlink( arg )
++	#define OS_TO_PTHREAD(x) (x)
+ #endif // !OSX
+
+-#ifdef PLATFORM_BSD
+-# undef OS_TO_PTRHEAD
+-# define OS_TO_PTHREAD(x) (pthread_t)(x)
+-#endif
+-
+ #endif
+
+ #ifndef _PS3
+diff --git a/tier0/wscript b/tier0/wscript
+index 04a814b3c..90d3c54c9 100755
+--- a/tier0/wscript
++++ b/tier0/wscript
+@@ -15,6 +15,7 @@ def configure(conf):
+ 	conf.define('WAF_CFLAGS', conf.env.CFLAGS)
+ 	conf.define('WAF_LDFLAGS', conf.env.LINKFLAGS)
+ 	conf.define('TIER0_DLL_EXPORT',1)
++	conf.define('GIT_COMMIT_HASH', conf.env.GIT_VERSION)
+ #	conf.define('NO_HOOK_MALLOC',1)
+
+ def build(bld):
+diff --git a/wscript b/wscript
+index 16f2263bd..0a06b93dd 100644
+--- a/wscript
++++ b/wscript
+@@ -279,9 +279,6 @@ def define_platform(conf):
+ 			'NDEBUG'
+ 		])
+
+-	conf.define('GIT_COMMIT_HASH', conf.env.GIT_VERSION)
+-
+-
+ def options(opt):
+ 	grp = opt.add_option_group('Common options')
+
+@@ -518,7 +515,7 @@ def configure(conf):
+ 		]
+
+ 		flags += ['-funwind-tables', '-g']
+-	elif conf.env.COMPILER_CC != 'msvc' and conf.env.DEST_OS != 'darwin' and conf.env.DEST_CPU in ['x86', 'x86_64']:
++	elif conf.env.COMPILER_CC != 'msvc' and conf.env.DEST_OS not in ['darwin', 'freebsd'] and conf.env.DEST_CPU in ['x86', 'x86_64']:
+ 		flags += ['-march=core2']
+
+ 	if conf.env.DEST_CPU in ['x86', 'x86_64']:

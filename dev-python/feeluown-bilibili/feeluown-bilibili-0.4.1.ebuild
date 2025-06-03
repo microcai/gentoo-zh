@@ -3,7 +3,7 @@
 
 EAPI=8
 DISTUTILS_USE_PEP517=poetry
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..14} )
 PYPI_NO_NORMALIZE=true
 inherit distutils-r1 pypi
 

@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_11 python3_12 )
+PYTHON_COMPAT=( python3_{11..14} )
 PYTHON_REQ_USE='threads(+)'
 
 inherit waf-utils git-r3 python-any-r1
@@ -24,10 +24,12 @@ BDEPEND="${PYTHON_DEPS}
 		 media-libs/libpng
 		 net-misc/curl
 		 media-libs/openal"
+PATCHES=(
+    "${FILESDIR}/0001-clang-Fix-build-with-LLVM-19.patch"
+)
 
 src_configure() {
 	local conf=(
-		'-8'
 		$(usex debug '-T debug' '-T release')
 	)
 	waf-utils_src_configure "${conf[@]}"
