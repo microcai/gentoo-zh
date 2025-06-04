@@ -26,9 +26,9 @@ BDEPEND="dev-qt/qttools:6[linguist]
 		dev-util/patchelf"
 
 src_prepare() {
-    default
-    eapply "${FILESDIR}"/fix-ZxingQtReader.patch
-    cmake_src_prepare
+	default
+	eapply "${FILESDIR}"/fix-ZxingQtReader.patch
+	cmake_src_prepare
 }
 
 src_install() {
