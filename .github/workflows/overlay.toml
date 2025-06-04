@@ -483,6 +483,13 @@ github_account = "oatiz"
 # TODO: no way check
 #["dev-lang/quickjs"]
 
+["dev-lang/koka-bin"]
+source = "github"
+github = "koka-lang/koka"
+use_latest_release = true
+prefix = "v"
+github_account = "gouwazi"
+
 ["dev-libs/libdatrie"]
 source = "github"
 github = "tlwg/libdatrie"
