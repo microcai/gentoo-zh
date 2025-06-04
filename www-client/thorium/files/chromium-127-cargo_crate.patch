@@ -1,0 +1,12 @@
+--- a/build/rust/cargo_crate.gni
++++ b/build/rust/cargo_crate.gni
+@@ -5,6 +5,8 @@
+ import("//build/rust/rust_executable.gni")
+ import("//build/rust/rust_macro.gni")
+ import("//build/rust/rust_static_library.gni")
++
++rust_sysroot=""
+ 
+ # This template allows for building Cargo crates within gn.
+ #
+

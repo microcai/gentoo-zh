@@ -2,10 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<name>blackteahamburger</name>
-		<email>blackteahamburger@outlook.com</email>
+		<name>gouwazi</name>
+		<email>gouwazi@protonmail.com</email>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">Alex313031/Thorium</remote-id>
+		<remote-id type="github">koka-lang/koka</remote-id>
 	</upstream>
 </pkgmetadata>
