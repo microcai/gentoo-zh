@@ -19,10 +19,8 @@ KEYWORDS="~amd64"
 
 RESTRICT="strip mirror"
 
-BDEPEND="
-	app-arch/unzip
-	sys-fs/fuse:0
-"
+RDEPEND="sys-fs/fuse:0"
+BDEPEND="app-arch/unzip"
 
 src_install() {
 	into /opt/apifox

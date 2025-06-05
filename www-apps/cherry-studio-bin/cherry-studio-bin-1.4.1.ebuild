@@ -15,6 +15,8 @@ LICENSE="Cherry-Studio"
 SLOT="0"
 KEYWORDS="~amd64"
 
+RDEPEND="sys-fs/fuse:0"
+
 RESTRICT="strip"
 
 src_unpack() {
