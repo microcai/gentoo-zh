@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-06 00:35:37 CST)
+(The last generation time: 2025-06-06 00:59:03 CST)
 
 ### Packages
 
@@ -295,13 +295,16 @@
  games-action/vintagestory                       | 1.19.8             |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
                                                  | 1.20.9             |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ games-arcade/osu-lazer-bin                      | 2025.424.0         |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away!
+                                                 | 2025.605.3         |            |                                                                                         |
+   media-libs/libsdl2                            | 2.32.50            | BD, RD     | https://libsdl.org/                                                                     | SDL2 compat layer over SDL3
+-------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-board/othello                             | 0.2.2              |            | http://othello-game.sourceforge.net                                                     | Othello is a classic strategy game, also known as Reversi
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-emulation/conty                           | 1.27.1             |            | https://github.com/Kron4ek/Conty                                                        | SquashFS image of Arch Linux with: Lutris, Steam, Bottles, Wine...
                                                  | 1.28               |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-fps/source-engine                         | 9999               |            | https://github.com/nillerusr/source-engine                                              | A 3D game engine developed by Valve
-   media-libs/libsdl2                            | 2.32.50            | BD         | https://libsdl.org/                                                                     | SDL2 compat layer over SDL3
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-misc/oh-my-git-bin                        | 0.6.5              |            | https://ohmygit.org/                                                                    | An interactive Git learning game!
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
