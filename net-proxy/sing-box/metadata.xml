@@ -23,5 +23,6 @@
 		<flag name="v2ray-api">Build with V2Ray API support</flag>
 		<flag name="gvisor">Build with gVisor support</flag>
 		<flag name="tor">Build with embedded Tor support</flag>
+		<flag name="tailscale">Build with Tailscale support</flag>
 	</use>
 </pkgmetadata>
