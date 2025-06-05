@@ -16,7 +16,7 @@ KEYWORDS="~amd64"
 
 RESTRICT="strip"
 
-BDEPEND="sys-fs/fuse:0"
+RDEPEND="sys-fs/fuse:0"
 
 src_unpack() {
 	cp "${DISTDIR}/${P}.AppImage" another-redis-desktop-manager || die
