@@ -759,6 +759,12 @@ use_latest_release = true
 prefix = "v"
 github_account = "gouwazi"
 
+["games-arcade/osu-lazer-bin"]
+source = "github"
+github = "ppy/osu"
+use_latest_release = true
+github_account = "Puqns67"
+
 ["games-board/othello"]
 source = "regex"
 url = "http://othello-game.sourceforge.net/en/Download.html"
