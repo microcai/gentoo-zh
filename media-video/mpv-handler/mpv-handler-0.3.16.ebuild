@@ -20,7 +20,7 @@ SRC_URI="
 
 LICENSE="MIT"
 # Dependent crate licenses
-LICENSE+=" MIT MPL-2.0 Unicode-DFS-2016"
+LICENSE+=" MIT MPL-2.0 Unicode-3.0"
 SLOT="0"
 KEYWORDS="~amd64"
 RESTRICT="strip"
