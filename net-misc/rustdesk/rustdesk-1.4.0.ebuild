@@ -28,14 +28,14 @@ declare -A GIT_CRATES=(
 	[keepawake]='https://github.com/rustdesk-org/keepawake-rs;64d568586dd16551d02120e19668d2b0fec8e3c9;keepawake-rs-%commit%'
 	[machine-uid]='https://github.com/rustdesk-org/machine-uid;381ff579c1dc3a6c54db9dfec47c44bcb0246542;machine-uid-%commit%'
 	[magnum-opus]='https://github.com/rustdesk-org/magnum-opus;5cd2bf989c148662fa3a2d9d539a71d71fd1d256;magnum-opus-%commit%'
-	[nokhwa-bindings-linux]='https://github.com/rustdesk-org/nokhwa;3e2512074bc57d5df011363a26a8ee8959dc7969;nokhwa-%commit%/nokhwa-bindings-linux'
-	[nokhwa-bindings-macos]='https://github.com/rustdesk-org/nokhwa;3e2512074bc57d5df011363a26a8ee8959dc7969;nokhwa-%commit%/nokhwa-bindings-macos'
-	[nokhwa-bindings-windows]='https://github.com/rustdesk-org/nokhwa;3e2512074bc57d5df011363a26a8ee8959dc7969;nokhwa-%commit%/nokhwa-bindings-windows'
-	[nokhwa-core]='https://github.com/rustdesk-org/nokhwa;3e2512074bc57d5df011363a26a8ee8959dc7969;nokhwa-%commit%/nokhwa-core'
-	[nokhwa]='https://github.com/rustdesk-org/nokhwa;3e2512074bc57d5df011363a26a8ee8959dc7969;nokhwa-%commit%'
+	[nokhwa-bindings-linux]='https://github.com/rustdesk-org/nokhwa;48963f514bb7f1ee5db44d38dfc88027029de5e6;nokhwa-%commit%/nokhwa-bindings-linux'
+	[nokhwa-bindings-macos]='https://github.com/rustdesk-org/nokhwa;48963f514bb7f1ee5db44d38dfc88027029de5e6;nokhwa-%commit%/nokhwa-bindings-macos'
+	[nokhwa-bindings-windows]='https://github.com/rustdesk-org/nokhwa;48963f514bb7f1ee5db44d38dfc88027029de5e6;nokhwa-%commit%/nokhwa-bindings-windows'
+	[nokhwa-core]='https://github.com/rustdesk-org/nokhwa;48963f514bb7f1ee5db44d38dfc88027029de5e6;nokhwa-%commit%/nokhwa-core'
+	[nokhwa]='https://github.com/rustdesk-org/nokhwa;48963f514bb7f1ee5db44d38dfc88027029de5e6;nokhwa-%commit%'
 	[pam-sys]='https://github.com/rustdesk-org/pam-sys;3337c9bb9a9c68d7497ec8c93cad2368c26091b7;pam-sys-%commit%'
 	[pam]='https://github.com/rustdesk-org/pam;7bfd25510202cd269292cbdd7c71f3977a6fd762;pam-%commit%'
-	[parity-tokio-ipc]='https://github.com/rustdesk-org/parity-tokio-ipc;3623ec9ebef50c9b118e03b03df831008a4d1441;parity-tokio-ipc-%commit%'
+	[parity-tokio-ipc]='https://github.com/rustdesk-org/parity-tokio-ipc;c8c8bbcbabf9be1201c53afb0269b92b9b02d291;parity-tokio-ipc-%commit%'
 	[rdev]='https://github.com/rustdesk-org/rdev;f9b60b1dd0f3300a1b797d7a74c116683cd232c8;rdev-%commit%'
 	[reqwest]='https://github.com/rustdesk-org/reqwest;9cb758c9fb2f4edc62eb790acfd45a6a3da21ed3;reqwest-%commit%'
 	[rust-pulsectl]='https://github.com/rustdesk-org/pulsectl;aa34dde499aa912a3abc5289cc0b547bd07dd6e2;pulsectl-%commit%'
@@ -44,7 +44,7 @@ declare -A GIT_CRATES=(
 	[tao-macros]='https://github.com/rustdesk-org/tao;288c219cb0527e509590c2b2d8e7072aa9feb2d3;tao-%commit%/tao-macros'
 	[tao]='https://github.com/rustdesk-org/tao;288c219cb0527e509590c2b2d8e7072aa9feb2d3;tao-%commit%'
 	[tfc]='https://github.com/rustdesk-org/The-Fat-Controller;78bb80a8e596e4c14ae57c8448f5fca75f91f2b0;The-Fat-Controller-%commit%'
-	[tokio-socks]='https://github.com/rustdesk-org/tokio-socks;94e97c6d7c93b0bcbfa54f2dc397c1da0a6e43d3;tokio-socks-%commit%'
+	[tokio-socks]='https://github.com/rustdesk-org/tokio-socks;bdb9aa3de5bac41602d0742b8ef6bbc6bfebd127;tokio-socks-%commit%'
 	[tray-icon]='https://github.com/tauri-apps/tray-icon;d4078696edba67b0ab42cef67e6a421a0332c96f;tray-icon-%commit%'
 	[wallpaper]='https://github.com/rustdesk-org/wallpaper.rs;ce4a0cd3f58327c7cc44d15a63706fb0c022bacf;wallpaper.rs-%commit%'
 	[webm-sys]='https://github.com/rustdesk-org/rust-webm;d2c4d3ac133c7b0e4c0f656da710b48391981e64;rust-webm-%commit%/src/sys'
@@ -63,7 +63,7 @@ HOMEPAGE="https://rustdesk.com/"
 _WEBM_PV="1.0.0.31"
 _VCPKG_COMMIT="2024.11.16"
 _HWCODEC_EXTERNALS_COMMIT="a0ff168b672ab57c50f09dbe128608e45a1c4a52"
-_HBB_COMMON_COMMIT="81b932b7bfa2ff8bc60189625fd6538db2fa9ea1"
+_HBB_COMMON_COMMIT="6e556f7e1751a3a709cd5cca0df7268ba3cb1c48"
 SRC_URI="
 	https://github.com/rustdesk/rustdesk/archive/refs/tags/${PV}.tar.gz
 		-> ${P}.tar.gz
@@ -83,8 +83,8 @@ LICENSE="AGPL-3"
 # Dependent crate licenses
 LICENSE+="
 	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD-2 BSD Boost-1.0
-	CC0-1.0 GPL-3+ IJG ISC MIT MIT-0 MPL-2.0 Unicode-DFS-2016 Unlicense
-	ZLIB
+	CC0-1.0 CDLA-Permissive-2.0 GPL-3+ IJG ISC MIT MIT-0 MPL-2.0
+	Unicode-DFS-2016 Unlicense ZLIB
 "
 SLOT="0"
 KEYWORDS="~amd64"
