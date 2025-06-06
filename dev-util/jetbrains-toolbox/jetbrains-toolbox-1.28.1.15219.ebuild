@@ -17,8 +17,6 @@ KEYWORDS="~amd64"
 
 RESTRICT="strip mirror"
 
-DEPEND="sys-fs/fuse:0"
-
 QA_PREBUILT="opt/jetbrains-toolbox/jetbrains-toolbox"
 
 src_compile() {
