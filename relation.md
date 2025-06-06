@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-06 11:14:00 CST)
+(The last generation time: 2025-06-06 15:11:22 CST)
 
 ### Packages
 
@@ -606,7 +606,7 @@
  net-proxy/qvplugin-command                      | 3.0.0              |            | https://github.com/Qv2ray/QvPlugin-Command                                              | Plugin for Qv2ray to run any commands when something happens in Qv2ray
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-naiveproxy                   | 3.0.0              |            | https://github.com/Qv2ray/QvPlugin-NaiveProxy                                           | Plugin for Qv2ray to support NaiveProxy in Qv2ray
-   net-proxy/naiveproxy-bin                      | 137.0.7151.44_p1   | RD         | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
+   net-proxy/naiveproxy-bin                      | 137.0.7151.44_p2   | RD         | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-ss                           | 3.0.0-r1           |            | https://github.com/Qv2ray/QvPlugin-SS                                                   | Plugin for Qv2ray to support SIP003 in Qv2ray
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
