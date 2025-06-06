@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-06 21:51:04 CST)
+(The last generation time: 2025-06-06 21:53:04 CST)
 
 ### Packages
 
@@ -424,7 +424,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/iptvnator-bin                       | 0.16.0             |            | https://iptvnator.vercel.app/                                                           | Cross-platform IPTV player application with multiple features
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-video/mpv-handler                         | 0.3.15             |            | https://github.com/akiirui/mpv-handler                                                  | Play website videos and songs with mpv & yt-dlp
+ media-video/mpv-handler                         | 0.3.16             |            | https://github.com/akiirui/mpv-handler                                                  | Play website videos and songs with mpv & yt-dlp
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/tenvideo                            | 1.0.10             |            | https://v.qq.com/download.html#linux                                                    | Tencent videos
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
