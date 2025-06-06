@@ -29,10 +29,6 @@ PATCHES=(
 	"${FILESDIR}"/${P}-fix-ZxingQtReader.patch
 )
 
-src_prepare() {
-	cmake_src_prepare
-}
-
 src_install() {
 	exeinto "/usr/lib/${PN}/"
 	doexe "${BUILD_DIR}"/nekoray
