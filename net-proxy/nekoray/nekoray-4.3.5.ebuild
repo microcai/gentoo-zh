@@ -25,8 +25,11 @@ RDEPEND="${DEPEND}"
 BDEPEND="dev-qt/qttools:6[linguist]
 		dev-util/patchelf"
 
+PATCHES=(
+	"${FILESDIR}"/${P}-fix-ZxingQtReader.patch
+)
+
 src_prepare() {
-	eapply "${FILESDIR}"/fix-ZxingQtReader.patch
 	cmake_src_prepare
 }
 
