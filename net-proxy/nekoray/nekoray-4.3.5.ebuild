@@ -25,6 +25,10 @@ RDEPEND="${DEPEND}"
 BDEPEND="dev-qt/qttools:6[linguist]
 		dev-util/patchelf"
 
+PATCHES=(
+	"${FILESDIR}"/${P}-fix-ZxingQtReader.patch
+)
+
 src_install() {
 	exeinto "/usr/lib/${PN}/"
 	doexe "${BUILD_DIR}"/nekoray
