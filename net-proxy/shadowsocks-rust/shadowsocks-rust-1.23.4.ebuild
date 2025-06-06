@@ -25,8 +25,8 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 LICENSE="MIT"
 # Dependent crate licenses
 LICENSE+="
-	0BSD Apache-2.0 BSD-2 BSD CC0-1.0 ISC MIT MPL-2.0 Unicode-3.0
-	WTFPL-2
+	0BSD Apache-2.0 BSD-2 BSD CC0-1.0 CDLA-Permissive-2.0 ISC MIT
+	MPL-2.0 Unicode-3.0 WTFPL-2
 "
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
