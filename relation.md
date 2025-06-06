@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-06 22:57:58 CST)
+(The last generation time: 2025-06-06 23:37:54 CST)
 
 ### Packages
 
@@ -242,7 +242,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/menuinst                             | 2.2.0              |            | https://github.com/conda/menuinst                                                       | Cross platform menu item installation
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/mw2fcitx                             | 0.21.1             |            | https://github.com/outloudvi/mw2fcitx                                                   | Build fcitx5 libraries from MediaWiki sites
+ dev-python/mw2fcitx                             | 0.22.0             |            | https://github.com/outloudvi/mw2fcitx                                                   | Build fcitx5 libraries from MediaWiki sites
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/nvchecker                            | 2.18               |            | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -692,7 +692,7 @@
  sys-fs/systemd-zpool-scrub                      | 9999               |            | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/cachyos-sources                      | 6.14.8             |            | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
-                                                 | 6.15.0             |            |                                                                                         |
+                                                 | 6.15.1             |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/mkinitcpio                           | 38                 |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
                                                  | 39.2               |            |                                                                                         |
