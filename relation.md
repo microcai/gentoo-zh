@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-06 00:59:03 CST)
+(The last generation time: 2025-06-06 11:14:00 CST)
 
 ### Packages
 
@@ -50,6 +50,8 @@
  app-editors/edit                                | 1.1.0              |            | https://github.com/microsoft/edit                                                       | Microsoft edit
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/marktext-bin                        | 0.17.1             |            | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
+-------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-editors/mu-editor-bin                       | 1.2.0              |            | https://github.com/mu-editor/mu                                                         | A simple Python editor for beginner programmers
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                              | 0.11.18            |            | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
                                                  | 1.10.8             |            |                                                                                         |
@@ -169,7 +171,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/lemminx-bin                            | 0.31.0             |            | https://github.com/eclipse-lemminx/lemminx                                              | A XML Language Server
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-text/readest-bin                            | 0.9.52             |            | https://readest.com/                                                                    | A modern, feature-rich ebook reader
+ app-text/readest-bin                            | 0.9.53             |            | https://readest.com/                                                                    | A modern, feature-rich ebook reader
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/easymotion                              | 1.3                |            | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: Vim motions on speed!
                                                  | 3.0.1              |            |                                                                                         |
