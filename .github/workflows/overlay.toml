@@ -87,11 +87,14 @@ github = "blackteahamburger/fcitx5-pinyin-sougou-baidu"
 use_latest_release = true
 github_account = "blackteahamburger"
 
-["app-dicts/fcitx-pinyin-zhwiki"]
-source = "github"
-github = "felixonmars/fcitx5-pinyin-zhwiki"
-use_latest_release = true
-github_account = "blackteahamburger"
+# 3 different version under tag: 0.2.5
+# web-slang-20250526.source
+# zhwiki-20250601-flow.xml.bz2
+#["app-dicts/fcitx-pinyin-zhwiki"]
+#source = "github"
+#github = "felixonmars/fcitx5-pinyin-zhwiki"
+#use_latest_release = true
+#github_account = "blackteahamburger"
 
 ["app-editors/appflowy-bin"]
 source = "github"
@@ -117,23 +120,48 @@ url = "https://typora.io/#linu://typora.io/releases/stable.html"
 regex = "typora_([\\d.]+)_amd64.deb"
 github_account = "CHN-beta"
 
-# TODO:
-#["app-emulation/deepin-udis86"]
+["app-emulation/deepin-udis86"]
+source = "regex"
+url = "https://community-packages.deepin.com/deepin/pool/non-free/u/udis86"
+regex = '''udis86[-_\.]([\d\w]+(?:[\._-][\d\w]+)*)(?=\.tar\..+|\.zip|\.tgz|\.deb|\.AppImage)'''
+from_pattern = '''(.*)-(.*)_(.*)'''
+to_pattern = '''\1_p\2'''
 
-# TODO:
-#["app-emulation/deepin-wine-helper"]
+["app-emulation/deepin-wine5"]
+source = "cmd"
+cmd = '''curl -s https://mirrors.sdu.edu.cn/spark-store-repository/store/depends/deepin-wine-series/ |grep -oP 'deepin-wine5[-_\.]\K([\d\w]+(?:[\._-][\d\w]+)*)(?=\.tar\..+|\.zip|\.tgz|\.deb|\.AppImage)' | sort -Vru | grep i386 | cut -d_ -f2 |
+head -n1'''
+from_pattern = '''(.*)-(.*)'''
+to_pattern = '''\1_p\2'''
 
-# TODO:
-#["app-emulation/deepin-wine-plugin"]
+["app-emulation/deepin-wine-helper"]
+source = "regex"
+url = "https://mirrors.sdu.edu.cn/spark-store-repository/store/depends/deepin-wine-helper/"
+regex = '''deepin-wine-helper[-_\.]([\d\w]+(?:[\._-][\d\w]+)*)(?=\.tar\..+|\.zip|\.tgz|\.deb|\.AppImage)'''
+from_pattern = '''(.*)-(.*)_(.*)'''
+to_pattern = '''\1_p\2'''
 
-# TODO:
-#["app-emulation/deepin-wine5"]
+["app-emulation/deepin-wine-plugin"]
+source = "cmd"
+cmd = '''curl -s https://mirrors.sdu.edu.cn/spark-store-repository/store/depends/deepin-wine-series/ |grep -oP 'deepin-wine-plugin[-_\.]\K([\d\w]+(?:[\._-][\d\w]+)*)(?=\.tar\..+|\.zip|\.tgz|\.deb|\.AppImage)' | sort -Vru | grep -v virtual | cut -d_ -f1'''
+from_pattern = '''(.*)-(.*)'''
+to_pattern = '''\1_p\2'''
 
-# TODO:
-#["app-emulation/deepin-wine6-stable"]
+["app-emulation/deepin-wine6-stable"]
+source = "cmd"
+cmd = '''curl -s https://mirrors.sdu.edu.cn/spark-store-repository/aarch64-store/depends/deepin-wine6-stable/ | grep -oP 'deepin-wine6-stable[-_\.]\K([\d\w]+(?:[\._-][\d\w]+)*)(?=\.tar\..+|\.zip|\.tgz|\.deb|\.AppImage)' | grep -v arm64 | grep -v ace | sort -Vru | head -n1 | cut -d_ -f1'''
+from_pattern = '''(.*)-(.*)'''
+to_pattern = '''\1_p\2'''
 
-# TODO: PV mismatching tags
-#["app-emulation/looking-glass"]
+# B7 -> 0_beta7
+# B7-rc1 -> 0_beta7-rc1
+["app-emulation/looking-glass"]
+source = "github"
+github = "gnif/LookingGlass"
+use_latest_tag = true
+prefix = "v"
+from_pattern = '''B(\d+)([\-\w\d]*)'''
+to_pattern = '''0_beta\1\2'''
 
 ["app-emulation/winetricks-zh"]
 source = "github"
@@ -147,8 +175,9 @@ use_latest_release = true
 prefix = "v"
 github_account = "yamader"
 
-# TODO:
-#["app-i18n/dvp"]
+["app-i18n/dvp"]
+source = "cmd"
+cmd = '''curl -s https://www.kaufmann.no/roland/dvorak/index.html | grep -oP 'dvp[-_\.]([\d\w]+(?:[\._-][\d\w]+)*)(?=\.tar\..+|\.zip|\.tgz|\.deb|\.AppImage)' | sort -Vru | cut -d- -f2 | sed 's/_/./g' '''
 
 # live package only
 #["app-i18n/fcitx"]
@@ -173,7 +202,7 @@ github_account = "liangyongxiang"
 
 ["app-i18n/fcitx-cskk"]
 source = "github"
-github = "fcitx/fcitx5-cskk"
+github = "naokiri/cskk"
 use_latest_release = true
 prefix = "v"
 github_account = "yamader"
@@ -369,13 +398,17 @@ use_latest_release = true
 prefix = "v"
 github_account = "OriPoin"
 
-# cajviewer.cnki.net only work on China mainland
-# Got 418 status code under GitHub's network
-# ["app-text/cajviewer"]
-# source = "regex"
-# url = "https://cajviewer.cnki.net/"
-# regex = "cajviewer_([\\d.]+)_amd64.deb"
-# github_account = "123485k"
+# cajviewer.cnki.net blocks github ip
+# use mirror, but the version varies: 9.0 to 9.0.0-24093_amd64
+# temporarily make the version same.
+# hash is same: 3142c633d74dcf34ebaca9b7653f88ad3619f0b7a6cb689487b6cc583ec926d3
+["app-text/cajviewer"]
+source = "regex"
+url = "https://mirrors.sdu.edu.cn/spark-store-repository/store/Packages"
+regex = '''cajviewer[-_\.]([\d\w]+(?:[\._-][\d\w]+)*)(?=\.tar\..+|\.zip|\.tgz|\.deb|\.AppImage)'''
+from_pattern = '''(\d+).(\d+).0-24093_amd64'''
+to_pattern = '''\1.\2'''
+github_account = "123485k"
 
 ["app-text/goldendict"]
 source = "github"
@@ -465,7 +498,14 @@ use_latest_release = true
 github_account = "gouwazi"
 
 # TODO: multiple slot
+# select r8.xx.yy
+# gentoo officially have add 8.xx
 #["dev-db/mongodb"]
+#source = "cmd"
+#cmd = '''git ls-remote --refs --tags https://github.com/mongodb/mongo | grep -oP 'refs/tags/\K([\d\w]+(?:[\._-][\d\w]+)*)' | sort -Vru | grep -E '^r[0-9]+' | head -n1'''
+#prefix = "r"
+#from_pattern = '''-'''
+#to_pattern = '''_'''
 
 ["dev-debug/lldb-mi"]
 source = "github"
@@ -480,17 +520,23 @@ prefix = "v"
 github_account = "oatiz"
 
 # TODO: multiple slot
-#["dev-java/oraclejdk-bin"]
+# 24.0.1
+# 21.0.7 select 21
+# 17.0.15
+# 11.0.27
+["dev-java/oraclejdk-bin"]
+source = "regex"
+url = "https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html"
+regex = '''jdk[-_\.]([\d\w]+(?:[\._-][\d\w]+)*)(?=\.tar\..+|\.zip|\.tgz|\.deb|\.AppImage)'''
+from_pattern = '''(.*?)_(.*)'''
+to_pattern = '''\1'''
 
-# TODO: no way check
-#["dev-lang/quickjs"]
-
-["dev-lang/koka-bin"]
-source = "github"
-github = "koka-lang/koka"
-use_latest_release = true
-prefix = "v"
-github_account = "gouwazi"
+["dev-lang/quickjs"]
+source = "regex"
+url = "https://bellard.org/quickjs/"
+regex = '''quickjs[-_\.]([\d\w]+(?:[\._-][\d\w]+)*)(?=\.tar\..+|\.zip|\.tgz|\.deb|\.AppImage)'''
+from_pattern = '''-'''
+to_pattern = '''.'''
 
 ["dev-libs/libdatrie"]
 source = "github"
@@ -586,7 +632,7 @@ prefix = "v"
 
 ["dev-python/feeluown-bilibili"]
 source = "pypi"
-pypi = "fuo-bilibili"
+pypi = "feeluown-bilibili"
 github_account = "wgjak47"
 
 ["dev-python/fuo-netease"]
@@ -688,15 +734,18 @@ use_latest_release = true
 prefix = "v"
 github_account = "gouwazi"
 
-# TODO:
-# https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release
 ["dev-util/jetbrains-toolbox"]
-source = "aur"
-aur = "jetbrains-toolbox"
-strip_release = true
+source = "cmd"
+cmd = '''curl -s https://data.services.jetbrains.com/products/releases\?code\=TBA\&latest\=true\&type\=release | grep -oP 'jetbrains-toolbox[-_\.]\K([\d\w]+(?:[\._-][\d\w]+)*)(?=\.tar\..+|\.zip|\.tgz|\.deb|\.AppImage)' | cut -d- -f1 | sort -Vru | head -n1'''
+#source = "aur"
+#aur = "jetbrains-toolbox"
+#strip_release = true
 
-# TODO: need filter mamba- prefix
-#["dev-util/mamba"]
+["dev-util/mamba"]
+source = "github"
+github = "mamba-org/mamba"
+use_latest_tag = true
+prefix = "v"
 
 ["dev-util/osc"]
 source = "github"
@@ -712,7 +761,16 @@ use_max_tag = true
 prefix = "v"
 
 # TODO: PV mismatching tag
-#["dev-util/patchelf-liblol"]
+# wrong: updated from 0.1.9 to 0.18.0
+# if the verson 0.18.0 varies, e.g. 0.19.0
+# then get 0.19.0 as a canary bird
+["dev-util/patchelf-liblol"]
+source = "github"
+github = "NixOS/patchelf"
+use_latest_tag = true
+prefix = "v"
+from_pattern = '''(0.18.0)'''
+to_pattern = '''0.1.9'''
 
 ["dev-util/redpanda-cpp"]
 source = "github"
@@ -761,16 +819,11 @@ use_latest_release = true
 prefix = "v"
 github_account = "gouwazi"
 
-["games-arcade/osu-lazer-bin"]
-source = "github"
-github = "ppy/osu"
-use_latest_release = true
-github_account = "Puqns67"
-
 ["games-board/othello"]
-source = "regex"
-url = "http://othello-game.sourceforge.net/en/Download.html"
-regex = "([\\d.]+) is the latest stable version."
+source = "github"
+github = "bekcpear/othello"
+use_latest_tag = true
+prefix = "v"
 
 # live package only
 #["games-fps/source-engine"]
@@ -911,11 +964,15 @@ github_account = "Linerre"
 source = "github"
 github = "bambulab/BambuStudio"
 use_latest_release = true
-prefix = "v"
+from_pattern = '''[vV](.*)'''
+to_pattern = '''\1'''
 github_account = "vowstar"
 
-# TODO: very old package
-#["media-gfx/scangearmp"]
+["media-gfx/scangearmp"]
+source = "github"
+github = "ThierryHFR/scangearmp2"
+use_latest_tag = true
+prefix = "v"
 
 # live package only
 #["media-gfx/tgs2png"]
@@ -931,11 +988,22 @@ source = "aur"
 aur = "unityhub"
 strip_release = true
 
-# TODO: can't check
-#["media-gfx/zw3d"]
+# TODO: to fix, outdated
+# the lastest is: zw3d2025_2025.0.3.0_amd64.deb
+# https://data.gpo.zugaina.org/vowstar/media-gfx/zw3d/zw3d-2025.0.3.0.ebuild
+["media-gfx/zw3d"]
+source = "regex"
+url = "https://softcenter-all.os.nfschina.com/nfscdos/pool/tiger/c/com.zwsoft.zw3dprofessional/"
+regex = '''com.zwsoft.zw3dprofessional[-_\.]([\d\w]+(?:[\._-][\d\w]+)*)(?=\.tar\..+|\.zip|\.tgz|\.deb|\.AppImage)'''
+from_pattern = '''(.*)_(.*)'''
+to_pattern = '''\1'''
 
-# TODO: can't check
-#["media-gfx/zwcad"]
+["media-gfx/zwcad"]
+source = "regex"
+url = "https://mirrors.sdu.edu.cn/spark-store-repository/store/Packages"
+regex = '''com.zwsoft.zwcad([\d\w]+(?:[\._-][\d\w]+)*)(?=\.tar\..+|\.zip|\.tgz|\.deb|\.AppImage)'''
+from_pattern = '''(.*)_(.*)_(.*)'''
+to_pattern = '''\1.\2'''
 
 # live package only
 #["media-libs/openslide"]
@@ -1043,8 +1111,12 @@ use_latest_release = true
 prefix = "v"
 github_account = "oatiz"
 
-# TODO:
-#["media-video/amdgpu-pro-amf"]
+["media-video/amdgpu-pro-amf"]
+source = "regex"
+url = "https://repo.radeon.com/amdgpu/latest/ubuntu/pool/proprietary/a/amf-amdgpu-pro/"
+regex = '''amf-amdgpu-pro[-_\.]([\d\w]+(?:[\._-][\d\w]+)*)(?=\.tar\..+|\.zip|\.tgz|\.deb|\.AppImage)'''
+from_pattern = '''(.*)-([^\.]*).(.*)'''
+to_pattern = '''\1.\2'''
 
 # live package only
 #["media-video/avplayer"]
@@ -1078,8 +1150,12 @@ use_latest_release = true
 prefix = "v"
 github_account = "st0nie"
 
-# TODO: upstream removed linux support
-#["media-video/tenvideo"]
+["media-video/tenvideo"]
+source = "regex"
+url = "https://mirrors.sdu.edu.cn/spark-store-repository/store/Packages"
+regex = '''Tenvideo_universal[-_\.]([\d\w]+(?:[\._-][\d\w]+)*)(?=\.tar\..+|\.zip|\.tgz|\.deb|\.AppImage)'''
+from_pattern = '''(.*)_amd64'''
+to_pattern = '''\1'''
 
 ["media-video/tsukimi"]
 source = "github"
@@ -1115,8 +1191,11 @@ github_account = "peeweep"
 # high update frequency
 #["net-dns/dnsmasq-china-list"]
 
-# dead upstream
-#["net-dns/libidn11"]
+# TODO: net-dns/libidn2 exists and updates
+["net-dns/libidn11"]
+source = "regex"
+url = "https://ftp.gnu.org/gnu/libidn/"
+regex = '''libidn[-_\.]([\d\w]+(?:[\._-][\d\w]+)*)(?=\.tar\..+|\.zip|\.tgz|\.deb|\.AppImage)'''
 
 ["net-dns/mosdns"]
 source = "github"
@@ -1139,9 +1218,19 @@ use_latest_tag = true
 prefix = "v"
 github_account = "peeweep"
 
-#["net-im/deepin-wine-wecom"]
+["net-im/deepin-wine-wecom"]
+source = "regex"
+url = "https://mirrors.sdu.edu.cn/spark-store-repository/store/Packages"
+regex = '''com.qq.weixin.work.deepin[-_\.]([\d\w]+(?:[\._-][\d\w]+)*)(?=\.tar\..+|\.zip|\.tgz|\.deb|\.AppImage)'''
+from_pattern = '''(.*)deepin2-1_all'''
+to_pattern = '''\1'''
 
-#["net-im/dingtalk"]
+["net-im/dingtalk"]
+source = "regex"
+url = "https://mirrors.sdu.edu.cn/spark-store-repository/store/Packages"
+regex = '''com.alibabainc.dingtalk[-_\.]([\d\w]+(?:[\._-][\d\w]+)*)(?=\.tar\..+|\.zip|\.tgz|\.deb|\.AppImage)'''
+from_pattern = '''(.*)-spark1_amd64'''
+to_pattern = '''\1'''
 
 ["net-im/tencent-qq"]
 source = "regex"
@@ -1155,7 +1244,16 @@ source = "regex"
 url = "https://github.com/peeweep/wechat-linux-watcher/raw/refs/heads/master/wechat-linux-version.txt"
 regex = '(.*)'
 
-#["net-im/wechat-universal-bwrap"]
+# download from https://home-store-packages.uniontech.com/appstore/pool/appstore/c/com.tencent.wechat/com.tencent.wechat_4.0.0.23_amd64.deb
+# fetch version from web1n/wechat-universal-flatpak
+["net-im/wechat-universal-bwrap"]
+source = "github"
+github = "web1n/wechat-universal-flatpak"
+use_latest_tag = true
+prefix = "v"
+from_pattern = '''(.*)-(.*)'''
+to_pattern = '''\1'''
+
 
 ["net-im/wemeet"]
 source = "aur"
@@ -1222,13 +1320,6 @@ github = "nilaoda/BBDown"
 use_latest_release = true
 prefix = "v"
 
-["net-misc/biliup-app"]
-source = "github"
-github = "ForgQi/biliup-app"
-use_latest_release = true
-prefix = "app-v"
-github_account = "123485k"
-
 ["net-misc/biliup-app-bin"]
 source = "github"
 github = "ForgQi/biliup-app"
@@ -1278,9 +1369,8 @@ github = "pcman-bbs/pcmanx"
 use_latest_release = true
 
 ["net-misc/prips"]
-source = "regex"
-url = "https://devel.ringlet.net/sysutils/prips/"
-regex = "The current version of <strong>prips</strong> is <strong>([\\d.]+)</strong>"
+source = "cmd"
+cmd = '''curl -s https://devel.ringlet.net/sysutils/prips/download/ | grep -oP 'release%2F\K([\d\w]+(?:[\._-][\d\w]+)*)' | sort -Vru | head -n1'''
 
 ["net-misc/remmina-plugin-rustdesk"]
 source = "github"
@@ -1320,7 +1410,7 @@ github_account = "st0nie"
 ["net-p2p/n2n"]
 source = "github"
 github = "ntop/n2n"
-use_latest_release = true
+use_latest_tag = true
 github_account = "st0nie"
 
 ["net-p2p/qbittorrent-enhanced"]
@@ -1420,13 +1510,12 @@ from_pattern = '(.*)-(.*)'
 to_pattern = '\1_p\2'
 github_account = "blackteahamburger"
 
-# TODO: missing KEYWORDS
-#["net-proxy/proxy-server"]
-#source = "github"
-#github = "jackarain/proxy"
-#use_latest_tag = true
-#prefix = "v"
-#github_account = "Jackarain"
+["net-proxy/proxy-server"]
+source = "github"
+github = "jackarain/proxy"
+use_latest_tag = true
+prefix = "v"
+github_account = "Jackarain"
 
 ["net-proxy/serenity"]
 source = "github"
@@ -1529,11 +1618,11 @@ github_account = "microcai"
 #["net-wireless/linux-wifi-hotspot"]
 
 # this website blocked github network
-# ["sci-chemistry/vesta"]
-# source = "regex"
-# url = "https://jp-minerals.org/vesta/en/download.html"
-# regex = "ver. ([\\d.]+), built on"
-# github_account = "CHN-beta"
+["sci-chemistry/vesta"]
+source = "regex"
+url = "https://jp-minerals.org/vesta/archives/"
+regex = '''>([\d\w]+(?:[\._-][\d\w]+)*)/<'''
+github_account = "CHN-beta"
 
 # TODO: upstream no tags
 #["sci-electronics/circuitjs1-bin"]
@@ -1618,8 +1707,10 @@ prefix = "v"
 # live package only
 #["sys-fs/ltfs"]
 
-# TODO: upstream no tags
-#["sys-fs/spadfs-utils"]
+["sys-fs/spadfs-utils"]
+source = "regex"
+url = "http://www.jikos.cz/~mikulas/spadfs/download/"
+regex = '''spadfs[-_\.]([\d\w]+(?:[\._-][\d\w]+)*)(?=\.tar\..+|\.zip|\.tgz|\.deb|\.AppImage)'''
 
 ["sys-fs/ssdfs-tools"]
 source = "github"
@@ -1633,8 +1724,8 @@ prefix = "v"
 ["sys-kernel/liquorix-sources"]
 source = "github"
 github = "zen-kernel/zen-kernel"
-use_latest_release = true
-from_pattern = "v(.*)-lqx(.*)"
+use_latest_tag = true
+from_pattern = "v(.*)-(.*)"
 to_pattern = "\\1"
 github_account = "zozx"
 
@@ -1652,7 +1743,16 @@ use_max_tag = true
 from_pattern = "(.*)-xanmod(.*)"
 to_pattern = "\\1"
 
-#["sys-kernel/xanmod-rt"]
+# TODO: to fix, multi tags based on different stable linux and archived
+# 6.6.58-rt45-xanmod1
+# 6.11.5-xanmod1, select 6.11.*, use_max_tag
+# 6.10.12-xanmod1
+["sys-kernel/xanmod-rt"]
+source = "github"
+github = "xanmod/linux"
+use_max_tag = true
+from_pattern = '''(.*)-(.*)'''
+to_pattern = '''\1'''
 
 ["sys-kernel/xanmod-sources"]
 source = "gitlab"
@@ -1660,13 +1760,6 @@ gitlab = "xanmod/linux"
 use_max_tag = true
 from_pattern = "(.*)-xanmod(.*)"
 to_pattern = "\\1"
-
-# dead upstream
-# ["sys-kernel/zenpower3"]
-# source = "git"
-# git = "https://git.exozy.me/a/zenpower3"
-# prefix = "v"
-# github_account = "liuyujielol"
 
 # FILESDIR only, upstream noneeded
 #["sys-libs/elog-functions"]
@@ -1712,7 +1805,7 @@ use_latest_release = true
 github_account = "irort"
 prefix = "v"
 
-["www-client/thorium"]
+["www-client/thorium-browser-bin"]
 source = "github"
 github = "Alex313031/thorium"
 use_latest_release = true
@@ -1760,7 +1853,7 @@ github_account = "st0nie"
 ["x11-misc/fqterm"]
 source = "github"
 github = "mytbk/fqterm"
-use_latest_release = true
+use_latest_tag = true
 
 # live package only
 #["x11-misc/i3lock-color"]
