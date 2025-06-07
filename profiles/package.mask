@@ -7,7 +7,7 @@
 >=net-proxy/clash-verge-bin-1.7.0
 
 # mask sdl2-compat, unmask it if you wants it
-media-libs/libsdl2
+media-libs/libsdl2:2
 
 # Because of bug #893668, those packages will be removed
 # on 2025-06-21.
