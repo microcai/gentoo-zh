@@ -498,12 +498,12 @@ github_account = "gouwazi"
 # TODO: multiple slot
 # select r8.xx.yy
 # gentoo officially have add 8.xx
-["dev-db/mongodb"]
-source = "cmd"
-cmd = '''git ls-remote --refs --tags https://github.com/mongodb/mongo | grep -oP 'refs/tags/\K([\d\w]+(?:[\._-][\d\w]+)*)' | sort -Vru | grep -E '^r[0-9]+' | head -n1'''
-prefix = "r"
-from_pattern = '''-'''
-to_pattern = '''_'''
+#["dev-db/mongodb"]
+#source = "cmd"
+#cmd = '''git ls-remote --refs --tags https://github.com/mongodb/mongo | grep -oP 'refs/tags/\K([\d\w]+(?:[\._-][\d\w]+)*)' | sort -Vru | grep -E '^r[0-9]+' | head -n1'''
+#prefix = "r"
+#from_pattern = '''-'''
+#to_pattern = '''_'''
 
 ["dev-debug/lldb-mi"]
 source = "github"
