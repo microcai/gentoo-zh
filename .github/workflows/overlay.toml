@@ -17,9 +17,11 @@ prefix = "v"
 github_account = "tsln1998"
 
 ["app-admin/enpass"]
-source = "regex"
-url = "https://apt.enpass.io/dists/stable/main/binary-amd64/Packages"
-regex = 'pool/main/e/enpass/enpass_(.*)_amd64.deb'
+source = "apt"
+mirror = "https://apt.enpass.io"
+suite = "stable"
+repo = "main"
+pkg = "enpass"
 github_account = "aieu"
 
 ["app-admin/rbw"]
