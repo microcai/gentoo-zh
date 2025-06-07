@@ -1226,13 +1226,6 @@ github = "nilaoda/BBDown"
 use_latest_release = true
 prefix = "v"
 
-["net-misc/biliup-app"]
-source = "github"
-github = "ForgQi/biliup-app"
-use_latest_release = true
-prefix = "app-v"
-github_account = "123485k"
-
 ["net-misc/biliup-app-bin"]
 source = "github"
 github = "ForgQi/biliup-app"
