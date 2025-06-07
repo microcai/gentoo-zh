@@ -1318,7 +1318,7 @@ github_account = "st0nie"
 ["net-p2p/n2n"]
 source = "github"
 github = "ntop/n2n"
-use_latest_release = true
+use_latest_tag = true
 github_account = "st0nie"
 
 ["net-p2p/qbittorrent-enhanced"]
