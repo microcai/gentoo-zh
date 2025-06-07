@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-07 20:16:12 CST)
+(The last generation time: 2025-06-07 21:23:15 CST)
 
 ### Packages
 
@@ -298,7 +298,7 @@
                                                  | 1.20.9             |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-arcade/osu-lazer-bin                      | 2025.424.0         |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away!
-                                                 | 2025.605.3         |            |                                                                                         |
+                                                 | 2025.607.0         |            |                                                                                         |
    media-libs/libsdl2                            | 2.32.50            | BD, RD     | https://libsdl.org/                                                                     | SDL2 compat layer over SDL3
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-board/othello                             | 0.2.2              |            | http://othello-game.sourceforge.net                                                     | Othello is a classic strategy game, also known as Reversi
