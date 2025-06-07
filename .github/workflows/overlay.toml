@@ -586,7 +586,7 @@ prefix = "v"
 
 ["dev-python/feeluown-bilibili"]
 source = "pypi"
-pypi = "fuo-bilibili"
+pypi = "feeluown-bilibili"
 github_account = "wgjak47"
 
 ["dev-python/fuo-netease"]
