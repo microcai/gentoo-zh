@@ -58,17 +58,17 @@ RUST_MIN_VER="1.75.0"
 RUST_NEEDS_LLVM=1
 inherit cargo desktop llvm-r1 systemd xdg
 
-DESCRIPTION="An open-source remote desktop, and alternative to TeamViewer."
+DESCRIPTION="An open-source remote desktop, and alternative to TeamViewer"
 HOMEPAGE="https://rustdesk.com/"
-_WEBM_PV="1.0.0.31"
-_VCPKG_COMMIT="2024.11.16"
+_WEBM_TAG="1.0.0.31"
+_VCPKG_TAG="2024.11.16"
 _HWCODEC_EXTERNALS_COMMIT="a0ff168b672ab57c50f09dbe128608e45a1c4a52"
 _HBB_COMMON_COMMIT="6e556f7e1751a3a709cd5cca0df7268ba3cb1c48"
 SRC_URI="
 	https://github.com/rustdesk/rustdesk/archive/refs/tags/${PV}.tar.gz
 		-> ${P}.tar.gz
-	https://distfiles.gentoocn.org/~jinqiang/distfiles/${PN}-1.3.6-vcpkg-${_VCPKG_COMMIT}-lite.tar.gz
-	https://github.com/webmproject/libwebm/archive/refs/tags/libwebm-${_WEBM_PV}.tar.gz
+	https://distfiles.gentoocn.org/~jinqiang/distfiles/${PN}-1.3.6-vcpkg-${_VCPKG_TAG}-lite.tar.gz
+	https://github.com/webmproject/libwebm/archive/refs/tags/libwebm-${_WEBM_TAG}.tar.gz
 	https://github.com/rustdesk/hbb_common/archive/${_HBB_COMMON_COMMIT}.tar.gz
 		-> hbb_common-${_HBB_COMMON_COMMIT}.tar.gz
 	https://github.com/rustdesk-org/externals/archive/${_HWCODEC_EXTERNALS_COMMIT}.tar.gz
@@ -128,21 +128,17 @@ pkg_setup() {
 }
 
 src_prepare() {
-	PATCHES+=(
-		"${FILESDIR}"/rust-sciter.patch
-	)
-	cd "${S}"/.. || die
-
 	default
+	cd "${S}"/.. || die
+	eapply "${FILESDIR}"/rust-sciter.patch
+	eapply "${FILESDIR}/${P}-fix-gcc15.patch"
 
-	cd - || die
+	rm -rf "${S}"/libs/hbb_common || die
+	ln -s "${WORKDIR}"/hbb_common-${_HBB_COMMON_COMMIT} "${S}"/libs/hbb_common || die
 
-	rm -rf libs/hbb_common || die
-	ln -s "${WORKDIR}"/hbb_common-${_HBB_COMMON_COMMIT} libs/hbb_common || die
-
-	cd ../rust-webm-*/src/sys || die
-	rm -rf libwebm/ || die
-	ln -s "${WORKDIR}"/libwebm-libwebm-*/ libwebm || die
+	local _WEBM_COMMIT=`echo "${GIT_CRATES[webm]}" | awk -F';' '{print $2}'`
+	rm -rf "${WORKDIR}/rust-webm-${_WEBM_COMMIT}"/src/sys/libwebm || die
+	ln -s "${WORKDIR}/libwebm-libwebm-${_WEBM_TAG}" "${WORKDIR}/rust-webm-${_WEBM_COMMIT}"/src/sys/libwebm || die
 
 	local _HWCODEC_COMMIT=`echo "${GIT_CRATES[hwcodec]}" | awk -F';' '{print $2}'`
 	rm -rf "${WORKDIR}"/hwcodec-${_HWCODEC_COMMIT}/externals || die
