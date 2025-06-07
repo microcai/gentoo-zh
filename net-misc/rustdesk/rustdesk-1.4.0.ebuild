@@ -61,13 +61,13 @@ inherit cargo desktop llvm-r1 systemd xdg
 DESCRIPTION="An open-source remote desktop, and alternative to TeamViewer"
 HOMEPAGE="https://rustdesk.com/"
 _WEBM_TAG="1.0.0.31"
-_VCPKG_TAG="2024.11.16"
+_VCPKG_TAG="2025.01.13"
 _HWCODEC_EXTERNALS_COMMIT="a0ff168b672ab57c50f09dbe128608e45a1c4a52"
 _HBB_COMMON_COMMIT="6e556f7e1751a3a709cd5cca0df7268ba3cb1c48"
 SRC_URI="
 	https://github.com/rustdesk/rustdesk/archive/refs/tags/${PV}.tar.gz
 		-> ${P}.tar.gz
-	https://distfiles.gentoocn.org/~jinqiang/distfiles/${PN}-1.3.6-vcpkg-${_VCPKG_TAG}-lite.tar.gz
+	https://distfiles.gentoocn.org/~jinqiang/distfiles/${P}-vcpkg-${_VCPKG_TAG}-lite.tar.gz
 	https://github.com/webmproject/libwebm/archive/refs/tags/libwebm-${_WEBM_TAG}.tar.gz
 	https://github.com/rustdesk/hbb_common/archive/${_HBB_COMMON_COMMIT}.tar.gz
 		-> hbb_common-${_HBB_COMMON_COMMIT}.tar.gz
