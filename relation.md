@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-08 03:11:22 CST)
+(The last generation time: 2025-06-08 03:18:59 CST)
 
 ### Packages
 
@@ -23,7 +23,7 @@
  app-backup/btrfs-assistant                      | 2.1.1              |            | https://gitlab.com/btrfs-assistant/btrfs-assistant                                      | A GUI management tool to make managing a Btrfs filesystem easier.
                                                  | 9999               |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-backup/restic-rest-server                   | 0.13.0             |            | https://github.com/restic/rest-server                                                   | A high performance HTTP server that implements restic's REST backend API
+ app-backup/restic-rest-server                   | 0.14.0             |            | https://github.com/restic/rest-server                                                   | A high performance HTTP server that implements restic's REST backend API
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-backup/snapper-gui                          | 220626             |            | https://github.com/ricardomv/snapper-gui                                                | GUI for snapper, a tool for Linux filesystem snapshot management
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
