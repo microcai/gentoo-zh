@@ -1751,7 +1751,7 @@ github_account = "st0nie"
 ["x11-misc/fqterm"]
 source = "github"
 github = "mytbk/fqterm"
-use_latest_release = true
+use_latest_tag = true
 
 # live package only
 #["x11-misc/i3lock-color"]
