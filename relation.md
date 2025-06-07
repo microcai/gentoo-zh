@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-07 16:18:42 CST)
+(The last generation time: 2025-06-07 16:41:04 CST)
 
 ### Packages
 
@@ -224,10 +224,10 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/conda                                | 25.3.1             |            | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
    dev-python/conda-libmamba-solver              | 25.4.0             |  D, RD     | https://github.com/conda/conda-libmamba-solver                                          | The libmamba based solver for conda
-     dev-util/mamba                              | 2.1.1              | RD         | https://github.com/mamba-org/mamba                                                      | The Fast Cross-Platform Package Manager
+     dev-util/mamba                              | 2.2.0              | RD         | https://github.com/mamba-org/mamba                                                      | The Fast Cross-Platform Package Manager
        dev-cpp/reproc                            | 14.2.5             |  D, RD     | https://github.com/DaanDeMeyer/reproc                                                   | A cross-platform (C99/C++11) process library
        dev-cpp/tl-expected                       | 1.1.0              |  D, RD     | https://github.com/TartanLlama/expected                                                 | Guideline Support Library implementation by Microsoft
-       sys-libs/libsolv                          | 0.7.32             |  D, RD     | https://github.com/openSUSE/libsolv                                                     | Library for solving packages and reading repositories
+       sys-libs/libsolv                          | 0.7.33             |  D, RD     | https://github.com/openSUSE/libsolv                                                     | Library for solving packages and reading repositories
          app-arch/zchunk                         | 1.3.2              | RD         | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
                                                  | 1.5.1              |            |                                                                                         |
                                                  | 9999               |            |                                                                                         |
