@@ -1659,13 +1659,6 @@ use_max_tag = true
 from_pattern = "(.*)-xanmod(.*)"
 to_pattern = "\\1"
 
-# dead upstream
-# ["sys-kernel/zenpower3"]
-# source = "git"
-# git = "https://git.exozy.me/a/zenpower3"
-# prefix = "v"
-# github_account = "liuyujielol"
-
 # FILESDIR only, upstream noneeded
 #["sys-libs/elog-functions"]
 
