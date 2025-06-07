@@ -1275,9 +1275,10 @@ github = "pcman-bbs/pcmanx"
 use_latest_release = true
 
 ["net-misc/prips"]
-source = "regex"
-url = "https://devel.ringlet.net/sysutils/prips/"
-regex = "The current version of <strong>prips</strong> is <strong>([\\d.]+)</strong>"
+source = "gitlab"
+gitlab = "prips/prips"
+use_max_tag = true
+prefix = "release/"
 
 ["net-misc/remmina-plugin-rustdesk"]
 source = "github"
