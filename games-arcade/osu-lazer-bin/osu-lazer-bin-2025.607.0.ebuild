@@ -26,7 +26,10 @@ IUSE="complete-icon pipewire sdl2 +system-sdl"
 
 RESTRICT="mirror"
 
-DEPEND="x11-themes/hicolor-icon-theme"
+DEPEND="
+	!games-arcade/osu-lazer
+	x11-themes/hicolor-icon-theme
+"
 RDEPEND="
 	${DEPEND}
 	dev-util/lttng-ust:0/2.12
@@ -49,34 +52,34 @@ src_unpack() {
 src_prepare() {
 	default
 
-	pushd squashfs-root/usr/bin
-		# Remove pdb files
-		rm -fv *.pdb
+	pushd squashfs-root/usr/bin || die
+	# Remove pdb files
+	rm -fv *.pdb
 
-		# Remove UpdateNix from Velopack, updates are managed by protage
-		rm -fv UpdateNix
+	# Remove UpdateNix from Velopack, updates are managed by protage
+	rm -fv UpdateNix
 
-		if use system-sdl; then
-			rm -fv libSDL{2,3}.so
-		fi
+	if use system-sdl; then
+		rm -fv libSDL{2,3}.so
+	fi
 	popd
 
 	mkdir -v icons
 	pushd icons
-		if use complete-icon; then
-			magick -verbose "${S}/squashfs-root/usr/bin/lazer.ico" osu.png
-			magick -verbose "${S}/squashfs-root/usr/bin/beatmap.ico" beatmap.png
+	if use complete-icon; then
+		magick -verbose "${S}/squashfs-root/usr/bin/lazer.ico" osu.png
+		magick -verbose "${S}/squashfs-root/usr/bin/beatmap.ico" beatmap.png
 
-			eval $(magick identify -format "mv -v %f osu-%G;" osu*.png)
-			eval $(magick identify -format "mv -v %f beatmap-%G;" beatmap*.png)
-		fi
+		eval $(magick identify -format "mv -v %f osu-%G;" osu*.png)
+		eval $(magick identify -format "mv -v %f beatmap-%G;" beatmap*.png)
+	fi
 
-		for icon in "${S}"/squashfs-root/usr/share/icons/hicolor/*/apps/osu.png; do
-			cp -v "${icon}" "osu-$(echo "${icon}" | sed 's/^.*\/\([0-9]\{2,4\}x[0-9]\{2,4\}\)\/.*$/\1/g')"
-		done
+	for icon in "${S}"/squashfs-root/usr/share/icons/hicolor/*/apps/osu.png; do
+		cp -v "${icon}" "osu-$(echo "${icon}" | sed 's/^.*\/\([0-9]\{2,4\}x[0-9]\{2,4\}\)\/.*$/\1/g')"
+	done
 	popd
 
-	sed "s/%SDL3_DEFAULT%/$(usex sdl2 false true)/" "${FILESDIR}/${_PN}.bash" > "${_PN}"
+	sed "s/%SDL3_DEFAULT%/$(usex sdl2 false true)/" "${FILESDIR}/${_PN}.bash" >"${_PN}"
 }
 
 src_install() {
@@ -97,19 +100,19 @@ src_install() {
 
 	# Install icons
 	pushd icons
-		for icon in *; do
-			type="${icon%-*}"
-			size="${icon##*-}"
+	for icon in *; do
+		type="${icon%-*}"
+		size="${icon##*-}"
 
-			case "${type}" in
-			"osu")
-				newicon --context "apps" --size "${size}" "${icon}" "${_PN}.png"
-				;;
-			"beatmap")
-				newicon --context "mimetypes" --size "${size}" "${icon}" "${_PN%-lazer}-beatmap.png"
-				;;
-			esac
-		done
+		case "${type}" in
+		"osu")
+			newicon --context "apps" --size "${size}" "${icon}" "${_PN}.png"
+			;;
+		"beatmap")
+			newicon --context "mimetypes" --size "${size}" "${icon}" "${_PN%-lazer}-beatmap.png"
+			;;
+		esac
+	done
 	popd
 
 	# Install license
