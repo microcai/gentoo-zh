@@ -88,9 +88,9 @@ use_latest_release = true
 github_account = "blackteahamburger"
 
 ["app-dicts/fcitx-pinyin-zhwiki"]
-source = "github"
-github = "felixonmars/fcitx5-pinyin-zhwiki"
-use_latest_release = true
+source = "archpkg"
+archpkg = "fcitx5-pinyin-zhwiki"
+strip_release = true
 github_account = "blackteahamburger"
 
 ["app-editors/appflowy-bin"]
