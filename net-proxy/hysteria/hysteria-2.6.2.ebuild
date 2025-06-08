@@ -9,7 +9,7 @@ HOMEPAGE="https://github.com/apernet/hysteria"
 
 SRC_URI="
 	https://github.com/apernet/${PN}/archive/refs/tags/app/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-deps.tar.xz
+	https://github.com/gentoo-zh/gentoo-deps/releases/download/${P}/${P}-deps.tar.xz
 "
 
 S="${WORKDIR}/${PN}-app-v${PV}"
