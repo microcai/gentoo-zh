@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-08 13:20:45 CST)
+(The last generation time: 2025-06-08 16:19:30 CST)
 
 ### Packages
 
@@ -38,7 +38,7 @@
    app-text/imewlconverter                       | 3.2.0              | BD         | https://github.com/studyzy/imewlconverter                                               | An open source and free input method dictionary conversion program
                                                  | 9999               |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-zhwiki                   | 0.2.5.20250310     |            | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
+ app-dicts/fcitx-pinyin-zhwiki                   | 0.2.5.20250526     |            | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/appflowy-bin                        | 0.9.3              |            | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
