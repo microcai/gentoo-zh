@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-08 19:03:39 CST)
+(The last generation time: 2025-06-08 19:16:14 CST)
 
 ### Packages
 
@@ -282,7 +282,7 @@
  dev-util/redpanda-cpp                           | 3.1                |            | http://royqh.net/redpandacpp                                                            | A lightweight yet powerful C/C++/GNU Assembly IDE.
                                                  | 3.3                |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/tailspin                               | 5.4.4              |            | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
+ dev-util/tailspin                               | 5.4.5              |            | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/vfox                                   | 0.6.10             |            | https://vfox.lhan.me                                                                    | A cross-platform version manager, extendable via plugins
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
