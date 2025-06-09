@@ -1,0 +1,107 @@
+From d99f07af78fcd57b8151014040dd0d919ef91195 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Miro=20Hron=C4=8Dok?= <miro@hroncok.cz>
+Date: Tue, 25 Jul 2023 19:15:38 +0200
+Subject: [PATCH] Fix pytest usage: .value can only be used after the context
+ manager exits
+
+    _________________________ test_main_with_bad_script __________________________
+
+    capfd = <_pytest.capture.CaptureFixture object at 0x7fd822ea7500>
+
+        def test_main_with_bad_script(capfd):
+            with pytest.raises(SystemExit) as ex:
+                with mock.patch("sys.argv", ["nudatus", "tests/bigscript_bad.py"]):
+                    nudatus.main()
+    >           assert ex.value.code == 1
+
+    tests/test_nudatus.py:98:
+     _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    self = <ExceptionInfo for raises contextmanager>
+
+        @property
+        def value(self) -> E:
+            """The exception value."""
+    >       assert (
+                self._excinfo is not None
+            ), ".value can only be used after the context manager exits"
+    E       AssertionError: .value can only be used after the context manager exits
+
+    .tox/py312/lib/python3.12/site-packages/_pytest/_code/code.py:558: Assertion Error
+---
+ tests/test_nudatus.py | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/tests/test_nudatus.py b/tests/test_nudatus.py
+index 8504240..f9321e7 100644
+--- a/tests/test_nudatus.py
++++ b/tests/test_nudatus.py
+@@ -52,10 +52,10 @@ def test_main_without_file(capfd):
+     with mock.patch("sys.argv", ["nudatus"]):
+         with pytest.raises(SystemExit) as ex:
+             nudatus.main()
+-            assert ex.value.code == 1
+-            out, err = capfd.readouterr()
+-            assert len(out) == 0
+-            assert err == "No file specified"
++        assert ex.value.code == 1
++        out, err = capfd.readouterr()
++        assert len(out) == 0
++        assert err.strip() == "No file specified"
+ 
+ 
+ def test_main_with_file_without_output_file(capfd):
+@@ -95,7 +95,7 @@ def test_main_with_bad_script(capfd):
+     with pytest.raises(SystemExit) as ex:
+         with mock.patch("sys.argv", ["nudatus", "tests/bigscript_bad.py"]):
+             nudatus.main()
+-        assert ex.value.code == 1
++    assert ex.value.code == 1
+     out, err = capfd.readouterr()
+     assert len(out) == 0
+     assert len(err) > 0
+
+From 7503c8fdef5cb11f8118a3342085055f0accbca7 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Miro=20Hron=C4=8Dok?= <miro@hroncok.cz>
+Date: Tue, 25 Jul 2023 19:29:07 +0200
+Subject: [PATCH] Explicitly raise TokenError when the source cannot be parsed
+ by ast
+
+---
+ nudatus.py | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+diff --git a/nudatus.py b/nudatus.py
+index d69f833..0c2a41c 100644
+--- a/nudatus.py
++++ b/nudatus.py
+@@ -10,11 +10,13 @@
+ """
+ 
+ import argparse
++import ast
+ import sys
+ import token
+ import tokenize
+ from io import BytesIO
+ from tokenize import tokenize as tokenizer
++from tokenize import TokenError
+ from typing import List, Optional
+ 
+ _VERSION = (
+@@ -48,6 +50,15 @@ def mangle(text: str) -> str:
+     last_line_text = ""
+     open_list_dicts = 0
+ 
++    # Parsing invalid code via the tokenizer is documented as "undefined".
++    # Python 3.12 sometimes successfully parses invalid code.
++    # To restore behavior before Python 3.12, we raise explicitly
++    # if ast cannot parse this:
++    try:
++        ast.parse(text_bytes)
++    except SyntaxError as e:
++        raise TokenError(e)
++
+     # Build tokens from the script
+     tokens = tokenizer(buff.readline)
+     for t, text, (line_s, col_s), (line_e, col_e), line in tokens:

@@ -621,6 +621,11 @@ source = "pypi"
 pypi = "mw2fcitx"
 github_account = "blackteahamburger"
 
+["dev-python/nudatus"]
+source = "pypi"
+pypi = "nudatus"
+github_account = "blackteahamburger"
+
 ["dev-python/nvchecker"]
 source = "github"
 github = "lilydjwg/nvchecker"
