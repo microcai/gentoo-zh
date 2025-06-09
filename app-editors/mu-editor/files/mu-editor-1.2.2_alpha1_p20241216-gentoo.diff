@@ -1,0 +1,1783 @@
+https://github.com/mu-editor/mu/pull/2279
+https://github.com/mu-editor/mu/pull/2556
+https://github.com/mu-editor/mu/issues/2564
+https://github.com/blackteahamburger/mu
+
+diff --git a/.github/workflows/codeql.yml b/.github/workflows/codeql.yml
+index 3d09e5a64..071233a9f 100644
+--- a/.github/workflows/codeql.yml
++++ b/.github/workflows/codeql.yml
+@@ -15,7 +15,7 @@ jobs:
+   analyze:
+     timeout-minutes: 20
+     name: Analyze
+-    runs-on: ubuntu-20.04
++    runs-on: ubuntu-22.04
+     permissions:
+       actions: read
+       contents: read
+diff --git a/.github/workflows/test.yml b/.github/workflows/test.yml
+index c97a2b29a..6f2dba0a1 100644
+--- a/.github/workflows/test.yml
++++ b/.github/workflows/test.yml
+@@ -11,15 +11,9 @@ jobs:
+     timeout-minutes: 30
+     strategy:
+       matrix:
+-        # macos-13 is x86 and macos-14 is arm64
+-        os: [ubuntu-20.04, ubuntu-latest, macos-13, windows-2019, windows-latest]
+-        python-version: ['3.5', '3.6', '3.7', '3.8']
+-        exclude:
+-          # Python 3.5 and 3.6 not available in the latest Ubuntu runners
+-          - os: ubuntu-latest
+-            python-version: '3.5'
+-          - os: ubuntu-latest
+-            python-version: '3.6'
++        # macos-13 is the last release on x86, and macos-14 is arm64
++        os: [ubuntu-20.04, ubuntu-24.04, macos-13, macos-14, windows-2019, windows-latest]
++        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12', '3.13']
+       fail-fast: false
+     runs-on: ${{ matrix.os }}
+     name: Test Py ${{ matrix.python-version }} - ${{ matrix.os }}
+@@ -29,10 +23,6 @@ jobs:
+         uses: actions/setup-python@v5
+         with:
+           python-version: ${{ matrix.python-version }}
+-        env:
+-          # Workaround to issue using Python 3.5
+-          # https://github.com/actions/setup-python/issues/866
+-          PIP_TRUSTED_HOST: "pypi.python.org pypi.org files.pythonhosted.org"
+       - name: Display Python info
+         run: |
+           python -c "import sys; print(sys.version)"
+@@ -44,9 +34,10 @@ jobs:
+           pip freeze
+       - name: Prepare Ubuntu
+         if: runner.os == 'Linux'
++        # This is needed for PyQt6 to not crash with missing: libEGL.so.1 libGL.so.1 libglib-2.0.so.0
+         run: |
+-          sudo apt-get update
+-          sudo apt-get install -y libxkbcommon-x11-0 xvfb
++          sudo apt update
++          sudo apt install -y libegl1 libgl1 libglib2.0-0
+       - name: Install Mu dependencies
+         run: |
+           pip install .[dev]
+@@ -54,7 +45,7 @@ jobs:
+         timeout-minutes: 10
+       - name: Run tests
+         if: runner.os == 'Linux'
+-        run: xvfb-run make check
++        run: QT_QPA_PLATFORM=offscreen python make.py check
+         timeout-minutes: 5
+       - name: Run tests
+         if: runner.os != 'Linux'
+@@ -62,8 +53,13 @@ jobs:
+         timeout-minutes: 5
+ 
+   test-arm:
++    # Missing Qt6 versions of: python3-pyqt5.qsci python3-pyqt5.qtchart
++    # Using pip --use-deprecated=legacy-resolver, as it takes too long, revisit after updating dep versions
++    # Also had to force install cryptography, pyzmq, and cffi from piwheels, or it tries to build them from source
++    # Should also revisit if we need all the extra apt packages
++    if: false
+     runs-on: ubuntu-latest
+-    name: Test Py 3.7 - arm-debian-buster
++    name: Test Py 3.10 - arm-debian-bookworm
+     steps:
+       - uses: actions/checkout@v4
+       - name: Set up QEMU
+@@ -73,19 +69,19 @@ jobs:
+           image: tonistiigi/binfmt:latest
+           platforms: 'linux/arm64,linux/arm/v7,linux/arm/v6'
+       - name: Check Debian image info
+-        uses: docker://multiarch/debian-debootstrap:armhf-buster
++        uses: docker://arm32v7/debian:bookworm
+         with:
+-          args: /bin/bash -c "uname -a && cat /etc/os-release"
++          args: bash -c "uname -a && cat /etc/os-release"
++      # This is testing armv7, we could create a matrix for armv8 (aarch64) as well
+       - name: Install dependencies and run tests
+-        uses: docker://multiarch/debian-debootstrap:armhf-buster
++        uses: docker://arm32v7/debian:bookworm
+         with:
+           args: >
+             bash -c "
+-              apt-get update &&
+-              apt-get install -y python3 python3-pip python3-virtualenv &&
+-              apt-get install -y python3-pyqt5 python3-pyqt5.qsci python3-pyqt5.qtserialport python3-pyqt5.qtsvg python3-pyqt5.qtchart &&
+-              apt-get install -y libxmlsec1-dev libxml2 libxml2-dev libxkbcommon-x11-0 libatlas-base-dev &&
+-              apt-get install -y git xvfb &&
++              apt update &&
++              apt install -y python3 python3-pip python3-virtualenv &&
++              apt install -y python3-pyqt6 python3-pyqt6.qtserialport python3-pyqt6.qtsvg &&
++              apt install -y libxmlsec1-dev libxml2 libxml2-dev libxkbcommon-x11-0 libatlas-base-dev &&
+               python3 -m virtualenv venv --python=python3 --system-site-packages &&
+               source venv/bin/activate &&
+               python -c \"import platform, struct, sys; print(platform.machine(), struct.calcsize('P') * 8, sys.version)\" &&
+@@ -93,19 +89,22 @@ jobs:
+               python -m pip config set global.extra-index-url https://www.piwheels.org/simple &&
+               python -m pip config list &&
+               python -m pip list &&
+-              python -m pip install .[dev] &&
++              python -m pip install cryptography pyzmq cffi --python-version 3.9 --only-binary \":all:\" --no-deps --target venv/lib/python3.10/site-packages/ &&
++              python -m pip install .[dev] --use-deprecated=legacy-resolver &&
+               python -m pip list &&
+               QT_QPA_PLATFORM=\"offscreen\" &&
+-              xvfb-run python make.py check &&
++              python make.py check &&
+               echo 'Finished successfully! :)'
+             "
+ 
+   test-pios:
++    # Pi OS images don't have python3-pyqt6 packages, so will have to enable and update in the future
++    if: false
+     name: Test PiOS ${{ matrix.docker-tag }}
+     runs-on: ubuntu-latest
+     strategy:
+       matrix:
+-        docker-tag: ['stretch-2018-03-13', 'buster-2021-05-28', 'buster-legacy-2023-05-03']
++        docker-tag: ['buster-2021-05-28', 'buster-legacy-2023-05-03', 'bullseye-2023-05-03']
+       fail-fast: false
+     services:
+       rpios:
+@@ -131,16 +130,6 @@ jobs:
+             git checkout --progress FETCH_HEAD
+             echo "cd ~/mu" > ~/.bashrc_new && cat ~/.bashrc >> ~/.bashrc_new
+             rm ~/.bashrc && mv ~/.bashrc_new ~/.bashrc
+-      # As Pi OS stretch is no longer supported the repository URL was moved and is no longer updated
+-      - name: Update Stretch sources.list
+-        if: ${{ matrix.docker-tag == 'stretch-2018-03-13' }}
+-        uses: appleboy/ssh-action@v1.0.3
+-        with:
+-          host: rpios
+-          username: pi
+-          password: raspberry
+-          port:  ${{ job.services.rpios.ports[5022] }}
+-          script: echo "deb http://legacy.raspbian.org/raspbian/ stretch main contrib non-free rpi" | sudo tee /etc/apt/sources.list
+       - name: Install Mu extra apt dependencies
+         uses: appleboy/ssh-action@v1.0.3
+         with:
+@@ -159,13 +148,15 @@ jobs:
+           password: raspberry
+           port:  ${{ job.services.rpios.ports[5022] }}
+           command_timeout: 25m
++          # Some compiled packages take a while to be built in piwheels, so to
++          # avoid intermittent pip install failures we use `--prefer-binary`
+           script: |
+             python3 -m virtualenv ~/mu/.venv -v --python=python3 --system-site-packages
+             echo "source ~/mu/.venv/bin/activate" > ~/.bashrc_new && cat ~/.bashrc >> ~/.bashrc_new
+             rm ~/.bashrc && mv ~/.bashrc_new ~/.bashrc
+             source .venv/bin/activate
+             python -m pip list
+-            python -m pip install ".[dev]"
++            python -m pip install ."[dev]" --prefer-binary
+       - name: Environment info
+         uses: appleboy/ssh-action@v1.0.3
+         with:
+@@ -186,6 +177,5 @@ jobs:
+           username: pi
+           password: raspberry
+           port:  ${{ job.services.rpios.ports[5022] }}
+-          # The time out can be decreased to 30 min when Stretch is dropped
+-          command_timeout: 45m
++          command_timeout: 30m
+           script: xvfb-run python make.py check
+diff --git a/Makefile b/Makefile
+index f3cde37ac..022096be6 100644
+--- a/Makefile
++++ b/Makefile
+@@ -112,9 +112,9 @@ macos: check
+ 	# 1. Not really needed.
+ 	# 2. Previously active venv would be "gone" on venv-pup deactivation.
+ 	# Installing pup from a fork with the --pip-platform flag proof of concept
+-	# and using it to install wheels for the `macosx_10_12_x86_64` platform
++	# and using it to install wheels for the `macosx_10_13_x86_64` platform
+ 	./venv-pup/bin/pip install git+https://github.com/carlosperate/pup.git@pip-platform
+-	./venv-pup/bin/pup package --launch-module=mu --nice-name="Mu Editor" --icon-path=./package/icons/mac_icon.icns --license-path=./LICENSE --pip-platform=macosx_10_12_x86_64 .
++	./venv-pup/bin/pup package --launch-module=mu --nice-name="Mu Editor" --icon-path=./package/icons/mac_icon.icns --license-path=./LICENSE --pip-platform=macosx_10_13_x86_64 .
+ 	rm -r venv-pup
+ 	ls -la ./build/pup/
+ 	ls -la ./dist/
+diff --git a/mu/app.py b/mu/app.py
+index 916d73dc9..87bb3e4a0 100644
+--- a/mu/app.py
++++ b/mu/app.py
+@@ -31,7 +31,7 @@
+ import webbrowser
+ import base64
+ 
+-from PyQt5.QtCore import (
++from PyQt6.QtCore import (
+     Qt,
+     QEventLoop,
+     QThread,
+@@ -39,7 +39,7 @@
+     pyqtSignal,
+     QSharedMemory,
+ )
+-from PyQt5.QtWidgets import QApplication, QSplashScreen
++from PyQt6.QtWidgets import QApplication, QSplashScreen
+ 
+ from . import i18n
+ from .virtual_environment import venv, logger as vlogger
+@@ -379,16 +379,16 @@ def run():
+ 
+     # Images (such as toolbar icons) aren't scaled nicely on retina/4k displays
+     # unless this flag is set
+-    os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
+-    if hasattr(Qt, "AA_EnableHighDpiScaling"):
+-        QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
+-    QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps)
++    # os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
++    # if hasattr(Qt, "AA_EnableHighDpiScaling"):
++    #    QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
++    # QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps)
+ 
+-    # An issue in PyQt5 v5.13.2 to v5.15.1 makes PyQt5 application
++    # An issue in PyQt5 v5.13.2 to v5.15.1 makes PyQt6 application
+     # hang on Mac OS 11 (Big Sur)
+     # Setting this environment variable fixes the problem.
+     # See issue #1147 for more information
+-    os.environ["QT_MAC_WANTS_LAYER"] = "1"
++    # os.environ["QT_MAC_WANTS_LAYER"] = "1"
+ 
+     # In Wayland for AppImage to launch it needs QT_QPA_PLATFORM set
+     # But only touch it if unset, useful for CI to configure it to "offscreen"
+@@ -475,7 +475,8 @@ def load_theme(theme):
+     editor.restore_session(sys.argv[1:])
+ 
+     # Save the exit code for sys.exit call below.
+-    exit_status = app.exec_()
++    exit_status = app.exec()
++
+     # Clean up the shared memory used to signal an app instance is running
+     _shared_memory.release()
+ 
+diff --git a/mu/debugger/client.py b/mu/debugger/client.py
+index 3a1d25ef5..1731e9a6e 100644
+--- a/mu/debugger/client.py
++++ b/mu/debugger/client.py
+@@ -21,7 +21,7 @@
+ import time
+ import logging
+ import os.path
+-from PyQt5.QtCore import QObject, QThread, pyqtSignal
++from PyQt6.QtCore import QObject, QThread, pyqtSignal
+ 
+ 
+ logger = logging.getLogger(__name__)
+diff --git a/mu/i18n.py b/mu/i18n.py
+index ba0e60d7d..da6583462 100644
+--- a/mu/i18n.py
++++ b/mu/i18n.py
+@@ -1,7 +1,7 @@
+ import os
+ import gettext
+ 
+-from PyQt5.QtCore import QLocale
++from PyQt6.QtCore import QLocale
+ 
+ # DEBUG/TRANSLATE: override the language code here (e.g. to Chinese).
+ # language_code = 'zh'
+diff --git a/mu/interface/dialogs.py b/mu/interface/dialogs.py
+index 783bc46b4..55ebc41c5 100644
+--- a/mu/interface/dialogs.py
++++ b/mu/interface/dialogs.py
+@@ -18,10 +18,9 @@
+ """
+ import os
+ import logging
+-import sys
++from PyQt6.QtCore import QSize, QProcess, QTimer, Qt
+ 
+-from PyQt5.QtCore import QSize, QProcess, QTimer, Qt
+-from PyQt5.QtWidgets import (
++from PyQt6.QtWidgets import (
+     QHBoxLayout,
+     QVBoxLayout,
+     QGridLayout,
+@@ -40,7 +39,7 @@
+     QGroupBox,
+     QComboBox,
+ )
+-from PyQt5.QtGui import QTextCursor
++from PyQt6.QtGui import QTextCursor
+ from mu.resources import load_icon
+ from mu.interface.widgets import DeviceSelector
+ from ..virtual_environment import venv
+@@ -492,11 +491,11 @@ def run_esptool(self):
+         self.process.readyReadStandardError.connect(self.read_process)
+         self.process.readyReadStandardOutput.connect(self.read_process)
+         self.process.finished.connect(self.esptool_finished)
+-        self.process.error.connect(self.esptool_error)
++        self.process.errorOccurred.connect(self.esptool_error)
+ 
+         command = self.commands.pop(0)
+         self.log_text_area.appendPlainText(command + "\n")
+-        self.process.start(command)
++        self.process.startCommand(command)
+ 
+     def esptool_error(self, error_num):
+         self.log_text_area.appendPlainText(
+diff --git a/mu/interface/editor.py b/mu/interface/editor.py
+index 0eac8b590..c3b09bbd1 100644
+--- a/mu/interface/editor.py
++++ b/mu/interface/editor.py
+@@ -22,15 +22,15 @@
+ import logging
+ import os.path
+ from collections import defaultdict
+-from PyQt5.Qsci import (
++from PyQt6.Qsci import (
+     QsciScintilla,
+     QsciLexerPython,
+     QsciLexerHTML,
+     QsciAPIs,
+     QsciLexerCSS,
+ )
+-from PyQt5.QtCore import Qt, pyqtSignal
+-from PyQt5.QtWidgets import QApplication
++from PyQt6.QtCore import Qt, pyqtSignal
++from PyQt6.QtWidgets import QApplication
+ from mu.interface.themes import Font, DayTheme
+ from mu.logic import NEWLINE
+ 
+@@ -192,12 +192,14 @@ def configure(self):
+         self.setEdgeColumn(79)
+         self.setMarginLineNumbers(0, True)
+         self.setMarginWidth(0, 50)
+-        self.setBraceMatching(QsciScintilla.SloppyBraceMatch)
++        self.setBraceMatching(QsciScintilla.BraceMatch.SloppyBraceMatch)
+         self.SendScintilla(QsciScintilla.SCI_SETHSCROLLBAR, 0)
+         self.set_theme()
+         # Markers and indicators
+         self.setMarginSensitivity(0, True)
+-        self.markerDefine(self.Circle, self.BREAKPOINT_MARKER)
++        self.markerDefine(
++            QsciScintilla.MarkerSymbol.Circle, self.BREAKPOINT_MARKER
++        )
+         self.setMarginSensitivity(1, True)
+         # Additional dummy margin to prevent accidental breakpoint toggles when
+         # trying to position the edit cursor to the left of the first column,
+@@ -211,14 +213,20 @@ def configure(self):
+         self.setIndicatorDrawUnder(True)
+         for type_ in self.check_indicators:
+             self.indicatorDefine(
+-                self.SquiggleIndicator, self.check_indicators[type_]["id"]
++                QsciScintilla.IndicatorStyle.SquiggleIndicator,
++                self.check_indicators[type_]["id"],
+             )
+         for type_ in self.search_indicators:
+             self.indicatorDefine(
+-                self.StraightBoxIndicator, self.search_indicators[type_]["id"]
++                QsciScintilla.IndicatorStyle.StraightBoxIndicator,
++                self.search_indicators[type_]["id"],
+             )
+-        self.indicatorDefine(self.FullBoxIndicator, self.DEBUG_INDICATOR)
+-        self.setAnnotationDisplay(self.AnnotationBoxed)
++        self.indicatorDefine(
++            QsciScintilla.IndicatorStyle.FullBoxIndicator, self.DEBUG_INDICATOR
++        )
++        self.setAnnotationDisplay(
++            QsciScintilla.AnnotationDisplay.AnnotationBoxed
++        )
+         self.selectionChanged.connect(self.selection_change_listener)
+         self.set_zoom()
+ 
+@@ -259,7 +267,7 @@ def set_theme(self, theme=DayTheme):
+             theme.BreakpointMarker, self.BREAKPOINT_MARKER
+         )
+         self.setAutoCompletionThreshold(2)
+-        self.setAutoCompletionSource(QsciScintilla.AcsAll)
++        self.setAutoCompletionSource(QsciScintilla.AutoCompletionSource.AcsAll)
+         self.setLexer(self.lexer)
+         self.setMarginsBackgroundColor(theme.Margin)
+         self.setMarginsForegroundColor(theme.Caret)
+@@ -434,7 +442,7 @@ def show_annotations(self):
+         for line, messages in lines.items():
+             text = "\n".join(messages).strip()
+             if text:
+-                self.annotate(line, text, self.annotationDisplay())
++                self.annotate(line, text, self.annotationDisplay().value)
+ 
+     def find_next_match(
+         self,
+diff --git a/mu/interface/main.py b/mu/interface/main.py
+index c9cc69edf..bce1e40fa 100644
+--- a/mu/interface/main.py
++++ b/mu/interface/main.py
+@@ -19,11 +19,9 @@
+ import sys
+ import logging
+ import os.path
+-from PyQt5.QtCore import QSize, Qt, pyqtSignal, QTimer, QThread
+-from PyQt5.QtWidgets import (
++from PyQt6.QtCore import QSize, Qt, pyqtSignal, QTimer, QThread
++from PyQt6.QtWidgets import (
+     QToolBar,
+-    QAction,
+-    QDesktopWidget,
+     QWidget,
+     QVBoxLayout,
+     QTabWidget,
+@@ -33,14 +31,19 @@
+     QMainWindow,
+     QStatusBar,
+     QDockWidget,
+-    QShortcut,
+     QApplication,
+     QTabBar,
+     QPushButton,
+     QHBoxLayout,
+     QProgressDialog,
+ )
+-from PyQt5.QtGui import QKeySequence, QStandardItemModel, QCursor
++from PyQt6.QtGui import (
++    QKeySequence,
++    QStandardItemModel,
++    QCursor,
++    QAction,
++    QShortcut,
++)
+ from mu import __version__
+ from mu.interface.dialogs import (
+     ModeSelector,
+@@ -85,7 +88,7 @@ def __init__(self, parent):
+         super().__init__(parent)
+         self.setMovable(False)
+         self.setIconSize(QSize(64, 64))
+-        self.setToolButtonStyle(3)
++        self.setToolButtonStyle(Qt.ToolButtonTextUnderIcon)
+         self.setContextMenuPolicy(Qt.PreventContextMenu)
+         self.setObjectName("StandardToolBar")
+         self.reset()
+@@ -557,7 +560,7 @@ def on_context_menu(self):
+             menu.insertAction(actions[0], copy_to_repl)
+             menu.insertSeparator(actions[0])
+         # Display menu.
+-        menu.exec_(QCursor.pos())
++        menu.exec(QCursor.pos())
+ 
+     def copy_to_repl(self):
+         """
+@@ -682,7 +685,6 @@ def add_jupyter_repl(self, kernel_manager, kernel_client):
+         """
+         Adds a Jupyter based REPL pane to the application.
+         """
+-        kernel_manager.kernel.gui = "qt4"
+         kernel_client.start_channels()
+         ipython_widget = JupyterREPLPane()
+         ipython_widget.kernel_manager = kernel_manager
+@@ -1093,7 +1095,7 @@ def screen_size(self):
+         """
+         Returns an (width, height) tuple with the screen geometry.
+         """
+-        screen = QDesktopWidget().screenGeometry()
++        screen = self.screen().availableGeometry()
+         return screen.width(), screen.height()
+ 
+     def size_window(self, x=None, y=None, w=None, h=None):
+@@ -1394,9 +1396,9 @@ def upload_to_python_anywhere(
+         self.worker.finished.connect(self.worker.deleteLater)
+         self.worker.finished.connect(self.handle_python_anywhere_complete)
+         self.upload_thread.finished.connect(self.upload_thread.deleteLater)
+-        self.worker.error.connect(self.handle_python_anywhere_error)
+-        self.worker.error.connect(self.upload_thread.quit)
+-        self.worker.error.connect(self.worker.deleteLater)
++        self.worker.errorOccurred.connect(self.handle_python_anywhere_error)
++        self.worker.errorOccurred.connect(self.upload_thread.quit)
++        self.worker.errorOccurred.connect(self.worker.deleteLater)
+         self.upload_thread.start()
+ 
+     def handle_python_anywhere_complete(self, domain):
+diff --git a/mu/interface/panes.py b/mu/interface/panes.py
+index 567fc843f..c6f5760bf 100644
+--- a/mu/interface/panes.py
++++ b/mu/interface/panes.py
+@@ -27,7 +27,7 @@
+ import os.path
+ import codecs
+ 
+-from PyQt5.QtCore import (
++from PyQt6.QtCore import (
+     Qt,
+     QProcess,
+     QProcessEnvironment,
+@@ -36,7 +36,7 @@
+     QUrl,
+ )
+ from collections import deque
+-from PyQt5.QtWidgets import (
++from PyQt6.QtWidgets import (
+     QMessageBox,
+     QTextEdit,
+     QFrame,
+@@ -46,7 +46,7 @@
+     QMenu,
+     QTreeView,
+ )
+-from PyQt5.QtGui import (
++from PyQt6.QtGui import (
+     QKeySequence,
+     QTextCursor,
+     QCursor,
+@@ -65,7 +65,7 @@
+ 
+ CHARTS = True
+ try:  # pragma: no cover
+-    from PyQt5.QtChart import QChart, QLineSeries, QChartView, QValueAxis
++    from PyQt6.QtCharts import QChart, QLineSeries, QChartView, QValueAxis
+ except ImportError:  # pragma: no cover
+     logger.info("Unable to find QChart. Plotter button will not display.")
+     QChartView = object
+@@ -208,15 +208,15 @@ def context_menu(self):
+         """
+         menu = QMenu(self)
+         if platform.system() == "Darwin":
+-            copy_keys = QKeySequence(Qt.CTRL + Qt.Key_C)
+-            paste_keys = QKeySequence(Qt.CTRL + Qt.Key_V)
++            copy_keys = QKeySequence("Ctrl+C")
++            paste_keys = QKeySequence("Ctrl+V")
+         else:
+-            copy_keys = QKeySequence(Qt.CTRL + Qt.SHIFT + Qt.Key_C)
+-            paste_keys = QKeySequence(Qt.CTRL + Qt.SHIFT + Qt.Key_V)
++            copy_keys = QKeySequence("Ctrl+Shift+C")
++            paste_keys = QKeySequence("Ctrl+Shift+V")
+ 
+         menu.addAction("Copy", self.copy, copy_keys)
+         menu.addAction("Paste", self.paste, paste_keys)
+-        menu.exec_(QCursor.pos())
++        menu.exec(QCursor.pos())
+ 
+     def set_theme(self, theme):
+         self.set_font_size(self.font_size)
+@@ -536,13 +536,15 @@ def keyPressEvent(self, data):
+         """
+         tc = self.textCursor()
+         key = data.key()
+-        mod = data.modifiers()
++        mod = data.modifiers().value
+         if not mod:
+             mod = 0
+-        ctrl_only = mod == Qt.ControlModifier
+-        meta_only = mod == Qt.MetaModifier
+-        ctrl_shift_only = mod == Qt.ControlModifier | Qt.ShiftModifier
+-        shift_down = mod & Qt.ShiftModifier
++        ctrl_only = mod == Qt.ControlModifier.value
++        meta_only = mod == Qt.MetaModifier.value
++        ctrl_shift_only = (
++            mod == Qt.ControlModifier.value | Qt.ShiftModifier.value
++        )
++        shift_down = mod & Qt.ShiftModifier.value
+         on_osx = platform.system() == "Darwin"
+ 
+         if key == Qt.Key_Return:
+@@ -694,7 +696,7 @@ def show_confirm_overwrite_dialog(self):
+         msg.setText(_("File already exists; overwrite it?"))
+         msg.setWindowTitle(_("File already exists"))
+         msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+-        return msg.exec_() == QMessageBox.Ok
++        return msg.exec() == QMessageBox.Ok
+ 
+ 
+ class MicroPythonDeviceFileList(MuFileList):
+@@ -744,7 +746,7 @@ def contextMenuEvent(self, event):
+             return
+         menu = QMenu(self)
+         delete_action = menu.addAction(_("Delete (cannot be undone)"))
+-        action = menu.exec_(self.mapToGlobal(event.pos()))
++        action = menu.exec(self.mapToGlobal(event.pos()))
+         if action == delete_action:
+             self.disable.emit()
+             microbit_filename = menu_current_item.text()
+@@ -826,7 +828,7 @@ def contextMenuEvent(self, event):
+             )
+         # Open outside Mu (things get meta if Mu is the default application)
+         open_action = menu.addAction(_("Open"))
+-        action = menu.exec_(self.mapToGlobal(event.pos()))
++        action = menu.exec(self.mapToGlobal(event.pos()))
+         if action == open_action:
+             # Get the file's path
+             path = os.path.abspath(os.path.join(self.home, local_filename))
+@@ -1182,14 +1184,15 @@ def context_menu(self):
+         """
+         menu = QMenu(self)
+         if platform.system() == "Darwin":
+-            copy_keys = QKeySequence(Qt.CTRL + Qt.Key_C)
+-            paste_keys = QKeySequence(Qt.CTRL + Qt.Key_V)
++            copy_keys = QKeySequence("Ctrl+C")
++            paste_keys = QKeySequence("Ctrl+V")
+         else:
+-            copy_keys = QKeySequence(Qt.CTRL + Qt.SHIFT + Qt.Key_C)
+-            paste_keys = QKeySequence(Qt.CTRL + Qt.SHIFT + Qt.Key_V)
++            copy_keys = QKeySequence("Ctrl+Shift+C")
++            paste_keys = QKeySequence("Ctrl+Shift+V")
++
+         menu.addAction("Copy", self.copy, copy_keys)
+         menu.addAction("Paste", self.paste, paste_keys)
+-        menu.exec_(QCursor.pos())
++        menu.exec(QCursor.pos())
+ 
+     def insertFromMimeData(self, source):
+         """
+@@ -1608,8 +1611,11 @@ def __init__(self, parent=None):
+         self.axis_y.setRange(self.min_y, self.max_y)
+         self.axis_x.setLabelFormat("time")
+         self.axis_y.setLabelFormat("%d")
+-        self.chart.setAxisX(self.axis_x, self.series[0])
+-        self.chart.setAxisY(self.axis_y, self.series[0])
++        self.chart.addAxis(self.axis_x, Qt.AlignmentFlag.AlignBottom)
++        self.chart.addAxis(self.axis_y, Qt.AlignmentFlag.AlignLeft)
++        self.series[0].attachAxis(self.axis_x)
++        self.series[0].attachAxis(self.axis_y)
++
+         self.setChart(self.chart)
+         self.setRenderHint(QPainter.Antialiasing)
+ 
+@@ -1680,8 +1686,10 @@ def add_data(self, values):
+                 for i in range(value_len - series_len):
+                     new_series = QLineSeries()
+                     self.chart.addSeries(new_series)
+-                    self.chart.setAxisX(self.axis_x, new_series)
+-                    self.chart.setAxisY(self.axis_y, new_series)
++                    new_series.attachAxis(self.axis_x)
++                    new_series.attachAxis(self.axis_y)
++                    # self.chart.addAxis(self.axis_x, Qt.AlignmentFlag.AlignBottom)
++                    # self.chart.addAxis(self.axis_y, Qt.AlignmentFlag.AlignLeft)
+                     self.series.append(new_series)
+                     self.data.append(deque([0] * self.lookback))
+             else:
+@@ -1745,8 +1753,8 @@ def set_theme(self, theme):
+         Sets the theme / look for the plotter pane.
+         """
+         if theme == "day":
+-            self.chart.setTheme(QChart.ChartThemeLight)
++            self.chart.setTheme(QChart.ChartTheme.ChartThemeLight)
+         elif theme == "night":
+-            self.chart.setTheme(QChart.ChartThemeDark)
++            self.chart.setTheme(QChart.ChartTheme.ChartThemeDark)
+         else:
+-            self.chart.setTheme(QChart.ChartThemeHighContrast)
++            self.chart.setTheme(QChart.ChartTheme.ChartThemeHighContrast)
+diff --git a/mu/interface/themes.py b/mu/interface/themes.py
+index 5308854ed..96cb50044 100644
+--- a/mu/interface/themes.py
++++ b/mu/interface/themes.py
+@@ -18,7 +18,7 @@
+ """
+ import logging
+ 
+-from PyQt5.QtGui import QColor, QFontDatabase
++from PyQt6.QtGui import QColor, QFontDatabase
+ from mu.resources import load_stylesheet, load_font_data
+ 
+ 
+@@ -67,12 +67,15 @@ def get_database(cls):
+         every time a font is referenced
+         """
+         if cls._DATABASE is None:
+-            cls._DATABASE = QFontDatabase()
++            cls._DATABASE = True
++            # cls._DATABASE = QFontDatabase()
+             for variant in FONT_VARIANTS:
+                 filename = FONT_FILENAME_PATTERN.format(variant=variant)
+                 font_data = load_font_data(filename)
+-                cls._DATABASE.addApplicationFontFromData(font_data)
+-        return cls._DATABASE
++                # cls._DATABASE.addApplicationFontFromData(font_data)
++                QFontDatabase.addApplicationFontFromData(font_data)
++        # return cls._DATABASE
++        return QFontDatabase
+ 
+     def load(self, size=DEFAULT_FONT_SIZE):
+         """
+diff --git a/mu/interface/widgets.py b/mu/interface/widgets.py
+index 90e617c63..4e7093091 100644
+--- a/mu/interface/widgets.py
++++ b/mu/interface/widgets.py
+@@ -16,8 +16,8 @@
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ """
+-from PyQt5.QtCore import QSize, Qt, pyqtSignal
+-from PyQt5.QtWidgets import (
++from PyQt6.QtCore import QSize, Qt, pyqtSignal
++from PyQt6.QtWidgets import (
+     QHBoxLayout,
+     QWidget,
+     QLabel,
+diff --git a/mu/interface/workers.py b/mu/interface/workers.py
+index dc52ae801..e4ee2ab3f 100644
+--- a/mu/interface/workers.py
++++ b/mu/interface/workers.py
+@@ -19,7 +19,7 @@
+ """
+ import logging
+ import requests
+-from PyQt5.QtCore import pyqtSignal, QObject
++from PyQt6.QtCore import pyqtSignal, QObject
+ 
+ 
+ logger = logging.getLogger(__name__)
+diff --git a/mu/logic.py b/mu/logic.py
+index d4566fb04..d1847a6b4 100644
+--- a/mu/logic.py
++++ b/mu/logic.py
+@@ -30,9 +30,9 @@
+ import shutil
+ 
+ import platformdirs
+-from PyQt5.QtWidgets import QMessageBox
+-from PyQt5.QtCore import QObject, pyqtSignal
+-from PyQt5 import QtCore
++from PyQt6.QtWidgets import QMessageBox
++from PyQt6.QtCore import QObject, pyqtSignal
++from PyQt6 import QtCore
+ from pyflakes.api import check
+ from pycodestyle import StyleGuide, Checker
+ 
+diff --git a/mu/modes/base.py b/mu/modes/base.py
+index b9327d74d..cc54ae2b3 100644
+--- a/mu/modes/base.py
++++ b/mu/modes/base.py
+@@ -24,8 +24,8 @@
+ import logging
+ import pkgutil
+ from serial import Serial
+-from PyQt5.QtSerialPort import QSerialPort, QSerialPortInfo
+-from PyQt5.QtCore import QObject, pyqtSignal, QIODevice, QTimer
++from PyQt6.QtSerialPort import QSerialPort, QSerialPortInfo
++from PyQt6.QtCore import QObject, pyqtSignal, QIODevice, QTimer
+ from mu.logic import Device
+ from mu.contrib import microfs
+ from .. import config, settings
+diff --git a/mu/modes/debugger.py b/mu/modes/debugger.py
+index 46413d806..28746061a 100644
+--- a/mu/modes/debugger.py
++++ b/mu/modes/debugger.py
+@@ -25,7 +25,7 @@
+ from ..debugger.utils import is_breakpoint_line
+ from ..virtual_environment import venv
+ 
+-from PyQt5.QtCore import QTimer
++from PyQt6.QtCore import QTimer
+ 
+ 
+ logger = logging.getLogger(__name__)
+diff --git a/mu/modes/esp.py b/mu/modes/esp.py
+index a663b46e9..742d85d45 100644
+--- a/mu/modes/esp.py
++++ b/mu/modes/esp.py
+@@ -20,7 +20,7 @@
+ from mu.modes.base import MicroPythonMode, FileManager
+ from mu.modes.api import ESP_APIS, SHARED_APIS
+ from mu.interface.panes import CHARTS
+-from PyQt5.QtCore import QThread
++from PyQt6.QtCore import QThread
+ import os
+ 
+ 
+diff --git a/mu/modes/microbit.py b/mu/modes/microbit.py
+index b29961e3a..e8cb9eae1 100644
+--- a/mu/modes/microbit.py
++++ b/mu/modes/microbit.py
+@@ -23,7 +23,7 @@
+ from tokenize import TokenError
+ 
+ import semver
+-from PyQt5.QtCore import QThread, pyqtSignal
++from PyQt6.QtCore import QThread, pyqtSignal
+ 
+ from mu.logic import sniff_newline_convention
+ from mu.contrib import uflash, microfs
+diff --git a/mu/modes/python3.py b/mu/modes/python3.py
+index 87612b6fa..5f377db4e 100644
+--- a/mu/modes/python3.py
++++ b/mu/modes/python3.py
+@@ -26,7 +26,7 @@
+ from ..virtual_environment import venv
+ from qtconsole.manager import QtKernelManager
+ from qtconsole.client import QtKernelClient
+-from PyQt5.QtCore import QObject, QThread, pyqtSignal
++from PyQt6.QtCore import QObject, QThread, pyqtSignal
+ 
+ 
+ logger = logging.getLogger(__name__)
+@@ -54,7 +54,7 @@ def start_kernel(self, **kw):
+ 
+         # launch the kernel subprocess
+         self.log.debug("Starting kernel: %s", kernel_cmd)
+-        self.kernel = self._launch_kernel(kernel_cmd, **kw)
++        self._launch_kernel(kernel_cmd, **kw)
+         self.post_start_kernel(**kw)
+ 
+ 
+diff --git a/mu/modes/snek.py b/mu/modes/snek.py
+index 5e68b158f..91b16369c 100644
+--- a/mu/modes/snek.py
++++ b/mu/modes/snek.py
+@@ -20,8 +20,8 @@
+ from .base import MicroPythonMode, REPLConnection
+ from .api import SNEK_APIS
+ from mu.interface.panes import CHARTS
+-from PyQt5.QtWidgets import QMessageBox
+-from PyQt5.QtCore import QTimer
++from PyQt6.QtWidgets import QMessageBox
++from PyQt6.QtCore import QTimer
+ 
+ logger = logging.getLogger(__name__)
+ 
+diff --git a/mu/resources/__init__.py b/mu/resources/__init__.py
+index 263cc9e1b..3198eba01 100644
+--- a/mu/resources/__init__.py
++++ b/mu/resources/__init__.py
+@@ -18,8 +18,8 @@
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ """
+ from pkg_resources import resource_filename, resource_string
+-from PyQt5.QtGui import QPixmap, QIcon, QMovie
+-from PyQt5.QtCore import QDir
++from PyQt6.QtGui import QPixmap, QIcon, QMovie
++from PyQt6.QtCore import QDir
+ import os
+ 
+ 
+diff --git a/mu/virtual_environment.py b/mu/virtual_environment.py
+index 0c6087fc6..093a83ade 100644
+--- a/mu/virtual_environment.py
++++ b/mu/virtual_environment.py
+@@ -14,7 +14,7 @@
+ except ImportError:
+     pass
+ 
+-from PyQt5.QtCore import (
++from PyQt6.QtCore import (
+     QObject,
+     QProcess,
+     pyqtSignal,
+@@ -88,8 +88,8 @@ class Process(QObject):
+ 
+     eg::
+         import sys
+-        from PyQt5.QtCore import *
+-        from PyQt5.QtWidgets import *
++        from PyQt6.QtCore import *
++        from PyQt6.QtWidgets import *
+ 
+         class Example(QMainWindow):
+ 
+@@ -109,7 +109,7 @@ def __init__(self):
+         def main():
+             app = QApplication(sys.argv)
+             ex = Example()
+-            sys.exit(app.exec_())
++            sys.exit(app.exec())
+     """
+ 
+     started = pyqtSignal()
+diff --git a/mu/wheels/__init__.py b/mu/wheels/__init__.py
+index f967d47bd..8cb0c4714 100644
+--- a/mu/wheels/__init__.py
++++ b/mu/wheels/__init__.py
+@@ -8,6 +8,7 @@
+ import subprocess
+ import tempfile
+ import zipfile
++import pkg_resources
+ 
+ from .. import __version__ as mu_version
+ 
+@@ -37,23 +38,8 @@ class WheelsBuildError(WheelsError):
+ # Any additional elements are passed to `pip` for specific purposes
+ #
+ mode_packages = [
+-    # pygame is a pgzero dependency, but there is currently an issue where
+-    # pygame versions >=2.1.3 have issues in macOS 10.x, so temporarily for
+-    # Mu release 1.2.1 pin the max version here
+-    # https://github.com/mu-editor/mu/issues/2423
+-    ("pgzero", ("pgzero>=1.2.1", "pygame<2.1.3")),
+-    # Lock Werkzeug to < 3.0.0: import flask fails, otherwise.
+-    ("flask", ("flask==2.0.3", "Werkzeug<3.0.0")),
+-    # The version of ipykernel here should match to the version used by
+-    # qtconsole at the version specified in setup.py
+-    # FIXME: ipykernel max ver added for macOS 10.13 compatibility, min taken
+-    # from qtconsole 4.7.7. This is mirrored in setup.py
+-    ("ipykernel", ("ipykernel>=4.1,<6",)),
+-    # FIXME: ipykernel<6 depends on ipython_genutils, but it isn't explicitly
+-    # declared as a dependency. It also depends on traitlets, which
+-    # incidentally brought ipython_genutils, but in v5.1 it was dropped, so as
+-    # a workaround we need to manually specify it here
+-    ("ipython_genutils", ("ipython_genutils>=0.2.0",)),
++    ("pgzero", ("pgzero>=1.2.1",)),
++    ("flask", ("flask>=2.0.3",)),
+ ]
+ 
+ 
+@@ -66,12 +52,12 @@ def os_compatibility_flags():
+     an issue to be resolved before doing a Mu release.
+     """
+     extra_flags = []
+-    # For macOS the oldest supported version is 10.12 Sierra, as that's the
+-    # oldest version supported by PyQt5 v5.13
++    # For macOS the oldest supported version is 10.13 High Sierra,
++    # as that's the oldest version supported by PyQt5 v5.15
+     if sys.platform == "darwin":
+         extra_flags.extend(
+             [
+-                "--platform=macosx_10_12_x86_64",
++                "--platform=macosx_10_13_x86_64",
+                 "--only-binary=:all:",
+             ]
+         )
+@@ -101,7 +87,33 @@ def remove_dist_files(dirpath, logger):
+         os.remove(rm_filepath)
+ 
+ 
++def get_mu_package_version(package_name):
++    """Get the version of a package in Python environment running Mu."""
++    try:
++        version = pkg_resources.get_distribution(package_name).version
++        return version
++    except pkg_resources.DistributionNotFound:
++        logger.error(
++            "Package {} not found in Mu environment".format(package_name)
++        )
++        raise
++
++
+ def pip_download(dirpath, logger, additional_flags=[]):
++    """Download wheels for the packages to be installed in the user venv."""
++    # ipykernel needs to be added to the user venv to launch the iPython REPL
++    # from within that environment.
++    # The ipykernel version must match the version installed in the Mu
++    # environment or the user venv kernel might fail (Kernel died, restarting).
++    ipykernel_version = get_mu_package_version("ipykernel")
++    logger.info("Detecting Mu ipykernel version: {}".format(ipykernel_version))
++    mode_packages.append(
++        (
++            "ipykernel",
++            ("ipykernel=={}".format(ipykernel_version),),
++        )
++    )
++
+     for name, pip_identifiers, *extra_flags in mode_packages:
+         logger.info(
+             "Running pip download for %s / %s / %s / %s",
+diff --git a/setup.py b/setup.py
+index d9b8a911f..c207dd978 100644
+--- a/setup.py
++++ b/setup.py
+@@ -25,31 +25,17 @@
+     # The core 'install_requires' should only be things
+     # which are needed for the main editor to function.
+     #
+-    "PyQt5-sip<=12.13.0"
++    "PyQt6>=6.3.1"
+     + ';"arm" not in platform_machine and "aarch" not in platform_machine',
+-    "PyQt5==5.13.2"
++    "PyQt6-QScintilla>=2.13.3"
+     + ';"arm" not in platform_machine and "aarch" not in platform_machine',
+-    "QScintilla==2.11.3"
++    "PyQt6-Charts>=6.3.1"
+     + ';"arm" not in platform_machine and "aarch" not in platform_machine',
+-    "PyQtChart==5.13.1"
+-    + ';"arm" not in platform_machine and "aarch" not in platform_machine',
+-    # FIXME: Needed for qtconsole, this is the latest wheel in armv7l for
+-    # Python 3.7 (Buster), otherwise it tries to build from source and fails.
+-    "pyzmq<=26.0.3",
+-    # FIXME: jupyter-client added for Py3.5 compatibility, to be dropped after
+-    # Mu v1.1 release. So, qtconsole < 5 and jupyter-client < 6.2 (issue #1444)
+-    "jupyter-client>=4.1,<6.2",
+-    # FIXME: ipykernel max added for macOS 10.13 compatibility, min taken from
+-    # qtconsole 4.7.7. Full line can be removed after Mu v1.1 release.
+-    # Dependency mirrored for user venv in mu/wheels/__init__.py
+-    "ipykernel>=4.1,<6",
+-    # FIXME: ipykernel<6 depends on ipython_genutils, but it isn't explicitly
+-    # declared as a dependency. It also depends on traitlets, which
+-    # incidentally brought ipython_genutils, but in v5.1 it was dropped, so as
+-    # a workaround we need to manually specify it here.
+-    "ipython_genutils>=0.2.0",
+-    "qtconsole==4.7.7",
+-    #
++    "jupyter-client",
++    # ipykernel v5.5.6 resolves issue ipython/ipykernel#759.
++    # ipykernel version has to be mirrored in mu/wheels/__init__.py
++    "ipykernel>=5.5.6",
++    "qtconsole~=5.4",
+     # adafruit-board-toolkit is used to find serial ports and help identify
+     # CircuitPython boards in the CircuitPython mode.
+     "adafruit-board-toolkit~=1.1",
+@@ -61,15 +47,14 @@
+     # though. Regarding these packages' versions, please refer to:
+     # http://flake8.pycqa.org/en/latest/faq.html#why-does-flake8-use-ranges-for-its-dependencies
+     "flake8 >= 3.8.3",
+-    # Clamp click max version to workaround incompatibility with black<22.1.0
+-    "click<=8.0.4",
+-    "black>=19.10b0,<22.1.0;python_version>'3.5'",
+-    "platformdirs>=2.0.0,<3.0.0",
++    "black>=19.10b0",
++    "platformdirs>=2.0.0",
+     "semver>=2.8.0",
+     # virtualenv vendors pip, we need at least pip v19.3 to install some
+     # rust based dependencies. virtualenv >=v20 is required for the --symlinks
+     # flag needed by AppImage, and it packs pip v20.0.2.
+     "virtualenv>=20.0.0",
++    "pip>=19.3",
+     #
+     # Needed for packaging
+     #
+@@ -80,6 +65,9 @@
+     # Needed to resolve an issue with paths in the user virtual environment
+     #
+     "pywin32; sys_platform=='win32'",
++    # pkg_resources has been removed in Python 3.12, until we move to importlib
++    # we need it via setuptools: https://github.com/mu-editor/mu/issues/2485
++    "setuptools",
+ ]
+ 
+ 
+@@ -133,7 +121,7 @@
+         "mu.modes.api",
+         "mu.wheels",
+     ],
+-    python_requires=">=3.5,<3.9",
++    python_requires=">=3.8,<3.14",
+     install_requires=install_requires,
+     extras_require=extras_require,
+     package_data={"mu.wheels": ["*.whl", "*.zip"]},
+@@ -152,10 +140,12 @@
+         "Operating System :: MacOS :: MacOS X",
+         "Operating System :: Microsoft :: Windows",
+         "Programming Language :: Python :: 3 :: Only",
+-        "Programming Language :: Python :: 3.5",
+-        "Programming Language :: Python :: 3.6",
+-        "Programming Language :: Python :: 3.7",
+         "Programming Language :: Python :: 3.8",
++        "Programming Language :: Python :: 3.9",
++        "Programming Language :: Python :: 3.10",
++        "Programming Language :: Python :: 3.11",
++        "Programming Language :: Python :: 3.12",
++        "Programming Language :: Python :: 3.13",
+         "Topic :: Education",
+         "Topic :: Games/Entertainment",
+         "Topic :: Software Development",
+diff --git a/tests/conftest.py b/tests/conftest.py
+index c6246b35a..11fefd7cc 100644
+--- a/tests/conftest.py
++++ b/tests/conftest.py
+@@ -1,9 +1,7 @@
+ from unittest import mock
+ 
+ import pytest
+-import os
+-import random
+-from PyQt5.QtWidgets import QApplication
++from PyQt6.QtWidgets import QApplication
+ 
+ from mu import settings
+ 
+diff --git a/tests/debugger/test_client.py b/tests/debugger/test_client.py
+index 0b4c1fb1f..040ed9aed 100644
+--- a/tests/debugger/test_client.py
++++ b/tests/debugger/test_client.py
+@@ -8,7 +8,7 @@
+ import os.path
+ import mu.debugger.client
+ from unittest import mock
+-from PyQt5.QtCore import pyqtBoundSignal
++from PyQt6.QtCore import pyqtBoundSignal
+ 
+ 
+ def test_Breakpoint_init():
+diff --git a/tests/interface/test_dialogs.py b/tests/interface/test_dialogs.py
+index b719fcc0d..310f3ef53 100644
+--- a/tests/interface/test_dialogs.py
++++ b/tests/interface/test_dialogs.py
+@@ -7,7 +7,7 @@
+ import pytest
+ import mu.i18n
+ import mu.interface.dialogs
+-from PyQt5.QtWidgets import QDialog, QWidget, QDialogButtonBox
++from PyQt6.QtWidgets import QDialog, QWidget, QDialogButtonBox
+ from unittest import mock
+ from mu import virtual_environment
+ from mu.modes import (
+@@ -17,7 +17,7 @@
+     DebugMode,
+     ESPMode,
+ )
+-from PyQt5.QtCore import QProcess
++from PyQt6.QtCore import QProcess
+ 
+ 
+ def test_ModeItem_init():
+@@ -288,12 +288,20 @@ def test_ESPFirmwareFlasherWidget_esptool_finished(microbit):
+     device_list = mu.logic.DeviceList(modes)
+     device_list.add_device(microbit)
+     espff = mu.interface.dialogs.ESPFirmwareFlasherWidget()
+-    with mock.patch("os.path.exists", return_value=True):
+-        espff.setup(mode, device_list)
++    espff.setup(mode, device_list)
+     espff.esptool_finished(1, 0)
++    assert "Error on flashing. Aborting." in espff.log_text_area.toPlainText()
++
++    espff.log_text_area.clear()
+ 
+     espff.commands = ["foo", "bar"]
+-    espff.esptool_finished(0, QProcess.CrashExit + 1)
++    espff.esptool_finished(0, QProcess.NormalExit)
++    assert "foo" in espff.log_text_area.toPlainText()
++
++    espff.log_text_area.clear()
++
++    espff.esptool_finished(0, QProcess.NormalExit)
++    assert "bar" in espff.log_text_area.toPlainText()
+ 
+ 
+ def test_ESPFirmwareFlasherWidget_read_process(microbit):
+diff --git a/tests/interface/test_editor.py b/tests/interface/test_editor.py
+index 297ab7ab0..42aa4fa5e 100644
+--- a/tests/interface/test_editor.py
++++ b/tests/interface/test_editor.py
+@@ -7,8 +7,8 @@
+ import mu.interface.editor
+ import keyword
+ import re
+-from PyQt5.QtCore import Qt, QMimeData, QUrl, QPointF
+-from PyQt5.QtGui import QDropEvent
++from PyQt6.QtCore import Qt, QMimeData, QUrl, QPointF
++from PyQt6.QtGui import QDropEvent
+ 
+ import pytest
+ 
+@@ -178,13 +178,15 @@ def test_EditorPane_configure():
+     ep.indicatorDefine.assert_has_calls(
+         [
+             mock.call(
+-                ep.SquiggleIndicator, ep.check_indicators["error"]["id"]
++                ep.IndicatorStyle.SquiggleIndicator,
++                ep.check_indicators["error"]["id"],
+             ),
+             mock.call(
+-                ep.SquiggleIndicator, ep.check_indicators["style"]["id"]
++                ep.IndicatorStyle.SquiggleIndicator,
++                ep.check_indicators["style"]["id"],
+             ),
+             mock.call(
+-                ep.StraightBoxIndicator,
++                ep.IndicatorStyle.StraightBoxIndicator,
+                 ep.search_indicators["selection"]["id"],
+             ),
+         ],
+diff --git a/tests/interface/test_main.py b/tests/interface/test_main.py
+index b49682de9..f221b276a 100644
+--- a/tests/interface/test_main.py
++++ b/tests/interface/test_main.py
+@@ -2,9 +2,9 @@
+ """
+ Tests for the user interface elements of Mu.
+ """
+-from PyQt5.QtWidgets import QAction, QWidget, QFileDialog, QMessageBox, QMenu
+-from PyQt5.QtCore import Qt, QSize
+-from PyQt5.QtGui import QIcon, QKeySequence
++from PyQt6.QtWidgets import QWidget, QFileDialog, QMessageBox, QMenu
++from PyQt6.QtCore import Qt, QSize
++from PyQt6.QtGui import QAction, QIcon, QKeySequence
+ from unittest import mock
+ import pytest
+ from mu import __version__
+@@ -44,7 +44,9 @@ def test_ButtonBar_init():
+         mu.interface.main.ButtonBar(None)
+         mock_movable.assert_called_once_with(False)
+         mock_icon_size.assert_called_once_with(QSize(64, 64))
+-        mock_tool_button_size.assert_called_once_with(3)
++        mock_tool_button_size.assert_called_once_with(
++            Qt.ToolButtonTextUnderIcon
++        )
+         mock_context_menu_policy.assert_called_once_with(Qt.PreventContextMenu)
+         mock_object_name.assert_called_once_with("StandardToolBar")
+         assert mock_reset.call_count == 1
+@@ -800,14 +802,14 @@ def test_Window_on_context_menu_nothing_selected():
+     menu = QMenu()
+     menu.insertAction = mock.MagicMock()
+     menu.insertSeparator = mock.MagicMock()
+-    menu.exec_ = mock.MagicMock()
++    menu.exec = mock.MagicMock()
+     mock_tab.createStandardContextMenu = mock.MagicMock(return_value=menu)
+     w.on_context_menu()
+     assert mock_tab.createStandardContextMenu.call_count == 1
+     # No additional items added to the menu.
+     assert menu.insertAction.call_count == 0
+     assert menu.insertSeparator.call_count == 0
+-    assert menu.exec_.call_count == 1
++    assert menu.exec.call_count == 1
+ 
+ 
+ def test_Window_on_context_menu_has_selection_but_no_repl():
+@@ -824,14 +826,14 @@ def test_Window_on_context_menu_has_selection_but_no_repl():
+     menu = QMenu()
+     menu.insertAction = mock.MagicMock()
+     menu.insertSeparator = mock.MagicMock()
+-    menu.exec_ = mock.MagicMock()
++    menu.exec = mock.MagicMock()
+     mock_tab.createStandardContextMenu = mock.MagicMock(return_value=menu)
+     w.on_context_menu()
+     assert mock_tab.createStandardContextMenu.call_count == 1
+     # No additional items added to the menu.
+     assert menu.insertAction.call_count == 0
+     assert menu.insertSeparator.call_count == 0
+-    assert menu.exec_.call_count == 1
++    assert menu.exec.call_count == 1
+ 
+ 
+ def test_Window_on_context_menu_has_selection_but_no_interactive_process():
+@@ -849,14 +851,14 @@ def test_Window_on_context_menu_has_selection_but_no_interactive_process():
+     menu = QMenu()
+     menu.insertAction = mock.MagicMock()
+     menu.insertSeparator = mock.MagicMock()
+-    menu.exec_ = mock.MagicMock()
++    menu.exec = mock.MagicMock()
+     mock_tab.createStandardContextMenu = mock.MagicMock(return_value=menu)
+     w.on_context_menu()
+     assert mock_tab.createStandardContextMenu.call_count == 1
+     # No additional items added to the menu.
+     assert menu.insertAction.call_count == 0
+     assert menu.insertSeparator.call_count == 0
+-    assert menu.exec_.call_count == 1
++    assert menu.exec.call_count == 1
+ 
+ 
+ def test_Window_on_context_menu_with_repl():
+@@ -873,14 +875,14 @@ def test_Window_on_context_menu_with_repl():
+     menu = QMenu()
+     menu.insertAction = mock.MagicMock()
+     menu.insertSeparator = mock.MagicMock()
+-    menu.exec_ = mock.MagicMock()
++    menu.exec = mock.MagicMock()
+     menu.actions = mock.MagicMock(return_value=["foo"])
+     mock_tab.createStandardContextMenu = mock.MagicMock(return_value=menu)
+     w.on_context_menu()
+     assert mock_tab.createStandardContextMenu.call_count == 1
+     assert menu.insertAction.call_count == 1
+     assert menu.insertSeparator.call_count == 1
+-    assert menu.exec_.call_count == 1
++    assert menu.exec.call_count == 1
+ 
+ 
+ def test_Window_on_context_menu_with_process_runner():
+@@ -899,14 +901,14 @@ def test_Window_on_context_menu_with_process_runner():
+     menu = QMenu()
+     menu.insertAction = mock.MagicMock()
+     menu.insertSeparator = mock.MagicMock()
+-    menu.exec_ = mock.MagicMock()
++    menu.exec = mock.MagicMock()
+     menu.actions = mock.MagicMock(return_value=["foo"])
+     mock_tab.createStandardContextMenu = mock.MagicMock(return_value=menu)
+     w.on_context_menu()
+     assert mock_tab.createStandardContextMenu.call_count == 1
+     assert menu.insertAction.call_count == 1
+     assert menu.insertSeparator.call_count == 1
+-    assert menu.exec_.call_count == 1
++    assert menu.exec.call_count == 1
+ 
+ 
+ def test_Window_copy_to_repl_fragment():
+@@ -1248,17 +1250,17 @@ def test_Window_remember_plotter_position():
+     pane = PlotterPane()
+     w.add_plotter(pane, "Test Plotter")
+     dock_area = w.dockWidgetArea(w.plotter)
+-    assert dock_area == 8  # Bottom
++    assert dock_area.value == 8  # Bottom
+     w.removeDockWidget(w.plotter)
+     w.addDockWidget(Qt.LeftDockWidgetArea, w.plotter)
+     dock_area = w.dockWidgetArea(w.plotter)
+-    assert dock_area == 1  # Left
++    assert dock_area.value == 1  # Left
+     w.remove_plotter()
+     assert w.plotter is None
+     pane2 = PlotterPane()
+     w.add_plotter(pane2, "Test Plotter 2")
+     dock_area = w.dockWidgetArea(w.plotter)
+-    assert dock_area == 1  # Reopened on left
++    assert dock_area.value == 1  # Reopened on left
+ 
+ 
+ def test_Window_add_python3_runner():
+@@ -1741,18 +1743,21 @@ def test_Window_update_title():
+     w.setWindowTitle.assert_called_once_with("Mu - foo.py")
+ 
+ 
+-def _qdesktopwidget_mock(width, height):
++def _qscreen_mock(width, height):
+     """
+-    Create and return a usable mock for QDesktopWidget that supports the
+-    QDesktopWidget().screenGeometry() use case: it returns a mocked QRect
++    Create and return a usable mock for QScreen that supports the
++    availableGeometry() use case: it returns a mocked QRect
+     responding to .width() and .height() per the passed in arguments.
+     """
+-    mock_sg = mock.MagicMock()
+-    mock_screen = mock.MagicMock()
+-    mock_screen.width = mock.MagicMock(return_value=width)
+-    mock_screen.height = mock.MagicMock(return_value=height)
+-    mock_sg.screenGeometry = mock.MagicMock(return_value=mock_screen)
+-    return mock.MagicMock(return_value=mock_sg)
++    mock_geometry = mock.MagicMock(name="mock_geometry")
++    mock_geometry.width.return_value = width
++    mock_geometry.height.return_value = height
++
++    mock_screen = mock.MagicMock(name="mock_screen")
++    mock_screen.availableGeometry.return_value = mock_geometry
++
++    # Mocking return_value().availableGeometry().width()/height()
++    return mock.MagicMock(name="mock_screen", return_value=mock_screen)
+ 
+ 
+ def test_Window_autosize_window():
+@@ -1760,7 +1765,7 @@ def test_Window_autosize_window():
+     Check the correct calculations take place and methods are called so the
+     window is resized and positioned correctly.
+     """
+-    mock_qdw = _qdesktopwidget_mock(1024, 768)
++    mock_qdw = _qscreen_mock(1024, 768)
+     w = mu.interface.main.Window()
+     w.resize = mock.MagicMock(return_value=None)
+     mock_size = mock.MagicMock()
+@@ -1768,7 +1773,7 @@ def test_Window_autosize_window():
+     mock_size.height = mock.MagicMock(return_value=614)
+     w.geometry = mock.MagicMock(return_value=mock_size)
+     w.move = mock.MagicMock(return_value=None)
+-    with mock.patch("mu.interface.main.QDesktopWidget", mock_qdw):
++    with mock.patch("mu.interface.main.QWidget.screen", mock_qdw):
+         w.size_window()
+     mock_qdw.assert_called_once_with()
+     w.resize.assert_called_once_with(int(1024 * 0.8), int(768 * 0.8))
+@@ -1785,7 +1790,7 @@ def test_Window_autosize_window_off_screen():
+     coordinates would put the window OFF the screen. See issue #1613 for
+     context.
+     """
+-    mock_qdw = _qdesktopwidget_mock(1024, 768)
++    mock_qdw = _qscreen_mock(1024, 768)
+     w = mu.interface.main.Window()
+     w.resize = mock.MagicMock(return_value=None)
+     mock_size = mock.MagicMock()
+@@ -1793,7 +1798,7 @@ def test_Window_autosize_window_off_screen():
+     mock_size.height = mock.MagicMock(return_value=614)
+     w.geometry = mock.MagicMock(return_value=mock_size)
+     w.move = mock.MagicMock(return_value=None)
+-    with mock.patch("mu.interface.main.QDesktopWidget", mock_qdw):
++    with mock.patch("mu.interface.main.QWidget.screen", mock_qdw):
+         w.size_window(x=-20, y=9999)
+     mock_qdw.assert_called_once_with()
+     w.resize.assert_called_once_with(int(1024 * 0.8), int(768 * 0.8))
+@@ -1856,6 +1861,7 @@ def test_Window_setup():
+     w.setCentralWidget = mock.MagicMock(return_value=None)
+     w.addToolBar = mock.MagicMock(return_value=None)
+     w.size_window = mock.MagicMock(return_value=None)
++    w.screen = _qscreen_mock(1000, 600)
+     mock_widget = mock.MagicMock()
+     mock_widget.setLayout = mock.MagicMock(return_value=None)
+     mock_widget_class = mock.MagicMock(return_value=mock_widget)
+@@ -1869,15 +1875,12 @@ def test_Window_setup():
+     mock_qtw_class = mock.MagicMock(return_value=mock_qtw)
+     theme = "night"
+     breakpoint_toggle = mock.MagicMock()
+-    mock_qdw = _qdesktopwidget_mock(1000, 600)
+     with mock.patch(
+         "mu.interface.main.QWidget", mock_widget_class
+     ), mock.patch(
+         "mu.interface.main.ButtonBar", mock_button_bar_class
+     ), mock.patch(
+         "mu.interface.main.FileTabs", mock_qtw_class
+-    ), mock.patch(
+-        "mu.interface.main.QDesktopWidget", mock_qdw
+     ):
+         w.setup(breakpoint_toggle, theme)
+     assert w.breakpoint_toggle == breakpoint_toggle
+@@ -2315,7 +2318,7 @@ def test_Window_upload_to_python_anywhere():
+         )
+         mock_thread.start.assert_called_once_with()
+         assert mock_worker.finished.connect.call_count == 3
+-        assert mock_worker.error.connect.call_count == 3
++        assert mock_worker.errorOccurred.connect.call_count == 3
+ 
+ 
+ def test_Window_handle_python_anywhere_complete():
+diff --git a/tests/interface/test_panes.py b/tests/interface/test_panes.py
+index 1818c86aa..7ab46e94f 100644
+--- a/tests/interface/test_panes.py
++++ b/tests/interface/test_panes.py
+@@ -2,9 +2,9 @@
+ """
+ Tests for the user interface elements of Mu.
+ """
+-from PyQt5.QtWidgets import QMessageBox, QLabel, QMenu
+-from PyQt5.QtCore import Qt, QEvent, QPointF, QUrl
+-from PyQt5.QtGui import QTextCursor, QMouseEvent
++from PyQt6.QtWidgets import QMessageBox, QLabel, QMenu
++from PyQt6.QtCore import Qt, QEvent, QPointF, QUrl
++from PyQt6.QtGui import QTextCursor, QMouseEvent
+ from collections import deque
+ from unittest import mock
+ 
+@@ -133,7 +133,7 @@ def test_MicroPythonREPLPane_context_menu():
+     assert paste_action[0] == "Paste"
+     assert paste_action[1] == rp.paste
+     assert paste_action[2].toString() == "Ctrl+Shift+V"
+-    assert mock_qmenu.exec_.call_count == 1
++    assert mock_qmenu.exec.call_count == 1
+ 
+ 
+ def test_MicroPythonREPLPane_context_menu_darwin():
+@@ -160,7 +160,7 @@ def test_MicroPythonREPLPane_context_menu_darwin():
+     assert paste_action[0] == "Paste"
+     assert paste_action[1] == rp.paste
+     assert paste_action[2].toString() == "Ctrl+V"
+-    assert mock_qmenu.exec_.call_count == 1
++    assert mock_qmenu.exec.call_count == 1
+ 
+ 
+ def test_MicroPythonREPLPane_keyPressEvent():
+@@ -287,7 +287,7 @@ def test_MicroPythonREPLPane_keyPressEvent_left():
+     )
+ 
+ 
+-@mock.patch("PyQt5.QtWidgets.QTextEdit.keyPressEvent")
++@mock.patch("PyQt6.QtWidgets.QTextEdit.keyPressEvent")
+ def test_MicroPythonREPLPane_keyPressEvent_shift_right(
+     mock_super_keyPressEvent,
+ ):
+@@ -305,7 +305,7 @@ def test_MicroPythonREPLPane_keyPressEvent_shift_right(
+     mock_super_keyPressEvent.assert_called_once_with(data)
+ 
+ 
+-@mock.patch("PyQt5.QtWidgets.QTextEdit.keyPressEvent")
++@mock.patch("PyQt6.QtWidgets.QTextEdit.keyPressEvent")
+ def test_MicroPythonREPLPane_keyPressEvent_shift_left(
+     mock_super_keyPressEvent,
+ ):
+@@ -323,8 +323,8 @@ def test_MicroPythonREPLPane_keyPressEvent_shift_left(
+     mock_super_keyPressEvent.assert_called_once_with(data)
+ 
+ 
+-@mock.patch("PyQt5.QtGui.QTextCursor.hasSelection", return_value=True)
+-@mock.patch("PyQt5.QtGui.QTextCursor.selectionEnd", return_value=30)
++@mock.patch("PyQt6.QtGui.QTextCursor.hasSelection", return_value=True)
++@mock.patch("PyQt6.QtGui.QTextCursor.selectionEnd", return_value=30)
+ def test_MicroPythonREPLPane_keyPressEvent_right_with_selection(a, b):
+     """
+     Ensure right arrows in the REPL when a selection is made, moves the cursor
+@@ -341,8 +341,8 @@ def test_MicroPythonREPLPane_keyPressEvent_right_with_selection(a, b):
+     rp.move_cursor_to.assert_called_once_with(30)
+ 
+ 
+-@mock.patch("PyQt5.QtGui.QTextCursor.hasSelection", return_value=True)
+-@mock.patch("PyQt5.QtGui.QTextCursor.selectionStart", return_value=20)
++@mock.patch("PyQt6.QtGui.QTextCursor.hasSelection", return_value=True)
++@mock.patch("PyQt6.QtGui.QTextCursor.selectionStart", return_value=20)
+ def test_MicroPythonREPLPane_keyPressEvent_left_with_selection(a, b):
+     """
+     Ensure left arrows in the REPL when a selection is made, moves the cursor
+@@ -1078,7 +1078,7 @@ def test_SnekREPLPane_context_menu():
+     assert paste_action[0] == "Paste"
+     assert paste_action[1] == rp.paste
+     assert paste_action[2].toString() == "Ctrl+Shift+V"
+-    assert mock_qmenu.exec_.call_count == 1
++    assert mock_qmenu.exec.call_count == 1
+ 
+ 
+ def test_SnekREPLPane_context_menu_darwin():
+@@ -1105,7 +1105,7 @@ def test_SnekREPLPane_context_menu_darwin():
+     assert paste_action[0] == "Paste"
+     assert paste_action[1] == rp.paste
+     assert paste_action[2].toString() == "Ctrl+V"
+-    assert mock_qmenu.exec_.call_count == 1
++    assert mock_qmenu.exec.call_count == 1
+ 
+ 
+ def test_SnekREPLPane_keyPressEvent():
+@@ -1117,7 +1117,7 @@ def test_SnekREPLPane_keyPressEvent():
+     data = mock.MagicMock
+     data.key = mock.MagicMock(return_value=Qt.Key_A)
+     data.text = mock.MagicMock(return_value="a")
+-    data.modifiers = mock.MagicMock(return_value=None)
++    data.modifiers = mock.MagicMock(return_value=mock.MagicMock())
+     rp.keyPressEvent(data)
+     mock_serial.write.assert_called_once_with(bytes("a", "utf-8"))
+ 
+@@ -1131,7 +1131,7 @@ def test_SnekREPLPane_keyPressEvent_backspace():
+     data = mock.MagicMock
+     data.key = mock.MagicMock(return_value=Qt.Key_Backspace)
+     data.text = mock.MagicMock(return_value="\b")
+-    data.modifiers = mock.MagicMock(return_value=None)
++    data.modifiers = mock.MagicMock(return_value=mock.MagicMock())
+     rp.keyPressEvent(data)
+     mock_serial.write.assert_called_once_with(b"\b")
+ 
+@@ -1159,12 +1159,12 @@ def test_SnekREPLPane_keyPressEvent_delete():
+     data = mock.MagicMock
+     data.key = mock.MagicMock(return_value=Qt.Key_Delete)
+     data.text = mock.MagicMock(return_value="\b")
+-    data.modifiers = mock.MagicMock(return_value=None)
++    data.modifiers = mock.MagicMock(return_value=mock.MagicMock())
+     rp.keyPressEvent(data)
+     mock_serial.write.assert_called_once_with(b"\x1B[\x33\x7E")
+ 
+ 
+-@mock.patch("PyQt5.QtWidgets.QTextEdit.keyPressEvent")
++@mock.patch("PyQt6.QtWidgets.QTextEdit.keyPressEvent")
+ def test_SnekREPLPane_keyPressEvent_shift_right(
+     mock_super_keyPressEvent,
+ ):
+@@ -1182,7 +1182,7 @@ def test_SnekREPLPane_keyPressEvent_shift_right(
+     mock_super_keyPressEvent.assert_called_once_with(data)
+ 
+ 
+-@mock.patch("PyQt5.QtWidgets.QTextEdit.keyPressEvent")
++@mock.patch("PyQt6.QtWidgets.QTextEdit.keyPressEvent")
+ def test_SnekREPLPane_keyPressEvent_shift_left(
+     mock_super_keyPressEvent,
+ ):
+@@ -1200,8 +1200,8 @@ def test_SnekREPLPane_keyPressEvent_shift_left(
+     mock_super_keyPressEvent.assert_called_once_with(data)
+ 
+ 
+-@mock.patch("PyQt5.QtGui.QTextCursor.hasSelection", return_value=True)
+-@mock.patch("PyQt5.QtGui.QTextCursor.selectionEnd", return_value=30)
++@mock.patch("PyQt6.QtGui.QTextCursor.hasSelection", return_value=True)
++@mock.patch("PyQt6.QtGui.QTextCursor.selectionEnd", return_value=30)
+ def test_SnekREPLPane_keyPressEvent_right_with_selection(a, b):
+     """
+     Ensure right arrows in the REPL when a selection is made, moves the cursor
+@@ -1218,8 +1218,8 @@ def test_SnekREPLPane_keyPressEvent_right_with_selection(a, b):
+     rp.move_cursor_to.assert_called_once_with(30)
+ 
+ 
+-@mock.patch("PyQt5.QtGui.QTextCursor.hasSelection", return_value=True)
+-@mock.patch("PyQt5.QtGui.QTextCursor.selectionStart", return_value=20)
++@mock.patch("PyQt6.QtGui.QTextCursor.hasSelection", return_value=True)
++@mock.patch("PyQt6.QtGui.QTextCursor.selectionStart", return_value=20)
+ def test_SnekREPLPane_keyPressEvent_left_with_selection(a, b):
+     """
+     Ensure left arrows in the REPL when a selection is made, moves the cursor
+@@ -1460,7 +1460,7 @@ def test_MuFileList_show_confirm_overwrite_dialog():
+     mock_qmb.setIcon = mock.MagicMock(return_value=None)
+     mock_qmb.setText = mock.MagicMock(return_value=None)
+     mock_qmb.setWindowTitle = mock.MagicMock(return_value=None)
+-    mock_qmb.exec_ = mock.MagicMock(return_value=QMessageBox.Ok)
++    mock_qmb.exec = mock.MagicMock(return_value=QMessageBox.Ok)
+     mock_qmb_class = mock.MagicMock(return_value=mock_qmb)
+     mock_qmb_class.Ok = QMessageBox.Ok
+     mock_qmb_class.Information = QMessageBox.Information
+@@ -1540,7 +1540,7 @@ def test_MicroPythonDeviceFileList_contextMenuEvent():
+     mock_menu = mock.MagicMock()
+     mock_action = mock.MagicMock()
+     mock_menu.addAction.return_value = mock_action
+-    mock_menu.exec_.return_value = mock_action
++    mock_menu.exec.return_value = mock_action
+     mfs = mu.interface.panes.MicroPythonDeviceFileList("homepath")
+     mock_current = mock.MagicMock()
+     mock_current.text.return_value = "foo.py"
+@@ -1663,7 +1663,7 @@ def test_LocalFileList_contextMenuEvent():
+         mock.MagicMock(),  # "Write to main.py on device"
+         mock.MagicMock(),  # "Open"
+     ]
+-    mock_menu.exec_.return_value = mock_action_first
++    mock_menu.exec.return_value = mock_action_first
+     mfs = mu.interface.panes.LocalFileList("homepath")
+     mock_open = mock.MagicMock()
+     mfs.open_file = mock.MagicMock()
+@@ -1696,7 +1696,7 @@ def test_LocalFileList_contextMenuEvent_hex():
+         mock.MagicMock(),  # "Open in Mu"
+         mock_action_second,  # "Open"
+     ]
+-    mock_menu.exec_.return_value = mock_action_second
++    mock_menu.exec.return_value = mock_action_second
+     mfs = mu.interface.panes.LocalFileList("homepath")
+     mock_current = mock.MagicMock()
+     mock_current.text.return_value = "foo.hex"
+@@ -1729,7 +1729,7 @@ def test_LocalFileList_contextMenuEvent_external():
+     mock_menu = mock.create_autospec(QMenu, instance=True)
+     mock_action = mock.MagicMock()
+     mock_menu.addAction.side_effect = [mock_action, mock.MagicMock()]  # "Open"
+-    mock_menu.exec_.return_value = mock_action
++    mock_menu.exec.return_value = mock_action
+     mfs = mu.interface.panes.LocalFileList("homepath")
+     mock_open = mock.MagicMock()
+     mfs.open_file = mock.MagicMock()
+@@ -1773,7 +1773,7 @@ def test_LocalFileList_contextMenuEvent_write_to_mainpy():
+         mock_action_second,
+         mock_action_third,
+     ]
+-    mock_menu.exec_.return_value = mock_action_second
++    mock_menu.exec.return_value = mock_action_second
+     mfs = mu.interface.panes.LocalFileList("homepath")
+     mfs.put = mock.MagicMock()
+     mock_current = mock.MagicMock()
+@@ -1798,7 +1798,7 @@ def test_LocalFileList_contextMenuEvent_empty_list():
+     file list is empty.
+     """
+     mock_menu = mock.MagicMock()
+-    mock_menu.exec_.return_value = mock.MagicMock()
++    mock_menu.exec.return_value = mock.MagicMock()
+     mfs = mu.interface.panes.LocalFileList("homepath")
+     mfs.currentItem = mock.MagicMock(return_value=None)
+     mock_event = mock.MagicMock()
+@@ -2368,7 +2368,7 @@ def test_PythonProcessPane_context_menu():
+     assert paste_action[0] == "Paste"
+     assert paste_action[1] == ppp.paste
+     assert paste_action[2].toString() == "Ctrl+Shift+V"
+-    assert mock_qmenu.exec_.call_count == 1
++    assert mock_qmenu.exec.call_count == 1
+ 
+ 
+ def test_PythonProcessPane_context_menu_darwin():
+@@ -2394,7 +2394,7 @@ def test_PythonProcessPane_context_menu_darwin():
+     assert paste_action[0] == "Paste"
+     assert paste_action[1] == ppp.paste
+     assert paste_action[2].toString() == "Ctrl+V"
+-    assert mock_qmenu.exec_.call_count == 1
++    assert mock_qmenu.exec.call_count == 1
+ 
+ 
+ def test_PythonProcessPane_paste():
+@@ -3376,8 +3376,7 @@ def test_PlotterPane_add_data_adjust_values_up():
+         pp.add_data((1, 2, 3, 4))
+     assert len(pp.series) == 4
+     assert pp.chart.addSeries.call_count == 3
+-    assert pp.chart.setAxisX.call_count == 3
+-    assert pp.chart.setAxisY.call_count == 3
++    assert pp.series[len(pp.series) - 1].attachAxis.call_count == (3 * 2)
+     assert len(pp.data) == 4
+ 
+ 
+@@ -3506,15 +3505,15 @@ def test_PlotterPane_set_theme():
+     pp.chart = mock.MagicMock()
+     pp.set_theme("day")
+     pp.chart.setTheme.assert_called_once_with(
+-        mu.interface.panes.QChart.ChartThemeLight
++        mu.interface.panes.QChart.ChartTheme.ChartThemeLight
+     )
+     pp.chart.setTheme.reset_mock()
+     pp.set_theme("night")
+     pp.chart.setTheme.assert_called_once_with(
+-        mu.interface.panes.QChart.ChartThemeDark
++        mu.interface.panes.QChart.ChartTheme.ChartThemeDark
+     )
+     pp.chart.setTheme.reset_mock()
+     pp.set_theme("contrast")
+     pp.chart.setTheme.assert_called_once_with(
+-        mu.interface.panes.QChart.ChartThemeHighContrast
++        mu.interface.panes.QChart.ChartTheme.ChartThemeHighContrast
+     )
+diff --git a/tests/interface/test_themes.py b/tests/interface/test_themes.py
+index 927602cf2..fca81643b 100644
+--- a/tests/interface/test_themes.py
++++ b/tests/interface/test_themes.py
+@@ -64,8 +64,7 @@ def test_Font_loading():
+             mu.interface.themes.Font(bold=True, italic=True).load()
+     finally:
+         mu.interface.themes.Font._DATABASE = None
+-    db.assert_called_once_with()
+-    db().font.assert_has_calls(
++    db.font.assert_has_calls(
+         [
+             mock.call("Source Code Pro", "Regular", 14),
+             mock.call("Source Code Pro", "Semibold", 14),
+diff --git a/tests/modes/test_base.py b/tests/modes/test_base.py
+index 32fb6fe9c..4161f5dbb 100644
+--- a/tests/modes/test_base.py
++++ b/tests/modes/test_base.py
+@@ -14,7 +14,7 @@
+     REPLConnection,
+ )
+ import mu.settings
+-from PyQt5.QtCore import QIODevice
++from PyQt6.QtCore import QIODevice
+ from unittest import mock
+ 
+ 
+diff --git a/tests/modes/test_snek.py b/tests/modes/test_snek.py
+index f94ef07c7..5eed41e13 100644
+--- a/tests/modes/test_snek.py
++++ b/tests/modes/test_snek.py
+@@ -6,7 +6,7 @@
+ from mu.logic import Device
+ from mu.modes.snek import SnekMode
+ from mu.modes.api import SNEK_APIS
+-from PyQt5.QtWidgets import QMessageBox
++from PyQt6.QtWidgets import QMessageBox
+ from unittest import mock
+ 
+ 
+diff --git a/tests/test_app.py b/tests/test_app.py
+index 47333f5c8..2c4f3e272 100755
+--- a/tests/test_app.py
++++ b/tests/test_app.py
+@@ -26,7 +26,7 @@
+ from mu.resources import load_movie
+ from mu import mu_debug
+ from mu.virtual_environment import VirtualEnvironment as VE, SplashLogHandler
+-from PyQt5.QtCore import Qt
++from PyQt6.QtCore import Qt
+ 
+ 
+ class DumSig:
+@@ -293,10 +293,11 @@ class Win(mock.MagicMock):
+         # foo.call_count is instantiating the class
+         assert qa.call_count == 1
+         # foo.mock_calls are method calls on the object
+-        if hasattr(Qt, "AA_EnableHighDpiScaling"):
+-            assert len(qa.mock_calls) == 9
+-        else:
+-            assert len(qa.mock_calls) == 8
++        # if hasattr(Qt, "AA_EnableHighDpiScaling"):
++        #    assert len(qa.mock_calls) == 9
++        # else:
++        #    assert len(qa.mock_calls) == 8
++        assert len(qa.mock_calls) == 7
+         assert qsp.call_count == 1
+         assert len(qsp.mock_calls) == 4
+         assert ed.call_count == 1
+diff --git a/tests/test_logic.py b/tests/test_logic.py
+index 8cbabd8aa..6052d4b7c 100644
+--- a/tests/test_logic.py
++++ b/tests/test_logic.py
+@@ -23,8 +23,8 @@
+ import mu.settings
+ 
+ from mu.virtual_environment import venv
+-from PyQt5.QtWidgets import QMessageBox
+-from PyQt5.QtCore import pyqtSignal, QObject, Qt
++from PyQt6.QtWidgets import QMessageBox
++from PyQt6.QtCore import pyqtSignal, QObject, Qt
+ 
+ from mu import __version__
+ 
+diff --git a/tests/test_resources.py b/tests/test_resources.py
+index d9bfefb74..c0025fb7d 100644
+--- a/tests/test_resources.py
++++ b/tests/test_resources.py
+@@ -4,7 +4,7 @@
+ """
+ import mu.resources
+ from unittest import mock
+-from PyQt5.QtGui import QIcon, QPixmap, QMovie
++from PyQt6.QtGui import QIcon, QPixmap, QMovie
+ 
+ 
+ def test_path():
+diff --git a/tests/virtual_environment/test_process.py b/tests/virtual_environment/test_process.py
+index e66b1781c..a2b938a2b 100644
+--- a/tests/virtual_environment/test_process.py
++++ b/tests/virtual_environment/test_process.py
+@@ -9,7 +9,7 @@
+ 
+ import pytest
+ 
+-from PyQt5.QtCore import QTimer, QProcess
++from PyQt6.QtCore import QTimer, QProcess
+ 
+ from mu import virtual_environment
+ 
