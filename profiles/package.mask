@@ -1,7 +1,3 @@
-# Dawn <dawn_xu_helloworld@163.com>
-# Seems it doesn't working fine on non-systemd OS after v1.7.0
->=net-proxy/clash-verge-bin-1.7.0
-
 # Because of bug #893668, those packages will be removed
 # on 2025-06-21.
 =games-util/winegame-client-bin-0.5.10.5
