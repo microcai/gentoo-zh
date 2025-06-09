@@ -1,15 +1,16 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 2023-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit cmake git-r3
+inherit cmake
 
 DESCRIPTION="A library of C++ coroutine abstractions for the coroutines TS"
 HOMEPAGE="https://github.com/Garcia6l20/cppcoro"
-EGIT_REPO_URI="https://github.com/Garcia6l20/${PN}.git"
-EGIT_COMMIT=e1d53e6
+COMMIT_ID="e1d53e620b0eee828915ada179cd7ca8e66ca855"
+SRC_URI="https://github.com/Garcia6l20/cppcoro/archive/${COMMIT_ID}.tar.gz -> ${P}.gh.tar.gz"
 
+S="${WORKDIR}/cppcoro-${COMMIT_ID}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
