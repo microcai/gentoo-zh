@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-09 17:23:03 CST)
+(The last generation time: 2025-06-09 17:38:08 CST)
 
 ### Packages
 
@@ -193,9 +193,6 @@
  dev-cpp/tgbot-cpp                               | 1.9                    |            | https://github.com/reo7sp/tgbot-cpp                                                     | C++ library for Telegram bot API
 -------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-db/dbeaver-bin                              | 25.1.0                 |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
--------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-db/mongodb                                  | 5.3.1                  |            | https://www.mongodb.com                                                                 | A high-performance, open source, schema-free document-oriented database
-                                                 | 6.2.0-r4               |            |                                                                                         |
 -------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-debug/lldb-mi                               | 0.0.1                  |            | https://github.com/lldb-tools/lldb-mi                                                   | LLDB Machine Interface Driver
                                                  | 9999                   |            |                                                                                         |
@@ -574,14 +571,7 @@
    sys-apps/pnpm                                 | 9.15.5                 | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
                                                  | 10.12.1                |            |                                                                                         |
 -------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/clash-verge-bin                       | 1.6.0                  |            | https://github.com/clash-verge-rev/clash-verge-rev                                      | (Continuation) of Clash Meta GUI based on Tauri.
-                                                 | 1.6.4                  |            |                                                                                         |
-                                                 | 1.6.6                  |            |                                                                                         |
-                                                 | 1.7.7-r1               |            |                                                                                         |
-                                                 | 2.0.2                  |            |                                                                                         |
-                                                 | 2.0.3                  |            |                                                                                         |
-                                                 | 2.2.2                  |            |                                                                                         |
-                                                 | 2.2.3                  |            |                                                                                         |
+ net-proxy/clash-verge-bin                       | 1.6.6                  |            | https://github.com/clash-verge-rev/clash-verge-rev                                      | (Continuation) of Clash Meta GUI based on Tauri.
                                                  | 2.3.0                  |            |                                                                                         |
 -------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/dae                                   | 1.0.0                  |            | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
