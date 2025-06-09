@@ -1,9 +1,9 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit bash-completion-r1
+inherit shell-completion
 
 DESCRIPTION="Manage all your runtime versions with one tool"
 HOMEPAGE="https://github.com/asdf-vm/asdf"
@@ -37,10 +37,6 @@ src_install() {
 	fperms +x /opt/${PN}/asdf.{elv,fish,nu,ps1,sh}
 
 	dobashcomp completions/asdf.bash
-
-	insinto /usr/share/zsh/site-functions
-	doins completions/_asdf
-
-	insinto /usr/share/fish/vendor_completions.d
-	doins completions/asdf.fish
+	dozshcomp completions/_asdf
+	dofishcomp completions/asdf.fish
 }
