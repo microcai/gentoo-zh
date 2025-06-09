@@ -17,6 +17,3 @@
 # lead to account suspension.
 # Please exercise caution when enabling it.
 net-im/tencent-qq liteloader
-
-# amarok currently broken on KF6
-media-sound/amarok qt6
