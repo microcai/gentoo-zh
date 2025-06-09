@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-09 18:48:58 CST)
+(The last generation time: 2025-06-09 22:09:37 CST)
 
 ### Packages
 
@@ -49,7 +49,7 @@
 -------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/edit                                | 1.1.0                  |            | https://github.com/microsoft/edit                                                       | Microsoft edit
 -------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/marktext-bin                        | 0.17.1                 |            | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
+ app-editors/marktext-bin                        | 0.17.1-r1              |            | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 -------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/mu-editor                           | 1.2.2_alpha1_p20241216 |            | https://github.com/mu-editor/mu                                                         | A simple Python editor for beginner programmers
    dev-python/adafruit-board-toolkit             | 1.1.2                  | RD         | https://github.com/adafruit/Adafruit_Board_Toolkit/                                     | CircuitPython board identification and information
@@ -184,7 +184,7 @@
  dev-build/gyp                                   | 20230914150222         |            | https://gyp.gsrc.io/                                                                    | GYP (Generate Your Projects) meta-build system
                                                  | 99999999999999         |            |                                                                                         |
 -------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-cpp/cppcoro                                 | 210105-r1              |            | https://github.com/Garcia6l20/cppcoro                                                   | A library of C++ coroutine abstractions for the coroutines TS
+ dev-cpp/cppcoro                                 | 0.0_p210105            |            | https://github.com/Garcia6l20/cppcoro                                                   | A library of C++ coroutine abstractions for the coroutines TS
 -------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/date                                    | 3.0.4                  |            | https://github.com/HowardHinnant/date                                                   | A date and time library based on the C++11/14/17 <chrono> header
 -------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -300,8 +300,6 @@
  games-arcade/osu-lazer-bin                      | 2025.424.0-r1          |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away!
                                                  | 2025.607.0-r1          |            |                                                                                         |
                                                  | 2025.607.1             |            |                                                                                         |
--------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- games-board/othello                             | 0.2.2                  |            | http://othello-game.sourceforge.net                                                     | Othello is a classic strategy game, also known as Reversi
 -------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-emulation/conty                           | 1.27.1                 |            | https://github.com/Kron4ek/Conty                                                        | SquashFS image of Arch Linux with: Lutris, Steam, Bottles, Wine...
                                                  | 1.28                   |            |                                                                                         |
