@@ -6,20 +6,19 @@ EAPI=8
 inherit desktop xdg
 
 _PN="${PN%-bin}"
-_RV="2025.321.0"
 
 DESCRIPTION="A free-to-win rhythm game. Rhythm is just a click away!"
 HOMEPAGE="https://osu.ppy.sh/ https://github.com/ppy/osu"
 SRC_URI="
 	https://github.com/ppy/osu/releases/download/${PV}/osu.AppImage -> ${_PN}-${PV}.AppImage
-	https://github.com/ppy/osu/raw/${PV}/LICENCE -> ${_PN}-${PV}-LICENCE
-	https://github.com/ppy/osu-resources/raw/${_RV}/LICENCE.md -> ${_PN}-resources-${_RV}-LICENCE.md
+	https://github.com/ppy/osu/raw/refs/heads/master/LICENCE -> ${_PN}-LICENCE
+	https://github.com/ppy/osu-resources/raw/refs/heads/master/LICENCE.md -> ${_PN}-resources-LICENCE.md
 "
 
 S="${WORKDIR}"
 
 LICENSE="MIT CC-BY-NC-4.0"
-SLOT="0"
+SLOT="0/lazer"
 KEYWORDS="-* ~amd64"
 
 IUSE="complete-icon pipewire sdl2 +system-sdl"
@@ -117,6 +116,6 @@ src_install() {
 
 	# Install license
 	insinto "/usr/share/licenses/${_PN}"
-	newins "${DISTDIR}/${_PN}-${PV}-LICENCE" "${_PN}-LICENCE"
-	newins "${DISTDIR}/${_PN}-resources-${_RV}-LICENCE.md" "${_PN}-resources-LICENCE.md"
+	newins "${DISTDIR}/${_PN}-LICENCE" "${_PN}-LICENCE"
+	newins "${DISTDIR}/${_PN}-resources-LICENCE.md" "${_PN}-resources-LICENCE.md"
 }
