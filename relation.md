@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-09 17:38:08 CST)
+(The last generation time: 2025-06-09 18:35:56 CST)
 
 ### Packages
 
@@ -297,8 +297,9 @@
  games-action/vintagestory                       | 1.19.8                 |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
                                                  | 1.20.9                 |            |                                                                                         |
 -------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- games-arcade/osu-lazer-bin                      | 2025.424.0             |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away!
-                                                 | 2025.607.0             |            |                                                                                         |
+ games-arcade/osu-lazer-bin                      | 2025.424.0-r1          |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away!
+                                                 | 2025.607.0-r1          |            |                                                                                         |
+                                                 | 2025.607.1             |            |                                                                                         |
 -------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-board/othello                             | 0.2.2                  |            | http://othello-game.sourceforge.net                                                     | Othello is a classic strategy game, also known as Reversi
 -------------------------------------------------|------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
