@@ -546,6 +546,11 @@ prefix = "v"
 # high update frequency
 #["dev-libs/v2ray-rules-dat-bin"]
 
+["dev-python/adafruit-board-toolkit"]
+source = "pypi"
+pypi = "adafruit-board-toolkit"
+github_account = "blackteahamburger"
+
 ["dev-python/archspec"]
 source = "github"
 github = "archspec/archspec"
