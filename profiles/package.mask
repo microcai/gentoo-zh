@@ -1,11 +1,7 @@
 # Because of bug #893668, those packages will be removed
 # on 2025-06-21.
-=games-util/winegame-client-bin-0.5.10.5
-=games-util/winegame-client-bin-0.5.12.2
-=net-misc/bruno-bin-1.35.0
-=net-misc/hoppscotch-bin-25.4.2.0
-=net-proxy/clash-nyanpasu-1.5.1
-=net-proxy/clash-verge-bin-1.6.0
-=net-proxy/clash-verge-bin-1.6.4
+games-util/winegame-client-bin
+net-misc/bruno-bin
+net-misc/hoppscotch-bin
+net-proxy/clash-nyanpasu
 =net-proxy/clash-verge-bin-1.6.6
-=net-proxy/clash-verge-bin-1.7.7-r1
