@@ -782,11 +782,6 @@ github = "ppy/osu"
 use_latest_release = true
 github_account = "Puqns67"
 
-["games-board/othello"]
-source = "regex"
-url = "http://othello-game.sourceforge.net/en/Download.html"
-regex = "([\\d.]+) is the latest stable version."
-
 # live package only
 #["games-fps/source-engine"]
 
