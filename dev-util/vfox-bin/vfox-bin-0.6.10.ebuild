@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit unpacker
+inherit unpacker shell-completion
 
 DESCRIPTION="A cross-platform version manager, extendable via plugins"
 HOMEPAGE="https://vfox.lhan.me/ https://github.com/version-fox/vfox"
@@ -28,10 +28,6 @@ src_install() {
 	default
 
 	dobin usr/bin/vfox
-
-	insinto /usr/share/bash-completion/completions
-	doins usr/share/bash-completion/completions/vfox
-
-	insinto /usr/share/zsh/site-functions
-	doins usr/share/zsh/site-functions/_vfox
+	dobashcomp usr/share/bash-completion/completions/vfox
+	dozshcomp usr/share/zsh/site-functions/_vfox
 }
