@@ -12,19 +12,16 @@ DESCRIPTION="A simple Python editor for beginner programmers"
 HOMEPAGE="
 	https://github.com/mu-editor/mu
 	https://pypi.org/project/mu-editor
+	https://github.com/blackteahamburger/mu
 "
-GIT_COMMIT="563cb860c83b9453fc901d80dfb9ef8ed49503fc"
-SRC_URI="https://github.com/mu-editor/mu/archive/${GIT_COMMIT}.tar.gz -> ${P}.gh.tar.gz"
-S="${WORKDIR}/mu-${GIT_COMMIT}"
+SRC_URI="https://github.com/blackteahamburger/mu/archive/refs/tags/v${PV}.tar.gz -> ${P}.gh.tar.gz"
+S="${WORKDIR}/mu-${PV}"
 
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64"
 
-PATCHES=(
-	"${FILESDIR}/${P}-gentoo.diff"
-	"${FILESDIR}/${P}-serial-port-improvements.patch"
-)
+RESTRICT="test"
 
 RDEPEND="
 	>=dev-python/pyqt6-6.3.1[gui,widgets,serialport,svg,${PYTHON_USEDEP}]
@@ -40,11 +37,9 @@ RDEPEND="
 	>=dev-python/black-19.10_beta0[${PYTHON_USEDEP}]
 	>=dev-python/platformdirs-2.0.0[${PYTHON_USEDEP}]
 	>=dev-python/semver-2.8.0[${PYTHON_USEDEP}]
-	>=dev-python/virtualenv-20.0.0[${PYTHON_USEDEP}]
-	>=dev-python/pip-19.3[${PYTHON_USEDEP}]
-	dev-python/wheel[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.0.0[${PYTHON_USEDEP}]
-	dev-python/setuptools[${PYTHON_USEDEP}]
+	>=dev-python/pgzero-1.2.1[${PYTHON_USEDEP}]
+	>=dev-python/flask-2.0.3[${PYTHON_USEDEP}]
 "
 
 QA_DESKTOP_FILE="usr/share/applications/mu.codewith.editor.desktop"
@@ -53,6 +48,11 @@ python_install_all() {
 	domenu "conf/mu.codewith.editor.desktop"
 	doicon -s 256 "conf/mu.codewith.editor.png"
 	distutils-r1_python_install_all
+}
+
+pkg_postinst() {
+	elog "This version of mu-editor has significant differences from the original"
+	elog "Please report related bugs to https://github.com/blackteahamburger/mu"
 }
 
 distutils_enable_sphinx docs
