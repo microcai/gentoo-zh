@@ -636,6 +636,11 @@ use_latest_tag = true
 prefix = "v"
 github_account = "blackteahamburger"
 
+["dev-python/pyqt6-charts"]
+source = "pypi"
+pypi = "PyQt6-Charts"
+github_account = "blackteahamburger"
+
 ["dev-python/pytube"]
 source = "github"
 github = "pytube/pytube"
