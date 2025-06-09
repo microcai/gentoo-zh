@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -12,16 +12,14 @@ SRC_URI="
 	arm64? ( https://github.com/peeweep/gentoo-go-deps/releases/download/${PN}_${PV}/${PN}_${PV}_arm64.deb )
 	amd64? ( https://github.com/peeweep/gentoo-go-deps/releases/download/${PN}_${PV}/${PN}_${PV}_amd64.deb )
 	loong? ( https://github.com/peeweep/gentoo-go-deps/releases/download/${PN}_${PV}/${PN}_${PV}_loongarch64.deb )
-	mips?	( ${PN}_${PV}_mips64el.deb )
 "
 
 S="${WORKDIR}"
 
 LICENSE="WPS-EULA"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~loong ~mips"
-IUSE="big-endian systemd abi_mips_n64"
-REQUIRED_USE="mips? ( !big-endian abi_mips_n64 )"
+KEYWORDS="~amd64 ~arm64 ~loong"
+IUSE="systemd"
 
 RESTRICT="strip mirror bindist" # mirror as explained at bug #547372
 
