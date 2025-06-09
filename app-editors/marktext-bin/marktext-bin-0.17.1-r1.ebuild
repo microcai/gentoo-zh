@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2022-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -9,15 +9,13 @@ DESCRIPTION="A simple and elegant markdown editor, available for Linux, macOS an
 HOMEPAGE="https://marktext.app/ https://github.com/marktext/marktext"
 SRC_URI="https://github.com/marktext/marktext/releases/download/v${PV}/${PN%-bin}-amd64.deb -> ${P}.deb"
 
+S="${WORKDIR}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64"
-S="${WORKDIR}"
 
 RDEPEND="
-	app-accessibility/at-spi2-atk:2
 	app-accessibility/at-spi2-core:2
-	dev-libs/atk
 	dev-libs/expat
 	dev-libs/nspr
 	dev-libs/nss
