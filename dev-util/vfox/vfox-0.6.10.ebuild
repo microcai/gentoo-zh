@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit go-module
+inherit go-module shell-completion
 
 DESCRIPTION="A cross-platform version manager, extendable via plugins"
 HOMEPAGE="https://vfox.lhan.me https://github.com/version-fox/vfox"
@@ -28,9 +28,6 @@ src_install() {
 
 	dodoc README.md
 
-	insinto /usr/share/bash-completion/completions
-	newins completions/bash_autocomplete ${PN}
-
-	insinto /usr/share/zsh/site-functions
-	newins completions/zsh_autocomplete _${PN}
+	newbashcomp completions/bash_autocomplete ${PN}
+	newzshcomp completions/zsh_autocomplete _${PN}
 }
