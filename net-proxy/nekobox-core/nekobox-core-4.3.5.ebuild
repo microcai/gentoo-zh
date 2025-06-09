@@ -12,7 +12,7 @@ SRC_URI="https://github.com/Mahdi-zarei/nekoray/archive/refs/tags/${PV}.tar.gz -
 
 S="${WORKDIR}/nekoray-${PV}/core/server"
 
-LICENSE="GPL-3+"
+LICENSE="GPL-3+ MIT BSD Apache-2.0 MPL-2.0 Unlicense ISC"
 SLOT="0"
 KEYWORDS="~amd64"
 
