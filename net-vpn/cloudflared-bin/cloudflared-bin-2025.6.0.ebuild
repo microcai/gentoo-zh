@@ -13,17 +13,12 @@ SRC_URI+="
 	arm64? (
 		https://github.com/cloudflare/cloudflared/releases/download/${PV}/cloudflared-linux-arm64
 			-> cloudflared-${PV}-arm64
-	)
-	doc? (
-		https://raw.githubusercontent.com/cloudflare/cloudflared/refs/tags/${PV}/RELEASE_NOTES
-			-> RELEASE_NOTES-${PV}
 	)"
 S=${WORKDIR}
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="-* amd64 ~arm64"
-IUSE="doc"
 
 RESTRICT="strip"
 
@@ -41,12 +36,9 @@ src_prepare() {
 	                die "Unsupported arch ${ARCH}"
 	                ;;
 	esac
-
-	use doc && (cp "${DISTDIR}/RELEASE_NOTES-${PV}" release_notes || die)
 }
 
 src_install() {
 	exeinto /usr/bin
 	doexe "${S}/cloudflared"
-	use doc && dodoc "${S}/release_notes"
 }
