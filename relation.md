@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-11 19:18:01 CST)
+(The last generation time: 2025-06-11 20:24:06 CST)
 
 ### Packages
 
@@ -636,7 +636,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-vpn/cloudflared                             | 2025.5.0           |            | https://github.com/cloudflare/cloudflared                                               | Cloudflare Tunnel client (formerly Argo Tunnel)
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-vpn/cloudflared-bin                         | 2025.5.0           |            | https://github.com/cloudflare/cloudflared                                               | Cloudflare Tunnel client (formerly Argo Tunnel)
+ net-vpn/cloudflared-bin                         | 2025.6.0           |            | https://github.com/cloudflare/cloudflared                                               | Cloudflare Tunnel client (formerly Argo Tunnel)
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-vpn/sstp-server                             | 0.6.0              |            | https://github.com/sorz/sstp-server/                                                    | A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
