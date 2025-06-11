@@ -15,7 +15,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND="net-libs/webkit-gtk:4"
+RDEPEND="net-libs/webkit-gtk:4.1"
 
 RESTRICT="strip"
 
