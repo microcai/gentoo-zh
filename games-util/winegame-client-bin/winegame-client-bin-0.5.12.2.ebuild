@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{10..13} )
 PYTHON_REQ_USE="sqlite,threads(+)"
 
 inherit unpacker xdg python-r1
@@ -38,7 +38,7 @@ RDEPEND="
 	')
 	gnome-base/gnome-desktop:3[introspection]
 	gnome-extra/zenity
-	net-libs/webkit-gtk:4[introspection]
+	net-libs/webkit-gtk:4.1[introspection]
 	media-sound/fluid-soundfont
 	x11-apps/mesa-progs
 	x11-apps/xrandr
