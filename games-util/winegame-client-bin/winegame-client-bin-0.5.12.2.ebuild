@@ -11,7 +11,11 @@ inherit unpacker xdg python-r1
 DESCRIPTION="An open source gaming platform for GNU/Linux"
 HOMEPAGE="https://winegame.net/"
 SRC_URI="https://file.winegame.net/packages/debian/${PV}/net.winegame.client_${PV}_amd64.deb"
+
+S=${WORKDIR}
+
 LICENSE="GPL-3"
+
 SLOT="0"
 KEYWORDS="~amd64"
 
@@ -46,8 +50,6 @@ RDEPEND="
 	x11-libs/gtk+:3[introspection]
 	virtual/wine
 "
-
-S=${WORKDIR}
 
 src_install() {
 	insinto /
