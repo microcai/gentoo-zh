@@ -5,7 +5,7 @@ EAPI=8
 
 DISTUTILS_USE_PEP517=poetry
 DISTUTILS_SINGLE_IMPL=1
-PYTHON_COMPAT=( python3_{10..13} )
+PYTHON_COMPAT=( python3_{11..13} )
 
 inherit distutils-r1 pypi
 
@@ -20,10 +20,11 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="
-	>=app-i18n/opencc-1.1.7[python(-),${PYTHON_SINGLE_USEDEP}]
+	>=app-i18n/opencc-1.1.9[python(-),${PYTHON_SINGLE_USEDEP}]
 	$(python_gen_cond_dep '
-		>=dev-python/pypinyin-0.52.0[${PYTHON_USEDEP}]
-		>=dev-python/urllib3-2.2.2[${PYTHON_USEDEP}]
+		>=dev-python/pypinyin-0.54.0[${PYTHON_USEDEP}]
+		>=dev-python/pyyaml-6.0.2[${PYTHON_USEDEP}]
+		>=dev-python/requests-2.32.4[${PYTHON_USEDEP}]
 	')
 "
 
