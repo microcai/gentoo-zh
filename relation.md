@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-14 03:57:56 CST)
+(The last generation time: 2025-06-14 18:38:29 CST)
 
 ### Packages
 
@@ -31,7 +31,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-custom-pinyin-dictionary | 20250101           |            | https://github.com/wuhgit/CustomPinyinDictionary                                        | Fcitx5 自建拼音输入法词库，百万常用词汇量。
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-moegirl                  | 20250509           |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
+ app-dicts/fcitx-pinyin-moegirl                  | 20250610           |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-sougou-baidu             | 20250520           |            | https://github.com/blackteahamburger/fcitx5-pinyin-sougou-baidu                         | Sougou & Baidu Pinyin dictionary for Fcitx5 and RIME
    app-i18n/ibus-rime                            | 9999               | RD         | http://code.google.com/p/rimeime/                                                       | Rime Input Method Engine for IBus Framework
@@ -244,7 +244,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/menuinst                             | 2.2.0              |            | https://github.com/conda/menuinst                                                       | Cross platform menu item installation
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/mw2fcitx                             | 0.22.0             |            | https://github.com/outloudvi/mw2fcitx                                                   | Build fcitx5 libraries from MediaWiki sites
+ dev-python/mw2fcitx                             | 0.24.0             |            | https://github.com/outloudvi/mw2fcitx                                                   | Build fcitx5 libraries from MediaWiki sites
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/nvchecker                            | 2.18               |            | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -687,7 +687,7 @@
  sys-fs/systemd-zpool-scrub                      | 9999               |            | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/cachyos-sources                      | 6.14.8             |            | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
-                                                 | 6.15.1             |            |                                                                                         |
+                                                 | 6.15.2             |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/mkinitcpio                           | 38                 |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
                                                  | 39.2               |            |                                                                                         |
