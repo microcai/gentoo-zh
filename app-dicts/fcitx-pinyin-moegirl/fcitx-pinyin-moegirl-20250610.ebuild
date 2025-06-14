@@ -35,10 +35,8 @@ python_check_deps() {
 }
 
 src_prepare() {
-	# remove unneeded outputs
-	sed -i -e '10d' utils/moegirl_dict.py || die
-	use !fcitx && (sed -i -e '26,30d' utils/moegirl_dict.py || die)
-	use !rime && (sed -i -e '21,26d' utils/moegirl_dict.py || die)
+	use !fcitx && (sed -i -e '27,31d' utils/moegirl_dict.py || die)
+	use !rime && (sed -i -e '22,27d' utils/moegirl_dict.py || die)
 	default
 }
 
