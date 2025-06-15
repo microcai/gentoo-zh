@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{9..11} )
+PYTHON_COMPAT=( python3_{9..13} )
 PYTHON_REQ_USE="sqlite,threads(+)"
 
 inherit unpacker xdg python-r1
@@ -11,6 +11,9 @@ inherit unpacker xdg python-r1
 DESCRIPTION="An open source gaming platform for GNU/Linux"
 HOMEPAGE="https://winegame.net/"
 SRC_URI="https://file.winegame.net/packages/debian/${PV}/net.winegame.client_${PV}_amd64.deb"
+
+S=${WORKDIR}
+
 LICENSE="GPL-3"
 SLOT="0"
 
@@ -39,7 +42,7 @@ RDEPEND="
 	')
 	gnome-base/gnome-desktop:3[introspection]
 	gnome-extra/zenity
-	net-libs/webkit-gtk:4[introspection]
+	net-libs/webkit-gtk:4.1[introspection]
 	media-sound/fluid-soundfont
 	x11-apps/mesa-progs
 	x11-apps/xrandr
@@ -47,8 +50,6 @@ RDEPEND="
 	x11-libs/gtk+:3[introspection]
 	virtual/wine
 "
-
-S=${WORKDIR}
 
 src_install() {
 	insinto /
