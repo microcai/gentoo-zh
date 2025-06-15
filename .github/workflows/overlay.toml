@@ -1353,13 +1353,6 @@ github = "springzfx/cgproxy"
 use_latest_release = true
 prefix = "v"
 
-["net-proxy/clash-nyanpasu"]
-source = "github"
-github = "keiko233/clash-nyanpasu"
-use_latest_release = true
-prefix = "v"
-github_account = "liuyujielol"
-
 ["net-proxy/clash-rs"]
 source = "github"
 github = "Watfaq/clash-rs"
