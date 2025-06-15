@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-15 16:38:45 CST)
+(The last generation time: 2025-06-16 06:23:55 CST)
 
 ### Packages
 
@@ -212,6 +212,8 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-lang/luajit                                 | 2.1.1727870382     |            | https://luajit.org/                                                                     | Just-In-Time Compiler for the Lua programming language
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-lang/quickjs                                | 2024.01.13         |            | https://bellard.org/quickjs/                                                            | Small embeddable Javascript engine
+-------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/libratbag                              | 0.18               |            | https://github.com/libratbag/libratbag                                                  | Library to configure gaming mice
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/lunar-calendar                         | 3.0.1              |            | https://github.com/yetist/lunar-calendar                                                | a gtk+ calendar widget for chinese lunar library
@@ -297,7 +299,7 @@
  dev-vcs/sourcegit-bin                           | 2025.21            |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                       | 1.19.8             |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
-                                                 | 1.20.9             |            |                                                                                         |
+                                                 | 1.20.12            |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-arcade/osu-lazer-bin                      | 2025.424.0-r1      |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away!
                                                  | 2025.607.0-r1      |            |                                                                                         |
@@ -313,7 +315,7 @@
  games-roguelike/tsl                             | 0.40-r2            |            | http://www.happyponyland.net/roguelike.php                                              | The Slimy Lichmummy, an adventure game similar in style to the classic Rogue
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-server/vintagestory-server                | 1.19.8             |            | https://www.vintagestory.at/                                                            | Dedicated game server for Vintage Story
-                                                 | 1.20.9             |            |                                                                                         |
+                                                 | 1.20.12            |            |                                                                                         |
    acct-group/vintagestory                       | 0                  | RD         |                                                                                         | User group for Vintage Story Server
    acct-user/vintagestory                        | 0                  | RD         |                                                                                         | User for Vintage Story Server
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -563,23 +565,21 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/cgproxy                               | 0.20-r1            |            | https://github.com/springzfx/cgproxy                                                    | Transparent Proxy with cgroup v2
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/clash-nyanpasu                        | 1.5.1              |            | https://github.com/LibNyanpasu/clash-nyanpasu                                           | Clash GUI based on tauri
-   dev-lang/quickjs                              | 2024.01.13         | BD         | https://bellard.org/quickjs/                                                            | Small embeddable Javascript engine
-   net-proxy/clash-rs                            | 0.7.8              | RD         | https://watfaq.gitbook.io/clashrs-user-manual/                                          | Custom protocol, rule based network proxy
-   net-proxy/mihomo                              | 1.19.10            |  D, RD     | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
-     acct-group/mihomo                           | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
-     acct-user/mihomo                            | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
-   sys-apps/pnpm                                 | 9.15.5             | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
-                                                 | 10.12.1            |            |                                                                                         |
+ net-proxy/clash-rs                              | 0.7.8              |            | https://watfaq.gitbook.io/clashrs-user-manual/                                          | Custom protocol, rule based network proxy
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-verge-bin                       | 1.6.6              |            | https://github.com/clash-verge-rev/clash-verge-rev                                      | (Continuation) of Clash Meta GUI based on Tauri.
                                                  | 2.3.0              |            |                                                                                         |
+   net-proxy/mihomo                              | 1.19.10            |  D, RD     | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
+     acct-group/mihomo                           | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
+     acct-user/mihomo                            | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/dae                                   | 1.0.0              |            | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
                                                  | 9999               |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/daed                                  | 0.9.0              |            | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
                                                  | 9999               |            |                                                                                         |
+   sys-apps/pnpm                                 | 9.15.5             | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
+                                                 | 10.12.1            |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/hysteria                              | 2.6.2              |            | https://github.com/apernet/hysteria                                                     | A powerful, lightning fast and censorship resistant proxy.
    acct-group/hysteria                           | 0                  |  D, RD     |                                                                                         | A powerful, lightning fast and censorship resistant proxy.
