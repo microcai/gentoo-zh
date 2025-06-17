@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-17 10:24:17 CST)
+(The last generation time: 2025-06-17 10:25:57 CST)
 
 ### Packages
 
@@ -402,7 +402,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/netease-cloud-music                 | 1.2.1              |            | https://music.163.com                                                                   | Netease Cloud Music, converted from .deb package
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/netease-cloud-music-gtk             | 2.5.0              |            | https://github.com/gmg137/netease-cloud-music-gtk                                       | netease cloud music player based on Rust & GTK for Linux
+ media-sound/netease-cloud-music-gtk             | 2.5.2              |            | https://github.com/gmg137/netease-cloud-music-gtk                                       | netease cloud music player based on Rust & GTK for Linux
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/qqmusic                             | 1.1.7              |            | https://y.qq.com/                                                                       | Tencent QQ Music, converted from .deb package
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
