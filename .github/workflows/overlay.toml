@@ -49,12 +49,6 @@ github = "zchunk/zchunk"
 use_latest_tag = true
 github_account = "HougeLangley"
 
-["app-backup/btrfs-assistant"]
-source = "gitlab"
-gitlab = "btrfs-assistant/btrfs-assistant"
-use_max_tag = true
-github_account = "st0nie"
-
 ["app-backup/restic-rest-server"]
 source = "github"
 github = "restic/rest-server"
