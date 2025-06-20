@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-20 16:19:17 CST)
+(The last generation time: 2025-06-20 21:08:15 CST)
 
 ### Packages
 
@@ -30,7 +30,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-moegirl                  | 20250610           |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-sougou-baidu             | 20250520           |            | https://github.com/blackteahamburger/fcitx5-pinyin-sougou-baidu                         | Sougou & Baidu Pinyin dictionary for Fcitx5 and RIME
+ app-dicts/fcitx-pinyin-sougou-baidu             | 20250620           |            | https://github.com/blackteahamburger/fcitx5-pinyin-sougou-baidu                         | Sougou & Baidu Pinyin dictionary for Fcitx5 and RIME
    app-i18n/ibus-rime                            | 9999               | RD         | http://code.google.com/p/rimeime/                                                       | Rime Input Method Engine for IBus Framework
    app-text/imewlconverter                       | 3.2.0              | BD         | https://github.com/studyzy/imewlconverter                                               | An open source and free input method dictionary conversion program
                                                  | 9999               |            |                                                                                         |
@@ -688,7 +688,7 @@
  sys-fs/systemd-zpool-scrub                      | 9999               |            | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/cachyos-sources                      | 6.14.8             |            | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
-                                                 | 6.15.2             |            |                                                                                         |
+                                                 | 6.15.3             |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/mkinitcpio                           | 38                 |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
                                                  | 39.2               |            |                                                                                         |
@@ -707,11 +707,11 @@
    sys-kernel/xanmod-sources                     | 6.14.10            | RD         | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-domain-list-community             | 0                  |            |                                                                                         | Virtual for v2ray-domain-list-community
-   dev-libs/v2ray-domain-list-community          | 20250508005311     | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+   dev-libs/v2ray-domain-list-community          | 20250608120644     | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
    dev-libs/v2ray-domain-list-community-bin      | 20250608120644     | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-geoip                             | 0                  |            |                                                                                         | Virtual for v2ray-geoip
-   dev-libs/v2ray-geoip                          | 202505050146       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
+   dev-libs/v2ray-geoip                          | 202506050146       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                      | 202506050146       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/cherry-studio-bin                      | 1.4.4              |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
