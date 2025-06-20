@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-20 16:18:34 CST)
+(The last generation time: 2025-06-20 16:19:17 CST)
 
 ### Packages
 
@@ -127,6 +127,8 @@
    acct-group/keyd                               | 0                  |  D, RD     |                                                                                         | A key remapping daemon for linux
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/opencode                               | 0.0.53             |            | https://github.com/opencode-ai/opencode                                                 | AI coding agent, built for the terminal
+-------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-misc/opencode-bin                           | 0.1.108            |            | https://github.com/sst/opencode                                                         | AI coding agent, built for the terminal
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/rmtrash                                | 1.14               |            | https://github.com/PhrozenByte/rmtrash                                                  | trash-put made compatible to GNUs rm and rmdir
                                                  | 1.15               |            |                                                                                         |
