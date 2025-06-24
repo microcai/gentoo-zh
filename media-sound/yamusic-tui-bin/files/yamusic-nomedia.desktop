@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=yamusic-nomedia
+Exec=yamusic-nomedia
+Type=Application
+Terminal=true
