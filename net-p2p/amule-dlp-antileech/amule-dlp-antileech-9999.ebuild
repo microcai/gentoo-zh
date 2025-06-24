@@ -1,9 +1,9 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-WX_GTK_VER="3.0"
+WX_GTK_VER="3.2-gtk3"
 inherit autotools git-r3 wxwidgets
 DESCRIPTION="$PN, dynamic DLP library for amule-dlp"
 HOMEPAGE="https://github.com/persmule/amule-dlp.antileech"
@@ -14,7 +14,7 @@ SLOT="0"
 IUSE="X"
 
 DEPEND="x11-libs/wxGTK:${WX_GTK_VER}"
-RDEPEND="net-p2p/amule-dlp[dynamic]"
+RDEPEND="net-p2p/amule-dlp"
 
 src_prepare() {
 	default
