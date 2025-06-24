@@ -1,4 +1,0 @@
-# Because of bug #893668, those packages will be removed
-# on 2025-06-21.
-net-proxy/clash-nyanpasu
-=net-proxy/clash-verge-bin-1.6.6
