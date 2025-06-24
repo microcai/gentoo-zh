@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-24 23:36:00 CST)
+(The last generation time: 2025-06-24 23:41:13 CST)
 
 ### Packages
 
@@ -321,9 +321,6 @@
    acct-group/vintagestory                       | 0                  | RD         |                                                                                         | User group for Vintage Story Server
    acct-user/vintagestory                        | 0                  | RD         |                                                                                         | User for Vintage Story Server
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- games-util/winegame-client-bin                  | 0.5.10.5           |            | https://winegame.net/                                                                   | An open source gaming platform for GNU/Linux
-                                                 | 0.5.12.2           |            |                                                                                         |
--------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  gui-apps/crystal-dock                           | 2.11               |            | https://github.com/dangvd/crystal-dock                                                  | Cool dock (desktop panel) for Linux desktop
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  gui-wm/swayfx                                   | 0.3.2              |            | https://github.com/WillPower3309/swayfx                                                 | SwayFX: Sway, but with eye candy!
@@ -569,11 +566,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-rs                              | 0.8.0              |            | https://watfaq.gitbook.io/clashrs-user-manual/                                          | Custom protocol, rule based network proxy
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/clash-verge-bin                       | 1.6.6              |            | https://github.com/clash-verge-rev/clash-verge-rev                                      | (Continuation) of Clash Meta GUI based on Tauri.
-                                                 | 2.3.1              |            |                                                                                         |
-   net-proxy/mihomo                              | 1.19.10            |  D, RD     | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
-     acct-group/mihomo                           | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
-     acct-user/mihomo                            | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
+ net-proxy/clash-verge-bin                       | 2.3.1              |            | https://github.com/clash-verge-rev/clash-verge-rev                                      | (Continuation) of Clash Meta GUI based on Tauri.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/dae                                   | 1.0.0              |            | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
                                                  | 9999               |            |                                                                                         |
@@ -590,6 +583,10 @@
  net-proxy/juicity                               | 0.4.3              |            | https://github.com/juicity/juicity                                                      | juicity is a quic-based proxy protocol.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/metacubexd                            | 1.187.1            |            | https://github.com/MetaCubeX/metacubexd                                                 | The Official Mihomo Dashboard
+-------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ net-proxy/mihomo                                | 1.19.10            |            | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
+   acct-group/mihomo                             | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
+   acct-user/mihomo                              | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/mihomo-party-bin                      | 1.7.3              |            | https://mihomo.party                                                                    | Mihomo Party
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
