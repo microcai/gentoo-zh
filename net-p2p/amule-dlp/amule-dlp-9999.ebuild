@@ -4,7 +4,7 @@
 EAPI=8
 WX_GTK_VER="3.2-gtk3"
 
-inherit wxwidgets xdg-utils autotools git-r3
+inherit wxwidgets xdg-utils git-r3
 DESCRIPTION="aMule with DLP patch, the all-platform eMule p2p client"
 HOMEPAGE="https://github.com/persmule/amule-dlp"
 EGIT_REPO_URI="https://github.com/persmule/amule-dlp"
