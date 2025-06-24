@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-24 23:27:02 CST)
+(The last generation time: 2025-06-24 23:36:00 CST)
 
 ### Packages
 
@@ -616,9 +616,9 @@
                                                  | 25.6.8             |            |                                                                                         |
        app-alternatives/v2ray-geoip              | 0-r2               |  D, RD     |                                                                                         | symlink for v2ray-geoip
        app-alternatives/v2ray-geosite            | 0-r2               |  D, RD     |                                                                                         | symlink for v2ray-geosite
-     net-proxy/v2ray                             | 5.32.0             | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
+     net-proxy/v2ray                             | 5.33.0             | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
      net-proxy/v2ray-bin                         | 4.45.0-r2          | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
-                                                 | 5.32.0             |            |                                                                                         |
+                                                 | 5.33.0             |            |                                                                                         |
    net-proxy/trojan-go-fork                      | 2025.05.04         | RD         | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/serenity                              | 1.1.0_beta3        |            | https://serenity.sagernet.org/                                                          | The configuration generator for sing-box
