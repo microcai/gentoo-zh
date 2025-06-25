@@ -967,14 +967,6 @@ prefix = "v"
 use_latest_release = true
 github_account = "liuyujielol"
 
-["media-sound/amarok"]
-source = "gitlab"
-host = "invent.kde.org"
-gitlab = "multimedia/amarok"
-use_max_tag = true
-prefix = "v"
-github_account = "microcai"
-
 # live package only
 #["media-sound/barva"]
 
