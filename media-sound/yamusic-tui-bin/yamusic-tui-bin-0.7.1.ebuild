@@ -6,7 +6,7 @@ EAPI=8
 inherit desktop
 DESCRIPTION="An unofficial Yandex Music terminal client, with offline mode and My Wave"
 HOMEPAGE="https://github.com/DECE2183/yamusic-tui"
-SRC_URI="https://github.com/DECE2183/yamusic-tui/releases/download/v${PV}/yamusic-nomedia"
+SRC_URI="https://github.com/DECE2183/yamusic-tui/releases/download/v${PV}/yamusic-nomedia -> ${P}"
 
 S="${WORKDIR}"
 
@@ -20,7 +20,7 @@ QA_PREBUILT="*"
 # Against "QA Notice: Files built without respecting CFLAGS have been detected"
 
 src_install() {
-	newbin "${DISTDIR}/yamusic-nomedia" yamusic-nomedia
+	newbin "${DISTDIR}/${P}" yamusic-nomedia
 	domenu "${FILESDIR}/yamusic-nomedia.desktop"
 }
 
