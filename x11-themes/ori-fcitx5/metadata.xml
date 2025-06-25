@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>akira.uestc@gmail.com</email>
+		<name>Akira-uestc</name>
+	</maintainer>
+	<upstream>
+		<remote-id type='github'>Reverier-Xu/Ori-fcitx5</remote-id>
+	</upstream>
+</pkgmetadata>
