@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-26 10:19:26 CST)
+(The last generation time: 2025-06-26 10:21:42 CST)
 
 ### Packages
 
@@ -704,6 +704,7 @@
                                                  | 6.6.8              |            |                                                                                         |
    sys-kernel/xanmod-kernel                      | 6.15.3             | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
    sys-kernel/xanmod-rt                          | 6.0.11             | RD         | https://xanmod.org                                                                      | XanMod RT sources and CJKTTY options.
+                                                 | 6.12.31            |            |                                                                                         |
    sys-kernel/xanmod-sources                     | 6.15.3             | RD         | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-domain-list-community             | 0                  |            |                                                                                         | Virtual for v2ray-domain-list-community
