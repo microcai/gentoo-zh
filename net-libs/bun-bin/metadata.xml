@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<upstream>
+		<remote-id type="github">oven-sh/bun</remote-id>
+	</upstream>
+	<use>
+		<flag name="symlink">Install node symlink to fix shell shebang</flag>
+	</use>
+</pkgmetadata>
