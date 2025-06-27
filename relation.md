@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-26 14:54:05 CST)
+(The last generation time: 2025-06-27 18:18:30 CST)
 
 ### Packages
 
@@ -458,8 +458,7 @@
                                                  | 5.1.45             |            |                                                                                         |
      app-emulation/deepin-wine-plugin            | 5.1.13-r1          |  D, RD     | https://www.deepin.org                                                                  | Deepin Wine plugin
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/dingtalk                                 | 7.6.25.4122001     |            | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
-                                                 | 7.6.45.5041701     |            |                                                                                         |
+ net-im/dingtalk                                 | 7.6.45.5062501     |            | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
    dev-libs/libthai                              | 0.1.28             |  D, RD     | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
                                                  | 0.1.29             |            |                                                                                         |
      dev-libs/libdatrie                          | 0.2.13             |  D, RD     | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
@@ -722,13 +721,13 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/follow-bin                             | 0.5.0              |            | https://follow.is/                                                                      | Next generation information browser
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-client/brave-bin                            | 1.79.126           |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
+ www-client/brave-bin                            | 1.80.113           |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-client/thorium                              | 130.0.6723.174     |            | #                                                                                       | [Something error when parsing.]
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                           | 1.16               |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-servers/miniserve                           | 0.29.0             |            | https://github.com/svenstaro/miniserve                                                  | For when you really just want to serve some files over HTTP right now!
+ www-servers/miniserve                           | 0.30.0             |            | https://github.com/svenstaro/miniserve                                                  | For when you really just want to serve some files over HTTP right now!
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/woof                                | 9999               |            | http://www.home.unix-ag.org/simon/woof.html                                             | an ad-hoc single file webserver
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
