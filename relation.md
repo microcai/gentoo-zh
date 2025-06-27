@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-28 07:12:46 CST)
+(The last generation time: 2025-06-28 07:15:07 CST)
 
 ### Packages
 
@@ -729,7 +729,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                           | 1.16               |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-servers/miniserve                           | 0.30.0             |            | https://github.com/svenstaro/miniserve                                                  | For when you really just want to serve some files over HTTP right now!
+ www-servers/miniserve                           | 0.31.0             |            | https://github.com/svenstaro/miniserve                                                  | For when you really just want to serve some files over HTTP right now!
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/woof                                | 9999               |            | http://www.home.unix-ag.org/simon/woof.html                                             | an ad-hoc single file webserver
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
