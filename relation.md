@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-27 18:39:36 CST)
+(The last generation time: 2025-06-28 05:12:24 CST)
 
 ### Packages
 
@@ -601,7 +601,7 @@
  net-proxy/qvplugin-command                      | 3.0.0              |            | https://github.com/Qv2ray/QvPlugin-Command                                              | Plugin for Qv2ray to run any commands when something happens in Qv2ray
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-naiveproxy                   | 3.0.0              |            | https://github.com/Qv2ray/QvPlugin-NaiveProxy                                           | Plugin for Qv2ray to support NaiveProxy in Qv2ray
-   net-proxy/naiveproxy-bin                      | 137.0.7151.44_p2   | RD         | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
+   net-proxy/naiveproxy-bin                      | 138.0.7204.35_p1   | RD         | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-ss                           | 3.0.0-r1           |            | https://github.com/Qv2ray/QvPlugin-SS                                                   | Plugin for Qv2ray to support SIP003 in Qv2ray
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -618,7 +618,7 @@
      net-proxy/v2ray                             | 5.33.0             | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
      net-proxy/v2ray-bin                         | 4.45.0-r2          | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
                                                  | 5.33.0             |            |                                                                                         |
-   net-proxy/trojan-go-fork                      | 2025.05.04         | RD         | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
+   net-proxy/trojan-go-fork                      | 2025.06.22         | RD         | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/serenity                              | 1.1.0_beta3        |            | https://serenity.sagernet.org/                                                          | The configuration generator for sing-box
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
