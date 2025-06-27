@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-06-28 05:12:24 CST)
+(The last generation time: 2025-06-28 07:12:46 CST)
 
 ### Packages
 
@@ -327,6 +327,8 @@
  kde-misc/plasma-applet-netspeed-widget          | 2.0                |            | https://www.kde-look.org/p/998895/                                                      | Plasma 5 widget that displays the currently used network bandwidth.
                                                  | 3.1                |            |                                                                                         |
                                                  | 9999               |            |                                                                                         |
+-------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ mate-base/caja-bin                              | 1.28.0             |            | https://wiki.mate-desktop.org/mate-desktop/applications/caja                            | GUI file manager, fork of GNOME Files (Nautilus); supports SSH, FTP, WebDav
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/Plangothic                          | 2.9.5771           |            | https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project                  | 遍黑体项目（Plangothic Project）
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
