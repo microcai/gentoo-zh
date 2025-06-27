@@ -121,7 +121,7 @@ S="${WORKDIR}/chromium-${PV}"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE_SYSTEM_LIBS="brotli crc32c double-conversion ffmpeg +harfbuzz +icu jsoncpp +libevent +libusb +openh264 openjpeg +png re2 snappy woff2 +zstd"
+IUSE_SYSTEM_LIBS="av1 brotli crc32c double-conversion ffmpeg +harfbuzz +icu jsoncpp +libevent +libusb libvpx +openh264 openjpeg +png re2 snappy woff2 +zstd"
 IUSE="+X bluetooth cfi convert-dict cups cpu_flags_arm_neon custom-cflags debug enable-driver gtk4 hangouts headless hevc kerberos lto libcxx nvidia +official +optimize-webui pax-kernel +pgo +proprietary-codecs pulseaudio qt6 screencast selinux test ungoogled vaapi wayland widevine cpu_flags_ppc_vsx3"
 
 for i in ${IUSE_SYSTEM_LIBS}; do
@@ -145,6 +145,7 @@ REQUIRED_USE="
 	screencast? ( wayland )
 	!headless? ( || ( X wayland ) )
 	!proprietary-codecs? ( !hevc )
+	vaapi? ( !system-av1 !system-libvpx )
 "
 
 COMMON_X_DEPEND="
@@ -170,6 +171,7 @@ COMMON_SNAPSHOT_DEPEND="
 	thorium-libjxl? ( media-libs/libjxl )
 	system-openjpeg? ( media-libs/openjpeg:2= )
 	system-re2? ( >=dev-libs/re2-0.2019.08.01:= )
+	system-libvpx? ( >=media-libs/libvpx-1.13.0:=[postproc] )
 	system-libusb? ( virtual/libusb:1 )
 	system-icu? ( >=dev-libs/icu-73.0:= )
 	>=dev-libs/libxml2-2.12.4:=[icu]
@@ -185,6 +187,10 @@ COMMON_SNAPSHOT_DEPEND="
 	>=media-libs/libwebp-0.4.0:=
 	media-libs/mesa:=[gbm(+)]
 	>=media-libs/openh264-1.6.0:=
+	system-av1? (
+		>=media-libs/dav1d-1.0.0:=
+		>=media-libs/libaom-3.7.0:=
+	)
 	sys-libs/zlib:=
 	x11-libs/libdrm:=
 	sys-libs/zlib:=
@@ -548,6 +554,7 @@ src_prepare() {
 		"${FILESDIR}/chromium-130-fix-includes.patch" # https://github.com/Alex313031/thorium/issues/978
 		"${FILESDIR}/chromium-130-fix-building-without-tflite-lib.patch" # https://github.com/Alex313031/thorium/issues/978
 		"${FILESDIR}/chromium-135-gperf.patch"
+		"${FILESDIR}/chromium-137-fix-for-kde.patch"
 	)
 
 	shopt -s globstar nullglob
@@ -669,6 +676,18 @@ src_prepare() {
 			eapply -R "${FILESDIR}/ffmpeg-nb_coded_side_data-dolby.diff"
 			eapply -R "${FILESDIR}/ffmpeg-nb_coded_side_data-r1.patch"
 		fi
+	fi
+
+	if use system-av1; then
+		PATCHES+=(
+			"${FILESDIR}/chromium-system-av1.patch"
+		)
+	fi
+
+	if use system-libvpx; then
+		PATCHES+=(
+			"${FILESDIR}/chromium-system-libvpx.patch"
+		)
 	fi
 
 	if use system-openjpeg ; then
@@ -1009,7 +1028,7 @@ src_prepare() {
 	keeplibs+=(
 		third_party/libva_protected_content
 	)
-	keeplibs+=(
+	use system-libvpx || keeplibs+=(
 		third_party/libvpx
 		third_party/libvpx/source/libvpx/third_party/x86inc
 	)
@@ -1180,14 +1199,16 @@ src_prepare() {
 		keeplibs+=( third_party/zstd )
 	fi
 
-	keeplibs+=(
-		third_party/dav1d
-		third_party/libaom
-		third_party/libaom/source/libaom/third_party/fastfeat
-		third_party/libaom/source/libaom/third_party/SVT-AV1
-		third_party/libaom/source/libaom/third_party/vector
-		third_party/libaom/source/libaom/third_party/x86inc
-	)
+	if ! use system-av1; then
+		keeplibs+=(
+			third_party/dav1d
+			third_party/libaom
+			third_party/libaom/source/libaom/third_party/fastfeat
+			third_party/libaom/source/libaom/third_party/SVT-AV1
+			third_party/libaom/source/libaom/third_party/vector
+			third_party/libaom/source/libaom/third_party/x86inc
+		)
+	fi
 
 	if use libcxx; then
 		keeplibs+=( third_party/libc++ )
@@ -1384,8 +1405,14 @@ src_configure() {
 	if use system-zstd; then
 		gn_system_libraries+=( zstd )
 	fi
+	if use system-av1; then
+		gn_system_libraries+=( dav1d libaom )
+	fi
 	if use system-libusb; then
 		gn_system_libraries+=( libusb )
+	fi
+	if use system-libvpx; then
+		gn_system_libraries+=( libvpx )
 	fi
 	if use thorium-libjxl; then
 		gn_system_libraries+=( libjxl )
