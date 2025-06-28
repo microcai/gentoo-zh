@@ -8,6 +8,7 @@ EAPI=8
 CRATES="
 "
 
+RUST_MIN_VER="1.85.0"
 inherit cargo
 
 DESCRIPTION="For when you really just want to serve some files over HTTP right now!"
