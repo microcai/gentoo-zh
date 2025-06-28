@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="4"
+K_GENPATCHES_VER="5"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 
@@ -14,21 +14,20 @@ detect_arch
 
 MY_KV="${KV_MAJOR}.${KV_MINOR}"
 AUFS_V="20250602"
-GIT_COMMIT_CACHYOS="1fc243888f62589785f2a9502445aa6ea2b3188f"
+GIT_COMMIT_CACHYOS="865e7c9b83309b8e78b4539f26b4e13b604beed6"
 
 DESCRIPTION="Full Cachyos sources including the Gentoo patchset for the ${MY_KV} kernel tree"
 HOMEPAGE="https://cachyos.org"
 CACHYOS_URI="https://raw.githubusercontent.com/CachyOS/kernel-patches/${GIT_COMMIT_CACHYOS}/${MY_KV}"
 SRC_URI="
 	${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
-	${CACHYOS_URI}/0006-cachy.patch -> ${P}-0006-cachy.patch
+	${CACHYOS_URI}/0005-cachy.patch -> ${P}-0005-cachy.patch
 	amd-pstate? ( ${CACHYOS_URI}/0001-amd-pstate.patch -> ${P}-0001-amd-pstate.patch )
 	asus? ( ${CACHYOS_URI}/0002-asus.patch -> ${P}-0002-asus.patch )
-	async-shutdown? ( ${CACHYOS_URI}/0003-async-shutdown.patch -> ${P}-0003-async-shutdown.patch )
-	bbr3? ( ${CACHYOS_URI}/0004-bbr3.patch -> ${P}-0004-bbr3.patch )
-	block? ( ${CACHYOS_URI}/0005-block.patch -> ${P}-0005-block.patch )
-	fixes? ( ${CACHYOS_URI}/0007-fixes.patch -> ${P}-0007-fixes.patch )
-	t2? ( ${CACHYOS_URI}/0008-t2.patch -> ${P}-0008-t2.patch )
+	bbr3? ( ${CACHYOS_URI}/0003-bbr3.patch -> ${P}-0003-bbr3.patch )
+	block? ( ${CACHYOS_URI}/0004-block.patch -> ${P}-0004-block.patch )
+	fixes? ( ${CACHYOS_URI}/0006-fixes.patch -> ${P}-0006-fixes.patch )
+	t2? ( ${CACHYOS_URI}/0007-t2.patch -> ${P}-0007-t2.patch )
 	bore? ( ${CACHYOS_URI}/sched/0001-bore-cachy.patch -> ${P}-0001-bore-cachy.patch )
 	prjc? ( ${CACHYOS_URI}/sched/0001-prjc-cachy.patch -> ${P}-0001-prjc-cachy.patch )
 	polly? ( ${CACHYOS_URI}/misc/0001-clang-polly.patch -> ${P}-0001-clang-polly.patch )
@@ -42,7 +41,7 @@ SRC_URI="
 	)
 "
 KEYWORDS="~amd64"
-IUSE="amd-pstate asus async-shutdown bbr3 block +fixes t2 +bore prjc polly rt dkms-clang aufs deckify"
+IUSE="amd-pstate asus bbr3 block +fixes t2 +bore prjc polly rt dkms-clang aufs deckify"
 REQUIRED_USE="?? ( bore prjc )"
 
 pkg_pretend() {
@@ -53,12 +52,11 @@ pkg_pretend() {
 src_prepare() {
 	use amd-pstate && eapply "${DISTDIR}/${P}-0001-amd-pstate.patch"
 	use asus && eapply "${DISTDIR}/${P}-0002-asus.patch"
-	use async-shutdown && eapply "${DISTDIR}/${P}-0003-async-shutdown.patch"
-	use bbr3 && eapply "${DISTDIR}/${P}-0004-bbr3.patch"
-	use block && eapply "${DISTDIR}/${P}-0005-block.patch"
-	eapply "${DISTDIR}/${P}-0006-cachy.patch"
-	use fixes && eapply "${DISTDIR}/${P}-0007-fixes.patch"
-	use t2 && eapply "${DISTDIR}/${P}-0008-t2.patch"
+	use bbr3 && eapply "${DISTDIR}/${P}-0003-bbr3.patch"
+	use block && eapply "${DISTDIR}/${P}-0004-block.patch"
+	eapply "${DISTDIR}/${P}-0005-cachy.patch"
+	use fixes && eapply "${DISTDIR}/${P}-0006-fixes.patch"
+	use t2 && eapply "${DISTDIR}/${P}-0007-t2.patch"
 	use bore && eapply "${DISTDIR}/${P}-0001-bore-cachy.patch"
 	use prjc && eapply "${DISTDIR}/${P}-0001-prjc-cachy.patch"
 	use polly && eapply "${DISTDIR}/${P}-0001-clang-polly.patch"
