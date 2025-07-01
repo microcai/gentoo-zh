@@ -9,13 +9,12 @@ DESCRIPTION="juicity is a quic-based proxy protocol."
 HOMEPAGE="https://github.com/juicity/juicity"
 SRC_URI="https://github.com/juicity/juicity/releases/download/v${PV}/juicity-full-src.zip -> ${P}.zip"
 
+S="$WORKDIR"
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
 IUSE="+server client"
-
-S="$WORKDIR"
 
 src_compile(){
 	for i in server client ;do
