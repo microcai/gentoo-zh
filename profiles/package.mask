@@ -1,0 +1,2 @@
+# mask sing-box:0/1.12 until 1.12 released
+net-proxy/sing-box:0/1.12
