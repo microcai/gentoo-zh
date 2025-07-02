@@ -55,9 +55,19 @@ src_compile() {
 
 src_install() {
 	dobin sing-box
+
 	insinto /etc/sing-box
 	newins release/config/config.json config.json.example
+
+	doinitd release/config/sing-box.initd
 	systemd_dounit release/config/sing-box{,@}.service
+
+	insinto /usr/share/dbus-1/system.d
+	newins release/config/sing-box-split-dns.xml sing-box-dns.conf
+
+	insinto /usr/share/polkit-1/rules.d
+	doins release/config/sing-box.rules
+
 	dobashcomp completions/sing-box
 	dofishcomp completions/sing-box.fish
 	dozshcomp completions/_sing-box
