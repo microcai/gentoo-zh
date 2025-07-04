@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-03 18:17:24 CST)
+(The last generation time: 2025-07-04 14:36:41 CST)
 
 ### Packages
 
@@ -412,7 +412,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/spotube-bin                         | 4.0.2              |            | https://github.com/KRTirtho/spotube                                                     | A lightweight Spotify client using YouTube as audio source
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/termusic                            | 0.10.0             |            | https://github.com/tramhao/termusic                                                     | Terminal Music and Podcast Player written in Rust
+ media-sound/termusic                            | 0.11.0             |            | https://github.com/tramhao/termusic                                                     | Terminal Music and Podcast Player written in Rust
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/yamusic-tui-bin                     | 0.7.1              |            | https://github.com/DECE2183/yamusic-tui                                                 | An unofficial Yandex Music terminal client, with offline mode and My Wave
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -633,7 +633,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/sing-box                              | 1.10.7             |            | https://sing-box.sagernet.org/                                                          | The universal proxy platform.
                                                  | 1.11.14            |            |                                                                                         |
-                                                 | 1.12.0_beta30-r1   |            |                                                                                         |
+                                                 | 1.12.0_beta31      |            |                                                                                         |
                                                  | 1.9.7              |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/smartproxy                            | 0.9.5              |            | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
@@ -647,9 +647,9 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/zashboard                             | 1.96.0             |            | https://github.com/Zephyruso/zashboard                                                  | The Official Mihomo Dashboard
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-vpn/cloudflared                             | 2025.6.1           |            | https://github.com/cloudflare/cloudflared                                               | Cloudflare Tunnel client (formerly Argo Tunnel)
+ net-vpn/cloudflared                             | 2025.7.0           |            | https://github.com/cloudflare/cloudflared                                               | Cloudflare Tunnel client (formerly Argo Tunnel)
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-vpn/cloudflared-bin                         | 2025.6.1           |            | https://github.com/cloudflare/cloudflared                                               | Cloudflare Tunnel client (formerly Argo Tunnel)
+ net-vpn/cloudflared-bin                         | 2025.7.0           |            | https://github.com/cloudflare/cloudflared                                               | Cloudflare Tunnel client (formerly Argo Tunnel)
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-vpn/sstp-server                             | 0.6.0              |            | https://github.com/sorz/sstp-server/                                                    | A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
