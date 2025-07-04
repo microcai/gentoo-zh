@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-05 01:49:08 CST)
+(The last generation time: 2025-07-05 02:10:36 CST)
 
 ### Packages
 
@@ -629,7 +629,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/serenity                              | 1.1.0_beta3        |            | https://serenity.sagernet.org/                                                          | The configuration generator for sing-box
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/shadowsocks-rust                      | 1.23.4             |            | https://github.com/shadowsocks/shadowsocks-rust                                         | shadowsocks is a fast tunnel proxy that helps you bypass firewalls.
+ net-proxy/shadowsocks-rust                      | 1.23.5             |            | https://github.com/shadowsocks/shadowsocks-rust                                         | shadowsocks is a fast tunnel proxy that helps you bypass firewalls.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/sing-box                              | 1.10.7             |            | https://sing-box.sagernet.org/                                                          | The universal proxy platform.
                                                  | 1.11.14            |            |                                                                                         |
