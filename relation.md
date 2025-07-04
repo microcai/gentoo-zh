@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-04 14:58:54 CST)
+(The last generation time: 2025-07-04 15:05:11 CST)
 
 ### Packages
 
@@ -211,7 +211,7 @@
  dev-java/oraclejdk-bin                          | 8.391              |            | https://www.oracle.com/java                                                             | Oracle's Java SE Development Kit
                                                  | 21.0.1             |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-lang/koka-bin                               | 3.1.2              |            | https://github.com/koka-lang/koka                                                       | A Functional Language with Effect Types and Handlers
+ dev-lang/koka-bin                               | 3.1.3              |            | https://github.com/koka-lang/koka                                                       | A Functional Language with Effect Types and Handlers
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-lang/luajit                                 | 2.1.1727870382     |            | https://luajit.org/                                                                     | Just-In-Time Compiler for the Lua programming language
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
