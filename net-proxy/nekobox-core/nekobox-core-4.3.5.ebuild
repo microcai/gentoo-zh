@@ -8,7 +8,7 @@ inherit go-module
 DESCRIPTION="Qt based Desktop cross-platform GUI proxy configuration manager"
 HOMEPAGE="https://github.com/Mahdi-zarei/nekoray"
 SRC_URI="https://github.com/Mahdi-zarei/nekoray/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz
-		https://codeberg.org/G-two/vendor/raw/branch/main/${P}-deps.tar.xz"
+		https://codeberg.org/G-two/vendor/media/branch/lfs/${P}-vendor.tar.xz"
 
 S="${WORKDIR}/nekoray-${PV}/core/server"
 
