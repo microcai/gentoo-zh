@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-07 13:41:48 CST)
+(The last generation time: 2025-07-07 13:58:38 CST)
 
 ### Packages
 
@@ -111,7 +111,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/zh-autoconvert                         | 0.3.16_p10         |            | https://packages.debian.org/stable/source/zh-autoconvert                                | Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/aichat                                 | 0.29.0             |            | https://github.com/sigoden/aichat                                                       | All-in-one LLM CLI Tool
+ app-misc/aichat                                 | 0.30.0             |            | https://github.com/sigoden/aichat                                                       | All-in-one LLM CLI Tool
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/bcompare                               | 4.4.6.27483        |            | https://www.scootersoftware.com/                                                        | Beyond Compare -- Compare, sync, and merge files and folders
                                                  | 4.4.7.28397        |            |                                                                                         |
@@ -455,7 +455,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/mosdns-cn-bin                           | 1.4.0-r1           |            | https://github.com/IrineSistiana/mosdns-cn                                              | A DNS forwarder
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-dns/q                                       | 0.19.2-r1          |            | https://github.com/natesales/q                                                          | A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
+ net-dns/q                                       | 0.19.5             |            | https://github.com/natesales/q                                                          | A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/deepin-wine-wecom                        | 4.1.22.6009        |            | https://aur.archlinux.org/packages/com.qq.weixin.work.deepin-x11                        | Tencent Weixin Work on Deepin Wine(com.qq.weixin.work.deepin) For Gentoo
    app-emulation/deepin-wine6-stable             | 6.0.0.52           |  D, RD     | https://www.deepin.org                                                                  | Deepin wine6 stable
