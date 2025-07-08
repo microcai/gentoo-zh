@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-08 17:46:08 CST)
+(The last generation time: 2025-07-08 18:06:43 CST)
 
 ### Packages
 
@@ -241,7 +241,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/conda-package-handling               | 2.4.0              |            | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/conda-package-streaming              | 0.11.0             |            | https://github.com/conda/conda-package-streaming                                        | An efficient library to read from new and old conda packages
+ dev-python/conda-package-streaming              | 0.12.0             |            | https://github.com/conda/conda-package-streaming                                        | An efficient library to read from new and old conda packages
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/daff                                 | 1.4.2              |            | https://github.com/paulfitz/daff                                                        | The daff can produce and apply tabular diffs
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
