@@ -18,8 +18,8 @@ LICENSE="all-rights-reserved"
 
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64 ~loong"
-IUSE="+fcitx ibus"
-REQUIRED_USE="^^ ( fcitx ibus )"
+IUSE="fcitx ibus"
+REQUIRED_USE="?? ( fcitx ibus )"
 
 RESTRICT="strip mirror bindist"
 BDEPEND="
@@ -40,6 +40,8 @@ RDEPEND="
 	x11-libs/xcb-util-keysyms
 	x11-libs/xcb-util-renderutil
 	x11-libs/xcb-util-wm
+	fcitx? ( app-i18n/fcitx )
+	ibus? ( app-i18n/ibus )
 	loong? ( virtual/loong-ow-compat )
 "
 QA_PREBUILT="*"
@@ -86,4 +88,8 @@ src_install() {
 
 	insinto /usr/share
 	doins -r usr/share/icons
+}
+
+pkg_postinst() {
+	einfo "If you need to input Chinese in WeChat, please enable the corresponding USE flag (fcitx or ibus)."
 }
