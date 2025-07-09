@@ -1712,6 +1712,12 @@ use_latest_release = true
 prefix = "v"
 github_account = "peeweep"
 
+["www-servers/s-ui-bin"]
+source = "github"
+github = "alireza0/s-ui"
+use_latest_release = true
+github_account = "gouwazi"
+
 # live package only
 #["www-servers/woof"]
 
