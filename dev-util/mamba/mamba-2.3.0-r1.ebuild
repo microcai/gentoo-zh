@@ -25,33 +25,33 @@ REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 DEPEND="app-arch/libarchive:=
 	app-arch/zstd:=
 	dev-cpp/cli11
+	dev-cpp/expected
 	dev-cpp/nlohmann_json
 	dev-cpp/reproc:=
-	dev-cpp/tl-expected
 	dev-cpp/yaml-cpp
+	<=dev-libs/libfmt-11.1
 	dev-libs/simdjson
+	dev-libs/spdlog
+	net-misc/curl
 	sys-libs/libsolv:=[conda]
 	mamba? (
-		app-crypt/mit-krb5
 		app-arch/bzip2
 		app-arch/libarchive
 		app-arch/lz4
 		app-arch/xz-utils
+		app-crypt/mit-krb5
 		dev-libs/libunistring
+		net-dns/c-ares
 		net-dns/libidn2
-		net-libs/libssh2
 		net-libs/libpsl
+		net-libs/libssh2
 		net-libs/nghttp2
 		net-libs/nghttp3
-		net-dns/c-ares
 		net-misc/curl
 		sys-apps/acl
 		sys-fs/e2fsprogs
 		sys-libs/zlib
 		)
-	<=dev-libs/libfmt-11.1
-	dev-libs/spdlog
-	net-misc/curl
 	python? ( ${PYTHON_DEPS} )
 "
 # conflict to micromamba from benzene-overlay
