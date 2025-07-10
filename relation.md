@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-10 09:57:05 CST)
+(The last generation time: 2025-07-10 14:58:28 CST)
 
 ### Packages
 
@@ -133,7 +133,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/opencode                               | 0.0.53             |            | https://github.com/opencode-ai/opencode                                                 | AI coding agent, built for the terminal
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/opencode-bin                           | 0.2.5              |            | https://github.com/sst/opencode                                                         | AI coding agent, built for the terminal
+ app-misc/opencode-bin                           | 0.2.18             |            | https://github.com/sst/opencode                                                         | AI coding agent, built for the terminal
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/rmtrash                                | 1.14               |            | https://github.com/PhrozenByte/rmtrash                                                  | trash-put made compatible to GNUs rm and rmdir
                                                  | 1.15               |            |                                                                                         |
@@ -260,7 +260,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pytube                               | 15.0.0             |            | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/uv-bin                               | 0.7.19             |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
+ dev-python/uv-bin                               | 0.7.20             |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-ruby/filelock                               | 1.1.1              |            | https://github.com/sheerun/filelock                                                     | Heavily tested, but simple filelocking solution using flock command
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -586,7 +586,7 @@
  net-proxy/daed                                  | 0.9.0              |            | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
                                                  | 9999               |            |                                                                                         |
    sys-apps/pnpm                                 | 9.15.5             | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
-                                                 | 10.12.4            |            |                                                                                         |
+                                                 | 10.13.1            |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/hysteria                              | 2.6.2              |            | https://github.com/apernet/hysteria                                                     | A powerful, lightning fast and censorship resistant proxy.
    acct-group/hysteria                           | 0                  |  D, RD     |                                                                                         | A powerful, lightning fast and censorship resistant proxy.
