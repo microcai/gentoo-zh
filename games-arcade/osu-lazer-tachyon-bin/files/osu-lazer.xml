@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+    <mime-type type="application/x-osu-beatmap">
+        <sub-class-of type="text/plain" />
+        <comment>osu! Beatmap</comment>
+        <comment xml:lang="zh">osu! 难度</comment>
+        <icon name="osu-beatmap" />
+        <glob pattern="*.osu" />
+    </mime-type>
+    <mime-type type="application/x-osu-beatmap-archive">
+        <sub-class-of type="application/zip" />
+        <comment>osu! Beatmap archive</comment>
+        <comment xml:lang="zh">osu! 谱面</comment>
+        <icon name="osu-beatmap" />
+        <glob pattern="*.osz" />
+    </mime-type>
+    <mime-type type="application/x-osu-skin-archive">
+        <sub-class-of type="application/zip" />
+        <comment>osu! Skin</comment>
+        <comment xml:lang="zh">osu! 皮肤</comment>
+        <icon name="osu-beatmap" />
+        <glob pattern="*.osk" />
+    </mime-type>
+    <mime-type type="application/x-osu-storyboard">
+        <sub-class-of type="text/plain" />
+        <comment>osu! Storyboard</comment>
+        <comment xml:lang="zh">osu! 故事板</comment>
+        <icon name="osu-beatmap" />
+        <glob pattern="*.osb" />
+    </mime-type>
+    <mime-type type="application/x-osu-replay">
+        <sub-class-of type="application/octet-stream" />
+        <comment>osu! Replay</comment>
+        <comment xml:lang="zh">osu! 回放</comment>
+        <icon name="osu-beatmap" />
+        <glob pattern="*.osr" />
+    </mime-type>
+</mime-info>

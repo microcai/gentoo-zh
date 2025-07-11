@@ -5,21 +5,13 @@ EAPI=8
 
 inherit desktop xdg
 
-_PN="${PN%-bin}"
-_PS="lazer"
+_PN="${PN%-tachyon-bin}"
 
-DESCRIPTION="A free-to-win rhythm game. Rhythm is just a click away!"
+DESCRIPTION="A free-to-win rhythm game. Rhythm is just a click away! (tachyon releases)"
 HOMEPAGE="https://osu.ppy.sh/ https://github.com/ppy/osu"
 
-case $_PS in
-"lazer")
-	SRC_URI="https://github.com/ppy/osu/releases/download/${PV}/osu.AppImage -> ${_PN}-${PV}.AppImage"
-	;;
-"tachyon")
-	SRC_URI="https://github.com/ppy/osu/releases/download/${PV}-tachyon/osu.AppImage -> ${_PN}-${PV}.AppImage"
-	;;
-esac
-SRC_URI+="
+SRC_URI="
+	https://github.com/ppy/osu/releases/download/${PV}-tachyon/osu.AppImage -> ${_PN}-tachyon-${PV}.AppImage
 	https://github.com/ppy/osu/raw/refs/heads/master/LICENCE -> ${_PN}-LICENCE
 	https://github.com/ppy/osu-resources/raw/refs/heads/master/LICENCE.md -> ${_PN}-resources-LICENCE.md
 "
@@ -27,7 +19,7 @@ SRC_URI+="
 S="${WORKDIR}"
 
 LICENSE="MIT CC-BY-NC-4.0"
-SLOT="0/${_PS}"
+SLOT="0"
 KEYWORDS="-* ~amd64"
 
 IUSE="complete-icon pipewire sdl2 +system-sdl"
@@ -36,6 +28,7 @@ RESTRICT="mirror"
 
 DEPEND="
 	!games-arcade/osu-lazer
+	!games-arcade/osu-lazer-bin
 	x11-themes/hicolor-icon-theme
 "
 RDEPEND="
@@ -52,7 +45,7 @@ RDEPEND="
 BDEPEND="complete-icon? ( media-gfx/imagemagick )"
 
 src_unpack() {
-	cp "${DISTDIR}/${_PN}-${PV}.AppImage" "${WORKDIR}/appimage"
+	cp "${DISTDIR}/${_PN}-tachyon-${PV}.AppImage" "${WORKDIR}/appimage"
 	chmod +x "${WORKDIR}/appimage"
 	"${WORKDIR}/appimage" --appimage-extract
 }
