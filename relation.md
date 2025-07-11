@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-11 17:18:39 CST)
+(The last generation time: 2025-07-11 19:06:48 CST)
 
 ### Packages
 
@@ -308,9 +308,10 @@
                                                  | 1.20.12            |            |                                                                                         |
                                                  | 1.21.0_pre2        |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- games-arcade/osu-lazer-bin                      | 2025.424.0-r1      |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away!
-                                                 | 2025.607.0-r1      |            |                                                                                         |
-                                                 | 2025.702.0         |            |                                                                                         |
+ games-arcade/osu-lazer-bin                      | 2025.607.0-r2      |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away!
+                                                 | 2025.710.0         |            |                                                                                         |
+-------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ games-arcade/osu-lazer-tachyon-bin              | 2025.711.0         |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away! (tachyon releases)
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-emulation/conty                           | 1.27.1             |            | https://github.com/Kron4ek/Conty                                                        | SquashFS image of Arch Linux with: Lutris, Steam, Bottles, Wine...
                                                  | 1.28               |            |                                                                                         |
