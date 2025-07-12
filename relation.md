@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-11 19:06:48 CST)
+(The last generation time: 2025-07-13 03:20:36 CST)
 
 ### Packages
 
@@ -133,7 +133,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/opencode                               | 0.0.53             |            | https://github.com/opencode-ai/opencode                                                 | AI coding agent, built for the terminal
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/opencode-bin                           | 0.2.20             |            | https://github.com/sst/opencode                                                         | AI coding agent, built for the terminal
+ app-misc/opencode-bin                           | 0.2.33             |            | https://github.com/sst/opencode                                                         | AI coding agent, built for the terminal
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/rmtrash                                | 1.14               |            | https://github.com/PhrozenByte/rmtrash                                                  | trash-put made compatible to GNUs rm and rmdir
                                                  | 1.15               |            |                                                                                         |
