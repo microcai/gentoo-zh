@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-13 12:15:11 CST)
+(The last generation time: 2025-07-13 15:27:17 CST)
 
 ### Packages
 
@@ -475,6 +475,7 @@
    dev-util/execstack                            | 0_pre20130503      | BD         | https://people.redhat.com/jakub/prelink                                                 | set the executable stack flag of ELF binaries and libraries
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/tencent-qq                               | 3.2.18_p250626     |            | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
+                                                 | 3.2.18_p250710     |            |                                                                                         |
    media-libs/openslide                          | 20230904           | RD         | http://openslide.org/                                                                   | C library with simple interface to read virtual slides
    virtual/loong-ow-compat                       | 0                  | RD         |                                                                                         | Virtual for LoongArch old-world compatibility
      app-emulation/liblol                        | 0.1.5              | RD         | https://liblol.aosc.io                                                                  | LoongArch old-world ABI compatibility layer from AOSC OS
