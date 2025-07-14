@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-13 15:27:17 CST)
+(The last generation time: 2025-07-14 17:02:13 CST)
 
 ### Packages
 
@@ -603,10 +603,6 @@
    acct-user/mihomo                              | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/mihomo-party-bin                      | 1.7.6              |            | https://mihomo.party                                                                    | Mihomo Party
--------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/nekoray                               | 4.3.5              |            | https://github.com/Mahdi-zarei/nekoray                                                  | Qt based Desktop cross-platform GUI proxy configuration manager
-   dev-libs/cpr                                  | 1.12.0             |  D, RD     | https://github.com/libcpr/cpr                                                           | C++ Requests: Curl for People, a spiritual port of Python Requests.
-   net-proxy/nekobox-core                        | 4.3.5              |  D, RD     | https://github.com/Mahdi-zarei/nekoray                                                  | Qt based Desktop cross-platform GUI proxy configuration manager
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/proxy-server                          | 8.0.0              |            | https://github.com/jackarain/proxy                                                      | Implementation of all proxy protocols using modern c++
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
