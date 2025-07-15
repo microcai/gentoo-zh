@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-15 19:09:16 CST)
+(The last generation time: 2025-07-15 23:08:50 CST)
 
 ### Packages
 
@@ -500,8 +500,6 @@
  net-libs/bun-bin                                | 1.2.18             |            | https://bun.sh                                                                          | Incredibly fast JavaScript runtime, bundler, test runner, and package manager
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-libs/jzmq                                   | 9999               |            | http://www.zeromq.org/bindings:java                                                     | jzmq
--------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-libs/nodejs-bin                             | 24.2.0             |            | https://nodejs.org/                                                                     | A JavaScript runtime built on Chrome's V8 JavaScript engine
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/alist                                  | 3.32.0             |            | https://alist.nn.ci                                                                     | A file list/WebDAV program that supports multiple storages
                                                  | 3.44.0             |            |                                                                                         |
