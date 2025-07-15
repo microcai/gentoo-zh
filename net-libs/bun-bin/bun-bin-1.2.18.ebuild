@@ -21,7 +21,7 @@ IUSE="+symlink"
 
 BDEPEND="app-arch/unzip"
 RDEPEND="
-	symlink? ( !net-libs/nodejs !net-libs/nodejs-bin )
+	symlink? ( !net-libs/nodejs )
 "
 
 RESTRICT="strip"
