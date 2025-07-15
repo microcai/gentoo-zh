@@ -20,6 +20,9 @@ SRC_URI="
 
 LICENSE="|| ( Apache-2.0 MIT )"
 # Dependent crate licenses
-LICENSE+=" Apache-2.0 BSD ISC MIT MPL-2.0 openssl Unicode-3.0 ZLIB"
+LICENSE+="
+	Apache-2.0 BSD CDLA-Permissive-2.0 ISC MIT MPL-2.0 openssl
+	Unicode-3.0 ZLIB
+"
 SLOT="0"
 KEYWORDS="~amd64"
