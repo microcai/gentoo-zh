@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-16 15:30:08 CST)
+(The last generation time: 2025-07-16 15:54:42 CST)
 
 ### Packages
 
@@ -605,7 +605,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/mihomo-party-bin                      | 1.7.6              |            | https://mihomo.party                                                                    | Mihomo Party
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/proxy-server                          | 8.0.0              |            | https://github.com/jackarain/proxy                                                      | Implementation of all proxy protocols using modern c++
+ net-proxy/proxy-server                          | 9.0.0              |            | https://github.com/jackarain/proxy                                                      | Implementation of all proxy protocols using modern c++
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-command                      | 3.0.0              |            | https://github.com/Qv2ray/QvPlugin-Command                                              | Plugin for Qv2ray to run any commands when something happens in Qv2ray
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
