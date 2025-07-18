@@ -12,7 +12,7 @@ SRC_URI+=" https://github.com/gentoo-zh/gentoo-deps/releases/download/${P}/${P}-
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 arm arm64 x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 
 RDEPEND="app-shells/bash"
 RDEPEND+=" !dev-util/vfox-bin"
