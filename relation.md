@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-16 23:24:38 CST)
+(The last generation time: 2025-07-18 17:26:53 CST)
 
 ### Packages
 
@@ -215,7 +215,7 @@
  dev-java/oraclejdk-bin                          | 8.391              |            | https://www.oracle.com/java                                                             | Oracle's Java SE Development Kit
                                                  | 21.0.1             |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-lang/koka-bin                               | 3.1.3              |            | https://github.com/koka-lang/koka                                                       | A Functional Language with Effect Types and Handlers
+ dev-lang/koka-bin                               | 3.2.0              |            | https://github.com/koka-lang/koka                                                       | A Functional Language with Effect Types and Handlers
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-lang/luajit                                 | 2.1.1727870382     |            | https://luajit.org/                                                                     | Just-In-Time Compiler for the Lua programming language
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -263,7 +263,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pytube                               | 15.0.0             |            | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/uv-bin                               | 0.7.21             |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
+ dev-python/uv-bin                               | 0.8.0              |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-ruby/filelock                               | 1.1.1              |            | https://github.com/sheerun/filelock                                                     | Heavily tested, but simple filelocking solution using flock command
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -724,13 +724,13 @@
    dev-libs/v2ray-geoip                          | 202506050146       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                      | 202506050146       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                      | 1.4.11             |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                      | 1.5.1              |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/dufs                                   | 0.43.0-r1          |            | https://github.com/sigoden/dufs                                                         | A distinctive utility file server
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/follow-bin                             | 0.6.2              |            | https://follow.is/                                                                      | Next generation information browser
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-client/brave-bin                            | 1.80.120           |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
+ www-client/brave-bin                            | 1.80.122           |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-client/thorium                              | 130.0.6723.174     |            | #                                                                                       | [Something error when parsing.]
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
