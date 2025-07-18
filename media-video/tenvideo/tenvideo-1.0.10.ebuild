@@ -6,17 +6,18 @@ inherit unpacker xdg
 
 DESCRIPTION="Tencent videos"
 HOMEPAGE="https://v.qq.com/download.html#linux"
-
-KEYWORDS="amd64"
-
 SRC_URI="https://dldir1.qq.com/qqtv/linux/Tenvideo_universal_${PV}_amd64.deb"
 
-SLOT="0"
-RESTRICT="strip mirror"
+S="${WORKDIR}"
+
 LICENSE="tenvideo-privacy"
+SLOT="0"
+KEYWORDS="~amd64"
+
+RESTRICT="strip mirror"
 
 RDEPEND="
-	app-accessibility/at-spi2-atk
+	app-accessibility/at-spi2-core
 	dev-libs/nss
 	media-libs/alsa-lib
 	x11-libs/gtk+:3
@@ -24,8 +25,6 @@ RDEPEND="
 "
 
 QA_PREBUILT="*"
-
-S="${WORKDIR}"
 
 src_install() {
 	sed -i 's/腾讯视频/tenvideo/g' "${S}"/usr/share/applications/TencentVideo.desktop || die
