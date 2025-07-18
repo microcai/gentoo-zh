@@ -12,7 +12,7 @@ SRC_URI="https://github.com/marktext/marktext/releases/download/v${PV}/${PN%-bin
 S="${WORKDIR}"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 
 RDEPEND="
 	app-accessibility/at-spi2-core:2
