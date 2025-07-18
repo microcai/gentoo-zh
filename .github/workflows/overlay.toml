@@ -1105,9 +1105,6 @@ github_account = "peeweep"
 # high update frequency
 #["net-dns/dnsmasq-china-list"]
 
-# dead upstream
-#["net-dns/libidn11"]
-
 ["net-dns/mosdns"]
 source = "github"
 github = "IrineSistiana/mosdns"
