@@ -23,6 +23,8 @@ https://github.com/microcai/gentoo-zh/blob/deps-table/relation.md
 
 # commit message
 
+It is recommended to run `pkgdev commit` to quickly generate commit messages.
+
 * for non-version bump commit, commit message should be like this:
 
         $category/$package: one line short description message
@@ -33,34 +35,25 @@ https://github.com/microcai/gentoo-zh/blob/deps-table/relation.md
 
 * for version bump commit, commit message should be like this:
 
-        $category/$package: version bump to $new_version
+        $category/$package: add $new_version, drop $old_version
 
-# package review
+# Contributions
 
 * I trust contributors that have commit rights, therefore commitors
   should think carefully before committing.
-
-* If you want to discuss your commit/patch, push to *another branch* or send a
-  Pull Request and discuss in the GitHub Issue, mailing list, or talk to the maintainer
-  directly.
 
 * If you are sending a new pull request, make sure it contains all necessary commits
   for a single contribution, e.g. don't send two pull requests for an ebuild and its
   `Manifest`.
 
-* Every ebuild change should not produce compile error before
-  committing.
+* Every ebuild change should not produce compile error before committing.
 
 * Every ebuild should be tested in every ARCH that it KEYWORDS for.
   if not, don't claim that you support that keyword.
 
-* If you are writing the ebuild for a font, and you are using stantard font.eclass
-  to install the font, I could grant an exception for the must-tested-in-every-ARCH
-  rule. You could use something like
+* Every ebuild is to have ~arch keywords. Stable keywords must not be used.
 
-  `KEYWORDS="alpha amd64 arm hppa ppc mips ~s390 ~sh sparc x86 ~x86-fbsd"`
-
-  But please don't abuse this exception. It must be a pure font package.
+* Run `pkgcheck scan --commits --net` locally before you open pull request.
 
 # Distfiles mirror
 
