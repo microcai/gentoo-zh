@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-19 00:48:19 CST)
+(The last generation time: 2025-07-19 01:46:22 CST)
 
 ### Packages
 
@@ -171,9 +171,7 @@
  app-shells/zsh-theme-powerlevel10k              | 1.20.0             |            | https://github.com/romkatv/powerlevel10k                                                | Theme for Zsh that emphasizes speed, flexibility and out-of-the-box experience
    app-shells/gitstatus                          | 1.5.5              |  D, RD     | https://github.com/romkatv/gitstatus                                                    | Git status for Bash and Zsh prompt
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-text/cajviewer                              | 1.3.22-r1          |            | http://cajviewer.cnki.net                                                               | Document Viewer for CAJ, KDH, NH, TEB and PDF format
-                                                 | 9.0-r1             |            |                                                                                         |
-   net-dns/libidn11                              | 1.33               |  D, RD     | https://www.gnu.org/software/libidn/                                                    | Internationalized Domain Names (IDN) implementation
+ app-text/cajviewer                              | 9.0-r1             |            | http://cajviewer.cnki.net                                                               | Document Viewer for CAJ, KDH, NH, TEB and PDF format
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/goldendict                             | 25.02.0            |            | https://xiaoyifang.github.io/goldendict-ng/                                             | Feature-rich dictionary lookup program (qtwebengine fork)
                                                  | 25.05.0            |            |                                                                                         |
@@ -225,9 +223,6 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/lunar-calendar                         | 3.0.1              |            | https://github.com/yetist/lunar-calendar                                                | a gtk+ calendar widget for chinese lunar library
    dev-libs/lunar-date                           | 3.0.1              |  D         | https://github.com/yetist/lunar-date                                                    | Chinese Lunar Library
--------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-libs/tdlib                                  | 1.8.0              |            | https://core.telegram.org/tdlib                                                         | Cross-platform library for building Telegram clients
-                                                 | 9999               |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/v2ray-rules-dat-bin                    | 202505102212       |            | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
