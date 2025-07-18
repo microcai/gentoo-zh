@@ -17,7 +17,7 @@ S="${WORKDIR}"
 
 LICENSE="KYOCERA"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 
 RESTRICT="strip mirror bindist" # mirror as explained at bug #547372
 
