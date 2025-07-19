@@ -153,12 +153,6 @@ github = "fcitx/fcitx5-bamboo"
 use_latest_tag = true
 github_account = "liangyongxiang"
 
-["app-i18n/fcitx-chewing"]
-source = "github"
-github = "fcitx/fcitx5-chewing"
-use_latest_tag = true
-github_account = "liangyongxiang"
-
 # live package only
 #["app-i18n/fcitx-chinese-addons"]
 
