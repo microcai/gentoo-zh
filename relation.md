@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-19 01:55:10 CST)
+(The last generation time: 2025-07-19 15:24:37 CST)
 
 ### Packages
 
@@ -136,7 +136,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/opencode                               | 0.0.53             |            | https://github.com/opencode-ai/opencode                                                 | AI coding agent, built for the terminal
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/opencode-bin                           | 0.3.13             |            | https://github.com/sst/opencode                                                         | AI coding agent, built for the terminal
+ app-misc/opencode-bin                           | 0.3.22             |            | https://github.com/sst/opencode                                                         | AI coding agent, built for the terminal
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/rmtrash                                | 1.14               |            | https://github.com/PhrozenByte/rmtrash                                                  | trash-put made compatible to GNUs rm and rmdir
                                                  | 1.15               |            |                                                                                         |
@@ -666,7 +666,7 @@
  sci-electronics/lceda                           | 6.5.37             |            | https://lceda.cn/                                                                       | LCEDA (binary package)
                                                  | 6.5.46             |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sci-electronics/lceda-pro                       | 2.2.40.3           |            | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
+ sci-electronics/lceda-pro                       | 2.2.40.8           |            | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sci-electronics/openfpgaloader                  | 0.13.1             |            | https://trabucayre.github.io/openFPGALoader                                             | Universal utility for programming FPGAs
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
