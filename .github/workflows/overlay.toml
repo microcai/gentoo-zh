@@ -1357,6 +1357,13 @@ use_latest_tag = true
 prefix = "v"
 github_account = "st0nie"
 
+["net-proxy/flclash-bin"]
+source = "github"
+github = "chen08209/FlClash"
+use_latest_release = true
+prefix = "v"
+github_account = ["yangmame", "peeweep"]
+
 ["net-proxy/hysteria"]
 source = "github"
 github = "apernet/hysteria"
