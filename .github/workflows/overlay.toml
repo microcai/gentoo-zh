@@ -496,14 +496,14 @@ github_account = "microcai"
 ["dev-libs/libthai"]
 source = "github"
 github = "tlwg/libthai"
-use_latest_release= true
+use_latest_release = true
 prefix = "v"
 github_account = "vowstar"
 
 ["dev-libs/lunar-calendar"]
 source = "github"
 github = "yetist/lunar-calendar"
-use_latest_release= true
+use_latest_release = true
 prefix = "v"
 
 ["dev-libs/lunar-date"]
@@ -762,6 +762,17 @@ github_account = "gouwazi"
 source = "github"
 github = "ppy/osu"
 use_latest_release = true
+from_pattern = '^(\d{4}\.\d{3,4}\.\d+)-lazer$'
+to_pattern = '\1'
+github_account = "Puqns67"
+
+["games-arcade/osu-lazer-tachyon-bin"]
+source = "github"
+github = "ppy/osu"
+use_latest_release = true
+include_prereleases = true
+from_pattern = '^(\d{4}\.\d{3,4}\.\d+)-tachyon$'
+to_pattern = '\1'
 github_account = "Puqns67"
 
 # live package only
@@ -1070,7 +1081,7 @@ source = "github"
 github = "tsukinaha/tsukimi"
 use_latest_release = true
 prefix = "v"
-github_account = ["peeweep","irort"]
+github_account = ["peeweep", "irort"]
 
 # dead upstream
 # ["net-analyzer/nali"]
@@ -1316,7 +1327,7 @@ source = "github"
 github = "ekzhang/bore"
 use_latest_release = true
 prefix = "v"
-github_account="gouwazi"
+github_account = "gouwazi"
 
 ["net-proxy/cgproxy"]
 source = "github"
@@ -1489,13 +1500,13 @@ github_account = "peeweep"
 source = "github"
 github = "cloudflare/cloudflared"
 use_latest_tag = true
-github_account = ["douglarek","peeweep"]
+github_account = ["douglarek", "peeweep"]
 
 ["net-vpn/cloudflared-bin"]
 source = "github"
 github = "cloudflare/cloudflared"
 use_latest_release = true
-github_account = ["douglarek","peeweep"]
+github_account = ["douglarek", "peeweep"]
 
 ["net-vpn/sstp-server"]
 source = "github"
