@@ -16,6 +16,10 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
 
 BDEPEND="app-arch/unzip"
+RDEPEND="
+	app-shells/fzf
+	sys-apps/ripgrep
+"
 
 RESTRICT="strip"
 
