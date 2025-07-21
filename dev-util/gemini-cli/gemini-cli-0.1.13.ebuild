@@ -3,11 +3,9 @@
 
 EAPI=8
 
-MY_TAG="v0.1.9-nightly.250709.c8cf954e"
-
 DESCRIPTION="Gemini CLI - a command-line AI workflow tool by Google"
 HOMEPAGE="https://github.com/google-gemini/gemini-cli"
-SRC_URI="https://github.com/google-gemini/gemini-cli/releases/download/${MY_TAG}/gemini.js -> ${P}.js"
+SRC_URI="https://github.com/google-gemini/gemini-cli/releases/download/v${PV}/gemini.js -> ${P}.js"
 S="${WORKDIR}"
 
 LICENSE="Apache-2.0"
