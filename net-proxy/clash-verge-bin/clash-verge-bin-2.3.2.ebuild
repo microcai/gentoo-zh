@@ -15,7 +15,7 @@ SRC_URI="
 S="${WORKDIR}"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS=""
 
 DEPEND="
 	dev-libs/libayatana-appindicator
