@@ -1,0 +1,37 @@
+From b2b6e08daccef3773c3be903abbde74d4e0f2ea7 Mon Sep 17 00:00:00 2001
+From: jinqiang zhang <jinqiang@zhang.my>
+Date: Tue, 22 Jul 2025 01:33:00 +0000
+Subject: [PATCH] build(deps): bump async-process to 2.4.0
+
+taiki-e/next branch removed
+---
+ Cargo.lock | 5 +++--
+ Cargo.toml | 2 --
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+
+diff --git a/Cargo.lock b/Cargo.lock
+index ed03e5650..f13161e97 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -455,8 +455,9 @@ dependencies = [
+ 
+ [[package]]
+ name = "async-process"
+-version = "2.3.2"
+-source = "git+https://github.com/smol-rs/async-process.git?branch=taiki-e%2Fnext#90873bf02a83b28ec21e392de86d49ca13b5354f"
++version = "2.4.0"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "65daa13722ad51e6ab1a1b9c01299142bc75135b337923cfa10e79bbbd669f00"
+ dependencies = [
+  "async-channel 2.5.0",
+  "async-io",
+diff --git a/Cargo.toml b/Cargo.toml
+index 7de93f865..d2950b920 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -26,5 +26,3 @@ debug = 2
+ panic = "abort"
+ 
+ 
+-[patch.crates-io]
+-async-process = { git = 'https://github.com/smol-rs/async-process.git', branch = "taiki-e/next" } # https://github.com/smol-rs/async-process/pull/96 is published to crates.io

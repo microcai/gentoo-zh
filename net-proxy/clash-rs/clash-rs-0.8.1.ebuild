@@ -11,20 +11,20 @@ CRATES="
 declare -A GIT_CRATES=(
 	[boring-noise]='https://github.com/Watfaq/boring-noise;e01409626a15a987b0174d8c78b8181031c37309;boring-noise-%commit%'
 	[netstack-smoltcp]='https://github.com/automesh-network/netstack-smoltcp;62260478079d96b42fa524caa855609312c2cf43;netstack-smoltcp-%commit%'
-	[network-interface]='https://github.com/Watfaq/network-interface;db9f1bcd2faa5122f694283bd300bf42d166d2f3;network-interface-%commit%'
 	[quinn-proto]='https://github.com/spongebob888/quinn-jls;9646c4283b77d1b801d8b9df0ffebca2fd97605e;quinn-jls-%commit%/quinn-proto'
 	[quinn-udp]='https://github.com/spongebob888/quinn-jls;9646c4283b77d1b801d8b9df0ffebca2fd97605e;quinn-jls-%commit%/quinn-udp'
 	[quinn]='https://github.com/spongebob888/quinn-jls;9646c4283b77d1b801d8b9df0ffebca2fd97605e;quinn-jls-%commit%/quinn'
 	[rustls]='https://github.com/spongebob888/rustls-jls;7492120f056900478f522f2c51c2fb5a70245f4d;rustls-jls-%commit%/rustls'
-	[shadowquic-macros]='https://github.com/spongebob888/shadowquic;b42e733e65fb0f7b990dc40018f20847b675bb60;shadowquic-%commit%/shadowquic-macros'
-	[shadowquic]='https://github.com/spongebob888/shadowquic;b42e733e65fb0f7b990dc40018f20847b675bb60;shadowquic-%commit%/shadowquic'
+	[shadowquic-macros]='https://github.com/spongebob888/shadowquic;ee6edf91843c5bcc67fe9d9343060fb975f749ee;shadowquic-%commit%/shadowquic-macros'
+	[shadowquic]='https://github.com/spongebob888/shadowquic;ee6edf91843c5bcc67fe9d9343060fb975f749ee;shadowquic-%commit%/shadowquic'
 	[tokio-watfaq-rustls]='https://github.com/Watfaq/tokio-rustls;638db32084d7ecf9c2660847b55d48d1186b4055;tokio-rustls-%commit%'
-	[tracing-oslog]='https://github.com/Absolucy/tracing-oslog;af14fccd47e92c0892dae0e9747ce06d44fe14f4;tracing-oslog-%commit%'
-	[tuic-quinn]='https://github.com/Itsusinn/tuic;17ee3f702e26aca048495d4c66ad5316bb8eaf98;tuic-%commit%/tuic-quinn'
-	[tuic]='https://github.com/Itsusinn/tuic;17ee3f702e26aca048495d4c66ad5316bb8eaf98;tuic-%commit%/tuic'
+	[tuic-quinn]='https://github.com/Itsusinn/tuic;3591624c0ab5abcdfc47256fb74ada440699593f;tuic-%commit%/tuic-quinn'
+	[tuic]='https://github.com/Itsusinn/tuic;3591624c0ab5abcdfc47256fb74ada440699593f;tuic-%commit%/tuic'
 	[unix-udp-sock]='https://github.com/Watfaq/unix-udp-sock;cd3e4eca43e6f3be82a2703c3d711b7e18fbfd18;unix-udp-sock-%commit%'
 	[watfaq-rustls]='https://github.com/Watfaq/rustls;4cae3aa2e84ea29d8a74b495793773bdb0a72206;rustls-%commit%/rustls'
 )
+
+RUST_MIN_VER="1.85.0"
 
 inherit cargo systemd
 
@@ -67,6 +67,10 @@ REQUIRED_USE="
 "
 
 BDEPEND="dev-libs/protobuf"
+
+PATCHES=(
+	"${FILESDIR}/${P}-fix-deps.patch"
+)
 
 src_configure() {
 	local myfeatures=(
