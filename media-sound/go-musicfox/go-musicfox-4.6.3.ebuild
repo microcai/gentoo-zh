@@ -29,6 +29,8 @@ BDEPEND="
 	clang? ( llvm-core/clang )
 "
 
+QA_PRESTRIPPED="/usr/bin/musicfox"
+
 src_compile() {
 	if use clang; then
 		ego env -w "CC=clang"
