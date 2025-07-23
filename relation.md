@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-23 22:47:50 CST)
+(The last generation time: 2025-07-23 22:48:14 CST)
 
 ### Packages
 
@@ -135,7 +135,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/opencode                               | 0.0.53             |            | https://github.com/opencode-ai/opencode                                                 | AI coding agent, built for the terminal
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/opencode-bin                           | 0.3.43             |            | https://github.com/sst/opencode                                                         | AI coding agent, built for the terminal
+ app-misc/opencode-bin                           | 0.3.57             |            | https://github.com/sst/opencode                                                         | AI coding agent, built for the terminal
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/rmtrash                                | 1.14               |            | https://github.com/PhrozenByte/rmtrash                                                  | trash-put made compatible to GNUs rm and rmdir
                                                  | 1.15               |            |                                                                                         |
@@ -634,7 +634,7 @@
  net-proxy/shadowsocks-rust                      | 1.23.5             |            | https://github.com/shadowsocks/shadowsocks-rust                                         | shadowsocks is a fast tunnel proxy that helps you bypass firewalls.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/sing-box                              | 1.10.7             |            | https://sing-box.sagernet.org/                                                          | The universal proxy platform.
-                                                 | 1.11.15            |            |                                                                                         |
+                                                 | 1.11.15-r1         |            |                                                                                         |
                                                  | 1.12.0_rc2         |            |                                                                                         |
                                                  | 1.9.7              |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
