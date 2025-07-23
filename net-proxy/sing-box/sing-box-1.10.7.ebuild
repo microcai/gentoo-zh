@@ -46,7 +46,7 @@ src_compile() {
 	if use tor; then _TAGS+="with_embedded_tor,"; fi
 
 	ego build -o sing-box -trimpath -tags "${_TAGS%,}" \
-		-ldflags "-s -w -X 'github.com/sagernet/sing-box/constant.Version=${PV}'" \
+		-ldflags "-X 'github.com/sagernet/sing-box/constant.Version=${PV}'" \
 		./cmd/sing-box
 
 	mkdir -v completions

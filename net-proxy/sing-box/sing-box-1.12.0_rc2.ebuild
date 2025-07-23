@@ -44,13 +44,13 @@ src_compile() {
 	if use tailscale; then _TAGS+="with_tailscale,"; fi
 
 	ego build -o sing-box -trimpath -tags "${_TAGS%,}" \
-		-ldflags "-s -w -X 'github.com/sagernet/sing-box/constant.Version=${PV}'" \
+		-ldflags "-X 'github.com/sagernet/sing-box/constant.Version=${PV}'" \
 		./cmd/sing-box
 
 	mkdir -v completions
-	./sing-box completion bash >completions/sing-box
-	./sing-box completion fish >completions/sing-box.fish
-	./sing-box completion zsh >completions/_sing-box
+	./sing-box completion bash > completions/sing-box
+	./sing-box completion fish > completions/sing-box.fish
+	./sing-box completion zsh > completions/_sing-box
 }
 
 src_install() {

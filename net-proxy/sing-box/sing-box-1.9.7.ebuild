@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -49,7 +49,7 @@ src_compile() {
 	_TAGS="${_TAGS%,}"
 
 	ego build -o sing-box -trimpath -tags "${_TAGS}" \
-		-ldflags "-s -w -X 'github.com/sagernet/sing-box/constant.Version=${PV}'" \
+		-ldflags "-X 'github.com/sagernet/sing-box/constant.Version=${PV}'" \
 		./cmd/sing-box
 }
 
