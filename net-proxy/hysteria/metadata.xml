@@ -6,9 +6,6 @@ pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 		<name>lyraile</name>
 		<email>iamoatiz@gmail.com</email>
 	</maintainer>
-	<use>
-		<flag name="goamd64">detect golang arch level on amd64 cpus by CPU_FLAGS_X86</flag>
-	</use>
 	<upstream>
 		<remote-id type="github">apernet/hysteria</remote-id>
 	</upstream>
