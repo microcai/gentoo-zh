@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-23 17:24:06 CST)
+(The last generation time: 2025-07-23 17:46:51 CST)
 
 ### Packages
 
@@ -18,9 +18,9 @@
  app-admin/1password                             | 8.11.0             |            | https://1password.com                                                                   | Password manager and secure wallet
    acct-group/onepassword                        | 0                  |  D, RD     |                                                                                         | Password manager and secure wallet
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/chezmoi                               | 2.63.0             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
+ app-admin/chezmoi                               | 2.63.1             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/chezmoi-bin                           | 2.63.0             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
+ app-admin/chezmoi-bin                           | 2.63.1             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/enpass                                | 6.10.1.1661        |            | https://www.enpass.io                                                                   | A cross-platform, complete password management solution.
                                                  | 6.11.6.1833        |            |                                                                                         |
@@ -635,7 +635,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/sing-box                              | 1.10.7             |            | https://sing-box.sagernet.org/                                                          | The universal proxy platform.
                                                  | 1.11.15            |            |                                                                                         |
-                                                 | 1.12.0_rc1         |            |                                                                                         |
+                                                 | 1.12.0_rc2         |            |                                                                                         |
                                                  | 1.9.7              |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/smartproxy                            | 0.9.5              |            | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
