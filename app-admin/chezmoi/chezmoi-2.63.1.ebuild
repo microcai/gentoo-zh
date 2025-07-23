@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit go-module
+inherit go-module shell-completion
 
 DESCRIPTION="Manage your dotfiles across multiple diverse machines, securely."
 HOMEPAGE="https://www.chezmoi.io https://github.com/twpayne/chezmoi"
@@ -27,12 +27,6 @@ src_compile() {
 
 src_install() {
 	dobin chezmoi
-
-	dodoc README.md
-
-	insinto /usr/share/bash-completion/completions
-	newins completions/chezmoi-completion.bash ${PN}
-
-	insinto /usr/share/zsh/vendor-completions
-	newins completions/chezmoi.zsh _${PN}
+	newbashcomp completions/chezmoi-completion.bash chezmoi
+	newzshcomp completions/chezmoi.zsh _chezmoi
 }
