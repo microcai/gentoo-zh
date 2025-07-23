@@ -21,8 +21,7 @@ BDEPEND=">=dev-lang/go-1.24.5"
 src_compile() {
 	local ldflags="\
 		-X main.version=${PV} \
-		-X main.date=$(date -u +%Y-%m-%dT%H:%M:%SZ) \
-		-w -s"
+		-X main.date=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 	ego build -trimpath -ldflags "${ldflags}"
 }
 
