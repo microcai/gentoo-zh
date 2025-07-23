@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit unpacker
+inherit unpacker shell-completion
 
 DESCRIPTION="Manage your dotfiles across multiple diverse machines, securely."
 HOMEPAGE="https://www.chezmoi.io https://github.com/twpayne/chezmoi"
@@ -24,14 +24,10 @@ KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 RDEPEND="dev-vcs/git"
 RDEPEND+=" !app-admin/chezmoi"
 
+QA_PRESTRIPPED="/usr/bin/chezmoi"
+
 src_install() {
-	default
-
 	dobin usr/bin/chezmoi
-
-	insinto /usr/share/bash-completion/completions
-	doins usr/share/bash-completion/completions/chezmoi
-
-	insinto /usr/share/zsh/vendor-completions
-	doins usr/share/zsh/vendor-completions/_chezmoi
+	dobashcomp usr/share/bash-completion/completions/chezmoi
+	dozshcomp usr/share/zsh/vendor-completions/_chezmoi
 }
