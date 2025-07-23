@@ -23,13 +23,14 @@ LICENSE="GPL-3+"
 SLOT="0/1.11"
 KEYWORDS="~amd64 ~arm64 ~riscv"
 
-IUSE="+quic grpc +dhcp +wireguard +utls +acme +clash-api v2ray-api +gvisor tor +tailscale"
+IUSE="+quic grpc +dhcp +wireguard +ech +utls +acme +clash-api v2ray-api +gvisor tor +tailscale"
 
 src_compile() {
 	if use quic; then _TAGS+="with_quic,"; fi
 	if use grpc; then _TAGS+="with_grpc,"; fi
 	if use dhcp; then _TAGS+="with_dhcp,"; fi
 	if use wireguard; then _TAGS+="with_wireguard,"; fi
+	if use ech; then _TAGS+="with_ech,"; fi
 	if use utls; then _TAGS+="with_utls,"; fi
 	if use acme; then _TAGS+="with_acme,"; fi
 	if use clash-api; then _TAGS+="with_clash_api,"; fi
