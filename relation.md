@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-23 17:46:51 CST)
+(The last generation time: 2025-07-23 22:47:50 CST)
 
 ### Packages
 
@@ -620,8 +620,8 @@
    net-proxy/qv2ray                              | 2.7.0_p20240625-r1 | RD         | https://github.com/Qv2ray/Qv2ray                                                        | Qt GUI fontend of v2ray
      dev-libs/qnodeeditor                        | 2.1.7_p20210113    |  D, RD     | https://github.com/Qv2ray/QNodeEditor                                                   | A general-purpose Qt-based library aimed at graph-controlled data processing.
      dev-libs/singleapplication                  | 3.5.2_p20250124-r1 |  D         | https://itay-grudev.github.io/SingleApplication/                                        | Replacement of QtSingleApplication support for inter-instance communication
-     net-proxy/Xray                              | 25.5.16            | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
-                                                 | 25.6.8             |            |                                                                                         |
+     net-proxy/Xray                              | 25.6.8             | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
+                                                 | 25.7.23            |            |                                                                                         |
        app-alternatives/v2ray-geoip              | 0-r2               |  D, RD     |                                                                                         | symlink for v2ray-geoip
        app-alternatives/v2ray-geosite            | 0-r2               |  D, RD     |                                                                                         | symlink for v2ray-geosite
      net-proxy/v2ray                             | 5.37.0             | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
