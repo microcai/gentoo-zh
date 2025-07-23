@@ -24,6 +24,8 @@ KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 RDEPEND="dev-vcs/git"
 RDEPEND+=" !app-admin/chezmoi"
 
+QA_PRESTRIPPED="/usr/bin/chezmoi"
+
 src_install() {
 	default
 
