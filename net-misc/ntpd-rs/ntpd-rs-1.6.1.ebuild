@@ -21,7 +21,9 @@ SRC_URI="
 S="${WORKDIR}/${P}/ntpd"
 LICENSE="Apache-2.0 MIT"
 # Dependent crate licenses
-LICENSE+=" Apache-2.0 BSD ISC MIT MPL-2.0 openssl Unicode-3.0"
+LICENSE+="
+	Apache-2.0 BSD CDLA-Permissive-2.0 ISC MIT openssl Unicode-3.0
+"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="metrics"
@@ -43,9 +45,6 @@ src_install(){
 	for man in ntp-ctl.8  ntp-daemon.8  ntp-metrics-exporter.8  ntp.toml.5; do
 		doman ../docs/precompiled/man/${man}
 	done
-
-	insinto $(systemd_get_systempresetdir)
-	doins ../docs/examples/conf/ntpd-rs.preset
 
 	insinto /etc/ntpd-rs
 	doins ../ntp.toml
