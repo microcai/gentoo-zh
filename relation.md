@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-25 10:15:34 CST)
+(The last generation time: 2025-07-25 10:24:32 CST)
 
 ### Packages
 
@@ -257,7 +257,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pytube                               | 15.0.0             |            | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/uv-bin                               | 0.8.2              |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
+ dev-python/uv-bin                               | 0.8.3              |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-ruby/filelock                               | 1.1.1              |            | https://github.com/sheerun/filelock                                                     | Heavily tested, but simple filelocking solution using flock command
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -725,7 +725,7 @@
    dev-libs/v2ray-geoip                          | 202506050146       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                      | 202506050146       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                      | 1.5.1              |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                      | 1.5.3              |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/dufs                                   | 0.43.0-r1          |            | https://github.com/sigoden/dufs                                                         | A distinctive utility file server
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
