@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-26 12:35:16 CST)
+(The last generation time: 2025-07-27 00:56:08 CST)
 
 ### Packages
 
@@ -622,7 +622,7 @@
    net-proxy/qv2ray                              | 2.7.0_p20240625-r1 | RD         | https://github.com/Qv2ray/Qv2ray                                                        | Qt GUI fontend of v2ray
      dev-libs/qnodeeditor                        | 2.1.7_p20210113    |  D, RD     | https://github.com/Qv2ray/QNodeEditor                                                   | A general-purpose Qt-based library aimed at graph-controlled data processing.
      dev-libs/singleapplication                  | 3.5.2_p20250124-r1 |  D         | https://itay-grudev.github.io/SingleApplication/                                        | Replacement of QtSingleApplication support for inter-instance communication
-     net-proxy/Xray                              | 25.7.25            | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
+     net-proxy/Xray                              | 25.7.26            | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
        app-alternatives/v2ray-geoip              | 0-r2               |  D, RD     |                                                                                         | symlink for v2ray-geoip
        app-alternatives/v2ray-geosite            | 0-r2               |  D, RD     |                                                                                         | symlink for v2ray-geosite
      net-proxy/v2ray                             | 5.37.0             | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
@@ -729,13 +729,13 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/dufs                                   | 0.43.0-r1          |            | https://github.com/sigoden/dufs                                                         | A distinctive utility file server
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/follow-bin                             | 0.6.2              |            | https://follow.is/                                                                      | Next generation information browser
+ www-apps/follow-bin                             | 0.6.3              |            | https://follow.is/                                                                      | Next generation information browser
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-client/brave-bin                            | 1.80.124           |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-client/thorium                              | 130.0.6723.174     |            | #                                                                                       | [Something error when parsing.]
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-servers/darkhttpd                           | 1.16               |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
+ www-servers/darkhttpd                           | 1.17               |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/miniserve                           | 0.31.0-r1          |            | https://github.com/svenstaro/miniserve                                                  | For when you really just want to serve some files over HTTP right now!
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
