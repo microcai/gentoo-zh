@@ -2,6 +2,12 @@
 oldver = "old_ver.json"
 newver = "new_ver.json"
 
+["app-admin/1password"]
+source = "snapcraft"
+snap = "1password"
+channel = "stable"
+github_account = ["yangmame", "peeweep"]
+
 ["app-admin/chezmoi"]
 source = "github"
 github = "twpayne/chezmoi"
