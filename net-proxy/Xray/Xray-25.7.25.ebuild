@@ -8,7 +8,7 @@ inherit go-module systemd
 DESCRIPTION="Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support."
 HOMEPAGE="https://xtls.github.io/ https://github.com/XTLS/Xray-core"
 SRC_URI="https://github.com/XTLS/Xray-core/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/Puqns67/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz"
+	https://github.com/gentoo-zh/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz"
 
 S="${WORKDIR}/${PN}-core-${PV}"
 
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=">=dev-lang/go-1.24"
 
 src_compile() {
-	ego build -o xray -trimpath -ldflags "-w -s -X 'github.com/XTLS/Xray-core/core.build=${PV}'" ./main
+	ego build -o xray -trimpath -ldflags "-X github.com/XTLS/Xray-core/core.build=${PV}" ./main
 }
 
 src_install() {
