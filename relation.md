@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-27 00:56:08 CST)
+(The last generation time: 2025-07-27 01:20:03 CST)
 
 ### Packages
 
@@ -15,7 +15,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  acct-user/sing-box                              | 0                  |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/1password                             | 8.11.0             |            | https://1password.com                                                                   | Password manager and secure wallet
+ app-admin/1password                             | 8.11.2             |            | https://1password.com                                                                   | Password manager and secure wallet
    acct-group/onepassword                        | 0                  |  D, RD     |                                                                                         | Password manager and secure wallet
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/chezmoi                               | 2.63.1             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
