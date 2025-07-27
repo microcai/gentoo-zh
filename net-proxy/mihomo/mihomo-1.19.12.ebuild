@@ -50,16 +50,14 @@ src_compile() {
 		MY_TAGS="with_gvisor"
 	fi
 	ego build -tags "${MY_TAGS}" -trimpath -ldflags "
-		-linkmode external -extldflags \"${LDFLAGS}\" \
-		-X \"github.com/metacubex/mihomo/constant.Version=${PV}\" \
-		-X \"github.com/metacubex/mihomo/constant.BuildTime=${BUILDTIME}\" \
-		-w -s -buildid=" \
-		-o bin/mihomo
+		-linkmode external -extldflags '${LDFLAGS}' \
+		-X github.com/metacubex/mihomo/constant.Version=${PV} \
+		-X 'github.com/metacubex/mihomo/constant.BuildTime=${BUILDTIME}'"
 }
 
 src_install() {
-	dobin bin/mihomo
-	dosym -r "/usr/bin/mihomo" "/usr/bin/clash-meta"
+	dobin mihomo
+	dosym mihomo /usr/bin/clash-meta
 	systemd_dounit "${FILESDIR}/mihomo.service"
 	systemd_newunit "${FILESDIR}/mihomo_at.service" mihomo@.service
 	newinitd "${FILESDIR}"/mihomo.initd mihomo
