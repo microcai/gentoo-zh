@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-07-29 17:11:11 CST)
+(The last generation time: 2025-07-29 20:26:41 CST)
 
 ### Packages
 
@@ -591,7 +591,7 @@
    sys-apps/pnpm                                 | 9.15.5             | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
                                                  | 10.13.1            |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/flclash-bin                           | 0.8.86             |            | https://github.com/chen08209/FlClash                                                    | A multi-platform proxy client based on ClashMeta
+ net-proxy/flclash-bin                           | 0.8.87             |            | https://github.com/chen08209/FlClash                                                    | A multi-platform proxy client based on ClashMeta
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/hysteria                              | 2.6.2-r1           |            | https://github.com/apernet/hysteria                                                     | A powerful, lightning fast and censorship resistant proxy.
    acct-group/hysteria                           | 0                  |  D, RD     |                                                                                         | A powerful, lightning fast and censorship resistant proxy.
@@ -729,7 +729,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/dufs                                   | 0.43.0-r1          |            | https://github.com/sigoden/dufs                                                         | A distinctive utility file server
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/follow-bin                             | 0.6.3              |            | https://follow.is/                                                                      | Next generation information browser
+ www-apps/follow-bin                             | 0.6.4              |            | https://follow.is/                                                                      | Next generation information browser
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-client/brave-bin                            | 1.80.124           |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
