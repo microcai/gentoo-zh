@@ -169,9 +169,9 @@ src_install() {
 	insinto "${rustdesk_dir}/src"
 	doins -r src/ui
 
-	newicon -s 32 $(realpath res/32x32.png || die) rustdesk.png
-	newicon -s 128 $(realpath res/128x128.png || die) rustdesk.png
-	newicon -s 256 $(realpath res/128x128@2x.png || die) rustdesk.png
+	newicon -s 32 res/32x32.png rustdesk.png
+	newicon -s 128 res/128x128.png rustdesk.png
+	newicon -s 256 res/128x128@2x.png rustdesk.png
 
 	domenu "${FILESDIR}"/rustdesk{,-link}.desktop
 	systemd_dounit "${FILESDIR}"/rustdesk.service
