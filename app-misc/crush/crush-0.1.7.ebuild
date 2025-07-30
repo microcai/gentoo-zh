@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit go-module
+inherit go-module shell-completion
 
 DESCRIPTION="The glamourous AI coding agent for your favourite terminal 💘"
 HOMEPAGE="https://github.com/charmbracelet/crush"
@@ -25,5 +25,14 @@ src_compile() {
 }
 
 src_install() {
+	# generate shell completion scripts
+	for sh in bash fish zsh; do
+	        ./${PN} completion ${sh} > "completion.${sh}"
+	done
+
 	dobin ${PN}
+
+	newbashcomp completion.bash "${PN}"
+	newfishcomp completion.fish "${PN}".fish
+	newzshcomp completion.zsh _"${PN}"
 }
