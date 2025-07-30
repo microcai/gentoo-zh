@@ -23,21 +23,24 @@ declare -A GIT_CRATES=(
 	[cpal]='https://github.com/rustdesk-org/cpal;6b374bcaed076750ca8fce6da518ab39b882e14a;cpal-%commit%'
 	[default_net]='https://github.com/rustdesk-org/default_net;78f8f70cd85151a3a2c4a3230d80d5272703c02e;default_net-%commit%'
 	[evdev]='https://github.com/rustdesk-org/evdev;cec616e37790293d2cd2aa54a96601ed6b1b35a9;evdev-%commit%'
-	[hwcodec]='https://github.com/rustdesk-org/hwcodec;0ea7e709d3c48bb6446e33a9cc8fd0e0da5709b9;hwcodec-%commit%'
+	[filedescriptor]='https://github.com/rustdesk-org/wezterm;80174f8009f41565f0fa8c66dab90d4f9211ae16;wezterm-%commit%/filedescriptor'
+	[hwcodec]='https://github.com/rustdesk-org/hwcodec;17c1dbb38450fe4a64aeba78fb50bec32f364a16;hwcodec-%commit%'
 	[impersonate_system]='https://github.com/rustdesk-org/impersonate-system;2f429010a5a10b1fe5eceb553c6672fd53d20167;impersonate-system-%commit%'
+	[kcp-sys]='https://github.com/rustdesk-org/kcp-sys;32a6c09fc6223f54aea83981a6aa8995931d29be;kcp-sys-%commit%'
 	[keepawake]='https://github.com/rustdesk-org/keepawake-rs;64d568586dd16551d02120e19668d2b0fec8e3c9;keepawake-rs-%commit%'
 	[machine-uid]='https://github.com/rustdesk-org/machine-uid;381ff579c1dc3a6c54db9dfec47c44bcb0246542;machine-uid-%commit%'
 	[magnum-opus]='https://github.com/rustdesk-org/magnum-opus;5cd2bf989c148662fa3a2d9d539a71d71fd1d256;magnum-opus-%commit%'
-	[nokhwa-bindings-linux]='https://github.com/rustdesk-org/nokhwa;48963f514bb7f1ee5db44d38dfc88027029de5e6;nokhwa-%commit%/nokhwa-bindings-linux'
-	[nokhwa-bindings-macos]='https://github.com/rustdesk-org/nokhwa;48963f514bb7f1ee5db44d38dfc88027029de5e6;nokhwa-%commit%/nokhwa-bindings-macos'
-	[nokhwa-bindings-windows]='https://github.com/rustdesk-org/nokhwa;48963f514bb7f1ee5db44d38dfc88027029de5e6;nokhwa-%commit%/nokhwa-bindings-windows'
-	[nokhwa-core]='https://github.com/rustdesk-org/nokhwa;48963f514bb7f1ee5db44d38dfc88027029de5e6;nokhwa-%commit%/nokhwa-core'
-	[nokhwa]='https://github.com/rustdesk-org/nokhwa;48963f514bb7f1ee5db44d38dfc88027029de5e6;nokhwa-%commit%'
+	[nokhwa-bindings-linux]='https://github.com/rustdesk-org/nokhwa;f32e7d68be61db9b1e99016b24edb14543d0383b;nokhwa-%commit%/nokhwa-bindings-linux'
+	[nokhwa-bindings-macos]='https://github.com/rustdesk-org/nokhwa;f32e7d68be61db9b1e99016b24edb14543d0383b;nokhwa-%commit%/nokhwa-bindings-macos'
+	[nokhwa-bindings-windows]='https://github.com/rustdesk-org/nokhwa;f32e7d68be61db9b1e99016b24edb14543d0383b;nokhwa-%commit%/nokhwa-bindings-windows'
+	[nokhwa-core]='https://github.com/rustdesk-org/nokhwa;f32e7d68be61db9b1e99016b24edb14543d0383b;nokhwa-%commit%/nokhwa-core'
+	[nokhwa]='https://github.com/rustdesk-org/nokhwa;f32e7d68be61db9b1e99016b24edb14543d0383b;nokhwa-%commit%'
 	[pam-sys]='https://github.com/rustdesk-org/pam-sys;3337c9bb9a9c68d7497ec8c93cad2368c26091b7;pam-sys-%commit%'
 	[pam]='https://github.com/rustdesk-org/pam;7bfd25510202cd269292cbdd7c71f3977a6fd762;pam-%commit%'
 	[parity-tokio-ipc]='https://github.com/rustdesk-org/parity-tokio-ipc;c8c8bbcbabf9be1201c53afb0269b92b9b02d291;parity-tokio-ipc-%commit%'
+	[portable-pty]='https://github.com/rustdesk-org/wezterm;80174f8009f41565f0fa8c66dab90d4f9211ae16;wezterm-%commit%/pty'
 	[rdev]='https://github.com/rustdesk-org/rdev;f9b60b1dd0f3300a1b797d7a74c116683cd232c8;rdev-%commit%'
-	[reqwest]='https://github.com/rustdesk-org/reqwest;9cb758c9fb2f4edc62eb790acfd45a6a3da21ed3;reqwest-%commit%'
+	[reqwest]='https://github.com/rustdesk-org/reqwest;9e859438203a71eb86ddc294fbebfde14cba7f7c;reqwest-%commit%'
 	[rust-pulsectl]='https://github.com/rustdesk-org/pulsectl;aa34dde499aa912a3abc5289cc0b547bd07dd6e2;pulsectl-%commit%'
 	[sciter-rs]='https://github.com/rustdesk-org/rust-sciter;5322f3a755a0e6bf999fbc60d1efc35246c0f821;rust-sciter-%commit%'
 	[sysinfo]='https://github.com/rustdesk-org/sysinfo;90b1705d909a4902dbbbdea37ee64db17841077d;sysinfo-%commit%'
@@ -62,13 +65,16 @@ DESCRIPTION="An open-source remote desktop, and alternative to TeamViewer"
 HOMEPAGE="https://rustdesk.com/"
 _WEBM_TAG="1.0.0.31"
 _VCPKG_TAG="2025.01.13"
-_HWCODEC_EXTERNALS_COMMIT="a0ff168b672ab57c50f09dbe128608e45a1c4a52"
-_HBB_COMMON_COMMIT="6e556f7e1751a3a709cd5cca0df7268ba3cb1c48"
+_HWCODEC_EXTERNALS_COMMIT="8903740a1f47884906a6e347ad3d8d56304d9771"
+_HBB_COMMON_COMMIT="f91459c4ab80fc3cfdef0882b2af51f984bc914c"
+_KCP_COMMIT="7f9805887b0909c52c825925f123e7a84da37167"
 SRC_URI="
 	https://github.com/rustdesk/rustdesk/archive/refs/tags/${PV}.tar.gz
 		-> ${P}.tar.gz
-	https://distfiles.gentoocn.org/~jinqiang/distfiles/${P}-vcpkg-${_VCPKG_TAG}-lite.tar.gz
+	https://distfiles.gentoocn.org/~jinqiang/distfiles/${PN}-1.4.0-vcpkg-${_VCPKG_TAG}-lite.tar.gz
 	https://github.com/webmproject/libwebm/archive/refs/tags/libwebm-${_WEBM_TAG}.tar.gz
+	https://github.com/skywind3000/kcp/archive/${_KCP_COMMIT}.tar.gz
+		-> kcp-${_KCP_COMMIT}.tar.gz
 	https://github.com/rustdesk/hbb_common/archive/${_HBB_COMMON_COMMIT}.tar.gz
 		-> hbb_common-${_HBB_COMMON_COMMIT}.tar.gz
 	https://github.com/rustdesk-org/externals/archive/${_HWCODEC_EXTERNALS_COMMIT}.tar.gz
@@ -84,7 +90,7 @@ LICENSE="AGPL-3"
 LICENSE+="
 	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD-2 BSD Boost-1.0
 	CC0-1.0 CDLA-Permissive-2.0 GPL-3+ IJG ISC MIT MIT-0 MPL-2.0
-	Unicode-DFS-2016 Unlicense ZLIB
+	Unicode-DFS-2016 Unlicense WTFPL-2 ZLIB
 "
 SLOT="0"
 KEYWORDS="~amd64"
@@ -131,18 +137,22 @@ src_prepare() {
 	default
 	cd "${S}"/.. || die
 	eapply "${FILESDIR}"/rust-sciter.patch
-	eapply "${FILESDIR}/${P}-fix-gcc15.patch"
+	eapply "${FILESDIR}/${PN}-1.4.0-fix-gcc15.patch"
 
 	rm -rf "${S}"/libs/hbb_common || die
-	ln -s "${WORKDIR}"/hbb_common-${_HBB_COMMON_COMMIT} "${S}"/libs/hbb_common || die
+	ln -s "${WORKDIR}/hbb_common-${_HBB_COMMON_COMMIT}" "${S}"/libs/hbb_common || die
 
 	local _WEBM_COMMIT=`echo "${GIT_CRATES[webm]}" | awk -F';' '{print $2}'`
 	rm -rf "${WORKDIR}/rust-webm-${_WEBM_COMMIT}"/src/sys/libwebm || die
 	ln -s "${WORKDIR}/libwebm-libwebm-${_WEBM_TAG}" "${WORKDIR}/rust-webm-${_WEBM_COMMIT}"/src/sys/libwebm || die
 
 	local _HWCODEC_COMMIT=`echo "${GIT_CRATES[hwcodec]}" | awk -F';' '{print $2}'`
-	rm -rf "${WORKDIR}"/hwcodec-${_HWCODEC_COMMIT}/externals || die
-	ln -s "${WORKDIR}"/externals-${_HWCODEC_EXTERNALS_COMMIT} "${WORKDIR}"/hwcodec-${_HWCODEC_COMMIT}/externals || die
+	rm -rf "${WORKDIR}/hwcodec-${_HWCODEC_COMMIT}"/externals || die
+	ln -s "${WORKDIR}/externals-${_HWCODEC_EXTERNALS_COMMIT}" "${WORKDIR}/hwcodec-${_HWCODEC_COMMIT}"/externals || die
+
+	local _KCPSYS_COMMIT=`echo "${GIT_CRATES[kcp-sys]}" | awk -F';' '{print $2}'`
+	rm -rf "${WORKDIR}/kcp-sys-${_KCPSYS_COMMIT}"/kcp || die
+	ln -s "${WORKDIR}/kcp-${_KCP_COMMIT}" "${WORKDIR}/kcp-sys-${_KCPSYS_COMMIT}"/kcp || die
 }
 
 src_configure() {
