@@ -14,7 +14,7 @@ DESCRIPTION="The universal proxy platform."
 HOMEPAGE="https://sing-box.sagernet.org/ https://github.com/SagerNet/sing-box"
 SRC_URI="
 	https://github.com/SagerNet/sing-box/archive/refs/tags/v${_PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/gentoo-zh/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz
+	https://github.com/Puqns67/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz
 "
 
 S="${WORKDIR}/${PN}-${_PV}"
@@ -31,26 +31,27 @@ RDEPEND="
 "
 
 src_compile() {
-	if use quic; then _TAGS+="with_quic,"; fi
-	if use grpc; then _TAGS+="with_grpc,"; fi
-	if use dhcp; then _TAGS+="with_dhcp,"; fi
-	if use wireguard; then _TAGS+="with_wireguard,"; fi
-	if use utls; then _TAGS+="with_utls,"; fi
-	if use acme; then _TAGS+="with_acme,"; fi
-	if use clash-api; then _TAGS+="with_clash_api,"; fi
-	if use v2ray-api; then _TAGS+="with_v2ray_api,"; fi
-	if use gvisor; then _TAGS+="with_gvisor,"; fi
-	if use tor; then _TAGS+="with_embedded_tor,"; fi
-	if use tailscale; then _TAGS+="with_tailscale,"; fi
+	local mytags
+	use quic && mytags+="with_quic,"
+	use grpc && mytags+="with_grpc,"
+	use dhcp && mytags+="with_dhcp,"
+	use wireguard && mytags+="with_wireguard,"
+	use utls && mytags+="with_utls,"
+	use acme && mytags+="with_acme,"
+	use clash-api && mytags+="with_clash_api,"
+	use v2ray-api && mytags+="with_v2ray_api,"
+	use gvisor && mytags+="with_gvisor,"
+	use tor && mytags+="with_embedded_tor,"
+	use tailscale && mytags+="with_tailscale,"
 
-	ego build -o sing-box -trimpath -tags "${_TAGS%,}" \
+	ego build -tags "${mytags%,}" \
 		-ldflags "-X 'github.com/sagernet/sing-box/constant.Version=${PV}'" \
 		./cmd/sing-box
 
 	mkdir -v completions
-	./sing-box completion bash > completions/sing-box
-	./sing-box completion fish > completions/sing-box.fish
-	./sing-box completion zsh > completions/_sing-box
+	./sing-box completion bash >completions/sing-box
+	./sing-box completion fish >completions/sing-box.fish
+	./sing-box completion zsh >completions/_sing-box
 }
 
 src_install() {
