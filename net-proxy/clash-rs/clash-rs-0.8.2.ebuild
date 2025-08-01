@@ -9,18 +9,18 @@ CRATES="
 "
 
 declare -A GIT_CRATES=(
-	[boring-noise]='https://github.com/Watfaq/boring-noise;e01409626a15a987b0174d8c78b8181031c37309;boring-noise-%commit%'
-	[netstack-smoltcp]='https://github.com/automesh-network/netstack-smoltcp;62260478079d96b42fa524caa855609312c2cf43;netstack-smoltcp-%commit%'
-	[quinn-proto]='https://github.com/spongebob888/quinn-jls;9646c4283b77d1b801d8b9df0ffebca2fd97605e;quinn-jls-%commit%/quinn-proto'
-	[quinn-udp]='https://github.com/spongebob888/quinn-jls;9646c4283b77d1b801d8b9df0ffebca2fd97605e;quinn-jls-%commit%/quinn-udp'
-	[quinn]='https://github.com/spongebob888/quinn-jls;9646c4283b77d1b801d8b9df0ffebca2fd97605e;quinn-jls-%commit%/quinn'
-	[rustls]='https://github.com/spongebob888/rustls-jls;7492120f056900478f522f2c51c2fb5a70245f4d;rustls-jls-%commit%/rustls'
-	[shadowquic-macros]='https://github.com/spongebob888/shadowquic;ee6edf91843c5bcc67fe9d9343060fb975f749ee;shadowquic-%commit%/shadowquic-macros'
-	[shadowquic]='https://github.com/spongebob888/shadowquic;ee6edf91843c5bcc67fe9d9343060fb975f749ee;shadowquic-%commit%/shadowquic'
+	[boring-noise]='https://github.com/Watfaq/boring-noise;1f57e8830ea2aea09c3b2f2d990bf3097ceb1bf5;boring-noise-%commit%'
+	[netstack-smoltcp]='https://github.com/automesh-network/netstack-smoltcp;ab06bc3de566fc6485a238dd4c746bb3e4f79484;netstack-smoltcp-%commit%'
+	[quinn-proto]='https://github.com/spongebob888/quinn-jls;3364498f3376432dc8d27ed2fb74b4695506288c;quinn-jls-%commit%/quinn-proto'
+	[quinn-udp]='https://github.com/spongebob888/quinn-jls;3364498f3376432dc8d27ed2fb74b4695506288c;quinn-jls-%commit%/quinn-udp'
+	[quinn]='https://github.com/spongebob888/quinn-jls;3364498f3376432dc8d27ed2fb74b4695506288c;quinn-jls-%commit%/quinn'
+	[rustls]='https://github.com/spongebob888/rustls-jls;70e0553c809ae4a6a3eb1229e864f20d4fc5e611;rustls-jls-%commit%/rustls'
+	[shadowquic-macros]='https://github.com/spongebob888/shadowquic;09cc9f85fd9d31bcb1ecdde2b8c00cc39e712294;shadowquic-%commit%/shadowquic-macros'
+	[shadowquic]='https://github.com/spongebob888/shadowquic;09cc9f85fd9d31bcb1ecdde2b8c00cc39e712294;shadowquic-%commit%/shadowquic'
 	[tokio-watfaq-rustls]='https://github.com/Watfaq/tokio-rustls;638db32084d7ecf9c2660847b55d48d1186b4055;tokio-rustls-%commit%'
 	[tuic-quinn]='https://github.com/Itsusinn/tuic;3591624c0ab5abcdfc47256fb74ada440699593f;tuic-%commit%/tuic-quinn'
 	[tuic]='https://github.com/Itsusinn/tuic;3591624c0ab5abcdfc47256fb74ada440699593f;tuic-%commit%/tuic'
-	[unix-udp-sock]='https://github.com/Watfaq/unix-udp-sock;cd3e4eca43e6f3be82a2703c3d711b7e18fbfd18;unix-udp-sock-%commit%'
+	[unix-udp-sock]='https://github.com/Watfaq/unix-udp-sock;847c80b519f0fd8cff5c887ae708429897d08671;unix-udp-sock-%commit%'
 	[watfaq-rustls]='https://github.com/Watfaq/rustls;4cae3aa2e84ea29d8a74b495793773bdb0a72206;rustls-%commit%/rustls'
 )
 
@@ -42,47 +42,24 @@ SRC_URI="
 # Dependent crate licenses
 LICENSE+="
 	0BSD Apache-2.0 BSD-2 BSD CC0-1.0 CDLA-Permissive-2.0 GPL-3+ ISC MIT
-	MPL-2.0 Unicode-3.0 Unlicense WTFPL-2 ZLIB
+	MPL-2.0 openssl Unicode-3.0 Unlicense ZLIB
 "
 SLOT="0"
 KEYWORDS="~amd64"
 
-# https://github.com/Watfaq/clash-rs/blob/v0.7.6/clash/Cargo.toml
-IUSE="doc +lto standard plus perf +shadowsocks ssh tuic onion jemallocator bench"
+IUSE="+lto +standard plus perf bench"
 REQUIRED_USE="
 	debug? ( !lto )
-	standard? (
-		shadowsocks
-		ssh
-		tuic
-	)
-	plus? (
-		standard
-		onion
-	)
-	perf? (
-		plus
-		jemallocator
-	)
 "
 
 BDEPEND="dev-libs/protobuf"
 
-PATCHES=(
-	"${FILESDIR}/${P}-fix-deps.patch"
-)
-
 src_configure() {
 	local myfeatures=(
-		$(usev bench)
-		$(usev onion)
 		$(usev standard)
 		$(usev plus)
 		$(usev perf)
-		$(usev shadowsocks)
-		$(usev ssh)
-		$(usev tuic)
-		$(usev jemallocator)
+		$(usev bench)
 	)
 	cargo_src_configure
 }
