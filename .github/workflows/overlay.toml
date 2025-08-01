@@ -1705,13 +1705,6 @@ use_latest_release = true
 github_account = "irort"
 prefix = "v"
 
-["www-client/thorium"]
-source = "github"
-github = "Alex313031/thorium"
-use_latest_release = true
-prefix = "M"
-github_account = "blackteahamburger"
-
 ["www-servers/darkhttpd"]
 source = "github"
 github = "emikulic/darkhttpd"
