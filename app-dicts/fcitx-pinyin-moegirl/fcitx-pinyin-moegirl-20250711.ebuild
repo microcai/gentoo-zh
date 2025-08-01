@@ -34,14 +34,9 @@ python_check_deps() {
 	python_has_version "dev-python/mw2fcitx[${PYTHON_SINGLE_USEDEP}]"
 }
 
-src_prepare() {
-	use !fcitx && (sed -i -e '27,31d' utils/moegirl_dict.py || die)
-	use !rime && (sed -i -e '22,27d' utils/moegirl_dict.py || die)
-	default
-}
-
 src_compile() {
-	mw2fcitx -c utils/moegirl_dict.py || die
+	use fcitx && (mw2fcitx -c "${FILESDIR}/moegirl_dict_fcitx.py" || die)
+	use rime && (mw2fcitx -c "${FILESDIR}/moegirl_dict_rime.py" || die)
 }
 
 src_install() {
