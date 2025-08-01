@@ -7,9 +7,8 @@ inherit cmake
 
 DESCRIPTION="Replacement of QtSingleApplication support for inter-instance communication"
 HOMEPAGE="https://itay-grudev.github.io/SingleApplication/"
-GIT_COMMIT="0ba7b6ce42cfb863cbb1463c274c762e1eb6652b"
-SRC_URI="https://github.com/itay-grudev/SingleApplication/archive/${GIT_COMMIT}.tar.gz -> ${P}.tar.gz"
-S="${WORKDIR}/SingleApplication-${GIT_COMMIT}"
+SRC_URI="https://github.com/itay-grudev/SingleApplication/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/SingleApplication-${PV}"
 
 LICENSE="MIT"
 SLOT="0"
@@ -21,7 +20,8 @@ RDEPEND="${DEPEND}"
 BDEPEND="doc? ( app-text/doxygen )"
 
 PATCHES=(
-	"${FILESDIR}/${P}-fix-single-instance-with-qt6.patch" # https://github.com/itay-grudev/SingleApplication/issues/190
+	# https://github.com/itay-grudev/SingleApplication/issues/190
+	"${FILESDIR}/singleapplication-3.5.2_p20250124-fix-single-instance-with-qt6.patch"
 )
 
 src_configure() {
