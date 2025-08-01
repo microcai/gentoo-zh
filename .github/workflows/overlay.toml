@@ -1401,11 +1401,15 @@ use_latest_release = true
 prefix = "v"
 github_account = ["st0nie", "peeweep"]
 
-["net-proxy/mihomo-party-bin"]
-source = "github"
-github = "mihomo-party-org/mihomo-party"
-use_latest_release = true
-prefix = "v"
+# Disable mihomo-party-bin because of:
+# 1. conflict with mihomo in github v4 search api
+# 2. mihomo shame on mihomo-party-bin
+# 3. bad quality and security
+# ["net-proxy/mihomo-party-bin"]
+# source = "github"
+# github = "mihomo-party-org/mihomo-party"
+# use_latest_release = true
+# prefix = "v"
 
 ["net-proxy/naiveproxy-bin"]
 source = "github"
