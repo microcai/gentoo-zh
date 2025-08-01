@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-01 10:04:33 CST)
+(The last generation time: 2025-08-01 10:37:52 CST)
 
 ### Packages
 
@@ -579,7 +579,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/cgproxy                               | 0.20-r1            |            | https://github.com/springzfx/cgproxy                                                    | Transparent Proxy with cgroup v2
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/clash-rs                              | 0.8.1              |            | https://watfaq.gitbook.io/clashrs-user-manual/                                          | Custom protocol, rule based network proxy
+ net-proxy/clash-rs                              | 0.8.2              |            | https://watfaq.gitbook.io/clashrs-user-manual/                                          | Custom protocol, rule based network proxy
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-verge-bin                       | 2.3.2-r1           |            | https://github.com/clash-verge-rev/clash-verge-rev                                      | (Continuation) of Clash Meta GUI based on Tauri.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -605,7 +605,7 @@
    acct-group/mihomo                             | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
    acct-user/mihomo                              | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/mihomo-party-bin                      | 1.7.6              |            | https://mihomo.party                                                                    | Mihomo Party
+ net-proxy/mihomo-party-bin                      | 1.7.7              |            | https://mihomo.party                                                                    | Mihomo Party
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/proxy-server                          | 9.0.0              |            | https://github.com/jackarain/proxy                                                      | Implementation of all proxy protocols using modern c++
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
