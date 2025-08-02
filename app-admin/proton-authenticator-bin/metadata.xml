@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>xz@xzos.net</email>
+    <name>xz-dev</name>
+  </maintainer>
+  <upstream>
+    <remote-id type="github">protonpass/proton-pass-common</remote-id>
+  </upstream>
+  <longdescription>
+    Proton Authenticator - A secure and privacy-focused two-factor authentication app.
+    Protect your accounts with industry-leading security features from Proton, the makers 
+    of Proton Mail and Proton Pass.
+  </longdescription>
+</pkgmetadata>
