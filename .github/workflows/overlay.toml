@@ -411,9 +411,6 @@ prefix = "v"
 # live package only
 #["app-vim/powerline"]
 
-# live package only
-#["dev-build/gyp"]
-
 # TODO: upstream no tags
 #["dev-cpp/cppcoro"]
 
