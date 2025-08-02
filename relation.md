@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-02 00:20:01 CST)
+(The last generation time: 2025-08-02 11:34:06 CST)
 
 ### Packages
 
@@ -35,14 +35,14 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-custom-pinyin-dictionary | 20250101           |            | https://github.com/wuhgit/CustomPinyinDictionary                                        | Fcitx5 自建拼音输入法词库，百万常用词汇量。
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-moegirl                  | 20250610           |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
+ app-dicts/fcitx-pinyin-moegirl                  | 20250711           |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-sougou-baidu             | 20250620           |            | https://github.com/blackteahamburger/fcitx5-pinyin-sougou-baidu                         | Sougou & Baidu Pinyin dictionary for Fcitx5 and RIME
+ app-dicts/fcitx-pinyin-sougou-baidu             | 20250720           |            | https://github.com/blackteahamburger/fcitx5-pinyin-sougou-baidu                         | Sougou & Baidu Pinyin dictionary for Fcitx5 and RIME
    app-i18n/ibus-rime                            | 9999               | RD         | http://code.google.com/p/rimeime/                                                       | Rime Input Method Engine for IBus Framework
    app-text/imewlconverter                       | 3.2.0              | BD         | https://github.com/studyzy/imewlconverter                                               | An open source and free input method dictionary conversion program
                                                  | 9999               |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-zhwiki                   | 0.2.5.20250526     |            | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
+ app-dicts/fcitx-pinyin-zhwiki                   | 0.2.5.20250731     |            | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/appflowy-bin                        | 0.9.3              |            | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -122,7 +122,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/ccal                                   | 2.5.3              |            | http://ccal.chinesebay.com/ccal/ccal.htm                                                | A simple command line calendar for Chinese lunar
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/crush                                  | 0.1.11             |            | https://github.com/charmbracelet/crush                                                  | The glamourous AI coding agent for your favourite terminal 💘
+ app-misc/crush                                  | 0.2.0              |            | https://github.com/charmbracelet/crush                                                  | The glamourous AI coding agent for your favourite terminal 💘
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/go-yq-bin                              | 4.47.1             |            | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -254,7 +254,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pycosat                              | 0.6.6              |            | https://github.com/conda/pycosat                                                        | Python bindings to picosat (a SAT solver)
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/pypinyin                             | 0.54.0             |            | https://github.com/mozillazg/python-pinyin                                              | Tool for converting Chinese characters to pinyin
+ dev-python/pypinyin                             | 0.55.0             |            | https://github.com/mozillazg/python-pinyin                                              | Tool for converting Chinese characters to pinyin
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pytube                               | 15.0.0             |            | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -622,14 +622,14 @@
  net-proxy/qvplugin-trojan-go                    | 3.0.0              |            | https://github.com/Qv2ray/QvPlugin-Trojan-Go                                            | Plugin for Qv2ray to support Trojan-Go proxy in Qv2ray
    net-proxy/qv2ray                              | 2.7.0_p20240625-r1 | RD         | https://github.com/Qv2ray/Qv2ray                                                        | Qt GUI fontend of v2ray
      dev-libs/qnodeeditor                        | 2.1.7_p20210113    |  D, RD     | https://github.com/Qv2ray/QNodeEditor                                                   | A general-purpose Qt-based library aimed at graph-controlled data processing.
-     dev-libs/singleapplication                  | 3.5.2_p20250124-r1 |  D         | https://itay-grudev.github.io/SingleApplication/                                        | Replacement of QtSingleApplication support for inter-instance communication
+     dev-libs/singleapplication                  | 3.5.3              |  D         | https://itay-grudev.github.io/SingleApplication/                                        | Replacement of QtSingleApplication support for inter-instance communication
      net-proxy/Xray                              | 25.7.26            | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
        app-alternatives/v2ray-geoip              | 0-r2               |  D, RD     |                                                                                         | symlink for v2ray-geoip
        app-alternatives/v2ray-geosite            | 0-r2               |  D, RD     |                                                                                         | symlink for v2ray-geosite
      net-proxy/v2ray                             | 5.37.0             | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
      net-proxy/v2ray-bin                         | 4.45.0-r2          | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
                                                  | 5.37.0             |            |                                                                                         |
-   net-proxy/trojan-go-fork                      | 2025.06.22         | RD         | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
+   net-proxy/trojan-go-fork                      | 2025.07.27         | RD         | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/serenity                              | 1.1.0_beta3        |            | https://serenity.sagernet.org/                                                          | The configuration generator for sing-box
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -699,7 +699,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/systemd-zpool-scrub                      | 9999               |            | https://github.com/lnicola/systemd-zpool-scrub                                          | Systemd service for automatic ZFS zpool scrubbing
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-kernel/cachyos-sources                      | 6.15.4             |            | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
+ sys-kernel/cachyos-sources                      | 6.16.0             |            | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-kernel/mkinitcpio                           | 38                 |            | https://github.com/archlinux/mkinitcpio                                                 | Modular initramfs image creation utility
                                                  | 39.2               |            |                                                                                         |
@@ -719,11 +719,11 @@
    sys-kernel/xanmod-sources                     | 6.15.8             | RD         | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-domain-list-community             | 0                  |            |                                                                                         | Virtual for v2ray-domain-list-community
-   dev-libs/v2ray-domain-list-community          | 20250608120644     | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+   dev-libs/v2ray-domain-list-community          | 20250627153051     | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
    dev-libs/v2ray-domain-list-community-bin      | 20250608120644     | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-geoip                             | 0                  |            |                                                                                         | Virtual for v2ray-geoip
-   dev-libs/v2ray-geoip                          | 202506050146       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
+   dev-libs/v2ray-geoip                          | 202507050144       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                      | 202506050146       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/cherry-studio-bin                      | 1.5.3              |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
@@ -733,8 +733,6 @@
  www-apps/follow-bin                             | 0.6.4              |            | https://follow.is/                                                                      | Next generation information browser
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-client/brave-bin                            | 1.80.125           |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
--------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-client/thorium                              | 130.0.6723.174     |            | #                                                                                       | [Something error when parsing.]
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                           | 1.17               |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
