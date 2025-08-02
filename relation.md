@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-02 11:34:06 CST)
+(The last generation time: 2025-08-02 12:06:04 CST)
 
 ### Packages
 
@@ -261,8 +261,6 @@
  dev-python/uv-bin                               | 0.8.4              |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-ruby/filelock                               | 1.1.1              |            | https://github.com/sheerun/filelock                                                     | Heavily tested, but simple filelocking solution using flock command
--------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/android-studio                         | 2024.3.2.15        |            | https://developer.android.com/studio                                                    | Android development environment based on IntelliJ IDEA
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/arch-install-scripts                   | 29                 |            | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
    dev-util/pacstrap                             | 29                 | RD         | https://github.com/archlinux/arch-install-scripts                                       | Pacstrap - install packages to the specified new root directorye
