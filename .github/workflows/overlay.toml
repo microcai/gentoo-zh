@@ -1147,7 +1147,7 @@ regex = 'com.alibabainc.dingtalk_(.*)_amd64.deb'
 
 ["net-im/tencent-qq"]
 source = "regex"
-url = "https://im.qq.com/rainbow/linuxQQDownload"
+url = "https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/linuxConfig.js"
 regex = 'QQ_([\d\.\_]+)_.*.deb'
 from_pattern = '(.*)_(.*)'
 to_pattern = '\1_p\2'
