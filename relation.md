@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-04 18:55:02 CST)
+(The last generation time: 2025-08-05 02:21:39 CST)
 
 ### Packages
 
@@ -242,6 +242,10 @@
  dev-python/conda-package-streaming              | 0.12.0             |            | https://github.com/conda/conda-package-streaming                                        | An efficient library to read from new and old conda packages
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/daff                                 | 1.4.2              |            | https://github.com/paulfitz/daff                                                        | The daff can produce and apply tabular diffs
+-------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/exifread                             | 2.3.1              |            | https://github.com/ianare/exif-py                                                       | Read Exif metadata from tiff and jpeg files
+                                                 | 2.3.2              |            |                                                                                         |
+                                                 | 3.3.2              |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/frozendict                           | 2.4.6              |            | https://github.com/Marco-Sulla/python-frozendict                                        | A simple immutable dictionary for Python
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
