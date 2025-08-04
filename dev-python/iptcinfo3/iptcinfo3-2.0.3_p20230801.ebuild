@@ -1,4 +1,4 @@
-# Copyright Gentoo Authors 2025
+# Copyright 2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -24,7 +24,7 @@ LICENSE="
 "
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 
 BDEPEND="
 	test? (
