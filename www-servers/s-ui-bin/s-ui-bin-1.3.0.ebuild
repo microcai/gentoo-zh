@@ -7,8 +7,10 @@ inherit unpacker systemd
 
 DESCRIPTION="An advanced Web Panel • Built for SagerNet/Sing-Box"
 HOMEPAGE="https://github.com/alireza0/s-ui"
-SRC_URI="https://github.com/alireza0/s-ui/releases/download/${PV}/s-ui-linux-amd64.tar.gz"
-
+SRC_URI="
+	amd64? ( https://github.com/alireza0/s-ui/releases/download/${PV}/s-ui-linux-amd64.tar.gz -> ${P}-amd64.tar.gz )
+	arm64? ( https://github.com/alireza0/s-ui/releases/download/${PV}/s-ui-linux-arm64.tar.gz -> ${P}-arm64.tar.gz )
+"
 S="${WORKDIR}"
 LICENSE="GPL-3"
 
