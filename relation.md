@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-05 15:06:10 CST)
+(The last generation time: 2025-08-05 17:00:08 CST)
 
 ### Packages
 
@@ -744,7 +744,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/miniserve                           | 0.31.0-r1          |            | https://github.com/svenstaro/miniserve                                                  | For when you really just want to serve some files over HTTP right now!
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-servers/s-ui-bin                            | 1.2.2              |            | https://github.com/alireza0/s-ui                                                        | An advanced Web Panel • Built for SagerNet/Sing-Box
+ www-servers/s-ui-bin                            | 1.3.0              |            | https://github.com/alireza0/s-ui                                                        | An advanced Web Panel • Built for SagerNet/Sing-Box
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/woof                                | 9999               |            | http://www.home.unix-ag.org/simon/woof.html                                             | an ad-hoc single file webserver
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
