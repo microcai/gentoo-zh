@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-05 02:21:39 CST)
+(The last generation time: 2025-08-05 14:52:50 CST)
 
 ### Packages
 
@@ -183,7 +183,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/lemminx-bin                            | 0.31.0             |            | https://github.com/eclipse-lemminx/lemminx                                              | A XML Language Server
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-text/readest-bin                            | 0.9.68             |            | https://readest.com/                                                                    | A modern, feature-rich ebook reader
+ app-text/readest-bin                            | 0.9.69             |            | https://readest.com/                                                                    | A modern, feature-rich ebook reader
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/easymotion                              | 1.3                |            | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: Vim motions on speed!
                                                  | 3.0.1              |            |                                                                                         |
@@ -198,7 +198,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/tgbot-cpp                               | 1.9                |            | https://github.com/reo7sp/tgbot-cpp                                                     | C++ library for Telegram bot API
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-db/dbeaver-bin                              | 25.1.3             |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
+ dev-db/dbeaver-bin                              | 25.1.4             |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-debug/lldb-mi                               | 0.0.1              |            | https://github.com/lldb-tools/lldb-mi                                                   | LLDB Machine Interface Driver
                                                  | 9999               |            |                                                                                         |
@@ -306,7 +306,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gitoxide                                | 0.45.0             |            | https://github.com/GitoxideLabs/gitoxide                                                | A command-line application for interacting with git repositories
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/sourcegit-bin                           | 2025.28            |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
+ dev-vcs/sourcegit-bin                           | 2025.29            |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                       | 1.19.8             |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
                                                  | 1.20.12            |            |                                                                                         |
@@ -522,7 +522,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/another-redis-desktop-manager-bin      | 1.7.1              |            | https://github.com/qishibo/AnotherRedisDesktopManager                                   | A faster, better and more stable Redis desktop manager [GUI client]
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/apifox                                 | 2.7.25             |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
+ net-misc/apifox                                 | 2.7.27             |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/baidunetdisk                           | 4.17.7             |            | https://pan.baidu.com/                                                                  | Baidu Net Disk is a cloud storage client (Linux Version)
                                                  | 4.3.0              |            |                                                                                         |
