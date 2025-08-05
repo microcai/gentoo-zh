@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-05 14:52:50 CST)
+(The last generation time: 2025-08-05 15:03:03 CST)
 
 ### Packages
 
@@ -612,7 +612,7 @@
    acct-group/mihomo                             | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
    acct-user/mihomo                              | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/mihomo-party-bin                      | 1.7.7              |            | https://mihomo.party                                                                    | Mihomo Party
+ net-proxy/mihomo-party-bin                      | 1.8.1              |            | https://mihomo.party                                                                    | Mihomo Party
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/proxy-server                          | 9.0.0              |            | https://github.com/jackarain/proxy                                                      | Implementation of all proxy protocols using modern c++
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
