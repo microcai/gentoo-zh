@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-06 17:19:35 CST)
+(The last generation time: 2025-08-07 17:42:05 CST)
 
 ### Packages
 
@@ -18,11 +18,12 @@
  app-admin/1password                             | 8.11.4             |            | https://1password.com                                                                   | Password manager and secure wallet
    acct-group/onepassword                        | 0                  |  D, RD     |                                                                                         | Password manager and secure wallet
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/chezmoi                               | 2.63.1             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
+ app-admin/chezmoi                               | 2.64.0             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/chezmoi-bin                           | 2.63.1             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
+ app-admin/chezmoi-bin                           | 2.64.0             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/enpass                                | 6.10.1.1661        |            | https://www.enpass.io                                                                   | A cross-platform, complete password management solution.
+                                                 | 6.11.12.1953       |            |                                                                                         |
                                                  | 6.11.6.1833        |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/proton-authenticator-bin              | 1.0.0              |            | https://proton.me/authenticator                                                         | Official open-source two-factor authentication app by Proton
@@ -742,7 +743,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/follow-bin                             | 0.6.4              |            | https://follow.is/                                                                      | Next generation information browser
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-client/brave-bin                            | 1.80.125           |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
+ www-client/brave-bin                            | 1.81.131           |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                           | 1.17               |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
