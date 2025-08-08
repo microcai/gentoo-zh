@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-08 23:54:31 CST)
+(The last generation time: 2025-08-09 00:06:18 CST)
 
 ### Packages
 
@@ -666,9 +666,9 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/zashboard                             | 1.101.0            |            | https://github.com/Zephyruso/zashboard                                                  | The Official Mihomo Dashboard
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-vpn/cloudflared                             | 2025.7.0           |            | https://github.com/cloudflare/cloudflared                                               | Cloudflare Tunnel client (formerly Argo Tunnel)
+ net-vpn/cloudflared                             | 2025.8.0           |            | https://github.com/cloudflare/cloudflared                                               | Cloudflare Tunnel client (formerly Argo Tunnel)
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-vpn/cloudflared-bin                         | 2025.7.0           |            | https://github.com/cloudflare/cloudflared                                               | Cloudflare Tunnel client (formerly Argo Tunnel)
+ net-vpn/cloudflared-bin                         | 2025.8.0           |            | https://github.com/cloudflare/cloudflared                                               | Cloudflare Tunnel client (formerly Argo Tunnel)
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-vpn/sstp-server                             | 0.6.0              |            | https://github.com/sorz/sstp-server/                                                    | A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
