@@ -8,7 +8,7 @@ EAPI=8
 CRATES="
 "
 
-LLVM_COMPAT=( 19 )
+LLVM_COMPAT=( 19 20 )
 RUST_MIN_VER="1.85.0"
 RUST_NEEDS_LLVM=1
 inherit cargo desktop gnome2-utils llvm-r1 toolchain-funcs xdg
