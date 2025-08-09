@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-09 00:06:18 CST)
+(The last generation time: 2025-08-09 09:57:37 CST)
 
 ### Packages
 
@@ -130,8 +130,10 @@
  app-misc/ccal                                   | 2.5.3              |            | http://ccal.chinesebay.com/ccal/ccal.htm                                                | A simple command line calendar for Chinese lunar
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/claude-code                            | 1.0.71             |            | https://www.anthropic.com/claude-code                                                   | Claude Code - an agentic coding tool by Anthropic
+                                                 | 1.0.72             |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/crush                                  | 0.3.0              |            | https://github.com/charmbracelet/crush                                                  | The glamourous AI coding agent for your favourite terminal 💘
+                                                 | 0.4.0              |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/cursor-agent                           | 2025.08.08         |            | https://docs.cursor.com/en/cli                                                          | Cursor CLI - interact with AI agents directly from your terminal
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
