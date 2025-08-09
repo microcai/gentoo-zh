@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-09 09:57:37 CST)
+(The last generation time: 2025-08-09 15:07:57 CST)
 
 ### Packages
 
@@ -150,6 +150,8 @@
    acct-group/keyd                               | 0                  |  D, RD     |                                                                                         | A key remapping daemon for linux
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/opencode-bin                           | 0.3.77             |            | https://github.com/sst/opencode                                                         | AI coding agent, built for the terminal
+-------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-misc/qwen-code                              | 0.0.5              |            | https://github.com/QwenLM/qwen-code                                                     | Qwen Code is a powerful command-line AI workflow tool adapted from Gemini CLI
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/rmtrash                                | 1.14               |            | https://github.com/PhrozenByte/rmtrash                                                  | trash-put made compatible to GNUs rm and rmdir
                                                  | 1.15               |            |                                                                                         |
