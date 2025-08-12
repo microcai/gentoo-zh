@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-12 10:18:22 CST)
+(The last generation time: 2025-08-12 10:44:38 CST)
 
 ### Packages
 
@@ -452,7 +452,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/avplayer                            | 9999               |            | http://avplayer.avplayer.org                                                            | avplayer is a p2p video downloader and player
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-video/bilibili                            | 1.16.5_p5          |            | https://github.com/msojocs/bilibili-linux                                               | Based on the Bilibli offcial client to linux version, support roaming
+ media-video/bilibili                            | 1.17.0_p2          |            | https://github.com/msojocs/bilibili-linux                                               | Based on the Bilibli offcial client to linux version, support roaming
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/implay                              | 1.5.1              |            | https://tsl0922.github.io/ImPlay                                                        | A Cross-Platform Desktop Media Player
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -531,7 +531,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/aliyunpan                              | 0.3.7              |            | https://github.com/tickstep/aliyunpan                                                   | aliyunpan cli client, support Webdav service, JavaScript plugin
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/ananta                                 | 1.3.4              |            | https://sr.ht/~cwt/ananta                                                               | a powerful command-line tool
+ net-misc/ananta                                 | 1.3.6              |            | https://sr.ht/~cwt/ananta                                                               | a powerful command-line tool
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/another-redis-desktop-manager-bin      | 1.7.1              |            | https://github.com/qishibo/AnotherRedisDesktopManager                                   | A faster, better and more stable Redis desktop manager [GUI client]
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -619,7 +619,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/juicity                               | 0.5.0              |            | https://github.com/juicity/juicity                                                      | juicity is a quic-based proxy protocol.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/metacubexd                            | 1.189.0            |            | https://github.com/MetaCubeX/metacubexd                                                 | The Official Mihomo Dashboard
+ net-proxy/metacubexd                            | 1.189.1            |            | https://github.com/MetaCubeX/metacubexd                                                 | The Official Mihomo Dashboard
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/mihomo                                | 1.19.12            |            | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
    acct-group/mihomo                             | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
@@ -668,7 +668,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/yass                                  | 1.16.2             |            | https://github.com/Chilledheart/yass                                                    | lightweight and efficient, socks5/http forward proxy
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/zashboard                             | 1.101.0            |            | https://github.com/Zephyruso/zashboard                                                  | The Official Mihomo Dashboard
+ net-proxy/zashboard                             | 1.101.1            |            | https://github.com/Zephyruso/zashboard                                                  | The Official Mihomo Dashboard
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-vpn/cloudflared                             | 2025.8.0           |            | https://github.com/cloudflare/cloudflared                                               | Cloudflare Tunnel client (formerly Argo Tunnel)
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
