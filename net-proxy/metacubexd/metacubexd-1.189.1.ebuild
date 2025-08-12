@@ -7,7 +7,7 @@ DESCRIPTION="The Official Mihomo Dashboard"
 HOMEPAGE="https://github.com/MetaCubeX/metacubexd"
 SRC_URI="
 	https://github.com/MetaCubeX/metacubexd/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-node_modules.tar.xz
+	https://github.com/gentoo-zh/gentoo-deps/releases/download/${P}/${P}-node_modules.tar.xz
 "
 
 LICENSE="MIT"
