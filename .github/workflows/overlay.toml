@@ -111,6 +111,11 @@ source = "regex"
 url = "https://cursor.com/install"
 regex = 'https:\/\/downloads\.cursor\.com\/lab\/(\d{4}\.\d{2}\.\d{2})-[^\/]+\/'
 
+["app-misc/claude-code"]
+source = "regex"
+url = "https://registry.npmjs.org/@anthropic-ai/claude-code"
+regex = '"latest":"([\d.]+)"'
+
 ["app-editors/marktext-bin"]
 source = "github"
 github = "marktext/marktext"
