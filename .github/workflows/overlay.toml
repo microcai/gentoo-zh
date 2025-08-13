@@ -116,6 +116,11 @@ source = "regex"
 url = "https://registry.npmjs.org/@anthropic-ai/claude-code"
 regex = '"latest":"([\d.]+)"'
 
+["dev-util/gemini-cli"]
+source = "regex"
+url = "https://registry.npmjs.org/@google/gemini-cli"
+regex = '"latest":"([\d.]+)"'
+
 ["app-editors/marktext-bin"]
 source = "github"
 github = "marktext/marktext"
