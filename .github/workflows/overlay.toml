@@ -894,7 +894,7 @@ source = "github"
 github = "GuiWonder/Shanggu"
 use_latest_release = true
 prefix = "v"
-github_account = "curlingchimpanzeeowl"
+github_account = "Linerre"
 
 # TODO: version not found: https://sites.google.com/view/jtfoundry/zh-tw/downloads
 #["media-fonts/taipei-sans-tc"]
