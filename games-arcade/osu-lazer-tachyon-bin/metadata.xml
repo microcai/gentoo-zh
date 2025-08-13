@@ -7,8 +7,10 @@
 	</maintainer>
 	<use>
 		<flag name="complete-icon">Generate more icons from .ICO files</flag>
-		<flag name="pipewire">Using pipewire as sound server requires that pipewire's alsa support be enabled</flag>
+		<flag name="gamemode">Use gamemode to run the game</flag>
+		<flag name="pipewire">Enable pipewire's alsa support if using pipewire as sound server</flag>
 		<flag name="sdl2">Use SDL2 to run the game, otherwise use SDL3</flag>
+		<flag name="system-ffmpeg">Use system ffmpeg</flag>
 		<flag name="system-sdl">Use system SDL</flag>
 	</use>
 	<upstream>
