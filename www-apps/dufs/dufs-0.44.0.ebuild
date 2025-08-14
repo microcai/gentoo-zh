@@ -5,9 +5,6 @@
 
 EAPI=8
 
-CRATES="
-"
-
 inherit cargo systemd shell-completion
 
 DESCRIPTION="A distinctive utility file server"
@@ -15,7 +12,6 @@ HOMEPAGE="https://github.com/sigoden/dufs"
 SRC_URI="
 	https://github.com/sigoden/dufs/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/gentoo-zh-drafts/dufs/releases/download/v${PV}/${P}-crates.tar.xz
-	${CARGO_CRATE_URIS}
 "
 
 LICENSE="|| ( Apache-2.0 MIT )"
