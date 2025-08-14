@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-14 16:12:18 CST)
+(The last generation time: 2025-08-14 17:00:56 CST)
 
 ### Packages
 
@@ -110,7 +110,7 @@
    app-i18n/fcitx-rime                           | 9999               | RD         | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
      app-i18n/fcitx                              | 9999               |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
    app-i18n/fcitx-skk                            | 5.1.6              | RD         | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
-                                                 | 5.1.7              |            |                                                                                         |
+                                                 | 5.1.7-r1           |            |                                                                                         |
                                                  | 9999               |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-skin-material                    | 0.5                |            | https://github.com/hrko99/fcitx-skin-material                                           | A Material Design-like skin for Fcitx
@@ -448,7 +448,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/avplayer                            | 9999               |            | http://avplayer.avplayer.org                                                            | avplayer is a p2p video downloader and player
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-video/bilibili                            | 1.17.0_p2          |            | https://github.com/msojocs/bilibili-linux                                               | Based on the Bilibli offcial client to linux version, support roaming
+ media-video/bilibili                            | 1.17.1_p1          |            | https://github.com/msojocs/bilibili-linux                                               | Based on the Bilibli offcial client to linux version, support roaming
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/implay                              | 1.5.1              |            | https://tsl0922.github.io/ImPlay                                                        | A Cross-Platform Desktop Media Player
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -615,7 +615,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/juicity                               | 0.5.0              |            | https://github.com/juicity/juicity                                                      | juicity is a quic-based proxy protocol.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/metacubexd                            | 1.189.1            |            | https://github.com/MetaCubeX/metacubexd                                                 | The Official Mihomo Dashboard
+ net-proxy/metacubexd                            | 1.190.0            |            | https://github.com/MetaCubeX/metacubexd                                                 | The Official Mihomo Dashboard
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/mihomo                                | 1.19.12            |            | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
    acct-group/mihomo                             | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
