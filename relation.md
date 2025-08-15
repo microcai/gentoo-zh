@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-15 08:08:43 CST)
+(The last generation time: 2025-08-15 08:10:29 CST)
 
 ### Packages
 
@@ -361,6 +361,8 @@
  media-fonts/Plangothic                          | 2.9.5771           |            | https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project                  | 遍黑体项目（Plangothic Project）
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/iansui                              | 1.011              |            | https://github.com/ButTaiwan/iansui                                                     | An open-source Chinese font derived from Klee One (Fontworks).
+-------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ media-fonts/ipamj                               | 006.01             |            | https://moji.or.jp/mojikiban/font/                                                      | IPAmj 明朝 (IPAmj Mincho) font
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/jf-openhuninn                       | 2.1                |            | https://justfont.com/huninn/                                                            | An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
