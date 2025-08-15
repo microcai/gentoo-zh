@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-15 22:10:32 CST)
+(The last generation time: 2025-08-15 22:11:34 CST)
 
 ### Packages
 
@@ -132,7 +132,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/claude-code                            | 1.0.81             |            | https://www.anthropic.com/claude-code                                                   | Claude Code - an agentic coding tool by Anthropic
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/crush                                  | 0.6.1              |            | https://github.com/charmbracelet/crush                                                  | The glamourous AI coding agent for your favourite terminal 💘
+ app-misc/crush                                  | 0.6.2              |            | https://github.com/charmbracelet/crush                                                  | The glamourous AI coding agent for your favourite terminal 💘
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/cursor-agent                           | 2025.08.15         |            | https://docs.cursor.com/en/cli                                                          | Cursor CLI - interact with AI agents directly from your terminal
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -148,7 +148,7 @@
  app-misc/keyd                                   | 2.5.0              |            | https://github.com/rvaiya/keyd                                                          | A key remapping daemon for linux
    acct-group/keyd                               | 0                  |  D, RD     |                                                                                         | A key remapping daemon for linux
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/qwen-code                              | 0.0.5              |            | https://github.com/QwenLM/qwen-code                                                     | Qwen Code is a powerful command-line AI workflow tool adapted from Gemini CLI
+ app-misc/qwen-code                              | 0.0.7              |            | https://github.com/QwenLM/qwen-code                                                     | Qwen Code is a powerful command-line AI workflow tool adapted from Gemini CLI
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/rmtrash                                | 1.14               |            | https://github.com/PhrozenByte/rmtrash                                                  | trash-put made compatible to GNUs rm and rmdir
                                                  | 1.15               |            |                                                                                         |
