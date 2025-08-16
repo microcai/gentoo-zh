@@ -11,7 +11,7 @@ DESCRIPTION="A free-to-win rhythm game. Rhythm is just a click away!"
 HOMEPAGE="https://osu.ppy.sh/ https://github.com/ppy/osu"
 
 SRC_URI="
-	https://github.com/ppy/osu/releases/download/${PV}/osu.AppImage -> ${_PN}-${PV}.AppImage
+	https://github.com/ppy/osu/releases/download/${PV}-lazer/osu.AppImage -> ${_PN}-${PV}.AppImage
 	https://github.com/ppy/osu/raw/refs/heads/master/LICENCE -> ${_PN}-LICENCE
 	https://github.com/ppy/osu-resources/raw/refs/heads/master/LICENCE.md -> ${_PN}-resources-LICENCE.md
 "
@@ -22,7 +22,7 @@ LICENSE="MIT CC-BY-NC-4.0"
 SLOT="0"
 KEYWORDS="-* ~amd64"
 
-IUSE="complete-icon pipewire sdl2 +system-sdl"
+IUSE="complete-icon gamemode pipewire sdl2 system-ffmpeg +system-sdl"
 
 RESTRICT="mirror"
 
@@ -34,12 +34,12 @@ DEPEND="
 RDEPEND="
 	${DEPEND}
 	dev-util/lttng-ust:0/2.12
+	gamemode? ( games-util/gamemode )
+	pipewire? ( media-video/pipewire[pipewire-alsa] )
+	system-ffmpeg? ( media-video/ffmpeg-compat:4 )
 	system-sdl? (
 		sdl2? ( <media-libs/libsdl2-2.32.50 )
 		!sdl2? ( media-libs/libsdl3 )
-	)
-	pipewire? (
-		media-video/pipewire[pipewire-alsa]
 	)
 "
 BDEPEND="complete-icon? ( media-gfx/imagemagick )"
@@ -63,6 +63,10 @@ src_prepare() {
 	if use system-sdl; then
 		rm -fv libSDL{2,3}.so
 	fi
+
+	if use system-ffmpeg; then
+		rm -fv libav{codec,format,util}.so.{56,58} libswscale.so.5
+	fi
 	popd
 
 	mkdir -v icons
@@ -80,7 +84,16 @@ src_prepare() {
 	done
 	popd
 
-	sed "s/%SDL3_DEFAULT%/$(usex sdl2 false true)/" "${FILESDIR}/${_PN}.bash" >"${_PN}"
+	cat >"${_PN}" <<EOF
+#!/usr/bin/bash
+
+export OSU_EXTERNAL_UPDATE_PROVIDER=true
+export OSU_SDL3=\${OSU_SDL3:=$(usex sdl2 false true)}
+$(use gamemode && echo "export LD_PRELOAD=/usr/lib64/libgamemodeauto.so")
+$(use system-ffmpeg && echo "export LD_LIBRARY_PATH=/usr/lib/ffmpeg4/lib64")
+
+exec /usr/lib/osu-lazer/osu! "\$@"
+EOF
 }
 
 src_install() {
