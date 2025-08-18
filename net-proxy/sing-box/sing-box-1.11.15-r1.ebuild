@@ -20,7 +20,7 @@ SRC_URI="
 S="${WORKDIR}/${PN}-${_PV}"
 
 LICENSE="GPL-3+"
-SLOT="0/1.11"
+SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~riscv"
 
 IUSE="+quic grpc +dhcp +wireguard +ech +utls +reality +acme +clash-api v2ray-api +gvisor tor"
