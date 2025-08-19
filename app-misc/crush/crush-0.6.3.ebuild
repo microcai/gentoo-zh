@@ -18,6 +18,13 @@ LICENSE="FSL-1.1-MIT"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
 
+src_prepare() {
+	default
+
+	# use go 1.24 since no 1.25 in the main tree
+	sed -i 's/go 1\.25\.[0-9]\+/go 1.24/' go.mod || die
+}
+
 src_compile() {
 	local ldflags="\
 		-X github.com/charmbracelet/crush/internal/version.Version=${PV}"
