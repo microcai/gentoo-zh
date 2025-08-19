@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-19 10:31:49 CST)
+(The last generation time: 2025-08-19 22:56:45 CST)
 
 ### Packages
 
@@ -133,7 +133,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/claude-code                            | 1.0.84             |            | https://www.anthropic.com/claude-code                                                   | Claude Code - an agentic coding tool by Anthropic
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/crush                                  | 0.6.2              |            | https://github.com/charmbracelet/crush                                                  | The glamourous AI coding agent for your favourite terminal 💘
+ app-misc/crush                                  | 0.6.3              |            | https://github.com/charmbracelet/crush                                                  | The glamourous AI coding agent for your favourite terminal 💘
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/cursor-agent                           | 2025.08.15         |            | https://docs.cursor.com/en/cli                                                          | Cursor CLI - interact with AI agents directly from your terminal
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
