@@ -10,13 +10,14 @@ CRATES="
 
 declare -A GIT_CRATES=(
 	[boring-noise]='https://github.com/Watfaq/boring-noise;1f57e8830ea2aea09c3b2f2d990bf3097ceb1bf5;boring-noise-%commit%'
-	[netstack-smoltcp]='https://github.com/automesh-network/netstack-smoltcp;ab06bc3de566fc6485a238dd4c746bb3e4f79484;netstack-smoltcp-%commit%'
+	[netstack-lwip]='https://github.com/eycorsican/netstack-lwip;f434fefd6c227c9dfbec84c364452ba6c1532779;netstack-lwip-%commit%'
 	[quinn-proto]='https://github.com/spongebob888/quinn-jls;3364498f3376432dc8d27ed2fb74b4695506288c;quinn-jls-%commit%/quinn-proto'
 	[quinn-udp]='https://github.com/spongebob888/quinn-jls;3364498f3376432dc8d27ed2fb74b4695506288c;quinn-jls-%commit%/quinn-udp'
 	[quinn]='https://github.com/spongebob888/quinn-jls;3364498f3376432dc8d27ed2fb74b4695506288c;quinn-jls-%commit%/quinn'
 	[rustls]='https://github.com/spongebob888/rustls-jls;70e0553c809ae4a6a3eb1229e864f20d4fc5e611;rustls-jls-%commit%/rustls'
-	[shadowquic-macros]='https://github.com/spongebob888/shadowquic;09cc9f85fd9d31bcb1ecdde2b8c00cc39e712294;shadowquic-%commit%/shadowquic-macros'
-	[shadowquic]='https://github.com/spongebob888/shadowquic;09cc9f85fd9d31bcb1ecdde2b8c00cc39e712294;shadowquic-%commit%/shadowquic'
+	[shadowquic-macros]='https://github.com/spongebob888/shadowquic;cb6f3f258e798b7572138071642a9455851b30c7;shadowquic-%commit%/shadowquic-macros'
+	[shadowquic]='https://github.com/spongebob888/shadowquic;cb6f3f258e798b7572138071642a9455851b30c7;shadowquic-%commit%/shadowquic'
+	[smoltcp]='https://github.com/smoltcp-rs/smoltcp;ac32e643a4b7e09161193071526b3ca5a0deedb5;smoltcp-%commit%'
 	[tokio-watfaq-rustls]='https://github.com/Watfaq/tokio-rustls;638db32084d7ecf9c2660847b55d48d1186b4055;tokio-rustls-%commit%'
 	[tuic-quinn]='https://github.com/Itsusinn/tuic;3591624c0ab5abcdfc47256fb74ada440699593f;tuic-%commit%/tuic-quinn'
 	[tuic]='https://github.com/Itsusinn/tuic;3591624c0ab5abcdfc47256fb74ada440699593f;tuic-%commit%/tuic'
