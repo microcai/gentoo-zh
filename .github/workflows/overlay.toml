@@ -341,7 +341,6 @@ source = "jq"
 url = "https://www.feishu.cn/api/downloads"
 filter = '.versions.Linux_deb_x64.version_number'
 prefix = "Linux-x64-deb@V"
-github_account = "peeweep"
 
 ["app-office/freeoffice"]
 source = "regex"
