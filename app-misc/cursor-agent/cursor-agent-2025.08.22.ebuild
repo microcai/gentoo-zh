@@ -3,7 +3,7 @@
 
 EAPI=8
 
-MY_PV="${PV}-9ba2c98"
+MY_PV="${PV}-82fb571"
 
 DESCRIPTION="Cursor CLI - interact with AI agents directly from your terminal"
 HOMEPAGE="https://docs.cursor.com/en/cli"
@@ -25,7 +25,7 @@ RDEPEND="
 
 src_install() {
 	rm -r -f rg node || die
-	sed -i 's|NODE_BIN="\$SCRIPT_DIR/node"|NODE_BIN="node"|' cursor-agent || die
+	sed -i 's|NODE_BIN="$SCRIPT_DIR/node"|NODE_BIN="node"|' cursor-agent || die
 	dodir "/opt/${PN}"
 	cp -ar . "${D}/opt/${PN}/" || die
 	dosym "../${PN}/${PN}" "/opt/bin/${PN}"
