@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-21 21:40:06 CST)
+(The last generation time: 2025-08-22 09:45:15 CST)
 
 ### Packages
 
@@ -131,7 +131,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/ccal                                   | 2.5.3              |            | http://ccal.chinesebay.com/ccal/ccal.htm                                                | A simple command line calendar for Chinese lunar
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/claude-code                            | 1.0.86             |            | https://www.anthropic.com/claude-code                                                   | Claude Code - an agentic coding tool by Anthropic
+ app-misc/claude-code                            | 1.0.87             |            | https://www.anthropic.com/claude-code                                                   | Claude Code - an agentic coding tool by Anthropic
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/crush                                  | 0.7.0              |            | https://github.com/charmbracelet/crush                                                  | The glamourous AI coding agent for your favourite terminal 💘
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
