@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-23 09:55:21 CST)
+(The last generation time: 2025-08-23 12:02:43 CST)
 
 ### Packages
 
@@ -66,6 +66,8 @@
    dev-python/adafruit-board-toolkit             | 1.1.2              | RD         | https://github.com/adafruit/Adafruit_Board_Toolkit/                                     | CircuitPython board identification and information
    dev-python/nudatus                            | 0.0.5              | RD         | https://github.com/ZanderBrown/nudatus                                                  | CircuitPython board identification and information
    dev-python/pyqt6-charts                       | 6.9.0              | RD         | https://www.riverbankcomputing.com/software/pyqtchart/                                  | Python bindings for QtChart
+-------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-editors/neovim-bin                          | 0.11.3             |            | https://neovim.io                                                                       | Vim-fork focused on extensibility and agility
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                              | 0.11.18            |            | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
                                                  | 1.10.8             |            |                                                                                         |
