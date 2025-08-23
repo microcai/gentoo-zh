@@ -42,6 +42,10 @@ src_install() {
 	insinto /usr/share/nvim/runtime
 	doins -r share/nvim/runtime/*
 
+	for parser in c lua markdown query vim vimdoc; do
+	        dosym ../../../../lib/nvim/parser/${parser}.so /usr/share/nvim/runtime/parser/${parser}.so
+	done
+
 	# conditionally install a symlink for nvimpager
 	if use nvimpager; then
 		fperms a+x usr/share/nvim/runtime/scripts/less.sh
