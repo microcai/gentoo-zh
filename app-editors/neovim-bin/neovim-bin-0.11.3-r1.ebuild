@@ -7,8 +7,11 @@ inherit desktop optfeature xdg
 
 DESCRIPTION="Vim-fork focused on extensibility and agility"
 HOMEPAGE="https://neovim.io"
-SRC_URI="https://github.com/neovim/neovim/releases/download/v${PV}/nvim-linux-x86_64.tar.gz -> ${P}.tar.gz"
-S="${WORKDIR}"/nvim-linux-x86_64
+SRC_URI="
+	amd64? ( https://github.com/neovim/neovim/releases/download/v${PV}/nvim-linux-x86_64.tar.gz -> ${P}-amd64.tar.gz )
+	arm64? ( https://github.com/neovim/neovim/releases/download/v${PV}/nvim-linux-arm64.tar.gz -> ${P}-arm64.tar.gz )
+"
+S="${WORKDIR}"
 
 LICENSE="Apache-2.0 vim"
 SLOT="0"
@@ -21,6 +24,11 @@ RDEPEND="
 "
 
 RESTRICT="strip"
+
+src_prepare() {
+	default
+	mv nvim-linux-*/* . && rm -r nvim-linux-* || die
+}
 
 src_install() {
 	dobin bin/nvim
@@ -47,9 +55,14 @@ src_install() {
 
 pkg_postinst() {
 	xdg_pkg_postinst
+	eselect vi update --if-unset
 
 	optfeature "clipboard support" x11-misc/xsel x11-misc/xclip gui-apps/wl-clipboard
 	optfeature "Python plugin support" dev-python/pynvim
 	optfeature "Ruby plugin support" dev-ruby/neovim-ruby-client
 	optfeature "remote/nvr support" dev-python/neovim-remote
+}
+
+pkg_postrm() {
+	eselect vi update --if-unset
 }
