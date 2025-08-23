@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-23 12:04:17 CST)
+(The last generation time: 2025-08-23 12:12:14 CST)
 
 ### Packages
 
@@ -48,7 +48,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-zhwiki                   | 0.2.5.20250731     |            | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/appflowy-bin                        | 0.9.3              |            | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
+ app-editors/appflowy-bin                        | 0.9.7              |            | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/cursor                              | 0.49.6             |            | https://www.cursor.com/                                                                 | Cursor App - AI-first coding environment
                                                  | 0.50.7             |            |                                                                                         |
@@ -163,7 +163,7 @@
  app-misc/yazi                                   | 25.5.31            |            | https://yazi-rs.github.io                                                               | Blazing fast terminal file manager written in Rust, based on async I/O.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/anytype-bin                          | 0.35.4             |            | https://anytype.io                                                                      | A notebook based on p2p network
-                                                 | 0.46.8             |            |                                                                                         |
+                                                 | 0.49.1             |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/bytedance-feishu                     | 7.22.9             |            | https://www.feishu.cn/download                                                          | 飞书（Feishu） 飞书整合即时消息、日历、音视频会议、云文档、工作台等功能于一体，成就团队和个人，更高效、更愉悦。
                                                  | 7.46.11            |            |                                                                                         |
