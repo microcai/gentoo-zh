@@ -1510,12 +1510,6 @@ use_latest_tag = true
 prefix = "v"
 github_account = "peeweep"
 
-["net-vpn/cloudflared-bin"]
-source = "github"
-github = "cloudflare/cloudflared"
-use_latest_release = true
-github_account = ["douglarek", "peeweep"]
-
 ["net-vpn/sstp-server"]
 source = "github"
 github = "sorz/sstp-server"
