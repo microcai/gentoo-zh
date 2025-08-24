@@ -1510,14 +1510,6 @@ use_latest_tag = true
 prefix = "v"
 github_account = "peeweep"
 
-# FIXME: github graphql api seems to be some confusion between
-# cloudflared and cloudflared-bin, so we disable one of them
-# ["net-vpn/cloudflared"]
-# source = "github"
-# github = "cloudflare/cloudflared"
-# use_latest_tag = true
-# github_account = ["douglarek", "peeweep"]
-
 ["net-vpn/cloudflared-bin"]
 source = "github"
 github = "cloudflare/cloudflared"
