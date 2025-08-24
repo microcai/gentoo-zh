@@ -5,27 +5,27 @@ EAPI=8
 
 inherit go-module
 
-DESCRIPTION="Cloudflare Tunnel client (formerly Argo Tunnel)"
+DESCRIPTION="A command-line client and tunneling daemon for Cloudflare Tunnel"
 HOMEPAGE="https://github.com/cloudflare/cloudflared"
-SRC_URI="
-	https://github.com/cloudflare/cloudflared/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/Gentoo-zh/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz
-"
+SRC_URI="https://github.com/cloudflare/cloudflared/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND="!net-vpn/cloudflared-bin"
+# "make test" fails since cloudflared-2024.12.1, and fails with network-sanbox
+RESTRICT="test"
+
+BDEPEND=">=dev-lang/go-1.24.4"
 
 src_compile(){
-	local ldflags="\
-		-X 'main.Version=${PV}' \
-		-X 'main.BuildTime=$(date +'%F %T %z')'
-		-w -s"
-	ego build -trimpath -ldflags "${ldflags}" ./cmd/cloudflared
+	local ldflags="
+		-X main.Version=${PV}
+		-X 'main.BuildTime=$(date +'%F %T %z')'"
+	ego build -ldflags "${ldflags}" ./cmd/cloudflared
 }
 
 src_install(){
 	dobin cloudflared
+	einstalldocs
 }
