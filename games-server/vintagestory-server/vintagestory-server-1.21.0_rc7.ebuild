@@ -5,9 +5,9 @@ EAPI=8
 DOTNET_PKG_COMPAT=8.0
 inherit dotnet-pkg-base systemd
 
-#MY_PV="${PV/_rc/-rc.}"
-MY_PV="${PV/_pre/-pre.}"
-_CHANNEL="pre"
+MY_PV="${PV/_rc/-rc.}"
+#MY_PV="${PV/_pre/-pre.}"
+_CHANNEL="unstable"
 
 DESCRIPTION="Dedicated game server for Vintage Story"
 HOMEPAGE="https://www.vintagestory.at/"
