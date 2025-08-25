@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-25 09:34:27 CST)
+(The last generation time: 2025-08-25 14:31:31 CST)
 
 ### Packages
 
@@ -324,8 +324,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                       | 1.19.8             |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
                                                  | 1.20.12            |            |                                                                                         |
-                                                 | 1.21.0_pre2        |            |                                                                                         |
-                                                 | 1.21.0_rc1         |            |                                                                                         |
+                                                 | 1.21.0_rc7         |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-arcade/osu-lazer-bin                      | 2025.710.0         |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away!
                                                  | 2025.816.0         |            |                                                                                         |
@@ -349,7 +348,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-server/vintagestory-server                | 1.19.8             |            | https://www.vintagestory.at/                                                            | Dedicated game server for Vintage Story
                                                  | 1.20.12            |            |                                                                                         |
-                                                 | 1.21.0_pre2        |            |                                                                                         |
+                                                 | 1.21.0_rc7         |            |                                                                                         |
    acct-group/vintagestory                       | 0                  | RD         |                                                                                         | User group for Vintage Story Server
    acct-user/vintagestory                        | 0                  | RD         |                                                                                         | User for Vintage Story Server
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -664,7 +663,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/smartproxy                            | 0.9.5              |            | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/v2rayA                                | 2.2.6.7            |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
+ net-proxy/v2rayA                                | 2.2.7              |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                                  | 9999               |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/yacd-meta                             | 0.3.7              |            | https://github.com/MetaCubeX/Yacd-meta                                                  | Yet Another Clash Dashboard
