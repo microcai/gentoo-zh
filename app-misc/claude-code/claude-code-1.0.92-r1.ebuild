@@ -40,6 +40,16 @@ src_install() {
 	dodir /opt/${PN}
 	dosym -r /opt/${PN}/cli.js /opt/bin/claude
 
+	# Create symlink for ripgrep binary since claude-code requires it for custom slash commands.
+	# This is a potential BUG.
+	if use amd64; then
+		dodir /opt/${PN}/vendor/ripgrep/x64-linux
+		dosym -r /usr/bin/rg /opt/${PN}/vendor/ripgrep/x64-linux/rg
+	elif use arm64; then
+		dodir /opt/${PN}/vendor/ripgrep/arm64-linux
+		dosym -r /usr/bin/rg /opt/${PN}/vendor/ripgrep/arm64-linux/rg
+	fi
+
 	insinto /etc/${PN}
 	doins "${FILESDIR}/managed-settings.json"
 }
