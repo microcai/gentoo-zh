@@ -7,7 +7,7 @@ inherit dotnet-pkg-base systemd
 
 MY_PV="${PV/_rc/-rc.}"
 #MY_PV="${PV/_pre/-pre.}"
-_CHANNEL="unstable"
+_CHANNEL="stable"
 
 DESCRIPTION="Dedicated game server for Vintage Story"
 HOMEPAGE="https://www.vintagestory.at/"
