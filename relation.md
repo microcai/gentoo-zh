@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-26 20:08:18 CST)
+(The last generation time: 2025-08-27 18:13:15 CST)
 
 ### Packages
 
@@ -15,7 +15,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  acct-user/sing-box                              | 0                  |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/1password                             | 8.11.6             |            | https://1password.com                                                                   | Password manager and secure wallet
+ app-admin/1password                             | 8.11.8             |            | https://1password.com                                                                   | Password manager and secure wallet
    acct-group/onepassword                        | 0                  |  D, RD     |                                                                                         | Password manager and secure wallet
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/chezmoi                               | 2.64.0             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
@@ -624,7 +624,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/juicity                               | 0.5.0              |            | https://github.com/juicity/juicity                                                      | juicity is a quic-based proxy protocol.
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/mihomo                                | 1.19.12            |            | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
+ net-proxy/mihomo                                | 1.19.13            |            | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
    acct-group/mihomo                             | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
    acct-user/mihomo                              | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
