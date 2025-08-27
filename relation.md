@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-27 20:27:45 CST)
+(The last generation time: 2025-08-27 20:35:32 CST)
 
 ### Packages
 
@@ -354,6 +354,8 @@
                                                  | 1.21.0             |            |                                                                                         |
    acct-group/vintagestory                       | 0                  | RD         |                                                                                         | User group for Vintage Story Server
    acct-user/vintagestory                        | 0                  | RD         |                                                                                         | User for Vintage Story Server
+-------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ gnome-extra/nautilus-open-any-terminal          | 0.6.1              |            | https://github.com/Stunkymonkey/nautilus-open-any-terminal                              | context-menu entry for opening other terminal in nautilus
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  gui-apps/crystal-dock                           | 2.11               |            | https://github.com/dangvd/crystal-dock                                                  | Cool dock (desktop panel) for Linux desktop
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
