@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<longdescription lang="en">
+		An extension for nautilus which adds an context-entry for opening other terminal emulators than gnome-terminal
+	</longdescription>
+	<upstream>
+		<remote-id type="github">Stunkymonkey/nautilus-open-any-terminal</remote-id>
+	</upstream>
+</pkgmetadata>
