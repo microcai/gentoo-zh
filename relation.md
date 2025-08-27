@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-27 20:05:09 CST)
+(The last generation time: 2025-08-27 20:27:45 CST)
 
 ### Packages
 
@@ -139,7 +139,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/crush                                  | 0.7.1              |            | https://github.com/charmbracelet/crush                                                  | The glamourous AI coding agent for your favourite terminal 💘
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/cursor-agent                           | 2025.08.25         |            | https://docs.cursor.com/en/cli                                                          | Cursor CLI - interact with AI agents directly from your terminal
+ app-misc/cursor-agent                           | 2025.08.27         |            | https://docs.cursor.com/en/cli                                                          | Cursor CLI - interact with AI agents directly from your terminal
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/go-yq-bin                              | 4.47.1             |            | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -153,7 +153,7 @@
  app-misc/keyd                                   | 2.5.0              |            | https://github.com/rvaiya/keyd                                                          | A key remapping daemon for linux
    acct-group/keyd                               | 0                  |  D, RD     |                                                                                         | A key remapping daemon for linux
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/qwen-code                              | 0.0.8              |            | https://github.com/QwenLM/qwen-code                                                     | Qwen Code is a powerful command-line AI workflow tool adapted from Gemini CLI
+ app-misc/qwen-code                              | 0.0.9              |            | https://github.com/QwenLM/qwen-code                                                     | Qwen Code is a powerful command-line AI workflow tool adapted from Gemini CLI
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/rmtrash                                | 1.14               |            | https://github.com/PhrozenByte/rmtrash                                                  | trash-put made compatible to GNUs rm and rmdir
                                                  | 1.15               |            |                                                                                         |
@@ -299,7 +299,7 @@
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/binsider                               | 0.2.1              |            | https://binsider.dev                                                                    | Analyze ELF binaries like a boss
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/gemini-cli                             | 0.1.22             |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
+ dev-util/gemini-cli                             | 0.2.1              |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                      | 1.28.1.15219       |            | https://www.jetbrains.com/toolbox/app                                                   | Manage all your JetBrains Projects and Tools
                                                  | 2.6.2.41321        |            |                                                                                         |
