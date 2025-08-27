@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit gnome2
+inherit gnome2-utils
 
 DESCRIPTION="context-menu entry for opening other terminal in nautilus"
 HOMEPAGE="https://github.com/Stunkymonkey/nautilus-open-any-terminal"
@@ -22,25 +22,8 @@ BDEPEND="
 	sys-devel/gettext
 "
 
-src_configure() {
-	default
-}
-
-src_compile() {
-	make || die "make failed"
-}
-
-src_install() {
-	make DESTDIR="${D}" PREFIX="/usr" install-nautilus
-	einstalldocs
-}
-
 pkg_postinst() {
 	gnome2_schemas_update
-}
-
-pkg_prerm() {
-	make DESTDIR="${D}" PREFIX="/usr" uninstall
 }
 
 pkg_postrm() {
