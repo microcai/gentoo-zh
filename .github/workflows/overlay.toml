@@ -1464,11 +1464,13 @@ github = "v2fly/v2ray-core"
 use_latest_release = true
 prefix = "v"
 
-["net-proxy/v2ray-bin"]
-source = "github"
-github = "v2fly/v2ray-core"
-use_latest_release = true
-prefix = "v"
+# Disable net-proxy/v2ray-bin because of it
+# conflict with v2ray in github v4 search api
+# ["net-proxy/v2ray-bin"]
+# source = "github"
+# github = "v2fly/v2ray-core"
+# use_latest_release = true
+# prefix = "v"
 
 ["net-proxy/v2rayA"]
 source = "github"
