@@ -21,6 +21,10 @@ RDEPEND="
 	=gnome-base/gnome-shell-${PV%.*}*
 "
 
+BDEPEND="
+	app-arch/unzip
+"
+
 extension_uuid="clipboard-indicator@tudmotu.com"
 
 src_install() {
