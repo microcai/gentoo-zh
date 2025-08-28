@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-28 17:11:44 CST)
+(The last generation time: 2025-08-28 17:16:59 CST)
 
 ### Packages
 
@@ -72,7 +72,7 @@
  app-editors/neovim-bin                          | 0.11.3-r2          |            | https://neovim.io                                                                       | Vim-fork focused on extensibility and agility
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                              | 0.11.18            |            | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
-                                                 | 1.10.8             |            |                                                                                         |
+                                                 | 1.11.5             |            |                                                                                         |
 -------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/void-editor                         | 1.2.1.25105        |            | https://voideditor.com                                                                  | Void Editor - AI Code Editor
                                                  | 1.99.30034         |            |                                                                                         |
