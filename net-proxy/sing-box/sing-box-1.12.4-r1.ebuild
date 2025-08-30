@@ -61,7 +61,7 @@ src_install() {
 	newins release/config/config.json config.json.example
 
 	doinitd release/config/sing-box.initd
-	systemd_dounit release/config/sing-box{,@}.service
+	systemd_dounit release/config/sing-box.service
 
 	insinto /usr/share/dbus-1/system.d
 	newins release/config/sing-box-split-dns.xml sing-box-dns.conf
