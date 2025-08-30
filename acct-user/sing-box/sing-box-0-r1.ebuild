@@ -7,5 +7,6 @@ inherit acct-user
 
 ACCT_USER_ID=-1
 ACCT_USER_GROUPS=( sing-box )
+ACCT_USER_HOME="/var/lib/sing-box"
 
 acct-user_add_deps
