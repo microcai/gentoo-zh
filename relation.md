@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-31 00:45:34 CST)
+(The last generation time: 2025-08-31 01:15:58 CST)
 
 ### Packages
 
@@ -630,8 +630,6 @@
  net-proxy/juicity                                     | 0.5.0              |            | https://github.com/juicity/juicity                                                      | juicity is a quic-based proxy protocol.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/mihomo                                      | 1.19.13            |            | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
-   acct-group/mihomo                                   | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
-   acct-user/mihomo                                    | 0-r1               |  D, RD     |                                                                                         | Another Clash Kernel, formerly Clash.Meta
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/mihomo-party-bin                            | 1.8.2              |            | https://mihomo.party                                                                    | Mihomo Party
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
