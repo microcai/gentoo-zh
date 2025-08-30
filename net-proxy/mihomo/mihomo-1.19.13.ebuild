@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-inherit go-module systemd fcaps
+inherit go-module systemd
 
 DESCRIPTION="Another Clash Kernel, formerly Clash.Meta"
 HOMEPAGE="
@@ -14,41 +14,17 @@ SRC_URI="
 	https://github.com/gentoo-zh/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz
 "
 
-DEPEND="
-	acct-group/mihomo
-	acct-user/mihomo
-"
-RDEPEND="
-	${DEPEND}
-	systemd? (
-		sys-apps/systemd
-	)
-	!systemd? (
-		tun? (
-			sys-apps/openrc[caps(+)]
-		)
-		!tun? (
-			sys-apps/openrc
-		)
-	)
-"
 BDEPEND=">=dev-lang/go-1.20.4"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~loong"
-IUSE="+gvisor systemd +tun"
-
-FILECAPS=(
-	cap_net_admin,cap_net_bind_service=+ep /usr/bin/mihomo
-)
+IUSE="+gvisor"
 
 src_compile() {
 	local BUILDTIME=$(LC_ALL=C date -u || die)
 	local MY_TAGS
-	if use gvisor; then
-		MY_TAGS="with_gvisor"
-	fi
+	use gvisor && MY_TAGS="with_gvisor"
 	ego build -tags "${MY_TAGS}" -trimpath -ldflags "
 		-linkmode external -extldflags '${LDFLAGS}' \
 		-X github.com/metacubex/mihomo/constant.Version=${PV} \
@@ -58,7 +34,12 @@ src_compile() {
 src_install() {
 	dobin mihomo
 	dosym mihomo /usr/bin/clash-meta
-	systemd_dounit "${FILESDIR}/mihomo.service"
-	systemd_newunit "${FILESDIR}/mihomo_at.service" mihomo@.service
+	systemd_dounit .github/release/mihomo.service
+	systemd_dounit .github/release/mihomo@.service
 	newinitd "${FILESDIR}"/mihomo.initd mihomo
+
+	keepdir /etc/mihomo
+	insinto /etc/mihomo
+	newins .github/release/config.yaml config.yaml.example
+	einstalldocs
 }
