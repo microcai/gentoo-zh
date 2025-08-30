@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-30 23:38:58 CST)
+(The last generation time: 2025-08-31 00:45:34 CST)
 
 ### Packages
 
@@ -336,6 +336,7 @@
  games-emulation/conty                                 | 1.27.1             |            | https://github.com/Kron4ek/Conty                                                        | SquashFS image of Arch Linux with: Lutris, Steam, Bottles, Wine...
                                                        | 1.28               |            |                                                                                         |
                                                        | 1.28.1             |            |                                                                                         |
+                                                       | 1.28.2             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-fps/openarena                                   | 0.8.8              |            | http://openarena.ws                                                                     | A violent, sexy, multiplayer first person shooter based on the ioquake3 engine
                                                        | 9999               |            |                                                                                         |
