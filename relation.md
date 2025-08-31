@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-31 18:46:32 CST)
+(The last generation time: 2025-09-01 07:54:30 CST)
 
 ### Packages
 
@@ -70,7 +70,7 @@
    dev-python/nudatus                                  | 0.0.5              | RD         | https://github.com/ZanderBrown/nudatus                                                  | CircuitPython board identification and information
    dev-python/pyqt6-charts                             | 6.9.0              | RD         | https://www.riverbankcomputing.com/software/pyqtchart/                                  | Python bindings for QtChart
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/neovim-bin                                | 0.11.3-r2          |            | https://neovim.io                                                                       | Vim-fork focused on extensibility and agility
+ app-editors/neovim-bin                                | 0.11.4             |            | https://neovim.io                                                                       | Vim-fork focused on extensibility and agility
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                                    | 0.11.18            |            | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
                                                        | 1.11.5             |            |                                                                                         |
