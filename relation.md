@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-08-31 15:33:34 CST)
+(The last generation time: 2025-08-31 18:46:32 CST)
 
 ### Packages
 
@@ -611,7 +611,7 @@
  net-proxy/clash-rs                                    | 0.9.0              |            | https://watfaq.gitbook.io/clashrs-user-manual/                                          | Custom protocol, rule based network proxy
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-verge-bin                             | 2.3.2-r1           |            | https://github.com/clash-verge-rev/clash-verge-rev                                      | (Continuation) of Clash Meta GUI based on Tauri.
-                                                       | 2.4.0              |            |                                                                                         |
+                                                       | 2.4.1              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/dae                                         | 1.0.0              |            | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
                                                        | 9999               |            |                                                                                         |
