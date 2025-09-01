@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-01 21:01:36 CST)
+(The last generation time: 2025-09-01 21:47:58 CST)
 
 ### Packages
 
@@ -619,7 +619,7 @@
  net-proxy/daed                                        | 1.0.0              |            | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
                                                        | 9999               |            |                                                                                         |
    sys-apps/pnpm                                       | 9.15.5             | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
-                                                       | 10.15.0            |            |                                                                                         |
+                                                       | 10.15.1            |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/flclash-bin                                 | 0.8.87             |            | https://github.com/chen08209/FlClash                                                    | A multi-platform proxy client based on ClashMeta
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -749,7 +749,7 @@
    dev-libs/v2ray-geoip                                | 202507050144       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                            | 202506050146       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                            | 1.5.7              |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                            | 1.5.8              |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/dufs                                         | 0.44.0             |            | https://github.com/sigoden/dufs                                                         | A distinctive utility file server
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
