@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-01 11:32:05 CST)
+(The last generation time: 2025-09-01 11:52:55 CST)
 
 ### Packages
 
@@ -73,7 +73,7 @@
  app-editors/neovim-bin                                | 0.11.4             |            | https://neovim.io                                                                       | Vim-fork focused on extensibility and agility
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                                    | 0.11.18            |            | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
-                                                       | 1.11.5             |            |                                                                                         |
+                                                       | 1.11.7             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/void-editor                               | 1.2.1.25105        |            | https://voideditor.com                                                                  | Void Editor - AI Code Editor
                                                        | 1.99.30034         |            |                                                                                         |
@@ -322,7 +322,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gitoxide                                      | 0.45.0             |            | https://github.com/GitoxideLabs/gitoxide                                                | A command-line application for interacting with git repositories
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/sourcegit-bin                                 | 2025.32            |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
+ dev-vcs/sourcegit-bin                                 | 2025.33            |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                             | 1.19.8             |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
                                                        | 1.20.12            |            |                                                                                         |
