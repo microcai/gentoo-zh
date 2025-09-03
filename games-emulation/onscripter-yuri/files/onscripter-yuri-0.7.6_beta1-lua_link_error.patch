@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 27060fc..9251167 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -57,7 +57,7 @@ function(config_linux TARGET_NAME)
+             SDL2::SDL2
+             jpeg
+             bz2
+-            lua
++            ${LUA_LIBRARIES}
+             dl
+             SDL2_ttf
+             SDL2_image

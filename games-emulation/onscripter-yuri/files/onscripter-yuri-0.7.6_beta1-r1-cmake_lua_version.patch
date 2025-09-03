@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 27060fc..55bbde9 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -49,7 +49,7 @@ function(config_linux TARGET_NAME)
+         pkg_check_modules(SDL2_IMAGE REQUIRED SDL2_image)
+         pkg_check_modules(SDL2_MIXER REQUIRED SDL2_mixer)
+         pkg_check_modules(JPEG REQUIRED libjpeg)
+-        find_package(Lua REQUIRED)
++        find_package(Lua ${LUA_VERSION} EXACT REQUIRED)
+         target_include_directories(${TARGET_NAME} PRIVATE
+             ${LUA_INCLUDE_DIR}
+         )
