@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<!-- maintainer-needed -->
+	<!-- maintainer-needed -->
+	<longdescription>
+		Install, update, and manage your JetBrains IDEs 
+		on remote machines just as easily as on your local 
+		setup. Work across Linux, Windows, and macOS with 
+		secure, flexible connections using built-in remote 
+		development support.
+	</longdescription>
 </pkgmetadata>
