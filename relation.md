@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-04 23:57:12 CST)
+(The last generation time: 2025-09-05 07:51:35 CST)
 
 ### Packages
 
@@ -464,7 +464,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/avplayer                                  | 9999               |            | http://avplayer.avplayer.org                                                            | avplayer is a p2p video downloader and player
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-video/bilibili                                  | 1.17.1_p4          |            | https://github.com/msojocs/bilibili-linux                                               | Based on the Bilibli offcial client to linux version, support roaming
+ media-video/bilibili                                  | 1.17.1_p5          |            | https://github.com/msojocs/bilibili-linux                                               | Based on the Bilibli offcial client to linux version, support roaming
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/implay                                    | 1.5.1              |            | https://tsl0922.github.io/ImPlay                                                        | A Cross-Platform Desktop Media Player
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
