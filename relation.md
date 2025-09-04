@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-04 18:28:33 CST)
+(The last generation time: 2025-09-04 23:57:12 CST)
 
 ### Packages
 
@@ -299,6 +299,7 @@
  dev-util/binsider                                     | 0.2.1              |            | https://binsider.dev                                                                    | Analyze ELF binaries like a boss
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/gemini-cli                                   | 0.2.2              |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
+                                                       | 0.3.0_pre3         |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                            | 1.28.1.15219       |            | https://www.jetbrains.com/toolbox/app                                                   | Manage all your JetBrains Projects and Tools
                                                        | 2.6.2.41321        |            |                                                                                         |
