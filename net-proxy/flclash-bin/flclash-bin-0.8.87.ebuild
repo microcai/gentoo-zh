@@ -16,7 +16,6 @@ S="${WORKDIR}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
-RESTRICT="mirror bindist"
 
 RDEPEND="
 	dev-libs/libayatana-appindicator
