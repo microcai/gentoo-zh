@@ -3,7 +3,8 @@
 
 EAPI=8
 
-MY_PV="${PV/_pre/-preview.}"
+MY_PV="${PV/_pre/-preview}"
+MY_PV="${MY_PV/preview[0-9]*/preview.${MY_PV##*preview}}"
 
 DESCRIPTION="Gemini CLI - a command-line AI workflow tool by Google"
 HOMEPAGE="https://github.com/google-gemini/gemini-cli"
