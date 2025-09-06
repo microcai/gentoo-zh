@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-07 01:08:07 CST)
+(The last generation time: 2025-09-07 01:09:10 CST)
 
 ### Packages
 
@@ -71,6 +71,7 @@
    dev-python/pyqt6-charts                             | 6.9.0              | RD         | https://www.riverbankcomputing.com/software/pyqtchart/                                  | Python bindings for QtChart
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/neovim-bin                                | 0.11.4             |            | https://neovim.io                                                                       | Vim-fork focused on extensibility and agility
+                                                       | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                                    | 0.11.18            |            | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
                                                        | 1.11.7             |            |                                                                                         |
