@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer type="person">
-		<email>me@puqns67.icu</email>
-		<name>Puqns67</name>
-	</maintainer>
+	<!-- maintainer-needed -->
 	<upstream>
 		<doc>https://xtls.github.io/config</doc>
 		<bugs-to>https://github.com/XTLS/Xray-core/issues</bugs-to>

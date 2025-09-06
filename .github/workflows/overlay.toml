@@ -1484,7 +1484,6 @@ source = "github"
 github = "XTLS/Xray-core"
 use_latest_release = true
 prefix = "v"
-github_account = "Puqns67"
 
 ["net-proxy/yacd-meta"]
 source = "github"
