@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-07 01:07:34 CST)
+(The last generation time: 2025-09-07 01:08:07 CST)
 
 ### Packages
 
@@ -137,8 +137,9 @@
  app-misc/ccal                                         | 2.5.3              |            | http://ccal.chinesebay.com/ccal/ccal.htm                                                | A simple command line calendar for Chinese lunar
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/crush                                        | 0.7.1              |            | https://github.com/charmbracelet/crush                                                  | The glamourous AI coding agent for your favourite terminal 💘
+                                                       | 0.7.5              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/cursor-agent                                 | 2025.09.03         |            | https://docs.cursor.com/en/cli                                                          | Cursor CLI - interact with AI agents directly from your terminal
+ app-misc/cursor-agent                                 | 2025.09.04         |            | https://docs.cursor.com/en/cli                                                          | Cursor CLI - interact with AI agents directly from your terminal
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/go-yq-bin                                    | 4.47.1             |            | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
