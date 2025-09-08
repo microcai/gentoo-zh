@@ -24,6 +24,8 @@ src_install() {
 
 	doins -r .
 
+	doins "${FILESDIR}/toolbox.svg"
+
 	fperms +x "/opt/${PN}/${PN}"
 
 	dosym "../../opt/${PN}/${PN}" /usr/bin/jetbrains-toolbox
