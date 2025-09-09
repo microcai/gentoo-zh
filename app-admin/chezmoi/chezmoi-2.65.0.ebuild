@@ -12,12 +12,11 @@ SRC_URI+=" https://github.com/gentoo-zh/gentoo-deps/releases/download/${P}/${P}-
 
 LICENSE="MIT"
 SLOT="0"
-# drop keywords until dev-lang/go-1.25.0 got keyworded
-# KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 
 RDEPEND="dev-vcs/git"
 RDEPEND+=" !app-admin/chezmoi-bin"
-BDEPEND=">=dev-lang/go-1.24.5"
+BDEPEND=">=dev-lang/go-1.25"
 
 src_compile() {
 	local ldflags="\
