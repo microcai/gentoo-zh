@@ -1121,13 +1121,6 @@ github_account = "peeweep"
 # high update frequency
 #["net-dns/dnsmasq-china-list"]
 
-["net-dns/mosdns"]
-source = "github"
-github = "IrineSistiana/mosdns"
-use_latest_release = true
-prefix = "v"
-github_account = "peeweep"
-
 ["net-dns/mosdns-cn-bin"]
 source = "github"
 github = "IrineSistiana/mosdns-cn"
