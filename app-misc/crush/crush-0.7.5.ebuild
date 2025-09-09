@@ -16,7 +16,7 @@ S="${WORKDIR}"/${P}
 # https://fsl.software/FSL-1.1-MIT.template.md
 LICENSE="FSL-1.1-MIT"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="-* ~amd64 ~arm64"
 
 BDEPEND=">=dev-lang/go-1.25"
 
