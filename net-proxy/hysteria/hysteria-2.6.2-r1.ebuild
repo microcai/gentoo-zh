@@ -41,7 +41,7 @@ src_compile() {
 		-X ${APP_SRC_CMD_PKG}.appType=release \
 		-X ${APP_SRC_CMD_PKG}.appPlatform=linux \
 		-X ${APP_SRC_CMD_PKG}.appArch=$(go env GOARCH) \
-		-X ${APP_SRC_CMD_PKG}.appToolchain=$(go env GOVERSION) \
+		-X '${APP_SRC_CMD_PKG}.appToolchain=$(go env GOVERSION)' \
 		-X ${APP_SRC_CMD_PKG}.appCommit=${COMMIT_ID} \
 		-X ${APP_SRC_CMD_PKG}.libVersion=${APP_LIB_VERSION} \
 		" \
