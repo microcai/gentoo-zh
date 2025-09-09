@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-08 18:27:15 CST)
+(The last generation time: 2025-09-09 08:59:38 CST)
 
 ### Packages
 
@@ -489,12 +489,6 @@
  net-dns/ddns-go                                       | 6.12.4             |            | https://github.com/jeessy2/ddns-go                                                      | Automatically obtain your public IP address and set to your domain name service.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/dnslookup                                     | 1.11.1             |            | https://github.com/ameshkov/dnslookup                                                   | Simple command line utility to make DNS lookups to the specified server
--------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-dns/dnsmasq-china-list                            | 9999               |            | https://github.com/felixonmars/dnsmasq-china-list                                       | Chinese-specific configuration to improve your favorite DNS server.
--------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-dns/mosdns                                        | 5.3.3              |            | https://github.com/IrineSistiana/mosdns                                                 | A DNS forwarder
--------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-dns/mosdns-cn-bin                                 | 1.4.0-r1           |            | https://github.com/IrineSistiana/mosdns-cn                                              | A DNS forwarder
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/q                                             | 0.19.8             |            | https://github.com/natesales/q                                                          | A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
