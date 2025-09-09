@@ -24,8 +24,6 @@ src_install() {
 
 	doins -r .
 
-	doins "${FILESDIR}/toolbox.svg"
-
 	fperms +x "/opt/${PN}/${PN}"
 
 	dosym "../../opt/${PN}/${PN}" /usr/bin/jetbrains-toolbox
@@ -36,6 +34,5 @@ src_install() {
 pkg_postinst() {
 	xdg_pkg_postinst
 
-	einfo "JetBrains Toolbox may not launch at first due to initialization scripts running."
-	einfo "In that case, try running it again."
+	chmod -R 777 /opt/"${PN}" # Required for app to behave correctly
 }
