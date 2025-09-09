@@ -21,8 +21,7 @@ src_compile() {
 	local ldflags="\
 		-X main.version=${PV} \
 		-X main.commit=${GIT_COMMIT} \
-		-X main.date=$(date -u +%Y-%m-%dT%H:%M:%SZ) \
-		-w -s"
+		-X main.date=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 	ego build -o ${P} -trimpath -ldflags "${ldflags}"
 }
 
