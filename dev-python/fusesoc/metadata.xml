@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM 'https://www.gentoo.org/dtd/metadata.dtd'>
+<pkgmetadata>
+	<maintainer type="person">
+		<email>fermata@h2o.moe</email>
+		<name>fermata</name>
+	</maintainer>
+	<longdescription lang="en">
+	FuseSoC is an award-winning package manager and a set of build tools for HDL (Hardware Description Language) code.Its main purpose is to increase reuse of IP (Intellectual Property) cores and be an aid for creating, building and simulating SoC solutions.
+	</longdescription>
+	<upstream>
+		<remote-id type="pypi">fusesoc</remote-id>
+		<remote-id type="github">olofk/fusesoc</remote-id>
+	</upstream>
+</pkgmetadata>
