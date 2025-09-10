@@ -669,6 +669,11 @@ source = "pypi"
 pypi = "qasync"
 github_account = "wgjak47"
 
+["dev-python/simplesat"]
+source = "pypi"
+pypi = "simplesat"
+github_account = "f3rmata"
+
 ["dev-python/uv-bin"]
 source = "github"
 github = "astral-sh/uv"
