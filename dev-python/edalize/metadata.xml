@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM 'https://www.gentoo.org/dtd/metadata.dtd'>
+<pkgmetadata>
+	<maintainer type="person">
+		<email>fermata@h2o.moe</email>
+		<name>fermata</name>
+	</maintainer>
+	<longdescription lang="en">
+	Edalize is a Python Library for interacting with EDA tools. It can create project files for supported tools and run them in batch or GUI mode (where supported).
+	</longdescription>
+	<upstream>
+		<remote-id type="pypi">edalize</remote-id>
+		<remote-id type="github">olofk/edalize</remote-id>
+	</upstream>
+</pkgmetadata>
