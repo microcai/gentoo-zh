@@ -634,6 +634,11 @@ use_latest_tag = true
 prefix = "v"
 github_account = "liangyongxiang"
 
+["dev-python/okonomiyaki"]
+source = "pypi"
+pypi = "okonomiyaki"
+github_account = "f3rmata"
+
 ["dev-python/pycosat"]
 source = "github"
 github = "ContinuumIO/pycosat"
