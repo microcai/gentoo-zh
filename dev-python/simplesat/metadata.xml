@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM 'https://www.gentoo.org/dtd/metadata.dtd'>
+<pkgmetadata>
+	<maintainer type="person">
+		<email>fermata@h2o.moe</email>
+		<name>fermata</name>
+	</maintainer>
+	<longdescription lang="en">
+	Prototype for SAT-based dependency handling. This is a work in progress, do not expect any API not to change at this point.
+	</longdescription>
+	<upstream>
+		<remote-id type="pypi">simplesat</remote-id>
+		<remote-id type="github">enthought/sat-solver</remote-id>
+	</upstream>
+</pkgmetadata>
