@@ -585,6 +585,11 @@ github = "paulfitz/daff"
 use_latest_release = true
 prefix = "v"
 
+["dev-python/edalize"]
+source = "pypi"
+pypi = "edalize"
+github_account = "f3rmata"
+
 ["dev-python/feeluown-bilibili"]
 source = "pypi"
 pypi = "feeluown-bilibili"
