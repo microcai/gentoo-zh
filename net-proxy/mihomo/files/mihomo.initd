@@ -2,7 +2,7 @@
 # Copyright 2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-pidfile="/run/mihomo/mihomo.pid"
+pidfile="/run/mihomo.pid"
 command="/usr/bin/mihomo"
 command_args="-d ${MIHOMO_CONF_DIR:-/etc/mihomo}"
 command_background="yes"
