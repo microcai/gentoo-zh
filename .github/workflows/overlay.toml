@@ -610,6 +610,11 @@ source = "pypi"
 pypi = "fuo-ytmusic"
 github_account = "wgjak47"
 
+["dev-python/fusesoc"]
+source = "pypi"
+pypi = "fusesoc"
+github_account = "f3rmata"
+
 ["dev-python/janus"]
 source = "github"
 github = "aio-libs/janus"
