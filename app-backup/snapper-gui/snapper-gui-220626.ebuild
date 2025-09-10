@@ -1,16 +1,17 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..12} )
-inherit distutils-r1 git-r3
+PYTHON_COMPAT=( python3_{10..13} )
+COMMIT_ID="191575084a4e951802c32a4177dc704cf435883a"
+inherit distutils-r1
 
 DESCRIPTION="GUI for snapper, a tool for Linux filesystem snapshot management"
 HOMEPAGE="https://github.com/ricardomv/snapper-gui"
-EGIT_REPO_URI="https://github.com/ricardomv/${PN}.git"
-EGIT_COMMIT=1915750
+SRC_URI="https://github.com/ricardomv/snapper-gui/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/snapper-gui-${COMMIT_ID}"
 
 LICENSE="GPL-2+"
 SLOT="0"
