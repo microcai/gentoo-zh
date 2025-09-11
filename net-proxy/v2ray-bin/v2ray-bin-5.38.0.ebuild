@@ -26,10 +26,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm ~arm64 ~x86"
 
-DEPEND="
-	app-alternatives/v2ray-geoip
-	app-alternatives/v2ray-geosite
-"
+DEPEND=""
 RDEPEND="
 	!net-proxy/v2ray
 	${DEPEND}
