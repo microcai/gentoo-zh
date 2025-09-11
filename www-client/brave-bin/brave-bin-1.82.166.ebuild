@@ -4,8 +4,8 @@
 EAPI=8
 
 CHROMIUM_LANGS="af am ar az bg bn ca cs da de el en-GB en-US es es-419 et fa fi fil fr
-	gu he hi hr hu id it ja ka km kn ko lt lv mk ml mn mr ms my nb nl pl pt-BR pt-PT ro ru si sk
-	sl sq sr-Latn sr sv sw ta te th tr uk ur uz vi zh-CN zh-TW"
+	gu he hi hr hu id it ja ka kk km kn ko lo lt lv mk ml mn mr ms my nb nl pl pt-BR pt-PT ro ru
+	si sk sl sq sr-Latn sr sv sw ta te th tr uk ur uz vi zh-CN zh-TW"
 
 inherit chromium-2 desktop pax-utils unpacker xdg
 
@@ -20,7 +20,7 @@ LICENSE="MPL-2.0"
 SLOT="0"
 KEYWORDS="-* amd64"
 
-IUSE="qt5 qt6"
+IUSE="qt6"
 RESTRICT="bindist strip"
 
 RDEPEND="
@@ -50,11 +50,6 @@ RDEPEND="
 	x11-libs/libXfixes
 	x11-libs/libXrandr
 	x11-libs/pango
-	qt5? (
-		dev-qt/qtcore:5
-		dev-qt/qtgui:5[X]
-		dev-qt/qtwidgets:5
-	)
 	qt6? ( dev-qt/qtbase:6[gui,widgets] )
 "
 
@@ -97,9 +92,7 @@ src_install() {
 	chromium_remove_language_paks
 	popd > /dev/null || die
 
-	if ! use qt5; then
-		rm "${BRAVE_HOME}/libqt5_shim.so" || die
-	fi
+	rm "${BRAVE_HOME}/libqt5_shim.so" || die
 	if ! use qt6; then
 		rm "${BRAVE_HOME}/libqt6_shim.so" || die
 	fi
