@@ -17,10 +17,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 
-DEPEND="!net-proxy/v2ray-bin
-	app-alternatives/v2ray-geoip
-	app-alternatives/v2ray-geosite
-"
+DEPEND="!net-proxy/v2ray-bin"
 RDEPEND="${DEPEND}"
 BDEPEND=">=dev-lang/go-1.24"
 
