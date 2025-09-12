@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-12 11:33:01 CST)
+(The last generation time: 2025-09-12 12:37:19 CST)
 
 ### Packages
 
@@ -743,7 +743,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-domain-list-community                   | 0                  |            |                                                                                         | Virtual for v2ray-domain-list-community
    dev-libs/v2ray-domain-list-community                | 20250627153051     | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
-   dev-libs/v2ray-domain-list-community-bin            | 20250608120644     | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
+   dev-libs/v2ray-domain-list-community-bin            | 20250906011216     | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-geoip                                   | 0                  |            |                                                                                         | Virtual for v2ray-geoip
    dev-libs/v2ray-geoip                                | 202507050144       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
