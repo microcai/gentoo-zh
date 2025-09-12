@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-12 20:14:13 CST)
+(The last generation time: 2025-09-12 20:34:40 CST)
 
 ### Packages
 
@@ -154,7 +154,7 @@
  app-misc/keyd                                         | 2.5.0              |            | https://github.com/rvaiya/keyd                                                          | A key remapping daemon for linux
    acct-group/keyd                                     | 0                  |  D, RD     |                                                                                         | A key remapping daemon for linux
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/qwen-code                                    | 0.0.10             |            | https://github.com/QwenLM/qwen-code                                                     | Qwen Code is a powerful command-line AI workflow tool adapted from Gemini CLI
+ app-misc/qwen-code                                    | 0.0.11             |            | https://github.com/QwenLM/qwen-code                                                     | Qwen Code is a powerful command-line AI workflow tool adapted from Gemini CLI
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/rmtrash                                      | 1.14               |            | https://github.com/PhrozenByte/rmtrash                                                  | trash-put made compatible to GNUs rm and rmdir
                                                        | 1.15               |            |                                                                                         |
