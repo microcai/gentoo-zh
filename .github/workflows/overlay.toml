@@ -1138,6 +1138,9 @@ use_latest_tag = true
 prefix = "v"
 github_account = "peeweep"
 
+# live package
+#["net-dns/dnsmasq-china-list"]
+
 ["net-dns/q"]
 source = "github"
 github = "natesales/q"
