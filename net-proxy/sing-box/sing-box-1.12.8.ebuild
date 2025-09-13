@@ -14,14 +14,14 @@ DESCRIPTION="The universal proxy platform."
 HOMEPAGE="https://sing-box.sagernet.org/ https://github.com/SagerNet/sing-box"
 SRC_URI="
 	https://github.com/SagerNet/sing-box/archive/refs/tags/v${_PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/gentoo-zh/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz
+	https://github.com/Puqns67/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz
 "
 
 S="${WORKDIR}/${PN}-${_PV}"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm64 ~riscv"
 
 IUSE="+quic grpc +dhcp +wireguard +utls +acme +clash-api v2ray-api +gvisor tor +tailscale"
 
@@ -61,7 +61,7 @@ src_install() {
 	newins release/config/config.json config.json.example
 
 	doinitd release/config/sing-box.initd
-	systemd_dounit release/config/sing-box{,@}.service
+	systemd_dounit release/config/sing-box.service
 
 	insinto /usr/share/dbus-1/system.d
 	newins release/config/sing-box-split-dns.xml sing-box-dns.conf
