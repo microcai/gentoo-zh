@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-14 11:44:37 CST)
+(The last generation time: 2025-09-15 17:13:52 CST)
 
 ### Packages
 
@@ -623,7 +623,7 @@
  net-proxy/daed                                        | 1.0.0              |            | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
                                                        | 9999               |            |                                                                                         |
    sys-apps/pnpm                                       | 9.15.5             | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
-                                                       | 10.15.1            |            |                                                                                         |
+                                                       | 10.16.1            |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/flclash-bin                                 | 0.8.87             |            | https://github.com/chen08209/FlClash                                                    | A multi-platform proxy client based on ClashMeta
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -752,7 +752,7 @@
    dev-libs/v2ray-geoip                                | 202507050144       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                            | 202506050146       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                            | 1.5.9              |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                            | 1.5.11             |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/dufs                                         | 0.45.0             |            | https://github.com/sigoden/dufs                                                         | A distinctive utility file server
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -764,7 +764,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/miniserve                                 | 0.31.0-r1          |            | https://github.com/svenstaro/miniserve                                                  | For when you really just want to serve some files over HTTP right now!
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-servers/s-ui-bin                                  | 1.3.4              |            | https://github.com/alireza0/s-ui                                                        | An advanced Web Panel • Built for SagerNet/Sing-Box
+ www-servers/s-ui-bin                                  | 1.3.6              |            | https://github.com/alireza0/s-ui                                                        | An advanced Web Panel • Built for SagerNet/Sing-Box
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/woof                                      | 9999               |            | http://www.home.unix-ag.org/simon/woof.html                                             | an ad-hoc single file webserver
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
