@@ -1690,7 +1690,6 @@ source = "github"
 github = "RSSNext/Follow"
 use_latest_release = true
 prefix = 'v'
-github_account = "peeweep"
 
 ["www-client/brave-bin"]
 source = "github"
