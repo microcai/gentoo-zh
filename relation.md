@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-17 18:35:21 CST)
+(The last generation time: 2025-09-17 18:38:59 CST)
 
 ### Packages
 
@@ -762,7 +762,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                                 | 1.17               |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-servers/miniserve                                 | 0.31.0-r1          |            | https://github.com/svenstaro/miniserve                                                  | For when you really just want to serve some files over HTTP right now!
+ www-servers/miniserve                                 | 0.32.0             |            | https://github.com/svenstaro/miniserve                                                  | For when you really just want to serve some files over HTTP right now!
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/s-ui-bin                                  | 1.3.6              |            | https://github.com/alireza0/s-ui                                                        | An advanced Web Panel • Built for SagerNet/Sing-Box
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
