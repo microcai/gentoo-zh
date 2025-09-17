@@ -14,7 +14,7 @@ inherit cargo
 DESCRIPTION="For when you really just want to serve some files over HTTP right now!"
 HOMEPAGE="https://github.com/svenstaro/miniserve"
 SRC_URI="
-	https://github.com/svenstaro/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/svenstaro/miniserve/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 	${CARGO_CRATE_URIS}
 	https://github.com/gentoo-zh-drafts/${PN}/releases/download/v${PV}/${P}-crates.tar.xz
 "
