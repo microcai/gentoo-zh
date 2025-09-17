@@ -11,7 +11,7 @@ CRATES="
 RUST_MIN_VER="1.85.0"
 inherit cargo
 
-DESCRIPTION="For when you really just want to serve some files over HTTP right now!"
+DESCRIPTION="a CLI tool to serve files and dirs over HTTP"
 HOMEPAGE="https://github.com/svenstaro/miniserve"
 SRC_URI="
 	https://github.com/svenstaro/miniserve/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
