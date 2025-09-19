@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-19 11:03:43 CST)
+(The last generation time: 2025-09-19 14:59:13 CST)
 
 ### Packages
 
@@ -495,7 +495,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/dnsmasq-china-list                            | 9999               |            | https://github.com/felixonmars/dnsmasq-china-list                                       | Chinese-specific configuration to improve your favorite DNS server.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-dns/q                                             | 0.19.8             |            | https://github.com/natesales/q                                                          | A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
+ net-dns/q                                             | 0.19.9             |            | https://github.com/natesales/q                                                          | A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/deepin-wine-wecom                              | 4.1.22.6009        |            | https://aur.archlinux.org/packages/com.qq.weixin.work.deepin-x11                        | Tencent Weixin Work on Deepin Wine(com.qq.weixin.work.deepin) For Gentoo
    app-emulation/deepin-wine6-stable                   | 6.0.0.52           |  D, RD     | https://www.deepin.org                                                                  | Deepin wine6 stable
