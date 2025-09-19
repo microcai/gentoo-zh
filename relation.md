@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-17 18:47:18 CST)
+(The last generation time: 2025-09-19 11:03:43 CST)
 
 ### Packages
 
@@ -288,7 +288,7 @@
  dev-python/pywikibot                                  | 10.3.0             |            | https://www.mediawiki.org/wiki/Manual:Pywikibot                                         | To interact with MediaWiki API (for example Wikipedia, Wikimedia Commons)
    dev-python/mwparserfromhell                         | 0.7.2              | RD         | https://github.com/earwig/mwparserfromhell                                              | A Python parser for MediaWiki wikicode
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/uv-bin                                     | 0.8.17             |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
+ dev-python/uv-bin                                     | 0.8.18             |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-ruby/filelock                                     | 1.1.1              |            | https://github.com/sheerun/filelock                                                     | Heavily tested, but simple filelocking solution using flock command
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -623,7 +623,7 @@
  net-proxy/daed                                        | 1.0.0              |            | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
                                                        | 9999               |            |                                                                                         |
    sys-apps/pnpm                                       | 9.15.5             | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
-                                                       | 10.16.1            |            |                                                                                         |
+                                                       | 10.17.0            |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/flclash-bin                                 | 0.8.87             |            | https://github.com/chen08209/FlClash                                                    | A multi-platform proxy client based on ClashMeta
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
