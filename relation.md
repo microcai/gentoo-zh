@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-20 01:52:55 CST)
+(The last generation time: 2025-09-20 11:48:46 CST)
 
 ### Packages
 
@@ -137,7 +137,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/ccal                                         | 2.5.3              |            | http://ccal.chinesebay.com/ccal/ccal.htm                                                | A simple command line calendar for Chinese lunar
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/crush                                        | 0.8.0              |            | https://github.com/charmbracelet/crush                                                  | The glamourous AI coding agent for your favourite terminal 💘
+ app-misc/crush                                        | 0.9.2              |            | https://github.com/charmbracelet/crush                                                  | The glamourous AI coding agent for your favourite terminal 💘
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/cursor-agent                                 | 2025.09.04         |            | https://docs.cursor.com/en/cli                                                          | Cursor CLI - interact with AI agents directly from your terminal
                                                        | 2025.09.12         |            |                                                                                         |
@@ -154,7 +154,7 @@
  app-misc/keyd                                         | 2.5.0              |            | https://github.com/rvaiya/keyd                                                          | A key remapping daemon for linux
    acct-group/keyd                                     | 0                  |  D, RD     |                                                                                         | A key remapping daemon for linux
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/qwen-code                                    | 0.0.11             |            | https://github.com/QwenLM/qwen-code                                                     | Qwen Code is a powerful command-line AI workflow tool adapted from Gemini CLI
+ app-misc/qwen-code                                    | 0.0.12             |            | https://github.com/QwenLM/qwen-code                                                     | Qwen Code is a powerful command-line AI workflow tool adapted from Gemini CLI
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/rmtrash                                      | 1.14               |            | https://github.com/PhrozenByte/rmtrash                                                  | trash-put made compatible to GNUs rm and rmdir
                                                        | 1.15               |            |                                                                                         |
