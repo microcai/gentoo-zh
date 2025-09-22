@@ -714,6 +714,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "gouwazi"
 
+["dev-util/codex-bin"]
+source = "github"
+github = "openai/codex"
+use_latest_release = true
+prefix = "rust-v"
+github_account = "vowstar"
+
 # TODO:
 # https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release
 ["dev-util/jetbrains-toolbox"]
