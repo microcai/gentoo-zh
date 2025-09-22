@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">openai/codex</remote-id>
+		<bugs-to>https://github.com/openai/codex/issues</bugs-to>
+	</upstream>
+	<longdescription lang="en">
+		Codex is OpenAI's advanced AI-powered code generation and completion tool.
+		It leverages large language models to understand natural language prompts
+		and generate corresponding code snippets, functions, and entire programs.
+		Codex supports multiple programming languages and helps developers write
+		code faster, debug more efficiently, and explore new coding patterns.
+	</longdescription>
+	<longdescription lang="zh">
+		Codex 是 OpenAI 开发的先进 AI 驱动代码生成和补全工具。它利用大型语言模型理解自然
+		语言提示，并生成相应的代码片段、函数和完整程序。Codex 支持多种编程语言，帮助开发人员
+		更快地编写代码、更高效地调试，并探索新的编码模式。
+	</longdescription>
+</pkgmetadata>
