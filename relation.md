@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-23 01:12:19 CST)
+(The last generation time: 2025-09-23 17:22:54 CST)
 
 ### Packages
 
@@ -15,7 +15,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  acct-user/sing-box                                    | 0-r1               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/1password                                   | 8.11.8             |            | https://1password.com                                                                   | Password manager and secure wallet
+ app-admin/1password                                   | 8.11.10            |            | https://1password.com                                                                   | Password manager and secure wallet
    acct-group/onepassword                              | 0                  |  D, RD     |                                                                                         | Password manager and secure wallet
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/chezmoi                                     | 2.65.1             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
@@ -626,7 +626,7 @@
    sys-apps/pnpm                                       | 9.15.5             | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
                                                        | 10.17.0            |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/flclash-bin                                 | 0.8.87             |            | https://github.com/chen08209/FlClash                                                    | A multi-platform proxy client based on ClashMeta
+ net-proxy/flclash-bin                                 | 0.8.88             |            | https://github.com/chen08209/FlClash                                                    | A multi-platform proxy client based on ClashMeta
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/hysteria                                    | 2.6.3              |            | https://github.com/apernet/hysteria                                                     | A powerful, lightning fast and censorship resistant proxy.
    acct-group/hysteria                                 | 0                  |  D, RD     |                                                                                         | A powerful, lightning fast and censorship resistant proxy.
@@ -680,7 +680,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/yass                                        | 1.16.2             |            | https://github.com/Chilledheart/yass                                                    | lightweight and efficient, socks5/http forward proxy
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/zashboard                                   | 1.104.0            |            | https://github.com/Zephyruso/zashboard                                                  | The Official Mihomo Dashboard
+ net-proxy/zashboard                                   | 1.105.0            |            | https://github.com/Zephyruso/zashboard                                                  | The Official Mihomo Dashboard
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-vpn/sstp-server                                   | 0.6.0              |            | https://github.com/sorz/sstp-server/                                                    | A Secure Socket Tunneling Protocol (SSTP) server implemented in Python.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
