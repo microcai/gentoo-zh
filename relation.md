@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-24 17:47:59 CST)
+(The last generation time: 2025-09-25 01:03:17 CST)
 
 ### Packages
 
@@ -266,7 +266,7 @@
  dev-python/frozendict                                 | 2.4.6              |            | https://github.com/Marco-Sulla/python-frozendict                                        | A simple immutable dictionary for Python
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/fusesoc                                    | 2.4.4              |            | https://github.com/olofk/fusesoc/                                                       | Award-winnning package manager and build abstraction tool for HDL code.
-   dev-python/edalize                                  | 0.6.1              | RD         | https://github.com/olofk/edalize/                                                       | Library for interfacing EDA tools.
+   dev-python/edalize                                  | 0.6.2              | RD         | https://github.com/olofk/edalize/                                                       | Library for interfacing EDA tools.
    dev-python/simplesat                                | 0.9.2              | RD         | https://github.com/enthought/sat-solver                                                 | Prototype for SAT-based dependency handling.
      dev-python/okonomiyaki                            | 3.0.0              | RD         | https://github.com/enthought/okonomiyaki                                                | Self-contained library to deal with metadata in egg and runtime archives.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
