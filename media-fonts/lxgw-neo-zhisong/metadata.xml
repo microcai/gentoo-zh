@@ -35,4 +35,8 @@
 		太玄经八十一卦符号、麻将符号、中国象棋符号、算筹数字、「正」字计数等
 		特殊符号。
 	</longdescription>
+	<use>
+		<flag name="regular">Regular variant</flag>
+		<flag name="plus">Plus variant (Supports Unicode CJK Unified Ideographs Extension A)</flag>
+	</use>
 </pkgmetadata>
