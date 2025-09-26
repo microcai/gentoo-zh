@@ -8,4 +8,8 @@
 	<upstream>
 		<remote-id type="github">lxgw/LxgwNeoXiHei</remote-id>
 	</upstream>
+	<use>
+		<flag name="regular">Regular variant</flag>
+		<flag name="plus">Plus variant (Supports Unicode CJK Unified Ideographs Extension A)</flag>
+	</use>
 </pkgmetadata>
