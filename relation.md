@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-27 18:46:52 CST)
+(The last generation time: 2025-09-28 03:53:36 CST)
 
 ### Packages
 
@@ -512,6 +512,8 @@
                                                        | 0.1.29             |            |                                                                                         |
      dev-libs/libdatrie                                | 0.2.13             |  D, RD     | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
    dev-util/execstack                                  | 0_pre20130503      | BD         | https://people.redhat.com/jakub/prelink                                                 | set the executable stack flag of ELF binaries and libraries
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ net-im/kotatogram-bin                                 | 1.4.9              |            | https://thatcat.space/kotatogram                                                        | Telegram Desktop fork with wide messages, local folders, square avatars
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/tencent-qq                                     | 3.2.19_p250820     |            | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
                                                        | 3.2.19_p250904     |            |                                                                                         |
