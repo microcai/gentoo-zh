@@ -1722,6 +1722,7 @@ github_account = "peeweep"
 source = "github"
 github = "alireza0/s-ui"
 use_latest_release = true
+prefix = "v"
 github_account = "gouwazi"
 
 # live package only
