@@ -1,0 +1,7 @@
+# Copyright 2025 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+# jinqiang zhang <peeweep@0x0.ee> (2025-09-29)
+# mask sing-box 1.9 1.10, a bit old
+# will be cleaned after 1 month if no one objected (2025-10-29)
+<net-proxy/sing-box-1.11
