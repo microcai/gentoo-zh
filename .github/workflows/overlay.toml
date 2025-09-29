@@ -1699,11 +1699,11 @@ use_latest_release = true
 prefix = 'v'
 
 ["www-client/brave-bin"]
-source = "github"
-github = "brave/brave-browser"
-use_latest_release = true
+source = "aur"
+aur = "brave-bin"
+strip_release = true
 github_account = "irort"
-prefix = "v"
+prefix = "1:"
 
 ["www-servers/darkhttpd"]
 source = "github"
