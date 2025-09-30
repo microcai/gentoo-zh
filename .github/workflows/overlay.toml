@@ -147,6 +147,13 @@ github_account = "CHN-beta"
 # TODO: PV mismatching tags
 #["app-emulation/looking-glass"]
 
+["app-emulation/winboat-bin"]
+source = "github"
+github = "TibixDev/winboat"
+use_latest_release = true
+prefix = "v"
+github_account = "gouwazi"
+
 ["app-emulation/winetricks-zh"]
 source = "github"
 github = "hillwoodroc/winetricks-zh"
