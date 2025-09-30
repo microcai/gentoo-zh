@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-30 08:20:48 CST)
+(The last generation time: 2025-09-30 13:34:39 CST)
 
 ### Packages
 
@@ -95,6 +95,8 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/looking-glass                           | 0_beta7_rc1-r1     |            | https://looking-glass.io                                                                | A low latency KVMFR application for guests with VGA PCI Passthrough
    gui-libs/libdecor                                   | 0.1.1              |  D, RD     | https://gitlab.freedesktop.org/libdecor/libdecor                                        | A client-side decorations library for Wayland clients
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-emulation/winboat-bin                             | 0.8.5              |            | https://www.winboat.app/                                                                | Run Windows apps on Linux with seamless integration
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/winetricks-zh                           | 9999               |            | https://github.com/hillwoodroc/winetricks-zh/                                           | windows applications setup wizard for Chinese wine users
                                                        | 20240105.1         |            |                                                                                         |
