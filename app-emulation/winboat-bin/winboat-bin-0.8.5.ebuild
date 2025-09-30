@@ -18,6 +18,7 @@ RESTRICT="strip"
 
 RDEPEND="
 	app-containers/docker
+	app-containers/docker-compose
 	net-misc/freerdp:3
 	virtual/libudev
 "
