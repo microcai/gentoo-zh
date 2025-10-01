@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-09-30 23:27:50 CST)
+(The last generation time: 2025-10-01 16:24:55 CST)
 
 ### Packages
 
@@ -527,6 +527,7 @@
    x11-misc/snapd-xdg-open                             | 20170401           | RD         | https://github.com/snapcore/snapd-xdg-open                                              | Software for opening links from snaps in desktop
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/wechat                                         | 4.0.1.11-r2        |            | https://linux.weixin.qq.com                                                             | Weixin for Linux
+                                                       | 4.1.0.10           |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/wechat-universal-bwrap                         | 1.0.0.241-r1       |            | https://weixin.qq.com                                                                   | WeChat (Universal) from UOS, inside bwrap sandbox
                                                        | 1.0.0.242          |            |                                                                                         |
