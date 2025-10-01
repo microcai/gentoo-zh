@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+   <maintainer type="person">
+       <email>xysgh2764@qq.com</email>
+       <name>Xysgh</name>
+   </maintainer>
+   <upstream>
+       <remote-id type="github">bggRGjQaUbCoE/PiliPlus</remote-id>
+   </upstream>
+</pkgmetadata>
