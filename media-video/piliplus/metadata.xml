@@ -8,4 +8,11 @@
    <upstream>
        <remote-id type="github">bggRGjQaUbCoE/PiliPlus</remote-id>
    </upstream>
+   </maintainer>
+   <longdescription lang="en">
+   BiliBili third-party client developed using Flutter
+   </longdescription>
+   <longdescription lang="zh">
+   使用Flutter开发的BiliBili第三方客户端
+   </longdescription>
 </pkgmetadata>
