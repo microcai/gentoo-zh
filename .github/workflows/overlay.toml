@@ -263,11 +263,12 @@ source = "regex"
 url = "https://www.scootersoftware.com/kb/linux_install"
 regex = "bcompare-([\\d.]+).x86_64.tar.gz"
 
-["app-misc/ccal"]
-source = "regex"
-url = "https://ccal.chinesebay.com/ccal/ccal.htm"
-regex = "<title>ccal-([\\d.]+)</title>"
-github_account = "aieu"
+# dead website, http status code 599
+# ["app-misc/ccal"]
+# source = "regex"
+# url = "https://ccal.chinesebay.com/ccal/ccal.htm"
+# regex = "<title>ccal-([\\d.]+)</title>"
+# github_account = "aieu"
 
 ["app-misc/go-yq-bin"]
 source = "github"
