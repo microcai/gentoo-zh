@@ -22,7 +22,7 @@ KEYWORDS="~amd64"
 DEPEND="
 	acct-user/hysteria
 	acct-group/hysteria
-	>=dev-lang/go-1.24.2
+	>=dev-lang/go-1.25.1
 "
 RDEPEND="${DEPEND}"
 
