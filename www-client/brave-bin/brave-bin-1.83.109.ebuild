@@ -74,7 +74,7 @@ src_install() {
 
 	# Remove cron job and menu for updating from Debian repos.
 	rm -r ${BRAVE_HOME}/cron/ || die
-	rm -r etc usr/share/menu || die
+	rm -r etc || die
 
 	# Rename docs directory to our needs.
 	mv usr/share/doc/${MY_PN} usr/share/doc/${PF} || die
