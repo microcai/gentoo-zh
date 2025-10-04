@@ -1289,7 +1289,7 @@ github_account = "Nuralii1i"
 ["net-misc/ntpd-rs"]
 source = "github"
 github = "pendulum-project/ntpd-rs"
-use_latest_tag = true
+use_latest_release = true
 prefix = "v"
 github_account = "peeweep"
 
