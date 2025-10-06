@@ -27,9 +27,11 @@ BDEPEND="
 "
 RDEPEND="
 	app-accessibility/at-spi2-core
+	app-crypt/mit-krb5
 	dev-libs/nss
 	media-libs/libpulse
 	media-libs/mesa
+	net-print/cups
 	virtual/jack
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
