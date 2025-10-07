@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-07 21:52:17 CST)
+(The last generation time: 2025-10-07 22:18:38 CST)
 
 ### Packages
 
@@ -141,9 +141,9 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/copilot                                      | 0.0.327            |            | https://github.com/github/copilot-cli                                                   | The power of GitHub Copilot, now in your terminal
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/crush                                        | 0.9.2              |            | https://github.com/charmbracelet/crush                                                  | The glamourous AI coding agent for your favourite terminal 💘
+ app-misc/crush                                        | 0.10.4             |            | https://github.com/charmbracelet/crush                                                  | The glamourous AI coding agent for your favourite terminal 💘
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/cursor-agent                                 | 2025.09.18         |            | https://docs.cursor.com/en/cli                                                          | Cursor CLI - interact with AI agents directly from your terminal
+ app-misc/cursor-agent                                 | 2025.10.02         |            | https://docs.cursor.com/en/cli                                                          | Cursor CLI - interact with AI agents directly from your terminal
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/go-yq-bin                                    | 4.47.2             |            | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -309,7 +309,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/codex-bin                                    | 0.44.0             |            | https://github.com/openai/codex                                                         | Codex - OpenAI's code generation and completion tool
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/gemini-cli                                   | 0.5.4              |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
+ dev-util/gemini-cli                                   | 0.7.0              |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                            | 2.8.1.52155        |            | https://www.jetbrains.com/toolbox-app/                                                  | Manage all your JetBrains Projects and Tools
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
