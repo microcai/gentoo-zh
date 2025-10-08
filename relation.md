@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-08 21:48:25 CST)
+(The last generation time: 2025-10-08 22:26:31 CST)
 
 ### Packages
 
@@ -28,7 +28,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/proton-authenticator-bin                    | 1.0.0              |            | https://proton.me/authenticator                                                         | Official open-source two-factor authentication app by Proton
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/rbw                                         | 1.13.2             |            | https://github.com/doy/rbw                                                              | Unofficial Bitwarden CLI
+ app-admin/rbw                                         | 1.14.1             |            | https://github.com/doy/rbw                                                              | Unofficial Bitwarden CLI
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-backup/restic-rest-server                         | 0.14.0             |            | https://github.com/restic/rest-server                                                   | A high performance HTTP server that implements restic's REST backend API
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -590,6 +590,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/prips                                        | 1.0.0              |            | http://devel.ringlet.net/sysutils/prips/                                                | print the IP addresses in a range
                                                        | 1.2.0              |            |                                                                                         |
+                                                       | 1.2.2              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/remmina-plugin-rustdesk                      | 1.0.0.0-r1         |            | http://www.muflone.com/remmina-plugin-rustdesk/                                         | A protocol plugin for Remmina to launch a Rustdesk connection.
    net-misc/rustdesk                                   | 1.4.1              |  D, RD     | https://rustdesk.com/                                                                   | An open-source remote desktop, and alternative to TeamViewer
