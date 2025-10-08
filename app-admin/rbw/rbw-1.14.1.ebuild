@@ -8,19 +8,21 @@ EAPI=8
 CRATES="
 "
 
+RUST_MIN_VER="1.82.0"
+
 inherit cargo shell-completion
 
 DESCRIPTION="Unofficial Bitwarden CLI"
 HOMEPAGE="https://github.com/doy/rbw"
 SRC_URI="
 	https://github.com/doy/rbw/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/gentoo-zh-drafts/${PN}/releases/download/${PV}/${P}-crates.tar.xz
+	https://github.com/gentoo-zh-drafts/rbw/releases/download/${PV}/${P}-crates.tar.xz
 	${CARGO_CRATE_URIS}
 "
 
 LICENSE="MIT"
 # Dependent crate licenses
-LICENSE+=" Apache-2.0 BSD Boost-1.0 ISC MIT Unicode-3.0"
+LICENSE+=" Apache-2.0 BSD Boost-1.0 ISC MIT MPL-2.0 Unicode-3.0"
 SLOT="0"
 KEYWORDS="~amd64"
 
