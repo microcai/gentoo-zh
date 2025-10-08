@@ -39,12 +39,43 @@ jobs:
         eselect repository add gentoo-zh git `realpath ./gentoo-zh`
         emaint sync -r gentoo-zh
 
+    - name: Get the base commit
+      id: basecommit
+      shell: bash
+      env:
+        COMMITS_URL: ${{ github.event.pull_request.commits_url }}
+        COMMITS_JSON: /tmp/commits.json
+      run: |
+        set -xe
+        curl -H "Accept: application/vnd.github.v3+json" \
+             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+             -o ${COMMITS_JSON} ${COMMITS_URL}
+        [[ $(file --mime-type ${COMMITS_JSON}) =~ application/json$ ]]
+        <${COMMITS_JSON} jq '.message' && false || true
+        commits=( $(<${COMMITS_JSON} jq '.[].sha' | cut -d'"' -f2) )
+        pcommits=( $(<${COMMITS_JSON} jq '.[].parents[].sha' | cut -d'"' -f2) )
+        sha=${pcommits[0]}
+        for pcommit in ${pcommits[@]}; do
+          pcommit_not_matched=0
+          for commit in ${commits[@]}; do
+            if [[ ${pcommit} == ${commit} ]]; then
+              pcommit_not_matched=1
+            fi
+          done
+          if [[ ${pcommit_not_matched} == 0 ]]; then
+            sha=${pcommit}
+            break
+          fi
+        done
+        echo "sha=$sha" >> $GITHUB_OUTPUT
+
     - name: echo pkgs
       id: pkgs
       run: |
         cd /var/db/repos/gentoo-zh
         # Get list of changed files between base and head
-        diff_files=$(git diff --raw --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
+        git diff --raw ${{ steps.basecommit.outputs.sha }} ${{ github.event.pull_request.head.sha }}
+        diff_files=$(git diff --raw --name-only ${{ steps.basecommit.outputs.sha }} ${{ github.event.pull_request.head.sha }})
         cates=$(cat /var/db/repos/gentoo{,-zh}/profiles/categories | sort -du)
         declare -a check_pkgs
         for file in ${diff_files}; do
