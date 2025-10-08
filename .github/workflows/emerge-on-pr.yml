@@ -1,4 +1,4 @@
-name: emerge-on-pr
+name: emerge
 
 on:
   pull_request_target:
@@ -15,6 +15,7 @@ concurrency:
 
 jobs:
   build:
+    name: emerge changed ebuilds
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/liangyongxiang/gentoo-testing:master
