@@ -81,12 +81,12 @@ jobs:
 
     - name: emerge --onlydeps packages
       run: |
-        emerge --autounmask=y --autounmask-write=y --autounmask-continue=y --onlydeps ${{ steps.pkgs.outputs.pkgs }}
+        emerge --quiet --autounmask=y --autounmask-write=y --autounmask-continue=y --onlydeps ${{ steps.pkgs.outputs.pkgs }}
         rm -rf /var/log/portage/elog/
 
     - name: emerge packages
       run: |
-        emerge --autounmask=y --autounmask-write=y --autounmask-continue=y ${{ steps.pkgs.outputs.pkgs }}
+        emerge --quiet --autounmask=y --autounmask-write=y --autounmask-continue=y ${{ steps.pkgs.outputs.pkgs }}
 
     - name: check Portage elog (fail if exists)
       run: |
