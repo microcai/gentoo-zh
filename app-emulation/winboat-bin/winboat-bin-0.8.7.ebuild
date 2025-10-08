@@ -19,6 +19,8 @@ RESTRICT="strip"
 RDEPEND="
 	app-containers/docker
 	app-containers/docker-compose
+	dev-libs/nspr
+	dev-libs/nss
 	net-misc/freerdp:3
 	virtual/libudev
 "
