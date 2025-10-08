@@ -43,7 +43,8 @@ jobs:
       id: pkgs
       run: |
         cd /var/db/repos/gentoo-zh
-        diff_files=$(git diff --raw --name-only ${{ github.event.pull_request.base.sha }})
+        # Get list of changed files between base and head
+        diff_files=$(git diff --raw --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
         cates=$(cat /var/db/repos/gentoo{,-zh}/profiles/categories | sort -du)
         declare -a check_pkgs
         for file in ${diff_files}; do
