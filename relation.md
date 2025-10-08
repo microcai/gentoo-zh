@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-08 20:37:35 CST)
+(The last generation time: 2025-10-08 20:41:37 CST)
 
 ### Packages
 
@@ -389,9 +389,9 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/jf-openhuninn                             | 2.1                |            | https://justfont.com/huninn/                                                            | An opensource Chinese font by justfont, based on Kosugi Maru and Varela Round
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/lxgw-neo-xihei                            | 1.223              |            | https://github.com/lxgw/LxgwNeoXiHei                                                    | A Simplified Chinese sans-serif font derived from IPAex Gothic
+ media-fonts/lxgw-neo-xihei                            | 1.224              |            | https://github.com/lxgw/LxgwNeoXiHei                                                    | A Simplified Chinese sans-serif font derived from IPAex Gothic
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/lxgw-neo-zhisong                          | 1.037              |            | https://github.com/lxgw/LxgwNeoZhiSong                                                  | A Chinese serif font derived from IPAex Mincho and IPAmj Mincho
+ media-fonts/lxgw-neo-zhisong                          | 1.039              |            | https://github.com/lxgw/LxgwNeoZhiSong                                                  | A Chinese serif font derived from IPAex Mincho and IPAmj Mincho
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/misans                                    | 4.003-r1           |            | https://hyperos.mi.com/font                                                             | MiSans 是由小米主导,联合汉仪发布的可免费使用的字体
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
