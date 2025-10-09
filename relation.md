@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-09 18:19:23 CST)
+(The last generation time: 2025-10-09 18:58:00 CST)
 
 ### Packages
 
@@ -480,6 +480,7 @@
  media-video/iptvnator-bin                             | 0.16.0             |            | https://iptvnator.vercel.app/                                                           | Cross-platform IPTV player application with multiple features
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/mpv-handler                               | 0.3.16             |            | https://github.com/akiirui/mpv-handler                                                  | Play website videos and songs with mpv & yt-dlp
+                                                       | 0.4.1              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/piliplus-bin                              | 1.1.4.6            |            | https://github.com/bggRGjQaUbCoE/PiliPlus                                               | BiliBili third-party client developed using Flutter
                                                        | 1.1.4.8            |            |                                                                                         |
