@@ -18,7 +18,7 @@ S=${WORKDIR}
 
 LICENSE="MPL-2.0"
 SLOT="0"
-KEYWORDS="-* amd64"
+KEYWORDS="-* ~amd64"
 
 IUSE="qt6"
 RESTRICT="bindist strip"
