@@ -1,15 +1,18 @@
 #!/sbin/openrc-run
 
 name="clash-verge"
-description="Clash Verge Service"
+description="Clash Verge Service helps to launch Clash Core."
 supervisor="supervise-daemon"
 command="/opt/clash-verge/bin/clash-verge-service"
 command_user="root:root"
 pidfile="/run/${RC_SVCNAME}.pid"
 output_log="/var/log/${RC_SVCNAME}.log"
 error_log="/var/log/${RC_SVCNAME}.log"
+respawn_delay=5
+respawn_max=0
 
 depend() {
     need net
+    use nftables iptables
     after bootmisc
 }
