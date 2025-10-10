@@ -25,6 +25,7 @@ RDEPEND="
 		app-accessibility/at-spi2-core:2
 		app-crypt/libsecret
 		dev-libs/nss
+		media-libs/alsa-lib
 		x11-misc/xdg-utils
 		x11-libs/gtk+:3
 		x11-libs/libnotify
@@ -34,14 +35,14 @@ RDEPEND="
 RESTRICT="mirror"
 
 QA_PREBUILT="
-	chrome-sandbox
-	chrome_crashpad_handler
-	libEGL.so
-	libffmpeg.so
-	libGLESv2.so
-	libvk_swiftshader.so
-	libvulkan.so.1
-	${D_PN}
+	/opt/${MY_PN}/chrome-sandbox
+	/opt/${MY_PN}/chrome_crashpad_handler
+	/opt/${MY_PN}/libEGL.so
+	/opt/${MY_PN}/libffmpeg.so
+	/opt/${MY_PN}/libGLESv2.so
+	/opt/${MY_PN}/libvk_swiftshader.so
+	/opt/${MY_PN}/libvulkan.so.1
+	/opt/${MY_PN}/${D_PN}
 "
 
 src_install() {
@@ -56,7 +57,7 @@ src_install() {
 
 	local f
 	for f in ${QA_PREBUILT}; do
-		fperms +x "/opt/${MY_PN}/${f}"
+		fperms +x "${f}"
 	done
 
 	fperms u+s /opt/"${MY_PN}"/chrome-sandbox
