@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-10 13:02:01 CST)
+(The last generation time: 2025-10-10 13:08:00 CST)
 
 ### Packages
 
@@ -461,7 +461,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/spotube-bin                               | 5.0.0              |            | https://github.com/KRTirtho/spotube                                                     | A lightweight Spotify client using YouTube as audio source
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/termusic                                  | 0.11.0             |            | https://github.com/tramhao/termusic                                                     | Terminal Music and Podcast Player written in Rust
+ media-sound/termusic                                  | 0.12.0             |            | https://github.com/tramhao/termusic                                                     | Terminal Music and Podcast Player written in Rust
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/yamusic-tui-bin                           | 0.7.1              |            | https://github.com/DECE2183/yamusic-tui                                                 | An unofficial Yandex Music terminal client, with offline mode and My Wave
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
