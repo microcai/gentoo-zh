@@ -8,6 +8,8 @@ EAPI=8
 CRATES="
 "
 
+RUST_MIN_VER="1.89"
+
 inherit cargo
 
 DESCRIPTION="Terminal Music and Podcast Player written in Rust"
@@ -22,8 +24,9 @@ SRC_URI+="
 LICENSE="MIT"
 # Dependent crate licenses
 LICENSE+="
-	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD-2 BSD GPL-3+ ISC
-	LGPL-2.1 LGPL-3+ MIT MPL-2.0 Unicode-DFS-2016 ZLIB
+	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD-2 BSD
+	CDLA-Permissive-2.0 GPL-3+ ISC LGPL-2.1 LGPL-3+ MIT MPL-2.0
+	Unicode-3.0 Unicode-DFS-2016 ZLIB
 "
 SLOT="0"
 KEYWORDS="~amd64"
