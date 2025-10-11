@@ -9,6 +9,10 @@ on:
       - 'metadata/**'
     types: [opened, reopened, synchronize]
 
+permissions:
+  contents: read
+  pull-requests: write
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
   cancel-in-progress: true
@@ -89,7 +93,6 @@ jobs:
           done
         done
         check_pkgs=( $(echo "${check_pkgs[@]}" | tr ' ' '\n' | sort -du | tr '\n' ' ') )
-        ret=0
         echo "pkgs: ${check_pkgs[@]}"
         echo "pkgs=${check_pkgs[@]}" >> $GITHUB_OUTPUT
 
@@ -111,20 +114,141 @@ jobs:
         cat /etc/portage/make.conf
 
     - name: emerge --onlydeps packages
+      id: onlydeps
+      shell: bash
       run: |
-        emerge --quiet --autounmask=y --autounmask-write=y --autounmask-continue=y --onlydeps ${{ steps.pkgs.outputs.pkgs }}
-        rm -rf /var/log/portage/elog/
+        set -o pipefail
+        : > /var/tmp/emerge.log
+        pkgs="${{ steps.pkgs.outputs.pkgs }}"
+        echo "Packages (onlydeps): ${pkgs}" | tee -a /var/tmp/emerge.log
+        ret=0
+        emerge --quiet --autounmask=y --autounmask-write=y --autounmask-continue=y --onlydeps ${pkgs} 2>&1 | tee -a /var/tmp/emerge.log || ret=$?
+        echo "ret=$ret" >> $GITHUB_OUTPUT
 
     - name: emerge packages
+      id: build
+      shell: bash
       run: |
-        emerge --quiet --autounmask=y --autounmask-write=y --autounmask-continue=y ${{ steps.pkgs.outputs.pkgs }}
-
-    - name: check Portage elog (fail if exists)
-      run: |
+        set -o pipefail
+        pkgs="${{ steps.pkgs.outputs.pkgs }}"
+        echo -e "\n=== emerge main ===" | tee -a /var/tmp/emerge.log
+        ret=0
+        rm -rf /var/log/portage/elog/ || true
+        emerge --quiet --autounmask=y --autounmask-write=y --autounmask-continue=y ${pkgs} 2>&1 | tee -a /var/tmp/emerge.log || ret=$?
         if ls /var/log/portage/elog/* 1> /dev/null 2>&1; then
-          echo "❌ Found Portage elog messages:"
-          cat /var/log/portage/elog/*
-          exit 1
+          echo "❌ Found Portage elog messages:" | tee -a /var/tmp/emerge.log
+          cat /var/log/portage/elog/* | tee -a /var/tmp/emerge.log
+          ret=1
         else
-          echo "✅ No elog messages found."
+          echo "✅ No elog messages found." | tee -a /var/tmp/emerge.log
         fi
+        echo "ret=$ret" >> $GITHUB_OUTPUT
+
+    - name: Format emerge report
+      if: ${{ always() }}
+      id: report
+      shell: bash
+      env:
+        RET_ONLYDEPS: ${{ steps.onlydeps.outputs.ret }}
+        RET_BUILD: ${{ steps.build.outputs.ret }}
+      run: |
+        set -e
+        r_header=':hammer_and_wrench: emerge build'
+        if [[ "${RET_ONLYDEPS}" == "0" && "${RET_BUILD}" == "0" ]]; then
+          r_title=":heavy_check_mark: ${r_header} passed"
+        elif [[ "${RET_ONLYDEPS}" == "0" || "${RET_BUILD}" == "0" ]]; then
+          r_title=":white_circle: ${r_header} partially passed"
+        else
+          r_title=":x: ${r_header} failed"
+        fi
+
+        v_portage=$(emerge --version 2>/dev/null | head -n1 || true)
+        v_gcc=$(gcc --version 2>/dev/null | head -n1 || true)
+        v_pkgs="${{ steps.pkgs.outputs.pkgs }}"
+
+        r_len=$(wc -c /var/tmp/emerge.log | awk '{print $1}')
+
+        cat <<EOF >/var/tmp/emerge-report.md
+        ## ${r_title}
+
+        * ${v_portage}
+        * ${v_gcc}
+        * **packages:** \`${v_pkgs}\`
+
+        <details open><summary><b>Build Log</b></summary>
+
+        EOF
+
+        if [[ ${r_len} -le 65000 ]]; then
+          echo '```' >>/var/tmp/emerge-report.md
+          cat /var/tmp/emerge.log >>/var/tmp/emerge-report.md
+          echo '```' >>/var/tmp/emerge-report.md
+        else
+          echo "*_Log too long, see **Artifacts** of this run: pkg-emerge-log_*" >>/var/tmp/emerge-report.md
+          echo "commit=true" >> $GITHUB_OUTPUT
+        fi
+
+        echo "</details>" >>/var/tmp/emerge-report.md
+        echo "has=true" >> $GITHUB_OUTPUT
+
+    - name: Hide previous results
+      if: ${{ always() }}
+      shell: bash
+      env:
+        COMMENTS_URL: ${{ github.event.pull_request.comments_url }}
+        COMMENTS_JSON: /tmp/comments.json
+      run: |
+        curl -H "Accept: application/vnd.github.v3+json" \
+             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+             -o ${COMMENTS_JSON} ${COMMENTS_URL}
+        node_ids=( $(<${COMMENTS_JSON} jq '.[] | select(.body|test("^##\\s*[:a-zA-Z_]+\\s*emerge\\s*build")) | select(.user.id == 41898282) | .node_id' | cut -d'"' -f2) )
+        json="{ \"query\": \"mutation {
+            minimizeComment(input: {
+              subjectId: \\\"NODEID\\\",
+              classifier: OUTDATED
+            }) {
+              minimizedComment { isMinimized }
+            }
+          }\"
+        }"
+        json=$(tr -d '\n' <<<${json})
+        for node_id in ${node_ids[@]}; do
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -d "${json/NODEID/${node_id}}" \
+            https://api.github.com/graphql
+        done
+
+    - name: Post result
+      if: ${{ always() && steps.report.outputs.has }}
+      uses: actions/github-script@v8
+      with:
+        script: |
+          const fs = require("fs").promises;
+          const body = await fs.readFile("/var/tmp/emerge-report.md", "utf8");
+          await github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body
+          });
+
+    - name: Upload big log
+      if: ${{ always() && steps.report.outputs.commit }}
+      uses: actions/upload-artifact@v4
+      with:
+        name: pkg-emerge-log
+        path: /var/tmp/emerge.log
+
+    - name: Fail job if build failed
+      if: ${{ always() }}
+      shell: bash
+      env:
+        RET_ONLYDEPS: ${{ steps.onlydeps.outputs.ret }}
+        RET_BUILD: ${{ steps.build.outputs.ret }}
+      run: |
+        if [[ "${RET_ONLYDEPS}" != "0" || "${RET_BUILD}" != "0" ]]; then
+          exit 1
+        fi
+
