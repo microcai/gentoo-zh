@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit xdg-utils
+inherit xdg
 
 DESCRIPTION="An SVG icon theme with lots of new icons for GNU/Linux operating systems"
 HOMEPAGE="https://github.com/bikass/kora"
@@ -21,12 +21,4 @@ src_install() {
 	find . -name '*.cache' -delete || die
 	insinto /usr/share/icons
 	doins -r .
-}
-
-pkg_postinst() {
-	xdg_icon_cache_update
-}
-
-pkg_postrm() {
-	xdg_icon_cache_update
 }
