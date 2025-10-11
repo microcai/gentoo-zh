@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-10 13:08:00 CST)
+(The last generation time: 2025-10-11 10:11:37 CST)
 
 ### Packages
 
@@ -74,7 +74,7 @@
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                                    | 0.11.18            |            | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
-                                                       | 1.11.7             |            |                                                                                         |
+                                                       | 1.12.1             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/void-editor                               | 1.2.1.25105        |            | https://voideditor.com                                                                  | Void Editor - AI Code Editor
                                                        | 1.99.30034         |            |                                                                                         |
@@ -307,7 +307,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/binsider                                     | 0.2.1              |            | https://binsider.dev                                                                    | Analyze ELF binaries like a boss
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/codex-bin                                    | 0.44.0             |            | https://github.com/openai/codex                                                         | Codex - OpenAI's code generation and completion tool
+ dev-util/codex-bin                                    | 0.46.0             |            | https://github.com/openai/codex                                                         | Codex - OpenAI's code generation and completion tool
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/gemini-cli                                   | 0.7.0              |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -655,7 +655,7 @@
  net-proxy/qvplugin-command                            | 3.0.0              |            | https://github.com/Qv2ray/QvPlugin-Command                                              | Plugin for Qv2ray to run any commands when something happens in Qv2ray
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-naiveproxy                         | 3.0.0              |            | https://github.com/Qv2ray/QvPlugin-NaiveProxy                                           | Plugin for Qv2ray to support NaiveProxy in Qv2ray
-   net-proxy/naiveproxy-bin                            | 140.0.7339.123_p1  | RD         | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
+   net-proxy/naiveproxy-bin                            | 140.0.7339.123_p2  | RD         | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-ss                                 | 3.0.0-r1           |            | https://github.com/Qv2ray/QvPlugin-SS                                                   | Plugin for Qv2ray to support SIP003 in Qv2ray
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -802,7 +802,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/fcitx-breeze                               | 3.1.0              |            | https://gitlab.com/scratch-er/fcitx5-breeze                                             | Fcitx5 theme to match KDE's Breeze style.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- x11-themes/kora-icon-theme                            | 1.6.4              |            | https://github.com/bikass/kora                                                          | An SVG icon theme with lots of new icons for GNU/Linux operating systems
+ x11-themes/kora-icon-theme                            | 1.6.5              |            | https://github.com/bikass/kora                                                          | An SVG icon theme with lots of new icons for GNU/Linux operating systems
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/nordic                                     | 2.1.0              |            | https://github.com/EliverLara/Nordic                                                    | Dark Gtk3.20+ theme created using the awesome Nord color pallete
                                                        | 2.2.0-r1           |            |                                                                                         |
