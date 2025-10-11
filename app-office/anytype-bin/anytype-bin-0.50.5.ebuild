@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit desktop xdg-utils
+inherit desktop xdg
 
 DESCRIPTION="A notebook based on p2p network"
 HOMEPAGE="https://anytype.io"
@@ -39,12 +39,4 @@ src_install() {
 		doicon -s "$size" usr/share/icons/hicolor/"$size"x"$size"/apps/anytype.png || die "Icon installation failed"
 	done
 	domenu usr/share/applications/anytype.desktop || die "Desktop file installation failed"
-}
-
-pkg_postinst() {
-	xdg_desktop_database_update
-}
-
-pkg_postrm() {
-	xdg_desktop_database_update
 }
