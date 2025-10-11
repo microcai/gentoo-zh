@@ -31,7 +31,7 @@ src_prepare() {
 }
 
 src_compile() {
-	ego build -o v2ray -trimpath -ldflags "-s -w" ./main
+	ego build -o v2ray ./main
 }
 
 src_install() {
