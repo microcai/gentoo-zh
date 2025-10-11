@@ -4,7 +4,7 @@
 EAPI=8
 WX_GTK_VER="3.2-gtk3"
 
-inherit wxwidgets xdg-utils git-r3
+inherit wxwidgets xdg git-r3
 DESCRIPTION="aMule with DLP patch, the all-platform eMule p2p client"
 HOMEPAGE="https://github.com/persmule/amule-dlp"
 EGIT_REPO_URI="https://github.com/persmule/amule-dlp"
@@ -107,6 +107,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	default
+
 	local ver
 
 	if use daemon || use remote; then
@@ -125,10 +127,4 @@ pkg_postinst() {
 			fi
 		done
 	fi
-
-	use X && xdg_desktop_database_update
-}
-
-pkg_postrm() {
-	use X && xdg_desktop_database_update
 }

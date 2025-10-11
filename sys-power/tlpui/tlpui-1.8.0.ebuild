@@ -6,7 +6,7 @@ EAPI=8
 DISTUTILS_USE_PEP517=poetry
 PYTHON_COMPAT=( python3_{9..13} )
 DISTUTILS_SINGLE_IMPL=y
-inherit distutils-r1 desktop xdg-utils
+inherit distutils-r1 desktop xdg
 
 if [[ $(ver_cut 4) == "p" ]] ; then
 	MY_PV="$(ver_cut 1-3)-$(ver_cut 5)"
@@ -38,12 +38,4 @@ python_install_all() {
 	insinto /usr/share/metainfo
 	doins "${S}/AppImage/com.github.d4nj1.tlpui.appdata.xml"
 	domenu "${S}/tlpui.desktop"
-}
-
-pkg_postinst() {
-	xdg_icon_cache_update
-}
-
-pkg_postrm() {
-	xdg_icon_cache_update
 }

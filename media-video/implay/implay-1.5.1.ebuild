@@ -4,7 +4,7 @@
 EAPI=8
 
 CMAKE_MAKEFILE_GENERATOR="emake"
-inherit cmake desktop xdg-utils
+inherit cmake desktop xdg
 
 DESCRIPTION="A Cross-Platform Desktop Media Player"
 HOMEPAGE="https://tsl0922.github.io/ImPlay"
@@ -34,14 +34,4 @@ src_install() {
 	cmake_src_install
 	dosym ../../../../../../../../usr/bin/ImPlay /usr/bin/implay
 	make_desktop_entry ${PN} "A Cross-Platform Desktop Media Player"
-}
-
-pkg_postinst() {
-	xdg_desktop_database_update
-	xdg_icon_cache_update
-}
-
-pkg_postrm() {
-	xdg_desktop_database_update
-	xdg_icon_cache_update
 }
