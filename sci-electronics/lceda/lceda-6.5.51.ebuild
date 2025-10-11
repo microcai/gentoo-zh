@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit desktop
+inherit desktop xdg
 
 DESCRIPTION="LCEDA (binary package)"
 HOMEPAGE="https://lceda.cn/"
