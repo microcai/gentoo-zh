@@ -17,8 +17,12 @@ KEYWORDS="~amd64"
 RESTRICT="mirror splitdebug"
 
 RDEPEND="
+	dev-libs/nspr
+	dev-libs/nss
+	media-libs/alsa-lib
+	net-print/cups
 	x11-libs/libXScrnSaver
-	net-print/cups"
+"
 
 QA_PREBUILT="*"
 
