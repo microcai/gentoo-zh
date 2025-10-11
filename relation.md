@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-11 13:57:34 CST)
+(The last generation time: 2025-10-11 14:26:35 CST)
 
 ### Packages
 
@@ -423,7 +423,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/tifig-bin                                   | 0.2.2              |            | https://github.com/monostream/tifig                                                     | Converts iOS 11 HEIC images to practical formats - Static binary
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-gfx/unityhub                                    | 3.11.0             |            | https://unity.com/                                                                      | The official unity tool for manager Unity Engines and projects
+ media-gfx/unityhub                                    | 3.14.1             |            | https://unity.com/                                                                      | The official unity tool for manager Unity Engines and projects
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/zw3d                                        | 2022.0.3.1-r3      |            | https://www.zwsoft.cn/product/zw3d/linux                                                | CAD/CAM software for 3D design and processing
                                                        | 2023.0.3.1         |            |                                                                                         |
@@ -707,7 +707,7 @@
  sci-electronics/lceda                                 | 6.5.37             |            | https://lceda.cn/                                                                       | LCEDA (binary package)
                                                        | 6.5.46             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sci-electronics/lceda-pro                             | 2.2.42.7           |            | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
+ sci-electronics/lceda-pro                             | 2.2.43.1           |            | https://lceda.cn/                                                                       | LCEDA Pro (binary package)
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sci-electronics/openfpgaloader                        | 0.13.1             |            | https://trabucayre.github.io/openFPGALoader                                             | Universal utility for programming FPGAs
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
