@@ -25,4 +25,16 @@ BDEPEND="
 	dev-python/argparse-manpage
 	dev-python/cryptography
 	dev-python/urllib3
+	test? ( dev-python/pytest[${PYTHON_USEDEP}] )
 "
+
+EPYTEST_DESELECT=(
+	# AssertionError: Lists differ: ['/usr/lib/osc-plugins', '/usr/local/lib/o[53 chars]ins'] != []
+	tests/test_doc_plugins.py::TestPopProjectPackageFromArgs::test_plugin_locations
+	# PermissionError: [Errno 13] Permission denied: '/var/lib/portage/home/.local'
+	tests/test_vc.py::TestVC::test_vc_export_env_api_call
+	tests/test_vc.py::TestVC::test_vc_export_env_conf_email
+	tests/test_vc.py::TestVC::test_vc_export_env_conf_realname
+)
+
+distutils_enable_tests pytest
