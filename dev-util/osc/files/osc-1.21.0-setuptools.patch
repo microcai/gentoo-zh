@@ -1,0 +1,14 @@
+license classifiers are deprecated and may become an error
+
+diff --git a/setup.cfg b/setup.cfg
+index 5c14b817..8376132e 100644
+--- a/setup.cfg
++++ b/setup.cfg
+@@ -15,7 +15,6 @@ classifiers =
+     Intended Audience :: Developers
+     Intended Audience :: Information Technology
+     Intended Audience :: System Administrators
+-    License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+     Operating System :: MacOS :: MacOS X
+     Operating System :: POSIX :: BSD :: FreeBSD
+     Operating System :: POSIX :: Linux
