@@ -14,7 +14,7 @@ LICENSE="Apache-2.0 EPL-1.0 BSD"
 SLOT="0"
 KEYWORDS="~amd64"
 RESTRICT="strip"
-RDEPEND=">=virtual/jdk-17"
+RDEPEND=">=virtual/jdk-21"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
