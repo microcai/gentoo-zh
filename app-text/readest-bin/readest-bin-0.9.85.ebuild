@@ -19,7 +19,7 @@ KEYWORDS="~amd64"
 
 RESTRICT="strip"
 
-BDEPEND="app-arch/unzip"
+RDEPEND="net-libs/webkit-gtk:4.1"
 
 src_install() {
 	dobin "${S}/usr/bin/readest"
