@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-15 02:25:40 CST)
+(The last generation time: 2025-10-15 02:26:45 CST)
 
 ### Packages
 
@@ -479,7 +479,8 @@
  media-video/mpv-handler                               | 0.3.16             |            | https://github.com/akiirui/mpv-handler                                                  | Play website videos and songs with mpv & yt-dlp
                                                        | 0.4.1              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-video/piliplus-bin                              | 1.1.4.6            |            | https://github.com/bggRGjQaUbCoE/PiliPlus                                               | BiliBili third-party client developed using Flutter
+ media-video/piliplus-bin                              | 1.1.4.10           |            | https://github.com/bggRGjQaUbCoE/PiliPlus                                               | BiliBili third-party client developed using Flutter
+                                                       | 1.1.4.6            |            |                                                                                         |
                                                        | 1.1.4.8            |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/tenvideo                                  | 1.0.10             |            | https://v.qq.com/download.html#linux                                                    | Tencent videos
