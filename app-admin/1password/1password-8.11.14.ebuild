@@ -24,6 +24,7 @@ RESTRICT="mirror strip bindist"
 DEPEND="
 	acct-group/onepassword
 	app-crypt/gnupg
+	dev-libs/nss
 	media-libs/alsa-lib
 	net-misc/curl
 	x11-libs/gtk+:3
@@ -55,7 +56,8 @@ src_install() {
 	domenu resources/1password.desktop
 
 	exeinto /opt/1Password/
-	doexe 1password 1Password-BrowserSupport 1Password-Crash-Handler 1Password-LastPass-Exporter op-ssh-sign chrome-sandbox chrome_crashpad_handler *.so*
+	doexe 1password 1Password-{BrowserSupport,Crash-Handler,LastPass-Exporter} op-ssh-sign
+	doexe chrome-sandbox chrome_crashpad_handler *.so*
 
 	insinto /etc/1password/
 	insopts -m0755
