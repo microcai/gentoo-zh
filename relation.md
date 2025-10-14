@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-13 17:26:50 CST)
+(The last generation time: 2025-10-15 00:16:22 CST)
 
 ### Packages
 
@@ -253,9 +253,6 @@
        dev-cpp/reproc                                  | 14.2.5             |  D, RD     | https://github.com/DaanDeMeyer/reproc                                                   | A cross-platform (C99/C++11) process library
        dev-cpp/tl-expected                             | 1.1.0              |  D, RD     | https://github.com/TartanLlama/expected                                                 | Guideline Support Library implementation by Microsoft
        sys-libs/libsolv                                | 0.7.33             |  D, RD     | https://github.com/openSUSE/libsolv                                                     | Library for solving packages and reading repositories
-         app-arch/zchunk                               | 1.3.2              | RD         | https://github.com/zchunk/zchunk                                                        | A format designed for highly efficient deltas while maintaining good compression
-                                                       | 1.5.1              |            |                                                                                         |
-                                                       | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/conda-package-handling                     | 2.4.0              |            | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
