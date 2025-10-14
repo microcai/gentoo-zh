@@ -51,12 +51,6 @@ github = "openzim/libzim"
 use_latest_release = true
 github_account = "liangyongxiang"
 
-["app-arch/zchunk"]
-source = "github"
-github = "zchunk/zchunk"
-use_latest_tag = true
-github_account = "HougeLangley"
-
 ["app-backup/restic-rest-server"]
 source = "github"
 github = "restic/rest-server"
