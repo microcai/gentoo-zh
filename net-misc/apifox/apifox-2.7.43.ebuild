@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit desktop xdg
+inherit desktop xdg unpacker
 
 DESCRIPTION="API 文档、API 调试、API Mock、API 自动化测试"
 HOMEPAGE="https://www.apifox.cn/"
