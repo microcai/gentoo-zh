@@ -69,7 +69,7 @@ src_unpack() {
 	fi
 }
 
-src_install(){
+src_install() {
 	exeinto /opt/clash-verge/bin
 	doexe "${S}"/usr/bin/*
 	insinto /usr/lib/clash-verge
