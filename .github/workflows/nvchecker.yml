@@ -15,18 +15,40 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  nvchecker:
+  eix:
     if: github.repository == 'microcai/gentoo-zh'
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/liangyongxiang/gentoo-testing:master
+      image: gentoo/stage3
+      options: --privileged
     outputs:
-      nvcmp: ${{ steps.nvchecker.outputs.nvcmp }}
+      pkgs: ${{ steps.eix.outputs.pkgs }}
     steps:
+    - name: sync gentoo main tree
+      run: |
+        emerge-webrsync
+
+    - name: cat binrepos
+      run: |
+        cat /etc/portage/binrepos.conf/gentoobinhost.conf
+
+    - name: setup features
+      run: |
+        echo 'FEATURES="getbinpkg"' >> /etc/portage/make.conf
+        getuto
+
+    - name: install depends
+      run: |
+        emerge --verbose --quiet --jobs $(nproc) --autounmask y --autounmask-continue y \
+        app-eselect/eselect-repository \
+        app-portage/eix \
+        dev-vcs/git
+
     - name: checkout
       uses: actions/checkout@v5
 
-    - name: gentoo
+    - name: eix
+      id: eix
       run: |
         # eselect
         echo "::group::eselect repository add and sync"
@@ -40,12 +62,33 @@ jobs:
         echo "::group::eix search packages"
         pkgs=$(ACCEPT_LICENSE="*" ACCEPT_KEYWORDS="~amd64 ~arm64 ~loong ~riscv" EIX_LIMIT=0 NAMEVERSION="<category>/<name>-<version>\n" eix --pure-packages --in-overlay "$repo_name" --format '<bestversion:NAMEVERSION>')
         pkgs=$(qatom -F "\"%{CATEGORY}/%{PN}\": \"%{PV}\"," $pkgs) # remove revision
-        echo "$pkgs"
         pkgs="{ ${pkgs::-1} }"
-        echo "$pkgs" > .github/workflows/old_ver.json
-        # sed -r -i 's/_p[^"]*//' .github/workflows/old_ver.json
-        cat .github/workflows/old_ver.json
+        echo $pkgs
+        # use multiine string:
+        # https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands#setting-an-output-parameter
+        {
+          echo 'pkgs<<EOF'
+          echo "$pkgs"
+          echo 'EOF'
+        } >> "$GITHUB_OUTPUT"
         echo "::endgroup::"
+
+  nvchecker:
+    needs: eix
+    runs-on: ubuntu-latest
+    outputs:
+      nvcmp: ${{ steps.nvchecker.outputs.nvcmp }}
+    steps:
+    - name: checkout
+      uses: actions/checkout@v5
+
+    - name: install depends
+      run: |
+        pip install nvchecker jq
+
+    - name: echo pkgs
+      run: |
+        echo "${{ needs.eix.outputs.pkgs }}"
 
     - name: nvchecker
       id: nvchecker
@@ -54,6 +97,7 @@ jobs:
       run: |
         echo "::group::nvchecker"
         cd .github/workflows/
+        echo "${{ needs.eix.outputs.pkgs }}" > old_ver.json
         echo -e "[keys]\ngithub = \"${{ secrets.GITHUB_TOKEN }}\"" > keyfile.toml
         nvchecker --file overlay.toml --keyfile keyfile.toml
         echo "::endgroup::"
