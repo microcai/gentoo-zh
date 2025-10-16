@@ -18,13 +18,29 @@ jobs:
     name: emerge changed ebuilds
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/liangyongxiang/gentoo-testing:master
+      image: gentoo/stage3:amd64-desktop-systemd
       options: --privileged
 
     steps:
-    - name: list repos
+    - name: sync gentoo main tree
       run: |
-        ls /var/db/repos/
+        emerge-webrsync
+
+    - name: cat binrepos
+      run: |
+        cat /etc/portage/binrepos.conf/gentoobinhost.conf
+
+    - name: setup features
+      run: |
+        echo 'FEATURES="getbinpkg"' >> /etc/portage/make.conf
+        getuto
+
+    - name: install depends
+      run: |
+        emerge --verbose --quiet --jobs $(nproc) --autounmask y --autounmask-continue y \
+        app-eselect/eselect-repository \
+        app-misc/jq \
+        dev-vcs/git
 
     - name: fetch
       uses: actions/checkout@v5
@@ -92,14 +108,6 @@ jobs:
         ret=0
         echo "pkgs: ${check_pkgs[@]}"
         echo "pkgs=${check_pkgs[@]}" >> $GITHUB_OUTPUT
-
-    - name: cat binrepos
-      run: |
-        cat /etc/portage/binrepos.conf/gentoobinhost.conf
-
-    - name: setup features
-      run: |
-        echo 'FEATURES="getbinpkg"' >> /etc/portage/make.conf
 
     - name: setup elogs
       run: |
