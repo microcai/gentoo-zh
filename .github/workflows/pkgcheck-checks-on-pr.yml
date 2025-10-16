@@ -28,11 +28,31 @@ jobs:
       contents: read
       pull-requests: write
     container:
-      image: ghcr.io/liangyongxiang/gentoo-testing:master
+      image: gentoo/stage3
+      options: --privileged
 
     steps:
       - name: Sync main tree
-        run: emerge --sync gentoo
+        run: |
+          emerge-webrsync
+
+      - name: cat binrepos
+        run: |
+          cat /etc/portage/binrepos.conf/gentoobinhost.conf
+
+      - name: setup features
+        run: |
+          echo 'FEATURES="getbinpkg"' >> /etc/portage/make.conf
+          getuto
+
+      - name: install depends
+        run: |
+          emerge --verbose --quiet --jobs $(nproc) --autounmask y --autounmask-continue y \
+          app-eselect/eselect-repository \
+          app-misc/jq \
+          dev-util/pkgcheck \
+          dev-vcs/git
+
       - name: Checkout the head ref of the pull request
         uses: actions/checkout@v5
         with:
@@ -40,6 +60,17 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.event.pull_request.head.sha }}
           path: gentoo-zh
+
+      - name: setup gentoo-zh repo
+        run: |
+          eselect repository add gentoo-zh git `realpath ./gentoo-zh`
+          emaint sync -r gentoo-zh
+
+      - name: setup gentoo repo.conf
+        run: |
+          # pkgcheck need this, see: https://github.com/pkgcore/pkgcore/issues/303
+          eselect repository enable gentoo
+
       - name: Get the base commit
         id: basecommit
         shell: bash
@@ -69,6 +100,7 @@ jobs:
             fi
           done
           echo "sha=$sha" >> $GITHUB_OUTPUT
+
       - name: Check
         id: check
         shell: bash
@@ -76,14 +108,6 @@ jobs:
           THEBASEREF: ${{ steps.basecommit.outputs.sha }}
         run: |
           set -e
-          mv ${GITHUB_WORKSPACE}/gentoo-zh /var/db/repos/
-          mkdir -p /etc/portage/repos.conf
-          echo "[gentoo]
-          location = /var/db/repos/gentoo
-          " >/etc/portage/repos.conf/gentoo.conf
-          echo "[gentoo-zh]
-          location = /var/db/repos/gentoo-zh
-          " >/etc/portage/repos.conf/gentoo-zh.conf
           cd /var/db/repos/gentoo-zh
           echo "git diff --raw ${THEBASEREF}"
           git diff --raw ${THEBASEREF}
@@ -110,6 +134,7 @@ jobs:
           set --
           echo "ret=$ret" >> $GITHUB_OUTPUT
           [[ ${ret} == 0 ]]
+
       - name: Format report
         if: ${{ always() }}
         id: report
@@ -167,6 +192,7 @@ jobs:
           EOF
           fi
           echo "has=true" >> $GITHUB_OUTPUT
+
       - name: Hide previous results
         if: ${{ always() }}
         shell: bash
@@ -201,6 +227,7 @@ jobs:
               -d "${json/NODEID/${node_id}}" \
               https://api.github.com/graphql
           done
+
       - name: Post result
         if: ${{ always() && steps.report.outputs.has }}
         uses: actions/github-script@v8
@@ -214,6 +241,7 @@ jobs:
               repo: context.repo.repo,
               body: cbody
             })
+
       - name: Upload big result
         if: ${{ always() && steps.report.outputs.commit }}
         uses: actions/upload-artifact@v4
