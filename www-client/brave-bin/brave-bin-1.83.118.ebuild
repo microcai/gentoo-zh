@@ -72,7 +72,7 @@ src_install() {
 	# The appdata directory is deprecated.
 	mv usr/share/{appdata,metainfo}/ || die
 
-	# Remove cron job and menu for updating from Debian repos.
+	# Remove cron job for updating from Debian repos.
 	rm -r ${BRAVE_HOME}/cron/ || die
 	rm -r etc || die
 
