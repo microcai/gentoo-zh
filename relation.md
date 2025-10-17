@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-17 10:35:05 CST)
+(The last generation time: 2025-10-17 10:46:32 CST)
 
 ### Packages
 
@@ -203,7 +203,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/lemminx-bin                                  | 0.31.0             |            | https://github.com/eclipse-lemminx/lemminx                                              | A XML Language Server
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-text/readest-bin                                  | 0.9.86             |            | https://readest.com/                                                                    | A modern, feature-rich ebook reader
+ app-text/readest-bin                                  | 0.9.87             |            | https://readest.com/                                                                    | A modern, feature-rich ebook reader
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/easymotion                                    | 1.3                |            | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: Vim motions on speed!
                                                        | 3.0.1              |            |                                                                                         |
@@ -288,7 +288,7 @@
  dev-python/pywikibot                                  | 10.3.0             |            | https://www.mediawiki.org/wiki/Manual:Pywikibot                                         | To interact with MediaWiki API (for example Wikipedia, Wikimedia Commons)
    dev-python/mwparserfromhell                         | 0.7.2              | RD         | https://github.com/earwig/mwparserfromhell                                              | A Python parser for MediaWiki wikicode
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/uv-bin                                     | 0.9.2              |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
+ dev-python/uv-bin                                     | 0.9.3              |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-ruby/filelock                                     | 1.1.1              |            | https://github.com/sheerun/filelock                                                     | Heavily tested, but simple filelocking solution using flock command
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
