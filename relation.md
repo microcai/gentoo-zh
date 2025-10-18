@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-18 20:21:15 CST)
+(The last generation time: 2025-10-19 00:57:29 CST)
 
 ### Packages
 
@@ -338,14 +338,14 @@
  games-arcade/osu-lazer-bin                            | 2025.816.0         |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away!
                                                        | 2025.912.0         |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- games-arcade/osu-lazer-tachyon-bin                    | 2025.911.0         |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away! (tachyon releases)
+ games-arcade/osu-lazer-tachyon-bin                    | 2025.1019.0        |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away! (tachyon releases)
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-emulation/conty                                 | 1.27.1             |            | https://github.com/Kron4ek/Conty                                                        | SquashFS image of Arch Linux with: Lutris, Steam, Bottles, Wine...
                                                        | 1.28               |            |                                                                                         |
                                                        | 1.28.1             |            |                                                                                         |
                                                        | 1.28.2             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- games-emulation/onscripter-yuri                       | 0.7.6_beta1-r1     |            | https://github.com/YuriSizuku/OnscripterYuri                                            | An enhancement ONScripter project porting to many platforms, especially web
+ games-emulation/onscripter-yuri                       | 0.7.6_beta2        |            | https://github.com/YuriSizuku/OnscripterYuri                                            | An enhancement ONScripter project porting to many platforms, especially web
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-fps/openarena                                   | 0.8.8              |            | http://openarena.ws                                                                     | A violent, sexy, multiplayer first person shooter based on the ioquake3 engine
                                                        | 9999               |            |                                                                                         |
