@@ -13,7 +13,7 @@ HOMEPAGE="
 	https://github.com/RSSNext/Follow
 "
 SRC_URI="
-	https://github.com/RSSNext/Follow/releases/download/v${PV}/${MY_PN}-${PV}-linux-x64.AppImage -> ${P}.AppImage
+	https://github.com/RSSNext/Follow/releases/download/desktop/v${PV}/${MY_PN}-${PV}-linux-x64.AppImage -> ${P}.AppImage
 "
 
 S="${WORKDIR}"
@@ -28,6 +28,8 @@ RDEPEND="
 	x11-libs/gtk+:3[X,cups]
 	x11-libs/libxkbcommon
 "
+
+QA_PREBUILT="/opt/follow-bin/*"
 
 src_unpack() {
 	mkdir -p "${S}" || die
