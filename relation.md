@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-20 00:05:38 CST)
+(The last generation time: 2025-10-20 00:56:38 CST)
 
 ### Packages
 
@@ -476,8 +476,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/iptvnator-bin                             | 0.16.0             |            | https://iptvnator.vercel.app/                                                           | Cross-platform IPTV player application with multiple features
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-video/mpv-handler                               | 0.3.16             |            | https://github.com/akiirui/mpv-handler                                                  | Play website videos and songs with mpv & yt-dlp
-                                                       | 0.4.1              |            |                                                                                         |
+ media-video/mpv-handler                               | 0.4.2              |            | https://github.com/akiirui/mpv-handler                                                  | Play website videos and songs with mpv & yt-dlp
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/piliplus-bin                              | 1.1.4.10           |            | https://github.com/bggRGjQaUbCoE/PiliPlus                                               | BiliBili third-party client developed using Flutter
                                                        | 1.1.4.11           |            |                                                                                         |
