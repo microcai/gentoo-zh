@@ -14,7 +14,7 @@ declare -A GIT_CRATES=(
 	[cacao]='https://github.com/clslaid/cacao;05e1536b0b43aaae308ec72c0eed703e875b7b95;cacao-%commit%'
 	[cidre-macros]='https://github.com/yury/cidre;f05c4288f9870c9fab53272ddafd6ec01c7b2dbf;cidre-%commit%/cidre-macros'
 	[cidre]='https://github.com/yury/cidre;f05c4288f9870c9fab53272ddafd6ec01c7b2dbf;cidre-%commit%/cidre'
-	[clipboard-master]='https://github.com/rustdesk-org/clipboard-master;4fb62e5b62fb6350d82b571ec7ba94b3cd466695;clipboard-master-%commit%'
+	[clipboard-master]='https://github.com/rustdesk-org/clipboard-master;ddc39f00a6211959489ae683aa6ae6eedf03a809;clipboard-master-%commit%'
 	[confy]='https://github.com/rustdesk-org/confy;83db9ec19a2f97e9718aef69e4fc5611bb382479;confy-%commit%'
 	[core-foundation-sys]='https://github.com/madsmtm/core-foundation-rs;7d593d016175755e492a92ef89edca68ac3bd5cd;core-foundation-rs-%commit%/core-foundation-sys'
 	[core-foundation]='https://github.com/madsmtm/core-foundation-rs;7d593d016175755e492a92ef89edca68ac3bd5cd;core-foundation-rs-%commit%/core-foundation'
@@ -56,23 +56,36 @@ declare -A GIT_CRATES=(
 	[x11]='https://github.com/bjornsnoen/x11-rs;c2e9bfaa7b196938f8700245564d8ac5d447786a;x11-rs-%commit%/x11'
 )
 
-LLVM_COMPAT=( 18 19 20 21 )
+LLVM_COMPAT=( 18 19 20 )
 RUST_MIN_VER="1.81.0"
 RUST_NEEDS_LLVM=1
 inherit cargo desktop llvm-r1 systemd xdg
 
 DESCRIPTION="An open-source remote desktop, and alternative to TeamViewer"
 HOMEPAGE="https://rustdesk.com/"
-_WEBM_TAG="1.0.0.31"
+# fix:
+# 1. rust-webm-*/src/sys/libwebm is a empty directory
+# 2. gcc15 build: https://github.com/microcai/gentoo-zh/issues/7234
+_LIBWEBM_COMMIT="3b630045052e1e4d563207ab9e3be8d137c26067"
+# grep -i vcpkg .github/workflows/flutter-build.yml
 _VCPKG_TAG="2025.08.27"
+# fix: hwcodec-${_HWCODEC_COMMIT}"/externals is a empty directory
+# git clone https://github.com/rustdesk-org/hwcodec
+# git ls-tree HEAD externals
 _HWCODEC_EXTERNALS_COMMIT="8903740a1f47884906a6e347ad3d8d56304d9771"
-_HBB_COMMON_COMMIT="334641686c731631fc51524bb2aa2ec2773069ee"
+# fix: libs/hbb_common is a empty directory
+# git ls-tree HEAD libs/hbb_common
+_HBB_COMMON_COMMIT="5ed0afde0841659e2fb37ae7acaddc005fa1a8d3"
+# fix: kcp-sys-*/kcp is a empty directory
+# git clone https://github.com/rustdesk-org/kcp-sys
+# git ls-tree HEAD kcp
 _KCP_COMMIT="7f9805887b0909c52c825925f123e7a84da37167"
 SRC_URI="
 	https://github.com/rustdesk/rustdesk/archive/refs/tags/${PV}.tar.gz
 		-> ${P}.tar.gz
 	https://distfiles.gentoocn.org/~jinqiang/distfiles/${PN}-1.4.2-vcpkg-${_VCPKG_TAG}-lite.tar.gz
-	https://github.com/webmproject/libwebm/archive/refs/tags/libwebm-${_WEBM_TAG}.tar.gz
+	https://github.com/webmproject/libwebm/archive/${_LIBWEBM_COMMIT}.tar.gz
+		-> libwebm-${_LIBWEBM_COMMIT}.tar.gz
 	https://github.com/skywind3000/kcp/archive/${_KCP_COMMIT}.tar.gz
 		-> kcp-${_KCP_COMMIT}.tar.gz
 	https://github.com/rustdesk/hbb_common/archive/${_HBB_COMMON_COMMIT}.tar.gz
@@ -80,7 +93,7 @@ SRC_URI="
 	https://github.com/rustdesk-org/externals/archive/${_HWCODEC_EXTERNALS_COMMIT}.tar.gz
 		-> hwcodec-externals-${_HWCODEC_EXTERNALS_COMMIT}.tar.gz
 	https://raw.githubusercontent.com/c-smile/sciter-sdk/master/bin.lnx/x64/libsciter-gtk.so
-		-> ${P}-libsciter-gtk.so
+		-> ${PN}-libsciter-gtk.so
 	https://github.com/gentoo-zh-drafts/${PN}/releases/download/${PV}/${P}-crates.tar.xz
 	${CARGO_CRATE_URIS}
 "
@@ -137,14 +150,13 @@ src_prepare() {
 	default
 	cd "${S}"/.. || die
 	eapply "${FILESDIR}"/rust-sciter.patch
-	eapply "${FILESDIR}/${PN}-1.4.0-fix-gcc15.patch"
 
 	rm -rf "${S}"/libs/hbb_common || die
 	ln -s "${WORKDIR}/hbb_common-${_HBB_COMMON_COMMIT}" "${S}"/libs/hbb_common || die
 
-	local _WEBM_COMMIT=`echo "${GIT_CRATES[webm]}" | awk -F';' '{print $2}'`
-	rm -rf "${WORKDIR}/rust-webm-${_WEBM_COMMIT}"/src/sys/libwebm || die
-	ln -s "${WORKDIR}/libwebm-libwebm-${_WEBM_TAG}" "${WORKDIR}/rust-webm-${_WEBM_COMMIT}"/src/sys/libwebm || die
+	local _RUSTWEBM_COMMIT=`echo "${GIT_CRATES[webm]}" | awk -F';' '{print $2}'`
+	rm -rf "${WORKDIR}/rust-webm-${_RUSTWEBM_COMMIT}"/src/sys/libwebm || die
+	ln -s "${WORKDIR}/libwebm-${_LIBWEBM_COMMIT}" "${WORKDIR}/rust-webm-${_RUSTWEBM_COMMIT}"/src/sys/libwebm || die
 
 	local _HWCODEC_COMMIT=`echo "${GIT_CRATES[hwcodec]}" | awk -F';' '{print $2}'`
 	rm -rf "${WORKDIR}/hwcodec-${_HWCODEC_COMMIT}"/externals || die
@@ -173,7 +185,7 @@ src_install() {
 	exeinto "${rustdesk_dir}"
 	insinto "${rustdesk_dir}"
 	doexe $(cargo_target_dir)/rustdesk
-	newins "${DISTDIR}/${P}-libsciter-gtk.so" libsciter-gtk.so
+	newins "${DISTDIR}/${PN}-libsciter-gtk.so" libsciter-gtk.so
 	rm src/ui/*.rs || die
 	newbin "${FILESDIR}/rustdesk.sh" rustdesk
 	insinto "${rustdesk_dir}/src"
