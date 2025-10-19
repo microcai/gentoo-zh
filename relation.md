@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-20 00:56:38 CST)
+(The last generation time: 2025-10-20 01:15:33 CST)
 
 ### Packages
 
@@ -677,7 +677,7 @@
  net-proxy/sing-box                                    | 1.10.7             |            | https://sing-box.sagernet.org/                                                          | The universal proxy platform.
                                                        | 1.11.15-r1         |            |                                                                                         |
                                                        | 1.12.10            |            |                                                                                         |
-                                                       | 1.13.0_alpha22     |            |                                                                                         |
+                                                       | 1.13.0_alpha23     |            |                                                                                         |
                                                        | 1.9.7              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/smartproxy                                  | 0.9.5              |            | https://github.com/microcai/smartproxy                                                  | A fast, proxy smart selector
