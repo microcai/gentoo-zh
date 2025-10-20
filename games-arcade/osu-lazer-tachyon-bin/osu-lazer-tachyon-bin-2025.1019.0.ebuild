@@ -44,6 +44,8 @@ RDEPEND="
 "
 BDEPEND="complete-icon? ( media-gfx/imagemagick )"
 
+QA_PREBUILT="/usr/lib/osu-lazer/*"
+
 src_unpack() {
 	cp "${DISTDIR}/${_PN}-tachyon-${PV}.AppImage" "${WORKDIR}/appimage"
 	chmod +x "${WORKDIR}/appimage"
@@ -56,9 +58,6 @@ src_prepare() {
 	pushd squashfs-root/usr/bin || die
 	# Remove pdb files
 	rm -fv *.pdb
-
-	# Remove UpdateNix from Velopack, updates are managed by protage
-	rm -fv UpdateNix
 
 	if use system-sdl; then
 		rm -fv libSDL{2,3}.so

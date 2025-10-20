@@ -8,6 +8,8 @@ EAPI=8
 CRATES="
 "
 
+RUST_MIN_VER="1.85.0"
+
 inherit cargo desktop xdg
 
 DESCRIPTION="Play website videos and songs with mpv & yt-dlp"
@@ -15,7 +17,7 @@ HOMEPAGE="https://github.com/akiirui/mpv-handler"
 SRC_URI="
 	${CARGO_CRATE_URIS}
 	https://github.com/gentoo-zh-drafts/mpv-handler/releases/download/v${PV}/${P}-crates.tar.xz
-	https://github.com/akiirui/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/akiirui/mpv-handler/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 "
 
 LICENSE="MIT"
