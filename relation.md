@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-20 01:15:33 CST)
+(The last generation time: 2025-10-20 13:32:55 CST)
 
 ### Packages
 
@@ -203,7 +203,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/lemminx-bin                                  | 0.31.0             |            | https://github.com/eclipse-lemminx/lemminx                                              | A XML Language Server
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-text/readest-bin                                  | 0.9.87             |            | https://readest.com/                                                                    | A modern, feature-rich ebook reader
+ app-text/readest-bin                                  | 0.9.88             |            | https://readest.com/                                                                    | A modern, feature-rich ebook reader
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/easymotion                                    | 1.3                |            | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: Vim motions on speed!
                                                        | 3.0.1              |            |                                                                                         |
@@ -218,7 +218,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/tgbot-cpp                                     | 1.9                |            | https://github.com/reo7sp/tgbot-cpp                                                     | C++ library for Telegram bot API
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-db/dbeaver-bin                                    | 25.2.2             |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
+ dev-db/dbeaver-bin                                    | 25.2.3             |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-debug/lldb-mi                                     | 0.0.1              |            | https://github.com/lldb-tools/lldb-mi                                                   | LLDB Machine Interface Driver
                                                        | 9999               |            |                                                                                         |
@@ -288,7 +288,7 @@
  dev-python/pywikibot                                  | 10.3.0             |            | https://www.mediawiki.org/wiki/Manual:Pywikibot                                         | To interact with MediaWiki API (for example Wikipedia, Wikimedia Commons)
    dev-python/mwparserfromhell                         | 0.7.2              | RD         | https://github.com/earwig/mwparserfromhell                                              | A Python parser for MediaWiki wikicode
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/uv-bin                                     | 0.9.3              |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
+ dev-python/uv-bin                                     | 0.9.4              |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-ruby/filelock                                     | 1.1.1              |            | https://github.com/sheerun/filelock                                                     | Heavily tested, but simple filelocking solution using flock command
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -556,7 +556,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/another-redis-desktop-manager-bin            | 1.7.1              |            | https://github.com/qishibo/AnotherRedisDesktopManager                                   | A faster, better and more stable Redis desktop manager [GUI client]
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/apifox                                       | 2.7.43             |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
+ net-misc/apifox                                       | 2.7.44             |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/baidunetdisk                                 | 4.17.7             |            | https://pan.baidu.com/                                                                  | Baidu Net Disk is a cloud storage client (Linux Version)
                                                        | 4.3.0              |            |                                                                                         |
@@ -761,7 +761,7 @@
    dev-libs/v2ray-geoip                                | 202507050144       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                            | 202506050146       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                            | 1.6.4              |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                            | 1.6.5              |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/dufs                                         | 0.45.0             |            | https://github.com/sigoden/dufs                                                         | A distinctive utility file server
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
