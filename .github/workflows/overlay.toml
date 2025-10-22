@@ -879,6 +879,7 @@ source = "github"
 github = "lxgw/LxgwNeoZhiSong"
 use_latest_release = true
 prefix = "v"
+github_account = "vowstar"
 
 # TODO: upstream no tags
 #["media-fonts/misans"]

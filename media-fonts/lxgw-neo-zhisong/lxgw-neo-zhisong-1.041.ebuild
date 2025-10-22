@@ -8,8 +8,12 @@ inherit font
 DESCRIPTION="A Chinese serif font derived from IPAex Mincho and IPAmj Mincho"
 HOMEPAGE="https://github.com/lxgw/LxgwNeoZhiSong"
 SRC_URI="
-	regular? ( https://github.com/lxgw/LxgwNeoZhiSong/releases/download/v${PV}/LXGWNeoZhiSong.ttf -> ${P}.ttf )
-	plus? ( https://github.com/lxgw/LxgwNeoZhiSong/releases/download/v${PV}/LXGWNeoZhiSongPlus.ttf -> ${PN}-plus-${PV}.ttf )
+	regular? (
+		https://github.com/lxgw/LxgwNeoZhiSong/releases/download/v${PV}/LXGWNeoZhiSong.ttf -> ${P}.ttf
+	)
+	plus? (
+		https://github.com/lxgw/LxgwNeoZhiSong/releases/download/v${PV}/LXGWNeoZhiSongPlus.ttf -> ${PN}-plus-${PV}.ttf
+	)
 "
 
 S="${WORKDIR}"
