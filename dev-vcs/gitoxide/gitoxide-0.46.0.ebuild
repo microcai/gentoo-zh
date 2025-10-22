@@ -8,6 +8,8 @@ EAPI=8
 CRATES="
 "
 
+RUST_MIN_VER="1.88"
+
 inherit cargo
 
 DESCRIPTION="A command-line application for interacting with git repositories"
