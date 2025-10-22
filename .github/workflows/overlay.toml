@@ -943,6 +943,13 @@ github_account = "Linerre"
 #url = "https://code.google.com/archive/p/wangfonts/downloads"
 #regex = "wangfonts-([\\d.]+).zip"
 
+["media-fonts/yozai-font"]
+source = "github"
+github = "lxgw/yozai-font"
+use_latest_release = true
+prefix = "v"
+github_account = "vowstar"
+
 ["media-fonts/zhudou"]
 source = "github"
 github = "Buernia/Zhudou-Sans"
