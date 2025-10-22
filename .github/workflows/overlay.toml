@@ -867,6 +867,13 @@ github = "justfont/open-huninn-font"
 use_latest_release = true
 prefix = "v"
 
+["media-fonts/kose-font"]
+source = "github"
+github = "lxgw/kose-font"
+use_latest_release = true
+prefix = "v"
+github_account = "vowstar"
+
 ["media-fonts/lxgw-neo-xihei"]
 source = "github"
 github = "lxgw/LxgwNeoXiHei"
