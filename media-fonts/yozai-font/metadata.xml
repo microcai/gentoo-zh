@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<stabilize-allarches/>
+	<upstream>
+		<remote-id type="github">lxgw/yozai-font</remote-id>
+	</upstream>
+	<longdescription lang="en">
+		Yozai Font (悠哉字体) is an open-source Chinese font derived from
+		Y.OzFont. This is a casual, friendly Chinese font suitable for
+		informal contexts and creative designs. The font includes three
+		weights: Light, Regular, and Medium, providing flexibility for
+		various design needs.
+	</longdescription>
+	<longdescription lang="zh">
+		悠哉字体是一款衍生于 Y.OzFont 的开源中文字体。这是一款休闲、
+		友好的中文字体，适合非正式场合和创意设计。字体包含三个字重：
+		Light（细体）、Regular（常规体）和 Medium（中等体），为各种
+		设计需求提供灵活性。
+	</longdescription>
+	<use>
+		<flag name="light">Light weight variant</flag>
+		<flag name="regular">Regular weight variant</flag>
+		<flag name="medium">Medium weight variant</flag>
+	</use>
+</pkgmetadata>

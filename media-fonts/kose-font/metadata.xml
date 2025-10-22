@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<stabilize-allarches/>
+	<upstream>
+		<remote-id type="github">lxgw/kose-font</remote-id>
+	</upstream>
+	<longdescription lang="en">
+		Kose Font (小赖字体 / Xiaolai) is an open-source Chinese font
+		derived from the Kose font. This is a Chinese serif font suitable
+		for body text and titles. The font includes two variants:
+		Xiaolai-Regular and XiaolaiMono-Regular (monospace version).
+	</longdescription>
+	<longdescription lang="zh">
+		小赖字体是一款衍生于 Kose 字体的开源中文字体。这是一款适合正文
+		和标题的中文衬线字体。字体包含两个变体：Xiaolai-Regular（小赖常规体）
+		和 XiaolaiMono-Regular（等宽版本）。
+	</longdescription>
+	<use>
+		<flag name="regular">Regular variant</flag>
+		<flag name="mono">Monospace variant</flag>
+	</use>
+</pkgmetadata>
