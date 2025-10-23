@@ -14,7 +14,10 @@ DESCRIPTION="Cursor App - AI-first coding environment"
 HOMEPAGE="https://www.cursor.com/"
 SRC_URI="
 	amd64? (
-		https://downloads.cursor.com/production/${BUILD_ID}/linux/x64/Cursor-${PV}-x86_64.AppImage -> ${P}-amd64.AppImage
+		https://downloads.cursor.com/production/${BUILD_ID}/linux/x64/deb/amd64/deb/cursor_${PV}_amd64.deb -> ${P}-amd64.deb
+	)
+	arm64? (
+		https://downloads.cursor.com/production/${BUILD_ID}/linux/arm64/deb/arm64/deb/cursor_${PV}_arm64.deb -> ${P}-arm64.deb
 	)
 "
 S="${WORKDIR}"
@@ -22,7 +25,7 @@ S="${WORKDIR}"
 LICENSE="cursor"
 
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~amd64 ~arm64"
 IUSE="egl kerberos wayland"
 RESTRICT="bindist mirror strip"
 
@@ -64,19 +67,8 @@ RDEPEND="
 "
 
 QA_PREBUILT="*"
+
 CURSOR_HOME="usr/share/cursor"
-
-src_unpack() {
-	cp "${DISTDIR}/${P}-${ARCH}.AppImage" "${S}/" || die
-	chmod +x "${S}/${P}-${ARCH}.AppImage" || die
-	"${S}/${P}-${ARCH}.AppImage" --appimage-extract || die
-	mv "${S}/squashfs-root"/* "${S}/" || die
-}
-
-src_configure() {
-	default
-	chromium_suid_sandbox_check_kernel_config
-}
 
 src_prepare() {
 	default
@@ -117,14 +109,11 @@ src_install() {
 		usr/share/applications/cursor-url-handler.desktop > cursor-url-handler.desktop || die
 	domenu cursor-url-handler.desktop
 
-	insinto /usr/share
-	doins -r usr/share/icons
+	insinto /usr/share/pixmaps
+	doins usr/share/pixmaps/co.anysphere.cursor.png
 
 	insinto /usr/share/mime/packages
-	doins -r usr/share/mime/packages
-
-	insinto /usr/share/pixmaps
-	doins -r usr/share/pixmaps
+	doins usr/share/mime/packages/cursor-workspace.xml
 
 	newbashcomp usr/share/bash-completion/completions/cursor cursor
 	newzshcomp usr/share/zsh/vendor-completions/_cursor _cursor
