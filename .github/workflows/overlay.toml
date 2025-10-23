@@ -105,6 +105,12 @@ source = "regex"
 url = "https://cursor.com/install"
 regex = 'https:\/\/downloads\.cursor\.com\/lab\/(\d{4}\.\d{2}\.\d{2})-[^\/]+\/'
 
+["dev-lang/dart"]
+source = "github"
+github = "dart-lang/sdk"
+use_latest_release = true
+github_account = "peeweep"
+
 ["dev-util/gemini-cli"]
 source = "regex"
 url = "https://registry.npmjs.org/@google/gemini-cli"
