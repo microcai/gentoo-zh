@@ -106,9 +106,11 @@ url = "https://cursor.com/install"
 regex = 'https:\/\/downloads\.cursor\.com\/lab\/(\d{4}\.\d{2}\.\d{2})-[^\/]+\/'
 
 ["dev-lang/dart"]
-source = "github"
-github = "dart-lang/sdk"
-use_latest_release = true
+source = "apt"
+pkg = "dart"
+mirror = "https://storage.googleapis.com/download.dartlang.org/linux/debian"
+suite = "stable"
+strip_release = true
 github_account = "peeweep"
 
 ["dev-util/fvm"]
