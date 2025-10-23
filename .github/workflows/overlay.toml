@@ -111,6 +111,12 @@ github = "dart-lang/sdk"
 use_latest_release = true
 github_account = "peeweep"
 
+["dev-util/fvm"]
+source = "github"
+github = "leoafarias/fvm"
+use_latest_release = true
+github_account = "peeweep"
+
 ["dev-util/gemini-cli"]
 source = "regex"
 url = "https://registry.npmjs.org/@google/gemini-cli"
