@@ -13,12 +13,14 @@ inherit chromium-2 desktop xdg
 
 DESCRIPTION="Password manager and secure wallet"
 HOMEPAGE="https://1password.com"
-SRC_URI="https://downloads.1password.com/linux/tar/stable/x86_64/${P}.x64.tar.gz"
+SRC_URI="
+	amd64? ( https://downloads.1password.com/linux/tar/stable/x86_64/${P}.x64.tar.gz -> ${P}-amd64.tar.gz )
+	arm64? ( https://downloads.1password.com/linux/tar/stable/aarch64/${P}.arm64.tar.gz -> ${P}-arm64.tar.gz )
+"
 
-S="${WORKDIR}/${P}.x64"
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64"
 RESTRICT="mirror strip bindist"
 
 DEPEND="
@@ -33,6 +35,14 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 QA_PREBUILT="*"
+
+pkg_setup() {
+	if use amd64; then
+		S="${WORKDIR}/${P}.x64"
+	elif use arm64; then
+		S="${WORKDIR}/${P}.arm64"
+	fi
+}
 
 src_configure() {
 	default
