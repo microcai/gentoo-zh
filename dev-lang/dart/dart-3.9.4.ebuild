@@ -27,8 +27,8 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}"/${P}-fix-gcc-15.patch
-	"${FILESDIR}"/${P}-fix-toolchain-prefix.patch
+	"${FILESDIR}"/${PN}-3.9.2-fix-gcc-15.patch
+	"${FILESDIR}"/${PN}-3.9.2-fix-toolchain-prefix.patch
 )
 
 src_prepare() {
