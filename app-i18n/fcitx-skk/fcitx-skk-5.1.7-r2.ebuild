@@ -15,19 +15,13 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 LICENSE="GPL-3+"
 SLOT="5"
 KEYWORDS="~amd64 ~x86"
-IUSE="+qt5 qt6"
-REQUIRED_USE="^^ ( qt5 qt6 )"
+IUSE="qt6"
 
 RDEPEND="
 	>=app-i18n/fcitx-5.1.13:5
-	app-i18n/fcitx-qt[qt5?,qt6?,-onlyplugin]
+	app-i18n/fcitx-qt[qt6?,-onlyplugin]
 	app-i18n/libskk
 	app-i18n/skk-jisyo
-	qt5? (
-		dev-qt/qtcore:5
-		dev-qt/qtgui:5=
-		dev-qt/qtwidgets:5
-	)
 	qt6? (
 		dev-qt/qtbase:6[dbus,gui,widgets]
 	)
@@ -40,10 +34,9 @@ BDEPEND="
 
 src_configure() {
 	local mycmakeargs=( )
-	if use qt5 || use qt6; then
+	if use qt6; then
 		mycmakeargs+=(
 			-DENABLE_QT=ON
-			-DUSE_QT6=$(usex qt6)
 		)
 	fi
 	cmake_src_configure
