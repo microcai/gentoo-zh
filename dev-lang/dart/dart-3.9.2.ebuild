@@ -5,7 +5,7 @@ EAPI=8
 
 inherit unpacker ninja-utils toolchain-funcs
 
-DESCRIPTION=" The Dart SDK, including the VM, dart2js, core libraries, and more."
+DESCRIPTION="The Dart SDK"
 HOMEPAGE="https://dart.dev https://github.com/dart-lang/sdk"
 # repack sdk by "abuild snapshot"
 # https://github.com/alpinelinux/aports/blob/master/testing/dart/APKBUILD
