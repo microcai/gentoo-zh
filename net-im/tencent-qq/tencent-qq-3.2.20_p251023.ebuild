@@ -13,9 +13,9 @@ DESCRIPTION="The new version of the official linux-qq"
 HOMEPAGE="https://im.qq.com/linuxqq/index.shtml"
 
 SRC_URI="
-	amd64? ( ${_QQDownloadURLPrefix}/QQ_${MY_PV}_amd64_01.deb )
-	arm64? ( ${_QQDownloadURLPrefix}/QQ_${MY_PV}_arm64_01.deb )
-	loong? ( ${_QQDownloadURLPrefix}/QQ_${MY_PV}_loongarch64_01.deb )
+	amd64? ( ${_QQDownloadURLPrefix}/QQ_${MY_PV}_amd64_01.deb -> ${P}_amd64.deb )
+	arm64? ( ${_QQDownloadURLPrefix}/QQ_${MY_PV}_arm64_01.deb -> ${P}_arm64.deb )
+	loong? ( ${_QQDownloadURLPrefix}/QQ_${MY_PV}_loongarch64_01.deb -> ${P}_loong.deb )
 	liteloader? (
 		https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/${_LiteLoader_PV}/LiteLoaderQQNT.zip \
 		-> LiteLoaderQQNT-${_LiteLoader_PV}.zip
@@ -26,7 +26,7 @@ LICENSE="Tencent"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
 
-IUSE="bwrap system-vips gnome liteloader"
+IUSE="bwrap system-fdk-aac system-libssh2 system-openh264 system-vips system-zlib gnome liteloader"
 
 RESTRICT="strip mirror"
 
@@ -43,20 +43,24 @@ RDEPEND="
 	app-crypt/libsecret
 	virtual/krb5
 	sys-apps/keyutils
+	media-libs/openslide
+	media-libs/alsa-lib
+	media-libs/libpulse
+	system-fdk-aac? ( media-libs/fdk-aac )
+	system-libssh2? ( net-libs/libssh2 )
+	system-openh264? ( media-libs/openh264 )
 	system-vips? (
 		dev-libs/glib
-		>=media-libs/vips-8.15.2[-pdf]
+		media-libs/vips
 	)
+	system-zlib? ( sys-libs/zlib )
 	bwrap? (
 		sys-apps/bubblewrap
 		x11-misc/snapd-xdg-open
 		x11-misc/flatpak-xdg-utils
 	)
 	gnome? ( dev-libs/gjs )
-	media-libs/openslide
-	loong? (
-			virtual/loong-ow-compat
-	)
+	loong? ( virtual/loong-ow-compat )
 "
 BDEPEND="liteloader? ( app-arch/unzip )"
 
@@ -67,24 +71,30 @@ src_unpack() {
 src_install() {
 	dodir /
 	cd "${D}" || die
-	if [ "${ARCH}" = "loong" ]; then
-		unpacker "${DISTDIR}/QQ_${MY_PV}_loongarch64_01.deb"
-	else
-		unpacker "${DISTDIR}/QQ_${MY_PV}_${ARCH}_01.deb"
+
+	unpacker "${DISTDIR}/${P}_${ARCH}.deb"
+
+	rm -rv "${D}/usr/share/doc" || die
+
+	if use system-fdk-aac; then
+		rm -v "${D}/opt/QQ/resources/app/avsdk/libfdk-aac.so" || die
 	fi
-
-	# Fix KDK Wayland QQ icons
-	mv "${D}/usr/share/applications/qq.desktop" "${D}/usr/share/applications/QQ.desktop" || die
-
+	if use system-libssh2; then
+		rm -v "${D}/opt/QQ/resources/app/libssh2.so.1" "${D}/opt/QQ/resources/app/avsdk/bugly/libssh2.so.1" || die
+	fi
+	if use system-openh264; then
+		rm -v "${D}/opt/QQ/resources/app/avsdk/libopenh264.so" || die
+	fi
 	if use system-vips; then
-		rm -r "${D}/opt/QQ/resources/app/sharp-lib" || die
+		rm -rv "${D}/opt/QQ/resources/app/sharp-lib" || die
+	fi
+	if use system-zlib; then
+		rm -v "${D}/opt/QQ/libz.so.1" || die
 	fi
 
 	if use bwrap; then
-		exeinto /opt/QQ
-		patch "${FILESDIR}/start.sh" -o "${WORKDIR}/start_sh_patched" < "${FILESDIR}/start_sh.patch" || die
-		newexe "${WORKDIR}/start_sh_patched" start.sh
-		sed -i 's!/opt/QQ/qq!/opt/QQ/start.sh!' "${D}/usr/share/applications/QQ.desktop" || die
+		newbin "${FILESDIR}/bwrap.sh" qq
+
 		insinto /opt/QQ/workarounds
 		doins "${FILESDIR}"/{config.json,xdg-open.sh,vercmp.sh}
 		fperms +x /opt/QQ/workarounds/{xdg-open.sh,vercmp.sh}
@@ -96,22 +106,12 @@ src_install() {
 
 		sed -i "s|__BASE_VER__|${base_ver}|g;s|__CURRENT_VER__|${cur_ver}|g;s|__BUILD_VER__|${build_ver}|g" \
 			"${D}/opt/QQ/workarounds/config.json" \
-			"${D}/opt/QQ/start.sh" || die
-
-	else
-		sed -i 's!/opt/QQ/qq!/usr/bin/qq!' "${D}/usr/share/applications/QQ.desktop" || die
-	fi
-
-	if use bwrap; then
-		dosym -r /opt/QQ/start.sh /usr/bin/qq
+			"${D}/usr/bin/qq" || die
 	else
 		newbin "${FILESDIR}/qq.sh" qq
 	fi
 
-	sed -i 's!/usr/share/icons/hicolor/512x512/apps/qq.png!qq!' "${D}/usr/share/applications/QQ.desktop" || die
-	gzip -d "${D}/usr/share/doc/linuxqq/changelog.gz" || die
-	dodoc "${D}/usr/share/doc/linuxqq/changelog"
-	rm -rf "${D}/usr/share/doc/linuxqq" || die
+	sed -i 's:^Exec=.*$:Exec=/usr/bin/qq %U:g;s:^Icon=.*$:Icon=qq:g' "${D}/usr/share/applications/qq.desktop" || die
 
 	if use liteloader; then
 		unzip -qo "${DISTDIR}/LiteLoaderQQNT-${_LiteLoader_PV}.zip" -d "${D}/opt/QQ/liteloader" || die
