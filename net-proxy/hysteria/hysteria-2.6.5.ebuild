@@ -10,8 +10,9 @@ DESCRIPTION="A powerful, lightning fast and censorship resistant proxy."
 HOMEPAGE="https://github.com/apernet/hysteria"
 
 SRC_URI="
-	https://github.com/apernet/${PN}/archive/refs/tags/app/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/gentoo-zh/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz
+	https://github.com/apernet/hysteria/archive/refs/tags/app/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/gentoo-zh-drafts/hysteria/releases/download/app/v${PV}/hysteria-app-v${PV}-vendor.tar.xz
+		-> ${P}-vendor.tar.xz
 "
 
 S="${WORKDIR}/${PN}-app-v${PV}"
