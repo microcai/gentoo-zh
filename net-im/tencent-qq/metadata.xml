@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE 
-pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-    <maintainer type="person">
-        <email>git@xen0n.name</email>
-        <name>WANG Xuerui</name>
-    </maintainer>
-    <maintainer type="person">
-        <email>ston.jia@outlook.com</email>
-        <name>ston</name>
-    </maintainer>
-    <use>
-        <flag name="bwrap">Use sys-apps/bubblewrap to prevent
-        private information leakage</flag>
-        <flag name="system-vips">Use media-libs/vips instead of
-        shipped libs.</flag>
-        <flag name="gnome">Supporting screenshot when using
-        GNOME</flag>
-        <flag name="liteloader">Add liteloader support</flag>
-    </use>
+	<maintainer type="person">
+		<email>git@xen0n.name</email>
+		<name>WANG Xuerui</name>
+	</maintainer>
+	<maintainer type="person">
+		<email>ston.jia@outlook.com</email>
+		<name>ston</name>
+	</maintainer>
+	<maintainer type="person">
+		<email>me@puqns67.icu</email>
+		<name>Puqns67</name>
+	</maintainer>
+	<use>
+		<flag name="bwrap">Use <pkg>sys-apps/bubblewrap</pkg> to prevent private information leakage</flag>
+		<flag name="system-libssh2">Use <pkg>net-libs/libssh2</pkg> instead of shipped libs.</flag>
+		<flag name="system-fdk-aac">Use <pkg>media-libs/fdk-aac</pkg> instead of shipped libs.</flag>
+		<flag name="system-openh264">Use <pkg>media-libs/openh264</pkg> instead of shipped libs.</flag>
+		<flag name="system-vips">Use <pkg>media-libs/vips</pkg> instead of shipped libs.</flag>
+		<flag name="system-zlib">Use <pkg>sys-libs/zlib</pkg> instead of shipped libs.</flag>
+		<flag name="gnome">Supporting screenshot when using GNOME</flag>
+		<flag name="liteloader">Add liteloader support</flag>
+	</use>
 </pkgmetadata>

@@ -43,7 +43,7 @@ fi
 # 从 flags 文件中加载参数
 
 set -euo pipefail
-electron_flags_file="${XDG_CONFIG_HOME}/qq-electron-flags.conf"
+electron_flags_file="${XDG_CONFIG_HOME}/qq-flags.conf"
 declare -a electron_flags
 
 if [[ -f "${electron_flags_file}" ]]; then
@@ -91,7 +91,7 @@ is_hotupdated_version=0 # 正在运行的版本是否经过热更新？
 
 find "${QQ_HOTUPDATE_DIR}/"*[-_]* -maxdepth 1 -type "d,l" | while read path; do
     this_version="$(basename "$path")"
-    if [ "$(vercmp "${this_version}" "${QQ_HOTUPDATE_VERSION//_/-}")" -lt "0" ]; then
+    if [ "$(/opt/QQ/workarounds/vercmp.sh "${this_version}" lt "${QQ_HOTUPDATE_VERSION//_/-}")" == "true" ]; then
         # 这个版本小于当前版本，删除之
         echo "rm $this_version"
         rm -rf "$path"
@@ -105,15 +105,16 @@ if [ "$is_hotupdated_version" == "0" ]; then
 fi
 
 bwrap --new-session --cap-drop ALL --unshare-user-try --unshare-pid --unshare-cgroup-try \
-    --symlink usr/lib /lib \
-    --symlink usr/lib64 /lib64 \
-    --symlink usr/bin /bin \
+    --ro-bind /lib /lib \
+    --ro-bind /lib64 /lib64 \
+    --ro-bind /bin /bin \
     --ro-bind /usr /usr \
     --ro-bind /opt /opt \
     --ro-bind /opt/QQ/workarounds/xdg-open.sh /usr/bin/xdg-open \
     --ro-bind /usr/lib/snapd-xdg-open/xdg-open /snapd-xdg-open \
     --ro-bind /usr/lib/flatpak-xdg-utils/xdg-open /flatpak-xdg-open \
     --ro-bind /etc/machine-id /etc/machine-id \
+    --ro-bind /etc/ld.so.cache /etc/ld.so.cache \
     --dev-bind /dev /dev \
     --ro-bind /sys /sys \
     --ro-bind /etc/passwd /etc/passwd \
@@ -137,12 +138,12 @@ bwrap --new-session --cap-drop ALL --unshare-user-try --unshare-pid --unshare-cg
     --ro-bind-try "${XDG_CONFIG_HOME}/gtk-3.0" "${XDG_CONFIG_HOME}/gtk-3.0" \
     --ro-bind-try "${XDG_CONFIG_HOME}/dconf" "${XDG_CONFIG_HOME}/dconf" \
     --ro-bind /etc/nsswitch.conf /etc/nsswitch.conf \
-    --ro-bind /run/systemd/userdb/ /run/systemd/userdb/ \
+    --ro-bind-try /run/systemd/userdb/ /run/systemd/userdb/ \
     --setenv IBUS_USE_PORTAL 1 \
     --setenv QQNTIM_HOME "${QQ_APP_DIR}/QQNTim" \
     --setenv LITELOADERQQNT_PROFILE "${QQ_APP_DIR}/LiteLoaderQQNT" \
     "${bwrap_flags[@]}" \
-    /opt/QQ/electron "${electron_flags[@]}" "$@" /opt/QQ/resources/app
+    /opt/QQ/qq "${electron_flags[@]}" "$@"
 
 # 移除无用崩溃报告和日志
 # 如果需要向腾讯反馈 bug，请注释掉如下几行

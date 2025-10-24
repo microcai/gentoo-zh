@@ -1206,6 +1206,7 @@ url = "https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/linuxConfig.js"
 regex = 'QQ_([\d\.\_]+)_.*.deb'
 from_pattern = '(.*)_(.*)'
 to_pattern = '\1_p\2'
+github_account = "Puqns67"
 
 ["net-im/wechat"]
 source = "regex"
