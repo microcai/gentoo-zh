@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-24 11:53:30 CST)
+(The last generation time: 2025-10-24 13:09:52 CST)
 
 ### Packages
 
@@ -516,8 +516,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/kotatogram-bin                                 | 1.4.9              |            | https://thatcat.space/kotatogram                                                        | Telegram Desktop fork with wide messages, local folders, square avatars
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/tencent-qq                                     | 3.2.19_p250820     |            | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
-                                                       | 3.2.19_p250904     |            |                                                                                         |
+ net-im/tencent-qq                                     | 3.2.20_p251023     |            | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
    media-libs/openslide                                | 20230904           | RD         | http://openslide.org/                                                                   | C library with simple interface to read virtual slides
    virtual/loong-ow-compat                             | 0                  | RD         |                                                                                         | Virtual for LoongArch old-world compatibility
      app-emulation/liblol                              | 0.1.5              | RD         | https://liblol.aosc.io                                                                  | LoongArch old-world ABI compatibility layer from AOSC OS
