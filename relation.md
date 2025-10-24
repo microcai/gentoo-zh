@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-24 10:45:56 CST)
+(The last generation time: 2025-10-24 11:07:40 CST)
 
 ### Packages
 
@@ -295,7 +295,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/binsider                                     | 0.2.1              |            | https://binsider.dev                                                                    | Analyze ELF binaries like a boss
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/codex-bin                                    | 0.47.0             |            | https://github.com/openai/codex                                                         | Codex - OpenAI's code generation and completion tool
+ dev-util/codex-bin                                    | 0.48.0             |            | https://github.com/openai/codex                                                         | Codex - OpenAI's code generation and completion tool
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/fvm                                          | 3.2.1              |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
    dev-lang/dart                                       | 3.9.4              | BD         | https://dart.dev                                                                        | The Dart SDK
