@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-24 13:09:52 CST)
+(The last generation time: 2025-10-24 18:15:33 CST)
 
 ### Packages
 
@@ -111,7 +111,7 @@
    app-i18n/fcitx-rime                                 | 9999               | RD         | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
      app-i18n/fcitx                                    | 9999               |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
    app-i18n/fcitx-skk                                  | 5.1.6              | RD         | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
-                                                       | 5.1.7-r1           |            |                                                                                         |
+                                                       | 5.1.7-r2           |            |                                                                                         |
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-skin-material                          | 0.5                |            | https://github.com/hrko99/fcitx-skin-material                                           | A Material Design-like skin for Fcitx
