@@ -32,6 +32,9 @@ BDEPEND="
 	virtual/pkgconfig
 "
 
+# cmake_minimum_required is 3.6.0
+CMAKE_QA_COMPAT_SKIP=1
+
 src_configure() {
 	local mycmakeargs=( )
 	if use qt6; then
