@@ -469,13 +469,6 @@ use_latest_release = true
 prefix = "v"
 github_account = "CHN-beta"
 
-["dev-cpp/tl-expected"]
-source = "github"
-github = "TartanLlama/expected"
-use_latest_release = true
-prefix = "v"
-github_account = "OriPoin"
-
 ["dev-db/dbeaver-bin"]
 source = "github"
 github = "dbeaver/dbeaver"
