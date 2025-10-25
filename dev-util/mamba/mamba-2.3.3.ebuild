@@ -7,7 +7,7 @@ DISTUTILS_USE_PEP517=setuptools
 DISTUTILS_EXT=1
 DISTUTILS_OPTIONAL=1
 DISTUTILS_SINGLE_IMPL=1
-PYTHON_COMPAT=(python3_{11..13})
+PYTHON_COMPAT=(python3_{11..14})
 
 inherit distutils-r1 cmake multilib
 
@@ -27,7 +27,7 @@ DEPEND="app-arch/libarchive:=
 	dev-cpp/cli11
 	dev-cpp/nlohmann_json
 	dev-cpp/reproc:=
-	dev-cpp/tl-expected
+	dev-cpp/expected
 	dev-cpp/yaml-cpp
 	dev-libs/simdjson
 	sys-libs/libsolv:=[conda]
@@ -49,7 +49,7 @@ DEPEND="app-arch/libarchive:=
 		sys-fs/e2fsprogs
 		sys-libs/zlib
 		)
-	<=dev-libs/libfmt-11.1
+	dev-libs/libfmt
 	dev-libs/spdlog
 	net-misc/curl
 	python? ( ${PYTHON_DEPS} )
