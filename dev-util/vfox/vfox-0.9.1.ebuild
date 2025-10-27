@@ -10,7 +10,6 @@ HOMEPAGE="https://vfox.dev https://github.com/version-fox/vfox"
 SRC_URI="
 	https://github.com/version-fox/vfox/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/gentoo-zh-drafts/vfox/releases/download/v${PV}/${P}-vendor.tar.xz
-		-> ${P}-vendor.golang-dist-mirror-action.tar.xz
 "
 
 LICENSE="Apache-2.0"
