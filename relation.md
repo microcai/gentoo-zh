@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-27 20:49:10 CST)
+(The last generation time: 2025-10-27 21:11:54 CST)
 
 ### Packages
 
@@ -214,7 +214,7 @@
  dev-debug/lldb-mi                                     | 0.0.1              |            | https://github.com/lldb-tools/lldb-mi                                                   | LLDB Machine Interface Driver
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-go/gotests                                        | 1.6.0              |            | https://github.com/cweill/gotests                                                       | Automatically generate Go test boilerplate from your source code
+ dev-go/gotests                                        | 1.8.0              |            | https://github.com/cweill/gotests                                                       | Automatically generate Go test boilerplate from your source code
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-go/staticcheck                                    | 2025.1.1           |            | https://staticcheck.dev                                                                 | Go static analysis, detecting bugs, performance issues, and much more
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
