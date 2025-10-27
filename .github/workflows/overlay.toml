@@ -1725,9 +1725,9 @@ github_account = "Puqns67"
 
 ["www-apps/follow-bin"]
 source = "github"
-github = "RSSNext/Follow"
+github = "RSSNext/Folo"
 use_latest_release = true
-prefix = 'v'
+prefix = 'desktop/v'
 
 ["www-client/brave-bin"]
 source = "aur"
