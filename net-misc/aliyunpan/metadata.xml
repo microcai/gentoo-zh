@@ -18,6 +18,6 @@
 		支持同步备份功能。
 	</longdescription>
 	<upstream>
-		<remote-id type="github">net-misc/aliyunpan</remote-id>
+		<remote-id type="github">tickstep/aliyunpan</remote-id>
 	</upstream>
 </pkgmetadata>
