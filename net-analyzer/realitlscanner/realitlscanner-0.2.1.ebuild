@@ -9,7 +9,8 @@ HOMEPAGE="https://github.com/XTLS/RealiTLScanner"
 
 SRC_URI="
 	https://github.com/XTLS/RealiTLScanner/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-vendor.tar.xz
+	https://github.com/gentoo-zh-drafts/RealiTLScanner/releases/download/v${PV}/RealiTLScanner-${PV}-vendor.tar.xz
+		-> ${P}-vendor.golang-dist-mirror-action.tar.xz
 "
 
 S="${WORKDIR}/RealiTLScanner-${PV}"
@@ -18,9 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 
 src_compile() {
-	local ldflags="\
-		-w -s"
-	ego build -o ${P} -trimpath -ldflags "${ldflags}"
+	ego build -o ${P}
 }
 
 src_install() {
