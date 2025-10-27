@@ -7,8 +7,11 @@ inherit go-module shell-completion
 
 DESCRIPTION="A cross-platform version manager, extendable via plugins"
 HOMEPAGE="https://vfox.lhan.me https://github.com/version-fox/vfox"
-SRC_URI="https://github.com/version-fox/vfox/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-SRC_URI+=" https://github.com/gentoo-zh/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz"
+SRC_URI="
+	https://github.com/version-fox/vfox/archive/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/gentoo-zh-drafts/vfox/releases/download/v${PV}/${P}-vendor.tar.xz
+		-> ${P}-vendor.golang-dist-mirror-action.tar.xz
+"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -19,8 +22,7 @@ RDEPEND+=" !dev-util/vfox-bin"
 BDEPEND=">=dev-lang/go-1.21.7"
 
 src_compile() {
-	local ldflags="-w -s"
-	ego build -o ${P} -trimpath -ldflags "${ldflags}"
+	ego build -o ${P}
 }
 
 src_install() {
