@@ -24,6 +24,8 @@ KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 RDEPEND="app-shells/bash"
 RDEPEND+=" !dev-util/vfox"
 
+QA_PREBUILT="/usr/bin/vfox"
+
 src_install() {
 	default
 
