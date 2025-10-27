@@ -9,7 +9,8 @@ HOMEPAGE="https://github.com/ameshkov/dnslookup"
 
 SRC_URI="
 	https://github.com/ameshkov/dnslookup/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-vendor.tar.xz
+	https://github.com/gentoo-zh-drafts/dnslookup/releases/download/v${PV}/${P}-vendor.tar.xz
+		-> ${P}-vendor.golang-dist-mirror-action.tar.xz
 "
 
 LICENSE="MIT"
@@ -17,10 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 
 src_compile() {
-	local ldflags="\
-		-X main.VersionString=${PV} \
-		-w -s"
-	ego build -o ${P} -trimpath -ldflags "${ldflags}"
+	ego build -o ${P} -ldflags "-X main.VersionString=${PV}"
 }
 
 src_install() {
