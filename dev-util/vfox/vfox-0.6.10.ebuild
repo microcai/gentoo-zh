@@ -6,7 +6,7 @@ EAPI=8
 inherit go-module shell-completion
 
 DESCRIPTION="A cross-platform version manager, extendable via plugins"
-HOMEPAGE="https://vfox.lhan.me https://github.com/version-fox/vfox"
+HOMEPAGE="https://vfox.dev https://github.com/version-fox/vfox"
 SRC_URI="
 	https://github.com/version-fox/vfox/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/gentoo-zh-drafts/vfox/releases/download/v${PV}/${P}-vendor.tar.xz
