@@ -9,10 +9,12 @@ DESCRIPTION="CLI for building apps using Cloud Native Buildpacks"
 HOMEPAGE="https://buildpacks.io https://paketo.io https://github.com/buildpacks/pack"
 
 SRC_URI="https://github.com/buildpacks/pack/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-SRC_URI+=" https://github.com/tsln1998/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz"
+SRC_URI+="
+	https://github.com/gentoo-zh-drafts/pack/releases/download/v${PV}/pack-${PV}-vendor.tar.xz
+		-> ${P}-vendor.golang-dist-mirror-action.tar.xz
+"
 
-S="${WORKDIR}/pack-${PV}/cmd/pack"
-
+S="${WORKDIR}/pack-${PV}"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~x86"
@@ -27,8 +29,8 @@ RDEPEND+=" !dev-util/pack-cli-bin"
 BDEPEND=">=dev-lang/go-1.23.0"
 
 src_compile() {
-	local ldflags="-w -s -X 'github.com/buildpacks/pack.Version=${PV}'"
-	ego build -ldflags "${ldflags}"
+	local ldflags="-X 'github.com/buildpacks/pack.Version=${PV}'"
+	ego build -ldflags "${ldflags}" ./cmd/pack
 }
 
 src_install() {
