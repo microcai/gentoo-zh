@@ -9,7 +9,7 @@ DESCRIPTION="The glamourous AI coding agent for your favourite terminal 💘"
 HOMEPAGE="https://github.com/charmbracelet/crush"
 SRC_URI="
 	https://github.com/charmbracelet/crush/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/douglarek/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz
+	https://github.com/gentoo-zh-drafts/crush/releases/download/v${PV}/${P}-vendor.tar.xz
 "
 S="${WORKDIR}"/${P}
 
