@@ -9,7 +9,8 @@ HOMEPAGE="https://github.com/zu1k/nali"
 
 SRC_URI="
 	https://github.com/zu1k/nali/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-vendor.tar.xz
+	https://github.com/gentoo-zh-drafts/nali/releases/download/v${PV}/${P}-vendor.tar.xz
+		-> ${P}-vendor.golang-dist-mirror-action.tar.xz
 "
 
 LICENSE="MIT"
@@ -17,10 +18,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 
 src_compile() {
-	local ldflags="\
-		-X \"github.com/zu1k/nali/internal/constant.Version=${PV}\" \
-		-w -s"
-	ego build -trimpath -ldflags "${ldflags}"
+	local ldflags="
+		-X github.com/zu1k/nali/internal/constant.Version=${PV}
+		"
+	ego build -ldflags "${ldflags}"
 }
 
 src_install() {

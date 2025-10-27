@@ -9,7 +9,7 @@ HOMEPAGE="https://github.com/zu1k/nali"
 EGIT_COMMIT="a41f45b7d9f0ad69631a19a21bd60ae00a777126"
 SRC_URI="
 	https://github.com/zu1k/nali/archive/${EGIT_COMMIT}.tar.gz -> ${P}.gh.tar.gz
-	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-vendor.tar.xz
+	https://github.com/gentoo-zh/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz
 "
 
 S="${WORKDIR}/${PN}-${EGIT_COMMIT}"
@@ -18,10 +18,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 
 src_compile() {
-	local ldflags="\
-		-X \"github.com/zu1k/nali/internal/constant.Version=${PV}\" \
-		-w -s"
-	ego build -trimpath -ldflags "${ldflags}"
+	local ldflags="
+		-X github.com/zu1k/nali/internal/constant.Version=${PV}
+		"
+	ego build -ldflags "${ldflags}"
 }
 
 src_install() {
