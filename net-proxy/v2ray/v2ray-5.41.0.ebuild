@@ -9,7 +9,7 @@ DESCRIPTION="A platform for building proxies to bypass network restrictions."
 HOMEPAGE="https://www.v2fly.org/"
 SRC_URI="
 	https://github.com/v2fly/v2ray-core/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/gentoo-zh/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz
+	https://github.com/gentoo-zh-drafts/v2ray-core/releases/download/v${PV}/v2ray-core-${PV}-vendor.tar.xz
 "
 S="${WORKDIR}/${PN}-core-${PV}"
 
