@@ -7,8 +7,11 @@ inherit go-module
 
 DESCRIPTION="Go static analysis, detecting bugs, performance issues, and much more"
 HOMEPAGE="https://staticcheck.dev https://github.com/dominikh/go-tools"
-SRC_URI="https://github.com/dominikh/go-tools/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/douglarek/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz"
+SRC_URI="
+	https://github.com/dominikh/go-tools/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/gentoo-zh-drafts/go-tools/releases/download/${PV}/go-tools-${PV}-vendor.tar.xz
+		-> ${P}-vendor.golang-dist-mirror-action.tar.xz
+"
 S="${WORKDIR}/go-tools-${PV}"
 
 LICENSE="BSD MIT"
