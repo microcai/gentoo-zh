@@ -9,7 +9,9 @@ DESCRIPTION="aliyunpan cli client, support Webdav service, JavaScript plugin"
 HOMEPAGE="https://github.com/tickstep/aliyunpan"
 
 SRC_URI="https://github.com/tickstep/aliyunpan/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/gentoo-zh/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz"
+	https://github.com/gentoo-zh-drafts/aliyunpan/releases/download/v${PV}/${P}-vendor.tar.xz
+		-> ${P}-vendor.golang-dist-mirror-action.tar.xz
+"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~s390 ~x86"
