@@ -13,7 +13,8 @@ DESCRIPTION="The configuration generator for sing-box"
 HOMEPAGE="https://serenity.sagernet.org/ https://github.com/SagerNet/serenity"
 SRC_URI="
 	https://github.com/SagerNet/serenity/archive/refs/tags/v${_PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/peeweep/gentoo-go-deps/releases/download/${P}/${P}-vendor.tar.xz
+	https://github.com/gentoo-zh-drafts/serenity/releases/download/v${_PV}/serenity-${_PV}-vendor.tar.xz
+		-> ${P}-vendor.golang-dist-mirror-action.tar.xz
 "
 
 S="${WORKDIR}/${PN}-${_PV}"
@@ -21,6 +22,10 @@ S="${WORKDIR}/${PN}-${_PV}"
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64"
+
+src_compile(){
+	ego build -ldflags "-X 'github.com/sagernet/serenity/constant.Version=${PV}'" ./cmd/serenity
+}
 
 src_install(){
 	dobin serenity
