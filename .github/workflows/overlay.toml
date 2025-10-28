@@ -1724,10 +1724,9 @@ prefix = "v"
 github_account = "Puqns67"
 
 ["www-apps/follow-bin"]
-source = "github"
-github = "RSSNext/Folo"
-use_latest_release = true
-prefix = 'desktop/v'
+source = "aur"
+aur = "folo-appimage"
+strip_release = true
 
 ["www-client/brave-bin"]
 source = "aur"
