@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-29 13:27:33 CST)
+(The last generation time: 2025-10-29 13:43:28 CST)
 
 ### Packages
 
@@ -331,7 +331,7 @@
  games-arcade/osu-lazer-bin                            | 2025.816.0         |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away!
                                                        | 2025.912.0         |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- games-arcade/osu-lazer-tachyon-bin                    | 2025.1025.1        |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away! (tachyon releases)
+ games-arcade/osu-lazer-tachyon-bin                    | 2025.1029.0        |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away! (tachyon releases)
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-emulation/conty                                 | 1.27.1             |            | https://github.com/Kron4ek/Conty                                                        | SquashFS image of Arch Linux with: Lutris, Steam, Bottles, Wine...
                                                        | 1.28               |            |                                                                                         |
@@ -492,7 +492,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-analyzer/realitlscanner                           | 0.2.1              |            | https://github.com/XTLS/RealiTLScanner                                                  | A TLS server scanner for Reality
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-dns/ddns-go                                       | 6.13.0             |            | https://github.com/jeessy2/ddns-go                                                      | Automatically obtain your public IP address and set to your domain name service.
+ net-dns/ddns-go                                       | 6.13.1             |            | https://github.com/jeessy2/ddns-go                                                      | Automatically obtain your public IP address and set to your domain name service.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/dnslookup                                     | 1.11.1             |            | https://github.com/ameshkov/dnslookup                                                   | Simple command line utility to make DNS lookups to the specified server
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
