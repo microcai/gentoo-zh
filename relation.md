@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-29 21:27:38 CST)
+(The last generation time: 2025-10-29 21:40:00 CST)
 
 ### Packages
 
@@ -558,7 +558,7 @@
  net-misc/baidunetdisk                                 | 4.17.7             |            | https://pan.baidu.com/                                                                  | Baidu Net Disk is a cloud storage client (Linux Version)
                                                        | 4.3.0              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/baidupcs-go                                  | 3.9.9              |            | https://github.com/qjfoidnh/BaiduPCS-Go                                                 | The terminal utility for Baidu Network Disk (Golang Version).
+ net-misc/baidupcs-go                                  | 4.0.0              |            | https://github.com/qjfoidnh/BaiduPCS-Go                                                 | The terminal utility for Baidu Network Disk (Golang Version).
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/bbdown-bin                                   | 1.6.3              |            | https://github.com/nilaoda/BBDown                                                       | The terminal utility for Baidu Network Disk (Golang Version).
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
