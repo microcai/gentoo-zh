@@ -44,6 +44,8 @@ RDEPEND="
 "
 BDEPEND="complete-icon? ( media-gfx/imagemagick )"
 
+QA_PREBUILT="/usr/lib/osu-lazer/*"
+
 src_unpack() {
 	cp "${DISTDIR}/${_PN}-${PV}.AppImage" "${WORKDIR}/appimage"
 	chmod +x "${WORKDIR}/appimage"
@@ -58,14 +60,14 @@ src_prepare() {
 	rm -fv *.pdb
 
 	# Remove UpdateNix from Velopack, updates are managed by protage
-	rm -fv UpdateNix
+	rm -v UpdateNix || die
 
 	if use system-sdl; then
-		rm -fv libSDL{2,3}.so
+		rm -v libSDL{2,3}.so || die
 	fi
 
 	if use system-ffmpeg; then
-		rm -fv libav{codec,format,util}.so.{56,58} libswscale.so.5
+		rm -v libavcodec.so.58 libavformat.so.58 libavutil.so.56 libswscale.so.5 || die
 	fi
 	popd
 
@@ -120,10 +122,10 @@ src_install() {
 
 		case "${type}" in
 		"osu")
-			newicon --context "apps" --size "${size}" "${icon}" "${_PN}.png"
+			newicon --context "apps" --size "${size}" "${icon}" "osu-lazer.png"
 			;;
 		"beatmap")
-			newicon --context "mimetypes" --size "${size}" "${icon}" "${_PN%-lazer}-beatmap.png"
+			newicon --context "mimetypes" --size "${size}" "${icon}" "osu-beatmap.png"
 			;;
 		esac
 	done
