@@ -15,8 +15,8 @@ if [[ ${PV} == *9999 ]]; then
 	}
 else
 	SRC_URI="https://github.com/qjfoidnh/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/gentoo-zh-drafts/BaiduPCS-Go/releases/download/v${PV}/${MY_PN}-${PV}-vendor.tar.xz
-			-> ${P}-vendor.golang-dist-mirror-action.tar.xz"
+		https://github.com/gentoo-zh-drafts/${MY_PN}/releases/download/v${PV}/${MY_PN}-${PV}-vendor.tar.xz
+			-> ${P}-vendor.tar.xz"
 	KEYWORDS="~amd64 ~x86"
 	S="${WORKDIR}/${MY_PN}-${PV}"
 fi
