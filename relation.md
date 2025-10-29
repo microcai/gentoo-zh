@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-30 00:07:54 CST)
+(The last generation time: 2025-10-30 00:23:10 CST)
 
 ### Packages
 
@@ -132,7 +132,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/copilot                                      | 0.0.327            |            | https://github.com/github/copilot-cli                                                   | The power of GitHub Copilot, now in your terminal
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/crush                                        | 0.13.0             |            | https://github.com/charmbracelet/crush                                                  | The glamourous AI coding agent for your favourite terminal 💘
+ app-misc/crush                                        | 0.13.4             |            | https://github.com/charmbracelet/crush                                                  | The glamourous AI coding agent for your favourite terminal 💘
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/cursor-agent                                 | 2025.10.02         |            | https://docs.cursor.com/en/cli                                                          | Cursor CLI - interact with AI agents directly from your terminal
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
