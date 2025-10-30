@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-10-30 07:32:17 CST)
+(The last generation time: 2025-10-30 18:40:03 CST)
 
 ### Packages
 
@@ -667,6 +667,7 @@
      net-proxy/v2ray-bin                               | 4.45.0-r2          | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
                                                        | 5.41.0             |            |                                                                                         |
    net-proxy/trojan-go-fork                            | 2025.07.27         | RD         | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
+                                                       | 2025.10.26         |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/serenity                                    | 1.1.0_beta3        |            | https://serenity.sagernet.org/                                                          | The configuration generator for sing-box
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
