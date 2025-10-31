@@ -16,7 +16,8 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-BDEPEND="dev-lang/dart"
+RDEPEND="dev-lang/dart"
+DEPEND="${RDEPEND}"
 
 src_compile() {
 	export PUB_CACHE=pubcache
