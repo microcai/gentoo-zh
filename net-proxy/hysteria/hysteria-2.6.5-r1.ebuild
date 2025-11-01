@@ -20,10 +20,12 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
+BDEPEND="
+	>=dev-lang/go-1.25.1
+"
 DEPEND="
 	acct-user/hysteria
 	acct-group/hysteria
-	>=dev-lang/go-1.25.1
 "
 RDEPEND="${DEPEND}"
 
