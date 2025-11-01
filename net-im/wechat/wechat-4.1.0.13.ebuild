@@ -88,10 +88,12 @@ src_install() {
 		usr/share/applications/wechat.desktop || die
 	domenu usr/share/applications/wechat.desktop
 
-	insinto /usr/share
-	doins -r usr/share/icons
+	for size in 16 32 48 64 128 256; do
+		doicon -s "${size}" usr/share/icons/hicolor/"${size}"x"${size}"/apps/wechat.png
+	done
 }
 
 pkg_postinst() {
+	xdg_pkg_postinst
 	einfo "If you need to input Chinese in WeChat, please enable the corresponding USE flag (fcitx or ibus)."
 }
