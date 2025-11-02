@@ -1,11 +1,12 @@
 [Unit]
-Description=Hysteria Server Service
+Description=Hysteria Client Service
 Documentation=https://hysteria.network/
 After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/hysteria server --config /etc/hysteria/server.yaml --disable-update-check
+Restart=on-failure
+ExecStart=/usr/bin/hysteria client --config /etc/hysteria/%i.yaml --disable-update-check
 WorkingDirectory=~
 User=hysteria
 Group=hysteria
@@ -23,7 +24,6 @@ ProtectKernelModules=yes
 ProtectKernelTunables=yes
 ProtectClock=yes
 ProtectProc=noaccess
-PrivateDevices=yes
 PrivateTmp=yes
 RestrictNamespaces=yes
 RestrictSUIDSGID=yes
