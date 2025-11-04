@@ -10,8 +10,8 @@ CRATES="
 
 declare -A GIT_CRATES=(
 	[boring-noise]='https://github.com/Watfaq/boring-noise;e8a17ecb688ef2fed8d37beda0f87f5561fa45e6;boring-noise-%commit%'
-	[console-api]='https://github.com/tokio-rs/console;44e2281f6ee7e21919aa55c2032d340d1831b4a3;console-%commit%/console-api'
-	[console-subscriber]='https://github.com/tokio-rs/console;44e2281f6ee7e21919aa55c2032d340d1831b4a3;console-%commit%/console-subscriber'
+	[console-api]='https://github.com/tokio-rs/console;d8fba132e6ce52821172b1178c77658b1f48bdd4;console-%commit%/console-api'
+	[console-subscriber]='https://github.com/tokio-rs/console;d8fba132e6ce52821172b1178c77658b1f48bdd4;console-%commit%/console-subscriber'
 	[netstack-lwip]='https://github.com/eycorsican/netstack-lwip;f434fefd6c227c9dfbec84c364452ba6c1532779;netstack-lwip-%commit%'
 	[quinn-proto]='https://github.com/spongebob888/quinn-jls;3364498f3376432dc8d27ed2fb74b4695506288c;quinn-jls-%commit%/quinn-proto'
 	[quinn-udp]='https://github.com/spongebob888/quinn-jls;3364498f3376432dc8d27ed2fb74b4695506288c;quinn-jls-%commit%/quinn-udp'
@@ -20,9 +20,10 @@ declare -A GIT_CRATES=(
 	[shadowquic-macros]='https://github.com/spongebob888/shadowquic;a6b0bb33bc61035ded282388746c35e701253656;shadowquic-%commit%/shadowquic-macros'
 	[shadowquic]='https://github.com/spongebob888/shadowquic;a6b0bb33bc61035ded282388746c35e701253656;shadowquic-%commit%/shadowquic'
 	[smoltcp]='https://github.com/smoltcp-rs/smoltcp;ac32e643a4b7e09161193071526b3ca5a0deedb5;smoltcp-%commit%'
+	[sock2proc]='https://github.com/Watfaq/sock2proc;1097e6ba692025f80567446e0035af1222f5231f;sock2proc-%commit%'
 	[tokio-watfaq-rustls]='https://github.com/Watfaq/tokio-rustls;638db32084d7ecf9c2660847b55d48d1186b4055;tokio-rustls-%commit%'
-	[tuic-quinn]='https://github.com/Itsusinn/tuic;33cd093e0871e395151b722ad895392ef2cf3267;tuic-%commit%/tuic-quinn'
-	[tuic]='https://github.com/Itsusinn/tuic;33cd093e0871e395151b722ad895392ef2cf3267;tuic-%commit%/tuic'
+	[tuic-quinn]='https://github.com/Itsusinn/tuic;ce1482c48315f45672eec483d55e2732db4a17ea;tuic-%commit%/tuic-quinn'
+	[tuic]='https://github.com/Itsusinn/tuic;ce1482c48315f45672eec483d55e2732db4a17ea;tuic-%commit%/tuic'
 	[unix-udp-sock]='https://github.com/Watfaq/unix-udp-sock;847c80b519f0fd8cff5c887ae708429897d08671;unix-udp-sock-%commit%'
 	[watfaq-rustls]='https://github.com/Watfaq/rustls;4cae3aa2e84ea29d8a74b495793773bdb0a72206;rustls-%commit%/rustls'
 )
