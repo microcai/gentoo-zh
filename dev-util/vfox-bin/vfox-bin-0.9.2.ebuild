@@ -6,7 +6,7 @@ EAPI=8
 inherit unpacker shell-completion
 
 DESCRIPTION="A cross-platform version manager, extendable via plugins"
-HOMEPAGE="https://vfox.lhan.me/ https://github.com/version-fox/vfox"
+HOMEPAGE="https://vfox.dev/ https://github.com/version-fox/vfox"
 
 SRC_URI="
 	amd64? ( https://github.com/version-fox/vfox/releases/download/v${PV}/vfox_${PV}_linux_x86_64.deb )
