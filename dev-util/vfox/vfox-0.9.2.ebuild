@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 
 RDEPEND="app-shells/bash"
 RDEPEND+=" !dev-util/vfox-bin"
-BDEPEND=">=dev-lang/go-1.21.7"
+BDEPEND=">=dev-lang/go-1.23.0"
 
 src_compile() {
 	ego build -o ${P}
