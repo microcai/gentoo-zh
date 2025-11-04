@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-04 22:08:14 CST)
+(The last generation time: 2025-11-05 00:52:14 CST)
 
 ### Packages
 
@@ -317,9 +317,9 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/tailspin                                     | 5.5.0              |            | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/vfox                                         | 0.9.1              |            | https://vfox.dev                                                                        | A cross-platform version manager, extendable via plugins
+ dev-util/vfox                                         | 0.9.2              |            | https://vfox.dev                                                                        | A cross-platform version manager, extendable via plugins
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/vfox-bin                                     | 0.9.1              |            | https://vfox.lhan.me/                                                                   | A cross-platform version manager, extendable via plugins
+ dev-util/vfox-bin                                     | 0.9.2              |            | https://vfox.dev/                                                                       | A cross-platform version manager, extendable via plugins
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/zprint-bin                                   | 1.3.0              |            | https://github.com/kkinnear/zprint                                                      | Clojure and Clojurescript source code formatter
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
