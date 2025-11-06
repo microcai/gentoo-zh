@@ -15,7 +15,12 @@ LICENSE="reqable_license"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND="x11-libs/gtk+:3"
+RDEPEND="
+	dev-libs/libdbusmenu
+	dev-libs/nspr
+	dev-libs/nss
+	x11-libs/gtk+:3
+"
 
 RESTRICT="strip mirror"
 
