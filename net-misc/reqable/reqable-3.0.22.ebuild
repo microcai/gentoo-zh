@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="
-	dev-libs/libdbusmenu
+	dev-libs/libdbusmenu[gtk3]
 	dev-libs/nspr
 	dev-libs/nss
 	x11-libs/gtk+:3
