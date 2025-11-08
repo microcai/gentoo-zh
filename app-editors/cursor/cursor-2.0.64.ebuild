@@ -102,14 +102,19 @@ src_install() {
 
 	sed -e "s|^Exec=/.*/cursor|Exec=cursor ${EXEC_EXTRA_FLAGS[*]}|" \
 		-e "s|^Icon=.*|Icon=cursor|" \
-		usr/share/applications/cursor.desktop > cursor.desktop || die
-	domenu cursor.desktop
+		usr/share/applications/cursor.desktop > "${T}/cursor.desktop" || die
+	domenu "${T}/cursor.desktop"
+
 	sed -e "s|^Exec=/.*/cursor|Exec=cursor ${EXEC_EXTRA_FLAGS[*]}|" \
 		-e "s|^Icon=.*|Icon=cursor|" \
-		usr/share/applications/cursor-url-handler.desktop > cursor-url-handler.desktop || die
-	domenu cursor-url-handler.desktop
+		usr/share/applications/cursor-url-handler.desktop > "${T}/cursor-url-handler.desktop" || die
+	domenu "${T}/cursor-url-handler.desktop"
 
-	doicon usr/share/pixmaps/co.anysphere.cursor.png
+	# Install icon to hicolor theme at multiple sizes for better theme compatibility
+	local size
+	for size in 16 24 32 48 64 128 256 512 1024; do
+		newicon -s "${size}" usr/share/pixmaps/co.anysphere.cursor.png cursor.png
+	done
 
 	insinto /usr/share/mime/packages
 	doins usr/share/mime/packages/cursor-workspace.xml
