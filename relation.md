@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-09 00:57:24 CST)
+(The last generation time: 2025-11-09 13:32:37 CST)
 
 ### Packages
 
@@ -279,7 +279,7 @@
  dev-python/pywikibot                                  | 10.3.0             |            | https://www.mediawiki.org/wiki/Manual:Pywikibot                                         | To interact with MediaWiki API (for example Wikipedia, Wikimedia Commons)
    dev-python/mwparserfromhell                         | 0.7.2              | RD         | https://github.com/earwig/mwparserfromhell                                              | A Python parser for MediaWiki wikicode
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/uv-bin                                     | 0.9.7              |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
+ dev-python/uv-bin                                     | 0.9.8              |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-ruby/filelock                                     | 1.1.1              |            | https://github.com/sheerun/filelock                                                     | Heavily tested, but simple filelocking solution using flock command
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -554,7 +554,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/another-redis-desktop-manager-bin            | 1.7.1              |            | https://github.com/qishibo/AnotherRedisDesktopManager                                   | A faster, better and more stable Redis desktop manager [GUI client]
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/apifox                                       | 2.7.47             |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
+ net-misc/apifox                                       | 2.7.48             |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/baidunetdisk                                 | 4.17.7             |            | https://pan.baidu.com/                                                                  | Baidu Net Disk is a cloud storage client (Linux Version)
                                                        | 4.3.0              |            |                                                                                         |
