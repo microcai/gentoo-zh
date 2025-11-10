@@ -40,8 +40,7 @@ jobs:
         emerge --verbose --quiet --jobs $(nproc) --autounmask y --autounmask-continue y \
         app-eselect/eselect-repository \
         app-misc/jq \
-        dev-vcs/git \
-        sys-kernel/gentoo-kernel-bin
+        dev-vcs/git
 
     - name: fetch
       uses: actions/checkout@v5
