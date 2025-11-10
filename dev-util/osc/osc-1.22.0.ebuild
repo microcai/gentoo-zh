@@ -28,7 +28,7 @@ BDEPEND="
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] )
 "
 
-PATCHES=( "${FILESDIR}/${P}-setuptools.patch" )
+PATCHES=( "${FILESDIR}/${PN}-1.21.0-setuptools.patch" )
 
 EPYTEST_DESELECT=(
 	# AssertionError: Lists differ: ['/usr/lib/osc-plugins', '/usr/local/lib/o[53 chars]ins'] != []
