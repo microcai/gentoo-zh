@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>admin@zakk.au</email>
+		<name>Zakk</name>
+	</maintainer>
+	<longdescription lang="en">
+		PQMarble (formerly known as Marble) is a utility library for GNOME applications,
+		providing common functionality and widgets.
+	</longdescription>
+	<upstream>
+		<remote-id type="gnome-gitlab">raggesilver/marble</remote-id>
+	</upstream>
+</pkgmetadata>
