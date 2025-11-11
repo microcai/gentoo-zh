@@ -20,10 +20,12 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
+BDEPEND="
+	>=dev-lang/go-1.25.1
+"
 DEPEND="
 	acct-user/hysteria
 	acct-group/hysteria
-	>=dev-lang/go-1.25.1
 "
 RDEPEND="${DEPEND}"
 
@@ -56,10 +58,23 @@ src_install() {
 
 	dobin "${PN}"
 
+	systemd_newunit "${FILESDIR}/${PN}-server_at.service" "${PN}-server@.service"
+	systemd_newunit "${FILESDIR}/${PN}-client_at.service" "${PN}-client@.service"
+	# compatibility services
 	systemd_dounit "${FILESDIR}/${PN}-server.service"
 	systemd_dounit "${FILESDIR}/${PN}-client.service"
+
 	newinitd "${FILESDIR}/${PN}-server.initd" "${PN}-server"
 	newinitd "${FILESDIR}/${PN}-client.initd" "${PN}-client"
 
 	keepdir /etc/${PN}
+}
+
+pkg_postinst() {
+	elog
+	elog "Systemd services are now templates, with a configuration file"
+	elog "name as a parameter. We recommend replacing: "
+	elog "  hysteria-server.service -> hysteria-server@server.service"
+	elog "  hysteria-client.service -> hysteria-client@client.service"
+	elog
 }

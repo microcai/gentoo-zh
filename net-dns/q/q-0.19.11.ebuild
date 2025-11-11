@@ -3,7 +3,7 @@
 
 EAPI=8
 inherit go-module
-COMMIT_ID="3f3ae8d2a8d58aed559f1b6be27e76f1e669d1d9"
+COMMIT_ID="65147eaa26a67ebb3f142cbe57e5397d160eb5e8"
 
 DESCRIPTION="A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH"
 HOMEPAGE="https://github.com/natesales/q"

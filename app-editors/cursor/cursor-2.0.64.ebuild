@@ -9,7 +9,7 @@ CHROMIUM_LANGS="af am ar bg bn ca cs da de el en-GB es es-419 et fa fi fil fr gu
 
 inherit chromium-2 desktop pax-utils unpacker xdg optfeature shell-completion
 
-BUILD_ID="5c17eb2968a37f66bc6662f48d6356a100b67be8"
+BUILD_ID="25412918da7e74b2686b25d62da1f01cfcd27683"
 DESCRIPTION="Cursor App - AI-first coding environment"
 HOMEPAGE="https://www.cursor.com/"
 SRC_URI="
@@ -102,14 +102,19 @@ src_install() {
 
 	sed -e "s|^Exec=/.*/cursor|Exec=cursor ${EXEC_EXTRA_FLAGS[*]}|" \
 		-e "s|^Icon=.*|Icon=cursor|" \
-		usr/share/applications/cursor.desktop > cursor.desktop || die
-	domenu cursor.desktop
+		usr/share/applications/cursor.desktop > "${T}/cursor.desktop" || die
+	domenu "${T}/cursor.desktop"
+
 	sed -e "s|^Exec=/.*/cursor|Exec=cursor ${EXEC_EXTRA_FLAGS[*]}|" \
 		-e "s|^Icon=.*|Icon=cursor|" \
-		usr/share/applications/cursor-url-handler.desktop > cursor-url-handler.desktop || die
-	domenu cursor-url-handler.desktop
-	
-	doicon usr/share/pixmaps/co.anysphere.cursor.png
+		usr/share/applications/cursor-url-handler.desktop > "${T}/cursor-url-handler.desktop" || die
+	domenu "${T}/cursor-url-handler.desktop"
+
+	# Install icon to hicolor theme at multiple sizes for better theme compatibility
+	local size
+	for size in 16 24 32 48 64 128 256 512 1024; do
+		newicon -s "${size}" usr/share/pixmaps/co.anysphere.cursor.png cursor.png
+	done
 
 	insinto /usr/share/mime/packages
 	doins usr/share/mime/packages/cursor-workspace.xml

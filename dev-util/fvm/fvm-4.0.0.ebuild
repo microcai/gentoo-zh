@@ -9,14 +9,15 @@ DESCRIPTION="Flutter Version Management"
 HOMEPAGE="https://github.com/leoafarias/fvm https://fvm.app"
 SRC_URI="
 	https://github.com/leoafarias/fvm/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz
-	https://minio.dream-universe.org/posts/distfiles/${P}-pubcache.tar.gz
+	https://minio.dream-universe.org/posts/distfiles/${P}-pubcache.tar.xz
 "
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-BDEPEND="dev-lang/dart"
+RDEPEND="dev-lang/dart"
+DEPEND="${RDEPEND}"
 
 src_compile() {
 	export PUB_CACHE=pubcache
