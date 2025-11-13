@@ -1,36 +1,41 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit cmake gnome2-utils xdg git-r3
-EGIT_REPO_URI="https://github.com/fcitx/fcitx5-gtk.git"
+MY_PN="fcitx5-gtk"
+
+inherit cmake gnome2-utils git-r3 xdg
+
 DESCRIPTION="Gtk im module for fcitx5 and glib based dbus client library"
 HOMEPAGE="https://github.com/fcitx/fcitx5-gtk"
+EGIT_REPO_URI="https://github.com/fcitx/fcitx5-gtk.git"
 
 LICENSE="LGPL-2.1+"
 SLOT="5"
-IUSE="gtk2 +gtk3 +gtk4 +introspection +snooper onlyplugin wayland"
+KEYWORDS=""
+IUSE="gtk2 +gtk3 +gtk4 +introspection +snooper onlyplugin wayland +X"
 REQUIRED_USE="|| ( gtk2 gtk3 gtk4 )"
 
 RDEPEND="
 	app-i18n/fcitx:5
-	kde-frameworks/extra-cmake-modules:0
+	>=dev-libs/glib-2.56
+	x11-libs/libxkbcommon
 	gtk2? ( x11-libs/gtk+:2 )
-	gtk3? ( x11-libs/gtk+:3[wayland?] )
-	gtk4? ( gui-libs/gtk:4[wayland?] )
-	introspection? ( dev-libs/gobject-introspection )
+	gtk3? ( x11-libs/gtk+:3[wayland?,X?] )
+	gtk4? ( gui-libs/gtk:4[wayland?,X?] )
+	introspection? ( >=dev-libs/gobject-introspection-1.82.0-r2 )
+	X? ( x11-libs/libX11 )
 "
 DEPEND="${RDEPEND}"
 BDEPEND="
+	dev-util/glib-utils
 	virtual/pkgconfig
+	kde-frameworks/extra-cmake-modules:0
 "
 
 src_configure() {
 	local mycmakeargs=(
-		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
-		-DCMAKE_INSTALL_SYSCONFDIR="${EPREFIX}/etc"
-		-DCMAKE_BUILD_TYPE=Release
 		-DENABLE_GTK2_IM_MODULE=$(usex gtk2)
 		-DENABLE_GTK3_IM_MODULE=$(usex gtk3)
 		-DENABLE_GTK4_IM_MODULE=$(usex gtk4)
