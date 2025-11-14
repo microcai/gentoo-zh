@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-13 22:46:57 CST)
+(The last generation time: 2025-11-14 14:07:50 CST)
 
 ### Packages
 
@@ -100,9 +100,11 @@
    app-i18n/cskk                                       | 3.2.0              |  D, RD     | https://github.com/naokiri/cskk                                                         | SKK (Simple Kana Kanji henkan) library
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-meta                                   | 5.0.12-r3          |            | https://fcitx-im.org                                                                    | Merge this to pull in Fcitx packages
+   app-i18n/fcitx-anthy                                | 9999               | RD         | https://fcitx-im.org/                                                                   | Japanese Anthy input methods for Fcitx5
    app-i18n/fcitx-bamboo                               | 1.0.7              | RD         | https://github.com/fcitx/fcitx5-bamboo                                                  | Typing Vietnamese by Bamboo core engine for Fcitx5
                                                        | 1.0.8              |            |                                                                                         |
-   app-i18n/fcitx-chinese-addons                       | 9999               |  D, RD     | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4.
+   app-i18n/fcitx-chewing                              | 9999               | RD         | https://github.com/fcitx/fcitx5-chewing                                                 | Chewing Wrapper for Fcitx.
+   app-i18n/fcitx-chinese-addons                       | 9999               |  D, RD     | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4
      app-i18n/fcitx-lua                                | 9999               |  D, RD     | https://github.com/fcitx/fcitx5-lua                                                     | Lua support for fcitx
      app-i18n/fcitx-qt                                 | 9999               |  D, RD     | https://github.com/fcitx/fcitx5-qt                                                      | Qt library and IM module for fcitx5
      app-i18n/libime                                   | 9999               |  D, BD, RD | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
@@ -110,13 +112,24 @@
    app-i18n/fcitx-gtk                                  | 9999               | RD         | https://github.com/fcitx/fcitx5-gtk                                                     | Gtk im module for fcitx5 and glib based dbus client library
    app-i18n/fcitx-hangul                               | 9999               | RD         | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
    app-i18n/fcitx-m17n                                 | 9999               | RD         | https://github.com/fcitx/fcitx5-m17n                                                    | m17n-provided input methods for Fcitx5
-   app-i18n/fcitx-rime                                 | 9999               | RD         | https://github.com/fcitx/fcitx5-rime                                                    | Rime Support for Fcitx5
-     app-i18n/fcitx                                    | 9999               |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx5 Next generation of fcitx
+   app-i18n/fcitx-rime                                 | 9999               | RD         | https://fcitx-im.org/                                                                   | Chinese RIME input methods for Fcitx
+     app-i18n/fcitx                                    | 9999               |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx 5 is a generic input method framework
+       x11-libs/xcb-imdkit                             | 9999               |  D, RD     | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
+     app-i18n/librime                                  | 9999               |  D, RD     | https://rime.im/                                                                        | RIME (Rime Input Method Engine) core library
+     app-i18n/rime-data                                | 9999               |  D, RD     | https://rime.im/                                                                        | Data resources for Rime Input Method Engine
    app-i18n/fcitx-skk                                  | 5.1.6              | RD         | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
                                                        | 5.1.7-r2           |            |                                                                                         |
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-i18n/fcitx-sayura                                 | 9999               |            | https://github.com/fcitx/fcitx5-sayura                                                  | Fcitx-Sayura is a Sinhala input method for Fcitx input method framework
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-skin-material                          | 0.5                |            | https://github.com/hrko99/fcitx-skin-material                                           | A Material Design-like skin for Fcitx
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-i18n/fcitx-table-extra                            | 9999               |            | https://github.com/fcitx/fcitx5-table-extra                                             | Provides extra table for Fcitx, including Boshiamy, Zhengma, Cangjie, and Quick
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-i18n/fcitx-table-other                            | 9999               |            | https://github.com/fcitx/fcitx5-table-other                                             | Provides some other tables for Fcitx, fork from ibus-table-others, scim-tables
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-i18n/fcitx-unikey                                 | 9999               |            | https://fcitx-im.org/                                                                   | Unikey (Vietnamese Input Method) engine support for Fcitx
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/libime-jyutping                              | 1.0.13             |            | https://github.com/fcitx/libime-jyutping                                                | A library make use of libime to implement jyutping input method
                                                        | 1.0.14             |            |                                                                                         |
