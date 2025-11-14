@@ -9,7 +9,8 @@
 		<remote-id type="github">Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project</remote-id>
 	</upstream>
 	<use>
-		<flag name="allideo">use HanaMin to display unincluded fonts</flag>
-		<flag name="fallback">do not display unincluded fonts</flag>
+		<flag name="otf">OpenType format for this font (default)</flag>
+		<flag name="static">TTF format for this font</flag>
+		<flag name="web">WOFF2 format for this font</flag>
 	</use>
 </pkgmetadata>
