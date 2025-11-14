@@ -2,14 +2,14 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>2073201758GD@gmail.com</email>
-		<name>liuyujielol</name>
-	</maintainer>
-	<maintainer type="person">
 		<email>tanekliang@gmail.com</email>
 		<name>Yongxiang Liang</name>
 	</maintainer>
+	<use>
+		<flag name="extra">Install extra input method packages</flag>
+	</use>
 	<upstream>
-		<remote-id type="github">fcitx/fcitx5-m17n</remote-id>
+		<remote-id type="github">rime/plum</remote-id>
 	</upstream>
 </pkgmetadata>
+
