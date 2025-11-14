@@ -16,7 +16,6 @@
 	<use>
 		<flag name="autostart">Enable XDG-compatible autostart of Fcitx</flag>
 		<flag name="enchant">Enable Enchant backend (using <pkg>app-text/enchant</pkg>) for spelling hinting</flag>
-		<flag name="coverage">Build the project with gcov support</flag>
 		<flag name="presage">Enable presage for word predication (not stable)</flag>
 		<flag name="emoji">Enable emoji loading for CLDR</flag>
 		<flag name="keyboard">Enable key event translation with XKB and build keyboard engine</flag>
