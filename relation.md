@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-14 14:07:50 CST)
+(The last generation time: 2025-11-14 22:03:59 CST)
 
 ### Packages
 
@@ -388,7 +388,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  mate-base/caja-bin                                    | 1.28.0             |            | https://wiki.mate-desktop.org/mate-desktop/applications/caja                            | GUI file manager, fork of GNOME Files (Nautilus); supports SSH, FTP, WebDav
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/Plangothic                                | 2.9.5771           |            | https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project                  | 遍黑体项目（Plangothic Project）
+ media-fonts/Plangothic                                | 2.9.5787           |            | https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project                  | 遍黑体项目（Plangothic Project）
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/iansui                                    | 1.020              |            | https://github.com/ButTaiwan/iansui                                                     | An open-source Chinese font derived from Klee One (Fontworks).
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
