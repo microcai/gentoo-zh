@@ -87,3 +87,33 @@ src_install() {
 
 	dosym ../../opt/1Password/1password /usr/bin/1password
 }
+
+pkg_postinst() {
+	xdg_pkg_postinst
+
+	local gid=$(getent group onepassword | cut -d: -f3)
+	
+	elog ""
+	elog "1Password has been installed successfully."
+	elog ""
+	
+	if [[ -n ${gid} ]]; then
+		if [[ ${gid} -lt 1000 ]]; then
+			ewarn "WARNING: The 'onepassword' group has GID ${gid} (< 1000)."
+			ewarn "1Password browser extension requires GID >= 1000 to work properly."
+			ewarn ""
+			ewarn "To fix this, add to /etc/portage/make.conf:"
+			ewarn "  ACCT_GROUP_ONEPASSWORD_ID=1010"
+			ewarn ""
+			ewarn "Then reinstall:"
+			ewarn "  emerge -1 acct-group/onepassword app-admin/1password"
+		else
+			elog "The 'onepassword' group (GID: ${gid}) is correctly configured."
+			elog "Browser extension should work properly."
+		fi
+	fi
+	
+	elog ""
+	elog "To verify the group: getent group onepassword"
+	elog ""
+}
