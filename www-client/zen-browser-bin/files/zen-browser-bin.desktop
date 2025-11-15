@@ -1,0 +1,22 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Zen Browser
+GenericName=Web Browser
+Comment=Experience tranquillity while browsing the web
+Icon=zen-browser-bin
+Exec=zen-browser %u
+Terminal=false
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/chrome;video/webm;application/x-xpinstall;
+StartupNotify=true
+StartupWMClass=zen
+Actions=NewWindow;NewPrivateWindow;
+
+[Desktop Action NewWindow]
+Name=Open a New Window
+Exec=zen-browser --new-window %u
+
+[Desktop Action NewPrivateWindow]
+Name=Open a New Private Window
+Exec=zen-browser --private-window %u
