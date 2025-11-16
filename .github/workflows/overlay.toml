@@ -1813,11 +1813,8 @@ prefix = "v"
 #github = "snapcore/snapd-xdg-open"
 
 ["x11-terms/blackbox-terminal"]
-source = "gitlab"
-host = "gitlab.gnome.org"
-gitlab = "raggesilver/blackbox"
-use_max_tag = true
-prefix = "v"
+source = "anitya"
+anitya_id = 320583
 github_account = "zakkaus"
 
 ["x11-terms/wezterm-bin"]
