@@ -36,11 +36,12 @@ RDEPEND="${DEPEND}"
 
 QA_PREBUILT="*"
 
-pkg_setup() {
+src_unpack() {
+	default
 	if use amd64; then
-		S="${WORKDIR}/${P}.x64"
+		mv ${P}.x64 ${P} || die
 	elif use arm64; then
-		S="${WORKDIR}/${P}.arm64"
+		mv ${P}.arm64 ${P} || die
 	fi
 }
 
