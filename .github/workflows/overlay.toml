@@ -1737,6 +1737,14 @@ strip_release = true
 github_account = "irort"
 prefix = "1:"
 
+["www-client/zen-browser-bin"]
+source = "github"
+github = "zen-browser/desktop"
+use_latest_release = true
+from_pattern = "(.*)b"
+to_pattern = "\\1_beta"
+github_account = "zakkaus"
+
 ["www-servers/darkhttpd"]
 source = "github"
 github = "emikulic/darkhttpd"
@@ -1803,6 +1811,14 @@ prefix = "v"
 #["x11-misc/snapd-xdg-open"]
 #source = "github"
 #github = "snapcore/snapd-xdg-open"
+
+["x11-terms/blackbox-terminal"]
+source = "gitlab"
+host = "gitlab.gnome.org"
+gitlab = "raggesilver/blackbox"
+use_max_tag = true
+prefix = "v"
+github_account = "zakkaus"
 
 ["x11-terms/wezterm-bin"]
 source = "github"
