@@ -1814,10 +1814,11 @@ prefix = "v"
 
 ["x11-terms/blackbox-terminal"]
 source = "gitlab"
-host = "gitlab.gnome.org"
 gitlab = "raggesilver/blackbox"
+host = "gitlab.gnome.org"
 use_max_tag = true
 prefix = "v"
+exclude_regex = ".*alpha.*|.*beta.*|.*rc.*"
 github_account = "zakkaus"
 
 ["x11-terms/wezterm-bin"]
