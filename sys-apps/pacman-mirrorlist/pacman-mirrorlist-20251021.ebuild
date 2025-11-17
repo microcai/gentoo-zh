@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="Repository list for Archlinux's binary package manager"
 HOMEPAGE="https://archlinux.org/mirrorlist/"
-SRC_URI="https://gitlab.archlinux.org/archlinux/packaging/packages/${PN}/-/raw/main/mirrorlist -> ${P}"
+SRC_URI="https://gitlab.archlinux.org/archlinux/packaging/packages/${PN}/-/raw/${PV}-1/mirrorlist -> ${P}"
 S="${WORKDIR}"
 
 LICENSE="GPL-2"
