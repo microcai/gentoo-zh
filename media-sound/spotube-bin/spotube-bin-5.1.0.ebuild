@@ -18,10 +18,11 @@ BDEPEND="
 		dev-util/patchelf
 "
 RDEPEND="
-		media-video/mpv
 		dev-libs/libayatana-appindicator
+		media-video/mpv
 		net-libs/libsoup:3.0
 		net-libs/webkit-gtk:4.1
+		x11-libs/libnotify
 "
 
 RESTRICT="strip"
