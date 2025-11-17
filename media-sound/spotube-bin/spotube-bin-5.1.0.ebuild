@@ -20,8 +20,8 @@ BDEPEND="
 RDEPEND="
 		>=media-video/mpv-0.38.0-r1
 		>=dev-libs/libayatana-appindicator-0.5.92
-        >=net-libs/libsoup-3.4.4
-        >=net-libs/webkit-gtk-2.48.5-r410
+		>=net-libs/libsoup-3.4.4
+		>=net-libs/webkit-gtk-2.48.5-r410
 "
 
 RESTRICT="strip"
