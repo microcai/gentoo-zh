@@ -20,7 +20,7 @@ BDEPEND="
 RDEPEND="
 		media-video/mpv
 		dev-libs/libayatana-appindicator
-		net-libs/libsoup
+		net-libs/libsoup:3.0
 		net-libs/webkit-gtk:4.1
 "
 
