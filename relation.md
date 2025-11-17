@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-17 14:23:48 CST)
+(The last generation time: 2025-11-17 15:52:19 CST)
 
 ### Packages
 
@@ -299,11 +299,15 @@
  dev-ruby/filelock                                     | 1.1.1              |            | https://github.com/sheerun/filelock                                                     | Heavily tested, but simple filelocking solution using flock command
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/arch-install-scripts                         | 29                 |            | https://projects.archlinux.org/arch-install-scripts.git/                                | Arch Linux install tools (pacstrap, genfstab, arch-chroot)
+                                                       | 31                 |            |                                                                                         |
    dev-util/pacstrap                                   | 29                 | RD         | https://github.com/archlinux/arch-install-scripts                                       | Pacstrap - install packages to the specified new root directorye
+                                                       | 31                 |            |                                                                                         |
      sys-apps/pacman                                   | 7.0.0              |  D         | https://archlinux.org/pacman/                                                           | Archlinux's binary package manager
+                                                       | 7.1.0              |            |                                                                                         |
        app-crypt/archlinux-keyring                     | 20231113           |  D, RD     | https://gitlab.archlinux.org/archlinux/archlinux-keyring                                | GnuPG keyring of Archlinux developer keys
                                                        | 20231222           |            |                                                                                         |
                                                        | 20240208-r1        |            |                                                                                         |
+                                                       | 20251116           |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/asdf-vm                                      | 0.15.0             |            | https://github.com/asdf-vm/asdf                                                         | Manage all your runtime versions with one tool
                                                        | 0.18.0             |            |                                                                                         |
@@ -736,6 +740,7 @@
  sys-apps/mdp                                          | 9999               |            | https://github.com/visit1985/mdp                                                        | A command-line based markdown presentation tool
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/pacman-mirrorlist                            | 20210509           |            | https://archlinux.org/mirrorlist/                                                       | Repository list for Archlinux's binary package manager
+                                                       | 20251021           |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/wait-online                                  | 9999               |            | https://github.com/lilydjwg/wait-online                                                 | Wait until we're connected to the Internet
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
