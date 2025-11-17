@@ -18,10 +18,10 @@ BDEPEND="
 		dev-util/patchelf
 "
 RDEPEND="
-		>=media-video/mpv-0.38.0-r1
-		>=dev-libs/libayatana-appindicator-0.5.92
-		>=net-libs/libsoup-3.4.4
-		>=net-libs/webkit-gtk-2.48.5-r410
+		media-video/mpv
+		dev-libs/libayatana-appindicator
+		net-libs/libsoup
+		net-libs/webkit-gtk:4.1
 "
 
 RESTRICT="strip"
