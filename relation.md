@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-17 15:52:19 CST)
+(The last generation time: 2025-11-17 16:54:33 CST)
 
 ### Packages
 
@@ -315,12 +315,14 @@
  dev-util/binsider                                     | 0.2.1              |            | https://binsider.dev                                                                    | Analyze ELF binaries like a boss
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/codex-bin                                    | 0.48.0             |            | https://github.com/openai/codex                                                         | Codex - OpenAI's code generation and completion tool
+                                                       | 0.58.0             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/fvm                                          | 3.2.1-r1           |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
                                                        | 4.0.0              |            |                                                                                         |
    dev-lang/dart                                       | 3.9.4              |  D, RD     | https://dart.dev                                                                        | The Dart SDK
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/gemini-cli                                   | 0.7.0              |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
+ dev-util/gemini-cli                                   | 0.15.3             |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
+                                                       | 0.7.0              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                            | 2.9.1.58121        |            | https://www.jetbrains.com/toolbox-app/                                                  | Manage all your JetBrains Projects and Tools
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
