@@ -24,7 +24,7 @@ declare -A GIT_CRATES=(
 	[default_net]='https://github.com/rustdesk-org/default_net;78f8f70cd85151a3a2c4a3230d80d5272703c02e;default_net-%commit%'
 	[evdev]='https://github.com/rustdesk-org/evdev;cec616e37790293d2cd2aa54a96601ed6b1b35a9;evdev-%commit%'
 	[filedescriptor]='https://github.com/rustdesk-org/wezterm;80174f8009f41565f0fa8c66dab90d4f9211ae16;wezterm-%commit%/filedescriptor'
-	[hwcodec]='https://github.com/rustdesk-org/hwcodec;17c1dbb38450fe4a64aeba78fb50bec32f364a16;hwcodec-%commit%'
+	[hwcodec]='https://github.com/rustdesk-org/hwcodec;398e5a8938dd8768ade0fcdc27ea80e8b4b38738;hwcodec-%commit%'
 	[impersonate_system]='https://github.com/rustdesk-org/impersonate-system;2f429010a5a10b1fe5eceb553c6672fd53d20167;impersonate-system-%commit%'
 	[kcp-sys]='https://github.com/rustdesk-org/kcp-sys;32a6c09fc6223f54aea83981a6aa8995931d29be;kcp-sys-%commit%'
 	[keepawake]='https://github.com/rustdesk-org/keepawake-rs;64d568586dd16551d02120e19668d2b0fec8e3c9;keepawake-rs-%commit%'
@@ -40,7 +40,6 @@ declare -A GIT_CRATES=(
 	[parity-tokio-ipc]='https://github.com/rustdesk-org/parity-tokio-ipc;c8c8bbcbabf9be1201c53afb0269b92b9b02d291;parity-tokio-ipc-%commit%'
 	[portable-pty]='https://github.com/rustdesk-org/wezterm;80174f8009f41565f0fa8c66dab90d4f9211ae16;wezterm-%commit%/pty'
 	[rdev]='https://github.com/rustdesk-org/rdev;f9b60b1dd0f3300a1b797d7a74c116683cd232c8;rdev-%commit%'
-	[reqwest]='https://github.com/rustdesk-org/reqwest;9e859438203a71eb86ddc294fbebfde14cba7f7c;reqwest-%commit%'
 	[rust-pulsectl]='https://github.com/rustdesk-org/pulsectl;aa34dde499aa912a3abc5289cc0b547bd07dd6e2;pulsectl-%commit%'
 	[sciter-rs]='https://github.com/rustdesk-org/rust-sciter;5322f3a755a0e6bf999fbc60d1efc35246c0f821;rust-sciter-%commit%'
 	[sysinfo]='https://github.com/rustdesk-org/sysinfo;90b1705d909a4902dbbbdea37ee64db17841077d;sysinfo-%commit%'
@@ -75,7 +74,7 @@ _VCPKG_TAG="2025.08.27"
 _HWCODEC_EXTERNALS_COMMIT="8903740a1f47884906a6e347ad3d8d56304d9771"
 # fix: libs/hbb_common is a empty directory
 # git ls-tree HEAD libs/hbb_common
-_HBB_COMMON_COMMIT="5ed0afde0841659e2fb37ae7acaddc005fa1a8d3"
+_HBB_COMMON_COMMIT="a86eda749e6fa33c282bab680e6b504d3ad87539"
 # fix: kcp-sys-*/kcp is a empty directory
 # git clone https://github.com/rustdesk-org/kcp-sys
 # git ls-tree HEAD kcp
