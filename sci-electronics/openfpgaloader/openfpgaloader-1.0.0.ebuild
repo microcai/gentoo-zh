@@ -20,11 +20,14 @@ DEPEND="
 	dev-libs/libgpiod
 	dev-libs/libusb
 	sys-libs/libcap
-	sys-libs/zlib
 	dev-embedded/libftdi
 	cmsisdap? ( dev-libs/hidapi )
+	virtual/zlib
 "
 RDEPEND="${DEPEND}"
+
+# Upstream still sticks to old CMakeList.txt v3.5, skip checking for now
+CMAKE_QA_COMPAT_SKIP=1
 
 src_configure() {
 
