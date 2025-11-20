@@ -1,15 +1,15 @@
-From 1bc5a4579ba77d2b9311ee1e07c6d8934a6caf13 Mon Sep 17 00:00:00 2001
+From c0f6202ff6cb5cc9b877b9c620f462346b3877f2 Mon Sep 17 00:00:00 2001
 From: Puqns67 <me@puqns67.icu>
-Date: Thu, 23 Oct 2025 21:42:15 +0800
+Date: Thu, 20 Nov 2025 19:49:28 +0800
 Subject: [PATCH 3/3] build(deps): tidy
 
 ---
- go.mod | 5 -----
+ go.mod | 7 +------
  go.sum | 4 ----
- 2 files changed, 9 deletions(-)
+ 2 files changed, 1 insertion(+), 10 deletions(-)
 
 diff --git a/go.mod b/go.mod
-index 2d163d7..e9d65ed 100644
+index 2d163d7..649c862 100644
 --- a/go.mod
 +++ b/go.mod
 @@ -3,14 +3,9 @@ module github.com/jeessy2/ddns-go/v6
@@ -20,12 +20,13 @@ index 2d163d7..e9d65ed 100644
  	github.com/wagslane/go-password-validator v0.3.0
  	golang.org/x/crypto v0.43.0
  	golang.org/x/net v0.46.0
- 	gopkg.in/yaml.v3 v3.0.1
+-	gopkg.in/yaml.v3 v3.0.1
 -)
 -
 -require (
 -	golang.org/x/sys v0.37.0 // indirect
  	golang.org/x/text v0.30.0
++	gopkg.in/yaml.v3 v3.0.1
  )
 diff --git a/go.sum b/go.sum
 index 0b23371..3240292 100644
@@ -46,5 +47,5 @@ index 0b23371..3240292 100644
  golang.org/x/text v0.30.0/go.mod h1:yDdHFIX9t+tORqspjENWgzaCVXgk0yYnYuSZ8UzzBVM=
  gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
 -- 
-2.51.1
+2.52.0
 

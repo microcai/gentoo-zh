@@ -9,7 +9,7 @@ DESCRIPTION="A modern, feature-rich ebook reader"
 HOMEPAGE="https://readest.com/"
 URI_PREFIX="https://github.com/readest/readest/releases/download/v${PV}/Readest_${PV}"
 SRC_URI="
-	amd64? ( ${URI_PREFIX}_amd64_linux.deb )
+	amd64? ( ${URI_PREFIX}_amd64.deb )
 "
 
 S="${WORKDIR}"

@@ -46,10 +46,11 @@ src_install() {
 	for f in libbv-screen-capture.so libbyteview-bytertc.so libbyteview-record.so libuss.so; do
 		patchelf --set-rpath '$ORIGIN' "${S}/opt/bytedance/feishu/${f}" || die "patchelf failed on ${f}"
 	done
-	# fix scanelf W^X error: https://github.com/microcai/gentoo-zh/issues/8194
-	for f in libbyteview-bytertc.so video_conference_sdk; do
-		paxctl -c "${S}/opt/bytedance/feishu/${f}" || die "paxctl failed on ${f}"
-	done
+	# paxctl will broken video meeting
+	# # fix scanelf W^X error: https://github.com/microcai/gentoo-zh/issues/8194
+	# for f in libbyteview-bytertc.so video_conference_sdk; do
+	# 	paxctl -c "${S}/opt/bytedance/feishu/${f}" || die "paxctl failed on ${f}"
+	# done
 	insinto "/"
 	doins -r "${S}/opt/"
 	dosym -r /opt/bytedance/feishu/bytedance-feishu /usr/bin/bytedance-feishu-stable
