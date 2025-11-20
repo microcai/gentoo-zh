@@ -1,14 +1,14 @@
-From b813f2180ed8bf7feaa2010f7aa97a2d50f9ccaf Mon Sep 17 00:00:00 2001
+From d816b77f2b0c3084b96cf339ffdbcb3d5a5ccd34 Mon Sep 17 00:00:00 2001
 From: Puqns67 <me@puqns67.icu>
 Date: Sun, 16 Jun 2024 01:15:02 +0800
 Subject: [PATCH 2/3] build: remove service management support for this build
 
 ---
- main.go | 224 --------------------------------------------------------
- 1 file changed, 224 deletions(-)
+ main.go | 224 +-------------------------------------------------------
+ 1 file changed, 2 insertions(+), 222 deletions(-)
 
 diff --git a/main.go b/main.go
-index aa71180..f74e29c 100644
+index 19315f8..f789e9b 100644
 --- a/main.go
 +++ b/main.go
 @@ -9,7 +9,6 @@ import (
@@ -19,15 +19,15 @@ index aa71180..f74e29c 100644
  	"path/filepath"
  	"runtime"
  	"strconv"
-@@ -19,7 +18,6 @@ import (
- 	"github.com/jeessy2/ddns-go/v6/dns"
+@@ -20,7 +19,6 @@ import (
  	"github.com/jeessy2/ddns-go/v6/util"
+ 	"github.com/jeessy2/ddns-go/v6/util/osutil"
  	"github.com/jeessy2/ddns-go/v6/web"
 -	"github.com/kardianos/service"
  )
  
  // ddns-go 版本
-@@ -35,9 +33,6 @@ var every = flag.Int("f", 300, "Update frequency(seconds)")
+@@ -36,9 +34,6 @@ var every = flag.Int("f", 300, "Update frequency(seconds)")
  // 缓存次数
  var ipCacheTimes = flag.Int("cacheTimes", 5, "Cache times")
  
@@ -37,7 +37,16 @@ index aa71180..f74e29c 100644
  // 配置文件路径
  var configFilePath = flag.String("c", util.GetConfigFilePathDefault(), "Custom configuration file path")
  
-@@ -102,37 +97,6 @@ func main() {
+@@ -73,7 +68,7 @@ func main() {
+ 		return
+ 	}
+ 
+-	if *daemonize && os.Getenv("DDNS_GO_DAEMON") != "1" {
++	if *daemonize {
+ 		if err := runAsDaemon(); err != nil {
+ 			log.Fatalf("Daemonize failed: %v", err)
+ 		}
+@@ -114,34 +109,7 @@ func main() {
  		util.SetDNS(*customDNS)
  	}
  	os.Setenv(util.IPCacheTimesENV, strconv.Itoa(*ipCacheTimes))
@@ -49,7 +58,7 @@ index aa71180..f74e29c 100644
 -	case "restart":
 -		restartService()
 -	default:
--		if util.IsRunInDocker() {
+-		if util.IsRunInDocker() || os.Getenv("DDNS_GO_DAEMON") == "1" {
 -			run()
 -		} else {
 -			s := getService()
@@ -69,15 +78,13 @@ index aa71180..f74e29c 100644
 -			}
 -		}
 -	}
--}
--
--func run() {
- 	// 兼容之前的配置文件
- 	conf, _ := config.GetConfigCached()
- 	conf.CompatibleConfig()
-@@ -192,191 +156,3 @@ func runWebServer() error {
++	run()
+ }
  
- 	return http.Serve(l, nil)
+ func run() {
+@@ -236,191 +204,3 @@ func runAsDaemon() error {
+ 
+ 	return proc.Release()
  }
 -
 -type program struct{}
@@ -268,5 +275,5 @@ index aa71180..f74e29c 100644
 -}
 -`
 -- 
-2.49.0
+2.52.0
 

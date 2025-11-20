@@ -17,9 +17,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~riscv"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-6.7.2-remove-update-support.patch"
-	"${FILESDIR}/${PN}-6.9.2-remove-service-management-support.patch"
-	"${FILESDIR}/${PN}-6.13.0-build-deps-tidy.patch"
+	"${FILESDIR}/${PN}-6.13.2-remove_update_support.patch"
+	"${FILESDIR}/${PN}-6.13.2-remove_service_management_support.patch"
+	"${FILESDIR}/${PN}-6.13.2-build_deps_tidy.patch"
 )
 
 src_compile() {
