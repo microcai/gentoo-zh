@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-21 11:32:33 CST)
+(The last generation time: 2025-11-21 12:12:26 CST)
 
 ### Packages
 
@@ -151,6 +151,7 @@
  app-misc/crush                                        | 0.13.4                  |            | https://github.com/charmbracelet/crush                                                  | The glamourous AI coding agent for your favourite terminal 💘
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/cursor-agent                                 | 2025.10.02              |            | https://docs.cursor.com/en/cli                                                          | Cursor CLI - interact with AI agents directly from your terminal
+                                                       | 2025.11.06              |            |                                                                                         |
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/go-yq-bin                                    | 4.48.2                  |            | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
