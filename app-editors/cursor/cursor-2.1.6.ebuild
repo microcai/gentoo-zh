@@ -14,10 +14,12 @@ DESCRIPTION="Cursor App - AI-first coding environment"
 HOMEPAGE="https://www.cursor.com/"
 SRC_URI="
 	amd64? (
-		https://downloads.cursor.com/production/${BUILD_ID}/linux/x64/deb/amd64/deb/cursor_${PV}_amd64.deb -> ${P}-amd64.deb
+		https://downloads.cursor.com/production/${BUILD_ID}/linux/x64/deb/amd64/deb/cursor_${PV}_amd64.deb
+			-> ${P}-amd64.deb
 	)
 	arm64? (
-		https://downloads.cursor.com/production/${BUILD_ID}/linux/arm64/deb/arm64/deb/cursor_${PV}_arm64.deb -> ${P}-arm64.deb
+		https://downloads.cursor.com/production/${BUILD_ID}/linux/arm64/deb/arm64/deb/cursor_${PV}_arm64.deb
+			-> ${P}-arm64.deb
 	)
 "
 S="${WORKDIR}"
@@ -46,7 +48,6 @@ RDEPEND="
 	media-libs/mesa
 	net-misc/curl
 	sys-apps/dbus
-	sys-libs/zlib
 	sys-process/lsof
 	x11-libs/cairo
 	x11-libs/gtk+:3
