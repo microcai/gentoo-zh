@@ -63,7 +63,7 @@ BDEPEND="
 		${PYTHON_DEPS}
 		${DISTUTILS_DEPS}
 		$(python_gen_cond_dep 'dev-python/pybind11[${PYTHON_USEDEP}]')
-		$(python_gen_cond_dep 'dev-python/scikit-build[${PYTHON_USEDEP}]')
+		$(python_gen_cond_dep 'dev-python/scikit-build-core[${PYTHON_USEDEP}]')
 	)
 "
 
@@ -110,6 +110,7 @@ src_compile() {
 	if use python; then
 		cmake --install "${BUILD_DIR}" --prefix "${T}"
 		cd libmambapy || die
+		local DISTUTILS_USE_PEP517=scikit-build-core
 		export SKBUILD_CONFIGURE_OPTIONS="\
 		-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON \
 		-DBUILD_LIBMAMBA=ON \
