@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-22 16:01:47 CST)
+(The last generation time: 2025-11-22 16:25:37 CST)
 
 ### Packages
 
@@ -322,8 +322,8 @@
                                                        | 4.0.0                   |            |                                                                                         |
    dev-lang/dart                                       | 3.9.4                   |  D, RD     | https://dart.dev                                                                        | The Dart SDK
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/gemini-cli                                   | 0.16.0                  |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
-                                                       | 0.17.0                  |            |                                                                                         |
+ dev-util/gemini-cli                                   | 0.17.0                  |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
+                                                       | 0.17.1                  |            |                                                                                         |
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                            | 2.9.1.58121             |            | https://www.jetbrains.com/toolbox-app/                                                  | Manage all your JetBrains Projects and Tools
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
