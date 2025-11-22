@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-22 09:36:50 CST)
+(The last generation time: 2025-11-22 15:59:43 CST)
 
 ### Packages
 
@@ -466,7 +466,7 @@
    dev-python/janus                                    | 2.0.0                   |  D, RD     | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
    dev-python/qasync                                   | 0.27.1                  |  D, RD     | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/go-musicfox                               | 4.6.3                   |            | https://github.com/go-musicfox/go-musicfox                                              | Command-line Netease Cloud Music written in Go
+ media-sound/go-musicfox                               | 4.7.1                   |            | https://github.com/go-musicfox/go-musicfox                                              | Command-line Netease Cloud Music written in Go
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/listen1_desktop-bin                       | 2.32.0                  |            | http://listen1.github.io/listen1                                                        | one for all free music in China
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
