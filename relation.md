@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-22 22:32:18 CST)
+(The last generation time: 2025-11-23 11:57:36 CST)
 
 ### Packages
 
@@ -406,9 +406,9 @@
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/kose-font                                 | 3.126                   |            | https://github.com/lxgw/kose-font                                                       | Kose Font (小赖字体) - An open-source Chinese font
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/lxgw-neo-xihei                            | 1.227                   |            | https://github.com/lxgw/LxgwNeoXiHei                                                    | A Simplified Chinese sans-serif font derived from IPAex Gothic
+ media-fonts/lxgw-neo-xihei                            | 1.228                   |            | https://github.com/lxgw/LxgwNeoXiHei                                                    | A Simplified Chinese sans-serif font derived from IPAex Gothic
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/lxgw-neo-zhisong                          | 1.043                   |            | https://github.com/lxgw/LxgwNeoZhiSong                                                  | A Chinese serif font derived from IPAex Mincho and IPAmj Mincho
+ media-fonts/lxgw-neo-zhisong                          | 1.044                   |            | https://github.com/lxgw/LxgwNeoZhiSong                                                  | A Chinese serif font derived from IPAex Mincho and IPAmj Mincho
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/misans                                    | 4.003-r1                |            | https://hyperos.mi.com/font                                                             | MiSans 是由小米主导,联合汉仪发布的可免费使用的字体
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
