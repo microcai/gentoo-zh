@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-23 19:25:19 CST)
+(The last generation time: 2025-11-23 19:35:56 CST)
 
 ### Packages
 
@@ -384,7 +384,7 @@
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  gnome-extra/gnome-shell-extension-clipboard-indicator | 48                      |            | https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator                    | The most popular clipboard manager for GNOME, with over 1M downloads
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- gnome-extra/nautilus-open-any-terminal                | 0.6.3                   |            | https://github.com/Stunkymonkey/nautilus-open-any-terminal                              | context-menu entry for opening other terminal in nautilus
+ gnome-extra/nautilus-open-any-terminal                | 0.7.0                   |            | https://github.com/Stunkymonkey/nautilus-open-any-terminal                              | context-menu entry for opening other terminal in nautilus
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  gui-apps/crystal-dock                                 | 2.11                    |            | https://github.com/dangvd/crystal-dock                                                  | Cool dock (desktop panel) for Linux desktop
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
