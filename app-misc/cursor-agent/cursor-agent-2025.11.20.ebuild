@@ -3,7 +3,7 @@
 
 EAPI=8
 
-MY_PV="${PV}-bd871ac"
+MY_PV="${PV}-a4d3945"
 
 DESCRIPTION="Cursor CLI - interact with AI agents directly from your terminal"
 HOMEPAGE="https://docs.cursor.com/en/cli"
