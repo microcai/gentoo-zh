@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-24 00:54:50 CST)
+(The last generation time: 2025-11-24 09:44:50 CST)
 
 ### Packages
 
@@ -153,7 +153,7 @@
  app-misc/cursor-agent                                 | 2025.11.06              |            | https://docs.cursor.com/en/cli                                                          | Cursor CLI - interact with AI agents directly from your terminal
                                                        | 2025.11.20              |            |                                                                                         |
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/go-yq-bin                                    | 4.48.2                  |            | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
+ app-misc/go-yq-bin                                    | 4.49.1                  |            | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/gpick                                        | 0.2.6-r1                |            | https://github.com/thezbyg/gpick                                                        | Advanced color picker written in C++ using GTK+ toolkit
                                                        | 0.3                     |            |                                                                                         |
@@ -211,7 +211,7 @@
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/lemminx-bin                                  | 0.31.0                  |            | https://github.com/eclipse-lemminx/lemminx                                              | A XML Language Server
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-text/readest-bin                                  | 0.9.92                  |            | https://readest.com/                                                                    | A modern, feature-rich ebook reader
+ app-text/readest-bin                                  | 0.9.93                  |            | https://readest.com/                                                                    | A modern, feature-rich ebook reader
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/easymotion                                    | 1.3                     |            | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: Vim motions on speed!
                                                        | 3.0.1                   |            |                                                                                         |
@@ -295,7 +295,7 @@
  dev-python/pywikibot                                  | 10.3.0                  |            | https://www.mediawiki.org/wiki/Manual:Pywikibot                                         | To interact with MediaWiki API (for example Wikipedia, Wikimedia Commons)
    dev-python/mwparserfromhell                         | 0.7.2                   | RD         | https://github.com/earwig/mwparserfromhell                                              | A Python parser for MediaWiki wikicode
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/uv-bin                                     | 0.9.10                  |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
+ dev-python/uv-bin                                     | 0.9.11                  |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-ruby/filelock                                     | 1.1.1                   |            | https://github.com/sheerun/filelock                                                     | Heavily tested, but simple filelocking solution using flock command
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -656,7 +656,7 @@
  net-proxy/daed                                        | 1.0.0                   |            | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
                                                        | 9999                    |            |                                                                                         |
    sys-apps/pnpm                                       | 9.15.5                  | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
-                                                       | 10.22.0                 |            |                                                                                         |
+                                                       | 10.23.0                 |            |                                                                                         |
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/flclash-bin                                 | 0.8.90                  |            | https://github.com/chen08209/FlClash                                                    | A multi-platform proxy client based on ClashMeta
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
