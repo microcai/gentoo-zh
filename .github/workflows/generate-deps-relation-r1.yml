@@ -12,12 +12,12 @@ jobs:
       contents: write
     steps:
       - name: Checkout repository code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ref: deps-table
           fetch-depth: 5
       - name: Fetch gentoo-zh repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ref: master
           path: gentoo-zh
