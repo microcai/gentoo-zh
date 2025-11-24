@@ -208,7 +208,7 @@ CRATES="
 	yansi@1.0.1
 "
 
-inherit cargo gnome2 gnome2-utils meson xdg
+inherit cargo gnome2-utils meson xdg
 
 DESCRIPTION="Keep an eye on system resources"
 HOMEPAGE="https://github.com/nokyan/resources"
