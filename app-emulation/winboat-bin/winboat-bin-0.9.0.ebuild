@@ -28,17 +28,13 @@ RDEPEND="
 src_prepare() {
 	default
 
-	local pre="${S}/opt/winboat/resources/app.asar.unpacked/node_modules/usb/prebuilds"
-	if [[ -d ${pre} ]]; then
-		rm -rf \
-			"${pre}/android-arm" \
-			"${pre}/android-arm64" \
-			"${pre}/linux-ia32" \
-			"${pre}/linux-arm" \
-			"${pre}/linux-arm64" || die "failed to prune non-amd64 prebuilds"
-
-		rm -f "${pre}/linux-x64/"*musl* || true
-	fi
+	for mode in argon2 usb; do
+		local pre="${S}/opt/winboat/resources/app.asar.unpacked/node_modules/${mode}/prebuilds"
+		if [[ -d ${pre} ]]; then
+			find "${pre}/" -mindepth 1 -maxdepth 1 ! -name "linux-x64" -type d -exec rm -rf {} + || die
+			rm -f "${pre}/linux-x64/"*musl* || die
+		fi
+	done
 }
 
 src_install() {
@@ -48,7 +44,5 @@ src_install() {
 	fperms +x /opt/winboat/chrome-sandbox
 	fperms +x /opt/winboat/chrome_crashpad_handler
 	domenu "${S}/usr/share/applications/winboat.desktop"
-	for size in 16 32 48 64 128 256 512; do
-		doicon -s "${size}" "${S}/usr/share/icons/hicolor/${size}x${size}/apps/winboat.png"
-	done
+	newicon -s scalable "${S}/usr/share/icons/hicolor/scalable/apps/winboat.svg" winboat.svg
 }
