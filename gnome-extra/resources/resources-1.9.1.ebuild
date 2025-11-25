@@ -226,13 +226,11 @@ RUST_MIN_VER="1.85.0"
 
 RDEPEND="
 	sys-auth/polkit
-"
-DEPEND="${RDEPEND}"
-BDEPEND="
 	dev-libs/glib
 	gui-libs/gtk
 	>=gui-libs/libadwaita-1.8.2
 "
+DEPEND="${RDEPEND}"
 
 src_configure () {
 	cargo_gen_config
