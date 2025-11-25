@@ -224,7 +224,6 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="
-	sys-apps/systemd
 	sys-auth/polkit
 "
 DEPEND="${RDEPEND}"
