@@ -47,7 +47,7 @@ DEPEND="app-arch/libarchive:=
 		net-misc/curl
 		sys-apps/acl
 		sys-fs/e2fsprogs
-		sys-libs/zlib
+		virtual/zlib
 		)
 	dev-libs/libfmt
 	dev-libs/spdlog
@@ -110,14 +110,14 @@ src_compile() {
 	if use python; then
 		cmake --install "${BUILD_DIR}" --prefix "${T}"
 		cd libmambapy || die
-		local DISTUTILS_USE_PEP517=scikit-build-core
+		export DISTUTILS_USE_PEP517=scikit-build-core
+		export CMAKE_PREFIX_PATH="${T}"
 		export SKBUILD_CONFIGURE_OPTIONS="\
 		-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON \
 		-DBUILD_LIBMAMBA=ON \
 		-DBUILD_LIBMAMBAPY=ON \
 		-DBUILD_MICROMAMBA=OFF \
-		-DBUILD_MAMBA_PACKAGE=OFF \
-		-Dlibmamba_ROOT=${T}"
+		-DBUILD_MAMBA_PACKAGE=OFF"
 		distutils-r1_src_compile
 	fi
 }
