@@ -240,7 +240,6 @@ src_configure () {
 }
 
 src_compile () {
-	export CARGO_NET_OFFLINE=true
 	export CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1
 	export CARGO_PROFILE_RELEASE_DEBUG=2
 	export CARGO_PROFILE_RELEASE_STRIP=false
