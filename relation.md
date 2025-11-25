@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-25 21:45:30 CST)
+(The last generation time: 2025-11-25 21:54:30 CST)
 
 ### Packages
 
@@ -153,7 +153,7 @@
  app-misc/cursor-agent                                 | 2025.11.20               |            | https://docs.cursor.com/en/cli                                                          | Cursor CLI - interact with AI agents directly from your terminal
                                                        | 2025.11.25               |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/go-yq-bin                                    | 4.49.1                   |            | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
+ app-misc/go-yq-bin                                    | 4.49.2                   |            | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/gpick                                        | 0.2.6-r1                 |            | https://github.com/thezbyg/gpick                                                        | Advanced color picker written in C++ using GTK+ toolkit
                                                        | 0.3                      |            |                                                                                         |
