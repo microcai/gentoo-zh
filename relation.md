@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-25 19:12:37 CST)
+(The last generation time: 2025-11-25 19:46:08 CST)
 
 ### Packages
 
@@ -256,8 +256,8 @@
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/archspec                                   | 0.2.5                   |            | https://github.com/archspec/archspec                                                    | A library for detecting, labeling, and reasoning about microarchitectures
 -------------------------------------------------------|-------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/conda                                      | 25.5.1                  |            | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
-   dev-python/conda-libmamba-solver                    | 25.4.0                  |  D, RD     | https://github.com/conda/conda-libmamba-solver                                          | The libmamba based solver for conda
+ dev-python/conda                                      | 25.11.0                 |            | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
+   dev-python/conda-libmamba-solver                    | 25.11.0                 |  D, RD     | https://github.com/conda/conda-libmamba-solver                                          | The libmamba based solver for conda
      dev-util/mamba                                    | 2.4.0                   | RD         | https://github.com/mamba-org/mamba                                                      | The Fast Cross-Platform Package Manager
        dev-cpp/reproc                                  | 14.2.5                  |  D, RD     | https://github.com/DaanDeMeyer/reproc                                                   | A cross-platform (C99/C++11) process library
        sys-libs/libsolv                                | 0.7.33                  |  D, RD     | https://github.com/openSUSE/libsolv                                                     | Library for solving packages and reading repositories
