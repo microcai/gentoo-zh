@@ -222,6 +222,7 @@ LICENSE+="
 "
 SLOT="0"
 KEYWORDS="~amd64"
+RUST_MIN_VER="1.85.0"
 
 RDEPEND="
 	sys-auth/polkit
