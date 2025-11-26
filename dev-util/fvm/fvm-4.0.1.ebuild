@@ -7,6 +7,7 @@ inherit wrapper
 
 DESCRIPTION="Flutter Version Management"
 HOMEPAGE="https://github.com/leoafarias/fvm https://fvm.app"
+# cookbook: https://lingchengling.feishu.cn/docx/McWLdmV2Zo8xSlx6bPUc0wF7ntc
 SRC_URI="
 	https://github.com/leoafarias/fvm/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz
 	https://minio.dream-universe.org/posts/distfiles/${P}-pubcache.tar.gz
