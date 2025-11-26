@@ -9,7 +9,7 @@ inherit kernel-build toolchain-funcs llvm-r1
 
 MY_P=linux-${PV%.*}
 #Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
-PATCHSET=linux-gentoo-patches-6.15.8
+PATCHSET=linux-gentoo-patches-6.17.2
 GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.}))
 XV="1"
 
@@ -21,7 +21,7 @@ HOMEPAGE="
 SRC_URI+="
 	https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.xz
 	https://dev.gentoo.org/~mgorny/dist/linux/${PATCHSET}.tar.xz
-	https://download.sourceforge.net/xanmod/patch-${PV}-xanmod1.xz"
+	https://phoenixnap.dl.sourceforge.net/project/xanmod/releases/main/${PV}-xanmod1/patch-${PV}-xanmod1.xz"
 S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
@@ -73,7 +73,7 @@ src_prepare() {
 	# delete failed patches
 	rm "${WORKDIR}/${PATCHSET}/0011-BMQ-BitMap-Queue-Scheduler.-A-new-CPU-scheduler-deve.patch"
 	rm "${WORKDIR}/${PATCHSET}/0012-Set-defaults-for-BMQ.-Add-archs-as-people-test-defau.patch"
-	rm "${WORKDIR}/${PATCHSET}/0013-alt-sched-Fix-build-error-when-CONFIG_PREEMPT_DYNAMI.patch"
+	rm "${WORKDIR}/${PATCHSET}/1710_disable_sse4a.patch'"
 
 	local PATCHES=(
 		# xanmod patches
