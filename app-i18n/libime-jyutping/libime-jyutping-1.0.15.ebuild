@@ -32,6 +32,8 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+CMAKE_QA_COMPAT_SKIP=1
+
 src_configure() {
 	local mycmakeargs=(
 		-DENABLE_ENGINE=$(usex engine)
