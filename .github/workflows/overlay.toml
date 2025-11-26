@@ -1131,9 +1131,9 @@ prefix = "v"
 github_account = "st0nie"
 
 ["media-video/piliplus-bin"]
-source = "github"
-github = "bggRGjQaUbCoE/PiliPlus"
-use_latest_release = true
+source = "aur"
+aur = "piliplus-bin"
+strip_release = true
 github_account = "xysgh"
 
 # TODO: upstream removed linux support
