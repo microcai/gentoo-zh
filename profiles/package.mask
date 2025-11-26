@@ -1,0 +1,4 @@
+# maintainer doesn't take care it over 1 year
+# https://github.com/microcai/gentoo-zh/issues/4310
+# will be removed after 1 month (2025-12-30)
+media-sound/yesplaymusic-bin
