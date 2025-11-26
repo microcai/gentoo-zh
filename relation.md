@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-26 16:51:00 CST)
+(The last generation time: 2025-11-26 19:38:39 CST)
 
 ### Packages
 
@@ -319,9 +319,9 @@
  dev-util/codex-bin                                    | 0.61.0                   |            | https://github.com/openai/codex                                                         | Codex - OpenAI's code generation and completion tool
                                                        | 0.63.0                   |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/fvm                                          | 3.2.1-r1                 |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
-                                                       | 4.0.0                    |            |                                                                                         |
-   dev-lang/dart                                       | 3.9.4                    |  D, RD     | https://dart.dev                                                                        | The Dart SDK
+ dev-util/fvm                                          | 4.0.0                    |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
+                                                       | 4.0.1                    |            |                                                                                         |
+   dev-lang/dart                                       | 3.10.2                   |  D, RD     | https://dart.dev                                                                        | The Dart SDK
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/gemini-cli                                   | 0.17.0                   |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
                                                        | 0.17.1                   |            |                                                                                         |
