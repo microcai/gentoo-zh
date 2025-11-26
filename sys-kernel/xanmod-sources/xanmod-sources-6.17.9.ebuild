@@ -5,7 +5,7 @@ EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
 #Note: to bump xanmod, check K_GENPATCHES_VER in sys-kernel/gentoo-sources
-K_GENPATCHES_VER="9"
+K_GENPATCHES_VER="12"
 
 inherit check-reqs kernel-2
 detect_version
@@ -16,12 +16,12 @@ DESCRIPTION="Full XanMod source, including the Gentoo patchset and other patch o
 HOMEPAGE="https://xanmod.org"
 
 XANMOD_VERSION="1"
-XANMOD_URI="https://download.sourceforge.net/xanmod"
+XANMOD_URI="https://master.dl.sourceforge.net/project/xanmod/releases/main"
 OKV="${OKV}-xanmod"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
 	${GENPATCHES_URI}
-	${XANMOD_URI}/patch-${OKV}${XANMOD_VERSION}.xz
+	https://phoenixnap.dl.sourceforge.net/project/xanmod/releases/main/${PV}-xanmod1/patch-${PV}-xanmod1.xz
 "
 S="${WORKDIR}/linux-${OKV}${XANMOD_VERSION}"
 
@@ -43,6 +43,8 @@ src_prepare() {
 	rm "${S}/tools/testing/selftests/tc-testing/action-ebpf"
 	# delete linux version patches
 	rm "${WORKDIR}"/*${MY_P}*.patch
+	# delete failed patches
+	rm "${WORKDIR}/1710_disable_sse4a.patch"
 
 	local PATCHES=(
 		# xanmod patches
