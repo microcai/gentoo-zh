@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-27 01:18:43 CST)
+(The last generation time: 2025-11-27 01:19:23 CST)
 
 ### Packages
 
@@ -132,8 +132,8 @@
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-unikey                                 | 9999                     |            | https://fcitx-im.org/                                                                   | Unikey (Vietnamese Input Method) engine support for Fcitx
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/libime-jyutping                              | 1.0.13                   |            | https://github.com/fcitx/libime-jyutping                                                | A library make use of libime to implement jyutping input method
-                                                       | 1.0.14                   |            |                                                                                         |
+ app-i18n/libime-jyutping                              | 1.0.14                   |            | https://github.com/fcitx/libime-jyutping                                                | A library make use of libime to implement jyutping input method
+                                                       | 1.0.15                   |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/lunar                                        | 2.2-r5                   |            | https://packages.debian.org/unstable/utils/lunar                                        | Chinese Lunar Calendar conversion utility
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -538,7 +538,7 @@
  net-im/dingtalk                                       | 7.8.15.5101401           |            | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
    dev-libs/libthai                                    | 0.1.28                   |  D, RD     | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
                                                        | 0.1.29                   |            |                                                                                         |
-     dev-libs/libdatrie                                | 0.2.13                   |  D, RD     | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
+     dev-libs/libdatrie                                | 0.2.14                   |  D, RD     | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
    dev-util/execstack                                  | 0_pre20130503            | BD         | https://people.redhat.com/jakub/prelink                                                 | set the executable stack flag of ELF binaries and libraries
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/kotatogram-bin                                 | 1.4.9                    |            | https://thatcat.space/kotatogram                                                        | Telegram Desktop fork with wide messages, local folders, square avatars
