@@ -9,6 +9,7 @@ DESCRIPTION="The Dart SDK"
 HOMEPAGE="https://dart.dev https://github.com/dart-lang/sdk"
 # repack sdk by "abuild snapshot"
 # https://github.com/alpinelinux/aports/blob/master/testing/dart/APKBUILD
+# cookbook: https://lingchengling.feishu.cn/docx/VIkqdR04koXb1exOqmbcSz2DnZe
 SRC_URI="
 	https://minio.dream-universe.org/posts/distfiles/dart-sdk-${PV}.tar.zst -> ${P}.snapshot.tar.zst
 	https://storage.googleapis.com/dart-archive/channels/stable/release/${PV}/sdk/dartsdk-linux-x64-release.zip
@@ -27,7 +28,6 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-3.9.2-fix-gcc-15.patch
 	"${FILESDIR}"/${PN}-3.9.2-fix-toolchain-prefix.patch
 )
 
