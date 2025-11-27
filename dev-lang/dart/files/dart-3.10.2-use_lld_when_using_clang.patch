@@ -1,0 +1,16 @@
+diff --git a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
+index b041a075..ae2e9c31 100644
+--- a/build/config/compiler/BUILD.gn
++++ b/build/config/compiler/BUILD.gn
+@@ -430,6 +430,11 @@ config("compiler") {
+     }
+   }
+ 
++  # Use lld when using clang
++  if (is_clang) {
++    ldflags += [ "-fuse-ld=lld" ]
++  }
++
+   # Assign any flags set for the C compiler to asmflags so that they are sent
+   # to the assembler. The Windows assembler takes different types of flags
+   # so only do so for posix platforms.

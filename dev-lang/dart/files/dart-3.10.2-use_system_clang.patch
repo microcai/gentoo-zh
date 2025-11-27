@@ -1,0 +1,75 @@
+diff --git a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
+index b041a075..60a9a868 100644
+--- a/build/config/compiler/BUILD.gn
++++ b/build/config/compiler/BUILD.gn
+@@ -396,40 +396,6 @@ config("compiler") {
+     }
+   }
+ 
+-  # We want to force a recompile and relink of the world whenever our toolchain
+-  # changes since artifacts from an older version of the toolchain may or may
+-  # not be compatible with newer ones. To achieve this, we insert a synthetic
+-  # define into the compile line.
+-  if (is_clang && (is_linux || is_mac || is_ios) && dart_sysroot != "alpine") {
+-    if (is_linux && host_cpu == "arm64") {
+-      toolchain_stamp_file =
+-          "//buildtools/linux-arm64/clang/.versions/clang.cipd_version"
+-    } else if (is_linux) {
+-      toolchain_stamp_file =
+-          "//buildtools/linux-x64/clang/.versions/clang.cipd_version"
+-    } else if ((is_mac || is_ios) && host_cpu == "arm64") {
+-      toolchain_stamp_file =
+-          "//buildtools/mac-arm64/clang/.versions/clang.cipd_version"
+-    } else if (is_mac || is_ios) {
+-      toolchain_stamp_file =
+-          "//buildtools/mac-x64/clang/.versions/clang.cipd_version"
+-    }
+-    toolchain_cipd_version = read_file(toolchain_stamp_file, "json")
+-    defines = [ "TOOLCHAIN_VERSION=${toolchain_cipd_version.instance_id}" ]
+-
+-    if (is_linux) {
+-      if (current_cpu == "riscv64") {
+-        sysroot_stamp_file =
+-            "//buildtools/sysroot/focal/.versions/sysroot.cipd_version"
+-      } else {
+-        sysroot_stamp_file =
+-            "//buildtools/sysroot/linux/.versions/sysroot.cipd_version"
+-      }
+-      sysroot_cipd_version = read_file(sysroot_stamp_file, "json")
+-      defines += [ "SYSROOT_VERSION=${sysroot_cipd_version.instance_id}" ]
+-    }
+-  }
+-
+   # Assign any flags set for the C compiler to asmflags so that they are sent
+   # to the assembler. The Windows assembler takes different types of flags
+   # so only do so for posix platforms.
+diff --git a/build/toolchain/linux/BUILD.gn b/build/toolchain/linux/BUILD.gn
+index 5ff6db3d..457730a9 100644
+--- a/build/toolchain/linux/BUILD.gn
++++ b/build/toolchain/linux/BUILD.gn
+@@ -15,6 +15,7 @@ declare_args() {
+   arm64_toolchain_prefix = ""
+   riscv32_toolchain_prefix = ""
+   riscv64_toolchain_prefix = ""
++  clang_toolchain_dir = "/usr/bin"
+ }
+ 
+ if (use_rbe) {
+@@ -44,16 +45,7 @@ if (use_rbe) {
+   gcc_compiler_prefix = compiler_prefix
+ }
+ 
+-# Google's clang does not work for alpine, use alpine's system clang
+-if (dart_sysroot == "alpine") {
+-  rebased_clang_dir = "/usr/bin"
+-} else if (host_cpu == "arm64") {
+-  rebased_clang_dir =
+-      rebase_path("//buildtools/linux-arm64/clang/bin", root_build_dir)
+-} else {
+-  rebased_clang_dir =
+-      rebase_path("//buildtools/linux-x64/clang/bin", root_build_dir)
+-}
++rebased_clang_dir = clang_toolchain_dir
+ 
+ template("gcc_toolchain_suite") {
+   toolchain_suite(target_name) {

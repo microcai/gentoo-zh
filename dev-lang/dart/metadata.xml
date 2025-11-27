@@ -8,4 +8,7 @@
 	<upstream>
 		<remote-id type="github">dart-lang/sdk</remote-id>
 	</upstream>
+	<use>
+		<flag name="clang">Use Clang compiler instead of GCC</flag>
+	</use>
 </pkgmetadata>
