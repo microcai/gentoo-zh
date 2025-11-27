@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-27 01:19:23 CST)
+(The last generation time: 2025-11-27 16:47:42 CST)
 
 ### Packages
 
@@ -324,8 +324,8 @@
                                                        | 4.0.1                    |            |                                                                                         |
    dev-lang/dart                                       | 3.10.2                   |  D, RD     | https://dart.dev                                                                        | The Dart SDK
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/gemini-cli                                   | 0.17.0                   |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
-                                                       | 0.17.1                   |            |                                                                                         |
+ dev-util/gemini-cli                                   | 0.17.1                   |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
+                                                       | 0.18.4                   |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                            | 3.1.0.62320              |            | https://www.jetbrains.com/toolbox-app/                                                  | Manage all your JetBrains Projects and Tools
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -797,7 +797,7 @@
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-client/brave-bin                                  | 1.84.141                 |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-client/zen-browser-bin                            | 1.17.8_beta              |            | https://zen-browser.app/                                                                | Experience tranquillity while browsing the web without people tracking you!
+ www-client/zen-browser-bin                            | 1.17.10_beta             |            | https://zen-browser.app/                                                                | Experience tranquillity while browsing the web without people tracking you!
                                                        | 1.17.9_beta              |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                                 | 1.17                     |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
