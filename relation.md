@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-27 18:19:45 CST)
+(The last generation time: 2025-11-27 18:22:23 CST)
 
 ### Packages
 
@@ -239,6 +239,7 @@
  dev-go/staticcheck                                    | 2025.1.1                 |            | https://staticcheck.dev                                                                 | Go static analysis, detecting bugs, performance issues, and much more
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-java/google-java-format                           | 1.30.0                   |            | https://github.com/google/google-java-format                                            | Reformats Java source code to comply with Google Java Style.
+                                                       | 1.32.0                   |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-java/oraclejdk-bin                                | 8.391                    |            | https://www.oracle.com/java                                                             | Oracle's Java SE Development Kit
                                                        | 21.0.1                   |            |                                                                                         |
