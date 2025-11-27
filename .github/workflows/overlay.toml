@@ -850,12 +850,6 @@ host = "gitlab.freedesktop.org"
 gitlab = "libdecor/libdecor"
 use_max_tag = true
 
-["gui-wm/swayfx"]
-source = "github"
-github = "WillPower3309/swayfx"
-use_latest_release = true
-github_account = "yangmame"
-
 ["kde-misc/plasma-applet-netspeed-widget"]
 source = "github"
 github = "dfaust/plasma-applet-netspeed-widget"
