@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-28 01:12:42 CST)
+(The last generation time: 2025-11-28 01:13:27 CST)
 
 ### Packages
 
@@ -390,8 +390,6 @@
  gnome-extra/resources                                 | 1.9.1                    |            | https://github.com/nokyan/resources                                                     | Keep an eye on system resources
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  gui-apps/crystal-dock                                 | 2.11                     |            | https://github.com/dangvd/crystal-dock                                                  | Cool dock (desktop panel) for Linux desktop
--------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- gui-wm/swayfx                                         | 0.3.2                    |            | https://github.com/WillPower3309/swayfx                                                 | SwayFX: Sway, but with eye candy!
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  kde-misc/plasma-applet-netspeed-widget                | 2.0                      |            | https://www.kde-look.org/p/998895/                                                      | Plasma 5 widget that displays the currently used network bandwidth.
                                                        | 3.1                      |            |                                                                                         |
