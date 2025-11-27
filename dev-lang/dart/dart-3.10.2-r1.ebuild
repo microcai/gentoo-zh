@@ -3,7 +3,10 @@
 
 EAPI=8
 
-inherit unpacker ninja-utils toolchain-funcs
+LLVM_COMPAT=( {20..21} )
+LLVM_OPTIONAL=1
+
+inherit unpacker ninja-utils llvm-r1 toolchain-funcs
 
 DESCRIPTION="The Dart SDK"
 HOMEPAGE="https://dart.dev https://github.com/dart-lang/sdk"
@@ -17,25 +20,38 @@ SRC_URI="
 "
 
 S="${WORKDIR}/dart-sdk-${PV}"
+
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
+
+IUSE="clang"
+REQUIRED_USE="clang? ( ${LLVM_REQUIRED_USE} )"
 
 BDEPEND="
 	app-arch/unzip
 	dev-build/gn
 	dev-build/ninja
+	clang? (
+		$(llvm_gen_dep '
+			llvm-core/clang:${LLVM_SLOT}
+			llvm-core/lld:${LLVM_SLOT}
+		')
+	)
 "
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-3.9.2-fix-toolchain-prefix.patch
+	"${FILESDIR}/${PN}-3.10.2-fix_toolchain_prefix.patch"
+	"${FILESDIR}/${PN}-3.10.2-use_system_clang.patch"
+	"${FILESDIR}/${PN}-3.10.2-use_lld_when_using_clang.patch"
+	"${FILESDIR}/${PN}-3.10.2-custom_flags.patch"
 )
 
 src_prepare() {
 	# https://github.com/dart-lang/sdk/issues/52295
 	# needed by build.ninja.stamp
 	mkdir -pv .git/logs
-	echo '' > .git/logs/HEAD
+	touch .git/logs/HEAD
 
 	ln -sfv "${WORKDIR}"/dart-sdk tools/sdks/dart-sdk
 
@@ -53,11 +69,12 @@ src_prepare() {
 src_configure() {
 	local mygnargs=()
 	mygnargs+=( 'target_cpu="x64"' )
-	mygnargs+=( 'is_clang=false' )
+	mygnargs+=( "is_clang=$(usex clang true false)" )
 	mygnargs+=( 'is_debug=false' )
 	mygnargs+=( 'is_release=true' )
 	mygnargs+=( 'dart_platform_sdk=false' )
 	mygnargs+=( 'verify_sdk_hash=false' )
+	use clang && mygnargs+=( "clang_toolchain_dir=\"$(get_llvm_prefix)/bin\"" )
 	gn gen --args="${mygnargs[*]}" out/Release
 }
 
