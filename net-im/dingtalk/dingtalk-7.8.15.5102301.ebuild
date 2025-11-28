@@ -19,6 +19,8 @@ KEYWORDS="-* ~amd64"
 RESTRICT="strip mirror bindist"
 
 RDEPEND="
+	dev-libs/nspr
+	dev-libs/nss
 	dev-libs/wayland
 	dev-libs/libthai
 	dev-qt/qtgui
@@ -28,7 +30,7 @@ RDEPEND="
 	net-misc/curl
 	net-nds/openldap
 	virtual/libc
-	sys-libs/zlib
+	virtual/zlib
 	sys-process/procps
 	x11-libs/gtk+:2
 	x11-libs/gtk+:3
