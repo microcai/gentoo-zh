@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-28 19:56:18 CST)
+(The last generation time: 2025-11-29 17:06:50 CST)
 
 ### Packages
 
@@ -532,7 +532,7 @@
                                                        | 5.1.45                   |            |                                                                                         |
      app-emulation/deepin-wine-plugin                  | 5.1.13-r1                |  D, RD     | https://www.deepin.org                                                                  | Deepin Wine plugin
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/dingtalk                                       | 7.8.15.5101401           |            | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
+ net-im/dingtalk                                       | 7.8.15.5102301           |            | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
    dev-libs/libthai                                    | 0.1.28                   |  D, RD     | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
                                                        | 0.1.29                   |            |                                                                                         |
      dev-libs/libdatrie                                | 0.2.14                   |  D, RD     | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
