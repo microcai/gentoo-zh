@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-29 18:17:27 CST)
+(The last generation time: 2025-11-29 20:17:08 CST)
 
 ### Packages
 
@@ -19,6 +19,7 @@
    acct-group/onepassword                              | 0-r1                     |  D, RD     |                                                                                         | Password manager and secure wallet
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/chezmoi                                     | 2.66.2                   |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
+                                                       | 2.67.1                   |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/chezmoi-bin                                 | 2.66.1                   |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -49,6 +50,7 @@
  app-dicts/fcitx-pinyin-zhwiki                         | 0.2.5.20250731           |            | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/antigravity                               | 1.11.5_p5234145629700096 |            | https://antigravity.google/                                                             | Google Antigravity - AI-powered code editor
+                                                       | 1.11.9_p4787439284912128 |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/appflowy-bin                              | 0.10.4                   |            | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -275,6 +277,7 @@
  dev-python/frozendict                                 | 2.4.6                    |            | https://github.com/Marco-Sulla/python-frozendict                                        | A simple immutable dictionary for Python
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/fusesoc                                    | 2.4.4                    |            | https://github.com/olofk/fusesoc/                                                       | Award-winnning package manager and build abstraction tool for HDL code.
+                                                       | 2.4.5                    |            |                                                                                         |
    dev-python/edalize                                  | 0.6.2                    | RD         | https://github.com/olofk/edalize/                                                       | Library for interfacing EDA tools.
    dev-python/simplesat                                | 0.9.2                    | RD         | https://github.com/enthought/sat-solver                                                 | Prototype for SAT-based dependency handling.
      dev-python/okonomiyaki                            | 3.0.0                    | RD         | https://github.com/enthought/okonomiyaki                                                | Self-contained library to deal with metadata in egg and runtime archives.
@@ -794,7 +797,7 @@
  www-client/brave-bin                                  | 1.84.141                 |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-client/zen-browser-bin                            | 1.17.10_beta             |            | https://zen-browser.app/                                                                | Experience tranquillity while browsing the web without people tracking you!
-                                                       | 1.17.9_beta              |            |                                                                                         |
+                                                       | 1.17.11_beta             |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                                 | 1.17                     |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
