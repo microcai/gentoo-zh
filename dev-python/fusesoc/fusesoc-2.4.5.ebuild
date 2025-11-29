@@ -8,6 +8,10 @@ PYTHON_COMPAT=( python3_{12..14} )
 
 inherit distutils-r1 pypi
 
+PATCHES=(
+	"${FILESDIR}/${P}-remove-deprecated-license-classifier.patch"
+)
+
 DESCRIPTION="
 Award-winnning package manager and build abstraction tool for HDL code.
 "
