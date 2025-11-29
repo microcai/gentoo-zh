@@ -1,0 +1,14 @@
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -19,10 +19,11 @@
+   "Development Status :: 5 - Production/Stable",
+   "Topic :: Utilities",
+   "Topic :: Software Development :: Build Tools",
+-  "License :: OSI Approved :: BSD License",
+ ]
+ 
++license = "BSD-2-Clause"
++
+ dynamic = ["version"]
+ 
+ dependencies = [
