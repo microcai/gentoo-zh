@@ -25,6 +25,8 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 
+PATCHES=( "${FILESDIR}/${P}-fix-segfault-on-start.patch" )
+
 src_prepare() {
 	cp "${FILESDIR}/.version" . || die
 	cmake_src_prepare
