@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-11-30 20:23:53 CST)
+(The last generation time: 2025-11-30 23:29:45 CST)
 
 ### Packages
 
@@ -197,6 +197,8 @@
  app-pda/ipadcharge                                    | 9999                     |            | https://github.com/mkorenkov/ipad_charge                                                | Enables USB charging for Apple devices.
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-shells/blesh                                      | 9999                     |            | https://github.com/akinomyoga/ble.sh                                                    | A line editor written in pure Bash with enhanced features
+-------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-shells/gentoo-fish-completion                     | 0.0.1                    |            | https://github.com/douglarek/gentoo-fish-completion                                     | Gentoo specific fish completion support (ported from gentoo-zsh-completions)
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-shells/oh-my-bash                                 | 9999                     |            | https://ohmybash.github.io                                                              | An open source, community-driven framework for managing your bash configuration
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
