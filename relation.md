@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-01 13:50:08 CST)
+(The last generation time: 2025-12-01 14:37:31 CST)
 
 ### Packages
 
@@ -840,7 +840,7 @@
  x11-themes/nordzy-cursors                             | 0.5.0                    |            | https://github.com/alvatip/Nordzy-cursors                                               | Cursor theme using the Nord color palette and based on Vimix and cz-Viator
                                                        | 2.4.0                    |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- x11-themes/nordzy-icon                                | 1.5                      |            | https://github.com/alvatip/Nordzy-icon                                                  | A free and open source icon theme for Linux desktops using the Nord color palette
+ x11-themes/nordzy-icon                                | 1.5                      |            | https://github.com/alvatip/Nordzy-icon                                                  | A free and open source icon theme for Linux desktops
                                                        | 1.8.7                    |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/ori-fcitx5                                 | 9999                     |            | https://github.com/Reverier-Xu/Ori-fcitx5                                               | Ori theme for Fcitx5
