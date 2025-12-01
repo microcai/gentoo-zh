@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-01 09:49:50 CST)
+(The last generation time: 2025-12-01 10:43:30 CST)
 
 ### Packages
 
@@ -318,7 +318,7 @@
  dev-util/asdf-vm                                      | 0.15.0                   |            | https://github.com/asdf-vm/asdf                                                         | Manage all your runtime versions with one tool
                                                        | 0.18.0                   |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/binsider                                     | 0.2.1                    |            | https://binsider.dev                                                                    | Analyze ELF binaries like a boss
+ dev-util/binsider                                     | 0.3.0                    |            | https://binsider.dev                                                                    | Analyze ELF binaries like a boss
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/codex-bin                                    | 0.61.0                   |            | https://github.com/openai/codex                                                         | Codex - OpenAI's code generation and completion tool
                                                        | 0.63.0                   |            |                                                                                         |
