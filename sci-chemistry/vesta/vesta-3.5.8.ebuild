@@ -9,6 +9,8 @@ DESCRIPTION="Visualization for Electronic and STructural Analysis"
 HOMEPAGE="https://jp-minerals.org/vesta"
 SRC_URI="https://jp-minerals.org/vesta/archives/${PV}/VESTA-gtk3.tar.bz2 -> ${PN}-${PV}.tar.bz2"
 
+S="${WORKDIR}/VESTA-gtk3"
+
 LICENSE="VESTA"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -22,8 +24,6 @@ RDEPEND="
 	x11-libs/libXtst
 	virtual/jdk
 	${DEPEND}"
-
-S="${WORKDIR}/VESTA-gtk3"
 
 QA_PREBUILT="*"
 

@@ -17,10 +17,6 @@ detect_version
 DESCRIPTION="XanMod RT sources and CJKTTY options."
 HOMEPAGE="https://xanmod.org
 		https://github.com/zhmars/cjktty-patches"
-LICENSE+=" CDDL"
-KEYWORDS="~amd64"
-IUSE="+cjk"
-SLOT="0"
 XANMOD_VERSION="1"
 RT_VERSION="14"
 XANMOD_RT_URI="https://github.com/xanmod/linux/releases/download/"
@@ -32,6 +28,10 @@ SRC_URI="
 	${XANMOD_RT_URI}/${OKV}/patch-${OKV}.xz
 	${CJKTTY_URI}/cjktty-${KV_MAJOR}.${KV_MINOR}.patch
 "
+LICENSE+=" CDDL"
+SLOT="0"
+KEYWORDS="~amd64"
+IUSE="+cjk"
 
 src_unpack() {
 	UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${OKV}.xz"

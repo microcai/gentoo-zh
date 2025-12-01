@@ -16,7 +16,8 @@ SLOT="0"
 RDEPEND="sys-libs/ncurses"
 
 src_prepare() {
-	# remove the CFLAGS and LDFLAGS defination in Makefile, use default option in make.conf as the binary will be stripped automatically
+	# remove the CFLAGS and LDFLAGS defination in Makefile,
+	# use default option in make.conf as the binary will be stripped automatically
 	sed -i -e '/CFLAGS[[:space:]]*=/d' -e '/LDFLAGS[[:space:]]*=/d' Makefile
 }
 

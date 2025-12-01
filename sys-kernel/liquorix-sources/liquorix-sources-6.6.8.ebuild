@@ -22,9 +22,6 @@ K_SECURITY_UNSUPPORTED="1"
 # already included in liquorix-sources
 K_WANT_GENPATCHES="extras"
 
-# To use CJKTTY, Please enable this USE
-IUSE="+cjk"
-
 DEPEND="
 	app-arch/cpio
 	dev-util/pahole"
@@ -41,9 +38,11 @@ SRC_URI="
 	https://github.com/zen-kernel/zen-kernel/releases/download/v${PV}-lqx1/v${PV}-lqx1.patch.xz
 	https://github.com/zhmars/cjktty-patches/raw/master/v${KV_MAJOR}.x/cjktty-${KV_MAJOR}.${KV_MINOR}.patch"
 
-KEYWORDS="~amd64"
-
 S="${WORKDIR}/linux-${PV}-liquorix"
+
+KEYWORDS="~amd64"
+# To use CJKTTY, Please enable this USE
+IUSE="+cjk"
 
 K_EXTRAEINFO="For more info on liquorix-kernel and details on how to report problems, see: ${HOMEPAGE}."
 

@@ -9,10 +9,10 @@ DESCRIPTION="A dynamic Linux tiling window manager for Xorg"
 HOMEPAGE="https://github.com/hyprwm/Hypr"
 SRC_URI="https://github.com/hyprwm/Hypr/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 
+S="${WORKDIR}/Hypr-${PV}"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
-S="${WORKDIR}/Hypr-${PV}"
 
 DEPEND="x11-libs/cairo
 		dev-build/ninja

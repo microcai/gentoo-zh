@@ -7,12 +7,12 @@ DESCRIPTION="Dark Gtk3.20+ theme created using the awesome Nord color pallete"
 HOMEPAGE="https://github.com/EliverLara/Nordic"
 SRC_URI="https://github.com/EliverLara/Nordic/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
+S="${WORKDIR}/Nordic-${PV}"
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+gtk2 +gtk3 xfce mate gnome-shell cinnamon"
-
-S="${WORKDIR}/Nordic-${PV}"
 
 src_configure() { :; }
 

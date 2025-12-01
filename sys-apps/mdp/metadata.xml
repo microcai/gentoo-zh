@@ -5,9 +5,6 @@
 		<name>loong0</name>
 		<email>longlene@gmail.com</email>
 	</maintainer>
-	<longdescription>
-		mdp - A command-line based markdown presentation tool
-	</longdescription>
 	<upstream>
 		<remote-id type="github">visit1985/mdp</remote-id>
 	</upstream>
