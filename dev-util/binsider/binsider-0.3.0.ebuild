@@ -7,7 +7,7 @@ EAPI=8
 
 CRATES="
 "
-
+RUST_MIN_VER="1.88.0"
 inherit cargo
 
 DESCRIPTION="Analyze ELF binaries like a boss"
