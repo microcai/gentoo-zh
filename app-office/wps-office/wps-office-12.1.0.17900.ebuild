@@ -51,7 +51,7 @@ RDEPEND="
 	sys-apps/tcp-wrappers
 	sys-apps/util-linux
 	sys-libs/libcap
-	sys-libs/zlib:0
+	virtual/zlib:0
 	virtual/glu
 	x11-libs/gtk+:2
 	x11-libs/libICE

@@ -19,7 +19,7 @@ BDEPEND="${PYTHON_DEPS}
 		 media-libs/libsdl2
 		 media-libs/freetype
 		 media-libs/fontconfig
-		 sys-libs/zlib
+		 virtual/zlib
 		 media-libs/libjpeg-turbo
 		 media-libs/libpng
 		 net-misc/curl

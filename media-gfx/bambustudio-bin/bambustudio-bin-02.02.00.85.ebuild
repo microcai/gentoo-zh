@@ -34,7 +34,7 @@ RDEPEND="
 	x11-libs/libxkbcommon
 	>=x11-libs/pixman-0.30
 	x11-libs/wxGTK:${WX_GTK_VER}=[X,opengl]
-	sys-libs/zlib
+	virtual/zlib
 "
 DEPEND="${RDEPEND}"
 BDEPEND="

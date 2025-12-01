@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND="sys-libs/zlib
+RDEPEND="virtual/zlib
 	app-arch/lzma
 	dev-libs/icu
 	app-arch/zstd

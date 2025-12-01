@@ -44,7 +44,7 @@ RDEPEND="
 	>=dev-libs/libxml2-2.9.0[abi_x86_32(-)]
 	|| ( dev-libs/ocl-icd[abi_x86_32(-)]  dev-libs/opencl-icd-loader[abi_x86_32(-)] )
 	app-emulation/deepin-udis86
-	>=sys-libs/zlib-1.1.4[abi_x86_32(-)]
+	>=virtual/zlib-1.1.4[abi_x86_32(-)]
 	|| ( sys-libs/ncurses[abi_x86_32(-)] sys-libs/ncurses-compat:5[abi_x86_32(-)] )
 	media-libs/fontconfig[abi_x86_32(-)]
 	media-libs/freetype:2[abi_x86_32(-)]

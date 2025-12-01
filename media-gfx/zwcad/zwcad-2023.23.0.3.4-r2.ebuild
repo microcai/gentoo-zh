@@ -29,7 +29,7 @@ RDEPEND="
 	media-libs/libglvnd
 	media-libs/tiff-compat:4
 	sys-apps/util-linux
-	sys-libs/zlib
+	virtual/zlib
 	virtual/libcrypt:=
 "
 

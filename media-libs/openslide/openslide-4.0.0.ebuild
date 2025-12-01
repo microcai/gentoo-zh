@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~loong"
 
 RDEPEND="
-	sys-libs/zlib
+	virtual/zlib
 	media-libs/libjpeg-turbo
 	media-libs/libpng
 	media-libs/openjpeg:2

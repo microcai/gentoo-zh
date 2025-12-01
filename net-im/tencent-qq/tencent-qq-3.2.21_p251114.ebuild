@@ -53,7 +53,7 @@ RDEPEND="
 		dev-libs/glib
 		media-libs/vips
 	)
-	system-zlib? ( sys-libs/zlib )
+	system-zlib? ( virtual/zlib )
 	bwrap? (
 		sys-apps/bubblewrap
 		x11-misc/snapd-xdg-open

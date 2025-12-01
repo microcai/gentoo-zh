@@ -37,7 +37,7 @@ PDEPEND="
 
 RDEPEND="
 	net-libs/mbedtls
-	sys-libs/zlib
+	virtual/zlib
 	net-dns/c-ares
 	net-libs/nghttp2
 	dev-libs/jsoncpp
