@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-01 16:56:52 CST)
+(The last generation time: 2025-12-01 22:27:45 CST)
 
 ### Packages
 
@@ -199,7 +199,7 @@
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-shells/blesh                                      | 9999                     |            | https://github.com/akinomyoga/ble.sh                                                    | A line editor written in pure Bash with enhanced features
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-shells/gentoo-fish-completion                     | 0.0.1                    |            | https://github.com/douglarek/gentoo-fish-completion                                     | Gentoo specific fish completion support (ported from gentoo-zsh-completions)
+ app-shells/gentoo-fish-completion                     | 0.0.2                    |            | https://github.com/douglarek/gentoo-fish-completion                                     | Gentoo specific fish completion support (ported from gentoo-zsh-completions)
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-shells/oh-my-bash                                 | 9999                     |            | https://ohmybash.github.io                                                              | An open source, community-driven framework for managing your bash configuration
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
