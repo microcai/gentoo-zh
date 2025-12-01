@@ -9,11 +9,11 @@ DESCRIPTION="Filesystem Tools for SpadFS"
 HOMEPAGE="http://www.jikos.cz/~mikulas/spadfs/"
 SRC_URI="http://www.jikos.cz/~mikulas/spadfs/download/spadfs-${PV}.tar.gz"
 
+S="${WORKDIR}/spadfs-${PV}"
 LICENSE="all-rights-reserved"
-RESTRICT="bindist mirror"
 SLOT="0"
 KEYWORDS="~amd64"
-S="${WORKDIR}/spadfs-${PV}"
+RESTRICT="bindist mirror"
 
 src_compile() {
 	emake SPADFS_CC="$(tc-getCC)" mkspadfs spadfsck

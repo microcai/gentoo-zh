@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-LICENSE=BSD
 DESCRIPTION="Linux Wifi Hotspot"
 HOMEPAGE="https://github.com/lakinduakash/linux-wifi-hotspot"
-SLOT="0"
 # inherit toolchain-funcs eutils
+LICENSE=BSD
+SLOT="0"
 
 DEPEND="
 	media-gfx/qrencode

@@ -10,11 +10,11 @@ HOMEPAGE="https://github.com/snapcore/snapd-xdg-open"
 EGIT_COMMIT="6fed3570066ea93598e8091bf749352a02d482ad"
 SRC_URI="https://github.com/snapcore/snapd-xdg-open/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 
+S="${WORKDIR}/${PN}-${EGIT_COMMIT}"
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~loong"
-
-S="${WORKDIR}/${PN}-${EGIT_COMMIT}"
 
 src_prepare() {
 	default

@@ -15,6 +15,7 @@ HOMEPAGE="https://wezfurlong.org/wezterm"
 
 SRC_URI="https://github.com/wez/wezterm/releases/download/${MY_PV}/${MY_PN}-${MY_PV}.Ubuntu20.04.tar.xz"
 
+S="${WORKDIR}/${MY_PN}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="-* ~amd64"
@@ -46,7 +47,6 @@ RDEPEND="
 "
 
 QA_PREBUILT="*"
-S="${WORKDIR}/${MY_PN}"
 
 src_install() {
 	insinto /
