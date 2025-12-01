@@ -21,7 +21,7 @@ SLOT="0"
 
 RDEPEND="
 	sys-apps/util-linux
-	sys-libs/zlib
+	virtual/zlib
 "
 
 DEPEND="${RDEPEND}"

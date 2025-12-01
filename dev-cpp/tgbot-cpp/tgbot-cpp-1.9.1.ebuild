@@ -16,7 +16,7 @@ IUSE="+shared-libs doc test"
 RESTRICT="!test? ( test )"
 
 DEPEND="
-	sys-libs/zlib
+	virtual/zlib
 	dev-libs/openssl:=
 	>=net-misc/curl-7.56.0
 	>=dev-libs/boost-1.59.0"

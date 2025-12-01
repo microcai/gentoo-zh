@@ -41,7 +41,7 @@ BLOB_RDEPEND="
 	media-libs/mesa
 	media-libs/tiff-compat:4
 	sys-apps/dbus
-	sys-libs/zlib
+	virtual/zlib
 	x11-libs/cairo
 	x11-libs/libdrm
 	x11-libs/libX11

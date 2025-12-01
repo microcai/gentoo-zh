@@ -49,7 +49,7 @@ DEPEND="
 	!ffmpeg? ( dev-qt/qtmultimedia:6[gstreamer] )
 	media-libs/libvorbis
 	tts? ( dev-qt/qtspeech:6 )
-	sys-libs/zlib
+	virtual/zlib
 	systemfmt? ( dev-libs/libfmt )
 	systemtoml? ( dev-cpp/tomlplusplus )
 	virtual/opengl

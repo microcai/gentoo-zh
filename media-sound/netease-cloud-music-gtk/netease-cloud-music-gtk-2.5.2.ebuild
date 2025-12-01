@@ -44,7 +44,7 @@ DEPEND="
 	media-plugins/gst-plugins-libav
 	media-plugins/gst-plugins-soup
 	sys-apps/dbus
-	sys-libs/zlib
+	virtual/zlib
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
 	gui-libs/gtk:4

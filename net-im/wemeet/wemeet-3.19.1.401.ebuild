@@ -39,7 +39,7 @@ RDEPEND="
 	media-libs/libglvnd
 	media-libs/libpulse
 	sys-apps/dbus
-	sys-libs/zlib
+	virtual/zlib
 	virtual/udev
 	x11-libs/libdrm
 	x11-libs/libICE

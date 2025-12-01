@@ -30,7 +30,7 @@ RDEPEND="
 	net-print/cups
 	sys-apps/dbus
 	sys-apps/util-linux
-	sys-libs/zlib
+	virtual/zlib
 	x11-libs/gtk+:3
 	x11-libs/libICE
 	x11-libs/libSM
