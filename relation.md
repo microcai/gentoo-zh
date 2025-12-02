@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-02 00:17:22 CST)
+(The last generation time: 2025-12-02 09:04:39 CST)
 
 ### Packages
 
@@ -285,6 +285,7 @@
      dev-python/okonomiyaki                            | 3.0.0                    | RD         | https://github.com/enthought/okonomiyaki                                                | Self-contained library to deal with metadata in egg and runtime archives.
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/iptcinfo3                                  | 2.0.3_p20230801          |            | https://github.com/james-see/iptcinfo3                                                  | To read/write image metadata
+                                                       | 2.2.0                    |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/menuinst                                   | 2.2.0                    |            | https://github.com/conda/menuinst                                                       | Cross platform menu item installation
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
