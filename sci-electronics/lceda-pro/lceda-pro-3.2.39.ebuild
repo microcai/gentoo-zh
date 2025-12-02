@@ -68,5 +68,5 @@ src_install(){
 	doins -r .
 	fperms 0755 /opt/lceda-pro/lceda-pro
 	fperms 0755 /opt/lceda-pro/chrome_crashpad_handler
-	newmenu lceda-pro.dkt LCEDA-pro.desktop
+	domenu ${FILESDIR}/LCEDA_pro.desktop
 }
