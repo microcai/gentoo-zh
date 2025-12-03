@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-03 18:44:04 CST)
+(The last generation time: 2025-12-03 18:52:08 CST)
 
 ### Packages
 
@@ -64,7 +64,7 @@
  app-editors/mu-editor                                 | 1.2.2_alpha1_p1          |            | https://github.com/mu-editor/mu                                                         | A simple Python editor for beginner programmers
    dev-python/adafruit-board-toolkit                   | 1.1.2                    | RD         | https://github.com/adafruit/Adafruit_Board_Toolkit/                                     | CircuitPython board identification and information
    dev-python/nudatus                                  | 0.0.5                    | RD         | https://github.com/ZanderBrown/nudatus                                                  | CircuitPython board identification and information
-   dev-python/pyqt6-charts                             | 6.9.0                    | RD         | https://www.riverbankcomputing.com/software/pyqtchart/                                  | Python bindings for QtChart
+   dev-python/pyqt6-charts                             | 6.10.0                   | RD         | https://www.riverbankcomputing.com/software/pyqtchart/                                  | Python bindings for QtChart
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/neovim-bin                                | 0.11.4                   |            | https://neovim.io                                                                       | Vim-fork focused on extensibility and agility
                                                        | 9999                     |            |                                                                                         |
