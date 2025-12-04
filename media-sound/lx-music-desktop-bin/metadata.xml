@@ -5,6 +5,10 @@
 		<email>haohedemeizhi@gmail.com</email>
 		<name>xiaobai</name>
 	</maintainer>
+	<maintainer type="person">
+		<email>xysgh2764@qq.com</email>
+		<name>Xysgh</name>
+	</maintainer>
 	<upstream>
 		<remote-id type="github">lyswhut/lx-music-desktop</remote-id>
 		<bugs-to>https://github.com/lyswhut/lx-music-desktop/issues</bugs-to>
