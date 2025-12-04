@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=Development;Electronics;
 Comment=免费、强大、易用的在线电路设计软件
-Exec=/opt/lceda-pro/lceda-pro --ozone-platform-hint=auto --enable-wayland-ime %f
+Exec=/opt/lceda-pro/lceda-pro --ozone-platform-hint=auto --enable-wayland-ime --enable-features=Vulkan,DefaultANGLEVulkan,VulkanFromANGLE --enable-unsafe-webgpu %f
 Keywords=PCB;LCEDA;嘉立创EDA;LC;EDA
 GenericName=嘉立创EDA(专业版)
 Icon=/opt/lceda-pro/icon/icon_128x128.png
