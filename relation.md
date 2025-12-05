@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-05 10:42:38 CST)
+(The last generation time: 2025-12-05 11:05:36 CST)
 
 ### Packages
 
@@ -605,7 +605,7 @@
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/geo                                          | 1.1                      |            | https://github.com/MetaCubeX/geo/                                                       | An easy way to manage all your Geo resources
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/hoppscotch-bin                               | 25.11.0.0                |            | https://hoppscotch.io                                                                   | Open source API development ecosystem
+ net-misc/hoppscotch-bin                               | 25.11.1.0                |            | https://hoppscotch.io                                                                   | Open source API development ecosystem
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/localsend-bin                                | 1.17.0                   |            | https://localsend.org                                                                   | An open-source cross-platform alternative to AirDrop
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -625,7 +625,7 @@
  net-misc/remmina-plugin-rustdesk                      | 1.0.0.0-r1               |            | http://www.muflone.com/remmina-plugin-rustdesk/                                         | A protocol plugin for Remmina to launch a Rustdesk connection.
    net-misc/rustdesk                                   | 1.4.4                    |  D, RD     | https://rustdesk.com/                                                                   | An open-source remote desktop, and alternative to TeamViewer
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/reqable                                      | 3.0.28                   |            | https://reqable.com/                                                                    | Reqable = Fiddler + Charles + Postman, 让API调试更快 🚀 更简单 👌
+ net-misc/reqable                                      | 3.0.29                   |            | https://reqable.com/                                                                    | Reqable = Fiddler + Charles + Postman, 让API调试更快 🚀 更简单 👌
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/todesk                                       | 4.1.0                    |            | https://www.todesk.com/                                                                 | ToDesk不一样的远控体验，轻松打破物理限制，随时随地高效使用所有计算终端
                                                        | 4.7.2.0-r1               |            |                                                                                         |
