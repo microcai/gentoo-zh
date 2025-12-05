@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-05 07:32:43 CST)
+(The last generation time: 2025-12-05 09:13:04 CST)
 
 ### Packages
 
@@ -326,8 +326,7 @@
  dev-util/codex-bin                                    | 0.61.0                   |            | https://github.com/openai/codex                                                         | Codex - OpenAI's code generation and completion tool
                                                        | 0.63.0                   |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/fvm                                          | 4.0.0                    |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
-                                                       | 4.0.1                    |            |                                                                                         |
+ dev-util/fvm                                          | 4.0.2                    |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
    dev-lang/dart                                       | 3.10.2-r1                |  D, RD     | https://dart.dev                                                                        | The Dart SDK
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/gemini-cli                                   | 0.17.1                   |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
