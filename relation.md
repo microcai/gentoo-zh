@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-05 11:05:36 CST)
+(The last generation time: 2025-12-05 12:33:42 CST)
 
 ### Packages
 
@@ -401,6 +401,8 @@
  kde-misc/plasma-applet-netspeed-widget                | 2.0                      |            | https://www.kde-look.org/p/998895/                                                      | Plasma 5 widget that displays the currently used network bandwidth.
                                                        | 3.1                      |            |                                                                                         |
                                                        | 9999                     |            |                                                                                         |
+-------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ kde-misc/plasma-ions-china                            | 9999                     |            | https://github.com/arenekosreal/plasma-ions-china                                       | A collection of plasma weather ions for Chinese users
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  mate-base/caja-bin                                    | 1.28.0                   |            | https://wiki.mate-desktop.org/mate-desktop/applications/caja                            | GUI file manager, fork of GNOME Files (Nautilus); supports SSH, FTP, WebDav
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
