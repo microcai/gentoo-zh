@@ -5,9 +5,9 @@ EAPI=8
 
 inherit desktop xdg
 
-_PN="${PN%-tachyon-bin}"
+_PN="${PN%-bin}"
 
-DESCRIPTION="A free-to-win rhythm game. Rhythm is just a click away! (tachyon releases)"
+DESCRIPTION="A free-to-win rhythm game. Rhythm is just a click away!"
 HOMEPAGE="https://osu.ppy.sh/ https://github.com/ppy/osu"
 
 SRC_URI="
@@ -19,8 +19,7 @@ SRC_URI="
 S="${WORKDIR}"
 
 LICENSE="MIT CC-BY-NC-4.0"
-SLOT="0"
-KEYWORDS="-* ~amd64"
+SLOT="0/tachyon"
 
 IUSE="complete-icon gamemode pipewire sdl2 system-ffmpeg +system-sdl"
 
@@ -28,7 +27,6 @@ RESTRICT="mirror"
 
 DEPEND="
 	!games-arcade/osu-lazer
-	!games-arcade/osu-lazer-bin
 	x11-themes/hicolor-icon-theme
 "
 RDEPEND="

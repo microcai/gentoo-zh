@@ -19,7 +19,7 @@ SRC_URI="
 S="${WORKDIR}"
 
 LICENSE="MIT CC-BY-NC-4.0"
-SLOT="0"
+SLOT="0/stable"
 KEYWORDS="-* ~amd64"
 
 IUSE="complete-icon gamemode pipewire sdl2 system-ffmpeg +system-sdl"
@@ -28,7 +28,6 @@ RESTRICT="mirror"
 
 DEPEND="
 	!games-arcade/osu-lazer
-	!games-arcade/osu-lazer-tachyon-bin
 	x11-themes/hicolor-icon-theme
 "
 RDEPEND="
