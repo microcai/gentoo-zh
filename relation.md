@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-05 22:09:21 CST)
+(The last generation time: 2025-12-06 12:29:17 CST)
 
 ### Packages
 
@@ -328,7 +328,7 @@
  dev-util/codex-bin                                    | 0.61.0                   |            | https://github.com/openai/codex                                                         | Codex - OpenAI's code generation and completion tool
                                                        | 0.63.0                   |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/fvm                                          | 4.0.2                    |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
+ dev-util/fvm                                          | 4.0.3                    |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
    dev-lang/dart                                       | 3.10.2-r1                |  D, RD     | https://dart.dev                                                                        | The Dart SDK
                                                        | 3.10.3                   |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
