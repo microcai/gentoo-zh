@@ -24,6 +24,7 @@ DEPEND="
 	dev-libs/openssl:0/3
 	dev-libs/keybinder:3
 	media-video/mpv:0[libmpv]
+	media-libs/gst-plugins-base
 	media-libs/harfbuzz
 	media-libs/libepoxy
 	x11-libs/cairo
