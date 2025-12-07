@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 
 RDEPEND="dev-vcs/git"
 RDEPEND+=" !app-admin/chezmoi-bin"
-BDEPEND=">=dev-lang/go-1.25.4"
+BDEPEND=">=dev-lang/go-1.25.5"
 
 src_compile() {
 	local ldflags="\
