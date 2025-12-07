@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-07 15:35:17 CST)
+(The last generation time: 2025-12-07 15:49:17 CST)
 
 ### Packages
 
@@ -52,7 +52,7 @@
  app-editors/antigravity                               | 1.11.5_p5234145629700096 |            | https://antigravity.google/                                                             | Google Antigravity - AI-powered code editor
                                                        | 1.11.9_p4787439284912128 |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/appflowy-bin                              | 0.10.4                   |            | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
+ app-editors/appflowy-bin                              | 0.10.6                   |            | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/cursor                                    | 2.1.42                   |            | https://www.cursor.com/                                                                 | Cursor App - AI-first coding environment
                                                        | 2.1.46                   |            |                                                                                         |
@@ -242,7 +242,7 @@
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-go/staticcheck                                    | 2025.1.1                 |            | https://staticcheck.dev                                                                 | Go static analysis, detecting bugs, performance issues, and much more
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-java/google-java-format                           | 1.32.0                   |            | https://github.com/google/google-java-format                                            | Reformats Java source code to comply with Google Java Style.
+ dev-java/google-java-format                           | 1.33.0                   |            | https://github.com/google/google-java-format                                            | Reformats Java source code to comply with Google Java Style.
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-java/oraclejdk-bin                                | 8.391                    |            | https://www.oracle.com/java                                                             | Oracle's Java SE Development Kit
                                                        | 21.0.1                   |            |                                                                                         |
@@ -305,7 +305,7 @@
  dev-python/pywikibot                                  | 10.3.0                   |            | https://www.mediawiki.org/wiki/Manual:Pywikibot                                         | To interact with MediaWiki API (for example Wikipedia, Wikimedia Commons)
    dev-python/mwparserfromhell                         | 0.7.2                    | RD         | https://github.com/earwig/mwparserfromhell                                              | A Python parser for MediaWiki wikicode
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/uv-bin                                     | 0.9.15                   |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
+ dev-python/uv-bin                                     | 0.9.16                   |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-ruby/filelock                                     | 1.1.1                    |            | https://github.com/sheerun/filelock                                                     | Heavily tested, but simple filelocking solution using flock command
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
