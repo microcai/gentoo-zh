@@ -19,6 +19,7 @@ SRC_URI+=" ${CARGO_CRATE_URIS}"
 S="${WORKDIR}/mdx_util-068d57bd013ca343ca332c42fada96ee0453e391"
 
 LICENSE="AGPL-3"
+# Dependent crate licenses
 LICENSE+="
 	Apache-2.0 BSD Boost-1.0 GPL-2 ISC MIT MPL-2.0 Unicode-3.0 ZLIB
 	BZIP2
