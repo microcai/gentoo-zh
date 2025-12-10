@@ -20,7 +20,7 @@ declare -A GIT_CRATES=(
 	[shadowquic-macros]='https://github.com/spongebob888/shadowquic;a6b0bb33bc61035ded282388746c35e701253656;shadowquic-%commit%/shadowquic-macros'
 	[shadowquic]='https://github.com/spongebob888/shadowquic;a6b0bb33bc61035ded282388746c35e701253656;shadowquic-%commit%/shadowquic'
 	[smoltcp]='https://github.com/smoltcp-rs/smoltcp;ac32e643a4b7e09161193071526b3ca5a0deedb5;smoltcp-%commit%'
-	[sock2proc]='https://github.com/Watfaq/sock2proc;1097e6ba692025f80567446e0035af1222f5231f;sock2proc-%commit%'
+	[sock2proc]='https://github.com/Watfaq/sock2proc;9f9e6304d62285115b2e4fa632527ae563bf0fcc;sock2proc-%commit%'
 	[tokio-watfaq-rustls]='https://github.com/Watfaq/tokio-rustls;638db32084d7ecf9c2660847b55d48d1186b4055;tokio-rustls-%commit%'
 	[tuic-quinn]='https://github.com/Itsusinn/tuic;ce1482c48315f45672eec483d55e2732db4a17ea;tuic-%commit%/tuic-quinn'
 	[tuic]='https://github.com/Itsusinn/tuic;ce1482c48315f45672eec483d55e2732db4a17ea;tuic-%commit%/tuic'
@@ -28,7 +28,7 @@ declare -A GIT_CRATES=(
 	[watfaq-rustls]='https://github.com/Watfaq/rustls;4cae3aa2e84ea29d8a74b495793773bdb0a72206;rustls-%commit%/rustls'
 )
 
-RUST_MIN_VER="1.85.0"
+RUST_MIN_VER="1.86"
 
 inherit cargo systemd
 
