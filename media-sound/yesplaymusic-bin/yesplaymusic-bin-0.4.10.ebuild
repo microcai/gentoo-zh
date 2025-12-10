@@ -7,8 +7,8 @@ inherit desktop xdg
 
 DESCRIPTION="A third party music player for Netease Music"
 HOMEPAGE="https://github.com/qier222/YesPlayMusic"
-BASE_URI="https://github.com/qier222/YesPlayMusic/releases/download/v${PV}-2"
-SRC_URI="${BASE_URI}/${PN%-bin}-${PV}.pacman"
+BASE_URI="https://github.com/qier222/YesPlayMusic/releases/download"
+SRC_URI="${BASE_URI}/v${PV}/${PN%-bin}-${PV}.pacman"
 
 S="${WORKDIR}"
 
