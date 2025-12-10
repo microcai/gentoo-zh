@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-10 17:30:00 CST)
+(The last generation time: 2025-12-10 18:41:14 CST)
 
 ### Packages
 
@@ -498,7 +498,7 @@
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/yamusic-tui-bin                           | 0.7.1                    |            | https://github.com/DECE2183/yamusic-tui                                                 | An unofficial Yandex Music terminal client, with offline mode and My Wave
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/yesplaymusic-bin                          | 0.4.8                    |            | https://github.com/qier222/YesPlayMusic                                                 | A third party music player for Netease Music
+ media-sound/yesplaymusic-bin                          | 0.4.10                   |            | https://github.com/qier222/YesPlayMusic                                                 | A third party music player for Netease Music
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/ytmdesktop-bin                            | 2.0.10                   |            | https://github.com/ytmdesktop/ytmdesktop                                                | A Desktop App for YouTube Music
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
