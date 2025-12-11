@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
-
 <pkgmetadata>
-  <maintainer type="person">
-    <email>vowstar@gmail.com</email>
-    <name>Huang Rui</name>
-  </maintainer>
-  <longdescription lang="en">
-    Gemini CLI is a command-line AI workflow tool that connects to your tools,
-    understands your code and accelerates your workflows. With the Gemini CLI
-    you can query and edit large codebases, generate new apps from PDFs or
-    sketches using Gemini's multimodal capabilities, automate operational tasks,
-    and use tools and MCP servers to connect new capabilities.
-  </longdescription>
-  <longdescription lang="zh">
-    Gemini CLI 是一个命令行 AI 工作流工具，可以连接到您的工具，理解您的代码并
-    加速您的工作流程。使用 Gemini CLI，您可以查询和编辑大型代码库，从 PDF 或
-    草图生成新应用程序，利用 Gemini 的多模态功能，自动化操作任务，并使用工具和
-    MCP 服务器连接新功能。
-  </longdescription>
-  <upstream>
-    <doc>https://github.com/google-gemini/gemini-cli/blob/HEAD/docs/index.md</doc>
-    <remote-id type="github">google-gemini/gemini-cli</remote-id>
-  </upstream>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<longdescription lang="en">
+		Gemini CLI is a command-line AI workflow tool that connects to your tools,
+		understands your code and accelerates your workflows. With the Gemini CLI
+		you can query and edit large codebases, generate new apps from PDFs or
+		sketches using Gemini's multimodal capabilities, automate operational tasks,
+		and use tools and MCP servers to connect new capabilities.
+	</longdescription>
+	<longdescription lang="zh">
+		Gemini CLI 是一个命令行 AI 工作流工具，可以连接到您的工具，理解您的代码并
+		加速您的工作流程。使用 Gemini CLI，您可以查询和编辑大型代码库，从 PDF 或
+		草图生成新应用程序，利用 Gemini 的多模态功能，自动化操作任务，并使用工具和
+		MCP 服务器连接新功能。
+	</longdescription>
+	<upstream>
+		<doc>https://github.com/google-gemini/gemini-cli/blob/HEAD/docs/index.md</doc>
+		<remote-id type="github">google-gemini/gemini-cli</remote-id>
+	</upstream>
 </pkgmetadata>
