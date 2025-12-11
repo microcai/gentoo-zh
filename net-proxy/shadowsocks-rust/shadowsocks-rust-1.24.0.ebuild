@@ -8,6 +8,8 @@ EAPI=8
 CRATES="
 "
 
+RUST_MIN_VER="1.88.0"
+
 inherit cargo linux-info systemd
 
 MY_PV=${PV/_alpha/-alpha.}
