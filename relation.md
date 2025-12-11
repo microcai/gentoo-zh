@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-10 20:07:44 CST)
+(The last generation time: 2025-12-11 14:53:28 CST)
 
 ### Packages
 
@@ -335,8 +335,7 @@
                                                        | 3.10.3                   |            |                                                                                         |
                                                        | 3.10.4                   |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/gemini-cli                                   | 0.17.1                   |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
-                                                       | 0.18.4                   |            |                                                                                         |
+ dev-util/gemini-cli                                   | 0.20.0                   |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                            | 3.1.0.62320              |            | https://www.jetbrains.com/toolbox-app/                                                  | Manage all your JetBrains Projects and Tools
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
