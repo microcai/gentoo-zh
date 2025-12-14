@@ -7,7 +7,7 @@ inherit unpacker desktop xdg
 
 DESCRIPTION="Cross-platform IPTV player application with multiple features"
 HOMEPAGE="https://iptvnator.vercel.app/"
-SRC_URI="https://github.com/4gray/iptvnator/releases/download/v${PV}/iptvnator_${PV}_amd64.deb"
+SRC_URI="https://github.com/4gray/iptvnator/releases/download/v${PV}/iptvnator-${PV}-linux-amd64.deb"
 
 S="${WORKDIR}"
 LICENSE="MIT"
@@ -16,6 +16,18 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RESTRICT="strip"
+
+RDEPEND="
+	dev-libs/nspr
+	dev-libs/nss
+	media-libs/alsa-lib
+"
+
+src_prepare() {
+	default
+
+	sed -i 's/Categories=Video;/Categories=AudioVideo;Video;/' "${S}"/usr/share/applications/iptvnator.desktop
+}
 
 src_install() {
 	insinto /opt/IPTVnator
@@ -26,7 +38,7 @@ src_install() {
 
 	domenu "${S}"/usr/share/applications/iptvnator.desktop
 
-	for size in 192 256 512 1024; do
+	for size in 16 32 256 512 1024; do
 		doicon -s ${size} "${S}"/usr/share/icons/hicolor/${size}x${size}/apps/iptvnator.png
 	done
 }
