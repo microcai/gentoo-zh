@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-14 16:53:55 CST)
+(The last generation time: 2025-12-14 17:00:28 CST)
 
 ### Packages
 
@@ -510,7 +510,7 @@
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/implay                                    | 1.5.1                    |            | https://tsl0922.github.io/ImPlay                                                        | A Cross-Platform Desktop Media Player
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-video/iptvnator-bin                             | 0.16.0                   |            | https://iptvnator.vercel.app/                                                           | Cross-platform IPTV player application with multiple features
+ media-video/iptvnator-bin                             | 0.17.0                   |            | https://iptvnator.vercel.app/                                                           | Cross-platform IPTV player application with multiple features
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/mpv-handler                               | 0.4.2                    |            | https://github.com/akiirui/mpv-handler                                                  | Play website videos and songs with mpv & yt-dlp
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -761,7 +761,7 @@
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/wait-online                                  | 9999                     |            | https://github.com/lilydjwg/wait-online                                                 | Wait until we're connected to the Internet
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-boot/ventoy-bin                                   | 1.1.08                   |            | http://www.ventoy.net                                                                   | A new multiboot USB solution
+ sys-boot/ventoy-bin                                   | 1.1.09                   |            | http://www.ventoy.net                                                                   | A new multiboot USB solution
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-fs/jmtpfs                                         | 0.5                      |            | http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux | A FUSE and libmtp based filesystem for accessing MTP devices.
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -799,7 +799,7 @@
    dev-libs/v2ray-geoip                                | 202507050144             | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                            | 202511050144             | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                            | 1.7.2                    |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                            | 1.7.3                    |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/dufs                                         | 0.45.0                   |            | https://github.com/sigoden/dufs                                                         | A distinctive utility file server
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
