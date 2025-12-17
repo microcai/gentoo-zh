@@ -14,6 +14,9 @@ SRC_URI="
 		-> remmina-plugin-builder-${_BUILDERVER}.tar.gz
 	https://github.com/muflone/remmina-plugin-rustdesk/archive/${PV}.tar.gz -> ${P}.tar.gz
 "
+
+S="${WORKDIR}/build"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -24,8 +27,6 @@ DEPEND="
 	x11-libs/gtk+:3
 "
 RDEPEND="${DEPEND}"
-
-S=${WORKDIR}/build
 
 src_unpack() {
 	default_src_unpack

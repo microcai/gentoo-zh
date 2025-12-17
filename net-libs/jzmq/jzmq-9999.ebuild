@@ -12,14 +12,13 @@ if [[ ${PV} == "9999" ]] ; then
 	vcs=git-r3
 fi
 
+S="${WORKDIR}/${P}/${PN}-jni"
 LICENSE="LGPL-3"
 SLOT="0"
 
 DEPEND="net-libs/zeromq
 	>=virtual/jre-1.7:*"
 RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/${P}/${PN}-jni"
 
 src_prepare() {
 	default
