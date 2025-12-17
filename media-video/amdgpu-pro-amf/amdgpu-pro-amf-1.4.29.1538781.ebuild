@@ -23,11 +23,11 @@ SRC_URI="https://repo.radeon.com/amdgpu/${PRO_VULKAN_PKG_VER}/ubuntu/pool/propri
 
 S="${WORKDIR}"
 
-RESTRICT="bindist mirror"
-
 LICENSE="AMD-GPU-PRO-EULA"
 SLOT="0"
 KEYWORDS="-* ~amd64"
+
+RESTRICT="bindist mirror"
 
 RDEPEND="
 	media-libs/amdgpu-pro-vulkan

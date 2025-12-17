@@ -8,11 +8,12 @@ inherit unpacker desktop toolchain-funcs xdg
 DESCRIPTION="Netease Cloud Music, converted from .deb package"
 HOMEPAGE="https://music.163.com"
 SRC_URI="https://d1.music.126.net/dmusic/${PN}_${PV}_amd64_ubuntu_20190428.deb"
+S="${WORKDIR}"
 
 LICENSE="NetEase BSD"
 SLOT="0"
-RESTRICT="strip mirror"
 KEYWORDS="-* ~amd64"
+RESTRICT="strip mirror"
 
 DEPEND="media-video/vlc[taglib]"
 RDEPEND="${DEPEND}
@@ -26,7 +27,6 @@ RDEPEND="${DEPEND}
 	virtual/krb5
 	x11-libs/gtk+:3
 "
-S="${WORKDIR}"
 
 QA_PREBUILT="opt/netease/${PN}/*"
 QA_FLAGS_IGNORED="opt/netease/${PN}/*"

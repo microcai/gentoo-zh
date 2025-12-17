@@ -9,12 +9,12 @@ MY_PN="Tiejili"
 DESCRIPTION="An open-source font that extends  Reggae One to Chinese."
 HOMEPAGE="https://github.com/Buernia/Tiejili"
 SRC_URI="https://github.com/Buernia/Tiejili/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/${MY_PN}-${PV}"
 
 LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/${MY_PN}-${PV}"
 FONT_SUFFIX="ttf otf"
 
 src_unpack() {

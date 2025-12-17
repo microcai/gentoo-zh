@@ -9,8 +9,8 @@ DESCRIPTION="one for all free music in China"
 HOMEPAGE="http://listen1.github.io/listen1
 	https://github.com/listen1/listen1_desktop
 "
-S="${WORKDIR}"
 SRC_URI="https://github.com/listen1/listen1_desktop/releases/download/v${PV}/listen1_${PV}_linux_amd64.deb -> ${P}.deb"
+S="${WORKDIR}"
 
 LICENSE="MIT"
 SLOT="0"
