@@ -10,6 +10,8 @@ DESCRIPTION="jonaburg's picom fork with dual_kawase blur and rounded corners"
 HOMEPAGE="https://github.com/jonaburg/picom"
 SRC_URI="https://github.com/jonaburg/picom/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
+S="${WORKDIR}/picom-${PV}"
+
 LICENSE="MPL-2.0 MIT"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -45,8 +47,6 @@ BDEPEND="virtual/pkgconfig
 "
 
 DOCS=( README.md picom.sample.conf )
-
-S="${WORKDIR}/picom-${PV}"
 
 src_configure() {
 	local emesonargs=(
