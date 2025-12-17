@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-17 11:02:54 CST)
+(The last generation time: 2025-12-17 11:23:46 CST)
 
 ### Packages
 
@@ -174,7 +174,7 @@
  app-misc/spark                                        | 1.0.1                     |            | http://zachholman.com/spark/                                                            | ▁▂▃▅▂▇ in your shell
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/xmind                                        | 25.07.03033               |            | https://www.xmind.net                                                                   | Brainstorming and Mind Mapping Software
-                                                       | 26.01.07145               |            |                                                                                         |
+                                                       | 26.01.07153               |            |                                                                                         |
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/yazi                                         | 25.5.31                   |            | https://yazi-rs.github.io                                                               | Blazing fast terminal file manager written in Rust, based on async I/O.
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -690,7 +690,7 @@
  net-proxy/qvplugin-command                            | 3.0.0                     |            | https://github.com/Qv2ray/QvPlugin-Command                                              | Plugin for Qv2ray to run any commands when something happens in Qv2ray
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-naiveproxy                         | 3.0.0                     |            | https://github.com/Qv2ray/QvPlugin-NaiveProxy                                           | Plugin for Qv2ray to support NaiveProxy in Qv2ray
-   net-proxy/naiveproxy-bin                            | 140.0.7339.123_p2         | RD         | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
+   net-proxy/naiveproxy-bin                            | 143.0.7499.109_p2         | RD         | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-ss                                 | 3.0.0-r1                  |            | https://github.com/Qv2ray/QvPlugin-SS                                                   | Plugin for Qv2ray to support SIP003 in Qv2ray
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
