@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-17 07:39:08 CST)
+(The last generation time: 2025-12-17 11:02:54 CST)
 
 ### Packages
 
@@ -153,7 +153,7 @@
  app-misc/cursor-agent                                 | 2025.11.20                |            | https://docs.cursor.com/en/cli                                                          | Cursor CLI - interact with AI agents directly from your terminal
                                                        | 2025.11.25                |            |                                                                                         |
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/go-yq-bin                                    | 4.49.2                    |            | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
+ app-misc/go-yq-bin                                    | 4.50.1                    |            | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/gpick                                        | 0.4                       |            | https://github.com/thezbyg/gpick                                                        | Advanced color picker written in C++ using GTK+ toolkit
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -305,7 +305,7 @@
  dev-python/pywikibot                                  | 10.3.0                    |            | https://www.mediawiki.org/wiki/Manual:Pywikibot                                         | To interact with MediaWiki API (for example Wikipedia, Wikimedia Commons)
    dev-python/mwparserfromhell                         | 0.7.2                     | RD         | https://github.com/earwig/mwparserfromhell                                              | A Python parser for MediaWiki wikicode
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/uv-bin                                     | 0.9.17                    |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
+ dev-python/uv-bin                                     | 0.9.18                    |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-ruby/filelock                                     | 1.1.1                     |            | https://github.com/sheerun/filelock                                                     | Heavily tested, but simple filelocking solution using flock command
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -359,7 +359,7 @@
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/gitoxide                                      | 0.47.0                    |            | https://github.com/GitoxideLabs/gitoxide                                                | A command-line application for interacting with git repositories
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/sourcegit-bin                                 | 2025.39                   |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
+ dev-vcs/sourcegit-bin                                 | 2025.40                   |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                             | 1.19.8                    |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
                                                        | 1.20.12                   |            |                                                                                         |
@@ -511,7 +511,7 @@
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/implay                                    | 1.5.1                     |            | https://tsl0922.github.io/ImPlay                                                        | A Cross-Platform Desktop Media Player
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-video/iptvnator-bin                             | 0.17.0                    |            | https://iptvnator.vercel.app/                                                           | Cross-platform IPTV player application with multiple features
+ media-video/iptvnator-bin                             | 0.17.1                    |            | https://iptvnator.vercel.app/                                                           | Cross-platform IPTV player application with multiple features
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/mpv-handler                               | 0.4.2                     |            | https://github.com/akiirui/mpv-handler                                                  | Play website videos and songs with mpv & yt-dlp
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -594,7 +594,7 @@
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/another-redis-desktop-manager-bin            | 1.7.1                     |            | https://github.com/qishibo/AnotherRedisDesktopManager                                   | A faster, better and more stable Redis desktop manager [GUI client]
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/apifox                                       | 2.7.55                    |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
+ net-misc/apifox                                       | 2.7.57                    |            | https://www.apifox.cn/                                                                  | API 文档、API 调试、API Mock、API 自动化测试
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/baidunetdisk                                 | 4.17.7                    |            | https://pan.baidu.com/                                                                  | Baidu Net Disk is a cloud storage client (Linux Version)
                                                        | 4.3.0                     |            |                                                                                         |
@@ -671,7 +671,7 @@
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/daed                                        | 1.0.0                     |            | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
                                                        | 9999                      |            |                                                                                         |
-   sys-apps/pnpm                                       | 10.25.0                   | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
+   sys-apps/pnpm                                       | 10.26.0                   | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/flclash-bin                                 | 0.8.91                    |            | https://github.com/chen08209/FlClash                                                    | A multi-platform proxy client based on ClashMeta
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -799,7 +799,7 @@
    dev-libs/v2ray-geoip                                | 202507050144              | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                            | 202511050144              | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                            | 1.7.3                     |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                            | 1.7.4                     |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/dufs                                         | 0.45.0                    |            | https://github.com/sigoden/dufs                                                         | A distinctive utility file server
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
