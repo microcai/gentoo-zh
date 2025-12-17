@@ -3,21 +3,32 @@
 
 EAPI=8
 
-MY_PN="codex-x86_64-unknown-linux-musl"
-
 DESCRIPTION="Codex - OpenAI's code generation and completion tool"
 HOMEPAGE="https://github.com/openai/codex"
-SRC_URI="https://github.com/openai/codex/releases/download/rust-v${PV}/${MY_PN}.tar.gz -> ${P}.tar.gz"
+SRC_URI="
+	amd64? (
+		https://github.com/openai/codex/releases/download/rust-v${PV}/codex-x86_64-unknown-linux-musl.tar.gz
+			-> ${P}-amd64.tar.gz
+	)
+	arm64? (
+		https://github.com/openai/codex/releases/download/rust-v${PV}/codex-aarch64-unknown-linux-musl.tar.gz
+			-> ${P}-arm64.tar.gz
+	)
+"
 S="${WORKDIR}"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64"
 
 RESTRICT="bindist mirror strip"
 
 QA_PREBUILT="usr/bin/codex"
 
 src_install() {
-	newbin "${MY_PN}" codex
+	if use amd64; then
+		newbin codex-x86_64-unknown-linux-musl codex
+	elif use arm64; then
+		newbin codex-aarch64-unknown-linux-musl codex
+	fi
 }
