@@ -1267,6 +1267,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "123485k"
 
+["net-misc/bruno-bin"]
+source = "github"
+github = "usebruno/bruno"
+use_latest_release = true
+prefix = "v"
+github_account = "gouwazi"
+
 ["net-misc/geo"]
 source = "github"
 github = "MetaCubeX/geo"
