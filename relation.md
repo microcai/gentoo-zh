@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-17 11:23:46 CST)
+(The last generation time: 2025-12-17 12:11:25 CST)
 
 ### Packages
 
@@ -333,6 +333,7 @@
    dev-lang/dart                                       | 3.10.2-r1                 |  D, RD     | https://dart.dev                                                                        | The Dart SDK
                                                        | 3.10.3                    |            |                                                                                         |
                                                        | 3.10.4                    |            |                                                                                         |
+                                                       | 3.10.6                    |            |                                                                                         |
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/gemini-cli                                   | 0.20.0                    |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
                                                        | 0.20.2                    |            |                                                                                         |
