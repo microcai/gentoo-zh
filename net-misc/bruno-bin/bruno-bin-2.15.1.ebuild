@@ -1,4 +1,4 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 2023-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -11,11 +11,15 @@ SRC_URI="https://github.com/usebruno/bruno/releases/download/v${PV}/bruno_${PV}_
 
 S="${WORKDIR}"
 LICENSE="MIT"
-
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND="net-libs/webkit-gtk:4.1"
+RDEPEND="
+	dev-libs/nss
+	media-libs/alsa-lib
+	x11-libs/gtk+:3[X,cups]
+	x11-libs/libxkbcommon[X]
+"
 
 RESTRICT="strip"
 
