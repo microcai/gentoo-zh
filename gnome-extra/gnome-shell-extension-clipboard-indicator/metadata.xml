@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<longdescription lang="en">
-		The most popular clipboard manager for GNOME, with over 1M downloads
-	</longdescription>
 	<upstream>
 		<remote-id type="github">Tudmotu/gnome-shell-extension-clipboard-indicator</remote-id>
 	</upstream>
