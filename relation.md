@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-17 17:49:04 CST)
+(The last generation time: 2025-12-18 09:05:40 CST)
 
 ### Packages
 
@@ -330,10 +330,7 @@
                                                        | 0.73.0                    |            |                                                                                         |
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/fvm                                          | 4.0.4                     |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
-   dev-lang/dart                                       | 3.10.2-r1                 |  D, RD     | https://dart.dev                                                                        | The Dart SDK
-                                                       | 3.10.3                    |            |                                                                                         |
-                                                       | 3.10.4                    |            |                                                                                         |
-                                                       | 3.10.6                    |            |                                                                                         |
+   dev-lang/dart                                       | 3.10.6                    |  D, RD     | https://dart.dev                                                                        | The Dart SDK
 -------------------------------------------------------|---------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/gemini-cli                                   | 0.20.0                    |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
                                                        | 0.20.2                    |            |                                                                                         |
