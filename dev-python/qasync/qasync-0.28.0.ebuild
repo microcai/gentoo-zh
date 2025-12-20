@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-DISTUTILS_USE_PEP517=poetry
+DISTUTILS_USE_PEP517=hatchling
 PYTHON_COMPAT=( python3_{10..13} )
 
 inherit distutils-r1 pypi
@@ -25,3 +25,12 @@ RDEPEND="
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
 "
+
+src_prepare() {
+	sed -i \
+		-e 's/build-backend = "uv_build"/build-backend = "hatchling.build"/' \
+		-e 's/requires = \["uv_build.*"\]/requires = ["hatchling"]/' \
+		pyproject.toml || die
+
+	distutils-r1_src_prepare
+}
