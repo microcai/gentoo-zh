@@ -9,7 +9,7 @@ inherit kernel-build toolchain-funcs llvm-r1
 
 MY_P=linux-${PV%.*}
 #Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
-PATCHSET=linux-gentoo-patches-6.17.2
+PATCHSET=linux-gentoo-patches-6.18.2
 GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.}))
 XV="1"
 
