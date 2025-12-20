@@ -38,12 +38,12 @@ DEPEND="dev-vcs/git
 		dev-python/tqdm[${PYTHON_USEDEP}]
 		dev-python/truststore[${PYTHON_USEDEP}]
 		dev-python/zstandard[${PYTHON_USEDEP}]
-		pycosat? ( dev-python/pycosat[${PYTHON_USEDEP}] )')
+		dev-python/msgpack[${PYTHON_USEDEP}]
+		dev-python/pycosat[${PYTHON_USEDEP}]')
 		mamba? ( dev-python/conda-libmamba-solver[${PYTHON_SINGLE_USEDEP}] )"
 RDEPEND="${DEPEND}"
 
-IUSE="+user +mamba pycosat"
-REQUIRED_USE="|| ( mamba pycosat )"
+IUSE="+user +mamba"
 
 distutils_enable_tests pytest
 
