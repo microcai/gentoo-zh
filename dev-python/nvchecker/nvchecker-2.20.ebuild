@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="nvchecker is for checking if a new version of some software has been released"
 HOMEPAGE="https://pypi.org/project/nvchecker/"
-SRC_URI="https://github.com/lilydjwg/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.gh.tar.gz"
+SRC_URI="https://github.com/lilydjwg/nvchecker/archive/refs/tags/v${PV}.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -30,6 +30,8 @@ RDEPEND="
 		virtual/notification-daemon
 	)
 "
+
+PATCHES=("${FILESDIR}/${P}-license-classifier-warns.patch")
 
 python_install_all() {
 	distutils-r1_python_install_all
