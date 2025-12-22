@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-22 14:31:52 CST)
+(The last generation time: 2025-12-22 15:30:35 CST)
 
 ### Packages
 
@@ -338,7 +338,7 @@
  dev-util/jetbrains-toolbox                            | 3.1.0.62320              |            | https://www.jetbrains.com/toolbox-app/                                                  | Manage all your JetBrains Projects and Tools
                                                        | 3.1.2.64642              |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/osc                                          | 1.22.0                   |            | https://github.com/openSUSE/osc                                                         | The Command Line Interface to work with an Open Build Service
+ dev-util/osc                                          | 1.23.0                   |            | https://github.com/openSUSE/osc                                                         | The Command Line Interface to work with an Open Build Service
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/pack-cli                                     | 0.37.0                   |            | https://buildpacks.io                                                                   | CLI for building apps using Cloud Native Buildpacks
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -532,7 +532,7 @@
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/ddns-go                                       | 6.13.2                   |            | https://github.com/jeessy2/ddns-go                                                      | Automatically obtain your public IP address and set to your domain name service.
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-dns/dnslookup                                     | 1.11.1                   |            | https://github.com/ameshkov/dnslookup                                                   | Simple command line utility to make DNS lookups to the specified server
+ net-dns/dnslookup                                     | 1.11.2                   |            | https://github.com/ameshkov/dnslookup                                                   | Simple command line utility to make DNS lookups to the specified server
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/dnsmasq-china-list                            | 9999                     |            | https://github.com/felixonmars/dnsmasq-china-list                                       | Chinese-specific configuration to improve your favorite DNS server.
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
