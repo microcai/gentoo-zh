@@ -10,7 +10,6 @@ HOMEPAGE="https://github.com/ameshkov/dnslookup"
 SRC_URI="
 	https://github.com/ameshkov/dnslookup/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/gentoo-zh-drafts/dnslookup/releases/download/v${PV}/${P}-vendor.tar.xz
-		-> ${P}-vendor.golang-dist-mirror-action.tar.xz
 "
 
 LICENSE="MIT"
