@@ -1,0 +1,21 @@
+diff --git a/Cargo.lock b/Cargo.lock
+index 6856445..2b5cdae 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -1894,12 +1894,14 @@ dependencies = [
+ 
+ [[package]]
+ name = "time"
+-version = "0.3.29"
++version = "0.3.36"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "426f806f4089c493dcac0d24c29c01e2c38baf8e30f1b716ee37e83d200b18fe"
++checksum = "5dfd88e563464686c916c7e46e623e520ddc6d79fa6641390f2e3fa86e83e885"
+ dependencies = [
+  "deranged",
+  "itoa",
++ "num-conv",
++ "powerfmt",
+  "serde",
+  "time-core",
+  "time-macros",
