@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-26 12:18:24 CST)
+(The last generation time: 2025-12-26 13:06:06 CST)
 
 ### Packages
 
@@ -325,9 +325,7 @@
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/binsider                                     | 0.3.0                    |            | https://binsider.dev                                                                    | Analyze ELF binaries like a boss
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/codex-bin                                    | 0.61.0                   |            | https://github.com/openai/codex                                                         | Codex - OpenAI's code generation and completion tool
-                                                       | 0.63.0                   |            |                                                                                         |
-                                                       | 0.73.0                   |            |                                                                                         |
+ dev-util/codex                                        | 0.77.0                   |            | https://github.com/openai/codex                                                         | Codex CLI - OpenAI's AI-powered coding agent
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/fvm                                          | 4.0.5                    |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
    dev-lang/dart                                       | 3.10.6                   |  D, RD     | https://dart.dev                                                                        | The Dart SDK
