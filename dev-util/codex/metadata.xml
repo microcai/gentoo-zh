@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<longdescription lang="en">
+		Codex CLI is an AI-powered coding agent from OpenAI that runs in your
+		terminal. It can understand your codebase, execute commands, and help
+		you write, debug, and refactor code using natural language. Codex uses
+		advanced language models to provide intelligent code assistance directly
+		from the command line.
+	</longdescription>
+	<longdescription lang="zh">
+		Codex CLI 是 OpenAI 推出的 AI 编程助手，可在终端中运行。它能够理解你的
+		代码库、执行命令，并通过自然语言帮助你编写、调试和重构代码。Codex 使用
+		先进的语言模型，直接从命令行提供智能代码辅助。
+	</longdescription>
+	<upstream>
+		<remote-id type="github">openai/codex</remote-id>
+		<bugs-to>https://github.com/openai/codex/issues</bugs-to>
+	</upstream>
+</pkgmetadata>
