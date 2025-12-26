@@ -12,13 +12,11 @@ HOMEPAGE="https://www.zwsoft.cn/product/zw3d/linux"
 SRC_URI="
 	amd64? ( signed_${MY_PGK_NAME}_${PV}_amd64.deb )
 "
-
-S="${WORKDIR}"
+S=${WORKDIR}
 
 LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* ~amd64"
-
 RESTRICT="strip mirror bindist fetch"
 
 RDEPEND="

@@ -11,6 +11,7 @@ MY_PV="${MY_PV//_/-}"
 DESCRIPTION="A low latency KVMFR application for guests with VGA PCI Passthrough"
 HOMEPAGE="https://looking-glass.io"
 SRC_URI="https://looking-glass.io/artifact/${MY_PV}/source -> ${P}.tar.gz"
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -50,8 +51,6 @@ DEPEND="gui-libs/egl-wayland
 		media-video/obs-studio
 	)"
 RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/${PN}-${MY_PV}"
 
 MY_CMAKE_PROJECT="client "
 

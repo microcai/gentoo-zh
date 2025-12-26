@@ -9,12 +9,14 @@ MY_PN="SmileySans"
 DESCRIPTION="An open-source font for Chinese."
 HOMEPAGE="https://github.com/atelier-anchor/smiley-sans"
 SRC_URI="https://github.com/atelier-anchor/smiley-sans/releases/download/v${PV}/smiley-sans-v${PV}.zip -> ${P}.zip"
+S="${WORKDIR}"
 
 LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="~amd64"
+
 BDEPEND="app-arch/unzip"
-S=${WORKDIR}
+
 FONT_SUFFIX="ttf otf"
 
 src_unpack() {

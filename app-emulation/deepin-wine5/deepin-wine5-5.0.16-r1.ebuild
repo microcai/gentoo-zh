@@ -20,6 +20,7 @@ SRC_URI="${APPSTORE_URI}/d/${PN}/${PN}_${PV}-${PR/r/}_i386.deb
 		 ${COMMUNITY_URI}/libp/libpcap/libpcap0.8_1.8.1.1-6+dde_i386.deb
 		 ${COMMUNITY_URI}/libp/libpcap/libpcap0.8_1.8.1.1-6+dde_amd64.deb
 "
+S=${WORKDIR}
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -59,7 +60,6 @@ RDEPEND="
 
 BDEPEND="dev-util/patchelf"
 
-S=${WORKDIR}
 QA_FLAGS_IGNORED=".*"
 QA_PREBUILT="*"
 QA_SONAME="*"

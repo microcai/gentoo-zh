@@ -11,13 +11,6 @@ TMPFILES_OPTIONAL=1
 
 inherit python-any-r1 toolchain-funcs flag-o-matic gnuconfig multilib tmpfiles
 
-DESCRIPTION="GNU libc C library, for liblol"
-HOMEPAGE="https://www.gnu.org/software/libc/ https://liblol.aosc.io"
-LICENSE="LGPL-2.1+ BSD HPND ISC inner-net rc PCRE"
-SLOT="2.2"
-
-EMULTILIB_PKG="true"
-
 # Gentoo patchset (ignored for live ebuilds)
 PATCH_VER=9
 PATCH_DEV=dilfridge
@@ -59,6 +52,9 @@ MIN_PAX_UTILS_VER="1.3.3"
 # its seccomp filter!). Please double check this!
 MIN_SYSTEMD_VER="254.9-r1"
 
+DESCRIPTION="GNU libc C library, for liblol"
+HOMEPAGE="https://www.gnu.org/software/libc/ https://liblol.aosc.io"
+
 if [[ ${PV} == 9999* ]]; then
 	inherit git-r3
 else
@@ -73,6 +69,12 @@ SRC_URI+=" multilib-bootstrap? ( https://dev.gentoo.org/~dilfridge/distfiles/gcc
 SRC_URI+=" systemd? ( https://gitweb.gentoo.org/proj/toolchain/glibc-systemd.git/snapshot/glibc-systemd-${GLIBC_SYSTEMD_VER}.tar.gz )"
 
 S="${WORKDIR}/glibc-${GLIBC_PV}"
+
+LICENSE="LGPL-2.1+ BSD HPND ISC inner-net rc PCRE"
+
+SLOT="2.2"
+
+EMULTILIB_PKG="true"
 
 IUSE="audit caps cet compile-locales custom-cflags doc gd hash-sysv-compat headers-only +multiarch multilib multilib-bootstrap nscd perl profile selinux split-usr +ssp stack-realign +static-libs suid systemd systemtap test vanilla"
 
