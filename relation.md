@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-24 22:17:05 CST)
+(The last generation time: 2025-12-26 11:04:02 CST)
 
 ### Packages
 
@@ -332,8 +332,7 @@
  dev-util/fvm                                          | 4.0.5                    |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
    dev-lang/dart                                       | 3.10.6                   |  D, RD     | https://dart.dev                                                                        | The Dart SDK
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/gemini-cli                                   | 0.20.0                   |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
-                                                       | 0.20.2                   |            |                                                                                         |
+ dev-util/gemini-cli                                   | 0.22.2                   |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                            | 3.1.0.62320              |            | https://www.jetbrains.com/toolbox-app/                                                  | Manage all your JetBrains Projects and Tools
                                                        | 3.1.2.64642              |            |                                                                                         |
