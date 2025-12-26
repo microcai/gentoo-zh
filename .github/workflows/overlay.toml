@@ -725,7 +725,7 @@ use_latest_release = true
 prefix = "v"
 github_account = "gouwazi"
 
-["dev-util/codex-bin"]
+["dev-util/codex"]
 source = "github"
 github = "openai/codex"
 use_latest_release = true
