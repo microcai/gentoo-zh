@@ -49,9 +49,9 @@ src_compile() {
 		./cmd/sing-box
 
 	mkdir -v completions
-	./sing-box completion bash >completions/sing-box
-	./sing-box completion fish >completions/sing-box.fish
-	./sing-box completion zsh >completions/_sing-box
+	./sing-box completion bash > completions/sing-box
+	./sing-box completion fish > completions/sing-box.fish
+	./sing-box completion zsh > completions/_sing-box
 }
 
 src_install() {
