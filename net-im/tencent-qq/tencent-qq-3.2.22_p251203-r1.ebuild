@@ -7,7 +7,7 @@ inherit unpacker xdg
 
 MY_PV="${PV/_p/_}"
 _QQDownloadURLPrefix="https://dldir1v6.qq.com/qqfile/qq/QQNT/Linux"
-_LiteLoader_PV="1.3.0"
+_LiteLoader_PV="1.4.1"
 
 DESCRIPTION="The new version of the official linux-qq"
 HOMEPAGE="https://im.qq.com/linuxqq/index.shtml"
@@ -21,7 +21,9 @@ SRC_URI="
 		-> LiteLoaderQQNT-${_LiteLoader_PV}.zip
 	)
 "
+
 S="${WORKDIR}"
+
 LICENSE="Tencent"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
