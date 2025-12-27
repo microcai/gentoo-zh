@@ -1,4 +1,4 @@
-From c0f6202ff6cb5cc9b877b9c620f462346b3877f2 Mon Sep 17 00:00:00 2001
+From c66a7967de5127b25309f2fa446b422c7260a2ec Mon Sep 17 00:00:00 2001
 From: Puqns67 <me@puqns67.icu>
 Date: Thu, 20 Nov 2025 19:49:28 +0800
 Subject: [PATCH 3/3] build(deps): tidy
@@ -9,7 +9,7 @@ Subject: [PATCH 3/3] build(deps): tidy
  2 files changed, 1 insertion(+), 10 deletions(-)
 
 diff --git a/go.mod b/go.mod
-index 2d163d7..649c862 100644
+index 4c7b0ec..aa3e4a0 100644
 --- a/go.mod
 +++ b/go.mod
 @@ -3,14 +3,9 @@ module github.com/jeessy2/ddns-go/v6
@@ -18,18 +18,18 @@ index 2d163d7..649c862 100644
  require (
 -	github.com/kardianos/service v1.2.4
  	github.com/wagslane/go-password-validator v0.3.0
- 	golang.org/x/crypto v0.43.0
- 	golang.org/x/net v0.46.0
+ 	golang.org/x/crypto v0.46.0
+ 	golang.org/x/net v0.48.0
 -	gopkg.in/yaml.v3 v3.0.1
 -)
 -
 -require (
--	golang.org/x/sys v0.37.0 // indirect
- 	golang.org/x/text v0.30.0
+-	golang.org/x/sys v0.39.0 // indirect
+ 	golang.org/x/text v0.32.0
 +	gopkg.in/yaml.v3 v3.0.1
  )
 diff --git a/go.sum b/go.sum
-index 0b23371..3240292 100644
+index 0542804..c0762c5 100644
 --- a/go.sum
 +++ b/go.sum
 @@ -1,13 +1,9 @@
@@ -37,14 +37,14 @@ index 0b23371..3240292 100644
 -github.com/kardianos/service v1.2.4/go.mod h1:E4V9ufUuY82F7Ztlu1eN9VXWIQxg8NoLQlmFe0MtrXc=
  github.com/wagslane/go-password-validator v0.3.0 h1:vfxOPzGHkz5S146HDpavl0cw1DSVP061Ry2PX0/ON6I=
  github.com/wagslane/go-password-validator v0.3.0/go.mod h1:TI1XJ6T5fRdRnHqHt14pvy1tNVnrwe7m3/f1f2fDphQ=
- golang.org/x/crypto v0.43.0 h1:dduJYIi3A3KOfdGOHX8AVZ/jGiyPa3IbBozJ5kNuE04=
- golang.org/x/crypto v0.43.0/go.mod h1:BFbav4mRNlXJL4wNeejLpWxB7wMbc79PdRGhWKncxR0=
- golang.org/x/net v0.46.0 h1:giFlY12I07fugqwPuWJi68oOnpfqFnJIJzaIIm2JVV4=
- golang.org/x/net v0.46.0/go.mod h1:Q9BGdFy1y4nkUwiLvT5qtyhAnEHgnQ/zd8PfU6nc210=
--golang.org/x/sys v0.37.0 h1:fdNQudmxPjkdUTPnLn5mdQv7Zwvbvpaxqs831goi9kQ=
--golang.org/x/sys v0.37.0/go.mod h1:OgkHotnGiDImocRcuBABYBEXf8A9a87e/uXjp9XT3ks=
- golang.org/x/text v0.30.0 h1:yznKA/E9zq54KzlzBEAWn1NXSQ8DIp/NYMy88xJjl4k=
- golang.org/x/text v0.30.0/go.mod h1:yDdHFIX9t+tORqspjENWgzaCVXgk0yYnYuSZ8UzzBVM=
+ golang.org/x/crypto v0.46.0 h1:cKRW/pmt1pKAfetfu+RCEvjvZkA9RimPbh7bhFjGVBU=
+ golang.org/x/crypto v0.46.0/go.mod h1:Evb/oLKmMraqjZ2iQTwDwvCtJkczlDuTmdJXoZVzqU0=
+ golang.org/x/net v0.48.0 h1:zyQRTTrjc33Lhh0fBgT/H3oZq9WuvRR5gPC70xpDiQU=
+ golang.org/x/net v0.48.0/go.mod h1:+ndRgGjkh8FGtu1w1FGbEC31if4VrNVMuKTgcAAnQRY=
+-golang.org/x/sys v0.39.0 h1:CvCKL8MeisomCi6qNZ+wbb0DN9E5AATixKsvNtMoMFk=
+-golang.org/x/sys v0.39.0/go.mod h1:OgkHotnGiDImocRcuBABYBEXf8A9a87e/uXjp9XT3ks=
+ golang.org/x/text v0.32.0 h1:ZD01bjUt1FQ9WJ0ClOL5vxgxOI/sVCNgX1YtKwcY0mU=
+ golang.org/x/text v0.32.0/go.mod h1:o/rUWzghvpD5TXrTIBuJU77MTaN0ljMWE47kxGJQ7jY=
  gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
 -- 
 2.52.0
