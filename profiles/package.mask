@@ -2,3 +2,5 @@
 # https://github.com/microcai/gentoo-zh/issues/6412
 # will be removed after 1 month (2025-12-30)
 net-misc/uuplugin
+
+sci-electronics/lceda-pro:beta
