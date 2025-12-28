@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-28 22:41:24 CST)
+(The last generation time: 2025-12-28 23:40:10 CST)
 
 ### Packages
 
@@ -161,7 +161,7 @@
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/jshon                                        | 9999                     |            | http://kmkeen.com/jshon/                                                                | Jshon is a JSON parser designed for maximum convenience within the shell
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/keyd                                         | 2.5.0                    |            | https://github.com/rvaiya/keyd                                                          | A key remapping daemon for linux
+ app-misc/keyd                                         | 2.6.0                    |            | https://github.com/rvaiya/keyd                                                          | A key remapping daemon for linux
    acct-group/keyd                                     | 0                        |  D, RD     |                                                                                         | A key remapping daemon for linux
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/mdx_util                                     | 20251029                 |            | https://github.com/raymanzhang/mdx_util                                                 | A command line tools for handling mdx related jobs.
