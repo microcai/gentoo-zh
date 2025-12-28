@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-28 21:01:01 CST)
+(The last generation time: 2025-12-28 21:16:26 CST)
 
 ### Packages
 
@@ -722,7 +722,7 @@
  net-proxy/v2rayA                                      | 2.2.7                    |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                                        | 9999                     |            |                                                                                         |
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/yacd-meta                                   | 0.3.7                    |            | https://github.com/MetaCubeX/Yacd-meta                                                  | Yet Another Clash Dashboard
+ net-proxy/yacd-meta                                   | 0.3.8                    |            | https://github.com/MetaCubeX/Yacd-meta                                                  | Yet Another Clash Dashboard
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/yass                                        | 1.16.2                   |            | https://github.com/Chilledheart/yass                                                    | lightweight and efficient, socks5/http forward proxy
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
