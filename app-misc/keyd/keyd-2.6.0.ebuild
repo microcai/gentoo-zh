@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -21,11 +21,17 @@ src_prepare() {
 }
 
 src_install() {
-	default
-	# prevent docs from being installed to /usr/local/share/doc
-	rm -r "${D}"/usr/local/share/{man,doc} || die
-	dodoc docs/{CHANGELOG.md,DESIGN.md}
+
+	sed -e 's#@PREFIX@#/usr#' keyd.service.in > keyd.service || die
 	systemd_dounit keyd.service
+
+	# sysusers.d taken cared by acct-group/keyd already
+	rm data/sysusers.d || die
+	insinto /usr/share/keyd
+	doins -r data
+
+	dodoc docs/{CHANGELOG.md,DESIGN.md}
+
 	insinto /etc/keyd
 	doins "${FILESDIR}"/default.conf
 	gzip -d data/{keyd,keyd-application-mapper}.1.gz || die
