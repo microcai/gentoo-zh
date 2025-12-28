@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-28 21:16:26 CST)
+(The last generation time: 2025-12-28 21:25:24 CST)
 
 ### Packages
 
@@ -216,7 +216,7 @@
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/lemminx-bin                                  | 0.31.0                   |            | https://github.com/eclipse-lemminx/lemminx                                              | A XML Language Server
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-text/readest-bin                                  | 0.9.95                   |            | https://readest.com/                                                                    | A modern, feature-rich ebook reader
+ app-text/readest-bin                                  | 0.9.96                   |            | https://readest.com/                                                                    | A modern, feature-rich ebook reader
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/easymotion                                    | 1.3                      |            | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: Vim motions on speed!
                                                        | 3.0.1                    |            |                                                                                         |
@@ -607,7 +607,7 @@
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/geo                                          | 1.1                      |            | https://github.com/MetaCubeX/geo/                                                       | An easy way to manage all your Geo resources
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/hoppscotch-bin                               | 25.11.2.0                |            | https://hoppscotch.io                                                                   | Open source API development ecosystem
+ net-misc/hoppscotch-bin                               | 25.12.0.0                |            | https://hoppscotch.io                                                                   | Open source API development ecosystem
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/immich-go                                    | 0.31.0                   |            | https://github.com/simulot/immich-go/                                                   | A immich-CLI alternative
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -629,7 +629,7 @@
  net-misc/remmina-plugin-rustdesk                      | 1.0.0.0-r1               |            | http://www.muflone.com/remmina-plugin-rustdesk/                                         | A protocol plugin for Remmina to launch a Rustdesk connection.
    net-misc/rustdesk                                   | 1.4.4                    |  D, RD     | https://rustdesk.com/                                                                   | An open-source remote desktop, and alternative to TeamViewer
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/reqable                                      | 3.0.30                   |            | https://reqable.com/                                                                    | Reqable = Fiddler + Charles + Postman, 让API调试更快 🚀 更简单 👌
+ net-misc/reqable                                      | 3.0.31                   |            | https://reqable.com/                                                                    | Reqable = Fiddler + Charles + Postman, 让API调试更快 🚀 更简单 👌
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/todesk                                       | 4.1.0                    |            | https://www.todesk.com/                                                                 | ToDesk不一样的远控体验，轻松打破物理限制，随时随地高效使用所有计算终端
                                                        | 4.7.2.0-r1               |            |                                                                                         |
@@ -800,7 +800,7 @@
    dev-libs/v2ray-geoip                                | 202507050144             | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                            | 202511050144             | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                            | 1.7.5                    |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                            | 1.7.8                    |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/dufs                                         | 0.45.0                   |            | https://github.com/sigoden/dufs                                                         | A distinctive utility file server
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
