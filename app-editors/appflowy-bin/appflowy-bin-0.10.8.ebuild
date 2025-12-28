@@ -27,10 +27,14 @@ DEPEND="
 	media-libs/gst-plugins-base
 	media-libs/harfbuzz
 	media-libs/libepoxy
+	media-libs/libpulse
+	media-libs/libva
+	sys-libs/libunwind
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
 	x11-libs/gtk+:3
 	x11-libs/libnotify
+	x11-libs/libvdpau
 	x11-libs/pango
 	x11-misc/xdg-user-dirs[gtk]
 "
