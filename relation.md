@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2025-12-28 23:40:10 CST)
+(The last generation time: 2025-12-29 15:03:58 CST)
 
 ### Packages
 
@@ -303,6 +303,7 @@
  dev-python/pytube                                     | 15.0.0                   |            | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pywikibot                                  | 10.3.0                   |            | https://www.mediawiki.org/wiki/Manual:Pywikibot                                         | To interact with MediaWiki API (for example Wikipedia, Wikimedia Commons)
+                                                       | 10.7.4                   |            |                                                                                         |
    dev-python/mwparserfromhell                         | 0.7.2                    | RD         | https://github.com/earwig/mwparserfromhell                                              | A Python parser for MediaWiki wikicode
 -------------------------------------------------------|--------------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/uv-bin                                     | 0.9.18                   |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
