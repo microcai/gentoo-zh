@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>keeyou-cn@outlook.com</email>
-		<name>Chilledheart</name>
+		<email>hukeyue@vip.163.com</email>
+		<name>hukeyue</name>
 	</maintainer>
 	<use>
 		<flag name="cli">Enable cli daemon</flag>
@@ -18,6 +18,6 @@
 		<flag name="cet">Enable Intel Control-flow Enforcement Technology</flag>
 	</use>
 	<upstream>
-		<remote-id type="github">Chilledheart/yass</remote-id>
+		<remote-id type="github">hukeyue/yass</remote-id>
 	</upstream>
 </pkgmetadata>
