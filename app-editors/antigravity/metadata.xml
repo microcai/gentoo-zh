@@ -11,6 +11,6 @@
 		<flag name="wayland">Enable Wayland support with Ozone platform</flag>
 	</use>
 	<upstream>
-		<doc>https://antigravity.google/docs/</doc>
+		<doc>https://antigravity.google/</doc>
 	</upstream>
 </pkgmetadata>
