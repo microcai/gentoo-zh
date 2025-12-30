@@ -91,6 +91,12 @@ archpkg = "fcitx5-pinyin-zhwiki"
 strip_release = true
 github_account = "blackteahamburger"
 
+["app-editors/antigravity"]
+source = "regex"
+url = "https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/dists/antigravity-debian/main/binary-amd64/Packages"
+regex = 'Version: ([^-]+)-\d+'
+github_account = "zakkaus"
+
 ["app-editors/appflowy-bin"]
 source = "github"
 github = "AppFlowy-IO/AppFlowy"
