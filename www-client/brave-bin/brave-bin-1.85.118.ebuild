@@ -1,4 +1,4 @@
-# Copyright 2024-2025 Gentoo Authors
+# Copyright 2024-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -12,13 +12,16 @@ inherit chromium-2 desktop pax-utils unpacker xdg
 MY_PN=${PN/-bin}-browser
 DESCRIPTION="Web browser that blocks ads and trackers by default"
 HOMEPAGE="https://brave.com/"
-SRC_URI="https://github.com/${PN/-bin}/${MY_PN}/releases/download/v${PV}/${MY_PN}_${PV}_amd64.deb"
+SRC_URI="
+	amd64? ( https://github.com/${PN/-bin}/${MY_PN}/releases/download/v${PV}/${MY_PN}_${PV}_amd64.deb )
+	arm64? ( https://github.com/${PN/-bin}/${MY_PN}/releases/download/v${PV}/${MY_PN}_${PV}_arm64.deb )
+"
 
 S=${WORKDIR}
 
 LICENSE="MPL-2.0"
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~amd64 ~arm64"
 
 IUSE="qt6"
 RESTRICT="bindist strip"
