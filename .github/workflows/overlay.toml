@@ -1732,8 +1732,8 @@ strip_release = true
 source = "aur"
 aur = "brave-bin"
 strip_release = true
-github_account = "irort"
 prefix = "1:"
+github_account = ["irort", "Zakkaus"]
 
 ["www-client/zen-browser-bin"]
 source = "github"
