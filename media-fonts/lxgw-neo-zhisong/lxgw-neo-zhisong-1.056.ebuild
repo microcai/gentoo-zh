@@ -23,6 +23,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~loong ~riscv ~x86"
 
 IUSE="+regular plus"
+REQUIRED_USE="|| ( regular plus )"
 
 FONT_SUFFIX="ttf"
 
