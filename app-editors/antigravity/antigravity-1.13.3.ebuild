@@ -59,7 +59,6 @@ RDEPEND="
 	net-misc/curl
 	net-print/cups
 	sys-apps/dbus
-	virtual/zlib:=
 	sys-process/lsof
 	x11-libs/cairo
 	x11-libs/gtk+:3
@@ -77,6 +76,7 @@ RDEPEND="
 	x11-libs/libXrandr
 	x11-libs/libXScrnSaver
 	x11-libs/pango
+	virtual/zlib:=
 	x11-misc/xdg-utils
 	kerberos? ( app-crypt/mit-krb5 )
 "
@@ -101,7 +101,7 @@ src_install() {
 	cd "${ANTIGRAVITY_HOME}" || die
 
 	# Cleanup
-	rm -r ./resources/app/ThirdPartyNotices.txt || die
+	rm ./resources/app/ThirdPartyNotices.txt || die
 
 	# Disable update server
 	sed -e "/updateUrl/d" -i ./resources/app/product.json || die
@@ -113,7 +113,7 @@ src_install() {
 	# Install main application
 	pax-mark m antigravity
 	mkdir -p "${ED}/opt/${PN}" || die
-	cp -r . "${ED}/opt/${PN}" || die
+	cp -a . "${ED}/opt/${PN}" || die
 	fperms 4711 /opt/${PN}/chrome-sandbox
 
 	dosym -r "/opt/${PN}/antigravity" "usr/bin/antigravity"
@@ -142,14 +142,9 @@ src_install() {
 		domenu "${T}/antigravity-url-handler.desktop"
 	fi
 
-	# Install icons at multiple sizes (deb provides 1024x1024 PNG)
+	# Install icon
 	if [[ -f usr/share/pixmaps/antigravity.png ]]; then
-		local size
-		for size in 16 24 32 48 64 128 256 512; do
-			newicon -s "${size}" usr/share/pixmaps/antigravity.png antigravity.png
-		done
-		# Also install the original high-res icon
-		newicon -s 1024 usr/share/pixmaps/antigravity.png antigravity.png
+		doicon usr/share/pixmaps/antigravity.png
 	fi
 
 	# Install metainfo if available
