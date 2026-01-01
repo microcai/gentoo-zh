@@ -46,7 +46,9 @@ DEPEND="
 	x11-libs/libXScrnSaver
 	x11-libs/libxshmfence
 	x11-libs/libXtst
-	x11-libs/pango"
+	x11-libs/pango
+	!sci-electronics/lceda-pro:0
+	"
 RDEPEND="${DEPEND}"
 BDEPEND="app-arch/unzip"
 RESTRICT="mirror"
