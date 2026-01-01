@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-01 16:39:12 CST)
+(The last generation time: 2026-01-01 20:51:06 CST)
 
 ### Packages
 
@@ -18,10 +18,9 @@
  app-admin/1password                                   | 8.11.22            |            | https://1password.com                                                                   | Password manager and secure wallet
    acct-group/onepassword                              | 0-r1               |  D, RD     |                                                                                         | Password manager and secure wallet
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/chezmoi                                     | 2.66.2             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
-                                                       | 2.68.0             |            |                                                                                         |
+ app-admin/chezmoi                                     | 2.68.1             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/chezmoi-bin                                 | 2.68.0             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
+ app-admin/chezmoi-bin                                 | 2.68.1             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/enpass                                      | 6.10.1.1661        |            | https://www.enpass.io                                                                   | A cross-platform, complete password management solution.
                                                        | 6.11.12.1953       |            |                                                                                         |
