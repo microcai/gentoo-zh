@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-01 05:23:04 CST)
+(The last generation time: 2026-01-01 16:39:12 CST)
 
 ### Packages
 
@@ -352,7 +352,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/zprint-bin                                   | 1.3.0              |            | https://github.com/kkinnear/zprint                                                      | Clojure and Clojurescript source code formatter
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/gitoxide                                      | 0.48.0             |            | https://github.com/GitoxideLabs/gitoxide                                                | A command-line application for interacting with git repositories
+ dev-vcs/gitoxide                                      | 0.49.0             |            | https://github.com/GitoxideLabs/gitoxide                                                | A command-line application for interacting with git repositories
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/sourcegit-bin                                 | 2025.40            |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
