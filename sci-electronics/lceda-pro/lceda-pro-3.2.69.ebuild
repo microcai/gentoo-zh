@@ -65,6 +65,11 @@ QA_PREBUILT="
 	/opt/lceda-pro/libvulkan.so.1
 "
 
+src_unpack(){
+	export LANG=C.UTF-8
+	unpack ${A}
+}
+
 src_install(){
 	insinto /opt/lceda-pro
 	doins -r .
