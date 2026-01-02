@@ -1342,12 +1342,6 @@ url = "https://www.todesk.com/linux.html"
 regex = "todesk-v(.*)-amd64.deb"
 github_account = "microcai"
 
-["net-misc/uuplugin"]
-source = "aur"
-aur = "uuplugin-bin"
-strip_release = true
-github_account = "st0nie"
-
 # live package only
 #["net-p2p/amule-dlp"]
 
