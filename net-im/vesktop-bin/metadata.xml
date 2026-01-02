@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>admin@zakk.au</email>
+		<name>zakkaus</name>
+	</maintainer>
+	<use>
+		<flag name="seccomp">Enable seccomp sandbox (recommended for security)</flag>
+		<flag name="wayland">Enable Wayland support when running under Wayland sessions</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">Vencord/Vesktop</remote-id>
+	</upstream>
+</pkgmetadata>
