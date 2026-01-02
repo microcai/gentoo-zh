@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-03 03:50:07 CST)
+(The last generation time: 2026-01-03 04:03:42 CST)
 
 ### Packages
 
@@ -634,9 +634,6 @@
  net-misc/todesk                                       | 4.1.0              |            | https://www.todesk.com/                                                                 | ToDesk不一样的远控体验，轻松打破物理限制，随时随地高效使用所有计算终端
                                                        | 4.7.2.0-r1         |            |                                                                                         |
                                                        | 4.8.1.0            |            |                                                                                         |
--------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/uuplugin                                     | 4.14.4             |            | https://uu.163.com/                                                                     | UU Game Accelerator for Linux
-                                                       | 7.12.12            |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-p2p/amule-dlp-antileech                           | 9999               |            | https://github.com/persmule/amule-dlp.antileech                                         | , dynamic DLP library for amule-dlp
    net-p2p/amule-dlp                                   | 9999               | RD         | https://github.com/persmule/amule-dlp                                                   | aMule with DLP patch, the all-platform eMule p2p client
