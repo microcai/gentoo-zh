@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-01 22:00:11 CST)
+(The last generation time: 2026-01-02 16:08:02 CST)
 
 ### Packages
 
@@ -359,9 +359,9 @@
                                                        | 1.20.12            |            |                                                                                         |
                                                        | 1.21.0             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- games-arcade/osu-lazer-bin                            | 2025.1209.0        |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away!
-                                                       | 2025.1218.0        |            |                                                                                         |
+ games-arcade/osu-lazer-bin                            | 2025.1218.0        |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away!
                                                        | 2025.1229.0        |            |                                                                                         |
+                                                       | 2026.102.0         |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-emulation/conty                                 | 1.27.1             |            | https://github.com/Kron4ek/Conty                                                        | SquashFS image of Arch Linux with: Lutris, Steam, Bottles, Wine...
                                                        | 1.28               |            |                                                                                         |
