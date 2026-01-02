@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>llyy@sipeed.com</email>
+        <name>semes</name>
+    </maintainer>
+    <upstream>
+        <maintainer status="active">
+            <email>support@sipeed.com</email>
+            <name>Sipeed</name>
+        </maintainer>
+    </upstream>
+</pkgmetadata>
