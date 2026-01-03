@@ -1,4 +1,4 @@
-# Copyright 2022-2025 Gentoo Authors
+# Copyright 2022-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -20,7 +20,7 @@ SRC_URI+="
 
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~loong"
+KEYWORDS="~amd64 ~arm64 ~loong"
 IUSE="xray"
 
 RDEPEND="
@@ -39,7 +39,7 @@ src_compile() {
 
 	cd "${S}/service" || die
 	ego build -tags "with_gvisor" \
-		-ldflags "-X github.com/v2rayA/v2rayA/conf.Version=${PV} -s -w" \
+		-ldflags "-X github.com/v2rayA/v2rayA/conf.Version=${PV}" \
 		-o v2raya -trimpath
 }
 
