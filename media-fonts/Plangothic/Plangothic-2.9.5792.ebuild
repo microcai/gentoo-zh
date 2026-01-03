@@ -1,4 +1,4 @@
-# Copyright 2023-2025 Gentoo Authors
+# Copyright 2023-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -16,6 +16,7 @@ LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+otf static web"
+REQUIRED_USE="|| ( otf static web )"
 
 FONT_SUFFIX="otf"
 
