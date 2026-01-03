@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-03 16:52:52 CST)
+(The last generation time: 2026-01-03 16:53:23 CST)
 
 ### Packages
 
@@ -406,7 +406,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  mate-base/caja-bin                                    | 1.28.0             |            | https://wiki.mate-desktop.org/mate-desktop/applications/caja                            | GUI file manager, fork of GNOME Files (Nautilus); supports SSH, FTP, WebDav
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/Plangothic                                | 2.9.5787           |            | https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project                  | 遍黑体项目（Plangothic Project）
+ media-fonts/Plangothic                                | 2.9.5792           |            | https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project                  | 遍黑体项目（Plangothic Project）
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/iansui                                    | 1.020              |            | https://github.com/ButTaiwan/iansui                                                     | An open-source Chinese font derived from Klee One (Fontworks).
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -416,9 +416,9 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/kose-font                                 | 3.126              |            | https://github.com/lxgw/kose-font                                                       | Kose Font (小赖字体) - An open-source Chinese font
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/lxgw-neo-xihei                            | 1.236              |            | https://github.com/lxgw/LxgwNeoXiHei                                                    | A Simplified Chinese sans-serif font derived from IPAex Gothic
+ media-fonts/lxgw-neo-xihei                            | 1.237              |            | https://github.com/lxgw/LxgwNeoXiHei                                                    | A Simplified Chinese sans-serif font derived from IPAex Gothic
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/lxgw-neo-zhisong                          | 1.056              |            | https://github.com/lxgw/LxgwNeoZhiSong                                                  | A Chinese serif font derived from IPAex Mincho and IPAmj Mincho
+ media-fonts/lxgw-neo-zhisong                          | 1.057              |            | https://github.com/lxgw/LxgwNeoZhiSong                                                  | A Chinese serif font derived from IPAex Mincho and IPAmj Mincho
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/misans                                    | 4.003-r1           |            | https://hyperos.mi.com/font                                                             | MiSans 是由小米主导,联合汉仪发布的可免费使用的字体
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
