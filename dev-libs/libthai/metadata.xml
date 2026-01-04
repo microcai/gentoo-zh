@@ -16,4 +16,10 @@
 	string supports. LibThai is an Open Source and collaborative effort
 	initiated by Thai Linux Working Group and opened for all contributors.
 	</longdescription>
+	<longdescription lang="zh">
+	LibThai 是一套泰语支持例程，旨在帮助开发人员在其应用程序中轻松集成泰语
+	支持。它包含重要的泰语特定功能，如分词、输入输出方法以及基本的字符和字符
+	串支持。LibThai 是由泰国 Linux 工作组发起的开源协作项目，欢迎所有贡献者
+	参与。
+	</longdescription>
 </pkgmetadata>
