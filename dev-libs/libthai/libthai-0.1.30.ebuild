@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -16,20 +16,28 @@ else
 	KEYWORDS="~amd64 ~arm ~arm64 ~riscv ~x86"
 fi
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1+"
 SLOT="0"
+IUSE="doc"
 
 RDEPEND="dev-libs/libdatrie"
 DEPEND="${RDEPEND}"
-BDEPEND="dev-vcs/git"
+BDEPEND="doc? ( app-text/doxygen )"
 
 src_prepare() {
 	default
 	# Fixed version if in non git project
 	echo ${PV} > VERSION
-	# From upstreams autogen.sh, to make it utilize the autotools eclass
-	# Fix html doc path
-	sed -i -e "s|share/doc/libthai/html|share/doc/libthai-${PV}/html|g" configure.ac || die
-	# use eautoreconf from autotools.eclass instead of autogen.sh
 	eautoreconf
+}
+
+src_configure() {
+	econf \
+		$(use_enable doc doxygen-doc) \
+		--with-html-docdir="${EPREFIX}"/usr/share/doc/${PF}/html
+}
+
+src_install() {
+	default
+	find "${ED}" -name '*.la' -delete || die
 }
