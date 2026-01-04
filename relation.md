@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-03 23:56:15 CST)
+(The last generation time: 2026-01-04 14:12:23 CST)
 
 ### Packages
 
@@ -544,8 +544,7 @@
      app-emulation/deepin-wine-plugin                  | 5.1.13-r1          |  D, RD     | https://www.deepin.org                                                                  | Deepin Wine plugin
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/dingtalk                                       | 7.8.15.5102301     |            | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
-   dev-libs/libthai                                    | 0.1.28             |  D, RD     | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
-                                                       | 0.1.29             |            |                                                                                         |
+   dev-libs/libthai                                    | 0.1.30             |  D, RD     | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
      dev-libs/libdatrie                                | 0.2.14             |  D, RD     | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
    dev-util/execstack                                  | 0_pre20130503      | BD         | https://people.redhat.com/jakub/prelink                                                 | set the executable stack flag of ELF binaries and libraries
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
