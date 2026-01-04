@@ -13,7 +13,11 @@ KEYWORDS="~amd64"
 
 RESTRICT="mirror"
 
-DEPEND=""
+DEPEND="dev-qt/qtxml:5
+dev-qt/qtwidgets:5
+dev-qt/qtnetwork:5
+"
+
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
@@ -22,10 +26,13 @@ inherit unpacker
 S="${WORKDIR}"
 
 src_unpack(){
-    unpack ${A}
-    unpack ${WORKDIR}/AT32_Work_Bench_Linux-x86_64_V${PV}.deb
+	unpack ${A}
+	unpack ${WORKDIR}/AT32_Work_Bench_Linux-x86_64_V${PV}.deb
 }
 
 src_install(){
-    tar -xvf ${WORKDIR}/data.tar.xz -C "$D"
+	tar -xvf ${WORKDIR}/data.tar.xz -C "$D"
+	pushd ${D}/usr/local/AT32_Work_Bench
+	rm libQt5*
+	rm platforms -rf
 }
