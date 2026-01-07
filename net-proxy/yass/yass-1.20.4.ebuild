@@ -83,7 +83,7 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}/${P}-fix-gcc15.patch"
+	"${FILESDIR}/${PN}-1.16.2-fix-gcc15.patch"
 )
 
 src_prepare() {
