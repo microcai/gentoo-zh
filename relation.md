@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-04 14:12:23 CST)
+(The last generation time: 2026-01-07 09:43:28 CST)
 
 ### Packages
 
@@ -327,8 +327,7 @@
  dev-util/codex                                        | 0.77.0             |            | https://github.com/openai/codex                                                         | Codex CLI - OpenAI's AI-powered coding agent
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/fvm                                          | 4.0.5              |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
-   dev-lang/dart                                       | 3.10.6             |  D, RD     | https://dart.dev                                                                        | The Dart SDK
-                                                       | 3.10.7             |            |                                                                                         |
+   dev-lang/dart                                       | 3.10.7             |  D, RD     | https://dart.dev                                                                        | The Dart SDK
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/gemini-cli                                   | 0.22.5             |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
