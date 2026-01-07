@@ -1,4 +1,4 @@
-# Copyright 2024-2025 Gentoo Authors
+# Copyright 2024-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -21,6 +21,8 @@ src_prepare() {
 }
 
 src_install() {
+	dobin bin/keyd
+	dobin bin/keyd-application-mapper
 
 	sed -e 's#@PREFIX@#/usr#' keyd.service.in > keyd.service || die
 	systemd_dounit keyd.service
@@ -31,6 +33,8 @@ src_install() {
 	doins -r data
 
 	dodoc docs/{CHANGELOG.md,DESIGN.md}
+	dodoc README.md
+	dodoc -r examples
 
 	insinto /etc/keyd
 	doins "${FILESDIR}"/default.conf
