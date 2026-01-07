@@ -1,4 +1,4 @@
-# Copyright 2025 Gentoo Authors
+# Copyright 2025-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -31,6 +31,7 @@ CRATES="
 	anstyle@1.0.11
 	anyhow@1.0.100
 	arboard@3.6.1
+	arc-swap@1.7.1
 	arrayvec@0.7.6
 	ascii-canvas@3.0.0
 	ascii@1.1.0
@@ -84,10 +85,10 @@ CRATES="
 	chrono@0.4.42
 	chunked_transfer@1.5.0
 	cipher@0.4.4
-	clap@4.5.47
-	clap_builder@4.5.47
-	clap_complete@4.5.57
-	clap_derive@4.5.47
+	clap@4.5.53
+	clap_builder@4.5.53
+	clap_complete@4.5.64
+	clap_derive@4.5.49
 	clap_lex@0.7.5
 	clipboard-win@5.4.1
 	cmp_any@0.8.1
@@ -96,10 +97,12 @@ CRATES="
 	colorchoice@1.0.4
 	combine@4.6.7
 	compact_str@0.8.1
+	compact_str@0.9.0
 	concurrent-queue@2.5.0
 	console@0.15.11
+	const-hex@1.17.0
+	convert_case@0.10.0
 	convert_case@0.6.0
-	convert_case@0.7.1
 	core-foundation-sys@0.8.7
 	core-foundation@0.10.1
 	core-foundation@0.9.4
@@ -134,9 +137,9 @@ CRATES="
 	deranged@0.5.4
 	derivative@2.2.0
 	derive_more-impl@1.0.0
-	derive_more-impl@2.0.1
+	derive_more-impl@2.1.1
 	derive_more@1.0.0
-	derive_more@2.0.1
+	derive_more@2.1.1
 	diff@0.1.13
 	difflib@0.4.0
 	diffy@0.4.2
@@ -149,6 +152,7 @@ CRATES="
 	display_container@0.9.0
 	displaydoc@0.2.5
 	doc-comment@0.3.3
+	document-features@0.2.12
 	dotenvy@0.15.7
 	downcast-rs@1.2.1
 	dtor-proc-macro@0.0.6
@@ -265,10 +269,9 @@ CRATES="
 	inotify-sys@0.1.5
 	inotify@0.11.0
 	inout@0.1.4
-	insta@1.44.3
+	insta@1.46.0
 	instability@0.3.9
 	inventory@0.3.20
-	io-uring@0.7.9
 	ipnet@2.11.0
 	iri-string@0.7.8
 	is-terminal@0.4.16
@@ -283,12 +286,13 @@ CRATES="
 	jni-sys@0.3.0
 	jni@0.21.1
 	js-sys@0.3.77
+	kasuari@0.4.11
 	keyring@3.6.3
 	kqueue-sys@1.0.4
 	kqueue@1.1.1
 	lalrpop-util@0.19.12
 	lalrpop@0.19.12
-	landlock@0.4.2
+	landlock@0.4.4
 	language-tags@0.3.2
 	lazy_static@1.5.0
 	libc@0.2.177
@@ -298,6 +302,7 @@ CRATES="
 	linux-raw-sys@0.4.15
 	linux-raw-sys@0.9.4
 	litemap@0.8.0
+	litrs@1.0.0
 	local-waker@0.1.4
 	lock_api@0.4.13
 	log@0.4.28
@@ -357,15 +362,15 @@ CRATES="
 	openssl-macros@0.1.1
 	openssl-probe@0.1.6
 	openssl-src@300.5.1+3.5.1
-	openssl-sys@0.9.109
+	openssl-sys@0.9.111
 	openssl@0.10.73
-	opentelemetry-appender-tracing@0.30.1
-	opentelemetry-http@0.30.0
-	opentelemetry-otlp@0.30.0
-	opentelemetry-proto@0.30.0
-	opentelemetry-semantic-conventions@0.30.0
-	opentelemetry@0.30.0
-	opentelemetry_sdk@0.30.0
+	opentelemetry-appender-tracing@0.31.1
+	opentelemetry-http@0.31.0
+	opentelemetry-otlp@0.31.0
+	opentelemetry-proto@0.31.0
+	opentelemetry-semantic-conventions@0.31.0
+	opentelemetry@0.31.0
+	opentelemetry_sdk@0.31.0
 	option-ext@0.2.0
 	ordered-stream@0.2.0
 	os_info@3.12.0
@@ -406,8 +411,9 @@ CRATES="
 	proc-macro-crate@3.4.0
 	proc-macro2@1.0.95
 	process-wrap@9.0.0
-	prost-derive@0.13.5
-	prost@0.13.5
+	proptest@1.9.0
+	prost-derive@0.14.1
+	prost@0.14.1
 	pulldown-cmark-escape@0.10.1
 	pulldown-cmark@0.10.3
 	pxfm@0.1.23
@@ -426,6 +432,8 @@ CRATES="
 	rand_chacha@0.9.0
 	rand_core@0.6.4
 	rand_core@0.9.3
+	rand_xorshift@0.4.0
+	ratatui-core@0.1.0
 	ratatui-macros@0.6.0
 	redox_syscall@0.5.15
 	redox_users@0.4.6
@@ -433,7 +441,7 @@ CRATES="
 	ref-cast-impl@1.0.24
 	ref-cast@1.0.24
 	regex-automata@0.4.13
-	regex-lite@0.1.7
+	regex-lite@0.1.8
 	regex-syntax@0.6.29
 	regex-syntax@0.8.5
 	regex@1.12.2
@@ -548,8 +556,8 @@ CRATES="
 	test-case-core@3.3.1
 	test-case-macros@3.3.1
 	test-case@3.3.1
-	test-log-macros@0.2.18
-	test-log@0.2.18
+	test-log-macros@0.2.19
+	test-log@0.2.19
 	textwrap@0.11.0
 	textwrap@0.16.2
 	thiserror-impl@1.0.69
@@ -566,20 +574,22 @@ CRATES="
 	tinystr@0.8.1
 	tinyvec@1.10.0
 	tinyvec_macros@0.1.1
-	tokio-macros@2.5.0
+	tokio-macros@2.6.0
 	tokio-native-tls@0.3.1
 	tokio-rustls@0.26.2
-	tokio-stream@0.1.17
+	tokio-stream@0.1.18
 	tokio-test@0.4.4
 	tokio-util@0.7.16
-	tokio@1.47.1
+	tokio@1.48.0
 	toml@0.5.11
 	toml@0.9.5
-	toml_datetime@0.7.3
-	toml_edit@0.23.7
-	toml_parser@1.0.4
-	toml_writer@1.0.4
-	tonic@0.13.1
+	toml_datetime@0.7.5+spec-1.1.0
+	toml_edit@0.23.10+spec-1.0.0
+	toml_edit@0.24.0+spec-1.1.0
+	toml_parser@1.0.6+spec-1.1.0
+	toml_writer@1.0.6+spec-1.1.0
+	tonic-prost@0.14.2
+	tonic@0.14.2
 	tower-http@0.6.6
 	tower-layer@0.3.3
 	tower-service@0.3.3
@@ -589,8 +599,8 @@ CRATES="
 	tracing-core@0.1.35
 	tracing-error@0.2.1
 	tracing-log@0.2.0
-	tracing-opentelemetry@0.31.0
-	tracing-subscriber@0.3.20
+	tracing-opentelemetry@0.32.0
+	tracing-subscriber@0.3.22
 	tracing-test-macro@0.2.5
 	tracing-test@0.2.5
 	tracing@0.1.43
@@ -602,14 +612,17 @@ CRATES="
 	try-lock@0.2.5
 	ts-rs-macros@11.0.1
 	ts-rs@11.0.1
+	tui-scrollbar@0.2.1
 	typenum@1.18.0
 	uds_windows@1.1.0
 	uname@0.1.1
+	unarray@0.1.4
 	unicase@2.8.1
 	unicode-ident@1.0.18
 	unicode-linebreak@0.1.5
 	unicode-segmentation@1.12.0
 	unicode-truncate@1.1.0
+	unicode-truncate@2.0.0
 	unicode-width@0.1.14
 	unicode-width@0.2.1
 	unicode-xid@0.2.6
@@ -720,6 +733,7 @@ CRATES="
 	winreg@0.10.1
 	winres@0.1.12
 	winsafe@0.0.19
+	winsplit@0.1.0
 	wiremock@0.6.5
 	wit-bindgen-rt@0.39.0
 	wl-clipboard-rs@0.9.2
@@ -772,7 +786,7 @@ S="${WORKDIR}/${PN}-rust-v${PV}/codex-rs"
 
 LICENSE="Apache-2.0"
 # Dependent crate licenses
-LICENSE+=" Apache-2.0 BSD ISC MIT MPL-2.0 Unicode-3.0 Unlicense ZLIB"
+LICENSE+=" Apache-2.0 BSD BSD-2 Boost-1.0 CC0-1.0 CDLA-Permissive-2.0 ISC MIT MPL-2.0 Unicode-3.0 Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 # Tests fail due to ring crate conflicts with system OpenSSL
