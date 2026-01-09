@@ -83,6 +83,7 @@ BDEPEND="
 "
 
 PATCHES=(
+	"${FILESDIR}/${PN}-1.20.4-use-system-mbedtls.patch"
 	"${FILESDIR}/${PN}-1.16.2-fix-gcc15.patch"
 )
 

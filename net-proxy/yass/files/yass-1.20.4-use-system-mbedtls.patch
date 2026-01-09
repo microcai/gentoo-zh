@@ -1,0 +1,57 @@
+From 4be95303834b55815027320f99edb7e773cdc399 Mon Sep 17 00:00:00 2001
+From: Keyue Hu <hukeyue@vip.163.com>
+Date: Fri, 9 Jan 2026 13:26:01 +0800
+Subject: [PATCH] mbedtls: use mbedcrypto-3 library as fallback
+
+---
+ CMakeLists.txt | 22 ++++++++++++++++------
+ 1 file changed, 16 insertions(+), 6 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 9c7393cf..8fae9fc6 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -3065,13 +3065,20 @@ set(SUPPORT_LIBS modp_b64 ${SUPPORT_LIBS})
+ if (USE_SYSTEM_MBEDTLS)
+   find_package(PkgConfig)
+   if (PKG_CONFIG_FOUND)
++    # IMPORTED_TARGET require cmake 3.6
++    pkg_check_modules(MBEDCRYPTO_3 mbedcrypto-3 IMPORTED_TARGET)
++  endif()
++  if (PKG_CONFIG_FOUND AND NOT MBEDCRYPTO_3_FOUND)
+     # IMPORTED_TARGET require cmake 3.6
+     pkg_check_modules(MBEDCRYPTO mbedcrypto IMPORTED_TARGET)
+   endif()
+-  if(NOT MBEDCRYPTO_FOUND)
+-    check_library_exists(mbedcrypto mbedtls_cipher_init "" HAVE_SYSTEM_MBEDTLS)
++  if (NOT MBEDCRYPTO_3_FOUND AND NOT MBEDCRYPTO_FOUND)
++    check_library_exists(mbedcrypto-3 mbedtls_cipher_init "" HAVE_SYSTEM_MBEDTLS_3)
++  endif()
++  if (NOT MBEDCRYPTO_3_FOUND AND NOT MBEDCRYPTO_FOUND AND NOT HAVE_SYSTEM_MBEDTLS_3)
++    check_library_exists(mbedcrypto mbedtls_cipher_init "" HAVE_SYSTEM_MBEDTLS_DEFAULT)
+   endif()
+-  if (NOT MBEDCRYPTO_FOUND AND NOT HAVE_SYSTEM_MBEDTLS)
++  if (NOT MBEDCRYPTO_3_FOUND AND NOT MBEDCRYPTO_FOUND AND NOT HAVE_SYSTEM_MBEDTLS_3 AND NOT HAVE_SYSTEM_MBEDTLS_DEFAULT)
+     message(STATUS "System mbedtls not found, using bundled one")
+     set(USE_SYSTEM_MBEDTLS FALSE)
+   endif()
+@@ -3084,10 +3091,13 @@ if (USE_SYSTEM_MBEDTLS)
+     HAVE_MBEDTLS
+     ${SUPPORT_DEFINITIONS}
+   )
+-
+-  if (MBEDCRYPTO_FOUND)
++  if (MBEDCRYPTO_3_FOUND)
++    set(SUPPORT_LIBS PkgConfig::MBEDCRYPTO_3 ${SUPPORT_LIBS})
++  elseif (MBEDCRYPTO_FOUND)
+     set(SUPPORT_LIBS PkgConfig::MBEDCRYPTO ${SUPPORT_LIBS})
+-  else()
++  elseif(HAVE_SYSTEM_MBEDTLS_3)
++    set(SUPPORT_LIBS mbedcrypto-3 ${SUPPORT_LIBS})
++  elseif(HAVE_SYSTEM_MBEDTLS_DEFAULT)
+     set(SUPPORT_LIBS mbedcrypto ${SUPPORT_LIBS})
+   endif()
+ elseif (USE_MBEDTLS)
+-- 
+2.52.0
+
