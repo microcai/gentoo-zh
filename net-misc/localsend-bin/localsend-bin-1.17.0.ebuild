@@ -8,12 +8,15 @@ inherit desktop
 MY_PN="${PN%-bin}"
 DESCRIPTION="An open-source cross-platform alternative to AirDrop"
 HOMEPAGE="https://localsend.org"
-SRC_URI="https://github.com/${MY_PN}/${MY_PN}/releases/download/v${PV}/${MY_PN}-${PV}-linux-x86-64.tar.gz"
+SRC_URI="
+	amd64? ( https://github.com/${MY_PN}/${MY_PN}/releases/download/v${PV}/${MY_PN}-${PV}-linux-x86-64.tar.gz )
+	arm64? ( https://github.com/${MY_PN}/${MY_PN}/releases/download/v${PV}/${MY_PN}-${PV}-linux-arm-64.tar.gz )
+"
 S="${WORKDIR}"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64"
 
 RESTRICT="bindist"
 
