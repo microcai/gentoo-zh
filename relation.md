@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-10 05:31:44 CST)
+(The last generation time: 2026-01-10 05:32:07 CST)
 
 ### Packages
 
@@ -52,7 +52,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/appflowy-bin                              | 0.10.8             |            | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/cursor                                    | 2.3.21             |            | https://www.cursor.com/                                                                 | Cursor App - AI-first coding environment
+ app-editors/cursor                                    | 2.3.29             |            | https://www.cursor.com/                                                                 | Cursor App - AI-first coding environment
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/edit                                      | 1.1.0              |            | https://github.com/microsoft/edit                                                       | Microsoft edit
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -550,6 +550,7 @@
  net-im/kotatogram-bin                                 | 1.4.9              |            | https://thatcat.space/kotatogram                                                        | Telegram Desktop fork with wide messages, local folders, square avatars
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/tencent-qq                                     | 3.2.22_p251203-r1  |            | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
+                                                       | 3.2.23_p260108     |            |                                                                                         |
    media-libs/openslide                                | 4.0.0              | RD         | https://openslide.org/                                                                  | A C library that provides a simple interface to read whole-slide images
      media-libs/libdicom                               | 1.2.0              |  D, RD     | https://libdicom.readthedocs.io/                                                        | A C library and a set of command-line tools for reading DICOM WSI files
    virtual/loong-ow-compat                             | 0                  | RD         |                                                                                         | Virtual for LoongArch old-world compatibility
