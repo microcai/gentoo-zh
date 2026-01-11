@@ -10,11 +10,14 @@ DESCRIPTION="Based on the Bilibli offcial client to linux version, support roami
 HOMEPAGE="https://github.com/msojocs/bilibili-linux"
 BASE_URI="https://github.com/msojocs/bilibili-linux/releases/download/v${MY_PV}"
 FPN="io.github.msojocs.${PN}"
-SRC_URI="${BASE_URI}/${FPN}_${MY_PV}_amd64.deb"
+SRC_URI="
+	amd64? ( ${BASE_URI}/${FPN}_${MY_PV}_amd64.deb )
+	arm64? ( ${BASE_URI}/${FPN}_${MY_PV}_arm64.deb )
+"
 S="${WORKDIR}"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~amd64 ~arm64"
 
 IUSE="wayland"
 
