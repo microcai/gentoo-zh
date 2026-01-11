@@ -1,4 +1,4 @@
-# Copyright 2025 Gentoo Authors
+# Copyright 2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -9,29 +9,32 @@ DESCRIPTION="A new multiboot USB solution"
 HOMEPAGE="http://www.ventoy.net"
 SRC_URI="https://github.com/ventoy/Ventoy/releases/download/v${PV}/ventoy-${PV}-linux.tar.gz"
 
-S=${WORKDIR}/ventoy-${PV}
+S="${WORKDIR}"/ventoy-${PV}
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="+qt5 +gtk"
-
 RESTRICT="strip mirror"
 
-DEPEND="
-	sys-fs/dosfstools
-	sys-fs/exfat-utils
-	sys-block/parted
-"
 RDEPEND="
-	${DEPEND}
-	qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 )
-	gtk? ( x11-libs/gtk+:3 )
+	app-accessibility/at-spi2-core:2
+	dev-libs/glib:2
+	sys-fs/dosfstools
+	|| ( sys-fs/exfatprogs sys-fs/exfat-utils )
+	sys-fs/fuse-exfat
+	sys-block/parted
+	x11-libs/cairo
+	x11-libs/gdk-pixbuf:2
+	x11-libs/gtk+:3
+	x11-libs/pango
 "
+# sys-fs/fuse-exfat is needed for mount, without it:
+# mount: /mnt: unknown filesystem type 'exfat'
+
+QA_PREBUILT="*" # Against "does not respect LDFLAGS"
 
 CARCH="x86_64"
-
-QA_PREBUILT="*"
 
 src_prepare() {
 	# Decompress tools
@@ -59,15 +62,6 @@ src_prepare() {
 	for binary in xzcat hexdump; do
 		rm -fv tool/$CARCH/$binary || die
 	done
-
-	# Exclude optional GUI binaries
-	if ! use qt5; then
-		rm -fv tool/$CARCH/Ventoy2Disk.qt5 || die
-	fi
-	if ! use gtk; then
-		rm -fv tool/$CARCH/Ventoy2Disk.gtk3 || die
-	fi
-
 	default
 }
 
@@ -99,4 +93,5 @@ src_install() {
 	dobin "${FILESDIR}"/ventoy{,gui,web,plugson,-{,extend-}persistent}
 
 	rm "${D}"/opt/ventoy/tool/x86_64/Ventoy2Disk.gtk2 || die
+	rm "${D}"/opt/ventoy/tool/x86_64/Ventoy2Disk.qt5 || die
 }
