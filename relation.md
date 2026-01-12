@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-11 04:08:24 CST)
+(The last generation time: 2026-01-12 17:39:26 CST)
 
 ### Packages
 
@@ -392,7 +392,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  gnome-extra/gnome-shell-extension-clipboard-indicator | 48                 |            | https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator                    | The most popular clipboard manager for GNOME, with over 1M downloads
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- gnome-extra/nautilus-open-any-terminal                | 0.7.0              |            | https://github.com/Stunkymonkey/nautilus-open-any-terminal                              | context-menu entry for opening other terminal in nautilus
+ gnome-extra/nautilus-open-any-terminal                | 0.8.0              |            | https://github.com/Stunkymonkey/nautilus-open-any-terminal                              | context-menu entry for opening other terminal in nautilus
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  gnome-extra/resources                                 | 1.9.1              |            | https://github.com/nokyan/resources                                                     | Keep an eye on system resources
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
