@@ -103,11 +103,6 @@ github = "AppFlowy-IO/AppFlowy"
 use_latest_release = true
 github_account = "Linerre"
 
-["app-editors/cursor"]
-source = "regex"
-url = "https://www.cursor.com/api/download?platform=linux-x64&releaseTrack=latest"
-regex = '"version":"([\d.]+)"'
-
 ["app-misc/cursor-agent"]
 source = "regex"
 url = "https://cursor.com/install"
