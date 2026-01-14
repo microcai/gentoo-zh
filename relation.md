@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-14 14:41:09 CST)
+(The last generation time: 2026-01-14 14:50:21 CST)
 
 ### Packages
 
@@ -36,7 +36,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-containers/distrobox-boost                        | 9999               |            | https://github.com/xz-dev/distrobox-boost                                               | A container runtimer wrapper for OCI (distrobox/toolbox, also podman/docker)
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-custom-pinyin-dictionary       | 20250101           |            | https://github.com/wuhgit/CustomPinyinDictionary                                        | Fcitx5 自建拼音输入法词库，百万常用词汇量。
+ app-dicts/fcitx-pinyin-custom-pinyin-dictionary       | 20260101           |            | https://github.com/wuhgit/CustomPinyinDictionary                                        | Fcitx5 自建拼音输入法词库，百万常用词汇量。
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-moegirl                        | 20250711           |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
                                                        | 20250810           |            |                                                                                         |
