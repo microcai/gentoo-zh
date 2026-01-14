@@ -10,14 +10,15 @@ CHROMIUM_LANGS="af am ar bg bn ca cs da de el en-GB es es-419 et fa fi fil fr gu
 inherit chromium-2 desktop optfeature pax-utils unpacker xdg shell-completion
 
 # Build timestamps and hashes from Google APT repo:
-# curl -s "https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/dists/antigravity-debian/main/binary-amd64/Packages" | \
-#   grep -A2 "Version: ${PV}-" | grep -E "Version|MD5sum"
-# curl -s "https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/dists/antigravity-debian/main/binary-arm64/Packages" | \
-#   grep -A2 "Version: ${PV}-" | grep -E "Version|MD5sum"
-BUILD_TS_AMD64="1766182170"
-BUILD_TS_ARM64="1766182168"
-HASH_AMD64="365061c50063f9bd47a9ff88432261b8"
-HASH_ARM64="940bc88042cadeaee51d9b1eedf6a506"
+# Replace ${PV} with actual version number when running these commands
+# amd64:
+# PV="1.14.2" && curl -s "https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/dists/antigravity-debian/main/binary-amd64/Packages" | grep -A15 "Version: ${PV}-" | grep -E "Version|Filename|MD5sum"
+# arm64:
+# PV="1.14.2" && curl -s "https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/dists/antigravity-debian/main/binary-arm64/Packages" | grep -A15 "Version: ${PV}-" | grep -E "Version|Filename|MD5sum"
+BUILD_TS_AMD64="1768287740"
+BUILD_TS_ARM64="1768287742"
+HASH_AMD64="5527204873323b09e7e6bc003cf22f91"
+HASH_ARM64="fa871f81c5b4e1b343589341d279a64c"
 
 DESCRIPTION="Google Antigravity - AI-powered code editor"
 HOMEPAGE="https://antigravity.google/"
