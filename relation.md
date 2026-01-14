@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-14 08:42:58 CST)
+(The last generation time: 2026-01-14 11:17:15 CST)
 
 ### Packages
 
@@ -671,6 +671,7 @@
  net-proxy/flclash-bin                                 | 0.8.91             |            | https://github.com/chen08209/FlClash                                                    | A multi-platform proxy client based on ClashMeta
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/hysteria                                    | 2.6.5-r2           |            | https://github.com/apernet/hysteria                                                     | A powerful, lightning fast and censorship resistant proxy.
+                                                       | 2.7.0              |            |                                                                                         |
    acct-group/hysteria                                 | 0                  |  D, RD     |                                                                                         | A powerful, lightning fast and censorship resistant proxy.
    acct-user/hysteria                                  | 0                  |  D, RD     |                                                                                         | A powerful, lightning fast and censorship resistant proxy.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
