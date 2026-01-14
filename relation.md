@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-14 19:15:34 CST)
+(The last generation time: 2026-01-15 00:12:30 CST)
 
 ### Packages
 
@@ -46,7 +46,7 @@
    app-text/imewlconverter                             | 3.2.0              | BD         | https://github.com/studyzy/imewlconverter                                               | An open source and free input method dictionary conversion program
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-zhwiki                         | 0.2.5.20250731     |            | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
+ app-dicts/fcitx-pinyin-zhwiki                         | 0.3.0.20251223     |            | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/antigravity                               | 1.13.3             |            | https://antigravity.google/                                                             | Google Antigravity - AI-powered code editor
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
