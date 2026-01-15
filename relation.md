@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-15 16:35:38 CST)
+(The last generation time: 2026-01-15 19:31:01 CST)
 
 ### Packages
 
@@ -415,7 +415,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/kose-font                                 | 3.126              |            | https://github.com/lxgw/kose-font                                                       | Kose Font (小赖字体) - An open-source Chinese font
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-fonts/lxgw-neo-xihei                            | 1.238              |            | https://github.com/lxgw/LxgwNeoXiHei                                                    | A Simplified Chinese sans-serif font derived from IPAex Gothic
+ media-fonts/lxgw-neo-xihei                            | 1.239              |            | https://github.com/lxgw/LxgwNeoXiHei                                                    | A Simplified Chinese sans-serif font derived from IPAex Gothic
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-fonts/lxgw-neo-zhisong                          | 1.058              |            | https://github.com/lxgw/LxgwNeoZhiSong                                                  | A Chinese serif font derived from IPAex Mincho and IPAmj Mincho
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
