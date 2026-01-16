@@ -90,6 +90,10 @@ src_install() {
 	# Rename docs directory to our needs.
 	mv usr/share/doc/${MY_PN} usr/share/doc/${PF} || die
 
+	# Remove unnecessary .desktop file and empty directory
+	rm -r usr/share/doc/${MY_PN}-stable || die
+	rm usr/share/applications/com.brave.Browser.desktop || die
+
 	# Decompress the docs.
 	gzip -d usr/share/doc/${PF}/changelog.gz || die
 	gzip -d usr/share/man/man1/${MY_PN}-stable.1.gz || die
