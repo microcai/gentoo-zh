@@ -14,7 +14,8 @@ DESCRIPTION="The universal proxy platform."
 HOMEPAGE="https://sing-box.sagernet.org/ https://github.com/SagerNet/sing-box"
 SRC_URI="
 	https://github.com/SagerNet/sing-box/archive/refs/tags/v${_PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/gentoo-zh-drafts/sing-box/releases/download/v${_PV}/${PN}-${_PV}-vendor.tar.xz
+	naive? ( https://github.com/gentoo-zh-drafts/sing-box/releases/download/v${_PV}/${PN}-${_PV}-vendor.tar.xz )
+	!naive? ( https://github.com/gentoo-zh-drafts/sing-box/releases/download/v${_PV}/${PN}-${_PV}-vendor-without-naive.tar.xz )
 "
 
 S="${WORKDIR}/${PN}-${_PV}"
@@ -23,7 +24,7 @@ LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS=""
 
-IUSE="+quic grpc +dhcp +wireguard +utls +acme +clash-api v2ray-api +gvisor tor +tailscale"
+IUSE="+quic grpc +dhcp +wireguard +utls +acme +clash-api v2ray-api +gvisor tor +tailscale naive"
 
 RDEPEND="
 	acct-group/${PN}
@@ -43,6 +44,7 @@ src_compile() {
 	use gvisor && mytags+="with_gvisor,"
 	use tor && mytags+="with_embedded_tor,"
 	use tailscale && mytags+="with_tailscale,"
+	use naive && mytags+="with_purego,with_naive_outbound,"
 
 	ego build -tags "${mytags%,}" \
 		-ldflags "-X 'github.com/sagernet/sing-box/constant.Version=${PV}'" \
