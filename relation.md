@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-18 00:56:19 CST)
+(The last generation time: 2026-01-18 00:57:00 CST)
 
 ### Packages
 
@@ -18,9 +18,9 @@
  app-admin/1password                                   | 8.11.22            |            | https://1password.com                                                                   | Password manager and secure wallet
    acct-group/onepassword                              | 0-r1               |  D, RD     |                                                                                         | Password manager and secure wallet
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/chezmoi                                     | 2.68.1             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
+ app-admin/chezmoi                                     | 2.69.3             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-admin/chezmoi-bin                                 | 2.68.1             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
+ app-admin/chezmoi-bin                                 | 2.69.3             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/enpass                                      | 6.10.1.1661        |            | https://www.enpass.io                                                                   | A cross-platform, complete password management solution.
                                                        | 6.11.12.1953       |            |                                                                                         |
@@ -797,7 +797,7 @@
    dev-libs/v2ray-geoip                                | 202507050144       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                            | 202512201334       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                            | 1.7.8              |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                            | 1.7.13             |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/dufs                                         | 0.45.0             |            | https://github.com/sigoden/dufs                                                         | A distinctive utility file server
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
