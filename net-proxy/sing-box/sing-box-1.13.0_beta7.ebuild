@@ -1,4 +1,4 @@
-# Copyright 2024-2025 Gentoo Authors
+# Copyright 2024-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -14,16 +14,16 @@ DESCRIPTION="The universal proxy platform."
 HOMEPAGE="https://sing-box.sagernet.org/ https://github.com/SagerNet/sing-box"
 SRC_URI="
 	https://github.com/SagerNet/sing-box/archive/refs/tags/v${_PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/gentoo-zh-drafts/sing-box/releases/download/v${_PV}/${PN}-${_PV}-vendor.tar.xz
+	naive? ( https://github.com/gentoo-zh-drafts/sing-box/releases/download/v${_PV}/${PN}-${_PV}-vendor.tar.xz )
+	!naive? ( https://github.com/gentoo-zh-drafts/sing-box/releases/download/v${_PV}/${PN}-${_PV}-vendor-without-naive.tar.xz )
 "
 
 S="${WORKDIR}/${PN}-${_PV}"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS=""
 
-IUSE="+quic grpc +dhcp +wireguard +utls +acme +clash-api v2ray-api +gvisor tor +tailscale"
+IUSE="+quic grpc +dhcp +wireguard +utls +acme +clash-api v2ray-api +gvisor tor +tailscale naive"
 
 RDEPEND="
 	acct-group/${PN}
@@ -43,12 +43,13 @@ src_compile() {
 	use gvisor && mytags+="with_gvisor,"
 	use tor && mytags+="with_embedded_tor,"
 	use tailscale && mytags+="with_tailscale,"
+	use naive && mytags+="with_purego,with_naive_outbound,"
 
 	ego build -tags "${mytags%,}" \
 		-ldflags "-X 'github.com/sagernet/sing-box/constant.Version=${PV}'" \
 		./cmd/sing-box
 
-	mkdir -v completions
+	mkdir completions
 	./sing-box completion bash > completions/sing-box
 	./sing-box completion fish > completions/sing-box.fish
 	./sing-box completion zsh > completions/_sing-box
@@ -60,7 +61,7 @@ src_install() {
 	insinto /etc/sing-box
 	newins release/config/config.json config.json.example
 
-	doinitd release/config/sing-box.initd
+	newinitd release/config/sing-box.initd sing-box
 	systemd_dounit release/config/sing-box{,@}.service
 
 	insinto /usr/share/dbus-1/system.d

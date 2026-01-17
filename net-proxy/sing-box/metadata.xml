@@ -24,5 +24,6 @@
 		<flag name="gvisor">Build with gVisor support</flag>
 		<flag name="tor">Build with embedded Tor support</flag>
 		<flag name="tailscale">Build with Tailscale support</flag>
+		<flag name="naive">Build with NaiveProxy outbound support</flag>
 	</use>
 </pkgmetadata>
