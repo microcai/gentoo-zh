@@ -1,4 +1,4 @@
-# Copyright 2025 Gentoo Authors
+# Copyright 2025-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -46,7 +46,7 @@ src_prepare() {
 	popd || die
 
 	# Apply sanitize patch
-	eapply -p0 "${FILESDIR}/sanitize.patch"
+	eapply -p1 "${FILESDIR}/sanitize.patch"
 
 	# Log location
 	sed -i 's|log\.txt|/var/log/ventoy.log|g' WebUI/static/js/languages.js tool/languages.json || die
