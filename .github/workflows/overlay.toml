@@ -103,10 +103,6 @@ github = "AppFlowy-IO/AppFlowy"
 use_latest_release = true
 github_account = "Linerre"
 
-["app-misc/cursor-agent"]
-source = "regex"
-url = "https://cursor.com/install"
-regex = 'https:\/\/downloads\.cursor\.com\/lab\/(\d{4}\.\d{2}\.\d{2})-[^\/]+\/'
 
 ["dev-lang/dart"]
 source = "apt"
