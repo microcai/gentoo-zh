@@ -630,6 +630,11 @@ use_latest_release = true
 prefix = "v"
 github_account = "wgjak47"
 
+["dev-python/microrepl"]
+source = "pypi"
+pypi = "microrepl"
+github_account = "blackteahamburger"
+
 ["dev-python/mw2fcitx"]
 source = "pypi"
 pypi = "mw2fcitx"
