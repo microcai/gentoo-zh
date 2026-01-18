@@ -3,10 +3,11 @@
 
 EAPI=8
 
-DOTNET_PKG_COMPAT="8.0"
+DOTNET_PKG_COMPAT="9.0"
 NUGETS="
 	sharpziplib@1.4.2
 	utf.unknown@2.5.1
+	minver@5.0.0
 "
 
 inherit dotnet-pkg
@@ -40,7 +41,9 @@ src_unpack() {
 }
 
 src_prepare() {
-	sed -i -E "s|<Version>.+</Version>|<Version>${PV}</Version>|" src/ImeWlConverterCmd/ImeWlConverterCmd.csproj || die
+	# not working, see https://github.com/studyzy/imewlconverter/issues/371
+	sed -i -E "s|<MinVerMinimumVersion>.+</MinVerMinimumVersion>|<MinVerMinimumVersion>${PV}</MinVerMinimumVersion>|" \
+		src/Directory.Build.props || die
 	sed -i -e 's/dotnet ImeWlConverterCmd.dll/ImeWlConverterCmd/g' src/ImeWlConverterCmd/Program.cs || die
 
 	dotnet-pkg_src_prepare
