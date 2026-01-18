@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-18 01:00:43 CST)
+(The last generation time: 2026-01-19 01:41:14 CST)
 
 ### Packages
 
@@ -38,12 +38,11 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-custom-pinyin-dictionary       | 20260101           |            | https://github.com/wuhgit/CustomPinyinDictionary                                        | Fcitx5 自建拼音输入法词库，百万常用词汇量。
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-moegirl                        | 20250711           |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
-                                                       | 20250810           |            |                                                                                         |
+ app-dicts/fcitx-pinyin-moegirl                        | 20260109           |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-sougou-baidu                   | 20250720           |            | https://github.com/blackteahamburger/fcitx5-pinyin-sougou-baidu                         | Sougou & Baidu Pinyin dictionary for Fcitx5 and RIME
+ app-dicts/fcitx-pinyin-sougou-baidu                   | 20251220           |            | https://github.com/blackteahamburger/fcitx5-pinyin-sougou-baidu                         | Sougou & Baidu Pinyin dictionary for Fcitx5 and RIME
    app-i18n/ibus-rime                                  | 9999               | RD         | http://code.google.com/p/rimeime/                                                       | Rime Input Method Engine for IBus Framework
-   app-text/imewlconverter                             | 3.2.0              | BD         | https://github.com/studyzy/imewlconverter                                               | An open source and free input method dictionary conversion program
+   app-text/imewlconverter                             | 3.3.1              | BD         | https://github.com/studyzy/imewlconverter                                               | An open source and free input method dictionary conversion program
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-zhwiki                         | 0.3.0.20251223     |            | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
@@ -55,11 +54,6 @@
  app-editors/edit                                      | 1.1.0              |            | https://github.com/microsoft/edit                                                       | Microsoft edit
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/marktext-bin                              | 0.17.1-r1          |            | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
--------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/mu-editor                                 | 1.2.2_alpha1_p1    |            | https://github.com/mu-editor/mu                                                         | A simple Python editor for beginner programmers
-   dev-python/adafruit-board-toolkit                   | 1.1.2              | RD         | https://github.com/adafruit/Adafruit_Board_Toolkit/                                     | CircuitPython board identification and information
-   dev-python/nudatus                                  | 0.0.5              | RD         | https://github.com/ZanderBrown/nudatus                                                  | CircuitPython board identification and information
-   dev-python/pyqt6-charts                             | 6.10.0             | RD         | https://www.riverbankcomputing.com/software/pyqtchart/                                  | Python bindings for QtChart
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/neovim-bin                                | 0.11.4             |            | https://neovim.io                                                                       | Vim-fork focused on extensibility and agility
                                                        | 9999               |            |                                                                                         |
@@ -254,6 +248,8 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/v2ray-rules-dat-bin                          | 202505102212       |            | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/adafruit-board-toolkit                     | 1.1.2              |            | https://github.com/adafruit/Adafruit_Board_Toolkit/                                     | CircuitPython board identification and information
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/archspec                                   | 0.2.5              |            | https://github.com/archspec/archspec                                                    | A library for detecting, labeling, and reasoning about microarchitectures
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/conda                                      | 25.11.1            |            | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
@@ -286,7 +282,9 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/menuinst                                   | 2.2.0              |            | https://github.com/conda/menuinst                                                       | Cross platform menu item installation
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/mw2fcitx                                   | 0.24.0             |            | https://github.com/outloudvi/mw2fcitx                                                   | Build fcitx5 libraries from MediaWiki sites
+ dev-python/microrepl                                  | 0.6                |            | https://github.com/ntoll/microrepl                                                      | A REPL client for MicroPython running on the BBC micro:bit
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/mw2fcitx                                   | 0.24.2             |            | https://github.com/outloudvi/mw2fcitx                                                   | Build fcitx5 libraries from MediaWiki sites
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/nvchecker                                  | 2.20               |            | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -294,11 +292,17 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pypinyin                                   | 0.55.0             |            | https://github.com/mozillazg/python-pinyin                                              | Tool for converting Chinese characters to pinyin
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/pyqt6-charts                               | 6.10.0             |            | https://www.riverbankcomputing.com/software/pyqtchart/                                  | Python bindings for QtChart
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pytube                                     | 15.0.0             |            | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pywikibot                                  | 10.3.0             |            | https://www.mediawiki.org/wiki/Manual:Pywikibot                                         | To interact with MediaWiki API (for example Wikipedia, Wikimedia Commons)
                                                        | 10.7.4             |            |                                                                                         |
    dev-python/mwparserfromhell                         | 0.7.2              | RD         | https://github.com/earwig/mwparserfromhell                                              | A Python parser for MediaWiki wikicode
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/uflash3                                    | 3.0.1              |            | https://github.com/blackteahamburger/uflash                                             | A module and utility to flash Python onto the BBC micro:bit
+   dev-python/microfs2                                 | 2.0.6              | RD         | https://github.com/blackteahamburger/microfs                                            | A module and utility to work with the simple filesystem on the BBC micro:bit
+   dev-python/nudatus                                  | 0.0.5              | RD         | https://github.com/ZanderBrown/nudatus                                                  | CircuitPython board identification and information
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/uv-bin                                     | 0.9.26             |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -695,7 +699,7 @@
  net-proxy/qvplugin-trojan-go                          | 3.0.0              |            | https://github.com/Qv2ray/QvPlugin-Trojan-Go                                            | Plugin for Qv2ray to support Trojan-Go proxy in Qv2ray
    net-proxy/qv2ray                                    | 2.7.0_p20240625-r1 | RD         | https://github.com/Qv2ray/Qv2ray                                                        | Qt GUI fontend of v2ray
      dev-libs/qnodeeditor                              | 2.1.7_p20210113    |  D, RD     | https://github.com/Qv2ray/QNodeEditor                                                   | A general-purpose Qt-based library aimed at graph-controlled data processing.
-     dev-libs/singleapplication                        | 3.5.3              |  D         | https://itay-grudev.github.io/SingleApplication/                                        | Replacement of QtSingleApplication support for inter-instance communication
+     dev-libs/singleapplication                        | 3.5.4              |  D         | https://itay-grudev.github.io/SingleApplication/                                        | Replacement of QtSingleApplication support for inter-instance communication
      net-proxy/Xray                                    | 26.1.13            | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
        app-alternatives/v2ray-geoip                    | 0-r2               |  D, RD     |                                                                                         | symlink for v2ray-geoip
        app-alternatives/v2ray-geosite                  | 0-r2               |  D, RD     |                                                                                         | symlink for v2ray-geosite
@@ -781,7 +785,7 @@
  virtual/dist-kernel                                   | 6.18.2             |            |                                                                                         | Virtual to depend on any Distribution Kernel
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                                 | 3-r12              |            |                                                                                         | Virtual for Linux kernel sources
-   sys-kernel/cachyos-sources                          | 6.16.0             | RD         | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
+   sys-kernel/cachyos-sources                          | 6.18.5             | RD         | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
    sys-kernel/liquorix-sources                         | 6.4.12             | RD         | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
                                                        | 6.6.8              |            |                                                                                         |
    sys-kernel/xanmod-kernel                            | 6.18.2             | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
