@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-20 20:49:18 CST)
+(The last generation time: 2026-01-21 01:08:34 CST)
 
 ### Packages
 
@@ -329,7 +329,7 @@
  dev-util/fvm                                          | 4.0.5              |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
    dev-lang/dart                                       | 3.10.7             |  D, RD     | https://dart.dev                                                                        | The Dart SDK
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/gemini-cli                                   | 0.23.0             |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
+ dev-util/gemini-cli                                   | 0.24.5             |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                            | 3.2.0.65851        |            | https://www.jetbrains.com/toolbox-app/                                                  | Manage all your JetBrains Projects and Tools
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -839,7 +839,7 @@
  x11-terms/blackbox-terminal                           | 0.14.0             |            | https://gitlab.gnome.org/raggesilver/blackbox                                           | A beautiful GTK 4 terminal
    dev-libs/libpqmarble                                | 2.0.0_p20250109    |  D, RD     | https://gitlab.gnome.org/raggesilver/marble                                             | Utility library for GNOME apps
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- x11-terms/termius                                     | 9.34.8             |            | https://termius.com/download/linux                                                      | Desktop SSH Client
+ x11-terms/termius                                     | 9.36.2             |            | https://termius.com/download/linux                                                      | Desktop SSH Client
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-terms/wezterm-bin                                 | 20240203           |            | https://wezfurlong.org/wezterm                                                          | A terminal emulator and multiplexer implemented in Rust
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
