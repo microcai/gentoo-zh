@@ -8,10 +8,10 @@ libicudata.so.60
 libicui18n.so.60
 libicuuc.so.60
 libinput.so.10
+libjpeg.so.8
 libmtdev.so.1
 libnspr4.so
 libnss3.so
-libnssutil3.so
 libplc4.so
 libplds4.so
 libqcef.so
@@ -31,6 +31,7 @@ libQt5XcbQpa.so.5
 libQt5Xml.so.5
 libsmime3.so
 libsqlite3.so.0
+libtag.so.1
 libwacom.so.2
 libX11-xcb.so.1
 libxcb-glx.so.0

@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -9,24 +9,23 @@ DESCRIPTION="Netease Cloud Music, converted from .deb package"
 HOMEPAGE="https://music.163.com"
 SRC_URI="https://d1.music.126.net/dmusic/${PN}_${PV}_amd64_ubuntu_20190428.deb"
 
+S="${WORKDIR}"
 LICENSE="NetEase BSD"
 SLOT="0"
-RESTRICT="strip mirror"
 KEYWORDS="-* ~amd64"
+RESTRICT="strip mirror"
 
 DEPEND="media-video/vlc[taglib]"
 RDEPEND="${DEPEND}
+	dev-libs/nss
 	media-libs/alsa-lib
-	media-sound/pulseaudio
 	net-dns/avahi
 	net-libs/libgssglue
-	sys-auth/nss-mdns
 	sys-devel/binutils
-	virtual/jpeg:0
 	virtual/krb5
-	x11-libs/gtk+:3
+	x11-libs/gtk+:2
+	x11-libs/gtk+:3[X]
 "
-S="${WORKDIR}"
 
 QA_PREBUILT="opt/netease/${PN}/*"
 QA_FLAGS_IGNORED="opt/netease/${PN}/*"
