@@ -53,6 +53,12 @@ jobs:
           dev-util/pkgcheck \
           dev-vcs/git
 
+      - name: setup gentoo git repo
+        run: |
+          eselect repository add gentoo git https://github.com/gentoo-mirror/gentoo.git
+          rm -rf /var/db/repos/gentoo
+          emaint sync -r gentoo
+
       - name: Checkout the head ref of the pull request
         uses: actions/checkout@v6
         with:
