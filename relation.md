@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-21 20:49:09 CST)
+(The last generation time: 2026-01-21 20:54:37 CST)
 
 ### Packages
 
@@ -172,6 +172,7 @@
  app-office/bytedance-feishu                           | 7.22.9             |            | https://www.feishu.cn/download                                                          | 飞书（Feishu） 飞书整合即时消息、日历、音视频会议、云文档、工作台等功能于一体，成就团队和个人，更高效、更愉悦。
                                                        | 7.50.14-r1         |            |                                                                                         |
                                                        | 7.54.11            |            |                                                                                         |
+                                                       | 7.58.14            |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/freeoffice                                 | 1062               |            | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite.
                                                        | 1064               |            |                                                                                         |
