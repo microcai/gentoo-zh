@@ -21,7 +21,7 @@ DEPEND="
 	app-alternatives/v2ray-geosite
 "
 RDEPEND="${DEPEND}"
-BDEPEND=">=dev-lang/go-1.25.6"
+BDEPEND=">=dev-lang/go-1.25.5"
 
 src_compile() {
 	ego build -tags "full"
