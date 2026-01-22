@@ -8,9 +8,9 @@ EAPI=8
 CRATES="
 "
 
-RUST_MIN_VER="1.88"
+RUST_MIN_VER="1.88.0"
 
-inherit cargo
+inherit cargo shell-completion
 
 DESCRIPTION="A command-line application for interacting with git repositories"
 HOMEPAGE="https://github.com/GitoxideLabs/gitoxide"
@@ -28,3 +28,23 @@ LICENSE+="
 "
 SLOT="0"
 KEYWORDS="~amd64"
+
+src_compile() {
+	cargo_src_compile
+
+	mkdir -pv completions || die
+	for bin in gix ein; do
+		./$(cargo_target_dir)/${bin} completions -s bash > completions/${bin} || die
+		./$(cargo_target_dir)/${bin} completions -s zsh > completions/_${bin} || die
+		./$(cargo_target_dir)/${bin} completions -s fish > completions/${bin}.fish || die
+	done
+}
+
+src_install(){
+	for bin in gix ein; do
+		dobin "$(cargo_target_dir)/${bin}"
+		dobashcomp completions/${bin}
+		dofishcomp completions/${bin}.fish
+		dozshcomp completions/_${bin}
+	done
+}
