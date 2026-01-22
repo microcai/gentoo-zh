@@ -9,7 +9,7 @@ DESCRIPTION="A fork of trojan-go"
 HOMEPAGE="https://github.com/Potterli20/trojan-go-fork"
 SRC_URI="
 	https://github.com/Potterli20/trojan-go-fork/archive/refs/tags/V${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/gentoo-zh-drafts/trojan-go-fork/releases/download/V${PV}/trojan-go-fork-V${PV}-deps.tar.xz
+	https://github.com/blackteahamburger/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz
 "
 
 LICENSE="GPL-3"
@@ -21,7 +21,7 @@ DEPEND="
 	app-alternatives/v2ray-geosite
 "
 RDEPEND="${DEPEND}"
-BDEPEND=">=dev-lang/go-1.25.0"
+BDEPEND=">=dev-lang/go-1.25.6"
 
 src_compile() {
 	ego build -tags "full"
