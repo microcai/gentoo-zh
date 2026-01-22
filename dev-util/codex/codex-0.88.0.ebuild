@@ -31,7 +31,7 @@ CRATES="
 	anstyle@1.0.11
 	anyhow@1.0.100
 	arboard@3.6.1
-	arc-swap@1.7.1
+	arc-swap@1.8.0
 	arrayvec@0.7.6
 	ascii-canvas@3.0.0
 	ascii@1.1.0
@@ -82,7 +82,7 @@ CRATES="
 	cfg_aliases@0.1.1
 	cfg_aliases@0.2.1
 	chardetng@0.1.17
-	chrono@0.4.42
+	chrono@0.4.43
 	chunked_transfer@1.5.0
 	cipher@0.4.4
 	clap@4.5.54
@@ -112,13 +112,12 @@ CRATES="
 	crossbeam-deque@0.8.6
 	crossbeam-epoch@0.9.18
 	crossbeam-utils@0.8.21
-	crossterm@0.28.1
 	crossterm_winapi@0.9.1
 	crunchy@0.2.4
 	crypto-common@0.1.6
-	ctor-proc-macro@0.0.6
+	ctor-proc-macro@0.0.7
 	ctor@0.1.26
-	ctor@0.5.0
+	ctor@0.6.3
 	darling@0.20.11
 	darling@0.21.3
 	darling@0.23.0
@@ -308,7 +307,7 @@ CRATES="
 	litrs@1.0.0
 	local-waker@0.1.4
 	lock_api@0.4.13
-	log@0.4.28
+	log@0.4.29
 	logos-derive@0.12.1
 	logos@0.12.1
 	lru-slab@0.1.2
@@ -438,7 +437,6 @@ CRATES="
 	rand_xorshift@0.4.0
 	ratatui-core@0.1.0
 	ratatui-macros@0.6.0
-	ratatui@0.29.0
 	redox_syscall@0.5.15
 	redox_users@0.4.6
 	redox_users@0.5.0
@@ -583,9 +581,8 @@ CRATES="
 	tokio-rustls@0.26.2
 	tokio-stream@0.1.18
 	tokio-test@0.4.4
-	tokio-tungstenite@0.21.0
 	tokio-util@0.7.18
-	tokio@1.48.0
+	tokio@1.49.0
 	toml@0.5.11
 	toml@0.9.5
 	toml_datetime@0.7.5+spec-1.1.0
@@ -618,7 +615,6 @@ CRATES="
 	ts-rs-macros@11.1.0
 	ts-rs@11.1.0
 	tui-scrollbar@0.2.2
-	tungstenite@0.21.0
 	typenum@1.18.0
 	uds_windows@1.1.0
 	uname@0.1.1
@@ -669,6 +665,7 @@ CRATES="
 	web-time@1.1.0
 	webbrowser@1.0.6
 	webpki-root-certs@1.0.4
+	webpki-roots@0.26.11
 	webpki-roots@1.0.2
 	weezl@0.1.10
 	which@8.0.0
@@ -777,6 +774,8 @@ CRATES="
 # Git patched dependencies commits
 CROSSTERM_COMMIT="87db8bfa6dc99427fd3b071681b07fc31c6ce995"
 RATATUI_COMMIT="9b2ad1298408c45918ee9f8241a6f95498cdbed2"
+TOKIO_TUNGSTENITE_COMMIT="2ae536b0de793f3ddf31fc2f22d445bf1ef2023d"
+TUNGSTENITE_COMMIT="f514de8644821113e5d18a027d6d28a5c8cc0a6e"
 
 # Note: Edition 2024 requires Rust 1.85+, users need rustup or newer Rust
 
@@ -788,6 +787,9 @@ SRC_URI="
 	https://github.com/openai/${PN}/archive/rust-v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/nornagon/crossterm/archive/${CROSSTERM_COMMIT}.tar.gz -> ${P}-crossterm.tar.gz
 	https://github.com/nornagon/ratatui/archive/${RATATUI_COMMIT}.tar.gz -> ${P}-ratatui.tar.gz
+	https://github.com/JakkuSakura/tokio-tungstenite/archive/${TOKIO_TUNGSTENITE_COMMIT}.tar.gz \
+		-> ${P}-tokio-tungstenite.tar.gz
+	https://github.com/JakkuSakura/tungstenite-rs/archive/${TUNGSTENITE_COMMIT}.tar.gz -> ${P}-tungstenite-rs.tar.gz
 	${CARGO_CRATE_URIS}
 "
 
@@ -795,7 +797,10 @@ S="${WORKDIR}/${PN}-rust-v${PV}/codex-rs"
 
 LICENSE="Apache-2.0"
 # Dependent crate licenses
-LICENSE+=" Apache-2.0 BSD BSD-2 Boost-1.0 CC0-1.0 CDLA-Permissive-2.0 ISC MIT MPL-2.0 Unicode-3.0 Unlicense ZLIB"
+LICENSE+="
+	Apache-2.0 BSD-2 BSD Boost-1.0 CC0-1.0 CDLA-Permissive-2.0 ISC MIT
+	MPL-2.0 Unicode-3.0 ZLIB
+"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 # Tests fail due to ring crate conflicts with system OpenSSL
@@ -817,9 +822,15 @@ src_prepare() {
 	# Setup patched dependencies in cargo_home
 	local crossterm_dir="${WORKDIR}/crossterm-${CROSSTERM_COMMIT}"
 	local ratatui_dir="${WORKDIR}/ratatui-${RATATUI_COMMIT}"
+	local tokio_tungstenite_dir="${WORKDIR}/tokio-tungstenite-${TOKIO_TUNGSTENITE_COMMIT}"
+	local tungstenite_dir="${WORKDIR}/tungstenite-rs-${TUNGSTENITE_COMMIT}"
 
 	# Remove the [patch.crates-io] section and add path-based patches
 	sed -i '/^\[patch\.crates-io\]/,/^$/d' "${S}/Cargo.toml" || die
+	sed -i '/^\[patch\."ssh:\/\/git@github.com\/JakkuSakura\/tungstenite-rs.git"\]/,/^$/d' \
+		"${S}/Cargo.toml" || die
+	sed -i '/^\[patch\."ssh:\/\/git@github.com\/JakkuSakura\/tungstenite-rs.git\?branch=proxy-support"\]/,/^$/d' \
+		"${S}/Cargo.toml" || die
 
 	# Add new patch section with local paths
 	cat >> "${S}/Cargo.toml" <<-EOF || die
@@ -827,7 +838,21 @@ src_prepare() {
 	[patch.crates-io]
 	crossterm = { path = "${crossterm_dir}" }
 	ratatui = { path = "${ratatui_dir}" }
+	tokio-tungstenite = { path = "${tokio_tungstenite_dir}" }
+
+	[patch."ssh://git@github.com/JakkuSakura/tungstenite-rs.git"]
+	tungstenite = { path = "${tungstenite_dir}" }
+
+	[patch."ssh://git@github.com/JakkuSakura/tungstenite-rs.git?branch=proxy-support"]
+	tungstenite = { path = "${tungstenite_dir}" }
 	EOF
+
+	# Avoid git fetch in tokio-tungstenite by using local tungstenite
+	sed -i '/^\[dependencies\.tungstenite\]/,/^$/c\
+[dependencies.tungstenite]\n\
+path = "'"${tungstenite_dir}"'"\n\
+default-features = false\n' \
+		"${tokio_tungstenite_dir}/Cargo.toml" || die
 }
 
 src_compile() {
