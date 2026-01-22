@@ -8,7 +8,7 @@ EAPI=8
 CRATES="
 "
 
-RUST_MIN_VER="1.91.0"
+RUST_MIN_VER="1.92.0"
 
 inherit cargo desktop shell-completion xdg
 
