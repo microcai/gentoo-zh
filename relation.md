@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-24 22:53:08 CST)
+(The last generation time: 2026-01-25 02:36:47 CST)
 
 ### Packages
 
@@ -299,8 +299,8 @@
                                                        | 10.7.4             |            |                                                                                         |
    dev-python/mwparserfromhell                         | 0.7.2              | RD         | https://github.com/earwig/mwparserfromhell                                              | A Python parser for MediaWiki wikicode
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/uflash3                                    | 3.0.1              |            | https://github.com/blackteahamburger/uflash                                             | A module and utility to flash Python onto the BBC micro:bit
-   dev-python/microfs2                                 | 2.0.6              | RD         | https://github.com/blackteahamburger/microfs                                            | A module and utility to work with the simple filesystem on the BBC micro:bit
+ dev-python/uflash3                                    | 3.0.2              |            | https://github.com/blackteahamburger/uflash                                             | A module and utility to flash Python onto the BBC micro:bit
+   dev-python/microfs2                                 | 2.0.7              | RD         | https://github.com/blackteahamburger/microfs                                            | A module and utility to work with the simple filesystem on the BBC micro:bit
    dev-python/nudatus                                  | 0.0.5              | RD         | https://github.com/ZanderBrown/nudatus                                                  | CircuitPython board identification and information
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/uv-bin                                     | 0.9.26             |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
@@ -785,7 +785,7 @@
  virtual/dist-kernel                                   | 6.18.2             |            |                                                                                         | Virtual to depend on any Distribution Kernel
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                                 | 3-r12              |            |                                                                                         | Virtual for Linux kernel sources
-   sys-kernel/cachyos-sources                          | 6.18.5             | RD         | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
+   sys-kernel/cachyos-sources                          | 6.18.6             | RD         | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
    sys-kernel/liquorix-sources                         | 6.4.12             | RD         | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
                                                        | 6.6.8              |            |                                                                                         |
    sys-kernel/xanmod-kernel                            | 6.18.2             | RD         | https://www.kernel.org/                                                                 | XanMod lts kernel built with Gentoo patches and cjktty
