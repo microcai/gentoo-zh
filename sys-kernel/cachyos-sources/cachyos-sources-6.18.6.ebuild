@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="7"
+K_GENPATCHES_VER="8"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 
@@ -14,14 +14,13 @@ detect_arch
 
 MY_KV="${KV_MAJOR}.${KV_MINOR}"
 AUFS_V="20251208"
-GIT_COMMIT_CACHYOS="865e7c9b83309b8e78b4539f26b4e13b604beed6"
 
 DESCRIPTION="Full Cachyos sources including the Gentoo patchset for the ${MY_KV} kernel tree"
 HOMEPAGE="https://cachyos.org"
 CACHYOS_URI="https://github.com/blackteahamburger/gentoo-CachyOS-kernel-patches-tarball/releases/download/${PV}/${P}.tar.gz"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${CACHYOS_URI}"
 KEYWORDS="~amd64"
-IUSE="amd-pstate asus autofdo bbr3 block +cachy crypto +fixes intel-pstate sched-ext t2 +bore prjc prjc-lfbmq polly rt-i915 dkms-clang aufs deckify"
+IUSE="amd-pstate asus autofdo bbr3 +cachy crypto +fixes hdmi intel-pstate sched-ext t2 +bore prjc prjc-lfbmq polly rt-i915 dkms-clang aufs deckify"
 REQUIRED_USE="?? ( bore prjc prjc-lfbmq )"
 
 src_unpack() {
@@ -31,7 +30,7 @@ src_unpack() {
 
 src_prepare() {
 	local i=1
-	for flag in amd-pstate asus autofdo bbr3 block cachy crypto fixes intel-pstate sched-ext t2; do
+	for flag in amd-pstate asus autofdo bbr3 cachy crypto fixes hdmi intel-pstate sched-ext t2; do
 		use ${flag} && eapply "${WORKDIR}/${P}/$(printf '%04d' ${i})-${flag}.patch"
 		((i++))
 	done

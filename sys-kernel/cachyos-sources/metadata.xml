@@ -10,10 +10,10 @@
 		<flag name="asus">ASUS patchset</flag>
 		<flag name="autofdo">AutoFDO profile-guided optimization</flag>
 		<flag name="bbr3">BBR v3</flag>
-		<flag name="block">mq-deadline and BFQ patches</flag>
 		<flag name="cachy">CachyOS patchset</flag>
 		<flag name="crypto">kernel crypto patches</flag>
 		<flag name="fixes">CachyOS fixes</flag>
+		<flag name="hdmi">HDMI patches</flag>
 		<flag name="intel-pstate">Intel P-State P/E core handling</flag>
 		<flag name="sched-ext">sched-ext scheduler framework</flag>
 		<flag name="t2">T2 Macbook support</flag>
