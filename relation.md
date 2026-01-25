@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-25 02:36:47 CST)
+(The last generation time: 2026-01-25 12:19:40 CST)
 
 ### Packages
 
@@ -513,8 +513,8 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/mpv-handler                               | 0.4.2              |            | https://github.com/akiirui/mpv-handler                                                  | Play website videos and songs with mpv & yt-dlp
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-video/piliplus-bin                              | 1.1.4.17           |            | https://github.com/bggRGjQaUbCoE/PiliPlus                                               | BiliBili third-party client developed using Flutter
-                                                       | 1.1.5              |            |                                                                                         |
+ media-video/piliplus-bin                              | 1.1.5              |            | https://github.com/bggRGjQaUbCoE/PiliPlus                                               | BiliBili third-party client developed using Flutter
+                                                       | 1.1.5.4            |            |                                                                                         |
                                                        | 1.1.5_pre8         |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/tenvideo                                  | 1.0.10             |            | https://v.qq.com/download.html#linux                                                    | Tencent videos
