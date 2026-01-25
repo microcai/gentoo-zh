@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-25 13:05:27 CST)
+(The last generation time: 2026-01-25 22:34:29 CST)
 
 ### Packages
 
@@ -340,7 +340,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/pack-cli-bin                                 | 0.37.0             |            | https://buildpacks.io                                                                   | CLI for building apps using Cloud Native Buildpacks
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/pi-coding-agent-bin                          | 0.45.7             |            | https://github.com/badlogic/pi-mono                                                     | A terminal-based coding agent with multi-model support
+ dev-util/pi-coding-agent-bin                          | 0.49.3             |            | https://github.com/badlogic/pi-mono                                                     | A terminal-based coding agent with multi-model support
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/redpanda-cpp                                 | 3.1                |            | http://royqh.net/redpandacpp                                                            | A lightweight yet powerful C/C++/GNU Assembly IDE.
                                                        | 3.3                |            |                                                                                         |
