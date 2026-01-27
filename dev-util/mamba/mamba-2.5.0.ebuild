@@ -100,6 +100,7 @@ src_configure() {
 		-DBUILD_MICROMAMBA=OFF
 		-DBUILD_SHARED=ON
 		-DBUILD_STATIC=OFF
+		-DBUILD_LIBMAMBA_SPDLOG=ON
 		-Dzstd_DIR="${T}"
 	)
 	cmake_src_configure
