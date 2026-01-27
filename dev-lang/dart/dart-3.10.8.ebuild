@@ -6,7 +6,7 @@ EAPI=8
 LLVM_COMPAT=( {20..21} )
 LLVM_OPTIONAL=1
 
-inherit unpacker ninja-utils llvm-r1 toolchain-funcs
+inherit unpacker ninja-utils llvm-r1 toolchain-funcs check-reqs
 
 DESCRIPTION="The Dart SDK"
 HOMEPAGE="https://dart.dev https://github.com/dart-lang/sdk"
@@ -24,6 +24,7 @@ S="${WORKDIR}/dart-sdk-${PV}"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
+CHECKREQS_DISK_BUILD="30G"
 
 IUSE="clang"
 REQUIRED_USE="clang? ( ${LLVM_REQUIRED_USE} )"
