@@ -74,6 +74,7 @@ src_prepare() {
 	rm "${WORKDIR}/${PATCHSET}/0011-BMQ-BitMap-Queue-Scheduler.-A-new-CPU-scheduler-deve.patch"
 	rm "${WORKDIR}/${PATCHSET}/0012-Set-defaults-for-BMQ.-Add-archs-as-people-test-defau.patch"
 	rm "${WORKDIR}/${PATCHSET}/1710_disable_sse4a.patch'"
+	rm "${WORKDIR}/${PATCHSET}/2701-drm-amdgpu-don-t-attach-the-tlb-fence-for-SI.patch"
 
 	local PATCHES=(
 		# xanmod patches

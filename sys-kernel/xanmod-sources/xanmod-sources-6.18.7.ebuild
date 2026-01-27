@@ -45,6 +45,7 @@ src_prepare() {
 	rm "${WORKDIR}"/*${MY_P}*.patch
 	# delete failed patches
 	rm "${WORKDIR}/1710_disable_sse4a.patch"
+	rm "${WORKDIR}/2701-drm-amdgpu-don-t-attach-the-tlb-fence-for-SI.patch"
 
 	local PATCHES=(
 		# xanmod patches
