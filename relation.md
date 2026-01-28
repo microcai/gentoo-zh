@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-01-28 14:25:37 CST)
+(The last generation time: 2026-01-29 04:42:42 CST)
 
 ### Packages
 
@@ -373,7 +373,7 @@
                                                        | 1.28.2             |            |                                                                                         |
                                                        | 1.28.3             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- games-emulation/onscripter-yuri                       | 0.7.6_beta2        |            | https://github.com/YuriSizuku/OnscripterYuri                                            | An enhancement ONScripter project porting to many platforms, especially web
+ games-emulation/onscripter-yuri                       | 0.7.6              |            | https://github.com/YuriSizuku/OnscripterYuri                                            | An enhancement ONScripter project porting to many platforms, especially web
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-fps/openarena                                   | 0.8.8              |            | http://openarena.ws                                                                     | A violent, sexy, multiplayer first person shooter based on the ioquake3 engine
                                                        | 9999               |            |                                                                                         |
