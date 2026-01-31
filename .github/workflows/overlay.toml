@@ -1878,3 +1878,10 @@ source = "github"
 github = "hyprwm/Hypr"
 use_latest_release = true
 github_account = "Goldsrc233"
+
+["dev-util/opencode-bin"]
+source = "github"
+github = "anomalyco/opencode"
+use_latest_release = true
+prefix = "v"
+github_account = "xz-dev"
