@@ -547,8 +547,10 @@ github_account = "microcai"
 # high update frequency
 #["dev-libs/v2ray-geoip-bin"]
 
-# high update frequency
-#["dev-libs/v2ray-rules-dat-bin"]
+["dev-libs/v2ray-rules-dat-bin"]
+source = "github"
+github = "Loyalsoldier/v2ray-rules-dat"
+use_latest_release = true
 
 ["dev-python/adafruit-board-toolkit"]
 source = "pypi"
