@@ -1,4 +1,4 @@
-# Copyright 2024-2025 Gentoo Authors
+# Copyright 2024-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -17,7 +17,7 @@ KEYWORDS="~amd64"
 
 DEPEND="
 	>=dev-libs/wayland-1.22
-	dev-qt/qtbase:6[dbus,gui,widgets]
+	>=dev-qt/qtbase-6.6:6[dbus,gui,widgets]
 	dev-util/vulkan-headers
 	kde-plasma/layer-shell-qt:6
 	x11-libs/libxkbcommon
