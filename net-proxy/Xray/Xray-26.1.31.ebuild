@@ -21,6 +21,10 @@ DEPEND="app-alternatives/v2ray-geoip
 RDEPEND="${DEPEND}"
 BDEPEND=">=dev-lang/go-1.25.5"
 
+PATCHES=(
+	"${FILESDIR}"/Xray-26.1.18-go-1.25.6.patch
+)
+
 src_compile() {
 	ego build -o xray -gcflags="all=-l=4" -ldflags "-X github.com/XTLS/Xray-core/core.build=${PV}" ./main
 }
