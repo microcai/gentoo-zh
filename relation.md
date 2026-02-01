@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-02-01 15:24:32 CST)
+(The last generation time: 2026-02-01 21:09:20 CST)
 
 ### Packages
 
@@ -470,6 +470,8 @@
  media-plugins/waylyrics                               | 0.3.21             |            | https://waylyrics.github.io/waylyrics/waylyrics                                         | Simple On Screen lyrics Display for linux/unix
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/barva                                     | 9999               |            | https://github.com/Kharacternyk/barva                                                   | a modular audio visualizer
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ media-sound/euphonica                                 | 0.98.0             |            | https://github.com/htkhiem/euphonica                                                    | An MPD client with delusions of grandeur, made with Rust, GTK and Libadwaita.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/feeluown                                  | 4.1.7              |            | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
    dev-python/feeluown-bilibili                        | 0.4.1              |  D         | https://github.com/feeluown/feeluown-bilibili                                           | bilibili support for feeluown
