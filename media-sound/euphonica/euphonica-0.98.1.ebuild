@@ -17,11 +17,11 @@ inherit cargo meson gnome2-utils xdg
 DESCRIPTION="An MPD client with delusions of grandeur, made with Rust, GTK and Libadwaita."
 HOMEPAGE="https://github.com/htkhiem/euphonica"
 SRC_URI="
-	https://github.com/htkhiem/euphonica/archive/v${PV}-beta.tar.gz -> ${P}.tar.gz
-	https://github.com/gentoo-zh-drafts/euphonica/releases/download/v${PV}-beta/${P}-beta-crates.tar.xz
+	https://github.com/htkhiem/euphonica/archive/v${PV}-beta.1.tar.gz -> ${P}.tar.gz
+	https://github.com/gentoo-zh-drafts/euphonica/releases/download/v${PV}-beta.1/${P}-beta.1-crates.tar.xz
 "
 SRC_URI+=" ${CARGO_CRATE_URIS}"
-S="${WORKDIR}/${P}-beta"
+S="${WORKDIR}/${P}-beta.1"
 
 LICENSE="GPL-3+"
 # Dependent crate licenses
