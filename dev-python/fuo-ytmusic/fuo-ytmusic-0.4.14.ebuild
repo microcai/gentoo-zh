@@ -1,9 +1,9 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{12..14})
-DISTUTILS_USE_PEP517=poetry
 
 inherit distutils-r1
 
@@ -18,16 +18,13 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="
-	dev-python/beautifulsoup4[${PYTHON_USEDEP}]
-	dev-python/pycryptodome[${PYTHON_USEDEP}]
-	dev-python/cachetools[${PYTHON_USEDEP}]
 	dev-python/ytmusicapi[${PYTHON_USEDEP}]
+	dev-python/beautifulsoup4[${PYTHON_USEDEP}]
+	>=dev-python/pydantic-2.0[${PYTHON_USEDEP}]
+	dev-python/cachetools[${PYTHON_USEDEP}]
 "
 
 PDEPEND="
 	media-sound/feeluown
+	net-misc/yt-dlp
 "
-
-python_install_all() {
-	distutils-r1_python_install_all
-}
