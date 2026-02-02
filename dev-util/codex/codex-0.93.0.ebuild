@@ -861,15 +861,17 @@ CRATES="
 	zvariant_utils@2.1.0
 "
 
-# Git patched dependencies commits
-CROSSTERM_COMMIT="87db8bfa6dc99427fd3b071681b07fc31c6ce995"
-RATATUI_COMMIT="9b2ad1298408c45918ee9f8241a6f95498cdbed2"
-NUCLEO_COMMIT="4253de9faabb4e5c6d81d946a5e35a90f87347ee"
-RULES_RUST_COMMIT="b56cbaa8465e74127f1ea216f813cd377295ad81"
-TOKIO_TUNGSTENITE_COMMIT="2ae536b0de793f3ddf31fc2f22d445bf1ef2023d"
-TUNGSTENITE_COMMIT="f514de8644821113e5d18a027d6d28a5c8cc0a6e"
+declare -A GIT_CRATES=(
+	[crossterm]='https://github.com/nornagon/crossterm;87db8bfa6dc99427fd3b071681b07fc31c6ce995;crossterm-%commit%'
+	[nucleo-matcher]='https://github.com/helix-editor/nucleo;4253de9faabb4e5c6d81d946a5e35a90f87347ee;nucleo-%commit%/matcher'
+	[nucleo]='https://github.com/helix-editor/nucleo;4253de9faabb4e5c6d81d946a5e35a90f87347ee;nucleo-%commit%'
+	[ratatui]='https://github.com/nornagon/ratatui;9b2ad1298408c45918ee9f8241a6f95498cdbed2;ratatui-%commit%'
+	[runfiles]='https://github.com/dzbarsky/rules_rust;b56cbaa8465e74127f1ea216f813cd377295ad81;rules_rust-%commit%/rust/runfiles'
+	[tokio-tungstenite]='https://github.com/JakkuSakura/tokio-tungstenite;2ae536b0de793f3ddf31fc2f22d445bf1ef2023d;tokio-tungstenite-%commit%'
+	[tungstenite]='https://github.com/JakkuSakura/tungstenite-rs;f514de8644821113e5d18a027d6d28a5c8cc0a6e;tungstenite-rs-%commit%'
+)
 
-# Note: Edition 2024 requires Rust 1.85+, users need rustup or newer Rust
+RUST_MIN_VER="1.91.0"
 
 inherit cargo
 
@@ -877,13 +879,6 @@ DESCRIPTION="Codex CLI - OpenAI's AI-powered coding agent"
 HOMEPAGE="https://github.com/openai/codex"
 SRC_URI="
 	https://github.com/openai/${PN}/archive/rust-v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/nornagon/crossterm/archive/${CROSSTERM_COMMIT}.tar.gz -> ${P}-crossterm.tar.gz
-	https://github.com/nornagon/ratatui/archive/${RATATUI_COMMIT}.tar.gz -> ${P}-ratatui.tar.gz
-	https://github.com/helix-editor/nucleo/archive/${NUCLEO_COMMIT}.tar.gz -> ${P}-nucleo.tar.gz
-	https://github.com/dzbarsky/rules_rust/archive/${RULES_RUST_COMMIT}.tar.gz -> ${P}-rules_rust.tar.gz
-	https://github.com/JakkuSakura/tokio-tungstenite/archive/${TOKIO_TUNGSTENITE_COMMIT}.tar.gz
-		-> ${P}-tokio-tungstenite.tar.gz
-	https://github.com/JakkuSakura/tungstenite-rs/archive/${TUNGSTENITE_COMMIT}.tar.gz -> ${P}-tungstenite.tar.gz
 	${CARGO_CRATE_URIS}
 "
 
@@ -891,7 +886,10 @@ S="${WORKDIR}/${PN}-rust-v${PV}/codex-rs"
 
 LICENSE="Apache-2.0"
 # Dependent crate licenses
-LICENSE+=" Apache-2.0 BSD BSD-2 Boost-1.0 CC0-1.0 CDLA-Permissive-2.0 ISC MIT MPL-2.0 Unicode-3.0 Unlicense ZLIB"
+LICENSE+="
+	Apache-2.0 BSD-2 BSD Boost-1.0 CC0-1.0 CDLA-Permissive-2.0 ISC MIT
+	MPL-2.0 Unicode-3.0 ZLIB
+"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 # Tests fail due to ring crate conflicts with system OpenSSL
@@ -907,29 +905,20 @@ BDEPEND="virtual/pkgconfig"
 # rust does not use *FLAGS from make.conf, silence portage warning
 QA_FLAGS_IGNORED="usr/bin/${PN}"
 
+gen_git_crate_dir() {
+	# https://github.com/gentoo/gentoo/blob/b09dd88412fe2d5eee5a8891e08bfa2d67848da3/eclass/cargo.eclass#L442
+	IFS=';' read -r crate_uri commit crate_dir <<<"${GIT_CRATES[$1]}"
+	echo "${WORKDIR}/${crate_dir//%commit%/${commit}}"
+}
+
 src_prepare() {
 	default
 
-	# Setup patched dependencies in cargo_home
-	local crossterm_dir="${WORKDIR}/crossterm-${CROSSTERM_COMMIT}"
-	local ratatui_dir="${WORKDIR}/ratatui-${RATATUI_COMMIT}"
-	local nucleo_dir="${WORKDIR}/nucleo-${NUCLEO_COMMIT}"
-	local rules_rust_dir="${WORKDIR}/rules_rust-${RULES_RUST_COMMIT}"
-	local tokio_tungstenite_dir="${WORKDIR}/tokio-tungstenite-${TOKIO_TUNGSTENITE_COMMIT}"
-	local tungstenite_dir="${WORKDIR}/tungstenite-rs-${TUNGSTENITE_COMMIT}"
-
-	# Replace git dependencies in workspace.dependencies with path dependencies
-	local ng='nucleo = { git = "https://github.com/helix-editor/nucleo.git"'
-	local rg='runfiles = { git = "https://github.com/dzbarsky/rules_rust"'
-	sed -i "s|${ng}.*|nucleo = { path = \"${nucleo_dir}\" }|" "${S}/Cargo.toml" || die
-	sed -i "s|${rg}.*|runfiles = { path = \"${rules_rust_dir}/rust/runfiles\" }|" \
-		"${S}/Cargo.toml" || die
-
 	# Fix tokio-tungstenite's ssh git dependency on tungstenite
 	sed -i '/^\[dependencies\.tungstenite\]/,/^$/{
-		s|git = "ssh://git@github.com/JakkuSakura/tungstenite-rs.git"|path = "'"${tungstenite_dir}"'"|
+		s|git = "ssh://git@github.com/JakkuSakura/tungstenite-rs.git"|path = "'"$(gen_git_crate_dir tungstenite)"'"|
 		/^branch = /d
-	}' "${tokio_tungstenite_dir}/Cargo.toml" || die
+	}' "$(gen_git_crate_dir tokio-tungstenite)/Cargo.toml" || die
 
 	# Remove the [patch.crates-io] section and add path-based patches
 	sed -i '/^\[patch\.crates-io\]/,/^$/d' "${S}/Cargo.toml" || die
@@ -939,13 +928,10 @@ src_prepare() {
 	cat >> "${S}/Cargo.toml" <<-EOF || die
 
 	[patch.crates-io]
-	crossterm = { path = "${crossterm_dir}" }
-	ratatui = { path = "${ratatui_dir}" }
-	nucleo = { path = "${nucleo_dir}" }
-	nucleo-matcher = { path = "${nucleo_dir}/matcher" }
-	runfiles = { path = "${rules_rust_dir}/rust/runfiles" }
-	tokio-tungstenite = { path = "${tokio_tungstenite_dir}" }
-	tungstenite = { path = "${tungstenite_dir}" }
+	crossterm = { path = "$(gen_git_crate_dir crossterm)" }
+	ratatui = { path = "$(gen_git_crate_dir ratatui)" }
+	tokio-tungstenite = { path = "$(gen_git_crate_dir tokio-tungstenite)" }
+	tungstenite = { path = "$(gen_git_crate_dir tungstenite)" }
 	EOF
 }
 
