@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-02-02 13:08:58 CST)
+(The last generation time: 2026-02-02 17:58:17 CST)
 
 ### Packages
 
@@ -78,7 +78,7 @@
  app-emulation/liblol-libxcrypt                        | 0.1.5              |            | https://github.com/besser82/libxcrypt                                                   | libxcrypt for liblol
                                                        | 0.1.9              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-emulation/looking-glass                           | 0_beta7_rc1-r1     |            | https://looking-glass.io                                                                | A low latency KVMFR application for guests with VGA PCI Passthrough
+ app-emulation/looking-glass                           | 0_beta7_rc1-r2     |            | https://looking-glass.io                                                                | A low latency KVMFR application for guests with VGA PCI Passthrough
    gui-libs/libdecor                                   | 0.1.1              |  D, RD     | https://gitlab.freedesktop.org/libdecor/libdecor                                        | A client-side decorations library for Wayland clients
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/winboat-bin                             | 0.9.0              |            | https://www.winboat.app/                                                                | Run Windows apps on Linux with seamless integration
@@ -677,7 +677,7 @@
    sys-apps/pnpm                                       | 10.26.0            | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
                                                        | 10.27.0            |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/flclash-bin                                 | 0.8.91             |            | https://github.com/chen08209/FlClash                                                    | A multi-platform proxy client based on ClashMeta
+ net-proxy/flclash-bin                                 | 0.8.92             |            | https://github.com/chen08209/FlClash                                                    | A multi-platform proxy client based on ClashMeta
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/hysteria                                    | 2.6.5-r2           |            | https://github.com/apernet/hysteria                                                     | A powerful, lightning fast and censorship resistant proxy.
                                                        | 2.7.0              |            |                                                                                         |
