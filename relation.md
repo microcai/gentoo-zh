@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-02-01 22:52:00 CST)
+(The last generation time: 2026-02-02 08:15:09 CST)
 
 ### Packages
 
@@ -363,7 +363,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                             | 1.19.8             |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
                                                        | 1.20.12            |            |                                                                                         |
-                                                       | 1.21.0             |            |                                                                                         |
+                                                       | 1.21.6             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-arcade/osu-lazer-bin                            | 2026.102.1         |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away!
                                                        | 2026.119.0         |            |                                                                                         |
@@ -400,7 +400,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  gnome-extra/resources                                 | 1.10.0             |            | https://github.com/nokyan/resources                                                     | Keep an eye on system resources
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- gui-apps/crystal-dock                                 | 2.11               |            | https://github.com/dangvd/crystal-dock                                                  | Cool dock (desktop panel) for Linux desktop
+ gui-apps/crystal-dock                                 | 2.16               |            | https://github.com/dangvd/crystal-dock                                                  | Cool dock (desktop panel) for Linux desktop
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  kde-misc/plasma-applet-netspeed-widget                | 2.0                |            | https://www.kde-look.org/p/998895/                                                      | Plasma 5 widget that displays the currently used network bandwidth.
                                                        | 3.1                |            |                                                                                         |
@@ -726,7 +726,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/tun2socks                                   | 2.6.0              |            | https://github.com/xjasonlyu/tun2socks                                                  | tun2socks - powered by gVisor TCP/IP stack
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/v2rayA                                      | 2.2.7              |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
+ net-proxy/v2rayA                                      | 2.2.7.5            |            | https://v2raya.org/                                                                     | web GUI of Project V which supports V2Ray, Xray, SS, SSR, Trojan and Pingtunnel
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/yacd-meta                                   | 0.3.8              |            | https://github.com/MetaCubeX/Yacd-meta                                                  | Yet Another Clash Dashboard
