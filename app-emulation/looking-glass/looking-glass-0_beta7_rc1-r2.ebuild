@@ -24,6 +24,8 @@ DEPEND="gui-libs/egl-wayland
 	media-libs/libsamplerate
 	dev-libs/nettle[gmp]
 	app-emulation/spice-protocol
+	sys-libs/binutils-libs
+	media-libs/libglvnd[X]
 	X? (
 		x11-libs/libX11
 		x11-libs/libXfixes
@@ -57,6 +59,9 @@ MY_CMAKE_PROJECT="client "
 
 src_prepare() {
 	default
+	# fix cmake compatibility issues with newer cmake versions
+	find "${S}" -name "CMakeLists.txt" -exec sed -i 's/cmake_minimum_required(VERSION 3\.5)/cmake_minimum_required(VERSION 3.10)/' {} +
+	find "${S}" -name "CMakeLists.txt" -exec sed -i 's/cmake_minimum_required(VERSION [0-9]\.[0-9])/cmake_minimum_required(VERSION 3.10)/' {} +
 	# add other project
 	if use host; then
 		MY_CMAKE_PROJECT+="host "
@@ -79,9 +84,9 @@ src_configure() {
 			-DENABLE_X11=no
 		)
 	fi
-	if ! use wayland; then
+	if use wayland; then
 		local mycmakeargs+=(
-			-DENABLE_WAYLAND=no
+			-DENABLE_WAYLAND=yes
 		)
 	fi
 	if ! use pipewire; then
