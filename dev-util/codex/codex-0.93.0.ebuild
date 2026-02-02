@@ -51,14 +51,17 @@ CRATES="
 	async-stream@0.3.6
 	async-task@4.7.1
 	async-trait@0.1.89
+	asynk-strim@0.1.5
+	atoi@2.0.0
 	atomic-waker@1.1.2
 	autocfg@1.5.0
-	axum-core@0.5.2
-	axum@0.8.4
+	axum-core@0.5.6
+	axum@0.8.8
 	backtrace@0.3.75
 	base64@0.22.1
 	base64ct@1.8.1
 	beef@0.5.2
+	bindgen@0.72.1
 	bit-set@0.5.3
 	bit-vec@0.6.3
 	bitflags@1.3.2
@@ -66,6 +69,7 @@ CRATES="
 	block-buffer@0.10.4
 	block-padding@0.3.3
 	blocking@1.6.2
+	borsh@1.6.0
 	bstr@1.12.0
 	bumpalo@3.19.0
 	bytemuck@1.23.1
@@ -76,8 +80,9 @@ CRATES="
 	cassowary@0.3.0
 	castaway@0.2.4
 	cbc@0.1.2
-	cc@1.2.30
+	cc@1.2.52
 	cesu8@1.1.0
+	cexpr@0.6.0
 	cfg-if@1.0.1
 	cfg_aliases@0.1.1
 	cfg_aliases@0.2.1
@@ -85,36 +90,46 @@ CRATES="
 	chrono@0.4.43
 	chunked_transfer@1.5.0
 	cipher@0.4.4
+	clang-sys@1.8.1
 	clap@4.5.54
 	clap_builder@4.5.54
 	clap_complete@4.5.64
 	clap_derive@4.5.49
 	clap_lex@0.7.5
 	clipboard-win@5.4.1
+	cmake@0.1.57
 	cmp_any@0.8.1
 	color-eyre@0.6.5
 	color-spantrace@0.3.0
 	colorchoice@1.0.4
 	combine@4.6.7
 	compact_str@0.8.1
-	compact_str@0.9.0
 	concurrent-queue@2.5.0
 	console@0.15.11
 	const-hex@1.17.0
+	const-oid@0.9.6
+	const_format@0.2.35
+	const_format_proc_macros@0.2.34
 	convert_case@0.10.0
 	convert_case@0.6.0
 	core-foundation-sys@0.8.7
 	core-foundation@0.10.1
 	core-foundation@0.9.4
 	cpufeatures@0.2.17
+	crc-catalog@2.4.0
 	crc32fast@1.5.0
+	crc@3.4.0
+	critical-section@1.2.0
 	crossbeam-channel@0.5.15
 	crossbeam-deque@0.8.6
 	crossbeam-epoch@0.9.18
+	crossbeam-queue@0.3.12
 	crossbeam-utils@0.8.21
 	crossterm_winapi@0.9.1
 	crunchy@0.2.4
 	crypto-common@0.1.6
+	csv-core@0.1.13
+	csv@1.4.0
 	ctor-proc-macro@0.0.7
 	ctor@0.1.26
 	ctor@0.6.3
@@ -153,7 +168,6 @@ CRATES="
 	display_container@0.9.0
 	displaydoc@0.2.5
 	doc-comment@0.3.3
-	document-features@0.2.12
 	dotenvy@0.15.7
 	downcast-rs@1.2.1
 	dtor-proc-macro@0.0.6
@@ -168,6 +182,8 @@ CRATES="
 	encoding_rs@0.8.35
 	endi@1.1.0
 	endian-type@0.1.2
+	endian-type@0.2.0
+	enum-as-inner@0.6.1
 	enumflags2@0.7.12
 	enumflags2_derive@0.7.12
 	env-flags@0.1.1
@@ -178,6 +194,7 @@ CRATES="
 	erased-serde@0.3.31
 	errno@0.3.13
 	error-code@3.3.2
+	etcetera@0.8.0
 	event-listener-strategy@0.5.4
 	event-listener@5.4.0
 	eventsource-stream@0.2.3
@@ -188,21 +205,30 @@ CRATES="
 	fd-lock@4.0.4
 	fdeflate@0.3.7
 	filedescriptor@0.8.3
+	find-msvc-tools@0.1.7
 	findshlibs@0.10.2
 	fixed_decimal@0.7.0
 	fixedbitset@0.4.2
 	flate2@1.1.2
 	float-cmp@0.10.0
+	flume@0.11.1
+	flume@0.12.0
 	fnv@1.0.7
 	foldhash@0.1.5
 	foldhash@0.2.0
+	foreign-types-macros@0.2.3
 	foreign-types-shared@0.1.1
+	foreign-types-shared@0.3.1
 	foreign-types@0.3.2
+	foreign-types@0.5.0
 	form_urlencoded@1.2.1
+	fs_extra@1.3.0
 	fsevent-sys@4.1.0
+	fslock@0.2.1
 	futures-channel@0.3.31
 	futures-core@0.3.31
 	futures-executor@0.3.31
+	futures-intrusive@0.5.0
 	futures-io@0.3.31
 	futures-lite@2.6.1
 	futures-macro@0.3.31
@@ -211,28 +237,34 @@ CRATES="
 	futures-util@0.3.31
 	futures@0.3.31
 	fxhash@0.2.1
+	generator@0.8.8
 	generic-array@0.14.7
 	gethostname@0.4.3
 	getopts@0.2.23
 	getrandom@0.2.16
 	getrandom@0.3.3
 	gimli@0.31.1
-	globset@0.4.16
+	glob@0.3.3
+	globset@0.4.18
 	h2@0.4.11
 	half@2.6.0
 	hashbrown@0.12.3
 	hashbrown@0.14.5
 	hashbrown@0.15.4
 	hashbrown@0.16.0
+	hashlink@0.10.0
 	heck@0.5.0
 	hermit-abi@0.5.2
 	hex@0.4.3
+	hickory-proto@0.25.2
+	hickory-resolver@0.25.2
 	hkdf@0.12.4
 	hmac@0.12.1
 	home@0.5.11
 	hostname@0.4.1
 	http-body-util@0.1.3
 	http-body@1.0.1
+	http-range-header@0.4.2
 	http@0.2.12
 	http@1.3.1
 	httparse@1.10.1
@@ -273,6 +305,7 @@ CRATES="
 	insta@1.46.0
 	instability@0.3.9
 	inventory@0.3.20
+	ipconfig@0.3.2
 	ipnet@2.11.0
 	iri-string@0.7.8
 	is-terminal@0.4.16
@@ -288,7 +321,6 @@ CRATES="
 	jni@0.21.1
 	jobserver@0.1.34
 	js-sys@0.3.77
-	kasuari@0.4.11
 	keyring@3.6.3
 	kqueue-sys@1.0.4
 	kqueue@1.1.1
@@ -299,17 +331,20 @@ CRATES="
 	lazy_static@1.5.0
 	libc@0.2.177
 	libdbus-sys@0.2.6
+	libloading@0.8.9
+	libm@0.2.16
 	libredox@0.1.6
+	libsqlite3-sys@0.30.1
 	linux-keyutils@0.2.4
 	linux-raw-sys@0.4.15
 	linux-raw-sys@0.9.4
 	litemap@0.8.0
-	litrs@1.0.0
 	local-waker@0.1.4
 	lock_api@0.4.13
 	log@0.4.29
 	logos-derive@0.12.1
 	logos@0.12.1
+	loom@0.7.2
 	lru-slab@0.1.2
 	lru@0.12.5
 	lru@0.16.3
@@ -317,6 +352,9 @@ CRATES="
 	maplit@1.0.2
 	matchers@0.2.0
 	matchit@0.8.4
+	matchit@0.9.1
+	md-5@0.10.6
+	md5@0.8.0
 	memchr@2.7.5
 	memoffset@0.6.5
 	memoffset@0.9.1
@@ -325,6 +363,7 @@ CRATES="
 	minimal-lexical@0.2.1
 	miniz_oxide@0.8.9
 	mio@1.0.4
+	moka@0.12.12
 	moxcms@0.7.5
 	multimap@0.10.1
 	native-tls@0.2.14
@@ -335,11 +374,12 @@ CRATES="
 	nix@0.29.0
 	nix@0.30.1
 	nom@7.1.3
+	nom@8.0.0
 	normalize-line-endings@0.3.0
 	notify-types@2.0.0
 	notify@8.2.0
 	nu-ansi-term@0.50.1
-	nucleo-matcher@0.3.1
+	num-bigint-dig@0.8.6
 	num-bigint@0.4.6
 	num-complex@0.4.6
 	num-conv@0.1.0
@@ -395,6 +435,8 @@ CRATES="
 	pin-project@1.1.10
 	pin-utils@0.1.0
 	piper@0.2.4
+	pkcs1@0.7.5
+	pkcs8@0.10.2
 	pkg-config@0.3.32
 	plist@1.7.4
 	png@0.18.0
@@ -416,6 +458,8 @@ CRATES="
 	proptest@1.9.0
 	prost-derive@0.14.1
 	prost@0.14.1
+	psl-types@2.0.11
+	psl@2.1.178
 	pulldown-cmark-escape@0.10.1
 	pulldown-cmark@0.10.3
 	pxfm@0.1.23
@@ -428,6 +472,26 @@ CRATES="
 	quote@1.0.40
 	r-efi@5.3.0
 	radix_trie@0.2.1
+	radix_trie@0.3.0
+	rama-boring-sys@0.5.9
+	rama-boring-tokio@0.5.9
+	rama-boring@0.5.9
+	rama-core@0.3.0-alpha.4
+	rama-dns@0.3.0-alpha.4
+	rama-error@0.3.0-alpha.4
+	rama-http-backend@0.3.0-alpha.4
+	rama-http-core@0.3.0-alpha.4
+	rama-http-headers@0.3.0-alpha.4
+	rama-http-types@0.3.0-alpha.4
+	rama-http@0.3.0-alpha.4
+	rama-macros@0.3.0-alpha.4
+	rama-net@0.3.0-alpha.4
+	rama-socks5@0.3.0-alpha.4
+	rama-tcp@0.3.0-alpha.4
+	rama-tls-boring@0.3.0-alpha.4
+	rama-udp@0.3.0-alpha.4
+	rama-unix@0.3.0-alpha.4
+	rama-utils@0.3.0-alpha.4
 	rand@0.8.5
 	rand@0.9.2
 	rand_chacha@0.3.1
@@ -435,8 +499,9 @@ CRATES="
 	rand_core@0.6.4
 	rand_core@0.9.3
 	rand_xorshift@0.4.0
-	ratatui-core@0.1.0
 	ratatui-macros@0.6.0
+	rayon-core@1.13.0
+	rayon@1.11.0
 	redox_syscall@0.5.15
 	redox_users@0.4.6
 	redox_users@0.5.0
@@ -448,9 +513,11 @@ CRATES="
 	regex-syntax@0.8.5
 	regex@1.12.2
 	reqwest@0.12.24
+	resolv-conf@0.7.6
 	ring@0.17.14
 	rmcp-macros@0.12.0
 	rmcp@0.12.0
+	rsa@0.9.10
 	rustc-demangle@0.1.25
 	rustc-hash@2.1.1
 	rustc_version@0.4.1
@@ -474,6 +541,7 @@ CRATES="
 	schemars@1.0.4
 	schemars_derive@0.8.22
 	schemars_derive@1.0.4
+	scoped-tls@1.0.1
 	scopeguard@1.2.0
 	sdd@3.0.10
 	seccompiler@0.5.0
@@ -495,6 +563,7 @@ CRATES="
 	serde_core@1.0.228
 	serde_derive@1.0.228
 	serde_derive_internals@0.29.1
+	serde_html_form@0.3.2
 	serde_json@1.0.145
 	serde_path_to_error@0.1.20
 	serde_repr@0.1.20
@@ -516,6 +585,7 @@ CRATES="
 	signal-hook-mio@0.2.4
 	signal-hook-registry@1.4.5
 	signal-hook@0.3.18
+	signature@2.2.0
 	simd-adler32@0.3.7
 	simdutf8@0.1.5
 	similar@2.7.0
@@ -523,8 +593,18 @@ CRATES="
 	slab@0.4.11
 	smallvec@1.15.1
 	smawk@0.3.2
+	smol_str@0.3.5
 	socket2@0.5.10
 	socket2@0.6.1
+	spin@0.9.8
+	spki@0.7.3
+	sqlx-core@0.8.6
+	sqlx-macros-core@0.8.6
+	sqlx-macros@0.8.6
+	sqlx-mysql@0.8.6
+	sqlx-postgres@0.8.6
+	sqlx-sqlite@0.8.6
+	sqlx@0.8.6
 	sse-stream@0.2.1
 	stable_deref_trait@1.2.0
 	starlark@0.13.0
@@ -534,6 +614,7 @@ CRATES="
 	static_assertions@1.1.0
 	streaming-iterator@0.1.9
 	string_cache@0.8.9
+	stringprep@0.1.5
 	strsim@0.10.0
 	strsim@0.11.1
 	strum@0.26.3
@@ -550,6 +631,7 @@ CRATES="
 	sys-locale@0.3.2
 	system-configuration-sys@0.6.0
 	system-configuration@0.6.1
+	tagptr@0.2.0
 	tempfile@3.23.0
 	term@0.7.0
 	termcolor@1.4.1
@@ -576,11 +658,12 @@ CRATES="
 	tinystr@0.8.1
 	tinyvec@1.10.0
 	tinyvec_macros@0.1.1
+	tokio-graceful@0.2.2
 	tokio-macros@2.6.0
 	tokio-native-tls@0.3.1
 	tokio-rustls@0.26.2
 	tokio-stream@0.1.18
-	tokio-test@0.4.4
+	tokio-test@0.4.5
 	tokio-util@0.7.18
 	tokio@1.49.0
 	toml@0.5.11
@@ -598,14 +681,14 @@ CRATES="
 	tower@0.5.2
 	tracing-appender@0.2.3
 	tracing-attributes@0.1.31
-	tracing-core@0.1.35
+	tracing-core@0.1.36
 	tracing-error@0.2.1
 	tracing-log@0.2.0
 	tracing-opentelemetry@0.32.0
 	tracing-subscriber@0.3.22
 	tracing-test-macro@0.2.5
 	tracing-test@0.2.5
-	tracing@0.1.43
+	tracing@0.1.44
 	tree-sitter-bash@0.25.0
 	tree-sitter-highlight@0.25.10
 	tree-sitter-language@0.1.5
@@ -614,17 +697,18 @@ CRATES="
 	try-lock@0.2.5
 	ts-rs-macros@11.1.0
 	ts-rs@11.1.0
-	tui-scrollbar@0.2.2
 	typenum@1.18.0
 	uds_windows@1.1.0
 	uname@0.1.1
 	unarray@0.1.4
 	unicase@2.8.1
+	unicode-bidi@0.3.18
 	unicode-ident@1.0.18
 	unicode-linebreak@0.1.5
+	unicode-normalization@0.1.25
+	unicode-properties@0.1.4
 	unicode-segmentation@1.12.0
 	unicode-truncate@1.1.0
-	unicode-truncate@2.0.0
 	unicode-width@0.1.14
 	unicode-width@0.2.1
 	unicode-xid@0.2.6
@@ -648,6 +732,7 @@ CRATES="
 	want@0.3.1
 	wasi@0.11.1+wasi-snapshot-preview1
 	wasi@0.14.2+wasi-0.2.4
+	wasite@0.1.0
 	wasm-bindgen-backend@0.2.100
 	wasm-bindgen-futures@0.4.50
 	wasm-bindgen-macro-support@0.2.100
@@ -669,6 +754,9 @@ CRATES="
 	webpki-roots@1.0.2
 	weezl@0.1.10
 	which@8.0.0
+	whoami@1.6.1
+	widestring@1.2.1
+	wildcard@0.3.0
 	wildmatch@2.6.1
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-util@0.1.9
@@ -691,6 +779,7 @@ CRATES="
 	windows-strings@0.1.0
 	windows-strings@0.4.2
 	windows-sys@0.45.0
+	windows-sys@0.48.0
 	windows-sys@0.52.0
 	windows-sys@0.59.0
 	windows-sys@0.60.2
@@ -734,6 +823,7 @@ CRATES="
 	windows_x86_64_msvc@0.53.0
 	winnow@0.7.13
 	winreg@0.10.1
+	winreg@0.50.0
 	winres@0.1.12
 	winsafe@0.0.19
 	winsplit@0.1.0
@@ -774,6 +864,8 @@ CRATES="
 # Git patched dependencies commits
 CROSSTERM_COMMIT="87db8bfa6dc99427fd3b071681b07fc31c6ce995"
 RATATUI_COMMIT="9b2ad1298408c45918ee9f8241a6f95498cdbed2"
+NUCLEO_COMMIT="4253de9faabb4e5c6d81d946a5e35a90f87347ee"
+RULES_RUST_COMMIT="b56cbaa8465e74127f1ea216f813cd377295ad81"
 TOKIO_TUNGSTENITE_COMMIT="2ae536b0de793f3ddf31fc2f22d445bf1ef2023d"
 TUNGSTENITE_COMMIT="f514de8644821113e5d18a027d6d28a5c8cc0a6e"
 
@@ -787,9 +879,11 @@ SRC_URI="
 	https://github.com/openai/${PN}/archive/rust-v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/nornagon/crossterm/archive/${CROSSTERM_COMMIT}.tar.gz -> ${P}-crossterm.tar.gz
 	https://github.com/nornagon/ratatui/archive/${RATATUI_COMMIT}.tar.gz -> ${P}-ratatui.tar.gz
-	https://github.com/JakkuSakura/tokio-tungstenite/archive/${TOKIO_TUNGSTENITE_COMMIT}.tar.gz \
+	https://github.com/helix-editor/nucleo/archive/${NUCLEO_COMMIT}.tar.gz -> ${P}-nucleo.tar.gz
+	https://github.com/dzbarsky/rules_rust/archive/${RULES_RUST_COMMIT}.tar.gz -> ${P}-rules_rust.tar.gz
+	https://github.com/JakkuSakura/tokio-tungstenite/archive/${TOKIO_TUNGSTENITE_COMMIT}.tar.gz
 		-> ${P}-tokio-tungstenite.tar.gz
-	https://github.com/JakkuSakura/tungstenite-rs/archive/${TUNGSTENITE_COMMIT}.tar.gz -> ${P}-tungstenite-rs.tar.gz
+	https://github.com/JakkuSakura/tungstenite-rs/archive/${TUNGSTENITE_COMMIT}.tar.gz -> ${P}-tungstenite.tar.gz
 	${CARGO_CRATE_URIS}
 "
 
@@ -797,10 +891,7 @@ S="${WORKDIR}/${PN}-rust-v${PV}/codex-rs"
 
 LICENSE="Apache-2.0"
 # Dependent crate licenses
-LICENSE+="
-	Apache-2.0 BSD-2 BSD Boost-1.0 CC0-1.0 CDLA-Permissive-2.0 ISC MIT
-	MPL-2.0 Unicode-3.0 ZLIB
-"
+LICENSE+=" Apache-2.0 BSD BSD-2 Boost-1.0 CC0-1.0 CDLA-Permissive-2.0 ISC MIT MPL-2.0 Unicode-3.0 Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 # Tests fail due to ring crate conflicts with system OpenSSL
@@ -822,15 +913,27 @@ src_prepare() {
 	# Setup patched dependencies in cargo_home
 	local crossterm_dir="${WORKDIR}/crossterm-${CROSSTERM_COMMIT}"
 	local ratatui_dir="${WORKDIR}/ratatui-${RATATUI_COMMIT}"
+	local nucleo_dir="${WORKDIR}/nucleo-${NUCLEO_COMMIT}"
+	local rules_rust_dir="${WORKDIR}/rules_rust-${RULES_RUST_COMMIT}"
 	local tokio_tungstenite_dir="${WORKDIR}/tokio-tungstenite-${TOKIO_TUNGSTENITE_COMMIT}"
 	local tungstenite_dir="${WORKDIR}/tungstenite-rs-${TUNGSTENITE_COMMIT}"
 
+	# Replace git dependencies in workspace.dependencies with path dependencies
+	local ng='nucleo = { git = "https://github.com/helix-editor/nucleo.git"'
+	local rg='runfiles = { git = "https://github.com/dzbarsky/rules_rust"'
+	sed -i "s|${ng}.*|nucleo = { path = \"${nucleo_dir}\" }|" "${S}/Cargo.toml" || die
+	sed -i "s|${rg}.*|runfiles = { path = \"${rules_rust_dir}/rust/runfiles\" }|" \
+		"${S}/Cargo.toml" || die
+
+	# Fix tokio-tungstenite's ssh git dependency on tungstenite
+	sed -i '/^\[dependencies\.tungstenite\]/,/^$/{
+		s|git = "ssh://git@github.com/JakkuSakura/tungstenite-rs.git"|path = "'"${tungstenite_dir}"'"|
+		/^branch = /d
+	}' "${tokio_tungstenite_dir}/Cargo.toml" || die
+
 	# Remove the [patch.crates-io] section and add path-based patches
 	sed -i '/^\[patch\.crates-io\]/,/^$/d' "${S}/Cargo.toml" || die
-	sed -i '/^\[patch\."ssh:\/\/git@github.com\/JakkuSakura\/tungstenite-rs.git"\]/,/^$/d' \
-		"${S}/Cargo.toml" || die
-	sed -i '/^\[patch\."ssh:\/\/git@github.com\/JakkuSakura\/tungstenite-rs.git\?branch=proxy-support"\]/,/^$/d' \
-		"${S}/Cargo.toml" || die
+	sed -i '/^\[patch\."ssh:\/\/git@github\.com/,/^$/d' "${S}/Cargo.toml" || die
 
 	# Add new patch section with local paths
 	cat >> "${S}/Cargo.toml" <<-EOF || die
@@ -838,21 +941,12 @@ src_prepare() {
 	[patch.crates-io]
 	crossterm = { path = "${crossterm_dir}" }
 	ratatui = { path = "${ratatui_dir}" }
+	nucleo = { path = "${nucleo_dir}" }
+	nucleo-matcher = { path = "${nucleo_dir}/matcher" }
+	runfiles = { path = "${rules_rust_dir}/rust/runfiles" }
 	tokio-tungstenite = { path = "${tokio_tungstenite_dir}" }
-
-	[patch."ssh://git@github.com/JakkuSakura/tungstenite-rs.git"]
-	tungstenite = { path = "${tungstenite_dir}" }
-
-	[patch."ssh://git@github.com/JakkuSakura/tungstenite-rs.git?branch=proxy-support"]
 	tungstenite = { path = "${tungstenite_dir}" }
 	EOF
-
-	# Avoid git fetch in tokio-tungstenite by using local tungstenite
-	sed -i '/^\[dependencies\.tungstenite\]/,/^$/c\
-[dependencies.tungstenite]\n\
-path = "'"${tungstenite_dir}"'"\n\
-default-features = false\n' \
-		"${tokio_tungstenite_dir}/Cargo.toml" || die
 }
 
 src_compile() {
