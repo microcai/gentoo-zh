@@ -3,18 +3,23 @@
 
 EAPI=8
 
-inherit git-r3 cmake
+inherit cmake
 
+SRC_HASH="84eedb4bb3a9addc21b7288aa22b84ef211e3603"
 KDEPLASMAADDONS_VERSION="6.5.5"
 
 DESCRIPTION="A collection of plasma weather ions for Chinese users"
 HOMEPAGE="https://github.com/arenekosreal/plasma-ions-china"
+SRC_URI="
+	https://github.com/arenekosreal/plasma-ions-china/archive/${SRC_HASH}.tar.gz -> ${P}.tar.gz
+	mirror://kde/stable/plasma/${KDEPLASMAADDONS_VERSION}/kdeplasma-addons-${KDEPLASMAADDONS_VERSION}.tar.xz
+"
 
-EGIT_REPO_URI="https://github.com/arenekosreal/plasma-ions-china.git"
-SRC_URI="mirror://kde/stable/plasma/${KDEPLASMAADDONS_VERSION}/kdeplasma-addons-${KDEPLASMAADDONS_VERSION}.tar.xz"
+S="${WORKDIR}/${PN}-${SRC_HASH}"
 
 LICENSE="GPL-3+"
 SLOT="0"
+KEYWORDS="~amd64"
 
 RDEPEND="
 	dev-qt/qtbase:6
@@ -24,7 +29,7 @@ DEPEND="${RDEPEND}"
 BDEPEND="kde-frameworks/extra-cmake-modules"
 
 src_unpack() {
-	git-r3_src_unpack
+	unpack "${P}.tar.gz"
 }
 
 src_configure() {
