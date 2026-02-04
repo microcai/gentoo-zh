@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-02-04 10:28:31 CST)
+(The last generation time: 2026-02-04 17:26:23 CST)
 
 ### Packages
 
@@ -709,6 +709,7 @@
      dev-libs/singleapplication                        | 3.5.4              |  D         | https://itay-grudev.github.io/SingleApplication/                                        | Replacement of QtSingleApplication support for inter-instance communication
      net-proxy/Xray                                    | 26.1.31            | RD         | https://xtls.github.io/                                                                 | Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support.
                                                        | 26.2.2             |            |                                                                                         |
+                                                       | 26.2.4             |            |                                                                                         |
        app-alternatives/v2ray-geoip                    | 0-r2               |  D, RD     |                                                                                         | symlink for v2ray-geoip
        app-alternatives/v2ray-geosite                  | 0-r2               |  D, RD     |                                                                                         | symlink for v2ray-geosite
      net-proxy/v2ray                                   | 5.42.0             | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
