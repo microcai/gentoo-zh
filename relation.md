@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-02-04 17:51:08 CST)
+(The last generation time: 2026-02-04 19:49:09 CST)
 
 ### Packages
 
@@ -407,7 +407,8 @@
                                                        | 3.1                |            |                                                                                         |
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- kde-misc/plasma-ions-china                            | 9999               |            | https://github.com/arenekosreal/plasma-ions-china                                       | A collection of plasma weather ions for Chinese users
+ kde-misc/plasma-ions-china                            | 0_p20260130        |            | https://github.com/arenekosreal/plasma-ions-china                                       | A collection of plasma weather ions for Chinese users
+                                                       | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  mate-base/caja-bin                                    | 1.28.0             |            | https://wiki.mate-desktop.org/mate-desktop/applications/caja                            | GUI file manager, fork of GNOME Files (Nautilus); supports SSH, FTP, WebDav
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
