@@ -18,15 +18,19 @@ RESTRICT="bindist mirror strip"
 
 RDEPEND="
 	>=app-accessibility/at-spi2-core-2.46.0:2
+	app-crypt/libsecret[crypt]
 	dev-libs/expat
 	dev-libs/glib:2
+	dev-libs/libbsd
 	dev-libs/nspr
 	dev-libs/nss
 	media-libs/alsa-lib
 	media-libs/mesa
 	net-print/cups
 	sys-apps/dbus
+	sys-apps/keyutils
 	sys-apps/util-linux
+	sys-fs/e2fsprogs
 	x11-libs/cairo
 	x11-libs/gtk+:3
 	x11-libs/libdrm
@@ -38,6 +42,8 @@ RDEPEND="
 	x11-libs/libXfixes
 	x11-libs/libxkbcommon
 	x11-libs/libXrandr
+	x11-libs/libXScrnSaver
+	x11-libs/libXtst
 	x11-libs/pango
 	x11-misc/xdg-utils
 "
