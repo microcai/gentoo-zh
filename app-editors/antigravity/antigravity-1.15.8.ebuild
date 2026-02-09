@@ -10,9 +10,9 @@ CHROMIUM_LANGS="af am ar bg bn ca cs da de el en-GB es es-419 et fa fi fil fr gu
 inherit chromium-2 desktop optfeature pax-utils unpacker xdg shell-completion
 
 # curl -sL https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/dists/antigravity-debian/main/binary-amd64/Packages | tac | sed -e '/^$/q' | grep Filename
-MY_PV_SUFFIX_AMD64="1770081357_amd64_1e91c55b802c42d27f931c53e68fc2ab"
+MY_PV_SUFFIX_AMD64="1769233008_amd64_7d1cef02620eccedced833093ea2a457"
 # curl -sL https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/dists/antigravity-debian/main/binary-arm64/Packages | tac | sed -e '/^$/q' | grep Filename
-MY_PV_SUFFIX_ARM64="1770081396_arm64_c50fd2a09a9c4bc5a4ef2c96ff8b8d0b"
+MY_PV_SUFFIX_ARM64="1769232817_arm64_fbf15ca5a8ac03ab24a27c5d7a9fe562"
 
 DESCRIPTION="Google Antigravity - AI-powered code editor"
 HOMEPAGE="https://antigravity.google/"
@@ -32,7 +32,7 @@ LICENSE="Google-TOS"
 
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
-IUSE="egl kerberos wayland webkit"
+IUSE="egl kerberos wayland"
 RESTRICT="bindist mirror strip"
 
 RDEPEND="
@@ -55,7 +55,6 @@ RDEPEND="
 	net-print/cups
 	sys-apps/dbus
 	sys-process/lsof
-	virtual/zlib:=
 	x11-libs/cairo
 	x11-libs/gtk+:3
 	x11-libs/libdrm
@@ -72,12 +71,9 @@ RDEPEND="
 	x11-libs/libXrandr
 	x11-libs/libXScrnSaver
 	x11-libs/pango
+	virtual/zlib:=
 	x11-misc/xdg-utils
 	kerberos? ( app-crypt/mit-krb5 )
-	webkit? (
-		net-libs/libsoup:3.0
-		net-libs/webkit-gtk:4.1
-	)
 "
 
 QA_PREBUILT="*"
