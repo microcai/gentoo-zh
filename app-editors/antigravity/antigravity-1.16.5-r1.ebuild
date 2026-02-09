@@ -109,6 +109,10 @@ src_install() {
 		rm -r ./resources/app/node_modules/kerberos || die
 	fi
 
+	if ! use webkit; then
+		rm -r ./resources/app/extensions/microsoft-authentication || die
+	fi
+
 	# Install main application
 	pax-mark m antigravity
 	mkdir -p "${ED}/opt/${PN}" || die
