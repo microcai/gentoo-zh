@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-02-10 20:14:46 CST)
+(The last generation time: 2026-02-10 23:49:08 CST)
 
 ### Packages
 
@@ -340,6 +340,7 @@
  dev-util/fvm                                          | 4.0.5              |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
    dev-lang/dart                                       | 3.10.8             |  D, RD     | https://dart.dev                                                                        | The Dart SDK
                                                        | 3.10.9             |            |                                                                                         |
+                                                       | 3.11.0             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/gemini-cli                                   | 0.27.3             |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
