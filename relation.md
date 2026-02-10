@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-02-10 13:17:36 CST)
+(The last generation time: 2026-02-10 20:14:46 CST)
 
 ### Packages
 
@@ -267,7 +267,19 @@
                                                        | 2.3.2              |            |                                                                                         |
                                                        | 3.3.2              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/feeluown-bilibili                          | 0.4.1              |            | https://github.com/feeluown/feeluown-bilibili                                           | bilibili support for feeluown
+                                                       | 0.5.4              |            |                                                                                         |
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/frozendict                                 | 2.4.6              |            | https://github.com/Marco-Sulla/python-frozendict                                        | A simple immutable dictionary for Python
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/fuo-netease                                | 1.0.3              |            | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
+                                                       | 1.0.8              |            |                                                                                         |
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/fuo-qqmusic                                | 1.0.16             |            | https://github.com/feeluown/feeluown-qqmusic                                            | qq music support for feeluown
+                                                       | 1.0.5              |            |                                                                                         |
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/fuo-ytmusic                                | 0.4.14             |            | https://github.com/feeluown/feeluown-ytmusic                                            | youtube music support for feeluown
+                                                       | 0.4.2              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/fusesoc                                    | 2.4.4              |            | https://github.com/olofk/fusesoc/                                                       | Award-winnning package manager and build abstraction tool for HDL code.
                                                        | 2.4.5              |            |                                                                                         |
@@ -475,13 +487,9 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/euphonica                                 | 0.98.1             |            | https://github.com/htkhiem/euphonica                                                    | An MPD client with delusions of grandeur, made with Rust, GTK and Libadwaita.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/feeluown                                  | 4.1.7              |            | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
-   dev-python/feeluown-bilibili                        | 0.4.1              |  D         | https://github.com/feeluown/feeluown-bilibili                                           | bilibili support for feeluown
-   dev-python/fuo-netease                              | 1.0.3              |  D         | https://github.com/feeluown/feeluown-netease                                            | netease cloud music support for feeluown
-   dev-python/fuo-qqmusic                              | 1.0.5              |  D         | https://github.com/feeluown/feeluown-qqmusic                                            | qq music support for feeluown
-   dev-python/fuo-ytmusic                              | 0.4.2              |  D         | https://github.com/feeluown/feeluown-ytmusic                                            | youtube music support for feeluown
-   dev-python/janus                                    | 2.0.0              |  D, RD     | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
-   dev-python/qasync                                   | 0.28.0             |  D, RD     | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
+ media-sound/feeluown                                  | 5.0.2              |            | https://github.com/feeluown/FeelUOwn                                                    | A user-friendly and hackable music player
+   dev-python/janus                                    | 2.0.0              | RD         | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
+   dev-python/qasync                                   | 0.28.0             | RD         | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/go-musicfox                               | 4.7.2              |            | https://github.com/go-musicfox/go-musicfox                                              | Command-line Netease Cloud Music written in Go
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
