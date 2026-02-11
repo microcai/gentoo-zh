@@ -23,6 +23,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
+    - name: list files
+      run: |
+        ls -la
+
     - name: get ebuilds
       env:
         GH_TOKEN: ${{ github.token }}
