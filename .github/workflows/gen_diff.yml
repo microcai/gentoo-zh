@@ -8,7 +8,7 @@ jobs:
   scan_ebuilds:
     runs-on: ubuntu-latest
     outputs:
-      packages: ${{ steps.colors.outputs.packages }}
+      packages: ${{ steps.packages.outputs.packages }}
 
     steps:
       - uses: actions/checkout@v4
