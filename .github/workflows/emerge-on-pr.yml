@@ -44,8 +44,10 @@ jobs:
             if [ ! -d "$(echo "$file" | awk -F'/' '{print $1"/"$2}')" ]; then
                 # treecleaned or deleted
                 continue
-            elif [[ "$file" == *.ebuild ]]; then 
-                packages+=(\=$(echo "$file" | awk -F'/' '{ sub(/\.ebuild$/, "", $3); print $1"/"$3 }'))
+            elif [[ "$file" == *.ebuild ]]; then
+                if [ -f "$file" ]; then
+                    packages+=(\=$(echo "$file" | awk -F'/' '{ sub(/\.ebuild$/, "", $3); print $1"/"$3 }'))
+                fi
             else
                 packages+=($(echo "$file" | awk -F'/' '{print $1"/"$2}'))
             fi
@@ -57,7 +59,7 @@ jobs:
         echo "packages=${json_output}" >> "$GITHUB_OUTPUT"
 
   build:
-    name: emerge changed ebuilds
+    name: emerge
     needs: scan
     strategy:
       matrix:
