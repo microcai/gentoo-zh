@@ -11,7 +11,7 @@ jobs:
       packages: ${{ steps.packages.outputs.packages }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: echo environment variables
         run: |

@@ -22,7 +22,7 @@ jobs:
       packages: ${{ steps.packages.outputs.packages }}
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
     - name: list files
       run: |
