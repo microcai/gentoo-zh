@@ -36,25 +36,23 @@ jobs:
           declare -a packages=()
           # new or modifie
           for file in $(gh pr view 1 --json files --jq '.files[] | select(.additions > 0) | .path'); do
-              local package
               if [[ "$file" == *.ebuild ]]; then
-                  package=\=${$(echo "$file" | awk -F'/' '{print $1"/"$3}')%.ebuild}
+                  packages+=(\=${$(echo "$file" | awk -F'/' '{print $1"/"$3}')%.ebuild})
               else
-                  package=$(echo "$file" | awk -F'/' '{print $1"/"$2}')
+                  packages+=($(echo "$file" | awk -F'/' '{print $1"/"$2}'))
               fi
-              packages+=("$package")
           done
+          echo packages=$(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s .)
 
           # treeclean, delete and modifie
           for file in $(gh pr view 1 --json files --jq '.files[] | select(.deletions > 0) | .path'); do
-              local package
               if [ ! -d "$package" ]; then
                   # treecleaned or deleted
-
+              elif [[ "$file" == *.ebuild ]]; then 
+                  packages+=(\=${$(echo "$file" | awk -F'/' '{print $1"/"$3}')%.ebuild})
               else
-                  package=\=${$(echo "$file" | awk -F'/' '{print $1"/"$3}')%.ebuild}
+                  packages+=($(echo "$file" | awk -F'/' '{print $1"/"$2}'))
               fi
-              packages+=("$package")
           done
 
           echo packages=$(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s .)
