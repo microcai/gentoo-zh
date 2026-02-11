@@ -62,7 +62,7 @@ jobs:
           echo "packages=${json_output}" >> "$GITHUB_OUTPUT"
 
 
-  runs-on-dynamic-matrix:
+  emerge:
     runs-on: ubuntu-latest
     needs: scan_ebuilds
     strategy:
