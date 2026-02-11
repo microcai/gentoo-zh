@@ -37,12 +37,11 @@ jobs:
                 packages+=($(echo "$file" | awk -F'/' '{print $1"/"$2}'))
             fi
         done
-        echo packages=$(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s .)
+        echo "scan additions files: $(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s .)"
 
         # treeclean, delete and modifie
         for file in $(gh pr view ${{ github.event.pull_request.number }} --json files --jq '.files[] | select(.deletions > 0) | .path'); do
             if [ ! -d "$(echo "$file" | awk -F'/' '{print $1"/"$2}')" ]; then
-                # treecleaned or deleted
                 continue
             elif [[ "$file" == *.ebuild ]]; then
                 if [ -f "$file" ]; then
@@ -53,7 +52,7 @@ jobs:
             fi
         done
 
-        echo packages=$(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s .)
+        echo "scan deletions files: $(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s .)"
 
         json_output=$(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s . | tr -d '\n')
         echo "packages=${json_output}" >> "$GITHUB_OUTPUT"
