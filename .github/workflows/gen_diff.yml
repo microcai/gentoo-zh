@@ -58,7 +58,8 @@ jobs:
 
           echo packages=$(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s .)
 
-          echo 'packages=$(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s .)' >> "$GITHUB_OUTPUT"
+          json_output=$(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s . | tr -d '\n')
+          echo "packages=${json_output}" >> "$GITHUB_OUTPUT"
 
 
   runs-on-dynamic-matrix:
