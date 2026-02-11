@@ -37,8 +37,10 @@ jobs:
           # new or modifie
           for file in $(gh pr view 1 --json files --jq '.files[] | select(.additions > 0) | .path'); do
               if [[ "$file" == *.ebuild ]]; then
+                  echo new or modifie $file
                   packages+=(\=$(echo "$file" | awk -F'/' '{ sub(/\.ebuild$/, "", $3); print $1"/"$3 }'))
               else
+                  echo new or modifie $(echo "$file" | awk -F'/' '{print $1"/"$2}')
                   packages+=($(echo "$file" | awk -F'/' '{print $1"/"$2}'))
               fi
           done
@@ -47,12 +49,17 @@ jobs:
           # treeclean, delete and modifie
           for file in $(gh pr view 1 --json files --jq '.files[] | select(.deletions > 0) | .path'); do
               if [ ! -d "$(echo "$file" | awk -F'/' '{print $1"/"$2}')" ]; then
+                  echo "treeclean $(echo "$file" | awk -F'/' '{print $1"/"$2}')"
                   continue
               elif [[ "$file" == *.ebuild ]]; then
                   if [ -f "$file" ]; then
+                      echo "modified $file"
                       packages+=(\=$(echo "$file" | awk -F'/' '{ sub(/\.ebuild$/, "", $3); print $1"/"$3 }'))
+                  else
+                      echo "deleted $file"
                   fi
               else
+                  echo "modified $file"
                   packages+=($(echo "$file" | awk -F'/' '{print $1"/"$2}'))
               fi
           done
