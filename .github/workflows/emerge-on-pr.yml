@@ -23,7 +23,7 @@ jobs:
     steps:
     - uses: actions/checkout@v6
 
-    - name: get ebuilds
+    - name: scan changed ebuilds
       env:
         GH_TOKEN: ${{ github.token }}
       id: packages
@@ -57,13 +57,16 @@ jobs:
         json_output=$(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s . | tr -d '\n')
         echo "packages=${json_output}" >> "$GITHUB_OUTPUT"
 
+
   build:
     name: emerge
     needs: scan
+    if: ${{ fromJson(needs.scan.outputs.packages)[0] != null }}
     strategy:
       fail-fast: false
       matrix:
         package: ${{ fromJSON(needs.scan.outputs.packages) }}
+
     runs-on: ubuntu-latest
     container:
       image: gentoo/stage3:amd64-desktop-systemd
