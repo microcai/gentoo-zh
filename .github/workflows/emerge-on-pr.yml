@@ -1,14 +1,13 @@
 name: emerge
 
 on:
-  pull_request_target:
+  pull_request:
     branches:
       - master
     paths-ignore:
       - '.github/**'
       - 'metadata/**'
       - 'profiles/**'
-    types: [opened, reopened, synchronize]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
