@@ -46,7 +46,7 @@ jobs:
 
           # treeclean, delete and modifie
           for file in $(gh pr view 1 --json files --jq '.files[] | select(.deletions > 0) | .path'); do
-              if [ ! -d "$package" ]; then
+              if [ ! -d "$(echo "$file" | awk -F'/' '{print $1"/"$2}')" ]; then
                   # treecleaned or deleted
                   continue
               elif [[ "$file" == *.ebuild ]]; then 
