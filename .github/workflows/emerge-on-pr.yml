@@ -1,22 +1,69 @@
 name: emerge
 
 on:
-  pull_request_target:
+  pull_request:
     branches:
       - master
     paths-ignore:
       - '.github/**'
       - 'metadata/**'
       - 'profiles/**'
-    types: [opened, reopened, synchronize]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 jobs:
+  scan:
+    name: scan changed ebuilds
+    runs-on: ubuntu-latest
+    outputs:
+      packages: ${{ steps.packages.outputs.packages }}
+
+    steps:
+    - uses: actions/checkout@v6
+
+    - name: get ebuilds
+      env:
+        GH_TOKEN: ${{ github.token }}
+      id: packages
+      run: |
+        declare -a packages=()
+        # new or modifie
+        for file in $(gh pr view ${{ github.event.pull_request.number }} --json files --jq '.files[] | select(.additions > 0) | .path'); do
+            if [[ "$file" == *.ebuild ]]; then
+                packages+=(\=$(echo "$file" | awk -F'/' '{ sub(/\.ebuild$/, "", $3); print $1"/"$3 }'))
+            else
+                packages+=($(echo "$file" | awk -F'/' '{print $1"/"$2}'))
+            fi
+        done
+        echo "scan additions files: $(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s .)"
+
+        # treeclean, delete and modifie
+        for file in $(gh pr view ${{ github.event.pull_request.number }} --json files --jq '.files[] | select(.deletions > 0) | .path'); do
+            if [ ! -d "$(echo "$file" | awk -F'/' '{print $1"/"$2}')" ]; then
+                continue
+            elif [[ "$file" == *.ebuild ]]; then
+                if [ -f "$file" ]; then
+                    packages+=(\=$(echo "$file" | awk -F'/' '{ sub(/\.ebuild$/, "", $3); print $1"/"$3 }'))
+                fi
+            else
+                packages+=($(echo "$file" | awk -F'/' '{print $1"/"$2}'))
+            fi
+        done
+
+        echo "scan deletions files: $(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s .)"
+
+        json_output=$(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s . | tr -d '\n')
+        echo "packages=${json_output}" >> "$GITHUB_OUTPUT"
+
   build:
-    name: emerge changed ebuilds
+    name: emerge
+    needs: scan
+    strategy:
+      fail-fast: false
+      matrix:
+        package: ${{ fromJSON(needs.scan.outputs.packages) }}
     runs-on: ubuntu-latest
     container:
       image: gentoo/stage3:amd64-desktop-systemd
@@ -62,60 +109,6 @@ jobs:
         eselect repository add gentoo-zh git `realpath ./gentoo-zh`
         emaint sync -r gentoo-zh
 
-    - name: Get the base commit
-      id: basecommit
-      shell: bash
-      env:
-        COMMITS_URL: ${{ github.event.pull_request.commits_url }}
-        COMMITS_JSON: /tmp/commits.json
-      run: |
-        set -xe
-        curl -H "Accept: application/vnd.github.v3+json" \
-             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-             -o ${COMMITS_JSON} ${COMMITS_URL}
-        [[ $(file --mime-type ${COMMITS_JSON}) =~ application/json$ ]]
-        <${COMMITS_JSON} jq '.message' && false || true
-        commits=( $(<${COMMITS_JSON} jq '.[].sha' | cut -d'"' -f2) )
-        pcommits=( $(<${COMMITS_JSON} jq '.[].parents[].sha' | cut -d'"' -f2) )
-        sha=${pcommits[0]}
-        for pcommit in ${pcommits[@]}; do
-          pcommit_not_matched=0
-          for commit in ${commits[@]}; do
-            if [[ ${pcommit} == ${commit} ]]; then
-              pcommit_not_matched=1
-            fi
-          done
-          if [[ ${pcommit_not_matched} == 0 ]]; then
-            sha=${pcommit}
-            break
-          fi
-        done
-        echo "sha=$sha" >> $GITHUB_OUTPUT
-
-    - name: echo pkgs
-      id: pkgs
-      run: |
-        cd /var/db/repos/gentoo-zh
-        # Get list of changed files between base and head
-        git diff --raw ${{ steps.basecommit.outputs.sha }} ${{ github.event.pull_request.head.sha }}
-        diff_files=$(git diff --raw --name-only ${{ steps.basecommit.outputs.sha }} ${{ github.event.pull_request.head.sha }})
-        cates=$(cat /var/db/repos/gentoo{,-zh}/profiles/categories | sort -du)
-        declare -a check_pkgs
-        for file in ${diff_files}; do
-          c=${file%%/*}
-          for cate in ${cates}; do
-            if [[ ${c} == ${cate} ]]; then
-              n=${file#*/}
-              n=${n%%/*}
-              check_pkgs+=( ${c}/${n} )
-            fi
-          done
-        done
-        check_pkgs=( $(echo "${check_pkgs[@]}" | tr ' ' '\n' | sort -du | tr '\n' ' ') )
-        ret=0
-        echo "pkgs: ${check_pkgs[@]}"
-        echo "pkgs=${check_pkgs[@]}" >> $GITHUB_OUTPUT
-
     - name: setup elogs
       run: |
         echo 'PORTAGE_ELOG_CLASSES="qa warn error"' >> /etc/portage/make.conf
@@ -127,12 +120,12 @@ jobs:
 
     - name: emerge --onlydeps packages
       run: |
-        emerge --quiet --autounmask=y --autounmask-write=y --autounmask-continue=y --onlydeps ${{ steps.pkgs.outputs.pkgs }}
+        emerge --quiet --autounmask=y --autounmask-write=y --autounmask-continue=y --onlydeps ${{ matrix.package }}
         rm -rf /var/log/portage/elog/
 
     - name: emerge packages
       run: |
-        emerge --quiet --autounmask=y --autounmask-write=y --autounmask-continue=y ${{ steps.pkgs.outputs.pkgs }}
+        emerge --quiet --autounmask=y --autounmask-write=y --autounmask-continue=y ${{ matrix.package }}
 
     - name: check Portage elog (fail if exists)
       run: |
