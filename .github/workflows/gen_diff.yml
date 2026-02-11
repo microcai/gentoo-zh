@@ -5,8 +5,10 @@ on:
 
 
 jobs:
-  build:
+  scan_ebuilds:
     runs-on: ubuntu-latest
+    outputs:
+      packages: ${{ steps.colors.outputs.packages }}
 
     steps:
       - uses: actions/checkout@v4
@@ -23,4 +25,53 @@ jobs:
       - name: Dump change files
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh pr view ${{ github.event.pull_request.number }} --json files --jq '.files[] | select(.additions > 0) | .path'
+        run: |
+          gh pr view ${{ github.event.pull_request.number }} --json files --jq '.files[] | select(.additions > 0) | .path'
+
+      - name: get ebuilds
+        env:
+          GH_TOKEN: ${{ github.token }}
+        id: packages
+        run: |
+          declare -a packages=()
+          # new or modifie
+          for file in $(gh pr view 1 --json files --jq '.files[] | select(.additions > 0) | .path'); do
+              local package
+              if [[ "$file" == *.ebuild ]]; then
+                  package=\=${$(echo "$file" | awk -F'/' '{print $1"/"$3}')%.ebuild}
+              else
+                  package=$(echo "$file" | awk -F'/' '{print $1"/"$2}')
+              fi
+              packages+=("$package")
+          done
+
+          # treeclean, delete and modifie
+          for file in $(gh pr view 1 --json files --jq '.files[] | select(.deletions > 0) | .path'); do
+              local package
+              if [ ! -d "$package" ]; then
+                  # treecleaned or deleted
+
+              else
+                  package=\=${$(echo "$file" | awk -F'/' '{print $1"/"$3}')%.ebuild}
+              fi
+              packages+=("$package")
+          done
+
+          echo packages=$(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s .)
+
+          echo 'packages=$(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s .)' >> "$GITHUB_OUTPUT"
+
+
+  runs-on-dynamic-matrix:
+    runs-on: ubuntu-latest
+    needs: scan_ebuilds
+    strategy:
+      matrix:
+        package: ${{ fromJSON(needs.scan_ebuilds.outputs.packages) }}
+
+    steps:
+      - name: Define Color
+        env:
+          package: ${{ matrix.package }}
+        run: |
+          echo "$package"
