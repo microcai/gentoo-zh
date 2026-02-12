@@ -55,7 +55,7 @@ declare -A GIT_CRATES=(
 	[x11]='https://github.com/bjornsnoen/x11-rs;c2e9bfaa7b196938f8700245564d8ac5d447786a;x11-rs-%commit%/x11'
 )
 
-LLVM_COMPAT=( 18 19 20 )
+LLVM_COMPAT=( 18 19 20 21 )
 RUST_MIN_VER="1.81.0"
 RUST_NEEDS_LLVM=1
 inherit cargo desktop llvm-r1 systemd xdg
