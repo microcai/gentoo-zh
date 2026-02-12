@@ -25,8 +25,8 @@ declare -A GIT_CRATES=(
 	[nucleo]='https://github.com/helix-editor/nucleo;4253de9faabb4e5c6d81d946a5e35a90f87347ee;nucleo-%commit%'
 	[ratatui]='https://github.com/nornagon/ratatui;9b2ad1298408c45918ee9f8241a6f95498cdbed2;ratatui-%commit%'
 	[runfiles]='https://github.com/dzbarsky/rules_rust;b56cbaa8465e74127f1ea216f813cd377295ad81;rules_rust-%commit%/rust/runfiles'
-	[tokio-tungstenite]='https://github.com/JakkuSakura/tokio-tungstenite;2ae536b0de793f3ddf31fc2f22d445bf1ef2023d;tokio-tungstenite-%commit%'
-	[tungstenite]='https://github.com/JakkuSakura/tungstenite-rs;f514de8644821113e5d18a027d6d28a5c8cc0a6e;tungstenite-rs-%commit%'
+	[tokio-tungstenite]='https://github.com/openai-oss-forks/tokio-tungstenite;132f5b39c862e3a970f731d709608b3e6276d5f6;tokio-tungstenite-%commit%'
+	[tungstenite]='https://github.com/openai-oss-forks/tungstenite-rs;9200079d3b54a1ff51072e24d81fd354f085156f;tungstenite-rs-%commit%'
 )
 
 RUST_MIN_VER="1.91.0"
@@ -77,10 +77,10 @@ gen_git_crate_dir() {
 src_prepare() {
 	default
 
-	# Fix tokio-tungstenite's ssh git dependency on tungstenite
+	# Fix tokio-tungstenite's git dependency on tungstenite
 	sed -i '/^\[dependencies\.tungstenite\]/,/^$/{
-		s|git = "ssh://git@github.com/JakkuSakura/tungstenite-rs.git"|path = "'"$(gen_git_crate_dir tungstenite)"'"|
-		/^branch = /d
+		s|git = "https://github.com/openai-oss-forks/tungstenite-rs"|path = "'"$(gen_git_crate_dir tungstenite)"'"|
+		/^rev = /d
 	}' "$(gen_git_crate_dir tokio-tungstenite)/Cargo.toml" || die
 
 	# Remove the [patch.crates-io] section and add path-based patches
