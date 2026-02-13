@@ -29,7 +29,7 @@ declare -A GIT_CRATES=(
 	[tungstenite]='https://github.com/openai-oss-forks/tungstenite-rs;9200079d3b54a1ff51072e24d81fd354f085156f;tungstenite-rs-%commit%'
 )
 
-RUST_MIN_VER="1.91.0"
+RUST_MIN_VER="1.93.0"
 
 inherit cargo
 
