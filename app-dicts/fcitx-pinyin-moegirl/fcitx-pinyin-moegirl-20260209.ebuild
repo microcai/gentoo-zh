@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..14} )
+PYTHON_COMPAT=( python3_{10..13} )
 inherit python-any-r1
 
 DESCRIPTION="Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn"
