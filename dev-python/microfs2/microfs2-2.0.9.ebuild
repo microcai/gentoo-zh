@@ -21,4 +21,5 @@ RDEPEND="
 	>=dev-python/pyserial-3.0.1[${PYTHON_USEDEP}]
 "
 
+EPYTEST_PLUGINS=()
 distutils_enable_tests pytest
