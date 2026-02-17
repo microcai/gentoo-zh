@@ -42,37 +42,20 @@ QA_PREBUILT="usr/bin/opencode"
 
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then
-		local download_url
+		local arch suffix=""
 		case ${ARCH} in
-			amd64)
-				if use cpu_flags_x86_avx2; then
-					if use elibc_musl; then
-						download_url="${GITHUB_BASE}/opencode-linux-x64-musl.tar.gz"
-					else
-						download_url="${GITHUB_BASE}/opencode-linux-x64.tar.gz"
-					fi
-				else
-					if use elibc_musl; then
-						download_url="${GITHUB_BASE}/opencode-linux-x64-baseline-musl.tar.gz"
-					else
-						download_url="${GITHUB_BASE}/opencode-linux-x64-baseline.tar.gz"
-					fi
-				fi
-				;;
-			arm64)
-				if use elibc_musl; then
-					download_url="${GITHUB_BASE}/opencode-linux-arm64-musl.tar.gz"
-				else
-					download_url="${GITHUB_BASE}/opencode-linux-arm64.tar.gz"
-				fi
-				;;
+			amd64) arch="x64" ;;
+			arm64) arch="arm64" ;;
 			*) die "Unsupported architecture: ${ARCH}" ;;
 		esac
+		[[ ${ARCH} == amd64 ]] && ! use cpu_flags_x86_avx2 && suffix+="-baseline"
+		use elibc_musl && suffix+="-musl"
 
-		einfo "Downloading opencode latest release for ${ARCH}..."
-		curl -L -o "${WORKDIR}/opencode-${ARCH}.tar.gz" "${download_url}" || die "Failed to download"
+		local filename="opencode-linux-${arch}${suffix}.tar.gz"
+		einfo "Downloading opencode latest release: ${filename}"
+		curl -L -o "${WORKDIR}/${filename}" "${GITHUB_BASE}/${filename}" || die "Failed to download"
 		cd "${WORKDIR}" || die
-		tar -xzf "opencode-${ARCH}.tar.gz" || die "Failed to extract"
+		tar -xzf "${filename}" || die "Failed to extract"
 	else
 		default_src_unpack
 	fi
