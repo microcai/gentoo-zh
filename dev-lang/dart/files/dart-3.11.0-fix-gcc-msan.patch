@@ -1,15 +1,15 @@
 diff --git a/sdk/BUILD.gn b/sdk/BUILD.gn
-index 3caf66e2cf8..49df5ecdc37 100644
+index 3caf66e2cf83..64fe45dc4222 100644
 --- a/sdk/BUILD.gn
 +++ b/sdk/BUILD.gn
-@@ -395,9 +396,13 @@ if (!using_sanitizer && current_os == "linux" &&
+@@ -395,9 +395,13 @@ if (!using_sanitizer && current_os == "linux" &&
    if (current_cpu == "x64" || current_cpu == "arm64") {
      sanitizers += [
        "asan",
 -      "msan",
        "tsan",
      ]
-+    if (is_clang){
++    if (is_clang) {
 +      sanitizers += [
 +        "msan",
 +      ]
