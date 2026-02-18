@@ -12,24 +12,24 @@ CRATES="
 	anstyle-query@1.1.5
 	anstyle-wincon@3.0.11
 	anstyle@1.0.13
-	anyhow@1.0.100
+	anyhow@1.0.101
 	async-channel@2.5.0
 	autocfg@1.5.0
 	backtrace@0.3.76
-	bitflags@2.10.0
+	bitflags@2.11.0
 	block@0.1.6
 	bumpalo@3.19.1
 	byteorder@1.5.0
 	cairo-rs@0.21.5
 	cairo-sys-rs@0.21.5
-	cc@1.2.55
+	cc@1.2.56
 	cfg-expr@0.20.6
 	cfg-if@1.0.4
 	cfg_aliases@0.2.1
-	clap@4.5.56
-	clap_builder@4.5.56
+	clap@4.5.58
+	clap_builder@4.5.58
 	clap_derive@4.5.55
-	clap_lex@0.7.7
+	clap_lex@1.0.0
 	colorchoice@1.0.4
 	concurrent-queue@2.5.0
 	const-random-macro@0.1.16
@@ -94,8 +94,8 @@ CRATES="
 	kernel32-sys@0.2.2
 	kinded@0.3.0
 	kinded_macros@0.3.0
-	lazy-regex-proc_macros@3.5.1
-	lazy-regex@3.5.1
+	lazy-regex-proc_macros@3.6.0
+	lazy-regex@3.6.0
 	lazy_static@1.5.0
 	libadwaita-sys@0.8.1
 	libadwaita@0.8.1
@@ -104,7 +104,7 @@ CRATES="
 	locale_config@0.3.0
 	log@0.4.29
 	malloc_buf@0.0.6
-	memchr@2.7.6
+	memchr@2.8.0
 	memoffset@0.9.1
 	miniz_oxide@0.8.9
 	neli-proc-macros@0.1.4
@@ -116,7 +116,7 @@ CRATES="
 	nutype@0.6.2
 	nutype_macros@0.6.2
 	nvml-wrapper-sys@0.9.0
-	nvml-wrapper@0.11.0
+	nvml-wrapper@0.12.0
 	objc-foundation@0.1.1
 	objc@0.2.7
 	objc_id@0.1.1
@@ -140,9 +140,9 @@ CRATES="
 	proc-macro-crate@3.4.0
 	proc-macro2@1.0.106
 	quote@1.0.44
-	regex-automata@0.4.13
-	regex-syntax@0.8.8
-	regex@1.12.2
+	regex-automata@0.4.14
+	regex-syntax@0.8.9
+	regex@1.12.3
 	rmp-serde@1.3.1
 	rmp@0.8.15
 	ron@0.12.0
@@ -163,7 +163,7 @@ CRATES="
 	strum@0.27.2
 	strum_macros@0.27.2
 	syn@1.0.109
-	syn@2.0.114
+	syn@2.0.115
 	sysconf@0.3.4
 	system-deps@7.0.7
 	target-lexicon@0.13.3
@@ -174,14 +174,14 @@ CRATES="
 	thiserror@1.0.69
 	thiserror@2.0.18
 	tiny-keccak@2.0.2
-	toml@0.9.11+spec-1.1.0
+	toml@0.9.12+spec-1.1.0
 	toml_datetime@0.7.5+spec-1.1.0
 	toml_edit@0.23.10+spec-1.0.0
-	toml_parser@1.0.6+spec-1.1.0
+	toml_parser@1.0.8+spec-1.1.0
 	toml_writer@1.0.6+spec-1.1.0
 	typeid@1.0.3
 	unescape@0.1.0
-	unicode-ident@1.0.22
+	unicode-ident@1.0.23
 	unicode-segmentation@1.12.0
 	urlencoding@2.1.3
 	utf8parse@0.2.2
@@ -245,6 +245,10 @@ src_compile () {
 	meson_src_compile
 }
 
+src_test () {
+	default_src_test
+}
+
 pkg_postinst () {
 	xdg_pkg_postinst
 	gnome2_schemas_update
@@ -254,3 +258,4 @@ pkg_postrm () {
 	xdg_pkg_postrm
 	gnome2_schemas_update
 }
+
