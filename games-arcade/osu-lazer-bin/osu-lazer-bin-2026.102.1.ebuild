@@ -58,7 +58,7 @@ src_prepare() {
 	# Remove pdb files
 	rm -fv *.pdb
 
-	# Remove UpdateNix from Velopack, updates are managed by protage
+	# Remove UpdateNix from Velopack, updates are managed by portage
 	rm -v UpdateNix || die
 
 	if use system-sdl; then
