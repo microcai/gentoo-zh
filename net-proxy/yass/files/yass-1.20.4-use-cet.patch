@@ -1,0 +1,138 @@
+From 03eadb76262ae9a79b05ff3a708f75bbb8022bdd Mon Sep 17 00:00:00 2001
+From: Keyue Hu <hukeyue@vip.163.com>
+Date: Fri, 20 Feb 2026 18:03:46 +0800
+Subject: [PATCH] cet: introduce cet section only if neccessary
+
+---
+ CMakeLists.txt                                   | 13 +++----------
+ .../{ca-bundle.crt.m32.s => ca-bundle.crt.S}     |  6 ++++++
+ third_party/ca-certificates/ca-bundle.crt.s      | 16 ----------------
+ ...e.crt.m32.s => supplementary-ca-bundle.crt.S} |  6 ++++++
+ .../supplementary-ca-bundle.crt.s                | 16 ----------------
+ 5 files changed, 15 insertions(+), 42 deletions(-)
+ rename third_party/ca-certificates/{ca-bundle.crt.m32.s => ca-bundle.crt.S} (73%)
+ delete mode 100644 third_party/ca-certificates/ca-bundle.crt.s
+ rename third_party/ca-certificates/{supplementary-ca-bundle.crt.m32.s => supplementary-ca-bundle.crt.S} (78%)
+ delete mode 100644 third_party/ca-certificates/supplementary-ca-bundle.crt.s
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index b39f5d69..65f38944 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -732,6 +732,7 @@ endif()
+ include(config-ix)
+ 
+ if (USE_CET)
++  add_definitions(-DUSE_CET)
+   if (MSVC)
+     # see https://reviews.llvm.org/D70606
+     add_link_options(/cetcompat)
+@@ -3222,11 +3223,7 @@ if (OHOS OR ANDROID OR CMAKE_SYSTEM_NAME STREQUAL "Linux" OR CMAKE_SYSTEM_NAME S
+   if (COMPILER_CLANG)
+     set(CMAKE_ASM_FLAGS "${CMAKE_ASM_FLAGS} -Wno-unused-command-line-argument")
+   endif()
+-  if(CMAKE_SIZEOF_VOID_P EQUAL 4)
+-    set(ASIO_CA_BUNDLE_CRT_SRC "third_party/ca-certificates/ca-bundle.crt.m32.s")
+-  else()
+-    set(ASIO_CA_BUNDLE_CRT_SRC "third_party/ca-certificates/ca-bundle.crt.s")
+-  endif()
++  set(ASIO_CA_BUNDLE_CRT_SRC "third_party/ca-certificates/ca-bundle.crt.S")
+ endif()
+ 
+ if (APPLE)
+@@ -3269,11 +3266,7 @@ if (OHOS OR ANDROID OR CMAKE_SYSTEM_NAME STREQUAL "Linux" OR CMAKE_SYSTEM_NAME S
+   if (COMPILER_CLANG)
+     set(CMAKE_ASM_FLAGS "${CMAKE_ASM_FLAGS} -Wno-unused-command-line-argument")
+   endif()
+-  if(CMAKE_SIZEOF_VOID_P EQUAL 4)
+-    set(ASIO_SUPPLEMENARY_CA_BUNDLE_CRT_SRC "third_party/ca-certificates/supplementary-ca-bundle.crt.m32.s")
+-  else()
+-    set(ASIO_SUPPLEMENARY_CA_BUNDLE_CRT_SRC "third_party/ca-certificates/supplementary-ca-bundle.crt.s")
+-  endif()
++  set(ASIO_SUPPLEMENARY_CA_BUNDLE_CRT_SRC "third_party/ca-certificates/supplementary-ca-bundle.crt.S")
+ endif()
+ 
+ if (APPLE)
+diff --git a/third_party/ca-certificates/ca-bundle.crt.m32.s b/third_party/ca-certificates/ca-bundle.crt.S
+similarity index 73%
+rename from third_party/ca-certificates/ca-bundle.crt.m32.s
+rename to third_party/ca-certificates/ca-bundle.crt.S
+index c9c7a6d2..b2ba2f6b 100644
+--- a/third_party/ca-certificates/ca-bundle.crt.m32.s
++++ b/third_party/ca-certificates/ca-bundle.crt.S
+@@ -13,4 +13,10 @@ _binary_ca_bundle_crt_start:
+ _binary_ca_bundle_crt_end:
+ .previous
+ 
++#ifdef USE_CET
++#if defined(_M_X64) || defined(__x86_64__)
++.include "cet.64.s"
++#elif defined(_M_IX86) || defined(__i386__)
+ .include "cet.32.s"
++#endif
++#endif
+diff --git a/third_party/ca-certificates/ca-bundle.crt.s b/third_party/ca-certificates/ca-bundle.crt.s
+deleted file mode 100644
+index 92ec2a8f..00000000
+--- a/third_party/ca-certificates/ca-bundle.crt.s
++++ /dev/null
+@@ -1,16 +0,0 @@
+-.section .rodata
+-.hidden _binary_ca_bundle_crt_start
+-.global _binary_ca_bundle_crt_start
+-.type   _binary_ca_bundle_crt_start, %object
+-.hidden _binary_ca_bundle_crt_end
+-.global _binary_ca_bundle_crt_end
+-.type   _binary_ca_bundle_crt_end, %object
+-.align  4
+-
+-_binary_ca_bundle_crt_start:
+-.incbin "ca-bundle.crt"
+-
+-_binary_ca_bundle_crt_end:
+-.previous
+-
+-.include "cet.64.s"
+diff --git a/third_party/ca-certificates/supplementary-ca-bundle.crt.m32.s b/third_party/ca-certificates/supplementary-ca-bundle.crt.S
+similarity index 78%
+rename from third_party/ca-certificates/supplementary-ca-bundle.crt.m32.s
+rename to third_party/ca-certificates/supplementary-ca-bundle.crt.S
+index 0eb9d058..1188dca4 100644
+--- a/third_party/ca-certificates/supplementary-ca-bundle.crt.m32.s
++++ b/third_party/ca-certificates/supplementary-ca-bundle.crt.S
+@@ -13,4 +13,10 @@ _binary_supplementary_ca_bundle_crt_start:
+ _binary_supplementary_ca_bundle_crt_end:
+ .previous
+ 
++#ifdef USE_CET
++#if defined(_M_X64) || defined(__x86_64__)
++.include "cet.64.s"
++#elif defined(_M_IX86) || defined(__i386__)
+ .include "cet.32.s"
++#endif
++#endif
+diff --git a/third_party/ca-certificates/supplementary-ca-bundle.crt.s b/third_party/ca-certificates/supplementary-ca-bundle.crt.s
+deleted file mode 100644
+index 6de3ac6d..00000000
+--- a/third_party/ca-certificates/supplementary-ca-bundle.crt.s
++++ /dev/null
+@@ -1,16 +0,0 @@
+-.section .rodata
+-.hidden _binary_supplementary_ca_bundle_crt_start
+-.global _binary_supplementary_ca_bundle_crt_start
+-.type   _binary_supplementary_ca_bundle_crt_start, %object
+-.hidden _binary_supplementary_ca_bundle_crt_end
+-.global _binary_supplementary_ca_bundle_crt_end
+-.type   _binary_supplementary_ca_bundle_crt_end, %object
+-.align  4
+-
+-_binary_supplementary_ca_bundle_crt_start:
+-.incbin "supplementary-ca-bundle.crt"
+-
+-_binary_supplementary_ca_bundle_crt_end:
+-.previous
+-
+-.include "cet.64.s"
+-- 
+2.53.0
+
