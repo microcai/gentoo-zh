@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-02-21 17:14:50 CST)
+(The last generation time: 2026-02-21 21:33:53 CST)
 
 ### Packages
 
@@ -252,7 +252,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/archspec                                   | 0.2.5              |            | https://github.com/archspec/archspec                                                    | A library for detecting, labeling, and reasoning about microarchitectures
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/conda                                      | 25.11.1            |            | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
+ dev-python/conda                                      | 26.1.1             |            | https://conda.io/                                                                       | OS-agnostic, system-level binary package manager and ecosystem
    dev-python/conda-libmamba-solver                    | 25.11.0            |  D, RD     | https://github.com/conda/conda-libmamba-solver                                          | The libmamba based solver for conda
      dev-util/mamba                                    | 2.5.0              | RD         | https://github.com/mamba-org/mamba                                                      | The Fast Cross-Platform Package Manager
        dev-cpp/reproc                                  | 14.2.5             |  D, RD     | https://github.com/DaanDeMeyer/reproc                                                   | A cross-platform (C99/C++11) process library
