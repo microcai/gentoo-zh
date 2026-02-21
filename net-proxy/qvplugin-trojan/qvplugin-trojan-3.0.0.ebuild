@@ -1,4 +1,4 @@
-# Copyright 2024-2025 Gentoo Authors
+# Copyright 2024-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -34,6 +34,10 @@ RDEPEND="
 	>=net-proxy/qv2ray-2.7.0
 	${DEPEND}
 "
+
+PATCHES=(
+	"${FILESDIR}/qvplugin-trojan-3.0.0-boost-1.89.0.patch"
+)
 
 src_unpack() {
 	default
