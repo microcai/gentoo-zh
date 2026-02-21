@@ -1,5 +1,5 @@
 [Desktop Entry]
 Name=conty-nautilus
-Exec=conty nautilus
+Exec=conty --ro-bind --bind /usr/share/themes /usr/share/themes nautilus
 Type=Application
 Terminal=false
