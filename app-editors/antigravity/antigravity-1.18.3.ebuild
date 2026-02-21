@@ -10,9 +10,9 @@ CHROMIUM_LANGS="af am ar bg bn ca cs da de el en-GB es es-419 et fa fi fil fr gu
 inherit chromium-2 desktop optfeature pax-utils unpacker xdg shell-completion
 
 # curl -sL https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/dists/antigravity-debian/main/binary-amd64/Packages | tac | sed -e '/^$/q' | grep Filename
-MY_PV_SUFFIX_AMD64="1770081357_amd64_1e91c55b802c42d27f931c53e68fc2ab"
+MY_PV_SUFFIX_AMD64="1771473975_amd64_bec6f978ba7532ab369d8234b1e87c15"
 # curl -sL https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/dists/antigravity-debian/main/binary-arm64/Packages | tac | sed -e '/^$/q' | grep Filename
-MY_PV_SUFFIX_ARM64="1770081396_arm64_c50fd2a09a9c4bc5a4ef2c96ff8b8d0b"
+MY_PV_SUFFIX_ARM64="1771473972_arm64_e3aeb7e3102cfe6a48cbe4db6ba7e60b"
 
 DESCRIPTION="Google Antigravity - AI-powered code editor"
 HOMEPAGE="https://antigravity.google/"
