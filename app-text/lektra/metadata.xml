@@ -12,5 +12,6 @@
 	<use>
 		<flag name="curl">Enable LLM support via <pkg>net-misc/curl</pkg></flag>
 		<flag name="synctex">Enable SyncTeX support for TeX editor synchronization</flag>
+		<flag name="system-mupdf">Use system <pkg>app-text/mupdf</pkg> instead of bundled version</flag>
 	</use>
 </pkgmetadata>
