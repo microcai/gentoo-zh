@@ -1,1 +1,6 @@
 sci-electronics/lceda-pro:beta
+
+# jinqiang zhang <peeweep@0x0.ee> (2026-02-23)
+# dead upstream and this package no longer work (See PR #9209)
+# Removal on 2026-03-23. 
+media-sound/netease-cloud-music
