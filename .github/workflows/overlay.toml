@@ -744,7 +744,7 @@ strip_release = true
 source = "github"
 github = "openSUSE/osc"
 use_latest_tag = true
-github_account = ["douglarek", "peeweep"]
+github_account = "douglarek"
 
 ["dev-util/pacstrap"]
 source = "gitlab"
