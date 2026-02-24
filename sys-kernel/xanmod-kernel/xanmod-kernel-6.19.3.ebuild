@@ -21,7 +21,7 @@ HOMEPAGE="
 SRC_URI+="
 	https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.xz
 	https://dev.gentoo.org/~mgorny/dist/linux/${PATCHSET}.tar.xz
-	https://phoenixnap.dl.sourceforge.net/project/xanmod/releases/main/${PV}-xanmod1/patch-${PV}-xanmod1.xz"
+	https://master.dl.sourceforge.net/project/xanmod/releases/edge/${PV}-xanmod1/patch-${PV}-xanmod1.xz"
 S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
@@ -36,10 +36,12 @@ BDEPEND="
 			llvm-core/lld:${LLVM_SLOT}
 		')
 	)
+	sys-libs/binutils-libs
 "
 
 PDEPEND="
-	>=virtual/dist-kernel-${PV}"
+	=virtual/dist-kernel-${PV}-r100
+"
 
 QA_FLAGS_IGNORED="usr/src/linux-.*/scripts/gcc-plugins/.*.so"
 
