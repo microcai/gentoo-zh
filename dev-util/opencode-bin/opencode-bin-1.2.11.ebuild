@@ -4,7 +4,7 @@
 EAPI=8
 
 DESCRIPTION="The open source AI coding agent"
-HOMEPAGE="https://opencode.ai"
+HOMEPAGE="https://opencode.ai https://github.com/anomalyco/opencode"
 
 GITHUB_BASE="https://github.com/anomalyco/opencode/releases/download/v${PV}"
 if [[ ${PV} == 9999 ]]; then
