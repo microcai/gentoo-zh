@@ -1,4 +1,4 @@
-# Copyright 2025 Gentoo Authors
+# Copyright 2025-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -38,5 +38,7 @@ EPYTEST_DESELECT=(
 	tests/test_vc.py::TestVC::test_vc_export_env_conf_email
 	tests/test_vc.py::TestVC::test_vc_export_env_conf_realname
 )
+
+EPYTEST_PLUGINS=()
 
 distutils_enable_tests pytest
