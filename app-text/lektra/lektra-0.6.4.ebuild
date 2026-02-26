@@ -17,13 +17,13 @@ SRC_URI="
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="curl synctex +system-mupdf"
+IUSE="curl synctex system-mupdf"
 
 DEPEND="
 	dev-qt/qtbase:6[concurrent,gui,widgets]
 	curl? ( net-misc/curl )
 	synctex? ( app-text/texlive-core )
-	system-mupdf? ( >=app-text/mupdf-1.26.3 )
+	system-mupdf? ( app-text/mupdf )
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
@@ -31,13 +31,44 @@ BDEPEND="
 	virtual/pkgconfig
 "
 
+pkg_setup() {
+	if use system-mupdf; then
+		eerror "The system-mupdf USE flag is currently not supported."
+		eerror "There is no suitable mupdf version available in the Gentoo portage tree."
+		eerror "Please disable the system-mupdf USE flag to use the bundled mupdf version."
+		die "No suitable mupdf version available in portage tree"
+	fi
+}
+
 src_prepare() {
 	if use system-mupdf; then
-		PATCHES+=( "${FILESDIR}/${PN}-0.6.2-system-mupdf.patch" )
+		PATCHES+=(
+			"${FILESDIR}/${PN}-0.6.4-system-mupdf.patch"
+		)
 	else
 		# Setup bundled mupdf
 		mkdir -p "${S}/external" || die
 		mv "${WORKDIR}/mupdf-${MUPDF_PV}-source" "${S}/external/mupdf" || die
+
+		# CMake 4 dropped compatibility with cmake_minimum_required() < 3.5.
+		# Upstream mupdf bundles thirdparty projects with very old minimum
+		# requirements which will hard-fail with CMake 4. See #951350 & #964405.
+		local cmake_min_required_fixes=(
+			external/mupdf/thirdparty/freeglut/CMakeLists.txt
+			external/mupdf/thirdparty/freeglut/progs/test-shapes-gles1/CMakeLists.txt
+			external/mupdf/thirdparty/curl/CMakeLists.txt
+			external/mupdf/thirdparty/leptonica/CMakeLists.txt
+			external/mupdf/thirdparty/freetype/CMakeLists.txt
+		)
+		local f
+		for f in "${cmake_min_required_fixes[@]}"; do
+			if [[ -f ${S}/${f} ]]; then
+				sed -i -E \
+					-e 's/^(\s*cmake_minimum_required\s*\(\s*VERSION\s+)[0-9.]+/\13.15/I' \
+					-e 's/^(\s*CMAKE_MINIMUM_REQUIRED\s*\(\s*VERSION\s+)[0-9.]+/\13.15/' \
+					"${S}/${f}" || die "sed failed for ${f}"
+			fi
+		done
 	fi
 
 	cmake_src_prepare
