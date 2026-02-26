@@ -1,16 +1,16 @@
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -37,6 +37,9 @@
- find_package(Qt6 REQUIRED COMPONENTS Gui Widgets Core Concurrent)
- #OpenGLWidgets )
+@@ -31,6 +31,9 @@
+ find_package(Qt6 REQUIRED COMPONENTS Gui Widgets Core Concurrent) #OpenGLWidgets )
  find_package(PkgConfig REQUIRED)
-+
+ 
 +# Use system mupdf
 +pkg_check_modules(MUPDF REQUIRED mupdf)
- 
- # --- SyncTeX (simple, no pkg-config) ---
++
+ # SyncTeX
  find_path(SYNCTEX_INCLUDE_DIR
-@@ -103,9 +106,8 @@
+     NAMES synctex_parser.h synctex/synctex_parser.h
+@@ -127,9 +130,8 @@
  qt_add_resources(RESOURCES resources.qrc)
  
  # Add MuPDF headers
@@ -22,10 +22,10 @@
  
  target_sources(${PROJECT_NAME} PRIVATE ${RESOURCES})
  
-@@ -121,8 +123,7 @@
+@@ -147,8 +149,7 @@
  
  target_link_libraries(${PROJECT_NAME} PRIVATE
-     Qt6::Widgets Qt6::Core Qt6::Concurrent
+     Qt6::Gui Qt6::Widgets Qt6::Core Qt6::Concurrent
 -    ${CMAKE_SOURCE_DIR}/external/mupdf/build/release/libmupdf.a
 -    ${CMAKE_SOURCE_DIR}/external/mupdf/build/release/libmupdf-third.a
 +    ${MUPDF_LIBRARIES}
