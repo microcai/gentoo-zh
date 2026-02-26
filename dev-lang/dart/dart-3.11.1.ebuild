@@ -3,7 +3,7 @@
 
 EAPI=8
 
-LLVM_COMPAT=( {20..21} )
+LLVM_COMPAT=( {20..22} )
 LLVM_OPTIONAL=1
 
 inherit unpacker ninja-utils llvm-r1 toolchain-funcs check-reqs
