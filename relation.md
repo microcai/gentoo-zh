@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-02-27 16:54:18 CST)
+(The last generation time: 2026-02-27 19:03:13 CST)
 
 ### Packages
 
@@ -870,7 +870,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/fcitx-breeze                               | 3.1.0              |            | https://gitlab.com/scratch-er/fcitx5-breeze                                             | Fcitx5 theme to match KDE's Breeze style.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- x11-themes/kora-icon-theme                            | 1.6.5              |            | https://github.com/bikass/kora                                                          | An SVG icon theme with lots of new icons for GNU/Linux operating systems
+ x11-themes/kora-icon-theme                            | 2.0.1              |            | https://github.com/bikass/kora                                                          | An SVG icon theme with lots of new icons for GNU/Linux operating systems
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/nordic                                     | 2.1.0              |            | https://github.com/EliverLara/Nordic                                                    | Dark Gtk3.20+ theme created using the awesome Nord color pallete
                                                        | 2.2.0-r1           |            |                                                                                         |
