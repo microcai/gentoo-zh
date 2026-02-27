@@ -1,9 +1,9 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 inherit go-module
-COMMIT_ID="65147eaa26a67ebb3f142cbe57e5397d160eb5e8"
+COMMIT_ID="628e9a3746161e2f47df6b6dfcc3784122f9e499"
 
 DESCRIPTION="A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH"
 HOMEPAGE="https://github.com/natesales/q"
