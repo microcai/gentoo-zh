@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-02-27 19:03:13 CST)
+(The last generation time: 2026-02-27 19:13:37 CST)
 
 ### Packages
 
@@ -49,7 +49,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/antigravity                               | 1.18.3             |            | https://antigravity.google/                                                             | Google Antigravity - AI-powered code editor
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/appflowy-bin                              | 0.11.2             |            | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
+ app-editors/appflowy-bin                              | 0.11.3             |            | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/edit                                      | 1.1.0              |            | https://github.com/microsoft/edit                                                       | Microsoft edit
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -862,7 +862,7 @@
  x11-terms/blackbox-terminal                           | 0.14.0             |            | https://gitlab.gnome.org/raggesilver/blackbox                                           | A beautiful GTK 4 terminal
    dev-libs/libpqmarble                                | 2.0.0_p20250109    |  D, RD     | https://gitlab.gnome.org/raggesilver/marble                                             | Utility library for GNOME apps
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- x11-terms/termius                                     | 9.36.3             |            | https://termius.com/download/linux                                                      | Desktop SSH Client
+ x11-terms/termius                                     | 9.37.2             |            | https://termius.com/download/linux                                                      | Desktop SSH Client
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-terms/wezterm-bin                                 | 20240203           |            | https://wezfurlong.org/wezterm                                                          | A terminal emulator and multiplexer implemented in Rust
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
