@@ -36,6 +36,7 @@ src_install() {
 	doins -r opt/MaixVision/
 
 	fperms 755 /opt/MaixVision/maixvision
+	fperms 755 /opt/MaixVision/resources/app.asar.unpacked/node_modules/node/bin/node
 
 	domenu usr/share/applications/maixvision.desktop
 	doicon -s 512 usr/share/icons/hicolor/512x512/apps/maixvision.png
