@@ -44,6 +44,12 @@ jobs:
         app-portage/eix \
         dev-vcs/git
 
+    - name: setup gentoo git repo
+      run: |
+        eselect repository add gentoo git https://github.com/gentoo-mirror/gentoo.git
+        rm -rf /var/db/repos/gentoo
+        emaint sync -r gentoo
+
     - name: checkout
       uses: actions/checkout@v6
 

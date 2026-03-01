@@ -1,4 +1,4 @@
-# Copyright 2022-2024 Gentoo Authors
+# Copyright 2022-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -23,7 +23,7 @@ RDEPEND="
 	xray? ( net-proxy/Xray )
 "
 BDEPEND="
-	>=dev-lang/go-1.21.0:*
+	>=dev-lang/go-1.21:*
 	>=net-libs/nodejs-16
 	sys-apps/yarn
 "
@@ -51,7 +51,7 @@ src_compile() {
 	OUTPUT_DIR="${S}/service/server/router/web" yarn build || die "yarn build failed"
 
 	cd "${S}/service" || die
-	ego build -mod vendor -tags "with_gvisor" -ldflags "-X github.com/v2rayA/v2rayA/conf.Version=${PV} -s -w" -o v2raya
+	ego build -mod vendor -tags "with_gvisor" -ldflags "-X github.com/v2rayA/v2rayA/conf.Version=${PV}" -o v2raya
 }
 
 src_install() {

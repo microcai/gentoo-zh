@@ -79,12 +79,6 @@ github = "outloudvi/mw2fcitx"
 use_latest_release = true
 github_account = "blackteahamburger"
 
-["app-dicts/fcitx-pinyin-sougou-baidu"]
-source = "github"
-github = "blackteahamburger/fcitx5-pinyin-sougou-baidu"
-use_latest_release = true
-github_account = "blackteahamburger"
-
 ["app-dicts/fcitx-pinyin-zhwiki"]
 source = "archpkg"
 archpkg = "fcitx5-pinyin-zhwiki"
@@ -103,15 +97,6 @@ github = "AppFlowy-IO/AppFlowy"
 use_latest_release = true
 github_account = "Linerre"
 
-["app-editors/cursor"]
-source = "regex"
-url = "https://www.cursor.com/api/download?platform=linux-x64&releaseTrack=latest"
-regex = '"version":"([\d.]+)"'
-
-["app-misc/cursor-agent"]
-source = "regex"
-url = "https://cursor.com/install"
-regex = 'https:\/\/downloads\.cursor\.com\/lab\/(\d{4}\.\d{2}\.\d{2})-[^\/]+\/'
 
 ["dev-lang/dart"]
 source = "apt"
@@ -556,8 +541,10 @@ github_account = "microcai"
 # high update frequency
 #["dev-libs/v2ray-geoip-bin"]
 
-# high update frequency
-#["dev-libs/v2ray-rules-dat-bin"]
+["dev-libs/v2ray-rules-dat-bin"]
+source = "github"
+github = "Loyalsoldier/v2ray-rules-dat"
+use_latest_release = true
 
 ["dev-python/adafruit-board-toolkit"]
 source = "pypi"
@@ -638,6 +625,11 @@ github = "aio-libs/janus"
 use_latest_release = true
 prefix = "v"
 github_account = "wgjak47"
+
+["dev-python/microrepl"]
+source = "pypi"
+pypi = "microrepl"
+github_account = "blackteahamburger"
 
 ["dev-python/mw2fcitx"]
 source = "pypi"
@@ -752,7 +744,7 @@ strip_release = true
 source = "github"
 github = "openSUSE/osc"
 use_latest_tag = true
-github_account = ["douglarek", "peeweep"]
+github_account = "douglarek"
 
 ["dev-util/pacstrap"]
 source = "gitlab"
@@ -1187,6 +1179,13 @@ from_pattern = '(.*)_(.*)'
 to_pattern = '\1_p\2'
 github_account = "Puqns67"
 
+["net-im/vesktop-bin"]
+source = "github"
+github = "Vencord/Vesktop"
+use_latest_release = true
+prefix = "v"
+github_account = "zakkaus"
+
 ["net-im/wechat"]
 source = "regex"
 url = "https://github.com/peeweep/wechat-linux-watcher/raw/refs/heads/master/wechat-linux-version.txt"
@@ -1341,12 +1340,6 @@ source = "regex"
 url = "https://www.todesk.com/linux.html"
 regex = "todesk-v(.*)-amd64.deb"
 github_account = "microcai"
-
-["net-misc/uuplugin"]
-source = "aur"
-aur = "uuplugin-bin"
-strip_release = true
-github_account = "st0nie"
 
 # live package only
 #["net-p2p/amule-dlp"]
@@ -1881,3 +1874,10 @@ source = "github"
 github = "hyprwm/Hypr"
 use_latest_release = true
 github_account = "Goldsrc233"
+
+["dev-util/opencode-bin"]
+source = "github"
+github = "anomalyco/opencode"
+use_latest_release = true
+prefix = "v"
+github_account = "xz-dev"

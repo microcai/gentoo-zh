@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <longdescription lang="en">
+        An MPD client with delusions of grandeur, made with Rust, GTK and Libadwaita.
+    </longdescription>
+    <upstream>
+        <remote-id type="github">htkhiem/euphonica</remote-id>
+    </upstream>
+</pkgmetadata>

@@ -1,0 +1,12 @@
+diff --git a/go.mod b/go.mod
+index fef388ad8f54..f3457b21bf17 100644
+--- a/go.mod
++++ b/go.mod
+@@ -1,6 +1,6 @@
+ module github.com/xtls/xray-core
+ 
+-go 1.25.6
++go 1.25.5
+ 
+ require (
+ 	github.com/apernet/quic-go v0.57.2-0.20260111184307-eec823306178

@@ -1,0 +1,12 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index fe08045..d3b9b87 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -124,6 +124,7 @@ build-backend = "setuptools.build_meta"
+ version = { attr = "feeluown.__version__" }
+ [tool.setuptools.packages.find]
+ exclude = ['tests*']
++include = ["feeluown*"]
+ [tool.setuptools.package-data]
+ "*" = [
+     'nowplaying/linux/*.xml',

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<longdescription lang="en">
+		Thumbnailer for glycin clients.
+	</longdescription>
+	<upstream>
+		<remote-id type="gnome-gitlab">GNOME/glycin</remote-id>
+	</upstream>
+</pkgmetadata>
