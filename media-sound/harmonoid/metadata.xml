@@ -1,0 +1,10 @@
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>dylanturing@protonmail.com</email>
+		<name>Dynamite Sch</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">harmonoid/harmonoid</remote-id>
+	</upstream>
+</pkgmetadata>
