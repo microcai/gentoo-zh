@@ -18,7 +18,7 @@ SRC_URI="
 S="${WORKDIR}"
 LICENSE="harmonoid-EULA"
 SLOT="0"
-KEYWORDS="amd64 arm64"
+KEYWORDS="-* ~amd64 ~arm64"
 
 QA_PRESTRIPPED="usr/share/harmonoid/lib/libapp.so"
 
