@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">csukuangfj/kaldi-native-fbank</remote-id>
+		<remote-id type="pypi">kaldi-native-fbank</remote-id>
+	</upstream>
+	<longdescription lang="en">
+		kaldi-native-fbank is a Kaldi-compatible online fbank feature extractor
+		implemented in C++. It provides efficient computation of filter bank
+		features for speech processing and is used by speech recognition systems
+		like FunASR. This is a prebuilt binary package from PyPI wheels.
+	</longdescription>
+	<longdescription lang="zh">
+		kaldi-native-fbank是一个用C++实现的与Kaldi兼容的在线fbank特征提取器。
+		它为语音处理提供高效的滤波器组特征计算，被FunASR等语音识别系统使用。
+		这是一个来自PyPI wheel的预构建二进制包。
+	</longdescription>
+</pkgmetadata>
