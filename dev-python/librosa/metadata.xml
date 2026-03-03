@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">librosa/librosa</remote-id>
+		<remote-id type="pypi">librosa</remote-id>
+	</upstream>
+	<longdescription lang="en">
+		librosa is a Python package for music and audio analysis. It provides
+		the building blocks necessary to create music information retrieval
+		systems, including feature extraction, spectrogram computation,
+		pitch tracking, beat detection, and audio effects processing.
+	</longdescription>
+	<longdescription lang="zh">
+		librosa是一个用于音乐和音频分析的Python包。它提供了创建音乐信息检索
+		系统所需的基本构建模块，包括特征提取、频谱图计算、音高跟踪、节拍检测
+		和音频效果处理。
+	</longdescription>
+</pkgmetadata>
