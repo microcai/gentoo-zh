@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">microsoft/onnxruntime</remote-id>
+		<remote-id type="pypi">onnxruntime</remote-id>
+		<bugs-to>https://github.com/microsoft/onnxruntime/issues</bugs-to>
+	</upstream>
+	<longdescription lang="en">
+		ONNX Runtime is a cross-platform, high performance ML inferencing and
+		training accelerator. It supports models in ONNX format and provides
+		optimized inference using hardware-specific acceleration. This is a
+		prebuilt binary package from PyPI wheels.
+	</longdescription>
+	<longdescription lang="zh">
+		ONNX Runtime是一个跨平台、高性能的机器学习推理和训练加速器。它支持ONNX
+		格式的模型，并使用硬件特定的加速来提供优化的推理。这是一个来自PyPI wheels
+		的预构建二进制包。
+	</longdescription>
+</pkgmetadata>
