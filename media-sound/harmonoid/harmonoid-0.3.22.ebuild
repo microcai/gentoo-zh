@@ -5,7 +5,7 @@ EAPI=8
 
 inherit desktop xdg
 
-DESCRIPTION="🎵 Plays & manages your music library. Looks beautiful & juicy."
+DESCRIPTION="Plays & manages your music library"
 HOMEPAGE="https://harmonoid.com/
 	https://github.com/harmonoid/harmonoid
 "
