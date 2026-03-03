@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">numba/numba</remote-id>
+		<remote-id type="pypi">numba</remote-id>
+	</upstream>
+	<longdescription lang="en">
+		Numba is an open-source NumPy-aware optimizing compiler for Python
+		sponsored by Anaconda. It uses the LLVM compiler infrastructure to
+		compile Python code to native machine code, making numerical and
+		scientific Python code run at speeds approaching C or Fortran. This
+		is a prebuilt binary package from PyPI wheels.
+	</longdescription>
+	<longdescription lang="zh">
+		Numba是一个由Anaconda赞助的开源NumPy感知Python优化编译器。它使用LLVM
+		编译器基础设施将Python代码编译为本机机器码，使数值和科学Python代码以
+		接近C或Fortran的速度运行。这是一个来自PyPI wheel的预构建二进制包。
+	</longdescription>
+</pkgmetadata>
