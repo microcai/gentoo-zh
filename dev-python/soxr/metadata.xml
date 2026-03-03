@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">dofuuz/python-soxr</remote-id>
+		<remote-id type="pypi">soxr</remote-id>
+	</upstream>
+	<longdescription lang="en">
+		Python-soxr is a Python wrapper of the high quality audio resampling
+		library libsoxr. It provides fast and high quality sample-rate conversion
+		for audio data stored in NumPy arrays.
+	</longdescription>
+	<longdescription lang="zh">
+		Python-soxr是高质量音频重采样库libsoxr的Python封装。它为存储在NumPy
+		数组中的音频数据提供快速且高质量的采样率转换。
+	</longdescription>
+</pkgmetadata>
