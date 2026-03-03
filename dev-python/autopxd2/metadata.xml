@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">elijahr/python-autopxd2</remote-id>
+		<remote-id type="pypi">autopxd2</remote-id>
+	</upstream>
+	<longdescription lang="en">
+		autopxd2 automatically generates Cython pxd files from C header files.
+		It parses C headers and outputs corresponding Cython declarations,
+		useful for creating Python bindings to C libraries.
+	</longdescription>
+	<longdescription lang="zh">
+		autopxd2可以自动从C头文件生成Cython pxd文件。它解析C头文件并输出
+		对应的Cython声明，适用于创建C库的Python绑定。
+	</longdescription>
+</pkgmetadata>
