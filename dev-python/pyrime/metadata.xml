@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+        <maintainer type="person">
+                <email>wuzhenyu@ustc.edu</email>
+                <name>Wu, Zhenyu</name>
+        </maintainer>
+        <use>
+                <flag name="prompt-toolkit">Add support for dev-python/prompt-toolkit</flag>
+        </use>
+        <upstream>
+                <remote-id type="pypi">pyrime</remote-id>
+                <remote-id type="github">Freed-Wu/pyrime</remote-id>
+        </upstream>
+</pkgmetadata>
