@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<use>
+		<flag name="ibus">Enable IBus input method framework support</flag>
+		<flag name="fcitx">Enable Fcitx5 input method framework support (builds C++ addon)</flag>
+		<flag name="rime">Enable Rime pinyin integration for text input alongside voice</flag>
+		<flag name="systemd">Install systemd user service for Fcitx5 backend</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">LeonardNJU/VocoType-linux</remote-id>
+		<bugs-to>https://github.com/LeonardNJU/VocoType-linux/issues</bugs-to>
+	</upstream>
+	<longdescription lang="en">
+		VoCoType is a Linux offline voice input method based on FunASR Paraformer.
+		It supports both IBus and Fcitx5 input method frameworks, providing
+		push-to-talk voice input for Chinese speech recognition. The recognition
+		runs entirely offline using ONNX Runtime, with no network connection
+		required after model download. Optional Rime integration enables combined
+		voice and pinyin input.
+	</longdescription>
+	<longdescription lang="zh">
+		VoCoType是一个基于FunASR Paraformer的Linux离线语音输入法。它支持IBus
+		和Fcitx5输入法框架，提供按住说话的语音输入功能，用于中文语音识别。识别
+		完全在本地使用ONNX Runtime运行，模型下载后无需网络连接。可选的Rime集成
+		支持语音和拼音混合输入。
+	</longdescription>
+</pkgmetadata>

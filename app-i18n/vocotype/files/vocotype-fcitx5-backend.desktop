@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=VoCoType Fcitx5 Backend
+Exec=/usr/bin/vocotype-fcitx5-backend
+Hidden=false
+NoDisplay=true
+X-KDE-autostart-after=panel
