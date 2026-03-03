@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">spatialaudio/python-sounddevice</remote-id>
+		<remote-id type="pypi">sounddevice</remote-id>
+	</upstream>
+	<longdescription lang="en">
+		python-sounddevice provides bindings for the PortAudio library and a few
+		convenience functions to play and record NumPy arrays containing audio
+		signals. It supports real-time audio input and output with low latency.
+	</longdescription>
+	<longdescription lang="zh">
+		python-sounddevice提供了PortAudio库的Python绑定以及一些便捷函数，
+		用于播放和录制包含音频信号的NumPy数组。它支持低延迟的实时音频输入和输出。
+	</longdescription>
+</pkgmetadata>
