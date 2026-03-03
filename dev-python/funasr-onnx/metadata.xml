@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">modelscope/FunASR</remote-id>
+		<remote-id type="pypi">funasr-onnx</remote-id>
+	</upstream>
+	<longdescription lang="en">
+		funasr_onnx provides ONNX Runtime-based inference for FunASR speech
+		recognition models. It supports Paraformer ASR, VAD (Voice Activity
+		Detection), and punctuation restoration models for Chinese speech
+		recognition without requiring PyTorch.
+	</longdescription>
+	<longdescription lang="zh">
+		funasr_onnx提供基于ONNX Runtime的FunASR语音识别模型推理。它支持
+		Paraformer语音识别、VAD（语音活动检测）和标点恢复模型，用于中文语音
+		识别，无需依赖PyTorch。
+	</longdescription>
+</pkgmetadata>
