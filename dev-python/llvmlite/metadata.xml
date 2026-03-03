@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">numba/llvmlite</remote-id>
+		<remote-id type="pypi">llvmlite</remote-id>
+	</upstream>
+	<longdescription lang="en">
+		llvmlite is a lightweight LLVM Python binding for writing JIT compilers.
+		It provides a small subset of the LLVM C++ API wrapped in a Pythonic
+		interface. This is a prebuilt binary package from PyPI wheels.
+	</longdescription>
+	<longdescription lang="zh">
+		llvmlite是一个轻量级的LLVM Python绑定，用于编写JIT编译器。它提供了LLVM
+		C++ API的一小部分子集，封装在Python风格的接口中。这是一个来自PyPI wheel
+		的预构建二进制包。
+	</longdescription>
+</pkgmetadata>
