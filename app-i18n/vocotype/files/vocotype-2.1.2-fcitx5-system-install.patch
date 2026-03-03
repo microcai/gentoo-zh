@@ -1,0 +1,66 @@
+Fix fcitx5 backend for system-wide installation.
+
+The upstream code assumes a development layout where fcitx5/backend/ sits
+alongside the app/ package. When installed system-wide:
+
+- vocotype.cpp hardcodes ~/.local paths for the Python interpreter and
+  audio_recorder.py script. Use system paths with user-install fallback.
+
+- fcitx5_server.py and audio_recorder.py use sys.path hacks to import
+  from the app package. Remove the hacks since distutils installs app/
+  into site-packages. Change "from backend.rime_handler" to
+  "from app.rime_handler" since rime_handler.py is copied into app/.
+
+diff -urN a/fcitx5/addon/vocotype.cpp b/fcitx5/addon/vocotype.cpp
+--- a/fcitx5/addon/vocotype.cpp
++++ b/fcitx5/addon/vocotype.cpp
+@@ -66,8 +66,15 @@
+     // 获取安装路径
+     const char* home = std::getenv("HOME");
+     if (home) {
+-        python_venv_path_ = std::string(home) + "/.local/share/vocotype-fcitx5/.venv/bin/python";
+-        recorder_script_path_ = std::string(home) + "/.local/share/vocotype-fcitx5/backend/audio_recorder.py";
++        // Try system-wide installation first
++        python_venv_path_ = "/usr/bin/python3";
++        recorder_script_path_ = "/usr/share/vocotype/audio_recorder.py";
++
++        // Fall back to user installation if system script not found
++        if (access(recorder_script_path_.c_str(), R_OK) != 0) {
++            python_venv_path_ = std::string(home) + "/.local/share/vocotype-fcitx5/.venv/bin/python";
++            recorder_script_path_ = std::string(home) + "/.local/share/vocotype-fcitx5/backend/audio_recorder.py";
++        }
+     } else {
+         FCITX_ERROR() << "HOME environment variable not set";
+     }
+diff -urN a/fcitx5/backend/audio_recorder.py b/fcitx5/backend/audio_recorder.py
+--- a/fcitx5/backend/audio_recorder.py
++++ b/fcitx5/backend/audio_recorder.py
+@@ -22,10 +22,6 @@
+ import numpy as np
+ import sounddevice as sd
+
+-# 添加项目根目录到 path
+-PROJECT_ROOT = Path(__file__).parent.parent.parent
+-sys.path.insert(0, str(PROJECT_ROOT))
+-
+ from app.audio_utils import load_audio_config, resample_audio, SAMPLE_RATE
+ from app.wave_writer import write_wav
+
+diff -urN a/fcitx5/backend/fcitx5_server.py b/fcitx5/backend/fcitx5_server.py
+--- a/fcitx5/backend/fcitx5_server.py
++++ b/fcitx5/backend/fcitx5_server.py
+@@ -16,14 +16,10 @@
+ import threading
+ from pathlib import Path
+
+-# 添加项目根目录到 path
+-PROJECT_ROOT = Path(__file__).parent.parent
+-sys.path.insert(0, str(PROJECT_ROOT))
+-
+ from app.config import DEFAULT_CONFIG, ensure_logging_dir, load_config
+ from app.funasr_server import FunASRServer
+ from app.logging_config import setup_logging
+-from backend.rime_handler import RimeHandler
++from app.rime_handler import RimeHandler
+
+ logger = logging.getLogger(__name__)

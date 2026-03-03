@@ -1,0 +1,13 @@
+[Unit]
+Description=VoCoType Fcitx5 Backend Service
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/vocotype-fcitx5-backend
+Restart=on-failure
+RestartSec=5s
+Environment="PYTHONIOENCODING=UTF-8"
+
+[Install]
+WantedBy=default.target

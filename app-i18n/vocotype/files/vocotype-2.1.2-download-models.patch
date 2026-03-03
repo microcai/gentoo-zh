@@ -1,0 +1,121 @@
+--- a/app/download_models.py
++++ b/app/download_models.py
+@@ -15,18 +15,38 @@
+ 
+ 
+ def download_model(model_config, progress_callback=None):
+-    """下载单个模型（使用 modelscope.snapshot_download，无需 funasr/torch）"""
++    """下载单个模型（直接从ModelScope CDN下载，无需modelscope包）"""
++    import os
++    import urllib.request
++    from pathlib import Path
++
+     model_name = model_config["name"]
+     model_type = model_config["type"]
+ 
+-    try:
+-        from modelscope.hub.snapshot_download import snapshot_download
++    MODEL_FILES = {
++        "asr": ["model_quant.onnx", "config.yaml", "am.mvn", "tokens.json", "configuration.json"],
++        "vad": ["model_quant.onnx", "config.yaml", "am.mvn", "configuration.json"],
++        "punc": ["model_quant.onnx", "config.yaml", "tokens.json", "configuration.json"],
++    }
+ 
++    try:
+         if progress_callback:
+             progress_callback(model_type, "downloading", 0)
+ 
+-        # 下载到本地缓存目录
+-        snapshot_download(model_name, revision=MODEL_REVISION)
++        short_name = model_name.split('/')[-1] if '/' in model_name else model_name
++        cache_dir = Path.home() / ".cache" / "modelscope" / "hub" / "models" / "iic" / short_name
++        cache_dir.mkdir(parents=True, exist_ok=True)
++
++        files = MODEL_FILES.get(model_type, ["model_quant.onnx", "configuration.json"])
++        for i, filename in enumerate(files):
++            target = cache_dir / filename
++            if target.exists():
++                continue
++            url = f"https://modelscope.cn/models/{model_name}/resolve/{MODEL_REVISION}/{filename}"
++            logger.info(f"下载: {url}")
++            urllib.request.urlretrieve(url, str(target))
++            if progress_callback:
++                progress_callback(model_type, "downloading", int((i + 1) / len(files) * 100))
+ 
+         if progress_callback:
+             progress_callback(model_type, "completed", 100)
+@@ -42,8 +62,7 @@
+     """主函数：并行下载所有模型"""
+     # 配置日志系统（使用统一配置）
+     import os
+-    project_root = os.path.dirname(os.path.abspath(__file__))
+-    log_dir = os.path.join(project_root, "logs")
++    log_dir = os.path.join(os.path.expanduser("~"), ".local", "share", "vocotype", "logs")
+     setup_logging("INFO", log_dir)
+     
+     # 从统一配置获取模型列表
+@@ -148,6 +167,17 @@
+     """
+     from pathlib import Path
+ 
++    # Check system-wide model directory first (Gentoo package installation)
++    system_base = Path("/usr/share/vocotype/models")
++    short_name = model_name.split('/')[-1] if '/' in model_name else model_name
++    system_dir = system_base / short_name
++    if system_dir.exists():
++        quant_file = system_dir / "model_quant.onnx"
++        base_file = system_dir / "model.onnx"
++        if quant_file.exists() or base_file.exists():
++            logger.info(f"使用系统模型: {system_dir}")
++            return str(system_dir)
++
+     # 构建本地缓存路径（与Rust端保持一致）
+     home = Path.home()
+     cache_base = home / ".cache" / "modelscope" / "hub" / "models" / "iic"
+@@ -168,25 +198,25 @@
+ 
+     # 本地不存在，需要下载
+     logger.info(f"本地缓存不存在，开始下载模型: {model_name}")
+-    from modelscope.hub.snapshot_download import snapshot_download
++    import urllib.request
+ 
+-    # 使用 ignore_file_pattern 和 local_files_only 参数控制行为
+-    try:
+-        # 先尝试纯离线模式（不联网）
+-        model_dir = snapshot_download(
+-            model_name,
+-            revision=revision,
+-            local_files_only=True  # 仅使用本地文件，不联网
+-        )
+-        logger.info(f"使用已下载的模型（离线模式）: {model_dir}")
+-        return model_dir
+-    except Exception as offline_error:
+-        logger.warning(f"离线模式失败: {offline_error}，尝试在线下载")
+-
+-        # 离线失败，进行在线下载
+-        model_dir = snapshot_download(
+-            model_name,
+-            revision=revision,
+-        )
+-        logger.info(f"模型下载完成: {model_dir}")
+-        return model_dir
++    MODEL_FILES = {
++        "speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-onnx":
++            ["model_quant.onnx", "config.yaml", "am.mvn", "tokens.json", "configuration.json"],
++        "speech_fsmn_vad_zh-cn-16k-common-onnx":
++            ["model_quant.onnx", "config.yaml", "am.mvn", "configuration.json"],
++        "punc_ct-transformer_zh-cn-common-vocab272727-onnx":
++            ["model_quant.onnx", "config.yaml", "tokens.json", "configuration.json"],
++    }
++
++    model_dir.mkdir(parents=True, exist_ok=True)
++    files = MODEL_FILES.get(short_name, ["model_quant.onnx", "configuration.json"])
++    for filename in files:
++        target = model_dir / filename
++        if not target.exists():
++            url = f"https://modelscope.cn/models/{model_name}/resolve/{revision}/{filename}"
++            logger.info(f"下载: {url}")
++            urllib.request.urlretrieve(url, str(target))
++
++    logger.info(f"模型下载完成: {model_dir}")
++    return str(model_dir)
