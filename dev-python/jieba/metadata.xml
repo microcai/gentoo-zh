@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">fxsjy/jieba</remote-id>
+		<remote-id type="pypi">jieba</remote-id>
+	</upstream>
+	<longdescription lang="en">
+		Jieba is a Chinese text segmentation library for Python. It supports
+		three segmentation modes: accurate mode, full mode, and search engine
+		mode. It also supports custom dictionaries and keyword extraction.
+	</longdescription>
+	<longdescription lang="zh">
+		结巴分词是一个Python中文分词库。它支持三种分词模式：精确模式、全模式
+		和搜索引擎模式。同时支持自定义词典和关键词提取功能。
+	</longdescription>
+</pkgmetadata>
