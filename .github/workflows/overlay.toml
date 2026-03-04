@@ -15,7 +15,6 @@ source = "github"
 github = "twpayne/chezmoi"
 use_latest_tag = true
 prefix = "v"
-github_account = "tsln1998"
 
 # FIXME: github graphql api seems to be some confusion between chezmoi and
 # chezmoi-bin, so we disable one of them
@@ -24,7 +23,6 @@ github_account = "tsln1998"
 # github = "twpayne/chezmoi"
 # use_latest_release = true
 # prefix = "v"
-# github_account = "tsln1998"
 
 ["app-admin/enpass"]
 source = "apt"
@@ -714,7 +712,6 @@ source = "github"
 github = "asdf-vm/asdf"
 use_latest_tag = true
 prefix = "v"
-github_account = "tsln1998"
 
 ["dev-util/binsider"]
 source = "github"
@@ -774,7 +771,6 @@ source = "github"
 github = "version-fox/vfox"
 use_latest_tag = true
 prefix = "v"
-github_account = "tsln1998"
 
 # FIXME: github graphql api seems to be some confusion between vfox and
 # vfox-bin, so we disable one of them
@@ -783,7 +779,6 @@ github_account = "tsln1998"
 # github = "version-fox/vfox"
 # use_latest_release = true
 # prefix = "v"
-# github_account = "tsln1998"
 
 ["dev-util/zprint-bin"]
 source = "github"
