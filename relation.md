@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-03 19:19:04 CST)
+(The last generation time: 2026-03-04 17:55:11 CST)
 
 ### Packages
 
@@ -105,9 +105,6 @@
    app-i18n/fcitx-hangul                               | 9999               | RD         | https://fcitx-im.org/                                                                   | Korean Hangul input method for Fcitx
    app-i18n/fcitx-m17n                                 | 9999               | RD         | https://github.com/fcitx/fcitx5-m17n                                                    | m17n-provided input methods for Fcitx5
    app-i18n/fcitx-rime                                 | 9999               | RD         | https://fcitx-im.org/                                                                   | Chinese RIME input methods for Fcitx
-     app-i18n/fcitx                                    | 9999               |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx 5 is a generic input method framework
-       x11-libs/xcb-imdkit                             | 9999               |  D, RD     | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
-     app-i18n/librime                                  | 9999               |  D, RD     | https://rime.im/                                                                        | RIME (Rime Input Method Engine) core library
      app-i18n/rime-data                                | 9999               |  D, RD     | https://rime.im/                                                                        | Data resources for Rime Input Method Engine
    app-i18n/fcitx-skk                                  | 5.1.6              | RD         | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
                                                        | 5.1.7-r2           |            |                                                                                         |
@@ -127,6 +124,22 @@
                                                        | 1.0.15             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/lunar                                        | 2.2-r5             |            | https://packages.debian.org/unstable/utils/lunar                                        | Chinese Lunar Calendar conversion utility
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-i18n/vocotype                                     | 2.1.2              |            | https://github.com/LeonardNJU/VocoType-linux                                            | Linux offline voice input method based on FunASR Paraformer
+   app-i18n/fcitx                                      | 9999               |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx 5 is a generic input method framework
+     x11-libs/xcb-imdkit                               | 9999               |  D, RD     | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
+   dev-python/funasr-onnx                              | 0.4.1              | RD         | https://github.com/modelscope/FunASR                                                    | FunASR ONNX Runtime inference for speech recognition
+     dev-python/kaldi-native-fbank                     | 1.22.3             | RD         | https://github.com/csukuangfj/kaldi-native-fbank                                        | Kaldi-compatible online fbank feature extractor
+     dev-python/librosa                                | 0.11.0             | RD         | https://github.com/librosa/librosa                                                      | Python library for audio and music analysis
+       dev-python/numba                                | 0.64.0             | RD         | https://github.com/numba/numba                                                          | NumPy-aware optimizing compiler for Python using LLVM
+         dev-python/llvmlite                           | 0.46.0             | RD         | https://github.com/numba/llvmlite                                                       | Lightweight LLVM Python binding for writing JIT compilers
+       dev-python/soxr                                 | 1.0.0              | RD         | https://github.com/dofuuz/python-soxr                                                   | High quality, one-dimensional sample-rate conversion library for Python
+     dev-python/onnxruntime                            | 1.24.2             | RD         | https://onnxruntime.ai                                                                  | Cross-platform, high performance ML inferencing and training accelerator
+   dev-python/jieba                                    | 0.42.1             | RD         | https://github.com/fxsjy/jieba                                                          | Chinese text segmentation library
+   dev-python/pyrime                                   | 0.2.3              | RD         | https://github.com/Freed-Wu/pyrime                                                      | rime for python
+     app-i18n/librime                                  | 9999               |  D, RD     | https://rime.im/                                                                        | RIME (Rime Input Method Engine) core library
+     dev-python/autopxd2                               | 3.2.2              | BD         | https://github.com/elijahr/python-autopxd2                                              | Generate Cython pxd files from C header files
+   dev-python/sounddevice                              | 0.5.5              | RD         | https://github.com/spatialaudio/python-sounddevice                                      | Play and record sound with Python via PortAudio
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/zh-autoconvert                               | 0.3.16_p10         |            | https://packages.debian.org/stable/source/zh-autoconvert                                | Chinese HZ/GB/BIG5/UNI/UTF7/UTF8 encodings auto-converter
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -316,7 +329,7 @@
    dev-python/microfs2                                 | 2.0.9              | RD         | https://github.com/blackteahamburger/microfs                                            | A module and utility to work with the simple filesystem on the BBC micro:bit
    dev-python/nudatus                                  | 0.0.5              | RD         | https://github.com/ZanderBrown/nudatus                                                  | CircuitPython board identification and information
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/uv-bin                                     | 0.10.7             |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
+ dev-python/uv-bin                                     | 0.10.8             |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-ruby/filelock                                     | 1.1.1              |            | https://github.com/sheerun/filelock                                                     | Heavily tested, but simple filelocking solution using flock command
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
