@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-05 20:12:17 CST)
+(The last generation time: 2026-03-05 23:07:32 CST)
 
 ### Packages
 
@@ -213,7 +213,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/groff-utf8                                   | 0-r1               |            | http://www.haible.de/bruno/packages-groff-utf8.html                                     | GNU groff wrapper allowing UTF-8 input
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-text/lektra                                       | 0.6.4              |            | https://github.com/dheerajshenoy/lektra                                                 | High-performance PDF reader that prioritizes screen space and control
+ app-text/lektra                                       | 0.6.5              |            | https://github.com/dheerajshenoy/lektra                                                 | High-performance PDF reader that prioritizes screen space and control
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/lemminx-bin                                  | 0.31.0             |            | https://github.com/eclipse-lemminx/lemminx                                              | A XML Language Server
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
