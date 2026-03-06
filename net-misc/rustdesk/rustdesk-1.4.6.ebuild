@@ -74,7 +74,7 @@ _VCPKG_TAG="2025.08.27"
 _HWCODEC_EXTERNALS_COMMIT="8903740a1f47884906a6e347ad3d8d56304d9771"
 # fix: libs/hbb_common is a empty directory
 # git ls-tree HEAD libs/hbb_common
-_HBB_COMMON_COMMIT="073403edbf1fffcb3acfe8cbe7582ee873b23398"
+_HBB_COMMON_COMMIT="48c37de3e6c4e399af6f51ca20e8e3e1fd037976"
 # fix: kcp-sys-*/kcp is a empty directory
 # git clone https://github.com/rustdesk-org/kcp-sys
 # git ls-tree HEAD kcp
