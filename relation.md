@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-07 16:47:09 CST)
+(The last generation time: 2026-03-07 17:35:21 CST)
 
 ### Packages
 
@@ -493,8 +493,6 @@
  media-gfx/zwcad                                       | 2023.23.0.3.4-r2   |            | https://www.zwsoft.cn/product/zwcad/linux                                               | CAD software for 2D drawing, reviewing and printing work
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-libs/glycin-thumbnailer                         | 2.0.8              |            | https://gitlab.gnome.org/GNOME/glycin/                                                  | Thumbnailer for glycin clients (glycin crate or libglycin)
--------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-libs/phonon-mpv                                 | 0.1.0-r1           |            | https://github.com/OpenProgger/phonon-mpv                                               | Mpv backend for the Phonon multimedia library
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-plugins/osdlyrics                               | 0.5.15             |            | https://github.com/osdlyrics/osdlyrics                                                  | Standalone lyrics fetcher/displayer (windowed and OSD mode).
                                                        | 9999               |            |                                                                                         |
