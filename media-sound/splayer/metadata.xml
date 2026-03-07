@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>flying-balloon-cat@protonmail.com</email>
+  </maintainer>
+  <upstream>
+    <remote-id type="github">imsyy/SPlayer</remote-id>
+  </upstream>
+</pkgmetadata>
