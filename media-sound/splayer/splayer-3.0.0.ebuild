@@ -23,6 +23,7 @@ RDEPEND="
 	dev-libs/expat
 	dev-libs/nss
 	media-libs/alsa-lib
+	media-libs/vips
 	net-print/cups
 	x11-libs/gtk+
 "
