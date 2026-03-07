@@ -4,30 +4,27 @@
 EAPI=8
 
 CRATES="
-	addr2line@0.25.1
-	adler2@2.0.1
 	aho-corasick@1.1.4
 	anstream@0.6.21
 	anstyle-parse@0.2.7
 	anstyle-query@1.1.5
 	anstyle-wincon@3.0.11
 	anstyle@1.0.13
-	anyhow@1.0.101
+	anyhow@1.0.102
 	async-channel@2.5.0
 	autocfg@1.5.0
-	backtrace@0.3.76
 	bitflags@2.11.0
 	block@0.1.6
-	bumpalo@3.19.1
+	bumpalo@3.20.2
 	byteorder@1.5.0
 	cairo-rs@0.21.5
 	cairo-sys-rs@0.21.5
 	cc@1.2.56
-	cfg-expr@0.20.6
+	cfg-expr@0.20.7
 	cfg-if@1.0.4
 	cfg_aliases@0.2.1
-	clap@4.5.58
-	clap_builder@4.5.58
+	clap@4.5.60
+	clap_builder@4.5.60
 	clap_derive@4.5.55
 	clap_lex@1.0.0
 	colorchoice@1.0.4
@@ -52,13 +49,13 @@ CRATES="
 	field-offset@0.3.6
 	find-msvc-tools@0.1.9
 	fnv@1.0.7
-	futures-channel@0.3.31
-	futures-core@0.3.31
-	futures-executor@0.3.31
-	futures-io@0.3.31
-	futures-macro@0.3.31
-	futures-task@0.3.31
-	futures-util@0.3.31
+	futures-channel@0.3.32
+	futures-core@0.3.32
+	futures-executor@0.3.32
+	futures-io@0.3.32
+	futures-macro@0.3.32
+	futures-task@0.3.32
+	futures-util@0.3.32
 	gdk-pixbuf-sys@0.21.5
 	gdk-pixbuf@0.21.5
 	gdk4-sys@0.10.3
@@ -66,7 +63,6 @@ CRATES="
 	getrandom@0.2.17
 	gettext-rs@0.7.7
 	gettext-sys@0.26.0
-	gimli@0.32.3
 	gio-sys@0.21.5
 	gio@0.21.5
 	glib-macros@0.21.5
@@ -90,7 +86,7 @@ CRATES="
 	indexmap@2.13.0
 	is-terminal@0.4.17
 	is_terminal_polyfill@1.70.2
-	js-sys@0.3.85
+	js-sys@0.3.91
 	kernel32-sys@0.2.2
 	kinded@0.3.0
 	kinded_macros@0.3.0
@@ -99,18 +95,17 @@ CRATES="
 	lazy_static@1.5.0
 	libadwaita-sys@0.8.1
 	libadwaita@0.8.1
-	libc@0.2.180
+	libc@0.2.182
 	libloading@0.8.9
 	locale_config@0.3.0
 	log@0.4.29
 	malloc_buf@0.0.6
 	memchr@2.8.0
 	memoffset@0.9.1
-	miniz_oxide@0.8.9
 	neli-proc-macros@0.1.4
 	neli-wifi@0.6.1
 	neli@0.6.5
-	nix@0.31.1
+	nix@0.31.2
 	num-traits@0.2.19
 	num_cpus@1.17.0
 	nutype@0.6.2
@@ -120,7 +115,6 @@ CRATES="
 	objc-foundation@0.1.1
 	objc@0.2.7
 	objc_id@0.1.1
-	object@0.37.3
 	once_cell@1.21.3
 	once_cell_polyfill@1.70.2
 	ordered-multimap@0.7.3
@@ -129,25 +123,23 @@ CRATES="
 	parking@2.2.1
 	pastey@0.2.1
 	path-dedot@3.1.1
-	pin-project-lite@0.2.16
-	pin-utils@0.1.0
+	pin-project-lite@0.2.17
 	pkg-config@0.3.32
 	plotters-backend@0.3.7
 	plotters-cairo@0.8.0
 	plotters@0.3.7
 	pretty_assertions@1.4.1
 	pretty_env_logger@0.5.0
-	proc-macro-crate@3.4.0
+	proc-macro-crate@3.5.0
 	proc-macro2@1.0.106
-	quote@1.0.44
+	quote@1.0.45
 	regex-automata@0.4.14
-	regex-syntax@0.8.9
+	regex-syntax@0.8.10
 	regex@1.12.3
 	rmp-serde@1.3.1
 	rmp@0.8.15
 	ron@0.12.0
 	rust-ini@0.21.3
-	rustc-demangle@0.1.27
 	rustc_version@0.4.1
 	rustversion@1.0.22
 	semver@1.0.27
@@ -160,10 +152,10 @@ CRATES="
 	smallvec@1.15.1
 	static_assertions@1.1.0
 	strsim@0.11.1
-	strum@0.27.2
-	strum_macros@0.27.2
+	strum@0.28.0
+	strum_macros@0.28.0
 	syn@1.0.109
-	syn@2.0.115
+	syn@2.0.117
 	sysconf@0.3.4
 	system-deps@7.0.7
 	target-lexicon@0.13.3
@@ -176,23 +168,24 @@ CRATES="
 	tiny-keccak@2.0.2
 	toml@0.9.12+spec-1.1.0
 	toml_datetime@0.7.5+spec-1.1.0
-	toml_edit@0.23.10+spec-1.0.0
-	toml_parser@1.0.8+spec-1.1.0
+	toml_datetime@1.0.0+spec-1.1.0
+	toml_edit@0.25.4+spec-1.1.0
+	toml_parser@1.0.9+spec-1.1.0
 	toml_writer@1.0.6+spec-1.1.0
 	typeid@1.0.3
 	unescape@0.1.0
-	unicode-ident@1.0.23
+	unicode-ident@1.0.24
 	unicode-segmentation@1.12.0
 	urlencoding@2.1.3
 	utf8parse@0.2.2
 	uzers@0.12.2
 	version-compare@0.2.1
 	wasi@0.11.1+wasi-snapshot-preview1
-	wasm-bindgen-macro-support@0.2.108
-	wasm-bindgen-macro@0.2.108
-	wasm-bindgen-shared@0.2.108
-	wasm-bindgen@0.2.108
-	web-sys@0.3.85
+	wasm-bindgen-macro-support@0.2.114
+	wasm-bindgen-macro@0.2.114
+	wasm-bindgen-shared@0.2.114
+	wasm-bindgen@0.2.114
+	web-sys@0.3.91
 	winapi-build@0.1.1
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-util@0.1.11
@@ -201,7 +194,7 @@ CRATES="
 	winapi@0.3.9
 	windows-link@0.2.1
 	windows-sys@0.61.2
-	winnow@0.7.14
+	winnow@0.7.15
 	wrapcenum-derive@0.4.1
 	yansi@1.0.1
 "
@@ -216,7 +209,7 @@ SRC_URI+=" ${CARGO_CRATE_URIS}"
 LICENSE="GPL-3+"
 # Dependent crate licenses
 LICENSE+="
-	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD-2 BSD CC0-1.0 ISC MIT
+	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD CC0-1.0 ISC MIT
 	Unicode-3.0
 "
 SLOT="0"
@@ -245,9 +238,9 @@ src_compile () {
 	meson_src_compile
 }
 
-src_test () {
-	default_src_test
-}
+#src_test () {
+	#default_src_test
+#}
 
 pkg_postinst () {
 	xdg_pkg_postinst
