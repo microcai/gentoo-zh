@@ -983,13 +983,6 @@ strip_release = true
 #use_latest_release = true
 #prefix = "v"
 
-["media-libs/phonon-mpv"]
-source = "github"
-github = "OpenProgger/phonon-mpv"
-use_latest_tag = true
-prefix = "v"
-github_account = "microcai"
-
 ["media-plugins/osdlyrics"]
 source = "github"
 github = "osdlyrics/osdlyrics"
