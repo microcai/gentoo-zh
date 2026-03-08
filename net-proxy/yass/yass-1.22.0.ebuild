@@ -82,12 +82,6 @@ BDEPEND="
 	test? ( net-misc/curl )
 "
 
-PATCHES=(
-	"${FILESDIR}/${PN}-1.20.4-use-cet.patch"
-	"${FILESDIR}/${PN}-1.20.4-use-system-mbedtls.patch"
-	"${FILESDIR}/${PN}-1.16.2-fix-gcc15.patch"
-)
-
 src_prepare() {
 	cmake_src_prepare
 	# some tests require network access, comment it out if not supported
