@@ -38,7 +38,7 @@ src_install() {
 
 	domenu "${S}"/usr/share/applications/iptvnator.desktop
 
-	for size in 16 32 256 512 1024; do
+	for size in 192 512; do
 		doicon -s ${size} "${S}"/usr/share/icons/hicolor/${size}x${size}/apps/iptvnator.png
 	done
 }
