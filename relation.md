@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-09 16:59:39 CST)
+(The last generation time: 2026-03-09 17:20:28 CST)
 
 ### Packages
 
@@ -793,7 +793,7 @@
    acct-group/aptly                                    | 0                  | RD         |                                                                                         | A swiss army knife for Debian repository management
    acct-user/aptly                                     | 0                  | RD         |                                                                                         | A swiss army knife for Debian repository management
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-apps/isd                                          | 0.6.1              |            | https://github.com/isd-project/isd                                                      | isd (interactive systemd) — a better way to work with systemd units
+ sys-apps/isd                                          | 0.6.2              |            | https://github.com/isd-project/isd                                                      | isd (interactive systemd) — a better way to work with systemd units
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/mdp                                          | 9999               |            | https://github.com/visit1985/mdp                                                        | A command-line based markdown presentation tool
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -855,7 +855,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/miniserve                                 | 0.33.0             |            | https://github.com/svenstaro/miniserve                                                  | a CLI tool to serve files and dirs over HTTP
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-servers/s-ui-bin                                  | 1.3.11             |            | https://github.com/alireza0/s-ui                                                        | An advanced Web Panel • Built for SagerNet/Sing-Box
+ www-servers/s-ui-bin                                  | 1.4.0              |            | https://github.com/alireza0/s-ui                                                        | An advanced Web Panel • Built for SagerNet/Sing-Box
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/woof                                      | 9999               |            | http://www.home.unix-ag.org/simon/woof.html                                             | an ad-hoc single file webserver
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
