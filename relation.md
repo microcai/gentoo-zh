@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-09 16:49:22 CST)
+(The last generation time: 2026-03-09 16:59:39 CST)
 
 ### Packages
 
@@ -669,7 +669,7 @@
  net-misc/remmina-plugin-rustdesk                      | 1.0.0.0-r1         |            | http://www.muflone.com/remmina-plugin-rustdesk/                                         | A protocol plugin for Remmina to launch a Rustdesk connection.
    net-misc/rustdesk                                   | 1.4.6              |  D, RD     | https://rustdesk.com/                                                                   | An open-source remote desktop, and alternative to TeamViewer
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/reqable                                      | 3.0.34             |            | https://reqable.com/                                                                    | Reqable = Fiddler + Charles + Postman, 让API调试更快 🚀 更简单 👌
+ net-misc/reqable                                      | 3.0.39             |            | https://reqable.com/                                                                    | Reqable = Fiddler + Charles + Postman, 让API调试更快 🚀 更简单 👌
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/todesk                                       | 4.1.0              |            | https://www.todesk.com/                                                                 | ToDesk不一样的远控体验，轻松打破物理限制，随时随地高效使用所有计算终端
                                                        | 4.7.2.0-r1         |            |                                                                                         |
@@ -706,8 +706,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/daed                                        | 1.21.1             |            | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
                                                        | 9999               |            |                                                                                         |
-   sys-apps/pnpm                                       | 10.26.0            | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
-                                                       | 10.27.0            |            |                                                                                         |
+   sys-apps/pnpm                                       | 10.31.0            | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/flclash-bin                                 | 0.8.92             |            | https://github.com/chen08209/FlClash                                                    | A multi-platform proxy client based on ClashMeta
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
