@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-10 08:22:04 CST)
+(The last generation time: 2026-03-10 10:31:48 CST)
 
 ### Packages
 
@@ -706,7 +706,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/daed                                        | 1.21.1             |            | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
                                                        | 9999               |            |                                                                                         |
-   sys-apps/pnpm                                       | 10.31.0            | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
+   sys-apps/pnpm                                       | 10.32.0            | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/flclash-bin                                 | 0.8.92             |            | https://github.com/chen08209/FlClash                                                    | A multi-platform proxy client based on ClashMeta
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
