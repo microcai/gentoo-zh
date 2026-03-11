@@ -18,7 +18,7 @@ SLOT="0"
 #FIXME pkgcheck cries on NonsolvableDepsInDev on mips, no idea why
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 
-IUSE="+cli server test cet gui gtk3 gtk4 qt5 qt6 wayland +tcmalloc mimalloc"
+IUSE="+cli server test cet gui gtk3 gtk4 qt5 qt6 wayland +tcmalloc mimalloc jemalloc"
 
 # tested with FEATURES="-network-sandbox test"
 # tested with FEATURES="network-sandbox test"
@@ -28,7 +28,8 @@ RESTRICT="!test? ( test )"
 REQUIRED_USE="
 	cet? ( ^^ ( amd64 x86 ) )
 	gui? ( || ( gtk3 gtk4 qt5 qt6 ) )
-	tcmalloc? ( !mimalloc )
+	tcmalloc? ( !mimalloc !jemalloc )
+	mimalloc? ( !jemalloc )
 "
 
 PDEPEND="
@@ -43,6 +44,7 @@ RDEPEND="
 	dev-libs/jsoncpp
 	tcmalloc? ( dev-util/google-perftools )
 	mimalloc? ( dev-libs/mimalloc )
+	jemalloc? ( dev-libs/jemalloc )
 	gui? (
 		gtk3? (
 			dev-libs/glib:2
@@ -103,6 +105,8 @@ src_configure() {
 		-DUSE_SYSTEM_TCMALLOC=$(usex tcmalloc)
 		-DUSE_MIMALLOC=$(usex mimalloc)
 		-DUSE_SYSTEM_MIMALLOC=$(usex mimalloc)
+		-DUSE_JEMALLOC=$(usex jemalloc)
+		-DUSE_SYSTEM_JEMALLOC=$(usex jemalloc)
 		-DUSE_SYSTEM_MBEDTLS=on
 		-DUSE_ZLIB=on
 		-DUSE_SYSTEM_ZLIB=on
