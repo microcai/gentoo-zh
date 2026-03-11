@@ -52,6 +52,21 @@ jobs:
             fi
         done
 
+        declare -a ignore_list=(
+            .github
+            profiles
+            README.md
+            COPYING
+            repo.xml
+            metadata
+            scripts
+            skel.ChangeLog
+            skel.metadata.xml
+        )
+        for i in "${ignore_list[@]}"; do
+            packages=($(printf '%s\n' "${packages[@]}" | grep -v "^$i"))
+        done
+
         echo "scan deletions files: $(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s .)"
 
         json_output=$(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s . | tr -d '\n')
