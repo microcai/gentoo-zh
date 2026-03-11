@@ -51,7 +51,7 @@ LICENSE="Apache-2.0"
 # Dependent crate licenses
 LICENSE+="
 	Apache-2.0 BSD-2 BSD Boost-1.0 CC0-1.0 CDLA-Permissive-2.0 ISC MIT
-	MPL-2.0 Unicode-3.0 ZLIB
+	MPL-2.0 openssl Unicode-3.0 ZLIB
 "
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
