@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-12 04:37:38 CST)
+(The last generation time: 2026-03-12 04:52:06 CST)
 
 ### Packages
 
@@ -47,7 +47,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-zhwiki                         | 0.3.0.20251223     |            | https://github.com/felixonmars/fcitx5-pinyin-zhwiki                                     | Fcitx 5 Pinyin Dictionary from zh.wikipedia.org
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/antigravity                               | 1.20.3             |            | https://antigravity.google/                                                             | Google Antigravity - AI-powered code editor
+ app-editors/antigravity                               | 1.20.5             |            | https://antigravity.google/                                                             | Google Antigravity - AI-powered code editor
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/appflowy-bin                              | 0.11.3             |            | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -842,7 +842,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/follow-bin                                   | 1.2.6              |            | https://follow.is/                                                                      | Next generation information browser
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-client/brave-bin                                  | 1.87.192           |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
+ www-client/brave-bin                                  | 1.88.127           |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-client/zen-browser-bin                            | 1.17.15_beta       |            | https://zen-browser.app/                                                                | Experience tranquillity while browsing the web without people tracking you!
                                                        | 1.18.4_beta        |            |                                                                                         |
