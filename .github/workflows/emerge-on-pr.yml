@@ -53,15 +53,17 @@ jobs:
         done
 
         declare -a ignore_list=(
-            .github
-            profiles
-            README.md
+            .gitignore
+            AUTHORS
             COPYING
+            README.md
             repo.xml
-            metadata
-            scripts
             skel.ChangeLog
             skel.metadata.xml
+            .github
+            metadata
+            profiles
+            scripts
         )
         for i in "${ignore_list[@]}"; do
             packages=($(printf '%s\n' "${packages[@]}" | grep -v "^$i"))
