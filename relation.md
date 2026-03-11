@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-12 02:37:47 CST)
+(The last generation time: 2026-03-12 02:47:48 CST)
 
 ### Packages
 
@@ -580,7 +580,7 @@
                                                        | 5.1.45             |            |                                                                                         |
      app-emulation/deepin-wine-plugin                  | 5.1.13-r1          |  D, RD     | https://www.deepin.org                                                                  | Deepin Wine plugin
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/dingtalk                                       | 7.8.15.5102301     |            | https://gov.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
+ net-im/dingtalk                                       | 8.1.0.6021101      |            | https://www.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
    dev-libs/libthai                                    | 0.1.30             |  D, RD     | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
      dev-libs/libdatrie                                | 0.2.14             |  D, RD     | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
    dev-util/execstack                                  | 0_pre20130503      | BD         | https://people.redhat.com/jakub/prelink                                                 | set the executable stack flag of ELF binaries and libraries
