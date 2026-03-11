@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -7,7 +7,7 @@ MY_PGK_NAME="com.alibabainc.dingtalk"
 inherit desktop unpacker xdg
 
 DESCRIPTION="Communication platform that supports video and audio conferencing"
-HOMEPAGE="https://gov.dingtalk.com"
+HOMEPAGE="https://www.dingtalk.com"
 SRC_URI="https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.${PN}_${PV}_amd64.deb"
 
 S=${WORKDIR}
@@ -33,7 +33,7 @@ RDEPEND="
 	virtual/zlib
 	sys-process/procps
 	x11-libs/gtk+:2
-	x11-libs/gtk+:3
+	x11-libs/gtk+:3[X]
 	x11-libs/libXScrnSaver
 	virtual/libcrypt
 "
