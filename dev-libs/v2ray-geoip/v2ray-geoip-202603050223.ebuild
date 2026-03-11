@@ -1,4 +1,4 @@
-# Copyright 2024-2025 Gentoo Authors
+# Copyright 2024-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -11,7 +11,7 @@ DESCRIPTION="GeoIP for V2Ray."
 HOMEPAGE="https://github.com/v2fly/geoip"
 SRC_URI="
 	https://github.com/v2fly/geoip/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/blackteahamburger/gentoo-deps/releases/download/${P}/${P}-vendor.tar.xz
+	https://github.com/gentoo-zh-drafts/geoip/releases/download/${PV}/geoip-${PV}-vendor.tar.xz
 	https://download.db-ip.com/free/dbip-country-lite-${DBIP_V}.mmdb.gz
 "
 
