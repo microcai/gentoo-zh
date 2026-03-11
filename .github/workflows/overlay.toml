@@ -804,8 +804,7 @@ github_account = "gouwazi"
 source = "github"
 github = "ppy/osu"
 use_latest_release = true
-include_prereleases = true
-from_pattern = '^(\d{4}\.\d{3,4}\.\d+)-(lazer|tachyon)$'
+from_pattern = '^(\d{4}\.\d{3,4}\.\d+)-lazer$'
 to_pattern = '\1'
 github_account = "Puqns67"
 
