@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-13 17:51:16 CST)
+(The last generation time: 2026-03-13 18:29:12 CST)
 
 ### Packages
 
@@ -360,7 +360,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/maixvision                                   | 1.2.2-r1           |            | https://www.sipeed.com/maixvision                                                       | MaixVision - AIoT development platform
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/opencode-bin                                 | 1.2.24             |            | https://opencode.ai                                                                     | The open source AI coding agent
+ dev-util/opencode-bin                                 | 1.2.25             |            | https://opencode.ai                                                                     | The open source AI coding agent
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/osc                                          | 1.24.0             |            | https://github.com/openSUSE/osc                                                         | The Command Line Interface to work with an Open Build Service
@@ -555,6 +555,8 @@
  media-video/tenvideo                                  | 1.0.10             |            | https://v.qq.com/download.html#linux                                                    | Tencent videos
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/tsukimi                                   | 0.21.0-r1          |            | https://github.com/tsukinaha/tsukimi                                                    | A simple Emby Client written by GTK4-RS
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ net-analyzer/cfspeedtest-bin                          | 2.2.0              |            | https://github.com/code-inflation/cfspeedtest                                           | Unofficial CLI for speed.cloudflare.com
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-analyzer/nali                                     | 0.8.1              |            | https://github.com/zu1k/nali                                                            | An offline tool for querying IP geographic information and CDN provider.
                                                        | 0.8.1_p20250221    |            |                                                                                         |
