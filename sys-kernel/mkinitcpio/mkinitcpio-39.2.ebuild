@@ -3,6 +3,8 @@
 
 EAPI=8
 
+inherit tmpfiles
+
 DESCRIPTION="Modular initramfs image creation utility"
 HOMEPAGE="https://github.com/archlinux/mkinitcpio"
 
@@ -33,11 +35,13 @@ RDEPEND="${DEPEND}
 "
 
 BDEPEND="
-sys-apps/busybox
-app-arch/libarchive
-app-text/asciidoc
-sys-apps/sed
+	sys-apps/busybox
+	app-arch/libarchive
+	app-text/asciidoc
+	sys-apps/sed
 "
+
+QA_PREBUILT="/usr/lib/initcpio/busybox"
 
 src_install(){
 	default_src_install
@@ -50,4 +54,8 @@ src_install(){
 	newins "${FILESDIR}"/initcpio-hook-udev udev
 	insinto /etc/mkinitcpio.d
 	doins "${FILESDIR}"/linux.preset
+}
+
+pkg_postinst() {
+	tmpfiles_process
 }
