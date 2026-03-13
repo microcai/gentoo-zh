@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -12,7 +12,7 @@ S="${WORKDIR}"
 LICENSE="todesk"
 
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="-* ~amd64"
 
 RESTRICT="strip mirror"
 
