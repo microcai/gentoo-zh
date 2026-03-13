@@ -137,12 +137,6 @@ github_account = "CHN-beta"
 # TODO:
 #["app-emulation/deepin-wine-plugin"]
 
-# TODO:
-#["app-emulation/deepin-wine5"]
-
-# TODO:
-#["app-emulation/deepin-wine6-stable"]
-
 # TODO: PV mismatching tags
 #["app-emulation/looking-glass"]
 
@@ -1021,9 +1015,6 @@ github = "lyswhut/lx-music-desktop"
 use_latest_tag = true
 prefix = "v"
 
-# dead upstream
-#["media-sound/netease-cloud-music"]
-
 ["media-sound/netease-cloud-music-gtk"]
 source = "github"
 github = "gmg137/netease-cloud-music-gtk"
@@ -1154,8 +1145,6 @@ github = "natesales/q"
 use_latest_tag = true
 prefix = "v"
 github_account = "peeweep"
-
-#["net-im/deepin-wine-wecom"]
 
 ["net-im/dingtalk"]
 source = "httpheader"
