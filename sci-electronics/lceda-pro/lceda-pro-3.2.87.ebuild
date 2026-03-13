@@ -1,4 +1,4 @@
-# Copyright 2023-2024 Gentoo Authors
+# Copyright 2023-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -47,7 +47,6 @@ DEPEND="
 	x11-libs/libxshmfence
 	x11-libs/libXtst
 	x11-libs/pango
-	!sci-electronics/lceda-pro:0
 	"
 RDEPEND="${DEPEND}"
 BDEPEND="app-arch/unzip"
