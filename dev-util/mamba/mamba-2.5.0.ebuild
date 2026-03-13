@@ -1,4 +1,4 @@
-# Copyright 2023-2025 Gentoo Authors
+# Copyright 2023-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -111,7 +111,6 @@ src_compile() {
 	if use python; then
 		cmake --install "${BUILD_DIR}" --prefix "${T}"
 		cd libmambapy || die
-		export DISTUTILS_USE_PEP517=scikit-build-core
 		export CMAKE_PREFIX_PATH="${T}"
 		export SKBUILD_CONFIGURE_OPTIONS="\
 		-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON \
