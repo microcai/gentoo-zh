@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-  pull_request_target:
+  pull_request:
     branches:
       - master
     paths-ignore:
@@ -13,7 +13,6 @@ on:
       - 'profiles/**'
       - 'README.md'
       - '.gitignore'
-    types: [opened, reopened, synchronize]
 
 jobs:
   build:
