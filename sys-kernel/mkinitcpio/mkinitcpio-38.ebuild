@@ -1,4 +1,4 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 2023-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -25,11 +25,11 @@ sys-apps/coreutils
 sys-apps/findutils
 sys-apps/sed
 app-alternatives/awk
-sys-apps/baselayout[-split-usr]
+sys-apps/baselayout
 "
 
 RDEPEND="${DEPEND}
-	systemd? ( sys-apps/systemd[-split-usr] )
+	systemd? ( sys-apps/systemd )
 "
 
 BDEPEND="
