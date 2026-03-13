@@ -1117,6 +1117,13 @@ github_account = ["peeweep", "irort"]
 # dead upstream
 # ["net-analyzer/nali"]
 
+["net-analyzer/cfspeedtest-bin"]
+source = "github"
+github = "code-inflation/cfspeedtest"
+use_latest_release = true
+prefix = "v"
+github_account = "gouwazi"
+
 ["net-analyzer/realitlscanner"]
 source = "github"
 github = "XTLS/RealiTLScanner"
