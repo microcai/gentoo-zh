@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-13 21:59:49 CST)
+(The last generation time: 2026-03-13 22:32:53 CST)
 
 ### Packages
 
@@ -67,7 +67,11 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/windsurf                                  | 1.9.2              |            | https://codeium.com                                                                     | AI-powered code editor maintaining flow state with instant assistance.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-emulation/deepin-wine5                            | 5.0.16-r1          |            | https://www.deepin.org                                                                  | Deepin wine5
+ app-emulation/deepin-udis86                           | 1.72-r4            |            | https://www.deepin.org                                                                  | Disassembler library for x86 (32-bit shared library)
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-emulation/deepin-wine-helper                      | 5.1.27-r1          |            | https://www.deepin.org                                                                  | Deepin Wine Helper
+                                                       | 5.1.45             |            |                                                                                         |
+   app-emulation/deepin-wine-plugin                    | 5.1.13-r1          |  D, RD     | https://www.deepin.org                                                                  | Deepin Wine plugin
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/la-ow-syscall                           | 0.1.1              |            | https://github.com/AOSC-Dev/la_ow_syscall                                               | Linux kernel module for compatibility with LoongArch's old-world ABI
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -433,8 +437,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  gui-apps/crystal-dock                                 | 2.16               |            | https://github.com/dangvd/crystal-dock                                                  | Cool dock (desktop panel) for Linux desktop
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- kde-misc/plasma-applet-netspeed-widget                | 2.0                |            | https://www.kde-look.org/p/998895/                                                      | Plasma 5 widget that displays the currently used network bandwidth.
-                                                       | 3.1                |            |                                                                                         |
+ kde-misc/plasma-applet-netspeed-widget                | 3.1                |            | https://www.kde-look.org/p/998895/                                                      | Plasma 5 widget that displays the currently used network bandwidth.
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  kde-misc/plasma-ions-china                            | 0_p20260130        |            | https://github.com/arenekosreal/plasma-ions-china                                       | A collection of plasma weather ions for Chinese users
@@ -577,13 +580,6 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/q                                             | 0.19.12            |            | https://github.com/natesales/q                                                          | A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/deepin-wine-wecom                              | 4.1.22.6009        |            | https://aur.archlinux.org/packages/com.qq.weixin.work.deepin-x11                        | Tencent Weixin Work on Deepin Wine(com.qq.weixin.work.deepin) For Gentoo
-   app-emulation/deepin-wine6-stable                   | 6.0.0.52           |  D, RD     | https://www.deepin.org                                                                  | Deepin wine6 stable
-     app-emulation/deepin-udis86                       | 1.72-r4            | RD         | https://www.deepin.org                                                                  | Disassembler library for x86 (32-bit shared library)
-   app-emulation/deepin-wine-helper                    | 5.1.27-r1          |  D, RD     | https://www.deepin.org                                                                  | Deepin Wine Helper
-                                                       | 5.1.45             |            |                                                                                         |
-     app-emulation/deepin-wine-plugin                  | 5.1.13-r1          |  D, RD     | https://www.deepin.org                                                                  | Deepin Wine plugin
--------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/dingtalk                                       | 8.1.0.6021101      |            | https://www.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
    dev-libs/libthai                                    | 0.1.30             |  D, RD     | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
      dev-libs/libdatrie                                | 0.2.14             |  D, RD     | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
@@ -674,8 +670,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/reqable                                      | 3.0.39             |            | https://reqable.com/                                                                    | Reqable = Fiddler + Charles + Postman, 让API调试更快 🚀 更简单 👌
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/todesk                                       | 4.1.0              |            | https://www.todesk.com/                                                                 | ToDesk不一样的远控体验，轻松打破物理限制，随时随地高效使用所有计算终端
-                                                       | 4.7.2.0-r1         |            |                                                                                         |
+ net-misc/todesk                                       | 4.7.2.0-r1         |            | https://www.todesk.com/                                                                 | ToDesk不一样的远控体验，轻松打破物理限制，随时随地高效使用所有计算终端
                                                        | 4.8.1.0            |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-p2p/amule-dlp-antileech                           | 9999               |            | https://github.com/persmule/amule-dlp.antileech                                         | , dynamic DLP library for amule-dlp
@@ -864,9 +859,6 @@
  x11-misc/9menu                                        | 1.11               |            | https://packages.debian.org/source/sid/9menu                                            | Create X menus from the shell
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-misc/extramaus                                    | 3                  |            | https://aur.archlinux.org/packages/extramaus                                            | workaround to always show mouse cursor under x11
--------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- x11-misc/fqterm                                       | 0.9.10.1           |            | https://github.com/mytbk/fqterm                                                         | a modern terminal emulator for Linux
-                                                       | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-misc/i3lock-fancy                                 | 9999               |            | https://github.com/meskarune/i3lock-fancy                                               | A fancy i3lock
    x11-misc/i3lock-color                               | 9999               |  D, RD     | https://github.com/chrjguill/i3lock-color                                               | An improved i3lock
