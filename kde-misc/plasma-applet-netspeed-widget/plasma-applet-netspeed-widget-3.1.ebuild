@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -28,3 +28,8 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 DOCS=( README.md )
+
+src_prepare() {
+	sed -i 's|VERSION 2.8.12|VERSION 3.16|' CMakeLists.txt
+	cmake_src_prepare
+}
