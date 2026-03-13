@@ -8,7 +8,6 @@ EGIT_BRANCH="master"
 
 LICENSE="MPL-2.0"
 SLOT="0"
-KEYWORDS="amd64"
 
 RDEPEND="app-i18n/fcitx:5"
 DEPEND="${RDEPEND}"
