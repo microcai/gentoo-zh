@@ -6,7 +6,7 @@ EAPI=8
 inherit desktop xdg unpacker
 
 DESCRIPTION="API 文档、API 调试、API Mock、API 自动化测试"
-HOMEPAGE="https://www.apifox.cn/"
+HOMEPAGE="https://apifox.com/"
 SRC_URI="
 	amd64? ( https://file-assets.apifox.com/download/Apifox-linux-latest.zip -> ${P}-amd64.zip )
 "
