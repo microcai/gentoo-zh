@@ -116,7 +116,7 @@ src_install() {
 	for logo in "${ED}"/${BRAVE_HOME}/product_logo_*.png; do
 	    size=${logo##*_}
 		size=${size%.*}
-		newicon -s "${size}" "${logo}" ${PN/-bin}.png
+		newicon -s "${size}" "${logo}" ${PN/-bin/-browser}.png
 	done
 
 	pax-mark m "${BRAVE_HOME}/brave"
