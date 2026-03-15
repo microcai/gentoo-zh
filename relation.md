@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-15 09:14:39 CST)
+(The last generation time: 2026-03-15 09:14:59 CST)
 
 ### Packages
 
@@ -313,9 +313,13 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/menuinst                                   | 2.2.0              |            | https://github.com/conda/menuinst                                                       | Cross platform menu item installation
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/microfs2                                   | 2.1.0              |            | https://github.com/blackteahamburger/microfs                                            | A module and utility to work with the simple filesystem on the BBC micro:bit
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/microrepl                                  | 0.6                |            | https://github.com/ntoll/microrepl                                                      | A REPL client for MicroPython running on the BBC micro:bit
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/mw2fcitx                                   | 0.24.2             |            | https://github.com/outloudvi/mw2fcitx                                                   | Build fcitx5 libraries from MediaWiki sites
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-python/nudatus                                    | 0.0.5              |            | https://github.com/ZanderBrown/nudatus                                                  | CircuitPython board identification and information
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/nvchecker                                  | 2.20               |            | https://pypi.org/project/nvchecker/                                                     | nvchecker is for checking if a new version of some software has been released
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -330,10 +334,6 @@
  dev-python/pywikibot                                  | 10.3.0             |            | https://www.mediawiki.org/wiki/Manual:Pywikibot                                         | To interact with MediaWiki API (for example Wikipedia, Wikimedia Commons)
                                                        | 10.7.4             |            |                                                                                         |
    dev-python/mwparserfromhell                         | 0.7.2              | RD         | https://github.com/earwig/mwparserfromhell                                              | A Python parser for MediaWiki wikicode
--------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/uflash3                                    | 3.0.4              |            | https://github.com/blackteahamburger/uflash                                             | A module and utility to flash Python onto the BBC micro:bit
-   dev-python/microfs2                                 | 2.0.9              | RD         | https://github.com/blackteahamburger/microfs                                            | A module and utility to work with the simple filesystem on the BBC micro:bit
-   dev-python/nudatus                                  | 0.0.5              | RD         | https://github.com/ZanderBrown/nudatus                                                  | CircuitPython board identification and information
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/uv-bin                                     | 0.10.10            |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -369,7 +369,7 @@
  dev-util/opencode-bin                                 | 1.2.26             |            | https://opencode.ai                                                                     | The open source AI coding agent
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/osc                                          | 1.24.0             |            | https://github.com/openSUSE/osc                                                         | The Command Line Interface to work with an Open Build Service
+ dev-util/osc                                          | 1.25.0             |            | https://github.com/openSUSE/osc                                                         | The Command Line Interface to work with an Open Build Service
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/pack-cli                                     | 0.37.0             |            | https://buildpacks.io                                                                   | CLI for building apps using Cloud Native Buildpacks
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -739,7 +739,7 @@
      net-proxy/v2ray                                   | 5.42.0             | RD         | https://www.v2fly.org/                                                                  | A platform for building proxies to bypass network restrictions.
      net-proxy/v2ray-bin                               | 4.45.0-r2          | RD         | https://www.v2fly.org                                                                   | A platform for building proxies to bypass network restrictions.
                                                        | 5.42.0             |            |                                                                                         |
-   net-proxy/trojan-go-fork                            | 2026.01.18         | RD         | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
+   net-proxy/trojan-go-fork                            | 2026.02.15         | RD         | https://github.com/Potterli20/trojan-go-fork                                            | A fork of trojan-go
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/serenity                                    | 1.1.0_beta3        |            | https://serenity.sagernet.org/                                                          | The configuration generator for sing-box
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
