@@ -30,6 +30,7 @@ DEPEND="
 	x11-libs/gtk+
 	app-crypt/libsecret
 	dev-libs/openssl-compat
+	media-libs/alsa-lib
 "
 RDEPEND="${DEPEND}"
 
