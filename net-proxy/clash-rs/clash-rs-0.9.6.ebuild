@@ -9,26 +9,19 @@ CRATES="
 "
 
 declare -A GIT_CRATES=(
-	[boring-noise]='https://github.com/Watfaq/boring-noise;e8a17ecb688ef2fed8d37beda0f87f5561fa45e6;boring-noise-%commit%'
+	[boring-noise]='https://github.com/Watfaq/boring-noise;9ddf1b54d0c9679e7bc50e9151f72d526190db1a;boring-noise-%commit%'
 	[console-api]='https://github.com/tokio-rs/console;d8fba132e6ce52821172b1178c77658b1f48bdd4;console-%commit%/console-api'
 	[console-subscriber]='https://github.com/tokio-rs/console;d8fba132e6ce52821172b1178c77658b1f48bdd4;console-%commit%/console-subscriber'
 	[netstack-lwip]='https://github.com/eycorsican/netstack-lwip;f434fefd6c227c9dfbec84c364452ba6c1532779;netstack-lwip-%commit%'
-	[quinn-proto]='https://github.com/spongebob888/quinn-jls;3364498f3376432dc8d27ed2fb74b4695506288c;quinn-jls-%commit%/quinn-proto'
-	[quinn-udp]='https://github.com/spongebob888/quinn-jls;3364498f3376432dc8d27ed2fb74b4695506288c;quinn-jls-%commit%/quinn-udp'
-	[quinn]='https://github.com/spongebob888/quinn-jls;3364498f3376432dc8d27ed2fb74b4695506288c;quinn-jls-%commit%/quinn'
-	[rustls]='https://github.com/spongebob888/rustls-jls;70e0553c809ae4a6a3eb1229e864f20d4fc5e611;rustls-jls-%commit%/rustls'
-	[shadowquic-macros]='https://github.com/spongebob888/shadowquic;b6d4b0320a838112a583211eaac8f7895491c0c6;shadowquic-%commit%/shadowquic-macros'
-	[shadowquic]='https://github.com/spongebob888/shadowquic;b6d4b0320a838112a583211eaac8f7895491c0c6;shadowquic-%commit%/shadowquic'
 	[smoltcp]='https://github.com/smoltcp-rs/smoltcp;ac32e643a4b7e09161193071526b3ca5a0deedb5;smoltcp-%commit%'
 	[sock2proc]='https://github.com/Watfaq/sock2proc;9f9e6304d62285115b2e4fa632527ae563bf0fcc;sock2proc-%commit%'
 	[tokio-watfaq-rustls]='https://github.com/Watfaq/tokio-rustls;638db32084d7ecf9c2660847b55d48d1186b4055;tokio-rustls-%commit%'
-	[tuic-quinn]='https://github.com/Itsusinn/tuic;ce1482c48315f45672eec483d55e2732db4a17ea;tuic-%commit%/tuic-quinn'
-	[tuic]='https://github.com/Itsusinn/tuic;ce1482c48315f45672eec483d55e2732db4a17ea;tuic-%commit%/tuic'
+	[tuic-core]='https://github.com/Itsusinn/tuic;4843d04b1584f49b503e344e2a96041e16fe8938;tuic-%commit%/tuic-core'
 	[unix-udp-sock]='https://github.com/Watfaq/unix-udp-sock;847c80b519f0fd8cff5c887ae708429897d08671;unix-udp-sock-%commit%'
 	[watfaq-rustls]='https://github.com/Watfaq/rustls;4cae3aa2e84ea29d8a74b495793773bdb0a72206;rustls-%commit%/rustls'
 )
 
-RUST_MIN_VER="1.88"
+RUST_MIN_VER="1.88.0"
 
 inherit cargo systemd
 
