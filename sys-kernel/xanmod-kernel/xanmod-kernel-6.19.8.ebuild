@@ -9,7 +9,7 @@ inherit kernel-build toolchain-funcs llvm-r1
 
 MY_P=linux-${PV%.*}
 #Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
-PATCHSET=linux-gentoo-patches-6.18.4
+PATCHSET=linux-gentoo-patches-6.19.6
 GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.}))
 XV="1"
 
@@ -21,7 +21,7 @@ HOMEPAGE="
 SRC_URI+="
 	https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.xz
 	https://dev.gentoo.org/~mgorny/dist/linux/${PATCHSET}.tar.xz
-	https://master.dl.sourceforge.net/project/xanmod/releases/edge/${PV}-xanmod1/patch-${PV}-xanmod1.xz"
+	https://master.dl.sourceforge.net/project/xanmod/releases/main/${PV}-xanmod1/patch-${PV}-xanmod1.xz"
 S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"

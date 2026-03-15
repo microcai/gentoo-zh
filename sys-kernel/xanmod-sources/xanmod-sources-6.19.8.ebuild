@@ -5,7 +5,7 @@ EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
 #Note: to bump xanmod, check K_GENPATCHES_VER in sys-kernel/gentoo-sources
-K_GENPATCHES_VER="3"
+K_GENPATCHES_VER="6"
 
 inherit check-reqs kernel-2
 detect_version
@@ -21,7 +21,7 @@ OKV="${OKV}-xanmod"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
 	${GENPATCHES_URI}
-	https://master.dl.sourceforge.net/project/xanmod/releases/edge/${PV}-xanmod1/patch-${PV}-xanmod1.xz
+	https://master.dl.sourceforge.net/project/xanmod/releases/main/${PV}-xanmod1/patch-${PV}-xanmod1.xz
 "
 S="${WORKDIR}/linux-${OKV}${XANMOD_VERSION}"
 
