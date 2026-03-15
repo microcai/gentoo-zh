@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-15 19:26:29 CST)
+(The last generation time: 2026-03-16 00:23:28 CST)
 
 ### Packages
 
@@ -559,7 +559,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/tsukimi                                   | 0.21.0-r1          |            | https://github.com/tsukinaha/tsukimi                                                    | A simple Emby Client written by GTK4-RS
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-analyzer/cfspeedtest-bin                          | 2.2.0              |            | https://github.com/code-inflation/cfspeedtest                                           | Unofficial CLI for speed.cloudflare.com
+ net-analyzer/cfspeedtest-bin                          | 2.2.1              |            | https://github.com/code-inflation/cfspeedtest                                           | Unofficial CLI for speed.cloudflare.com
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-analyzer/nali                                     | 0.8.1              |            | https://github.com/zu1k/nali                                                            | An offline tool for querying IP geographic information and CDN provider.
                                                        | 0.8.1_p20250221    |            |                                                                                         |
