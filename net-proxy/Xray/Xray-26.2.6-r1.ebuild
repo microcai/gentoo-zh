@@ -19,11 +19,7 @@ KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 DEPEND="app-alternatives/v2ray-geoip
 	app-alternatives/v2ray-geosite"
 RDEPEND="${DEPEND}"
-BDEPEND=">=dev-lang/go-1.25.5"
-
-PATCHES=(
-	"${FILESDIR}"/Xray-26.2.6-go-1.25.7.patch
-)
+BDEPEND=">=dev-lang/go-1.25.7"
 
 src_compile() {
 	ego build -o xray -gcflags="all=-l=4" -ldflags "-X github.com/XTLS/Xray-core/core.build=${PV}" ./main
