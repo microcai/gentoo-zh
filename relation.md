@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-16 00:23:28 CST)
+(The last generation time: 2026-03-16 14:51:50 CST)
 
 ### Packages
 
@@ -838,7 +838,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/follow-bin                                   | 1.2.6              |            | https://follow.is/                                                                      | Next generation information browser
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-client/brave-bin                                  | 1.88.130-r1        |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
+ www-client/brave-bin                                  | 1.88.132           |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-client/zen-browser-bin                            | 1.17.15_beta       |            | https://zen-browser.app/                                                                | Experience tranquillity while browsing the web without people tracking you!
                                                        | 1.18.4_beta        |            |                                                                                         |
