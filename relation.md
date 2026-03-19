@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-19 22:17:25 CST)
+(The last generation time: 2026-03-19 23:49:51 CST)
 
 ### Packages
 
@@ -38,7 +38,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-custom-pinyin-dictionary       | 20260101           |            | https://github.com/wuhgit/CustomPinyinDictionary                                        | Fcitx5 自建拼音输入法词库，百万常用词汇量。
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-dicts/fcitx-pinyin-moegirl                        | 20260310           |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
+ app-dicts/fcitx-pinyin-moegirl                        | 20260315           |            | https://github.com/outloudvi/mw2fcitx                                                   | Fcitx 5 Pinyin Dictionary from zh.moegirl.org.cn
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-dicts/fcitx-pinyin-sougou-dict                    | 20260215           |            | https://github.com/blackteahamburger/fcitx5-pinyin-sougou-dict                          | Sougou Pinyin dictionary for Fcitx5 and RIME
    app-i18n/ibus-rime                                  | 9999               | RD         | http://code.google.com/p/rimeime/                                                       | Rime Input Method Engine for IBus Framework
@@ -317,7 +317,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/microrepl                                  | 0.6                |            | https://github.com/ntoll/microrepl                                                      | A REPL client for MicroPython running on the BBC micro:bit
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/mw2fcitx                                   | 0.25.0             |            | https://github.com/outloudvi/mw2fcitx                                                   | Build fcitx5 libraries from MediaWiki sites
+ dev-python/mw2fcitx                                   | 0.25.1             |            | https://github.com/outloudvi/mw2fcitx                                                   | Build fcitx5 libraries from MediaWiki sites
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/nudatus                                    | 0.0.5              |            | https://github.com/ZanderBrown/nudatus                                                  | CircuitPython board identification and information
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -355,7 +355,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/binsider                                     | 0.3.0              |            | https://binsider.dev                                                                    | Analyze ELF binaries like a boss
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/codex                                        | 0.114.0            |            | https://github.com/openai/codex                                                         | Codex CLI - OpenAI's AI-powered coding agent
+ dev-util/codex                                        | 0.115.0            |            | https://github.com/openai/codex                                                         | Codex CLI - OpenAI's AI-powered coding agent
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/fvm                                          | 4.0.5              |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
    dev-lang/dart                                       | 3.11.3             |  D, RD     | https://dart.dev                                                                        | The Dart SDK
