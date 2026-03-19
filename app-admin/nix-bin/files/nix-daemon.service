@@ -1,0 +1,13 @@
+[Unit]
+Description=Nix Daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/nix/var/nix/profiles/default/bin/nix-daemon
+Restart=on-failure
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
