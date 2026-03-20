@@ -19,7 +19,7 @@ RDEPEND="
 	app-crypt/p11-kit
 	dev-libs/nss
 	media-libs/alsa-lib
-	x11-libs/gtk+:3[cups]
+	x11-libs/gtk+:3[cups,X,wayland]
 	x11-libs/libXScrnSaver
 	x11-libs/libXtst
 "
