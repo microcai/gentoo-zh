@@ -18,7 +18,7 @@ LICENSE="all-rights-reserved"
 
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64 ~loong"
-IUSE="fcitx ibus"
+IUSE="bwrap fcitx ibus"
 REQUIRED_USE="?? ( fcitx ibus )"
 
 RESTRICT="strip mirror bindist"
@@ -42,6 +42,10 @@ RDEPEND="
 	x11-libs/xcb-util-keysyms
 	x11-libs/xcb-util-renderutil
 	x11-libs/xcb-util-wm
+	bwrap? (
+		sys-apps/bubblewrap
+		x11-misc/xdg-utils
+	)
 	fcitx? ( app-i18n/fcitx )
 	ibus? ( app-i18n/ibus )
 	loong? ( virtual/loong-ow-compat )
@@ -71,7 +75,13 @@ src_install() {
 	dodir /opt/wechat
 	cp -r opt/wechat/. "${D}/opt/wechat/" || die
 
-	dosym ../wechat/wechat /opt/bin/wechat
+	if use bwrap; then
+		newbin "${FILESDIR}/bwrap.sh" wechat
+		exeinto /opt/wechat
+		doexe "${FILESDIR}/xdg-open.sh"
+	else
+		newbin "${FILESDIR}/wechat.sh" wechat
+	fi
 
 	local exec_envs=( "QT_AUTO_SCREEN_SCALE_FACTOR=1" "\"QT_QPA_PLATFORM=wayland;xcb\"" )
 	if use fcitx; then
@@ -84,7 +94,7 @@ src_install() {
 	sed -i \
 		-e "s|^Icon=.*|Icon=wechat|" \
 		-e "s|^Categories=.*|Categories=Network;InstantMessaging;Chat;|" \
-		-e "s|^Exec=.*|Exec=env ${exec_envs[*]} wechat %U|" \
+		-e "s|^Exec=.*|Exec=env ${exec_envs[*]} /usr/bin/wechat %U|" \
 		usr/share/applications/wechat.desktop || die
 	domenu usr/share/applications/wechat.desktop
 
@@ -95,5 +105,11 @@ src_install() {
 
 pkg_postinst() {
 	xdg_pkg_postinst
+	if use bwrap; then
+		elog "Enabled Bubblewrap support."
+		elog "WeChat can only access its own sandbox home and the download directory by default."
+		elog "Other files should be accessed through the desktop file chooser path."
+		elog "Advanced users can extend the sandbox using ~/.config/wechat-bwrap-flags.conf."
+	fi
 	einfo "If you need to input Chinese in WeChat, please enable the corresponding USE flag (fcitx or ibus)."
 }
