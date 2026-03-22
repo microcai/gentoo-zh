@@ -22,7 +22,7 @@ RDEPEND="
 	net-misc/curl
 	dev-vcs/git
 "
-BDEPEND=">=dev-lang/go-1.23.4"
+BDEPEND=">=dev-lang/go-1.24.9"
 
 DOCS=( CHANGELOG.md README.md )
 
