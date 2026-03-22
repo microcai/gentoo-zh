@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-22 14:23:34 CST)
+(The last generation time: 2026-03-23 00:31:26 CST)
 
 ### Packages
 
@@ -382,13 +382,13 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/tailspin                                     | 5.5.0              |            | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/vfox                                         | 1.0.3              |            | https://vfox.dev                                                                        | A cross-platform version manager, extendable via plugins
+ dev-util/vfox                                         | 1.0.6              |            | https://vfox.dev                                                                        | A cross-platform version manager, extendable via plugins
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/vfox-bin                                     | 1.0.3              |            | https://vfox.dev/                                                                       | A cross-platform version manager, extendable via plugins
+ dev-util/vfox-bin                                     | 1.0.6              |            | https://vfox.dev/                                                                       | A cross-platform version manager, extendable via plugins
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/zprint-bin                                   | 1.3.0              |            | https://github.com/kkinnear/zprint                                                      | Clojure and Clojurescript source code formatter
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/gitoxide                                      | 0.51.0             |            | https://github.com/GitoxideLabs/gitoxide                                                | A command-line application for interacting with git repositories
+ dev-vcs/gitoxide                                      | 0.52.0             |            | https://github.com/GitoxideLabs/gitoxide                                                | A command-line application for interacting with git repositories
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/git-remote-mediawiki                          | 9999               |            | https://github.com/Git-Mediawiki/Git-Mediawiki                                          | Gate between Git and Mediawiki: pull and push Wikipedia articles
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
