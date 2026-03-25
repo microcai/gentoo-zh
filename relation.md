@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-25 17:38:51 CST)
+(The last generation time: 2026-03-25 17:44:03 CST)
 
 ### Packages
 
@@ -188,7 +188,7 @@
  app-office/anytype-bin                                | 0.54.9             |            | https://anytype.io                                                                      | A notebook based on p2p network
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/bytedance-feishu                           | 7.22.9             |            | https://www.feishu.cn/download                                                          | 飞书（Feishu） 飞书整合即时消息、日历、音视频会议、云文档、工作台等功能于一体，成就团队和个人，更高效、更愉悦。
-                                                       | 7.58.14            |            |                                                                                         |
+                                                       | 7.62.9             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/freeoffice                                 | 1062               |            | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite.
                                                        | 1064               |            |                                                                                         |
