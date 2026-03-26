@@ -18,7 +18,7 @@ SLOT="0"
 #FIXME pkgcheck cries on NonsolvableDepsInDev on mips, no idea why
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 
-IUSE="+cli server test cet gui gtk3 gtk4 qt5 qt6 wayland +tcmalloc mimalloc jemalloc"
+IUSE="+cli server test cet gui gtk3 gtk4 qt5 qt6 wayland tbbmalloc +tcmalloc mimalloc jemalloc"
 
 # tested with FEATURES="-network-sandbox test"
 # tested with FEATURES="network-sandbox test"
@@ -28,6 +28,7 @@ RESTRICT="!test? ( test )"
 REQUIRED_USE="
 	cet? ( ^^ ( amd64 x86 ) )
 	gui? ( || ( gtk3 gtk4 qt5 qt6 ) )
+	tbbmalloc? ( !tcmalloc !mimalloc !jemalloc )
 	tcmalloc? ( !mimalloc !jemalloc )
 	mimalloc? ( !jemalloc )
 "
@@ -42,6 +43,7 @@ RDEPEND="
 	net-dns/c-ares
 	net-libs/nghttp2
 	dev-libs/jsoncpp
+	tbbmalloc? ( dev-cpp/tbb )
 	tcmalloc? ( dev-util/google-perftools )
 	mimalloc? ( dev-libs/mimalloc )
 	jemalloc? ( dev-libs/jemalloc )
@@ -95,12 +97,14 @@ src_prepare() {
 src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_INSTALL_SYSCONFDIR=/etc
-		-DBUILD_SHARED_LIBS=off
+		-DCMAKE_INSTALL_LIBEXECDIR=libexec
 		-DUSE_LIBCXX=off
 		-DCLI=$(usex cli)
 		-DSERVER=$(usex server)
 		-DUSE_CET=$(usex cet)
 		-DBUILD_TESTS=$(usex test)
+		-DUSE_TBBMALLOC=$(usex tbbmalloc)
+		-DUSE_SYSTEM_TBBMALLOC=$(usex tbbmalloc)
 		-DUSE_TCMALLOC=$(usex tcmalloc)
 		-DUSE_SYSTEM_TCMALLOC=$(usex tcmalloc)
 		-DUSE_MIMALLOC=$(usex mimalloc)
