@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-26 20:12:55 CST)
+(The last generation time: 2026-03-26 20:16:06 CST)
 
 ### Packages
 
@@ -585,8 +585,8 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-im/kotatogram-bin                                 | 1.4.9              |            | https://thatcat.space/kotatogram                                                        | Telegram Desktop fork with wide messages, local folders, square avatars
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/tencent-qq                                     | 3.2.25_p260205     |            | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
-                                                       | 3.2.26_p260311     |            |                                                                                         |
+ net-im/tencent-qq                                     | 3.2.26_p260311     |            | https://im.qq.com/linuxqq/index.shtml                                                   | The new version of the official linux-qq
+                                                       | 3.2.26_p260319     |            |                                                                                         |
    media-libs/openslide                                | 4.0.0              | RD         | https://openslide.org/                                                                  | A C library that provides a simple interface to read whole-slide images
      media-libs/libdicom                               | 1.2.0              |  D, RD     | https://libdicom.readthedocs.io/                                                        | A C library and a set of command-line tools for reading DICOM WSI files
    virtual/loong-ow-compat                             | 0                  | RD         |                                                                                         | Virtual for LoongArch old-world compatibility
