@@ -31,6 +31,9 @@ declare -A GIT_CRATES=(
 
 RUST_MIN_VER="1.93.0"
 
+# python3 .github/scripts/rusty_v8_bazel.py resolved-v8-crate-version
+RUSTY_V8_TAG="146.4.0"
+
 inherit cargo
 
 DESCRIPTION="Codex CLI - OpenAI's AI-powered coding agent"
@@ -42,6 +45,18 @@ HOMEPAGE="https://github.com/openai/codex"
 SRC_URI="
 	https://github.com/openai/${PN}/archive/rust-v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/gentoo-zh-drafts/codex/releases/download/rust-v${PV}/codex-rust-v${PV}-crates.tar.xz
+	amd64? (
+		https://github.com/openai/codex/releases/download/rusty-v8-v${RUSTY_V8_TAG}/librusty_v8_release_x86_64-unknown-linux-musl.a.gz
+			-> rusty_v8_${RUSTY_V8_TAG}_librusty_v8_release_x86_64-unknown-linux-musl.a.gz
+		https://github.com/openai/codex/releases/download/rusty-v8-v${RUSTY_V8_TAG}/src_binding_release_x86_64-unknown-linux-musl.rs
+			-> rusty_v8_${RUSTY_V8_TAG}_src_binding_release_x86_64-unknown-linux-musl.rs
+	)
+	arm64? (
+		https://github.com/openai/codex/releases/download/rusty-v8-v${RUSTY_V8_TAG}/librusty_v8_release_aarch64-unknown-linux-musl.a.gz
+			-> rusty_v8_${RUSTY_V8_TAG}_librusty_v8_release_aarch64-unknown-linux-musl.a.gz
+		https://github.com/openai/codex/releases/download/rusty-v8-v${RUSTY_V8_TAG}/src_binding_release_aarch64-unknown-linux-musl.rs
+			-> rusty_v8_${RUSTY_V8_TAG}_src_binding_release_aarch64-unknown-linux-musl.rs
+	)
 	${CARGO_CRATE_URIS}
 "
 
@@ -54,7 +69,7 @@ LICENSE+="
 	MPL-2.0 Unicode-3.0 ZLIB
 "
 SLOT="0"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="-* ~amd64 ~arm64"
 # Tests fail due to ring crate conflicts with system OpenSSL
 RESTRICT="test"
 
@@ -99,7 +114,12 @@ src_prepare() {
 }
 
 src_compile() {
-	cargo_src_compile --package codex-cli
+	use amd64 && export RUST_MUSL_SUFFIX=x86_64-unknown-linux-musl
+	use arm64 && export RUST_MUSL_SUFFIX=aarch64-unknown-linux-musl
+
+	RUSTY_V8_ARCHIVE=${DISTDIR}/rusty_v8_${RUSTY_V8_TAG}_librusty_v8_release_${RUST_MUSL_SUFFIX}.a.gz \
+	RUSTY_V8_SRC_BINDING_PATH=${DISTDIR}/rusty_v8_${RUSTY_V8_TAG}_src_binding_release_${RUST_MUSL_SUFFIX}.rs \
+		cargo_src_compile --package codex-cli
 }
 
 src_install() {
