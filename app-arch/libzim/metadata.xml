@@ -8,4 +8,7 @@
 	<upstream>
 		<remote-id type="github">openzim/libzim</remote-id>
 	</upstream>
+	<use>
+		<flag name="xapian">Build libzim with xapian support</flag>
+	</use>
 </pkgmetadata>
