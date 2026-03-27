@@ -1,15 +1,17 @@
-# Copyright 2022-2025 Gentoo Authors
+# Copyright 2022-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-PLOCALES="ar_SA ay_BO be_BY bg_BG crowdin cs_CZ de_CH de_DE el_GR eo_UY es_AR
-es_BO es_ES fa_IR fi_FI fr_FR hi_IN hu_HU ie_001 it_IT ja_JP jbo_EN kab_KAB
-ko_KR lt_LT mk_MK nl_NL pl_PL pt_BR pt_PT qu_PE ru_RU sk_SK sq_AL sr_SP
-sv_SE tg_TJ tk_TM tr_TR uk_UA vi_VN zh_CN zh_TW"
+PLOCALES="
+	ar ay be bg crowdin cs de de_CH el en eo es es_AR es_BO
+	fa fi fr hi hu ie it ja jbo kab ko lt mk nl pl pt pt_BR
+	qu ru sk sq sr sv tg tk tr uk vi zh_CN zh_TW
+"
+PLOCALE_BACKUP="en"
 
 inherit cmake flag-o-matic plocale xdg
 
-MY_PV="25.05.0-Release.2a2b0e16"
+MY_PV="26.3.0-Release.fce2b872"
 
 DESCRIPTION="Feature-rich dictionary lookup program (qtwebengine fork)"
 HOMEPAGE="https://xiaoyifang.github.io/goldendict-ng/"
@@ -18,14 +20,14 @@ SRC_URI="
 "
 S="${WORKDIR}/goldendict-ng-${MY_PV}"
 
-LICENSE="
-	GPL-3
-	!systemfmt? ( MIT )
-	!systemtoml? ( MIT )
-"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="ffmpeg epwing systemfmt systemtoml tts zim"
+IUSE="epwing +tts +X zim"
+# Actual min ver is 6.2
+# FFMPEG Player is not supported for Qt >= 6.8
+# Gentoo MainTree dropped last version of QT6.8 on 2025/07/10
+QT_MIN="6.8"
 
 DEPEND="
 	app-arch/bzip2
@@ -33,45 +35,40 @@ DEPEND="
 	app-arch/xz-utils
 	app-i18n/opencc
 	app-text/hunspell
-	dev-libs/eb
+	dev-cpp/tomlplusplus
+	dev-libs/libfmt
 	dev-libs/lzo:2
 	dev-libs/xapian
-	dev-qt/qt5compat:6
-	dev-qt/qtbase:6[dbus,concurrent,cups,gui,network,sql,widgets,xml,X]
-	dev-qt/qtmultimedia:6
-	dev-qt/qtdeclarative:6
-	dev-qt/qtsvg:6
-	dev-qt/qtwebengine:6[widgets]
+	>=dev-qt/qt5compat-${QT_MIN}:6
+	>=dev-qt/qtbase-${QT_MIN}:6[dbus,concurrent,cups,gui,network,sql,widgets,xml,X?]
+	>=dev-qt/qtmultimedia-${QT_MIN}:6
+	>=dev-qt/qtdeclarative-${QT_MIN}:6
+	>=dev-qt/qtsvg-${QT_MIN}:6
+	>=dev-qt/qtwebengine-${QT_MIN}:6[widgets]
 	epwing? ( dev-libs/eb )
-	ffmpeg? (
-		media-video/ffmpeg:*
-	)
-	!ffmpeg? ( dev-qt/qtmultimedia:6[gstreamer] )
+	>=dev-qt/qtmultimedia-${QT_MIN}:6[gstreamer]
 	media-libs/libvorbis
-	tts? ( dev-qt/qtspeech:6 )
+	tts? ( >=dev-qt/qtspeech-${QT_MIN}:6 )
 	virtual/zlib
-	systemfmt? ( dev-libs/libfmt )
-	systemtoml? ( dev-cpp/tomlplusplus )
 	virtual/opengl
 	virtual/libiconv
-	x11-libs/libX11
-	x11-libs/libxkbcommon
-	x11-libs/libXtst
+	X? (
+		x11-libs/libX11
+		x11-libs/libxkbcommon
+		x11-libs/libXtst
+	)
 	zim? ( app-arch/libzim )
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
 	dev-qt/qttools:6[assistant,linguist]
-	dev-vcs/git
 	virtual/pkgconfig
 "
 
 src_prepare() {
 	local loc_dir="${S}/locale"
 	plocale_find_changes "${loc_dir}" "" ".ts"
-	rm_loc() {
-		rm -vf "locale/${1}.ts" || die
-	}
+	rm_loc() { rm -vf "locale/${1}.ts" || die ;}
 	plocale_for_each_disabled_locale rm_loc
 
 	cmake_src_prepare
@@ -82,13 +79,14 @@ src_configure() {
 	use elibc_musl && append-ldflags -Wl,-z,stack-size=2097152
 
 	local mycmakeargs=(
-		-DWITH_FFMPEG_PLAYER=$(usex ffmpeg ON OFF)
+		#FFMPEG Player is useless for Qt >= 6.8
+		-DWITH_FFMPEG_PLAYER=OFF
+		-DWITH_QT_MULTIMEDIA=ON
 		-DWITH_EPWING_SUPPORT=$(usex epwing ON OFF)
-		-DUSE_SYSTEM_FMT=$(usex systemfmt ON OFF)
-		-DUSE_SYSTEM_TOML=$(usex systemtoml ON OFF)
 		-DWITH_TTS=$(usex tts ON OFF)
 		-DWITH_ZIM=$(usex zim ON OFF)
 		-DWITH_VCPKG_BREAKPAD=OFF
+		-DWITH_X11=$(usex X ON OFF)
 	)
 	cmake_src_configure
 }
