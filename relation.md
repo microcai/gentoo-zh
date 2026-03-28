@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-27 11:50:29 CST)
+(The last generation time: 2026-03-28 08:09:38 CST)
 
 ### Packages
 
@@ -214,8 +214,8 @@
  app-text/cajviewer                                    | 9.0-r1             |            | http://cajviewer.cnki.net                                                               | Document Viewer for CAJ, KDH, NH, TEB and PDF format
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/goldendict                                   | 25.02.0            |            | https://xiaoyifang.github.io/goldendict-ng/                                             | Feature-rich dictionary lookup program (qtwebengine fork)
-                                                       | 25.05.0            |            |                                                                                         |
-   app-arch/libzim                                     | 9.3.0              |  D, RD     | https://wiki.openzim.org/wiki/OpenZIM                                                   | ZIM file format: an offline storage solution for content coming from the Web
+                                                       | 26.3.0             |            |                                                                                         |
+   app-arch/libzim                                     | 9.5.1              |  D, RD     | https://wiki.openzim.org/wiki/OpenZIM                                                   | ZIM file format: an offline storage solution for content coming from the Web
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/groff-utf8                                   | 0-r1               |            | http://www.haible.de/bruno/packages-groff-utf8.html                                     | GNU groff wrapper allowing UTF-8 input
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
