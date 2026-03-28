@@ -114,11 +114,12 @@ src_prepare() {
 }
 
 src_compile() {
-	use amd64 && export RUST_MUSL_SUFFIX=x86_64-unknown-linux-musl
-	use arm64 && export RUST_MUSL_SUFFIX=aarch64-unknown-linux-musl
+	local rusty_v8_triple
+	use amd64 && rusty_v8_triple=x86_64-unknown-linux-musl
+	use arm64 && rusty_v8_triple=aarch64-unknown-linux-musl
 
-	RUSTY_V8_ARCHIVE=${DISTDIR}/rusty_v8_${RUSTY_V8_TAG}_librusty_v8_release_${RUST_MUSL_SUFFIX}.a.gz \
-	RUSTY_V8_SRC_BINDING_PATH=${DISTDIR}/rusty_v8_${RUSTY_V8_TAG}_src_binding_release_${RUST_MUSL_SUFFIX}.rs \
+	RUSTY_V8_ARCHIVE="${DISTDIR}/rusty_v8_${RUSTY_V8_TAG}_librusty_v8_release_${rusty_v8_triple}.a.gz" \
+	RUSTY_V8_SRC_BINDING_PATH="${DISTDIR}/rusty_v8_${RUSTY_V8_TAG}_src_binding_release_${rusty_v8_triple}.rs" \
 		cargo_src_compile --package codex-cli
 }
 
