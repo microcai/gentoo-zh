@@ -96,10 +96,13 @@ jobs:
       fail-fast: false
       matrix:
         package: ${{ fromJSON(needs.scan.outputs.packages) }}
+        profile:
+          - amd64-desktop-openrc
+          - amd64-desktop-systemd
 
     runs-on: ubuntu-latest
     container:
-      image: gentoo/stage3:amd64-desktop-systemd
+      image: gentoo/stage3:${{ matrix.profile }}
       options: --privileged
 
     steps:
