@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-29 07:01:00 CST)
+(The last generation time: 2026-03-29 09:23:25 CST)
 
 ### Packages
 
@@ -93,7 +93,7 @@
  app-i18n/dvp                                          | 1.2.1-r1           |            | http://kaufmann.no/roland/dvorak/index.html                                             | The kbd keymap for Programmer Dvorak.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-cskk                                   | 1.2.0              |            | https://github.com/fcitx/fcitx5-cskk                                                    | SKK input method plugin for fcitx5 that uses LibCSKK
-   app-i18n/cskk                                       | 3.2.1              |  D, RD     | https://github.com/naokiri/cskk                                                         | SKK (Simple Kana Kanji henkan) library
+   app-i18n/cskk                                       | 3.3.0              |  D, RD     | https://github.com/naokiri/cskk                                                         | SKK (Simple Kana Kanji henkan) library
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-meta                                   | 5.0.12-r3          |            | https://fcitx-im.org                                                                    | Merge this to pull in Fcitx packages
    app-i18n/fcitx-anthy                                | 9999               | RD         | https://fcitx-im.org/                                                                   | Japanese Anthy input methods for Fcitx5
