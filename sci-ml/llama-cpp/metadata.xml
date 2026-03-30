@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>me@puqns67.icu</email>
+		<name>Puqns67</name>
+	</maintainer>
+	<use>
+		<flag name="blis">Build a BLIS backend</flag>
+		<flag name="flexiblas">Build a FlexiBLAS backend</flag>
+		<flag name="openblas">Build an OpenBLAS backend</flag>
+		<flag name="rocm">Build a HIP (ROCm) backend</flag>
+		<flag name="wmma">Use rocWMMA to enhance flash attention performance</flag>
+		<flag name="opencl">Build an OpenCL backend, so far only works on Adreno and Intel GPUs</flag>
+		<flag name="rpc">Build with rpc-server</flag>
+		<flag name="server">Build with example server</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">ggml-org/llama.cpp</remote-id>
+	</upstream>
+</pkgmetadata>
