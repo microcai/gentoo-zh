@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-03-30 12:02:09 CST)
+(The last generation time: 2026-03-30 14:05:04 CST)
 
 ### Packages
 
@@ -392,7 +392,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/git-remote-mediawiki                          | 9999               |            | https://github.com/Git-Mediawiki/Git-Mediawiki                                          | Gate between Git and Mediawiki: pull and push Wikipedia articles
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/sourcegit-bin                                 | 2026.06            |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
+ dev-vcs/sourcegit-bin                                 | 2026.07            |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                             | 1.19.8             |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
                                                        | 1.20.12            |            |                                                                                         |
