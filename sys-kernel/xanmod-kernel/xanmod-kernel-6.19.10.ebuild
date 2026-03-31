@@ -3,7 +3,7 @@
 
 EAPI=8
 
-LLVM_COMPAT=(19 20)
+LLVM_COMPAT=(19 20 21)
 
 inherit kernel-build toolchain-funcs llvm-r1
 
