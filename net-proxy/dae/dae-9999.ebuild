@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -47,7 +47,7 @@ src_prepare() {
 
 src_compile() {
 	# for dae's ebpf target
-	# gentoo-zh#3720
+	# https://github.com/microcai/gentoo-zh/issues/3720
 	filter-flags "-march=*" "-mtune=*"
 	append-cflags "-fno-stack-protector"
 
