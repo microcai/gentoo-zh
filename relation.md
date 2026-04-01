@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-01 10:40:57 CST)
+(The last generation time: 2026-04-01 14:15:57 CST)
 
 ### Packages
 
@@ -399,9 +399,9 @@
                                                        | 1.21.6             |            |                                                                                         |
                                                        | 1.22.0_rc6         |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- games-arcade/osu-lazer-bin                            | 2026.119.0         |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away!
-                                                       | 2026.305.0         |            |                                                                                         |
+ games-arcade/osu-lazer-bin                            | 2026.305.0         |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away!
                                                        | 2026.326.1         |            |                                                                                         |
+                                                       | 2026.401.0         |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-emulation/conty                                 | 1.27.1             |            | https://github.com/Kron4ek/Conty                                                        | SquashFS image of Arch Linux with: Lutris, Steam, Bottles, Wine...
                                                        | 1.28               |            |                                                                                         |
@@ -715,7 +715,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/juicity                                     | 0.5.0              |            | https://github.com/juicity/juicity                                                      | juicity is a quic-based proxy protocol.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/mihomo                                      | 1.19.21            |            | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
+ net-proxy/mihomo                                      | 1.19.22            |            | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/mihomo-party-bin                            | 1.8.2              |            | https://mihomo.party                                                                    | Mihomo Party
                                                        | 1.9.1              |            |                                                                                         |
