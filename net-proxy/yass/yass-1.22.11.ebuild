@@ -98,6 +98,8 @@ src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_INSTALL_SYSCONFDIR=/etc
 		-DCMAKE_INSTALL_LIBEXECDIR=libexec
+		-DUSE_DEBUG_FISSION=OFF
+		-DUSE_COMPRESS_DEBUG_SECTIONS=off
 		-DUSE_LIBCXX=off
 		-DCLI=$(usex cli)
 		-DSERVER=$(usex server)
