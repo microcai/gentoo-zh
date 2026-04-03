@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-03 10:33:15 CST)
+(The last generation time: 2026-04-03 12:50:26 CST)
 
 ### Packages
 
@@ -369,7 +369,7 @@
  dev-util/opencode-bin                                 | 1.3.13             |            | https://opencode.ai                                                                     | The open source AI coding agent
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/osc                                          | 1.25.0             |            | https://github.com/openSUSE/osc                                                         | The Command Line Interface to work with an Open Build Service
+ dev-util/osc                                          | 1.26.0             |            | https://github.com/openSUSE/osc                                                         | The Command Line Interface to work with an Open Build Service
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/pack-cli                                     | 0.37.0             |            | https://buildpacks.io                                                                   | CLI for building apps using Cloud Native Buildpacks
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
