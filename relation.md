@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-02 10:55:48 CST)
+(The last generation time: 2026-04-03 10:33:15 CST)
 
 ### Packages
 
@@ -651,7 +651,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/localsend-bin                                | 1.17.0             |            | https://localsend.org                                                                   | An open-source cross-platform alternative to AirDrop
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/ntpd-rs                                      | 1.7.1              |            | https://github.com/pendulum-project/ntpd-rs                                             | Full-featured implementation of NTP with NTS support
+ net-misc/ntpd-rs                                      | 1.7.2              |            | https://github.com/pendulum-project/ntpd-rs                                             | Full-featured implementation of NTP with NTS support
    acct-group/ntpd-rs                                  | 0                  | RD         |                                                                                         | Full-featured implementation of NTP with NTS support
    acct-group/ntpd-rs-observe                          | 0                  | RD         |                                                                                         | Full-featured implementation of NTP with NTS support
    acct-user/ntpd-rs                                   | 0                  | RD         |                                                                                         | user for ntpd-rs daemon
