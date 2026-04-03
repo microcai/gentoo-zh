@@ -8,7 +8,7 @@ EAPI=8
 CRATES="
 "
 
-RUST_MIN_VER="1.85.0"
+RUST_MIN_VER="1.88.0"
 
 inherit cargo systemd
 
@@ -23,9 +23,7 @@ SRC_URI="
 S="${WORKDIR}/${P}/ntpd"
 LICENSE="Apache-2.0 MIT"
 # Dependent crate licenses
-LICENSE+="
-	Apache-2.0 BSD CDLA-Permissive-2.0 ISC MIT openssl Unicode-3.0
-"
+LICENSE+=" Apache-2.0 BSD CDLA-Permissive-2.0 ISC MIT Unicode-3.0 ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="metrics"
