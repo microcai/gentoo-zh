@@ -50,7 +50,7 @@ DEPEND="
 	"
 RDEPEND="${DEPEND}"
 BDEPEND="app-arch/unzip"
-RESTRICT="mirror fetch"
+RESTRICT="mirror"
 
 QA_PREBUILT="
 	/opt/lceda-pro/chrome-sandbox
@@ -63,18 +63,6 @@ QA_PREBUILT="
 	/opt/lceda-pro/libGLESv2.so
 	/opt/lceda-pro/libvulkan.so.1
 "
-
-pkg_nofetch() {
-	[[ -z ${A} ]] && return
-
-	elog "The following files cannot be fetched for ${PN}:"
-	local x
-	for x in ${A}; do
-		elog "   ${x}"
-	done
-
-	elog "please visit https://lceda.cn/page/download, download ${A} then put it into your DISTDIR."
-}
 
 src_unpack(){
 	export LANG=C.UTF-8
