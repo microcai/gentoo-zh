@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-05 14:41:26 CST)
+(The last generation time: 2026-04-05 21:12:32 CST)
 
 ### Packages
 
@@ -171,7 +171,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/mdx_util                                     | 20251029           |            | https://github.com/raymanzhang/mdx_util                                                 | A command line tools for handling mdx related jobs.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-misc/qwen-code                                    | 0.0.12             |            | https://github.com/QwenLM/qwen-code                                                     | Qwen Code is a powerful command-line AI workflow tool adapted from Gemini CLI
+ app-misc/qwen-code                                    | 0.14.0             |            | https://github.com/QwenLM/qwen-code                                                     | An open-source AI agent that lives in your terminal
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/rmtrash                                      | 1.14               |            | https://github.com/PhrozenByte/rmtrash                                                  | trash-put made compatible to GNUs rm and rmdir
                                                        | 1.15               |            |                                                                                         |
