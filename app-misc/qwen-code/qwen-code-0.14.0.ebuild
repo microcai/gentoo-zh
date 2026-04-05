@@ -1,11 +1,11 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=8
+EAPI=9
 
-DESCRIPTION="Qwen Code is a powerful command-line AI workflow tool adapted from Gemini CLI"
+DESCRIPTION="An open-source AI agent that lives in your terminal"
 HOMEPAGE="https://github.com/QwenLM/qwen-code"
-SRC_URI="https://github.com/QwenLM/qwen-code/releases/download/v${PV}/gemini.js -> ${P}.js"
+SRC_URI="https://github.com/QwenLM/qwen-code/releases/download/v${PV}/cli.js -> ${P}.js"
 S="${WORKDIR}"
 
 LICENSE="Apache-2.0"

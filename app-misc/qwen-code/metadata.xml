@@ -2,7 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 
 <pkgmetadata>
-  <upstream>
-    <remote-id type="github">QwenLM/qwen-code</remote-id>
-  </upstream>
+	<maintainer type="person">
+		<email>douglarek@gmail.com</email>
+		<name>Leo Douglas</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">QwenLM/qwen-code</remote-id>
+	</upstream>
 </pkgmetadata>
