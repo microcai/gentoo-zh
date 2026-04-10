@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-09 20:10:10 CST)
+(The last generation time: 2026-04-10 15:18:02 CST)
 
 ### Packages
 
@@ -49,7 +49,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/antigravity                               | 1.22.2             |            | https://antigravity.google/                                                             | Google Antigravity - AI-powered code editor
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/appflowy-bin                              | 0.11.6             |            | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
+ app-editors/appflowy-bin                              | 0.11.7             |            | https://www.appflowy.io/                                                                | AppFlowy is an open-source alternative to Notion
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/edit                                      | 1.1.0              |            | https://github.com/microsoft/edit                                                       | Microsoft edit
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -514,7 +514,7 @@
    dev-python/janus                                    | 2.0.0              | RD         | https://github.com/aio-libs/janus                                                       | Implementation of the asyncio (PEP 3156) event-loop with Qt
    dev-python/qasync                                   | 0.28.0             | RD         | https://github.com/CabbageDevelopment/qasync                                            | Implementation of the asyncio (PEP 3156) event-loop with Qt
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/go-musicfox                               | 4.8.0              |            | https://github.com/go-musicfox/go-musicfox                                              | Command-line Netease Cloud Music written in Go
+ media-sound/go-musicfox                               | 4.8.1              |            | https://github.com/go-musicfox/go-musicfox                                              | Command-line Netease Cloud Music written in Go
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/harmonoid                                 | 0.3.22             |            | https://harmonoid.com/                                                                  | Plays & manages your music library
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
