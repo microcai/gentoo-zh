@@ -21,12 +21,17 @@ CRATES="
 
 declare -A GIT_CRATES=(
 	[crossterm]='https://github.com/nornagon/crossterm;87db8bfa6dc99427fd3b071681b07fc31c6ce995;crossterm-%commit%'
+	[libwebrtc]='https://github.com/juberti-oai/rust-sdks;e2d1d1d230c6fc9df171ccb181423f957bb3c1f0;rust-sdks-%commit%/libwebrtc'
+	[livekit-protocol]='https://github.com/juberti-oai/rust-sdks;e2d1d1d230c6fc9df171ccb181423f957bb3c1f0;rust-sdks-%commit%/livekit-protocol'
+	[livekit-runtime]='https://github.com/juberti-oai/rust-sdks;e2d1d1d230c6fc9df171ccb181423f957bb3c1f0;rust-sdks-%commit%/livekit-runtime'
 	[nucleo-matcher]='https://github.com/helix-editor/nucleo;4253de9faabb4e5c6d81d946a5e35a90f87347ee;nucleo-%commit%/matcher'
 	[nucleo]='https://github.com/helix-editor/nucleo;4253de9faabb4e5c6d81d946a5e35a90f87347ee;nucleo-%commit%'
 	[ratatui]='https://github.com/nornagon/ratatui;9b2ad1298408c45918ee9f8241a6f95498cdbed2;ratatui-%commit%'
 	[runfiles]='https://github.com/dzbarsky/rules_rust;b56cbaa8465e74127f1ea216f813cd377295ad81;rules_rust-%commit%/rust/runfiles'
 	[tokio-tungstenite]='https://github.com/openai-oss-forks/tokio-tungstenite;132f5b39c862e3a970f731d709608b3e6276d5f6;tokio-tungstenite-%commit%'
 	[tungstenite]='https://github.com/openai-oss-forks/tungstenite-rs;9200079d3b54a1ff51072e24d81fd354f085156f;tungstenite-rs-%commit%'
+	[webrtc-sys-build]='https://github.com/juberti-oai/rust-sdks;e2d1d1d230c6fc9df171ccb181423f957bb3c1f0;rust-sdks-%commit%/webrtc-sys/build'
+	[webrtc-sys]='https://github.com/juberti-oai/rust-sdks;e2d1d1d230c6fc9df171ccb181423f957bb3c1f0;rust-sdks-%commit%/webrtc-sys'
 )
 
 RUST_MIN_VER="1.93.0"
@@ -65,8 +70,8 @@ S="${WORKDIR}/${PN}-rust-v${PV}/codex-rs"
 LICENSE="Apache-2.0"
 # Dependent crate licenses
 LICENSE+="
-	Apache-2.0 BSD-2 BSD Boost-1.0 CC0-1.0 CDLA-Permissive-2.0 ISC MIT
-	MPL-2.0 Unicode-3.0 ZLIB
+	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD-2 BSD Boost-1.0
+	CC0-1.0 CDLA-Permissive-2.0 ISC MIT MPL-2.0 Unicode-3.0 ZLIB
 "
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
