@@ -6,6 +6,8 @@ EAPI=8
 MY_PV="${PV/_pre/-preview}"
 MY_PV="${MY_PV/preview[0-9]*/preview.${MY_PV##*preview}}"
 
+inherit wrapper
+
 DESCRIPTION="Gemini CLI - a command-line AI workflow tool by Google"
 HOMEPAGE="https://github.com/google-gemini/gemini-cli"
 SRC_URI="https://github.com/google-gemini/gemini-cli/releases/download/v${MY_PV}/gemini-cli-bundle.zip -> ${P}.zip"
@@ -25,5 +27,7 @@ src_install() {
 	doins -r .
 
 	fperms +x /usr/lib/${PN}/gemini.js
-	dosym ../lib/${PN}/gemini.js /usr/bin/gemini
+	# Use a wrapper instead of a symlink so that Node.js ESM relative
+	# imports resolve from the real install path, not the /usr/bin symlink.
+	make_wrapper gemini "node /usr/lib/${PN}/gemini.js"
 }
