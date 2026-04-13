@@ -8,7 +8,7 @@ inherit meson tmpfiles
 MVMATH_COMMIT="e7547696c8345dcdbc65fd31c51d05d1dc4e1e1a"
 
 DESCRIPTION="DRM/KMS based remote desktop for Linux"
-HOMEPAGE="https://https://reframe.alynx.one/"
+HOMEPAGE="https://reframe.alynx.one/"
 SRC_URI="
 	https://github.com/AlynxZhou/reframe/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/AlynxZhou/mvmath/archive/mvmath-${MVMATH_COMMIT}.zip -> mvmath.zip
