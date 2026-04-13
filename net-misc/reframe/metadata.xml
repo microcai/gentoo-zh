@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <use>
+        <flag name="neatvnc">Use optional neatvnc implementation instead of the default libvncserver implementation</flag>
+    </use>
+    <longdescription lang="en">
+        DRM/KMS based remote desktop for Linux that supports Wayland/NVIDIA/headless/login…
+    </longdescription>
+    <upstream>
+        <remote-id type="github">AlynxZhou/reframe</remote-id>
+    </upstream>
+</pkgmetadata>
