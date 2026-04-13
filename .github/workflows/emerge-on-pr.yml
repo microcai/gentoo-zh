@@ -112,7 +112,7 @@ jobs:
 
     - name: cat binrepos
       run: |
-        cat /etc/portage/binrepos.conf/gentoobinhost.conf
+        cat /etc/portage/binrepos.conf/*
 
     - name: setup features
       run: |
