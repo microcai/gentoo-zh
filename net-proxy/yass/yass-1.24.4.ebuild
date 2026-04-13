@@ -18,7 +18,7 @@ SLOT="0"
 #FIXME pkgcheck cries on NonsolvableDepsInDev on mips, no idea why
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 
-IUSE="+cli server test cet gui gtk3 gtk4 qt5 qt6 wayland tbbmalloc +tcmalloc mimalloc jemalloc"
+IUSE="+cli server dylib test cet gui gtk3 gtk4 qt5 qt6 wayland tbbmalloc tcmalloc mimalloc jemalloc"
 
 # tested with FEATURES="-network-sandbox test"
 # tested with FEATURES="network-sandbox test"
@@ -104,6 +104,7 @@ src_configure() {
 		-DCLI=$(usex cli)
 		-DSERVER=$(usex server)
 		-DUSE_CET=$(usex cet)
+		-DBUILD_DYLIB=$(usex dylib)
 		-DBUILD_TESTS=$(usex test)
 		-DUSE_TBBMALLOC=$(usex tbbmalloc)
 		-DUSE_SYSTEM_TBBMALLOC=$(usex tbbmalloc)
