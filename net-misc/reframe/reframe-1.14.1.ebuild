@@ -17,7 +17,7 @@ SRC_URI="
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="neatvnc"
+IUSE="neatvnc systemd"
 
 RDEPEND="
 	acct-user/reframe
@@ -58,5 +58,7 @@ src_configure() {
 }
 
 pkg_postinst() {
-	tmpfiles_process reframe-tmpfiles.conf
+	if use systemd; then
+		tmpfiles_process reframe-tmpfiles.conf
+	fi
 }
