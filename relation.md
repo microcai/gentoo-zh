@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-14 07:09:38 CST)
+(The last generation time: 2026-04-14 18:20:01 CST)
 
 ### Packages
 
@@ -663,6 +663,10 @@
  net-misc/prips                                        | 1.0.0              |            | http://devel.ringlet.net/sysutils/prips/                                                | print the IP addresses in a range
                                                        | 1.2.0              |            |                                                                                         |
                                                        | 1.2.2              |            |                                                                                         |
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ net-misc/reframe                                      | 1.14.1             |            | https://reframe.alynx.one/                                                              | DRM/KMS based remote desktop for Linux
+   acct-group/reframe                                  | 0                  |  D, RD     |                                                                                         | group for reframe
+   acct-user/reframe                                   | 0                  |  D, RD     |                                                                                         | user for reframe
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/remmina-plugin-rustdesk                      | 1.0.0.0-r1         |            | http://www.muflone.com/remmina-plugin-rustdesk/                                         | A protocol plugin for Remmina to launch a Rustdesk connection.
    net-misc/rustdesk                                   | 1.4.6              |  D, RD     | https://rustdesk.com/                                                                   | An open-source remote desktop, and alternative to TeamViewer
