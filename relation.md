@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-15 15:07:24 CST)
+(The last generation time: 2026-04-15 21:52:39 CST)
 
 ### Packages
 
@@ -55,7 +55,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/marktext-bin                              | 0.17.1-r1          |            | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/neovim-bin                                | 0.11.4             |            | https://neovim.io                                                                       | Vim-fork focused on extensibility and agility
+ app-editors/neovim-bin                                | 0.12.1             |            | https://neovim.io                                                                       | Vim-fork focused on extensibility and agility
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                                    | 0.11.18            |            | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
