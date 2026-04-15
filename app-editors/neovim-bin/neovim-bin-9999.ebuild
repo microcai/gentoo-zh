@@ -76,7 +76,7 @@ src_install() {
 	fi
 
 	doicon -s 128 share/icons/hicolor/128x128/apps/nvim.png
-	domenu share/applications/nvim.desktop
+	domenu share/applications/org.neovim.nvim.desktop
 	doman share/man/man1/nvim.1
 }
 
