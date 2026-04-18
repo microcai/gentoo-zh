@@ -13,7 +13,7 @@ HOMEPAGE="https://bambulab.com"
 
 SRC_URI="
 	amd64? (
-		https://github.com/bambulab/${MY_PN}/releases/download/v${PV}/Bambu_Studio_linux_fedora-v02.05.03.61.AppImage
+		https://github.com/bambulab/${MY_PN}/releases/download/v${PV}/BambuStudio_ubuntu-24.04-v02.06.00.51-20260417160415.AppImage
 		-> ${P}.AppImage
 	)
 "
@@ -57,14 +57,10 @@ src_unpack() {
 }
 
 src_install() {
-	# Fix RUNPATH and replace webkit-gtk 4.0 sonames with 4.1
-	# The fedora AppImage was built against webkit-gtk:4 (4.0 API)
-	# which has been removed from the Gentoo tree; webkit-gtk:4.1
-	# provides a compatible ABI under different sonames
+	# Set RUNPATH so the bundled libraries in /opt/${PN}/bin/ are found.
+	# The ubuntu-24.04 AppImage links directly against webkit-gtk:4.1,
+	# so no soname replacement is needed anymore.
 	patchelf --set-rpath '$ORIGIN' \
-		--replace-needed libwebkit2gtk-4.0.so.37 libwebkit2gtk-4.1.so.0 \
-		--replace-needed libjavascriptcoregtk-4.0.so.18 libjavascriptcoregtk-4.1.so.0 \
-		--remove-needed libOSMesa.so.8 \
 		"${S}"/squashfs-root/bin/bambu-studio || die
 	insinto /opt/"${PN}"
 	doins -r "${S}"/squashfs-root/*
