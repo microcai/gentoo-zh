@@ -11,7 +11,7 @@ DESCRIPTION="DRM/KMS based remote desktop for Linux"
 HOMEPAGE="https://reframe.alynx.one/"
 SRC_URI="
 	https://github.com/AlynxZhou/reframe/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/AlynxZhou/mvmath/archive/${MVMATH_COMMIT}.zip -> mvmath-${MVMATH_COMMIT}.zip
+	https://github.com/AlynxZhou/mvmath/archive/${MVMATH_COMMIT}.tar.gz -> mvmath-${MVMATH_COMMIT}.tar.gz
 "
 
 LICENSE="Apache-2.0"
@@ -37,9 +37,6 @@ RDEPEND="
 "
 DEPEND="
 	${RDEPEND}
-"
-BDEPEND="
-	app-arch/unzip
 "
 
 src_prepare() {
