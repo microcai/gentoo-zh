@@ -1,9 +1,9 @@
-# Copyright 2004-2025 Gentoo Authors
+# Copyright 2004-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..13} )
+PYTHON_COMPAT=( python3_{11..13} )
 # NEED_BOOTSTRAP is for developers to quickly generate a tarball
 # for publishing to the tree.
 NEED_BOOTSTRAP="no"
@@ -43,7 +43,9 @@ DEPEND="
 		!sys-libs/musl[crypt(+)]
 	)
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!<sys-apps/man-pages-6.16-r1
+"
 BDEPEND="
 	dev-lang/perl
 	>=dev-util/patchelf-liblol-0.1.9
