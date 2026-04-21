@@ -14,8 +14,33 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v6
+      with:
+        fetch-depth: 0
 
-    - name: Run pkgcheck
+    - name: Run pkgcheck for pull requests
+      if: github.event_name == 'pull_request'
+      uses: pkgcore/pkgcheck-action@v1
+      with:
+        args: >-
+          --commits
+          ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }}
+          --checks=-RedundantVersionCheck
+          --keywords=-NonsolvableDepsInDev
+          --exit=NonexistentDeps
+
+    - name: Run pkgcheck for master pushes
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      uses: pkgcore/pkgcheck-action@v1
+      with:
+        args: >-
+          --commits
+          ${{ github.sha }}^!
+          --checks=-RedundantVersionCheck
+          --keywords=-NonsolvableDepsInDev
+          --exit=NonexistentDeps
+
+    - name: Run full pkgcheck manually
+      if: github.event_name == 'workflow_dispatch'
       uses: pkgcore/pkgcheck-action@v1
       with:
         args: --checks=-RedundantVersionCheck --keywords=-NonsolvableDepsInDev --exit=NonexistentDeps
