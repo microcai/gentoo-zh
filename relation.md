@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-21 20:59:53 CST)
+(The last generation time: 2026-04-21 21:37:19 CST)
 
 ### Packages
 
@@ -75,12 +75,10 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/la-ow-syscall                           | 0.1.1              |            | https://github.com/AOSC-Dev/la_ow_syscall                                               | Linux kernel module for compatibility with LoongArch's old-world ABI
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-emulation/liblol-glibc                            | 0.1.5              |            | https://www.gnu.org/software/libc/                                                      | GNU libc C library, for liblol
-                                                       | 0.1.9              |            |                                                                                         |
+ app-emulation/liblol-glibc                            | 0.1.10-r1          |            | https://www.gnu.org/software/libc/                                                      | GNU libc C library, for liblol
    dev-util/patchelf-liblol                            | 0.1.9              | BD         | https://github.com/NixOS/patchelf                                                       | patchelf patched for building libLoL only
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-emulation/liblol-libxcrypt                        | 0.1.5              |            | https://github.com/besser82/libxcrypt                                                   | libxcrypt for liblol
-                                                       | 0.1.9              |            |                                                                                         |
+ app-emulation/liblol-libxcrypt                        | 0.1.10             |            | https://github.com/besser82/libxcrypt                                                   | libxcrypt for liblol
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/looking-glass                           | 0_beta7_rc1-r2     |            | https://looking-glass.io                                                                | A low latency KVMFR application for guests with VGA PCI Passthrough
    gui-libs/libdecor                                   | 0.1.1              |  D, RD     | https://gitlab.freedesktop.org/libdecor/libdecor                                        | A client-side decorations library for Wayland clients
@@ -593,8 +591,7 @@
    media-libs/openslide                                | 4.0.0              | RD         | https://openslide.org/                                                                  | A C library that provides a simple interface to read whole-slide images
      media-libs/libdicom                               | 1.2.0              |  D, RD     | https://libdicom.readthedocs.io/                                                        | A C library and a set of command-line tools for reading DICOM WSI files
    virtual/loong-ow-compat                             | 0                  | RD         |                                                                                         | Virtual for LoongArch old-world compatibility
-     app-emulation/liblol                              | 0.1.5              | RD         | https://liblol.aosc.io                                                                  | LoongArch old-world ABI compatibility layer from AOSC OS
-                                                       | 0.1.9              |            |                                                                                         |
+     app-emulation/liblol                              | 0.1.10             | RD         | https://liblol.aosc.io                                                                  | LoongArch old-world ABI compatibility layer from AOSC OS
    x11-misc/flatpak-xdg-utils                          | 1.0.6              | RD         | https://github.com/flatpak/flatpak-xdg-utils                                            | Utilities for containerized apps to launch programs outside the container
    x11-misc/snapd-xdg-open                             | 20170401           | RD         | https://github.com/snapcore/snapd-xdg-open                                              | Software for opening links from snaps in desktop
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
