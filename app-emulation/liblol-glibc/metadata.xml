@@ -7,6 +7,7 @@
 	</maintainer>
 	<use>
 		<flag name="cet">Enable Intel Control-flow Enforcement Technology (needs binutils 2.29 and gcc 8)</flag>
+		<flag name="clang">Allow building with clang (if proper environment is set). Highly experimental. Disable to auto-force gcc usage.</flag>
 		<flag name="compile-locales">build *all* locales in src_install; this is generally meant for stage building only as it ignores /etc/locale.gen file and can be pretty slow</flag>
 		<flag name="gd">build memusage and memusagestat tools</flag>
 		<flag name="hash-sysv-compat">enable sysv linker hashes in glibc for compatibility with binary software (EAC via wine/proton)</flag>
@@ -14,10 +15,17 @@
 		<flag name="multilib-bootstrap">Provide prebuilt libgcc.a and crt files if missing. Only needed for ABI switch.</flag>
 		<flag name="nscd">Build, and enable support for, the Name Service Cache Daemon</flag>
 		<flag name="perl">Install additional scripts written in Perl</flag>
+		<flag name="sframe">enable building with sframe backtrace support</flag>
 		<flag name="ssp">protect stack of glibc internals</flag>
 		<flag name="stack-realign">Realign the stack in the 32-bit build for compatibility with older binaries at some performance cost</flag>
 		<flag name="suid">Make internal pt_chown helper setuid -- not needed if using Linux and have /dev/pts mounted with gid=5</flag>
-		<flag name="systemtap">enable systemtap static probe points</flag>
+		<flag name="systemtap">
+			Enable enhanced debugging hooks/interface via SystemTap static probe points.
+
+			Note that this isn't exclusive to SystemTap, despite the name. This provides
+			an interface which <pkg>dev-debug/gdb</pkg> optionally uses, see
+			https://sourceware.org/gdb/wiki/LinkerInterface.
+		</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">AOSC-Dev/liblol</remote-id>
