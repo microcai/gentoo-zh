@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-22 17:30:47 CST)
+(The last generation time: 2026-04-22 19:50:47 CST)
 
 ### Packages
 
@@ -130,9 +130,9 @@
  app-i18n/vocotype                                     | 2.1.2              |            | https://github.com/LeonardNJU/VocoType-linux                                            | Linux offline voice input method based on FunASR Paraformer
    app-i18n/fcitx                                      | 9999               |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx 5 is a generic input method framework
      x11-libs/xcb-imdkit                               | 9999               |  D, RD     | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
-   dev-python/funasr-onnx                              | 0.4.1              | RD         | https://github.com/modelscope/FunASR                                                    | FunASR ONNX Runtime inference for speech recognition
+   dev-python/funasr-onnx                              | 0.4.1-r1           | RD         | https://github.com/modelscope/FunASR                                                    | FunASR ONNX Runtime inference for speech recognition
      dev-python/kaldi-native-fbank                     | 1.22.3             | RD         | https://github.com/csukuangfj/kaldi-native-fbank                                        | Kaldi-compatible online fbank feature extractor
-     dev-python/librosa                                | 0.11.0             | RD         | https://github.com/librosa/librosa                                                      | Python library for audio and music analysis
+     dev-python/librosa                                | 0.11.0-r1          | RD         | https://github.com/librosa/librosa                                                      | Python library for audio and music analysis
        dev-python/numba                                | 0.64.0             | RD         | https://github.com/numba/numba                                                          | NumPy-aware optimizing compiler for Python using LLVM
          dev-python/llvmlite                           | 0.46.0             | RD         | https://github.com/numba/llvmlite                                                       | Lightweight LLVM Python binding for writing JIT compilers
        dev-python/soxr                                 | 1.0.0              | RD         | https://github.com/dofuuz/python-soxr                                                   | High quality, one-dimensional sample-rate conversion library for Python
@@ -845,7 +845,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/follow-bin                                   | 1.2.6              |            | https://follow.is/                                                                      | Next generation information browser
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-client/brave-bin                                  | 1.89.137           |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
+ www-client/brave-bin                                  | 1.89.141           |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-client/zen-browser-bin                            | 1.17.15_beta       |            | https://zen-browser.app/                                                                | Experience tranquillity while browsing the web without people tracking you!
                                                        | 1.18.4_beta        |            |                                                                                         |
