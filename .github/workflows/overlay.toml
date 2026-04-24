@@ -1182,13 +1182,6 @@ strip_release = true
 # live package only
 #["net-libs/jzmq"]
 
-["net-misc/alist"]
-source = "github"
-github = "alist-org/alist"
-use_latest_release = true
-prefix = "v"
-github_account = "liangyongxiang"
-
 ["net-misc/aliyundrive-webdav"]
 source = "github"
 github = "messense/aliyundrive-webdav"
