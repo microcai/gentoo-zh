@@ -1,0 +1,35 @@
+From 43db5384a436501945b3a52ba5db9780fda24a88 Mon Sep 17 00:00:00 2001
+From: Vitaly Zaitsev <vitaly@easycoding.org>
+Date: Fri, 11 Nov 2022 16:41:07 +0100
+Subject: [PATCH] Implemented installation.
+
+Signed-off-by: Vitaly Zaitsev <vitaly@easycoding.org>
+---
+ CMakeLists.txt | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 432b8bf..8ece23d 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -14,3 +14,20 @@ if(BUILD_TESTS AND (PROJECT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR))
+     endif()
+     add_subdirectory(tests)
+ endif()
++
++include(GNUInstallDirs)
++include(CMakePackageConfigHelpers)
++
++if(${CMAKE_VERSION} VERSION_LESS "3.14")
++    write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/cmakerc-config-version.cmake
++        COMPATIBILITY SameMajorVersion
++    )
++else()
++    write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/cmakerc-config-version.cmake
++        COMPATIBILITY SameMajorVersion
++        ARCH_INDEPENDENT
++    )
++endif()
++
++install(FILES ${CMAKE_CURRENT_BINARY_DIR}/cmakerc-config-version.cmake DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/cmake/cmakerc)
++install(FILES CMakeRC.cmake DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/cmake/cmakerc RENAME cmakerc-config.cmake)
