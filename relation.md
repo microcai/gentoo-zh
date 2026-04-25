@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-25 22:35:44 CST)
+(The last generation time: 2026-04-25 22:43:41 CST)
 
 ### Packages
 
@@ -381,6 +381,8 @@
  dev-util/trae-ide                                     | 2.3.21082          |            | https://trae.com.cn/                                                                    | Trae IDE (binary package)
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/vcpkg-tool                                   | 2025.12.16         |            | https://github.com/microsoft/vcpkg-tool                                                 | Library manager for C/C++ (tool only).
+   dev-util/cmakerc                                    | 2.0.1              | BD         | https://github.com/vector-of-bool/cmrc                                                  | A Resource Compiler in a Single CMake Script
+                                                       | 2.0.1_p20230725    |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/vfox                                         | 1.0.7              |            | https://vfox.dev                                                                        | A cross-platform version manager, extendable via plugins
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
