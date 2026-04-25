@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-25 17:42:54 CST)
+(The last generation time: 2026-04-25 22:35:44 CST)
 
 ### Packages
 
@@ -613,11 +613,6 @@
  net-libs/bun-bin                                      | 1.2.21             |            | https://bun.sh                                                                          | Incredibly fast JavaScript runtime, bundler, test runner, and package manager
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-libs/jzmq                                         | 9999               |            | http://www.zeromq.org/bindings:java                                                     | jzmq
--------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/alist                                        | 3.32.0             |            | https://alist.nn.ci                                                                     | A file list/WebDAV program that supports multiple storages
-                                                       | 3.44.0             |            |                                                                                         |
-   acct-group/alist                                    | 0                  | RD         |                                                                                         | A file list/WebDAV program that supports multiple storages
-   acct-user/alist                                     | 0                  | RD         |                                                                                         | A file list/WebDAV program that supports multiple storages
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/aliyundrive-webdav                           | 2.3.3              |            | https://github.com/messense/aliyundrive-webdav                                          | WebDAV server for AliyunDrive
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
