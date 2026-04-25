@@ -3,19 +3,25 @@
 
 EAPI=8
 
-inherit go-module systemd shell-completion
+inherit go-env go-module systemd shell-completion
 
 _PV="${PV/_/-}"
 _PV="${_PV/alpha/alpha.}"
 _PV="${_PV/beta/beta.}"
 _PV="${_PV/rc/rc.}"
 
+VENDOR_PREFIX="https://github.com/gentoo-zh-drafts/sing-box/releases/download/v${_PV}"
+
 DESCRIPTION="The universal proxy platform."
 HOMEPAGE="https://sing-box.sagernet.org/ https://github.com/SagerNet/sing-box"
 SRC_URI="
 	https://github.com/SagerNet/sing-box/archive/refs/tags/v${_PV}.tar.gz -> ${P}.tar.gz
-	naive? ( https://github.com/gentoo-zh-drafts/sing-box/releases/download/v${_PV}/${PN}-${_PV}-vendor.tar.xz )
-	!naive? ( https://github.com/gentoo-zh-drafts/sing-box/releases/download/v${_PV}/${PN}-${_PV}-vendor-without-naive.tar.xz )
+	${VENDOR_PREFIX}/sing-box-${_PV}-vendor-lite.tar.xz
+	naive? (
+		amd64? ( ${VENDOR_PREFIX}/sing-box-${_PV}-vendor-libcronet-so-amd64.tar.xz )
+		arm64? ( ${VENDOR_PREFIX}/sing-box-${_PV}-vendor-libcronet-so-arm64.tar.xz )
+		riscv? ( ${VENDOR_PREFIX}/sing-box-${_PV}-vendor-libcronet-so-riscv64.tar.xz )
+	)
 "
 
 S="${WORKDIR}/${PN}-${_PV}"
@@ -24,7 +30,12 @@ LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~riscv"
 
-IUSE="+quic grpc +dhcp +wireguard +utls +acme +clash-api v2ray-api +gvisor tor +tailscale naive"
+# Follow: https://sing-box.sagernet.org/installation/build-from-source/#build-tags
+# In upstream versions, `naive` is enabled by default, but in Gentoo's downstream versions, it is disabled by default.
+IUSE="
+	+quic grpc +dhcp +wireguard +utls +acme +clash-api v2ray-api
+	+gvisor tor +tailscale +ccm +ocm naive +cloudflared
+"
 
 RDEPEND="
 	acct-group/${PN}
@@ -44,7 +55,10 @@ src_compile() {
 	use gvisor && mytags+="with_gvisor,"
 	use tor && mytags+="with_embedded_tor,"
 	use tailscale && mytags+="with_tailscale,"
+	use ccm && mytags+="with_ccm,"
+	use ocm && mytags+="with_ocm,"
 	use naive && mytags+="with_purego,with_naive_outbound,"
+	use cloudflared && mytags+="with_cloudflared,"
 
 	ego build -tags "${mytags%,}" \
 		-ldflags "-X 'github.com/sagernet/sing-box/constant.Version=${PV}'" \
@@ -57,7 +71,14 @@ src_compile() {
 }
 
 src_install() {
-	dobin sing-box
+	if ! use naive; then
+		dobin sing-box
+	else
+		insinto /usr/lib/sing-box
+		doins sing-box "vendor/github.com/sagernet/cronet-go/lib/linux_$(go-env_goarch)/libcronet.so"
+		dosym ../lib/sing-box/sing-box /usr/bin/sing-box
+		fperms +x /usr/bin/sing-box /usr/lib/sing-box/sing-box
+	fi
 
 	insinto /etc/sing-box
 	newins release/config/config.json config.json.example
