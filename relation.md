@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-25 23:12:07 CST)
+(The last generation time: 2026-04-26 07:40:22 CST)
 
 ### Packages
 
@@ -95,7 +95,8 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-meta                                   | 5.0.12-r3          |            | https://fcitx-im.org                                                                    | Merge this to pull in Fcitx packages
    app-i18n/fcitx-anthy                                | 9999               | RD         | https://fcitx-im.org/                                                                   | Japanese Anthy input methods for Fcitx5
-   app-i18n/fcitx-bamboo                               | 1.0.7              | RD         | https://github.com/fcitx/fcitx5-bamboo                                                  | Typing Vietnamese by Bamboo core engine for Fcitx5
+   app-i18n/fcitx-bamboo                               | 1.0.10             | RD         | https://github.com/fcitx/fcitx5-bamboo                                                  | Typing Vietnamese by Bamboo core engine for Fcitx5
+                                                       | 1.0.7              |            |                                                                                         |
                                                        | 1.0.8              |            |                                                                                         |
    app-i18n/fcitx-chewing                              | 9999               | RD         | https://github.com/fcitx/fcitx5-chewing                                                 | Chewing Wrapper for Fcitx.
    app-i18n/fcitx-chinese-addons                       | 9999               |  D, RD     | https://github.com/fcitx/fcitx5-chinese-addons                                          | Addons related to Chinese, including IME previous bundled inside fcitx4
