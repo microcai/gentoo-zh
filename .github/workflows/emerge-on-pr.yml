@@ -79,7 +79,7 @@ jobs:
             scripts
         )
         for i in "${ignore_list[@]}"; do
-            packages=($(printf '%s\n' "${packages[@]}" | grep -v "^$i"))
+            packages=($(printf '%s\n' "${packages[@]}" | grep -v "^$i" || true))
         done
 
         echo "scan all files: $(printf '%s\n' "${packages[@]}" | sort -u | jq -R . | jq -s .)"
