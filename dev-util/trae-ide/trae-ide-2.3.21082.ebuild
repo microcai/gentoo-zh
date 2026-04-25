@@ -5,8 +5,8 @@ EAPI=8
 
 inherit desktop xdg
 
-DESCRIPTION="LCEDA Pro (binary package)"
-HOMEPAGE="https://lceda.cn/"
+DESCRIPTION="Trae IDE (binary package)"
+HOMEPAGE="https://trae.com.cn/"
 
 SRC_URI="
 	amd64?	( https://lf-cdn.trae.com.cn/obj/trae-com-cn/pkg/app/releases/stable/${PV}/linux/Trae%20CN-linux-x64.deb -> ${P}.deb )
