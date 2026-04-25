@@ -1,0 +1,33 @@
+From 02589a94b792011971fbd0b77cc9daf785134cc4 Mon Sep 17 00:00:00 2001
+From: Julien Jerphanion <git@jjerphan.xyz>
+Date: Tue, 7 Apr 2026 16:41:39 +0200
+Subject: [PATCH] fix: Adapt bindings for `UnresolvedChannel`'s readonly
+ properties
+
+Signed-off-by: Julien Jerphanion <git@jjerphan.xyz>
+---
+ libmambapy/bindings/specs.cpp | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+
+diff --git a/libmambapy/bindings/specs.cpp b/libmambapy/bindings/specs.cpp
+index cb6adeb62c..57e11164c8 100644
+--- a/libmambapy/bindings/specs.cpp
++++ b/libmambapy/bindings/specs.cpp
+@@ -345,8 +345,15 @@ namespace mambapy
+             .def("__copy__", &copy<UnresolvedChannel>)
+             .def("__deepcopy__", &deepcopy<UnresolvedChannel>, py::arg("memo"))
+             .def_property_readonly("type", &UnresolvedChannel::type)
+-            .def_property_readonly("location", &UnresolvedChannel::location)
+-            .def_property_readonly("platform_filters", &UnresolvedChannel::platform_filters);
++            .def_property_readonly(
++                "location",
++                [](const UnresolvedChannel& self) -> std::string { return self.location(); }
++            )
++            .def_property_readonly(
++                "platform_filters",
++                [](const UnresolvedChannel& self) -> const UnresolvedChannel::platform_set&
++                { return self.platform_filters(); }
++            );
+ 
+         py::class_<BasicHTTPAuthentication>(m, "BasicHTTPAuthentication")
+             .def(
