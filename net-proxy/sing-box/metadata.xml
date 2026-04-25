@@ -24,6 +24,9 @@
 		<flag name="gvisor">Build with gVisor support</flag>
 		<flag name="tor">Build with embedded Tor support</flag>
 		<flag name="tailscale">Build with Tailscale support</flag>
+		<flag name="ccm">Build with Claude Code Multiplexer service support</flag>
+		<flag name="ocm">Build with OpenAI Codex Multiplexer service support</flag>
 		<flag name="naive">Build with NaiveProxy outbound support</flag>
+		<flag name="cloudflared">Build with Cloudflare Tunnel inbound support</flag>
 	</use>
 </pkgmetadata>
