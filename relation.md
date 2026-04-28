@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-27 18:48:20 CST)
+(The last generation time: 2026-04-28 11:31:15 CST)
 
 ### Packages
 
@@ -109,13 +109,15 @@
    app-i18n/fcitx-m17n                                 | 9999               | RD         | https://github.com/fcitx/fcitx5-m17n                                                    | m17n-provided input methods for Fcitx5
    app-i18n/fcitx-rime                                 | 9999               | RD         | https://fcitx-im.org/                                                                   | Chinese RIME input methods for Fcitx
      app-i18n/rime-data                                | 9999               |  D, RD     | https://rime.im/                                                                        | Data resources for Rime Input Method Engine
-   app-i18n/fcitx-skk                                  | 5.1.6              | RD         | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
+   app-i18n/fcitx-skk                                  | 5.1.10             | RD         | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
+                                                       | 5.1.6              |            |                                                                                         |
                                                        | 5.1.7-r2           |            |                                                                                         |
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-sayura                                 | 9999               |            | https://github.com/fcitx/fcitx5-sayura                                                  | Fcitx-Sayura is a Sinhala input method for Fcitx input method framework
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/fcitx-skin-material                          | 0.5                |            | https://github.com/hrko99/fcitx-skin-material                                           | A Material Design-like skin for Fcitx
+ app-i18n/fcitx-skin-material                          | 0.5                |            | https://github.com/hrko/fcitx-skin-material                                             | A Material Design-like skin for Fcitx
+                                                       | 0.6.0              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-table-extra                            | 9999               |            | https://github.com/fcitx/fcitx5-table-extra                                             | Provides extra table for Fcitx, including Boshiamy, Zhengma, Cangjie, and Quick
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -396,6 +398,7 @@
  dev-vcs/git-remote-mediawiki                          | 9999               |            | https://github.com/Git-Mediawiki/Git-Mediawiki                                          | Gate between Git and Mediawiki: pull and push Wikipedia articles
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/sourcegit-bin                                 | 2026.07            |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
+                                                       | 2026.09            |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                             | 1.19.8             |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
                                                        | 1.20.12            |            |                                                                                         |
