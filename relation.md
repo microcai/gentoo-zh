@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-28 12:04:11 CST)
+(The last generation time: 2026-04-28 15:31:53 CST)
 
 ### Packages
 
@@ -717,6 +717,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/hysteria                                    | 2.7.1              |            | https://github.com/apernet/hysteria                                                     | A powerful, lightning fast and censorship resistant proxy.
                                                        | 2.8.1              |            |                                                                                         |
+                                                       | 2.8.2              |            |                                                                                         |
    acct-group/hysteria                                 | 0                  |  D, RD     |                                                                                         | A powerful, lightning fast and censorship resistant proxy.
    acct-user/hysteria                                  | 0                  |  D, RD     |                                                                                         | A powerful, lightning fast and censorship resistant proxy.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
