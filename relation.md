@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-28 11:31:41 CST)
+(The last generation time: 2026-04-28 12:04:11 CST)
 
 ### Packages
 
@@ -395,7 +395,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/zprint-bin                                   | 1.3.0              |            | https://github.com/kkinnear/zprint                                                      | Clojure and Clojurescript source code formatter
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-vcs/gitoxide                                      | 0.52.1             |            | https://github.com/GitoxideLabs/gitoxide                                                | A command-line application for interacting with git repositories
+ dev-vcs/gitoxide                                      | 0.53.0             |            | https://github.com/GitoxideLabs/gitoxide                                                | A command-line application for interacting with git repositories
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/git-remote-mediawiki                          | 9999               |            | https://github.com/Git-Mediawiki/Git-Mediawiki                                          | Gate between Git and Mediawiki: pull and push Wikipedia articles
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
