@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-28 18:53:01 CST)
+(The last generation time: 2026-04-29 12:33:27 CST)
 
 ### Packages
 
@@ -220,6 +220,7 @@
                                                        | 26.3.0             |            |                                                                                         |
                                                        | 26.5.2             |            |                                                                                         |
    app-arch/libzim                                     | 9.5.1              |  D, RD     | https://wiki.openzim.org/wiki/OpenZIM                                                   | ZIM file format: an offline storage solution for content coming from the Web
+                                                       | 9.6.0              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/groff-utf8                                   | 0-r1               |            | http://www.haible.de/bruno/packages-groff-utf8.html                                     | GNU groff wrapper allowing UTF-8 input
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
