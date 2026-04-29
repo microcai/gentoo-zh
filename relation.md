@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-29 12:33:27 CST)
+(The last generation time: 2026-04-29 12:34:02 CST)
 
 ### Packages
 
@@ -132,7 +132,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/lunar                                        | 2.2-r5             |            | https://packages.debian.org/unstable/utils/lunar                                        | Chinese Lunar Calendar conversion utility
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/vocotype                                     | 2.1.2              |            | https://github.com/LeonardNJU/VocoType-linux                                            | Linux offline voice input method based on FunASR Paraformer
+ app-i18n/vocotype                                     | 2.1.3              |            | https://github.com/LeonardNJU/VocoType-linux                                            | Linux offline voice input method based on FunASR Paraformer
    app-i18n/fcitx                                      | 9999               |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx 5 is a generic input method framework
      x11-libs/xcb-imdkit                               | 9999               |  D, RD     | https://github.com/fcitx/xcb-imdkit                                                     | Input method development support for xcb
    dev-python/funasr-onnx                              | 0.4.1-r1           | RD         | https://github.com/modelscope/FunASR                                                    | FunASR ONNX Runtime inference for speech recognition
