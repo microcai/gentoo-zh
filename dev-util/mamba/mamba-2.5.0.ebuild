@@ -54,7 +54,8 @@ DEPEND="app-arch/libarchive:=
 	net-misc/curl
 	python? ( ${PYTHON_DEPS} )
 "
-# conflict to micromamba from benzene-overlay
+# Conflict with dev-util/micromamba from benzene-overlay:
+# https://github.com/Universebenzene/benzene-overlay/tree/master/dev-util/micromamba
 RDEPEND="${DEPEND}
 	!dev-util/micromamba
 "
