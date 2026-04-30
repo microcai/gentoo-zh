@@ -11,7 +11,7 @@ CRATES="
 LLVM_COMPAT=( 19 20 21 )
 RUST_MIN_VER="1.85.0"
 RUST_NEEDS_LLVM=1
-inherit cargo desktop gnome2-utils llvm-r1 toolchain-funcs xdg
+inherit cargo desktop gnome2-utils llvm-utils toolchain-funcs xdg
 
 DESCRIPTION="A simple Emby Client written by GTK4-RS"
 HOMEPAGE="https://github.com/tsukinaha/tsukimi"
@@ -43,17 +43,34 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 BDEPEND="
 	clang? (
-		$(llvm_gen_dep '
-			llvm-core/clang:${LLVM_SLOT}
-			llvm-core/llvm:${LLVM_SLOT}
-			llvm-core/lld:${LLVM_SLOT}
-		')
+		llvm_slot_19? (
+			llvm-core/clang:19
+			llvm-core/llvm:19
+			llvm-core/lld:19
+		)
+		llvm_slot_20? (
+			llvm-core/clang:20
+			llvm-core/llvm:20
+			llvm-core/lld:20
+		)
+		llvm_slot_21? (
+			llvm-core/clang:21
+			llvm-core/llvm:21
+			llvm-core/lld:21
+		)
 	)
 "
 
 pkg_setup() {
 	if use clang && ! tc-is-clang; then
-		llvm-r1_pkg_setup
+		[[ -z ${LLVM_SLOT} ]] && die "LLVM_SLOT unset (broken USE_EXPAND?)"
+
+		llvm_fix_clang_version CC CPP CXX
+		llvm_fix_tool_path ADDR2LINE AR AS LD NM OBJCOPY OBJDUMP RANLIB
+		llvm_fix_tool_path READELF STRINGS STRIP
+		[[ -z ${ESYSROOT} ]] && llvm_fix_tool_path LLVM_CONFIG
+		llvm_prepend_path "${LLVM_SLOT}"
+
 		export CC=clang
 		export CXX=clang++
 		export AR=llvm-ar
