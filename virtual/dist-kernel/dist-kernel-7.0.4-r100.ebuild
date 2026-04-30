@@ -8,7 +8,4 @@ DESCRIPTION="Virtual to depend on any Distribution Kernel"
 SLOT="0/${PV}"
 KEYWORDS="~amd64"
 
-RDEPEND="
-	|| (
-		~sys-kernel/xanmod-kernel-${PV}
-	)"
+RDEPEND="kernel_linux? ( ~sys-kernel/xanmod-kernel-${PV} )"
