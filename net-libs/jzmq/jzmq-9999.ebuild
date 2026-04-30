@@ -4,7 +4,7 @@
 EAPI=7
 
 inherit git-r3 autotools
-DESCRIPTION="jzmq"
+DESCRIPTION="Java bindings for ZeroMQ"
 HOMEPAGE="http://www.zeromq.org/bindings:java"
 
 if [[ ${PV} == "9999" ]] ; then
