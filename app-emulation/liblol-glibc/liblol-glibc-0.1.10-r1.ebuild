@@ -162,6 +162,9 @@ COMMON_DEPEND="
 "
 DEPEND="${COMMON_DEPEND}
 "
+# Keep these compatibility blockers synced with ::gentoo sys-libs/glibc.
+# pax-utils and systemd protect old installed versions with stale seccomp
+# syscall filters; liblol protects upgrades from pre-split app-emulation/liblol.
 RDEPEND="${COMMON_DEPEND}
 	!<app-emulation/liblol-0.1.0
 	!<app-misc/pax-utils-${MIN_PAX_UTILS_VER}
