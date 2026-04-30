@@ -16,7 +16,8 @@ S="${WORKDIR}"
 
 LICENSE="WPS-EULA"
 SLOT="0"
-KEYWORDS="~amd64"
+# Upstream no longer publishes arm64 or loongarch64 builds for this version.
+KEYWORDS="~amd64 -arm64 -loong"
 IUSE="systemd"
 
 RESTRICT="strip mirror bindist" # mirror as explained at bug #547372
