@@ -1,0 +1,10 @@
+Fix portage QA warning from current extra-cmake-modules.
+
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 3.13)
++cmake_minimum_required(VERSION 3.16)
+ cmake_policy(SET CMP0063 NEW)
+ project(fcitx5-cskk VERSION 1.2.0)
+ set(CMAKE_CXX_FLAGS "-Wall")
