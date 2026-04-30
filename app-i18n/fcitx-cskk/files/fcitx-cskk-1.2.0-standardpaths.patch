@@ -1,0 +1,59 @@
+https://github.com/fcitx/fcitx5-cskk/commit/da7e2ce7d8f1319368adae3d9e96513058c40018
+
+--- a/src/cskk.cpp
++++ b/src/cskk.cpp
+@@ -17,6 +17,13 @@
+ #include <cstring>
+ #include <fcitx-config/iniparser.h>
+ #include <fcitx/addonmanager.h>
++#if __has_include(<fcitx-utils/standardpaths.h>)
++#include <fcitx-utils/standardpaths.h>
++#define FCITX_CSKK_HAS_STANDARDPATHS 1
++#else
++#include <fcitx-utils/standardpath.h>
++#define FCITX_CSKK_HAS_STANDARDPATHS 0
++#endif
+ #include <fcitx/inputpanel.h>
+ #include <filesystem>
+ #include <string>
+@@ -105,13 +112,23 @@ typedef enum _FcitxSkkDictType { FSDT_Invalid, FSDT_File } FcitxSkkDictType;
+ void FcitxCskkEngine::loadDictionary() {
+   freeDictionaries();
+ 
++#if FCITX_CSKK_HAS_STANDARDPATHS
++  auto dict_config_file = StandardPaths::global().open(
++      StandardPathsType::PkgData, "cskk/dictionary_list");
++#else
+   auto dict_config_file = StandardPath::global().open(
+       StandardPath::Type::PkgData, "cskk/dictionary_list", O_RDONLY);
++#endif
++
++  if (!dict_config_file.isValid()) {
++    return;
++  }
+ 
+   UniqueFilePtr fp(fdopen(dict_config_file.fd(), "rb"));
+   if (!fp) {
+     return;
+   }
++  dict_config_file.release();
+ 
+   UniqueCPtr<char> buf;
+   size_t len = 0;
+@@ -192,9 +209,16 @@ void FcitxCskkEngine::loadDictionary() {
+         constexpr auto var_len = sizeof(configDir) - 1;
+         std::string realpath = path;
+         if (stringutils::startsWith(path, configDir)) {
++#if FCITX_CSKK_HAS_STANDARDPATHS
++          realpath =
++              (StandardPaths::global().userDirectory(StandardPathsType::PkgData) /
++               path.substr(var_len))
++                  .string();
++#else
+           realpath = stringutils::joinPath(
+               StandardPath::global().userDirectory(StandardPath::Type::PkgData),
+               path.substr(var_len));
++#endif
+         }
+         auto *userdict =
+             skk_user_dict_new(realpath.c_str(), encoding.c_str(), complete);
