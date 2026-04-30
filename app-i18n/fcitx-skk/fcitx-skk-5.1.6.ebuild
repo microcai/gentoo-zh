@@ -16,7 +16,7 @@ LICENSE="GPL-3+"
 SLOT="5"
 KEYWORDS="~amd64 ~x86"
 IUSE="+qt5 qt6"
-REQUIRED_USE="^^ ( qt5 qt6 )"
+REQUIRED_USE="|| ( qt5 qt6 )"
 
 RDEPEND="
 	>=app-i18n/fcitx-5.1.12:5
