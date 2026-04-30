@@ -23,7 +23,10 @@ SLOT="0"
 
 IUSE="static perl python ruby tcl rpm pubkey suse comps helix debian mdk arch cudf conda appdata lzma bzip2 zstd zchunk libxml2"
 
-RDEPEND="zchunk? ( app-arch/zchunk )"
+RDEPEND="
+	python? ( ${PYTHON_DEPS} )
+	zchunk? ( app-arch/zchunk )
+"
 DEPEND="
 	perl? ( dev-lang/perl )
 	rpm? ( app-arch/rpm )
