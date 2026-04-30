@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-30 20:10:16 CST)
+(The last generation time: 2026-04-30 21:25:33 CST)
 
 ### Packages
 
@@ -536,7 +536,7 @@
  media-sound/lx-music-desktop-bin                      | 2.10.0             |            | https://github.com/lyswhut/lx-music-desktop                                             | 一个基于 electron 的音乐软件
                                                        | 2.12.0             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/netease-cloud-music-gtk                   | 2.5.2              |            | https://github.com/gmg137/netease-cloud-music-gtk                                       | netease cloud music player based on Rust & GTK for Linux
+ media-sound/netease-cloud-music-gtk                   | 2.5.3              |            | https://github.com/gmg137/netease-cloud-music-gtk                                       | netease cloud music player based on Rust & GTK for Linux
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/qqmusic                                   | 1.1.8              |            | https://y.qq.com/                                                                       | Tencent QQ Music, converted from .deb package
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
