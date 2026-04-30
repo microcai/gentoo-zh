@@ -10,9 +10,11 @@ HOMEPAGE="https://weixin.qq.com https://github.com/7Ji-PKGBUILDs/wechat-universa
 
 RPM_URI="https://mirrors.opencloudos.tech/opencloudos/9.2/extras"
 AUR_REPO_REF="5e8ad25218b82b9bbacb0bd43dce2feb85998889"
+AUR_REPO_URI="https://github.com/7Ji-PKGBUILDs/wechat-universal-bwrap/archive"
 SRC_URI="
 	amd64? ( ${RPM_URI}/x86_64/os/Packages/wechat-beta_${PV}_amd64.rpm )
-	arm64? ( ${RPM_URI}/aarch64/os/Packages/wechat-beta_${PV}_arm64.rpm ) https://github.com/7Ji-PKGBUILDs/wechat-universal-bwrap/archive/${AUR_REPO_REF}.tar.gz -> wechat-universal-bwrap-${AUR_REPO_REF}.tar.gz
+	arm64? ( ${RPM_URI}/aarch64/os/Packages/wechat-beta_${PV}_arm64.rpm )
+	${AUR_REPO_URI}/${AUR_REPO_REF}.tar.gz -> wechat-universal-bwrap-${AUR_REPO_REF}.tar.gz
 "
 
 S="${WORKDIR}"
@@ -96,7 +98,8 @@ src_compile() {
 	call_patchelf --set-rpath '$ORIGIN' RadiumWMPF/runtime/WeChatAppEx
 	# originally $ORIGIN:/home/ubuntu/.wconan2/ilink/5ae3ed15_1692179323/libs/Release/clang-llvm-12.0.0/libs:
 	call_patchelf --remove-rpath RadiumWMPF/runtime/libilink2.so
-	# originally /home/ubuntu/.wconan2/ilink_network/cfed668b_1692178974/ilink-network/libs/Release/clang-llvm-12.0.0/libs:
+	# originally /home/ubuntu/.wconan2/ilink_network/cfed668b_1692178974/
+	# ilink-network/libs/Release/clang-llvm-12.0.0/libs:
 	call_patchelf --remove-rpath RadiumWMPF/runtime/libilink_network.so
 	# originally ./ (!!!)
 	call_patchelf --remove-rpath libvoipChannel.so

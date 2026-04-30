@@ -12,10 +12,12 @@ APP_NAME="com.tencent.wechat"
 URL_ROOT="https://home-store-packages.uniontech.com/appstore/pool/appstore/c/${APP_NAME}"
 DEB_STEM="${APP_NAME}_${PV}"
 AUR_REPO_REF="e0982191c6940f1bdcae87786cf8e5badfaf65c9"
+AUR_REPO_URI="https://github.com/7Ji-PKGBUILDs/wechat-universal-bwrap/archive"
 SRC_URI="
 	amd64? ( ${URL_ROOT}/${DEB_STEM}_amd64.deb )
 	arm64? ( ${URL_ROOT}/${DEB_STEM}_arm64.deb )
-	loong? ( ${URL_ROOT}/${DEB_STEM}_loongarch64.deb ) https://github.com/7Ji-PKGBUILDs/wechat-universal-bwrap/archive/${AUR_REPO_REF}.tar.gz -> wechat-universal-bwrap-${AUR_REPO_REF}.tar.gz
+	loong? ( ${URL_ROOT}/${DEB_STEM}_loongarch64.deb )
+	${AUR_REPO_URI}/${AUR_REPO_REF}.tar.gz -> wechat-universal-bwrap-${AUR_REPO_REF}.tar.gz
 "
 
 S="${WORKDIR}"
@@ -100,7 +102,8 @@ src_compile() {
 	call_patchelf --set-rpath '$ORIGIN' RadiumWMPF/runtime/WeChatAppEx
 	# originally $ORIGIN:/home/ubuntu/.wconan2/ilink/fcafc08e_1712581517/libs/Release/clang-llvm-12.0.0/libs
 	call_patchelf --remove-rpath RadiumWMPF/runtime/libilink2.so
-	# originally /home/ubuntu/.wconan2/ilink_network/7fd99102_1712579641/ilink-network/libs/Release/clang-llvm-12.0.0/libs:
+	# originally /home/ubuntu/.wconan2/ilink_network/7fd99102_1712579641/
+	# ilink-network/libs/Release/clang-llvm-12.0.0/libs:
 	call_patchelf --remove-rpath RadiumWMPF/runtime/libilink_network.so
 	# originally ./ (!!!)
 	call_patchelf --remove-rpath libvoipChannel.so
