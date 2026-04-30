@@ -13,19 +13,13 @@ KEYWORDS="~amd64"
 
 RESTRICT="mirror"
 
-DEPEND="
-	dev-qt/qtxml:5
-	dev-qt/qtwidgets:5
-	dev-qt/qtnetwork:5
-	dev-qt/qtprintsupport:5
-"
-
-RDEPEND="${DEPEND}"
 BDEPEND="app-arch/unzip"
 
 inherit unpacker
 
 S="${WORKDIR}"
+
+QA_PREBUILT="*"
 
 src_unpack(){
 	unpack "${A}"
@@ -34,7 +28,4 @@ src_unpack(){
 
 src_install(){
 	tar -xvf "${WORKDIR}/data.tar.xz" -C "$D"
-	pushd "${D}/usr/local/AT32_Work_Bench"
-	rm libQt5*
-	rm platforms -rf
 }
