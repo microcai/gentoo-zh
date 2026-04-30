@@ -5,11 +5,13 @@ EAPI=8
 
 inherit xdg
 
+TRAE_URI="https://lf-cdn.trae.com.cn/obj/trae-com-cn/pkg/app/releases/stable"
+
 DESCRIPTION="Trae IDE (binary package)"
 HOMEPAGE="https://trae.com.cn/"
 
 SRC_URI="
-	amd64?	( https://lf-cdn.trae.com.cn/obj/trae-com-cn/pkg/app/releases/stable/${PV}/linux/Trae%20CN-linux-x64.deb -> ${P}.deb )
+	amd64? ( ${TRAE_URI}/${PV}/linux/Trae%20CN-linux-x64.deb -> ${P}.deb )
 "
 
 S="${WORKDIR}"
