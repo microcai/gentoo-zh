@@ -45,6 +45,8 @@ RDEPEND="${DEPEND}"
 
 IUSE="+user +mamba"
 
+EPYTEST_PLUGINS=()
+
 distutils_enable_tests pytest
 
 PATCHES=(
