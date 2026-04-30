@@ -6,6 +6,7 @@ EAPI=8
 DESCRIPTION="at32 workbench is a GUI tool for AT32 MCU startup code generation"
 HOMEPAGE="https://www.arterytek.com/cn/support/tools.jsp"
 SRC_URI="https://www.arterytek.com/download/AT32%20Workbench/AT32_Work_Bench_Linux-x86_64_V${PV}.zip"
+S="${WORKDIR}"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
@@ -16,8 +17,6 @@ RESTRICT="mirror"
 BDEPEND="app-arch/unzip"
 
 inherit unpacker
-
-S="${WORKDIR}"
 
 QA_PREBUILT="*"
 
