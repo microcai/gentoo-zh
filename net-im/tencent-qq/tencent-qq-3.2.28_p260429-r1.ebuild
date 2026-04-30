@@ -10,7 +10,7 @@ _QQDownloadURLPrefix="https://dldir1v6.qq.com/qqfile/qq/QQNT/Linux"
 _LiteLoader_PV="1.4.1"
 
 DESCRIPTION="The new version of the official linux-qq"
-HOMEPAGE="https://im.qq.com/linuxqq/index.shtml"
+HOMEPAGE="https://im.qq.com/index/#/linux"
 
 SRC_URI="
 	amd64? ( ${_QQDownloadURLPrefix}/QQ_${MY_PV}_amd64_01.deb -> ${P}_amd64.deb )
@@ -28,7 +28,7 @@ LICENSE="Tencent"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
 
-IUSE="bwrap system-fdk-aac system-libssh2 system-openh264 system-vips system-zlib gnome liteloader"
+IUSE="bwrap system-fdk-aac system-libssh2 system-openh264 system-zlib gnome liteloader"
 
 RESTRICT="strip mirror"
 
@@ -51,10 +51,6 @@ RDEPEND="
 	system-fdk-aac? ( media-libs/fdk-aac )
 	system-libssh2? ( net-libs/libssh2 )
 	system-openh264? ( media-libs/openh264 )
-	system-vips? (
-		dev-libs/glib
-		media-libs/vips
-	)
 	system-zlib? ( virtual/zlib )
 	bwrap? (
 		sys-apps/bubblewrap
@@ -86,9 +82,6 @@ src_install() {
 	fi
 	if use system-openh264; then
 		rm -v "${D}/opt/QQ/resources/app/avsdk/libopenh264.so" || die
-	fi
-	if use system-vips; then
-		rm -rv "${D}/opt/QQ/resources/app/sharp-lib" || die
 	fi
 	if use system-zlib; then
 		rm -v "${D}/opt/QQ/libz.so.1" || die
