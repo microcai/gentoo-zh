@@ -35,7 +35,6 @@ RDEPEND="
 	drm? ( x11-libs/libdrm )
 	opengl? ( virtual/opengl )
 	pcre? ( dev-libs/libpcre )
-	!x11-misc/compton
 	!x11-misc/picom"
 DEPEND="${RDEPEND}
 	x11-base/xorg-proto"
