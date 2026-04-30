@@ -23,4 +23,6 @@ PATCHES=(
 	"${FILESDIR}/${P}-python3.12-fix.patch"
 )
 
+EPYTEST_PLUGINS=()
+
 distutils_enable_tests pytest
