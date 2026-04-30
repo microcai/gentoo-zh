@@ -15,7 +15,8 @@ SRC_URI="
 S="${WORKDIR}"
 LICENSE="Feishu-EULA"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64"
+# Upstream no longer publishes mips64el builds for this version.
+KEYWORDS="~amd64 ~arm64 -mips"
 
 RESTRICT="strip mirror bindist"
 
