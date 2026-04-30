@@ -53,6 +53,7 @@ src_install() {
 	# Remove the libraries that break compatibility in modern systems
 	# Dingtalk will use the system libs instead
 	MY_VERSION=$(cat "${S}"/opt/apps/"${MY_PGK_NAME}"/files/version)
+	local elevator="${S}/opt/apps/${MY_PGK_NAME}/files/Elevator.sh"
 	# Use system stdc++
 	rm -f "${S}"/opt/apps/"${MY_PGK_NAME}"/files/"${MY_VERSION}"/libstdc++* || die
 	# Use system glibc
@@ -74,17 +75,20 @@ src_install() {
 		# Use \x7fELF header to separate ELF executables and libraries
 		[[ -f ${x} && $(od -t x1 -N 4 "${x}") == *"7f 45 4c 46"* ]] || continue
 		local RPATH_ROOT="/opt/apps/${MY_PGK_NAME}/files/${MY_VERSION}"
-		patchelf --set-rpath "${RPATH_ROOT}/:${RPATH_ROOT}/swiftshader/:${RPATH_ROOT}/platforminputcontexts/:${RPATH_ROOT}/imageformats/" "${x}" || \
-			die "patchelf failed on ${x}"
+		local RPATH_S="${RPATH_ROOT}/:${RPATH_ROOT}/swiftshader/:"
+		RPATH_S+="${RPATH_ROOT}/platforminputcontexts/:${RPATH_ROOT}/imageformats/"
+		patchelf --set-rpath "${RPATH_S}" "${x}" || die "patchelf failed on ${x}"
 	done
 	popd || die
 	# fix ldd pattern error
-	sed -i 's/libc_version=.*/libc_version=`ldd --version | grep ldd | rev | cut -d" " -f1 | rev`/g' "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh || die
+	sed -i \
+		's/libc_version=.*/libc_version=`ldd --version | grep ldd | rev | cut -d" " -f1 | rev`/g' \
+		"${elevator}" || die
 	# Fix fcitx5
-	sed -i "s/export XMODIFIERS/#export XMODIFIERS/g" "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh || die
-	sed -i "s/export QT_IM_MODULE/#export QT_IM_MODULE/g" "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh || die
+	sed -i "s/export XMODIFIERS/#export XMODIFIERS/g" "${elevator}" || die
+	sed -i "s/export QT_IM_MODULE/#export QT_IM_MODULE/g" "${elevator}" || die
 
-	cat >> "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh.head <<- EOF || die
+	cat >> "${elevator}.head" <<- EOF || die
 #!/bin/sh
 if [ -z "\${QT_IM_MODULE}" ]
 then
@@ -104,9 +108,9 @@ then
 fi
 	EOF
 
-	cat "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh.head "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh > "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh.new || die
-	cat "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh.new > "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh || die
-	rm "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh.head "${S}"/opt/apps/"${MY_PGK_NAME}"/files/Elevator.sh.new || die
+	cat "${elevator}.head" "${elevator}" > "${elevator}.new" || die
+	cat "${elevator}.new" > "${elevator}" || die
+	rm "${elevator}.head" "${elevator}.new" || die
 
 	# Add dingtalk command
 	mkdir -p "${S}"/usr/bin/ || die
