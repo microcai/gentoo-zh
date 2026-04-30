@@ -21,7 +21,6 @@ DEPEND="
 "
 
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 inherit unpacker
 
