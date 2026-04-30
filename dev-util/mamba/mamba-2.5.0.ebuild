@@ -76,7 +76,7 @@ src_prepare() {
 	cmake_src_prepare
 	use python && {
 		sed -i \
-			"s|\${CMAKE_CURRENT_BINARY_DIR}|${D}/\${CMAKE_INSTALL_PREFIX}\/$(python_get_sitedir | sed -e 's|/usr/||')|" \
+			"s|\${CMAKE_CURRENT_BINARY_DIR}|\${D}/\${CMAKE_INSTALL_PREFIX}\/$(python_get_sitedir | sed -e 's|/usr/||')|" \
 			libmambapy/CMakeLists.txt || die
 		pushd libmambapy || die
 		distutils-r1_src_prepare
