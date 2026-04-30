@@ -21,6 +21,7 @@ DEPEND="
 "
 
 RDEPEND="${DEPEND}"
+BDEPEND="app-arch/unzip"
 
 inherit unpacker
 
