@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-30 22:37:39 CST)
+(The last generation time: 2026-04-30 22:42:43 CST)
 
 ### Packages
 
@@ -312,9 +312,7 @@
    dev-python/simplesat                                | 0.9.2              | RD         | https://github.com/enthought/sat-solver                                                 | Prototype for SAT-based dependency handling.
      dev-python/okonomiyaki                            | 3.0.0              | RD         | https://github.com/enthought/okonomiyaki                                                | Self-contained library to deal with metadata in egg and runtime archives.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/iptcinfo3                                  | 2.0.3_p20230801    |            | https://github.com/james-see/iptcinfo3                                                  | To read/write image metadata
-                                                       | 2.2.0              |            |                                                                                         |
-                                                       | 2.3.0              |            |                                                                                         |
+ dev-python/iptcinfo3                                  | 2.3.0              |            | https://github.com/james-see/iptcinfo3                                                  | To read/write image metadata
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/menuinst                                   | 2.2.0              |            | https://github.com/conda/menuinst                                                       | Cross platform menu item installation
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
