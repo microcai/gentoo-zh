@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit desktop xdg
+inherit xdg
 
 DESCRIPTION="Trae IDE (binary package)"
 HOMEPAGE="https://trae.com.cn/"
