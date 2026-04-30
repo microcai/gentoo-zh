@@ -18,7 +18,6 @@
 		<flag name="system-libssh2">Use <pkg>net-libs/libssh2</pkg> instead of shipped libs.</flag>
 		<flag name="system-fdk-aac">Use <pkg>media-libs/fdk-aac</pkg> instead of shipped libs.</flag>
 		<flag name="system-openh264">Use <pkg>media-libs/openh264</pkg> instead of shipped libs.</flag>
-		<flag name="system-vips">Use <pkg>media-libs/vips</pkg> instead of shipped libs.</flag>
 		<flag name="system-zlib">Use <pkg>virtual/zlib</pkg> instead of shipped libs.</flag>
 		<flag name="gnome">Supporting screenshot when using GNOME</flag>
 		<flag name="liteloader">Add liteloader support</flag>
