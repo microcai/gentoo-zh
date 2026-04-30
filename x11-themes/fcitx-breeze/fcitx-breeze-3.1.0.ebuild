@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..13} python3_13t )
+PYTHON_COMPAT=( python3_{10..14} python3_13t )
 inherit python-any-r1
 
 EGIT_COMMIT=59456757ca1f0736dcf03b507f661a3693f5b51d
