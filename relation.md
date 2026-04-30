@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-30 22:42:43 CST)
+(The last generation time: 2026-04-30 23:03:33 CST)
 
 ### Packages
 
@@ -408,7 +408,7 @@
  games-action/vintagestory                             | 1.19.8             |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
                                                        | 1.20.12            |            |                                                                                         |
                                                        | 1.21.6             |            |                                                                                         |
-                                                       | 1.22.0             |            |                                                                                         |
+                                                       | 1.22.1             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-arcade/osu-lazer-bin                            | 2026.417.0         |            | https://osu.ppy.sh/                                                                     | A free-to-win rhythm game. Rhythm is just a click away!
                                                        | 2026.425.0         |            |                                                                                         |
