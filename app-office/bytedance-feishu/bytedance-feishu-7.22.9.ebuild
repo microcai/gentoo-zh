@@ -10,7 +10,11 @@ HOMEPAGE="https://www.feishu.cn/download"
 SRC_URI="
 	amd64? ( https://sf3-cn.feishucdn.com/obj/ee-appcenter/bfdb886c/Feishu-linux_x64-${PV}.deb )
 	arm64? ( https://sf3-cn.feishucdn.com/obj/ee-appcenter/c3f495d6/Feishu-linux_arm64-${PV}.deb )
-	mips? ( https://sf3-cn.feishucdn.com/obj/ee-appcenter/78243739/Feishu-linux_mips64el-${PV}.deb )
+	mips? (
+		!big-endian? (
+			abi_mips_n64? ( https://sf3-cn.feishucdn.com/obj/ee-appcenter/78243739/Feishu-linux_mips64el-${PV}.deb )
+		)
+	)
 "
 
 S="${WORKDIR}"
@@ -18,7 +22,6 @@ LICENSE="Feishu-EULA"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~mips"
 IUSE="big-endian abi_mips_n64"
-REQUIRED_USE="mips? ( !big-endian abi_mips_n64 )"
 
 RESTRICT="strip mirror bindist"
 
@@ -31,6 +34,13 @@ x11-libs/libXext
 x11-misc/xdg-utils
 "
 RDEPEND="${DEPEND}"
+
+pkg_pretend() {
+	if use mips; then
+		use big-endian && die "${PN} upstream only provides little-endian mips64 binaries"
+		use abi_mips_n64 || die "${PN} upstream only provides mips n64 binaries"
+	fi
+}
 
 src_prepare() {
 	default
