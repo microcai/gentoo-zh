@@ -54,8 +54,7 @@ MIN_SYSTEMD_VER="254.9-r1"
 
 VERIFY_SIG_OPENPGP_KEY_PATH=/usr/share/openpgp-keys/glibc.asc
 
-inherit python-any-r1 prefix preserve-libs toolchain-funcs flag-o-matic gnuconfig \
-	multilib systemd multiprocessing eapi9-ver verify-sig
+inherit python-any-r1 toolchain-funcs flag-o-matic gnuconfig multilib verify-sig
 
 DESCRIPTION="GNU libc C library, for liblol"
 HOMEPAGE="https://www.gnu.org/software/libc/ https://liblol.aosc.io"
