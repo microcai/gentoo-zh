@@ -40,7 +40,8 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~arm ~arm64 ~mips ~riscv ~x86"
 IUSE="abi_mips_n64 abi_mips_o32 big-endian"
 
-# conflict to net-proxy/naiveproxy from chiyuki-overlay
+# Conflict with net-proxy/naiveproxy from chiyuki-overlay:
+# https://github.com/IllyaTheHath/gentoo-overlay/tree/master/net-proxy/naiveproxy
 RDEPEND="!net-proxy/naiveproxy"
 
 QA_PREBUILT="
