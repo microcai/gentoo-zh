@@ -15,7 +15,7 @@ SRC_URI="https://looking-glass.io/artifact/${MY_PV}/source -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="X wayland pipewire pulseaudio +backtrace gnome host obs"
+IUSE="+X wayland +pipewire pulseaudio +backtrace gnome host obs"
 REQUIRED_USE="|| ( X wayland )
 	|| ( pipewire pulseaudio )"
 
