@@ -2,23 +2,3 @@
 # Distributed under the terms of the GNU General Public License v2
 
 # Keep them sorted
-
-X - Adds support for X11
-build - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used for creating build images and the first half of bootstrapping [make stage1]
-curl - Adds support for client-side URL transfer library
-dbus - Enable dbus support for anything that needs it (gpsd, gnomemeeting, etc)
-debug - Enable extra debug codepaths, like asserts and extra output. If you want to get meaningful backtraces see http://www.gentoo.org/proj/en/qa/backtraces.xml .
-doc - Adds extra documentation (API, Javadoc, etc)
-geoip - Add geoip support
-gnome - Adds GNOME support
-kerberos - Adds kerberos support
-libnotify - Enable notification support
-lua - Enable Lua scripting support
-pcre - Adds support for Perl Compatible Regular Expressions
-pdf - Adds general support for PDF (Portable Document Format), this replaces the pdflib and cpdflib flags
-pulseaudio - Adds support for PulseAudio sound server
-savedconfig - Use this to restore your config from /etc/portage/savedconfig ${CATEGORY}/${PN}. Make sure you USE flags allow for approprate dependencies
-selinux - !!internal use only!! Security Enhanced Linux support, this must be set by the selinux profile or breakage will occur
-static - !!do not set this during bootstrap!! Causes binaries to be statically linked instead of dynamically
-symlink - Force kernel ebuilds to automatically update the /usr/src/linux symlink.
-test - Workaround to pull in packages needed to run with FEATURES=test. Portage-2.1.2 handles this internally, so don't set it in make.conf/package.use anymore.
