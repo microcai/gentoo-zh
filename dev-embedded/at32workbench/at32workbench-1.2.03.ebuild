@@ -28,13 +28,13 @@ inherit unpacker
 S="${WORKDIR}"
 
 src_unpack(){
-	unpack ${A}
-	unpack ${WORKDIR}/AT32_Work_Bench_Linux-x86_64_V${PV}.deb
+	unpack "${A}"
+	unpack "${WORKDIR}/AT32_Work_Bench_Linux-x86_64_V${PV}.deb"
 }
 
 src_install(){
-	tar -xvf ${WORKDIR}/data.tar.xz -C "$D"
-	pushd ${D}/usr/local/AT32_Work_Bench
+	tar -xvf "${WORKDIR}/data.tar.xz" -C "$D"
+	pushd "${D}/usr/local/AT32_Work_Bench"
 	rm libQt5*
 	rm platforms -rf
 }
