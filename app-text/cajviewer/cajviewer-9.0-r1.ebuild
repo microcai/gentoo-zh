@@ -17,8 +17,6 @@ RESTRICT="mirror strip"
 
 RDEPEND="
 	dev-db/freetds
-	dev-qt/qtcore:5
-	dev-qt/qtdeclarative:5
 	media-libs/tiff-compat:4
 "
 DEPEND="${RDEPEND}"
