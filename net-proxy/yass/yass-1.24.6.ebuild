@@ -18,7 +18,7 @@ SLOT="0"
 #FIXME pkgcheck cries on NonsolvableDepsInDev on mips, no idea why
 KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 
-IUSE="+cli server dylib test cet gui gtk3 gtk4 qt5 qt6 wayland tbbmalloc tcmalloc mimalloc jemalloc"
+IUSE="+cli server dylib test cet gui gtk3 gtk4 qt6 wayland tbbmalloc tcmalloc mimalloc jemalloc"
 
 # tested with FEATURES="-network-sandbox test"
 # tested with FEATURES="network-sandbox test"
@@ -27,7 +27,7 @@ RESTRICT="!test? ( test )"
 
 REQUIRED_USE="
 	cet? ( ^^ ( amd64 x86 ) )
-	gui? ( || ( gtk3 gtk4 qt5 qt6 ) )
+	gui? ( || ( gtk3 gtk4 qt6 ) )
 	tbbmalloc? ( !tcmalloc !mimalloc !jemalloc )
 	tcmalloc? ( !mimalloc !jemalloc )
 	mimalloc? ( !jemalloc )
@@ -55,12 +55,6 @@ RDEPEND="
 		gtk4? (
 			dev-libs/glib:2
 			gui-libs/gtk:4[wayland?]
-		)
-		qt5? (
-			dev-qt/qtcore:5
-			dev-qt/qtgui:5
-			dev-qt/qtwidgets:5
-			wayland? ( dev-qt/qtwayland:5 )
 		)
 		qt6? (
 			dev-qt/qtbase:6=[dbus,gui,widgets,wayland?]
@@ -126,8 +120,6 @@ src_configure() {
 
 	if use qt6; then
 		mycmakeargs+=( -DGUI=ON -DUSE_QT6=ON )
-	elif use qt5; then
-		mycmakeargs+=( -DGUI=ON -DUSE_QT5=ON )
 	elif use gtk4; then
 		mycmakeargs+=( -DGUI=ON -DUSE_GTK4=ON )
 	elif use gtk3; then
