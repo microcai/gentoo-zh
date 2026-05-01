@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -26,6 +26,11 @@ DEPEND="
 "
 RDEPEND="$DEPEND"
 BDEPEND="llvm-core/clang"
+
+PATCHES=(
+	# from upstream, remove when bump
+	"${FILESDIR}/${P}-ebpf-fix-bad-relocation-on-gcc-15.patch"
+)
 
 pkg_pretend() {
 	local CONFIG_CHECK="
@@ -71,6 +76,8 @@ src_compile() {
 	# gentoo-zh#3720
 	filter-flags "-march=*" "-mtune=*"
 	append-cflags "-fno-stack-protector"
+
+	CC="clang" CXX="clang++" strip-unsupported-flags
 
 	emake VERSION="${PV}" GOFLAGS="-buildvcs=false -w" NOSTRIP=y
 }
