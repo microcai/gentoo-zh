@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-01 17:32:50 CST)
+(The last generation time: 2026-05-01 18:48:04 CST)
 
 ### Packages
 
@@ -444,7 +444,7 @@
    acct-group/vintagestory                             | 0                  | RD         |                                                                                         | User group for Vintage Story Server
    acct-user/vintagestory                              | 0                  | RD         |                                                                                         | User for Vintage Story Server
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- gnome-extra/gnome-shell-extension-clipboard-indicator | 48                 |            | https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator                    | The most popular clipboard manager for GNOME, with over 1M downloads
+ gnome-extra/gnome-shell-extension-clipboard-indicator | 49                 |            | https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator                    | The most popular clipboard manager for GNOME, with over 1M downloads
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  gnome-extra/nautilus-open-any-terminal                | 0.8.1              |            | https://github.com/Stunkymonkey/nautilus-open-any-terminal                              | context-menu entry for opening other terminal in nautilus
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
