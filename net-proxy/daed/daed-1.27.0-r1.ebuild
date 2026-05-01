@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit flag-o-matic systemd
+inherit flag-o-matic linux-info systemd
 
 DESCRIPTION="A Modern Dashboard For dae"
 HOMEPAGE="https://github.com/daeuniverse/daed"
@@ -17,6 +17,7 @@ S="${WORKDIR}"
 LICENSE="MIT AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
+MINKV="5.17"
 
 DEPEND="
 	app-alternatives/v2ray-geoip
@@ -44,6 +45,37 @@ src_prepare() {
 	default
 }
 
+PATCHES=(
+	# from upstream, remove when bump
+	"${FILESDIR}/${P}-ebpf-fix-bad-relocation-on-gcc-15.patch"
+)
+
+pkg_pretend() {
+	local CONFIG_CHECK="
+		~BPF
+		~BPF_SYSCALL
+		~BPF_JIT
+		~CGROUPS
+		~KPROBES
+		~NET_INGRESS
+		~NET_EGRESS
+		~NET_SCH_INGRESS
+		~NET_CLS_BPF
+		~NET_CLS_ACT
+		~BPF_STREAM_PARSER
+		~DEBUG_INFO
+		~DEBUG_INFO_BTF
+		~KPROBE_EVENTS
+		~BPF_EVENTS
+	"
+
+	if kernel_is -lt ${MINKV//./ }; then
+		ewarn "Kernel version at least ${MINKV} required"
+	fi
+
+	check_extra_config
+}
+
 src_compile(){
 	#-flto makes llvm-strip complains
 	#llvm-strip: error: '*/control/bpf_bpfel.o': The file was not recognized as a valid object file
@@ -58,6 +90,8 @@ src_compile(){
 	# gentoo-zh#3720
 	filter-flags "-march=*" "-mtune=*"
 	append-cflags "-fno-stack-protector"
+
+	CC="clang" CXX="clang++" strip-unsupported-flags
 
 	GO_ROOT="${S}" SKIP_SUBMODULES=1 emake APPNAME="${PN}" VERSION="${PV}"
 }
