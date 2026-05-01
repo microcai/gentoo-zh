@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-04-30 23:03:33 CST)
+(The last generation time: 2026-05-01 10:41:22 CST)
 
 ### Packages
 
@@ -231,6 +231,8 @@
  app-text/lemminx-bin                                  | 0.31.0             |            | https://github.com/eclipse-lemminx/lemminx                                              | A XML Language Server
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/readest-bin                                  | 0.10.1             |            | https://readest.com/                                                                    | A modern, feature-rich ebook reader
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-text/wik                                          | 2.0.1              |            | https://github.com/yashsinghcodes/wik                                                   | Wikipedia like a man - in the terminal, without images, with caching
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/easymotion                                    | 1.3                |            | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: Vim motions on speed!
                                                        | 3.0.1              |            |                                                                                         |
