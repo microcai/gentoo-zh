@@ -10,18 +10,19 @@ CRATES="
 
 declare -A GIT_CRATES=(
 	[boring-noise]='https://github.com/Watfaq/boring-noise;9ddf1b54d0c9679e7bc50e9151f72d526190db1a;boring-noise-%commit%'
-	[console-api]='https://github.com/tokio-rs/console;d8fba132e6ce52821172b1178c77658b1f48bdd4;console-%commit%/console-api'
-	[console-subscriber]='https://github.com/tokio-rs/console;d8fba132e6ce52821172b1178c77658b1f48bdd4;console-%commit%/console-subscriber'
+	[console-api]='https://github.com/tokio-rs/console;59e23edf17b0e42e87e315bfc9cbb8a6ba2f401f;console-%commit%/console-api'
+	[console-subscriber]='https://github.com/tokio-rs/console;59e23edf17b0e42e87e315bfc9cbb8a6ba2f401f;console-%commit%/console-subscriber'
 	[netstack-lwip]='https://github.com/eycorsican/netstack-lwip;f434fefd6c227c9dfbec84c364452ba6c1532779;netstack-lwip-%commit%'
+	[shadowsocks]='https://github.com/Watfaq/shadowsocks-rust;dee2d932dc580e0e1b7a5a591ff5f8c51f70495e;shadowsocks-rust-%commit%/crates/shadowsocks'
 	[smoltcp]='https://github.com/smoltcp-rs/smoltcp;ac32e643a4b7e09161193071526b3ca5a0deedb5;smoltcp-%commit%'
 	[sock2proc]='https://github.com/Watfaq/sock2proc;9f9e6304d62285115b2e4fa632527ae563bf0fcc;sock2proc-%commit%'
-	[tokio-watfaq-rustls]='https://github.com/Watfaq/tokio-rustls;638db32084d7ecf9c2660847b55d48d1186b4055;tokio-rustls-%commit%'
+	[tokio-watfaq-rustls]='https://github.com/Watfaq/tokio-rustls;cf8961ac1a36e580d0e38bedc8a41ca4a9b301e8;tokio-rustls-%commit%'
 	[tuic-core]='https://github.com/Itsusinn/tuic;4843d04b1584f49b503e344e2a96041e16fe8938;tuic-%commit%/tuic-core'
 	[unix-udp-sock]='https://github.com/Watfaq/unix-udp-sock;847c80b519f0fd8cff5c887ae708429897d08671;unix-udp-sock-%commit%'
-	[watfaq-rustls]='https://github.com/Watfaq/rustls;4cae3aa2e84ea29d8a74b495793773bdb0a72206;rustls-%commit%/rustls'
+	[watfaq-rustls]='https://github.com/Watfaq/rustls;c3ab043d673029d245fd618b9bc86fd6a6109bae;rustls-%commit%/rustls'
 )
 
-RUST_MIN_VER="1.88.0"
+RUST_MIN_VER="1.91.0"
 
 inherit cargo systemd
 
@@ -39,7 +40,7 @@ SRC_URI="
 # Dependent crate licenses
 LICENSE+="
 	0BSD Apache-2.0 BSD-2 BSD CC0-1.0 CDLA-Permissive-2.0 GPL-3+ ISC MIT
-	MPL-2.0 openssl Unicode-3.0 Unlicense ZLIB
+	MPL-2.0 Unicode-3.0 Unlicense ZLIB
 "
 SLOT="0"
 KEYWORDS="~amd64"
@@ -53,6 +54,28 @@ BDEPEND="
 	llvm-core/clang
 	dev-libs/protobuf
 "
+
+PATCHES=(
+	"${FILESDIR}/${P}-remove-default-dashboard.patch"
+)
+
+gen_git_crate_dir() {
+	# https://github.com/gentoo/gentoo/blob/b09dd88412fe2d5eee5a8891e08bfa2d67848da3/eclass/cargo.eclass#L442
+	IFS=';' read -r crate_uri commit crate_dir <<<"${GIT_CRATES[$1]}"
+	echo "${WORKDIR}/${crate_dir//%commit%/${commit}}"
+}
+
+src_prepare() {
+	default
+	# Remove the [patch.crates-io] section and add path-based patches
+	sed -i '/^\[patch\.crates-io\]/,/^$/d' "${S}/Cargo.toml" || die
+
+	# Add new patch section with local paths
+	cat >> "${S}/Cargo.toml" <<-EOF || die
+	[patch.crates-io]
+	shadowsocks = { path = "$(gen_git_crate_dir shadowsocks)" }
+	EOF
+}
 
 src_configure() {
 	local myfeatures=(
@@ -72,10 +95,6 @@ src_compile() {
 			export CARGO_PROFILE_RELEASE_LTO=false
 		fi
 	fi
-
-	# enable unstable features
-
-	export RUSTC_BOOTSTRAP=1
 
 	cargo_src_compile --package=clash-rs --bin=clash-rs
 }

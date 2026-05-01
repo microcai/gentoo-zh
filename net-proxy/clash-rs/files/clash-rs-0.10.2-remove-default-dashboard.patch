@@ -1,0 +1,13 @@
+diff --git a/clash-bin/Cargo.toml b/clash-bin/Cargo.toml
+index 072553a..51d3d62 100644
+--- a/clash-bin/Cargo.toml
++++ b/clash-bin/Cargo.toml
+@@ -7,7 +7,7 @@ homepage = { workspace = true }
+ authors = { workspace = true }
+ 
+ [features]
+-default = ["standard", "aws-lc-rs", "dashboard"]
++default = ["standard", "aws-lc-rs"]
+ standard = ["shadowsocks", "tuic", "ssh", "shadowquic", "wireguard", "tailscale", "clash-lib/zero_copy", "tproxy", "tun", "redir"]
+ 
+ plus = ["standard", "onion"]
