@@ -119,6 +119,13 @@ jobs:
         echo 'FEATURES="getbinpkg"' >> /etc/portage/make.conf
         getuto
 
+    - name: setup distfiles permissions
+      run: |
+        mkdir -p /var/cache/distfiles
+        chown root:portage /var/cache/distfiles
+        chmod 775 /var/cache/distfiles
+        install -d -o portage -g portage -m 775 /var/cache/distfiles/git3-src
+
     - name: install depends
       run: |
         emerge --verbose --quiet --jobs $(nproc) --autounmask y --autounmask-continue y \
