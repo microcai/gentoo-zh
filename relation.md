@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-02 16:49:42 CST)
+(The last generation time: 2026-05-03 15:22:23 CST)
 
 ### Packages
 
@@ -92,7 +92,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/dvp                                          | 1.2.1-r1           |            | http://kaufmann.no/roland/dvorak/index.html                                             | The kbd keymap for Programmer Dvorak.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/fcitx-cskk                                   | 1.2.0              |            | https://github.com/fcitx/fcitx5-cskk                                                    | SKK input method plugin for fcitx5 that uses LibCSKK
+ app-i18n/fcitx-cskk                                   | 1.2.0-r1           |            | https://github.com/fcitx/fcitx5-cskk                                                    | SKK input method plugin for fcitx5 that uses LibCSKK
    app-i18n/cskk                                       | 3.3.0              |  D, RD     | https://github.com/naokiri/cskk                                                         | SKK (Simple Kana Kanji henkan) library
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/fcitx-meta                                   | 5.0.12-r3          |            | https://fcitx-im.org                                                                    | Merge this to pull in Fcitx packages
@@ -112,7 +112,6 @@
    app-i18n/fcitx-rime                                 | 9999               | RD         | https://fcitx-im.org/                                                                   | Chinese RIME input methods for Fcitx
      app-i18n/rime-data                                | 9999               |  D, RD     | https://rime.im/                                                                        | Data resources for Rime Input Method Engine
    app-i18n/fcitx-skk                                  | 5.1.10             | RD         | https://fcitx-im.org/                                                                   | Japanese SKK input engine for Fcitx5
-                                                       | 5.1.6              |            |                                                                                         |
                                                        | 5.1.7-r2           |            |                                                                                         |
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
