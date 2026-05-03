@@ -61,6 +61,7 @@ RDEPEND="
 BDEPEND="
 	${COMMON_DEPEND}
 	app-misc/jq
+	dev-build/cmake
 	dev-util/patchelf
 	sys-apps/moreutils
 "
@@ -80,7 +81,8 @@ src_prepare() {
 src_compile() {
 	#aws-lc-sys-0.38.0/aws-lc/third_party/jitterentropy/jitterentropy-library/src/jitterentropy-base.c:
 	#The CPU Jitter random number generator must not be compiled with optimizations.
-	export AWS_LC_SYS_CFLAGS="${CFLAGS} -O0"
+	#Force use of cmake to auto apply -O0 to related parts
+	export AWS_LC_SYS_CMAKE_BUILDER=1
 
 	lto-guarantee-fat
 
