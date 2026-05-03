@@ -8,6 +8,8 @@ EAPI=8
 CRATES="
 "
 
+RUST_MIN_VER="1.93"
+
 inherit cargo
 
 DESCRIPTION="Microsoft edit"
@@ -18,13 +20,11 @@ SRC_URI="
 	${CARGO_CRATE_URIS}
 "
 
+S="${WORKDIR}/${P}/crates/edit"
+
 LICENSE="MIT"
 # Dependent crate licenses
 LICENSE+=" Apache-2.0 MIT Unicode-3.0"
 SLOT="0"
 KEYWORDS="~amd64"
 
-src_compile() {
-	export RUSTC_BOOTSTRAP=1
-	cargo_src_compile
-}
