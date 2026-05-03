@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-03 15:46:51 CST)
+(The last generation time: 2026-05-03 16:12:51 CST)
 
 ### Packages
 
@@ -370,7 +370,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/maixvision                                   | 1.2.2-r1           |            | https://www.sipeed.com/maixvision                                                       | MaixVision - AIoT development platform
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/opencode-bin                                 | 1.14.31            |            | https://opencode.ai                                                                     | The open source AI coding agent
+ dev-util/opencode-bin                                 | 1.14.33            |            | https://opencode.ai                                                                     | The open source AI coding agent
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/osc                                          | 1.26.0             |            | https://github.com/openSUSE/osc                                                         | The Command Line Interface to work with an Open Build Service
