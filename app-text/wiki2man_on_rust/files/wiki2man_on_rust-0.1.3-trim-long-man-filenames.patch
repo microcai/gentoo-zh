@@ -1,0 +1,39 @@
+Trim generated man page filenames so Portage ecompress can append its temporary
+.ecompress suffix without exceeding the filesystem filename component limit.
+
+--- a/src/lib.rs
++++ b/src/lib.rs
+@@ -15,5 +15,6 @@ use rayon::prelude::*;
+ 
+ pub const DEFAULT_BATCH_SIZE: usize = 1024;
++const MAX_MAN_FILE_STEM_BYTES: usize = 255 - ".7.ecompress".len();
+ 
+ #[derive(Clone, Debug, Eq, PartialEq)]
+ pub struct WikiPage {
+@@ -418,6 +419,7 @@ pub fn man_file_name(title: &str) -> String {
+             character => name.push(character),
+         }
+     }
++    truncate_to_byte_len(&mut name, MAX_MAN_FILE_STEM_BYTES);
+ 
+     if name.is_empty() {
+         "_".to_string()
+@@ -426,6 +428,18 @@ pub fn man_file_name(title: &str) -> String {
+     }
+ }
+ 
++fn truncate_to_byte_len(value: &mut String, max_len: usize) {
++    if value.len() <= max_len {
++        return;
++    }
++
++    let mut end = max_len;
++    while !value.is_char_boundary(end) {
++        end -= 1;
++    }
++    value.truncate(end);
++}
++
+ fn write_man_batch(
+     man_dir: &Path,
+     batch: &mut Vec<WikiPage>,
