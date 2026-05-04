@@ -53,7 +53,6 @@ SRC_URI="
 LICENSE="
 	MIT Unicode-3.0 BZIP2
 	l10n_be? ( CC-BY-SA-4.0 )
-	l10n_be-tarask? ( CC-BY-SA-4.0 )
 	l10n_de? ( CC-BY-SA-4.0 )
 	l10n_en? ( CC-BY-SA-4.0 )
 	l10n_fr? ( CC-BY-SA-4.0 )
@@ -68,7 +67,6 @@ DUMP_BASE_URL="https://dumps.wikimedia.org/other/mediawiki_content_current"
 
 WIKIS=(
 	"be:bewiki"
-	"be-tarask:be_x_oldwiki"
 	"en:enwiki"
 	"ru:ruwiki"
 	"de:dewiki"
@@ -80,7 +78,6 @@ WIKIS=(
 # Format: "l10n_code:wiki_id:chunk"
 DUMP_CHUNKS=(
 	"be:bewiki:p2p803222"
-	"be-tarask:be_x_oldwiki:p4p302009"
 	"en:enwiki:p10p1147431"
 	"en:enwiki:p1147434p3987701"
 	"en:enwiki:p3987703p8213792"
@@ -142,9 +139,6 @@ src_unpack() {
 
 src_prepare() {
 	default
-
-	eapply "${FILESDIR}/${P}-parse-timeout-partial-output.patch"
-	eapply "${FILESDIR}/${P}-trim-long-man-filenames.patch"
 
 	pushd "${ECARGO_VENDOR}/parse-wiki-text-2-0.2.0" >/dev/null || die
 	eapply "${FILESDIR}/parse-wiki-text-2-0.2.0-utf8-boundaries.patch"
