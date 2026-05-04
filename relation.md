@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-05 02:00:05 CST)
+(The last generation time: 2026-05-05 02:01:17 CST)
 
 ### Packages
 
@@ -232,6 +232,8 @@
  app-text/readest-bin                                  | 0.10.1             |            | https://readest.com/                                                                    | A modern, feature-rich ebook reader
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/wik                                          | 2.0.1              |            | https://github.com/yashsinghcodes/wik                                                   | Wikipedia like a man - in the terminal, without images, with caching
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-text/wiki2man_on_rust                             | 0.1.3              |            | https://gitlab.com/vitaly-zdanevich/wiki2man_on_rust                                    | Convert MediaWiki XML dumps into man(7) pages - so you can read Wikipedia in man
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/easymotion                                    | 1.3                |            | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: Vim motions on speed!
                                                        | 3.0.1              |            |                                                                                         |
