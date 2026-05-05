@@ -1,11 +1,11 @@
-# Copyright 2020-2025 Gentoo Authors
+# Copyright 2020-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 LLVM_COMPAT=(19 20 21)
 
-inherit kernel-build toolchain-funcs llvm-r1
+inherit kernel-build toolchain-funcs llvm-r2
 
 MY_P=linux-${PV%.*}
 #Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
@@ -20,8 +20,8 @@ HOMEPAGE="
 "
 SRC_URI+="
 	https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.xz
-	https://dev.gentoo.org/~mgorny/dist/linux/${PATCHSET}.tar.xz
-	https://master.dl.sourceforge.net/project/xanmod/releases/main/${PV}-xanmod1/patch-${PV}-xanmod1.xz"
+	https://distfiles.gentoo.org/pub/proj/dist-kernel/patchsets/$(ver_cut 1-2)/${PATCHSET}.tar.xz
+	https://downloads.sourceforge.net/project/xanmod/releases/main/${PV}-xanmod1/patch-${PV}-xanmod1.xz"
 S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
@@ -72,15 +72,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# delete failed patches
-	rm "${WORKDIR}/${PATCHSET}/0011-BMQ-BitMap-Queue-Scheduler.-A-new-CPU-scheduler-deve.patch"
-	rm "${WORKDIR}/${PATCHSET}/0012-Set-defaults-for-BMQ.-Add-archs-as-people-test-defau.patch"
-	rm "${WORKDIR}/${PATCHSET}/1710_disable_sse4a.patch'"
-	rm "${WORKDIR}/${PATCHSET}/2701-drm-amdgpu-don-t-attach-the-tlb-fence-for-SI.patch"
-
 	local PATCHES=(
 		# xanmod patches
 		"${WORKDIR}"/patch-${PV}-xanmod${XV}
+		"${FILESDIR}"/xanmod-6.19.14-x86-l1-cache-shift-fallback.patch
 		# genpatches
 		"${WORKDIR}/${PATCHSET}"/*.patch
 	)
