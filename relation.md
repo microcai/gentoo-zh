@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-05 17:10:29 CST)
+(The last generation time: 2026-05-05 17:32:25 CST)
 
 ### Packages
 
@@ -364,6 +364,7 @@
  dev-util/codex                                        | 0.128.0            |            | https://github.com/openai/codex                                                         | Codex CLI - OpenAI's AI-powered coding agent
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/deepseek-bin                                 | 0.8.11             |            | https://github.com/Hmbown/DeepSeek-TUI                                                  | Coding agent for DeepSeek models with terminal TUI
+                                                       | 0.8.12             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/fvm                                          | 4.0.5              |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
    dev-lang/dart                                       | 3.11.3             |  D, RD     | https://dart.dev                                                                        | The Dart SDK
