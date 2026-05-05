@@ -61,6 +61,7 @@ LICENSE="
 "
 SLOT="0"
 KEYWORDS="~amd64"
+RESTRICT="mirror"
 
 DUMP_DATE="2026-03-01"
 DUMP_BASE_URL="https://dumps.wikimedia.org/other/mediawiki_content_current"
