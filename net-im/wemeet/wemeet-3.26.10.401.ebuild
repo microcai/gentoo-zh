@@ -8,13 +8,16 @@ inherit desktop unpacker xdg
 DESCRIPTION="Wemeet - Tencent Video Conferencing"
 HOMEPAGE="https://wemeet.qq.com"
 
+TENCENT_URI="https://updatecdn.meeting.qq.com/cos"
+AMD64_URI="${TENCENT_URI}/72e0e0023e1d1e6d4123fba28821aea1"
+ARM64_URI="${TENCENT_URI}/c06d6bc4a3370dbfb2f43bbc6ff8969e"
+LOONG_URI="${TENCENT_URI}/399aded330e344aa1327064170be86e8"
+LOONG_FILE="TencentMeeting_0300000000_${PV}_loongarch64_default.publish.officialwebsite.deb"
+
 SRC_URI="
-	amd64? ( https://updatecdn.meeting.qq.com/cos/\
-72e0e0023e1d1e6d4123fba28821aea1/TencentMeeting_0300000000_${PV}_x86_64_default.publish.officialwebsite.deb -> ${P}_amd64.deb )
-	arm64? ( https://updatecdn.meeting.qq.com/cos/\
-c06d6bc4a3370dbfb2f43bbc6ff8969e/TencentMeeting_0300000000_${PV}_arm64_default.publish.officialwebsite.deb -> ${P}_arm64.deb )
-	loong? ( https://updatecdn.meeting.qq.com/cos/\
-399aded330e344aa1327064170be86e8/TencentMeeting_0300000000_${PV}_loongarch64_default.publish.officialwebsite.deb -> ${P}_loongarch64.deb )
+	amd64? ( ${AMD64_URI}/TencentMeeting_0300000000_${PV}_x86_64_default.publish.officialwebsite.deb -> ${P}_amd64.deb )
+	arm64? ( ${ARM64_URI}/TencentMeeting_0300000000_${PV}_arm64_default.publish.officialwebsite.deb -> ${P}_arm64.deb )
+	loong? ( ${LOONG_URI}/${LOONG_FILE} -> ${P}_loongarch64.deb )
 "
 
 S="${WORKDIR}"
@@ -92,7 +95,9 @@ src_prepare() {
 			# we have to keep the entirety of Qt, because of an alarming error
 			# seen with libQt5Widgets.so.5 unbundled:
 			#
-			# /opt/wemeet/bin/wemeetapp: symbol lookup error: /opt/wemeet/lib/libwemeet_framework.so: undefined symbol: _ZN7QWidget11eventFilterEP7QObjectP6QEvent, version Qt_5
+			# /opt/wemeet/bin/wemeetapp: symbol lookup error:
+			# /opt/wemeet/lib/libwemeet_framework.so: undefined symbol:
+			# _ZN7QWidget11eventFilterEP7QObjectP6QEvent, version Qt_5
 			#
 			# which means the Qt ABI is different in the Tencent build env than
 			# ours, and that it is unsafe for us to swap the libraries.

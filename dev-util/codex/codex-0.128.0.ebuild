@@ -54,13 +54,13 @@ SRC_URI="
 		https://github.com/openai/codex/releases/download/rusty-v8-v${RUSTY_V8_TAG}/librusty_v8_release_x86_64-unknown-linux-musl.a.gz
 			-> rusty_v8_${RUSTY_V8_TAG}_librusty_v8_release_x86_64-unknown-linux-musl.a.gz
 		https://github.com/openai/codex/releases/download/rusty-v8-v${RUSTY_V8_TAG}/src_binding_release_x86_64-unknown-linux-musl.rs
-			-> rusty_v8_${RUSTY_V8_TAG}_src_binding_release_x86_64-unknown-linux-musl.rs
+			-> rusty_v8_${RUSTY_V8_TAG}_src_binding_release.rs
 	)
 	arm64? (
 		https://github.com/openai/codex/releases/download/rusty-v8-v${RUSTY_V8_TAG}/librusty_v8_release_aarch64-unknown-linux-musl.a.gz
 			-> rusty_v8_${RUSTY_V8_TAG}_librusty_v8_release_aarch64-unknown-linux-musl.a.gz
 		https://github.com/openai/codex/releases/download/rusty-v8-v${RUSTY_V8_TAG}/src_binding_release_aarch64-unknown-linux-musl.rs
-			-> rusty_v8_${RUSTY_V8_TAG}_src_binding_release_aarch64-unknown-linux-musl.rs
+			-> rusty_v8_${RUSTY_V8_TAG}_src_binding_release.rs
 	)
 	${CARGO_CRATE_URIS}
 "
@@ -124,7 +124,7 @@ src_compile() {
 	use arm64 && rusty_v8_triple=aarch64-unknown-linux-musl
 
 	RUSTY_V8_ARCHIVE="${DISTDIR}/rusty_v8_${RUSTY_V8_TAG}_librusty_v8_release_${rusty_v8_triple}.a.gz" \
-	RUSTY_V8_SRC_BINDING_PATH="${DISTDIR}/rusty_v8_${RUSTY_V8_TAG}_src_binding_release_${rusty_v8_triple}.rs" \
+	RUSTY_V8_SRC_BINDING_PATH="${DISTDIR}/rusty_v8_${RUSTY_V8_TAG}_src_binding_release.rs" \
 		cargo_src_compile --package codex-cli
 }
 

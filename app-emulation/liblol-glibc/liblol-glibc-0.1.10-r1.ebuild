@@ -7,7 +7,6 @@ EAPI=8
 # Please read & adapt the page as necessary if obsolete.
 
 PYTHON_COMPAT=( python3_{11..14} )
-TMPFILES_OPTIONAL=1
 
 EMULTILIB_PKG="true"
 
@@ -55,8 +54,7 @@ MIN_SYSTEMD_VER="254.9-r1"
 
 VERIFY_SIG_OPENPGP_KEY_PATH=/usr/share/openpgp-keys/glibc.asc
 
-inherit python-any-r1 prefix preserve-libs toolchain-funcs flag-o-matic gnuconfig \
-	multilib systemd multiprocessing tmpfiles eapi9-ver verify-sig
+inherit python-any-r1 toolchain-funcs flag-o-matic gnuconfig multilib verify-sig
 
 DESCRIPTION="GNU libc C library, for liblol"
 HOMEPAGE="https://www.gnu.org/software/libc/ https://liblol.aosc.io"
@@ -164,6 +162,9 @@ COMMON_DEPEND="
 "
 DEPEND="${COMMON_DEPEND}
 "
+# Keep these compatibility blockers synced with ::gentoo sys-libs/glibc.
+# pax-utils and systemd protect old installed versions with stale seccomp
+# syscall filters; liblol protects upgrades from pre-split app-emulation/liblol.
 RDEPEND="${COMMON_DEPEND}
 	!<app-emulation/liblol-0.1.0
 	!<app-misc/pax-utils-${MIN_PAX_UTILS_VER}
@@ -386,6 +387,12 @@ setup_target_flags() {
 	# when building up just the headers.
 	just_headers && return 0
 
+	local sync_fetch_test=$'void f(int i, void *p) {\n'
+	sync_fetch_test+=$'\tif (__sync_fetch_and_add(&i, 1))\n'
+	sync_fetch_test+=$'\t\tf(i, p);\n'
+	sync_fetch_test+=$'}\n'
+	sync_fetch_test+=$'int main(){return 0;}\n'
+
 	case $(tc-arch) in
 		x86)
 			# -march needed for #185404 #199334
@@ -396,7 +403,7 @@ setup_target_flags() {
 			# We could change main to _start and pass -nostdlib here so that we
 			# only test the gcc code compilation.  Or we could do a compile and
 			# then look for the symbol via scanelf.
-			if ! do_compile_test "" 'void f(int i, void *p) {if (__sync_fetch_and_add(&i, 1)) f(i, p);}\nint main(){return 0;}\n'; then
+			if ! do_compile_test "" "${sync_fetch_test}" ; then
 				local t=${CTARGET_OPT:-${CTARGET}}
 				t=${t%%-*}
 				filter-flags '-march=*'
@@ -410,7 +417,7 @@ setup_target_flags() {
 			# -march needed for #185404 #199334
 			# TODO: See cross-compile issues listed above for x86.
 			if [[ ${ABI} == x86 ]]; then
-				if ! do_compile_test "${CFLAGS_x86}" 'void f(int i, void *p) {if (__sync_fetch_and_add(&i, 1)) f(i, p);}\nint main(){return 0;}\n'; then
+				if ! do_compile_test "${CFLAGS_x86}" "${sync_fetch_test}" ; then
 					local t=${CTARGET_OPT:-${CTARGET}}
 					t=${t%%-*}
 					# Normally the target is x86_64-xxx, so turn that into the -march that
@@ -872,7 +879,11 @@ sanity_prechecks() {
 			[[ ${I_ALLOW_TO_BREAK_MY_SYSTEM} = yes ]] || die "Aborting to save your system."
 		fi
 
-		if is_linux && ! do_run_test '#include <unistd.h>\n#include <sys/syscall.h>\nint main(){return syscall(1000)!=-1;}\n' ; then
+		local syscall_test=$'#include <unistd.h>\n'
+		syscall_test+=$'#include <sys/syscall.h>\n'
+		syscall_test+=$'int main(){return syscall(1000)!=-1;}\n'
+
+		if is_linux && ! do_run_test "${syscall_test}" ; then
 			eerror "Your old kernel is broken. You need to update it to a newer"
 			eerror "version as syscall(<bignum>) will break. See bug 279260."
 			[[ ${I_ALLOW_TO_BREAK_MY_SYSTEM} = yes ]] || die "Old and broken kernel."
@@ -1088,6 +1099,11 @@ glibc_do_configure() {
 	dump_build_environment
 
 	local myconf=()
+	local perl_path=no
+
+	if use perl || use test || use doc ; then
+		perl_path="${EPREFIX}/usr/bin/perl"
+	fi
 
 	# Use '=strong' instead of '=all' to protect only functions
 	# worth protecting from stack smashes.
@@ -1171,7 +1187,7 @@ glibc_do_configure() {
 		# execute Perl during configure if we're cross-compiling a prefix, but
 		# it will just disable mtrace in that case.
 		# Note: mtrace is needed by the test suite.
-		ac_cv_path_PERL="$(usex perl "${EPREFIX}"/usr/bin/perl $(usex test "${EPREFIX}"/usr/bin/perl $(usex doc "${EPREFIX}"/usr/bin/perl no)))"
+		ac_cv_path_PERL="${perl_path}"
 
 		# locale data is arch-independent
 		# https://bugs.gentoo.org/753740
@@ -1583,8 +1599,12 @@ glibc_do_src_install() {
 
 	# We configure toolchains for standalone prefix systems with a sysroot,
 	# which is prepended to paths in ld scripts, so strip the prefix from these.
-	# Before: GROUP ( /foo/lib64/libc.so.6 /foo/usr/lib64/libc_nonshared.a  AS_NEEDED ( /foo/lib64/ld-linux-x86-64.so.2 ) )
-	# After: GROUP ( /lib64/libc.so.6 /usr/lib64/libc_nonshared.a  AS_NEEDED ( /lib64/ld-linux-x86-64.so.2 ) )
+	# Before:
+	# GROUP ( /foo/lib64/libc.so.6 /foo/usr/lib64/libc_nonshared.a
+	# AS_NEEDED ( /foo/lib64/ld-linux-x86-64.so.2 ) )
+	# After:
+	# GROUP ( /lib64/libc.so.6 /usr/lib64/libc_nonshared.a
+	# AS_NEEDED ( /lib64/ld-linux-x86-64.so.2 ) )
 	if [[ -n $(host_eprefix) ]] ; then
 		local file
 		grep -lZIF "ld script" "${ED}/$(alt_usrlibdir)"/lib*.{a,so} 2>/dev/null | while read -rd '' file ; do

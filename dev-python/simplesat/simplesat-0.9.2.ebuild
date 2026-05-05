@@ -27,4 +27,6 @@ RDEPEND="
 	dev-python/mock
 "
 
+EPYTEST_PLUGINS=()
+
 distutils_enable_tests pytest

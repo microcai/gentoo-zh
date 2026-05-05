@@ -3,11 +3,10 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{11..13} )
 # NEED_BOOTSTRAP is for developers to quickly generate a tarball
 # for publishing to the tree.
 NEED_BOOTSTRAP="no"
-inherit crossdev multibuild multilib python-any-r1 flag-o-matic toolchain-funcs multilib-minimal
+inherit crossdev multibuild multilib flag-o-matic toolchain-funcs multilib-minimal
 
 # upstream metadata
 XC_PV="4.4.38"
@@ -30,8 +29,8 @@ LICENSE="LGPL-2.1+ public-domain BSD BSD-2"
 SLOT="0/1"
 #KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
 KEYWORDS="-* ~loong"
-IUSE="static-libs test headers-only"
-RESTRICT="!test? ( test )"
+IUSE="static-libs headers-only"
+RESTRICT="test"
 
 DEPEND="
 	elibc_glibc? (
@@ -49,12 +48,7 @@ RDEPEND="${DEPEND}
 BDEPEND="
 	dev-lang/perl
 	>=dev-util/patchelf-liblol-0.1.9
-	test? ( $(python_gen_any_dep 'dev-python/passlib[${PYTHON_USEDEP}]') )
 "
-
-python_check_deps() {
-	python_has_version "dev-python/passlib[${PYTHON_USEDEP}]"
-}
 
 pkg_pretend() {
 	if has "distcc" ${FEATURES} ; then
@@ -159,10 +153,6 @@ src_configure() {
 	filter-lto
 
 	append-ldflags $(test-flags-CCLD -Wl,--undefined-version)
-
-	if use test; then
-		python_setup
-	fi
 
 	multibuild_foreach_variant multilib-minimal_src_configure
 }

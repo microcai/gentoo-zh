@@ -11,6 +11,7 @@ HOMEPAGE="https://www.deepin.org"
 
 COMMON_URI="https://home-store-packages.uniontech.com/appstore/pool/appstore/d"
 SRC_URI="${COMMON_URI}/${PN}/${PN}_${PV}-1_i386.deb"
+S=${WORKDIR}
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -22,8 +23,6 @@ RDEPEND="
 	${PYTHON_DEPS}
 "
 DEPEND="${RDEPEND}"
-
-S=${WORKDIR}
 
 QA_PREBUILT="opt/deepinwine/*"
 QA_FLAGS_IGNORED="opt/deepinwine/*"

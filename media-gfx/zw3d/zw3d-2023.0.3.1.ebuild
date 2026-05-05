@@ -9,6 +9,7 @@ inherit unpacker xdg
 DESCRIPTION="CAD/CAM software for 3D design and processing"
 HOMEPAGE="https://www.zwsoft.cn/product/zw3d/linux"
 SRC_URI="https://home-store-packages.uniontech.com/appstore/pool/appstore/c/${MY_PGK_NAME}/${MY_PGK_NAME}_${PV}_amd64.deb -> ${P}.deb"
+S=${WORKDIR}
 
 LICENSE="all-rights-reserved"
 SLOT="0"
@@ -24,11 +25,6 @@ RDEPEND="
 	dev-libs/glib:2
 	dev-libs/libpcre
 	dev-libs/libxml2
-	dev-qt/qtcore:5
-	dev-qt/qtgui:5
-	dev-qt/qtnetwork:5
-	dev-qt/qtprintsupport:5
-	dev-qt/qtsvg:5
 	media-fonts/noto-cjk
 	media-gfx/imagemagick
 	media-libs/jbigkit
@@ -59,8 +55,6 @@ BDEPEND="
 	dev-util/bbe
 	dev-util/patchelf
 "
-
-S=${WORKDIR}
 
 QA_PREBUILT="*"
 

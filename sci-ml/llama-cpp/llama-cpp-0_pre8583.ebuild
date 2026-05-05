@@ -60,19 +60,21 @@ REQUIRED_USE="
 	?? ( openblas blis flexiblas )
 	rocm? ( ${ROCM_REQUIRED_USE} )
 	wmma? ( rocm )
-	riscv? ( !rocm )
+	riscv? ( !blis !rocm !wmma )
 "
 
 CDEPEND="
 	dev-libs/openssl
 	openmp? ( llvm-runtimes/openmp:= )
 	openblas? ( sci-libs/openblas:= )
-	blis? ( sci-libs/blis:= )
 	flexiblas? ( sci-libs/flexiblas:= )
-	rocm? (
-		>=dev-util/hip-${ROCM_VERSION}
-		>=sci-libs/hipBLAS-${ROCM_VERSION}
-		wmma? ( >=sci-libs/rocWMMA-${ROCM_VERSION} )
+	amd64? (
+		blis? ( sci-libs/blis:= )
+		rocm? (
+			>=dev-util/hip-${ROCM_VERSION}
+			>=sci-libs/hipBLAS-${ROCM_VERSION}
+			wmma? ( >=sci-libs/rocWMMA-${ROCM_VERSION} )
+		)
 	)
 	cuda? ( dev-util/nvidia-cuda-toolkit:= )
 "
