@@ -1,27 +1,32 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
 #Note: to bump xanmod, check K_GENPATCHES_VER in sys-kernel/gentoo-sources
-K_GENPATCHES_VER="9"
+K_GENPATCHES_VER="13"
 
 inherit check-reqs kernel-2
 detect_version
 detect_arch
 
 MY_P=linux-${PV%.*}
+GENPATCHES_P="genpatches-${PV%.*}-${K_GENPATCHES_VER}"
+GENPATCHES_URI="
+	https://distfiles.gentoo.org/pub/proj/kernel/genpatches/${GENPATCHES_P}.base.tar.xz
+	https://distfiles.gentoo.org/pub/proj/kernel/genpatches/${GENPATCHES_P}.extras.tar.xz
+"
 DESCRIPTION="Full XanMod source, including the Gentoo patchset and other patch options."
 HOMEPAGE="https://xanmod.org"
 
 XANMOD_VERSION="1"
-XANMOD_URI="https://master.dl.sourceforge.net/project/xanmod/releases/main"
+XANMOD_URI="https://downloads.sourceforge.net/project/xanmod/releases/main"
 OKV="${OKV}-xanmod"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
 	${GENPATCHES_URI}
-	https://master.dl.sourceforge.net/project/xanmod/releases/main/${PV}-xanmod1/patch-${PV}-xanmod1.xz
+	${XANMOD_URI}/${PV}-xanmod${XANMOD_VERSION}/patch-${PV}-xanmod${XANMOD_VERSION}.xz
 "
 S="${WORKDIR}/linux-${OKV}${XANMOD_VERSION}"
 
@@ -43,13 +48,11 @@ src_prepare() {
 	rm "${S}/tools/testing/selftests/tc-testing/action-ebpf"
 	# delete linux version patches
 	rm "${WORKDIR}"/*${MY_P}*.patch
-	# delete failed patches
-	rm "${WORKDIR}/1710_disable_sse4a.patch"
-	rm "${WORKDIR}/2701-drm-amdgpu-don-t-attach-the-tlb-fence-for-SI.patch"
 
 	local PATCHES=(
 		# xanmod patches
 		"${WORKDIR}"/patch-${PV}-xanmod${XANMOD_VERSION}
+		"${FILESDIR}"/xanmod-6.19.14-x86-l1-cache-shift-fallback.patch
 		# genpatches
 		"${WORKDIR}"/*.patch
 	)
