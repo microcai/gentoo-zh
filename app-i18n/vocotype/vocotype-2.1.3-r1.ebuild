@@ -53,7 +53,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="+fcitx ibus +rime systemd"
+IUSE="+fcitx ibus +rime"
 REQUIRED_USE="
 	|| ( ibus fcitx )
 	${PYTHON_REQUIRED_USE}
@@ -96,6 +96,7 @@ RESTRICT="test"
 PATCHES=(
 	"${FILESDIR}/${P}-download-models.patch"
 	"${FILESDIR}/${P}-fcitx5-system-install.patch"
+	"${FILESDIR}/${P}-audio-fixes.patch"
 )
 
 src_prepare() {
@@ -152,6 +153,11 @@ python_install() {
 		python_scriptinto /usr/bin
 		python_newscript fcitx5/backend/fcitx5_server.py vocotype-fcitx5-backend
 	fi
+
+	# Audio device override wizard. Optional; default behaviour follows
+	# the system default input source without any conf file.
+	python_scriptinto /usr/bin
+	python_newscript scripts/setup-audio.py vocotype-setup-audio
 }
 
 src_install() {
@@ -181,12 +187,12 @@ src_install() {
 		insinto /usr/share/vocotype
 		doins fcitx5/backend/audio_recorder.py
 
-		# systemd user service
-		if use systemd; then
-			systemd_douserunit "${FILESDIR}/vocotype-fcitx5-backend.service"
-		fi
+		# systemd user service (small file, install unconditionally per devmanual)
+		systemd_douserunit "${FILESDIR}/vocotype-fcitx5-backend.service"
 
-		# XDG autostart for non-systemd setups
+		# XDG autostart for the desktop session. The Exec= line defers to
+		# the systemd unit when available and falls back to running the
+		# binary directly, so a single backend starts in either setup.
 		insinto /etc/xdg/autostart
 		doins "${FILESDIR}/vocotype-fcitx5-backend.desktop"
 	fi
@@ -224,13 +230,17 @@ pkg_postinst() {
 		elog ""
 	fi
 	if use fcitx; then
-		elog "For Fcitx5: start the backend service and restart Fcitx5."
-		if use systemd; then
-			elog "  systemctl --user enable --now vocotype-fcitx5-backend.service"
-		fi
+		elog "For Fcitx5: the backend autostarts on the next desktop login."
+		elog "Then restart Fcitx5 to pick up the addon:"
 		elog "  fcitx5 -r"
 		elog ""
 	fi
+	elog "VoCoType follows the system default input device on PipeWire/"
+	elog "PulseAudio. To inspect or change the active microphone:"
+	elog "  wpctl status            # list sources, default marked with *"
+	elog "  pavucontrol             # GUI: Recording / Input Devices tab"
+	elog "To pin a specific microphone, run: vocotype-setup-audio"
+	elog ""
 	elog "Usage: Press and hold F9 to speak, release to recognize."
 }
 

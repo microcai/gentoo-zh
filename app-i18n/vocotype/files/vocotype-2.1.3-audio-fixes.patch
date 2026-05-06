@@ -1,0 +1,242 @@
+From: Huang Rui <vowstar@gmail.com>
+Subject: [PATCH] audio: pick the server-virtual default mic and resample without aliasing
+
+PortAudio on Gentoo has no native PipeWire/PulseAudio host API, so
+sounddevice only ever sees ALSA devices. The previous fallback grabbed
+the first ALSA device with input channels, which on most desktops is a
+hardware capture card (e.g. hw:0,0) rather than the PipeWire-injected
+"default" / "pulse" virtual PCM that follows the user's wpctl /
+pavucontrol selection. Recording from the wrong jack and then linearly
+resampling 44.1 kHz -> 16 kHz with np.interp (no anti-aliasing low-pass)
+together produced garbled recognition that surfaced as upstream issue #5.
+
+Three changes:
+
+1. resolve_default_input_device() picks: explicit override -> ALSA
+   "default" -> ALSA "pulse" -> PortAudio sd.default.device[0] -> first
+   input device. This matches the source the user sees in pavucontrol on
+   PipeWire/PulseAudio systems.
+
+2. Ask the sound server for 16 kHz directly. PipeWire/PulseAudio carry
+   band-limited resamplers, so the client doesn't have to resample. Only
+   fall back to native rate + client-side resample when the server
+   refuses 16 kHz. load_audio_config now returns (None, None) when no
+   audio.conf exists, signalling "use server default rate".
+
+3. Replace np.interp with librosa.resample(res_type="soxr_hq") for the
+   client-side fallback. librosa is already an RDEPEND and soxr_hq
+   provides FIR low-pass + polyphase filtering.
+
+Also drop the sys.path hack in scripts/setup-audio.py so it works when
+installed system-wide (app/ comes from site-packages).
+diff --color -urN vocotype-orig/app/audio_capture.py vocotype-new/app/audio_capture.py
+--- a/app/audio_capture.py	2026-05-06 18:54:19.381655023 +0800
++++ b/app/audio_capture.py	2026-05-06 18:55:25.399785562 +0800
+@@ -10,6 +10,8 @@
+ import numpy as np
+ import sounddevice as sd
+ 
++from app.audio_utils import resolve_default_input_device
++
+ 
+ logger = logging.getLogger(__name__)
+ 
+@@ -50,12 +52,13 @@
+                 return
+ 
+             self.flush()
+-            self._stream = self._create_stream(self.device)
++            device = self.device if self.device is not None else resolve_default_input_device()
++            self._stream = self._create_stream(device)
+             try:
+                 self._stream.start()
+             except Exception:
+                 self._stream.close()
+-                self._stream = self._create_stream(self._fallback_device())
++                self._stream = self._create_stream(resolve_default_input_device())
+                 self._stream.start()
+ 
+             self._running = True
+@@ -100,19 +103,6 @@
+             logger.error(msg)
+             raise AudioCaptureError(msg) from exc
+ 
+-    def _fallback_device(self) -> Optional[int]:
+-        try:
+-            devices = sd.query_devices()
+-            for idx, info in enumerate(devices):
+-                if info.get("max_input_channels", 0) > 0:
+-                    logger.warning(
+-                        "回退至输入设备 #%s (%s)", idx, info.get("name", "unknown")
+-                    )
+-                    return idx
+-        except Exception as exc:
+-            logger.error("查询音频设备失败: %s", exc)
+-        return None
+-
+     def _callback(self, in_data, frames, time, status):  # type: ignore[override]
+         if status:
+             logger.warning("音频流状态: %s", status)
+diff --color -urN vocotype-orig/app/audio_utils.py vocotype-new/app/audio_utils.py
+--- a/app/audio_utils.py	2026-05-06 18:54:19.381639383 +0800
++++ b/app/audio_utils.py	2026-05-06 18:54:46.828750594 +0800
+@@ -17,16 +17,63 @@
+ DEFAULT_NATIVE_SAMPLE_RATE = 44100
+ 
+ 
+-def load_audio_config() -> tuple[int | str | None, int]:
+-    """从配置文件加载音频设备配置
++def resolve_default_input_device() -> int | None:
++    """挑选用户实际的默认麦克风。
++
++    优先级：
++      1. ALSA "default" / "pulse" 这两个由 PipeWire/PulseAudio 注入的虚拟
++         PCM，跟随 wpctl/pavucontrol 选择的默认源。
++      2. PortAudio 自己认定的 default (sd.default.device[0])。
++      3. 第一个有输入通道的设备（兜底）。
++    """
++    import sounddevice as sd
++
++    try:
++        devices = list(sd.query_devices())
++    except Exception as exc:
++        logger.warning("查询音频设备列表失败: %s", exc)
++        return None
++
++    for preferred in ("default", "pulse"):
++        for idx, info in enumerate(devices):
++            if info.get("name") == preferred and info.get("max_input_channels", 0) > 0:
++                logger.info("使用服务器虚拟设备 #%s (%s)", idx, preferred)
++                return idx
++
++    try:
++        pa_default = sd.default.device[0]
++        if pa_default is not None and pa_default >= 0:
++            info = devices[pa_default]
++            if info.get("max_input_channels", 0) > 0:
++                logger.info(
++                    "使用 PortAudio 默认设备 #%s (%s)",
++                    pa_default,
++                    info.get("name", "unknown"),
++                )
++                return pa_default
++    except Exception:
++        pass
++
++    for idx, info in enumerate(devices):
++        if info.get("max_input_channels", 0) > 0:
++            logger.info("回退至输入设备 #%s (%s)", idx, info.get("name", "unknown"))
++            return idx
++
++    logger.warning("没有发现可用的音频输入设备")
++    return None
++
++
++def load_audio_config() -> tuple[int | str | None, int | None]:
++    """从配置文件加载音频设备配置。
+ 
+     Returns:
+-        (device, sample_rate): 设备（可能为 None、整数 ID 或字符串名称）和采样率
++        (device, sample_rate): 没有配置文件时返回 (None, None)，让调用方使用
++        服务器虚拟设备并直接请求 16 kHz；配置文件存在则按内容返回。
+     """
+     config_file = Path.home() / ".config" / "vocotype" / "audio.conf"
+     if not config_file.exists():
+-        logger.warning("音频配置文件不存在: %s，使用默认设备", config_file)
+-        return None, DEFAULT_NATIVE_SAMPLE_RATE
++        logger.info("未找到 %s，使用系统默认输入设备", config_file)
++        return None, None
+ 
+     try:
+         import configparser
+@@ -47,7 +94,7 @@
+         return device_id, sample_rate
+     except Exception as e:
+         logger.warning("读取音频配置失败: %s，使用默认设备", e)
+-        return None, DEFAULT_NATIVE_SAMPLE_RATE
++        return None, None
+ 
+ 
+ def resample_audio(audio: np.ndarray, orig_sr: int, target_sr: int) -> np.ndarray:
+@@ -63,7 +110,14 @@
+     """
+     if orig_sr == target_sr:
+         return audio
+-    duration = len(audio) / orig_sr
+-    target_length = int(duration * target_sr)
+-    indices = np.linspace(0, len(audio) - 1, target_length)
+-    return np.interp(indices, np.arange(len(audio)), audio.astype(np.float32)).astype(np.int16)
++
++    import librosa
++
++    float_audio = audio.astype(np.float32) / 32768.0
++    resampled = librosa.resample(
++        float_audio,
++        orig_sr=orig_sr,
++        target_sr=target_sr,
++        res_type="soxr_hq",
++    )
++    return np.clip(resampled * 32768.0, -32768, 32767).astype(np.int16)
+diff --color -urN vocotype-orig/fcitx5/backend/audio_recorder.py vocotype-new/fcitx5/backend/audio_recorder.py
+--- a/fcitx5/backend/audio_recorder.py	2026-05-06 18:54:19.383937056 +0800
++++ b/fcitx5/backend/audio_recorder.py	2026-05-06 18:55:10.033372996 +0800
+@@ -22,7 +22,12 @@
+ import numpy as np
+ import sounddevice as sd
+ 
+-from app.audio_utils import load_audio_config, resample_audio, SAMPLE_RATE
++from app.audio_utils import (
++    load_audio_config,
++    resample_audio,
++    resolve_default_input_device,
++    SAMPLE_RATE,
++)
+ from app.wave_writer import write_wav
+ 
+ logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+@@ -51,16 +56,7 @@
+             except Exception as exc:
+                 logger.warning("查询设备 %s 失败: %s", self.device, exc)
+ 
+-        try:
+-            devices = sd.query_devices()
+-            for idx, info in enumerate(devices):
+-                if info.get("max_input_channels", 0) > 0:
+-                    logger.info("回退至输入设备 #%s (%s)", idx, info.get("name", "unknown"))
+-                    return idx
+-        except Exception as exc:
+-            logger.warning("查询输入设备列表失败: %s", exc)
+-
+-        return None
++        return resolve_default_input_device()
+ 
+     def _resolve_sample_rate(self, device, preferred):
+         """选择可用采样率"""
+@@ -209,7 +205,12 @@
+     device = args.device if args.device is not None else configured_device
+     if isinstance(device, str) and device.isdigit():
+         device = int(device)
+-    sample_rate = args.sample_rate if args.sample_rate != 44100 else configured_sr
++    # Ask the sound server for 16 kHz directly so PipeWire/PulseAudio resample
++    # with proper anti-aliasing. Honour an explicit configured rate if set.
++    if args.sample_rate != 44100:
++        sample_rate = args.sample_rate
++    else:
++        sample_rate = configured_sr if configured_sr else SAMPLE_RATE
+ 
+     # 录音
+     recorder = AudioRecorder(device, sample_rate)
+diff --color -urN vocotype-orig/scripts/setup-audio.py vocotype-new/scripts/setup-audio.py
+--- a/scripts/setup-audio.py	2026-05-06 18:54:19.381711231 +0800
++++ b/scripts/setup-audio.py	2026-05-06 18:55:30.815931052 +0800
+@@ -15,10 +15,6 @@
+ import numpy as np
+ import sounddevice as sd
+ 
+-# 添加项目根目录到 path
+-PROJECT_ROOT = Path(__file__).parent.parent
+-sys.path.insert(0, str(PROJECT_ROOT))
+-
+ from app.wave_writer import write_wav
+ 
+ TARGET_SAMPLE_RATE = 16000

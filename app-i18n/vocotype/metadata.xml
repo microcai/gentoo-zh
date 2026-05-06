@@ -9,7 +9,6 @@
 		<flag name="ibus">Enable IBus input method framework support</flag>
 		<flag name="fcitx">Enable Fcitx5 input method framework support (builds C++ addon)</flag>
 		<flag name="rime">Enable Rime pinyin integration for text input alongside voice</flag>
-		<flag name="systemd">Install systemd user service for Fcitx5 backend</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">LeonardNJU/VocoType-linux</remote-id>
