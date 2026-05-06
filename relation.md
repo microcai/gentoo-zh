@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-06 14:25:09 CST)
+(The last generation time: 2026-05-06 16:09:27 CST)
 
 ### Packages
 
@@ -233,7 +233,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/wik                                          | 2.0.1              |            | https://github.com/yashsinghcodes/wik                                                   | Wikipedia like a man - in the terminal, without images, with caching
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-text/wiki2man_on_rust                             | 0.1.7              |            | https://gitlab.com/vitaly-zdanevich/wiki2man_on_rust                                    | Convert MediaWiki XML dumps into man(7) pages - so you can read Wikipedia in man
+ app-text/wiki2man_on_rust                             | 0.1.10             |            | https://gitlab.com/vitaly-zdanevich/wiki2man_on_rust                                    | Convert MediaWiki XML dumps into man(7) pages - so you can read Wikipedia in man
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/easymotion                                    | 1.3                |            | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: Vim motions on speed!
                                                        | 3.0.1              |            |                                                                                         |
@@ -369,7 +369,7 @@
  dev-util/fvm                                          | 4.0.5              |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
    dev-lang/dart                                       | 3.11.3             |  D, RD     | https://dart.dev                                                                        | The Dart SDK
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/gemini-cli                                   | 0.40.1             |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
+ dev-util/gemini-cli                                   | 0.41.1             |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/jetbrains-toolbox                            | 3.2.0.65851        |            | https://www.jetbrains.com/toolbox-app/                                                  | Manage all your JetBrains Projects and Tools
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
