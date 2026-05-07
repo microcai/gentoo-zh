@@ -256,6 +256,13 @@ source = "regex"
 url = "https://www.scootersoftware.com/kb/linux_install"
 regex = "bcompare-([\\d.]+).x86_64.tar.gz"
 
+["app-misc/cc-switch"]
+source = "github"
+github = "farion1231/cc-switch"
+use_latest_release = true
+prefix = "v"
+github_account = "liangyongxiang"
+
 ["app-misc/cc-switch-bin"]
 source = "github"
 github = "farion1231/cc-switch"
