@@ -256,6 +256,13 @@ source = "regex"
 url = "https://www.scootersoftware.com/kb/linux_install"
 regex = "bcompare-([\\d.]+).x86_64.tar.gz"
 
+["app-misc/cc-switch-bin"]
+source = "github"
+github = "farion1231/cc-switch"
+use_latest_release = true
+prefix = "v"
+github_account = "liangyongxiang"
+
 # dead website, http status code 599
 # ["app-misc/ccal"]
 # source = "regex"
