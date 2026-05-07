@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+	<maintainer type="person">
+		<email>tanekliang@gmail.com</email>
+		<name>Yongxiang Liang</name>
+	</maintainer>
+	<upstream>
+		<bugs-to>https://github.com/Loongphy/codex-auth/issues</bugs-to>
+		<remote-id type="github">Loongphy/codex-auth</remote-id>
+	</upstream>
+</pkgmetadata>

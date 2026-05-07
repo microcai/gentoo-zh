@@ -270,6 +270,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "liangyongxiang"
 
+["app-misc/codex-auth"]
+source = "github"
+github = "Loongphy/codex-auth"
+use_latest_release = true
+prefix = "v"
+github_account = "liangyongxiang"
+
 # dead website, http status code 599
 # ["app-misc/ccal"]
 # source = "regex"
