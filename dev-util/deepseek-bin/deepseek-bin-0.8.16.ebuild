@@ -22,6 +22,8 @@ SRC_URI="
 
 S="${WORKDIR}"
 
+inherit shell-completion
+
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
@@ -44,9 +46,21 @@ src_prepare() {
 			die "Unsupported arch ${ARCH}"
 			;;
 	esac
+
+	chmod +x deepseek deepseek-tui || die
 }
 
 src_install() {
 	exeinto /usr/bin
 	doexe deepseek deepseek-tui
+
+	# shell completions
+	./deepseek completions bash > deepseek.bash || die
+	dobashcomp deepseek.bash
+
+	./deepseek completions zsh > _deepseek || die
+	dozshcomp _deepseek
+
+	./deepseek completions fish > deepseek.fish || die
+	dofishcomp deepseek.fish
 }
