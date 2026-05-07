@@ -18,7 +18,4 @@ jobs:
     - name: Run pkgcheck
       uses: pkgcore/pkgcheck-action@v1
       with:
-        args: >-
-          --checks=-RedundantVersionCheck
-          --keywords=-NonsolvableDepsInDev,-PotentialStable
-          --exit=NonexistentDeps
+        args: --checks=-RedundantVersionCheck --keywords=-NonsolvableDepsInDev --exit=NonexistentDeps
