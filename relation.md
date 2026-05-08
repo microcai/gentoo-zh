@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-08 13:48:54 CST)
+(The last generation time: 2026-05-08 15:44:23 CST)
 
 ### Packages
 
@@ -160,6 +160,8 @@
  app-misc/cc-switch                                    | 3.14.1             |            | https://github.com/farion1231/cc-switch                                                 | All-in-One Assistant for Claude Code, Codex & Gemini CLI
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/cc-switch-bin                                | 3.14.1             |            | https://github.com/farion1231/cc-switch                                                 | All-in-one manager for Claude Code, Codex, Gemini CLI, OpenCode, and OpenClaw
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ app-misc/codex-auth                                   | 0.2.8              |            | https://github.com/Loongphy/codex-auth                                                  | Command-line tool for switching Codex accounts
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/copilot                                      | 0.0.327            |            | https://github.com/github/copilot-cli                                                   | The power of GitHub Copilot, now in your terminal
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
