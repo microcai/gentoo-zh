@@ -13,11 +13,14 @@ declare -A GIT_CRATES=(
 	[console-api]='https://github.com/tokio-rs/console;59e23edf17b0e42e87e315bfc9cbb8a6ba2f401f;console-%commit%/console-api'
 	[console-subscriber]='https://github.com/tokio-rs/console;59e23edf17b0e42e87e315bfc9cbb8a6ba2f401f;console-%commit%/console-subscriber'
 	[netstack-lwip]='https://github.com/eycorsican/netstack-lwip;f434fefd6c227c9dfbec84c364452ba6c1532779;netstack-lwip-%commit%'
+	[quinn-proto]='https://github.com/Tipuch/quinn;ce60e5b5c115db2a6053f4e0ca7fc52103cb76b9;quinn-%commit%/quinn-proto'
+	[quinn-udp]='https://github.com/Tipuch/quinn;ce60e5b5c115db2a6053f4e0ca7fc52103cb76b9;quinn-%commit%/quinn-udp'
+	[quinn]='https://github.com/Tipuch/quinn;ce60e5b5c115db2a6053f4e0ca7fc52103cb76b9;quinn-%commit%/quinn'
 	[shadowsocks]='https://github.com/Watfaq/shadowsocks-rust;dee2d932dc580e0e1b7a5a591ff5f8c51f70495e;shadowsocks-rust-%commit%/crates/shadowsocks'
 	[smoltcp]='https://github.com/smoltcp-rs/smoltcp;ac32e643a4b7e09161193071526b3ca5a0deedb5;smoltcp-%commit%'
 	[sock2proc]='https://github.com/Watfaq/sock2proc;9f9e6304d62285115b2e4fa632527ae563bf0fcc;sock2proc-%commit%'
 	[tokio-watfaq-rustls]='https://github.com/Watfaq/tokio-rustls;cf8961ac1a36e580d0e38bedc8a41ca4a9b301e8;tokio-rustls-%commit%'
-	[tuic-core]='https://github.com/Itsusinn/tuic;4843d04b1584f49b503e344e2a96041e16fe8938;tuic-%commit%/tuic-core'
+	[tuic-core]='https://github.com/Itsusinn/tuic;18b74bcf11fe33caf9dcfc9e2d6685c5230a2e0a;tuic-%commit%/tuic-core'
 	[unix-udp-sock]='https://github.com/Watfaq/unix-udp-sock;847c80b519f0fd8cff5c887ae708429897d08671;unix-udp-sock-%commit%'
 	[watfaq-rustls]='https://github.com/Watfaq/rustls;c3ab043d673029d245fd618b9bc86fd6a6109bae;rustls-%commit%/rustls'
 )
@@ -56,7 +59,7 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}/${P}-remove-default-dashboard.patch"
+	"${FILESDIR}/${PN}-0.10.2-remove-default-dashboard.patch"
 )
 
 gen_git_crate_dir() {
