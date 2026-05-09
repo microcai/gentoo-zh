@@ -4,8 +4,8 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-#Note: to bump xanmod, check K_GENPATCHES_VER in sys-kernel/gentoo-sources
-K_GENPATCHES_VER="13"
+# Note: to bump xanmod, check K_GENPATCHES_VER in sys-kernel/gentoo-sources
+K_GENPATCHES_VER="6"
 
 inherit check-reqs kernel-2
 detect_version
@@ -52,7 +52,7 @@ src_prepare() {
 	local PATCHES=(
 		# xanmod patches
 		"${WORKDIR}"/patch-${PV}-xanmod${XANMOD_VERSION}
-		"${FILESDIR}"/xanmod-6.19.14-x86-l1-cache-shift-fallback.patch
+		"${FILESDIR}"/xanmod-7.0.4-x86-l1-cache-shift-fallback.patch
 		# genpatches
 		"${WORKDIR}"/*.patch
 	)
