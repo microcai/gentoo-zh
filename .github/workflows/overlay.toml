@@ -277,6 +277,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "liangyongxiang"
 
+["app-misc/cc-switch-cli"]
+source = "github"
+github = "SaladDay/cc-switch-cli"
+use_latest_release = true
+prefix = "v"
+github_account = "liangyongxiang"
+
 # dead website, http status code 599
 # ["app-misc/ccal"]
 # source = "regex"
