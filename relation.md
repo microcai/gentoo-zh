@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-09 13:21:33 CST)
+(The last generation time: 2026-05-09 20:03:27 CST)
 
 ### Packages
 
@@ -369,8 +369,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/codex                                        | 0.129.0            |            | https://github.com/openai/codex                                                         | Codex CLI - OpenAI's AI-powered coding agent
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/deepseek-bin                                 | 0.8.16             |            | https://github.com/Hmbown/DeepSeek-TUI                                                  | Coding agent for DeepSeek models with terminal TUI
-                                                       | 9999               |            |                                                                                         |
+ dev-util/deepseek-bin                                 | 9999               |            | https://github.com/douglarek/deepseek-tui-nightly                                       | Coding agent for DeepSeek models with terminal TUI
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/fvm                                          | 4.0.5              |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
    dev-lang/dart                                       | 3.11.3             |  D, RD     | https://dart.dev                                                                        | The Dart SDK
