@@ -1,0 +1,44 @@
+#!/sbin/openrc-run
+# Copyright 2025 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+description="ReFrame remote desktop streamer"
+
+instance="${RC_SVCNAME#*.}"
+if [ "${instance}" = "${RC_SVCNAME}" ]; then
+	instance=default
+fi
+
+: "${REFRAME_CONFBASEDIR:=/etc/reframe}"
+: "${REFRAME_SOCKETDIR:=/run/reframe}"
+: "${REFRAME_LOGDIR:=/var/log/reframe}"
+
+cfgfile="${REFRAME_CONFBASEDIR}/${instance}.conf"
+if [ "${instance}" = default ] && [ ! -f "${cfgfile}" ] \
+	&& [ -f "${REFRAME_CONFBASEDIR}/example.conf" ]; then
+	cfgfile="${REFRAME_CONFBASEDIR}/example.conf"
+fi
+
+command="/usr/bin/reframe-streamer"
+command_args="--config=${cfgfile} --socket=${REFRAME_SOCKETDIR}/${instance}.sock"
+supervisor=supervise-daemon
+pidfile="/run/${RC_SVCNAME}.pid"
+output_log="${REFRAME_LOGDIR}/${RC_SVCNAME}.log"
+error_log="${REFRAME_LOGDIR}/${RC_SVCNAME}.log"
+
+depend() {
+	after localmount
+	use net
+}
+
+start_pre() {
+	if [ ! -f "${cfgfile}" ]; then
+		eerror "Configuration file ${cfgfile} not found."
+		eerror "Create one based on ${REFRAME_CONFBASEDIR}/example.conf"
+		return 1
+	fi
+
+	checkpath -d -m 0755 -o root:root "${REFRAME_SOCKETDIR}"
+	checkpath -d -m 0755 -o root:root "${REFRAME_LOGDIR}"
+	checkpath -f -m 0644 -o root:root "${output_log}"
+}

@@ -1,0 +1,54 @@
+#!/sbin/openrc-run
+# Copyright 2025 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+description="ReFrame remote desktop server"
+
+instance="${RC_SVCNAME#*.}"
+if [ "${instance}" = "${RC_SVCNAME}" ]; then
+	instance=default
+fi
+
+: "${REFRAME_CONFBASEDIR:=/etc/reframe}"
+: "${REFRAME_USER:=reframe}"
+: "${REFRAME_GROUP:=reframe}"
+: "${REFRAME_SOCKETDIR:=/run/reframe}"
+: "${REFRAME_SESSION_SOCKETDIR:=/run/reframe-session}"
+: "${REFRAME_LOGDIR:=/var/log/reframe}"
+
+cfgfile="${REFRAME_CONFBASEDIR}/${instance}.conf"
+if [ "${instance}" = default ] && [ ! -f "${cfgfile}" ] \
+	&& [ -f "${REFRAME_CONFBASEDIR}/example.conf" ]; then
+	cfgfile="${REFRAME_CONFBASEDIR}/example.conf"
+fi
+
+command="/usr/bin/reframe-server"
+command_user="${REFRAME_USER}:${REFRAME_GROUP}"
+command_args="--config=${cfgfile} --socket=${REFRAME_SOCKETDIR}/${instance}.sock --session-socket=${REFRAME_SESSION_SOCKETDIR}/${instance}.sock"
+supervisor=supervise-daemon
+supervise_daemon_args="-e EGL_PLATFORM=surfaceless"
+pidfile="/run/${RC_SVCNAME}.pid"
+output_log="${REFRAME_LOGDIR}/${RC_SVCNAME}.log"
+error_log="${REFRAME_LOGDIR}/${RC_SVCNAME}.log"
+
+depend() {
+	if [ "${instance}" = default ]; then
+		need reframe-streamer
+	else
+		need "reframe-streamer.${instance}"
+	fi
+	use net
+}
+
+start_pre() {
+	if [ ! -f "${cfgfile}" ]; then
+		eerror "Configuration file ${cfgfile} not found."
+		eerror "Create one based on ${REFRAME_CONFBASEDIR}/example.conf"
+		return 1
+	fi
+
+	checkpath -d -m 0755 -o root:root "${REFRAME_SOCKETDIR}"
+	checkpath -d -m 0755 -o "${command_user}" "${REFRAME_SESSION_SOCKETDIR}"
+	checkpath -d -m 0755 -o "${command_user}" "${REFRAME_LOGDIR}"
+	checkpath -f -m 0644 -o "${command_user}" "${output_log}"
+}

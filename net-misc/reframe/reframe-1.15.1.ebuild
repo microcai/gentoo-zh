@@ -58,6 +58,20 @@ src_configure() {
 	meson_src_configure
 }
 
+src_install() {
+	meson_src_install
+
+	newinitd "${FILESDIR}/reframe-server.initd" reframe-server
+	newinitd "${FILESDIR}/reframe-streamer.initd" reframe-streamer
+	newconfd "${FILESDIR}/reframe.confd" reframe-server
+	newconfd "${FILESDIR}/reframe.confd" reframe-streamer
+
+	if use neatvnc; then
+		sed -i -e 's/^type=libvncserver$/type=neatvnc/' \
+			"${ED}/etc/reframe/example.conf" || die
+	fi
+}
+
 pkg_postinst() {
 	if use systemd; then
 		tmpfiles_process reframe-tmpfiles.conf
