@@ -8,12 +8,11 @@ LLVM_COMPAT=(19 20 21)
 inherit kernel-build toolchain-funcs llvm-r2
 
 MY_P=linux-${PV%.*}
-#Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
-PATCHSET=linux-gentoo-patches-6.19.6
-GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.}))
+# Note: to bump xanmod, check PATCHSET in sys-kernel/gentoo-kernel
+PATCHSET=linux-gentoo-patches-7.0.5
 XV="1"
 
-DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
+DESCRIPTION="XanMod kernel built with Gentoo patches and cjktty"
 HOMEPAGE="
 	https://www.kernel.org/
 	https://xanmod.org/
@@ -75,7 +74,7 @@ src_prepare() {
 	local PATCHES=(
 		# xanmod patches
 		"${WORKDIR}"/patch-${PV}-xanmod${XV}
-		"${FILESDIR}"/xanmod-6.19.14-x86-l1-cache-shift-fallback.patch
+		"${FILESDIR}"/xanmod-7.0.4-x86-l1-cache-shift-fallback.patch
 		# genpatches
 		"${WORKDIR}/${PATCHSET}"/*.patch
 	)
