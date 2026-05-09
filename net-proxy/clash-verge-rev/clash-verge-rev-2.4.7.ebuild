@@ -25,16 +25,18 @@ HOMEPAGE="
 	https://github.com/clash-verge-rev/clash-verge-rev
 "
 # Web dist tarball generared from liuyujielol/gentoo-go-deps/blob/cvr/.github/workflows/generator.yml
+DEPS_URI="https://github.com/liuyujielol/gentoo-go-deps/releases/download"
 SRC_URI="
 	https://github.com/clash-verge-rev/clash-verge-rev/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/liuyujielol/gentoo-go-deps/releases/download/${P}/${P/-rev/}-crates.tar.xz
-	https://github.com/liuyujielol/gentoo-go-deps/releases/download/${P}/${P}-web.tar.xz
+	${DEPS_URI}/${P}/${P/-rev/}-crates.tar.xz
+	${DEPS_URI}/${P}/${P}-web.tar.xz
 "
-SERVICE_PV="2.3.0"
-SERVICE_P="clash-verge-service-ipc-${SERVICE_PV}"
+# Use macthing commit from git crates
+SERVICE_PV="2.1.3" # pycargoebuild use version from Cargo.toml in generated filename
+SERVICE_COMMIT="360f205a12c6c2fe229d09252a41e3253ed6be3e"
+SERVICE_P="clash-verge-service-ipc-${SERVICE_COMMIT}"
 SRC_URI+="
-	https://github.com/clash-verge-rev/clash-verge-service-ipc/archive/refs/tags/v${SERVICE_PV}.tar.gz -> ${SERVICE_P}.tar.gz
-	https://github.com/liuyujielol/gentoo-go-deps/releases/download/${SERVICE_P}/clash_verge_service_ipc-${SERVICE_PV}-crates.tar.xz
+	${DEPS_URI}/${SERVICE_P}/clash_verge_service_ipc-${SERVICE_PV}-crates.tar.xz -> ${SERVICE_P}-crates.tar.xz
 "
 SRC_URI+=" ${CARGO_CRATE_URIS}"
 LICENSE="GPL-3"
