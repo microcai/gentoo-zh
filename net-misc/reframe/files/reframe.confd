@@ -1,0 +1,28 @@
+# Shared configuration for reframe-server and reframe-streamer OpenRC services.
+# Install this file as both /etc/conf.d/reframe-server and
+# /etc/conf.d/reframe-streamer.
+#
+# The base services reframe-server and reframe-streamer run the default
+# instance. They use ${REFRAME_CONFBASEDIR}/default.conf when present,
+# otherwise they fall back to ${REFRAME_CONFBASEDIR}/example.conf.
+#
+# Additional instances can be created via symlink, for example
+# reframe-server.work -> instance="work".
+#
+# The config file for each instance is ${REFRAME_CONFBASEDIR}/${instance}.conf
+# The socket path for each instance is ${REFRAME_SOCKETDIR}/${instance}.sock
+
+# Base directory for configuration files.
+#REFRAME_CONFBASEDIR="/etc/reframe"
+
+# User for reframe-server process.
+#REFRAME_USER="reframe"
+
+# Group for reframe-server process.
+#REFRAME_GROUP="reframe"
+
+# Directory for streamer-to-server communication sockets.
+#REFRAME_SOCKETDIR="/run/reframe"
+
+# Directory for session communication sockets.
+#REFRAME_SESSION_SOCKETDIR="/run/reframe-session"

@@ -1,5 +1,6 @@
-diff --git a/reframe-server/meson.build b/reframe-server/meson.build
-index 8a27483..321ec82 100644
+From: https://github.com/AlynxZhou/reframe/pull/27
+Subject: Skip libvncserver when building with neatvnc
+
 --- a/reframe-server/meson.build
 +++ b/reframe-server/meson.build
 @@ -49,29 +49,31 @@ executable(

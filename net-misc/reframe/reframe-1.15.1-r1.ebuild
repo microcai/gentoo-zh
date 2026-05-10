@@ -40,7 +40,9 @@ DEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}/${P}-libvncserver-optional.patch"
+	"${FILESDIR}/25-skip-connected-drm-output-without-crtc.patch"
+	"${FILESDIR}/26-coalesce-delayed-vnc-client-state-signals.patch"
+	"${FILESDIR}/27-skip-libvncserver-when-building-with-neatvnc.patch"
 )
 
 src_prepare() {
@@ -56,6 +58,20 @@ src_configure() {
 	)
 
 	meson_src_configure
+}
+
+src_install() {
+	meson_src_install
+
+	newinitd "${FILESDIR}/reframe-server.initd" reframe-server
+	newinitd "${FILESDIR}/reframe-streamer.initd" reframe-streamer
+	newconfd "${FILESDIR}/reframe.confd" reframe-server
+	newconfd "${FILESDIR}/reframe.confd" reframe-streamer
+
+	if use neatvnc; then
+		sed -i -e 's/^type=libvncserver$/type=neatvnc/' \
+			"${ED}/etc/reframe/example.conf" || die
+	fi
 }
 
 pkg_postinst() {

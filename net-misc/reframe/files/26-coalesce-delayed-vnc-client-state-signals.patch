@@ -1,0 +1,88 @@
+From: https://github.com/AlynxZhou/reframe/pull/26
+Subject: Coalesce delayed VNC client state signals
+
+--- a/reframe-server/rf-vnc-server.c
++++ b/reframe-server/rf-vnc-server.c
+@@ -6,6 +6,8 @@
+ typedef struct _RfVNCServerPrivate {
+ 	struct xkb_context *xkb_context;
+ 	struct xkb_keymap *xkb_keymap;
++	guint client_signal_id;
++	bool clients_connected;
+ } RfVNCServerPrivate;
+ G_DEFINE_TYPE_WITH_PRIVATE(RfVNCServer, rf_vnc_server, G_TYPE_OBJECT)
+ 
+@@ -26,6 +28,10 @@ static void finalize(GObject *o)
+ 	RfVNCServer *this = RF_VNC_SERVER(o);
+ 	RfVNCServerPrivate *priv = rf_vnc_server_get_instance_private(this);
+ 
++	if (priv->client_signal_id != 0) {
++		g_source_remove(priv->client_signal_id);
++		priv->client_signal_id = 0;
++	}
+ 	g_clear_pointer(&priv->xkb_keymap, xkb_keymap_unref);
+ 	g_clear_pointer(&priv->xkb_context, xkb_context_unref);
+ 
+@@ -397,36 +403,48 @@ void rf_vnc_server_handle_clipboard_text(RfVNCServer *this, const char *text)
+ // events, it is not OK to release resources while still processing events so we
+ // have to delay them until events are done.
+ 
+-static void emit_first_client(void *data)
++static int emit_client_signal(void *data)
+ {
+ 	RfVNCServer *this = data;
+-	g_debug("Signal: Emitting VNC first client signal.");
+-	g_signal_emit(this, sigs[SIG_FIRST_CLIENT], 0);
++	RfVNCServerPrivate *priv = rf_vnc_server_get_instance_private(this);
++
++	priv->client_signal_id = 0;
++	if (!rf_vnc_server_is_running(this))
++		return G_SOURCE_REMOVE;
++
++	g_debug("Signal: Emitting VNC %s client signal.",
++		priv->clients_connected ? "first" : "last");
++	g_signal_emit(
++		this,
++		priv->clients_connected ? sigs[SIG_FIRST_CLIENT] : sigs[SIG_LAST_CLIENT],
++		0
++	);
++
++	return G_SOURCE_REMOVE;
+ }
+ 
+-void rf_vnc_server_handle_first_client(RfVNCServer *this)
++static void schedule_client_signal(RfVNCServer *this, bool clients_connected)
+ {
+-	g_return_if_fail(RF_IS_VNC_SERVER(this));
++	RfVNCServerPrivate *priv = rf_vnc_server_get_instance_private(this);
+ 
+ 	if (!rf_vnc_server_is_running(this))
+ 		return;
+ 
+-	g_idle_add_once(emit_first_client, this);
++	priv->clients_connected = clients_connected;
++	if (priv->client_signal_id == 0)
++		priv->client_signal_id = g_idle_add(emit_client_signal, this);
+ }
+ 
+-static void emit_last_client(void *data)
++void rf_vnc_server_handle_first_client(RfVNCServer *this)
+ {
+-	RfVNCServer *this = data;
+-	g_debug("Signal: Emitting VNC last client signal.");
+-	g_signal_emit(this, sigs[SIG_LAST_CLIENT], 0);
++	g_return_if_fail(RF_IS_VNC_SERVER(this));
++
++	schedule_client_signal(this, true);
+ }
+ 
+ void rf_vnc_server_handle_last_client(RfVNCServer *this)
+ {
+ 	g_return_if_fail(RF_IS_VNC_SERVER(this));
+ 
+-	if (!rf_vnc_server_is_running(this))
+-		return;
+-
+-	g_idle_add_once(emit_last_client, this);
++	schedule_client_signal(this, false);
+ }
