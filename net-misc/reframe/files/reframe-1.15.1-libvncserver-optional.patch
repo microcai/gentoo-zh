@@ -1,0 +1,56 @@
+diff --git a/reframe-server/meson.build b/reframe-server/meson.build
+index 8a27483..321ec82 100644
+--- a/reframe-server/meson.build
++++ b/reframe-server/meson.build
+@@ -49,29 +49,31 @@ executable(
+   install: true
+ )
+ 
+-lvnc_sources = files('rf-lvnc-server.c')
++if not get_option('neatvnc') or not neatvnc.found()
++  lvnc_sources = files('rf-lvnc-server.c')
+ 
+-lvnc_headers = files('rf-lvnc-server.h')
++  lvnc_headers = files('rf-lvnc-server.h')
+ 
+-lvnc_dependencies = []
+-libvncserver = dependency('libvncserver', required: true)
+-lvnc_dependencies += [
+-  glib,
+-  gio,
+-  gmodule,
+-  gobject,
+-  libvncserver,
+-  reframe_common_dep
+-]
++  lvnc_dependencies = []
++  libvncserver = dependency('libvncserver', required: true)
++  lvnc_dependencies += [
++    glib,
++    gio,
++    gmodule,
++    gobject,
++    libvncserver,
++    reframe_common_dep
++  ]
+ 
+-shared_module(
+-  meson.project_name() + '-libvncserver',
+-  sources: lvnc_sources,
+-  dependencies: lvnc_dependencies,
+-  include_directories: include_directories,
+-  install: true,
+-  install_dir: moduledir / 'vnc'
+-)
++  shared_module(
++    meson.project_name() + '-libvncserver',
++    sources: lvnc_sources,
++    dependencies: lvnc_dependencies,
++    include_directories: include_directories,
++    install: true,
++    install_dir: moduledir / 'vnc'
++  )
++endif
+ 
+ if get_option('neatvnc') and neatvnc.found()
+   nvnc_sources = files('rf-nvnc-server.c')
