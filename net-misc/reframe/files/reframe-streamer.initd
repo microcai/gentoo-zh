@@ -19,8 +19,10 @@ if [ "${instance}" = default ] && [ ! -f "${cfgfile}" ] \
 	cfgfile="${REFRAME_CONFBASEDIR}/example.conf"
 fi
 
+socket_file="${REFRAME_SOCKETDIR}/${instance}.sock"
+
 command="/usr/bin/reframe-streamer"
-command_args="--config=${cfgfile} --socket=${REFRAME_SOCKETDIR}/${instance}.sock"
+command_args="--config=${cfgfile} --socket=${socket_file}"
 supervisor=supervise-daemon
 pidfile="/run/${RC_SVCNAME}.pid"
 output_log="${REFRAME_LOGDIR}/${RC_SVCNAME}.log"
@@ -41,4 +43,11 @@ start_pre() {
 	checkpath -d -m 0755 -o root:root "${REFRAME_SOCKETDIR}"
 	checkpath -d -m 0755 -o root:root "${REFRAME_LOGDIR}"
 	checkpath -f -m 0644 -o root:root "${output_log}"
+
+	# Clean up a stale unix socket left behind by an unclean shutdown.
+	[ ! -S "${socket_file}" ] || rm -f "${socket_file}"
+}
+
+stop_post() {
+	[ ! -S "${socket_file}" ] || rm -f "${socket_file}"
 }

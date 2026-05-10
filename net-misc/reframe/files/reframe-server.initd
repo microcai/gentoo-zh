@@ -22,9 +22,11 @@ if [ "${instance}" = default ] && [ ! -f "${cfgfile}" ] \
 	cfgfile="${REFRAME_CONFBASEDIR}/example.conf"
 fi
 
+session_socket_file="${REFRAME_SESSION_SOCKETDIR}/${instance}.sock"
+
 command="/usr/bin/reframe-server"
 command_user="${REFRAME_USER}:${REFRAME_GROUP}"
-command_args="--config=${cfgfile} --socket=${REFRAME_SOCKETDIR}/${instance}.sock --session-socket=${REFRAME_SESSION_SOCKETDIR}/${instance}.sock"
+command_args="--config=${cfgfile} --socket=${REFRAME_SOCKETDIR}/${instance}.sock --session-socket=${session_socket_file}"
 supervisor=supervise-daemon
 supervise_daemon_args="-e EGL_PLATFORM=surfaceless"
 pidfile="/run/${RC_SVCNAME}.pid"
@@ -51,4 +53,11 @@ start_pre() {
 	checkpath -d -m 0755 -o "${command_user}" "${REFRAME_SESSION_SOCKETDIR}"
 	checkpath -d -m 0755 -o "${command_user}" "${REFRAME_LOGDIR}"
 	checkpath -f -m 0644 -o "${command_user}" "${output_log}"
+
+	# Clean up a stale session socket left behind by an unclean shutdown.
+	[ ! -S "${session_socket_file}" ] || rm -f "${session_socket_file}"
+}
+
+stop_post() {
+	[ ! -S "${session_socket_file}" ] || rm -f "${session_socket_file}"
 }
