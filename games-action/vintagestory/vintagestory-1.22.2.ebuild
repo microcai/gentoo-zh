@@ -10,25 +10,28 @@ HOMEPAGE="https://www.vintagestory.at/"
 
 MY_PV="${PV/_rc/-rc.}"
 _CHANNEL="stable"
-SRC_URI="https://cdn.vintagestory.at/gamefiles/${_CHANNEL}/vs_client_linux-x64_${MY_PV}.tar.gz"
+SRC_URI="
+	elibc_glibc? ( https://cdn.vintagestory.at/gamefiles/${_CHANNEL}/vs_client_linux-x64_${MY_PV}.tar.gz )
+"
 S="${WORKDIR}/${PN}"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* ~amd64"
 
-DEPEND="
+DEPEND="elibc_glibc? (
 	virtual/dotnet-sdk:${DOTNET_PKG_COMPAT}
-"
+)"
 RDEPEND="
 	${DEPEND}
-	media-libs/openal
-	virtual/opengl
+	elibc_glibc? (
+		media-libs/openal
+		virtual/opengl
+	)
 "
-BDEPEND="
+BDEPEND="elibc_glibc? (
 	virtual/dotnet-sdk:${DOTNET_PKG_COMPAT}
-"
-REQUIRED_USE="elibc_glibc"
+)"
 # Do NOT Distribute!
 RESTRICT="bindist mirror strip"
 
@@ -37,6 +40,10 @@ QA_PRESTRIPPED="*"
 
 DOTNET_PKG_OUTPUT="${S}"
 INST_DIR="/opt/${PN}"
+
+pkg_pretend() {
+	use elibc_glibc || die "${PN} upstream binary releases require glibc"
+}
 
 src_prepare() {
 	rm *.desktop || die

@@ -21,4 +21,6 @@ BDEPEND="
 
 export SETUPTOOLS_SCM_PRETEND_VERSION=${PV}
 
+EPYTEST_PLUGINS=()
+
 distutils_enable_tests pytest

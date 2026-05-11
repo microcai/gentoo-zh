@@ -15,7 +15,7 @@ SRC_URI="https://looking-glass.io/artifact/${MY_PV}/source -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="X wayland pipewire pulseaudio +backtrace gnome host obs"
+IUSE="+X wayland +pipewire pulseaudio +backtrace gnome host obs"
 REQUIRED_USE="|| ( X wayland )
 	|| ( pipewire pulseaudio )"
 
@@ -60,8 +60,10 @@ MY_CMAKE_PROJECT="client "
 src_prepare() {
 	default
 	# fix cmake compatibility issues with newer cmake versions
-	find "${S}" -name "CMakeLists.txt" -exec sed -i 's/cmake_minimum_required(VERSION 3\.5)/cmake_minimum_required(VERSION 3.10)/' {} +
-	find "${S}" -name "CMakeLists.txt" -exec sed -i 's/cmake_minimum_required(VERSION [0-9]\.[0-9])/cmake_minimum_required(VERSION 3.10)/' {} +
+	find "${S}" -name "CMakeLists.txt" -exec sed -i \
+		's/cmake_minimum_required(VERSION 3\.5)/cmake_minimum_required(VERSION 3.10)/' {} +
+	find "${S}" -name "CMakeLists.txt" -exec sed -i \
+		's/cmake_minimum_required(VERSION [0-9]\.[0-9])/cmake_minimum_required(VERSION 3.10)/' {} +
 	# add other project
 	if use host; then
 		MY_CMAKE_PROJECT+="host "

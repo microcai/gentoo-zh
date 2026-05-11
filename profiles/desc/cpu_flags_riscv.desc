@@ -1,0 +1,6 @@
+v - Enable RISC-V vector extension support
+xtheadvector - Enable T-Head vendor vector extension support
+zfh - Enable RISC-V half-precision floating-point extension support
+zicbop - Enable RISC-V cache block prefetch extension support
+zihintpause - Enable RISC-V pause hint extension support
+zvfh - Enable RISC-V vector half-precision floating-point extension support

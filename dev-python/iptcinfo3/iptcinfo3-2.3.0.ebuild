@@ -28,4 +28,6 @@ BDEPEND="
 	)
 "
 
+EPYTEST_PLUGINS=( pytest-cov )
+
 distutils_enable_tests pytest

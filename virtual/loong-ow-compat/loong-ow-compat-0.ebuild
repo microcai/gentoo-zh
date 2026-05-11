@@ -8,6 +8,6 @@ DESCRIPTION="Virtual for LoongArch old-world compatibility"
 SLOT="0"
 KEYWORDS="~loong"
 
-RDEPEND="|| (
-	app-emulation/liblol
-)"
+RDEPEND="
+	kernel_linux? ( app-emulation/liblol )
+"

@@ -15,10 +15,9 @@ SRC_URI="https://github.com/libratbag/libratbag/archive/refs/tags/v${PV}.tar.gz 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc elogind systemd test"
+IUSE="doc systemd test"
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
-	^^ ( elogind systemd )
 "
 RESTRICT="mirror !test? ( test )"
 
@@ -54,7 +53,7 @@ RDEPEND="
 		dev-python/pygobject:3[${PYTHON_USEDEP}]
 		dev-python/evdev[${PYTHON_USEDEP}]
 	')
-	elogind? ( sys-auth/elogind )
+	!systemd? ( sys-auth/elogind )
 	systemd? ( sys-apps/systemd )
 "
 DEPEND="
@@ -65,7 +64,7 @@ DEPEND="
 src_prepare() {
 	default
 
-	if use elogind ; then
+	if ! use systemd ; then
 		# Fix systemd includes for elogind
 		sed -i -e 's@include <systemd@include <elogind@' \
 			ratbagd/ratbag*.c || die
@@ -80,7 +79,7 @@ src_configure() {
 		$(meson_use systemd)
 		$(meson_use test tests)
 		-Ddbus-group="plugdev"
-		-Dlogind-provider=$(usex elogind elogind systemd)
+		-Dlogind-provider=$(usex systemd systemd elogind)
 		-Dsystemd-unit-dir="$(systemd_get_systemunitdir)"
 		-Dudev-dir="${EPREFIX}$(get_udevdir)"
 	)

@@ -54,7 +54,8 @@ DEPEND="app-arch/libarchive:=
 	net-misc/curl
 	python? ( ${PYTHON_DEPS} )
 "
-# conflict to micromamba from benzene-overlay
+# Conflict with dev-util/micromamba from benzene-overlay:
+# https://github.com/Universebenzene/benzene-overlay/tree/master/dev-util/micromamba
 RDEPEND="${DEPEND}
 	!dev-util/micromamba
 "
@@ -76,7 +77,7 @@ src_prepare() {
 	cmake_src_prepare
 	use python && {
 		sed -i \
-			"s|\${CMAKE_CURRENT_BINARY_DIR}|${D}/\${CMAKE_INSTALL_PREFIX}\/$(python_get_sitedir | sed -e 's|/usr/||')|" \
+			"s|\${CMAKE_CURRENT_BINARY_DIR}|\${D}/\${CMAKE_INSTALL_PREFIX}\/$(python_get_sitedir | sed -e 's|/usr/||')|" \
 			libmambapy/CMakeLists.txt || die
 		pushd libmambapy || die
 		distutils-r1_src_prepare

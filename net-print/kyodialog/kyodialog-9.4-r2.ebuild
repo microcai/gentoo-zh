@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit unpacker xdg
+inherit unpacker
 
 DESCRIPTION="Kyocera printer driver for linux"
 HOMEPAGE="https://www.kyoceradocumentsolutions.com.cn/support/mfp/download/"
@@ -23,11 +23,6 @@ RESTRICT="strip mirror bindist" # mirror as explained at bug #547372
 
 RDEPEND="
 	net-print/cups
-	dev-qt/qtwidgets:5
-	dev-qt/qtdbus:5
-	dev-qt/qtgui:5
-	dev-qt/qtcore:5
-	dev-qt/qtnetwork:5
 "
 
 src_unpack() {
@@ -36,19 +31,11 @@ src_unpack() {
 }
 
 src_install() {
-	exeinto /usr/bin
-	exeopts -m0755
-	doexe "${S}"/usr/bin/*
-
 	exeinto /usr/lib/cups/filter
 	exeopts -m0755
 	doexe "${S}"/usr/lib/cups/filter/*
 
-	# fix the icon patch
-	sed -i "s/kyocera/kyocera9.4/g" "${$}"/usr/share/applications/kyodialog9.4.desktop
+	# Skip the optional Qt5 GUI; CUPS filters and PPD resources work without it.
 	insinto /usr/share
-	doins -r "${S}"/usr/share/{applications,kyocera9.4}
-
-	insinto /etc
-	doins -r "${S}"/etc/{dbus-1,xdg}
+	doins -r "${S}"/usr/share/kyocera9.4
 }

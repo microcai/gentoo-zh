@@ -13,8 +13,10 @@ SRC_URI="
 	arm? ( ${DIST_URI}-arm.tar.xz )
 	arm64? ( ${DIST_URI}-arm64.tar.xz )
 	mips? (
-		abi_mips_o32? ( ${DIST_URI}-mipsel.tar.xz )
-		abi_mips_n64? ( ${DIST_URI}-mips64el.tar.xz )
+		!big-endian? (
+			abi_mips_o32? ( ${DIST_URI}-mipsel.tar.xz )
+			abi_mips_n64? ( ${DIST_URI}-mips64el.tar.xz )
+		)
 	)
 	riscv? ( ${DIST_URI}-riscv64.tar.xz )
 	x86? ( ${DIST_URI}-x86.tar.xz )
@@ -37,13 +39,21 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm ~arm64 ~mips ~riscv ~x86"
 IUSE="abi_mips_n64 abi_mips_o32 big-endian"
-REQUIRED_USE="mips? ( !big-endian || ( abi_mips_n64 abi_mips_o32 ) )"
 
+# Conflict with net-proxy/naiveproxy from chiyuki-overlay:
+# https://github.com/IllyaTheHath/gentoo-overlay/tree/master/net-proxy/naiveproxy
 RDEPEND="!net-proxy/naiveproxy"
 
 QA_PREBUILT="
 	/opt/naiveproxy/naive
 "
+
+pkg_pretend() {
+	if use mips; then
+		use big-endian && die "${PN} upstream only provides little-endian mips binaries"
+		use abi_mips_n64 || use abi_mips_o32 || die "${PN} requires a mips ABI"
+	fi
+}
 
 src_install() {
 	insinto /opt/naiveproxy

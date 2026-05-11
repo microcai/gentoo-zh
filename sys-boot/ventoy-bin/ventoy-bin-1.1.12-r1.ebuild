@@ -14,7 +14,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="+qt5 +gtk"
+IUSE="+gtk"
 
 RESTRICT="strip mirror"
 
@@ -25,7 +25,6 @@ DEPEND="
 "
 RDEPEND="
 	${DEPEND}
-	qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 )
 	gtk? ( x11-libs/gtk+:3 )
 "
 
@@ -61,9 +60,7 @@ src_prepare() {
 	done
 
 	# Exclude optional GUI binaries
-	if ! use qt5; then
-		rm -fv tool/$CARCH/Ventoy2Disk.qt5 || die
-	fi
+	rm -fv tool/$CARCH/Ventoy2Disk.qt5 || die
 	if ! use gtk; then
 		rm -fv tool/$CARCH/Ventoy2Disk.gtk3 || die
 	fi

@@ -24,11 +24,6 @@ RDEPEND="
 	dev-libs/glib:2
 	dev-libs/libpcre
 	dev-libs/libxml2
-	dev-qt/qtcore:5
-	dev-qt/qtgui:5
-	dev-qt/qtnetwork:5
-	dev-qt/qtprintsupport:5
-	dev-qt/qtsvg:5
 	media-fonts/noto-cjk
 	media-gfx/imagemagick
 	media-libs/jbigkit

@@ -58,7 +58,7 @@ declare -A GIT_CRATES=(
 LLVM_COMPAT=( 18 19 20 21 )
 RUST_MIN_VER="1.81.0"
 RUST_NEEDS_LLVM=1
-inherit cargo desktop llvm-r1 systemd xdg
+inherit cargo desktop llvm-utils systemd xdg
 
 DESCRIPTION="An open-source remote desktop, and alternative to TeamViewer"
 HOMEPAGE="https://rustdesk.com/"
@@ -129,10 +129,22 @@ BDEPEND="
 	dev-build/ninja
 	media-libs/gstreamer
 	media-libs/gst-plugins-base
-	$(llvm_gen_dep '
-		llvm-core/clang:${LLVM_SLOT}
-		llvm-core/llvm:${LLVM_SLOT}
-	')
+	llvm_slot_18? (
+		llvm-core/clang:18
+		llvm-core/llvm:18
+	)
+	llvm_slot_19? (
+		llvm-core/clang:19
+		llvm-core/llvm:19
+	)
+	llvm_slot_20? (
+		llvm-core/clang:20
+		llvm-core/llvm:20
+	)
+	llvm_slot_21? (
+		llvm-core/clang:21
+		llvm-core/llvm:21
+	)
 "
 
 QA_PRESTRIPPED="
@@ -141,7 +153,14 @@ QA_PRESTRIPPED="
 "
 
 pkg_setup() {
-	llvm-r1_pkg_setup
+	[[ -z ${LLVM_SLOT} ]] && die "LLVM_SLOT unset (broken USE_EXPAND?)"
+
+	llvm_fix_clang_version CC CPP CXX
+	llvm_fix_tool_path ADDR2LINE AR AS LD NM OBJCOPY OBJDUMP RANLIB
+	llvm_fix_tool_path READELF STRINGS STRIP
+	[[ -z ${ESYSROOT} ]] && llvm_fix_tool_path LLVM_CONFIG
+	llvm_prepend_path "${LLVM_SLOT}"
+
 	rust_pkg_setup
 }
 
