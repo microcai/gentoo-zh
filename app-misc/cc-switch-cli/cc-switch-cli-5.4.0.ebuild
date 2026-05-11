@@ -51,6 +51,6 @@ src_configure() {
 }
 
 src_install() {
-	newbin "$(cargo_target_dir)/${MY_PN}" ${PN}
+	newbin "src-tauri/$(cargo_target_dir)/${MY_PN}" ${PN}
 	einstalldocs
 }
