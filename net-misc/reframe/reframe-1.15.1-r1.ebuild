@@ -40,8 +40,6 @@ DEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}/25-skip-connected-drm-output-without-crtc.patch"
-	"${FILESDIR}/26-coalesce-delayed-vnc-client-state-signals.patch"
 	"${FILESDIR}/27-skip-libvncserver-when-building-with-neatvnc.patch"
 )
 

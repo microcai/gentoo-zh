@@ -1,6 +1,15 @@
-From: https://github.com/AlynxZhou/reframe/pull/27
-Subject: Skip libvncserver when building with neatvnc
+From 86b2798e43f41412278397b8089ef3367529eaa7 Mon Sep 17 00:00:00 2001
+From: Xiangzhe <xiangzhedev@gmail.com>
+Date: Sun, 10 May 2026 12:04:11 +0800
+Subject: [PATCH] Skip libvncserver when building with neatvnc
 
+Signed-off-by: Xiangzhe <xiangzhedev@gmail.com>
+---
+ reframe-server/meson.build | 42 ++++++++++++++++++++------------------
+ 1 file changed, 22 insertions(+), 20 deletions(-)
+
+diff --git a/reframe-server/meson.build b/reframe-server/meson.build
+index 8a27483..321ec82 100644
 --- a/reframe-server/meson.build
 +++ b/reframe-server/meson.build
 @@ -49,29 +49,31 @@ executable(
