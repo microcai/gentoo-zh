@@ -4,6 +4,13 @@
 
 description="ReFrame remote desktop server"
 
+# Translated from upstream dists/reframe-server@.service.in.
+# Upstream runs as User=<username> with RuntimeDirectory=reframe-session,
+# AmbientCapabilities/CapabilityBoundingSet=CAP_NET_BIND_SERVICE,
+# Environment=EGL_PLATFORM=surfaceless.
+# OpenRC has no AmbientCapabilities equivalent, but the default VNC port
+# (5933) is above 1024 so CAP_NET_BIND_SERVICE is not required.
+
 instance="${RC_SVCNAME#*.}"
 if [ "${instance}" = "${RC_SVCNAME}" ]; then
 	instance=default
@@ -28,12 +35,15 @@ command="/usr/bin/reframe-server"
 command_user="${REFRAME_USER}:${REFRAME_GROUP}"
 command_args="--config=${cfgfile} --socket=${REFRAME_SOCKETDIR}/${instance}.sock --session-socket=${session_socket_file}"
 supervisor=supervise-daemon
+# Upstream: Environment=EGL_PLATFORM=surfaceless — required for framebuffer-only rendering.
 supervise_daemon_args="-e EGL_PLATFORM=surfaceless"
 pidfile="/run/${RC_SVCNAME}.pid"
 output_log="${REFRAME_LOGDIR}/${RC_SVCNAME}.log"
 error_log="${REFRAME_LOGDIR}/${RC_SVCNAME}.log"
 
 depend() {
+	# Upstream: Requires=reframe@%i.socket — the socket unit activates streamer.
+	# In OpenRC we depend on the streamer service directly.
 	if [ "${instance}" = default ]; then
 		need reframe-streamer
 	else
@@ -49,7 +59,8 @@ start_pre() {
 		return 1
 	fi
 
-	checkpath -d -m 0755 -o root:root "${REFRAME_SOCKETDIR}"
+	# Upstream: RuntimeDirectory=reframe-session, RuntimeDirectoryMode=0755.
+	# With User=<username>, systemd creates it owned by the service user.
 	checkpath -d -m 0755 -o "${command_user}" "${REFRAME_SESSION_SOCKETDIR}"
 	checkpath -d -m 0755 -o "${command_user}" "${REFRAME_LOGDIR}"
 	checkpath -f -m 0644 -o "${command_user}" "${output_log}"

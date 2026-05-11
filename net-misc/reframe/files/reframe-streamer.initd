@@ -4,6 +4,16 @@
 
 description="ReFrame remote desktop streamer"
 
+# Translated from upstream dists/reframe-streamer@.service.in and dists/reframe@.socket.in.
+# Upstream uses systemd socket activation where the socket unit creates
+# /run/reframe/<instance>.sock with SocketUser=<username> and SocketMode=0660,
+# then activates reframe-streamer when a client connects.
+# In OpenRC the streamer creates its own socket, so we fix ownership/permissions
+# in start_post() so that reframe-server (running as REFRAME_USER) can connect.
+# Upstream systemd hardening directives (CapabilityBoundingSet, Protect*,
+# DeviceAllow) have no direct OpenRC equivalent and are intentionally not
+# translated here; streamer still runs as root, as upstream requires for DRM.
+
 instance="${RC_SVCNAME#*.}"
 if [ "${instance}" = "${RC_SVCNAME}" ]; then
 	instance=default
@@ -12,6 +22,8 @@ fi
 : "${REFRAME_CONFBASEDIR:=/etc/reframe}"
 : "${REFRAME_SOCKETDIR:=/run/reframe}"
 : "${REFRAME_LOGDIR:=/var/log/reframe}"
+: "${REFRAME_USER:=reframe}"
+: "${REFRAME_GROUP:=reframe}"
 
 cfgfile="${REFRAME_CONFBASEDIR}/${instance}.conf"
 if [ "${instance}" = default ] && [ ! -f "${cfgfile}" ] \
@@ -40,12 +52,35 @@ start_pre() {
 		return 1
 	fi
 
-	checkpath -d -m 0755 -o root:root "${REFRAME_SOCKETDIR}"
+	# Upstream socket unit: DirectoryMode=0755 owned by root,
+	# SocketUser=<username>, SocketMode=0660.
+	# We use setgid so files created inside inherit the group,
+	# matching upstream SocketUser=<username>.
+	checkpath -d -m 2775 -o root:"${REFRAME_GROUP}" "${REFRAME_SOCKETDIR}"
 	checkpath -d -m 0755 -o root:root "${REFRAME_LOGDIR}"
 	checkpath -f -m 0644 -o root:root "${output_log}"
 
 	# Clean up a stale unix socket left behind by an unclean shutdown.
 	[ ! -S "${socket_file}" ] || rm -f "${socket_file}"
+}
+
+start_post() {
+	# Wait for the streamer to create the socket file.
+	local retry=0
+	while [ ! -S "${socket_file}" ] && [ "${retry}" -lt 50 ]; do
+		retry=$((retry + 1))
+		sleep 0.1
+	done
+
+	if [ ! -S "${socket_file}" ]; then
+		eerror "Socket ${socket_file} was not created by streamer."
+		return 1
+	fi
+
+	# Fix ownership and permissions to match upstream socket unit:
+	# SocketUser=<username>, SocketMode=0660.
+	chown "${REFRAME_USER}":"${REFRAME_GROUP}" "${socket_file}"
+	chmod 0660 "${socket_file}"
 }
 
 stop_post() {

@@ -11,17 +11,26 @@
 #
 # The config file for each instance is ${REFRAME_CONFBASEDIR}/${instance}.conf
 # The socket path for each instance is ${REFRAME_SOCKETDIR}/${instance}.sock
+#
+# Keep REFRAME_USER and REFRAME_GROUP consistent in both
+# /etc/conf.d/reframe-server and /etc/conf.d/reframe-streamer. The server runs
+# as this user, while the streamer uses the same values to chown/chmod the
+# socket it creates for server communication.
 
 # Base directory for configuration files.
 #REFRAME_CONFBASEDIR="/etc/reframe"
 
 # User for reframe-server process.
+# Upstream systemd runs reframe-server as this user and creates sockets
+# with SocketUser set to this value.
 #REFRAME_USER="reframe"
 
 # Group for reframe-server process.
+# Also used for streamer socket directory ownership so the server can connect.
 #REFRAME_GROUP="reframe"
 
 # Directory for streamer-to-server communication sockets.
+# Created with setgid bit so socket files inherit this group.
 #REFRAME_SOCKETDIR="/run/reframe"
 
 # Directory for session communication sockets.
