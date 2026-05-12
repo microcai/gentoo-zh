@@ -16,16 +16,18 @@ declare -A GIT_CRATES=(
 	[quinn-proto]='https://github.com/Tipuch/quinn;ce60e5b5c115db2a6053f4e0ca7fc52103cb76b9;quinn-%commit%/quinn-proto'
 	[quinn-udp]='https://github.com/Tipuch/quinn;ce60e5b5c115db2a6053f4e0ca7fc52103cb76b9;quinn-%commit%/quinn-udp'
 	[quinn]='https://github.com/Tipuch/quinn;ce60e5b5c115db2a6053f4e0ca7fc52103cb76b9;quinn-%commit%/quinn'
-	[shadowsocks]='https://github.com/Watfaq/shadowsocks-rust;dee2d932dc580e0e1b7a5a591ff5f8c51f70495e;shadowsocks-rust-%commit%/crates/shadowsocks'
+	[rustls]='https://github.com/Watfaq/rustls;e6e8e7e1a0d65f2f273eb7b5b6179896536ac174;rustls-%commit%/rustls'
+	[shadowquic-macros]='https://github.com/spongebob888/shadowquic;277f47a59607a91d11bcb4ae98309a320617d4b2;shadowquic-%commit%/shadowquic-macros'
+	[shadowquic]='https://github.com/spongebob888/shadowquic;277f47a59607a91d11bcb4ae98309a320617d4b2;shadowquic-%commit%/shadowquic'
+	[shadowsocks]='https://github.com/shadowsocks/shadowsocks-rust;c4d8d18527289d12470cad1ce718754c908a75fe;shadowsocks-rust-%commit%/crates/shadowsocks'
 	[smoltcp]='https://github.com/smoltcp-rs/smoltcp;ac32e643a4b7e09161193071526b3ca5a0deedb5;smoltcp-%commit%'
 	[sock2proc]='https://github.com/Watfaq/sock2proc;9f9e6304d62285115b2e4fa632527ae563bf0fcc;sock2proc-%commit%'
-	[tokio-watfaq-rustls]='https://github.com/Watfaq/tokio-rustls;cf8961ac1a36e580d0e38bedc8a41ca4a9b301e8;tokio-rustls-%commit%'
-	[tuic-core]='https://github.com/Itsusinn/tuic;18b74bcf11fe33caf9dcfc9e2d6685c5230a2e0a;tuic-%commit%/tuic-core'
+	[tokio-rustls]='https://github.com/Watfaq/tokio-rustls;b26e3e2b7a0161d505fd12d6e545b16463f1a45f;tokio-rustls-%commit%'
+	[tuic-core]='https://github.com/Itsusinn/tuic;cc583dc3372783e8ec09ba3707b7c1b9680a8a2e;tuic-%commit%/tuic-core'
 	[unix-udp-sock]='https://github.com/Watfaq/unix-udp-sock;847c80b519f0fd8cff5c887ae708429897d08671;unix-udp-sock-%commit%'
-	[watfaq-rustls]='https://github.com/Watfaq/rustls;c3ab043d673029d245fd618b9bc86fd6a6109bae;rustls-%commit%/rustls'
 )
 
-RUST_MIN_VER="1.91.0"
+RUST_MIN_VER="1.95.0"
 
 inherit cargo systemd
 
@@ -76,7 +78,8 @@ src_prepare() {
 	# Add new patch section with local paths
 	cat >> "${S}/Cargo.toml" <<-EOF || die
 	[patch.crates-io]
-	shadowsocks = { path = "$(gen_git_crate_dir shadowsocks)" }
+	rustls = { path = "$(gen_git_crate_dir rustls)" }
+	tokio-rustls = { path = "$(gen_git_crate_dir tokio-rustls)" }
 	EOF
 }
 
@@ -99,6 +102,8 @@ src_compile() {
 		fi
 	fi
 
+	# enable unstable features
+	export RUSTC_BOOTSTRAP=1
 	cargo_src_compile --package=clash-rs --bin=clash-rs
 }
 
