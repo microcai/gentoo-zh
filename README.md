@@ -59,7 +59,7 @@ It is recommended to run `pkgdev commit` to quickly generate commit messages.
 
 We provide a distfiles mirror that caches the distfiles in gentoo-zh.
 
-Our server, hosted on Finland:
+Our server, hosted on USA:
 ```
 GENTOO_MIRRORS="${GENTOO_MIRRORS} https://distfiles.gentoocn.org"
 ```
