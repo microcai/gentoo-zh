@@ -28,12 +28,9 @@ PATCHES=(
 	"${WORKDIR}/debian/patches/22_datetime-go-back_Zhi.hour_jiealert.patch"
 )
 
-src_compile() {
-	tc-export PKG_CONFIG
-
-	emake \
-		CC="$(tc-getCC) -std=gnu17" \
-		lunar
+src_configure() {
+        append-cflags -std=gnu17
+        default
 }
 
 src_install() {
