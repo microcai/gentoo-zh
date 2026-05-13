@@ -3,10 +3,12 @@
 
 EAPI=8
 
+inherit toolchain-funcs
+
 DESCRIPTION="Chinese Lunar Calendar conversion utility"
 HOMEPAGE="https://packages.debian.org/unstable/utils/lunar"
 SRC_URI="mirror://debian/pool/main/l/${PN}/${PN}_${PV}.orig.tar.gz
-	mirror://debian/pool/main/l/${PN}/${PN}_${PVR/r5/9}.debian.tar.xz"
+	mirror://debian/pool/main/l/${PN}/${PN}_${PVR/r6/10}.debian.tar.xz"
 
 S="${WORKDIR}/${PN}"
 LICENSE="GPL-2"
@@ -25,6 +27,14 @@ PATCHES=(
 	"${WORKDIR}/debian/patches/20_update_man_page.diff"
 	"${WORKDIR}/debian/patches/22_datetime-go-back_Zhi.hour_jiealert.patch"
 )
+
+src_compile() {
+	tc-export PKG_CONFIG
+
+	emake \
+		CC="$(tc-getCC) -std=gnu17" \
+		lunar
+}
 
 src_install() {
 	dobin lunar
