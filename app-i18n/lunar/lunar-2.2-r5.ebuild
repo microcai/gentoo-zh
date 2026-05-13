@@ -24,6 +24,7 @@ PATCHES=(
 	"${WORKDIR}/debian/patches/10_complete_the_makefile.diff"
 	"${WORKDIR}/debian/patches/20_update_man_page.diff"
 	"${WORKDIR}/debian/patches/22_datetime-go-back_Zhi.hour_jiealert.patch"
+	"${FILESDIR}/${PN}-2.2-gcc15.patch"
 )
 
 src_install() {

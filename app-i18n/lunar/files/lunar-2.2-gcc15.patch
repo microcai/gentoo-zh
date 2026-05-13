@@ -1,0 +1,154 @@
+diff '--color=auto' -Nur lunar.orig/lunar.c lunar/lunar.c
+--- lunar.orig/lunar.c	2026-05-13 16:31:48.911956999 +0800
++++ lunar/lunar.c	2026-05-13 17:36:47.964272855 +0800
+@@ -196,20 +196,18 @@
+ char	*progname;
+ 
+ void	Solar2Lunar(), Lunar2Solar();
+-long    Solar2Day(), Solar2Day1(), Lunar2Day();
+-void	Day2Lunar(), Day2Solar();
+-int     make_yday(), make_mday(), GZcycle();
+-void	CalGZ();
+-int	CmpDate(), JieDate();
+-void    readBM(), display3();
++long    Solar2Day(Date *), Solar2Day1(Date *), Lunar2Day(Date *);
++void	Day2Lunar(long, Date *), Day2Solar(long, Date *);
++int     make_yday(), make_mday(int), GZcycle(int, int);
++void	CalGZ(long, Date *, Date *, Date *);
++int	CmpDate(int, int, int, int), JieDate(Date *, Date *);
++void    readBM(), display3(int, int, int);
+ void	Report(), ReportE(), ReportBM(), ReportGB(), ReportB5();
+ void	ReportUTF8_hant(), ReportUTF8_hans();
+-void	usage(), Error();
++void	usage(), Error(char *);
+ 
+ 
+-int main(argc, argv)
+-int argc;
+-char *argv[];
++int main(int argc, char *argv[])
+ {
+     int year, month, day, hour, i, k, option, inverse=0, leap=0;
+     int dateInfo[4];
+@@ -471,16 +469,14 @@
+ /* BYEAR % 4 == 1  and BYEAR % 400 == 1 for easy calculation of leap years */
+ /* assert(BYEAR <= SolarFirstDate.year) */
+ 
+-long Solar2Day(d)
+-Date *d;
++long Solar2Day(Date *d)
+ {
+     return (Solar2Day1(d) - Solar2Day1(&SolarFirstDate));
+ }
+ 
+ 
+ /* Compute the number of days from the Solar date BYEAR.1.1 */
+-long Solar2Day1(d)
+-Date *d;
++long Solar2Day1(Date *d)
+ {
+     long offset, delta;
+     int i;
+@@ -504,8 +500,7 @@
+ 
+ 
+ /* Compute offset days of a lunar date from the beginning of the table */
+-long Lunar2Day(d)
+-Date *d;
++long Lunar2Day(Date *d)
+ {
+     long offset = 0;
+     int year, i, m, leapMonth;
+@@ -534,9 +529,7 @@
+ }
+ 
+ 
+-void Day2Lunar(offset, d)
+-long offset;
+-Date *d;
++void Day2Lunar(long offset, Date *d)
+ {
+     int i, m, nYear, leapMonth;
+ 
+@@ -571,9 +564,7 @@
+ }
+ 
+ 
+-void Day2Solar(offset, d)
+-long offset;
+-Date *d;
++void Day2Solar(long offset, Date *d)
+ {
+     int	i, m, days;
+ 
+@@ -609,8 +600,7 @@
+ }
+ 
+ 
+-int GZcycle(g, z)
+-int g, z;
++int GZcycle(int g, int z)
+ {
+     int gz;
+ 
+@@ -620,9 +610,7 @@
+ }
+ 
+ 
+-void CalGZ(offset, d, g, z)
+-long offset;
+-Date *d, *g, *z;
++void CalGZ(long offset, Date *d, Date *g, Date *z)
+ {
+     int	year, month;
+ 
+@@ -640,8 +628,7 @@
+ }
+ 
+ 
+-void Error(s)
+-char	*s;
++void Error(char *s)
+ {
+     printf("%s\n",s);
+     exit(1);
+@@ -649,8 +636,7 @@
+ 
+ 
+ /* Compare two dates and return <,=,> 0 if the 1st is <,=,> the 2nd */
+-int CmpDate(month1, day1, month2, day2)
+-int month1, day1, month2, day2;
++int CmpDate(int month1, int day1, int month2, int day2)
+ {
+     if (month1!=month2) return(month1-month2);
+     if (day1!=day2) return(day1-day2);
+@@ -662,8 +648,7 @@
+    Given a solar date, find the "lunar" date for the purpose of
+    calculating the "4-columns" by taking jie into consideration.
+ */
+-int JieDate(ds, dl)
+-Date *ds, *dl;
++int JieDate(Date *ds, Date *dl)
+ {
+     int m, flag;
+ 
+@@ -724,8 +709,7 @@
+ 
+ 
+ /* Compute the days of each month in the given lunar year */
+-int make_mday(year)
+-int year;
++int make_mday(int year)
+ {
+     int i, leapMonth;
+     long code;
+@@ -1009,8 +993,7 @@
+ 
+ 
+ /* Display three ganzhi characters in a row */
+-void display3(i, j, k)
+-int i,j,k;
++void display3(int i, int j, int k)
+ {
+     int	r,c;
+ 
