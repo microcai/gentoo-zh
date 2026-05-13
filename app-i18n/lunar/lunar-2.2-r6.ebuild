@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit toolchain-funcs
+inherit flag-o-matic
 
 DESCRIPTION="Chinese Lunar Calendar conversion utility"
 HOMEPAGE="https://packages.debian.org/unstable/utils/lunar"
