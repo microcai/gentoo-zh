@@ -101,6 +101,7 @@ src_configure() {
 		-DUSE_DEBUG_FISSION=OFF
 		-DUSE_COMPRESS_DEBUG_SECTIONS=off
 		-DUSE_LIBCXX=off
+		-DUSE_TBB=off
 		-DCLI=$(usex cli)
 		-DSERVER=$(usex server)
 		-DUSE_CET=$(usex cet)
