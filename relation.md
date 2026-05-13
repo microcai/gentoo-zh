@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-12 23:56:22 CST)
+(The last generation time: 2026-05-13 09:41:21 CST)
 
 ### Packages
 
@@ -788,7 +788,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/yacd-meta                                   | 0.3.8              |            | https://github.com/MetaCubeX/Yacd-meta                                                  | Yet Another Clash Dashboard
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/yass                                        | 1.24.6             |            | https://github.com/hukeyue/yass                                                         | lightweight and efficient, socks5/http forward proxy
+ net-proxy/yass                                        | 1.24.11            |            | https://github.com/hukeyue/yass                                                         | lightweight and efficient, socks5/http forward proxy
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/zashboard                                   | 2.8.0              |            | https://github.com/Zephyruso/zashboard                                                  | The Official Mihomo Dashboard
                                                        | 3.5.1              |            |                                                                                         |
@@ -851,12 +851,14 @@
  sys-power/tlpui                                       | 1.10.1             |            | https://github.com/d4nj1/TLPUI                                                          | A GTK user interface for TLP written in Python
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/dist-kernel                                   | 7.0.4-r100         |            |                                                                                         | Virtual to depend on any Distribution Kernel
+                                                       | 7.0.6-r100         |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                                 | 3-r12              |            |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/cachyos-sources                          | 6.18.6             | RD         | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
    sys-kernel/liquorix-sources                         | 6.4.12             | RD         | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
                                                        | 6.6.8              |            |                                                                                         |
    sys-kernel/xanmod-kernel                            | 7.0.4              | RD         | https://www.kernel.org/                                                                 | XanMod kernel built with Gentoo patches and cjktty
+                                                       | 7.0.6              |            |                                                                                         |
    sys-kernel/xanmod-rt                                | 6.0.11             | RD         | https://xanmod.org                                                                      | XanMod RT sources and CJKTTY options.
                                                        | 6.12.31            |            |                                                                                         |
    sys-kernel/xanmod-sources                           | 7.0.4              | RD         | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
