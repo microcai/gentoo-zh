@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<!-- maintainer-needed -->
+	<maintainer type="person">
+		<email>vowstar@gmail.com</email>
+		<name>Huang Rui</name>
+	</maintainer>
+	<longdescription lang="en">
+		BaiduPCS-Go is a command-line client for Baidu Network Disk
+		written in Go. It supports authenticated login, file upload
+		and download with multi-connection acceleration, recursive
+		directory operations, share-link and rapid-link transfer to
+		the user's own storage, and offline (cloud) downloads.
+	</longdescription>
+	<longdescription lang="zh">
+		BaiduPCS-Go 是一款使用 Go 语言编写的百度网盘命令行客户端。
+		支持账号登录、多线程加速上传与下载、目录递归操作、分享链接
+		与秒传链接转存到自己的网盘，以及离线（云端）下载等功能。
+	</longdescription>
 	<upstream>
 		<remote-id type="github">qjfoidnh/BaiduPCS-Go</remote-id>
 	</upstream>

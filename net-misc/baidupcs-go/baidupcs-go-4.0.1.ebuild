@@ -1,4 +1,4 @@
-# Copyright 2020-2025 Gentoo Authors
+# Copyright 2020-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -21,7 +21,7 @@ else
 	S="${WORKDIR}/${MY_PN}-${PV}"
 fi
 
-DESCRIPTION="The terminal utility for Baidu Network Disk (Golang Version)."
+DESCRIPTION="Terminal utility for Baidu Network Disk (Golang Version)"
 HOMEPAGE="https://github.com/qjfoidnh/BaiduPCS-Go"
 
 LICENSE="Apache-2.0"
