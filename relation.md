@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-14 11:32:45 CST)
+(The last generation time: 2026-05-14 11:33:22 CST)
 
 ### Packages
 
@@ -656,9 +656,9 @@
  net-misc/baidunetdisk                                 | 4.17.8             |            | https://pan.baidu.com/                                                                  | Baidu Net Disk is a cloud storage client (Linux Version)
                                                        | 4.3.0              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/baidupcs-go                                  | 4.0.0              |            | https://github.com/qjfoidnh/BaiduPCS-Go                                                 | The terminal utility for Baidu Network Disk (Golang Version).
+ net-misc/baidupcs-go                                  | 4.0.1              |            | https://github.com/qjfoidnh/BaiduPCS-Go                                                 | Terminal utility for Baidu Network Disk (Golang Version)
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/bbdown-bin                                   | 1.6.3              |            | https://github.com/nilaoda/BBDown                                                       | The terminal utility for Baidu Network Disk (Golang Version).
+ net-misc/bbdown-bin                                   | 1.6.3              |            | https://github.com/nilaoda/BBDown                                                       | Terminal utility for Baidu Network Disk (Golang Version)
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/biliup-app-bin                               | 0.6.7              |            | https://github.com/ForgQi/biliup-app                                                    | A Tool for Upload video to bilibili
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
