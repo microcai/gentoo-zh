@@ -233,8 +233,8 @@ github_account = "liuyujielol"
 ["app-i18n/lunar"]
 source = "debianpkg"
 debianpkg = "lunar"
-from_pattern = "-(\\d+)"
-to_pattern = ""
+from_pattern = "^(\\d+\\.\\d+)-(\\d+)$"
+to_pattern = "\\1_p\\2"
 github_account = "liangyongxiang"
 
 ["app-i18n/zh-autoconvert"]
